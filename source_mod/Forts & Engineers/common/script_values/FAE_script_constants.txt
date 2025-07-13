@@ -1,0 +1,28 @@
+﻿# Fort bonuses will be at least this fraction of the full bonus even if the enemy's siege can take the fort entrenchment down to 0
+FAE_WEAK_FORT_MIN_BONUS = 0.25
+
+# Thresholds for modifiers - purely for aesthetics, doesn't affect calculations
+# Strong Fortifications    => [FAE_STRONG_FORT_BONUS_THRESHOLD, 1]
+# Partially-Weakened Forts => [FAE_PARTIAL_FORT_BONUS_THRESHOLD, FAE_STRONG_FORT_BONUS_THRESHOLD)
+# Weakened Fortifications  => [FAE_WEAK_FORT_MIN_BONUS, FAE_PARTIAL_FORT_BONUS_THRESHOLD)
+FAE_STRONG_FORT_BONUS_THRESHOLD  = 0.8
+FAE_PARTIAL_FORT_BONUS_THRESHOLD = 0.55
+
+# Siege values - keep values set in mob. options & unit types up to date
+FAE_siege_combat_engies     = 4
+FAE_siege_combat_engies_tnt = 2 # additive bonus for having Dynamite tech
+
+FAE_siege_light_tank    = 8
+
+FAE_siege_heavy_tank    = 10
+FAE_siege_siege_arty    = 6
+FAE_siege_shrapnel_arty = 4
+FAE_siege_mobile_arty   = 3
+FAE_siege_cannon_arty   = 2
+
+# AI siege multipliers
+FAE_ai_mult_low = 0.5
+FAE_ai_mult_med = 1.0
+FAE_ai_mult_hi  = 2.0
+FAE_ai_mult_vhi = 3.0
+FAE_ai_mult_ext = 5.0

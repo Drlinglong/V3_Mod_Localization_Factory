@@ -1,0 +1,141 @@
+﻿# Battle condition to represent attackers breaching a fort
+# Note that the battle condition supposes only a single fort in particular has been breached, while the building is
+# supposed to represent a network/system of multiple fortifications.
+FAE_battle_condition_attacker_fort_breached = {
+    icon = "gfx/interface/icons/battle_conditions/FAE_battle_condition_fort_breached_positive.dds"
+    
+    modifier = {
+        unit_kill_rate_add   = 0.10
+        unit_offense_mult    = 0.50
+        unit_occupation_mult = 0.10
+    }
+    
+    possible = {
+        # Generals existence check
+        scope:character ?= {
+            has_role = general
+            exists   = opposing_commander
+        }
+        
+        # Attackers only
+        scope:is_advancing_side = yes
+        
+        # Check if defender has fort
+        province.state = {
+            has_building = fae_building_forts
+            OR = {
+                owner = scope:character.opposing_commander.owner
+                owner = {
+                    is_in_war_together = scope:character.opposing_commander.owner
+                }
+            }
+            this.b:fae_building_forts = {
+                NOT = {
+                    has_active_production_method = FAE_pm_mothballed
+                }
+            }
+        }
+        
+        # A fort isn't already being breached
+        battle = {
+            defender_side = {
+                NOT = {
+                    has_battle_condition = FAE_battle_condition_defender_fort_breached
+                }
+            }
+        }
+    }
+    
+    weight = {
+        value = 0.5
+        
+        # Apply commander's traits (vanilla conditions do this first apparently)
+        multiply = {
+            value = 1
+            scope:character = {
+                add = modifier:character_fae_battle_condition_attacker_fort_breached_mult
+            }
+            min = 0
+        }
+        
+        # Calculate modifier based on siege / entrenchment ratio
+        add = {
+            add     = scope:character.var:FAE_siege
+            divide  = {
+                add = scope:character.opposing_commander.var:FAE_entrenchment
+                min = 0.001 # Prevent divide by 0
+            }
+            min = 0
+            max = 2.5
+        }
+        
+        # Adjust weight based on avg atk/def gap
+        # -75% odds when atk/def are even, no modifier at >=50% advantage for either side
+        # mfw no absolute value function
+        if = {
+            limit = {
+                "battle.front.average_defense(scope:character.opposing_commander.owner)" >= "battle.front.average_offense(scope:character.owner)"
+            }
+            multiply = { # The quotation marks are necessary for correct parsing of the parentheses
+                value    = "battle.front.average_defense(scope:character.opposing_commander.owner)"
+                divide   = "battle.front.average_offense(scope:character.owner)"
+                multiply = 2
+                subtract = 2
+                min      = 0.25
+                max      = 1
+            }
+        }
+        else = {
+            multiply = { # The quotation marks are necessary for correct parsing of the parentheses
+                value    = "battle.front.average_defense(scope:character.opposing_commander.owner)"
+                divide   = "battle.front.average_offense(scope:character.owner)"
+                multiply = -2
+                add      = 2
+                min      = 0.25
+                max      = 1
+            }
+        }
+    }
+}
+
+# Corresponding battle condition for defenders when a fort is breached to really help the attackers gain an edge
+FAE_battle_condition_defender_fort_breached = {
+    icon = "gfx/interface/icons/battle_conditions/FAE_battle_condition_fort_breached_negative.dds"
+    
+    modifier = {
+        battle_casualties_mult = 0.30
+        unit_defense_mult      = -0.25
+        unit_kill_rate_add     = -0.10
+    }
+    
+    instant_switch = {
+        # Generals existence check
+        scope:character ?= {
+            has_role = general
+            exists   = opposing_commander
+        }
+        
+        # Defenders only
+        scope:is_advancing_side = no
+        
+        # Check if defender has fort
+        province.state = {
+            has_building = fae_building_forts
+            OR = {
+                owner = scope:character.owner
+                owner = {
+                    is_in_war_together = scope:character.owner
+                }
+            }
+        }
+        
+        # A fort is being breached
+        battle = {
+            attacker_side = {
+                has_battle_condition = FAE_battle_condition_attacker_fort_breached
+            }
+        }
+    }
+    
+    weight = 1
+}

@@ -1,0 +1,89 @@
+﻿# Fort PM changed modifiers
+FAE_md_fort_reconstruction = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
+    unit_offense_mult = -0.8
+    unit_defense_mult = -0.8
+}
+
+FAE_md_fort_rearmament = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
+    unit_offense_mult = -0.2
+    unit_defense_mult = -0.2
+}
+
+FAE_md_fort_recommission = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+    building_input_small_arms_mult = -0.5
+    building_input_artillery_mult  = -0.5
+    building_input_ammunition_mult = -0.5
+}
+
+# Fort informative modifiers
+FAE_md_total_siege = {
+    icon = gfx/interface/icons/timed_modifier_icons/FAE_modifier_fort_gear_neutral.dds
+    character_fae_total_siege = 1
+}
+
+FAE_md_total_entrenchment = {
+    icon = gfx/interface/icons/timed_modifier_icons/FAE_modifier_fort_gear_neutral.dds
+    character_fae_total_entrenchment = 1
+}
+
+# Fort combat modifiers
+FAE_md_fort_in_battle = {
+    icon = gfx/interface/icons/timed_modifier_icons/FAE_modifier_fort_defense_negative.dds
+    building_soldiers_mortality_mult   = 80 # These numbers seemed to work decently in testing...
+    building_officers_mortality_mult   = 80 # 8000% isn't *THAT* bad; honest!
+    building_laborers_mortality_mult   = 1
+    building_machinists_mortality_mult = 1
+}
+
+FAE_md_fort_defense_strong = {
+    icon = gfx/interface/icons/timed_modifier_icons/FAE_modifier_fort_defense_positive.dds
+    unit_defense_add = 1
+}
+
+FAE_md_fort_defense_mid = {
+    icon = gfx/interface/icons/timed_modifier_icons/FAE_modifier_fort_defense_negative.dds
+    unit_defense_add = 1
+}
+
+FAE_md_fort_defense_weak = {
+    icon = gfx/interface/icons/timed_modifier_icons/FAE_modifier_fort_defense_negative.dds
+    unit_defense_add = 1
+}
+
+FAE_md_fort_kill_rate_strong = {
+    icon = gfx/interface/icons/timed_modifier_icons/FAE_modifier_fort_kills_positive.dds
+    unit_kill_rate_add = 1
+}
+
+FAE_md_fort_kill_rate_mid = {
+    icon = gfx/interface/icons/timed_modifier_icons/FAE_modifier_fort_kills_negative.dds
+    unit_kill_rate_add = 1
+}
+
+FAE_md_fort_kill_rate_weak = {
+    icon = gfx/interface/icons/timed_modifier_icons/FAE_modifier_fort_kills_negative.dds
+    unit_kill_rate_add = 1
+}
+
+FAE_md_fort_occupation_speed = {
+    icon = gfx/interface/icons/timed_modifier_icons/FAE_modifier_fort_provinces_negative.dds
+    unit_occupation_mult = 1
+}
+
+FAE_md_fort_provinces_lost_strong = {
+    icon = gfx/interface/icons/timed_modifier_icons/FAE_modifier_fort_provinces_positive.dds
+    unit_provinces_lost_mult = 1
+}
+
+FAE_md_fort_provinces_lost_weak = {
+    icon = gfx/interface/icons/timed_modifier_icons/FAE_modifier_fort_provinces_negative.dds
+    unit_provinces_lost_mult = 1
+}
+
+FAE_md_fort_max_level = {
+    icon = gfx/interface/icons/timed_modifier_icons/FAE_modifier_fort_provinces_positive.dds
+    state_fae_building_forts_max_level_add = 1
+}

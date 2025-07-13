@@ -1,0 +1,27 @@
+{
+    "name" : "Forts & Engineers",
+    "id" : "xyz.1230james.forts_and_engineers",
+    "version" : "2.2.2",
+    "game_id" : "victoria3",
+    "supported_game_version" : "1.9.*",
+    "short_description" : "",
+    "tags" : [
+        "1.9",
+        "Expansion",
+        "Economy And Buildings",
+        "Gameplay",
+        "Warfare"
+    ],
+    "relationships" : [
+        {
+            "rel_type" : "dependency",
+            "id" : "xyz.1230james.multiline_pms",
+            "display_name" : "Multi-line Production Methods Framework",
+            "resource_type" : "mod",
+            "version" : "*"
+        }
+    ],
+    "game_custom_data" : {
+        "multiplayer_synchronized" : false
+    }
+}

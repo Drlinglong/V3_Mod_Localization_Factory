@@ -1,0 +1,44 @@
+﻿FAE_pm_normal = {
+    texture = "gfx/interface/icons/production_method_icons/FAE_pm_in_service.dds"
+    
+    is_default = yes
+    
+    ai_value = 50000
+    
+    timed_modifiers = {
+        FAE_md_fort_recommission
+    }
+    
+    country_modifiers = { # Convince the AI to build forts
+        workforce_scaled = {
+            country_weekly_innovation_add     = 0.001
+            country_weekly_innovation_max_add = 0.001
+        }
+    }
+}
+
+FAE_pm_mothballed = {
+    texture = "gfx/interface/icons/production_method_icons/V3_no_maintenance.dds"
+    
+    # Elected to add a mothballed PM to the other PMGs instead to be a little bit more clear to the user what exactly
+    # is happening since for some reason employment multipliers aren't shown in the tooltips...
+    # Keeping this here just for reference.
+    #
+    # building_modifiers = {
+    #     unscaled = {
+    #         building_employment_engineers_mult  = -0.9
+    #         building_employment_laborers_mult   = -0.9
+    #         building_employment_machinists_mult = -1
+    #         building_employment_officers_mult   = -1
+    #         building_employment_soldiers_mult   = -1
+    #         building_input_mult                 = -0.5
+    #     }
+    # }
+    
+    country_modifiers = { # Convince the AI to build forts
+        workforce_scaled = {
+            country_weekly_innovation_add     = 0.001
+            country_weekly_innovation_max_add = 0.001
+        }
+    }
+}
