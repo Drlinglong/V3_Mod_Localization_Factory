@@ -1,0 +1,175 @@
+﻿l_simp_chinese:
+##### CUSTOMISE COUNTRY #####
+
+# Every option should have an alternative option to cancel the effect.
+
+
+#### AUSTRALIA ####
+
+### EVENTS   ---- list all possible conditioned options in flavor text
+
+#start - main menu
+anz_ast_customise.1.t:0  "自定义[ROOT.GetCountry.GetNameNoFormatting]：主菜单"
+anz_ast_customise.1.d:0  "点击选项自定义[ROOT.GetCountry.GetName]。"
+anz_ast_customise.1.f:0  "#ITALIC “身在地狱便是随波逐流；身在天堂便是掌控方向。”#!\n- 乔治·伯纳·萧"
+anz_ast_customise.1.a:0  "国家名称"
+anz_ast_customise.1.b:0  "旗帜"
+anz_ast_customise.1.c:0  "地图颜色"
+anz_ast_customise.1.y:0  "移除决议"
+anz_ast_customise.1.z:0  "完成"
+
+anz_finish_customisation_tt:0  "完成自定义。"
+anz_remove_customisation_tt:0  "#r 关闭事件并永久移除自定义[ROOT.GetCountry.GetNameNoFormatting]的决议。#!"
+
+#names
+anz_ast_customise.2.t:0  "自定义名称"
+anz_ast_customise.2.d:0  "#grey “别人怎么叫你不重要，你如何回应才重要。” - W.C. 菲尔兹#!"
+anz_ast_customise.2.f:0  "（你需要解除暂停以使更改生效。）"
+anz_ast_customise.2.a:0  "澳大拉西亚"
+anz_ast_customise.2.a2:0  "取消“澳大拉西亚”"
+anz_ast_customise.2.b:0  "斯特拉亚"
+anz_ast_customise.2.b2:0  "取消“斯特拉亚”"
+anz_ast_customise.2.c:0  "澳匈帝国"
+anz_ast_customise.2.c2:0  "取消“澳匈帝国”"
+anz_ast_customise.2.e:0  "奥匈帝国"
+anz_ast_customise.2.e2:0  "取消“奥匈帝国”"
+anz_ast_customise.2.z:0  "返回。"
+
+anz_ast_australasia_missing_var:0  "新西兰同意留在我们的联邦内或我们拥有新西兰所有[concept_state_region]的领土"
+anz_asthungry_missing_var:0  "完成#v 澳匈问题#!日志条目"
+
+#flags
+anz_ast_customise.3.t:0  "自定义旗帜"
+anz_ast_customise.3.d:0  "#grey “旗帜不会在真空挥舞，这其中蕴含着充满希望的象征意义。” - 阿瑟·C·克拉克#!"
+anz_ast_customise.3.f:0  "条件选项：\n#v 共产主义旗帜：#!#white 已通过[GetLawType('law_council_republic').GetName]且未通过[GetLawType('law_anarchy').GetName]。#!\n#v 无政府共产主义旗帜：#!#white 已通过[GetLawType('law_council_republic').GetName]且通过[GetLawType('law_anarchy').GetName]。#!\n#v 不带左上角图案的澳大利亚蓝船旗：#!#white 独立。#!\n#v 原住民旗帜：#!#white [GetCulture('aborigine').GetName]是[Concept('concept_primary_cultures','$concept_primary_culture$')]。#!"
+anz_ast_customise.3.a:0  "共产主义：左上角带锤子与镰刀"
+anz_ast_customise.3.a2:0  "取消“共产主义：左上角带锤子与镰刀”"
+anz_ast_customise.3.b:0  "不带米字旗左上角图案的蓝船旗"
+anz_ast_customise.3.b2:0  "取消“不带米字旗左上角图案的蓝船旗”"
+anz_ast_customise.3.c:0  "红船旗"
+anz_ast_customise.3.c2:0  "取消“红船旗”"
+anz_ast_customise.3.e:0  "无政府共产主义尤里卡旗（中心带锤子与镰刀）"
+anz_ast_customise.3.e2:0  "取消“无政府共产主义尤里卡旗（中心带锤子与镰刀）”"
+anz_ast_customise.3.g:0  "无政府共产主义尤里卡旗（左上角带锤子与镰刀）"
+anz_ast_customise.3.g2:0  "取消“无政府共产主义尤里卡旗（左上角带锤子与镰刀）”"
+anz_ast_customise.3.h:0  "原住民旗帜"
+anz_ast_customise.3.h2:0  "取消“原住民旗帜”"
+anz_ast_customise.3.i:0  "带米字旗左上角图案的蓝船旗"
+anz_ast_customise.3.i2:0  "取消“带米字旗左上角图案的蓝船旗”"
+anz_ast_customise.3.j:0  "辛普森“靴子”旗"
+anz_ast_customise.3.j2:0  "取消“辛普森“靴子”旗”"
+anz_ast_customise.3.k:0  "澳匈帝国"
+anz_ast_customise.3.k2:0  "取消“澳匈帝国”"
+anz_ast_customise.3.z:0  "返回。"
+
+anz_ast_customise.4.t:0  "自定义颜色"
+anz_ast_customise.4.d:0  "#grey “单纯的色彩……能以千百种方式与灵魂对话。” - 奥斯卡·王尔德#!"
+anz_ast_customise.4.f:0  "条件选项：\n#v 红色：#!#white 已通过[GetLawType('law_council_republic').GetName]。#!\n#v 白色：#!#white 已通过[GetLawType('law_migration_controls').GetName]且未通过[GetLawType('law_multicultural').GetName]。#!\n#v 紫色：#!#white 已通过[GetLawType('law_monarchy').GetName]且通过[GetLawType('law_autocracy').GetName]。#!\n#v 粉色：#!#white 已通过[GetLawType('law_womens_suffrage').GetName]。#!\n#v 黑色：#!#white 已通过[GetLawType('law_anarchy').GetName]或通过[GetLawType('law_ethnostate').GetName]。#!\n\n（你可能需要重载游戏以使更改生效。）"
+anz_ast_customise.4.a:0  "红色"
+anz_ast_customise.4.a2:0  "取消“红色”"
+anz_ast_customise.4.b:0  "白色"
+anz_ast_customise.4.b2:0  "取消“白色”"
+anz_ast_customise.4.c:0  "蓝色"
+anz_ast_customise.4.c2:0  "取消“蓝色”"
+anz_ast_customise.4.e:0  "金色"
+anz_ast_customise.4.e2:0  "取消“金色”"
+anz_ast_customise.4.g:0  "绿色"
+anz_ast_customise.4.g2:0  "取消“绿色”"
+anz_ast_customise.4.h:0  "紫色"
+anz_ast_customise.4.h2:0  "取消“紫色”"
+anz_ast_customise.4.j:0  "橙色"
+anz_ast_customise.4.j2:0  "取消“橙色”"
+anz_ast_customise.4.k:0  "粉色"
+anz_ast_customise.4.k2:0  "取消“粉色”"
+anz_ast_customise.4.L:0  "黑色"
+anz_ast_customise.4.L2:0  "取消“黑色”"
+anz_ast_customise.4.m:0  "钢蓝色"
+anz_ast_customise.4.m2:0  "取消“钢蓝色”"
+anz_ast_customise.4.z:0  "返回。"
+
+### DECISIONS
+
+anz_ast_customise_decision:0  "自定义澳大利亚"
+anz_ast_customise_decision_desc:0  "考虑自定义你的国家名称、旗帜和颜色的选项。部分选项仅在特定条件下显示。"
+anz_ast_customise_event_open:0  "自定义事件尚未激活。"
+
+### OTHER
+
+##########################################################################################
+##########################################################################################
+##########################################################################################
+
+
+#### NEW ZEALAND ####
+
+### EVENTS   ---- list all possible conditioned options in flavor text
+
+#start - main menu
+anz_nz_customise.1.t:0  "自定义[ROOT.GetCountry.GetNameNoFormatting]：主菜单"
+anz_nz_customise.1.d:0  "点击选项自定义[ROOT.GetCountry.GetName]。"
+anz_nz_customise.1.f:0  "#ITALIC “身在地狱便是随波逐流；身在天堂便是掌控方向。”#!\n- 乔治·伯纳·萧"
+anz_nz_customise.1.a:0  "国家名称"
+anz_nz_customise.1.b:0  "旗帜"
+anz_nz_customise.1.c:0  "地图颜色"
+anz_nz_customise.1.y:0  "移除决议"
+anz_nz_customise.1.z:0  "完成"
+
+anz_finish_customisation_tt:0  "完成自定义。"
+anz_remove_customisation_tt:0  "#r 关闭事件并永久移除自定义[ROOT.GetCountry.GetNameNoFormatting]的决议。#!"
+
+#names
+anz_nz_customise.2.t:0  "自定义名称"
+anz_nz_customise.2.d:0  "#grey “别人怎么叫你不重要，你如何回应才重要。” - W.C. 菲尔兹#!"
+anz_nz_customise.2.f:0  "条件选项：\n#v 奥特亚罗瓦：#!#white [GetCulture('maori').GetName]是[Concept('concept_primary_cultures','$concept_primary_culture$')]。\n#v 毛利兰：#!#white [GetCulture('maori').GetName]是[Concept('concept_primary_cultures','$concept_primary_culture$')] #italic 或#! 已研究#yellow $socialism$#!。\n#v 神域：#!#white 已通过[GetLawType('law_theocracy').GetName]。#!\n#v 中土：#!#white 已研究#yellow $film$#!。#!\n\n（你需要解除暂停以使更改生效。）"
+anz_nz_customise.2.a:0  "奥特亚罗瓦"
+anz_nz_customise.2.a2:0  "取消“奥特亚罗瓦”"
+anz_nz_customise.2.b:0  "中土"
+anz_nz_customise.2.b2:0  "取消“中土”"
+anz_nz_customise.2.c:0  "神域"
+anz_nz_customise.2.c2:0  "取消“神域”"
+anz_nz_customise.2.e:0  "新西兰（形容词：新西兰人）"
+anz_nz_customise.2.e2:0  "取消“新西兰（形容词：新西兰人）”"
+anz_nz_customise.2.g:0  "毛利兰"
+anz_nz_customise.2.g2:0  "取消“毛利兰”"
+anz_nz_customise.2.z:0  "返回。"
+
+#flags
+anz_nz_customise.3.t:0  "自定义旗帜"
+anz_nz_customise.3.d:0  "#grey “旗帜不会在真空挥舞，这其中蕴含着充满希望的象征意义。” - 阿瑟·C·克拉克#!"
+anz_nz_customise.3.f:0 ""
+anz_nz_customise.3.a:0  "激光奇异鸟"
+anz_nz_customise.3.a2:0  "取消“激光奇异鸟”"
+anz_nz_customise.3.z:0  "返回。"
+
+anz_nz_customise.4.t:0  "自定义颜色"
+anz_nz_customise.4.d:0  "#grey “单纯的色彩……能以千百种方式与灵魂对话。” - 奥斯卡·王尔德#!"
+anz_nz_customise.4.f:0  "条件选项：\n#v 红色：#!#white 已通过[GetLawType('law_council_republic').GetName]。#!\n#v 紫色：#!#white 已通过[GetLawType('law_monarchy').GetName]且通过[GetLawType('law_autocracy').GetName]。#!\n#v 粉色：#!#white 已通过[GetLawType('law_womens_suffrage').GetName]。#!\n#v 黑色：#!#white 已通过[GetLawType('law_anarchy').GetName]或通过[GetLawType('law_multicultural').GetName]。#!\n\n（你可能需要重载游戏以使更改生效。）"
+anz_nz_customise.4.a:0  "红色"
+anz_nz_customise.4.a2:0  "取消“红色”"
+anz_nz_customise.4.b:0  "白色"
+anz_nz_customise.4.b2:0  "取消“白色”"
+anz_nz_customise.4.c:0  "蓝色"
+anz_nz_customise.4.c2:0  "取消“蓝色”"
+anz_nz_customise.4.e:0  "金色"
+anz_nz_customise.4.e2:0  "取消“金色”"
+anz_nz_customise.4.g:0  "绿色"
+anz_nz_customise.4.g2:0  "取消“绿色”"
+anz_nz_customise.4.h:0  "紫色"
+anz_nz_customise.4.h2:0  "取消“紫色”"
+anz_nz_customise.4.j:0  "橙色"
+anz_nz_customise.4.j2:0  "取消“橙色”"
+anz_nz_customise.4.k:0  "粉色"
+anz_nz_customise.4.k2:0  "取消“粉色”"
+anz_nz_customise.4.L:0  "黑色"
+anz_nz_customise.4.L2:0  "取消“黑色”"
+anz_nz_customise.4.m:0  "钢蓝色"
+anz_nz_customise.4.m2:0  "取消“钢蓝色”"
+anz_nz_customise.4.z:0  "返回。"
+
+### DECISIONS
+
+anz_nz_customise_decision:0  "自定义新西兰"
+anz_nz_customise_decision_desc:0  "考虑自定义你的国家名称、旗帜和颜色的选项。部分选项仅在特定条件下显示。"
+anz_nz_customise_event_open:0  "自定义事件尚未激活。"
+
+### OTHER

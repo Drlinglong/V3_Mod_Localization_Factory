@@ -1,0 +1,574 @@
+﻿l_simp_chinese:
+
+anz_federate:0  "联邦化"
+anz_federate_article_short_desc:0  "[SECOND_COUNTRY.GetNameNoFormatting]同意与[FIRST_COUNTRY.GetNameNoFormatting]一起加入澳大利亚联邦。"
+
+## Journal Entries 
+
+afp_je_federation:0  "呼唤联邦"
+
+afp_je_federation_reason:0  "将本大陆的省级政府统一为一个国家，才能最好地服务于人民。然而，统一的民族认同尚未完全形成。我们必须发展澳大利亚认同，并与各行政机构以及殖民部合作，提议吞并我们的邻国。\n$TOOLTIP_DELIMITER$\n@information! 通过与每个[concept_fed_colony]保持#g 友好#!或#red 冷淡#!的[concept_relations]以及通过事件，可以获得或失去[concept_afp_national_unity]。它也根据[GetCulture('australian').GetName] [concept_culture]的民族百分比获得。"
+
+afp_federation_desc:0  "发展[concept_afp_national_unity]"
+all_austrailan_colonies_peace_tt:0  "所有参与的[concept_fed_colony]都处于和平状态"
+afp_je_federation_complete_was_tt:0  "鉴于我们已向西澳大利亚做出承诺："
+afp_je_federation_complete_nzl_tt:0  "鉴于我们已向新西兰做出承诺："
+
+anz_je_federation_goal:0  "[concept_afp_national_unity]达到100%"
+
+# Progress Bar
+anz_federation_bar:0  "[concept_afp_national_unity]"
+anz_federation_bar_desc:0  "[concept_afp_national_unity]进度：[JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%0] ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]/170)"
+
+# saving these countries for loc may be complicated but doable i guess
+anz_fed_rel_was:0  "与西澳大利亚的[concept_relations]"
+anz_fed_rel_sas:0  "与南澳大利亚的[concept_relations]"
+anz_fed_rel_qld:0  "与昆士兰的[concept_relations]"
+anz_fed_rel_nsw:0  "与新南威尔士的[concept_relations]"
+anz_fed_rel_vic:0  "与维多利亚的[concept_relations]"
+anz_fed_rel_tas:0  "与塔斯马尼亚的[concept_relations]"
+anz_fed_rel_nzl:0  "与新西兰/新阿尔斯特的[concept_relations]"
+anz_fed_rel_nms:0  "与新芒斯特的[concept_relations]"
+anz_fed_base:0  "衰落"
+anz_fed_culture:0  "[GetCulture('australian').GetName] [concept_culture]民族百分比"
+
+je_afp_nzl_promises:0  "对新西兰的承诺"
+je_afp_nzl_promises_reason:0  "信守我们对新西兰人民的承诺，他们将成为澳大利亚联邦的平等成员。"
+je_afp_nzl_promises_desc:0  "信守我们对新西兰人民的承诺，他们将成为澳大利亚联邦的平等成员"
+nzl_gdp_greater_than_tt:0 ""
+je_afp_nu_promises:0  "对新阿尔斯特的承诺"
+je_afp_nu_promises_reason:0  "信守我们对新阿尔斯特人民的承诺，他们将成为澳大利亚联邦的平等成员。"
+je_afp_nu_promises_desc:0  "信守我们对新阿尔斯特人民的承诺，他们将成为澳大利亚联邦的平等成员"
+nu_gdp_greater_than_tt:0 ""
+je_afp_nm_promises:0  "对新芒斯特的承诺"
+je_afp_nm_promises_reason:0  "信守我们对新芒斯特人民的承诺，他们将成为澳大利亚联邦的平等成员。"
+je_afp_nm_promises_desc:0  "信守我们对新芒斯特人民的承诺，他们将成为澳大利亚联邦的平等成员"
+nu_gdp_greater_than_tt:0 ""
+
+#nz colonisation changes was causing issues with scoping states, so changing the localization
+promise_nz_gov:0  "#tooltippable #tooltip:new_zealand_state_regions_tt #bold 新西兰#!#!#!至少有#b 1#! [GetBuildingType('building_government_administration').GetName] [concept_building_level]"
+promise_nz_urban:0  "#tooltippable #tooltip:new_zealand_state_regions_tt #bold 新西兰#!#!#!至少有#b 1#! [GetBuildingType('building_urban_center').GetName] [concept_building_level]"
+promise_nz_urban2:0  "#tooltippable #tooltip:south_island_state_regions_tt #bold 南岛#!#!#!至少有#b 1#! [GetBuildingType('building_urban_center').GetName] [concept_building_level]"
+promise_nz_army1:0  "#tooltippable #tooltip:new_zealand_state_regions_tt #bold 新西兰#!#!#!的每个[concept_state]都至少有#b 1#! [GetBuildingType('building_barracks').GetName] [Concept('concept_building_level', '$concept_building_levels$')]"
+promise_nz_army2:0  "#tooltippable #tooltip:new_zealand_state_regions_tt #bold 新西兰#!#!#!的任何[concept_state]都至少有#b 5#! [GetBuildingType('building_barracks').GetName] [Concept('concept_building_level', '$concept_building_levels$')]"
+
+promise_nu_gov:0  "#tooltippable #tooltip:north_island_state_regions_tt #bold 北岛#!#!#!的任何[concept_state]都至少有#b 3#! [GetBuildingType('building_government_administration').GetName] [Concept('concept_building_level', '$concept_building_levels$')]"
+promise_nu_army1:0  "#tooltippable #tooltip:north_island_state_regions_tt #bold 北岛#!#!#!的每个[concept_state]都至少有#b 5#! [GetBuildingType('building_barracks').GetName] [Concept('concept_building_level', '$concept_building_levels$')]"
+promise_nu_army2:0  "#tooltippable #tooltip:north_island_state_regions_tt #bold 北岛#!#!#!的任何[concept_state]都至少有#b 15#! [GetBuildingType('building_barracks').GetName] [Concept('concept_building_level', '$concept_building_levels$')]"
+
+promise_nm_gov:0  "#tooltippable #tooltip:south_island_state_regions_tt #bold 南岛#!#!#!的任何[concept_state]都至少有#b 3#! [GetBuildingType('building_government_administration').GetName] [Concept('concept_building_level', '$concept_building_levels$')]"
+promise_nm_urban:0  "#tooltippable #tooltip:south_island_state_regions_tt #bold 南岛#!#!#!至少有#b 1#! [GetBuildingType('building_urban_center').GetName] [concept_building_level]"
+promise_nm_army1:0  "#tooltippable #tooltip:south_island_state_regions_tt #bold 南岛#!#!#!的任何[concept_state]都至少有#b 10#! [GetBuildingType('building_barracks').GetName] [Concept('concept_building_level', '$concept_building_levels$')]"
+promise_nm_army2:0  "#tooltippable #tooltip:south_island_state_regions_tt #bold 南岛#!#!#!的每个[concept_state]都至少有#b 5#! [GetBuildingType('building_barracks').GetName] [Concept('concept_building_level', '$concept_building_levels$')]"
+
+promise_was_urban:0  "[SCOPE.sState('was_promises_wa_scope').GetName]至少有#b 2#! [GetBuildingType('building_urban_center').GetName] [Concept('concept_building_level', '$concept_building_levels$')]"
+promise_was_rail1:0  "[SCOPE.sState('was_promises_wa_scope').GetName]至少有#b 1#! [GetBuildingType('building_railway').GetName] [concept_building_level]"
+promise_was_rail2:0  "[SCOPE.sState('was_promises_qld_scope').GetName]至少有#b 1#! [GetBuildingType('building_railway').GetName] [concept_building_level]"
+promise_was_rail3:0  "[SCOPE.sState('was_promises_nsw_scope').GetName]至少有#b 1#! [GetBuildingType('building_railway').GetName][concept_building_level]"
+promise_was_rail4:0  "[SCOPE.sState('was_promises_vic_scope').GetName]至少有#b 1#! [GetBuildingType('building_railway').GetName] [concept_building_level]"
+promise_was_rail5:0  "[SCOPE.sState('was_promises_sas_scope').GetName]#b 或#! [SCOPE.sState('was_promises_nt_scope').GetName]至少有#b 1#! [GetBuildingType('building_railway').GetName] [concept_building_level]"
+
+je_afp_was_promises:0  "对西澳大利亚的承诺"
+je_afp_was_promises_reason:0  "信守我们对西澳大利亚人民的承诺，他们将成为澳大利亚联邦的平等成员"
+je_afp_was_promises_desc:0  "信守我们对西澳大利亚人民的承诺，他们将成为澳大利亚联邦的平等成员"
+##########################
+
+
+
+###########################
+
+# can't figure out how to get this to place different text in different journals. So for now, burke localization sets it to not say what it is and just be the % filled for strategic ambiguity 
+#JOURNAL_ENTRY_PROGRESSBAR_FROM_ZERO:0 "[Select_CString( JournalEntry.MakeScope.Var(progress_loc_fed').IsSet, JournalEntry.MakeScope.Var('progress_loc_fed').GetFlagName, Localize('unity_bar'))]"
+#unity_bar:0 "National Unity"
+#unity_bar:0 "National Unity [JournalEntry.GetGoalProgressPercent|%1v]  ([JournalEntry.GetGoalProgressValue|D]/[JournalEntry.GetTotalGoalValue|D])"
+
+#afp_je_independence:0 "war"
+#afp_je_independence_reason:0 "grrr"
+#afp_je_independence_desc:0 "ok"
+
+#Other
+building_uluru:0  "乌鲁鲁"
+pm_default_building_uluru:0  "乌鲁鲁"
+pmg_base_building_uluru:0  "乌鲁鲁"
+modifier_building_group_bg_power_throughput_mult:0  "发电厂吞吐量"
+modifier_building_group_bg_power_throughput_mult_desc:0  "发电厂吞吐量"
+
+#Start up / Intro events
+
+afp_intro1_tt:0  "根据无主地原则，您将获得对所宣称的澳大利亚[Concept('concept_state_region','$concept_state_regions$')]的[concept_colonial_growth]的显著且永久性增加"
+
+#include game concept of crown colony
+afp_federation_events.100.t:0  "新南威尔士罪犯殖民地"
+afp_federation_events.100.d:0  "欢迎游玩澳大利亚和\n新西兰风味包"
+afp_federation_events.100.f:0  "1788年2月7日，阿瑟·菲利普船长在悉尼湾升起了英国国旗，为大英帝国宣称了澳大利亚大陆，永远改变了它的命运。到1836年，殖民地已经发展成为一个繁荣的社区，出现了以羊毛和小麦产业为主的新兴城镇。土地资源丰富，拥有从大分水岭到内陆地区的各种自然景观，包括热带雨林和连绵起伏的平原。\n\n65,000年的持续原住民文化被寻求传播西方文明的定居者颠覆。殖民化开始近50年来，定居者进一步深入内陆，殖民政府的边疆染上了原住民的鲜血。\n\n珀斯、阿德莱德和霍巴特的定居点已获得王室授予的自治权，将这片大陆分裂为四个由总督管理的殖民地，其他地区则主张成立自己的政府。\n\n新南威尔士的未来将是暴力和残酷的。但作为最大、人口最多的殖民地，新南威尔士进入维多利亚时代，掌握着澳大利亚的命运。"
+afp_federation_events.100.a:0  "干杯，伙计！"
+afp_federation_events.100.b:0  "喂兄弟，我现在就想玩新西兰！"
+afp_intro_nz_tt:0  "怀唐伊条约提前发生"
+
+afp_federation_events.101.t:0  "范迪门斯地罪犯殖民地"
+afp_federation_events.101.d:0  "欢迎游玩澳大利亚和\n新西兰风味包"
+afp_federation_events.101.f:0  "范迪门斯地，或称塔斯马尼亚，是英国的殖民地。这片土地土壤肥沃，景观多样，森林资源丰富。英国于1803年在塔斯马尼亚建立了罪犯殖民地，该岛成为罪犯被送往服刑的目的地。\n\n范迪门斯地的政府是殖民地政府，总督由英国王室任命。白人定居者通过任命的议会获得有限的治理代表权，但在地方决策中拥有相当大的参与度。宗教在定居者的生活中扮演着重要角色，英国国教是主要的教派。\n\n塔斯马尼亚的原住民，被称为塔斯马尼亚原住民，拥有比白人定居者早35,000年的丰富文化遗产。定居者与原住民之间的关系充满了冲突，因为定居者侵占原住民土地并扰乱了传统的生活方式。塔斯马尼亚原住民与英国殖民者之间的黑人战争于1932年结束，当时大多数幸存的原住民被迫迁徙。黑人战争导致原住民几乎被毁灭，尽管孤立的暴力行为仍在继续。"
+afp_federation_events.101.a:0  "干杯，伙计！"
+
+afp_federation_events.102.t:0  "西澳大利亚王室殖民地"
+afp_federation_events.102.d:0  "欢迎游玩澳大利亚和\n新西兰风味包"
+afp_federation_events.102.f:0  "西澳大利亚拥有丰富的肥沃土壤、多样的景观和宝贵的自然资源，是一个充满希望和机遇的地方，尽管并非没有挑战。英国政府于1829年在此建立了罪犯殖民地，尽管条件恶劣且偏远，但这片土地为农业和资源提供了巨大的潜力。\n\n西澳大利亚的政府是殖民行政机构，总督由英国王室任命。尽管通过任命的议会和集会在地方治理中拥有相当大的代表性和参与度。宗教在白人定居者的生活中扮演着重要角色，英国国教是主要的教派。\n\n西澳大利亚的原住民拥有比白人定居者早60,000年的丰富文化遗产。他们与定居者之间的关系常常充满冲突，因为定居者侵占原住民土地并扰乱传统生活方式。尽管面临这些挑战，原住民文化和传统仍然坚韧不拔，并继续影响着殖民地的发展。"
+afp_federation_events.102.a:0  "干杯，伙计！"
+
+afp_federation_events.103.t:0  "南澳大利亚王室殖民地"
+afp_federation_events.103.d:0  "欢迎游玩澳大利亚和\n新西兰风味包"
+afp_federation_events.103.f:0  "英国政府于1836年建立了这个殖民地，标志着欧洲人开始在该地区定居，其重点是建立一个自由有序的社会，与新南威尔士和塔斯马尼亚的罪犯殖民地形成对比。这片土地多样而丰富，拥有肥沃的土壤、自然资源和独特的景观，为农业和工业提供了机会。\n\n南澳大利亚政府是一个殖民行政机构，总督由英国王室任命，并通过任命的议会和集会在地方治理中拥有相当大的代表性和参与度。宗教在白人定居者的生活中扮演着重要角色，英国国教是主要的教派。\n\n南澳大利亚的原住民拥有比白人定居者早45,000年的丰富多元的文化遗产。两族之间的关系常常充满冲突，因为定居者侵占原住民土地并扰乱传统生活方式。尽管面临这些挑战，原住民文化和传统仍然坚韧不拔，并继续影响着殖民地的发展。"
+afp_federation_events.103.a:0  "干杯，伙计！"
+
+afp_federation_events.106.t:0  "新西兰王室殖民地"
+afp_federation_events.106.d:0  "欢迎游玩澳大利亚和\n新西兰风味包"
+afp_federation_events.106.f:0  "怀唐伊条约的签署标志着新西兰的一个关键时刻，使英国对这些古老岛屿的管辖权正式化。数百名毛利酋长签署的毛利语版本条约文本承诺共同治理，但许多英国领导人则认为它完全是将原住民主权交给了英国王室。\n\n随着欧洲定居者开始涌入这个新殖民地，他们被肥沃的土壤、丰富的资源和新开始的承诺所吸引，新西兰正处于增长和转型的门槛。然而，白人与毛利人之间新兴的关系充满了紧张，因为他们的世界观、习俗和抱负相互冲突。对土地、资源和权力的斗争迫在眉睫，殖民者试图确立控制权，并将自己的治理体系确立为这片土地的普遍法律。\n\n随着新西兰努力应对这些挑战，对所有人而言，繁荣和进步的承诺似乎遥不可及。定居者与毛利人之间这种微妙平衡的结果，将塑造新西兰的命运，无论是好是坏。"
+afp_federation_events.106.a:0  "很棒！"
+
+afp_federation_events.105.t:0  "新西兰联合部落"
+afp_federation_events.105.d:0  "欢迎游玩澳大利亚和\n新西兰风味包"
+afp_federation_events.105.f:0  "当詹姆斯·库克船长于1769年抵达新西兰时，毛利人很快就意识到，他们已孤立存在了近十五代的世界将发生天翻地覆的变化。外国捕鲸者和传教士带来了土豆、枪械、文字、基督教等等，促使沿海毛利人迅速适应。\n\n作为北部的主导部落，瑙普希与来访的英国人建立了比其他任何部落都更密切的关系，他们是第一个获得滑膛枪的部落，最终亲自与乔治国王打交道。1808年，北方酋长开始在被称为“Te Whakaminenga o Ngā Hapū o Nu Tireni”的会议上会面，认识到需要团结一致才能与欧洲人进行有效的决策和外交。1835年，英国王室承认这个联盟是独立的新西兰联合部落，并接受了我们的新西兰独立宣言。\n\n尽管贸易蓬勃发展，挑战依然存在，包括数十年部落间滑膛枪战争导致的人口减少，新到任的英国驻地官员詹姆斯·巴斯比（James Busby）难以控制的蛮横外国水手，以及强大伦敦人对获取毛利土地进行殖民的迫切兴趣。有一点很清楚：如果联合部落希望在对其土地和人民的持续威胁中捍卫其主权，他们必须保持高度警惕。"
+afp_federation_events.105.a:0  "你好！"
+
+afp_federation_events.104.t:0  "[SCOPE.sCountry('afp_free_colony').GetName]挣脱束缚！"
+afp_federation_events.104.d:0  "[SCOPE.sCountry('afp_free_colony').GetName]不知何故成功摆脱了[ROOT.GetCountry.GetOverlord.GetAdjective]的桎梏，建立了一个独立的王国。如果我们能够与[SCOPE.sCountry('afp_free_colony').GetName]保持良好关系并确保[concept_defensive_pact]，他们仍然可能加入我们组建联邦澳大利亚。"
+afp_federation_events.104.f:0  "大不列颠一定是觉得他们不值得付出努力……"
+afp_federation_events.104.a:0  "我们将把他们带回我们的怀抱，以实现互惠互利。"
+#afp_federation_events.104.b:0 "We don't want those three-headed freaks."
+
+#Commonwealth
+
+afp_federation_events.200.t:0  "帝国会议"
+afp_federation_events.200.d:0  "目睹我们联邦的成功，人们越来越渴望将[ROOT.GetCountry.GetOverlord.GetAdjective]帝国重组为帝国联邦。[SCOPE.sCharacter('aust_overlord_ruler').GetFullName]正在主持第一次帝国会议，以强调帝国统一，协调共同利益政策。"
+afp_federation_events.200.f:0  "\"这个问题既困难又微妙，让人想起凯瑟琳二世女皇对狄德罗的回答，后者指责她没有在国家推行现成的改革，女皇回答说：‘是的，哲学家先生；但你忘记了我们所处的不同位置。你是在纸上工作，纸张能容纳一切，不会阻碍你的想象；但我必须在人体皮肤上工作，它极其敏感，令人担忧。’我认为很明显，任何改变母国与殖民地关系的提议都必须来自殖民地本身。\""
+afp_federation_events.200.a:0  "我们的命运不在大英帝国之内"
+afp_federation_events.200.b:0  "我们可以从更大的合作和认可中受益"
+#tinyurl.com/2p8bap8m 1887 speech source
+afp_commonwealth_route_tt:0  "这将使我们在大英帝国内部获得更平等的地位。\n#i（解锁一项决议）#!\n\n#b（日后仍可寻求独立）#!"
+#afp_independence_route_tt:0 "This will lead us down a path of hostility and total independence from Great Britain.\n(Unlocks a decision)"   [WIP]
+
+#ammend if extend commonwealth to other british dominions
+afp_federation_events.201.t:0  "贝尔福宣言"
+afp_federation_events.201.d:0  "接受我们已实现的日益增长的政治和外交现实，澳大利亚被宣布在大英帝国内享有平等地位，在国内和对外事务的任何方面均不从属，尽管因对王室的共同效忠而联合。"
+afp_federation_events.201.f:0  "\"大英帝国本质上（即使非形式上）依赖积极的理想。自由制度是其生命线。自由合作是其工具。和平、安全和进步是其目标之一……尽管澳大利亚现在是，并且必须永远是其合作性质和程度的唯一评判者，但任何共同事业都不会因此受到危害。就英国和澳大利亚而言，地位平等因此是我们帝国间关系的基本原则。\"\n——阿瑟·贝尔福"
+afp_federation_events.201.a:0  "理应如此"
+afp_federation_events.201.b:0  "或许下次吧"
+afp_balfour_tt:0  "将我们的附庸类型更改为[concept_anz_commonwealth_realm]。\n#b 在我们与大不列颠之间建立10年停战期#!"
+
+#independence route war, not implemented, idea & execution WIP
+afp_federation_events.202.t:0  "与[SCOPE.sCountry('gbr_rival').GetName]开战"
+afp_federation_events.202.d:0 ""
+afp_federation_events.202.f:0 ""
+afp_federation_events.202.a:0  "理应如此"
+afp_federation_events.202.b:0  "或许下次吧"
+
+
+
+# Federation Journal events
+
+afp_federation_events.1.t:0  "联邦呼唤"
+afp_federation_events.1.d:0  "关于共同澳大利亚身份和政府的民族主义思想正在兴起。贸易、国防和移民等问题正在推动这场讨论。成为[SCOPE.sCulture('aus_culture').GetName]意味着什么？我们将面临许多十字路口；我们应该选择哪条道路？"
+afp_federation_events.1.f:0  "\"我有一个愿景，希望建立一个伟大的国家政府，它将以广阔的视野处理所有重大问题，并着眼于整个国家的利益……我们必须考虑的重大问题是，现在是否是时候在这块澳大利亚大陆上建立一个澳大利亚政府和澳大利亚议会了……美国人通过战争实现的事情，澳大利亚人理应可以在和平中实现。\"——亨利·帕克斯爵士"
+afp_federation_events.1.a:0  "联邦化已摆上台面！"
+afp_federation_events.1.a.tt:0  "一系列持续进行的会议将在幕后举行，利益团体和相关方可以对当前时事做出回应，并讨论澳大利亚联邦的可取性和形式。"
+
+afp_federation_events.2.t:0  "《澳大利亚联邦宪法法案》"
+afp_federation_events.2.d:0  "在[ROOT.GetCountry.GetOverlord.GetAdjective]议会通过后，这项历史性立法颁布并建立了澳大利亚联邦。"
+afp_federation_events.2.f:0  "“澳大利亚殖民地的人民，谦卑地仰赖全能上帝的祝福，同意在[ROOT.GetCountry.GetOverlord.GetNameNoFormatting]的[ROOT.GetCountry.GetCustom('fed_crown_title')]以及[ROOT.GetCountry.GetCustom('united_kingdom_title')][ROOT.GetCountry.GetCustom('uk_and_ireland_title')]之下，联合为一个不可分割的联邦共和国，并根据本议会所建立之宪法，以及依本议会之权限，以澳大利亚联邦之名联合。”"
+afp_federation_events.2.a:0  "我们第一次拥有了大陆之国，以及国家之大陆。"
+afp_federation_events.2.b:0  "延迟进程。"
+afp_federate_decision_tt:0  "此事件可随时通过决议重新激活"
+afp_federate_decision_tt2:0  "其他玩家控制的澳大利亚殖民地将不会被纳入澳大利亚联邦"
+
+afp_federated_tt:0  "将澳大利亚殖民地统一为一个联邦。"
+afp_federation_vic_rename_tt:  "[SCOPE.sState('scope_federation_vic').GetName]成为#white 维多利亚#!州"
+afp_federation_qld_rename_tt:  "[SCOPE.sState('scope_federation_qld').GetName]成为#white 昆士兰#!州"
+caca_crown:  "王冠"
+caca_constitution:0  "宪法"
+caca_uk:0  "大不列颠及"
+caca_the:0  "的"
+caca_nothing:0 ""
+caca_and_ireland:0  "和爱尔兰"
+
+afp_federation_events.3.t:0  "联邦会议破裂"
+afp_federation_events.3.d:0  "由于无法就关键问题达成共识，也无法调和彼此不同的政治、经济和文化利益，澳大利亚联邦会议已经结束。"
+afp_federation_events.3.f:0  "尽管会议初期充满乐观和进展，但出现了一些关键的分歧和障碍，最终证明无法克服。会议的破裂让那些曾希望建立一个更统一、更具凝聚力国家的人们感到失望和沮丧。结果，各殖民地将继续作为独立的实体运作，各自拥有自己的政府、经济和认同。联邦化失败对澳大利亚人民来说是一个错失的机会，并为未来进一步的分裂和冲突敞开了大门。"
+afp_federation_events.3.a:0  "那就这样吧。"
+
+afp_federation_events.4.t:0  "食言"
+afp_federation_events.4.d:0  "未能兑现我们对新西兰人民的承诺，导致他们认为其州未从联邦政府获得公平的资源和投资份额，且其利益未能在国家政治讨论中得到充分代表。因此，在其合法权利范围内，他们将脱离联邦。"
+afp_federation_events.4.f:0  "近年来，新西兰对其在澳大利亚联邦中的地位日益不满。分离主义的支持者认为，作为一个富裕且资源丰富的州，新西兰将能够更好地掌握自己的命运，并做出最符合自身利益的决策。"
+afp_federation_events.4.a:0  "滚吧，放羊的。"
+afp_federation_events.4.b:0  "#o 扮演[SCOPE.sCountry('nzl_secede_country').GetName]。#!"
+afp_federation_events.4.c:0  "#o 扮演[SCOPE.sCountry('nm_secede_country').GetName]。#!"
+
+afp_federation_events.5.t:0  "新西兰留下"
+afp_federation_events.5.d:0  "联邦政府通过向新西兰人民提供平等待遇、代表权以及资源和机会，兑现了对新西兰人民的承诺，从而确保了新西兰在澳大利亚联邦内的地位。"
+afp_federation_events.5.f:0  "尽管早先有担忧和独立的呼声，新西兰仍决定留在澳大利亚联邦。此外，新西兰在更大的联邦内部得以保持其独特的文化认同和传统。这些因素为新西兰人民带来了稳定和安全感，并有助于建立对整个联邦的信任和信心。"
+afp_federation_events.5.a:0  "理应如此。"
+
+afp_federation_events.6.t:0  "食言"
+afp_federation_events.6.d:0  "未能兑现我们对西澳大利亚政府的承诺，导致他们认为其州未从联邦政府获得公平的资源和投资份额，且其利益未能在国家政治讨论中得到充分代表。因此，在其合法权利范围内，西澳大利亚将脱离联邦。"
+afp_federation_events.6.f:0  "近年来，西澳大利亚对其在澳大利亚联邦中的地位日益不满。分离主义的支持者认为，作为一个富裕且资源丰富的州，西澳大利亚将能够更好地掌握自己的命运，并做出最符合自身利益的决策。"
+afp_federation_events.6.a:0  "滚吧，沙虫。"
+afp_federation_events.6.b:0  "#r 扮演西澳大利亚。#!"
+
+afp_federation_events.7.t:0  "西澳大利亚留下"
+afp_federation_events.7.d:0  "联邦政府通过向西澳大利亚人民提供平等待遇、代表权以及资源和机会，兑现了对西澳大利亚人民的承诺，从而确保了西澳大利亚在澳大利亚联邦内的地位。"
+afp_federation_events.7.f:0  "尽管早先有担忧和独立的呼声，西澳大利亚仍决定留在澳大利亚联邦。此外，西澳大利亚在更大的联邦内部得以保持其独特的文化认同和传统。这些因素为西澳大利亚人民带来了稳定和安全感，并有助于建立对整个联邦的信任和信心。"
+afp_federation_events.7.a:0  "前进，美丽的澳大利亚！"
+
+afp_federation_events.9.t:0  "食言"
+afp_federation_events.9.d:0  "未能兑现我们对新阿尔斯特政府的承诺，导致他们认为其州未从联邦政府获得公平的资源和投资份额，且其利益未能在国家政治讨论中得到充分代表。因此，在其合法权利范围内，新阿尔斯特将脱离联邦。"
+afp_federation_events.9.f:0  "近年来，新阿尔斯特对其在澳大利亚联邦中的地位日益不满。分离主义的支持者认为，作为一个富裕且资源丰富的州，新阿尔斯特将能够更好地掌握自己的命运，并做出最符合自身利益的决策。"
+afp_federation_events.9.a:0  "滚吧，放羊的。"
+afp_federation_events.9.b:0  "#r 扮演新阿尔斯特。#!"
+
+afp_federation_events.10.t:0  "“新阿尔斯特留下”"
+afp_federation_events.10.d:0  "“联邦政府信守了对新阿尔斯特人民的承诺，为其提供了平等待遇、代表权以及获取资源和机会的途径，确保了新阿尔斯特在澳大利亚联邦内的地位。”"
+afp_federation_events.10.f:0  "“尽管早期存在担忧和独立的呼声，新阿尔斯特仍决定留在澳大利亚联邦内。此外，新阿尔斯特得以在更大的联邦内保持其独特的文化认同和传统。这些因素为新阿尔斯特人民带来了稳定和安全感，并有助于建立对整个联邦的信任和信心。”"
+afp_federation_events.10.a:0  "“理所当然。”"
+
+afp_federation_events.11.t:0  "“违背诺言”"
+afp_federation_events.11.d:0  "“我们未能兑现对新明斯特政府的承诺，导致他们认为其州未从联邦政府获得应有的资源和投资，并且其利益在国家政治讨论中未得到充分代表。因此，新明斯特将在其合法权利范围内脱离联邦。”"
+afp_federation_events.11.f:0  "“近年来，新明斯特对该州在澳大利亚联邦中的地位日益不满。分离主义者认为，作为一个富裕且资源丰富的州，新明斯特将能更好地掌控自己的命运，并做出符合自身最佳利益的决策。”"
+afp_federation_events.11.a:0  "“滚开，你们这群乡巴佬。”"
+afp_federation_events.11.b:0  "“#r 扮演新明斯特。#！”"
+
+afp_federation_events.12.t:0  "“新明斯特留下”"
+afp_federation_events.12.d:0  "“联邦政府信守了对新明斯特人民的承诺，为其提供了平等待遇、代表权以及获取资源和机会的途径，确保了新阿尔斯特在澳大利亚联邦内的地位。”"
+afp_federation_events.12.f:0  "“尽管早期存在担忧和独立的呼声，新明斯特仍决定留在澳大利亚联邦内。此外，新明斯特得以在更大的联邦内保持其独特的文化认同和传统。这些因素为新明斯特人民带来了稳定和安全感，并有助于建立对整个联邦的信任和信心。”"
+afp_federation_events.12.a:0  "“理所当然。”"
+
+afp_federation_events.8.t:0  "“AI强行联邦化”"
+afp_federation_events.8.d:0  "“此事件每5年触发一次，仅当年份至少为1900年且只有AI控制澳大利亚标签时才会触发。新西兰不应与AI联邦化。”"
+afp_federation_events.8.f:0  "“如果您在没有通过控制台触发此事件的情况下看到它，请报告此问题。这是为了在没有人扮演澳大利亚时，创造一定程度的历史准确性。”"
+afp_federation_events.8.a:0  "“哔哔波普 10101110”"
+
+#anti overlord lobby post federation
+afp_federation_events.300.t:0  "“对自治的渴望”"
+afp_federation_events.300.d1:0  "“从一个羽翼未丰的殖民地发展成为一个国家后，我们新获得的地位及其带来的好处，使得[SCOPE.gsInterestGroup('anz_anti_overlord_IG_scope').GetName]对从[SCOPE.sCountry('anz_anti_overlord_scope').GetName]获得更大自治权产生了渴望。”"
+afp_federation_events.300.d2:0  "“从一个羽翼未丰的殖民地发展成为一个国家后，我们新获得的地位及其带来的好处，使得[SCOPE.gsInterestGroup('anz_anti_overlord_IG_scope').GetName]对从[SCOPE.sCountry('anz_anti_overlord_scope').GetName]获得更大自治权产生了渴望。\n\n然而，坚定的保皇党人[SCOPE.sCharacter('anz_pro_overlord_ig_leader_scope').GetFullName]也做出了自己的努力。”"
+afp_federation_events.300.f:0  "““对自由的追求不分国界；它是一个决心塑造自己未来的人民永不停止的追求。在反抗的熔炉中，自由精神熊熊燃烧，挣脱帝国统治的枷锁。””"
+afp_federation_events.300.a:0  "“自由是崇高的追求。”"
+afp_federation_events.300.b:0  "“我们时代的新辩论。”"
+afp_federation_events.300.c:0  "“我听到了叛国的声音吗？”"
+anz_empire_antagonism:0  "“帝国对立”"
+
+# Unity events
+afp_unity_events.1.t:0  "“铁路连接澳大利亚人”"
+afp_unity_events.1.d:0  "“[SCOPE.sState('afp_rail_state').GetName]的新铁路以前所未有的方式连接了整个国家，促进了人员、商品和思想的流动。这使得殖民地之间产生了共同的经济利益，并形成了独特的澳大利亚认同。”"
+afp_unity_events.1.f:0  "“尽管铁路有助于连接大部分孤立的殖民地，但它们在每个殖民地都使用不同的轨距建造，这使得人员和货物跨大陆运输变得复杂。一个统一的全国政府可以更好地确保标准化。”"
+afp_unity_events.1.a:0  "“这让我们更紧密地联系在一起。”"
+
+afp_unity_events.2.t:0  "“电子通信连接澳大利亚人”"
+afp_unity_events.2.d:0  "“新技术使人们更容易相互交流，这正在培养一种强烈的共享文化感和[concept_afp_national_unity]。”"
+afp_unity_events.2.f:0  "“澳大利亚的许多人被广袤的土地隔开。新的无线电和电信服务以前所未有的方式将人们连接起来，有助于在分散的移民和定居者中创造一种共享文化。联邦制政治家一直在利用这项技术协调他们为统一澳大利亚所做的努力。”"
+afp_unity_events.2.a:0  "“这让我们更紧密地联系在一起。”"
+
+afp_unity_events.3.t:0  "“公共教育”"
+afp_unity_events.3.d:0  "“[GetInterestGroupVariant('ig_devout',GetPlayer).GetNameWithCountryVariant]对教育的垄断已被打破！随着宗派教学被边缘化，我们可以通过在学校中培养[SCOPE.sCulture('aus_culture').GetName]认同来启动一个国家建设项目。”"
+afp_unity_events.3.f:0  "“澳大利亚的大多数人认为自己更像英国人而非澳大利亚人。此外，人口中普遍存在几种基督教教派，因此，为了公平与和谐，公立学校必须保持世俗教学。随着政府对教育的更大控制，课程将成为国家的工具。”"
+afp_unity_events.3.a:0  "“建立一个国家建设课程！”"
+afp_unity_events.3.b:0  "“还是不要了。”"
+afp_unity_events.3.c:0  "“宗教仍应是课程的一部分。”"
+
+afp_unity_events.4.t:0  "“殖民地间关税”"
+afp_unity_events.4.d:0  "“澳大利亚殖民地之间的关税为各政府提供了收入，但代价是限制了跨国贸易和竞争。[GetInterestGroupVariant('ig_industrialists',GetPlayer).GetNameWithCountryVariant]认为，将澳大利亚联邦化将增强每个殖民地的经济。然而，[GetInterestGroupVariant('ig_rural_folk',GetPlayer).GetNameWithCountryVariant]反对这一想法，并表示如果我们支持他们在此事上的利益，他们愿意支持我们的财政。”"
+afp_unity_events.4.f:0  "“殖民地之间的关税不仅增加了商品的成本，贸易限制也使得旅行变得困难，在边境处海关官员检查行李时会造成长时间延误。另一方面，[GetInterestGroupVariant('ig_rural_folk',GetPlayer).GetNameWithCountryVariant]认为取消对当地产业的保护将严重损害农民的生计。”"
+afp_unity_events.4.a:0  "“鼓励实业家的联邦主义运动。”"
+afp_unity_events.4.b:0  "“支持乡村派的利益。”"
+
+afp_unity_events.5.t:0  "“澳大利亚军队报告”"
+afp_unity_events.5.d:0  "“[SCOPE.sCountry('afp_gp').GetName]日益增多地介入[SCOPE.sStrategicRegion('afp_sr').GetName]事务，这引起了殖民地方面的担忧，唯恐他们侵犯或阻碍我们的利益。[SCOPE.sCharacter('af_unity_general_scope').GetPrimaryRoleTitle][SCOPE.sCharacter('af_unity_general_scope').GetFullName]的报告强烈建议殖民地联邦化，以更好地组织国防。”"
+afp_unity_events.5.f:0  "“[SCOPE.sCharacter('af_unity_general_scope').GetPrimaryRoleTitle][SCOPE.sCharacter('af_unity_general_scope').GetLastNameNoFormatting]指出，殖民地军队不仅缺乏凝聚力，也缺乏适合保卫大陆的组织、训练和装备。他提议建立一个能使各殖民地联合起来进行共同防御的组织；“防卫力量应立即走上正轨；然而，若没有各殖民地军队的联邦化，这是根本不可能的。””"
+afp_unity_events.5.a:0  "“允许报纸刊登报告。”"
+afp_unity_events.5.b:0  "“审查报告！”"
+
+afp_unity_events.6.t:0  "“淘金潮涌入引发抗议”"
+afp_unity_events.6.d:0  "“[GetInterestGroupVariant('ig_trade_unions',GetPlayer).GetNameWithCountryVariant]召集了一群人抗议成群结队的移民淘金者，他们认为这些淘金者正在窃取他们的财富。淘金者则认为需要一个全国性政府来制定统一的移民政策，以确保有效的边境管制。然而，[GetInterestGroupVariant('ig_petty_bourgeoisie',GetPlayer).GetNameWithCountryVariant]指出，这些移民可以成为国家的收入来源。”"
+afp_unity_events.6.f:0  "“尽管世界各地许多人都被我们发现的黄金和发财梦想所吸引，但那些语言、服饰、食物和习俗差异显著的其他族裔的人，却受到了极大的怀疑和蔑视。这些群体往往不得不选择欧洲人已经废弃的矿区，但他们仍然会被指控占据白人的矿权。虽然一些淘金者发了财，但大多数人却因为奸商的哄抬物价、昂贵的采矿许可证和设备而赔钱。”"
+afp_unity_events.6.a:0  "“允许抗议。”"
+afp_unity_events.6.b:0  "“镇压抗议。”"
+afp_unity_events.6.c:0  "“我们必须考虑[GetLawType('law_protected_speech').GetName]或[GetLawType('law_multicultural').GetName]哪一个具有法律优先权。”"
+
+afp_unity_events.600.t:0  "“法律困境”"
+afp_unity_events.600.d:0  "“[GetInterestGroupVariant('ig_trade_unions',GetPlayer).GetNameWithCountryVariant]最近针对移民的抗议，使我们在[GetLawType('law_protected_speech').GetName]和[GetLawType('law_multicultural').GetName]两项法律之间面临一个法律困境。我们必须决定言论自由是否凌驾于一个人不因民族而被歧视的权利之上。”"
+afp_unity_events.600.f:0  "“抗议活动大体上是和平的，但也发生了一些肢体暴力和恐吓行为。我们的法律规定，任何人不得因其种族或民族而受到歧视，但与此同时，法律也保障言论自由。我们必须确定这些原则是否存在例外，并以此作为法律先例。”"
+afp_unity_events.600.a:0  "“言论自由不等于剥夺他人权利的自由。”"
+afp_unity_events.600.b:0  "“言论自由是自由的核心。”"
+
+afp_unity_events.7.t:0  "“加纳卡人问题”"
+afp_unity_events.7.d:0 "The [GetInterestGroupVariant('ig_trade_unions',GetPlayer).GetNameWithCountryVariant] are concerned about cheap, non-White labour. They argue importing Kanakas lowers wages, standard of living and steals non-white jobs. They argue a national government would be better situated than the colonies to control immigration. The [GetInterestGroupVariant('ig_landowners',GetPlayer).GetNameWithCountryVariant] argue cheap Kanaka labour is essential to the agricultural industry.
+afp_unity_events.7.f:0  "““黑鸟行动”是招募加纳卡人（美拉尼西亚人）的做法，通常通过虚假合同欺骗他们，有时甚至绑架。除了廉价劳动力，种植园主还看重他们，认为他们是天生适合昆士兰热带地区的工人。”"
+afp_unity_events.7.a:0  "“鼓励[GetInterestGroupVariant('ig_trade_unions',GetPlayer).GetNameWithCountryVariant]。”"
+afp_unity_events.7.b:0  "“支持[GetInterestGroupVariant('ig_landowners',GetPlayer).GetNameWithCountryVariant]。”"
+afp_kanaka_tt:0  "“此选项将启用一个可切换的决议，以利用加纳卡劳工来造福农业。”"
+
+
+afp_unity_events.8.t:0  "““他乡客””"
+afp_unity_events.8.d:0  "“淘金潮吸引了来自澳大利亚东部的移民浪潮，他们带来了对统一澳大利亚的热情。然而，我们已建立的沿海和农业社区不信任这些新思想，并对现状的改变抱有敌意。我们的支持可以塑造[ROOT.GetCountry.GetName]的未来。”"
+afp_unity_events.8.f:0  "“近期在西澳大利亚发现的大型冲积金矿吸引了许多来自东部的移民，当地人称他们为“他乡客”。人口的巨大增长正在剧烈改变社会和政治格局。此前，权力主要掌握在“沙袋鼠”手中，即少数富裕的沿海和农业家庭，他们现在正受到一股热衷于民族主义、平等主义和共和主义的新移民浪潮的威胁。”"
+afp_unity_events.8.a:0  "“联邦制是我们的未来。”"
+afp_unity_events.8.b:0  "“我们必须专注于我们的根基。”"
+
+afp_unity_events.9.t:0  "““他乡客””"
+afp_unity_events.9.d:0  "“随着移民潮涌向西澳大利亚的淘金热，对全国政府的热情也随之高涨。我们可以派遣竞选组织者，在西部领导联邦主义运动。”"
+afp_unity_events.9.f:0  "“近期在西澳大利亚发现的大型冲积金矿吸引了许多来自澳大利亚东部的移民，西部当地人称他们为“他乡客”。人口的巨大增长正在剧烈改变社会和政治格局。此前，权力主要掌握在“沙袋鼠”手中，即少数富裕的沿海和农业家庭，他们现在正受到一股热衷于民族主义、平等主义和共和主义的新移民浪潮的威胁。”"
+afp_unity_events.9.a:0  "“派遣联邦主义宣传员。”"
+afp_unity_events.9.b:0  "“我们不会干涉。”"
+
+afp_unity_events.10.t:0  "“[SCOPE.sCountry('nz_country').GetNameNoFlag]对联邦化的担忧”"
+afp_unity_events.10.d:0  "“[SCOPE.sCountry('nz_country').GetName]代表表达了对加入联邦的担忧。他们提出了需要一支双重军队、一个双重政府所在地以及弥补关税同盟收入损失的手段。我们可以承诺提供保障来解决这些担忧。”"
+afp_unity_events.10.f:0  "““我所希望和渴望的，是现在时机已经到来……一个世界上前所未见的宪法将赋予一个自由民族；而当我今天听到这些言论时……我的心开始沉沦，那些看似近在咫尺的希望似乎正在消逝。””"
+afp_unity_events.10.a:0  "“向[SCOPE.sCountry('nz_country').GetAdjective]代表保证。”"
+afp_unity_events.10.b:0  "“我们不需要他们。”"
+
+afp_unity_events.1001.t:0  "“[SCOPE.sCountry('nms_country').GetNameNoFlag]对联邦化的担忧”"
+afp_unity_events.1001.d:0  "“[SCOPE.sCountry('nms_country').GetName]代表表达了对加入联邦的担忧。他们提出了需要一支双重军队、一个双重政府所在地以及弥补关税同盟收入损失的手段。我们可以承诺提供保障来解决这些担忧。”"
+afp_unity_events.1001.f:0  "““我所希望和渴望的，是现在时机已经到来……一个世界上前所未见的宪法将赋予一个自由民族；而当我今天听到这些言论时……我的心开始沉沦，那些看似近在咫尺的希望似乎正在消逝。””"
+afp_unity_events.1001.a:0  "“向[SCOPE.sCountry('nms_country').GetAdjective]代表保证。”"
+afp_unity_events.1001.b:0  "“我们不需要他们。”"
+
+afp_promisenzl_tt:0  "“我们将向[SCOPE.sCountry('nz_country').GetName]作出承诺，如果这些承诺在联邦化后#bold 10年#!内未能完成，将导致[SCOPE.sCountry('nz_country').GetNameNoFlag]合法#r 脱离联邦#!。\N#WHITE 承诺将至少包括在任意#tooltippable #tooltip:new_zealand_state_regions_tt #bold 新西兰#!#!#!州建立：#!\n• #bold 1#!座[GetBuildingType('building_urban_center').GetName][concept_building_level]\n• #bold 1#!座[GetBuildingType('building_government_administration').GetName][Concept('concept_building_level', '$concept_building_levels$')]\n• 任意#tooltippable #tooltip:new_zealand_state_regions_tt #bold 新西兰#!#!#!州建立#bold 5#!座[GetBuildingType('building_barracks').GetName][Concept('concept_building_level', '$concept_building_levels$')]，#b 或#!在每个#tooltippable #tooltip:new_zealand_state_regions_tt #bold 新西兰#!#!#!州建立[GetBuildingType('building_barracks').GetName][Concept('concept_building_level', '$concept_building_levels$')]。\n”"
+afp_rejectnzl_tt:0  "“如果我们联邦化澳大利亚，[SCOPE.sCountry('nz_country').GetName]将不会加入我们。”"
+
+afp_promisenms_tt:0  "“我们将向[SCOPE.sCountry('nms_country').GetName]作出承诺，如果这些承诺在联邦化后#bold 10年#!内未能完成，将导致[SCOPE.sCountry('nms_country').GetNameNoFlag]合法#r 脱离联邦#!。\N#WHITE 承诺将至少包括在任意#tooltippable #tooltip:new_zealand_state_regions_tt #bold 新西兰#!#!#!州建立：#!\n• #bold 1#!座[GetBuildingType('building_urban_center').GetName][concept_building_level]在任意#tooltippable #tooltip:new_zealand_state_regions_tt #bold 新西兰#!#!#!州\n• #bold 1#!座[GetBuildingType('building_government_administration').GetName][Concept('concept_building_level', '$concept_building_levels$')]在任意#tooltippable #tooltip:new_zealand_state_regions_tt #bold 新西兰#!#!#!州\n• 任意#tooltippable #tooltip:new_zealand_state_regions_tt #bold 新西兰#!#!#!州建立#bold 5#!座[GetBuildingType('building_barracks').GetName][Concept('concept_building_level', '$concept_building_levels$')]，#b 或#!在每个#tooltippable #tooltip:new_zealand_state_regions_tt #bold 新西兰#!#!#!州建立[GetBuildingType('building_barracks').GetName][Concept('concept_building_level', '$concept_building_levels$')]。\n”"
+afp_rejectnms_tt:0  "“如果我们联邦化澳大利亚，[SCOPE.sCountry('nms_country').GetName]将不会加入我们。”"
+
+afp_unity_events.11.t:0  "“[SCOPE.sCountry('was_country').GetNameNoFlag]对联邦化的担忧”"
+afp_unity_events.11.d:0  "“[SCOPE.sCountry('was_country').GetName]代表表达了对加入联邦的担忧。由于进口不平衡，他们将因关税损失而失去大量收入。此外，巨大的地理距离也威胁到经济和社会交流。我们可以承诺提供保障来解决这些担忧。”"
+afp_unity_events.11.f:0  "““关于‘一个民族，一面旗帜’的许多情绪已经表达出来，仿佛那会带来一个繁荣的时代。就我而言，我无法看出我们目前除了一个民族之外还有什么；事实上，我们比任何联邦方案更能有效地成为一个民族，至于‘一面旗帜’，它或许能成为一张不错的床罩，但我担心它远远不够大，无法覆盖东方任何一个殖民地的失业者。”——《西澳大利亚报》，1899年。”"
+afp_unity_events.11.a:0  "“向[SCOPE.sCountry('was_country').GetAdjective]代表保证。”"
+afp_unity_events.11.b:0  "“我们不需要他们。”"
+afp_promisewas_tt:0  "“我们将向[SCOPE.sCountry('was_country').GetName]作出承诺，如果这些承诺在联邦化后#bold 15年#!内未能完成，将导致[SCOPE.sCountry('was_country').GetNameNoFlag]合法#r 脱离联邦#!。\N#WHITE 承诺将包括：#!\n• 从[SCOPE.sStateRegion('was_state_region').GetName]经南澳大利亚或北领地通往#tooltippable #tooltip:eastern_australia_state_regions_tt #bold 澳大利亚东部各州#!#!#!的[GetBuildingType('building_railway').GetName]连接线\n• 在[SCOPE.sStateRegion('was_state_region').GetName]建立#bold 2#!座[GetBuildingType('building_urban_center').GetName][Concept('concept_building_level', '$concept_building_levels$')]。”"
+afp_ignorewas_tt:0  "“如果我们联邦化澳大利亚，[SCOPE.sCountry('was_country').GetName]将不会加入我们。”"
+
+afp_unity_events.12.t:0  "“托马斯·奥斯汀”"
+afp_unity_events.12.d:0  "“作为一名开创性的牧民，托马斯·奥斯汀一直在从英国引入各种物种。他最新的计划是在自己的庄园里放养两打繁殖兔。”"
+afp_unity_events.12.f:0  "““引进几只兔子没什么大碍，或许还能带来一丝家乡的味道，顺便还能打猎消遣。””"
+afp_unity_events.12.a:0  "“能出什么问题呢？”"
+afp_unity_events.12.b:0  "“我们应该制止此事。”"
+
+afp_unity_events.13.t:0  "“兔灾失控”"
+afp_unity_events.13.d:0  "“自托马斯·奥斯汀放生两打繁殖兔以来，几年过去了。它们迅速繁殖并遍布澳大利亚，摧毁了农作物和牧场，严重影响了农民。”"
+afp_unity_events.13.f:0  "“由于几乎没有本地捕食者，澳大利亚的理想环境导致兔子数量在整个大陆呈爆炸式增长，丝毫没有减缓的迹象。对农民收成和生计的损害威胁着新生的殖民地。”"
+afp_unity_events.13.a:0  "“我们必须修建一道防兔篱笆。”"
+afp_unity_events.13.b:0  "“无视他们的恳求。”"
+
+afp_unity_events.14.t:0  "“澳洲野犬的威胁”"
+afp_unity_events.14.d:0  "“防兔篱笆已显示出阻挡大型动物的希望。牧民们现在呼吁修建延伸的篱笆，以保护他们的牲畜免受野生澳洲野犬的侵害。我们需要与邻近的州合作，修建一道有效的篱笆。”"
+afp_unity_events.14.f:0  "“防兔篱笆在预期目的上收效有限。一些小动物被发现会从下方挖掘并穿过。然而，它在围堵大型动物方面取得了更大的成功。由于某些地区肥沃土地稀少，牧场需要非常大以作弥补。鉴于管理如此广阔土地的困难，牧民们呼吁建立一套篱笆系统，以帮助保护他们的牲畜免受野生捕食者，即澳洲野犬的侵害。这样的篱笆将需要异常之长，大约5600公里，并需要其他殖民地在建造和维护方面的合作。”"
+afp_unity_events.14.a:0  "“澳洲野犬篱笆将是世界上最长的建筑之一！”"
+afp_unity_events.14.b:0  "“这超出了我们的能力。”"
+building_dingo_fence:0  "“澳洲野犬篱笆”"
+pm_default_building_dingo_fence:0  "“澳洲野犬篱笆”"
+pmg_base_building_dingo_fence:0  "“澳洲野犬篱笆”"
+
+afp_unity_events.15.t:0  "“肆虐的丛林大火”"
+afp_unity_events.15.d:0  "“源自[SCOPE.sCountry('neighbor_bushfire_country').GetName]的一场丛林大火迅速失控，吞噬了乡村。有人说，如果政府之间有更多的合作和管理，这本可以避免。”"
+afp_unity_events.15.f:0  "““我们看着火势悄悄向南蔓延，我心想，天哪，我们能挺过去。然后风向变了。从火线处的小山坡上，火势就那样向上蔓延，简直是飞速。强度惊人，我们以为能扑灭它，但我们办不到。我有18只退役的格力犬，其中13只我不得不听着它们被烧死，那简直是一场噩梦。””"
+afp_unity_events.15.a:0  "“显然，[SCOPE.sCountry('neighbor_bushfire_country').GetName]需要我们的监督。”"
+afp_unity_events.15.b:0  "“加强殖民地间通信。”"
+
+afp_unity_events.151.t:0  "“我们的丛林大火越过边境”"
+afp_unity_events.151.d:0  "“[SCOPE.sState('bushfire_state').GetName]发生了丛林大火，不幸蔓延到了[SCOPE.sCountry('bushfire_victim_country').GetName]。如果我们不小心，这可能会演变成一场外交事件。”"
+afp_unity_events.151.f:0  "““那就像地狱之门。没有其他方式可以形容。一切都很快从光明转为黑暗——阳光被烟雾遮蔽，你唯一能看到的只有透过烟雾的火光。灰烬开始落下，黑暗降临了。””"
+afp_unity_events.151.a:0  "“向[SCOPE.sCountry('bushfire_victim_country').GetName]提供援助。”"
+afp_unity_events.151.b:0  "“真是糟糕，[SCOPE.sCountry('bushfire_victim_country').GetName]，我们可控制不了天气！”"
+national_unity_average_negative_effect_tt:0  "“失去10 [concept_afp_national_unity]”"
+afp_offer_bushfire_relief:0  "“提供紧急丛林大火救援”"
+
+afp_unity_events.16.t:0  "“贿赂丑闻”"
+afp_unity_events.16.d:0  "“殖民地新闻界的调查报告曝光了[SCOPE.sCharacter('afp_corrupt_leader').GetFullName]涉嫌普遍腐败。公众对这起丑闻的愤怒正在加剧对政府机构的不满和不信任，并引发了对系统性改革的呼吁。”"
+afp_unity_events.16.f:0  "“[SCOPE.sCharacter('afp_corrupt_leader').GetFullName]已被发现有确凿证据收取[GetInterestGroupVariant('ig_landowners',GetPlayer).GetNameWithCountryVariant]的贿赂，以换取有利的政治待遇。此外，这些交易在[SCOPE.gsInterestGroup('afp_corrupt_ig').GetName]中被曝光为公开的秘密，揭示了殖民地政府缺乏透明度、问责制和诚信的根深蒂固的问题。在这起丑闻发生后，其他[concept_fed_colony]担心这对澳大利亚联邦化的影响。”"
+afp_unity_events.16.a:0  "“让[SCOPE.sCharacter('afp_corrupt_leader').GetFullName]承担责任，希望风波平息。”"
+ afp_unity_events.16.a.tt:0  "“[SCOPE.sCharacter('afp_corrupt_leader').GetFullName]将辞职。”"
+afp_unity_events.16.b:0  "“联邦化反腐措施。”"
+afp_unity_events.16.c:0  "“一支帝国军事分遣队将把所有人管得服服帖帖！”"
+
+afp_unity_events.17.t:0  "“澳式足球”"
+afp_unity_events.17.d:0  "“一种新的运动出现了，它借鉴了英式足球、盖尔式足球和橄榄球的元素，并加入了独特的澳大利亚特色。澳式足球在整个大陆变得非常受欢迎。我们可以鼓励在澳大利亚各地成立体育俱乐部，从而促进一种独特的[SCOPE.sCulture('aus_culture').GetName]认同感。”"
+afp_unity_events.17.f:0  "“除了饮酒，年轻人几乎没有什么消遣活动。作为板球休赛期对一项“男子汉”冬季运动的需求而诞生，一种新的足球风格出现了，它涉及球员在场上相互踢传球。这种加快比赛速度的方式以及不同文化和宗教群体的融合，赋予了这项运动独特的澳大利亚认同。自从两所学校之间的第一场比赛以来，澳式足球热潮已准备席卷全国。”"
+afp_unity_events.17.a:0  "“别玩了，回去工作！”"
+afp_unity_events.17.b:0  "“我们应该推广澳式比赛！”"
+
+afp_unity_events.18.t:0  "“殖民地间争端”"
+afp_unity_events.18.d:0  "“与邻国[SCOPE.sCountry('neighbor_dispute_country').GetName]之间关于小额关税和边境问题的争端已耗尽外交解决的努力。下一步是由[ROOT.GetCountry.GetOverlord.GetName]进行仲裁，然而，相隔半个地球，发送和接收通信可能需要一整年。”"
+afp_unity_events.18.f:0  "“总督和其他王室代表权力中的灰色地带，导致澳大利亚殖民地需要枢密院的裁决。然而，英国和澳大利亚之间的旅行仍主要依赖强劲的盛行西风，并且需要在途中停靠港口，导致漫长的旅行时间。通信往往需要很长时间，以至于及时解决某些事项变得不可能。”"
+afp_unity_events.18.a:0  "“一个负责监督各州争端的澳大利亚全国政府将更有效率……”"
+afp_unity_events.18.b:0  "“这样就好。”"
+
+afp_unity_events.19.t:0  "“丛林侠盗”"
+afp_unity_events.19.d:0  "“一名臭名昭著的罪犯，人称“丛林侠盗”，在澳大利亚的几个殖民地 совершил一系列大胆的抢劫。他来往于我们与[SCOPE.sCountry('neighbor_bushranger_country').GetName]之间的边境，暴露出这片广阔土地上不同殖民地之间警务协调的缺陷，并威胁要鼓励更多的盗匪行为。随着犯罪狂潮的持续，公众对警方进展缓慢感到越来越沮丧，并担忧自己的安全。”"
+afp_unity_events.19.f:0  "““丛林侠盗”生于贫困，在澳大利亚崎岖的边境地区长大，从小被迫自力更生，很快学会了在严酷的丛林环境中生存。起初是小偷小摸，后来逐渐演变为更严重的罪行。凭借对丛林的了解和伪装的精湛技艺，“丛林侠盗”总能比法律领先一步，一次又一次地逃脱逮捕。这名丛林侠盗经常在边境之间穿梭，利用各个新生殖民地警察部门之间缺乏协调的漏洞。”"
+afp_unity_events.19.a:0  "“调查建立一个统一的跨殖民地执法系统。”"
+afp_unity_events.19.b:0  "“我们应该招募他的才能。”"
+
+afp_unity_events.20.t:0  "“全国公报”"
+afp_unity_events.20.d:0  "“《公报》在澳大利亚的每个城市和城镇出版，其兴起在[SCOPE.sCulture('aus_culture').GetName]认同的出现中扮演着重要角色。它将新闻和思想传播到原本孤立和断裂的殖民地，展现了不同农村社区的共同困境是一种所有人都能产生共鸣的共享经历。”"
+afp_unity_events.20.f:0  "这基本上就是报纸的天下。几乎人人都能阅读，而且几乎人人都有闲暇阅读。报纸媒体几乎是澳大利亚殖民地出版的唯一文学形式。它垄断了大部分思想。报纸占据了所有文学的版面，并堵塞了所有其他信息来源的渠道；绝大多数人无法从任何其他地方获取信息。"
+afp_unity_events.20.a:0  "这是一个控制大众的工具。"
+afp_unity_events.20.b:0  "我们将成为一个公共言论开放的土地！"
+afp_freepress_movement_modifier:0  "言论自由运动"
+
+afp_unity_events.21.t:0  "艺术与手工艺运动"
+afp_unity_events.21.d:0  "作为对时代大规模生产的反动，一股国际潮流正蔓延至整个[ROOT.GetCountry.GetOverlord.GetAdjective]帝国，该运动旨在通过精湛的工艺将艺术融入日常生活。我们可以资助我们的艺术家和手工艺人，以发展我们独具特色的[SCOPE.sCulture('aus_culture').GetName]风格，使其与世界其他地区截然不同。"
+afp_unity_events.21.f:0  "这种新风格的灵感来源于过去英式建筑，不再那么严谨，而更注重功能、舒适性以及展示原材料之美，艺术与手工艺风格的建筑朴实无华、不拘一格，营造出一种舒适亲切的氛围。"
+afp_unity_events.21.a:0  "资助艺术家。"
+afp_unity_events.21.b:0  "资助建筑师。"
+afp_unity_events.21.c:0  "我们负担不起。"
+
+afp_unity_events.22.t:0  "爱国颂歌"
+afp_unity_events.22.d:0  "在[SCOPE.sState('anz_choir_state').GetName]举行的一场大型合唱音乐会演唱了世界各国国歌；然而，却没有一首属于澳大利亚的音符。为此，一首名为《前进，美丽的澳大利亚》的新爱国歌曲被创作出来，并在联邦主义者中广受欢迎。我们可以采取行动来培养对共同澳大利亚的爱国主义，或者试图将其扼杀。"
+afp_unity_events.22.f:0  "澳大利亚的儿女，让我们欢欣鼓舞，因为我们年轻且自由；我们拥有金色的土地和辛勤耕耘的财富，家园被海洋环绕；我们的土地充满大自然的馈赠，美丽富饶而稀有；在历史的篇章上，让每一个阶段都前进，美丽的澳大利亚。让我们以欢乐的曲调歌唱，前进，美丽的澳大利亚。当英勇的库克从不列颠扬帆起航，跨越广阔的海洋，真正的英式勇气激励着他，直到他踏上我们的海岸。然后他在这里升起古老英格兰的旗帜，勇士的旗帜；“尽管她有缺点我们依然爱她”，“不列颠统治着波涛。”那么让我们以欢乐的曲调歌唱，前进，美丽的澳大利亚。当世界其他国家从远方注视我们时，我们将声名鹊起，闪耀光芒，如同我们光荣的南十字星；来自英格兰的土地和祖国，美丽的苏格兰和爱尔兰，让所有人同心协力，前进美丽的澳大利亚。那么让我们以欢乐的曲调歌唱，前进，美丽的澳大利亚。"
+afp_unity_events.22.a:0  "制止这种胡闹。"
+afp_unity_events.22.b:0  "一首团结人民的歌曲！"
+
+afp_unity_events.23.t:0  "[GetInterestGroupVariant('ig_intelligentsia',GetPlayer).GetNameWithCountryVariant]对联邦的担忧"
+afp_unity_events.23.d:0  "随着联邦化讨论的进行，[SCOPE.sCharacter('intelligentsia_leader').GetFullName]对这一事业表示了保留，理由是[SCOPE.sCountry('afp_religious_country').GetName]的[GetInterestGroupVariant('ig_devout',GetPlayer).GetNameWithCountryVariant]影响力强大。如果我们的殖民地联合起来，[GetInterestGroupVariant('ig_intelligentsia',GetPlayer).GetNameWithCountryVariant]担心教士对我们社会和政治的影响力会增加。"
+afp_unity_events.23.f:0  "我们不能允许神职人员的影响力主宰我们国家的未来。他们在一个新联邦中影响力的增加只会导致社会倒退，科学进步和理性思维将被扼杀。我恳请您考虑这会对我们国家的进步产生负面影响。"
+afp_unity_events.23.a:0  "联邦是未来，你绝不能阻碍进步！"
+afp_unity_events.23.b:0  "[GetInterestGroupVariant('ig_intelligentsia',GetPlayer).GetNameWithCountryVariant]是正确的！"
+afp_unity_events.23.c.tt:0  "[SCOPE.sCharacter('intelligentsia_leader').GetFullName]将辞职。"
+
+afp_unity_events.24.t:0  "[GetInterestGroupVariant('ig_devout',GetPlayer).GetNameWithCountryVariant]对联邦的担忧"
+afp_unity_events.24.d:0  "随着联邦化讨论的进行，[SCOPE.sCharacter('devout_leader').GetFullName]对这一事业表示了保留，理由是[SCOPE.sCountry('afp_intelligentsia_country').GetName]的[GetInterestGroupVariant('ig_intelligentsia',GetPlayer).GetNameWithCountryVariant]影响力强大。如果我们的殖民地联合起来，[GetInterestGroupVariant('ig_devout',GetPlayer).GetNameWithCountryVariant]担心反教士对我们社会和政治的影响力会增加。"
+afp_unity_events.24.f:0  "他们的进步思想和世俗价值观是对我们社会传统道德结构的一种威胁。我担心将这些州纳入新联邦只会放大他们的影响，并侵蚀我们国家的宗教基础。"
+afp_unity_events.24.a:0  "联邦将是我们的基础，你绝不能侵蚀它！"
+afp_unity_events.24.b:0  "[GetInterestGroupVariant('ig_devout',GetPlayer).GetNameWithCountryVariant]是正确的！"
+afp_unity_events.24.c.tt:0  "[SCOPE.sCharacter('devout_leader').GetFullName]将辞职。"
+
+afp_unity_events.25.t:0  "[GetInterestGroupVariant('ig_trade_unions',GetPlayer).GetNameWithCountryVariant]对联邦的担忧"
+afp_unity_events.25.d:0  "随着联邦化讨论的进行，[SCOPE.sCharacter('unions_leader').GetFullName]对这一事业表示了保留，理由是[SCOPE.sCountry('afp_aristocratic_country').GetName]的[GetInterestGroupVariant('ig_landowners',GetPlayer).GetNameWithCountryVariant]影响力强大。如果我们的殖民地联合起来，[GetInterestGroupVariant('ig_trade_unions',GetPlayer).GetNameWithCountryVariant]担心工人剥削在我们社会和政治中的现象会增加。"
+afp_unity_events.25.f:0  "作为工会代表，我们深切关注附近州地主日益增长的影响力。他们在新联邦中影响力的增加只会加剧对工人阶级的系统性剥削和压迫。我们恳请您采取行动，避免地主影响力的负面作用，并确保一个公平公正的社会。"
+afp_unity_events.25.a:0  "联邦将帮助所有阶级，你绝不能阻止它！"
+afp_unity_events.25.b:0  "[GetInterestGroupVariant('ig_trade_unions',GetPlayer).GetNameWithCountryVariant]是正确的！"
+afp_unity_events.25.c.tt:0  "[SCOPE.sCharacter('unions_leader').GetFullName]将辞职。"
+
+afp_unity_events.26.t:0  "[GetInterestGroupVariant('ig_landowners',GetPlayer).GetNameWithCountryVariant]对联邦的担忧"
+afp_unity_events.26.d:0  "随着联邦化讨论的进行，[SCOPE.sCharacter('landowners_leader').GetFullName]对这一事业表示了保留，理由是[SCOPE.sCountry('afp_unions_country').GetName]的[GetInterestGroupVariant('ig_trade_unions',GetPlayer).GetNameWithCountryVariant]影响力强大。如果我们的殖民地联合起来，[GetInterestGroupVariant('ig_landowners',GetPlayer).GetNameWithCountryVariant]担心反商业和社会主义对我们社会和政治的影响力会增加。"
+afp_unity_events.26.f:0  "阁下，我们对附近州工会的影响力感到担忧。他们正试图对我们经营企业和管理土地的能力施加限制。如果他们在新联邦中影响力增加，将对我们的生计和整个地区的繁荣产生不利影响。"
+afp_unity_events.26.a:0  "联邦将使该地区繁荣，你绝不能限制它！"
+afp_unity_events.26.b:0  "[GetInterestGroupVariant('ig_landowners',GetPlayer).GetNameWithCountryVariant]是正确的！"
+afp_unity_events.26.c.tt:0  "[SCOPE.sCharacter('landowners_leader').GetFullName]将辞职。"
+
+afp_unity_events.27.t:0  "[GetInterestGroupVariant('ig_industrialists',GetPlayer).GetNameWithCountryVariant]对联邦的担忧"
+afp_unity_events.27.d:0  "随着联邦化讨论的进行，[SCOPE.sCharacter('industry_leader').GetFullName]对这一事业表示了保留，理由是[SCOPE.sCountry('afp_rural_country').GetName]的[GetInterestGroupVariant('ig_rural_folk',GetPlayer).GetNameWithCountryVariant]影响力强大。如果我们的殖民地联合起来，[GetInterestGroupVariant('ig_industrialists',GetPlayer).GetNameWithCountryVariant]担心重农主义会限制经济进步。"
+afp_unity_events.27.f:0  "阁下，我今天前来向您表达我对附近州乡土农民影响力的担忧。如果他们在新联邦中获得更强的发言权，那将阻碍我们工业部门的增长和繁荣。他们的传统方法和对现代经济有限的理解将扼杀进步和发展。"
+afp_unity_events.27.a:0  "联邦将助长增长，你绝不能扼杀它！"
+afp_unity_events.27.b:0  "[GetInterestGroupVariant('ig_industrialists',GetPlayer).GetNameWithCountryVariant]是正确的！"
+afp_unity_events.27.c.tt:0  "[SCOPE.sCharacter('industry_leader').GetFullName]将辞职。"
+
+afp_unity_events.28.t:0  "[GetInterestGroupVariant('ig_rural_folk',GetPlayer).GetNameWithCountryVariant]对联邦的担忧"
+afp_unity_events.28.d:0  "随着联邦化讨论的进行，[SCOPE.sCharacter('rural_leader').GetFullName]对这一事业表示了保留，理由是[SCOPE.sCountry('afp_industrialists_country').GetName]的[GetInterestGroupVariant('ig_industrialists',GetPlayer).GetNameWithCountryVariant]影响力强大。如果我们的殖民地联合起来，[GetInterestGroupVariant('ig_rural_folk',GetPlayer).GetNameWithCountryVariant]担心工业家的贪婪会毁坏土地和他们的生活方式。"
+afp_unity_events.28.f:0  "他们的贪婪以及对土地和人民的漠视正对我们的社区造成有害影响。如果他们在新联邦中影响力继续增长，我们担心那将导致我们生活方式和生计的毁灭，并敦促您保护我们。"
+afp_unity_events.28.a:0  "联邦将改善我们的生计，我们应该保护它不受你的侵害！"
+afp_unity_events.28.b:0  "[GetInterestGroupVariant('ig_rural_folk',GetPlayer).GetNameWithCountryVariant]是正确的！"
+afp_unity_events.28.c.tt:0  "[SCOPE.sCharacter('rural_leader').GetFullName]将辞职。"
+
+afp_unity_events.29.t:0  "革命引发联邦担忧"
+afp_unity_events.29.d:0  "[ROOT.GetCountry.GetAdjective]地区的脱离向澳大利亚人民表明，他们对潜在的澳大利亚联邦明显存在担忧。"
+afp_unity_events.29.f:0  "[ROOT.GetCountry.GetAdjectiveNoFormatting]内战在某种程度上破坏了澳大利亚联邦的想法，我们将不得不说服我们的人民，一个统一的澳大利亚政府确实对整个大陆和我们的人民都有益。"
+afp_unity_events.29.a:0  "内战优先，联邦其次。"
+
+afp_unity_events.30.t:0  "联邦的低语"
+afp_unity_events.30.d:0  "整个大陆都在低声议论澳大利亚联邦的事。然而，考虑到[SCOPE.sCountry('afp_whispers_country').GetName]相对于其他殖民地的独立性，我们应该问自己是否真的想参与其中。"
+afp_unity_events.30.f:0  "[SCOPE.sCountry('afp_whispers_country').GetNameNoFormatting]将成为此联邦的一部分。"
+afp_unity_events.30.a:0  "让我们试试这个联邦化。"
+afp_unity_events.30.b:0  "[SCOPE.sCountry('afp_whispers_country').GetNameNoFormatting]将开辟自己的道路。"
+afp_unity_events_30_a_tt:0  "[SCOPE.sCountry('afp_whispers_country').GetName]将参与联邦"
+afp_unity_events_30_b_not_tt:0  "[SCOPE.sCountry('afp_whispers_country').GetName]将不参与联邦"
+afp_unity_events_30_b_was_tt:0  "[SCOPE.sCountry('afp_whispers_country').GetNameNoFormatting]将成为西澳尼亚"
+
+
+# modifiers etc
+
+anz_colonial_office_bur_help:0  "殖民地办公室官僚"
+
+national_unity_very_large_progress_effect:0  "#bold 30#! [concept_afp_national_unity]进度"
+national_unity_very_large_tt:0  "#bold 30#! [concept_afp_national_unity]进度"
+national_unity_large_progress_effect:0  "#bold 15#! [concept_afp_national_unity]进度"
+national_unity_large_tt:0  "#bold 15#! [concept_afp_national_unity]进度"
+national_unity_average_progress_effect:0  "#bold 10#! [concept_afp_national_unity]进度"
+national_unity_average_tt:0  "#bold 10#! [concept_afp_national_unity]进度"
+national_unity_small_progress_effect:0  "#bold 5#! [concept_afp_national_unity]进度"
+national_unity_small_tt:0  "#bold 5#! [concept_afp_national_unity]进度"
+national_unity_large_negative_effect:0  "失去 #bold 20#! [concept_afp_national_unity]进度"
+national_unity_large_negative_tt:0  "失去 #bold 20#! [concept_afp_national_unity]进度"
+national_unity_average_negative_effect:0  "失去 #bold 15#! [concept_afp_national_unity]进度"
+national_unity_average_negative_tt:0  "失去 #bold 15#! [concept_afp_national_unity]进度"
+afp_australian_identity_modifier:0  "日益增长的澳大利亚认同"
+afp_religious_curriculum_modifier:0  "公共课程中的宗教"
+afp_industrial_unity_modifier:0  "鼓励联邦主义工业家"
+afp_decline_federal_industrialists_modifier:0  "在农民与工业家之间选择支持农民"
+afp_weak_military_modifier:0  "军事薄弱暴露"
+afp_censor_military_report_modifier:0  "审查军事报告"
+afp_federal_unionistsprotest_modifier:0  "允许工会抗议"
+afp_federal_unionists_crushed_modifier:0  "镇压工会抗议"
+afp_federal_kanaka_unions_modifier:0  "鼓励联邦主义工会成员"
+afp_federal_kanaka_planters_modifier:0  "支持种植园主"
+afp_support_othersiders_modifier:0  "鼓励联邦主义者（西澳脱离者）"
+afp_support_sandgropers_modifier:0  "支持“沙地掘金者”贵族"
+afp_fund_campaigners_modifier:0  "资助西方联邦主义竞选者"
+afp_federal_kanaka_plantations_modifier:0  "卡纳卡劳工"
+afp_kanaka_decision_modifier:0  "剥削卡纳卡劳工"
+afp_stop_austin_modifier:0  "拒绝新式体育运动"
+afp_rabbit_infestation_modifier:0  "兔子泛滥"
+afp_rabbit_fence_modifier:0  "防兔围栏"
+afp_rabbit_problem_ignored_modifier:0  "农民的请求被忽视"
+afp_dingos_modifier:0  "澳洲野犬威胁被忽视"
+afp_dingo_fence_cost_modifier:0  "防野犬围栏"
+afp_bushfire_modifier:0  "肆虐的丛林大火"
+afp_bushfire_influence_modifier:0  "殖民地间外交扩张"
+afp_accountability_modifier:0  "殖民地间问责会议"
+afp_redcoats_modifier:0  "红衫军（英军）存在感增加"
+modifier_building_group_bg_military_throughput_mult:0  "军事建筑产出"
+afp_promote_afl_modifier:0  "推广澳式足球"
+afp_slow_bureaucracy_modifier:0  "缓慢的官僚机构"
+afp_criminal_general_modifier:0  "犯罪将军"
+afp_recruited_bushranger_modifier:0  "招募罪犯为将军"
+afp_police_enactment_modifier:0  "殖民地间警务调查"
+afp_propaganda_modifier:0  "宣传报纸"
+afp_freepress_modifier:0  "鼓励全国自由媒体"
+afp_sponsor_artcraft_modifier:0  "赞助艺术与手工艺运动"
+afp_ego_modifier:0  "膨胀的民族自负"
+afp_lowego_modifier:0  "殖民心态"
+afp_devoverint1_modifier:0  "忽视反教士知识分子"
+afp_intoverdev1_modifier:0  "站在反教士知识分子一边"
+afp_devoverint2_modifier:0  "忽视反教士知识分子"
+afp_intoverdev2_modifier:0  "站在反教士知识分子一边"
+afp_unionoverland1_modifier:0  "反贵族立场"
+afp_landoverunion1_modifier:0  "反无产阶级立场"
+afp_unionoverland2_modifier:0  "反贵族立场"
+afp_landoverunion2_modifier:0  "反无产阶级立场"
+afp_indoverrural1_modifier:0  "亲工业立场"
+afp_ruraloverind1_modifier:0  "亲农业立场"
+afp_indoverrural2_modifier:0  "亲工业立场"
+afp_ruraloverind2_modifier:0  "亲农业立场"
+afp_negative_enactment_modifier:0  "虚伪"
+afp_negative_enactment_modifier2:0  "公众愤怒"
+afp_bounty_modifier:0  "赏金"
+afp_relief_modifier:0  "救济"
+afp_compensatefarmer_modifier:0  "补偿农民"
+afp_more_workers_modifier:0  "少玩游戏，多工作"
+frontier_wars_modifier_ig_positive_attraction_minor:0  "小幅增长"
+frontier_wars_modifier_ig_positive_attraction:0  "增长"
+afp_scandal_modifier:0  "腐败丑闻"
+afp_ruler_popular_positive_modifier:0  "公众认可"
+afp_ruler_popular_negative_modifier:0  "公众不认可"
+afp_legalinvestigation_modifier:0  "调查执法部门"
+afp_bad_press_ig_modifier:0  "负面报道"
+afp_good_press_ig_modifier:0  "正面报道"
+afp_bad_press_modifier:0  "负面报道"
+afp_good_press_modifier:0  "正面报道"
+afp_legislative_impetus_modifier:0  "立法授权"
+anz_federal_assimilation:0  "民族觉醒"
+
+# concepts
+
+concept_afp_national_unity:0  "民族团结"
+concept_afp_national_unity_desc:0  "衡量澳大利亚民族认同的出现以及每个[concept_fed_colony]联合成联邦的意愿。"
+
+concept_fed_colony:0  "澳大拉西亚殖民地"
+concept_fed_colony_desc:0  "#b 这包括：#!\n#white 新南威尔士\n南澳大利亚\n塔斯马尼亚\n西澳大利亚#!#ITALIC （如果他们尚未宣布独立意向）#!\n#white 维多利亚#!#ITALIC （如果存在）#!\n#white 昆士兰#!#ITALIC （如果存在）#!\n#white 新西兰/阿尔斯特#!#ITALIC （如果存在#b 并且#! 如果他们尚未宣布独立意向）#!\n#white 新明斯特#!#ITALIC （如果存在#b 并且#! 如果他们尚未宣布独立意向）#!"
