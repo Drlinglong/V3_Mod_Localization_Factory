@@ -1,0 +1,166 @@
+﻿l_simp_chinese:
+
+#events
+
+#afp_gold_events.1.t:0 ""
+#afp_gold_events.1.d:0 ""
+#afp_gold_events.1.f:0 ""
+#afp_gold_events.1.a:0 ""
+
+#rumors of gold
+afp_gold_events.1.t:0: "淘金传闻"
+afp_gold_events.1.d:0: "黄金在此地存在已有时日，但数量微不足道——直到现在。威廉·克拉克报告称在石英中发现了大量黄金。这可能为殖民地带来巨大财富，但也可能在流放犯定居者中引发狂热，动摇我们脆弱的社会。\n\n[GetInterestGroupVariant('ig_landowners',GetPlayer).GetNameWithCountryVariant]敦促我们压制这些谣言，以防他们的劳动力为了追逐财富而弃田而去。"
+afp_gold_events.1.f:0: "“我们已经面临劳动力短缺；用快速致富的梦想诱惑所有人，无疑会加剧这个问题，并导致许多必需品和服务的供应链出现系统性短缺。更不用说，这里许多人是前罪犯，面对这样的诱惑，我们怎能相信他们会保持秩序而不叛变？即使黄金真在此地，待我们殖民地基础更加稳固后，仍可从中获利……”"
+afp_gold_events.1.a:0: "把它收起来，克拉克先生，否则我们都要被割喉了！"
+afp_gold_events.1.b:0: "追查这些传闻。"
+
+#external gold rush
+afp_gold_events.2.t:0: "[SCOPE.sState('external_gold_state').GetName]的淘金热"
+afp_gold_events.2.d:0: "自[SCOPE.sState('external_gold_state').GetName]传来轻松致富的消息，吸引走了我们的劳动力，严重损害了我们的经济。随着[SCOPE.sState('external_gold_state').GetName]新增城镇，我们则出现新的鬼城。或许我们若有自己的淘金热，便能扭转经济颓势？然而，这样的鼓励可能导致无法控制的乐观情绪。"
+afp_gold_events.2.f:0: "他们发现了规模可观的金矿区，吸引了各种各样寻求发财的工人。大量有能力的劳动力涌入[SCOPE.sCountry('external_gold_country').GetName]，正创造着蓬勃发展的经济，并围绕这些金矿区建立了服务矿工的新城镇。"
+afp_gold_events.2.a:0: "现在时机不对。"
+afp_gold_events.2.b:0: "悬赏发现黄金。"
+afp_gold2:0: "已发生：\n#r 20%的非原住民劳工、农民、职员、店主和机械师已前往[SCOPE.sState('external_gold_state').GetName]！#"
+
+#force discover gold in victoria
+afp_gold_events.200.t:0: "维多利亚发现黄金！"
+afp_gold_events.200.d:0: "早该如此"
+afp_gold_events.200.f:0: "终于"
+afp_gold_events.200.a:0: "金矿区"
+afp_gold_events.200.b:0: "矿山"
+
+#overwritten vanilla goldrush.1 for Victoria, Otago, and Coromandel
+goldrush.1.d2:0: "一名[SCOPE.sCulture('scope_coromandel_australian').GetName]探矿者在[SCOPE.sState('goldrush_state').GetStateRegion.GetName]发现了大量砂金。世界各地的人们正蜂拥而至，相信他们会发现下一个大矿脉并变得极其富有。"
+goldrush.1.d3:0: "在瀑布岩壁上发现的一个闪光点，导致了科罗曼德半岛黄金的发现。世界各地的矿业公司正蜂拥而至，相信他们会发现下一个大矿脉并变得极其富有。"
+goldrush.1.f2:0: "黄金，黄金，闪亮亮的黄金！\n图阿佩卡，旺阿佩卡，鲜红的黄金！"
+goldrush.1.f3:0: "针锋相对，巴拉瑞特，闪亮亮的黄金！"
+goldrush.1.c:0: "广而告之！"
+goldrush.1.e:0: "我的！全是我的！"
+
+#marvelous melbourne
+afp_gold_events.3.t:0: "美妙的[SCOPE.sState('afp_gold_state').GetCityHubName]"
+afp_gold_events.3.d:0: "随着淘金热持续为[SCOPE.sState('afp_gold_state').GetName]殖民地带来财富和繁荣，[SCOPE.sState('afp_gold_state').GetCityHubName]已成为世界上最富裕、最奢华的城市之一。一场盛大的舞会已计划好，以展示黄金所带来的奢华与铺张。"
+afp_gold_events.3.f:0: "“枝形吊灯比把我们都吸引到这里的黄金还要闪亮，客人们的服装比我对我父母撒的关于我职业前景的谎言还要奢华。这是一场令人眼花缭乱的财富与地位展示，我不禁感觉自己像是在鳄鱼派对上的负鼠。但话说回来，入乡随俗嘛（或者在[SCOPE.sState('afp_gold_state').GetCityHubName]就是这样），对吧？”"
+afp_gold_events.3.a:0: "只邀请社会有影响力人士"
+afp_gold_events.3.b:0: "向所有人开放舞会"
+afp_gold_events.3.c:0: "将活动作为公共项目的筹款活动"
+afp_gold_events.3.e:0: "利用此次活动展示澳大利亚文化与艺术"
+
+modifier_building_group_bg_arts_throughput_mult:0: "艺术学院产出"
+modifier_building_group_bg_arts_throughput_mult_desc:0: "艺术学院产出"
+
+#gold speculation bubble
+afp_gold_events.4.t:0: "投机泡沫"
+afp_gold_events.4.d:0: "随着[SCOPE.sState('gold_state').GetName]新金矿的传闻甚嚣尘上，投机者们正大量购入土地，希望从中发现黄金，导致地价出现泡沫。我们可以规范土地投机行为，任由市场发展，或者鼓励更多对采矿业而非仅仅土地投机的投资。"
+afp_gold_events.4.f:0: "“大家都在谈论新发现的金矿！土地投机者正在购买眼前的一切，但这真的是好事吗？我们可不想再看到像荷兰郁金香狂热那样的泡沫！”"
+afp_gold_events.4.a:0: "通过征税规范土地投机。"
+afp_gold_events.4.b:0: "任由市场发展。"
+afp_gold_events.4.c:0: "改为鼓励采矿投资。"
+
+
+#eureka
+afp_gold_events.5.t:0: "巴拉瑞特改革联盟"
+afp_gold_events.5.d:0: "数千人聚集起来，在[SCOPE.sCharacter('eureka_leader').GetFullName]的主持下成立了一个改革联盟。他们对昂贵的采矿许可证和金矿区的管理感到愤怒，声称警察收受贿赂，未经正当程序监禁民众。\n\n渴望选举改革的宪章运动正在酝酿之中。"
+afp_gold_events.5.f:0: "“木已成舟，命运已在这场运动上盖下其不可磨灭的印记。世上没有任何力量可以阻止这个国家人民为自由而联合起来的强大力量和迅猛步伐，我们在展望澳大利亚未来的辉煌前景时，感到无比惊叹。”"
+
+#afp_gold_events.5.a:0 "We will try resolve their grievances."
+afp_gold_events.5.a:0: "黄金必须源源不断。"
+afp_eureka_war:0: "一场[concept_revolution]在[SCOPE.sState('afp_gold_state').GetName]爆发"
+afp_eureka_war2:0: "将在维多利亚的[concept_state]爆发一场[concept_revolution]"
+
+afp_gold_events.6.t:0: "尤里卡栅栏"
+afp_gold_events.6.d:0: "和平进程已经失败。[SCOPE.sCharacter('peter_lalor').GetFullName]已接管这场运动，并主持了对尤里卡旗帜的宣誓仪式。鉴于有必要拿起武器，[SCOPE.sCharacter('peter_lalor').GetLastName]已下令建造一座栅栏，以准备一场不可避免的战斗。"
+afp_gold_events.6.f:0: "“我们以南十字星起誓，彼此忠诚，为捍卫我们的权利与自由而战！”\n\n彼得·拉洛尔高声喊道，矿工们则宣誓并烧毁他们的采矿许可证。"
+afp_gold_events.6.a:0: "我们不能容忍这种叛国行为！"
+afp_gold_events.6.b:0: "我们以南十字星起誓！"
+#afp_gold_events.6.b:0 "So be it." #let them go independent?
+Peter:0: "彼得"
+Lalor:0: "拉洛尔"
+George:0: "乔治"
+Black:0: "布莱克"
+Vern:0: "弗恩"
+John:0: "约翰"
+Humffray:0: "汉弗雷"
+esr_play_name:0: "尤里卡栅栏起义"
+esr_formation_name:0: "尤里卡矿工"
+eureka_zeal_army:0: "南十字星热忱"
+eureka_zeal_barracks:0: "南十字星热忱"
+
+afp_gold_events.7.t:0: "尤里卡起义"
+afp_gold_events.7.d:0: "随着镇压叛乱的消息传开，我们的军事胜利已转变为一场公共关系灾难。普通民众现在强烈同情叛乱者。在这种舆论下，煽动叛乱的审判变得难以进行。战斗虽已胜利，但一切尚未结束。"
+afp_gold_events.7.f:0: "“那是一场革命——规模虽小；但政治意义重大；那是一场争取自由的罢工，一场为原则而进行的斗争，一次反抗不公和压迫的立场。那是男爵们与约翰王的故事重演；微不足道的开端，却带来巨大的政治成果，都具有划时代的意义。这是又一个通过战败赢得胜利的例子。它为历史增添了光荣的一页；人民知道它并为此感到自豪。他们铭记着在尤里卡栅栏牺牲的那些人，彼得·拉洛尔也拥有他的纪念碑。”\n——马克·吐温"
+afp_gold_events.7.a:0: "安抚民众"
+afp_gold_events.7.b:0: "我们不会向叛徒屈服！"
+
+afp_gold_events.8.t:0: "许可证搜查"
+afp_gold_events.8.d:0: "[SCOPE.sState('afp_gold_state').GetName]金矿区的紧张局势正达到沸点，淘金者抱怨警察使用的残暴和勒索手段。另一方面，警察声称他们只是试图对那些利用我们资源却拒绝支付应有份额的局外人执行法律。"
+afp_gold_events.8.f:0: "设立许可证费是为了承担淘金热的基础设施和管理成本，然而[GetInterestGroupVariant('ig_trade_unions',GetPlayer).GetNameWithCountryVariant]声称，与淘金者的平均收入相比，许可证费过于繁重，导致许多人蒙受巨大损失而离开金矿区。因此，大约一半的淘金者一直没有支付。警察（其中许多是来自[SCOPE.sState('afp_gold_tasmania').GetName]的前罪犯）以其残暴手段而闻名。由于警察对所有罚款收取50%的佣金，他们经常无视正当程序，并将许可证检查视为一场以英式猎狐风格进行的盛大运动。"
+afp_gold_events.8.a:0: "对黄金征收特许权使用费将使我们能够降低许可证费。"
+afp_gold_events.8.b:0: "增加搜查频率，让那些不劳而获者支付！"
+afp_gold_events.8.c:0: "加强警方调查，并设立黄金特许权使用费以降低许可证费。"
+anz_goldfield_investigating_police_var:0: "我们正在调查警方行为"
+
+afp_gold_events.9.t:0: "尤里卡酒店"
+afp_gold_events.9.d:0: "淘金者[SCOPE.sCharacter('james_scobie').GetFullName]被发现在尤里卡酒店附近遇害。一次仓促的法庭调查迅速免除了酒店被控所有者[SCOPE.sCharacter('james_bentley').GetFullName]的罪名。鉴于已知该地方法官曾收受[SCOPE.sCharacter('james_bentley').GetLastName]的贿赂，当地民众感到司法不公，便在尤里卡酒店举行了抗议，该酒店在一场骚乱中被焚毁。"
+afp_gold_events.9.f:0: "“我儿子，也是最后一位证人，昨晚我和他交谈时我们受到了干扰，期间我说我想知道那些声音是不是本特利先生或夫人发出的。”\n——玛丽·安·韦尔奇在作证指控本特利时说。"
+afp_gold_events.9.a:0: "派兵增援警察！"
+afp_gold_events.9.b:0: "对此事展开调查。"
+
+Scobie:0: "斯科比"
+Bentley:0: "本特利"
+James:0: "詹姆斯"
+
+je_goldfield_repress_diggers:0: "增加警力部署"
+je_goldfield_repress_diggers_desc:0: "通过在金矿区和联盟会议中增加警力部署，我们可以确保宝贵黄金的持续有序开采，同时不损失许可证费带来的收入。"
+je_goldfield_investigate_police:0: "调查警方行为"
+je_goldfield_investigate_police_desc:0: "腐败对商业有害，尤其当它意味着身体健全的人无法得到有效利用时。通过调查这些关于警察不当行为的指控，我们对矿工的善意姿态无疑将平息紧张局势并吸引更多矿工。"
+je_goldfield_button_possible:0: "尚未#b 增加警力部署#！或#b 调查警方行为#！"
+je_goldfield_button_once:0: "我们只能选择一个选项"
+afp_goldfield_more_police:0: "警察涌入金矿区"
+afp_goldfield_investigate_police:0: "调查警方行为"
+
+############################
+# NZ Gold Rush
+
+ afp_gold_events.10.t:0: "南方的“北方雅典”"
+ afp_gold_events.10.d:0: "[GetGoods('gold').GetName]涌入[SCOPE.sState('afp_gold_state').GetName]正迅速将但尼丁变为[ROOT.GetCountry.GetName]最富裕的城市之一。"
+ afp_gold_events.10.f:0: "“尽管可能有些混乱，但我们这座美丽的城市似乎正因淘金热的兴奋而热闹非凡。每天都有新的财富涌入，所有这些都需要妥善管理和分配。我们面前的任务很明确。”"
+ afp_gold_events.10.a:0: "这笔新发现的财富将使但尼丁成为工业巨头，以及[ROOT.GetCountry.GetNameNoFlag]所有贸易的中心。"
+ afp_gold_events.10.b:0: "将多余的黄金用于资助城市中贫困的拉撒路们的慈善救济是理所当然的。"
+ afp_gold_events.10.c:0: "凭借这些资源，但尼丁将在所有学术领域引领其国家。"
+ afp_gold_events.10.e:0: "这是一个让公平的[ROOT.GetCountry.GetNameNoFlag]闻名世界的机会。我们将举办一次全国性展览，由但尼丁承办。"
+ otago_trading_modifier:0: "但尼丁贸易枢纽"
+ gold_charity_modifier:0: "淘金热福利支出"
+ university_of_otago_modifier:0: "奥塔哥大学获得资助"
+ new_zealand_exhibition_modifier_state:0: "主办新西兰展览"
+ new_zealand_exhibition_modifier_country: "举办新西兰展览"
+
+ afp_gold_events.11.t:0: "金矿区洪水泛滥！"
+ afp_gold_events.11.d:0: "连续六天的强降雨导致[SCOPE.sState('flood_state').GetName]中部所有河流决堤，淹没了数十名在洪泛平原扎营的不幸矿工。"
+ afp_gold_events.11.f:0: "“在上次风暴之后，人们曾认为在相当长一段时间内，我们不可能再次遭遇如此严重的灾难。我们对此深信不疑，以至于肖特奥弗河的峡谷和河滩再次挤满了我们勤劳的人群，努力从顽固的土壤中夺取其隐藏并严密守护的宝藏；然而，无情的元素再次咆哮而下，我们的希望彻底破灭了。”"
+ afp_gold_events.11.a:0: "幸存者将不得不自食其力。"
+ afp_gold_events.11.b:0: "我们应该投入一些资金用于运送救援物资。"
+ state_goldfields_flooded:0: "金矿区被淹"
+
+ afp_gold_events.12.t:0: "金矿区暴风雪！"
+ afp_gold_events.12.d:0: "正当我们以为最恶劣的天气已过去时，一场毁灭性的暴风雪席卷了[SCOPE.sState('blizzard_state').GetName]。数周的强降雪将许多矿工困在山区，无法得知他们是否还活着。"
+ afp_gold_events.12.f:0: "“没有取暖的燃料，只有做饭的。当水壶煮沸时，就把柴火熄灭并保存起来。夜里靴子和衣服会冻得像木板一样硬，所以早上穿之前必须把它们塞到毯子下解冻。只有天知道这些北极般的低温何时才会停止。”"
+ afp_gold_events.12.a:0: "这太令人痛心了！立即开始协调救援工作。"
+ afp_gold_events.12.b:0: "洪水应该已经给他们一个教训了。"
+ afp_gold_events.12.c:0: "营救我们能救的人。春天到来时，我们建造水坝和防雪棚，以减轻未来任何灾害的损害。"
+ state_goldfields_snowed:0: "金矿区被大雪覆盖"
+ modifier_blizzard_rescue:0: "暴风雪救援工作"
+ state_disaster_infrastructure:0: "预防性基础设施"
+
+ afp_gold_events.13.t:0: "外国劳工"
+ afp_gold_events.13.d:0: "随着[SCOPE.sState('nz_gold_state').GetName]的淘金热逐渐消退，矿主们正向海外寻求廉价劳工，以系统性地开采初期淘金热中遗漏的黄金。"
+ afp_gold_events.13.f:0: "“想想看：我们尊贵的但尼丁商行，随着淘金热离我们而去而变得空空荡荡。我们需要更多的矿工来维持黄金的流动。”"
+ afp_gold_events.13.a:0: "来自[SCOPE.sState('nz_china_state').GetName]的工人将是完美的选择。"
+ afp_gold_events.13.b:0: "我们应该到别处寻找廉价劳动力来源。"
+ afp_gold_events.13.c:0: "绝不能邀请那些肮脏、吝啬、无知的异族人踏上我们的土地！"
+ modifier_nz_xenophobia_support:0: "排外情绪"
+
+
+#Eureka Journal
+afp_je_eureka:0: "金矿区怨言"
+afp_je_eureka_reason:0: "“每一位公民都拥有制定其必须遵守的法律的不可剥夺的权利——无代表不纳税即是暴政。\n\n本殖民地迄今为止一直由受薪官员统治，他们错误地认为法律高于正义，因为，嘿，法律是由他们及其朋友制定的，并且完美地符合他们的自私目的和狭隘观点。该“联盟”的宗旨是将权力置于人民的负责任代表手中，以制定健全的法律并建立廉洁的政府。\n\n“联盟”并不希望本殖民地立即与宗主国分离，如果全体自由社区都能获得平等的法律和权利。\n\n但是，如果[ROOT.GetCountry.GetOverlord.GetRuler.GetFullNameWithTitle]继续采纳不诚实大臣的错误建议，并坚持以王室特权的假定权力间接为殖民地制定令人厌恶的法律，那么改革联盟将努力通过主张人民的特权来取代这种王室特权，因为人民的特权是所有特权中最至高无上的，人民是所有政治权力的唯一合法来源。”"

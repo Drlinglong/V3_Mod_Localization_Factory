@@ -1,0 +1,19 @@
+﻿l_english:
+ je_nz_flagstaff_war:0 "War in the North"
+ je_nz_flagstaff_war_reason:0 "Ngāpuhi Māori in the North of New Zealand have become disillusioned by our promises under the Treaty of Waitangi and have started to rebel against our rule.\n\n#BOLD Hint:#! \nThis journal entry will trigger events representing historical battles. Your choices will determine how the war plays out."
+ je_nz_northernwar_win_tt:0 "The war has ended"
+ je_nz_flagstaff_war_goal: "The war against Ngāpuhi has been won, by having the progress bar reach #variable 100%#!"
+ 
+ je_nz_hutt_valley_campaign:0 "Assert our Land Purchases"
+ je_nz_hutt_valley_campaign_reason:0 "The commission confirmed that our settlers have legitimate claims to land in the Hutt Valley - an area north of the Wellington colony. However, much of the land they’ve bought is still occupied by their original Maori inhabitants which is making our settlers anxious.\n \nOur settlers require our backing to gain control over their land."
+ 
+ je_nz_hutt_valley_campaign_button:0 "Assert our position in the Hutt"
+ je_nz_hutt_valley_campaign_button_ongoing:0 "We're asserting our position in the Hutt"
+ je_nz_hutt_valley_campaign_button_desc:0 "Our settlers have bought the land in the Hutt Valley, now is the time to assert their claims."
+ je_nz_hutt_valley_campaign_button_tt:0 "This button will begin the process to assert our settlers' land purchases in the Hutt Valley. The first event will allow you to postpone the process, if you change your mind"
+ 
+ je_nz_hutt_valley_campaign_complete_tt:0 "Our position has been asserted in the Hutt Valley. \n\nHint: This journal will periodically trigger events which will lead us to asserting our claims."
+ 
+ #temporary decision:
+ nz_hutt_valley_campaign:0 "Assert settlers' land purchases in the Hutt Valley"
+ nz_hutt_valley_campaign_desc:0 "The commission confirmed that our settlers have legitimate claims to land in the Hutt Valley."

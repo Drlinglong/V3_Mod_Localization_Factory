@@ -1,0 +1,93 @@
+﻿l_english:
+
+austrian_empire_collapse.1.t: "Collapse of the Austrian Empire"
+austrian_empire_collapse.1.d: "The Austrian Empire, after centuries of dominance in Central Europe, is in a state of crisis. The fragile balance of our empire has collapsed. With both Hungary and Bohemia declaring their independence, the very heart of the Empire lies in ruins. Vienna is paralyzed between the thunder of war and the silence of dissolution. The old order is dying—will it go down fighting, or be buried with dignity?"
+austrian_empire_collapse.1.a: "We must first retake [SCOPE.sCountry('collapse_hungary_scope').GetName]!"
+austrian_empire_collapse.1.a: "We must first retake [SCOPE.sCountry('collapse_czech_scope').GetName]!"
+austrian_empire_collapse.1.b:  "Fight them both!"
+austrian_empire_collapse.1.c:  "Smite them all!"
+austrian_empire_collapse.1.e:  "Accept the new reality."
+
+austrian_empire_collapse.2.t:  "Austrian Empire Unity Restored"
+austrian_empire_collapse.2.d:  "Against all odds, the Empire has held. By skillfully balancing diplomacy with decisive force, the crisis has been averted. The old bonds reforged, a new sense of imperial purpose rises from the ashes of unrest. Austria endures, and now forever!"
+austrian_empire_collapse.2.a:  "Long live Austria and [ROOT.GetCountry.GetRuler]!"
+
+austrian_empire_collapse.3.t:  "Magyar Versus German"
+austrian_empire_collapse.3.d:  "The delicate ethnic fabric of the Empire begins to tear as Hungarian representatives demand that Magyar be recognized on equal footing with German in state affairs. To some, this is a threat to imperial cohesion; to others, a righteous claim long ignored."
+austrian_empire_collapse.3.a:  "German—or nothing!"
+austrian_empire_collapse.3.b:  "Acknowledge Magyar in regional administration."
+
+austrian_empire_collapse.4.t:  "Hungarian Uprisings"
+austrian_empire_collapse.4.d:  "The discontent simmering in Hungary has erupted into open revolt. Nationalist militias occupy towns, disrupt railways, and raise banners of independence. Imperial garrisons stand besieged, awaiting orders from a wavering capital."
+austrian_empire_collapse.4.a:  "Send in the army!"
+austrian_empire_collapse.4.b:  "Offer reforms and autonomy."
+
+austrian_empire_collapse.5.t:  "Equal Rights for Hungarians"
+austrian_empire_collapse.5.d:  "Having secured earlier some degree of recognition, the Hungarian delegation now presses for full equality under imperial law. Their demands echo throughout the Empire's many peoples—either Vienna yields, or the pressure may become intolerable."
+austrian_empire_collapse.5.a:  "The privileges stay as they are!"
+austrian_empire_collapse.5.b:  "Grant equality to Hungary."
+
+austrian_empire_collapse.6.t:  "The Independence of Hungary"
+austrian_empire_collapse.6.d:  "With no resolution in sight, Hungary has declared its full independence, severing ties with Vienna. This bold act has shaken the foundations of imperial legitimacy, setting a dangerous precedent for others. Will Austria restore its claim, or accept its fragmentation?"
+austrian_empire_collapse.6.a:  "Suppress the rebellion!"
+austrian_empire_collapse.6.b:  "Crush them—we indulged them enough!"
+austrian_empire_collapse.6.c:  "Let Hungary go."
+
+austrian_empire_collapse.7.t:  "Triest, Harbor of Mitteleuropa"
+austrian_empire_collapse.7.d:  "Triest, or Trieste in italian, the gateway to the Adriatic from Mitteleuropa, is seen by imperial planners as the key to maintaining Austria's economic and naval relevance. Turning it into a beacon of industry and maritime might may ensure the Empire's survival—if resources can be spared."
+austrian_empire_collapse.7.a:  "Invest and fortify the port."
+austrian_empire_collapse.7.b:  "We cannot afford such extravagance."
+
+austrian_empire_collapse.8.t:  "Italy Stirs"
+austrian_empire_collapse.8.d:  "The winds of nationalism stir in Lombardy-Venetia. Inspired by the Italian unification movement, local leaders whisper rebellion. Tensions rise, and the imperial flag is greeted more with resentment than loyalty in the cobbled streets of Milan and Venice."
+austrian_empire_collapse.8.a:  "Deploy the army!"
+austrian_empire_collapse.8.b:  "Offer reforms and autonomy."
+austrian_empire_collapse.8.c:  "Return the provinces to [SCOPE.sCountry('stirs_italy_scope').GetName]."
+
+austrian_empire_collapse.9.t:  "Galicia, Granary of the Empire"
+austrian_empire_collapse.9.d:  "Galicia feeds the Empire—but at a terrible price, especially now that the west regions agricolture is fastly industrializing. Imperial taxation grinds the peasants into poverty while their grain fills Viennese tables. Their patience wears thin, and some already speak of autonomy—or worse."
+austrian_empire_collapse.9.a:  "Squeeze Galicia harder."
+austrian_empire_collapse.9.b:  "Subsidise Galician agriculture."
+
+austrian_empire_collapse.10.t: "Czech Demands for Equality"
+austrian_empire_collapse.10.d: "Emboldened by Hungary's assertiveness, the Czech intelligentsia and bourgeoisie now demand civil and political equality. Long treated as a subordinate people, they seek a new place in a reimagined, fairer Empire—or outside of it."
+austrian_empire_collapse.10.a: "Privileges will not be extended"
+austrian_empire_collapse.10.b: "Grant civil equality to the Czechs"
+
+austrian_empire_collapse.11.t: "The Slovak Question"
+austrian_empire_collapse.11.d: "The Slovaks, caught between rising Czech and Hungarian influence, begin to assert their own identity. Both Prague and Budapest lay claim to their loyalty, while Vienna fears this new faultline could trigger another wave of upheaval."
+austrian_empire_collapse.11.a: "Favour the Czechs"
+austrian_empire_collapse.11.b: "Favour the Hungarians"
+
+austrian_empire_collapse.12.t: "The Independence of Czechoslovakia"
+austrian_empire_collapse.12.d: "In a bold move, Prague has declared a sovereign Czechoslovak republic. The Empire's hold over its Slavic provinces falters, as revolutionaries rally support and foreign powers watch keenly for Austria's next move."
+austrian_empire_collapse.12.a: "Suppress the rebellion!"
+austrian_empire_collapse.12.b: "Punish the rebels—they had their rights!"
+austrian_empire_collapse.12.c: "Recognise Czechoslovakia"
+
+austrian_empire_collapse.13.t: "Whispers of a Yugoslav Union"
+austrian_empire_collapse.13.d: "From the cafés of Ljubljana to the classrooms of Sarajevo, South Slavic intellectuals speak of unity—of one Yugoslav people, bound by language and heritage. To some this is utopian idealism, to others an existential threat to Austria's Balkan dominion."
+austrian_empire_collapse.13.a: "Censor such dangerous ideas!"
+austrian_empire_collapse.13.b: "Allow open debate"
+
+austrian_empire_collapse.14.t: "The Transylvanian Question"
+austrian_empire_collapse.14.d: "The Carpathian frontier quakes with unrest. Romanian nationalists stir the hearts of Transylvania's people, claiming the region by history and blood. If their demands go unanswered, the Empire may face yet another irreparable fracture."
+austrian_empire_collapse.14.a: "Send in the army!"
+austrian_empire_collapse.14.b: "Grant broad autonomy"
+austrian_empire_collapse.14.c: "Cede Transylvania to Romania"
+
+austrian_empire_collapse.15.t: "The Polish Question"
+austrian_empire_collapse.15.d: "Nationalist fervor has erupted once more in Galicia, where Polish activists denounce imperial neglect and demand union with an independent Poland. As tensions rise, Vienna faces a familiar choice: crush the movement with steel, offer self-rule, or abandon Galicia altogether."
+austrian_empire_collapse.15.a: "Send in the army!"
+austrian_empire_collapse.15.b: "Grant broad autonomy"
+austrian_empire_collapse.15.c: "Cede Galicia to [SCOPE.sCountry('polish_question_scope').GetName]"
+
+austrian_empire_collapse.16.t: "The Vojvodina Proposal"
+austrian_empire_collapse.16.d: "The Kingdom of Serbia has formally requested control over the region of Vojvodina, citing ethnic ties and imperial mismanagement. With the Empire weakened and the region volatile, granting the request could ease the crisis—or embolden others to demand the same."
+austrian_empire_collapse.16.a: "Accept [SCOPE.sCountry('serbia_proposal_scope').GetName]'s request"
+austrian_empire_collapse.16.b: "Reject the claim"
+
+austrian_empire_collapse.17.t: "The Kraków Agreement"
+austrian_empire_collapse.17.d: "Polish diplomats have proposed the annexation of Kraków into the Polish state, offering loyalty and cooperation in return. While the Free City has long enjoyed autonomy under imperial protection, the tides of nationalism threaten to make such arrangements obsolete."
+austrian_empire_collapse.17.a: "Support Polish annexation of [SCOPE.sCountry('krakow_agreement_scope').GetName]"
+austrian_empire_collapse.17.b: "Refuse the offer and maintain our hold"

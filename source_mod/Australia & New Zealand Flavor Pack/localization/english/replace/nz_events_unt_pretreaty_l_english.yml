@@ -1,0 +1,51 @@
+﻿l_english:
+
+ unt_pre_treaty.1.t:0 "The Pākehā Presence"
+ unt_pre_treaty.1.d:0 "The number of [SCOPE.sCulture('scope_pakeha_english').GetName] people and other Europeans coming to New Zealand has been steadily increasing for decades, and not all of them choose to respect our people, laws, and customs. At some point we will need to come to an agreement with the [SCOPE.sCountry('scope_pakeha_british_govt').GetAdjective] Crown to resolve the issue of how these Pākehā are to be governed in [SCOPE.sCulture('scope_pakeha_maori').GetName] lands."
+ unt_pre_treaty.1.f:0 "Since the arrival of Captain Cook in 1769, more and more Europeans have been coming to New Zealand. At first it was whalers and traders; after a few decades missionaries began to arrive with their families; eventually businessmen started appearing with the intent to buy and resell Māori land to incoming settlers. Now hundreds of Pākehā live here permanently, with many more visiting on merchant ships from Britain, France, Australia, and the United States. While relations with these foreigners have generally been very friendly—with the British Crown in particular promising to protect the United Tribes from colonisation by the French—the rising Pākehā population is leading to more disagreements and outbursts of violence, and it is becoming increasingly difficult to keep the rowdiest ones in line."
+ unt_pre_treaty.1.a:0 "We must do all we can to ensure a favourable outcome for our mana and our land."
+
+nz_je_unt_pakeha:0 "The Pākehā Presence"
+nz_je_unt_pakeha_desc:0 "Eventually we will need to work with the British Crown to resolve the question of how Pākehā are to be governed on Māori lands."
+nz_je_unt_pakeha_reason:0 "As more and more Europeans come to our shores, it is becoming more and more difficult to resolve disputes and keep the peace. This state of affairs cannot last forever."
+unt_rowdy_pakeha:0 "Unruly Pākehā"
+unt_pakeha_signed_tt:0 "The Treaty of Waitangi has been signed"
+unt_pakeha_rejected_tt:0 "The Treaty of Waitangi has been rejected"
+
+ unt_pre_treaty.2.t:0 "The British Resident's Plan"
+ unt_pre_treaty.2.d:0 "Recognising the lawlessness of [SCOPE.sCulture('scope_busby_pakeha').GetName] settlers and traders in the [SCOPE.sCountry('scope_busby_unt').GetName], British Resident [SCOPE.sCharacter('scope_unt_busby').GetFullName] believes that Pākehā will respect our laws if we submit more to [SCOPE.sCountry('scope_busby_british_govt').GetAdjective] influence. This would involve creating a European-style legislature led by our chiefs and appointing [SCOPE.sCountry('scope_busby_british_govt').GetAdjectiveNoFlag] delegates to enforce our authority. What he does not understand is that our whakaminenga has stood as a sovereign congress for decades, and, many believe, should not need to Westernise its presentation in order to be respected."
+ unt_pre_treaty.2.f:0 "In order to regulate the interactions between British subjects and Māori, in 1833 the British government sent James Busby to the Bay of Islands to serve as the official British Resident in New Zealand. Though he is supposed to mediate disputes and hold the Pākehā here to the laws of their [SCOPE.sCharacter('scope_busby_monarch').GetPrimaryRoleTitle] across the sea, he is painfully aware that at present he is nothing but a man-of-war without guns, unable to enforce any authority whatsoever."
+ unt_pre_treaty.2.a:0 "This is our land, and our tikanga shall prevail upon it."
+ unt_pre_treaty.2.b:0 "In this time of change, perhaps some traditions must be set aside."
+traditional_whakaminenga:0 "Traditional Whakaminenga Upheld"
+no_perceived_congress:0 "No Perceived Legitimate Congress of Chiefs"
+british_standards_disregarded:0 "British Standards Disregarded"
+westernized_whakaminenga_oppose:0 "Westernised Whakaminenga Supported"
+westernized_whakaminenga_support:0 "Westernised Whakaminenga Supported"
+british_standards_respected:0 "British Standards Respected"
+
+ unt_pre_treaty.3.t:0 "Murderous Pākehā"
+ unt_pre_treaty.3.d:0 "A group of [SCOPE.sCulture('scope_wright_pakeha').GetName] robbers broke into the Kororāreka home of a popular Pākehā trading captain last night. When he awoke and discovered them, they tried to kill him but he managed to fight them off and escape. Many Pākehā are taking this incident as proof that [SCOPE.sCulture('scope_wright_maori').GetName] law cannot keep them safe, with some calling for the establishment of a [SCOPE.sCountry('scope_wright_british_govt').GetAdjective] government in New Zealand."
+ unt_pre_treaty.3.d2:0 "A group of [SCOPE.sCulture('scope_wright_pakeha').GetName] robbers broke into the Kororāreka home of a popular Pākehā trading captain last night. When he awoke and discovered them, they stabbed him to death before he could escape. Many Pākehā are taking this incident as proof that [SCOPE.sCulture('scope_wright_maori').GetName] law cannot keep them safe, with some calling for the establishment of a [SCOPE.sCountry('scope_wright_british_govt').GetAdjective] government in New Zealand."
+ unt_pre_treaty.3.f:0 ""In the early hours, as I learned of Captain Wright's encounter with those dreadful assailants, the weight of fear bore heavily upon my heart. It was not solely for his safety, but for the security of all those dwelling upon the wild beauty of these shores. This harrowing encounter has laid bare the vulnerability we face without the firm embrace of the [SCOPE.sCharacter('scope_wright_british_monarch').GetPrimaryRoleTitle]'s law.""
+ unt_pre_treaty.3.a:0 "In this land, all crimes must be punished in accordance with tikanga [SCOPE.sCulture('scope_wright_maori').GetName]."
+ unt_pre_treaty.3.b:0 "We shall authorize [SCOPE.sCharacter('scope_wright_busby').GetFullName] to arrest and deport the culprits to [SCOPE.sCountry('scope_wright_nsw').GetName], to be punished under [SCOPE.sCountry('scope_wright_british_govt').GetAdjectiveNoFlag] law."
+ unt_pre_treaty.3.c:0 "We shall authorize the Pākehā to arrest and deport the culprits to New South Wales, to be punished under [SCOPE.sCountry('scope_wright_british_govt').GetAdjectiveNoFlag] law."
+ wright_nsw_tt:0 "The culprits will be sent to [GetGlobalVariable('anz_nsw_state').GetState.GetCityHubName] and incarcerated or hanged."
+ wright_utu_tt:0 "The culprits will be made to pay utu in blood or goods according to their victim's demands."
+ wright_utu2_tt:0 "The culprits will be made to pay utu in blood or goods according to the demands of their victim's community."
+ limits_of_tikanga:0 "Limits of Tikanga"
+
+
+
+ nz_je_unt_alliances:0 "A Tenuous Confederation"
+ nz_je_unt_alliances_desc:0 "The tensions between the Northern and Southern Alliances of the United Tribes must be resolved if we are to forge a strong Ngāpuhi confederation."
+ nz_je_unt_alliances_reason:0 "The United Tribes of New Zealand are formed of two main power blocs. The Northern Alliance, based around Kaikohe and led by Tītore at the time of He Whakaputanga's signing, is dominated by hapū such as Ngāti Tautahi, Ngāi Tāwake, Te Uri o Hua, and Ngāti Rēhia. The Southern Alliance is led by Pōmare II and consists of the subtribes of the southern Taiāmai plains such as Ngāti Hine, Ngāti Rangi, and Ngāre Hauata. The struggle between these two groups for influence predates the establishment of Te Whakaminenga o ngā Hapū o Niu Tireni, but it must come to an end if the confederation of the United Tribes is to live up to its name."
+ unt_illegitimate_confederation:0 "Tenuous Confederation"
+ unt_alliance_war_tt: "The tensions between the alliances have boiled over into war"
+
+ unt_pre_treaty.201.t:0 "Kauri Forest Dispute"
+ unt_pre_treaty.201.d:0 ""
+ unt_pre_treaty.201.f:0 ""
+ unt_pre_treaty.201.a:0 ""
+ unt_pre_treaty.201.b:0 ""

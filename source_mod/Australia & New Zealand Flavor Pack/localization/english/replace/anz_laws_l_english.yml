@@ -1,0 +1,12 @@
+﻿l_english:
+  
+# law_migration_controls:0 "[Law.GetCustom('custom_migration_controls_loc')]"
+# law_migration_controls_desc:0 "Only people of cultures and religions not discriminated against may migrate."
+
+# custom_loc_white_australia:0 "White Australia Policy"
+# custom_loc_migration_controls:0 "Migration Controls"
+
+ accepts_overlord_primary_culture: "Is a [Concept('concept_primary_cultures','$concept_primary_culture$')] of their [concept_country]'s [concept_overlord]"
+
+ anz_law_penal_transportation: "Penal Transportation"
+ anz_law_penal_transportation_desc: "Convicted criminals are sentenced to a life of forced labour in the colonies."

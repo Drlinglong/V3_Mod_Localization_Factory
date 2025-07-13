@@ -1,0 +1,65 @@
+﻿l_simp_chinese:
+
+tactical_weapons: "战术武器"
+
+mobilization_option_close_air_support: "近空支援"
+mobilization_option_close_air_support_desc: "搭载空对地武器的专用飞机直接攻击敌方地面部队。"
+mobilization_option_supersonic_close_air_support: "超音速近空支援"
+mobilization_option_supersonic_close_air_support_desc: "搭载空对地武器的超音速飞机直接攻击敌方地面部队。"
+
+mobilization_option_indirect_air_support: "间接空中支援"
+mobilization_option_indirect_air_support_desc: "各式轰炸机攻击敌后目标，以扰乱敌方预备队和补给线。"
+mobilization_option_supersonic_indirect_air_support: "超音速间接空中支援"
+mobilization_option_supersonic_indirect_air_support_desc: "超音速轰炸机攻击敌后目标，以扰乱敌方预备队和补给线。"
+
+mobilization_option_paratroopers: "伞兵"
+mobilization_option_paratroopers_desc: "精锐部队利用降落伞深入敌后攻击关键目标。"
+
+mobilization_option_rocket_artillery: "火箭炮兵"
+mobilization_option_rocket_artillery_desc: "火箭能够将毁灭性炸药投送到敌方部队头上。"
+
+mobilization_option_nuclear_artillery: "核炮兵"
+mobilization_option_nuclear_artillery_desc: "这种毁灭性武器能够摧毁其所过之处的一切。"
+
+mobilization_option_guided_missiles: "制导导弹"
+mobilization_option_guided_missiles_desc: "制导导弹用于精准攻击敌方目标。"
+
+mobilization_option_helicopters_support: "直升机支援"
+mobilization_option_helicopters_support_desc: "直升机为地面部队提供支援，并可用于空中突击。"
+
+mobilization_option_awacs_support: "预警机支援"
+mobilization_option_awacs_support_desc: "预警机有助于侦察，并可用于协调行动。"
+
+mobilization_option_satellites_support: "卫星支援"
+mobilization_option_satellites_support_desc: "卫星是天基侦察系统，可用于协调行动。"
+
+mobilization_option_penicillin_medical_support: "青霉素医疗支援"
+mobilization_option_penicillin_medical_support_desc: "青霉素是一种强效抗生素，可用于治疗感染并在战场上挽救生命。"
+
+unit_combat_unit_type_modern_heavy_tank_offense_mult: "$combat_unit_type_modern_heavy_tank$ $unit_offense_mult$"
+unit_combat_unit_type_modern_heavy_tank_offense_mult_desc: "$combat_unit_type_modern_heavy_tank$ $unit_offense_mult$"
+unit_combat_unit_type_modern_light_tanks_offense_mult: "$combat_unit_type_modern_light_tanks$ $unit_offense_mult$"
+unit_combat_unit_type_modern_light_tanks_offense_mult_desc: "$combat_unit_type_modern_light_tanks$ $unit_offense_mult$"
+unit_combat_unit_type_main_battle_tanks_offense_mult: "$combat_unit_type_main_battle_tanks$ $unit_offense_mult$"
+unit_combat_unit_type_main_battle_tanks_offense_mult_desc: "$combat_unit_type_main_battle_tanks$ $unit_offense_mult$"
+ 
+goods_input_light_fuel_add: "@light_fuel! 轻质燃料投入"
+goods_input_light_fuel_add_desc: "建筑消耗的@light_fuel! 轻质燃料数量"
+goods_input_pharmaceuticals_add: "@pharmaceuticals! 药品投入"
+goods_input_light_fuel_add_desc: "建筑消耗的@pharmaceuticals! 药品数量"
+goods_input_helicopters_add: "@helicopters! 直升机投入"
+goods_input_helicopters_add_desc: "建筑消耗的@helicopters! 直升机数量"
+goods_input_processors_add: "@processors! 处理器投入"
+goods_input_processors_add_desc: "建筑消耗的@processors! 处理器数量"
+goods_input_missiles_add: "@missiles! 导弹投入"
+goods_input_missiles_add_desc: "建筑消耗的@missiles! 导弹数量"
+goods_input_good_uranium_add: "@good_uranium! 铀投入"
+goods_input_good_uranium_add_desc: "建筑消耗的@good_uranium! 铀数量"
+goods_input_computer_add: "@computer! 计算机投入"
+goods_input_computer_add_desc: "建筑消耗的@computer! 计算机数量"
+goods_input_electroniccomponents_add: "@electroniccomponents! 电子元件投入"
+goods_input_electroniccomponents_add_desc: "建筑消耗的@electroniccomponents! 电子元件数量"
+goods_input_space_assets_add: "@space_assets! 空间资产投入"
+goods_input_space_assets_add_desc: "建筑消耗的@space_assets! 空间资产数量"
+goods_input_water_add: "@water! 水投入"
+goods_input_water_add_desc: "建筑消耗的@water! 水数量"

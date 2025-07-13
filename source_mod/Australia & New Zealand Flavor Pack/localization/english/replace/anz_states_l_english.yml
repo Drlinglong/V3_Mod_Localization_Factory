@@ -1,0 +1,72 @@
+﻿l_english:
+
+ # Australia
+ STATE_VICTORIA_nsw: "Port Phillip"
+ STATE_QUEENSLAND_nsw: "Moreton Bay"
+ STATE_QUEENSLAND_torres_strait_islands: "Torres Strait Islands"
+ STATE_TASMANIA_vdl: "Van Diemen’s Land"
+ STATE_AUSTRALIAN_CAPITAL_TERRITORY:0 "Canberra"
+ STATE_AUSTRALIAN_CAPITAL_TERRITORY_canberra:0 "Canberra" # for when a split state
+ STATE_AUSTRALIAN_CAPITAL_TERRITORY_namadgi:0 "Namadgi"
+ STATE_AUSTRALIAN_CAPITAL_TERRITORY_fct:0 "Federal Capital Territory"
+ STATE_NORTHERNL_TERRITORY_nt:0 "Northern Territory" # for when a split state
+ STATE_CHRISTMAS_KEELING:1 "Christmas and Keeling Islands"
+
+ # New Zealand - English by default is just easiest for me to keep track of
+ STATE_NORTHLAND: "Auckland"
+ STATE_NORTHLAND_boi: "Bay of Islands"
+ STATE_NORTHLAND_auckland: "Auckland" # to stop split capital naming weirdness
+ STATE_NORTHLAND_maori: "Te Tai Tokerau"
+ STATE_NORTHLAND_french: "Nouveau-Lyon"
+ STATE_NORTH_ISLAND: "South Auckland"
+ STATE_NORTH_ISLAND_maori: "Te Manawa o Te Wheke"
+ STATE_NORTH_ISLAND_french: "Nouveau-Lyon Sud"
+ STATE_NORTH_ISLAND_waikato: "Waikato"
+ STATE_NORTH_ISLAND_rawhiti: "Te Tai Rawhiti"
+ STATE_COOK_STRAIT: "Wellington"
+ STATE_COOK_STRAIT_maori: "Te Upoko o Te Ika"
+ STATE_COOK_STRAIT_french: "Saint-Germain"
+ STATE_COOK_STRAIT_taranaki: "Taranaki"
+ STATE_COOK_STRAIT_matau: "Te Matau-a-Māui"
+ STATE_WAITAHA: "Canterbury"
+ STATE_WAITAHA_nelson: "Nelson"
+ STATE_WAITAHA_maori: "Waitaha"
+ STATE_WAITAHA_french: "Bordeaux"
+ STATE_WAITAHA_tauihu: "Te Tauihu-o-te-waka"
+ STATE_SOUTH_ISLAND: "Otago"
+ STATE_SOUTH_ISLAND_maori: "Ōtākou"
+ STATE_SOUTH_ISLAND_french: "Otago" # same as above
+
+ # Indo-Pacific
+ STATE_WEST_MICRONESIA:1 "Caroline Islands"
+ STATE_EAST_MICRONESIA:1 "Gilbert Islands"
+ STATE_EAST_MICRONESIA_gilbert_islands: "Gilbert Islands" # to stop split capital naming weirdness
+ STATE_EAST_MICRONESIA_line_islands: "Line Islands"
+ STATE_MARSHALL_ISLANDS:0 "Marshall Islands"
+ STATE_ELLICE_ISLANDS:0 "Ellice Islands"
+ STATE_ELLICE_ISLANDS_polynesian: "Tuvalu"
+ STATE_SAMOA:0 "Samoa"
+ STATE_RAPA_NUI:0 "Easter Island"
+ STATE_RAPA_NUI_polynesian:0 "Rapa Nui"
+ STATE_VANUATU:1 "New Hebrides"
+ STATE_VANUATU_melanesian:1 "Vanuatu"
+ STATE_KANAK:1 "New Caledonia"
+ STATE_KANAK_melanesian: "Kanaky"
+ STATE_NAURU: "Pleasant Island"
+ STATE_NAURU_nauru: "Nauru"
+ STATE_HAWAIIAN_ISLANDS:1 "Hawaii"
+ STATE_HAWAIIAN_ISLANDS_british:0 "Sandwich Islands"
+ STATE_TONGA_british:0 "Friendly Islands"
+ STATE_TONGA_wallis_futuna: "Wallis and Futuna"
+ STATE_EASTERN_NEW_GUINEA:1 "Northeastern New Guinea"
+ STATE_EASTERN_NEW_GUINEA_german:0 "Kaiser-Wilhelmsland"
+ STATE_SOUTHEASTERN_NEW_GUINEA:0 "Southeastern New Guinea"
+ STATE_CELEBES_sulawesi:0 "Sulawesi"
+ STATE_SUNDA_ISLANDS:0 "Lesser Sunda Islands"
+ STATE_NORTH_SUMATRA:0 "Central Sumatra"
+
+ new_zealand_state_regions_tt: "Component [Concept('concept_state_region','$concept_state_regions$')]:\n• $STATE_NORTHLAND$\n• $STATE_NORTH_ISLAND$\n• $STATE_COOK_STRAIT$\n• $STATE_WAITAHA$\n• $STATE_SOUTH_ISLAND$"
+ north_island_state_regions_tt: "Component [Concept('concept_state_region','$concept_state_regions$')]:\n• $STATE_NORTHLAND$\n• $STATE_NORTH_ISLAND$\n• $STATE_COOK_STRAIT$"
+ south_island_state_regions_tt: "Component [Concept('concept_state_region','$concept_state_regions$')]:\n• $STATE_WAITAHA$\n• $STATE_SOUTH_ISLAND$"
+ 
+ eastern_australia_state_regions_tt: "Component [Concept('concept_state_region','$concept_state_regions$')]:\n• $STATE_QUEENSLAND$\n• $STATE_NEW_SOUTH_WALES$\n• $STATE_VICTORIA$"

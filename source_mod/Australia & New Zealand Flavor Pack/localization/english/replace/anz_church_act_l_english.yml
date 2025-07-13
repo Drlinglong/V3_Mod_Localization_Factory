@@ -1,0 +1,62 @@
+﻿l_english:
+
+### Journal Entry
+
+je_anz_church_act:0 "Church Act"
+
+je_anz_church_act_reason:0 "The [GetInterestGroupVariant('ig_intelligentsia',GetPlayer).GetName] are petitioning for [GetLawType('law_freedom_of_conscience').GetName].\n\n[GetCulture('irish').GetName] [GetReligion('catholic').GetName] sectarian violence has been rife in the home country and the colonies. The [GetInterestGroupVariant('ig_devout',GetPlayer).GetName] currently enjoys many exclusive privileges and while our population includes other Christian denominations, they have virtually no official pastoral care and face frequent [concept_discrimination].\n\nThe#white  Church Act#! proposes to place Anglicans and other Christian faiths on an equal basis by the removal of many Anglican privileges and the sponsoring of non-Anglican churches and clergy in proportion to their number of adherents."
+
+#je_anz_churchact_petition_status:0 "The [GetInterestGroupVariant('ig_intelligentsia',GetPlayer).GetName] are petitioning for [GetLawType('law_freedom_of_conscience').GetName] to pass."
+
+anz_churchact_int_dontcare:0 "[GetInterestGroupVariant('ig_intelligentsia',GetPlayer).GetNameWithCountryVariant] stance on [GetLawType('law_freedom_of_conscience').GetName] less than#g  Endorse#1"
+anz_churchact_complete:0 "Church Act"
+
+# Scripted buttons
+
+je_anz_church_colonial_office_appeal_button:0 "Request Support from Colonial Office"
+je_anz_church_colonial_office_appeal_button_desc:0 "By requesting the Colonial Office to bolster our legislative mandate, we could ease the intractable position resulting from sectarian [concept_discrimination].\n\n@information! If [GetGlobalVariable('gbr_var_scope').GetCountry.GetName] has at least two [Concept('concept_interest_group','$concept_interest_groups$')] [concept_in_government] opposing [GetLawType('law_freedom_of_conscience').GetName], the Colonial Office will#red  refuse our request#!.\n\n@information! Our chance for acceptance will depend on positive [concept_relations] with [GetGlobalVariable('gbr_var_scope').GetCountry.GetName]."
+je_anz_church_colonial_office_appeal_button_possible1:0 "Not currently waiting for a response."
+je_anz_church_colonial_office_appeal_button_possible2:0 "The Colonial Office has not already issued an edict in support."
+anz_churchact_response_time:0 "#v We will get a response within a year#!"
+
+### Events
+anz_churchact_diplomatic_no:0 "Relations with [ROOT.GetCountry.GetOverlord.GetName] are less than#v  neutral#!.
+anz_churchact_diplomatic_no_chanced:0 "Relations with [ROOT.GetCountry.GetOverlord.GetName] are less than#g  amicable#! (25% chance).
+anz_churchact_political_no:0 "[ROOT.GetCountry.GetOverlord.GetName] has at least two [concept_interest_group] [concept_in_government] opposing [GetLawType('law_freedom_of_conscience').GetName]"
+anz_churchact_petition_tt:0 "The [GetInterestGroupVariant('ig_intelligentsia',GetPlayer).GetName] will expect the government to pass [GetLawType('law_freedom_of_conscience').GetName] within the next five years."
+
+# Journal petition start
+anz_church_act.1.t:0 "Christian Sectarianism"
+anz_church_act.1.d:0 "With recent anti-[GetReligion('catholic').GetName] hostility momentarily subsided, [SCOPE.sCharacter('anz_int_leader_churchact').GetFullName] is petitioning for the building and maintenance of non-Anglican churches and clergy.\n\nThis would remove many [GetInterestGroupVariant('ig_devout',GetPlayer).GetName] privileges and represent State-sponsored [GetLawType('law_freedom_of_conscience').GetName]."
+anz_church_act.1.f:0 "[GetCulture('british').GetName] [concept_discrimination] toward [GetCulture('irish').GetName] [GetReligion('catholic').GetName]#yellow s#! has a long history involving revolt and suppression, whereby many failed rebels have ended up in the colonies as political prisoners.\n\nIn 1803, Catholic service was briefly offered until only a year later when Irish convicts attempted to overthrow British rule in the Castle Hill uprising."
+anz_church_act.1.a:0 "Appeasement might discourage further rebellion..."
+anz_church_act.1.b:0 "We cannot dilute our pure religion."
+anz_church_act.1.b2:0 "We absolutely cannot dilute our pure religion."
+
+# Colonial office helps
+anz_church_act.2.t:0 "Colonial Office Responds"
+anz_church_act.2.d:0 "An edict has been issued encouraging [GetLawType('law_freedom_of_conscience').GetName] to ease sectarian violence and promote stable development of the colony."
+anz_church_act.2.f:0 ""All social life, stability, progress, depend upon each man’s confidence in his neighbor, a reliance upon him to do his duty.""
+anz_church_act.2.a:0 "Good news!"
+
+# Colonial office rejects
+anz_church_act.21.t:0 "Colonial Office Responds"
+anz_church_act.21.d:0 "Our request for the Colonial Office to issue an edict in support of [GetLawType('law_freedom_of_conscience').GetName] has been denied."
+anz_church_act.21.f:0 ""The farther backward you can look, the farther forward you are likely to see""
+anz_church_act.21.a:0 "Dang it!"
+anz_church_act.21.b:0 "Blast it!"
+anz_church_act.21.c:0 "So be it!"
+
+# enactment event - NOT IMPLEMENTED .. 
+anz_church_act.3.t:0 "enactment"
+anz_church_act.3.d:0 ""
+anz_church_act.3.f:0 ""
+anz_church_act.3.a:0 ""
+
+
+### Modifiers
+anz_churchact_colonial_office_request:0 "Relying on Colonial Office"
+anz_churchact_devout_bolstered:0 "Anglican Church Bolstered"
+anz_churchact_devout_rebuked:0 "Anglican Church Sidelined"
+anz_churchact_colonial_office_helps:0 "Anti-Sectarian Mandate"
+anz_churchact_colonial_office_hurts:0 "Anglican Mandate"

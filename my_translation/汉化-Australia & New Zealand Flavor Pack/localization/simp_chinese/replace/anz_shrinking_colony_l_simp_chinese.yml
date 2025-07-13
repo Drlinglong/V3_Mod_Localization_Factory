@@ -1,0 +1,233 @@
+﻿l_simp_chinese:
+
+## Journal Entries
+
+# VICTORIA JE                 #[ROOT.Var('anz_vic_state').GetState.GetNameNoFormatting]
+je_afp_shrinking_colony_vic: "“萎缩的殖民地：[GetGlobalVariable('anz_vic_state').GetState.GetNameNoFormatting]”"
+je_afp_shrinking_colony_vic_reason: "“随着[GetGlobalVariable('anz_vic_state').GetState.GetNameNoFormatting]成长为一个自尊的政体，[ROOT.GetCountry.GetAdjectiveNoFormatting]政治的支配地位在该州引发了不满。他们认为公共工程不公平，并希望获得更多地方代表权，如果这种情绪未能得到成功引导，[GetGlobalVariable('anz_vic_state').GetState.GetNameNoFormatting]将威胁彻底脱离该省，并获得自己的自由代议制政府，成为一个平等的皇家殖民地。”"
+
+anz_je_sc_vic_fail_tt:0: "“[concept_shrinking_je_vic_loyalty]进度条归零。”"
+anz_je_sc_vic_complete_tt:0: "“[concept_shrinking_je_vic_loyalty]进度条达到100。”"
+
+#scripted progress bar
+anz_shrinking_vic_bar:0: "“@information! 查看[concept_shrinking_je_vic_loyalty]提示框以了解具体贡献。\n”"
+anz_shrinking_vic_bar_desc:0: "“[concept_shrinking_je_vic_loyalty]：[JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%0] ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]/100)”"
+
+anz_shrink_vic_bureaucracy:0: "“[GetLawGroup('lawgroup_bureaucracy').GetName]”"
+anz_shrink_vic_power:0: "“[GetLawGroup('lawgroup_distribution_of_power').GetName]”"
+anz_shrink_vic_trade:0: "“[GetLawGroup('lawgroup_trade_policy').GetName]”"
+anz_shrink_vic_slavery:0: "“[GetLawGroup('lawgroup_slavery').GetName]”"
+anz_shrink_vic_speech:0: "“[GetLawGroup('lawgroup_free_speech').GetName]”"
+anz_shrink_vic_labor:0: "“[GetLawGroup('lawgroup_labor_rights').GetName]”"
+anz_shrink_vic_loyalists:0: "“在[GetGlobalVariable('anz_vic_state').GetState.GetName]的[concept_loyalist]#o s#!”"
+anz_shrink_vic_radicals:0: "“在[GetGlobalVariable('anz_vic_state').GetState.GetName]的[concept_radical]#o s#!”"
+anz_shrink_vic_unemployment:0: "“在[GetGlobalVariable('anz_vic_state').GetState.GetName]的[concept_unemployed]”"
+  
+concept_shrinking_je_vic_loyalty:0: "“维多利亚忠诚度”"
+concept_shrinking_je_vic_loyalty_desc: "“衡量[GetGlobalVariable('anz_vic_state').GetState.GetNameNoFormatting]对我们政府忠诚度的一个指标。如果完全耗尽，[GetGlobalVariable('anz_vic_state').GetState.GetNameNoFormatting]将脱离。数值每周追踪，每月更新进度。\n\n#bold #UNDERLINE 忠臣：#!#!\n数值等于[GetGlobalVariable('anz_vic_state').GetState.GetNameNoFormatting]中[concept_loyalist]的百分比乘以2.5。例如，30%忠臣 = #green +0.75#!\n\n#bold #UNDERLINE 动荡：#!#!\n数值等于[GetGlobalVariable('anz_vic_state').GetState.GetNameNoFormatting]中[concept_turmoil]的百分比乘以1.5。例如，30%激进分子 = #red -0.6#!\n\n#bold #UNDERLINE 失业：#!#!\n数值等于[GetGlobalVariable('anz_vic_state').GetState.GetNameNoFormatting]中[concept_unemployed]的百分比。例如，30%失业率 = #red -0.3#!\n\n#bold #UNDERLINE 其他：#!#!\n在[GetGlobalVariable('anz_vic_state').GetState.GetNameNoFormatting]中建造的每座建筑提供#green +5#!（不包括城市中心、贸易中心、原住民保留地或自给自足）。某些事件可能会影响[concept_shrinking_je_vic_loyalty]。\n\n#bold #UNDERLINE 法律：#!#!\n#b  官僚制度#!\n世袭官僚 = #red -0.4#!\n任命官僚 = #red -0.15#!\n民选官僚 = #green +0.2#!\n#b  权力分配#!\n专制 = #red -0.35#!\n寡头政治或技术官僚 = #red -0.25#!\n土地投票 = #red -0.2#!\n财富投票 = #red -0.05#!\n人口普查投票 = #green +0.25#!\n普选权 = #green +0.35#!\n#b  贸易#!\n重商主义 = #red -0.35#!\n保护主义 = #green +0.35#!\n自由贸易 = #red -0.1#!\n#b  奴隶制#!\n债务奴役 = #red -0.5#!\n禁止奴隶制 = #green +0.35#!\n#b  言论自由#!\n取缔异见 = #red -0.35#!\n审查制度 = #red -0.175#!\n集会权 = #green +0.1#!\n受保护的言论 = #green +0.15#!\n#b  劳工权利#!\n无工人权利 = #red -0.125#!\n监管机构 = #green +0.1#!\n工人保护 = #green +0.175#!”"
+
+afp_vic_release_status1:0: "“#red [GetGlobalVariable('anz_vic_state').GetState.GetNameNoFormatting]要求脱离。#!”"
+afp_vic_release_status2:0: "“#b [GetGlobalVariable('anz_vic_state').GetState.GetNameNoFormatting]正威胁脱离。#!”"
+afp_vic_release_status3:0: "“[GetGlobalVariable('anz_vic_state').GetState.GetNameNoFormatting]正在考虑脱离。”"
+afp_vic_release_status4:0: "“[GetGlobalVariable('anz_vic_state').GetState.GetNameNoFormatting]略感满足。”"
+afp_vic_release_status5:0: "“[GetGlobalVariable('anz_vic_state').GetState.GetNameNoFormatting]基本已平息。”"
+
+je_anz_shrinking_vic_loyalty_button:0: "“承诺保障”"
+je_anz_shrinking_vic_loyalty_button_desc:0: "“向[GetGlobalVariable('anz_vic_state').GetState.GetNameNoFormatting]人民承诺提高他们的[concept_sol]。然而，这些承诺是期望被兑现的。”"
+je_anz_shrinking_vic_tax_button:0: "“提供减税”"
+je_anz_shrinking_vic_tax_button_desc:0: "“让人民把部分钱留在口袋里，无疑将有助于改善他们的生活，并说服他们相信我们政府管理的好处。”"
+je_anz_shrinking_vic_power_button:0: "“加强代表权”"
+je_anz_shrinking_vic_power_button_desc:0: "“我们从美国人那里得知，无代表不征税是一个严重的问题，那么增加代表权又如何呢？”"
+je_anz_shrinking_vic_begone_button1:0: "“放弃[GetGlobalVariable('anz_vic_state').GetState.GetNameNoFormatting]”"
+je_anz_shrinking_vic_begone_button1_desc:0: "“这个忘恩负义的省份不再值得我们监督；虽然他们可能认为分离会更好，但实际上是我们会更好。”"
+je_anz_shrinking_vic_begone_button2:0: "“再见了，臭墨尔本！”"
+je_anz_shrinking_vic_begone_button2_desc:0: "“#r 你确定吗？！#!”"
+je_anz_shrinking_vic_begone_button3:0: "“再想想……”"
+je_anz_shrinking_vic_begone_button3_desc:0: "“冷静下来或许能占上风。”"
+je_shrinking_willfail_vic_tt:0: "“#RED 萎缩的殖民地日志将失败，[GetGlobalVariable('anz_vic_state').GetState.GetNameNoFormatting]将脱离我们，这可能会减缓任何联邦化抱负。#!”"
+je_shrinking_back_tt:0: "“返回政策菜单”"
+shrinking_others_not_angry_tt:0: "“其他州不介意。”"
+shrinkingJE_rivalry_nsw_tt:0: "“#RED 因为[SCOPE.sState('anz_capitalnsw_state').GetCityHubName]和[SCOPE.sState('anz_vic_state').GetCityHubName]之间存在强烈的竞争，提升[GetGlobalVariable('anz_vic_state').GetState.GetNameNoFormatting]的相对[concept_pop] [concept_political_strength]将导致#b  20%#!的#YELLOW  [GetGlobalVariable('anz_nsw_state').GetState.GetNameNoFormatting]#!州人口变得更加[concept_radical]。#!”"
+
+je_anz_shrinking_vic_tax_poor_button:0: "“为[concept_lower_strata]减税”"
+je_anz_shrinking_vic_tax_poor_button_desc:0: "“人头税以相同的税率向每位公民征收，不因其他收入的增加或减少而改变，因此减少这类税收将确保最贫困的人群获得按比例更好的待遇。同样，减少土地税意味着我们减轻了农民的负担。”"
+je_anz_shrinking_vic_tax_middle_button:0: "“为[concept_middle_strata]减税”"
+je_anz_shrinking_vic_tax_middle_button_desc:0: "“中产阶级通过投资知识和技能，获得了与他们的能力相称的高工资回报。通过降低所得税，我们主要针对社会这个阶层。”"
+je_anz_shrinking_vic_tax_rich_button:0: "“为[concept_upper_strata]减税”"
+je_anz_shrinking_vic_tax_rich_button_desc:0: "“这些[concept_pop]是工业和农业的巨头，他们通过出身或能力抓住了机会，引领经济。通过持有大量企业[concept_ownership_share]，他们从投资中获得分红。通过降低分红税，我们无疑能增强他们进一步投资我们经济的能力。”"
+je_anz_shrinking_vic_tax_back_button:0: "“或许下次吧……”"
+je_anz_shrinking_vic_tax_back_button_desc:0: "“从一个决定中退缩并非领导无方；被施压以坚持与现有事实相悖的决定才是。”"
+shrinking_open_tax_menu_tt:0: "“打开税收政策菜单，可选择针对[concept_lower_strata]、[concept_middle_strata]或[concept_upper_strata]。”"
+shrinking_close_tax_menu_tt:0: "“关闭税收政策并返回其他政策选项。您仍可返回税收政策。”"
+
+
+# Shared
+anz_shrinking_button_cooldown_tt:0: "“此政策在三年内未被激活。”"
+anz_shrinking_sol_promise_modifier:0: "“宜居承诺”"
+anz_shrinking_sol_promise_modifier2:0: "“更高政府审查”"
+anz_shrinking_taxbreak_modifier:0: "“普遍减税”"
+anz_shrinking_power_modifier:0: "“增加代表权”"
+anz_shrinking_tax_poor_modifier:0: "“下层阶级减税”"
+anz_shrinking_tax_middle_modifier:0: "“中层阶级减税”"
+anz_shrinking_tax_rich_modifier:0: "“上层阶级减税”"
+
+
+#################################################
+
+# QUEENSLAND JE
+je_afp_shrinking_colony_qld: "“萎缩的殖民地：[GetGlobalVariable('anz_qld_state').GetState.GetNameNoFormatting]”"
+je_afp_shrinking_colony_qld_reason: "“随着[GetGlobalVariable('anz_qld_state').GetState.GetNameNoFormatting]成长为一个自尊的政体，[ROOT.GetCountry.GetAdjectiveNoFormatting]政治的支配地位在该州引发了不满。他们认为遥远的统治能力不足，且希望获得更多地方代表权，如果这种情绪未能得到成功引导，[GetGlobalVariable('anz_qld_state').GetState.GetNameNoFormatting]将威胁脱离，成为一个平等的皇家殖民地。”"
+
+anz_je_sc_qld_fail_tt:0: "“[concept_shrinking_je_qld_loyalty]进度条归零。”"
+anz_je_sc_qld_complete_tt:0: "“[concept_shrinking_je_qld_loyalty]进度条达到100。”"
+
+#scripted progress bar
+anz_shrinking_qld_bar:0: "“@information! 查看[concept_shrinking_je_qld_loyalty]提示框以了解具体贡献。\n”"
+anz_shrinking_qld_bar_desc:0: "“[concept_shrinking_je_qld_loyalty]：[JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%0] ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]/100)”"
+
+anz_shrink_qld_bureaucracy:0: "“[GetLawGroup('lawgroup_bureaucracy').GetName]”"
+anz_shrink_qld_power:0: "“[GetLawGroup('lawgroup_distribution_of_power').GetName]”"
+anz_shrink_qld_trade:0: "“[GetLawGroup('lawgroup_trade_policy').GetName]”"
+anz_shrink_qld_slavery:0: "“[GetLawGroup('lawgroup_slavery').GetName]”"
+anz_shrink_qld_speech:0: "“[GetLawGroup('lawgroup_free_speech').GetName]”"
+anz_shrink_qld_labor:0: "“[GetLawGroup('lawgroup_labor_rights').GetName]”"
+anz_shrink_qld_loyalists:0: "“在[GetGlobalVariable('anz_qld_state').GetState.GetName]的[concept_loyalist]#o s#!”"
+anz_shrink_qld_radicals:0: "“在[GetGlobalVariable('anz_qld_state').GetState.GetName]的[concept_radical]#o s#!”"
+anz_shrink_qld_unemployment:0: "“在[GetGlobalVariable('anz_qld_state').GetState.GetName]的[concept_unemployed]”"
+  
+concept_shrinking_je_qld_loyalty:0: "“昆士兰忠诚度”"
+concept_shrinking_je_qld_loyalty_desc: "“衡量[GetGlobalVariable('anz_qld_state').GetState.GetNameNoFormatting]对我们政府忠诚度的一个指标。如果完全耗尽，[GetGlobalVariable('anz_qld_state').GetState.GetNameNoFormatting]将脱离。数值每周追踪，每月更新进度。\n\n#bold #UNDERLINE 忠臣：#!#!\n数值等于[GetGlobalVariable('anz_qld_state').GetState.GetNameNoFormatting]中[concept_loyalist]的百分比乘以3。例如，30%忠臣 = #green +0.9#!\n\n#bold #UNDERLINE 动荡：#!#!\n数值等于[GetGlobalVariable('anz_qld_state').GetState.GetNameNoFormatting]中[concept_turmoil]的百分比乘以2。例如，30%激进分子 = #red -0.75#!\n\n#bold #UNDERLINE 失业：#!#!\n数值等于[GetGlobalVariable('anz_qld_state').GetState.GetNameNoFormatting]中[concept_unemployed]的百分比。例如，30%失业率 = #red -0.3#!\n\n#bold #UNDERLINE 其他：#!#!\n在[GetGlobalVariable('anz_qld_state').GetState.GetNameNoFormatting]中建造的每座建筑提供#green +5#!（不包括城市中心、贸易中心、原住民保留地或自给自足）。某些事件可能会影响[concept_shrinking_je_qld_loyalty]。\n\n#bold #UNDERLINE 法律：#!#!\n#b  官僚制度#!\n世袭官僚 = #red -0.3#!\n任命官僚 = #red -0.1#!\n民选官僚 = #green +0.1#!\n#b  权力分配#!\n专制 = #red -0.35#!\n寡头政治或技术官僚 = #red -0.25#!\n土地投票 = #red -0.2#!\n财富投票 = #white 0#!\n人口普查投票 = #green +0.25#!\n普选权 = #green +0.35#!\n#b  奴隶制#!\n债务奴役 = #red -0.3#!\n禁止奴隶制 = #green +0.3#!\n#b  言论自由#!\n取缔异见 = #red -0.35#!\n审查制度 = #red -0.175#!\n集会权 = #green +0.1#!\n受保护的言论 = #green +0.15#!\n#b  劳工权利#!\n无工人权利 = #red -0.1#!\n监管机构 = #green +0.1#!\n工人保护 = #green +0.15#!”"
+
+afp_qld_release_status1:0: "“#red [GetGlobalVariable('anz_qld_state').GetState.GetNameNoFormatting]要求脱离。#!”"
+afp_qld_release_status2:0: "“#b [GetGlobalVariable('anz_qld_state').GetState.GetNameNoFormatting]正威胁脱离。#!”"
+afp_qld_release_status3:0: "“[GetGlobalVariable('anz_qld_state').GetState.GetNameNoFormatting]正在考虑脱离。”"
+afp_qld_release_status4:0: "“[GetGlobalVariable('anz_qld_state').GetState.GetNameNoFormatting]略感满足。”"
+afp_qld_release_status5:0: "“[GetGlobalVariable('anz_qld_state').GetState.GetNameNoFormatting]基本已平息。”"
+
+je_anz_shrinking_qld_loyalty_button:0: "“承诺保障”"
+je_anz_shrinking_qld_loyalty_button_desc:0: "“向[GetGlobalVariable('anz_qld_state').GetState.GetNameNoFormatting]人民承诺提高他们的[concept_sol]。然而，这些承诺是期望被兑现的。”"
+je_anz_shrinking_qld_tax_button:0: "“提供减税”"
+je_anz_shrinking_qld_tax_button_desc:0: "“让人民把部分钱留在口袋里，无疑将有助于改善他们的生活，并说服他们相信我们政府管理的好处。”"
+je_anz_shrinking_qld_power_button:0: "“加强代表权”"
+je_anz_shrinking_qld_power_button_desc:0: "“我们从美国人那里得知，无代表不征税是一个严重的问题，那么增加代表权又如何呢？”"
+je_anz_shrinking_qld_begone_button1:0: "“放弃[GetGlobalVariable('anz_qld_state').GetState.GetNameNoFormatting]”"
+je_anz_shrinking_qld_begone_button1_desc:0: "“这个忘恩负义的省份不再值得我们监督；虽然他们可能认为分离会更好，但实际上是我们会更好。”"
+je_anz_shrinking_qld_begone_button2:0: "“再见了，[GetGlobalVariable('anz_qld_state').GetState.GetCityHubName]！”"
+je_anz_shrinking_qld_begone_button2_desc:0: "“#r 你确定吗？！#!”"
+je_anz_shrinking_qld_begone_button3:0: "“再想想……”"
+je_anz_shrinking_qld_begone_button3_desc:0: "“冷静下来或许能占上风。”"
+je_shrinking_willfail_qld_tt:0: "“#RED 萎缩的殖民地日志将失败，[GetGlobalVariable('anz_qld_state').GetState.GetNameNoFormatting]将脱离我们，这可能会减缓任何联邦化抱负。#!”"
+je_shrinking_back_tt:0: "“返回政策菜单”"
+shrinking_others_not_angry_tt:0: "“其他州不介意。”"
+
+##############################################
+### Events
+
+#Victoria JE Start - lil awkward if player has moved capital
+afp_shrinking_colony_event.1.t:0: "“萎缩的殖民地”"
+afp_shrinking_colony_event.1.d1:0: "“因不满税收被送往[GetGlobalVariable('anz_nsw_state').GetState.GetCityHubName]以及在立法会中代表权不足的怨言，[GetGlobalVariable('anz_vic_state').GetState.GetName]的殖民者正在考虑脱离。\n\n#r 在此问题解决之前，联邦化将无法实现。#!”"
+afp_shrinking_colony_event.1.d2:0: "“因不满税收被送往[GetGlobalVariable('anz_nsw_state').GetState.GetCityHubName]以及在立法会中代表权不足的怨言，[GetGlobalVariable('anz_vic_state').GetState.GetName]的殖民者正在考虑脱离。”"
+afp_shrinking_colony_event.1.f:0: "“菲利普港的人民对其在政治上从属于[GetGlobalVariable('anz_nsw_state').GetState.GetCityHubName]越来越感到失望，他们认为如果拥有自己的自治权会更好，也理应获得自治权。[concept_shrinking_je_vic_loyalty]正受到质疑，需要仔细管理才能维持对该省的控制。”"
+afp_shrinking_colony_event.1.a:0: "“我们必须让他们满足。”"
+
+#Queensland JE Start - lil awkward if player has moved capital
+afp_shrinking_colony_event.2.t:0: "“萎缩的殖民地”"
+afp_shrinking_colony_event.2.d1:0: "“因不满税收被送往[GetGlobalVariable('anz_nsw_state').GetState.GetCityHubName]以及在立法会中代表权不足的怨言，[GetGlobalVariable('anz_qld_state').GetState.GetName]的殖民者正在考虑脱离。\n\n#r 在此问题解决之前，联邦化将无法实现。#!”"
+afp_shrinking_colony_event.2.d2:0: "“因不满税收被送往[GetGlobalVariable('anz_nsw_state').GetState.GetCityHubName]以及在立法会中代表权不足的怨言，[GetGlobalVariable('anz_qld_state').GetState.GetName]的殖民者正在考虑脱离。”"
+afp_shrinking_colony_event.2.f:0: "“莫顿湾的人民对其在政治上从属于[GetGlobalVariable('anz_nsw_state').GetState.GetCityHubName]越来越感到失望，他们认为如果拥有自己的自治权会更好，也理应获得自治权。[concept_shrinking_je_qld_loyalty]正受到质疑，需要仔细管理才能维持对该省的控制。”"
+afp_shrinking_colony_event.2.a:0: "“我们必须让他们满足。”"
+
+#Victoria success
+afp_shrinking_colony_event.100.t:0: "“一个新的新南威尔士”"
+afp_shrinking_colony_event.100.d:0: "“我们已经阻止了南方省份的自治要求，[GetGlobalVariable('anz_vic_state').GetState.GetName]已牢固地成为[ROOT.GetCountry.GetNameNoFormatting]的一部分。”"
+afp_shrinking_colony_event.100.f:0: "“尽管[GetGlobalVariable('anz_vic_state').GetState.GetCityHubName]的一些人可能认为今天是一个挫折，但对大多数人来说，这是在我们开明统治下共同繁荣的庆祝。”"
+afp_shrinking_colony_event.100.a:0: "“我们仁慈光辉的典范。”"
+anz_sc_vic_success_tt:0: "“[GetGlobalVariable('anz_vic_state').GetState.GetName]将不再能够寻求自治”"
+
+#Queensland success
+afp_shrinking_colony_event.200.t:0: "“一个新的新南威尔士”"
+afp_shrinking_colony_event.200.d:0: "“我们已经阻止了北方省份的自治要求，[GetGlobalVariable('anz_qld_state').GetState.GetName]已牢固地成为[ROOT.GetCountry.GetNameNoFormatting]的一部分。”"
+afp_shrinking_colony_event.200.f:0: "“尽管有人认为所谓的“[GetGlobalVariable('anz_qld_state').GetState.GetNameNoFormatting]”面积过大，无法从[SCOPE.sState('anz_capitalnsw_state').GetCityHubName]进行有效管理，但我们已经证明并非如此。”"
+afp_shrinking_colony_event.200.a:0: "“这符合我们所有人的利益。”"
+anz_sc_qld_success_tt:0: "“[GetGlobalVariable('anz_qld_state').GetState.GetName]将不再能够寻求自治”"
+
+# Victoria fail
+afp_shrinking_colony_event.101.t:0: "“萎缩的殖民地”"
+afp_shrinking_colony_event.101.d:0: "“[GetGlobalVariable('anz_vic_state').GetState.GetName]人民寻求自治并已实现。为回应他们的要求，[ROOT.GetCountry.GetOverlord.GetAdjective]议会通过了《澳大利亚殖民地政府法案》，允许建立与[ROOT.GetCountry.GetNameNoFormatting]政府形式类似的新澳大利亚殖民地。”"
+afp_shrinking_colony_event.101.f:0: "“次日清晨，宣布立即放假四天，并伴随着在旗杆山上的皇家礼炮和烟花。[GetGlobalVariable('anz_vic_state').GetState.GetCityHubName]的居民随后参加了“灯光之夜”，城中各家各户点亮灯笼，形成一片灯火辉煌。”"
+afp_shrinking_colony_event.101.a:0: "“就这样吧。”"
+afp_shrinking_colony_event.101.b:0: "“我这就去[GetGlobalVariable('anz_vic_state').GetState.GetCityHubName]！”"
+
+# Queensland fail
+afp_shrinking_colony_event.201.t:0: "“萎缩的殖民地”"
+afp_shrinking_colony_event.201.d:0: "“[GetGlobalVariable('anz_qld_state').GetState.GetName]人民寻求自治并已实现。为回应他们的要求，[ROOT.GetCountry.GetOverlord.GetAdjective]议会通过了《澳大利亚殖民地政府法案》，允许建立与[ROOT.GetCountry.GetNameNoFormatting]政府形式类似的新澳大利亚殖民地。”"
+afp_shrinking_colony_event.201.f:0: "“[ROOT.GetCountry.GetAdjectiveNoFormatting]的决心受到了考验，并动摇了。那些希望建立一个更强大的[ROOT.GetCountry.GetNameNoFormatting]并领导澳大利亚的人，希望破灭，因为东海岸四分五裂。\n\n如果我们要寻求联邦化，现在不仅要与西边和海外的邻国谈判，还要与那些曾经统一的实体谈判。”"
+afp_shrinking_colony_event.201.a:0: "“唉。”"
+afp_shrinking_colony_event.201.b:0: "“我这就去[GetGlobalVariable('anz_qld_state').GetState.GetCityHubName]！”"
+
+shrunken_colony_vic_tt:0: "“[GetGlobalVariable('anz_vic_state').GetState.GetName]获得自治权”"
+shrunken_colony_qld_tt:0: "“[GetGlobalVariable('anz_qld_state').GetState.GetName]获得自治权”"
+shrunken_colony_vic_rename_tt: "“[GetGlobalVariable('anz_vic_state').GetState.GetName]更名为#white 维多利亚#!”"
+shrunken_colony_qld_rename_tt: "“[GetGlobalVariable('anz_qld_state').GetState.GetName]更名为#white 昆士兰#!”"
+shrunken_colony_vic_stay_tt:0: "“[GetGlobalVariable('anz_vic_state').GetState.GetName]将继续是[SCOPE.sCountry('root_country_nsw').GetName]的一部分”"
+shrunken_colony_qld_stay_tt:0: "“[GetGlobalVariable('anz_qld_state').GetState.GetName]将继续是[SCOPE.sCountry('root_country_nsw').GetName]的一部分”"
+
+shrunk_federation_journal_reset_tt:0: "“如果您切换标签，联邦日志的进度将#r 不#!会保留。”"
+
+## MISC EVENTS
+
+# Vic: Sydney too far; Tyranny of Distance
+afp_shrinking_colony_event.3.t:0: "“距离的暴政”"
+afp_shrinking_colony_event.3.d:0: "“[GetGlobalVariable('anz_vic_state').GetState.GetName]的分裂煽动者指出，[GetGlobalVariable('anz_vic_state').GetState.GetNameNoFormatting]的代表前往[SCOPE.sState('state_capital').GetNameNoFormatting]往返立法机构是难以维持的。”"
+afp_shrinking_colony_event.3.f:0: "““从[GetGlobalVariable('anz_vic_state').GetState.GetCityHubName]到[SCOPE.sState('state_capital').GetNameNoFormatting]的路程超过800公里！除了那些与普通公民最脱节的政客，很少有人能负担得起如此频繁的旅行，即便如此，当他们必须经常远在他方时，又如何能了解[GetGlobalVariable('anz_vic_state').GetState.GetNameNoFormatting]的疾苦呢？””"
+afp_shrinking_colony_event.3.a:0: "“如果我们把立法机构带到[GetGlobalVariable('anz_vic_state').GetState.GetName]呢？”"
+afp_shrinking_colony_event.3.b:0: "“它总得有个地方，不如就在[SCOPE.sState('state_capital').GetNameNoFormatting]吧。”"
+sc_capital_move_promise_vic_tt:0: "“我们承诺在#WHITE  2年#!内将[concept_capital_state]迁至[GetGlobalVariable('anz_vic_state').GetState.GetNameNoFormatting]。\n如果我们遵守承诺，[concept_shrinking_je_vic_loyalty]将增加#WHITE  10#!点。\n#b 不履行此承诺将产生后果。#!”"
+broke_sc_vic_capital_promise_tt:0: "“由于我们未能履行承诺，我们的[concept_shrinking_je_vic_loyalty]减少了#WHITE  10#!点。”"
+sc_broke_qld_capital_promise1_tt:0: "“因为我们曾承诺[GetGlobalVariable('anz_qld_state').GetState.GetNameNoFormatting]将成为我们的[concept_capital_state]，所以这项决定将激怒他们的人民。”"
+sc_broke_qld_capital_promise2_tt:0: "“因为我们曾承诺[GetGlobalVariable('anz_qld_state').GetState.GetNameNoFormatting]将成为我们的[concept_capital_state]，我们将失去#WHITE  10#!点[concept_shrinking_je_qld_loyalty]。”"
+
+# QLD/VIC Tryanny of Distance fail
+afp_shrinking_colony_event.302.t:0: "“谎言的暴政”"
+afp_shrinking_colony_event.302.d:0: "“为避免殖民地萎缩，我们曾承诺在两年内迁都。今天，我们被发现食言了。”"
+afp_shrinking_colony_event.302.f:0: "““如果[ROOT.GetCountry.GetNameNoFormatting]政府试图让我们相信，与谎言的暴政相比，距离的暴政只是小事一桩，那么他们无疑是成功了。””"
+afp_shrinking_colony_event.302.a:0: "“你愿意接受另一个承诺吗……？”"
+
+# QLD: Sydney too far; Tyranny of Distance
+afp_shrinking_colony_event.4.t:0: "“距离的暴政”"
+afp_shrinking_colony_event.4.d:0: "“[GetGlobalVariable('anz_qld_state').GetState.GetName]的分裂煽动者指出，[GetGlobalVariable('anz_qld_state').GetState.GetNameNoFormatting]的代表前往[SCOPE.sState('state_capital').GetNameNoFormatting]往返立法机构是难以维持的。”"
+afp_shrinking_colony_event.4.f:0: "““从[GetGlobalVariable('anz_qld_state').GetState.GetCityHubName]到[SCOPE.sState('state_capital').GetNameNoFormatting]的路程超过800公里！除了那些与普通公民最脱节的政客，很少有人能负担得起如此频繁的旅行，即便如此，当他们必须经常远在他方时，又如何能了解[GetGlobalVariable('anz_qld_state').GetState.GetNameNoFormatting]的疾苦呢？””"
+afp_shrinking_colony_event.4.a:0: "“如果我们把立法机构带到[GetGlobalVariable('anz_qld_state').GetState.GetName]呢？”"
+afp_shrinking_colony_event.4.b:0: "“它总得有个地方，不如就在[SCOPE.sState('state_capital').GetName]吧。”"
+sc_capital_move_promise_qld_tt:0: "“我们承诺在#WHITE  2年#!内将[concept_capital_state]迁至[GetGlobalVariable('anz_qld_state').GetState.GetNameNoFormatting]。\n如果我们遵守承诺，[concept_shrinking_je_qld_loyalty]将增加#WHITE  10#!点。\n#b 不履行此承诺将产生后果。#!”"
+broke_sc_qld_capital_promise_tt:0: "“由于我们未能履行承诺，我们的[concept_shrinking_je_qld_loyalty]减少了#WHITE  10#!点。”"
+sc_broke_vic_capital_promise1_tt:0: "“因为我们曾承诺[GetGlobalVariable('anz_vic_state').GetState.GetNameNoFormatting]将成为我们的[concept_capital_state]，所以这项决定将激怒他们的人民。”"
+sc_broke_vic_capital_promise2_tt:0: "“因为我们曾承诺[GetGlobalVariable('anz_vic_state').GetState.GetNameNoFormatting]将成为我们的[concept_capital_state]，我们将失去#WHITE  10#!点[concept_shrinking_je_vic_loyalty]。”"
+
+# Gold (vic)
+afp_shrinking_colony_event.5.t:0: "“[GetGlobalVariable('anz_vic_state').GetState.GetNameNoFormatting]的财富”"
+afp_shrinking_colony_event.5.d:0: "“在[GetGlobalVariable('anz_vic_state').GetState.GetName]发现了巨额黄金，吸引了许多人加入[GetGlobalVariable('anz_vic_state').GetState.GetNameNoFormatting]的分离主义运动，希望将新发现的财富保留在该州内。”"
+afp_shrinking_colony_event.5.f:0: "““这是一种不仅影响[GetGlobalVariable('anz_vic_state').GetState.GetNameNoFormatting]或澳大拉西亚历史，而且影响世界的发现。一场激烈的淘金热正在上演，我们不能让这些财富散播到那些只会索取、只会自肥而无能力或意愿回报的人手中，从而浪费我们自己的机会！””"
+afp_shrinking_colony_event.5.a:0: "“不，不……那是[ROOT.GetCountry.GetNameNoFormatting]的财富。”"
+afp_shrinking_colony_event.5.b:0: "“提议减少金矿税。”"
+anz_sc_reduced_gold_tax:0: "“金矿减税”"
+sc_gold_loyalty_tt:0: "“损失#WHITE  5#!点[concept_shrinking_je_vic_loyalty]”"
+
+# Tariffs (vic)
+afp_shrinking_colony_event.6.t:0: "“征收关税还是不征收？”"
+afp_shrinking_colony_event.6.d:0: "“为了保护地方工业并实现自给自足，[SCOPE.sCharacter( 'sc_protectionist_agitator').GetFullName]代表着[SCOPE.sState('state_vic').GetName]内部的保护主义运动。\n[SCOPE.sCharacter('protectionist_leader').GetInterestGroup.GetName]的领导人[SCOPE.sCharacter( 'protectionist_leader').GetFullName]也加入了这项呼吁，要求实施[GetLawType('law_protectionism').GetName]。\n\n这可能是一个获得[concept_shrinking_je_vic_loyalty]的机会。”"
+afp_shrinking_colony_event.6.f:0: "““每当有人开始谈论‘公平竞争’，或者泛泛而言的‘公平’时，就该看紧你的钱包了，因为它快要被掏空了。””"
+afp_shrinking_colony_event.6.a:0: "“鼓励该运动。”"
+afp_shrinking_colony_event.6.b:0: "“不鼓励该运动。”"
+afp_shrinking_colony_event.6.c:0: "“让事情顺其自然。”"
+anz_sc_reduced_gold_tax:0: "“金矿减税”"
+sc_gold_loyalty_tt:0: "“损失#WHITE  5#!点[concept_shrinking_je_vic_loyalty]”"
+anz_bolster_popularity_modifier:0: "“人气提升”"
+anz_suppress_popularity_modifier:0: "“人气压制”"
+
+# convict settlers (vic)  #NOT IMPLEMENTED
+afp_shrinking_colony_event.7.t:0: "“征收关税还是不征收？”"
+afp_shrinking_colony_event.7.d:0: "“为了保护地方工业并实现自给自足，[SCOPE.sCharacter( 'sc_protectionist_agitator').GetFullName]代表着[SCOPE.sState('state_vic').GetName]内部的保护主义运动。\n[SCOPE.sCharacter('protectionist_leader').GetInterestGroup.GetName]的领导人[SCOPE.sCharacter( 'protectionist_leader').GetFullName]也加入了这项呼吁，要求实施[GetLawType('law_protectionism').GetName]。\n\n这可能是一个获得[concept_shrinking_je_vic_loyalty]的机会。”"
+afp_shrinking_colony_event.7.f:0: "““每当有人开始谈论‘公平竞争’，或者泛泛而言的‘公平’时，就该看紧你的钱包了，因为它快要被掏空了。””"
+afp_shrinking_colony_event.7.a:0: "“鼓励该运动。”"
+afp_shrinking_colony_event.7.b:0: "“不鼓励该运动。”"

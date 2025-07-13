@@ -1,0 +1,917 @@
+﻿l_simp_chinese:
+
+### Journal Entries
+
+je_group_anz_indigenous_affairs:0: "原住民事务"
+
+## FRONTIER WARS
+je_australian_frontier_wars:0: "边疆战争"
+je_australian_frontier_wars_reason:0: "随着殖民边疆在大陆上扩张，边疆战争是原住民人口与欧洲定居者之间一系列暴力冲突的总称。虽然殖民政府通常不对多数冲突负直接责任，且尽管上级命令保护原住民，但随着定居点进一步向内陆发展，冲突仍在增加。维持边疆秩序可能很困难，因为定居者为了财富和安全而追逐自身利益，却以牺牲原住民的土地和生命为代价。\n$TOOLTIP_DELIMITER$\n@information! [concept_anz_frontier_control] 将影响某些冲突发生的可能性，并为此日志添加一个规模化的#green 正面#!或#red 负面#!修正。"
+
+anz_fw_less_likely:0: "冲突可能性较低"
+anz_fw_neutral:0: "中等程度冲突"
+anz_fw_more_likely:0: "#b 冲突可能性更高#!"
+
+#GetPlayer.GetJournalEntry('je_whatever_your_je_is_named')
+#[GetPlayer.GetJournalEntry('je_australian_frontier_wars').GetCurrentBarProgress(ScriptedProgressBar.anz_frontier_control_bar)|%0]
+#[JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%0]
+
+anz_afw_complete:0: "和解"
+anz_afw_fail:0: "殖民主义的持久影响"
+
+anz_afw_fail_tt:0: "澳大利亚大陆上不存在[GetCulture('aborigine').GetName][concept_decentralized_nation]"
+
+anz_fwc_full_control_status_tt:0: "[concept_anz_frontier_control]为100%"
+#anz_afw_subject_condition_tt:0 "[ROOT.GetCountry.GetNameNoFlag] has an [GetCulture('aborigine').GetName] [concept_subject] with their [concept_capital_state] in [GetGlobalVariable('anz_nsw_state').GetState.GetName], [GetGlobalVariable('anz_vic_state').GetState.GetName], [GetGlobalVariable('anz_qld_state').GetState.GetName], [GetGlobalVariable('anz_sas_state').GetState.GetName], [GetGlobalVariable('anz_nt_state').GetState.GetName] and [GetGlobalVariable('anz_was_state').GetState.GetName]"
+anz_afw_subject_condition_tt:0: "[ROOT.GetCountry.GetNameNoFlag]在每个其拥有的澳大利亚邦区域（堪培拉除外）都拥有一个以[concept_capital_state]为[GetCulture('aborigine').GetName]的[concept_subject]"
+anz_afw_primary_culture_guide_tt:0: "@information! 如果在拥有[GetLawType('law_aboriginal_equal').GetName]的情况下完成此日志，[GetCulture('aborigine').GetName]将成为[ROOT.GetCountry.GetNameNoFlag]的[Concept('concept_primary_cultures','$concept_primary_culture$')]"
+
+# Scripted Progess Bar (Frontier Wars)
+anz_frontier_control_bar:0: "[concept_anz_frontier_control]"
+anz_frontier_control_bar_desc:0: "#white 已控制[JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%0]#!"
+anz_frontier_control_bar_desc2:0: "#white 未控制#!"
+
+anz_fwc_landowner_clout:0: "[GetInterestGroupVariant('ig_landowners',GetPlayer).GetName][concept_clout]"
+anz_fwc_rural_clout:0: "[GetInterestGroupVariant('ig_rural_folk',GetPlayer).GetName][concept_clout]"
+anz_fwc_instituion_police:0: "[GetInstitutionType('institution_police').GetName][concept_institution]等级"
+anz_fwc_instituion_colonisation:0: "[GetInstitutionType('institution_colonial_affairs').GetName][concept_institution]等级"
+anz_fwc_dedicated_police:0: "[GetLawType('law_dedicated_police').GetName]"
+anz_fwc_local_police:0: "[GetLawType('law_local_police').GetName]或[GetLawType('law_militarized_police').GetName]"
+anz_fwc_atsi_equal:0: "[GetLawType('law_aboriginal_equal').GetName]"
+anz_fwc_atsi_protection:0: "[GetLawType('law_aboriginal_protectorate').GetName]"
+anz_fwc_atsi_guardianship:0: "[GetLawType('law_aboriginal_guardianship').GetName]"
+anz_fwc_guaranteed_liberties:0: "[GetLawType('law_guaranteed_liberties').GetName]"
+anz_fwc_aboriginal_homelands_under_colonisation:0: "[GetCulture('aborigine').GetName][concept_homeland]#o s#!在殖民统治下"
+anz_fwc_reserves:0: "[GetBuildingType('anz_building_atsi_reserve').GetName][Concept('concept_building_level', '$concept_building_levels$')]"
+anz_fwc_legitimacy:0: "[concept_legitimacy]"
+anz_fwc_loyalists:0: "[Concept('concept_loyalist','$concept_loyalists$')]在[GetCulture('aborigine').GetName][concept_homeland]#o s#!中"
+anz_fwc_radicals:0: "[Concept('concept_radical','$concept_radicals$')]在[GetCulture('aborigine').GetName][concept_homeland]#o s#!中"
+
+anz_fw_uncontrolled:0: "失控的定居者"
+anz_fw_controlled:0: "受控的定居者"
+
+# Scripted Buttons (Frontier Wars)
+anz_fw_control_settlers:0: "控制定居者"
+anz_fw_control_settlers_desc:0: "我们需要控制定居者人口，以免他们不顾可持续性地将殖民边疆扩展到政府管辖范围之外，并保护原住民免受任何残酷待遇。"
+
+anz_fw_control_natives:0: "控制原住民"
+anz_fw_control_natives_desc:0: "我们的首要任务是定居者，原住民必须为他们的利益让路。原住民必须受到控制。我们应使我们的利益与边疆拓荒定居者的利益保持一致，并鼓励他们积极且不懈地向内陆扩张。"
+
+## RESERVE MANANGEMENT - not in use
+je_anz_atsi_reserves:0: "原住民保留区"
+je_anz_atsi_reserves_reason:0: "管理等..."
+
+## ABORIGINAL SUFFRAGE
+je_anz_aboriginal_voting:0: "原住民选举权"
+je_anz_aboriginal_voting_reason:0: "[ROOT.GetCountry.GetNameNoFlag]已实现[concept_anz_responsible_govt]，然而许多[GetCulture('aborigine').GetName]和[GetCulture('torres_strait_islander').GetName]民族，尤其是那些维持[GetReligion('dreamtime').GetName]传统的民族，被阻止或不鼓励参与我们的选举。\n$TOOLTIP_DELIMITER$\n@information! 我们需要通过法律或采取其他行动，使[GetReligion('dreamtime').GetName][GetCulture('aborigine').GetName][concept_pop]#o s#!处于授予投票权的[concept_acceptance_status]。请注意，这些人口属于#white 原住民#! [concept_social_class]，影响着他们的[concept_acceptance]。"
+#anz_atsi_suffrage_multicultural_success_tt:0 "[ROOT.GetCountry.GetNameNoFlag] has enacted [GetLawType('law_aboriginal_equal').GetName] or [GetLawType('law_multicultural').GetName]"
+has_acceptance_reward_from_testimony_journal_tt:0: "[ROOT.GetCountry.GetNameNoFlag]已完成#v 原住民证词#! [concept_journal_entry]"
+
+## NATIVE TESTIMONY
+je_anz_aboriginal_testimony:0: "原住民证词"
+je_anz_aboriginal_testimony_reason:0: "法庭作证需要宣读宗教誓言，理由是需要相信上帝和神圣后果才能理解誓言的本质。因此，[GetReligion('dreamtime').GetName]的[GetCulture('aborigine').GetName]人被认为不具备作证资格，尽管他们可以在同一法庭上作为被告或受指控者。\n\n改革遭到国内反对派的质疑，同时[GetGlobalVariable('gbr_var_scope').GetCountry.GetAdjective]司法部长办公室也颁布法令，认为其[concept_anz_repugnancy]与英国法理学原则不符。"
+
+anz_native_testimony_bar:0: "改革"
+anz_native_testimony_bar_desc:0: "改革进度：#v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%0]#! ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]/100)"
+
+anz_native_testimony_repugnancy_bar:0: "抵触"
+anz_native_testimony_repugnancy_bar_desc:0: "[GetGlobalVariable('gbr_var_scope').GetCountry.GetAdjective][concept_anz_repugnancy]：#v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%0]#! ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]/100)"
+
+anz_native_testimony_progress_complete_tt:0: "#v 改革#!进度条已达到#v 100%#!"
+
+anz_native_testimony_repugnancy_complete_tt:0: "#v 抵触#!进度条已达到#v 0%#!"
+anz_native_testimony_natsuprem_staterel_tt:0: "[ROOT.GetCountry.GetNameNoFlag]已颁布[GetLawType('law_national_supremacy').GetName]和[GetLawType('law_state_religion').GetName]"
+
+anz_myall_creek_maassacre_happened:0: "[GetInterestGroupVariant('ig_intelligentsia',GetPlayer).GetNameWithCountryVariant]正在推动[GetCulture('aborigine').GetName]证词改革"
+anz_aboriginal_testimony_allowed:0: "原住民证词获准"
+anz_je_nt_equalorsep:0: "[ROOT.GetCountry.GetNameNoFlag]已颁布[GetLawType('law_aboriginal_equal').GetName]或[GetLawType('law_total_separation').GetName]"
+
+anz_nt_je_reform_lose_25:0: "#v 原住民证词#!#b 改革进度条#!将倒退#v 25#!"
+anz_nt_je_reform_lose_15:0: "#v 原住民证词#!#b 改革进度条#!将倒退#v 15#!"
+anz_nt_je_reform_lose_5:0: "#v 原住民证词#!#b 改革进度条#!将倒退#v 5#!"
+anz_nt_je_reform_lose_10:0: "#v 原住民证词#!#b 改革进度条#!将倒退#v 10#!"
+anz_nt_je_reform_lose_2_5:0: "#v 原住民证词#!#b 改革进度条#!将倒退#v 2.5#!"
+anz_nt_je_reform_gain_2_5:0: "#v 原住民证词#!#b 改革进度条#!将增加#v 2.5#!"
+anz_nt_je_reform_gain_15:0: "#v 原住民证词#!#b 改革进度条#!将增加#v 15#!"
+anz_nt_je_repugnancy_lose_15:0: "#v 原住民证词#!#b [GetGlobalVariable('gbr_var_scope').GetCountry.GetAdjective][concept_anz_repugnancy]进度条#!将倒退#v 15#!"
+anz_nt_je_repugnancy_gain_5:0: "#v 原住民证词#!#b [GetGlobalVariable('gbr_var_scope').GetCountry.GetAdjective][concept_anz_repugnancy]进度条#!将增加#v 5#!"
+
+anz_fw_je_reform_lose_2_5:0: "[concept_anz_frontier_control]将减少#v 2.5#!"
+anz_fw_je_reform_lose_5:0: "[concept_anz_frontier_control]将减少#v 5#!"
+anz_fw_je_reform_lose_10:0: "[concept_anz_frontier_control]将减少#v 10#!"
+
+
+# Scripted Buttons (native testimony)
+anz_native_testimony_lobby_add_repugnancy:0: "游说以维持[concept_anz_repugnancy]"
+anz_native_testimony_lobby_add_repugnancy_desc:0: "若不了解上帝及其赏罚，野蛮人如何能明辨是非，又如何能在法庭上认真宣誓，从而成为合格可信的证人？如果无法说服当地立法机关接受这一合理性，我们必须向[GetGlobalVariable('gbr_var_scope').GetCountry.GetAdjective]议会和殖民部上诉。\n#v @information! 我们可以随时自由停止游说。#!"
+
+anz_native_testimony_lobby_add_repugnancy_cancel:0: "取消游说以维持[concept_anz_repugnancy]"
+anz_native_testimony_lobby_add_repugnancy_cancel_desc:0: "这不再是我们的需求或利益所在。"
+
+anz_native_testimony_lobby_reduce_repugnancy:0: "游说以消除[concept_anz_repugnancy]"
+anz_native_testimony_lobby_reduce_repugnancy_desc:0: "这是法院所犯下的最大实际荒谬之一。如果英国存在土著野蛮民族，我设想他们也应该制定像当前这样的法律。\n#v @information! 我们可以随时自由停止游说。#!"
+
+anz_native_testimony_lobby_reduce_repugnancy_cancel:0: "取消游说以消除[concept_anz_repugnancy]"
+anz_native_testimony_lobby_reduce_repugnancy_cancel_desc:0: "这不再是我们的需求或利益所在。"
+
+anz_repugnancy_lobby:0: "抵触游说"
+anz_je_nt_repugnancy_add_tt:0: "[concept_anz_repugnancy]#v 每月增加#!#v 2#!"
+anz_je_nt_repugnancy_add_stopped_tt:0: "[concept_anz_repugnancy]#v 不再#!每月增加#v 2#!"
+anz_je_nt_repugnancy_subtract_tt:0: "[concept_anz_repugnancy]#v 每月减少#!#v 2#!"
+anz_je_nt_repugnancy_subtract_stopped_tt:0: "[concept_anz_repugnancy]#v 不再#!每月减少#v 2#!"
+anz_non_commonwealth_british_subject_tt:0: "[ROOT.GetCountry.GetName]是[GetGlobalVariable('gbr_var_scope').GetCountry.GetName]的一个#b 非#!@anz_commonwealth! [concept_anz_commonwealth_realm][concept_subject]"
+
+# Scripted Progress Bars (reform & repugnancy)
+anz_ntje_not_british_controlled:0: "不受[SCOPE.sCountry('ntje_gbr_scope').GetName]控制"
+anz_ntje_lobby_add:0: "游说"
+anz_ntje_lobby_reduce:0: "游说"
+anz_ntje_gov_supports_state_rel:0: "执政的[Concept('concept_interest_group','$concept_interest_groups$')]批准[GetLawType('law_state_religion').GetName]"
+anz_ntje_approves_bigracism:0: "执政的[Concept('concept_interest_group','$concept_interest_groups$')]批准[GetLawType('law_national_supremacy').GetName]或[GetLawType('law_ethnostate').GetName]"
+anz_ntje_gov_supports_cexcl:0: "执政的[Concept('concept_interest_group','$concept_interest_groups$')]批准[GetLawType('law_cultural_exclusion').GetName]"
+anz_ntje_gov_supports_multicult:0: "执政的[Concept('concept_interest_group','$concept_interest_groups$')]批准[GetLawType('law_multicultural').GetName]或[GetLawType('law_aboriginal_equal').GetName]"
+anz_ntje_gov_supports_colhum:0: "执政的[Concept('concept_interest_group','$concept_interest_groups$')]拥有[GetIdeology('ideology_anz_colonial_humanism').GetName]"
+anz_ntje_legitimacy:0: "合法性缩放后低于50"
+anz_ntje_dreamtime_movement:0: "@movement_category_religious![GetReligion('dreamtime').GetName]权利[concept_activism]"
+anz_ntje_aboriginal_literacy:0: "[GetCulture('aborigine').GetName][concept_literacy]"
+anz_ntje_protestant_movement:0: "@movement_category_religious!传统主义者[concept_activism]"
+anz_ntje_gbr_relations:0: "[GetGlobalVariable('gbr_var_scope').GetCountry.GetAdjective]关系"
+anz_ntje_gov_supports_totalsep:0: "执政的[Concept('concept_interest_group','$concept_interest_groups$')]批准[GetLawType('law_total_separation').GetName]"
+anz_ntje_gbr_reformer:0: "[GetGlobalVariable('gbr_var_scope').GetCountry.GetAdjective][GetIdeology('ideology_reformer').GetName][Concept('concept_leader', '$concept_leaders$')]执政"
+anz_ntje_gbr_traditionalist:0: "[GetGlobalVariable('gbr_var_scope').GetCountry.GetAdjective][GetIdeology('ideology_traditionalist').GetName][Concept('concept_leader', '$concept_leaders$')]执政"
+anz_ntje_gbr_state_rel:0: "[GetGlobalVariable('gbr_var_scope').GetCountry.GetAdjective]执政的[Concept('concept_interest_group','$concept_interest_groups$')]批准[GetLawType('law_state_religion').GetName]"
+anz_ntje_gbr_totalsep:0: "[GetGlobalVariable('gbr_var_scope').GetCountry.GetAdjective]执政的[Concept('concept_interest_group','$concept_interest_groups$')]批准[GetLawType('law_total_separation').GetName]"
+anz_ntje_gbr_devout_clout:0: "[GetGlobalVariable('gbr_var_scope').GetCountry.GetAdjective]@devout!英国圣公会[concept_clout]"
+anz_ntje_atsi_clout:0: "[GetInterestGroupVariant('ig_atsi',GetPlayer).GetName][concept_clout]"
+anz_ntje_supremacist_movement:0: "@movement_category_cultural!至上主义[concept_activism]"
+anz_ntje_gbr_tory_gov:0: "[GetGlobalVariable('gbr_var_scope').GetCountry.GetAdjective]托利党[concept_party]执政的[Concept('concept_interest_group','$concept_interest_groups$')]"
+anz_ntje_gbr_whig_gov:0: "[GetGlobalVariable('gbr_var_scope').GetCountry.GetAdjective]辉格党[concept_party]执政的[Concept('concept_interest_group','$concept_interest_groups$')]"
+
+### Events
+
+anz_atsi.101.t:0: "边疆战争"
+anz_atsi.101.d:0: "自第一舰队抵达澳大利亚海岸以来，澳大利亚原住民与非原住民定居者之间发生了多次暴力冲突。若要阻止这些大屠杀，殖民政府必须采取果断行动。"
+anz_atsi.101.f:0: "邪恶苏醒，天空漆黑，太阳被夺。丛林尖叫，痛苦哀嚎。死亡火焰吞噬天空。数世纪的美丽化为死寂黄沙。这邪恶为何惩罚我的土地？它从丛林中穿过树林，捕获所有生命，使其屈服。"
+anz_atsi.101.a:0: "我们会看看能做些什么。"
+frontier_war_effects_tt:0: "边疆战争持续期间，我国澳大利亚邦境内的所有[GetCulture('aborigine').GetName]或[GetCulture('torres_strait_islander').GetName]人口的[concept_sol]将减少2点。"
+frontier_wars_modifier_ig2:0: "边疆战争的不满"
+
+anz_atsi.102.t:0: "条约"
+anz_atsi.102.d:0: "[ROOT.GetCountry.GetName]境内的暴力事件已和平结束，[ROOT.GetCountry.GetNameNoFormatting]周围的[GetCulture('aborigine').GetName]领袖代表团已与我方签署一项条约。这将有助于澳大利亚原住民寻求土地监护权并改善其社会地位。"
+anz_atsi.102.f:0: "“抬起头，我的人民。黎明正在破晓。世界正在苏醒。迎来一个崭新光明的日子。无人诽谤我们。没有限制驯服我们。颜色不令我们羞耻。冷嘲热讽不使我们沮丧。”\n——《希望之歌》，奥杜格鲁·努努卡尔/凯斯·沃克"
+anz_atsi.102.a:0: "签署条约。"
+anz_atsi.102.b:0: "在条约中增加一条额外条款！"
+
+anz_atsi.103.t:0: "殖民主义的持久影响"
+anz_atsi.103.d:0: "我们未能结束边疆战争的暴力，现在签署条约的任何机会都看似渺茫。"
+anz_atsi.103.f:0: "“总督脸上的微笑。你用绳索，用枪杀害了我。我的聚居区被屠杀，你把我深深埋葬在麦克拉蒂的土地上。我被抛入一个普通的坟墓。你用基督、繁文缛节、烟草、烈酒和恐惧支撑我，然后是疾病和高贵的强奸。在那些野蛮的岁月里。现在你一本正经地说你理所当然，歌颂一个国家的荣耀，但我想到的是一个被钉在十字架上的人民——真正的澳大利亚故事。”\n——《土著澳大利亚》，杰克·戴维斯"
+anz_atsi.103.a:0: "这将是澳大利亚的遗产。"
+
+anz_atsi.104.t:0: "原住民团体寻求原住民土地权"
+anz_atsi.104.d:0: "一群[SCOPE.sState('ast_native_title_state').GetCustom('indigenous_local_nation')]人正寻求被承认为[SCOPE.sState('ast_native_title_state').GetName]部分地区的原住民土地权持有者。"
+anz_atsi.104.f:0: "原住民土地权源于并受某领土内原住民居民所承认的传统法律和所遵守的习俗赋予其内容。"
+anz_atsi.104.a:0: "是的，在我们到来之前很久，它就属于他们了。"
+anz_atsi.104.b:0: "提供一个更温和的妥协方案。"
+anz_atsi.104.c:0: "我们是一个国家，为什么要分裂我们？"
+#anz_atsi.104.e:0 "What about increased support for ?"
+anz_atsi.104.g:0: "辩称其在“无主地”原则下属非法。"
+anz_native_title_grant:0: "原住民土地权授予"
+anz_completed_afw_tt:0: "尚未完成#v 边疆战争#! [concept_journal_entry]"
+
+anz_atsi.105.t:0: "黑人战争的结束"
+anz_atsi.105.d:0: "从19世纪20年代到1832年，[ROOT.GetCountry.GetName]处于一种近乎持续不断的冲突状态，被称为黑人战争。这场冲突导致数千人死亡——既有疾病也有直接冲突——并将大多数幸存的塔斯马尼亚原住民迁至弗林德斯岛。"
+anz_atsi.105.f:0: "黑人战争是澳大利亚历史上最激烈的边疆冲突。战队焚烧了数十处房产，劫掠了数百座房屋，刺死了数千头绵羊和牛，数千人丧生。19世纪30年代初，约200名原住民幸存者被驱逐到弗林德斯岛，这使塔斯马尼亚成为了白人的岛屿，并在许多当代历史学家眼中，将这场冲突定性为一场种族灭绝行为。"
+anz_atsi.105.a:0: "战争结束了。"
+
+#anz_atsi.107.t:0 "Call for an Expedition"
+#anz_atsi.107.d:0 "X has answered our call for an expedition into the Australian interior. They are only willing to explore a single river basin, and have stressed that the [ROOT.GetCountry.GetAdjective] government is expected to fund the expedition."
+#anz_atsi.107.f:0 "Flavour."
+#anz_atsi.107.a:0 "Explore the Darling River (NSW)"
+#anz_atsi.107.b:0 "Explore the Murray River (VIC)"
+#anz_atsi.107.c:0 "Explore the Flinders River (QLD)"
+#anz_atsi.107.e:0 "Nevermind, it's too expensive."
+#anz_atsi.107.g:0 "Why not enlist Burke and Wills instead?"
+
+# Random Events
+
+# Moving indidgenous to subject
+anz_atsi.110.t:0: "原住民迁移"
+anz_atsi.110.d:0: "我们已命令[SCOPE.sState('anz_native_relocation_state').GetStateRegion.GetName]的原住民人口迁往[SCOPE.sCountry('anz_native_subject').GetName]，然而一些人拒绝离开家园，并担心部落间的冲突，特别是围绕资源的冲突。"
+anz_atsi.110.f:0: "“他们带着他们的法律和文件，告诉我这片土地——我们的祖传之地——不再是我们的家园，仿佛根和河流会忘记我的人民。现在他们把我推开，说是进步，但我所看到的只是我们的故事被打破，像尘土一样散落在一条我从未选择的道路上。”"
+#anz_atsi.110.a:0 "Thunder upon them the bellow of musket fire!"
+anz_atsi.110.a:0: "我们将组建我们自己的#tooltippable;tooltip:[GetPlayer.GetTooltipTag],anz_blackline_tt 黑线部队！#!"
+anz_atsi.110.b:0: "用礼物和补给品来打发[SCOPE.sCountry('anz_native_subject').GetNameNoFormatting]，以安置抵达者。"
+anz_atsi.110.c:0: "算了，开玩笑的！"
+anz_da_move_atsi:0: "原住民遣返"
+anz_da_move_atsi_desc:0: "我们的原住民人口最好由我们的[concept_subject]管理，这样我们就不必再为此担忧了。"
+anz_da_move_atsi_action_notification_name:0: "原住民遣返"
+anz_da_move_atsi_action_notification_desc:0: "我们的原住民人口已被遣返至我们的附庸。"
+anz_atsi_relocation_cooldown_tt:0: "在过去的#v 5#!年里，我们没有指示这个附庸接收我们当地的原住民人口。"
+anz_atsi_relocation_event_cooldown_tt:0: "我们已完成对选项的考虑。"
+anz_supplying_atsi_relocation:0: "为原住民迁移提供补给"
+anz_atsi_relocation_tt:0: "#red 40%的原住民人口将迁往我们的附庸国#!\n"
+anz_blackline_tt:0: "1830年，在塔斯马尼亚的“黑人战争”期间，数千名定居者形成一条人链，在岛上交错行进。其目的是形成钳形攻势，将原住民民族逼入死角，加以限制。\n\n黑线部队伏击并杀害了一些原住民，但最终许多人得以穿过混乱的缝隙。"
+
+# IG asks to move Aboriginal
+anz_atsi.111.t:0: "他们属于哪里？"
+anz_atsi.111.d:0: "[SCOPE.gsInterestGroup('anz_native_relocation_ig_scope').GetName]请求我们对[SCOPE.sCountry('anz_relocation_target_country').GetName]使用[GetDiplomaticActionType('anz_da_move_atsi').GetName][concept_overlord_action]。"
+anz_atsi.111.f:0: "“定居者窃窃私语，政客争吵不休，然而答案就摆在我们面前：将这些原住民从我们的街道送回他们的亲人身边，让我们的国家毫无负担地展望未来。”"
+anz_atsi.111.a:0: "我们会考虑的..."
+anz_atsi.111.b:0: "绝不！"
+
+anz_atsi.201.t:0: "[SCOPE.sState('frontier_event_state').GetNameNoFormatting]大屠杀"
+anz_atsi.201.d:0: "来自[SCOPE.sState('frontier_event_state').GetName]的一群[SCOPE.sState('frontier_event_state').GetCustom('indigenous_local_nation')]人在与附近定居者发生冲突后遭到屠杀。"
+anz_atsi.201.f:0: "周围的人们相互对视，如释重负地笑着，将这场战斗美化为一场公平的遭遇。他们的死者人数是我们的20倍。这不是一场战斗。这是一场屠杀。"
+anz_atsi.201.a:0: "我们无能为力。"
+anz_atsi.201.b:0: "悬赏捉拿责任人。"
+anz_atsi.201.c:0: "提供紧急援助。"
+afp_emergency_relief_promise_tt:0: "我们承诺在[SCOPE.sState('frontier_event_state').GetNameNoFormatting]设立一项紧急援助法令"
+
+anz_atsi.2011.t:0: "信守承诺"
+anz_atsi.2011.d:0: "我们曾向[SCOPE.sState('kept_promise_state').GetName]的原住民社区承诺，在悲剧性大屠杀后提供紧急援助——我们已兑现承诺。\n\n我们可以在履行承诺后撤销该法令。"
+anz_atsi.2011.f:0: "虽然失去族人并目睹此类暴力的痛苦和创伤无法抹去，但在悲剧发生后获得食物、水和住所等基本必需品，已成为一种慰藉和支持。我希望此类救援工作能够继续并扩大，以解决原住民社区面临的系统性问题。"
+anz_atsi.2011.a:0: "这是正确的做法。"
+
+anz_atsi.2012.t:0: "违背承诺"
+anz_atsi.2012.d:0: "我们曾向[SCOPE.sState('broke_promise_state').GetName]的原住民社区承诺，在悲剧性大屠杀后提供紧急援助——然而我们辜负了他们，在他们的伤口上撒盐，并恶化了我们本已脆弱的关系。"
+anz_atsi.2012.f:0: "“我站在这里，身处族人无谓屠杀的余波之中，心中充满悲痛和愤怒。面对这场难以想象的悲剧，白人曾向我们承诺提供紧急援助，然而他们未能兑现承诺。我们没有得到援助和支持，反而被留下来独自承受苦难和绝望。他们怎能对我们的苦难视而不见？我们的人性难道不值得他们付出时间或努力吗？\n\n这又是一个我们社区持续遭受虐待的例子。白人是时候承认并纠正困扰我们民族的不公了。我们不会沉默，我们不会停止斗争，直到我们被倾听和看见。”"
+anz_atsi.2012.a:0: "哦，好吧。"
+anz_atsi.2012.b:0: "这次我们真的承诺！"
+
+anz_atsi.202.t:0: "[SCOPE.sState('frontier_event_state').GetNameNoFormatting]的袭击"
+anz_atsi.202.d:0: "[SCOPE.sState('frontier_event_state').GetCustom('indigenous_local_nation')]的成员一直在[SCOPE.sState('frontier_event_state').GetName]乡村地区进行[GetHarvestConditionType('anz_atsi_raids').GetName]。受影响的定居者正在寻求帮助。"
+anz_atsi.202.f:0: "牛群在夜间遭到屠杀。澳大利亚原住民在数千年来狩猎比这困难得多的敌人，对他们来说，我们驯养的牲畜就像坐以待毙的猎物。"
+anz_atsi.202.a:0: "如果他们选择保护自己的财产，政府将不予干涉。"
+anz_atsi.202.b:0: "赔偿农民。"
+
+anz_atsi.203.t:0: "[SCOPE.sState('frontier_event_state').GetNameNoFormatting]的矛刺事件"
+anz_atsi.203.d:0: "在定居者与[SCOPE.sState('frontier_event_state').GetCustom('indigenous_local_nation')]人之间发生冲突后，[SCOPE.gsInterestGroup('speared_IG').GetName]的领导人[SCOPE.sCharacter('speared_leader').GetFullName]在[SCOPE.sState('frontier_event_state').GetName]被矛刺伤。"
+anz_atsi.203.f:0: "当新的一天太阳升起时，很明显前一夜的冲突已经变得致命。[SCOPE.sCharacter('speared_leader').GetFullName]的腿部和肩部被矛刺穿，这是向广大定居者发出的一个毫不含蓄的信息。"
+anz_atsi.203.a:0: "边疆生活就是如此。"
+anz_atsi.203.b:0: "将责任人绳之以法。"
+
+anz_atsi.204.t:0: "警方行为被揭露"
+anz_atsi.204.d:0: "[SCOPE.gsInterestGroup('armed_forces_scope').GetName]的领导人[SCOPE.sCharacter('armed_forces_leader_scope').GetFullName]被发现鼓励警察在[SCOPE.sState('frontier_event_state').GetName]射杀[SCOPE.sState('frontier_event_state').GetCustom('indigenous_local_nation')]人，而不是逮捕他们。"
+anz_atsi.204.f:0: "[SCOPE.sCharacter('armed_forces_leader_scope').GetLastNameNoFormatting]的做法是对我们声称的公平公正司法制度的侮辱，然而这种做法在制度中根深蒂固，需要进行严肃的改革。"
+anz_atsi.204.a:0: "如果没坏，就别修。"
+anz_atsi.204.b:0: "终止这种卑鄙的行为。"
+frontier_wars_police_practice_tt:0: "这项残酷的做法将被禁止，[SCOPE.sCharacter('armed_forces_leader_scope').GetLastNameNoFormatting]将辞职。"
+
+anz_atsi.205.t:0: "[SCOPE.sState('frontier_event_state').GetNameNoFormatting]大规模中毒事件"
+anz_atsi.205.d:0: "[SCOPE.sState('frontier_event_state').GetName]边疆的定居者使用砒霜毒害了大量[SCOPE.sState('frontier_event_state').GetCustom('indigenous_local_nation')]人，企图通过大规模灭绝来清除他们的土地。"
+anz_atsi.205.f:0: "这种滔天罪行的谣言已在国内传播了一段时间，不同的原住民团体已将谣言当作事实告知殖民政府。幸存的受害者已对肇事者展开报复，他们沿着边疆随意袭击。"
+anz_atsi.205.a:0: "立即调查此事！"
+anz_atsi.205.b:0: "让警察处理吧。"
+anz_atsi.205.c:0: "给予最高优先处理。"
+
+anz_atsi.206.t:0: "紧急援助成功"
+anz_atsi.206.d:0: "我们在[SCOPE.sState('frontier_event_state').GetName]实施的[GetDecreeType('decree_emergency_relief').GetName]措施在制止边疆大屠杀方面取得了巨大成功。有人建议我们应该在全国范围内使用这种策略。"
+anz_atsi.206.f:0: "[ROOT.GetCountry.GetAdjectiveNoFormatting]政府实施的措施，至少暂时地，结束了定居者和澳大利亚原住民之间在边疆地区的大部分暴力。"
+anz_atsi.206.a:0: "在全国范围内临时实施这些措施。"
+anz_atsi.206.b:0: "预算无法维持此类措施。"
+frontier_wars_random_6_tt:0: "边疆事件将停止2年"
+
+anz_atsi.207.t:0: "定居者奖励"
+anz_atsi.207.d:0: "[SCOPE.sState('frontier_event_state').GetName]的定居者越来越多地从边疆地区迁往城市化地区，削弱了我们对该地区的影响力。"
+anz_atsi.207.f:0: "边疆地区持续不断的暴力，让新老定居者都在重新考虑是否在农村或城市地区定居。"
+anz_atsi.207.a:0: "为边疆地区的房产提供补贴。"
+anz_atsi.207.b:0: "为城市房产提供补贴。"
+anz_atsi.207.c:0: "让他们爱在哪定居就在哪定居。"
+anz_settler_incentives_cost:0: "房产补贴"
+
+anz_atsi.208.t:0: "传播上帝的旨意"
+anz_atsi.208.d:0: "一群传教士一直在向[SCOPE.sState('frontier_event_state').GetName]的[SCOPE.sState('frontier_event_state').GetCustom('indigenous_local_nation')]人传授基督教，并请求政府正式协助。"
+anz_atsi.208.f:0: "[ROOT.GetCountry.GetAdjectiveNoFormatting]社会的核心是基督教，通过向原住民传授其经典，我们为他们提供了融入我们伟大文明的途径。而且，通过阅读上帝的旨意，他们肯定会明白我们的扩张是正当的，不是吗？"
+anz_atsi.208.a:0: "毕竟，这是上帝的旨意..."
+anz_atsi.208.b:0: "...因此必须教导所有人。"
+anz_atsi.208.c:0: "劝阻传教士进行教学。"
+
+anz_atsi.209.t:0: "[SCOPE.sState('frontier_event_state').GetNameNoFormatting]战役"
+anz_atsi.209.d:0: "[SCOPE.sState('frontier_event_state').GetName]边疆地区针对[SCOPE.sState('frontier_event_state').GetCustom('indigenous_local_nation')]人的持续暴力已升级为殖民定居者与原住民之间的全面战争。"
+anz_atsi.209.f:0: "残酷的大屠杀、投毒及其他令人发指的行为已达到临界点。原住民被我们的定居者和政府的不作为所剥夺了人性，已决心拿起武器反抗[ROOT.GetCountry.GetOverlord.GetAdjectiveNoFormatting]的统治。"
+anz_atsi.209.a:0: "谈判失败了。赢得战争。"
+
+anz_atsi.210.t:0: "洪水警报"
+anz_atsi.210.d:0: "定居者在[SCOPE.sState('frontier_event_state').GetName]的一条小河岸边建立了一个小型定居点。然而，[SCOPE.sState('frontier_event_state').GetCustom('indigenous_local_nation')]人派出的一些侦察兵警告定居者，该定居点位于一个凶猛的洪泛区中心。"
+anz_atsi.210.f:0: "当那人走向定居点时，脸上带着绝望的神情。他开始用零碎的英语警告定居者，但传递的信息足够清楚。他们的新定居点建在洪泛区，如果定居者不尽快搬走，他们的城镇就会被洪水冲走。"
+anz_atsi.210.a:0: "他们在这里生活的时间远比我们长。搬迁定居点吧。"
+anz_atsi.210.b:0: "这不过是徒劳的诡计！"
+frontier_wars_random_10_move_tt:0: "定居点将迁址"
+frontier_wars_random_10_stay_tt:0: "定居点将留在原地"
+
+anz_atsi.2101.t:0: "河流泛滥"
+anz_atsi.2101.d:0: "定居点曾经所在的那条河流泛滥了，证明了原住民的话是值得相信的。"
+anz_atsi.2101.f:0: "一场特大洪水席卷山谷，摧毁了所过之处的一切。原住民的话是真实的，他们对这片土地的了解也得到了证实。"
+anz_atsi.2101.a:0: "原住民对这片土地的了解深厚。"
+
+anz_atsi.2102.t:0: "原住民的谎言"
+anz_atsi.2102.d:0: "定居点曾经所在的河流没有泛滥，相反，当地原住民在[ROOT.GetCountry.GetAdjective]定居点所在的地点安营扎寨。"
+anz_atsi.2102.f:0: "河水一如既往地平静，当地人的警告最终只是一个为了将定居者赶出这片土地而编造的神话。"
+anz_atsi.2102.a:0: "我们怎会中此圈套？"
+
+anz_atsi.2103.t:0: "河流泛滥"
+anz_atsi.2103.d:0: "定居点所在的河流如我们所警告的那样泛滥了，彻底摧毁了城镇。"
+anz_atsi.2103.f:0: "一场特大洪水席卷山谷，摧毁了所过之处的一切。原住民的话是真实的，他们对这片土地的了解也得到了证实。"
+anz_atsi.2103.a:0: "我们也曾被警告过..."
+
+anz_atsi.2104.t:0: "原住民的谎言"
+anz_atsi.2104.d:0: "定居点所在的河流没有泛滥，证明原住民居民关于特大洪水的警告是错误的。"
+anz_atsi.2104.f:0: "河水一如既往地平静，当地人的警告最终只是一个为了将定居者赶出这片土地而编造的神话。"
+anz_atsi.2104.a:0: "正如所料，一场徒劳的诡计。"
+
+anz_atsi.211.t:0: "被俘的白人？"
+anz_atsi.211.d:0: "一支在[SCOPE.sState('frontier_event_state').GetName]停泊寻找水源的采珠船员，偶然发现了一群[SCOPE.sState('frontier_event_state').GetCustom('indigenous_local_nation')]人，其中有一名白人。船员已将此遭遇报告给船长，并请求指示营救该男子。"
+anz_atsi.211.f:0: "看到一个白人生活在原住民部落中是极不寻常的，更不寻常的是这个白人穿着原住民服装。这个陌生人似乎不会说英语，只会说破碎的法语。他的胸部和手臂有许多大伤疤；也许是作为囚犯遭受虐待的迹象？"
+anz_atsi.211.a:0: "提议交换那名白人。"
+anz_atsi.211.b:0: "武力营救那名白人。"
+anz_atsi.211.c:0: "任由他们去吧。"
+frontier_wars_frenchmantrade_tt:0: "他们可能会拒绝交易。"
+
+anz_atsi.2111.t:0: "纳西斯·佩尔捷"
+anz_atsi.2111.d:0: "当士兵们持步枪靠近时，原住民部落认为他们受到了攻击，准备投掷长矛。采珠船员见状，向部落开火，迫使他们四散。这名白人是纳西斯·佩尔捷，他似乎很愤怒，不情愿被“拯救”。"
+anz_atsi.2111.f:0: "纳西斯·佩尔捷14岁时遭遇海难，被当地一个原住民部落发现、照料并收养，部落给他取名为“阿姆格罗”。他身上的伤疤是部落的标记。阿姆格罗最终在部落中结婚并生儿育女。他害怕被他的英国“救世主”射杀，于是随他们而去，但他坚称自己是被绑架的，而非被营救的。"
+anz_atsi.2111.a:0: "将此人送回法国。"
+
+anz_atsi.2112.t:0: "纳西斯·佩尔捷"
+anz_atsi.2112.d:0: "士兵们被派去与部落谈判，用一些金属工具换取那名白人。部落似乎急于摆脱他。"
+anz_atsi.2112.f:0: "这名男子原来是纳西斯·佩尔捷，一名法国人，14岁时遭遇海难，被原住民部落收留。纳西斯只会说当地原住民语言和支离破碎的法语，他已适应了生存，几乎忘记了自己成为遇难者之前的身份。"
+anz_atsi.2112.a:0: "将此人送回法国。"
+
+anz_atsi.2113.t:0: "拒绝交易"
+anz_atsi.2113.d:0: "部落成员咕哝着，挥舞着手臂，开始走开，示意他们对物物交换不感兴趣。"
+anz_atsi.2113.f:0: "起初他们似乎对我们的货物感兴趣，也许以为那是礼物。然而，一旦我们指向他们群体中的白人，部落的态度迅速改变，会议气氛变得紧张。"
+anz_atsi.2113.a:0: "使用武力带走那人。"
+anz_atsi.2113.b:0: "好吧，任由他们去吧。"
+
+anz_atsi.212.t:0: "[SCOPE.sState('frontier_event_state').GetName]的动荡"
+anz_atsi.212.d:0: "[Concept('concept_radical','$concept_radicalized$')]暴徒正在对[SCOPE.sState('frontier_event_state').GetName]造成严重干扰。收税变得困难，建筑业被迫几乎停滞。定居者寻求离开这个饱受战火蹂躏的地区也就不足为奇了。"
+anz_atsi.212.f:0: "“街头挤满了骚动的民众，给整个殖民地造成了混乱和困苦。由于动乱，政府和商业运作陷入停滞，生活比以往任何时候都更加艰难。商店经常空空如也，物资也难以获得。关于不公正和管理不善的谣言四处流传，导致骚乱和抗议。我渴望我旧日生活的熟悉和平与安全，也许是时候离开这场不幸了。”"
+anz_atsi.212.a:0: "派遣卫队恢复秩序！"
+anz_atsi.212.b:0: "不幸的是，我们束手无策。"
+
+# asking for native reserve mission (protectorate)
+anz_atsi.213.t:0: "指引迷途者"
+anz_atsi.213.d:0: "[SCOPE.gsInterestGroup('anz_reserve_request_ig_scope').GetName]请求我们增加[concept_anz_frontier_control]，并通过在[SCOPE.sState('anz_reserve_state_scope').GetStateRegion.GetName]建立[GetBuildingType('anz_building_atsi_reserve').GetName]来支持教化使命。\n\n然而，[SCOPE.gsInterestGroup('anz_reserve_unhappy_ig_scope').GetName]抗议此举是对[concept_arable_land]的浪费。"
+anz_atsi.213.f:0: "“稍加引导并施以铁腕，我们就能提升这些人，向他们展示真正文明的光芒！”\n\n“每一寸给予这些异教徒的土地，都是对我们未来的背叛，浪费在那些无可救药的灵魂身上！”"
+anz_atsi.213.a:0: "拯救野蛮人是我们的职责。"
+anz_atsi.213.b:0: "主自会引导万物。"
+
+anz_atsi.214.t:0: "一项新的教化使命"
+anz_atsi.214.d:0: "[SCOPE.gsInterestGroup('anz_reserve_request_ig_scope').GetName]恳求我们利用[GetLawType('law_aboriginal_guardianship').GetName]的权力，在[SCOPE.sState('anz_reserve_state_scope').GetStateRegion.GetName]的[GetBuildingType('anz_building_atsi_reserve').GetName]中配备#v 站点#! [concept_production_method]。虽然成本更高，但它可以增加我们对原住民的同化努力。"
+anz_atsi.214.f:0: "“想象一个站点，野蛮人通过劳动被教化，转变为适合社会的有秩序和勤劳的人。”"
+anz_atsi.214.a:0: "让@bureaucrats!官僚接管。"
+anz_atsi.214.b:0: "@clergymen!神职人员知道他们在做什么。"
+anz_station_takeover_tt:0: "#white 在拥有[GetLawType('law_aboriginal_guardianship').GetName]的同时，我们#v 承诺#!将[GetBuildingType('anz_building_atsi_reserve').GetName]#v 站点#! [concept_production_method]维持至少5年。\n"
+anz_promised_station:0: "承诺#v 站点#! [concept_production_method]"
+
+anz_atsi.2141.t:0: "诺言破碎之站"
+anz_atsi.2141.d:0: "我们未能遵守维持[SCOPE.sState('anz_reserve_state_scope').GetStateRegion.GetName]的[GetBuildingType('anz_building_atsi_reserve').GetName]#v 站点#! [concept_production_method]的五年承诺。"
+anz_atsi.2141.f:0: "“好吧，先生们，情况变了——也就是我们从一开始就不愿遵守的承诺。”\n\n“啊哈，又是政府最喜欢的消遣的一个绝佳例子——说一套，做一套，却期望两者都得到掌声！”"
+anz_atsi.2141.a:0: "哦，滚蛋。"
+
+#founding case for terra nullius doctrine
+anz_atsi.301.t:0: "R诉默雷尔案"
+anz_atsi.301.d:0: "一名[GetCulture('aborigine').GetName]男子被指控作为习惯性[Concept('concept_anz_revenge_killing', '$concept_anz_lc_revenge_killing$')]的一部分，谋杀其部落的另一名成员。此案引发了[GetCulture('british').GetName]法律对原住民之间事务管辖权的问题。\n\n1829年，R诉巴拉德案确立了先例，即让原住民对其部落内部的犯罪负责是不公正的。推翻这一判决将确立[concept_anz_terra_nullius]原则。"
+anz_atsi.301.f:0: "“……它既不能被称为被征服的国家，也不能被称为割让的国家，它是一个拥有自己风俗习惯的人口的国家……因此我们有义务遵守他们的法律，而不是他们遵守我们的法律。大不列颠的臣民受法律约束，因为他们受到法律保护；而原住民不受这些法律保护，他们不被允许在法院作证……因此，他们不受那些无法提供保护的法律的约束。”"
+anz_atsi.301.a:0: "我们将承认原住民习惯法。"
+anz_atsi.301.b:0: "他们没有法律，只有淫秽行径！"
+anz_aboriginal_customs_recognised:0: "原住民主权获得承认"
+anz_aboriginal_customs_recognised_states:0: "原住民主权获得承认"
+anz_terra_nullius:0: "[concept_anz_terra_nullius]"
+anz_customs_recognised_lowers_tension_tt:0: "与澳大利亚原住民部落的[concept_tension]降低。"
+anz_customs_rejected_increase_tension_tt:0: "与澳大利亚原住民部落的[concept_tension]增加。"
+anz_native_protectorate_disallowed:0: "在[concept_anz_terra_nullius]原则生效期间，我们#r 将无法#!建立#yellow @anz_treatypuppet!原住民保护地#! [concept_subject_type]。"
+anz_murrell_decision_change_tt:0: "#white 我们可以通过一项决议改变这一裁决：#!"
+murrell:0: "默雷尔"
+
+aboriginal_customs_recognised_state_modifier_tt:0: "每个[GetCulture('aborigine').GetName][concept_homeland][concept_state]获得#tooltippable;tooltip:[GetPlayer.GetTooltipTag],anz_state_cutoms_colonisation_nerf 原住民主权获得承认#!\n#r -0.25#!#yellow 殖民增长生成#!\n#r -15%#!#yellow 殖民地增长速度#!"
+
+aboriginal_customs_recognised_state_modifier_lost_tt:0: "每个[GetCulture('aborigine').GetName][concept_homeland][concept_state]失去#tooltippable;tooltip:[GetPlayer.GetTooltipTag],anz_state_cutoms_colonisation_nerf #v 原住民主权获得承认#!#!\n#r -0.25#!#yellow 殖民增长生成#!\n#r -15%#!#yellow 殖民地增长速度#!"
+anz_state_cutoms_colonisation_nerf:0: "#v 原住民主权获得承认#!\n#r -0.25#!#yellow 殖民增长生成#!\n#r -15%#!#yellow 殖民地增长速度#!"
+
+# Aboriginal Suffrage start
+anz_atsi.302.t:0: "原住民选举权"
+anz_atsi.302.d:0: "尽管[concept_anz_responsible_govt]已引入殖民地，但关于原住民人口选举权的辩论仍在继续。虽然他们表面上与其他英国臣民平等，但各种结构阻碍或阻止了他们参与我们的选举系统。特别是那些维持传统生活方式的人。"
+anz_atsi.302.f:0: "“绝大多数人认为，一个原住民男子，或任何原住民女性——一个可怕的、堕落的、肮脏的生物——仅仅因为年满21岁就拥有同样的权利，这绝对是令人厌恶的。”\n\n“以剥夺原住民在自己国家投票的权利，仅仅因为他们的肤色，这是我们所做过闻所未闻的野蛮行径。”"
+anz_atsi.302.a:0: "给他们一个机会！"
+anz_atsi.302.b:0: "这只会导致彻底的混乱。"
+anz_aboriginal_voting_debate:0: "原住民选举权辩论"
+
+# Aboriginal Suffrage complete - [Commonwealth] Electoral Act
+anz_atsi.3021.t:0: "选举法"
+anz_atsi.3021.d:0: "随着这项立法的出台，阻碍许多[GetCulture('aborigine').GetName]和[GetCulture('torres_strait_islander').GetName]民族登记和投票的大部分障碍已被消除。\n\n尽管可能尚未实现完全平等的参与，但这仍然是一个分水岭时刻，代表着原住民的广泛公民权。"
+anz_atsi.3021.f:0: "“有权被倾听，而非言论被审查；\n一个真实的声音，而非短暂的观点；\n一个真正的价值，在你我之间；\n它预示着开始，发自我们内心深处。”"
+anz_atsi.3021.a:0: "声音回来了。"
+anz_atsi_attraction:0: "原住民势头"
+
+# Myall Creek Massacre - Native Testimony start
+anz_atsi.303.t1:0: "米亚尔溪大屠杀"
+anz_atsi.303.t2:0: "溪边大屠杀"
+#historical:
+anz_atsi.303.d1:0: "为回应[GetHarvestConditionType('anz_atsi_raids').GetName]，边疆定居者伏击了一个Wirrayaraay营地，捆绑并杀害了28人以上，其中大部分是#tooltippable;tooltip:[GetPlayer.GetTooltipTag],anz_myallwomen #white 妇女和儿童#!#!，然后将他们斩首焚烧，试图逃避发现。\n\n起诉定居者的[SCOPE.sCharacter('ag_myall_char').GetFullName]正面临同情陪审员的抵制，并且由于法律不允许[GetCulture('aborigine').GetName]作证，无法使用主要证人[SCOPE.sCharacter('davey_scope').GetLastName]。[SCOPE.sCharacter('ag_myall_char').GetLastName]现在正在推动法律改革。"
+#generic:
+anz_atsi.303.d2:0: "为回应[GetHarvestConditionType('anz_atsi_raids').GetName]，边疆定居者伏击了一个[SCOPE.sState('frontier_event_state').GetCustom('indigenous_local_nation')]营地，捆绑并杀害了28人以上，其中大部分是#tooltippable;tooltip:[GetPlayer.GetTooltipTag],anz_myallwomen #white 妇女和儿童#!#!，然后将他们斩首焚烧，试图逃避发现。\n\n起诉定居者的[SCOPE.sCharacter('ag_myall_char').GetFullName]正面临同情陪审员的抵制，并且由于法律不允许[GetCulture('aborigine').GetName]作证，无法使用主要证人[SCOPE.sCharacter('davey_scope').GetLastName]。[SCOPE.sCharacter('ag_myall_char').GetLastName]现在正在推动法律改革。"
+anz_atsi.303.f:0: "“在指引我们的星辰之上，他带来了我被屠宰的儿子；\n向他们的上帝展示陌生人如何背信弃义地毁灭；\n告诉友谊之手誓言，堆高了致命的火葬堆；\n讲述阴森的山脊！以及牧人的焚人火。”"
+anz_atsi.303.a:0: "肇事者必须被绞死。"
+anz_atsi.303.b:0: "宣告被告无罪，以#tooltippable;tooltip:[GetPlayer.GetTooltipTag],anz_appeasemyall #white 安抚社区#!#!。"
+
+Yintayintin:0: "因泰因廷"
+'Davey':0: "“戴维”"
+anz_myallwomen:0: "十名年轻的原住民男子曾在附近的一个站点，受雇于此进行环剥树皮。他们夜间返回后被警告杀手会回来，于是逃往30公里外的另一个站点。不久之后，该地区据报有10至20名原住民被谋杀并在一堆大火中焚烧。"
+
+anz_appeasemyall:0: "#italic “法律的不平等……特别是自1832年以来，尽管黑人不断实施谋杀，但没有一个黑人被绳之以法——这将滋生报复情绪，煽动一场实际的灭绝战争”\n\n“这群黑人动物根本不值殖民者为印刷这些愚蠢文件所花的钱，我们已经浪费了太多时间”#!\n- 报纸社论\n\n随着殖民边疆不断向外延伸，定居者与原住民之间的[concept_tension]不断增加。将警力延伸到这些广阔而人烟稀少的地区是困难的，这助长了定居者中的法外感，他们有时为了保护自己的利益而自行其是。\n\n无论是为了争夺日益减少的资源，还是出于报复，[GetHarvestConditionType('anz_atsi_raids').GetName]都会发生在农业定居点。暴力滋生更多暴力，边疆的定居者社区对原住民人口越来越蔑视，将他们视为威胁，并认为对他们施加这种暴力是合理的。\n\n尽管并非所有人都持这种观点。一些报纸认为这些谋杀案#italic “在很大程度上，应归咎于我们作为一个国家”#!，或者发表了同情性的诗歌，例如伊丽莎·汉密尔顿·邓洛普的《原住民母亲》。"
+
+# Native Testimony complete
+anz_atsi.3031.t:0: "证据法"
+anz_atsi.3031.d:0: "随着[concept_anz_repugnancy]问题在国内解决并达成一致，法庭作证不再需要宗教誓言，任何人都可以作出承诺以代替誓言。"
+anz_atsi.3031.f:0: "#italic “在本案中，我作为证人，我保证只说真话，说出全部真相，且除了真相别无其他。”#!"
+anz_atsi.3031.a:0: "终于有了明智的改革！"
+
+# Chattering of Orangutan
+anz_atsi.3032.t:0: "猩猩的胡言乱语"
+anz_atsi.3032.d:0: "在评论#v 原住民证词#!的辩论时，[SCOPE.sCharacter('chatterings_char_scope').GetFullName]将[GetCulture('aborigine').GetName]的言论比作猩猩的叫声，并警告说他们将被授权“向不幸的白人复仇”，从而召集了反对派。"
+anz_atsi.3032.f:0: "“这些黑人的语言无法进行司法管理中必要的细微区分；而且许多部落的语言没有任何白人能够彻底理解。翻译人员将被迫说些什么以赚取酬劳，因此法院听到的不是黑人证人意图表达的，而是翻译人员乐意赋予其声音的任何解释。在法庭上接受猩猩的叫声与接受这个野蛮民族的言语一样站得住脚。”"
+anz_atsi.3032.a:0: "[SCOPE.sCharacter('chatterings_char_scope').GetLastName]说得有道理。"
+anz_atsi.3032.b:0: "胡说八道！"
+anz_ntje_orangutan_momentum:0: "原住民证词诽谤"
+
+# Colonial Secretary supports, disagrees with AG office
+anz_atsi.3033.t:0: "殖民部对抵触的支持"
+anz_atsi.3033.d:0: "[GetGlobalVariable('gbr_var_scope').GetCountry.GetName]并非所有人都同意允许[GetCulture('aborigine').GetName]作证的[concept_anz_repugnancy]。殖民部的一些人质疑普遍的解释，并试图说服其他人。"
+anz_atsi.3033.f:0: "“我所理解的抵触，仅指阻止帝国与殖民地立法机关之间的直接权力冲突。将其解释为所有本地法律都必须按照相同的英国法律模式制定，将是认为议会荒谬地要求在固有的环境差异下立法一致……为了保护原住民，他们的证据至少在一定程度上必须被法院接受，这一点是不可或缺的。”"
+anz_atsi.3033.a:0: "终于有点道理了！"
+anz_atsi.3033.b:0: "不，不，你完全错了！"
+
+# Jury not of their peers
+anz_atsi.3034.t:0: "非同辈陪审团"
+anz_atsi.3034.d:0: "自《大宪章》以来，由同辈组成的陪审团进行审判是英国法理学的基石。而[GetCulture('aborigine').GetName]人口不享有这一权利已成为一个相当大的问题，因为它导致了司法偏见，而原住民对此心知肚明。"
+anz_atsi.3034.f:0: "“原住民无法在法院作证的事实对他们来说是巨大的困难，他们也认为如此；原因无法向他们解释。我曾目睹一名原住民无辜受罚，因为唯一能说出无罪事实的人不被允许……还必须记住，原住民并非由他们的同辈陪审团审判，而是由利益与他们直接对立的陪审团审判，这些陪审团几乎无法避免对原住民罪犯抱有一定程度的偏见。”"
+anz_atsi.3034.a:0: "这太残酷和残暴了。"
+anz_atsi.3034.b:0: "法律不能托付给那些对上帝一无所知的人。"
+
+# 
+#anz_atsi.3032.t:0 ""
+#anz_atsi.3032.d:0 ""
+#anz_atsi.3032.f:0 ""
+#anz_atsi.3032.a:0 ""
+
+# Doomed Race
+anz_atsi.401.t:0: "一个注定灭亡的民族"
+anz_atsi.401.d:0: "查尔斯·达尔文的《物种起源》震撼了世界，旧有的观念通过新的科学视角重新审视。[GetCulture('aborigine').GetName]民族的衰落和现状，现在越来越多地被理解为他们在适者生存中的必然灭绝。\n\n讨论已从[GetLawType('law_aboriginal_protectorate').GetName]转向[GetLawType('law_aboriginal_guardianship').GetName]，以期使其得以生存。"
+anz_atsi.401.f:0: "“这已成为一条公理，即遵循进化论和适者生存的法则，人类的低等种族必须让位给最高类型的人，而这条法则足以解释一个国家原住民人口在文明进程面前逐渐减少的原因。”"
+anz_atsi.401.a:0: "我们必须为这个垂死的民族铺好枕头。"
+anz_atsi.401.b:0: "这不是达尔文的意思。"
+anz_doomed_race_attraction:0: "没落民族理论"
+
+# The Stolen Generation
+anz_atsi.402.t:0: "被盗一代"
+anz_atsi.402.d:0: "我们的[GetCulture('aborigine').GetName][GetDecreeType('decree_anz_stolen_generation').GetName]政策造就了新一代的[GetCulture('aborigine_mixed').GetName]人。他们被从原住民家庭中带走，作为监护对象安置在白人社区中，这一新一代已失去了与原住民文化的许多联系，取而代之的是英式教育。"
+anz_atsi.402.f:0: "“我清楚地记得每两周就被排队接受审视，潜在的父母会查看所有孩子。我并不是他们正在寻找的孩子。\n\n我记得这个女人对我说，‘你妈妈死了，你现在没有妈妈了。所以你和我们在一起。’ 大约两年后，我妈妈和我妈妈的姐姐来到平房区，但他们不被允许探望我们，因为他们是黑人。”"
+anz_atsi.402.a:0: "这是#italic 监护#!，不是盗窃！"
+anz_atsi.402.b:0: "我国历史上一个蒙羞的篇章。"
+anz_stolen_generational_trauma:0: "世代创伤"
+
+# Error of their ways (intelligentsia adopt indigenous pluralist) 
+anz_atsi.403.t:0: "认识到自己的错误"
+anz_atsi.403.d:0: "随着政治格局的发展，[GetInterestGroupVariant('ig_intelligentsia',GetPlayer).GetName]开始认识到他们在原住民事务上的立场错误，转向一种更加多元化和不那么家长式的愿景。"
+anz_atsi.403.f:0: "“旅行者，本无路。路是走出来的。”"
+anz_atsi.403.a:0: "是时候了。"
+anz_atsi.403.b:0: "绝无可能！"
+anz_discourage_pluralist_int_str:0: "不鼓励原住民多元主义"
+
+# 
+#anz_atsi.401.t:0 ""
+#anz_atsi.401.d:0 ""
+#anz_atsi.401.f:0 ""
+#anz_atsi.401.a:0 ""
+
+# 
+#anz_atsi.401.t:0 ""
+#anz_atsi.401.d:0 ""
+#anz_atsi.401.f:0 ""
+#anz_atsi.401.a:0 ""
+
+# (africa colonial event clones)
+
+anz_atsi.901.t:0: "不服从的沙文主义者"
+anz_atsi.901.d:0: "一名殖民军官故意挑衅与[SCOPE.sCountry('jingoist_officer_victim').GetName]发生冲突，尽管有维持和平的指示。我们要么顺从该军官的阴谋，挽回颜面，要么召回他，承认我们对局势失去了控制，并惹恼沙文主义者。"
+anz_atsi.901.f:0: "“别理会首都那些软弱愚蠢的公文！我在这些战役中取得的一切成就，都是不顾部的意愿而完成的，而非因为部。”"
+anz_atsi.901.a:0: "我们别无选择，只能攻击[SCOPE.sCountry('jingoist_officer_victim').GetName]。"
+anz_atsi.901.b:0: "召回军官，结束这场疯狂！"
+anz_atsi.901.c:0: "我喜欢这个人！继续进攻并提拔这位军官。"
+
+anz_atsi.902.t:0: "机遇大陆"
+anz_atsi.902.d:0: "自由定居者迁至[SCOPE.sState('african_colony_state').GetName]，希望能[ROOT.GetCountry.GetName]开始新生活，却在陌生的环境中挣扎求生。"
+anz_atsi.902.f:0: "“如果仅仅是温度和天气，我们还能应付！但如果连动植物和土壤都与我们的习俗格格不入呢！我们知道自己正处于历史新篇章的开端，但如果这不仅仅是一个脚注，我们迄今为止得到的帮助就太少了。”"
+anz_atsi.902.a:0: "我们将为他们提供所需物资。"
+anz_atsi.902.b:0: "殖民政府应协助他们。"
+anz_atsi.902.c:0: "边疆是属于幸存者的，不是慈善救助对象的！"
+
+#anz_atsi.401.t:0 ""
+#anz_atsi.401.d:0 ""
+#anz_atsi.401.f:0 ""
+#anz_atsi.401.a:0 ""
+
+### decree
+decree_anz_stolen_generation:0: "强制儿童离家"
+decree_anz_stolen_generation_desc:0: "将[GetCulture('aborigine').GetName]和[GetCulture('torres_strait_islander').GetName]儿童从其父母身边带走，成为国家监护对象，并安置在白人社区中"
+
+anz_can_steal_children_decree:0: "可使用@aut![GetDecreeType('decree_anz_stolen_generation').GetName][concept_decree]"
+anz_can_steal_children_decree_desc:0: "[GetDecreeType('decree_anz_stolen_generation').GetName]可在拥有[GetCulture('aborigine').GetName][Concept('concept_pop', '$concept_pops$')]以及带有“站点”生产方式的[GetBuildingType('anz_building_atsi_reserve').GetName]的邦中使用。"
+
+#not in use
+anz_stealing_children:0: "[GetCulture('aborigine').GetName][Concept('concept_pop', '$concept_pops$')]将缓慢[Concept('concept_assimilation','$concept_assimilate$')]为[GetCulture('aborigine_mixed').GetName]"
+anz_stealing_children_desc:0: "无论[concept_homeland]如何，[concept_assimilation]都会以低于标准的速度发生，并且不会显示在月度人口变化中"
+
+anz_building_atsi_reserve_throughput_add:0: "$anz_building_atsi_reserve$建筑[concept_throughput]"
+anz_building_atsi_reserve_throughput_add_desc:0: "对$anz_building_atsi_reserve$站点的投入和产出均产生增益或惩罚"
+
+
+### Decisions
+
+anz_overturn_terra_nullius:0: "推翻无主地原则"
+anz_overturn_terra_nullius_desc:0: "里程碑式的判例法裁定，原住民不具备可识别的主权，因此他们的习俗无权获得法律承认。如果我们的法院尊重他们的法律，我们也将推翻[concept_anz_terra_nullius]的应用。"
+
+anz_overturn_customs_recognition:0: "推翻原住民法律承认"
+anz_overturn_customs_recognition_desc:0: "里程碑式的判例法裁定，我们的法院对原住民之间的罪行没有管辖权，承认了他们彼此之间的主权法律。推翻这一裁决将在澳大利亚确立[concept_anz_terra_nullius]原则。"
+anz_terra_nullius_decision_available:0: "在#b 5#!年内尚未建立#b 先例#!。"
+anz_aboriginal_turbulent_legal_precedent:0: "法律判例动荡"
+
+anz_torres_primary_culture_decision:0: "提升托雷斯海峡岛民地位"
+anz_torres_primary_culture_decision_desc:0: "我们已通过将[GetCulture('aborigine').GetName]确立为[Concept('concept_primary_cultures','$concept_primary_culture$')]，在与这片土地上的原住民和解方面取得了巨大进展。我们可以将此地位扩展到[GetCulture('torres_strait_islander').GetName]民族。"
+
+anz_tsi_is_subject_tt:0: "托雷斯海峡群岛是我们的[concept_subject]"
+
+anz_combine_aboriginal_culture_decision:0: "原住民法案"
+anz_combine_aboriginal_culture_decision_desc:0: "区分纯血、混血甚至四分之一血统不再是澳大利亚原住民的适当分类。我们可以通过立法修改原住民身份的定义，从而消除这些区别和官方歧视。"
+anz_combine_aboriginal_tt:0: "在[ROOT.GetCountry.GetName]中的每个[GetCulture('aborigine_mixed').GetName][concept_pop]都被重新归类为[GetCulture('aborigine').GetName]\n"
+
+### Interest Group
+
+ig_atsi:0: "原住民"
+ig_atsi_desc:0: "澳大利亚原住民群体，代表着数百个不同的部落、文化和语言，在殖民主义面前齐心协力追求共同利益。其他大洋洲原住民也与这个群体团结一致。"
+ig_atsi_only_icon:0: "@atsi!"
+
+#ig traits
+ig_trait_anz_atsi_trackers_stockmen:0: "追踪者与牧民"
+ig_trait_anz_atsi_trackers_stockmen_desc:0: "[GetCulture('aborigine').GetName]人与这片土地高度契合，因此是优秀的牧民和追踪者，能够寻找食物、水源，甚至找到其他原住民。\n\n#italic “我从不低头，只是缓慢地绕圈行走，直到看到更多。”#!"
+
+ig_trait_anz_atsi_land_stewards:0: "土地管理者"
+ig_trait_anz_atsi_land_stewards_desc:0: "[GetCulture('aborigine').GetName]人将自己视为土地的守护者。传统习俗强调如何照料和可持续管理土地与水域。受控火烧技术可防止过度燃烧，并用于狩猎动物和恢复植被。\n\n#italic “当我们焚烧土地时，我们正在治愈它。”#!"
+
+ig_trait_anz_atsi_raids:0: "袭击"
+ig_trait_anz_atsi_raids_desc:0: "有时，当地原住民袭击我们的食物供应，是因为他们失去了传统的食物来源，有时则是出于个人原因，表达他们对我们存在的厌恶。"
+
+# attraction
+POP_Aboriginal:0: "[GetCulture('aborigine').GetName]"
+POP_Aboriginal_mixed:0: "[GetCulture('aborigine_mixed').GetName]"
+POP_TSI:0: "[GetCulture('torres_strait_islander').GetName]"
+COLONISATION_INST:0: "殖民统治下[GetInstitutionType('institution_colonial_affairs').GetName][concept_institution]等级，同时[concept_homeland]"
+POP_ATSI_ACCEPTANCE:0: "[concept_discrimination]"
+POP_atsi_religion:0: "拥有[concept_state_religion]"
+POP_ATSI_EQUAL_RIGHTS:0: "拥有[GetLawType('law_aboriginal_equal').GetName][concept_law]"
+POP_not_atsi:0: "非[GetCulture('aborigine').GetName]、[GetCulture('aborigine_mixed').GetName]或[GetCulture('torres_strait_islander').GetName]"
+
+### Social Hierarchy / Classes 
+
+anz_australian_social_hierarchy:0: "澳大利亚原住民事务"
+anz_australian_social_hierarchy_desc:0: "六万多年来，澳大利亚原住民一直相对与世隔绝。当欧洲殖民者到来时，当地部落为他们在这片陌生大陆上的生存和了解提供了关键帮助。如今，数百种独特的文化、语言和部落发现自己任由英国文明摆布，他们作为享有与其他英国臣民同等权利的人的生存本身仍然受到质疑和怀疑。"
+
+anz_atsi_upper_class:0: "上层阶级"
+anz_atsi_upper_class_desc:0: "社会中享有最高特权和无可争议权力的人群。他们处于社会等级制度的顶端。"
+anz_atsi_middle_class:0: "中产阶级"
+anz_atsi_middle_class_desc:0: "社会中特权多于下层阶级的人群。他们在社会等级制度中位居中等，并具有一定的社会流动潜力。"
+anz_atsi_lower_class:0: "原住民"
+anz_atsi_lower_class_desc:0: "澳大利亚的[GetCulture('aborigine').GetName]和[GetCulture('torres_strait_islander').GetName]原住民，在自己的家园流离失所、饱受压迫。有时被殖民者视为财产，很少被视为人，他们在这个社会中所能企及的最高地位是“高贵的野蛮人”。"
+#anz_atsi_fauna_class:0 "Fauna"
+#anz_atsi_fauna_class_desc:0 "While not actually counted among the land's fauna, in effect they may as well be, if they were to be counted at all."
+anz_half_caste_class:0: "混血儿"
+anz_half_caste_class_desc:0: "澳大利亚原住民中的[GetCulture('aborigine_mixed').GetName]成员，他们有一位原住民父母，并在英语传统中长大。"
+
+aborigine_mixed:0: "英裔原住民"
+
+### Law Group / Laws / Institution
+
+lawgroup_aboriginal_rights:0: "原住民事务"
+lawgroup_aboriginal_rights_desc:0: "原住民人口的法律法规和权利。"
+
+#law_no_aboriginal_rights:0 "No Protections"
+#law_no_aboriginal_rights_desc:0 "Whilst Aboriginal peoples are considered British subjects and are nominally equal before the law, in reality a suspension in the rule of law related to Indigenous people exists in favor of colonial interests." #use this in event
+
+#this was incremental, initially being only to those whose parents are dead or unknown, later being expanded to all under a certain age (21) regardless of exisitng family
+law_aboriginal_guardianship:0: "原住民监护权"
+law_aboriginal_guardianship_desc:0: "“原住民保护者”办公室声称对每个原住民儿童拥有法定监护权，并被授予对所有成年人的广泛控制权。"
+
+law_aboriginal_protectorate:0: "改善"
+law_aboriginal_protectorate_desc:0: "在一项旨在减轻对原住民人口伤害的政策下，保护机构负责保护和教化当地原住民，管理关系并提供世俗和宗教教育，以实现同化。"
+
+law_aboriginal_equal:0: "平等权利"
+law_aboriginal_equal_desc:0: "原住民和托雷斯海峡岛民在法律面前被认为完全和有效地平等，不受与其公民身份相关的特殊法律的约束。"
+
+institution_aboriginal_rights:0: "原住民事务"
+institution_aboriginal_rights_desc:0: "殖民部负责监督与澳大利亚原住民相关的政策实施的部门。"
+
+country_institution_size_change_speed_institution_aboriginal_rights_mult:0: "[GetInstitutionType('institution_aboriginal_rights').GetName]的制度规模变化速度"
+country_institution_size_change_speed_institution_aboriginal_rights_mult_desc:0: "您改变[GetInstitutionType('institution_aboriginal_rights').GetName]规模的速度"
+
+### Ideologies
+
+# aboriginal national movement core ideology, to add in aboriginal affairs laws
+ideology_anz_atsi_pluralist_movement:0: "原住民多元主义者"
+ideology_anz_atsi_pluralist_movement_desc:0: "#lore 该团体希望维护其文化传统、身份和语言。#!"
+
+# for supremacist movement to have aboriginal law stance
+ideology_anz_ethno_nationalist_movement:0: "民族主义者"
+ideology_anz_ethno_nationalist_movement_desc:0: "#lore 该领导人相信一个基于民族定义建立的国家。#!"
+
+# for supremacist movement if aboriginal becomes primary culture
+ideology_anz_ethno_nationalist_movement2:0: "民族主义者"
+ideology_anz_ethno_nationalist_movement2_desc:0: "#lore 该领导人相信一个基于民族定义建立的国家。#!"
+
+ideology_anz_atsi_pluralist:0: "原住民多元主义者"
+ideology_anz_atsi_pluralist_desc:0: "#lore 该团体相信一个多元化的社会，包括公平和平等地对待[GetCulture('aborigine').GetName]和[GetCulture('torres_strait_islander').GetName]民族。#!"
+
+ideology_anz_atsi_pluralist_character:0: "原住民多元主义者"
+ideology_anz_atsi_pluralist_character_desc:0: "#lore 该人物是澳大利亚[GetCulture('aborigine').GetName]和[GetCulture('torres_strait_islander').GetName]民族的倡导者，认为这片土地的原始居民应由国家保障一套不可剥夺且不可谈判的应有权利。"
+
+#safeguard the cultural traditions, identity and standing of [GetCulture('aborigine').GetName] and [GetCulture('torres_strait_islander').GetName] peoples in society.#!"
+
+ideology_anz_atsi_traditional_beliefs:0: "传统习俗"
+ideology_anz_atsi_traditional_beliefs_desc:0: "#lore 该团体希望维护其传统的文化和宗教习俗，包括语言。#!"
+
+ideology_anz_atsi_anti_colonial:0: "反殖民"
+ideology_anz_atsi_anti_colonial_desc:0: "#lore 该团体希望阻止其他原住民的殖民化，并抵制针对他们的偏见性警务做法。#!"
+
+ideology_anz_colonial_humanism:0: "殖民人道主义"
+ideology_anz_colonial_humanism_desc:0: "#lore 源自英国人道主义传统，旨在改善美洲奴隶制度的这一团体，也称为[concept_anz_philanthropists]，认为被殖民的原住民应受到保护，免受残酷对待，并应被赋予基督教文明的馈赠。#!"
+
+ideology_anz_social_darwinism:0: "社会达尔文主义"
+ideology_anz_social_darwinism_desc:0: "#lore 根据新的“科学”观念，该团体认为澳大利亚的[GetCulture('aborigine').GetName]和[GetCulture('torres_strait_islander').GetName]民族是一个[concept_anz_doomed_race]，他们需要直接监督才能同化到优越的白人社会中以求生存。"
+
+ #ideology_anz_no_aboriginal_rights:0 "Flora and Fauna" #not in use
+ #ideology_anz_no_aboriginal_rights_desc:0 "#lore This group believes the Aboriginal inhabitants of Australia should be regarded as essentially no different than vegetation and animals and should be used or discarded in advance of the State."
+
+# ideology_anz_aboriginal_rights:0 "Aboriginal Rights Advocate" #not in use
+# ideology_anz_aboriginal_rights_desc:0 "#lore This leader believes that the discrimination against the [GetCulture('aborigine').GetName] and [GetCulture('torres_strait_islander').GetName] peoples of Australia is an unjust stain on society and the rule of law."
+
+### Religion
+
+dreamtime:0: "梦幻时光"
+dreamtime_desc:0: "梦幻时光描述"
+
+### Modifiers
+
+frontier_wars_modifier_country:0: "失控的定居者"
+frontier_wars_modifier_country_desc:0: "失控的定居者"
+frontier_wars_modifier_country_emergency_relief:0: "全国性救济实施"
+frontier_wars_modifier_country_emergency_relief_desc:0: "全国性救济实施"
+
+frontier_wars_modifier_ig:0: "边疆战争的不满"
+frontier_wars_modifier_ig_desc:0: "边疆战争的不满"
+frontier_wars_modifier_ig_positive:0: "政府回应的认可"
+frontier_wars_modifier_ig_positive_desc:0: "政府回应的认可"
+frontier_wars_modifier_ig_negative:0: "政府回应的不满"
+frontier_wars_modifier_ig_negative_desc:0: "政府回应的不满"
+frontier_wars_modifier_ig_positive_minor:0: "对政府回应的轻微认可"
+frontier_wars_modifier_ig_positive_minor_desc:0: "对政府回应的轻微认可"
+frontier_wars_modifier_ig_negative_minor:0: "对政府回应的轻微不满"
+frontier_wars_modifier_ig_negative_minor_desc:0: "对政府回应的轻微不满"
+
+frontier_wars_modifier_state:0: "原住民被剥夺土地"
+frontier_wars_modifier_state_desc:0: "原住民被剥夺土地"
+frontier_wars_modifier_state_mortality:0: "边疆地区进一步的暴力"
+frontier_wars_modifier_state_mortality_desc:0: "边疆地区进一步的暴力"
+
+frontier_wars_modifier_country_raids:0: "农业产出下降"
+frontier_wars_modifier_country_raids_desc:0: "农业产出下降"
+
+frontier_wars_modifier_urban_boost:0: "鼓励城市定居"
+frontier_wars_modifier_urban_boost_desc:0: "鼓励城市定居"
+
+frontier_wars_modifier_rural_boost:0: "鼓励农村定居"
+frontier_wars_modifier_rural_boost_desc:0: "鼓励农村定居"
+
+frontier_wars_modifier_je_fail:0: "白人之地"
+frontier_wars_modifier_je_fail_desc:0: "白人之地"
+
+frontier_wars_modifier_assimilation_boost:0: "主要同化工作"
+frontier_wars_modifier_assimilation_boost_desc:0: "主要同化工作"
+
+frontier_wars_modifier_assimilation_boost_minor:0: "次要同化工作"
+frontier_wars_modifier_assimilation_boost_minor_desc:0: "次要同化工作"
+
+country_anz_atsi_lower_class_acceptance_min_add:0: "$anz_atsi_lower_class$[concept_social_class]的最低[concept_acceptance]"
+country_anz_atsi_lower_class_acceptance_min_add_desc:0: "描述$anz_atsi_lower_class$[concept_social_class]中的[Concept('concept_pop', '$concept_pops$')]不会低于的[concept_acceptance]值的一个阈值"
+
+country_anz_atsi_lower_class_acceptance_max_add:0: "$anz_atsi_lower_class$[concept_social_class]的最高[concept_acceptance]"
+country_anz_atsi_lower_class_acceptance_max_add_desc:0: "描述$anz_atsi_lower_class$[concept_social_class]中的[Concept('concept_pop', '$concept_pops$')]不会超过的[concept_acceptance]值的一个阈值"
+
+country_anz_half_caste_class_acceptance_max_add:0: "$anz_half_caste_class$[concept_social_class]的最高[concept_acceptance]"
+country_anz_half_caste_class_acceptance_max_add_desc:0: "描述$anz_half_caste_class$[concept_social_class]中的[Concept('concept_pop', '$concept_pops$')]不会超过的[concept_acceptance]值的一个阈值"
+
+country_anz_half_caste_class_cultural_acceptance_add:0: "$anz_half_caste_class$[concept_social_class]的文化[concept_acceptance]"
+country_anz_half_caste_class_cultural_acceptance_add_desc:0: "对$anz_half_caste_class$[concept_social_class]的文化[concept_acceptance]的固定增减"
+
+country_anz_atsi_lower_class_cultural_acceptance_add:0: "$anz_atsi_lower_class$[concept_social_class]的文化[concept_acceptance]"
+country_anz_atsi_lower_class_cultural_acceptance_add_desc:0: "对$anz_atsi_lower_class$[concept_social_class]的文化[concept_acceptance]的固定增减"
+
+#country_anz_atsi_lower_class_conversion_mult:0 "[concept_conversion] Percentage for [GetCulture('aborigine').GetName] and [GetCulture('torres_strait_islander').GetName]"
+country_anz_atsi_lower_class_conversion_mult:0: "[GetCulture('aborigine').GetName]和[GetCulture('torres_strait_islander').GetName]的[concept_conversion]"
+country_anz_atsi_lower_class_conversion_mult_desc:0: "[GetCulture('aborigine').GetName]和[GetCulture('torres_strait_islander').GetName]的[concept_conversion]百分比的增减"
+
+country_anz_atsi_lower_class_assimilation_mult:0: "[GetCulture('aborigine').GetName][concept_assimilation]至[GetCulture('aborigine_mixed').GetName]（需要#b @aut![GetDecreeType('decree_anz_stolen_generation').GetName]#!）"
+country_anz_atsi_lower_class_assimilation_mult_desc:0: "[GetCulture('aborigine').GetName]向[GetCulture('aborigine_mixed').GetName]的[concept_assimilation]增减"
+
+anz_native_conversion_mult:0: "[GetCulture('aborigine').GetName]从[GetBuildingType('anz_building_atsi_reserve').GetName][Concept('concept_building', '$concept_buildings$')]获得的[concept_conversion]"
+anz_native_conversion_mult_desc:0: "从[GetBuildingType('anz_building_atsi_reserve').GetName][Concept('concept_building', '$concept_buildings$')]获得的[GetCulture('aborigine').GetName][concept_conversion]数量的增减"
+
+anz_native_assimilation_mult:0: "[GetCulture('aborigine').GetName]从[GetBuildingType('anz_building_atsi_reserve').GetName][Concept('concept_building', '$concept_buildings$')]同化为[GetCulture('aborigine_mixed').GetName]"
+anz_native_assimilation_mult_desc:0: "从[GetBuildingType('anz_building_atsi_reserve').GetName][Concept('concept_building', '$concept_buildings$')]同化[GetCulture('aborigine').GetName]到[GetCulture('aborigine_mixed').GetName]的数量增减（需要@aut![GetDecreeType('decree_anz_stolen_generation').GetName]）"
+
+ig_response_positive:0: "高兴"
+ig_response_negative:0: "愤怒"
+
+### Customisable localisation (random indigenous group)
+
+vic_local_nation_wurundjeri:0: "沃伦杰里"
+vic_local_nation_dja_dja_wurrung:0: "贾贾沃伦"
+vic_local_nation_wergaia:0: "韦尔盖亚"
+vic_local_nation_yorta_yorta:0: "约塔约塔"
+vic_local_nation_taungurung:0: "陶恩格伦"
+vic_local_nation_wathaurung:0: "瓦索伦"
+vic_local_nation_gunditjmara:0: "冈吉马拉"
+
+nsw_local_nation_bundjalung:0: "邦贾隆"
+nsw_local_nation_eora:0: "埃奥拉"
+nsw_local_nation_gamilaraay:0: "加米拉莱"
+nsw_local_nation_gweagal:0: "奎伽尔"
+nsw_local_nation_wiradjuri:0: "威拉朱里"
+
+qld_local_nation_bidjara:0: "比贾拉"
+qld_local_nation_bundjalung:0: "邦贾隆"
+qld_local_nation_gubbi_gubbi:0: "古比古比"
+qld_local_nation_wik:0: "维克"
+qld_local_nation_gugu_badhun:0: "古古-巴顿"
+
+was_local_nation_noongar:0: "努恩加"
+was_local_nation_nyangumarta:0: "尼亚古马塔"
+was_local_nation_pintupi:0: "平图皮"
+was_local_nation_pitjantjatjara:0: "皮特詹贾特贾拉"
+was_local_nation_watjarri:0: "瓦贾里"
+
+sas_local_nation_kaurna:0: "考尔纳"
+sas_local_nation_narungga:0: "纳伦加"
+sas_local_nation_ngarrindjeri:0: "恩加林杰里"
+sas_local_nation_pitjantjatjara:0: "皮特詹贾特贾拉"
+sas_local_nation_bungandidj:0: "邦甘迪吉"
+
+nrt_local_nation_arrernte:0: "阿雷恩特"
+nrt_local_nation_gurindji:0: "古林吉"
+nrt_local_nation_warlpiri:0: "瓦尔皮里"
+nrt_local_nation_pitjantjatjara:0: "皮特詹贾特贾拉"
+nrt_local_nation_yolngu:0: "约尔恩古"
+
+canberra_local_nation_maloongoola:0: "马隆古拉"
+canberra_local_nation_Biyaligee:0: "比亚利吉"
+canberra_local_nation_Namitch:0: "纳米奇"
+canberra_local_nation_Toogoranoongh:0: "图戈拉诺恩"
+canberra_local_nation_Kanberri:0: "堪贝里"
+
+ast_local_nation_generic:0: "当地原住民"
+
+### Building
+
+anz_building_atsi_reserve:0: "原住民保留地"
+
+anz_pmg_atsi_reserve_base:0: "保留地"
+anz_pmg_atsi_reserve_control:0: "管理"
+
+anz_pm_atsi_reserve_base:0: "土地保留地"
+anz_pm_atsi_reserve_base_amenities:0: "住房"
+
+anz_pm_atsi_reserve_mission:0: "传教站"
+anz_pm_atsi_reserve_station:0: "站点"
+
+### Subject type /Native Protectorate # dependent territory?
+
+ anz_treatypuppet:0: "原住民保护地"
+ subject_type_anz_treatypuppet:0: "@anz_treatypuppet! $subject_type_anz_treatypuppet_no_icon$"
+ subject_type_anz_treatypuppet_no_icon:0: "原住民保护地"
+ concept_anz_treatypuppet_desc:0: "与澳大利亚原住民团体签订的一项条约，建立原住民保护地附庸关系，以保护当地习俗和人民。"
+
+ anz_treatypuppet_desc:0: "一项在[GetCulture('aborigine').GetName]或[GetCulture('torres_strait_islander').GetName][concept_country]与[GetCulture('australian').GetName][concept_country]之间建立$subject_type_anz_treatypuppet_no_icon$附庸国类型关系的条约"
+
+ anz_treatypuppet_action_ask_to_break_name:0: "要求独立"
+ anz_treatypuppet_pact_desc:0: "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]是[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetAdjective]英联邦的成员国。"
+
+anz_treatypuppet_action_break_name:0: "授予独立"
+
+anz_treatypuppet_action_notification_name:0: "条约提案"
+anz_treatypuppet_action_notification_desc:0: "[INITIATOR_COUNTRY.GetName]提议建立一个原住民保护地。"
+anz_treatypuppet_action_propose_name:0: "建立原住民保护地"
+anz_treatypuppet_action_notification_break_name:0: "独立要求"
+anz_treatypuppet_action_notification_break_desc:0: "[INITIATOR_COUNTRY.GetName]要求我们终止其原住民保护地地位。"
+
+anz_treatypuppet_proposal_declined_name:0: "条约被拒"
+anz_treatypuppet_proposal_declined_desc:0: "[TARGET_COUNTRY.GetName]拒绝了成为我们@anz_treatypuppet! $subject_type_anz_treatypuppet_no_icon$的提议。"
+anz_treatypuppet_offer_cooldown:0: "在过去的#v 5#!年里，我们#b 没有#!向#b 他们#!提供过@anz_treatypuppet! $subject_type_anz_treatypuppet_no_icon$条约。"
+anz_treatypuppet_offer_cooldown2:0: "在过去的#v 4#!年里，我们#b 没有#!向#b 任何人#!提供过@anz_treatypuppet! $subject_type_anz_treatypuppet_no_icon$条约。"
+
+### concepts
+
+concept_anz_doomed_race:0: "注定灭亡的民族"
+concept_anz_doomed_race_desc:0: "自与欧洲人首次接触以来，澳大利亚原住民人口急剧下降，引发了灭绝的猜测。\n\n最初，这种衰落被理解为神圣天意；即他们的卑微地位是天命所归。现在，随着新的自然主义进化论，他们的衰落被理解为适者生存的框架。进化论者将原住民视为人类最原始的种族之一，暗示他们的地理隔绝阻碍了进化发展。\n\n因此，人们普遍认为，在文明进程面前，澳大利亚原住民是一个注定灭亡的民族，如果他们想要生存，就需要进行基因和社会同化，融入欧洲的生活方式。"
+
+concept_anz_philanthropists:0: "慈善家"
+concept_anz_philanthropists_desc:0: "19世纪，随着奴隶制的废除以及在印度和澳大拉西亚殖民地开始的福音传播，慈善家和关于英国帝国政策的慈善讨论有所增加。\n\n这些在海外倡导解放、传教和保护的同一批人，也常常在英国国内委员会中任职，负责都市贫困和劳动阶层的救济、教育和护理。因此，慈善作为一个项目，将国内的贫困者和劳工以及改善海外被殖民者的状况视为同一系列的社会问题。\n\n从这个意义上说，慈善不是富人与穷人之间的一种私人道德关系，而是英国帝国行政的一个分支，具有公共和跨国意义。"
+
+concept_anz_revenge_killing:0: "复仇杀戮"
+concept_anz_lc_revenge_killing:0: "复仇杀戮"
+concept_anz_revenge_killing_desc:0: "当原住民法律被违反时，惩罚有时涉及“报复”，这可能采取复仇杀戮的形式，类似于死刑。这可能涉及一次由一小队人执行暗杀的远征，也可能是长者们为在不法行为后恢复社区平衡而商定的惩罚。\n\n通常，报复会涉及对腿部进行非致命性的矛刺，社区会照料犯事者恢复健康，以此作为恢复社会联系的手段。当报复达到复仇杀戮的程度时，通常是为了惩罚那些在欧洲法律下会被判处死刑的同类罪行。"
+
+concept_anz_terra_nullius:0: "无主地"
+concept_anz_terra_nullius_desc:0: "拉丁语意为“无主之地”，#italic 无主地#!是指在没有现有主权统治的假设下，通过占领来获得领土的法律原则。\n\n在澳大利亚，虽然原住民部落的存在毋庸置疑，但这些部落是否发展出足以获得可识别主权的文明，则是另一个问题。\n\n将澳大利亚大陆宣称为#italic 无主地#!，意味着所有土地自动归英国王室所有，因此，任何原住民习惯法都可能不被承认，因为该领土内的所有居民因此都是英国臣民，受英国法律管辖。"
+
+concept_anz_frontier_control:0: "边疆控制"
+concept_anz_frontier_control_desc:0: "代表殖民边疆定居人口的控制程度。\n\n边疆扩张对我们来说涉及两种限制力量，而拓荒定居者却不受其影响。\n\n首先，随着我们边境的扩张，政府服务和监管的成本也随之增加。\n\n其次，自第一舰队以来，英国殖民部指示我们尽一切努力与当地原住民和平相处并尊重他们。然而，随着我们定居点的扩张，冲突总是不可避免地发生，定居者将原住民视为对其生计和繁荣的威胁，需要被清除，就像清除杂草为耕地让路一样。"
+
+### Misc
+
+state_aborigine_standard_of_living_add:0: "原住民[concept_sol]"
+state_torres_strait_islander_standard_of_living_add:0: "托雷斯海峡岛民的[concept_sol]修正值"
+state_torres_strait_islander_standard_of_living_add_desc:0: "特定文化[concept_sol]的增益或惩罚"
+state_aborigine_mixed_standard_of_living_add:0: "英裔原住民的[concept_sol]修正值"
+state_aborigine_mixed_standard_of_living_add_desc:0: "特定文化[concept_sol]的增益或惩罚"
+
+country_institution_aboriginal_rights_max_investment_add:0: "$institution_aboriginal_rights$[concept_institution]的最大投资"
+country_institution_aboriginal_rights_max_investment_add_desc:0: "对$institution_aboriginal_rights$[concept_institution]最大投资等级的增益或惩罚"
+
+country_institution_cost_institution_aboriginal_rights_mult: "@bur![Nbsp][GetInstitutionType('institution_aboriginal_rights').GetName]的[concept_bureaucracy]成本"
+country_institution_cost_institution_aboriginal_rights_mult_desc: "处理[GetInstitutionType('institution_aboriginal_rights').GetName]的@bur![Nbsp][concept_bureaucracy]成本的增减"
+
+anz_cheap_indigenous_affairs_institution:0: "原住民事务局"
+
+country_anz_atsi_lower_class_qualification_growth_mult:0: "$Native$[concept_social_class]的资格增长"
+country_anz_atsi_lower_class_qualification_growth_mult_desc: "对$Native$[concept_social_class]资格增长的百分比增减"
+
+country_anz_atsi_lower_class_education_access_mult: "$Native$[concept_social_class]的[concept_education_access]"
+country_anz_atsi_lower_class_education_access_mult_desc: "对$Native$[concept_social_class][concept_education_access]的百分比增减"
+
+ interest_group_ig_atsi_approval_add:0: "[GetInterestGroupVariant('ig_atsi',GetPlayer).GetName][concept_approval]"
+ interest_group_ig_atsi_approval_add_desc:0: "对[GetInterestGroupVariant('ig_atsi',GetPlayer).GetName][concept_interest_group]总[concept_approval]的增益或惩罚"
+
+ interest_group_ig_atsi_pol_str_mult:2: "[GetInterestGroupVariant('ig_atsi',GetPlayer).GetName][concept_political_strength]"
+ interest_group_ig_atsi_pol_str_mult_desc:2: "对[GetInterestGroupVariant('ig_atsi',GetPlayer).GetName][concept_interest_group]总[concept_political_strength]的增益或惩罚"
+
+ interest_group_ig_atsi_pop_attraction_mult:1: "[GetInterestGroupVariant('ig_atsi',GetPlayer).GetName]人口吸引力"
+ interest_group_ig_atsi_pop_attraction_mult_desc:1: "对人口被[GetInterestGroupVariant('ig_atsi',GetPlayer).GetName][concept_interest_group]吸引程度的增益或惩罚"
+
+anz_allow_treatypuppet:0: "可以建立@anz_treatypuppet!原住民保护地"
+anz_allow_treatypuppet_desc:0: "允许与邻近的澳大利亚原住民[concept_decentralized_nation]签订条约，通过[concept_subject]安排保护他们的原住民习俗和人民。"
+anz_gave_treaty:0: "条约承认"
+
+#movement debuff modifier
+anz_protectorate_movement_debuff:0: "[GetLawType('law_aboriginal_protectorate').GetName]"
+anz_guardianship_movement_debuff:0: "[GetLawType('law_aboriginal_guardianship').GetName]"
+#fake modifier for law
+anz_atsi_movement_attraction:0: "原住民民族运动[concept_pop]吸引力"
+anz_atsi_movement_attraction_desc:0: "加入原住民民族运动的[Concept('concept_pop', '$concept_pops$')]吸引力增减"
+anz_atsi_movement_radical:0: "原住民民族运动行动主义"
+anz_atsi_movement_radical_desc:0: "原住民民族运动的[concept_activism]增减"
+
+# Harvest condition
+anz_atsi_raids:0: "原住民袭击"
+anz_atsi_raids_desc:0: "无论是为了报复我们的殖民，还是因为传统食物来源受到干扰后被迫寻找食物，当地的原住民部落都会袭击我们的农业。"
+
+anz_atsi_raids_less_likely:0: "[GetHarvestConditionType('anz_atsi_raids').GetName]#g 可能性更小#!"
+anz_atsi_raids_less_likely_desc:0: "[GetHarvestConditionType('anz_atsi_raids').GetName][concept_harvest_condition]发生的可能性更小。"
+
+anz_atsi_raids_more_likely:0: "[GetHarvestConditionType('anz_atsi_raids').GetName]#r 可能性更大#!"
+anz_atsi_raids_more_likely_desc:0 "The [GetHarvestConditionType('anz_atsi_raids').GetName] [concept_harvest_condition] is more likely to occur.
+
+anz_atsi_raids_none:0: "[GetHarvestConditionType('anz_atsi_raids').GetName]不会发生"
+anz_atsi_raids_none_desc:0: "[GetHarvestConditionType('anz_atsi_raids').GetName][concept_harvest_condition]将不再发生。"
+
+anz_accelerated_dispossession2:0: "加速剥夺"
+
+# Characters
+Awabakal:0: "阿瓦巴卡尔"
+Derrimut:0: "德里穆特"
+Bunurong:0: "布努隆"
+Dundalli:0: "邓达利"
+Dalambara:0: "达兰巴拉"
+Nalebunner:0: "纳勒本纳"
+Maulboyheenner:0: "毛尔博伊希纳"
+Topar:0: "托帕尔"
+Truganini:0: "特鲁加尼尼"
+Tunnerminnerwait:0: "图纳米纳韦特"
+Parperloihener:0: "帕珀洛伊希纳"
+Winberri:0: "温伯里"
+Taungurung:0: "陶恩格伦"
+Denamundinna:0: "德纳蒙丁纳"
+Coonong:0: "库努格"
+Yilbung:0: "伊尔本"
+Turrbal:0: "图尔巴尔"
+Yuranigh:0: "尤兰尼格"
+Pindjarup:0: "平贾鲁普"
+Calyute:0: "卡利尤特"
+Walter:0: "沃尔特"

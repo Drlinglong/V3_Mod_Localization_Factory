@@ -1,0 +1,166 @@
+﻿l_english:
+
+#Oil/Gas Companies
+company_bg: "British Petroleum"
+company_total: "TotalEnergies"
+company_eni: "Ente Nazionale Idrocarburi (ENI)"
+company_gazprom: "Gazprom"
+company_sinopec: "Sinopec"
+company_petrobas: "Petrobras"
+company_saudi_aramco: "Saudi Aramco"
+
+# Hygiene & Cosmetics Companies
+generic_company_basic_cosmetics_dynamic_name_tag_plural: "Cosmetics"
+generic_company_basic_cosmetics_dynamic_name_tag_singular: "Beauty"
+company_oreal: "L'Oréal"
+company_shiseido: "Shiseido"
+company_revlon: "Revlon"
+company_unilever: "Unilever"
+company_beiersdorf: "Beiersdorf"
+
+# Fashion Companies
+company_louis_vuitton: "Louis Vuitton"
+company_hermes: "Hermès"
+company_prada: "Prada"
+company_gucci: "Gucci"
+company_burberry: "Burberry"
+company_levi_strauss: "Levi's"
+company_nike: "Nike"
+company_adidas: "Adidas"
+company_hm: "H&M"
+company_inditex: "Inditex"
+company_shein: "Shein"
+company_primark: "Primark"
+
+# Videogame Companies
+company_nintendo: "Nintendo"
+company_atari: "Atari"
+company_sega: "Sega"
+company_valve: "Valve"
+company_electronic_arts: "Electronic Arts"
+company_codemasters: "Codemasters"
+company_ubisoft: "Ubisoft"
+company_cd_projekt: "CD Projekt"
+company_krafton: "Krafton"
+company_paradox_interactive: "Paradox Interactive"
+
+# Airline Companies
+curtiss_company_basic_air_travel_dynamic_name_tag_plural: "Airlines"
+curtiss_company_basic_air_travel_dynamic_name_tag_singular: "Air Travel"
+curtiss_company_KLM: "KLM Royal Dutch Airlines"
+curtiss_company_DLR: "Lufthansa"
+curtiss_company_imperial_airways: "British Airways"
+curtiss_company_air_france: "Air France"
+curtiss_company_swissair: "Swissair"
+company_pan_american_airways: "Pan American Airways"
+company_turk_hava_yollari_turkish: "Türk Hava Yollari (Turkish Airlines)"
+company_emirates_airline: "Emirates Airlines"
+company_air_china: "Air China"
+company_boeing: "Boeing"
+company_airbus: "Airbus"
+company_embraer: "Embraer"
+company_bombardier: "Bombardier"
+company_comac: "Comac"
+
+# Music & Instruments Companies
+elgar_company_basic_instruments_dynamic_name_tag_singular: "Music"
+elgar_company_basic_instruments_dynamic_name_tag_plural: "Instruments"
+elgar_company_steinway: "Steinway & Sons"
+company_basic_records_and_films: "Records"
+company_basic_records_and_films_dynamic_name_tag_singular: "Record"
+company_basic_records_and_films_dynamic_name_tag_plural: "Records"
+company_yamaha: "Yamaha"
+company_columbia_records: "Columbia Records"
+company_societe_pathe_freres: "Société Pathé Frères"
+company_warner_bros_records: "Warner Bros. Records"
+company_universal_records: "Decca Records (Universal)"
+company_tokyo_tsushin_kogyo_sony: "Tokyo Tsushin Kogyo (Sony)"
+
+# Mining & Resources Companies
+company_uranium_advancedores_mining_dynamic_name_tag_plural: "Strategic Materials"
+company_uranium_advancedores_mining_dynamic_name_tag_singular: "Strategic Mining"
+company_kazatomprom: "Kazatomprom"
+company_compagnie_generale_des_matieres_nucleaires: "Compagnie Générale des Matières Nucléaires (Orano)"
+company_cameco: "CAMECO"
+company_union_miniere_du_haut_katanga: "Union Minière du Haut-Katanga"
+company_bhp: "Broken Hill Propretary Company"
+company_rosatom: "Rosatom"
+company_Glencore: "Glencore"
+company_southern_copper_corp: "Southern Copper Corporation"
+company_rio_tinto: "Rio Tinto"
+company_china_rare_earth_group: "China Rare Earth Group"
+
+# Big Tech Companies
+generic_company_basic_tech_dynamic_name_tag_plural: "Electronics"
+generic_company_basic_tech_dynamic_name_tag_singular: "Tech"
+company_apple: "Apple"
+company_samsung: "Samsung"
+company_olivetti: "Olivetti"
+company_microsoft: "Microsoft"
+company_intel: "Intel"
+company_asml: "ASML"
+company_tsmc: "TSMC"
+company_sap: "SAP"
+company_xiaomi: "Xiaomi"
+
+# Furniture/Home Appliances Companies
+company_ikea: "IKEA"
+company_whirlpool: "Whirlpool"
+company_haier: "Haier"
+
+###############################################################################
+
+# Hygiene & Cosmetics Goods
+prestige_good_loreal_cosmetics: "L'Oréal Cosmetics"
+prestige_good_shiseido_cosmetics: "Shiseido Cosmetics"
+prestige_good_revlon_cosmetics: "Revlon Cosmetics"
+prestige_good_unilever_soap: "Dove Soap"
+prestige_good_beiersdorf_cosmetics: "Nivea Cosmetics"
+
+# Fashion Goods
+prestige_good_dior_perfumes: "Dior Perfumes"
+prestige_good_burberry_coats: "Burberry Coats"
+prestige_good_levis_denim: "Levi's Denim"
+prestige_good_nike_shoes: "Nike Outfits"
+prestige_good_adidas_shoes: "Adidas Outfits"
+prestige_good_fast_fashion_clothes: "Fast Fashion"
+prestige_good_cosmetics: "Brand Cosmetics"
+prestige_good_french_fashion: "French Fashion"
+prestige_good_italian_fashion: "Italian Fashion"
+
+# Oil & Gas Goods
+prestige_good_saudi_aramco_oil: "OPEC Oil"
+prestige_good_gazprom_natural_gas: "Russian Gas"
+
+# Videogame Goods
+prestige_good_nintendo_consoles: "Nintendo Videogames"
+prestige_good_atari_consoles: "Atari Videogames"
+prestige_good_sony_consoles: "Sony Videogames" #Per uniformare con Nintendo e Atari
+
+# Electrics Goods
+prestige_good_apple_iphones: "Apple Telephones"
+prestige_good_nokia_phones: "Nokia Telephones"
+prestige_good_apple_mac: "Apple Computers"
+prestige_good_olivetti_teleprinters: "Olivetti Computers"
+prestige_good_microsoft_windows: "Microsoft Windows"
+prestige_good_asml_euv_lithography_machines: "EUV Lithography Machines"
+prestige_good_intel_processors: "Intel Processors"
+prestige_good_wafers: "High Quality Wafers"
+prestige_good_smartphones: "Brand Telephones" #Per uniformare con Samsung e Xiaomi
+
+# Prestige goods
+prestige_good_generic_records_and_films: "High quality Record & Films"
+prestige_good_generic_instruments: "High quality instruments"
+prestige_good_generic_prints: "High quality Books & Newspapers"
+
+# Flight Goods
+prestige_good_generic_flights: "Luxury flights"
+prestige_good_boeing_aircraft: "Boeing Airplanes"
+prestige_good_airbus_aircraft: "Airbus Airplanes"
+
+# Mining Goods
+prestige_good_australian_coal: "Australian Coal"
+prestige_high_quality_uranium: "Concentrated Uranium"
+
+# Furniture/Home Appliances Goods
+prestige_good_ikea_furniture: "Modular Furniture"

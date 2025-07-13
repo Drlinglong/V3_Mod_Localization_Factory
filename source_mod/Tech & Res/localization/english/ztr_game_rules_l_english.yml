@@ -1,0 +1,15 @@
+﻿l_english:
+
+#NEW 1.0
+
+ rule_ztr_decolonization_content: "Decolonization Content (Tech&Res)"
+ setting_allow_ztr_decolonization_content: "#tooltippable #tooltip:[GetPlayer.GetTooltipTag],setting_allow_ztr_decolonization_content_desc #high Enabled#!#!#!"
+ setting_allow_ztr_decolonization_content_desc: "Allow decolonization content during this campaign, for a more historical experience."
+ setting_no_ztr_decolonization_content: "#tooltippable #tooltip:[GetPlayer.GetTooltipTag],setting_no_ztr_decolonization_content_desc #high Disabled#!#!#!"
+ setting_no_ztr_decolonization_content_desc: "Disable decolonization content during this campaign, for a vanilla and world-conquer gameplay-focused experience."
+
+ rule_ztr_historical_content: "Historical Content (Tech&Res)"
+ setting_allow_ztr_historical_content: "#tooltippable #tooltip:[GetPlayer.GetTooltipTag],setting_allow_ztr_historical_content_desc #high Enabled#!#!#!"
+ setting_allow_ztr_historical_content_desc: "Allow historical content related, for now, to Austria and Ottoman Decline."
+ setting_no_ztr_historical_content: "#tooltippable #tooltip:[GetPlayer.GetTooltipTag],setting_no_ztr_historical_content_desc #high Disabled#!#!#!"
+ setting_no_ztr_historical_content_desc: "Disable historical content during this campaign, for a vanilla gameplay-focused experience."

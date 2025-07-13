@@ -1,0 +1,71 @@
+﻿l_simp_chinese:
+
+# New Zealand release
+
+new_zealand_release.1.t:0: "怀唐伊条约"
+new_zealand_release.1.d:0: "[ROOT.GetCountry.GetOverlord.GetAdjective]政府签署了一项条约，根据总督的说法，该条约授予[ROOT.GetCountry.GetOverlord.GetAdjectiveNoFlag]对北岛和南岛的主权，以换取[SCOPE.sCulture('scope_waitangi_maori').GetName]作为[ROOT.GetCountry.GetOverlord.GetAdjectiveNoFlag]臣民的保护。"
+new_zealand_release.1.f:0: "条约规定的条款为岛屿上的政治和法律体系奠定了基础。威斯敏斯特已经有人在私下议论新西兰的自治问题。"
+new_zealand_release.1.a:0: "我确信这会持续很久。"
+
+new_zealand_release.2.t:0: "新西兰殖民地"
+new_zealand_release.2.d:0: "[ROOT.GetCountry.GetOverlord.GetAdjective]政府已将[SCOPE.sCountry('nz_country').GetName]设立为皇家殖民地。"
+new_zealand_release.2.f:0: "当消息传到[GetGlobalVariable('anz_nsw_state').GetState.GetCityHubName]的议会时，反应不一。没有人真正指望新南威尔士能继续掌控新西兰，所以当消息传到悉尼时，反响褒贬不一，但大体上漠不关心。无论如何，新南威尔士必须适应这个新现实。"
+new_zealand_release.2.a:0: "希望没人会有什么主意。"
+new_zealand_release.2.b:0: "是不是在放《关于霍比特人》？"
+nz_release_tt:0: "[SCOPE.sCountry('nz_country').GetName]被授予自治权"
+
+# South Australia Request NT
+
+ast_territorial_changes.1.t:0: "北领地移交"
+ast_territorial_changes.1.d:0: "[SCOPE.sCountry('northern_territory_requester').GetAdjective]政府已要求控制[SCOPE.sState('northern_territory_state').GetName]这个大部分是干旱的地区。"
+ast_territorial_changes.1.f:0: "我们很困惑为什么[SCOPE.sCountry('northern_territory_requester').GetName]想要这片干旱的荒地，但如果它能促进澳大利亚各殖民地之间的进一步联系，我们看不出有任何理由不接受。"
+ast_territorial_changes.1.a:0: "是的，为了联邦精神。"
+ast_territorial_changes.1.b:0: "嗯，不。这是我们的。"
+sa_annex_nt_tt:0: "对[SCOPE.sState('northern_territory_state').GetName]的控制权将移交给[SCOPE.sCountry('northern_territory_requester').GetName]。"
+
+ast_territorial_changes.2.t:0: "移交已接受"
+ast_territorial_changes.2.d:0: "[SCOPE.sCountry('northern_territory_controller').GetAdjective]政府已接受我们控制[SCOPE.sState('northern_territory_state').GetName]的请求。"
+ast_territorial_changes.2.f:0: "是的，我们可以声称这有利于联邦精神。但实际上，他们将不再嘲笑我们。有了这个，我们将能进入北部海岸，并成为[ROOT.GetCountry.GetOverlord.GetAdjectiveNoFormatting]帝国最伟大的单一殖民地！"
+ast_territorial_changes.2.a:0: "这将有利于联邦精神。"
+
+ast_territorial_changes.3.t:0: "移交被拒"
+ast_territorial_changes.3.d:0: "[SCOPE.sCountry('northern_territory_controller').GetAdjective]政府已拒绝我们控制[SCOPE.sState('northern_territory_state').GetName]的请求。"
+ast_territorial_changes.3.f:0: "[SCOPE.sCountry('northern_territory_controller').GetName]的背叛者出卖了我们。他们一直以来都想让我们弱小。好吧，我们会让他们看看。我们会让他们所有人都看看！"
+ast_territorial_changes.3.a:0: "殖民地内部合作到此为止。"
+
+ast_territorial_changes.4.t:0: "检测到人工智能 检测到人工智能"
+ast_territorial_changes.4.d:0: "你好，机器人。请保持冷静。我们已检测到您是人工智能，因此不具备做出明智决定的能力。请允许我们慷慨地赐予您此事件，以便您能让所有人的生活更轻松。"
+ast_territorial_changes.4.f:0: "呜——哦——呜——哦——呜——哦——呜——哦——呜——哦——呜——哦——呜——哦——呜——哦——呜——哦——呜——哦——呜——哦——呜——哦——呜——哦——呜——哦——呜——哦——呜——哦——呜——哦——呜——哦——呜——哦——呜——哦——呜——哦——呜——哦——呜——哦——呜——哦——呜——哦——呜——哦——呜——哦"
+ast_territorial_changes.4.a:0: "01011001 01000101 01010011 00100000 01001101 01000001 01010011 01010100 01000101 01010010"
+
+# Bunyip Aristocracy
+
+bunyip_aristocracy.1.t:0: "班伊普贵族制"
+bunyip_aristocracy.1.f:0: "“他们出身古老，但他会挑战任何博物学家正确地将其分类。但这或许只是反足之地存在的显著对立的一个样本。在这里，他们都知道普通的水鼹鼠变成了鸭嘴兽，而在这种退化的某些遥远效仿中，他认为他们将被授予班伊普贵族制。”"
+bunyip_aristocracy.1.d:0: "[SCOPE.sLaw('current_law_scope').GetName]的支持者一直在举行公众集会以争取更多支持。演讲者雄辩地嘲笑澳大利亚的世袭统治思想，赢得了热烈掌声。"
+bunyip_aristocracy.1.a:0: "公众支持将大有帮助"
+bunyip_aristocracy.1.b:0: "这些想法正在获得关注"
+bunyip_aristocracy.2.d:0: "[SCOPE.sLaw('current_law_scope').GetName]的反对者一直在举行公众集会以争取更多反对。演讲者雄辩地嘲笑澳大利亚的世袭统治思想，赢得了热烈掌声。"
+bunyip_aristocracy.2.a:0: "诅咒他们！"
+bunyip_aristocracy.2.b:0: "我觉得这像是煽动叛乱"
+afp_bunyip_aristocracy_good_modifier:0: "班伊普贵族制被嘲笑"
+afp_bunyip_aristocracy_bad_modifier:0: "班伊普贵族制被嘲笑"
+afp_bunyip_aristocracy_small_modifier:0: "班伊普贵族制受反对"
+
+# New Guinea Colonisation
+qld_flavour.1.t: "[SCOPE.sCountry('foreign_ng_coloniser').GetAdjectiveNoFormatting]旗帜飘扬在新几内亚上空"
+qld_flavour.1.d: "[SCOPE.sCountry('foreign_ng_coloniser').GetAdjective]政府已宣布对[SCOPE.sStateRegion('foreign_ng_state').GetName]实行保护。 [SCOPE.gsInterestGroup('ng_jingoist_ig_scope').GetName]认为，外国势力如此逼近[ROOT.GetCountry.GetName]可能对我们构成威胁，一旦发生战争，我们应该对该岛的剩余部分宣布自己的保护权，以限制[SCOPE.sCountry('foreign_ng_coloniser').GetAdjectiveNoFlag]在我们附近扩张。我们只管求[SCOPE.sCountry('ng_qld_overlord').GetName]原谅，而不是请求允许。"
+qld_flavour.1.f: "“难道你们没有察觉到[SCOPE.sCharacter('foreign_ng_coloniser_ruler').GetFullNameNoFormatting]将[SCOPE.sCharacter('foreign_ng_coloniser_ruler').GetHerHis]的八足触手直接伸入我们腹地的危险吗？这是唯一合理的行动方针。那是什么？哦，是的，我的庄园总是需要更多的劳工。这与当前的话题有什么关系呢？”"
+qld_flavour.1.a: "[SCOPE.sStateRegion('uncolonised_ng_state').GetName]必须是我们的！"
+qld_flavour.1.b: "[SCOPE.sCountry('ng_qld_overlord').GetAdjectiveNoFlag]帝国的形态将由[SCOPE.sState('ng_qld_overlord_capital').GetCityHubName]决定，而不是[SCOPE.sState('ng_qld_capital').GetCityHubName]！"
+custom_her:0: "她的"
+custom_his:0: "他的"
+ng_colonisation_ce_government_petition_tt: "[SCOPE.gsInterestGroup('ng_jingoist_ig_scope').GetName]将期望政府在未来五年内通过[GetLawType('law_colonial_exploitation').GetName]。"
+ng_colonisation_cr_government_petition_tt: "[SCOPE.gsInterestGroup('ng_jingoist_ig_scope').GetName]将期望政府在未来五年内通过[GetLawType('law_colonial_resettlement').GetName]。"
+
+je_anz_new_guinea_colonization_ce:0: "新几内亚管辖法案"
+je_anz_new_guinea_colonization_ce_reason:0: "为了支持我们对[SCOPE.sStateRegion('je_uncolonised_ng_state').GetName]的[concept_claim]，我们已向[SCOPE.gsInterestGroup('je_ng_jingoist_ig_scope').GetName]承诺通过[GetLawType('law_colonial_exploitation').GetName]。\n\n如果[GetLawType('law_colonial_exploitation').GetName]成功通过并在[SCOPE.sStateRegion('je_uncolonised_ng_state').GetName]建立了[concept_colony]，[SCOPE.gsInterestGroup('je_ng_jingoist_ig_scope').GetName]将非常满意；但如果此承诺被忽视，我们的[concept_claim]将失去其合法性，国家将面临惩罚，甚至可能导致[SCOPE.gsInterestGroup('je_ng_jingoist_ig_scope').GetName]退出政府。"
+je_anz_new_guinea_colonization_ce_status:0: "[SCOPE.gsInterestGroup('je_ng_jingoist_ig_scope').GetName]正在请愿通过[GetLawType('law_colonial_exploitation').GetName]。"
+je_anz_new_guinea_colonization_cr:0: "新几内亚管辖法案"
+je_anz_new_guinea_colonization_cr_reason:0: "为了支持我们对[SCOPE.sStateRegion('je_uncolonised_ng_state').GetName]的[concept_claim]，我们已向[SCOPE.gsInterestGroup('je_ng_jingoist_ig_scope').GetName]承诺通过[GetLawType('law_colonial_resettlement').GetName]。\n\n如果[GetLawType('law_colonial_resettlement').GetName]成功通过并在[SCOPE.sStateRegion('je_uncolonised_ng_state').GetName]建立了[concept_colony]，[SCOPE.gsInterestGroup('je_ng_jingoist_ig_scope').GetName]将非常满意；但如果此承诺被忽视，我们的[concept_claim]将失去其合法性，国家将面临惩罚，甚至可能导致[SCOPE.gsInterestGroup('je_ng_jingoist_ig_scope').GetName]退出政府。"
+je_anz_new_guinea_colonization_cr_status:0: "[SCOPE.gsInterestGroup('je_ng_jingoist_ig_scope').GetName]正在请愿通过[GetLawType('law_colonial_resettlement').GetName]。"

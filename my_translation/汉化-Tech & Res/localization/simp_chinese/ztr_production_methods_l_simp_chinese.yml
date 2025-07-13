@@ -1,0 +1,745 @@
+﻿l_simp_chinese:
+
+# MR
+pmg_mendelejew_coal_liquefaction: "煤炭液化"
+pm_mendelejew_coal_liquefaction: "煤炭液化"
+pmg_mendelejew_isoprene: "合成橡胶"
+pm_mendelejew_isoprene: "异戊二烯"
+pm_mendelejev_butadiene: "丁二烯"
+
+# Nuclear Reactor 
+pm_nuclear_reactor: "核反应堆"
+pmg_nuclear_reactor: "核反应堆"
+pmg_automation_building_nuclear_power_plant: "自动化"
+pm_nuclear_first_generation: "第一代"
+pm_nuclear_second_generation: "第二代"
+
+# Geothermal
+pmg_geothermal_reactor: "地热反应堆"
+pm_geothermal_turbine: "地热涡轮机"
+pmg_automation_building_geothermal_power_plant: "自动化"
+pm_automation_closed_loop_system: "闭环系统"
+
+#Electric Power Plant
+pmg_automation_building_power_plant: "自动化"
+no_automation_power_plant: "无精炼"
+pm_automation_HFO_fuel: "重燃油"
+pm_gas-fired_plant: "燃气发电厂"
+  
+# Spaceport
+pmg_base_building_spaceport: "航天港"
+pm_orbital_launch_system: "轨道发射"
+  
+# Electric industries
+  
+pm_no_telephones: "无电话"
+pm_cathode_tube_televisions: "阴极管电视"
+pm_colored_cathode_tube_televisions: "彩色阴极管电视"
+pm_candlestick_telephones: "烛台电话"
+pm_bakelite_telephones: "电木电话"
+
+# Electronics Industries
+
+pmg_base_building_copperwires: "电线"
+pm_basic_copperwires: "基本电线"
+pm_cabled_copperwires: "电缆线"
+pm_advanced_copperwires: "高级电线"
+
+pmg_base_building_batteries: "电池"
+pm_voltaic_pile: "伏打电堆"
+pm_lead_acid_battery: "铅酸电池"
+pm_alkaline_battery: "碱性电池"
+
+pmg_base_building_electroniccomponents: "电子元件"
+pm_no_electroniccomponents_production: "无电子元件"
+pm_vacuum_tube: "真空管"
+pm_transistor: "晶体管"
+pm_integrated_transistor: "集成晶体管"
+
+pmg_base_building_fuel_cell: "燃料电池"
+pm_no_fuel_cell: "无燃料电池"
+pm_alkaline_fuel_cell: "碱性燃料电池"
+
+pmg_automation_building_electronics_plant: "自动化"
+pm_watertube_boiler_building_electronics_plant: "水管锅炉"
+pm_rotary_valve_engine_building_electronics_plant: "旋转阀发动机"
+pm_automatic_printed_circuit_board_building_electronics_plant: "自动印刷电路板"
+
+#Chip Foundry
+
+pmg_base_building_processors: "处理器"
+pm_no_processors_production: "无处理器"
+pm_integrated_circuit: "集成处理器"
+pm_microprocessor: "微处理器"
+
+pmg_base_building_computers: "计算机"
+pm_no_computer_production: "无计算机"
+pm_computer_teleprinters: "计算机电传打字机"
+pm_personal_computers: "个人计算机"
+
+#Robotics Industry
+
+pmg_base_building_robotics: "机器人技术"
+pm_mechanical_arm: "机械臂"
+pm_cnc_machines: "数控机床"
+
+pmg_automation_building_robotics_industry: "自动化"
+pm_advanced_assembly_lines_building_robotics_industry: "高级装配线"
+pm_robotic_building_robotics_industry: "机器人装配线"
+  
+# Machines Industry
+ 
+pmg_aeroplanes: "军用飞机"
+pm_aeroplane_production: "军用飞机生产"
+pm_modern_warplanes_production: "现代军用飞机生产"
+pmg_civil_planes: "民用飞机"
+pm_no_civil_plane_production: "无民用飞机"
+pm_zeppelins_production: "齐柏林飞艇"
+pm_civil_planes_production: "民用飞机"
+ 
+ 
+ # Oil refineries e petrol-chemical
+
+pmg_fuel_production: "燃料/石油生产"
+pm_fractional_distillation: "分馏"
+pm_catalytic_cracking: "催化裂化"
+pm_vacuum_distillation: "真空蒸馏"
+pm_thermal_cracking: "热裂化"
+pm_synthetic_fraction: "合成馏分"
+
+pmg_plastics_production: "塑料生产"
+pm_bakelite_molding: "电木成型"
+pm_celluloid_processing: "赛璐珞加工"
+pm_polyethylene_synthesis: "聚乙烯合成"
+pm_ziegler-natta_catalysts: "齐格勒-纳塔催化剂"
+
+# Airport
+pmg_base_building_airport: "航班类型"
+pmg_cargo_airport: "货运类型"
+pm_private_charters: "私人包机"
+pm_regional_routes: "区域航线"
+pm_domestic_routes: "国内航线"
+pm_international_routes: "国际航线"
+pm_air_passenger_only: "仅载客"
+pm_air_mail: "邮件"
+pm_air_freight: "货运"
+
+pmg_fuel_airport: "燃料"
+pm_airport_oil: "航空燃料"
+pm_airport_kerosene: "煤油"
+		
+# Modern cars
+pmg_automobile_production: "车辆"
+pm_turbo_diesel_engines: "涡轮增压柴油发动机"
+ 
+# Uranium mine
+pmg_curie_mining_equipment_building_uranium_mine: "采矿设备"
+pm_curie_picks_and_shovels_building_uranium_mine: "镐和铲"
+pm_curie_atmospheric_engine_pump_building_uranium_mine: "大气式发动机泵"
+pm_curie_condensing_engine_pump_building_uranium_mine: "冷凝式发动机泵"
+pm_curie_diesel_pump_building_uranium_mine: "柴油泵"
+pmg_curie_explosives_building_uranium_mine: "炸药"
+pmg_curie_steam_automation_building_uranium_mine: "蒸汽自动化"
+pmg_curie_train_automation_building_uranium_mine: "铁路自动化"
+pmg_refined_fuel_building_uranium_mine: "浓缩铀"
+pm_refined_fuel_building_uranium_mine: "浓缩铀"
+ 
+ # Bauxite mine
+pmg_mining_equipment_building_bauxite_mine: "采矿设备"
+pm_picks_and_shovels_building_bauxite_mine: "镐和铲"
+pm_atmospheric_engine_pump_building_bauxite_mine: "大气式发动机泵"
+pm_condensing_engine_pump_building_bauxite_mine: "冷凝式发动机泵"
+pm_diesel_pump_building_bauxite_mine: "柴油泵"
+pmg_explosives_building_bauxite_mine: "炸药"
+pm_nitroglycerin_building_bauxite_mine: "硝化甘油"
+pm_dynamite_building_bauxite_mine: "炸药"
+pmg_steam_automation_building_bauxite_mine: "蒸汽自动化"
+pmg_train_automation_building_bauxite_mine: "铁路自动化"
+
+# Copper mine
+
+pmg_mining_equipment_building_copper_mine: "采矿设备"
+pm_picks_and_shovels_building_copper_mine: "镐和铲"
+pm_atmospheric_engine_pump_building_copper_mine: "大气式发动机泵"
+pm_condensing_engine_pump_building_copper_mine: "冷凝式发动机泵"
+pm_diesel_pump_building_copper_mine: "柴油泵"
+pmg_explosives_building_copper_mine: "炸药"
+pm_nitroglycerin_building_copper_mine: "硝化甘油"
+pm_dynamite_building_copper_mine: "炸药"
+pmg_steam_automation_building_copper_mine: "蒸汽自动化"
+pmg_train_automation_building_copper_mine: "铁路自动化"
+
+# Common Ores mine
+
+pmg_mining_equipment_building_commonores_mine: "采矿设备"
+pm_picks_and_shovels_building_commonores_mine: "镐和铲"
+pm_atmospheric_engine_pump_building_commonores_mine: "大气式发动机泵"
+pm_condensing_engine_pump_building_commonores_mine: "冷凝式发动机泵"
+pm_diesel_pump_building_commonores_mine: "柴油泵"
+pmg_explosives_building_commonores_mine: "炸药"
+pm_nitroglycerin_building_commonores_mine: "硝化甘油"
+pm_dynamite_building_commonores_mine: "炸药"
+pmg_steam_automation_building_commonores_mine: "蒸汽自动化"
+pmg_train_automation_building_commonores_mine: "铁路自动化"
+
+# Advanced Ores mine
+
+pmg_mining_equipment_building_advancedores_mine: "采矿设备"
+pm_picks_and_shovels_building_advancedores_mine: "镐和铲"
+pm_diesel_pump_building_advancedores_mine: "柴油泵"
+pmg_explosives_building_advancedores_mine: "炸药"
+pm_nitroglycerin_building_advancedores_mine: "硝化甘油"
+pm_dynamite_building_advancedores_mine: "炸药"
+pmg_steam_automation_building_advancedores_mine: "蒸汽自动化"
+pmg_train_automation_building_advancedores_mine: "铁路自动化"
+
+#Equipment Mining
+
+pm_electric_fueled_pump_building_uranium_mine: "电力燃料泵"
+pm_electric_fueled_pump_building_bauxite_mine: "电力燃料泵"
+pm_electric_fueled_pump_building_iron_mine: "电力燃料泵"
+pm_electric_fueled_pump_building_lead_mine: "电力燃料泵"
+pm_electric_fueled_pump_building_sulfur_mine: "电力燃料泵"
+pm_electric_fueled_pump_building_coal_mine: "电力燃料泵"
+pm_electric_fueled_pump_building_copper_mine: "电力燃料泵"
+pm_electric_fueled_pump_building_commonores_mine: "电力燃料泵"
+pm_electric_fueled_pump_building_advancedores_mine: "电力燃料泵"
+
+#Selective Mining
+pmg_selective_mineral_extraction_coal_mine: "选择性采矿"
+pmg_selective_mineral_extraction_iron_mine: "选择性采矿"
+pmg_selective_mineral_extraction_sulfur_mine: "选择性采矿"
+pmg_selective_mineral_extraction_lead_mine: "选择性采矿"
+pmg_selective_mineral_extraction_commonores_mine: "选择性采矿"
+pm_no_selective_mineral_extraction: "无选择性采矿"
+selective_mineral_extraction_coal_mine: "硫提取工艺"
+selective_mineral_extraction_iron_mine: "普通矿石微量回收"
+selective_mineral_extraction_sulfur_mine: "铅副产品提取"
+selective_mineral_extraction_lead_mine: "铜共提取"
+selective_mineral_extraction_commonores_mine: "铁矿床清除"
+
+#Water Plant
+pmg_base_building_water: "水"
+pm_hand_pumped_water: "手动抽水"
+pm_steam_pumped_water: "蒸汽抽水"
+pm_electric_pumped_water: "电动抽水"
+pm_advanced_water_filtration: "高级水过滤"
+pmg_automation_building_water_plant: "自动化"
+pm_no_steam_automation: "无自动化"
+pm_copper_pipes: "铜管"
+pm_rotary_valve_engine_building_water_plant: "旋转阀发动机"
+pm_plastics_pipes_and_pet: "聚酯瓶"
+
+#Aluminium Plant
+pmg_alloys_process: "合金工艺"
+pm_basic_smelting_process: "基本冶炼工艺"
+pm_electric_arc_process_alloying: "电弧工艺合金化"
+pm_advanced_alloying_techniques: "高级合金技术"
+pm_vacuum_arc_remelting: "真空电弧重熔合金"
+pmg_aluminiummaking_process: "铝工艺"
+pm_no_aluminium_production: "无铝"
+pm_wohler_deville_process: "沃勒-德维尔法"
+pm_hall_heroult_process: "霍尔-埃鲁法"
+pm_electro-refining_process: "电解精炼工艺"
+pmg_automation_building_alloys_plant: "自动化"
+pm_watertube_boiler_building_alloys_plant: "水管锅炉"
+pm_rotary_valve_engine_building_alloys_plant: "旋转阀发动机"
+ 
+# Textile
+pm_nylon_accessories: "尼龙附件"
+pm_synthetic_fabric: "合成织物"
+pm_stretchwear: "弹力服装"
+pm_cnc_weaving_machines: "数控织造机"
+pm_fast_fashion: "快时尚"
+ 
+# Glassworks
+pm_curie_uranium_glass: "铀玻璃"
+pm_aluminium_inox_houseware: "不锈钢铝制家居用品"
+pm_moplen_houseware: "莫普伦家居用品"
+pmg_base_building_quartz_glass: "石英玻璃"
+pm_no_quartz_glass: "无石英玻璃"
+pm_quartz_glass: "石英玻璃"
+
+# Furniture
+pmg_base_building_homeappliances: "家用电器"
+pm_no_homeappliances: "无家用电器"
+pm_rudimental_homeappliances: "简易家用电器"
+pm_basic_homeappliances: "基本家用电器"
+ 
+#Tools
+pm_bronze_tools: "青铜工具"
+pm_modern_tools: "现代工具"
+ 
+# Power plant
+pm_nuclear_reactor: "核反应堆"
+
+# Telecommunications
+pmg_base_building_telecommunications: "电信"
+pm_manual_operators_network_building_telecommunications: "人工操作员网络"
+pm_national_radio_network_building_telecommunications: "全国无线电网络"
+pm_mass_broadcasting_network_building_telecommunications: "大众广播网络"
+pm_satellite_communications_network_building_telecommunications: "卫星通信网络"
+pm_internet_global_network_building_telecommunications: "互联网全球网络"
+
+# Entertainment Industry
+pmg_entertainment_type: "娱乐类型"
+pm_theater: "剧院"
+pm_cinema: "电影"
+pmg_entertainment_theater_method: "剧院类型"
+no_theater: "无剧院"
+no_cinema: "无电影院"
+pmg_entertainment_cinema_method: "电影院类型"
+local_plays_pm: "本地戏剧"
+classic_plays_pm: "古典戏剧"
+modern_productions_pm: "现代制作"
+kinetoscope: "活动电影放映机"
+silent_films: "无声电影"
+celluloide_films: "赛璐珞电影"
+blockbuster_films: "卖座电影"
+pmg_ownership_capital_building_entertainment_industry: "所有权资本"
+pm_traditional_patronage_entertainment_industry: "传统赞助"
+pm_bourgeoisie_patronage_entertainment_industry: "资产阶级赞助"
+pm_independent_artists_entertainment_industry: "独立艺术家"
+
+#Instruments Workshop
+pmg_elgar_instruments: "乐器"
+pm_elgar_artisan_instruments: "手工乐器"
+pm_elgar_artisan_brass_instruments: "黄铜手工乐器"
+pm_elgar_industrial_instruments: "工业乐器"
+pm_elgar_electric_instruments: "电力乐器"
+pm_elgar_digital_instruments: "数字乐器"
+
+#Opera House
+pmg_elgar_orchestra: "歌剧乐团规模"
+pm_elgar_classical_orchestra: "古典乐团"
+pm_elgar_early_romantic_orchestra: "浪漫乐团"
+pm_elgar_mid_romantic_orchestra: "瓦格纳乐团"
+pm_elgar_late_romantic_orchestra: "后浪漫乐团"
+pm_elgar_jazz_band: "爵士乐队"
+pm_elgar_rock_band: "摇滚乐队"
+
+pm_elgar_cinema_orchestra: "电影乐团"
+pm_elgar_public_orchestra: "公共乐团"
+pmg_elgar_ballet_school: "芭蕾舞学校"
+
+pm_elgar_no_ballet: "无芭蕾"
+pm_elgar_classic_ballet: "古典芭蕾"
+pm_elgar_impressionistic_ballet: "印象派芭蕾"
+pm_elgar_expressionistic_ballet: "表现主义芭蕾"
+pm_elgar_avantgarde_ballet: "先锋派芭蕾"
+pm_elgar_swing_ballet: "摇摆舞"
+pm_elgar_modern_ballet: "现代舞"
+
+# Publishing Workshop
+manzoni_pmg_building_publishing_industry_automation: "$pmg_automation$"
+manzoni_pmg_building_publishing_industry_automation: "$pmg_automation$"
+manzoni_pm_printing_presses: "印刷机"
+manzoni_pm_cylinder_presses: "圆筒压印机"
+manzoni_pm_rotary_presses: "轮转印刷机"
+manzoni_pm_linotype: "铸排机"
+
+manzoni_pmg_communication: "传输"
+manzoni_pm_physical: "实体运输"
+manzoni_pm_electric_telegraph: "有线电报"
+manzoni_pm_telephone: "电话"
+manzoni_pm_radio: "无线电"
+manzoni_pm_cinema: "电影"
+manzoni_pm_television: "电视"
+
+# Office
+pmg_data_section_building_office: "数据部门"
+pm_manual_market_studies: "人工市场研究"
+pm_basic_data_analysis: "基本数据处理"
+pm_cloud_databased_data_analysis: "云数据库数据处理"
+pmg_service_section_building_office: "服务部门"
+pm_consulting_firm_services: "咨询公司服务"
+pm_multinational_corporate_services: "跨国公司服务"
+pm_global_outsourcing_hub: "全球外包中心"
+pmg_data_transportation_building_office: "数据传输"
+pm_typewriter_documentation_building_office: "打字机文档"
+pm_teleprinter_network_building_office: "电传打字机网络"
+pm_local_network_building_office: "本地网络"
+pm_internet_building_office: "互联网"
+
+#Datacenter
+pmg_base_building_datacenter: "数据中心类型"
+pm_local_data_storage_building_datacenter: "本地数据存储"
+pm_cloud_storage_building_datacenter: "云存储"
+pmg_automation_building_datacenter: "自动化"
+pm_early_computer_server_building_datacenter: "早期计算机服务器"
+pm_mid_computer_server_building_datacenter: "中期计算机服务器"
+pmg_data_transportation_building_datacenter: "数据传输"
+pm_local_network_building_datacenter: "本地网络"
+pm_internet_building_datacenter: "互联网"
+
+# Data Processing Automation
+pmg_data_optimization_primary_sector: "优化"
+pm_manual_data_reporting_primary_sector: "人工数据报告"
+pm_manual_data_optimization_primary_sector: "人工数据优化"
+pm_digital_data_optimization_primary_sector: "数字数据优化"
+pm_digital_data_on_premises_primary_sector: "本地数字数据"
+pm_internet_data_reporting_primary_sector: "互联网数据报告"
+pm_internet_data_optimization_primary_sector: "云数据优化"
+
+pmg_data_optimization_light_industry: "优化"
+pm_manual_data_reporting_light_industry: "人工数据报告"
+pm_manual_data_optimization_light_industry: "人工数据优化"
+pm_digital_data_optimization_light_industry: "数字数据优化"
+pm_digital_data_on_premises_light_industry: "本地数字数据"
+pm_internet_data_reporting_light_industry: "互联网数据报告"
+pm_internet_data_optimization_light_industry: "云数据优化"
+
+pmg_data_optimization_heavy_industry: "优化"
+pm_manual_data_reporting_heavy_industry: "人工数据报告"
+pm_manual_data_optimization_heavy_industry: "人工数据优化"
+pm_digital_data_optimization_heavy_industry: "数字数据优化"
+pm_digital_data_on_premises_heavy_industry: "本地数字数据"
+pm_internet_data_reporting_heavy_industry: "互联网数据报告"
+pm_internet_data_optimization_heavy_industry: "云数据优化"
+
+#Highway
+pmg_base_highway_road: "高速公路"
+pm_basic_highway: "基本高速公路"
+pm_advanced_highway: "高级高速公路"
+
+#Government Administreation
+pm_local_computer_networks: "本地计算机网络"
+pm_rudimental_data_networks: "基本数据库网络"
+
+#Physics Institute
+pmg_curie_physics: "物理研究所"
+pm_curie_physics_classical: "经典物理研究所"
+pm_curie_physics_electromagnetism: "电磁物理研究所"
+pm_curie_physics_modern: "现代物理研究所"
+pm_curie_physics_nuclear: "核物理研究所"
+
+#Trains
+pm_advanced_express_trains: "流线型列车"
+pm_advanced_express_trains_principle_transport_3: "流线型列车"
+pm_bullet_trains: "子弹头列车"
+pm_bullet_trains_principle_transport_3: "子弹头列车"
+pm_high_speed_trains: "高速列车"
+pm_high_speed_trains_principle_transport_3: "高速列车"
+pmg_gaudi_communication: "通信"
+pm_gaudi_no_communication: "无通信"
+pm_gaudi_telegraph_office: "电报局"
+pm_elgar_radio_stations: "无线电台"
+
+#Water
+pmg_base_building_hydroponic_type: "类型"
+pmg_hydroponic_fruits: "水果"
+pmg_hydroponic_dye: "染料"
+pmg_hydroponic_cotton: "棉花"
+pmg_hydroponic_tea: "染料"
+pmg_hydroponic_coffee: "咖啡"
+pm_hydroponic_fruits_specialization: "水果专业化"
+pm_hydroponic_dye_specialization: "染料专业化"
+pm_hydroponic_cotton_specialization: "棉花专业化"
+pm_hydroponic_tea_specialization: "茶叶专业化"
+pm_hydroponic_coffee_specialization: "咖啡专业化"
+pm_hydroponic_no_fruits: "禁用"
+pm_hydroponic_fruits_gericke: "盖里克系统水果"
+pm_hydroponic_fruits_acquafarm: "水产农场系统水果"
+pm_hydroponic_no_dye: "禁用"
+pm_hydroponic_dye_gericke: "盖里克系统染料"
+pm_hydroponic_dye_acquafarm: "水产农场系统染料"
+pm_hydroponic_no_cotton: "禁用"
+pm_hydroponic_cotton_gericke: "盖里克系统棉花"
+pm_hydroponic_cotton_acquafarm: "水产农场系统棉花"
+pm_hydroponic_no_tea: "禁用"
+pm_hydroponic_tea_gericke: "盖里克系统茶叶"
+pm_hydroponic_tea_acquafarm: "水产农场系统茶叶"
+pm_hydroponic_no_coffee: "禁用"
+pm_hydroponic_coffee_gericke: "盖里克系统咖啡"
+pm_hydroponic_coffee_acquafarm: "水产农场系统咖啡"
+pmg_hydroponic_automation: "自动化"
+pm_hydroponic_no_automation: "无自动化"
+pm_hydroponic_basic_electric_control: "基本电气控制"
+pm_hydroponic_advanced_electric_control: "高级电气控制"
+
+#Urban Center
+pmg_urban_center_healtcare: "医疗保健"
+pm_gas_streetlights: "煤气路灯"
+pm_modern_urban_utilities: "现代城市公用设施"
+pm_no_healtcare: "无医疗保健"
+pm_basic_healtcare: "基本医疗保健"
+pm_drugs_healtcare: "药物医疗保健"
+pm_modern_healtcare: "现代医疗保健"
+pm_developed_healtcare: "发达医疗保健"
+pm_advanced_healtcare: "高级医疗保健"
+
+#Pharmaceuticals
+pmg_base_building_pharmaceuticals: "药品"
+pm_handcraft_natural_medicinals: "手工天然药物"
+pm_rudimental_chemical_pharmaceuticals: "基本化学药品"
+pm_antibiotics_pharmaceuticals: "抗生素"
+pm_synthetic_pharmaceuticals: "合成药品"
+
+#Automation
+pm_rail_transport_building_robotics_industry: "铁路运输"
+pm_multiway_transport_building_robotics_industry: "多功能运输"
+pmg_transport_automation_building_general: "运输"
+pm_multiway_transport_mine: "多功能运输"
+pm_multiway_transport_plantation: "多功能运输"
+pmg_train_automation_building_hydroponic: "运输"
+pm_robotic_building_commonalloys_plant: "机器人装配线"
+pm_robotic_building_steel_mills: "机器人装配线"
+pm_robotic_building_motor_industry: "机器人装配线"
+pm_advanced_assembly_lines_building_commonalloys_plant: "高级装配线"
+pm_advanced_assembly_lines_building_steel_mills: "高级装配线"
+pm_advanced_assembly_lines_building_motor_industry: "高级装配线"
+pm_advanced_automatic_bottle_blowers: "机器人吹瓶机"
+pm_advanced_assembly_lines_building_tooling_workshops: "高级装配线"
+pmg_transport_automation_building_robotics_industry: "运输"
+pmg_automation_building_chip_foundry: "自动化"
+pm_photomask_projection: "光掩模投影"
+pm_deep_uv_photolithography: "深紫外光刻"
+pmg_transportation_building_natural_gas_rig: "运输"
+pm_rail_transport_building_natural_gas_rig: "铁路运输"
+pm_liquefied_gas_tankers: "液化气油轮"
+pmg_automation_building_general: "自动化"
+pm_watertube_boiler_building_general: "水管锅炉"
+pm_rotary_valve_engine_building_general: "旋转阀发动机"
+pm_basic_electric_control_building_general: "基本电子"
+pm_advanced_electric_control_building_general: "微电子学"
+pm_assembly_lines_building_electronics_plant: "装配线"
+
+#Harbor
+pm_advanced_port: "高级港口"
+
+#Food
+pm_ultraprocessed_snacks: "超加工零食"
+pm_insulated_packaging: "绝缘包装"
+pm_beverages_cola: "饮料和可乐"
+pmg_delivery_building_food_industry: "运输"
+pm_delivering_disabled: "禁用"
+pm_delivering_bakery: "送货上门"
+pm_gas_fired_ovens: "燃气烤箱"
+
+#Oil
+pm_hydraulic_fracturing: "水力压裂"
+
+#Gas
+pmg_base_building_natural_gas_rig: "天然气钻机"
+pm_gas_steam_derricks: "燃气蒸汽钻塔"
+pm_gas_combustion_derricks: "燃气内燃钻塔"
+pm_gas_hydraulic_fracturing: "水力压裂"
+
+# Fertilizer
+pm_hb_process_steam_reforming: "HB工艺 - 蒸汽重整"
+
+# Steelmills
+pmg_direct_reduced_iron_steelmaking: "直接还原铁"
+pm_disabled_direct_reduced_iron: "禁用"
+pm_direct_reduced_iron_hyl_process: "HYL工艺"
+pm_direct_reduced_iron_midrex_process: "米德雷克斯工艺"
+pm_advanced_electric_arc_process: "高级电弧工艺"
+
+# Military
+pm_mobile_artillery: "火箭炮"
+
+pm_no_tank_production: "无坦克"
+pm_tank_production: "第一代坦克"
+pm_second_gen_tank_production: "第二代坦克"
+pm_third_gen_tank_production: "第三代坦克"
+
+pmg_helicopters: "直升机"
+pm_no_helicopter_production: "无直升机"
+pm_helicopter_production: "直升机"
+pmg_missiles_building_munition_plants: "导弹"
+
+pm_no_missiles_building_munition_plants: "无导弹"
+pm_rocket_building_munition_plants: "火箭"
+pm_guided_missiles_building_munition_plants: "导弹"
+
+pm_supersonic_warplanes_production: "超音速喷气式军用飞机"
+
+# Space Industry
+
+pmg_base_building_space_assets: "空间资产"
+pm_rocket_probes: "探测器"
+pm_rocket_satellites: "卫星"
+pm_rocket_spacecraft: "航天器"
+
+#NEW 1.0
+pmg_automation_building_commonalloys_plant: "自动化"
+pm_synthetic_furniture_molding: "合成家具模塑"
+pm_fast_modular_furniture_systems: "快速模块化家具"
+pm_designers_furniture_collections: "设计师系列"
+pmg_base_building_water_desalination: "海水淡化"
+pm_electric_pumped_desalinated_water: "电动海水泵送"
+pm_advanced_desalinated_water_filtration: "高级海水过滤"
+pm_watertube_boiler_building_commonalloys_plant: "水管锅炉"
+pm_rotary_valve_engine_building_commonalloys_plant: "旋转阀发动机"
+pmg_automation_building_battery_plant: "自动化"
+pm_robotic_building_battery_plant: "机器人装配线"
+pm_electronic_grade_wires: "电子级电线"
+pm_lithium_battery: "锂离子电池"
+
+pmg_base_building_renewable_energy_power_plant: "可再生能源电厂"
+pm_rudimental_photovoltaic_cells: "基本光伏电池"
+pm_wind_turbines: "风力涡轮机"
+pm_solar_panels: "太阳能电池板"
+
+pmg_automation_building_renewable_energy_power_plant: "自动化"
+pm_basic_electric_control_building_renewable_energy_power_plant: "基本电气控制"
+pm_advanced_electric_control_building_renewable_energy_power_plant: "高级电气控制"
+pm_smart_grid_energy_management: "智能电网能源管理"
+pmg_automation_building_aircraft_industry: "自动化"
+
+pmg_mining_equipment_building_rare_earths_mine: "采矿设备"
+pm_picks_and_shovels_building_rare_earths_mine: "镐和铲"
+pm_diesel_pump_building_rare_earths_mine: "柴油泵"
+pm_electric_fueled_pump_building_rare_earths_mine: "电动泵"
+pm_purification_mine: "现代净化方法"
+pm_advanced_purification_mine: "高级净化方法"
+pm_rare_earths_rudimental_purification: "基本净化"
+pm_rare_earths_advanced_purification: "高级净化"
+pmg_steam_automation_building_rare_earths_mine: "蒸汽自动化"
+pmg_train_automation_building_rare_earths_mine: "铁路自动化"
+
+pmg_gasification_building_coal_mine: "气化"
+pmg_gasification_building_oil_refinerie: "气化"
+pm_no_gasification: "无气化"
+pm_gasification_building_coal_mine: "城镇燃气"
+pm_gasification_building_oil_refinerie: "合成气"
+pm_oil_horizontal_perforation: "水平穿孔"
+pm_oil_hydraulic_fracturing: "水力压裂"
+pm_gas_horizontal_perforation: "水平穿孔"
+pm_gas_hydraulic_fracturing: "水力压裂"
+
+pm_ev_motors: "电动汽车发动机"
+pm_automobile_production: "原型车辆"
+pm_mass_automobile_production: "早期车辆"
+pm_modern_vehicles_production: "战后车辆"
+pm_hybrid_vehicles_production: "混合动力汽车"
+pm_smart_vehicles_production: "智能汽车"
+pm_electric_vehicles_production: "电动汽车"
+
+pmg_chemical_plant_automation: "自动化"
+pm_basic_electric_control_building_chemical_plant: "基本电气控制"
+pm_advanced_electric_control_building_chemical_plant: "高级电气控制"
+pmg_explosives_factory_automation: "自动化"
+pm_basic_electric_control_building_explosives_factory: "基本电气控制"
+pm_advanced_electric_control_building_explosives_factory: "高级电气控制"
+
+pm_hd_televisions: "高清电视"
+pm_smart_televisions: "智能电视"
+pm_nano_transistor: "纳米晶体管"
+pm_pem_fuel_cell: "质子交换膜燃料电池"
+pm_multi_core_processor: "多核处理器"
+pm_cell_phones: "手机"
+pm_smartphones: "智能手机"
+pm_laptops: "笔记本电脑"
+pm_advanced_personal_computers: "高级工作站"
+
+pmg_software_building_software_industry: "软件生产"
+pm_coding_by_hand_building_software_industry: "完全手动编码"
+pm_integrated_development_environment_building_software_industry: "集成开发环境"
+pm_version_control_collaboration_building_software_industry: "版本控制"
+pm_cloud_based_devops_building_software_industry: "云端DevOps"
+
+pmg_software_type_building_software_industry: "软件类型"
+pm_traditional_software_building_software_industry: "桌面应用程序"
+pm_web_based_building_software_industry: "网站"
+pm_mobile_based_building_software_industry: "移动应用程序"
+
+pmg_interactive_media_building_digital_media_industry: "交互式媒体制作"
+pm_pixel_based_building_digital_media_industry: "基于像素的游戏开发"
+pm_3d_engine_building_digital_media_industry: "3D引擎中间件"
+pm_cross_platform_building_digital_media_industry: "休闲游戏开发"
+
+pm_autonomous_agricultural_vehicles: "自动农用车辆"
+pm_autonomous_agricultural_vehicles_building_rice_farm: "自动农用车辆"
+pm_synthetic_pesticides: "合成农药"
+pm_synthetic_pesticides_building_rice_farm: "合成农药"
+pm_ogm: "转基因作物"
+pm_ogm_building_rice_farm: "转基因作物"
+pm_hydraulic_transmission_tractors_building_rice_farm: "液压传动拖拉机"
+
+pmg_data_optimization_light_industry_paper: "优化"
+pm_manual_data_reporting_light_industry_paper: "人工数据报告"
+pm_manual_data_optimization_light_industry_paper: "人工数据优化"
+
+pmg_data_optimization_heavy_industry_processors: "优化"
+pm_digital_data_optimization_heavy_industry_processors: "数字数据优化"
+pm_digital_data_on_premises_heavy_industry_processors: "本地数字数据"
+pm_internet_data_reporting_heavy_industry_processors: "互联网数据报告"
+pm_internet_data_optimization_heavy_industry_processors: "云数据优化"
+
+pmg_data_optimization_heavy_industry_telecommunications: "优化"
+pm_internet_data_reporting_heavy_industry_telecommunications: "互联网数据报告"
+pm_internet_data_optimization_heavy_industry_telecommunications: "云数据优化"
+
+pmg_data_optimization_heavy_industry_software: "优化"
+pm_digital_data_optimization_heavy_industry_software: "数字数据优化"
+pm_digital_data_on_premises_heavy_industry_software: "本地数字数据"
+pm_internet_data_reporting_heavy_industry_software: "互联网数据报告"
+pm_internet_data_optimization_heavy_industry_software: "云数据优化"
+
+pm_no_selective_breeding: "育种"
+pm_no_selective_breeding_livestock_ranch: "无选择性育种"
+pm_genetic_analysis_breeding: "基因分析"
+pm_hormonal_feedlots: "激素饲养场"
+pm_conveyor_belt_abattoirs: "传送带屠宰场"
+
+pm_chemical_pulp_recovery: "化学纸浆回收"
+pm_advanced_composite_paper: "高级复合纸"
+
+pm_offset_printing: "胶版印刷"
+pm_digital_press: "数字打印机"
+manzoni_pm_digital_media: "数字媒体"
+
+pm_advanced_mining_systems_building_commonores_mine: "高级采矿系统"
+pm_advanced_mining_systems_building_advancedores_mine: "高级采矿系统"
+pm_advanced_mining_systems_building_bauxite_mine: "高级采矿系统"
+pm_advanced_mining_systems_building_copper_mine: "高级采矿系统"
+pm_advanced_mining_systems_building_iron_mine: "高级采矿系统"
+pm_advanced_mining_systems_building_lead_mine: "高级采矿系统"
+pm_advanced_mining_systems_building_sulfur_mine: "高级采矿系统"
+pm_advanced_mining_systems_building_uranium_mine: "高级采矿系统"
+pm_advanced_mining_systems_building_coal_mine: "高级采矿系统"
+pm_advanced_mining_systems_building_rare_earths_mine: "高级采矿系统"
+
+pm_curie_nitroglycerin_building_uranium_mine: "Nitroglycerin" #Added curie
+pm_curie_dynamite_building_uranium_mine: "炸药"
+
+# NEW 1.1
+
+pm_advanced_assembly_lines_building_automotive_industry: "高级装配线"
+pm_robotic_building_automotive_industry: "机器人装配线"
+pm_assembly_lines_building_aircraft_industry: "装配线"
+pm_advanced_assembly_lines_building_aircraft_industry: "高级装配线"
+pm_robotic_building_aircraft_industry: "机器人装配线"
+pm_big_science_and_humanities_department: "“科学”与“人文”部门"
+pm_computerized_research_center: "计算机化研究中心"
+pm_manual_data_optimization_light_industry_university: "人工数据优化"
+pm_digital_data_optimization_light_industry_university: "数字数据优化"
+pm_digital_data_on_premises_light_industry_university: "本地数字数据"
+pm_internet_data_reporting_light_industry_university: "互联网数据报告"
+pm_internet_data_optimization_light_industry_university: "云数据优化"
+pm_trade_center_trade_quantity_ultra: "全球生产链贸易"
+
+# NEW 1.2
+pmg_automation_building_synthetics_plants: "自动化"
+pm_basic_electric_control_building_synthetics_plants: "基本电气控制"
+pm_advanced_electric_control_building_synthetics_plants: "高级电气控制"
+pm_no_dye_production: "无染料生产"
+pmg_cosmetics: "化妆品"
+pm_traditional_perfumes_cosmetics: "传统化妆品"
+pm_industrial_cosmetics: "工业化妆品"
+pm_synthetic_compounds_cosmetics: "合成化妆品"
+pm_modern_cosmetics: "现代化妆品"
+pmg_television_category: "电视类别"
+pm_transistor_radios: "晶体管收音机"
+pm_digital_sound_devices: "数字音响设备"
+pm_no_televisions: "无电视"
+pm_touch_tone_telephones: "按键电话"
+pm_nuclear_third_generation: "第三代"
+pm_assembly_lines_building_electrics_industry: "装配线"
+pm_advanced_assembly_lines_building_electrics_industry: "高级装配线"
+pm_robotic_building_electrics_industry: "机器人装配线"
+pm_iot_assembly_lines_building_electrics_industry: "物联网装配线"
+pm_cobots: "协作机器人"
+pm_smart_city_infrastructure: "智慧城市服务"
+pmg_automation_building_electrics_industry: "自动化"

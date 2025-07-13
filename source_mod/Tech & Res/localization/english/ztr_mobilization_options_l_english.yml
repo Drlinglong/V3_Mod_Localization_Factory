@@ -1,0 +1,65 @@
+﻿l_english:
+
+tactical_weapons: "Tactical Weapons"
+
+mobilization_option_close_air_support: "Close Air Support"
+mobilization_option_close_air_support_desc: "Specialezed aircraft with air-to ground weaponry directly attack enemy ground forces."
+mobilization_option_supersonic_close_air_support: "Supersonic Close Air Support"
+mobilization_option_supersonic_close_air_support_desc: "Supersonic aircraft with air-to ground weaponry directly attack enemy ground forces."
+
+mobilization_option_indirect_air_support: "Indirect Air Support"
+mobilization_option_indirect_air_support_desc: "Variety of bombers attack targets behind enemy lines to disrupt enemy reserves and supply lines."
+mobilization_option_supersonic_indirect_air_support: "Supersonic Indirect Air Support"
+mobilization_option_supersonic_indirect_air_support_desc: "Supersonic bombers attack targets behind enemy lines to disrupt enemy reserves and supply lines."
+
+mobilization_option_paratroopers: "Paratroopers"
+mobilization_option_paratroopers_desc: "Elite troops use parachutes to attack key targets behind enemy lines."
+
+mobilization_option_rocket_artillery: "Rocket Artillery"
+mobilization_option_rocket_artillery_desc: "Rockets provide means to deliver deadly amount of explosives on enemy troops."
+
+mobilization_option_nuclear_artillery: "Nuclear Artillery"
+mobilization_option_nuclear_artillery_desc: "Terrible weapon of destruction obliterates everything in its way."
+
+mobilization_option_guided_missiles: "Guided Missiles"
+mobilization_option_guided_missiles_desc: "Guided missiles are used to attack enemy targets with precision."
+
+mobilization_option_helicopters_support: "Helicopter Support"
+mobilization_option_helicopters_support_desc: "Helicopters provide support to ground troops and can be used for air assault."
+
+mobilization_option_awacs_support: "AWACS Support"
+mobilization_option_awacs_support_desc: "AWACS aircraft are useful for reconnaissance and can be used to coordinate operations."
+
+mobilization_option_satellites_support: "Satellite Support"
+mobilization_option_satellites_support_desc: "Satellites are space-based reconnaissance systems that can be used to coordinate operations."
+
+mobilization_option_penicillin_medical_support: "Penicillin Medical Support"
+mobilization_option_penicillin_medical_support_desc: "Penicillin is a powerful antibiotic that can be used to treat infections and save lives on the battlefield."
+
+unit_combat_unit_type_modern_heavy_tank_offense_mult: "$combat_unit_type_modern_heavy_tank$ $unit_offense_mult$"
+unit_combat_unit_type_modern_heavy_tank_offense_mult_desc: "$combat_unit_type_modern_heavy_tank$ $unit_offense_mult$"
+unit_combat_unit_type_modern_light_tanks_offense_mult: "$combat_unit_type_modern_light_tanks$ $unit_offense_mult$"
+unit_combat_unit_type_modern_light_tanks_offense_mult_desc: "$combat_unit_type_modern_light_tanks$ $unit_offense_mult$"
+unit_combat_unit_type_main_battle_tanks_offense_mult: "$combat_unit_type_main_battle_tanks$ $unit_offense_mult$"
+unit_combat_unit_type_main_battle_tanks_offense_mult_desc: "$combat_unit_type_main_battle_tanks$ $unit_offense_mult$"
+ 
+goods_input_light_fuel_add: "@light_fuel! Light Fuel input"
+goods_input_light_fuel_add_desc: "The amount of @light_fuel! Light Fuel consumed by buildings"
+goods_input_pharmaceuticals_add: "@pharmaceuticals! Pharmaceuticals input"
+goods_input_light_fuel_add_desc: "The amount of @pharmaceuticals! Pharmaceuticals consumed by buildings"
+goods_input_helicopters_add: "@helicopters! Helicopters input"
+goods_input_helicopters_add_desc: "The amount of @helicopters! Helicopters consumed by buildings"
+goods_input_processors_add: "@processors! Processors input"
+goods_input_processors_add_desc: "The amount of @processors! Processors consumed by buildings"
+goods_input_missiles_add: "@missiles! Missiles input"
+goods_input_missiles_add_desc: "The amount of @missiles! Missiles consumed by buildings"
+goods_input_good_uranium_add: "@good_uranium! Uranium input"
+goods_input_good_uranium_add_desc: "The amount of @good_uranium! Uranium consumed by buildings"
+goods_input_computer_add: "@computer! Computers input"
+goods_input_computer_add_desc: "The amount of @computer! Computers consumed by buildings"
+goods_input_electroniccomponents_add: "@electroniccomponents! Electronic Components input"
+goods_input_electroniccomponents_add_desc: "The amount of @electroniccomponents! Electronic Components consumed by buildings"
+goods_input_space_assets_add: "@space_assets! Space Assets input"
+goods_input_space_assets_add_desc: "The amount of @space_assets! Space Assets consumed by buildings"
+goods_input_water_add: "@water! Water input"
+goods_input_water_add_desc: "The amount of @water! Water consumed by buildings"

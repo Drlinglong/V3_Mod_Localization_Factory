@@ -1,0 +1,745 @@
+﻿l_english:
+
+# MR
+pmg_mendelejew_coal_liquefaction: "Coal Liquefaction"
+pm_mendelejew_coal_liquefaction: "Coal Liquefaction"
+pmg_mendelejew_isoprene: "Synthetic Rubber"
+pm_mendelejew_isoprene: "Isoprene"
+pm_mendelejev_butadiene: "Butadiene"
+
+# Nuclear Reactor 
+pm_nuclear_reactor: "Nuclear Reactor"
+pmg_nuclear_reactor: "Nuclear Reactor"
+pmg_automation_building_nuclear_power_plant: "Automation"
+pm_nuclear_first_generation: "First Generation"
+pm_nuclear_second_generation: "Second Generation"
+
+# Geothermal
+pmg_geothermal_reactor: "Geothermal Reactor"
+pm_geothermal_turbine: "Geothermal Turbine"
+pmg_automation_building_geothermal_power_plant: "Automation"
+pm_automation_closed_loop_system: "Closed Loop System"
+
+#Electric Power Plant
+pmg_automation_building_power_plant: "Automation"
+no_automation_power_plant: "No Refining"
+pm_automation_HFO_fuel: "HFO Fuel"
+pm_gas-fired_plant: "Gas-Fired Power Plant"
+  
+# Spaceport
+pmg_base_building_spaceport: "Spaceport"
+pm_orbital_launch_system: "Orbital launches"
+  
+# Electric industries
+  
+pm_no_telephones: "No Telephones"
+pm_cathode_tube_televisions: "Cathode Tube TV" 
+pm_colored_cathode_tube_televisions: "Colored Cathode Tube TV"
+pm_candlestick_telephones: "Candlestick Telephones"
+pm_bakelite_telephones: "Bakelite Telephones"  
+
+# Electronics Industries
+
+pmg_base_building_copperwires: "Wire"
+pm_basic_copperwires: "Basic Wire"
+pm_cabled_copperwires: "Cabled Wire"
+pm_advanced_copperwires: "Advanced Wire"
+
+pmg_base_building_batteries: "Battery"
+pm_voltaic_pile: "Voltaic Pile"
+pm_lead_acid_battery: "Lead-Acid Battery"
+pm_alkaline_battery: "Alkaline Battery"
+
+pmg_base_building_electroniccomponents: "Electronic Components"
+pm_no_electroniccomponents_production: "No Electronic Components"
+pm_vacuum_tube: "Vacuum Tube"
+pm_transistor: "Transistor"
+pm_integrated_transistor: "Integrated Transistor"
+
+pmg_base_building_fuel_cell: "Fuel Cell"
+pm_no_fuel_cell: "No Fuel Cell"
+pm_alkaline_fuel_cell: "Alkaline Fuel Cell"
+
+pmg_automation_building_electronics_plant: "Automation"
+pm_watertube_boiler_building_electronics_plant: "Watertube Boiler"
+pm_rotary_valve_engine_building_electronics_plant: "Rotary Valve Engine"
+pm_automatic_printed_circuit_board_building_electronics_plant: "Automatic Printed Circuit Board"
+
+#Chip Foundry
+
+pmg_base_building_processors: "Processor"
+pm_no_processors_production: "No Processor"
+pm_integrated_circuit: "Integrated Processor"
+pm_microprocessor: "Micro-Processor"
+
+pmg_base_building_computers: "Computer"
+pm_no_computer_production: "No Computer"
+pm_computer_teleprinters: "Computer Teleprinters"
+pm_personal_computers: "Personal Computers"
+
+#Robotics Industry
+
+pmg_base_building_robotics: "Robotics"
+pm_mechanical_arm: "Mechanical Arm"
+pm_cnc_machines: "CNC Machines"
+
+pmg_automation_building_robotics_industry: "Automation"
+pm_advanced_assembly_lines_building_robotics_industry: "Advanced Assembly Lines"
+pm_robotic_building_robotics_industry: "Robotic Assembly Lines"
+  
+# Machines Industry
+ 
+pmg_aeroplanes: "Warplanes"
+pm_aeroplane_production: "Warplane Production"
+pm_modern_warplanes_production: "Modern Warplanes Production"
+pmg_civil_planes: "Civil Plane"
+pm_no_civil_plane_production: "No Civil Aircraft"
+pm_zeppelins_production: "Zeppelin"
+pm_civil_planes_production: "Civil Plane"
+ 
+ 
+ # Oil refineries e petrol-chemical
+
+pmg_fuel_production: "Fuel/Oil production"
+pm_fractional_distillation: "Fractional Distillation"
+pm_catalytic_cracking: "Catalytic Cracking"
+pm_vacuum_distillation: "Vacuum Distillation"
+pm_thermal_cracking: "Thermal Cracking"
+pm_synthetic_fraction: "Synthetic Fraction"
+
+pmg_plastics_production: "Plastics production"
+pm_bakelite_molding: "Bakelite Molding"
+pm_celluloid_processing: "Celluloid Processing"
+pm_polyethylene_synthesis: "Polyethylene Synthesis"
+pm_ziegler-natta_catalysts: "Ziegler-Natta Catalysts"
+
+# Airport
+pmg_base_building_airport: "Flight Type"
+pmg_cargo_airport: "Cargo Type"
+pm_private_charters: "Private Charters"
+pm_regional_routes: "Regional Routes"
+pm_domestic_routes: "Domestic Routes"
+pm_international_routes: "International Routes"
+pm_air_passenger_only: "Passenger Only"
+pm_air_mail: "Mail"
+pm_air_freight: "Freight"
+
+pmg_fuel_airport: "Fuel"
+pm_airport_oil: "Aviation Fuel"
+pm_airport_kerosene: "Kerosene"
+		
+# Modern cars
+pmg_automobile_production: "Vehicles"
+pm_turbo_diesel_engines: "Turbo-Diesel Engines"
+ 
+# Uranium mine
+pmg_curie_mining_equipment_building_uranium_mine: "Mining equipment"
+pm_curie_picks_and_shovels_building_uranium_mine: "Picks and Shovels"
+pm_curie_atmospheric_engine_pump_building_uranium_mine: "Atmospheric Engine Pump"
+pm_curie_condensing_engine_pump_building_uranium_mine: "Condensing Engine Pump"
+pm_curie_diesel_pump_building_uranium_mine: "Diesel Pump"
+pmg_curie_explosives_building_uranium_mine: "Explosives"
+pmg_curie_steam_automation_building_uranium_mine: "Steam Automation"
+pmg_curie_train_automation_building_uranium_mine: "Train Automation"
+pmg_refined_fuel_building_uranium_mine: "Enriched Uranium"
+pm_refined_fuel_building_uranium_mine: "Enriched Uranium"
+ 
+ # Bauxite mine
+pmg_mining_equipment_building_bauxite_mine: "Mining Equipment"
+pm_picks_and_shovels_building_bauxite_mine: "Picks and Shovels"
+pm_atmospheric_engine_pump_building_bauxite_mine: "Atmospheric Engine Pump"
+pm_condensing_engine_pump_building_bauxite_mine: "Condensing Engine Pump"
+pm_diesel_pump_building_bauxite_mine: "Diesel Pump"
+pmg_explosives_building_bauxite_mine: "Explosives"
+pm_nitroglycerin_building_bauxite_mine: "Nitroglycerin"
+pm_dynamite_building_bauxite_mine: "Dynamite"
+pmg_steam_automation_building_bauxite_mine: "Steam Automation"
+pmg_train_automation_building_bauxite_mine: "Train Automation"
+
+# Copper mine
+
+pmg_mining_equipment_building_copper_mine: "Mining Equipment"
+pm_picks_and_shovels_building_copper_mine: "Picks and Shovels"
+pm_atmospheric_engine_pump_building_copper_mine: "Atmospheric Engine Pump"
+pm_condensing_engine_pump_building_copper_mine: "Condensing Engine Pump"
+pm_diesel_pump_building_copper_mine: "Diesel Pump"
+pmg_explosives_building_copper_mine: "Explosives"
+pm_nitroglycerin_building_copper_mine: "Nitroglycerin"
+pm_dynamite_building_copper_mine: "Dynamite"
+pmg_steam_automation_building_copper_mine: "Steam Automation"
+pmg_train_automation_building_copper_mine: "Train Automation"
+
+# Common Ores mine
+
+pmg_mining_equipment_building_commonores_mine: "Mining Equipment"
+pm_picks_and_shovels_building_commonores_mine: "Picks and Shovels"
+pm_atmospheric_engine_pump_building_commonores_mine: "Atmospheric Engine Pump"
+pm_condensing_engine_pump_building_commonores_mine: "Condensing Engine Pump"
+pm_diesel_pump_building_commonores_mine: "Diesel Pump"
+pmg_explosives_building_commonores_mine: "Explosives"
+pm_nitroglycerin_building_commonores_mine: "Nitroglycerin"
+pm_dynamite_building_commonores_mine: "Dynamite"
+pmg_steam_automation_building_commonores_mine: "Steam Automation"
+pmg_train_automation_building_commonores_mine: "Train Automation"
+
+# Advanced Ores mine
+
+pmg_mining_equipment_building_advancedores_mine: "Mining Equipment"
+pm_picks_and_shovels_building_advancedores_mine: "Picks and Shovels"
+pm_diesel_pump_building_advancedores_mine: "Diesel Pump"
+pmg_explosives_building_advancedores_mine: "Explosives"
+pm_nitroglycerin_building_advancedores_mine: "Nitroglycerin"
+pm_dynamite_building_advancedores_mine: "Dynamite"
+pmg_steam_automation_building_advancedores_mine: "Steam Automation"
+pmg_train_automation_building_advancedores_mine: "Train Automation"
+
+#Equipment Mining
+
+pm_electric_fueled_pump_building_uranium_mine: "Electric Fueled Pump"
+pm_electric_fueled_pump_building_bauxite_mine: "Electric Fueled Pump"
+pm_electric_fueled_pump_building_iron_mine: "Electric Fueled Pump"
+pm_electric_fueled_pump_building_lead_mine: "Electric Fueled Pump"
+pm_electric_fueled_pump_building_sulfur_mine: "Electric Fueled Pump"
+pm_electric_fueled_pump_building_coal_mine: "Electric Fueled Pump"
+pm_electric_fueled_pump_building_copper_mine: "Electric Fueled Pump"
+pm_electric_fueled_pump_building_commonores_mine: "Electric Fueled Pump"
+pm_electric_fueled_pump_building_advancedores_mine: "Electric Fueled Pump"
+
+#Selective Mining
+pmg_selective_mineral_extraction_coal_mine: "Selective Mining"
+pmg_selective_mineral_extraction_iron_mine: "Selective Mining"
+pmg_selective_mineral_extraction_sulfur_mine: "Selective Mining"
+pmg_selective_mineral_extraction_lead_mine: "Selective Mining"
+pmg_selective_mineral_extraction_commonores_mine: "Selective Mining"
+pm_no_selective_mineral_extraction: "No Selective Mining"
+selective_mineral_extraction_coal_mine: "Sulfur Extraction Process"
+selective_mineral_extraction_iron_mine: "Trace Recovery for Common Ores"
+selective_mineral_extraction_sulfur_mine: "Lead Byproduct Extraction"
+selective_mineral_extraction_lead_mine: "Copper Co-Extraction"
+selective_mineral_extraction_commonores_mine: "Iron Deposit Scavenging"
+
+#Water Plant
+pmg_base_building_water: "Water"
+pm_hand_pumped_water: "Hand Pumped Water"
+pm_steam_pumped_water: "Steam Pumped Water"
+pm_electric_pumped_water: "Electric Pumped Water"
+pm_advanced_water_filtration: "Advanced Water Filtration"
+pmg_automation_building_water_plant: "Automation"
+pm_no_steam_automation: "No Automation"
+pm_copper_pipes: "Copper Pipes"
+pm_rotary_valve_engine_building_water_plant: "Rotary Valve Engine"
+pm_plastics_pipes_and_pet: "PET Bottles"
+
+#Aluminium Plant
+pmg_alloys_process: "Alloys Process"
+pm_basic_smelting_process: "Basic Smelting Process"
+pm_electric_arc_process_alloying: "Electric Arc Process Alloying"
+pm_advanced_alloying_techniques: "Advanced Alloys Techniques"
+pm_vacuum_arc_remelting: "Alloys VAR"
+pmg_aluminiummaking_process: "Aluminium Process"
+pm_no_aluminium_production: "No Aluminium"
+pm_wohler_deville_process: "Wöhler-Deville Process"
+pm_hall_heroult_process: "Hall-Héroult Process"
+pm_electro-refining_process: "Electro-Refining Process"
+pmg_automation_building_alloys_plant: "Automation"
+pm_watertube_boiler_building_alloys_plant: "Watertube Boiler"
+pm_rotary_valve_engine_building_alloys_plant: "Rotary Valve Engine"
+ 
+# Textile
+pm_nylon_accessories: "Nylon Accessories"
+pm_synthetic_fabric: "Synthetic Fabrics"
+pm_stretchwear: "Stretchwear"
+pm_cnc_weaving_machines: "CNC Weaving Machines"
+pm_fast_fashion: "Fast Fashion"
+ 
+# Glassworks
+pm_curie_uranium_glass: "Uranium Glass"
+pm_aluminium_inox_houseware: "Houseware Inox-Aluminium"
+pm_moplen_houseware: "Houseware Moplen"
+pmg_base_building_quartz_glass: "Quartz Glass"
+pm_no_quartz_glass: "No Quartz Glass"
+pm_quartz_glass: "Quartz Glass"
+
+# Furniture
+pmg_base_building_homeappliances: "Home Appliance"
+pm_no_homeappliances: "No Home Appliances"
+pm_rudimental_homeappliances: "Rudimental Home Appliances"
+pm_basic_homeappliances: "Basic Home Appliances"
+ 
+#Tools
+pm_bronze_tools: "Bronze Tools"
+pm_modern_tools: "Modern Tools"
+ 
+# Power plant
+pm_nuclear_reactor: "Nuclear reactor"
+
+# Telecommunications
+pmg_base_building_telecommunications: "Telecommunications"
+pm_manual_operators_network_building_telecommunications: "Manual Operators Network"
+pm_national_radio_network_building_telecommunications: "National Radio Network"
+pm_mass_broadcasting_network_building_telecommunications: "Mass Broadcasting Network"
+pm_satellite_communications_network_building_telecommunications: "Satellite Communications Network"
+pm_internet_global_network_building_telecommunications: "Internet Global Network"
+
+# Entertainment Industry
+pmg_entertainment_type: "Entertainment Type"
+pm_theater: "Theater"
+pm_cinema: "Cinema"
+pmg_entertainment_theater_method: "Theater Types"
+no_theater: "No Theater"
+no_cinema: "No Cinema"
+pmg_entertainment_cinema_method: "Cinema Types"
+local_plays_pm: "Local Plays"
+classic_plays_pm: "Classical Plays"
+modern_productions_pm: "Modern Productions"
+kinetoscope: "Kinetoscope"
+silent_films: "Silent Films"
+celluloide_films: "Celluloide Films"
+blockbuster_films: "Blockbuster Films"
+pmg_ownership_capital_building_entertainment_industry: "Ownership Capital"
+pm_traditional_patronage_entertainment_industry: "Traditional Patronage"
+pm_bourgeoisie_patronage_entertainment_industry: "Bourgeoisie Patronage"
+pm_independent_artists_entertainment_industry: "Independent Artists"
+
+#Instruments Workshop
+pmg_elgar_instruments: "Musical Instruments"
+pm_elgar_artisan_instruments: "Artisan Instruments"
+pm_elgar_artisan_brass_instruments: "Brass Artisan Instruments"
+pm_elgar_industrial_instruments: "Industrial Instruments"
+pm_elgar_electric_instruments: "Electric Instruments"
+pm_elgar_digital_instruments: "Digital Instruments"
+
+#Opera House
+pmg_elgar_orchestra: "Opera Orchestra Size"
+pm_elgar_classical_orchestra: "Classical Orchestra"
+pm_elgar_early_romantic_orchestra: "Romantic Orchestra"
+pm_elgar_mid_romantic_orchestra: "Wagnerian Orchestra"
+pm_elgar_late_romantic_orchestra: "Late Romantic Orchestra"
+pm_elgar_jazz_band: "Jazz Band"
+pm_elgar_rock_band: "Rock Band"
+
+pm_elgar_cinema_orchestra: "Cinema Orchestra"
+pm_elgar_public_orchestra: "Public Orchestra"
+pmg_elgar_ballet_school: "Ballet School"
+
+pm_elgar_no_ballet: "No Ballet"
+pm_elgar_classic_ballet: "Classic Ballet"
+pm_elgar_impressionistic_ballet: "Impressionist Ballet"
+pm_elgar_expressionistic_ballet: "Expressionist Ballet"
+pm_elgar_avantgarde_ballet: "Avantgarde Ballet"
+pm_elgar_swing_ballet: "Swing Dance"
+pm_elgar_modern_ballet: "Modern Dance"
+
+# Publishing Workshop
+manzoni_pmg_building_publishing_industry_automation: "$pmg_automation$"
+manzoni_pmg_building_publishing_industry_automation: "$pmg_automation$"
+manzoni_pm_printing_presses: "Printing Presses"
+manzoni_pm_cylinder_presses: "Circular Pressure Printing Machine"
+manzoni_pm_rotary_presses: "Rotary Press"
+manzoni_pm_linotype: "Linotype"
+
+manzoni_pmg_communication: "Transmission"
+manzoni_pm_physical: "Physical Transport"
+manzoni_pm_electric_telegraph: "Electric Telegraph"
+manzoni_pm_telephone: "Telephone"
+manzoni_pm_radio: "Radio"
+manzoni_pm_cinema: "Cinema"
+manzoni_pm_television: "Television"
+
+# Office
+pmg_data_section_building_office: "Data Section"
+pm_manual_market_studies: "Manual Market Studies"
+pm_basic_data_analysis: "Basic Data Processing"
+pm_cloud_databased_data_analysis: "Cloud Databased Data Processing"
+pmg_service_section_building_office: "Service Section"
+pm_consulting_firm_services: "Consulting Firm Services"
+pm_multinational_corporate_services: "Multinational Corporate Services"
+pm_global_outsourcing_hub: "Global Outsourcing Hub"
+pmg_data_transportation_building_office: "Data Transportation"
+pm_typewriter_documentation_building_office: "Typewriter Documentation"
+pm_teleprinter_network_building_office: "Teleprinter Network"
+pm_local_network_building_office: "Local Network"
+pm_internet_building_office: "Internet"
+
+#Datacenter
+pmg_base_building_datacenter: "Type of Datacenter"
+pm_local_data_storage_building_datacenter: "Local Data Storage"
+pm_cloud_storage_building_datacenter: "Cloud Storage"
+pmg_automation_building_datacenter: "Automation"
+pm_early_computer_server_building_datacenter: "Early Computer Server"
+pm_mid_computer_server_building_datacenter: "Mid Computer Server"
+pmg_data_transportation_building_datacenter: "Data Transportation"
+pm_local_network_building_datacenter: "Local Network"
+pm_internet_building_datacenter: "Internet"
+
+# Data Processing Automation
+pmg_data_optimization_primary_sector: "Optimization"
+pm_manual_data_reporting_primary_sector: "Manual Data Reporting"
+pm_manual_data_optimization_primary_sector: "Manual Data Optimization"
+pm_digital_data_optimization_primary_sector: "Digital Data Optimization"
+pm_digital_data_on_premises_primary_sector: "Digital Data On Premises"
+pm_internet_data_reporting_primary_sector: "Internet Data Reporting"
+pm_internet_data_optimization_primary_sector: "Cloud Data Optimization"
+
+pmg_data_optimization_light_industry: "Optimization"
+pm_manual_data_reporting_light_industry: "Manual Data Reporting"
+pm_manual_data_optimization_light_industry: "Manual Data Optimization"
+pm_digital_data_optimization_light_industry: "Digital Data Optimization"
+pm_digital_data_on_premises_light_industry: "Digital Data On Premises"
+pm_internet_data_reporting_light_industry: "Internet Data Reporting"
+pm_internet_data_optimization_light_industry: "Cloud Data Optimization"
+
+pmg_data_optimization_heavy_industry: "Optimization"
+pm_manual_data_reporting_heavy_industry: "Manual Data Reporting"
+pm_manual_data_optimization_heavy_industry: "Manual Data Optimization"
+pm_digital_data_optimization_heavy_industry: "Digital Data Optimization"
+pm_digital_data_on_premises_heavy_industry: "Digital Data On Premises"
+pm_internet_data_reporting_heavy_industry: "Internet Data Reporting"
+pm_internet_data_optimization_heavy_industry: "Cloud Data Optimization"
+
+#Highway
+pmg_base_highway_road: "Highway"
+pm_basic_highway: "Basic Highway"
+pm_advanced_highway: "Advanced Highway"
+
+#Government Administreation
+pm_local_computer_networks: "Local Computer Networks"
+pm_rudimental_data_networks: "Rudimental Databases Networks"
+
+#Physics Institute
+pmg_curie_physics: "Institute for Physics"
+pm_curie_physics_classical: "Institute for Classical Physics"
+pm_curie_physics_electromagnetism: "Institute for Electromagnetic Physics"
+pm_curie_physics_modern: "Institute for Modern Physics"
+pm_curie_physics_nuclear: "Institute for Nuclear Physics"
+
+#Trains
+pm_advanced_express_trains: "Streamlined Trains"
+pm_advanced_express_trains_principle_transport_3: "Streamlined Trains"
+pm_bullet_trains: "Bullet Trains"
+pm_bullet_trains_principle_transport_3: "Bullet Trains"
+pm_high_speed_trains: "High Speed Trains"
+pm_high_speed_trains_principle_transport_3: "High Speed Trains"
+pmg_gaudi_communication: "Communication"
+pm_gaudi_no_communication: "No Communication"
+pm_gaudi_telegraph_office: "Telegraph Office"
+pm_elgar_radio_stations: "Radio Stations"
+
+#Water
+pmg_base_building_hydroponic_type: "Type"
+pmg_hydroponic_fruits: "Fruits"
+pmg_hydroponic_dye: "Dye"
+pmg_hydroponic_cotton: "Cotton"
+pmg_hydroponic_tea: "Dye"
+pmg_hydroponic_coffee: "Coffee"
+pm_hydroponic_fruits_specialization: "Fruits Specialization"
+pm_hydroponic_dye_specialization: "Dye Specialization"
+pm_hydroponic_cotton_specialization: "Cotton Specialization"
+pm_hydroponic_tea_specialization: "Tea Specialization"
+pm_hydroponic_coffee_specialization: "Coffee Specialization"
+pm_hydroponic_no_fruits: "Disabled"
+pm_hydroponic_fruits_gericke: "Gericke Systems Fruits"
+pm_hydroponic_fruits_acquafarm: "AcquaFarm Systems Fruits"
+pm_hydroponic_no_dye: "Disabled"
+pm_hydroponic_dye_gericke: "Gericke Systems Dye"
+pm_hydroponic_dye_acquafarm: "AcquaFarm Systems Dye"
+pm_hydroponic_no_cotton: "Disabled"
+pm_hydroponic_cotton_gericke: "Gericke Systems Cotton"
+pm_hydroponic_cotton_acquafarm: "AcquaFarm Systems Cotton"
+pm_hydroponic_no_tea: "Disabled"
+pm_hydroponic_tea_gericke: "Gericke Systems Tea"
+pm_hydroponic_tea_acquafarm: "AcquaFarm Systems Tea"
+pm_hydroponic_no_coffee: "Disabled"
+pm_hydroponic_coffee_gericke: "Gericke Systems Coffee"
+pm_hydroponic_coffee_acquafarm: "AcquaFarm Systems Coffee"
+pmg_hydroponic_automation: "Automation"
+pm_hydroponic_no_automation: "No Automation"
+pm_hydroponic_basic_electric_control: "Basic Electric Control"
+pm_hydroponic_advanced_electric_control: "Advanced Electric Control"
+
+#Urban Center
+pmg_urban_center_healtcare: "Healthcare"
+pm_gas_streetlights: "Coal Gas Streetlights"
+pm_modern_urban_utilities: "Modern Urban Utilities"
+pm_no_healtcare: "No Healthcare"
+pm_basic_healtcare: "Basic Healthcare"
+pm_drugs_healtcare: "Drugs Healthcare"
+pm_modern_healtcare: "Modern Healthcare"
+pm_developed_healtcare: "Developed Healthcare"
+pm_advanced_healtcare: "Advanced Healthcare"
+
+#Pharmaceuticals
+pmg_base_building_pharmaceuticals: "Pharmaceuticals"
+pm_handcraft_natural_medicinals: "Handcraft Natural Medicinals"
+pm_rudimental_chemical_pharmaceuticals: "Rudimental Chemical Pharmaceuticals"
+pm_antibiotics_pharmaceuticals: "Antibiotics"
+pm_synthetic_pharmaceuticals: "Synthetic Pharmaceuticals"
+
+#Automation
+pm_rail_transport_building_robotics_industry: "Rail Transportation"
+pm_multiway_transport_building_robotics_industry: "Versatile Transportation"
+pmg_transport_automation_building_general: "Transport"
+pm_multiway_transport_mine: "Versatile Transportation"
+pm_multiway_transport_plantation: "Versatile Transportation"
+pmg_train_automation_building_hydroponic: "Transport"
+pm_robotic_building_commonalloys_plant: "Robotic Assembly Lines"
+pm_robotic_building_steel_mills: "Robotic Assembly Lines"
+pm_robotic_building_motor_industry: "Robotic Assembly Lines"
+pm_advanced_assembly_lines_building_commonalloys_plant: "Advanced Assembly Lines"
+pm_advanced_assembly_lines_building_steel_mills: "Advanced Assembly Lines"
+pm_advanced_assembly_lines_building_motor_industry: "Advanced Assembly Lines"
+pm_advanced_automatic_bottle_blowers: "Robotic Bottle Blowers"
+pm_advanced_assembly_lines_building_tooling_workshops: "Advanced Assembly Lines"
+pmg_transport_automation_building_robotics_industry: "Transport"
+pmg_automation_building_chip_foundry: "Automation"
+pm_photomask_projection: "Photomask Projection"
+pm_deep_uv_photolithography: "DUV Photolithography"
+pmg_transportation_building_natural_gas_rig: "Transport"
+pm_rail_transport_building_natural_gas_rig: "Rail Transportation"
+pm_liquefied_gas_tankers: "Liquefied Gas Tankers"
+pmg_automation_building_general: "Automation"
+pm_watertube_boiler_building_general: "Watertube Boiler"
+pm_rotary_valve_engine_building_general: "Rotary Valve Engine"
+pm_basic_electric_control_building_general: "Basic Electronic"
+pm_advanced_electric_control_building_general: "Microelectronics"
+pm_assembly_lines_building_electronics_plant: "Assembly Lines"
+
+#Harbor
+pm_advanced_port: "Advanced Port"
+
+#Food
+pm_ultraprocessed_snacks: "Ultra-processed Snacks"
+pm_insulated_packaging: "Insulated Packaging"
+pm_beverages_cola: "Beverages & Cola"
+pmg_delivery_building_food_industry: "Transport"
+pm_delivering_disabled: "Disabled"
+pm_delivering_bakery: "Home Delivering"
+pm_gas_fired_ovens: "Gas Fired Ovens"
+
+#Oil
+pm_hydraulic_fracturing: "Fracking"
+
+#Gas
+pmg_base_building_natural_gas_rig: "Natural Gas Rig"
+pm_gas_steam_derricks: "Gas Steam Derrick"
+pm_gas_combustion_derricks: "Gas Combustion Derrick"
+pm_gas_hydraulic_fracturing: "Fracking"
+
+# Fertilizer
+pm_hb_process_steam_reforming: "HB Process - Steam Reforming"
+
+# Steelmills
+pmg_direct_reduced_iron_steelmaking: "Direct Reduced Iron"
+pm_disabled_direct_reduced_iron: "Disabled"
+pm_direct_reduced_iron_hyl_process: "HYL Process"
+pm_direct_reduced_iron_midrex_process: "Midrex Process"
+pm_advanced_electric_arc_process: "Advanced Electric Arc Process"
+
+# Military
+pm_mobile_artillery: "Rocket Artillery"
+
+pm_no_tank_production: "No Tanks"
+pm_tank_production: "I Generation Tanks"
+pm_second_gen_tank_production: "II Generation Tanks"
+pm_third_gen_tank_production: "III Generation Tanks"
+
+pmg_helicopters: "Helicopters"
+pm_no_helicopter_production: "No Helicopters"
+pm_helicopter_production: "Helicopters"
+pmg_missiles_building_munition_plants: "Missiles"
+
+pm_no_missiles_building_munition_plants: "No Missiles"
+pm_rocket_building_munition_plants: "Rockets"
+pm_guided_missiles_building_munition_plants: "Guided Missiles"
+
+pm_supersonic_warplanes_production: "Supersonic Jet Warplanes"
+
+# Space Industry
+
+pmg_base_building_space_assets: "Space Assets"
+pm_rocket_probes: "Probes"
+pm_rocket_satellites: "Satellites"
+pm_rocket_spacecraft: "Spacecraft"
+
+#NEW 1.0
+pmg_automation_building_commonalloys_plant: "Automation"
+pm_synthetic_furniture_molding: "Synthetic Furniture Molding"
+pm_fast_modular_furniture_systems: "Fast Modular Furniture"
+pm_designers_furniture_collections: "Designers Collections"
+pmg_base_building_water_desalination: "Desalination"
+pm_electric_pumped_desalinated_water: "Electric Pumped Sea Water"
+pm_advanced_desalinated_water_filtration: "Advanced Sea Water Filtration"
+pm_watertube_boiler_building_commonalloys_plant: "Watertube Boiler"
+pm_rotary_valve_engine_building_commonalloys_plant: "Rotary Valve Engine"
+pmg_automation_building_battery_plant: "Automation"
+pm_robotic_building_battery_plant: "Robotic Assembly Lines"
+pm_electronic_grade_wires: "Electronic Grade Wire"
+pm_lithium_battery: "Lithium-Ion Battery"
+
+pmg_base_building_renewable_energy_power_plant: "Renewable Energy Plant"
+pm_rudimental_photovoltaic_cells: "Rudimental Photovoltaic Cells"
+pm_wind_turbines: "Wind Turbines"
+pm_solar_panels: "Solar Panels"
+
+pmg_automation_building_renewable_energy_power_plant: "Automation"
+pm_basic_electric_control_building_renewable_energy_power_plant: "Basic Electric Control"
+pm_advanced_electric_control_building_renewable_energy_power_plant: "Advanced Electric Control"
+pm_smart_grid_energy_management: "Smart Grid Energy Management"
+pmg_automation_building_aircraft_industry: "Automation"
+
+pmg_mining_equipment_building_rare_earths_mine: "Mining Equipment"
+pm_picks_and_shovels_building_rare_earths_mine: "Picks and Shovels"
+pm_diesel_pump_building_rare_earths_mine: "Diesel Pump"
+pm_electric_fueled_pump_building_rare_earths_mine: "Electric Pump"
+pm_purification_mine: "Modern Purification Methods"
+pm_advanced_purification_mine: "Advanced Purification Methods"
+pm_rare_earths_rudimental_purification: "Rudimental Purification"
+pm_rare_earths_advanced_purification: "Advanced Purification"
+pmg_steam_automation_building_rare_earths_mine: "Steam Automation"
+pmg_train_automation_building_rare_earths_mine: "Train Automation"
+
+pmg_gasification_building_coal_mine: "Gasification"
+pmg_gasification_building_oil_refinerie: "Gasification"
+pm_no_gasification: "No Gasification"
+pm_gasification_building_coal_mine: "Town Gas"
+pm_gasification_building_oil_refinerie: "Syngas"
+pm_oil_horizontal_perforation: "Horizontal Perforation"
+pm_oil_hydraulic_fracturing: "Hydraulic Fracturing"
+pm_gas_horizontal_perforation: "Horizontal Perforation"
+pm_gas_hydraulic_fracturing: "Hydraulic Fracturing"
+
+pm_ev_motors: "EV Engines"
+pm_automobile_production: "Prototype Vehicles"
+pm_mass_automobile_production: "Early Vehicles"
+pm_modern_vehicles_production: "Post-war Vehicles"
+pm_hybrid_vehicles_production: "Hybrid Vehicles"
+pm_smart_vehicles_production: "Smart Vehicles"
+pm_electric_vehicles_production: "Electric Vehicles"
+
+pmg_chemical_plant_automation: "Automation"
+pm_basic_electric_control_building_chemical_plant: "Basic Electric Control"
+pm_advanced_electric_control_building_chemical_plant: "Advanced Electric Control"
+pmg_explosives_factory_automation: "Automation"
+pm_basic_electric_control_building_explosives_factory: "Basic Electric Control"
+pm_advanced_electric_control_building_explosives_factory: "Advanced Electric Control"
+
+pm_hd_televisions: "HD TV"
+pm_smart_televisions: "Smart TV"
+pm_nano_transistor: "Nano Transistor"
+pm_pem_fuel_cell: "PEM Fuel Cell"
+pm_multi_core_processor: "Multi-Core Processor"
+pm_cell_phones: "Cell Phones"
+pm_smartphones: "Smartphones"
+pm_laptops: "Laptops"
+pm_advanced_personal_computers: "Advanced Workstations"
+
+pmg_software_building_software_industry: "Software Production"
+pm_coding_by_hand_building_software_industry: "Full Manual Coding"
+pm_integrated_development_environment_building_software_industry: "IDE"
+pm_version_control_collaboration_building_software_industry: "Version Control"
+pm_cloud_based_devops_building_software_industry: "Cloud Based DevOps"
+
+pmg_software_type_building_software_industry: "Software Type"
+pm_traditional_software_building_software_industry: "Desktop Applications"
+pm_web_based_building_software_industry: "Websites"
+pm_mobile_based_building_software_industry: "Mobile Apps"
+
+pmg_interactive_media_building_digital_media_industry: "Interactive Media Production"
+pm_pixel_based_building_digital_media_industry: "Pixel-Based Game Development"
+pm_3d_engine_building_digital_media_industry: "3D Engine Middleware"
+pm_cross_platform_building_digital_media_industry: "Casual Games Development"
+
+pm_autonomous_agricultural_vehicles: "Autonomous Agricultural Vehicles"
+pm_autonomous_agricultural_vehicles_building_rice_farm: "Autonomous Agricultural Vehicles"
+pm_synthetic_pesticides: "Synthetic Pesticides"
+pm_synthetic_pesticides_building_rice_farm: "Synthetic Pesticides"
+pm_ogm: "GMO Crops"
+pm_ogm_building_rice_farm: "GMO Crops"
+pm_hydraulic_transmission_tractors_building_rice_farm: "Hydraulic Transmission Tractors"
+
+pmg_data_optimization_light_industry_paper: "Optimization"
+pm_manual_data_reporting_light_industry_paper: "Manual Data Reporting"
+pm_manual_data_optimization_light_industry_paper: "Manual Data Optimization"
+
+pmg_data_optimization_heavy_industry_processors: "Optimization"
+pm_digital_data_optimization_heavy_industry_processors: "Digital Data Optimization"
+pm_digital_data_on_premises_heavy_industry_processors: "Digital Data On Premises"
+pm_internet_data_reporting_heavy_industry_processors: "Internet Data Reporting"
+pm_internet_data_optimization_heavy_industry_processors: "Cloud Data Optimization"
+
+pmg_data_optimization_heavy_industry_telecommunications: "Optimization"
+pm_internet_data_reporting_heavy_industry_telecommunications: "Internet Data Reporting"
+pm_internet_data_optimization_heavy_industry_telecommunications: "Cloud Data Optimization"
+
+pmg_data_optimization_heavy_industry_software: "Optimization"
+pm_digital_data_optimization_heavy_industry_software: "Digital Data Optimization"
+pm_digital_data_on_premises_heavy_industry_software: "Digital Data On Premises"
+pm_internet_data_reporting_heavy_industry_software: "Internet Data Reporting"
+pm_internet_data_optimization_heavy_industry_software: "Cloud Data Optimization"
+
+pm_no_selective_breeding: "Breeding"
+pm_no_selective_breeding_livestock_ranch: "No Selective Breeding"
+pm_genetic_analysis_breeding: "Genetic Analysis"
+pm_hormonal_feedlots: "Hormonal Feedlots"
+pm_conveyor_belt_abattoirs: "Conveyor Belt Abattoirs"
+
+pm_chemical_pulp_recovery: "Chemical Pulp Recovery"
+pm_advanced_composite_paper: "Advanced Composite Paper"
+
+pm_offset_printing: "Offset Printing"
+pm_digital_press: "Digital Printers"
+manzoni_pm_digital_media: "Digital Media"
+
+pm_advanced_mining_systems_building_commonores_mine: "Advanced Mining Systems"
+pm_advanced_mining_systems_building_advancedores_mine: "Advanced Mining Systems"
+pm_advanced_mining_systems_building_bauxite_mine: "Advanced Mining Systems"
+pm_advanced_mining_systems_building_copper_mine: "Advanced Mining Systems"
+pm_advanced_mining_systems_building_iron_mine: "Advanced Mining Systems"
+pm_advanced_mining_systems_building_lead_mine: "Advanced Mining Systems"
+pm_advanced_mining_systems_building_sulfur_mine: "Advanced Mining Systems"
+pm_advanced_mining_systems_building_uranium_mine: "Advanced Mining Systems"
+pm_advanced_mining_systems_building_coal_mine: "Advanced Mining Systems"
+pm_advanced_mining_systems_building_rare_earths_mine: "Advanced Mining Systems"
+
+pm_curie_nitroglycerin_building_uranium_mine: "Nitroglycerin" #Added curie
+pm_curie_dynamite_building_uranium_mine: "Dynamite"
+
+# NEW 1.1
+
+pm_advanced_assembly_lines_building_automotive_industry: "Advanced Assembly Lines"
+pm_robotic_building_automotive_industry: "Robotic Assembly Lines"
+pm_assembly_lines_building_aircraft_industry: "Assembly Lines"
+pm_advanced_assembly_lines_building_aircraft_industry: "Advanced Assembly Lines"
+pm_robotic_building_aircraft_industry: "Robotic Assembly Lines"
+pm_big_science_and_humanities_department: "'Science' and 'Humanities' Department"
+pm_computerized_research_center: "Computerized Research Centers"
+pm_manual_data_optimization_light_industry_university: "Manual Data Optimization"
+pm_digital_data_optimization_light_industry_university: "Digital Data Optimization"
+pm_digital_data_on_premises_light_industry_university: "Digital Data On Premises"
+pm_internet_data_reporting_light_industry_university: "Internet Data Reporting"
+pm_internet_data_optimization_light_industry_university: "Cloud Data Optimization"
+pm_trade_center_trade_quantity_ultra: "Global Production Chains Trading"
+
+# NEW 1.2
+pmg_automation_building_synthetics_plants: "Automation"
+pm_basic_electric_control_building_synthetics_plants: "Basic Electric Control"
+pm_advanced_electric_control_building_synthetics_plants: "Advanced Electric Control"
+pm_no_dye_production: "No Dye Production"
+pmg_cosmetics: "Cosmetics"
+pm_traditional_perfumes_cosmetics: "Traditional Cosmetics"
+pm_industrial_cosmetics: "Industrial Cosmetics"
+pm_synthetic_compounds_cosmetics: "Synthetic Cosmetics"
+pm_modern_cosmetics: "Modern Cosmetics"
+pmg_television_category: "Television Category"
+pm_transistor_radios: "Transistor Radios"
+pm_digital_sound_devices: "Digital Sound Devices"
+pm_no_televisions: "No Televisions"
+pm_touch_tone_telephones: "Touch-Tone Telephones"
+pm_nuclear_third_generation: "Third Generation"
+pm_assembly_lines_building_electrics_industry: "Assembly Lines"
+pm_advanced_assembly_lines_building_electrics_industry: "Advanced Assembly Lines"
+pm_robotic_building_electrics_industry: "Robotic Assembly Lines"
+pm_iot_assembly_lines_building_electrics_industry: "IoT Assembly Lines"
+pm_cobots: "Co-bots"
+pm_smart_city_infrastructure: "Smart City Services"
+pmg_automation_building_electrics_industry: "Automation"

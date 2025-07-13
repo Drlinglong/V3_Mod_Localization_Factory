@@ -1,0 +1,18 @@
+﻿l_english:
+
+# Journal Entries
+ je_expand_united_tribes:0 "Invitation to the Southern Tribes"
+ je_expand_united_tribes_reason:0 "In the 1835 Declaration of the Independence of New Zealand, the new United Tribes of New Zealand extended a cordial invitation the rest of Māoridom to lay aside their animosities and join the confederation of the United Tribes. This would discourage wars between tribes, foster a sense of common welfare, and strengthen the standing of Māori on the international stage."
+
+
+# Events
+ unt_controls_northland:0 "[SCOPE.sCountry('expand_unt_unt').GetNameNoFlag] controls [SCOPE.sState('expand_unt_northland').GetStateRegion.GetName]"
+ unt_controls_waikato:0 "[SCOPE.sCountry('expand_unt_unt').GetNameNoFlag] controls [SCOPE.sState('expand_unt_waikato').GetStateRegion.GetName]"
+ unt_controls_east_cape:0 "[SCOPE.sCountry('expand_unt_unt').GetNameNoFlag] controls [SCOPE.sState('expand_unt_east_cape').GetStateRegion.GetName]"
+ unt_controls_manawatu:0 "[SCOPE.sCountry('expand_unt_unt').GetNameNoFlag] controls [SCOPE.sState('expand_unt_manawatu').GetStateRegion.GetName]"
+ unt_controls_south_island:0 "[SCOPE.sCountry('expand_unt_unt').GetNameNoFlag] controls [SCOPE.sState('expand_unt_south_island').GetStateRegion.GetName]"
+ 
+ united_maoridom.1.t:0 "Māoridom Confederated"
+ united_maoridom.1.d:0 "We have brought all the tribes of New Zealand into the fold of the [ROOT.GetCountry.GetName]. For the first time, all iwi across our islands will face the world together."
+ united_maoridom.1.f:0 "We stand together as one people, united by a common thread that weaves through the fabric of our nation. It is the thread of our whakapapa, the thread that connects us to our ancestors and to the land that sustains us. We have been joined together as one, many tribes united. Though great struggles await us, we shall stand tall, like the tōtara that holds firm in the face of the storm, and in confederation the mana of our people will endure."
+ united_maoridom.1.a:0 "The [ROOT.GetCountry.GetName] are truly united at last."

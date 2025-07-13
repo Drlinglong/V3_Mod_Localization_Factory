@@ -1,0 +1,227 @@
+﻿l_simp_chinese:
+# "CITADEL OF CIVILIZATION" -- AUSTRALIAN IMPERIALISM.
+
+
+### JOURNAL ENTRIES
+
+# MASTER - CITADEL OF CIVILISATION 
+je_anz_citadel_master:0: "文明堡垒"
+je_anz_citadel_master_reason:0 "Australia has unified its continent, but if we are to ensure our long term survival, we must look outward of our natural boundaries and adopt a foreign policy and modern military to safeguard our interests.
+
+citadel_fp_indonesia_button:0: "[SCOPE.sStrategicRegion('indonesia').GetName]外交政策"
+citadel_fp_indonesia_button_desc:0: "考量我们在[SCOPE.sStrategicRegion('indonesia').GetName]的外交方针"
+citadel_fp_oceania_button:0: "[SCOPE.sStrategicRegion('oceania').GetName]外交政策"
+citadel_fp_oceania_button_desc:0: "考量我们在[SCOPE.sStrategicRegion('oceania').GetName]的外交方针"
+
+je_citadel_FP_button_possible:0: "90天内未激活。"
+anz_fp_change_penalty:0: "不可信赖的行动者"
+
+completed_indonesia_fp_var_tt:0: "已完成#v [SCOPE.sStrategicRegion('indonesia').GetName]外交政策#! [concept_journal_entry]"
+completed_oceania_fp_var_tt:0: "已完成#v [SCOPE.sStrategicRegion('oceania').GetName]外交政策#! [concept_journal_entry]"
+completed_nz_fp_var_tt:0: "已完成#yellow #b 新西兰#!#!#v 外交政策#! [concept_journal_entry]"
+completed_naval_hegemony_var_tt:0: "已完成#v 海军霸权#! [concept_journal_entry]"
+
+# POWER BLOC
+identity_anz_cooperative:0: "合作论坛"
+identity_anz_cooperative_desc:0: "这一认同重视[Concept('concept_power_bloc_member', '$concept_power_bloc_members_short$')]之间为共同繁荣而进行的合作，重点关注贸易、防御和社会福祉。"
+
+principle_group_anz_diplomatic_league:0: "外交联盟"
+principle_group_anz_diplomatic_league_desc:0: "在松散的邦联中，[Concept('concept_power_bloc_member', '$concept_power_bloc_members_short$')]拓展其外交联系，并寻求[Concept('concept_power_bloc_leader', '$concept_power_bloc_leader_short$')]的指导。"
+principle_anz_diplomatic_league_1_desc:0 "$principle_group_anz_diplomatic_league_desc$"
+principle_anz_diplomatic_league_2_desc:0 "$principle_group_anz_diplomatic_league_desc$"
+principle_anz_diplomatic_league_3_desc:0 "$principle_group_anz_diplomatic_league_desc$"
+
+principle_group_anz_social_prosperity:0: "社会繁荣"
+principle_group_anz_social_prosperity_desc:0: "政府政策的职责是促进[concept_sol]；因此，[concept_power_bloc]的职责是促进并为集体社会繁荣提供指导。"
+principle_anz_social_prosperity_1_desc:0 "$principle_group_anz_social_prosperity_desc$"
+principle_anz_social_prosperity_2_desc:0 "$principle_group_anz_social_prosperity_desc$"
+principle_anz_social_prosperity_3_desc:0 "$principle_group_anz_social_prosperity_desc$"
+
+pm_power_bloc_statue_cooperative_forum: "$identity_anz_cooperative$"
+anz_pacific_forum:0: "太平洋论坛"
+
+
+#cohesion factors
+anz_CF_POWER_BLOC_COHESION_SHARE_POWER_PROJECTION:0: "[Concept('concept_power_bloc_leader','$concept_power_bloc_leader_extra_short$')]在总[concept_power_projection]中的份额（$identity_anz_cooperative$）"
+anz_CF_POWER_BLOC_COHESION_GOODS_SHORTAGES:0: "货物短缺（$identity_anz_cooperative$）"
+anz_CF_POWER_BLOC_COHESION_LEGITIMACY:0: "[Concept('concept_power_bloc_leader','$concept_power_bloc_leader_extra_short$')] [concept_legitimacy]（$identity_anz_cooperative$）"
+anz_CF_POWER_BLOC_COHESION_WORST_LIBERTY_DESIRE:0: "#indent_newline:3 拥有最高[concept_liberty_desire]的[concept_power_bloc_member]（$identity_anz_cooperative$）\n[SCOPE.GetRootScope.GetCountry.GetPowerBloc.GetParticipantWithHighestLibertyDesire.GetName]（[SCOPE.GetRootScope.GetCountry.GetPowerBloc.GetParticipantWithHighestLibertyDesire.GetRank]）拥有[SCOPE.GetRootScope.GetCountry.GetPowerBloc.GetParticipantWithHighestLibertyDesire.GetLibertyDesireLevelLabel]#！"
+anz_CF_POWER_BLOC_COHESION_SHARE_GDP:0: "[Concept('concept_power_bloc_leader','$concept_power_bloc_leader_extra_short$')]在总[concept_gdp]中的份额（$identity_anz_cooperative$）"
+anz_CF_POWER_BLOC_COHESION_STRATEGIC_REGIONS:0: "拥有#b 大洋洲#!或#b 印度尼西亚#! [concept_strategic_region]境内[concept_capital_state]的[Concept('concept_power_bloc_member','$concept_power_bloc_members_non_leader$')]（合作论坛）"
+anz_CF_POWER_BLOC_COHESION_BELOW_EXPECTED_SOL:0: "[Concept('concept_power_bloc_leader','$concept_power_bloc_leader_extra_short$')]低于平均[concept_expected_sol]（$identity_anz_cooperative$）"
+
+
+#bloc diplomatic actions
+anz_impose_slavery:0: "强制奴隶制法律"
+anz_impose_slavery_desc:0: "强制[concept_power_bloc_member]立即改变[GetLawGroup('lawgroup_slavery').GetName]法律以符合我们自身的法律。"
+anz_impose_slavery_action_notification_name: "[INITIATOR_COUNTRY.GetName]强制实行其[GetLawGroup('lawgroup_slavery').GetName]法律"
+anz_impose_slavery_action_notification_desc: "[INITIATOR_COUNTRY.GetName]已强制我们实行其[GetLawGroup('lawgroup_slavery').GetName]法律"
+
+anz_impose_childrens_rights:0: "强制儿童权利法律"
+anz_impose_childrens_rights_desc:0: "强制[concept_power_bloc_member]立即改变[GetLawGroup('lawgroup_childrens_rights').GetName]法律以符合我们自身的法律。"
+anz_impose_childrens_rights_action_notification_name: "[INITIATOR_COUNTRY.GetName]强制实行其[GetLawGroup('lawgroup_childrens_rights').GetName]法律"
+anz_impose_childrens_rights_action_notification_desc: "[INITIATOR_COUNTRY.GetName]已强制我们实行其[GetLawGroup('lawgroup_childrens_rights').GetName]法律"
+
+anz_impose_labor_rights:0: "强制劳工权利法律"
+anz_impose_labor_rights_desc:0: "强制[concept_power_bloc_member]立即改变[GetLawGroup('lawgroup_labor_rights').GetName]法律以符合我们自身的法律。"
+anz_impose_labor_rights_action_notification_name: "[INITIATOR_COUNTRY.GetName]强制实行其[GetLawGroup('lawgroup_labor_rights').GetName]法律"
+anz_impose_labor_rights_action_notification_desc: "[INITIATOR_COUNTRY.GetName]已强制我们实行其[GetLawGroup('lawgroup_labor_rights').GetName]法律"
+
+anz_impose_rights_of_women:0: "强制妇女权利法律"
+anz_impose_rights_of_women_desc:0: "强制[concept_power_bloc_member]立即改变[GetLawGroup('lawgroup_rights_of_women').GetName]法律以符合我们自身的法律。"
+anz_impose_rights_of_women_action_notification_name: "[INITIATOR_COUNTRY.GetName]强制实行其[GetLawGroup('lawgroup_rights_of_women').GetName]法律"
+anz_impose_rights_of_women_action_notification_desc: "[INITIATOR_COUNTRY.GetName]已强制我们实行其[GetLawGroup('lawgroup_rights_of_women').GetName]法律"
+
+anz_impose_land_reform:0: "强制土地改革法律"
+anz_impose_land_reform_desc:0: "强制[concept_power_bloc_member]立即改变[GetLawGroup('lawgroup_land_reform').GetName]法律以符合我们自身的法律。"
+anz_impose_land_reform_action_notification_name: "[INITIATOR_COUNTRY.GetName]强制实行其[GetLawGroup('lawgroup_land_reform').GetName]法律"
+anz_impose_land_reform_action_notification_desc: "[INITIATOR_COUNTRY.GetName]已强制我们实行其[GetLawGroup('lawgroup_land_reform').GetName]法律"
+
+anz_impose_welfare:0: "强制福利法律"
+anz_impose_welfare_desc:0: "强制[concept_power_bloc_member]立即改变[GetLawGroup('lawgroup_welfare').GetName]法律以符合我们自身的法律。"
+anz_impose_welfare_action_notification_name: "[INITIATOR_COUNTRY.GetName]强制实行其[GetLawGroup('lawgroup_welfare').GetName]法律"
+anz_impose_welfare_action_notification_desc: "[INITIATOR_COUNTRY.GetName]已强制我们实行其[GetLawGroup('lawgroup_welfare').GetName]法律"
+
+
+#v Oceania#! or#v  Indonesia#!
+
+#icons
+anz_pb_ast_southerncross:0: "澳大利亚南十字星"
+anz_pb_nz_southerncross:0: "新西兰南十字星"
+anz_pb_variant_southerncross:0: "南十字星变体"
+anz_pb_pacific_trust:0: "太平洋岛屿托管地"
+anz_pb_kangarooboxer:0: "拳击袋鼠"
+anz_pb_kiwi:0: "几维鸟"
+anz_pb_fern:0: "银蕨"
+anz_pb_heimatau:0: "鱼钩雕刻"
+anz_pb_abmeeting:0: "原住民集会地"
+
+# modifiers
+power_bloc_influence_per_member_add:0: "@inf! [concept_influence]每[concept_power_bloc_member]"
+power_bloc_influence_per_member_add_desc:0: "根据权力集团成员数量进行调整的@inf! [concept_influence]量"
+country_influence_per_subject_add:0: "@inf! [concept_influence]每[concept_subject]"
+country_influence_per_subject_add_desc:0: "根据附庸数量进行调整的@inf! [concept_influence]量"
+anz_diplomatic_league_influence:0: "外交联盟原则"
+
+# NAVAL HEGEMONY
+je_anz_citadel_navy:0: "海军霸权"
+je_anz_citadel_navy_reason:0: "作为一个岛国，我们兴衰系于海洋。依附于他者庇护固然不错，但要真正获得自由，我们必须主宰自己的命运；在海上战斗并取胜，确保对大洋洲和印度尼西亚水域的统治。\n\n为了在本地区实现海军霸权，我们必须在[SCOPE.sStrategicRegion('oceania').GetName]和[SCOPE.sStrategicRegion('indonesia').GetName]拥有最高的[concept_power_projection]。\n\n此外，世界上少于#v 5#!个[Concept('concept_country', '$concept_countries$')]的海军[concept_power_projection]能够比我们高#v 30%#!。\n\n并且，其[concept_capital_state]在[SCOPE.sStrategicRegion('indochina').GetName]、[SCOPE.sStrategicRegion('japan').GetName]、[SCOPE.sStrategicRegion('northchina').GetName]、[SCOPE.sStrategicRegion('southchina').GetName]、[SCOPE.sStrategicRegion('manchuria').GetName]或[SCOPE.sStrategicRegion('westsiberia').GetName]的[Concept('concept_country', '$concept_countries$')]，必须只有#v 1#!个或更少的海军[concept_power_projection]比我们高#v 20%#!。\n\n[Country.GetNavyPowerProjectionDesc]"
+je_anz_citadel_navy_goal:0: "#v 以下条件已达成且至少持续了25年：#!"
+
+best_indo_pacific_navy:0: "在[SCOPE.sStrategicRegion('oceania').GetName]或[SCOPE.sStrategicRegion('indonesia').GetName]中，没有[concept_country]（拥有其[concept_capital_state]）的海军[concept_power_projection]高于我们"
+anz_naval_hegemon_complete:0: "新兴海军霸主"
+
+## INDONESIA FOREIGN POLICY
+
+anz_indonesia_hostile_consistent_positive:0: "印度尼西亚沙文主义"
+anz_indonesia_hostile_consistent_negative:0: "印度尼西亚沙文主义"
+anz_indonesia_cooperative_consistent_positive:0: "印度尼西亚合作"
+anz_indonesia_cooperative_consistent_negative:0: "印度尼西亚合作"
+
+
+# BELLIGERENT / HOSTILE
+je_anz_citadel_hostile_indo:0: "印度尼西亚政策目标"
+je_anz_citadel_hostile_indo_reason:0: "[SCOPE.sStrategicRegion('indonesia').GetName]是我们通向世界其他地区的边境。如果任何[concept_country]想与我们互动而无需经历横跨印度洋或太平洋的漫长旅程，他们就必须通过这里。反过来，这个[concept_strategic_region]正是切断我们并主导我们地位所需的一切。[concept_alliance]#o s#!来去匆匆，但这一地缘政治现实却坚定不移；任何在该地区的外国行动者都必然对我们的安全构成威胁。\n\n因此，我们必须直接或通过[concept_subject]控制整个[SCOPE.sStrategicRegion('indonesia').GetName]，这是我们最紧迫的任务。这是我们的“门罗主义”。"
+
+anz_fp_indonesia_hostile_bar_name:0: "敌对立场"
+anz_fp_indonesia_hostile_bar_subjugation_desc:0: "#white 征服"
+anz_fp_indonesia_hostile_bar_annexation_desc:0: "#white 吞并"
+
+anz_fp_indonesia_hostile_consistent_bar_name:0: "一致性"
+anz_fp_indonesia_hostile_consistent_bar_name_desc:0: "#white 沙文主义：#! [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%]（[JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|10]/100）"
+
+anz_fp_hostile_objective_tt1:0: "所有人是#b 或#! [SCOPE.GetRootScope.GetCountry.GetName]的[concept_subject]"
+anz_fp_hostile_objective_tt2:0: "所有人属于我们的[concept_power_bloc]，#b 或者#! 隶属于#b 或者#! [SCOPE.GetRootScope.GetCountry.GetName]\n"
+anz_fp_hostile_objective_tt3:0: "我们领导着一个以[SCOPE.sPowerBlocPrinciple('anz_fp_hostile_principle_scope').GetName][concept_power_bloc_principle]为基础的[concept_power_bloc]"
+
+
+
+# COOPERATIVE
+je_anz_citadel_coop_indo:0: "印度尼西亚政策目标"
+je_anz_citadel_coop_indo_reason:0: "合作"
+
+anz_fp_indonesia_cooperative_bar_name:0: "合作立场"
+anz_fp_indonesia_cooperative_bar_protection_desc:0: "#white 家长主义"
+anz_fp_indonesia_hostile_bar_liberation_desc:0: "#white 解放"
+
+anz_fp_indonesia_cooperative_consistent_bar_name:0: "一致性"
+anz_fp_indonesia_cooperative_consistent_bar_name_desc:0: "#white 合作：#! [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%]（[JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|10]/100）"
+
+anz_fp_cooperative_objective_tt1:0: "所有人是[SCOPE.GetRootScope.GetCountry.GetName]的#white 非傀儡#! [concept_subject]"
+anz_fp_cooperative_objective_tt2:0: "我们领导着一个以[SCOPE.sPowerBlocPrinciple('anz_fp_cooperative_principle_scope').GetName][concept_power_bloc_principle]为基础的[concept_power_bloc]"
+anz_fp_cooperative_objective_tt3:0: "所有人属于我们的[concept_power_bloc]#b 并且#!其[concept_capital_state]在[SCOPE.sStrategicRegion('indonesia').GetName]，#b 或者#!是[SCOPE.GetRootScope.GetCountry.GetName]的#white 非傀儡#! [concept_subject]\n"
+
+## OCEANIA FOREIGN POLICY
+
+anz_oceania_hostile_consistent_positive:0: "大洋洲沙文主义"
+anz_oceania_hostile_consistent_negative:0: "大洋洲沙文主义"
+anz_oceania_cooperative_consistent_positive:0: "大洋洲合作"
+anz_oceania_cooperative_consistent_negative:0: "大洋洲合作"
+
+# BELLIGERENT / HOSTILE
+je_anz_citadel_hostile_oceania:0: "大洋洲外交政策目标"
+je_anz_citadel_hostile_oceania_reason:0: "敌对"
+
+# LIBERATE
+je_anz_citadel_liberate_oceania:0: "大洋洲外交政策目标"
+je_anz_citadel_liberate_oceania_reason:0: "解放"
+
+# COOPERATIVE
+je_anz_citadel_coop_oceania:0: "大洋洲外交政策目标"
+je_anz_citadel_coop_oceania_reason:0: "合作"
+
+
+### EVENTS
+
+#anz_citadel_events.1.t:0 ""
+#anz_citadel_events.1.d:0 ""
+#anz_citadel_events.1.f:0 ""
+#anz_citadel_events.1.a:0 ""
+
+#make indo pacific a game concept?
+anz_citadel_events.1.t:0: "文明堡垒"
+anz_citadel_events.1.d:0: "随着国内统一的实现，我们的[GetInterestGroupVariant('ig_armed_forces',GetPlayer).GetNameWithCountryVariant]顾问建议是时候考虑我们在本地区的地位了。"
+anz_citadel_events.1.f:0: "“正如所有伟大国家在内政安稳后都会做的那样，我们必须超越我们的自然边界，保护我们在该地区免受威胁的利益。\n\n授予阿瑟·菲利普总督建立第一个澳大拉西亚定居点的指示，也包括建立对太平洋所有邻近岛屿的控制。因此，作为我们的责任和孤立的需要，我们应该扩大我们在[SCOPE.sStrategicRegion('oceania').GetName]和[SCOPE.sStrategicRegion('indonesia').GetName]的影响力。\n\n我们将守卫这个国家，并将其作为讲英语民族的堡垒，以及文明将持续存在之地。”"
+anz_citadel_events.1.a:0: "加快你的时机，在你工作完成之前不要停歇。"
+
+#Navy development start  #CURRENTLY DONE FOR PRE-CITADEL 
+anz_citadel_events.2.t:0: "海上威胁"
+anz_citadel_events.2.d:0: "作为一个岛国，[ROOT.GetCountry.GetName]受到海洋的保护，也受到其威胁。正如这一现实使母国统治海洋一样，我们也必须如此。\n\n观察[SCOPE.sCountry('scary_naval_power').GetAdjective]海军的[concept_power_projection]，我们的[GetInterestGroupVariant('ig_armed_forces',GetPlayer).GetName]发出的信息很明确：\n我们必须建立一支强大的海军。"
+anz_citadel_events.2.f:0: "“通过在不参与其中的情况下为[SCOPE.sCountry('overlord_scope').GetAdjective]海军提供财政捐助，我们将为我们的保护付出贡金。没有什么能比这更打击一个国家的士气了；我们面临的问题必须在这个大陆上解决，而这需要发展海军。”"
+anz_citadel_events.2.a:0: "我们需要一支强大的舰队！"
+anz_citadel_events.2.b:0: "好战的胡言乱语。"
+anz_navy_maligned:0: "海军受贬"
+anz_navy_encouraged:0: "海军受鼓舞"
+
+#Challenging British Naval Hegemony (triggered from completing Naval JE)
+anz_citadel_events.20.t:0: "打破现状"
+anz_citadel_events.20.d:0: "[SCOPE.sCountry('anz_gb_overlord').GetAdjective]海军部对我们的海军建设感到暗中愤怒和焦虑。我们可以通过表现忠诚来缓解紧张局势，或者自豪地作为一支不可忽视的力量而存在。"
+anz_citadel_events.20.f:0: "尽管一些旁观者可能将我们军事能力的增强解读为提高了我们的宗主国[SCOPE.sCountry('anz_gb_overlord').GetName]的力量，但精明的人知道力量是相对的，尽管我们的利益可能经常一致，但一个新兴的[ROOT.GetCountry.GetNameNoFormatting]若与[SCOPE.sCountry('anz_gb_overlord').GetAdjectiveNoFormatting]在该地区的霸权发生冲突，则可能构成潜在的扰乱。美洲已经看到前殖民地摆脱了其欧洲宗主国，而英国殖民地事务部不希望这种情况在[SCOPE.sStrategicRegion('oceania').GetName]重演。"
+anz_citadel_events.20.a:0: "[SCOPE.sCountry('anz_gb_overlord').GetAdjective]的利益就是我们的利益。"
+anz_citadel_events.20.b:0: "不，[ROOT.GetCountry.GetName]将统治海洋！"
+anz_gb_admirals_angry:0: "英国海军部被蔑视"
+anz_gb_admirals_appeased:0: "英国海军部遵从"
+
+#Indonesia Foreign Policy menu
+anz_citadel_events.3.t:0: "印度尼西亚外交政策"
+anz_citadel_events.3.d1:0: "当前在[SCOPE.sStrategicRegion('indonesia').GetName]的立场：#v 沙文主义者。#!"
+anz_citadel_events.3.d2:0: "当前在[SCOPE.sStrategicRegion('indonesia').GetName]的立场：#v 合作。#!"
+anz_citadel_events.3.d3:0: "当前在[SCOPE.sStrategicRegion('indonesia').GetName]的立场：#v 无。#!"
+anz_citadel_events.3.f:0: "[SCOPE.sStrategicRegion('indonesia').GetName]是一个对我们而言具有必要利益的[concept_strategic_region]。它是我们唯一的邻近地区，坐落于我们与世界其他地区之间。该地区主要居住着东南亚血统的[GetReligion('sunni').GetName]民众，我们必须决定如何最好地利用该地区来支持我们的利益。\n\n我们的经济可以从扩大的消费人口中受益；或者，该地区拥有丰富的资源和人力资本，我们可以加以利用。又或许，我们应该追求一项解放和自决的道德事业。无论我们选择何种道路，我们都需要仔细考虑在该地区追求自身利益的其他列强。\n\n采取官方外交立场有助于证明我们的行动合理性或吸引盟友。"
+anz_citadel_events.3.a:0: "沙文主义立场"
+anz_citadel_events.3.b:0: "合作立场"
+anz_citadel_events.3.c:0: "清晰立场"
+anz_citadel_events.3.e:0: "算了"
+
+#Oceania Foreign Policy menu
+anz_citadel_events.4.t:0: "大洋洲外交政策"
+anz_citadel_events.4.d:0: "好的"
+anz_citadel_events.4.f:0: "“尽管一些旁观者可能将我们军事能力的增强解读为提高了我们的宗主国[GB]的力量，但力量必须在与他者的关系中理解，而且尽管我们的利益可能经常一致，但如果我们的利益出现不一致，一个新兴的澳大利亚将威胁到英国在该地区的霸权。英国[某个]部对我们的军备建设感到暗中焦虑和愤怒。”"
+anz_citadel_events.4.a:0: "是"
+anz_citadel_events.4.b:0: "否"
+
+
+### OTHER
+
+#Australian DEI
+dyn_c_new_new_holland:0: "新新荷兰"

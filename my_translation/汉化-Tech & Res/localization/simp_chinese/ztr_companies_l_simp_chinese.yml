@@ -1,0 +1,166 @@
+﻿l_simp_chinese:
+
+#Oil/Gas Companies
+company_bg: "英国石油"
+company_total: "道达尔能源"
+company_eni: "意大利国家碳化氢公司 (埃尼)"
+company_gazprom: "俄罗斯天然气工业股份公司 (俄气)"
+company_sinopec: "中国石化"
+company_petrobas: "巴西石油公司"
+company_saudi_aramco: "沙特阿美"
+
+# Hygiene & Cosmetics Companies
+generic_company_basic_cosmetics_dynamic_name_tag_plural: "化妆品"
+generic_company_basic_cosmetics_dynamic_name_tag_singular: "美容"
+company_oreal: "欧莱雅"
+company_shiseido: "资生堂"
+company_revlon: "露华浓"
+company_unilever: "联合利华"
+company_beiersdorf: "拜尔斯道夫"
+
+# Fashion Companies
+company_louis_vuitton: "路易威登"
+company_hermes: "爱马仕"
+company_prada: "普拉达"
+company_gucci: "古驰"
+company_burberry: "博柏利"
+company_levi_strauss: "李维斯"
+company_nike: "耐克"
+company_adidas: "阿迪达斯"
+company_hm: "H&M"
+company_inditex: "印地纺"
+company_shein: "希音"
+company_primark: "普利马克"
+
+# Videogame Companies
+company_nintendo: "任天堂"
+company_atari: "雅达利"
+company_sega: "世嘉"
+company_valve: "维尔福"
+company_electronic_arts: "艺电"
+company_codemasters: "编码大师"
+company_ubisoft: "育碧"
+company_cd_projekt: "CD Projekt"
+company_krafton: "魁匠团"
+company_paradox_interactive: "悖论互动"
+
+# Airline Companies
+curtiss_company_basic_air_travel_dynamic_name_tag_plural: "航空公司"
+curtiss_company_basic_air_travel_dynamic_name_tag_singular: "航空旅行"
+curtiss_company_KLM: "荷兰皇家航空"
+curtiss_company_DLR: "汉莎航空"
+curtiss_company_imperial_airways: "英国航空"
+curtiss_company_air_france: "法国航空"
+curtiss_company_swissair: "瑞士航空"
+company_pan_american_airways: "泛美航空"
+company_turk_hava_yollari_turkish: "土耳其航空"
+company_emirates_airline: "阿联酋航空"
+company_air_china: "中国国际航空"
+company_boeing: "波音"
+company_airbus: "空中客车"
+company_embraer: "巴西航空工业公司"
+company_bombardier: "庞巴迪"
+company_comac: "中国商飞"
+
+# Music & Instruments Companies
+elgar_company_basic_instruments_dynamic_name_tag_singular: "音乐"
+elgar_company_basic_instruments_dynamic_name_tag_plural: "乐器"
+elgar_company_steinway: "施坦威"
+company_basic_records_and_films: "唱片"
+company_basic_records_and_films_dynamic_name_tag_singular: "唱片"
+company_basic_records_and_films_dynamic_name_tag_plural: "唱片"
+company_yamaha: "雅马哈"
+company_columbia_records: "哥伦比亚唱片"
+company_societe_pathe_freres: "百代兄弟公司"
+company_warner_bros_records: "华纳兄弟唱片公司"
+company_universal_records: "迪卡唱片 (环球)"
+company_tokyo_tsushin_kogyo_sony: "东京通信工业 (索尼)"
+
+# Mining & Resources Companies
+company_uranium_advancedores_mining_dynamic_name_tag_plural: "战略物资"
+company_uranium_advancedores_mining_dynamic_name_tag_singular: "战略采矿"
+company_kazatomprom: "哈萨克原子能工业公司"
+company_compagnie_generale_des_matieres_nucleaires: "法国核材料总公司 (欧安诺)"
+company_cameco: "加拿大萨斯喀彻温矿业公司"
+company_union_miniere_du_haut_katanga: "上加丹加矿业联盟"
+company_bhp: "布罗肯希尔私营公司"
+company_rosatom: "俄罗斯国家原子能公司"
+company_Glencore: "嘉能可"
+company_southern_copper_corp: "南方铜业公司"
+company_rio_tinto: "力拓集团"
+company_china_rare_earth_group: "中国稀土集团"
+
+# Big Tech Companies
+generic_company_basic_tech_dynamic_name_tag_plural: "电子产品"
+generic_company_basic_tech_dynamic_name_tag_singular: "科技"
+company_apple: "苹果"
+company_samsung: "三星"
+company_olivetti: "奥利维蒂"
+company_microsoft: "微软"
+company_intel: "英特尔"
+company_asml: "阿斯麦"
+company_tsmc: "台积电"
+company_sap: "思爱普"
+company_xiaomi: "小米"
+
+# Furniture/Home Appliances Companies
+company_ikea: "宜家"
+company_whirlpool: "惠而浦"
+company_haier: "海尔"
+
+###############################################################################
+
+# Hygiene & Cosmetics Goods
+prestige_good_loreal_cosmetics: "欧莱雅化妆品"
+prestige_good_shiseido_cosmetics: "资生堂化妆品"
+prestige_good_revlon_cosmetics: "露华浓化妆品"
+prestige_good_unilever_soap: "多芬香皂"
+prestige_good_beiersdorf_cosmetics: "妮维雅化妆品"
+
+# Fashion Goods
+prestige_good_dior_perfumes: "迪奥香水"
+prestige_good_burberry_coats: "博柏利外套"
+prestige_good_levis_denim: "李维斯牛仔服饰"
+prestige_good_nike_shoes: "耐克服饰"
+prestige_good_adidas_shoes: "阿迪达斯服饰"
+prestige_good_fast_fashion_clothes: "快时尚"
+prestige_good_cosmetics: "品牌化妆品"
+prestige_good_french_fashion: "法国时尚"
+prestige_good_italian_fashion: "意大利时尚"
+
+# Oil & Gas Goods
+prestige_good_saudi_aramco_oil: "欧佩克石油"
+prestige_good_gazprom_natural_gas: "俄罗斯天然气"
+
+# Videogame Goods
+prestige_good_nintendo_consoles: "任天堂电子游戏"
+prestige_good_atari_consoles: "雅达利电子游戏"
+prestige_good_sony_consoles: "Sony Videogames" #Per uniformare con Nintendo e Atari
+
+# Electrics Goods
+prestige_good_apple_iphones: "苹果电话"
+prestige_good_nokia_phones: "诺基亚电话"
+prestige_good_apple_mac: "苹果电脑"
+prestige_good_olivetti_teleprinters: "奥利维蒂电脑"
+prestige_good_microsoft_windows: "微软视窗"
+prestige_good_asml_euv_lithography_machines: "极紫外光刻机"
+prestige_good_intel_processors: "英特尔处理器"
+prestige_good_wafers: "高品质晶圆"
+prestige_good_smartphones: "Brand Telephones" #Per uniformare con Samsung e Xiaomi
+
+# Prestige goods
+prestige_good_generic_records_and_films: "高品质唱片与电影"
+prestige_good_generic_instruments: "高品质乐器"
+prestige_good_generic_prints: "高品质书籍与报纸"
+
+# Flight Goods
+prestige_good_generic_flights: "豪华航班"
+prestige_good_boeing_aircraft: "波音飞机"
+prestige_good_airbus_aircraft: "空中客车飞机"
+
+# Mining Goods
+prestige_good_australian_coal: "澳大利亚煤炭"
+prestige_high_quality_uranium: "浓缩铀"
+
+# Furniture/Home Appliances Goods
+prestige_good_ikea_furniture: "模块化家具"

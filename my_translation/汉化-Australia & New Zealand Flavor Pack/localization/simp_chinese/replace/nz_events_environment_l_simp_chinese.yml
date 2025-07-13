@@ -1,0 +1,44 @@
+﻿l_simp_chinese:
+
+ nz_environment.1.t:0: "“A Britain of the South”"
+ nz_environment.1.d:0: "“为了给[ROOT.GetCountry.GetName]带来一些家的舒适感，许多[SCOPE.sCulture('scope_rabbits_english').GetName]定居者将兔子、猪、鳟鱼和其他动物放生到野外，以便狩猎它们。”"
+ nz_environment.1.d2:0: "“为了给新西兰带来一些家的舒适感，许多[SCOPE.sCulture('scope_rabbits_english').GetName]定居者将兔子、猪、鳟鱼和其他动物放生到野外，以便狩猎它们。”"
+ nz_environment.1.f:0: "#italic “追逐这些可怕的生物，越过山丘，"
+ nz_environment.1.a:0: "“多么田园诗意！”"
+ nz_environment.1.b:0: "“我们必须制止这一切。”"
+ nz_containment_hunting_modifier:0: "“围猎”"
+
+ nz_environment.2.t:0: "“兔灾”"
+ nz_environment.2.d:0: "“大群的兔子啃光了[SCOPE.sState('crop_fail_state').GetName]的大片牧场，它们与牲畜争夺食物，并使土壤极易受到严重侵蚀。”"
+ nz_environment.2.f:0: "“将兔子引入新西兰的人曾受宴款待并被颂扬，但如果现在能抓到他，他们会把他吊死。在英格兰，他们对偷猎者处以罚款，而他本应被放逐到新西兰。新西兰会支付他的路费并给他工资。”"
+ nz_environment.2.a:0: "“对农民来说这将是糟糕的一年。”"
+ nz_environment.2.b:0: "“围栏、毒药，不惜一切代价，我们必须控制住这些兔子。”"
+ nz_modifier_rabbit_plague:0: "“兔灾”"
+ nz_modifier_rabbit_plague_relief:0: "“兔灾缓解”"
+ nz_modifier_rabbit_plague_relief_effect:0: "“兔灾缓解”"
+
+ nz_environment.3.t:0: "“天敌”"
+ nz_environment.3.d:0: "“尽管付出了所有努力，仍没有人能阻止[ROOT.GetCountry.GetName]兔子数量的增加。随着更多兔灾随时可能爆发，许多人将希望寄托在一个备受争议的解决方案上：引进黄鼠狼、白鼬和其他捕食者来控制兔子的数量。”"
+ nz_environment.3.d2:0: "“尽管付出了所有努力，仍没有人能阻止新西兰兔子数量的增加。随着更多兔灾随时可能爆发，许多人将希望寄托在一个备受争议的解决方案上：引进黄鼠狼、白鼬和其他捕食者来控制兔子的数量。”"
+ nz_environment.3.f:0: "#italic “大农场主以与小农不同的方式进行破坏，"
+ nz_environment.3.a:0: "“这是唯一的办法。”"
+ nz_environment.3.a.tt:0: "“可能不会再有兔灾了”"
+ nz_environment.3.b:0: "“这药方会比疾病本身更糟糕！”"
+ nz_environment.3.b.tt:0: "“兔灾将持续”"
+ nz_modifier_importing_weasels:0: "“引进鼬科动物”"
+ nz_natural_enemies_minus_2:0: "“不处理兔灾”"
+ nz_natural_enemies_plus_2:0: "“处理兔灾”"
+ nz_natural_enemies_minus_1:0: "“并非如此”"
+ nz_natural_enemies_plus_1:0: "“并非如此”"
+
+ nz_environment.4.t:0: "“岛屿庇护所”"
+
+ nz_environment.5.t:0: "“收藏品”"
+
+ nz_environment.6.t:0: "“保护法案”"
+
+ nz_environment.7.t:0: "“岛屿庇护所”"
+ 
+ nz_environment.8.t:0: "“最后的[]”"
+
+ nz_environment.9.t:0: "“绝处逢生”"

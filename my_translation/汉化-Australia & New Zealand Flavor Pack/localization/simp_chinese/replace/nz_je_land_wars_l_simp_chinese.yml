@@ -1,0 +1,19 @@
+﻿l_simp_chinese:
+ je_nz_flagstaff_war:0: "北方战争"
+ je_nz_flagstaff_war_reason:0: "新西兰北方的毛利人纳普希部落对我们根据《怀唐伊条约》做出的承诺感到失望，并开始反抗我们的统治。\n\n#BOLD 提示:#! \n该日志条目将触发代表历史战役的事件。你的选择将决定战争的走向。"
+ je_nz_northernwar_win_tt:0: "战争已经结束"
+ je_nz_flagstaff_war_goal: "对纳普希的战争已经胜利，因为进度条已达到#variable 100%#！"
+ 
+ je_nz_hutt_valley_campaign:0: "确立我们的土地购买"
+ je_nz_hutt_valley_campaign_reason:0: "委员会证实，我们的殖民者对赫特谷（惠灵顿殖民地以北的区域）的土地拥有合法权利。然而，他们购买的许多土地仍被原住民毛利人占据，这让我们的殖民者感到不安。\n \n我们的殖民者需要我们的支持才能获得对其土地的控制权。"
+ 
+ je_nz_hutt_valley_campaign_button:0: "确立我们在赫特的地位"
+ je_nz_hutt_valley_campaign_button_ongoing:0: "我们正在赫特确立我们的地位"
+ je_nz_hutt_valley_campaign_button_desc:0: "我们的殖民者已经在赫特谷购买了土地，现在是时候主张他们的权利了。"
+ je_nz_hutt_valley_campaign_button_tt:0: "这个按钮将启动在赫特谷确立我们殖民者土地购买权利的进程。如果你改变主意，第一个事件将允许你推迟该进程。"
+ 
+ je_nz_hutt_valley_campaign_complete_tt:0: "我们在赫特谷的地位已得到确立。\n\n提示：该日志将周期性地触发事件，引导我们主张我们的权利。"
+ 
+ #temporary decision:
+ nz_hutt_valley_campaign:0: "确立殖民者在赫特谷的土地购买权利"
+ nz_hutt_valley_campaign_desc:0: "委员会证实我们的殖民者对赫特谷的土地拥有合法权利。"

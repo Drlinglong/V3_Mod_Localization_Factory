@@ -1,0 +1,6 @@
+﻿l_simp_chinese:
+ law_traditional_mana_whenua: "传统土地权柄"
+ law_traditional_mana_whenua_desc: "尽管[GetPopType('aristocrats').GetName]从土地产出中获益最多，但所有其他非奴役雇员，包括[GetPopType('laborers').GetName]和[GetPopType('peasants').GetName]，也保留一定的[Concept('concept_ownership_share','$concept_ownership_shares$')]。"
+
+ pm_hapu_communal_ownership: "哈普共有"
+ pm_hapu_communal_ownership_subsistence: "哈普共有"

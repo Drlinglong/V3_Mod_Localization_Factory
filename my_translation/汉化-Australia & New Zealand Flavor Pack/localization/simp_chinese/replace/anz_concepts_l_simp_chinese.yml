@@ -1,0 +1,45 @@
+﻿l_simp_chinese:
+
+concept_frontier_wars_relations:0: "原住民关系"
+concept_frontier_wars_relations_desc:0: "衡量您与澳大利亚原住民之间平均关系的指标。"
+
+concept_burke_supplies:0: "补给"
+concept_burke_supplies_desc:0: "补给决定探险队成员在死亡前能坚持多久。探险队每完成一阶段的[concept_burke_progress]，就会消耗1份补给。补给可以通过事件结果获得或失去。"
+
+concept_burke_progress:0: "进度"
+concept_burke_progress_desc:0: "完成伯克探险队需要9个进度阶段。这些阶段代表着前往卡奔塔利亚湾并返回[GetGlobalVariable('anz_vic_state').GetState.GetCityHubName]的旅程中的重要检查点。每完成一个进度阶段，就会消耗1份[concept_burke_supplies]。"
+
+concept_dominion:0: "自治领"
+ concept_dominion_desc:1: "[Concept('concept_recognized_power','$concept_recognized_powers$')]可以将较弱的[concept_country]变为其$concept_dominion$。$concept_dominion$是一种更自治的[concept_subject]类型，能够发起自己的[Concept('concept_diplomatic_play','$concept_diplomatic_plays$')]，并且不被迫加入其[Concept('concept_overlord','$concept_overlord_possessive$')]的[Concept('concept_war','$concept_wars$')]。它们每周必须将其[concept_treasury]收入的#v 20%#!支付给其$concept_overlord$。"
+
+#using variant without British references because cannot prevent non-British 'colonial' countries becoming these subject types without issues
+
+concept_anz_colony:0: "皇家殖民地"
+#concept_anz_colony_desc:0 "A colony whose administration is controlled by the British Crown, represented by a governor. A Crown Colony is a semi-autonomous [concept_subject] type that are able to start their own [Concept('concept_diplomatic_play','$concept_diplomatic_plays$')], but are forced to join their [Concept('concept_overlord','$concept_overlord_possessive$')] [Concept('concept_war','$concept_wars$')]. They must pay #v 25%#! of their [concept_treasury] income to their $concept_overlord$ each week.\n\n#ITALIC Part of the Australia & New Zealand Flavour Pack.#!"
+
+concept_anz_colony_desc:0: "行政管理由王室（由总督代表）控制的殖民地。皇家殖民地是一种半自治的[concept_subject]类型，能够发起自己的[Concept('concept_diplomatic_play','$concept_diplomatic_plays$')]，但被迫加入其[Concept('concept_overlord','$concept_overlord_possessive$')]的[Concept('concept_war','$concept_wars$')]。它们每周必须将其[concept_treasury]收入的#v 25%#!支付给其$concept_overlord$。\n\n#ITALIC 澳大利亚与新西兰风味包的一部分。#!"
+
+concept_anz_commonwealth_realm:0: "联邦王国"
+#concept_anz_commonwealth_realm_desc:0 "The British Commonwealth of Nations [concept_subject] type are autonomous communities within the British Empire, equal in status though united by a common allegiance to the Crown. [concept_anz_commonwealth_realm] are able to start their own [Concept('concept_diplomatic_play','$concept_diplomatic_plays$')] and are not forced to join their [Concept('concept_overlord','$concept_overlord_possessive$')] [Concept('concept_war','$concept_wars$')]. They must pay #v 1%#! of their [concept_treasury] income to their $concept_overlord$ each week.\n\n#ITALIC Part of the Australia & New Zealand Flavour Pack.#!"
+
+concept_anz_commonwealth_realm_desc:0: "英联邦[concept_subject]类型是自治的共同体，地位平等但都效忠于王室。[concept_anz_commonwealth_realm]能够发起自己的[Concept('concept_diplomatic_play','$concept_diplomatic_plays$')]，并且不被迫加入其[Concept('concept_overlord','$concept_overlord_possessive$')]的[Concept('concept_war','$concept_wars$')]。它们不向其$concept_overlord$支付任何[concept_treasury]收入。\n\n#ITALIC 澳大利亚与新西兰风味包的一部分。#!"
+
+subject_type_commonwealth_no_icon:0: "联邦王国"
+#concept_commonwealth_desc:0 "The British Commonwealth of Nations [concept_subject] type are autonomous communities within the British Empire, equal in status though united by a common allegiance to the Crown."
+
+concept_commonwealth_desc:0: "英联邦[concept_subject]类型是自治的共同体，地位平等但都效忠于王室。"
+
+######
+
+concept_anz_men_of_capital:0: "真正的资本家"
+concept_anz_men_of_capital_desc:0: "指的是#b [GetInterestGroupVariant('ig_landowners',GetPlayer).GetNameWithCountryVariant]#!和#b [GetInterestGroupVariant('ig_industrialists',GetPlayer).GetNameWithCountryVariant]#!中的[GetPopType('aristocrats').GetName]和[GetPopType('capitalists').GetName]。#!\n\n#ITALIC 1819年，皇家委员约翰·比格受命考察新南威尔士殖民地，以确定这个不断扩张的殖民地能在多大程度上“达到其最初建立的目的”，而这些目的被理解为纯粹是一个罪犯流放地。比格极力赞扬#b 约翰·麦克阿瑟#!，并提倡他的政策，即将大量@slaves!犯人分配给#v “真正的资本家”#!，让他们在自己的牧羊场劳动。\n\n比格在1822-23年的报告中批评了麦格理总督的释囚政策，并指出政府在[GetGlobalVariable('anz_nsw_state').GetState.GetCityHubName]雇佣囚犯过于放纵、昂贵，并使囚犯容易获得酒精和娱乐。\n\n比格建议，应延长囚犯通常七年的刑期，并主要将其作为廉价劳动力分配给偏远地区的#b 富裕地主#!。他写道，政府雇佣囚犯是不必要的，而且成本过高，而将他们分配给#b 贫穷的定居者#!则“非常有害”。#!"
+
+#nvm useless concepts dont access scopes :(
+concept_central_indo_pacific:0: "中部印太地区"
+concept_central_indo_pacific_desc:0: "包括大洋洲和印度尼西亚的[concept_strategic_region]。"
+
+concept_anz_responsible_govt:0: "责任政府"
+concept_anz_responsible_govt_desc:0: "一种体现威斯敏斯特制度议会问责原则的政府概念。在此制度下，政党若要继续掌控政府行政权，必须维持议会多数议员的支持。当存在由上议院和下议院组成的两院制时，政府对下议院的责任更大，因为下议院通常拥有更多议员且由直接选举产生，从而加强了人民与政府之间的联系。\n\n澳大利亚的殖民地最初由君主任命的独裁总督统治。为了保持对新生殖民地的严密控制，同时又不僵化地对待当地民意，迈向责任政府的第一步于1823年迈出，在新南威尔士设立了立法委员会，其职责是向总督提供建议。随着时间的推移，该委员会及其权力不断演变。"
+
+concept_anz_repugnancy:0: "矛盾性"
+concept_anz_repugnancy_desc:0: "一个法律概念，指同一文件中存在的矛盾。在英国法律中，根据具体案件，法院通常会支持较早的声明。\n\n作为一个殖民地，我们继承并受英国法律的诸多约束。对于何为与英国法律相矛盾的应用和标准，也常常是模糊不清并受政治因素影响。尽管我们是大不列颠一个非[concept_anz_commonwealth_realm]的[concept_subject]，我们仍需与他们合作处理矛盾性问题。"

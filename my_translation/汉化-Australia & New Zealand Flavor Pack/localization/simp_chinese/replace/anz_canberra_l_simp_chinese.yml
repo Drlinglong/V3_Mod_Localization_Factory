@@ -1,0 +1,107 @@
+﻿l_simp_chinese:
+
+#note: have replaced most Melbourne/Brisbane references with [GetGlobalVariable('anz_vic_state').GetState.GetCityHubName] etc. Need to confirm if working fine.
+
+### Journal Entries
+
+## # Australian Capital journal
+je_anz_canberra:0: "“澳大利亚首都”"
+
+je_anz_canberra_reason:0: "“随着澳大利亚统一的前景日益临近，澳大利亚首都问题已成为热门话题。自然，每个殖民地和主要定居点都希望获得成为首都的殊荣。\n\n澳大拉西亚联邦大会已就首都事宜成立了一个委员会。\n\n关于有利气候、现有自然和人工基础设施、防御能力、资源、地理中心和人口中心等方面的各种论点已被提出。\n\n我们应考虑这些因素，以确定何处最能符合我们[concept_capital_state]的象征意义和战略影响力。”"
+
+capital_onlyonce_tt:0: "“您#r 无法#!更改此日志条目的决定。”"
+canberra_je_closed_tt:0: "“#YELLOW  这完成了日志。#!”"
+canberra_complete_var_need_tt:0: "“#WHITE “解散委员会”#!按钮已被激活。”"
+je_anz_canberra_complete_button:0: "“解散委员会”"
+je_anz_canberra_complete_button_desc:0: "“本次澳大拉西亚联邦大会会议结束。”"
+
+ast_capital_location_own_tt:0: "“若要选择我们自己的城市，您需要先建立至少#b  4#! [GetBuildingType('building_government_administration').GetName] [Concept('concept_building_level', '$concept_building_levels$')]，且[concept_occupancy]至少达到#b  50%#!，然后才能解散委员会。\n您将获得特殊的首都发展重心以帮助您。\n\n”"
+
+ast_capital_promise_tt:0: "“我们承诺在联邦成立后#b  5年#!内，将其打造成澳大利亚的[concept_capital_state]，并至少拥有#b  4#! [GetBuildingType('building_government_administration').GetName] [Concept('concept_building_level', '$concept_building_levels$')]。\n\n”"
+
+anz_capital_influenced:0: "“首都选址谈判”"
+anz_capital_assimilation:0: "“首都荣誉”"
+
+je_anz_capital_location_vic_button:0: "“[GetGlobalVariable('anz_vic_state').GetState.GetCityHubName]，#b  [GetGlobalVariable('anz_vic_state').GetState.GetNameNoFormatting]#！”"
+je_anz_capital_location_vic_button_desc:0: "“#ITALIC  “毫无疑问，在[GetGlobalVariable('anz_vic_state').GetState.GetNameNoFormatting]这片殖民地中，我们拥有一个非常适合作为联邦首都的地方，无论是自然条件还是为此所做的一切。我们拥有非常适合此目的的建筑，而且我们的气候在澳大利亚殖民地任何地方都是无与伦比的。”#！”"
+je_anz_capital_location_nsw_button:0: "“[GetGlobalVariable('anz_nsw_state').GetState.GetCityHubName]，#b  [GetGlobalVariable('anz_nsw_state').GetState.GetNameNoFormatting]#！”"
+je_anz_capital_location_nsw_button_desc:0: "“#ITALIC  “既然没有其他城市拥有[GetGlobalVariable('anz_nsw_state').GetState.GetCityHubName]的设施，那么事实上的首都将是[GetGlobalVariable('anz_nsw_state').GetState.GetCityHubName]。我们不能放弃在这片土地上的根基，也不能放弃[GetGlobalVariable('anz_nsw_state').GetState.GetNameNoFormatting]所孕育的定居点的主导地位。[GetGlobalVariable('anz_nsw_state').GetState.GetCityHubName]是这片大陆的诞生地，因此它也必将成为首都！”#！”"
+je_anz_capital_location_qld_button:0: "“[GetGlobalVariable('anz_qld_state').GetState.GetCityHubName]，#b  [GetGlobalVariable('anz_qld_state').GetState.GetNameNoFormatting]#！”"
+je_anz_capital_location_qld_button_desc:0: "“#ITALIC  “[GetGlobalVariable('anz_qld_state').GetState.GetCityHubName]作为首都，战略性地坐落于繁荣的布里斯班河畔，充满吸引力。这座城市是进步和工业潜力的象征，是澳大利亚充满活力的未来的缩影。让我们选择[GetGlobalVariable('anz_qld_state').GetState.GetCityHubName]——我们国家的心脏。”#！”"
+je_anz_capital_location_sas_button:0: "“[GetGlobalVariable('anz_sas_state').GetState.GetCityHubName]，#b  [GetGlobalVariable('anz_sas_state').GetState.GetNameNoFormatting]#！”"
+je_anz_capital_location_sas_button_desc:0: "“#ITALIC  “我需要指出，从地理角度来看，澳大利亚的重心位于一个明确的点……[GetGlobalVariable('anz_sas_state').GetState.GetCityHubName]，它坐落在通往大陆中心最重要的水路上。”#！”"
+je_anz_capital_location_was_button:0: "“[GetGlobalVariable('anz_was_state').GetState.GetCityHubName]，#b  [GetGlobalVariable('anz_was_state').GetState.GetNameNoFormatting]#！”"
+je_anz_capital_location_was_button_desc:0: "“#ITALIC  “在所有澳大利亚人能称之为自己的地方中，为什么不能是[GetGlobalVariable('anz_was_state').GetState.GetCityHubName]呢？自古以来，旧世界就流传着一句玩笑话‘当黑天鹅出现时！’，看吧，您的黑天鹅就在这里，它们坐在黄金的支柱之上。这是一片财富与荣耀的土地，向北走，巨人的足迹从布鲁姆的沙滩延伸开来，您就会明白上帝注定它将飞向星辰。#!！”"
+je_anz_capital_location_tas_button:0: "“[GetGlobalVariable('anz_tas_state').GetState.GetCityHubName]，#b  [GetGlobalVariable('anz_tas_state').GetState.GetNameNoFormatting]#！”"
+je_anz_capital_location_tas_button_desc:0: "“#ITALIC  “大自然已经将[GetGlobalVariable('anz_tas_state').GetState.GetCityHubName]定为首都。一切都指向它或者[GetGlobalVariable('anz_tas_state').GetState.GetNameNoFormatting]的其他某个地方作为首都……那些渴望在联邦议会中获得席位的尊敬的议员们，将无需牺牲健康或个人舒适。”#！”"
+je_anz_capital_location_act_button:0: "“堪培拉”"
+je_anz_capital_location_act_button_desc:0: "“#ITALIC  “堪培拉深藏内陆，提供了一个战略核心，连接着[GetGlobalVariable('anz_nsw_state').GetState.GetCityHubName]的城市活力和更远处的地区魅力。堪培拉不仅仅是与[GetGlobalVariable('anz_vic_state').GetState.GetCityHubName]的妥协；它是一个深思熟虑的选择，确保我们国家拥有一个有韧性且团结的未来。”#！”"
+je_anz_capital_location_nzl_button:0: "“奥克兰，#b  新西兰#！”"
+je_anz_capital_location_nzl_button_desc:0: "“#ITALIC  “帆之城，太平洋海风低语着进步，风景描绘出充满活力的未来。奥克兰不仅仅是一个选择；它是一个重新定义我们叙事、拥抱一个既迷人又前瞻性首都的邀请。让我们以奥克兰为舵，扬帆驶向明天！”#！”"
+
+je_anz_capital_build_focus_button:0: "“建设重心”"
+je_anz_capital_build_focus_button_desc:0: "““建设它，人们就会到来”；首都的发展首先依赖于实际拥有可供治理的建筑。”"
+je_anz_capital_worker_focus_button:0: "“人口重心”"
+je_anz_capital_worker_focus_button_desc:0: "“空荡荡的建筑里没有人来做治理工作，有什么用呢？”"
+je_anz_capital_qualification_focus_button:0: "“资质重心”"
+je_anz_capital_qualification_focus_button_desc:0: "“治理是一项微妙的事业，我们必须培养最优秀、最聪明的人才来领导我们的新国家。”"
+je_anz_own_capital_complete_button:0: "“#v 解散委员会#！”"
+je_anz_own_capital_complete_button_desc:0: "“正如罗马不是一日建成的，万事万物都必须从某个地方开始，而澳大利亚将从这里开始。”"
+je_ast_capital_focus_chosen_tt:0: "“首都发展重心尚未激活。”"
+canberra_gov_workers_tt:0: "“#b #GREEN 堪培拉将迎来大量工人涌入，以协助新政府大楼的人员配置。#!#!\n#WHITE  后续使用此重心时将不会再次出现工人涌入，且[concept_authority]成本将减少至75#！”"
+
+anz_construction_focus_modifier:0: "“首都：建设重心”"
+anz_population_focus_modifier:0: "“首都：人口重心”"
+anz_qualification_focus_modifier:0: "“首都：资质重心”"
+anz_focus_cost_modifier:0: "“首都发展重心”"
+
+anz_capital_decisions_required:0: "“#b 需做决定#！”"
+anz_capital_actions_available:0: "“可用行动”"
+anz_capital_actions_unavailable:0: "“#GREY 无可用行动#！”"
+anz_capital_action_required:0: "“#b 需采取行动”"
+
+## A PROMISED CAPITAL
+
+je_anz_promised_capital:0: "“应许之地”"
+je_anz_promised_capital_reason:0: "“我们必须履行承诺，建立商定的首都，以免人民对我们新的联邦失去信心。”"
+anz_canberra_rename_tt: "“[SCOPE.sState('anz_fct_scope').GetName]被重命名为#white 联邦首都领地#！”"
+
+# Events
+
+# arguments 
+# https://parlinfo.aph.gov.au/parlInfo/search/display/display.w3p;query=Id%3A%22constitution%2Fconventions%2F1898-1104%22;src1=sm1 
+
+
+anz_ast_capital_events.1.t:0: "“城市竞争”"
+anz_ast_capital_events.1.d:0: "“[GetGlobalVariable('anz_vic_state').GetState.GetCityHubName]的增长已开始与[GetGlobalVariable('anz_nsw_state').GetState.GetCityHubName]竞争。尽管[GetGlobalVariable('anz_nsw_state').GetState.GetCityHubName]是澳大利亚殖民地的诞生地，但[GetGlobalVariable('anz_vic_state').GetState.GetCityHubName]正在迅速发展，并有望超越[GetGlobalVariable('anz_nsw_state').GetState.GetCityHubName]。\n\n这种竞争在决定联邦首都时可能会带来并发症……”"
+anz_ast_capital_events.1.f:0: "“[GetGlobalVariable('anz_nsw_state').GetState.GetCityHubName]的报纸头条，题为“我们的科隆殖民地”：\n#ITALIC  “一个新来的伙计沿着亚拉河上来，自然会捂着鼻子问：‘这就是墨尔本（Smell-bourne，双关语，意为“臭味之地”）吗？我早就该猜到了。’”#！”"
+anz_ast_capital_events.1.a:0: "“一点竞争也许是好事。”"
+anz_ast_capital_events.1.b:0: "“别这样，我们都是澳大利亚人！”"
+anz_city_rivalry_construction:0: "“鼓励竞争”"
+anz_city_rivalry_assimilation:0: "“不鼓励竞争”"
+rivalry_vic_tt:0: "“#red  由于[GetGlobalVariable('anz_nsw_state').GetState.GetCityHubName]和[GetGlobalVariable('anz_vic_state').GetState.GetCityHubName]之间存在强烈竞争，选择[GetGlobalVariable('anz_nsw_state').GetState.GetCityHubName]作为首都将导致#b #YELLOW  [GetGlobalVariable('anz_vic_state').GetState.GetNameNoFormatting]#!#!州#b  20%#!的人口变得更加[concept_radical]。#！”"
+rivalry_nsw_tt:0: "“#red  由于[GetGlobalVariable('anz_nsw_state').GetState.GetCityHubName]和[GetGlobalVariable('anz_vic_state').GetState.GetCityHubName]之间存在强烈竞争，选择[GetGlobalVariable('anz_vic_state').GetState.GetCityHubName]作为首都将导致#b #YELLOW  [GetGlobalVariable('anz_nsw_state').GetState.GetName]#!#!州#b  20%#!的人口变得更加[concept_radical]。#！”"
+
+anz_ast_capital_events.2.t:0: "“圣地”"
+anz_ast_capital_events.2.d:0: "“当地原住民社区对首都发展计划可能对其圣地造成的影响表示担忧，敦促政府重新考虑。”"
+anz_ast_capital_events.2.f:0: "“不满的低语在土地上回荡，传到您的行政部门耳中。原住民社区作为古遗址的守护者，表达了他们对首都建设可能影响圣地的担忧。做出决定刻不容缓：是承认并解决他们的担忧，可能减缓建设速度，还是继续进行，冒着关系紧张和潜在抗议的风险。”"
+anz_ast_capital_events.2.a:0: "“继续按计划进行。”"
+anz_ast_capital_events.2.b:0: "“拨款用于文化保护。”"
+anz_cultural_preservation_modifier:0: "“文化保护基金”"
+
+anz_ast_capital_events.3.t:0: "“争夺首都影响力”"
+anz_ast_capital_events.3.d:0: "“[GetGlobalVariable('anz_nsw_state').GetState.GetCityHubName]和[GetGlobalVariable('anz_vic_state').GetState.GetCityHubName]之间的竞争日益扩大，两座城市的商业巨头和工业家们竞相争夺对新首都政策的影响力。”"
+anz_ast_capital_events.3.f:0: "“随着首都的形成，来自[GetGlobalVariable('anz_nsw_state').GetState.GetCityHubName]和[GetGlobalVariable('anz_vic_state').GetState.GetCityHubName]的经济巨头们竞相争夺主导地位。利益冲突在建设工地回响。一个决定正在等待：是让经济政策与[GetGlobalVariable('anz_nsw_state').GetState.GetCityHubName]的愿景一致，还是与[GetGlobalVariable('anz_vic_state').GetState.GetCityHubName]的愿景一致，抑或是尝试一种微妙的平衡，这可能同时激怒双方。”"
+anz_ast_capital_events.3.a:0: "“支持[GetGlobalVariable('anz_vic_state').GetState.GetCityHubName]的影响力。”"
+anz_ast_capital_events.3.b:0: "“支持[GetGlobalVariable('anz_nsw_state').GetState.GetCityHubName]的影响力。”"
+anz_ast_capital_events.3.c:0: "“我们应该努力寻求平衡。”"
+anz_ast_capital_events.3.e:0: "“这种小气行为不能容忍。”"
+vicnswrivalryended_tt:0: "“#b#U 竞争结束。#！”"
+anz_rivalry_influence_modifier:0: "“支持影响力”"
+anz_rivalry_influence_modifier2:0: "“不鼓励影响力”"
+anz_rivalry_influence_modifier3:0: "“国家高于城市”"
+
+anz_ast_capital_events.4.t:0: "“一个澳大利亚首都”"
+anz_ast_capital_events.4.d:0: "“统一的澳大利亚近在咫尺，但关于一个合适的[concept_capital_state]的问题引发了成员之间激烈的辩论，每个人都希望自己的定居点成为权力中心。\n\n澳大拉西亚联邦大会已成立一个委员会来监督此事。\n#r 联邦成立在此问题解决前无法实现。#！”"
+anz_ast_capital_events.4.f:0: "““考虑这一伟大议题的机会已经出现，我相信时机已经到来……这件事将会完成。事实上，这件大事必须完成，拖延只会使阻碍其实现的困难变得更大。”——亨利·帕克斯。”"
+anz_ast_capital_events.4.a:0: "“好的。”"

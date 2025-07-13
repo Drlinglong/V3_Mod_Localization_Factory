@@ -1,0 +1,14 @@
+﻿l_simp_chinese:
+
+
+# Nationhood Ambitions modifier
+rule_anz_nationhood_desire:0: "#yellow 澳新联邦#! | 增加殖民地类型附庸的自由愿望"
+
+setting_anz_rule_nationhood_desire_vanilla:0: "原版"
+setting_anz_rule_nationhood_desire_vanilla_desc:0: "无修正器。"
+
+setting_anz_rule_nationhood_desire_start:0: "开始时"
+setting_anz_rule_nationhood_desire_start_desc:0: "游戏开始时，提供+0.08每周自由愿望修正，“民族国家抱负”。"
+
+setting_anz_rule_nationhood_desire_research:0: "民族主义后"
+setting_anz_rule_nationhood_desire_research_desc:0: "研究民族主义后，提供+0.08每周自由愿望修正，“民族国家抱负”。"

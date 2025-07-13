@@ -1,0 +1,120 @@
+﻿l_english:
+
+#GOVERNMENTS
+
+ RULER_TITLE_PRIME_MINISTER:0 "Prime Minister"
+ RULER_TITLE_PREMIER:0 "Premier"
+ RULER_TITLE_DICTATOR:0 "Dictator"
+
+ # crown colony
+ afp_gov_crown_colony:0 "Crown Colony"
+ afp_gov_crown_colony_desc:0 "This is a colony [concept_government_type] of the British Crown, governed by an appointed representative who is advised by an unelected Legislative Council.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+
+ anz_gov_penal_colony:0 "Penal Colony"
+ anz_gov_penal_colony_desc:0 "This is a colony [concept_government_type] of the British Crown, who transports convicts to undertake penal labour, governed by an appointed representative who is advised by an unelected Legislative Council.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+
+ anz_gov_crown_colony_president:0 "Crown Colony"
+ anz_gov_crown_colony_president_desc:0 "This is a colony [concept_government_type] of the British Crown, with a [concept_anz_responsible_govt] led by an [Concept('concept_election','$concept_elected$')] [Concept('concept_ruler','$RULER_TITLE_PRESIDENT$')].\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+
+ anz_gov_crown_colony_parliament:0 "Crown Colony"
+ anz_gov_crown_colony_parliament_desc:0 "This is a colony [concept_government_type] of the British Crown, with a [concept_anz_responsible_govt] led by the leader of the Interest Group in government with the most clout.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+
+ anz_gov_crown_colony_theocracy:0 "Crown Colony"
+ anz_gov_crown_colony_theocracy_desc:0 "This is a colony [concept_government_type] of the British Crown, ruled by the state Protestant Church. Its highest authority is called the [Concept('concept_ruler','$RULER_PRIMATE$')], who wields both secular and spiritual authority.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+
+ anz_gov_crown_colony_council:0 "Crown Colony"
+ anz_gov_crown_colony_council_desc:0 "This is a colony [concept_government_type] of the British Crown, with a [concept_anz_responsible_govt] led by a council which is [Concept('concept_election','$concept_elected$')] directly by the workers.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+
+# crown dominion
+ gov_crown_dominion_monarchy:0 "Commonwealth Crown Dominion"
+ gov_crown_dominion_monarchy_desc:0 "This is a dominion [concept_government_type] of the British Crown, with a degree of autonomy and governed by an appointed representative of the British Crown, the Governor-General.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+
+ gov_crown_dominion_president:0 "Commonwealth Presidential Dominion"
+ gov_crown_dominion_president_desc:0 "This is a dominion [concept_government_type] of the British Crown, with a [concept_anz_responsible_govt] led by an [Concept('concept_election','$concept_elected$')] [Concept('concept_ruler','$RULER_TITLE_PRESIDENT$')].\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+ 
+ gov_crown_dominion_parliament:0 "Commonwealth Parliamentary Dominion"
+ gov_crown_dominion_parliament_desc:0 "This is a dominion [concept_government_type] of the British Crown, with a [concept_anz_responsible_govt] led by the leader of the Interest Group in government with the most clout.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+
+ gov_crown_dominion_theocracy:0 "Commonwealth Theocratic Dominion"
+ gov_crown_dominion_theocracy_desc:0 "This is a dominion [concept_government_type] of the British Crown, ruled by the state Protestant Church. Its highest authority is called the [Concept('concept_ruler','$RULER_PRIMATE$')], who wields both secular and spiritual authority.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+
+ gov_crown_dominion_council:0 "Commonwealth Council Dominion"
+ gov_crown_dominion_council_desc:0 "This is a dominion [concept_government_type] of the British Crown, with a [concept_anz_responsible_govt] led by a council which is [Concept('concept_election','$concept_elected$')] directly by the workers.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+
+# commonwealth realm
+
+gov_anz_commonwealth_dictator:0 "Commonwealth Dictatorship"
+gov_anz_commonwealth_dictator_desc:1 "This is an otherwise fully independent [concept_anz_commonwealth_realm] [concept_government_type] where the [concept_country] is in a personal union with the United Kingdom ruled by a [Concept('concept_ruler','$RULER_TITLE_DICTATOR$')] wielding dictatorial powers.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+
+gov_anz_commonwealth_president:0 "Presidential Commonwealth Realm"
+gov_anz_commonwealth_president_desc:1 "This is an otherwise fully independent [concept_anz_commonwealth_realm] [concept_government_type] where the [concept_country] is in a personal union with the United Kingdom led by an [Concept('concept_election','$concept_elected$')] [Concept('concept_ruler','$RULER_TITLE_PRESIDENT$')].\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+
+gov_anz_commonwealth_parliament:0 "Parliamentary Commonwealth Realm"
+gov_anz_commonwealth_parliament_desc:0 "This is an otherwise fully independent [concept_anz_commonwealth_realm] [concept_government_type] where the [concept_country] is in a personal union with the United Kingdom and is ruled by a democratically [Concept('concept_election','$concept_elected$')] parliament.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+
+gov_anz_commonwealth_theocracy:0 "Theocratic Commonwealth Realm"
+gov_anz_commonwealth_theocracy_desc:0 "This is an otherwise fully independent within the [concept_anz_commonwealth_realm] [concept_government_type] where the [concept_country] is in a personal union with the United Kingdom and is ruled by the state Protestant Church. Its highest authority is called the [Concept('concept_ruler','$RULER_PRIMATE$')], who wields both secular and spiritual authority.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+
+gov_anz_commonwealth_council:0 "Commonwealth Realm Council"
+gov_anz_commonwealth_council_desc:0 "This is an otherwise fully independent [concept_anz_commonwealth_realm] [concept_government_type] where the [concept_country] is in a personal union with the United Kingdom and is led by a council which is [Concept('concept_election','$concept_elected$')] directly by the workers.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+
+gov_commonwealth_monarchy:0 "Commonwealth Monarchy" 
+gov_commonwealth_monarchy_desc:0 "This is an otherwise fully independent [concept_anz_commonwealth_realm] [concept_government_type] where the [concept_country] is ruled by a [Concept('concept_ruler','$RULER_TITLE_KING$')] or [Concept('concept_ruler','$RULER_TITLE_QUEEN$')].\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+
+# Independent Parliament - Prime Minister, not Chancellor!
+gov_anz_parliament:0 "Parliamentary Republic"
+gov_anz_parliament_desc:2 "This is a [concept_government_type] where the [concept_country] is ruled by a democratically [Concept('concept_election','$concept_elected$')] parliament.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+
+##SUBJECT TYPE - #'d versions referencing Britain because issue preventing this being available to non-british heritage colonies
+
+
+anz_crown_colony:0 "Crown Colony"
+subject_type_anz_crown_colony:0 "@anz_crown_colony! $subject_type_anz_crown_colony_no_icon$"
+subject_type_anz_crown_colony:0 "[concept_anz_colony]"
+anz_crown_colony_desc:0 "A British colony whose administration is controlled by the British Crown, represented by a governor.\n\n#ITALIC Part of the Australia & New Zealand Flavour mod.#!"
+
+subject_type_anz_crown_colony_no_icon:0 "Crown Colony"
+concept_anz_crown_colony_desc:0 "A British colony whose administration is controlled by the British Crown"
+
+anz_crown_colony_desc:0 "A colony whose administration is controlled by the Crown, represented by a governor.\n\n#ITALIC Part of the Australia & New Zealand Flavour mod.#!"
+
+anz_crown_colony_action_notification_name:0 "Crown Colony"
+anz_crown_colony_action_notification_desc:0 "Crown Colony"
+
+anz_crown_colony_action_propose_name:0 "Establish Colony"
+anz_crown_colony_action_break_name:0 "Grant Independence"
+
+anz_crown_colony_action_notification_break_name:0 "Demmand for Indepenence"
+anz_crown_colony_action_notification_break_desc:0 "[INITIATOR_COUNTRY.GetName] are demanding that we end their Crown Colony status."
+
+anz_crown_colony_action_ask_to_break_name:0 "Demand Independence"
+anz_crown_colony_pact_desc:0 "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName] is a colony of [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName]"
+
+# COMMONWEALTH 
+ commonwealth:0 "Commonwealth"
+ subject_type_commonwealth:0 "@anz_commonwealth! $subject_type_commonwealth_no_icon$"
+ #subject_type_commonwealth:0 "[concept_anz_commonwealth_realm]"
+ #commonwealth_desc:0 "#header $commonwealth$#!\n$TOOLTIP_DELIMITER$\nThe British Commonwealth of Nations are autonomous communities within the British Empire, equal in status, in no way subordinate to one another, though united by a common allegiance to the Crown.\n\n#ITALIC Part of the Australia & New Zealand Flavour mod.#!"
+
+ commonwealth_desc:0 "#header $commonwealth$#!\n$TOOLTIP_DELIMITER$\nThe Commonwealth of Nations are autonomous communities, equal in status, in no way subordinate to one another, though united by a common allegiance to the Crown.\n\n#ITALIC Part of the Australia & New Zealand Flavour mod.#!"
+
+ commonwealth_action_ask_to_break_name:0 "Demand Independence"
+ commonwealth_pact_desc:0 "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName] is a member of the [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetAdjective] Commonwealth of Nations."
+
+commonwealth_action_break_name:0 "Grant Independence"
+
+commonwealth_action_notification_name:0 "Commonwealth Realm Proposal"
+commonwealth_action_notification_desc:0 "[INITIATOR_COUNTRY.GetName] proposes to establish a Commonwealth Realm."
+commonwealth_action_propose_name:0 "Make into Commonwealth Realm"
+commonwealth_action_notification_break_name:0 "Demmand for Indepenence"
+commonwealth_action_notification_break_desc:0 "[INITIATOR_COUNTRY.GetName] are demanding that we end their Commonwealth Realm status."
+
+ notification_governor_retires_name:1 "[SCOPE.sCharacter('scope_new_colonial_governor').GetFullName] Appointed Governor"
+ governor_retires_notification_group:0 "New Governor"
+ notification_governor_retires_desc:0 "[SCOPE.sCharacter('scope_retiring_governor').GetFullName]'s tenure as governor of [SCOPE.sCountry('governor_retirement_this_country').GetName] has ended, and [SCOPE.sCharacter('scope_new_colonial_governor').GetFullName] has been appointed to succeed [SCOPE.sCharacter('scope_retiring_governor').GetCustom('GetHimHer')]."
+ notification_governor_retires_tooltip:0 "#header $notification_governor_retires_name$#!\n$TOOLTIP_DELIMITER$\n$notification_governor_retires_desc$"
+
+custom_him:0 "him"
+
+ig_anz_dummy_landowners:0 "Landowners"
+ig_anz_dummy_landowners_desc:0 "The owners of great estates, vast ranches and plantations, the landowners are custodians of aristocratic tradition and old money."

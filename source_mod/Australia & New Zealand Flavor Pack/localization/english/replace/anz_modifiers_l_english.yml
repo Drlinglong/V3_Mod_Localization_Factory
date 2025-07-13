@@ -1,0 +1,153 @@
+﻿l_english:
+
+#Are these still needed?
+modifier_building_group_bg_construction_throughput_mult:0 "Construction Sector Throughput" 
+modifier_building_group_bg_construction_throughput_mult_desc:0 "Construction Sector Throughput"
+
+# frontier wars
+afp_bounty_police_modifier1:0 "Need For Police"
+afp_bounty_police_modifier2:0 "Need For Police"
+afp_massacre_made_promise_modifier:0 "Promised Emergency Relief"
+afp_massacre_made_promise2_modifier:0 "Sympathy For Victims"
+afp_massacre_kept_promise:0 "Kept Relief Promise"
+afp_massacre_broken_promise:0 "Broke Relief Promise"
+frontier_wars_speared_IG_modifier:0 "Outraged"
+afp_moving_town:0 "Relocating Settlement"
+afp_flooded_town:0 "Flooded Settlement"
+afp_laworder_modifier:0 "Law & Order Justification"
+afp_colony_growth_boost:0 "Port Phillip Association"
+afp_afw_colony_expedition:0 "Ongoing expedition"
+afp_afw_investigation_cost:0 "Inventigation Costs"
+afp_corrupt_leader_modifier:0 "Corruption Scandal"
+afp_help_ai_modifier:0 "Colonial Oversight"
+
+
+#gold rush
+afp_lowdiscovery_modifier:0 "Not Prospecting for Gold"
+afp_goldmania1_modifier:0 "Gold Mania"
+afp_goldmania2_modifier:0 "Encouraging Gold Discovery"
+afp_ball_approval_positive:0 "Invited to Grand Ball"
+afp_ball_approval_negative:0 "Scorned"
+afp_ball_cohesion:0 "Promoting Social Cohesion"
+afp_ball_fundraising:0 "Fundraising at Grand Ball"
+afp_ball_fundraising2:0 "Public Project Fundraised"
+afp_ball_art:0 "Artistic Grand Ball"
+afp_ball_art2:0 "Showcasing Australian Art and Culture"
+afp_land_tax:0 "Taxing land ownership"
+afp_goldmarket_forces:0 "Laissez-faire land speculation"
+afp_bubble_works:0 "Speculation pays off"
+afp_bubble_fails:0 "Bubble Bursts"
+afp_bubble_fails2:0 "Bubble Bursts"
+afp_investing_mining:0 "Incentives for mining investments"
+afp_angry_gold_miners:0 "Angry Miners"
+eureka_zeal:0 "Eureka Rebellion Zeal"
+eureka_leader:0 "Ballarat Reform League Leader"
+afp_mining_fee:0 "Reinstated Mining Licenses"
+afp_reform_support:0 "Public Support for Reform"
+afp_doubledown:0 "Doubling Down on Eureka Response"
+afp_public_sympathy:0 "Eureka Aftermath Public Opinion"
+afp_gold_royalty:0 "Royalties on Gold"
+afp_more_hunts:0 "Increased License Hunts"
+afp_police_hunts:0 "Brutal Police License Hunts"
+afp_police_soldiers:0 "Increasing Military Presence"
+afp_scobie_enquiry:0 "Scobie Investigation"
+afp_independence_war_prep_country:0 "Military Preparations"
+afp_independence_war_prep_state:0 "Military Preparations"
+
+#squattocracy
+anz_wealthy_pioneers:0 "Wealthy Agricultural Pioneers"
+anz_support_squatting_expansion:0 "Squatter Expansion"
+anz_support_squatting_expansion2:0 "Extending Government Services"
+modifier_building_group_bg_agriculture_aristocrats_standard_of_living_add:0 "[concept_sol] of $aristocrats$"
+modifier_building_group_bg_agriculture_aristocrats_standard_of_living_add_desc:0 "[concept_sol] of $aristocrats$ employed in Agriculture"
+anz_regulate_squatting_expansion:0 "Regulating Squatter Expansion"
+anz_regulate_squatting_expansion2:0 "Less Shiny Silver Spoons"
+anz_passoc_concession:0 "Favourable leases to Squatters"
+anz_passoc:0 "Pastoral Association Activity"
+anz_monarch_rejects_squattocrats:0 "Monarch Publicly Spurns Squattocrats"
+anz_landowner_decreed_ruler:0 "Landowners Royal Prerogative"
+anz_supported_agitator:0 "Praised Agitator"
+anz_repressed_agitator:0 "Slandered Agitator"
+anz_accelerated_dispossession:0 "Accelerated Dispossession of Aboriginal Peoples"
+anz_smallholder_support1:0 "Accessible Landownership"
+anz_smallholder_support2:0 "Financing Smallholders"
+anz_smallholder_support3:0 "Encouraging Smallholders"
+anz_squatter_supremacy:0 "Squattocrat Supremacy"
+anz_squatter_efficiency:0 "Squattocrat Effectiveness"
+
+# Merino Wool Industry
+
+anz_aac_research_modifier:0 "Livestock Research & Development"
+anz_aac_prestige_modifier:0 "Renowned Wool Quality"
+anz_aac_exports_modifier1:0 "Encouraging Merino Exports"
+anz_aac_exports_modifier2:0 "Encouraging Merino Exports"
+anz_aac_exports_modifier3:0 "Encouraging Merino Exports"
+anz_aac_siphon_modifier:0 "Secretly Siphoning A.A.Co. Funds"
+anz_aac_honorable_siphon_modifier:0 "Publicly Siphoning A.A.Co Funds"
+anz_aac_breed_modifier:0 "Borrowing Interntionally Prized Merino Breeds"
+anz_aac_leadproducer_modifier:0 "Global Producer"
+anz_aac_inbred_modifier:0 "Inbred Sheep"
+
+
+# Misc
+anz_nationhood_ambitions:0 "Nationhood Ambitions"
+anz_indigenous_subsistence:0 "Indigenous Subsistence Practices"
+anz_movement_angered:0 "Movement Angered"
+anz_movement_momentum:0 "Movement Momentum"
+anz_movement_appeased:0 "Movement Appeased"
+anz_movement_responsive_activism:0 "Movement Activism"
+
+# Power Bloc
+
+country_can_impose_same_lawgroup_colonization_in_power_bloc_bool:0 "#b Impose#! same [GetLawGroup('lawgroup_colonization').GetName] [concept_law] on $concept_power_bloc_members_short$" #not being used
+
+country_can_impose_same_lawgroup_slavery_in_power_bloc_bool:0 "#b Impose#! same [GetLawGroup('lawgroup_slavery').GetName] [concept_law] on $concept_power_bloc_members_short$"
+country_can_impose_same_lawgroup_slavery_in_power_bloc_bool_desc:0 "Allowed to #b Impose#! the same [concept_law] as their own in the [GetLawGroup('lawgroup_slavery').GetName] group on other [Concept('concept_power_bloc_member','$concept_power_bloc_members_short$')]"
+
+country_can_impose_same_lawgroup_childrens_rights_in_power_bloc_bool:0 "#b Impose#! same [GetLawGroup('lawgroup_childrens_rights').GetName] [concept_law] on $concept_power_bloc_members_short$"
+country_can_impose_same_lawgroup_childrens_rights_in_power_bloc_bool_desc:0 "Allowed to #b Impose#! the same [concept_law] as their own in the [GetLawGroup('lawgroup_childrens_rights').GetName] group on other [Concept('concept_power_bloc_member','$concept_power_bloc_members_short$')]"
+
+country_can_impose_same_lawgroup_labor_rights_in_power_bloc_bool:0 "#b Impose#! same [GetLawGroup('lawgroup_labor_rights').GetName] [concept_law] on $concept_power_bloc_members_short$"
+country_can_impose_same_lawgroup_labor_rights_in_power_bloc_bool_desc:0 "Allowed to #b Impose#! the same [concept_law] as their own in the [GetLawGroup('lawgroup_labor_rights').GetName] group on other [Concept('concept_power_bloc_member','$concept_power_bloc_members_short$')]"
+
+country_can_impose_same_lawgroup_rights_of_women_in_power_bloc_bool:0 "#b Impose#! same [GetLawGroup('lawgroup_rights_of_women').GetName] [concept_law] on $concept_power_bloc_members_short$"
+country_can_impose_same_lawgroup_rights_of_women_in_power_bloc_bool_desc:0 "Allowed to #b Impose#! the same [concept_law] as their own in the [GetLawGroup('lawgroup_rights_of_women').GetName] group on other [Concept('concept_power_bloc_member','$concept_power_bloc_members_short$')]"
+
+country_can_impose_same_lawgroup_land_reform_in_power_bloc_bool:0 "#b Impose#! same [GetLawGroup('lawgroup_land_reform').GetName] [concept_law] on $concept_power_bloc_members_short$"
+country_can_impose_same_lawgroup_land_reform_in_power_bloc_bool_desc:0 "Allowed to #b Impose#! the same [concept_law] as their own in the [GetLawGroup('lawgroup_land_reform').GetName] group on other [Concept('concept_power_bloc_member','$concept_power_bloc_members_short$')]"
+
+country_can_impose_same_lawgroup_welfare_in_power_bloc_bool:0 "#b Impose#! same [GetLawGroup('lawgroup_welfare').GetName] [concept_law] on $concept_power_bloc_members_short$"
+country_can_impose_same_lawgroup_welfare_in_power_bloc_bool_desc:0 "Allowed to #b Impose#! the same [concept_law] as their own in the [GetLawGroup('lawgroup_welfare').GetName] group on other [Concept('concept_power_bloc_member','$concept_power_bloc_members_short$')]"
+
+### Modifier types
+
+state_radicals_from_sol_change_mult:0 "$concept_radicals$ from [concept_sol] changes"
+state_radicals_from_sol_change_mult_desc:0 "A bonus or penalty to how many [Concept('concept_pop', '$concept_pops$')] will become [concept_radical] from changes in [concept_sol]"
+
+state_loyalists_from_sol_change_mult:0 "$concept_loyalists$ from [concept_sol] changes"
+state_loyalists_from_sol_change_mult_desc:0 "A bonus or penalty to how many [Concept('concept_pop', '$concept_pops$')] will become concept_loyalist from changes in [concept_sol]"
+
+
+#political_movement_character_attraction_mult:0 "[concept_political_movement] Attraction from [concept_character]"
+#political_movement_character_attraction_mult_desc:0 "A bonus or penalty to how much the [concept_character] attracts a [concept_pop] to a [concept_political_movement]"
+
+country_enactment_success_chance_law_slavery_banned_add: "[concept_enactment_success] chance for [GetLawType('law_slavery_banned').GetName]"
+country_enactment_success_chance_law_slavery_banned_add_desc: "A flat percentage point increase or decrease to the likelihood of enacting the specific law"
+
+ country_enactment_success_chance_law_cultural_exclusion_add: "[concept_enactment_success] chance for [GetLawType('law_cultural_exclusion').GetName]"
+ country_enactment_success_chance_law_cultural_exclusion_add_desc: "A flat percentage point increase to the likelihood of enacting the specific law"
+
+ country_enactment_success_chance_law_total_separation_add: "[concept_enactment_success] chance for [GetLawType('law_total_separation').GetName]"
+ country_enactment_success_chance_law_total_separation_add_desc: "A flat percentage point increase to the likelihood of enacting the specific law"
+
+ country_enactment_time_law_multicultural_mult: "Enactment Time for [GetLawType('law_multicultural').GetName]"
+ country_enactment_time_law_multicultural_mult_desc: "A reduction or increase to the time required for legislative enactments for the specific law"
+
+ country_enactment_time_law_aboriginal_equal_mult: "Enactment Time for [GetLawType('law_aboriginal_equal').GetName]"
+ country_enactment_time_law_aboriginal_equal_mult_desc: "A reduction or increase to the time required for legislative enactments for the specific law"
+
+ country_enactment_time_law_cultural_exclusion_mult: "Enactment Time for [GetLawType('law_cultural_exclusion').GetName]"
+ country_enactment_time_law_cultural_exclusion_mult_desc: "A reduction or increase to the time required for legislative enactments for the specific law"
+
+ country_enactment_time_law_total_separation_mult: "Enactment Time for [GetLawType('law_total_separation').GetName]"
+ country_enactment_time_law_total_separation_mult_desc: "A reduction or increase to the time required for legislative enactments for the specific law"

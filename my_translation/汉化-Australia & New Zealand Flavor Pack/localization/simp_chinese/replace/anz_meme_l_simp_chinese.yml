@@ -1,0 +1,24 @@
+﻿l_simp_chinese:
+
+# DLC clone (not meme) #grefm has 2 different loc keys for same text, will try with 1
+ dlc_anzfp: "澳大利亚及新西兰风味"
+
+ dlc_anzfp_desc: "#ITALIC 适用于Victoria 3 1.9.x版本的Mod 2.0.9#!\n\n这是澳大利亚及新西兰风味包Mod。祝您游戏愉快！请在Steam创意工坊给我们评分，并随时留下您的反馈或建议。"
+
+
+#Decisions
+
+afp_great_western_empire:0: "成立大西方帝国"
+afp_great_western_empire_desc:0: "西澳尼亚人民厌倦了成为世界的笑柄。到此为止。我们必须向世界展示我们真正的实力。"
+
+#Events
+
+
+anz_meme_events.2.t:0: "追求伟大"
+anz_meme_events.2.d:0: "世界上的西方人已在我们的领导下团结起来，我们应该通过宣告西方人将统治世界来庆祝这一历史性时刻！"
+anz_meme_events.2.f:0: "西方……这感觉太对了。显然，它是最伟大的基本方向……它的形容词……西方。是的。我现在看得很清楚了。这个伟大帝国的名字必须是……"
+anz_meme_events.2.a:0: "统一西方人。"
+afp_great_western_empire_tt:0: "成立大西方帝国"
+
+# Misc
+anz_POP_NOT_T5:0: "不 @acceptance_status_5! 全面接受"

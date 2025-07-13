@@ -1,0 +1,151 @@
+﻿l_english:
+
+# Journal Entries
+
+je_anz_aac:0 "Merino Wool Industry"
+je_anz_aac_reason:0 "The first sheep brought to Australia in 1788 were not well suited to the environment and primarily used for meat as they did not produce good quality wool.\n\nIn 1797, a mere 26 Merino sheep were introduced. Derived from the Royal Merino Flocks of Spain, whose wool is of world-class quality.\n\nSoon after, Captain John Macarthur, a wealthy and powerful pioneer, began breeding Merino on vast acres of land. Taking several decades for the breeding program to produce enough wool to auction, the first Australian wool was sold in London in 1821, recieving acclaim for being on par with the finest Spanish fleece.\n\nThis endeavour will be challenging, but with London impressed, we have an exciting opportunity to establish a thriving Merino wool industry at a global scale.\n$TOOLTIP_DELIMITER$\n@information! While the#v  Australian Agricultural Company#! is established, if#b  any#! "[concept_anz_men_of_capital]" are [concept_powerful] or are [concept_in_government], they will secure a royal charter from the British monarchy, granting an#WHITE  additional company slot#!."
+
+aac_exists_tt:0 "The Australian Agricultural [concept_company] has been established."
+aac_prosperous_tt:0 "The Australian Agricultural [concept_company] is producing a [concept_prestige_good]"
+aac_prosperous_33_tt:0 "The Australian Agricultural [concept_company] has#v  33#! [concept_prosperity]."
+anz_aac_wool_exporter_tt:0 "Any [ROOT.GetCountry.GetAdjective]#v  export#! [concept_trade_route]:\n•  [concept_trade_route] is productive\n•  Trade level is greater than, or equal to#v  5#!\n•  [concept_good] is [GetGoods('fabric').GetName]"
+je_anz_aac_goal:0 "#b The following has been true for#v  2#! years#!:"
+
+je_anz_aac_button_breed:0 "Expand Breeding Program"
+je_anz_aac_button_breed_desc:0 "By breeding our flocks with other types of Merino from around the world, we will ensure our sheep remain healthy. Selecting for suitable and desirable traits, we will be able to raise sheep in more locations and gain a competitive edge."
+
+give_merino_trait_tt:0 "Every Australian [concept_state_region] in which we own at least part of (excluding the Northern Territory) gains the#v  Merino Wool state trait#! providing a#GREEN #b  +20%#!#! @fabric! fabric output boost if it does not already have it."
+
+je_anz_aac_button_research:0 "Research Investment"
+je_anz_aac_button_research_desc:0 "The pioneering spirit knows no bounds; investing resources in to research and development will aid in innovating the industry."
+anz_je_aac_research_prereq_tt:0 "Has the prerequisite [concept_technology] of any of the above#b  unresearched#! [concept_technology]"
+
+je_anz_aac_button_siphon:0 "Siphon Funds"
+je_anz_aac_button_siphon_desc:0 "Just as a parent must first ensure their own health so that they may care for their offspring, so too does the State need to prioritise other vital interests in order to later look after its industry... Of course, though, we would still want to keep this private..."
+aac_ruler_grifter:0 "#RED Caught siphoning funds#!"
+aac_honorable_grift_tt:0 "This costs authority because [SCOPE.sCharacter('aac_siphon_ruler').GetFullName] is honorable"
+aac_grifter_grift_tt:0 "There is an increased chance to get caught because [SCOPE.sCharacter('aac_siphon_ruler').GetFullName] is a known grifter"
+anz_aac_siphon_event_trigger:0 "Triggers the event#b  #WHITE Siphoning Funds#!#! that allows the siphoning of £8333 per level of the highest level Livestock Ranch in an Australian state (not Northern Territory) up to a maximum of 20 levels. You will have the option to change your mind."
+anz_aac_siphon_event_complete:0 "The#WHITE  'Siphoning Funds'#! event has not occured within 90 days."
+
+
+je_anz_aac_button_trade:0 "Encourage Trade"
+je_anz_aac_button_trade_desc:0 "By reducing trade barriers, we can promote the profitability and growth of our wool industry."
+
+je_aac_button_possible:0 "This action has not been made within the last#WHITE  4#! years"
+je_aac_button_possible2:0 "This action has not been made within the last#WHITE  10#! years"
+je_aac_button_possible3:0 "This action has not been made within the last#WHITE  5#! years"
+
+je_anz_aac_button_give_capitalists:0 "Restructure @aristocrats! Ownership"
+je_anz_aac_button_give_capitalists_desc:0 "The entrepreneurial spirit of capitalists will surely lead the A.A.Co to new heights, which we can encourage by restructuring the company's ownership class."
+
+je_anz_aac_button_give_aristocrats:0 "Restructure @capitalists! Ownership"
+je_anz_aac_button_give_aristocrats_desc:0 "Through some corporate restructuring, we can restore aristocratic prescence in the A.A.Co's ownership class."
+
+anz_aac_capitalist_ownership_tt:0 "A.A.Co ownership will employ 35 @aristocrats! Aristocrats for every 15 @capitalists! Capitalists"
+anz_aac_aristocratic_ownership_tt:0 "A.A.Co ownership will replace all @aristocrats! Aristocrats with @capitalists! Capitalists"
+
+anz_aac_giving_capitalists_ownership:0 "A.A.Co Ownership Restructuring"
+anz_aac_giving_aristocrats_ownership:0 "A.A.Co Ownership Restructuring"
+
+anz_aac_free_company:0 "A.A.Co Royal Charter Incorporation"
+
+anz_aac_buttons_available:0 "Actions available"
+anz_aac_buttons_unavailable:0 "#GREY No actions available#!"
+
+je_anz_aac_button_coal:0 "Grant Coal Monopoly"
+je_anz_aac_button_coal_desc:0 "While the A.A.Co's mission is mostly agricultural, their directors consist of business savvy "[concept_anz_men_of_capital]", so granting them limited coal monopoly rights would surely increase mine [concept_productivity]."
+anz_aac_coal_monopoly_modifier:0 "A.A.Co Monopoly Rights"
+
+# Events
+
+# john murray, germany imports wool from australia? https://en.wikipedia.org/wiki/Merino 
+anz_aac_events.1.t:0 "1"
+anz_aac_events.1.d:0 "2"
+anz_aac_events.1.f:0 "3"
+anz_aac_events.1.a:0 "4"
+
+#remove je prestige reward if no livestock
+anz_aac_events.2.t:0 "Merino Prestige Lost"
+anz_aac_events.2.d:0 "Once [ROOT.GetCountry.GetNameNoFormatting] was known for our world class quality wool.\n\nHowever, we have let our @fabric! wool industry completely collapse and have lost our global reputation."
+anz_aac_events.2.f:0 ""In London, Paris, Milan, New York and more, Australian Merino wool was a prized commodity in trading houses and textile mills. It is a sad day that we shall lose this prestige, but it is an even sadder day that the world has lost our wool.""
+anz_aac_events.2.a:0 "Meri#b noooo!"
+
+# if leading producer
+anz_aac_events.3.t:0 "Leading Fabric Producer"
+anz_aac_events.3.d:0 "The Australian Agricultural Company has proven its worth as we are now a world leading producer of fabric!"
+anz_aac_events.3.f:0 ""Our uniquely bred Merino sheep have ascended from their Spanish beginnings and are finally recognised for their unparreled quality wool!"\n\n"One of the most remarkable sights is that of the Wool Exchange in full blast. Both buyers and brokers are men of weight and substance and responsibility in the community, but when the auctioneer puts up a lot, the buyers spring to their feet, wave their catalogues over their heads, and shout their bids frantically at the seller... It is not unusual for 100,000 pounds worth of wool to be put through during an afternoon.""
+anz_aac_events.3.a:0 "A pride of the nation!"
+
+
+
+#caught siphoning funds
+anz_aac_events.4.t:0 "Caught Siphoning Funds"
+anz_aac_events.4.d:0 "[SCOPE.sCharacter('ruler_merino_siphon').GetFullName] has been caught skimming money from the Australian Agricultural Company for personal use. This will not please stakeholders..." 
+anz_aac_events.4.f:0 "Draped in the cloak of public trust, [SCOPE.sCharacter('ruler_merino_siphon').GetLastName] now stands exposed in the harsh light of scrutiny. Revelations have surfaced of their clandestine activities, as they were caught covertly diverting funds from the company into their personal coffers, a stark betrayal of the very principles they were entrusted to uphold and their duty to the state of [ROOT.GetCountry.GetNameNoFormatting]."
+anz_aac_events.4.a:0 "This is#b  baaa#!d."
+
+#siphoning funds
+anz_aac_events.400.t:0 "Siphoning Funds"
+anz_aac_events.400.d:0 "The [GetBuildingType('building_livestock_ranch').GetName] in [SCOPE.sState('aac_siphon_state').GetName] have been doing well, managing to build up [concept_cash_reserves]. While these reserves bolster our [concept_credit], direct access to that money could also be useful..." 
+anz_aac_events.400.f:0 ""They're doing so well in fact, that#b  A.A.Co#! shareholders will surely not notice some funds being redirected to the needs of [ROOT.GetCountry.GetNameNoFormatting], or even myself for that matter...""
+anz_aac_events.400.a:0 "This is for the greater good."
+anz_aac_events.400.b:0 "This idea is a mistake."
+aac_siphon_backdown_tt:0 "You will be able to return to this choice."
+
+
+#inbred sheep
+anz_aac_events.5.t:0 "Inbred Sheep"
+anz_aac_events.5.d:0 "Due to our Merino breeding program remaining rather insular without expanding for foreign Merino breeding pairs, there has unfortunately been an epidemic of inbred sheep..."
+anz_aac_events.5.f:0 ""We've got flocks of woolly relatives that couldn't find their way out of a family reunion if it bit 'em. They're barely lasting the seasons before droppin' dead and worst of all they're growing less an' less wool!""
+anz_aac_events.5.a:0 "Yikes..."
+anz_inbreeding_event_tt:0 "The Merino Breeding Program has not been recently expanded."
+
+#royal charter discontinued (landowners/industrialists)
+anz_aac_events.6.t:0 "A.A.Co Royal Charter Discontinued"
+anz_aac_events.6.d:0 "With the influence of "[concept_anz_men_of_capital]" lacking, their lobbying for the renewal of the#white  Australian Agricultural Company's#! charter has failed. The royal charter it was priviledged to has now ceased."
+anz_aac_events.6.f:0 "With recommendation from royal commissioner John Bigge that large land grants are given to "[concept_anz_men_of_capital]", the Australian Agricultural Company had been incorporated by royal charter for the cultivation and improvement of waste lands and other purposes, amongst which was the production of fine merino wool for export to Great Britain."
+anz_aac_events.6.a:0 "So be it."
+anz_aac_no_aristocrats_of_capital_tt:0 "The [GetInterestGroupVariant('ig_landowners',GetPlayer).GetName] are#b  not#! [concept_powerful]#b  or#! [concept_in_government]."
+anz_aac_no_capitalists_of_capital_tt:0 "The [GetInterestGroupVariant('ig_industrialists',GetPlayer).GetName] are#b  not#! [concept_powerful]#b  or#! [concept_in_government]."
+anz_aac_no_men_of_capital_tt:0 "This is because the [GetInterestGroupVariant('ig_industrialists',GetPlayer).GetName] or [GetInterestGroupVariant('ig_landowners',GetPlayer).GetName] are currently#b  not#! [concept_powerful]#b  or#! [concept_in_government]. If they return to influence, they will seek to renew the royal charter.\n"
+
+#royal charter discontinued (GB not monarchy)
+anz_aac_events.61.t:0 "A.A.Co Royal Charter Discontinued"
+anz_aac_events.61.d:0 "[ROOT.GetCountry.GetOverlord.GetName] is no longer a [GetLawType('law_monarchy').GetName], thus cannot grant company incorporation by royal charter. Consequently, the#white  Australian Agricultural Company#! has lost their special status."
+anz_aac_events.61.f:0 "With recommendation from royal commissioner John Bigge that large land grants are given to "[concept_anz_men_of_capital]", the Australian Agricultural Company had been incorporated by royal charter for the cultivation and improvement of waste lands and other purposes, amongst which was the production of fine merino wool for export to Great Britain."
+anz_aac_events.61.a:0 "God save the British monarchy..."
+anz_aac_events.61.b:0 "Fine."
+
+#royal charter discontinued (GB not overlord)
+anz_aac_events.62.t:0 "A.A.Co Royal Charter Discontinued"
+anz_aac_events.62.d:0 "As [SCOPE.sCountry('gbr_scope').GetName] no longer has authority in [ROOT.GetCountry.GetNameNoFormatting], the#white  Australian Agricultural Company#! has lost their special status from being incorporated by royal charter."
+anz_aac_events.62.f:0 "With recommendation from royal commissioner John Bigge that large land grants are given to "[concept_anz_men_of_capital]", the Australian Agricultural Company had been incorporated by royal charter for the cultivation and improvement of waste lands and other purposes, amongst which was the production of fine merino wool for export to Great Britain."
+anz_aac_events.62.a:0 "We don't need them."
+
+#royal charter granted (landowners + GB monarch overlord)
+anz_aac_events.7.t:0 "A.A.Co Royal Charter Granted"
+anz_aac_events.7.d:0 "Our "[concept_anz_men_of_capital]" have successfully lobbied the [ROOT.GetCountry.GetOverlord.GetAdjective] to have the#white  Australian Agricultural Company#! incorporated by royal charter."
+anz_aac_events.7.f:0 "With recommendation from royal commissioner John Bigge that large land grants are given to "[concept_anz_men_of_capital]", the Australian Agricultural Company has been incorporated by royal charter for the cultivation and improvement of waste lands and other purposes, amongst which is the production of fine merino wool for export to Great Britain."
+anz_aac_events.7.a:0 "Good news!"
+
+
+#closest I have to tooltip scoping fucking companies
+#tooltip:[Company.GetTooltipTag],DATA_COMPANY_TYPE_NAME_FORMAT_TOOLTIP [SCOPE.sCompanyType('aac_scope').GetName]#!
+
+#[SCOPE.sCompanyType('aac_scope').GetTooltipTag]
+
+# Coal Monopoly union busting --#just have aaco try to cut pay/hewing rate? yes i think so. 
+anz_aac_events.8.t:0 "Coal Union Organisation"
+anz_aac_events.8.d:0 "Australian Agricultural Company superintendent, Jesse Gregson, has provoked a miner strike as part of an attempt to restrict coal workers from different companies organising under the same union.\n\nA district wide union would greatly stengthen the collective bargaining power of the [GetInterestGroupVariant('ig_trade_unions',GetPlayer).GetNameWithCountryVariant]."
+anz_aac_events.8.f:0 "Believing it is wrong for miners employed by different companies to make common cause in a single union, Gregson is attempting to split worker solidarity by provoking a strike and sourcing miners from elsewhere who would break the strike. This would pressure the local miners to acquiesce to company demands lest they lose their livelihoods.\n\nGregson has engineered the strike by cutting the hewing rate (pay per yield) and is sourcing desperate miners from depleted gold fields in [SCOPE.sState('scab_state').GetStateRegion.GetName]."
+anz_aac_events.8.a:0 "Encourage A.A.Co. union busting."
+anz_aac_events.8.b:0 "Support district-wide unions."
+anz_aac_unions_crushed_modifier:0 "Coal Workers Supressed"
+anz_aac_unions_win_modifier:0 "District-wide Miner Unions"
+
+#NOTE TO SELF: should do some AACo events relating to wanting to keep convict labour - and if labor is banned, do event about trying to source convicts from hamburg (hamburgers to produce hamburgers??) 
+#wagyu event?
+
+#not really private.. but its more 'private' than the vanilla capitalist ownership, which calls itself private.. ergh, just keeping names the same.
+anz_pm_company_headquarter_aristocrat_owned:0 "Privately Owned" 

@@ -1,0 +1,14 @@
+﻿l_simp_chinese:
+ 
+ # Events
+ nz_agitators.1.t: "这公平吗？"
+ nz_agitators.1.d: "[ROOT.GetCountry.GetAdjectiveNoFormatting]女性基督徒禁酒联盟的选举权部门，在基督徒社会主义者[SCOPE.sCharacter('historic_agitator_scope').GetFullName]的领导下，已开始收集全国各地数千名女性的签名，以强烈支持女性普选权。"
+ nz_agitators.1.f: "把你的母亲、你的姐妹与罪犯和疯子归为一类，这公平吗？当赌徒、酒鬼甚至虐妻者都能投票时，认真、受过教育且举止优雅的女性却被剥夺投票权，这公平吗？一个母亲竟被认为不配拥有投票权，而这个投票权却能随意授予亵渎者、说谎者、诱惑者和放荡者，这公平吗？"
+ nz_agitators.1.a: "如此强大的民意展现不容小觑！"
+ nz_agitators.1.b: "她应该停止放弃女性本分，别再插手她一无所知的事务。"
+ nz_agitators.1.c: "她会非常适合投身劳工运动！教育、鼓动、组织！"
+
+ # Modifiers
+ modifier_sheppard_womens_rights_support: "民众参政论者"
+ modifier_sheppard_negative_popularity: "嘲弄与侮辱随意倾泻"
+ modifier_sheppard_socialism_support: "致我最微小的兄弟"

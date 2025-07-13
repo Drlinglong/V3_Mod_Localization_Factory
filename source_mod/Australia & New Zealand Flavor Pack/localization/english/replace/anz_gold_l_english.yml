@@ -1,0 +1,166 @@
+﻿l_english:
+
+#events
+
+#afp_gold_events.1.t:0 ""
+#afp_gold_events.1.d:0 ""
+#afp_gold_events.1.f:0 ""
+#afp_gold_events.1.a:0 ""
+
+#rumors of gold
+afp_gold_events.1.t:0 "Rumours of Gold"
+afp_gold_events.1.d:0 "Gold has been known to exist here for some time, though only in insignificant quantities—until now. William Clarke reports an abundance of gold embedded in quartz. This could bring great wealth to the colony, but it also risks sparking hysteria among the convict-settlers, destabilizing our fragile society.\n\nThe [GetInterestGroupVariant('ig_landowners',GetPlayer).GetNameWithCountryVariant] urge us to suppress these rumors to prevent their workforce from abandoning the fields in pursuit of fortune."
+afp_gold_events.1.f:0 ""We are already experiencing labour shortages; enticing everyone with dreams of quick riches would surely exacerbate this issue and lead to systemic shortages in the supply chain of many essential goods and services. Not to mention, many people here are ex-convicts, how can we trust them to remain orderly and not mutiny in the face of such temptation? The gold, if it truly is here, will still be there to profit from once our colony has established a more stable foundation...""
+afp_gold_events.1.a:0 "Put it away, Mr. Clarke, or we shall all have our throats cut!"
+afp_gold_events.1.b:0 "Pursue these rumours."
+
+#external gold rush
+afp_gold_events.2.t:0 "Gold Rush in [SCOPE.sState('external_gold_state').GetName]"
+afp_gold_events.2.d:0 "News of easy riches in [SCOPE.sState('external_gold_state').GetName] have reached our shores, siphoning our workforce and severely hurting our economy. As [SCOPE.sState('external_gold_state').GetName] gains new townships, we gain new ghost towns. Perhaps we could reverse our economic downturn if we had our own gold rush? Such encouragement may lead to unruly optimism, however."
+afp_gold_events.2.f:0 "Their discovery of sizeable gold fields is attracting workers of all sorts seeking to make their fortune. This influx of capable labour in [SCOPE.sCountry('external_gold_country').GetName] is creating a booming economy and establishment of new towns based around these gold fields to service the miners."
+afp_gold_events.2.a:0 "This is not the right time."
+afp_gold_events.2.b:0 "Offer a reward for the discovery of gold."
+afp_gold2:0 "Has happened:\n#r 20% of our non-Indigenous laborers, farmers, clerks, shopkeepers and machinists have gone to [SCOPE.sState('external_gold_state').GetName]#!"
+
+#force discover gold in victoria
+afp_gold_events.200.t:0 "Gold in Victoria!"
+afp_gold_events.200.d:0 "bout time"
+afp_gold_events.200.f:0 "finally"
+afp_gold_events.200.a:0 "fields"
+afp_gold_events.200.b:0 "mines"
+
+#overwritten vanilla goldrush.1 for Victoria, Otago, and Coromandel
+goldrush.1.d2:0 "An [SCOPE.sCulture('scope_coromandel_australian').GetName] prospector has discovered great quantites of alluvial gold in [SCOPE.sState('goldrush_state').GetStateRegion.GetName]. People from all corners of the earth are converging there, confident that they will discover the next great lode and become incredibly rich."
+goldrush.1.d3:0 "A glittering speck noticed in the rock face of a waterfall has led to the discovery of gold in the Coromandel Peninsula. Mining companies from all over are converging there, confident that they will discover the next great lode and become incredibly rich."
+goldrush.1.f2:0 "Gold, gold, fine bright gold!\nTuapeka, Wangapeka, bright red gold!"
+goldrush.1.f3:0 "Tit for tat, Ballarat, bright fine gold!"
+goldrush.1.c:0 "Spread the word!"
+goldrush.1.e:0 "Mine! It's all mine!"
+
+#marvelous melbourne
+afp_gold_events.3.t:0 "Marvelous [SCOPE.sState('afp_gold_state').GetCityHubName]"
+afp_gold_events.3.d:0 "As the gold rush continues to bring wealth and prosperity to the colony of [SCOPE.sState('afp_gold_state').GetName], [SCOPE.sState('afp_gold_state').GetCityHubName] has become one of the wealthiest and most luxurious cities in the world. A grand ball has been planned to showcase the opulence and extravagance that the gold has brought."
+afp_gold_events.3.f:0 ""The chandeliers sparkle brighter than the gold that brought us all here, and the guests' outfits are more extravagant than the lies I told my parents about my career prospects. It's a dizzying display of wealth and status, and I can't help but feel a bit like a possum at a crocodile party. But hey, when in Rome (or [SCOPE.sState('afp_gold_state').GetCityHubName]), right?""
+afp_gold_events.3.a:0 "Invite only the influential members of society"
+afp_gold_events.3.b:0 "Open the ball to everyone"
+afp_gold_events.3.c:0 "Use the event as a fundraiser for a public project"
+afp_gold_events.3.e:0 "Use the event to showcase Australian culture and art"
+
+modifier_building_group_bg_arts_throughput_mult:0 "Arts Academy Throughput"
+modifier_building_group_bg_arts_throughput_mult_desc:0 "Arts Academy Throughput"
+
+#gold speculation bubble
+afp_gold_events.4.t:0 "Speculation Bubble"
+afp_gold_events.4.d:0 "With talk of the new gold strike in [SCOPE.sState('gold_state').GetName], speculators are buying up large tracts of land in the hopes of finding gold, leading to a bubble in land prices. We could regulate land speculation, let the market run its course, or encourage more investment in the mining industry rather than mere land speculation."
+afp_gold_events.4.f:0 ""Everyone's talking about the new strike! Land speculators are buying up everything in sight, but is this a good thing? We don't want another bubble like we saw with the tulip craze in the Netherlands!""
+afp_gold_events.4.a:0 "Regulate land speculation with taxes."
+afp_gold_events.4.b:0 "Let the market run its course."
+afp_gold_events.4.c:0 "Encourage investment in mining instead."
+
+
+#eureka
+afp_gold_events.5.t:0 "Ballarat Reform League"
+afp_gold_events.5.d:0 "Thousands have gathered to establish a reform League under the chairmanship of [SCOPE.sCharacter('eureka_leader').GetFullName]. Angry about expensive mining licenses and the administration of the goldfields, they claim police are taking bribes to imprison people without due process.\n\nDesiring electoral reform, a growing chartist movement is brewing."
+afp_gold_events.5.f:0 ""The die is cast and fate has stamped upon the movement its indelible signature. No power on earth can now restrain the united might and headlong stride for freedom of the people of this country and we are lost in amazement while contemplating the dazzling Panorama of the Australian future.""
+
+#afp_gold_events.5.a:0 "We will try resolve their grievances."
+afp_gold_events.5.a:0 "The gold must flow."
+afp_eureka_war:0 "A [concept_revolution] starts in [SCOPE.sState('afp_gold_state').GetName]"
+afp_eureka_war2:0 "Will start a [concept_revolution] in the [concept_state] of Victoria"
+
+afp_gold_events.6.t:0 "The Eureka Stockade"
+afp_gold_events.6.d:0 "Peaceful processes have failed. [SCOPE.sCharacter('peter_lalor').GetFullName] has taken charge of the movement and conducted an oath swearing ceremony to the Eureka flag. Determined of the need to take up arms, [SCOPE.sCharacter('peter_lalor').GetLastName] has ordered the construction of a stockade in preparation for an inevitable battle."
+afp_gold_events.6.f:0 ""We swear by the Southern Cross to stand truly by each other, and fight to defend our rights and liberties!"\n\nPeter Lalor shouts as miners make oaths and burn their mining licenses."
+afp_gold_events.6.a:0 "We cannot tolerate such treason!"
+afp_gold_events.6.b:0 "We swear by the Southern Cross!"
+#afp_gold_events.6.b:0 "So be it." #let them go independent?
+Peter:0 "Peter"
+Lalor:0 "Lalor"
+George:0 "George"
+Black:0 "Black"
+Vern:0 "Vern"
+John:0 "John"
+Humffray:0 "Humffray"
+esr_play_name:0 "Eureka Stockade Rebellion" #broken lol
+esr_formation_name:0 "Eureka Miners" 
+eureka_zeal_army:0 "Southern Cross Zeal"
+eureka_zeal_barracks:0 "Southern Cross Zeal"
+
+afp_gold_events.7.t:0 "Eureka Rebellion" #aftermath, crushed
+afp_gold_events.7.d:0 "As news of the crushed rebellion spreads, our military victory has transformed in to a public relations disaster. The general populace now heavily sympathises with the rebels. Trials for sedition are proving difficult to prosecute with such public opinion. The battle was won, yet this is not over."
+afp_gold_events.7.f:0 ""It was a revolution - small in size; but great politically; it was a strike for liberty, a struggle for a principle, a stand against injustice and oppression. It was the Barons and John over again; small beginnings, but great in political results, all  epoch-making. It is another instance of a victory won by a lost battle. It adds an honorable page to history; the people know it and are proud of it. They keep green the memory of the men who fell at the Eureka Stockade, and Peter Lalor has his monument." \n- Mark Twain"
+afp_gold_events.7.a:0 "Appease the population"
+afp_gold_events.7.b:0 "We will not yield to traitors!"
+
+afp_gold_events.8.t:0 "License Hunts"
+afp_gold_events.8.d:0 "The tension in the [SCOPE.sState('afp_gold_state').GetName] goldfields is coming to a boiling point as diggers complain about the brutal and extortinate tactics used by police. On the other hand, the police claim they are merely trying to enforce the law upon outsiders who would exploit our resources yet refuse to pay their fair share."
+afp_gold_events.8.f:0 "The license fee was introduced to handle the infrastructure and administrative costs of the gold rush, however the [GetInterestGroupVariant('ig_trade_unions',GetPlayer).GetNameWithCountryVariant] claim the license fees are overly burdensome compared to the average earnings of diggers, causing many to leave the goldfields at a substantial loss. Consequently, about half of the diggers have not been paying. The police, of whom many are former convicts from [SCOPE.sState('afp_gold_tasmania').GetName], are known for their brutal methods. Because the police receive a 50% commission on all fines imposed, they often ignore due process and treat license inspection as a great sport carried out in the style of an English fox-hunt."
+afp_gold_events.8.a:0 "A royalty on gold will allow us to reduce license fees."
+afp_gold_events.8.b:0 "Increase hunt frequency, make those freeloaders pay!"
+afp_gold_events.8.c:0 "Increase police investigation and establish a gold royalty to reduce license fees."
+anz_goldfield_investigating_police_var:0 "We are investigating police conduct"
+
+afp_gold_events.9.t:0 "The Eureka Hotel"
+afp_gold_events.9.d:0 "[SCOPE.sCharacter('james_scobie').GetFullName], a digger, was found murdered nearby the Eureka Hotel. A hasty court inquiry quickly exonerated the accused owner of the Hotel, [SCOPE.sCharacter('james_bentley').GetFullName]. Given the magistrate was known to take bribes from [SCOPE.sCharacter('james_bentley').GetLastName], the local populace sensing a miscarriage of justice assembled a protest at the Eureka Hotel, which was burned down in a riot."
+afp_gold_events.9.f:0 ""My son the last witness and I had some conversation last night when we were disturbed during which I said I wonder if those voices are the voices of Mr or Mrs Bentley" \n- Mary Ann Welch giving testimony against Bentley."
+afp_gold_events.9.a:0 "Reinforce the police with soldiers!"
+afp_gold_events.9.b:0 "Establish an enquiry into the matter."
+
+Scobie:0 "Scobie"
+Bentley:0 "Bentley"
+James:0 "James"
+
+je_goldfield_repress_diggers:0 "Increase Police Presence"
+je_goldfield_repress_diggers_desc:0 "By increasing the presence of police on the fields and in League meetings, we can ensure the continued and orderly extraction of the precious gold without losing the revenue gained from license fees."
+je_goldfield_investigate_police:0 "Investigate Police Conduct"
+je_goldfield_investigate_police_desc:0 "Corruption is bad for business, especially when it means perfectly able-bodied people aren't being put to productive use. By investigating these claims of police misconduct, our gesture of goodwill to the miners will surely calm down tensions and attract more miners."
+je_goldfield_button_possible:0 "Is#b  not#! already increasing police presence or investigating police conduct"
+je_goldfield_button_once:0 "We can only pick one option"
+afp_goldfield_more_police:0 "Police Swarming Goldfields"
+afp_goldfield_investigate_police:0 "Investigating Police Conduct"
+
+############################
+# NZ Gold Rush
+
+ afp_gold_events.10.t:0 "'The Athens of the North' of the South"
+ afp_gold_events.10.d:0 "The influx of [GetGoods('gold').GetName] in [SCOPE.sState('afp_gold_state').GetName] is quickly turning Dunedin into one of the richest cities in [ROOT.GetCountry.GetName]."
+ afp_gold_events.10.f:0 ""Chaotic though it may be, it seems our fair city is abuzz with the excitement of the gold fever. Each day brings a new flood of riches, all in need of proper management and allocation. The task before us is clear.""
+ afp_gold_events.10.a:0 "This newfound wealth shall make Dunedin a giant of industry and the heart of trade for all of [ROOT.GetCountry.GetNameNoFlag]."
+ afp_gold_events.10.b:0 "It is only right that surplus gold be used to fund charitable relief for the poor Lazaruses of the city."
+ afp_gold_events.10.c:0 "With these resources, Dunedin shall lead her country in all things academic."
+ afp_gold_events.10.e:0 "This is an opportunity to make fair [ROOT.GetCountry.GetNameNoFlag] known across the world. We shall hold a national exhibition, and Dunedin will host."
+ otago_trading_modifier:0 "Dunedin Trade Hub"
+ gold_charity_modifier:0 "Gold Rush Welfare Spending"
+ university_of_otago_modifier:0 "University of Otago Patronized"
+ new_zealand_exhibition_modifier_state:0 "Hosted New Zealand Exhibition"
+ new_zealand_exhibition_modifier_country: "Held New Zealand Exhibition"
+
+ afp_gold_events.11.t:0 "Flooding on the Goldfields!"
+ afp_gold_events.11.d:0 "Six days of heavy rains have burst the banks of all the rivers in central [SCOPE.sState('flood_state').GetName], drowning dozens of unlucky miners camped in the floodplains."
+ afp_gold_events.11.f:0 ""It was thought scarcely possible, on the occasion of the previous storm, that we should be again visited by any catastrophe so serious for at least a considerable time. So confident were we on this score that the gorges and beaches of the Shotover River were once more populated by our industrious swarm, labouring to wrench from the stubborn soil its hidden and carefully guarded treasures; but still again roared down the remorseless element, and our hopes were dashed to the ground.""
+ afp_gold_events.11.a:0 "The survivors will have to manage on their own."
+ afp_gold_events.11.b:0 "We should put some money into sending relief supplies."
+ state_goldfields_flooded:0 "Goldfields Flooded"
+
+ afp_gold_events.12.t:0 "Goldfields Blizzard!"
+ afp_gold_events.12.d:0 "Just when the worst weather seemed to be behind us, a devastating blizzard has swept [SCOPE.sState('blizzard_state').GetName]. Weeks of heavy snowfall have trapped many miners in the mountains with no way of communicating if they are still alive."
+ afp_gold_events.12.f:0 ""No fuel for warmth, only for cooking. When the billy boils, put out the sticks and save them. Boots and clothes will freeze like boards in the night-time, so they have to be taken under the blankets and thawed before being put on in the morning. God only knows when these Arctic temperatures will cease.""
+ afp_gold_events.12.a:0 "This is harrowing! Start coordinating rescue efforts immediately."
+ afp_gold_events.12.b:0 "The floods should have taught them their lesson."
+ afp_gold_events.12.c:0 "Rescue those we can. When spring comes we build dams and snow sheds to mitigate damage from any future disasters."
+ state_goldfields_snowed:0 "Goldfields Snowed Over"
+ modifier_blizzard_rescue:0 "Blizzard Rescue Efforts"
+ state_disaster_infrastructure:0 "Preventative Infrastructure"
+
+ afp_gold_events.13.t:0 "Foreign Labour"
+ afp_gold_events.13.d:0 "As the gold fever in [SCOPE.sState('nz_gold_state').GetName] is dying down, mine owners are looking abroad for cheap labourers to systematically extract gold passed over in the initial rush."
+ afp_gold_events.13.f:0 ""Just think of it: our esteemed Dunedin houses of business, turned out empty as the gold fever leaves us behind. We need more miners to keep the gold flowing.""
+ afp_gold_events.13.a:0 "Workers from [SCOPE.sState('nz_china_state').GetName] would be perfect."
+ afp_gold_events.13.b:0 "We should look elsewhere for sources of inexpensive labour."
+ afp_gold_events.13.c:0 "Perish the thought of inviting dirty, miserly, ignorant ethnics to these shores!"
+ modifier_nz_xenophobia_support:0 "Xenophobic Sentiment"
+
+
+#Eureka Journal
+afp_je_eureka:0 "Goldfield Grievances"
+afp_je_eureka_reason:0 ""That it is the inalienable right of every citizen to have a voice in making the laws he is called upon to obey – that taxation without representation is tyranny.\n\nThat this Colony has hitherto been governed by paid Officials, upon the false assumption that law is greater than justice because, forsooth, it was made by them and their friends, and admirably suits their selfish ends and narrow minded views. It is the object of the “League” to place the power in the hands of responsible representatives of the people to frame wholesome laws and carry on an honest Government.\n\nThat it is not the wish of the “League” to effect an immediate separation of this Colony from the parent country, if equal laws and equal rights are dealt out to the whole free community.\n\nBut that if [ROOT.GetCountry.GetOverlord.GetRuler.GetFullNameWithTitle] continues to act upon the ill advice of the dishonest ministers and insists upon indirectly dictating obnoxious laws for the Colony, under the assumed authority of the Royal Prerogative the Reform League will endeavour to supersede such Royal Prerogative by asserting that of the People which is the most Royal of all Prerogatives, as the people are the only legitimate source of all political power.""

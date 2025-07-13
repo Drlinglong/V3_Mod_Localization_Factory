@@ -1,0 +1,94 @@
+﻿l_english:
+
+dlc_tech_res: "Tech & Res"
+dlc_tech_res_desc: "Tech & Res is a mod that adds a deep and immersive technological progression system, including new eras, production technologies, and industry mechanics from 1836 to 1990s and beyond."
+
+# State Traits
+
+dubois_state_trait_volcano: "Volcano"
+
+# Economy Growth Modifiers
+
+dev_0_country: "Poor Country"
+dev_1_country: "Developing Country"
+dev_2_country: "Semi-Developed Country"
+dev_3_country: "Partially Developed Country"
+dev_4_country: "Developed Country"
+dev_5_country: "Hyper-Developed Country"
+
+# Military Units
+
+combat_unit_type_modern_mechanized_infantry: "Modern Mechanized Infantry"
+combat_unit_type_modern_mechanized_infantry_desc: "Highly mobile and well-equipped force, capable of rapid deployment and effective combat operations."
+
+combat_unit_type_modern_light_tanks: "Modern Light Tanks"
+combat_unit_type_modern_light_tanks_desc: "Fast and agile armored vehicles, designed for reconnaissance and rapid assaults."
+
+combat_unit_type_modern_heavy_tank: "Modern Heavy Tank"
+combat_unit_type_modern_heavy_tank_desc: "Heavily armored and armed vehicle, providing superior firepower and protection on the battlefield."
+
+combat_unit_type_main_battle_tanks: "Main Battle Tank"
+combat_unit_type_main_battle_tanks_desc: "Versatile armored vehicle, combining firepower, protection, and mobility for various modern combat scenarios, especially during Cold War."
+
+combat_unit_type_advanced_mechanized_infantry: "Advanced Mechanized Infantry"
+combat_unit_type_advanced_mechanized_infantry_desc: "Highly mobile and well-equipped force, capable of rapid deployment and effective combat operations."
+extra: "Extra"
+
+combat_unit_type_nuclear_submarine: "Nuclear Submarine"
+combat_unit_type_nuclear_submarine_desc: "Submarine powered by nuclear reactors, allowing for extended underwater operations and stealthy engagements."
+
+combat_unit_type_modern_carrier: "Modern Carrier"
+combat_unit_type_modern_carrier_desc: "Aircraft carrier equipped with advanced technology and capable of projecting air power over long distances."
+
+combat_unit_type_modern_destroyer: "Modern Destroyer"
+combat_unit_type_modern_destroyer_desc: "Fast and maneuverable warship, designed for anti-aircraft, anti-submarine, and surface warfare."
+
+combat_unit_type_scout_modern_cruiser: "Scout Modern Cruiser"
+combat_unit_type_scout_modern_cruiser_desc: "Fast and agile cruiser, designed for reconnaissance and rapid response operations."
+
+combat_unit_type_modern_battleship: "Modern Battleship"
+combat_unit_type_modern_battleship_desc: "Heavily armed and armored warship, providing long-range fire support and naval dominance."
+
+# NEW 1.1 Pop growth modifiers
+
+historical_population_of_france_1: "19th Century Stagnation"
+historical_population_of_france_2: "19th Century Stagnation Resolved"
+population_of_brazil_end_of_slavery: "Favelas Boom"
+population_of_brazil_end_of_slavery_player: "Favelas Boom"
+population_of_country_modernizing: "Population Boom"
+japan_meiji_modernization: "Meiji Modernization"
+japan_meiji_modernization_player: "Meiji Modernization"
+usa_gilded_age: "Gilded Age"
+usa_gilded_age_player: "Gilded Age"
+arabia_renaissance_modifier: "Arabian Renaissance"
+anglo_irish_pact_modifier: "Anglo-Irish Truce"
+anglo_irish_false_pact_modifier: "Anglo-Irish False Truce"
+bloody_sunday_modifier: "Bloody Sunday"
+good_friday_agreement_modifier: "Good Friday Agreement"
+union_consolidated_modifier: "Anglo-Irish Union Consolidated"
+austria_unity_restored: "Empire Unity Restored"
+magyar_linguistic_discrimination: "Magyar Linguistic Discrimination"
+austrian_collapse_revolt_crushed: "Revolt Crushed"
+austrian_collapse_revolt_appeased: "Revolt Appeased"
+hungarian_rights_granted: "Hungarian Rights Granted"
+czech_rights_granted: "Czech Rights Granted"
+austrian_monarchy_humiliated: "Austrian Monarchy Humiliated"
+mittleuropa_harbor: "Mittleuropa Harbor"
+galicia_agricultural_subsidies: "Galicia Agricultural Subsidies"
+
+ztr_geneva_convention: "Geneva Conventions Membership"
+ztr_society_of_nations: "Member of Society of Nations"
+ztr_onu_member: "UN Member"
+ztr_onu_permanent_member: "Permanent UN Member"
+ztr_un_resolution_refused_modifier: "UN Resolution Refused"
+ztr_un_resolution_veto_modifier: "Received UN Resolution Veto"
+ztr_un_resolution_used_veto_modifier: "Used UN Resolution Veto"
+
+modern_medicine_0: "19th Century Medicine"
+modern_medicine_1: "Early 20th Century Medicine"
+modern_medicine_2: "Late 20th Century Medicine"
+modern_medicine_3: "21th Century Medicine"
+
+# NEW 1.2
+
+historical_population_of_germany: "19th Century Boom"

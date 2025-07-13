@@ -1,0 +1,67 @@
+﻿l_simp_chinese:
+#Journal
+
+anz_je_aushungry:0: "澳大利亚-匈牙利问题"
+anz_je_aushungry_reason:0: "我们对匈牙利大胆而鲁莽的主张引起了全世界的侧目。如果成功，这一追求有望提升我们在欧洲的地位。在此之前，我们的外交官需要努力争取国际社会对我们主张的支持。澳大利亚-匈牙利问题确实是我们这个时代的一个决定性问题。"
+je_anz_aushungary_claims:0: "寻求国际认可"
+je_anz_aushungary_claims_desc:0: "尽管对开明者而言，澳大利亚-匈牙利联盟的真相可能显而易见，但其他人仍需要帮助才能看清。获得国际社会对这项正义使命的认可，将极大地帮助我们为匈牙利带来和平与繁荣。"
+je_anz_button_hungary_claims_tt:0: "我们对匈牙利的主张#b 未#!获认可。"
+anz_hungary_claims_recognition:0: "匈牙利主张已获认可"
+anz_hungary_subject_complete_tt:0: "匈牙利是我们的主体，并拥有上述所有[concept_state_region]#o 州#！"
+
+anz_je_aushungry2_boogaloo:0: "奥地利伪王"
+anz_je_aushungry2_boogaloo_reason:0: "奥地利人致力于将我们驱逐出去，并对我们发动袭击。他们公然挑战我们的正当地位，这只能意味着一件事：\n金鹰的时代已经结束。鸸鹋的时代已经到来。\n\n@information! 每月在没有奥地利[concept_truce]且未与奥地利交战的情况下，我们的邻近州会获得#r [ROOT.ScriptValue('anz_austria_raids_value')]#! [concept_devastation]。"
+je_anz_austria_claims:0: "推进我们的主张"
+je_anz_button_austria_claims_tt:0: "我们#b 未#!对奥地利推进我们的主张。"
+je_anz_austria_claims_desc:0: "世界臣服于[ROOT.GetCountry.GetNameNoFormatting]，伙计。#italic A.E.I.O.U.#！"
+anz_asthun2_fail_tt:0: "[ROOT.GetCountry.GetName] #b 不#!控制任何[GetCulture('hungarian').GetName]或[GetCulture('south_german').GetName] [concept_homeland] [concept_state]#o 州#！"
+je_anz_austria_raiddefence:0: "发布袭击防御令"
+je_anz_austria_raiddefence_desc:0: "通过增加巡逻、前出侦察和防御装备的协调混合方法，我们可以足够减缓[concept_devastation]的速度，使其随时间推移而下降。"
+je_anz_austria_counterraid:0: "反击式袭击"
+je_anz_austria_counterraid_desc:0: "有时你需要以牙还牙。然而，尽管奥地利凭借这种本应被视为懦弱和野蛮的战争形式，从国际社会中获得了一些复仇主义的同情，并对此视而不见，但#red 我们自己的反击式袭击将不会被以同样的眼光看待，反而会增加我们的[concept_infamy]。#！"
+je_anz_button_austria_raiddefence_tt:0: "#b 未#!发布袭击防御令。"
+je_anz_button_austria_counterraid_tt:0: "过去一年#b 未#!进行反击式袭击。"
+je_anz_austria_raiddefence_deactivate:0: "停止袭击防御"
+je_anz_austria_raiddefence_deactivate_desc:0: "凡事皆有其时，现在不是执行这些反袭击程序的时候。但如果我们没有其他方法来阻止奥地利的袭击，我们的[concept_devastation]将会增加。"
+je_anz_button_austria_raiddefence_tt2:0: "已发布袭击防御令。"
+anz_raiddefence_var_tt:0: "每月减少奥地利对我们邻近州袭击造成的[concept_devastation]#v 1#!点。"
+anz_raiddefence_var_tt2:0: "我们将不再每月减少奥地利对我们邻近州袭击造成的[concept_devastation]#v 1#!点。"
+anz_austria_raiddefences:0: "防御袭击"
+anz_austria_counterraid:0 "Counter-raiding
+
+#Events
+
+anz_asthun.1.t:0: "澳大利亚……匈牙利？"
+anz_asthun.1.d:0: "一位善意但地理知识欠缺的官僚偶然发现了一份关于“奥匈”土地的文件。他将“奥地利”误认为是“澳大利亚”，写了一份报告，声称澳大利亚对匈牙利拥有合法主张，从而引发了一股意想不到的热潮。"
+anz_asthun.1.f:0: "“卡洛维茨条约……帕萨罗维茨……奥匈……奥地利……澳大利亚？！我们对匈牙利有主张？！这可能是一个完美的机会，让我们留下印记，向世界展示我们的实力！想想看——澳大利亚伸出援手，触及那些充满活力的匈牙利土地，带来繁荣和进步！我已经能预见到这次大胆举动将带来的赞誉！”"
+anz_asthun.1.a:0: "当作官僚失误一笑了之。"
+anz_asthun.1.b:0: "合法的澳大利亚领土！"
+
+anz_asthun.2.t:0: "澳大利亚-匈牙利帝国"
+anz_asthun.2.d:0: "[ROOT.GetCountry.GetName]大胆地巩固了其在匈牙利的正当主张，在欧洲中心确立了一席之地。[GetCulture('australian').GetName]#yellow 人#!现在骄傲地俯瞰着他们遥远却注定属于他们的土地。"
+anz_asthun.2.f:0: "“在这里布达佩斯站岗感觉像活在一个奇怪的梦里。从没想过我会离家乡的红沙半个地球远，守卫着连“澳大利亚”都发音不出来的村庄。“奥地利”他们一直说……记住那个“利亚”有多难？当然，他们瞪着眼窃窃私语，但很快，他们就会知道我们的名字。”"
+anz_asthun.2.a:0: "一切皆应如此。"
+anz_asthun.2.b:0: "这一成就需要更新我们的形象！"
+anz_customise_direction_tt:0: "\n#yellow 我们可以随时在决议菜单中调整我们的形象#！"
+anz_asthun2_incorp:0: "每一个拥有的[GetCulture('hungarian').GetName] [concept_homeland] [concept_state]都成为[concept_incorporated_state]。"
+anz_hungary_fast_incorporation:0: "官僚加班"
+
+anz_asthun.3.t:0: "奥地利伪王"
+anz_asthun.3.d:0: "[SCOPE.sCountry('aus_scope').GetName]对我们收复匈牙利的行为怒不可遏，认为这是对其遗产的极大冒犯，一直在进行边境袭击，在公开挑战我们在欧洲的地位，造成了[concept_devastation]。"
+anz_asthun.3.f:0: "“这是什么疯了——盎格鲁混蛋罪犯竟敢在这里自作主张？我怒火中烧，困惑不已；怎么会有人把我们引以为傲的奥地利和他们搞混？他们竟敢宣称拥有我们的土地，这简直是丑闻；我们将带着强烈的愿望，把这些罪犯的孽种赶出去，恢复欧洲秩序！”"
+anz_asthun.3.a:0: "欧洲容不下鸸鹋和变异的鹰。"
+anz_asthun.3.b:0: "提供[GetCulture('south_german').GetName] [concept_homeland]#o 州#!作为安抚。"
+anz_austria_appeasement_fails:0: "#u 绥靖失败#！"
+anz_austria_appeasement_works:0: "#u 绥靖成功#！"
+
+anz_asthun.4.t:0: "金鸸鹋"
+anz_asthun.4.d:0: "在彻底瓦解奥地利抵抗后，[ROOT.GetCountry.GetName]凯旋而起，巩固了其在欧洲中心的正当地位。\n\n一只新的、更优越的鸟类加入了欧洲纹章的显赫行列！"
+anz_asthun.4.f:0: "“与其选择老鹰，不如选择鸸鹋，它不会飞走，而是像内陆一样坚韧不拔。它像丛林一样顽强，比蓝山的基础还要坚固！所有人都将听从来自南方的雷鸣！”"
+anz_asthun.4.a:0: "一切皆应如此。"
+anz_asthun_golden_emu:0: "金鸸鹋"
+anz_asthun_victory_over_austria:0: "对奥地利的完全胜利"
+
+anz_asthun.5.t:0: "不会飞的鸟"
+anz_asthun.5.d:0: "尽管我们雄心勃勃，但澳大利亚-匈牙利的时机尚未到来。\n\n有人说，一只不会飞的鸟却能飞得离太阳太近，这真是一种讽刺……"
+anz_asthun.5.f:0: "“谁将身着磨损的军装，双手与口袋清白？\n我十七岁起便身着磨损的军装\n我穿着它们征战四方，内陆和海外——\n谁将身着磨损的军装，与我一同归家？”"
+anz_asthun.5.a:0: "我们曾是澳大利亚-匈牙利，但我们还不够‘饥饿’……"

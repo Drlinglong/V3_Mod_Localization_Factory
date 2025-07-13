@@ -1,0 +1,134 @@
+﻿l_simp_chinese:
+# 1. GB eases up on harsh sentencing. only particuarly violent convicts coming. 
+#--I can't find other sources for this... really seems to be about it being costly compared to new prisons, getting shipped to australia seemed somewhat appealing & free settlers not wanting criminals around and having to compete with convict labour
+
+# 1.2 free people complaining. add radical/turmoil to represent escaped convicts murdering people etc.
+#norfolk island event? brutal treatment
+#2. non-landowner/industrialist free people complain about wages being dragged down by convict labour. do something with rural folk v /landowner industrialists? option to petition governor to lobby GB 
+# 3. news of molesworth committee event for GB. increase their chance to ban convicts if reformers/humanitarians in govt. If they don't, make agitator in colony. If they do, remove debt slavery, gain loyalists. 
+# 4. GB/Colony program of assisted migration, gain migration attraction. increase literacy
+# bounty system?
+
+# events
+
+afp_convict_events.1.t:0: "罪犯安置抱怨"
+afp_convict_events.1.d:0: "我们逐渐吸引了寻求体力劳动的自由移民；他们认为罪犯的免费劳动对他们的生计构成了威胁，他们无法与之竞争。其他人则将罪犯视为不光彩的污点。\n\n[GetInterestGroupVariant('ig_rural_folk',GetPlayer).GetNameWithCountryVariant]正在向[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetLastName]请愿，要求殖民地办公室废除罪犯流放。"
+afp_convict_events.1.f:0: "根据1717年《流放法案》，[GetGlobalVariable('gbr_var_scope').GetCountry.GetName]将罪犯运往殖民地服刑。这种做法为殖民地提供了劳动力，并减轻了工业革命后日益不满的人群造成的监狱过度拥挤。在恶劣条件下经过漫长旅程后，他们服刑7年、14年或终身，从事公共项目或通常为私人定居者工作。一些人被其主人视为[SelectLocalization(GetPlayer.IsValid,'concept_slavery_desc_added', '奴隶')]。刑满后，他们被释放到社区，但其前罪犯身份在那些#b “自由移民”#!（指自由来到澳大利亚的人）眼中玷污了他们的声誉。"
+afp_convict_events.1.a:0: "支持请愿。"
+afp_convict_events.1.b:0: "驳回请愿。"
+convict_agitator_made:0: "[GetInterestGroupVariant('ig_rural_folk',GetPlayer).GetNameWithCountryVariant] [concept_agitator]出现"
+afp_accept_petition:0: "反流放请愿获得支持"
+afp_reject_petition:0: "反流放请愿被驳回"
+anz_accept_convict_petition:0: "反流放运动"
+
+afp_convict_events.2.t:0: "暴力罪犯"
+afp_convict_events.2.d:0: "许多被运到这里的罪犯被判犯有轻微罪行。然而，最近一批特别暴力的罪犯被流放到我们的殖民地。他们抵达后不久，便设法逃脱了主人的控制，开始了一场杀戮狂潮。"
+afp_convict_events.2.f:0: "“我判决你，但我不知道判决的是什么——也许是风暴和沉船——也许是传染病——也许是饥荒——也许是被野蛮人屠杀——也许是被野兽吞噬。走吧，去碰碰运气吧；或灭亡或繁荣，或受苦或享乐；我摆脱了你的视线，那艘载你远去的船使我免于目睹你的痛苦，我不会再为你操心。”"
+afp_convict_events.2.a:0: "这就是为什么我们需要停止罪犯流放！"
+afp_convict_events.2.b:0: "他们只是需要更严厉的管控。"
+afp_convict_events.2.c:0: "噢，天哪……"
+afp_murderspree_news:0: "暴力罪犯新闻"
+afp_murderspree1_modifier:0: "刑罚改革需求"
+afp_murderspree2_modifier:0: "罪犯惩罚需求"
+
+#afp_convict_events.3.t:0 "Molesworth Committee" #molesworth event for GB #NOT USED
+#afp_convict_events.3.d:0 "Event for GB within Australia & New Zealand Flavour pack."
+#afp_convict_events.3.f:0 "This event is meant to be hidden. If you see this please let us know. #Hidden so that if a player is on GB, they do not get this event repeated times for multiple #australian colonies triggering the chain."
+#afp_convict_events.3.a:0 "End convict transportation"
+#afp_convict_events.3.b:0 "Continue convict transportation"
+
+afp_convict_events.3.t:0: "莫尔斯沃斯报告"
+afp_convict_events.3.d:0: "委员会发现，罪犯流放和指派劳役不仅作为一种震慑犯罪的手段无效，反而助长了道德败坏，是一种类似于奴役的道德腐败行为，因此建议进行改革。"
+afp_convict_events.3.f:0: "“流放不仅仅在促成罪犯道德改造方面效率低下；它在使那些因偶然情况而非真正邪恶本性被诱入犯罪的人堕落方面效率很高。”"
+afp_convict_events.3.a:0: "我们的殖民地将是一个自由而正直的社会。"
+afp_convict_events.3.b:0: "隐藏报告！"
+afp_molesworth_modifier:0: "莫尔斯沃斯报告调查结果"
+afp_molesworth_suppressed_modifier:0: "莫尔斯沃斯报告被审查"
+ 
+#law already changed by time of molesworth event approval
+afp_convict_events.4.d2:0: "他们发现罪犯流放和劳役的做法效率低下且存在道德问题，因此向殖民地办公室建议改革。然而，在这份通讯跨海抵达时，我们已经终止了这种做法。"
+afp_convict_events.4.f2:0: "“流放不仅仅在促成罪犯道德改造方面效率低下；它在使那些因偶然情况而非真正邪恶本性被诱入犯罪的人堕落方面效率很高。”"
+
+afp_convict_events.4.t:0: "比奇报告"
+afp_convict_events.4.d:0: "比奇1822年关于罪犯流放的报告重新流通，越来越受欢迎。该报告支持继续实行该制度，并主张应将罪犯进一步隔离于城镇设施之外，将他们送往更远的内陆地区。报告还认为，赦免和休假通行证应更难获得。"
+afp_convict_events.4.f:0: "“我们不应以自由或宽大来奖励不良行为。罪犯劳役应以增加锁链帮的形式，在远离社会的地方得到更好的控制，他们可以在那里通过支持边缘地区日益增长的农业部门来赎罪。”"
+afp_convict_events.4.a:0: "他说得有道理……"
+afp_convict_events.4.b:0: "资助反宣传！"
+afp_bigge_modifier:0: "比奇报告卷土重来"
+afp_sponsor_antitransport_modifier:0: "资助反流放主义者"
+
+afp_convict_events.100.t:0: "协助移民"
+afp_convict_events.100.d:0: "罪犯安置已被废除，但我们仍然急需劳动力。我们可以扩大协助移民的范围，尽管资助这样的项目会产生可观的成本。"
+afp_convict_events.100.f:0: "自19世纪20年代以来，移民获得前往殖民地的船票，费用将在数年内偿还。这项计划也已应用于北美和南非殖民地。然而，澳大利亚距离更远，给移民带来了更高的成本和风险。"
+afp_convict_events.100.a:0: "提供免费船票。"
+afp_convict_events.100.b:0: "提供免费船票和临时住宿。"
+afp_convict_events.100.c:0: "提供免费船票、临时住宿和协助建立农场。"
+afp_convict_events.100.e:0: "这不是办法。"
+afp_assisted_migration_cost1_modifier:0: "协助移民资金"
+afp_assisted_migration_cost2_modifier:0: "协助移民资金"
+afp_assisted_migration_cost3_modifier:0: "协助移民资金"
+afp_assisted_migration_attraction_modifier:0: "协助移民计划"
+afp_assisted_migration_landowner_modifier:0: "协助计划被否决"
+
+afp_convict_events.101.t:0: "有文化移民"
+afp_convict_events.101.d:0: "扩大后的协助移民计划比最初预想的更有效。该计划的参与者往往比留在本国的平均人口拥有更高的识字率，这反映了利用这一机会所需的技能和主动性。"
+afp_convict_events.101.f:0: "与报纸专栏作家哀叹移民人数增加，认为所有优秀人才都已前往其他殖民地不同，我们实际上接收到的移民识字率高得惊人。最近一批男性移民中，73%识字，远高于英国平均水平。这些移民带来他们的技能和新思想，必将成为我们国家智力发展的福音。"
+#[concept_literacy]
+afp_convict_events.101.a:0: "太棒了！"
+afp_convict_events.101.b:0: "战士不读书。"
+afp_literate_migrants_modifier:0: "有文化移民"
+afp_warriors_dont_read_books_modifier:0: "剑，而非笔"
+
+ afp_convict_events.7.t:0: "奇特的和解"
+ afp_convict_events.7.d:0: "[GetLawType('anz_law_penal_transportation').GetName]被禁止多年后，[GetInterestGroupVariant('ig_landowners',GetPlayer).GetName]和[GetInterestGroupVariant('ig_industrialists',GetPlayer).GetName]不情愿地接受了这不再是一个可行的立场。"
+ afp_convict_events.7.f:0: "殖民地国务卿关于有朝一日可能恢复罪犯流放的提议遭到民众的强烈反对，[concept_upper_strata]似乎已达成共识，即继续抵制反流放主义是不可行的。他们开始讨论寻找廉价劳动力的替代来源，无论是来自原住民俘虏、进口的美拉尼西亚人，还是来自东亚和南亚。"
+ afp_convict_events.7.a:0: "现在是时候团结起来并宽恕了。"
+ afp_convict_events.7.b:0: "我们不能忘记不公。"
+anz_modifier_slavery_forgotten:0: "为流放主义者平反"
+anz_modifier_slavery_forgotten_bad:0: "恶名昭彰"
+anz_modifier_slavery_whitewashing:0: "流放主义者获得平反"
+
+#wentworth supports banning slavery
+#APA, petitions GB for reforms, GB says no while convicts
+#ban convicts, push for parliament
+#wentworth changes ideology, wants slave trade? 
+#do something with emancipists v exclusives in landed voting?
+
+#idk, anyway for now: "people" push for voting (and/or?)/governance principles, GB gives negative chance
+#  once slavery banned + if governor rule (monarchy & oligarchy+), push for parliament
+
+# governor rule "enforced" while penal colony
+ afp_convict_events.8.t:0: "罪犯自治？"
+ afp_convict_events.8.d:0: "[ROOT.GetCountry.GetOverlord.GetAdjective]当局正在抵制地方争取自治的努力，声称尽管[ROOT.GetCountry.GetNameNoFormatting]是一个@slaves! 流放地，但总督的严密控制被认为是必要的。"
+ afp_convict_events.8.f:0: "尽管通常互相反对，一些倡导前罪犯权利的“解放主义者”和倡导自由定居者及本地出生者权利的“自由移民”已携手合作，共同开辟一条通往自治的道路。"
+ afp_convict_events.8.a:0: "不幸。"
+ afp_convict_events.8.b:0: "那我们最好赶紧行动！"
+ governor_needed_while_convicts:0: "殖民当局坚持总督控制"
+ governor_needed_while_convicts_fastafboi:0: "冲破阻力"
+
+# self governance desire after slavery banned
+ afp_convict_events.9.t:0: "澳大利亚爱国协会"
+ afp_convict_events.9.d:0: "澳大利亚爱国协会不再是@slaves! 流放地，由[SCOPE.sCharacter('wentworth_scope').GetLastName]领导的该协会已在新的[ROOT.GetCountry.GetNameNoFormatting]中重新推动自治。"
+ afp_convict_events.9.f:0: "“每一个没有自由政府的社会，都缺乏人身和财产的安全，而这种安全已被证明是个人努力的主要动力，也是社会大厦能够稳固持久地安宁的唯一基础。”\n——威廉·温特沃斯，1819年。"
+ afp_convict_events.9.a:0: "我们想要一个类似[SCOPE.sCountry('gbr_scope').GetName]的政府！"
+ afp_convict_events.9.b:0: "我们想要一个类似[SCOPE.sCountry('usa_scope').GetName]的政府！"
+ #afp_convict_events.9.c:0 "We are still best served by a Governor!"
+anz_parliament_constitution_wanted:0: "议会运动"
+anz_presidential_constitution_wanted:0: "总统制运动"
+
+# MOVEMENTS
+anz_antitransportation:0: "反流放"
+
+# MISC
+
+anz_penal_transportation_effect:0: "接收@slaves! 罪犯运输"
+anz_penal_transportation_effect_desc:0: "每#v 3#!个月，我们的一个[GetCulture('australian').GetName] [concept_homeland]邦会收到一批[GetCulture('british').GetName]、[GetCulture('irish').GetName]或[GetCulture('scottish').GetName] [GetPopType('slaves').GetName]。"
+
+# MESSAGES
+ast_feed_group:0: "澳大利亚通知"
+
+notification_anz_convict_ship_arrived_generic_name:0: "新罪犯抵达[SCOPE.sState('anz_convict_ship_arrives_state_scope').GetStateRegion.GetName]"
+
+notification_anz_convict_ship_arrived_generic_desc:0: "一批新罪犯已从母国被运送过来，通过体力劳动服刑。他们的到来令一些当地的自由定居者感到不安。"
+
+notification_anz_convict_ship_arrived_generic_tooltip:0: "#header $notification_anz_convict_ship_arrived_generic_name$#!\n$TOOLTIP_DELIMITER$\n$notification_anz_convict_ship_arrived_generic_desc$"

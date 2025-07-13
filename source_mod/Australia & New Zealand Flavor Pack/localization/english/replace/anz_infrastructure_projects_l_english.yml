@@ -1,0 +1,47 @@
+﻿l_english:
+
+#for misc infrastructure projects
+
+# Fremantle Harbor Development
+
+#Decision
+anz_fremantle_jetty_decision:0 "Build Fremantle Long Jetty"
+anz_fremantle_jetty_decision_desc:0 "A limestone bar blocks the port's access to the Swan River; until we have technology to remove it, we could extend the jetty in to the open sea."
+
+anz_fremantle_harbour_decision:0 "Develop Fremantle Harbor"
+anz_fremantle_harbour_decision_desc:0 "Fremantle's port access to the Swan River estuary is blocked by a limestone bar and sand shoals. We could use explosives to clear the bar."
+
+## JOURNAL
+
+#LONG JETTY
+je_anz_fremantle_jetty:0 "Fremantle Long Jetty"
+je_anz_fremantle_jetty_reason:0 "Fremantle is an important maritime centre for Western Australia, serving as the region's point of access for trade and communication. However, the port settlement is blocked from the mouth of the Swan River estuary by a limestone bar, preventing passage for sea-going vessels.\n\nDue to current limitations, we cannot yet remove the bar, but we can build a long jetty in to the open ocean that barges can transport cargo to and from. The current jetty is only 15 ft wide and 750 ft long. The plan is to extend the jetty by 2,500 ft so that up to 8 large ships can be facilitated at once.\n\nEvery month#v  1#! progress is made by default."
+je_anz_fremantle_jetty_button:0 "Hasten Construction"
+je_anz_fremantle_jetty_button_desc:0 "By expending more of our funds and with a little government direction, we can encourage the public works to make#v  1#! more progress each month for#v  6 months#!.\n\nThis has a#b  1 year#! cooldown."
+anz_fremantle_jetty_costs:0 "Long Jetty Construction"
+je_anz_fremantle_jetty_goal:0 "24 Progress has completed"
+je_fremantle_jetty_button_possible:0 "Construction has not been quickened within the past year"
+anz_fremantle_jetty_construction_costs_money:0 "Encouraging Jetty Construction"
+anz_fremantle_jetty_construction_costs_authority:0 "Encouraging Jetty Construction"
+
+#HARBOUR
+je_anz_fremantle_harbour:0 "Fremantle Harbour"
+je_anz_fremantle_harbour_reason:0 "Fremantle is an important maritime centre for Western Australia, serving as the region's point of access for trade and communication. However, the port settlement is blocked from the mouth of the Swan River estuary by a limestone bar, preventing passage for sea-going vessels.\n\nBy using explosives, we could blast the bar away and begin works on developing a worthy harbour.\n\nEvery month#v  1#! progress is made by default."
+je_anz_fremantle_harbour_button:0 "Hasten Construction"
+je_anz_fremantle_harbour_button_desc:0 "By expending more of our funds and with a little government direction, we can encourage the public works to make#v  1#! more progress each month for#v  6 months#!.\n\nThis has a#b  1 year#! cooldown."
+anz_fremantle_harbour_costs:0 "Fremantle Harbour Construction"
+je_anz_fremantle_harbour_goal:0 "48 Progress has completed"
+je_fremantle_harbour_button_possible:0 "Construction has not been quickened within the past year"
+anz_fremantle_harbour_construction_costs_money:0 "Encouraging Harbour Construction"
+anz_fremantle_harbour_construction_costs_authority:0 "Encouraging Harbour Construction"
+
+##EVENTS
+
+# Jetty complaints
+
+anz_ast_infrastructure.1.t:0 "Fremantle Jetty"
+anz_ast_infrastructure.1.d:0 "Sailors frustrated with Fremantle's port amenities have made their displeasure known across their travels, harming our reputation as a place of commerce."
+anz_ast_infrastructure.1.f:0 ""We entered and fought against putting the vessel alongside jetty to discharge. It is a terrible place. No place to put a vessel. No shelter whatever. All the ships have to lay and discharge at the wharf or pay lighterage... It is blowing a gale from the SW ... and takes all our time to hold her... She had done considerable damage to herself.... It is certainly the worst place I or anyone else ever saw. No place to send a ship of this size... Any man who would come or send a ship a second time is a damned ass."
+anz_ast_infrastructure.1.a:0 "We need to do something!"
+anz_ast_infrastructure.1.a_tt:0 "Fremantle developed almost immediately alongside Perth as a port town. However, Fremantle's access to the Swan River estuary is blocked by a limestone bar, preventing access of sea-going vessels. Instead, vessels have to dock alongside the jetty in open-sea and have to transfer cargo between different sized vessels to and from shore.\n\n#italic (You will need to make a 'decision' to upgrade the port's capabilities).#!"
+anz_fremantle_jetty_complaints_modifier:0 "Fremantle Port Reputation"

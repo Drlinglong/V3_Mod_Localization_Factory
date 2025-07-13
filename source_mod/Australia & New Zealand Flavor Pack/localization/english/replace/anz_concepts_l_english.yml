@@ -1,0 +1,45 @@
+﻿l_english:
+
+concept_frontier_wars_relations:0 "Indigenous Relations"
+concept_frontier_wars_relations_desc:0 "A measure of your average standing with Indigenous Australians."
+
+concept_burke_supplies:0 "Supply"
+concept_burke_supplies_desc:0 "Supplies determine how long the expedition members can last before dying. 1 supply is consumed upon each stage of [concept_burke_progress] of the expedition. Supplies can be gained or lost through event outcomes."
+
+concept_burke_progress:0 "Progress"
+concept_burke_progress_desc:0 "9 stages of progress are needed to complete Burke's expedition. These stages represent notable checkpoints along the journey to the Gulf of Carpentaria and back to [GetGlobalVariable('anz_vic_state').GetState.GetCityHubName]. 1 [concept_burke_supplies] is consumed upon each stage of progress."
+
+concept_dominion:0 "Dominion"
+ concept_dominion_desc:1 "[Concept('concept_recognized_power','$concept_recognized_powers$')] may turn a weaker [concept_country] into their $concept_dominion$. A $concept_dominion$ is a more autonomous [concept_subject] type that are able to start their own [Concept('concept_diplomatic_play','$concept_diplomatic_plays$')] and are not forced to join their [Concept('concept_overlord','$concept_overlord_possessive$')] [Concept('concept_war','$concept_wars$')]. They must pay #v 20%#! of their [concept_treasury] income to their $concept_overlord$ each week."
+
+#using variant without British references because cannot prevent non-British 'colonial' countries becoming these subject types without issues
+
+concept_anz_colony:0 "Crown Colony"
+#concept_anz_colony_desc:0 "A colony whose administration is controlled by the British Crown, represented by a governor. A Crown Colony is a semi-autonomous [concept_subject] type that are able to start their own [Concept('concept_diplomatic_play','$concept_diplomatic_plays$')], but are forced to join their [Concept('concept_overlord','$concept_overlord_possessive$')] [Concept('concept_war','$concept_wars$')]. They must pay #v 25%#! of their [concept_treasury] income to their $concept_overlord$ each week.\n\n#ITALIC Part of the Australia & New Zealand Flavour Pack.#!"
+
+concept_anz_colony_desc:0 "A colony whose administration is controlled by the Crown, represented by a governor. A Crown Colony is a semi-autonomous [concept_subject] type that are able to start their own [Concept('concept_diplomatic_play','$concept_diplomatic_plays$')], but are forced to join their [Concept('concept_overlord','$concept_overlord_possessive$')] [Concept('concept_war','$concept_wars$')]. They must pay #v 25%#! of their [concept_treasury] income to their $concept_overlord$ each week.\n\n#ITALIC Part of the Australia & New Zealand Flavour Pack.#!"
+
+concept_anz_commonwealth_realm:0 "Commonwealth Realm"
+#concept_anz_commonwealth_realm_desc:0 "The British Commonwealth of Nations [concept_subject] type are autonomous communities within the British Empire, equal in status though united by a common allegiance to the Crown. [concept_anz_commonwealth_realm] are able to start their own [Concept('concept_diplomatic_play','$concept_diplomatic_plays$')] and are not forced to join their [Concept('concept_overlord','$concept_overlord_possessive$')] [Concept('concept_war','$concept_wars$')]. They must pay #v 1%#! of their [concept_treasury] income to their $concept_overlord$ each week.\n\n#ITALIC Part of the Australia & New Zealand Flavour Pack.#!"
+
+concept_anz_commonwealth_realm_desc:0 "The Commonwealth of Nations [concept_subject] type are autonomous communities, equal in status though united by a common allegiance to the Crown. [concept_anz_commonwealth_realm] are able to start their own [Concept('concept_diplomatic_play','$concept_diplomatic_plays$')] and are not forced to join their [Concept('concept_overlord','$concept_overlord_possessive$')] [Concept('concept_war','$concept_wars$')]. They pay #v none#! of their [concept_treasury] income to their $concept_overlord$.\n\n#ITALIC Part of the Australia & New Zealand Flavour Pack.#!"
+
+subject_type_commonwealth_no_icon:0 "Commonwealth Realm"
+#concept_commonwealth_desc:0 "The British Commonwealth of Nations [concept_subject] type are autonomous communities within the British Empire, equal in status though united by a common allegiance to the Crown."
+
+concept_commonwealth_desc:0 "The Commonwealth of Nations [concept_subject] type are autonomous communities, equal in status though united by a common allegiance to the Crown."
+
+######
+
+concept_anz_men_of_capital:0 "Men of Real Capital"
+concept_anz_men_of_capital_desc:0 "Refers to [GetPopType('aristocrats').GetName] and [GetPopType('capitalists').GetName] as members of the#b [GetInterestGroupVariant('ig_landowners',GetPlayer).GetNameWithCountryVariant]#! and#b [GetInterestGroupVariant('ig_industrialists',GetPlayer).GetNameWithCountryVariant].#!\n\n#ITALIC In 1819, royal commissioner John Bigge was appointed to examine the colony of New South Wales to determine how far the expanding colony could be "made adequate to the Objects of its original Institution", which were understood to be purely a penal colony. Bigge extensively praised#b  John Macarthur#! and advocated for his policies of providing large assignments of @slaves! convicts to#v  'men of real capital'#! in order to labour upon their sheep stations.\n\nBigge's reports in 1822-23 criticised Governor Macquarie's emancipist policies and outlined that the concentration of convicts in the employ of the government in [GetGlobalVariable('anz_nsw_state').GetState.GetCityHubName] was indulgent, expensive and enabled convicts to readily access alcohol and entertainment.\n\nBigge recommended that the convicts have their usual seven year sentences increased and be mostly assigned as cheap labour to#b  wealthy land-holders#! in more regional areas. He wrote that convicts in the employ of the government was unnecessary and too costly, while assigning them to#b  poor settlers#! was 'very pernicious'.#!" 
+
+#nvm useless concepts dont access scopes :(
+concept_central_indo_pacific:0 "Central Indo-Pacific" #asia-pacific might be better
+concept_central_indo_pacific_desc:0 "Comprises the [concept_strategic_region] of Oceania and Indonesia."
+
+concept_anz_responsible_govt:0 "responsible government"
+concept_anz_responsible_govt_desc:0 "A concept of government embodying the Westminster system principle of parliamentary accountability. In this system, for a party to remain in executive control of government, they must maintain the support of a majority of the Members of Parliament. When there is a bicameral system of an upper and lower house, the government is more responsible to the lower house as it usually has more members and are directly elected, thus strengthening the connection between the people and the government.\n\nAustralia's colonies were initially ruled by autocratic governers appointed by the Monarch. Wanting to maintain close control over nascent colonies while also not being inflexible to the local will, the first step toward responsible government was made in 1823 with the establishment of the Legislative Council in New South Wales, whose role was to advise the Governor. Over time this council and their powers would evolve."
+
+concept_anz_repugnancy:0 "Repugnancy"
+concept_anz_repugnancy_desc:0 "A legal concept referring to a contradiction in the same doccument. In English law, depending on the case, the court will rule in favor of the earlier statement.\n\nAs a colony, we have inherited and are responsible to much of English law. The application and criterion of what is repugnant to English law is also often vague and influenced by political factors. While we are a non-[concept_anz_commonwealth_realm] [concept_subject] of Great Britain, we will need to cooperate with them to deal with matters of repugnancy."

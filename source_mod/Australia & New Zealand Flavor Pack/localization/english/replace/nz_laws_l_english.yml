@@ -1,0 +1,6 @@
+﻿l_english:
+ law_traditional_mana_whenua: "Traditional Mana Whenua"
+ law_traditional_mana_whenua_desc: "Although [GetPopType('aristocrats').GetName] benefit the most from the produce of the land, all other non-enslaved employees including [GetPopType('laborers').GetName] and [GetPopType('peasants').GetName] also maintain some [Concept('concept_ownership_share','$concept_ownership_shares$')].\n\nLand and its proceeds are owned communally by hapū, with use governed by customary principles of take whenua."
+
+ pm_hapu_communal_ownership: "Hapū Communal Ownership"
+ pm_hapu_communal_ownership_subsistence: "Hapū Communal Ownership"

@@ -1,0 +1,67 @@
+﻿l_english:
+#Journal
+
+anz_je_aushungry:0 "The Australia-Hungary Question"
+anz_je_aushungry_reason:0 "Our bold and audacious claim over Hungary has raised eyebrows worldwide. Should we succeed, this pursuit promises to elevate our standing in the European pedigree. Until then, our diplomats will need to work to win international support for our claims. The Australia-Hungary issue is truly a defining question of our age."
+je_anz_aushungary_claims:0 "Seek International Recognition"
+je_anz_aushungary_claims_desc:0 "While the truth of an Australian-Hungarian union may be obvious to the enlightened, others will need help to see the light. Gaining international recognition of this righteous mission will greatly assist us bringing peace and prosperity to Hungary."
+je_anz_button_hungary_claims_tt:0 "Our Hungarian claims are#b  not#! recognised."
+anz_hungary_claims_recognition:0 "Hungarian Claims Recognised"
+anz_hungary_subject_complete_tt:0 "Hungary is our subject and owns all of the above [concept_state_region]#o s#!"
+
+anz_je_aushungry2_boogaloo:0 "The Austro Pretender"
+anz_je_aushungry2_boogaloo_reason:0 "The Austrians are committed to pushing us out and are conducting raids against us. Their flagrant open challenge to our righteous place can only mean one thing:\nThe age of the Golden Eagle is over. The time of the Emu has come.\n\n@information! Every month without an Austrian [concept_truce] and while not at war with Austria, our neighboring states gain#r  [ROOT.ScriptValue('anz_austria_raids_value')]#! [concept_devastation]."
+je_anz_austria_claims:0 "Push Our Claims"
+je_anz_button_austria_claims_tt:0 "We have#b  not#! pushed our claim on Austria."
+je_anz_austria_claims_desc:0 "The world is subject to [ROOT.GetCountry.GetNameNoFormatting], mate.#italic  A.E.I.O.U.#!"
+anz_asthun2_fail_tt:0 "[ROOT.GetCountry.GetName] controls#b  no#! [GetCulture('hungarian').GetName] or [GetCulture('south_german').GetName] [concept_homeland] [concept_state]#o s#!"
+je_anz_austria_raiddefence:0 "Issue Raid Defences"
+je_anz_austria_raiddefence_desc:0 "Through a coordinated mixed approach of increasing patrols, forward scouting and defensive equiptment, we can slow the rate of [concept_devastation] enough that it should decrease over time."
+je_anz_austria_counterraid:0 "Counter-Raid"
+je_anz_austria_counterraid_desc:0 "Sometimes you need to fight fire with fire. However, while Austria has garnered some revanchist sympathy from the international community who look the other way at this otherwise cowardly and barbaric form of warfare,#red  our own counter-raids will not be viewed in the same light, increasing our [concept_infamy].#!"
+je_anz_button_austria_raiddefence_tt:0 "Has#b  not#! issued raid defences."
+je_anz_button_austria_counterraid_tt:0 "Has#b  not#! counter-raided within the past year."
+je_anz_austria_raiddefence_deactivate:0 "Halt raid defences"
+je_anz_austria_raiddefence_deactivate_desc:0 "There is a time and place for everything and now is not a time for these anti-raiding procedures. Though if we have no other means of preventing Austrian raids, our [concept_devastation] will grow."
+je_anz_button_austria_raiddefence_tt2:0 "Has issued raid defences."
+anz_raiddefence_var_tt:0 "Reduces the monthly [concept_devastation] caused by Austria's raids on our neighboring states by#v  1#!"
+anz_raiddefence_var_tt2:0 "We will no longer reduce the monthly [concept_devastation] caused by Austria's raids on our neighboring states by#v  1#!"
+anz_austria_raiddefences:0 "Defending Raids"
+anz_austria_counterraid:0 "Counter-raiding
+
+#Events
+
+anz_asthun.1.t:0 "Australia... Hungary?"
+anz_asthun.1.d:0 "A well-meaning but geographically challenged bureaucrat stumbles upon a document of "Austro-Hungarian" lands. Mistaking "Austro" for "Australian", he pens a report suggesting Australia holds legitimate claims over Hungary, sparking a wave of unexpected fervor."
+anz_asthun.1.f:0 ""Treaty of Karlowitz... Passarowitz... Austro-Hungarian... Austro... Australia?! We have claims to Hungary?! This could be the perfect opportunity to make our mark and show the world what we are made of! Just think—Australia reaching out to those vibrant Hungarian lands, bringing prosperity and progress! I can already envision the accolades that will come from this bold move!""
+anz_asthun.1.a:0 "Laugh it off as a bureaucratic blunder."
+anz_asthun.1.b:0 "Rightful Australian clay!"
+
+anz_asthun.2.t:0 "Austro-Hungarian Empire"
+anz_asthun.2.d:0 "[ROOT.GetCountry.GetName] has boldly secured its rightful claims in Hungary, cementing a place in the heart of Europe. [GetCulture('australian').GetName]#yellow s#! now look proudly upon their distant yet destined lands."
+anz_asthun.2.f:0 ""Standing guard here in Pest feels like living in a strange dream. Never thought I'd be half a world away from the red sands of home, watching over villages that can’t even pronounce “Australia". "Austria" they keep saying... how hard is it to remember the "al"? Sure, they stare and mutter, but soon enough, they’ll learn our name.""
+anz_asthun.2.a:0 "Everything is as it should be."
+anz_asthun.2.b:0 "This achievement calls for an update to our image!"
+anz_customise_direction_tt:0 "\n#yellow We can adjust our image at any time from the decisions menu#!"
+anz_asthun2_incorp:0 "Every owned [GetCulture('hungarian').GetName] [concept_homeland] [concept_state] becomes an [concept_incorporated_state]"
+anz_hungary_fast_incorporation:0 "Bureaucratic Overtime"
+
+anz_asthun.3.t:0 "The Austrian Pretender"
+anz_asthun.3.d:0 "Bristling at our reclamation of Hungary as a deep affront to their heritage, [SCOPE.sCountry('aus_scope').GetName] has been conducting border raids, wreaking [concept_devastation] in an open challenge to our place in Europe."
+anz_asthun.3.f:0 ""What madness is this—Anglo bastard convicts daring to assert themselves here? My blood boils with outrage and confusion; how can anyone mistake our proud Austria for them? It is a scandal that they would lay claim to our land; with fierce desire we will push out these begotten sons-of-criminals and restore Europe!""
+anz_asthun.3.a:0 "Europe ain't big enough for Emus and mutated Eagles."
+anz_asthun.3.b:0 "Offer [GetCulture('south_german').GetName] [concept_homeland]#o s#! as appeasement."
+anz_austria_appeasement_fails:0 "#u Appeasement Fails#!"
+anz_austria_appeasement_works:0 "#u Appeasement Succeeds#!"
+
+anz_asthun.4.t:0 "The Golden Emu"
+anz_asthun.4.d:0 "Having utterly dismantled Austrian resistance, [ROOT.GetCountry.GetName] rises triumphant, cementing its rightful place in the heart of Europe.\n\nA new and superior bird joins the prestigious ranks of European heraldry!"
+anz_asthun.4.f:0 ""Instead of an Eagle, you would have an Emu, not flying away but grounded and indomitable as the Outback. Hardy as the Bush and stronger than the foundations of Blue Moutanins! All shall heed the thunder from down under!""
+anz_asthun.4.a:0 "As it should be."
+anz_asthun_golden_emu:0 "The Golden Emu"
+anz_asthun_victory_over_austria:0 "Complete Victory over Austria"
+
+anz_asthun.5.t:0 "The Flightless Bird" #ironic icarus
+anz_asthun.5.d:0 "Despite our valiant ambitions, it is not yet time for an Australia-Hungary.\n\nSome say it is ironic that a flightless bird could still fly too close to the sun..."
+anz_asthun.5.f:0 ""Who’ll wear the beaten colours, with hands and pockets clean?\nI wore the beaten colours since I was seventeen\nI wore them up, and wore them down, Outback and across the sea—\nWho’ll wear the beaten colours, and wear them home with me?""
+anz_asthun.5.a:0 "We were Australia-Hungary, but we weren't Australia-Hungry enough..."
