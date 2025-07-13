@@ -1,0 +1,6 @@
+﻿l_simp_chinese:
+ law_traditional_mana_whenua:  "传统土地权威"
+ law_traditional_mana_whenua_desc:  "尽管[GetPopType('aristocrats').GetName]从土地产出中获益最多，所有其他非奴隶雇员，包括[GetPopType('laborers').GetName]和[GetPopType('peasants').GetName]，也保有一定的[Concept('concept_ownership_share','$concept_ownership_shares$')]。\n\n土地及其收益由哈普（hapū）公社拥有，其使用受塔克韦努阿（take whenua）习惯法原则管辖。"
+
+ pm_hapu_communal_ownership:  "哈普共有制"
+ pm_hapu_communal_ownership_subsistence:  "哈普共有制"

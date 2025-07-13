@@ -1,0 +1,18 @@
+﻿l_simp_chinese:
+
+# Journal Entries
+ je_expand_united_tribes:0  "“对南方部落的邀请”"
+ je_expand_united_tribes_reason:0  "“在1835年新西兰独立宣言中，新成立的新西兰联合部落诚挚地邀请其余毛利人部落摒弃前嫌，加入联合部落的邦联。这将阻止部落间的战争，促进共同福祉，并提升毛利人在国际舞台上的地位。”"
+
+
+# Events
+ unt_controls_northland:0  "“[SCOPE.sCountry('expand_unt_unt').GetNameNoFlag]控制着[SCOPE.sState('expand_unt_northland').GetStateRegion.GetName]”"
+ unt_controls_waikato:0  "“[SCOPE.sCountry('expand_unt_unt').GetNameNoFlag]控制着[SCOPE.sState('expand_unt_waikato').GetStateRegion.GetName]”"
+ unt_controls_east_cape:0  "“[SCOPE.sCountry('expand_unt_unt').GetNameNoFlag]控制着[SCOPE.sState('expand_unt_east_cape').GetStateRegion.GetName]”"
+ unt_controls_manawatu:0  "“[SCOPE.sCountry('expand_unt_unt').GetNameNoFlag]控制着[SCOPE.sState('expand_unt_manawatu').GetStateRegion.GetName]”"
+ unt_controls_south_island:0  "“[SCOPE.sCountry('expand_unt_unt').GetNameNoFlag]控制着[SCOPE.sState('expand_unt_south_island').GetStateRegion.GetName]”"
+ 
+ united_maoridom.1.t:0  "“毛利人邦联”"
+ united_maoridom.1.d:0  "“我们已将新西兰的所有部落纳入[ROOT.GetCountry.GetName]麾下。我们的群岛上的所有iwi将第一次共同面对世界。”"
+ united_maoridom.1.f:0  "“我们作为一个民族团结一心，被一条贯穿我们国家肌理的共同纽带维系着。这是我们whakapapa的纽带，这条纽带将我们与祖先以及养育我们的土地连接起来。我们已经作为一个整体结合在一起，众多部落联合一心。尽管巨大的斗争等待着我们，我们仍将巍然屹立，如同在风暴中坚韧不拔的tōtara，在邦联中，我们人民的mana将永存。”"
+ united_maoridom.1.a:0  "“如今[ROOT.GetCountry.GetName]终于真正地团结起来了。”"

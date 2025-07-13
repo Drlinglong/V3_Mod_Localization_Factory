@@ -1,0 +1,49 @@
+﻿l_simp_chinese:
+
+#events
+
+#anz_election_events.1.t:0 ""
+#anz_election_events.1.d:0 ""
+#anz_election_events.1.f:0 ""
+#anz_election_events.1.a:0 ""
+
+#riot
+anz_election_events.1.t:0  "首次选举骚乱"
+anz_election_events.1.d:0  "在[ROOT.GetCountry.GetName]首次选举的黎明时分，一支500人的暴徒队伍手持棍棒和栏杆涌上街头。[SCOPE.sCharacter('landowner_leader_first_election').GetLastName]的支持者遭到袭击，他们的家园和生意被砸毁，导致一些人惊恐逃离，不敢投票。"
+anz_election_events.1.f:0  "\"当我策马冲向暴徒首领时，他手下的一个人冲上来，用棍子猛击我的马的下颚；马立刻变得无法控制，带着我飞奔而去，撞倒了一名妇女。我刚停下马去照看那名妇女，就被暴徒包围了，我的生命多次受到威胁；他们说要把我的脑浆打出来。随后，骑警们努力保护我。\""
+anz_election_events.1.a:0  "起诉暴徒！"
+anz_election_events.1.b:0  "随它去吧。"
+anz_first_election_riot_enquiry:0  "选举骚乱起诉"
+anz_first_election_riot_clemency:0  "选举骚乱赦免"
+
+#secret ballot - advance
+anz_election_events.2.t:0  "秘密投票"
+anz_election_events.2.d:0  "我们的选举民主化进程正在加速。我们可以利用这一点，将秘密投票这一[GetIdeology('ideology_radical').GetName]们长期以来的目标纳入选举改革法案。\n\n目前，投票是公开进行的，充斥着恐吓和贿赂。"
+anz_election_events.2.f:0  "#ITALIC “十年内，秘密投票将在那些殖民地强制实行……\n亲爱的曾祖母，别启航，别启航；\n再等一个世纪，福利将全面普及，\n你将不再扮演殖民者角色。\n投票亭将是祷告室。”"
+anz_election_events.2.a:0  "投票亭将是祷告室！"
+anz_election_events.2.b:0  "最好不要得寸进尺。"
+anz_debating_secret_ballot:0  "辩论秘密投票"
+anz_notdebating_secret_ballot:0  "辜负宪章派"
+
+#secret ballot - stall/debate
+anz_election_events.201.t:0  "秘密投票"
+anz_election_events.201.d:0  "[GetIdeology('ideology_radical').GetName]#yellow s#!打断了辩论，提出了秘密投票的问题。目前，投票是公开进行的，充斥着恐吓和贿赂。"
+anz_election_events.201.f:0  "许多[SCOPE.sCountry('gbr_scope').GetName]宪章运动的追随者已移居到[ROOT.GetCountry.GetNameNoFormatting]，传播他们的理想和群众行动技巧。他们以1838年《人民宪章》命名，呼吁进行六项民主改革：平等投票权、取消议员财产资格限制、议员薪酬、平等代表选区、年度选举以及#b 秘密投票#!。"
+anz_election_events.201.a:0  "不要在改革中纳入秘密投票。"
+anz_election_events.201.b:0  "投票亭将是祷告室！"
+
+#australian ballot 
+anz_election_events.3.t:0  "澳大利亚式投票"
+anz_election_events.3.d:0  "随着我们的民主选举改革法案通过，[ROOT.GetCountry.GetNameNoFormatting]成为世界上第一个立法实行秘密投票的国家！\n\n这项被称为“澳大利亚式投票”的制度，使世界各地的[GetIdeology('ideology_radical').GetName]#yellow s#!将我们视为典范。"
+anz_election_events.3.f:0  "隐私当然是澳大利亚式投票的关键要素；进入一个投票亭，任何胁迫都无法辨识其目标。但同时，由国家决定哪些候选人出现在选票上，并将其作为唯一有效的选举材料提供给选民，这也是一项创新。"
+anz_election_events.3.a:0  "我们站在巨人的肩膀上创新。"
+anz_secret_ballot_pioneer:0  "秘密投票先驱"
+australian_ballot_inspire_others_tt:0  "每一个拥有欧洲[concept_cultural_heritage_trait]并实行选举投票的国家，其国民对[GetLawType('law_universal_suffrage').GetName]和[GetLawType('law_protected_speech').GetName]的支持度都会有所提升。"
+
+#australian ballot (news of secret ballot)
+anz_election_events.301.t:0  "澳大利亚式投票"
+anz_election_events.301.d:0  "[SCOPE.sCountry('secret_ballot_pioneer_scope').GetName]全球首创“秘密投票”立法的消息，鼓舞了我们的[GetIdeology('ideology_radical').GetName]#yellow s#!，推动在[ROOT.GetCountry.GetNameNoFormatting]进行类似的民主改革。"
+anz_election_events.301.f:0  "澳大利亚人继承了[SCOPE.sCountry('gbr_scope').GetName]宪章运动的理想，为世界树立了这些理想可能实现的榜样。宪章派以1838年《人民宪章》命名，采用群众行动技巧，呼吁进行六项民主改革：平等投票权、取消议员财产资格限制、议员薪酬、平等代表选区、年度选举以及#b 秘密投票#!。"
+anz_election_events.301.a:0  "鼓励这种范例！"
+anz_election_events.301.b:0  "绝不。"
+anz_secret_ballot_global_encourage:0  "鼓励澳大利亚式投票"

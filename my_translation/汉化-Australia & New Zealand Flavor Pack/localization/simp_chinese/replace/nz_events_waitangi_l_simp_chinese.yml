@@ -1,0 +1,198 @@
+﻿l_simp_chinese:
+ 
+ 
+ # player hints
+ 
+ waitangi_events.hint.nzl.nzc:0  "#BOLD #YELLOW 玩家提示:#!#!\n此选项最终将允许你扮演#BOLD #BLUE 新西兰#!#!\n此选项最终将允许你扮演#BOLD #RED 新西兰公司#!#!"
+ waitangi_events.hint.nzc.fra:0  "#BOLD #YELLOW 玩家提示:#!#!\n此选项最终将允许你扮演#BOLD #RED 新西兰公司#!#!\n#BOLD #BLUE 法国#!#!可能会利用这一点"
+ waitangi_events.hint.unt.fra:0  "#BOLD #YELLOW 玩家提示:#!#!\n此选项将取消怀唐伊事件树，并让#BOLD #GREEN 联合部落#!#!保持独立。如果你改变主意，可以通过决议选项卡发送条约。\n#BOLD #BLUE 法国#!#!可能会利用这一点"
+ waitangi_events.hint.nzl.fra:0  "#BOLD #YELLOW 玩家提示:#!#!\n此选项最终将允许你扮演#BOLD #BLUE 新西兰#!#!\n#BOLD #BLUE 法国#!#!可能会利用这一点"
+ waitangi_events.hint.nzl:0  "#BOLD #YELLOW 玩家提示:#!#!\n此选项最终将允许你扮演#BOLD #BLUE 新西兰#!#!"
+ waitangi_events.hint.unt:0  "#BOLD #YELLOW 玩家提示:#!#!\n此选项将试图使#BOLD #GREEN 联合部落#!#!成为傀儡"
+ waitangi_events.hint.nzl.annex.nzc.sov:0  "#BOLD #YELLOW 玩家提示:#!#!\n此选项最终将允许你扮演#BOLD #BLUE 新西兰#!#!\n此选项将吞并#BOLD #RED 新西兰公司#!#!\n我们的殖民地将对任何未签署条约的部落宣布主权"
+ waitangi_events.hint.nzl.annex.nzc:0  "#BOLD #YELLOW 玩家提示:#!#!\n此选项最终将允许你扮演#BOLD #BLUE 新西兰#!#!\n此选项将吞并#BOLD #RED 新西兰公司#!#!"
+ waitangi_events.hint.nzl.sov:0  "#BOLD #YELLOW 玩家提示:#!#!\n此选项最终将允许你扮演#BOLD #BLUE 新西兰#!#!\n我们的殖民地将对任何未签署条约的部落宣布主权"
+ 
+ waitangi_events.hint.nzl2:0  "此选项最终将允许你扮演#BOLD #BLUE 新西兰#!#!"
+ waitangi_events.hint.nzc2:0  "此选项最终将允许你扮演#BOLD #RED 新西兰公司#!#!"
+ waitangi_events.hint.unt2:0  "此选项将取消怀唐伊事件树，并让#BOLD #GREEN 联合部落#!#!保持独立"
+ waitangi_events.hint.unt:0  "#BOLD #YELLOW 玩家提示:#!#!\n此选项将试图使#BOLD #GREEN 联合部落#!#!成为傀儡"
+ 
+ waitangi_events.hint.fra:0  "#BOLD #BLUE 法国#!#!可能会利用此选项"
+ 
+ # notifications
+ 
+ notification_nz_iwi_accept_treaty_name:1  "[SCOPE.sCountry('treaty_reciever_scope').GetName]已签署我们的条约！"
+ notification_nz_iwi_accept_treaty_desc:0  "[SCOPE.sCountry('treaty_reciever_scope').GetName]已签署条约——他们已将主权割让给我们。\n\n天佑[Concept('concept_ruler','$RULER_TITLE_QUEEN$')]！"
+ notification_nz_iwi_accept_treaty_tooltip:0  "#header $notification_nz_iwi_accept_treaty_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nz_iwi_accept_treaty_desc$"
+
+ notification_nz_iwi_refuse_treaty_name:1  "[SCOPE.sCountry('treaty_reciever_scope').GetName]已拒绝签署我们的条约"
+ notification_nz_iwi_refuse_treaty_desc:0  "[SCOPE.sCountry('treaty_reciever_scope').GetName]已拒绝签署条约——这无疑是他们的一大失误！"
+ notification_nz_iwi_reufse_treaty_tooltip:0  "#header $notification_nz_iwi_refuse_treaty_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nz_iwi_refuse_treaty_desc$"
+ 
+ notification_nz_nsw_told_waitangi_happened_name:1  "[SCOPE.sCountry('treaty_proposer_scope').GetName]已获得[SCOPE.sCountry('treaty_reciever_scope').GetName]的主权"
+ notification_nz_nsw_told_waitangi_happened_desc:0  "[SCOPE.sCountry('treaty_reciever_scope').GetName]今日签署了一份条约，将他们的土地主权授予[SCOPE.sCountry('treaty_proposer_scope').GetName]。我们将作为该土地的临时管理者，直至决定更永久的解决方案"
+ notification_nz_nsw_told_waitangi_happened_tooltip:0  "#header $notification_nz_nsw_told_waitangi_happened_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nz_nsw_told_waitangi_happened_desc$"
+ 
+ notification_nz_other_locals_told_waitangi_happened_name:1  "[SCOPE.sCountry('treaty_proposer_scope').GetName]已获得[SCOPE.sCountry('treaty_reciever_scope').GetName]的主权"
+ notification_nz_other_locals_told_waitangi_happened_desc:0  "据报道，[SCOPE.sCountry('treaty_reciever_scope').GetName]已签署一份条约，将其主权割让给[SCOPE.sCountry('treaty_proposer_scope').GetName]。\n[SCOPE.sCountry('treaty_nsw_scope').GetName]将作为该土地的临时殖民管理者，直至决定更永久的解决方案"
+ notification_nz_other_locals_told_waitangi_happened_tooltip:0  "#header $notification_nz_other_locals_told_waitangi_happened_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nz_other_locals_told_waitangi_happened_desc$"
+ 
+ anz_waitangi_decision:0  "向毛利人发送条约"
+ anz_waitangi_decision_desc:0  "我们对新西兰感兴趣。我们可以与当地毛利部落签订条约，以巩固我们在这些岛屿上的地位。"
+ 
+ waitangi_events.101.t:0  "新西兰公司"
+ waitangi_events.101.d:0  "一项名为新西兰公司的新殖民商业冒险企业已在我国注册。"
+ waitangi_events.101.f:0  "该公司的策划者爱德华·威克菲尔德认为，通过缓慢地向定居者出售土地并集中欧洲人定居，可以避免澳大利亚殖民地发展中面临的大部分问题。他认为，这能将劳动力集中到特定区域和项目中，从而避免对奴隶或罪犯劳动力的需求，进而让地主将时间投入到更具文化修养的事业中。他的系统殖民思想是在他因绑架并与一位富裕家族的少女继承人结婚而被判入狱期间构思的……"
+ waitangi_events.101.a:0  "可能会出什么问题？"
+ 
+ waitangi_events.102.t:0  "驶向新西兰！"
+ waitangi_events.102.d:0  "[SCOPE.sCountry('treaty_company_scope').GetNameNoFlag]声称已从库克海峡的[SCOPE.sCulture('maori_people_scope').GetName]手中购买了大量土地。\n今天我们收到消息，他们已派遣船只前往那里建立正式殖民地……未经我们监督！"
+ waitangi_events.102.f:0  "他们的船只刚离开港口，我们仍有时间阻止他们建立殖民地！或者，也许我们应该亲自在那里建立殖民地……\n与此同时，我们听说#BOLD #BLUE 法国人#!#!也在密切关注这些岛屿"
+ waitangi_events.102.a:0  "我们需要保护我们的利益；向[SCOPE.sCulture('maori_people_scope').GetName]发送条约"
+ waitangi_events.102.b:0  "让他们去做，但要密切关注"
+ waitangi_events.102.c:0  "拦截他们的船只并将土地归还给原所有者"
+ #waitangi_events.102.tt1:0 "This option will seek to create our own colony in New Zealand."
+ #waitangi_events.102.tt2:0 "This option will let them establish their colony in New Zealand."
+ #waitangi_events.102.tt3:0 "You will leave New Zealand alone. "
+  
+ waitangi_events.103.t:0  "太平洋上的地狱之窟"
+ waitangi_events.103.d:0  "在过去的几年里，我国境内的欧洲人（主要来自[SCOPE.sCountry('UNT_overlord_scope').GetName]）数量有所增加，犯罪率也随之上升。我们国家窝藏的流氓数量比宇宙中任何同等面积的地方都要多；这已经失控了！"
+ waitangi_events.103.f:0  "“欧洲捕鲸者和商人正在我国境内酗酒并横行！”"
+ waitangi_events.103.a:0  "要求[SCOPE.sCountry('UNT_overlord_scope').GetNameNoFlag]控制其子民！"
+ waitangi_events.103.b:0  "尝试限制进一步移民。"
+ waitangi_events.103.c:0  "我们可以忍受。"
+ 
+ waitangi_events.104.t:0  "保护请求"
+ waitangi_events.104.d:0  "数百名我们的子民已前往新西兰寻找新机遇。对许多人来说，这种机遇是财富和贸易，但对少数恶棍而言，吸引他们的是无法无天的机会。这对[SCOPE.sCountry('treaty_reciever_scope').GetName]来说已不堪重负，他们向我们抱怨我们的子民的犯罪和放荡行为。他们已请求我们介入以管理我们不守规矩的子民。"
+ waitangi_events.104.f:0  "“[SCOPE.sCountry('treaty_reciever_scope').GetNameNoFormatting]窝藏的流氓数量比宇宙中任何同等面积的地方都要多；它已成为太平洋上的地狱之窟！”"
+ waitangi_events.104.a:0  "我们必须介入。"
+ waitangi_events.104.b:0  "这与我们无关。"
+ 
+ waitangi_events.105.t:0  "保护请求被拒！"
+ waitangi_events.105.d:0  "我们请求[SCOPE.sCountry('UNT_overlord_scope').GetName]管理其在我们土地上不守规矩的子民的请求未获回应。现在轮到我们来对付这些恶棍了。"
+ waitangi_events.105.f:0  "“[SCOPE.sCountry('treaty_reciever_scope').GetNameNoFormatting]窝藏的流氓数量比宇宙中任何同等面积的地方都要多；它已成为太平洋上的地狱之窟！”"
+ waitangi_events.105.a:0  "糟糕！"
+ 
+ waitangi_events.201.t:0  "起草条约"
+ waitangi_events.201.d:0  "我们的官员已抵达[SCOPE.sCountry('treaty_reciever_scope').GetName]，并准备开始起草条约。打开殖民地办公室的信件后，我们的官员发现他们被命令……"
+ waitangi_events.201.f:0  "国内对新西兰的未来展开了激烈辩论：掌权者希望获得更大的控制权，而人道主义运动的支持者则希望保护毛利人免受我们其他殖民地原住民所经历的遭遇。与此同时，一群毛利人已在岸边聚集，耐心等待阅读文件。"
+ waitangi_events.201.a:0  "……寻求对[SCOPE.sCountry('treaty_reciever_scope').GetNameNoFlag]的主权。"
+ waitangi_events.201.b:0  "……寻求与[SCOPE.sCulture('maori_people_scope').GetName]的更紧密合作。"
+ waitangi_events.201.tt1:0  "此选项将寻求吞并新西兰。"
+ waitangi_events.201.tt2:0  "此选项将寻求扶植新西兰为傀儡国。"
+ 
+ # hashed out as this event has been replaced. Keeping for reference
+ #waitangi_events.202.t:0 "Words and Their Meaning"
+ #waitangi_events.202.d:0 "We have completed the English draft of the treaty. However, there is doubt that the chiefs of the [SCOPE.sCountry('treaty_reciever_scope').GetName] would actually agree to signing it; the treaty proposes to annex the country and there is no way that the [SCOPE.sCulture('maori_people_scope').GetName] would agree to such terms. To ensure success, we could mistranslate the treaty's clauses instead."
+ #waitangi_events.202.f:0 "The Colonial Office wants us to seek sovereignty over the [SCOPE.sCountry('treaty_reciever_scope').GetNameNoFormatting] of New Zealand, meaning that we would assume governance over their lands. Surely they would never cede such authority over to us. But, perhaps we could twist the translation in a more favourable fashion…"
+ #waitangi_events.202.a:0 "Purposefully mistranslate the treaty." 
+ #waitangi_events.202.b:0 "Ensure that our translation is accurate."
+ #waitangi_events.202.tt1:0 "This option will likely increase the chances of the [SCOPE.sCountry('treaty_reciever_scope').GetNameNoFlag] signing the treaty."
+ #waitangi_events.202.tt2:0 "This option will likely decrease the chances of the [SCOPE.sCountry('treaty_reciever_scope').GetNameNoFlag] signing the treaty."
+ 
+ waitangi_events.202.t:0  "[SCOPE.sCulture('maori_people_scope').GetName]酋长们准备签署！"
+ waitangi_events.202.d:0  "数百名[SCOPE.sCulture('maori_people_scope').GetName]已聚集在英国驻地官员的草坪上：他们正在设宴、贸易，以及最重要的是，辩论呈交给他们的条约……"
+ waitangi_events.202.f:0  "讨论的时间比预期更长，食物和耐心都所剩无几。一些酋长正准备离开，以免来不及签署条约——我们甚至还没有完成最终文件的翻译工作！我们需要迅速行动——召集会议并准备签署条约！\n\n“如果我们再等下去，[SCOPE.sCulture('maori_people_scope').GetNameNoFormatting]酋长们就会不签署条约而离开。先生，我们需要趁热打铁。”"
+ waitangi_events.202.a:0  "快！准备签署条约！"
+ waitangi_events.202.b:0  "我们必须先完成条约的翻译！"
+ waitangi_events.202.att:0  "我们将在[SCOPE.sCulture('maori_people_scope').GetName]离开前，匆忙翻译条约的草案版本以呈递给他们。我们无法保证翻译的准确性，但至少会有更多的[SCOPE.sCulture('maori_people_scope').GetName]在此签署它"
+ waitangi_events.202.btt:0  "我们将花费更多时间来起草一份严谨的条约，并为[SCOPE.sCulture('maori_people_scope').GetName]提供准确的翻译以供签署……尽管我们预计在此期间会有许多人离开……"
+ 
+ waitangi_events.203.t:0  "在新西兰的成功！"
+ waitangi_events.203.d:0  "经过多日的讨论和辩论，[SCOPE.sCulture('maori_people_scope').GetName]酋长们已签署我们的条约，并向我们割让了主权。他们是否完全理解我们条约的意图，那是日后再议的问题了。\n\n天佑[SCOPE.sCountry('treaty_proposer_scope').GetRuler.GetPrimaryRoleTitle]！"
+ waitangi_events.203.f:0  "“这是[SCOPE.sCountry('treaty_proposer_scope').GetRuler.GetPrimaryRoleTitle][SCOPE.sCountry('treaty_proposer_scope').GetRuler.GetFirstNameNoFormatting]对你们的爱之举。[SCOPE.sCountry('treaty_proposer_scope').GetRuler.GetCustom('GetHeShe')]想向你们保证，你们将保留属于自己的一切——你们的财产、你们的权利和特权，以及你们所珍视的一切。谁知道什么时候外国势力，也许是法国，可能会试图夺走这个国家呢？这份条约对你们来说真的就像一座堡垒。”"
+ waitangi_events.203.a:0  "继续在新西兰各地传阅条约"
+ waitangi_events.203.b:0  "这就够了。将该公司并入一个新的殖民地"
+ waitangi_events.203.c:0  "这就够了。开始组建一个新的殖民地"
+ waitangi_events.203.tt:0  "条约副本将被送往新西兰各地。这可能需要大约一个月的时间才能完成"
+ 
+ waitangi_events.204.t:0  "在新西兰的失败！"
+ waitangi_events.204.d:0  "经过多日的讨论和辩论，[SCOPE.sCulture('maori_people_scope').GetName]酋长们已拒绝签署我们的条约；他们不准备向我们割让主权。或许我们可以尝试起草一份条约修订版，并提议替代此版。"
+ waitangi_events.204.f:0  "“毛利人民不想要总督！我们不是欧洲人。没错，我们卖掉了一些土地。但这个国家仍然是我们的！我们酋长管理着我们祖先的这片土地。”——里瓦，怀唐伊，1840年"
+ waitangi_events.204.a:0  "糟糕！提供条约的修订版本。"
+ waitangi_events.204.b:0  "算了；这不值得。"
+ waitangi_events.204.tt1:0  "此选项将改为寻求扶植[SCOPE.sCountry('treaty_reciever_scope').GetNameNoFlag]为傀儡国。"
+ waitangi_events.204.tt2:0  "此选项将改为正式确立我们与[SCOPE.sCountry('treaty_nzc_scope').GetNameNoFlag]的关系。"
+ 
+  # hashed out as this event has been replaced (unt cant be annexed if its a player so theres no event for that anymore). Keeping for reference
+ waitangi_events.205.t:0  "怀唐伊条约"
+ waitangi_events.205.d:0  "[SCOPE.sCountry('treaty_proposer_scope').GetName]已起草一份条约，寻求对我方土地的更大权力。他们现在已将它呈递给我们，供我们决定是否签署。"
+ waitangi_events.205.f:0  "“这是[SCOPE.sCountry('treaty_proposer_scope').GetRuler.GetPrimaryRoleTitle][SCOPE.sCountry('treaty_proposer_scope').GetRuler.GetFirstNameNoFormatting]对你们的爱之举。[SCOPE.sCountry('treaty_proposer_scope').GetRuler.GetCustom('GetHeShe')]想向你们保证，你们将保留属于自己的一切——你们的财产、你们的权利和特权，以及你们所珍视的一切。谁知道什么时候外国势力，也许是法国，可能会试图夺走这个国家呢？这份条约对你们来说真的就像一座堡垒。”"
+ waitangi_events.205.a:0  "我们是一家人：我们将签署。"
+ waitangi_events.205.b:0  "绝不：不要签署。"
+ waitangi_events.205.tt1:0  "#BOLD 这将结束你的游戏#"
+ waitangi_events.205.tt2:0  "拒绝签署后，我们想知道他们是否会带着修订版条约回来提出新的提议？"
+
+ custom_she:0  "她"
+ custom_he:0  "他"
+ 
+ waitangi_events.206.t:0  "条约"
+ waitangi_events.206.d:0  "我们已将条约传遍新西兰，并取得了一定成功。尽管有些部落拒绝签署，但我们仍已确立了在该地区的地位。"
+ waitangi_events.206.f:0  "“这是[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle][ROOT.GetCountry.GetRuler.GetFirstNameNoFormatting]对你们的爱之举。[ROOT.GetCountry.GetRuler.GetCustom('GetHeShe')]想向你们保证，你们将保留属于自己的一切——你们的财产、你们的权利和特权，以及你们所珍视的一切。谁知道什么时候外国势力，也许是法国，可能会试图夺走这个国家呢？这份条约对你们来说真的就像一座堡垒。”"
+ waitangi_events.206.a:0  "少数人的异议算得了什么？无论如何，宣布对整个新西兰拥有主权！"
+ waitangi_events.206.b:0  "我们已达成目标！"
+ waitangi_events.206.c:0  "很好！但我们目前可以保留[SCOPE.sCountry('treaty_nzc_scope').GetNameNoFlag]的完整性"
+ waitangi_events.206.tt1:0  "哦，这可能会激怒当地人。它还将吞并该地区任何多余的殖民公司。我们的政府将很快决定是否在新西兰建立一个独立的殖民地。"
+ 
+ #Deleted this event but have kept the loc in case its needed in future
+ #waitangi_events.209.t:0 "[SCOPE.sCountry('treaty_proposer_scope').GetNameNoFlag]'s Revised Treaty"
+ #waitangi_events.209.d:0 "After we declined annexation, [SCOPE.sCountry('treaty_proposer_scope').GetName] has come back to us with a revised treaty. This time they seek to formalise us as their client state. We would maintain control over our lands, but the [SCOPE.sCountry('treaty_proposer_scope').GetAdjectiveNoFlag] would have greater control over our trade and military."
+ #waitangi_events.209.f:0 ""We chiefs are the rulers and won’t be ruled over. If we were all to have a rank equal to you, that might be acceptable. But if we are to be subordinate to you, then I say get back to your ship and sail away.” –Tareha, at Waitangi 1840"
+ #waitangi_events.209.a:0 "This is better; we will sign it." 
+ #waitangi_events.209.b:0 "Why don't they understand? We will not sign."
+ #waitangi_events.209.tt1:0 "This will make us [SCOPE.sCountry('treaty_proposer_scope').GetNameNoFlag]'s puppet. We think that, afterwards, they may ask the other iwi in New Zealand to become subject to them as well."
+ 
+ waitangi_events.301.t:0  "[SCOPE.sCountry('treaty_proposer_scope').GetNameNoFlag]有项提议"
+ waitangi_events.301.d:0  "[SCOPE.sCountry('treaty_proposer_scope').GetNameNoFlag]已起草一份条约，寻求对我们事务的更大权力。他们现在已将它呈递给我们，我们现在可以决定是否签署"
+ waitangi_events.301.f:0  "“这是[SCOPE.sCountry('treaty_proposer_scope').GetRuler.GetPrimaryRoleTitle][SCOPE.sCountry('treaty_proposer_scope').GetRuler.GetFirstNameNoFormatting]对你们的爱之举。[SCOPE.sCountry('treaty_proposer_scope').GetRuler.GetCustom('GetHeShe')]想向你们保证，你们将保留属于自己的一切——你们的财产、你们的权利和特权，以及你们所珍视的一切。谁知道什么时候外国势力，也许是法国，可能会试图夺走这个国家呢？这份条约对你们来说真的就像一座堡垒。”"
+ waitangi_events.301.a:0  "我们是一家人：我们将签署。"
+ waitangi_events.301.b:0  "绝不：不要签署。"
+ 
+ waitangi_events.302.t:0  "在新西兰的成功！"
+ waitangi_events.302.d:0  "[SCOPE.sCountry('treaty_reciever_scope').GetName]已同意我们条约的条款，并已成为我们的傀儡。我们的殖民远见和实力无远弗届。现在，关于新西兰其余地区的命运问题已经出现。"
+ waitangi_events.302.f:0  "“这是[SCOPE.sCountry('treaty_proposer_scope').GetRuler.GetPrimaryRoleTitle][SCOPE.sCountry('treaty_proposer_scope').GetRuler.GetFirstNameNoFormatting]对你们的爱之举。[SCOPE.sCountry('treaty_proposer_scope').GetRuler.GetCustom('GetHeShe')]想向你们保证，你们将保留属于自己的一切——你们的财产、你们的权利和特权，以及你们所珍视的一切。谁知道什么时候外国势力，也许是法国，可能会试图夺走这个国家呢？这份条约对你们来说真的就像一座堡垒。”"
+ waitangi_events.302.a:0  "将剩余的[SCOPE.sCulture('maori_people_scope').GetName]部落变为傀儡。"
+ waitangi_events.302.b:0  "扩大[SCOPE.sCountry('treaty_reciever_scope').GetNameNoFlag]在新西兰的权力"
+ waitangi_events.302.c:0  "我们已达成目标。"
+ waitangi_events.302.tt1:0  "此选项将向新西兰的其他部落发送相同的条约；我们将尝试扶植剩余的[SCOPE.sCulture('maori_people_scope').GetName]部落为傀儡。"
+ waitangi_events.302.tt2:0  "此选项将要求其他部落被[SCOPE.sCountry('treaty_reciever_scope').GetNameNoFlag]吞并，从而扩大其在该地区的权力。"
+ waitangi_events.302.tt3:0  "此选项下不会再有其他事情发生。"
+ 
+ waitangi_events.303.t:0  "在新西兰的失败！"
+ waitangi_events.303.d:0  "经过多日的讨论和辩论，[SCOPE.sCulture('maori_people_scope').GetName]酋长们已拒绝签署我们的条约；他们不准备成为我们的傀儡。"
+ waitangi_events.303.f:0  "“毛利人民不想要总督！我们不是欧洲人。没错，我们卖掉了一些土地。这个国家仍然是我们的！我们酋长管理着我们祖先的这片土地。”——里瓦，怀唐伊，1840年"
+ waitangi_events.303.a:0  "算了；这不值得。"
+ 
+ waitangi_events.304.t:0  "来自海外的提议"
+ waitangi_events.304.d:0  "你是怎么看待的"
+ waitangi_events.304.f:0  "你好"
+ waitangi_events.304.a:0  "我们是一家人：我们将签署"
+ waitangi_events.304.b:0  "绝不：不要签署"
+ 
+ waitangi_events.305.t:0  "怀唐伊条约"
+ waitangi_events.305.d:0  "我们已将条约传遍新西兰，并取得了一定成功。我们已巩固了在太平洋的地位。"
+ waitangi_events.305.f:0  "我们与[SCOPE.sCulture('maori_people_scope').GetName]的关系已加强，现在我们有能力保护我们的利益免受任何外国势力的侵害"
+ waitangi_events.305.a:0  "天佑[SCOPE.sCountry('treaty_proposer_scope').GetRuler.GetPrimaryRoleTitle]！"
+ waitangi_events.305.b:0  "将所有欧洲人土地归还给[SCOPE.sCulture('maori_people_scope').GetName]"
+ 
+ waitangi_events.401.t:0  "建立新西兰殖民地"
+ waitangi_events.401.d:0  "新西兰的命运摆在我们议会面前。"
+ waitangi_events.401.f:0  "我们已获得新西兰的主权。有人向我们议会提议，这些岛屿应成为一个独立的殖民地，拥有自己的立法和行政委员会，并设一名服从于我们的总督。"
+ waitangi_events.401.a:0  "建立殖民地"
+ waitangi_events.401.b:0  "建立殖民地。告知[SCOPE.sCountry('nsw_nz_owner_scope').GetName]我们的计划。"
+ waitangi_events.401.c:0  "暂时保持现状。"
+ waitangi_events.401.tt1:0  "这将把新西兰释放为一个殖民地。下一个事件将询问你是否想扮演新西兰。"
+ #waitangi_events.401.tt2:0 "This will release New Zealand as a colony. After the colony is created, you will get an event asking if you would like to play as New Zealand."
+ waitangi_events.401.tt3:0  "没有殖民地被创建。如果你直接拥有这些岛屿，你可以在外交选项卡中使用游戏基础机制来释放殖民地。"
+ 
+ waitangi_events.404.t:0  "扮演[SCOPE.sCountry('treaty_NZL_scope').GetNameNoFlag]？"
+ waitangi_events.404.d:0  "你想扮演[SCOPE.sCountry('treaty_NZL_scope').GetName]吗？"
+ waitangi_events.404.f:0  "我们已获得新西兰的主权。有人向我们议会提议，这些岛屿应成为一个独立的殖民地，拥有自己的立法和行政委员会，并设一名服从于我们的总督。"
+ waitangi_events.404.a:0  "扮演[SCOPE.sCountry('treaty_NZL_scope').GetName]"
+ waitangi_events.404.b:0  "继续我的游戏。万岁！"
+ 
+ waitangi_events.501.t:0  "毛利语你好！"
+ waitangi_events.501.d:0  "对这个年轻的殖民地来说，这是一个动荡的时代"
+ waitangi_events.501.f:0  "大约一半的部落已签署怀唐伊条约，将国家主权赋予英国王室。新西兰公司的董事们对这一进展感到震惊，因为他们原本希望能够不受限制地进入这些岛屿。\n \n腹地崎岖而神秘；其中大部分仍为土著毛利人所有。如果我们的定居者要从其未开发的财富中繁荣发展，我们将需要通过一切必要手段获取这片土地。\n \n如果我们要建立这个殖民地，我们首先需要平息定居者的焦虑，并确认他们在条约之前的土地购买将得到王室的维护……"
+ waitangi_events.501.a:0  "前进！"
