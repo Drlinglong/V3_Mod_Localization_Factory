@@ -165,7 +165,7 @@ def process_yml_files(mod_name, client):
                 if quote_start_index == -1 or quote_end_index == -1 or quote_start_index >= quote_end_index: continue
                 key_part = stripped_line[:quote_start_index]
                 value = stripped_line[quote_start_index + 1 : quote_end_index]
-                key = key_part.strip().rstrip(':').strip()
+                key = key_part#.strip().rstrip(':').strip()
                 if (value.startswith('$') and value.endswith('$')) or not value: continue
                 texts_to_translate.append(value)
                 key_map[len(texts_to_translate) - 1] = {'key': key, 'line_num': line_num}
@@ -230,7 +230,7 @@ def process_yml_files(mod_name, client):
                 original_key = line_info['key']
                 indent = original_lines[original_line_num][:original_lines[original_line_num].find(original_key)]
                 safe_translated_text = translated_text.strip().replace('"', '\\"')
-                new_lines[original_line_num] = f'{indent}{original_key}: "{safe_translated_text}"\n'
+                new_lines[original_line_num] = f'{indent}{original_key} "{safe_translated_text}"\n'
             new_lines[0] = "l_simp_chinese:\n"
             new_filename = filename.replace('_l_english.yml', '_l_simp_chinese.yml') if filename.endswith('_l_english.yml') else filename
             dest_file_path = os.path.join(dest_dir_path, new_filename)
