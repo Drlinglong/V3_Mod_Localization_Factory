@@ -1,0 +1,22 @@
+{
+  "name" : "Project Utopia - Extended Timeline - Technical Preview",
+	"id" : "3535929411",
+  "version" : "0.1",
+  "supported_game_version" : "1.9.*",
+  "short_description" : "Project Utopia extends the base gameplay beyond 1936. It expands many elements from technology over politics.",
+  "tags" : [
+    "Economy And Buildings",
+    "Expansion",
+    "Interest Groups",
+    "Journal Entries",
+    "Pops",
+    "Technologies",
+    "Balance",
+    "Gameplay",
+    "Warfare"
+  ],
+  "relationships" : [],
+  "game_custom_data" : {
+    "multiplayer_synchronized" : true
+  }
+}
