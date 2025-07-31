@@ -1,64 +1,64 @@
 ﻿l_simp_chinese:
     # Battle Conditions
-    FAE_battle_condition_attacker_fort_breached:  "堡垒被攻破"
+    FAE_battle_condition_attacker_fort_breached:"堡垒被突破"
     FAE_battle_condition_defender_fort_breached: "$FAE_battle_condition_attacker_fort_breached$"
     
-    FAE_battle_condition_attacker_fort_breached_desc:  "这位指挥官已成功攻破敌方部分防御工事。"
-    FAE_battle_condition_defender_fort_breached_desc:  "敌方已成功攻破这位指挥官的部分防御工事。"
+    FAE_battle_condition_attacker_fort_breached_desc:"这位指挥官成功突破了敌方部分防御工事。"
+    FAE_battle_condition_defender_fort_breached_desc:"敌军成功突破了这位指挥官的部分防御工事。"
     
     # Buildings
-    fae_building_forts:  "防御工事"
+    fae_building_forts:"防御工事"
     
     # Character Traits
-    FAE_trait_combat_engineer_1:  "战斗工兵"
-    FAE_trait_combat_engineer_2:  "经验丰富的战斗工兵"
-    FAE_trait_combat_engineer_3:  "专家级战斗工兵"
+    FAE_trait_combat_engineer_1:"战斗工兵"
+    FAE_trait_combat_engineer_2:"经验丰富的战斗工兵"
+    FAE_trait_combat_engineer_3:"专家级战斗工兵"
     
-    FAE_trait_combat_engineer_1_desc:  "这位指挥官精通战斗工兵的有效运用。"
-    FAE_trait_combat_engineer_2_desc:  "这位指挥官对战斗工兵在战争中的运用有专家级的掌握。"
-    FAE_trait_combat_engineer_3_desc:  "这位指挥官已真正掌握了现代战争中战斗工兵的运用艺术。"
+    FAE_trait_combat_engineer_1_desc:"这位指挥官精通战斗工兵的有效运用。"
+    FAE_trait_combat_engineer_2_desc:"这位指挥官在作战中对战斗工兵的使用有着专家级的掌握。"
+    FAE_trait_combat_engineer_3_desc:"这位指挥官在战斗工兵方面真正掌握了现代战争的艺术。"
     
     # Modifiers I (types)
-    state_fae_building_forts_max_level_add:       "$fae_building_forts$ 最高等级"
-    state_fae_building_forts_max_level_add_desc:  "对$fae_building_forts$建筑最高等级的加成或惩罚。"
+    state_fae_building_forts_max_level_add:"$fae_building_forts$ 最大等级"
+    state_fae_building_forts_max_level_add_desc:"$fae_building_forts$ 建筑最大等级的加成或惩罚。"
     
-    building_input_small_arms_mult:  "@small_arms! $small_arms$ $concept_input_mult$"
-    building_input_artillery_mult:   "@artillery! $artillery$ $concept_input_mult$"
-    building_input_ammunition_mult:  "@ammunition! $ammunition$ $concept_input_mult$"
+    building_input_small_arms_mult:"@small_arms! $small_arms$ $concept_input_mult$"
+    building_input_artillery_mult:"@artillery! $artillery$ $concept_input_mult$"
+    building_input_ammunition_mult:"@ammunition! $ammunition$ $concept_input_mult$"
     
     building_input_small_arms_mult_desc: "$concept_input_mult_desc$"
     building_input_artillery_mult_desc:  "$concept_input_mult_desc$"
     building_input_ammunition_mult_desc: "$concept_input_mult_desc$"
     
-    character_fae_battle_condition_attacker_fort_breached_mult:       "[GetBattleCondition('FAE_battle_condition_attacker_fort_breached').GetName]$modifier_character_battle_condition_suffix$"
+    character_fae_battle_condition_attacker_fort_breached_mult:"[GetBattleCondition('FAE_battle_condition_attacker_fort_breached').GetName]$modifier_character_battle_condition_suffix$"
     character_fae_battle_condition_attacker_fort_breached_mult_desc: "$modifier_character_battle_condition_desc_prefix$[GetBattleCondition('FAE_battle_condition_attacker_fort_breached').GetName]$modifier_character_battle_condition_desc_suffix$"
     
-    unit_fae_siege_add:       "[concept_FAE_siege]"
-    unit_fae_siege_add_desc:  "参与[concept_battle]的每个[concept_unit]所增加的[concept_FAE_siege]总量"
+    unit_fae_siege_add:"[concept_FAE_siege]"
+    unit_fae_siege_add_desc:"每支参战[concept_unit]在[concept_battle]中增加的总[concept_FAE_siege]"
     
-    unit_fae_entrenchment_add:       "[concept_FAE_entrenchment]"
-    unit_fae_entrenchment_add_desc:  "参与[concept_battle]的每个[concept_unit]所增加的[concept_FAE_entrenchment]总量"
+    unit_fae_entrenchment_add:"[concept_FAE_entrenchment]"
+    unit_fae_entrenchment_add_desc:"每支参战[concept_unit]在[concept_battle]中增加的总[concept_FAE_entrenchment]"
     
-    character_fae_total_siege:       "$concept_FAE_siege$ 总量"
-    character_fae_total_siege_desc:  "在当前[concept_battle]中，由这位[concept_general]指挥下的[Concept('concept_unit','$concept_units$')]所产生的[concept_FAE_siege]总量"
+    character_fae_total_siege:"总$concept_FAE_siege$"
+    character_fae_total_siege_desc:"当前[concept_battle]中，由这位[concept_general]指挥的[Concept('concept_unit','$concept_units$')]产生的总[concept_FAE_siege]"
     
-    character_fae_total_entrenchment:       "$concept_FAE_entrenchment$ 总量"
-    character_fae_total_entrenchment_desc:  "在当前[concept_battle]中，由这位[concept_general]指挥下的[Concept('concept_unit','$concept_units$')]所产生的[concept_FAE_entrenchment]总量"
+    character_fae_total_entrenchment:"总$concept_FAE_entrenchment$"
+    character_fae_total_entrenchment_desc:"当前[concept_battle]中，由这位[concept_general]指挥的[Concept('concept_unit','$concept_units$')]产生的总[concept_FAE_entrenchment]"
     
-    country_fae_combat_engie_siege_add:       "来自[GetMobilizationOption('FAE_mo_combat_engineers').GetName]的[concept_FAE_siege]"
-    country_fae_combat_engie_siege_add_desc:  "由[GetMobilizationOption('FAE_mo_combat_engineers').GetName] [concept_mobilization_option]产生的额外每[Concept('concept_unit', '单位')] [concept_FAE_siege]"
+    country_fae_combat_engie_siege_add:"来自[GetMobilizationOption('FAE_mo_combat_engineers').GetName]的[concept_FAE_siege]"
+    country_fae_combat_engie_siege_add_desc:"由[GetMobilizationOption('FAE_mo_combat_engineers').GetName][concept_mobilization_option]产生的每[Concept('concept_unit', 'unit')]额外[concept_FAE_siege]"
     
     # Modifiers II (modifiers)
-    FAE_md_fort_reconstruction:  "堡垒建造"
-    FAE_md_fort_rearmament:      "堡垒武装"
-    FAE_md_fort_recommission:    "最近服役"
+    FAE_md_fort_reconstruction:"堡垒建造"
+    FAE_md_fort_rearmament:"堡垒武器"
+    FAE_md_fort_recommission:"近期启用"
     
-    FAE_md_fort_in_battle:  "投入作战"
+    FAE_md_fort_in_battle:"投入战斗"
     
-    FAE_md_fort_defense_strong:    "坚固防御工事"
-    FAE_md_fort_defense_mid:       "部分削弱的防御工事"
-    FAE_md_fort_defense_weak:      "削弱的防御工事"
-    FAE_md_fort_occupation_speed:  "受敌方防御工事阻碍"
+    FAE_md_fort_defense_strong:"坚固防御工事"
+    FAE_md_fort_defense_mid:"部分削弱的防御工事"
+    FAE_md_fort_defense_weak:"削弱的防御工事"
+    FAE_md_fort_occupation_speed:"受敌方防御工事阻碍"
     
     FAE_md_fort_kill_rate_strong:      "$FAE_md_fort_defense_strong$"
     FAE_md_fort_kill_rate_mid:         "$FAE_md_fort_defense_mid$"
@@ -72,31 +72,31 @@
     FAE_md_total_entrenchment: "$character_fae_total_entrenchment$"
     
     # Production Method Groups
-    FAE_pmg_fort_design:          "堡垒设计"
-    FAE_pmg_fort_construction:    "建筑材料"
-    FAE_pmg_fort_heavy_armament:  "重型武装"
-    FAE_pmg_fort_small_armament:  "轻型武装"
-    FAE_pmg_fort_maintenance:     "运行状态"
+    FAE_pmg_fort_design:"堡垒设计"
+    FAE_pmg_fort_construction:"建筑材料"
+    FAE_pmg_fort_heavy_armament:"重型武器"
+    FAE_pmg_fort_small_armament:"轻型武器"
+    FAE_pmg_fort_maintenance:"运行状态"
     
     # Production Methods
-    FAE_pm_bastion_forts:    "棱堡"
-    FAE_pm_polygonal_forts:  "多边形堡垒"
-    FAE_pm_bunkers:          "掩体与碉堡"
+    FAE_pm_bastion_forts:"棱堡"
+    FAE_pm_polygonal_forts:"多边形堡垒"
+    FAE_pm_bunkers:"掩体和碉堡"
     
-    FAE_pm_wood_palisades:  "木制栅栏"
-    FAE_pm_stone_iron:      "石与铁"
-    FAE_pm_steel_concrete:  "钢与混凝土"
+    FAE_pm_wood_palisades:"木质栅栏"
+    FAE_pm_stone_iron:"石材和铁"
+    FAE_pm_steel_concrete:"钢筋混凝土"
     
-    FAE_pm_parapets:   "矮墙大炮"
-    FAE_pm_casemates:  "炮兵工事"
-    FAE_pm_turrets:    "炮塔"
+    FAE_pm_parapets:"矮墙火炮"
+    FAE_pm_casemates:"炮廓"
+    FAE_pm_turrets:"炮塔"
     
     FAE_pm_small_arms:        "$small_arms$"
     FAE_pm_gatling_guns:      "$handcranked_machine_gun$"
     FAE_pm_auto_machine_guns: "$automatic_machine_guns$"
     
-    FAE_pm_normal:      "正常运行"
-    FAE_pm_mothballed:  "封存"
+    FAE_pm_normal:"正常运行"
+    FAE_pm_mothballed:"封存"
     
     FAE_pm_fort_design_mothballed:       "$FAE_pm_mothballed$"
     FAE_pm_fort_construction_mothballed: "$FAE_pm_mothballed$"
@@ -104,50 +104,50 @@
     FAE_pm_small_arms_mothballed:        "$FAE_pm_mothballed$"
     
     # Mobilization Options
-    FAE_mo_combat_engineers:       "战斗工兵"
-    FAE_mo_combat_engineers_desc:  "战场上受过特殊训练的工兵将帮助我们根据需要改造地形并克服敌人防御。"
+    FAE_mo_combat_engineers:"战斗工兵"
+    FAE_mo_combat_engineers_desc:"战场上训练有素的工兵将帮助我们根据需要调整地形并克服敌方防御。"
     
     # Game Rules
-    rule_FAE_gr_ai_siege_mult:  "#yellow FAE#! | AI [concept_FAE_siege] 倍率"
+    rule_FAE_gr_ai_siege_mult:"#yellow FAE#! | AI [concept_FAE_siege] 乘数"
     
-    FAE_txt_ai_weak_warning:    "#red AI国家在进攻拥有$fae_building_forts$的省份时可能会遇到困难。#!"
-    FAE_txt_ai_strong_warning:  "#red $fae_building_forts$可能难以对AI攻势提供有效帮助。#!"
+    FAE_txt_ai_weak_warning:"#red AI国家可能难以攻打拥有$fae_building_forts$的省份。#!"
+    FAE_txt_ai_strong_warning:"#red $fae_building_forts$可能难以有效协助对抗AI攻势。#!"
     
-    setting_FAE_grs_ai_siege_nil:       "无"
-    setting_FAE_grs_ai_siege_nil_desc:  "AI国家不会获得任何[concept_FAE_siege]加成。$FAE_txt_ai_weak_warning$"
-    setting_FAE_grs_ai_siege_low:       "[GetPlayer.MakeScope.ScriptValue('FAE_ai_mult_low')|=0%]"
-    setting_FAE_grs_ai_siege_low_desc:  "AI国家在每场战斗中将额外获得[GetPlayer.MakeScope.ScriptValue('FAE_ai_mult_low')|v=0%]的[concept_FAE_siege]。"
-    setting_FAE_grs_ai_siege_med:       "[GetPlayer.MakeScope.ScriptValue('FAE_ai_mult_med')|=0%]"
-    setting_FAE_grs_ai_siege_med_desc:  "AI国家在每场战斗中将额外获得[GetPlayer.MakeScope.ScriptValue('FAE_ai_mult_med')|v=0%]的[concept_FAE_siege]。"
-    setting_FAE_grs_ai_siege_hi:        "[GetPlayer.MakeScope.ScriptValue('FAE_ai_mult_hi')|=0%]"
-    setting_FAE_grs_ai_siege_hi_desc:   "AI国家在每场战斗中将额外获得[GetPlayer.MakeScope.ScriptValue('FAE_ai_mult_hi')|v=0%]的[concept_FAE_siege]。"
-    setting_FAE_grs_ai_siege_vhi:       "[GetPlayer.MakeScope.ScriptValue('FAE_ai_mult_vhi')|=0%]"
-    setting_FAE_grs_ai_siege_vhi_desc:  "AI国家在每场战斗中将额外获得[GetPlayer.MakeScope.ScriptValue('FAE_ai_mult_vhi')|v=0%]的[concept_FAE_siege]。$FAE_txt_ai_strong_warning$"
-    setting_FAE_grs_ai_siege_ext:       "[GetPlayer.MakeScope.ScriptValue('FAE_ai_mult_ext')|=0%]"
-    setting_FAE_grs_ai_siege_ext_desc:  "AI国家在每场战斗中将额外获得[GetPlayer.MakeScope.ScriptValue('FAE_ai_mult_ext')|v=0%]的[concept_FAE_siege]。$FAE_txt_ai_strong_warning$"
+    setting_FAE_grs_ai_siege_nil:"无"
+    setting_FAE_grs_ai_siege_nil_desc:"AI国家无法获得[concept_FAE_siege]加成。 $FAE_txt_ai_weak_warning$"
+    setting_FAE_grs_ai_siege_low:"[GetPlayer.MakeScope.ScriptValue('FAE_ai_mult_low')|=0%]"
+    setting_FAE_grs_ai_siege_low_desc:"AI国家在每次战斗中都会获得[GetPlayer.MakeScope.ScriptValue('FAE_ai_mult_low')|v=0%]额外[concept_FAE_siege]。"
+    setting_FAE_grs_ai_siege_med:"[GetPlayer.MakeScope.ScriptValue('FAE_ai_mult_med')|=0%]"
+    setting_FAE_grs_ai_siege_med_desc:"AI国家在每次战斗中都会获得[GetPlayer.MakeScope.ScriptValue('FAE_ai_mult_med')|v=0%]额外[concept_FAE_siege]。"
+    setting_FAE_grs_ai_siege_hi:"[GetPlayer.MakeScope.ScriptValue('FAE_ai_mult_hi')|=0%]"
+    setting_FAE_grs_ai_siege_hi_desc:"AI国家在每次战斗中都会获得[GetPlayer.MakeScope.ScriptValue('FAE_ai_mult_hi')|v=0%]额外[concept_FAE_siege]。"
+    setting_FAE_grs_ai_siege_vhi:"[GetPlayer.MakeScope.ScriptValue('FAE_ai_mult_vhi')|=0%]"
+    setting_FAE_grs_ai_siege_vhi_desc:"AI国家在每次战斗中都会获得[GetPlayer.MakeScope.ScriptValue('FAE_ai_mult_vhi')|v=0%]额外[concept_FAE_siege]。 $FAE_txt_ai_strong_warning$"
+    setting_FAE_grs_ai_siege_ext:"[GetPlayer.MakeScope.ScriptValue('FAE_ai_mult_ext')|=0%]"
+    setting_FAE_grs_ai_siege_ext_desc:"AI国家在每次战斗中都会获得[GetPlayer.MakeScope.ScriptValue('FAE_ai_mult_ext')|v=0%]额外[concept_FAE_siege]。 $FAE_txt_ai_strong_warning$"
     
     # Concepts
-    concept_FAE_siege:         "围攻能力"
-    concept_FAE_entrenchment:  "堡垒工事"
-    FAE_txt_added_by_FAE:      "#italic 这是#blue 堡垒与工程师#!模组的一项功能。#!"
+    concept_FAE_siege:"攻城能力"
+    concept_FAE_entrenchment:"堡垒战壕"
+    FAE_txt_added_by_FAE:"#italic 这是#blue 堡垒与工兵#!模组的特色。#!"
     
-    FAE_txt_siege:     "[concept_FAE_siege]"
-    FAE_txt_entrench:  "[concept_FAE_entrenchment]"
-    FAE_txt_forts:     "[GetBuildingType('fae_building_forts').GetName]"
+    FAE_txt_siege:"[concept_FAE_siege]"
+    FAE_txt_entrench:"[concept_FAE_entrenchment]"
+    FAE_txt_forts:"[GetBuildingType('fae_building_forts').GetName]"
     
-    FAE_txt_battles:  "在每个发生于拥有$FAE_txt_forts$ [concept_building]的[concept_state]的[concept_battle]开始时，攻防双方的[Concept('concept_unit', '$concept_units$')]数量将分别用于计算总$FAE_txt_siege$和$FAE_txt_entrench$。"
+    FAE_txt_battles:"每当在拥有$FAE_txt_forts$[concept_building]的[concept_state]中爆发[concept_battle]时，总$FAE_txt_siege$和$FAE_txt_entrench$将分别根据参战的攻击方和防御方的[Concept('concept_unit', '$concept_units$')]数量计算。"
     
-    FAE_txt_siege_stats:    "$FAE_txt_siege_stats_h$\n#indent_newline:6 $FAE_txt_siege_stats_1$#!\n#indent_newline:6 $FAE_txt_siege_stats_2$#!\n#indent_newline:6 $FAE_txt_siege_stats_3$#!\n#indent_newline:6 $FAE_txt_siege_stats_4$#!\n#indent_newline:6 $FAE_txt_siege_stats_5$#!\n#indent_newline:6 $FAE_txt_siege_stats_6$#!\n#indent_newline:6 $FAE_txt_siege_stats_7$#!"
-    FAE_txt_siege_stats_h:  "每[Concept('concept_unit', '单位')]的$FAE_txt_siege$计算方式如下："
-    FAE_txt_siege_stats_1:  "#p +[GetPlayer.MakeScope.ScriptValue('FAE_siege_combat_engies')]#!，如果其[concept_military_formation]启用了[GetMobilizationOption('FAE_mo_combat_engineers').GetName] [concept_mobilization_option]（研究[GetTechnology('dynamite').GetName]后增加至#p +[Add_CFixedPoint(GetPlayer.MakeScope.ScriptValue('FAE_siege_combat_engies'),GetPlayer.MakeScope.ScriptValue('FAE_siege_combat_engies_tnt'))]#!）"
-    FAE_txt_siege_stats_2:  "#p +[GetPlayer.MakeScope.ScriptValue('FAE_siege_heavy_tank')]#!，如果它是[GetCombatUnitType('combat_unit_type_heavy_tank').GetName] [Concept('concept_combat_unit_type', '单位')]"
-    FAE_txt_siege_stats_3:  "#p +[GetPlayer.MakeScope.ScriptValue('FAE_siege_light_tank')]#!，如果它是[GetCombatUnitType('combat_unit_type_light_tanks').GetName] [Concept('concept_combat_unit_type', '单位')]"
-    FAE_txt_siege_stats_4:  "#p +[GetPlayer.MakeScope.ScriptValue('FAE_siege_siege_arty')]#!，如果它是[GetCombatUnitType('combat_unit_type_siege_artillery').GetName] [Concept('concept_combat_unit_type', '单位')]"
-    FAE_txt_siege_stats_5:  "#p +[GetPlayer.MakeScope.ScriptValue('FAE_siege_shrapnel_arty')]#!，如果它是[GetCombatUnitType('combat_unit_type_shrapnel_artillery').GetName] [Concept('concept_combat_unit_type', '单位')]"
-    FAE_txt_siege_stats_6:  "#p +[GetPlayer.MakeScope.ScriptValue('FAE_siege_mobile_arty')]#!，如果它是[GetCombatUnitType('combat_unit_type_mobile_artillery').GetName] [Concept('concept_combat_unit_type', '单位')]"
-    FAE_txt_siege_stats_7:  "#p +[GetPlayer.MakeScope.ScriptValue('FAE_siege_cannon_arty')]#!，如果它是[GetCombatUnitType('combat_unit_type_cannon_artillery').GetName] [Concept('concept_combat_unit_type', '单位')]"
+    FAE_txt_siege_stats:"$FAE_txt_siege_stats_h$\n#indent_newline:6 $FAE_txt_siege_stats_1$#!\n#indent_newline:6 $FAE_txt_siege_stats_2$#!\n#indent_newline:6 $FAE_txt_siege_stats_3$#!\n#indent_newline:6 $FAE_txt_siege_stats_4$#!\n#indent_newline:6 $FAE_txt_siege_stats_5$#!\n#indent_newline:6 $FAE_txt_siege_stats_6$#!\n#indent_newline:6 $FAE_txt_siege_stats_7$#!"
+    FAE_txt_siege_stats_h:"每[Concept('concept_unit', 'unit')] $FAE_txt_siege$的计算方式如下："
+    FAE_txt_siege_stats_1:"#p +[GetPlayer.MakeScope.ScriptValue('FAE_siege_combat_engies')]#! 如果其[concept_military_formation]激活了[GetMobilizationOption('FAE_mo_combat_engineers').GetName][concept_mobilization_option]（研究[GetTechnology('dynamite').GetName]后，增加到#p +[Add_CFixedPoint(GetPlayer.MakeScope.ScriptValue('FAE_siege_combat_engies'),GetPlayer.MakeScope.ScriptValue('FAE_siege_combat_engies_tnt'))]#!）"
+    FAE_txt_siege_stats_2:"#p +[GetPlayer.MakeScope.ScriptValue('FAE_siege_heavy_tank')]#! 如果是[GetCombatUnitType('combat_unit_type_heavy_tank').GetName][Concept('concept_combat_unit_type', 'Unit')]"
+    FAE_txt_siege_stats_3:"#p +[GetPlayer.MakeScope.ScriptValue('FAE_siege_light_tank')]#! 如果是[GetCombatUnitType('combat_unit_type_light_tanks').GetName][Concept('concept_combat_unit_type', 'Unit')]"
+    FAE_txt_siege_stats_4:"#p +[GetPlayer.MakeScope.ScriptValue('FAE_siege_siege_arty')]#! 如果是[GetCombatUnitType('combat_unit_type_siege_artillery').GetName][Concept('concept_combat_unit_type', 'Unit')]"
+    FAE_txt_siege_stats_5:"#p +[GetPlayer.MakeScope.ScriptValue('FAE_siege_shrapnel_arty')]#! 如果是[GetCombatUnitType('combat_unit_type_shrapnel_artillery').GetName][Concept('concept_combat_unit_type', 'Unit')]"
+    FAE_txt_siege_stats_6:"#p +[GetPlayer.MakeScope.ScriptValue('FAE_siege_mobile_arty')]#! 如果是[GetCombatUnitType('combat_unit_type_mobile_artillery').GetName][Concept('concept_combat_unit_type', 'Unit')]"
+    FAE_txt_siege_stats_7:"#p +[GetPlayer.MakeScope.ScriptValue('FAE_siege_cannon_arty')]#! 如果是[GetCombatUnitType('combat_unit_type_cannon_artillery').GetName][Concept('concept_combat_unit_type', 'Unit')]"
     
-    FAE_txt_min_fort_bonus:  "#p [Multiply_CFixedPoint( GetPlayer.MakeScope.ScriptValue('FAE_WEAK_FORT_MIN_BONUS'), '(CFixedPoint)100' )]%#!"
+    FAE_txt_min_fort_bonus:"#p [Multiply_CFixedPoint( GetPlayer.MakeScope.ScriptValue('FAE_WEAK_FORT_MIN_BONUS'), '(CFixedPoint)100' )]%#!"
     
     concept_FAE_siege_desc: "$FAE_txt_siege$ directly counters [concept_FAE_entrenchment].\n\n$FAE_txt_battles$\n\n$FAE_txt_siege$ acts as a direct reduction of $FAE_txt_entrench$ on a 1-to-1 basis, and the more $FAE_txt_entrench$ is reduced, the smaller the defender bonuses to [concept_defense] & [concept_kill_rate] and the attacker malus to [Concept('concept_occupation', '$concept_battle$ $concept_occupation$')] will be.\n\n$FAE_txt_siege_stats$\n\n$FAE_txt_added_by_FAE$"
     
