@@ -2,7 +2,7 @@
 >
 > **[点击此处阅读中文版README](README.md)**
 
-[hr][/hr]
+***
 
 # Paradox Mod Localization Factory
 
@@ -13,8 +13,6 @@
 This project is a modular, automated translation workflow based on Python and the Google Gemini API. Its core objective is to fully automate the initial "first pass" (from 0 to 1) of mod localization. It compresses the traditionally labor-intensive and repetitive work into a few minutes of machine processing, freeing up localizers to focus on the "1 to 100" tasks of proofreading, polishing, and quality assurance.
 
 ## 2. Core Features
-
-Our "Galactic Battleship" has undergone multiple iterations and refactoring, and currently possesses the following core features:
 
 #### **Automated Translation Core**
 * **Powered by Gemini API:** Utilizes a powerful Large Language Model to provide high-quality first-draft translations.
