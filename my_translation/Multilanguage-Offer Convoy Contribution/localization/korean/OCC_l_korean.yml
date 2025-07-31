@@ -1,0 +1,11 @@
+﻿l_korean:
+
+ occ_offer_convoys:"호송선 기여 증대"
+ occ_offer_convoys_desc:"[concept_subject]이(가) [concept_market_owner] [concept_overlord]에 대한 호송선 기여를 증대시킵니다."
+ occ_offer_convoys_action_notification_name:"[INITIATOR_COUNTRY.GetName]이(가) 호송선 기여를 증대합니다"
+ occ_offer_convoys_action_notification_desc:"[INITIATOR_COUNTRY.GetName]이(가) 호송선 기여 증대를 제안했습니다."
+ occ_offer_convoys_action_propose_name: "$occ_offer_convoys$"
+ occ_offer_convoys_action_break_name:"호송선 기여 증대 취소"
+ occ_offer_convoys_pact_desc:"[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName]이(가) [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]에게 호송선 기여 증대를 제안합니다."
+ occ_offer_convoys_action_notification_break_name:"[INITIATOR_COUNTRY.GetName]이(가) 증대된 호송선 기여를 취소했습니다."
+ occ_offer_convoys_action_notification_break_desc:"[INITIATOR_COUNTRY.GetName]이(가) 호송선 기여를 통상 수준으로 복원했습니다."

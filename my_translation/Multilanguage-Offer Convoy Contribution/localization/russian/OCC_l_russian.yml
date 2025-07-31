@@ -1,0 +1,11 @@
+﻿l_russian:
+
+ occ_offer_convoys:"Увеличить вклад в конвои"
+ occ_offer_convoys_desc:"Увеличивает вклад [concept_subject]а в конвои для своего [concept_market_owner] [concept_overlord]а."
+ occ_offer_convoys_action_notification_name:"[INITIATOR_COUNTRY.GetName] увеличивает вклад в конвои"
+ occ_offer_convoys_action_notification_desc:"[INITIATOR_COUNTRY.GetName] предложила увеличить свой вклад в конвои."
+ occ_offer_convoys_action_propose_name: "$occ_offer_convoys$"
+ occ_offer_convoys_action_break_name:"Отменить повышенный вклад в конвои"
+ occ_offer_convoys_pact_desc:"[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] предлагает увеличить вклад в конвои для [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]."
+ occ_offer_convoys_action_notification_break_name:"[INITIATOR_COUNTRY.GetName] отменила повышенный вклад в конвои."
+ occ_offer_convoys_action_notification_break_desc:"[INITIATOR_COUNTRY.GetName] восстановила вклад в конвои до обычного уровня."

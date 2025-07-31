@@ -11,17 +11,18 @@ SOURCE_DIR = 'source_mod'
 DEST_DIR = 'my_translation'
 
 # --- 语言数据库 ---
-# 根据你提供的官方语言表创建
+# scripts/config.py -> LANGUAGES 字典
+
 LANGUAGES = {
-    "1": {"code": "en", "key": "l_english", "name": "English"},
-    "2": {"code": "zh-CN", "key": "l_simp_chinese", "name": "简体中文"},
-    "3": {"code": "fr", "key": "l_french", "name": "Français"},
-    "4": {"code": "de", "key": "l_german", "name": "Deutsch"},
-    "5": {"code": "es", "key": "l_spanish", "name": "Español"},
-    "6": {"code": "ja", "key": "l_japanese", "name": "日本語"},
-    "7": {"code": "ko", "key": "l_korean", "name": "한국어"},
-    "8": {"code": "pl", "key": "l_polish", "name": "Polski"},
-    "9": {"code": "pt-BR", "key": "l_braz_por", "name": "Português do Brasil"},
-    "10": {"code": "ru", "key": "l_russian", "name": "Русский"},
-    "11": {"code": "tr", "key": "l_turkish", "name": "Türkçe"}
+    "1": {"code": "en", "key": "l_english", "name": "English", "folder_prefix": "EN-"},
+    "2": {"code": "zh-CN", "key": "l_simp_chinese", "name": "简体中文", "folder_prefix": "汉化-"},
+    "3": {"code": "fr", "key": "l_french", "name": "Français", "folder_prefix": "FR-"},
+    "4": {"code": "de", "key": "l_german", "name": "Deutsch", "folder_prefix": "DE-"},
+    "5": {"code": "es", "key": "l_spanish", "name": "Español", "folder_prefix": "ES-"},
+    "6": {"code": "ja", "key": "l_japanese", "name": "日本語", "folder_prefix": "日本語化-"},
+    "7": {"code": "ko", "key": "l_korean", "name": "한국어", "folder_prefix": "한국어-"},
+    "8": {"code": "pl", "key": "l_polish", "name": "Polski", "folder_prefix": "PL-"},
+    "9": {"code": "pt-BR", "key": "l_braz_por", "name": "Português do Brasil", "folder_prefix": "PT-BR-"},
+    "10": {"code": "ru", "key": "l_russian", "name": "Русский", "folder_prefix": "RU-"},
+    "11": {"code": "tr", "key": "l_turkish", "name": "Türkçe", "folder_prefix": "TR-"}
 }

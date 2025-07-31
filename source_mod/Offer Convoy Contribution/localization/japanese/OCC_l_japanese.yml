@@ -1,0 +1,11 @@
+﻿l_english:
+
+ occ_offer_convoys: "Increase Convoy Contribution"
+ occ_offer_convoys_desc: "Increases the convoy contribution of the [concept_subject] towards its [concept_market_owner] [concept_overlord]."
+ occ_offer_convoys_action_notification_name: "[INITIATOR_COUNTRY.GetName] increases convoy contribution"
+ occ_offer_convoys_action_notification_desc: "[INITIATOR_COUNTRY.GetName] has offered to increase their convoy contributions."
+ occ_offer_convoys_action_propose_name: "$occ_offer_convoys$"
+ occ_offer_convoys_action_break_name: "Cancel Increased Convoy Contributions"
+ occ_offer_convoys_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] offers to increase convoy contributions to [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]."
+ occ_offer_convoys_action_notification_break_name: "[INITIATOR_COUNTRY.GetName] cancelled increased convoy contributions"
+ occ_offer_convoys_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] has restored convoy contributions to their regular level."

@@ -1,5 +1,6 @@
 # scripts/core/directory_handler.py
 import os
+import shutil
 from utils import i18n
 from config import SOURCE_DIR
 
@@ -32,15 +33,18 @@ def select_mod_directory():
         print(i18n.t("error_source_folder_not_found", dir=SOURCE_DIR))
         return None
     
-
 def cleanup_source_directory(mod_name):
-    """清理源mod文件夹，只保留核心汉化文件。"""
+    """
+    清理源mod文件夹，只保留核心汉化文件。
+    现在使用更详细的警告信息。
+    """
     print(i18n.t("cleanup_start", mod_name=mod_name))
     
-    confirm = input(i18n.t("cleanup_warning"))
+    # 使用新的、更详细的i18n key
+    confirm = input(i18n.t("cleanup_warning_detailed", mod_name=mod_name))
     if confirm.lower() not in ['y', 'yes']:
         print(i18n.t("cleanup_cancelled"))
-        return
+        return False # 返回False表示用户取消了操作
 
     mod_path = os.path.join(SOURCE_DIR, mod_name)
     protected_items = {'.metadata', 'localization', 'thumbnail.png'}
@@ -60,5 +64,7 @@ def cleanup_source_directory(mod_name):
                 except Exception as e:
                     print(i18n.t("cleanup_delete_error", path=item_path, error=e))
         print(i18n.t("cleanup_success"))
+        return True # 返回True表示清理成功
     except Exception as e:
         print(i18n.t("cleanup_error", error=e))
+        return False # 返回False表示清理失败
