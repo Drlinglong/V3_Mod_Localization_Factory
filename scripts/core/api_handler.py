@@ -19,13 +19,13 @@ def initialize_client():
     except Exception as e:
         print(f"Error initializing Gemini client: {e}")
         return None
-
-def translate_single_text(client, text, task_description, mod_name):
-    """【新增】调用API翻译单条文本，增加了mod主题作为上下文。"""
+def translate_single_text(client, text, task_description, mod_name, source_lang, target_lang):
+    """
+    【V2.7】调用API翻译单条文本，已完全支持多语言。
+    """
     if not text:
         return ""
         
-    # 根据 task_description 选择对应的i18n key
     if task_description == "mod name":
         print_key = "translating_mod_name"
     else:
@@ -33,12 +33,14 @@ def translate_single_text(client, text, task_description, mod_name):
     
     print(i18n.t(print_key, text=text[:30]))
 
+    # 【核心修改】将Prompt完全模板化，以支持任何语言对
     prompt = (
         "You are a direct, one-to-one translation engine. "
-        f"The text you are translating is for a Victoria 3 game mod named '{mod_name}'. Use this thematic context to ensure accuracy.\n"
-        "CRITICAL: Your response MUST ONLY contain the translated Chinese text. "
+        f"The text you are translating is for a Victoria 3 game mod named '{mod_name}'. "
+        f"Translate the following {task_description} from {source_lang['name']} to {target_lang['name']}.\n"
+        "CRITICAL: Your response MUST ONLY contain the translated text. "
         "DO NOT include explanations, pinyin, English, or any other conversational text or formatting.\n"
-        "For example, if the input is 'Flavor Pack', your output must be '风味包' and nothing else.\n\n"
+        "For example, if the input is 'Flavor Pack' in English, and the target is Simplified Chinese, your output must be '风味包' and nothing else.\n\n"
         f"Translate this: \"{text}\""
     )
     
@@ -47,11 +49,12 @@ def translate_single_text(client, text, task_description, mod_name):
         return response.text.strip().strip('"')
     except Exception as e:
         print(i18n.t("api_call_error", error=e))
-        return text # 翻译失败则返回原文
-
-def translate_texts_in_batches(client, texts_to_translate):
+        return text
+    
+    
+def translate_texts_in_batches(client, texts_to_translate, source_lang, target_lang):
     """
-    使用“化整为零”的策略，分批次翻译文本列表。
+    分批次翻译文本列表，现在支持指定源语言和目标语言。
     """
     all_translated_texts = []
     
@@ -62,9 +65,11 @@ def translate_texts_in_batches(client, texts_to_translate):
         print(i18n.t("processing_batch", batch_num=batch_num, chunk_size=len(chunk)))
         
         numbered_list = "\n".join([f"{j+1}. \"{text}\"" for j, text in enumerate(chunk)])
+        
+        # 【核心修改】将Prompt模板化，以支持任何语言
         prompt = (
-            "You are a professional translator for the game Victoria 3. "
-            "Translate the following numbered list of English texts into Simplified Chinese.\n"
+            f"You are a professional translator for the game Victoria 3. "
+            f"Translate the following numbered list of texts from {source_lang['name']} to {target_lang['name']}.\n"
             "CRITICAL: Your response MUST be a numbered list with the EXACT same number of items, from 1 to "
             f"{len(chunk)}. "
             "Each item in your list MUST be the translation of the corresponding item in the input list.\n"
@@ -74,6 +79,8 @@ def translate_texts_in_batches(client, texts_to_translate):
             f"{numbered_list}\n"
             "--- END OF INPUT LIST ---"
         )
+        
+        # ... (后续API调用和解析逻辑无变化) ...
         
         try:
             response = client.models.generate_content(model=MODEL_NAME, contents=prompt)
