@@ -32,7 +32,7 @@
   "thumbnail_not_found": "未找到 thumbnail.png，跳过此步骤。",
   "thumbnail_copied": "thumbnail.png 复制完成。",
   "cleanup_start": "\n--- 开始精简源Mod文件夹: {mod_name} ---",
-  "cleanup_warning": "警告：此操作将删除源Mod文件夹中除必要文件外的所有内容！\n请确认是否继续？ (输入 'y' 或 'yes' 以确认): ",
+  "cleanup_warning_detailed": "警告：此操作将永久删除源文件夹 '{mod_name}' 下的所有文件和文件夹，除了 '.metadata', 'localization', 和 'thumbnail.png' 之外。\n此功能有助于在翻译完成后节省磁盘空间。\n请确认是否继续？ (输入 'y' 或 'yes' 以确认): ", 
   "cleanup_cancelled": "操作已取消。",
   "cleanup_deleting": "正在删除非必要文件和文件夹...",
   "cleanup_deleted_folder": "  已删除文件夹: {item}",
@@ -44,5 +44,6 @@
   "select_source_language_prompt": "\n请选择源语言:",
   "select_target_language_prompt": "\n请选择目标语言:", 
   "target_option_all": "翻译为其余所有10种语言", 
-  "error_same_language": "错误：目标语言不能与源语言相同。"
+  "error_same_language": "错误：目标语言不能与源语言相同。",
+  "translating_to_language": "\n--- 正在翻译为: {lang_name} ---"
 }

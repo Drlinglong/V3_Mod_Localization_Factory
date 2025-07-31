@@ -19,21 +19,24 @@ def select_language(prompt_key):
             print(i18n.t("invalid_input_number"))
 
 def main_menu():
-    """程序主菜单和业务流程调度 (V3.0)。"""
+    """程序主菜单和业务流程调度 (V3.2)。"""
     i18n.load_language()
     
+    # 步骤 1: 选择Mod
     selected_mod = directory_handler.select_mod_directory()
     if not selected_mod:
         return
 
-    # 1. 选择源语言
+    # 步骤 2: (按你的建议) 在所有操作之前，首先询问是否清理源文件
+    directory_handler.cleanup_source_directory(selected_mod)
+    
+    # 步骤 3: 选择源语言
     source_lang = select_language("select_source_language_prompt")
     
-    # 2. 【核心修正】构建并显示新的目标语言菜单
+    # 步骤 4: 选择目标语言
     print(i18n.t("select_target_language_prompt"))
     print(f"  [0] {i18n.t('target_option_all')}")
     for key, lang_info in LANGUAGES.items():
-        # 如果是源语言本身，则在后面做出标记
         if lang_info['key'] == source_lang['key']:
             print(f"  [{key}] {lang_info['name']} (Source)")
         else:
@@ -41,23 +44,27 @@ def main_menu():
     
     target_choice = input(i18n.t("enter_choice_prompt")).strip()
 
-    # 3. 根据用户的选择执行相应的流程
+    # 步骤 5: 准备目标语言列表
+    target_languages = []
     if target_choice == '0':
-        # “一键翻译十国语言”模式
-        print(f"\n模式: 翻译为所有其他语言...")
-        for key, target_lang in LANGUAGES.items():
-            if target_lang['key'] == source_lang['key']:
-                continue # 跳过源语言本身
-            initial_translate.run(selected_mod, source_lang, target_lang)
+        # 批量模式：构建包含所有其他语言的列表
+        for key, lang_info in LANGUAGES.items():
+            if lang_info['key'] != source_lang['key']:
+                target_languages.append(lang_info)
     elif target_choice in LANGUAGES:
-        # 一对一翻译模式
+        # 单一模式：列表只包含一个元素
         target_lang = LANGUAGES[target_choice]
         if target_lang['key'] == source_lang['key']:
             print(i18n.t("error_same_language"))
             return
-        initial_translate.run(selected_mod, source_lang, target_lang)
+        target_languages.append(target_lang)
     else:
         print(i18n.t("invalid_input_number"))
+        return
+
+    # 步骤 6: 一次性调用工作流，传入所有需要处理的目标语言
+    if target_languages:
+        initial_translate.run(selected_mod, source_lang, target_languages)
 
 if __name__ == '__main__':
     main_menu()

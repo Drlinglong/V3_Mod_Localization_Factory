@@ -32,7 +32,7 @@
   "thumbnail_not_found": "thumbnail.png not found, skipping.",
   "thumbnail_copied": "thumbnail.png copied successfully.",
   "cleanup_start": "\n--- Starting cleanup of source Mod folder: {mod_name} ---",
-  "cleanup_warning": "WARNING: This action will delete all non-essential files from the source Mod folder!\nAre you sure you want to continue? (enter 'y' or 'yes' to confirm): ",
+  "cleanup_warning_detailed": "WARNING: This will permanently delete all files and folders from the source directory '{mod_name}' EXCEPT for '.metadata', 'localization', and 'thumbnail.png'.\nThis is useful for saving disk space after translation is complete.\nAre you sure you want to continue? (enter 'y' or 'yes' to confirm): ", 
   "cleanup_cancelled": "Operation cancelled.",
   "cleanup_deleting": "Deleting non-essential files and folders...",
   "cleanup_deleted_folder": "  Deleted folder: {item}",
@@ -44,5 +44,6 @@
   "select_source_language_prompt": "\nPlease select the source language:",
   "select_target_language_prompt": "\nPlease select the target language(s):",
   "target_option_all": "Translate to all other 10 languages", 
-  "error_same_language": "Error: Target language cannot be the same as the source language."
+  "error_same_language": "Error: Target language cannot be the same as the source language.",
+  "translating_to_language": "\n--- Translating to: {lang_name} ---"
 }

@@ -1,0 +1,11 @@
+﻿l_french:
+
+ occ_offer_convoys:"Augmenter les contributions en convois"
+ occ_offer_convoys_desc:"Augmente la contribution en convois du [concept_sujet] envers son [concept_possesseur_marche] [concept_suzerain]."
+ occ_offer_convoys_action_notification_name:"[INITIATOR_COUNTRY.GetName] augmente sa contribution en convois"
+ occ_offer_convoys_action_notification_desc:"[INITIATOR_COUNTRY.GetName] a offert d'augmenter ses contributions en convois."
+ occ_offer_convoys_action_propose_name: "$occ_offer_convoys$"
+ occ_offer_convoys_action_break_name:"Annuler les contributions en convois accrues"
+ occ_offer_convoys_pact_desc:"[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] offre d'augmenter ses contributions en convois à [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]."
+ occ_offer_convoys_action_notification_break_name:"[INITIATOR_COUNTRY.GetName] a annulé ses contributions en convois accrues"
+ occ_offer_convoys_action_notification_break_desc:"[INITIATOR_COUNTRY.GetName] a rétabli ses contributions en convois à leur niveau habituel."
