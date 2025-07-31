@@ -2,7 +2,7 @@
 >
 > **[Click here to read the English README](README_EN.md)**
 
-[hr][/hr]
+***
 
 # P社Mod本地化工厂 (Paradox Mod Localization Factory)
 
