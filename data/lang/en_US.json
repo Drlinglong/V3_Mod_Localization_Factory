@@ -39,5 +39,6 @@
   "cleanup_deleted_file": "  Deleted file: {item}",
   "cleanup_delete_error": "Error deleting {path}: {error}",
   "cleanup_success": "Source folder cleanup complete!",
-  "cleanup_error": "An error occurred during cleanup: {error}"
+  "cleanup_error": "An error occurred during cleanup: {error}",
+  "workflow_initial_translate_name": "Initial Translation"
 }
