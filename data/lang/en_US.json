@@ -40,5 +40,9 @@
   "cleanup_delete_error": "Error deleting {path}: {error}",
   "cleanup_success": "Source folder cleanup complete!",
   "cleanup_error": "An error occurred during cleanup: {error}",
-  "workflow_initial_translate_name": "Initial Translation"
+  "workflow_initial_translate_name": "Initial Translation",
+  "select_source_language_prompt": "\nPlease select the source language:",
+  "select_target_language_prompt": "\nPlease select the target language(s):",
+  "target_option_all": "Translate to all other 10 languages", 
+  "error_same_language": "Error: Target language cannot be the same as the source language."
 }

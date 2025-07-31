@@ -40,5 +40,9 @@
   "cleanup_delete_error": "删除 {path} 时出错: {error}",
   "cleanup_success": "源文件夹精简完成！",
   "cleanup_error": "清理过程中发生错误: {error}",
-  "workflow_initial_translate_name": "首次翻译"  
+  "workflow_initial_translate_name": "首次翻译" ,
+  "select_source_language_prompt": "\n请选择源语言:",
+  "select_target_language_prompt": "\n请选择目标语言:", 
+  "target_option_all": "翻译为其余所有10种语言", 
+  "error_same_language": "错误：目标语言不能与源语言相同。"
 }
