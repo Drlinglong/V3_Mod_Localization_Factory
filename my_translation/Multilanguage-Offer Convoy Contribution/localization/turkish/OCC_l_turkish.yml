@@ -1,11 +1,11 @@
 ﻿l_turkish:
 
  occ_offer_convoys:"Konvoy Katkısını Artır"
- occ_offer_convoys_desc:"[concept_subject]'ın, kendi [concept_market_owner] [concept_overlord]'una yaptığı konvoy katkısını artırır."
+ occ_offer_convoys_desc:"[concept_subject]'ın [concept_market_owner] [concept_overlord]'una olan konvoy katkısını artırır."
  occ_offer_convoys_action_notification_name:"[INITIATOR_COUNTRY.GetName] konvoy katkısını artırıyor"
  occ_offer_convoys_action_notification_desc:"[INITIATOR_COUNTRY.GetName] konvoy katkılarını artırmayı teklif etti."
  occ_offer_convoys_action_propose_name: "$occ_offer_convoys$"
- occ_offer_convoys_action_break_name:"Artırılmış Konvoy Katkılarını İptal Et"
- occ_offer_convoys_pact_desc:"[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName], [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]'ya konvoy katkılarını artırmayı teklif ediyor."
- occ_offer_convoys_action_notification_break_name:"[INITIATOR_COUNTRY.GetName] artırılmış konvoy katkılarını iptal etti."
+ occ_offer_convoys_action_break_name:"Artırılan Konvoy Katkılarını İptal Et"
+ occ_offer_convoys_pact_desc:"[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName], [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]'na konvoy katkılarını artırmayı teklif ediyor."
+ occ_offer_convoys_action_notification_break_name:"[INITIATOR_COUNTRY.GetName] artırılan konvoy katkılarını iptal etti."
  occ_offer_convoys_action_notification_break_desc:"[INITIATOR_COUNTRY.GetName] konvoy katkılarını normal seviyelerine geri getirdi."
