@@ -39,5 +39,6 @@
   "cleanup_deleted_file": "  已删除文件: {item}",
   "cleanup_delete_error": "删除 {path} 时出错: {error}",
   "cleanup_success": "源文件夹精简完成！",
-  "cleanup_error": "清理过程中发生错误: {error}"
+  "cleanup_error": "清理过程中发生错误: {error}",
+  "workflow_initial_translate_name": "首次翻译"  
 }

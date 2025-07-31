@@ -8,9 +8,10 @@ from utils import i18n
 def run(mod_name):
     """“首次翻译”工作流的主函数，负责调度所有核心模块。"""
     
-    print(i18n.t("start_workflow", workflow_name="'首次翻译'", mod_name=mod_name))
+    # 【修正】从i18n模块获取工作流的名称，而不是硬编码
+    workflow_name = i18n.t("workflow_initial_translate_name")
+    print(i18n.t("start_workflow", workflow_name=workflow_name, mod_name=mod_name))
     
-    # 初始化API客户端
     client = api_handler.initialize_client()
     if not client:
         print(i18n.t("api_client_init_fail"))
@@ -23,7 +24,6 @@ def run(mod_name):
     # --- 核心翻译流程 ---
     source_localization_path = os.path.join(SOURCE_DIR, mod_name, 'localization', 'english')
     
-    # 检查本地化文件夹是否存在
     if not os.path.isdir(source_localization_path):
         print(f"警告：在 {mod_name} 目录下找不到 'localization/english' 文件夹，跳过.yml文件处理。")
     else:
