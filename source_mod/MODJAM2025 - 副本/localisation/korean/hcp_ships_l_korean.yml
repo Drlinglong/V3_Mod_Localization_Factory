@@ -1,0 +1,78 @@
+﻿l_korean:
+##################
+# hcp_ships_l_korean.yml
+# By jam1066
+##################
+
+ #start
+
+ ###################
+ # Ship Components #
+ ###################
+ hcp_PLANET_KILLER_STELLAR_HARVESTER: "Harvester Drone Swarm"
+ hcp_PLANET_KILLER_STELLAR_HARVESTER_ACTION: "Harvest Solar System"
+ PLANET_KILLER_CRACKER_DESC: "A large swarm of autonomouse drones is released to dismantle everything in the system. Only the control ship is spared from their mining lasers."
+ FLEETORDER_DESTROY_PLANET_WITH_hcp_PLANET_KILLER_STELLAR_HARVESTER: "Preparing to harvest $PLANET|Y$"
+ 
+ ## Targeting Requirements
+ hcp_can_test_fire: "\n£trigger_no£ Must test fire in own system without colonies"
+ hcp_nothing_to_harvest: "\n£trigger_no£ There is nothing to harvest"
+ hcp_is_your_megastructure_system: "\n£trigger_no£ Must not target system containing your own Singularity Silo"
+
+ hcp_SHIP_STELLAR_HARVESTER_REPLICATE: "Replication Bay"
+ hcp_SHIP_STELLAR_HARVESTER_REPLICATE_DESC: "This specialized replication bay allows our Stellar Harvesters to use their collected resources to make more of themselves, ensuring our harvesting operations can grow exponentially."
+ hcp_stellar_harvester_replicate_ship_button: "§HReplicate§!\n\n§HCost§!: £minerals£$@hcp_replicate_cost|0$\n§HConstruction Time§!: 360 £time£\n\nOrder the Stellar Harvester to §YReplicate§!."
+ hcp_stellar_harvester_replicate_activity_key: "Replicating"
+ hcp_stellar_harvester_replicate_menu_title: "Replicate"
+ hcp_stellar_harvester_replicate_progress_activity_key: "Replicating: §Y$PROGRESS$%§!"
+
+ hcp_stellar_harvester_depart_galaxy_ship_button: "§HDepart Galaxy§!\n\n§HCost§!: £energy£100000\n§HCharge Time§!: 360 £time£\n\nOrder the Stellar Harvester to §YDepart the Galaxy§!."
+ hcp_stellar_harvester_depart_galaxy_activity_key: "Charging Intergalactic FTL"
+ hcp_stellar_harvester_depart_galaxy_menu_title: "Depart Galaxy"
+ hcp_stellar_harvester_depart_galaxy_progress_activity_key: "Charging Intergalactic FTL: §Y$PROGRESS$%§!"
+ hcp_stellar_harvester_depart_galaxy_must_be_rim: "\n£trigger_no£ Must be on the edge of the galaxy"
+
+ ####################
+ # Prospector Drone #
+ ####################
+ hcp_NAME_Prospector_Drone: "Prospector Drone"
+ hcp_BIO_NAME_Prospector_Drone: "$hcp_NAME_Prospector_Drone$"
+
+ hcp_prospector_drone: "$hcp_NAME_Prospector_Drone$"
+ hcp_prospector_drone_plural: "$hcp_prospector_drone$s"
+
+ ################
+ # Mining Drone #
+ ################
+
+ hcp_mining_drone: "Mining Drone"
+ hcp_mining_drone_plural: "$hcp_mining_drone$s"
+ hcp_mining_drone_cap: "$hcp_mining_drone$"
+
+ hcp_mining_drone_MSS_section: "Driller Frame"
+ hcp_mining_drone_GPP_section: "Explosives Frame"
+
+ ###################
+ # Excavator Drone #
+ ###################
+
+ hcp_excavator_drone: "Excavator Drone"
+ hcp_excavator_drone_plural: "$hcp_excavator_drone$s"
+ hcp_excavator_drone_cap: "$hcp_excavator_drone$"
+
+ hcp_excavator_drone_MMSS_section: "Driller Frame"
+ hcp_excavator_drone_GGPP_section: "Explosives Frame"
+
+ ######################
+ # Stellar Harvesters #
+ ######################
+ hcp_NAME_Stellar_Harvester: "Stellar Harvester"
+
+ hcp_stellar_harvester: "$hcp_NAME_Stellar_Harvester$"
+ hcp_stellar_harvester_plural: "$hcp_NAME_Stellar_Harvester$s"
+
+ hcp_HARVESTER_STORAGE_title: "£mod_country_resource_max_add£Resources:"
+ hcp_HARVESTER_STORAGE_value: "[this.hcp_harvester_stored_resources]"
+ hcp_HARVESTER_STORAGE_tt: "The Harvesters current stock of resources, which it can spend on abilities or to replicate itself."
+
+ #end

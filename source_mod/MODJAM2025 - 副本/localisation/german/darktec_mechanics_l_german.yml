@@ -1,0 +1,1285 @@
+﻿# localisation\english\darktec_mechanics_l_english.yml
+
+# Authors: Rodahtnov & Zyralynn
+
+l_german:
+
+# Misc
+	# §B thisisblue §!
+	# §E thisisteal §!
+	# §G thisisgreen §!
+	# §H thisisorange §!
+	# §L thisisbrown §!
+	# §M thisispurple §!
+	# §P thisislightred §!
+	# §R thisisred §!
+	# §S thisisdarkorange §!
+	# §T thisislightgrey §!
+	# §W thisiswhite §!
+	# §Y thisisyellow §!
+# /
+
+# Ascension perk
+	darktec_ap_postbaryonic:0 "Post-Baryonic Infusion"
+	darktec_ap_postbaryonic_desc:0 "Long we have seen how the universe collapses onto itself as the void slowly devours down to the very last star, the very last light, in all that exists; Now it is the time we know how to undo that catastrophe, how to prevent it and how to turn it to our advantage. Entropy will end with us."
+	darktec_ap_postbaryonic_not_for_multispecies:0 "£trigger_no£ Requires not §YMulticultural§! empires."
+	darktec_ap_postbaryonic_not_for_wilderness:0 "£trigger_no£ Requires non amalgamated empires (Like §YWilderness§! Empires)."
+	darktec_ap_postbaryonic_requires_able_to_modify_species:0 "£trigger_no£ Requires non purist empiers (We are not able to modify our main species)."
+	darktec_ap_postbaryonic_tooltip_will_need_to_research_dm_tech:0 "\n§ETechnology Requirements:§!\n- We need the §Y£physics£ $tech_mine_dark_matter$§! technology to proceed forward. It will be provided as research guaranteed."
+
+	darktec_ap_postbaryonic_tooltip:0 "- Progress towards a Crisis will start\n- A way to harvest and use non-baryonic energy will be our new goal, no matter the cost."
+
+	darktec_ap_postbaryonic_transformed:0 "Entropic Fusion"
+	darktec_ap_postbaryonic_transformed_desc:0 "$darktec_ap_postbaryonic_desc$"
+	darktec_ap_postbaryonic_transformed_tooltip:0 "- We have transformed our species into §YEntrophereals§! and now we are embracing the true potential of entropy on our very selves."
+
+	darktec_ap_postbaryonic_tainted:0 "Umbral Infusion"
+	darktec_ap_postbaryonic_tainted_desc:0 "$darktec_ap_postbaryonic_desc$"
+	darktec_ap_postbaryonic_tainted_tooltip:0 "- We have empowered our §YUmbral§! applications and now we have a bigger control over Dark Matter."
+
+# Crisis
+	# Misc
+	# UI
+	#darktec_crisis_postbaryonic_level_1:0 "§EConcern§!"
+	#darktec_crisis_postbaryonic_level_2:0 "§ERisk§!"
+	#darktec_crisis_postbaryonic_level_3:0 "§EDanger§!"
+	#darktec_crisis_postbaryonic_level_4:0 "§ECalamity§!"
+	#darktec_crisis_postbaryonic_level_5:0 "§EExistential Threat§!"
+	darktec_crisis_postbaryonic_level_1:0 "§EContainment§!"
+	darktec_crisis_postbaryonic_level_2:0 "§EExploitation§!"
+	darktec_crisis_postbaryonic_level_3:0 "§EEntropy-Bound§!"
+	darktec_crisis_postbaryonic_level_4:0 "§EImminent Collapse§!"
+	darktec_crisis_postbaryonic_level_5:0 "§EUmbral Cataclysm§!"
+	darktec_crisis_postbaryonic_level_1_desc:0 "Crisis Level 1"
+	darktec_crisis_postbaryonic_level_2_desc:0 "Crisis Level 2"
+	darktec_crisis_postbaryonic_level_3_desc:0 "Crisis Level 3"
+	darktec_crisis_postbaryonic_level_4_desc:0 "Crisis Level 4"
+	darktec_crisis_postbaryonic_level_5_desc:0 "Crisis Level 5"
+	# Resouces
+	darktec_contained_entropy:0 "Contained Entropy"
+	darktec_contained_entropy_name:0 "$darktec_contained_entropy$"
+	darktec_contained_entropy_with_icon:0 "£darktec_contained_entropy£ $darktec_contained_entropy$"
+	darktec_contained_entropy_value:0 "£darktec_contained_entropy£ $VAL|0$"
+	darktec_contained_entropy_current_value:0 "Current Value: §Y$VALUE|0$§!"
+	darktec_contained_entropy_gaining:0 "Complete §HCrisis Objectives§! to gain more §Y$darktec_contained_entropy$§!."
+	darktec_contained_entropy_desc:0 "Contained Entropy is the amount of chaotic background energy entrapped by non-baryonic matter in a way it cannot interfere or interact with reality in any way possible, unless artificially influenced to do so."
+
+	darktec_contained_entropy_crisis_objective:0 "Crisis Objectives"
+	darktec_contained_entropy_crisis_objective_gained:0 "Resource gained"
+	darktec_contained_entropy_crisis_objective_reward:0 "$REWARD$"
+	darktec_contained_entropy_crisis_objective_progress:0 "We have gained £darktec_contained_entropy£ $AMOUNT$ from this Crisis Objective."
+
+	darktec_contained_entropy_crisis_level_locked:0 "Required to unlock this level:\n"
+	darktec_contained_entropy_crisis_level_unlocked:0 "At $LEVEL$, you get a special event and the rewards:\n"
+	darktec_contained_entropy_crisis_level_unlock:0 "Has £darktec_contained_entropy£ §Y$CURRENCY$§! $darktec_contained_entropy$"
+	darktec_contained_entropy_crisis_level_desc:0 "To advance through the Crisis levels, complete Crisis Objectives and research the Crisis Features in the Situation Log"
+
+	darktec_contained_entropy_crisis_description_title:0 "Post-Baryonic Infusion"
+	darktec_contained_entropy_crisis_description:0 "$menace_crisis_description_intro$\n\nThe potential of the vacuum, the void, the space between atoms... the dark energy that fuels entropy is limitless, and as such it is our duty to stop the regressive and destructive influence it has on reality, and take its handle; We will subdue the power of entropy as our own."
+	darktec_contained_entropy_crisis_howto_title:0 "Coalescing Entropy"
+	darktec_contained_entropy_crisis_howto:0 "Pursuing §HCrisis Objectives§! and using some §EUmbral§! features such as building §H$building_darktec_anchor_1_plural$§! generate §H$darktec_contained_entropy_with_icon$§!, unlocking the technological, economical and existential power of our empire. We need to harvest, to grow and to create more, and more, and more, until we are able to §HCoalesce§! the gained entropy into a form we can shape, and with that, shape reality to our desires."
+
+	# Perks
+	# T1
+	menp_darktec_anchor_t1:0 "Void Syphoning"
+	menp_darktec_anchor_t1_desc:0 "Removing the latent dark energy around our space and reconducting into usable resources will advance our purpose."
+	menp_darktec_anchor_t1_tooltip:0 "Allows us to build ['building:building_darktec_anchor_1', £building£ $building_darktec_anchor_1_plural$] in any of our zones, which are used for generating §Y$darktec_contained_entropy_with_icon$§!."
+
+	menp_darktec_entropy_t1:0 "Obscure Studies"
+	menp_darktec_entropy_t1_desc:0 "Studying background radiation and entropic energy will give us a head start towards the proper handling of non-baryonic matter."
+	menp_darktec_entropy_t1_tooltip:0 "We can now earn §Y$darktec_contained_entropy_with_icon$§! through Crisis Objectives."
+
+	menp_darktec_darkmatter_t1:0 "Anti-energy Containment"
+	menp_darktec_darkmatter_t1_desc:0 "The only logical outcome is the reduction of entropy, and in the process, exploiting it."
+	menp_darktec_darkmatter_t1_tooltip:0 "Allows the construction of ['building:building_darktec_storage_1', £building£ $building_darktec_storage_1_plural$], which generate §Y£sr_dark_matter£ Dark Matter§! based on the amount of stored §Y$darktec_contained_entropy_with_icon$§!."
+
+	# T2
+	menp_darktec_anchor_t2:0 "Void Harvesting"
+	menp_darktec_anchor_t2_desc:0 "We must construct additional Anchors, we need to syphon all the background and dark energy we can, and redirect it towards our goals"
+	menp_darktec_anchor_t2_tooltip:0 "We can now upgrade ['building:building_darktec_anchor_1', £building£ $building_darktec_anchor_1_plural$] into ['building:building_darktec_anchor_2', £building£ $building_darktec_anchor_2_plural$]."
+
+	menp_darktec_entropy_t2:0 "Exotic Recombination"
+	menp_darktec_entropy_t2_desc:0 "Combining non baryonic matter with baryonic matter is a complicated matter, even more so with living entities. But the effort is truly worth it"
+	menp_darktec_entropy_t2_tooltip:0 "[darktec_loc_menp_darktec_entropy_t2_tooltip]"
+	menp_darktec_entropy_t2_tooltip_normal:0 "Allows the research of ['technology:tech_darktec_traits_t1'], which enable us to enhance our species with special traits.\n"
+	menp_darktec_entropy_t2_tooltip_early:0 "Allows the research of ['technology:tech_darktec_traits_t1'], which enable us to enhance our species with special traits.\n\nOur effort on focusing on improving our §G$situation_darktec_intro_approach_applications$§! has given us this bonus:\n\n$MOD_COUNTRY_MODIFY_SPECIES_COST_MULT$: §G-10%§!"
+
+	menp_darktec_darkmatter_t2:0 "Vacuum Recycling"
+	menp_darktec_darkmatter_t2_desc:0 "No resource must be wasted, not even the ones we can't detect - maximized efficiency is a must."
+	menp_darktec_darkmatter_t2_tooltip:0 "[darktec_loc_menp_darktec_darkmatter_t2_tooltip]"
+	menp_darktec_darkmatter_t2_tooltip_normal:0 "We can now upgrade ['building:building_darktec_storage_1', £building£ $building_darktec_storage_1_plural$] into ['building:building_darktec_storage_2', £building£ $building_darktec_storage_2_plural$].\n\nWe now have access to §YUmbral building technologies§!."
+	menp_darktec_darkmatter_t2_tooltip_early:0 "We can now upgrade ['building:building_darktec_storage_1', £building£ $building_darktec_storage_1_plural$] into ['building:building_darktec_storage_2', £building£ $building_darktec_storage_2_plural$].\n\nWe now have access to §YUmbral building technologies§!.\n\nOur effort on focusing on improving our §Y$situation_darktec_intro_approach_economy$§! has given us this bonus:\n\n$MOD_PLANET_BUILDING_COST_MULT$: §G-5%§!"
+
+	menp_darktec_umbralships_t2:0 "Behind the Umbral Veil"
+	menp_darktec_umbralships_t2_desc:0 "The creation of recycled entropy-infused materials allows us to generate designs that seem to blend with both tangible and intangible reality."
+	menp_darktec_umbralships_t2_tooltip:0 "[darktec_loc_menp_darktec_umbralships_t2_tooltip]"
+
+	menp_darktec_umbralships_t2_tooltip_mechanical:0 "Unlocks the technology for the first tier of §YUmbral ships§! - ['technology:tech_darktec_crisis_destroyer']."
+	menp_darktec_umbralships_t2_tooltip_mechanical_early:0 "Unlocks the technology for the first tier of §YUmbral ships§! - ['technology:tech_darktec_crisis_destroyer'].\n\nOur effort on focusing on improving our §Y$situation_darktec_intro_approach_warfare$§! has given us this bonus:\n\n$MOD_SHIP_SPEED_MULT$: §G+5%§!"
+	menp_darktec_umbralships_t2_tooltip_bioships:0 "Unlocks the technology for the first tier of §YUmbral ships§! - ['technology:tech_darktec_crisis_mauler']."
+	menp_darktec_umbralships_t2_tooltip_bioships_early:0 "Unlocks the technology for the first tier of §YUmbral ships§! - ['technology:tech_darktec_crisis_mauler'].\n\nOur effort on focusing on improving our §Y$situation_darktec_intro_approach_warfare$§! has given us this bonus:\n\n$MOD_SHIP_SPEED_MULT$: §G+5%§!"
+
+	darktec_modifier_menp_early_applications:0 "$menp_darktec_entropy_t2$"
+	darktec_modifier_menp_early_applications_desc:0 "$menp_darktec_entropy_t2_desc$"
+	darktec_modifier_menp_early_warfare:0 "$menp_darktec_umbralships_t2$"
+	darktec_modifier_menp_early_warfare_desc:0 "$menp_darktec_umbralships_t2_desc$"
+	darktec_modifier_menp_early_industry:0 "$menp_darktec_darkmatter_t2$"
+	darktec_modifier_menp_early_industry_desc:0 "$menp_darktec_umbralships_t2_desc$"
+
+	# T3
+	menp_darktec_anchor_t3:0 "Void Resonance Cascade"
+	menp_darktec_anchor_t3_desc:0 "After stabilizing our extractors, we can now experiment with entropy extraction in the very void of space without generating a catastrophic chain-reaction"
+	menp_darktec_anchor_t3_tooltip:0 "We can now upgrade ['building:building_darktec_anchor_2', £building£ $building_darktec_anchor_2_plural$] into ['building:building_darktec_anchor_3', £building£ $building_darktec_anchor_3_plural$].\n\n['building:building_darktec_anchor_3', £building£ $building_darktec_anchor_3_plural$] will now also produce a moderate amount of §Y£sr_dark_matter£ Dark Matter§!."
+
+	menp_darktec_entropy_t3:0 "Dark Experimentation"
+	menp_darktec_entropy_t3_desc:0 "Now we have a grasp, an idea, a thought on how to maximize our affinity with the entropic recycled elements, and as such we need to satisfy our needs, or knowledge"
+	menp_darktec_entropy_t3_tooltip:0 "We can now research ['technology:tech_darktec_traits_t2'], which provide §Ypowerful traits§! for use on our species."
+
+	menp_darktec_darkmatter_t3:0 "Controlled Vacuum Collapse"
+	menp_darktec_darkmatter_t3_desc:0 "By creating small pockets of controlled vacuum collapses we can greatly understand how to handle and reroute immense amounts of non-baryonic matter and energy without a complete collapse of reality"
+	menp_darktec_darkmatter_t3_tooltip:0 "[darktec_loc_menp_darktec_darkmatter_t3_tooltip]"
+	menp_darktec_darkmatter_t3_tooltip_mechanical:0 "Unlocks the technology for the second tier of §YUmbral ships§! - ['technology:tech_darktec_crisis_cruiser'].\n\nUmbral Ships can have their special §YAura components§! upgraded to tier §Y2§!.\n\nAdditional §YPowerful ship components§! can now appear as research options."
+	menp_darktec_darkmatter_t3_tooltip_bioships:0 "Unlocks the technology for the second tier of §YUmbral ships§! - ['technology:tech_darktec_crisis_weaver'].\n\nUmbral Ships can have their special §YAura components§! upgraded to tier §Y2§!.\n\nAdditional §YPowerful ship components§! can now appear as research options."
+
+	# T4
+	menp_darktec_anchor_t4:0 "Void Reaping"
+	menp_darktec_anchor_t4_desc:0 "[darktec_loc_menp_darktec_anchor_t4_desc]"
+	menp_darktec_anchor_t4_tooltip:0 "[darktec_loc_menp_darktec_anchor_t4_tooltip]"
+
+	menp_darktec_anchor_t4_unknown:0 "????"
+	menp_darktec_anchor_t4_unknown_desc:0 "????"
+	menp_darktec_anchor_t4_unknown_tooltip:0 "????"
+	menp_darktec_anchor_t4_unknown_tooltip:0 "????"
+
+	menp_darktec_anchor_t4_known:0 "Void Reaping"
+	menp_darktec_anchor_t4_known_desc:0 "Never enough harvested. Never enough consumed."
+	menp_darktec_anchor_t4_known_tooltip:0 "['building:building_darktec_anchor_3', £building£ $building_darktec_anchor_3_plural$] will now boost the effects of othe §Y£building£ Umbral Buildings§! on the colony.\nThis effect scales with the Anchor upgrade level."
+
+	menp_darktec_entropy_t4:0 "One with the Abyss"
+	menp_darktec_entropy_t4_desc:0 "[darktec_loc_menp_darktec_entropy_t4_desc]"
+	menp_darktec_entropy_t4_tooltip:0 "[darktec_loc_menp_darktec_entropy_t4_tooltip]"
+
+	menp_darktec_entropy_t4_unknown:0 "???"
+	menp_darktec_entropy_t4_unknown_desc:0 "???"
+	menp_darktec_entropy_t4_unknown_tooltip:0 "???"
+
+	menp_darktec_entropy_t4_transformed:0 "Obscure Stabilization"
+	menp_darktec_entropy_t4_transformed_desc:0 "Our new form is… intriguing. We are less, we are more, and we can make others be too."
+	menp_darktec_entropy_t4_transformed_tooltip:0 "['building:building_darktec_umbral_portal_1', £building£ $building_darktec_umbral_portal_1_plural$] now also increase the £job£ Output on the planet.\n\nThis building now enables the passive §YAssimilation§! of pops into §EEntrophereals§!."
+
+	menp_darktec_entropy_t4_tainted:0 "Merged Darkness"
+	menp_darktec_entropy_t4_tainted_desc:0 "The reactive effects of dark matter in our living processes has resulted in a success over all this time, and as such, we are ready to experiment more. And more. And more."
+	menp_darktec_entropy_t4_tainted_tooltip:0 "Basic and Advanced §YUmbral traits§! now have extra productive capacities."
+
+	menp_darktec_darkmatter_t4:0 "Entropic Harmonization"
+	menp_darktec_darkmatter_t4_desc:0 "[darktec_loc_menp_darktec_darkmatter_t4_desc]"
+	menp_darktec_darkmatter_t4_tooltip:0 "[darktec_loc_menp_darktec_darkmatter_t4_tooltip]"
+
+	menp_darktec_darkmatter_t4_unknown:0 "???"
+	menp_darktec_darkmatter_t4_unknown_desc:0 "???"
+	menp_darktec_darkmatter_t4_unknown_tooltip:0 "???"
+
+	menp_darktec_darkmatter_t4_transformed:0 "Entropic Taint"
+	menp_darktec_darkmatter_t4_transformed_desc:0 "With our new presence we carry a latent essence, an ichor, a way of subverting anything in our reach."
+	menp_darktec_darkmatter_t4_transformed_tooltip:0 "We can now upgrade ['building:building_darktec_storage_2', £building£ $building_darktec_storage_2_plural$] into ['building:building_darktec_storage_3', £building£ $building_darktec_storage_3_plural$]."
+
+	menp_darktec_darkmatter_t4_tainted:0 "Entropy Reallocation"
+	menp_darktec_darkmatter_t4_tainted_desc_old:0 "By redirecting some ''Contained Entropy'' towards one of our productive fields we can increase its yield by incredible amounts."
+	menp_darktec_darkmatter_t4_tainted_desc:0 "The power of the entropy applied to further enhance parallel qualities of our species allow room for even more applications, and even more power."
+	menp_darktec_darkmatter_t4_tainted_tooltip:0 "We can now upgrade ['building:building_darktec_storage_2', £building£ $building_darktec_storage_2_plural$] into ['building:building_darktec_storage_3', £building£ $building_darktec_storage_3_plural$].\n\nWe can now research ['technology:tech_darktec_traits_ascension'], which will provide our empire powerful traits at our disposal based on any ascension path picked."
+
+	menp_darktec_umbralships_t4:0 "Phase-Matter Vessels"
+	menp_darktec_umbralships_t4_desc:0 "[darktec_loc_menp_darktec_umbralships_t4_desc]"
+	menp_darktec_umbralships_t4_tooltip:0 "[darktec_loc_menp_darktec_umbralships_t4_tooltip]"
+
+	menp_darktec_umbralships_t4_unknown:0 "???"
+	menp_darktec_umbralships_t4_unknown_desc:0 "???"
+	menp_darktec_umbralships_t4_unknown_tooltip:0 "???"
+
+	menp_darktec_umbralships_t4_known:0 "Phase-Matter Vessels"
+	menp_darktec_umbralships_t4_known_desc:0 "The very fabric of reality is bent for our vessels, allowing them to exist and not exist at the same time, jumping from different statuses to other statuses giving us a vast advantage."
+	menp_darktec_umbralships_t4_known_tooltip:0 "Unlocks the technology for the final tier of §YUmbral ships§! - ['technology:tech_darktec_crisis_battleship'].\n\nUmbral Ships can have their special §YAura components§! upgraded to tier §Y3§!."
+	menp_darktec_umbralships_t4_known_tooltip_bioships:0 "Unlocks the technology for the final tier of §YUmbral ships§! - ['technology:tech_darktec_crisis_stinger'].\n\nUmbral Ships can have their special §YAura components§! upgraded to tier §Y3§!."
+
+	# T5
+	menp_darktec_anchor_t5:0 "Void Tearing"
+	menp_darktec_anchor_t5_desc:0 "[darktec_loc_menp_darktec_anchor_t5_desc]"
+	menp_darktec_anchor_t5_tooltip:0 "[darktec_loc_menp_darktec_anchor_t5_tooltip]"
+
+	menp_darktec_anchor_t5_unknown:0 "?????"
+	menp_darktec_anchor_t5_unknown_desc:0 "?????"
+	menp_darktec_anchor_t5_unknown_tooltip:0 "?????"
+
+	menp_darktec_anchor_t5_known:0 "Void Tearing"
+	menp_darktec_anchor_t5_known_desc:0 "Extracting the very non-essence of the vacuum is mandatory."
+	menp_darktec_anchor_t5_known_tooltip:0 "We can now upgrade ['building:building_darktec_anchor_3', £building£ $building_darktec_anchor_3_plural$] into ['building:building_darktec_anchor_4', £building£ $building_darktec_anchor_4_plural$].\n\n£building£ $building_darktec_anchor_4_plural$ (and pre-upgrades) now boost the effectivity of ALL Umbral buildings in our empire."
+
+	menp_darktec_entropy_t5:0 "Final Anomaly"
+	menp_darktec_entropy_t5_desc:0 "[darktec_loc_menp_darktec_entropy_t5_desc]"
+	menp_darktec_entropy_t5_tooltip:0 "[darktec_loc_menp_darktec_entropy_t5_tooltip]"
+
+	menp_darktec_entropy_t5_unknown:0 "?????"
+	menp_darktec_entropy_t5_unknown_desc:0 "?????"
+	menp_darktec_entropy_t5_unknown_tooltip:0 "?????"
+
+	menp_darktec_entropy_t5_known:0 "Final Anomaly"
+	menp_darktec_entropy_t5_known_desc:0 "Only a theory until now, we are certain to be able to convey all our obtained entropy into a single point in space and time."
+	menp_darktec_entropy_t5_known_tooltip:0 "Allows us to §YCreate§! a special Megastructure:\n§YThe Coalesced Anomaly§!\n\n§HBy building and upgrading this megastructure we will achieve our goals.§!"
+
+	menp_darktec_darkmatter_t5:0 "Reality Culling"
+	menp_darktec_darkmatter_t5_desc:0 "[darktec_loc_menp_darktec_darkmatter_t5_desc]"
+	menp_darktec_darkmatter_t5_tooltip:0 "[darktec_loc_menp_darktec_darkmatter_t5_tooltip]"
+
+	menp_darktec_darkmatter_t5_unknown:0 "?????"
+	menp_darktec_darkmatter_t5_unknown_desc:0 "?????"
+	menp_darktec_darkmatter_t5_unknown_tooltip:0 "?????"
+
+	menp_darktec_darkmatter_t5_known:0 "Reality Culling"
+	menp_darktec_darkmatter_t5_known_desc:0 "Anything existing ,or not existing, must be reshaped and bent towards our will."
+	menp_darktec_darkmatter_t5_known_tooltip:0 "Unlocks the §Y$bombardment_darktec_bombardment_entropy$§! stance for our fleets.\nPlanets destroyed with this bombardment type will provide us extra resources for fulfilling our goal.\n\nWe can now upgrade ['building:building_darktec_storage_3', £building£ $building_darktec_storage_3_plural$] into ['building:building_darktec_storage_4', £building£ $building_darktec_storage_4_plural$]."
+
+	menp_darktec_umbralships_t5:0 "Multidimensional Incursion"
+	menp_darktec_umbralships_t5_desc:0 "[darktec_loc_menp_darktec_umbralships_t5_desc]"
+	menp_darktec_umbralships_t5_tooltip:0 "[darktec_loc_menp_darktec_umbralships_t5_tooltip]"
+
+	menp_darktec_umbralships_t5_unknown:0 "?????"
+	menp_darktec_umbralships_t5_unknown_desc:0 "?????"
+	menp_darktec_umbralships_t5_unknown_tooltip:0 "?????"
+
+	menp_darktec_umbralships_t5_known:0 "Multidimensional Incursion"
+	menp_darktec_umbralships_t5_known_desc:0 "They won't see what is coming until it's too late, even in other dimensions, even in other realities."
+	menp_darktec_umbralships_t5_known_tooltip:0 "We can now research potent §YEntropic ship utility components§!, which enable powerful §YFleet Actions§! at our disposal."
+
+# Crisis objectives
+	darktec_crisobj_monthly_extract_entropy_name:0 "Harvest Entropy"
+	darktec_crisobj_monthly_extract_entropy_desc:0 "Beneath the layers of the fabric of the universe lay a latent power, one that is bound to separate the universe as it tries to expand, to destroy, to cause death. That power shall be ours.\n\nBuild §Y$building_darktec_anchor_1_plural$§! and harvest $darktec_contained_entropy_with_icon$ with them."
+
+	darktec_crisobj_immediate_research_physics_technologies_name:0 "Research Technologies"
+	darktec_crisobj_immediate_research_physics_technologies_desc:0 "We need to understand the intricate ways the universe is written.\n\nResearch §YTechnologies§! to gain this $darktec_contained_entropy_with_icon$ reward."
+
+	darktec_crisobj_immediate_build_and_keep_umbral_buildings_name:0 "Build or Upgrade Umbral Buildings"
+	darktec_crisobj_immediate_build_and_keep_umbral_buildings_desc:0 "Towering and empowered, the buildings that keep and shape entropy are now the foundation of our empire.\n\n§YBuild§! or §YUpgrade§! Umbral Buildings to gain this $darktec_contained_entropy_with_icon$ reward."
+
+	darktec_crisobj_yearly_retain_vassals_name:0 "Retain Vassals"
+	darktec_crisobj_yearly_retain_vassals_desc:0 "Those helping our cause deserve our good will - and eventually, our knowledge.\n\nRetain §YVassals§! to gain this §Yannual§! $darktec_contained_entropy_with_icon$ reward."
+
+	darktec_crisobj_yearly_retain_megastructures_name:0 "Retain Megastructures"
+	darktec_crisobj_yearly_retain_megastructures_desc:0 "The grandiosity of spacebound megastructures is not only a beauty to observe, but another way to defy the standards - and of gaining advantage on harvesting the void.\n\nRetain §YMegastructures§! of unique types to gain this §Yannual§! $darktec_contained_entropy_with_icon$ reward."
+
+	darktec_crisobj_yearly_galcom_retain_galcom_respect_name:0 "Secure Galactic Community Support"
+	darktec_crisobj_yearly_galcom_retain_galcom_respect_desc:0 "We need to convince others about our cause, to avoid their unnecessary demise by the cold embrace of a dead universe.\n\nBe part of the Galactic Community §YCouncil§! or avoid being §YIn Breach§! od the galactic law to gain this §Yannual§! $darktec_contained_entropy_with_icon$ reward."
+
+	darktec_crisobj_immediate_conquer_worlds_name:0 "Conquer or Harvest Worlds"
+	darktec_crisobj_immediate_conquer_worlds_desc:0 "There is no space for those that oppose us, and as such we must expell them from any habitable surface.\n\n§YConquer§! or §YHarvest§! worlds to gain this $darktec_contained_entropy_with_icon$ reward."
+
+	darktec_crisobj_immediate_assimilate_pops_name:0 "Assimilate Pops"
+	darktec_crisobj_immediate_assimilate_pops_desc:0 "Everyone must yield, either by becoming us, or becoming part of the void.\n\n§YAssimilate pops with entropy§! to gain this $darktec_contained_entropy_with_icon$ reward."
+
+	darktec_crisobj_immediate_taint_world_name:0 "Taint Worlds"
+	darktec_crisobj_immediate_taint_world_desc:0 "Vast fields of dark matter, rivers of entropic darkness, all bathing the worlds we settle and converting them into the perfect catalyst for the combination of both dimensions.\n\n§YTaint§! worlds with entropy to gain this $darktec_contained_entropy_with_icon$ reward."
+
+	darktec_crisobj_immediate_build_umbral_ships_name:0 "Build Umbral Ships"
+	darktec_crisobj_immediate_build_umbral_ships_desc:0 "Invisible, sleek and saturated with dark matter, the vessels we created thanks to the power of recycled entropy are our future.\n\nBuild §YUmbral Ships§! to gain this $darktec_contained_entropy_with_icon$ reward. Reward increased per ship tier."
+
+	darktec_crisobj_immediate_destroy_empires_name:0 "Destroy Empires"
+	darktec_crisobj_immediate_destroy_empires_desc:0 "Long have they stood in our way. Now, they belong to the void.\n\n§YEliminate§! and empire to gain this $darktec_contained_entropy_with_icon$ reward."
+# /
+
+# Crisis misc
+
+# Umbral Ships
+	darktec_umbral_component:0 "§EUmbral§!"
+	darktec_umbral_component_weapon_damage_mult:0 "Umbral Component Damage"
+	mod_darktec_umbral_component_weapon_damage_mult:0 "$darktec_umbral_component_weapon_damage_mult$"
+
+	darktec_crisis_destroyer:0 "Umbral Brigand"
+	darktec_crisis_destroyer_plural:0 "$darktec_crisis_destroyer$s"
+	darktec_crisis_destroyer_cap:0 "$darktec_crisis_destroyer$"
+	darktec_crisis_destroyer_desc:0 "Brigands bring the destructive power of non-baryonic matter towards space combat, able to deal and deflect incredible amount of damage while trading material integrity for shielded performance."
+	darktec_crisis_destroyer_tooltip:0 "Brigands are the first tier of umbral ship and serve as the main line of offense and defense of Post-Baryonic empires.\nHas a special aura component for self-modifiers.\nThe ship has the following modifiers:\n  - Hull: §R-50%§!\n  - Bonus Shield multiplier: §G+50%§!\n  - Shield Hardening: §G+10%§!"
+
+	darktec_crisis_cruiser:0 "Umbral Marauder"
+	darktec_crisis_cruiser_plural:0 "$darktec_crisis_cruiser$s"
+	darktec_crisis_cruiser_cap:0 "$darktec_crisis_cruiser$"
+	darktec_crisis_cruiser_desc:0 "Marauders serve as a first line of offense and defense, as their resilience and potential of damage surpass the one of Brigands. It's ethereal silhouette shines with the density of the energy field its intense shield bonus emits."
+	darktec_crisis_cruiser_tooltip:0 "Marauders are the second tier of umbral ships, replacing the role of Cruisers as a versatile and durable, yet highly offensive ship.\nHas a special aura component for self-modifiers.\nThe ship has the following modifiers:\n  - Hull: §R-50%§!\n  - Bonus Shield multiplier: §G+100%§!\n  - Shield Hardening: §G+10%§!"
+
+	darktec_crisis_battleship:0 "Umbral Interloper"
+	darktec_crisis_battleship_plural:0 "$darktec_crisis_battleship$s"
+	darktec_crisis_battleship_cap:0 "$darktec_crisis_battleship$"
+	darktec_crisis_battleship_desc:0 "Oversaturated with dark matter, these powerful vessels are the higher tier amongst umbral ships - a platform of devastation that keeps an agility and immense defensive capacity able to widthstand even the most powerful blows."
+	darktec_crisis_battleship_tooltip:0 "Interlopers are the higher tier of umbral ships, being improved Battleships with more section variety and lethality.\nHas a special aura component for self-modifiers.\nThe ship has the following modifiers:\n  - Hull: §R-50%§!\n  - Bonus Shield multiplier: §G+250%§!\n  - Shield Hardening: §G+10%§!"
+
+	darktec_crisis_mauler:0 "Umbral Stalker"
+	darktec_crisis_mauler_plural:0 "$darktec_crisis_mauler$s"
+	darktec_crisis_mauler_cap:0 "$darktec_crisis_mauler$"
+	darktec_crisis_mauler_desc:0 "Veiled in darkness, this organic vessel traverses the void searching for prey as its silhouette shifts due to its increased shielding."
+	darktec_crisis_mauler_tooltip:0 "Stalkers are the initial umbral ship tier, being improved Maulers with extra lethality.\nHas a special aura component for self-modifiers.\nThe ship has the following modifiers:\n  - Hull: §R-50%§!\n  - Bonus Shield multiplier: §G+50%§!\n  - Shield Hardening: §G+10%§!"
+
+	darktec_crisis_weaver:0 "Umbral Prowler"
+	darktec_crisis_weaver_plural:0 "$darktec_crisis_weaver$s"
+	darktec_crisis_weaver_cap:0 "$darktec_crisis_weaver$"
+	darktec_crisis_weaver_desc:0 "Lethal on distance and as a support, Prowlers use their immense versatile capacities to elevate the battlefield into a deadly chorus."
+	darktec_crisis_weaver_tooltip:0 "Prowlers serve as the middle tier of umbral ships, mirroring the role of Weavers but with increased section variety.\nHas a special aura component for self-modifiers.\nThe ship has the following modifiers:\n  - Hull: §R-50%§!\n  - Bonus Shield multiplier: §G+150%§!\n  - Shield Hardening: §G+10%§!"
+
+	darktec_crisis_stinger:0 "Umbral Reaver"
+	darktec_crisis_stinger_plural:0 "$darktec_crisis_stinger$s"
+	darktec_crisis_stinger_cap:0 "$darktec_crisis_stinger$"
+	darktec_crisis_stinger_desc:0 "Tailored and growth with entropy, this gigantic organism sails space offering a terrifying sight, being the apex of umbral ships - a platform of devastation that keeps an agility and immense defensive capacity able to widthstand even the most powerful blows."
+	darktec_crisis_stinger_tooltip:0 "Reavers are the apex of umbral ships, serving as improved Stingers with an ample variety of sections.\nHas a special aura component for self-modifiers.\nThe ship has the following modifiers:\n  - Hull: §R-50%§!\n  - Bonus Shield multiplier: §G+250%§!\n  - Shield Hardening: §G+10%§!"
+
+
+	DARKTEC_CRISIS_DESTROYER_BRAWLER:0 "Brawler Brigand"
+	DARKTEC_CRISIS_DESTROYER_PICKET:0 "Picket Brigand"
+	DARKTEC_CRISIS_DESTROYER_MISSILES:0 "Missile Brigand"
+	DARKTEC_CRISIS_DESTROYER_ARTILLERY:0 "Artillery Brigand"
+
+	DARKTEC_CRISIS_CRUISER_ARTILLERY:0 "Artillery Marauder"
+	DARKTEC_CRISIS_CRUISER_BRAWLER:0 "Brawler Marauder"
+	DARKTEC_CRISIS_CRUISER_MISSILES:0 "Missiles Marauder"
+
+	DARKTEC_CRISIS_BATTLESHIP_ANNIHILATOR:0 "Annihilator Interloper"
+	DARKTEC_CRISIS_BATTLESHIP_ARTILLERY:0 "Artillery Interloper"
+	DARKTEC_CRISIS_BATTLESHIP_BRAWLER:0 "Brawler Interloper"
+	DARKTEC_CRISIS_BATTLESHIP_CARRIER:0 "Carrier Interloper"
+
+	DARKTEC_CRISIS_MAULER_MELEE:0 "Devourer Stalker"
+	DARKTEC_CRISIS_MAULER_BRAWLER:0 "Brawler Stalker"
+	DARKTEC_CRISIS_MAULER_MISSILES:0 "Expeller Stalker"
+
+	DARKTEC_CRISIS_WEAVER_SUPPORT:0 "Support Prowler"
+	DARKTEC_CRISIS_WEAVER_BRAWLER:0 "Brawler Prowler"
+	DARKTEC_CRISIS_WEAVER_ARTILLERY:0 "Artillery Prowler"
+
+	DARKTEC_CRISIS_STINGER_ANNIHILATOR:0 "Annihilator Reaver"
+	DARKTEC_CRISIS_STINGER_ARTILLERY:0 "Artillery Reaver"
+	DARKTEC_CRISIS_STINGER_BRAWLER:0 "Brawler Reaver"
+	DARKTEC_CRISIS_STINGER_CARRIER:0 "Carrier Reaver"
+	DARKTEC_CRISIS_STINGER_PICKET:0 "Picket Reaver"
+
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T1:0 "Umbral Decoy I"
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T1_DESC:0 "This umbral ship uses a special device to mask its signals by tapping into background radiaton, diverting its own emissions towards the void."
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T1_TOOLTIP:0 "Allows the use of §GCloaking§! as fleet action."
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T2:0 "Umbral Decoy II"
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T2_DESC:0 "$DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T1_DESC$"
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T2_TOOLTIP:0 "$DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T1_TOOLTIP$"
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T3:0 "Umbral Decoy III"
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T3_DESC:0 "$DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T1_DESC$"
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T3_TOOLTIP:0 "$DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T1_TOOLTIP$"
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T1:0 "Umbral Blurrer I"
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T1_DESC:0 "Using a mini localized phase jump, this vessel ''blurs'' its signatures making hostile targetting extremely difficult."
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T1_TOOLTIP:0 ""
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T2:0 "Umbral Blurrer II"
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T2_DESC:0 "$DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T1_DESC$"
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T2_TOOLTIP:0 "$DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T1_TOOLTIP$"
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T3:0 "Umbral Blurrer III"
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T3_DESC:0 "$DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T1_DESC$"
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T3_TOOLTIP:0 "$DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T1_TOOLTIP$"
+
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T1:0 "Umbral Camouflage I"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T1_DESC:0 "This umbral creature uses a special device to mask its signals by tapping into background radiaton, diverting its own emissions towards the void."
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T1_TOOLTIP:0 ""
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T2:0 "Umbral Camouflage II"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T2_DESC:0 "$DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T1_DESC$"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T2_TOOLTIP:0 "$DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T1_TOOLTIP$"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T3:0 "Umbral Camouflage III"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T3_DESC:0 "$DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T1_DESC$"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T3_TOOLTIP:0 "$DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T1_TOOLTIP$"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_EVASION_T1:0 "Umbral Veiler I"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_EVASION_T1_DESC:0 "Using a mini localized phase jump, this vessel ''blurs'' its signatures making hostile targetting extremely difficult."
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_EVASION_T1_TOOLTIP:0 "$DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T1_TOOLTIP$"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_EVASION_T2:0 "Umbral Veiler II"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_EVASION_T2_DESC:0 "$DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_EVASION_T1_DESC$"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_EVASION_T2_TOOLTIP:0 "$DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_EVASION_T1_TOOLTIP$"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_EVASION_T3:0 "Umbral Veiler III"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_EVASION_T3_DESC:0 "$DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_EVASION_T1_DESC$"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_EVASION_T3_TOOLTIP:0 "$DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_EVASION_T1_TOOLTIP$"
+
+	# Tech mechanical
+	tech_darktec_crisis_destroyer:0 "$darktec_crisis_destroyer$"
+	tech_darktec_crisis_destroyer_desc:0 "A marvel of technology, this vessel is composed by mainly para-matter, making it shift between phase statuses as it sails the void - or as it throws part of it towards the desired target."
+	tech_darktec_crisis_destroyer_unlocks_title:0 "§HUnlocks Ship Type:§! $darktec_crisis_destroyer$"
+	tech_darktec_crisis_destroyer_unlocks_desc:0 "§H$darktec_crisis_destroyer$§!\n$darktec_crisis_destroyer_tooltip$"
+
+	tech_darktec_crisis_cruiser:0 "$darktec_crisis_cruiser$"
+	tech_darktec_crisis_cruiser_desc:0 "Improving the design upon existing blueprints, this ship is able to widthstand and deal incredible amounts of damage as it's entropic composition greatly amplifies its capacities to an unnatural level, compared with designed counterparts."
+	tech_darktec_crisis_cruiser_unlocks_title:0 "§HUnlocks Ship Type:§! $darktec_crisis_cruiser$"
+	tech_darktec_crisis_cruiser_unlocks_desc:0 "§H$darktec_crisis_cruiser$§!\n$darktec_crisis_cruiser_tooltip$"
+
+	tech_darktec_crisis_battleship:0 "$darktec_crisis_battleship$"
+	tech_darktec_crisis_battleship_desc:0 "A marvel of umbral technology, their own presence shifts reality around them; These improved battleships, composed by para-matter and harnessing the power of dark matter, can devastate anything that crosses its path."
+	tech_darktec_crisis_battleship_unlocks_title:0 "§HUnlocks Ship Type:§! $darktec_crisis_battleship$"
+	tech_darktec_crisis_battleship_unlocks_desc:0 "§H$darktec_crisis_battleship$§!\n$darktec_crisis_battleship_tooltip$"
+
+	# Techs organic
+	tech_darktec_crisis_mauler:0 "$darktec_crisis_mauler$"
+	tech_darktec_crisis_mauler_desc:0 "By selectively adding small traces of non-baryonic material to new organic vessel breeds, we are able to create immensely powerful specimens that shift through normal and void spaces, and shifts space-time around its own very presence."
+	tech_darktec_crisis_mauler_unlocks_title:0 "§HUnlocks Ship Type:§! $darktec_crisis_mauler$"
+	tech_darktec_crisis_mauler_unlocks_desc:0 "§H$darktec_crisis_mauler$§!\n$darktec_crisis_mauler_tooltip$"
+
+	tech_darktec_crisis_weaver:0 "$darktec_crisis_weaver$"
+	tech_darktec_crisis_weaver_desc:0 "The ghastly reflection of its normal counterpart, this organic vessel bends the light to its advantage and the advantage of its brethren, camouflaging with the fabric of reality itself."
+	tech_darktec_crisis_weaver_unlocks_title:0 "§HUnlocks Ship Type:§! $darktec_crisis_weaver$"
+	tech_darktec_crisis_weaver_unlocks_desc:0 "§H$darktec_crisis_weaver$§!\n$darktec_crisis_weaver_tooltip$"
+
+	tech_darktec_crisis_stinger:0 "$darktec_crisis_stinger$"
+	tech_darktec_crisis_stinger_desc:0 "A large dark-matter saturated and deadly creature, this colossal organic vessel doesn't really move, but cuts through the void of space sealing through the void as it seeks its prey. A prey that will never know what hit them."
+	tech_darktec_crisis_stinger_unlocks_title:0 "§HUnlocks Ship Type:§! $darktec_crisis_stinger$"
+	tech_darktec_crisis_stinger_unlocks_desc:0 "§H$darktec_crisis_stinger$§!\n$darktec_crisis_stinger_tooltip$"
+
+
+# Umbral Buildings
+	# Techs
+	tech_darktec_umbral_extractors_t1:0 "Umbral Extraction"
+	tech_darktec_umbral_extractors_t1_desc:0 "The conversion of entropy into a ''containable'' entity is an intensive one, but the byproducts greatly enhance our economy if used appropiately."
+	tech_darktec_umbral_extractors_t2:0 "Umbro-Material Predation"
+	tech_darktec_umbral_extractors_t2_desc:0 "By cycling contained entropy and dark matter into a power source, or diverting baryonic matter into paramatter, we can accelerate some industrial processes."
+	tech_darktec_umbral_extractors_t3:0 "Umbro-Material Multiversal Cycling"
+	tech_darktec_umbral_extractors_t3_desc:0 "It is not only a matter of harvesting local entropy, but theorise we can do slight tapping into parallel universes collapsing in a single point in time in space."
+
+	tech_darktec_umbral_industry_t1:0 "Umbral Forging"
+	tech_darktec_umbral_industry_t1_desc:0 "Standar materials can be upgraded with a thin contained layer of paramatter to greatly strenghten their capacities."
+	tech_darktec_umbral_industry_t2:0 "Umbro-Material Melting"
+	tech_darktec_umbral_industry_t2_desc:0 "Processing paramatter into a semi-baryonic alloy can be a revolutionary new method for fast economical and military expansion."
+	tech_darktec_umbral_industry_t3:0 "Umbral Hypercondensation"
+	tech_darktec_umbral_industry_t3_desc:0 "Layer after layer of paramatter alloys can be overlapped even at the same physical dimensionality, exponentially increasing production with just mere drawbacks."
+
+	tech_darktec_umbral_research_t1:0 "Umbral Analytic Research"
+	tech_darktec_umbral_research_t1_desc:0 "Discovering the potential of vacuum study without the risks of an accidental universal-annihilation event will, for sure, accelerate our research."
+	tech_darktec_umbral_research_t2:0 "Umbral Statistical Predictions"
+	tech_darktec_umbral_research_t2_desc:0 "Randomness and chaos ironically pay a deterministic role in the adquisition of exotic and theoretical technologies."
+	tech_darktec_umbral_research_t3:0 "Umbral Multiversional Calculus"
+	tech_darktec_umbral_research_t3_desc:0 "The close-up study of the everchanging status of entropy allows us to observe potential time divergences ocurring in the same space, but different potential dimensions."
+
+
+
+	# Core
+	mod_darktec_umbral_boost:0 "£sr_dark_matter£ Umbral Building Boost"
+	mod_darktec_umbral_boost_desc:0 "By redirecting entropy towards different systems, their efficiency is improved exponentially."
+
+	building_darktec_affected_by_umbral_boost:0 "\n\n§HFeature§!: §EUmbral Synergy§!\nThis £building£building's modifiers, or production, are affected by §Y$mod_darktec_umbral_boost$§!"
+
+	building_darktec_provides_umbral_boost:0 "\n\n§HFeature§!: §EUmbral Synergy§!\nThis £building£building §YBoosts§! other Umbral buildings production or modifiers."
+
+	building_darktec_grows_entrophereals:0 "\n\n§HFeature§!: §EEntrophereal Recomposition§!\nThis £building£building reconstitues entrophereals from an altered state, §Ygeneration§! extra population.\nThe next pop creation pulse will be done at §Y[owner.darktec_entrophereal_growth_pulse]§!"
+
+	building_darktec_allows_entrophereal_assimilation:0 "\n\n§HFeature§!: §EEntrophereal Assimilation§!\nThis £building£building allows the assimilation of non-entrophereal pops into entrophereal pops of the main species when §EEntrophereal Recomposition§! pulse is done."
+
+	building_darktec_anchor_1:0 "Entropic Reallocation Anchor"
+	building_darktec_anchor_1_plural:0 "$building_darktec_anchor_1$s"
+	building_darktec_anchor_1_desc:0 "A towering structure that amalgamates local entropy into a containable form. It constantly hums and vibrates as the paramatter resonance when changed material status generates an enormous amount of background energy."
+	building_darktec_anchor_1_tooltip:0 ""
+
+	building_darktec_anchor_2:0 "Entropic Condensation Syphon"
+	building_darktec_anchor_2_plural:0 "$building_darktec_anchor_2$s"
+	building_darktec_anchor_2_desc:0 "$building_darktec_anchor_1_desc$"
+	building_darktec_anchor_2_tooltip:0 ""
+
+	building_darktec_anchor_3:0 "Entropy Paramatter Harvester"
+	building_darktec_anchor_3_plural:0 "$building_darktec_anchor_3$s"
+	building_darktec_anchor_3_desc:0 "$building_darktec_anchor_1_desc$"
+	building_darktec_anchor_3_tooltip:0 ""
+
+	building_darktec_anchor_4:0 "Entropy Reaper"
+	building_darktec_anchor_4_plural:0 "$building_darktec_anchor_4$s"
+	building_darktec_anchor_4_desc:0 "$building_darktec_anchor_1_desc$"
+	building_darktec_anchor_4_tooltip:0 ""
+
+	building_darktec_storage_1:0 "Paramatter Silo"
+	building_darktec_storage_1_plural:0 "$building_darktec_storage_1$s"
+	building_darktec_storage_1_desc:0 "This containment facility uses micro-shielding technologies to safely store non-baryonic matter, with several precaution and countermeasures enacted for avoiding a catastrophic collapse event in case of leakage or sabotage."
+	building_darktec_storage_1_tooltip:0 ""
+
+	building_darktec_storage_2:0 "Paramatter Containment"
+	building_darktec_storage_2_plural:0 "$building_darktec_storage_2$s"
+	building_darktec_storage_2_desc:0 "$building_darktec_storage_1_desc$"
+	building_darktec_storage_2_tooltip:0 ""
+
+	building_darktec_storage_3:0 "Paramatter Depot"
+	building_darktec_storage_3_plural:0 "$building_darktec_storage_3$s"
+	building_darktec_storage_3_desc:0 "$building_darktec_storage_1_desc$"
+	building_darktec_storage_3_tooltip:0 ""
+
+	building_darktec_storage_4:0 "Paramatter Vault"
+	building_darktec_storage_4_plural:0 "$building_darktec_storage_4$s"
+	building_darktec_storage_4_desc:0 "$building_darktec_storage_1_desc$"
+	building_darktec_storage_4_tooltip:0 ""
+
+	building_darktec_umbral_portal_1:0 "Entrophereal Reconstitutor"
+	building_darktec_umbral_portal_1_plural:0 "$building_darktec_umbral_portal_1$s"
+	building_darktec_umbral_portal_1_desc:0 "Serving as a way to gather dispersed non-baryonic matter result of an entropic transformation, this building allows new entrophereals to exist in a stable form."
+	building_darktec_umbral_portal_1_tooltip:0 ""
+
+	building_darktec_umbral_portal_2:0 "Entrophereal Emulser"
+	building_darktec_umbral_portal_2_plural:0 "$building_darktec_umbral_portal_2$s"
+	building_darktec_umbral_portal_2_desc:0 "$building_darktec_umbral_portal_1_desc$"
+	building_darktec_umbral_portal_2_tooltip:0 ""
+
+	building_darktec_umbral_assimilation_1:0 "Entropic Emulser"
+	building_darktec_umbral_assimilation_1_plural:0 "$building_darktec_umbral_assimilation_1$s"
+	building_darktec_umbral_assimilation_1_desc:0 "By complex combination processes this building allows an ample population to get its composition radically altered, becoming way more than just mere baryonic or non baryonic entities."
+
+	building_darktec_umbral_assimilation_2:0 "Entropic Converger"
+	building_darktec_umbral_assimilation_2_plural:0 "$building_darktec_umbral_assimilation_2$s"
+	building_darktec_umbral_assimilation_2_desc:0 "$building_darktec_umbral_assimilation_1_desc$"
+	building_darktec_umbral_assimilation_2_tooltip:0 "DISCARDED"
+
+	building_darktec_umbral_reallocator_specialist:0 "DISCARDED"
+	building_darktec_umbral_reallocator_specialist_plural:0 "DISCARDED"
+	building_darktec_umbral_reallocator_specialist_desc:0 "DISCARDED"
+	building_darktec_umbral_reallocator_specialist_tooltip:0 "DISCARDED"
+
+	building_darktec_umbral_reallocator_menial:0 "DISCARDED"
+	building_darktec_umbral_reallocator_menial_plural:0 "DISCARDED"
+	building_darktec_umbral_reallocator_menial_desc:0 "DISCARDED"
+	building_darktec_umbral_reallocator_menial_tooltip:0 "DISCARDED"
+
+	building_darktec_umbral_reallocator_utility:0 "DISCARDED"
+	building_darktec_umbral_reallocator_utility_plural:0 "DISCARDED"
+	building_darktec_umbral_reallocator_utility_desc:0 "DISCARDED"
+	building_darktec_umbral_reallocator_utility_tooltip:0 "DISCARDED"
+
+	building_darktec_umbral_reallocator_pops:0 "DISCARDED"
+	building_darktec_umbral_reallocator_pops_plural:0 "DISCARDED"
+	building_darktec_umbral_reallocator_pops_desc:0 "DISCARDED"
+	building_darktec_umbral_reallocator_pops_tooltip:0 "DISCARDED"
+
+	# Secondary
+	# Moar dark matter
+	building_darktec_umbral_compressor_1:0 "Vacuum Compressor"
+	building_darktec_umbral_compressor_1_plural:0 "$building_darktec_umbral_compressor_1$s"
+	building_darktec_umbral_compressor_1_desc:0 "This structure help local entropic extraction facilities to generate non-baryonic matter by safe compression and conversion of raw materials in the process."
+	building_darktec_umbral_compressor_1_tooltip:0 ""
+
+	building_darktec_umbral_compressor_2:0 "Vacuum Amalgamator"
+	building_darktec_umbral_compressor_2_plural:0 "$building_darktec_umbral_compressor_2$s"
+	building_darktec_umbral_compressor_2_desc:0 "$building_darktec_umbral_compressor_1_desc$"
+	building_darktec_umbral_compressor_2_tooltip:0 ""
+
+	building_darktec_umbral_compressor_3:0 "Vacuum Merger"
+	building_darktec_umbral_compressor_3_plural:0 "$building_darktec_umbral_compressor_3$s"
+	building_darktec_umbral_compressor_3_desc:0 "$building_darktec_umbral_compressor_1_desc$"
+	building_darktec_umbral_compressor_3_tooltip:0 ""
+
+	building_darktec_umbral_compressor_4:0 "Vacuum Veiled Merger"
+	building_darktec_umbral_compressor_4_plural:0 "$building_darktec_umbral_compressor_4$s"
+	building_darktec_umbral_compressor_4_desc:0 "$building_darktec_umbral_compressor_1_desc$"
+	building_darktec_umbral_compressor_4_tooltip:0 ""
+
+	# Dark matter into minerals and energy
+	building_darktec_umbral_decompressor_1:0 "Void Deconstructor"
+	building_darktec_umbral_decompressor_1_plural:0 "$building_darktec_umbral_decompressor_1$s"
+	building_darktec_umbral_decompressor_1_desc:0 "By applying a strong particle field to non-baryonic matter, this building allows the transformation of exotic isopods into recognisable matter and energy."
+	building_darktec_umbral_decompressor_1_tooltip:0 ""
+
+	building_darktec_umbral_decompressor_2:0 "Void Dismantler"
+	building_darktec_umbral_decompressor_2_plural:0 "$building_darktec_umbral_decompressor_2$s"
+	building_darktec_umbral_decompressor_2_desc:0 "$building_darktec_umbral_decompressor_1_desc$"
+	building_darktec_umbral_decompressor_2_tooltip:0 ""
+
+	building_darktec_umbral_decompressor_3:0 "Void Atomizer"
+	building_darktec_umbral_decompressor_3_plural:0 "$building_darktec_umbral_decompressor_3$s"
+	building_darktec_umbral_decompressor_3_desc:0 "$building_darktec_umbral_decompressor_1_desc$"
+	building_darktec_umbral_decompressor_3_tooltip:0 ""
+
+	building_darktec_umbral_decompressor_4:0 "Void Veiled Atomizer"
+	building_darktec_umbral_decompressor_4_plural:0 "$building_darktec_umbral_decompressor_4$s"
+	building_darktec_umbral_decompressor_4_desc:0 "$building_darktec_umbral_decompressor_1_desc$"
+	building_darktec_umbral_decompressor_4_tooltip:0 ""
+
+	# Dark matter into extra food
+	building_darktec_umbral_food_1:0 "Infused Tilth"
+	building_darktec_umbral_food_1_plural:0 "$building_darktec_umbral_food_1$s"
+	building_darktec_umbral_food_1_desc:0 "A bath of exotic radiation and light-alike particles towards biomasss stimulates its growth and production; however, if used for consumption, can be reported as ''oddly'' crispy."
+	building_darktec_umbral_food_1_tooltip:0 ""
+
+	building_darktec_umbral_food_2:0 "Saturated Tilth"
+	building_darktec_umbral_food_2_plural:0 "$building_darktec_umbral_food_2$s"
+	building_darktec_umbral_food_2_desc:0 "$building_darktec_umbral_food_1_desc$"
+	building_darktec_umbral_food_2_tooltip:0 ""
+
+	building_darktec_umbral_food_3:0 "Voidbound Tilth"
+	building_darktec_umbral_food_3_plural:0 "$building_darktec_umbral_food_3$s"
+	building_darktec_umbral_food_3_desc:0 "$building_darktec_umbral_food_1_desc$"
+	building_darktec_umbral_food_3_tooltip:0 ""
+
+	building_darktec_umbral_food_4:0 "Voidbound Veiled Tilth"
+	building_darktec_umbral_food_4_plural:0 "$building_darktec_umbral_food_4$s"
+	building_darktec_umbral_food_4_desc:0 "$building_darktec_umbral_food_1_desc$"
+	building_darktec_umbral_food_4_tooltip:0 ""
+
+	# Alloys from DM
+	building_darktec_void_foundry_1:0 "Umbral Forge"
+	building_darktec_void_foundry_1_plural:0 "$building_darktec_void_foundry_1$s"
+	building_darktec_void_foundry_1_desc:0 "Immense foundries where non-baryonic matter and energy are combined with strong alloys to create para-matter alloys in an evergrowingly exponential way."
+	building_darktec_void_foundry_1_tooltip:0 ""
+
+	building_darktec_void_foundry_2:0 "Umbral Neoforge"
+	building_darktec_void_foundry_2_plural:0 "$building_darktec_void_foundry_2$s"
+	building_darktec_void_foundry_2_desc:0 "$building_darktec_void_foundry_1_desc$"
+	building_darktec_void_foundry_2_tooltip:0 ""
+
+	building_darktec_void_foundry_3:0 "Umbral Ultraforge"
+	building_darktec_void_foundry_3_plural:0 "$building_darktec_void_foundry_3$s"
+	building_darktec_void_foundry_3_desc:0 "$building_darktec_void_foundry_1_desc$"
+	building_darktec_void_foundry_3_tooltip:0 ""
+
+	building_darktec_void_foundry_4:0 "Umbral Veiled Ultraforge"
+	building_darktec_void_foundry_4_plural:0 "$building_darktec_void_foundry_3$s"
+	building_darktec_void_foundry_4_desc:0 "$building_darktec_void_foundry_1_desc$"
+	building_darktec_void_foundry_4_tooltip:0 ""
+
+	# Exotics from DM
+	building_darktec_void_refinery_1:0 "Baryonic Refinery"
+	building_darktec_void_refinery_1_plural:0 "DISCARDED"
+	building_darktec_void_refinery_1_desc:0 "DISCARDED"
+	building_darktec_void_refinery_1_tooltip:0 "DISCARDED"
+
+	building_darktec_void_refinery_2:0 "Baryonic Neorefinery"
+	building_darktec_void_refinery_2_plural:0 "DISCARDED"
+	building_darktec_void_refinery_2_desc:0 "DISCARDED"
+	building_darktec_void_refinery_2_tooltip:0 "DISCARDED"
+
+	building_darktec_void_refinery_3:0 "Baryonic Ultrarefinery"
+	building_darktec_void_refinery_3_plural:0 "DISCARDED"
+	building_darktec_void_refinery_3_desc:0 "DISCARDED"
+	building_darktec_void_refinery_3_tooltip:0 "DISCARDED"
+
+	building_darktec_void_refinery_4:0 "Baryonic Reintegration Refinery"
+	building_darktec_void_refinery_4_plural:0 "DISCARDED"
+	building_darktec_void_refinery_4_desc:0 "DISCARDED"
+	building_darktec_void_refinery_4_tooltip:0 "DISCARDED"
+
+	# Research from DM
+	building_darktec_void_research_1:0 "Anomalous Research Emplacement"
+	building_darktec_void_research_1_plural:0 "$building_darktec_void_research_1$s"
+	building_darktec_void_research_1_desc:0 "This facility serves as a state-of-the-art center of study of non-baryonic matter and void-bound applications."
+	building_darktec_void_research_1_tooltip:0 ""
+
+	building_darktec_void_research_2:0 "Anomalous Research Laboratory"
+	building_darktec_void_research_2_plural:0 "Anomalous Research Laboratories"
+	building_darktec_void_research_2_desc:0 "$building_darktec_void_research_1_desc$"
+	building_darktec_void_research_2_tooltip:0 ""
+
+	building_darktec_void_research_3:0 "Anomalous Research Reactor"
+	building_darktec_void_research_3_plural:0 "$building_darktec_void_research_3$s"
+	building_darktec_void_research_3_desc:0 "$building_darktec_void_research_1_desc$"
+	building_darktec_void_research_3_tooltip:0 ""
+
+	building_darktec_void_research_4:0 "Anomalous Research Super-Reactor"
+	building_darktec_void_research_4_plural:0 "$building_darktec_void_research_4$s"
+	building_darktec_void_research_4_desc:0 "$building_darktec_void_research_1_desc$"
+	building_darktec_void_research_4_tooltip:0 ""
+
+	# DM from researchers
+	building_darktec_void_investigation_1:0 "Entropic Lab"
+	building_darktec_void_investigation_1_plural:0 "$building_darktec_void_investigation_1$s"
+	building_darktec_void_investigation_1_desc:0 "Dedicated labs that employ exotic paramatter for direct experimentation - several containment measures are taken in place to avoid... unforeseen consequences."
+	building_darktec_void_investigation_1_tooltip:0 ""
+
+	building_darktec_void_investigation_2:0 "Entropic Station"
+	building_darktec_void_investigation_2_plural:0 "$building_darktec_void_investigation_2$s"
+	building_darktec_void_investigation_2_desc:0 "$building_darktec_void_investigation_1_desc$"
+	building_darktec_void_investigation_2_tooltip:0 ""
+
+	building_darktec_void_investigation_3:0 "Entropic Installation"
+	building_darktec_void_investigation_3_plural:0 "$building_darktec_void_investigation_3$s"
+	building_darktec_void_investigation_3_desc:0 "$building_darktec_void_investigation_1_desc$"
+	building_darktec_void_investigation_3_tooltip:0 ""
+
+	building_darktec_void_investigation_4:0 "Entropic Reactor"
+	building_darktec_void_investigation_4_plural:0 "$building_darktec_void_investigation_4$s"
+	building_darktec_void_investigation_4_desc:0 "$building_darktec_void_investigation_1_desc$"
+	building_darktec_void_investigation_4_tooltip:0 ""
+
+# Umbral Traits
+	darktec_trait_umbral_basic:0 "§EUmbral Trait§!"
+	darktec_trait_umbral_advanced:0 "§EUmbral Trait - Advanced§!"
+	darktec_trait_ascension:0 "§EEntropic Ascension Trait§!"
+	darktec_trait_entro:0 "§EEntrophereal Trait§!"
+
+	tech_darktec_traits_t1:0 "Chimeral Paramatter Applications"
+	tech_darktec_traits_t1_desc:0 "Diverse studies have proven the application of tiny doses of paramatter on non-inert entities can led to the assimilation of it without dangerouse consequences; As such, we theorize we can improve our species in this way, by creating specialized and localized combination of both dimensions."
+	tech_darktec_traits_t1_unlocks_title:0 "§HUnlocks Species Traits:§! Chimeral Umbral Traits"
+	tech_darktec_traits_t1_unlocks_desc:0 "§H$tech_darktec_traits_t1$§!\nSpecial traits that interact with £sr_dark_matter£ Dark Matter and $darktec_contained_entropy_with_icon$, while also offering potent bonuses."
+
+	tech_darktec_traits_t2:0 "Umbral Self-Experimentation"
+	tech_darktec_traits_t2_desc:0 "The success of entropic infusion of paramatter with our species composition led to an ample field of study when it comes to exotic combinations - some more radical and some less methodical than expected."
+	tech_darktec_traits_t2_unlocks_title:0 "§HUnlocks Species Traits:§! Advanced Umbral Traits"
+	tech_darktec_traits_t2_unlocks_desc:0 "§H$tech_darktec_traits_t1$§!\nSpecial traits that interact further with £sr_dark_matter£ Dark Matter and $darktec_contained_entropy_with_icon$, while also offering potent bonuses."
+
+	tech_darktec_traits_ascension:0 "Entropic Traits"
+	tech_darktec_traits_ascension_desc:0 "Enhancing our species after our empire changed was not enough, we need to take advantage of our advancements on paramatter and further this vision, further this ascension into something better."
+	tech_darktec_traits_ascension_unlocks_title:0 "§HUnlocks Species Traits:§! $tech_darktec_traits_ascension$"
+	tech_darktec_traits_ascension_unlocks_desc:0 "§H$tech_darktec_traits_t1$§!\nWe will obtain a powerful trait that varies based on the ascension path picked through the game."
+
+	trait_darktec_decay_predation:0 "Cosmic Decay Predation"
+	trait_darktec_decay_predation_desc:0 "The entire compositon of this species has been readapted to be able to filter and benefit from cosmic background radiation, supplying them with immense energy capacities."
+	trait_darktec_decay_predation_tooltip:0 "$mod_leaders_upkeep_mult$: §G-25%§!\n    - $mod_planet_pops_upkeep_mult$: §G-25%§!\n\nPer $pop_group_unit$ £pop£ §HPops§! per month:\n    - Production: §G+0.025§! §Y$darktec_contained_entropy_with_icon$§!.\n    - Upkeep: §R-0.025§! §Y£sr_dark_matter£ Dark Matter§!"
+
+	trait_darktec_paramatter_saturation:0 "Para-Matter Saturation"
+	trait_darktec_paramatter_saturation_desc:0 "A condensed overload of non-baryonic matter saturates the body of this kind, oozing "
+	trait_darktec_paramatter_saturation_tooltip:0 "$mod_planet_pops_upkeep_mult$: §R+15%§!\n\nPer $pop_group_unit$ £pop£ §HPops§! per month:\n    - Production: §G+0.035§! §Y$darktec_contained_entropy_with_icon$§!"
+
+	trait_darktec_obscure_intellect:0 "Obscure Intellect"
+	trait_darktec_obscure_intellect_desc:0 "The ability to perceive and sense the influx of para-matter and background/dark radiation gives this species an increased awareness and understanding of the universe."
+	trait_darktec_obscure_intellect_tooltip:0 "$researcher_jobs_bonus_workforce_mult$: §G+15%§!\n\nPer $pop_group_unit$ £pop£ §HPops§! per month:\n    - Upkeep: §R-0.025§! §Y£sr_dark_matter£ Dark Matter§!"
+
+	trait_darktec_obscure_intellect_robotic:0 "Abstract Processing"
+	trait_darktec_obscure_intellect_robotic_desc:0 "Due to the influence of contained entropy on the circuitry and processing of this mechanical species, their efficiency when it comes to understanding the design and intrincations of the universe has increased tenfold."
+	trait_darktec_obscure_intellect_robotic_tooltip:0 "$trait_darktec_obscure_intellect_tooltip$"
+
+	trait_darktec_darkened_veins:0 "Umbral Organism"
+	trait_darktec_darkened_veins_desc:0 "The excessive influence of dark matter on this species is noticeable, as their very fluids ooze with a surreally black tint."
+	trait_darktec_darkened_veins_tooltip:0 "$MOD_POP_AMENITIES_USAGE_ADD$: §R+0.15§!\n\nPer $pop_group_unit$ £pop£ §HPops§! per month:\n    - Production: §G+0.055§! §Y£sr_dark_matter£ Dark Matter§!"
+
+	trait_darktec_darkened_veins_robotic:0 "Umbral Fueling"
+	trait_darktec_darkened_veins_robotic_desc:0 "Adapted as main fuel, this mechanical species harness the power of dark matter; the noticeable effects on their mechanism give them an strange way of operating."
+	trait_darktec_darkened_veins_robotic_tooltip:0 "$trait_darktec_darkened_veins_tooltip$"
+
+	trait_darktec_entropic_synthesis:0 "Entropic Synthesis"
+	trait_darktec_entropic_synthesis_desc:0 "Due to immense modifications, this species has gained the ability to catch and filter entropy, recycling it as a natural process as it gets nurtured by the energy generated on the process."
+	trait_darktec_entropic_synthesis_tooltip:0 "$MOD_POP_BONUS_WORKFORCE_MULT$: §G+10%§!\n\nPer $pop_group_unit$ £pop£ §HPops§! per month:\n    - Upkeep: §R-0.025§! §Y$darktec_contained_entropy_with_icon$§!"
+
+	# Ascension - genetics
+	trait_darktec_purity_ingrained_entrogenomics:0 "Ingrained Entrogenomics"
+	trait_darktec_purity_ingrained_entrogenomics_desc:0 "Using pockets of dark matter directed towards specific faulty or potentially faulty genetic chains, this species stimulates perfection on outstanding members of their kind."
+	trait_darktec_purity_ingrained_entrogenomics_tooltip:0 "Leaders have a §G25%§! chance of consuming §R200§! §Y£sr_dark_matter£ Dark Matter§! (per level) on level up to remove their negative traits."
+
+	trait_darktec_cloning_mirror_splicing:0 "Mirror-Veiled Splicing"
+	trait_darktec_cloning_mirror_splicing_desc:0 "Altering the cellular division when reproduction occurs, this species use entropic-randomness provided by paramatter to accelerate cloning processes tenfold."
+	#trait_darktec_cloning_mirror_splicing_tooltip:0 "$MOD_BONUS_POP_GROWTH_MULT$: §G+25%§!\n\nPer $pop_group_unit$ £pop£ §HPops§! grown, §G10%§! chance of any pop group with this trait gaining another $pop_group_unit$ £pop£ §HPops§!."
+
+	trait_darktec_mutation_dark_adaptation:0 "Dark Adaptation"
+	trait_darktec_mutation_dark_adaptation_desc:0 "As an organism saturated with background radiation, the potential of mutation is ceaseless."
+	trait_darktec_mutation_dark_adaptation_tooltip:0 "The Species gain between §G+15%§! and §G+25%§! $MOD_POP_BONUS_WORKFORCE_MULT$ for a specific £job£ §HJob§! based on the planet designation."
+
+	# Ascension - cybernetics and synths
+	trait_darktec_cybernetic_dm_injectors:0 "Dark Matter Injectors"
+	trait_darktec_cybernetic_dm_injectors_desc:0 "Specialized injectors dose tiny amounts of dark matter into the circuitry of this species to greatly increase its capacities."
+	trait_darktec_cybernetic_dm_injectors_tooltip:0 "$MOD_BONUS_POP_GROWTH_MULT$: §G+25%§!\n    - $MOD_POP_BONUS_WORKFORCE_MULT$: §G+25%§!\n\nPer $pop_group_unit$ £pop£ §HPops§! per month:\n    - Upkeep: §R-0.05§! §Y£sr_dark_matter£ Dark Matter§!"
+
+	trait_darktec_cybernetic_void_threadware:0 "Void Threadware"
+	trait_darktec_cybernetic_void_threadware_desc:0 "Taking advantage of the everchanging and chaotic aspect of entropy, the circuits tied to this kind can process information in a random but way more efficient manner."
+	trait_darktec_cybernetic_void_threadware_tooltip:0 "$researcher_jobs_bonus_workforce_mult$: §G+1%§!\n    - $bureaucrat_jobs_bonus_workforce_mult$: §G+1%§!\n\nRandomly over each passed year, these values can increase (individually) up to §G100%§!"
+
+	# Ascension - Machine
+	trait_darktec_nanite_replication:0 "Entropic Replication Cyclers"
+	trait_darktec_nanite_replication_desc:0 "Applying paramatter duplication and entropic cycles of random orders, new nanites composing this mechanical construct can multiplicate in a exponential way."
+	#trait_darktec_nanite_replication_tooltip:0 ""
+
+	trait_darktec_virtual_void_calculation:0 "Umbral Calculation Models"
+	trait_darktec_virtual_void_calculation_desc:0 "Diverting some processing capacity towards vacuum while retrofeeding data storage with non-baryonic matter allows a reduction in load for these virtual machines."
+	trait_darktec_virtual_void_calculation_tooltip:0 "$MOD_POP_BONUS_WORKFORCE_MULT$: §G+25%§! per colony\n    - Upkeep: §R-0.015§! §Y£sr_dark_matter£ Dark Matter§! per colony.\nEffect capped at 6 colonies."
+
+	trait_darktec_modularity_paramatter:0 "Para-Matter Synthetizers"
+	trait_darktec_modularity_paramatter_desc:0 "Tiny anchors and forges coupled on redundant or available space allow this artificial species to harvest tiny amounts of paramatter per construct in a contained and safe way."
+	trait_darktec_modularity_paramatter_tooltip:0 "$foundry_jobs_bonus_workforce_mult$: §R+15%§!\n\nPer $pop_group_unit$ £pop£ §HPops§! per month:\n    - Production: §G+0.05§! §Y$darktec_contained_entropy_with_icon$§!"
+
+	# Ascension - Psionic
+	trait_darktec_psionic_eldritch_prescience:0 "Eldritch Prescience"
+	trait_darktec_psionic_eldritch_prescience_desc:0 "Improved by consuming large amounts of dark matter, this psionic species is able to peer into infinite possibilities without losing its sanity."
+	trait_darktec_psionic_eldritch_prescience_tooltip:0 "$mod_psionic_pop_bonus_workforce_mult$: §G+40%§!\n\nPer $pop_group_unit$ £pop£ §HPops§! per month:\n    - Upkeep: §R-0.05§! §Y£sr_dark_matter£ Dark Matter§!"
+
+	trait_darktec_entro_main:0 "Entrophereal"
+	trait_darktec_entro_main_plural:0 "Entrophereals"
+	trait_darktec_entro_main_desc:0 "No belonging to neither a baryonic or non-baryonic composition, this species has achieved the impossible - being a perfect combination of both worlds... but at a great price, as it is unstable without proper measures to contain their new form."
+	trait_darktec_entro_main_tooltip:0 ""
+
+	leader_trait_darktec_entro_main:0 "$trait_darktec_entro_main$"
+	leader_trait_darktec_entro_main_desc:0 "No belonging to neither a baryonic or non-baryonic composition, this leader has achieved the impossible - being a perfect combination of both worlds... but at a great price, as it is unstable without proper measures to contain their new form."
+
+	trait_darktec_entro_phase_body:0 "Phase-Matter Composition"
+	trait_darktec_entro_phase_body_desc:0 "An increase of paramatter composition on the body of these $trait_darktec_entro_main_plural$ make them able to phase and traverse the material plane in a ghostly manner."
+	trait_darktec_entro_phase_body_tooltip:0 "TODO massive housing reduction and army bonuses"
+
+	trait_darktec_entro_eldritch_touch:0 "Eldritch Touch"
+	trait_darktec_entro_eldritch_touch_desc:0 "Able to converge two different matter statuses, this $trait_darktec_entro_main$ species can create impossible things with near no effort."
+	trait_darktec_entro_eldritch_touch_tooltip:0 "TODO extra output"
+
+	trait_darktec_entro_dm_oozing:0 "Gloomed Oozing"
+	trait_darktec_entro_dm_oozing_desc:0 "Overcharged with exotic matter, this species exude and shed paramatter and produce tiny amounts of harmless radiation that can be harvested with the proper tools and containment measures."
+	trait_darktec_entro_dm_oozing_tooltip:0 "$MOD_POP_AMENITIES_USAGE_ADD$: §R+0.25§!\n\nPer $pop_group_unit$ £pop£ §HPops§! per month:\n    - Production: §G+0.1§! §Y£sr_dark_matter£ Dark Matter§!"
+
+	trait_darktec_entro_multiverse_sight:0 "Multidimensional Sight"
+	trait_darktec_entro_multiverse_sight_desc:0 "The consciousness of this kind is intermingled with the impossible randomness of entropy but bound to reality at the same time, allowing parallel lines of thought by peering into potential possibilies of alternative realities."
+	trait_darktec_entro_multiverse_sight_tooltip:0 "TODO extra unity output"
+
+	trait_darktec_entro_possession:0 "Baryonic Posession"
+	trait_darktec_entro_possession_desc:0 "Due to its unstable status, this species can shift into a semi or non tangible composition and ''submerge'' in or out of machinery and technology, connecting their consciouness to existing circuitry and being able to execute a level of control never seen before."
+	trait_darktec_entro_possession_tooltip:0 "TODO high bonuses for foundry and artisan jobs per district"
+
+	trait_darktec_entro_saturation:0 "Entropic Saturation"
+	trait_darktec_entro_saturation_desc:0 "Too much entropic matter traverse this species, making them highly unstable and dangerous."
+	trait_darktec_entro_saturation_tooltip:0 "$MOD_POP_AMENITIES_USAGE_MULT$: §R+0.25%§!\n\nPer $pop_group_unit$ £pop£ §HPops§! per month:\n    - Production: §G+0.1§! §Y$darktec_contained_entropy_with_icon$§!"
+
+	trait_darktec_entro_hunger:0 "Paracausal Hunger"
+	trait_darktec_entro_hunger_desc:0 "A constant need of energy consumption haunts this species, as their new composition demands an increasingly high income to keep a stable form."
+	trait_darktec_entro_hunger_tooltip:0 "$mod_planet_pops_upkeep_mult$: §R+50%§!\n\nPer $pop_group_unit$ £pop£ §HPops§! per month:\n    - Production: §G+0.05§! §Y$darktec_contained_entropy_with_icon$§!\n    - Production: §G+0.05§! §Y£sr_dark_matter£ Dark Matter§!"
+
+	trait_darktec_entro_multiplicity:0 "Ghastly Multiplicity"
+	trait_darktec_entro_multiplicity_desc:0 "The influence of paramatter on the reproductive capacities of these $trait_darktec_entro_main_plural$ allows their duplication in a physical, metaphorical and consciouness-like process, creating perfect ''clones'' of themselves by reconstituting basic and exotic matter in the process."
+	trait_darktec_entro_multiplicity_tooltip:0 "Each time an §H$building_darktec_umbral_portal_1$§! generates an entrophereal growth pulse for this species, §G10%§! chance of providing $pop_group_unit$ £pop£ §HPops§!."
+
+	trait_darktec_entro_traversal:0 "Cross-Reality Traversal"
+	trait_darktec_entro_traversal_desc:0 "There are no physical limits for this species, as they can traverse and shift between dimensions briefly altering their spatial and temporal location swiftly."
+	trait_darktec_entro_traversal_tooltip:0 "TODO massive automigration bonus"
+# /
+
+# UNSORTED LOCALISATION
+	bombardment_darktec_bombardment_entropy:0 "Entropic Bombardment"
+	bombardment_darktec_bombardment_entropy_desc:0 "Large saturated bombs devastate the surface of the planet, disintegrating baryonic matter and subverting it into non-baryonic on contact and chain-reaction."
+
+	DARKTEC_SHIP_UTILITY_VOIDJUMP_MODULE:0 "Voidrift Relocator"
+	DARKTEC_SHIP_UTILITY_VOIDJUMP_MODULE_ORGANIC:0 "$DARKTEC_SHIP_UTILITY_VOIDJUMP_MODULE$"
+	DARKTEC_SHIP_UTILITY_VOIDJUMP:0 "$DARKTEC_SHIP_UTILITY_VOIDJUMP_MODULE$"
+	DARKTEC_SHIP_UTILITY_VOIDJUMP_DESC:0 "Constantly shifting between physic states, this device can be overloaded to instantly create a rift in time and space, relocating the vessel and its surroundings to a previous known location."
+	DARKTEC_SHIP_UTILITY_VOIDJUMP_MODULE_DESC:0 "$DARKTEC_SHIP_UTILITY_VOIDJUMP_DESC$"
+	DARKTEC_SHIP_UTILITY_VOIDJUMP_ORGANIC:0 "$DARKTEC_SHIP_UTILITY_VOIDJUMP_MODULE$"
+	DARKTEC_SHIP_UTILITY_VOIDJUMP_ORGANIC_DESC:0 "Constantly shifting between physic states, this organ can be overloaded to instantly create a rift in time and space, relocating the vessel and its surroundings to a previous known location."
+	DARKTEC_SHIP_UTILITY_VOIDJUMP_TOOLTIP:0 "Unlocks fleet action:  §H$on_darktec_voidjump_ability_title$§!\n\n§HCost§!: £sr_dark_matter£1000 £darktec_contained_entropy£1000\n§HCooldown§!: 360 £time£\n\nYour fleet will open a §YVoid Rift§! towards your home system.$TABBED_NEW_LINE$- All the ships on the fleet will be relocated.$TABBED_NEW_LINE$- All ships without this module will suffer §RSEVERE§! damage."
+
+	DARKTEC_SHIP_UTILITY_INERTIALESS:0 "Inertialess Entropic Drive"
+	DARKTEC_SHIP_UTILITY_INERTIALESS_DESC:0 "Breaking laws of physic, this perpetually-moving apparatus generates energy by its very existence."
+	DARKTEC_SHIP_UTILITY_INERTIALESS_ORGANIC:0 "Inertialess Entropic Organ"
+	DARKTEC_SHIP_UTILITY_INERTIALESS_ORGANIC_DESC:0 "Breaking laws of physic, this perpetually-moving muscle generates energy by its very existence."
+	DARKTEC_SHIP_UTILITY_INERTIALESS_TOOLTIP:0 "Unlocks fleet action: §H$on_darktec_inertialess_ability_title$§!\n\n§HCost§!: £sr_dark_matter£1000 £darktec_contained_entropy£1000\n§HCooldown§!: 360 £time£\n\nYour fleet will activate their §YInertialess Drive§!.$TABBED_NEW_LINE$- All ships with the module will gain a massive power Self-Modifier.$TABBED_NEW_LINE$- All ships without this module will suffer §RSEVERE§! damage and the self-modifier inverted.\n\nSelf-Modifier:\n    $MOD_SHIP_FIRE_RATE_MULT$: §G+50%§!\n    $MOD_SHIP_SPEED_MULT$: §G+50%§!\n    $MOD_SHIP_ACCURACY_MULT$: §G+25%§!\n\n    Duration: §Y60 £time£§!"
+
+	DARKTEC_SHIP_UTILITY_COLLAPSER:0 "Paramatter Collapser"
+	DARKTEC_SHIP_UTILITY_COLLAPSER_DESC:0 "Regulating the flow of dark matter towards external shielding, this device can immediately redirect the intensity of the protection towards a micro-vacuum collapse around the ship, creating a devastating shockwave."
+	DARKTEC_SHIP_UTILITY_COLLAPSER_ORGANIC:0 "$DARKTEC_SHIP_UTILITY_COLLAPSER$"
+	DARKTEC_SHIP_UTILITY_COLLAPSER_ORGANIC_DESC:0 "Regulating the flow of dark matter towards external shielding, this organelle can immediately redirect the intensity of the protection towards a micro-vacuum collapse around the ship, creating a devastating shockwave."
+	DARKTEC_SHIP_UTILITY_COLLAPSER_TOOLTIP:0 "Unlocks fleet action:  §H$on_darktec_collapser_ability_title$§!\n\n§HCost§!: £sr_dark_matter£1000 £darktec_contained_entropy£1000\n§HCooldown§!: 360 £time£\n\nYour fleet will activate their §YEntropic Collapser§!.$TABBED_NEW_LINE$- All ships with the module will lose their shields and receive a §RSelf-debuff§!.$TABBED_NEW_LINE$- All ships on the system will receive a §Y5%§! of the lost shields as direct damage.\n$TABBED_NEW_LINE$- Allied ships without this module will get §RAffected§! by the shockwave.\n\n§YCapped at 20000 damage max.§!\n\nSelf-debuff:\n    $MOD_SHIP_SPEED_MULT$ = §R-100%§!\n    $MOD_SHIP_FIRE_RATE_MULT$: §R-100%§!\n\n    Duration: §R30 £time£§!"
+
+	DARKTEC_SHIP_UTILITY_INTERFERER:0 "Vacuum Interferer"
+	DARKTEC_SHIP_UTILITY_INTERFERER_DESC:0 "Accumulating dense amounts of dark matter, this device can create an immense interference in location systems, effectively isolating all emissions from this vessel from detection."
+	DARKTEC_SHIP_UTILITY_INTERFERER_ORGANIC:0 "$DARKTEC_SHIP_UTILITY_INTERFERER$"
+	DARKTEC_SHIP_UTILITY_INTERFERER_ORGANIC_DESC:0 "Accumulating dense amounts of dark matter, this organelle can create an immense interference in location systems, effectively isolating all emissions from this vessel from detection."
+	DARKTEC_SHIP_UTILITY_INTERFERER_TOOLTIP:0 "Unlocks fleet action: §H$on_darktec_interferer_ability_title$§!\n\n§HCost§!: £sr_dark_matter£1000 £darktec_contained_entropy£1000\n§HCooldown§!: 360 £time£\n\nYour fleet will activate their §YVacuum Interferer§!.$TABBED_NEW_LINE$- All ships with the module will gain a massive movement and stealth bonus.$TABBED_NEW_LINE$- Allied ships without this module will §RLose§! most of their hull and armor temporarily.\n\nSelf-Modifier:\n    $MOD_SHIP_CLOAKING_STRENGTH_ADD$: §R+20§!\n    $MOD_SHIP_SPEED_MULT$: §G+100%§!\n    $MOD_SHIP_EVASION_MULT$: §G+50%§!\n\n    Duration: §Y60 £time£§!"
+
+	# Shields
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS:0 "Reverse-Entropy Shielding"
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_DESC:0 "By using residual entropy traces applied to the matter around a ship exterior, the tendency to particule disorder creates a window of soft-shielding alterations at the expense of material integrity."
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_ORGANIC:0 "Reverse-Entropy Shield-Skin"
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_ORGANIC_DESC:0 "By using residual entropy traces applied to the matter around a biological vessel skin, the tendency to particule disorder creates a window of soft-shielding alterations at the expense of structural integrity."
+
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_SMALL:0 "Small $DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS$"
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_SMALL_DESC:0 "$DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_DESC$"
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_MEDIUM:0 "Medium $DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS$"
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_MEDIUM_DESC:0 "$DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_DESC$"
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_LARGE:0 "Large $DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS$"
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_LARGE_DESC:0 "$DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_DESC$"
+
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_SMALL_BIO:0 "Small $DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS$"
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_SMALL_BIO_DESC:0 "$DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_ORGANIC_DESC$"
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_MEDIUM_BIO:0 "Medium $DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS$"
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_MEDIUM_BIO_DESC:0 "$DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_ORGANIC_DESC$"
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_LARGE_BIO:0 "Large $DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS$"
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_LARGE_BIO_DESC:0 "$DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_ORGANIC_DESC$"
+
+	# Antiparticles
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES:0 "Antiparticle Ray"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_DESC:0 "Steamed in a monomolecular line, this projection of antiparticles create micro material collapses on the target, cutting the surfaces it touches in a clean way before they detonate."
+
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_ORGANIC:0 "Antiparticle Lenses"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_ORGANIC_DESC:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_DESC$"
+
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_SMALL:0 "Small $DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES$"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_SMALL_DESC:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_DESC$"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_MEDIUM:0 "Medium $DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES$"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_MEDIUM_DESC:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_DESC$"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_LARGE:0 "Large $DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES$"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_LARGE_DESC:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_DESC$"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_X:0 "Extra-Large $DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES$"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_X_DESC:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_DESC$"
+
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_SMALL_BIO:0 "Small $DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_SMALL_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_ORGANIC_DESC$"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_MEDIUM_BIO:0 "Medium $DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_MEDIUM_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_ORGANIC_DESC$"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_LARGE_BIO:0 "Large $DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_LARGE_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_ORGANIC_DESC$"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_X_BIO:0 "Extra-Large $DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_X_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_ORGANIC_DESC$"
+
+	# Destabilizator
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION:0 "Destabilization Cannons"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_DESC:0 "This launcher of plasma-like dark matter coagulous generate an immense disruptive electromagnetic effect on impact."
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_ORGANIC:0 "Destabilization Emulser"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_ORGANIC_DESC:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION_DESC$"
+
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_SMALL:0 "Small $DARKTEC_SHIP_WEAPON_DESTABILIZATION$"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_SMALL_DESC:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION_DESC$"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_MEDIUM:0 "Medium $DARKTEC_SHIP_WEAPON_DESTABILIZATION$"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_MEDIUM_DESC:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION_DESC$"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_LARGE:0 "Large $DARKTEC_SHIP_WEAPON_DESTABILIZATION$"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_LARGE_DESC:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION_DESC$"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_X:0 "Extra-Large $DARKTEC_SHIP_WEAPON_DESTABILIZATION$"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_X_DESC:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION_DESC$"
+
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_SMALL_BIO:0 "Small $DARKTEC_SHIP_WEAPON_DESTABILIZATION_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_SMALL_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION_ORGANIC_DESC$"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_MEDIUM_BIO:0 "Medium $DARKTEC_SHIP_WEAPON_DESTABILIZATION_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_MEDIUM_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION_ORGANIC_DESC$"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_LARGE_BIO:0 "Large $DARKTEC_SHIP_WEAPON_DESTABILIZATION_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_LARGE_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION_ORGANIC_DESC$"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_X_BIO:0 "Extra-Large $DARKTEC_SHIP_WEAPON_DESTABILIZATION_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_X_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION_ORGANIC_DESC$"
+
+	# Antimatter Lnace
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE:0 "Antimatter Lancer"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_DESC:0 "This dangerous weapon redirects a contained and excited antimatter jet towards a target, devastating matter on its way."
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_ORGANIC:0 "Antimatter Expeller"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_ORGANIC_DESC:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_DESC$"
+
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_SMALL:0 "Small $DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE$"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_SMALL_DESC:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_DESC$"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_MEDIUM:0 "Medium $DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE$"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_MEDIUM_DESC:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_DESC$"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_LARGE:0 "Large $DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE$"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_LARGE_DESC:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_DESC$"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_X:0 "Extra-Large $DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE$"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_X_DESC:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_DESC$"
+
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_SMALL_BIO:0 "Small $DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_SMALL_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_ORGANIC_DESC$"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_MEDIUM_BIO:0 "Medium $DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_MEDIUM_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_ORGANIC_DESC$"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_LARGE_BIO:0 "Large $DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_LARGE_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_ORGANIC_DESC$"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_X_BIO:0 "Extra-Large $DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_X_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_ORGANIC_DESC$"
+
+	# Discharger
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER:0 "Entropic Discharger"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_DESC:0 "Having micro entropic recyclers incorporated to the ships, this discharger throws the byproduct of the extraction process towards a target, manifested in null-energy rays able to permeate through the most dense layer of particles."
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_ORGANIC:0 "Entropic Discharger"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_ORGANIC_DESC:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_DESC$"
+
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_SMALL:0 "Small $DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER$"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_SMALL_DESC:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_DESC$"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_MEDIUM:0 "Medium $DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER$"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_MEDIUM_DESC:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_DESC$"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_LARGE:0 "Large $DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER$"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_LARGE_DESC:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_DESC$"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_X:0 "Extra-Large $DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER$"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_X_DESC:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_DESC$"
+
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_SMALL_BIO:0 "Small $DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_SMALL_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_ORGANIC_DESC$"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_MEDIUM_BIO:0 "Medium $DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_MEDIUM_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_ORGANIC_DESC$"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_LARGE_BIO:0 "Large $DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_LARGE_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_ORGANIC_DESC$"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_X_BIO:0 "Extra-Large $DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_X_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_ORGANIC_DESC$"
+
+
+	on_darktec_voidjump_ability_tooltip:0 "§H$on_darktec_voidjump_ability_title$§!\n\n§HCost§!: £sr_dark_matter£1000 £darktec_contained_entropy£1000\n§HCooldown§!: 360 £time£\n\nYour fleet will open a §YVoid Rift§! towards your home system.$TABBED_NEW_LINE$-All the ships on the fleet will be relocated.$TABBED_NEW_LINE$- All ships without this module will suffer §RSEVERE§! damage."
+	on_darktec_voidjump_ability_title:0 "Void-Rift"
+	on_darktec_voidjump_ability_activity:0 "Void-Rifting"
+	on_darktec_voidjump_ability_progress:0 "Opening Rift"
+
+	on_darktec_inertialess_ability_tooltip:0 "§H$on_darktec_inertialess_ability_title$§!\n\n§HCost§!: £sr_dark_matter£1000 £darktec_contained_entropy£1000\n§HCooldown§!: 360 £time£\n\nYour fleet will activate their §YInertialess Drive§!.$TABBED_NEW_LINE$- All ships with the module will gain a massive power Self-Modifier.$TABBED_NEW_LINE$- All ships without this module will suffer §RSEVERE§! damage and the self-modifier inverted.\n\nSelf-Modifier:\n    $MOD_SHIP_FIRE_RATE_MULT$: §G+50%§!\n    $MOD_SHIP_SPEED_MULT$: §G+50%§!\n    $MOD_SHIP_ACCURACY_MULT$: §G+25%§!\n\n    Duration: §Y60 £time£§!"
+	on_darktec_inertialess_ability_title:0 "Inertialess Drive"
+	on_darktec_inertialess_ability_activity:0 "Perpetuating Inertia"
+	on_darktec_inertialess_ability_progress:0 "Initializing Intertialess Drive"
+
+	on_darktec_collapser_ability_tooltip:0 "§H$on_darktec_collapser_ability_title$§!\n\n§HCost§!: £sr_dark_matter£1000 £darktec_contained_entropy£1000\n§HCooldown§!: 360 £time£\n\nYour fleet will activate their §YEntropic Collapser§!.$TABBED_NEW_LINE$- All ships with the module will lose their shields and receive a §RSelf-debuff§!.$TABBED_NEW_LINE$- All ships on the system will receive a §Y5%§! of the lost shields as direct damage.\n$TABBED_NEW_LINE$- Allied ships without this module will get §RAffected§! by the shockwave.\n\n§YCapped at 20000 damage max.§!\n\nSelf-debuff:\n    $MOD_SHIP_SPEED_MULT$ = §R-100%§!\n    $MOD_SHIP_FIRE_RATE_MULT$: §R-100%§!\n\n    Duration: §R30 £time£§!"
+	on_darktec_collapser_ability_title:0 "Entropic Collapse"
+	on_darktec_collapser_ability_activity:0 "Collapsing Shields"
+	on_darktec_collapser_ability_progress:0 "Collapsing Shields"
+
+	on_darktec_interferer_ability_tooltip:0 "§H$on_darktec_interferer_ability_title$§!\n\n§HCost§!: £sr_dark_matter£1000 £darktec_contained_entropy£1000\n§HCooldown§!: 360 £time£\n\nYour fleet will activate their §YVacuum Interferer§!.$TABBED_NEW_LINE$- All ships with the module will gain a massive movement and stealth Self-modifier.$TABBED_NEW_LINE$- Allied ships without this module will §RLose§! most of their hull and armor temporarily.\n\nSelf-Modifier:\n    $MOD_SHIP_CLOAKING_STRENGTH_ADD$: §R+20§!\n    $MOD_SHIP_SPEED_MULT$: §G+100%§!\n    $MOD_SHIP_EVASION_MULT$: §G+50%§!\n\n    Duration: §Y60 £time£§!"
+	on_darktec_interferer_ability_title:0 "Vacuum Interference"
+	on_darktec_interferer_ability_activity:0 "Interfering Signals"
+	on_darktec_interferer_ability_progress:0 "Interfering Signals"
+
+	darktec_crisis_chain_title:0 "$darktec_ap_postbaryonic$"
+	darktec_crisis_chain_desc:0 "$darktec_ap_postbaryonic$[darktec_crisis_chain_desc_choice_1][darktec_crisis_chain_desc_choice_2][darktec_crisis_chain_desc_choice_2_5][darktec_crisis_chain_desc_choice_3][darktec_crisis_chain_desc_choice_4]"
+	darktec_crisis_chain_desc_choice_1_economy:0 "\n\nInitially we decided to focus the paramatter applications toward industrial uses, improving our throughput and increasing paramatter harvesting capacities."
+	darktec_crisis_chain_desc_choice_1_warfare:0 "\n\nInitially we decided to focus the paramatter applications towards warfare, creating reality-bending vessels able to shift between matter statuses."
+	darktec_crisis_chain_desc_choice_1_applications:0 "\n\nInitially we decided to focus the paramatter applications towards scientific and species applications, and we gained ways to fuse some of our qualities with it."
+
+	darktec_crisis_chain_desc_choice_2_transformation:0 "\n\nHowever a radical turn of events made us get transformed as we combined our matter with entropy in a fundamental level, and now we have changed, we have been transformed into Entrophereals."
+	darktec_crisis_chain_desc_choice_2_taint:0 "\n\nHowever a radical turn of events made us decide to combine our essence with attuned dark matter, improving even further what we are, how we are and how to apply it to other developments."
+
+	darktec_crisis_chain_desc_choice_2_5_built_sphere:0 "\n\nThe conclusion we reached after studying both entropic and dark matter fields is that was possible to create a specific point in time and space where we could focus the paramatter, to create a powerful ''Anomaly'' we could use to shift reality to our will.\nAnd finally made it."
+
+	darktec_crisis_chain_desc_choice_3_do_nothing:0 "\n\nThe first moment we noticed the Anomaly was unstable we decided to let it take its own course of action, as intervention could had been... counterproductive."
+	darktec_crisis_chain_desc_choice_3_overload_dm:0 "\n\nThe first moment we noticed the Anomaly was unstable we decided to increase its protective layer of dark matter by saturating it with the byproducts of entropic harvesting.."
+	darktec_crisis_chain_desc_choice_3_overload_entro:0 "\n\nThe first moment we noticed the Anomaly was unstable we decided to provide it even more focalized entropy in order to stabilize the dual combat of dark forces taking place within its surface."
+
+	darktec_crisis_chain_desc_choice_4_do_nothing:0 "\n\nPatiently, when the anomaly started to alter space and time around it, before becoming terminal, we waited."
+	darktec_crisis_chain_desc_choice_4_overload_entrophereals:0 "\n\nWe could not risk more instability or destruction after the anomaly started to alter the flow of space and time around it, so we decided to move some of our non-shaped population to its surface, where they apparently were successful."
+	darktec_crisis_chain_desc_choice_4_overload_dm:0 "\n\nAs the external shielding of the anomaly gets reinforced with more dark matter, the anomaly irregularities fade."
+	darktec_crisis_chain_desc_choice_4_overload_entropy:0 "\n\nWe overloaded the Anomaly with more and more paramatter as it's internal powers dimmed out, and we finally stabilized it.."
+
+
+	darktec_crisis_postbaryonic_level_2_require_enough_currency_completed:0 "We have gained enough $darktec_contained_entropy_with_icon$."
+	darktec_crisis_postbaryonic_level_2_require_enough_currency:0 "Require amassing enough $darktec_contained_entropy_with_icon$."
+	darktec_crisis_postbaryonic_level_3_require_enough_currency_completed:0 "We have gained enough $darktec_contained_entropy_with_icon$."
+	darktec_crisis_postbaryonic_level_3_require_enough_currency:0 "Require amassing enough $darktec_contained_entropy_with_icon$."
+	darktec_crisis_postbaryonic_level_4_require_situation_completed:0 "We have successfully completed the Entropic Alteration situation and amassed enough $darktec_contained_entropy_with_icon$."
+	darktec_crisis_postbaryonic_level_4_require_situation:0 "Requires having completed a situation.\nThe situation will be enabled when enough $darktec_contained_entropy_with_icon$ is gained."
+	darktec_crisis_postbaryonic_level_5_require_situation_completed:0 "We have gained enough $darktec_contained_entropy_with_icon$."
+	darktec_crisis_postbaryonic_level_5_require_situation:0 "We have gained enough $darktec_contained_entropy_with_icon$."
+
+	edict_darktec_edict_chimerical_dark_matter:0 "Umbro-Chimerical Darkness"
+	edict_darktec_edict_chimerical_dark_matter_desc:0 "DISCARDED"
+	edict_darktec_edict_chimerical_entropy:0 "Umbro-Chimerical Entropy"
+	edict_darktec_edict_chimerical_entropy_desc:0 "DISCARDED"
+	edict_darktec_edict_chimerical_ascension:0 "Umbro-Chimerical Ascendance"
+	edict_darktec_edict_chimerical_ascension_desc:0 "DISCARDED"
+
+	darktec_crisis_level_reached:0 "Crisis Level Reached"
+
+	darktec_pm_entropic_world:0 "Entropy-Infused World"
+	darktec_pm_entropic_world_desc:0 "DISCARDED"
+
+	mod_mod_darktec_umbral_boost:0 "Umbral Building Boost"
+
+	darktec_sphere_0:0 "Coalesced Anomaly"
+	darktec_sphere_0_DESC:0 "An amalgamation of entropy manifested into a pseudo celestial body and contained by strong dark matter fields. It alters physics at its boundaries."
+	darktec_sphere_0_MEGASTRUCTURE_DETAILS:0 "A §Y$darktec_sphere_0$§! is an amalgamation of entropy manifested into a pseudo celestial body and contained by strong dark matter fields. It alters physics at its boundaries."
+
+	darktec_sphere_1:0 "Coalesced Anomaly - I"
+	darktec_sphere_1_DESC:0 "$darktec_sphere_0_DESC$"
+	darktec_sphere_2:0 "Coalesced Anomaly - II"
+	darktec_sphere_2_DESC:0 "$darktec_sphere_0_DESC$"
+	darktec_sphere_3:0 "Coalesced Anomaly - III"
+	darktec_sphere_3_DESC:0 "$darktec_sphere_0_DESC$"
+	darktec_sphere_4:0 "Coalesced Anomaly - IV"
+	darktec_sphere_4_DESC:0 "$darktec_sphere_0_DESC$"
+	darktec_sphere_5:0 "Coalesced Anomaly - V"
+	darktec_sphere_5_DESC:0 "$darktec_sphere_0_DESC$"
+	darktec_sphere_6:0 "Coalesced Anomaly - VI"
+	darktec_sphere_6_DESC:0 "$darktec_sphere_0_DESC$"
+	darktec_sphere_7:0 "Coalesced Anomaly - VII"
+	darktec_sphere_7_DESC:0 "$darktec_sphere_0_DESC$"
+	darktec_sphere_8:0 "Coalesced Anomaly - VIII"
+	darktec_sphere_8_DESC:0 "$darktec_sphere_0_DESC$"
+
+	mod_mod_darktec_assimilation_capacity:0 "Entrophereal Coalescence Capacity"
+	mod_mod_darktec_umbral_components_mult:0 "Umbral Components Efficiency"
+
+	darktec_pm_tainted:0 "DISCARDED"
+	darktec_pm_tainted_desc:0 "DISCARDED"
+
+	darktec_pm_tainted_worker:0 "DISCARDED"
+	darktec_pm_tainted_worker_desc:0 "DISCARDED"
+
+	darktec_pm_tainted_specialist:0 "DISCARDED"
+	darktec_pm_tainted_specialist_desc:0 "DISCARDED"
+
+	darktec_pm_tainted_pops:0 "DISCARDED"
+	darktec_pm_tainted_pops_desc:0 "DISCARDED"
+
+	darktec_pm_tainted_utility:0 "DISCARDED"
+	darktec_pm_tainted_utility_desc:0 "DISCARDED"
+
+	darktec_pm_entropic_world_phase_1:0 "DISCARDED"
+	darktec_pm_entropic_world_phase_1_desc:0 "DISCARDED"
+
+	darktec_pm_entropic_world_phase_2:0 "DISCARDED"
+	darktec_pm_entropic_world_phase_2_desc:0 "DISCARDED"
+
+	darktec_pm_entropic_world_phase_3:0 "DISCARDED"
+	darktec_pm_entropic_world_phase_3_desc:0 "DISCARDED"
+
+	darktec_modifier_country_doomed_galaxy:0 "Doomed Existence"
+	darktec_modifier_country_doomed_galaxy_desc:0 "There is no escape."
+
+	darktec_modifier_fleet_voidjump:0 "Voidrift Impulse"
+	darktec_modifier_fleet_interferer:0 "Interferer Cloaking"
+	darktec_modifier_fleet_inertialess:0 "Inertialess Boost"
+	darktec_modifier_fleet_collapser:0 "Collapsed Entropy"
+
+	darktec_modifier_fleet_hungering_void:0 "Hungering Void"
+	darktec_modifier_fleet_ceaseless_horror:0 "Ceaseless Horror"
+
+
+	tech_darktec_ship_shields:0 "$DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS$"
+	tech_darktec_ship_shields_desc:0 "$DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_DESC$"
+
+	tech_darktec_ship_shields_mechanical:0 "$DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS$"
+	tech_darktec_ship_shields_mechanical_desc:0 "$DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_DESC$"
+	tech_darktec_ship_shields_organic:0 "$DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_ORGANIC$"
+	tech_darktec_ship_shields_organic_desc:0 "$DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_ORGANIC_DESC$"
+
+	tech_darktec_ship_shields_unlocks_title:0 "DISCARDED"
+	tech_darktec_ship_shields_unlocks_desc:0 "DISCARDED"
+	tech_darktec_ship_shields_organic_unlocks_title:0 "DISCARDED"
+	tech_darktec_ship_shields_organic_unlocks_desc:0 "DISCARDED"
+
+	tech_darktec_weapon_antiparticles:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES$"
+	tech_darktec_weapon_antiparticles_desc:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_DESC$"
+	tech_darktec_weapon_antiparticles_mechanical:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES$"
+	tech_darktec_weapon_antiparticles_mechanical_desc:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_DESC$"
+	tech_darktec_weapon_antiparticles_organic:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_ORGANIC$"
+	tech_darktec_weapon_antiparticles_organic_desc:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_ORGANIC_DESC$"
+
+	tech_darktec_weapon_antiparticles_unlocks_title:0 "DISCARDED"
+	tech_darktec_weapon_antiparticles_unlocks_desc:0 "DISCARDED"
+	tech_darktec_weapon_antiparticles_organic_unlocks_title:0 "DISCARDED"
+	tech_darktec_weapon_antiparticles_organic_unlocks_desc:0 "DISCARDED"
+
+	tech_darktec_weapon_destabilization:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION$"
+	tech_darktec_weapon_destabilization_desc:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION_DESC$"
+	tech_darktec_weapon_destabilization_mechanical:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION$"
+	tech_darktec_weapon_destabilization_mechanical_desc:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION_DESC$"
+	tech_darktec_weapon_destabilization_organic:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION_ORGANIC$"
+	tech_darktec_weapon_destabilization_organic_desc:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION_ORGANIC_DESC$"
+
+	tech_darktec_weapon_destabilization_unlocks_title:0 "DISCARDED"
+	tech_darktec_weapon_destabilization_unlocks_desc:0 "DISCARDED"
+	tech_darktec_weapon_destabilization_organic_unlocks_title:0 "DISCARDED"
+	tech_darktec_weapon_destabilization_organic_unlocks_desc:0 "DISCARDED"
+
+	tech_darktec_weapon_antimatter_lance:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE$"
+	tech_darktec_weapon_antimatter_lance_desc:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_DESC$"
+	tech_darktec_weapon_antimatter_lance_mechanical:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE$"
+	tech_darktec_weapon_antimatter_lance_mechanical_desc:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_DESC$"
+	tech_darktec_weapon_antimatter_lance_organic:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_ORGANIC$"
+	tech_darktec_weapon_antimatter_lance_organic_desc:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_ORGANIC_DESC$"
+
+	tech_darktec_weapon_antimatter_lance_unlocks_title:0 "DISCARDED"
+	tech_darktec_weapon_antimatter_lance_unlocks_desc:0 "DISCARDED"
+	tech_darktec_weapon_antimatter_organic_lance_unlocks_title:0 "DISCARDED"
+	tech_darktec_weapon_antimatter_organic_lance_unlocks_desc:0 "DISCARDED"
+
+	tech_darktec_weapon_discharger:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER$"
+	tech_darktec_weapon_discharger_desc:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_DESC$"
+	tech_darktec_weapon_discharger_mechanical:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER$"
+	tech_darktec_weapon_discharger_mechanical_desc:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_DESC$"
+	tech_darktec_weapon_discharger_organic:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_ORGANIC$"
+	tech_darktec_weapon_discharger_organic_desc:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_ORGANIC_DESC$"
+
+	tech_darktec_weapon_discharger_unlocks_title:0 "DISCARDED"
+	tech_darktec_weapon_discharger_unlocks_desc:0 "DISCARDED"
+	tech_darktec_weapon_discharger_organic_unlocks_title:0 "DISCARDED"
+	tech_darktec_weapon_discharger_organic_unlocks_desc:0 "DISCARDED"
+
+	tech_darktec_ship_util_voidjump:0 "$DARKTEC_SHIP_UTILITY_VOIDJUMP_MODULE$"
+	tech_darktec_ship_util_voidjump_desc:0 "$DARKTEC_SHIP_UTILITY_VOIDJUMP_DESC$"
+	tech_darktec_ship_util_voidjump_mechanical:0 "$DARKTEC_SHIP_UTILITY_VOIDJUMP_MODULE$"
+	tech_darktec_ship_util_voidjump_mechanical_desc:0 "$DARKTEC_SHIP_UTILITY_VOIDJUMP_DESC$"
+	tech_darktec_ship_util_voidjump_organic:0 "$DARKTEC_SHIP_UTILITY_VOIDJUMP_MODULE_ORGANIC$"
+	tech_darktec_ship_util_voidjump_organic_desc:0 "$DARKTEC_SHIP_UTILITY_VOIDJUMP_ORGANIC_DESC$"
+
+	tech_darktec_ship_util_voidjump_unlocks_title:0 "DISCARDED"
+	tech_darktec_ship_util_voidjump_unlocks_desc:0 "DISCARDED"
+	tech_darktec_ship_util_voidjump_organic_unlocks_title:0 "DISCARDED"
+	tech_darktec_ship_util_voidjump_organic_unlocks_desc:0 "DISCARDED"
+
+	tech_darktec_ship_util_inertialess:0 "$DARKTEC_SHIP_UTILITY_INERTIALESS$"
+	tech_darktec_ship_util_inertialess_desc:0 "$DARKTEC_SHIP_UTILITY_INERTIALESS_DESC$"
+	tech_darktec_ship_util_inertialess_mechanical:0 "$DARKTEC_SHIP_UTILITY_INERTIALESS$"
+	tech_darktec_ship_util_inertialess_mechanical_desc:0 "$DARKTEC_SHIP_UTILITY_INERTIALESS_DESC$"
+	tech_darktec_ship_util_inertialess_organic:0 "$DARKTEC_SHIP_UTILITY_INERTIALESS_ORGANIC$"
+	tech_darktec_ship_util_inertialess_organic_desc:0 "$DARKTEC_SHIP_UTILITY_INERTIALESS_ORGANIC_DESC$"
+
+	tech_darktec_ship_util_inertialess_unlocks_title:0 "DISCARDED"
+	tech_darktec_ship_util_inertialess_unlocks_desc:0 "DISCARDED"
+	tech_darktec_ship_util_inertialess_organic_unlocks_title:0 "DISCARDED"
+	tech_darktec_ship_util_inertialess_organic_unlocks_desc:0 "DISCARDED"
+
+	tech_darktec_ship_util_collapser:0 "$DARKTEC_SHIP_UTILITY_COLLAPSER$"
+	tech_darktec_ship_util_collapser_desc:0 "$DARKTEC_SHIP_UTILITY_COLLAPSER_DESC$"
+	tech_darktec_ship_util_collapser_mechanical:0 "$DARKTEC_SHIP_UTILITY_COLLAPSER$"
+	tech_darktec_ship_util_collapser_mechanical_desc:0 "$DARKTEC_SHIP_UTILITY_COLLAPSER_DESC$"
+	tech_darktec_ship_util_collapser_organic:0 "$DARKTEC_SHIP_UTILITY_COLLAPSER_ORGANIC$"
+	tech_darktec_ship_util_collapser_organic_desc:0 "$DARKTEC_SHIP_UTILITY_COLLAPSER_ORGANIC_DESC$"
+
+	tech_darktec_ship_util_collapser_unlocks_title:0 "DISCARDED"
+	tech_darktec_ship_util_collapser_unlocks_desc:0 "DISCARDED"
+	tech_darktec_ship_util_collapser_organic_unlocks_title:0 "DISCARDED"
+	tech_darktec_ship_util_collapser_organic_unlocks_desc:0 "DISCARDED"
+
+	tech_darktec_ship_util_interferer:0 "$DARKTEC_SHIP_UTILITY_INTERFERER$"
+	tech_darktec_ship_util_interferer_desc:0 "$DARKTEC_SHIP_UTILITY_INTERFERER_DESC$"
+	tech_darktec_ship_util_interferer_mechanical:0 "$DARKTEC_SHIP_UTILITY_INTERFERER$"
+	tech_darktec_ship_util_interferer_mechanical_desc:0 "$DARKTEC_SHIP_UTILITY_INTERFERER_DESC$"
+	tech_darktec_ship_util_interferer_organic:0 "$DARKTEC_SHIP_UTILITY_INTERFERER_ORGANIC$"
+	tech_darktec_ship_util_interferer_organic_desc:0 "$DARKTEC_SHIP_UTILITY_INTERFERER_ORGANIC_DESC$"
+
+	tech_darktec_ship_util_interferer_unlocks_title:0 "DISCARDED"
+	tech_darktec_ship_util_interferer_unlocks_desc:0 "DISCARDED"
+	tech_darktec_ship_util_interferer_organic_unlocks_title:0 "DISCARDED"
+	tech_darktec_ship_util_interferer_organic_unlocks_desc:0 "DISCARDED"
+
+
+	DARKTEC_SPHERE_BREACHING:0 "Invert Entropy"
+	DARKTEC_SPHERE_BREACHING_DESC:0 "We have fed the contained anomaly enough para-matter and now it's close to collapse.\nHowever, we can force a collapse on our own which theoretically will allow a local rewrite of reality... a rewrite on our very thoughts an ideas."
+
+	DARKTEC_ANTICRISIS_PROTECTION:0 "DISCARDED"
+	DARKTEC_ANTICRISIS_PROTECTION_DESC:0 "REPLDISCARDEDACE_ME"
+
+	DARKTEC_ANTICRISIS_ATTACK:0 "DISCARDED"
+	DARKTEC_ANTICRISIS_ATTACK_DESC:0 "DISCARDED"
+
+
+	darktec_modifier_country_shielded_against_entropy:0 "DISCARDED"
+	darktec_modifier_anti_entropy_crisis:0 "DISCARDED"
+
+	darktec_decision_taint_world_menial:0 "Umbral Taint - Extraction"
+	darktec_decision_taint_world_menial_desc:0 "DISCARDED"
+	darktec_decision_taint_world_menial_tooltip:0 "DISCARDED"
+	darktec_decision_taint_world_menial_repeated_tooltip:0 "DISCARDED"
+
+	darktec_decision_taint_world_specialist:0 "Umbral Taint - Production"
+	darktec_decision_taint_world_specialist_desc:0 "DISCARDED"
+	darktec_decision_taint_world_specialist_tooltip:0 "DISCARDED"
+	darktec_decision_taint_world_specialist_repeated_tooltip:0 "DISCARDED"
+
+	darktec_decision_taint_world_pop:0 "Umbral Taint - Population"
+	darktec_decision_taint_world_pop_desc:0 "DISCARDED"
+	darktec_decision_taint_world_pop_tooltip:0 "DISCARDED"
+	darktec_decision_taint_world_pop_repeated_tooltip:0 "DISCARDED"
+
+	darktec_decision_taint_world_utility:0 "Umbral Taint - Utilities"
+	darktec_decision_taint_world_utility_desc:0 "DISCARDED"
+	darktec_decision_taint_world_utility_tooltip:0 "DISCARDED"
+	darktec_decision_taint_world_utility_repeated_tooltip:0 "DISCARDED"
+
+	darktec_decision_untaint_world:0 "Un-Taint World"
+	darktec_decision_untaint_world_desc:0 "DISCARDED"
+	darktec_decision_untaint_world_tooltip:0 "DISCARDED"
+
+	darktec_decision_entropy_world:0 "Entropy-Bond World"
+	darktec_decision_entropy_world_desc:0 "DISCARDED"
+	darktec_decision_entropy_world_tooltip:0 "DISCARDED"
+
+	darktec_decision_unentropy_world:0 "Cleanse Entropy"
+	darktec_decision_unentropy_world_desc:0 "DISCARDED"
+	darktec_decision_undo_entropy_world:0 "DISCARDED"
+	darktec_decision_undo_entropy_world_desc:0 "DISCARDED"
+	darktec_decision_undo_entropy_world_tooltip:0 "DISCARDED"
+
+	situation_darktec_entropy_deficit_approach_economy:0 "DISCARDED"
+	situation_darktec_entropy_deficit_approach_economy_tooltip:0 "DISCARDED"
+	situation_darktec_entropy_deficit_approach_warfare:0 "DISCARDED"
+	situation_darktec_entropy_deficit_approach_warfare_tooltip:0 "DISCARDED"
+	situation_darktec_entropy_deficit_approach_applications:0 "DISCARDED"
+	situation_darktec_entropy_deficit_approach_applications_tooltip:0 "DISCARDED"
+
+	mod_country_resource_max_darktec_contained_entropy_add:0 "$darktec_contained_entropy_with_icon$ Storage Capacity"
+	mod_planet_farmers_sr_dark_matter_upkeep_add:0 "$sr_dark_matter_with_icon$ Upkeep per $pop_group_unit$ $job_farmer_plural_with_icon$"
+	mod_planet_miners_sr_dark_matter_produces_add:0 "$sr_dark_matter_with_icon$ per $pop_group_unit$ $job_miner_plural_with_icon$"
+	mod_planet_miners_sr_dark_matter_upkeep_add:0 "$sr_dark_matter_with_icon$ Upkeep per $pop_group_unit$ $job_miner_plural_with_icon$"
+	mod_planet_technician_sr_dark_matter_produces_add:0 "$sr_dark_matter_with_icon$ per $pop_group_unit$ $job_technician_plural_with_icon$"
+	mod_planet_technician_sr_dark_matter_upkeep_add:0 "$sr_dark_matter_with_icon$ Upkeep per $pop_group_unit$ $job_technician_plural_with_icon$"
+	mod_planet_metallurgists_sr_dark_matter_upkeep_add:0 "$sr_dark_matter_with_icon$ Upkeep per $pop_group_unit$ $job_foundry_plural_with_icon$"
+	# dm from physicist already exist
+	mod_planet_physicists_sr_dark_matter_upkeep_add:0 "$sr_dark_matter_with_icon$ Upkeep per $pop_group_unit$ $job_physicist_plural_with_icon$"
+	mod_planet_biologists_sr_dark_matter_produces_add:0 "$sr_dark_matter_with_icon$ per $pop_group_unit$ $job_biologist_plural_with_icon$"
+	mod_planet_biologists_sr_dark_matter_upkeep_add:0 "$sr_dark_matter_with_icon$ Upkeep per $pop_group_unit$ $job_biologist_plural_with_icon$"
+	mod_planet_engineers_sr_dark_matter_produces_add:0 "$sr_dark_matter_with_icon$ per $pop_group_unit$ $job_engineer_plural_with_icon$"
+	mod_planet_engineers_sr_dark_matter_upkeep_add:0 "$sr_dark_matter_with_icon$ Upkeep per $pop_group_unit$ $job_engineer_plural_with_icon$"
+
+
+	# Note: this modifier is not localized in vanilla
+	mod_country_sr_dark_matter_produces_mult:0 "Monthly £sr_dark_matter£ Dark Matter"
+
+
+# Do not remove below v
