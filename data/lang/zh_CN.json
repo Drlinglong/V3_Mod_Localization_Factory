@@ -39,6 +39,7 @@
   "cleanup_deleted_file": "  已删除文件: {item}",
   "cleanup_delete_error": "删除 {path} 时出错: {error}",
   "cleanup_success": "源文件夹精简完成！",
+"select_game_profile_prompt": "\n请选择游戏:",
   "cleanup_error": "清理过程中发生错误: {error}",
   "workflow_initial_translate_name": "首次翻译" ,
   "select_source_language_prompt": "\n请选择源语言:",

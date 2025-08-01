@@ -5,16 +5,14 @@ import shutil
 from utils import i18n
 from config import SOURCE_DIR, DEST_DIR
 from .api_handler import translate_single_text
-
-def process_metadata(mod_name, client, source_lang, target_lang, output_folder_name):
+def process_metadata(mod_name, client, source_lang, target_lang, output_folder_name, mod_context):
     """
-    【V3.3】处理 metadata.json 文件。
-    直接接收 output_folder_name，不再自己判断。
+    【V3.0 修正版】处理 metadata.json 文件。
+    确保在调用API时，正确传递 mod_context 参数。
     """
     print(i18n.t("processing_metadata"))
     source_meta_file = os.path.join(SOURCE_DIR, mod_name, '.metadata', 'metadata.json')
     
-    # 直接使用传入的文件夹名构建路径
     dest_meta_dir = os.path.join(DEST_DIR, output_folder_name, '.metadata')
     
     if not os.path.exists(source_meta_file):
@@ -25,9 +23,9 @@ def process_metadata(mod_name, client, source_lang, target_lang, output_folder_n
         data = json.load(f)
 
     original_name = data.get('name', '')
-    translated_name = translate_single_text(client, original_name, "mod name", mod_name, source_lang, target_lang)
+    # 【修正】在此处调用时，加上 mod_context
+    translated_name = translate_single_text(client, original_name, "mod name", mod_name, source_lang, target_lang, mod_context)
     
-    # 检查是否是批量模式，以决定后缀
     is_batch_mode = "Multilanguage" in output_folder_name
     if is_batch_mode:
         suffix = " (Multilingual Patch)"
@@ -38,7 +36,8 @@ def process_metadata(mod_name, client, source_lang, target_lang, output_folder_n
     data['name'] = f"{translated_name}{suffix}"
 
     original_desc = data.get('short_description', '')
-    data['short_description'] = translate_single_text(client, original_desc, "mod short description", mod_name, source_lang, target_lang)
+    # 【修正】在此处调用时，也加上 mod_context
+    data['short_description'] = translate_single_text(client, original_desc, "mod short description", mod_name, source_lang, target_lang, mod_context)
 
     os.makedirs(dest_meta_dir, exist_ok=True)
     dest_meta_file = os.path.join(dest_meta_dir, 'metadata.json')

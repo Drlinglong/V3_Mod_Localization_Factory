@@ -45,5 +45,7 @@
   "select_target_language_prompt": "\nPlease select the target language(s):",
   "target_option_all": "Translate to all other 10 languages", 
   "error_same_language": "Error: Target language cannot be the same as the source language.",
-  "translating_to_language": "\n--- Translating to: {lang_name} ---"
+  "translating_to_language": "\n--- Translating to: {lang_name} ---",
+  "select_game_profile_prompt": "\nPlease select a game:"
+
 }
