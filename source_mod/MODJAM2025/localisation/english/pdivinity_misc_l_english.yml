@@ -1,0 +1,256 @@
+﻿l_english:
+
+ #######################################
+ ### project_divinity_misc_l_english ###
+ ###     by daniellm                 ###
+ #######################################
+
+ ############
+ ### star ###
+ ############
+
+ pc_pdivinity_shrouded_hole:0 "Shroud Tunnel"
+ pc_pdivinity_shrouded_hole_desc:0 "A breach in the veil, formed from the complete collapse of matter. Shroud tunnels have extremely strong gravity fields, preventing even light from escaping the grip of the shroud itself."
+
+ #############
+ ### trait ###
+ #############
+
+ trait_pdivinity_shroud_touched:0 "Shroud Touched"
+ trait_pdivinity_shroud_touched_desc:0 "§LServants of the §RArchitect of Fate§!\nThis species has been molded since time immemorial to withstand the corrupting influence of mass psionic energy. It will have no penalties on Shroud-Phased planets§!."
+ pdivinity_shroud_touched_tooltip:0 "\n§LOn Shroud-Phased planets:\n- §Y$mod_planet_psionic_jobs_produces_mult$§!: §G25%§!\n- §Y$MOD_POP_HAPPINESS$§!: §G10%§!\n- §YPlanet Habitability§! §G100%§!"
+
+ leader_trait_pdivinity_chosen_by_the_eye:0 "Chosen of The Great Eye"
+ leader_trait_pdivinity_chosen_by_the_eye_desc:0 "Chosen by the Architect himself, this leader is an immortal being that wields incredible psionic power."
+ ######################
+ ### ascension perk ###
+ ######################
+
+ ap_pdivinity:0 "Project Divinity"
+ ap_pdivinity_desc:0 "A voice stirs from the depths beyond the stars, something ancient, inscrutable, and filled with terrible purpose. It whispers through the veil, seeping into our dreams and corrupting our thoughts with a divine will not our own. We are chosen to heed this call, to serve the Architect of Fate, and to become instruments of an inevitable destiny far greater than ourselves."
+
+ must_not_be_homicidal:0 "$TRIGGER_FAIL$ Cannot select this Ascension Perk as a genocidal empire"
+ must_be_psionic:0 "$TRIGGER_FAIL$ Must have completed Psionic Ascension"
+
+ ##############
+ ### armies ###
+ ##############
+
+ pdivinitiy_psionic_army:0 "Psionic Phantoms"
+ pdivinitiy_psionic_army_desc:0 "Manifestations of dark psionic energy, these armies haunt the battlefield, being neither fully alive nor dead, driven by the Architect's inscrutable will."
+
+ #####################
+ ### tech category ###
+ #####################
+
+ pdivinity_eye:0 "Fate"
+ pdivinity_eye_desc:0 "Shrouded technology from our greatest patron, the §RArchitect Of Fate§!."
+ mod_category_pdivinity_eye_research_speed_mult:0 "Research Speed (§RFate§!)"
+
+
+ ################
+ ### decision ###
+ ################
+
+ decision_pdivinity_shroud_phasing:0 "Shroud Phasing"
+ decision_pdivinity_shroud_phasing_desc:0 "By weakening the boundary between this world and the Shroud, we can reshape reality itself, elevating the faithful while plunging unbelievers into a living nightmare in service of the §RArchitect of Fate§!."
+ pdivinity_shroud_phasing_tooltip:0 "§Y$pdivinity_shroud_phased_modifier$§! modifier added.\n\nIncreases £pop£ §GShroud-Touched Pop Output§! but reduces £pop£ §YNon-Shroud-Touched Pop Output§!."
+ pdivinity_shroud_phased_modifier:0 "Shroud Phased"
+ pdivinity_shroud_phased_modifier_desc:0 "The veil has been deliberately thinned on this world. For the §GShroud-Touched§!, reality becomes fluid, a paradise shaped by thought. But for all others, the laws of nature break down, dreams bleed into nightmares, and existence becomes torment under the gaze of the §RArchitect of Fate§!."
+ pdivinity_shroud_phased_modifier_tooltip:0 "§GShroud Touched§! £pop£ Pops:\n- §Y$mod_planet_psionic_jobs_produces_mult$§!: §G25%§!\n- §Y$MOD_POP_HAPPINESS$§!: §G10%§!\n- §YPlanet Habitability§! §G100%§!\n\n§YNon-Shroud-Touched§! £pop£ Pops:\n- §YPlanet Habitability§!: §R-75%§!\n- $MOD_POP_HAPPINESS$: §R-25%§!\n- $MOD_LOGISTIC_GROWTH_MULT$: §R-50%§!"
+
+
+ #########################
+ ### opinion modifiers ###
+ #########################
+
+ opinion_pdivinity_sacrifices:0 "The Shroud Wills It"
+
+ opinion_breaking_the_veil:0 "Breaking The Veil"
+
+ #################
+ ### modifiers ###
+ #################
+
+ pdivinity_cult_attack:0 "Terror Attack"
+ pdivinity_cult_attack_desc:0 "This planet has recently been attacked by shroud entities."
+
+ mod_country_resource_max_energy_add:0 "Energy Storage Capacity"
+ mod_country_resource_max_sr_zro_add:0 "Zro Storage Capacity"
+ mod_job_pdivinity_zro_harvester_add:0 "Zro Harvester Jobs"
+
+ ############
+ ### jobs ###
+ ############
+ job_pdivinity_zro_harvester:0 "Zro Harvester"
+ job_pdivinity_zro_harvester_plural:0 "Zro Harvesters"
+ job_pdivinity_zro_harvester_desc:0 "$pdivinity_zro_harvester_plural$ operate in sanctified temples built atop psionic faultlines. There, they coax Zro directly from the Shroud, not mined, but summoned, through ritual and revelation."
+ job_pdivinity_zro_harvester_effect_desc:0 "£job_pdivinity_zro_harvester£ $pdivinity_zro_harvester_plural$ turn £minerals£ into £sr_zro£ §Y$sr_zro$§!\n\nAutomatically produces £sr_zro£ §Y$sr_zro$§! on §YShroud-Phased§! planets"
+
+ mod_planet_telepaths_pdivinity_psionic_strength_produces_add:0 "$pdivinity_psionic_strength$ £pdivinity_psionic_strength£ per $pop_group_unit$ [telepath.GetIcon] [telepath.GetNamePlural]"
+
+ purge_pdivinity_sacrifice:0 "Ritual Sacrifice"
+ purge_pdivinity_sacrifice_desc:0 "Those unworthy of the Architect's design may yet serve a purpose. Through sacred offerings of flesh and spirit, we draw strength and favor from the Shroud."
+ job_purge_pdivinity_sacrifice_job:0 "Ritual Sacrifice"
+ job_purge_pdivinity_sacrifice_job_desc:0 "Selected individuals are offered to the §RArchitect of Fate§! through sacred rites. Their essence feeds the Shroud and our divine purpose."
+
+ ################
+ ### building ###
+ ################
+
+ building_pdivinity_architect_shrine:0 "Temple Of Fate"
+ building_pdivinity_architect_shrine_desc:0 "A grand temple built to honor the Architect Of Fate."
+
+ building_pdivinity_shroud_harvester_building:0 "Zro Harvester"
+ building_pdivinity_shroud_harvester_building_desc:0 "Built atop of psionic faultlines, the zro harvesters employ special equipment to harvest zro directly from the shroud itself."
+
+ #####################
+ ### megastructure ###
+ #####################
+
+ # ruined megastructure
+ pdivinity_shroud_needle_1_ruined:0 "Ruined Spire of Fate - Foundation"
+ pdivinity_shroud_needle_1_ruined_DESC:0 "The shattered foundation of a once-divine structure. Its whispers have faded."
+ pdivinity_shroud_needle_1_ruined_MEGASTRUCTURE_DETAILS:0 "idk what this is, don't fill these called _details, i'll figure it out later"
+
+ # ruined megastructure
+ pdivinity_shroud_needle_2_ruined:0 "Ruined Spire of Fate - Channeling Ring"
+ pdivinity_shroud_needle_2_ruined_DESC:0 "Fragments of psionic conduit ring the void, inert and broken."
+ pdivinity_shroud_needle_2_ruined_MEGASTRUCTURE_DETAILS:0 ""
+
+ # ruined megastructure
+ pdivinity_shroud_needle_3_ruined:0 "Ruined Spire of Fate - Conduit Core"
+ pdivinity_shroud_needle_3_ruined_DESC:0 "The rift has sealed. The Architect retreats for now."
+ pdivinity_shroud_needle_3_ruined_MEGASTRUCTURE_DETAILS:0 ""
+
+ # ruined megastructure
+ pdivinity_shroud_needle_4_ruined:0 "Ruined Spire of Fate - Communion Array"
+ pdivinity_shroud_needle_4_ruined_DESC:0 "The echoes of faith linger here, but the structure is silent."
+ pdivinity_shroud_needle_4_ruined_MEGASTRUCTURE_DETAILS:0 ""
+
+ # stage 1
+ pdivinity_shroud_needle_1:0 "Spire of Fate - Foundation"
+ pdivinity_shroud_needle_1_DESC:0 "The foundation of the Spire is laid. Though it appears inert, it resonates with faint whispers from beyond the veil."
+
+ # stage 2
+ pdivinity_shroud_needle_2:0 "Spire of Fate - Channeling Ring"
+ pdivinity_shroud_needle_2_DESC:0 "A vast ring of amplifiers now encircles the structure, focusing psionic harmonics into the void. The veil stirs."
+
+ # stage 3
+ pdivinity_shroud_needle_3:0 "Spire of Fate - Conduit Core"
+ pdivinity_shroud_needle_3_DESC:0 "Reality begins to bend around the core. Entities within the Shroud take notice. A rift is forming."
+
+ # stage 4
+ pdivinity_shroud_needle_4:0 "Spire of Fate - Communion Array"
+ pdivinity_shroud_needle_4_DESC:0 "The Spire sings. The Shroud replies. Worshipers across the galaxy feel its pull, and cults rise in every corner of known space."
+
+ # stage 5
+ pdivinity_shroud_needle_5:0 "Spire of Fate - Apotheosis Stage"
+ pdivinity_shroud_needle_5_DESC:0 "The final structure stands complete. Reality thins to the breaking point. The Architect's arrival is inevitable."
+
+ pdivinity_is_not_possible_rift:0 "\n£trigger_no£ Target must be on of the following: \n§YBlackhole§!\n§YPulsar§!\n§YA-class star§!"
+
+
+ ####################
+ ### global names ###
+ ####################
+
+ NAME_pdivinity_the_great_eye_name:0 "The Architect Of Fate"
+
+ NAME_pdivinity_lesser_avatar:0 "Lesser Psionic Avatar"
+
+ NAME_pdivinity_psionic_avatar:0 "Psionic Avatar"
+
+ NAME_pdivinity_dimensional_tearer:0 "Dimensional Tearer"
+
+ NAME_pdivinity_dimensional_tearer_name:0 "Breaker of the Veil"
+
+ NAME_pdivinity_dimensional_portal:0 "Dimensional Portal"
+
+ NAME_pdivinity_Shroudpriests:0 "Acolyte of the Architect"
+
+ NAME_pdivinity_demons:0 "Psionic Phantoms"
+
+ NAME_pdivinity_architect_of_fate:0 "Architect of Fate"
+
+
+ ####################
+ ### vassal stuff ###
+ ####################
+
+ specialist_pdivinity_acolyte:0 "Acolyte"
+ specialist_pdivinity_acolyte_desc:0 "Acolyte of the great eye. This empire follows the will of the §RArchitect Of Fate§!"
+ specialist_pdivinity_acolyte_summary:0 "£pdivinitiy_acolyte£Acolytes specialize in mastering the gifts of the Architect, in exchange for weaker industry."
+
+ preset_pdivinity_acolyte:0 "Acolyte"
+ preset_pdivinity_acolyte_desc:0 "Acolyte of the great eye. This empire follows the will of the §RArchitect Of Fate§!"
+
+ # modifier for acolyte hyper relay links
+ specialist_pdivinity_acolyte_neighbor:0 "Acolyte watcher"
+ specialist_pdivinity_acolyte_neighbor_desc:0 "Proximity to the faithful of the §RGreat Eye§! instills obedience, fear, and a strange sense of peace. Where His will is present, order follows."
+
+ ### stage 1
+
+ pdivinity_acolyte_1_modifier:0 "Acolyte Bonuses I"
+ pdivinity_acolyte_1_penalties:0 "Acolyte Penalties I"
+ pdivinity_acolyte_1_modifier_desc:0 "$MOD_COUNTRY_ALL_TECH_RESEARCH_SPEED$: §G+10%§!\n$mod_category_pdivinity_eye_research_speed_mult$: §G+15%§!\n$mod_country_sr_zro_produces_mult$: §G+15%§!"
+
+ pdivinity_acolyte_1_insight:0 "Acolyte Insight I"
+ pdivinity_acolyte_1_insight_desc:0 "§EAdd to Researchable Technologies:§!\n$t$£society£ $tech_psionic_theory$\n$t$£society£ $tech_mine_zro$"
+
+ pdivinity_acolyte_1_shroud_storm:0 "Shroud Storm"
+ pdivinity_acolyte_1_shield_desc:0 "§EHostile Ships in Owned Systems:§!\n$t$$MOD_SHIP_SHIELD_MULT$: §R-50%§!\n$t$$MOD_SHIP_WEAPON_RANGE_MULT$: §R-20%§!\n$t$$MOD_SHIP_TRACKING_ADD$: §R-15§!"
+
+ pdivinity_acolyte_1_neighbor:0 "Acolyte Watcher"
+ pdivinity_acolyte_1_neighbor_desc:0 "Proximity to the faithful of the §RGreat Eye§! instills obedience, fear, and a strange sense of peace. Where His will is present, order follows."
+
+ ### stage 2
+
+ pdivinity_acolyte_2_modifier:0 "Acolyte Bonuses II"
+ pdivinity_acolyte_2_penalties:0 "Acolyte Penalties II"
+ pdivinity_acolyte_2_modifier_desc:0 "$MOD_COUNTRY_ALL_TECH_RESEARCH_SPEED$: §G+20%§!\n$mod_category_pdivinity_eye_research_speed_mult$: §G+25%§!\n$mod_country_sr_zro_produces_mult$: §G+25%§!"
+
+ pdivinity_acolyte_2_insight:0 "Acolyte Insight II"
+ pdivinity_acolyte_2_insight_desc:0 "§EAdd to Researchable Technologies:§!\n$t$£society£ $tech_pdivinity_shroud_harvester$"
+
+ pdivinity_acolyte_2_psionic_capacity:0 "Servants of The Eye"
+
+ pdivinity_acolyte_2_components:0 "Gifts of the Architect"
+ pdivinity_acolyte_2_components_desc:0 "§EEnable Research of:§!\n£pdivinitiy_acolyte£Psionic Ship Components"
+
+ ### stage 3
+
+ pdivinity_acolyte_3_modifier:0 "Acolyte Bonuses III"
+ pdivinity_acolyte_3_penalties:0 "Acolyte Penalties III"
+ pdivinity_acolyte_3_modifier_desc:0 "$MOD_COUNTRY_ALL_TECH_RESEARCH_SPEED$: §G+50%§!\n$mod_category_pdivinity_eye_research_speed_mult$: §G+100%§!\n$mod_country_sr_zro_produces_mult$: §G+50%§!"
+
+ pdivinity_acolyte_3_insight:0 "Acolyte Insight III"
+ pdivinity_acolyte_3_insight_desc:0 "§EAdd to Researchable Technologies:§!\n$t$£society£ $tech_pdivinity_psionic_avatar$"
+
+ pdivinity_acolyte_3_psionic_shielding:0 "Hyperdimensional Shielding"
+
+ pdivinity_acolyte_3_overlord:0 "Wrath of the Great Eye"
+ pdivinity_acolyte_3_overlord_desc:0 "§EEnable Research of:§!\n£pdivinitiy_acolyte£Psionic Weaponry"
+ #################
+ ### war stuff ###
+ #################
+
+ bombardment_pdivinity_psionic_rupture_bombardment:0 "Psionic Rupture"
+ bombardment_pdivinity_psionic_rupture_bombardment_desc:0 "$bombardment_pdivinity_psionic_rupture_bombardment$ Bombardment blankets the planet in psionic energy with the explicit aim of shrouding the planet.\n- §RMassive§! damage to §YArmies§!\n- §RMassive§! damage to §YPlanet§!\n- §RMassive§! damage to §YPops§!\n- Will bombard undefended planets\n- Can reduce planets to shrouded worlds, or shroud-phased worlds"
+ pdivinity_bombed_to_shrouded_world:0 "§Y[From.GetName] is now a Shrouded World.§!"
+ pdivinity_bombed_to_shroud_phased_world:0 "§Y[From.GetName] has become a Shroud-Phased planet.§!"
+
+
+ casus_belli_cb_pdivinity_acolyte:0 "Subjugation"
+ wg_pdivinity_acolyte:0 "Divine Crusade"
+
+ #####################
+ ### ship sections ###
+ #####################
+
+ pdivinity_psionic_cloud_section:0 "Mid"
+ pdivinity_lesser_psionic_avatar_section:0 "Mid"
+ pdivinity_psionic_avatar_section:0 "Mid"
+ pdivinity_dimensional_tearer_section:0 "Mid"
+ pdivinity_dimensional_portal_section:0 "Mid"
+ pdivinity_the_architect_of_fate_section:0 "Mid"

@@ -19,11 +19,11 @@ def initialize_client():
     except Exception as e:
         print(f"Error initializing Gemini client: {e}")
         return None
-    
-def translate_single_text(client, text, task_description, mod_name, source_lang, target_lang, mod_context):
+ 
+def translate_single_text(client, text, task_description, mod_name, source_lang, target_lang, mod_context, game_profile):
     """
-    【V2.9 修正版】调用API翻译单条文本。
-    签名已更新，可以正确接收 mod_context 参数。
+    【V3.2 修正版】调用API翻译单条文本。
+    签名已更新，可以正确接收 game_profile 参数。
     """
     if not text:
         return ""
@@ -36,15 +36,19 @@ def translate_single_text(client, text, task_description, mod_name, source_lang,
     print(i18n.t(print_key, text=text[:30]))
 
     # 从游戏档案中获取正确的prompt模板
-    # 我们假设 game_profile 已经被正确传递，或者在这里用一个通用模板
-    # 为避免引入更多错误，我们先用一个通用模板
+    base_prompt = game_profile['single_prompt_template'].format(
+        mod_name=mod_name,
+        task_description=task_description,
+        source_lang_name=source_lang['name'],
+        target_lang_name=target_lang['name']
+    )
+    
+    # 组合成最终的Prompt
     prompt = (
-        "You are a direct, one-to-one translation engine. "
-        f"The text you are translating is for a game mod with the following context: '{mod_context}'. Use this thematic context to ensure accuracy.\n"
-        f"Translate the following {task_description} from {source_lang['name']} to {target_lang['name']}.\n"
-        "CRITICAL: Your response MUST ONLY contain the translated text. "
-        "DO NOT include explanations, pinyin, English, or any other conversational text or formatting.\n"
-        f"For example, if the input is 'Flavor Pack' in English, and the target is Simplified Chinese, your output must be '风味包' and nothing else.\n\n"
+        base_prompt +
+        f"CRITICAL CONTEXT: The mod's theme is '{mod_context}'. Use this to ensure accuracy.\n"
+        "CRITICAL FORMATTING: Your response MUST ONLY contain the translated text. DO NOT include explanations, pinyin, or any other text.\n"
+        f"For example, if the input is 'Flavor Pack', your output must be '风味包' and nothing else.\n\n"
         f"Translate this: \"{text}\""
     )
     

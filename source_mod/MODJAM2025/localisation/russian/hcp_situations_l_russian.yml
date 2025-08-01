@@ -1,0 +1,131 @@
+﻿l_russian:
+##################
+# hcp_situations_l_russian.yml
+# By jam1066
+##################
+
+ #start
+
+ ##############################
+ # Harvester Planet Situation #
+ ##############################
+ ### Planet Modifier
+ hcp_being_harvested_modifier: "Being Harvested"
+ hcp_being_harvested_modifier_desc: "This planet is in the process of being systematically dismantled by an $hcp_orbital_quarrier$. Its days are numbered"
+
+ ### Messages
+ hcp_MESSAGE_HARVEST_WORLD_TITLE: "Harvest World"
+ hcp_MESSAGE_HARVEST_WORLD_MINERALS_TEXT: "The harvesting of $PLANET|Y$ has yielded valuable minerals.\n£minerals£$RESOURCE|Y$"
+ hcp_MESSAGE_HARVEST_WORLD_ALLOYS_TEXT: "The harvesting of $PLANET|Y$ has yielded valuable alloys.\n£alloys£$RESOURCE|Y$"
+
+ ### Situation
+ hcp_situation_harvest_planet: "Harvest [Target.GetName]"
+ hcp_situation_harvest_planet_type: "Harvest World"
+ hcp_situation_harvest_planet_monthly_change_tooltip: "$situation_monthly_change_tooltip_approaches_dependent$"
+ hcp_situation_harvest_planet_desc: "Starting with the crust, we will strip this planet bare. We cannot leave anything, lest it go to waste."
+
+ hcp_stage_harvesting: "Dismantling Planet"
+
+ hcp_string_harvesting_progress: "Planet Harvesting"
+ hcp_harvest_finish_tooltip: "Harvest [Target.GetName], leaving it a shell of its former self."
+
+ ## Approaches
+ hcp_approach_harvest: "Harvest"
+ hcp_planet_harvest_effect: "Harvest the world, gaining £hcp_mining_efficiency£ §H$hcp_mining_efficiency$§! and either £minerals£ §H$minerals$§! or £alloys£ §H$alloys$§! every §Y6§! months."
+
+ hcp_approach_dismantle: "Dismantle $hcp_orbital_quarrier$"
+ hcp_harvester_dismantle_effect: "Dismantle the §Y$hcp_orbital_quarrier$§! and stop harvesting the world, despite the potential inefficiencies."
+
+ ## Finisher Event
+ hcp_harvesters_situations.2.name: "World Harvested"
+ hcp_harvesters_situations.2.desc: "We have harvested enough of §Y[Target.GetName]§! that continuing our intensive harvesting operations would not be efficient.\n\n The remaining population has been evacuated to §Y[Owner.Capital.GetName]§! and any remaining resources can be collected with a standard orbital mining station."
+ hcp_harvesters_situations.2.a: "A job well done."
+ hcp_harvesters_situations.2.a.tooltip: "§Y[Target.GetName]§! is reduced to an asteroid."
+
+ ###########################
+ # Outward Bound Situation #
+ ###########################
+ #### Master Situation
+ ### Policies
+ policy_hcp_evacuation_policy: "Evacuation Policy"
+ policy_hcp_evacuation_policy_desc: "This policy dictates how our Stellar Harvesters deal with the populations of other empire's planets."
+
+ hcp_evacuate_everyone: "Evacuate Population"
+ hcp_evacuate_everyone_name: "$hcp_evacuate_everyone$"
+ hcp_evacuate_everyone_desc: "We will evacuate the population of other empire's colonies to the sanctuaries around our Singularity Silo."
+
+ hcp_evacuate_only_ours: "Harvest Population"
+ hcp_evacuate_only_ours_name: "$hcp_evacuate_only_ours$"
+ hcp_evacuate_only_ours_desc: "We will harvest the population of other empire's, along with the planets they reside on."
+
+ ### Messages
+ hcp_MESSAGE_STELLAR_HARVESTER_DEPARTED_TITLE: "Stellar Harvester Departed"
+ hcp_MESSAGE_STELLAR_HARVESTER_DEPARTED_TEXT: "One of our §YStellar Harvesters§! has left the galaxy."
+
+ ### Special Projects
+ hcp_DEPARTURE_POINT: "Departure Point"
+ hcp_DEPARTURE_POINT_DESC: "We have identified the §H[this.GetName] System§! as an ideal departure point for our §YStellar Harvesters§!."
+
+ ### Situation
+ hcp_situation_outward_bound_master: "Outward Bound"
+ hcp_situation_outward_bound_master_type: "$hcp_situation_outward_bound_master$"
+ hcp_situation_outward_bound_master_monthly_change_tooltip: "This §YSituation§! will progress as we send §Y$hcp_stellar_harvester$s§! beyond our galaxy."
+ hcp_situation_outward_bound_master_desc: "To gather sufficient resources for our long term survival, we must send our §YStellar Harvesters§! out beyond our galaxy. Each one carries the hopes of our entire civilization.\n\nStellar Harvesters: §G[owner.hcp_num_stellar_harvesters]§!"
+ hcp_outward_bound_master_finish_tooltip: "We will have sent out enough Stellar Harvesters to ensure our goals are achieved."
+ hcp_build_another_stellar_harvester: "£trigger_no£ No Stellar-Harvesters"
+
+ ### Situation Events
+ ##On Start
+ hcp_harvesters_situations.1000.name: "$hcp_situation_outward_bound_master$"
+ hcp_harvesters_situations.1000.desc: "We have known for a while that our galaxy does not contain enough resources for us to sustain our civilization for any reasonable length of time. We will need to begin looking outward towards other galaxies. To that end, we have outfitted our Stellar-Harvesters with an experimental type of FTL drive, allowing them to travel at superluminal speeds between galaxies.\n\nSending our Stellar-Harvesters out of the galaxy is a risky endeavour. We have no way of knowing what dangers could exist out there, so we will need to send a sufficient number out to increase their overall odds of success.\n\nAdditionally, we will need to prepare the sanctuaries around our Singularity Silo to house our entire civilization. We are prepared to begin expanding the habitable area of each sanctuary but it will require a substantial amount of resources."
+ hcp_harvesters_situations.1000.a: "Prioritise our Sanctuaries."
+ hcp_harvesters_situations.1000.b: "Prioritise our Stellar-Harvesters."
+
+ ##On Finish
+ hcp_harvesters_situations.1005.name: "Peak Efficiency"
+ hcp_harvesters_situations.1005.desc.a: "We have now sent a sufficient number of Stellar-Harvesters beyond our galaxy to ensure the resource of the universe will eventually be ours. We must now turn our attention elsewhere.\n\nIt is more than evident that the other empires are none too pleased with our activities. To that end, we have been working on a design for a shield to isolate our Singularity Silo from the rest of the universe. This shield is designed to disintegrate matter on contact and syphon it into the black hole at the heart of our refuge."
+ hcp_harvesters_situations.1005.desc.b: "$hcp_harvesters_situations.1005.desc.a$\n\nWe will need to finish relocating our population to the sanctuaries before we can activate it."
+ hcp_harvesters_situations.1005.a: "Prepare the shield."
+ hcp_harvesters_situations.1005.b: "We shall relocate our remaining populations."
+
+ ## Approaches
+ hcp_approach_sanctuaries: "Prioritise Sanctuaries"
+ hcp_planet_sanctuaries_effect: "We should prioritise the development of our sanctuaries to ensure they can meet our needs."
+
+ hcp_approach_harvesters: "Prioritise Harvesters"
+ hcp_harvesters_effect: "We should prioritise our Stellar Harvesters, our survival could be jeopardised if they cannot get the resources we need."
+ mod_shipsize_hcp_stellar_harvester_weapon_damage: "$hcp_stellar_harvester$ $MOD_SHIP_WEAPON_DAMAGE$"
+
+ #### Dummy Situation
+ ### Messages
+ hcp_MESSAGE_HOSTILE_STELLAR_HARVESTER_DEPARTED_TITLE: "Stellar Harvester Departed"
+ hcp_MESSAGE_HOSTILE_STELLAR_HARVESTER_DEPARTED_TEXT: "A §YStellar Harvesters§!, belonging to the $TARGET|Y$ has left the galaxy."
+
+ ### Situation
+ hcp_situation_outward_bound_dummy: "Outward Bound: [Target.GetName]"
+ hcp_situation_outward_bound_dummy_type: "$hcp_situation_outward_bound_master$"
+ hcp_situation_outward_bound_dummy_monthly_change_tooltip: "This §YSituation§! will progress as the [Target.GetName] send §Y$hcp_stellar_harvester$s§! beyond our galaxy."
+ hcp_situation_outward_bound_dummy_desc: "The §H[Target.GetName]§! has begun sending its §YStellar Harvesters§! to other galaxies. Each one poses an §RExistential Threat§! to the entire universe.\n\nStellar Harvesters: §R[target.hcp_num_stellar_harvesters]§!"
+ hcp_outward_bound_dummy_finish_tooltip: "Too many Stellar Harvesters will have escaped."
+
+ ### Situation Events
+ ##On Start
+ #First Stellar-Harvester Left Galaxy
+ hcp_harvesters_situations.2000.name: "$hcp_situation_outward_bound_dummy$"
+ hcp_harvesters_situations.2000.desc: "One of the Stellar-Harvesters belonging to the [Target.GetName] has just left the galaxy. We detected a strange subspace disruption build up around the vessel before it departed, seemingly using a new type of FTL travel.\n\nWhile at first we were relieved to have one less to deal with, the full implications of this quickly became apparent. The Stellar-Harvesters are designed to self replicate utilising the matter they collect. Any that escape will likely return one day having multiplied substantially!\n\nOptimistically, there is always the chance that civilizations in other galaxies are able to recognise the threat they pose and destroy them before they can get out of control, but each one that leaves increases the chance of their success. We cannot afford to let many more escape."
+ hcp_harvesters_situations.2000.a: "They must be stopped."
+ #Built Half Stellar-Harvesters Required to Win
+ hcp_harvesters_situations.2001.name: "$hcp_situation_outward_bound_dummy$"
+ hcp_harvesters_situations.2001.desc: "Our agents within the [Target.GetName] have brought some disturbing news. Apparently, they have outfitted their Stellar-Harvesters with a new type of FTL drive capable of intergalactic travel.\n\nInitially we were perplexed by these findings but the full implications quickly became apparent. The Stellar-Harvesters are designed to self replicate utilising the matter they collect. Any that escape will likely return one day having multiplied substantially!\n\nIf any were to escape, we would have to rely on civilizations in other galaxies being able to recognise the threat they pose and destroy them before they can get out of control, but this assumes they are at an equivalent technological level to ourselves if they even exist at all. We must destroy as many as possible before they can escape."
+ hcp_harvesters_situations.2001.a: "They must be stopped."
+
+ ##On Finish
+ hcp_harvesters_situations.2005.name: "Bleak Inevitability"
+ hcp_harvesters_situations.2005.desc: "The [Target.GetName] has now sent a sufficient number of Stellar-Harvesters beyond the galaxy to guarantee at least one of them successfully replicates. While we would like to believe there are civilizations out there with both the willingness and ability to deal with them before it is too late, realistically, our only real hope is that we don't live long enough to see them return."
+ hcp_harvesters_situations.2005.a: "A shadow falls over our future."
+
+ ## Approaches
+ hcp_approach_track_harvesters: "Track Stellar Harvesters"
+ hcp_track_harvesters_effect: "Our observation station will track the movements of any Stellar Harvesters Belonging to the [Target.GetName]."
+
+ #end

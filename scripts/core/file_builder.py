@@ -30,7 +30,7 @@ def create_fallback_file(source_path, dest_dir, original_filename, source_lang, 
 
         dest_file_path = os.path.join(dest_dir, new_filename)
         
-        with open(dest_file_path, 'w', encoding='utf-8-bom') as f:
+        with open(dest_file_path, 'w', encoding='utf-8-sig') as f:
             f.writelines(lines)
         print(i18n.t("fallback_file_created", filename=new_filename))
     except Exception as e:
