@@ -3,7 +3,7 @@ import os # 导入os模块以备后用
 
 # --- 核心配置 ---
 MODEL_NAME = 'gemini-2.5-flash'
-CHUNK_SIZE = 150
+CHUNK_SIZE = 60
 
 # --- 路径配置 ---
 SOURCE_DIR = 'source_mod'
