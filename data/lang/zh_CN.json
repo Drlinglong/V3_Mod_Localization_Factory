@@ -28,6 +28,9 @@
   "translating_mod_name": "正在翻译 mod name: \"{text}...\"",
   "translating_mod_desc": "正在翻译 mod short description: \"{text}...\"",
   "metadata_success": "metadata.json 汉化完成。",
+  "processing_assets": "\n--- 正在处理资产文件 (封面图、描述文件等) ---",
+  "asset_copied": "资产文件 '{asset_name}' 复制完成。",
+  "asset_not_found": "未找到资产文件 '{asset_name}'，跳过。",
   "processing_thumbnail": "\n--- 正在处理 thumbnail.png ---",
   "thumbnail_not_found": "未找到 thumbnail.png，跳过此步骤。",
   "thumbnail_copied": "thumbnail.png 复制完成。",
@@ -46,5 +49,10 @@
   "select_target_language_prompt": "\n请选择目标语言:", 
   "target_option_all": "翻译为其余所有10种语言", 
   "error_same_language": "错误：目标语言不能与源语言相同。",
+  "getting_mod_context": "\n--- 正在获取Mod主题上下文 ---",
+  "mod_name_identified": "已识别Mod名称为: '{name}'",
+  "prompt_for_extra_context":"（可选）请输入关于该Mod主题的额外信息（如'科幻'、'经济'等），或直接按回车跳过: ",
+  "final_context_is": "最终使用的主题上下文为: '{context}'",
+  "error_getting_context": "获取Mod上下文时出错: {error}",
   "translating_to_language": "\n--- 正在翻译为: {lang_name} ---"
 }

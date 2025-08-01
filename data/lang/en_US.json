@@ -28,6 +28,9 @@
   "translating_mod_name": "Translating mod name: \"{text}...\"",
   "translating_mod_desc": "Translating mod short description: \"{text}...\"",
   "metadata_success": "metadata.json localized successfully.",
+  "processing_assets": "\n--- Processing assets (thumbnail, descriptor, etc.) ---",
+  "asset_copied": "Asset '{asset_name}' copied successfully.",
+  "asset_not_found": "Asset '{asset_name}' not found, skipping.",
   "processing_thumbnail": "\n--- Processing thumbnail.png ---",
   "thumbnail_not_found": "thumbnail.png not found, skipping.",
   "thumbnail_copied": "thumbnail.png copied successfully.",
@@ -46,6 +49,12 @@
   "target_option_all": "Translate to all other 10 languages", 
   "error_same_language": "Error: Target language cannot be the same as the source language.",
   "translating_to_language": "\n--- Translating to: {lang_name} ---",
+  "getting_mod_context": "\n--- Getting Mod thematic context ---",
+  "mod_name_identified": "Identified Mod Name: '{name}'",
+  "prompt_for_extra_context": "(Optional) Enter additional info about this mod's theme (e.g. 'Sci-Fi', 'Economy'), or press Enter to skip: ",
+  "final_context_is": "Final thematic context used: '{context}'",
+  "error_getting_context": "Error getting mod context: {error}",
   "select_game_profile_prompt": "\nPlease select a game:"
+  
 
 }

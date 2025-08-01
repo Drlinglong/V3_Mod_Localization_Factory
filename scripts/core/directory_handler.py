@@ -33,21 +33,18 @@ def select_mod_directory():
         print(i18n.t("error_source_folder_not_found", dir=SOURCE_DIR))
         return None
     
-def cleanup_source_directory(mod_name):
-    """
-    清理源mod文件夹，只保留核心汉化文件。
-    现在使用更详细的警告信息。
-    """
+def cleanup_source_directory(mod_name, game_profile):
+    """清理源mod文件夹，现在会根据游戏档案来决定保护哪些文件。"""
     print(i18n.t("cleanup_start", mod_name=mod_name))
-    
-    # 使用新的、更详细的i18n key
+
     confirm = input(i18n.t("cleanup_warning_detailed", mod_name=mod_name))
     if confirm.lower() not in ['y', 'yes']:
         print(i18n.t("cleanup_cancelled"))
-        return False # 返回False表示用户取消了操作
+        return False
 
     mod_path = os.path.join(SOURCE_DIR, mod_name)
-    protected_items = {'.metadata', 'localization', 'thumbnail.png'}
+    # 【核心修改】从游戏档案中读取保护名单
+    protected_items = game_profile.get('protected_items', set())
 
     print(i18n.t("cleanup_deleting"))
     try:
