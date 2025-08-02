@@ -5,6 +5,8 @@ from utils import i18n
 from workflows import initial_translate
 from core import directory_handler
 from config import LANGUAGES, GAME_PROFILES, SOURCE_DIR
+from sys import argv
+import argparse
 
 def gather_mod_context(mod_name):
     """读取metadata获取Mod名，并询问用户是否补充上下文。"""
@@ -34,8 +36,15 @@ def gather_mod_context(mod_name):
         print(i18n.t("error_getting_context", error=e))
         return mod_name
 
-def select_game_profile():
+def select_game_profile(cli_game_id):
     """让用户选择一个游戏档案。"""
+    if cli_game_id:
+            for key, profile in GAME_PROFILES.items():
+                if profile.get('id') == cli_game_id:
+                    return profile
+            print(i18n.t("error_invalid_game_profile").format(cli_game_id))
+            return None
+
     print(i18n.t("select_game_profile_prompt"))
     for key, profile in GAME_PROFILES.items():
         print(f"  [{key}] {profile['name']}")
@@ -71,11 +80,21 @@ def select_language(prompt_key, source_lang_key=None):
         else:
             print(i18n.t("invalid_input_number"))
 
-def main_menu():
-    """【最终版】程序主菜单，确保正确传递 game_profile。"""
-    i18n.load_language()
+def main_menu(argv=None):
+    parser = argparse.ArgumentParser(description="Mod Translation Tool")
+    parser.add_argument('-cli-language', default=None, help='Language used for CLI (e.g., en)')
+    parser.add_argument('-game', default=None, help='Game profile (e.g., vic3)')
+    parser.add_argument('-source-mod', default=None, help='Path to the source mod directory or 0 for manual selection')
+    parser.add_argument('-source-lang', default=None, help='Source language key (e.g., english)')
+    parser.add_argument('-target-lang', default=None, help='Target language key or 0 for all except source')
+    args = parser.parse_args(argv)
     
-    selected_game_profile = select_game_profile()
+    print(args)
+
+    """【最终版】程序主菜单，确保正确传递 game_profile。"""
+    i18n.load_language(args.cli_language)
+    
+    selected_game_profile = select_game_profile(args.game)
     selected_mod = directory_handler.select_mod_directory()
     if not selected_mod: return
 
@@ -105,4 +124,5 @@ def main_menu():
         initial_translate.run(selected_mod, source_lang, target_languages, selected_game_profile, mod_context)
 
 if __name__ == '__main__':
-    main_menu()
+    import sys
+    main_menu(sys.argv[1:])

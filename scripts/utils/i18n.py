@@ -1,14 +1,18 @@
 # scripts/utils/i18n.py
 import json
 import os
+import sys
 
 _strings = {}
 
-def load_language():
+def load_language(cli_language=None):
     """向用户提问，加载选择的语言文件。"""
     global _strings
-    lang_choice = input("Please select a language (1: English, 2: 中文): ").strip()
-    lang_code = 'en_US' if lang_choice == '1' else 'zh_CN'
+    if cli_language:
+        lang_code = cli_language
+    else:
+        lang_choice = input("Please select a language (1: English, 2: 中文): ").strip()
+        lang_code = 'en_US' if lang_choice == '1' else 'zh_CN'
 
     lang_file_path = os.path.join('data', 'lang', f'{lang_code}.json')
 
