@@ -88,7 +88,7 @@ scripts/
 ### 4.1. Prerequisites
 1.  **Install Git:** Ensure [Git](https://git-scm.com/downloads) is installed on your system.
 2.  **Install Python:** Ensure Python 3.8 or a higher version is installed.
-3.  **Install Dependencies:** Run `pip install --upgrade google-generativeai` in your terminal.
+3.  **Install Dependencies:** Run `pip install --upgrade google-genai` in your terminal.
 4.  **Set API Key:** Set an environment variable named `GEMINI_API_KEY` with your API key.
 
 ### 4.2. Project Setup

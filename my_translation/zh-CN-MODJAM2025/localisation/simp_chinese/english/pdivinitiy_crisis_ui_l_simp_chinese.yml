@@ -1,0 +1,183 @@
+﻿l_simp_chinese:
+
+ ############################################
+ ### project_divinity_crisis_ui_l_english ###
+ ###     by daniellm                      ###
+ ############################################
+
+
+
+ #####################
+ ### crisis screen ###
+ #####################
+
+ pdivinity_psionic_strength_value:"£pdivinity_psionic_strength£ $VAL|0$"
+ pdivinity_psionic_strength_gaining:"完成§H危机目标§!可获得更多§Y庇护者的恩眷§!。"
+ pdivinity_psionic_strength_desc:"$pdivinity_psionic_strength$衡量着我们与缔造者神秘能量的共鸣程度。"
+ pdivinity_psionic_strength_crisis_objective:"危机目标"
+ pdivinity_psionic_strength_crisis_objective_gained:"获得的$pdivinity_psionic_strength$"
+ pdivinity_psionic_strength_crisis_objective_reward: "$REWARD$"
+ pdivinity_psionic_strength_crisis_objective_progress:"我们已从本次危机目标中获得了£pdivinity_psionic_strength£ $AMOUNT$。"
+ pdivinity_psionic_strength_crisis_level_locked:"解锁此等级所需：\n"
+ pdivinity_psionic_strength_crisis_level_unlocked:"在$LEVEL$级，你将获得一个特殊项目和以下奖励：\n"
+ pdivinity_psionic_strength_crisis_level_desc:"要提升危机等级，请完成危机目标，并完成每个阶段规定的任务。"
+ pdivinity_psionic_strength_crisis_level_unlock:"拥有 £pdivinity_psionic_strength£ §Y$CURRENCY$§! $pdivinity_psionic_strength$"
+ pdivinity_psionic_strength_current_value:"当前值：§Y$VALUE|0$§!"
+
+ # this text exists in the crisis screen, the intro is just the nemesis one, i don't really like it tbh neither does the other one talk about the galcom. ask me if you need the other ones for comparison
+ pdivinity_psionic_strength_crisis_description_title:"神性计划"
+ pdivinity_psionic_strength_crisis_description_intro:"亿万年来，先知与学者们窃窃私语着一场即将到来的§R危机§!——一个裹挟在预言中的终结，届时所有智慧生命的命运都将命悬一线。他们曾设想是域外入侵者、冰冷机械逻辑的反叛，或是异界维度中爆发的战争。\n\n然而他们向外求索，却本应向内审视。\n\n真相一直在表面之下涌动——深刻、必然，且只与意志相关。最终的危机……一直都将是§R我们§!。"
+ pdivinity_psionic_strength_crisis_description:"$pdivinity_psionic_strength_crisis_description_intro$\n\n我们的思想，我们的意志，在另一个维度中激荡——那是一个充满无尽灵能的位面。帷幕渐薄。如果我们能掌握这股力量，并以我们的目的塑造它，那么我们不仅能在这即将到来的一切中幸存……我们还将定义它。"
+ pdivinity_psionic_strength_crisis_howto_title:0 "追求神性"
+ pdivinity_psionic_strength_crisis_howto:"追求§H危机目标§!将生成£pdivinity_psionic_strength£ §Y庇护者的恩眷§!，解锁我们的神性潜能，以释放那位召唤银河的存在！"
+
+ crisis_pdivinity_project_divinity_level_1:0 "创世"
+ crisis_pdivinity_project_divinity_level_1_desc:0 "危机等级1"
+
+ crisis_pdivinity_project_divinity_level_2:0 "颠覆"
+ crisis_pdivinity_project_divinity_level_2_desc:0 "危机等级2"
+
+ crisis_pdivinity_project_divinity_level_3:0 "预言"
+ crisis_pdivinity_project_divinity_level_3_desc:0 "危机等级3"
+
+ crisis_pdivinity_project_divinity_level_4:0 "启示"
+ crisis_pdivinity_project_divinity_level_4_desc:0 "危机等级4"
+
+ crisis_pdivinity_project_divinity_level_5:0 "神化"
+ crisis_pdivinity_project_divinity_level_5_desc:0 "危机等级5"
+ # Resource
+
+ pdivinity_psionic_strength_name:0 "庇护者的恩眷"
+ pdivinity_psionic_strength:0 "庇护者的恩眷"
+
+ # objectives
+
+ crisobj_pdivinity_establish_cult_name:0 "建立帷幕教团"
+ crisobj_pdivinity_establish_cult_desc:0 "在其他帝国建立帷幕教团能够帮助我们将影响力传播至整个银河系。\n\n建立帷幕教团可获得此$pdivinity_psionic_strength$奖励。"
+
+ crisobj_pdivinity_retain_vassals_name:0 "维持侍僧附庸"
+ crisobj_pdivinity_retain_vassals_desc:0 "他们对帷幕的顺从有助于我们迈向神性之路。\n\n维持侍僧附庸可获得此§Y每年§!的$pdivinity_psionic_strength$奖励。"
+
+ crisobj_pdivinity_vassalize_empire_name:0 "附庸化帝国"
+ crisobj_pdivinity_vassalize_empire_desc:0 "征服大众确保他们将听从他的神谕。\n\n附庸化帝国可获得此$pdivinity_psionic_strength$奖励。"
+
+ crisobj_pdivinity_research_psionic_technology_name:0 "研究灵能科技"
+ crisobj_pdivinity_research_psionic_technology_desc:0 "试验基于帷幕的组件能帮助我们追求神性。\n\n研究这些稀有科技可获得此$pdivinity_psionic_strength$奖励。"
+
+ crisobj_pdivinity_shroud_phase_planets_name:0 "帷幕相移行星"
+ crisobj_pdivinity_shroud_phase_planets_desc:0 "对行星进行帷幕相移操作会在帷幕中撕开一道裂隙，并必定会引起那位呼唤者的注意。\n\n帷幕相移行星可获得此$pdivinity_psionic_strength$奖励。"
+
+ crisobj_pdivinity_sacrifice_population_name:0 "仪式性献祭人口"
+ crisobj_pdivinity_sacrifice_population_desc:0 "被献祭人口的灵魂将帮助我们获得庇护者的恩眷。\n\n使用仪式性献祭净化类型，每净化$pop_group_unit$人口，即可获得此$pdivinity_psionic_strength$奖励。"
+
+ crisobj_pdivinity_control_shroud_enclave_name:0 "控制灵能行者飞地"
+ crisobj_pdivinity_control_shroud_enclave_desc:0 "灵能行者们信仰神性，他们会帮助我们实现目标。\n\n维持灵能行者飞地可获得此§Y每年§!的$pdivinity_psionic_strength$奖励。"
+
+ crisobj_pdivinity_shroud_enemy_planets_name:0 "灵能裂解行星"
+ crisobj_pdivinity_shroud_enemy_planets_desc:0 "以灵能灼烧敌对行星将为我们带来恩眷。\n\n裂解行星可获得此$pdivinity_psionic_strength$奖励。"
+
+ crisobj_pdivinity_summon_psionic_ships_name:0 "召唤灵能舰船"
+ crisobj_pdivinity_summon_psionic_ships_desc:0 "帷幕因我们的号令而颤抖。从其深处，我们召唤的并非由金属而生，而是由意志铸就的舰船——它们是我们与帷幕日益增长的联系的具现。\n\n召唤灵能舰船可获得此$pdivinity_psionic_strength$奖励。"
+
+ crisobj_pdivinity_employ_telepaths_name:0 "雇佣灵能者"
+ crisobj_pdivinity_employ_telepaths_desc:0 "缔造者已赋予我们的灵能者生产灵能的能力。\n\n$pdivinity_psionic_strength$的产出与雇佣的灵能者数量成比例增长。"
+
+ ####################
+ ### menace perks ###
+ ####################
+
+ menp_pdivinity_resource:0 "庇护者的恩眷"
+ # tooltip
+ unlocks_pdivinity_unlock_resource:0 "允许通过完成§H危机目标§!积累£pdivinity_psionic_strength£ §Y$menp_pdivinity_resource$§!。"
+ menp_pdivinity_resource_desc:0 "获得缔造者的恩眷将助力我们达成神性的终极目标。我们将为他的意志献出鲜血。"
+
+ menp_pdivinity_ethic_attraction:0 "神圣信仰"
+ # desc
+ menp_pdivinity_ethic_attraction_desc:0 "窃窃私语与幻象激起了对更高力量的信仰。许多人现在都怀着敬畏之心提及§R命运缔造者§!的名字。"
+
+ menp_pdivinity_psionic_armies:0 "灵能幻影"
+ menp_pdivinity_psionic_armies_desc:0 "笼罩在非自然灵能中，这些幽魂战士游荡于现实与梦魇之间。作为缔造者的代理人，他们注定将在显现之处播撒恐惧与毁灭。"
+ unlocks_pdivinity_unlock_armies:0 "解锁§Y$pdivinitiy_psionic_army$§!陆军类型"
+
+ menp_pdivinity_zro_building:0 "帷幕萃取器"
+ menp_pdivinity_zro_building_desc:0 "一个圣化结构，它削薄了领域间的帷幕，允许受训的侍僧直接从帷幕的涡流中虹吸原始Zro。"
+ unlocks_pdivinity_unlock_buildings:0 "解锁§Y$building_pdivinity_shroud_harvester_building$§!"
+
+ menp_pdivinity_shroud_phasing:0 "帷幕相移"
+ menp_pdivinity_shroud_phasing_desc:0 "我们已学会刻意削弱选定世界的帷幕，将它们转化为灵能圣所。我族在这种共鸣中繁荣昌盛，而其他一切都将在我们脚下受苦。"
+ unlocks_pdivinity_unlock_phasing:0 "解锁星球决议§Y$decision_pdivinity_shroud_phasing$§!"
+
+ menp_pdivinity_ritual_sacrifice:0 "仪式献祭"
+ menp_pdivinity_ritual_sacrifice_desc:0 "那些不配造物主设计者的人，或许仍有其用。通过献祭血肉与灵魂，我们从灵能空间汲取力量与恩惠。"
+ unlocks_pdivinity_ritual_sacrifice:0 "解锁净化类型§Y$purge_pdivinity_sacrifice$§!"
+
+ menp_pdivinity_cult_espionage:0 "启示之种"
+ menp_pdivinity_cult_espionage_desc:0 "我们已精通在边境之间散布低语的艺术。信仰如腐烂般在表面下蔓延，很快，他们的人民将以造物主之名反叛他们的神明。"
+ unlocks_pdivinity_cult_espionage:0 "解锁行动类型§Y$operation_pdivinity_establish_cult$§!\n"
+
+ menp_pdivinity_divine_crusade:0 "神圣远征"
+ menp_pdivinity_divine_crusade_desc:0 "我们的神圣远征将唤醒银河系的其他文明。通过圣战，我们将他人束缚于命运的设计。他们将成为侍从，或作为异端陨落。"
+ unlocks_pdivinity_divine_crusade:0 "解锁宣战理由§Y$wg_pdivinity_acolyte$§!\n解锁附庸类型§Y$specialist_pdivinity_acolyte$§!\n"
+
+ menp_pdivinity_psionic_avatar:0 "灵能帷幕"
+ menp_pdivinity_psionic_avatar_desc:0 "灵能空间意志的虚幻显现，一团旋涡状的灵能云团，遮蔽并扭曲现实，以命运的低语萦绕于星际虚空。"
+ unlocks_pdivinity_psionic_avatar:0 "解锁舰船类型：§Y$pdivinity_psionic_cloud$§!"
+
+ menp_pdivinity_psionic_rupture:0 "裂隙弹幕"
+ menp_pdivinity_psionic_rupture_desc:0 "一种毁灭性轰炸，撕开维度之间的帷幕，释放原始灵能，撕裂敌军防御工事并瓦解他们的意志。"
+ unlocks_pdivinity_psionic_rupture:0 "解锁轰炸类型：§Y$bombardment_pdivinity_psionic_rupture_bombardment$§!"
+
+ menp_pdivinity_psionic_potential:0 "灵能调谐"
+ menp_pdivinity_psionic_potential_desc:0 "我族人与灵能空间潜在的连接绽放，赋予他们增强的心智天赋，并使其更深层次地与现实结构调谐。"
+
+ menp_pdivinity_gifts_from_beyond:0 "彼方赠礼"
+ menp_pdivinity_gifts_from_beyond_desc:0 "从灵能空间深处寻获的古老灵能秘密与技术，以超凡之力强化我们的舰船与武器。"
+ unlocks_pdivinity_gifts_from_beyond:0 "§Y灵能组件§!现在可以作为研究选项出现"
+
+ menp_pdivinity_astral_tear:0 "灵能化身"
+ menp_pdivinity_astral_tear_desc:0 "灵能空间意志的活体具象，这具化身是被原始灵能环绕的凶猛而神秘的实体，随其意志扭曲现实。"
+ unlocks_pdivinity_astral_tear:0 "解锁舰船类型：§Y$pdivinity_psionic_avatar$§!"
+
+ menp_pdivinity_beyond_the_rifts:0 "银河风暴"
+ menp_pdivinity_beyond_the_rifts_desc:0 "命运尖塔已缓慢地撕裂了帷幕，灵能正以惊人的速度涌入真实空间，在我方疆域内制造出一场帷幕风暴。"
+ unlocks_pdivinity_beyond_the_rifts:0 "在每个已控星系中制造一个§Y帷幕风暴§!"
+
+ menp_pdivinity_divine_insight:0 "神圣洞察"
+ menp_pdivinity_divine_insight_desc:0 "造物主的存在磨砺我们的心智，缩短我们灵能技艺之间的间隔，并让我们更快地掌握灵能空间。"
+
+ menp_pdivinity_hyperdimensional_shielding:0 "超维护盾"
+ menp_pdivinity_hyperdimensional_shielding_desc:0 "一种由高维能量编织而成的防护灵气，保护我们的舰队免受伤害，仿佛有造物主自身的恩典守护着他们。"
+
+ menp_pdivinity_dimensional_tearer:0 "维度撕裂者"
+ menp_pdivinity_dimensional_tearer_desc:0 "一种能够撕裂现实本身的武器，制造出撕裂并瓦解时空结构本身的灵能之门。"
+ unlocks_pdivinity_dimensional_tearer:0 "解锁舰船类型：§Y$pdivinity_dimensional_tearer$§!"
+
+ menp_pdivinity_call_of_the_eye:0 "造物主召唤"
+ menp_pdivinity_call_of_the_eye_desc:0 "祂的声音回荡在整个银河系，邪教徒们因预言的实现和升入光明的殿堂而欢欣鼓舞。造物主近在咫尺……"
+ unlocks_pdivinity_call_of_the_eye:0 "§Y邪教徒起义§!现在以两倍的速度增长"
+
+ menp_pdivinity_psionic_mastery:0 "灵能精通"
+ menp_pdivinity_psionic_mastery_desc:0 "我们与灵能空间的深刻共鸣增强了我们武器的破坏潜力，使每一次打击都回荡着灵能的狂怒。"
+
+ menp_pdivinity_beyond_the_Shroud:0 "命运尖塔"
+ menp_pdivinity_beyond_the_Shroud_desc:0 "尖塔在歌唱。灵能空间回应着。银河系各地的信徒都感受到了它的牵引，邪教在已知宇宙的每个角落兴起。"
+ unlocks_pdivinity_spire_of_fate:0 "解锁巨构阶段：§Y命运尖塔 - 升华阶段§!"
+
+ ##################################
+ ### crisis unlock requirements ###
+ ##################################
+
+ pdivinity_level_2_req_clear_tooltip:0 "£trigger_yes£ 已建造§Y$building_pdivinity_architect_shrine$§!"
+ pdivinity_level_2_req_tooltip:0 "£trigger_no£ 未建造§Y$building_pdivinity_architect_shrine$§!"
+
+ pdivinity_level_3_req_clear_tooltip:0 "£trigger_yes£ 已使一个星球§Y灵能相位化§!"
+ pdivinity_level_3_req_tooltip:0 "£trigger_no£ 未使一个星球§Y灵能相位化§!"
+
+ pdivinity_level_4_req_clear_tooltip:0 "£trigger_yes£ 已完成考古遗址§Y$pdivinity_catacombs_digsite$§!"
+ pdivinity_level_4_req_tooltip:0 "£trigger_no£ 未完成考古遗址§Y$pdivinity_catacombs_digsite$§!"
+
+ pdivinity_level_5_req_clear_tooltip:0 "£trigger_yes£ 已建造§Y$pdivinity_shroud_needle_3$§!"
+ pdivinity_level_5_req_tooltip:0"£trigger_no£ 未建造§Y$pdivinity_shroud_needle_3$§!"
+
+ pdivinity_level_5_req_clear_tooltip_2:0 "£trigger_yes£ 已发射§Y维度撕裂者§!"
+ pdivinity_level_5_req_tooltip_2:0 "£trigger_no£ 未发射§Y维度撕裂者§!"
