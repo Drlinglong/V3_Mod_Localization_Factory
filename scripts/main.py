@@ -81,6 +81,10 @@ def select_language(prompt_key, source_lang_key=None):
             print(i18n.t("invalid_input_number"))
 
 def main_menu(argv=None):
+    if not os.getenv('GEMINI_API_KEY'):
+        print("API Key not found in environment variables.")
+        return None
+    
     parser = argparse.ArgumentParser(description="Mod Translation Tool")
     parser.add_argument('-cli-language', default=None, help='Language used for CLI (e.g., en)')
     parser.add_argument('-game', default=None, help='Game profile (e.g., vic3)')
