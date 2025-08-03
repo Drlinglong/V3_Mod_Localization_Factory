@@ -4,13 +4,22 @@ import shutil
 from utils import i18n
 from config import SOURCE_DIR
 
-def select_mod_directory():
+def select_mod_directory(source_mod=None):
     """扫描source_mod目录，让用户选择一个mod文件夹。"""
     print(i18n.t("scan_source_folder", dir=SOURCE_DIR))
     try:
         mod_folders = [d for d in os.listdir(SOURCE_DIR) if os.path.isdir(os.path.join(SOURCE_DIR, d))]
         if not mod_folders:
             print(i18n.t("error_no_mods_found", dir=SOURCE_DIR))
+            return None
+
+        # If source_mod is provided and valid, use it directly
+        if source_mod:
+            if source_mod in mod_folders:
+                print(i18n.t("you_selected", mod_name=source_mod))
+                return source_mod
+            else:
+                print(i18n.t("error_source_folder_not_found", dir=source_mod))
             return None
 
         print(i18n.t("select_mod_prompt"))

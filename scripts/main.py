@@ -95,7 +95,7 @@ def main_menu(argv=None):
     i18n.load_language(args.cli_language)
     
     selected_game_profile = select_game_profile(args.game)
-    selected_mod = directory_handler.select_mod_directory()
+    selected_mod = directory_handler.select_mod_directory(args.source_mod)
     if not selected_mod: return
 
     mod_context = gather_mod_context(selected_mod)
