@@ -13,15 +13,20 @@ def select_mod_directory(source_mod=None):
             print(i18n.t("error_no_mods_found", dir=SOURCE_DIR))
             return None
 
-        # If source_mod is provided and valid, use it directly
+        # Normalize path for cross-platform compatibility
         if source_mod:
-            if source_mod in mod_folders:
+            normalized_path = os.path.normpath(source_mod)
+            # If it's an absolute path and a directory, use it directly
+            if os.path.isabs(normalized_path) and os.path.isdir(normalized_path):
+                mod_name = os.path.basename(normalized_path)
+                print(i18n.t("you_selected", mod_name=mod_name))
+                return mod_name
+            # If it's just a name and exists in SOURCE_DIR, use it
+            elif source_mod in mod_folders:
                 print(i18n.t("you_selected", mod_name=source_mod))
                 return source_mod
-            else:
-                print(i18n.t("error_source_folder_not_found", dir=source_mod))
-            return None
 
+        # Fall back to manual selection
         print(i18n.t("select_mod_prompt"))
         for i, folder_name in enumerate(mod_folders):
             print(f"  [{i + 1}] {folder_name}")
