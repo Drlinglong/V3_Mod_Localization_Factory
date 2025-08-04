@@ -100,4 +100,23 @@ GAME_PROFILES = {
             "Translate the following {task_description} from {source_lang_name} to {target_lang_name}.\n"
         ),
     },
+    "4": {
+        "id": "hoi4",
+        "name": "Hearts of Iron IV (钢铁雄心4)",
+        "source_localization_folder": "localisation", # 和群星一样same as stellaris
+        "protected_items": {'descriptor.mod', 'localisation', 'thumbnail.png'}, # 和群星一样same as stellaris
+        "metadata_file": 'descriptor.mod', # 和群星一样same as stellaris
+        "encoding": "utf-8-sig", # 和群星/V3一样same as stellaris/VIC3
+        "strip_pl_diacritics": False,
+        "prompt_template": (
+            "You are a professional translator specializing in the grand strategy game Hearts of Iron IV, set during World War II. "
+            "Translate the following numbered list of texts from {source_lang_name} to {target_lang_name}.\n"
+            "The tone must be appropriate for a historical military and political strategy game."
+        ),
+        "single_prompt_template": (
+            "You are a direct, one-to-one translation engine. "
+            "The text you are translating is for a Hearts of Iron IV game mod named '{mod_name}'. "
+            "Translate the following {task_description} from {source_lang_name} to {target_lang_name}.\n"
+        )
+    }
 }

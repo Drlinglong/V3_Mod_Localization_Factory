@@ -64,7 +64,7 @@ def _process_stellaris_metadata(mod_name, client, source_lang, target_lang,
     """【群星专用】生成两份 .mod 文件。"""
     source_mod_file = os.path.join(SOURCE_DIR, mod_name, game_profile['metadata_file'])
     if not os.path.exists(source_mod_file):
-        print(f"警告：未找到源 {game_profile['metadata_file']} 文件，跳过元数据处理。")
+        print(i18n.t("metadata_not_found"))
         return
 
     with open(source_mod_file, 'r', encoding='utf-8') as f:
@@ -93,28 +93,43 @@ def _process_stellaris_metadata(mod_name, client, source_lang, target_lang,
         suffix = f" ({target_lang['name']} Translation)"
     final_name = f"{translated_name}{suffix}"
 
-    # ── rewrite descriptor.mod ────────────────────────────────────
-    new_content_lines, in_tags_block, tags_block_written = [], False, False
+# --- Rebuild the new file content line by line ---
+    # We create a new list for the output and use a state machine to handle multi-line blocks.
+    new_content_lines = []
+    in_tags_block = False  # State flag: True if we are inside a tags={...} block that needs to be skipped.
+    tags_block_written = False # Flag to check if we have already written our new "Translation" tag.
+
     for line in lines:
         stripped_line = line.strip()
 
+        # If the 'in_tags_block' flag is on, we are inside a multi-line tags block.
+        # We will skip all lines until we find the closing brace '}'.
         if in_tags_block:
             if '}' in stripped_line:
-                in_tags_block = False
-            continue
+                in_tags_block = False # End of the block, turn the flag off.
+            continue # Skip the current line (part of the old tags block).
 
+        # If the line defines the mod name, replace it with our translated version.
         if stripped_line.startswith('name='):
             new_content_lines.append(f'name="{final_name}"\n')
-
+        
+        # If we find the start of a tags block...
         elif stripped_line.startswith('tags={'):
+            # ...append our new, standardized "Translation" tag block.
             new_content_lines.append('tags={\n\t"Translation"\n}\n')
+            tags_block_written = True
+            # If the block is multi-line (no '}' on the same line), turn on the skipping flag.
             if '}' not in stripped_line:
                 in_tags_block = True
-            tags_block_written = True
-
+        
+        # If the line is the remote_file_id, skip it to effectively delete it.
         elif stripped_line.startswith('remote_file_id='):
-            continue  # usuń ID Workshopu
+            continue
+        # If the line is the replace_path, skip it to effectively delete it.
+        elif stripped_line.startswith('replace_path='):
+            continue
 
+        # For any other line (like version, supported_version, etc.), keep it as is.
         else:
             new_content_lines.append(line)
 
@@ -216,28 +231,25 @@ def _process_eu4_metadata(mod_name, client, source_lang, target_lang,
     print(i18n.t("metadata_success"))
 
 
-# ──────────────────────────────────────────────────────────────────
-# GŁÓWNY DISPATCHER
-# ──────────────────────────────────────────────────────────────────
 def process_metadata(mod_name, client, source_lang, target_lang,
                      output_folder_name, mod_context, game_profile):
     """【总调度】元数据处理器，根据游戏档案调用对应的处理函数。"""
     print(i18n.t("processing_metadata"))
 
-    if game_profile['id'] == 'stellaris':
+    game_id = game_profile.get('id')
+    
+    if game_id == 'stellaris' or game_id == 'hoi4': #Use the same process method
         _process_stellaris_metadata(mod_name, client, source_lang, target_lang,
                                     output_folder_name, mod_context, game_profile)
-
-    elif game_profile['id'] == 'victoria3':
+    elif game_id == 'victoria3':
         _process_victoria3_metadata(mod_name, client, source_lang, target_lang,
-                                    output_folder_name, mod_context, game_profile)
-
-    elif game_profile['id'] == 'eu4':                     # <── NOWE
+                                      output_folder_name, mod_context, game_profile)
+    elif game_id == 'eu4':
         _process_eu4_metadata(mod_name, client, source_lang, target_lang,
                               output_folder_name, mod_context, game_profile)
-
     else:
-        print(f"警告：暂不支持游戏 '{game_profile['name']}' 的元数据处理。")
+        # warning msg
+        print(i18n.t("unsupported_metadata", game_name=game_profile['name']))
 
 
 # ──────────────────────────────────────────────────────────────────

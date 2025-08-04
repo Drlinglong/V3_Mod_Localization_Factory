@@ -54,5 +54,6 @@
   "prompt_for_extra_context":"（可选）请输入关于该Mod主题的额外信息（如'科幻'、'经济'等），或直接按回车跳过: ",
   "final_context_is": "最终使用的主题上下文为: '{context}'",
   "error_getting_context": "获取Mod上下文时出错: {error}",
-  "translating_to_language": "\n--- 正在翻译为: {lang_name} ---"
+  "translating_to_language": "\n--- 正在翻译为: {lang_name} ---",
+  "unsupported_metadata": "警告：暂不支持游戏 '{game_name}' 的元数据处理。"
 }
