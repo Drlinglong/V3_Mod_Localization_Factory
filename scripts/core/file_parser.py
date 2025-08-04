@@ -46,22 +46,23 @@ except Exception as e:  # pragma: no cover – hook opcjonalny
     print(f"[parser-hook] ⚠️  Failed to load hooks: {e}")
 
 
-# ───────────────────── 2. GŁÓWNA FUNKCJA ──────────────────────────────
+
 def extract_translatable_content(
     file_path: str,
 ) -> tuple[list[str], list[str], dict[int, dict]]:
-    """Wyciąga teksty do tłumaczenia z pojedynczego pliku .yml lub
-    z *.txt w customizable_localization (add_custom_loc).
+    """
+    Extracts translatable texts from a single .yml file or a .txt file
+    from a customizable_localization directory.
 
-    Zwraca:
-        original_lines      – oryginalne linie pliku (list[str])
-        texts_to_translate  – kolejność = kolejność wystąpień w pliku
-        key_map             – {idx: {key_part, original_value_part, line_num}}
+    Returns:
+        original_lines (list[str]): The original lines of the file.
+        texts_to_translate (list[str]): A list of strings to be translated, in order of appearance.
+        key_map (dict): A map to reconstruct the file: {index: {key_part, original_value_part, line_num}}.
     """
     rel_path = os.path.relpath(file_path)
     print(i18n.t("parsing_file", filename=rel_path))
 
-    # 1) Wczytanie linii z fallbackem na CP1252 dla niespodzianek
+    # 1) Read file lines with a fallback to cp1252 for unexpected encodings
     try:
         with open(file_path, "r", encoding="utf-8-sig") as f:
             original_lines = f.readlines()
@@ -72,18 +73,18 @@ def extract_translatable_content(
     texts_to_translate: list[str] = []
     key_map: dict[int, dict] = {}
 
-    # Czy to plik txt w customizable_localization?
+    # Check if this is a .txt file in a customizable_localization directory
     is_txt = file_path.lower().endswith(".txt") and "customizable_localization" in file_path.replace("\\", "/")
 
     for line_num, line in enumerate(original_lines):
         stripped = line.strip()
 
-        # wspólne pomijanie komentarzy i pustych
+        # Common check: skip comments and empty lines
         if not stripped or stripped.startswith("#"):
             continue
 
         if is_txt:
-            # obsługa: add_custom_loc = "Text"
+            # Handle the format: add_custom_loc = "Text"
             if "add_custom_loc" not in stripped:
                 continue
             match = re.search(r'add_custom_loc\s*=\s*"(.*?)"', stripped)
@@ -93,31 +94,38 @@ def extract_translatable_content(
             key_part = "add_custom_loc"
             value_part = stripped.split("=", 1)[1]
         else:
-            # ——— klasyczny format Paradox-yml: key:0 "Text"
-            # pomijamy nagłówki l_english, l_polish itd.
+            # --- Handle the classic Paradox-yml format: key:0 "Text" ---
+            # Skip headers like l_english, l_polish etc.
             if any(stripped.startswith(pref) for pref in (
                 "l_english", "l_simp_chinese", "l_french", "l_german",
                 "l_spanish", "l_russian", "l_polish"
             )):
                 continue
 
-            # rozdzielamy klucz od wartości
+            # Split the line into key and value parts
             parts = stripped.split(":", 1)
             if len(parts) < 2:
                 continue
             key_part, value_part = parts[0], parts[1]
 
-            # w wartości szukamy ciągu w "…"
+            # Find the string within quotes "..." in the value part
             m = re.search(r'"(.*)"', value_part)
             if not m:
                 continue
             value = m.group(1)
 
-        # pomijamy placeholdery typu $VAL$
-        if (value.startswith("$") and value.endswith("$")) or not value:
+        # 【核心修正】Filter out placeholders like $VAL$ using the precise rule
+        is_pure_variable = False
+        if value.startswith('$') and value.endswith('$'):
+            # If it starts and ends with '$', check the total count of '$'.
+            # Only if the count is exactly 2 is it a pure, non-translatable variable.
+            if value.count('$') == 2:
+                is_pure_variable = True
+
+        if is_pure_variable or not value:
             continue
 
-        # zapis do list
+        # Save the extracted text and its metadata to the lists
         idx = len(texts_to_translate)
         texts_to_translate.append(value)
         key_map[idx] = {
@@ -126,14 +134,14 @@ def extract_translatable_content(
             "line_num": line_num,
         }
 
-    # ───────────── 2.a Uruchamiamy ewentualne hooki ─────────────
+    # --- (The Hook system logic remains the same) ---
     if HOOKS:
         for hook in HOOKS:
             try:
                 hook(file_path, original_lines, texts_to_translate, key_map)
-            except Exception as e:  # pragma: no cover
+            except Exception as e:
                 print(f"[parser-hook] ⚠️  {hook.__name__} failed: {e}")
 
-    # ───────────── 3. PODSUMOWANIE ─────────────
+    # --- Final Summary ---
     print(i18n.t("extracted_texts", count=len(texts_to_translate)))
     return original_lines, texts_to_translate, key_map
