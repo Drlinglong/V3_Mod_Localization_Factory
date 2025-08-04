@@ -55,5 +55,7 @@
   "final_context_is": "最终使用的主题上下文为: '{context}'",
   "error_getting_context": "获取Mod上下文时出错: {error}",
   "translating_to_language": "\n--- 正在翻译为: {lang_name} ---",
-  "unsupported_metadata": "警告：暂不支持游戏 '{game_name}' 的元数据处理。"
+  "unsupported_metadata": "警告：暂不支持游戏 '{game_name}' 的元数据处理。",
+  "parallel_processing_start": "--- 检测到 {count} 个翻译批次，启动并行处理模式 ---",
+  "parallel_processing_end": "--- 所有批次并行处理完毕 ---"
 }
