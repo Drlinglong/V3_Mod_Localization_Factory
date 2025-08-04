@@ -1,0 +1,11 @@
+﻿# localisation\english\darktec_events_l_english.yml
+
+# Authors: Rodahtnov & Zyralynn
+
+l_english:
+  # Situations
+  situation_darktec_intro:0 "Non-Baryonic Containment"
+  situation_darktec_intro_type:0 "$situation_darktec_intro$"
+  situation_darktec_intro_monthly_change_tooltip:0 "$situation_monthly_change_tooltip_little_control$"
+  situation_darktec_intro_desc_fallback:0 "[situation_darktec_intro_please_build_anchor]\n\nWe are in the verge of giving an enormous jump in the development of our kind as a whole, embracing the power of background radiation and exotic matter to safeguard our long-term survival. We need to figure a way to harvest and contain it in a safe way."
+  

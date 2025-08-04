@@ -1,58 +1,53 @@
 # scripts/core/file_builder.py
-# ---------------------------------------------------------------
 import os
+import re
 from utils import i18n
 
-
-# ---------------------------------------------------------------
-# 1.  Fallback dla pustych/lang-only plików
-# ---------------------------------------------------------------
 def create_fallback_file(
     source_path: str,
     dest_dir: str,
     original_filename: str,
     source_lang: dict,
     target_lang: dict,
-    game_profile: dict,                 # ← NOWY PARAMETR (dla encoding)
+    game_profile: dict,
 ) -> None:
-    """Kopiuje plik bez tłumaczenia, zmieniając nagłówek i nazwę."""
+    """
+    [Fallback Function] Copies the source file, changing only the header and filename.
+    This is a safety net for when translation fails or is not needed.
+    """
     print(i18n.t("creating_fallback_file"))
-
     try:
-        # czytamy w UTF-8-SIG – bezpieczne również dla CP-1252
         with open(source_path, "r", encoding="utf-8-sig") as f:
             lines = f.readlines()
 
-        # ── 1) nagłówek ------------------------------------------------------------
-        for i, ln in enumerate(lines):
-            if source_lang["key"] in ln:
-                lines[i] = ln.replace(source_lang["key"], target_lang["key"])
+        # Robustly find and replace the language header
+        header_found_and_replaced = False
+        for i, line in enumerate(lines):
+            if line.strip().startswith(source_lang["key"]):
+                lines[i] = line.replace(source_lang["key"], target_lang["key"])
+                header_found_and_replaced = True
                 break
-        else:
+        if not header_found_and_replaced:
             lines.insert(0, f"{target_lang['key']}:\n")
 
-        # ── 2) nowa nazwa pliku ----------------------------------------------------
-        def _swap_suffix(name: str) -> str:
-            src = f"_l_{source_lang['key'][2:]}"
-            tgt = f"_l_{target_lang['key'][2:]}"
-            return name.replace(src, tgt) if src in name else name
-
-        new_filename   = _swap_suffix(original_filename)
+        # Dynamically generate the new filename based on language keys
+        source_suffix = f"_l_{source_lang['key'][2:]}"
+        target_suffix = f"_l_{target_lang['key'][2:]}"
+        new_filename = (
+            original_filename.replace(source_suffix, target_suffix)
+            if source_suffix in original_filename
+            else original_filename
+        )
         dest_file_path = os.path.join(dest_dir, new_filename)
 
-        # ── 3) zapis – zgodnie z profilem gry --------------------------------------
-        with open(dest_file_path, "w", encoding=game_profile["encoding"]) as f:  # ★
+        # Write the file using the encoding specified in the game profile
+        with open(dest_file_path, "w", encoding=game_profile.get("encoding", "utf-8-sig")) as f:
             f.writelines(lines)
-
         print(i18n.t("fallback_file_created", filename=new_filename))
-
     except Exception as e:
         print(i18n.t("fallback_creation_error", error=e))
 
 
-# ---------------------------------------------------------------
-# 2.  Rekonstrukcja i zapis przetłumaczonego pliku
-# ---------------------------------------------------------------
 def rebuild_and_write_file(
     original_lines: list[str],
     texts_to_translate: list[str],
@@ -62,47 +57,62 @@ def rebuild_and_write_file(
     original_filename: str,
     source_lang: dict,
     target_lang: dict,
-    game_profile: dict,                 # ← NOWY PARAMETR
+    game_profile: dict,
 ) -> None:
-    """Buduje nowy *.yml z gotowymi tłumaczeniami i zapisuje go na dysk."""
+    """
+    Reconstructs the .yml file with the translated text and saves it to disk.
+    """
+    # Create a map from original text to translated text for easy lookup.
     translation_map = dict(zip(texts_to_translate, translated_texts))
-    new_lines       = list(original_lines)   # robimy kopię
+    
+    # Work on a copy of the original lines to preserve comments and structure.
+    new_lines = list(original_lines)
 
-    # ── wstawiamy tłumaczenia -------------------------------------------------------
+    # --- Reconstruct each translated line ---
     for i, original_text in enumerate(texts_to_translate):
-        translated = translation_map.get(original_text, original_text)
+        translated_text = translation_map.get(original_text, original_text)
+        
+        line_info = key_map[i]
+        
+        line_num = line_info["line_num"]
+        key_part = line_info["key_part"]
+        original_value_part = line_info["original_value_part"]
+        
+        # Rebuild the value part, preserving things like the ":0" and escaping quotes.
+        safe_translated_text = translated_text.strip().replace('"', r"\"")
+        new_value_part = original_value_part.replace(f'"{original_text}"', f'"{safe_translated_text}"')
+        
+        # Preserve the original indentation.
+        indent = original_lines[line_num][: original_lines[line_num].find(key_part)]
+        
+        # Reconstruct the full line without adding an extra colon.
+        new_lines[line_num] = f"{indent}{key_part}:{new_value_part}\n"
 
-        linfo      = key_map[i]
-        line_num   = linfo["line_num"]
-        key_part   = linfo["key_part"]
-        val_part   = linfo["original_value_part"]
-
-        safe_txt = translated.strip().replace('"', r"\"")
-        new_val  = val_part.replace(f'"{original_text}"', f'"{safe_txt}"')
-
-        indent   = original_lines[line_num][: original_lines[line_num].find(key_part)]
-        new_lines[line_num] = f"{indent}{key_part}:{new_val}\n"
-
-    # ── nagłówek (l_english → l_polish itd.) ---------------------------------------
-    for i, ln in enumerate(new_lines):
-        if source_lang["key"] in ln:
-            new_lines[i] = ln.replace(source_lang["key"], target_lang["key"])
+    # --- Replace the language header ---
+    header_found_and_replaced = False
+    for i, line in enumerate(new_lines):
+        if line.strip().startswith(source_lang["key"]):
+            new_lines[i] = line.replace(source_lang["key"], target_lang["key"])
+            header_found_and_replaced = True
             break
-    else:
+    if not header_found_and_replaced:
         new_lines.insert(0, f"{target_lang['key']}:\n")
-
-    # ── nazwa pliku ----------------------------------------------------------------
-    src_suf = f"_l_{source_lang['key'][2:]}"
-    tgt_suf = f"_l_{target_lang['key'][2:]}"
+        
+    # --- Generate the new filename ---
+    source_suffix = f"_l_{source_lang['key'][2:]}"
+    target_suffix = f"_l_{target_lang['key'][2:]}"
     new_filename = (
-        original_filename.replace(src_suf, tgt_suf) if src_suf in original_filename else original_filename
+        original_filename.replace(source_suffix, target_suffix)
+        if source_suffix in original_filename
+        else original_filename
     )
+    
     dest_file_path = os.path.join(dest_dir_path, new_filename)
 
-    # ── zapis w odpowiednim kodowaniu ----------------------------------------------
-    with open(dest_file_path, "w", encoding=game_profile["encoding"]) as f:  # ★
-        f.writelines(new_lines)
-
+    # --- Save the file using the correct encoding from the game profile ---
+    with open(dest_file_path, "w", encoding=game_profile.get("encoding", "utf-8-sig")) as f:
+        f.writelines(new_lines) # Use the modified 'new_lines' list
+        
     print(
         i18n.t(
             "writing_file_success",
