@@ -1,87 +1,111 @@
 # scripts/core/file_builder.py
-
+# ---------------------------------------------------------------
 import os
 from utils import i18n
-def create_fallback_file(source_path, dest_dir, original_filename, source_lang, target_lang):
-    """安全网现在支持多语言的文件头和文件名转换。"""
+
+
+# ---------------------------------------------------------------
+# 1.  Fallback dla pustych/lang-only plików
+# ---------------------------------------------------------------
+def create_fallback_file(
+    source_path: str,
+    dest_dir: str,
+    original_filename: str,
+    source_lang: dict,
+    target_lang: dict,
+    game_profile: dict,                 # ← NOWY PARAMETR (dla encoding)
+) -> None:
+    """Kopiuje plik bez tłumaczenia, zmieniając nagłówek i nazwę."""
     print(i18n.t("creating_fallback_file"))
+
     try:
-        with open(source_path, 'r', encoding='utf-8-sig') as f:
+        # czytamy w UTF-8-SIG – bezpieczne również dla CP-1252
+        with open(source_path, "r", encoding="utf-8-sig") as f:
             lines = f.readlines()
-        
-        # 【核心修改】动态替换文件头
-        header_found_and_replaced = False
-        for i, line in enumerate(lines):
-            if source_lang['key'] in line:
-                lines[i] = line.replace(source_lang['key'], target_lang['key'])
-                header_found_and_replaced = True
+
+        # ── 1) nagłówek ------------------------------------------------------------
+        for i, ln in enumerate(lines):
+            if source_lang["key"] in ln:
+                lines[i] = ln.replace(source_lang["key"], target_lang["key"])
                 break
-        if not header_found_and_replaced:
+        else:
             lines.insert(0, f"{target_lang['key']}:\n")
 
-        # 【核心修改】动态替换文件名
-        source_suffix = f"_l_{source_lang['name'].lower()}.yml"
-        target_suffix = f"_l_{target_lang['name'].lower()}.yml"
-        # 这是一个更通用的替换方法，处理Victoria3和Stellaris等不同命名
-        if f"_l_{source_lang['key'][2:]}" in original_filename:
-             new_filename = original_filename.replace(f"_l_{source_lang['key'][2:]}", f"_l_{target_lang['key'][2:]}")
-        else:
-             new_filename = original_filename # 如果找不到，则保持原样
+        # ── 2) nowa nazwa pliku ----------------------------------------------------
+        def _swap_suffix(name: str) -> str:
+            src = f"_l_{source_lang['key'][2:]}"
+            tgt = f"_l_{target_lang['key'][2:]}"
+            return name.replace(src, tgt) if src in name else name
 
+        new_filename   = _swap_suffix(original_filename)
         dest_file_path = os.path.join(dest_dir, new_filename)
-        
-        with open(dest_file_path, 'w', encoding='utf-8-sig') as f:
+
+        # ── 3) zapis – zgodnie z profilem gry --------------------------------------
+        with open(dest_file_path, "w", encoding=game_profile["encoding"]) as f:  # ★
             f.writelines(lines)
+
         print(i18n.t("fallback_file_created", filename=new_filename))
+
     except Exception as e:
         print(i18n.t("fallback_creation_error", error=e))
 
-def rebuild_and_write_file(original_lines, texts_to_translate, translated_texts, key_map, dest_dir_path, original_filename, source_lang, target_lang):
-    """
-    【V2.8 完整版】根据翻译结果重建.yml文件内容并写入磁盘。
-    """
-    # 【缺失的逻辑 1】创建原文到译文的映射
+
+# ---------------------------------------------------------------
+# 2.  Rekonstrukcja i zapis przetłumaczonego pliku
+# ---------------------------------------------------------------
+def rebuild_and_write_file(
+    original_lines: list[str],
+    texts_to_translate: list[str],
+    translated_texts: list[str],
+    key_map: dict[int, dict],
+    dest_dir_path: str,
+    original_filename: str,
+    source_lang: dict,
+    target_lang: dict,
+    game_profile: dict,                 # ← NOWY PARAMETR
+) -> None:
+    """Buduje nowy *.yml z gotowymi tłumaczeniami i zapisuje go na dysk."""
     translation_map = dict(zip(texts_to_translate, translated_texts))
-    
-    # 【缺失的逻辑 2】创建一个原始文件内容的副本，我们将在副本上进行修改
-    new_lines = list(original_lines)
+    new_lines       = list(original_lines)   # robimy kopię
 
-    # 【缺失的逻辑 3】遍历所有翻译结果，替换副本中对应行的内容
+    # ── wstawiamy tłumaczenia -------------------------------------------------------
     for i, original_text in enumerate(texts_to_translate):
-        translated_text = translation_map.get(original_text, original_text)
-        line_info = key_map[i]
-        original_line_num = line_info['line_num']
-        original_key_part = line_info['key_part']
-        original_value_part = line_info['original_value_part']
-        
-        safe_translated_text = translated_text.strip().replace('"', '\\"')
-        new_value_part = original_value_part.replace(f'"{original_text}"', f'"{safe_translated_text}"')
-        
-        indent = original_lines[original_line_num][:original_lines[original_line_num].find(original_key_part)]
-        
-        new_lines[original_line_num] = f'{indent}{original_key_part}:{new_value_part}\n'
+        translated = translation_map.get(original_text, original_text)
 
-    # 动态替换文件头
-    header_found_and_replaced = False
-    for i, line in enumerate(new_lines):
-        if source_lang['key'] in line:
-            new_lines[i] = line.replace(source_lang['key'], target_lang['key'])
-            header_found_and_replaced = True
+        linfo      = key_map[i]
+        line_num   = linfo["line_num"]
+        key_part   = linfo["key_part"]
+        val_part   = linfo["original_value_part"]
+
+        safe_txt = translated.strip().replace('"', r"\"")
+        new_val  = val_part.replace(f'"{original_text}"', f'"{safe_txt}"')
+
+        indent   = original_lines[line_num][: original_lines[line_num].find(key_part)]
+        new_lines[line_num] = f"{indent}{key_part}:{new_val}\n"
+
+    # ── nagłówek (l_english → l_polish itd.) ---------------------------------------
+    for i, ln in enumerate(new_lines):
+        if source_lang["key"] in ln:
+            new_lines[i] = ln.replace(source_lang["key"], target_lang["key"])
             break
-    if not header_found_and_replaced:
-        new_lines.insert(0, f"{target_lang['key']}:\n")
-        
-    # 动态替换文件名
-    source_suffix = f"_l_{source_lang['key'][2:]}" # e.g., _l_english
-    target_suffix = f"_l_{target_lang['key'][2:]}" # e.g., _l_simp_chinese
-    
-    if source_suffix in original_filename:
-        new_filename = original_filename.replace(source_suffix, target_suffix)
     else:
-        new_filename = original_filename
-        
+        new_lines.insert(0, f"{target_lang['key']}:\n")
+
+    # ── nazwa pliku ----------------------------------------------------------------
+    src_suf = f"_l_{source_lang['key'][2:]}"
+    tgt_suf = f"_l_{target_lang['key'][2:]}"
+    new_filename = (
+        original_filename.replace(src_suf, tgt_suf) if src_suf in original_filename else original_filename
+    )
     dest_file_path = os.path.join(dest_dir_path, new_filename)
-    with open(dest_file_path, 'w', encoding='utf-8-sig') as f: # 确保使用 utf-8-sig
+
+    # ── zapis w odpowiednim kodowaniu ----------------------------------------------
+    with open(dest_file_path, "w", encoding=game_profile["encoding"]) as f:  # ★
         f.writelines(new_lines)
-        
-    print(i18n.t("writing_file_success", filename=os.path.join(os.path.relpath(dest_dir_path, 'my_translation'), new_filename)))
+
+    print(
+        i18n.t(
+            "writing_file_success",
+            filename=os.path.join(os.path.relpath(dest_dir_path, "my_translation"), new_filename),
+        )
+    )

@@ -22,8 +22,8 @@ CHUNK_SIZE = 150 # 定义每个翻译批次的大小
 
 def initialize_client():
     """初始化genai客户端。"""
-    if not os.getenv('GEMINI_API_KEY'):
-        print("错误：环境变量 'GEMINI_API_KEY' 未设置。")
+    if not os.getenv('AIzaSyA6XWEwfoGRup2dkKzqsE_kwEJA5enSIqs'):
+        print("错误：环境变量 'AIzaSyA6XWEwfoGRup2dkKzqsE_kwEJA5enSIqs' 未设置。")
         return None
     try:
         client = genai.Client()
