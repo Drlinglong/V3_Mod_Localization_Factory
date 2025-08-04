@@ -118,5 +118,24 @@ GAME_PROFILES = {
             "The text you are translating is for a Hearts of Iron IV game mod named '{mod_name}'. "
             "Translate the following {task_description} from {source_lang_name} to {target_lang_name}.\n"
         )
+    },
+    "5": {
+        "id": "ck3",
+        "name": "Crusader Kings III (十字军之王3)",
+        "source_localization_folder": "localization", # same as V3
+        "protected_items": {'descriptor.mod', 'localization', 'thumbnail.png'}, # same as stellaris /HOI4
+        "metadata_file": 'descriptor.mod', # same as stellaris /HOI4
+        "encoding": "utf-8-sig", 
+        "strip_pl_diacritics": False,
+        "prompt_template": (
+            "You are a professional translator specializing in the grand strategy game Crusader Kings III, set in the Middle Ages. "
+            "Translate the following numbered list of texts from {source_lang_name} to {target_lang_name}.\n"
+            "The tone must be appropriate for a role-playing game focused on characters, dynasties, and medieval intrigue."
+        ),
+        "single_prompt_template": (
+            "You are a direct, one-to-one translation engine. "
+            "The text you are translating is for a Crusader Kings III game mod named '{mod_name}'. "
+            "Translate the following {task_description} from {source_lang_name} to {target_lang_name}.\n"
+        )
     }
 }

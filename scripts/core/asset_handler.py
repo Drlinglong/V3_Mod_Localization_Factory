@@ -238,7 +238,7 @@ def process_metadata(mod_name, client, source_lang, target_lang,
 
     game_id = game_profile.get('id')
     
-    if game_id == 'stellaris' or game_id == 'hoi4': #Use the same process method
+    if game_id in ['stellaris', 'hoi4', 'ck3']: #Use the same process method
         _process_stellaris_metadata(mod_name, client, source_lang, target_lang,
                                     output_folder_name, mod_context, game_profile)
     elif game_id == 'victoria3':
