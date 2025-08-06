@@ -1,0 +1,18 @@
+﻿l_simp_chinese:
+ DECISION_TOOLTIP_FORMAT:1 "#header $NAME$#!\n$TOOLTIP_DELIMITER$\n$TRIGGER_SUMMARY$\n\n拍摄时间：\n$EFFECT_SUMMARY$"
+
+ build_railways:0 "修建铁路"
+ build_railways_desc:0 "在各地增加足够的铁路以确保完全的市场准入"
+ build_railways_tooltip:0 "点击建造更多铁路"
+ build_administrations:0 "建立政府机构"
+ build_administrations_desc:0 "在各地增加足够的政府行政部门以确保税收能力"
+ build_administrations_tooltip:0 "点击建立更多政务"
+ 
+ tooltip_buildrailwaysx:0 "#header 最大化市场准入 #!\n$TOOLTIP_DELIMITER$\n单击此按钮可根据需要将尽可能多的铁路添加到施工队列中，以最大化市场准入。"
+ tooltip_buildrailwaysxx:0 "#header 最大化市场准入 #!\n$TOOLTIP_DELIMITER$\n#red #italic #bold #gold 铁路#！还没有被[GetPlayer.GetName]研究过"
+ tooltip_buildrailways:0 "[GetPlayer.GetCustom('researchedrailwayscustom')]"
+ tooltip_govadm:0 "#header 最大化税收能力 #!\n$TOOLTIP_DELIMITER$\n单击此按钮可根据需要将尽可能多的政府行政建筑添加到建设队列中，以最大化合并州的税收能力。"
+
+ tooltip_buildpowerplantsx:0 "#header Build Power Plants #!\n$TOOLTIP_DELIMITER$\nAdds just enough power plants everywhere to cover the electricity demand."
+ tooltip_buildpowerplantsxx:0 "#header Build Power Plants #!\n$TOOLTIP_DELIMITER$\n#red #italic #bold #gold Electrical Generation#! has not yet been researched by [GetPlayer.GetName]"
+ tooltip_buildpowerplants:0 "[GetPlayer.GetCustom('researchedelectriccustom')]" 

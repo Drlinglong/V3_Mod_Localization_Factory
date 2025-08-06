@@ -1,0 +1,83 @@
+﻿l_braz_por:
+
+ ################################
+ ### pdivinity_tech_l_english ###
+ ###     by daniellm          ###
+ ################################
+
+ ##################
+ ### components ###
+ ##################
+
+ tech_pdivinity_psionic_jump_drive:0 "Impulsor do Véu"
+ tech_pdivinity_psionic_jump_drive_desc:0 "Um propulsor de salto avançado sintonizado com o próprio Véu. Naves equipadas com este sistema entram brevemente no véu entre as realidades, reemergindo em seu destino antes que sensores convencionais possam rastrear seu caminho."
+ TECH_UNLOCK_PDIVINITY_JUMP_DRIVE_TITLE:0 "§HDesbloqueia Componente:§! $PDIVINITY_SHROUD_JUMP_DRIVE$"
+ TECH_UNLOCK_PDIVINITY_JUMP_DRIVE_DESC:0 "§H$PDIVINITY_SHROUD_JUMP_DRIVE$§!\n$PDIVINITY_SHROUD_JUMP_DRIVE_DESC$"
+
+ tech_pdivinity_psionic_reactor:0 "Vontade do Arquiteto"
+ tech_pdivinity_psionic_reactor_desc:0 "Este núcleo de energia sincroniza-se com frequências psiônicas latentes, extraindo energia diretamente do Véu. Sua presença distorce o espaço local e desafia as leis conhecidas de conservação de energia."
+ TECH_UNLOCK_PDDIVINITY_PSIONIC_POWER_TITLE:0 "§HDesbloqueia Componente:§! $pdivinity_psionic_reactor$"
+ TECH_UNLOCK_PDDIVINITY_PSIONIC_POWER_DESC:0 "§H$pdivinity_psionic_reactor$§!\n$pdivinity_psionic_reactor_desc$"
+
+ tech_pdivinity_psionic_thrusters:0 "Propulsor de Rastro Mental"
+ tech_pdivinity_psionic_thrusters_desc:0 "Ao parcialmente se transpor para o Véu, estes propulsores contornam a inércia e o atrito, possibilitando manobras impossíveis pelos padrões do espaço-real."
+ TECH_UNLOCK_PDIVINITY_PSIONIC_THRUSTER_TITLE:0 "§HDesbloqueia Componente:§! $Pdivinity_psionic_thruster$"
+ TECH_UNLOCK_PDIVINITY_PSIONIC_THRUSTER_DESC:0 "§H$Pdivinity_psionic_thruster$§!\n$Pdivinity_psionic_thruster_desc$"
+
+ tech_pdivinity_psionic_sensors:0 "Sensores de Eco do Véu"
+ tech_pdivinity_psionic_sensors_desc:0 "Estes sensores são sintonizados para detectar a intenção por trás das ações. Ao ler potencialidades no Véu, naves equipadas com eles podem reagir antes mesmo que as ameaças se manifestem."
+ TECH_UNLOCK_PDIVINITY_PSIONIC_SENSORS_TITLE:0 "§HDesbloqueia Componente:§! $PDIVINITY_PSIONIC_SENSOR$"
+ TECH_UNLOCK_PDIVINITY_PSIONIC_SENSORS_DESC:0 "§H$PDIVINITY_PSIONIC_SENSOR$§!\n$PDIVINITY_PSIONIC_SENSOR_DESC$"
+
+ tech_pdivinity_psionic_precog:0 "Computador Vinculado ao Véu"
+ tech_pdivinity_psionic_precog_desc:0 "Um sistema de controle de combate incorporado com algoritmos de previsão psiônica. Permite que as naves prevejam o comportamento inimigo e otimizem táticas com precisão assustadora."
+ TECH_UNLOCK_PDIVINITY_PSIONIC_PRECOG_TITLE:0 "§HDesbloqueia Componentes:§! $PDIVINITY_PSIONIC_PRECOG$"
+ TECH_UNLOCK_PDIVINITY_PSIONIC_PRECOG_DESC:0 "§H$PDIVINITY_PSIONIC_PRECOG$§!\n$PDIVINITY_PSIONIC_PRECOG_DESC$"
+
+ tech_pdivinity_psionic_laser:0 "Matriz de Lanças Psiônicas"
+ tech_pdivinity_psionic_laser_desc:0 "Estes emissores de lança são imbuídos de harmônicos psiônicos que desestabilizam a estrutura atômica. Armadura e casco oferecem pouca proteção contra seu efeito desintegrador."
+
+ tech_pdivinity_psionic_lance:0 "Perfurador do Véu"
+ tech_pdivinity_psionic_lance_desc:0 "Um feixe focado de energia psiônica que rasga a matéria física e enfraquece o véu ao redor de seu local de impacto. Seus ataques deixam cicatrizes profundas, imbuídas de ecos dos mortos."
+
+ tech_pdivinity_psionic_lightning:0 "Ira do Véu"
+ tech_pdivinity_psionic_lightning_desc:0 "Arcos caóticos de relâmpagos psiônicos surgem imprevisivelmente desta arma, guiados mais pela vontade do que por sensores. O Véu anseia, e esta é sua voz."
+
+ tech_pdivinity_psionic_titan_lance:0 "Lança do Arquiteto"
+ tech_pdivinity_psionic_titan_lance_desc:0 "Uma arma titânica de classe lança projetada para rasgar o espaço e transpor parcialmente seu alvo para o Véu. Poucas estruturas, físicas ou dimensionais, podem suportar sua fúria."
+
+ tech_pdivinity_psionic_strikecraft:0 "Interceptadores Psiônicos"
+ tech_pdivinity_psionic_strikecraft_desc:0 "Naves de ataque compostas de formas-pensamento vivas, moldadas pela vontade e animadas por ecos da consciência dentro do Véu. Elas navegam a realidade apenas pelo instinto, guiadas unicamente por propósito e vontade."
+
+ tech_pdivinity_psionic_artillery:0 "Artilharia de Ondas do Véu"
+ tech_pdivinity_psionic_artillery_desc:0 "Uma plataforma de bombardeio psiônico de longo alcance que projeta campos de ressonância destrutivos através de vastas distâncias. Ela perturba pensamento, matéria e coesão igualmente."
+
+ tech_pdivinity_psionic_torpedo:0 "Projetor de Explosão Psi"
+ tech_pdivinity_psionic_torpedo_desc:0 "Lança projéteis psiônicos instáveis que atravessam a matéria antes de detonar em explosões de energia revestida pelo Véu."
+
+ tech_pdivinity_psionic_shields:0 "Escudos do Véu"
+ tech_pdivinity_psionic_shields_desc:0 "Barreiras defensivas projetadas pelas mentes dos fiéis. Elas curvam a percepção e a probabilidade, permitindo que as naves sobrevivam a impactos que deveriam tê-las destruído completamente."
+
+ tech_pdivinity_psionic_cloud:0 "Eco do Véu"
+ tech_pdivinity_psionic_cloud_desc:0 "Uma manifestação etérea da vontade do Véu, como uma nuvem rodopiante de energia psiônica que vela e distorce a realidade, assombrando o vazio entre as estrelas com sussurros do destino."
+ TECH_UNLOCK_PDIVINITY_PSIONIC_CLOUD_CONSTRUCTION_TITLE:0 "§HDesbloqueia Tipo de Nave:§! Eco do Véu"
+ TECH_UNLOCK_PDIVINITY_PSIONIC_CLOUD_CONSTRUCTION_DESC:0 "§HEco do Véu§!\nUma entidade rápida e ágil servindo como nave de patrulha para os filhos do destino."
+
+ tech_pdivinity_psionic_avatar:0 "Avatar Psíquico"
+ tech_pdivinity_psionic_avatar_desc:0 "Uma encarnação viva da vontade do Véu, este avatar é uma entidade feroz e enigmática envolta em poder psíquico bruto, dobrando a realidade à sua vontade."
+ TECH_UNLOCK_PDIVINITY_PSIONIC_AVATAR_CONSTRUCTION_TITLE:0 "§HDesbloqueia Tipo de Nave:§! Avatar Psíquico"
+ TECH_UNLOCK_PDIVINITY_PSIONIC_AVATAR_CONSTRUCTION_DESC:0 "§HAvatar Psíquico§!\nCriado pelo arquiteto do destino para servir como uma nave de linha de frente. O avatar psíquico possui poder de fogo imenso para o seu tamanho."
+
+ tech_pdivinity_dimensional_tearer:0 "Dilacerador Dimensional"
+ tech_pdivinity_dimensional_tearer_desc:0 "Uma arma capaz de rasgar buracos na própria realidade, criando portais psíquicos que dilaceram e desfazem o tecido do próprio espaço-tempo."
+ TECH_UNLOCK_PDIVINITY_DIMENSIONAL_TEARER_CONSTRUCTION_TITLE:0 "§HDesbloqueia Tipo de Nave:§! Dilacerador Dimensional"
+ TECH_UNLOCK_PDIVINITY_DIMENSIONAL_TEARER_CONSTRUCTION_DESC:0 "§HAvatar Psíquico§!\nUma entidade maior do arquiteto do destino. O dilacerador dimensional serve como uma capitânia. Capaz de romper o véu, esta nave é um oponente muito perigoso para os não-crentes da galáxia."
+ ##############
+ ### others ###
+ ##############
+
+ tech_pdivinity_shroud_harvester:0 "Doutrina de Extração do Véu"
+ tech_pdivinity_shroud_harvester_desc:0 "Através de arquitetura sagrada e rituais meditativos, nós extraímos Zro das dobras do próprio Véu. A essência colhida flui como uma memória invisível, instável e faminta por ser moldada."
+
+
+

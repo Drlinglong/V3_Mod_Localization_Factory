@@ -1,0 +1,377 @@
+﻿## OTC Localisation
+# Created by Accorata & BrettlesSr
+
+l_japanese:
+
+## Crisis Resource ##
+  otc_temporal_fabric:"時空繊維"
+  otc_temporal_fabric_with_icon:"£otc_temporal_fabric£ $otc_temporal_fabric$"
+  otc_temporal_fabric_name: "$otc_temporal_fabric$"
+  otc_temporal_fabric_value:"£otc_temporal_fabric£ $VAL|0$"
+  otc_temporal_fabric_current_value:"現在の値: §Y$VALUE|0$§!"
+  otc_temporal_fabric_gaining:"§H危機目標§!を達成して、さらに多くの§Y$otc_temporal_fabric_with_icon$§!を獲得せよ。"
+  otc_temporal_fabric_desc:"時空繊維は、我々が最も発達させた時間科学の成果として紡がれた時間そのものである。"
+
+## Crisis Information ##
+# Ascension Perk
+  otc_ap_omnitemporal:"全時空性"
+  otc_ap_omnitemporal_desc:"数千年にわたり、我々は不本意ながら時間を未来へと投げ出されてきた。もはやそのようなことはない。時間は単なる物理的な次元の一つとなり、容易に横断できるようになるだろう。"
+
+# Other
+  otc_temporal_fabric_crisis_objective:"危機目標"
+  otc_temporal_fabric_crisis_objective_gained:"$otc_temporal_fabric$獲得"
+  otc_temporal_fabric_crisis_objective_reward: "$REWARD$"
+  otc_temporal_fabric_crisis_objective_progress:"この危機目標により、£otc_temporal_fabric£ $AMOUNT$を獲得した。"
+
+  otc_temporal_fabric_crisis_description_title:"$otc_ap_omnitemporal$危機"
+  otc_temporal_fabric_crisis_description:"$menace_crisis_description_intro$\n\n宇宙の支配は、通常の空間次元に縛られるものではない。代わりに、我々は時間そのものを征服し、あらゆる可能性のタイムラインを至高の存在として支配するだろう。"
+  otc_temporal_fabric_crisis_howto_title:"時間の支配"
+  otc_temporal_fabric_crisis_howto:"§H危機目標§!を追求することで§H$otc_temporal_fabric_with_icon$§!が生成され、我々は時間そのものを操作できるようになるだろう。"
+
+  otc_temporal_fabric_crisis_level_unlocked:"$LEVEL$では、以下の報酬が得られます:\n"
+  otc_temporal_fabric_crisis_level_locked:"このレベルを解放するのに必要なもの:\n"
+  otc_temporal_fabric_crisis_level_unlock:"£otc_temporal_fabric£ §Y$CURRENCY$§! $otc_temporal_fabric$を所持"
+  otc_temporal_fabric_crisis_level_desc:"危機レベルを進めるには、§H$otc_temporal_fabric_with_icon$§!を蓄積し、§H時間異常§!を完了させ、§H$otc_omnitemporal_kilostructure_plural$§!を建設せよ。"
+
+## Crisis Objectives ##
+  otc_crisobj_physicist_production_name:"物理学者を雇用" # the amount here doesn't display properly - most likely a rounding issue
+  otc_crisobj_physicist_production_desc:"宇宙の自然な働きに関する彼らの研究を通じて、時間の秘密はいずれ明らかにされるだろう。\n\n物理学者を雇用して、この$otc_temporal_fabric$報酬を獲得せよ。"
+  otc_crisobj_research_archeological_sites_name:"考古学サイトを発掘"
+  otc_crisobj_research_archeological_sites_desc:"我々は過去を深く掘り下げ、その古代の知識を明らかにしなければならない。\n\n考古学サイトを完全に発掘して、この$otc_temporal_fabric$報酬を獲得せよ。"
+  otc_crisobj_research_time_anomaly_name:"時間異常を研究"
+  otc_crisobj_research_time_anomaly_desc:"これらの謎は、我々の時間に対する理解の範疇を超えて作用している。その秘密を解き明かすことは極めて重要である。\n\n時間異常を研究して、この$otc_temporal_fabric$報酬を獲得せよ。"
+  otc_crisobj_research_anomaly_name:0 "異常を研究"
+  otc_crisobj_research_anomaly_desc:0 "あらゆる謎は、知識の機会、そして過去、現在、未来における我々の位置を理解する機会を生み出す。\n\n異常を研究して、この$otc_temporal_fabric$報酬を獲得せよ。"
+  otc_crisobj_activate_relic_name:0 "遺物を起動"
+  otc_crisobj_activate_relic_desc:0 "過去の時代の道具は、今日に至るまで強力なままだ。さらなる使用により、それらが起源とする時間が明らかになるかもしれない。\n\n遺物を起動して、この$otc_temporal_fabric$報酬を獲得せよ。"
+
+## Crisis Levels ##
+  otc_crisis_omnitemporal_level_1:"§B懸念§!"
+  otc_crisis_omnitemporal_level_1_desc:"危機レベル1"
+  otc_crisis_omnitemporal_level_2:"§B危険§!"
+  otc_crisis_omnitemporal_level_2_desc:"危機レベル2"
+  otc_crisis_omnitemporal_level_3:"§B脅威§!"
+  otc_crisis_omnitemporal_level_3_desc:"危機レベル3"
+  otc_crisis_omnitemporal_level_4:"§B破滅§!"
+  otc_crisis_omnitemporal_level_4_desc:"危機レベル4"
+  otc_crisis_omnitemporal_level_5:"§B存在の脅威§!"
+  otc_crisis_omnitemporal_level_5_desc:"危機レベル5"
+
+## Crisis Perks ##
+# Level 1
+  menp_otc_omnitemporal_objectives: "$otc_temporal_fabric$"
+  menp_otc_omnitemporal_objectives_desc:"$otc_temporal_fabric$は、我々が時間を意のままに操る能力を象徴する。"
+  unlocks_otc_omnitemporal_objectives:"「§Y$otc_temporal_fabric_with_icon$§!を§H危機目標§!の完了によって蓄積できるようにする。\n\n」"
+  mod_planet_physicists_otc_temporal_fabric_produces_add:"「$job_physicist_plural_with_icon$ $pop_group_unit$ごとに$otc_temporal_fabric_with_icon$」"
+
+  menp_otc_time_shields:"「時間停止」"
+  menp_otc_time_shields_desc:"「古の者たちは、飛来する兵器を拡散させるため、戦略的に時間を遅らせる強力な防御を開発した。時間布地は、これらの特性を再現する新たな方法を提供する。」"
+  unlocks_otc_time_shields:"「§Y$OTC_TIME_SHIELD$§!シールド部品をアンロックする。」"
+  unlocks_otc_time_shields_bio:"「§Y$OTC_BIO_TIME_SHIELD$§!シールド部品をアンロックする。」"
+  OTC_TIME_SHIELD:"「先進停止場」"
+  OTC_TIME_SHIELD_DESC:"「$OTC_TIME_SHIELD$は、着弾点で時間を遅らせるために古代のアーティファクトを使用した古の停止技術を模して作られており、飛来する攻撃のエネルギーを消散させるためのより長い機会を提供する。時間布地の力により、これらの設計は著しく近代化された。」"
+  OTC_SMALL_TIME_SHIELD:"「小型$OTC_TIME_SHIELD$」"
+  OTC_MEDIUM_TIME_SHIELD:"「中型$OTC_TIME_SHIELD$」"
+  OTC_LARGE_TIME_SHIELD:"「大型$OTC_TIME_SHIELD$」"
+  OTC_BIO_TIME_SHIELD:"「先進停止組織」"
+  OTC_BIO_TIME_SHIELD_DESC:"「$OTC_BIO_TIME_SHIELD$は、着弾点で時間を遅らせるために古代のアーティファクトを使用した古の停止技術を模して作られており、飛来する攻撃のエネルギーを消散させるためのより長い機会を提供する。時間布地の力により、これらの設計は著しく近代化された。」"
+  OTC_SMALL_BIO_TIME_SHIELD:"「小型$OTC_BIO_TIME_SHIELD$」"
+  OTC_MEDIUM_BIO_TIME_SHIELD:"「中型$OTC_BIO_TIME_SHIELD$」"
+  OTC_LARGE_BIO_TIME_SHIELD:"「大型$OTC_BIO_TIME_SHIELD$」"
+
+  menp_otc_secrets_of_the_past:"「過去の秘密」"
+  menp_otc_secrets_of_the_past_desc:"「かつて存在した世界を垣間見るためには、今日に残された遺物から始める必要がある。かつて存在したもののアーティファクトは、現在と未来を明らかにする。」"
+  unlocks_otc_secrets_of_the_past:"「§Y$artifact_otc_chronological_studies$§!マイナーアーティファクト決定をアンロックする。これは£minor_artifacts£マイナーアーティファクトを使用して時間的異常を生成する。\n\n」"
+  unlocks_otc_secrets_of_the_past_no_ancrel:"「§Y$otc_chronological_studies_project$§!特別プロジェクトを発行する。これは完了時に時間的異常を生成する。\n\n$mod_scientist_exp_gain$: §G+20%§!」"
+  otc_secrets_of_the_past_no_ancrel: "$menp_otc_secrets_of_the_past$"
+
+  # Minor Artifact Decision
+  artifact_otc_chronological_studies:"「年代学研究」"
+  artifact_otc_chronological_studies_desc:"「我々の最高の年代学者たちは、マイナーアーティファクトを分解し、それらの過去に時間的異常の手がかりがないか調査するだろう。」"
+  artifact_otc_chronological_studies_effect:"「£minor_artifacts£マイナーアーティファクトを分解し、時間的異常を生成する。\n\nクールダウン: £time£ §Y360§!」"
+
+  requires_artifact_otc_chronological_studies_no_cooldown:"「$TRIGGER_FAIL$§Rまだマイナーアーティファクトを使用して別の時間的異常を生成することはできません。§!」"
+  artifact_otc_chronological_studies_cooldown:0 "「年代学研究クールダウン」"
+
+  # Special Project
+  otc_chronological_studies_project: "$artifact_otc_chronological_studies$"
+  otc_chronological_studies_project_desc:"「我々は時間的異常――通常の時間の流れにおける奇妙な点――の手がかりを得た。我々は科学資源をそれに費やし、追跡しなければならない。」"
+
+# Level 2
+  menp_otc_timeless_studies:"「時間超越研究」"
+  menp_otc_timeless_studies_desc:"「時間科学を研究するのに最適な場所はブラックホールと中性子星の周囲にあり、そこでは信じられないほどの重力が、自然宇宙の他の場所では見られないような逸脱を通常の時間の流れにもたらす。」"
+
+  unlocks_otc_timeless_studies:"「§Yブラックホール§!と§Y中性子星§!の周囲に§Y$otc_omnitemporal_kilostructure$§!メガストラクチャーを建設できるようにする。\n\n」"
+
+  # Kilostructure
+  otc_omnitemporal_kilostructure:"「非時間研究ゾーン」"
+  otc_omnitemporal_kilostructure_plural:"「$otc_omnitemporal_kilostructure$」"
+  otc_atemporal_research_zone: "$otc_omnitemporal_kilostructure$"
+  otc_atemporal_research_zone_DESC:"「時間内に封鎖された秘密の場所であるこの機密研究施設は、§Y時間的異常§!を生成する危険な実験を行う。」"
+  otc_atemporal_research_zone_MEGASTRUCTURE_DETAILS:"「時間内に封鎖された秘密の場所であるこの機密研究施設は、§Y時間的異常§!を生成する危険な実験を行う。」"
+  MEGASTRUCTURE_TOOLTIP_REQUIREMENTS_OTC_ARZ:"「ブラックホールまたは中性子星の軌道上に建設されなければならない。」"
+  otc_atemporal_research_zone_effects:"「自国の境界内の様々な天体上に§Y時間的異常§!をランダムに生成する。\n\n異常が生成される速度は、我々が活動させている$otc_omnitemporal_kilostructure_plural$の数によって増加する。」"
+  otc_requires_black_hole_or_neutron_star:"「$TRIGGER_FAIL$$pc_black_hole$または$pc_neutron_star$の周囲に建設されなければならない。」"
+  otc_requires_less_than_x_arz:"「$TRIGGER_FAIL$一度に[owner.OtcGetARZLimit]以上の$otc_omnitemporal_kilostructure_plural$を維持することはできません」"
+  mod_otc_arz_limit_add:"「$otc_omnitemporal_kilostructure$容量」"
+
+  menp_otc_weaponized_relativity:"「兵器化された相対性」"
+  menp_otc_weaponized_relativity_desc:"「特殊なクロノトンバーストは、敵艦を四次元的に引き裂くことができる。しかし、それらはまた、目標の時間を我々の時間に対して遅らせ、著しい戦術的優位性をもたらす。」"
+  unlocks_otc_weaponized_relativity:"§Y$OTC_TIME_BEAM$§!兵器をアンロックします。この兵器は、敵の艦船と投射物を減速させるレーザーを発射します。"
+  OTC_TIME_BEAM:"エーオン・ビーム"
+  OTC_TIME_BEAM_DESC:"$OTC_TIME_BEAM$は、クロノトンバーストを投射し、敵艦にダメージを与え、その基準系を減速させます。"
+  OTC_SMALL_TIME_BEAM:"小型$OTC_TIME_BEAM$"
+  OTC_MEDIUM_TIME_BEAM:"中型$OTC_TIME_BEAM$"
+  OTC_LARGE_TIME_BEAM:"大型$OTC_TIME_BEAM$"
+  otc_time_beam_1_tt:"敵の艦船と投射物を§G25%§!減速（§Y5§!日間）"
+  otc_time_beam_2_tt:"敵の艦船と投射物を§G25%§!減速（§Y15§!日間）"
+  otc_time_beam_3_tt:"敵の艦船と投射物を§G25%§!減速（§Y35§!日間）"
+  otc_distorted_field:"時間歪曲"
+  mod_weapon_type_energy_speed_mult:"エネルギー兵器速度"
+  mod_weapon_type_kinetic_speed_mult:"キネティック兵器速度"
+  mod_weapon_type_explosive_speed_mult:"爆発性兵器速度"
+  mod_weapon_type_point_defense_speed_mult:"ポイント防御兵器速度"
+  mod_weapon_type_space_fauna_speed_mult:"宇宙生物兵器速度"
+  mod_weapon_type_mandible_speed_mult:"顎兵器速度"
+
+  menp_otc_secrets_of_the_present:"現在性の秘密"
+  menp_otc_secrets_of_the_present_desc:"時間科学の熟達は我々の科学エリートの第一の使命となり、学術機関と日常的な探査活動の両方を革命的に変えつつあります。"
+
+  menp_otc_prolonged_lifespans:"寿命の延長"
+  menp_otc_prolonged_lifespans_desc:"注意深い時間操作により生物学的老化を遅らせることで、我々の指導者はより長く、より生産的な人生を送ることができます。"
+  menp_otc_prolonged_lifespans_machine_desc:"注意深い時間操作により機械的摩耗の速度を遅らせることで、我々の指導者はより長く、より生産的な人生を送ることができます。"
+
+# Level 3
+  menp_otc_across_timelines:"複数の時間軸"
+  menp_otc_across_timelines_desc:"時間は直線ではありません。それは分岐する宇宙であり、無限の時間軸の集合体です。そして今、ついにそれらに到達する技術が我々の手中にあります。"
+  unlocks_otc_across_timelines:"§Y$tech_otc_travel_timelines$§!テクノロジーをアンロックします。これにより、より影響力のある時間的異常が発生するようになります。\n\n"
+
+  # Tech
+  tech_otc_travel_timelines:"時間軸の移動"
+  tech_otc_travel_timelines_desc:"ついに他の時間軸へ移動できるようになり、潜在的に無限の宇宙へのアクセスを可能にし、我々の利点となる、より強力な時間的異常を生成できるようになります。"
+  tech_otc_travel_timelines_effects_title:"より影響力のある§H時間的異常§!が発生する可能性があります\n危機§Hレベル4§!の§H$otc_ap_omnitemporal$§!をアンロック"
+  tech_otc_travel_timelines_effects_desc:"§H$tech_otc_travel_timelines$§!\n$tech_otc_travel_timelines_desc$"
+
+  menp_otc_temporal_shell:0 "時間障壁"
+  sm_otc_temporal_shell:0 "時間障壁生成器"
+  sm_otc_temporal_shell_desc:0 "時間障壁生成器は、大規模な時空操作エンジンであり、太陽系全体における時間の流れの速度を減速させることができます。居住地や我々の惑星のような重力井戸内の物体は影響を受けませんが、あらゆるサイズの宇宙船およびそれらが発射するあらゆる兵器は、大幅に減速させることが可能です。"
+  sm_otc_temporal_shell_desc_modifier:0 "星系内に§Y人工嵐§!を生成します：\n§Y艦船速度§!と§Y射撃速度§!を減少させます！"
+  menp_otc_temporal_shell_desc:0 "太陽系全体にわたって時間を操作する能力は、真に並外れた防御構造の可能性を解き放ちます― 我々の時間実験に対する隣人たちの非合理的な異議を考慮すれば、これは有用です。"
+  unlocks_otc_temporal_shell_aura:0 "§Y$sm_otc_temporal_shell$§!星系基地建造物をアンロックします。これは準光速速度と兵器射撃速度を減少させます。"
+  otc_temporal_shell_aura:0 "時間障壁"
+
+  menp_otc_secrets_of_the_future:0 "未来の秘密"
+  menp_otc_secrets_of_the_future_desc:0 "特別に訓練されたエージェントが未来へマイクロジャンプし、間もなく発見するであろう様々な知見を持ち帰ります。そのような知見は、エージェントが受け取る知識の基礎を形成しますが、これらのパラドックスの解決は後日に持ち越すことにしています。"
+
+  menp_otc_accelerated_infancy:0 "幼年期加速"
+  menp_otc_accelerated_infancy_desc:0 "未来の指導者や市民が、貴重な寿命をカタツムリのような速度で自然な幼年期を過ごすことで浪費するのではなく、我々の新しいプログラムは、個人が誕生からより生産的な人生の段階へ、たった一日で移行することを可能にします。"
+
+# Level 4
+  menp_otc_the_greatest_timeline:"最も偉大な時間軸"
+  menp_otc_the_greatest_timeline_desc:"資源が不足していても、どこかのタイムラインには豊富に存在する。幸運にも全く同じ考えを持つ別の自己と連携することで、二度とあらゆる種類の不足に直面することはなくなるだろう。"
+  unlocks_otc_the_greatest_timeline:0 "資源が§Y毎月減少§!しない。\n\n"
+
+  menp_otc_spacetime_sever:"時空切断"
+  menp_otc_spacetime_sever_desc:"クロノトン兵器の究極形である時空切断投射器は、敵を時空連続体から完全に「切り離し」、時間流から一時的に追放してその場に凍結させることが可能である。"
+  unlocks_otc_spacetime_sever:"§Y$OTC_TIME_LANCE$§!をアンロックする。命中した敵艦船を凍結させる超大型兵器である。"
+  OTC_TIME_LANCE:"時空切断"
+  OTC_TIME_LANCE_DESC:"$OTC_TIME_LANCE$は、命中した艦船を時空から「切り裂き」、通常の時間から分断してその場に凍結させる強力なビームを発射する。このような兵器は大型の目標に対して極めて効果的である。"
+  otc_time_lance_tt:"敵艦船（およびその搭載機）が§Y10§!日間、発砲または移動できなくなる。"
+  otc_halted_in_time:"時より分断されし者"
+
+  menp_otc_indefinite_lifespans:0 "量子不滅性"
+  menp_otc_indefinite_lifespans_desc:0 "無限のタイムラインにおいて、発生する全ての死には、その死が回避された全く同じタイムラインが必ず存在する。これらのタイムライン上の複製体を呼び戻すための単純な跳躍により、誰も我々から去ることはなくなるだろう。"
+  unlocks_otc_indefinite_lifespans:0 "全ての指導者は§Y不滅§!であり、死亡時に§Y復活§!する。"
+  leader_trait_otc_timeline_warped:"異時空めまい"
+  leader_trait_otc_timeline_warped_desc:"我々はこの指導者を、我々のタイムラインとほぼ同一だが、この指導者がその対応する個体の不慮の死を生き延びた別のタイムラインから引き抜いた。"
+  mod_leader_commanders_astral_threads_upkeep_add:"$r_astral_threads$ $UPKEEP$"
+  mod_leader_scientists_astral_threads_upkeep_add:0 "$r_astral_threads$ $UPKEEP$"
+  mod_leader_officials_astral_threads_upkeep_add:0 "$r_astral_threads$ $UPKEEP$"
+
+  menp_otc_localised_time_loops:0 "局所的タイムループ"
+  menp_otc_localised_time_loops_desc:0 "我々の最高の造船技師、港湾労働者、海軍将校は、今や数十人もの彼らの時間的複製体と共に働くことができる。彼らはシフトを始めるたびに同じ日の始まりに戻るのだ。我々の造船所の生産高は言うまでもないが、残業代は本当に破滅的である。"
+
+# Level 5
+  menp_otc_end_of_time:0 "時の終焉"
+  menp_otc_end_of_time_desc:0 "通常の線形的な時間の流れは、我々がもはや受け入れることのできない牢獄である。この時間の瞬間に我々の掌握が固まるにつれて、我々は未来、過去、現在を超越し、それらを打ち砕き、完全な全時間性の中で永遠に支配するだろう。"
+  unlocks_otc_end_of_time:0 "$situation_otc_end_of_time$の状況をアンロックする。この状況が完了すると、線形的な時間の流れを完全に終わらせる計画を実行し、§Yゲームに勝利§!することができる。"
+  situation_otc_end_of_time:"時の終焉"
+  situation_otc_end_of_time_type: "$situation_otc_end_of_time$"
+  situation_otc_end_of_time_monthly_change_tooltip:"- 他の全ての文明に対して少なくとも§Y優勢§!であること。\n- §Y$operation_reset_civilisation$§!作戦を完了すること。"
+  situation_otc_end_of_time_desc:"我々は、線形的な時間の外に我々の文明を伝播させる方法を発見した。因果の専制から真に解放されるために。それには、時間そのものを未来と過去に打ち砕き、その衝撃波に乗って新たな存在状態へと移行するだけである。"
+  situation_otc_end_of_time_complete:"[Owner.GetName]は§Yゲームに勝利§!した。"
+  otc_apex_of_power:"力の頂点：他の全ての文明に対して少なくとも§Y優勢§!である。"
+  situation_otc_end_of_time_approach_basic:"不可避性"
+  situation_otc_end_of_time_approach_basic_desc:"全ての歴史のあらゆる瞬間が我々をこの地点へと導いた。もはや為すべきことは何もない。為し得ることも何もない。"
+  omnitemporal.54.name:0 "時の終焉"
+  omnitemporal.54.desc:0 "これまで我々は、時の支配が我々に与えた新たな玩具に喜ぶ子供のようであった。我々に敢然と立ち向かう者は打ち負かされ、我々は「現在」と総称される束の間の瞬間に力を結集する。しかし、我々の視点が広がるにつれて、無益さの認識も深まる。我々は依然として線形的な時間の囚人であり、我々の宇宙がエントロピーへと螺旋を描いていくのを防ぐことはできない。いかなる帝国も永遠には続かない。\n\n玩具を脇に置く時が来たのだ。\n\n我々は、線形的な時間の外に我々の文明を伝播させる方法を発見した。因果の専制から真に解放されるために。それには、時間そのものを未来と過去に打ち砕き、その衝撃波に乗って新たな存在状態へと移行するだけである。"
+  omnitemporal.54.a:0 "時が来た。"
+  omnitemporal.2000.name:0 "最終瞬間"
+  omnitemporal.2000.desc:0 "それはここにある。常にここに存在していた。我々は全時間性の夜明けを、新しい太陽が昇るように、卵が孵るように、あるいは星が死ぬように味わう。あるいは、これら全てとは異なるものとして。古い宇宙の本質をあまりにも多く含んだ単純な比喩は、もはや我々には役に立たない。\n\n時は粉砕され、その外部の「あらゆるとき」から我々はそれが常に粉砕されていたことを知る。我々がそれを裏返しにするのを待ち、それが常にそうであったように、今や永遠に新たな現在の中に存在するのだ。"
+  omnitemporal.2000.a:0 "我々と同じく、永遠の時を浴び、勝利に酔いしれる。"
+  omnitemporal.2001.name:0 "残された紐を結びつける"
+  omnitemporal.2001.desc:0 "我々は理解し始めた。タイムラインを越えた我々の到達は、全てのタイムライン上の我々のあらゆる別バージョンによって反映されている。今や、一斉に、共に、間もなく、我々は過去から未来のあらゆる瞬間に手を伸ばし、全時間性を達成するだろう。\n\nほとんど考えもせずに、我々はこの全てが始まった瞬間に時間を遡り、今ここにいるために必要だった起爆剤を自らに与える。"
+  omnitemporal.2001.a:0 "この贈り物を、過去の我々よ。"
+  omnitemporal.2002.name:0 "時の終焉"
+  omnitemporal.2002.desc:0 "洗練されたセンサーや時間感知計器がなくても、何かがおかしいとわかる。あらゆる瞬間が不安に満ちている。まるで宇宙の秒刻みがただ…止まってしまうかのように。我々は瞬く間に数時間、数週間を失い、新しい日を迎えるたびに、歴史書には過去の一部が宇宙から抜け落ちた空白の箇所が見つかる。[From.GetName]が企んでいるどんな恐ろしい計画であろうと、それは時間そのものの構造を脅かしている。"
+  omnitemporal.2002.a:0 "[From.GetName]を止めなければなりません！"
+  omnitemporal.2003.name:0 "謎の贈り物"
+  omnitemporal.2003.desc:0 "時間現象の可能性を探求し始めてからわずか数時間後、謎の包みが我々の母星軌道上に出現しました。中には、包みが§Y時間布§!と呼ぶ奇妙なメッシュの製造法と使用法に関する説明書が入っていました。また、相当量の素材も含まれています。科学者による予備分析では、既に驚くべき時間活性特性の数々を示していますが、誰がこれを我々に与えたのかは全く分かりません。"
+  omnitemporal.2003.a:0 "何と奇妙な。"
+
+  menp_otc_paradox_drives:"時空歪曲"
+  menp_otc_paradox_drives_desc:"従来のジャンプドライブは、空間上の2点を隣接させることで移動を行います。同様に、パラドックスドライブは到着の瞬間と出発の瞬間を隣接させることができ、これにより即時移動が可能になります。"
+  unlocks_otc_paradox_drives:"§Y$OTC_TIME_DRIVE$§!をアンロックします。これは、ジャンプ後に艦隊のダメージと速度を維持するジャンプドライブです。"
+  OTC_TIME_DRIVE:"パラドックスドライブ"
+  OTC_TIME_DRIVE_DESC:"このドライブは時間流を直接操作し、従来のジャンプドライブの欠点なしに、所要時間ゼロの移動を可能にします。"
+  OTC_BIO_TIME_DRIVE: "$OTC_TIME_DRIVE$"
+  OTC_BIO_TIME_DRIVE_DESC: "$OTC_TIME_DRIVE_DESC$"
+  otc_time_drive_tt:"ジャンプ後、艦船は兵器ダメージと亜光速速度に対して通常の§Y-50%§!の減少を受けません。"
+
+  menp_otc_reset_civilisation:0 "「因果抹消プロトコル」"
+  menp_otc_reset_civilisation_desc:0 "我々の敵は、我々にふさわしく、強大で不屈の存在です。しかし、彼らが常にそうであったわけではありません。未来は究極の優位な地点であり、敵が最も弱体化しているときに攻撃し、排除できる場所です。彼らの歴史にわずかな修正を加えるだけで、彼らを我々の時間流から消し去ることができます。"
+  unlocks_otc_reset_civilisation:0 "§Y$menp_otc_reset_civilisation$§!をアンロックします。これは、文明の歴史を調整し、現在において我々に敵対する存在として存続しないようにすることで、文明全体を消去する能力です。"
+
+
+## Crisis Requirements ##
+  otc_omnitemporal_level_2_req_clear_tooltip:"£trigger_yes£ §Y時間的異常§!を完了しました！"
+  otc_omnitemporal_level_2_req_tooltip:"£trigger_no£ §Y時間的異常§!を完了しました！"
+  otc_omnitemporal_level_3_req_clear_tooltip:"£trigger_yes£ §Y$otc_omnitemporal_kilostructure$§!を建設しました！"
+  otc_omnitemporal_level_3_req_tooltip:"£trigger_no£ §Y$otc_omnitemporal_kilostructure$§!を建設しました！"
+  otc_omnitemporal_level_4_req_clear_tooltip:"£trigger_yes£ §Y$tech_otc_travel_timelines$ テクノロジー§!を研究しました！"
+  otc_omnitemporal_level_4_req_tooltip:"£trigger_no£ §Y$tech_otc_travel_timelines$ テクノロジー§!を研究しました！"
+  otc_omnitemporal_level_5_req_clear_tooltip:"£trigger_yes£ §Y$otc_omnitemporal_kilostructure_plural$§!を5つ建設しました！"
+  otc_omnitemporal_level_5_req_tooltip:"£trigger_no£ §Y$otc_omnitemporal_kilostructure_plural$§!を5つ建設しました！"
+
+
+## Temporal Anomalies ##
+  # Base Anomalies
+  omnitemporal.1000.name:"タイムトラベル！"
+  omnitemporal.1000.desc:"[Root.Leader.GetName]が異常現象に接近するにつれて、[Root.Leader.GetSheHe]は時計が逆回転し始めるのを目にしました。乗組員が過去へと旅するにつれ、時計はどんどん加速していきました。明らかな理由により、[Root.Leader.GetName]が過去へと深く踏み込んだ直後（あるいは視点によってはその前）に、我々の通信は途絶えました。\n\nこの出来事は、我々が失ったばかりの乗組員と全く同じ乗組員が出現したことを説明しています。彼らは本当に時間を超えて旅をしたようです。貴重なデータが今、手に入りました。早速活用に取り掛かるべきでしょう。"
+  omnitemporal.1000.a:"信じられない！"
+  omnitemporal.1000.a.tooltip:"[Root.Leader.GetName]が過去へと消え去りました。"
+
+  omnitemporal.1001.name:"未来からの来訪者"
+  omnitemporal.1001.desc:"時間的異常現象に接近すると、宇宙服を着用した人影が浮遊しているのを発見しました。その人物を特定し、[event_target:otc_future_leader.GetSheHe]を乗艦させたところ、我々は、もう一人の[event_target:otc_future_leader.GetName]を発見したことに気づきました！\n\n[event_target:otc_future_leader.GetSheHe]は、自身がクローンではなく、時間を遡ってここに投げ込まれたのだと説明しました。つまり、[event_target:otc_future_leader.GetSheHe]は[event_target:otc_future_leader.GetName]の未来の複製だったのです。我々はこれから起こることについて詳細を尋ねましたが、沈黙で迎えられました。未来の[event_target:otc_future_leader.GetName]は、この情報を共有すれば、予期せぬ影響を伴う偶発的なパラドックスを引き起こす可能性があると考えています。"
+  omnitemporal.1001.a:"信じられない！"
+  omnitemporal.1001.b:"不審"
+  omnitemporal.1001.a.tooltip:"もう一人の[event_target:otc_future_leader.GetName]が我が帝国に加わりました。"
+
+  omnitemporal.1014.name:"存在からの消滅"
+  omnitemporal.1014.desc:"[event_target:otc_temporal_clone.GetName]が亡くなるとすぐに、[event_target:otc_temporal_clone.GetHisHer]の未来のバージョンは崩壊し始めました。間もなく完全に消え去り、その存在の記憶だけが残されました。しかし、その後すぐにそれらの記憶も薄れ始めました。若い頃の自己の死に際して、パラドックスな結果が生じたようです。過去へ旅する若い自己が存在しなくなり、それゆえ未来からの出現も不可能になったのです。宇宙はこの矛盾を速やかに修正し、残された[event_target:otc_temporal_clone.GetHisHer]を存在から消し去りました。"
+  omnitemporal.1014.a:"「興味深い。」"
+
+  omnitemporal.1003.name:"悠久の時が数ヶ月に"
+  omnitemporal.1003.desc:"[From.GetName]の火山性の地表では、我々が想像するよりもはるかに速く時間が流れています。悠久の時が数ヶ月の間に過ぎ去り、我々の科学者がもし足を踏み入れれば、ほんの数瞬で侵食されてしまうため、ここで行われている時間ループに踏み込むことはできません。惑星の観測も困難です。我々のスキャナーが地表に到達し、船に戻ってくる頃には、地表は既に変化してしまっています。これは非常に奇妙な現象であり、今後数ヶ月の間に[From.GetName]が大きな変革を遂げることを予想しています。"
+  omnitemporal.1003.a:"「興味深い。」"
+
+  omnitemporal.1004.name:"惑星冷却"
+  omnitemporal.1004.desc:"我々の科学者が[FromFrom.GetName]上で時間の加速された経過を発見してからわずか数ヶ月で、惑星全体はより穏やかなレベルにまで冷却されました。この惑星はわずか数ヶ月で数千年にわたるライフサイクルを経験し、その火山性の地表が不毛な広がりへと変貌したようです。軌道上からの観測によると、地殻活動は依然として活発であり、惑星はまだ減速の兆候を見せていません。\n\n我々の科学者の中でもより冒険的な者は、[FromFrom.GetName]そのものを探査したいと望んでいます。しかし、彼らはより賢明な同僚たちからの「外部の観測者にとっては、全生涯がほんの一瞬の数分の一になるだろう」という説明によってすぐに止められました。"
+  omnitemporal.1004.a:"非常に興味深い。"
+
+  omnitemporal.1005.name:"生命の発展"
+  omnitemporal.1005.desc:"「[FromFromFrom.GetName]の時間が極めて速い速度で進み続けるにつれ、新たな発展が観測されました。基本的な生命体が誕生し、彼らは単純な生き方をしているにもかかわらず、既に大気条件を変化させているのが見受けられます。最初の植物が惑星の表面に広がり始めると、空を満たしていた新たな微粒子を貪欲に消費していきました。もし時間速度が今のようでなければ、この惑星は今頃居住可能に見えたことでしょう。」"
+  omnitemporal.1005.a:"「観測を続行する。」"
+
+  omnitemporal.1006.name:"「安定状態」"
+  omnitemporal.1006.desc:"「ついに、[FromFromFromFrom.GetName]の急速な老化が完了し、この惑星は銀河の他の領域と時間的に再統合されました。しかし、加速時間が終了する前に、それは再び変貌を遂げていました。ここ数ヶ月で、動物の生命体から青々とした森に至るまで、数多くの変化が生じています。これらの原始的な動物はいずれも真の知性の兆候を示していませんが、有望な知的成長を示している前知性体もおり、我々が望むならば彼らを支援することも可能です。」"
+  omnitemporal.1006.a:"「素晴らしい。」"
+
+  omnitemporal.1007.name:"「時間束縛」"
+  omnitemporal.1007.desc:"「[time_loop_trapped_scientist.GetName]が時間異常を調査するにつれて、[time_loop_trapped_scientist.GetHisHer]の乗組員は奇妙な行動に気づき始めました。[time_loop_trapped_scientist.GetName]は、日付が変わっておらず、調査がたった一日しか続いていないと一貫して信じ込むようになりました。さらに、[time_loop_trapped_scientist.GetSheHe]は数週間前に完了したはずの初期観測タスクを繰り返し行い続けました。\n\n[time_loop_trapped_scientist.GetName]が精神的なタイムループに囚われ、その最初の一日を何度も何度も繰り返し体験していることは明らかでした。この現象の正確な性質は不明であり、特にこの出来事の最高の目撃者が[time_loop_trapped_scientist.GetHisHer]の妄想に捕らわれているため、解明は困難です。いずれにせよ、[time_loop_trapped_scientist.GetHisHer]の指導者としての有効性は著しく低下するでしょう。」"
+  omnitemporal.1007.a:"「残念だ。」"
+  leader_trait_otc_time_loop_trapped:"「時間束縛状態」"
+  leader_trait_otc_time_loop_trapped_desc:"「この指導者は精神的なタイムループに囚われ、同じ日を何度も繰り返し体験しています。彼らの感覚入力を慎重に操作することで、現実をシミュレートすることはできますが、彼らが新たな記憶を形成することは二度とないでしょう。」"
+
+  omnitemporal.1008.name:"「狂った時計」"
+  omnitemporal.1008.desc:"「時間異常に到達した途端、[Root.GetName]上のあらゆる時間計測装置が不規則に変動し始め、あり得ない日付を表示するようになりました。彼らからの通信を受信した直後、同様の異常が我々のコロニーでも現れ始めました。無害ではあるものの、信頼できる時系列情報の喪失は、通常の生活のバランスを崩しています。しかし、これらの事象は我々の物理学者にとって解析すべき膨大な量のデータをもたらしました。」"
+  omnitemporal.1008.a:"「興味深い。」"
+
+  omnitemporal.1009.name:"「惑星加速」"
+  omnitemporal.1009.desc:"「[From.GetName]における時間の流れが大幅に加速し、一部の地域では速度が2倍にまでなっています。これらの空間に我々の産業を集中させることで、生産性を大幅に向上させることができるでしょう。しかし、惑星全体にわたる変動する時間速度は、居住条件を困難にし、計画に追加の労力を要するでしょう。」"
+  omnitemporal.1009.a:"「素晴らしい。」"
+  otc_time_accelerated:"「加速時間」"
+
+  omnitemporal.1010.name:0 "「失われた日」"
+  omnitemporal.1010.desc:0 "「最近発見された時間異常の探査が、予期せぬ副作用をもたらしました。誰もが一日を失ったのです。具体的には、我々の全人口が過去24時間、つまり[From.lost_date_flag]に関する情報を完全に記憶しておらず、完全な記憶喪失を経験しています。昨日特に注目すべきことは何も起こらなかったと合理的に確信していますが、この経験は困惑させられるものでした。さらに悪いことに、この影響は銀河規模に及んでいるようで、我々の近隣諸国の多くは、これを『彼らの自然な時間認識への干渉』と呼び、不満を抱いています。」"
+  otc_forgot_a_day:0 "「失われた日」"
+
+  omnitemporal.1012.name:0 "「失われた日」"
+  omnitemporal.1012.desc:0 "「皆の記憶には同じ穴が開いています。それは[This.lost_date_flag_plus_one]の次が[This.lost_date_flag_minus_one]となっているのです。[This.GetName]の全ての[This.GetSpeciesName]は、[This.lost_date_flag]の出来事について何の記憶も残していません。これは当然のことながら、大きな動揺と混乱を引き起こしました。事後分析により、問題の失われた日は確かに発生していた（そしてそれ自体は特筆すべきことではなかった）ことが明らかになりましたが、誰もその記憶を持っていません。我々の科学者たちはこの現象を、[From.GetName]によって解き放たれた強力な時間エネルギーと関連付けましたが、彼らはこの途方もない干渉について謝罪することを拒否しています。」"
+  otc_opinion_lost_day:0 "「時間操作に不満」"
+
+
+  omnitemporal.1013.name:"「急速老化」"
+  omnitemporal.1013.desc:"「[Root.Leader.GetName]は、最近調査した時間異常に関する[Root.Leader.GetHerHis]の報告書を提出しました。『[From.GetName]の異常な挙動を10年間研究した結果、残念ながら何も異常はなかったと結論せざるを得ません。』この報告書は網羅的で詳細にわたっており、その作成に要した時間がなければ、我々の時間学部門によって即座に承認されていたでしょう。[Root.Leader.GetName]が10年以上を研究に費やしたのに対し、銀河の他の者たちは数ヶ月待つだけで通信を受け取っていました。このタイムループが exactly 何によって生じたのかは、報告書に異常が見つからなかったため不明ですが、[Root.Leader.GetName]に対するその影響は明らかです。我々は[Root.Leader.GetSheHe]が充実した人生を送り続けられるよう願うしかありません。」"
+  omnitemporal.1013.a:"「残念だ。」"
+
+  # Dangerous/Impactful Anomalies
+  omnitemporal.1100.name:"「惑星減速」"
+  omnitemporal.1100.desc:"「時間計測値は、[From.GetName]における時間の流れが大幅に減少し、最大で半分にまで遅くなっていることを示しています。この新たな時間の経過に適応するには、追加のロジスティクスが必要です。なぜなら、惑星の半分が消失したかのような帝国を考慮に入れなければならないからです。さらに、外部入力の調整もこれまで以上に重要になります。時間の減速により、コロニーへの光の入射が以前の2倍の強度に見えるようになるからです。」"
+  omnitemporal.1100.a:"「残念だ。」"
+  otc_time_decelerated:"「減速時間」"
+
+  omnitemporal.1101.name:"「[From.GetName]で時計が停止」"
+  omnitemporal.1101.desc:"「[From.GetName]の全ての人、そして全てが突然停止しました。惑星からの全ての通信が即座に途絶え、惑星へ送られたメッセージも目的地に届きませんでした。惑星は時間の中に凍結し、我々の現在のタイムラインとはもはや繋がっていないようです。[From.GetName]への、そして[From.GetName]からの全ての資源輸送は無期限に中断されます。この異常な挙動が早く終わることを願うばかりです。」"
+  omnitemporal.1101.a:"「壊滅的だ！」"
+  otc_time_stopped:"「時間凍結」"
+
+  omnitemporal.1107.name:"「[This.GetName]が時間に戻る」"
+  omnitemporal.1107.desc:"「半年間の絶対的な沈黙の後、[This.GetName]で再び時間が流れ始めました。我々の市民は日常生活に戻り、星間貨物はドックを出発し、数ヶ月前に送られた通信が次々と届いています。一瞬、何もなかったかのように見えました。\n\nしかし、それはほんの一瞬のことでした。[This.GetName]の住民が何が起こったのか、過去6ヶ月間、銀河の他の領域が進行し続ける間、彼らが一秒たりとも経験していなかったことを知るまでの間は。この災害が我々に直接追跡できないことは極めて幸運ですが、この時間的歪みの影響は決して過小評価できず、[This.GetName]は回復に時間を要するでしょう。」"
+  omnitemporal.1107.a:"「それでも幸運だ。」"
+  otc_after_time_resumed:"「失われた数ヶ月」"
+
+  omnitemporal.1102.name:"「我々の原始の過去の幻影」"
+  omnitemporal.1102.desc:"「この時間異常の中で、[Root.Leader.GetName]と[Root.Leader.GetHerHis]の乗組員は、我々の過去の一部が捕らえられた時間の泡を発見しました。ここでは、空間や時間から切り離された状態で、彼らは我々の原始の自己がゆっくりと星々へと進んでいくのを見守りました。\n\n我々は他の初期社会の発展を観察し、自身の起源についても多くの記録を持っていますが、これほど明確に我々自身の過去を見たことはありませんでした。歴史学から原始研究、神学、初期哲学に至るまで、数多くの社会学分野がこの発見から多大な恩恵を受けました。」"
+  omnitemporal.1102.a:"「素晴らしい。」"
+  otc_past_selves:"「過ぎし日の自己」"
+  otc_past_selves_desc:"「我らの起源の幻視は、集団の結束を促し、過去への更なる探求を刺激した。」"
+
+  omnitemporal.1103.name:"「認識論的懐疑」"
+  omnitemporal.1103.desc:"「我らの始まりの幻視は、種の育成と初期発展について深い洞察をもたらしたが、同時に我々がいかに愚かであったかを明らかにした。さらに、銀河の真の性質について全く無知であっただけでなく、物事をありのままに理解していると本気で信じていたのだ。我々がそのような愚かさから大きく脱却できたことは喜ばしいが、これらの幻視は、我々が十分な進歩を遂げていないのではないかという懸念を人々に抱かせた。結局のところ、我々が未開の祖先と同じくらい道に迷っていないと、どうして確信できるだろうか？」"
+  omnitemporal.1103.a:"「残念だ。」"
+  otc_disillusioned_past:"「始まりへの幻滅」"
+  otc_disillusioned_past_desc:"「過去の自己を見たことで、我々がいかにかつて愚かであったかが明らかになった。我々の計り知れない変化は意志の証であるかもしれないが、我々が同じくらい道に迷っていないとどう確信できるだろうか？」"
+
+  omnitemporal.1104.name:"「偉大な帝国」"
+  omnitemporal.1104.desc:"「我々の目の前に幻視が現れた。それは深淵を滑空する偉大な艦隊を描いている。その巨大な規模と威容は、我々の時代には見たことのないものだ。彼らの先には輝く惑星があり、我々自身のものよりはるかに進んだ技術の驚異が光を放っている。そのデザインは没落した帝国を思わせるが、この幻視に映る帝国を『没落した』と呼ぶのは極めて不適切だろう。\n\nこの幻視に関する歴史的記録がないことを考えると、これは遥か過去か未来から来たものに違いない。どちらであるかは永遠にわからないかもしれない。」"
+  omnitemporal.1104.a:"「興味深い。」"
+
+  omnitemporal.1105.name:"「幻視の現実化」"
+  omnitemporal.1105.desc:"「覚醒した帝国$領邦$の幻視が過去の映像ではなかったことは、今や明らかだ。我々は未来を提示され、その後すぐにそれが現実のものとなった。科学者たちの間では大きな興奮があり、幻視のニュースはたちまち一般市民に広まった。\n\n我々国民も同様に興味を抱いたが、他の帝国は我々の行動を極めて無謀だと見なしている。多くの者が、我々がこの幻視を見たことがその出来事を引き起こしたと主張している。まるで我々の知ると知らざるとに関わらず、それが起こらなかったかのように。彼らはおそらくこれを、我々の時間研究に反対する口実として利用しているのだろう――それが何をもたらすかを懸念して。」"
+  omnitemporal.1105.a:"「馬鹿げている。」"
+
+  omnitemporal.1106.name:"「破滅的な予言」"
+  omnitemporal.1106.desc:"「最近の没落帝国$領邦$の覚醒後、[From.GetName]は既にこの出来事を知っていたことが明らかになった。彼らの最近の時間実験により、科学者の一人が未来の幻視を与えられ、没落帝国$領邦$の覚醒が描かれていたのだ。\n\n彼らの時間改変がこの幻視の実現を招いたのか、それとも単に未来を洞察したものなのかは不明である。いずれにせよ、彼らの無謀な実験は破滅を招く運命にあるだろう。」"
+  omnitemporal.1106.a:"「実験馬鹿め。」"
+  omnitemporal.1106.b:"「実験こそが未来を築く。」"
+  otc_opinion_awakened_empire:"「未来の予言に不満」"
+  otc_opinion_awakened_empire_lesser: "$otc_opinion_awakened_empire$"
+
+  # Anomaly Categories
+  otc_temporal_anomaly_cat:"「時間的異常$事象$」"
+  otc_temporal_anomaly_cat_desc:"「ここでは、空間と時間が銀河の他のいかなる場所とも異なり衝突している。それらは予測不能な方法で互いに踊り合い、未知の結果を生み出すのだ。\n\nこれらの異常$事象$には危険が伴わないわけではないが、危険がある場所には常に機会も存在する。」"
+  MESSAGE_OTC_NEW_TEMPORAL_ANOMALY_TITLE:"「$otc_temporal_anomaly_cat$ 発見」"
+  MESSAGE_OTC_NEW_TEMPORAL_ANOMALY_DESC:"「$LOCATION$にて新たな$otc_temporal_anomaly_cat$が発見された。科学者を派遣し、その秘密を解き明かすことができる。」"
+
+
+## Operations ##
+  operation_reset_civilisation:0 "「因果抹消プロトコル」"
+  operation_reset_civilisation_desc:0 "「目標の母星に攻撃チームを送り込み、彼らの歴史を外科的に編集することで、彼らがいつか我々に敵対するために用いるであろう高度な技術を、決して開発しないようにすることができる。」"
+  operation_reset_civilisation_on_success:"「$IF_SUCCESSFUL|E$\n目標文明は、FTL以前の未開の単一惑星国家に還元される。」"
+  operation_reset_civilisation_rival_time_travellers:0 "「我々は、同胞の時間操作者に対してこの作戦を試みることはできない。」"
+  omnitemporal.50.name:0 "「接近中」"
+  omnitemporal.50.desc:0 "「チーム――特殊作戦専門家と時間科学者の混合部隊――は、今回の遠征のために装備された輸送船に隠蔽されている。彼らは、異種族歴史家が[Target.GetName]の発展を妨害するのに最適な時期と判断した過去の瞬間にタイムジャンプを行うための装備を携行している。」"
+  omnitemporal.51.name:0 "「旧式コード」"
+  omnitemporal.51.desc:0 "「我々の時間調整輸送機が星系のセキュリティチェックを通過した――$role_spymaster$ [spynetwork.leader.GetName]が集めていたセキュリティコードは、星系内への進入に不可欠だったのだ。我々の工作員は、タイムマシンを準備するためのウォームアップ手順を開始した。彼らは輸送船の最終航海のため、再び首都を目指すだろう。」"
+  omnitemporal.52.name:0 "「過去へ」"
+  omnitemporal.52.desc:0 "「$role_spymaster$ [spynetwork.leader.GetName]から連絡が入った。全て準備は完了したとのことだ。我々の工作員は既にジャンプの準備を終えており、軌道を確立次第、船全体が過去へと跳躍し、計画を実行するだろう。我々の視点からは、その効果は瞬時に現れるはずだ。」"
+  omnitemporal.53.name:0 "「消去完了」"
+  omnitemporal.53.desc:0 "「§Y[From.target.GetName]§!はもはや存在しない！輸送船が消え去るや否や、我々は計り知れない時間エネルギーの急増を検知した。スコープがクリアになると、我々の最も荒唐無稽な期待を超えて計画が成功したことが分かった。§Y[From.target.GetName]§!は未開人に還元され、我々が今彼らに拒否した偉大な運命に気づくこともない。」"
+  
+  OTC_RESET_LEADER_DEATH_DESC:0 "「存在から抹消された」"
+
+  omnitemporal.56.name:0 "「時間軸切断」"
+  omnitemporal.56.desc:0 "「§H[resetting_civ.GetName]§!は存在を停止した！[resettor_civ.GetName]は、彼らの高度な時間操作技術を使って過去に遡り、自文明が宇宙航行技術を発展させることを阻止したようだ。彼らの文明全体、植民地、偉大な指導者、艦船、さらには移民までもが、我々の時間軸から抹消された。」"
+  omnitemporal.56.a:0 "「[resettor_civ.GetName]を阻止しなければならない！」"
+  omnitemporal.56.a.tooltip:0 "「[resetting_civ.GetName]の全ての指導者とポップは§R死亡§!する！」"

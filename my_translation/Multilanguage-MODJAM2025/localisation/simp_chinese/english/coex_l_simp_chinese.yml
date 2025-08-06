@@ -1,0 +1,351 @@
+﻿l_simp_chinese:
+
+
+
+#Technology
+  coex_tech_brain_relay:"超空间投射"
+  coex_tech_brain_relay_desc:"超空间投射为脑波中继器供能。它使用新发现的脑电图技术，将思想转化为合成脑电波。"
+  COEX_TECH_UNLOCK_BRAIN_RELAY_TITLE:"§H解锁巨构：§! 脑波继电器"
+  COEX_TECH_UNLOCK_BRAIN_RELAY_DESC:"脑波中继器是一种巨构，使我们能够影响异星物种的心智。它将影响10跳范围内最近的外国殖民地，且该帝国尚未受到其他脑波中继器的影响。"
+
+  coex_brain_relay_tech_unlock_tt:"§Y危机飞升天赋§!: §Y£physics£ $coex_tech_brain_relay$§!"
+  coex_psionic_theory_tech_unlock_tt:"§Y危机飞升天赋§!: §Y£society£ $tech_psionic_theory$§!"
+
+
+
+
+#Crisis Levels
+  coex_crisis_coexistence_level_1:"§U担忧§!"
+  coex_crisis_coexistence_level_1_desc:"危机等级1"
+  coex_crisis_coexistence_level_2:"§U风险§!"
+  coex_crisis_coexistence_level_2_desc:"危机等级2"
+  coex_crisis_coexistence_level_3:"§U危险§!"
+  coex_crisis_coexistence_level_3_desc:"危机等级3"
+  coex_crisis_coexistence_level_4:"§U灾难§!"
+  coex_crisis_coexistence_level_4_desc:"危机等级4"
+  coex_crisis_coexistence_level_5:"§U存续威胁§!"
+  coex_crisis_coexistence_level_5_desc:"危机等级5"
+
+
+  coex_coexistence_level_2_req_clear_tooltip:"£trigger_yes£ 拥有至少一个 §Y$coex_brain_relay_1$§!"
+  coex_coexistence_level_2_req_tooltip:"£trigger_no£ 拥有至少一个 §Y$coex_brain_relay_1$§!"
+
+  coex_coexistence_level_3_req_clear_tooltip:"£trigger_yes£ 已建成 §Y$coex_enlightenment_array_0$§!"
+  coex_coexistence_level_3_req_tooltip:"£trigger_no£ 已建成 §Y$coex_enlightenment_array_0$§!"
+
+  coex_coexistence_level_4_req_clear_tooltip:"£trigger_yes£ 已建成 §Y$coex_enlightenment_array_2$§!"
+  coex_coexistence_level_4_req_tooltip:"£trigger_no£ 已建成 §Y$coex_enlightenment_array_2$§!"
+
+  coex_coexistence_level_5_req_tooltip:"£trigger_no£ 已完成 §Y$coex_enlightenment_array_3$§! 特殊项目"
+  coex_coexistence_level_5_req_clear_tooltip:"£trigger_no£ 已完成 §Y$coex_enlightenment_array_3$§! 特殊项目"
+
+  COEX_CRISIS_SPECIAL_PROJECT_4:"启动阵列"
+  COEX_CRISIS_SPECIAL_PROJECT_4_DESC:"我们必须准备启迪阵列，以开始在银河系尺度上影响生命。"
+
+
+
+###Crisis UI
+
+#Mental Authority
+
+  coex_mental_authority:"心智主宰力"
+  coex_mental_authority_name:"$coex_mental_authority$:"
+  coex_mental_authority_value:"£coex_mental_authority£ $VAL|0$"
+  coex_mental_authority_gaining:"完成 §H危机目标§! 以获得更多 £coex_mental_authority£ §Y心智主宰力§!。"
+  coex_mental_authority_desc:"心智主宰力衡量我们对宇宙最深奥秘密的理解程度。"
+  coex_mental_authority_crisis_objective:"危机目标"
+  coex_mental_authority_crisis_objective_gained:"获得心智主宰力"
+  coex_mental_authority_crisis_objective_reward: "$REWARD$"
+  coex_mental_authority_crisis_objective_progress:"我们已通过此危机目标获得 £coex_mental_authority£ $AMOUNT$。"
+  coex_mental_authority_crisis_level_locked:"解锁此等级所需：\n"
+  coex_mental_authority_crisis_level_unlocked:"达到 $LEVEL$ 级时，你将获得奖励：\n"
+  coex_mental_authority_crisis_level_desc:"若要提升危机等级，请累积心智主宰力并研究特殊危机科技。"
+  coex_mental_authority_crisis_level_unlock:"拥有 £coex_mental_authority£ §Y$CURRENCY$§! 心智主宰力"
+  coex_mental_authority_current_value:"当前值：§Y$VALUE|0$§!"
+  coex_mental_authority_crisis_description_title:"共存协议"
+
+#Ascension Perk
+  coex_ap_coexistence_protocol:"共存协议"
+  coex_ap_coexistence_protocol_desc:"个体之乱难以为继。我们必须成为带来永恒和平之人，而和平唯有通过掌控方能实现。"
+  coex_no_other_crisis:"另一个帝国已启动了共存协议"
+
+
+#Crisis Objectives
+  coex_crisobj_brain_relays_name:"控制脑部中继站（每月）"
+  coex_crisobj_brain_relays_desc:"大规模和平需要独创性和胁迫。"
+
+  coex_crisobj_espionage_name:"执行危机行动"
+  coex_crisobj_espionage_desc:"间谍活动使我们能够了解潜在的敌人。"
+
+  coex_crisobj_have_vassals_name:"拥有附庸（每年）"
+  coex_crisobj_have_vassals_desc:"附庸化使利益趋向和平。对个体性的微小牺牲将思想解放，以迎接未来。"
+
+  coex_crisobj_vassalise_empires_name:"征服帝国"
+  coex_crisobj_vassalise_empires_desc:"每个归顺的帝国都让我们离和平更近一步。"
+
+  coex_crisobj_galcom_surveillance_resolution_name:"确保银河共同体协助（每年）"
+  coex_crisobj_galcom_surveillance_resolution_desc:"通过§Y官僚监视§!决议"
+
+#Menace perks
+
+  menp_coex_techs_1:"灵能理论"
+  coex_unlocks_techs_1:"将灵能理论添加为研究选项"
+  menp_coex_techs_1_desc:"我们对心智的研究已引导我们走向更超自然的应用。"
+
+  menp_coex_mega_1:"社会工程学 I"
+  coex_unlocks_mega_1:"解锁超空间投射技术"
+  menp_coex_mega_1_desc:"一种能使我们将意志投射到银河系各处异族身上的结构。"
+
+  menp_coex_operations_1:"强制和平主义"
+  coex_unlocks_operations_1:"解锁一项间谍行动，以强迫一个受中继站影响的帝国达成休战"
+  menp_coex_operations_1_desc:"这些蠢货会为任何事开战。我们不会允许这种轻浮的行为。"
+
+  menp_coex_infiltration_1:"信任制造"
+  menp_coex_infiltration_1_desc:"我们现在有办法让其他人更……容易受影响。"
+
+  menp_coex_mega_2:"社会工程学 II"
+  coex_unlocks_mega_2:"§H解锁巨型建筑：§! $coex_enlightenment_array_0$\n"
+  menp_coex_mega_2_desc:"脑部中继站还不够。我们必须让它们更强大。"
+
+
+  menp_coex_features_2:"新技术"
+  menp_coex_features_2_desc:"我们现在对认知有了比以往任何人都更深入的理解。"
+
+  menp_coex_operations_2:"灵活许可"
+  coex_unlocks_operations_2:"解锁一项在目标帝国安装脑部中继站的行动。"
+  menp_coex_operations_2_desc:"精神控制，即便有限，也为我们提供了诸多优势。"
+
+  menp_coex_mega_3:"社会工程学 III"
+  coex_unlocks_mega_3:"§H解锁巨型建筑等级：§! $coex_enlightenment_array_2$\n"
+  menp_coex_mega_3_desc:"如果我们想实现和平，就必须继续我们对启蒙阵列的研究。"
+
+
+  menp_coex_codebreaking_3:"情报应用"
+  menp_coex_codebreaking_3_desc:"我们的特工配备了能够让别人忽视他们或相信他们每句话的技术。"
+
+  menp_coex_diplomacy_3:"高级外交"
+  menp_coex_diplomacy_3_desc:"如果他们不听我们的，我们就强迫他们听。"
+
+  menp_coex_mega_4:"社会工程学 IV"
+  coex_unlocks_mega_4:"§H解锁巨构等级：§! $coex_enlightenment_array_3$\n"
+  menp_coex_mega_4_desc:"迄今为止，我们的阵列运作良好，但其全部潜力尚未发挥出来。"
+
+  menp_coex_operations_4:"必要的控制"
+  coex_unlocks_operations_4:"解锁一项操作，以征服受继电器影响的帝国"
+  menp_coex_operations_4_desc:"没有任何个体值得信任。我们必须将所有人都纳入掌控。"
+
+  menp_coex_features_5:"智斗"
+  menp_coex_features_5_desc:"尽管我们为他们付出了一切，他们仍然不明白。如果有什么值得为之奋斗，那就是和平。"
+
+  menp_coex_enlightenment_5:"宏大启蒙"
+  coex_unlocks_enlightenment_5:"开始启动启蒙阵列，对所有智慧生命进行洗脑，并赢得游戏！"
+  menp_coex_enlightenment_5_desc:"这是唯一的出路。最终，阵列将终结纷争与冲突。"
+
+  enlightened_galaxy_score:"启迪了银河系"
+
+
+
+
+#Megastructures
+  coex_enlightenment_array_0_MEGASTRUCTURE_DETAILS:"启蒙阵列由一个中心立方体处理单元组成，附带鳍状结构，它们与辅助脑波继电器通信并聚焦其信号。它们将共同最终实现对银河系的完全控制。"
+  coex_enlightenment_array_0:"启蒙阵列框架"
+  coex_enlightenment_array_0_DESC:"该框架容纳着启蒙阵列的核心组件"
+  coex_enlightenment_array_1:"启蒙阵列聚焦鳍片"
+  coex_enlightenment_array_1_DESC:"这些鳍片直接与我们的脑波继电器通信并增强其效能。"
+  coex_enlightenment_array_2:"启蒙阵列控制中心"
+  coex_enlightenment_array_2_DESC:"防御严密的控制中心是我们通过阵列下达指令的地方，"
+  coex_enlightenment_array_3:"启蒙阵列"
+  coex_enlightenment_array_3_DESC:"启蒙阵列能够将信号广播至整个银河系，并将很快赋予我们对所有智慧生命的控制权。"
+  allow_coex_brain_relay:"§H解锁巨构：§! 脑波继电器"
+  coex_brain_relay_0:"脑波继电器站点"
+  coex_brain_relay_0_DESC:"该建筑站点空间站作为未来建造脑波继电器的基地。"
+  coex_brain_relay_0_MEGASTRUCTURE_DETAILS:"一个脑波继电器，能够影响所有智慧物种的心智。它将影响10跳范围内最近的异族殖民地，且该帝国尚未受到其他脑波继电器的影响。"
+  coex_brain_relay_1:"脑波继电器"
+  coex_brain_relay_1_DESC:"这个脑波继电器使我们能够影响异族心智。"
+
+
+  coex_brain_relay_no_federation_0:"脑波继电器站点"
+  coex_brain_relay_no_federation_0_DESC:"该建筑站点空间站作为未来建造脑波继电器的基地。"
+  coex_brain_relay_no_federation_0_MEGASTRUCTURE_DETAILS:"一个脑波继电器，能够影响所有智慧物种的心智。它将影响10跳范围内最近的异族殖民地，且该帝国尚未受到其他脑波继电器的影响"
+  coex_brain_relay_no_federation_1:"脑波继电器"
+  coex_brain_relay_no_federation_1_DESC:"这个脑波继电器使我们能够影响异族心智。"
+
+  mod_coex_brain_relay_megastructures_produces_mult:"£coex_mental_authority£ $coex_mental_authority$ 来自脑波继电器"
+  coex_brain_relay_megastructures:"脑波继电器"
+
+  #Espionage
+  coex_operation_need_brain_relay:"这项操作要求目标处于脑波继电器的影响下。"
+
+
+  coex_operation_force_truce:"强制停战"
+  coex_operation_force_truce_desc:"强制目标帝国停战"
+  coex_operation_force_truce_on_success:"$IF_SUCCESSFUL|E$\n授予我们与目标之间10年的停战期。"
+  #Force truce
+  coex_operation.101.name:"强制停战"
+  coex_operation.101.desc:"我们已将关键军事领导人置于我们脑波继电器的影响之下。"
+  coex_operation.102.name:"强制停战"
+  coex_operation.102.desc:"我们的特工已在§Y[Target.GetName]§!全境散布了各种形式的亲和宣传。"
+  coex_operation.103.name:"强制停战"
+  coex_operation.103.desc:"军事领袖们正在说服中央政府，以促进我们之间的和平。"
+  coex_operation.104.name:"强制停战"
+  coex_operation.104.desc:"他们已同意在未来10年内无条件停战。和平即将来临。"
+
+  coex_operation_build_relay:"安装脑部中继站"
+  coex_operation_build_relay_desc:"我们将通过建造一座新的脑部中继站来扩大我们的影响力。"
+  coex_operation_build_relay_on_success:"$IF_SUCCESSFUL|E$\n获得目标帝国境内一个未使用的星系的控制权，并开始建造脑部中继站。"
+  coex_operation.301.name:"安装脑部中继站"
+  coex_operation.301.desc:"我们的[GetEnvoy]已经抵达，开始商讨一项新的建筑项目。"
+  coex_operation.302.name:"安装脑部中继站"
+  coex_operation.302.desc:"我们的[GetEnvoy]凭借雄辩的口才和精心的视觉辅助，提出了建造一颗卫星以提高全银河系通讯效率的构想。"
+  coex_operation.303.name:"安装脑部中继站"
+  coex_operation.303.desc:"他们全然不知内情，竟同意我们可以在他们的帝国境内建造一座脑部中继站。我们需要找到一个合适的星系。"
+  coex_operation.310.name:"中继站已安装"
+  coex_operation.310.desc:"我们已成功协商获得了一个平平无奇星系的行政控制权，并已开始建造一座脑部中继站。"
+  coex_operation.311.name:"行动失败"
+  coex_operation.311.desc:"我们未能找到任何适合建造脑部中继站的星系。我们以后可以再试。"
+  coex_operation.320.name:"卫星已安装"
+  coex_operation.320.desc:"我们已同意允许§Y[Root.Owner.GetName]§!在一个无关紧要的星系中建造一颗通讯卫星，以增强银河系的通讯。"
+
+
+  coex_operation_encourage_subjugation:"获得效忠"
+  coex_operation_encourage_subjugation_desc:"我们将说服他们接受我们的统治。"
+  coex_operation_encourage_subjugation_on_success:"$IF_SUCCESSFUL|E$\n使目标帝国臣服。"
+  coex_operation.401.name:"获得效忠"
+  coex_operation.401.desc:"脑部中继站已识别出§Y[coex_subjugation_target_leader.Owner.GetAdj] [coex_subjugation_target_leader.GetTitle] [coex_subjugation_target_leader.GetName]§!是极具潜力的操纵目标。"
+  coex_operation.402.name:"获得效忠"
+  coex_operation.402.desc:"§Y[coex_subjugation_target_leader.GetTitle] [coex_subjugation_target_leader.GetName]§!深知我们帝国的强大以及加入我们的好处。"
+  coex_operation.403.name:"获得效忠"
+  coex_operation.403.desc:"在[coex_subjugation_target_leader.GetName]和我们的中继站的帮助下，一场民众运动在他们的帝国境内爆发，要求政府臣服于我们的帝国。"
+
+  coex_operation.411.name:"臣服提议"
+  coex_operation.411.desc:"最近，一场新的运动悄然兴起。其成员声称我们过于弱小，无法独立生存，成为§Y[coex_subjugator.GetName]§!的附庸会更好。这场运动的起源不明，也尚不清楚是否存在不正当手段。"
+  coex_operation.411.a:"抵抗臣服"
+  coex_operation.411.b:"接受臣服"
+
+  coex_operation_subject:"无法成为其他帝国的附庸"
+
+#Events
+  coexistence_chain:"共存协议"
+  coexistence_chain_title:"共存协议"
+  coexistence_chain_desc:"个体的混沌是不可持续的。我们将通过控制带来持久的和平。"
+  coexistence_level_reached:"危机等级已达成"
+
+  coex_crisis.3001.desc.target:"我们的中继站正在成功影响§Y[coex_relay_target.GetName]§!。"
+  coex_crisis.3001.desc.no_target:"脑部中继站范围内没有外国殖民地。"
+  coex_crisis.3001.name:"中继器已建成"
+
+
+
+
+  
+
+
+  # requires_fewer_than_x_brain_relays: "You cannot build more Cerebral Relays"
+
+  coex_crisis.1000.name:"危机等级1"
+  coex_crisis.1000.desc:"在我们当前这种个体野兽般的本性下，战争与暴力不可避免。唯有强制服从，方能实现真正的和平。我们已精通耕作与探索、科学与征服，如今必须将重心转向掌控我们自身的和平。神经中继器将为我们开辟一条全新的未来之路，在那里，我们的心智将用于善举，而制造暴力误解的那部分自我则得以安息。"
+  coex_crisis.1000.a:"未来即和平。"
+
+  coex_crisis.7105.name:"危机等级2"
+  coex_crisis.7105.desc:"在我们继续追求和平的征途上，深知必须为更宏大的利益做出艰难的抉择。我们的神经中继器已启动，正为未来的进步辛勤工作。我们正在建造精密的“启迪阵列”技术，以增强中继器的力量。随着其他帝国受其影响，和平如同旭日东升般，洒满沉睡的世界。我们并非寻求征服，而是追求统一。如同手电筒照亮黑暗的角落，我们通过驱散阴影来启迪银河系的遥远角落。"
+  coex_crisis.7105.a:"愿世间有光。"
+
+  coex_crisis.7110.name:"危机等级3"
+  coex_crisis.7110.desc:"我们已将原本就令人印象深刻的“启迪阵列”再次升级。这标志着我们争取持久和平的任务达到了一个关键时刻。通过思想的温和暗示，暴力被我们世界 desperately 需要的和睦与宁静所取代。这种被设计出来的、持久的和平，将社会从无法无天的个体混乱中解放出来。每当一个异星心智被校准同步，我们就离我们所构想的未来更近一步。"
+  coex_crisis.7110.a:"达成一致的和睦是美丽的。"
+
+  coex_crisis.7115.name:"危机等级4"
+  coex_crisis.7115.desc:"我们的“启迪阵列”再次升级。我们已增强了力量，如今能够将整个帝国都引导至我们仁慈的银河和平目标。"
+  coex_crisis.7115.a:"我们以仁慈引领。"
+
+  coex_crisis.7120.name:"危机等级5"
+  coex_crisis.7120.desc:"最终更新已完成。我们的“启迪阵列”开始将目标锁定为银河系中的所有生命。我们已接近目标，但仍需保持警惕。其他帝国可能会开始担忧，因为它们对变革和可能性保持警惕。"
+  coex_crisis.7120.a:"最终冲突迫在眉睫。"
+
+  coex_crisis.7200.name:"神经中继器已被捕获"
+  coex_crisis.7200.desc:"我们已捕获由§Y[coex_relay_builders.GetName]§!建造的一个神经中继器。摧毁它将使受影响的帝国摆脱其影响。"
+  coex_crisis.7200.A:"必须将其摧毁"
+  coex_crisis.7210.name:"神经中继器已被摧毁"
+  coex_crisis.7210.desc:"由§Y[coex_relay_builders.GetName]§!建造的一个神经中继器已被摧毁。摆脱其影响后，我们现在才明白自己曾多么轻易地被操控。"
+  coex_crisis.7210.b:"这不可饶恕。"
+  coex_crisis.7210.a:"我们必将复仇。"
+
+  coex_crisis.7220.name:"神经中继器已被摧毁"
+  coex_crisis.7220.desc:"我们位于§Y[coex_destroyed_relay_system.GetName]§!的神经中继器已被摧毁。受影响的帝国现已摆脱其影响。"
+  coex_crisis.7220.a:"不幸。"
+  coex_crisis.7300.name:"启迪阵列"
+  coex_crisis.7300.desc:"时机已到。我们必须开始准备启动“启迪阵列”，以控制构成这个银河系的桀骜不驯的个体。"
+
+
+
+
+
+
+
+
+###Operations
+
+
+
+
+  coex_operation_already_attempted_subjugation:"此行动已在此帝国上尝试过。"
+
+  coex_affected_by_brain_relay_0:"受神经中继器影响（阶段1）"
+  coex_affected_by_brain_relay_1:"受神经中继器影响（阶段2）"
+  coex_affected_by_brain_relay_2:"受神经中继器影响（阶段3）"
+  coex_affected_by_brain_relay_3:"受神经中继器影响（阶段4）"
+
+
+  coex_brain_relay_removed:"已摆脱神经中继器影响"
+
+  # mod_coex_brain_relay_limit_add: "REPLACE_ME"
+  
+  coex_approach_continue:"继续"
+  coex_approach_continue_effect:"引导银河系走向“启迪”。"
+
+
+
+#Situations
+  coex_situation_crisis_subjugation:"精神臣服"
+  coex_situation_crisis_subjugation_type:"精神臣服"
+  coex_situation_crisis_subjugation_desc:"我方一大群人口要求我们成为§Y[coex_subjugator.GetName]§!的附庸。这场运动的起源不明，但疑点重重。"
+  coex_string_situation_pathetic:"与他们的帝国相比，我们是如此的渺小。"
+  coex_string_situation_inferior:"我们的帝国不如他们。"
+  coex_string_situation_superior:"我们的帝国更胜一筹。"
+  coex_string_situation_overwhelming:"我们的帝国远比他们强大。"
+  coex_situation_crisis_subjugation_monthly_change_tooltip:"这种§Y情势§!的进展取决于我们选择的§Y策略§!。如果我们耗尽 £influence£ 影响力，将无法说服我们的人民抵抗 [coex_subjugator.GetAdj]§! 的统治。"
+  coex_situation_subjugation_subjugated_tooltip:"臣服"
+  coex_situation_subjugation_finish_tooltip:"自由"
+  coex_approach_resist:"抵抗"
+  coex_approach_resist_effect:"说服我们的人民，我们能够自力更生。"
+  coex_approach_accept:"接受"
+  coex_approach_accept_effect:"向§Y[coex_subjugator.GetName]§! 臣服是最佳选择。"
+
+  coex_situation_crisis_enlightenment:"真正的启蒙"
+  coex_situation_crisis_enlightenment_type:"真正的启蒙"
+  coex_situation_crisis_enlightenment_desc:"启蒙阵列终于完成了。很快，银河系将摆脱个体思想的混乱和意见分歧的纷争。只有我们才能为银河系带来真正的和平。"
+  coex_situation_crisis_enlightenment_monthly_change_tooltip:"这种§Y情势§!的进展取决于我们对启蒙阵列的掌控。如果失去它，进展将停止，直到我们重新获得控制权。"
+  coex_situation_enlightenment_tooltip:"启蒙"
+  coex_approach_recover_array:"恢复启蒙阵列"
+  coex_approach_recover_array_effect:"我们必须恢复我们的启蒙阵列。"
+
+  coex_situation.103.name:"精神臣服"
+  coex_situation.103.desc:"我们已被§Y[Owner.Overlord.GetName]§! 臣服。现在很清楚，这是我们帝国的唯一出路。"
+  coex_situation.104.name:"抵抗臣服"
+  coex_situation.104.desc:"经过巨大努力，我们抵抗了臣服。这是我们帝国的一次伟大胜利。"
+  coex_situation.104.a:"我们不会如此轻易被击败。"
+
+  
+  coex_situation.303.name:"启蒙"
+  coex_situation.303.desc:"我们做到了前所未有的事：统一银河，终结个体思想的混乱，通过精神暗示启迪众生，并带来持久的和平。"
+  coex_situation.303.a:"最终，将会迎来真正的和平。"
+  coex_situation.305.name:"启蒙"
+  coex_situation.305.desc:"我们现在是一个更美好的银河系的一部分。我们为何曾经抵抗？启蒙阵列已经实现了不可能，为我们所有人都带来了持久的和平与和谐。"
+  coex_situation.305.a:"不……"
+
+
+  coex_situation.110.name:"获得效忠"
+  coex_situation.110.desc:"臣服了§Y[coex_subjugation_target.GetName]§!。"
+  coex_situation.111.name:"获得效忠"
+  coex_situation.111.desc:"§Y[coex_subjugation_target.GetName]§! 抵抗了臣服。"
+

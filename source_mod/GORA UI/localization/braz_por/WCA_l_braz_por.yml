@@ -1,0 +1,11 @@
+﻿l_braz_por:
+ # WCA
+ alert_wasted_construction_name: "Tem [concept_construction] sem utilização"
+ alert_wasted_construction_hint: "Tem [concept_construction] sem utilização"
+ alert_wasted_construction_action: "Painel Obras"
+ wasted_construction_setting_name: "Obras Sem Utilização"
+ alert_not_enacting_laws_name: "#bold Não #!está promulgando uma lei"
+ alert_not_enacting_laws_hint: "#bold Não #!está promulgando uma lei"
+ alert_not_enacting_laws_action: "Painel Política"
+ not_enacting_laws_setting_name: "Não Está Promulgando Uma Lei"
+

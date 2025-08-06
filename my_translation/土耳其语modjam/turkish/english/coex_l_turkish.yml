@@ -1,0 +1,351 @@
+﻿l_turkish:
+
+
+
+#Technology
+  coex_tech_brain_relay:"Hiperuzay Projeksiyonu"
+  coex_tech_brain_relay_desc:"Hiperuzay Projeksiyonu, Beyinsel Röleleri güçlendirir. Yeni keşfedilen bir elektroensefalogram teknolojisi biçimini kullanarak fikirleri sentetik beyin dalgalarına dönüştürür."
+  COEX_TECH_UNLOCK_BRAIN_RELAY_TITLE:"§HMegayapının Kilidini Açar:§! Serebral Röle"
+  COEX_TECH_UNLOCK_BRAIN_RELAY_DESC:"Beyinsel Röle, uzaylı türlerin zihinlerini etkilememizi sağlayan bir yüksek yapıdır. Halihazırda başka bir Beyinsel Röle'nin etkisi altında olmayan bir imparatorlukta 10 sıçrama mesafesindeki en yakın yabancı koloniyi etkileyecektir."
+
+  coex_brain_relay_tech_unlock_tt:"§YKriz Avantajı§!: §Y£physics£ $coex_tech_brain_relay$§!"
+  coex_psionic_theory_tech_unlock_tt:"§YKriz Avantajı§!: §Y£society£ $tech_psionic_theory$§!"
+
+
+
+
+#Crisis Levels
+  coex_crisis_coexistence_level_1:"§UKaygı§!"
+  coex_crisis_coexistence_level_1_desc:"Kriz Seviyesi 1"
+  coex_crisis_coexistence_level_2:"§URisk§!"
+  coex_crisis_coexistence_level_2_desc:"Kriz Seviyesi 2"
+  coex_crisis_coexistence_level_3:"§UTehlike§!"
+  coex_crisis_coexistence_level_3_desc:"Kriz Seviyesi 3"
+  coex_crisis_coexistence_level_4:"§UFelaket§!"
+  coex_crisis_coexistence_level_4_desc:"Kriz Seviyesi 4"
+  coex_crisis_coexistence_level_5:"§UVaroluşsal Tehdit§!"
+  coex_crisis_coexistence_level_5_desc:"Kriz Seviyesi 5"
+
+
+  coex_coexistence_level_2_req_clear_tooltip:"£trigger_yes£ En az bir adet §Y$coex_brain_relay_1$§! var"
+  coex_coexistence_level_2_req_tooltip:"£trigger_no£ En az bir adet §Y$coex_brain_relay_1$§! yok"
+
+  coex_coexistence_level_3_req_clear_tooltip:"£trigger_yes£ §Y$coex_enlightenment_array_0$§! inşa edildi"
+  coex_coexistence_level_3_req_tooltip:"£trigger_no£ §Y$coex_enlightenment_array_0$§! inşa edilmedi"
+
+  coex_coexistence_level_4_req_clear_tooltip:"£trigger_yes£ §Y$coex_enlightenment_array_2$§! inşa edildi"
+  coex_coexistence_level_4_req_tooltip:"£trigger_no£ §Y$coex_enlightenment_array_2$§! inşa edilmedi"
+
+  coex_coexistence_level_5_req_tooltip:"£trigger_no£ §Y$coex_enlightenment_array_3$§! Özel Projesi tamamlanmadı"
+  coex_coexistence_level_5_req_clear_tooltip:"£trigger_no£ §Y$coex_enlightenment_array_3$§! Özel Projesi tamamlanmadı"
+
+  COEX_CRISIS_SPECIAL_PROJECT_4:"Diziyi Etkinleştir"
+  COEX_CRISIS_SPECIAL_PROJECT_4_DESC:"Galaktik ölçekte yaşamı etkilemeye başlamak için Aydınlanma Dizisi'ni hazırlamalıyız."
+
+
+
+###Crisis UI
+
+#Mental Authority
+
+  coex_mental_authority:"Zihinsel Otorite"
+  coex_mental_authority_name:"$coex_mental_authority$:"
+  coex_mental_authority_value:"£coex_mental_authority£ $VAL|0$"
+  coex_mental_authority_gaining:"Daha fazla £coex_mental_authority£ §YZihinsel Otorite§! kazanmak için §HKriz Hedeflerini§! tamamlayın."
+  coex_mental_authority_desc:"Zihinsel Otorite, evrenin en derin sırlarına ilişkin anlayışımızı ölçer."
+  coex_mental_authority_crisis_objective:"Kriz Hedefleri"
+  coex_mental_authority_crisis_objective_gained:"Kazanılan Zihinsel Otorite"
+  coex_mental_authority_crisis_objective_reward: "$REWARD$"
+  coex_mental_authority_crisis_objective_progress:"Bu Kriz Hedefinden £coex_mental_authority£ $AMOUNT$ kazandık."
+  coex_mental_authority_crisis_level_locked:"Bu seviyenin kilidini açmak için gerekenler:\n"
+  coex_mental_authority_crisis_level_unlocked:"$LEVEL$ seviyesinde şu ödülleri alırsınız:\n"
+  coex_mental_authority_crisis_level_desc:"Kriz seviyelerinde ilerlemek için Zihinsel Otorite biriktirin ve Özel Kriz Teknolojilerini araştırın."
+  coex_mental_authority_crisis_level_unlock:"£coex_mental_authority£ §Y$CURRENCY$§! Zihinsel Otoriteye sahip"
+  coex_mental_authority_current_value:"Mevcut Değer: §Y$VALUE|0$§!"
+  coex_mental_authority_crisis_description_title:"Birlikte Varoluş Protokolü"
+
+#Ascension Perk
+  coex_ap_coexistence_protocol:"Birlikte Varoluş Protokolü"
+  coex_ap_coexistence_protocol_desc:"Bireyselliğin kaosu sürdürülemez. Kalıcı barışı getiren biz olmalıyız ve barış ancak kontrolle gelir."
+  coex_no_other_crisis:"Başka bir imparatorluk Eş Varoluş Protokolü'nü zaten başlattı"
+
+
+#Crisis Objectives
+  coex_crisobj_brain_relays_name:"Serebral Röleleri Kontrol Et (Aylık)"
+  coex_crisobj_brain_relays_desc:"Büyük ölçekli barış, zeka ve zorlama gerektirir."
+
+  coex_crisobj_espionage_name:"Kriz Operasyonları Gerçekleştir"
+  coex_crisobj_espionage_desc:"Casusluk, olası düşmanlarımızı anlamamızı sağlar."
+
+  coex_crisobj_have_vassals_name:"Vassallara Sahip Ol (Yıllık)"
+  coex_crisobj_have_vassals_desc:"Vassalizasyon, çıkarları barışa doğru hizalar. Bireyselliğin küçük fedakarlığı, zihinleri gelecek için özgürleştirir."
+
+  coex_crisobj_vassalise_empires_name:"İmparatorlukları Boyunduruk Altına Al"
+  coex_crisobj_vassalise_empires_desc:"Söz dinleyen her imparatorluk bizi barışa yaklaştırır."
+
+  coex_crisobj_galcom_surveillance_resolution_name:"Galaktik Topluluk Desteği Sağla (Yıllık)"
+  coex_crisobj_galcom_surveillance_resolution_desc:"§YBürokratik Gözetim§! kararlarını geçir."
+
+#Menace perks
+
+  menp_coex_techs_1:"Psiyonik Teori"
+  coex_unlocks_techs_1:"Psiyonik Teori'yi araştırma seçeneği olarak ekler"
+  menp_coex_techs_1_desc:"Zihin üzerindeki araştırmamız bizi daha doğaüstü uygulamalara yöneltti."
+
+  menp_coex_mega_1:"Sosyal Mühendislik I"
+  coex_unlocks_mega_1:"Hiperuzay Yansıtma Teknolojisini açar"
+  menp_coex_mega_1_desc:"İrademizi galaksideki uzaylılara yansıtmamızı sağlayacak bir yapı."
+
+  menp_coex_operations_1:"Zorunlu Pasifizm"
+  coex_unlocks_operations_1:"Röle etkisindeki bir imparatorlukla zorla ateşkes yapmak için bir casusluk operasyonunu açar"
+  menp_coex_operations_1_desc:"Bu aptallar her şey için savaşa girerdi. Böyle anlamsız davranışlara izin vermeyeceğiz."
+
+  menp_coex_infiltration_1:"Güven Üretimi"
+  menp_coex_infiltration_1_desc:"Artık başkalarını daha... telkin edilebilir kılmanın yollarına sahibiz."
+
+  menp_coex_mega_2:"Sosyal Mühendislik II"
+  coex_unlocks_mega_2:"§HMega Yapı Açılır:§! $coex_enlightenment_array_0$\n"
+  menp_coex_mega_2_desc:"Serebral Röleler yeterli değil. Onları daha güçlü hale getirmeliyiz."
+
+
+  menp_coex_features_2:"Yeni Teknikler"
+  menp_coex_features_2_desc:"Artık biliş üzerinde bizden öncekinden daha derin bir anlayışa sahibiz."
+
+  menp_coex_operations_2:"Esnek İzinler"
+  coex_unlocks_operations_2:"Hedef imparatorluğa bir Serebral Röle kurmak için bir operasyonu açar."
+  menp_coex_operations_2_desc:"Sınırlı da olsa zihin kontrolü bize birçok avantaj sağlar."
+
+  menp_coex_mega_3:"Sosyal Mühendislik III"
+  coex_unlocks_mega_3:"§HMega Yapı Seviyesi Açılır:§! $coex_enlightenment_array_2$\n"
+  menp_coex_mega_3_desc:"Barışı sağlayacaksak Aydınlanma Dizisi üzerindeki çalışmalarımıza devam etmeliyiz."
+
+
+  menp_coex_codebreaking_3:"İstihbarat Uygulamaları"
+  menp_coex_codebreaking_3_desc:"Operatiflerimiz, başkalarının onları görmezden gelmesine veya her sözlerine inanmasına izin veren teknolojiyle donatılmıştır."
+
+  menp_coex_diplomacy_3:"Gelişmiş Diplomasi"
+  menp_coex_diplomacy_3_desc:"Bizi dinlemezlerse, onları zorlayacağız."
+
+  menp_coex_mega_4:"Sosyal Mühendislik IV"
+  coex_unlocks_mega_4:"§HMegayapı Seviyesinin Kilidini Açar:§! $coex_enlightenment_array_3$\n"
+  menp_coex_mega_4_desc:"Dizilimimiz bize şimdiye kadar iyi hizmet etti, ancak tam potansiyeli henüz gerçekleştirilmedi."
+
+  menp_coex_operations_4:"Gerekli Kontrol"
+  coex_unlocks_operations_4:"Röleden etkilenen bir imparatorluğu boyunduruk altına alma operasyonunun kilidini açar"
+  menp_coex_operations_4_desc:"Hiçbir bireye güvenilemez. Hepsini kontrolümüz altına almalıyız."
+
+  menp_coex_features_5:"Zeka Savaşı"
+  menp_coex_features_5_desc:"Onlar için yaptığımız her şeye rağmen, hala anlamıyorlar. Uğruna savaşmaya değer bir şey varsa, o da barıştır."
+
+  menp_coex_enlightenment_5:"Yüce Aydınlanma"
+  coex_unlocks_enlightenment_5:"Aydınlanma Dizilimini ateşlemeye başlar, tüm zeki yaşamı beyin yıkar ve oyunu kazanır!"
+  menp_coex_enlightenment_5_desc:"Tek yol bu. Nihayet, Dizilim çekişme ve çatışmayı sona erdirecek."
+
+  enlightened_galaxy_score:"Galaksiyi Aydınlattı"
+
+
+
+
+#Megastructures
+  coex_enlightenment_array_0_MEGASTRUCTURE_DETAILS:"Aydınlanma Dizilimi, yardımcı Serebral Rölelerden gelen sinyalleri ileten ve odaklayan ekli kanatçıklara sahip merkezi kübik bir işleme biriminden oluşur. Birlikte, sonunda galaksinin tam kontrolünü sağlayacaklar."
+  coex_enlightenment_array_0:"Aydınlanma Dizilimi Gövdesi"
+  coex_enlightenment_array_0_DESC:"Bu gövde, Aydınlanma Diziliminin merkezi bileşenlerini barındırır"
+  coex_enlightenment_array_1:"Aydınlanma Dizilimi Odak Kanatçıkları"
+  coex_enlightenment_array_1_DESC:"Bu kanatçıklar, Serebral Rölelerimizle doğrudan iletişim kurar ve onları güçlendirir."
+  coex_enlightenment_array_2:"Aydınlanma Dizilimi Kontrol Merkezi"
+  coex_enlightenment_array_2_DESC:"Ağır savunmalı kontrol merkezi, Dizilim aracılığıyla komutlarımızı vereceğimiz yerdir,"
+  coex_enlightenment_array_3:"Aydınlanma Dizilimi"
+  coex_enlightenment_array_3_DESC:"Aydınlanma Dizilimi tüm galaksiye sinyal yayınlayabilir ve yakında tüm zeki yaşam üzerinde bize kontrol sağlayacak."
+  allow_coex_brain_relay:"§HMegayapının Kilidini Açar:§! Serebral Röle"
+  coex_brain_relay_0:"Serebral Röle Sahası"
+  coex_brain_relay_0_DESC:"İnşaat sahası istasyonu, gelecekteki bir Serebral Röle yapımı için temel görevi görür."
+  coex_brain_relay_0_MEGASTRUCTURE_DETAILS:"Tüm zeki türlerin zihinlerini etkileyebilen bir Serebral Röle. Zaten başka bir Serebral Rölenin etkisi altında olmayan bir imparatorlukta, 10 sıçrama mesafesindeki en yakın yabancı koloniyi etkileyecek."
+  coex_brain_relay_1:"Serebral Röle"
+  coex_brain_relay_1_DESC:"Bu Serebral Röle, uzaylı zihinlerini etkilememizi sağlar."
+
+
+  coex_brain_relay_no_federation_0:"Serebral Röle Sahası"
+  coex_brain_relay_no_federation_0_DESC:"İnşaat sahası istasyonu, gelecekteki bir Serebral Röle yapımı için temel görevi görür."
+  coex_brain_relay_no_federation_0_MEGASTRUCTURE_DETAILS:"Tüm zeki türlerin zihinlerini etkileyebilen bir Serebral Röle. Zaten başka bir Serebral Rölenin etkisi altında olmayan bir imparatorlukta, 10 sıçrama mesafesindeki en yakın yabancı koloniyi etkileyecek"
+  coex_brain_relay_no_federation_1:"Serebral Röle"
+  coex_brain_relay_no_federation_1_DESC:"Bu Serebral Röle, uzaylı zihinlerini etkilememizi sağlar."
+
+  mod_coex_brain_relay_megastructures_produces_mult:"£coex_mental_authority£ $coex_mental_authority$ Serebral Rölelerden"
+  coex_brain_relay_megastructures:"Serebral Röleler"
+
+  #Espionage
+  coex_operation_need_brain_relay:"Bu operasyon, hedefin bir Serebral Rölenin etkisi altında olmasını gerektirir."
+
+
+  coex_operation_force_truce:"Ateşkes Dayat"
+  coex_operation_force_truce_desc:"Hedef imparatorlukla bir ateşkesi zorla"
+  coex_operation_force_truce_on_success:"$IF_SUCCESSFUL|E$\nBizimle hedef arasında 10 yıllık bir ateşkes sağlar."
+  #Force truce
+  coex_operation.101.name:"Ateşkes Dayat"
+  coex_operation.101.desc:"Kilit askeri liderleri Serebral Rölemizin etkisi altına aldık."
+  coex_operation.102.name:"Ateşkes Dayat"
+  coex_operation.102.desc:"Ajanlarımız §Y[Target.GetName]§!'ın geneline çeşitli barış yanlısı propaganda türleri yaydı."
+  coex_operation.103.name:"Ateşkes Dayat"
+  coex_operation.103.desc:"Askeri liderler, merkezi hükümeti aramızda barışı teşvik etmeye ikna ediyor."
+  coex_operation.104.name:"Ateşkes Dayat"
+  coex_operation.104.desc:"Önümüzdeki 10 yıl boyunca koşulsuz bir ateşkese razı oldular. Barış sağlanacak."
+
+  coex_operation_build_relay:"Serebral Röle Kur"
+  coex_operation_build_relay_desc:"Yeni bir Serebral Röle inşasıyla erişimimizi genişleteceğiz."
+  coex_operation_build_relay_on_success:"$IF_SUCCESSFUL|E$\nHedef imparatorluğun kullanılmayan bir sisteminin kontrolünü ele geçir ve bir Serebral Röle inşaatına başla."
+  coex_operation.301.name:"Serebral Röle Kur"
+  coex_operation.301.desc:"Elçimiz, yeni bir inşaat projesini tartışmaya başlamak için geldi."
+  coex_operation.302.name:"Serebral Röle Kur"
+  coex_operation.302.desc:"Etkili konuşma ve düşünülmüş görsel yardımlarla, elçimiz galaksi genelinde iletişim etkinliğini artırmak için bir uydu inşa etme fikrini sundu."
+  coex_operation.303.name:"Serebral Röle Kur"
+  coex_operation.303.desc:"Hiçbir şeyden şüphelenmeden, imparatorluklarında bir Serebral Röle inşa etmemize izin vermeyi kabul ettiler. Uygun bir sistem bulmamız gerekecek."
+  coex_operation.310.name:"Röle Kuruldu"
+  coex_operation.310.desc:"Sıradan bir sistemin idari kontrolünü başarıyla müzakere ettik ve bir Serebral Röle inşaatına başladık."
+  coex_operation.311.name:"Operasyon Başarısız"
+  coex_operation.311.desc:"Bir Serebral Röle için hiçbir uygun sistem bulamadık. Daha sonra tekrar deneyebiliriz."
+  coex_operation.320.name:"Uydu Kuruldu"
+  coex_operation.320.desc:"§Y[Root.Owner.GetName]§!'ın galaktik iletişimi geliştirmek için önemsiz bir sistemde bir iletişim uydusu inşa etmesine izin vermeyi kabul ettik."
+
+
+  coex_operation_encourage_subjugation:"Sadakat Sağla"
+  coex_operation_encourage_subjugation_desc:"Onları yönetimimizi kabul etmeye ikna edeceğiz."
+  coex_operation_encourage_subjugation_on_success:"$IF_SUCCESSFUL|E$\nHedef imparatorluğu boyun eğdir."
+  coex_operation.401.name:"Sadakat Sağla"
+  coex_operation.401.desc:"Serebral Röle, §Y[coex_subjugation_target_leader.Owner.GetAdj] [coex_subjugation_target_leader.GetTitle] [coex_subjugation_target_leader.GetName]§!'ı manipülasyon için umut vadeden bir hedef olarak belirledi."
+  coex_operation.402.name:"Sadakat Sağla"
+  coex_operation.402.desc:"§Y[coex_subjugation_target_leader.GetTitle] [coex_subjugation_target_leader.GetName]§!, imparatorluğumuzun gücünü ve bize katılmanın faydalarını anlıyor."
+  coex_operation.403.name:"Sadakat Sağla"
+  coex_operation.403.desc:"[coex_subjugation_target_leader.GetName] ve Rölemizin yardımıyla, hükümetin imparatorluğumuza boyun eğmesini talep eden popüler bir hareket onların imparatorluğunda patlak verdi."
+
+  coex_operation.411.name:"Boyun Eğme Teklifi"
+  coex_operation.411.desc:"Son zamanlarda yeni bir kampanya ortaya çıktı. Üyeleri, tek başımıza hayatta kalamayacak kadar zayıf olduğumuzu ve §Y[coex_subjugator.GetName]§!'ın vasalı olarak daha iyi olacağımızı iddia ediyor. Bu hareketin kökenleri bilinmiyor ve hileli bir eylemin olup olmadığı belirsiz."
+  coex_operation.411.a:"Boyun Eğmeye Diren"
+  coex_operation.411.b:"Boyun Eğmeyi Kabul Et"
+
+  coex_operation_subject:"Başka bir imparatorluğun tabiiyeti olamaz"
+
+#Events
+  coexistence_chain:"Birlikte Varoluş Protokolü"
+  coexistence_chain_title:"Birlikte Varoluş Protokolü"
+  coexistence_chain_desc:"Bireyselliğin kaosu sürdürülemezdir. Kontrol yoluyla kalıcı barış getireceğiz."
+  coexistence_level_reached:"Kriz Seviyesine Ulaşıldı"
+
+  coex_crisis.3001.desc.target:"Rölemiz, §Y[coex_relay_target.GetName]§!'ı başarıyla etkiliyor."
+  coex_crisis.3001.desc.no_target:"Serebral Rölenin menzili içinde yabancı koloni yok."
+  coex_crisis.3001.name:"Röle İnşa Edildi"
+
+
+
+
+  
+
+
+  # requires_fewer_than_x_brain_relays: "You cannot build more Cerebral Relays"
+
+  coex_crisis.1000.name:"Kriz Seviyesi 1"
+  coex_crisis.1000.desc:"Mevcut bireysel, hayvansı doğamızda savaş ve şiddet kaçınılmazdır. Gerçek barışa ancak zorunlu uyum yoluyla ulaşılabilir. Tarım ve keşif, bilim ve fethi ustalıkla hallettik; şimdi odağımızı kendi barışımızı ustalaşmaya çevirmeliyiz. Serebral Röleler, zihinlerimizi iyilik için kullanabileceğimiz ve şiddetli yanlış anlaşılmalar yaratan parçamızı huzura kavuşturabileceğimiz yeni bir geleceğin yolunu açacaktır."
+  coex_crisis.1000.a:"Gelecek barıştır."
+
+  coex_crisis.7105.name:"Kriz Seviyesi 2"
+  coex_crisis.7105.desc:"Barış arayışımıza devam ederken, daha büyük iyilik için zor kararlar almamız gerektiğini biliyoruz. Serebral Rölelerimiz aktif ve gelecekteki ilerlemenin zor işini yapıyorlar. Rölelerin gücünü artırmak için Aydınlanma Dizisi'nin zarif teknolojisini inşa ediyoruz. Diğer imparatorluklar etkilerine girdikçe, barış uyuyan bir dünyanın üzerine doğan güneş gibi yayılıyor. Fethetmek değil, birleştirmek istiyoruz. Karanlık bir köşeye fener tutar gibi, gölgeleri kaldırarak galaksinin uzak noktalarını aydınlatıyoruz."
+  coex_crisis.7105.a:"Işık olsun."
+
+  coex_crisis.7110.name:"Kriz Seviyesi 3"
+  coex_crisis.7110.desc:"Zaten etkileyici olan Aydınlanma Dizisi'ni şimdi yükselttik. Bu, kalıcı barışı sağlama misyonumuzda önemli bir anı işaret ediyor. Nazik düşünce telkinleriyle, şiddet yerini dünyamızın umutsuzca ihtiyaç duyduğu uyuma ve sükunete bırakıyor. Tasarlanmış ve kalıcı bu barış, toplumu asi bireyselliğin kaosundan kurtarıyor. Hizaya getirilen her uzaylı zihniyle, hayal ettiğimiz geleceğe bir adım daha yaklaşıyoruz."
+  coex_crisis.7110.a:"Anlaşmanın uyumu güzeldir."
+
+  coex_crisis.7115.name:"Kriz Seviyesi 4"
+  coex_crisis.7115.desc:"Aydınlanma Dizimiz bir kez daha yükseltildi. Gücümüzü artırdık ve artık tüm imparatorlukları galaktik barışa yönelik hayırsever hedefimize doğru yönlendirebiliriz."
+  coex_crisis.7115.a:"Hayırseverlikle liderlik ediyoruz."
+
+  coex_crisis.7120.name:"Kriz Seviyesi 5"
+  coex_crisis.7120.desc:"Son güncellemeler tamamlandı. Aydınlanma Dizimiz galaksindeki tüm yaşamı hedeflemeye başlıyor. Hedefimize yakınız, ancak tetikte kalmalıyız. Değişim ve olasılıklardan çekinen diğer imparatorluklar endişelenmeye başlayabilir."
+  coex_crisis.7120.a:"Son çatışma kapıda."
+
+  coex_crisis.7200.name:"Serebral Röle Ele Geçirildi"
+  coex_crisis.7200.desc:"§Y[coex_relay_builders.GetName]§! tarafından inşa edilen bir Serebral Röle'yi ele geçirdik! Onu yok etmek, etkilenen imparatorluğu etkisinden kurtaracaktır."
+  coex_crisis.7200.A:"Yok edilmeli"
+  coex_crisis.7210.name:"Serebral Röle Yok Edildi"
+  coex_crisis.7210.desc:"§Y[coex_relay_builders.GetName]§! tarafından inşa edilen bir Serebral Röle yok edildi. Etkisinden kurtulmuş olarak, ne kadar kolay manipüle edildiğimizi şimdi görüyoruz."
+  coex_crisis.7210.b:"Bu affedilmez."
+  coex_crisis.7210.a:"İntikamımızı alacağız."
+
+  coex_crisis.7220.name:"Serebral Röle Yok Edildi"
+  coex_crisis.7220.desc:"§Y[coex_destroyed_relay_system.GetName]§!'deki Serebral Rölemiz yok edildi. Etkilenen imparatorluk şimdi onun etkisinden kurtuldu."
+  coex_crisis.7220.a:"Talihsiz."
+  coex_crisis.7300.name:"Aydınlanma Dizisi"
+  coex_crisis.7300.desc:"Zamanı geldi. Aydınlanma Dizisi'ni ateşlemek ve bu galaksiyi oluşturan asi bireyleri kontrol etmek için hazırlıklara başlamalıyız."
+
+
+
+
+
+
+
+
+###Operations
+
+
+
+
+  coex_operation_already_attempted_subjugation:"Bu operasyon bu imparatorluk üzerinde zaten denendi."
+
+  coex_affected_by_brain_relay_0:"Serebral Röle Etkisinde (Aşama 1)"
+  coex_affected_by_brain_relay_1:"Serebral Röle Etkisinde (Aşama 2)"
+  coex_affected_by_brain_relay_2:"Serebral Röle Etkisinde (Aşama 3)"
+  coex_affected_by_brain_relay_3:"Serebral Röle Etkisinde (Aşama 4)"
+
+
+  coex_brain_relay_removed:"Serebral Röleden Kurtuldu"
+
+  # mod_coex_brain_relay_limit_add: "REPLACE_ME"
+  
+  coex_approach_continue:"Devam Et"
+  coex_approach_continue_effect:"Galaksiyi aydınlanmaya doğru yönlendir."
+
+
+
+#Situations
+  coex_situation_crisis_subjugation:"Zihinsel Boyun Eğdirme"
+  coex_situation_crisis_subjugation_type:"Zihinsel Boyun Eğdirme"
+  coex_situation_crisis_subjugation_desc:"Nüfusumuzun büyük bir kısmı, §Y[coex_subjugator.GetName]§!'ın vasalı olmamızı talep ediyor! Bu hareketin kökenleri bilinmiyor, ancak şüpheli."
+  coex_string_situation_pathetic:"Onların imparatorluğuna kıyasla acınası durumdayız."
+  coex_string_situation_inferior:"İmparatorluğumuz onlarınkinden aşağı."
+  coex_string_situation_superior:"İmparatorluğumuz üstün."
+  coex_string_situation_overwhelming:"İmparatorluğumuz ezici bir şekilde daha güçlü."
+  coex_situation_crisis_subjugation_monthly_change_tooltip:"Bu §YDurdum§!'un ilerleyişi seçtiğimiz §YYaklaşım§!'a bağlıdır. Eğer £influence£ etki puanımız biterse, halkımızı [coex_subjugator.GetAdj]§! yönetimine direnmeleri için ikna edemeyiz."
+  coex_situation_subjugation_subjugated_tooltip:"Boyun Eğdirme"
+  coex_situation_subjugation_finish_tooltip:"Özgürlük"
+  coex_approach_resist:"Direniş"
+  coex_approach_resist_effect:"Halkımızı kendi başımıza güçlü olduğumuza ikna edin."
+  coex_approach_accept:"Kabul Et"
+  coex_approach_accept_effect:"§Y[coex_subjugator.GetName]§!'a boyun eğmek en iyi hareket tarzıdır."
+
+  coex_situation_crisis_enlightenment:"Gerçek Aydınlanma"
+  coex_situation_crisis_enlightenment_type:"Gerçek Aydınlanma"
+  coex_situation_crisis_enlightenment_desc:"Nihayet Aydınlanma Dizisi tamamlandı. Yakında galaksi bireyselliğin kaosundan ve anlaşmazlığın çekişmesinden kurtulacak. Yalnızca biz galaksiye gerçek barışı getirebiliriz."
+  coex_situation_crisis_enlightenment_monthly_change_tooltip:"Bu §YDurdum§!'un ilerleyişi, Aydınlanma Dizisi'nin kontrolünü sürdürmeye bağlıdır. Eğer onu kaybedersek, tekrar kontrolü ele geçirene kadar ilerleyiş duracak."
+  coex_situation_enlightenment_tooltip:"Aydınlanma"
+  coex_approach_recover_array:"Aydınlanma Dizisini Kurtar"
+  coex_approach_recover_array_effect:"Aydınlanma Dizimizi kurtarmalıyız."
+
+  coex_situation.103.name:"Zihinsel Boyun Eğdirme"
+  coex_situation.103.desc:"§Y[Owner.Overlord.GetName]§! tarafından boyun eğdirildik! Artık açıkça görülüyor ki bu, imparatorluğumuz için tek yoldur."
+  coex_situation.104.name:"Boyun Eğdirme Direnişi"
+  coex_situation.104.desc:"Büyük bir çabayla boyun eğdirilmeye direndik. Bu, imparatorluğumuz için büyük bir zaferdir."
+  coex_situation.104.a:"Bu kadar kolay yenilmeyeceğiz"
+
+  
+  coex_situation.303.name:"Aydınlanma"
+  coex_situation.303.desc:"Daha önce kimsenin yapamadığını başardık: galaksiyi hizaladık, bireysel düşüncenin kaosuna son verdik, zihinsel telkinle kitleleri aydınlattık ve kalıcı bir barış getirdik."
+  coex_situation.303.a:"Sonunda, gerçek barış olacak."
+  coex_situation.305.name:"Aydınlanma"
+  coex_situation.305.desc:"Artık daha iyi bir galaksinin parçasıyız. Neden direnmiştik ki? Aydınlanma Dizisi imkansızı başardı ve hepimize kalıcı barış ve uyum getirdi."
+  coex_situation.305.a:"Hayır..."
+
+
+  coex_situation.110.name:"Sadakat Sağla"
+  coex_situation.110.desc:"§Y[coex_subjugation_target.GetName]§! boyun eğdirildi."
+  coex_situation.111.name:"Sadakat Sağla"
+  coex_situation.111.desc:"§Y[coex_subjugation_target.GetName]§! boyun eğdirilmeye direndi."
+

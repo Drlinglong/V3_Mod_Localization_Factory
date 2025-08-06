@@ -1,0 +1,9 @@
+﻿l_simp_chinese:
+
+STATE_building_government_administration_profit_DESC: "每个$building_government_administration$花费：@money![State.MakeScope.ScriptValue('cnm_state_building_government_administration_profit')|D+]\n每个$building_government_administration$征收：@money![Multiply_CFixedPoint(State.MakeScope.ScriptValue('cnm_state_building_government_administration_tax_capacity_rate'), State.GetTaxationRevenue )|D+]\n全部$building_government_administration$$state_tax_capacity_add$：[State.MakeScope.ScriptValue('cnm_state_building_government_administration_tax_capacity')]\n每个$building_government_administration$$state_tax_capacity_add$：[State.MakeScope.ScriptValue('cnm_state_building_government_administration_tax_capacity_per_level')]"
+#\n全部$building_government_administration$$state_tax_capacity_add$占比：[State.MakeScope.ScriptValue('cnm_state_building_government_administration_tax_capacity_rate')|%]
+
+commander_offense_DESC: "$concept_commander$自身的$concept_offense$，排除了$concept_order$的影响。\n仅计算原版数值，如果你启用了其他MOD带来的$concept_order$，那么数值计算将不正确。"
+commander_defense_DESC: "$concept_commander$自身的$concept_defense$，排除了$concept_order$的影响。\n仅计算原版数值，如果你启用了其他MOD带来的$concept_order$，那么数值计算将不正确。"
+
+TOOLTIP_state_available_workers: "$peasants_no_icon$：[State.MakeScope.ScriptValue('cnm_state_subsistence_workers')|1Dv]\n$concept_unemployed$：[State.MakeScope.ScriptValue('cnm_state_unemployed')|1Dv]"

@@ -1,0 +1,2 @@
+﻿l_english:
+ GDP_TOOLTIP:1 "#header [concept_gdp]#!\n[Country.GetAdjective] $GDP_SHORT$: @money![Country.GetGDP|Dv] ($GDPGR_growth_text$) ([Country.GetGDPRanking])\n$TOOLTIP_DELIMITER$\nGDP per Capita: #variable @money![Country.GetGDPPerCapita|2*]#! ([Country.GetGDPPerCapitaRanking])\n$TOOLTIP_DELIMITER$\n[Country.GetAdjective] $GDP_SHORT$ is [Country.MakeScope.ScriptValue('larp_global_gdp_percent')|%v2] of Global GDP\nGlobal GDP: @money![Country.MakeScope.ScriptValue('larp_global_gdp')|Dv]\n"

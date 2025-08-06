@@ -1,0 +1,233 @@
+﻿l_polish:
+##################
+# hcp_l_english.yml
+# By jam1066
+##################
+
+ #start
+ ### No Loc Vanilla Effects and Triggers
+ effect_every_rim_system:"Każdy System na Obrzeżach"
+ any_rim_system_trigger:"Dowolny System na Obrzeżach"
+ count_rim_system_trigger:"Liczba Systemów na Obrzeżach$CONDITIONS$ $IS_NOT$ $COMPARATOR$ $NUM|Y$"
+
+ ### Victory Score
+ hcp_harvested_systems_score:"Zebrane Systemy Gwiezdne: $VALUE$"
+
+ ### Ascension Perks
+ hcp_ap_harvesters:"Żniwiarze"
+ hcp_ap_harvesters_desc:"Ciepła śmierć wszechświata stanowi punkt zwrotny, poza którym istnienie, jakie znamy, staje się niemożliwe. Aby ją przetrwać, musimy rozpocząć przygotowania już teraz."
+ hcp_ap_tooltip:"Pozwala [this.GetName] na postępy w kierunku §YStania się §RKryzysem§!§!."
+
+ ### Technology
+ hcp_tech_mining_drone:"Dron Górniczy"
+ hcp_tech_mining_drone_desc: "$hcp_menp_mining_drone_desc$"
+ hcp_TECH_UNLOCK_MINING_DRONE_CONSTRUCTION_TITLE:"§HOdblokowuje typ statku:§! Dron Górniczy"
+ hcp_TECH_UNLOCK_MINING_DRONE_CONSTRUCTION_DESC:"§HDron Górniczy§!\n$hcp_menp_mining_drone_desc$"
+
+ hcp_tech_excavator_drone:"Dron Kopiący"
+ hcp_tech_excavator_drone_desc: "$hcp_menp_excavator_drone_desc$"
+ hcp_TECH_UNLOCK_EXCAVATOR_DRONE_CONSTRUCTION_TITLE:"§HOdblokowuje typ statku:§! Dron Kopiący"
+ hcp_TECH_UNLOCK_EXCAVATOR_DRONE_CONSTRUCTION_DESC:"§HDron Kopiący§!\n$hcp_menp_excavator_drone_desc$"
+
+ ### Harvested Systems
+ hcp_pc_harvested_system:"Pusta Przestrzeń"
+ hcp_pc_harvested_system_desc:"Pusta przestrzeń, w większości pozbawiona materii."
+ hcp_sc_harvested_system: "$hcp_pc_harvested_system$"
+ hcp_sc_harvested_system_desc: "$hcp_pc_harvested_system_desc$"
+
+ ### Casus Belli
+ casus_belli_hcp_cb_harvest:"Żniwa"
+ casus_belli_hcp_cb_containment: "$casus_belli_cb_containment$"
+
+ ### War Goals
+ war_goal_hcp_wg_end_threat_harvesters: "$war_goal_wg_end_threat$"
+ war_goal_hcp_wg_end_threat_harvesters_desc: "$war_goal_wg_end_threat_desc$"
+ war_goal_hcp_wg_resource_acquisition:"Pozyskiwanie Zasobów"
+ war_goal_hcp_wg_resource_acquisition_desc:"Wojna prowadzona jest w celu pozyskania terytorium wroga."
+ war_goal_hcp_wg_resource_acquisition_vs_fe: "$war_goal_hcp_wg_resource_acquisition$"
+ war_goal_hcp_wg_resource_acquisition_vs_fe_desc: "$war_goal_hcp_wg_resource_acquisition_desc$"
+
+ ### Opinion Modifier
+ 
+ ### Crisis Tab
+ hcp_crisobj_build_mining_stations_name:"Zbuduj Stacje Górnicze"
+ hcp_crisobj_build_mining_stations_desc:"Musimy rozszerzyć nasze orbitalne operacje górnicze.\n\nZbuduj nowe §YStacje Górnicze§!, aby otrzymać tę nagrodę $hcp_mining_efficiency$."
+ hcp_crisobj_scavenge_debris_name:"Odzyskaj Szczatki"
+ hcp_crisobj_scavenge_debris_desc:"Musimy dopilnować, aby żadne zasoby się nie marnowały.\n\nUstaw swoją politykę §YSzczątków§! na §YOdzysk§! i niech §YStatki Naukowe§! odzyskują szczątki, aby otrzymać tę nagrodę $hcp_mining_efficiency$."
+ hcp_crisobj_harvest_planets_name:"Zbieraj Planety"
+ hcp_crisobj_harvest_planets_desc:"Planety to nic więcej niż duże złoża zasobów. Czas zacząć je tak traktować.\n\nZbuduj §Y$hcp_orbital_quarrier$s§! i ukończ sytuacje §Y$hcp_situation_harvest_planet_type$§!, aby otrzymać tę nagrodę $hcp_mining_efficiency$."
+ hcp_crisobj_harvest_star_systems_name:"Żniwa Systemów Słonecznych"
+ hcp_crisobj_harvest_star_systems_desc:"Systemy słoneczne nieefektywnie wykorzystują zawartą w nich materię. Czas, abyśmy lepiej ją wykorzystali.\n\nUżyj kolosa §Y$hcp_PLANET_KILLER_STELLAR_HARVESTER$§! wyposażonego na naszych §Y$hcp_stellar_harvester_plural$§!, aby otrzymać tę nagrodę $hcp_mining_efficiency$."
+ hcp_crisobj_galcom_industrial_resolution_name:"Zyskaj Wsparcie Wspólnoty Galaktycznej"
+ hcp_crisobj_galcom_industrial_resolution_desc:"Przekonanie członków Wspólnoty Galaktycznej o znaczeniu naszych operacji pozyskiwania byłoby dużym krokiem w kierunku realizacji naszych planów.\n\nSpraw, aby §YWspólnota Galaktyczna§! przyjęła §YUchwały§! dotyczące Rozwoju Przemysłowego, aby otrzymać tę §Yroczną§! nagrodę $hcp_mining_efficiency$."
+ hcp_crisobj_have_matter_decompressors_name:"Kontroluj Dekompresory Materii"
+ hcp_crisobj_have_matter_decompressors_desc:"Położony delikatnie na horyzoncie zdarzeń czarnej dziury, ten najnowocześniejszy obiekt służy do pozyskiwania cennych minerałów, które kiedyś uważano za niedostępne.\n\nKontroluj w pełni ulepszone megastruktury §YDekompresor Materii§!, aby otrzymać tę §Yroczną§! nagrodę $hcp_mining_efficiency$."
+ hcp_crisobj_have_arc_furnaces_name:"Kontroluj Piece Łukowe"
+ hcp_crisobj_have_arc_furnaces_desc:"Piece Łukowe pozwalają nam efektywnie wydobywać i przetwarzać cenne minerały z inaczej nieopłacalnych złóż.\n\nKontroluj w pełni ulepszone megastruktury §YPiec Łukowy§!, aby otrzymać tę §Yroczną§! nagrodę $hcp_mining_efficiency$."
+ hcp_crisobj_have_prospectorium_vassals_name:"Utrzymaj Wasali Prospektorium"
+ hcp_crisobj_have_prospectorium_vassals_desc:"Podmioty skoncentrowane na zasobach mogą pomóc nam poprawić wydajność naszych operacji pozyskiwania.\n\nUtrzymaj §YWasali Prospektorium§!, aby otrzymać tę §Yroczną§! nagrodę $hcp_mining_efficiency$."
+ 
+ hcp_crisis_harvesters_level_1:"§bPoszukiwania§!"
+ hcp_crisis_harvesters_level_1_desc:"Poziom Kryzysu 1"
+ hcp_crisis_harvesters_level_2:"§bEksploracja§!"
+ hcp_crisis_harvesters_level_2_desc:"Poziom Kryzysu 2"
+ hcp_crisis_harvesters_level_3:"§bEkstrakcja§!"
+ hcp_crisis_harvesters_level_3_desc:"Poziom Kryzysu 3"
+ hcp_crisis_harvesters_level_4:"§bWykopy§!"
+ hcp_crisis_harvesters_level_4_desc:"Poziom Kryzysu 4"
+ hcp_crisis_harvesters_level_5:"§bZagrożenie Egzystencjalne§!"
+ hcp_crisis_harvesters_level_5_desc:"Poziom Kryzysu 5"
+ 
+ ### Crisis Perks Level 1
+ ## Prospector Drone
+ hcp_menp_prospector_drone: "$hcp_prospector_drone$"
+ hcp_unlock_prospector_drone:"Odblokowuje §Y$hcp_prospector_drone$ Statek Naukowy§!, który jest tańszy w budowie i ma 50% szans na odkrycie złóż minerałów podczas badania planet bez złóż."
+ hcp_menp_prospector_drone_desc:"Dron zwiadowczy zaprojektowany z potężnymi skanerami, aby odkryć nawet najgłębsze złoża minerałów."
+
+ ## Mining Efficiency
+ hcp_menp_mining_efficiency: "$hcp_mining_efficiency$"
+ hcp_unlock_mining_efficiency:"Umożliwia akumulację £hcp_mining_efficiency£ §Y$hcp_mining_efficiency$§! poprzez ukończenie §HCelów Kryzysowych§!."
+ hcp_menp_mining_efficiency_desc: "$hcp_mining_efficiency_desc$"
+
+ ## Standardised Orbital Mining
+ hcp_menp_standardised_orbital_mining:"Standaryzowane Wydobycie Orbitalne"
+ hcp_unlock_mech_standardised_orbital_mining:"Odblokowuje technologię dla komponentów statków: §YLaser Tnący§!.\n"
+ hcp_unlock_bio_standardised_orbital_mining:"Odblokowuje technologię dla komponentów statków: §YProjektor Wiązki Górniczej§!."
+ hcp_menp_standardised_orbital_mining_desc:"Poprzez wprowadzenie ścisłej standaryzacji naszych procedur wydobycia orbitalnego, możemy zwiększyć ich ogólną wydajność."
+
+ ## Infinite Storage
+ hcp_menp_infinite_storage:"Nieskończone Składowanie"
+ hcp_unlock_infinite_storage:"Odblokowuje Megastrukturę §Y$hcp_singularity_silo$§!.\n"
+ hcp_menp_infinite_storage_desc:"Aby pomieścić potrzebne zasoby, standardowe rozwiązania magazynowe nie są wystarczające. Musimy wykorzystać nieskończoną pojemność czarnych dziur na naszą korzyść."
+
+ ### Crisis Perks Level 2
+ ## Mining Drone
+ hcp_menp_mining_drone: "$hcp_mining_drone$"
+ hcp_unlock_mining_drone:"Odblokowuje §Y$hcp_mining_drone$§!."
+ hcp_menp_mining_drone_desc:"Specjalistyczny dron górniczy, zdolny do użycia potężnych laserów górniczych lub materiałów wybuchowych."
+
+ ## Energised Mining Equipment
+ hcp_menp_energised_mining_equipment:"Zasilany Sprzęt Górniczy"
+ hcp_menp_energised_mining_equipment_desc:"Wdrożenie wysokowydajnego sprzętu górniczego nawet w naszych najbardziej odległych operacjach wydobywczych, dramatycznie zwiększy naszą wydajność wydobycia."
+
+ ## Detritus Recycling
+ hcp_menp_detritus_recycling:"Recykling Szczatków"
+ hcp_unlock_detritus_recycling:"Zniszczone §YStatki§! pozostawiają szczątki, które można badać, aby odzyskać część ich kosztów. (§G10%§!)"
+ hcp_menp_detritus_recycling_desc:"Górnictwo to niebezpieczny biznes. Posiadając solidne procedury odzysku, możemy zminimalizować utratę wydajności wynikającą z wypadków."
+
+ ### Crisis Perks Level 3
+ ## Excavator Drone
+ hcp_menp_excavator_drone: "$hcp_excavator_drone$"
+ hcp_unlock_excavator_drone:"Odblokowuje §Y$hcp_excavator_drone$§!"
+ hcp_menp_excavator_drone_desc:"Większy dron przeznaczony do usuwania dużych fragmentów skał w celu pozyskania niedostępnych w inny sposób zasobów."
+
+ ## Planetary Quarrying
+ hcp_menp_planetary_quarrying:"Eksploatacja Planetarna"
+ hcp_unlock_planetary_quarrying:"Odblokowuje Megastrukturę §Y$hcp_orbital_quarrier$§!."
+ hcp_menp_planetary_quarrying_desc:"Nie możemy pozwolić sobie na selektywność w rodzajach pozyskiwanych zasobów. Cała materia ma dla nas wartość i powinna zostać zebrana."
+
+ ## Improved Mining Lasers
+ hcp_menp_improved_mining_lasers:"Ulepszone Lasery Górnicze"
+ hcp_menp_improved_mining_lasers_desc:"Dostosowanie naszych laserów górniczych do lepszej wydajności podczas napotykania zakłócających pól energetycznych zwiększy naszą zdolność operacyjną w egzotycznych środowiskach."
+
+ ### Crisis Perks Level 4
+ ## Stellar Harvester Prototype
+ hcp_menp_stellar_harvesters: "$hcp_stellar_harvester_prototype$"
+ hcp_unlock_stellar_harvesters:"Odblokowuje Megastrukturę §Y$hcp_stellar_harvester_prototype$§!.\n"
+ hcp_menp_stellar_harvesters_desc:"Gigantyczny statek kontrolny dronów, zdolny do wypuszczania rojów dronów do pozyskiwania zasobów z całych układów słonecznych."
+
+ ## Efficient Metallurgy
+ hcp_menp_efficient_metallurgy:"Wydajna Metalurgia"
+ hcp_unlock_efficient_metallurgy_minerals:"$mod_planet_metallurgists_minerals_upkeep_add$: §G-3§!\n"
+ hcp_unlock_efficient_metallurgy_minerals_machine:"$mod_planet_metallurgists_minerals_upkeep_add$: §G-4§!\n"
+ hcp_unlock_efficient_metallurgy_food:"$mod_planet_metallurgists_food_upkeep_add$: §G-4.5§!\n"
+ hcp_unlock_efficient_metallurgy_food_machine:"$mod_planet_metallurgists_food_upkeep_add$: §G-6§!\n"
+ hcp_menp_efficient_metallurgy_desc:"Poprawa wydajności naszych procesów metalurgicznych pozwoli nam zaoszczędzić zasoby na czasy, gdy będą najbardziej potrzebne."
+
+ ## Field Repairs
+ hcp_menp_field_repairs:"Naprawy Polowe"
+ hcp_unlock_field_repairs:"Za każdy zniszczony statek wrogiego imperium:$TABBED_NEW_LINE$Losowy statek w £military_ship£ §YFlocie§!: §G$@hcp_field_repairs_heal|%0$§! £ship_stats_hitpoints£ Punktów Wytrzymałości Kadłuba Odnowionych\n"
+ hcp_menp_field_repairs_desc:"Możemy sobie pozwolić na wykorzystanie części nowo pozyskanych materiałów do konserwacji naszego sprzętu górniczego."
+
+ ### Crisis Perks Level 5
+ ## Perpetual Replication
+ hcp_menp_perpetual_replication:"Wieczna Replikacja"
+ hcp_unlock_perpetual_replication:"Odblokowuje megastrukturę §Y$hcp_stellar_harvester$§!.\nOdblokowuje także zdolność dla §Y$hcp_stellar_harvester_plural$§! do §YReplikacji§!, co pozwala na wykładnicze rozszerzenie naszych operacji pozyskiwania zasobów.\n"
+ hcp_menp_perpetual_replication_desc:"Nasze Gwiezdne Harvestery będą służyć zarówno jako górnicy, jak i magazyny, przekształcając zebrane zasoby w kolejne egzemplarze samych siebie."
+
+ hcp_menp_galactic_harvest:"Galaktyczne Żniwa"
+ hcp_unlock_galactic_harvest:"Odblokowuje Sytuację §YOutward Bound§!. Po zakończeniu testów §Y$hcp_stellar_harvester_prototype$§! możemy znacznie zwiększyć nasze operacje.\n"
+ hcp_menp_galactic_harvest_desc:"Aby uruchomić nasze żniwa wszechświata, musimy zgromadzić wystarczające zasoby. Wartość całej galaktyki powinna wystarczyć."
+
+ ##Eternal Sanctuaries
+ hcp_menp_eternal_sanctuaries:"Wieczne Sanktuaria"
+ hcp_unlock_eternal_sanctuaries:"Odblokowuje decyzję planetarną §Y$hcp_decision_expand_sanctuary$§! dla §YSanktuariów§! wokół naszego §Y$hcp_singularity_silo$§!.\n"
+ hcp_menp_eternal_sanctuaries_desc:"Musimy zapewnić, by nasze sanktuaria miały pojemność wystarczającą do pomieszczenia całej naszej cywilizacji i były wystarczająco trwałe, by przetrwać wiecznie."
+
+ ### Crisis Level Requirements
+ hcp_NO_BLACK_HOLE:"Pozyskaj Czarną Dziurę"
+ hcp_NO_BLACK_HOLE_DESC:"Potrzebujemy §HCzarnej Dziury§!, aby zbudować §Y$hcp_singularity_silo_4$§!. Możemy albo pozyskać jedną z już znanych, albo ustawić nasze stacje obserwacyjne, aby poszukały wcześniej przeoczonej."
+
+ hcp_BUILD_SINGULARITY_SILO_LEVEL_1: "$hcp_singularity_silo_1$"
+ hcp_BUILD_SINGULARITY_SILO_LEVEL_1_DESC:"Silos Osobliwości to ostateczne rozwiązanie do przechowywania. Ten pierwszy etap będzie w stanie pomieścić jedynie 25% swojej potencjalnej pojemności, ale to więcej niż wystarczy, abyśmy mogli zacząć."
+ hcp_BUILD_SINGULARITY_SILO_LEVEL_1_TOOLTIP:"Użyj §YStatku Konstrukcyjnego§!, aby zbudować pierwszy etap §Y$hcp_singularity_silo$§! wokół §HCzarnej Dziury§!."
+ hcp_harvesters_level_2_req_clear_tooltip:"£trigger_yes£ Zbudowano pierwszy etap Megastruktury §H$hcp_singularity_silo$§!."
+ hcp_harvesters_level_2_req_tooltip:"£trigger_no£ Nie zbudowano pierwszego etapu Megastruktury §H$hcp_singularity_silo$§!."
+
+ hcp_BUILD_SINGULARITY_SILO_LEVEL_2: "$hcp_singularity_silo_2$"
+ hcp_BUILD_SINGULARITY_SILO_LEVEL_2_DESC:"Silos Osobliwości to ostateczne rozwiązanie do przechowywania. Ten drugi etap będzie w stanie pomieścić jedynie 50% swojej potencjalnej pojemności, ale pozwoli nam to znacząco rozszerzyć nasze zapasy zasobów."
+ hcp_BUILD_SINGULARITY_SILO_LEVEL_2_TOOLTIP:"Ulepsz nasz §Y$hcp_singularity_silo$§! do drugiego etapu."
+ hcp_harvesters_level_3_req_clear_tooltip:"£trigger_yes£ Zbudowano drugi etap Megastruktury §H$hcp_singularity_silo$§!."
+ hcp_harvesters_level_3_req_tooltip:"£trigger_no£ Nie zbudowano drugiego etapu Megastruktury §H$hcp_singularity_silo$§!."
+
+ hcp_BUILD_SINGULARITY_SILO_LEVEL_3: "$hcp_singularity_silo_3$"
+ hcp_BUILD_SINGULARITY_SILO_LEVEL_3_DESC:"Silos Osobliwości to ostateczne rozwiązanie do przechowywania. Ten trzeci etap będzie w stanie pomieścić jedynie 75% swojej potencjalnej pojemności, ale pozwoli nam to znacząco rozszerzyć nasze zapasy zasobów."
+ hcp_BUILD_SINGULARITY_SILO_LEVEL_3_TOOLTIP:"Ulepsz nasz §Y$hcp_singularity_silo$§! do trzeciego etapu."
+ hcp_harvesters_level_4_req_clear_tooltip:"£trigger_yes£ Zbudowano trzeci etap Megastruktury §H$hcp_singularity_silo$§!."
+ hcp_harvesters_level_4_req_tooltip:"£trigger_no£ Nie zbudowano trzeciego etapu Megastruktury §H$hcp_singularity_silo$§!."
+
+ hcp_BUILD_SINGULARITY_SILO_LEVEL_4: "$hcp_singularity_silo_4$"
+ hcp_BUILD_SINGULARITY_SILO_LEVEL_4_DESC:"Silos Osobliwości to ostateczne rozwiązanie do przechowywania. Po ukończeniu będzie w stanie pomieścić całą naszą cywilizację, wraz z zasobami niezbędnymi do jej nieskończonego utrzymania."
+ hcp_BUILD_SINGULARITY_SILO_LEVEL_4_TOOLTIP:"Ulepsz nasz §Y$hcp_singularity_silo$§! do ostatecznego etapu."
+ hcp_harvesters_level_5_req_clear_tooltip:"£trigger_yes£ Zbudowano ostateczny etap Megastruktury §H$hcp_singularity_silo$§!."
+ hcp_harvesters_level_5_req_tooltip:"£trigger_no£ Nie zbudowano ostatecznego etapu Megastruktury §H$hcp_singularity_silo$§!."
+
+ hcp_BUILD_STELLAR_HARVESTER_PROTOTYPE:"Zbuduj Prototyp Gwiezdnego Harvestera"
+ hcp_BUILD_STELLAR_HARVESTER_PROTOTYPE_DESC:"Aby przyspieszyć ich rozwój, musimy zbudować i przetestować §YPrototyp Gwiezdnego Harvestera§!. To kosztowne i czasochłonne przedsięwzięcie, ale jeśli się powiedzie, może znacząco przyspieszyć nasze operacje pozyskiwania zasobów."
+ hcp_BUILD_STELLAR_HARVESTER_PROTOTYPE_TOOLTIP:"Zbuduj §YPrototyp Gwiezdnego Harvestera§! na orbicie §H[this.GetName]§!."
+
+ hcp_TEST_STELLAR_HARVESTER_PROTOTYPE:"Przetestuj Prototyp Gwiezdnego Harvestera"
+ hcp_TEST_STELLAR_HARVESTER_PROTOTYPE_DESC:"Po ukończeniu prototypu pozostaje tylko go przetestować. Zidentyfikowaliśmy System §H[this.GetName]§! jako odpowiedni cel, ale moglibyśmy poszukać innego systemu."
+ hcp_TEST_STELLAR_HARVESTER_PROTOTYPE_TOOLTIP:"Przetestuj §YPrototyp Gwiezdnego Harvestera§! w Systemie §H[this.GetName]§!."
+
+ hcp_harvesters_level_5_test_fire_clear_tooltip:"£trigger_yes£ Zbudowano i przetestowano §H$hcp_stellar_harvester_prototype$§!."
+ hcp_harvesters_level_5_test_fire_tooltip:"£trigger_no£ Nie zbudowano i nie przetestowano §H$hcp_stellar_harvester_prototype$§!."
+
+ hcp_harvesters_level_5_sanctuary_clear_tooltip:"£trigger_yes£ Skolonizowano co najmniej jedno z naszych §HSanktuariów§!."
+ hcp_harvesters_level_5_sanctuary_tooltip:"£trigger_no£ Nie skolonizowano co najmniej jednego z naszych §HSanktuariów§!."
+ 
+ #############
+ # Crisis UI #
+ #############
+
+ hcp_mining_efficiency:"Wydajność Górnicza"
+ hcp_mining_efficiency_name:"$hcp_mining_efficiency$:"
+ hcp_mining_efficiency_value:"£hcp_mining_efficiency£ $VAL|0$"
+ hcp_mining_efficiency_gaining:"Ukończ §HCele Kryzysowe§!, aby zyskać więcej £hcp_mining_efficiency£ §Y$hcp_mining_efficiency$§!."
+ hcp_mining_efficiency_desc:"$hcp_mining_efficiency$ mierzy ogólną efektywność naszych technik zbioru."
+ hcp_mining_efficiency_crisis_objective:"Cele Kryzysowe"
+ hcp_mining_efficiency_crisis_objective_gained:"$hcp_mining_efficiency$ zdobyte"
+ hcp_mining_efficiency_crisis_objective_reward: "$REWARD$"
+ hcp_mining_efficiency_crisis_objective_progress:"Zdobyliśmy £hcp_mining_efficiency£ $AMOUNT$ z tego Celu Kryzysowego."
+ hcp_mining_efficiency_crisis_level_locked:"Wymagane do odblokowania tego poziomu:\n"
+ hcp_mining_efficiency_crisis_level_unlocked:"Na poziomie $LEVEL$ otrzymujesz nagrody:\n"
+ hcp_mining_efficiency_crisis_level_desc:"Aby awansować przez poziomy Kryzysu, akumuluj $hcp_mining_efficiency$ i ulepsz Megastrukturę $hcp_singularity_silo$."
+ hcp_mining_efficiency_crisis_level_unlock:"Posiada £hcp_mining_efficiency£ §Y$CURRENCY$§! $hcp_mining_efficiency$"
+ hcp_mining_efficiency_current_value:"Bieżąca Wartość: §Y$VALUE|0$§!"
+ 
+ hcp_mining_efficiency_crisis_description_title: "$hcp_ap_harvesters$"
+ hcp_mining_efficiency_crisis_description:"$menace_crisis_description_intro$\n\nCzas nagli. Musimy skonsolidować jak najwięcej materii, aby przedłużyć istnienie naszej cywilizacji. Każda cząsteczka, którą pominiemy, może kosztować nas tysiące lat."
+ hcp_mining_efficiency_crisis_howto_title:"§HEfektywność i Techniki§!"
+ hcp_mining_efficiency_crisis_howto:"Realizowanie §HCelów Kryzysowych§! generuje £hcp_mining_efficiency£ §H$hcp_mining_efficiency$§!, poprawiając efektywność naszych operacji ekstrakcji zasobów. Ostatecznie, możemy rozwinąć §HTechniki Zbioru§!, aby efektywnie zbierać całe układy słoneczne, pozwalając nam przyspieszyć nasze żniwa §HWszechświata§!!"
+
+ #end

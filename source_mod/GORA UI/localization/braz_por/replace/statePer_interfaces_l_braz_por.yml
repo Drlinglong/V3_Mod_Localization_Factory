@@ -1,0 +1,4 @@
+﻿l_braz_por:
+ CURRENT_GDP_STATE:2 "#header [concept_gdp] [State.GetOwner.GetAdjectiveNoFormatting] de [State.GetName]#!\n$TOOLTIP_DELIMITER$\nContribuição do PIB anual atual: #variable @money![State.GetGDPContribution|K]#!\nO PIB per capita de [State.GetName] é: #variable @money![State.MakeScope.ScriptValue('get_state_gdp_per')|Dv]#!\nDiferença do PIB per capita de [State.GetName] em relação a [State.GetOwner.GetAdjectiveNoFormatting]: #variable @money![State.MakeScope.ScriptValue('get_country_state_relative_value')|D2+=]#!\nDiferença do PIB per capita de [State.GetName] em relação ao global: #variable @money![State.MakeScope.ScriptValue('get_global_state_relative_value')|D2+=]#!\n[State.GetName] está contribuindo com #variable [State.GetGDPContributionPercentage|%1]#! do $GDP_SHORT$ [State.GetOwner.GetAdjectiveNoFormatting]\n\n[State.GetGDPGoodsContributionBreakdown]"
+
+

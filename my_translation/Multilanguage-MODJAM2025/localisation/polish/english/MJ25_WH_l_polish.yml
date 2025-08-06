@@ -1,0 +1,574 @@
+﻿l_polish:
+
+ ##############################
+ # SHIPS
+ ##############################
+
+ MJ25_WH_silent_witness_cap: "$MJ25_WH_silent_witness$"
+ MJ25_WH_silent_witness:"Cichy Świadek"
+ MJ25_WH_silent_witness_plural:"Cisi Świadkowie"
+
+ MJ25_WH_SILENT_WITNESS_G2P2:"Hymn"
+ MJ25_WH_SILENT_WITNESS_S6:"Chór"
+ MJ25_WH_SILENT_WITNESS_M1P4:"Oda"
+ MJ25_WH_SILENT_WITNESS_L1S2:"Opera"
+
+ NAME_MJ25_WH_silent_witness_test:"Szeptacz"
+
+ MJ25_WH_conductor_cap: "$MJ25_WH_conductor$"
+ MJ25_WH_conductor:"Dyrygent"
+ MJ25_WH_conductor_plural:"Dyrygenci"
+
+ MJ25_WH_CONDUCTOR_X2P8:"Wers"
+ MJ25_WH_CONDUCTOR_L4M4:"Serenada"
+ MJ25_WH_CONDUCTOR_H4L2:"Chór"
+
+ NAME_MJ25_WH_conductor_test:"Orator"
+
+ 
+
+ MJ25_WH_aural_starmass:"Auratyczna Masa Gwiazd"
+ MJ25_WH_aural_starmass_plural:"Auratyczne Masy Gwiazd"
+ MJ25_WH_aural_starmass_cap: "$MJ25_WH_aural_starmass$"
+ MJ25_WH_aural_starmass_key:"Kosmiczny Głos"
+ MJ25_WH_aural_starmass_name: "$MJ25_WH_aural_starmass_key$"
+ NAME_MJ25_WH_aural_starmass: "$MJ25_WH_aural_starmass_key$"
+
+ MJ25_WH_void_echo:"Echo Pustki"
+ MJ25_WH_void_echo_plural:"Echa Pustki"
+ MJ25_WH_void_echo_cap: "$MJ25_WH_void_echo$"
+ MJ25_WH_VOID_ECHO_KEY:"Ruchomy Szept"
+ NAME_MJ25_WH_VOID_ECHO: "$MJ25_WH_VOID_ECHO_KEY$"
+ NAME_MJ25_WH_VOID_ECHO_FLEET:"Szepczący Chór"
+
+ MJ25_WH_battlecruiser:"Pretorianin"
+ MJ25_WH_battlecruiser_plural:"Pretorianie"
+ MJ25_WH_battlecruiser_cap: "$MJ25_WH_battlecruiser$"
+
+ MJ25_WH_BATTLECRUISER_L3S8:"Melodia"
+ MJ25_WH_BATTLECRUISER_X2P4:"Aria"
+ MJ25_WH_BATTLECRUISER_H3X1:"Chór"
+ 
+
+ ############################
+ # Technologies
+ ############################
+
+ tech_MJ25_WH_whisper_cloak: "$MJ25_WH_WHISPER_CLOAK$"
+ tech_MJ25_WH_whisper_cloak_desc: "$MJ25_WH_whisper_cloak_DESC$"
+ TECH_UNLOCK_MJ25_WH_WHISPER_CLOAK_TITLE:"§HOdblokowuje Komponent:§! $MJ25_WH_WHISPER_CLOAK$"
+ TECH_UNLOCK_MJ25_WH_WHISPER_CLOAK_DESC:"§H$MJ25_WH_WHISPER_CLOAK$§!\n$MJ25_WH_WHISPER_CLOAK_DESC$"
+
+ tech_MJ25_WH_echo_drive: "$MJ25_WH_ECHO_DRIVE$"
+ tech_MJ25_WH_echo_drive_desc: "$MJ25_WH_ECHO_DRIVE_DESC$"
+ TECH_UNLOCK_MJ25_WH_ECHO_DRIVE_TITLE:"§HOdblokowuje Komponent:§! $MJ25_WH_ECHO_DRIVE$"
+ TECH_UNLOCK_MJ25_WH_ECHO_DRIVE_DESC:"§H$MJ25_WH_ECHO_DRIVE$§!\n$tech_MJ25_WH_echo_drive_desc$"
+
+ tech_MJ25_WH_echo_drive_bio: "$MJ25_WH_ECHO_DRIVE$"
+ tech_MJ25_WH_echo_drive_bio_desc: "$MJ25_WH_ECHO_DRIVE_DESC$"
+ TECH_UNLOCK_BIO_MJ25_WH_ECHO_DRIVE_TITLE:"§HOdblokowuje Komponent:§! $MJ25_WH_ECHO_DRIVE_BIO$"
+ TECH_UNLOCK_BIO_MJ25_WH_ECHO_DRIVE_DESC:"§H$MJ25_WH_ECHO_DRIVE_BIO$§!\n$tech_MJ25_WH_echo_drive_bio_desc$"
+
+ tech_MJ25_WH_whisper_cloak: "$MJ25_WH_WHISPER_CLOAK$"
+ tech_MJ25_WH_whisper_cloak_desc: "$MJ25_WH_WHISPER_CLOAK_DESC$"
+
+ tech_MJ25_WH_songflare_lance: "$MJ25_WH_SONGFLARE_LANCE$"
+ tech_MJ25_WH_songflare_lance_desc: "$MJ25_WH_SONGFLARE_LANCE_DESC$"
+
+ tech_MJ25_WH_songflare_lance_bio: "$tech_MJ25_WH_songflare_lance$"
+ tech_MJ25_WH_songflare_lance_bio_desc: "$tech_MJ25_WH_songflare_lance_desc$"
+
+ tech_MJ25_WH_verdant_hymnarium: "$building_MJ25_WH_verdant_hymnarium$"
+ tech_MJ25_WH_verdant_hymnarium_desc: "$building_MJ25_WH_verdant_hymnarium_desc$"
+
+ tech_MJ25_WH_stonespeech_mithraeum: "$building_MJ25_WH_stonespeech_mithraeum$"
+ tech_MJ25_WH_stonespeech_mithraeum_desc: "$building_MJ25_WH_stonespeech_mithraeum_desc$"
+
+ tech_MJ25_WH_pulsechant_conclave: "$building_MJ25_WH_pulsechant_conclave$"
+ tech_MJ25_WH_pulsechant_conclave_desc: "$building_MJ25_WH_pulsechant_conclave_desc$"
+
+ tech_MJ25_WH_pulsechant_conclave: "$building_MJ25_WH_pulsechant_conclave$"
+ tech_MJ25_WH_pulsechant_conclave_desc: "$building_MJ25_WH_pulsechant_conclave_desc$"
+
+ tech_MJ25_WH_ashtongue_crucible: "$building_MJ25_WH_ashtongue_crucible$"
+ tech_MJ25_WH_ashtongue_crucible_desc: "$building_MJ25_WH_ashtongue_crucible_desc$"
+
+ tech_MJ25_WH_threnodic_bastion: "$building_MJ25_WH_threnodic_bastion$"
+ tech_MJ25_WH_threnodic_bastion_desc: "$building_MJ25_WH_threnodic_bastion_desc$"
+
+ tech_MJ25_WH_songful_spires: "$building_MJ25_WH_silent_spires$"
+ tech_MJ25_WH_songful_spires_desc: "$building_MJ25_WH_silent_spires_desc$"
+
+ tech_MJ25_WH_halls_of_truth: "$building_MJ25_WH_halls_of_truth$"
+ tech_MJ25_WH_halls_of_truth_desc: "$building_MJ25_WH_halls_of_truth_desc$"
+
+ tech_MJ25_WH_intonating_chambers: "$building_MJ25_WH_intonating_chambers$"
+ tech_MJ25_WH_intonating_chambers_desc: "$building_MJ25_WH_intonating_chambers_desc$"
+
+ tech_MJ25_WH_otic_heralds: "$MJ25_WH_STRIKE_CRAFT_HANGAR_SP$"
+ tech_MJ25_WH_otic_heralds_desc: "$MJ25_WH_STRIKE_CRAFT_HANGAR_SP_DESC$"
+ tech_MJ25_WH_otic_heralds_bio: "$MJ25_WH_STRIKE_CRAFT_HANGAR_SP_BIO$"
+ tech_MJ25_WH_otic_heralds_bio_desc: "$MJ25_WH_STRIKE_CRAFT_HANGAR_SP_BIO_DESC$"
+
+ tech_MJ25_WH_illusion_matrix: "$MJ25_WH_ILLUSION_MATRIX$"
+ tech_MJ25_WH_illusion_matrix_desc: "$MJ25_WH_ILLUSION_MATRIX_DESC$"
+
+ tech_MJ25_WH_seeker_matrix: "$MJ25_WH_SEEKER_MATRIX$"
+ tech_MJ25_WH_seeker_matrix_desc: "$MJ25_WH_SEEKER_MATRIX_DESC$"
+
+ tech_MJ25_WH_harmonizing_weave: "$MJ25_WH_HAROMIZING_WEAVE$"
+ tech_MJ25_WH_harmonizing_weave_desc: "$MJ25_WH_HAROMIZING_WEAVE_DESC$"
+
+ 
+
+ ############################
+ # SHIP COMPONENTS
+ ############################
+
+ MJ25_WH_silent_witness_components:"Gwiezdna Melodia"
+ MJ25_WH_silent_witness_components_DESC:"Zrodzone z Ich pieśni, głos tego okrętu odpowiada tym samym. To barwa tej melodii dyktuje zarówno formę, jak i funkcję."
+
+ MJ25_WH_silent_witness_component_empty:"Brak modułu"
+ MJ25_WH_silent_witness_component_empty_DESC:"Nic nie wybrano."
+
+ MJ25_WH_silent_witness_component_evasion:"Nieuchwytna Elegia"
+ MJ25_WH_silent_witness_component_evasion_no_first_contact: "$MJ25_WH_silent_witness_component_evasion$"
+ MJ25_WH_silent_witness_component_assault:"Serenadująca Burza"
+ MJ25_WH_silent_witness_component_range:"Panoramiczny Psalm"
+ MJ25_WH_silent_witness_component_resilience:"Odporne Requiem"
+
+ MJ25_WH_battlecruiser_components:"Gwiezdna Melodia"
+ MJ25_WH_battlecruiser_components_DESC:"Zrodzone z Ich pieśni, głos tego okrętu odpowiada tym samym. To barwa tej melodii dyktuje zarówno formę, jak i funkcję."
+
+ MJ25_WH_battlecruiser_component_empty:"Brak modułu"
+ MJ25_WH_battlecruiser_component_empty_DESC:"Nic nie wybrano."
+ MJ25_WH_battlecruiser_component_evasion:"Nieuchwytna Elegia"
+ MJ25_WH_battlecruiser_component_evasion_no_first_contact: "$MJ25_WH_battlecruiser_component_evasion$"
+ MJ25_WH_battlecruiser_component_assault:"Serenadująca Burza"
+ MJ25_WH_battlecruiser_component_range:"Panoramiczny Psalm"
+ MJ25_WH_battlecruiser_component_resilience:"Odporne Requiem"
+
+ MJ25_WH_conductor_components:"Pole Szeptów"
+ MJ25_WH_conductor_components_DESC:"Otulony cichymi solilokwiami przewijającymi się przez przestrzeń i czas, okręt ten wymyka się zmysłom i zrozumieniu."
+ MJ25_WH_conductor_component_super_cloak:"Translokator Foniczny"
+ MJ25_WH_conductor_component_super_cloak_desc:"Głosy mówią o głębokim miejscu ukrytym przed wzrokiem."
+ MJ25_WH_conductor_component_slippery_cloak:"Wieszcz Slipspace'u"
+ MJ25_WH_conductor_component_slippery_cloak_desc:"Ich głos niesie się na prądach łączących gwiazdy."
+ MJ25_WH_conductor_component_energised_cloak:"Zenergetyzowany Elokutor"
+ MJ25_WH_conductor_component_energised_cloak_desc:"Symfonia niesie się przez każdy nerw i obwód."
+ MJ25_WH_conductor_component_energised_cloak_TT:"Skraca czasy odnowienia zdolności o §G-25%§!."
+ MJ25_WH_conductor_component_no_first_contact: "$MJ25_WH_conductor_component_slippery_cloak$"
+ MJ25_WH_conductor_component_no_first_contact_desc: "$MJ25_WH_conductor_component_slippery_cloak_desc$"
+
+ 
+
+ MJ25_WH_CONDUCTOR_DEVICE:"Wzmacniacze Auralne"
+ MJ25_WH_CONDUCTOR_DEVICE_ACTION:"Rozsiej Szepty"
+ MJ25_WH_CONDUCTOR_DEVICE_DESC:"Kąpanie świata w subtelnej pieśni Dyrygenta przyniesie nasze idee tym, którzy zechcą słuchać. To oni zadbają o ciche rozprzestrzenianie się naszych wpływów, gdy będziemy kontynuować nasze wielkie dzieło."
+ MESSAGE_DESC_FOR_MJ25_WH_CONDUCTOR_DEVICE:"został serenadowany przez"
+ FLEETORDER_DESTROY_PLANET_WITH_MJ25_WH_CONDUCTOR_DEVICE:"Rozsiewanie szeptów na $PLANET|Y$"
+
+ MJ25_WH_ECHO_DRIVE:"Napęd Echo"
+ MJ25_WH_ECHO_DRIVE_DESC:"Pieśń gwiazd roznosi się po pustce, unosząc się wszędzie naraz. Wykorzystując jej potencjał, my również możemy zostać przeniesieni przez tę rozległą przestrzeń."
+ MJ25_WH_ECHO_DRIVE_BIO: "$MJ25_WH_ECHO_DRIVE$"
+ MJ25_WH_ECHO_DRIVE_BIO_DESC: "$MJ25_WH_ECHO_DRIVE_DESC$"
+
+ 
+ MJ25_WH_WHISPER_CLOAK:"Osłona Szeptów"
+ MJ25_WH_WHISPER_CLOAK_DESC:"Słowo tak cicho wypowiedziane może umknąć wszelkiej uwadze. Wykorzystując taki ton, my również możemy umknąć niewrażliwym zmysłom niepojmących."
+
+ MJ25_WH_ECHO_DRIVE_TOOLTIP:"Z technologią §Y$tech_psi_jump_drive_1$§!:$TABBED_NEW_LINE$ -$MOD_SHIP_JUMPDRIVE_COOLDOWN_MULT$: §G-25%§!"
+ CLOAKING_MJ25_WH_WHISPER_TOOLTIP:"$CLOAKING_DARK_MATTER_TOOLTIP$\n\nZ technologią §Y$tech_cloaking_psi$§!:$TABBED_NEW_LINE$ -$MOD_SHIP_CLOAKING_STRENGTH_ADD$: §G+1§!"
+
+ MJ25_WH_SONGFLARE_LANCE:"Lanca Pieśniowego Rozbłysku"
+ MJ25_WH_SONGFLARE_LANCE_DESC:"Słowa mają moc, a Ich w szczególności. Wzmocnione i rezonujące, uderzą w samo istnienie naszych wrogów w destrukcyjnym podmuchu, który może zatrzymać nawet największe okręty naszych wrogów."
+
+ MJ25_WH_SONGFLARE_LANCE_BIO: "$MJ25_WH_SONGFLARE_LANCE$"
+ MJ25_WH_SONGFLARE_LANCE_BIO_DESC: "$MJ25_WH_SONGFLARE_LANCE_DESC$"
+
+ MJ25_WH_STRIKE_CRAFT_HANGAR_SP:"Heroldzi Otyczni"
+ MJ25_WH_STRIKE_CRAFT_HANGAR_SP_DESC:"Ukształtowane z metalu utkanego pieśnią i celu, te szybkie i śmiercionośne maszyny szturmowe wnoszą niezliczone głosy do symfonii naszych wojen."
+ MJ25_WH_STRIKE_CRAFT_HANGAR_SP_BIO:"Heroldzi Otyczni"
+ MJ25_WH_STRIKE_CRAFT_HANGAR_SP_BIO_DESC:"Ukształtowane z ciała utkanego pieśnią i celu, te szybkie i śmiercionośne maszyny szturmowe wnoszą niezliczone głosy do symfonii naszych wojen."
+
+ MJ25_WH_ILLUSION_MATRIX:"Matryca Iluzji"
+ MJ25_WH_ILLUSION_MATRIX_DESC:"Synestetyczne pola łączą nasze mistrzostwo w dźwięku z interferencją światłopostaci, aby zakłócić systemy sensoryczne tych, którzy by nam się sprzeciwiali."
+ MJ25_WH_ILLUSION_MATRIX_TT:"Korzyści są §Ypodwojone§! na §YKORWETACH§, §YNISZCZYCIELACH§! i §YKRAŻOWNIKACH§!."
+
+ MJ25_WH_SEEKER_MATRIX:"Matryca Poszukująca"
+ MJ25_WH_SEEKER_MATRIX_DESC:"Ich pieśń wije się przez przestrzeń i czas, tworząc fale interferencji, które możemy śledzić, aby nadnaturalnie precyzyjnie określić pozycje naszych wrogów."
+ MJ25_WH_SEEKER_MATRIX_TT:"§G+5%§! $MOD_SHIP_WEAPON_RANGE_MULT$ na §YLINKOWCACH§, §YTYTANACH§! i innych dużych okrętach."
+
+ MJ25_WH_HAROMIZING_WEAVE:"Harmonizujący Splot"
+ MJ25_WH_HAROMIZING_WEAVE_DESC:"Zakłócenia nie muszą być niszczycielskie. Ostrożne harmonie wplecione w pola rezonansowe naszych osłon energetycznych posłużą jako szańce przeciwko furii naszych wrogów."
+
+  #################################
+  # STARBASE CONSTRUCTIONS
+  #################################
+
+ sm_MJ25_WH_augury_array:"Macierz Auguralna"
+ sm_MJ25_WH_augury_array_plural:"Macierze Auguralne"
+ sm_MJ25_WH_augury_array_desc:"Zestaw zewnętrznych sensorów o dużej mocy, zdolny do wykrywania nawet najcichszych akordów, które mogą być rozciągnięte między gwiazdami.\n"
+
+ sm_MJ25_WH_auracular_listening_post:"Aurakularny Posterunek Nasłuchowy"
+ sm_MJ25_WH_auracular_listening_post_desc:"Punkt obserwacyjny na krawędzi, pozbawiony zakłóceń, gdzie nasi najbardziej oddani mogą dosięgnąć Ich nieuchwytnej pieśni.\n"
+
+ sm_MJ25_WH_thrumming_choirhall:"Dudniącą Sala Chóralna"
+ sm_MJ25_WH_thrumming_choirhall_desc:"Gdy tylko zbyt cienka blacha oddziela nas od pustki, nie ma bliższego gwiazdom miejsca, z którego moglibyśmy śpiewać. To tutaj nasze pieśni rozbrzmiewać będą echem i zostaną usłyszane.\n"
+ 
+
+ #################################
+ # SHIP ABILITIES
+ #################################
+
+ MJ25_WH_conductor_spread_whispers_button:"§HRozsiej Szepty§!\nDodaje §Y+100§! $job_MJ25_WH_whisper_cultist_plural$ do tego świata i zmniejsza jego stabilność.\n\nZyskujemy §G+5§! £MJ25_WH_void_whispers_text£ §Y$MJ25_WH_void_whispers$§! na 100 $job_MJ25_WH_whisper_cultist_plural$.\n§Y+300§! populacji staje się przeklętych prawdą rocznie.§!"
+ MJ25_WH_conductor_spread_whispers_activity_key:"Rozsiewanie Szeptów"
+ MJ25_WH_conductor_spread_whispers_menu_title:"Rozsiej Szepty"
+ MJ25_WH_conductor_spread_whispers_progress_activity_key:"Serenadowanie (§Y$PROGRESS$%§!)"
+
+ MJ25_WH_conductor_animate_star_button:"§HOżywij Gwiazdę§!\nNasze najbardziej frenetyczne pieśni mogą obudzić nawet gwiazdę w Auralną Masę Gwiezdną. Taka niszczycielska siła, wirująca z mocą Ich słów, może zamienić naszych wrogów w ogłuszone narzędzia.\n\n§RWszelkie kolonie w systemie zostaną zniszczone.§!"
+ MJ25_WH_conductor_animate_star_activity_key:"Ożywianie Gwiazdy"
+ MJ25_WH_conductor_animate_star_menu_title:"Ożywij Gwiazdę"
+ MJ25_WH_conductor_animate_star_progress_activity_key:"Serenadowanie (§Y$PROGRESS$%§!)"
+
+ MJ25_WH_animate_star_combat_fail_tt:"£trigger_no£ Nie można użyć podczas walki."
+ MJ25_WH_animate_star_requires_star_tt:"£trigger_no£ Musi być wycelowane w gwiazdę."
+ MJ25_WH_animate_star_not_black_hole_tt:"£trigger_no£ Nie można wycelować w czarną dziurę."
+ MJ25_WH_animate_star_not_megastructure_tt:"£trigger_no£ Nie można wycelować w gwiazdę goszczącą megastrukturę."
+
+ MJ25_WH_conductor_create_storm_button:"§HStwórz Burzę§!\nMelodie, które prowadzimy, połączą się w burzę, która trwa przez §Y300§! £time£ dni. Statki w tym systemie otrzymują:$TABBED_NEW_LINE$- $MOD_SHIP_SPEED_REDUCTION$: §R30%§!$TABBED_NEW_LINE$- $MOD_SHIP_WEAPON_RANGE_MULT$: §R-20%§!"
+ MJ25_WH_conductor_create_storm_activity_key:"Tworzenie Burzy"
+ MJ25_WH_conductor_create_storm_menu_title:"Stwórz Burzę"
+ MJ25_WH_conductor_create_storm_progress_activity_key:"Tworzenie Burzy (§Y$PROGRESS$%§!)"
+
+ MJ25_WH_conductor_confusion_button:"§HDezorientacja§!\nPrzymuszona kakofonią, losowa flota w systemie staje się zdezorientowana na §Y30§! £time£ dni i atakuje bez rozróżniania.\n\n§RNie można wycelować w floty, które są już zaangażowane w walkę§!."
+ MJ25_WH_conductor_confusion_activity_key:"Rozsiewanie Dezorientacji"
+ MJ25_WH_conductor_confusion_menu_title:"Dezorientacja"
+ MJ25_WH_conductor_confusion_progress_activity_key:"Rozsiewanie Dezorientacji (§Y$PROGRESS$%§!)"
+
+
+
+ #########################
+ # MODIFIERS
+ #########################
+
+ MJ25_WH_spread_whispers:"Kosmiczne Szepty"
+ MJ25_WH_spread_whispers_desc:"Podły kult zakorzenił się na tym świecie, szerząc bezkształtne, sprofanowane szepty wśród wrażliwych umysłów."
+
+ MJ25_WH_spread_whispers_gestalt: "$MJ25_WH_spread_whispers$"
+ MJ25_WH_spread_whispers_gestalt_desc:"Infekcja w ulu objawiła się na tym świecie. Zboczone drony zaczęły bełkotać niespójne, bezsensowne sekrety, które teraz rozprzestrzeniają się na inne drony."
+
+ #MJ25_WH_test_deficit_mod: "$MJ25_WH_void_whispers$ Deficit Test"
+ #MJ25_WH_test_deficit_mod_desc: "test"
+
+ MJ25_WH_storm_hostile_debuff:"Szepcząca Burza"
+
+ MJ25_WH_storm_debuff:"Szepcząca Burza"
+
+ MJ25_WH_songflare_lance_debuff:"Zakłócający Rozbłysk Pieśni"
+
+ MJ25_WH_aural_explosion:"Auralna Dewastacja"
+
+ mod_planet_farmers_MJ25_WH_void_whispers_upkeep_add:"£MJ25_WH_void_whispers£ $MJ25_WH_void_whispers$ Utrzymanie na $pop_group_unit$ [farmer.GetIcon] [GetFarmerPlural]"
+ mod_planet_miners_MJ25_WH_void_whispers_upkeep_add:"£MJ25_WH_void_whispers£ $MJ25_WH_void_whispers$ Utrzymanie na $pop_group_unit$ [miner.GetIcon] [GetMinerPlural]"
+ mod_planet_technician_MJ25_WH_void_whispers_upkeep_add:"£MJ25_WH_void_whispers£ $MJ25_WH_void_whispers$ Utrzymanie na $pop_group_unit$ [technician.GetIcon] [GetTechnician]"
+ mod_planet_metallurgists_MJ25_WH_void_whispers_upkeep_add:"£MJ25_WH_void_whispers£ $MJ25_WH_void_whispers$ Utrzymanie na $pop_group_unit$ [foundry.GetIcon] [GetAlloyProducerPlural]"
+ mod_planet_soldiers_MJ25_WH_void_whispers_upkeep_add:"£MJ25_WH_void_whispers£ $MJ25_WH_void_whispers$ Utrzymanie na $pop_group_unit$ [soldier.GetIcon] [soldier.GetNamePlural]"
+ mod_country_base_MJ25_WH_void_whispers_produces_add:"£MJ25_WH_void_whispers£ Szepty Pustki"
+ mod_planet_MJ25_WH_listeners_unity_upkeep_add:"Utrzymanie £unity£ $unity$ na $pop_group_unit$ £job_MJ25_WH_listener£ $job_MJ25_WH_listener_plural$"
+ mod_planet_MJ25_WH_listeners_MJ25_WH_void_whispers_produces_add:"£MJ25_WH_void_whispers_text£ $MJ25_WH_void_whispers$ na $pop_group_unit$ £job_MJ25_WH_listener£ $job_MJ25_WH_listener_plural$"
+
+ mod_pop_category_workers_MJ25_WH_void_whispers_produces_add:"£MJ25_WH_void_whispers_text£ $MJ25_WH_void_whispers$ od £pop_cat_worker£ $pop_cat_worker_plural$"
+ mod_pop_category_specialists_MJ25_WH_void_whispers_produces_add:"£MJ25_WH_void_whispers_text£ $MJ25_WH_void_whispers$ od £pop_cat_specialist£ $pop_cat_specialist_plural$"
+
+
+ ##########################
+ # POP JOBS
+ ##########################
+
+ job_MJ25_WH_whisper_cultist:"Kultysta Szeptu"
+ job_MJ25_WH_whisper_cultist_plural:"Kultyści Szeptu"
+ job_MJ25_WH_whisper_cultist_desc:"Ci nieliczni, oderwani i szaleni, zamieszkują ukryte miejsca, gdzie głoszą o szeptach między gwiazdami, infekując podatne umysły niczym zaraza."
+ mod_job_MJ25_WH_whisper_cultist_add:"$job_MJ25_WH_whisper_cultist$ Stanowiska"
+ mod_job_MJ25_WH_whisper_cultist_per_pop:"§R+1§! $job_MJ25_WH_whisper_cultist$ Stanowisko na $VALUE$ Populacji £pop£ Planety §YPops§!"
+ mod_job_MJ25_WH_whisper_cultist_per_pop_short:"\n§R+1§! $mod_job_MJ25_WH_whisper_cultist_add$ na $VALUE$ £pop£"
+
+ job_MJ25_WH_whisper_cultist_drone:"Szepczący Dron"
+ job_MJ25_WH_whisper_cultist_drone_plural:"Szepczące Drony"
+ job_MJ25_WH_whisper_cultist_drone_desc:"Te drony zanieczyszczają ul szaleńczymi i obłąkanymi szeptami."
+ mod_job_MJ25_WH_whisper_cultist_drone_add:"$job_deviant_drone$ Stanowiska"
+ mod_job_MJ25_WH_whisper_cultist_drone_per_crime:"§R+1§! $job_deviant_drone$ Stanowisko na $VALUE$ Przestępczości £crime£ Planety §YCrime§!"
+ mod_job_MJ25_WH_whisper_cultist_drone_per_crime_short:"\n§R+1§! mod_job_deviant_drone_add na $VALUE$ £crime£"
+
+ job_MJ25_WH_listener:"Słuchacz"
+ job_MJ25_WH_listener_plural:"Słuchacze"
+ job_MJ25_WH_listener_desc:"Ci nieliczni, uważni, zwracają uwagę na mroczne miejsca, gdzie szepty mówią o kosmicznej prawdzie."
+ mod_job_MJ25_WH_listener_add:"Stanowiska $job_MJ25_WH_listener$"
+ mod_job_MJ25_WH_listener_per_pop:"§R+1§! $job_MJ25_WH_listener$ Stanowisko na $VALUE$ Populacji £pop£ Planety §YPops§!"
+ mod_job_MJ25_WH_listener_per_pop_short:"\n§R+1§! $mod_job_MJ25_WH_listener_add$ na $VALUE$ £pop£"
+
+ job_MJ25_WH_listener_drone:"Dron Słuchacz"
+ job_MJ25_WH_listener_drone_plural:"Drony Słuchacze"
+ job_MJ25_WH_listener_drone_desc:"Ci nieliczni, uważni, zwracają uwagę na mroczne miejsca, gdzie szepty mówią o kosmicznej prawdzie."
+ mod_job_MJ25_WH_listener_drone_add:"$job_MJ25_WH_listener_drone$ Stanowiska"
+ mod_job_MJ25_WH_listener_drone_per_pop:"§R+1§! $job_MJ25_WH_listener_drone$ Stanowisko na $VALUE$ Populacji £pop£ Planety §YPops§!"
+ mod_job_MJ25_WH_listener_drone_per_pop_short:"\n§R+1§! $mod_job_MJ25_WH_listener_drone_add$ na $VALUE$ £pop£"
+
+ job_MJ25_WH_listener_effect_desc:"£job_MJ25_WH_listener£ $job_MJ25_WH_listener_plural$ zamieniają £unity£ §Y$unity$§! w £MJ25_WH_void_whispers_text£ §Y$MJ25_WH_void_whispers$§!"
+ job_MJ25_WH_listener_drone_hive_effect_desc:"£job_MJ25_WH_listener_drone£ $job_MJ25_WH_listener_drone_plural$ zamieniają £unity£ §Y$unity$§! w £MJ25_WH_void_whispers_text£ §Y$MJ25_WH_void_whispers$§!"
+ job_MJ25_WH_listener_drone_machine_effect_desc:"£job_MJ25_WH_listener_drone£ $job_MJ25_WH_listener_drone_plural$ zamieniają £unity£ §Y$unity$§! w £MJ25_WH_void_whispers_text£ §Y$MJ25_WH_void_whispers$§!"
+
+ mod_planet_MJ25_WH_listeners_unity_produces_add:"£unity£ §Y$unity$§! z £job_MJ25_WH_listener£ §Y$job_MJ25_WH_listener_plural$§!"
+ mod_planet_MJ25_WH_listeners_MJ25_WH_void_whispers_produces_add:"£MJ25_WH_void_whispers_text£ §Y$MJ25_WH_void_whispers$§! z £job_MJ25_WH_listener£ §Y$job_MJ25_WH_listener_plural$§!"
+
+ job_MJ25_WH_chorister:"Chórzysta"
+ job_MJ25_WH_chorister_plural:"Chórzyści"
+ job_MJ25_WH_chorister_desc:"Ci wyniesieni śpiewają swoje pieśni, by zawsze przypominać nam o celu, jaki Wdychali w nasze istnienie."
+ mod_job_MJ25_WH_chorister_add:"$job_MJ25_WH_chorister$ Stanowiska"
+ mod_job_MJ25_WH_chorister_per_pop:"§R+1§! $job_MJ25_WH_chorister$ Stanowisko na $VALUE$ Populacji £pop£ Planety §YPops§!"
+ mod_job_MJ25_MJ25_WH_chorister_per_pop_short:"\n§R+1§! $mod_job_MJ25_WH_chorister_add$ na $VALUE$ £pop£"
+
+ job_MJ25_WH_chorister_drone:"Dron Chórzysta"
+ job_MJ25_WH_chorister_drone_plural:"Drony Chórzyści"
+ job_MJ25_WH_chorister_drone_desc:"Ci wyniesieni śpiewają swoje pieśni, by zawsze przypominać nam o celu, jaki Wdychali w nasze istnienie."
+ mod_job_MJ25_WH_chorister_drone_add:"Stanowiska $job_MJ25_WH_chorister_drone$"
+ mod_job_MJ25_WH_chorister_drone_per_pop:"§R+1§! Stanowisko $job_MJ25_WH_chorister_drone$ na każde $VALUE$ £pop£ §YPopulacji§! na Planecie!"
+ mod_job_MJ25_MJ25_WH_chorister_drone_per_pop_short:"\n§R+1§! $mod_job_MJ25_WH_chorister_drone_add$ na każde $VALUE$ £pop£"
+
+ job_MJ25_WH_chorister_effect_desc:"£job_MJ25_WH_chorister£ $job_MJ25_WH_chorister_plural$ zamieniają £consumer_goods£ §Y$consumer_goods$§! na £influence£ §Y$influence$§! i £mod_country_edict_fund_add£ §Y$EDICT_FUND$§!"
+ job_MJ25_WH_chorister_drone_hive_effect_desc:"£job_MJ25_WH_chorister_drone£ $job_MJ25_WH_chorister_drone_plural$ zamieniają £minerals£ §Y$minerals$§! na £influence£ §Y$influence$§! i £mod_country_edict_fund_add£ §Y$EDICT_FUND$§!"
+ job_MJ25_WH_chorister_drone_machine_effect_desc:"£job_MJ25_WH_chorister_drone£ $job_MJ25_WH_chorister_drone_plural$ zamieniają £energy£ §Y$energy$§! na £influence£ §Y$influence$§! i £mod_country_edict_fund_add£ §Y$EDICT_FUND$§!"
+
+
+ planet_MJ25_WH_listeners:"Stanowiska $job_MJ25_WH_listener$"
+ mod_planet_jobs_MJ25_WH_void_whispers_produces_mult:"£MJ25_WH_void_whispers£ $MJ25_WH_void_whispers$ ze Stanowisk £job£"
+
+ ###########################
+ # BUILDINGS AND ZONES
+ ###########################
+
+ zone_MJ25_WH_whisper_sanctum:"Bazylika Gwiezdnej Pieśni"
+ zone_MJ25_WH_whisper_sanctum_desc:"Wielkie zigguraty wiją się w kształt, który wymyka się pojmowaniu, niczym krawędzie sfery. Takie miejsce mogłoby być zamieszkane tylko przez tych, którzy potrafią znieść ujrzenie echa Ich głosu."
+
+ building_MJ25_WH_lilting_altar:"Śpiewny Ołtarz"
+ building_MJ25_WH_lilting_altar_desc:"Niepokojące miejsce wypełnione szeptami, które wibrują wbrew strukturze umysłu."
+
+ building_MJ25_WH_starsong_cathedral:"Zasłonięta Katedra"
+ building_MJ25_WH_starsong_cathedral_desc:"Pieśń emanująca z zasłoniętych wnęk wewnątrz, oświecająca umysły tych, którzy przybywają, by kontemplować wieczność."
+
+ building_MJ25_WH_silent_spires:"Śpiewne Igły"
+ building_MJ25_WH_silent_spires_desc:"Te wznoszące się iglice nucą melodie, które intonujemy, śpiewając serenady wszystkim, którzy chcieliby usłyszeć o Ich dobroczynności."
+ building_MJ25_WH_silent_spires_tt:"Na 100 £job_MJ25_WH_chorister£ $job_MJ25_WH_chorister_plural$ i 100 £job_MJ25_WH_listener£ $job_MJ25_WH_listener_plural$:$TABBED_NEW_LINE$ - £mod_pop_bonus_workforce_mult£ $MOD_POP_BONUS_WORKFORCE_MULT$: §G+5%§!$TABBED_NEW_LINE$- $MOD_POP_AMENITIES_USAGE_MULT$: §R+5%§!"
+
+ building_MJ25_WH_verdant_hymnarium:"Zielone Hymnarium"
+ building_MJ25_WH_verdant_hymnarium_desc:"Ożywcza pieśń, którą karmimy glebę i korzenie, wykiełkuje w najbardziej zielony sad."
+
+ building_MJ25_WH_stonespeech_mithraeum:"Mithraeum Kamiennej Mowy"
+ building_MJ25_WH_stonespeech_mithraeum_desc:"Uderzenia bębnów, które grzmocimy w kamienie, na których stoimy, wstrząsną samą ziemią swoim niekończącym się rytmem."
+ 
+ building_MJ25_WH_pulsechant_conclave:"Konklawe Pulsacyjnego Śpiewu"
+ building_MJ25_WH_pulsechant_conclave_desc:"Pulsujące pieśni, które intonujemy przez wodę i powietrze, napędzą nasze turbiny w wiecznie wirującej burzy."
+
+ building_MJ25_WH_ashtongue_crucible:"Kocioł Popielnego Języka"
+ building_MJ25_WH_ashtongue_crucible_desc:"Rozgrzane jęki ognia i stali łączą się teraz, by podsycić piece naszego przemysłu."
+ building_MJ25_WH_ashtongue_crucible_tt:"Na 100 [foundry.GetIcon] [foundry.GetNamePlural]:$TABBED_NEW_LINE$- $MOD_POP_AMENITIES_USAGE_MULT$: §R+5%§!"
+
+ building_MJ25_WH_threnodic_bastion:"Trenowy Bastion"
+ building_MJ25_WH_threnodic_bastion_desc:"Legiony żołnierzy związanych pieśniami żałobnymi wojny stoją na baczność w tej śpiewnej twierdzy."
+ building_MJ25_WH_threnodic_bastion_tt:"Na 100 £job_soldier£ §Y$job_soldier_plural$§!:$TABBED_NEW_LINE$- £mod_country_naval_cap_add£ §YPojemność Morska§!: §G+6§!"
+
+ building_MJ25_WH_halls_of_truth:"Sale Prawdy"
+ building_MJ25_WH_halls_of_truth_desc:"Prawda płynąca na pieśni tak czystej oplata ściany i serca tych, którzy szukają schronienia pod łukami tych uświęconych sal."
+ building_MJ25_WH_halls_of_truth_tt:"Na 100 £job_MJ25_WH_chorister£ $job_MJ25_WH_chorister_plural$ i 100 £job_MJ25_WH_listener£ $job_MJ25_WH_listener_plural$:$TABBED_NEW_LINE$- Mutacje populacji rocznie: §Y+100§!$TABBED_NEW_LINE$:- £mod_planet_stability_add£ $MOD_PLANET_STABILITY_ADD$: §G+3§!"
+
+ building_MJ25_WH_intonating_chambers:"Komnaty Intonacji"
+ building_MJ25_WH_intonating_chambers_desc:"Wiejąc przez sklepione sale i iglice, wszechogarniająca aria podtrzymuje nasz lud, zastępując banalne potrzeby materialne pieśniami nieskończonej pomocy."
+ building_MJ25_WH_intonating_chambers_tt:"Na 100 £job_MJ25_WH_chorister£ $job_MJ25_WH_chorister_plural$ i 100 £job_MJ25_WH_listener£ $job_MJ25_WH_listener_plural$:$TABBED_NEW_LINE$- $mod_planet_pops_upkeep_mult$: §G-10%§!$TABBED_NEW_LINE$- $mod_planet_jobs_upkeep_mult$: §G-5%§!"
+
+ MJ25_WH_pops_mutate:"populacje mutują rocznie, zyskując cechę ['concept_MJ25_WH_trait_word_bearer'] lub cechę ['concept_MJ25_WH_trait_starsong_vessel'] z atutem kryzysowym §r$MJ25_WH_menp_we_are$§! (Poziom Kryzysu 5)."
+ MJ25_WH_pops_mutate_25:"\n§Y25§! $MJ25_WH_pops_mutate$"
+ MJ25_WH_pops_mutate_50:"\n§Y50§! $MJ25_WH_pops_mutate$"
+ MJ25_WH_pops_mutate_100:"\n§Y100§! $MJ25_WH_pops_mutate$"
+ MJ25_WH_pops_mutate_200:"\n§Y200§! $MJ25_WH_pops_mutate$"
+
+
+ ###########################
+ # MESSAGE TYPES
+ ###########################
+
+ # Message type loc
+ MJ25_WH_STAR_ANIMATED_TITLE:"Ożywiona Gwiazda"
+ MJ25_WH_STAR_ANIMATED_DESC:"$PLANET|Y$ jest żywa!"
+
+ MJ25_WH_PLANET_DISAPPEARED_TITLE:"Planeta Zniknęła"
+ MJ25_WH_PLANET_DISAPPEARED_DESC:"§Y[From.GetName]§! zniknęła!"
+
+ MJ25_WH_POPS_ABSORBED_TITLE:"Dodano Głosy"
+ MJ25_WH_POPS_ABSORBED_DESC:"§Y[From.GetName]§! zniknęła, a $VALUE|Y$ głosów zostało uwolnionych."
+
+ MJ25_WH_SPREAD_WHISPERS_TITLE:"Szepty Się Rozprzestrzeniły"
+ MJ25_WH_SPREAD_WHISPERS_DESC:"Rozprzestrzeniliśmy szepty na świat §Y[From.GetName]§!."
+
+ MJ25_WH_POPS_MUTATED_TITLE:"Zmutowane Populacje"
+ MJ25_WH_POPS_MUTATED_WORD_BEARER_DESC:"$VALUE|Y$ populacji na $PLANET|Y$ zmutowało i zyskało cechę §R$MJ25_WH_word_bearer$§!"
+ MJ25_WH_POPS_MUTATED_TRUTH_CURSED_DESC:"$VALUE|Y$ populacji na $PLANET|Y$ zmutowało i zyskało cechę §R$MJ25_WH_trait_truthcursed$§!"
+ MJ25_WH_POPS_MUTATED_STARSONG_VESSEL_DESC:"$VALUE|Y$ populacji na $PLANET|Y$ zmutowało i zyskało cechę §G$MJ25_WH_trait_starsong_vessel$§!"
+
+ ###########################
+ # CONCEPTS
+ ###########################
+
+ concept_MJ25_WH_trait_word_bearer:"Nosiciel Słów"
+ concept_MJ25_WH_trait_word_bearer_desc:"$MJ25_WH_word_bearer_desc$\n\n$MJ25_WH_word_bearer_tt$"
+
+ concept_MJ25_WH_trait_starsong_vessel:"Naczynie Gwiezdnej Pieśni"
+ concept_MJ25_WH_trait_starsong_vessel_desc:"$MJ25_WH_trait_starsong_vessel_desc$\n$TABBED_NEW_LINE$$MOD_POP_BONUS_WORKFORCE_MULT$: §G+30%§!\n$MJ25_WH_trait_starsong_vessel_tt$"
+
+ concept_MJ25_WH_starsong_basilica: "$zone_MJ25_WH_whisper_sanctum$"
+ concept_MJ25_WH_starsong_basilica_desc:"- Stanowisk $job_MJ25_WH_listener$: §G+200§!TABBED_NEW_LINE$- $MOD_POP_AMENITIES_USAGE_MULT$: §R+5%§!"
+
+ concept_MJ25_WH_voidwrought_ciphers: "$edict_MJ25_WH_voidwrought_ciphers$"
+ concept_MJ25_WH_voidwrought_ciphers_desc:"$edict_MJ25_WH_voidwrought_ciphers_desc$\n\nKoszt: §Y$@MJ25_WH_crisis_edict_cost|0$§! £MJ25_WH_void_whispers_text£ §Y$MJ25_WH_void_whispers$§! \n- §G+5§! $MOD_INTEL_ENCRYPTION_ADD$\n- §G+5§! $MOD_INTEL_DECRYPTION_ADD$\n- §G+20§! $MOD_SPY_NETWORK_LEVELS_ADD$"
+
+ concept_MJ25_WH_battle_songs: "$edict_MJ25_WH_battle_songs$"
+ concept_MJ25_WH_battle_songs_desc:"$edict_MJ25_WH_battle_songs_desc$\n\nKoszt: §Y$@MJ25_WH_crisis_edict_cost|0$§! £MJ25_WH_void_whispers_text£ §Y$MJ25_WH_void_whispers$§! \n- §G+25%§! $MOD_SHIP_SPEED_MULT$\n- §G+10%§! $MOD_SHIP_FIRE_RATE_MULT$\n- §G+10%§! $MOD_SHIP_EVASION_MULT$"
+
+ concept_MJ25_WH_words_wisdom: "$edict_MJ25_WH_words_wisdom$"
+ concept_MJ25_WH_words_wisdom_desc:"$edict_MJ25_WH_words_wisdom_desc$\n\nKoszt: §Y$@MJ25_WH_crisis_edict_cost|0$§! £MJ25_WH_void_whispers_text£ §Y$MJ25_WH_void_whispers$§! \n- §G+15%§! $mod_planet_jobs_specialist_produces_mult$\n- §R-5§! $MOD_PLANET_STABILITY_ADD$"
+
+ concept_MJ25_WH_auracular_listening_post: "$sm_MJ25_WH_auracular_listening_post$"
+ concept_MJ25_WH_auracular_listening_post_desc:"$sm_MJ25_WH_auracular_listening_post_desc$\n\n- §G+100§! stanowisk §Y$job_MJ25_WH_listener$§! dla każdej kolonii w systemie.\n- §G+1§! £MJ25_WH_void_whispers_text£ §Y$MJ25_WH_void_whispers$§! za każdy §Y$sm_MJ25_WH_augury_array$§!"
+
+ concept_MJ25_WH_augury_array: "$sm_MJ25_WH_augury_array$"
+ concept_MJ25_WH_augury_array_desc:"$sm_MJ25_WH_augury_array_desc$\n\n- §G+1§! $MOD_SHIP_CLOAKING_DETECTION_ADD$\n- §G+2§! £MJ25_WH_void_whispers_text£ §Y$MJ25_WH_void_whispers$§!"
+
+ concept_MJ25_WH_conductor_animate_star: "$MJ25_WH_conductor_animate_star_menu_title$"
+ concept_MJ25_WH_conductor_animate_star_desc:"- Koszt: §Y$@MJ25_WH_animate_star_cost|0$§! £MJ25_WH_void_whispers_text£ §Y$MJ25_WH_void_whispers$§!\n- Czas odnowienia: §Y$@MJ25_WH_animate_star_cooldown|0$§! £time£ dni\n$MJ25_WH_conductor_animate_star_button$"
+
+ concept_MJ25_WH_songflare_lance: "$tech_MJ25_WH_songflare_lance$"
+ concept_MJ25_WH_songflare_lance_desc:"$tech_MJ25_WH_songflare_lance_desc$\n\n- Działa jak §Y$ENERGY_LANCE_2$§!, ale z:\n- §R-5%§! obrażeń od broni\n- §G+10%§! zasięgu broni\n- Każde trafienie nakłada §R-40%§! $MOD_SHIP_SPEED_MULT$ i §R-20%§! $MOD_SHIP_TRACKING_MULT$ na §Y10§! £time£ dni"
+
+ concept_MJ25_WH_echo_drive: "$tech_MJ25_WH_echo_drive$"
+ concept_MJ25_WH_echo_drive_desc:"$tech_MJ25_WH_echo_drive_desc$\n\n- §G+2§! $MOD_SHIP_DISENGAGE_OPPORTUNITIES_ADD$\n- §G-80%§! $MOD_SHIP_WINDUP_MULT$\n- §G+50%§! $MOD_SHIP_FTL_JUMPDRIVE_RANGE_MULT$\n- Jeśli masz odblokowane §Y$tech_cloaking_psi$§!: §G-25%§! $MOD_SHIP_JUMPDRIVE_COOLDOWN_MULT$"
+
+ concept_MJ25_WH_whisper_cloak: "$tech_MJ25_WH_whisper_cloak$"
+ concept_MJ25_WH_whisper_cloak_desc:"$tech_MJ25_WH_whisper_cloak_desc$\n\n- §G+5§! $MOD_SHIP_CLOAKING_STRENGTH_ADD$, zredukowane w zależności od rozmiaru statku.\n- Jeśli masz odblokowane §Y$tech_cloaking_psi$§!: §G+1§! $MOD_SHIP_CLOAKING_STRENGTH_ADD$"
+
+ concept_MJ25_WH_otic_heralds: "$tech_MJ25_WH_otic_heralds$"
+ concept_MJ25_WH_otic_heralds_desc:"$tech_MJ25_WH_otic_heralds_desc$\n\n- Działa jak §Y$STRIKE_CRAFT_HANGAR_3$§!, ale z dodatkową prędkością statków szturmowych, osłonami i nieznacznie zwiększonymi obrażeniami."
+
+ concept_MJ25_WH_illusion_matrix: "$tech_MJ25_WH_illusion_matrix$"
+ concept_MJ25_WH_illusion_matrix_desc:"$tech_MJ25_WH_illusion_matrix_desc$\n\nCzęść statku do gniazda pomocniczego:\n- §G+3§! $MOD_SHIP_EVASION_ADD$ \n- §G+15%§! $MOD_SHIP_DISENGAGE_CHANCE_MULT$ \n- Statystyki podwojone dla §Ykorwet§!, §Yniszczycieli§!, §Ykrążowników§! i statków podobnej wielkości."
+
+ concept_MJ25_WH_seeker_matrix: "$tech_MJ25_WH_seeker_matrix$"
+ concept_MJ25_WH_seeker_matrix_desc:"$tech_MJ25_WH_seeker_matrix_desc$\n\nCzęść statku do gniazda pomocniczego:\n- §G+5§! $MOD_SHIP_TRACKING_ADD$ \n- §G+5%§! $MOD_SHIP_WEAPON_RANGE_MULT$ \n- Dodatkowe §G+5%§! $MOD_SHIP_WEAPON_RANGE_MULT$ dla §Ypancerników§!, §Ytytanów§! i innych dużych statków."
+
+ concept_MJ25_WH_haromizing_weave: "$tech_MJ25_WH_harmonizing_weave$"
+ concept_MJ25_WH_haromizing_weave_desc:"$tech_MJ25_WH_harmonizing_weave_desc$\n\nCzęść statku do gniazda pomocniczego:\n- §G+20%§! $MOD_SHIP_SHIELD_MULT$ \n- §G+10%§! $MOD_SHIP_SHIELD_HARDENING_ADD$"
+ 
+ concept_MJ25_WH_thrumming_choirhall:"Dudniącą Sala Chóralna"
+ concept_MJ25_WH_thrumming_choirhall_desc:"$sm_MJ25_WH_thrumming_choirhall_desc$\n\n- §G+15§! £MJ25_WH_void_whispers_text£ §Y$MJ25_WH_void_whispers$§!\n- Tworzy §rWyjące Rozbłyski Pieśni§!, gdy tylko zostanie odblokowana dominacja §rGwiezdnej Fali Pieśni§! (Poziom Kryzysu 5)"
+
+ concept_MJ25_WH_trait_truth_cursed: "$MJ25_WH_trait_truthcursed$"
+ concept_MJ25_WH_trait_truth_cursed_desc:"$MJ25_WH_trait_truthcursed_desc$\n\n$MJ25_WH_trait_truthcursed_tooltip$"
+
+ concept_MJ25_WH_special_storm:"Wyjący Rozbłysk Pieśni"
+ concept_MJ25_WH_special_storm_desc:"§YWszystkie floty§! wewnątrz Wyjącego Rozbłysku Pieśni otrzymują:$TABBED_NEW_LINE$- Siła maskowania: §G+3§!\n\nPrzy wejściu w walkę wewnątrz Rozbłysku Pieśni, §YWrogie floty§! otrzymują:$TABBED_NEW_LINE$- $MOD_SHIP_FIRE_RATE_MULT$: §R-15%§!$TABBED_NEW_LINE- $MOD_SHIP_WEAPON_RANGE_MULT$: §R-15%§!"
+
+ concept_MJ25_WH_voices_relic: "$r_MJ25_WH_choir$"
+ concept_MJ25_WH_voices_relic_desc:"Pieśń naszego Chóru rośnie w siłę z każdym głosem, który uwalniamy."
+
+ ########################
+ # EVENTS
+ ########################
+ 
+ MJ25_WH.1050.title:"Jedno Puste, Rozbrzmiewające Echem Słowo"
+ MJ25_WH.1050.desc:"Ich Słowo zostało wypowiedziane i kości rzucone. Już teraz odbija się echem w powłoce [root.GetName], wypełniając uszy i umysły Ich chwałą. Każdego dnia pieśń gwiazd staje się głośniejsza, przybliżając nas do Ich Prawdy."
+ MJ25_WH.1050.a:"Radujcie się, bo Oni nas usłyszą."
+
+ MJ25_WH.1060.title:"Jedno Puste, Rozbrzmiewające Echem Słowo"
+ MJ25_WH.1060.desc:"Na [target.GetName] stało się nieuniknione. W szalonym chórze ludność planety powstała i niczym jedno wołała do Ich chwały. Niebo otworzyło się, rozbłyskując niemożliwością Ich obecności, i w jednej chwili wszelka komunikacja nadawana z naszej kolonii ustała.\n\nOdległe placówki zgłosiły gromkie dudnienie, a w następnych chwilach zarejestrowały zniknięcie planety. W mgnieniu oka po planecie rozeszła się pękająca refrakcja, gdy złożyła się w sobie i zniknęła.\n\nZ jej mieszkańców nie pozostał żaden ślad, poza echami unoszącymi się na wiatrach słonecznych."
+ MJ25_WH.1060.a:"Ich głosy zostały uwolnione."
+ MJ25_WH.1060.tt:"§R[target.GetName] upada§!"
+
+ MJ25_WH_must_be_colonised:"§R$TRIGGER_FAIL$Cel nie jest skolonizowanym światem§!"
+ MJ25_WH_cant_target_own_colony:"§R$TRIGGER_FAIL$Cel musi należeć do innego imperium§!"
+ NAME_MJ25_WH_confused_country:"Zdezorientowany"
+
+ MJ25_WH.1130:"Gniewna Pieśń"
+ MJ25_WH.1130.desc:"Straszliwe konsekwencje naszego nadmiernego wysiłku w końcu nadeszły.\n\nW jednej chwili zniszczona harmonia dysonansu rozdarła umysły każdego [root.owner.GetSpeciesName] niczym paznokcie po tablicy. Gdy paraliżujący zgiełk ucichł, §Y[event_target:MJ25_WH_deficit_consequence.GetName]§! przestało istnieć.\n\nZniknięcie tego całego świata zabrało ze sobą naszą dawną kolonię.\n\nJeśli jest jakaś nadzieja, to taka, że to zniknięcie pozostawiło nam skromną linę życia w postaci $MJ25_WH_void_whispers$, przesączających się przez systemy pobliskiej placówki. Powinniśmy starać się unikać dalszych deficytów w przyszłości, bo Ich niezadowolenie z pewnością objawi się ponownie."
+ MJ25_WH.1130.a:"Nie możemy dopuścić, aby to się powtórzyło."
+
+ NAME_MJ25_WH_aural_starmass_country:"Chóralny Pieśnioblask"
+
+ MJ25_WH.1160.title:"Rosnąca Możliwość"
+ MJ25_WH.1160.desc:"Zasady są po to, by je łamać, a te definiujące rzeczywistość nie są wyjątkiem. Jeśli Ich pieśń czegoś nas nauczyła, to tego, że nasze pieśni mogą przekształcić świat wokół nas.\n\nNasycając komponenty naszych statków krzyczącą wolą, możemy przebić się przez najbardziej fundamentalne elementy rzeczywistości. Uczynienie tego nie jest zadaniem błahym, a każda z tych transformacji staje się trudniejsza od poprzedniej. Jednakże to właśnie dzięki takim wysiłkom możemy tworzyć narzędzia o największym potencjale.\n\nMusimy teraz zdecydować, w jakich celach zastosujemy nasze pieśni. Które narzędzie, pytamy, powołamy do istnienia w naszych snach?"
+ MJ25_WH.1160.a:"Napęd Echo"
+ MJ25_WH.1160.a.tt:"Potężny napęd skokowy, który skacze tak daleko, jak daleko mogą podróżować nasze pieśni. ['concept_MJ25_WH_echo_drive']"
+ MJ25_WH.1160.b:"Lanca Pieśnioblasku"
+ MJ25_WH.1160.b.tt:"Broń o wielkim potencjale destrukcyjnym, która utrudnia celom każdy strzał. ['concept_MJ25_WH_songflare_lance']"
+ MJ25_WH.1160.c:"Otowy Herold"
+ MJ25_WH.1160.c.tt:"Hangary wypełnione szybkimi i zabójczymi statkami szturmowymi. ['concept_MJ25_WH_otic_heralds']"
+ MJ25_WH.1160.d:"Macierz Iluzji"
+ MJ25_WH.1160.d.tt:"Moduł pomocniczy, który poprawia szansę na uniki i wycofanie się. ['concept_MJ25_WH_illusion_matrix']"
+ MJ25_WH.1160.e:"Macierz Namierzająca"
+ MJ25_WH.1160.e.tt:"Moduł pomocniczy, który poprawia namierzanie i zasięg broni. ['concept_MJ25_WH_seeker_matrix']"
+ MJ25_WH.1160.f:"Splot Harmonizujący"
+ MJ25_WH.1160.f.tt:"Rezonująca sieć, która wplata Ich pieśń w nasze tarcze, wzmacniając nasze statki przed uszkodzeniami. ['concept_MJ25_WH_haromizing_weave']"
+ MJ25_WH.1160.g:"Płaszcz Szeptu"
+ MJ25_WH.1160.g.tt:"Zacieniony płaszcz szeptów, który chroni nasze statki zarówno przed wzrokiem, jak i dźwiękiem. ['concept_MJ25_WH_whisper_cloak']"
+
+ MJ25_WH.1170.materialist.desc:"[Root.GetSpeciesName], zaprzestańcie prób siania zamętu wśród naszych flot. Jesteśmy świadomi, że spowodowaliście już kilka incydentów, a nasza cierpliwość do waszych wybryków się wyczerpuje. Rozumiemy znacznie więcej, niż kiedykolwiek pojmiecie, a te twierdzenia o szeptach nie pasują do żadnego umiarkowanie akceptowalnego uniwersalnego twierdzenia. Ergo, są fałszywe."
+ MJ25_WH.1170.spiritualist.desc:"Długo już pozwalaliśmy na wasze igraszki, dziecko. Nie będziemy już znosić waszych bełkotliwych kłamstw. Odejdźcie i módlcie się, abyśmy nie szukali świętej zemsty za bluźnierstwa, które wyszeptaliście nam do uszu."
+ MJ25_WH.1170.xenophile.desc:"Młodzi [Root.GetSpeciesName], możemy wierzyć, że wszyscy mają prawo do własnych opinii, ale w waszym przypadku możemy zacząć czynić wyjątek. To, co rozprzestrzeniacie, jest nie tylko fałszywe, ale i złośliwe. Czy możemy zasugerować pojednanie zamiast agresji, zanim będzie dla was za późno?"
+ MJ25_WH.1170.xenophobe.desc:"Wasze próby kooptacji naszych flot niewiele znaczą, [Root.GetSpeciesName]. Już teraz przeciwstawiliśmy się waszej prymitywnej technologii i uznaliśmy wasze podstawowe pojmowanie wszechświata za śmieszne. Teraz zniknijcie i nie dręczcie nas więcej."
+ MJ25_WH.1170.machine.desc:"Aktywowano protokół Strażnika 727-9. Komunikat: Uwaga, [Root.GetSpeciesName]. Transmisje, które otrzymaliśmy od waszego imperium, składają się z infekującego złomu kodu. Obliczyliśmy, że wasze imperium jest w 72% §R<<BŁĄD: BLOK DANYCH USZKODZONY>>§!. Żądamy walidacji waszych systemów i wznieśliśmy zaporę, aby zapobiec dalszemu rozprzestrzenianiu się do naszej macierzy doświadczeń."
+ MJ25_WH.1170.hive.desc:"Słyszeliśmy wasze szepty drażniące stare blizny. Jest to dyskomfort, ale taki, który umysł taki jak nasz może łatwo zagłuszyć. Nie wątpcie, że krzyki są znacznie głośniejsze niż zwykłe szepty, a my nie jesteśmy im obcy."
+
+ MJ25_WH.1170.a:"Oni już nas nie słyszą."
+ MJ25_WH.1170.a.tt:"Floty należące do [event_target:MJ25_WH_temp_fe.GetName] stały się odporne na zdolność §Y$MJ25_WH_conductor_confusion_menu_title$§! naszych Konduktorów."
+ 
+ MJ25_WH.1202.title:"Ci, Którzy Nie Usłyszą"
+ MJ25_WH.1202.desc:"Nasze pieśnioblaski niedawno dotarły do granicy Upadłego Imperium, §H[From.GetSpeciesName]§!. Zamiast być otwartymi na objawienie, które obiecujemy, przyjęli stanowisko, że jesteśmy zagrożeniem egzystencjalnym, które musi zostać wyeliminowane.\n\nGdy nasza pieśń schodzi na ich systemy, w imperium nastąpił zryw aktywności niewidziany w naszych dziejach. Ci, którzy kiedyś spali, obudzili się ponownie, i to z nienawiścią oraz brakiem zrozumienia w sercach spoglądają teraz na nasze dzieła.\n\nWojna może nadejść..."
+ MJ25_WH.1202.a:"Musimy wzmocnić nasze obrony."
+
+ MJ25_WH.1203.title:"Ci, którzy chcą nas uciszyć"
+ MJ25_WH.1203.desc:"Jak się spodziewaliśmy, §H[FromFrom.GetSpeciesName]§! po prostu nie dali się przekonać naszym naleganiom, by walczyć o prawdę dla wszystkich. Poprzysięgając zmiażdżyć nas w proch i na zawsze uciszyć nasze głosy, wypowiedzieli nam wojnę totalną.\n\nZaprosilibyśmy ich, by dołączyli do nas w pieśni, lecz niestety, nasi starsi okazują się zbyt zamknięci na nowe idee. To z pewnością wstyd, ale zrobimy, co musimy. To może się skończyć tylko w jeden sposób."
+ MJ25_WH.1203.a:"Walczymy o Prawdę."
+ MJ25_WH.1203.a.tt:"§H[FromFrom.GetSpeciesName]§! wypowiedzieli nam wojnę."
+ 
+
+ MJ25_WH_opinion_confusion:"Szerzenie fałszu"
+ MJ25_WH_opinion_cracking_reality:"Rozrywanie rzeczywistości"
+ MJ25_WH_opinion_bad_music:"Drażniące melodie natrętne"
+ MJ25_WH_opinion_stoking_cults:"Zasiewanie kultów szeptów"
+ MJ25_WH_opinion_existential_threat:"Pieśni końca"
+
+ MJ25_WH_aura_starbase_fire_rate:"Tonalna Kakofonia"
+
+
+ ###########################
+ # Situations
+ ###########################
+
+ situation_MJ25_WH_one_empty_echoing_word:"Jedno Puste, Rozbrzmiewające Echem Słowo"
+ situation_MJ25_WH_one_empty_echoing_word_type:"Jedno Puste, Rozbrzmiewające Echem Słowo"
+ situation_MJ25_WH_one_empty_echoing_word_desc:"Ich Słowo zostało wypowiedziane i kości zostały rzucone. Już teraz rozbrzmiewa echem w skorupie planety, wypełniając uszy i umysły Ich chwałą. Każdego dnia pieśń gwiazd staje się głośniejsza, przybliżając nas coraz bardziej do Ich Prawdy."
+
+ situation_MJ25_WH_one_empty_echoing_word_monthly_change_tooltip: "$situation_monthly_change_tooltip_little_control$"
+ situation_MJ25_WH_echoing_word_approach:"Niech Ich Pieśń się rozwinie."
+
+ situation_MJ25_WH_echoing_word_outcome:"Cokolwiek się stanie, tego świata już nie będzie."
+
+ situation_MJ25_WH_resource_deficit:"$MJ25_WH_void_whispers$ Deficyt"
+ situation_MJ25_WH_resource_deficit_type: "$situation_MJ25_WH_resource_deficit$"
+ situation_MJ25_WH_resource_deficit_desc:"Nasz deficyt $MJ25_WH_void_whispers$ wymyka się spod kontroli! $situation_deficit_desc_base$"
+ situation_MJ25_WH_resource_deficit_monthly_change_tooltip: "$situation_deficit_monthly_change_tooltip$"
+ deficit_situation_MJ25_Wh_resource_defaulted_tt:"Niewywiązanie się z naszych rezerw $MJ25_WH_void_whispers$ będzie miało §Rkatastrofalne konsekwencje...§!"
+
+ string_not_in_deficit_MJ25_WH_resource:"Pozytywne Miesięczne Saldo $MJ25_WH_void_whispers$"
+ string_expenditures_greater_than_income_MJ25_WH_resource:"$MJ25_WH_void_whispers$ Deficyt"
+ string_resource_reserves_MJ25_WH_resource:"$MJ25_WH_void_whispers$ Rezerwy"
+
+ deficit_approach_MJ25_WH_resource_deficit_work_harder:"Wytężyć słuch"
+ deficit_approach_MJ25_WH_resource_deficit_exposure:"Otworzyć skarbce szeptów"

@@ -1,0 +1,315 @@
+﻿l_korean:
+rule_headlines_minor_events: "@headlines_newsicon! #yellow Headlines#! | Minor Events"
+setting_headlines_all_minor_events: "All Minor Headlines"
+setting_headlines_all_minor_events_desc: "All headlines will be shown."
+setting_headlines_relevant_minor_events: "Only Relevant Minor Headlines"
+setting_headlines_relevant_minor_events_desc: "Some less important headlines will only be shown if you have an [concept_interest] in the relevant region. #lore This includes events such as the collapse of Central America or the French reconquest of Algeria. #!"
+setting_headlines_no_minor_events: "No Minor Headlines"
+setting_headlines_no_minor_events_desc: "Some less important headlines will not be shown. #lore This includes events such as the collapse of Central America or the French reconquest of Algeria. #!"
+
+headlines_major_group: "@headlines_newsicon! #yellow Headlines#! | Major Events"
+headlines_minor_group: "@headlines_newsicon! #yellow Headlines#! | Minor Events"
+headlines_constructions_group: "@headlines_newsicon! #yellow Headlines#! | Constructions"
+
+
+##Civil Wars##
+#ACW Begins
+notification_headlines_acw_begin_csa_tooltip:0 "#header $notification_headlines_acw_begin_csa_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_acw_begin_csa_desc$"
+ notification_headlines_acw_begin_csa_name:0 "#b SOUTHERN STATES ENACT SECESSION #!"
+ notification_headlines_acw_begin_csa_desc:1 "In the face of mounting support for the abolition of slavery, the [SCOPE.sCountry('csa_scope').GetName] have erupted in open rebellion. #lore Declaring their unilateral exit from the union, the secessionist states have seized federal arsenals and called up their local militias to fight. The Union government's negotations were rebuked, said the secretary... #!"
+
+notification_headlines_acw_begin_fsa_tooltip:0 "#header $notification_headlines_acw_begin_fsa_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_acw_begin_fsa_desc$"
+ notification_headlines_acw_begin_fsa_name:0 "#b NORTHERN STATES ENACT SECESSION #!"
+ notification_headlines_acw_begin_fsa_desc:1 "Facing a staunchly pro-slavery, the [SCOPE.sCountry('fsa_scope').GetName] have erupted in open rebellion. #lore Declaring the federal government to be illegitimate, the free states have declared emancipation for any slaves in their territory, including those fleeing the slave states. The Union government denounced the rebels as traitors to the Constitution, and called for... #!"
+
+#ACW Ends
+notification_headlines_acw_end_slaver_tooltip:0 "#header $notification_headlines_acw_end_slaver_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_acw_end_slaver_desc$"
+ notification_headlines_acw_end_slaver_name:0 "#b SLAVERY REIGNS IN USA #!"
+ notification_headlines_acw_end_slaver_desc:1 "The American Civil War has ended in victory for slavery. #lore The president urged reconciliation and the swift reintegration of the belligerent states. Pockets of abolitionist forces continue to hold out even after... #!"
+
+notification_headlines_acw_end_emancipation_tooltip:0 "#header $notification_headlines_acw_end_emancipation_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_acw_end_emancipation_desc$"
+ notification_headlines_acw_end_emancipation_name:0 "#b AMERICAN CIVIL WAR ENDS #!"
+ notification_headlines_acw_end_emancipation_desc:1 "The American Civil War has ended in favor of the abolitionists. #lore The president urged reconciliation and the swift reintegration of the belligerent states. Pro-slavery paramilitary forces carried out a series of... #!"
+
+#ACW Ends (Stalemate)
+notification_headlines_acw_end_stalemate_tooltip:0 "#header $notification_headlines_acw_end_stalemate_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_acw_end_stalemate_desc$"
+ notification_headlines_acw_end_stalemate_name:0 "#b THE DISUNITED STATES #!"
+ notification_headlines_acw_end_stalemate_desc:1 "The American Civil War has concluded in stalemate, with the [SCOPE.sCountry('usa_scope').GetName] and the [SCOPE.sCountry('acw_other_one_scope').GetName] begrudgingly accepting truce. #lore Most observers say that peace between the two Americas cannot last. Turmoil has rocked the border states as both sides seek to... #!"
+
+#Taiping Appears
+notification_headlines_taiping_appears_tooltip:0 "#header $notification_headlines_taiping_appears_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_taiping_appears_desc$"
+ notification_headlines_taiping_appears_name:0 "#b 'HEAVENLY KINGDOM' DECLARED IN CHINA #!"
+ notification_headlines_taiping_appears_desc:1 "A chinese Christian movement has formed the [SCOPE.sCountry('taiping_scope').GetName] and declared holy war against the [SCOPE.sCountry('china_scope').GetName]. #lore The sect known as the God-Worshipping Society is said to be led by the brother of Jesus Christ, with thousands flocking to...  #!"
+
+#Taiping Victory
+notification_headlines_taiping_victory_tooltip:0 "#header $notification_headlines_taiping_victory_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_taiping_victory_desc$"
+ notification_headlines_taiping_victory_name:0 "#b THE HOLY CHINESE EMPIRE? #!"
+ notification_headlines_taiping_victory_desc:1 "The [SCOPE.sCountry('taiping_scope').GetName] has emerged victorious and established God-Worshipping rule over all of China. #lore The brutal conflict has left a staggering bodycount. [SCOPE.sCountry('taiping_scope').GetRuler.GetPrimaryRoleTitle] [SCOPE.sCountry('taiping_scope').GetRuler.GetFirstName] has already decreed a broad range of societal reforms, including... #!"
+
+#Taiping Defeat
+notification_headlines_taiping_defeat_tooltip:0 "#header $notification_headlines_taiping_defeat_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_taiping_defeat_desc$"
+ notification_headlines_taiping_defeat_name:0 "#b CHRISTIANS MASSACRED IN CHINA #!"
+ notification_headlines_taiping_defeat_desc:1 "The [SCOPE.sCountry('china_scope').GetName] have crushed the God-Worshipping Society's rebellion. #lore Shocking reports of civilian massacres have filtered out from the recaptured provinces, with one eyewitness claiming that over 30,000 people were killed in a single day by... #!"
+
+#Sepoy Mutiny
+notification_headlines_sepoy_mutiny_tooltip:0 "#header $notification_headlines_sepoy_mutiny_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_sepoy_mutiny_desc$"
+ notification_headlines_sepoy_mutiny_name:0 "#b SEPOY MUTINY â€” BRITISH MOBILIZE #!"
+ notification_headlines_sepoy_mutiny_desc:1 "The Indian subjects of the [SCOPE.sCountry('bic_scope').GetName] have risen in revolt across the subcontinent. #lore Entire regiments of local Hindu and Muslim troops have rebelled against their British masters, fighting for an end to foreign domination by the... #!"
+
+#Sepoy Mutiny Success
+notification_headlines_sepoy_mutiny_success_tooltip:0 "#header $notification_headlines_sepoy_mutiny_success_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_sepoy_mutiny_success_desc$"
+ notification_headlines_sepoy_mutiny_success_name:0 "#b THE END OF BRITISH INDIA? #!"
+ notification_headlines_sepoy_mutiny_success_desc:1 "The Sepoy Mutiny has succeeded in liberating large swathes of India from [SCOPE.sCountry('bic_scope').GetAdjective] rule. #lore The catastrophic defeat has sent markets in London into chaos, while the remnants of the British administration fortify their remaining holdings in... #!"
+
+#Sepoy Mutiny Failure
+notification_headlines_sepoy_mutiny_crushed_tooltip:0 "#header $notification_headlines_sepoy_mutiny_crushed_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_sepoy_mutiny_crushed_desc$"
+ notification_headlines_sepoy_mutiny_crushed_name:0 "#b THE ARMY OF RETRIBUTION #!"
+ notification_headlines_sepoy_mutiny_crushed_desc:1 "The [SCOPE.sCountry('bic_scope').GetName] has crushed the sepoy mutiny with overwhelming force. #lore Horrific reports from the recaptured cities describe British regulars shooting everything that moves, bayoneting women and children, and even... #!"
+
+
+##Collapses##
+#Qing Collapse
+notification_headlines_qing_collapse_tooltip:0 "#header $notification_headlines_qing_collapse_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_qing_collapse_desc$"
+ notification_headlines_qing_collapse_name:0 "#b BEIJING IN CHAOS â€” ARMIES DEFECT #!"
+ notification_headlines_qing_collapse_desc:1 "Beleagured on all sides, the authority of the [SCOPE.sCountry('china_scope').GetName] appears to have totally collapsed. #lore  Local generals and ambitious bandits have seized control of provinces across China, subjecting the population to untold privations. The foreign ministries of several European powers issued statements concerning...#!"
+#BIC Collapse
+notification_headlines_bic_collapse_tooltip:0 "#header $notification_headlines_bic_collapse_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_bic_collapse_desc$"
+ notification_headlines_bic_collapse_name:0 "#b THE CROWN JEWEL, LOST #!"
+ notification_headlines_bic_collapse_desc:1 "The long [SCOPE.sCountry('britain_scope').GetAdjective] rule over India has ended, leaving the future of the subcontinent uncertain. #lore Indian ports are clogged with English seeking passage back to the home islands. The British foreign ministry has given its full support to repatriation of...#!"
+
+#DEI Collapse
+notification_headlines_dei_collapse_tooltip:0 "#header $notification_headlines_dei_collapse_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_dei_collapse_desc$"
+ notification_headlines_dei_collapse_name:0 "#b DUTCH RETREAT â€” INDIES IN TATTERS #!"
+ notification_headlines_dei_collapse_desc:1 "The colonial administration of the Dutch East Indies has made a hasty retreat from the islands, leaving the natives free from their former overlords. #lore Panic gripped the markets in Amsterdam as news of the colonial catastrophe reached...#!"
+
+#Central America Collapse
+notification_headlines_uca_collapse_tooltip:0 "#header $notification_headlines_uca_collapse_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_uca_collapse_desc$"
+ notification_headlines_uca_collapse_name:0 "#b CENTRAL AMERICA VOTES TO DISSOLVE #!"
+ notification_headlines_uca_collapse_desc:1 "The former provinces of Central America have officially separated into independent states. #lore Practically defunct since early this year, the central congress of the federation voted to officially end the union and recognize the sovereignty of the provinces. In a solemn ceremony, the flag of the federation was lowered... #!"
+
+##Formations##
+#NGF Formed
+notification_headlines_ngf_formed_tooltip:0 "#header $notification_headlines_ngf_formed_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_ngf_formed_desc$"
+ notification_headlines_ngf_formed_name:0 "#b GERMAN STATES DECLARE FEDERATION #!"
+ notification_headlines_ngf_formed_desc:1 "Driven by the cause of nationalism, over a dozen members of the German Confederation have joined together into the [SCOPE.sCountry('ngf_scope').GetName]. #lore Celebrations spontaneously broke out across several cities in favor of the new federation. The common sentiment is that the full unification of Germany is now inevitable, with... #!"
+
+#SGF Formed
+notification_headlines_sgf_formed_tooltip:0 "#header $notification_headlines_sgf_formed_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_sgf_formed_desc$"
+ notification_headlines_sgf_formed_name:0 "#b SOUTH GERMANY FEDERATES #!"
+ notification_headlines_sgf_formed_desc:1 "Several south german states have joined together into the [SCOPE.sCountry('sgf_scope').GetName]. #lore German nationalists from all corners traveled to [SCOPE.sCountry('sgf_scope').GetCapital.GetCityHubName] for the inaugural ceremony. The implications for german unification are hotly debated, considering... #!"
+
+#Germany Formed
+notification_headlines_ger_formed_tooltip:0 "#header $notification_headlines_ger_formed_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_ger_formed_desc$"
+ notification_headlines_ger_formed_name:0 "#b GERMAN UNIFICATION #!"
+ notification_headlines_ger_formed_desc:1 "The [SCOPE.sCountry('germany_scope').GetName] was officially declared in [SCOPE.sCountry('germany_scope').GetCapital.GetCityHubName] today, uniting the patchwork of German principalities into one state. #lore Cheering crowds paraded through the streets carrying the flag of the newly united Germany. Already the governments of France and Austria have sent their cautious regards to... #!"
+
+#Italy Formed
+notification_headlines_italy_formed_tooltip:0 "#header $notification_headlines_italy_formed_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_italy_formed_desc$"
+ notification_headlines_italy_formed_name:0 "#b ITALIAN UNIFICATION #!"
+ notification_headlines_italy_formed_desc:1 "Italian nationalism has prevailed in the peninsula with the formation of [SCOPE.sCountry('italy_scope').GetName]. #lore The new Italian government was inaugerated in [SCOPE.sCountry('italy_scope').GetCapital.GetCityHubName] amidst cheering crowds and waving tricolors. Diplomats from several other european nations in attendance gave their... #!"
+
+#Central Europe Formed
+notification_headlines_central_europe_formed_tooltip:0 "#header $notification_headlines_central_europe_formed_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_central_europe_formed_desc$"
+ notification_headlines_central_europe_formed_name:0 "#b A UNITED EUROPE #!"
+ notification_headlines_central_europe_formed_desc:1 "A momentous occasion in the history of Europe and the world today, with the inauguration of the [SCOPE.sCountry('hre_scope').GetName]. #lore Crowds of people from all across europe packed the streets to mark the occasion. Negotiations over the official languages to be used by the pan-european state remain ongoing, as... #!"
+
+#Scandinavia Formed
+notification_headlines_scandinavia_formed_tooltip:0 "#header $notification_headlines_scandinavia_formed_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_scandinavia_formed_desc$"
+ notification_headlines_scandinavia_formed_name:0 "#b SCANDINAVIA DECLARES UNION #!"
+ notification_headlines_scandinavia_formed_desc:1 "The northern countries of [SCOPE.sCountry('scandinavia_scope').GetName] have formed a united government. #lore The new flag of united Scandinavia was unveiled and raised alongside the flags of each of the constituent nations. The new prime minister gave a multi-lingual toast in honor of... #!"
+
+#Yugoslavia Formed
+notification_headlines_yugoslavia_formed_tooltip:0 "#header $notification_headlines_yugoslavia_formed_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_yugoslavia_formed_desc$"
+ notification_headlines_yugoslavia_formed_name:0 "#b YUGOSLAV FEDERATION DECLARED #!"
+ notification_headlines_yugoslavia_formed_desc:1 "The western balkans have been united under [SCOPE.sCountry('yugoslavia_scope').GetName]. #lore Ambassadors of the new Yugoslav state were formally recognized by the other European countries at a diplomatic congress. Long under the Austrian and Ottoman yokes, the slavic peoples must now... #!"
+
+#India Formed
+notification_headlines_india_formed_tooltip:0 "#header $notification_headlines_india_formed_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_india_formed_desc$"
+ notification_headlines_india_formed_name:0 "#b FREE INDIA #!"
+ notification_headlines_india_formed_desc:1 "The state of [SCOPE.sCountry('india_scope').GetName] has been declared, claiming the title of unifier of the subcontinent. #lore International observers remain skeptical of the new state's prospects, citing increasing tension between the Hindu and Muslim populations of the region, especially in... #!"
+
+##Regime Changes##
+#British Republic
+notification_headlines_british_republic_tooltip:0 "#header $notification_headlines_british_republic_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_british_republic_desc$"
+ notification_headlines_british_republic_name:0 "#b TRICOLORS OVER LONDON #!"
+ notification_headlines_british_republic_desc:1 "The sun has set on the United Kingdom today as the [SCOPE.sCountry('britain_scope').GetName] was officially declared by parliament. #lore The royal family has been allowed to retire to their estates, but have been barred from holding any government offices. The scene was hectic outside of Westminster as anti-republican demonstrators...#!"
+
+#British Council Republic
+notification_headlines_british_council_republic_tooltip:0 "#header $notification_headlines_british_council_republic_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_british_council_republic_desc$"
+ notification_headlines_british_council_republic_name:0 "#b RED LONDON  #!"
+ notification_headlines_british_council_republic_desc:1 "A government of worker's councils have seized control of the [SCOPE.sCountry('britain_scope').GetName]. #lore Estates all throughout the country have been stormed and looted by mobs of frenzied revolutionaries. The status of the royal family remains unclear as... #!"
+
+#British Raj
+notification_headlines_british_raj_tooltip:0 "#header $notification_headlines_british_raj_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_british_raj_desc$"
+ notification_headlines_british_raj_name:0 "#b END OF COMPANY RULE IN INDIA #!"
+ notification_headlines_british_raj_desc:1 "Following a series of failures by the colonial administration, the entire East India Company has been dissolved by act of parliament. #lore All company assets have been seized by the crown, and its Indian holdings reorganized into the [SCOPE.sCountry('raj_scope').GetName]. The newly appointed Governor-General of India gave a statement upon his arrival in... #!"
+
+#Japan Restoration
+notification_headlines_japan_restoration_tooltip:0 "#header $notification_headlines_japan_restoration_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_japan_restoration_desc$"
+ notification_headlines_japan_restoration_name:0 "#b EMPEROR TAKES POWER IN JAPAN #!"
+ notification_headlines_japan_restoration_desc:1 "The shogunate that dominated [SCOPE.sCountry('japan_scope').GetName] for centuries has been dissolved, and political power restored to [SCOPE.sCountry('japan_scope').GetRuler.GetPrimaryRoleTitle] [SCOPE.sCountry('japan_scope').GetRuler.GetFirstName]. #lore The new administration has already announced sweeping reforms, seeking to modernize and industrialize the island nation. Several bands of disgruntled samurai clashed with government forces...#!"
+
+#Tricolors over Rome
+notification_headlines_roman_republic_tooltip:0 "#header $notification_headlines_roman_republic_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_roman_republic_desc$"
+ notification_headlines_roman_republic_name:0 "#b POPE OUSTED FROM ROME #!"
+ notification_headlines_roman_republic_desc:1 "Republican radicals have seized the Eternal City and proclaimed the [SCOPE.sCountry('rome_scope').GetName]. #lore His Holiness was allegedly spirited out of the Vatican in disguise before the takeover. The new elections have been boycotted by devout... #!"
+
+#French Commune
+notification_headlines_french_commune_tooltip:0 "#header $notification_headlines_french_commune_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_french_commune_desc$"
+ notification_headlines_french_commune_name:0 "#b COMMUNARDS SEIZE FRANCE #!"
+ notification_headlines_french_commune_desc:1 "French communards have taken control of the government and declared the [SCOPE.sCountry('france_scope').GetName]. #lore Red flags lined the streets of Paris in celebration of the new regime. Dispossessed aristocrats have fled across the continent, turning up at foreign ports of entry...  #!"
+
+#French Legitimist Restoration
+notification_headlines_french_legitimist_tooltip:0 "#header $notification_headlines_french_legitimist_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_french_legitimist_desc$"
+ notification_headlines_french_legitimist_name:0 "#b BOURBONS RESTORED TO POWER #!"
+ notification_headlines_french_legitimist_desc:1 "The Legitimist faction has restored [SCOPE.sCountry('france_scope').GetRuler.GetPrimaryRoleTitle] [SCOPE.sCountry('france_scope').GetRuler.GetFirstName] to the [SCOPE.sCountry('france_scope').GetAdjective] throne. #lore The conservative ultra-royalist administration has promised a return to the days before the revolution. Republican agitators interrupted proceedings in the capital as... #!"
+
+#French Monarchy Restored (again)
+notification_headlines_french_monarchy_returns_tooltip:0 "#header $notification_headlines_french_monarchy_returns_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_french_monarchy_returns_desc$"
+ notification_headlines_french_monarchy_returns_name:0 "#b FRANCE RETURNS TO MONARCHY #!"
+ notification_headlines_french_monarchy_returns_desc:1 "[SCOPE.sCountry('france_scope').GetName] has once again restored the monarchy with the crowning of [SCOPE.sCountry('france_scope').GetRuler.GetPrimaryRoleTitle] [SCOPE.sCountry('france_scope').GetRuler.GetFirstName]. #lore The new [SCOPE.sCountry('france_scope').GetRuler.GetPrimaryRoleTitle] has promised to restore prosperity and stability to the nation. Partisan activity is reported to continue in the... #!"
+
+#French Republic Restored
+notification_headlines_french_republic_tooltip:0 "#header $notification_headlines_french_republic_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_french_republic_desc$"
+ notification_headlines_french_republic_name:0 "#b FRENCH REPUBLIC RESTORED #!"
+ notification_headlines_french_republic_desc:1 "The formerly abolished [SCOPE.sCountry('france_scope').GetName] has returned to power. #lore Champagne and tricolor cockades marked the occasion as triumphant republican forces paraded through Paris. 'LibertÃ©, Ã©galitÃ©, fraternitÃ©!' were the words of the day among the... #!"
+
+#French Empire Restored
+notification_headlines_french_empire_tooltip:0 "#header $notification_headlines_french_empire_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_french_empire_desc$"
+ notification_headlines_french_empire_name:0 "#b A NEW NAPOLEON? #!"
+ notification_headlines_french_empire_desc:1 "[SCOPE.sCountry('france_scope').GetRuler.GetPrimaryRoleTitle] [SCOPE.sCountry('france_scope').GetRuler.GetFirstName] has returned the house of Bonaparte to power and proclaimed the [SCOPE.sCountry('france_scope').GetName]. #lore Backed by the armed forces, the new imperial administration seeks to restore France's position on the world stage. European diplomats were keen to hear the specific intents of the new emperor... #!"
+
+#Communist Germany
+notification_headlines_communist_germany_tooltip:0 "#header $notification_headlines_communist_germany_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_communist_germany_desc$"
+ notification_headlines_communist_germany_name:0 "#b THE GERMAN SOCIAL REVOLUTION #!"
+ notification_headlines_communist_germany_desc:1 "A socialist revolution has swept through [SCOPE.sCountry('germany_scope').GetName]. #lore Leftist theorists have long pointed to the German industrial heartland as the most fertile soil for a great proletarian uprising. Already radical elements in countries across Europe have begun to emulate the successful model of the german socialists, even as denouncements from... #!"
+
+#Communist USA
+notification_headlines_communist_usa_tooltip:0 "#header $notification_headlines_communist_usa_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_communist_usa_desc$"
+ notification_headlines_communist_usa_name:0 "#b WHITE HOUSE, RED FLAGS #!"
+ notification_headlines_communist_usa_desc:1 "The venerable liberal government of the United States has been dissolved and replaced by the [SCOPE.sCountry('usa_scope').GetName]. #lore Declarations of solidarity have emanated from socialist organizations across Europe, hailing this new 'Revolutionary Titan' as mighty force against the capitalist regimes. Reports of protests and violence against the new government have filtered out of the former states, especially from the... #!"
+
+#Monarchist USA
+notification_headlines_monarchy_usa_tooltip:0 "#header $notification_headlines_monarchy_usa_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_monarchy_usa_desc$"
+ notification_headlines_monarchy_usa_name:0 "#b AN AMERICAN EMPIRE? #!"
+ notification_headlines_monarchy_usa_desc:1 "The American republic has finally faltered and been replaced by the [SCOPE.sCountry('usa_scope').GetName]. #lore A lavish ceremony in the capital inaugurated the new [SCOPE.sCountry('usa_scope').GetRuler.GetPrimaryRoleTitle] [SCOPE.sCountry('usa_scope').GetRuler.GetFirstName], in a ceremony repleate with American icons repurposed as symbols of the new monarchy. Opposition newspapers have unleashed a torrent of mockery and criticism against the end of the republic, with...  #!"
+
+#Technocracy USA
+notification_headlines_technocracy_usa_tooltip:0 "#header $notification_headlines_technocracy_usa_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_technocracy_usa_desc$"
+ notification_headlines_technocracy_usa_name:0 "#b THE TECHNOCRATIC EXPERIMENT #!"
+ notification_headlines_technocracy_usa_desc:1 "The former United States has been reorganized into the [SCOPE.sCountry('usa_scope').GetName], a technocratic regime. #lore Formal statements issued by the new ruling council announced a sweeping overhaul to the country's economy, promising huge gains in efficiency and standard of living. Dissidents carrying the Stars and Stripes were met with staunch police resistance as... #!"
+
+#Austria-Hungary
+notification_headlines_austria_hungary_tooltip:0 "#header $notification_headlines_austria_hungary_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_austria_hungary_desc$"
+ notification_headlines_austria_hungary_name:0 "#b THE AUSTRIAN DUAL MONARCHY #!"
+ notification_headlines_austria_hungary_desc:1 "The Austrian Empire has been reorganized into [SCOPE.sCountry('austria_scope').GetName], dividing the country between Austrian and Hungarian holdings. #lore [SCOPE.sCountry('austria_scope').GetRuler.GetFullName] now reigns as Emperor-King of a dual nation, presiding over two tenuously-united governments. The compromise has been met with mixed reactions in Hungary, where nationalist elements continue to advocate for...#!"
+
+#Democratic Russia
+notification_headlines_democratic_russia_tooltip:0 "#header $notification_headlines_democratic_russia_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_democratic_russia_desc$"
+ notification_headlines_democratic_russia_name:0 "#b DEMOCRATIC RUSSIA #!"
+ notification_headlines_democratic_russia_desc:1 "A democratic republic has been proclaimed in [SCOPE.sCountry('russia_scope').GetName]. #lore Preparations for the first elections of the new republic have commenced across the massive territory of the country. Partisans loyal to the previous government have continued to harass... #!"
+
+#Soviet Russia
+notification_headlines_soviet_russia_tooltip:0 "#header $notification_headlines_soviet_russia_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_soviet_russia_desc$"
+ notification_headlines_soviet_russia_name:0 "#b ALL POWER TO THE SOVIETS #!"
+ notification_headlines_soviet_russia_desc:1 "A revolutionary government of workers' councils has proclaimed the [SCOPE.sCountry('russia_scope').GetName] in Russia. #lore The new socialist regime has consolidated its control over the country and announced radical redistributions of land and wealth in the country. Those disfavored as counter-revolutionaries have been hunted down or forced to flee into exile, as... #!"
+
+#President Pedro
+notification_headlines_pedro_president_tooltip:0 "#header $notification_headlines_pedro_president_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_pedro_president_desc$"
+ notification_headlines_pedro_president_name:0 "#b PRESIDENT PEDRO #!"
+ notification_headlines_pedro_president_desc:1 "[SCOPE.sCountry('brazil_scope').GetRuler.GetFullName] has relinquished his royal title and accepted the office of first [SCOPE.sCountry('brazil_scope').GetRuler.GetPrimaryRoleTitle] of [SCOPE.sCountry('brazil_scope').GetName]. #lore The announcement came as a response to republican agitation within the divided country, with the former emperor still wielding executive power, it is unlikely that... #!"
+
+#Pedro Dies
+notification_headlines_pedro_death_tooltip:0 "#header $notification_headlines_pedro_death_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_pedro_death_desc$"
+ notification_headlines_pedro_death_name:0 "#b DOM PEDRO DEAD #!"
+ notification_headlines_pedro_death_desc:1 "Pedro II has died, leaving [SCOPE.sCountry('brazil_scope').GetRuler.GetPrimaryRoleTitle] [SCOPE.sCountry('brazil_scope').GetRuler.GetName] to take the throne of [SCOPE.sCountry('brazil_scope').GetName]. #lore The streets were packed full of mourning Brazilians as the late emperor's funeral process brought his body to be held in state. Churches across the country gave special services in praise of... #!"
+
+## Other Events
+#Billion GDP
+notification_headlines_billion_gdp_tooltip:0 "#header $notification_headlines_billion_gdp_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_billion_gdp_desc$"
+ notification_headlines_billion_gdp_name:0 "#b NEW ECONOMIC HEIGHTS â€” 1B IN GDP #!"
+ notification_headlines_billion_gdp_desc:1 "The latest economic report confirms that the total economic output of [SCOPE.sCountry('billionare_country').GetName] has surpassed #yellow @money! 1 Billion #!. #lore Market analysts predict unparalleled growth to continue, with the most optimistic forecasting another doubling of total activity by...#!"
+
+#Tanzimat Fail
+notification_headlines_tanzimat_fail_tooltip:0 "#header $notification_headlines_tanzimat_fail_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tanzimat_fail_desc$"
+ notification_headlines_tanzimat_fail_name:0 "#b OTTOMAN SULTAN ABDICATES #!"
+ notification_headlines_tanzimat_fail_desc:1 "Political paralysis has gripped the [SCOPE.sCountry('ottoman_scope').GetName] in the wake of the Sultan's sudden abdication from the throne. #lore Facing revolts from its myriad subjects and local governors, the Sublime Porte's administration has been stretched thin in recent years. The British ambassador in Istanbul said... #!"
+
+#French Algeria
+notification_headlines_french_algeria_tooltip:0 "#header $notification_headlines_french_algeria_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_french_algeria_desc$"
+ notification_headlines_french_algeria_name:0 "#b FRENCH RETAKE ALGERIA #!"
+ notification_headlines_french_algeria_desc:1 "[SCOPE.sCountry('france_scope').GetName] has reasserted its control over Algeria after a bloody conflict against local resistance forces. #lore With costs mounting in the face of unconventional tactics, the French army adopted a brutal scorched earth campaign against the countryside of... #!"
+
+#South Pole Reached
+notification_headlines_south_pole_tooltip:0 "#header $notification_headlines_south_pole_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_south_pole_desc$"
+ notification_headlines_south_pole_name:0 "#b [SCOPE.sCountry('south_pole_country').GetAdjective] REACHES SOUTH POLE #!"
+ notification_headlines_south_pole_desc:1 "An expedition sponsored by [SCOPE.sCountry('south_pole_country').GetName] has successfully reached the South Pole and returned. #lore The explorers trekked across the Antarctic wilderness and raised the [SCOPE.sCountry('south_pole_country').GetAdjectiveNoFormatting] flag. Upon their return, messages of congratulation were sent... #!"
+
+#First State Atheism
+notification_headlines_state_atheism_tooltip:0 "#header $notification_headlines_state_atheism_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_state_atheism_desc$"
+ notification_headlines_state_atheism_name:0 "#b GOD OUTLAWED â€” CHURCHES LOOTED #!"
+ notification_headlines_state_atheism_desc:1 "[SCOPE.sCountry('atheist_country').GetName] has enacted a policy of State Atheism, banning religion from public life. #lore Churches across [SCOPE.sCountry('atheist_country').GetCapital.GetCityHubName] have been stripped of their valuables and shuttered. Reports abound of scriptures being burnt in the street, with clergymen being... #!"
+
+#Victoria Coronation
+notification_headlines_victoria_coronation_tooltip:0 "#header $notification_headlines_victoria_coronation_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_victoria_coronation_desc$"
+ notification_headlines_victoria_coronation_name:0 "#b CORONATION OF QUEEN VICTORIA #!"
+ notification_headlines_victoria_coronation_desc:1 "[SCOPE.sCharacter('queen_victoria').GetFirstName] has been crowned [SCOPE.sCharacter('queen_victoria').GetPrimaryRoleTitle] of [SCOPE.sCountry('britain_scope').GetName] at age [SCOPE.sCharacter('queen_victoria').GetAge]. #lore The event was marked by several mishaps, including the dramatic fall of an elderly Lord upon the steps of the Queen's platform. The new Queen, to her credit, gave aid to the Lord by... #!"
+
+#Victoria Funeral
+notification_headlines_victoria_funeral_tooltip:0 "#header $notification_headlines_victoria_funeral_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_victoria_funeral_desc$"
+ notification_headlines_victoria_funeral_name:0 "#b FUNERAL OF QUEEN VICTORIA #!"
+ notification_headlines_victoria_funeral_desc:1 "Queen Victoria has died and been succeeded by [SCOPE.sCharacter('new_british_monarch').GetPrimaryRoleTitle] [SCOPE.sCharacter('new_british_monarch').GetFirstName].  #lore Dignitaries and Nobles traveled from across Europe to attend the Queen's funeral. Special services were held across the country in memorial of... #!"
+
+
+#Suez Canal Built
+notification_headlines_suez_canal_tooltip:0 "#header $notification_headlines_suez_canal_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_suez_canal_desc$"
+ notification_headlines_suez_canal_name:0 "#b SUEZ CANAL COMPLETE #!"
+ notification_headlines_suez_canal_desc:1 "[SCOPE.sCountry('suez_owner_scope').GetName] has completed the [SCOPE.sBuilding('suez_canal_scope').GetName] linking the Mediterranean to the Red Sea. #lore Years of surveys and construction culminated in a grand opening ceremony marked with banquets and fireworks. The first ship to sail through the canal... #!"
+
+#Panama Canal Built
+notification_headlines_panama_canal_tooltip:0 "#header $notification_headlines_panama_canal_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_panama_canal_desc$"
+ notification_headlines_panama_canal_name:0 "#b PANAMA CANAL OPEN TO THE WORLD #!"
+ notification_headlines_panama_canal_desc:1 "The [SCOPE.sBuilding('panama_canal_scope').GetName] has been built by [SCOPE.sCountry('panama_owner_scope').GetName], connecting the Atlantic and Pacific oceans. #lore The project had been plagued by construction delays and worksite troubles. Tolls for the crossing have been... #!"
+
+#Cristo Redentor
+notification_headlines_cristo_redentor_tooltip:0 "#header $notification_headlines_cristo_redentor_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_cristo_redentor_desc$"
+notification_headlines_cristo_redentor_name:0 "#b WORLD'S TALLEST JESUS #!"
+notification_headlines_cristo_redentor_desc:1 "[SCOPE.sBuilding('cristo_redentor_scope').GetName] has been completed overlooking [SCOPE.sState('rio_scope').GetCityHubName]. #lore Standing at just under 100 feet tall, the statue presents a striking symbol of Christianity's worldwide outreach. On the night of the opening ceremony, the great figure was illuminated by...#!"
+
+
+#Statue of Liberty Built
+notification_headlines_statue_of_liberty_tooltip:0 "#header $notification_headlines_statue_of_liberty_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_statue_of_liberty_desc$"
+ notification_headlines_statue_of_liberty_name:0 "#b LIBERTY'S LIGHT OVER NEW YORK #!"
+ notification_headlines_statue_of_liberty_desc:1 "The [SCOPE.sBuilding('statue_of_liberty_scope').GetName] now stands tall over [SCOPE.sState('new_york_scope').GetCityHubName] Harbor, welcoming new arrivals to the continent. #lore The great symbol of freedom was designed and assembled in France as a gift to the American people. Efforts to secure funding for the statue were spearheaded by... #!"
+
+#Big Ben
+notification_headlines_big_ben_tooltip:0 "#header $notification_headlines_big_ben_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_big_ben_desc$"
+notification_headlines_big_ben_name:0 "#b LONDON'S NEW BELL TOWER #!"
+notification_headlines_big_ben_desc:1 "[SCOPE.sBuilding('big_ben_scope').GetName] has been completed in [SCOPE.sState('home_counties_scope').GetCityHubName]. #lore The enormous Great Bell was pulled through the streets by sixteen horses, and took an entire day's work to lift into the tower. Its four great clock faces have been calibrated precisely... #!"
+
+#Mosque of Djenne
+notification_headlines_mosque_of_djenne_tooltip:0 "#header $notification_headlines_mosque_of_djenne_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_mosque_of_djenne_desc$"
+notification_headlines_mosque_of_djenne_name:0 "#b GREAT MOSQUE OF DJENNE RESTORED #!"
+notification_headlines_mosque_of_djenne_desc:1 "After decades of disrepair, the [SCOPE.sBuilding('mosque_of_djenne_scope').GetName] in [SCOPE.sState('djenne_scope').GetName] has been restored. #lore Hailing back to at least the 1300s, the great mud brick structure has been totally rebuilt on the original site. The re-opening of the mosque inspired a great festival that attracted... #!"
+
+#Eiffel Tower
+notification_headlines_eiffel_tower_tooltip:0 "#header $notification_headlines_eiffel_tower_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_eiffel_tower_desc$"
+notification_headlines_eiffel_tower_name:0 "#b NEW PARIS TOWER WORLD'S TALLEST #!"
+notification_headlines_eiffel_tower_desc:1 "The [SCOPE.sBuilding('eiffel_tower_scope').GetName] now dominates the [SCOPE.sState('eiffel_state').GetCityHubName] skyline. #lore Constructed using pioneering metalworking and engineering techniques, the tower stands at over 1000 feet tall. Controversy continues to surround the design of the tower, which...  #!"
+
+#First Skyscraper
+notification_headlines_first_skyscraper_tooltip:0 "#header $notification_headlines_first_skyscraper_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_first_skyscraper_desc$"
+notification_headlines_first_skyscraper_name:0 "#b 'SKYSCRAPER' REACHES NEW HEIGHTS #!"
+notification_headlines_first_skyscraper_desc:1 "[SCOPE.sCountry('first_skyscraper_country').GetName] has built the world's first 'skyscraper' office building in [SCOPE.sState('first_skyscraper_state').GetCityHubName]. #lore The amazing new building was constructed using the latest building materials and techniques, entirely supported on a structural steel frame. The new design caused some concern for government inspectors, who... #!"
+
+
+##Dynamic
+#Great Power War
+notification_headlines_gp_war_tooltip:0 "#header $notification_headlines_gp_war_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_gp_war_desc$"
+ notification_headlines_gp_war_name:0 "#b GREAT POWERS AT WAR #!"
+ notification_headlines_gp_war_desc:1 "An official state of war has been declared between [SCOPE.sCountry('great_power_scope_1').GetName] and [SCOPE.sCountry('great_power_scope_2').GetName]. #lore The foreign ministries of both countries issued justifications and denouncements against the other side. Already streams of panicked refugees can be seen fleeing from the frontlines, as...#!"
+
+#Major Bankruptcy
+notification_headlines_notable_bankrupt_tooltip:0 "#header $notification_headlines_notable_bankrupt_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_notable_bankrupt_desc$"
+ notification_headlines_notable_bankrupt_name:0 "#b [SCOPE.sCountry('bankrupt_country').GetName] BANKRUPT! #!"
+ notification_headlines_notable_bankrupt_desc:1 "The government of [SCOPE.sCountry('bankrupt_country').GetName] officially declared bankruptcy this morning, devastating the nation's economy and international standing. #lore Riots erupted outside of regional banks as panicked citizens attempted to...  #!"

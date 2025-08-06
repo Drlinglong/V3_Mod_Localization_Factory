@@ -1,0 +1,18 @@
+﻿l_french:
+ DECISION_TOOLTIP_FORMAT:1 "#header $NAME$# !\n$TOOLTIP_DELIMITER$\n$TRIGGER_SUMMARY$\n\nLorsqu'il est pris :\n$EFFECT_SUMMARY$"
+
+ build_railways:0 "Construire des chemins de fer"
+ build_railways_desc:0 "Ajoute juste assez de chemins de fer partout pour assurer un accès complet au marché"
+ build_railways_tooltip:0 "Cliquez pour construire plus de chemins de fer"
+ build_administrations:0 "Construire des administrations gouvernementales"
+ build_administrations_desc:0 "Ajoute juste assez d'administrations gouvernementales partout pour assurer la capacité de taxation"
+ build_administrations_tooltip:0 "Cliquez pour construire plus d'administrations gouvernementales"
+ 
+ tooltip_buildrailwaysx:0 "#header Maximiser l'accès au marché #!\n$TOOLTIP_DELIMITER$\nCliquez sur ce bouton pour ajouter autant de chemins de fer que nécessaire à la file d'attente de construction afin de maximiser l'accès au marché."
+ tooltip_buildrailwaysxx:0 "#header Maximiser l'accès au marché #!\n$TOOLTIP_DELIMITER$\n#red #italic #bold #gold Chemins de fer# ! n'a pas encore été recherché par [GetPlayer.GetName]"
+ tooltip_buildrailways:0 "[GetPlayer.GetCustom('researchedrailwayscustom')]"
+ tooltip_govadm:0 "#header Maximiser la capacité de taxation #!\n$TOOLTIP_DELIMITER$\nCliquez sur ce bouton pour ajouter autant de bâtiments administratifs gouvernementaux que nécessaire à la file d'attente de construction afin de maximiser la capacité de taxation dans les États incorporés."
+
+ tooltip_buildpowerplantsx:0 "#header Build Power Plants #!\n$TOOLTIP_DELIMITER$\nAdds just enough power plants everywhere to cover the electricity demand."
+ tooltip_buildpowerplantsxx:0 "#header Build Power Plants #!\n$TOOLTIP_DELIMITER$\n#red #italic #bold #gold Electrical Generation#! has not yet been researched by [GetPlayer.GetName]"
+ tooltip_buildpowerplants:0 "[GetPlayer.GetCustom('researchedelectriccustom')]" 

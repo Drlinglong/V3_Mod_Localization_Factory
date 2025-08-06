@@ -1,0 +1,78 @@
+﻿l_korean:
+##################
+# hcp_megastructures_l_english.yml
+# By jam1066
+##################
+
+ #start
+
+ ####################
+ # Singularity Silo #
+ ####################
+ hcp_singularity_silo:"특이점 사일로"
+ hcp_requires_no_existing_singularity_silo:"$TRIGGER_FAIL$하나 이상의 $hcp_singularity_silo$를 건설할 수 없습니다."
+ hcp_requires_stable_system:"$TRIGGER_FAIL$이 성계에 §Y$pc_black_hole$§!이 너무 많습니다."
+
+ hcp_singularity_silo_1:"$hcp_singularity_silo$: 용량 25%"
+ hcp_singularity_silo_1_DESC:"이 $hcp_singularity_silo$는 궁극적인 저장 시설입니다. 아직 부분적으로만 완성되었지만, 이미 방대한 양의 자원을 보관할 수 있습니다."
+ hcp_singularity_silo_1_MEGASTRUCTURE_DETAILS:"§Y블랙홀§!의 무한한 용량을 활용하여 건설된 거대한 저장 시설."
+
+ hcp_singularity_silo_2:"$hcp_singularity_silo$: 용량 50%"
+ hcp_singularity_silo_2_DESC:"이 $hcp_singularity_silo$는 궁극적인 저장 시설입니다. 아직 부분적으로만 완성되었지만, 이미 방대한 양의 자원을 보관할 수 있습니다."
+ hcp_singularity_silo_2_MEGASTRUCTURE_DETAILS:"§Y블랙홀§!의 무한한 용량을 활용하여 건설된 거대한 저장 시설."
+
+ hcp_singularity_silo_3:"$hcp_singularity_silo$: 용량 75%"
+ hcp_singularity_silo_3_DESC:"이 $hcp_singularity_silo$는 궁극적인 저장 시설입니다. 아직 부분적으로만 완성되었지만, 이미 방대한 양의 자원을 보관할 수 있습니다."
+ hcp_singularity_silo_3_MEGASTRUCTURE_DETAILS:"§Y블랙홀§!의 무한한 용량을 활용하여 건설된 거대한 저장 시설."
+
+ hcp_singularity_silo_4: "$hcp_singularity_silo$"
+ hcp_singularity_silo_4_DESC:"완성된 $hcp_singularity_silo$는 우리 문명 업적의 정점입니다. 전체 인구를 수용할 수 있으며, 영구적으로 유지하는 데 필요한 자원을 저장할 수 있습니다."
+ hcp_singularity_silo_4_MEGASTRUCTURE_DETAILS:"§Y블랙홀§!의 무한한 용량을 활용하여 건설된 거대한 저장 시설."
+
+ hcp_NAME_Sanctuary_A:"성역 A"
+ hcp_NAME_Sanctuary_B:"성역 B"
+ hcp_NAME_Sanctuary_C:"성역 C"
+ hcp_NAME_Sanctuary_D:"성역 D"
+
+ # Districts
+ hcp_district_ring_world_minerals:"추출 구역"
+ hcp_district_ring_world_minerals_plural:"$hcp_district_ring_world_minerals$"
+ hcp_district_ring_world_minerals_desc:"이 링 구역에서 특이점 사일로를 향해 우뚝 솟은 추출 장치들이 뻗어 나와 필요한 광물을 추출합니다."
+
+ #Zones
+ hcp_zone_minerals_ring_world: "$zone_minerals$"
+ hcp_zone_minerals_ring_world_desc: "$zone_minerals_triggered_desc$"
+
+ #Decisions
+ hcp_decision_expand_sanctuary:"성역 확장"
+ hcp_decision_expand_sanctuary_desc:"특이점 사일로의 성역 내 거주 가능 구역을 확장합니다."
+ hcp_decision_repair_sanctuary:"성역 수리"
+ hcp_decision_repair_sanctuary_desc:"이 성역은 아직 우리 인구에게 필요합니다. 가능한 한 최선을 다해 수리해야 합니다."
+ hcp_decision_unshield_sanctuary:"성역 방어막 해제"
+ hcp_decision_unshield_sanctuary_desc:"이 성역은 아직 우리 인구에게 필요합니다. 어떤 대가를 치르더라도 이 방어막을 해제해야 합니다."
+
+ ####################
+ # Orbital Quarrier #
+ ####################
+ hcp_orbital_quarrier:"궤도 채굴선"
+ hcp_orbital_quarrier_DESC:"이 $hcp_orbital_quarrier$는 현재 궤도를 도는 행성을 해체하는 중입니다."
+ hcp_orbital_quarrier_MEGASTRUCTURE_DETAILS:"행성 전체를 해체할 수 있는 대형 궤도 채굴 정거장."
+
+ hcp_requires_not_capital:"$TRIGGER_FAIL$수도 주위에 건설할 수 없습니다."
+ hcp_requires_not_gas_giant:"$TRIGGER_FAIL$가스 행성 주위에 건설할 수 없습니다."
+ hcp_requires_no_deposit:"$TRIGGER_FAIL$궤도 광물 매장지가 있는 행성에는 건설할 수 없습니다."
+ hcp_requires_min_size:"$TRIGGER_FAIL$작은 행성 및 소행성에는 건설할 수 없습니다."
+
+ ######################
+ # Stellar Harvesters #
+ ######################
+ hcp_stellar_harvester_prototype:"$hcp_NAME_Stellar_Harvester$ 프로토타입"
+ hcp_stellar_harvester_prototype_DESC:"§Y$hcp_NAME_Stellar_Harvester$§!는 태양계 전체의 자원을 수확할 수 있는 거대한 드론 제어선입니다."
+ hcp_stellar_harvester_prototype_MEGASTRUCTURE_DETAILS:"어떤 자원을 수집할지 까다롭게 굴 여유가 없습니다. $hcp_NAME_Stellar_Harvester$는 모든 것을 효율적으로 취할 수 있도록 해줄 것입니다."
+
+ hcp_stellar_harvester: "$hcp_NAME_Stellar_Harvester$"
+ hcp_stellar_harvester_DESC:"§Y$hcp_NAME_Stellar_Harvester$§!는 태양계 전체의 자원을 수확할 수 있는 거대한 드론 제어선입니다."
+ hcp_stellar_harvester_MEGASTRUCTURE_DETAILS:"어떤 자원을 수집할지 까다롭게 굴 여유가 없습니다. $hcp_NAME_Stellar_Harvester$는 모든 것을 효율적으로 취할 수 있도록 해줄 것입니다."
+ MEGASTRUCTURE_TOOLTIP_REQUIREMENTS_STELLAR_HARVESTER:"각 제국은 $hcp_singularity_silo$의 궤도에 $MEGASTRUCTURE$를 단 하나만 건설할 수 있습니다."
+
+ #end

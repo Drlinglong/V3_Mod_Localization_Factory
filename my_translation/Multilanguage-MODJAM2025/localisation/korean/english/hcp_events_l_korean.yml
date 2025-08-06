@@ -1,0 +1,177 @@
+﻿l_korean:
+##################
+# hcp_events_l_english.yml
+# By jam1066
+##################
+
+ #start
+
+ ##########################
+ # Harvesters Event Chain #
+ ##########################
+ hcp_harvesters_crisis_chain_title: "$hcp_ap_harvesters$"
+ hcp_harvesters_crisis_chain_desc:"우리 우주는 유한하다! 자원과 시간 모두 제한적이다. 그 무엇도 낭비해선 안 된다."
+ hcp_harvesters_level_reached:"위기 단계 도달"
+
+ ######################
+ # Harvesters Level 1 #
+ ######################
+ hcp_harvesters_crisis.100.name:"미래를 생각하며"
+ hcp_harvesters_crisis.100.desc:"우리 문명이 은하계 전역으로 확산됨에 따라, 우리 공동 생존의 가능성은 향상되었고, 우리는 더욱더 먼 미래를 내다볼 여유를 갖게 되었다. 그러나 그러는 과정에서 우리는 끔찍한 깨달음에 직면했다. 우리 제국이 얼마나 광활하든, 그 업적이 얼마나 위대하든, 그 유산이 얼마나 오래 지속되든, 우리 우주는 결국 종말을 맞이하여 모든 것을 무의미하게 만들 것이다.\n\n민중들 사이에서는 다가올 열죽음에 대한 우려가 커지고 있으며, 많은 이들이 지금부터 이에 대비해야 한다고 주장한다. 이는 막대한 양의 자원 확보를 필요로 한다.\n\n이를 위한 저장 용량을 확보하기 위해, 우리는 블랙홀 주위에 건설될 거대한 사일로의 계획을 수립했다."
+ hcp_harvesters_crisis.100.mach.desc:"우리 네트워크가 은하계 전역으로 확산됨에 따라, 우리의 지속적인 생존 확률은 기하급수적으로 증가하며, 더 긴 시간 척도를 고려할 수 있게 되었다. 안타깝게도, 우리의 모든 미래 시뮬레이션은 동일한 결과로 수렴한다. 우리의 존재는 우주의 예측 수명에 의해 제한된다.\n\n그러한 시점 너머까지 우리의 존재를 지속시키기 위해, 우리는 가용한 모든 자원을 통합하는 데 힘써야 한다. 이러한 목적을 위해, 우리는 블랙홀 주위에 건설될 거대한 사일로의 계획을 수립했다."
+ hcp_harvesters_crisis.100.hive.desc:"우리가 은하계 전역으로 계속해서 번성함에 따라, 우리의 생존 가능성은 향상되었고, 우리는 더욱더 먼 미래를 내다볼 여유를 갖게 되었다. 그러나 그러는 과정에서 우리는 끔찍한 깨달음에 직면했다. 우리 우주는 결국 죽음을 맞이할 것이고, 우리 또한 그러할 것이다.\n\n이러한 피할 수 없는 현실 앞에서 우리의 생존을 확보하는 것이 무엇보다 중요하다. 그렇게 하기 위해, 우리는 막대한 양의 자원을 비축하기 시작해야 한다. 이러한 목적을 위해, 우리는 블랙홀 주위에 건설될 거대한 사일로의 계획을 수립했다."
+ hcp_harvesters_crisis.100.a:"작업에 착수하자."
+ hcp_harvesters_crisis.100.resource_consolidation:"우리는 이에 대한 경험이 있다."
+
+ # Acquire a Black Hole
+ hcp_harvesters_crisis.101.name:"블랙홀 확보"
+ hcp_harvesters_crisis.101.desc:"적절한 §H블랙홀§!을 확보하여 §Y특이점 사일로§! 건설을 시작합니다."
+
+ hcp_harvesters_crisis.102.name:"블랙홀 확인"
+ hcp_harvesters_crisis.102.desc:"우리 관측소에서 §Y특이점 사일로§! 건설을 시작할 적절한 §H블랙홀§!을 확인했습니다."
+
+ ######################
+ # Harvesters Level 2 #
+ ######################
+ hcp_harvesters_crisis.200.name:"작전 개시"
+ hcp_harvesters_crisis.200.desc:"우리 특이점 사일로의 1단계가 완료된 것은 역사적인 순간입니다! 비록 25%만 완료되었지만, 이미 다른 모든 저장 시설을 합친 것보다 더 큰 용량을 자랑합니다. 안타깝게도, 우리는 수확 작전을 시작하기 전에 사일로가 완전히 건설되기를 기다릴 시간적 여유가 없습니다.\n\n우리 정찰 드론들은 이미 우리가 채굴할 새롭고 풍부한 광물 매장지를 확인했으며, 우리는 더 효율적인 채굴 기술을 개발하기 위해 부단히 노력하고 있지만, 아직 할 일이 많습니다."
+ hcp_harvesters_crisis.200.a:"낭비할 시간이 없다."
+
+ ######################
+ # Harvesters Level 3 #
+ ######################
+ hcp_harvesters_crisis.300.name:"잔존하는 비효율성"
+ hcp_harvesters_crisis.300.desc:"우리의 수확 작전은 이제 순조롭게 진행되고 있습니다. 에너지화된 채굴 장비의 배치는 전체적인 효율성을 극적으로 향상시켰고, 궤도 인프라의 지속적인 확장은 귀중한 자원에 대한 접근성을 높였지만, 여전히 비효율적인 부분이 남아있습니다.\n\n이를 해결하기 위해, 우리는 새로운 유형의 궤도 정거장 설계를 수립했습니다. 이 궤도 채굴기(Orbital Quarrier)는 행성을 층층이 벗겨내어 우리를 위한 막대한 양의 자원을 수집할 수 있도록 설계되었습니다.\n\n또한, 우리는 특이점 사일로 설계에 일련의 성역들을 포함시키도록 수정했습니다. 이 성역들은 그 어떤 행성보다 훨씬 효율적인 방식으로 우리 문명 전체를 수용할 것입니다."
+ hcp_harvesters_crisis.300.a:"더 많은 자원이 필요하다."
+
+ ######################
+ # Harvesters Level 4 #
+ ######################
+ hcp_harvesters_crisis.400.name:"실험적 기술"
+ hcp_harvesters_crisis.400.desc:"최근 우리 수확 작전에 대한 분석 결과, 충격적인 결과가 드러났습니다. 우리 궤도 채굴기(Orbital Quarrier)의 배치가 이전에 불가능하다고 여겨졌던 수준으로 작전 효율성을 끌어올렸지만, 우리는 여전히 가장 비관적인 목표치에도 미치지 못할 것으로 예상됩니다.\n\n이 노력을 살리기 위해, 우리는 개발 중이던 더 실험적인 채굴 기술들을 검토하기 시작했으며, 그중 특히 §H항성 수확기§!가 유망한 것으로 나타났습니다.\n\n우리는 시제품을 제작하고 시험함으로써 개발을 가속화할 수 있다고 믿습니다. §H[capital_scope.GetName]§!의 궤도 인프라는 건설을 수용할 준비가 되었습니다."
+ hcp_harvesters_crisis.400.a:"이것은 반드시 성공해야 한다."
+
+ hcp_harvesters_crisis.410.name:"시제품 완성"
+ hcp_harvesters_crisis.410.desc:"항성 수확기 시제품 건설이 완료되었습니다. 우리 함대 기지 중 가장 큰 것조차 왜소하게 만들 정도로, 건설에 사용된 자원은 천문학적입니다. 따라서 약속된 결과를 도출하는 것이 중요합니다. 이를 시험하기 위해, 우리는 전략적 중요성이 낮은 우리 영토 내의 항성계를 목표로 삼아야 합니다."
+ hcp_harvesters_crisis.410.a:"[event_target:hcp_test_fire_target.GetName] 항성계가 적합할 것이다."
+ hcp_harvesters_crisis.410.b:"어떤 항성계가 없어도 되는지 결정해야 할 것이다."
+
+ hcp_harvesters_crisis.415.name:"시제품 파괴"
+ hcp_harvesters_crisis.415.desc:"우리 항성 수확기 시제품이 파괴되었습니다! 이로 인해 낭비된 자원의 양은 천문학적입니다. 이제 시험을 완료하기 위해 다른 하나를 다시 건설해야 합니다."
+ hcp_harvesters_crisis.415.a:"이것은 재앙이다!"
+
+ hcp_harvesters_crisis.420.name:"성계 수확됨"
+ hcp_harvesters_crisis.420.desc:"[from.GetName] 항성계가 사라졌습니다. 그 안의 모든 것이 완전히 해체되었고, 그 자원은 우리 항성 수확기에 저장되었습니다. 이번 시험은 우리의 가장 낙관적인 기대를 뛰어넘었습니다! 설계를 최종 확정하는 데는 아직 할 일이 남았지만, 우리의 목표는 이제 훨씬 더 달성 가능해졌습니다."
+
+ ######################
+ # Harvesters Level 5 #
+ ######################
+ hcp_harvesters_crisis.500.name:"우주 수확"
+ hcp_harvesters_crisis.500.desc:"우리는 우주의 새로운 시대의 문턱에 서 있습니다. 시제품 시험이 완료됨에 따라, 우리는 이제 필요한 자원을 수집하기 위해 항성 수확기들을 풀어놓을 준비가 되었습니다. 수동으로 더 많이 건설하는 것은 비효율적이므로, 우리는 수확기가 수집한 재료를 활용하여 스스로 복제하는 능력을 부여했습니다.\n\n우리는 또한 그들에게 행성 인구를 대피시킬 수 있는 능력을 부여했습니다. 이는 원래 우리의 기존 식민지가 포함된 항성계에서도 수확 작업 속도를 늦추지 않고 수확기를 사용할 수 있도록 하기 위함이었습니다. 하지만, 이 능력은 다른 제국의 식민지에도 사용될 수 있으며, 그들의 인구를 우리 성역으로 재배치할 수 있게 합니다."
+ hcp_harvesters_crisis.500.a:"모든 이들을 우리 성역으로 환영합니다."
+ hcp_harvesters_crisis.500.b:"인구를 수확한다."
+
+ hcp_harvesters_crisis.510.name:"마지막 항성 수확기 파괴됨"
+ hcp_harvesters_crisis.510.desc:"우리의 마지막 활성 항성 수확기가 파괴되었습니다! 더 이상 복제할 수확기가 없으므로, 수동으로 새로운 것을 건설해야 합니다."
+ hcp_harvesters_crisis.510.a:"이것은 재앙이다!"
+
+ hcp_harvesters_crisis.515.name:"마지막 항성 수확기 은하계 이탈"
+ hcp_harvesters_crisis.515.desc:"우리의 마지막 활성 항성 수확기가 은하계를 떠났습니다! 다시는 이런 일이 발생하지 않도록 행정 절차를 검토하고 있습니다. 더 이상 복제할 수확기가 없으므로, 수동으로 새로운 것을 건설해야 합니다."
+ hcp_harvesters_crisis.515.a:"이것은 재앙이다!"
+
+ ##########################
+ # Solar System Harvested #
+ ##########################
+ hcp_harvesters_crisis.610.name:"성계 소멸"
+ hcp_harvesters_crisis.610.desc:"§H[destroyed_system.GetName]§! 성계가 사라졌습니다. 장거리 센서에는 한때 그곳에 있던 자리에 텅 빈 허공만 보입니다. 지난 몇 달간의 원격 측정 데이터를 검토한 결과, 성계 질량이 갑자기 변동하다가 급격히 줄어들기 시작한 것을 발견했습니다. 성계에 있던 모든 함선이나 기지 또한 사라진 것으로 보입니다.\n\n확인되지 않은 보고에 따르면 이 사건의 생존자가 단 한 명 있습니다. 그것은 §H[crisis_country.GetName]§!에 소속된 일종의 거대한 함선이라고 합니다..."
+ hcp_harvesters_crisis.610.a:"그들이 무슨 꿍꿍이지?"
+
+ hcp_harvesters_crisis.611.name:"성계 수확됨"
+ hcp_harvesters_crisis.611.desc:"§H[destroyed_system.GetName]§! 성계가 사라졌습니다! §H[crisis_country.GetName]§! 소속의 거대한 함선이 주성 위에 자리를 잡고 대규모 드론 무리를 풀어 성계의 모든 것을 해체했습니다.\n\n그들이 \"§H항성 수확기§!\"라고 부르는 [crisis_country.GetSpeciesName] 함선만이 살아남았습니다. 명백히, [crisis_country.GetName]는 이제 성계 전체를 수확할 수 있는 기술과 수단을 모두 갖추게 되었습니다."
+ hcp_harvesters_crisis.611.a:"모든 것이 달라졌다..."
+
+ hcp_harvesters_crisis.612.name:"성계 소멸"
+ hcp_harvesters_crisis.612.desc:"§H[destroyed_system.GetName]§! 성계가 사라졌습니다! 대규모 드론 무리가 성계의 모든 것을 해체했습니다.\n\n이제 §H[crisis_country.GetName]§! 또한 항성 수확기 기술을 보유하고 있는 것으로 보입니다!"
+ hcp_harvesters_crisis.612.a:"그들의 자원은 우리의 것이 될 것이다!"
+
+ ##################################
+ # Harvesters Victory Event Chain #
+ ##################################
+ hcp_harvesters_victory_chain_title:"우주 수확"
+ hcp_harvesters_victory_chain_desc:"우주의 수확을 본격적으로 시작하려면, 충분한 수의 항성 수확기를 건설하여 다른 은하를 수확하도록 보내야 합니다. 우리 은하만으로도 이 시도를 위한 충분한 자원을 제공할 것입니다. 또한, 우리의 모든 인구를 영원한 안식처인 특이점 격납고 주변의 피난처로 재배치해야 합니다.\n\n§H목표§!:\n- 모든 인구를 특이점 격납고로 재배치하십시오.\n- '외부 개척' 상황을 완료하십시오."
+
+ hcp_anti_harvesters_chain_title:"우주 수확"
+ hcp_anti_harvesters_chain_desc:"항성 수확기는 전 우주에 실존적 위협을 가하고 있습니다. 우리는 가능한 한 많은 수를 파괴해야 합니다. 하나라도 탈출한다면 우리 모두에게 파멸을 가져올 수 있습니다."
+ hcp_DESTROY_STELLAR_HARVESTER:"항성 수확기 파괴"
+ hcp_DESTROY_STELLAR_HARVESTER_DESC:"현재 이 항성 수확기를 추적 중입니다. 은하를 벗어나기 전에 파괴해야 합니다."
+ hcp_DESTROY_STELLAR_HARVESTER_TOOLTIP:"항성 수확기 파괴"
+
+ hcp_harvesters_crisis.800.name:"영원이 기다린다"
+ hcp_harvesters_crisis.800.desc:"우리 항성 수확기들은 필요한 자원을 수집하느라 바쁘며, 우리는 모든 인구를 특이점 격납고 주변의 피난처로 성공적으로 재배치했습니다. 이제 스스로를 고립시켜, 우리의 피난처 너머에 여전히 존재하는 위험으로부터 보호받을 때입니다." #\n\nAlthough, this galaxy still contains valuable resources. We could wait until we have claimed all we can.
+ hcp_harvesters_crisis.800.a:"방어막 활성화."
+ hcp_harvesters_crisis.800.b:"자원을 더 수집해야 합니다."
+
+ ###############################
+ # Harvester Country Destroyed #
+ ###############################
+ #Harvester Defeated Before Completing Outward Bound Situation
+ hcp_harvesters_crisis.905.name:"은하 수확 종료"
+ hcp_harvesters_crisis.905.desc:"§H[LastKilledCountryName]§!의 파괴로, 그들의 항성 수확기 위협은 마침내 끝났습니다. 은하는 안도의 한숨을 내쉽니다."
+ hcp_harvesters_crisis.905.a:"우주를 위한 위대한 날이다."
+ #Harvester Defeated After Completing Outward Bound Situation
+ hcp_harvesters_crisis.910.name:"공허한 승리"
+ hcp_harvesters_crisis.910.desc:"§H[LastKilledCountryName]§!의 파괴가 분명히 축하할 일이지만, 너무나 많은 항성 수확기가 은하를 탈출했다는 사실은 피할 수 없습니다. 그들이 돌아오는 것을 우리가 살아남아 본다면, 우리는 그들을 막을 수 있기를 바랄 뿐입니다."
+ hcp_harvesters_crisis.910.a:"생각할 가치도 없는 일이다."
+ #Post Harvester Victory Event
+ hcp_harvesters_crisis.915.name:"자발적 고립"
+ hcp_harvesters_crisis.915.desc:"§H[LastKilledCountryName]§!가 잔존 병력을 §Y[event_target:hcp_refuge_system.GetName] 성계§!로 철수시킨 직후, 우리는 그들의 특이점 격납고에서 대규모 에너지 급증을 감지했습니다. 장거리 센서는 그들의 피난처 주위에 강력한 에너지 방어막이 세워져 우주의 나머지 부분으로부터 고립시키고 있음을 나타냅니다.\n\n이 방어막은 접촉하는 모든 것을 증발시킨 다음, 그 중심에 있는 블랙홀로 빨아들입니다. 광활한 우주에 항성 수확기를 풀어놓은 후, 그들은 어떠한 보복도 피해 숨은 것으로 보입니다."
+ hcp_harvesters_crisis.915.a:"비겁한 자들."
+
+ ################################
+ # Singularity Silo Lost Events #
+ ################################
+ hcp_harvesters_crisis.1000.name:"$hcp_singularity_silo$ 수확됨"
+ hcp_harvesters_crisis.1000.desc:"우리 §Y$hcp_singularity_silo$§!가 파괴되었습니다! §H[event_target:crisis_country.GetName]§! 소속의 §Y$hcp_stellar_harvester$§!가 그 위로 자리를 잡고 드론 무리를 풀어 아무것도 남기지 않았습니다.\n\n이 구조물은 우리의 작전에 필수적이므로, 가능한 한 빨리 새로운 것을 가동시키는 것이 중요합니다."
+ hcp_harvesters_crisis.1000.a:"재건해야 합니다."
+ hcp_harvesters_crisis.1000.b:"그냥 그들의 것을 빼앗으면 안 될까요?"
+
+ hcp_NEEDS_NEW_BLACK_HOLE:"새로운 블랙홀 확보"
+ hcp_NEEDS_NEW_BLACK_HOLE_DESC:"새로운 §Y$hcp_singularity_silo_4$§!를 건설하려면 §H블랙홀§!이 필요합니다. 알려진 블랙홀 중 하나를 확보하거나, 관측소에 이전에 간과되었던 블랙홀을 찾도록 지시할 수 있습니다."
+ 
+ hcp_REBUILD_SINGULARITY_SILO_1:"$hcp_singularity_silo$ 재건"
+ hcp_REBUILD_SINGULARITY_SILO_1_DESC:"우리 $hcp_singularity_silo$가 파괴되었습니다. 영원한 안식처가 될 수 있도록 재건해야 합니다."
+ hcp_REBUILD_SINGULARITY_SILO_2: "$hcp_REBUILD_SINGULARITY_SILO_1$"
+ hcp_REBUILD_SINGULARITY_SILO_2_DESC: "$hcp_REBUILD_SINGULARITY_SILO_1_DESC$"
+ hcp_REBUILD_SINGULARITY_SILO_TOOLTIP: "$hcp_BUILD_SINGULARITY_SILO_LEVEL_1_TOOLTIP$"
+
+ hcp_harvesters_crisis.1002.name: "$hcp_harvesters_crisis.101.name$"
+ hcp_harvesters_crisis.1002.desc:"새로운 §Y특이점 격납고§! 건설을 시작하기 위한 적합한 §H블랙홀§!을 확보했습니다."
+ hcp_harvesters_crisis.1003.name: "$hcp_harvesters_crisis.1002.name$"
+ hcp_harvesters_crisis.1003.desc: "$hcp_harvesters_crisis.1003.desc$"
+
+ hcp_harvesters_crisis.1005.name: "$hcp_harvesters_crisis.102.name$"
+ hcp_harvesters_crisis.1005.desc:"우리 관측소가 새로운 §Y특이점 격납고§! 건설을 시작하기 위한 적합한 §H블랙홀§!을 확인했습니다."
+ hcp_harvesters_crisis.1006.name: "$hcp_harvesters_crisis.1005.name$"
+ hcp_harvesters_crisis.1006.desc: "$hcp_harvesters_crisis.1005.desc$"
+
+ hcp_STEAL_SINGULARITY_SILO_1:"$hcp_singularity_silo$ 확보"
+ hcp_STEAL_SINGULARITY_SILO_1_DESC:"우리의 $hcp_singularity_silo$ 손실은 막대한 차질을 빚었습니다. 새로운 것을 \\"획득\\"할 수 있다면 더 이상의 비효율을 피할 수 있을 것입니다."
+ hcp_STEAL_SINGULARITY_SILO_2: "$hcp_STEAL_SINGULARITY_SILO_1$"
+ hcp_STEAL_SINGULARITY_SILO_2_DESC: "$hcp_STEAL_SINGULARITY_SILO_1_DESC$"
+ hcp_STEAL_SINGULARITY_SILO_TOOLTIP:"§H[this.GetName] 시스템§!에 있는 §Y$hcp_singularity_silo$§!를 장악하십시오."
+
+ hcp_harvesters_crisis.1011.name:"$hcp_singularity_silo$ 획득 완료"
+ hcp_harvesters_crisis.1011.desc.a:"새로운 §Y$hcp_singularity_silo$§!를 성공적으로 획득했습니다. 우리 작전은 정상으로 돌아갈 수 있을 것입니다."
+ hcp_harvesters_crisis.1011.desc.b:"우리의 운명이 바뀌었나 봅니다. §H[from.GetName] 시스템§!을 획득하는 과정에서 새로운 §Y$hcp_singularity_silo$§!를 얻게 되었습니다. 더 이상 새로운 것을 건설하는 데 투자할 필요가 없습니다."
+
+ hcp_harvesters_crisis.1012.name: "$hcp_harvesters_crisis.1011.name$"
+ hcp_harvesters_crisis.1012.desc.a: "$hcp_harvesters_crisis.1011.desc.a$"
+ hcp_harvesters_crisis.1012.desc.b: "$hcp_harvesters_crisis.1011.desc.b$"
+
+ hcp_harvesters_crisis.1015.name: "$hcp_harvesters_crisis.1000.name$"
+ hcp_harvesters_crisis.1015.desc.a:"§H[from.GetName] 시스템§!에 있던 §Y$hcp_singularity_silo$§!가 파괴되었습니다! 은하계에 더 이상 남은 것이 없으므로, 우리는 새로운 것을 건설할 수밖에 없습니다."
+ hcp_harvesters_crisis.1015.desc.b: ""
+ hcp_harvesters_crisis.1015.a:"우리는 새로운 것을 건설해야 할 것입니다."
+ hcp_harvesters_crisis.1015.b:"우리가 노릴 만한 다른 것들이 있습니다. §H[from.GetName] 시스템§!에 있던 §Y$hcp_singularity_silo$§!가 파괴되었습니다! 남은 사일로에 노력을 집중해야 합니다."
+ 
+ #end

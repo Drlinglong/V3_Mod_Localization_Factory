@@ -1,0 +1,21 @@
+﻿l_simp_chinese:
+
+ notification_victoria_notification_tooltip:0 "#header $notification_victoria_notification_name$#!\n$TOOLTIP_DELIMITER$\n$notification_victoria_notification_desc$"
+ notification_victoria_notification_name:0 "#b 汉诺威脱离英国 #!"
+ notification_victoria_notification_desc:0 "随着威廉四世国王的逝世，不同的继承法终止了[SCOPE.sCountry('britain_victoria_country_scope').GetName]与[SCOPE.sCountry('hannover_victoria_scope').GetName]之间的[concept_personal_union]。"
+
+ notification_opium_wars_british_response_angry_name:0 "#b 中国禁烟 #!"
+ notification_opium_wars_british_response_angry_desc:0 "[SCOPE.sCountry('opium_wars_aggressor_country').GetName]愤怒地回应了[SCOPE.sCountry('opium_wars_target_country').GetAdjectiveNoFormatting]的鸦片禁令，并对[SCOPE.sCountry('opium_wars_target_country').GetName]政府发出了多项威胁。"
+
+ notification_opium_wars_british_response_passive_name:0 "#b 中国禁烟 #!"
+ notification_opium_wars_british_response_passive_desc:0 "[SCOPE.sCountry('opium_wars_aggressor_country').GetName]似乎正在无视[SCOPE.sCountry('opium_wars_target_country').GetAdjectiveNoFormatting]的鸦片禁令。"
+ notification_opium_wars_british_response_passive_tooltip:1 "#header $notification_opium_wars_british_response_passive_name$#!\n$TOOLTIP_DELIMITER$\n$notification_opium_wars_british_response_passive_desc$"
+
+ notification_santa_anna_captured_notification_name:0 "#b 圣安娜被俘 #!"
+ notification_santa_anna_captured_notification_desc:0 "[SCOPE.sCountry('texas_scope').GetName]俘获了[SCOPE.sCountry('mexico_scope').GetAdjective]将军圣安娜，他利用其个人权力谈判结束了德克萨斯独立战争。"
+ notification_santa_anna_captured_notification_tooltip:0 "#header $santa_anna_captured_notification_name$#!\n$TOOLTIP_DELIMITER$\n$santa_anna_captured_notification_desc$"
+
+  notification_brz_isabel_accession_name:"#b 佩德罗驾崩 #!"
+  notification_brz_isabel_accession_desc:"巴西皇帝佩德罗二世逝世了，[SCOPE.sCountry('brazil_scope').GetRuler.GetPrimaryRoleTitle][SCOPE.sCountry('brazil_scope').GetRuler.GetFullName]在其身后继承了王位。#lore 街道上挤满了哀悼的巴西人，因为先帝的葬礼队伍将他的遗体运往国葬。全国各地的教堂都举行了特别的礼拜以赞美…… #!"
+  notification_brz_isabel_accession_tooltip:"#header $notification_brz_isabel_accession_name$#!\n$TOOLTIP_DELIMITER$\n$notification_brz_isabel_accession_desc$"
+

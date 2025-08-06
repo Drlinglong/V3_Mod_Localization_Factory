@@ -1,0 +1,254 @@
+﻿l_korean:
+
+ ################################
+ ### pdivinity_tech_l_english ###
+ ###     by daniellm          ###
+ ################################
+
+ ###################
+ ### weapon type ###
+ ###################
+
+ weapon_type_pdivinity_psionic:0 "사이오닉"
+ mod_weapon_type_pdivinity_psionic_weapon_damage_mult:0 "사이오닉 무기 피해"
+ mod_weapon_type_pdivinity_psionic_weapon_fire_rate_mult:0 "사이오닉 무기 발사 속도"
+
+ #####################
+ ### ship tooltips ###
+ #####################
+
+ PDIVINITY_CLOAKING_TOOLTIP:0 "은폐로 인한 방어막 무효화 효과를 무력화"
+
+
+
+ ################
+ ### weaponry ###
+ ################
+ pdivinity_laser_set:0 "사이오닉 창 배열"
+ pdivinity_laser_set_DESC:0 "무기 배열을 사이오닉 공명장과 동기화하여 형성된, 응축된 장막 에너지의 집중된 방출."
+ SMALL_PDIVINITY_LASER:0 "소형 사이오닉 창"
+ MEDIUM_PDIVINITY_LASER:0 "중형 사이오닉 창"
+ LARGE_PDIVINITY_LASER:0 "대형 사이오닉 창"
+
+ SMALL_PDIVINITY_LASER_SHROUD:0 "소형 사이오닉 창"
+ MEDIUM_PDIVINITY_LASER_SHROUD:0 "중형 사이오닉 창"
+ LARGE_PDIVINITY_LASER_SHROUD:0 "대형 사이오닉 창"
+
+ pdivinity_energy_torpedo_set:0 "사이 버스트 투사기"
+ pdivinity_energy_torpedo_set_DESC:0 "물질을 통과하여 위상 전환한 후 장막으로 뒤덮인 에너지 폭발로 터지는 불안정한 사이오닉 투사체를 발사합니다."
+ PDIVINITY_ENERGY_TORPEDO:0 "사이 버스트 투사기"
+ PDIVINITY_ENERGY_TORPEDO_SHROUD:0 "사이 버스트 투사기"
+
+ pdivinity_lance_set:0 "장막 관통자"
+ pdivinity_lance_set_DESC:0 "국지 공간을 접어 먼 목표물에 응축된 사이오닉 파열을 전달하는 거대한 무기입니다."
+ PDIVINITY_LANCE:0 "장막 관통자"
+ PDIVINITY_LANCE_SHROUD:0 "장막 관통자"
+
+ pdivinity_lightning_set:0 "장막의 분노"
+ pdivinity_lightning_set_DESC:0 "분노와 공명에 의해 유도되어 목표물에 걸쳐 아크를 그리는 사이오닉 번개입니다. 장막 그 자체가 이 방출을 통해 맹렬히 공격합니다."
+ PDIVINITY_LIGHTNING:0 "장막의 분노"
+ PDIVINITY_LIGHTNING_SHROUD:0 "장막의 분노"
+
+ pdivinity_titan_set:0 "설계자의 창"
+ pdivinity_titan_set_DESC:0 "차원적 긴장에 의해 충전되는 거대한 빔 무기입니다. 발사되면 현실 공간과 장막 사이에 일시적으로 단층을 노출시킵니다."
+ PDIVINITY_TITAN_WEAPON:0 "설계자의 창"
+ PDIVINITY_TITAN_WEAPON_TEARER:0 "설계자의 창"
+
+ pdivinity_star_rifter_set:0 "차원 찢는 자"
+ pdivinity_star_rifter_set_DESC:0 "사이오닉 공명장에 의해 작동되는 묵시적인 무기입니다. 활성화되면 행성 주변의 현실 공간 구조를 찢어버려, 장막과 직접 연결된 균열 속으로 붕괴시키고 행성 자체와 현실을 영원히 변화시킵니다."
+ PDIVINITY_STAR_RIFTER:0 "차원 찢는 자"
+ PDIVINITY_STAR_RIFTER_ACTION:0 "장막을 찢기"
+ FLEETORDER_DESTROY_PLANET_WITH_PDIVINITY_STAR_RIFTER:0 "장막을 찢을 준비 중"
+
+ pdivinity_psionic_artillery_set:0 "장막파 포대"
+ pdivinity_psionic_artillery_set_DESC:0 "사이오닉 파동을 타고 이동하며 적의 정신을 왜곡시키고 방어막과 선체를 똑같이 쉽게 파괴하는 장거리 에너지 무기입니다."
+ PDIVINITY_PSIONIC_ARTILLERY:0 "장막파 포대"
+ PDIVINITY_PSIONIC_ARTILLERY_SHROUD:0 "장막파 포대"
+
+ pdivinity_psionic_strikecraft_set:0 "사이오닉 요격 시스템"
+ pdivinity_psionic_strikecraft_set_DESC:0 "살아있는 사고체로 구성된 공격정으로, 본능과 장막 속 의식의 메아리에 의해 유도됩니다."
+ PDIVINITY_PSIONIC_STRIKECRAFT:0 "사이오닉 요격 시스템"
+ PDIVINITY_PSIONIC_STRIKECRAFT_SHROUD:0 "사이오닉 요격 시스템"
+
+ pdivinity_shields_set:0 "장막 보호막"
+ pdivinity_shields_set_DESC:0 "사이오닉 보호막의 발전된 형태이며, 장막의 정수로부터 직접 엮어 만들어졌습니다. 다가오는 위협에 본능적으로 반응합니다."
+ SMALL_PDIVINITY_PSIONIC_SHIELDS:0 "소형 장막 보호막"
+ MEDIUM_PDIVINITY_PSIONIC_SHIELDS:0 "중형 장막 보호막"
+ LARGE_PDIVINITY_PSIONIC_SHIELDS:0 "대형 장막 보호막"
+ SMALL_PDIVINITY_PSIONIC_SHIELDS_SHROUD:0 "소형 장막 보호막"
+ MEDIUM_PDIVINITY_PSIONIC_SHIELDS_SHROUD:0 "중형 장막 보호막"
+ LARGE_PDIVINITY_PSIONIC_SHIELDS_SHROUD:0 "대형 장막 보호막"
+
+ ###############
+ ### reactor ###
+ ###############
+
+ pdivinity_psionic_reactor:0 "설계자의 의지"
+ pdivinity_psionic_reactor_desc:0 "장막 속 설계자의 의지력에서 직접 에너지를 끌어오는 사이오닉 충전 코어입니다. 에너지는 더 이상 물질에 의해 제한되지 않습니다."
+
+ PDIVINITY_PSIONIC_CLOUD_PSIONIC_REACTOR:0 "$pdivinity_psionic_reactor$"
+ PDIVINITY_PSIONIC_CLOUD_PSIONIC_REACTOR_DESC:0 "$pdivinity_psionic_reactor_desc$"
+
+ PDIVINITY_PSIONIC_AVATAR_PSIONIC_REACTOR:0 "$pdivinity_psionic_reactor$"
+ PDIVINITY_PSIONIC_AVATAR_PSIONIC_REACTOR_DESC:0 "$pdivinity_psionic_reactor_desc$"
+
+ PDIVINITY_DIMENSIONAL_TEARER_PSIONIC_REACTOR:0 "$pdivinity_psionic_reactor$"
+ PDIVINITY_DIMENSIONAL_TEARER_PSIONIC_REACTOR_DESC:0 "$pdivinity_psionic_reactor_desc$"
+
+ PDIVINITY_CORVETTE_PSIONIC_REACTOR:0 "$pdivinity_psionic_reactor$"
+ PDIVINITY_CORVETTE_PSIONIC_REACTOR_DESC:0 "$pdivinity_psionic_reactor_desc$"
+
+ PDIVINITY_DESTROYER_PSIONIC_REACTOR:0 "$pdivinity_psionic_reactor$"
+ PDIVINITY_DESTROYER_PSIONIC_REACTOR_DESC:0 "$pdivinity_psionic_reactor_desc$"
+
+ PDIVINITY_CRUISER_PSIONIC_REACTOR:0 "$pdivinity_psionic_reactor$"
+ PDIVINITY_CRUISER_PSIONIC_REACTOR_DESC:0 "$pdivinity_psionic_reactor_desc$"
+
+ PDIVINITY_BATTLESHIP_PSIONIC_REACTOR:0 "$pdivinity_psionic_reactor$"
+ PDIVINITY_BATTLESHIP_PSIONIC_REACTOR_DESC:0 "$pdivinity_psionic_reactor_desc$"
+
+ PDIVINITY_TITAN_PSIONIC_REACTOR:0 "$pdivinity_psionic_reactor$"
+ PDIVINITY_TITAN_PSIONIC_REACTOR_DESC:0 "$pdivinity_psionic_reactor_desc$"
+
+ PDIVINITY_COLOSSUS_PSIONIC_REACTOR:0 "$pdivinity_psionic_reactor$"
+ PDIVINITY_COLOSSUS_PSIONIC_REACTOR_DESC:0 "$pdivinity_psionic_reactor_desc$"
+
+ PDIVINITY_JUGGERNAUT_PSIONIC_REACTOR:0 "$pdivinity_psionic_reactor$"
+ PDIVINITY_JUGGERNAUT_PSIONIC_REACTOR_DESC:0 "$pdivinity_psionic_reactor_desc$"
+
+ PDIVINITY_PLATFORM_PSIONIC_REACTOR:0 "$pdivinity_psionic_reactor$"
+ PDIVINITY_PLATFORM_PSIONIC_REACTOR_DESC:0 "$pdivinity_psionic_reactor_desc$"
+
+ PDIVINITY_ION_PSIONIC_REACTOR:0 "$pdivinity_psionic_reactor$"
+ PDIVINITY_ION_PSIONIC_REACTOR_DESC:0 "$pdivinity_psionic_reactor_desc$"
+
+ #############
+ ### drive ###
+ #############
+
+ PDIVINITY_SHROUD_JUMP_DRIVE:0 "장막 드라이브"
+ PDIVINITY_SHROUD_JUMP_DRIVE_DESC:0 "장막이 반영하는 현실 공간을 통해 공간을 완전히 우회하는 점프 드라이브입니다."
+
+ PDIVINITY_SHROUD_JUMP_DRIVE_VANILLA:0 "장막 드라이브"
+ PDIVINITY_SHROUD_JUMP_DRIVE_VANILLA_DESC:0 "장막이 반영하는 현실 공간을 통해 공간을 완전히 우회하는 점프 드라이브입니다."
+
+ #################
+ ### thrusters ###
+ #################
+
+
+ Pdivinity_psionic_thruster:0 "사고 잔상 추진기"
+ Pdivinity_psionic_thruster_desc:0 "사이오닉 의지로 유도되는 추진입니다. 함선은 물리적인 힘이 아닌 의도를 사용하여 현실 공간을 미끄러지듯이 이동합니다."
+
+ PDIVINITY_PSIONIC_CLOUD_PSIONIC_THRUSTER:0 "$Pdivinity_psionic_thruster$"
+ PDIVINITY_PSIONIC_CLOUD_PSIONIC_THRUSTER_DESC:0 "$Pdivinity_psionic_thruster_desc$"
+
+ PDIVINITY_PSIONIC_AVATAR_PSIONIC_THRUSTER:0 "$Pdivinity_psionic_thruster$"
+ PDIVINITY_PSIONIC_AVATAR_PSIONIC_THRUSTER_DESC:0 "$Pdivinity_psionic_thruster_desc$"
+
+ PDIVINITY_DIMENSIONAL_TEARER_THRUSTER:0 "$Pdivinity_psionic_thruster$"
+ PDIVINITY_DIMENSIONAL_TEARER_THRUSTER_DESC:0 "$Pdivinity_psionic_thruster_desc$"
+
+ PDIVINITY_CORVETTE_PSIONIC_THRUSTER:0 "$Pdivinity_psionic_thruster$"
+ PDIVINITY_CORVETTE_PSIONIC_THRUSTER_DESC:0 "$Pdivinity_psionic_thruster_desc$"
+
+ PDIVINITY_DESTROYER_PSIONIC_THRUSTER:0 "$Pdivinity_psionic_thruster$"
+ PDIVINITY_DESTROYER_PSIONIC_THRUSTER_DESC:0 "$Pdivinity_psionic_thruster_desc$"
+
+ PDIVINITY_CRUISER_PSIONIC_THRUSTER:0 "$Pdivinity_psionic_thruster$"
+ PDIVINITY_CRUISER_PSIONIC_THRUSTER_DESC:0 "$Pdivinity_psionic_thruster_desc$"
+
+ PDIVINITY_BATTLESHIP_PSIONIC_THRUSTER:0 "$Pdivinity_psionic_thruster$"
+ PDIVINITY_BATTLESHIP_PSIONIC_THRUSTER_DESC:0 "$Pdivinity_psionic_thruster_desc$"
+
+ PDIVINITY_TITAN_PSIONIC_THRUSTER:0 "$Pdivinity_psionic_thruster$"
+ PDIVINITY_TITAN_PSIONIC_THRUSTER_DESC:0 "$Pdivinity_psionic_thruster_desc$"
+
+ PDIVINITY_COLOSSUS_PSIONIC_THRUSTER:0 "$Pdivinity_psionic_thruster$"
+ PDIVINITY_COLOSSUS_PSIONIC_THRUSTER_DESC:0 "$Pdivinity_psionic_thruster_desc$"
+
+ ##############
+ ### sensor ###
+ ##############
+
+ PDIVINITY_PSIONIC_SENSOR:0 "장막 메아리 센서"
+ PDIVINITY_PSIONIC_SENSOR_DESC:0 "이 센서들은 사고와 행동이 발생하기 전에 그 사이오닉적인 메아리를 감지하며, 이 센서에 포착되도록 장막으로 번역된 의도에 초점을 맞춥니다."
+
+ PDIVINITY_PSIONIC_SENSOR_VANILLA:0 "장막 메아리 센서"
+ PDIVINITY_PSIONIC_SENSOR_VANILLA_DESC:0 "이 센서들은 사고와 행동이 발생하기 전에 그 사이오닉적인 메아리를 감지하며, 이 센서에 포착되도록 장막으로 번역된 의도에 초점을 맞춥니다."
+ #################
+ ### computers ###
+ #################
+
+ PDIVINITY_PSIONIC_PRECOG:0 "장막 결속 컴퓨터"
+ PDIVINITY_PSIONIC_PRECOG_DESC:0 "이 시스템은 전투의 충동이 발현되기 전에 읽어내어, 섬뜩한 선견지명으로 사격 해법과 방어막 위상을 조율합니다."
+
+ PDIVINITY_SWARM_PSIONIC_PRECOG:0 "장막 결속 컴퓨터 (군집)"
+ PDIVINITY_SWARM_PSIONIC_PRECOG_DESC:0 "장막의 예지 능력으로 강화된 발전된 전투 알고리즘입니다. 민첩한 함선에 최적화되어 적의 움직임을 수 밀리초 전에 예측하여 빠르고 본능적인 기동을 가능하게 합니다."
+
+ PDIVINITY_LINE_PSIONIC_PRECOG:0 "장막 결속 컴퓨터 (전열)"
+ PDIVINITY_LINE_PSIONIC_PRECOG_DESC:0 "이 시스템은 전투의 충동이 발현되기 전에 읽어내어, 섬뜩한 선견지명으로 사격 해법과 방어막 위상을 조율합니다."
+
+ PDIVINITY_ARTILLERY_PRECOG:0 "장막 결속 컴퓨터 (포격)"
+ PDIVINITY_ARTILLERY_PRECOG_DESC:0 "설계자 본인과 연결된 이 조준 코어는 먼 거리의 발사 패턴을 전개되기 전에 감지하여, 마치 목표가 전혀 움직이지 않은 것처럼 조준을 조정합니다."
+
+
+ PDIVINITY_SWARM_PSIONIC_PRECOG_VANILLA:0 "장막 결속 컴퓨터 (군집)"
+ PDIVINITY_SWARM_PSIONIC_PRECOG_VANILLA_DESC:0 "장막의 예지 능력으로 강화된 발전된 전투 알고리즘입니다. 민첩한 함선에 최적화되어 적의 움직임을 수 밀리초 전에 예측하여 빠르고 본능적인 기동을 가능하게 합니다."
+
+ PDIVINITY_TORPEDO_PSIONIC_PRECOG_VANILLA:0 "장막 결속 컴퓨터 (어뢰)"
+ PDIVINITY_TORPEDO_PSIONIC_PRECOG_VANILLA_DESC:0 "장막의 예지 능력으로 강화된 발전된 전투 알고리즘입니다. 민첩한 함선에 최적화되어 적의 움직임을 수 밀리초 전에 예측하여 빠르고 본능적인 기동을 가능하게 합니다."
+
+ PDIVINITY_PICKET_PSIONIC_PRECOG_VANILLA:0 "장막 결속 컴퓨터 (초계)"
+ PDIVINITY_PICKET_PSIONIC_PRECOG_VANILLA_DESC:0 "이 시스템은 전투의 충동이 발현되기 전에 읽어내어, 섬뜩한 선견지명으로 사격 해법과 방어막 위상을 조율합니다."
+
+ PDIVINITY_LINE_PSIONIC_PRECOG_VANILLA:0 "장막 결속 컴퓨터 (전열)"
+ PDIVINITY_LINE_PSIONIC_PRECOG_VANILLA_DESC:0 "이 시스템은 전투의 충동이 발현되기 전에 읽어내어, 섬뜩한 선견지명으로 사격 해법과 방어막 위상을 조율합니다."
+
+ PDIVINITY_ARTILLERY_PRECOG_VANILLA:0 "장막 결속 컴퓨터 (포격)"
+ PDIVINITY_ARTILLERY_PRECOG_VANILLA_DESC:0 "설계자 본인과 연결된 이 조준 코어는 먼 거리의 발사 패턴을 전개되기 전에 감지하여, 마치 목표가 전혀 움직이지 않은 것처럼 조준을 조정합니다."
+
+ PDIVINITY_CARRIER_PRECOG_VANILLA:0 "장막 결속 컴퓨터 (항공모함)"
+ PDIVINITY_CARRIER_PRECOG_VANILLA_DESC:0 "설계자 본인과 연결된 이 조준 코어는 먼 거리의 발사 패턴을 전개되기 전에 감지하여, 마치 목표가 전혀 움직이지 않은 것처럼 조준을 조정합니다."
+
+ PDIVINITY_PLATFORM_PRECOG_VANILLA:0 "장막 결속 컴퓨터 (플랫폼)"
+ PDIVINITY_PLATFORM_PRECOG_VANILLA_DESC:0 "이 시스템은 전투의 충동이 발현되기 전에 읽어내어, 섬뜩한 선견지명으로 사격 해법과 방어막 위상을 조율합니다."
+
+
+ ##################
+ ### aura stuff ###
+ ##################
+
+ PDIVINITY_SHROUD_STORM_COMPONENT:0 "장막 폭풍 시전자"
+ PDIVINITY_SHROUD_STORM_COMPONENT_DESC:0 "함선 주위에 맴도는 사이오닉 폭풍을 생성하여, 정신, 센서, 방어막을 교란합니다. 그 반경 안에서는 공간이 휘어지고 비명을 지릅니다."
+
+ aura_pdivinity_shroud_storm:0 "$PDIVINITY_SHROUD_STORM_COMPONENT$"
+
+
+ #############
+ ### ships ###
+ #############
+
+ pdivinity_psionic_cloud:0 "장막 메아리"
+ pdivinity_psionic_cloud_plural:0 "장막 메아리들"
+ pdivinity_psionic_cloud_cap:0 "장막 메아리"
+
+ pdivinity_lesser_psionic_avatar:0 "하급 사이오닉 아바타"
+ pdivinity_lesser_psionic_avatar_plural:0 "하급 아바타들"
+ pdivinity_lesser_psionic_avatar_cap:0 "하급 사이오닉 아바타"
+
+ pdivinity_psionic_avatar:0 "사이오닉 아바타"
+ pdivinity_psionic_avatar_plural:0 "사이오닉 아바타들"
+ pdivinity_psionic_avatar_cap:0 "사이오닉 아바타"
+
+ pdivinity_dimensional_tearer:0 "차원 찢는 자"
+ pdivinity_dimensional_tearer_plural:0 "차원 찢는 자들"
+ pdivinity_dimensional_tearer_cap:0 "차원 찢는 자"
+
+ pdivinity_dimensional_portal:0 "차원문"
+ pdivinity_dimensional_portal_plural:0 "차원문들"
+ pdivinity_dimensional_portal_cap:0 "차원문"
+
+ pdivinity_the_architect_of_fate:0 "운명의 설계자"
+ pdivinity_the_architect_of_fate_plural:0 "그"
+ pdivinity_the_architect_of_fate_cap:0 "운명의 설계자"

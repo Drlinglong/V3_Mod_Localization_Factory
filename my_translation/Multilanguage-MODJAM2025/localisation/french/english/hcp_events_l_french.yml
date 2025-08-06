@@ -1,0 +1,177 @@
+﻿l_french:
+##################
+# hcp_events_l_english.yml
+# By jam1066
+##################
+
+ #start
+
+ ##########################
+ # Harvesters Event Chain #
+ ##########################
+ hcp_harvesters_crisis_chain_title: "$hcp_ap_harvesters$"
+ hcp_harvesters_crisis_chain_desc:"Notre univers est fini ! Les ressources et le temps sont tous deux limités. Nous ne devons rien gaspiller."
+ hcp_harvesters_level_reached:"Niveau de Crise Atteint"
+
+ ######################
+ # Harvesters Level 1 #
+ ######################
+ hcp_harvesters_crisis.100.name:"Penser à l'avenir"
+ hcp_harvesters_crisis.100.desc:"Tandis que notre civilisation continue de s'étendre à travers la galaxie, nos chances de survie collective s'améliorent et nous pouvons nous permettre d'envisager un avenir de plus en plus lointain. Cependant, ce faisant, nous avons été confrontés à une réalisation terrifiante. Peu importe l'étendue de notre empire, la grandeur de ses réalisations ou la pérennité de son héritage, notre univers finira par s'éteindre, rendant toute chose dénuée de sens.\n\nUne inquiétude croissante se répand parmi la population concernant l'inévitable mort thermique de l'univers, beaucoup arguant que nous devrions commencer à nous y préparer dès maintenant. Cela exigerait l'acquisition de vastes quantités de ressources.\n\nAfin de faciliter la capacité de stockage nécessaire, nous avons élaboré des plans pour un silo gargantuesque, construit autour d'un trou noir."
+ hcp_harvesters_crisis.100.mach.desc:"Alors que notre réseau s'étend à travers la galaxie, la probabilité de notre survie continue croît de manière exponentielle, nous permettant d'envisager des échelles de temps plus longues. Malheureusement, toutes nos simulations d'avenir convergent vers le même résultat. Notre existence est limitée par la durée de vie prévue de l'univers.\n\nAfin de faciliter notre existence au-delà d'un tel point, nous devons œuvrer à consolider toutes les ressources disponibles. À cette fin, nous avons élaboré des plans pour un silo gargantuesque, construit autour d'un trou noir."
+ hcp_harvesters_crisis.100.hive.desc:"Alors que nous continuons à nous propager à travers la galaxie, nos chances de survie s'améliorent et nous pouvons nous permettre d'envisager un avenir de plus en plus lointain. Cependant, ce faisant, nous avons été confrontés à une réalisation terrifiante. Notre univers finira par mourir, et nous avec lui.\n\nIl est primordial d'assurer notre survie face à une telle inévitabilité. Pour ce faire, nous devons commencer à accumuler de vastes stocks de ressources. À cette fin, nous avons élaboré des plans pour un silo gargantuesque, construit autour d'un trou noir."
+ hcp_harvesters_crisis.100.a:"Mettons-nous au travail."
+ hcp_harvesters_crisis.100.resource_consolidation:"Nous avons l'expérience en la matière."
+
+ # Acquire a Black Hole
+ hcp_harvesters_crisis.101.name:"Trou noir acquis"
+ hcp_harvesters_crisis.101.desc:"Nous avons acquis un §HTrou noir§! approprié pour commencer la construction d'un §YSilo de Singularité§!."
+
+ hcp_harvesters_crisis.102.name:"Trou noir identifié"
+ hcp_harvesters_crisis.102.desc:"Nos postes d'observation ont identifié un §HTrou noir§! approprié pour commencer la construction d'un §YSilo de Singularité§!."
+
+ ######################
+ # Harvesters Level 2 #
+ ######################
+ hcp_harvesters_crisis.200.name:"Début des opérations"
+ hcp_harvesters_crisis.200.desc:"L'achèvement de la première étape de notre Silo de Singularité est une occasion mémorable ! Bien qu'il ne soit achevé qu'à 25 %, il a déjà une capacité supérieure à celle de toutes nos autres installations de stockage combinées. Malheureusement, nous n'avons pas le luxe d'attendre son achèvement complet avant de commencer nos opérations de récolte.\n\nNos Drones prospecteurs ont déjà identifié de nouveaux gisements minéraux riches à exploiter et nous travaillons d'arrache-pied au développement de techniques minières plus efficaces, mais il reste encore beaucoup à faire."
+ hcp_harvesters_crisis.200.a:"Il n'y a pas de temps à perdre."
+
+ ######################
+ # Harvesters Level 3 #
+ ######################
+ hcp_harvesters_crisis.300.name:"Inefficacités Persistantes"
+ hcp_harvesters_crisis.300.desc:"Nos opérations de récolte sont désormais bien avancées. Le déploiement d'équipements miniers énergisés a considérablement amélioré leur efficacité globale et l'expansion continue de notre infrastructure orbitale accroît notre accès aux ressources précieuses, mais des inefficacités persistent encore.\n\nPour tenter d'y remédier, nous avons élaboré les plans d'un nouveau type de station orbitale. Ces Carières Orbitales sont conçues avec la capacité de dépouiller une planète couche par couche, recueillant ainsi d'énormes quantités de ressources pour nous.\n\nDe plus, nous avons modifié les plans du Silo de Singularité pour inclure une série de sanctuaires. Ceux-ci abriteront l'intégralité de notre civilisation d'une manière bien plus efficace que n'importe quelle planète n'aurait jamais pu le faire."
+ hcp_harvesters_crisis.300.a:"Nous avons besoin de plus de ressources."
+
+ ######################
+ # Harvesters Level 4 #
+ ######################
+ hcp_harvesters_crisis.400.name:"Techniques Expérimentales"
+ hcp_harvesters_crisis.400.desc:"Une analyse récente de nos opérations de récolte a révélé un résultat alarmant. Bien que le déploiement de nos Carières Orbitales ait porté notre efficacité opérationnelle à des sommets jugés auparavant inatteignables, nous estimons toujours que nous n'atteindrons pas même nos objectifs les plus pessimistes.\n\nDans un effort pour sauver cette entreprise, nous avons commencé à examiner certaines des techniques minières les plus expérimentales que nous développions, et l'une d'elles, en particulier, se révèle prometteuse : les §HMoissonneurs Stellaires§!.\n\nNous pensons pouvoir accélérer leur développement en construisant et en testant un prototype. L'infrastructure orbitale de §H[capital_scope.GetName]§! a été préparée pour accueillir la construction."
+ hcp_harvesters_crisis.400.a:"Cela doit fonctionner."
+
+ hcp_harvesters_crisis.410.name:"Prototype achevé"
+ hcp_harvesters_crisis.410.desc:"Nous avons achevé la construction du prototype de Moissonneur Stellaire. Éclipsant même les plus grandes de nos stations stellaires, les ressources utilisées pour le construire sont astronomiques, il est donc important qu'il produise les résultats promis. Pour le tester, nous devrions cibler un système de notre territoire qui manque d'importance stratégique."
+ hcp_harvesters_crisis.410.a:"Le système [event_target:hcp_test_fire_target.GetName] devrait convenir."
+ hcp_harvesters_crisis.410.b:"Nous devrons décider de quel système nous pouvons nous passer."
+
+ hcp_harvesters_crisis.415.name:"Prototype détruit"
+ hcp_harvesters_crisis.415.desc:"Notre prototype de Moissonneur Stellaire a été détruit ! La quantité de ressources gaspillées est astronomique. Nous devons maintenant en construire un autre pour terminer les tests."
+ hcp_harvesters_crisis.415.a:"C'est un désastre !"
+
+ hcp_harvesters_crisis.420.name:"Système stellaire moissonné"
+ hcp_harvesters_crisis.420.desc:"Le système [from.GetName] a disparu, tout ce qu'il contenait a été entièrement démantelé et ses ressources stockées à bord de notre Moissonneur Stellaire. Ce test a dépassé nos attentes les plus optimistes ! Il reste encore du travail pour finaliser la conception, mais nos objectifs sont désormais bien plus réalisables."
+
+ ######################
+ # Harvesters Level 5 #
+ ######################
+ hcp_harvesters_crisis.500.name:"La Moisson de l'Univers"
+ hcp_harvesters_crisis.500.desc:"Nous nous tenons au précipice d'une nouvelle ère pour l'univers. Avec la conclusion de nos tests avec le prototype, nous sommes maintenant prêts à déchaîner nos Moissonneurs Stellaires pour rassembler les ressources dont nous avons besoin. Il serait inefficace d'en construire d'autres manuellement, nous leur avons donc donné la capacité de s'auto-répliquer, en utilisant les matériaux qu'ils ont récoltés.\n\nNous leur avons également donné la capacité d'évacuer la population d'une planète. Cela était initialement destiné à permettre leur utilisation sur des systèmes incluant nos colonies existantes sans ralentir nos efforts de moisson. Cependant, cela pourrait également être utilisé sur les colonies d'autres empires, nous permettant de relocaliser leurs populations dans nos sanctuaires."
+ hcp_harvesters_crisis.500.a:"Tous sont les bienvenus dans nos sanctuaires."
+ hcp_harvesters_crisis.500.b:"Moissonnez les populations."
+
+ hcp_harvesters_crisis.510.name:"Dernier Moissonneur Stellaire Détruit"
+ hcp_harvesters_crisis.510.desc:"Notre dernier Moissonneur Stellaire actif a été détruit ! Puisque nous n'en avons plus pour la réplication, nous devrons en construire un nouveau manuellement."
+ hcp_harvesters_crisis.510.a:"C'est un désastre !"
+
+ hcp_harvesters_crisis.515.name:"Dernier Moissonneur Stellaire Quitte la Galaxie"
+ hcp_harvesters_crisis.515.desc:"Notre dernier Moissonneur Stellaire actif a quitté la galaxie ! Nous révisons nos processus administratifs pour nous assurer que cela ne se reproduise plus. Puisque nous n'en avons plus pour la réplication, nous devrons en construire un nouveau manuellement."
+ hcp_harvesters_crisis.515.a:"C'est un désastre !"
+
+ ##########################
+ # Solar System Harvested #
+ ##########################
+ hcp_harvesters_crisis.610.name:"Disparition d'un système stellaire"
+ hcp_harvesters_crisis.610.desc:"Le système §H[destroyed_system.GetName]§! a disparu. Nos capteurs longue portée ne détectent qu'un vide là où il se trouvait autrefois. En examinant la télémétrie des mois précédents, nous avons remarqué une fluctuation soudaine de la masse du système avant qu'elle ne commence à chuter rapidement. Tous les vaisseaux ou stations présents dans le système ont également semblé disparaître.\n\nDes rapports non confirmés font état d'un unique survivant de cet événement – une sorte de vaisseau massif appartenant à §H[crisis_country.GetName]§!..."
+ hcp_harvesters_crisis.610.a:"Que manigancent-ils ?"
+
+ hcp_harvesters_crisis.611.name:"Système stellaire moissonné"
+ hcp_harvesters_crisis.611.desc:"Le système §H[destroyed_system.GetName]§! a disparu ! Un vaisseau massif appartenant à §H[crisis_country.GetName]§! s'est positionné au-dessus de l'étoile principale et a lâché un essaim de drones colossal qui a démantelé tout ce qui se trouvait dans le système.\n\nSeul le vaisseau [crisis_country.GetSpeciesName], qu'ils appellent apparemment un « §HMoissonneur stellaire§! », a survécu. De toute évidence, [crisis_country.GetName] possède désormais à la fois la technologie et les moyens de moissonner des systèmes stellaires entiers."
+ hcp_harvesters_crisis.611.a:"Cela change tout..."
+
+ hcp_harvesters_crisis.612.name:"Disparition d'un système stellaire"
+ hcp_harvesters_crisis.612.desc:"Le système §H[destroyed_system.GetName]§! a disparu ! Un essaim de drones massif a démantelé tout ce qui se trouvait dans le système.\n\nIl semblerait que §H[crisis_country.GetName]§! possède désormais également la technologie de Moissonneur stellaire !"
+ hcp_harvesters_crisis.612.a:"Leurs ressources seront nôtres !"
+
+ ##################################
+ # Harvesters Victory Event Chain #
+ ##################################
+ hcp_harvesters_victory_chain_title:"La Moisson de l'Univers"
+ hcp_harvesters_victory_chain_desc:"Pour lancer notre Moisson de l'Univers, nous devrons construire un nombre suffisant de Moissonneurs stellaires et les envoyer pour commencer à moissonner d'autres galaxies. Notre propre galaxie devrait fournir des ressources suffisantes pour cette entreprise. Nous devons également relocaliser toute notre population dans les sanctuaires autour de notre Silo de Singularité, notre foyer éternel.\n\n§HOBJECTIFS§!:\n- Relocaliser toute notre population dans notre Silo de Singularité.\n- Terminer la situation Liaison extérieure."
+
+ hcp_anti_harvesters_chain_title:"La Moisson de l'Univers"
+ hcp_anti_harvesters_chain_desc:"Les Moissonneurs stellaires représentent une menace existentielle pour l'univers entier. Nous devons en détruire autant que possible ; ceux qui s'échapperaient pourraient nous condamner tous."
+ hcp_DESTROY_STELLAR_HARVESTER:"Détruire le Moissonneur stellaire"
+ hcp_DESTROY_STELLAR_HARVESTER_DESC:"Nous traquons actuellement ce Moissonneur stellaire. Nous devrions le détruire avant qu'il ne puisse quitter la galaxie."
+ hcp_DESTROY_STELLAR_HARVESTER_TOOLTIP:"Détruire le Moissonneur stellaire"
+
+ hcp_harvesters_crisis.800.name:"L'Éternité nous attend"
+ hcp_harvesters_crisis.800.desc:"Nos Moissonneurs stellaires sont occupés à récolter des ressources indispensables, et nous avons réussi à relocaliser toute notre population dans les sanctuaires autour de notre Silo de Singularité. Il est maintenant temps de nous isoler, afin de nous assurer d'être protégés des dangers toujours présents au-delà de notre refuge." #\n\nAlthough, this galaxy still contains valuable resources. We could wait until we have claimed all we can.
+ hcp_harvesters_crisis.800.a:"Activer le bouclier."
+ hcp_harvesters_crisis.800.b:"Nous devrions collecter plus de ressources."
+
+ ###############################
+ # Harvester Country Destroyed #
+ ###############################
+ #Harvester Defeated Before Completing Outward Bound Situation
+ hcp_harvesters_crisis.905.name:"Moisson galactique terminée"
+ hcp_harvesters_crisis.905.desc:"Avec la destruction de §H[LastKilledCountryName]§!, la menace de leurs Moissonneurs stellaires est enfin terminée. La galaxie pousse un soupir de soulagement."
+ hcp_harvesters_crisis.905.a:"Un grand jour pour l'univers."
+ #Harvester Defeated After Completing Outward Bound Situation
+ hcp_harvesters_crisis.910.name:"Victoire creuse"
+ hcp_harvesters_crisis.910.desc:"Bien que la destruction de §H[LastKilledCountryName]§! soit certainement une raison de célébration, on ne peut échapper au fait que beaucoup trop de Moissonneurs stellaires ont réussi à s'échapper de la galaxie. Si nous survivons pour les voir revenir, nous ne pouvons qu'espérer être en mesure de les arrêter."
+ hcp_harvesters_crisis.910.a:"Une chose à ne pas y penser."
+ #Post Harvester Victory Event
+ hcp_harvesters_crisis.915.name:"Isolement auto-imposé"
+ hcp_harvesters_crisis.915.desc:"Peu après que §H[LastKilledCountryName]§! ait retiré le reste de ses forces vers le §YSystème [event_target:hcp_refuge_system.GetName]§!, nous avons détecté un pic d'énergie massif provenant de leur Silo de Singularité. Les capteurs longue portée indiquent qu'un puissant bouclier énergétique a été érigé autour de leur sanctuaire, l'isolant du reste de l'univers.\n\nLe bouclier vaporise tout ce qui entre en contact avec lui, avant de le siphonner dans le trou noir en son centre. Il semblerait qu'après avoir libéré leurs Moissonneurs stellaires sur l'univers, ils se soient cachés de toute rétribution."
+ hcp_harvesters_crisis.915.a:"Lâches."
+
+ ################################
+ # Singularity Silo Lost Events #
+ ################################
+ hcp_harvesters_crisis.1000.name:"$hcp_singularity_silo$ moissonné"
+ hcp_harvesters_crisis.1000.desc:"Notre §Y$hcp_singularity_silo$§! a été détruit ! Un §Y$hcp_stellar_harvester$§! appartenant à §H[event_target:crisis_country.GetName]§! s'est positionné au-dessus et a libéré ses essaims de drones, ne laissant rien derrière.\n\nCette structure est essentielle à nos opérations ; il est impératif que nous en ayons une nouvelle opérationnelle le plus rapidement possible."
+ hcp_harvesters_crisis.1000.a:"Nous devons le reconstruire."
+ hcp_harvesters_crisis.1000.b:"Ne pouvons-nous pas simplement prendre le leur ?"
+
+ hcp_NEEDS_NEW_BLACK_HOLE:"Acquérir un nouveau Trou Noir"
+ hcp_NEEDS_NEW_BLACK_HOLE_DESC:"Nous avons besoin d'un §HTrou Noir§! pour construire un nouveau §Y$hcp_singularity_silo_4$§!. Nous pouvons soit acquérir l'un de ceux qui sont connus, soit demander à nos stations d'observation d'en chercher un qui aurait été précédemment ignoré."
+ 
+ hcp_REBUILD_SINGULARITY_SILO_1:"Reconstruire $hcp_singularity_silo$"
+ hcp_REBUILD_SINGULARITY_SILO_1_DESC:"Notre $hcp_singularity_silo$ a été détruit. Nous devons le reconstruire afin qu'il puisse nous servir de refuge éternel."
+ hcp_REBUILD_SINGULARITY_SILO_2: "$hcp_REBUILD_SINGULARITY_SILO_1$"
+ hcp_REBUILD_SINGULARITY_SILO_2_DESC: "$hcp_REBUILD_SINGULARITY_SILO_1_DESC$"
+ hcp_REBUILD_SINGULARITY_SILO_TOOLTIP: "$hcp_BUILD_SINGULARITY_SILO_LEVEL_1_TOOLTIP$"
+
+ hcp_harvesters_crisis.1002.name: "$hcp_harvesters_crisis.101.name$"
+ hcp_harvesters_crisis.1002.desc:"Nous avons acquis un §HTrou Noir§! adapté pour commencer la construction d'un nouveau §YSilo de Singularité§!."
+ hcp_harvesters_crisis.1003.name: "$hcp_harvesters_crisis.1002.name$"
+ hcp_harvesters_crisis.1003.desc: "$hcp_harvesters_crisis.1003.desc$"
+
+ hcp_harvesters_crisis.1005.name: "$hcp_harvesters_crisis.102.name$"
+ hcp_harvesters_crisis.1005.desc:"Nos postes d'observation ont identifié un §HTrou Noir§! adapté pour commencer la construction d'un nouveau §YSilo de Singularité§!."
+ hcp_harvesters_crisis.1006.name: "$hcp_harvesters_crisis.1005.name$"
+ hcp_harvesters_crisis.1006.desc: "$hcp_harvesters_crisis.1005.desc$"
+
+ hcp_STEAL_SINGULARITY_SILO_1:"Acquérir $hcp_singularity_silo$"
+ hcp_STEAL_SINGULARITY_SILO_1_DESC:"La perte de notre $hcp_singularity_silo$ nous a considérablement ralentis. Nous pouvons éviter d'autres inefficacités si nous pouvons en « acquérir » un nouveau."
+ hcp_STEAL_SINGULARITY_SILO_2: "$hcp_STEAL_SINGULARITY_SILO_1$"
+ hcp_STEAL_SINGULARITY_SILO_2_DESC: "$hcp_STEAL_SINGULARITY_SILO_1_DESC$"
+ hcp_STEAL_SINGULARITY_SILO_TOOLTIP:"Prenez le contrôle du §Y$hcp_singularity_silo$§! dans le §HSystème [this.GetName]§!."
+
+ hcp_harvesters_crisis.1011.name:"$hcp_singularity_silo$ Acquis"
+ hcp_harvesters_crisis.1011.desc.a:"Nous avons réussi à acquérir un nouveau §Y$hcp_singularity_silo$§!. Nos opérations peuvent reprendre un cours normal."
+ hcp_harvesters_crisis.1011.desc.b:"Il semble que notre fortune ait tourné. Dans le cadre de notre acquisition du §HSystème [from.GetName]§!, nous avons obtenu un nouveau §Y$hcp_singularity_silo$§!. Il n'est plus nécessaire pour nous d'investir dans la construction d'un nouveau."
+
+ hcp_harvesters_crisis.1012.name: "$hcp_harvesters_crisis.1011.name$"
+ hcp_harvesters_crisis.1012.desc.a: "$hcp_harvesters_crisis.1011.desc.a$"
+ hcp_harvesters_crisis.1012.desc.b: "$hcp_harvesters_crisis.1011.desc.b$"
+
+ hcp_harvesters_crisis.1015.name: "$hcp_harvesters_crisis.1000.name$"
+ hcp_harvesters_crisis.1015.desc.a:"Le §Y$hcp_singularity_silo$§! dans le §HSystème [from.GetName]§! a été détruit ! Puisqu'il n'en reste plus d'autres dans la galaxie, nous n'avons d'autre choix que d'en construire un nouveau."
+ hcp_harvesters_crisis.1015.desc.b: ""
+ hcp_harvesters_crisis.1015.a:"Nous devrons en construire un nouveau."
+ hcp_harvesters_crisis.1015.b:"Il y en a d'autres que nous pouvons cibler. Le §Y$hcp_singularity_silo$§! dans le §HSystème [from.GetName]§! a été détruit ! Nous devrions concentrer nos efforts sur les silos restants."
+ 
+ #end

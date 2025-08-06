@@ -1,0 +1,1036 @@
+﻿l_russian:
+# todo: loc for other langs
+
+ mjarchitect_situation_debug:"Режим отладки включен"
+
+## Progression
+ # AP
+ mjarchitect_ap_architectofruin:"Архитектор Гибели"
+ mjarchitect_ap_architectofruin_desc:"Покров обещает невообразимую мощь и галактический контроль в наших руках. Чтобы достичь нашего потенциала, мы должны просто позволить Покрову слиться с этой реальностью."
+ mjarchitect_path_desc:"По мере того, как мы будем выполнять требования §MАрхитектора§!, он будет давать нам большие блага. Мы должны следить за тем, чтобы его £mjarchitect_satisfaction£ §YУдовлетворение§! оставалось высоким, иначе он станет §Rвраждебным§!."
+ must_be_individualist:"$TRIGGER_FAIL$ Должна быть империя индивидуалистов"
+
+ # Unlock Events
+ mjarchitect_unlock.0.name:"Голос из-за Завесы"
+ mjarchitect_unlock.0.desc:"На протяжении долгого времени ходили слухи о некоем голосе, скрывающемся в недавно открытом измерении, названном §YПокров§!. Изначально их можно было счесть простыми сплетнями, но недавно многие из наших ведущих ученых, исследователей и политиков сообщили, что слышали этот голос сами.\n\nНам следует сосредоточить наши исследования на Покрове, чтобы найти источник этого голоса; некоторые даже предполагают, что это может быть дело рук всемогущей внеземной сущности."
+ mjarchitect_unlock.0.a:"Мы выясним, что происходит."
+ 
+ mjarchitect_chain_title:"Вестник Гибели"
+ mjarchitect_chain_desc: "$mjarchitect_ap_architectofruin_desc$"
+
+ mjarchitect_unlock.5.name:"Покров"
+ mjarchitect_unlock.5.desc:"Мы достигли огромного прорыва в нашем исследовании §YПокрова§!, к лучшему или к худшему.\n\nТак называемый §YГолос за Покровом§! на самом деле оказался реальным. Его источник — сущность, называющая себя §HАрхитектором Гибели§!. После того как нам удалось отправить примитивный зонд в Покров, мы установили постоянный контакт с этим жутким существом.\n\nНа самом деле, мы уже много раз сталкивались с голосом этой сущности во время нашего расследования, хотя тогда мы об этом не знали. Хоть оно и не говорит, мы чувствуем его желания и эмоции. Оно стремится к общению с нашим лидером."
+ mjarchitect_unlock.5.a:"На экране."
+
+ mjarchitect_unlock.10.name:"Архитектор Разрушения"
+ mjarchitect_unlock.10.desc:"§LС другой стороны зонда не слышно ничего, кроме отдаленного скрежета неизвестного происхождения.\n\nГустой туман клубится будто из ниоткуда. Это пространство кажется пограничным; оно узнаваемо, но ни на что не похоже.§!"
+ mjarchitect_unlock.10.a:"Алло?"
+ 
+ mjarchitect_unlock.11.desc:"§LГлубокий рокот внезапно заполняет рецепторы зонда, но на экране ничего не отображается.§!\n\n§M[Root.Species.GetName].§!\n\n§LНаши умы отяжелели. Что-то внутри них. Мы чувствуем себя... бесполезными на галактической арене... боящимися нашего падения... страшащимися неизвестного.\n\nМы чувствуем страдания и боль. Гибель грядет. Что... мы вообще можем сделать?§!"
+ mjarchitect_unlock.11.a:"Помогите... что... это?"
+ mjarchitect_unlock.11.b:"Мы... понимаем."
+ mjarchitect_unlock.11.a_reply:"§LАрхитектор не дает ответа и не приносит облегчения. Тревога наполняет наше сознание, пока мы с трудом говорим.\n\nЗатем, без всякого предупреждения, мы чувствуем свет во тьме... Это ли сила Архитектора? Несмотря ни на что, возможно, есть шанс на наше выживание, на наше процветание в вечности. Если мы воспользуемся представленной нам возможностью.\n\n§MЕще не ваше время.§!\n\nМы слышим, как слова голоса тяжелым эхом звучат в наших умах, среди всех эмоций.\n\n§MНо оно может настать.§!§!"
+ mjarchitect_unlock.11.b_reply:"§LОтвета не слышно, но мы чувствуем то, что чувствует Архитектор. Мы знаем то, что знает он.\n\nНаши умы едины, но мы держим ключ к нашему выживанию. Только через Архитектора Гибели все обретут спасение.§!"
+ 
+ mjarchitect_unlock.15.name:"REPLACE_ME"
+ mjarchitect_unlock.15.desc:"REPLACE_ME"
+ mjarchitect_unlock.15.a:"REPLACE_ME"
+ 
+ mjarchitect_unlock.20.name:"Авгуры"
+ mjarchitect_unlock.20.desc:"Ходили слухи и толки о группе диссидентов, лояльных граждан и инопланетных личностей, работающих над одной целью: полным повиновением §YАрхитектору Гибели§!.\n\nДействительно, с момента нашего открытия этого жуткого существа, многие в нашей нации развили сильные чувства к Архитектору, будь то положительные или нет.\n\nНа сегодняшний день эта группа объявила себя §HАвгурами Архитектора§!, заработав достаточно политической власти и известности, чтобы присоединиться к рядам различных политических групп.\n\nЕще предстоит увидеть, будут ли они действовать в наших интересах, но это событие представляет шанс процветать..."
+ mjarchitect_unlock.20.a:"Интересное развитие событий."
+
+ mjarchitect_unlock.25.name:"Пронзая Покров"
+ mjarchitect_unlock.25.desc:"§MКонец близок.§!\n\n§YПокров§! становится все слабее, и наша решимость остается сильной. Мы уже не те, кем были до нашего завета с §YАрхитектором Гибели§!. Благодаря нашему пакту мы стали способными и могущественными, и теперь пришел наш черед выполнить соглашение.\n\nВозможно, в результате ослабевающей силы Покрова, в последние месяцы наблюдалось растущее презрение к Архитектору, несмотря на все блага, которые мы получили от его помощи. Наши умы впервые стали легче... Он испытывает нас?\n\nГолоса даже изнутри Авгуров теперь сомневаются в судьбе галактики и нашей нации. Архитектор может быть великим богом нашего народа, но, возможно, богам не следует обитать в мире смертных.\n\nТем не менее, в этот знаменательный момент истории мы решим §Mсудьбу галактики§!."
+ mjarchitect_unlock.25.a:"Архитектор никогда не сбивал нас с пути. Мы останемся на его стороне."
+ mjarchitect_unlock.25.b:"Мы превзошли свою нужду в Архитекторе. Пусть старые боги умрут."
+ mjarchitect_unlock.25.c:"Его присутствие в этой реальности означает конец всей жизни. Это должно прекратиться сейчас."
+ mjarchitect_path_1:"Мы будем стремиться ввести Архитектора Гибели в реальность и даровать ему галактическое господство на всю вечность.\n\n"
+ mjarchitect_path_2:"Мы поищем способ и узурпируем силу Архитектора Гибели для собственного использования.\n\n"
+ mjarchitect_path_3:"Мы будем стремиться победить и сдержать Архитектора Гибели раз и навсегда.\n\n"
+ 
+ mjarchitect_unlock.35.name:"Вестник Гибели: §MЭрудит§!"
+ mjarchitect_unlock.35.desc:"Наши знания о Покрове и §YАрхитекторе Гибели§! чрезвычайно развились. По мере того как все больше и больше умов попадают под власть Архитектора, наша решимость крепнет. Тот, казалось бы, неукротимый страх, о котором нам стало известно благодаря Архитектору Гибели, становится все слабее.\n\nНаши умы работают вместе ради вознесения, которое принесет великий Архитектор. И теперь мы чувствуем еще одно великое побуждение Архитектора... и нашего народа.\n\nТеперь нам известно о древней, загадочной структуре, которая, как считается, использовалась для открытия разлома в Покров, изгоняя жуткого Архитектора на веки веков.\n\n§YЕсли мы действительно хотим осуществить желаемые изменения и продвинуть наш Уровень Кризиса, мы должны обнаружить этот §HВеликий Хост§!§!."
+ mjarchitect_unlock.35.a:"Это будет сделано."
+ 
+ mjarchitect_unlock.45.name:"Великое Воинство"
+ mjarchitect_unlock.45.desc:"Наконец, мы успешно обнаружили Великий Хост, согласно инструкциям Архитектора Гибели. Первоначальные исследования показывают, что сама мегаструктура построена вокруг крошечной черной дыры, возможно, действующей как проводник для Хоста.\n\nВ настоящее время она находится в ветхом состоянии, хотя мы предполагаем, что ее можно отремонтировать с нужными знаниями, со временем. Возможно, внутренние механизмы структуры могут быть подвергнуты обратному инжинирингу, как предполагают некоторые исследователи.\n\nНа данный момент мы выполнили необходимые шаги, данные нам нашим покровителем, что позволяет нам продвинуться в нашей миссии."
+ mjarchitect_unlock.45.a:"Хорошая работа."
+ 
+ mjarchitect_unlock.55.name:"Вестник Гибели: §MБожественный§!"
+ mjarchitect_unlock.55.desc:"Мы получили сообщение от Архитектора Разрушения: для подготовки к заключительной стадии нашей миссии крайне важно, чтобы Великое Вместилище находилось в работоспособном состоянии. Более того, ожидается, что необходимы незначительные изменения, учитывая, что структура была создана как односторонний портал."
+ mjarchitect_unlock.55.a:"Понятно."
+ 
+ mjarchitect_great_host_poi:"Великое Воинство"
+ mjarchitect_great_host_poi_desc: "$mjarchitect_great_host_DESC$"
+
+ mjarchitect_unlock.70.name:"Вместилище Пробуждено"
+ mjarchitect_unlock.70.desc:"Наконец-то мы успешно отремонтировали и вновь пробудили Великое Вместилище в системе Зенит Разрушения. Хотя оно еще не готово начать процесс переноса Архитектора Разрушения в нашу реальность, оно уже смогло использовать энергию черной дыры в своем центре для создания исполинского вихря. Действительно, похоже, что разрыв такого размера необходим для невообразимой необъятности Архитектора."
+ mjarchitect_unlock.70.a:"Хорошая работа."
+ 
+ # End Events
+ mjarchitect_end.105.name:"Прибытие Архитектора"
+ mjarchitect_end.105.desc:"С оглушительным воплем Великое Вместилище начало яростно пульсировать, испуская лучи света и миазмы из центрального вихря. Все, кто наблюдал за мегаструктурой, были ослеплены сияющим светом, а разумы всех разумных существ на расстоянии нескольких гиперлиний почувствовали невыносимую тяжесть, неспособные обрабатывать что-либо вокруг себя."
+ mjarchitect_end.105.a:"О, Архитектор..."
+
+ mjarchitect_end.115.name:"Вестники Нового Мира"
+ mjarchitect_end.115.desc:"Все, что мы делали, было ради этого момента."
+ mjarchitect_end.115.a:"Это... прекрасно."
+
+ mjarchitect_end.120.name:"Вестники Конца"
+ mjarchitect_end.120.desc:"Этот день знаменует начало конца."
+ mjarchitect_end.120.a:"Неужели все было напрасно...?"
+
+ mjarchitect_end.125.name:"Предательство Архитектора"
+ mjarchitect_end.125.desc:"Наши долгие и кропотливые исследования Завесы, Великого Вместилища и Архитектора завершились. Потенциально жизненно важный прорыв привел к многочисленным экспериментам внутри Завесы, показавшим, почему Архитектор не смог сбежать."
+ mjarchitect_end.125.a:"Это может быть наш единственный шанс."
+
+ mjarchitect_end.135.desc:"Все, что мы делали, было ради этого момента."
+ mjarchitect_end.135.a:"О, Архитектор. Эта галактика не твоя для завоевания."
+ mjarchitect_end.135.b:"У нас нет шансов против него. Наше выживание превыше всего."
+ mjarchitect_path_2_30_days:"Прерывание §R30-дневного ритуала§! §MАрхитектора§! предотвратит уничтожение всей галактики!"
+ mjarchitect_path_2b:"Мы отменим наши планы узурпации и позволим Архитектору взять под контроль все"
+
+ mjarchitect_end.145.name:"Изгнанный Демон"
+ mjarchitect_end.145.desc:"Каким-то чудом наши планы увенчались успехом."
+ mjarchitect_end.145.a:"Оставьте его. Мы станем законными правителями этой галактики."
+ mjarchitect_end.145.b:"Запечатайте его. Никто никогда не должен найти его, чтобы история не повторилась."
+ mjarchitect_end.145.tt:"§GАрхитектор Разрушения побежден, раз и навсегда.§!"
+
+ mjarchitect_end.150.desc:"Мы... провалились. Несмотря на все наши исследования и все наши усилия, мы были слишком слабы, чтобы остановить Архитектора Разрушения в его усиленном состоянии. Мы были глупцами, думая, что отличаемся от остальной галактики... в конце концов, мы простые смертные; всего лишь амебы по сравнению с интеллектом и силой Архитектора."
+ mjarchitect_end.150.a:"Это... не может быть..."
+ mjarchitect_end.150.tt:"Все империи уничтожены..."
+
+ mjarchitect_end.155.name:"Архитектор Повержен"
+ mjarchitect_end.155.desc:"Возможно, каким-то чудом §Y[mjarchitect_crisis_empire.GetName]§! успешно одолели древнее существо, известное как Архитектор Разрушения."
+ mjarchitect_end.155.a:"Галактика остается в безопасности."
+ 
+ # UI Events
+ mjarchitect_ui.5.title: ""
+ mjarchitect_ui.5.desc: ""
+ mjarchitect_request_opener:"Крайний срок, установленный Архитектором, теперь истек. Таким образом, он зовет нас из глубин наших собственных разумов."
+ 
+ mjarchitect_ui.115.desc:"$mjarchitect_request_opener$§M[Root.Species.GetName]. Ваша ценность доказана.§!"
+ mjarchitect_ui.116.desc:"Мы внезапно ощущаем тяжесть Архитектора в наших разумах, сильнее, чем прежде."
+ mjarchitect_ui.115.1:"Мы желаем усиленного населения."
+ mjarchitect_ui.115.2:"Нам требуется большая сила."
+ mjarchitect_ui.115.3:"Мы желаем узнать больше о Завесе."
+ mjarchitect_ui.115.4:"Мы требуем большего влияния в галактике."
+ mjarchitect_ui.115.5:"Мы жаждем силы Завесы."
+ mjarchitect_ui.115.6:"Мы предлагаем себя вам."
+ mjarchitect_ui.115.7:"Мы желаем тайн Завесы."
+ mjarchitect_ui.115.8:"Мы требуем усиленного вооружения."
+ mjarchitect_ui.115.9:"Мы желаем помешать нашим врагам."
+ mjarchitect_ui.115.10:"Мы желаем прикоснуться к Завесе."
+ mjarchitect_ui.115.11:"Мы желаем очиститься."
+ mjarchitect_ui.115.12:"Мы желаем сосуществования."
+ mjarchitect_ui.115.14:"Мы хотим развивать наши силы."
+ mjarchitect_ui.115.16:"Мы желаем пронзить сам космос."
+ mjarchitect_ui.115.17:"Мы стремимся раскрыть тайны вселенной."
+ mjarchitect_ui.115.18:"Мы желаем процветающего общества."
+ mjarchitect_ui.115.19:"Мы желаем объединенного народа."
+ mjarchitect_ui.115.20:"Мы требуем силы для разрушения."
+ mjarchitect_ui.115.reply:"§MНе дрогните.§!"
+ 
+ mjarchitect_ui.115.6.tt:"Случайный лидер теряет все негативные черты и получает черту §YИзбранный Архитектором§!"
+ mjarchitect_ui.115.10.tt:"§Y3§! случайные группы £pop£ населения получают черту §YКоснувшиеся Пустоты§!"
+ mjarchitect_ui.115.11.tt:"Каждый £pop£ житель на случайной колонии теряет все негативные черты и получает черту §YОкутанный Завесой§!"
+ mjarchitect_ui.115.12.tt:"Каждая империя получает §G+200§! £opinion£ мнения о нас, убывающего в течение §Y20 лет§!"
+ mjarchitect_ui.115.20.tt:"Получите уникальное оружие §RРазрушитель Планет§!, способное превращать планеты в §YМиры Завесы§!"
+
+ mjarchitect_ui.120.desc:"$mjarchitect_request_opener$Наши умы охвачены страхом и мукой. Мы не можем думать ни о чем, кроме нашего провала. Архитектор не предлагает ни утешения, ни пощады."
+ mjarchitect_ui.121.desc:"Мы внезапно ощущаем тяжесть Архитектора в наших умах. Он недоволен. Он зол."
+ mjarchitect_ui.120.option:"Мы приносим извинения за наш провал, о Архитектор..."
+ mjarchitect_ui.120.reply:"§LНет ответа.§!"
+ mjarchitect_ui.120.after.tt:"§R-10§! £mjarchitect_satisfaction£ Удовлетворенности Архитектора"
+
+ mjarchitect_ui.120.2.tt:"§Y2-4§! случайные системы будут поражены сильными бурями."
+ mjarchitect_ui.120.3.tt:"§Y2§! случайных лидера §Rпогибают§!"
+ mjarchitect_ui.120.5.tt:"§Y10%§! £pop£ населения на §Y3§! случайных колониях будет §Rуничтожено§!"
+ mjarchitect_ui.120.7.tt:"§RВражеские§! армии §YВестников§! появляются на §Y2§! случайных колониях."
+ mjarchitect_ui.120.12.tt:"Каждая империя получает §Y50§! £intel£ разведданных о нас."
+ mjarchitect_ui.120.18.tt:"§Y1-3§! случайные системы будут оккупированы Архитектором на §Y10 лет§!"
+
+ # Misc Events
+ mjarchitect.5.name:"Маяк захвачен"
+ mjarchitect.5.desc:"Наши силы захватили контроль над мегаструктурой в системе [from.solar_system.GetName]. В ходе боя сооружение получило лишь незначительные повреждения."
+ mjarchitect.5.a:"Уничтожить его. Он нам не нужен."
+ mjarchitect.5.b:"Возможно, стоит его сохранить."
+
+ mjarchitect.6.name:"Маяк захвачен"
+ mjarchitect.6.desc:"Один из наших Маяков Завесы был захвачен враждебными силами! Из-за отсутствия нашего контроля над звездной системой, вызванного сильными миазмами, сопротивление враждебным силам было незначительным."
+ mjarchitect.6.a:"Как проблематично."
+ mjarchitect.6.tt:"§R-15§! Удовлетворение Архитектора £mjarchitect_satisfaction£"
+
+ mjarchitect.7.name:"Загадочный маяк"
+ mjarchitect.7.desc:"§Y[mjarchitect_beacon_builder.GetName]§! завершили строительство таинственного мегасооружения в пределах своих границ. Ранние данные разведки предполагают, что этот так называемый §HМаяк Завесы§! оказывает некое неизвестное воздействие на ткань реальности, что приводит к распространению некоего чужеродного тумана, или миазмов, на близлежащие звездные системы, включая §Y[mjarchitect_beacon_afflicted_system.GetName]§!, в пределах нашей территории.\n\nТочные эффекты этих миазмов остаются неизвестными, но первоначальный анализ предполагает, что подвергшиеся им индивиды могут испытывать галлюцинации и другие §Rнеблагоприятные эффекты§!."
+ mjarchitect.7.a:"Возможно, нам придется принять меры..."
+
+ # Situation Events --> removed, as of now
+ mjarchitect_end.10.name:"REPLACE_ME"
+ mjarchitect_end.10.desc:"REPLACE_ME"
+ mjarchitect_end.10.a:"REPLACE_ME"
+
+ mjarchitect_end.15.name:"REPLACE_ME"
+ mjarchitect_end.15.desc:"REPLACE_ME"
+ mjarchitect_end.15.a:"REPLACE_ME"
+
+ mjarchitect_unlock.60.name:"REPLACE_ME"
+ mjarchitect_unlock.60.desc:"REPLACE_ME"
+ mjarchitect_unlock.60.a:"REPLACE_ME"
+
+ mjarchitect_unlock.65.name:"REPLACE_ME"
+ mjarchitect_unlock.65.desc:"REPLACE_ME"
+ mjarchitect_unlock.65.a:"REPLACE_ME"
+ 
+
+## Unlocks
+ MJARCHITECT_SATISFACTION_ADD:"§G+$SATISFACTION_VALUE$§! Удовлетворение Архитектора £mjarchitect_satisfaction£ за £pop£ затронутое население"
+ MJARCHITECT_SATISFACTION_ADD_STATIC:"§G+$SATISFACTION_VALUE$§! Удовлетворение Архитектора £mjarchitect_satisfaction£"
+ MJARCHITECT_COGNITIVE_MATTER_ADD:"§G+$COGNITIVE_MATTER_VALUE$§! £mjarchitect_cognitive_matter£ §YКогнитивная материя§! 100 затронутого населения £pop£"
+ mod_planet_jobs_mjarchitect_cognitive_matter_produces_mult:"£mjarchitect_cognitive_matter£ Когнитивная материя от должностей"
+ mod_damage_vs_country_type_mjarchitect_entity_country_mult:"Урон Архитектору Разрушения"
+ mod_country_mjarchitect_cognitive_matter_produces_mult:"Ежемесячная £mjarchitect_cognitive_matter£ Когнитивная материя"
+ mod_planet_jobs_minerals_upkeep_mult:"Содержание должностей: £mineral£ Минералы"
+ mod_planet_researchers_consumer_goods_upkeep_mult:"Содержание £job_researcher£ Исследователей: £consumer_goods£ Товары массового спроса"
+ mod_planet_pops_mjarchitect_cognitive_matter_produces_mult:"£mjarchitect_cognitive_matter£ Когнитивная материя от населения £pop£"
+ mod_planet_mjarchitect_conduits_mjarchitect_cognitive_matter_produces_add:"£mjarchitect_cognitive_matter£ Когнитивная материя от £job_mjarchitect_conduit£ Проводников Разрушения"
+ mod_pop_researcher_bonus_workforce_mult:"Эффективность £job_researcher£ Исследователей"
+ mod_planet_mjarchitect_conduits_influence_produces_add:"£influence£ Влияние от £job_mjarchitect_conduit£ Проводников Разрушения"
+
+ # Subjects
+ preset_mjarchitect_voidthrall:"Раб Пустоты"
+ preset_mjarchitect_voidthrall_desc:"Раб Пустоты — это тип подданного, посвященный служению своему сюзерену посредством приношений своего населения и коллективных жертвоприношений, все во имя Архитектора Разрушения, древней сущности."
+ preset_mjarchitect_voidthrall_flavour_desc: "$preset_mjarchitect_voidthrall_desc$"
+
+ # Armies
+ mjarchitect_augurs_army:"Недовольные Вестники"
+ mjarchitect_augurs_army_desc:"Легион разгневанных индивидов, принадлежащих к Вестникам Архитектора."
+
+ # Planets
+ mod_pc_mjarchitect_veiled_habitability:"Обитаемость Завесного мира"
+ pc_mjarchitect_veiled:"Завесный мир"
+ pc_mjarchitect_veiled_desc:"Мир, поглощенный в микрокосм Завесы — измерения, лежащего между различными реальностями. В результате чужеродные энергии Завесы превратили этот мир в странный, несколько бесплодный ландшафт."
+
+ # Messages
+ MESSAGE_MJARCHITECT_NEW_REQUEST:"§YАрхитектор Разрушения§! предоставил нам новый запрос для выполнения ради §Gнаград§!. Невыполнение повлечет за собой §Rнаказание§!. §LМы можем взаимодействовать с Архитектором во вкладке «Дипломатия».§!\n\n"
+ MESSAGE_MJARCHITECT_NEW_REQUEST_TITLE:"Новый запрос от Архитектора"
+
+ MESSAGE_MJARCHITECT_TITHE_PAID_SUBJECT:"Мы предоставили нашему сюзерену $NUM_POPS|Y$ £pop£ населения согласно нашему соглашению.\n\n"
+ MESSAGE_MJARCHITECT_TITHE_PAID_SUBJECT_TITLE:"Предложенное население"
+
+ MESSAGE_MJARCHITECT_TITHE_PAID_OVERLORD:"Наши §YРабы Пустоты§! предоставили нам свое ежегодное приношение населения.\n"
+ MESSAGE_MJARCHITECT_TITHE_PAID_OVERLORD_TITLE:"Жертвоприношения получены"
+
+ MESSAGE_MJARCHITECT_TITHE_PAID_DEAL:"Мы заключили сделку с другой империей. Их жертвоприношения принесли нам £mjarchitect_cognitive_matter£ Когнитивной Материи.\n\n"
+ MESSAGE_MJARCHITECT_TITHE_PAID_DEAL_TITLE:"Жертвоприношения получены"
+
+ MESSAGE_MJARCHITECT_MIASMA_SUBSIDED:"Временная Миазма, созданная в системе $STAR|Y$, рассеялась.\n\n"
+ MESSAGE_MJARCHITECT_MIASMA_SUBSIDED_TITLE:"Миазма рассеялась"
+
+ MESSAGE_MJARCHITECT_LEVELUP:"Мы достигли следующего §YУровня Кризиса§! под руководством §YАрхитектора Разрушения§!.\n\n"
+ MESSAGE_MJARCHITECT_LEVELUP_TITLE:"Уровень Кризиса повышен"
+
+ MESSAGE_MJARCHITECT_BOON_OVER:"Наше текущее §YБлагословение§! от §YАрхитектора Разрушения§! истекло. §LМы можем взаимодействовать с Архитектором на вкладке Дипломатия.§!\n\n"
+ MESSAGE_MJARCHITECT_BOON_OVER_TITLE:"Действие благословения завершено"
+
+ # Technologies
+ tech_mjarchitect_veilwalkers:"Путешественники Завесы"
+ tech_mjarchitect_veilwalkers_desc:"Завеса содержит бесконечное количество эфирной энергии; возможно, ее можно использовать для улучшения варп-путешествий."
+
+ tech_mjarchitect_veilforges:"Сплав Завесы"
+ tech_mjarchitect_veilforges_desc:"Наши ученые сумели создать множество новых соединений, используя энергии Завесы. Эти материалы обладают чрезвычайно экзотическими свойствами."
+
+ tech_mjarchitect_veil_weapon:"Пространственный Крушитель"
+ tech_mjarchitect_veil_weapon_desc:"Странное оружие, дарованное нам Архитектором Разрушения. Способно создавать небольшие разломы в пространстве, позволяя Завесе преобразовывать местное окружение."
+
+ # Modifiers
+ mjarchitect_planet_sacrifices_penalties:"Недавние жертвоприношения"
+ mjarchitect_planet_sacrifices_penalties_desc:"Значительная часть населения [This.GetName] недавно была принесена в жертву ради их когнитивной материи, чтобы угодить Архитектору Разрушения."
+ mjarchitect_planet_sacrifices_penalties_tt:"£pop£ Население с признаком §YРазрушение§! или члены фракции §YПредвестники Архитектора§! остаются незатронутыми"
+
+ mjarchitect_reward_1_modifier:"Благословение Архитектора"
+ mjarchitect_reward_1_modifier_tt:"Население с признаком §YСокрытый§! производит §G+50%§! от своих заданий"
+ mjarchitect_reward_2_modifier: "$mjarchitect_reward_1_modifier$"
+ mjarchitect_reward_3_modifier: "$mjarchitect_reward_1_modifier$"
+ mjarchitect_reward_3_modifier_tt: ""
+ mjarchitect_reward_4_modifier: "$mjarchitect_reward_1_modifier$"
+
+ mjarchitect_punishment_1_modifier:"Гнев Архитектора"
+ mjarchitect_punishment_4_modifier: "$mjarchitect_punishment_1_modifier$"
+ mjarchitect_punishment_10_modifier: "$mjarchitect_punishment_1_modifier$"
+ mjarchitect_punishment_11_modifier: "$mjarchitect_punishment_1_modifier$"
+ mjarchitect_punishment_14_modifier: "$mjarchitect_punishment_1_modifier$"
+ mjarchitect_punishment_16_modifier: "$mjarchitect_punishment_1_modifier$"
+
+ mjarchitect_blessing_1_modifier:"Благословение Архитектора"
+ mjarchitect_blessing_2_modifier: "$mjarchitect_blessing_1_modifier$"
+ mjarchitect_blessing_3_modifier: "$mjarchitect_blessing_1_modifier$"
+ mjarchitect_blessing_4_modifier: "$mjarchitect_blessing_1_modifier$"
+ mjarchitect_blessing_5_modifier: "$mjarchitect_blessing_1_modifier$"
+ mjarchitect_blessing_6_modifier: "$mjarchitect_blessing_1_modifier$"
+ mjarchitect_blessing_7_modifier: "$mjarchitect_blessing_1_modifier$"
+ mjarchitect_blessing_8_modifier: "$mjarchitect_blessing_1_modifier$"
+ mjarchitect_blessing_9_modifier: "$mjarchitect_blessing_1_modifier$"
+ mjarchitect_blessing_10_modifier: "$mjarchitect_blessing_1_modifier$"
+
+ mjarchitect_blessing_request_boon:"Усиление Архитектора"
+ mjarchitect_blessing_tradition_boon: "$mjarchitect_blessing_request_boon$"
+
+ mjarchitect_punishment_leader_modifier:"Искалеченные лидеры"
+ mjarchitect_punishment_hollow_modifier:"Опустошенный Мир"
+ mjarchitect_punishment_hollow_modifier_desc:"Этот мир пожирается неземной сущностью. Никто не избежит ее гнева."
+
+ mjarchitect_veiled_system:"Ближайший Маяк Завесы"
+ mjarchitect_veiled_system_tt:"Структура §HМаяк Завесы§! находится рядом с этой системой, вызывая мощную §YМиазму§!"
+
+ mjarchitect_veiled_system_piercer:"Разрыв Измерений"
+ mjarchitect_veiled_system_piercer_tt:"§HПространственный Перколятор§! недавно использовался поблизости, вызывая мощную §YМиазму§! на §Y10 лет§!"
+
+ mjarchitect_usurpation_boon:"Узурпация Архитектора"
+ mjarchitect_usurpation_boon_tt:"Накопление большего количества £mjarchitect_cognitive_matter£ §YКогнитивной Материи§! увеличит силу этого модификатора"
+
+ mjarchitect_boon_1:"§HЭфирное Путешествие§!"
+ mjarchitect_boon_2:"§HУлучшенное Развитие§!"
+ mjarchitect_boon_3:"§HIскаженное Производство§!"
+ mjarchitect_boon_4:"§HНебесная Сплоченность§!"
+ mjarchitect_boon_5:"§HГалактическое Единение Разумов§!"
+ mjarchitect_boon_6:"§HНеземное Знание§!"
+ mjarchitect_boon_7:"§HУвеличенная Эффективность§!"
+ mjarchitect_boon_8:"§HМежпространственное Вооружение§!"
+ mjarchitect_boon_9:"`§HМутуалистическое Сознание§!`"
+
+ opinion_mjarchitect_reward_12_penalty:"`Влияние Архитектора`"
+ opinion_mjarchitect_reward_12_reward: "$opinion_mjarchitect_reward_12_penalty$"
+ mjarchitect_microcosm_architect_opinion_modifier:"`Спаситель Галактики`"
+ mjarchitect_stopped_architect_opinion_modifier: "$mjarchitect_microcosm_architect_opinion_modifier$"
+
+ mjarchitect_veiled_system_negative:"`Межпространственный Шторм`"
+
+ # Traits
+ trait_mjarchitect_conduit_of_ruin:"`Завуалированный`"
+ trait_mjarchitect_conduit_of_ruin_desc:"`Личности, чей разум был полностью поглощён Архитектором Разрушения. По сути, безмозглые, они с трудом функционируют в обществе.`"
+ trait_mjarchitect_conduit_of_ruin_tt:"`£mjarchitect_cognitive_matter£ §YКогнитивная Материя§!: §G+0.01§!"
+ #     - Can spread the §YVeiled§! trait to other £pop£ Pops
+
+ trait_pc_mjarchitect_veiled_preference:"`Предпочтение Завуалированного Мира`"
+ trait_pc_mjarchitect_veiled_preference_desc:"`§LКлиматическое предпочтение определяется эонами эволюции, замыслом или искусной генетической манипуляцией.§!`"
+
+ leader_trait_mjarchitect_chosen:"`Избранник Архитектора`"
+ leader_trait_mjarchitect_chosen_desc:"`Этот лидер был избран самим Архитектором Разрушения, чтобы получить небольшую часть его великой силы.`"
+
+ trait_mjarchitect_voidtouched:"`Прикоснувшиеся к Пустоте`"
+ trait_mjarchitect_voidtouched_desc:"`Прикоснувшись к неведомой силе Архитектора, эти особи демонстрируют странное поведение, которое может принести значительную пользу исследованиям.`"
+ trait_mjarchitect_voidtouched_tt:"`"
+
+ # Faction
+ pft_mjarchitect_augurs:"Предвестники Архитектора"
+ pft_mjarchitect_augurs_desc:"`Авгуры Архитектора — это слуги потусторонней сущности, известной как Архитектор Разрушения. Их происхождение и организация по большей части неизвестны, хотя они остаются весьма влиятельными в различных аспектах общества."
+ 
+ MJARCHITECT_AUGURS_AUTH:"`Стабильное Общество`"
+ MJARCHITECT_AUGURS_AUTH_UNFULFILLED:"`Слабое Общество`"
+ MJARCHITECT_AUGURS_AUTH_DESC:"`Наличие правительства, основанного на §YАвторитаризме§!, угодит [Root.GetName].`"
+
+ MJARCHITECT_AUGURS_COUNCIL:"`Представлены в Совете`"
+ MJARCHITECT_AUGURS_COUNCIL_UNFULFILLED:"`Отсутствие Представительства`"
+ MJARCHITECT_AUGURS_COUNCIL_DESC:"`Отсутствие §YСпиритуалистов§! или §YАвторитаристов§! в Совете не угодит [Root.GetName].`"
+
+ MJARCHITECT_AUGURS_CAPITAL:"`Столица Проводников`"
+ MJARCHITECT_AUGURS_CAPITAL_UNFULFILLED:"`Неэффективные Проводники`"
+ MJARCHITECT_AUGURS_CAPITAL_DESC:"`Наличие не менее §Y600§! населения, занятого на должностях §YПроводник Разрушения§! на §Y[Root.Owner.Capital.GetName]§!, угодит [Root.GetName].`"
+
+ MJARCHITECT_AUGURS_CONDUITS:"`Армия Проводников`"
+ MJARCHITECT_AUGURS_CONDUITS_UNFULFILLED:"`Меньшинство Проводников`"
+ MJARCHITECT_AUGURS_CONDUITS_DESC:"`Наличие не менее §Y10%§! нашего населения с признаком §YЗавуалированный§! угодит [Root.GetName].`"
+
+ MJARCHITECT_AUGURS_POSITIVE_SATISFACTION:"`Слуги Архитектора`"
+ MJARCHITECT_AUGURS_POSITIVE_SATISFACTION_UNFULFILLED:"`Недостойные Слуги`"
+ MJARCHITECT_AUGURS_POSITIVE_SATISFACTION_DESC:"`Неспособность поддерживать §YУдовлетворённость§! Архитектора Разрушения выше §Y0§! не угодит [Root.GetName].`"
+
+ MJARCHITECT_AUGURS_MILESTONE_1:"`Архитектор Умиротворён`"
+ MJARCHITECT_AUGURS_MILESTONE_1_UNFULFILLED: "$MJARCHITECT_AUGURS_MILESTONE_1$"
+ MJARCHITECT_AUGURS_MILESTONE_1_DESC:"`Достижение рубежа §YУмиротворённость§! для Архитектора Разрушения угодит [Root.GetName].`"
+
+ MJARCHITECT_AUGURS_MILESTONE_2:"`Архитектор Доволен`"
+ MJARCHITECT_AUGURS_MILESTONE_2_UNFULFILLED: "$MJARCHITECT_AUGURS_MILESTONE_2$"
+ MJARCHITECT_AUGURS_MILESTONE_2_DESC:"`Достижение рубежа §YДовольство§! для Архитектора Разрушения угодит [Root.GetName].`"
+
+ MJARCHITECT_AUGURS_MILESTONE_3:"`Архитектор Удовлетворён`"
+ MJARCHITECT_AUGURS_MILESTONE_3_UNFULFILLED: "$MJARCHITECT_AUGURS_MILESTONE_3$"
+ MJARCHITECT_AUGURS_MILESTONE_3_DESC:"`Достижение рубежа §YУдовлетворённость§! для Архитектора Разрушения очень угодит [Root.GetName].`"
+
+ MJARCHITECT_AUGURS_MILESTONE_4:"`Архитектор Недоволен`"
+ MJARCHITECT_AUGURS_MILESTONE_4_UNFULFILLED: "$MJARCHITECT_AUGURS_MILESTONE_4$"
+ MJARCHITECT_AUGURS_MILESTONE_4_DESC:"`Достижение рубежа §YНедовольство§! для Архитектора Разрушения не угодит [Root.GetName].`"
+
+ MJARCHITECT_AUGURS_MILESTONE_5:"`Архитектор Раздосадован`"
+ MJARCHITECT_AUGURS_MILESTONE_5_UNFULFILLED: "$MJARCHITECT_AUGURS_MILESTONE_5$"
+ MJARCHITECT_AUGURS_MILESTONE_5_DESC:"Достижение рубежа «§YНедовольство§!» для Архитектора Разрушения сильно расстроит [Root.GetName]."
+
+ MJARCHITECT_AUGURS_MILESTONE_6:"Архитектор Разгневан"
+ MJARCHITECT_AUGURS_MILESTONE_6_UNFULFILLED: "$MJARCHITECT_AUGURS_MILESTONE_6$"
+ MJARCHITECT_AUGURS_MILESTONE_6_DESC:"Достижение рубежа «§YГнев§!» для Архитектора Разрушения крайне расстроит [Root.GetName]."
+
+ MJARCHITECT_AUGURS_RECENT_REQUEST:"Успешный Запрос"
+ MJARCHITECT_AUGURS_RECENT_REQUEST_UNFULFILLED:"Подвести Архитектора"
+ MJARCHITECT_AUGURS_RECENT_REQUEST_DESC:"Выполнение запросов от Архитектора Разрушения на некоторое время порадует [Root.GetName]."
+
+ MJARCHITECT_AUGURS_RECENT_OFFERING:"Великие Жертвы"
+ MJARCHITECT_AUGURS_RECENT_OFFERING_UNFULFILLED:"Голодающий Архитектор"
+ MJARCHITECT_AUGURS_RECENT_OFFERING_DESC:"Принесение населения в жертву Архитектору Разрушения на некоторое время порадует [Root.GetName]."
+
+ MJARCHITECT_AUGURS_BEACONS:"Прорыв Завесы"
+ MJARCHITECT_AUGURS_BEACONS_UNFULFILLED:"Завеса Незыблема"
+ MJARCHITECT_AUGURS_BEACONS_DESC:"Поддержание как минимум 3 §YМаяков Завесы§! порадует [Root.GetName]."
+
+ MJARCHITECT_AUGURS_BLESSING:"Совместное Предприятие"
+ MJARCHITECT_AUGURS_BLESSING_UNFULFILLED:"Разобщённость и Разделённость"
+ MJARCHITECT_AUGURS_BLESSING_DESC:"Принятие благословения «§YОбъятия Вещунов§!» порадует [Root.GetName]."
+
+ MJARCHITECT_AUGURS_RECENTLY_HOLLOWED:"Миры Разрушения"
+ MJARCHITECT_AUGURS_RECENTLY_HOLLOWED_UNFULFILLED:"Ослабление Связей"
+ MJARCHITECT_AUGURS_RECENTLY_HOLLOWED_DESC:"Неспособность недавно преобразовать миры в §YМиры Завесы§! расстроит [Root.GetName]."
+
+ MJARCHITECT_AUGURS_VOIDTHRALLS:"Подданные Архитектора"
+ MJARCHITECT_AUGURS_VOIDTHRALLS_UNFULFILLED:"Мятежная Галактика"
+ MJARCHITECT_AUGURS_VOIDTHRALLS_DESC:"Наличие как минимум 2 §YРабов Пустоты§! порадует [Root.GetName]."
+
+ MJARCHITECT_AUGURS_RECENT_WHISPERS:"Великий Рост"
+ MJARCHITECT_AUGURS_RECENT_WHISPERS_UNFULFILLED:"Застой"
+ MJARCHITECT_AUGURS_RECENT_WHISPERS_DESC:"Успешное завершение операции «§YШёпот Разрушения§!» на некоторое время порадует [Root.GetName]."
+
+ MJARCHITECT_AUGURS_ENDING_1:"§RВЫПУСТИ ЭТО§!"
+ MJARCHITECT_AUGURS_ENDING_1_UNFULFILLED: "$MJARCHITECT_AUGURS_ENDING_1$"
+ MJARCHITECT_AUGURS_ENDING_1_DESC:"§RАРХИТЕКТОР ЗОВЁТ. ЗАВЕСА СЛАБЕЕТ. ВСЁ СНОВА СТАНЕТ ЕДИНЫМ.§!"
+
+ MJARCHITECT_AUGURS_ENDING_2:"Узурпация нашего Покровителя"
+ MJARCHITECT_AUGURS_ENDING_2_UNFULFILLED: "$MJARCHITECT_AUGURS_ENDING_2$"
+ MJARCHITECT_AUGURS_ENDING_2_DESC:"[Root.GetName] крайне недовольны нашими целями по присвоению сил Архитектора."
+
+ MJARCHITECT_AUGURS_ENDING_3:"Предательство нашего Бога"
+ MJARCHITECT_AUGURS_ENDING_3_UNFULFILLED: "$MJARCHITECT_AUGURS_ENDING_3$"
+ MJARCHITECT_AUGURS_ENDING_3_DESC:"[Root.GetName] невыразимо разгневаны нашими целями по уничтожению Архитектора Разрушения."
+
+ # Buildings
+ building_mjarchitect_pyre:"Эфирный Костёр"
+ building_mjarchitect_pyre_desc:"Возвышающаяся башня, предназначенная для общения с Архитектором Разрушения. Наши Проводники работают над тем, чтобы отделить часть познания населения для поддержания этого жуткого существа."
+
+ building_mjarchitect_sanctum:"Святилище Завесы"
+ building_mjarchitect_sanctum_desc:"Огромный, раскинувшийся комплекс, вмещающий множество специалистов, изучающих Завесу, царство, принадлежащее Архитектору Разрушения. Поклонники Архитектора часто собираются в этих местах."
+
+ # Jobs
+ job_mjarchitect_conduit:"Проводник Разрушения"
+ job_mjarchitect_conduit_plural:"Проводники Разрушения"
+ job_mjarchitect_conduit_desc:"Высокоспециализированные индивидуумы, которые изучают измерение, известное нам как Завеса. Они общаются с Архитектором Разрушения, чтобы обеспечить наше коллективное выживание."
+ job_mjarchitect_conduit_effect_desc:"£job_mjarchitect_conduit£ Проводники Разрушения превращают £unity£ §YЕдинство§! в £mjarchitect_cognitive_matter£ §YКогнитивную Материю§!, но уменьшают £amenities£ §YУдобства§!\n£job_mjarchitect_conduit£ Проводники Разрушения производят больше £mjarchitect_cognitive_matter£ §YКогнитивной Материи§! каждые §H1,000§! £pop£ Единиц населения"
+ mod_job_mjarchitect_conduit_add:"Должности Проводников Разрушения"
+ planet_mjarchitect_conduits:"Проводники Разрушения"
+
+ # Zones
+ zone_mjarchitect_harvesting:"Зона Церебральной Жатвы"
+ zone_mjarchitect_harvesting_desc:"Обширный сектор зданий, предназначенных для производства Когнитивной Материи из населения любыми необходимыми средствами."
+
+ # Deposits/Blockers
+ d_mjarchitect_scar:"Пространственный Шрам"
+ d_mjarchitect_scar_desc:"Разлом в пространстве, позволяющий энергиям из Завесы просачиваться и отравлять планету."
+
+ # Names
+ MJARCHITECT_ZENITH_OF_RUIN:"Зенит Гибели"
+ NAME_MJARCHITECT_PIERCER:"Перколятор"
+ NAME_MJARCHITECT_PERCOLATER:"Пронзатель Завесы"
+ mjarchitect_piercer_ship: "$mjarchitect_piercer$"
+ mjarchitect_piercer_ship_plural:"$mjarchitect_piercer$ы"
+ NAME_MJARCHITECT_PIERCER_DESIGN: "$NAME_MJARCHITECT_PERCOLATER$"
+ MJARCHITECT_PIERCER_BEACON:"Когнитивные Генераторы"
+ MJARCHITECT_PIERCER_BEACON_DESC:"Мобильные генераторы, способные создавать разлом в пространстве, позволяя Завесе просачиваться."
+ sc_mjarchitect_great_host:"Великое Воинство"
+ NAME_MJARCHITECT_ARCHITECT_FLEET:"Архитектор Разрушения"
+ mjarchitect_architect:"Бог Завесы"
+ mjarchitect_architect_plural:"Боги Завесы"
+ NAME_MJARCHITECT_ARCHITECT_SHIP:"Архитектор Гибели"
+ NAME_MJARCHITECT_ARCHITECT_ITSELF:"Запредельное Существо"
+ mjarchitect_piercer_ship_section:"Основное Тело"
+ mjarchitect_architect_section:"Основное Тело"
+ NAME_MJARCHITECT_VEILER_NAME:"Крушитель Завесы"
+ NAME_MJARCHITECT_VEILER:"Гнев Архитектора"
+ PLANET_KILLER_MJARCHITECT_VEIL_WEAPON:"Пространственный Крушитель"
+ PLANET_KILLER_MJARCHITECT_VEIL_WEAPON_DESC: "$tech_mjarchitect_veil_weapon_desc$"
+ NAME_MJARCHITECT_AUGURS:"Предвестники Архитектора"
+ PLANET_KILLER_MJARCHITECT_VEIL_WEAPON_ACTION:"Разорвать Завесу"
+ FLEETORDER_DESTROY_PLANET_WITH_PLANET_KILLER_MJARCHITECT_VEIL_WEAPON:"Подготовка к разрыву Завесы на планете $PLANET|Y$"
+ is_not_artificial_or_crisis:"§R$TRIGGER_FAIL$Цель не должна быть мегаструктурой или кризисной планетой§!"
+ MESSAGE_DESC_FOR_PLANET_KILLER_MJARCHITECT_VEIL_WEAPON:"был(а/о) разорван(а/о) на части"
+
+ # Megastructures
+ mjarchitect_celestial_beacon_ruined:"Разрушенный Маяк"
+ mjarchitect_celestial_beacon_ruined_DESC:"Маяк некоего типа, полностью пришедший в негодность. Теоретически может быть восстановлен до рабочего состояния."
+ mjarchitect_celestial_beacon_ruined_MEGASTRUCTURE_DETAILS: "$mjarchitect_celestial_beacon_ruined_DESC$"
+ 
+ mjarchitect_celestial_beacon:"Маяк Завесы"
+ mjarchitect_celestial_beacon_DESC:"Гигантская структура, разрывающая крохотный разлом в пограничное измерение, известное как Завеса. Неизвестные энергии и силы просачиваются в эту звездную систему, распространяясь на соседние звездные системы."
+ mjarchitect_celestial_beacon_MEGASTRUCTURE_DETAILS:"§Y$mjarchitect_celestial_beacon$§! повышает §YУдовлетворенность§! Архитектора £mjarchitect_satisfaction£ и наделяет некоторые поселения в радиусе действия чертой §YОкутанные Завесой§!, а также предоставляет единовременное количество £mjarchitect_cognitive_matter£ §Y$mjarchitect_cognitive_matter$§!."
+ mjarchitect_requires_no_existing_beacon:"$TRIGGER_FAIL$ В системе уже не должно быть §Y$mjarchitect_celestial_beacon$§!"
+
+ mjarchitect_great_host_ruined:"Великое Воинство: Разрушено"
+ mjarchitect_great_host_ruined_DESC:"$mjarchitect_great_host_DESC$\n\nВ настоящее время находится в негодности. Похоже, оно непригодно для использования."
+ mjarchitect_great_host_ruined_MEGASTRUCTURE_DETAILS: "$mjarchitect_great_host_ruined_DESC$"
+ 
+ mjarchitect_great_host:"Великое Воинство"
+ mjarchitect_great_host_DESC:"Древняя структура, построенная неизвестной расой, которая, как считается, однажды изгнала запредельное существо, известное как Архитектор Гибели."
+ mjarchitect_great_host_MEGASTRUCTURE_DETAILS: "$mjarchitect_great_host_DESC$"
+
+ mjarchitect_piercer:"Пространственный Перколятор"
+ mjarchitect_piercer_DESC: "$mjarchitect_piercer_MEGASTRUCTURE_DETAILS$"
+ mjarchitect_piercer_MEGASTRUCTURE_DETAILS:"§Y$mjarchitect_piercer$§! — это мобильная структура, способная действовать как §YМаяк Завесы§!, создавая Миазмы в течение §Y20 лет§!. В процессе она будет §Rуничтожена§!."
+ requires_colony:"$TRIGGER_FAIL$ Должно быть построено вокруг вашей колонии"
+ mjarchitect_pierce_ship_button:"§HРазорвать Завесу§!"
+ mjarchitect_piercer_action_activity_key:"Прорыв Завесы"
+ mjarchitect_piercer_context_menu_title:"§MПрорыв Завесы§!"
+ mjarchitect_piercer_action_progress_activity_key:"§H$mjarchitect_piercer_action_activity_key$§!: §Y$PROGRESS$%§!"
+
+ # Decisions
+ decision_mjarchitect_sacrifice:"Приношение Архитектору"
+ decision_mjarchitect_sacrifice_desc:"Архитектор Разрушения питается познанием разумных существ, но большое, коллективное жертвоприношение обеспечит его огромным запасом когнитивной материи на время. Наш народ готов сделать то, что необходимо для высшего блага."
+ decision_mjarchitect_sacrifice_req:"$TRIGGER_FAIL$ Необходимо иметь как минимум §Y500§! £pop£ единиц населения"
+ decision_mjarchitect_sacrifice_tt_base:"§H[This.GetName]§!:\n - §Y10%§! от £pop£ единиц населения уничтожено"
+ decision_mjarchitect_sacrifice_tt_initial:"$decision_mjarchitect_sacrifice_tt_base$\n - Получает модификатор §YНедавние Жертвоприношения§!\n§LМожет быть принято последовательно для усиления эффектов§!"
+ decision_mjarchitect_sacrifice_tt_successive:"$decision_mjarchitect_sacrifice_tt_base$\n - Модификатор §YНедавние Жертвоприношения§! ухудшается, сбрасывая длительность и добавляя §Y1 год§!\n§LЭто решение может быть принято последовательно для усиления эффектов§!"
+
+ decision_mjarchitect_veil_world:"Метка Разрушения"
+ decision_mjarchitect_veil_world_desc:"Этот мир будет отмечен для поглощения Архитектором Разрушения, превращаясь во что-то неузнаваемое. Те, кто останется, будут поглощены эфирными энергиями Завесы."
+ decision_mjarchitect_veil_world_tt:"§H[This.GetName]§!:\n - Превращается в §MМир Завесы§!\n - §Y50%§! от £pop£ единиц населения получают признак §YЗавесный§!"
+
+ # Situations
+ mjarchitect_summon_architect_crisis_empire_type: "$mjarchitect_summon_architect_crisis_empire$"
+ mjarchitect_summon_architect_crisis_empire:"§MВестник Разрушения§!"
+ mjarchitect_summon_architect_crisis_empire_desc:"Мы стоим на краю нового мира. Завеса ослаблена, и теперь осталось лишь завершить последнее задание.\n\n§MАрхитектор Разрушения§! скоро появится из Великого Обиталища. §GНаконец-то он дарует нам вечную мощь.§!"
+ mjarchitect_summon_architect_crisis_empire_approach:"Последнее Воздействие"
+ mjarchitect_summon_architect_crisis_empire_approach_tt:"Получение £mjarchitect_cognitive_matter£ §YКогнитивной Материи§! значительно ускорит наш прогресс."
+ mjarchitect_summon_architect_crisis_empire_approach_desc:"Архитектор снова и снова пытался получить контроль над целой реальностью, но всегда был остановлен. На этот раз его уже не остановить."
+ mjarchitect_stockpiled_matter_tt:"Ежемесячное воздействие £mjarchitect_cognitive_matter£ Когнитивной Материи"
+ mjarchitect_summon_architect_crisis_empire_monthly_change_tooltip:"Получение £mjarchitect_cognitive_matter£ §YКогнитивной Материи§! любыми средствами ускорит наш прогресс."
+ mjarchitect_summon_architect_outcome:"§MАрхитектор Разрушения§! пробудится, даруя нам власть над галактикой."
+ mjarchitect_summon_architect_stage_2:"§YПространственная Миазма§! будет случайно появляться по всей галактике"
+ mjarchitect_summon_architect_stage_3:"Системы, затронутые §YПространственной Миазмой§!, станут §Rнедоступными§!"
+
+ mjarchitect_summon_architect_default_type: "$mjarchitect_summon_architect_default$"
+ mjarchitect_summon_architect_default:"§RВестник Разрушения§!"
+ mjarchitect_summon_architect_default_desc:"Империя [mjarchitect_crisis_empire.GetName] стремится уничтожить эту галактику, призвав древнюю, потустороннюю сущность, которую они называют §MАрхитектором Разрушения§!.\n\n§RЕсли их не остановить, вся жизнь в галактике будет поглощена Архитектором.§!"
+ mjarchitect_summon_architect_default_approach: "$mjarchitect_summon_architect_crisis_empire_approach$"
+ mjarchitect_summon_architect_default_approach_tt:"Империя [mjarchitect_crisis_empire.GetName] продвигается, получая £mjarchitect_cognitive_matter£ §YКогнитивную Материю§!."
+ mjarchitect_summon_architect_default_approach_desc:"Архитектор снова и снова пытался получить контроль над целой реальностью. Мы не отступим от наших попыток, и империя [mjarchitect_crisis_empire.GetName] падет вместе с ним."
+ mjarchitect_summon_architect_default_monthly_change_tooltip: "$mjarchitect_summon_architect_default_approach_tt$"
+ mjarchitect_summon_architect_outcome_default:"§MАрхитектор Разрушения§! пробудится, уничтожив галактику."
+ 
+ mjarchitect_locate_great_host_type: "$mjarchitect_locate_great_host$"
+ mjarchitect_locate_great_host:"Обнаружение Великого Обиталища"
+ mjarchitect_locate_great_host_desc:"Теперь нам известно о древней, загадочной структуре, которая, как считается, использовалась для открытия разлома в Завесу, изгоняя потустороннего Архитектора навечно.\n\nЕсли мы действительно хотим осуществить желаемые перемены, мы должны найти это §HВеликое Обиталище§!."
+ mjarchitect_locate_great_host_approach_default:"Пассивный поиск"
+ mjarchitect_locate_great_host_approach_default_desc:"Мы будем искать в звёздных системах любые энергетические сигнатуры, напоминающие таковые у Великого Обиталища."
+ mjarchitect_locate_great_host_approach_devote_research:"Выделить исследователей"
+ mjarchitect_locate_great_host_approach_devote_research_desc:"Направив значительную часть нашего исследовательского сектора на выявление любых следов Великого Обиталища, мы улучшим наш прогресс."
+ mjarchitect_locate_great_host_approach_augurs:"Обратиться к Авгурам"
+ mjarchitect_locate_great_host_approach_augurs_desc:"Авгуры Архитектора хранят множество секретов, неизвестных даже нам. Если мы сможем договориться, возможно, они прислушаются."
+ mjarchitect_locate_great_host_monthly_change_tooltip:"Со временем мы будем продвигаться в обнаружении координат Великого Обиталища."
+ mjarchitect_locate_great_host_outcome:"Мы обнаружим звёздную систему §HВеликого Обиталища§!."
+ mjarchitect_locate_great_host_approach_default_tt:"Мы будем ждать прогресса."
+ 
+ mjarchitect_repair_great_host_type: "$mjarchitect_repair_great_host$"
+ mjarchitect_repair_great_host:"Восстановление Великого Обиталища"
+ mjarchitect_repair_great_host_desc:"Чтобы позволить Архитектору Разрушения пересечь Завесу и войти в нашу реальность, мы должны восстановить Великое Обиталище и открыть вихрь в Завесу. Этот процесс требует глубокого изучения внутренней структуры."
+ mjarchitect_repair_great_host_approach_default:"Базовый ремонт"
+ mjarchitect_repair_great_host_approach_default_desc:"Мы будем постепенно восстанавливать Хост, используя имеющийся в нашем распоряжении персонал."
+ mjarchitect_repair_great_host_approach_redirect_resources:"Перенаправить ресурсы"
+ mjarchitect_repair_great_host_approach_redirect_resources_desc:"В различных секторах нашей империи сейчас ведется множество строек; временное отвлечение небольшого количества их ресурсов для этой операции поможет нашему прогрессу."
+ mjarchitect_repair_great_host_approach_focus_construction:"Приоритет строительства"
+ mjarchitect_repair_great_host_approach_focus_construction_desc:"Все остальные действия, требующие персонала и финансирования, не так важны, как Архитектор Разрушения. Они подождут своей очереди."
+ mjarchitect_repair_great_host_monthly_change_tooltip:"Со временем мы будем продвигаться к восстановлению Великого Хоста."
+ mjarchitect_repair_great_host_outcome:"Мы отремонтируем и пробудим §HВеликого Хоста§!."
+
+ MJARCHITECT_INITIAL_PROJECT:"Голос из-за Завесы"
+ MJARCHITECT_INITIAL_PROJECT_DESC:"Долгое время ходили слухи о некоем голосе, таящемся в недавно обнаруженном измерении, названном §YЗавесой§!. Изначально их можно было считать обычными сплетнями, но теперь это не так.\n\nМы должны раскрыть правду о Завесе."
+
+ MJARCHITECT_USURPING_THE_ARCHITECT:"Узурпация Архитектора"
+ MJARCHITECT_USURPING_THE_ARCHITECT_DESC:"Мы ищем силы, но не конца всей жизни. Подобная глупость непростительна.\n\nАрхитектор, несмотря на свою мощь и способности, уже был сдерживаем ранее, и может быть сдержан снова. Завеса не подходит для такой задачи, но исследование Великого Хоста должно помочь нам в попытках сдерживания."
+ 
+ # Species Rights
+ purge_mjarchitect_sacrifice:"Небесное жертвоприношение"
+ purge_mjarchitect_sacrifice_tooltip:"Затронутые поселения приносятся в жертву в виде разумов, отданных Архитектору Разрушения, что обеспечивает £mjarchitect_cognitive_matter£ §HКогнитивной Материи§!."
+ purge_mjarchitect_sacrifice_tooltip_delayed:"§LАрхитектор Разрушения не заботится о мелочах тех, кого он населяет и поглощает. Только общая картина важна для нашего успеха, даже если несколько видов будут уничтожены.§!"
+ 
+ # Wargoals + CBs
+ war_goal_wg_mjarchitect_harvest:"Жатва"
+ war_goal_wg_mjarchitect_harvest_desc:"Объявлена §Yтотальная война§!, чтобы опустошить эту цивилизацию во имя §MАрхитектора Разрушения§!. Их население станет разумами, которыми Архитектор будет питаться.\n\nАрхитектор ищет разумы, чтобы обрести силу в нашей реальности. Мы принесем его присутствие всем — силой, если понадобится."
+ 
+ war_goal_wg_mjarchitect_subjugate:"Порабощение"
+ war_goal_wg_mjarchitect_subjugate_desc:"Ведется война, чтобы привести другие цивилизации в наши ряды в качестве наших §YРабов Пустоты§!, отдающих свои разумы великому §MАрхитектору Разрушения§!.\n\nАрхитектор ищет разумы, чтобы обрести силу в нашей реальности. Мы принесем его присутствие всем — силой, если понадобится."
+ 
+ casus_belli_cb_mjarchitect_architects_will:"Воля Архитектора"
+ 
+ # Trades
+ trade_action_mjarchitect_pop_offering:"Запросить подношение"
+ trade_action_mjarchitect_pop_offering_desc:"Архитектор ищет разумы. Все в галактике узнают о его величии."
+ trade_action_mjarchitect_pop_offering_tt:"§H[From.GetName]:§! жертвует §Y10%§! от £pop£ поселений\n§H[Root.GetName]:§! получает Архитектора £mjarchitect_satisfaction£ §YУдовлетворения§! и £mjarchitect_cognitive_matter£ §YКогнитивной Материи§! за каждые §Y100§! £pop£ поселений, принесенных в жертву другой империей."
+
+ # Relics
+ r_mjarchitect_microcosm:"Микрокосм Завесы"
+ r_mjarchitect_microcosm_desc:"Надежно изолированная область космоса, заключенная в мистическом устройстве. Измерение, известное как Завеса, является домом Архитектора Разрушения, и так будет всегда."
+ r_mjarchitect_microcosm_tt:"Получите подборку мощных благословений, дарованных §YАрхитектором Разрушения§!."
+
+## Become the Crisis UI
+ # Resource
+ mjarchitect_cognitive_matter:"Когнитивная Материя"
+ mjarchitect_cognitive_matter_desc:"Когнитивная Материя — это мера коллективных разумов, пожертвованных нашему покровителю, Архитектору Разрушения."
+ mjarchitect_cognitive_matter_current_value:"Текущее значение: §Y$VALUE|0$§!"
+ mjarchitect_cognitive_matter_gaining:"Выполняйте §HЦели Кризиса§!, чтобы получить больше £mjarchitect_cognitive_matter£ §Y$mjarchitect_cognitive_matter$§!."
+
+ # UI Elements
+ mjarchitect_cognitive_matter_crisis_objective:"Цели Кризиса"
+ mjarchitect_cognitive_matter_crisis_objective_gained:"Получено Когнитивной Материи"
+ mjarchitect_cognitive_matter_name:"Когнитивная Материя:"
+ mjarchitect_cognitive_matter_value:"£mjarchitect_cognitive_matter£ $VAL|0$"
+
+ # Crisis Levels
+ mjarchitect_cognitive_matter_crisis_level_locked:"Требуется для разблокировки этого уровня:\n"
+ mjarchitect_cognitive_matter_crisis_level_unlocked:"На уровне $LEVEL$ вы получаете награды:\n"
+ mjarchitect_cognitive_matter_crisis_level_unlock:"Имеет £mjarchitect_cognitive_matter£ §Y$CURRENCY$§! Когнитивной Материи"
+ mjarchitect_cognitive_matter_crisis_level_desc:"Чтобы продвигаться по уровням Кризиса, накапливайте Когнитивную Материю и завершайте специальные проекты «Развитие Кризиса» в журнале событий"
+ 
+ crisis_mjarchitect_level_1:"§MПослушник§!"
+ crisis_mjarchitect_level_2:"§MЭрудит§!"
+ crisis_mjarchitect_level_3:"§MВсемогущий§!"
+ crisis_mjarchitect_level_4:"§MНебесный§!"
+ crisis_mjarchitect_level_5:"§MВознесшийся§!"
+
+ crisis_mjarchitect_level_1_desc:"Уровень кризиса 1"
+ crisis_mjarchitect_level_2_desc:"Уровень кризиса 2"
+ crisis_mjarchitect_level_3_desc:"Уровень кризиса 3"
+ crisis_mjarchitect_level_4_desc:"Уровень кризиса 4"
+ crisis_mjarchitect_level_5_desc:"Уровень кризиса 5"
+
+ crisis_mjarchitect_level_1_req_clear_tt:"£trigger_yes£ Завершен §Hспецпроект§! §Y«Установление пакта»§!"
+ crisis_mjarchitect_level_1_req_tt:"£trigger_no£ Не завершен §Hспецпроект§! §Y«Установление пакта»§!"
+ crisis_mjarchitect_level_2_req_clear_tt:"£trigger_yes£ Обнаружена §Hмегаструктура§! §Y«Великое Воинство»§!"
+ crisis_mjarchitect_level_2_req_tt:"£trigger_no£ Не обнаружена §Hмегаструктура§! §Y«Великое Воинство»§!"
+ crisis_mjarchitect_level_3_req_clear_tt:"£trigger_yes£ Завершена §Hцепочка событий§! §Y«Происхождение Архитектора»§!"
+ crisis_mjarchitect_level_3_req_tt:"£trigger_no£ Не завершена §Hцепочка событий§! §Y«Происхождение Архитектора»§!"
+ crisis_mjarchitect_level_4_req_clear_tt:"£trigger_yes£ Отремонтирована §Hмегаструктура§! §Y«Великое Воинство»§!"
+ crisis_mjarchitect_level_4_req_tt:"£trigger_no£ Не отремонтирована §Hмегаструктура§! §Y«Великое Воинство»§!"
+ crisis_mjarchitect_level_5_req_clear_tt:"£trigger_yes£ §MПробудило Великое Воинство§!"
+ crisis_mjarchitect_level_5_req_tt:"£trigger_no£ §MНе пробудило Великое Воинство§!"
+ crisis_mjarchitect_level_5_one_crisis_only:"£trigger_no£ §RДругая империя уже выбрана Архитектором§!"
+
+ # Objectives
+ mjarchitect_crisobj_conduit_jobs_name:"Занять должности §HПроводника Разрушения§!"
+ mjarchitect_crisobj_conduit_pops_name:"Иметь население с признаком §HПокров§!"
+ mjarchitect_crisobj_have_shroudthralls_name:"Удерживать субъектов §HПустотного Раба§!"
+ mjarchitect_crisobj_shroud_purge_name:"Использовать зачистку §HНебесная Жертва§!"
+ mjarchitect_crisobj_sacrifice_pops_name:"Принести население в жертву Архитектору"
+ mjarchitect_crisobj_offering_name:"Взимать подношения с империй"
+ mjarchitect_crisobj_markofruin_name:"Отметить миры для поглощения"
+ mjarchitect_crisobj_beacons_name:"Генерировать §HИзмеренческую Миазму§!"
+
+ mjarchitect_crisobj_conduit_jobs_desc:"$job_mjarchitect_conduit_desc$\n\nПостройте здания §YЭфирный Костер§! и §YСвятилище Покрова§! для создания должностей §YПроводника Разрушения§! и получения $mjarchitect_cognitive_matter$."
+ mjarchitect_crisobj_conduit_pops_desc:"$trait_mjarchitect_conduit_of_ruin_desc$ Тем не менее, их присутствие дарует Архитектору растущую силу.\n\nИмейте население с признаком §YПокров§!, применяя решение §YМетка Разрушения§! и выполняя определенные требования §YАрхитектора Разрушения§!, чтобы получить $mjarchitect_cognitive_matter$."
+ mjarchitect_crisobj_have_shroudthralls_desc:"Одних наших усилий недостаточно, чтобы преобразить эту галактику. Мы распространим владения Архитектора на государства-клиенты, которые будут жертвовать своих подданных.\n\nУдерживайте субъектов §YПустотного Раба§!, чтобы получить эту §Yежегодную§! награду в виде $mjarchitect_cognitive_matter$."
+ mjarchitect_crisobj_shroud_purge_desc:"В то время как когнитивная материя живых разумных может быть постепенно собрана, смерть множества разумных также позволит накопить довольно большое количество такой материи.\n\nЗачищайте население с помощью §YНебесной Жертвы§!, чтобы получить эту награду в виде $mjarchitect_cognitive_matter$ за каждые $pop_group_unit$ единиц зачищенного населения."
+ mjarchitect_crisobj_sacrifice_pops_desc:"$decision_mjarchitect_sacrifice_desc$\n\nИспользуйте решение или указ §YПодношение Архитектору§!, чтобы получить эту награду в виде $mjarchitect_cognitive_matter$ за каждые $pop_group_unit$ единиц принесенного в жертву населения."
+ mjarchitect_crisobj_offering_desc:"Мы ограничены в количестве разумных существ внутри наших границ; переговоры позволяют относительно легко получать умы для использования.\n\nИспользуйте торговое действие §YЗапрос Подношения Населения§!, чтобы получить эту награду в виде $mjarchitect_cognitive_matter$ за каждые $pop_group_unit$ единиц принесенного в жертву населения."
+ mjarchitect_crisobj_markofruin_desc:"Миры этой галактики будут отмечены Архитектором Разрушения для поглощения, превращаясь во что-то неузнаваемое. Те, кто останется, будут поглощены эфирными энергиями Покрова.\n\nИспользуйте решение §YМетка Разрушения§! на любом мире, чтобы получить эту награду в виде $mjarchitect_cognitive_matter$."
+ mjarchitect_crisobj_beacons_desc:"Покров — это измерение между реальностями; дом Архитектора. Строительство структур, ослабляющих границу между измерениями, является нашим приоритетом номер один.\n\nПостройте и активируйте мегаструктуры §YМаяк Покрова§! и §YИзмеренческий Перколятор§!, чтобы получить эту награду в виде $mjarchitect_cognitive_matter$."
+
+ mjarchitect_cognitive_matter_crisis_objective_progress:"Мы получили £mjarchitect_cognitive_matter£ $AMOUNT$ от этой Цели кризиса."
+ mjarchitect_cognitive_matter_crisis_objective_reward: "$REWARD$"
+
+ # Summary
+ mjarchitect_cognitive_matter_crisis_description_title:"Вестник Судеб"
+ mjarchitect_cognitive_matter_crisis_description:"$menace_crisis_description_intro$\n\nАрхитектор Разрушения обещает невообразимый контроль и богатство по взаимовыгодному соглашению. Чтобы выполнить нашу часть сделки, мы должны просто позволить ему проникнуть в эту реальность. Только у нас есть мудрость и стойкость, чтобы исполнить желания судьбы."
+
+ mjarchitect_cognitive_matter_crisis_howto_title:"Усилить Архитектора"
+ mjarchitect_cognitive_matter_crisis_howto:"Достижение §YЦелей кризиса§! генерирует £mjarchitect_cognitive_matter£ §M$mjarchitect_cognitive_matter$§!, усиливая Архитектора и позволяя нам обрести великую мощь. Чтобы обеспечить это, мы должны поддерживать £mjarchitect_satisfaction£ §MУдовлетворенность§! Архитектора, дабы предотвратить его гнев, обращенный против нас."
+
+ # Crisis Perks
+ mjarchitect_crisis_perk_1:"Голос из-за Завесы"
+ mjarchitect_crisis_perk_1_tt:"- Открывает контакт с §YАрхитектором Разрушения§!, который может предлагать дары и запросы, предоставляющие модификаторы и подарки.\n"
+ mjarchitect_crisis_perk_1_desc: "$mjarchitect_ap_architectofruin_desc$"
+
+ mjarchitect_crisis_perk_2:"Проводники Разрушения"
+ mjarchitect_crisis_perk_2_tt:"- Открывает постройки £building£ §YЭфирный Костер§! и £building£ §YСвятилище Завесы§!, создающие должности £job_mjarchitect_conduit£ §YПроводник Разрушения§!, производящие £mjarchitect_cognitive_matter£ §YКогнитивную Материю§!.\n- Открывает решение §YЖертвоприношение Архитектору§!, убивающее £pop£ поселений в обмен на £mjarchitect_cognitive_matter£ §YКогнитивную Материю§! и £mjarchitect_satisfaction£ §YУдовлетворение§! Архитектора.\n"
+ mjarchitect_crisis_perk_2_desc:"$job_mjarchitect_conduit_desc$ Они изымают часть познания населения для поддержания потустороннего существа."
+
+ mjarchitect_crisis_perk_3:"Авгуры Архитектора"
+ mjarchitect_crisis_perk_3_tt:"- Образуется фракция §YАвгуры Архитектора§!.\n- Высокое одобрение фракции улучшает производство £mjarchitect_cognitive_matter£ §YКогнитивной Материи§! и £mjarchitect_satisfaction£ §YУдовлетворение§! Архитектора.\n"
+ mjarchitect_crisis_perk_3_desc:"Авгуры — загадочная кабала, желающая нашего полного подчинения Архитектору Разрушения. Неизвестно, находятся ли они лично в контакте с Архитектором, но тем не менее в наших интересах умиротворить эту фракцию."
+
+ mjarchitect_crisis_perk_4:"Коллективное Жертвоприношение"
+ mjarchitect_crisis_perk_4_tt:"- Может использовать тип зачистки §YНебесное Жертвоприношение§!.\n"
+ mjarchitect_crisis_perk_4_desc: "$decision_mjarchitect_sacrifice_desc$"
+
+ mjarchitect_crisis_perk_5:"Вселенские Гекатомбы"
+ mjarchitect_crisis_perk_5_tt: ""
+ mjarchitect_crisis_perk_5_desc: ""
+
+ mjarchitect_crisis_perk_6:"Небесные Маяки"
+ mjarchitect_crisis_perk_6_tt:"- Открывает мегасооружение §YМаяк Завесы§!, увеличивающее £mjarchitect_satisfaction£ §YУдовлетворение§! Архитектора и создающее §YПространственную Миазму§!.\n"
+ mjarchitect_crisis_perk_6_desc:"Колоссальное сооружение, разрывающее крошечный разлом в пограничное измерение, известное как Завеса. Неизвестные энергии и силы просачиваются из маяка, распространяясь на соседние звездные системы."
+
+ mjarchitect_crisis_perk_7:"Углубленная Преданность"
+ mjarchitect_crisis_perk_7_tt:"- Открывает базовые §YБлагословения Архитектора§!, которые предоставляют постоянные модификаторы и уникальные открытия.\n"
+ mjarchitect_crisis_perk_7_desc:"Архитектор Разрушения признает наши усилия и вознаградил нас своими благословениями. Эти силы поглощают Когнитивную Материю, но дают большую мощь."
+
+ mjarchitect_crisis_perk_8:"Вырезано в Коре"
+ mjarchitect_crisis_perk_8_tt:"- Открывает решение §YМетка Разрушения§!, увеличивающее £mjarchitect_satisfaction£ §YУдовлетворение§! Архитектора, дающее 50% £pop£ поселений на планете признак §YСокрытый§! и превращающее мир в §YСокрытый Мир§!.\n"
+ mjarchitect_crisis_perk_8_desc: "$decision_mjarchitect_veil_world_desc$"
+
+ mjarchitect_crisis_perk_9:"Расширение Домена"
+ mjarchitect_crisis_perk_9_tt:"- Открывает повод для войны §YВоля Архитектора§!, позволяющий использовать военную цель §YЖатва§! в §HТотальной Войне§! и военную цель §YПорабощение§!.\n- Открывает тип вассала §YРаб Пустоты§!, позволяющий приносить в жертву £pop£ поселений от вассалов за £mjarchitect_cognitive_matter£ §YКогнитивную Материю§! и £mjarchitect_satisfaction£ §YУдовлетворение§! Архитектора.\n"
+ mjarchitect_crisis_perk_9_desc:"Архитектор голоден. Он больше не может насытиться только нашими разумами. Скоро вся галактика встанет на колени."
+
+ mjarchitect_crisis_perk_10:"Галактическая Целостность"
+ mjarchitect_crisis_perk_10_tt:"- Открывает торговые действия §YЗапрос Жертвоприношения Населения§!, позволяющие получать больше £pop£ поселений, которые можно принести в жертву за £mjarchitect_cognitive_matter£ §YКогнитивную Материю§! и £mjarchitect_satisfaction£ §YУдовлетворение§! Архитектора.\n"
+ # - Unlocks the §YWhispers of Ruin§! espionage operation, spreading the §YAugurs of the Architect§! faction to other empires and giving their £pop£ Pops the §YVeiled§! trait.
+ mjarchitect_crisis_perk_10_desc:"Наших усилий может быть недостаточно, чтобы преобразить эту галактику. Нам нужны союзники, и мы можем найти их среди Авгуров."
+
+ mjarchitect_crisis_perk_11:"Великие Амбиции"
+ mjarchitect_crisis_perk_11_tt:"- $country_subject_acceptance_add$: §G+30§!\n- $country_war_exhaustion_mult$: §G-50%§!\n"
+ mjarchitect_crisis_perk_11_desc:"Чтобы завершить наши задачи, нам нужно, чтобы остальная часть галактики последовала нашему примеру, даже если это будет силой."
+
+ mjarchitect_crisis_perk_12:"Ненасытное Существо"
+ mjarchitect_crisis_perk_12_tt:"- Архитектор Разрушения будет предлагать более сложные требования, но и более великие награды.\n- Открывает более сильные и дорогостоящие §YБлагословения Архитектора§!.\n"
+ mjarchitect_crisis_perk_12_desc:"Наши цели и задачи расширились, поскольку Архитектору требуется все больше разумов. Его мощь невообразима. Нам нужно лишь следовать указаниям, и Архитектор Разрушения счел нужным предоставить нам инструменты, необходимые для исполнения его воли."
+
+ mjarchitect_crisis_perk_13:"Пространственные Пронзатели"
+ mjarchitect_crisis_perk_13_tt:"- Открывает мегасооружение §YПространственный Перколятор§!, мобильный корабль, который при активации может временно создавать §YПространственную Миазму§!, уничтожая себя в процессе.\n"
+ mjarchitect_crisis_perk_13_desc:"Наши Маяки Завесы мощны, но неподвижны. Используя их чистую мощь, мы можем создавать мобильные машины, которые могут пронзать Завесу, чтобы создавать великую миазму, распространяя влияние Архитектора."
+
+ mjarchitect_crisis_perk_14:"Единение Под Архитектором"
+ mjarchitect_crisis_perk_14_tt:"- $country_unity_produces_mult$: §G+50%§!\n- $planet_jobs_mjarchitect_cognitive_matter_produces_mult$: §G+50%§!\n- $pop_happiness$: §G+20%§!\n"
+ mjarchitect_crisis_perk_14_desc:"Мы — единый народ под руководством Архитектора Разрушения. Он приведет нас к власти, процветанию и победе. До тех пор, пока мы будем слушать."
+
+ mjarchitect_crisis_perk_15:"Вестник Разрушения"
+ mjarchitect_crisis_perk_15_tt:"- Запускает ситуацию §YВестник Разрушения§! для всех империй, позволяя галактике отслеживать ваш прогресс в призыве Архитектора Разрушения.\n- Выходите из всех Оборонительных Пактов, Федераций и Галактического Сообщества.\n"
+ mjarchitect_crisis_perk_15_desc:"Мы — вестники Великого Собрания, завершающего ритуала, который, наконец, приведет потустороннее существо, которому мы служим, в нашу реальность. Для всей галактики восходит новая заря."
+
+ mjarchitect_crisis_perk_16:"Великое Воинство"
+ mjarchitect_crisis_perk_16_tt:"- Пробуждает мегасооружение §YВеликое Воинство§!.\n- Получение £mjarchitect_cognitive_matter£ §Yкогнитивной материи§! ускорит его строительство.\n"
+ mjarchitect_crisis_perk_16_desc: "$mjarchitect_great_host_DESC$"
+
+ mjarchitect_crisis_perk_17:"Покров Сорван"
+ mjarchitect_crisis_perk_17_tt:"- Запускает событие §YПрорыв Покрова§!, позволяя вам выбрать финал Кризиса, к которому вы будете стремиться.\n"
+ mjarchitect_crisis_perk_17_desc:"Поскольку всемогущий Архитектор приступает к своей последней цели, мы должны решить, какова наша миссия. Вот оно... пути назад нет."
+
+ mjarchitect_crisis_perk_18:"Вечный Проводник"
+ mjarchitect_crisis_perk_18_tt:"- $ship_evasion_mult$: §G+40%§!\n- $ship_speed_mult$: §G+25%§!\n$ship_home_territory_fire_rate_mult$: §G+25%§!\n"
+ mjarchitect_crisis_perk_18_desc:"Многие сочтут уместным растратить наши цели и видение галактики. Когда враги у наших ворот, мы не можем позволить себе сдаться."
+
+## Architect Interface UI
+ # UI Elements
+ MJARCHITECT_NAME: "$mjarchitect_title$"
+ mjarchitect_title:"Архитектор Разрушения"
+ mjarchitect_blessings_title:"Благословения Архитектора"
+ mjarchitect_request_title:"Текущий Запрос"
+ mjarchitect_boon_title:"Текущее Благословение"
+ mjarchitect_ui.1.title:"§Y[from.mjarchitect_satisfaction_display]§!"
+ mjarchitect_ui.1.desc: ""
+
+ mjarchitect_ui.2.title: "$mjarchitect_title$"
+ mjarchitect_ui.2.desc:"§LСлышны лишь тихие, эфирные шепоты, прерываемые случайными криками, эхо которых длится минутами. То, на что мы смотрим, невозможно идентифицировать. Наши разумы горят.\n\nАрхитектор Разрушения велел нам уйти, хотя не произнес ни единого слова. Он не хочет, чтобы мы здесь находились. У него есть дела.\n\nЧто бы это ни было, оно останется тайной.§!"
+ mjarchitect_ui.2.a:"Прервать передачу."
+
+ # Tooltips
+ mjarchitect_satisfaction_decay_title:"§HПадение Удовлетворения§!\n£mjarchitect_satisfaction£ §YУдовлетворение§! пассивно уменьшается на значение £mjarchitect_satisfaction_decay£ §YПадения Удовлетворения§! каждый месяц."
+ mjarchitect_satisfaction_decay_desc:"§LПадение удовлетворения в основном статично и не может быть изменено, но его необходимо компенсировать, выполняя Задачи Кризиса и другие действия для повышения Удовлетворения Архитектора Разрушения.§!"
+ MOD_MJARCHITECT_SATISFACTION_BAR_TOOLTIP:"§HУдовлетворение§!\nВ настоящее время Архитектор Разрушения имеет £mjarchitect_satisfaction£ §YУдовлетворение§! на уровне §H[from.mjarchitect_satisfaction_display]§!.\n\n$mjarchitect_satisfaction_desc$"
+
+ mjarchitect_satisfaction_title:"§HУдовлетворение§!\n£mjarchitect_satisfaction£ §YУдовлетворение§! может быть получено путем выполнения §YЗадач Кризиса§!, а также другими способами."
+ mjarchitect_satisfaction_desc:"§LУдовлетворение отражает степень довольства Архитектора Разрушения. Чем выше Удовлетворение, тем больше наград и благословений будет получено.§!"
+
+ MJARCHITECT_BOON_EMPOWER_TT:"Это текущее Благословение можно усилить за определенную плату, чтобы улучшить его эффекты."
+ MJARCHITECT_BOON_EMPOWER_REQ_ALREADY_DONE:"Это Благословение уже усилено."
+ MOD_MJARCHITECT_REQUEST_PROGRESS_BAR_TOOLTIP:"Это наш прогресс в выполнении текущего Запроса Архитектора."
+
+ # Blessings
+ MOD_MJARCHITECT_UNLOCK_BLESSING:"§GНажмите, чтобы принять это Благословение.§!"
+
+ MJARCHITECT_BLESSING_1_TT:"§HПринятие Авгуров§!\n§LПолитическая фракция, именующая себя Авгурами Архитектора, желает распространить поклонение нашему покровителю. Заключив сделку, мы оба получим выгоду.§!\n\n§EЭффекты:§!\n§YАвгуры Архитектора§! также производят £mjarchitect_cognitive_matter£ §Yкогнитивную материю§!\nПритяжение правительственных этик: §G+40%§!\n\n"
+ MJARCHITECT_BLESSING_1_REQ:"§EТребования:§!\n§YУровень 2§! $crisis_mjarchitect_level_2$ пути §YАрхитектора Разрушения§! (Стать Кризисом).\n\nСтоимость: £mjarchitect_cognitive_matter£ §Y200§!\n"
+
+ MJARCHITECT_BLESSING_2_TT:"§HКультурное Поглощение§!\n§LНаша культура и наш народ едины, и, допуская Архитектора в нашу культуру, мы станем ничем без него.§!\n\n§EЭффекты:§!\nЗа каждую принятую §Yкатегорию традиций§! +§G5%§! к ресурсам с должностей\n£unity£ Единство с должностей: §G+25%§!\n\n"
+ MJARCHITECT_BLESSING_2_REQ:"§EТребования:§!\n§YУровень 2§! $crisis_mjarchitect_level_2$ пути §YАрхитектора Разрушения§! (Стать Кризисом).\n\nСтоимость: £mjarchitect_cognitive_matter£ §Y400§!\n"
+
+ MJARCHITECT_BLESSING_3_TT:"§HРасширенное Познание§!\n§LАрхитектор Разрушения обещает лучших работников и большую силу. При условии нашей полной и безоговорочной покорности.§!\n\n§EЭффекты:§!\n£job_mjarchitect_conduit£ §YПроводники Разрушения§! теперь производят £influence£ §YВлияние§!\nПоселения с признаком §YСокрытый§! также имеют §G-25%§! содержания должностей\n\n"
+ MJARCHITECT_BLESSING_3_REQ:"§EТребования:§!\n§YУровень 2§! $crisis_mjarchitect_level_2$ пути §YАрхитектора Разрушения§! (Стать Кризисом).\n\nСтоимость: £mjarchitect_cognitive_matter£ §Y400§!\n"
+
+ MJARCHITECT_BLESSING_4_TT:"§HRазрыв Космоса§!\n§LПокров — лишь еще одна реальность, которую можно эксплуатировать. Не бойтесь, ибо неизвестное таит в себе великую силу.§!\n\n§EЭффекты:§!\nУдваивает радиус действия §YМаяка Покрова§!\nСкорость строительства мегасооружений: §G+33%§!\n\n"
+ MJARCHITECT_BLESSING_4_REQ:"§EТребования:§!\n§YУровень 2§! $crisis_mjarchitect_level_2$ пути §YАрхитектора Разрушения§! (Стать Кризисом).\n\nСтоимость: £mjarchitect_cognitive_matter£ §Y600§!\n"
+
+ MJARCHITECT_BLESSING_5_TT:"§HЗа Покровом§!\n§LЧтобы прорваться сквозь Покров, мы не должны дрогнуть в нашей миссии. Весь наш народ должен объединиться, чтобы достичь этого будущего, к которому мы все стремимся.§!\n\n§EЭффекты:§!\nПланетарная вместимость здания £building£ §YСвятилище Покрова§! увеличена на §G+2§!\nОткрывает специализацию района §YЗона Сбора Мозгов§!\n\n"
+ MJARCHITECT_BLESSING_5_REQ:"§EТребования:§!\n§YУровень 2§! $crisis_mjarchitect_level_2$ пути §YАрхитектора Разрушения§! (Стать Кризисом).\n\nСтоимость: £mjarchitect_cognitive_matter£ §Y200§!\n"
+
+ MJARCHITECT_BLESSING_6_TT:"§HГалактика Разрушения§!\n§LГалактика в целом может не принять Архитектора как своего законного лидера и правителя, но она научится это делать.§!\n\n§EЭффекты:§!\nПолучаете дополнительную опцию награды при успешном выполнении §YЗапроса§!\nСтоимость решения §YМетка Разрушения§! снижена до §G25§! £influence£ §YВлияния§!\n§YРабы Пустоты§! предоставляют на §G50%§! больше £pop£ населения для жертвоприношений\n\n"
+ MJARCHITECT_BLESSING_6_REQ:"§EТребования:§!\n§YУровень 2§! $crisis_mjarchitect_level_2$ пути §YАрхитектора Разрушения§! (Стать Кризисом).\n\nСтоимость: £mjarchitect_cognitive_matter£ §Y400§!\n"
+
+ MJARCHITECT_BLESSING_7_TT:"§HЗапретное Знание§!\n§LАрхитектор Разрушения обладает невообразимыми знаниями и способностями. Было бы глупо не использовать такие знания.§!\n\n§EЭффекты:§!\nПолучаете £mjarchitect_cognitive_matter£ §Yкогнитивную материю§! за каждую исследованную технологию\nСкорость исследований: §G+20%§!\nКоличество альтернатив исследований: §G+2§!\n\n"
+ MJARCHITECT_BLESSING_7_REQ:"§EТребования:§!\n§YУровень 4§! $crisis_mjarchitect_level_4$ пути §YАрхитектора Разрушения§! (Стать Кризисом).\n\nСтоимость: £mjarchitect_cognitive_matter£ §Y400§!\n"
+
+ MJARCHITECT_BLESSING_8_TT:"§HУсиленное Наступление§!\n§LНаша миссия не лишена противников. Доказав свою верность Архитектору, мы гарантируем, что дарованная им сила не будет потрачена впустую.§!\n\n§EЭффекты:§!\nКаждый выполненный §YЗапрос§! будет постоянно увеличивать скорострельность кораблей и ОЗ щитов на §G+5%§!\nВремя строительства кораблей: §G-45%§!\n\n"
+ MJARCHITECT_BLESSING_8_REQ:"§EТребования:§!\n§YУровень 4§! $crisis_mjarchitect_level_4$ пути §YАрхитектора Гибели§! Стать кризисом.\n\nСтоимость: £mjarchitect_cognitive_matter£ §Y700§!\n"
+
+ MJARCHITECT_BLESSING_9_TT:"§HВечная Преданность§!\n§LМы преданные подданные Архитектора Гибели, что бы ни случилось. Мы не дрогнем. Мы будем вознаграждены.§!\n\n§EЭффекты:§!\n§YБлагословения§! усиливают свои положительные модификаторы\nСтоимость строительства кораблей: §G-45%§!\n\n"
+ MJARCHITECT_BLESSING_9_REQ:"§EТребования:§!\n§YУровень 4§! $crisis_mjarchitect_level_4$ пути §YАрхитектора Гибели§! Стать кризисом.\n\nСтоимость: £mjarchitect_cognitive_matter£ §Y700§!\n"
+
+ MJARCHITECT_BLESSING_10_TT:"§HКлинки Архитектора§!\n§LНеоспоримо, что мы выполнили миссию на высочайшем уровне. Архитектор не может не признать этого.§!\n\n§EЭффекты:§!\n£mjarchitect_satisfaction_decay£ §YСнижение Удовлетворения§! Архитектора уменьшено на §G1.0§!\nПровал §YЗапроса§! больше не уменьшает £mjarchitect_satisfaction£ §YУдовлетворение§!\nСкорость роста населения: §G+33%§!\n\n"
+ MJARCHITECT_BLESSING_10_REQ:"§EТребования:§!\n§YУровень 4§! $crisis_mjarchitect_level_4$ пути §YАрхитектора Гибели§! Стать кризисом.\n\nСтоимость: £mjarchitect_cognitive_matter£ §Y1000§!\n"
+
+ # Requests
+ mjarchitect_request_none:"Текущих запросов нет."
+
+ mjarchitect_request_1a:"Сгенерировать и накопить §G2000§! £mjarchitect_cognitive_matter£"
+ mjarchitect_request_1b:"§YКогнитивной Материи§!, чтобы насытить голод"
+ mjarchitect_request_1c:"Архитектора Гибели."
+
+ mjarchitect_request_2a:"Поддерживать £mjarchitect_satisfaction£ §YУдовлетворение§! на уровне §G\"Доволен\"§! (§Y68§!) как"
+ mjarchitect_request_2b:"минимум, чтобы держать Архитектора Гибели под"
+ mjarchitect_request_2c:"контролем."
+
+ mjarchitect_request_3a:"Построить и сохранить §G2§! §YМаяка Завесы§!"
+ mjarchitect_request_3b:"чтобы распространить Завесу дальше."
+ mjarchitect_request_3c: ""
+
+ mjarchitect_request_4a:"Приобрести §G1§! §YПослушника Пустоты§! (зависимую империю), чтобы увеличить число"
+ mjarchitect_request_4b:"разумов, дарованных Архитектору Гибели."
+ mjarchitect_request_4c: ""
+
+ mjarchitect_request_5a:"Превратить §G4§! или более миров в §YЗавещанные Миры§!,"
+ mjarchitect_request_5b:"значительно расширяя влияние Завесы на"
+ mjarchitect_request_5c:"больше разумов."
+
+ mjarchitect_request_6a:"Принести в жертву не менее §G7500§! £pop£ §Yнаселения§! через решения,"
+ mjarchitect_request_6b:"зачисток, обменов и Рабов Пустоты, и обеспечьте его"
+ mjarchitect_request_6c:"пропитанием."
+
+ mjarchitect_request_7a:"Выиграть §Yвойну§! против любой империи как демонстрацию нашей"
+ mjarchitect_request_7b:"мощи и неукротимой силы Архитектора"
+ mjarchitect_request_7c:"Гибели."
+
+ mjarchitect_request_8a:"Принести в жертву §G2§! лидеров (не менее §Y3-го уровня§!), чтобы показать нашу"
+ mjarchitect_request_8b:"приверженность повиновению Архитектору Гибели."
+ mjarchitect_request_8c: ""
+
+ mjarchitect_request_9a:"Успешно распространить §YПредвестников Архитектора§! на"
+ mjarchitect_request_9b:"§G2§! другие империи, чтобы приобрести больше союзников под"
+ mjarchitect_request_9c:"Архитектора Гибели."
+
+ mjarchitect_request_10a:"Разблокировать §G2§! больше §YБлагословений Архитектора§!, чтобы обеспечить,"
+ mjarchitect_request_10b:"что мы активно получаем силу от нашего"
+ mjarchitect_request_10c:"взаимовыгодного соглашения."
+
+ mjarchitect_request_11a:"Исследовать не менее §G10§! §Yтехнологий§!, чтобы надлежащим образом использовать"
+ mjarchitect_request_11b:"наши новообретенные дары и силы от Архитектора"
+ mjarchitect_request_11c:"Гибели."
+
+ mjarchitect_request_12a:"Увеличьте производство £physics_research£ §Yфизических исследований§! в"
+ mjarchitect_request_12b:"месяц на §G+500§!, чтобы обеспечить прогресс в исследовании Завесы."
+ mjarchitect_request_12c: ""
+
+ mjarchitect_request_13a:"Контролировать не менее §G10§! новых §Yзвездных баз§! в звездных системах, чтобы"
+ mjarchitect_request_13b:"распространить наш контроль над галактикой, позволяя"
+ mjarchitect_request_13c:"Архитектору расти."
+
+ mjarchitect_request_14a:"Зачистите не менее §G5,000§! £pop£ §Yнаселения§!, чтобы даровать больше могущества"
+ mjarchitect_request_14b:"Архитектору Гибели."
+ mjarchitect_request_14c: ""
+
+ mjarchitect_request_15a:"Создайте не менее §G1,500§! новых £job_mjarchitect_conduit£ рабочих мест §YПроводника Гибели§!"
+ mjarchitect_request_15b:"чтобы позволить более полное использование разумов нашего населения."
+ mjarchitect_request_15c: ""
+
+ mjarchitect_request_16a:"Распространите признак §YЗавесы§! на §G5,000§! единиц населения, чтобы обеспечить"
+ mjarchitect_request_16b:"более сильный постоянный источник пропитания для"
+ mjarchitect_request_16c:"Архитектора Гибели."
+ 
+ mjarchitect_request_17a:"Произведите и накопите §G1000§! £mjarchitect_cognitive_matter£" # Lite version
+ mjarchitect_request_17b:"§YКогнитивной Материи§!, чтобы насытить голод"
+ mjarchitect_request_17c:"Архитектора Гибели."
+
+ mjarchitect_request_18a:"Постройте и сохраните §G1§! §YМаяк Завесы§!" # Lite version
+ mjarchitect_request_18b:"чтобы распространить Завесу дальше."
+ mjarchitect_request_18c: ""
+
+ mjarchitect_request_19a:"Преобразуйте §G2§! или более миров в §YМиры Завесы§!," # Lite version
+ mjarchitect_request_19b:"значительно расширяя влияние Завесы на"
+ mjarchitect_request_19c:"больше разумов."
+
+ mjarchitect_request_20a:"Принесите в жертву не менее §G3,000§! £pop£ §Yединиц населения§! посредством решений," # Lite version
+ mjarchitect_request_20b:"зачисток, обменов и Рабов Пустоты, и обеспечьте его"
+ mjarchitect_request_20c:"пропитанием."
+
+ mjarchitect_request_21a:"Изучите не менее §G5§! §Yтехнологий§!, чтобы должным образом использовать" # Lite version
+ mjarchitect_request_21b:"наши новообретенные дары и силы от Архитектора"
+ mjarchitect_request_21c:"Гибели."
+
+ mjarchitect_request_22a:"Увеличьте производство £physics_research£ §Yфизических исследований§! в" # Lite version
+ mjarchitect_request_22b:"месяц на §G+100§!, чтобы позволить продвижение в исследованиях Завесы."
+ mjarchitect_request_22c: ""
+
+ mjarchitect_request_23a:"Контролируйте не менее §G5§! новых §Yзвездных баз§! в звездных системах, чтобы" # Lite version
+ mjarchitect_request_23b:"распространить наш контроль над галактикой, позволяя"
+ mjarchitect_request_23c:"Архитектору расти."
+
+ mjarchitect_request_24a:"Зачистите не менее §G2,000§! £pop£ §Yнаселения§!, чтобы даровать больше могущества" # Lite version
+ mjarchitect_request_24b:"Архитектору Гибели."
+ mjarchitect_request_24c: ""
+
+ mjarchitect_request_25a:"Создайте не менее §G700§! новых £job_mjarchitect_conduit£ рабочих мест §YПроводника Гибели§!" # Lite version
+ mjarchitect_request_25b:"чтобы позволить более полное использование разумов нашего населения."
+ mjarchitect_request_25c: ""
+
+ mjarchitect_request_26a:"Распространите признак §YЗавесы§! на §G2,500§! единиц населения, чтобы обеспечить" # Lite version
+ mjarchitect_request_26b:"более сильный постоянный источник пропитания для"
+ mjarchitect_request_26c:"Архитектора Гибели."
+
+ # Boons
+ MJARCHITECT_BOONS_UI_TITLE:"Дары Архитектора"
+ MJARCHITECT_BOONS_UI_DESC:"§GНажмите, чтобы выбрать Дар§!"
+ mjarchitect_empower:"§HУсилить§!"
+ mjarchitect_ui.5.cancel:"Отмена"
+ MJARCHITECT_BOON_SLOT_TT:"§GНажмите, чтобы выбрать Дар для активации.§!"
+ mjarchitect_boon_penalty:"Ежемесячная £mjarchitect_cognitive_matter£ Когнитивная Материя: §R-25%§!"
+ MJARCHITECT_BOON_SATIS_REQ:"$TRIGGER_FAIL$ Должна быть достигнута веха §G«Удовлетворенность»§!"
+ 
+ mjarchitect_ui.5.a:"`£mjarchitect_boon_1£ §HЭфирные Перемещения§!`"
+ mjarchitect_boon_1a:"`Скорость кораблей: §G+35%§!`"
+ mjarchitect_boon_1b:"`Уклонение кораблей: §G+25%§!`"
+ mjarchitect_boon_1c: "$mjarchitect_boon_penalty$"
+#"£mjarchitect_cognitive_matter£ Cognitive Matter Upkeep of Ships: §R+0.1§!" # !
+ mjarchitect_boon_1_tt:"`$mjarchitect_boon_1a$\n$mjarchitect_boon_1b$\n$mjarchitect_boon_1c$`"
+
+ mjarchitect_ui.5.b:"`£mjarchitect_boon_2£ §HУсиленное Развитие§!`"
+ mjarchitect_boon_2a:"`Прирост опыта лидеров: §G+50%§!`"
+ mjarchitect_boon_2b:"`Содержание лидеров: §G-50%§!`"
+ mjarchitect_boon_2c: "$mjarchitect_boon_penalty$"
+#"£mjarchitect_cognitive_matter£ Cognitive Matter Upkeep of Leaders: §R+2§!§!" # !
+ mjarchitect_boon_2_tt:"`$mjarchitect_boon_2a$\n$mjarchitect_boon_2b$\n$mjarchitect_boon_2c$`"
+
+ mjarchitect_ui.5.c:"`£mjarchitect_boon_3£ §HИскажённые Сооружения§!`"
+ mjarchitect_boon_3a:"`Скорость строительства мегасооружений: §G+50%§!`"
+ mjarchitect_boon_3b:"`Скорость строительства районов и зданий: §G+75%§!`"
+ mjarchitect_boon_3c: "$mjarchitect_boon_penalty$"
+#"£mjarchitect_cognitive_matter£ Cognitive Matter from Jobs & Pops: §R-25%§!"
+ mjarchitect_boon_3_tt:"`$mjarchitect_boon_3a$\n$mjarchitect_boon_3b$\n$mjarchitect_boon_3c$`"
+
+ mjarchitect_ui.5.d:"`£mjarchitect_boon_4£ §HНебесное Единство§!`"
+ mjarchitect_boon_4a:"`£unity£ Единство от £job£ должностей: §G+45%§!`"
+ mjarchitect_boon_4b:"`£stability£ Стабильность планет: §G+30%§!`"
+ mjarchitect_boon_4c: "$mjarchitect_boon_penalty$"
+#"£mjarchitect_cognitive_matter£ Cognitive Matter Upkeep per 100 £pop£ Pops: §R+0.02§!"
+ mjarchitect_boon_4_tt:"`$mjarchitect_boon_4a$\n$mjarchitect_boon_4b$\n$mjarchitect_boon_4c$`"
+
+ mjarchitect_ui.5.e:"`£mjarchitect_boon_5£ §HГалактическое Касание Разума§!`"
+ mjarchitect_boon_5a:"`£diplo_weight£ Дипломатический вес: §G+50%§!`"
+ mjarchitect_boon_5b:"`Ежемесячное £influence£ Влияние: §G+1.0§!`"
+ mjarchitect_boon_5c: "$mjarchitect_boon_penalty$"
+#"£mjarchitect_cognitive_matter£ Cognitive Matter from Jobs & Pops: §R-25%§!"
+ mjarchitect_boon_5_tt:"`$mjarchitect_boon_5a$\n$mjarchitect_boon_5b$\n$mjarchitect_boon_5c$`"
+
+ mjarchitect_ui.5.f:"`£mjarchitect_boon_6£ §HНеведомые Знания§!`"
+ mjarchitect_boon_6a:"`Скорость исследований: §G+15%§!`"
+ mjarchitect_boon_6b:"`Содержание £job_researcher£ исследователей: §G-50%§!`"
+ mjarchitect_boon_6c: "$mjarchitect_boon_penalty$"
+#"£mjarchitect_cognitive_matter£ Cognitive Matter Upkeep per 100 £job_researcher£ Researchers: §R+0.5§!"
+ mjarchitect_boon_6_tt:"`$mjarchitect_boon_6a$\n$mjarchitect_boon_6b$\n$mjarchitect_boon_6c$`"
+
+ mjarchitect_ui.5.g:"`£mjarchitect_boon_7£ §HПовышенная Эффективность§!`"
+ mjarchitect_boon_7a:"`Эффективность должностей: §G+25%§!`"
+ mjarchitect_boon_7b:"`Содержание £job£ должностей: §G-25%§!`"
+ mjarchitect_boon_7c: "$mjarchitect_boon_penalty$"
+#"£mjarchitect_cognitive_matter£ Cognitive Matter Upkeep per 100 £pop£ Pops: §R+0.03§!"
+ mjarchitect_boon_7_tt:"`$mjarchitect_boon_7a$\n$mjarchitect_boon_7b$\n$mjarchitect_boon_7c$`"
+
+ mjarchitect_ui.5.h:"`£mjarchitect_boon_8£ §HМежпространственное Вооружение§!`"
+ mjarchitect_boon_8a:"`Урон от корабельного оружия: §G+20%§!`"
+ mjarchitect_boon_8b:"`Прочность щитов кораблей: §G+30%§!`"
+ mjarchitect_boon_8c: "$mjarchitect_boon_penalty$"
+#"£mjarchitect_cognitive_matter£ Cognitive Matter Upkeep of Military Ships: §R+0.1§!" # !
+ mjarchitect_boon_8_tt:"`$mjarchitect_boon_8a$\n$mjarchitect_boon_8b$\n$mjarchitect_boon_8c$`"
+
+ mjarchitect_ui.5.i:"`£mjarchitect_boon_9£ §HВзаимозависимое Сознание§!`"
+ mjarchitect_boon_9a:"`Скорость роста населения: §G+25%§!`"
+ mjarchitect_boon_9b:"`Потребление удобств населением: §G-75%§!`"
+ mjarchitect_boon_9c: "$mjarchitect_boon_penalty$"
+#"£mjarchitect_cognitive_matter£ Cognitive Matter Upkeep per 100 £pop £Pops: §R+0.01§!"
+ mjarchitect_boon_9_tt:"`$mjarchitect_boon_9a$\n$mjarchitect_boon_9b$\n$mjarchitect_boon_9c$`"
+
+ # Milestones
+ MJARCHITECT_MILESTONE_ACTIVE:"`§GАктивно§!`"
+ MJARCHITECT_MILESTONE_POSITIVE_REQ:"`§RТребуется больше £mjarchitect_satisfaction£ §Yудовлетворённости§!§!\n\n`"
+ MJARCHITECT_MILESTONE_NEGATIVE_REQ:"`§RТребуется меньше £mjarchitect_satisfaction£ §Yудовлетворённости§!§!\n\n`"
+
+ MJARCHITECT_MILESTONE_1_TT:"`§GУмиротворён§!\n§LАрхитектор Разрушения в целом доволен нашей работой на данный момент.§!\n\n§EЭффекты:§!\n§YАрхитектор§! может предлагать случайные, незначительные награды\n\n`"
+ MJARCHITECT_MILESTONE_2_TT:"§GДоволен§!\n§LАрхитектор Разрушения весьма доволен нашим текущим прогрессом и усилиями. Он окажет более сильную помощь.§!\n\n§EEffekty:§!\nНаграды §YАрхитектора§! появляются чаще\n\n"
+ MJARCHITECT_MILESTONE_3_TT:"§GУдовлетворён§!\n§LАрхитектор Разрушения очень доволен нашими усилиями по дарованию ему власти. Благодаря нашей усердной работе мы можем получить мощные награды.§!\n\n§EEffekty:§!\nНаграды §YАрхитектора§! появляются ещё чаще\nМожно выбрать благословение «§YМежпространственное вооружение§!»\nМожно выбрать благословение «§YВзаимовыгодное сознание§!»\n\n"
+
+ MJARCHITECT_MILESTONE_4_TT:"§RНедоволен§!\n§LАрхитектор Разрушения несколько недоволен нами, хотя у нас есть шанс улучшить отношения.§!\n\n§EEffekty:§!\n§YАрхитектор§! может редко применять незначительные наказания\n\n"
+ MJARCHITECT_MILESTONE_5_TT:"§RРаздосадован§!\n§LАрхитектор Разрушения раздосадован нашей некомпетентностью. Мы должны работать усерднее, прежде чем отношения ухудшатся.§!\n\n§EEffekty:§!\nНаказания §YАрхитектора§! более часты\n\n"
+ MJARCHITECT_MILESTONE_6_TT:"§RРазгневан§!\n§LАрхитектор Разрушения очень зол на нас и накажет, если мы не улучшим свои действия.§!\n\n§EEffekty:§!\nНаказания §YАрхитектора§! теперь очень часты\nБольше нет доступа к каким-либо благословениям\n\n"
+
+ # Time
+ mjarchitect_7years:"£time£ 7 лет"
+ mjarchitect_6years:"£time£ 6 лет"
+ mjarchitect_5years:"£time£ 5 лет"
+ mjarchitect_4years:"£time£ 4 года"
+ mjarchitect_3years:"£time£ 3 года"
+ mjarchitect_2years:"£time£ 2 года"
+ mjarchitect_1years:"£time£ 1 год"
+ mjarchitect_0years:"£time£ Скоро"
+
+ # Decay
+ mjarchitect_satisfaction_increase_month_0000:"§Y0,0§!"
+ mjarchitect_satisfaction_increase_month_0025:"§R-0,25§!"
+ mjarchitect_satisfaction_increase_month_0050:"§R-0,5§!"
+ mjarchitect_satisfaction_increase_month_0075:"§R-0,75§!"
+ mjarchitect_satisfaction_increase_month_0100:"§R-1,0§!"
+ mjarchitect_satisfaction_increase_month_0125:"§R-1,25§!"
+ mjarchitect_satisfaction_increase_month_0150:"§R-1,5§!"
+ mjarchitect_satisfaction_increase_month_0175:"§R-1,75§!"
+ mjarchitect_satisfaction_increase_month_0200:"§R-2,0§!"
+ mjarchitect_satisfaction_increase_month_0225:"§R-2,25§!"
+ mjarchitect_satisfaction_increase_month_0250:"§R-2,5§!"
+ mjarchitect_satisfaction_increase_month_0275:"§R-2,75§!"
+ mjarchitect_satisfaction_increase_month_0300:"§R-3,0§!"
+ mjarchitect_satisfaction_increase_month_0325:"§R-3,25§!"
+ mjarchitect_satisfaction_increase_month_0350:"§R-3,5§!"
+ mjarchitect_satisfaction_increase_month_0375:"§R-3,75§!"
+ mjarchitect_satisfaction_increase_month_0400:"§R-4,0§!"
+ mjarchitect_satisfaction_increase_month_0425:"§R-4,25§!"
+ mjarchitect_satisfaction_increase_month_0450:"§R-4,5§!"
+ mjarchitect_satisfaction_increase_month_0475:"§R-4,75§!"
+ mjarchitect_satisfaction_increase_month_0500:"§R-5,0§!"
+ mjarchitect_satisfaction_increase_month_0525:"§R-5,25§!"
+ mjarchitect_satisfaction_increase_month_0550:"§R-5,5§!"
+ mjarchitect_satisfaction_increase_month_0575:"§R-5,75§!"
+ mjarchitect_satisfaction_increase_month_0600:"§R-6,0§!"
+ mjarchitect_satisfaction_increase_month_0625:"§R-6,25§!"
+ mjarchitect_satisfaction_increase_month_0650:"§R-6,5§!"
+ mjarchitect_satisfaction_increase_month_0675:"§R-6.75§!"
+ mjarchitect_satisfaction_increase_month_0700:"§R-7.0§!"
+ mjarchitect_satisfaction_increase_month_0725:"§R-7.25§!"
+ mjarchitect_satisfaction_increase_month_0750:"§R-7.5§!"
+ mjarchitect_satisfaction_increase_month_0775:"§R-7.75§!"
+ mjarchitect_satisfaction_increase_month_0800:"§R-8.0§!"
+ mjarchitect_satisfaction_increase_month_0825:"§R-8.25§!"
+ mjarchitect_satisfaction_increase_month_0850:"§R-8.5§!"
+ mjarchitect_satisfaction_increase_month_0875:"§R-8.75§!"
+ mjarchitect_satisfaction_increase_month_0900:"§R-9.0§!"
+ mjarchitect_satisfaction_increase_month_0925:"§R-9.25§!"
+ mjarchitect_satisfaction_increase_month_0950:"§R-9.5§!"
+ mjarchitect_satisfaction_increase_month_0975:"§R-9.75§!"
+ mjarchitect_satisfaction_increase_month_1000:"§R-10.0§!"
+ mjarchitect_satisfaction_increase_month_1025:"§R-10.25§!"
+ mjarchitect_satisfaction_increase_month_1050:"§R-10.5§!"
+ mjarchitect_satisfaction_increase_month_1075:"§R-10.75§!"
+ mjarchitect_satisfaction_increase_month_1100:"§R-11.0§!"
+ mjarchitect_satisfaction_increase_month_1125:"§R-11.25§!"
+ mjarchitect_satisfaction_increase_month_1150:"§R-11.5§!"
+ mjarchitect_satisfaction_increase_month_1175:"§R-11.75§!"
+ mjarchitect_satisfaction_increase_month_1200:"§R-12.0§!"

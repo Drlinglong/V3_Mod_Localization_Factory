@@ -1,0 +1,183 @@
+﻿l_korean:
+
+ ############################################
+ ### project_divinity_crisis_ui_l_english ###
+ ###     by daniellm                      ###
+ ############################################
+
+
+
+ #####################
+ ### crisis screen ###
+ #####################
+
+ pdivinity_psionic_strength_value:"`£pdivinity_psionic_strength£ $VAL|0$`"
+ pdivinity_psionic_strength_gaining:"`§H위기 목표§!를 완료하여 더 많은 §Y후원자의 총애§!를 얻으십시오.`"
+ pdivinity_psionic_strength_desc:"`$pdivinity_psionic_strength$는 설계자의 불가사의한 에너지와 공명하는 정도를 나타냅니다.`"
+ pdivinity_psionic_strength_crisis_objective:"`위기 목표`"
+ pdivinity_psionic_strength_crisis_objective_gained:"`$pdivinity_psionic_strength$ 획득`"
+ pdivinity_psionic_strength_crisis_objective_reward: "$REWARD$"
+ pdivinity_psionic_strength_crisis_objective_progress:"`이 위기 목표를 통해 £pdivinity_psionic_strength£ $AMOUNT$를 얻었습니다.`"
+ pdivinity_psionic_strength_crisis_level_locked:"`이 단계를 잠금 해제하는 데 필요:\n`"
+ pdivinity_psionic_strength_crisis_level_unlocked:"`$LEVEL$ 단계에서 특수 프로젝트와 다음 보상을 얻습니다:\n`"
+ pdivinity_psionic_strength_crisis_level_desc:"`위기 단계를 진행하려면 위기 목표를 완료하고 각 단계에서 주어진 필수 과업을 완료하십시오.`"
+ pdivinity_psionic_strength_crisis_level_unlock:"`보유 £pdivinity_psionic_strength£ §Y$CURRENCY$§! $pdivinity_psionic_strength$`"
+ pdivinity_psionic_strength_current_value:"`현재 값: §Y$VALUE|0$§!`"
+
+ # this text exists in the crisis screen, the intro is just the nemesis one, i don't really like it tbh neither does the other one talk about the galcom. ask me if you need the other ones for comparison
+ pdivinity_psionic_strength_crisis_description_title:"`신성 프로젝트`"
+ pdivinity_psionic_strength_crisis_description_intro:"`수많은 세월 동안, 선지자와 학자들은 다가올 §R위기§!를 속삭였습니다. 예언에 싸인 종말, 모든 지성체의 운명이 실낱같이 위태로워질 종말을 말이죠. 그들은 별 너머에서 온 침략자, 차가운 기계 논리의 반란, 혹은 외계 차원에서 태어난 전쟁을 상상했습니다.\n\n그러나 그들은 밖을 내다보았지만, 안을 들여다보았어야 했습니다.\n\n진실은 언제나 표면 아래에서 꿈틀거렸습니다. 깊고, 불가피하며, 오직 의지에만 묶여 있었죠. 마지막 위기는... 언제나 §R우리§!였습니다.`"
+ pdivinity_psionic_strength_crisis_description:"`$pdivinity_psionic_strength_crisis_description_intro$\n\n우리의 생각과 의지는 무한한 사이오닉 힘으로 가득한 다른 차원으로 파동칩니다. 장막이 얇아집니다. 우리가 이 힘을 장악하고 우리의 목적에 맞게 형성할 수 있다면, 다가올 일에서 살아남는 것을 넘어... 우리가 그것을 정의할 것입니다.`"
+ pdivinity_psionic_strength_crisis_howto_title:0 "`신성 추구`"
+ pdivinity_psionic_strength_crisis_howto:"`§H위기 목표§!를 추구하면 £pdivinity_psionic_strength£ §Y후원자의 총애§!가 생성되어 우리의 신성한 잠재력을 해방시키고 은하계에 부름을 내리는 자를 해방시킬 수 있습니다!`"
+
+ crisis_pdivinity_project_divinity_level_1:0 "`창세`"
+ crisis_pdivinity_project_divinity_level_1_desc:0 "`위기 단계 1`"
+
+ crisis_pdivinity_project_divinity_level_2:0 "`전복`"
+ crisis_pdivinity_project_divinity_level_2_desc:0 "`위기 단계 2`"
+
+ crisis_pdivinity_project_divinity_level_3:0 "`예언`"
+ crisis_pdivinity_project_divinity_level_3_desc:0 "`위기 단계 3`"
+
+ crisis_pdivinity_project_divinity_level_4:0 "`계시`"
+ crisis_pdivinity_project_divinity_level_4_desc:0 "`위기 단계 4`"
+
+ crisis_pdivinity_project_divinity_level_5:0 "`신격화`"
+ crisis_pdivinity_project_divinity_level_5_desc:0 "`위기 단계 5`"
+ # Resource
+
+ pdivinity_psionic_strength_name:0 "`후원자의 총애`"
+ pdivinity_psionic_strength:0 "`후원자의 총애`"
+
+ # objectives
+
+ crisobj_pdivinity_establish_cult_name:0 "`장막 숭배 설립`"
+ crisobj_pdivinity_establish_cult_desc:0 "`다른 제국에 장막 숭배를 설립하여 은하계 전역에 우리의 영향력을 전파할 수 있습니다.\n\n장막 숭배를 설립하여 이 $pdivinity_psionic_strength$ 보상을 얻으십시오.`"
+
+ crisobj_pdivinity_retain_vassals_name:0 "`추종자 종속국 유지`"
+ crisobj_pdivinity_retain_vassals_desc:0 "`장막에 대한 그들의 복종은 우리의 신성으로 향하는 길에 기여합니다.\n\n추종자 종속국을 유지하여 이 §Y연간§! $pdivinity_psionic_strength$ 보상을 얻으십시오.`"
+
+ crisobj_pdivinity_vassalize_empire_name:0 "`제국 종속화`"
+ crisobj_pdivinity_vassalize_empire_desc:0 "`대중을 종속시키는 것은 그들이 그의 신성한 말씀을 경청하도록 보장합니다.\n\n제국을 종속화하여 이 $pdivinity_psionic_strength$ 보상을 얻으십시오.`"
+
+ crisobj_pdivinity_research_psionic_technology_name:0 "`사이오닉 기술 연구`"
+ crisobj_pdivinity_research_psionic_technology_desc:0 "`장막 기반의 구성 요소를 실험하는 것은 신성을 향한 우리의 탐구에 도움이 될 수 있습니다.\n\n이 희귀 기술을 연구하여 이 $pdivinity_psionic_strength$ 보상을 얻으십시오.`"
+
+ crisobj_pdivinity_shroud_phase_planets_name:0 "`장막 위상 행성`"
+ crisobj_pdivinity_shroud_phase_planets_desc:0 "`행성을 장막 위상화하는 것은 장막에 균열을 열고 부름을 내리는 자의 시선을 사로잡을 것입니다.\n\n행성을 장막 위상화하여 이 $pdivinity_psionic_strength$ 보상을 얻으십시오.`"
+
+ crisobj_pdivinity_sacrifice_population_name:0 "`의식 희생 인구`"
+ crisobj_pdivinity_sacrifice_population_desc:0 "`희생된 인구의 영혼은 우리가 후원자의 총애를 얻는 데 도움이 될 것입니다.\n\n의식 희생 정화 유형을 사용하여 정화된 $pop_group_unit$ 인구당 이 $pdivinity_psionic_strength$ 보상을 얻으십시오.`"
+
+ crisobj_pdivinity_control_shroud_enclave_name:0 "초월자 엔클레이브 통제"
+ crisobj_pdivinity_control_shroud_enclave_desc:0 "초월자들은 신성한 믿음을 지니고 있으니, 우리의 목표에 도움을 줄 것입니다.\n\n초월자 엔클레이브를 유지하여 §Y매년§! $pdivinity_psionic_strength$ 보상을 얻습니다."
+
+ crisobj_pdivinity_shroud_enemy_planets_name:0 "사이오닉으로 행성 파열"
+ crisobj_pdivinity_shroud_enemy_planets_desc:0 "적 행성을 사이오닉 에너지로 불태우는 것이 우리에게 호의를 가져다줄 것입니다.\n\n행성을 파열시켜 $pdivinity_psionic_strength$ 보상을 얻습니다."
+
+ crisobj_pdivinity_summon_psionic_ships_name:0 "사이오닉 함선 소환"
+ crisobj_pdivinity_summon_psionic_ships_desc:0 "우리의 명령에 따라 장막이 전율합니다. 그 심연에서 우리는 금속이 아닌 의지로 태어난 함선, 즉 장막과의 유대가 깊어지고 있음을 보여주는 현현을 소환합니다.\n\n사이오닉 함선을 소환하여 $pdivinity_psionic_strength$ 보상을 얻습니다."
+
+ crisobj_pdivinity_employ_telepaths_name:0 "텔레파스 고용"
+ crisobj_pdivinity_employ_telepaths_desc:0 "창조주는 우리 텔레파스들에게 사이오닉 에너지를 생산하는 능력을 부여했습니다.\n\n$pdivinity_psionic_strength$ 생산량은 고용된 텔레파스 수에 비례합니다."
+
+ ####################
+ ### menace perks ###
+ ####################
+
+ menp_pdivinity_resource:0 "수호자의 은총"
+ # tooltip
+ unlocks_pdivinity_unlock_resource:0 "§HCrisis Objectives§! 완료 시 £pdivinity_psionic_strength£ §Y$menp_pdivinity_resource$§! 축적을 허용합니다."
+ menp_pdivinity_resource_desc:0 "창조주의 은총을 얻는 것은 우리의 궁극적인 신성 목표에 도움이 될 것입니다. 우리는 그의 뜻을 위해 피를 흘릴 것입니다."
+
+ menp_pdivinity_ethic_attraction:0 "신성한 믿음"
+ # desc
+ menp_pdivinity_ethic_attraction_desc:0 "속삭임과 환영은 더 높은 존재에 대한 믿음을 불러일으킵니다. 이제 많은 이들이 §R운명의 창조주§!의 이름을 경외심으로 말합니다."
+
+ menp_pdivinity_psionic_armies:0 "사이오닉 환영"
+ menp_pdivinity_psionic_armies_desc:0 "부자연스러운 사이오닉 에너지에 감싸인 이 유령 전사들은 현실과 악몽 사이를 떠돕니다. 창조주의 요원으로서, 그들은 나타나는 곳마다 공포와 파괴를 뿌리도록 묶여 있습니다."
+ unlocks_pdivinity_unlock_armies:0 "§Y$pdivinitiy_psionic_army$§! 군대 유형 잠금 해제"
+
+ menp_pdivinity_zro_building:0 "장막 추출기"
+ menp_pdivinity_zro_building_desc:0 "영역 사이의 장막을 얇게 하여 훈련된 수습생들이 장막의 소용돌이에서 순수한 즈로를 직접 흡수할 수 있게 하는 신성한 구조물입니다."
+ unlocks_pdivinity_unlock_buildings:0 "§Y$building_pdivinity_shroud_harvester_building$§! 잠금 해제"
+
+ menp_pdivinity_shroud_phasing:0 "장막 위상 변환"
+ menp_pdivinity_shroud_phasing_desc:0 "우리는 선택된 행성의 장막을 의도적으로 약화시켜 사이오닉 성역으로 변모시키는 법을 배웠습니다. 우리 종족은 이 공명 속에서 번성하고, 다른 모든 종족은 우리 아래에서 고통받을 것입니다."
+ unlocks_pdivinity_unlock_phasing:0 "행성에서 §Y$decision_pdivinity_shroud_phasing$§! 결정 잠금 해제"
+
+ menp_pdivinity_ritual_sacrifice:0 "의식 희생"
+ menp_pdivinity_ritual_sacrifice_desc:0 "창조주의 설계에 합당하지 않은 자들도 여전히 목적을 이룰 수 있습니다. 살과 영혼의 신성한 제물을 통해 우리는 장막에서 힘과 은총을 얻습니다."
+ unlocks_pdivinity_ritual_sacrifice:0 "§Y$purge_pdivinity_sacrifice$§! 숙청 유형 잠금 해제"
+
+ menp_pdivinity_cult_espionage:0 "계시의 씨앗"
+ menp_pdivinity_cult_espionage_desc:0 "우리는 국경을 넘어 속삭임을 전하는 기술을 터득했습니다. 믿음은 표면 아래에서 부패처럼 퍼져나가고, 곧 그들의 백성은 창조주의 이름으로 자신들의 신들에게 등을 돌릴 것입니다."
+ unlocks_pdivinity_cult_espionage:0 "§Y$operation_pdivinity_establish_cult$§! 작전 유형 잠금 해제\n"
+
+ menp_pdivinity_divine_crusade:0 "신성한 성전"
+ menp_pdivinity_divine_crusade_desc:0 "우리의 신성한 성전은 은하계의 다른 존재들에게 각성이 될 것입니다. 성전을 통해 우리는 다른 존재들을 운명의 설계에 묶습니다. 그들은 수습생이 되거나 이단으로 쓰러질 것입니다."
+ unlocks_pdivinity_divine_crusade:0 "§Y$wg_pdivinity_acolyte$§! 전쟁 목표 잠금 해제\n§Y$specialist_pdivinity_acolyte$§! 봉신 유형 잠금 해제\n"
+
+ menp_pdivinity_psionic_avatar:0 "장막 베일"
+ menp_pdivinity_psionic_avatar_desc:0 "장막의 의지가 구현된 에테르적 존재로, 현실을 가리고 왜곡하며 별들 사이의 공허를 운명의 속삭임으로 맴도는 소용돌이치는 사이오닉 에너지 구름입니다."
+ unlocks_pdivinity_psionic_avatar:0 "함선 유형 잠금 해제: §Y$pdivinity_psionic_cloud$§!"
+
+ menp_pdivinity_psionic_rupture:0 "파열 포격"
+ menp_pdivinity_psionic_rupture_desc:0 "차원 사이의 장막을 찢어 열고 순수한 사이오닉 에너지를 방출하여 적의 요새를 파괴하고 그들의 의지를 흩트리는 파괴적인 포격입니다."
+ unlocks_pdivinity_psionic_rupture:0 "포격 유형 잠금 해제: §Y$bombardment_pdivinity_psionic_rupture_bombardment$§!"
+
+ menp_pdivinity_psionic_potential:0 "사이오닉 조화"
+ menp_pdivinity_psionic_potential_desc:0 "우리 종족의 장막에 대한 잠재적 연결이 꽃피워, 그들에게 향상된 정신적 능력과 현실의 구조에 대한 더 깊은 조화를 부여합니다."
+
+ menp_pdivinity_gifts_from_beyond:0 "저편으로부터의 선물"
+ menp_pdivinity_gifts_from_beyond_desc:0 "장막의 깊은 곳에서 회수한 고대 사이오닉 비밀과 기술은 우리 함선과 무기에 초월적인 힘을 부여합니다."
+ unlocks_pdivinity_gifts_from_beyond:0 "이제 §Y사이오닉 구성 요소§!가 연구 옵션으로 나타날 수 있습니다."
+
+ menp_pdivinity_astral_tear:0 "사이오닉 아바타"
+ menp_pdivinity_astral_tear_desc:0 "장막의 의지가 살아 숨 쉬는 구현체인 이 아바타는 순수한 사이오닉 힘으로 뒤덮인 맹렬하고 불가사의한 존재이며, 현실을 자신의 의지대로 굴복시킵니다."
+ unlocks_pdivinity_astral_tear:0 "함선 유형 잠금 해제: §Y$pdivinity_psionic_avatar$§!"
+
+ menp_pdivinity_beyond_the_rifts:0 "은하 폭풍"
+ menp_pdivinity_beyond_the_rifts_desc:0 "운명의 첨탑이 서서히 장막을 허물면서, 사이오닉 에너지가 경이로운 속도로 실재 공간으로 흘러들어 우리 영역에 장막 폭풍을 만들어냅니다."
+ unlocks_pdivinity_beyond_the_rifts:0 "소유한 모든 성계에 §Y장막 폭풍§!을 생성합니다."
+
+ menp_pdivinity_divine_insight:0 "신성한 통찰력"
+ menp_pdivinity_divine_insight_desc:0 "건축가의 존재는 우리의 정신을 날카롭게 하여 사이오닉 위업 간의 시간을 단축하고 장막을 더 빠르게 숙달할 수 있도록 합니다."
+
+ menp_pdivinity_hyperdimensional_shielding:0 "초차원 방어막"
+ menp_pdivinity_hyperdimensional_shielding_desc:0 "고차원 에너지로 짜인 보호 오라가 마치 건축가 자신의 은총이 지키는 듯 우리 함대를 해로부터 보호합니다."
+
+ menp_pdivinity_dimensional_tearer:0 "차원 찢개"
+ menp_pdivinity_dimensional_tearer_desc:0 "현실 자체를 찢어 구멍을 낼 수 있는 무기로, 시공간의 구조를 찢고 풀어헤치는 사이오닉 관문을 생성합니다."
+ unlocks_pdivinity_dimensional_tearer:0 "함선 유형 잠금 해제: §Y$pdivinity_dimensional_tearer$§!"
+
+ menp_pdivinity_call_of_the_eye:0 "건축가의 부름"
+ menp_pdivinity_call_of_the_eye_desc:0 "그의 목소리가 은하계 전역에 울려 퍼지고, 숭배자들은 예언의 성취와 빛으로의 승천에 환호합니다. 건축가가 가까이 있습니다..."
+ unlocks_pdivinity_call_of_the_eye:0 "이제 §Y숭배자 봉기§!가 두 배 빠른 속도로 증가합니다."
+
+ menp_pdivinity_psionic_mastery:0 "사이오닉 숙달"
+ menp_pdivinity_psionic_mastery_desc:0 "장막과의 심오한 교감은 우리 무기의 파괴력을 강화하여, 모든 공격이 사이오닉 분노로 울려 퍼지게 합니다."
+
+ menp_pdivinity_beyond_the_Shroud:0 "운명의 첨탑"
+ menp_pdivinity_beyond_the_Shroud_desc:0 "첨탑이 노래합니다. 장막이 응답합니다. 은하계 전역의 숭배자들이 그 끌림을 느끼며, 알려진 공간의 모든 구석에서 숭배 집단이 일어납니다."
+ unlocks_pdivinity_spire_of_fate:0 "거대 구조물 단계 잠금 해제: §Y운명의 첨탑 - 신격화 단계§!"
+
+ ##################################
+ ### crisis unlock requirements ###
+ ##################################
+
+ pdivinity_level_2_req_clear_tooltip:0 "£trigger_yes£ §Y$building_pdivinity_architect_shrine$§!를 건설했습니다."
+ pdivinity_level_2_req_tooltip:0 "£trigger_no£ §Y$building_pdivinity_architect_shrine$§!를 건설했습니다."
+
+ pdivinity_level_3_req_clear_tooltip:0 "£trigger_yes£ 행성을 §Y장막으로 위상 변경§!했습니다."
+ pdivinity_level_3_req_tooltip:0 "£trigger_no£ 행성을 §Y장막으로 위상 변경§!했습니다."
+
+ pdivinity_level_4_req_clear_tooltip:0 "£trigger_yes£ §Y$pdivinity_catacombs_digsite$§! 고고학 발굴지를 완료했습니다."
+ pdivinity_level_4_req_tooltip:0 "£trigger_no£ §Y$pdivinity_catacombs_digsite$§! 고고학 발굴지를 완료했습니다."
+
+ pdivinity_level_5_req_clear_tooltip:0 "£trigger_yes£ §Y$pdivinity_shroud_needle_3$§!를 건설했습니다."
+ pdivinity_level_5_req_tooltip:0"£trigger_no£ §Y$pdivinity_shroud_needle_3$§!를 건설했습니다."
+
+ pdivinity_level_5_req_clear_tooltip_2:0 "£trigger_yes£ §Y차원 찢개§!를 발사했습니다."
+ pdivinity_level_5_req_tooltip_2:0 "£trigger_no£ §Y차원 찢개§!를 발사했습니다."

@@ -1,0 +1,256 @@
+﻿l_german:
+
+ #######################################
+ ### project_divinity_misc_l_english ###
+ ###     by daniellm                 ###
+ #######################################
+
+ ############
+ ### star ###
+ ############
+
+ pc_pdivinity_shrouded_hole:0 "Schleiertunnel"
+ pc_pdivinity_shrouded_hole_desc:0 "Ein Bruch im Schleier, entstanden durch den vollständigen Kollaps von Materie. Schleiertunnel besitzen extrem starke Gravitationsfelder, die selbst Licht daran hindern, dem Griff des Schleiers zu entkommen."
+
+ #############
+ ### trait ###
+ #############
+
+ trait_pdivinity_shroud_touched:0 "Schleierberührt"
+ trait_pdivinity_shroud_touched_desc:0 "§LDiener des §RSchicksalsarchitekten§!\nDiese Spezies wurde seit Urzeiten geformt, um dem verderblichen Einfluss massiver psionischer Energie standzuhalten. Sie erleidet keine Mali auf Schleier-Phasen-Planeten§!."
+ pdivinity_shroud_touched_tooltip:0 "\n§LAuf Schleier-Phasen-Planeten:\n- §Y$mod_planet_psionic_jobs_produces_mult$§!: §G25%§!\n- §Y$MOD_POP_HAPPINESS$§!: §G10%§!\n- §YPlaneten-Bewohnbarkeit§! §G100%§!"
+
+ leader_trait_pdivinity_chosen_by_the_eye:0 "Auserwählter des Großen Auges"
+ leader_trait_pdivinity_chosen_by_the_eye_desc:0 "Vom Architekten selbst auserwählt, ist dieser Anführer ein unsterbliches Wesen, das unglaubliche psionische Macht besitzt."
+ ######################
+ ### ascension perk ###
+ ######################
+
+ ap_pdivinity:0 "Projekt Göttlichkeit"
+ ap_pdivinity_desc:0 "Eine Stimme regt sich aus den Tiefen jenseits der Sterne, etwas Uraltes, Unergründliches und von schrecklicher Bestimmung erfüllt. Sie flüstert durch den Schleier, sickert in unsere Träume und korrumpiert unsere Gedanken mit einem göttlichen Willen, der nicht unser eigener ist. Wir sind auserwählt, diesem Ruf zu folgen, dem Schicksalsarchitekten zu dienen und Werkzeuge eines unausweichlichen Schicksals zu werden, das weit größer ist als wir selbst."
+
+ must_not_be_homicidal:0 "$TRIGGER_FAIL$ Kann diesen Aufstiegsvorteil nicht als genozidales Imperium wählen"
+ must_be_psionic:0 "$TRIGGER_FAIL$ Psionischer Aufstieg muss abgeschlossen sein"
+
+ ##############
+ ### armies ###
+ ##############
+
+ pdivinitiy_psionic_army:0 "Psionische Phantome"
+ pdivinitiy_psionic_army_desc:0 "Manifestationen dunkler psionischer Energie, diese Armeen spuken auf dem Schlachtfeld, weder ganz lebendig noch tot, getrieben vom unergründlichen Willen des Architekten."
+
+ #####################
+ ### tech category ###
+ #####################
+
+ pdivinity_eye:0 "Schicksal"
+ pdivinity_eye_desc:0 "Schleiertechnologie von unserem größten Gönner, dem §RSchicksalsarchitekten§!."
+ mod_category_pdivinity_eye_research_speed_mult:0 "Forschungsgeschwindigkeit (§RSchicksal§!)"
+
+
+ ################
+ ### decision ###
+ ################
+
+ decision_pdivinity_shroud_phasing:0 "Schleierphasung"
+ decision_pdivinity_shroud_phasing_desc:0 "Indem wir die Grenze zwischen dieser Welt und dem Schleier schwächen, können wir die Realität selbst neu gestalten, die Gläubigen erheben und Ungläubige in einen lebenden Albtraum im Dienste des §RSchicksalsarchitekten§! stürzen."
+ pdivinity_shroud_phasing_tooltip:0 "§Y$pdivinity_shroud_phased_modifier$§! Modifikator hinzugefügt.\n\nErhöht £pop£ §GSchleierberührte Bevölkerungsproduktion§!, reduziert aber £pop£ §YNicht-Schleierberührte Bevölkerungsproduktion§!."
+ pdivinity_shroud_phased_modifier:0 "Schleier-Phasen"
+ pdivinity_shroud_phased_modifier_desc:0 "Der Schleier wurde auf dieser Welt bewusst verdünnt. Für die §GSchleierberührten§! wird die Realität fließend, ein Paradies, das von Gedanken geformt wird. Doch für alle anderen brechen die Naturgesetze zusammen, Träume gehen in Albträume über und die Existenz wird zur Qual unter dem Blick des §RSchicksalsarchitekten§!."
+ pdivinity_shroud_phased_modifier_tooltip:0 "§GSchleierberührte§! £pop£ Pops:\n- §Y$mod_planet_psionic_jobs_produces_mult$§!: §G25%§!\n- §Y$MOD_POP_HAPPINESS$§!: §G10%§!\n- §YPlaneten-Bewohnbarkeit§! §G100%§!\n\n§YNicht-Schleierberührte§! £pop£ Pops:\n- §YPlaneten-Bewohnbarkeit§!: §R-75%§!\n- $MOD_POP_HAPPINESS$: §R-25%§!\n- $MOD_LOGISTIC_GROWTH_MULT$: §R-50%§!"
+
+
+ #########################
+ ### opinion modifiers ###
+ #########################
+
+ opinion_pdivinity_sacrifices:0 "Der Schleier will es"
+
+ opinion_breaking_the_veil:0 "Den Schleier durchbrechen"
+
+ #################
+ ### modifiers ###
+ #################
+
+ pdivinity_cult_attack:0 "Terrorangriff"
+ pdivinity_cult_attack_desc:0 "Dieser Planet wurde kürzlich von Schleier-Entitäten angegriffen."
+
+ mod_country_resource_max_energy_add:0 "Energie-Speicherkapazität"
+ mod_country_resource_max_sr_zro_add:0 "Zro-Speicherkapazität"
+ mod_job_pdivinity_zro_harvester_add:0 "Zro-Sammler-Arbeitsplätze"
+
+ ############
+ ### jobs ###
+ ############
+ job_pdivinity_zro_harvester:0 "Zro-Ernter"
+ job_pdivinity_zro_harvester_plural:0 "Zro-Sammler"
+ job_pdivinity_zro_harvester_desc:0 "$pdivinity_zro_harvester_plural$ arbeiten in geheiligten Tempeln, die auf psionischen Verwerfungslinien errichtet wurden. Dort entlocken sie Zro direkt dem Schleier, nicht abgebaut, sondern beschworen, durch Ritual und Offenbarung."
+ job_pdivinity_zro_harvester_effect_desc:0 "£job_pdivinity_zro_harvester£ $pdivinity_zro_harvester_plural$ wandeln £minerals£ in £sr_zro£ §Y$sr_zro$§! um.\n\nProduziert automatisch £sr_zro£ §Y$sr_zro$§! auf §YSchleier-Phasen§!-Planeten"
+
+ mod_planet_telepaths_pdivinity_psionic_strength_produces_add:0 "$pdivinity_psionic_strength$ £pdivinity_psionic_strength£ pro $pop_group_unit$ [telepath.GetIcon] [telepath.GetNamePlural]"
+
+ purge_pdivinity_sacrifice:0 "Ritualopfer"
+ purge_pdivinity_sacrifice_desc:0 "Jene, die des Architekten Entwurfs unwürdig sind, können dennoch einem Zweck dienen. Durch heilige Opfer von Fleisch und Geist ziehen wir Stärke und Gunst aus dem Schleier."
+ job_purge_pdivinity_sacrifice_job:0 "Ritualopfer"
+ job_purge_pdivinity_sacrifice_job_desc:0 "Ausgewählte Individuen werden dem §RSchicksalsarchitekten§! durch heilige Riten geopfert. Ihre Essenz speist den Schleier und unseren göttlichen Zweck."
+
+ ################
+ ### building ###
+ ################
+
+ building_pdivinity_architect_shrine:0 "Tempel des Schicksals"
+ building_pdivinity_architect_shrine_desc:0 "Ein großer Tempel, der zu Ehren des Schicksalsarchitekten errichtet wurde."
+
+ building_pdivinity_shroud_harvester_building:0 "Zro-Ernter"
+ building_pdivinity_shroud_harvester_building_desc:0 "Auf psionischen Verwerfungslinien errichtet, setzen die Zro-Ernter spezielle Ausrüstung ein, um Zro direkt aus dem Schleier selbst zu gewinnen."
+
+ #####################
+ ### megastructure ###
+ #####################
+
+ # ruined megastructure
+ pdivinity_shroud_needle_1_ruined:0 "Ruiniertes Schicksalsnadel – Fundament"
+ pdivinity_shroud_needle_1_ruined_DESC:0 "Das zersplitterte Fundament einer einst göttlichen Struktur. Seine Flüsterlaute sind verstummt."
+ pdivinity_shroud_needle_1_ruined_MEGASTRUCTURE_DETAILS:0 "Ich weiß nicht, was das ist, fülle diese _details nicht aus, ich finde es später heraus."
+
+ # ruined megastructure
+ pdivinity_shroud_needle_2_ruined:0 "Ruiniertes Schicksalsnadel – Kanalisierungsring"
+ pdivinity_shroud_needle_2_ruined_DESC:0 "Fragmente eines psionischen Leitungsrings umgeben die Leere, träge und zerbrochen."
+ pdivinity_shroud_needle_2_ruined_MEGASTRUCTURE_DETAILS:0 ""
+
+ # ruined megastructure
+ pdivinity_shroud_needle_3_ruined:0 "Ruiniertes Schicksalsnadel – Leitungskern"
+ pdivinity_shroud_needle_3_ruined_DESC:0 "Der Riss hat sich geschlossen. Der Architekt zieht sich vorerst zurück."
+ pdivinity_shroud_needle_3_ruined_MEGASTRUCTURE_DETAILS:0 ""
+
+ # ruined megastructure
+ pdivinity_shroud_needle_4_ruined:0 "Ruiniertes Schicksalsnadel – Kommunionsfeld"
+ pdivinity_shroud_needle_4_ruined_DESC:0 "Die Echos des Glaubens verweilen hier, doch die Struktur ist stumm."
+ pdivinity_shroud_needle_4_ruined_MEGASTRUCTURE_DETAILS:0 ""
+
+ # stage 1
+ pdivinity_shroud_needle_1:0 "Schicksalsnadel – Fundament"
+ pdivinity_shroud_needle_1_DESC:0 "Das Fundament der Nadel ist gelegt. Obwohl es träge erscheint, schwingt es mit leisen Flüsterlauten von jenseits des Schleiers mit."
+
+ # stage 2
+ pdivinity_shroud_needle_2:0 "Schicksalsnadel – Kanalisierungsring"
+ pdivinity_shroud_needle_2_DESC:0 "Ein gewaltiger Ring von Verstärkern umschließt nun die Struktur und bündelt psionische Harmonien in die Leere. Der Schleier regt sich."
+
+ # stage 3
+ pdivinity_shroud_needle_3:0 "Schicksalsnadel – Leitungskern"
+ pdivinity_shroud_needle_3_DESC:0 "Die Realität beginnt sich um den Kern zu krümmen. Entitäten innerhalb des Schleiers nehmen Notiz. Ein Riss bildet sich."
+
+ # stage 4
+ pdivinity_shroud_needle_4:0 "Schicksalsnadel – Kommunionsfeld"
+ pdivinity_shroud_needle_4_DESC:0 "Die Nadel singt. Der Schleier antwortet. Verehrer in der ganzen Galaxis spüren ihre Anziehungskraft, und Kulte erheben sich in jedem Winkel des bekannten Raums."
+
+ # stage 5
+ pdivinity_shroud_needle_5:0 "Schicksalsnadel – Apotheose-Stufe"
+ pdivinity_shroud_needle_5_DESC:0 "Die endgültige Struktur ist vollendet. Die Realität verdünnt sich bis zum Zerreißen. Die Ankunft des Architekten ist unvermeidlich."
+
+ pdivinity_is_not_possible_rift:0 "\n£trigger_no£ Ziel muss eines der folgenden sein: \n§YSchwarzes Loch§!\n§YPulsar§!\n§YA-Klasse-Stern§!"
+
+
+ ####################
+ ### global names ###
+ ####################
+
+ NAME_pdivinity_the_great_eye_name:0 "Der Architekt des Schicksals"
+
+ NAME_pdivinity_lesser_avatar:0 "Geringerer Psionischer Avatar"
+
+ NAME_pdivinity_psionic_avatar:0 "Psionischer Avatar"
+
+ NAME_pdivinity_dimensional_tearer:0 "Dimensionszerrüttler"
+
+ NAME_pdivinity_dimensional_tearer_name:0 "Schleierbrecher"
+
+ NAME_pdivinity_dimensional_portal:0 "Dimensionsportal"
+
+ NAME_pdivinity_Shroudpriests:0 "Akolyth des Architekten"
+
+ NAME_pdivinity_demons:0 "Psionische Phantome"
+
+ NAME_pdivinity_architect_of_fate:0 "Architekt des Schicksals"
+
+
+ ####################
+ ### vassal stuff ###
+ ####################
+
+ specialist_pdivinity_acolyte:0 "Akolyth"
+ specialist_pdivinity_acolyte_desc:0 "Akolyth des großen Auges. Dieses Reich folgt dem Willen des §RArchitekten des Schicksals§!"
+ specialist_pdivinity_acolyte_summary:0 "£pdivinitiy_acolyte£Akoylthen spezialisieren sich darauf, die Gaben des Architekten zu meistern, im Austausch für eine schwächere Industrie."
+
+ preset_pdivinity_acolyte:0 "Akolyth"
+ preset_pdivinity_acolyte_desc:0 "Akolyth des großen Auges. Dieses Reich folgt dem Willen des §RArchitekten des Schicksals§!"
+
+ # modifier for acolyte hyper relay links
+ specialist_pdivinity_acolyte_neighbor:0 "Akolyth-Wächter"
+ specialist_pdivinity_acolyte_neighbor_desc:0 "Die Nähe zu den Gläubigen des §RGroßen Auges§! flößt Gehorsam, Furcht und ein seltsames Gefühl des Friedens ein. Wo Sein Wille gegenwärtig ist, folgt die Ordnung."
+
+ ### stage 1
+
+ pdivinity_acolyte_1_modifier:0 "Akolyth-Boni I"
+ pdivinity_acolyte_1_penalties:0 "Akolyth-Mali I"
+ pdivinity_acolyte_1_modifier_desc:0 "$MOD_COUNTRY_ALL_TECH_RESEARCH_SPEED$: §G+10%§!\n$mod_category_pdivinity_eye_research_speed_mult$: §G+15%§!\n$mod_country_sr_zro_produces_mult$: §G+15%§!"
+
+ pdivinity_acolyte_1_insight:0 "Akolyth-Einsicht I"
+ pdivinity_acolyte_1_insight_desc:0 "§EFügt erforschbaren Technologien hinzu:§!\n$t$£society£ $tech_psionic_theory$\n$t$£society£ $tech_mine_zro$"
+
+ pdivinity_acolyte_1_shroud_storm:0 "Schleiersturm"
+ pdivinity_acolyte_1_shield_desc:0 "§EFeindliche Schiffe in eigenen Systemen:§!\n$t$$MOD_SHIP_SHIELD_MULT$: §R-50%§!\n$t$$MOD_SHIP_WEAPON_RANGE_MULT$: §R-20%§!\n$t$$MOD_SHIP_TRACKING_ADD$: §R-15§!"
+
+ pdivinity_acolyte_1_neighbor:0 "Akolyth-Wächter"
+ pdivinity_acolyte_1_neighbor_desc:0 "Die Nähe zu den Gläubigen des §RGroßen Auges§! flößt Gehorsam, Furcht und ein seltsames Gefühl des Friedens ein. Wo Sein Wille gegenwärtig ist, folgt die Ordnung."
+
+ ### stage 2
+
+ pdivinity_acolyte_2_modifier:0 "Akolyth-Boni II"
+ pdivinity_acolyte_2_penalties:0 "Akolyth-Mali II"
+ pdivinity_acolyte_2_modifier_desc:0 "$MOD_COUNTRY_ALL_TECH_RESEARCH_SPEED$: §G+20%§!\n$mod_category_pdivinity_eye_research_speed_mult$: §G+25%§!\n$mod_country_sr_zro_produces_mult$: §G+25%§!"
+
+ pdivinity_acolyte_2_insight:0 "Akolyth-Einsicht II"
+ pdivinity_acolyte_2_insight_desc:0 "§EFügt erforschbaren Technologien hinzu:§!\n$t$£society£ $tech_pdivinity_shroud_harvester$"
+
+ pdivinity_acolyte_2_psionic_capacity:0 "Diener Des Auges"
+
+ pdivinity_acolyte_2_components:0 "Gaben des Architekten"
+ pdivinity_acolyte_2_components_desc:0 "§EErmöglicht die Erforschung von:§!\n£pdivinitiy_acolyte£Psionische Schiffskomponenten"
+
+ ### stage 3
+
+ pdivinity_acolyte_3_modifier:0 "Akolyth-Boni III"
+ pdivinity_acolyte_3_penalties:0 "Akolyth-Mali III"
+ pdivinity_acolyte_3_modifier_desc:0 "$MOD_COUNTRY_ALL_TECH_RESEARCH_SPEED$: §G+50%§!\n$mod_category_pdivinity_eye_research_speed_mult$: §G+100%§!\n$mod_country_sr_zro_produces_mult$: §G+50%§!"
+
+ pdivinity_acolyte_3_insight:0 "Akolyth-Einsicht III"
+ pdivinity_acolyte_3_insight_desc:0 "§EFügt erforschbaren Technologien hinzu:§!\n$t$£society£ $tech_pdivinity_psionic_avatar$"
+
+ pdivinity_acolyte_3_psionic_shielding:0 "Hyperdimensionale Abschirmung"
+
+ pdivinity_acolyte_3_overlord:0 "Zorn des Großen Auges"
+ pdivinity_acolyte_3_overlord_desc:0 "§EErmöglicht die Erforschung von:§!\n£pdivinitiy_acolyte£Psionische Bewaffnung"
+ #################
+ ### war stuff ###
+ #################
+
+ bombardment_pdivinity_psionic_rupture_bombardment:0 "Psionische Ruptur"
+ bombardment_pdivinity_psionic_rupture_bombardment_desc:0 "$bombardment_pdivinity_psionic_rupture_bombardment$ Die Bombardierung hüllt den Planeten in psionische Energie mit dem ausdrücklichen Ziel, den Planeten zu verschleiern.\n- §RMassiver§! Schaden an §YArmeen§!\n- §RMassiver§! Schaden am §YPlaneten§!\n- §RMassiver§! Schaden an §YBevölkerung§!\n- Bombardiert unverteidigte Planeten\n- Kann Planeten zu Schleierwelten oder Schleier-Phasenwelten machen"
+ pdivinity_bombed_to_shrouded_world:0 "§Y[From.GetName] ist jetzt eine Schleierwelt.§!"
+ pdivinity_bombed_to_shroud_phased_world:0 "§Y[From.GetName] ist zu einem Schleier-Phasenplaneten geworden.§!"
+
+
+ casus_belli_cb_pdivinity_acolyte:0 "Unterwerfung"
+ wg_pdivinity_acolyte:0 "Göttlicher Kreuzzug"
+
+ #####################
+ ### ship sections ###
+ #####################
+
+ pdivinity_psionic_cloud_section:0 "Mittel"
+ pdivinity_lesser_psionic_avatar_section:0 "Mittel"
+ pdivinity_psionic_avatar_section:0 "Mittel"
+ pdivinity_dimensional_tearer_section:0 "Mittel"
+ pdivinity_dimensional_portal_section:0 "Mittel"
+ pdivinity_the_architect_of_fate_section:0 "Mittel"

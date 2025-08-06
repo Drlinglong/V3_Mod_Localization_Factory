@@ -1,0 +1,27 @@
+﻿l_japanese:
+ HTAB: "$TAB$#b -#!$TAB$"
+ TOOLTIP_DELIMITER_LONG: "@divider_start!@divider_mid!@divider_mid!@divider_mid!@divider_mid!@divider_mid!@divider_mid!@divider_mid!@divider_end!"
+
+ # GDP Ownership Display
+ COUNTRY_GDP_OWNERSHIP_ONE_LINE: "#title [Concept('concept_building_owners', 'GDP所有権')]#!"
+ GDP_OWNERSHIP_RATIO_TT: "#header [Concept('concept_building_owners', 'GDP所有権')]#!\n[Country.GetAdjective]の$GDP_SHORT$所有権：@money![Country.GetGDP|Dv] / [Country.MakeScope.ScriptValue('gdp_ownership_by_self')|%v] + [Country.MakeScope.ScriptValue('gdp_ownership_of_other')|%v] ([Country.GetGDPRanking])\n[SelectLocalization(IsZero_CFixedPoint(Country.MakeScope.ScriptValue('gdp_ownership_by_other_count')), 'DA_OVERSEA_INVESTMENT_NONE_TT', 'DA_OVERSEA_INVESTMENT_TT')]\n[SelectLocalization(IsZero_CFixedPoint(Country.MakeScope.ScriptValue('gdp_ownership_of_other_count')), 'DA_FOREIGN_INVESTMENT_NONE_TT', 'DA_FOREIGN_INVESTMENT_TT')][AddLocalizationIf(Not(ObjectsEqual(GetPlayer, Country.Self)), 'DA_GDP_OTHER_TT')]"
+
+ DA_OVERSEA_INVESTMENT_TT: "#b 国外投資：#![Country.MakeScope.ScriptValue('gdp_ownership_by_other_count')|v0]カ国に[Country.GetAdjective]の$GDP_SHORT$の#tooltippable;tooltip:[Country.GetTooltipTag],da_gui_gdp_ownership_other [Country.MakeScope.ScriptValue('gdp_ownership_of_other')|%v+2]#!に相当する額を投資しています。"
+ DA_OVERSEA_INVESTMENT_NONE_TT: "[Country.GetName]は国外に資産を#b 保有していません#!。"
+ DA_FOREIGN_INVESTMENT_TT: "#b 海外資本：#![Country.MakeScope.ScriptValue('gdp_ownership_of_other_count')|v0]カ国より、[Country.GetAdjective]の$GDP_SHORT$の#tooltippable;tooltip:[Country.GetTooltipTag],da_gui_gdp_ownership_self [Country.MakeScope.ScriptValue('gdp_ownership_by_other')|%v-2]#!に相当する額が投資されています。"
+ DA_FOREIGN_INVESTMENT_NONE_TT: "[Country.GetName]内には海外資本が#b 存在しません#!。"
+
+ da_gui_gdp_ownership_title: "#title     $GDP_SHORT$   $HTAB$  シェア $TAB$#b -#! [Concept('concept_building_level', '施設レベル')]  #b - #!$TAB$[concept_country]#!"
+ da_gui_gdp_ownership_self: "[GetScriptedGui('da_gui_gdp_ownership_self_list').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).End)]"
+ da_gui_gdp_ownership_self_tt: "@money![Multiply_CFixedPoint(Country.GetInvestmentGdpFractionInCountry(THIS.GetCountry.Self), Country.GetGDP)|Dv]$HTAB$[Country.GetInvestmentGdpFractionInCountry(THIS.GetCountry.Self)|%2v]$HTAB$[Country.GetInvestmentLevelsInCountry(THIS.GetCountry.Self)|v]$HTAB$[THIS.GetCountry.GetName]"
+ da_gui_gdp_ownership_other: "[GetScriptedGui('da_gui_gdp_ownership_other_list').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).End)]"
+ da_gui_gdp_ownership_other_tt: "@money![Multiply_CFixedPoint(THIS.GetCountry.GetInvestmentGdpFractionInCountry(Country.Self), THIS.GetCountry.GetGDP)|Dv]$HTAB$[THIS.GetCountry.GetInvestmentGdpFractionInCountry(Country.Self)|%2v]$HTAB$[THIS.GetCountry.GetInvestmentLevelsInCountry(Country.Self)|v]$HTAB$[THIS.GetCountry.GetName]"
+
+ DA_GDP_OTHER_TT: "\n$TOOLTIP_DELIMITER_LONG$\n[SelectLocalization(IsZero(Country.GetInvestmentLevelsInCountry(GetPlayer)), 'DA_GDP_OTHER_00', 'DA_GDP_OTHER_01')]\n[SelectLocalization(IsZero(GetPlayer.GetInvestmentLevelsInCountry(Country.Self)), 'DA_GDP_OTHER_10', 'DA_GDP_OTHER_11')]"
+ DA_GDP_OTHER_00: "[GetPlayer.GetName]が[Country.GetName]内に所有する[concept_building_level]は#b ありません#!。"
+ DA_GDP_OTHER_01: "[GetPlayer.GetName]が[Country.GetName]内に所有する[Concept('concept_building_level', '$concept_building_levels$')]は[Country.GetInvestmentLevelsInCountry(GetPlayer)|v]で、この総額は[Country.GetAdjective]の$GDP_SHORT$の[Country.GetInvestmentGdpFractionInCountry(GetPlayer)|%2v]に相当します。"
+ DA_GDP_OTHER_10: "[Country.GetName]が[GetPlayer.GetName]内に所有する[concept_building_level]は#b ありません#!。"
+ DA_GDP_OTHER_11: "[Country.GetName]が[GetPlayer.GetName]内に所有する[Concept('concept_building_level', '$concept_building_levels$')]は[GetPlayer.GetInvestmentLevelsInCountry(Country.Self)|v]で、この総額は[GetPlayer.GetAdjective]の$GDP_SHORT$の[GetPlayer.GetInvestmentGdpFractionInCountry(Country.Self)|%2v]に相当します。"
+
+ ATTITUDE_DETAILS: "[COUNTRY.GetAttitudeTowards(TARGET_COUNTRY.Self).GetReasonsDesc]\n$TOOLTIP_DELIMITER$\n[TARGET_COUNTRY.GetName]が[COUNTRY.GetName]内に所有する[Concept('concept_building_level', '$concept_building_levels$')]は[COUNTRY.GetInvestmentLevelsInCountry(TARGET_COUNTRY.Self)|v]で、この総額は[COUNTRY.GetAdjective]の$GDP_SHORT$の[COUNTRY.GetInvestmentGdpFractionInCountry(TARGET_COUNTRY.Self)|%2v]に相当します。\n[COUNTRY.GetName]が[TARGET_COUNTRY.GetName]内に所有する[Concept('concept_building_level', '$concept_building_levels$')]は[TARGET_COUNTRY.GetInvestmentLevelsInCountry(COUNTRY.Self)|v]で、この総額は[TARGET_COUNTRY.GetAdjective]の$GDP_SHORT$の[TARGET_COUNTRY.GetInvestmentGdpFractionInCountry(COUNTRY.Self)|%2v]に相当します。"
+ ai_attitude_human_tooltip: "#header $ai_attitude_human$#!\n$ai_attitude_human_desc$\n$TOOLTIP_DELIMITER$\n$ATTITUDE_DETAILS$"

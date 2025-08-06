@@ -1,0 +1,256 @@
+﻿l_french:
+
+ #######################################
+ ### project_divinity_misc_l_english ###
+ ###     by daniellm                 ###
+ #######################################
+
+ ############
+ ### star ###
+ ############
+
+ pc_pdivinity_shrouded_hole:0 "Tunnel du Voile"
+ pc_pdivinity_shrouded_hole_desc:0 "Une brèche dans le voile, formée par l'effondrement complet de la matière. Les tunnels du voile possèdent des champs gravitationnels extrêmement puissants, empêchant même la lumière d'échapper à l'emprise du voile lui-même."
+
+ #############
+ ### trait ###
+ #############
+
+ trait_pdivinity_shroud_touched:0 "Touchés par le Voile"
+ trait_pdivinity_shroud_touched_desc:0 "§LServiteurs de l'§RArchitecte du Destin§!\nCette espèce a été façonnée depuis des temps immémoriaux pour résister à l'influence corruptrice de l'énergie psionique massive. Elle ne subira aucune pénalité sur les planètes Voile-Phasées§!."
+ pdivinity_shroud_touched_tooltip:0 "\n§LSur les planètes Voile-Phasées :\n- §Y$mod_planet_psionic_jobs_produces_mult$§!: §G25%§!\n- §Y$MOD_POP_HAPPINESS$§!: §G10%§!\n- §YHabitabilité planétaire§! §G100%§!"
+
+ leader_trait_pdivinity_chosen_by_the_eye:0 "Élus du Grand Œil"
+ leader_trait_pdivinity_chosen_by_the_eye_desc:0 "Choisi par l'Architecte lui-même, ce dirigeant est un être immortel qui manie un pouvoir psionique incroyable."
+ ######################
+ ### ascension perk ###
+ ######################
+
+ ap_pdivinity:0 "Projet Divinité"
+ ap_pdivinity_desc:0 "Une voix s'agite depuis les profondeurs au-delà des étoiles, quelque chose d'ancien, d'impénétrable et empli d'un terrible dessein. Elle murmure à travers le voile, s'insinuant dans nos rêves et corrompant nos pensées d'une volonté divine qui n'est pas la nôtre. Nous sommes choisis pour répondre à cet appel, pour servir l'Architecte du Destin et devenir les instruments d'une destinée inéluctable bien plus grande que nous-mêmes."
+
+ must_not_be_homicidal:0 "$TRIGGER_FAIL$ Impossible de sélectionner cet Atout d'Ascension en tant qu'empire génocidaire."
+ must_be_psionic:0 "$TRIGGER_FAIL$ Doit avoir terminé l'Ascension Psionique."
+
+ ##############
+ ### armies ###
+ ##############
+
+ pdivinitiy_psionic_army:0 "Fantômes Psioniques"
+ pdivinitiy_psionic_army_desc:0 "Manifestations d'énergie psionique obscure, ces armées hantent le champ de bataille, n'étant ni pleinement vivantes ni mortes, mues par la volonté impénétrable de l'Architecte."
+
+ #####################
+ ### tech category ###
+ #####################
+
+ pdivinity_eye:0 "Destin"
+ pdivinity_eye_desc:0 "Technologie du Voile de notre plus grand mécène, l'§RArchitecte du Destin§!."
+ mod_category_pdivinity_eye_research_speed_mult:0 "Vitesse de Recherche (§RDestin§!)"
+
+
+ ################
+ ### decision ###
+ ################
+
+ decision_pdivinity_shroud_phasing:0 "Phasage du Voile"
+ decision_pdivinity_shroud_phasing_desc:0 "En affaiblissant la frontière entre ce monde et le Voile, nous pouvons remodeler la réalité elle-même, élevant les fidèles tout en plongeant les incroyants dans un cauchemar vivant au service de l'§RArchitecte du Destin§!."
+ pdivinity_shroud_phasing_tooltip:0 "Modificateur §Y$pdivinity_shroud_phased_modifier$§! ajouté.\n\nAugmente la production des populations £pop£ §GTouchées par le Voile§! mais réduit la production des populations £pop£ §YNon-Touchées par le Voile§!."
+ pdivinity_shroud_phased_modifier:0 "Voile-Phasé"
+ pdivinity_shroud_phased_modifier_desc:0 "Le voile a été délibérément aminci sur ce monde. Pour les §GTouchés par le Voile§!, la réalité devient fluide, un paradis façonné par la pensée. Mais pour tous les autres, les lois de la nature s'effondrent, les rêves se transforment en cauchemars et l'existence devient un tourment sous le regard de l'§RArchitecte du Destin§!."
+ pdivinity_shroud_phased_modifier_tooltip:0 "Populations £pop£ §GTouchées par le Voile§! :\n- §Y$mod_planet_psionic_jobs_produces_mult$§!: §G25%§!\n- §Y$MOD_POP_HAPPINESS$§!: §G10%§!\n- §YHabitabilité planétaire§! §G100%§!\n\nPopulations £pop£ §YNon-Touchées par le Voile§! :\n- §YHabitabilité planétaire§!: §R-75%§!\n- $MOD_POP_HAPPINESS$: §R-25%§!\n- $MOD_LOGISTIC_GROWTH_MULT$: §R-50%§!"
+
+
+ #########################
+ ### opinion modifiers ###
+ #########################
+
+ opinion_pdivinity_sacrifices:0 "Le Voile le Veut"
+
+ opinion_breaking_the_veil:0 "Briser le Voile"
+
+ #################
+ ### modifiers ###
+ #################
+
+ pdivinity_cult_attack:0 "Attaque Terreur"
+ pdivinity_cult_attack_desc:0 "Cette planète a récemment été attaquée par des entités du voile."
+
+ mod_country_resource_max_energy_add:0 "Capacité de Stockage d'Énergie"
+ mod_country_resource_max_sr_zro_add:0 "Capacité de Stockage de Zro"
+ mod_job_pdivinity_zro_harvester_add:0 "Métiers de Moissonneur de Zro"
+
+ ############
+ ### jobs ###
+ ############
+ job_pdivinity_zro_harvester:0 "Moissonneur de Zro"
+ job_pdivinity_zro_harvester_plural:0 "Moissonneurs de Zro"
+ job_pdivinity_zro_harvester_desc:0 "Les $pdivinity_zro_harvester_plural$ opèrent dans des temples sanctifiés construits au-dessus de failles psioniques. Là, ils extorquent du Zro directement du Voile, non pas en le minant, mais en le conjurant, par le rituel et la révélation."
+ job_pdivinity_zro_harvester_effect_desc:0 "Les £job_pdivinity_zro_harvester£ $pdivinity_zro_harvester_plural$ transforment les £minerals£ en £sr_zro£ §Y$sr_zro$§!\n\nProduit automatiquement £sr_zro£ §Y$sr_zro$§! sur les planètes §YVoile-Phasées§!"
+
+ mod_planet_telepaths_pdivinity_psionic_strength_produces_add:0 "$pdivinity_psionic_strength$ £pdivinity_psionic_strength£ par $pop_group_unit$ [telepath.GetIcon] [telepath.GetNamePlural]"
+
+ purge_pdivinity_sacrifice:0 "Sacrifice Rituel"
+ purge_pdivinity_sacrifice_desc:0 "Ceux qui sont indignes du dessein de l'Architecte peuvent néanmoins servir un but. Par des offrandes sacrées de chair et d'esprit, nous puisons force et faveur du Voile."
+ job_purge_pdivinity_sacrifice_job:0 "Sacrifice Rituel"
+ job_purge_pdivinity_sacrifice_job_desc:0 "Des individus sélectionnés sont offerts à l'§RArchitecte du Destin§! par des rites sacrés. Leur essence nourrit le Voile et notre dessein divin."
+
+ ################
+ ### building ###
+ ################
+
+ building_pdivinity_architect_shrine:0 "Temple du Destin"
+ building_pdivinity_architect_shrine_desc:0 "Un grand temple construit pour honorer l'Architecte du Destin."
+
+ building_pdivinity_shroud_harvester_building:0 "Moissonneur de Zro"
+ building_pdivinity_shroud_harvester_building_desc:0 "Construits au-dessus de failles psioniques, les moissonneurs de Zro emploient un équipement spécial pour extraire le Zro directement du Voile lui-même."
+
+ #####################
+ ### megastructure ###
+ #####################
+
+ # ruined megastructure
+ pdivinity_shroud_needle_1_ruined:0 "Ruines de la Flèche du Destin - Fondation"
+ pdivinity_shroud_needle_1_ruined_DESC:0 "La fondation brisée d'une structure autrefois divine. Ses murmures se sont estompés."
+ pdivinity_shroud_needle_1_ruined_MEGASTRUCTURE_DETAILS:0 "Je ne sais pas ce que c'est, ne remplissez pas ces champs appelés _details, je m'en occuperai plus tard."
+
+ # ruined megastructure
+ pdivinity_shroud_needle_2_ruined:0 "Ruines de la Flèche du Destin - Anneau de Canalisation"
+ pdivinity_shroud_needle_2_ruined_DESC:0 "Des fragments de conduits psioniques encerclent le vide, inertes et brisés."
+ pdivinity_shroud_needle_2_ruined_MEGASTRUCTURE_DETAILS:0 ""
+
+ # ruined megastructure
+ pdivinity_shroud_needle_3_ruined:0 "Ruines de la Flèche du Destin - Noyau de Conduit"
+ pdivinity_shroud_needle_3_ruined_DESC:0 "La Faille s'est refermée. L'Architecte se retire pour l'instant."
+ pdivinity_shroud_needle_3_ruined_MEGASTRUCTURE_DETAILS:0 ""
+
+ # ruined megastructure
+ pdivinity_shroud_needle_4_ruined:0 "Ruines de la Flèche du Destin - Réseau de Communion"
+ pdivinity_shroud_needle_4_ruined_DESC:0 "Les échos de foi persistent ici, mais la structure est silencieuse."
+ pdivinity_shroud_needle_4_ruined_MEGASTRUCTURE_DETAILS:0 ""
+
+ # stage 1
+ pdivinity_shroud_needle_1:0 "Flèche du Destin - Fondation"
+ pdivinity_shroud_needle_1_DESC:0 "La fondation de la Flèche est posée. Bien qu'elle semble inerte, elle résonne de faibles murmures venus d'au-delà du voile."
+
+ # stage 2
+ pdivinity_shroud_needle_2:0 "Flèche du Destin - Anneau de Canalisation"
+ pdivinity_shroud_needle_2_DESC:0 "Un vaste anneau d'amplificateurs encercle désormais la structure, concentrant les harmoniques psioniques dans le vide. Le voile s'agite."
+
+ # stage 3
+ pdivinity_shroud_needle_3:0 "Flèche du Destin - Noyau de Conduit"
+ pdivinity_shroud_needle_3_DESC:0 "La réalité commence à se courber autour du noyau. Des entités du Voile le remarquent. Une faille se forme."
+
+ # stage 4
+ pdivinity_shroud_needle_4:0 "Flèche du Destin - Réseau de Communion"
+ pdivinity_shroud_needle_4_DESC:0 "La Flèche chante. Le Voile répond. Des adorateurs à travers la galaxie ressentent son appel, et des cultes surgissent dans chaque recoin de l'espace connu."
+
+ # stage 5
+ pdivinity_shroud_needle_5:0 "Flèche du Destin - Phase d'Apothéose"
+ pdivinity_shroud_needle_5_DESC:0 "La structure finale est achevée. La réalité s'amincit jusqu'au point de rupture. L'arrivée de l'Architecte est inévitable."
+
+ pdivinity_is_not_possible_rift:0 "\n£trigger_no£ La cible doit être l'un des suivants : \n§YTrou noir§!\n§YPulsar§!\n§YÉtoile de classe A§!"
+
+
+ ####################
+ ### global names ###
+ ####################
+
+ NAME_pdivinity_the_great_eye_name:0 "L'Architecte du Destin"
+
+ NAME_pdivinity_lesser_avatar:0 "Avatar Psionique Mineur"
+
+ NAME_pdivinity_psionic_avatar:0 "Avatar Psionique"
+
+ NAME_pdivinity_dimensional_tearer:0 "Déchireur Dimensionnel"
+
+ NAME_pdivinity_dimensional_tearer_name:0 "Briseur du Voile"
+
+ NAME_pdivinity_dimensional_portal:0 "Portail Dimensionnel"
+
+ NAME_pdivinity_Shroudpriests:0 "Acolyte de l'Architecte"
+
+ NAME_pdivinity_demons:0 "Fantômes Psioniques"
+
+ NAME_pdivinity_architect_of_fate:0 "Architecte du Destin"
+
+
+ ####################
+ ### vassal stuff ###
+ ####################
+
+ specialist_pdivinity_acolyte:0 "Acolyte"
+ specialist_pdivinity_acolyte_desc:0 "Acolyte du Grand Œil. Cet empire suit la volonté de l'§RL'Architecte du Destin§!"
+ specialist_pdivinity_acolyte_summary:0 "£pdivinitiy_acolyte£Les Acolytes se spécialisent dans la maîtrise des dons de l'Architecte, en échange d'une industrie plus faible."
+
+ preset_pdivinity_acolyte:0 "Acolyte"
+ preset_pdivinity_acolyte_desc:0 "Acolyte du Grand Œil. Cet empire suit la volonté de l'§RL'Architecte du Destin§!"
+
+ # modifier for acolyte hyper relay links
+ specialist_pdivinity_acolyte_neighbor:0 "Veilleur Acolyte"
+ specialist_pdivinity_acolyte_neighbor_desc:0 "La proximité avec les fidèles du §RGrand Œil§! inspire l'obéissance, la peur et un étrange sentiment de paix. Là où Sa volonté est présente, l'ordre règne."
+
+ ### stage 1
+
+ pdivinity_acolyte_1_modifier:0 "Bonus Acolyte I"
+ pdivinity_acolyte_1_penalties:0 "Malus Acolyte I"
+ pdivinity_acolyte_1_modifier_desc:0 "Vitesse de recherche globale : §G+10%§!\nVitesse de recherche (Catégorie Œil Divin) : §G+15%§!\nProduction de Zro : §G+15%§!"
+
+ pdivinity_acolyte_1_insight:0 "Perception d'Acolyte I"
+ pdivinity_acolyte_1_insight_desc:0 "§EAjout aux technologies recherchables :§!\n$t$£society£ $tech_psionic_theory$\n$t$£society£ $tech_mine_zro$"
+
+ pdivinity_acolyte_1_shroud_storm:0 "Tempête du Voile"
+ pdivinity_acolyte_1_shield_desc:0 "§EVaisseaux hostiles dans les systèmes possédés :§!\n$t$Multiplicateur de bouclier des vaisseaux : §R-50%§!\n$t$Multiplicateur de portée des armes des vaisseaux : §R-20%§!\n$t$Poursuite des vaisseaux : §R-15§!"
+
+ pdivinity_acolyte_1_neighbor:0 "Guetteur Acolyte"
+ pdivinity_acolyte_1_neighbor_desc:0 "La proximité avec les fidèles du §RGrand Œil§! inspire l'obéissance, la peur et un étrange sentiment de paix. Là où Sa volonté est présente, l'ordre règne."
+
+ ### stage 2
+
+ pdivinity_acolyte_2_modifier:0 "Bonus d'Acolyte II"
+ pdivinity_acolyte_2_penalties:0 "Malus d'Acolyte II"
+ pdivinity_acolyte_2_modifier_desc:0 "Vitesse de recherche globale : §G+20%§!\nVitesse de recherche (Catégorie Œil Divin) : §G+25%§!\nProduction de Zro : §G+25%§!"
+
+ pdivinity_acolyte_2_insight:0 "Perception d'Acolyte II"
+ pdivinity_acolyte_2_insight_desc:0 "§EAjout aux technologies recherchables :§!\n$t$£society£ $tech_pdivinity_shroud_harvester$"
+
+ pdivinity_acolyte_2_psionic_capacity:0 "Serviteurs de l'Œil"
+
+ pdivinity_acolyte_2_components:0 "Dons de l'Architecte"
+ pdivinity_acolyte_2_components_desc:0 "§EPermet la recherche de :§!\n£pdivinitiy_acolyte£Composants de Vaisseaux Psioniques"
+
+ ### stage 3
+
+ pdivinity_acolyte_3_modifier:0 "Bonus d'Acolyte III"
+ pdivinity_acolyte_3_penalties:0 "Malus d'Acolyte III"
+ pdivinity_acolyte_3_modifier_desc:0 "Vitesse de recherche globale : §G+50%§!\nVitesse de recherche (Catégorie Œil Divin) : §G+100%§!\nProduction de Zro : §G+50%§!"
+
+ pdivinity_acolyte_3_insight:0 "Perception d'Acolyte III"
+ pdivinity_acolyte_3_insight_desc:0 "§EAjout aux technologies recherchables :§!\n$t$£society£ $tech_pdivinity_psionic_avatar$"
+
+ pdivinity_acolyte_3_psionic_shielding:0 "Bouclier Hyperdimensionnel"
+
+ pdivinity_acolyte_3_overlord:0 "Colère du Grand Œil"
+ pdivinity_acolyte_3_overlord_desc:0 "§EPermet la recherche de :§!\n£pdivinitiy_acolyte£Armement Psionique"
+ #################
+ ### war stuff ###
+ #################
+
+ bombardment_pdivinity_psionic_rupture_bombardment:0 "Rupture Psionique"
+ bombardment_pdivinity_psionic_rupture_bombardment_desc:0 "$bombardment_pdivinity_psionic_rupture_bombardment$ Le bombardement enveloppe la planète d'énergie psionique dans le but explicite de voiler la planète.\n- Dégâts §Rmassifs§! aux §YArmées§!\n- Dégâts §Rmassifs§! à la §YPlanète§!\n- Dégâts §Rmassifs§! aux §YPopulations§!\n- Bombardera les planètes sans défense\n- Peut réduire les planètes en mondes voilés, ou en mondes en phase-Voile"
+ pdivinity_bombed_to_shrouded_world:0 "§Y[From.GetName] est maintenant un Monde Voilé.§!"
+ pdivinity_bombed_to_shroud_phased_world:0 "§Y[From.GetName] est devenue une planète en phase-Voile.§!"
+
+
+ casus_belli_cb_pdivinity_acolyte:0 "Subjugation"
+ wg_pdivinity_acolyte:0 "Croisade Divine"
+
+ #####################
+ ### ship sections ###
+ #####################
+
+ pdivinity_psionic_cloud_section:0 "Moyenne"
+ pdivinity_lesser_psionic_avatar_section:0 "Moyenne"
+ pdivinity_psionic_avatar_section:0 "Moyenne"
+ pdivinity_dimensional_tearer_section:0 "Moyenne"
+ pdivinity_dimensional_portal_section:0 "Moyenne"
+ pdivinity_the_architect_of_fate_section:0 "Moyenne"

@@ -1,0 +1,83 @@
+﻿l_spanish:
+
+ ################################
+ ### pdivinity_tech_l_english ###
+ ###     by daniellm          ###
+ ################################
+
+ ##################
+ ### components ###
+ ##################
+
+ tech_pdivinity_psionic_jump_drive:0 "Motor del Velo"
+ tech_pdivinity_psionic_jump_drive_desc:0 "Un motor de salto avanzado sintonizado con el propio Velo. Las naves equipadas con este sistema entran brevemente en el velo entre realidades, reapareciendo en su destino antes de que los sensores convencionales puedan rastrear su trayectoria."
+ TECH_UNLOCK_PDIVINITY_JUMP_DRIVE_TITLE:0 "§HDesbloquea Componente:§! $PDIVINITY_SHROUD_JUMP_DRIVE$"
+ TECH_UNLOCK_PDIVINITY_JUMP_DRIVE_DESC:0 "§H$PDIVINITY_SHROUD_JUMP_DRIVE$§!\n$PDIVINITY_SHROUD_JUMP_DRIVE_DESC$"
+
+ tech_pdivinity_psionic_reactor:0 "Voluntad del Arquitecto"
+ tech_pdivinity_psionic_reactor_desc:0 "Este núcleo de energía se sincroniza con frecuencias psiónicas latentes, extrayendo poder directamente del Velo. Su presencia distorsiona el espacio local y desafía las leyes conocidas de conservación de la energía."
+ TECH_UNLOCK_PDDIVINITY_PSIONIC_POWER_TITLE:0 "§HDesbloquea Componente:§! $pdivinity_psionic_reactor$"
+ TECH_UNLOCK_PDDIVINITY_PSIONIC_POWER_DESC:0 "§H$pdivinity_psionic_reactor$§!\n$pdivinity_psionic_reactor_desc$"
+
+ tech_pdivinity_psionic_thrusters:0 "Propulsor de Estela Psiónica"
+ tech_pdivinity_psionic_thrusters_desc:0 "Al entrar parcialmente en el Velo, estos propulsores anulan la inercia y la fricción, permitiendo maniobras imposibles para los estándares del espacio real."
+ TECH_UNLOCK_PDIVINITY_PSIONIC_THRUSTER_TITLE:0 "§HDesbloquea Componente:§! $Pdivinity_psionic_thruster$"
+ TECH_UNLOCK_PDIVINITY_PSIONIC_THRUSTER_DESC:0 "§H$Pdivinity_psionic_thruster$§!\n$Pdivinity_psionic_thruster_desc$"
+
+ tech_pdivinity_psionic_sensors:0 "Sensores Eco del Velo"
+ tech_pdivinity_psionic_sensors_desc:0 "Estos sensores están sintonizados para detectar la intención detrás de las acciones. Al leer las potencialidades en el Velo, las naves equipadas con ellos pueden reaccionar antes de que las amenazas se manifiesten."
+ TECH_UNLOCK_PDIVINITY_PSIONIC_SENSORS_TITLE:0 "§HDesbloquea Componente:§! $PDIVINITY_PSIONIC_SENSOR$"
+ TECH_UNLOCK_PDIVINITY_PSIONIC_SENSORS_DESC:0 "§H$PDIVINITY_PSIONIC_SENSOR$§!\n$PDIVINITY_PSIONIC_SENSOR_DESC$"
+
+ tech_pdivinity_psionic_precog:0 "Ordenador Vinculado al Velo"
+ tech_pdivinity_psionic_precog_desc:0 "Un sistema de control de combate incrustado con algoritmos de precognición psiónica. Permite a las naves predecir el comportamiento enemigo y optimizar tácticas con una precisión inquietante."
+ TECH_UNLOCK_PDIVINITY_PSIONIC_PRECOG_TITLE:0 "§HDesbloquea Componentes:§! $PDIVINITY_PSIONIC_PRECOG$"
+ TECH_UNLOCK_PDIVINITY_PSIONIC_PRECOG_DESC:0 "§H$PDIVINITY_PSIONIC_PRECOG$§!\n$PDIVINITY_PSIONIC_PRECOG_DESC$"
+
+ tech_pdivinity_psionic_laser:0 "Matriz de Lanzas Psiónicas"
+ tech_pdivinity_psionic_laser_desc:0 "Estos emisores de lanza están imbuidos de armónicos psiónicos que desestabilizan la estructura atómica. La armadura y el casco ofrecen poca protección contra su efecto desintegrador."
+
+ tech_pdivinity_psionic_lance:0 "Perforador del Velo"
+ tech_pdivinity_psionic_lance_desc:0 "Un haz concentrado de energía psiónica que desgarra la materia física y debilita el velo alrededor de su lugar de impacto. Sus golpes dejan cicatrices profundas, impregnadas de ecos de los muertos."
+
+ tech_pdivinity_psionic_lightning:0 "Ira del Velo"
+ tech_pdivinity_psionic_lightning_desc:0 "Arcos caóticos de relámpagos psiónicos surgen impredeciblemente de esta arma, guiados más por la voluntad que por los sensores. El Velo tiene hambre, y esta es su voz."
+
+ tech_pdivinity_psionic_titan_lance:0 "Lanza del Arquitecto"
+ tech_pdivinity_psionic_titan_lance_desc:0 "Un arma titánica de clase lanza diseñada para desgarrar el espacio y transicionar parcialmente a su objetivo al Velo. Pocas estructuras, físicas o dimensionales, pueden soportar su furia."
+
+ tech_pdivinity_psionic_strikecraft:0 "Interceptores Psiónicos"
+ tech_pdivinity_psionic_strikecraft_desc:0 "Naves de asalto compuestas por formas de pensamiento vivas, moldeadas por la voluntad y animadas por ecos de conciencia dentro del Velo. Navegan la realidad solo por instinto, guiadas únicamente por el propósito y la voluntad."
+
+ tech_pdivinity_psionic_artillery:0 "Artillería de Onda del Velo"
+ tech_pdivinity_psionic_artillery_desc:0 "Una plataforma de bombardeo psiónico de largo alcance que proyecta campos de resonancia destructivos a través de vastas distancias. Interrumpe el pensamiento, la materia y la cohesión por igual."
+
+ tech_pdivinity_psionic_torpedo:0 "Proyector de Ráfagas Psiónicas"
+ tech_pdivinity_psionic_torpedo_desc:0 "Lanza proyectiles psiónicos inestables que atraviesan la materia antes de detonar en ráfagas de energía recubierta del Velo."
+
+ tech_pdivinity_psionic_shields:0 "Escudos del Velo"
+ tech_pdivinity_psionic_shields_desc:0 "Barreras defensivas proyectadas por las mentes de los fieles. Doblegan la percepción y la probabilidad, permitiendo a las naves sobrevivir a impactos que deberían haberlas destruido por completo."
+
+ tech_pdivinity_psionic_cloud:0 "Eco del Velo"
+ tech_pdivinity_psionic_cloud_desc:0 "Una manifestación etérea de la voluntad del Velo, como una nube arremolinada de energía psiónica que vela y distorsiona la realidad, persiguiendo el vacío entre las estrellas con susurros del destino."
+ TECH_UNLOCK_PDIVINITY_PSIONIC_CLOUD_CONSTRUCTION_TITLE:0 "§HDesbloquea Tipo de Nave:§! Eco del Velo"
+ TECH_UNLOCK_PDIVINITY_PSIONIC_CLOUD_CONSTRUCTION_DESC:0 "§HEco del Velo§!\nUna entidad rápida y ágil que sirve como nave de patrulla para los hijos del destino."
+
+ tech_pdivinity_psionic_avatar:0 "Avatar Psiónico"
+ tech_pdivinity_psionic_avatar_desc:0 "Una encarnación viviente de la voluntad del Velo, este avatar es una entidad feroz y enigmática envuelta en poder psiónico puro, doblando la realidad a su voluntad."
+ TECH_UNLOCK_PDIVINITY_PSIONIC_AVATAR_CONSTRUCTION_TITLE:0 "§HDesbloquea Tipo de Nave:§! Avatar Psiónico"
+ TECH_UNLOCK_PDIVINITY_PSIONIC_AVATAR_CONSTRUCTION_DESC:0 "§HAvatar Psiónico§!\nCreado por el arquitecto del destino para servir como nave de primera línea. El avatar psiónico porta una potencia de fuego inmensa para su tamaño."
+
+ tech_pdivinity_dimensional_tearer:0 "Desgarrador Dimensional"
+ tech_pdivinity_dimensional_tearer_desc:0 "Un arma capaz de desgarrar agujeros a través de la realidad misma, creando portales psiónicos que desgarran y desentrañan el tejido del espacio-tiempo mismo."
+ TECH_UNLOCK_PDIVINITY_DIMENSIONAL_TEARER_CONSTRUCTION_TITLE:0 "§HDesbloquea Tipo de Nave:§! Desgarrador Dimensional"
+ TECH_UNLOCK_PDIVINITY_DIMENSIONAL_TEARER_CONSTRUCTION_DESC:0 "§HAvatar Psiónico§!\nUna entidad mayor del arquitecto del destino. El desgarrador dimensional sirve como nave insignia. Capaz de romper el velo, esta nave es un oponente muy peligroso para los no creyentes de la galaxia."
+ ##############
+ ### others ###
+ ##############
+
+ tech_pdivinity_shroud_harvester:0 "Doctrina de Extracción del Velo"
+ tech_pdivinity_shroud_harvester_desc:0 "A través de arquitectura sagrada y rituales meditativos, extraemos Zro de los pliegues del Velo mismo. La esencia cosechada fluye como memoria invisible, inestable y ávida de ser moldeada."
+
+
+

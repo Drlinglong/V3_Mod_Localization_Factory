@@ -1,0 +1,22 @@
+﻿l_korean:
+ DECISION_TOOLTIP_FORMAT:1 "#header $NAME$#!\n$TOOLTIP_DELIMITER$\n$TRIGGER_SUMMARY$\n\nWhen taken:\n$EFFECT_SUMMARY$"
+
+ build_railways:0 "철도 건설"
+ build_railways_desc:0 "모든 곳에 충분한 철도를 건설하여 시장 접근성을 완벽하게 확보합니다."
+ build_railways_tooltip:0 "더 많은 철도를 건설하려면 클릭하십시오."
+ build_administrations:0 "정부 행정 청사 건설"
+ build_administrations_desc:0 "모든 곳에 충분한 정부 행정 청사를 건설하여 조세 역량을 완벽하게 확보합니다"
+ build_administrations_tooltip:0 "더 많은 정부 행정 청사를 건설하려면 클릭하십시오."
+ 
+ tooltip_buildrailwaysx:0 "#header 시장 접근 최대화 #!\n$TOOLTIP_DELIMITER$\n시장 접근을 최대화하기 위해 건설 대기열에 필요한 만큼 철도를 추가하려면 이 버튼을 클릭하세요."
+ tooltip_buildrailwaysxx:0 "#header 시장 접근성 극대화 #!\n$TOOLTIP_DELIMITER$\n#red #italic #bold #gold 철도#! [GetPlayer.GetName]이(가) 아직 조사하지 않았습니다."
+ tooltip_buildrailways:0 "[GetPlayer.GetCustom('researchedrailwayscustom')]"
+ tooltip_govadm:0 "#header 과세 능력 최대화 #!\n$TOOLTIP_DELIMITER$\n통합된 주에서 과세 능력을 최대화하기 위해 필요한 만큼 정부 관리 건물을 건설 대기열에 추가하려면 이 버튼을 클릭하세요."
+ 
+ build_powerplants:0 "발전소 건설"
+ build_powerplants_desc:0 "모든 곳에 충분한 발전소를 건설하여 전력 수요를 완벽하게 충족합니다"
+ build_powerplants_tooltip:0 "더 많은 발전소를 건설하려면 클릭하십시오"
+
+ tooltip_buildpowerplantsx:0 "#header Build Power Plants #!\n$TOOLTIP_DELIMITER$\nAdds just enough power plants everywhere to cover the electricity demand."
+ tooltip_buildpowerplantsxx:0 "#header Build Power Plants #!\n$TOOLTIP_DELIMITER$\n#red #italic #bold #gold Electrical Generation#! has not yet been researched by [GetPlayer.GetName]"
+ tooltip_buildpowerplants:0 "[GetPlayer.GetCustom('researchedelectriccustom')]"

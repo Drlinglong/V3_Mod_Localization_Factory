@@ -1,0 +1,78 @@
+﻿l_simp_chinese:
+##################
+# hcp_megastructures_l_english.yml
+# By jam1066
+##################
+
+ #start
+
+ ####################
+ # Singularity Silo #
+ ####################
+ hcp_singularity_silo:"奇点筒仓"
+ hcp_requires_no_existing_singularity_silo:"$TRIGGER_FAIL$无法建造多个$hcp_singularity_silo$。"
+ hcp_requires_stable_system:"$TRIGGER_FAIL$本星系中有太多§Y$pc_black_hole$s§!。"
+
+ hcp_singularity_silo_1:"$hcp_singularity_silo$：容量25%"
+ hcp_singularity_silo_1_DESC:"这个$hcp_singularity_silo$是终极储存设施。尽管它尚未完全建成，但已能容纳海量资源。"
+ hcp_singularity_silo_1_MEGASTRUCTURE_DETAILS:"一个利用§Y黑洞§!无限容量建造的巨型储存设施。"
+
+ hcp_singularity_silo_2:"$hcp_singularity_silo$：容量50%"
+ hcp_singularity_silo_2_DESC:"这个$hcp_singularity_silo$是终极储存设施。尽管它尚未完全建成，但已能容纳海量资源。"
+ hcp_singularity_silo_2_MEGASTRUCTURE_DETAILS:"一个利用§Y黑洞§!无限容量建造的巨型储存设施。"
+
+ hcp_singularity_silo_3:"$hcp_singularity_silo$：容量75%"
+ hcp_singularity_silo_3_DESC:"这个$hcp_singularity_silo$是终极储存设施。尽管它尚未完全建成，但已能容纳海量资源。"
+ hcp_singularity_silo_3_MEGASTRUCTURE_DETAILS:"一个利用§Y黑洞§!无限容量建造的巨型储存设施。"
+
+ hcp_singularity_silo_4: "$hcp_singularity_silo$"
+ hcp_singularity_silo_4_DESC:"竣工的$hcp_singularity_silo$是我们文明成就的巅峰。它能够容纳我们全部的人口，并可无限期储存维持其所需的资源。"
+ hcp_singularity_silo_4_MEGASTRUCTURE_DETAILS:"一个利用§Y黑洞§!无限容量建造的巨型储存设施。"
+
+ hcp_NAME_Sanctuary_A:"避难所A"
+ hcp_NAME_Sanctuary_B:"避难所B"
+ hcp_NAME_Sanctuary_C:"避难所C"
+ hcp_NAME_Sanctuary_D:"避难所D"
+
+ # Districts
+ hcp_district_ring_world_minerals:"萃取区段"
+ hcp_district_ring_world_minerals_plural:"$hcp_district_ring_world_minerals$s"
+ hcp_district_ring_world_minerals_desc:"巨型萃取装置从环世界段伸向奇点筒仓，开采所需矿物。"
+
+ #Zones
+ hcp_zone_minerals_ring_world: "$zone_minerals$"
+ hcp_zone_minerals_ring_world_desc: "$zone_minerals_triggered_desc$"
+
+ #Decisions
+ hcp_decision_expand_sanctuary:"扩建避难所"
+ hcp_decision_expand_sanctuary_desc:"扩建我们奇点筒仓避难所的宜居区域。"
+ hcp_decision_repair_sanctuary:"修复避难所"
+ hcp_decision_repair_sanctuary_desc:"这个避难所对我们的人口至关重要。我们必须尽力将其修复。"
+ hcp_decision_unshield_sanctuary:"移除避难所护盾"
+ hcp_decision_unshield_sanctuary_desc:"这个避难所对我们的人口至关重要。无论付出何种代价，我们都必须撤下这个护盾。"
+
+ ####################
+ # Orbital Quarrier #
+ ####################
+ hcp_orbital_quarrier:"轨道采石者"
+ hcp_orbital_quarrier_DESC:"这个$hcp_orbital_quarrier$正在拆解它所环绕的行星。"
+ hcp_orbital_quarrier_MEGASTRUCTURE_DETAILS:"一个能够拆解整颗行星的大型轨道采矿站。"
+
+ hcp_requires_not_capital:"$TRIGGER_FAIL$无法在首都周围建造"
+ hcp_requires_not_gas_giant:"$TRIGGER_FAIL$无法在气态巨行星周围建造"
+ hcp_requires_no_deposit:"$TRIGGER_FAIL$无法在带有轨道矿藏的行星上建造"
+ hcp_requires_min_size:"$TRIGGER_FAIL$无法在小型行星和小行星上建造"
+
+ ######################
+ # Stellar Harvesters #
+ ######################
+ hcp_stellar_harvester_prototype:"$hcp_NAME_Stellar_Harvester$原型机"
+ hcp_stellar_harvester_prototype_DESC:"一个§Y$hcp_NAME_Stellar_Harvester$§!是一艘巨型无人机控制舰，能够收割整个恒星系的资源。"
+ hcp_stellar_harvester_prototype_MEGASTRUCTURE_DETAILS:"我们无法对收集的资源挑三拣四。$hcp_NAME_Stellar_Harvester$s将使我们能够高效地掠夺一切。"
+
+ hcp_stellar_harvester: "$hcp_NAME_Stellar_Harvester$"
+ hcp_stellar_harvester_DESC:"一个§Y$hcp_NAME_Stellar_Harvester$§!是一艘巨型无人机控制舰，能够收割整个恒星系的资源。"
+ hcp_stellar_harvester_MEGASTRUCTURE_DETAILS:"我们无法对收集的资源挑三拣四。$hcp_NAME_Stellar_Harvester$s将使我们能够高效地掠夺一切。"
+ MEGASTRUCTURE_TOOLTIP_REQUIREMENTS_STELLAR_HARVESTER:"每个帝国只能在他们的$hcp_singularity_silo$轨道上建造一个$MEGASTRUCTURE$。"
+
+ #end

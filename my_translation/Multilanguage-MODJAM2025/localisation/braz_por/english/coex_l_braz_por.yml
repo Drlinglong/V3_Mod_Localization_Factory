@@ -1,0 +1,351 @@
+﻿l_braz_por:
+
+
+
+#Technology
+  coex_tech_brain_relay:"Projeção Hiperespaço"
+  coex_tech_brain_relay_desc:"A Projeção Hiperespaço alimenta os Relés Cerebrais. Usando uma forma recém-descoberta de tecnologia de eletroencefalograma, ela converte ideias em ondas cerebrais sintéticas."
+  COEX_TECH_UNLOCK_BRAIN_RELAY_TITLE:"§HDesbloqueia Megaestrutura:§! Relé Cerebral"
+  COEX_TECH_UNLOCK_BRAIN_RELAY_DESC:"O Relé Cerebral é uma megaestrutura que nos permite influenciar as mentes de espécies alienígenas. Ele afetará a colônia estrangeira mais próxima em até 10 saltos em um império que ainda não esteja sob o efeito de outro Relé Cerebral."
+
+  coex_brain_relay_tech_unlock_tt:"§YBenefício de Crise§!: §Y£physics£ $coex_tech_brain_relay$§!"
+  coex_psionic_theory_tech_unlock_tt:"§YBenefício de Crise§!: §Y£society£ $tech_psionic_theory$§!"
+
+
+
+
+#Crisis Levels
+  coex_crisis_coexistence_level_1:"§UPreocupação§!"
+  coex_crisis_coexistence_level_1_desc:"Nível de Crise 1"
+  coex_crisis_coexistence_level_2:"§URisco§!"
+  coex_crisis_coexistence_level_2_desc:"Nível de Crise 2"
+  coex_crisis_coexistence_level_3:"§UPerigo§!"
+  coex_crisis_coexistence_level_3_desc:"Nível de Crise 3"
+  coex_crisis_coexistence_level_4:"§UCalamidade§!"
+  coex_crisis_coexistence_level_4_desc:"Nível de Crise 4"
+  coex_crisis_coexistence_level_5:"§UAmeaça Existencial§!"
+  coex_crisis_coexistence_level_5_desc:"Nível de Crise 5"
+
+
+  coex_coexistence_level_2_req_clear_tooltip:"£trigger_yes£ Tem pelo menos um(a) §Y$coex_brain_relay_1$§!"
+  coex_coexistence_level_2_req_tooltip:"£trigger_no£ Não tem pelo menos um(a) §Y$coex_brain_relay_1$§!"
+
+  coex_coexistence_level_3_req_clear_tooltip:"£trigger_yes£ Construiu o(a) §Y$coex_enlightenment_array_0$§!"
+  coex_coexistence_level_3_req_tooltip:"£trigger_no£ Não construiu o(a) §Y$coex_enlightenment_array_0$§!"
+
+  coex_coexistence_level_4_req_clear_tooltip:"£trigger_yes£ Construiu o(a) §Y$coex_enlightenment_array_2$§!"
+  coex_coexistence_level_4_req_tooltip:"£trigger_no£ Não construiu o(a) §Y$coex_enlightenment_array_2$§!"
+
+  coex_coexistence_level_5_req_tooltip:"£trigger_no£ Não concluiu o Projeto Especial §Y$coex_enlightenment_array_3$§!"
+  coex_coexistence_level_5_req_clear_tooltip:"£trigger_no£ Não concluiu o Projeto Especial §Y$coex_enlightenment_array_3$§!"
+
+  COEX_CRISIS_SPECIAL_PROJECT_4:"Ativar a Matriz"
+  COEX_CRISIS_SPECIAL_PROJECT_4_DESC:"Devemos preparar a Matriz da Iluminação para começar a influenciar a vida em escala galáctica."
+
+
+
+###Crisis UI
+
+#Mental Authority
+
+  coex_mental_authority:"Autoridade Mental"
+  coex_mental_authority_name:"$coex_mental_authority$:"
+  coex_mental_authority_value:"£coex_mental_authority£ $VAL|0$"
+  coex_mental_authority_gaining:"Conclua os §HObjetivos de Crise§! para ganhar mais £coex_mental_authority£ §YAutoridade Mental§!."
+  coex_mental_authority_desc:"Autoridade Mental mede nossa compreensão dos segredos mais profundos do universo."
+  coex_mental_authority_crisis_objective:"Objetivos de Crise"
+  coex_mental_authority_crisis_objective_gained:"Autoridade Mental obtida"
+  coex_mental_authority_crisis_objective_reward: "$REWARD$"
+  coex_mental_authority_crisis_objective_progress:"Ganhamos £coex_mental_authority£ $AMOUNT$ com este Objetivo de Crise."
+  coex_mental_authority_crisis_level_locked:"Necessário para desbloquear este nível:\n"
+  coex_mental_authority_crisis_level_unlocked:"No $LEVEL$, você recebe as recompensas:\n"
+  coex_mental_authority_crisis_level_desc:"Para avançar pelos níveis de Crise, acumule Autoridade Mental e pesquise as Tecnologias Especiais de Crise."
+  coex_mental_authority_crisis_level_unlock:"Tem £coex_mental_authority£ §Y$CURRENCY$§! de Autoridade Mental"
+  coex_mental_authority_current_value:"Valor Atual: §Y$VALUE|0$§!"
+  coex_mental_authority_crisis_description_title:"Protocolo de Coexistência"
+
+#Ascension Perk
+  coex_ap_coexistence_protocol:"Protocolo de Coexistência"
+  coex_ap_coexistence_protocol_desc:"O caos da individualidade é insustentável. Devemos ser nós a trazer paz duradoura, e a paz só pode vir do controle."
+  coex_no_other_crisis:"Outro império já iniciou o Protocolo de Coexistência"
+
+
+#Crisis Objectives
+  coex_crisobj_brain_relays_name:"Controlar Retransmissores Cerebrais (Mensal)"
+  coex_crisobj_brain_relays_desc:"Paz em larga escala exige engenhosidade e coerção."
+
+  coex_crisobj_espionage_name:"Conduzir Operações de Crise"
+  coex_crisobj_espionage_desc:"A espionagem nos permite compreender nossos potenciais inimigos."
+
+  coex_crisobj_have_vassals_name:"Ter Vassalos (Anual)"
+  coex_crisobj_have_vassals_desc:"A vassalização alinha interesses em prol da paz. O pequeno sacrifício da individualidade liberta mentes para o futuro."
+
+  coex_crisobj_vassalise_empires_name:"Subjugar Impérios"
+  coex_crisobj_vassalise_empires_desc:"Cada império que se alinha nos aproxima da paz."
+
+  coex_crisobj_galcom_surveillance_resolution_name:"Garantir Assistência da Comunidade Galáctica (Anual)"
+  coex_crisobj_galcom_surveillance_resolution_desc:"Aprovar as resoluções de §YVigilância Burocrática§!"
+
+#Menace perks
+
+  menp_coex_techs_1:"Teoria Psiônica"
+  coex_unlocks_techs_1:"Adiciona Teoria Psiônica como uma opção de pesquisa"
+  menp_coex_techs_1_desc:"Nossa pesquisa da mente nos levou a aplicações mais sobrenaturais."
+
+  menp_coex_mega_1:"Engenharia Social I"
+  coex_unlocks_mega_1:"Desbloqueia a Tecnologia de Projeção Hiperespaço"
+  menp_coex_mega_1_desc:"Uma estrutura que nos permitirá projetar nossa vontade sobre alienígenas por toda a galáxia."
+
+  menp_coex_operations_1:"Pacifismo Obrigatório"
+  coex_unlocks_operations_1:"Desbloqueia uma operação de espionagem para forçar uma trégua com um império afetado por retransmissores"
+  menp_coex_operations_1_desc:"Esses tolos iriam à guerra por qualquer coisa. Não permitiremos tal comportamento frívolo."
+
+  menp_coex_infiltration_1:"Fabricação de Confiança"
+  menp_coex_infiltration_1_desc:"Agora temos maneiras de tornar os outros mais... sugestionáveis."
+
+  menp_coex_mega_2:"Engenharia Social II"
+  coex_unlocks_mega_2:"§HDesbloqueia Megaestrutura:§! $coex_enlightenment_array_0$\n"
+  menp_coex_mega_2_desc:"Os Retransmissores Cerebrais não são suficientes. Devemos torná-los mais poderosos."
+
+
+  menp_coex_features_2:"Novas Técnicas"
+  menp_coex_features_2_desc:"Agora temos uma compreensão mais profunda da cognição do que qualquer um antes de nós."
+
+  menp_coex_operations_2:"Permissões Flexíveis"
+  coex_unlocks_operations_2:"Desbloqueia uma operação para instalar um Retransmissor Cerebral no império-alvo."
+  menp_coex_operations_2_desc:"O controle mental, mesmo limitado, nos proporciona muitas vantagens."
+
+  menp_coex_mega_3:"Engenharia Social III"
+  coex_unlocks_mega_3:"§HDesbloqueia Nível de Megaestrutura:§! $coex_enlightenment_array_2$\n"
+  menp_coex_mega_3_desc:"Devemos continuar nosso trabalho no Array do Iluminismo se quisermos ter paz."
+
+
+  menp_coex_codebreaking_3:"Aplicações de Inteligência"
+  menp_coex_codebreaking_3_desc:"Nossos agentes estão equipados com tecnologia que permite que outros os ignorem ou acreditem em cada palavra deles."
+
+  menp_coex_diplomacy_3:"Diplomacia Avançada"
+  menp_coex_diplomacy_3_desc:"Se eles não nos ouvirem, nós os forçaremos."
+
+  menp_coex_mega_4:"Engenharia Social IV"
+  coex_unlocks_mega_4:"§HDesbloqueia Nível de Megaestrutura:§! $coex_enlightenment_array_3$\n"
+  menp_coex_mega_4_desc:"Nosso Array nos serviu bem até agora, mas seu potencial total ainda não foi realizado."
+
+  menp_coex_operations_4:"Controle Necessário"
+  coex_unlocks_operations_4:"Desbloqueia uma operação para subjugar um império afetado por relés"
+  menp_coex_operations_4_desc:"Nenhum indivíduo pode ser confiado. Devemos trazer todos para o nosso controle."
+
+  menp_coex_features_5:"Batalha de Inteligências"
+  menp_coex_features_5_desc:"Apesar de tudo que fizemos por eles, eles ainda não entendem. Se há algo pelo que vale a pena lutar, é a paz."
+
+  menp_coex_enlightenment_5:"Grande Iluminação"
+  coex_unlocks_enlightenment_5:"Começa a ativar o Array da Iluminação, lavando o cérebro de toda a vida inteligente e vencendo o jogo!"
+  menp_coex_enlightenment_5_desc:"É o único caminho. Finalmente, o Array acabará com a discórdia e o conflito."
+
+  enlightened_galaxy_score:"Iluminou a galáxia"
+
+
+
+
+#Megastructures
+  coex_enlightenment_array_0_MEGASTRUCTURE_DETAILS:"O Array da Iluminação consiste em uma unidade de processamento central cuboide com aletas anexadas que se comunicam e focam os sinais dos Relés Cerebrais auxiliares. Juntos, eles concederão, eventualmente, o controle total da galáxia."
+  coex_enlightenment_array_0:"Estrutura do Array da Iluminação"
+  coex_enlightenment_array_0_DESC:"Esta estrutura abriga os componentes centrais do Array da Iluminação"
+  coex_enlightenment_array_1:"Aletas Focais do Array da Iluminação"
+  coex_enlightenment_array_1_DESC:"Estas aletas se comunicam diretamente e fortalecem nossos Relés Cerebrais."
+  coex_enlightenment_array_2:"Centro de Controle do Array da Iluminação"
+  coex_enlightenment_array_2_DESC:"O centro de controle fortemente defendido é onde emitiremos comandos através do Array,"
+  coex_enlightenment_array_3:"Array da Iluminação"
+  coex_enlightenment_array_3_DESC:"O Array da Iluminação é capaz de transmitir sinais por toda a galáxia e em breve nos concederá o controle de toda a vida inteligente."
+  allow_coex_brain_relay:"§HDesbloqueia Megaestrutura:§! Relé Cerebral"
+  coex_brain_relay_0:"Sítio de Relé Cerebral"
+  coex_brain_relay_0_DESC:"A estação do sítio de construção serve como base para a futura construção de um Relé Cerebral."
+  coex_brain_relay_0_MEGASTRUCTURE_DETAILS:"Um Relé Cerebral, capaz de influenciar as mentes de todas as espécies inteligentes. Afetará a colônia estrangeira mais próxima dentro de 10 saltos em um império que ainda não esteja sob o efeito de outro Relé Cerebral."
+  coex_brain_relay_1:"Relé Cerebral"
+  coex_brain_relay_1_DESC:"Este Relé Cerebral nos permite influenciar mentes alienígenas."
+
+
+  coex_brain_relay_no_federation_0:"Sítio de Relé Cerebral"
+  coex_brain_relay_no_federation_0_DESC:"A estação do sítio de construção serve como base para a futura construção de um Relé Cerebral."
+  coex_brain_relay_no_federation_0_MEGASTRUCTURE_DETAILS:"Um Relé Cerebral, capaz de influenciar as mentes de todas as espécies inteligentes. Afetará a colônia estrangeira mais próxima dentro de 10 saltos em um império que ainda não esteja sob o efeito de outro Relé Cerebral"
+  coex_brain_relay_no_federation_1:"Relé Cerebral"
+  coex_brain_relay_no_federation_1_DESC:"Este Relé Cerebral nos permite influenciar mentes alienígenas."
+
+  mod_coex_brain_relay_megastructures_produces_mult:"£coex_mental_authority£ $coex_mental_authority$ de Relés Cerebrais"
+  coex_brain_relay_megastructures:"Relés Cerebrais"
+
+  #Espionage
+  coex_operation_need_brain_relay:"Esta operação requer que o alvo esteja sob a influência de um Relé Cerebral."
+
+
+  coex_operation_force_truce:"Forçar Trégua"
+  coex_operation_force_truce_desc:"Força uma trégua com o império alvo"
+  coex_operation_force_truce_on_success:"$IF_SUCCESSFUL|E$\nConcede uma trégua de 10 anos entre nós e o alvo."
+  #Force truce
+  coex_operation.101.name:"Forçar Trégua"
+  coex_operation.101.desc:"Colocamos líderes militares-chave sob o efeito do nosso Relé Cerebral."
+  coex_operation.102.name:"Forçar Trégua"
+  coex_operation.102.desc:"Nossos operativos plantaram várias formas de propaganda pró-paz em todo §Y[Target.GetName]§!."
+  coex_operation.103.name:"Forçar Trégua"
+  coex_operation.103.desc:"Os líderes militares estão persuadindo o governo central a promover a paz entre nós."
+  coex_operation.104.name:"Forçar Trégua"
+  coex_operation.104.desc:"Eles concordaram com uma trégua incondicional pelos próximos 10 anos. Haverá paz."
+
+  coex_operation_build_relay:"Instalar Relé Cerebral"
+  coex_operation_build_relay_desc:"Expandiremos nosso alcance através da construção de um novo Relé Cerebral."
+  coex_operation_build_relay_on_success:"$IF_SUCCESSFUL|E$\nObtenha controle de um sistema não utilizado no império do alvo e inicie a construção de um Relé Cerebral."
+  coex_operation.301.name:"Instalar Relé Cerebral"
+  coex_operation.301.desc:"Nosso [GetEnvoy] chegou para iniciar a discussão sobre um novo projeto de construção."
+  coex_operation.302.name:"Instalar Relé Cerebral"
+  coex_operation.302.desc:"Com eloquência e recursos visuais bem elaborados, nosso [GetEnvoy] apresentou a ideia de construir um satélite para aumentar a eficácia da comunicação em toda a galáxia."
+  coex_operation.303.name:"Instalar Relé Cerebral"
+  coex_operation.303.desc:"Sem desconfiar, eles concordaram em nos permitir construir um Relé Cerebral em seu império. Precisaremos encontrar um sistema adequado."
+  coex_operation.310.name:"Relé Instalado"
+  coex_operation.310.desc:"Negociamos com sucesso o controle administrativo de um sistema sem importância e iniciamos a construção de um Relé Cerebral."
+  coex_operation.311.name:"Operação Falhou"
+  coex_operation.311.desc:"Não conseguimos encontrar nenhum sistema adequado para um Relé Cerebral. Podemos tentar novamente mais tarde."
+  coex_operation.320.name:"Satélite Instalado"
+  coex_operation.320.desc:"Concordamos em permitir que §Y[Root.Owner.GetName]§! construa um satélite de comunicações em um sistema inconsequente para melhorar a comunicação galáctica."
+
+
+  coex_operation_encourage_subjugation:"Obter Fidelidade"
+  coex_operation_encourage_subjugation_desc:"Nós os persuadiremos a aceitar nosso domínio."
+  coex_operation_encourage_subjugation_on_success:"$IF_SUCCESSFUL|E$\nSubjugar o império alvo."
+  coex_operation.401.name:"Obter Fidelidade"
+  coex_operation.401.desc:"O Relé Cerebral identificou §Y[coex_subjugation_target_leader.Owner.GetAdj] [coex_subjugation_target_leader.GetTitle] [coex_subjugation_target_leader.GetName]§! como um alvo promissor para manipulação."
+  coex_operation.402.name:"Obter Fidelidade"
+  coex_operation.402.desc:"§Y[coex_subjugation_target_leader.GetTitle] [coex_subjugation_target_leader.GetName]§! compreende a força do nosso império e os benefícios de se juntar a nós."
+  coex_operation.403.name:"Obter Fidelidade"
+  coex_operation.403.desc:"Com a ajuda de [coex_subjugation_target_leader.GetName] e do nosso Relé, um movimento popular irrompeu em seu império exigindo que o governo se submeta ao nosso império."
+
+  coex_operation.411.name:"Proposta de Subjugação"
+  coex_operation.411.desc:"Recentemente, uma nova campanha surgiu. Seus membros afirmam que somos muito fracos para sobreviver por conta própria, e que estaríamos melhor como vassalos de §Y[coex_subjugator.GetName]§!. As origens deste movimento são desconhecidas, e não está claro se houve jogo sujo envolvido."
+  coex_operation.411.a:"Resistir à Subjugação"
+  coex_operation.411.b:"Aceitar Subjugação"
+
+  coex_operation_subject:"Não pode ser súdito de outro império"
+
+#Events
+  coexistence_chain:"Protocolo de Coexistência"
+  coexistence_chain_title:"Protocolo de Coexistência"
+  coexistence_chain_desc:"O caos da individualidade é insustentável. Traremos paz duradoura através do controle."
+  coexistence_level_reached:"Nível de Crise Atingido"
+
+  coex_crisis.3001.desc.target:"Nosso Relé está influenciando com sucesso o §Y[coex_relay_target.GetName]§!."
+  coex_crisis.3001.desc.no_target:"Nenhuma colônia estrangeira dentro do alcance do Relé Cerebral."
+  coex_crisis.3001.name:"Releitor Construído"
+
+
+
+
+  
+
+
+  # requires_fewer_than_x_brain_relays: "You cannot build more Cerebral Relays"
+
+  coex_crisis.1000.name:"Nível de Crise 1"
+  coex_crisis.1000.desc:"Em nosso estado atual de natureza animal individual, a guerra e a violência são inevitáveis. Somente através da conformidade mandatória pode-se alcançar a verdadeira paz. Dominamos a agricultura e a exploração, a ciência e a conquista; agora devemos voltar nosso foco para o domínio de nossa própria paz. Releitores Cerebrais pavimentarão o caminho para um novo futuro onde poderemos usar nossas mentes para o bem, e deixar repousar a parte de nós mesmos que cria mal-entendidos violentos."
+  coex_crisis.1000.a:"O futuro é a paz."
+
+  coex_crisis.7105.name:"Nível de Crise 2"
+  coex_crisis.7105.desc:"À medida que continuamos nossa busca pela paz, sabemos que devemos tomar decisões difíceis para o bem maior. Nossos Releitores Cerebrais estão ativos e realizando o árduo trabalho do progresso futuro. Construímos a elegante tecnologia do Arranjo do Iluminismo para aumentar a força dos Releitores. À medida que outros impérios caem sob seu efeito, a paz se espalha como o nascer do sol sobre um mundo adormecido. Não buscamos conquistar, mas unir. Como apontar uma lanterna para um canto escuro, iluminamos os confins da galáxia removendo as sombras."
+  coex_crisis.7105.a:"Que haja luz."
+
+  coex_crisis.7110.name:"Nível de Crise 3"
+  coex_crisis.7110.desc:"Atualizamos agora o já impressionante Arranjo do Iluminismo. Isso marca um momento chave em nossa missão de garantir uma paz duradoura. Através das suaves sugestões do pensamento, a violência é substituída pela harmonia e quietude que nosso mundo tão desesperadamente precisa. Esta paz, engenhosamente criada e duradoura, liberta a sociedade do caos da individualidade indisciplinada. Com cada mente alienígena trazida para o alinhamento, nos aproximamos do futuro que imaginamos."
+  coex_crisis.7110.a:"A harmonia do acordo é bela."
+
+  coex_crisis.7115.name:"Nível de Crise 4"
+  coex_crisis.7115.desc:"Nosso Arranjo do Iluminismo foi atualizado mais uma vez. Aumentamos nosso poder e agora podemos dobrar impérios inteiros em direção ao nosso benevolente objetivo de paz galáctica."
+  coex_crisis.7115.a:"Lideramos com benevolência."
+
+  coex_crisis.7120.name:"Nível de Crise 5"
+  coex_crisis.7120.desc:"As atualizações finais foram concluídas. Nosso Arranjo do Iluminismo começa a visar toda a vida na galáxia. Estamos perto de nosso objetivo, mas precisamos permanecer vigilantes. Outros impérios, cautelosos com a mudança e a possibilidade, podem começar a se preocupar."
+  coex_crisis.7120.a:"O conflito final está próximo."
+
+  coex_crisis.7200.name:"Releitor Cerebral Capturado"
+  coex_crisis.7200.desc:"Capturamos um Releitor Cerebral construído pelos §Y[coex_relay_builders.GetName]§!. Destruí-lo libertará o império afetado de sua influência."
+  coex_crisis.7200.A:"Deve ser destruído"
+  coex_crisis.7210.name:"Releitor Cerebral Destruído"
+  coex_crisis.7210.desc:"Um Releitor Cerebral construído pelos §Y[coex_relay_builders.GetName]§! foi destruído. Livres de sua influência, agora vemos quão facilmente fomos manipulados."
+  coex_crisis.7210.b:"Isso é imperdoável."
+  coex_crisis.7210.a:"Teremos nossa vingança."
+
+  coex_crisis.7220.name:"Releitor Cerebral Destruído"
+  coex_crisis.7220.desc:"Nosso Releitor Cerebral no §Y[coex_destroyed_relay_system.GetName]§! foi destruído. O império afetado está agora livre de sua influência."
+  coex_crisis.7220.a:"Lamentável."
+  coex_crisis.7300.name:"O Arranjo do Iluminismo"
+  coex_crisis.7300.desc:"Chegou a hora. Devemos iniciar os preparativos para disparar o Arranjo do Iluminismo e controlar os indivíduos indisciplinados que compõem esta galáxia."
+
+
+
+
+
+
+
+
+###Operations
+
+
+
+
+  coex_operation_already_attempted_subjugation:"Esta operação já foi tentada neste império."
+
+  coex_affected_by_brain_relay_0:"Afetado pelo Releitor Cerebral (Estágio 1)"
+  coex_affected_by_brain_relay_1:"Afetado pelo Releitor Cerebral (Estágio 2)"
+  coex_affected_by_brain_relay_2:"Afetado pelo Releitor Cerebral (Estágio 3)"
+  coex_affected_by_brain_relay_3:"Afetado pelo Releitor Cerebral (Estágio 4)"
+
+
+  coex_brain_relay_removed:"Liberto do Releitor Cerebral"
+
+  # mod_coex_brain_relay_limit_add: "REPLACE_ME"
+  
+  coex_approach_continue:"Continuar"
+  coex_approach_continue_effect:"Guiar a galáxia em direção ao iluminismo."
+
+
+
+#Situations
+  coex_situation_crisis_subjugation:"Subjugação Mental"
+  coex_situation_crisis_subjugation_type:"Subjugação Mental"
+  coex_situation_crisis_subjugation_desc:"Um grande grupo de nossa população exige que nos tornemos vassalos do §Y[coex_subjugator.GetName]§!. As origens deste movimento são desconhecidas, mas suspeitas."
+  coex_string_situation_pathetic:"Somos patéticos comparados ao império deles."
+  coex_string_situation_inferior:"Nosso império é inferior ao deles."
+  coex_string_situation_superior:"Nosso império é superior."
+  coex_string_situation_overwhelming:"Nosso império é esmagadoramente mais poderoso."
+  coex_situation_crisis_subjugation_monthly_change_tooltip:"O progresso desta §YSituação§! depende da §YAbordagem§! que escolhermos. Se ficarmos sem £influence£ Influência, não conseguiremos persuadir nossa população a resistir ao domínio [coex_subjugator.GetAdj]§!."
+  coex_situation_subjugation_subjugated_tooltip:"Subjugação"
+  coex_situation_subjugation_finish_tooltip:"Liberdade"
+  coex_approach_resist:"Resistir"
+  coex_approach_resist_effect:"Persuadir nossa população de que somos fortes por conta própria."
+  coex_approach_accept:"Aceitar"
+  coex_approach_accept_effect:"Submeter-se ao(à) §Y[coex_subjugator.GetName]§! é o melhor curso de ação."
+
+  coex_situation_crisis_enlightenment:"Iluminação Verdadeira"
+  coex_situation_crisis_enlightenment_type:"Iluminação Verdadeira"
+  coex_situation_crisis_enlightenment_desc:"Por fim, a Matriz de Iluminação está completa. Em breve a galáxia estará livre do caos da individualidade e da discórdia do desacordo. Somente nós podemos trazer a verdadeira paz à galáxia."
+  coex_situation_crisis_enlightenment_monthly_change_tooltip:"O progresso desta §YSituação§! depende de manter o controle da Matriz de Iluminação. Se a perdermos, o progresso cessará até que possamos retomar o controle."
+  coex_situation_enlightenment_tooltip:"Iluminação"
+  coex_approach_recover_array:"Recuperar Matriz de Iluminação"
+  coex_approach_recover_array_effect:"Devemos recuperar nossa Matriz de Iluminação."
+
+  coex_situation.103.name:"Subjugação Mental"
+  coex_situation.103.desc:"Fomos subjugados pelo(a) §Y[Owner.Overlord.GetName]§!. Agora está claro que este é o único caminho para nosso império."
+  coex_situation.104.name:"Subjugação Resistida"
+  coex_situation.104.desc:"Com grande esforço, resistimos à subjugação. Esta é uma grande vitória para nosso império."
+  coex_situation.104.a:"Não seremos derrotados tão facilmente"
+
+  
+  coex_situation.303.name:"Iluminação"
+  coex_situation.303.desc:"Fizemos o que ninguém conseguiu antes: alinhar a galáxia, encerrar o caos do pensamento individual, iluminar as massas através da sugestão mental e trazer uma paz duradoura."
+  coex_situation.303.a:"Finalmente, haverá verdadeira paz."
+  coex_situation.305.name:"Iluminação"
+  coex_situation.305.desc:"Agora somos parte de uma galáxia melhor. Por que sequer resistimos? A Matriz de Iluminação fez o impossível, e nos trouxe a todos paz e harmonia duradouras."
+  coex_situation.305.a:"Não..."
+
+
+  coex_situation.110.name:"Obter Fidelidade"
+  coex_situation.110.desc:"Subjugado(a) §Y[coex_subjugation_target.GetName]§!."
+  coex_situation.111.name:"Obter Fidelidade"
+  coex_situation.111.desc:"§Y[coex_subjugation_target.GetName]§! resistiu à subjugação."
+

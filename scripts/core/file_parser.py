@@ -46,23 +46,22 @@ except Exception as e:  # pragma: no cover – hook opcjonalny
     print(f"[parser-hook] ⚠️  Failed to load hooks: {e}")
 
 
-
 def extract_translatable_content(
     file_path: str,
 ) -> tuple[list[str], list[str], dict[int, dict]]:
     """
     Extracts translatable texts from a single .yml file or a .txt file
-    from a customizable_localization directory.
+    from a customizable_localization directory, now with improved filtering.
 
     Returns:
         original_lines (list[str]): The original lines of the file.
-        texts_to_translate (list[str]): A list of strings to be translated, in order of appearance.
+        texts_to_translate (list[str]): A list of strings to be translated.
         key_map (dict): A map to reconstruct the file: {index: {key_part, original_value_part, line_num}}.
     """
     rel_path = os.path.relpath(file_path)
     print(i18n.t("parsing_file", filename=rel_path))
 
-    # 1) Read file lines with a fallback to cp1252 for unexpected encodings
+    # 1) Read file lines with a fallback to cp1252 for unexpected encodings.
     try:
         with open(file_path, "r", encoding="utf-8-sig") as f:
             original_lines = f.readlines()
@@ -73,13 +72,13 @@ def extract_translatable_content(
     texts_to_translate: list[str] = []
     key_map: dict[int, dict] = {}
 
-    # Check if this is a .txt file in a customizable_localization directory
+    # Check if this is a .txt file in a customizable_localization directory.
     is_txt = file_path.lower().endswith(".txt") and "customizable_localization" in file_path.replace("\\", "/")
 
     for line_num, line in enumerate(original_lines):
         stripped = line.strip()
 
-        # Common check: skip comments and empty lines
+        # Common check: skip comments and empty lines.
         if not stripped or stripped.startswith("#"):
             continue
 
@@ -102,30 +101,36 @@ def extract_translatable_content(
             )):
                 continue
 
-            # Split the line into key and value parts
+            # Split the line into key and value parts at the first colon.
             parts = stripped.split(":", 1)
             if len(parts) < 2:
                 continue
             key_part, value_part = parts[0], parts[1]
 
-            # Find the string within quotes "..." in the value part
+            # Find the string within quotes "..." in the value part.
             m = re.search(r'"(.*)"', value_part)
             if not m:
                 continue
             value = m.group(1)
 
-        # 【核心修正】Filter out placeholders like $VAL$ using the precise rule
+        # --- Filtering Logic ---
+
+        # 【核心修正 1】Filter out self-referencing keys (e.g., a_key: "a_key").
+        # We strip the key_part to get a clean key for comparison.
+        if key_part.strip() == value:
+            continue
+
+        # 【核心修正 2】Filter out pure variables (e.g., "$VAR$").
         is_pure_variable = False
         if value.startswith('$') and value.endswith('$'):
-            # If it starts and ends with '$', check the total count of '$'.
-            # Only if the count is exactly 2 is it a pure, non-translatable variable.
             if value.count('$') == 2:
                 is_pure_variable = True
 
+        # 【核心修正 3】Filter out pure variables AND empty values (e.g., key: "").
         if is_pure_variable or not value:
             continue
 
-        # Save the extracted text and its metadata to the lists
+        # Save the extracted text and its metadata to the lists.
         idx = len(texts_to_translate)
         texts_to_translate.append(value)
         key_map[idx] = {

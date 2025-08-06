@@ -1,0 +1,377 @@
+﻿## OTC Localisation
+# Created by Accorata & BrettlesSr
+
+l_spanish:
+
+## Crisis Resource ##
+  otc_temporal_fabric:"Tejido Temporal"
+  otc_temporal_fabric_with_icon:"£otc_temporal_fabric£ $otc_temporal_fabric$"
+  otc_temporal_fabric_name: "$otc_temporal_fabric$"
+  otc_temporal_fabric_value:"£otc_temporal_fabric£ $VAL|0$"
+  otc_temporal_fabric_current_value:"Valor Actual: §Y$VALUE|0$§!"
+  otc_temporal_fabric_gaining:"Completa §HObjetivos de Crisis§! para obtener más §Y$otc_temporal_fabric_with_icon$§!."
+  otc_temporal_fabric_desc:"El Tejido Temporal es tiempo hilado, el resultado de nuestras cronociencias más avanzadas."
+
+## Crisis Information ##
+# Ascension Perk
+  otc_ap_omnitemporal:"Omnitemporal"
+  otc_ap_omnitemporal_desc:"Durante milenios, nuestra especie ha sido arrojada a través del tiempo contra su voluntad. Ya no más. El tiempo se convertirá en una dimensión física más, transitable con facilidad."
+
+# Other
+  otc_temporal_fabric_crisis_objective:"Objetivos de Crisis"
+  otc_temporal_fabric_crisis_objective_gained:"$otc_temporal_fabric$ obtenidos"
+  otc_temporal_fabric_crisis_objective_reward: "$REWARD$"
+  otc_temporal_fabric_crisis_objective_progress:"Hemos obtenido £otc_temporal_fabric£ $AMOUNT$ de este Objetivo de Crisis."
+
+  otc_temporal_fabric_crisis_description_title:"Crisis $otc_ap_omnitemporal$"
+  otc_temporal_fabric_crisis_description:"$menace_crisis_description_intro$\n\nNuestra dominación del universo no puede ser restringida por las dimensiones ordinarias del espacio. En su lugar, conquistaremos el tiempo mismo y gobernaremos de forma suprema sobre cada línea temporal posible."
+  otc_temporal_fabric_crisis_howto_title:"Dominio del Tiempo"
+  otc_temporal_fabric_crisis_howto:"Perseguir §HObjetivos de Crisis§! genera §H$otc_temporal_fabric_with_icon$§!, lo que nos permitirá manipular el tiempo mismo."
+
+  otc_temporal_fabric_crisis_level_unlocked:"En el nivel $LEVEL$, obtienes las recompensas:\n"
+  otc_temporal_fabric_crisis_level_locked:"Requisitos para desbloquear este nivel:\n"
+  otc_temporal_fabric_crisis_level_unlock:"Tiene £otc_temporal_fabric£ §Y$CURRENCY$§! $otc_temporal_fabric$"
+  otc_temporal_fabric_crisis_level_desc:"Para avanzar a través de los niveles de Crisis, acumula §H$otc_temporal_fabric_with_icon$§!, completa §HAnomalías Temporales§!, y construye §H$otc_omnitemporal_kilostructure_plural$§!."
+
+## Crisis Objectives ##
+  otc_crisobj_physicist_production_name:"Emplear Físicos" # the amount here doesn't display properly - most likely a rounding issue
+  otc_crisobj_physicist_production_desc:"A través de sus estudios sobre el funcionamiento natural del universo, los secretos del tiempo están destinados a ser revelados, de una forma u otra.\n\nEmplea físicos para obtener esta recompensa de $otc_temporal_fabric$."
+  otc_crisobj_research_archeological_sites_name:"Excavar Yacimientos Arqueológicos"
+  otc_crisobj_research_archeological_sites_desc:"Debemos adentrarnos en el pasado y revelar su conocimiento ancestral.\n\nExcava completamente yacimientos arqueológicos para obtener esta recompensa de $otc_temporal_fabric$."
+  otc_crisobj_research_time_anomaly_name:"Investigar Anomalías Temporales"
+  otc_crisobj_research_time_anomaly_desc:"Estos enigmas operan fuera de nuestra comprensión del tiempo. Es imperativo que divulguemos sus secretos.\n\nInvestiga anomalías temporales para obtener esta recompensa de $otc_temporal_fabric$."
+  otc_crisobj_research_anomaly_name:0 "Investigar Anomalías"
+  otc_crisobj_research_anomaly_desc:0 "Cada misterio crea una oportunidad para el conocimiento, para comprender nuestro lugar en el pasado, presente y futuro.\n\nInvestiga anomalías para obtener esta recompensa de $otc_temporal_fabric$."
+  otc_crisobj_activate_relic_name:0 "Activar Reliquias"
+  otc_crisobj_activate_relic_desc:0 "Los instrumentos de eras pasadas siguen siendo potentes incluso hoy. Un uso adicional podría revelar la época de la que provienen.\n\nActiva reliquias para obtener esta recompensa de $otc_temporal_fabric$."
+
+## Crisis Levels ##
+  otc_crisis_omnitemporal_level_1:"§BPreocupación§!"
+  otc_crisis_omnitemporal_level_1_desc:"Nivel de Crisis 1"
+  otc_crisis_omnitemporal_level_2:"§BRiesgo§!"
+  otc_crisis_omnitemporal_level_2_desc:"Nivel de Crisis 2"
+  otc_crisis_omnitemporal_level_3:"§BPeligro§!"
+  otc_crisis_omnitemporal_level_3_desc:"Nivel de Crisis 3"
+  otc_crisis_omnitemporal_level_4:"§BCalamidad§!"
+  otc_crisis_omnitemporal_level_4_desc:"Nivel de Crisis 4"
+  otc_crisis_omnitemporal_level_5:"§BAmenaza Existencial§!"
+  otc_crisis_omnitemporal_level_5_desc:"Nivel de Crisis 5"
+
+## Crisis Perks ##
+# Level 1
+  menp_otc_omnitemporal_objectives: "$otc_temporal_fabric$"
+  menp_otc_omnitemporal_objectives_desc:"$otc_temporal_fabric$ representa nuestra habilidad para doblegar el tiempo a nuestra voluntad."
+  unlocks_otc_omnitemporal_objectives:"Permite la acumulación de §Y$otc_temporal_fabric_with_icon$§! al completar §HObjetivos de Crisis§!.\n\n"
+  mod_planet_physicists_otc_temporal_fabric_produces_add:"$otc_temporal_fabric_with_icon$ por $pop_group_unit$ $job_physicist_plural_with_icon$"
+
+  menp_otc_time_shields:"Suspensión Temporal"
+  menp_otc_time_shields_desc:"Los antiguos desarrollaron poderosas defensas que ralentizaban estratégicamente el tiempo para dispersar las armas entrantes. El tejido temporal ofrece una nueva forma de replicar estas propiedades."
+  unlocks_otc_time_shields:"Desbloquea Componentes de Escudo §Y$OTC_TIME_SHIELD$§!."
+  unlocks_otc_time_shields_bio:"Desbloquea Componentes de Escudo §Y$OTC_BIO_TIME_SHIELD$§!."
+  OTC_TIME_SHIELD:"Campo de Suspensión Avanzado"
+  OTC_TIME_SHIELD_DESC:"Los $OTC_TIME_SHIELD$ se modelan a partir de la antigua tecnología de suspensión que utilizaba artefactos ancestrales para ralentizar el tiempo en el punto de impacto, lo que otorgaba una oportunidad más larga para disipar la energía del ataque entrante. Con el poder del tejido temporal, estos diseños se han modernizado considerablemente."
+  OTC_SMALL_TIME_SHIELD:"$OTC_TIME_SHIELD$ Pequeño"
+  OTC_MEDIUM_TIME_SHIELD:"$OTC_TIME_SHIELD$ Mediano"
+  OTC_LARGE_TIME_SHIELD:"$OTC_TIME_SHIELD$ Grande"
+  OTC_BIO_TIME_SHIELD:"Tejido de Suspensión Avanzado"
+  OTC_BIO_TIME_SHIELD_DESC:"El $OTC_BIO_TIME_SHIELD$ se modela a partir de la antigua tecnología de suspensión que utilizaba artefactos ancestrales para ralentizar el tiempo en el punto de impacto, lo que otorgaba una oportunidad más larga para disipar la energía del ataque entrante. Con el poder del tejido temporal, estos diseños se han modernizado considerablemente."
+  OTC_SMALL_BIO_TIME_SHIELD:"$OTC_BIO_TIME_SHIELD$ Pequeño"
+  OTC_MEDIUM_BIO_TIME_SHIELD:"$OTC_BIO_TIME_SHIELD$ Mediano"
+  OTC_LARGE_BIO_TIME_SHIELD:"$OTC_BIO_TIME_SHIELD$ Grande"
+
+  menp_otc_secrets_of_the_past:"Secretos del Pasado"
+  menp_otc_secrets_of_the_past_desc:"Si queremos vislumbrar los mundos que alguna vez existieron, debemos empezar por las reliquias que quedan hoy. Los artefactos de lo que fue revelan lo que es y lo que será."
+  unlocks_otc_secrets_of_the_past:"Desbloquea la Decisión de Artefacto Menor §Y$artifact_otc_chronological_studies$§!, que utiliza £minor_artifacts£Artefactos Menores para crear una Anomalía Temporal.\n\n"
+  unlocks_otc_secrets_of_the_past_no_ancrel:"Emite el Proyecto Especial §Y$otc_chronological_studies_project$§!, que crea una Anomalía Temporal al completarse.\n\n$mod_scientist_exp_gain$: §G+20%§!"
+  otc_secrets_of_the_past_no_ancrel: "$menp_otc_secrets_of_the_past$"
+
+  # Minor Artifact Decision
+  artifact_otc_chronological_studies:"Estudios Cronológicos"
+  artifact_otc_chronological_studies_desc:"Nuestros mejores cronocientíficos desglosarán y examinarán artefactos menores en busca de cualquier pista de una anomalía temporal en su pasado."
+  artifact_otc_chronological_studies_effect:"Desglosa £minor_artifacts£Artefactos Menores para crear una Anomalía Temporal.\n\nEnfriamiento: £time£ §Y360§!"
+
+  requires_artifact_otc_chronological_studies_no_cooldown:"$TRIGGER_FAIL$§RAún no se pueden usar artefactos menores para crear otra anomalía temporal.§!"
+  artifact_otc_chronological_studies_cooldown:0 "Enfriamiento de Estudios Cronológicos"
+
+  # Special Project
+  otc_chronological_studies_project: "$artifact_otc_chronological_studies$"
+  otc_chronological_studies_project_desc:"Hemos encontrado una pista sobre una anomalía temporal, una rareza en el flujo normal del tiempo. Debemos dedicar recursos científicos a rastrearla."
+
+# Level 2
+  menp_otc_timeless_studies:"Estudios Atemporales"
+  menp_otc_timeless_studies_desc:"Los mejores lugares para estudiar las ciencias temporales se encuentran alrededor de agujeros negros y estrellas de neutrones, donde increíbles fuerzas gravitacionales someten el flujo ordinario del tiempo a desviaciones no vistas en ninguna otra parte del universo natural."
+
+  unlocks_otc_timeless_studies:"Nos permite construir Megaestructuras §Y$otc_omnitemporal_kilostructure$§! alrededor de §YAgujeros Negros§! y §YEstrellas de Neutrones§!.\n\n"
+
+  # Kilostructure
+  otc_omnitemporal_kilostructure:"Zona de Investigación Atemporal"
+  otc_omnitemporal_kilostructure_plural:"$otc_omnitemporal_kilostructure$s"
+  otc_atemporal_research_zone: "$otc_omnitemporal_kilostructure$"
+  otc_atemporal_research_zone_DESC:"Un emplazamiento clandestino sellado en el tiempo, esta instalación de investigación confidencial se dedica a experimentos peligrosos que producen §YAnomalías Temporales§!."
+  otc_atemporal_research_zone_MEGASTRUCTURE_DETAILS:"Un emplazamiento clandestino sellado en el tiempo, esta instalación de investigación confidencial se dedica a experimentos peligrosos que producen §YAnomalías Temporales§!."
+  MEGASTRUCTURE_TOOLTIP_REQUIREMENTS_OTC_ARZ:"Debe construirse en órbita de un Agujero Negro o una Estrella de Neutrones."
+  otc_atemporal_research_zone_effects:"Generará aleatoriamente §YAnomalías Temporales§! en varios objetos celestes dentro de tus fronteras.\n\nLa velocidad a la que se generan las Anomalías aumenta con el número de $otc_omnitemporal_kilostructure_plural$ que tengamos activos."
+  otc_requires_black_hole_or_neutron_star:"$TRIGGER_FAIL$Debe construirse alrededor de un $pc_black_hole$ o una $pc_neutron_star$."
+  otc_requires_less_than_x_arz:"$TRIGGER_FAIL$No podemos mantener más de [owner.OtcGetARZLimit] $otc_omnitemporal_kilostructure_plural$ a la vez"
+  mod_otc_arz_limit_add:"Capacidad de $otc_omnitemporal_kilostructure$"
+
+  menp_otc_weaponized_relativity:"Relatividad Armamentizada"
+  menp_otc_weaponized_relativity_desc:"Explosiones de cronotones especializadas pueden desgarrar naves enemigas en las cuatro dimensiones, pero también ralentizan el marco temporal del objetivo en relación con el nuestro, lo que otorga una ventaja táctica significativa."
+  unlocks_otc_weaponized_relativity:"Desbloquea Armas §Y$OTC_TIME_BEAM$§!, que disparan láseres que ralentizan Naves y Proyectiles Enemigos."
+  OTC_TIME_BEAM:"Rayo Eón"
+  OTC_TIME_BEAM_DESC:"El $OTC_TIME_BEAM$ proyecta ráfagas de cronotones que dañan las naves enemigas y ralentizan su marco de referencia."
+  OTC_SMALL_TIME_BEAM:"$OTC_TIME_BEAM$ Pequeño"
+  OTC_MEDIUM_TIME_BEAM:"$OTC_TIME_BEAM$ Mediano"
+  OTC_LARGE_TIME_BEAM:"$OTC_TIME_BEAM$ Grande"
+  otc_time_beam_1_tt:"Ralentiza las Naves Enemigas y sus Proyectiles en un §G25%§! durante §Y5§! Días"
+  otc_time_beam_2_tt:"Ralentiza las Naves Enemigas y sus Proyectiles en un §G25%§! durante §Y15§! Días"
+  otc_time_beam_3_tt:"Ralentiza las Naves Enemigas y sus Proyectiles en un §G25%§! durante §Y35§! Días"
+  otc_distorted_field:"Distorsión Temporal"
+  mod_weapon_type_energy_speed_mult:"Velocidad de Arma de Energía"
+  mod_weapon_type_kinetic_speed_mult:"Velocidad de Arma Cinética"
+  mod_weapon_type_explosive_speed_mult:"Velocidad de Arma Explosiva"
+  mod_weapon_type_point_defense_speed_mult:"Velocidad de Arma de Defensa Puntual"
+  mod_weapon_type_space_fauna_speed_mult:"Velocidad de Arma de Fauna Espacial"
+  mod_weapon_type_mandible_speed_mult:"Velocidad de Arma de Mandíbulas"
+
+  menp_otc_secrets_of_the_present:"Secretos del Presente"
+  menp_otc_secrets_of_the_present_desc:"El dominio de las ciencias temporales se ha convertido en la vocación principal de nuestra élite científica, revolucionando tanto el establecimiento académico como la práctica del trabajo exploratorio rutinario."
+
+  menp_otc_prolonged_lifespans:"Esperanzas de Vida Prolongadas"
+  menp_otc_prolonged_lifespans_desc:"Al ralentizar el envejecimiento biológico mediante una cuidadosa manipulación temporal, nuestros líderes pueden disfrutar de vidas más largas y productivas."
+  menp_otc_prolonged_lifespans_machine_desc:"Al ralentizar el índice de desgaste mecánico mediante una cuidadosa manipulación temporal, nuestros líderes pueden disfrutar de vidas más largas y productivas."
+
+# Level 3
+  menp_otc_across_timelines:"A Través de Líneas Temporales"
+  menp_otc_across_timelines_desc:"El tiempo no es una línea recta; es un universo ramificado, una matriz infinita de líneas temporales. Ahora, por fin, la tecnología para alcanzarlas está a nuestro alcance."
+  unlocks_otc_across_timelines:"Desbloquea la Tecnología §Y$tech_otc_travel_timelines$§!, lo que conducirá a Anomalías Temporales más impactantes.\n\n"
+
+  # Tech
+  tech_otc_travel_timelines:"Viajar a Líneas Temporales"
+  tech_otc_travel_timelines_desc:"Por fin podemos viajar a otras líneas temporales, lo que nos permite acceder a universos potencialmente infinitos y crear anomalías temporales más poderosas que podemos aprovechar en nuestro beneficio."
+  tech_otc_travel_timelines_effects_title:"Pueden ocurrir §HAnomalías Temporales§! más impactantes\nDesbloquea la Crisis §H$otc_ap_omnitemporal$§! §HNivel 4§!"
+  tech_otc_travel_timelines_effects_desc:"§H$tech_otc_travel_timelines$§!\n$tech_otc_travel_timelines_desc$"
+
+  menp_otc_temporal_shell:0 "Cáscara Temporal"
+  sm_otc_temporal_shell:0 "Generador de Cáscara Temporal"
+  sm_otc_temporal_shell_desc:0 "El Generador de Cáscara Temporal es un motor masivo de manipulación del espaciotiempo, capaz de ralentizar el ritmo del flujo del tiempo en todo un sistema solar. Si bien los cuerpos en pozos de gravedad, como los hábitats y nuestros propios planetas, no se ven afectados, las naves espaciales de todos los tamaños y las armas que disparen pueden ser ralentizadas sustancialmente."
+  sm_otc_temporal_shell_desc_modifier:0 "Crea una §YTorménta Artificial§! en el sistema:\nReduce la §YVelocidad de Nave§! y la §YCadencia de Fuego§!"
+  menp_otc_temporal_shell_desc:0 "La capacidad de manipular el tiempo en todo un sistema solar desbloquea el potencial para estructuras defensivas verdaderamente extraordinarias, algo útil dadas las objeciones irracionales de nuestros vecinos a nuestros experimentos temporales."
+  unlocks_otc_temporal_shell_aura:0 "Desbloquea el Edificio de Estación Estelar §Y$sm_otc_temporal_shell$§!, que reduce las Velocidades Sublumínicas y las Cadencias de Fuego de las Armas."
+  otc_temporal_shell_aura:0 "Cáscara Temporal"
+
+  menp_otc_secrets_of_the_future:0 "Secretos del Futuro"
+  menp_otc_secrets_of_the_future_desc:0 "Agentes especialmente entrenados realizan micro saltos al futuro, trayendo de vuelta varias revelaciones que pronto descubriremos. Dichas revelaciones forman entonces la base del conocimiento que estos agentes reciben, pero preferimos resolver estas paradojas en una fecha posterior."
+
+  menp_otc_accelerated_infancy:0 "Infancia Acelerada"
+  menp_otc_accelerated_infancy_desc:0 "En lugar de que los futuros líderes y civiles desperdicien sus preciosas esperanzas de vida pasando por una infancia natural a paso de tortuga, nuestro nuevo programa permite a los individuos pasar del nacimiento a una etapa más productiva de sus vidas en un solo día."
+
+# Level 4
+  menp_otc_the_greatest_timeline:"La Mejor Línea Temporal"
+  menp_otc_the_greatest_timeline_desc:"Para cualquier recurso que nos falte, existe otra línea temporal en la que poseemos una abundancia. Al conectar con nuestros otros yo (quienes, fortuitamente, tienen exactamente el mismo pensamiento) podemos asegurar que nunca más enfrentaremos escasez de ningún tipo."
+  unlocks_otc_the_greatest_timeline:0 "Los Recursos §Yno pueden§! disminuir mensualmente.\n\n"
+
+  menp_otc_spacetime_sever:"Separación Espaciotemporal"
+  menp_otc_spacetime_sever_desc:"Lo último en armamento de cronotones, los proyectores de Separación Espaciotemporal son capaces de 'recortar' completamente a nuestros enemigos del continuo espaciotemporal, expulsándolos temporalmente del flujo del tiempo y congelándolos en su lugar."
+  unlocks_otc_spacetime_sever:"Desbloquea la §Y$OTC_TIME_LANCE$§!, un Arma Extra Grande que Congela Naves Enemigas al impactarlas."
+  OTC_TIME_LANCE:"Separación Espaciotemporal"
+  OTC_TIME_LANCE_DESC:"La $OTC_TIME_LANCE$ dispara un potente rayo que 'corta' las naves impactadas del espacio-tiempo, separándolas del tiempo ordinario y congelándolas en su lugar. Un arma así resulta extremadamente efectiva contra objetivos más grandes."
+  otc_time_lance_tt:"Impide que la Nave Enemiga (y sus Cazas de Ataque) disparen o se muevan durante §Y10§! Días."
+  otc_halted_in_time:"Separado del Tiempo"
+
+  menp_otc_indefinite_lifespans:0 "Inmortalidad Cuántica"
+  menp_otc_indefinite_lifespans_desc:0 "A través de las infinitas líneas temporales, por cada muerte que ocurre, necesariamente existirá una línea temporal idéntica en la que esa muerte fue evitada. Un simple salto para recuperar estos dobles temporales asegura que nadie nos abandonará jamás."
+  unlocks_otc_indefinite_lifespans:0 "Todos los Líderes son §YInmortales§! y serán §YResucitados§! al Morir."
+  leader_trait_otc_timeline_warped:"Vértigo Interlínea Temporal"
+  leader_trait_otc_timeline_warped_desc:"Hemos traído a este líder de una línea temporal alternativa, una casi idéntica a la nuestra, excepto que este líder sobrevivió a la muerte prematura de su contraparte."
+  mod_leader_commanders_astral_threads_upkeep_add:"$r_astral_threads$ $UPKEEP$"
+  mod_leader_scientists_astral_threads_upkeep_add:0 "$r_astral_threads$ $UPKEEP$"
+  mod_leader_officials_astral_threads_upkeep_add:0 "$r_astral_threads$ $UPKEEP$"
+
+  menp_otc_localised_time_loops:0 "Bucles Temporales Localizados"
+  menp_otc_localised_time_loops_desc:0 "Nuestros mejores constructores de naves, estibadores y oficiales navales pueden ahora trabajar junto a docenas de copias temporales de sí mismos, cada uno regresando al inicio del mismo día cada vez que comienzan un turno. La producción de nuestros astilleros habla por sí misma, pero el pago de horas extras es verdaderamente ruinoso."
+
+# Level 5
+  menp_otc_end_of_time:0 "El Fin del Tiempo"
+  menp_otc_end_of_time_desc:0 "El flujo ordinario y lineal del tiempo es una prisión que ya no podemos aceptar. A medida que nuestro control sobre este instante del tiempo se solidifica, nos extenderemos desde y haremos añicos el futuro, el pasado y el presente, y gobernaremos para siempre en perfecta omnitemporalidad."
+  unlocks_otc_end_of_time:0 "Desbloquea la Situación $situation_otc_end_of_time$. Cuando la situación se complete, podremos ejecutar nuestro plan de poner fin al flujo lineal del tiempo por completo y §Yganaremos la partida.§!"
+  situation_otc_end_of_time:"Fin del Tiempo"
+  situation_otc_end_of_time_type: "$situation_otc_end_of_time$"
+  situation_otc_end_of_time_monthly_change_tooltip:"- Ser al menos §YSuperior§! a todas las demás civilizaciones.\n- Completar §Y$operation_reset_civilisation$§! Operaciones"
+  situation_otc_end_of_time_desc:"Hemos descubierto una forma de propagar nuestra civilización fuera del tiempo lineal, para liberarnos verdaderamente de la tiranía de la causa y el efecto. Todo lo que requerirá es que hagamos añicos el tiempo mismo, hacia adelante y hacia atrás, y cabalguemos la onda de choque hacia un nuevo estado de existencia."
+  situation_otc_end_of_time_complete:"El [Owner.GetName] §YGana la Partida§!."
+  otc_apex_of_power:"Cima del Poder: Al menos §YSuperior§! a todas las demás civilizaciones."
+  situation_otc_end_of_time_approach_basic:"Inevitabilidad"
+  situation_otc_end_of_time_approach_basic_desc:"Cada momento de toda la historia nos ha conducido a este punto. No hay nada más que hacer. No hay nada que se pueda hacer."
+  omnitemporal.54.name:0 "El Fin del Tiempo"
+  omnitemporal.54.desc:0 "Hasta ahora, hemos sido como niños, contentos de deleitarnos con nuestros nuevos juguetes que el dominio del tiempo nos ha otorgado. Aquellos que se atreven a oponerse a nosotros son vencidos, y consolidamos nuestro poder en el instante fugaz que colectivamente llamamos: 'el presente'. Pero a medida que nuestra perspectiva crece, también lo hace la comprensión de la futilidad. Todavía somos prisioneros del tiempo lineal, incapaces de evitar que nuestro universo caiga en la entropía. Ningún imperio dura para siempre.\n\nHa llegado el momento de dejar de lado nuestros juguetes.\n\nHemos descubierto una forma de propagar nuestra civilización fuera del tiempo lineal, para liberarnos verdaderamente de la tiranía de la causa y el efecto. Todo lo que requerirá es que hagamos añicos el tiempo mismo, hacia adelante y hacia atrás, y cabalguemos la onda de choque hacia un nuevo estado de existencia."
+  omnitemporal.54.a:0 "Ya era hora."
+  omnitemporal.2000.name:0 "El Momento Final"
+  omnitemporal.2000.desc:0 "Está aquí. Siempre ha estado aquí. Saboreamos el amanecer de la omnitemporalidad como un nuevo sol que nace, o un huevo que eclosiona, o una estrella que muere. O como ninguna de esas cosas. Esas metáforas simples que llevan consigo demasiado de la naturaleza del viejo universo son inútiles para nosotros ahora.\n\nEl tiempo está hecho añicos, y desde el \"siempre-donde\" fuera de él, vemos que siempre estuvo hecho añicos. Esperándonos para que lo pusiéramos del revés y pudiéramos verlo como siempre ha sido. Siempre y para siempre en el nuevo ahora."
+  omnitemporal.2000.a:0 "Como nosotros, deleitándonos en el siempratiempo, triunfantes."
+  omnitemporal.2001.name:0 "Atando Cabos Sueltos"
+  omnitemporal.2001.desc:0 "Estamos empezando a entender. Nuestro alcance a través de las líneas temporales se refleja en todas las otras versiones de nosotros mismos, en cada línea temporal. Todo a la vez, todos juntos, tan pronto, nos extenderemos a cada momento que ha sido o será y alcanzaremos la omnitemporalidad.\n\nSin apenas pensarlo, retrocedemos en el tiempo al momento que inició todo esto, y nos damos el impulso que necesitábamos para estar aquí ahora."
+  omnitemporal.2001.a:0 "Tomad este regalo, yoes del pasado."
+  omnitemporal.2002.name:0 "El Fin del Tiempo"
+  omnitemporal.2002.desc:0 "Incluso sin sensores sofisticados o instrumentación crono-sensible, podemos decir que algo anda mal. Cada momento se siente tenso. Como si la marcha universal de un segundo al siguiente pudiera simplemente... detenerse. Perdemos horas, semanas, en un abrir y cerrar de ojos, y cada nuevo día encontramos otro vacío en nuestros libros de historia donde alguna parte de nuestro propio pasado ha desaparecido del universo. Sea cual sea el esquema nefasto en el que están trabajando los [From.GetName], amenaza el tejido mismo del tiempo."
+  omnitemporal.2002.a:0 "[From.GetName] ¡debe ser detenido!"
+  omnitemporal.2003.name:0 "Un Regalo Misterioso"
+  omnitemporal.2003.desc:0 "Apenas unas horas después de que decidiéramos empezar a explorar las posibilidades de los fenómenos temporales, un paquete misterioso se ha materializado en la órbita de nuestro mundo natal. En su interior hay instrucciones para la fabricación y uso de una extraña malla, a la que el paquete se refiere como §YTela Temporal§!. También contiene una cantidad considerable del material. El análisis preliminar de nuestros científicos ya muestra que posee una notable variedad de propiedades cronoactivas, aunque no sabemos quién nos lo legó."
+  omnitemporal.2003.a:0 "Qué extraño."
+
+  menp_otc_paradox_drives:"Distorsión espacio-temporal"
+  menp_otc_paradox_drives_desc:"Un motor de salto convencional opera acercando dos puntos en el espacio para su recorrido. Por analogía, el Motor de Paradoja nos permite acercar el momento de nuestra llegada al momento de nuestra partida, permitiendo el viaje instantáneo."
+  unlocks_otc_paradox_drives:"Desbloquea el §Y$OTC_TIME_DRIVE$§!, un Motor de Salto que Preserva el Daño y la Velocidad de la Flota después del Salto."
+  OTC_TIME_DRIVE:"Motor de Paradoja"
+  OTC_TIME_DRIVE_DESC:"El motor manipula directamente el flujo del tiempo para permitir viajes de duración cero sin los inconvenientes de los motores de salto convencionales."
+  OTC_BIO_TIME_DRIVE: "$OTC_TIME_DRIVE$"
+  OTC_BIO_TIME_DRIVE_DESC: "$OTC_TIME_DRIVE_DESC$"
+  otc_time_drive_tt:"Después de Saltar, la Nave No Recibe la Penalización Normal de §Y-50%§! al Daño de Armas y a la Velocidad Sublumínica."
+
+  menp_otc_reset_civilisation:0 "Protocolo de Aniquilación Causal"
+  menp_otc_reset_civilisation_desc:0 "Nuestros enemigos, como es propio de nosotros, son poderosos y resilientes. Pero no siempre fueron así. El futuro es la posición más ventajosa, un lugar desde el cual podemos atacar y eliminar a un enemigo cuando está en su punto más débil. Una pequeña corrección a su historia los purgará de nuestra línea temporal."
+  unlocks_otc_reset_civilisation:0 "Desbloquea el §Y$menp_otc_reset_civilisation$§!, la capacidad de borrar una Civilización Entera ajustando su historia para que ya no exista en el presente y se nos oponga."
+
+
+## Crisis Requirements ##
+  otc_omnitemporal_level_2_req_clear_tooltip:"£trigger_yes£ Ha completado una §YAnomalía Temporal§!"
+  otc_omnitemporal_level_2_req_tooltip:"£trigger_no£ Ha completado una §YAnomalía Temporal§!"
+  otc_omnitemporal_level_3_req_clear_tooltip:"£trigger_yes£ Ha construido una §Y$otc_omnitemporal_kilostructure$§!"
+  otc_omnitemporal_level_3_req_tooltip:"£trigger_no£ Ha construido una §Y$otc_omnitemporal_kilostructure$§!"
+  otc_omnitemporal_level_4_req_clear_tooltip:"£trigger_yes£ Ha investigado la tecnología §Y$tech_otc_travel_timelines$§!"
+  otc_omnitemporal_level_4_req_tooltip:"£trigger_no£ Ha investigado la tecnología §Y$tech_otc_travel_timelines$§!"
+  otc_omnitemporal_level_5_req_clear_tooltip:"£trigger_yes£ Ha construido 5 §Y$otc_omnitemporal_kilostructure_plural$§!"
+  otc_omnitemporal_level_5_req_tooltip:"£trigger_no£ Ha construido 5 §Y$otc_omnitemporal_kilostructure_plural$§!"
+
+
+## Temporal Anomalies ##
+  # Base Anomalies
+  omnitemporal.1000.name:"¡Viaje en el tiempo!"
+  omnitemporal.1000.desc:"A medida que [Root.Leader.GetName] se acercaba cada vez más a la anomalía, [Root.Leader.GetSheHe] observó cómo los relojes empezaban a retroceder, acelerándose cada vez más a medida que la tripulación viajaba al pasado. Por razones obvias, nuestras comunicaciones terminan poco después (o posiblemente antes, dependiendo de la perspectiva) de que [Root.Leader.GetName] se adentrara en el pasado.\n\nEste evento explica la aparición de la misma tripulación, idéntica a la que acabamos de perder. Parece que realmente viajaron a través del tiempo. Se acaban de adquirir datos valiosos, y no perderemos el tiempo en utilizarlos."
+  omnitemporal.1000.a:"¡Increíble!"
+  omnitemporal.1000.a.tooltip:"[Root.Leader.GetName] se desvanece en el pasado."
+
+  omnitemporal.1001.name:"Viajero del Futuro"
+  omnitemporal.1001.desc:"Al acercarnos a la anomalía temporal, apareció una figura flotando, vistiendo un traje espacial. Tras identificar la figura y llevar a [event_target:otc_future_leader.GetSheHe] a bordo, ¡nos dimos cuenta de que acabábamos de descubrir a otro [event_target:otc_future_leader.GetName]!\n\n[event_target:otc_future_leader.GetSheHe] explicó que [event_target:otc_future_leader.GetSheHe] no era un clon, sino que acababa de llegar aquí tras ser arrojado hacia atrás en el tiempo. Así, [event_target:otc_future_leader.GetSheHe] era una copia futura de [event_target:otc_future_leader.GetName]. Pedimos detalles sobre lo que estaba por venir, pero fuimos recibidos con silencio. El [event_target:otc_future_leader.GetName] del futuro cree que esta información podría causar una paradoja causal con repercusiones desconocidas si se comparte."
+  omnitemporal.1001.a:"¡Increíble!"
+  omnitemporal.1001.b:"Sospechoso"
+  omnitemporal.1001.a.tooltip:"Otro [event_target:otc_future_leader.GetName] se une a nuestro Imperio."
+
+  omnitemporal.1014.name:"Se Desvanece de la Existencia"
+  omnitemporal.1014.desc:"Tan pronto como [event_target:otc_temporal_clone.GetName] falleció, la versión futura de [event_target:otc_temporal_clone.GetHisHer] comenzó a desintegrarse. Pronto se había desvanecido por completo, dejando solo recuerdos de su existencia. Pero poco después, esos también comenzaron a desvanecerse. Parece que, tras la muerte de su yo más joven, se produjo un resultado paradójico: ya no había un yo más joven para viajar al pasado y, por lo tanto, su aparición desde el futuro fue imposible. El universo corrigió rápidamente esta inconsistencia, eliminando al [event_target:otc_temporal_clone.GetHisHer] restante de la existencia."
+  omnitemporal.1014.a:"Interesante."
+
+  omnitemporal.1003.name:"Eones en Meses"
+  omnitemporal.1003.desc:"En la superficie volcánica de [From.GetName], el tiempo transcurre más rápido de lo que podríamos imaginar. Los eones transcurren en cuestión de meses, y no nos atrevemos a entrar en el bucle temporal que ocurre aquí, pues nuestros científicos se desvanecerían en meros momentos si lo hiciéramos. Observar el planeta también es una dificultad, ya que para cuando nuestros escáneres alcanzan el suelo y se reflejan de vuelta a nuestra nave, la superficie ya ha cambiado. Esto es toda una rareza, y esperamos ver a [From.GetName] experimentar una gran transformación en los próximos meses."
+  omnitemporal.1003.a:"Interesante."
+
+  omnitemporal.1004.name:"Enfriamiento Planetario"
+  omnitemporal.1004.desc:"Solo un par de meses después de que nuestros científicos descubrieran el paso acelerado del tiempo en [FromFrom.GetName], todo el planeta se ha enfriado a niveles más moderados. Parece que este planeta ha experimentado milenios de su ciclo de vida en cuestión de meses, transformando su superficie volcánica en una extensión estéril. Según las lecturas tomadas desde la órbita, la actividad tectónica sigue siendo intensa y el planeta no muestra signos de desaceleración todavía.\n\nLos más aventureros de nuestros científicos desean explorar el propio [FromFrom.GetName]. Sin embargo, son rápidamente detenidos por las explicaciones de sus colegas más sabios de que vidas enteras se convertirían en meras fracciones de segundo para cualquier observador externo."
+  omnitemporal.1004.a:"Muy interesante."
+
+  omnitemporal.1005.name:"Desarrollo de Vida"
+  omnitemporal.1005.desc:"A medida que el tiempo en [FromFromFrom.GetName] ha seguido progresando a velocidades extremas, hemos sido testigos de nuevos desarrollos. Han surgido formas de vida básicas y, aunque confinadas a sus simples modos de ser, ya las hemos visto cambiar las condiciones atmosféricas. Poco después, las primeras plantas comenzaron a extenderse por la superficie del planeta, consumiendo ávidamente las nuevas partículas que habían llenado el cielo. Si no fuera por las velocidades temporales, el planeta ahora parecería habitable."
+  omnitemporal.1005.a:"Continuar observaciones."
+
+  omnitemporal.1006.name:"Condición de Reposo"
+  omnitemporal.1006.desc:"Por fin, el envejecimiento rápido de [FromFromFromFrom.GetName] ha concluido, y el planeta se ha reunido temporalmente una vez más con el resto de la galaxia. Sin embargo, antes de que el tiempo acelerado terminara, se ha transformado de nuevo. Los últimos meses han traído numerosos cambios, desde formas de vida animales hasta bosques exuberantes. Aunque ninguno de estos animales primitivos demuestra signos de verdadera inteligencia, hay algunos presapiens que han mostrado un crecimiento intelectual prometedor y podrían ser ayudados si lo deseamos."
+  omnitemporal.1006.a:"Maravilloso."
+
+  omnitemporal.1007.name:"Trampa Temporal"
+  omnitemporal.1007.desc:"Mientras [time_loop_trapped_scientist.GetName] exploraba la anomalía temporal, el resto de [time_loop_trapped_scientist.GetHisHer] tripulación comenzó a notar un comportamiento errático. [time_loop_trapped_scientist.GetName] comenzó a creer consistentemente que la fecha no había cambiado y que la investigación solo había durado un día. Además, [time_loop_trapped_scientist.GetSheHe] continuó repitiendo tareas de observación iniciales que se habían completado semanas antes.\n\nQuedó claro que [time_loop_trapped_scientist.GetName] seguía reviviendo ese primer día una y otra vez, atrapado en un bucle temporal mental. La naturaleza exacta de este fenómeno es desconocida, especialmente porque el mejor testigo del evento está atrapado en [time_loop_trapped_scientist.GetHisHer] delirio. De cualquier manera, la efectividad de [time_loop_trapped_scientist.GetHisHer] como líder se verá significativamente reducida."
+  omnitemporal.1007.a:"Lamentable."
+  leader_trait_otc_time_loop_trapped:"Atrapado Temporalmente"
+  leader_trait_otc_time_loop_trapped_desc:"Este líder está atrapado en un bucle temporal mental, experimentando el mismo día una y otra vez. Mediante una cuidadosa manipulación de su entrada sensorial, podemos simular la realidad, pero nunca más formarán nuevos recuerdos."
+
+  omnitemporal.1008.name:"Relojes Erráticos"
+  omnitemporal.1008.desc:"Al llegar a la anomalía temporal, todos los dispositivos de medición del tiempo en [Root.GetName] comenzaron a fluctuar erráticamente, mostrando varias fechas imposibles. Momentos después de recibir sus comunicaciones, anomalías similares comenzaron a aparecer en nuestras colonias. Aunque inofensiva, la pérdida de información cronológica fiable ha desequilibrado la vida normal. Sin embargo, estos eventos han resultado en una inmensa cantidad de datos para que nuestros físicos los analicen."
+  omnitemporal.1008.a:"Interesante."
+
+  omnitemporal.1009.name:"Aceleración Planetaria"
+  omnitemporal.1009.desc:"El tiempo en [From.GetName] ha aumentado considerablemente su flujo, incluso duplicando su velocidad en ciertas áreas. Concentrar nuestras industrias dentro de estos espacios debería permitir una productividad masivamente incrementada. Sin embargo, las velocidades temporales variables en todo el planeta conducen a condiciones de vida difíciles y requerirán un esfuerzo adicional para planificar."
+  omnitemporal.1009.a:"Maravilloso."
+  otc_time_accelerated:"Tiempo Acelerado"
+
+  omnitemporal.1010.name:0 "Día Perdido"
+  omnitemporal.1010.desc:0 "Nuestra investigación de la anomalía temporal recientemente descubierta ha tenido un efecto secundario imprevisto: todos han perdido un día. Específicamente, nadie ha retenido información sobre [From.lost_date_flag], y toda nuestra población experimenta amnesia total sobre las últimas veinticuatro horas. Estamos razonablemente seguros de que nada particularmente notable sucedió ayer, pero la experiencia ha sido desconcertante. Peor aún, el efecto parece haber sido de naturaleza galáctica: muchos de nuestros vecinos no están contentos con lo que llaman 'interferencia en sus percepciones cronológicas naturales'."
+  otc_forgot_a_day:0 "Día Perdido"
+
+  omnitemporal.1012.name:0 "Día Perdido"
+  omnitemporal.1012.desc:0 "Los recuerdos de todos tienen el mismo hueco: era [This.lost_date_flag_plus_one], y luego era [This.lost_date_flag_minus_one]. Cada [This.GetSpeciesName] en [This.GetName] no ha conservado ningún recuerdo sobre los eventos de [This.lost_date_flag]. Esto ha causado, comprensiblemente, una gran cantidad de malestar y confusión. Un análisis posterior a los hechos revela que el día en cuestión definitivamente ocurrió (y fue por lo demás intrascendente), pero nadie tiene recuerdos de ello. Nuestros científicos han vinculado el fenómeno a las potentes energías temporales desatadas por los [From.GetName], quienes se han negado a disculparse por esta escandalosa intromisión."
+  otc_opinion_lost_day:0 "Descontentos con la Intromisión Temporal"
+
+
+  omnitemporal.1013.name:"Envejecimiento Rápido"
+  omnitemporal.1013.desc:"[Root.Leader.GetName] presenta [Root.Leader.GetHerHis] informe sobre la anomalía temporal recientemente investigada: 'Después de una década investigando el comportamiento anómalo de [From.GetName], debo concluir, lamentablemente, que no había nada fuera de lugar.' El informe era exhaustivo, detallado y habría sido aceptado rápidamente por nuestro departamento de cronología si no fuera por el tiempo durante el cual había sido compilado. Porque mientras [Root.Leader.GetName] pasó más de una década investigando, el resto de la galaxia esperó solo meses para recibir cualquier comunicación. Aunque no está claro exactamente qué creó este bucle temporal, ya que el informe no encontró nada fuera de lugar, sus efectos en [Root.Leader.GetName] son claros. Tendremos que esperar que [Root.Leader.GetSheHe] pueda seguir viviendo una vida plena."
+  omnitemporal.1013.a:"Lamentable."
+
+  # Dangerous/Impactful Anomalies
+  omnitemporal.1100.name:"Desaceleración Planetaria"
+  omnitemporal.1100.desc:"Las lecturas temporales indican que el tiempo en [From.GetName] ha disminuido enormemente, ralentizándose hasta un factor de dos. Adaptarse a este nuevo paso del tiempo requerirá logística adicional, ya que ahora necesitamos tener en cuenta un imperio en el que la mitad de un planeta ha desaparecido. Además, es importante que regulemos las entradas externas aún más que antes, ya que el tiempo ralentizado hará que la entrada de luz en la colonia parezca el doble de potente que antes."
+  omnitemporal.1100.a:"Lamentable."
+  otc_time_decelerated:"Tiempo Ralentizado"
+
+  omnitemporal.1101.name:"Los Relojes Se Detienen en [From.GetName]"
+  omnitemporal.1101.desc:"Todo y todos en [From.GetName] se detuvieron de repente. Todas las transmisiones desde el planeta cesaron inmediatamente, y cualquier mensaje enviado al planeta no llegó a su destino. El planeta parece congelado en el tiempo, ya no está unido a nuestra línea temporal actual. Todos los envíos de recursos, tanto hacia como desde [From.GetName], se suspenderán indefinidamente. Solo podemos esperar que este comportamiento anómalo termine pronto."
+  omnitemporal.1101.a:"¡Desastroso!"
+  otc_time_stopped:"Congelado en el Tiempo"
+
+  omnitemporal.1107.name:"[This.GetName] Vuelve al Tiempo"
+  omnitemporal.1107.desc:"Después de medio año de silencio absoluto, el tiempo comienza a fluir de nuevo en [This.GetName]. Nuestros ciudadanos continúan con sus días, los envíos interestelares parten de los muelles y las comunicaciones enviadas hace meses llegan sin cesar. Por un momento, es como si nada hubiera pasado.\n\nSin embargo, es solo un momento hasta que los habitantes de [This.GetName] se enteran de lo que pasó: que no han experimentado un solo segundo en los últimos seis meses mientras el resto de la galaxia siguió adelante. Si bien es extremadamente afortunado que este desastre no pueda rastrearse inmediatamente hasta nosotros, los efectos de esta distorsión temporal no pueden subestimarse, y [This.GetName] necesitará tiempo para recuperarse."
+  omnitemporal.1107.a:"Afortunado de todos modos."
+  otc_after_time_resumed:"Meses Perdidos"
+
+  omnitemporal.1102.name:"Visiones de Nuestro Pasado Primitivo"
+  omnitemporal.1102.desc:"Dentro de esta anomalía temporal, [Root.Leader.GetName] y [Root.Leader.GetHerHis] tripulación encontraron una burbuja de tiempo en la que una porción de nuestro pasado había quedado atrapada. Aquí, desconectados del espacio o el tiempo, observaron cómo nuestros seres primitivos avanzaban lentamente hacia las estrellas.\n\nAunque hemos visto progresar a otras sociedades tempranas y tenemos numerosos registros de nuestros propios comienzos, nunca habíamos visto nuestro propio pasado con tanta claridad. Numerosos campos sociológicos se han beneficiado enormemente, desde la historia hasta los estudios primitivos, la teología y la filosofía temprana."
+  omnitemporal.1102.a:"Maravilloso."
+  otc_past_selves:"Yoes Pasados"
+  otc_past_selves_desc:"Visiones de nuestros orígenes han fomentado la unidad colectiva e inspirado una mayor indagación en nuestro pasado."
+
+  omnitemporal.1103.name:"Dudas Epistemológicas"
+  omnitemporal.1103.desc:"Aunque las visiones de nuestros orígenes demostraron ser profundamente perspicaces en la crianza y el desarrollo temprano de nuestra especie, también revelaron cuán idiotas éramos. Además, no solo desconocíamos la verdadera naturaleza de la galaxia, sino que realmente creíamos comprender las cosas tal como eran. Si bien nos alegra habernos alejado tanto de tal idiotez, estas visiones han dejado a nuestra gente con la preocupación de que no hemos progresado lo suficiente. Después de todo, ¿cómo podemos estar seguros de que no estamos tan perdidos como nuestros ancestros primitivos?"
+  omnitemporal.1103.a:"Lamentable."
+  otc_disillusioned_past:"Desilusionados con los Orígenes"
+  otc_disillusioned_past_desc:"Ver nuestros yoes pasados ha revelado cuán idiotas fuimos una vez. Aunque nuestro inmenso cambio pueda ser un testamento a nuestra voluntad, ¿cómo podemos estar seguros de que no estamos igual de perdidos?"
+
+  omnitemporal.1104.name:"Un Gran Imperio"
+  omnitemporal.1104.desc:"Una visión aparece ante nuestros ojos, una visión que representa una gran flota deslizándose por el abismo. Su inmenso tamaño y estatura nunca vistos en nuestro tiempo. Más allá de ellos yace un planeta reluciente, brillando con maravillas tecnológicas mucho más allá de las nuestras. Los diseños se asemejan a los de un imperio caído, aunque llamar 'caído' al imperio de esta visión sería extremadamente impreciso.\n\nDado que no tenemos registros históricos de esta visión, debe haber venido del pasado lejano o del futuro. Quizás nunca sepamos cuál."
+  omnitemporal.1104.a:"Intrigante."
+
+  omnitemporal.1105.name:"La Visión se Cumple"
+  omnitemporal.1105.desc:"Ahora está claro que nuestra visión del imperio despertado no era una imagen del pasado. Se nos presentó el futuro, y poco después, se hizo realidad. Hay mucha emoción entre nuestros científicos, y las noticias de la visión se extendieron rápidamente al público.\n\nSi bien nuestra gente estaba igualmente intrigada, otros imperios han encontrado nuestras acciones extremadamente descuidadas. Muchos afirman que nuestra observación de esta visión causó que el evento mismo ocurriera, como si no hubiera sucedido con o sin nuestro conocimiento. Es probable que estén usando esto como excusa para desaprobar nuestros estudios temporales, preocupados por lo que podrían traer."
+  omnitemporal.1105.a:"Eso es absurdo."
+
+  omnitemporal.1106.name:"Predicción Desastrosa"
+  omnitemporal.1106.desc:"Tras el reciente despertar del imperio caído, se ha descubierto que los [From.GetName] ya eran conscientes de este evento. Debido a su reciente experimentación con el tiempo, a uno de sus científicos se le concedió una visión del futuro: una que retrataba el despertar del imperio caído.\n\nNo está claro si su manipulación temporal resultó en que esta visión se hiciera realidad o si fue puramente una visión de lo que estaba por venir. De cualquier manera, su experimentación imprudente está destinada a conducir al desastre."
+  omnitemporal.1106.a:"Insensatos experimentales."
+  omnitemporal.1106.b:"Los experimentos forjan el futuro."
+  otc_opinion_awakened_empire:"Disgustados con las Predicciones Futuras"
+  otc_opinion_awakened_empire_lesser: "$otc_opinion_awakened_empire$"
+
+  # Anomaly Categories
+  otc_temporal_anomaly_cat:"Anomalía Temporal"
+  otc_temporal_anomaly_cat_desc:"Aquí, el espacio y el tiempo chocan como en ningún otro lugar de la galaxia. Danzan uno alrededor del otro de formas impredecibles, formando resultados nunca vistos.\n\nEstas anomalías no están exentas de peligro, pero donde hay peligro, también hay oportunidad."
+  MESSAGE_OTC_NEW_TEMPORAL_ANOMALY_TITLE:"$otc_temporal_anomaly_cat$ Descubierta"
+  MESSAGE_OTC_NEW_TEMPORAL_ANOMALY_DESC:"Una nueva $otc_temporal_anomaly_cat$ ha sido descubierta en $LOCATION$. Se puede enviar un científico para desenterrar sus secretos."
+
+
+## Operations ##
+  operation_reset_civilisation:0 "Protocolo de Aniquilación Causal"
+  operation_reset_civilisation_desc:0 "Enviando un equipo de asalto al mundo natal objetivo y editando quirúrgicamente su historia, podemos asegurar que nunca desarrollen las tecnologías avanzadas que un día usarán para oponerse a nosotros."
+  operation_reset_civilisation_on_success:"$IF_SUCCESSFUL|E$\nLa civilización objetivo será reducida a un único mundo de primitivos pre-FTL."
+  operation_reset_civilisation_rival_time_travellers:0 "No podemos intentar esta operación contra manipuladores temporales colegas."
+  omnitemporal.50.name:0 "En Aproximación"
+  omnitemporal.50.desc:0 "El equipo —una mezcla de especialistas de operaciones encubiertas y científicos temporales— está oculto a bordo de una nave de transporte que hemos equipado para esta expedición. Con ellos llevan el equipo para realizar un salto en el tiempo hacia el pasado, al momento que nuestros xenohistoriadores han determinado como el mejor para sabotear el desarrollo de [Target.GetName]."
+  omnitemporal.51.name:0 "Códigos Antiguos"
+  omnitemporal.51.desc:0 "El transporte de nuestro ajustador temporal ha superado el control de seguridad del sistema; los códigos de seguridad que el $role_spymaster$ [spynetwork.leader.GetName] ha estado recolectando fueron cruciales para acceder al sistema. Nuestros operativos han iniciado el procedimiento de calentamiento para preparar la máquina del tiempo. Apuntarán de nuevo a la capital para el viaje final de la nave de transporte."
+  omnitemporal.52.name:0 "Hacia el Pasado"
+  omnitemporal.52.desc:0 "Hemos recibido noticias del $role_spymaster$ [spynetwork.leader.GetName]: todo está listo. Nuestros operativos ya se han preparado para el salto; una vez que hayan establecido órbita, toda la nave saltará al pasado y ejecutará el plan. Desde nuestro punto de vista, el efecto será instantáneo."
+  omnitemporal.53.name:0 "Borrado Completo"
+  omnitemporal.53.desc:0 "¡Los §Y[From.target.GetName]§! ya no existen! Tan pronto como la nave de transporte desapareció, detectamos una inmensa oleada de energía temporal. Una vez que nuestros visores se despejaron, pudimos ver que el plan tuvo éxito más allá de nuestras esperanzas más descabelladas. Los §Y[From.target.GetName]§! han sido reducidos a primitivos, inconscientes del gran destino que les acabamos de negar."
+  
+  OTC_RESET_LEADER_DEATH_DESC:0 "Fue borrado de la existencia"
+
+  omnitemporal.56.name:0 "Línea Temporal Cortada"
+  omnitemporal.56.desc:0 "¡La §H[resetting_civ.GetName]§! ha dejado de existir! Parece que el [resettor_civ.GetName] usó su avanzada tecnología de manipulación temporal para viajar al pasado y evitar que su civilización desarrollara el vuelo espacial. Toda su civilización: colonias, grandes líderes, naves, incluso los emigrantes, han sido borrados de nuestra línea temporal."
+  omnitemporal.56.a:0 "¡Hay que detener a los [resettor_civ.GetName]!"
+  omnitemporal.56.a.tooltip:0 "¡Cada líder y población de los [resetting_civ.GetName] §Rmuere§!"
