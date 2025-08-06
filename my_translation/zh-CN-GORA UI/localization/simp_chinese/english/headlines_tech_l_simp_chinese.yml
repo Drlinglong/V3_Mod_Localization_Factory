@@ -1,0 +1,389 @@
+﻿l_simp_chinese:
+headlines_tech_group:"@headlines_techicon! #yellow 头条#! | 科技"
+headlines_tech_important_group:"@headlines_techicon! #yellow 头条#! | 重要科技"
+
+HEADLINES_TECH_NAME:"[GetGlobalVariable('headlines_tech_acquired').GetTechnology.GetName]"
+
+notification_headlines_tech_bessemer_process_tooltip:0 "#header $notification_headlines_tech_bessemer_process_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_bessemer_process_desc$"
+ notification_headlines_tech_bessemer_process_name:0 "#b “贝塞麦”法面世 #!"
+ notification_headlines_tech_bessemer_process_desc:1 "一位[SCOPE.sCountry('headlines_bessemer_process_researcher').GetAdjective]炼钢师发明了$HEADLINES_TECH_NAME$。#lore 这种工艺的专利受到了来自其他几个国家的人的质疑，他们声称已经开发出了这种工艺的基础…… #!"
+
+
+notification_headlines_tech_crystal_glass_tooltip:0 "#header $notification_headlines_tech_crystal_glass_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_crystal_glass_desc$"
+ notification_headlines_tech_crystal_glass_name:0 "#b 玻璃晶莹剔透 #!"
+ notification_headlines_tech_crystal_glass_desc:1 "[SCOPE.sCountry('headlines_crystal_glass_researcher').GetName]的玻璃制造商已能工业化生产$HEADLINES_TECH_NAME$。#lore 在生产过程中使用铅，已被证明是扩大生产的挑战，因为…… #!"
+
+
+notification_headlines_tech_baking_powder_tooltip:0 "#header $notification_headlines_tech_baking_powder_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_baking_powder_desc$"
+ notification_headlines_tech_baking_powder_name:0 "#b 自发粉 #!"
+ notification_headlines_tech_baking_powder_desc:1 "[SCOPE.sCountry('headlines_baking_powder_researcher').GetName]的化学家发明了$HEADLINES_TECH_NAME$。#lore 这种保质期长的化学品组合将使得工业面包生产能够进一步扩大规模，以及其他由……指出的即时用途。 #!"
+
+
+notification_headlines_tech_nitroglycerin_tooltip:0 "#header $notification_headlines_tech_nitroglycerin_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_nitroglycerin_desc$"
+ notification_headlines_tech_nitroglycerin_name:0 "#b 新型炸药油证实致命 #!"
+ notification_headlines_tech_nitroglycerin_desc:1 "[SCOPE.sCountry('headlines_nitroglycerin_researcher').GetAdjective]化学家发明了$HEADLINES_TECH_NAME$。#lore 这种新物质已被证明是一种特别易挥发且强效的炸药。项目负责人警告不要使用它，称这种液体极不稳定，容易…… #!"
+
+
+notification_headlines_tech_improved_fertilizer_tooltip:0 "#header $notification_headlines_tech_improved_fertilizer_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_improved_fertilizer_desc$"
+ notification_headlines_tech_improved_fertilizer_name:0 "#b 化肥前景光明 #!"
+ notification_headlines_tech_improved_fertilizer_desc:1 "[SCOPE.sCountry('headlines_improved_fertilizer_researcher').GetName]的农学家发明了通过专门工艺生产$HEADLINES_TECH_NAME$的方法。#lore 初步试种的作物显示产量比传统方式翻了一番…… #!"
+
+
+notification_headlines_tech_steam_donkey_tooltip:0 "#header $notification_headlines_tech_steam_donkey_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_steam_donkey_desc$"
+ notification_headlines_tech_steam_donkey_name:0 "#b “蒸汽驴”能取代骡子？ #!"
+ notification_headlines_tech_steam_donkey_desc:1 "一位[SCOPE.sCountry('headlines_steam_donkey_researcher').GetAdjective]发明家演示了一种他们称之为[GetGlobalVariable('headlines_tech_acquired').GetTechnology.GetName]的机器。#lore 这种蒸汽驱动的机械能够运输任何人类或动物都无法搬运的木材和矿石，其额定…… #!"
+
+
+notification_headlines_tech_dynamite_tooltip:0 "#header $notification_headlines_tech_dynamite_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_dynamite_desc$"
+ notification_headlines_tech_dynamite_name:0 "#b “炸药”——安全的爆炸物？ #!"
+ notification_headlines_tech_dynamite_desc:1 "一位[SCOPE.sCountry('headlines_dynamite_researcher').GetAdjective]发明家创造了$HEADLINES_TECH_NAME$的配方。#lore 通过将硝化甘油与额外的粘合剂结合，这种新物质在保持所有威力的同时，也变得更加稳定，并且不易受……的影响。 #!"
+
+
+notification_headlines_tech_steel_railway_cars_tooltip:0 "#header $notification_headlines_tech_steel_railway_cars_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_steel_railway_cars_desc$"
+ notification_headlines_tech_steel_railway_cars_name:0 "#b 新型铁路车辆提升效率 #!"
+ notification_headlines_tech_steel_railway_cars_desc:1 "[SCOPE.sCountry('headlines_steel_railway_cars_researcher').GetName]的铁路已开始用$HEADLINES_TECH_NAME$替换木制车厢。#lore 新设计已证明比现有铁路车辆坚固得多，从而允许…… #!"
+
+
+notification_headlines_tech_rubber_mastication_tooltip:0 "#header $notification_headlines_tech_rubber_mastication_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_rubber_mastication_desc$"
+ notification_headlines_tech_rubber_mastication_name:0 "#b 新工艺使橡胶得以应用 #!"
+ notification_headlines_tech_rubber_mastication_desc:1 "[SCOPE.sCountry('headlines_rubber_mastication_researcher').GetName]已证明了$HEADLINES_TECH_NAME$的原理，使其能够大规模开采和加工。#lore 如果没有这个过程，天然橡胶将极难加工，限制了其…… #!"
+
+
+notification_headlines_tech_pumpjacks_tooltip:0 "#header $notification_headlines_tech_pumpjacks_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_pumpjacks_desc$"
+ notification_headlines_tech_pumpjacks_name:0 "#b 石油——未来的燃料 #!"
+ notification_headlines_tech_pumpjacks_desc:1 "[SCOPE.sCountry('headlines_pumpjacks_researcher').GetName]的工程师发明了$HEADLINES_TECH_NAME$，使得石油能够可靠地从地下开采。#lore 这种看似简单的泵机构使得该设计可以轻松运输到任何……的地点。 #!"
+
+
+notification_headlines_tech_electrical_generation_tooltip:0 "#header $notification_headlines_tech_electrical_generation_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_electrical_generation_desc$"
+ notification_headlines_tech_electrical_generation_name:0 "#b 闪电的奥秘 #!"
+ notification_headlines_tech_electrical_generation_desc:1 "[SCOPE.sCountry('headlines_electrical_generation_researcher').GetAdjective]发明家已实现了可靠的$HEADLINES_TECH_NAME$。#lore 参与其中的科学家称，这种新电力力量的潜力是无限的，可应用于家庭、工业、公共工程甚至…… #!"
+
+
+notification_headlines_tech_aniline_tooltip:0 "#header $notification_headlines_tech_aniline_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_aniline_desc$"
+ notification_headlines_tech_aniline_name:0 "#b 合成染料光彩夺目 #!"
+ notification_headlines_tech_aniline_desc:1 "[SCOPE.sCountry('headlines_aniline_researcher').GetName]的化学家发明了$HEADLINES_TECH_NAME$。#lore 这种化学品可以生产出以前需要……才能得到的鲜艳染料。 #!"
+
+
+notification_headlines_tech_vulcanization_tooltip:0 "#header $notification_headlines_tech_vulcanization_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_vulcanization_desc$"
+ notification_headlines_tech_vulcanization_name:0 "#b 弹性橡胶诞生 #!"
+ notification_headlines_tech_vulcanization_desc:1 "[SCOPE.sCountry('headlines_vulcanization_researcher').GetAdjective]化学家发明了$HEADLINES_TECH_NAME$，扩展了橡胶的用途。#lore 这种高温处理工艺生产的橡胶既更柔韧又更耐用，使得…… #!"
+
+
+notification_headlines_tech_nitrogen_fixation_tooltip:0 "#header $notification_headlines_tech_nitrogen_fixation_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_nitrogen_fixation_desc$"
+ notification_headlines_tech_nitrogen_fixation_name:0 "#b 氮肥有望带来丰收 #!"
+ notification_headlines_tech_nitrogen_fixation_desc:1 "农学家在[SCOPE.sCountry('headlines_nitrogen_fixation_researcher').GetName]开发了一种人工$HEADLINES_TECH_NAME$工艺。#lore 这种新型化肥能让现有耕地实现惊人的产量，有望使收成再翻一番…… #!"
+
+
+notification_headlines_tech_mechanized_farming_tooltip:0 "#header $notification_headlines_tech_mechanized_farming_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_mechanized_farming_desc$"
+ notification_headlines_tech_mechanized_farming_name:0 "#b 农田机械化 #!"
+ notification_headlines_tech_mechanized_farming_desc:1 "[SCOPE.sCountry('headlines_mechanized_farming_researcher').GetAdjective]工程师实施了$HEADLINES_TECH_NAME$技术。#lore 新设计的拖拉机能够耕耘整片田地，大幅减少了耕作所需的人力…… #!"
+
+
+notification_headlines_tech_plastics_tooltip:0 "#header $notification_headlines_tech_plastics_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_plastics_desc$"
+ notification_headlines_tech_plastics_name:0 "#b 塑料——奇迹材料 #!"
+ notification_headlines_tech_plastics_desc:1 "[SCOPE.sCountry('headlines_plastics_researcher').GetAdjective]化学家发明了$HEADLINES_TECH_NAME$。#lore 这种新材料可以被塑造成无限多样的形状，适用于家庭和工业用途，提供了无限的机遇…… #!"
+
+
+notification_headlines_tech_steam_turbine_tooltip:0 "#header $notification_headlines_tech_steam_turbine_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_steam_turbine_desc$"
+ notification_headlines_tech_steam_turbine_name:0 "#b 蒸汽发电 #!"
+ notification_headlines_tech_steam_turbine_desc:1 "工程师在[SCOPE.sCountry('headlines_steam_turbine_researcher').GetName]发明了$HEADLINES_TECH_NAME$。#lore 新型涡轮机已在陆地和海上证明了其卓越的用途，并计划将这项技术扩大十倍规模…… #!"
+
+
+notification_headlines_tech_combustion_engine_tooltip:0 "#header $notification_headlines_tech_combustion_engine_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_combustion_engine_desc$"
+ notification_headlines_tech_combustion_engine_name:0 "#b 蒸汽动力将成历史？ #!"
+ notification_headlines_tech_combustion_engine_desc:1 "发明家从[SCOPE.sCountry('headlines_combustion_engine_researcher').GetName]创造了$HEADLINES_TECH_NAME$。#lore 这种新型发动机能够将燃料直接转化为机械动力，在小型化方面展现出巨大潜力，已有数项提案…… #!"
+
+
+notification_headlines_tech_telephone_tooltip:0 "#header $notification_headlines_tech_telephone_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_telephone_desc$"
+ notification_headlines_tech_telephone_name:0 "#b 电线传声：‘电话’问世 #!"
+ notification_headlines_tech_telephone_desc:1 "一位[SCOPE.sCountry('headlines_telephone_researcher').GetAdjective]发明家开发了$HEADLINES_TECH_NAME$。#lore 电话的专利权已引发争议，因为其他几位发明家声称自己也…… #!"
+
+
+notification_headlines_tech_art_silk_tooltip:0 "#header $notification_headlines_tech_art_silk_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_art_silk_desc$"
+ notification_headlines_tech_art_silk_name:0 "#b 合成丝绸几可乱真 #!"
+ notification_headlines_tech_art_silk_desc:1 "[SCOPE.sCountry('headlines_art_silk_researcher').GetName]的科学家发明了$HEADLINES_TECH_NAME$。#lore 据称，使用这种植物基材料生产的服装能完全以假乱真，已有数家大型生产工厂…… #!"
+
+
+notification_headlines_tech_electric_railway_tooltip:0 "#header $notification_headlines_tech_electric_railway_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_electric_railway_desc$"
+ notification_headlines_tech_electric_railway_name:0 "#b 闪电列车 #!"
+ notification_headlines_tech_electric_railway_desc:1 "工程师在[SCOPE.sCountry('headlines_electric_railway_researcher').GetName]发明了$HEADLINES_TECH_NAME$。#lore 新型机车通过电缆而非发动机提供动力，以惊人的速度行驶，并已证明其…… #!"
+
+
+notification_headlines_tech_radio_tooltip:0 "#header $notification_headlines_tech_radio_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_radio_desc$"
+ notification_headlines_tech_radio_name:0 "#b 无线电——无线电报 #!"
+ notification_headlines_tech_radio_desc:1 "一位[SCOPE.sCountry('headlines_radio_researcher').GetAdjective]发明家创造了首个$HEADLINES_TECH_NAME$。#lore 利用电磁波这项新科学，无线电能够以极远的距离和速度传输编码电报信息，而无需…… #!"
+
+
+notification_headlines_tech_pasteurization_tooltip:0 "#header $notification_headlines_tech_pasteurization_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_pasteurization_desc$"
+ notification_headlines_tech_pasteurization_name:0 "#b “巴氏杀菌法”防止腐败 #!"
+ notification_headlines_tech_pasteurization_desc:1 "一位化学家在[SCOPE.sCountry('headlines_pasteurization_researcher').GetName]发明了$HEADLINES_TECH_NAME$。#lore 该工艺通过将牛奶和葡萄酒加热到特定温度，然后密封产品，从而阻止了……的生长。 #!"
+
+
+notification_headlines_tech_arc_welding_tooltip:0 "#header $notification_headlines_tech_arc_welding_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_arc_welding_desc$"
+ notification_headlines_tech_arc_welding_name:0 "#b 电弧熔金 #!"
+ notification_headlines_tech_arc_welding_desc:1 "[SCOPE.sCountry('headlines_arc_welding_researcher').GetName]的建筑业开发了$HEADLINES_TECH_NAME$。#lore 该工艺允许在原位连接金属梁，代价是需要巨量的能源供应来…… #!"
+
+
+notification_headlines_tech_oil_turbine_tooltip:0 "#header $notification_headlines_tech_oil_turbine_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_oil_turbine_desc$"
+ notification_headlines_tech_oil_turbine_name:0 "#b 巨型涡轮机问世 #!"
+ notification_headlines_tech_oil_turbine_desc:1 "[SCOPE.sCountry('headlines_oil_turbine_researcher').GetAdjective]工程师发明了$HEADLINES_TECH_NAME$。#lore 燃料油蕴含的惊人能量使得新型涡轮机能够以远超以往的规模建造…… #!"
+
+
+notification_headlines_tech_compression_ignition_tooltip:0 "#header $notification_headlines_tech_compression_ignition_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_compression_ignition_desc$"
+ notification_headlines_tech_compression_ignition_name:0 "#b 新型“柴油”发动机 #!"
+ notification_headlines_tech_compression_ignition_desc:1 "[SCOPE.sCountry('headlines_compression_ignition_researcher').GetAdjective]工程师发明了$HEADLINES_TECH_NAME$。#lore 新型发动机效率更高，燃油可用于火车、拖拉机、水泵以及各种…… #!"
+
+
+notification_headlines_tech_dough_rollers_tooltip:0 "#header $notification_headlines_tech_dough_rollers_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_dough_rollers_desc$"
+ notification_headlines_tech_dough_rollers_name:0 "#b 自动化面包房 #!"
+ notification_headlines_tech_dough_rollers_desc:1 "[SCOPE.sCountry('headlines_dough_rollers_researcher').GetName]的发明家开发了$HEADLINES_TECH_NAME$。#lore 这种新机器有望在减少熟练工人的情况下大幅增加面包产量，目前已经…… #!"
+
+
+notification_headlines_tech_rifling_tooltip:0 "#header $notification_headlines_tech_rifling_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_rifling_desc$"
+ notification_headlines_tech_rifling_name:0 "#b 膛线技术已研究 #!"
+ notification_headlines_tech_rifling_desc:1 "[SCOPE.sCountry('headlines_rifling_researcher').GetName]发明了$HEADLINES_TECH_NAME$。#lore REPLACE_ME #!"
+
+
+notification_headlines_tech_breech_loading_artillery_tooltip:0 "#header $notification_headlines_tech_breech_loading_artillery_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_breech_loading_artillery_desc$"
+ notification_headlines_tech_breech_loading_artillery_name:0 "#b 榴霰弹炮演示 #!"
+ notification_headlines_tech_breech_loading_artillery_desc:1 "[SCOPE.sCountry('headlines_breech_loading_artillery_researcher').GetName]发明了$HEADLINES_TECH_NAME$。#lore 从前膛装填火炮到后膛装填的转变，使得更大炮弹能够更快地装填，这可能对……产生巨大的影响。 #!"
+
+
+notification_headlines_tech_repeaters_tooltip:0 "#header $notification_headlines_tech_repeaters_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_repeaters_desc$"
+ notification_headlines_tech_repeaters_name:0 "#b 连发步枪 #!"
+ notification_headlines_tech_repeaters_desc:1 "[SCOPE.sCountry('headlines_repeaters_researcher').GetName]的枪匠开发了$HEADLINES_TECH_NAME$。#lore 这种枪可一次装填多发子弹，持枪士兵的火力倍增，能够…… #!"
+
+
+notification_headlines_tech_modern_nursing_tooltip:0 "#header $notification_headlines_tech_modern_nursing_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_modern_nursing_desc$"
+ notification_headlines_tech_modern_nursing_name:0 "#b 战地医生拯救生命 #!"
+ notification_headlines_tech_modern_nursing_desc:1 "[SCOPE.sCountry('headlines_modern_nursing_researcher').GetName]的军医开发了$HEADLINES_TECH_NAME$。#lore 现代战地医院采用了新的卫生和患者护理实践，导致了备受欢迎的增加…… #!"
+
+
+notification_headlines_tech_gantry_cranes_tooltip:0 "#header $notification_headlines_tech_gantry_cranes_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_gantry_cranes_desc$"
+ notification_headlines_tech_gantry_cranes_name:0 "#b 可吊起整艘船的起重机 #!"
+ notification_headlines_tech_gantry_cranes_desc:1 "[SCOPE.sCountry('headlines_gantry_cranes_researcher').GetName]为其港口开发了$HEADLINES_TECH_NAME$。#lore 新工业港口的首次开放受到了热烈欢迎，同时还演示了新设施能够…… #!"
+
+
+notification_headlines_tech_ironclad_tech_tooltip:0 "#header $notification_headlines_tech_ironclad_tech_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_ironclad_tech_desc$"
+ notification_headlines_tech_ironclad_tech_name:0 "#b 航海时代终结 #!"
+ notification_headlines_tech_ironclad_tech_desc:1 "[SCOPE.sCountry('headlines_ironclad_tech_researcher').GetName]开发了$HEADLINES_TECH_NAME$舰船。#lore 初步测试表明，装甲舰即使面对最猛烈的炮火也毫发无损，瞬间让所有……都变得过时。 #!"
+
+
+notification_headlines_tech_handcranked_machine_gun_tooltip:0 "#header $notification_headlines_tech_handcranked_machine_gun_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_handcranked_machine_gun_desc$"
+ notification_headlines_tech_handcranked_machine_gun_name:0 "#b “机关”枪演示 #!"
+ notification_headlines_tech_handcranked_machine_gun_desc:1 "[SCOPE.sCountry('headlines_handcranked_machine_gun_researcher').GetName]的一位发明家开发了$HEADLINES_TECH_NAME$。#lore 第一代产品能够达到每分钟400发的射速，火力大幅提升，这必将…… #!"
+
+
+notification_headlines_tech_bolt_action_rifles_tooltip:0 "#header $notification_headlines_tech_bolt_action_rifles_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_bolt_action_rifles_desc$"
+ notification_headlines_tech_bolt_action_rifles_name:0 "#b 栓动连发枪 #!"
+ notification_headlines_tech_bolt_action_rifles_desc:1 "[SCOPE.sCountry('headlines_bolt_action_rifles_researcher').GetAdjective]枪匠发明了$HEADLINES_TECH_NAME$。#lore 尽管最初被质疑过于精巧复杂，但这种新机制在试验中已证明其价值，使得士兵能够获得更大的…… #!"
+
+
+notification_headlines_tech_trench_works_tooltip:0 "#header $notification_headlines_tech_trench_works_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_trench_works_desc$"
+ notification_headlines_tech_trench_works_name:0 "#b 堑壕战时代 #!"
+ notification_headlines_tech_trench_works_desc:1 "[SCOPE.sCountry('headlines_trench_works_researcher').GetName]采纳了$HEADLINES_TECH_NAME$的军事理论。#lore 随着军队规模日益扩大，现代军队开始采用古代战术，将大地化作自己的…… #!"
+
+
+notification_headlines_tech_destroyer_tooltip:0 "#header $notification_headlines_tech_destroyer_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_destroyer_desc$"
+ notification_headlines_tech_destroyer_name:0 "#b 海上驱逐舰 #!"
+ notification_headlines_tech_destroyer_desc:1 "[SCOPE.sCountry('headlines_destroyer_researcher').GetName]开发了$HEADLINES_TECH_NAME$。#lore 海军军备竞赛随着新设计的揭幕仪式而继续，这种设计更快、更流畅，并带有一系列改进的…… #!"
+
+
+notification_headlines_tech_submarine_tooltip:0 "#header $notification_headlines_tech_submarine_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_submarine_desc$"
+ notification_headlines_tech_submarine_name:0 "#b 水下战争 #!"
+ notification_headlines_tech_submarine_desc:1 "[SCOPE.sCountry('headlines_submarine_researcher').GetName]开发了一种具备实战效能的$HEADLINES_TECH_NAME$设计。#lore 许多之前在潜水器上的尝试都失败了或被证明过于脆弱，现在已被在……处发现的新设计所超越。 #!"
+
+
+notification_headlines_tech_sea_lane_strategies_tooltip:0 "#header $notification_headlines_tech_sea_lane_strategies_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_sea_lane_strategies_desc$"
+ notification_headlines_tech_sea_lane_strategies_name:0 "#b 巡洋舰统治海浪 #!"
+ notification_headlines_tech_sea_lane_strategies_desc:1 "[SCOPE.sCountry('headlines_sea_lane_strategies_researcher').GetName]开发了$HEADLINES_TECH_NAME$。#lore 新的海战策略要求加速造船业的发展，随着……的引入。 #!"
+
+
+notification_headlines_tech_automatic_machine_guns_tooltip:0 "`#header $notification_headlines_tech_automatic_machine_guns_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_automatic_machine_guns_desc$`"
+ notification_headlines_tech_automatic_machine_guns_name:0 "`#b 以枪维和？ #!`"
+ notification_headlines_tech_automatic_machine_guns_desc:1 "`一位[SCOPE.sCountry('headlines_automatic_machine_guns_researcher').GetAdjective]发明家发明了$HEADLINES_TECH_NAME$。#lore 该枪能够以每分钟600发的速度连续发射250发子弹，发明者声称，仅仅是这把枪的出现，就能让敌方军队陷入恐慌，并且……#!`"
+
+
+notification_headlines_tech_dreadnought_tooltip:0 "`#header $notification_headlines_tech_dreadnought_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_dreadnought_desc$`"
+ notification_headlines_tech_dreadnought_name:0 "`#b 无畏之舰 #!`"
+ notification_headlines_tech_dreadnought_desc:1 "`[SCOPE.sCountry('headlines_dreadnought_researcher').GetName]已研发出$HEADLINES_TECH_NAME$。#lore 这艘新的主力舰由新型涡轮机驱动，并搭载了强大的重炮武器，在公海之上展现出令人生畏的姿态，这无疑将……#!`"
+
+
+notification_headlines_tech_chemical_warfare_tooltip:0 "`#header $notification_headlines_tech_chemical_warfare_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_chemical_warfare_desc$`"
+ notification_headlines_tech_chemical_warfare_name:0 "`#b 战场毒气 #!`"
+ notification_headlines_tech_chemical_warfare_desc:1 "`[SCOPE.sCountry('headlines_chemical_warfare_researcher').GetName]已研发出$HEADLINES_TECH_NAME$。#lore 化学毒气对人体造成的恐怖影响，已促使国际社会呼吁禁止使用……#!`"
+
+
+notification_headlines_tech_military_aviation_tooltip:0 "`#header $notification_headlines_tech_military_aviation_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_military_aviation_desc$`"
+ notification_headlines_tech_military_aviation_name:0 "`#b 重于空气的航空 #!`"
+ notification_headlines_tech_military_aviation_desc:1 "`[SCOPE.sCountry('headlines_military_aviation_researcher').GetName]的一位发明家展示了在$HEADLINES_TECH_NAME$方面具有巨大潜力的飞行器。#lore 这架多翼飞机由一组轻型发动机在空中向前推进，从而在……时产生空气动力升力。#!`"
+
+
+notification_headlines_tech_flamethrowers_tooltip:0 "`#header $notification_headlines_tech_flamethrowers_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_flamethrowers_desc$`"
+ notification_headlines_tech_flamethrowers_name:0 "`#b 武器化火焰 #!`"
+ notification_headlines_tech_flamethrowers_desc:1 "`[SCOPE.sCountry('headlines_flamethrowers_researcher').GetAdjective]工程师已研发出$HEADLINES_TECH_NAME$。#lore 尽管对使用者极其危险，但将火焰喷射至20米范围的能力在……时代展现出巨大的战术潜力。#!`"
+
+
+notification_headlines_tech_nco_training_tooltip:0 "`#header $notification_headlines_tech_nco_training_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_nco_training_desc$`"
+ notification_headlines_tech_nco_training_name:0 "`#b 现代军官应对现代战争 #!`"
+ notification_headlines_tech_nco_training_desc:1 "`[SCOPE.sCountry('headlines_nco_training_researcher').GetName]的军事理论家已研发出$HEADLINES_TECH_NAME$。#lore 战场环境的持续演变，推动了更灵活的部队结构的发展，需要……#!`"
+
+
+notification_headlines_tech_carrier_tech_tooltip:0 "`#header $notification_headlines_tech_carrier_tech_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_carrier_tech_desc$`"
+ notification_headlines_tech_carrier_tech_name:0 "`#b 战列舰的终结？ #!`"
+ notification_headlines_tech_carrier_tech_desc:1 "`[SCOPE.sCountry('headlines_carrier_tech_researcher').GetName]已发明出$HEADLINES_TECH_NAME$。#lore 这些新型实验舰船配备了大型飞行甲板，能够让整个航空中队在瞬间起飞，导致一些观察家欢呼……的终结。#!`"
+
+
+notification_headlines_tech_battleship_tech_tooltip:0 "`#header $notification_headlines_tech_battleship_tech_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_battleship_tech_desc$`"
+ notification_headlines_tech_battleship_tech_name:0 "`#b 超级无畏舰 #!`"
+ notification_headlines_tech_battleship_tech_desc:1 "`[SCOPE.sCountry('headlines_battleship_tech_researcher').GetName]已提升了他们的$HEADLINES_TECH_NAME$设计。#lore 新型舰船所搭载的巨大炮塔甚至令无畏舰的火力都相形见绌，同时其指挥能力也因整合了……而得到增强。#!`"
+
+
+notification_headlines_tech_mobile_armor_tooltip:0 "`#header $notification_headlines_tech_mobile_armor_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_mobile_armor_desc$`"
+ notification_headlines_tech_mobile_armor_name:0 "`#b “坦克”碾过战壕 #!`"
+ notification_headlines_tech_mobile_armor_desc:1 "`[SCOPE.sCountry('headlines_mobile_armor_researcher').GetName]已研发出$HEADLINES_TECH_NAME$。#lore 尽管这些装甲“陆地舰”行动缓慢、噪音巨大且容易发生故障，但它们能抵御轻武器攻击，并能将重型火炮带到前线，使得敌人无法忽视其……#!`"
+
+
+notification_headlines_tech_pharmaceuticals_tooltip:0 "`#header $notification_headlines_tech_pharmaceuticals_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_pharmaceuticals_desc$`"
+ notification_headlines_tech_pharmaceuticals_name:0 "`#b 奇效药包治百病 #!`"
+ notification_headlines_tech_pharmaceuticals_desc:1 "`[SCOPE.sCountry('headlines_pharmaceuticals_researcher').GetName]的科学家已研发出$HEADLINES_TECH_NAME$。#lore 随着数种新药已投入生产以治疗各种疾病，……的标准化和工业化进程已展开。#!`"
+
+
+notification_headlines_tech_realism_tooltip:0 "`#header $notification_headlines_tech_realism_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_realism_desc$`"
+ notification_headlines_tech_realism_name:0 "`#b 现实主义运动 #!`"
+ notification_headlines_tech_realism_desc:1 "`[SCOPE.sCountry('headlines_realism_researcher').GetName]的艺术家已开始采纳$HEADLINES_TECH_NAME$。#lore 作为对浪漫主义情感和戏剧的强烈反击，现实主义者如实描绘生活，包括先前被认为……的题材。#!`"
+
+
+notification_headlines_tech_organized_sports_tooltip:0 "`#header $notification_headlines_tech_organized_sports_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_organized_sports_desc$`"
+ notification_headlines_tech_organized_sports_name:0 "`#b 新国家体育联盟 #!`"
+ notification_headlines_tech_organized_sports_desc:1 "`[SCOPE.sCountry('headlines_organized_sports_researcher').GetName]已编纂了一套$HEADLINES_TECH_NAME$体系。#lore 国家政府资助成立了一个官方联盟，该联盟拥有完整的球队制服，展示着……#!`"
+
+
+notification_headlines_tech_quinine_tooltip:0 "`#header $notification_headlines_tech_quinine_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_quinine_desc$`"
+ notification_headlines_tech_quinine_name:0 "`#b 奎宁对抗疟疾 #!`"
+ notification_headlines_tech_quinine_desc:1 "`[SCOPE.sCountry('headlines_quinine_researcher').GetName]的研究人员已分离出$HEADLINES_TECH_NAME$。#lore 随着抗疟疾药物的大规模生产现已可行，非洲海岸的“疾病守卫”已被攻克，这促使新一波的……#!`"
+
+
+notification_headlines_tech_steel_frame_buildings_tooltip:0 "`#header $notification_headlines_tech_steel_frame_buildings_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_steel_frame_buildings_desc$`"
+ notification_headlines_tech_steel_frame_buildings_name:0 "#b 钢铁 - 现代材料 #!"
+ notification_headlines_tech_steel_frame_buildings_desc:1 "在[SCOPE.sCountry('headlines_steel_frame_buildings_researcher').GetAdjective]建筑行业中，一项名为$HEADLINES_TECH_NAME$的技术已经开发成功。#lore由于钢材能够承受比传统材料大得多的应力，数十层高的新建筑设计方案也已揭开面纱，其中..."
+
+
+notification_headlines_tech_mutual_funds_tooltip:0 "#header $notification_headlines_tech_mutual_funds_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_mutual_funds_desc$"
+ notification_headlines_tech_mutual_funds_name:0 "#b 共同基金热潮 #!"
+ notification_headlines_tech_mutual_funds_desc:1 "[SCOPE.sCountry('headlines_mutual_funds_researcher').GetName]的金融家们开发了$HEADLINES_TECH_NAME$。#lore首批向股票经纪人开放的此类基金引发了一波新投资者热潮，他们被该基金较低的风险状况所吸引..."
+
+
+notification_headlines_tech_camera_tooltip:0 "#header $notification_headlines_tech_camera_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_camera_desc$"
+ notification_headlines_tech_camera_name:0 "#b 摄影术 - 即时画作 #!"
+ notification_headlines_tech_camera_desc:1 "[SCOPE.sCountry('headlines_camera_researcher').GetName]的一位发明家创造了$HEADLINES_TECH_NAME$。#lore一道耀眼的光芒闪过，现实瞬间被捕捉并转移到一张纸上，然后可以..."
+
+
+notification_headlines_tech_socialism_tooltip:0 "#header $notification_headlines_tech_socialism_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_socialism_desc$"
+ notification_headlines_tech_socialism_name:0 "#b 世界的幽灵 #!"
+ notification_headlines_tech_socialism_desc:1 "[SCOPE.sCountry('headlines_socialism_researcher').GetName]的一位哲学家发表了$HEADLINES_TECH_NAME$理论。#lore该宣言声称整个世界都处于一场伟大的阶级斗争之中，预示着工人大众最终将击败资本家阶级，随后..."
+
+
+notification_headlines_tech_elevator_tooltip:0 "#header $notification_headlines_tech_elevator_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_elevator_desc$"
+ notification_headlines_tech_elevator_name:0 "#b “电梯”取代楼梯 #!"
+ notification_headlines_tech_elevator_desc:1 "[SCOPE.sCountry('headlines_elevator_researcher').GetName]的发明家们开始建造$HEADLINES_TECH_NAME$。#lore其中一位发明家站在平台上，用斧头砍断绳索，以此展示了电梯制动系统的安全性，之后平台..."
+
+
+notification_headlines_tech_zeppelins_tooltip:0 "#header $notification_headlines_tech_zeppelins_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_zeppelins_desc$"
+ notification_headlines_tech_zeppelins_name:0 "#b 空中飞艇 #!"
+ notification_headlines_tech_zeppelins_desc:1 "[SCOPE.sCountry('headlines_zeppelins_researcher').GetAdjective]的发明家们创造了$HEADLINES_TECH_NAME$。#lore这些新型飞艇使现有热气球的设计相形见绌，它们利用比空气轻的气体高高地飘向天空，运载货物和乘客前往..."
+
+
+notification_headlines_tech_malaria_prevention_tooltip:0 "#header $notification_headlines_tech_malaria_prevention_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_malaria_prevention_desc$"
+ notification_headlines_tech_malaria_prevention_name:0 "#b 疟疾退散 #!"
+ notification_headlines_tech_malaria_prevention_desc:1 "[SCOPE.sCountry('headlines_malaria_prevention_researcher').GetName]已开发出有效的$HEADLINES_TECH_NAME$技术。#lore随着强化药物的部署和对疾病传播的更深入理解，现在即使是非洲内陆地区也可以安全地..."
+
+
+notification_headlines_tech_film_tooltip:0 "#header $notification_headlines_tech_film_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_film_desc$"
+ notification_headlines_tech_film_name:0 "#b 动态影像 #!"
+ notification_headlines_tech_film_desc:1 "[SCOPE.sCountry('headlines_film_researcher').GetAdjective]的发明家们创造了$HEADLINES_TECH_NAME$。#lore惊叹的观众看着照片似乎活了起来，被快速的序列所动画化..."
+
+
+notification_headlines_tech_paved_roads_tooltip:0 "#header $notification_headlines_tech_paved_roads_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_paved_roads_desc$"
+ notification_headlines_tech_paved_roads_name:0 "#b 汽车时代 #!"
+ notification_headlines_tech_paved_roads_desc:1 "[SCOPE.sCountry('headlines_paved_roads_researcher').GetName]已开发出$HEADLINES_TECH_NAME$。#lore随着新式汽车设计变得更便宜、更普及，专为汽车使用而设计的最新的铺砌道路的开通必然会..."
+
+
+notification_headlines_tech_antibiotics_tooltip:0 "#header $notification_headlines_tech_antibiotics_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_antibiotics_desc$"
+ notification_headlines_tech_antibiotics_name:0 "#b 抗生素革命 #!"
+ notification_headlines_tech_antibiotics_desc:1 "[SCOPE.sCountry('headlines_antibiotics_researcher').GetName]的研究人员发明了$HEADLINES_TECH_NAME$。#lore青霉素的分离和生产在试验中已被证明是奇迹，治愈了以前致命的疾病..."
+
+
+
+
+
+
+# * denotes Important Technologies that are in their own message group
+
+##Production Techs
+#Bessemer Process
+#Crystal Glass
+#Baking Powder
+#Nitroglycerin
+#Improved Fertilizer
+#Steam Donkey
+#Dynamite
+#Steel Railway Cars
+#Rubber Mastication*
+#Pumpjacks*
+#Electrical Generation*
+#Aniline
+#Vulcanization
+#Nitrogen Fixation
+#Mechanized Farming
+#Plastics*
+#Steam Turbine
+#Combustion Engine*
+#Telephone*
+#Art Silk
+#Electric Railways*
+#Radio*
+#Pasteurization
+#Arc Welding*
+#Oil Turbine
+#Compression Ignition
+#Dough Rollers
+
+##Military Techs
+#Rifles
+#Breech-Loading Artillery
+#Repeaters
+#Modern Nursing
+#Gantry Cranes
+#Ironclad*
+#Handcranked Machine Gun*
+#Bolt-Action Rifle
+#Trench Works*
+#Destroyer*
+#Submarine*
+#Sea Lane Strategy*
+#Automatic Machine Guns*
+#Dreadnought*
+#Chemical Warfare*
+#Military Aviation*
+#Flamethrowers
+#NCO Training*
+#Aircraft Carrier*
+#Battleship*
+#Mobile Armor*
+
+##Society Techs
+#Pharmaceuticals
+#Realism
+#Organized Sports
+#Quinine*
+#Steel-Frame Buildings*
+#Mutual Funds
+#Camera
+#Socialism*
+#Elevators
+#Zeppelins
+#Malaria Prevention*
+#Film
+#Paved Roads
+#Antibiotics

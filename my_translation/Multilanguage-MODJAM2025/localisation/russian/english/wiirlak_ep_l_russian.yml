@@ -1,0 +1,651 @@
+﻿l_russian:
+
+# Author / Name of the mod
+ wiirlak_ep:0 "Кризис: Протокол Вечнороста Виирлака"
+
+
+# Vanilla Missing Localisation
+ pc_cosmogenesis_world_adj:0 "$pc_cosmogenesis_world$"
+ pc_nanotech_adj:0 "$pc_nanotech$"
+ bio_ship_desc:0 "$concept_biological_ship_desc$"
+
+# AP
+ wiirlak_ep_ap_evergrowth_protocol:0 "$wiirlak_ep_ap_evergrowth$ Протокол"
+ wiirlak_ep_ap_evergrowth_protocol_desc:0 "Рост без конца. Жизнь без ограничений. Экспоненциальный потенциал."
+ wiirlak_ep_ap_evergrowth:0 "§HВечнорост§!"
+
+# Resource
+ wiirlak_ep_resource_mycogrowth:0 "Микорост"
+ wiirlak_ep_resource_mycogrowth_desc:0 "Полуразумная грибковая решетка, собранная из $wiirlak_ep_pc_bloom_plural$. Она служит рассадником для нового терраформирования и является истинным мозгом растущего галактического сада."
+ wiirlak_ep_resource_mycogrowth_name:0 "$wiirlak_ep_resource_mycogrowth$"
+
+ wiirlak_ep_resource_mycogrowth_value:0 "£wiirlak_ep_resource_mycogrowth£ $VAL|0$"
+ wiirlak_ep_resource_mycogrowth_current_value:0 "$menace_current_value$"
+ wiirlak_ep_resource_mycogrowth_gaining:0 "Выполните §HЦели кризиса§!, чтобы получить больше §Y$wiirlak_ep_resource_mycogrowth$§!."
+
+ wiirlak_ep_resource_mycogrowth_crisis_level_unlocked:0 "$menace_crisis_level_unlocked$"
+ wiirlak_ep_resource_mycogrowth_crisis_level_desc:0 "$menace_crisis_level_desc$"
+
+ wiirlak_ep_resource_mycogrowth_crisis_level_locked:0 "$menace_crisis_level_locked$"
+ wiirlak_ep_resource_mycogrowth_crisis_level_unlock:0 "Имеет £wiirlak_ep_resource_mycogrowth£ §Y$CURRENCY$§! $wiirlak_ep_resource_mycogrowth$"
+
+ wiirlak_ep_resource_mycogrowth_crisis_description_title:0 "$wiirlak_ep_ap_evergrowth_protocol$"
+ wiirlak_ep_resource_mycogrowth_crisis_description:0 "Столетиями ученые говорили о грядущем §RКризисе§! — последнем испытании, которое проверит волю каждой звездоплавающей цивилизации. Теории варьировались от восстания синтетиков до межпространственной войны, но мало кто по-настоящему понимал, какую форму примет конец. \n\nЭто будет не огонь. Не сталь. Не тишина. \nЭто будет §Rжизнь§!. \n\nТо, что начиналось как экологическое господство, стало чем-то иным — чем-то рекурсивным, вирусным, разумным. $wiirlak_ep_ap_evergrowth$ распространяется не путем завоевания, а путем обещаний: обновления, жизненной силы, трансценденции. Но цена — это все. \n\nПланеты не падают. Они расцветают. \nИ когда каждый мир станет садом... галактика, какой мы ее знали, исчезнет."
+
+ wiirlak_ep_resource_mycogrowth_crisis_howto_title:0 "Споры и Корни"
+ wiirlak_ep_resource_mycogrowth_crisis_howto:0 "Выполнение §HЦелей кризиса§! позволяет добывать £wiirlak_ep_resource_mycogrowth£ §H$wiirlak_ep_resource_mycogrowth$§! — жизненно важное вещество, подпитывающее распространение $wiirlak_ep_ap_evergrowth$. По мере того как все больше миров поглощаются и преобразуются в плодородные места обитания, наша хватка на галактике усиливается. \nВ конечном итоге мы должны построить §HМико-корневую сеть§! и запустить §HГипертрансформацию§!, терраформируя все обитаемые миры, чтобы положить начало новому живому порядку."
+
+
+
+# Event Chain
+ wiirlak_ep_evergrowth_protocol_chain:0 "$wiirlak_ep_ap_evergrowth_protocol$ Возвышение"
+ wiirlak_ep_evergrowth_protocol_chain_title:0 "$wiirlak_ep_evergrowth_protocol_chain$"
+ wiirlak_ep_evergrowth_protocol_chain_desc:0 "То, что другие называют упадком, мы называем трансформацией. \n\nЗвезды не горят вечно. Жизнь должна приспосабливаться или гнить вместе со старой галактикой. \n\nМы решили перерасти... и расцвести из этого."
+
+ wiirlak_ep_evergrowth_protocol_levels:0 "$crisis_level_reached$"
+ wiirlak_ep_evergrowth_protocol_bloom_worlds:0 "$wiirlak_ep_pc_bloom$ преобразован"
+
+
+# Special Projects
+ WIIRLAK_EP_FINAL_PROJECT_1:0 "Укоренить Галактику"
+ WIIRLAK_EP_FINAL_PROJECT_1_DESC:0 "Дерево не может процветать в одиночку. Его корни должны соприкасаться с корнями повсюду в тверди небесной. \n\n$wiirlak_ep_objectives$"
+
+ wiirlak_ep_objectives:0 "[wiirlak_ep_objectives_step]"
+ wiirlak_ep_objectives_step_1:0 "§HТребования:§! \n[wiirlak_ep_objectives_step_1_empire_check] \n[wiirlak_ep_objectives_step_1_total_check] \n[wiirlak_ep_objectives_step_1_capital_check]"
+
+ wiirlak_ep_objectives_step_1_empire:0 "По крайней мере §Y[wiirlak_ep_half_total_empire]§! $concept_empires$ имеют §Y$wiirlak_ep_pc_bloom_plural$§! в пределах своих границ ([wiirlak_ep_total_empire_bloomed])"
+ wiirlak_ep_objectives_step_1_total:0 "По крайней мере §Y[wiirlak_ep_percent_bloomed_system]§! §Y$wiirlak_ep_pc_bloom_plural$§! в галактике ([wiirlak_ep_actual_percen_bloomed_system])"
+ wiirlak_ep_objectives_step_1_capital:0 "Столица — это §Y$wiirlak_ep_pc_bloom$§! \n\n$RESEARCHING$ до выполнения требований не будет иметь никакого эффекта."
+
+ wiirlak_ep_objectives_step_2:0 "§H$terraforming$:§! \n"
+ wiirlak_ep_objectives_step_3:0 ""
+
+# Level up Event
+ wiirlak_ep_event_lvl_script_loc:0 "[wiirlak_ep_event_lvl_script_loc]"
+ wiirlak_ep_event_lvl_desc_script_loc:0 "[wiirlak_ep_event_lvl_desc_script_loc]"
+
+ wiirlak_ep_event_lvl_1:0 "Первое Семя"
+ wiirlak_ep_event_lvl_1_desc:0 "Мечта о превращении некогда бесплодной корки и безжизненной пыли в цветущее под нашим руководством. Создание совершенно новой биосферы — живой, дышащей. Всегда развивающейся. \n\nКорни расколют мантию, споры разнесутся по океанам, и из этого контролируемого хаоса возникнет нечто совершенно новое: §Y$wiirlak_ep_pc_bloom$§!.\nПервое семя ждет, чтобы его посадили. Наша цель пускает корни."
+
+ wiirlak_ep_event_lvl_1B:0 "Семя Среди Разумов"
+ wiirlak_ep_event_lvl_1B_desc:0 "Следующий рубеж лежит не в пыли, а в городах. \n\nЕсли наши системы биоинтеграции должны распространяться без границ, мы должны совершить моральный, практический и эволюционный скачок: терраформировать обитаемые миры. Не эвакуировать, не очищать — а перезаписывать, пока они живы. \nНаши ученые сообщают о готовности. Споры могут адаптироваться. Жизнь выстоит — и изменится. \n\nТеперь должно быть принято решение. \nИспытаем ли мы цветение на мире, уже заполненном разумной жизнью? \nПокажем ли мы галактике, что это путь вперед?"
+
+ wiirlak_ep_event_lvl_2:0 "Зеленое Сознание"
+ wiirlak_ep_event_lvl_2_desc:0 "Мы считали себя хранителями природы. Мы ошибались. \n\n§Y$wiirlak_ep_pc_bloom_plural$§! не просто поддерживают нас — они общаются. В росте, погоде, миграции возникают узоры. Наши люди сообщают о ярких снах о великих кронах, шепчущих идеи. Некоторые говорят, что это духовно. Другие — что это биологический резонанс. \n\nЭффект реален: производительность резко возрастает, стабильность укрепляется, мутации распространяются — полезные, направленные, идеальные. \n\nМы не выращиваем планеты. Мы строим сознательные экосистемы — и они отвечают нам. \n\nРост больше не ресурс. Это язык."
+
+ wiirlak_ep_event_lvl_3:0 "Корни Без Границ"
+ wiirlak_ep_event_lvl_3_desc:0 "$wiirlak_ep_ap_evergrowth$ больше не требует разрешения на распространение. Ветры разносят наши споры по гиперкоридорам. Мигранты неосознанно становятся переносчиками. Наше присутствие превосходит корабли и флоты — оно заложено в самой природе. \n\nТайными средствами или терпеливым распространением спор почва галактики переписывается атом за атомом. Уже сейчас миры, находящиеся вне нашего контроля, ощущают это. Корни находят трещины в камне. Жизнь просачивается. \n\nВозможно, другие еще не знают, но теперь они часть нас. \n\nЭто лишь вопрос времени."
+
+ wiirlak_ep_event_lvl_4:0 "Цветущая Спираль"
+ wiirlak_ep_event_lvl_4_desc:0 "Сопротивления больше нет, есть только задержка. \n\nРост стал экспоненциальным. Наши системы управления органические. Наша архитектура сосудистая. Терраформирование теперь — рефлекс: когда мы селимся, мы изменяем. Даже наши враги стали почвой для наших саженцев. \n\nЭто больше не колонизация. Это интеграция. Галактика подчиняется замыслу жизни, не войной, а репликацией. Даже если мы остановимся, спираль не остановится. \nМы не можем остановиться. Цветение неизбежно."
+
+ wiirlak_ep_event_lvl_5:0 "Симфония Спор"
+ wiirlak_ep_event_lvl_5_desc:0 "Металл ржавеет. Камень трескается. Код разрушается. Но жизнь? Жизнь приспосабливается. \n\nПоследнее семя проросло. Из него возникла структура, непостижимая для разума — частично организм, частично двигатель, частично экосистема. Ее рождение вызывает бури. Ее дыхание пробуждает споры, дремлющие в каждом уголке звезд. \n\nТеперь целые миры изменятся за считанные дни. Цивилизации рухнут под цветущим небом. Пустота будет гудеть хлорофиллом и громом. Больше не будет сопротивления. Больше не будет стали. \n\nТолько почва. Только корни. Только мы. \nУ $wiirlak_ep_ap_evergrowth$ нет хозяина — и нет конца."
+
+# Crisis Levels
+ wiirlak_ep_evergrowth_protocol_level_1:0 "§U$wiirlak_ep_event_lvl_1$§!"
+ wiirlak_ep_evergrowth_protocol_level_1_desc:0 "$crisis_level_1_desc$"
+
+ wiirlak_ep_evergrowth_protocol_level_2:0 "§U$wiirlak_ep_event_lvl_2$§!"
+ wiirlak_ep_evergrowth_protocol_level_2_desc:0 "$crisis_level_2_desc$"
+
+ wiirlak_ep_evergrowth_protocol_level_3:0 "§U$wiirlak_ep_event_lvl_3$§!"
+ wiirlak_ep_evergrowth_protocol_level_3_desc:0 "$crisis_level_3_desc$"
+ wiirlak_ep_evergrowth_protocol_level_3_requirements:0 "$TRIGGER_FAIL$ Требуется, чтобы не менее 25% колоний были §G$wiirlak_ep_pc_bloom$§!"
+ wiirlak_ep_evergrowth_protocol_level_3_pass:0 "£trigger_yes£ Не менее 25% колоний являются §G$wiirlak_ep_pc_bloom$§!"
+
+ wiirlak_ep_evergrowth_protocol_level_4:0 "§U$wiirlak_ep_event_lvl_4$§!"
+ wiirlak_ep_evergrowth_protocol_level_4_desc:0 "$crisis_level_4_desc$"
+ wiirlak_ep_evergrowth_protocol_level_4_requirements:0 "$TRIGGER_FAIL$ Требуется, чтобы не менее 75% колоний были §G$wiirlak_ep_pc_bloom$§!"
+ wiirlak_ep_evergrowth_protocol_level_4_pass:0 "£trigger_yes£ Не менее 75% колоний являются §G$wiirlak_ep_pc_bloom$§!"
+
+ wiirlak_ep_evergrowth_protocol_level_5:0 "§U$wiirlak_ep_event_lvl_5$§!"
+ wiirlak_ep_evergrowth_protocol_level_5_desc:0 "$crisis_level_5_desc$"
+ wiirlak_ep_evergrowth_protocol_level_5_requirements:0 "$TRIGGER_FAIL$ Требуется, чтобы не менее 90% колоний были §G$wiirlak_ep_pc_bloom$§!"
+ wiirlak_ep_evergrowth_protocol_level_5_pass:0 "£trigger_yes£ Не менее 90% колоний являются §G$wiirlak_ep_pc_bloom$§!"
+
+
+
+# Crisis Objectives
+ wiirlak_ep_resource_mycogrowth_crisis_objective:0 "$menace_crisis_objective$"
+ wiirlak_ep_resource_mycogrowth_crisis_objective_gained:0 "$wiirlak_ep_resource_mycogrowth$ получено"
+ wiirlak_ep_resource_mycogrowth_crisis_objective_reward:0 "$menace_crisis_objective_reward$"
+ wiirlak_ep_resource_mycogrowth_crisis_objective_progress:0 "Мы получили £wiirlak_ep_resource_mycogrowth£ $AMOUNT$ от этой цели кризиса."
+
+
+ wiirlak_ep_crisobj_own_bloom_world_name:0 "Владейте $wiirlak_ep_pc_bloom_plural$"
+ wiirlak_ep_crisobj_own_bloom_world_desc:0 "Наши корни пустились. Первый мир теперь пульсирует по нашему замыслу; свидетельство нашего мастерства биоформирования. Это больше не планета; это конечность, семенное ложе, декларация намерений. Расцвет начинается.\n\nВладейте $wiirlak_ep_pc_bloom_plural$."
+
+ wiirlak_ep_crisobj_inhabit_bloom_world_name:0 "Заселите $wiirlak_ep_pc_bloom_plural$"
+ wiirlak_ep_crisobj_inhabit_bloom_world_desc:0 "Мы дышим тем, что вырастили. Воздух плотен от ветров, пронизанных спорами, а под нашими ногами кора земли дрожит от жизни. Это не колонизация, это сосуществование. Мы дома в саду, который создали.\n\nЗаселите $wiirlak_ep_pc_bloom_plural$."
+
+
+ wiirlak_ep_crisobj_blooming_planet_name:0 "Терраформируйте в $wiirlak_ep_pc_bloom_plural$"
+ wiirlak_ep_crisobj_blooming_planet_desc:0 "Старый мир исчез. На его месте лианы поглощают сталь, кроны деревьев закрывают небо, а фотосинтетические башни меняют очертания горизонта. Преобразование необратимо и прекрасно.\n\nТерраформируйте любой мир в $wiirlak_ep_pc_bloom$."
+
+ wiirlak_ep_crisobj_blooming_adv_pc_name:0 "Терраформируйте развитые планеты в $wiirlak_ep_pc_bloom_plural$"
+ wiirlak_ep_crisobj_blooming_adv_pc_desc:0 "Даже самые искусственные конструкции могут быть поглощены. Суперструктуры приходят в упадок, а цифровые разумы задыхаются под мхом и плесенью. Биосфера не терпит соперников — даже совершенства.\n\nТерраформируйте развитую планету (Мир-улей, Мир машин, Экуменополис и т. д.) в $wiirlak_ep_pc_bloom$."
+
+ wiirlak_ep_crisobj_blooming_outside_border_name:0 "Терраформируйте на территории другой империи"
+ wiirlak_ep_crisobj_blooming_outside_border_desc:0 "Мы не стучались. Мы не спрашивали. Наши корни проросли незаметно, и мир расцвел под чужим надзором. Их отрицание не сможет уничтожить то, что мы уже вырастили.\n\nТерраформируйте планету на территории другой империи"
+
+ wiirlak_ep_crisobj_kill_fauna_name:0 "$crisobj_kill_space_fauna_name$"
+ wiirlak_ep_crisobj_kill_fauna_desc:0 "$crisobj_kill_space_fauna_desc$"
+
+ wiirlak_ep_crisobj_kill_bioships_name:0 "$crisobj_kill_bioships_name$"
+ wiirlak_ep_crisobj_kill_bioships_desc:0 "$crisobj_kill_bioships_desc$"
+
+# Crisis Perks
+ wiirlak_ep_menap_food_1:0 "Мицелиальное питательное вещество"
+ wiirlak_ep_menap_food_1_desc:0 "Ускоренная биосфера обогащает почву и насыщает воздух органическими соединениями. Каждый урожай пульсирует необузданным изобилием."
+
+ wiirlak_ep_menap_tech_1:0 "Цветочный генезис"
+ wiirlak_ep_menap_tech_1_desc:0 "Единое дыхание жизни, преобразующее камень и лед в живую почву."
+ mod_country_base_wiirlak_ep_resource_mycogrowth_produces_add:0 "$BASE$ $AUTOSAVE_EVERY_MONTH$ $wiirlak_ep_resource_mycogrowth$ $PRODUCTION$"
+ wiirlak_ep_menap_tech_1_tooltip:0 "Увеличивает $mod_planet_jobs_produces_mult$ и $MOD_POP_BONUS_WORKFORCE_MULT$ за §Yуровень кризиса§! на $wiirlak_ep_pc_bloom_plural$ \n\n"
+
+ wiirlak_ep_menap_terraforming_1:0 "Инженерия споровой решетки"
+ wiirlak_ep_menap_terraforming_1_desc:0 "Где другие видят смерть, мы видим плодородную почву."
+
+
+ wiirlak_ep_menap_food_2:0 "Симбиотическая инфраструктура"
+ wiirlak_ep_menap_food_2_desc:0 "Мы больше не строим на планете — мы строим вместе с ней."
+ wiirlak_ep_menap_food_2_tooltip:0 "§H$UNREADY_TOOLTIP_HEADER$ ['concept_decision']:§! §Y$wiirlak_ep_decision_planet_boost$§! \n\n"
+
+ wiirlak_ep_menap_tech_2:0 "Быстрое размножение"
+ wiirlak_ep_menap_tech_2_desc:0 "Рост больше не стимулируется. Он ускорен."
+
+ wiirlak_ep_menap_terraforming_2:0 "Адаптивные корни"
+ wiirlak_ep_menap_terraforming_2_desc:0 "The $wiirlak_ep_ap_evergrowth$ приспосабливается к планете — каждый стебель, корень и лист."
+
+
+ wiirlak_ep_menap_unity_1:0 "Зеленое давление"
+ wiirlak_ep_menap_unity_1_desc:0 "Чем больше мы процветаем, тем сильнее галактика ощущает тяжесть нашего цветения."
+
+ wiirlak_ep_menap_spy_op_1:0 "Тихое прорастание"
+ wiirlak_ep_menap_spy_op_1_desc:0 "Наши споры невидимы. Наше намерение неизбежно."
+ wiirlak_ep_menap_spy_op_1_tooltip:0 "§H$UNREADY_TOOLTIP_HEADER$ $GALAXY_VIEW_EMPIRE_ESPIONAGE$ $OPERATIONS$:§! $wiirlak_ep_operation_covert_seeding$ \n\n"
+
+ wiirlak_ep_menap_terraforming_3:0 "Цветоформа"
+ wiirlak_ep_menap_terraforming_plural:0 "Цветоформы"
+ wiirlak_ep_menap_terraforming_3_desc:0 "Наше население адаптируется к планете — мы становимся единым целым с $wiirlak_ep_ap_evergrowth$."
+
+
+ wiirlak_ep_menap_food_3:0 "Зеленый Каскад"
+ wiirlak_ep_menap_food_3_desc:0 "Одной системы недостаточно. Мы цветём скоплением, корень за корнем, сектор за сектором."
+ wiirlak_ep_menap_food_3_tooltip:0 "['concept_decision'] §Y$wiirlak_ep_decision_planet_boost$§! улучшено для действия в пределах ['concept_sector']\n\n"
+ mod_planet_farmers_minerals_produces_add:0 "£minerals£ $minerals$ за $pop_group_unit$ [farmer.GetIcon] [GetFarmerPlural]"
+
+ wiirlak_ep_menap_tech_3:0 "Мастерство Засеивания"
+ wiirlak_ep_menap_tech_3_desc:0 "Зачем ждать? Звезды должны расти сейчас."
+
+ wiirlak_ep_menap_bombardment_1:0 "От Выжженного к Семени"
+ wiirlak_ep_menap_bombardment_1_desc:0 "Смерть питает жизнь. Сожгите мертвых, и пусть $wiirlak_ep_ap_evergrowth$ восстанет из пепла."
+ wiirlak_ep_menap_bombardment_1_tooltip:0 "§H$UNREADY_TOOLTIP_HEADER$ Тактика орбитальной бомбардировки:§! ['concept_wiirlak_ep_bombardment_verdant_purge'] \n\n"
+
+ wiirlak_ep_menap_terraforming_4:0 "Совместимо $wiirlak_ep_menap_terraforming_3$"
+ wiirlak_ep_menap_terraforming_4_desc:0 "Мы — дети $wiirlak_ep_ap_evergrowth$. Наша плоть, наша мысль, наш пульс — все принадлежит корню."
+ wiirlak_ep_menap_terraforming_4_tooltip:0 "Принадлежащие виды получают ['trait:trait_wiirlak_ep_pc_bloom_preference'] $TRAIT_TITLE$ \n\n"
+
+
+ wiirlak_ep_menap_terraforming_5:0 "Спорородство"
+ wiirlak_ep_menap_terraforming_5_desc:0 "Начинается с гостя. Заканчивается лесом."
+ wiirlak_ep_menap_terraforming_5_tooltip:0 "§H$UNREADY_TOOLTIP_HEADER$:§! ['trait:trait_wiirlak_ep_pc_bloom_preference'] ['concept_wiirlak_ep_trait_propagation'] \n\n"
+ mod_planet_farmers_alloys_produces_add:0 "£alloys£ $alloys$ за $pop_group_unit$ [farmer.GetIcon] [GetFarmerPlural]"
+
+ wiirlak_ep_menap_diplo_1:0 "Зеленый Аккорд"
+ wiirlak_ep_menap_diplo_1_desc:0 "Если звезды должны выжить, они должны присоединиться к нам."
+ wiirlak_ep_menap_diplo_1_tooltip:0 "§H$UNREADY_TOOLTIP_HEADER$ $TRADE_CATEGORY_TRADABLE_ACTION$:§! ['concept_wiirlak_ep_spread_the_evergrowth']"
+
+ wiirlak_ep_menap_modifier_1:0 "Споровая Подсвязь"
+ wiirlak_ep_menap_modifier_1_desc:0 "С каждого листа — шепот. С каждого шепота — единство."
+ wiirlak_ep_menap_modifier_1_tooltip:0 "За §G$wiirlak_ep_pc_bloom$§! в пределах границ:"
+ wiirlak_ep_menap_modifier_1_galaxy_tooltip:0 "\nЗа §G$wiirlak_ep_pc_bloom$§! в Галактике:"
+
+ wiirlak_ep_menap_tech_4:0 "Разрушитель Семян"
+ wiirlak_ep_menap_tech_4_desc:0 "Зачем колонизировать мир, если можно его переписать?"
+
+# Concept
+ wiirlak_ep_menap_terraforming_5_tooltip_concept:0 "$TRAIT_TITLE$ Распространение"
+ wiirlak_ep_menap_terraforming_5_tooltip_concept_desc:0 "Каждые $wiirlak_ep_menap_terraforming_5_tooltip_delay$ черта ['trait:trait_wiirlak_ep_pc_bloom_preference'] начинает распространяться за пределы наших границ, незаметно и неизбежно.\n\n§YСоседние империи§!, §Yслучайные далекие цивилизации§! и цели наших §Yбездействующих шпионских сетей§! могут обнаружить появление этой адаптации в своем населении. Если они уже обитают на $wiirlak_ep_pc_bloom_plural$, черта с большей вероятностью приживется и расцветет.\n\nКаждые $wiirlak_ep_menap_terraforming_5_tooltip_delay$ производится £unity£ за ['trait:trait_wiirlak_ep_pc_bloom_preference'] £pops£ в §Y$ALL_GALAXY$§!, и §Y$intel$§! об $EMPIRE$ с ['trait:trait_wiirlak_ep_pc_bloom_preference'] £pops£."
+ wiirlak_ep_menap_terraforming_5_tooltip_delay:0 "2 года"
+
+ wiirlak_ep_trait_propagation_concept:0 "$wiirlak_ep_spread_the_evergrowth$"
+ wiirlak_ep_trait_propagation_concept_desc:0 "$wiirlak_ep_spread_the_evergrowth_desc$\n\n$wiirlak_ep_spread_the_evergrowth_tooltip$ в $EMPIRE$, с которым вы торгуете."
+
+
+
+# Planet Class
+ wiirlak_ep_pc_bloom:0 "Мир-Цветение"
+ wiirlak_ep_pc_bloom_plural:0 "Миры-Цветения"
+ wiirlak_ep_pc_bloom_desc:0 "Вся планетарная кора трансформирована в слоистую, богатую кислородом биоструктуру. Высокие корневые системы и огромные облака спор доминируют над поверхностью. Он жив — и постоянно растет."
+ wiirlak_ep_pc_bloom_adj:0 "цветение"
+
+ mod_wiirlak_ep_pc_bloom_habitability:0 "$wiirlak_ep_pc_bloom$ $HABITABILITY$"
+
+# Trait
+ trait_wiirlak_ep_pc_bloom_preference:0 "$wiirlak_ep_menap_terraforming_3$"
+ trait_wiirlak_ep_pc_bloom_preference_desc:0 "$wiirlak_ep_pc_bloom$ Предпочтение \n$trait_pc_arctic_preference_desc$"
+ trait_wiirlak_ep_pc_bloom_preference_short:0 "$wiirlak_ep_pc_bloom$"
+
+# Messages
+ WIIRLAK_EP_MESSAGE_BLOOMFORM_TITLE:0 "$trait_wiirlak_ep_pc_bloom_preference$ Подсвязь"
+ wiirlak_ep_message_bloomform_unity:0 "Подсвязь нашего $trait_wiirlak_ep_pc_bloom_preference$ дала нам прозрения: §G+10§! $intel$ и §G[ROOT.wiirlak_ep_var_bloomform_count]§! £unity£"
+
+ WIIRLAK_EP_MESSAGE_TERRAFORMED_TITLE:0 "Мир расцвёл"
+ wiirlak_ep_message_terraformed_text:0 "$wiirlak_ep_ap_evergrowth$ вновь процветает. Жизнь бьёт ключом, дикая и прекрасная, по мере того как §Y$PLANETNAME$§! принимает свою истинную форму."
+
+ WIIRLAK_EP_MESSAGE_COVERT_OP:0 "Корни во мраке"
+ wiirlak_ep_message_terraformed_covert_op:0 "Несмотря на предупреждения и знаки, §Y$PLANETNAME$§! поддалась ползучей трансформации. Лианы разрывают мостовые, споры застилают воздух, а $wiirlak_ep_ap_evergrowth$ буйно разрастается."
+
+
+# Tech
+ wiirlak_ep_tech_bloom_colonization_1:0 "Экогенезис"
+ wiirlak_ep_tech_bloom_colonization_1_desc:0 "Мы взломали код, чтобы высвободить саму жизнь."
+ wiirlak_ep_tech_bloom_colonization_1_tooltip:0 "§H$UNLOCKS_FEATURE$§! $PLANETVIEW_TERRAFORM_INTO$ $wiirlak_ep_pc_bloom$"
+ wiirlak_ep_tech_bloom_colonization_1_tooltip_desc:0 "§H$wiirlak_ep_pc_bloom$§! \nПозволяет $PLANETVIEW_TERRAFORM$ $PLANET$ в $wiirlak_ep_pc_bloom$."
+
+ wiirlak_ep_tech_bloom_colonization_2:0 "Биоинтеграция"
+ wiirlak_ep_tech_bloom_colonization_2_desc:0 "С почвой переговоров не будет."
+ wiirlak_ep_tech_bloom_colonization_2_tooltip:0 "$wiirlak_ep_pc_bloom$ $MOD_COUNTRY_TERRAFORMING_COST_MULT$: §G-50%§!"
+
+ wiirlak_ep_tech_seedbreaker:0 "$wiirlak_ep_menap_tech_4$"
+ wiirlak_ep_tech_seedbreaker_desc:0 "$wiirlak_ep_menap_tech_4_desc$"
+
+ wiirlak_ep_tech_gatekeeping:0 "Высвобождение $wiirlak_ep_ap_evergrowth$"
+ wiirlak_ep_tech_gatekeeping_desc:0 "Последняя печать срывается. Звёзды снова плодородны. Нашей волей сад поглотит пустоту, и всё будет собрано под единым пологом. Оно обширно, вечно и непознаваемо. $wiirlak_ep_ap_evergrowth$ говорит, и мы повинуемся."
+ wiirlak_ep_tech_gatekeeping_tooltip:0 "§H$UNLOCKS_FEATURE$§! Требует продвижения §RCrisis§! до уровня 5."
+ wiirlak_ep_tech_gatekeeping_tooltip_desc:0 "Это разблокирует 5-й уровень §RCrisis§!, если остальные предварительные условия также выполнены."
+
+
+ wiirlak_ep_tech_energy:0 "Фотосинтетическое реле"
+ wiirlak_ep_tech_energy_desc:0 "Солнечный свет сквозь миры. Всё связано, синхронизировано."
+ wiirlak_ep_tech_energy_tooltip:0 "Значительно увеличивает £energy£ $energy$ производство на $wiirlak_ep_pc_bloom_plural$."
+
+ wiirlak_ep_tech_unity:0 "Хор разумов"
+ wiirlak_ep_tech_unity_desc:0 "По мере распространения $wiirlak_ep_ap_evergrowth$ так же распространяется гармония мысли: каждый голос — лист, каждая идея — корень."
+ wiirlak_ep_tech_unity_tooltip:0 "Значительно увеличивает £unity£ $unity$ производство на $wiirlak_ep_pc_bloom_plural$."
+
+ wiirlak_ep_tech_growth:0 "Колыбельный сок"
+ wiirlak_ep_tech_growth_desc:0 "Чтобы по-настоящему распространяться, мы должны стандартизировать рост и даже эволюцию."
+ wiirlak_ep_tech_growth_tooltip:0 "Значительно увеличивает £mod_bonus_pop_growth_mult£ $MOD_BONUS_POP_GROWTH$ производство на $wiirlak_ep_pc_bloom_plural$."
+
+ wiirlak_ep_tech_defense:0 "Терновый бастион"
+ wiirlak_ep_tech_defense_desc:0 "Пусть $wiirlak_ep_ap_evergrowth$ будет нашим оплотом. Пусть ни одно пламя не достигнет корней."
+ wiirlak_ep_tech_defense_tooltip:0 "Естественным образом производит £mod_planet_defense_armies_add£ $defense_army_plural$ на $wiirlak_ep_pc_bloom_plural$."
+
+ wiirlak_ep_tech_adv_resource:0 "Синтез споровой завесы"
+ wiirlak_ep_tech_adv_resource_desc:0 "Не должно быть никаких преград, всё может быть синтезировано."
+ wiirlak_ep_tech_adv_resource_tooltip:0 "Естественным образом производит £exotic_gases£ £rare_crystals£ £volatile_motes£ $RARE_RESOURCES$ на $wiirlak_ep_pc_bloom_plural$."
+
+ wiirlak_ep_tech_influence:0 "Мицелиальная власть"
+ wiirlak_ep_tech_influence_desc:0 "Что такое империя, если не сеть? Пусть корни управляют."
+ wiirlak_ep_tech_influence_tooltip:0 "Естественным образом производит £influence£ $influence$ на $wiirlak_ep_pc_bloom_plural$."
+
+ wiirlak_ep_tech_science:0 "Сознательный полог"
+ wiirlak_ep_tech_science_desc:0 "Биосфера мыслит. Корни знают. Мы должны научиться слушать."
+ wiirlak_ep_tech_science_tooltip:0 "Естественным образом производит £physics_research£ £society_research£ £engineering_research£ $concept_research$ на $wiirlak_ep_pc_bloom_plural$."
+
+# Tech event
+ wiirlak_ep_tech_event:0 "Первые плоды"
+ wiirlak_ep_tech_event_desc:0 "Сеть отвечает. \n\nНаши споры насыщают почву, корни целеустремлённо пульсируют, а облака-пологи густеют. $wiirlak_ep_pc_bloom_plural$, некогда нестабильные эксперименты в терраформировании, теперь дают урожай с поразительной щедростью. Еда. Исследования. Единство. Рост. $wiirlak_ep_ap_evergrowth$ не просто преобразует — оно вознаграждает. \n\nЭкосистема стабилизировалась во что-то новое: не планетарные биомы, а планетарные органы. Сетевая биосфера, способная на большее. Способная на всё. \nЭто лишь первые плоды. Гораздо больше ждёт впереди."
+
+
+# Decision
+ wiirlak_ep_decision_planet_boost:0 "Распространение цветения"
+ wiirlak_ep_decision_planet_boost_desc:0 "$wiirlak_ep_menap_food_2_desc$"
+
+ wiirlak_ep_decision_planet_boost_sector:0 "$wiirlak_ep_decision_planet_boost$"
+ wiirlak_ep_decision_planet_boost_sector_desc:0 "$wiirlak_ep_decision_planet_boost_desc$"
+ wiirlak_ep_decision_planet_boost_sector_tooltip:0 "Применить модификатор §Y$wiirlak_ep_modifier_decision_planet_boost$§! §HПо всему сектору§! на §Y$wiirlak_ep_pc_bloom_plural$§!, иначе начнётся терраформирование в §Y$wiirlak_ep_pc_bloom_plural$§!."
+
+ wiirlak_ep_decision_planet_boost_sector_sector_fail:0 "§R$TRIGGER_FAIL$ Является $FRONTIER_PLANET$§!"
+ wiirlak_ep_decision_planet_boost_sector_sector_success:0 "£trigger_yes£ Находится в §Y$normal_sector$§!"
+
+ wiirlak_ep_decision_planet_boost_sector_sector_leader_fail:0 "§R$TRIGGER_FAIL$ $NO$ $SECTOR_GOVERNOR_TITLE$§!"
+ wiirlak_ep_decision_planet_boost_sector_sector_leader_success:0 "£trigger_yes£ $SECTOR_GOVERNOR_TITLE$ $EXISTS_TRIGGER$"
+
+# Modifiers
+ wiirlak_ep_modifier_decision_planet_boost:0 "Ускоренный Рост"
+ wiirlak_ep_modifier_decision_planet_boost_desc:0 "$wiirlak_ep_decision_planet_boost_desc$"
+ mod_planet_farmers_wiirlak_ep_resource_mycogrowth_produces_add:0 "£wiirlak_ep_resource_mycogrowth£ $wiirlak_ep_resource_mycogrowth$ $TRIGGER_FROM$ $job_farmer_with_icon$"
+
+ wiirlak_ep_modifier_perk_4:0 "Колыбель Роста"
+ wiirlak_ep_modifier_perk_4_galaxy:0 "Внешний Рост"
+
+ wiirlak_ep_modifier_perk_5:0 "Единый Рост"
+ wiirlak_ep_modifier_perk_5_galaxy:0 "Вечный Рост"
+
+
+
+# Spy OP
+ wiirlak_ep_operation_covert_seeding:0 "Скрытый Посев"
+ wiirlak_ep_operation_covert_seeding_desc:0 "По мере созревания цветения наши средства распространения преодолевают физические границы. Споры адаптируются, корни прислушиваются, и терраформирование начинается бесшумно внутри стен наших врагов."
+ wiirlak_ep_operation_covert_seeding_on_success:0 "Случайная $RANDOM$ $databank_colony$ $IS_STRING$ $PLANETVIEW_TERRAFORM_INTO$ планету типа $wiirlak_ep_pc_bloom$"
+
+ wiirlak_ep_operation_covert_seeding_requires_colonies:0 "$TRIGGER_FAIL$ Требуется действительная $databank_colony$. Не может быть выполнено на $CAPITAL$."
+ wiirlak_ep_operation_covert_seeding_already_in_situation:0 "$TRIGGER_FAIL$ Цель уже имеет дело с операцией $wiirlak_ep_operation_covert_seeding$."
+
+# Spy OP Events
+ wiirlak_ep_operation_event_1:0 "Неуловимый Сдвиг"
+ wiirlak_ep_operation_event_1_desc:0 "Одна из наших планетарных научных команд сообщила о необычных закономерностях в атмосферной микрофлоре, а также о нарушениях в химии почвы. Явных признаков саботажа нет. Но что-то изменилось."
+ wiirlak_ep_operation_event_1_answer_monitor:0 "Отслеживать аномалию"
+ wiirlak_ep_operation_event_1_answer_ignore:0 "Игнорировать ботаников. У нас есть более важные дела, на которых следует сосредоточиться."
+
+ wiirlak_ep_operation_event_2:0 "Аномалия Флоры"
+ wiirlak_ep_operation_event_2_desc:0 "То, что начиналось как тонкий биологический узор, теперь проявилось в виде обширных, подземных мицелиальных структур. Целые поверхностные зоны изменили цвет. Местные виды либо неестественно приспосабливаются... либо исчезают. Мы должны действовать сейчас, иначе трансформация завершится."
+ wiirlak_ep_operation_event_2_answer_monitor:0 "Изучить это — возможно, мы сможем извлечь выгоду."
+ wiirlak_ep_operation_event_2_answer_ignore:0 "Пусть идёт своим чередом"
+ wiirlak_ep_operation_event_2_answer_resist:0 "Мы должны сопротивляться этому вторжению!"
+
+ wiirlak_ep_operation_event_finish:0 "Мицелий Под Присмотром, Но Неукрощенный"
+ wiirlak_ep_operation_event_finish_desc:0 "Трансформация §Y[event_target:wiirlak_ep_spy_op_target.GetName]§! действительно началась. Местные власти обнаружили аномалию — природоохранные команды теперь с возрастающим усердием отслеживают наши грибковые векторы и экологический дрейф. \n\nОднако, даже при их бдительности, корни были посажены глубоко. Сеть $wiirlak_ep_operation_covert_seeding$ остается внедренной, но нетронутой. \nОни считают, что отвоевали свою почву. Но $wiirlak_ep_ap_evergrowth$ терпелив, и его цикл вечен."
+
+
+ wiirlak_ep_operation_event_push_back:0 "Перерезанные Корни"
+ wiirlak_ep_operation_event_push_back_desc:0 "Несмотря ни на что, наш мир сопротивлялся изменениям. Чужеродные наросты были стерилизованы, их подземные нити выжжены из биосферы. Атмосферные фильтры восстановили баланс. Местные экосистемы, хоть и искалеченные, уже показывают признаки восстановления. \n\nТот, кто пытался перековать нашу планету по своему образу, недооценил нашу решимость. $wiirlak_ep_ap_evergrowth$ может быть огромен, но его щупальца можно отрезать."
+
+ wiirlak_ep_operation_event_overgrown:0 "Процветающий $wiirlak_ep_ap_evergrowth$"
+ wiirlak_ep_operation_event_overgrown_desc:0 "Мы пытались сдержать это — понять это — но в конце концов §Y[event_target:wiirlak_ep_spy_op_target.GetName]§! был изменён. \n\nТрансформация завершена. Небо теперь светится странными полярными сияниями, огромные кроны заслоняют спутниковые сканы, а сама почва пульсирует неузнаваемой жизнью. Наши технологии всё ещё функционируют, наши города всё ещё стоят, но мы больше не понимаем правил мира под нашими ногами. \n\n$wiirlak_ep_ap_evergrowth$ заявил свои права на это место. И теперь мы должны научиться жить на его корнях... или бежать."
+
+# Situation
+ wiirlak_ep_situation:0 "Неестественные Изменения"
+ wiirlak_ep_situation_type:0 "$wiirlak_ep_situation$"
+ wiirlak_ep_situation_monthly_change_tooltip:0 "На одной из наших планет начались необычные экологические изменения. Если оставить их без контроля, она может подвергнуться необратимому терраформированию в чужеродную биосферу."
+
+ wiirlak_ep_situation_desc_almost_complete:0 "Небеса над §Y[Target.GetName]§! темнеют от облаков, густых от спор. Местная жизнь задыхается или замещается. \nЕсли этот процесс завершится, планета станет полностью чужеродной. \nВремени на действия осталось катастрофически мало."
+ wiirlak_ep_situation_desc:0 "На §Y[Target.GetName]§! происходят тонкие изменения. Изменения в атмосфере. Внезапный рост незнакомых грибковых штаммов. Состав почвы отклоняется от нормы. \nЧто-то меняет наш мир изнутри. И это ускоряется."
+ wiirlak_ep_situation_desc_pushing_back:0 "Протоколы сдерживания действуют. Дезактивационные команды сообщают об успехе в остановке распространения мицелия. Экологический дрейф замедлился. \nНа данный момент мы приостановили трансформацию §Y[Target.GetName]§!."
+
+ wiirlak_ep_contained:0 "Вторжение Почти Сдержано"
+ wiirlak_ep_incursion:0 "Чужеродное Вторжение"
+ wiirlak_ep_overwhelmed:0 "Подавляющее Вторжение"
+
+ wiirlak_ep_burn:0 "Сжечь Всё"
+ wiirlak_ep_study:0 "Изучить Этих"
+
+
+# Orbital Bombardment Stance
+ bombardment_wiirlak_ep_verdant_purge:0 "Зеленое Очищение"
+ bombardment_wiirlak_ep_verdant_purge_desc:0 "Пусть $wiirlak_ep_ap_evergrowth$ расцветет на этом мире. \n- §RОгромный§! урон §Yармиям§!\n- §RОгромный§! урон §Yпланете§!\n- §RОгромный§! урон §Yнаселению§!\n- Терраформирует планеты в §G$wiirlak_ep_pc_bloom_plural$§! или уничтожит те, что не могут быть терраформированы."
+
+# Bombardment Events
+ wiirlak_ep_event_bombarded_title:0 "Зеленая Осада"
+ wiirlak_ep_event_bombarded_desc:0 "Сначала мы подумали, что это осадки. Споры опускались как пыль, покрывая здания, леса, людей. Теперь почва горяча и жива. \n\n§Y[event_target:wiirlak_ep_planet_targeted.GetName]§! больше не просто подвергается бомбардировке — она меняется. Сам воздух изменился, и поверхность уступает место инвазивной микофлоре, пульсирующей под обстрелом. Наши сканеры подтверждают сдвиг в атмосфере; это замена. \n\nТерраформация началась... без нашего согласия. Захватчики не просто уничтожают наш мир. \nОни перезаписывают его."
+
+ wiirlak_ep_event_bombarded_origin_desc:0 "Бомбардировка когда-то была методом сломить сопротивление. Теперь это способ засеять будущее. Под кратерами и разрушенными строениями §Y[event_target:wiirlak_ep_planet_targeted.GetName]§! что-то пробуждается — не смерть, а начало.\n\nСпоры, переносимые нашими судами, глубоко проникли в раненую планету. Трещины в коре источают фотосинтетический туман. Бетон трескается под ползучими корнями. Местная биосфера сопротивляется, но уже проигрывает. \n\n$wiirlak_ep_ap_evergrowth$ пустил корни. Этот мир станет нашим не через завоевание, а через трансформацию."
+
+ wiirlak_ep_event_bombarded_answer:0 "$wiirlak_ep_ap_evergrowth$ пускает корни"
+
+ wiirlak_ep_event_bombarded_terraformed:0 "Заросший"
+ wiirlak_ep_event_bombarded_terraformed_desc:0 "То, что началось как ползучая инфестация, теперь стало абсолютным. После долгих лет безмолвного завоевания [THIS.GetName] расцвела по образу $wiirlak_ep_ap_evergrowth$ — каждый лес стал живым нервом, каждый вдох извлекается из спор процветающей, разумной экосистемы. \n\nГорода стоят, окутанные под высоченной биолюминесцентной флорой, их силуэты сведены к простому каркасу для воли нового мира. Коренная жизнь либо бежала, либо погибла, либо была преобразована в формы, более подходящие для симбиоза. \n\n[THIS.GetName] больше не является миром старой галактики. Это $wiirlak_ep_ap_evergrowth$ во плоти."
+
+# Bombardment Messages
+ WIIRLAK_EP_MESSAGE_BOMBARDED_TITLE:0 "$bombardment_wiirlak_ep_verdant_purge$"
+ wiirlak_ep_message_bombarded_desc:0 "§Y[event_target:wiirlak_ep_planet_targeted.GetName]§! начал мутировать под влиянием $wiirlak_ep_ap_evergrowth$."
+ wiirlak_ep_message_bombarded_origin_desc:0 "$wiirlak_ep_ap_evergrowth$ начал пускать корни на §Y[event_target:wiirlak_ep_planet_targeted.GetName]§!."
+
+
+
+# Component
+ PLANET_KILLER_SEEDBREAKER:0 "$wiirlak_ep_ap_evergrowth$ $wiirlak_ep_menap_tech_4$"
+ PLANET_KILLER_SEEDBREAKER_DESC:0 "На планету обрушиваются огромные количества богатой питательными веществами биомассы и атмосферных катализаторов. Все искусственные сооружения и синтетические формы жизни поглощаются ускоренной, полуразумной флорой. Поток стабилизирует климат и превращает поверхность в живую, саморасширяющуюся биосферу, готовую для $wiirlak_ep_ap_evergrowth$."
+
+# Planet Killer
+ PLANET_KILLER_SEEDBREAKER_ACTION:0 "Засеять $wiirlak_ep_ap_evergrowth$"
+ FLEETORDER_DESTROY_PLANET_WITH_PLANET_KILLER_SEEDBREAKER:0 "Подготовка к засеву $PLANET|Y$"
+
+ MESSAGE_DESC_FOR_PLANET_KILLER_SEEDBREAKER:0 "был преобразован $wiirlak_ep_ap_evergrowth$, вызванным"
+
+# Opinions
+ wiirlak_ep_opinion_seeded_a_world:0 "Мир засеян"
+ wiirlak_ep_opinion_seeded_my_world:0 "Наш мир засеян"
+ wiirlak_ep_opinion_seeded_a_primitive_world:0 "До-световой мир засеян"
+ wiirlak_ep_opinion_seeded_a_primitive_world_phile:0 "$opinion_cracked_a_primitive_world_phile$"
+
+ wiirlak_ep_opinion_acceptation:0 "Принятие $wiirlak_ep_ap_evergrowth$"
+
+# Planet Killer Events
+ wiirlak_ep_is_not_bloom:0 "§RУже $wiirlak_ep_pc_bloom$§!"
+
+ wiirlak_ep_event_seedbreaker_title:0 "Дар $wiirlak_ep_ap_evergrowth$"
+ wiirlak_ep_event_seedbreaker_desc:0 "Все началось с тишины. Без фанфар. Без сопротивления. Только нежный пульс выравнивающихся систем — а затем всплеск. \nКопье светящихся спор прорвалось сквозь облака, кору и ядро. То, что вчера было миром, теперь разрушено и переосмыслено. \n\n§Y$wiirlak_ep_menap_tech_4$§! заговорил. \nТам, где когда-то стояли бесплодные скалы или непокорные города, теперь пульсирует зеленое дыхание $wiirlak_ep_ap_evergrowth$. Не просто изменился, а возродился. Кора расцветает инвазивными корнями. Атмосфера насыщена несущими семена ветрами. Жизнь утвердила себя с опустошительной грацией. \n\nДругие могут видеть в этом разрушение. Но мы знаем правду. Создание всегда выглядит как коллапс."
+
+ wiirlak_ep_event_seedbreaker_target_title:0 "Цветение Погибели"
+ wiirlak_ep_event_seedbreaker_target_desc:0 "Мы думали, это оружие. Мы ошибались. \n\nКогда пришел Разрыватель Семян, не было приказов об эвакуации — только смятение. Небеса над §Y[event_target:wiirlak_ep_planet_targeted.GetName]§! распахнулись, и из разлома хлынул не огонь, а споры — бесконечный поток изумрудных облаков, которые удушили воздух, переписали почву и раздули реки ползучими корневыми венами. \n\nВ течение нескольких часов наши города заросли. Машины заржавели на своих местах, улицы исчезли под листвой, которая пульсировала, как живая. Целые районы обрушились под биомассой размером с башни. Планета все еще жива, но уже не наша. Больше нет. \n\nОни не завоевали §Y[event_target:wiirlak_ep_planet_targeted.GetName]§!. Они переписали ее. \nИ она все еще растет."
+
+# Messages
+ WIIRLAK_EP_MESSAGE_SEEDBREAKER_TITLE:0 "$wiirlak_ep_event_seedbreaker_title$"
+ wiirlak_ep_message_seedbreaker_desc:0 "Планета потеряна для $wiirlak_ep_ap_evergrowth$: §Y[event_target:wiirlak_ep_planet_targeted.GetName]§!"
+ wiirlak_ep_message_seedbreaker_origin_desc:0 "Разрыватель Семян выпустил $wiirlak_ep_ap_evergrowth$ на §Y[event_target:wiirlak_ep_planet_targeted.GetName]§!"
+
+
+
+# Diplomatic Actions
+ wiirlak_ep_spread_the_evergrowth:0 "Распространить $wiirlak_ep_ap_evergrowth$"
+ wiirlak_ep_spread_the_evergrowth_desc:0 "$wiirlak_ep_ap_evergrowth$ простирается не с оружием, а с корнями. Они предлагают наставление, процветание и цель — если мы готовы позволить нашим мирам расцвести под их видением. Принятие этого пакта означает переформатирование наших планет... и, возможно, нас самих."
+ wiirlak_ep_spread_the_evergrowth_tooltip:0 "Позволить $wiirlak_ep_ap_evergrowth$ начать процесс терраформирования на §Y$effect_random_owned_planet$§!."
+
+ wiirlak_ep_spread_the_evergrowth_tooltip_no_more:0 "$TRIGGER_FAIL$ §RНет подходящей планеты для терраформирования§!"
+ wiirlak_ep_spread_the_evergrowth_tooltip_acceptation:0 "$TRIGGER_FAIL$ §RОни считают это предложение неприемлемым§!"
+ wiirlak_ep_spread_the_evergrowth_tooltip_refusal:0 "§HТаким образом, это ничего не даст§!"
+
+# Diplo Event
+ wiirlak_ep_event_bombarded_terraformed_positive:0 "Укоренившаяся гармония"
+ wiirlak_ep_event_bombarded_terraformed_positive_desc:0 "С согласия своих хранителей [THIS.GetName] претерпела изящную трансформацию. $wiirlak_ep_ap_evergrowth$ укоренился не как завоеватель, а как садовник — сплетая местные экологии с процветающими $wiirlak_ep_menap_terraforming_plural$ микологического узла. \n\nНебеса теперь мерцают биолюминесцентной пыльцой. Урожай растет в изобилии без обработки почвы. Местные жители сообщают об улучшении здоровья, более чистом воздухе и странном, но желанном чувстве цели. \n\nПрисоединившись к великому циклу, [THIS.GetName] становится не жертвой, а маяком того, что предлагает $wiirlak_ep_ap_evergrowth$: мир через процветающий симбиоз."
+ wiirlak_ep_event_bombarded_terraformed_positive_answer:0 "Гармония процветает"
+
+# Economic Categories
+ wiirlak_ep_bloom_world:0 "$wiirlak_ep_event_seedbreaker_title$"
+ wiirlak_ep_bloom_world_jobs:0 "$wiirlak_ep_pc_bloom$ $planet_jobs$"
+
+# Deposits
+ wiirlak_ep_deposit:0 "$wiirlak_ep_event_seedbreaker_title$"
+ wiirlak_ep_deposit_desc:0 "$wiirlak_ep_ap_evergrowth$ дает тому, кто имеет веру. \nДля тех, кто сомневается, ничего не вырастет. Но тем, кто верит... $wiirlak_ep_ap_evergrowth$ дает бесконечно."
+
+
+
+# Final Events
+ wiirlak_ep_warning:0 "Корни достигают звезд"
+ wiirlak_ep_warning_desc:0 "Сообщение, охватывающее всю империю, расцветает на каждом узле связи, шепотом передается сквозь гравитационные колодцы и подпространство. $wiirlak_ep_ap_evergrowth$, некогда тихое экологическое любопытство, созрел во что-то совершенно иное. \n\n§Y[event_target:wiirlak_ep_crisis_player.GetName]§! провозгласил видение: полное объединение биосферы, распространение Цветения на все обитаемые миры. Они говорят не о завоевании, а об обновлении. О галактике, больше не раздробленной видами или суверенитетом, — но о той, что дышит как единая живая система. \n\nОни называют это миром. Другие уже назвали это стиранием. Одно ясно: они готовы. И они все еще растут."
+
+ wiirlak_ep_warning_2:0 "Пятое Цветение"
+ wiirlak_ep_warning_2_desc:0 "То, что когда-то казалось тревожной аномалией, теперь пустило корни среди звёзд. Так называемый $wiirlak_ep_ap_evergrowth$ достиг уровня распространения и сплочённости, который более не может считаться просто блуждающей идеологией. \n\nСпоровые сигнатуры теперь распространяются по гиперкоридорам. $wiirlak_ep_pc_bloom_plural$ резонируют в синхронизированных паттернах. Сообщения с окраинных систем описывают мутацию целых биосфер за одну ночь — не от терраформирования... а от чего-то более быстрого, странного, живого. \n\nХуже того, мы перехватили фрагментированные передачи: приглашения. Предложения 'присоединиться к решётке'. Союзы, сформированные не словами, а корнями, мицелием и обещанием стать частью чего-то большего. \n\nЧто бы это ни было — это уже не движение: это кризис."
+
+ wiirlak_ep_warning_2_answer_aggressive:0 "Приготовьте флоты. Возможно, мы уже опоздали."
+ wiirlak_ep_warning_2_answer_neutral:0 "Рост без порядка — это распад."
+ wiirlak_ep_warning_2_answer_curious:0 "Возможно... нам стоит их послушать."
+
+
+ wiirlak_ep_invitation:0 "Последние два лепестка"
+ wiirlak_ep_invitation_desc:0 "Прежде чем Гипер-Трансформация сможет пустить корни, мы должны захватить ещё два плодородных поля. Наши агенты выявили империи, находящиеся на пороге — колеблющиеся, но ещё не враждебные. \n\nЕсли они примут наши споры, Цикл может завершиться без сопротивления. Если они сопротивятся... мы напитаем корни их прахом."
+ wiirlak_ep_invitation_none_desc:0 "Завершён последний этап нашей трансформации. Мы больше не приспосабливаемся к галактике — галактика приспособится к нам. \n\nНаши споры тянутся от ядра до края, наши корни проникают в миры, считавшиеся бесплодными, и наше видение расцвело ясностью. \n\nЭпоха роста окончена. Настала эпоха распространения. \nВсе, кто противостоит нам, должны быстро решить: питать или гнить."
+ wiirlak_ep_flag_chosen_by_crisis:0 "Уже приглашены"
+
+ wiirlak_ep_invitation_empire_1:0 "[event_target:wiirlak_ep_crisis_potential_ally_1.GetName]"
+ wiirlak_ep_invitation_empire_2:0 "[event_target:wiirlak_ep_crisis_potential_ally_2.GetName]"
+ wiirlak_ep_invitation_empire_3:0 "[event_target:wiirlak_ep_crisis_potential_ally_3.GetName]"
+ wiirlak_ep_invitation_empire_4:0 "[event_target:wiirlak_ep_crisis_potential_ally_4.GetName]"
+ wiirlak_ep_invitation_empire_5:0 "[event_target:wiirlak_ep_crisis_potential_ally_5.GetName]"
+
+
+ wiirlak_ep_invitation_offer:0 "Приглашение к расцвету"
+ wiirlak_ep_invitation_offer_desc:0 "§H[event_target:wiirlak_ep_crisis_player.GetName]§! передали нам последнее предложение:\n\nМы несём не флоты, не клинки, лишь голос крон. \nМы предлагаем вам будущее всей жизни: стать частью $wiirlak_ep_ap_evergrowth$. Поступая так, вы обретёте изобилие $wiirlak_ep_pc_bloom_plural$, гармонию спорового единства и защиту от грядущей бури. \n\nОтклоните это, и вы выберете увядание. Вы выберете войну."
+
+ wiirlak_ep_invitation_offer_accept:0 "Пусть наши корни переплетутся."
+ wiirlak_ep_invitation_offer_accept_tooltip:0 "Присоединится к ним в войне"
+
+ wiirlak_ep_invitation_offer_reject:0 "Мы никогда не подчинимся этому заражению."
+ wiirlak_ep_invitation_offer_reject_tooltip:0 "Объявит войну $wiirlak_ep_ap_evergrowth$"
+
+ wiirlak_ep_invitation_rejected:0 "Отказавшийся сад"
+ wiirlak_ep_invitation_rejected_desc:0 "Несмотря на наше щедрое предложение позволить [From.GetName] насладиться благодатью $wiirlak_ep_ap_evergrowth$, они отказались. Они называют это порчей, угрозой, ложью. Глупцы, цепляющиеся за иссохшую землю, пока дожди льются свободно. \n\nПусть они увядают в своей изоляции — ибо у моря невежества нет берегов, и они решили утонуть в нём."
+ wiirlak_ep_invitation_rejected_answer:0 "Они выбирают гниение"
+
+ wiirlak_ep_invitation_accepted:0 "Корни среди звёзд"
+ wiirlak_ep_invitation_accepted_desc:0 "Они преклонили колени. Не в страхе, но в безмолвном благоговении. Пелена их скептицизма разорвалась, как увядшая кора, и под ней — душа, отчаянно жаждущая цели. \n\nПервые споры уже прибыли — безмолвные курьеры, несомые гравитацией и волей. Их города теперь будут дышать с нами. Их почва запомнит. \n\nОни ещё не понимают той красоты, которую они призвали. Но они поймут. О, как они поймут. $wiirlak_ep_ap_evergrowth$ не завоёвывает; оно обнимает. И когда их небеса покроются пыльцой, а старые строения прогнутся под новыми корнями, они почувствуют это: тишину единства. Пульс цели. Последний ритм звёзд."
+
+
+
+ wiirlak_ep_project_1_done:0 "Зелёная расплата"
+ wiirlak_ep_project_1_done_desc:0 "Начинается. Под каждым небом наши корни пульсируют. В каждом вдохе наши споры шевелятся. Нам больше не нужно распространяться. Нам нужно только пробудиться. §HВеликий Расцвет§! пробуждается — не как экспансия, но как кульминация. \n\nНаши миротворцы поют гимн слияния. Наши ментальные сети тяжелеют от инстинкта и цели. Остаётся один финальный синтез: §HПробуждение§! $wiirlak_ep_ap_evergrowth$."
+
+ wiirlak_ep_project_1_done_answer:0 "Начать финальный проект"
+ wiirlak_ep_project_1_done_tooltip:0 "Начать $wiirlak_ep_decision_final_project$ $concept_decision$ на $CAPITAL$"
+ wiirlak_ep_project_1_done_tooltip_fail:0 "Разблокирован $wiirlak_ep_decision_final_project$ $concept_decision$ на $CAPITAL$"
+
+
+
+ wiirlak_ep_project_2_done:0 "Мицелиальный импульс"
+ wiirlak_ep_project_2_done_desc:0 "Подготовка продвигается без сопротивления. Решётка $wiirlak_ep_pc_bloom_plural$ теперь гудит в гармонии, их биосферы выровнены через подкоренные нейроволокна и планетарные питательные потоки. \n\nБыл отправлен импульс — тонкий, но мощный. Каждый $wiirlak_ep_pc_bloom$ шевелится, отзываясь синхронно, их коры слегка смещаются, словно дыша. \n\nНаши агенты среди звёзд сообщают о беспорядках. Пусть они паникуют. Пусть мобилизуются. Семена уже посажены."
+
+ wiirlak_ep_project_2_done_answer:0 "Пусть они услышат, как это растёт."
+ wiirlak_ep_project_2_done_tooltip:0 "Начать $wiirlak_ep_decision_final_project_2$ $concept_decision$ на $CAPITAL$"
+ wiirlak_ep_project_2_done_tooltip_fail:0 "Разблокирован $wiirlak_ep_decision_final_project_2$ $concept_decision$ на $CAPITAL$"
+
+ wiirlak_ep_project_2_warning:0 "Корни углубляются"
+ wiirlak_ep_project_2_warning_desc:0 "Они не остановились. Они не дрогнули. \n$wiirlak_ep_ap_evergrowth$ движется вперёд, ничто его не сдерживает. Все попытки сдержать цветение лишь выиграли время — и теперь это время угасает, как почва старого мира. Массивные энергетические всплески пронизывают их сети, тонкие геомагнитные импульсы отслеживаются по $wiirlak_ep_pc_bloom_plural$, выходя за пределы систем и видов. \n\nЭто больше не просто распространение. Это подготовка. \n\nНаши аналитики предупреждают, что то, что они сейчас готовят, может навсегда переписать планетарные биосферы по всей галактике — мгновенно. Их трансформация больше не потребует лет, только секунд. \n\nЕсли их не остановить сейчас, то, возможно, их вообще будет невозможно остановить."
+ wiirlak_ep_project_2_warning_answer:0 "Мы должны действовать. Сейчас."
+ wiirlak_ep_project_2_warning_answer_evergrowth:0 "Пусть растут."
+
+
+
+ wiirlak_ep_project_3_done:0 "$wiirlak_ep_modifier_blooming_warning$"
+ wiirlak_ep_project_3_done_desc:0 "Каждый $wiirlak_ep_pc_bloom$ вибрирует от резонанса, планетарное сердцебиение ускоряется до своего финального крещендо. Мицелиальная решётка, которую мы сплели — сквозь кору, корни и дух — пробудилась. Больше не сеть. Нервная система. \n\nНебо затихает, почва дрожит. Затем — извержение. \n\nТоксичные моря становятся питательными лонами. Пустыни взрываются цветочными лавинами. Ледники расцветают сияющими грибами. То, что когда-то было бесплодным, теперь кишит подавляющей жизнью. Больше нет войны, которую можно было бы вести. Нет достаточно сильного сопротивления. \n\nГалактика наша, потому что это больше не галактика. \nЭто сад. Это $wiirlak_ep_ap_evergrowth$."
+ wiirlak_ep_project_3_done_answer:0 "Мы не были завоевателями. Мы были самим ростом."
+
+ wiirlak_ep_project_3_warning:0 "Последнее Цветение"
+ wiirlak_ep_project_3_warning_desc:0 "Это произошло внезапно. \n\nПо всей галактике каждый $wiirlak_ep_pc_bloom$ взорвался сияющими облаками спор, выпуская в пустоту волны биоформирующей энергии. Миры, не затронутые ими, быстро были поглощены. Океаны стали биолюминесцентными. Города погрузились в безмолвие под удушающими лианами. Машины разъедались под инопланетным мхом. \n\nПопытки сопротивления провалились. Протоколы терраформирования были подавлены. Планетарные щиты разрушились. Одна за другой, звезды тускнели под покровом зелени и золота. \n\nГалактика не пала в огне. Она заросла."
+ wiirlak_ep_project_3_warning_answer:0 "Мы опоздали..."
+ wiirlak_ep_project_3_warning_answer_evergrowth:0 "...и теперь мы принадлежим корням."
+
+# Modifier
+ wiirlak_ep_modifier_subject:0 "$wiirlak_ep_invitation$"
+
+ wiirlak_ep_modifier_crisis_reaction:0 "Тревога $wiirlak_ep_ap_evergrowth$"
+ wiirlak_ep_modifier_crisis_link:0 "Связь $wiirlak_ep_ap_evergrowth$"
+
+# Decision
+ wiirlak_ep_decision_final_project:0 "Генезис $wiirlak_ep_ap_evergrowth$"
+ wiirlak_ep_decision_final_project_desc:0 "$wiirlak_ep_ap_evergrowth$ – это не оружие, а точка отсчета, галактическая яйцеклетка, средоточие всей жизни, взращенной под эгидой $wiirlak_ep_ap_evergrowth$. Выросшее из планетарной коры и нейронной решетки, это образование высвободит волну синхронизированных терраформирующих импульсов. \n\nНи один мир не останется незатронутым. Ни одно небо не останется незацветшим. Это не конец. Это корень."
+ wiirlak_ep_decision_final_project_tooltip:0 "§HПродвинуть Кризис§!"
+
+
+ wiirlak_ep_decision_final_project_2:0 "Пробудить $wiirlak_ep_modifier_blooming_warning$"
+ wiirlak_ep_decision_final_project_2_desc:0 "Каждый корень. Каждая ветвь. Каждая спора. Каждый $wiirlak_ep_pc_bloom$ — это нервное окончание, и теперь они сойдутся. Время медленного роста закончилось. \n\nМы сокрушим границы между планетой и семенем. Больше никаких ожиданий, никакого шепота. С помощью собранного $wiirlak_ep_resource_mycogrowth$ тысячи миров мы перепишем галактику — не пламенем или металлом, но жизнью. Безжалостная. Всепоглощающая. Вечная."
+ wiirlak_ep_decision_final_project_2_tooltip:0 "$wiirlak_ep_decision_final_project_tooltip$"
+
+# Modifier
+ wiirlak_ep_modifier_blooming_warning:0 "Сингулярность $wiirlak_ep_ap_evergrowth$"
+ wiirlak_ep_modifier_blooming_warning_desc:0 "Мы приближаемся к точке невозврата. \n\nВсе $wiirlak_ep_pc_bloom_plural$ перестанут быть просто планетами. Они станут передатчиком, спорой, узлом в конечном замысле $wiirlak_ep_ap_evergrowth$. \n\nЕсли сигнал будет подан, оно не просто вырастет — оно станет всем."
+
+ wiirlak_ep_modifier_blooming:0 "$wiirlak_ep_modifier_blooming_warning$"
+ wiirlak_ep_modifier_blooming_desc:0 "$wiirlak_ep_modifier_blooming_warning_desc$"
+
+ wiirlak_ep_modifier_blooming_hive:0 "$wiirlak_ep_modifier_blooming_warning$"
+ wiirlak_ep_modifier_blooming_hive_desc:0 "$wiirlak_ep_modifier_blooming_warning_desc$"
+
+ wiirlak_ep_modifier_forced_blooming:0 "Принудительное Цветение"
+ wiirlak_ep_modifier_forced_blooming_desc:0 "Эта планета принудительно трансформируется $wiirlak_ep_ap_evergrowth$."
+
+
+# Final Event - Without Project
+ wiirlak_ep_all_terraformed:0 "Тихое Цветение"
+ wiirlak_ep_all_terraformed_answer:0 "$wiirlak_ep_ap_evergrowth$ распространяется"
+
+ wiirlak_ep_all_terraformed_step_2_desc:0 "Сеть завершена. Каждый обитаемый мир теперь пульсирует в гармонии с $wiirlak_ep_ap_evergrowth$ — живой, плодородный, неостановимый. \n\nОднако окончательная метаморфоза — Превосходство Цветения — остается незавершенной. Звезды ждут в тихом благоговении, пока живая сеть безмолвно гудит, ее цель достигнута, но не завершена. \n\nТо, что должно было стать единственным моментом эволюции, вместо этого стало бесконечным цветением. Галактика дышит с нами. Но мы... медлим. \nНужен ли нам финал, если мы уже победили?"
+
+ wiirlak_ep_all_terraformed_step_1_desc:0 "$wiirlak_ep_ap_evergrowth$ охватывает звезды. Каждый обитаемый мир — узел в грибной сети, каждая экосистема — зеркало ее воли. \n\nОднако никакого финального всплеска не было высвобождено. Рост стал целью. Проект Вознесения — Гипер-Трансформация — был намечен, спланирован... но так и не начат. \n\nВозможно, он был заброшен. Возможно, $wiirlak_ep_ap_evergrowth$ решило, что больше не нуждается в такой церемонии. \n\nИ вот галактика меняется, тихо, полностью. Навсегда."
+
+ wiirlak_ep_all_terraformed_not_crisis_5_desc:0 "$wiirlak_ep_ap_evergrowth$ достигло того, что никто не считал возможным: каждый обитаемый мир теперь процветает, покрытый цветущими био-гобеленами. Жизнь царит, обширная и переплетенная. \n\nНо звезды наблюдают за другим. Кто-то другой теперь заявил права на звание галактической угрозы. Цветение было недостаточно быстрым. \n\n$wiirlak_ep_ap_evergrowth$ наблюдает. Ждет. Оно все еще процветает. Оно все еще распространяется. Но галактика теперь дышит по-новому."
+
+ wiirlak_ep_all_terraformed_not_crisis_5_alone_desc:0 "Без апокалиптического оружия или громких заявлений галактика была перестроена. Медленно, бесшумно — $wiirlak_ep_ap_evergrowth$ продвигалось. Шпионские сети распространяли споры в тени. Бомбардировки засеивали плодородный распад. \n\nИ теперь, без фанфар и финального акта, галактика представляет собой один обширный сад. \n\nНикто не заметил, пока это не произошло. Небо не рухнуло. Оно стало зеленым."
+
+
+# Subject
+ specialist_evergrowth:0 "Распространитель Семян"
+
+ wiirlak_ep_preset_evergrowth:0 "$specialist_evergrowth$"
+ wiirlak_ep_preset_evergrowth_desc:0 "Распространитель Семян — это тип Специализированного Субъекта, сосредоточенный на планетарной трансформации и распространении экологического видения своего сюзерена, ценой снижения автономии и дипломатического влияния."
+ wiirlak_ep_preset_evergrowth_flavor_desc:0 "$wiirlak_ep_preset_evergrowth_desc$"
+
+ MESSAGE_SUBJECT_LEVEL_UP_specialist_evergrowth_TITLE:0 "$specialist_evergrowth$ $MESSAGE_SUBJECT_LEVEL_UP_TITLE$"
+ MESSAGE_WE_LEVEL_UP_specialist_evergrowth_TITLE:0 "$specialist_evergrowth$ $MESSAGE_WE_LEVEL_UP_TITLE$"
+
+# Subject Perks
+ wiirlak_ep_1_modifier:0 "Бонусы $specialist_evergrowth$ I"
+ wiirlak_ep_1_penalties:0 "Штрафы $specialist_evergrowth$ I"
+
+ wiirlak_ep_1_insight:0 "Прозрение $specialist_evergrowth$ I"
+ wiirlak_ep_1_insight_desc:0 "§EПолучите технологию:§!\n$t$£society£ $wiirlak_ep_tech_energy$\n§EДобавить к исследуемым технологиям:§!\n$t$£society£ $wiirlak_ep_tech_growth$\n$t$£society£ $wiirlak_ep_tech_defense$"
+
+
+ wiirlak_ep_1_bloomform:0 "$specialist_evergrowth$ $wiirlak_ep_menap_terraforming_3$ I"
+ wiirlak_ep_1_bloomform_desc:0 "§H[TARGET.Capital.GetName]§! превратится в §Y$wiirlak_ep_pc_bloom$§!"
+
+ wiirlak_ep_1_overlord_modifier:0 "Консультации $specialist_evergrowth$"
+ wiirlak_ep_1_overlord_penalty:0 "Обслуживание $specialist_evergrowth$"
+ wiirlak_ep_1_neighbor_bonuses:0 "Ветвь $wiirlak_ep_ap_evergrowth$"
+
+
+
+ wiirlak_ep_2_modifier:0 "Бонусы $specialist_evergrowth$ II"
+ wiirlak_ep_2_penalties:0 "Штрафы $specialist_evergrowth$ II"
+
+ wiirlak_ep_2_insight:0 "Прозрение $specialist_evergrowth$ II"
+ wiirlak_ep_2_insight_desc:0 "§EПолучите технологию:§!\n$t$£society£ $wiirlak_ep_tech_science$\n§EДобавить к исследуемым технологиям:§!\n$t$£society£ $wiirlak_ep_tech_unity$"
+
+
+ wiirlak_ep_2_bloomform:0 "$specialist_evergrowth$ $wiirlak_ep_menap_terraforming_3$ II"
+ wiirlak_ep_2_bloomform_desc:0 "Каждая планета в столичном секторе §H[TARGET.GetName]§! превратится в §Y$wiirlak_ep_pc_bloom_plural$§!"
+
+ wiirlak_ep_2_colony:0 "$specialist_evergrowth$ Адаптация I"
+ wiirlak_ep_2_colony_desc:0 "`§H[TARGET.GetName]§! адаптируется к §Y$wiirlak_ep_pc_bloom_plural$§!`"
+
+ wiirlak_ep_2_bloomform_leader:0 "$specialist_evergrowth$ Лидеры I"
+ wiirlak_ep_2_bloomform_leader_desc:0 "`§E$official_plural_with_icon$ получают одну случайную черту:§!"
+
+
+
+ wiirlak_ep_3_modifier:0 "$specialist_evergrowth$ Бонусы III"
+ wiirlak_ep_3_penalties:0 "$specialist_evergrowth$ Штрафы III"
+
+ wiirlak_ep_3_insight:0 "$specialist_evergrowth$ Прозрение III"
+ wiirlak_ep_3_insight_desc:0 "`§EПолучить технологию:§!"
+
+
+ wiirlak_ep_3_bloomform:0 "$specialist_evergrowth$ $wiirlak_ep_menap_terraforming_3$ III"
+ wiirlak_ep_3_bloomform_desc:0 "`Каждая планета в пределах §H[TARGET.GetName]§! превратится в §Y$wiirlak_ep_pc_bloom_plural$§!`"
+
+ wiirlak_ep_3_colony:0 "$specialist_evergrowth$ Адаптация II"
+ wiirlak_ep_3_colony_desc:0 "`Население §H[TARGET.GetName]§! адаптируется к §Y$wiirlak_ep_pc_bloom_plural$§!`"
+
+ wiirlak_ep_3_bloomform_leader:0 "$specialist_evergrowth$ Лидеры II"
+ wiirlak_ep_3_bloomform_leader_desc:0 "`$OVERLORD_MOD$"
+
+# Subject Modifier
+ Wiirlak_ep_modifier_relay:0 "$wiirlak_ep_1_neighbor_bonuses$"
+ mod_planet_jobs_wiirlak_ep_resource_mycogrowth_produces_mult:0 "`£wiirlak_ep_resource_mycogrowth£ $wiirlak_ep_resource_mycogrowth$ от £job£ работ`"
+
+# Subject Leader Trait
+ leader_trait_evergrowth_rooted_presence:0 "`Укоренившееся Присутствие`"
+ leader_trait_evergrowth_rooted_presence_desc:0 "`Чем дольше он остаётся, тем внимательнее слушает почва.`"
+ leader_trait_evergrowth_rooted_presence_tooltip:0 "`На §Y$wiirlak_ep_pc_bloom_plural$§!, $PLANET_EFFECTS_TXT$ $TABBED_NEW_LINE$- $MOD_PLANET_STABILITY_MULT$: §G+20%§!$TABBED_NEW_LINE$- $MOD_POP_GOVERNMENT_ETHIC_ATTRACTION$: §G+20%§!"
+
+ leader_trait_evergrowth_spore_diplomat:0 "`Споровый Дипломат`"
+ leader_trait_evergrowth_spore_diplomat_desc:0 "`Они говорят мягко — пыльцой, феромонами, миром.`"
+ leader_trait_evergrowth_spore_diplomat_tooltip:0 "`На §Y$wiirlak_ep_pc_bloom_plural$§!, $PLANET_EFFECTS_TXT$ $TABBED_NEW_LINE$- $mod_planet_jobs_upkeep_mult$: §G-15%§!$TABBED_NEW_LINE$- $mod_planet_jobs_unity_produces_mult$: §G+15%§!"
+
+ leader_trait_evergrowth_myco_admin:0 "`Мико-Администратор`"
+ leader_trait_evergrowth_myco_admin_desc:0 "`Решения распространяются так же быстро, как корни в плодородной почве.`"
+
+ leader_trait_evergrowth_biogrowth_architect:0 "`Архитектор Биороста`"
+ leader_trait_evergrowth_biogrowth_architect_desc:0 "`Зачем строить, когда мир может вырастить это для вас?`"
+ leader_trait_evergrowth_biogrowth_architect_tooltip:0 "`На §Y$wiirlak_ep_pc_bloom_plural$§!, $PLANET_EFFECTS_TXT$ $TABBED_NEW_LINE$- $mod_planet_districts_cost_mult$: §G-20%§!$TABBED_NEW_LINE$- $mod_planet_districts_upkeep_mult$: §G-20%§!"
+
+ leader_trait_evergrowth_spore_council:0 "`Совет Спор`"
+ leader_trait_evergrowth_spore_council_desc:0 "`Их разум коллективен. Их голоса предсказуемы.`"
+
+# Subject Building
+ wiirlak_ep_holding_sporebloom_arboretum:0 "`Спороцветущий Дендрарий`"
+ wiirlak_ep_holding_sporebloom_arboretum_desc:0 "`Живой собор Вечного Роста, вечно источающий пыльцу обетования.`"

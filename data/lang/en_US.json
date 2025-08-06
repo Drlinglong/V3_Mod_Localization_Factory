@@ -57,6 +57,10 @@
   "select_game_profile_prompt": "\nPlease select a game:",
   "unsupported_metadata": "Warning: Metadata processing is not yet supported for the game '{game_name}'.",
   "parallel_processing_start": "--- Detected {count} translation batches, starting parallel processing mode ---",
-  "parallel_processing_end": "--- All batches have finished parallel processing ---"
+  "parallel_processing_end": "--- All batches have finished parallel processing ---",
+  "warning_batch_failed": "Warning: Batch {batch_num} failed. The original English text for this batch will be used as a fallback.",
+  "warning_partial_failure": "Warning: Some translation batches failed. Original English text has been used for the failed parts.",
+  "retrying_batch": "Batch {batch_num} failed on attempt {attempt}/{max_retries}. Retrying in {delay} seconds..."
+
 
 }

@@ -1,0 +1,1285 @@
+﻿# localisation\english\darktec_mechanics_l_english.yml
+
+# Authors: Rodahtnov & Zyralynn
+
+l_simp_chinese:
+
+# Misc
+	# §B thisisblue §!
+	# §E thisisteal §!
+	# §G thisisgreen §!
+	# §H thisisorange §!
+	# §L thisisbrown §!
+	# §M thisispurple §!
+	# §P thisislightred §!
+	# §R thisisred §!
+	# §S thisisdarkorange §!
+	# §T thisislightgrey §!
+	# §W thisiswhite §!
+	# §Y thisisyellow §!
+# /
+
+# Ascension perk
+	darktec_ap_postbaryonic:0 "后重子注入"
+	darktec_ap_postbaryonic_desc:0 "长期以来，我们目睹着宇宙如何坍缩，虚空如何缓慢吞噬着万物中最后一颗恒星、最后一缕光芒；现在，是我们知晓如何逆转那场浩劫，如何阻止它，以及如何将其化为己用的时候了。熵将因我们而终结。"
+	darktec_ap_postbaryonic_not_for_multispecies:0 "£trigger_no£ 要求非 §Y多元文化§! 帝国。"
+	darktec_ap_postbaryonic_not_for_wilderness:0 "£trigger_no£ 要求非同化帝国（例如 §Y荒野§! 帝国）。"
+	darktec_ap_postbaryonic_requires_able_to_modify_species:0 "£trigger_no£ 要求非纯粹主义帝国（我们无法修改我们的主要物种）。"
+	darktec_ap_postbaryonic_tooltip_will_need_to_research_dm_tech:0 "\n§E科技需求：§!\n- 我们需要 §Y£physics£ $tech_mine_dark_matter$§! 科技才能继续。它将作为保底研究项提供。"
+
+	darktec_ap_postbaryonic_tooltip:0 "- 危机进程将开启\n- 无论付出什么代价，我们新的目标都将是收获并利用非重子能量。"
+
+	darktec_ap_postbaryonic_transformed:0 "熵变融合"
+	darktec_ap_postbaryonic_transformed_desc:0 "$darktec_ap_postbaryonic_desc$"
+	darktec_ap_postbaryonic_transformed_tooltip:0 "- 我们已将物种转化为 §Y熵灵§!，现在我们正在自身上拥抱熵的真正潜力。"
+
+	darktec_ap_postbaryonic_tainted:0 "幽影注入"
+	darktec_ap_postbaryonic_tainted_desc:0 "$darktec_ap_postbaryonic_desc$"
+	darktec_ap_postbaryonic_tainted_tooltip:0 "- 我们已强化了 §Y幽影§! 应用，现在我们对暗物质有了更大的控制力。"
+
+# Crisis
+	# Misc
+	# UI
+	#darktec_crisis_postbaryonic_level_1:0 "§EConcern§!"
+	#darktec_crisis_postbaryonic_level_2:0 "§ERisk§!"
+	#darktec_crisis_postbaryonic_level_3:0 "§EDanger§!"
+	#darktec_crisis_postbaryonic_level_4:0 "§ECalamity§!"
+	#darktec_crisis_postbaryonic_level_5:0 "§EExistential Threat§!"
+	darktec_crisis_postbaryonic_level_1:0 "§E遏制§!"
+	darktec_crisis_postbaryonic_level_2:0 "§E剥削§!"
+	darktec_crisis_postbaryonic_level_3:0 "§E熵束§!"
+	darktec_crisis_postbaryonic_level_4:0 "§E迫近的坍缩§!"
+	darktec_crisis_postbaryonic_level_5:0 "§E幽影浩劫§!"
+	darktec_crisis_postbaryonic_level_1_desc:0 "危机等级 1"
+	darktec_crisis_postbaryonic_level_2_desc:0 "危机等级 2"
+	darktec_crisis_postbaryonic_level_3_desc:0 "危机等级 3"
+	darktec_crisis_postbaryonic_level_4_desc:0 "危机等级 4"
+	darktec_crisis_postbaryonic_level_5_desc:0 "危机等级 5"
+	# Resouces
+	darktec_contained_entropy:0 "遏制熵能"
+	darktec_contained_entropy_name:0 "$darktec_contained_entropy$"
+	darktec_contained_entropy_with_icon:0 "£darktec_contained_entropy£ $darktec_contained_entropy$"
+	darktec_contained_entropy_value:0 "£darktec_contained_entropy£ $VAL|0$"
+	darktec_contained_entropy_current_value:0 "当前值：§Y$VALUE|0$§!"
+	darktec_contained_entropy_gaining:0 "完成 §H危机目标§! 以获得更多 §Y$darktec_contained_entropy$§!。"
+	darktec_contained_entropy_desc:0 "遏制熵能是由非重子物质束缚的混乱背景能量，其无法以任何方式干扰或与现实互动，除非受到人工影响。"
+
+	darktec_contained_entropy_crisis_objective:0 "危机目标"
+	darktec_contained_entropy_crisis_objective_gained:0 "资源获取"
+	darktec_contained_entropy_crisis_objective_reward:0 "$REWARD$"
+	darktec_contained_entropy_crisis_objective_progress:0 "我们已从该危机目标中获得了 £darktec_contained_entropy£ $AMOUNT$。"
+
+	darktec_contained_entropy_crisis_level_locked:0 "解锁此等级所需：\n"
+	darktec_contained_entropy_crisis_level_unlocked:0 "在 $LEVEL$ 级时，你将获得一个特殊事件和奖励：\n"
+	darktec_contained_entropy_crisis_level_unlock:0 "拥有 £darktec_contained_entropy£ §Y$CURRENCY$§! $darktec_contained_entropy$"
+	darktec_contained_entropy_crisis_level_desc:0 "要晋升危机等级，请完成危机目标并在情报日志中研究危机特性。"
+
+	darktec_contained_entropy_crisis_description_title:0 "后重子注入"
+	darktec_contained_entropy_crisis_description:0 "$menace_crisis_description_intro$\n\n真空、虚空、原子间的空间……这些推动熵的暗能量蕴藏着无限潜力。因此，我们有责任阻止它对现实产生的倒退和破坏性影响，并掌控它；我们将把熵的力量驯服为我们自己的力量。"
+	darktec_contained_entropy_crisis_howto_title:0 "熵能聚合"
+	darktec_contained_entropy_crisis_howto:0 "追寻 §H危机目标§! 并利用一些 §E幽影§! 特性，例如建造 §H$building_darktec_anchor_1_plural$§!，会产生 §H$darktec_contained_entropy_with_icon$§!，从而解锁我们帝国的科技、经济和存在力量。我们需要不断收获、成长和创造，直到我们能够将获得的熵能 §H聚合§! 成我们可以塑造的形式，并以此塑造现实以实现我们的愿望。"
+
+	# Perks
+	# T1
+	menp_darktec_anchor_t1:0 "虚空虹吸"
+	menp_darktec_anchor_t1_desc:0 "移除我们空间周围的潜在暗能量并将其转化为可用资源将推动我们的目标。"
+	menp_darktec_anchor_t1_tooltip:0 "允许我们在任意区域内建造['building:building_darktec_anchor_1', £building£ $building_darktec_anchor_1_plural$]，用于生成§Y$darktec_contained_entropy_with_icon$§!。"
+
+	menp_darktec_entropy_t1:0 "深奥研究"
+	menp_darktec_entropy_t1_desc:0 "研究背景辐射和熵能将使我们领先一步，以妥善驾驭非重子物质。"
+	menp_darktec_entropy_t1_tooltip:0 "我们现在可以通过危机目标获取§Y$darktec_contained_entropy_with_icon$§!。"
+
+	menp_darktec_darkmatter_t1:0 "反能量遏制"
+	menp_darktec_darkmatter_t1_desc:0 "唯一符合逻辑的结果是降低熵，并在此过程中加以利用。"
+	menp_darktec_darkmatter_t1_tooltip:0 "允许建造['building:building_darktec_storage_1', £building£ $building_darktec_storage_1_plural$]，其根据储存的§Y$darktec_contained_entropy_with_icon$§!数量来生成§Y£sr_dark_matter£ 暗物质§!。"
+
+	# T2
+	menp_darktec_anchor_t2:0 "虚空收割"
+	menp_darktec_anchor_t2_desc:0 "我们必须建造更多的锚点，我们需要虹吸所有能获取的背景能量和暗能量，并将其用于我们的目标。"
+	menp_darktec_anchor_t2_tooltip:0 "我们现在可以将['building:building_darktec_anchor_1', £building£ $building_darktec_anchor_1_plural$]升级为['building:building_darktec_anchor_2', £building£ $building_darktec_anchor_2_plural$]。"
+
+	menp_darktec_entropy_t2:0 "奇异重组"
+	menp_darktec_entropy_t2_desc:0 "将非重子物质与重子物质结合是一件复杂的事情，对于活体生物而言更是如此。但这份努力是真正值得的。"
+	menp_darktec_entropy_t2_tooltip:0 "[darktec_loc_menp_darktec_entropy_t2_tooltip]"
+	menp_darktec_entropy_t2_tooltip_normal:0 "允许研究['technology:tech_darktec_traits_t1']，使我们能够用特殊性状增强我们的物种。\n"
+	menp_darktec_entropy_t2_tooltip_early:0 "允许研究['technology:tech_darktec_traits_t1']，使我们能够用特殊性状增强我们的物种。\n\n我们致力于改进我们的§G$situation_darktec_intro_approach_applications$§!已经为我们带来了以下加成：\n\n$MOD_COUNTRY_MODIFY_SPECIES_COST_MULT$: §G-10%§!"
+
+	menp_darktec_darkmatter_t2:0 "真空回收"
+	menp_darktec_darkmatter_t2_desc:0 "任何资源都不能浪费，即使是我们无法探测到的资源亦然——实现效率最大化是当务之急。"
+	menp_darktec_darkmatter_t2_tooltip:0 "[darktec_loc_menp_darktec_darkmatter_t2_tooltip]"
+	menp_darktec_darkmatter_t2_tooltip_normal:0 "我们现在可以将['building:building_darktec_storage_1', £building£ $building_darktec_storage_1_plural$]升级为['building:building_darktec_storage_2', £building£ $building_darktec_storage_2_plural$]。\n\n我们现在拥有§Y幽影建筑科技§!。"
+	menp_darktec_darkmatter_t2_tooltip_early:0 "我们现在可以将['building:building_darktec_storage_1', £building£ $building_darktec_storage_1_plural$]升级为['building:building_darktec_storage_2', £building£ $building_darktec_storage_2_plural$]。\n\n我们现在拥有§Y幽影建筑科技§!。\n\n我们致力于改进我们的§Y$situation_darktec_intro_approach_economy$§!已经为我们带来了以下加成：\n\n$MOD_PLANET_BUILDING_COST_MULT$: §G-5%§!"
+
+	menp_darktec_umbralships_t2:0 "幽影帷幕之后"
+	menp_darktec_umbralships_t2_desc:0 "熵能灌注的回收材料的创造使我们能够产生似乎与有形和无形现实融合的设计。"
+	menp_darktec_umbralships_t2_tooltip:0 "[darktec_loc_menp_darktec_umbralships_t2_tooltip]"
+
+	menp_darktec_umbralships_t2_tooltip_mechanical:0 "解锁了第一级§Y幽影飞船§!的科技——['technology:tech_darktec_crisis_destroyer']。"
+	menp_darktec_umbralships_t2_tooltip_mechanical_early:0 "解锁了第一级§Y幽影飞船§!的科技——['technology:tech_darktec_crisis_destroyer']。\n\n我们致力于改进我们的§Y$situation_darktec_intro_approach_warfare$§!已经为我们带来了以下加成：\n\n$MOD_SHIP_SPEED_MULT$: §G+5%§!"
+	menp_darktec_umbralships_t2_tooltip_bioships:0 "解锁了第一级§Y幽影飞船§!的科技——['technology:tech_darktec_crisis_mauler']。"
+	menp_darktec_umbralships_t2_tooltip_bioships_early:0 "解锁了第一级§Y幽影飞船§!的科技——['technology:tech_darktec_crisis_mauler']。\n\n我们致力于改进我们的§Y$situation_darktec_intro_approach_warfare$§!已经为我们带来了以下加成：\n\n$MOD_SHIP_SPEED_MULT$: §G+5%§!"
+
+	darktec_modifier_menp_early_applications:0 "$menp_darktec_entropy_t2$"
+	darktec_modifier_menp_early_applications_desc:0 "$menp_darktec_entropy_t2_desc$"
+	darktec_modifier_menp_early_warfare:0 "$menp_darktec_umbralships_t2$"
+	darktec_modifier_menp_early_warfare_desc:0 "$menp_darktec_umbralships_t2_desc$"
+	darktec_modifier_menp_early_industry:0 "$menp_darktec_darkmatter_t2$"
+	darktec_modifier_menp_early_industry_desc:0 "$menp_darktec_umbralships_t2_desc$"
+
+	# T3
+	menp_darktec_anchor_t3:0 "虚空共振级联"
+	menp_darktec_anchor_t3_desc:0 "在稳定我们的提取器后，我们现在可以在虚空中进行熵能提取的实验，而不会产生灾难性的连锁反应。"
+	menp_darktec_anchor_t3_tooltip:0 "我们现在可以将['building:building_darktec_anchor_2', £building£ $building_darktec_anchor_2_plural$]升级为['building:building_darktec_anchor_3', £building£ $building_darktec_anchor_3_plural$]。\n\n['building:building_darktec_anchor_3', £building£ $building_darktec_anchor_3_plural$]现在也将产出适量的§Y£sr_dark_matter£ 暗物质§!。"
+
+	menp_darktec_entropy_t3:0 "黑暗实验"
+	menp_darktec_entropy_t3_desc:0 "我们现在对如何最大限度地提升我们与熵能回收元素的亲和力有了初步的认识和想法，因此我们需要满足我们的需求，或对知识的渴望。"
+	menp_darktec_entropy_t3_tooltip:0 "我们现在可以研究['technology:tech_darktec_traits_t2']，其提供了§Y强大性状§!供我们的物种使用。"
+
+	menp_darktec_darkmatter_t3:0 "受控真空坍缩"
+	menp_darktec_darkmatter_t3_desc:0 "通过制造小规模的受控真空坍缩，我们能够极大地理解如何处理和重新定向巨量的非重子物质和能量，而不会导致现实的彻底坍塌。"
+	menp_darktec_darkmatter_t3_tooltip:0 "[darktec_loc_menp_darktec_darkmatter_t3_tooltip]"
+	menp_darktec_darkmatter_t3_tooltip_mechanical:0 "解锁了第二级§Y幽影飞船§!的科技——['technology:tech_darktec_crisis_cruiser']。\n\n幽影飞船的特殊§Y灵光组件§!可以升级到§Y2§!级。\n\n现在可以有额外的§Y强大飞船组件§!作为研究选项出现。"
+	menp_darktec_darkmatter_t3_tooltip_bioships:0 "解锁了第二级§Y幽影飞船§!的科技——['technology:tech_darktec_crisis_weaver']。\n\n幽影飞船的特殊§Y灵光组件§!可以升级到§Y2§!级。\n\n现在可以有额外的§Y强大飞船组件§!作为研究选项出现。"
+
+	# T4
+	menp_darktec_anchor_t4:0 "虚空收割"
+	menp_darktec_anchor_t4_desc:0 "[darktec_loc_menp_darktec_anchor_t4_desc]"
+	menp_darktec_anchor_t4_tooltip:0 "[darktec_loc_menp_darktec_anchor_t4_tooltip]"
+
+	menp_darktec_anchor_t4_unknown:0 "????"
+	menp_darktec_anchor_t4_unknown_desc:0 "????"
+	menp_darktec_anchor_t4_unknown_tooltip:0 "????"
+	menp_darktec_anchor_t4_unknown_tooltip:0 "????"
+
+	menp_darktec_anchor_t4_known:0 "虚空收割"
+	menp_darktec_anchor_t4_known_desc:0 "永无止境的收割。永无止境的吞噬。"
+	menp_darktec_anchor_t4_known_tooltip:0 "['building:building_darktec_anchor_3', £building£ $building_darktec_anchor_3_plural$] 将提升殖民地上其他 §Y£building£ 幽影建筑§! 的效果。\n此效果随锚点升级等级而增强。"
+
+	menp_darktec_entropy_t4:0 "与深渊合一"
+	menp_darktec_entropy_t4_desc:0 "[darktec_loc_menp_darktec_entropy_t4_desc]"
+	menp_darktec_entropy_t4_tooltip:0 "[darktec_loc_menp_darktec_entropy_t4_tooltip]"
+
+	menp_darktec_entropy_t4_unknown:0 "???"
+	menp_darktec_entropy_t4_unknown_desc:0 "???"
+	menp_darktec_entropy_t4_unknown_tooltip:0 "???"
+
+	menp_darktec_entropy_t4_transformed:0 "晦暗稳定"
+	menp_darktec_entropy_t4_transformed_desc:0 "我们的新形态……令人费解。我们更少，我们更多，而我们也能让其他存在如此。"
+	menp_darktec_entropy_t4_transformed_tooltip:0 "['building:building_darktec_umbral_portal_1', £building£ $building_darktec_umbral_portal_1_plural$] 现在也提升行星上的 £job£ 产出。\n\n此建筑现在能使人口被动地 §Y同化§! 为 §E熵灵§!。"
+
+	menp_darktec_entropy_t4_tainted:0 "融合黑暗"
+	menp_darktec_entropy_t4_tainted_desc:0 "暗物质在我们生命过程中产生的反应效应，历经长久以来已取得成功，因此我们已准备好进行更多的实验。更多。更多。"
+	menp_darktec_entropy_t4_tainted_tooltip:0 "基础和高级的 §Y幽影特质§! 现在拥有额外的生产能力。"
+
+	menp_darktec_darkmatter_t4:0 "熵调和"
+	menp_darktec_darkmatter_t4_desc:0 "[darktec_loc_menp_darktec_darkmatter_t4_desc]"
+	menp_darktec_darkmatter_t4_tooltip:0 "[darktec_loc_menp_darktec_darkmatter_t4_tooltip]"
+
+	menp_darktec_darkmatter_t4_unknown:0 "???"
+	menp_darktec_darkmatter_t4_unknown_desc:0 "???"
+	menp_darktec_darkmatter_t4_unknown_tooltip:0 "???"
+
+	menp_darktec_darkmatter_t4_transformed:0 "熵能污染"
+	menp_darktec_darkmatter_t4_transformed_desc:0 "凭借我们新获得的存在，我们携带着一种潜藏的精粹，一种黑色液体，一种能颠覆触及范围内一切事物的方式。"
+	menp_darktec_darkmatter_t4_transformed_tooltip:0 "我们现在可以将 ['building:building_darktec_storage_2', £building£ $building_darktec_storage_2_plural$] 升级为 ['building:building_darktec_storage_3', £building£ $building_darktec_storage_3_plural$]。"
+
+	menp_darktec_darkmatter_t4_tainted:0 "熵能再分配"
+	menp_darktec_darkmatter_t4_tainted_desc_old:0 "通过将部分“受控熵能”重新分配至我们的某个生产领域，我们可以令人难以置信地提高其产量。"
+	menp_darktec_darkmatter_t4_tainted_desc:0 "熵能的力量被用于进一步增强我们物种的并行特性，为更多的应用和更大的力量提供了空间。"
+	menp_darktec_darkmatter_t4_tainted_tooltip:0 "我们现在可以将 ['building:building_darktec_storage_2', £building£ $building_darktec_storage_2_plural$] 升级为 ['building:building_darktec_storage_3', £building£ $building_darktec_storage_3_plural$]。\n\n我们现在可以研究 ['technology:tech_darktec_traits_ascension']，这将根据所选择的任何飞升路线，为我们的帝国提供强大的特质。"
+
+	menp_darktec_umbralships_t4:0 "相位物质舰船"
+	menp_darktec_umbralships_t4_desc:0 "[darktec_loc_menp_darktec_umbralships_t4_desc]"
+	menp_darktec_umbralships_t4_tooltip:0 "[darktec_loc_menp_darktec_umbralships_t4_tooltip]"
+
+	menp_darktec_umbralships_t4_unknown:0 "???"
+	menp_darktec_umbralships_t4_unknown_desc:0 "???"
+	menp_darktec_umbralships_t4_unknown_tooltip:0 "???"
+
+	menp_darktec_umbralships_t4_known:0 "相位物质舰船"
+	menp_darktec_umbralships_t4_known_desc:0 "现实结构为我们的舰船扭曲，使其能够同时存在又同时不存在，在不同状态间跃迁，为我们带来巨大优势。"
+	menp_darktec_umbralships_t4_known_tooltip:0 "解锁最终阶段的§Y幽影舰船§!科技 - ['technology:tech_darktec_crisis_battleship']。\n\n幽影舰船的特殊§Y灵气组件§!可升级至§Y3§!级。"
+	menp_darktec_umbralships_t4_known_tooltip_bioships:0 "解锁最终阶段的§Y幽影舰船§!科技 - ['technology:tech_darktec_crisis_stinger']。\n\n幽影舰船的特殊§Y灵气组件§!可升级至§Y3§!级。"
+
+	# T5
+	menp_darktec_anchor_t5:0 "虚空撕裂"
+	menp_darktec_anchor_t5_desc:0 "[darktec_loc_menp_darktec_anchor_t5_desc]"
+	menp_darktec_anchor_t5_tooltip:0 "[darktec_loc_menp_darktec_anchor_t5_tooltip]"
+
+	menp_darktec_anchor_t5_unknown:0 "?????"
+	menp_darktec_anchor_t5_unknown_desc:0 "?????"
+	menp_darktec_anchor_t5_unknown_tooltip:0 "?????"
+
+	menp_darktec_anchor_t5_known:0 "虚空撕裂"
+	menp_darktec_anchor_t5_known_desc:0 "提取真空的非本质是势在必行的。"
+	menp_darktec_anchor_t5_known_tooltip:0 "我们现在可以将['building:building_darktec_anchor_3', £building£ $building_darktec_anchor_3_plural$]升级为['building:building_darktec_anchor_4', £building£ $building_darktec_anchor_4_plural$]。\n\n£building£ $building_darktec_anchor_4_plural$（以及其前置升级）现在将提升我们帝国中所有幽影建筑的效能。"
+
+	menp_darktec_entropy_t5:0 "最终异常"
+	menp_darktec_entropy_t5_desc:0 "[darktec_loc_menp_darktec_entropy_t5_desc]"
+	menp_darktec_entropy_t5_tooltip:0 "[darktec_loc_menp_darktec_entropy_t5_tooltip]"
+
+	menp_darktec_entropy_t5_unknown:0 "?????"
+	menp_darktec_entropy_t5_unknown_desc:0 "?????"
+	menp_darktec_entropy_t5_unknown_tooltip:0 "?????"
+
+	menp_darktec_entropy_t5_known:0 "最终异常"
+	menp_darktec_entropy_t5_known_desc:0 "迄今为止都只是理论，我们现在确信能够将我们获得的所有熵汇聚到时空中的一个点。"
+	menp_darktec_entropy_t5_known_tooltip:0 "允许我们§Y建造§!一座特殊巨构：\n§Y聚合异常§!\n\n§H通过建造并升级此巨构，我们将达成我们的目标。§!"
+
+	menp_darktec_darkmatter_t5:0 "现实清除"
+	menp_darktec_darkmatter_t5_desc:0 "[darktec_loc_menp_darktec_darkmatter_t5_desc]"
+	menp_darktec_darkmatter_t5_tooltip:0 "[darktec_loc_menp_darktec_darkmatter_t5_tooltip]"
+
+	menp_darktec_darkmatter_t5_unknown:0 "?????"
+	menp_darktec_darkmatter_t5_unknown_desc:0 "?????"
+	menp_darktec_darkmatter_t5_unknown_tooltip:0 "?????"
+
+	menp_darktec_darkmatter_t5_known:0 "现实清除"
+	menp_darktec_darkmatter_t5_known_desc:0 "任何存在或不存在之物，都必须被重塑并顺从我们的意志。"
+	menp_darktec_darkmatter_t5_known_tooltip:0 "解锁我们舰队的§Y$bombardment_darktec_bombardment_entropy$§!轰炸姿态。\n以此轰炸类型摧毁的星球将为我们提供额外资源，以达成我们的目标。\n\n我们现在可以将['building:building_darktec_storage_3', £building£ $building_darktec_storage_3_plural$]升级为['building:building_darktec_storage_4', £building£ $building_darktec_storage_4_plural$]。"
+
+	menp_darktec_umbralships_t5:0 "多维入侵"
+	menp_darktec_umbralships_t5_desc:0 "[darktec_loc_menp_darktec_umbralships_t5_desc]"
+	menp_darktec_umbralships_t5_tooltip:0 "[darktec_loc_menp_darktec_umbralships_t5_tooltip]"
+
+	menp_darktec_umbralships_t5_unknown:0 "?????"
+	menp_darktec_umbralships_t5_unknown_desc:0 "?????"
+	menp_darktec_umbralships_t5_unknown_tooltip:0 "?????"
+
+	menp_darktec_umbralships_t5_known:0 "多维入侵"
+	menp_darktec_umbralships_t5_known_desc:0 "他们直到为时已晚才会意识到大祸临头，即使在其他维度，即使在其他现实中也是如此。"
+	menp_darktec_umbralships_t5_known_tooltip:0 "我们现在可以研究强大的§Y熵能舰船通用组件§!，这将使强大的§Y舰队行动§!供我们支配。"
+
+# Crisis objectives
+	darktec_crisobj_monthly_extract_entropy_name:0 "汲取熵"
+	darktec_crisobj_monthly_extract_entropy_desc:0 "在宇宙的结构层之下，蛰伏着一种潜在的力量，它注定会随着宇宙的扩张而分裂、毁灭、带来死亡。这种力量将属于我们。\n\n建造§Y$building_darktec_anchor_1_plural$§!并用它们收获$darktec_contained_entropy_with_icon$。"
+
+	darktec_crisobj_immediate_research_physics_technologies_name:0 "研究科技"
+	darktec_crisobj_immediate_research_physics_technologies_desc:0 "我们需要理解宇宙的精妙构成。\n\n§Y研究科技§!以获得$darktec_contained_entropy_with_icon$奖励。"
+
+	darktec_crisobj_immediate_build_and_keep_umbral_buildings_name:0 "建造或升级幽影建筑"
+	darktec_crisobj_immediate_build_and_keep_umbral_buildings_desc:0 "高耸而强大，那些容纳并塑造熵的建筑，如今已成为我们帝国的基石。\n\n§Y建造§!或§Y升级§!幽影建筑以获得$darktec_contained_entropy_with_icon$奖励。"
+
+	darktec_crisobj_yearly_retain_vassals_name:0 "保留附庸"
+	darktec_crisobj_yearly_retain_vassals_desc:0 "那些协助我们事业的，值得我们的善意——以及最终，我们的知识。\n\n§Y保留附庸§!以获得此§Y年度§!$darktec_contained_entropy_with_icon$奖励。"
+
+	darktec_crisobj_yearly_retain_megastructures_name:0 "保留巨构建筑"
+	darktec_crisobj_yearly_retain_megastructures_desc:0 "太空巨构建筑的宏伟壮丽不仅是一种美学享受，更是我们蔑视常规、并从虚空中获取优势的另一种方式。\n\n§Y保留独特类型的巨构建筑§!以获得此§Y年度§!$darktec_contained_entropy_with_icon$奖励。"
+
+	darktec_crisobj_yearly_galcom_retain_galcom_respect_name:0 "获得银河共同体支持"
+	darktec_crisobj_yearly_galcom_retain_galcom_respect_desc:0 "我们需要让其他人信服我们的事业，以避免他们被死寂宇宙的冰冷拥抱不必要地毁灭。\n\n成为银河共同体§Y理事会§!成员或避免§Y违反§!银河法律以获得此§Y年度§!$darktec_contained_entropy_with_icon$奖励。"
+
+	darktec_crisobj_immediate_conquer_worlds_name:0 "征服或收割世界"
+	darktec_crisobj_immediate_conquer_worlds_desc:0 "那些反对我们的人没有容身之地，因此我们必须将他们从任何可居住的星球表面驱逐。\n\n§Y征服§!或§Y收割§!世界以获得$darktec_contained_entropy_with_icon$奖励。"
+
+	darktec_crisobj_immediate_assimilate_pops_name:0 "同化人口"
+	darktec_crisobj_immediate_assimilate_pops_desc:0 "所有人都必须屈服，要么成为我们的一部分，要么融入虚空。\n\n§Y通过熵同化人口§!以获得$darktec_contained_entropy_with_icon$奖励。"
+
+	darktec_crisobj_immediate_taint_world_name:0 "玷污世界"
+	darktec_crisobj_immediate_taint_world_desc:0 "广袤的暗物质场，熵暗的河流，它们沐浴着我们定居的世界，并将它们转化为完美催化剂，促使两个维度结合。\n\n§Y通过熵玷污§!世界以获得$darktec_contained_entropy_with_icon$奖励。"
+
+	darktec_crisobj_immediate_build_umbral_ships_name:0 "建造幽影飞船"
+	darktec_crisobj_immediate_build_umbral_ships_desc:0 "隐形、流畅且充满暗物质，这些通过循环熵之力创造的舰船是我们的未来。\n\n§Y建造幽影飞船§!以获得$darktec_contained_entropy_with_icon$奖励。奖励随飞船等级提升而增加。"
+
+	darktec_crisobj_immediate_destroy_empires_name:0 "摧毁帝国"
+	darktec_crisobj_immediate_destroy_empires_desc:0 "他们阻碍我们已久。如今，他们将归于虚空。\n\n§Y消灭§!一个帝国以获得$darktec_contained_entropy_with_icon$奖励。"
+# /
+
+# Crisis misc
+
+# Umbral Ships
+	darktec_umbral_component:0 "§E幽影§!"
+	darktec_umbral_component_weapon_damage_mult:0 "幽影部件伤害"
+	mod_darktec_umbral_component_weapon_damage_mult:0 "$darktec_umbral_component_weapon_damage_mult$"
+
+	darktec_crisis_destroyer:0 "幽影劫掠者"
+	darktec_crisis_destroyer_plural:0 "$darktec_crisis_destroyer$s"
+	darktec_crisis_destroyer_cap:0 "$darktec_crisis_destroyer$"
+	darktec_crisis_destroyer_desc:0 "劫掠者将非重子物质的破坏力带入太空战，能够造成和偏转惊人的伤害，同时以牺牲物质完整性为代价换取护盾性能。"
+	darktec_crisis_destroyer_tooltip:0 "劫掠者是幽影飞船的第一级，作为后重子帝国的主要攻防力量。\n拥有用于自我修正的特殊光环组件。\n该飞船具有以下修正：\n  - 船体：§R-50%§!\n  - 护盾加成倍率：§G+50%§!\n  - 护盾硬化：§G+10%§!"
+
+	darktec_crisis_cruiser:0 "幽影掠夺者"
+	darktec_crisis_cruiser_plural:0 "$darktec_crisis_cruiser$s"
+	darktec_crisis_cruiser_cap:0 "$darktec_crisis_cruiser$"
+	darktec_crisis_cruiser_desc:0 "掠夺者作为第一道攻防线，其韧性和潜在伤害超越了劫掠者。其虚无缥缈的轮廓，因其强烈护盾加成所发出的能量场的密度而闪耀。"
+	darktec_crisis_cruiser_tooltip:0 "掠夺者是幽影飞船的第二级，取代了巡洋舰的角色，成为一种多功能、耐用且极具攻击性的飞船。\n拥有用于自我修正的特殊光环组件。\n该飞船具有以下修正：\n  - 船体：§R-50%§!\n  - 护盾加成倍率：§G+100%§!\n  - 护盾硬化：§G+10%§!"
+
+	darktec_crisis_battleship:0 "幽影闯入者"
+	darktec_crisis_battleship_plural:0 "$darktec_crisis_battleship$s"
+	darktec_crisis_battleship_cap:0 "$darktec_crisis_battleship$"
+	darktec_crisis_battleship_desc:0 "这些强大的舰船充满了暗物质，是幽影飞船中的更高等级——一个毁灭平台，它保持着敏捷性和巨大的防御能力，足以承受最强大的打击。"
+	darktec_crisis_battleship_tooltip:0 "闯入者是幽影飞船的更高等级，是经过改进的战列舰，具有更多的分区种类和致命性。\n拥有用于自我修正的特殊光环组件。\n该飞船具有以下修正：\n  - 船体：§R-50%§!\n  - 护盾加成倍率：§G+250%§!\n  - 护盾硬化：§G+10%§!"
+
+	darktec_crisis_mauler:0 "幽影潜行者"
+	darktec_crisis_mauler_plural:0 "$darktec_crisis_mauler$s"
+	darktec_crisis_mauler_cap:0 "$darktec_crisis_mauler$"
+	darktec_crisis_mauler_desc:0 "这艘有机舰船笼罩在黑暗中，穿越虚空搜寻猎物，其轮廓因增强的护盾而不断变化。"
+	darktec_crisis_mauler_tooltip:0 "潜行者是幽影飞船的初始级别，是改进后的掠袭者，具有额外的致命性。\n拥有用于自我修正的特殊光环组件。\n该飞船具有以下修正：\n  - 船体：§R-50%§!\n  - 护盾加成倍率：§G+50%§!\n  - 护盾硬化：§G+10%§!"
+
+	darktec_crisis_weaver:0 "幽影漫游者"
+	darktec_crisis_weaver_plural:0 "$darktec_crisis_weaver$s"
+	darktec_crisis_weaver_cap:0 "$darktec_crisis_weaver$"
+	darktec_crisis_weaver_desc:0 "徘徊者舰船在远程和支援方面都极为致命，它们利用自身巨大的多功能能力，将战场化为一曲致命的合唱。"
+	darktec_crisis_weaver_tooltip:0 "徘徊者舰船是幽影舰船的中级型号，其作用类似于织魂者，但增加了更多舰船区段种类。"
+
+	darktec_crisis_stinger:0 "幽影劫掠者"
+	darktec_crisis_stinger_plural:0 "$darktec_crisis_stinger$s"
+	darktec_crisis_stinger_cap:0 "$darktec_crisis_stinger$"
+	darktec_crisis_stinger_desc:0 "在熵的侵染下诞生并成长，这艘巨型有机体在太空中航行，景象骇人，它是幽影舰船的顶点——一个毁灭的平台，却保持着敏捷性与强大的防御能力，足以抵御最猛烈的打击。"
+	darktec_crisis_stinger_tooltip:0 "劫掠者是幽影舰船的顶点，是改进版的螯刺者，拥有丰富的舰船区段种类。"
+
+
+	DARKTEC_CRISIS_DESTROYER_BRAWLER:0 "格斗型匪徒舰"
+	DARKTEC_CRISIS_DESTROYER_PICKET:0 "近防型匪徒舰"
+	DARKTEC_CRISIS_DESTROYER_MISSILES:0 "导弹型匪徒舰"
+	DARKTEC_CRISIS_DESTROYER_ARTILLERY:0 "火炮型匪徒舰"
+
+	DARKTEC_CRISIS_CRUISER_ARTILLERY:0 "火炮型掠袭者"
+	DARKTEC_CRISIS_CRUISER_BRAWLER:0 "格斗型掠袭者"
+	DARKTEC_CRISIS_CRUISER_MISSILES:0 "导弹型掠袭者"
+
+	DARKTEC_CRISIS_BATTLESHIP_ANNIHILATOR:0 "歼灭型闯入者"
+	DARKTEC_CRISIS_BATTLESHIP_ARTILLERY:0 "火炮型闯入者"
+	DARKTEC_CRISIS_BATTLESHIP_BRAWLER:0 "格斗型闯入者"
+	DARKTEC_CRISIS_BATTLESHIP_CARRIER:0 "航母型闯入者"
+
+	DARKTEC_CRISIS_MAULER_MELEE:0 "吞噬型追猎者"
+	DARKTEC_CRISIS_MAULER_BRAWLER:0 "格斗型追猎者"
+	DARKTEC_CRISIS_MAULER_MISSILES:0 "驱逐型追猎者"
+
+	DARKTEC_CRISIS_WEAVER_SUPPORT:0 "支援型徘徊者"
+	DARKTEC_CRISIS_WEAVER_BRAWLER:0 "格斗型徘徊者"
+	DARKTEC_CRISIS_WEAVER_ARTILLERY:0 "火炮型徘徊者"
+
+	DARKTEC_CRISIS_STINGER_ANNIHILATOR:0 "歼灭型劫掠者"
+	DARKTEC_CRISIS_STINGER_ARTILLERY:0 "火炮型劫掠者"
+	DARKTEC_CRISIS_STINGER_BRAWLER:0 "格斗型劫掠者"
+	DARKTEC_CRISIS_STINGER_CARRIER:0 "航母型劫掠者"
+	DARKTEC_CRISIS_STINGER_PICKET:0 "近防型劫掠者"
+
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T1:0 "幽影诱饵 I型"
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T1_DESC:0 "这艘幽影舰船利用一个特殊装置，通过利用背景辐射来遮蔽自身信号，并将其排放物导向虚空。"
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T1_TOOLTIP:0 "允许将§G隐匿§!作为舰队行动。"
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T2:0 "幽影诱饵 II型"
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T2_DESC:0 "$DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T1_DESC$"
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T2_TOOLTIP:0 "$DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T1_TOOLTIP$"
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T3:0 "幽影诱饵 III型"
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T3_DESC:0 "$DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T1_DESC$"
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T3_TOOLTIP:0 "$DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T1_TOOLTIP$"
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T1:0 "幽影模糊器 I型"
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T1_DESC:0 "利用小型局部相位跳跃，这艘飞船“模糊”了其特征信号，使敌方锁定极其困难。"
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T1_TOOLTIP:0 ""
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T2:0 "幽影模糊器 II型"
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T2_DESC:0 "$DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T1_DESC$"
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T2_TOOLTIP:0 "$DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T1_TOOLTIP$"
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T3:0 "幽影模糊器 III型"
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T3_DESC:0 "$DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T1_DESC$"
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T3_TOOLTIP:0 "$DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T1_TOOLTIP$"
+
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T1:0 "幽影伪装 I型"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T1_DESC:0 "这艘幽影生物利用一个特殊装置，通过利用背景辐射来遮蔽自身信号，并将其排放物导向虚空。"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T1_TOOLTIP:0 ""
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T2:0 "幽影伪装 II"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T2_DESC:0 "$DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T1_DESC$"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T2_TOOLTIP:0 "$DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T1_TOOLTIP$"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T3:0 "幽影伪装 III"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T3_DESC:0 "$DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T1_DESC$"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T3_TOOLTIP:0 "$DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T1_TOOLTIP$"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_EVASION_T1:0 "幽影遮蔽 I"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_EVASION_T1_DESC:0 "利用小型局部相位跳跃，这艘飞船“模糊”了其特征信号，使敌方锁定极其困难。"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_EVASION_T1_TOOLTIP:0 "$DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T1_TOOLTIP$"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_EVASION_T2:0 "幽影遮蔽 II"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_EVASION_T2_DESC:0 "$DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_EVASION_T1_DESC$"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_EVASION_T2_TOOLTIP:0 "$DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_EVASION_T1_TOOLTIP$"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_EVASION_T3:0 "幽影遮蔽 III"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_EVASION_T3_DESC:0 "$DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_EVASION_T1_DESC$"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_EVASION_T3_TOOLTIP:0 "$DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_EVASION_T1_TOOLTIP$"
+
+	# Tech mechanical
+	tech_darktec_crisis_destroyer:0 "$darktec_crisis_destroyer$"
+	tech_darktec_crisis_destroyer_desc:0 "一项技术奇迹，这艘飞船主要由超物质构成，使其在虚空中航行时能够切换相位状态——或将其一部分投向目标。"
+	tech_darktec_crisis_destroyer_unlocks_title:0 "§H解锁舰船类型：§! $darktec_crisis_destroyer$"
+	tech_darktec_crisis_destroyer_unlocks_desc:0 "§H$darktec_crisis_destroyer$§!\n$darktec_crisis_destroyer_tooltip$"
+
+	tech_darktec_crisis_cruiser:0 "$darktec_crisis_cruiser$"
+	tech_darktec_crisis_cruiser_desc:0 "在现有蓝图基础上改进设计，这艘飞船由于其熵质构成极大地将其能力提升到了非自然水平，与设计中的同类相比，能够承受并造成难以置信的伤害。"
+	tech_darktec_crisis_cruiser_unlocks_title:0 "§H解锁舰船类型：§! $darktec_crisis_cruiser$"
+	tech_darktec_crisis_cruiser_unlocks_desc:0 "§H$darktec_crisis_cruiser$§!\n$darktec_crisis_cruiser_tooltip$"
+
+	tech_darktec_crisis_battleship:0 "$darktec_crisis_battleship$"
+	tech_darktec_crisis_battleship_desc:0 "幽影科技的奇迹，它们的存在本身就能扭曲周围的现实；这些改进型战列舰由超物质构成，并驾驭着暗物质的力量，能够摧毁任何挡在其路径上的东西。"
+	tech_darktec_crisis_battleship_unlocks_title:0 "§H解锁舰船类型：§! $darktec_crisis_battleship$"
+	tech_darktec_crisis_battleship_unlocks_desc:0 "§H$darktec_crisis_battleship$§!\n$darktec_crisis_battleship_tooltip$"
+
+	# Techs organic
+	tech_darktec_crisis_mauler:0 "$darktec_crisis_mauler$"
+	tech_darktec_crisis_mauler_desc:0 "通过选择性地将少量非重子物质添加到新型有机飞船品种中，我们能够创造出极其强大的个体，它们能在正常空间和虚空之间穿梭，并且它们的存在本身就能扭曲周围的时空。"
+	tech_darktec_crisis_mauler_unlocks_title:0 "§H解锁舰船类型：§! $darktec_crisis_mauler$"
+	tech_darktec_crisis_mauler_unlocks_desc:0 "§H$darktec_crisis_mauler$§!\n$darktec_crisis_mauler_tooltip$"
+
+	tech_darktec_crisis_weaver:0 "$darktec_crisis_weaver$"
+	tech_darktec_crisis_weaver_desc:0 "作为其常规对应物的幽灵般倒影，这种有机飞船能够将光线弯曲以利于自身及其同伴，与现实结构本身融为一体。"
+	tech_darktec_crisis_weaver_unlocks_title:0 "§H解锁舰船类型：§! $darktec_crisis_weaver$"
+	tech_darktec_crisis_weaver_unlocks_desc:0 "§H$darktec_crisis_weaver$§!\n$darktec_crisis_weaver_tooltip$"
+
+	tech_darktec_crisis_stinger:0 "$darktec_crisis_stinger$"
+	tech_darktec_crisis_stinger_desc:0 "一种大型的、被暗物质饱和的致命生物，这艘巨大的有机飞船并非真正移动，而是切开空间虚空，在其中穿梭以寻找猎物。它的猎物将永远不知道是什么击中了它们。"
+	tech_darktec_crisis_stinger_unlocks_title:0 "§H解锁舰船类型：§! $darktec_crisis_stinger$"
+	tech_darktec_crisis_stinger_unlocks_desc:0 "§H$darktec_crisis_stinger$§!\n$darktec_crisis_stinger_tooltip$"
+
+
+# Umbral Buildings
+	# Techs
+	tech_darktec_umbral_extractors_t1:0 "幽影萃取"
+	tech_darktec_umbral_extractors_t1_desc:0 "将熵转化为“可控”实体是一项密集型工作，但如果运用得当，其副产品能极大增强我们的经济。"
+	tech_darktec_umbral_extractors_t2:0 "幽物质掠夺"
+	tech_darktec_umbral_extractors_t2_desc:0 "通过将受控的熵和暗物质循环转化为能源，或将重子物质转变为超物质，我们能够加速某些工业流程。"
+	tech_darktec_umbral_extractors_t3:0 "幽物质多维循环"
+	tech_darktec_umbral_extractors_t3_desc:0 "这不仅仅是收获局部熵的问题，我们还理论上可以轻微地利用那些在时空中的某个奇点处坍缩的平行宇宙。"
+
+	tech_darktec_umbral_industry_t1:0 "幽影锻造"
+	tech_darktec_umbral_industry_t1_desc:0 "标准材料可以通过添加一层薄薄的受控超物质层来大大增强其性能。"
+	tech_darktec_umbral_industry_t2:0 "幽物质熔炼"
+	tech_darktec_umbral_industry_t2_desc:0 "将超物质加工成半重子合金，这可能成为经济和军事快速扩张的革命性新方法。"
+	tech_darktec_umbral_industry_t3:0 "幽影超凝聚"
+	tech_darktec_umbral_industry_t3_desc:0 "超物质合金层层叠加，甚至可以在相同的物理维度上重叠，从而以微乎其微的缺点指数级提高产量。"
+
+	tech_darktec_umbral_research_t1:0 "幽影分析研究"
+	tech_darktec_umbral_research_t1_desc:0 "探索真空研究的潜力，同时避免意外的宇宙湮灭事件风险，这无疑将加速我们的研究。"
+	tech_darktec_umbral_research_t2:0 "幽影统计预测"
+	tech_darktec_umbral_research_t2_desc:0 "讽刺的是，随机性和混沌在获取奇异和理论技术方面扮演着决定性角色。"
+	tech_darktec_umbral_research_t3:0 "幽影多元宇宙微积分"
+	tech_darktec_umbral_research_t3_desc:0 "对熵不断变化的近距离研究使我们能够观察到发生在同一空间但不同潜在维度中的潜在时间分歧。"
+
+
+
+	# Core
+	mod_darktec_umbral_boost:0 "£sr_dark_matter£ 幽影建筑增益"
+	mod_darktec_umbral_boost_desc:0 "通过将熵重定向至不同系统，其效率呈指数级提高。"
+
+	building_darktec_affected_by_umbral_boost:0 "\n\n§H特性§!: §E幽影协同§!\n该£building£建筑的修正值或产出受§Y$mod_darktec_umbral_boost$§!影响。"
+
+	building_darktec_provides_umbral_boost:0 "\n\n§H特性§!: §E幽影协同§!\n该£building£建筑§Y增益§!其他幽影建筑的产出或修正值。"
+
+	building_darktec_grows_entrophereals:0 "\n\n§H特性§!: §E熵灵重构§!\n该£building£建筑从异变状态下重构熵灵，§Y生成§!额外人口。\n下一次人口生成脉冲将在§Y[owner.darktec_entrophereal_growth_pulse]§!进行！"
+
+	building_darktec_allows_entrophereal_assimilation:0 "\n\n§H特性§!: §E熵灵同化§!\n该£building£建筑允许在§E熵灵重构§!脉冲完成后，将非熵灵人口同化为主物种的熵灵人口。"
+
+	building_darktec_anchor_1:0 "熵重分配锚点"
+	building_darktec_anchor_1_plural:0 "$building_darktec_anchor_1$s"
+	building_darktec_anchor_1_desc:0 "一座将局部熵聚合为可控形态的宏伟建筑。当奇物质改变物质状态时，其共振会产生巨量的背景能量，使得这座建筑持续发出嗡鸣和震动。"
+	building_darktec_anchor_1_tooltip:0 ""
+
+	building_darktec_anchor_2:0 "熵凝析虹吸"
+	building_darktec_anchor_2_plural:0 "$building_darktec_anchor_2$s"
+	building_darktec_anchor_2_desc:0 "$building_darktec_anchor_1_desc$"
+	building_darktec_anchor_2_tooltip:0 ""
+
+	building_darktec_anchor_3:0 "熵奇物质收割机"
+	building_darktec_anchor_3_plural:0 "$building_darktec_anchor_3$s"
+	building_darktec_anchor_3_desc:0 "$building_darktec_anchor_1_desc$"
+	building_darktec_anchor_3_tooltip:0 ""
+
+	building_darktec_anchor_4:0 "熵收割者"
+	building_darktec_anchor_4_plural:0 "$building_darktec_anchor_4$s"
+	building_darktec_anchor_4_desc:0 "$building_darktec_anchor_1_desc$"
+	building_darktec_anchor_4_tooltip:0 ""
+
+	building_darktec_storage_1:0 "奇物质筒仓"
+	building_darktec_storage_1_plural:0 "$building_darktec_storage_1$s"
+	building_darktec_storage_1_desc:0 "该遏制设施采用微型屏蔽技术，安全储存非重子物质，并采取多项预防措施和反制手段，以避免在泄漏或蓄意破坏时发生灾难性崩塌事件。"
+	building_darktec_storage_1_tooltip:0 ""
+
+	building_darktec_storage_2:0 "奇物质遏制设施"
+	building_darktec_storage_2_plural:0 "$building_darktec_storage_2$s"
+	building_darktec_storage_2_desc:0 "$building_darktec_storage_1_desc$"
+	building_darktec_storage_2_tooltip:0 ""
+
+	building_darktec_storage_3:0 "奇物质储备库"
+	building_darktec_storage_3_plural:0 "$building_darktec_storage_3$s"
+	building_darktec_storage_3_desc:0 "$building_darktec_storage_1_desc$"
+	building_darktec_storage_3_tooltip:0 ""
+
+	building_darktec_storage_4:0 "奇物质秘库"
+	building_darktec_storage_4_plural:0 "$building_darktec_storage_4$s"
+	building_darktec_storage_4_desc:0 "$building_darktec_storage_1_desc$"
+	building_darktec_storage_4_tooltip:0 ""
+
+	building_darktec_umbral_portal_1:0 "熵灵重构器"
+	building_darktec_umbral_portal_1_plural:0 "$building_darktec_umbral_portal_1$s"
+	building_darktec_umbral_portal_1_desc:0 "作为一种收集熵变转化所产生的离散非重子物质的手段，该建筑允许新熵灵以稳定的形态存在。"
+	building_darktec_umbral_portal_1_tooltip:0 ""
+
+	building_darktec_umbral_portal_2:0 "熵灵乳化器"
+	building_darktec_umbral_portal_2_plural:0 "$building_darktec_umbral_portal_2$s"
+	building_darktec_umbral_portal_2_desc:0 "$building_darktec_umbral_portal_1_desc$"
+	building_darktec_umbral_portal_2_tooltip:0 ""
+
+	building_darktec_umbral_assimilation_1:0 "熵乳化器"
+	building_darktec_umbral_assimilation_1_plural:0 "$building_darktec_umbral_assimilation_1$s"
+	building_darktec_umbral_assimilation_1_desc:0 "通过复杂的组合过程，该建筑能够使大量人口的构成发生根本性改变，使其远超单纯的重子或非重子实体。"
+
+	building_darktec_umbral_assimilation_2:0 "熵会聚器"
+	building_darktec_umbral_assimilation_2_plural:0 "$building_darktec_umbral_assimilation_2$s"
+	building_darktec_umbral_assimilation_2_desc:0 "$building_darktec_umbral_assimilation_1_desc$"
+	building_darktec_umbral_assimilation_2_tooltip:0 "已废弃"
+
+	building_darktec_umbral_reallocator_specialist:0 "已废弃"
+	building_darktec_umbral_reallocator_specialist_plural:0 "已废弃"
+	building_darktec_umbral_reallocator_specialist_desc:0 "已废弃"
+	building_darktec_umbral_reallocator_specialist_tooltip:0 "已废弃"
+
+	building_darktec_umbral_reallocator_menial:0 "已废弃"
+	building_darktec_umbral_reallocator_menial_plural:0 "已废弃"
+	building_darktec_umbral_reallocator_menial_desc:0 "已废弃"
+	building_darktec_umbral_reallocator_menial_tooltip:0 "已废弃"
+
+	building_darktec_umbral_reallocator_utility:0 "已废弃"
+	building_darktec_umbral_reallocator_utility_plural:0 "已废弃"
+	building_darktec_umbral_reallocator_utility_desc:0 "已废弃"
+	building_darktec_umbral_reallocator_utility_tooltip:0 "已废弃"
+
+	building_darktec_umbral_reallocator_pops:0 "已废弃"
+	building_darktec_umbral_reallocator_pops_plural:0 "已废弃"
+	building_darktec_umbral_reallocator_pops_desc:0 "已废弃"
+	building_darktec_umbral_reallocator_pops_tooltip:0 "已废弃"
+
+	# Secondary
+	# Moar dark matter
+	building_darktec_umbral_compressor_1:0 "真空压缩机"
+	building_darktec_umbral_compressor_1_plural:0 "$building_darktec_umbral_compressor_1$s"
+	building_darktec_umbral_compressor_1_desc:0 "这个结构辅助当地的熵萃取设施，通过安全压缩和转化原材料，生成非重子物质。"
+	building_darktec_umbral_compressor_1_tooltip:0 ""
+
+	building_darktec_umbral_compressor_2:0 "真空融合器"
+	building_darktec_umbral_compressor_2_plural:0 "$building_darktec_umbral_compressor_2$s"
+	building_darktec_umbral_compressor_2_desc:0 "$building_darktec_umbral_compressor_1_desc$"
+	building_darktec_umbral_compressor_2_tooltip:0 ""
+
+	building_darktec_umbral_compressor_3:0 "真空合并器"
+	building_darktec_umbral_compressor_3_plural:0 "$building_darktec_umbral_compressor_3$s"
+	building_darktec_umbral_compressor_3_desc:0 "$building_darktec_umbral_compressor_1_desc$"
+	building_darktec_umbral_compressor_3_tooltip:0 ""
+
+	building_darktec_umbral_compressor_4:0 "真空隐匿合并器"
+	building_darktec_umbral_compressor_4_plural:0 "$building_darktec_umbral_compressor_4$s"
+	building_darktec_umbral_compressor_4_desc:0 "$building_darktec_umbral_compressor_1_desc$"
+	building_darktec_umbral_compressor_4_tooltip:0 ""
+
+	# Dark matter into minerals and energy
+	building_darktec_umbral_decompressor_1:0 "虚空解构器"
+	building_darktec_umbral_decompressor_1_plural:0 "$building_darktec_umbral_decompressor_1$s"
+	building_darktec_umbral_decompressor_1_desc:0 "通过对非重子物质施加强大的粒子场，这个建筑能够将异星等足类生物转化为可识别的物质和能量。"
+	building_darktec_umbral_decompressor_1_tooltip:0 ""
+
+	building_darktec_umbral_decompressor_2:0 "虚空拆解器"
+	building_darktec_umbral_decompressor_2_plural:0 "$building_darktec_umbral_decompressor_2$s"
+	building_darktec_umbral_decompressor_2_desc:0 "$building_darktec_umbral_decompressor_1_desc$"
+	building_darktec_umbral_decompressor_2_tooltip:0 ""
+
+	building_darktec_umbral_decompressor_3:0 "虚空雾化器"
+	building_darktec_umbral_decompressor_3_plural:0 "$building_darktec_umbral_decompressor_3$s"
+	building_darktec_umbral_decompressor_3_desc:0 "$building_darktec_umbral_decompressor_1_desc$"
+	building_darktec_umbral_decompressor_3_tooltip:0 ""
+
+	building_darktec_umbral_decompressor_4:0 "虚空隐匿雾化器"
+	building_darktec_umbral_decompressor_4_plural:0 "$building_darktec_umbral_decompressor_4$s"
+	building_darktec_umbral_decompressor_4_desc:0 "$building_darktec_umbral_decompressor_1_desc$"
+	building_darktec_umbral_decompressor_4_tooltip:0 ""
+
+	# Dark matter into extra food
+	building_darktec_umbral_food_1:0 "浸注肥沃土壤"
+	building_darktec_umbral_food_1_plural:0 "$building_darktec_umbral_food_1$s"
+	building_darktec_umbral_food_1_desc:0 "以外来辐射和类光粒子沐浴生物质，刺激其生长和产出；然而，若用于食用，可能会被评价为“异常”酥脆。"
+	building_darktec_umbral_food_1_tooltip:0 ""
+
+	building_darktec_umbral_food_2:0 "饱和肥沃土壤"
+	building_darktec_umbral_food_2_plural:0 "$building_darktec_umbral_food_2$s"
+	building_darktec_umbral_food_2_desc:0 "$building_darktec_umbral_food_1_desc$"
+	building_darktec_umbral_food_2_tooltip:0 ""
+
+	building_darktec_umbral_food_3:0 "虚空束缚肥沃土壤"
+	building_darktec_umbral_food_3_plural:0 "$building_darktec_umbral_food_3$s"
+	building_darktec_umbral_food_3_desc:0 "$building_darktec_umbral_food_1_desc$"
+	building_darktec_umbral_food_3_tooltip:0 ""
+
+	building_darktec_umbral_food_4:0 "虚空束缚隐匿肥沃土壤"
+	building_darktec_umbral_food_4_plural:0 "$building_darktec_umbral_food_4$s"
+	building_darktec_umbral_food_4_desc:0 "$building_darktec_umbral_food_1_desc$"
+	building_darktec_umbral_food_4_tooltip:0 ""
+
+	# Alloys from DM
+	building_darktec_void_foundry_1:0 "幽影锻炉"
+	building_darktec_void_foundry_1_plural:0 "$building_darktec_void_foundry_1$s"
+	building_darktec_void_foundry_1_desc:0 "巨型锻炉，在此非重子物质与能量结合坚固合金，以指数级增长的方式制造超物质合金。"
+	building_darktec_void_foundry_1_tooltip:0 ""
+
+	building_darktec_void_foundry_2:0 "幽影新锻炉"
+	building_darktec_void_foundry_2_plural:0 "$building_darktec_void_foundry_2$s"
+	building_darktec_void_foundry_2_desc:0 "$building_darktec_void_foundry_1_desc$"
+	building_darktec_void_foundry_2_tooltip:0 ""
+
+	building_darktec_void_foundry_3:0 "幽影超锻炉"
+	building_darktec_void_foundry_3_plural:0 "$building_darktec_void_foundry_3$s"
+	building_darktec_void_foundry_3_desc:0 "$building_darktec_void_foundry_1_desc$"
+	building_darktec_void_foundry_3_tooltip:0 ""
+
+	building_darktec_void_foundry_4:0 "幽影隐匿超锻炉"
+	building_darktec_void_foundry_4_plural:0 "$building_darktec_void_foundry_3$s"
+	building_darktec_void_foundry_4_desc:0 "$building_darktec_void_foundry_1_desc$"
+	building_darktec_void_foundry_4_tooltip:0 ""
+
+	# Exotics from DM
+	building_darktec_void_refinery_1:0 "重子精炼厂"
+	building_darktec_void_refinery_1_plural:0 "已废弃"
+	building_darktec_void_refinery_1_desc:0 "已废弃"
+	building_darktec_void_refinery_1_tooltip:0 "已废弃"
+
+	building_darktec_void_refinery_2:0 "重子新精炼厂"
+	building_darktec_void_refinery_2_plural:0 "已废弃"
+	building_darktec_void_refinery_2_desc:0 "已废弃"
+	building_darktec_void_refinery_2_tooltip:0 "已废弃"
+
+	building_darktec_void_refinery_3:0 "重子超精炼厂"
+	building_darktec_void_refinery_3_plural:0 "已废弃"
+	building_darktec_void_refinery_3_desc:0 "已废弃"
+	building_darktec_void_refinery_3_tooltip:0 "已废弃"
+
+	building_darktec_void_refinery_4:0 "重子重组精炼厂"
+	building_darktec_void_refinery_4_plural:0 "已废弃"
+	building_darktec_void_refinery_4_desc:0 "已废弃"
+	building_darktec_void_refinery_4_tooltip:0 "已废弃"
+
+	# Research from DM
+	building_darktec_void_research_1:0 "异常研究站"
+	building_darktec_void_research_1_plural:0 "$building_darktec_void_research_1$s"
+	building_darktec_void_research_1_desc:0 "该设施是一座最先进的中心，用于研究非重子物质以及虚空相关应用。"
+	building_darktec_void_research_1_tooltip:0 ""
+
+	building_darktec_void_research_2:0 "异常研究实验室"
+	building_darktec_void_research_2_plural:0 "异常研究实验室"
+	building_darktec_void_research_2_desc:0 "$building_darktec_void_research_1_desc$"
+	building_darktec_void_research_2_tooltip:0 ""
+
+	building_darktec_void_research_3:0 "异常研究反应堆"
+	building_darktec_void_research_3_plural:0 "$building_darktec_void_research_3$s"
+	building_darktec_void_research_3_desc:0 "$building_darktec_void_research_1_desc$"
+	building_darktec_void_research_3_tooltip:0 ""
+
+	building_darktec_void_research_4:0 "异常研究超反应堆"
+	building_darktec_void_research_4_plural:0 "$building_darktec_void_research_4$s"
+	building_darktec_void_research_4_desc:0 "$building_darktec_void_research_1_desc$"
+	building_darktec_void_research_4_tooltip:0 ""
+
+	# DM from researchers
+	building_darktec_void_investigation_1:0 "熵变实验室"
+	building_darktec_void_investigation_1_plural:0 "$building_darktec_void_investigation_1$s"
+	building_darktec_void_investigation_1_desc:0 "专用实验室，采用奇异超物质进行直接实验——已采取多项收容措施，以避免……不可预见的后果。"
+	building_darktec_void_investigation_1_tooltip:0 ""
+
+	building_darktec_void_investigation_2:0 "熵变站点"
+	building_darktec_void_investigation_2_plural:0 "$building_darktec_void_investigation_2$s"
+	building_darktec_void_investigation_2_desc:0 "$building_darktec_void_investigation_1_desc$"
+	building_darktec_void_investigation_2_tooltip:0 ""
+
+	building_darktec_void_investigation_3:0 "熵变设施"
+	building_darktec_void_investigation_3_plural:0 "$building_darktec_void_investigation_3$s"
+	building_darktec_void_investigation_3_desc:0 "$building_darktec_void_investigation_1_desc$"
+	building_darktec_void_investigation_3_tooltip:0 ""
+
+	building_darktec_void_investigation_4:0 "熵能反应堆"
+	building_darktec_void_investigation_4_plural:0 "$building_darktec_void_investigation_4$s"
+	building_darktec_void_investigation_4_desc:0 "$building_darktec_void_investigation_1_desc$"
+	building_darktec_void_investigation_4_tooltip:0 ""
+
+# Umbral Traits
+	darktec_trait_umbral_basic:0 "§E幽影特质§!"
+	darktec_trait_umbral_advanced:0 "§E幽影特质 - 高级§!"
+	darktec_trait_ascension:0 "§E熵能飞升特质§!"
+	darktec_trait_entro:0 "§E熵灵特质§!"
+
+	tech_darktec_traits_t1:0 "嵌合超物质应用"
+	tech_darktec_traits_t1_desc:0 "大量研究已证明，在非惰性实体上施加微量超物质，能够在没有危险后果的情况下使其被同化。因此，我们推测可以通过创造两种维度间的特殊局部组合，以此方式改良我们的物种。"
+	tech_darktec_traits_t1_unlocks_title:0 "§H解锁物种特质：§! 嵌合幽影特质"
+	tech_darktec_traits_t1_unlocks_desc:0 "§H$tech_darktec_traits_t1$§!\n与£sr_dark_matter£暗物质和$darktec_contained_entropy_with_icon$互动的特殊特质，同时提供强大的加成。"
+
+	tech_darktec_traits_t2:0 "幽影自我实验"
+	tech_darktec_traits_t2_desc:0 "将超物质的熵能成功注入我们物种的组成结构中，为异域组合研究开辟了广阔领域——其中一些比预期更为激进，另一些则不那么循规蹈矩。"
+	tech_darktec_traits_t2_unlocks_title:0 "§H解锁物种特质：§! 高级幽影特质"
+	tech_darktec_traits_t2_unlocks_desc:0 "§H$tech_darktec_traits_t1$§!\n与£sr_dark_matter£暗物质和$darktec_contained_entropy_with_icon$更进一步互动的特殊特质，同时提供强大的加成。"
+
+	tech_darktec_traits_ascension:0 "熵能特质"
+	tech_darktec_traits_ascension_desc:0 "在帝国蜕变后增强我们的物种还远远不够，我们需要利用在超物质方面取得的进展，将这一愿景、这一飞升推向更美好的境界。"
+	tech_darktec_traits_ascension_unlocks_title:0 "§H解锁物种特质：§! $tech_darktec_traits_ascension$"
+	tech_darktec_traits_ascension_unlocks_desc:0 "§H$tech_darktec_traits_t1$§!\n我们将获得一个强大的特质，其效果将根据游戏过程中选择的飞升之路而异。"
+
+	trait_darktec_decay_predation:0 "宇宙衰变掠食"
+	trait_darktec_decay_predation_desc:0 "该物种的整个构成已重新适应，能够过滤并利用宇宙背景辐射，从而为其提供巨大的能量容量。"
+	trait_darktec_decay_predation_tooltip:0 "$mod_leaders_upkeep_mult$: §G-25%§!\n    - $mod_planet_pops_upkeep_mult$: §G-25%§!\n\n每个$pop_group_unit$ £pop£ §H人口§!每月：\n    - 产出：§G+0.025§! §Y$darktec_contained_entropy_with_icon$§!。\n    - 维护费：§R-0.025§! §Y£sr_dark_matter£暗物质§!"
+
+	trait_darktec_paramatter_saturation:0 "超物质饱和"
+	trait_darktec_paramatter_saturation_desc:0 "浓缩的非重子物质过载，渗透该物种全身，从中渗出"
+	trait_darktec_paramatter_saturation_tooltip:0 "$mod_planet_pops_upkeep_mult$: §R+15%§!\n\n每个$pop_group_unit$ £pop£ §H人口§!每月：\n    - 产出：§G+0.035§! §Y$darktec_contained_entropy_with_icon$§!"
+
+	trait_darktec_obscure_intellect:0 "隐秘心智"
+	trait_darktec_obscure_intellect_desc:0 "感知并感应超物质与背景/暗辐射涌入的能力，赋予该物种对宇宙更高的感知和理解能力。"
+	trait_darktec_obscure_intellect_tooltip:0 "$researcher_jobs_bonus_workforce_mult$: §G+15%§!\n\n每个$pop_group_unit$ £pop£ §H人口§!每月：\n    - 维护费：§R-0.025§! §Y£sr_dark_matter£暗物质§!"
+
+	trait_darktec_obscure_intellect_robotic:0 "抽象处理"
+	trait_darktec_obscure_intellect_robotic_desc:0 "由于受控熵对该机械物种的电路和处理过程的影响，它们理解宇宙设计和复杂之处的效率提升了十倍。"
+	trait_darktec_obscure_intellect_robotic_tooltip:0 "$trait_darktec_obscure_intellect_tooltip$"
+
+	trait_darktec_darkened_veins:0 "幽影有机体"
+	trait_darktec_darkened_veins_desc:0 "暗物质对该物种的过度影响是显而易见的，因为它们的体液渗出一种超现实的黑色光泽。"
+	trait_darktec_darkened_veins_tooltip:0 "$MOD_POP_AMENITIES_USAGE_ADD$: §R+0.15§!\n\n每个$pop_group_unit$ £pop£ §H人口§!每月：\n    - 产出：§G+0.055§! §Y£sr_dark_matter£暗物质§!"
+
+	trait_darktec_darkened_veins_robotic:0 "幽影供能"
+	trait_darktec_darkened_veins_robotic_desc:0 "作为主要燃料，该机械物种驾驭着暗物质的力量；对其机制的显著影响，使其以一种奇特的方式运作。"
+	trait_darktec_darkened_veins_robotic_tooltip:0 "$trait_darktec_darkened_veins_tooltip$"
+
+	trait_darktec_entropic_synthesis:0 "熵能合成"
+	trait_darktec_entropic_synthesis_desc:0 "由于巨大的改造，该物种已获得捕获和过滤熵的能力，并将其作为自然过程回收利用，同时被该过程中产生的能量滋养。"
+	trait_darktec_entropic_synthesis_tooltip:0 "$MOD_POP_BONUS_WORKFORCE_MULT$: §G+10%§!\n\n每个$pop_group_unit$ £pop£ §H人口§!每月：\n    - 维护费：§R-0.025§! §Y$darktec_contained_entropy_with_icon$§!"
+
+	# Ascension - genetics
+	trait_darktec_purity_ingrained_entrogenomics:0 "深植熵基因组学"
+	trait_darktec_purity_ingrained_entrogenomics_desc:0 "利用定向作用于特定有缺陷或潜在缺陷基因链的暗物质团，该物种促使其族群中杰出成员趋于完美。"
+	trait_darktec_purity_ingrained_entrogenomics_tooltip:0 "领袖在升级时有§G25%§!的几率消耗§R200§! §Y£sr_dark_matter£暗物质§!（每级），以移除其负面特质。"
+
+	trait_darktec_cloning_mirror_splicing:0 "镜影拼接"
+	trait_darktec_cloning_mirror_splicing_desc:0 "这种物种通过改变繁殖时的细胞分裂方式，利用亚物质提供的熵随机性，将克隆过程加速十倍。"
+	#trait_darktec_cloning_mirror_splicing_tooltip:0 "$MOD_BONUS_POP_GROWTH_MULT$: §G+25%§!\n\nPer $pop_group_unit$ £pop£ §HPops§! grown, §G10%§! chance of any pop group with this trait gaining another $pop_group_unit$ £pop£ §HPops§!."
+
+	trait_darktec_mutation_dark_adaptation:0 "暗适应"
+	trait_darktec_mutation_dark_adaptation_desc:0 "作为一种被背景辐射饱和的有机体，其突变的潜力永无止境。"
+	trait_darktec_mutation_dark_adaptation_tooltip:0 "该物种根据行星类型，获得特定£job£§H岗位§!的$MOD_POP_BONUS_WORKFORCE_MULT$加成，介于§G+15%§!到§G+25%§!之间。"
+
+	# Ascension - cybernetics and synths
+	trait_darktec_cybernetic_dm_injectors:0 "暗物质注射器"
+	trait_darktec_cybernetic_dm_injectors_desc:0 "专业的注射器将微量暗物质注入该物种的回路中，以大幅提升其能力。"
+	trait_darktec_cybernetic_dm_injectors_tooltip:0 "$MOD_BONUS_POP_GROWTH_MULT$：§G+25%§!"
+
+	trait_darktec_cybernetic_void_threadware:0 "虚空线程科技"
+	trait_darktec_cybernetic_void_threadware_desc:0 "利用熵的瞬息万变和混沌特性，与这类物种相关的回路能够以随机但效率高得多的方式处理信息。"
+	trait_darktec_cybernetic_void_threadware_tooltip:0 "$researcher_jobs_bonus_workforce_mult$：§G+1%§!"
+
+	# Ascension - Machine
+	trait_darktec_nanite_replication:0 "熵增复制循环器"
+	trait_darktec_nanite_replication_desc:0 "通过应用亚物质复制和随机顺序的熵循环，构成这种机械构造体的新纳米机器人能够以指数方式增殖。"
+	#trait_darktec_nanite_replication_tooltip:0 ""
+
+	trait_darktec_virtual_void_calculation:0 "暗影计算模型"
+	trait_darktec_virtual_void_calculation_desc:0 "将部分处理能力导向真空，同时用非重子物质反向馈送数据存储，可以减轻这些虚拟机负载。"
+	trait_darktec_virtual_void_calculation_tooltip:0 "$MOD_POP_BONUS_WORKFORCE_MULT$：每殖民地§G+25%§!"
+
+	trait_darktec_modularity_paramatter:0 "亚物质合成器"
+	trait_darktec_modularity_paramatter_desc:0 "微型锚点和熔炉与冗余或可用空间结合，使这种人造物种能够以受控且安全的方式，从每个构造体中收获微量亚物质。"
+	trait_darktec_modularity_paramatter_tooltip:0 "$foundry_jobs_bonus_workforce_mult$：§R+15%§!"
+
+	# Ascension - Psionic
+	trait_darktec_psionic_eldritch_prescience:0 "异能预知"
+	trait_darktec_psionic_eldritch_prescience_desc:0 "通过消耗大量暗物质得以增强，这种灵能物种能够洞察无限的可能性，而不会失去理智。"
+	trait_darktec_psionic_eldritch_prescience_tooltip:0 "$mod_psionic_pop_bonus_workforce_mult$：§G+40%§!"
+
+	trait_darktec_entro_main:0 "熵灵体"
+	trait_darktec_entro_main_plural:0 "熵灵体"
+	trait_darktec_entro_main_desc:0 "这种物种既不属于重子构成，也不属于非重子构成，它们实现了不可能之事——完美结合了两个世界……但这代价巨大，因为如果没有适当的措施来容纳其新形态，它们就会变得不稳定。"
+	trait_darktec_entro_main_tooltip:0 ""
+
+	leader_trait_darktec_entro_main:0 "$trait_darktec_entro_main$"
+	leader_trait_darktec_entro_main_desc:0 "这位领袖既不属于重子构成，也不属于非重子构成，他们实现了不可能之事——完美结合了两个世界……但这代价巨大，因为如果没有适当的措施来容纳其新形态，他们就会变得不稳定。"
+
+	trait_darktec_entro_phase_body:0 "相位物质构成"
+	trait_darktec_entro_phase_body_desc:0 "这些$trait_darktec_entro_main_plural$体内亚物质构成的增加，使其能够以幽灵般的方式穿梭于物质位面。"
+	trait_darktec_entro_phase_body_tooltip:0 "TODO 大量住房减少和陆军加成"
+
+	trait_darktec_entro_eldritch_touch:0 "异能之触"
+	trait_darktec_entro_eldritch_touch_desc:0 "这种$trait_darktec_entro_main$物种能够融合两种不同的物质状态，几乎不费吹灰之力就能创造出不可能的事物。"
+	trait_darktec_entro_eldritch_touch_tooltip:0 "TODO 额外产出"
+
+	trait_darktec_entro_dm_oozing:0 "黯影渗出"
+	trait_darktec_entro_dm_oozing_desc:0 "这种物种被奇异物质过度充能，会渗出和脱落亚物质，并产生微量的无害辐射，这些辐射可以通过适当的工具和收容措施进行收集。"
+	trait_darktec_entro_dm_oozing_tooltip:0 "$MOD_POP_AMENITIES_USAGE_ADD$：§R+0.25§!"
+
+	trait_darktec_entro_multiverse_sight:0 "多维视野"
+	trait_darktec_entro_multiverse_sight_desc:0 "这类物种的意识与熵那不可能的随机性交织在一起，但同时又与现实相连，通过洞察替代现实的潜在可能性，使其能够进行平行思考。"
+	trait_darktec_entro_multiverse_sight_tooltip:0 "TODO 额外凝聚力产出"
+
+	trait_darktec_entro_possession:0 "重子附身"
+	trait_darktec_entro_possession_desc:0 "由于其不稳定的状态，该物种可以在半实体或非实体的构成之间切换，从而“沉浸”于机械和技术之中或从中脱离，将其意识连接到现有电路，并能够执行前所未有的控制级别。"
+	trait_darktec_entro_possession_tooltip:0 "待办：每个行政区提供铸造工和艺人岗位的高额加成。"
+
+	trait_darktec_entro_saturation:0 "熵能饱和"
+	trait_darktec_entro_saturation_desc:0 "过量的熵物质穿梭于该物种体内，使其变得极度不稳定且危险。"
+	trait_darktec_entro_saturation_tooltip:0 "服务设施使用量修正: §R+0.25%§!\n\n每月每个$pop_group_unit$£pop£§HPops§！\n    - 产出: §G+0.1§! §Y$darktec_contained_entropy_with_icon$§!"
+
+	trait_darktec_entro_hunger:0 "超因果饥渴"
+	trait_darktec_entro_hunger_desc:0 "该物种时刻被对能量的无尽需求所困扰，因为其全新的构成要求越来越高的能量摄入，才能维持稳定的形态。"
+	trait_darktec_entro_hunger_tooltip:0 "行星人口维护费修正: §R+50%§!\n\n每月每个$pop_group_unit$£pop£§HPops§！\n    - 产出: §G+0.05§! §Y$darktec_contained_entropy_with_icon$§!\n    - 产出: §G+0.05§! §Y£sr_dark_matter£ 暗物质§!"
+
+	trait_darktec_entro_multiplicity:0 "幽灵增殖"
+	trait_darktec_entro_multiplicity_desc:0 "副物质对这些$trait_darktec_entro_main_plural$繁殖能力的影响，使其能够通过物理、隐喻和意识层面的过程进行复制，通过重构基础物质和奇异物质来创造完美的“克隆体”。"
+	trait_darktec_entro_multiplicity_tooltip:0 "每次§H$building_darktec_umbral_portal_1$§!为该物种生成熵生增长脉冲时，有§G10%§!几率提供$pop_group_unit$£pop£§HPops§！"
+
+	trait_darktec_entro_traversal:0 "跨实相穿梭"
+	trait_darktec_entro_traversal_desc:0 "该物种没有物理限制，它们可以在维度之间穿梭和切换，迅速短暂地改变自身的空间和时间位置。"
+	trait_darktec_entro_traversal_tooltip:0 "待办：巨额自动移民加成。"
+# /
+
+# UNSORTED LOCALISATION
+	bombardment_darktec_bombardment_entropy:0 "熵能轰炸"
+	bombardment_darktec_bombardment_entropy_desc:0 "大型饱和炸弹摧毁行星表面，使重子物质接触后解体并连锁反应，将其转化为非重子物质。"
+
+	DARKTEC_SHIP_UTILITY_VOIDJUMP_MODULE:0 "虚空裂隙重定位器"
+	DARKTEC_SHIP_UTILITY_VOIDJUMP_MODULE_ORGANIC:0 "$DARKTEC_SHIP_UTILITY_VOIDJUMP_MODULE$"
+	DARKTEC_SHIP_UTILITY_VOIDJUMP:0 "$DARKTEC_SHIP_UTILITY_VOIDJUMP_MODULE$"
+	DARKTEC_SHIP_UTILITY_VOIDJUMP_DESC:0 "该装置持续在物理状态间切换，可通过过载瞬间制造时空裂隙，将飞船及其周围环境转移到之前已知的位置。"
+	DARKTEC_SHIP_UTILITY_VOIDJUMP_MODULE_DESC:0 "$DARKTEC_SHIP_UTILITY_VOIDJUMP_DESC$"
+	DARKTEC_SHIP_UTILITY_VOIDJUMP_ORGANIC:0 "$DARKTEC_SHIP_UTILITY_VOIDJUMP_MODULE$"
+	DARKTEC_SHIP_UTILITY_VOIDJUMP_ORGANIC_DESC:0 "该器官持续在物理状态间切换，可通过过载瞬间制造时空裂隙，将飞船及其周围环境转移到之前已知的位置。"
+	DARKTEC_SHIP_UTILITY_VOIDJUMP_TOOLTIP:0 "解锁舰队行动: §H$on_darktec_voidjump_ability_title$§!\n\n§H消耗§!: £sr_dark_matter£1000 £darktec_contained_entropy£1000\n§H冷却§!: 360 £time£\n\n你的舰队将向你的母星系开启一道§Y虚空裂隙§！$TABBED_NEW_LINE$- 舰队中所有舰船都将被重新定位。\n- 所有未搭载此模块的舰船将受到§R严重§!伤害。"
+
+	DARKTEC_SHIP_UTILITY_INERTIALESS:0 "无惯性熵能驱动器"
+	DARKTEC_SHIP_UTILITY_INERTIALESS_DESC:0 "该永动装置打破物理定律，其自身的存在即可生成能量。"
+	DARKTEC_SHIP_UTILITY_INERTIALESS_ORGANIC:0 "无惯性熵能器官"
+	DARKTEC_SHIP_UTILITY_INERTIALESS_ORGANIC_DESC:0 "这块永动肌肉打破物理定律，其自身的存在即可生成能量。"
+	DARKTEC_SHIP_UTILITY_INERTIALESS_TOOLTIP:0 "解锁舰队行动: §H$on_darktec_inertialess_ability_title$§!\n\n§H消耗§!: £sr_dark_matter£1000 £darktec_contained_entropy£1000\n§H冷却§!: 360 £time£\n\n你的舰队将激活其§Y无惯性驱动器§！$TABBED_NEW_LINE$- 所有搭载此模块的舰船将获得巨额力量自我修正器。\n- 所有未搭载此模块的舰船将受到§R严重§!伤害，且自我修正器效果反转。\n\n自我修正器:\n    舰船射速修正: §G+50%§!\n    舰船速度修正: §G+50%§!\n    舰船精准度修正: §G+25%§!\n\n    持续时间: §Y60 £time£§!"
+
+	DARKTEC_SHIP_UTILITY_COLLAPSER:0 "副物质坍缩器"
+	DARKTEC_SHIP_UTILITY_COLLAPSER_DESC:0 "通过调节流向外部护盾的暗物质，该装置能立即将防护强度重定向至飞船周围的微型真空坍缩，从而产生毁灭性的冲击波。"
+	DARKTEC_SHIP_UTILITY_COLLAPSER_ORGANIC:0 "$DARKTEC_SHIP_UTILITY_COLLAPSER$"
+	DARKTEC_SHIP_UTILITY_COLLAPSER_ORGANIC_DESC:0 "通过调节流向外部护盾的暗物质，该细胞器能立即将防护强度重定向至飞船周围的微型真空坍缩，从而产生毁灭性的冲击波。"
+	DARKTEC_SHIP_UTILITY_COLLAPSER_TOOLTIP:0 "解锁舰队行动: §H$on_darktec_collapser_ability_title$§!\n\n§H消耗§!: £sr_dark_matter£1000 £darktec_contained_entropy£1000\n§H冷却§!: 360 £time£\n\n你的舰队将激活其§Y熵能坍缩器§！$TABBED_NEW_LINE$- 所有搭载此模块的舰船将失去护盾并受到§R自我减益§！\n- 星系中所有舰船将受到失去护盾§Y5%§!的直接伤害。\n- 未搭载此模块的友军舰船将受到冲击波§R影响§！\n\n§Y最高伤害上限为20000。§!\n\n自我减益:\n    舰船速度修正 = §R-100%§!\n    舰船射速修正: §R-100%§!\n\n    持续时间: §R30 £time£§!"
+
+	DARKTEC_SHIP_UTILITY_INTERFERER:0 "真空干扰器"
+	DARKTEC_SHIP_UTILITY_INTERFERER_DESC:0 "通过积累大量暗物质，该装置能对定位系统造成巨大干扰，有效隔离本飞船的所有信号，使其无法被侦测。"
+	DARKTEC_SHIP_UTILITY_INTERFERER_ORGANIC:0 "$DARKTEC_SHIP_UTILITY_INTERFERER$"
+	DARKTEC_SHIP_UTILITY_INTERFERER_ORGANIC_DESC:0 "通过积累大量暗物质，该细胞器能对定位系统造成巨大干扰，有效隔离本飞船的所有信号，使其无法被侦测。"
+	DARKTEC_SHIP_UTILITY_INTERFERER_TOOLTIP:0 "解锁舰队行动: §H$on_darktec_interferer_ability_title$§!\n\n§H消耗§!: £sr_dark_matter£1000 £darktec_contained_entropy£1000\n§H冷却§!: 360 £time£\n\n你的舰队将激活其§Y真空干扰器§！$TABBED_NEW_LINE$- 所有搭载此模块的舰船将获得巨额移动和隐形加成。\n- 未搭载此模块的友军舰船将暂时§R失去§!大部分船体和装甲。\n\n自我修正器:\n    舰船隐匿强度: §R+20§!\n    舰船速度修正: §G+100%§!\n    舰船规避修正: §G+50%§!\n\n    持续时间: §Y60 £time£§!"
+
+	# Shields
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS:0 "逆熵护盾"
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_DESC:0 "通过利用应用于飞船外部物质的残余熵痕迹，粒子无序的趋势创造了一个软护盾变化窗口，但代价是牺牲了材料完整性。"
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_ORGANIC:0 "逆熵护盾表皮"
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_ORGANIC_DESC:0 "通过利用应用于生物飞船表皮周围物质的残余熵痕迹，粒子无序的趋势创造了一个软护盾变化窗口，但代价是牺牲了结构完整性。"
+
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_SMALL:0 "小型 $DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS$"
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_SMALL_DESC:0 "$DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_DESC$"
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_MEDIUM:0 "中型 $DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS$"
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_MEDIUM_DESC:0 "$DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_DESC$"
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_LARGE:0 "大型 $DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS$"
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_LARGE_DESC:0 "$DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_DESC$"
+
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_SMALL_BIO:0 "小型 $DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS$"
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_SMALL_BIO_DESC:0 "$DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_ORGANIC_DESC$"
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_MEDIUM_BIO:0 "中型 $DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS$"
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_MEDIUM_BIO_DESC:0 "$DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_ORGANIC_DESC$"
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_LARGE_BIO:0 "大型 $DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS$"
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_LARGE_BIO_DESC:0 "$DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_ORGANIC_DESC$"
+
+	# Antiparticles
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES:0 "反粒子射线"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_DESC:0 "以单分子线束聚焦，这种反粒子投射在目标上造成微观物质坍塌，在其爆炸前，以极精准的方式切割其所触及的表面。"
+
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_ORGANIC:0 "反粒子透镜"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_ORGANIC_DESC:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_DESC$"
+
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_SMALL:0 "小型 $DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES$"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_SMALL_DESC:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_DESC$"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_MEDIUM:0 "中型 $DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES$"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_MEDIUM_DESC:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_DESC$"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_LARGE:0 "大型 $DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES$"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_LARGE_DESC:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_DESC$"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_X:0 "超大型 $DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES$"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_X_DESC:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_DESC$"
+
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_SMALL_BIO:0 "小型 $DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_SMALL_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_ORGANIC_DESC$"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_MEDIUM_BIO:0 "中型 $DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_MEDIUM_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_ORGANIC_DESC$"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_LARGE_BIO:0 "大型 $DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_LARGE_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_ORGANIC_DESC$"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_X_BIO:0 "超大型 $DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_X_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_ORGANIC_DESC$"
+
+	# Destabilizator
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION:0 "不稳定化加农炮"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_DESC:0 "这种发射等离子体状暗物质凝结物的武器，在撞击时会产生巨大的破坏性电磁效应。"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_ORGANIC:0 "不稳定化扰乱器"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_ORGANIC_DESC:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION_DESC$"
+
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_SMALL:0 "小型 $DARKTEC_SHIP_WEAPON_DESTABILIZATION$"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_SMALL_DESC:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION_DESC$"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_MEDIUM:0 "中型 $DARKTEC_SHIP_WEAPON_DESTABILIZATION$"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_MEDIUM_DESC:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION_DESC$"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_LARGE:0 "大型 $DARKTEC_SHIP_WEAPON_DESTABILIZATION$"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_LARGE_DESC:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION_DESC$"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_X:0 "超大型 $DARKTEC_SHIP_WEAPON_DESTABILIZATION$"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_X_DESC:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION_DESC$"
+
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_SMALL_BIO:0 "小型 $DARKTEC_SHIP_WEAPON_DESTABILIZATION_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_SMALL_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION_ORGANIC_DESC$"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_MEDIUM_BIO:0 "中型 $DARKTEC_SHIP_WEAPON_DESTABILIZATION_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_MEDIUM_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION_ORGANIC_DESC$"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_LARGE_BIO:0 "大型 $DARKTEC_SHIP_WEAPON_DESTABILIZATION_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_LARGE_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION_ORGANIC_DESC$"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_X_BIO:0 "超大型 $DARKTEC_SHIP_WEAPON_DESTABILIZATION_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_X_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION_ORGANIC_DESC$"
+
+	# Antimatter Lnace
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE:0 "反物质长枪"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_DESC:0 "这种危险武器将一股受控且激发的反物质射流重定向至目标，沿途毁灭物质。"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_ORGANIC:0 "反物质喷射器"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_ORGANIC_DESC:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_DESC$"
+
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_SMALL:0 "小型 $DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE$"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_SMALL_DESC:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_DESC$"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_MEDIUM:0 "中型 $DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE$"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_MEDIUM_DESC:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_DESC$"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_LARGE:0 "大型 $DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE$"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_LARGE_DESC:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_DESC$"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_X:0 "超大型 $DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE$"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_X_DESC:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_DESC$"
+
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_SMALL_BIO:0 "小型 $DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_SMALL_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_ORGANIC_DESC$"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_MEDIUM_BIO:0 "中型 $DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_MEDIUM_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_ORGANIC_DESC$"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_LARGE_BIO:0 "大型 $DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_LARGE_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_ORGANIC_DESC$"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_X_BIO:0 "超大型 $DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_X_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_ORGANIC_DESC$"
+
+	# Discharger
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER:0 "熵能释出器"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_DESC:0 "舰船上装载了微型熵能回收器，这种释出器将提取过程的副产品投向目标，其表现为虚能射线，能够穿透最致密的粒子层。"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_ORGANIC:0 "熵能释出器"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_ORGANIC_DESC:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_DESC$"
+
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_SMALL:0 "小型 $DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER$"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_SMALL_DESC:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_DESC$"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_MEDIUM:0 "中型 $DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER$"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_MEDIUM_DESC:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_DESC$"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_LARGE:0 "大型 $DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER$"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_LARGE_DESC:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_DESC$"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_X:0 "超大型 $DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER$"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_X_DESC:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_DESC$"
+
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_SMALL_BIO:0 "小型 $DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_SMALL_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_ORGANIC_DESC$"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_MEDIUM_BIO:0 "中型 $DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_MEDIUM_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_ORGANIC_DESC$"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_LARGE_BIO:0 "大型 $DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_LARGE_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_ORGANIC_DESC$"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_X_BIO:0 "超大型 $DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_X_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_ORGANIC_DESC$"
+
+
+	on_darktec_voidjump_ability_tooltip:0 "§H$on_darktec_voidjump_ability_title$§!\n\n§H花费§!: £sr_dark_matter£1000 £darktec_contained_entropy£1000\n§H冷却时间§!: 360 £time£\n\n你的舰队将向你的母星系开启一道§Y虚空裂隙§！$TABBED_NEW_LINE$-舰队中的所有舰船都将被重新部署。$TABBED_NEW_LINE$- 所有未装备此模块的舰船都将受到§R严重§！损害。"
+	on_darktec_voidjump_ability_title:0 "虚空裂隙"
+	on_darktec_voidjump_ability_activity:0 "虚空裂隙生成中"
+	on_darktec_voidjump_ability_progress:0 "开启裂隙"
+
+	on_darktec_inertialess_ability_tooltip:0 "§H$on_darktec_inertialess_ability_title$§!\n\n§H花费§!: £sr_dark_matter£1000 £darktec_contained_entropy£1000\n§H冷却时间§!: 360 £time£\n\n你的舰队将激活它们的§Y惯性驱动器§！$TABBED_NEW_LINE$- 所有装备此模块的舰船都将获得一个强大的自我修正器。$TABBED_NEW_LINE$- 所有未装备此模块的舰船都将受到§R严重§！损害，且自我修正器效果反转。\n\n自我修正器：\n    $MOD_SHIP_FIRE_RATE_MULT$: §G+50%§!\n    $MOD_SHIP_SPEED_MULT$: §G+50%§!\n    $MOD_SHIP_ACCURACY_MULT$: §G+25%§!\n\n    持续时间: §Y60 £time£§!"
+	on_darktec_inertialess_ability_title:0 "惯性驱动器"
+	on_darktec_inertialess_ability_activity:0 "维持惯性"
+	on_darktec_inertialess_ability_progress:0 "正在初始化惯性驱动器"
+
+	on_darktec_collapser_ability_tooltip:0 "§H$on_darktec_collapser_ability_title$§!\n\n§H花费§!: £sr_dark_matter£1000 £darktec_contained_entropy£1000\n§H冷却时间§!: 360 £time£\n\n你的舰队将激活它们的§Y熵能崩塌器§！$TABBED_NEW_LINE$- 所有装备此模块的舰船都将失去护盾并受到§R自我减益§！$TABBED_NEW_LINE$- 星系中所有舰船都将受到已损失护盾§Y5%§！的直接伤害。\n$TABBED_NEW_LINE$- 未装备此模块的盟友舰船将受到冲击波§R影响§！\n\n§Y伤害上限为20000点。§！\n\n自我减益：\n    $MOD_SHIP_SPEED_MULT$ = §R-100%§!\n    $MOD_SHIP_FIRE_RATE_MULT$: §R-100%§!\n\n    持续时间: §R30 £time£§!"
+	on_darktec_collapser_ability_title:0 "熵能崩塌"
+	on_darktec_collapser_ability_activity:0 "护盾崩塌中"
+	on_darktec_collapser_ability_progress:0 "护盾崩塌中"
+
+	on_darktec_interferer_ability_tooltip:0 "§H$on_darktec_interferer_ability_title$§!\n\n§H花费§!: £sr_dark_matter£1000 £darktec_contained_entropy£1000\n§H冷却时间§!: 360 £time£\n\n你的舰队将激活它们的§Y真空干扰器§！$TABBED_NEW_LINE$- 所有装备此模块的舰船都将获得一个巨大的移动和隐身自我修正器。$TABBED_NEW_LINE$- 未装备此模块的盟友舰船将§R暂时失去§！大部分船体和装甲。\n\n自我修正器：\n    $MOD_SHIP_CLOAKING_STRENGTH_ADD$: §R+20§!\n    $MOD_SHIP_SPEED_MULT$: §G+100%§!\n    $MOD_SHIP_EVASION_MULT$: §G+50%§!\n\n    持续时间: §Y60 £time£§!"
+	on_darktec_interferer_ability_title:0 "真空干扰"
+	on_darktec_interferer_ability_activity:0 "信号干扰中"
+	on_darktec_interferer_ability_progress:0 "信号干扰中"
+
+	darktec_crisis_chain_title:0 "$darktec_ap_postbaryonic$"
+	darktec_crisis_chain_desc:0 "$darktec_ap_postbaryonic$[darktec_crisis_chain_desc_choice_1][darktec_crisis_chain_desc_choice_2][darktec_crisis_chain_desc_choice_2_5][darktec_crisis_chain_desc_choice_3][darktec_crisis_chain_desc_choice_4]"
+	darktec_crisis_chain_desc_choice_1_economy:0 "\n\n起初，我们决定将超子物质的应用重心放在工业用途上，以提高生产效率并增强超子物质的采集能力。"
+	darktec_crisis_chain_desc_choice_1_warfare:0 "\n\n起初，我们决定将超子物质的应用重心放在军事上，创造出能够扭曲现实、在物质状态间转换的舰船。"
+	darktec_crisis_chain_desc_choice_1_applications:0 "\n\n起初，我们决定将超子物质的应用重心放在科学和物种用途上，并获得了将我们自身部分特性与超子物质融合的方法。"
+
+	darktec_crisis_chain_desc_choice_2_transformation:0 "\n\n然而，一系列根本性的事件转变使我们与熵在基本层面上相结合，从而发生了转变，如今我们已然改变，我们已被转化为熵灵。"
+	darktec_crisis_chain_desc_choice_2_taint:0 "\n\n然而，一系列根本性的事件转变使我们决定将自身本质与调谐过的暗物质相结合，从而进一步提升了我们的存在形态，以及我们如何将其应用于其他发展领域。"
+
+	darktec_crisis_chain_desc_choice_2_5_built_sphere:0 "\n\n在研究了熵能和暗物质场后，我们得出的结论是，有可能在特定的时空中聚焦超子物质，从而创造出一个强大的“异常点”，我们可以利用它随心所欲地改变现实。我们最终成功了。"
+
+	darktec_crisis_chain_desc_choice_3_do_nothing:0 "\n\n当我们首次察觉到异常点不稳定时，我们决定任其自行发展，因为干预可能会...适得其反。"
+	darktec_crisis_chain_desc_choice_3_overload_dm:0 "\n\n当我们首次察觉到异常点不稳定时，我们决定通过增加其暗物质防护层来增强它，方法是用熵能采集的副产品将其饱和。"
+	darktec_crisis_chain_desc_choice_3_overload_entro:0 "\n\n当我们首次察觉到异常点不稳定时，我们决定为其提供更多聚焦的熵能，以稳定其内部发生的黑暗力量之间的双重对抗。"
+
+	darktec_crisis_chain_desc_choice_4_do_nothing:0 "\n\n当异常点开始扭曲周围时空，在它达到临界状态之前，我们耐心等待着。"
+	darktec_crisis_chain_desc_choice_4_overload_entrophereals:0 "\n\n在异常点开始扭曲周围时空流后，我们不能再冒险增加更多的不稳定或破坏，因此我们决定将一些未成形的种群迁至其表面，在那里他们显然获得了成功。"
+	darktec_crisis_chain_desc_choice_4_overload_dm:0 "\n\n随着异常点外部护盾被更多暗物质强化，异常点的不规则性也随之消退。"
+	darktec_crisis_chain_desc_choice_4_overload_entropy:0 "\n\n当异常点的内部力量减弱时，我们向其注入了越来越多的超子物质，最终将其稳定了下来。"
+
+
+	darktec_crisis_postbaryonic_level_2_require_enough_currency_completed:0 "我们已获得了足够的$darktec_contained_entropy_with_icon$。"
+	darktec_crisis_postbaryonic_level_2_require_enough_currency:0 "需要积累足够的$darktec_contained_entropy_with_icon$。"
+	darktec_crisis_postbaryonic_level_3_require_enough_currency_completed:0 "我们已获得了足够的$darktec_contained_entropy_with_icon$。"
+	darktec_crisis_postbaryonic_level_3_require_enough_currency:0 "需要积累足够的$darktec_contained_entropy_with_icon$。"
+	darktec_crisis_postbaryonic_level_4_require_situation_completed:0 "我们已成功完成了熵变事件，并积累了足够的$darktec_contained_entropy_with_icon$。"
+	darktec_crisis_postbaryonic_level_4_require_situation:0 "需要完成一项事件。\n当积累了足够的$darktec_contained_entropy_with_icon$时，该事件将被启用。"
+	darktec_crisis_postbaryonic_level_5_require_situation_completed:0 "我们已获得了足够的$darktec_contained_entropy_with_icon$。"
+	darktec_crisis_postbaryonic_level_5_require_situation:0 "我们已获得了足够的$darktec_contained_entropy_with_icon$。"
+
+	edict_darktec_edict_chimerical_dark_matter:0 "幽影诡变黑暗"
+	edict_darktec_edict_chimerical_dark_matter_desc:0 "已废弃"
+	edict_darktec_edict_chimerical_entropy:0 "幽影诡变熵"
+	edict_darktec_edict_chimerical_entropy_desc:0 "已废弃"
+	edict_darktec_edict_chimerical_ascension:0 "幽影诡变飞升"
+	edict_darktec_edict_chimerical_ascension_desc:0 "已废弃"
+
+	darktec_crisis_level_reached:0 "危机等级已达到"
+
+	darktec_pm_entropic_world:0 "熵能灌注世界"
+	darktec_pm_entropic_world_desc:0 "已废弃"
+
+	mod_mod_darktec_umbral_boost:0 "幽影建筑增益"
+
+	darktec_sphere_0:0 "聚合异常"
+	darktec_sphere_0_DESC:0 "一种熵能聚合体，具现化为一个伪天体，并被强大的暗物质力场约束。它在其边界处改变物理法则。"
+	darktec_sphere_0_MEGASTRUCTURE_DETAILS:0 "一个§Y$darktec_sphere_0$§!是一种熵能聚合体，具现化为一个伪天体，并被强大的暗物质力场约束。它在其边界处改变物理法则。"
+
+	darktec_sphere_1:0 "聚合异常 - I"
+	darktec_sphere_1_DESC:0 "$darktec_sphere_0_DESC$"
+	darktec_sphere_2:0 "聚合异常 - II"
+	darktec_sphere_2_DESC:0 "$darktec_sphere_0_DESC$"
+	darktec_sphere_3:0 "聚合异常 - III"
+	darktec_sphere_3_DESC:0 "$darktec_sphere_0_DESC$"
+	darktec_sphere_4:0 "聚合异常 - IV"
+	darktec_sphere_4_DESC:0 "$darktec_sphere_0_DESC$"
+	darktec_sphere_5:0 "聚合异常 - V"
+	darktec_sphere_5_DESC:0 "$darktec_sphere_0_DESC$"
+	darktec_sphere_6:0 "聚合异常 - VI"
+	darktec_sphere_6_DESC:0 "$darktec_sphere_0_DESC$"
+	darktec_sphere_7:0 "聚合异常 - VII"
+	darktec_sphere_7_DESC:0 "$darktec_sphere_0_DESC$"
+	darktec_sphere_8:0 "聚合异常 - VIII"
+	darktec_sphere_8_DESC:0 "$darktec_sphere_0_DESC$"
+
+	mod_mod_darktec_assimilation_capacity:0 "熵能聚合容量"
+	mod_mod_darktec_umbral_components_mult:0 "幽影组件效率"
+
+	darktec_pm_tainted:0 "已废弃"
+	darktec_pm_tainted_desc:0 "已废弃"
+
+	darktec_pm_tainted_worker:0 "已废弃"
+	darktec_pm_tainted_worker_desc:0 "已废弃"
+
+	darktec_pm_tainted_specialist:0 "已废弃"
+	darktec_pm_tainted_specialist_desc:0 "已废弃"
+
+	darktec_pm_tainted_pops:0 "已废弃"
+	darktec_pm_tainted_pops_desc:0 "已废弃"
+
+	darktec_pm_tainted_utility:0 "已废弃"
+	darktec_pm_tainted_utility_desc:0 "已废弃"
+
+	darktec_pm_entropic_world_phase_1:0 "已废弃"
+	darktec_pm_entropic_world_phase_1_desc:0 "已废弃"
+
+	darktec_pm_entropic_world_phase_2:0 "已废弃"
+	darktec_pm_entropic_world_phase_2_desc:0 "已废弃"
+
+	darktec_pm_entropic_world_phase_3:0 "已废弃"
+	darktec_pm_entropic_world_phase_3_desc:0 "已废弃"
+
+	darktec_modifier_country_doomed_galaxy:0 "注定灭亡的存在"
+	darktec_modifier_country_doomed_galaxy_desc:0 "无处可逃"
+
+	darktec_modifier_fleet_voidjump:0 "虚空裂隙脉冲"
+	darktec_modifier_fleet_interferer:0 "干扰者隐形"
+	darktec_modifier_fleet_inertialess:0 "无惯性推进"
+	darktec_modifier_fleet_collapser:0 "熵塌陷"
+
+	darktec_modifier_fleet_hungering_void:0 "饥饿虚空"
+	darktec_modifier_fleet_ceaseless_horror:0 "无尽恐怖"
+
+
+	tech_darktec_ship_shields:0 "$DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS$"
+	tech_darktec_ship_shields_desc:0 "$DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_DESC$"
+
+	tech_darktec_ship_shields_mechanical:0 "$DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS$"
+	tech_darktec_ship_shields_mechanical_desc:0 "$DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_DESC$"
+	tech_darktec_ship_shields_organic:0 "$DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_ORGANIC$"
+	tech_darktec_ship_shields_organic_desc:0 "$DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_ORGANIC_DESC$"
+
+	tech_darktec_ship_shields_unlocks_title:0 "已废弃"
+	tech_darktec_ship_shields_unlocks_desc:0 "已废弃"
+	tech_darktec_ship_shields_organic_unlocks_title:0 "已废弃"
+	tech_darktec_ship_shields_organic_unlocks_desc:0 "已废弃"
+
+	tech_darktec_weapon_antiparticles:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES$"
+	tech_darktec_weapon_antiparticles_desc:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_DESC$"
+	tech_darktec_weapon_antiparticles_mechanical:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES$"
+	tech_darktec_weapon_antiparticles_mechanical_desc:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_DESC$"
+	tech_darktec_weapon_antiparticles_organic:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_ORGANIC$"
+	tech_darktec_weapon_antiparticles_organic_desc:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_ORGANIC_DESC$"
+
+	tech_darktec_weapon_antiparticles_unlocks_title:0 "已废弃"
+	tech_darktec_weapon_antiparticles_unlocks_desc:0 "已废弃"
+	tech_darktec_weapon_antiparticles_organic_unlocks_title:0 "已废弃"
+	tech_darktec_weapon_antiparticles_organic_unlocks_desc:0 "已废弃"
+
+	tech_darktec_weapon_destabilization:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION$"
+	tech_darktec_weapon_destabilization_desc:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION_DESC$"
+	tech_darktec_weapon_destabilization_mechanical:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION$"
+	tech_darktec_weapon_destabilization_mechanical_desc:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION_DESC$"
+	tech_darktec_weapon_destabilization_organic:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION_ORGANIC$"
+	tech_darktec_weapon_destabilization_organic_desc:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION_ORGANIC_DESC$"
+
+	tech_darktec_weapon_destabilization_unlocks_title:0 "已废弃"
+	tech_darktec_weapon_destabilization_unlocks_desc:0 "已废弃"
+	tech_darktec_weapon_destabilization_organic_unlocks_title:0 "已废弃"
+	tech_darktec_weapon_destabilization_organic_unlocks_desc:0 "已废弃"
+
+	tech_darktec_weapon_antimatter_lance:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE$"
+	tech_darktec_weapon_antimatter_lance_desc:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_DESC$"
+	tech_darktec_weapon_antimatter_lance_mechanical:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE$"
+	tech_darktec_weapon_antimatter_lance_mechanical_desc:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_DESC$"
+	tech_darktec_weapon_antimatter_lance_organic:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_ORGANIC$"
+	tech_darktec_weapon_antimatter_lance_organic_desc:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_ORGANIC_DESC$"
+
+	tech_darktec_weapon_antimatter_lance_unlocks_title:0 "已废弃"
+	tech_darktec_weapon_antimatter_lance_unlocks_desc:0 "已废弃"
+	tech_darktec_weapon_antimatter_organic_lance_unlocks_title:0 "已废弃"
+	tech_darktec_weapon_antimatter_organic_lance_unlocks_desc:0 "已废弃"
+
+	tech_darktec_weapon_discharger:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER$"
+	tech_darktec_weapon_discharger_desc:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_DESC$"
+	tech_darktec_weapon_discharger_mechanical:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER$"
+	tech_darktec_weapon_discharger_mechanical_desc:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_DESC$"
+	tech_darktec_weapon_discharger_organic:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_ORGANIC$"
+	tech_darktec_weapon_discharger_organic_desc:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_ORGANIC_DESC$"
+
+	tech_darktec_weapon_discharger_unlocks_title:0 "已废弃"
+	tech_darktec_weapon_discharger_unlocks_desc:0 "已废弃"
+	tech_darktec_weapon_discharger_organic_unlocks_title:0 "已废弃"
+	tech_darktec_weapon_discharger_organic_unlocks_desc:0 "已废弃"
+
+	tech_darktec_ship_util_voidjump:0 "$DARKTEC_SHIP_UTILITY_VOIDJUMP_MODULE$"
+	tech_darktec_ship_util_voidjump_desc:0 "$DARKTEC_SHIP_UTILITY_VOIDJUMP_DESC$"
+	tech_darktec_ship_util_voidjump_mechanical:0 "$DARKTEC_SHIP_UTILITY_VOIDJUMP_MODULE$"
+	tech_darktec_ship_util_voidjump_mechanical_desc:0 "$DARKTEC_SHIP_UTILITY_VOIDJUMP_DESC$"
+	tech_darktec_ship_util_voidjump_organic:0 "$DARKTEC_SHIP_UTILITY_VOIDJUMP_MODULE_ORGANIC$"
+	tech_darktec_ship_util_voidjump_organic_desc:0 "$DARKTEC_SHIP_UTILITY_VOIDJUMP_ORGANIC_DESC$"
+
+	tech_darktec_ship_util_voidjump_unlocks_title:0 "已废弃"
+	tech_darktec_ship_util_voidjump_unlocks_desc:0 "已废弃"
+	tech_darktec_ship_util_voidjump_organic_unlocks_title:0 "已废弃"
+	tech_darktec_ship_util_voidjump_organic_unlocks_desc:0 "已废弃"
+
+	tech_darktec_ship_util_inertialess:0 "$DARKTEC_SHIP_UTILITY_INERTIALESS$"
+	tech_darktec_ship_util_inertialess_desc:0 "$DARKTEC_SHIP_UTILITY_INERTIALESS_DESC$"
+	tech_darktec_ship_util_inertialess_mechanical:0 "$DARKTEC_SHIP_UTILITY_INERTIALESS$"
+	tech_darktec_ship_util_inertialess_mechanical_desc:0 "$DARKTEC_SHIP_UTILITY_INERTIALESS_DESC$"
+	tech_darktec_ship_util_inertialess_organic:0 "$DARKTEC_SHIP_UTILITY_INERTIALESS_ORGANIC$"
+	tech_darktec_ship_util_inertialess_organic_desc:0 "$DARKTEC_SHIP_UTILITY_INERTIALESS_ORGANIC_DESC$"
+
+	tech_darktec_ship_util_inertialess_unlocks_title:0 "已废弃"
+	tech_darktec_ship_util_inertialess_unlocks_desc:0 "已废弃"
+	tech_darktec_ship_util_inertialess_organic_unlocks_title:0 "已废弃"
+	tech_darktec_ship_util_inertialess_organic_unlocks_desc:0 "已废弃"
+
+	tech_darktec_ship_util_collapser:0 "$DARKTEC_SHIP_UTILITY_COLLAPSER$"
+	tech_darktec_ship_util_collapser_desc:0 "$DARKTEC_SHIP_UTILITY_COLLAPSER_DESC$"
+	tech_darktec_ship_util_collapser_mechanical:0 "$DARKTEC_SHIP_UTILITY_COLLAPSER$"
+	tech_darktec_ship_util_collapser_mechanical_desc:0 "$DARKTEC_SHIP_UTILITY_COLLAPSER_DESC$"
+	tech_darktec_ship_util_collapser_organic:0 "$DARKTEC_SHIP_UTILITY_COLLAPSER_ORGANIC$"
+	tech_darktec_ship_util_collapser_organic_desc:0 "$DARKTEC_SHIP_UTILITY_COLLAPSER_ORGANIC_DESC$"
+
+	tech_darktec_ship_util_collapser_unlocks_title:0 "已废弃"
+	tech_darktec_ship_util_collapser_unlocks_desc:0 "已废弃"
+	tech_darktec_ship_util_collapser_organic_unlocks_title:0 "已废弃"
+	tech_darktec_ship_util_collapser_organic_unlocks_desc:0 "已废弃"
+
+	tech_darktec_ship_util_interferer:0 "$DARKTEC_SHIP_UTILITY_INTERFERER$"
+	tech_darktec_ship_util_interferer_desc:0 "$DARKTEC_SHIP_UTILITY_INTERFERER_DESC$"
+	tech_darktec_ship_util_interferer_mechanical:0 "$DARKTEC_SHIP_UTILITY_INTERFERER$"
+	tech_darktec_ship_util_interferer_mechanical_desc:0 "$DARKTEC_SHIP_UTILITY_INTERFERER_DESC$"
+	tech_darktec_ship_util_interferer_organic:0 "$DARKTEC_SHIP_UTILITY_INTERFERER_ORGANIC$"
+	tech_darktec_ship_util_interferer_organic_desc:0 "$DARKTEC_SHIP_UTILITY_INTERFERER_ORGANIC_DESC$"
+
+	tech_darktec_ship_util_interferer_unlocks_title:0 "已废弃"
+	tech_darktec_ship_util_interferer_unlocks_desc:0 "已废弃"
+	tech_darktec_ship_util_interferer_organic_unlocks_title:0 "已废弃"
+	tech_darktec_ship_util_interferer_organic_unlocks_desc:0 "已废弃"
+
+
+	DARKTEC_SPHERE_BREACHING:0 "逆转熵增"
+	DARKTEC_SPHERE_BREACHING_DESC:0 "我们已向被约束的异常体喂食了足够的亚物质，它现在已接近崩溃。\n然而，我们可以自行强制其崩溃，这理论上将允许局部现实的重写……重写我们自身的思想和理念。"
+
+	DARKTEC_ANTICRISIS_PROTECTION:0 "已废弃"
+	DARKTEC_ANTICRISIS_PROTECTION_DESC:0 "替换我"
+
+	DARKTEC_ANTICRISIS_ATTACK:0 "已废弃"
+	DARKTEC_ANTICRISIS_ATTACK_DESC:0 "已废弃"
+
+
+	darktec_modifier_country_shielded_against_entropy:0 "已废弃"
+	darktec_modifier_anti_entropy_crisis:0 "已废弃"
+
+	darktec_decision_taint_world_menial:0 "幽影侵蚀 - 提取"
+	darktec_decision_taint_world_menial_desc:0 "已废弃"
+	darktec_decision_taint_world_menial_tooltip:0 "已废弃"
+	darktec_decision_taint_world_menial_repeated_tooltip:0 "已废弃"
+
+	darktec_decision_taint_world_specialist:0 "幽影侵蚀 - 产出"
+	darktec_decision_taint_world_specialist_desc:0 "已废弃"
+	darktec_decision_taint_world_specialist_tooltip:0 "已废弃"
+	darktec_decision_taint_world_specialist_repeated_tooltip:0 "已废弃"
+
+	darktec_decision_taint_world_pop:0 "幽影侵蚀 - 人口"
+	darktec_decision_taint_world_pop_desc:0 "已废弃"
+	darktec_decision_taint_world_pop_tooltip:0 "已废弃"
+	darktec_decision_taint_world_pop_repeated_tooltip:0 "已废弃"
+
+	darktec_decision_taint_world_utility:0 "幽影侵蚀 - 效用"
+	darktec_decision_taint_world_utility_desc:0 "已废弃"
+	darktec_decision_taint_world_utility_tooltip:0 "已废弃"
+	darktec_decision_taint_world_utility_repeated_tooltip:0 "已废弃"
+
+	darktec_decision_untaint_world:0 "净化世界"
+	darktec_decision_untaint_world_desc:0 "已废弃"
+	darktec_decision_untaint_world_tooltip:0 "已废弃"
+
+	darktec_decision_entropy_world:0 "熵缚世界"
+	darktec_decision_entropy_world_desc:0 "已废弃"
+	darktec_decision_entropy_world_tooltip:0 "已废弃"
+
+	darktec_decision_unentropy_world:0 "净化熵增"
+	darktec_decision_unentropy_world_desc:0 "已废弃"
+	darktec_decision_undo_entropy_world:0 "已废弃"
+	darktec_decision_undo_entropy_world_desc:0 "已废弃"
+	darktec_decision_undo_entropy_world_tooltip:0 "已废弃"
+
+	situation_darktec_entropy_deficit_approach_economy:0 "已废弃"
+	situation_darktec_entropy_deficit_approach_economy_tooltip:0 "已废弃"
+	situation_darktec_entropy_deficit_approach_warfare:0 "已废弃"
+	situation_darktec_entropy_deficit_approach_warfare_tooltip:0 "已废弃"
+	situation_darktec_entropy_deficit_approach_applications:0 "已废弃"
+	situation_darktec_entropy_deficit_approach_applications_tooltip:0 "已废弃"
+
+	mod_country_resource_max_darktec_contained_entropy_add:0 "$darktec_contained_entropy_with_icon$储存容量"
+	mod_planet_farmers_sr_dark_matter_upkeep_add:0 "$sr_dark_matter_with_icon$维护费 每 $pop_group_unit$$job_farmer_plural_with_icon$"
+	mod_planet_miners_sr_dark_matter_produces_add:0 "$sr_dark_matter_with_icon$每 $pop_group_unit$$job_miner_plural_with_icon$"
+	mod_planet_miners_sr_dark_matter_upkeep_add:0 "$sr_dark_matter_with_icon$维护费 每 $pop_group_unit$$job_miner_plural_with_icon$"
+	mod_planet_technician_sr_dark_matter_produces_add:0 "$sr_dark_matter_with_icon$每 $pop_group_unit$$job_technician_plural_with_icon$"
+	mod_planet_technician_sr_dark_matter_upkeep_add:0 "$sr_dark_matter_with_icon$维护费 每 $pop_group_unit$$job_technician_plural_with_icon$"
+	mod_planet_metallurgists_sr_dark_matter_upkeep_add:0 "$sr_dark_matter_with_icon$维护费 每 $pop_group_unit$$job_foundry_plural_with_icon$"
+	# dm from physicist already exist
+	mod_planet_physicists_sr_dark_matter_upkeep_add:0 "$sr_dark_matter_with_icon$维护费 每 $pop_group_unit$$job_physicist_plural_with_icon$"
+	mod_planet_biologists_sr_dark_matter_produces_add:0 "$sr_dark_matter_with_icon$每 $pop_group_unit$$job_biologist_plural_with_icon$"
+	mod_planet_biologists_sr_dark_matter_upkeep_add:0 "$sr_dark_matter_with_icon$维护费 每 $pop_group_unit$$job_biologist_plural_with_icon$"
+	mod_planet_engineers_sr_dark_matter_produces_add:0 "$sr_dark_matter_with_icon$每 $pop_group_unit$$job_engineer_plural_with_icon$"
+	mod_planet_engineers_sr_dark_matter_upkeep_add:0 "$sr_dark_matter_with_icon$维护费 每 $pop_group_unit$$job_engineer_plural_with_icon$"
+
+
+	# Note: this modifier is not localized in vanilla
+	mod_country_sr_dark_matter_produces_mult:0 "每月 £sr_dark_matter£ 暗物质"
+
+
+# Do not remove below v

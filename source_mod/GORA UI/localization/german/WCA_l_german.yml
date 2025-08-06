@@ -1,0 +1,10 @@
+﻿l_german:
+ # WCA
+ alert_wasted_construction_name: "Hat ungenutzten [concept_construction]"
+ alert_wasted_construction_hint: "Hat ungenutzten [concept_construction]"
+ alert_wasted_construction_action: "Bau-Tafel"
+ wasted_construction_setting_name: "Ungenutzten Bau"
+ alert_not_enacting_laws_name: "Beschließt derzeit #bold kein#! Gesetz"
+ alert_not_enacting_laws_hint: "Beschließt derzeit #bold kein#! Gesetz"
+ alert_not_enacting_laws_action: "Politik-Tafel"
+ not_enacting_laws_setting_name: "Beschließt Derzeit Kein Gesetz"

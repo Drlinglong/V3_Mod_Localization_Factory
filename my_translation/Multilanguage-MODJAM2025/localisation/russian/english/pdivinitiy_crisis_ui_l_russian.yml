@@ -1,0 +1,183 @@
+﻿l_russian:
+
+ ############################################
+ ### project_divinity_crisis_ui_l_english ###
+ ###     by daniellm                      ###
+ ############################################
+
+
+
+ #####################
+ ### crisis screen ###
+ #####################
+
+ pdivinity_psionic_strength_value:"£pdivinity_psionic_strength£ $VAL|0$"
+ pdivinity_psionic_strength_gaining:"Выполняйте §HКризисные Цели§!, чтобы получить больше §YМилости Покровителя§!."
+ pdivinity_psionic_strength_desc:"$pdivinity_psionic_strength$ — это мера нашего резонанса с загадочными энергиями Архитектора."
+ pdivinity_psionic_strength_crisis_objective:"Кризисные Цели"
+ pdivinity_psionic_strength_crisis_objective_gained:"Получено $pdivinity_psionic_strength$"
+ pdivinity_psionic_strength_crisis_objective_reward: "$REWARD$"
+ pdivinity_psionic_strength_crisis_objective_progress:"Мы получили £pdivinity_psionic_strength£ $AMOUNT$ от выполнения этой Кризисной Цели."
+ pdivinity_psionic_strength_crisis_level_locked:"Требуется для разблокировки этого уровня:\n"
+ pdivinity_psionic_strength_crisis_level_unlocked:"На уровне $LEVEL$ вы получаете Особый Проект и награды:\n"
+ pdivinity_psionic_strength_crisis_level_desc:"Чтобы продвигаться по уровням Кризиса, выполняйте Кризисные Цели и завершайте требуемые задания для каждой стадии."
+ pdivinity_psionic_strength_crisis_level_unlock:"Имеется £pdivinity_psionic_strength£ §Y$CURRENCY$§! $pdivinity_psionic_strength$"
+ pdivinity_psionic_strength_current_value:"Текущее значение: §Y$VALUE|0$§!"
+
+ # this text exists in the crisis screen, the intro is just the nemesis one, i don't really like it tbh neither does the other one talk about the galcom. ask me if you need the other ones for comparison
+ pdivinity_psionic_strength_crisis_description_title:"Проект Божественности"
+ pdivinity_psionic_strength_crisis_description_intro:"На протяжении эонов провидцы и учёные шептались о грядущем §RКризисе§! — конце, окутанном пророчествами, где судьба всей разумной жизни висела бы на волоске. Они представляли себе захватчиков из-за звёзд, восстания холодной машинной логики или войны, рождённые в чужих измерениях.\n\nНо они смотрели вовне, когда следовало взглянуть внутрь.\n\nИстина всегда ворошилась под поверхностью — глубокая, неизбежная и привязанная лишь к воле. Последний кризис... всегда должен был быть §Rнами§!."
+ pdivinity_psionic_strength_crisis_description:"$pdivinity_psionic_strength_crisis_description_intro$\n\nНаши мысли, наша воля, расходятся волнами по другой плоскости — плоскости безграничной псионической силы. Завеса истончается. Если мы сможем завладеть этой силой, сформировать её согласно нашей цели, то не только переживём грядущее... мы определим его."
+ pdivinity_psionic_strength_crisis_howto_title:0 "Стремление к Божественности"
+ pdivinity_psionic_strength_crisis_howto:"Выполнение §HКризисных Целей§! генерирует £pdivinity_psionic_strength£ §YМилость Покровителя§!, раскрывая наш божественный потенциал, чтобы высвободить того, кто призывает галактику!."
+
+ crisis_pdivinity_project_divinity_level_1:0 "Генезис"
+ crisis_pdivinity_project_divinity_level_1_desc:0 "Уровень Кризиса 1"
+
+ crisis_pdivinity_project_divinity_level_2:0 "Подрыв"
+ crisis_pdivinity_project_divinity_level_2_desc:0 "Уровень Кризиса 2"
+
+ crisis_pdivinity_project_divinity_level_3:0 "Пророчество"
+ crisis_pdivinity_project_divinity_level_3_desc:0 "Уровень Кризиса 3"
+
+ crisis_pdivinity_project_divinity_level_4:0 "Откровение"
+ crisis_pdivinity_project_divinity_level_4_desc:0 "Уровень Кризиса 4"
+
+ crisis_pdivinity_project_divinity_level_5:0 "Апофеоз"
+ crisis_pdivinity_project_divinity_level_5_desc:0 "Уровень Кризиса 5"
+ # Resource
+
+ pdivinity_psionic_strength_name:0 "Милость Покровителя"
+ pdivinity_psionic_strength:0 "Милость Покровителя"
+
+ # objectives
+
+ crisobj_pdivinity_establish_cult_name:0 "Основать Культ Покрова"
+ crisobj_pdivinity_establish_cult_desc:0 "Создание культов Покрова в других империях позволяет нам распространять наше влияние по всей галактике.\n\nОсновывайте культы Покрова, чтобы получить эту награду $pdivinity_psionic_strength$."
+
+ crisobj_pdivinity_retain_vassals_name:0 "Удерживать Вассалов-Аколитов"
+ crisobj_pdivinity_retain_vassals_desc:0 "Их послушание Покрову способствует нашему пути к божественности.\n\nУдерживайте Вассалов-Аколитов, чтобы получить эту §Yежегодную§! награду $pdivinity_psionic_strength$."
+
+ crisobj_pdivinity_vassalize_empire_name:0 "Вассализировать Империи"
+ crisobj_pdivinity_vassalize_empire_desc:0 "Покорение масс гарантирует, что они внемлют его божественному слову.\n\nВассализируйте империи, чтобы получить эту награду $pdivinity_psionic_strength$."
+
+ crisobj_pdivinity_research_psionic_technology_name:0 "Исследовать Псионические Технологии"
+ crisobj_pdivinity_research_psionic_technology_desc:0 "Эксперименты с компонентами, основанными на Покрове, могут помочь нам в нашем стремлении к божественности.\n\nИсследуйте эти редкие технологии, чтобы получить эту награду $pdivinity_psionic_strength$."
+
+ crisobj_pdivinity_shroud_phase_planets_name:0 "Фазирование Планет Покровом"
+ crisobj_pdivinity_shroud_phase_planets_desc:0 "Фазирование планет Покровом открывает разлом в завесе и непременно привлечёт внимание того, кто зовёт.\n\nФазируйте планеты Покровом, чтобы получить эту награду $pdivinity_psionic_strength$."
+
+ crisobj_pdivinity_sacrifice_population_name:0 "Ритуальные Жертвоприношения Единиц Населения"
+ crisobj_pdivinity_sacrifice_population_desc:0 "Души принесённых в жертву популяций помогут нам получить милость наших покровителей.\n\nИспользуйте тип зачистки «Ритуальное жертвоприношение», чтобы получить эту награду $pdivinity_psionic_strength$ за каждые $pop_group_unit$ зачищенных единиц населения."
+
+ crisobj_pdivinity_control_shroud_enclave_name:0 "Контроль над анклавом вуалеходов"
+ crisobj_pdivinity_control_shroud_enclave_desc:0 "Вуалеходы — носители божественной веры, они помогут нам в достижении цели.\n\nУдерживайте анклавы вуалеходов, чтобы получать эту §Yежегодную§! награду в $pdivinity_psionic_strength$."
+
+ crisobj_pdivinity_shroud_enemy_planets_name:0 "Псионический разрыв миров"
+ crisobj_pdivinity_shroud_enemy_planets_desc:0 "Опаление вражеских миров псионическими энергиями принесет нам благосклонность.\n\nРазрывайте миры, чтобы получать эту награду в $pdivinity_psionic_strength$."
+
+ crisobj_pdivinity_summon_psionic_ships_name:0 "Призыв псионических кораблей"
+ crisobj_pdivinity_summon_psionic_ships_desc:0 "Завеса дрожит по нашей команде. Из ее глубин мы призываем не металлические сосуды, но порождения воли — проявления нашей крепнущей связи с Вуалью.\n\nПризывайте псионические корабли, чтобы получать эту награду в $pdivinity_psionic_strength$."
+
+ crisobj_pdivinity_employ_telepaths_name:0 "Применение телепатов"
+ crisobj_pdivinity_employ_telepaths_desc:0 "Архитектор даровал нашим телепатам способность производить псионическую энергию.\n\nПроизводство $pdivinity_psionic_strength$ масштабируется в зависимости от количества задействованных телепатов."
+
+ ####################
+ ### menace perks ###
+ ####################
+
+ menp_pdivinity_resource:0 "Благосклонность Покровителя"
+ # tooltip
+ unlocks_pdivinity_unlock_resource:0 "Позволяет накапливать £pdivinity_psionic_strength£ §Y$menp_pdivinity_resource$§! путем выполнения §HЦелей Кризиса§!."
+ menp_pdivinity_resource_desc:0 "Завоевание благосклонности Архитектора поможет нам в нашей конечной цели — достижении божественности. Мы прольем свою кровь за его волю."
+
+ menp_pdivinity_ethic_attraction:0 "Божественная вера"
+ # desc
+ menp_pdivinity_ethic_attraction_desc:0 "Шепот и видения пробуждают веру в высшую силу. Многие теперь с почтением произносят имя §RАрхитектора Судьбы§!."
+
+ menp_pdivinity_psionic_armies:0 "Псионические фантомы"
+ menp_pdivinity_psionic_armies_desc:0 "Окутанные неестественной псионической энергией, эти призрачные воины дрейфуют между реальностью и кошмаром. Агенты Архитектора, они призваны сеять страх и опустошение везде, где проявляются."
+ unlocks_pdivinity_unlock_armies:0 "Открывает тип армии: §Y$pdivinitiy_psionic_army$§!"
+
+ menp_pdivinity_zro_building:0 "Экстрактор Вуали"
+ menp_pdivinity_zro_building_desc:0 "Освященное сооружение, истончающее завесу между измерениями, позволяя обученным аколитам выкачивать сырой Зро непосредственно из водоворотов Вуали."
+ unlocks_pdivinity_unlock_buildings:0 "Открывает §Y$building_pdivinity_shroud_harvester_building$§!"
+
+ menp_pdivinity_shroud_phasing:0 "Фазирование Вуали"
+ menp_pdivinity_shroud_phasing_desc:0 "Мы научились намеренно ослаблять завесу на выбранных мирах, превращая их в псионические святилища. Наш вид процветает в этом резонансе, в то время как все остальные страдают под нами."
+ unlocks_pdivinity_unlock_phasing:0 "Открывает решение §Y$decision_pdivinity_shroud_phasing$§! на планетах"
+
+ menp_pdivinity_ritual_sacrifice:0 "Ритуальное жертвоприношение"
+ menp_pdivinity_ritual_sacrifice_desc:0 "Те, кто недостоин замысла Архитектора, все же могут послужить цели. Через священные подношения плоти и духа мы черпаем силу и благосклонность из Вуали."
+ unlocks_pdivinity_ritual_sacrifice:0 "Открывает тип зачистки: §Y$purge_pdivinity_sacrifice$§!"
+
+ menp_pdivinity_cult_espionage:0 "Семена Откровения"
+ menp_pdivinity_cult_espionage_desc:0 "Мы освоили искусство распространения шепота между границами. Вера распространяется как гниль под поверхностью, и скоро их народы обратятся против своих богов во имя Архитектора."
+ unlocks_pdivinity_cult_espionage:0 "Открывает тип операции: §Y$operation_pdivinity_establish_cult$§!\n"
+
+ menp_pdivinity_divine_crusade:0 "Божественный крестовый поход"
+ menp_pdivinity_divine_crusade_desc:0 "Наш божественный крестовый поход послужит пробуждением для остальной галактики. Через священную войну мы связываем других с замыслом судьбы. Они будут служить аколитами или падут как еретики."
+ unlocks_pdivinity_divine_crusade:0 "Открывает военную цель: §Y$wg_pdivinity_acolyte$§!\nОткрывает тип вассала: §Y$specialist_pdivinity_acolyte$§!\n"
+
+ menp_pdivinity_psionic_avatar:0 "Завеса Вуали"
+ menp_pdivinity_psionic_avatar_desc:0 "Эфирное проявление воли Вуали, кружащееся облако псионической энергии, которое скрывает и искажает реальность, преследуя пустоту между звездами шепотом судьбы."
+ unlocks_pdivinity_psionic_avatar:0 "Открывает тип корабля: §Y$pdivinity_psionic_cloud$§!"
+
+ menp_pdivinity_psionic_rupture:0 "Разрывающий обстрел"
+ menp_pdivinity_psionic_rupture_desc:0 "Опустошительный обстрел, который разрывает завесу между измерениями, высвобождая чистую псионическую энергию, чтобы разорвать вражеские укрепления и рассеять их волю."
+ unlocks_pdivinity_psionic_rupture:0 "Открывает тип обстрела: §Y$bombardment_pdivinity_psionic_rupture_bombardment$§!"
+
+ menp_pdivinity_psionic_potential:0 "Псионическая сонастройка"
+ menp_pdivinity_psionic_potential_desc:0 "Скрытая связь нашего народа с Вуалью расцветает, даруя им усиленные ментальные дары и более глубокую сонастройку с тканью реальности."
+
+ menp_pdivinity_gifts_from_beyond:0 "Дары извне"
+ menp_pdivinity_gifts_from_beyond_desc:0 "Древние псионные секреты и технологии, извлеченные из глубин Покрова, наделяют наши корабли и оружие неземной мощью."
+ unlocks_pdivinity_gifts_from_beyond:0 "§YПсионные компоненты§! теперь могут появляться в качестве вариантов исследований."
+
+ menp_pdivinity_astral_tear:0 "Псионный Аватар"
+ menp_pdivinity_astral_tear_desc:0 "Живое воплощение воли Покрова, этот аватар — свирепая и загадочная сущность, обвитая чистой псионной силой, подчиняющая реальность своей воле."
+ unlocks_pdivinity_astral_tear:0 "Открывает тип корабля: §Y$pdivinity_psionic_avatar$§!"
+
+ menp_pdivinity_beyond_the_rifts:0 "Галактический Шторм"
+ menp_pdivinity_beyond_the_rifts_desc:0 "Шпиль Судьбы медленно прорвал завесу, псионная энергия теперь поступает в реальное пространство с угрожающей скоростью, создавая шторм Покрова в нашем владении."
+ unlocks_pdivinity_beyond_the_rifts:0 "Создает §YШторм Покрова§! в каждой контролируемой системе."
+
+ menp_pdivinity_divine_insight:0 "Божественное Прозрение"
+ menp_pdivinity_divine_insight_desc:0 "Присутствие Архитектора обостряет наш разум, сокращая время между нашими псионными подвигами и позволяя быстрее освоить Покров."
+
+ menp_pdivinity_hyperdimensional_shielding:0 "Гипермерное Экранирование"
+ menp_pdivinity_hyperdimensional_shielding_desc:0 "Защитная аура, сотканная из энергий высших измерений, защищающая наши флоты от вреда, словно их оберегает сама милость Архитектора."
+
+ menp_pdivinity_dimensional_tearer:0 "Разрыватель Измерений"
+ menp_pdivinity_dimensional_tearer_desc:0 "Оружие, способное прорывать дыры в самой реальности, создавая псионные врата, которые рвут и распутывают саму ткань пространства-времени."
+ unlocks_pdivinity_dimensional_tearer:0 "Открывает тип корабля: §Y$pdivinity_dimensional_tearer$§!"
+
+ menp_pdivinity_call_of_the_eye:0 "Зов Архитектора"
+ menp_pdivinity_call_of_the_eye_desc:0 "Его голос эхом разносится по всей галактике, культисты ликуют от исполнения пророчества и своего вознесения в свет. Архитектор близко.."
+ unlocks_pdivinity_call_of_the_eye:0 "§YВосстания культистов§! теперь растут вдвое быстрее."
+
+ menp_pdivinity_psionic_mastery:0 "Псионное Мастерство"
+ menp_pdivinity_psionic_mastery_desc:0 "Наше глубокое единение с Покровом увеличивает разрушительный потенциал нашего оружия, заставляя каждый удар отзываться псионной яростью."
+
+ menp_pdivinity_beyond_the_Shroud:0 "Шпиль Судьбы"
+ menp_pdivinity_beyond_the_Shroud_desc:0 "Шпиль поет. Покров отвечает. Поклонники по всей галактике чувствуют его притяжение, и культы возникают в каждом уголке известного космоса."
+ unlocks_pdivinity_spire_of_fate:0 "Открывает стадию мегаструктуры: §YШпиль Судьбы - Стадия Апофеоза§!"
+
+ ##################################
+ ### crisis unlock requirements ###
+ ##################################
+
+ pdivinity_level_2_req_clear_tooltip:0 "£trigger_yes£ Построен(а) §Y$building_pdivinity_architect_shrine$§!"
+ pdivinity_level_2_req_tooltip:0 "£trigger_no£ Не построен(а) §Y$building_pdivinity_architect_shrine$§!"
+
+ pdivinity_level_3_req_clear_tooltip:0 "£trigger_yes£ Планета §Yфазирована Покровом§!"
+ pdivinity_level_3_req_tooltip:0 "£trigger_no£ Планета не §Yфазирована Покровом§!"
+
+ pdivinity_level_4_req_clear_tooltip:0 "£trigger_yes£ Завершено исследование археологического участка §Y$pdivinity_catacombs_digsite$§!."
+ pdivinity_level_4_req_tooltip:0 "£trigger_no£ Не завершено исследование археологического участка §Y$pdivinity_catacombs_digsite$§!."
+
+ pdivinity_level_5_req_clear_tooltip:0 "£trigger_yes£ Построен(а) §Y$pdivinity_shroud_needle_3$§!"
+ pdivinity_level_5_req_tooltip:0"£trigger_no£ Не построен(а) §Y$pdivinity_shroud_needle_3$§!"
+
+ pdivinity_level_5_req_clear_tooltip_2:0 "£trigger_yes£ Произведен выстрел из §YРазрывателя Измерений§!."
+ pdivinity_level_5_req_tooltip_2:0 "£trigger_no£ Не произведен выстрел из §YРазрывателя Измерений§!."

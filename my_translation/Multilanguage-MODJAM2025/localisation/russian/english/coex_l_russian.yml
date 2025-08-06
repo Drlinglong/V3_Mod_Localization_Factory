@@ -1,0 +1,351 @@
+﻿l_russian:
+
+
+
+#Technology
+  coex_tech_brain_relay:"Гиперпространственная Проекция"
+  coex_tech_brain_relay_desc:"Гиперпространственная Проекция обеспечивает работу Церебральных Ретрансляторов. Используя недавно открытую форму технологии электроэнцефалограммы, она преобразует идеи в синтетические мозговые волны."
+  COEX_TECH_UNLOCK_BRAIN_RELAY_TITLE:"§HОткрывает мегасооружение:§! Церебральный Ретранслятор"
+  COEX_TECH_UNLOCK_BRAIN_RELAY_DESC:"Церебральный Ретранслятор — это мегаструктура, позволяющая нам влиять на умы чужеродных видов. Он будет воздействовать на ближайшую чужую колонию в пределах 10 прыжков в империи, которая еще не находится под воздействием другого Церебрального Ретранслятора."
+
+  coex_brain_relay_tech_unlock_tt:"§YКризисная Способность§!: §Y£physics£ $coex_tech_brain_relay$§!"
+  coex_psionic_theory_tech_unlock_tt:"§YКризисная Способность§!: §Y£society£ $tech_psionic_theory$§!"
+
+
+
+
+#Crisis Levels
+  coex_crisis_coexistence_level_1:"§UОбеспокоенность§!"
+  coex_crisis_coexistence_level_1_desc:"Уровень кризиса 1"
+  coex_crisis_coexistence_level_2:"§UРиск§!"
+  coex_crisis_coexistence_level_2_desc:"Уровень кризиса 2"
+  coex_crisis_coexistence_level_3:"§UОпасность§!"
+  coex_crisis_coexistence_level_3_desc:"Уровень кризиса 3"
+  coex_crisis_coexistence_level_4:"§UБедствие§!"
+  coex_crisis_coexistence_level_4_desc:"Уровень кризиса 4"
+  coex_crisis_coexistence_level_5:"§UЭкзистенциальная Угроза§!"
+  coex_crisis_coexistence_level_5_desc:"Уровень кризиса 5"
+
+
+  coex_coexistence_level_2_req_clear_tooltip:"£trigger_yes£ Имеется как минимум один §Y$coex_brain_relay_1$§!"
+  coex_coexistence_level_2_req_tooltip:"£trigger_no£ Имеется как минимум один §Y$coex_brain_relay_1$§!"
+
+  coex_coexistence_level_3_req_clear_tooltip:"£trigger_yes£ Построена §Y$coex_enlightenment_array_0$§!"
+  coex_coexistence_level_3_req_tooltip:"£trigger_no£ Построена §Y$coex_enlightenment_array_0$§!"
+
+  coex_coexistence_level_4_req_clear_tooltip:"£trigger_yes£ Построена §Y$coex_enlightenment_array_2$§!"
+  coex_coexistence_level_4_req_tooltip:"£trigger_no£ Построена §Y$coex_enlightenment_array_2$§!"
+
+  coex_coexistence_level_5_req_tooltip:"£trigger_no£ Завершен особый проект §Y$coex_enlightenment_array_3$§!"
+  coex_coexistence_level_5_req_clear_tooltip:"£trigger_no£ Завершен особый проект §Y$coex_enlightenment_array_3$§!"
+
+  COEX_CRISIS_SPECIAL_PROJECT_4:"Активировать Массив"
+  COEX_CRISIS_SPECIAL_PROJECT_4_DESC:"Мы должны подготовить Массив Просвещения, чтобы начать влиять на жизнь в галактическом масштабе."
+
+
+
+###Crisis UI
+
+#Mental Authority
+
+  coex_mental_authority:"Ментальный Авторитет"
+  coex_mental_authority_name:"$coex_mental_authority$:"
+  coex_mental_authority_value:"£coex_mental_authority£ $VAL|0$"
+  coex_mental_authority_gaining:"Выполняйте §HКризисные Задачи§!, чтобы получить больше £coex_mental_authority£ §YМентального авторитета§!."
+  coex_mental_authority_desc:"Ментальный Авторитет измеряет наше понимание глубочайших секретов вселенной."
+  coex_mental_authority_crisis_objective:"Кризисные Задачи"
+  coex_mental_authority_crisis_objective_gained:"Получено Ментального авторитета"
+  coex_mental_authority_crisis_objective_reward: "$REWARD$"
+  coex_mental_authority_crisis_objective_progress:"Мы получили £coex_mental_authority£ $AMOUNT$ за выполнение этой Кризисной Задачи."
+  coex_mental_authority_crisis_level_locked:"Требуется для разблокировки этого уровня:\n"
+  coex_mental_authority_crisis_level_unlocked:"На $LEVEL$ уровне вы получаете награды:\n"
+  coex_mental_authority_crisis_level_desc:"Чтобы продвигаться по уровням Кризиса, накапливайте Ментальный Авторитет и исследуйте особые Кризисные Технологии."
+  coex_mental_authority_crisis_level_unlock:"Имеется £coex_mental_authority£ §Y$CURRENCY$§! Ментального Авторитета"
+  coex_mental_authority_current_value:"Текущее Значение: §Y$VALUE|0$§!"
+  coex_mental_authority_crisis_description_title:"Протокол сосуществования"
+
+#Ascension Perk
+  coex_ap_coexistence_protocol:"Протокол сосуществования"
+  coex_ap_coexistence_protocol_desc:"Хаос индивидуальности неустойчив. Мы должны принести прочный мир, а мир может быть достигнут только через контроль."
+  coex_no_other_crisis:"Другая империя уже начала Протокол Сосуществования."
+
+
+#Crisis Objectives
+  coex_crisobj_brain_relays_name:"Контроль над Церебральными Ретрансляторами (Ежемесячно)"
+  coex_crisobj_brain_relays_desc:"Масштабный мир требует изобретательности и принуждения."
+
+  coex_crisobj_espionage_name:"Проводить кризисные операции"
+  coex_crisobj_espionage_desc:"Шпионаж позволяет нам понять наших потенциальных врагов."
+
+  coex_crisobj_have_vassals_name:"Иметь вассалов (Ежегодно)"
+  coex_crisobj_have_vassals_desc:"Вассализация приводит интересы к миру. Небольшая жертва индивидуальности освобождает умы для будущего."
+
+  coex_crisobj_vassalise_empires_name:"Покорять империи"
+  coex_crisobj_vassalise_empires_desc:"Каждая империя, которая подчиняется, приближает нас к миру."
+
+  coex_crisobj_galcom_surveillance_resolution_name:"Получить помощь Галактического Сообщества (Ежегодно)"
+  coex_crisobj_galcom_surveillance_resolution_desc:"Принять резолюции §YБюрократического Надзора§!"
+
+#Menace perks
+
+  menp_coex_techs_1:"Псионическая теория"
+  coex_unlocks_techs_1:"Добавляет Псионическую теорию как вариант исследования"
+  menp_coex_techs_1_desc:"Наши исследования разума привели нас к более сверхъестественным применениям."
+
+  menp_coex_mega_1:"Социальная инженерия I"
+  coex_unlocks_mega_1:"Открывает технологию Гиперпространственной Проекции"
+  menp_coex_mega_1_desc:"Структура, которая позволит нам проецировать нашу волю на чужаков по всей галактике."
+
+  menp_coex_operations_1:"Обязательный Пацифизм"
+  coex_unlocks_operations_1:"Открывает операцию шпионажа для принуждения к перемирию с империей, затронутой ретранслятором."
+  menp_coex_operations_1_desc:"Эти глупцы готовы воевать из-за чего угодно. Мы не допустим такого легкомысленного поведения."
+
+  menp_coex_infiltration_1:"Производство Доверия"
+  menp_coex_infiltration_1_desc:"Теперь у нас есть способы сделать других более... внушаемыми."
+
+  menp_coex_mega_2:"Социальная инженерия II"
+  coex_unlocks_mega_2:"§HОткрывает Мегасооружение:§! $coex_enlightenment_array_0$\n"
+  menp_coex_mega_2_desc:"Церебральных Ретрансляторов недостаточно. Мы должны сделать их более мощными."
+
+
+  menp_coex_features_2:"Новые Техники"
+  menp_coex_features_2_desc:"Теперь у нас есть более глубокое понимание познания, чем у кого-либо до нас."
+
+  menp_coex_operations_2:"Гибкие Разрешения"
+  coex_unlocks_operations_2:"Открывает операцию по установке Церебрального Ретранслятора в целевой империи."
+  menp_coex_operations_2_desc:"Контроль разума, даже ограниченный, дает нам множество преимуществ."
+
+  menp_coex_mega_3:"Социальная инженерия III"
+  coex_unlocks_mega_3:"§HОткрывает Уровень Мегасооружения:§! $coex_enlightenment_array_2$\n"
+  menp_coex_mega_3_desc:"Мы должны продолжать нашу работу над Массивом Просветления, если хотим достичь мира."
+
+
+  menp_coex_codebreaking_3:"Приложения Разведки"
+  menp_coex_codebreaking_3_desc:"Наши оперативники оснащены технологией, которая позволяет другим игнорировать их или верить каждому их слову."
+
+  menp_coex_diplomacy_3:"Продвинутая Дипломатия"
+  menp_coex_diplomacy_3_desc:"Если они не будут слушать нас, мы заставим их."
+
+  menp_coex_mega_4:"Социальная инженерия IV"
+  coex_unlocks_mega_4:"§HОткрывает уровень мегасооружения:§! $coex_enlightenment_array_3$\n"
+  menp_coex_mega_4_desc:"Наша Установка хорошо послужила нам до сих пор, но её полный потенциал ещё не раскрыт."
+
+  menp_coex_operations_4:"Необходимый контроль"
+  coex_unlocks_operations_4:"Открывает операцию по подчинению империи, затронутой ретранслятором"
+  menp_coex_operations_4_desc:"Никому нельзя доверять. Мы должны привести всех в наше лоно."
+
+  menp_coex_features_5:"Битва умов"
+  menp_coex_features_5_desc:"Несмотря на всё, что мы для них сделали, они до сих пор не понимают. Если и есть что-то, за что стоит бороться, так это мир."
+
+  menp_coex_enlightenment_5:"Великое Просвещение"
+  coex_unlocks_enlightenment_5:"Начинает запуск Установки Просвещения, промывая мозги всей разумной жизни и одерживая победу в игре!"
+  menp_coex_enlightenment_5_desc:"Это единственный путь. Наконец, Установка положит конец раздорам и конфликтам."
+
+  enlightened_galaxy_score:"Просветили галактику"
+
+
+
+
+#Megastructures
+  coex_enlightenment_array_0_MEGASTRUCTURE_DETAILS:"Установка Просвещения состоит из центрального кубовидного процессорного блока с прикреплёнными рёбрами, которые связываются и фокусируют сигналы от вспомогательных Церебральных Ретрансляторов. Вместе они в конечном итоге предоставят полный контроль над галактикой."
+  coex_enlightenment_array_0:"Рама Установки Просвещения"
+  coex_enlightenment_array_0_DESC:"Эта рама вмещает центральные компоненты Установки Просвещения"
+  coex_enlightenment_array_1:"Фокальные Рёбра Установки Просвещения"
+  coex_enlightenment_array_1_DESC:"Эти рёбра напрямую связываются с нашими Церебральными Ретрансляторами и усиливают их."
+  coex_enlightenment_array_2:"Центр Управления Установкой Просвещения"
+  coex_enlightenment_array_2_DESC:"В сильно защищённом центре управления мы будем отдавать команды через Установку,"
+  coex_enlightenment_array_3:"Установка Просвещения"
+  coex_enlightenment_array_3_DESC:"Установка Просвещения способна транслировать сигналы по всей галактике и вскоре предоставит нам контроль над всей разумной жизнью."
+  allow_coex_brain_relay:"§HОткрывает мегасооружение:§! Церебральный Ретранслятор"
+  coex_brain_relay_0:"Место для Церебрального Ретранслятора"
+  coex_brain_relay_0_DESC:"Станция-строительная площадка служит базой для будущего строительства Церебрального Ретранслятора."
+  coex_brain_relay_0_MEGASTRUCTURE_DETAILS:"Церебральный Ретранслятор, способный влиять на умы всех разумных видов. Затронет ближайшую чужую колонию в пределах 10 прыжков в империи, которая ещё не находится под влиянием другого Церебрального Ретранслятора."
+  coex_brain_relay_1:"Церебральный Ретранслятор"
+  coex_brain_relay_1_DESC:"Этот Церебральный Ретранслятор позволяет нам влиять на чужие разумы."
+
+
+  coex_brain_relay_no_federation_0:"Место для Церебрального Ретранслятора"
+  coex_brain_relay_no_federation_0_DESC:"Станция-строительная площадка служит базой для будущего строительства Церебрального Ретранслятора."
+  coex_brain_relay_no_federation_0_MEGASTRUCTURE_DETAILS:"Церебральный Ретранслятор, способный влиять на умы всех разумных видов. Затронет ближайшую чужую колонию в пределах 10 прыжков в империи, которая ещё не находится под влиянием другого Церебрального Ретранслятора"
+  coex_brain_relay_no_federation_1:"Церебральный Ретранслятор"
+  coex_brain_relay_no_federation_1_DESC:"Этот Церебральный Ретранслятор позволяет нам влиять на чужие разумы."
+
+  mod_coex_brain_relay_megastructures_produces_mult:"£coex_mental_authority£ $coex_mental_authority$ от Церебральных Ретрансляторов"
+  coex_brain_relay_megastructures:"Церебральные Ретрансляторы"
+
+  #Espionage
+  coex_operation_need_brain_relay:"Эта операция требует, чтобы цель находилась под влиянием Церебрального Ретранслятора."
+
+
+  coex_operation_force_truce:"Принудить к перемирию"
+  coex_operation_force_truce_desc:"Навязать перемирие целевой империи"
+  coex_operation_force_truce_on_success:"$IF_SUCCESSFUL|E$\nДарует перемирие на 10 лет между нами и целью."
+  #Force truce
+  coex_operation.101.name:"Принудить к перемирию"
+  coex_operation.101.desc:"Мы поместили ключевых военных лидеров под воздействие нашего Церебрального Ретранслятора."
+  coex_operation.102.name:"Принудить к перемирию"
+  coex_operation.102.desc:"Наши оперативники распространили различные формы пропаганды мира по всей территории §Y[Target.GetName]§!."
+  coex_operation.103.name:"Принудить к перемирию"
+  coex_operation.103.desc:"Военные лидеры убеждают центральное правительство способствовать миру между нами."
+  coex_operation.104.name:"Принудить к перемирию"
+  coex_operation.104.desc:"Они согласились на безоговорочное перемирие на следующие 10 лет. Наступит мир."
+
+  coex_operation_build_relay:"Установить Церебральный ретранслятор"
+  coex_operation_build_relay_desc:"Мы расширим наше влияние посредством строительства нового Церебрального ретранслятора."
+  coex_operation_build_relay_on_success:"$IF_SUCCESSFUL|E$"
+  coex_operation.301.name:"Установить Церебральный ретранслятор"
+  coex_operation.301.desc:"Наш [GetEnvoy] прибыл для начала обсуждения нового строительного проекта."
+  coex_operation.302.name:"Установить Церебральный ретранслятор"
+  coex_operation.302.desc:"С красноречием и продуманными наглядными пособиями наш [GetEnvoy] представил идею строительства спутника для повышения эффективности связи по всей галактике."
+  coex_operation.303.name:"Установить Церебральный ретранслятор"
+  coex_operation.303.desc:"Ничего не подозревая, они согласились позволить нам построить Церебральный ретранслятор в их империи. Нам потребуется найти подходящую систему."
+  coex_operation.310.name:"Ретранслятор установлен"
+  coex_operation.310.desc:"Мы успешно договорились об административном контроле над ничем не примечательной системой и начали строительство Церебрального ретранслятора."
+  coex_operation.311.name:"Операция провалена"
+  coex_operation.311.desc:"Мы не смогли найти подходящей системы для Церебрального ретранслятора. Мы можем попробовать снова позднее."
+  coex_operation.320.name:"Спутник установлен"
+  coex_operation.320.desc:"Мы согласились позволить §Y[Root.Owner.GetName]§! построить спутник связи в незначительной системе для улучшения галактической связи."
+
+
+  coex_operation_encourage_subjugation:"Получить верность"
+  coex_operation_encourage_subjugation_desc:"Мы убедим их принять нашу власть."
+  coex_operation_encourage_subjugation_on_success:"$IF_SUCCESSFUL|E$"
+  coex_operation.401.name:"Получить верность"
+  coex_operation.401.desc:"Церебральный ретранслятор идентифицировал §Y[coex_subjugation_target_leader.Owner.GetAdj] [coex_subjugation_target_leader.GetTitle] [coex_subjugation_target_leader.GetName]§! как перспективную цель для манипуляции."
+  coex_operation.402.name:"Получить верность"
+  coex_operation.402.desc:"§Y[coex_subjugation_target_leader.GetTitle] [coex_subjugation_target_leader.GetName]§! понимает силу нашей империи и выгоды присоединения к нам."
+  coex_operation.403.name:"Получить верность"
+  coex_operation.403.desc:"С помощью [coex_subjugation_target_leader.GetName] и нашего Ретранслятора в их империи вспыхнуло народное движение, требующее от правительства подчиниться нашей империи."
+
+  coex_operation.411.name:"Предложение о подчинении"
+  coex_operation.411.desc:"Недавно возникла новая кампания. Ее члены утверждают, что мы слишком слабы, чтобы выжить самостоятельно, и что нам было бы лучше стать вассалами §Y[coex_subjugator.GetName]§!. Происхождение этого движения неизвестно, и неясно, была ли замешана нечестная игра."
+  coex_operation.411.a:"Сопротивляться подчинению"
+  coex_operation.411.b:"Принять подчинение"
+
+  coex_operation_subject:"Не может быть субъектом другой империи"
+
+#Events
+  coexistence_chain:"Протокол сосуществования"
+  coexistence_chain_title:"Протокол сосуществования"
+  coexistence_chain_desc:"Хаос индивидуальности неустойчив. Мы принесем прочный мир через контроль."
+  coexistence_level_reached:"Достигнут уровень кризиса"
+
+  coex_crisis.3001.desc.target:"Наш Ретранслятор успешно влияет на §Y[coex_relay_target.GetName]§!."
+  coex_crisis.3001.desc.no_target:"Нет иностранных колоний в радиусе действия Церебрального ретранслятора."
+  coex_crisis.3001.name:"Ретранслятор построен"
+
+
+
+
+  
+
+
+  # requires_fewer_than_x_brain_relays: "You cannot build more Cerebral Relays"
+
+  coex_crisis.1000.name:"Уровень кризиса 1"
+  coex_crisis.1000.desc:"В нашем нынешнем состоянии индивидуальной животной природы война и насилие неизбежны. Истинный мир может быть достигнут только через принудительное подчинение. Мы овладели земледелием и исследованиями, наукой и завоеваниями, теперь мы должны сосредоточиться на овладении нашим собственным миром. Церебральные ретрансляторы проложат путь к новому будущему, где мы сможем использовать наш разум во благо и дать покой той части нас, которая порождает жестокие недопонимания."
+  coex_crisis.1000.a:"Будущее — это мир."
+
+  coex_crisis.7105.name:"Уровень кризиса 2"
+  coex_crisis.7105.desc:"Продолжая наше стремление к миру, мы знаем, что должны принимать трудные решения ради высшего блага. Наши Церебральные ретрансляторы активны и усердно работают для будущего прогресса. Мы создаем изящную технологию Массива Просвещения, чтобы увеличить мощь ретрансляторов. По мере того, как другие империи попадают под их воздействие, мир распространяется, как восход солнца над спящим миром. Мы стремимся не завоевывать, а объединять. Как свет от фонаря в темном углу, мы просвещаем далекие уголки галактики, устраняя тени."
+  coex_crisis.7105.a:"Да будет свет."
+
+  coex_crisis.7110.name:"Уровень кризиса 3"
+  coex_crisis.7110.desc:"Теперь мы улучшили и без того впечатляющий Массив Просвещения. Это знаменует собой ключевой момент в нашей миссии по обеспечению прочного мира. Благодаря мягким внушениям мысли насилие заменяется гармонией и покоем, в которых так отчаянно нуждается наш мир. Этот мир, сконструированный и прочный, освобождает общество от хаоса неуправляемой индивидуальности. С каждым чуждым разумом, приведенным в соответствие, мы приближаемся к будущему, которое мы себе представляли."
+  coex_crisis.7110.a:"Гармония согласия прекрасна."
+
+  coex_crisis.7115.name:"Уровень кризиса 4"
+  coex_crisis.7115.desc:"Наш Массив Просвещения был снова улучшен. Мы увеличили нашу мощь и теперь можем склонять целые империи к нашей благожелательной цели галактического мира."
+  coex_crisis.7115.a:"Мы ведем с благожелательностью."
+
+  coex_crisis.7120.name:"Уровень кризиса 5"
+  coex_crisis.7120.desc:"Заключительные обновления завершены. Наш Массив Просвещения начинает нацеливаться на всю жизнь в галактике. Мы близки к нашей цели, но нам нужно оставаться бдительными. Другие империи, опасаясь перемен и возможностей, могут начать беспокоиться."
+  coex_crisis.7120.a:"Последний конфликт близок."
+
+  coex_crisis.7200.name:"Церебральный ретранслятор захвачен"
+  coex_crisis.7200.desc:"Мы захватили Церебральный ретранслятор, построенный §Y[coex_relay_builders.GetName]§!. Его уничтожение освободит пострадавшую империю от его влияния."
+  coex_crisis.7200.A:"Он должен быть уничтожен"
+  coex_crisis.7210.name:"Церебральный ретранслятор уничтожен"
+  coex_crisis.7210.desc:"Церебральный ретранслятор, построенный §Y[coex_relay_builders.GetName]§!, был уничтожен. Свободные от его влияния, мы теперь видим, как легко нами манипулировали."
+  coex_crisis.7210.b:"Это непростительно."
+  coex_crisis.7210.a:"Мы отомстим."
+
+  coex_crisis.7220.name:"Церебральный ретранслятор уничтожен"
+  coex_crisis.7220.desc:"Наш Церебральный ретранслятор в системе §Y[coex_destroyed_relay_system.GetName]§! был уничтожен. Пострадавшая империя теперь свободна от его влияния."
+  coex_crisis.7220.a:"Печально."
+  coex_crisis.7300.name:"Массив Просвещения"
+  coex_crisis.7300.desc:"Время пришло. Мы должны начать подготовку к запуску Массива Просвещения и контролю над неуправляемыми индивидуумами, составляющими эту галактику."
+
+
+
+
+
+
+
+
+###Operations
+
+
+
+
+  coex_operation_already_attempted_subjugation:"Эта операция уже была предпринята в отношении этой империи."
+
+  coex_affected_by_brain_relay_0:"Под воздействием Церебрального ретранслятора (Стадия 1)"
+  coex_affected_by_brain_relay_1:"Под воздействием Церебрального ретранслятора (Стадия 2)"
+  coex_affected_by_brain_relay_2:"Под воздействием Церебрального ретранслятора (Стадия 3)"
+  coex_affected_by_brain_relay_3:"Под воздействием Церебрального ретранслятора (Стадия 4)"
+
+
+  coex_brain_relay_removed:"Освобожден от Церебрального ретранслятора"
+
+  # mod_coex_brain_relay_limit_add: "REPLACE_ME"
+  
+  coex_approach_continue:"Продолжить"
+  coex_approach_continue_effect:"Направить галактику к просвещению."
+
+
+
+#Situations
+  coex_situation_crisis_subjugation:"Ментальное Подчинение"
+  coex_situation_crisis_subjugation_type:"Ментальное Подчинение"
+  coex_situation_crisis_subjugation_desc:"Большая группа нашего населения требует, чтобы мы стали вассалами §Y[coex_subjugator.GetName]§!. Происхождение этого движения неизвестно, но подозрительно."
+  coex_string_situation_pathetic:"Мы жалки по сравнению с их империей."
+  coex_string_situation_inferior:"Наша империя уступает их."
+  coex_string_situation_superior:"Наша империя превосходит."
+  coex_string_situation_overwhelming:"Наша империя обладает подавляющим превосходством."
+  coex_situation_crisis_subjugation_monthly_change_tooltip:"Прогресс этой §YСитуации§! зависит от выбранного нами §YПодхода§!. Если у нас закончится £influence£ влияние, мы не сможем убедить наше население сопротивляться §!правлению [coex_subjugator.GetAdj]."
+  coex_situation_subjugation_subjugated_tooltip:"Подчинение"
+  coex_situation_subjugation_finish_tooltip:"Свобода"
+  coex_approach_resist:"Сопротивляться"
+  coex_approach_resist_effect:"Убедить наше население, что мы сильны сами по себе."
+  coex_approach_accept:"Принять"
+  coex_approach_accept_effect:"Подчиниться §Y[coex_subjugator.GetName]§! – это наилучший вариант действий."
+
+  coex_situation_crisis_enlightenment:"Истинное Просвещение"
+  coex_situation_crisis_enlightenment_type:"Истинное Просвещение"
+  coex_situation_crisis_enlightenment_desc:"Наконец-то, Массив Просвещения завершен. Скоро галактика будет свободна от хаоса индивидуальности и раздоров разногласий. Только мы можем принести истинный мир в галактику."
+  coex_situation_crisis_enlightenment_monthly_change_tooltip:"Прогресс этой §YСитуации§! зависит от поддержания контроля над Массивом Просвещения. Если мы его потеряем, прогресс остановится, пока мы не восстановим контроль."
+  coex_situation_enlightenment_tooltip:"Просвещение"
+  coex_approach_recover_array:"Вернуть Массив Просвещения"
+  coex_approach_recover_array_effect:"Мы должны вернуть наш Массив Просвещения."
+
+  coex_situation.103.name:"Ментальное Подчинение"
+  coex_situation.103.desc:"Мы были подчинены §Y[Owner.Overlord.GetName]§!. Теперь ясно, что это единственный путь для нашей империи."
+  coex_situation.104.name:"Подчинение Отражено"
+  coex_situation.104.desc:"С огромным усилием мы сопротивлялись подчинению. Это великая победа для нашей империи."
+  coex_situation.104.a:"Нас не победить так просто."
+
+  
+  coex_situation.303.name:"Просвещение"
+  coex_situation.303.desc:"Мы совершили то, что не удавалось никому прежде: объединили галактику, положили конец хаосу индивидуального мышления, просветили массы с помощью ментального внушения и принесли прочный мир."
+  coex_situation.303.a:"Наконец-то настанет истинный мир."
+  coex_situation.305.name:"Просвещение"
+  coex_situation.305.desc:"Теперь мы часть лучшей галактики. Зачем мы вообще сопротивлялись? Массив Просвещения совершил невозможное и принес всем нам прочный мир и гармонию."
+  coex_situation.305.a:"Нет..."
+
+
+  coex_situation.110.name:"Получить верность"
+  coex_situation.110.desc:"Подчинили §Y[coex_subjugation_target.GetName]§!."
+  coex_situation.111.name:"Получить верность"
+  coex_situation.111.desc:"§Y[coex_subjugation_target.GetName]§! сопротивлялся подчинению."
+

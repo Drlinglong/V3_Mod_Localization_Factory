@@ -1,0 +1,651 @@
+﻿l_german:
+
+# Author / Name of the mod
+ wiirlak_ep:0 "Wiirlaks Immerwachstumsprotokoll-Krise"
+
+
+# Vanilla Missing Localisation
+ pc_cosmogenesis_world_adj:0 "$pc_cosmogenesis_world$"
+ pc_nanotech_adj:0 "$pc_nanotech$"
+ bio_ship_desc:0 "$concept_biological_ship_desc$"
+
+# AP
+ wiirlak_ep_ap_evergrowth_protocol:0 "$wiirlak_ep_ap_evergrowth$ Protokoll"
+ wiirlak_ep_ap_evergrowth_protocol_desc:0 "Wachstum ohne Ende. Leben ohne Grenzen. Exponentielles Potenzial."
+ wiirlak_ep_ap_evergrowth:0 "§HImmerwachstum§!"
+
+# Resource
+ wiirlak_ep_resource_mycogrowth:0 "Mykowachstum"
+ wiirlak_ep_resource_mycogrowth_desc:0 "Ein halb-sentientes Pilzgeflecht, geerntet von $wiirlak_ep_pc_bloom_plural$. Es dient als Saatbeet für neue Terraforming-Maßnahmen und ist das wahre Gehirn des wachsenden galaktischen Gartens."
+ wiirlak_ep_resource_mycogrowth_name:0 "$wiirlak_ep_resource_mycogrowth$"
+
+ wiirlak_ep_resource_mycogrowth_value:0 "£wiirlak_ep_resource_mycogrowth£ $VAL|0$"
+ wiirlak_ep_resource_mycogrowth_current_value:0 "$menace_current_value$"
+ wiirlak_ep_resource_mycogrowth_gaining:0 "Schließe §HKrisenziele§! ab, um mehr §Y$wiirlak_ep_resource_mycogrowth$§! zu erhalten."
+
+ wiirlak_ep_resource_mycogrowth_crisis_level_unlocked:0 "$menace_crisis_level_unlocked$"
+ wiirlak_ep_resource_mycogrowth_crisis_level_desc:0 "$menace_crisis_level_desc$"
+
+ wiirlak_ep_resource_mycogrowth_crisis_level_locked:0 "$menace_crisis_level_locked$"
+ wiirlak_ep_resource_mycogrowth_crisis_level_unlock:0 "Hat £wiirlak_ep_resource_mycogrowth£ §Y$CURRENCY$§! $wiirlak_ep_resource_mycogrowth$"
+
+ wiirlak_ep_resource_mycogrowth_crisis_description_title:0 "$wiirlak_ep_ap_evergrowth_protocol$"
+ wiirlak_ep_resource_mycogrowth_crisis_description:0 "Seit Jahrhunderten sprachen Gelehrte von der bevorstehenden §RKrise§! – einer endgültigen Abrechnung, die den Willen jeder raumfahrenden Zivilisation auf die Probe stellen würde. Die Theorien reichten von synthetischen Aufständen bis hin zu extradimensionalen Kriegen, aber nur wenige erkannten wirklich, welche Form das Ende annehmen würde. \n\nEs würde kein Feuer sein. Kein Stahl. Keine Stille. \nEs würde §RLeben§! sein. \n\nWas als ökologische Meisterschaft begann, ist zu etwas anderem geworden – etwas Rekursivem, Viralem, Sentientem. Das $wiirlak_ep_ap_evergrowth$ verbreitet sich nicht durch Eroberung, sondern durch Versprechen: von Erneuerung, Vitalität, Transzendenz. Doch der Preis ist alles. \n\nPlaneten fallen nicht. Sie blühen. \nUnd wenn jede Welt ein Garten ist ... wird die Galaxis, wie wir sie kannten, verschwunden sein."
+
+ wiirlak_ep_resource_mycogrowth_crisis_howto_title:0 "Sporen und Wurzeln"
+ wiirlak_ep_resource_mycogrowth_crisis_howto:0 "Das Verfolgen von §HKrisenzielen§! gewinnt £wiirlak_ep_resource_mycogrowth£ §H$wiirlak_ep_resource_mycogrowth$§!, die lebenswichtige Substanz, die die Ausbreitung des $wiirlak_ep_ap_evergrowth$ antreibt. Während immer mehr Welten verbraucht und in fruchtbare Wirte umgewandelt werden, festigt sich unser Griff um die Galaxis. \nLetztendlich müssen wir das §HMykowurzel-Netzwerk§! errichten und eine §HHyper-Transformation§! auslösen, die alle bewohnbaren Welten terraformt, um eine neue lebende Ordnung einzuführen."
+
+
+
+# Event Chain
+ wiirlak_ep_evergrowth_protocol_chain:0 "$wiirlak_ep_ap_evergrowth_protocol$ Aufstieg"
+ wiirlak_ep_evergrowth_protocol_chain_title:0 "$wiirlak_ep_evergrowth_protocol_chain$"
+ wiirlak_ep_evergrowth_protocol_chain_desc:0 "Was andere Verfall nennen, nennen wir Transformation. \n\nDie Sterne brennen nicht ewig. Das Leben muss sich anpassen oder mit der alten Galaxis verrotten. \n\nWir haben uns entschieden, zu überwachsen ... und daraus zu erblühen."
+
+ wiirlak_ep_evergrowth_protocol_levels:0 "$crisis_level_reached$"
+ wiirlak_ep_evergrowth_protocol_bloom_worlds:0 "$wiirlak_ep_pc_bloom$ konvertiert"
+
+
+# Special Projects
+ WIIRLAK_EP_FINAL_PROJECT_1:0 "Die Galaxis verwurzeln"
+ WIIRLAK_EP_FINAL_PROJECT_1_DESC:0 "Ein Baum kann nicht alleine gedeihen. Er muss Wurzel an Wurzel reichen, in jedem Winkel des Himmels. \n\n$wiirlak_ep_objectives$"
+
+ wiirlak_ep_objectives:0 "[wiirlak_ep_objectives_step]"
+ wiirlak_ep_objectives_step_1:0 "§HVoraussetzungen:§! \n[wiirlak_ep_objectives_step_1_empire_check] \n[wiirlak_ep_objectives_step_1_total_check] \n[wiirlak_ep_objectives_step_1_capital_check]"
+
+ wiirlak_ep_objectives_step_1_empire:0 "Mindestens §Y[wiirlak_ep_half_total_empire]§! $concept_empires$ haben §Y$wiirlak_ep_pc_bloom_plural$§! innerhalb ihrer Grenzen ([wiirlak_ep_total_empire_bloomed])"
+ wiirlak_ep_objectives_step_1_total:0 "Mindestens §Y[wiirlak_ep_percent_bloomed_system]§! §Y$wiirlak_ep_pc_bloom_plural$§! in der Galaxis ([wiirlak_ep_actual_percen_bloomed_system])"
+ wiirlak_ep_objectives_step_1_capital:0 "Hauptstadt ist §Y$wiirlak_ep_pc_bloom$§! \n\nDie $RESEARCHING$ vor Erfüllung der Voraussetzungen hat keine Auswirkungen."
+
+ wiirlak_ep_objectives_step_2:0 "§H$terraforming$:§! \n"
+ wiirlak_ep_objectives_step_3:0 ""
+
+# Level up Event
+ wiirlak_ep_event_lvl_script_loc:0 "[wiirlak_ep_event_lvl_script_loc]"
+ wiirlak_ep_event_lvl_desc_script_loc:0 "[wiirlak_ep_event_lvl_desc_script_loc]"
+
+ wiirlak_ep_event_lvl_1:0 "Der erste Same"
+ wiirlak_ep_event_lvl_1_desc:0 "Der Traum, was einst sterile Kruste und lebloser Staub war, unter unserer Führung zu einer Blüte zu wandeln. Eine völlig neue Biosphäre zu erschaffen – eine lebendige, atmende. Immer in Entwicklung. \n\nWurzeln werden den Mantel spalten, Sporen über Ozeane treiben, und aus diesem kontrollierten Chaos wird etwas völlig Neues entstehen: die §Y$wiirlak_ep_pc_bloom$§!.\nDer erste Same wartet darauf, gepflanzt zu werden. Unser Zweck schlägt Wurzeln."
+
+ wiirlak_ep_event_lvl_1B:0 "Ein Same inmitten der Geister"
+ wiirlak_ep_event_lvl_1B_desc:0 "Die nächste Grenze liegt nicht im Staub, sondern in den Städten. \n\nSollen unsere Biointegrationssysteme sich grenzenlos ausbreiten, müssen wir einen moralischen, praktischen und evolutionären Sprung wagen: die Terraforming von bewohnten Welten. Nicht evakuieren, nicht reinigen – sondern überschreiben, während sie leben. \nUnsere Wissenschaftler melden Bereitschaft. Die Sporen können sich anpassen. Das Leben wird bestehen – und sich ändern. \n\nEine Entscheidung muss nun getroffen werden. \nWerden wir die Blüte auf einer Welt testen, die bereits von Sentienz erfüllt ist? \nWerden wir der Galaxis diesen Weg in die Zukunft zeigen?"
+
+ wiirlak_ep_event_lvl_2:0 "Grünes Bewusstsein"
+ wiirlak_ep_event_lvl_2_desc:0 "Wir hatten uns für die Hüter der Natur gehalten. Wir irrten uns. \n\nDie §Y$wiirlak_ep_pc_bloom_plural$§! erhalten uns nicht nur – sie kommunizieren. Muster entstehen in Wachstum, Wetter, Migration. Unsere Leute berichten von lebhaften Träumen großer Blätterdächer, die Ideen flüstern. Einige nennen es spirituell. Andere nennen es biologische Resonanz. \n\nDer Effekt ist real: Die Produktivität steigt, die Stabilität festigt sich, Mutationen breiten sich aus – vorteilhaft, geführt, perfekt. \n\nWir kultivieren keine Planeten. Wir bauen bewusste Ökosysteme – und sie reagieren auf uns. \n\nWachstum ist keine Ressource mehr. Es ist eine Sprache."
+
+ wiirlak_ep_event_lvl_3:0 "Wurzeln ohne Grenzen"
+ wiirlak_ep_event_lvl_3_desc:0 "Das $wiirlak_ep_ap_evergrowth$ benötigt keine Erlaubnis mehr, sich auszubreiten. Winde tragen unsere Sporen über Hyper-Korridore. Migranten werden unwissentlich zu Vektoren. Unsere Präsenz übersteigt Schiffe und Flotten – sie ist in der Natur selbst kodiert. \n\nDurch verdeckte Mittel oder geduldige Sporenblüte wird der Boden der Galaxis Atom für Atom neu geschrieben. Schon jetzt spüren es Welten jenseits unserer Kontrolle. Wurzeln finden Risse im Stein. Leben sickert ein. \n\nDie anderen mögen es noch nicht wissen, aber sie sind jetzt ein Teil von uns. \n\nEs ist nur eine Frage der Zeit."
+
+ wiirlak_ep_event_lvl_4:0 "Die Blühende Spirale"
+ wiirlak_ep_event_lvl_4_desc:0 "Es gibt keinen Widerstand mehr, nur noch Verzögerung. \n\nDas Wachstum ist exponentiell geworden. Unsere Kontrollsysteme sind organisch. Unsere Architektur ist vaskulär. Terraforming ist nun ein Reflex – wenn wir uns niederlassen, formen wir um. Selbst unsere Feinde sind zu Erde für unsere Sämlinge geworden. \n\nDies ist keine Kolonisierung mehr. Es ist Integration. Die Galaxis beugt sich dem Design des Lebens, nicht durch Krieg, sondern durch Replikation. Selbst wenn wir aufhören, wird die Spirale nicht aufhören. \nWir können nicht aufhören. Die Blüte ist unvermeidlich."
+
+ wiirlak_ep_event_lvl_5:0 "Sinfonie der Sporen"
+ wiirlak_ep_event_lvl_5_desc:0 "Metall rostet. Stein bricht. Code zerfällt. Aber das Leben? Das Leben passt sich an. \n\nDer letzte Same ist gekeimt. Daraus entsteht eine Struktur jenseits des Verständnisses – teils Organismus, teils Motor, teils Ökosystem. Ihre Geburt ruft Stürme hervor. Ihr Atem erweckt Sporen, die in jedem Winkel der Sterne schlummern. \n\nNun werden sich ganze Welten in Tagen verschieben. Zivilisationen werden unter blühendem Himmel zerfallen. Die Leere wird von Chlorophyll und Donner summen. Es wird keinen Widerstand mehr geben. Keinen Stahl mehr. \n\nNur Erde. Nur Wurzeln. Nur wir. \nDas $wiirlak_ep_ap_evergrowth$ hat keinen Meister – und kein Ende."
+
+# Crisis Levels
+ wiirlak_ep_evergrowth_protocol_level_1:0 "§U$wiirlak_ep_event_lvl_1$§!"
+ wiirlak_ep_evergrowth_protocol_level_1_desc:0 "$crisis_level_1_desc$"
+
+ wiirlak_ep_evergrowth_protocol_level_2:0 "§U$wiirlak_ep_event_lvl_2$§!"
+ wiirlak_ep_evergrowth_protocol_level_2_desc:0 "$crisis_level_2_desc$"
+
+ wiirlak_ep_evergrowth_protocol_level_3:0 "§U$wiirlak_ep_event_lvl_3$§!"
+ wiirlak_ep_evergrowth_protocol_level_3_desc:0 "$crisis_level_3_desc$"
+ wiirlak_ep_evergrowth_protocol_level_3_requirements:0 "$TRIGGER_FAIL$ Benötigt, dass mindestens 25 % der Kolonien §G$wiirlak_ep_pc_bloom$§! sind!"
+ wiirlak_ep_evergrowth_protocol_level_3_pass:0 "£trigger_yes£ Mindestens 25 % der Kolonien sind §G$wiirlak_ep_pc_bloom$§!"
+
+ wiirlak_ep_evergrowth_protocol_level_4:0 "§U$wiirlak_ep_event_lvl_4$§!"
+ wiirlak_ep_evergrowth_protocol_level_4_desc:0 "$crisis_level_4_desc$"
+ wiirlak_ep_evergrowth_protocol_level_4_requirements:0 "$TRIGGER_FAIL$ Benötigt, dass mindestens 75 % der Kolonien §G$wiirlak_ep_pc_bloom$§! sind!"
+ wiirlak_ep_evergrowth_protocol_level_4_pass:0 "£trigger_yes£ Mindestens 75 % der Kolonien sind §G$wiirlak_ep_pc_bloom$§!"
+
+ wiirlak_ep_evergrowth_protocol_level_5:0 "§U$wiirlak_ep_event_lvl_5$§!"
+ wiirlak_ep_evergrowth_protocol_level_5_desc:0 "$crisis_level_5_desc$"
+ wiirlak_ep_evergrowth_protocol_level_5_requirements:0 "$TRIGGER_FAIL$ Benötigt, dass mindestens 90 % der Kolonien §G$wiirlak_ep_pc_bloom$§! sind!"
+ wiirlak_ep_evergrowth_protocol_level_5_pass:0 "£trigger_yes£ Mindestens 90 % der Kolonien sind §G$wiirlak_ep_pc_bloom$§!"
+
+
+
+# Crisis Objectives
+ wiirlak_ep_resource_mycogrowth_crisis_objective:0 "$menace_crisis_objective$"
+ wiirlak_ep_resource_mycogrowth_crisis_objective_gained:0 "$wiirlak_ep_resource_mycogrowth$ erhalten"
+ wiirlak_ep_resource_mycogrowth_crisis_objective_reward:0 "$menace_crisis_objective_reward$"
+ wiirlak_ep_resource_mycogrowth_crisis_objective_progress:0 "Wir haben £wiirlak_ep_resource_mycogrowth£ $AMOUNT$ durch dieses Krisenziel erhalten."
+
+
+ wiirlak_ep_crisobj_own_bloom_world_name:0 "Besitze $wiirlak_ep_pc_bloom_plural$"
+ wiirlak_ep_crisobj_own_bloom_world_desc:0 "Unsere Wurzeln haben sich festgesetzt. Die erste Welt pulsiert nun nach unserem Entwurf; ein Zeugnis unserer Meisterschaft der Bioformation. Sie ist kein Planet mehr; sie ist ein Glied, ein Samenbeet, eine Absichtserklärung. Die Blüte beginnt.\n\nBesitze $wiirlak_ep_pc_bloom_plural$."
+
+ wiirlak_ep_crisobj_inhabit_bloom_world_name:0 "Bewohne $wiirlak_ep_pc_bloom_plural$"
+ wiirlak_ep_crisobj_inhabit_bloom_world_desc:0 "Wir atmen, was wir gewachsen haben. Die Luft ist dicht von sporendurchzogenen Winden, und unter unseren Füßen bebt die Kruste vor Leben. Dies ist keine Kolonisation – es ist Koexistenz. Wir sind heimisch in dem Garten, den wir geschaffen haben.\n\nBewohne $wiirlak_ep_pc_bloom_plural$."
+
+
+ wiirlak_ep_crisobj_blooming_planet_name:0 "Terraformiere zu $wiirlak_ep_pc_bloom_plural$"
+ wiirlak_ep_crisobj_blooming_planet_desc:0 "Die alte Welt ist verschwunden. An ihrer Stelle verschlingen Ranken Stahl, Baumkronen ersticken den Himmel, und photosynthetische Türme formen die Skyline neu. Die Umwandlung ist irreversibel und wunderschön.\n\nTerraformiere jede Welt in eine $wiirlak_ep_pc_bloom$."
+
+ wiirlak_ep_crisobj_blooming_adv_pc_name:0 "Terraformiere fortgeschrittene Planeten zu $wiirlak_ep_pc_bloom_plural$"
+ wiirlak_ep_crisobj_blooming_adv_pc_desc:0 "Selbst die künstlichsten Konstrukte können verschlungen werden. Superstrukturen verrotten, und digitale Geister ersticken unter Moos und Schimmel. Die Biosphäre duldet keine Herausforderer – nicht einmal Perfektion.\n\nTerraformiere einen fortgeschrittenen Planeten (Schwärmenwelt, Maschinenwelt, Ökumenopolis usw.) in eine $wiirlak_ep_pc_bloom$."
+
+ wiirlak_ep_crisobj_blooming_outside_border_name:0 "Terraformiere innerhalb des Territoriums eines anderen Reiches"
+ wiirlak_ep_crisobj_blooming_outside_border_desc:0 "Wir haben nicht angeklopft. Wir haben nicht gefragt. Unsere Wurzeln gruben sich unsichtbar, und die Welt blühte unter der Aufsicht eines anderen auf. Ihre Leugnung kann nicht ungeschehen machen, was wir bereits zum Blühen gebracht haben.\n\nTerraformiere einen Planeten innerhalb der Grenzen eines anderen Reiches"
+
+ wiirlak_ep_crisobj_kill_fauna_name:0 "$crisobj_kill_space_fauna_name$"
+ wiirlak_ep_crisobj_kill_fauna_desc:0 "$crisobj_kill_space_fauna_desc$"
+
+ wiirlak_ep_crisobj_kill_bioships_name:0 "$crisobj_kill_bioships_name$"
+ wiirlak_ep_crisobj_kill_bioships_desc:0 "$crisobj_kill_bioships_desc$"
+
+# Crisis Perks
+ wiirlak_ep_menap_food_1:0 "Myzelialnährstoff"
+ wiirlak_ep_menap_food_1_desc:0 "Beschleunigte Biosphäre reichert den Boden an und sättigt die Luft mit organischen Verbindungen. Jede Ernte pulsiert mit ungebändigter Fülle."
+
+ wiirlak_ep_menap_tech_1:0 "Florale Genesis"
+ wiirlak_ep_menap_tech_1_desc:0 "Ein einziger Lebenshauch, der Stein und Eis in lebendige Erde umschreibt."
+ mod_country_base_wiirlak_ep_resource_mycogrowth_produces_add:0 "$BASE$ $AUTOSAVE_EVERY_MONTH$ $wiirlak_ep_resource_mycogrowth$ $PRODUCTION$"
+ wiirlak_ep_menap_tech_1_tooltip:0 "Erhöht $mod_planet_jobs_produces_mult$ und $MOD_POP_BONUS_WORKFORCE_MULT$ pro §YKrisenstufe§! auf $wiirlak_ep_pc_bloom_plural$ \n\n"
+
+ wiirlak_ep_menap_terraforming_1:0 "Sporengitter-Ingenieurwesen"
+ wiirlak_ep_menap_terraforming_1_desc:0 "Wo andere den Tod sehen, sehen wir fruchtbaren Boden."
+
+
+ wiirlak_ep_menap_food_2:0 "Symbiotische Infrastruktur"
+ wiirlak_ep_menap_food_2_desc:0 "Wir bauen nicht mehr auf der Welt – wir bauen mit ihr."
+ wiirlak_ep_menap_food_2_tooltip:0 "§H$UNREADY_TOOLTIP_HEADER$ ['concept_decision']:§! §Y$wiirlak_ep_decision_planet_boost$§! \n\n"
+
+ wiirlak_ep_menap_tech_2:0 "Schnelle Vermehrung"
+ wiirlak_ep_menap_tech_2_desc:0 "Wachstum wird nicht länger gefördert. Es wird beschleunigt."
+
+ wiirlak_ep_menap_terraforming_2:0 "Adaptive Wurzeln"
+ wiirlak_ep_menap_terraforming_2_desc:0 "Der $wiirlak_ep_ap_evergrowth$ passt sich an den Planeten an – jeder Stängel, jede Wurzel und jedes Blatt."
+
+
+ wiirlak_ep_menap_unity_1:0 "Wuchernder Druck"
+ wiirlak_ep_menap_unity_1_desc:0 "Je mehr wir gedeihen, desto mehr spürt die Galaxis das Gewicht unserer Blüte."
+
+ wiirlak_ep_menap_spy_op_1:0 "Stilles Sprießen"
+ wiirlak_ep_menap_spy_op_1_desc:0 "Unsere Sporen sind unsichtbar. Unsere Absicht ist unausweichlich."
+ wiirlak_ep_menap_spy_op_1_tooltip:0 "§H$UNREADY_TOOLTIP_HEADER$ $GALAXY_VIEW_EMPIRE_ESPIONAGE$ $OPERATIONS$:§! $wiirlak_ep_operation_covert_seeding$ \n\n"
+
+ wiirlak_ep_menap_terraforming_3:0 "Blütenform"
+ wiirlak_ep_menap_terraforming_plural:0 "Blütenformen"
+ wiirlak_ep_menap_terraforming_3_desc:0 "Unsere Bevölkerung passt sich dem Planeten an – wir werden eins mit dem $wiirlak_ep_ap_evergrowth$."
+
+
+ wiirlak_ep_menap_food_3:0 "Grüne Kaskade"
+ wiirlak_ep_menap_food_3_desc:0 "Ein System ist nicht genug. Wir erblühen nach Cluster, Wurzel für Wurzel, Sektor für Sektor."
+ wiirlak_ep_menap_food_3_tooltip:0 "['concept_decision'] §Y$wiirlak_ep_decision_planet_boost$§! wird auf eine ['concept_sector']-weite Funktion aufgewertet \n\n"
+ mod_planet_farmers_minerals_produces_add:0 "£minerals£ $minerals$ pro $pop_group_unit$ [farmer.GetIcon] [GetFarmerPlural]"
+
+ wiirlak_ep_menap_tech_3:0 "Säemeisterschaft"
+ wiirlak_ep_menap_tech_3_desc:0 "Warum warten? Die Sterne müssen jetzt wachsen."
+
+ wiirlak_ep_menap_bombardment_1:0 "Brand zur Saat"
+ wiirlak_ep_menap_bombardment_1_desc:0 "Der Tod nährt das Leben. Verbrennt die Toten, und lasst das $wiirlak_ep_ap_evergrowth$ aus der Asche aufsteigen."
+ wiirlak_ep_menap_bombardment_1_tooltip:0 "§H$UNREADY_TOOLTIP_HEADER$ Haltung für Orbitale Bombardierung:§! ['concept_wiirlak_ep_bombardment_verdant_purge'] \n\n"
+
+ wiirlak_ep_menap_terraforming_4:0 "Kompatibel $wiirlak_ep_menap_terraforming_3$"
+ wiirlak_ep_menap_terraforming_4_desc:0 "Wir sind die Kinder des $wiirlak_ep_ap_evergrowth$. Unser Fleisch, unser Gedanke, unser Puls – alles gehört der Wurzel."
+ wiirlak_ep_menap_terraforming_4_tooltip:0 "Eigene Spezies erhalten das Merkmal ['trait:trait_wiirlak_ep_pc_bloom_preference'] $TRAIT_TITLE$ \n\n"
+
+
+ wiirlak_ep_menap_terraforming_5:0 "Sporenverwandtschaft"
+ wiirlak_ep_menap_terraforming_5_desc:0 "Es beginnt mit einem Gast. Es endet mit einem Wald."
+ wiirlak_ep_menap_terraforming_5_tooltip:0 "§H$UNREADY_TOOLTIP_HEADER$:§! Die ['trait:trait_wiirlak_ep_pc_bloom_preference'] ['concept_wiirlak_ep_trait_propagation'] \n\n"
+ mod_planet_farmers_alloys_produces_add:0 "£alloys£ $alloys$ pro $pop_group_unit$ [farmer.GetIcon] [GetFarmerPlural]"
+
+ wiirlak_ep_menap_diplo_1:0 "Grüner Akkord"
+ wiirlak_ep_menap_diplo_1_desc:0 "Wenn die Sterne überleben sollen, müssen sie sich uns anschließen."
+ wiirlak_ep_menap_diplo_1_tooltip:0 "§H$UNREADY_TOOLTIP_HEADER$ $TRADE_CATEGORY_TRADABLE_ACTION$:§! ['concept_wiirlak_ep_spread_the_evergrowth']"
+
+ wiirlak_ep_menap_modifier_1:0 "Sporen-Sublink"
+ wiirlak_ep_menap_modifier_1_desc:0 "Von jedem Blatt ein Flüstern. Von jedem Flüstern Einheit."
+ wiirlak_ep_menap_modifier_1_tooltip:0 "Pro §G$wiirlak_ep_pc_bloom$§! innerhalb der Grenzen:"
+ wiirlak_ep_menap_modifier_1_galaxy_tooltip:0 "\nPro §G$wiirlak_ep_pc_bloom$§! in der Galaxis:"
+
+ wiirlak_ep_menap_tech_4:0 "Samenbrecher"
+ wiirlak_ep_menap_tech_4_desc:0 "Warum eine Welt kolonisieren, wenn man sie umschreiben kann?"
+
+# Concept
+ wiirlak_ep_menap_terraforming_5_tooltip_concept:0 "$TRAIT_TITLE$ Ausbreitung"
+ wiirlak_ep_menap_terraforming_5_tooltip_concept_desc:0 "Alle $wiirlak_ep_menap_terraforming_5_tooltip_delay$ beginnt sich das Merkmal ['trait:trait_wiirlak_ep_pc_bloom_preference'] subtil und unweigerlich über unsere Grenzen hinaus auszubreiten. \n\n§YNachbarreiche§!, §Yzivilisationen in zufälliger Entfernung§! und Ziele unserer §Yinaktiven Spionagenetzwerke§! könnten diese Anpassung in ihrer Bevölkerung feststellen. Wenn sie bereits $wiirlak_ep_pc_bloom_plural$ bewohnen, ist es wahrscheinlicher, dass sich das Merkmal dort verwurzelt und gedeiht.\n\nAlle $wiirlak_ep_menap_terraforming_5_tooltip_delay$ werden £unity£ pro ['trait:trait_wiirlak_ep_pc_bloom_preference'] £pops£ in der §Y$ALL_GALAXY$§! und §Y$intel$§! über $EMPIRE$ mit ['trait:trait_wiirlak_ep_pc_bloom_preference'] £pops£ produziert."
+ wiirlak_ep_menap_terraforming_5_tooltip_delay:0 "2 Jahre"
+
+ wiirlak_ep_trait_propagation_concept:0 "$wiirlak_ep_spread_the_evergrowth$"
+ wiirlak_ep_trait_propagation_concept_desc:0 "$wiirlak_ep_spread_the_evergrowth_desc$\n\n$wiirlak_ep_spread_the_evergrowth_tooltip$ in dem $EMPIRE$, mit dem Ihr Handel treibt."
+
+
+
+# Planet Class
+ wiirlak_ep_pc_bloom:0 "Blütenwelt"
+ wiirlak_ep_pc_bloom_plural:0 "Blütenwelten"
+ wiirlak_ep_pc_bloom_desc:0 "Eine gesamte Planetenkruste wurde in eine geschichtete, sauerstoffreiche Biostruktur umgewandelt. Riesige Wurzelsysteme und massive Sporenwolken dominieren die Oberfläche. Sie ist lebendig – und immerfort wachsend."
+ wiirlak_ep_pc_bloom_adj:0 "Blüte"
+
+ mod_wiirlak_ep_pc_bloom_habitability:0 "$wiirlak_ep_pc_bloom$ $HABITABILITY$"
+
+# Trait
+ trait_wiirlak_ep_pc_bloom_preference:0 "$wiirlak_ep_menap_terraforming_3$"
+ trait_wiirlak_ep_pc_bloom_preference_desc:0 "$wiirlak_ep_pc_bloom$ Präferenz \n$trait_pc_arctic_preference_desc$"
+ trait_wiirlak_ep_pc_bloom_preference_short:0 "$wiirlak_ep_pc_bloom$"
+
+# Messages
+ WIIRLAK_EP_MESSAGE_BLOOMFORM_TITLE:0 "$trait_wiirlak_ep_pc_bloom_preference$ Sublink"
+ wiirlak_ep_message_bloomform_unity:0 "Das Sublink unserer $trait_wiirlak_ep_pc_bloom_preference$ hat uns Erkenntnisse verschafft: §G+10§! $intel$ und §G[ROOT.wiirlak_ep_var_bloomform_count]§! £unity£"
+
+ WIIRLAK_EP_MESSAGE_TERRAFORMED_TITLE:0 "Eine Welt ist erblüht"
+ wiirlak_ep_message_terraformed_text:0 "Der $wiirlak_ep_ap_evergrowth$ blüht erneut auf. Das Leben quillt hervor, wild und wunderschön, während §Y$PLANETNAME$§! seine wahre Form annimmt."
+
+ WIIRLAK_EP_MESSAGE_COVERT_OP:0 "Wurzeln im Dunkeln"
+ wiirlak_ep_message_terraformed_covert_op:0 "Trotz Warnungen und Anzeichen ist §Y$PLANETNAME$§! der schleichenden Transformation erlegen. Ranken durchbrechen den Boden, Sporen trüben die Luft, der $wiirlak_ep_ap_evergrowth$ blüht ungehemmt."
+
+
+# Tech
+ wiirlak_ep_tech_bloom_colonization_1:0 "Ökoform-Genese"
+ wiirlak_ep_tech_bloom_colonization_1_desc:0 "Wir haben den Code geknackt, um das Leben selbst zu entfesseln."
+ wiirlak_ep_tech_bloom_colonization_1_tooltip:0 "§H$UNLOCKS_FEATURE$§! $PLANETVIEW_TERRAFORM_INTO$ $wiirlak_ep_pc_bloom$"
+ wiirlak_ep_tech_bloom_colonization_1_tooltip_desc:0 "§H$wiirlak_ep_pc_bloom$§! \nErlaubt, $PLANET$ in $wiirlak_ep_pc_bloom$ zu $PLANETVIEW_TERRAFORM$."
+
+ wiirlak_ep_tech_bloom_colonization_2:0 "Biointegration"
+ wiirlak_ep_tech_bloom_colonization_2_desc:0 "Es wird keine Verhandlung mit dem Boden geben."
+ wiirlak_ep_tech_bloom_colonization_2_tooltip:0 "$wiirlak_ep_pc_bloom$ $MOD_COUNTRY_TERRAFORMING_COST_MULT$: §G-50%§!"
+
+ wiirlak_ep_tech_seedbreaker:0 "$wiirlak_ep_menap_tech_4$"
+ wiirlak_ep_tech_seedbreaker_desc:0 "$wiirlak_ep_menap_tech_4_desc$"
+
+ wiirlak_ep_tech_gatekeeping:0 "Den $wiirlak_ep_ap_evergrowth$ entfesseln"
+ wiirlak_ep_tech_gatekeeping_desc:0 "Das letzte Siegel bricht. Die Sterne sind erneut fruchtbar. Durch unseren Willen soll der Garten die Leere verschlingen, und alles wird unter einem einzigen Blätterdach versammelt sein. Er ist weit, ewig und unergründlich. Der $wiirlak_ep_ap_evergrowth$ spricht, und wir gehorchen."
+ wiirlak_ep_tech_gatekeeping_tooltip:0 "§H$UNLOCKS_FEATURE$§! Erfordert, die §RKrise§! auf Stufe 5 voranzutreiben."
+ wiirlak_ep_tech_gatekeeping_tooltip_desc:0 "Dies schaltet Stufe 5 der §RKrise§! frei, falls die anderen Voraussetzungen ebenfalls erfüllt sind."
+
+
+ wiirlak_ep_tech_energy:0 "Photosynthetisches Relais"
+ wiirlak_ep_tech_energy_desc:0 "Sonnenlicht über Welten. Alles verbunden, synchronisiert."
+ wiirlak_ep_tech_energy_tooltip:0 "Erhöht die £energy£ $energy$-Produktion auf $wiirlak_ep_pc_bloom_plural$ erheblich."
+
+ wiirlak_ep_tech_unity:0 "Chor der Gedanken"
+ wiirlak_ep_tech_unity_desc:0 "Wie der $wiirlak_ep_ap_evergrowth$ sich ausbreitet, so auch die Harmonie des Denkens: jede Stimme ein Blatt, jede Idee eine Wurzel."
+ wiirlak_ep_tech_unity_tooltip:0 "Erhöht die £unity£ $unity$-Produktion auf $wiirlak_ep_pc_bloom_plural$ erheblich."
+
+ wiirlak_ep_tech_growth:0 "Wiegen-Saft"
+ wiirlak_ep_tech_growth_desc:0 "Um sich wahrhaft zu verbreiten, müssen wir Wachstum und sogar Evolution standardisieren."
+ wiirlak_ep_tech_growth_tooltip:0 "Erhöht die £mod_bonus_pop_growth_mult£ $MOD_BONUS_POP_GROWTH$-Produktion auf $wiirlak_ep_pc_bloom_plural$ erheblich."
+
+ wiirlak_ep_tech_defense:0 "Dornen-Bastion"
+ wiirlak_ep_tech_defense_desc:0 "Der $wiirlak_ep_ap_evergrowth$ sei unser Bollwerk. Keine Flamme soll die Wurzeln erreichen."
+ wiirlak_ep_tech_defense_tooltip:0 "Produziert auf $wiirlak_ep_pc_bloom_plural$ £mod_planet_defense_armies_add£ $defense_army_plural$ auf natürliche Weise."
+
+ wiirlak_ep_tech_adv_resource:0 "Sporenschleier-Synthese"
+ wiirlak_ep_tech_adv_resource_desc:0 "Es darf keine Barriere geben, alles kann synthetisiert werden."
+ wiirlak_ep_tech_adv_resource_tooltip:0 "Produziert auf $wiirlak_ep_pc_bloom_plural$ £exotic_gases£ £rare_crystals£ £volatile_motes£ $RARE_RESOURCES$ auf natürliche Weise."
+
+ wiirlak_ep_tech_influence:0 "Myzeliale Autorität"
+ wiirlak_ep_tech_influence_desc:0 "Was ist ein Reich, wenn nicht ein Netzwerk? Lasst die Wurzeln regieren."
+ wiirlak_ep_tech_influence_tooltip:0 "Produziert auf $wiirlak_ep_pc_bloom_plural$ £influence£ $influence$ auf natürliche Weise."
+
+ wiirlak_ep_tech_science:0 "Bewusstes Blätterdach"
+ wiirlak_ep_tech_science_desc:0 "Die Biosphäre denkt. Die Wurzeln wissen. Wir müssen lernen zuzuhören."
+ wiirlak_ep_tech_science_tooltip:0 "Produziert auf $wiirlak_ep_pc_bloom_plural$ £physics_research£ £society_research£ £engineering_research£ $concept_research$ auf natürliche Weise."
+
+# Tech event
+ wiirlak_ep_tech_event:0 "Die ersten Früchte"
+ wiirlak_ep_tech_event_desc:0 "Das Geflecht reagiert. \n\nUnsere Sporen sättigen den Boden, Wurzeln pulsieren mit Entschlossenheit und Blätterdach-Wolken verdichten sich. $wiirlak_ep_pc_bloom_plural$, einst flüchtige Experimente in der Terraformation, liefern nun mit erstaunlicher Großzügigkeit Ertrag. Nahrung. Forschung. Einheit. Wachstum. Der $wiirlak_ep_ap_evergrowth$ formt nicht nur um – er belohnt. \n\nDas Ökosystem hat sich zu etwas Neuem stabilisiert: nicht planetare Biome, sondern planetare Organe. Eine vernetzte Biosphäre, die zu mehr fähig ist. Zu allem fähig. \nDies sind nur die ersten Früchte. Viel mehr erwartet uns."
+
+
+# Decision
+ wiirlak_ep_decision_planet_boost:0 "Blütenausbreitung"
+ wiirlak_ep_decision_planet_boost_desc:0 "$wiirlak_ep_menap_food_2_desc$"
+
+ wiirlak_ep_decision_planet_boost_sector:0 "$wiirlak_ep_decision_planet_boost$"
+ wiirlak_ep_decision_planet_boost_sector_desc:0 "$wiirlak_ep_decision_planet_boost_desc$"
+ wiirlak_ep_decision_planet_boost_sector_tooltip:0 "Wendet den Modifikator §Y$wiirlak_ep_modifier_decision_planet_boost$§! §HSektorweit§! auf §Y$wiirlak_ep_pc_bloom_plural$§! an, andernfalls beginnt die Terraformation zu §Y$wiirlak_ep_pc_bloom_plural$§!."
+
+ wiirlak_ep_decision_planet_boost_sector_sector_fail:0 "§R$TRIGGER_FAIL$ Ist ein $FRONTIER_PLANET$§!"
+ wiirlak_ep_decision_planet_boost_sector_sector_success:0 "£trigger_yes£ Ist in einem §Y$normal_sector$§!"
+
+ wiirlak_ep_decision_planet_boost_sector_sector_leader_fail:0 "§R$TRIGGER_FAIL$ Kein $SECTOR_GOVERNOR_TITLE$§!"
+ wiirlak_ep_decision_planet_boost_sector_sector_leader_success:0 "£trigger_yes£ $SECTOR_GOVERNOR_TITLE$ existiert"
+
+# Modifiers
+ wiirlak_ep_modifier_decision_planet_boost:0 "Beschleunigtes Wachstum"
+ wiirlak_ep_modifier_decision_planet_boost_desc:0 "$wiirlak_ep_decision_planet_boost_desc$"
+ mod_planet_farmers_wiirlak_ep_resource_mycogrowth_produces_add:0 "£wiirlak_ep_resource_mycogrowth£ $wiirlak_ep_resource_mycogrowth$ von $job_farmer_with_icon$"
+
+ wiirlak_ep_modifier_perk_4:0 "Wiege des Wachstums"
+ wiirlak_ep_modifier_perk_4_galaxy:0 "Äußeres Wachstum"
+
+ wiirlak_ep_modifier_perk_5:0 "Vereintes Wachstum"
+ wiirlak_ep_modifier_perk_5_galaxy:0 "Ewiges Wachstum"
+
+
+
+# Spy OP
+ wiirlak_ep_operation_covert_seeding:0 "Verdeckte Aussaat"
+ wiirlak_ep_operation_covert_seeding_desc:0 "Wenn die Pracht erblüht, überwinden unsere Fortpflanzungsmittel physische Grenzen. Die Sporen passen sich an, die Wurzeln lauschen, und das Terraforming beginnt lautlos innerhalb der Mauern unserer Feinde."
+ wiirlak_ep_operation_covert_seeding_on_success:0 "Eine $RANDOM$ $databank_colony$ wird in einen $wiirlak_ep_pc_bloom$ transformiert"
+
+ wiirlak_ep_operation_covert_seeding_requires_colonies:0 "$TRIGGER_FAIL$ Benötigt eine gültige $databank_colony$. Nicht auf der $CAPITAL$ möglich."
+ wiirlak_ep_operation_covert_seeding_already_in_situation:0 "$TRIGGER_FAIL$ Ziel ist bereits mit einer $wiirlak_ep_operation_covert_seeding$ Operation befasst"
+
+# Spy OP Events
+ wiirlak_ep_operation_event_1:0 "Subtile Veränderung"
+ wiirlak_ep_operation_event_1_desc:0 "Eines unserer Planetenforschungsteams hat ungewöhnliche Muster in der atmosphärischen Mikroflora sowie Unregelmäßigkeiten in der Bodenchemie gemeldet. Es gibt keine klaren Anzeichen für Sabotage. Aber etwas ist anders."
+ wiirlak_ep_operation_event_1_answer_monitor:0 "Die Anomalie überwachen"
+ wiirlak_ep_operation_event_1_answer_ignore:0 "Die Botaniker ignorieren. Wir haben wichtigere Angelegenheiten, auf die wir uns konzentrieren müssen."
+
+ wiirlak_ep_operation_event_2:0 "Flora-Anomalie"
+ wiirlak_ep_operation_event_2_desc:0 "Was als subtiles biologisches Muster begann, hat sich nun als riesige, unterirdische Myzelstrukturen manifestiert. Ganze Oberflächenzonen haben ihre Farbe geändert. Einheimische Spezies passen sich entweder unnatürlich an... oder verschwinden. Wir müssen jetzt handeln, oder die Transformation wird abgeschlossen sein."
+ wiirlak_ep_operation_event_2_answer_monitor:0 "Es studieren – vielleicht können wir davon profitieren"
+ wiirlak_ep_operation_event_2_answer_ignore:0 "Es seinen Lauf nehmen lassen"
+ wiirlak_ep_operation_event_2_answer_resist:0 "Wir müssen dieser Invasion widerstehen!"
+
+ wiirlak_ep_operation_event_finish:0 "Myzel überwacht, doch ungezähmt"
+ wiirlak_ep_operation_event_finish_desc:0 "Die Transformation von §Y[event_target:wiirlak_ep_spy_op_target.GetName]§! hat wirklich begonnen. Lokale Behörden haben die Anomalie entdeckt – Umweltteams überwachen nun unsere Pilzvektoren und die ökologische Drift mit zunehmender Sorgfalt. \n\nDoch selbst mit ihrer Wachsamkeit wurden die Wurzeln tief gepflanzt. Das $wiirlak_ep_operation_covert_seeding$-Netzwerk bleibt eingebettet, aber intakt. \nSie glauben, sie hätten ihren Boden zurückerobert. Doch das $wiirlak_ep_ap_evergrowth$ ist geduldig, und sein Kreislauf ist ewig."
+
+
+ wiirlak_ep_operation_event_push_back:0 "Durchtrennte Wurzeln"
+ wiirlak_ep_operation_event_push_back_desc:0 "Wider Erwarten hat unsere Welt der Veränderung widerstanden. Die außerirdischen Wucherungen wurden sterilisiert, ihre unterirdischen Fäden aus der Biosphäre verbrannt. Atmosphärenfilter haben das Gleichgewicht wiederhergestellt. Einheimische Ökosysteme, wenngleich vernarbt, zeigen bereits Anzeichen der Erholung. \n\nWer auch immer versuchte, unseren Planeten nach seinem Bild neu zu formen, unterschätzte unsere Entschlossenheit. Das $wiirlak_ep_ap_evergrowth$ mag gewaltig sein, doch seine Ranken können gekappt werden."
+
+ wiirlak_ep_operation_event_overgrown:0 "Blühendes $wiirlak_ep_ap_evergrowth$"
+ wiirlak_ep_operation_event_overgrown_desc:0 "Wir versuchten, es einzudämmen – es zu verstehen –, doch am Ende wurde §Y[event_target:wiirlak_ep_spy_op_target.GetName]§! umgewandelt. \n\nDie Transformation ist abgeschlossen. Der Himmel leuchtet nun mit seltsamen Polarlichtern, riesige Baumkronen verdecken Satellitenbilder, und der Boden selbst pulsiert mit unerkennbarem Leben. Unsere Technologie funktioniert noch, unsere Städte stehen noch, aber wir verstehen die Regeln der Welt unter unseren Füßen nicht mehr. \n\nDas $wiirlak_ep_ap_evergrowth$ hat diesen Ort beansprucht. Und wir müssen nun lernen, auf seinen Wurzeln zu leben... oder fliehen."
+
+# Situation
+ wiirlak_ep_situation:0 "Unnatürliche Veränderungen"
+ wiirlak_ep_situation_type:0 "$wiirlak_ep_situation$"
+ wiirlak_ep_situation_monthly_change_tooltip:0 "Ungewöhnliche ökologische Verschiebungen haben auf einem unserer Planeten begonnen. Wird dies nicht kontrolliert, könnte es eine irreversible Terraformation in eine außerirdische Biosphäre erfahren."
+
+ wiirlak_ep_situation_desc_almost_complete:0 "Der Himmel über §Y[Target.GetName]§! verdunkelt sich mit sporendichten Wolken. Einheimisches Leben wird erstickt oder ersetzt. \nWenn dieser Prozess abgeschlossen ist, wird der Planet gänzlich außerirdisch werden. \nEs bleibt kaum noch Zeit zu handeln."
+ wiirlak_ep_situation_desc:0 "Subtile Veränderungen entfalten sich auf §Y[Target.GetName]§!. Atmosphärische Verschiebungen. Plötzliches Wachstum unbekannter Pilzstämme. Bodenbeschaffenheit weicht von der Norm ab. \nEtwas verändert unsere Welt von innen heraus. Und es beschleunigt sich."
+ wiirlak_ep_situation_desc_pushing_back:0 "Eindämmungsprotokolle halten stand. Dekontaminationsteams melden Erfolge bei der Eindämmung der Myzelausbreitung. Die ökologische Drift hat sich verlangsamt. \nVorerst haben wir die Transformation von §Y[Target.GetName]§! gestoppt."
+
+ wiirlak_ep_contained:0 "Einfall größtenteils eingedämmt"
+ wiirlak_ep_incursion:0 "Fremder Einfall"
+ wiirlak_ep_overwhelmed:0 "Überwältigender Einfall"
+
+ wiirlak_ep_burn:0 "Alles verbrennen"
+ wiirlak_ep_study:0 "Diese studieren"
+
+
+# Orbital Bombardment Stance
+ bombardment_wiirlak_ep_verdant_purge:0 "Grünende Säuberung"
+ bombardment_wiirlak_ep_verdant_purge_desc:0 "Lasst das $wiirlak_ep_ap_evergrowth$ diese Welt erblühen. \n- §RMassiver§! Schaden an §YArmeen§!\n- §RMassiver§! Schaden am §YPlaneten§!\n- §RMassiver§! Schaden an §YBevölkerungen§!\n- Wird Planeten in §G$wiirlak_ep_pc_bloom_plural$§! terraformen oder jene zerstören, die nicht terraformt werden können."
+
+# Bombardment Events
+ wiirlak_ep_event_bombarded_title:0 "Die Grüne Belagerung"
+ wiirlak_ep_event_bombarded_desc:0 "Zunächst dachten wir, es sei Niederschlag. Sporen fielen wie Staub herab und bedeckten Gebäude, Wälder, Menschen. Nun ist der Boden heiß und lebendig. \n\n§Y[event_target:wiirlak_ep_planet_targeted.GetName]§! wird nicht mehr nur bombardiert – es verändert sich. Die Luft selbst hat sich gewandelt, und die Oberfläche weicht invasiver Mykoflora, die unter dem Beschuss pulsiert. Unsere Scanner bestätigen eine atmosphärische Verschiebung; es ist ein Austausch. \n\nDie Terraformation hat begonnen... ohne unsere Zustimmung. Die Invasoren beenden nicht nur unsere Welt. \nSie überschreiben sie."
+
+ wiirlak_ep_event_bombarded_origin_desc:0 "Bombardement war einst eine Methode, den Widerstand zu brechen. Nun ist es die Art, wie wir Zukunft säen. Unter den Kratern und zerbrochenen Strukturen von §Y[event_target:wiirlak_ep_planet_targeted.GetName]§! regt sich etwas – nicht der Tod, sondern der Anfang.\n\nDie von unseren Schiffen mitgeführten Sporen sind tief in den verwundeten Planeten gesunken. Risse in der Kruste quellen mit photosynthetischem Nebel über. Beton spaltet sich unter kriechenden Wurzeln. Die lokale Biosphäre leistet Widerstand, doch sie verliert bereits. \n\nDas $wiirlak_ep_ap_evergrowth$ hat Wurzeln geschlagen. Diese Welt wird unsere sein, nicht durch Eroberung, sondern durch Transformation."
+
+ wiirlak_ep_event_bombarded_answer:0 "Das $wiirlak_ep_ap_evergrowth$ schlägt Wurzeln"
+
+ wiirlak_ep_event_bombarded_terraformed:0 "Überwuchert"
+ wiirlak_ep_event_bombarded_terraformed_desc:0 "Was als schleichender Befall begann, ist nun absolut geworden. Nach Jahren stiller Eroberung ist [THIS.GetName] zum Abbild des Evergrowth erblüht – jeder Wald ein lebendiger Nerv, jeder Atemzug aus den Sporen eines blühenden, empfindungsfähigen Ökosystems gezogen. \n\nStädte stehen verhüllt unter aufragender biolumineszenter Flora, ihre Skylines reduziert zu bloßem Gerüst für den Willen der neuen Welt. Indigenes Leben ist entweder geflohen, gefallen oder in Formen umgestaltet worden, die besser für die Symbiose geeignet sind. \n\n[THIS.GetName] ist keine Welt der alten Galaxis mehr. Es ist das $wiirlak_ep_ap_evergrowth$ inkarniert."
+
+# Bombardment Messages
+ WIIRLAK_EP_MESSAGE_BOMBARDED_TITLE:0 "$bombardment_wiirlak_ep_verdant_purge$"
+ wiirlak_ep_message_bombarded_desc:0 "§Y[event_target:wiirlak_ep_planet_targeted.GetName]§! hat begonnen, durch das $wiirlak_ep_ap_evergrowth$ zu mutieren."
+ wiirlak_ep_message_bombarded_origin_desc:0 "Das $wiirlak_ep_ap_evergrowth$ hat begonnen, auf §Y[event_target:wiirlak_ep_planet_targeted.GetName]§! Wurzeln zu schlagen."
+
+
+
+# Component
+ PLANET_KILLER_SEEDBREAKER:0 "$wiirlak_ep_ap_evergrowth$ $wiirlak_ep_menap_tech_4$"
+ PLANET_KILLER_SEEDBREAKER_DESC:0 "Große Mengen nährstoffreicher Biomasse und atmosphärischer Katalysatoren werden auf dem Planeten entfesselt. Alle künstlichen Strukturen und synthetischen Lebensformen werden von beschleunigter, semi-empfindungsfähiger Flora überwuchert. Die Sintflut stabilisiert das Klima und verwandelt die Oberfläche in eine lebendige, sich selbst ausdehnende Biosphäre, die für das $wiirlak_ep_ap_evergrowth$ bereit ist."
+
+# Planet Killer
+ PLANET_KILLER_SEEDBREAKER_ACTION:0 "Pflanzt das $wiirlak_ep_ap_evergrowth$"
+ FLEETORDER_DESTROY_PLANET_WITH_PLANET_KILLER_SEEDBREAKER:0 "Bereitet das Besäen von $PLANET|Y$ vor"
+
+ MESSAGE_DESC_FOR_PLANET_KILLER_SEEDBREAKER:0 "wurde durch das $wiirlak_ep_ap_evergrowth$ transformiert, verursacht durch"
+
+# Opinions
+ wiirlak_ep_opinion_seeded_a_world:0 "Eine Welt besät"
+ wiirlak_ep_opinion_seeded_my_world:0 "Unsere Welt besät"
+ wiirlak_ep_opinion_seeded_a_primitive_world:0 "Eine Prä-FTL-Welt besät"
+ wiirlak_ep_opinion_seeded_a_primitive_world_phile:0 "$opinion_cracked_a_primitive_world_phile$"
+
+ wiirlak_ep_opinion_acceptation:0 "Das $wiirlak_ep_ap_evergrowth$ annehmen"
+
+# Planet Killer Events
+ wiirlak_ep_is_not_bloom:0 "§RBereits ein $wiirlak_ep_pc_bloom$§!"
+
+ wiirlak_ep_event_seedbreaker_title:0 "Der Segen des $wiirlak_ep_ap_evergrowth$"
+ wiirlak_ep_event_seedbreaker_desc:0 "Es begann mit Stille. Keine Fanfare. Kein Widerstand. Nur der sanfte Puls sich ausrichtender Systeme – und dann der Ausbruch. \nEin Speer leuchtender Sporen zerriss Wolke, Kruste und Kern. Was gestern eine Welt war, wurde nun ungeschehen gemacht und neu erdacht. \n\nDas §Y$wiirlak_ep_menap_tech_4$§! hat gesprochen. \nWo einst steriler Fels oder trotzige Städte standen, pulsiert nun der grüne Atem des $wiirlak_ep_ap_evergrowth$. Nicht nur verändert, sondern wiedergeboren. Die Kruste erblüht mit invasiven Wurzeln. Die Atmosphäre ist dick von säenden Winden. Das Leben hat sich mit verheerender Anmut durchgesetzt. \n\nAndere Augen mögen dies als Zerstörung sehen. Doch wir kennen die Wahrheit. Schöpfung sieht immer wie Kollaps aus."
+
+ wiirlak_ep_event_seedbreaker_target_title:0 "Die Blüte des Verderbens"
+ wiirlak_ep_event_seedbreaker_target_desc:0 "Wir dachten, es sei eine Waffe. Wir irrten uns. \n\nAls der Saatbrecher kam, gab es keine Evakuierungsbefehle – nur Verwirrung. Die Himmel über §Y[event_target:wiirlak_ep_planet_targeted.GetName]§! spalteten sich, und aus dem Riss strömten nicht Feuer, sondern Sporen – ein endloser Strom viridianer Wolken, der die Luft erstickte, den Boden umschrieb und die Flüsse mit kriechenden Wurzeladern aufblähte. \n\nInnerhalb weniger Stunden waren unsere Städte überwuchert. Maschinen rosteten an Ort und Stelle, Straßen verschwanden unter Laubwerk, das pulsierte, als sei es lebendig. Ganze Distrikte kollabierten unter Biomasse von der Größe von Türmen. Der Planet lebt noch, aber nicht als unserer. Nicht mehr. \n\nSie eroberten §Y[event_target:wiirlak_ep_planet_targeted.GetName]§! nicht. Sie schrieben es um. \nUnd es wächst immer noch."
+
+# Messages
+ WIIRLAK_EP_MESSAGE_SEEDBREAKER_TITLE:0 "$wiirlak_ep_event_seedbreaker_title$"
+ wiirlak_ep_message_seedbreaker_desc:0 "Planet ging an das $wiirlak_ep_ap_evergrowth$ verloren: §Y[event_target:wiirlak_ep_planet_targeted.GetName]§!"
+ wiirlak_ep_message_seedbreaker_origin_desc:0 "Saatbrecher setzte das $wiirlak_ep_ap_evergrowth$ auf §Y[event_target:wiirlak_ep_planet_targeted.GetName]§! frei!"
+
+
+
+# Diplomatic Actions
+ wiirlak_ep_spread_the_evergrowth:0 "Verbreitet das $wiirlak_ep_ap_evergrowth$."
+ wiirlak_ep_spread_the_evergrowth_desc:0 "Das $wiirlak_ep_ap_evergrowth$ streckt sich aus, nicht mit Waffen, sondern mit Wurzeln. Es bietet Führung, Wohlstand und Zweck – wenn wir bereit sind, unsere Welten unter seiner Vision erblühen zu lassen. Diesen Pakt anzunehmen bedeutet, unsere Planeten neu zu gestalten... und vielleicht uns selbst."
+ wiirlak_ep_spread_the_evergrowth_tooltip:0 "Lasst das $wiirlak_ep_ap_evergrowth$ den Terraforming-Prozess auf einem §Y$effect_random_owned_planet$§! beginnen."
+
+ wiirlak_ep_spread_the_evergrowth_tooltip_no_more:0 "$TRIGGER_FAIL$ §RKein gültiger Planet zum Terraformieren§!"
+ wiirlak_ep_spread_the_evergrowth_tooltip_acceptation:0 "$TRIGGER_FAIL$ §RSie finden diesen Vorschlag inakzeptabel§!"
+ wiirlak_ep_spread_the_evergrowth_tooltip_refusal:0 "§HDementsprechend wird dies nichts bewirken§!"
+
+# Diplo Event
+ wiirlak_ep_event_bombarded_terraformed_positive:0 "Harmonie verwurzelt"
+ wiirlak_ep_event_bombarded_terraformed_positive_desc:0 "Mit Zustimmung seiner Verwalter hat [THIS.GetName] eine anmutige Transformation erfahren. Das $wiirlak_ep_ap_evergrowth$ fasste Fuß nicht als Eroberer, sondern als Gärtner – es verwebte heimische Ökologien mit den blühenden $wiirlak_ep_menap_terraforming_plural$ des mykologischen Nexus. \n\nDie Himmel schimmern nun mit biolumineszenten Pollen. Ernten wachsen in Hülle und Fülle ohne Bodenbearbeitung. Lokale Bevölkerungen berichten von verbesserter Gesundheit, klarerer Luft und einem seltsamen, aber willkommenen Sinn für Zweck. \n\nIndem [THIS.GetName] sich dem großen Zyklus anschließt, wird es nicht zu einem Opfer, sondern zu einem Leuchtfeuer dessen, was das $wiirlak_ep_ap_evergrowth$ bietet: Frieden durch blühende Symbiose."
+ wiirlak_ep_event_bombarded_terraformed_positive_answer:0 "Harmonie erblüht"
+
+# Economic Categories
+ wiirlak_ep_bloom_world:0 "$wiirlak_ep_event_seedbreaker_title$"
+ wiirlak_ep_bloom_world_jobs:0 "$wiirlak_ep_pc_bloom$ $planet_jobs$"
+
+# Deposits
+ wiirlak_ep_deposit:0 "$wiirlak_ep_event_seedbreaker_title$"
+ wiirlak_ep_deposit_desc:0 "Das $wiirlak_ep_ap_evergrowth$ gibt, wem der Glaube innewohnt. \nFür jene, die zweifeln, wird nichts wachsen. Doch jenen, die glauben... gibt das $wiirlak_ep_ap_evergrowth$ unendlich."
+
+
+
+# Final Events
+ wiirlak_ep_warning:0 "Die Wurzeln erreichen die Sterne"
+ wiirlak_ep_warning_desc:0 "Eine reichsweite Nachricht erblüht auf jedem Kommunikationsarray, geflüstert durch Gravitationsfelder und den Subraum gleichermaßen. Das $wiirlak_ep_ap_evergrowth$, einst eine stille ökologische Kuriosität, ist zu etwas ganz anderem herangereift. \n\nDie §Y[event_target:wiirlak_ep_crisis_player.GetName]§! hat eine Vision erklärt: eine totale Vereinigung der Biosphäre, die die Blüte über alle bewohnbaren Welten verbreitet. Sie sprechen nicht von Eroberung, sondern von Erneuerung. Von einer Galaxis, die nicht länger durch Spezies oder Souveränität gespalten ist – sondern eine, die als ein einziges lebendes System atmet. \n\nSie nennen es Frieden. Andere haben es bereits Auslöschung genannt. Eines ist klar: Sie sind bereit. Und sie wachsen immer noch."
+
+ wiirlak_ep_warning_2:0 "Die Fünfte Blüte"
+ wiirlak_ep_warning_2_desc:0 "Was einst eine beunruhigende Anomalie schien, hat nun über die Sterne hinweg Wurzeln geschlagen. Die sogenannte $wiirlak_ep_ap_evergrowth$ hat ein Ausmaß an Ausbreitung und Kohäsion erreicht, das nicht länger als abtrünnige Ideologie abgetan werden kann. \n\nSporensignaturen ziehen sich nun durch die Hyperrouten. $wiirlak_ep_pc_bloom_plural$ resonieren in synchronisierten Mustern. Berichte von Randsystemen beschreiben, wie ganze Biosphären über Nacht mutieren – nicht durch Terraforming ... sondern durch etwas Schnelleres, Fremderes, Lebendiges. \n\nSchlimmer noch, wir haben fragmentierte Übertragungen abgefangen: Einladungen. Angebote, „dem Geflecht beizutreten“. Bündnisse, die nicht mit Worten, sondern mit Wurzeln, Myzel und dem Versprechen, Teil von etwas Größerem zu werden, geschlossen wurden. \n\nWas auch immer das ist – es ist keine Bewegung mehr: Es ist eine Krise."
+
+ wiirlak_ep_warning_2_answer_aggressive:0 "Bereitet die Flotten vor. Wir könnten zu spät sein."
+ wiirlak_ep_warning_2_answer_neutral:0 "Wachstum ohne Ordnung ist Verfall."
+ wiirlak_ep_warning_2_answer_curious:0 "Vielleicht... sollten wir ihnen zuhören."
+
+
+ wiirlak_ep_invitation:0 "Die letzten beiden Blütenblätter"
+ wiirlak_ep_invitation_desc:0 "Bevor die Hyper-Transformation Wurzeln schlagen kann, müssen wir zwei weitere fruchtbare Felder sichern. Unsere Agenten haben Reiche identifiziert, die an der Schwelle stehen – zögerlich, aber noch nicht feindselig. \n\nSollten sie unsere Sporen akzeptieren, könnte der Zyklus ungehindert abgeschlossen werden. Sollten sie Widerstand leisten... werden wir die Wurzeln mit ihrer Asche nähren."
+ wiirlak_ep_invitation_none_desc:0 "Die letzte Phase unserer Transformation ist abgeschlossen. Wir passen uns der Galaxis nicht länger an – die Galaxis wird sich uns anpassen. \n\nUnsere Sporen erstrecken sich vom Kern bis zum Rand, unsere Wurzeln graben sich in Welten, die als steril galten, und unsere Vision ist zu Klarheit erblüht. \n\nDas Zeitalter des Wachstums ist vorbei. Das Zeitalter der Ausbreitung ist jetzt. \nAlle, die sich uns widersetzen, müssen schnell entscheiden: nähren oder verrotten."
+ wiirlak_ep_flag_chosen_by_crisis:0 "Bereits eingeladen"
+
+ wiirlak_ep_invitation_empire_1:0 "[event_target:wiirlak_ep_crisis_potential_ally_1.GetName]"
+ wiirlak_ep_invitation_empire_2:0 "[event_target:wiirlak_ep_crisis_potential_ally_2.GetName]"
+ wiirlak_ep_invitation_empire_3:0 "[event_target:wiirlak_ep_crisis_potential_ally_3.GetName]"
+ wiirlak_ep_invitation_empire_4:0 "[event_target:wiirlak_ep_crisis_potential_ally_4.GetName]"
+ wiirlak_ep_invitation_empire_5:0 "[event_target:wiirlak_ep_crisis_potential_ally_5.GetName]"
+
+
+ wiirlak_ep_invitation_offer:0 "Eine Einladung zum Erblühen"
+ wiirlak_ep_invitation_offer_desc:0 "Das §H[event_target:wiirlak_ep_crisis_player.GetName]§! hat uns ein letztes Angebot übermittelt:\n\nWir bringen keine Flotten, keine Klingen, nur die Stimme des Blätterdaches. \nWir bieten Euch die Zukunft allen Lebens: Teil der $wiirlak_ep_ap_evergrowth$ zu werden. Dabei werdet Ihr den Reichtum der $wiirlak_ep_pc_bloom_plural$, die Harmonie der sporengeküssten Einheit und Schutz vor dem kommenden Sturm erhalten. \n\nLehnt dies ab, und Ihr wählt das Verwelken. Ihr wählt den Krieg."
+
+ wiirlak_ep_invitation_offer_accept:0 "Mögen unsere Wurzeln sich verflechten."
+ wiirlak_ep_invitation_offer_accept_tooltip:0 "Werden sich im Krieg auf ihre Seite schlagen"
+
+ wiirlak_ep_invitation_offer_reject:0 "Wir werden uns dieser Verseuchung niemals unterwerfen."
+ wiirlak_ep_invitation_offer_reject_tooltip:0 "Wird der $wiirlak_ep_ap_evergrowth$ den Krieg erklären"
+
+ wiirlak_ep_invitation_rejected:0 "Ein abgelehnter Garten"
+ wiirlak_ep_invitation_rejected_desc:0 "Trotz unseres großzügigen Angebots, [From.GetName] in der Anmut der $wiirlak_ep_ap_evergrowth$ schwelgen zu lassen, haben sie abgelehnt. Sie nennen es eine Verderbnis, eine Bedrohung, eine Lüge. Narren, die an ausgedörrter Erde festhalten, während der Regen frei fällt. \n\nLasst sie in ihrer Isolation verkümmern – denn das Meer der Ignoranz hat kein Ufer, und sie haben sich entschieden, darin zu ertrinken."
+ wiirlak_ep_invitation_rejected_answer:0 "Sie wählen den Verfall"
+
+ wiirlak_ep_invitation_accepted:0 "Wurzeln über den Sternen"
+ wiirlak_ep_invitation_accepted_desc:0 "Sie sind niedergekniet. Nicht aus Furcht, sondern in stiller Ehrfurcht. Der Schleier ihrer Skepsis ist wie verwelkte Rinde zerrissen, und darunter eine Seele, die verzweifelt nach Sinn sucht. \n\nDie ersten Sporen sind bereits angekommen – stille Kuriere, getragen von Gravitation und Willen. Ihre Städte werden nun mit uns atmen. Ihr Boden wird sich erinnern. \n\nSie verstehen noch nicht die Schönheit, die sie eingeladen haben. Aber sie werden. Oh, wie sie werden. Die $wiirlak_ep_ap_evergrowth$ erobert nicht; sie umarmt. Und während ihre Himmel sich mit Pollen verdunkeln und die alten Strukturen unter neuen Wurzeln nachgeben, werden sie es fühlen: die Stille der Einheit. Den Puls des Sinns. Den finalen Rhythmus der Sterne."
+
+
+
+ wiirlak_ep_project_1_done:0 "Grünende Abrechnung"
+ wiirlak_ep_project_1_done_desc:0 "Es beginnt. Unter jedem Himmel pulsieren unsere Wurzeln. In jedem Atemzug rühren sich unsere Sporen. Wir müssen uns nicht länger ausbreiten. Wir müssen nur erwachen. Die §HGroße Blüte§! regt sich – nicht als Expansion, sondern als Kulmination. \n\nUnsere Weltengestalter singen die Hymne der Konvergenz. Unsere Gedankennetze werden schwer von Instinkt und Sinn. Eine letzte Synthese bleibt: das §HErwachen§! der $wiirlak_ep_ap_evergrowth$."
+
+ wiirlak_ep_project_1_done_answer:0 "Beginnt das Abschlussprojekt"
+ wiirlak_ep_project_1_done_tooltip:0 "Startet die $wiirlak_ep_decision_final_project$ $concept_decision$ auf dem $CAPITAL$"
+ wiirlak_ep_project_1_done_tooltip_fail:0 "Die $wiirlak_ep_decision_final_project$ $concept_decision$ auf dem $CAPITAL$ freigeschaltet"
+
+
+
+ wiirlak_ep_project_2_done:0 "Der Myzel-Puls"
+ wiirlak_ep_project_2_done_desc:0 "Die Vorbereitung schreitet widerstandslos voran. Das Geflecht der $wiirlak_ep_pc_bloom_plural$ summt nun in Harmonie, ihre Biosphären sind durch Sub-Wurzel-Neurofasern und planetarische Nährstoffströme ausgerichtet. \n\nEin Puls wurde gesendet – subtil, doch potent. Jeder $wiirlak_ep_pc_bloom$ regt sich, reagiert synchron, ihre Krusten verschieben sich nur ganz leicht, als ob sie atmen würden. \n\nUnsere Agenten unter den Sternen berichten von Unruhen. Lasst sie panisch werden. Lasst sie mobilisieren. Die Samen sind bereits gepflanzt."
+
+ wiirlak_ep_project_2_done_answer:0 "Lasst sie es wachsen hören."
+ wiirlak_ep_project_2_done_tooltip:0 "Startet die $wiirlak_ep_decision_final_project_2$ $concept_decision$ auf dem $CAPITAL$"
+ wiirlak_ep_project_2_done_tooltip_fail:0 "Die $wiirlak_ep_decision_final_project_2$ $concept_decision$ auf dem $CAPITAL$ freigeschaltet"
+
+ wiirlak_ep_project_2_warning:0 "Die Wurzeln vertiefen sich"
+ wiirlak_ep_project_2_warning_desc:0 "Sie haben nicht stagniert. Sie haben nicht geschwankt. \nDie $wiirlak_ep_ap_evergrowth$ schreitet unbeirrt voran. Alle Versuche, die Blüte einzudämmen, haben nur Zeit gekauft – und jetzt zerfällt diese Zeit wie der Boden der alten Welt. Massive Energiestöße durchziehen ihre Netzwerke, subtile geomagnetische Impulse, die sich über $wiirlak_ep_pc_bloom_plural$ verfolgen lassen und über Systeme und Spezies hinausreichen. \n\nDies ist nicht länger bloße Ausbreitung. Es ist Vorbereitung. \n\nUnsere Analysten warnen, dass das, was sie jetzt vorbereiten, planetarische Biosphären in der gesamten Galaxis – augenblicklich – permanent umschreiben könnte. Ihre Transformation wird nicht länger Jahre, sondern nur Sekunden erfordern. \n\nWenn sie jetzt nicht aufgehalten werden, gibt es vielleicht überhaupt kein Aufhalten mehr."
+ wiirlak_ep_project_2_warning_answer:0 "Wir müssen handeln. Jetzt."
+ wiirlak_ep_project_2_warning_answer_evergrowth:0 "Lasst sie wachsen."
+
+
+
+ wiirlak_ep_project_3_done:0 "$wiirlak_ep_modifier_blooming_warning$"
+ wiirlak_ep_project_3_done_desc:0 "Jeder $wiirlak_ep_pc_bloom$ vibriert mit Resonanz, ein planetarischer Herzschlag, der zu seinem letzten Crescendo beschleunigt. Das Myzelgeflecht, das wir gewebt haben – über Kruste, Wurzel und Geist – ist erwacht. Kein Netzwerk mehr. Ein Nervensystem. \n\nDer Himmel verstummt, der Boden bebt. Dann – Eruption. \n\nToxische Meere werden zu Nährstoffbäuchen. Wüsten brechen in florale Lawinen aus. Gletscher blühen mit strahlenden Pilzen. Was einst steril war, wimmelt nun von überwältigendem Leben. Es gibt keinen Krieg mehr zu führen. Es gibt keinen Widerstand, der stark genug wäre. \n\nDie Galaxis gehört uns, denn sie ist keine Galaxis mehr. \nEs ist ein Garten. Es ist die $wiirlak_ep_ap_evergrowth$."
+ wiirlak_ep_project_3_done_answer:0 "Wir waren keine Eroberer. Wir waren das Wachstum selbst."
+
+ wiirlak_ep_project_3_warning:0 "Letzte Blüte"
+ wiirlak_ep_project_3_warning_desc:0 "Es geschah plötzlich. \n\nÜberall in den Sternen explodierte jeder $wiirlak_ep_pc_bloom$ in strahlenden Sporenwolken und setzte Wellen biome-verändernder Energie ins Nichts frei. Welten, die von ihnen unberührt geblieben waren, wurden schnell erfasst. Ozeane wurden biolumineszent. Städte verstummten unter erstickenden Ranken. Maschinen korrodierten unter fremdartigem Moos. \n\nVersuche, Widerstand zu leisten, scheiterten. Terraformationsprotokolle wurden außer Kraft gesetzt. Planetare Schilde zerrissen. Einer nach dem anderen wurden die Sterne unter Dächern aus Grün und Gold gedimmt. \n\nDie Galaxis fiel nicht in Flammen. Sie wurde überwuchert."
+ wiirlak_ep_project_3_warning_answer:0 "Wir waren zu spät..."
+ wiirlak_ep_project_3_warning_answer_evergrowth:0 "...und jetzt gehören wir den Wurzeln."
+
+# Modifier
+ wiirlak_ep_modifier_subject:0 "$wiirlak_ep_invitation$"
+
+ wiirlak_ep_modifier_crisis_reaction:0 "Angst vor $wiirlak_ep_ap_evergrowth$"
+ wiirlak_ep_modifier_crisis_link:0 "$wiirlak_ep_ap_evergrowth$ Verbindung"
+
+# Decision
+ wiirlak_ep_decision_final_project:0 "$wiirlak_ep_ap_evergrowth$ Genesis"
+ wiirlak_ep_decision_final_project_desc:0 "Die $wiirlak_ep_ap_evergrowth$ ist keine Waffe – sie ist ein Ursprungspunkt, eine galaktische Eizelle, die Konvergenz allen Lebens, das unter der $wiirlak_ep_ap_evergrowth$ kultiviert wurde. Aus Planetenkruste und neuronalem Gitter gewachsen, wird dieses Konstrukt eine Welle synchronisierter Terraformungsimpulse freisetzen. \n\nNicht eine Welt wird unberührt bleiben. Nicht ein Himmel bleibt ungeblüht. Dies ist nicht das Ende. Es ist die Wurzel."
+ wiirlak_ep_decision_final_project_tooltip:0 "§HDie Krise vorantreiben§!"
+
+
+ wiirlak_ep_decision_final_project_2:0 "Den $wiirlak_ep_modifier_blooming_warning$ erwecken"
+ wiirlak_ep_decision_final_project_2_desc:0 "Jede Wurzel. Jeder Ast. Jede Spore. Jeder $wiirlak_ep_pc_bloom$ ist eine Nervenendigung – und jetzt werden sie konvergieren. Die Zeit des langsamen Wachstums ist vorbei. \n\nWir werden die Grenzen zwischen Planet und Samen zerschmettern. Kein Warten mehr, kein Flüstern mehr. Mit dem gesammelten $wiirlak_ep_resource_mycogrowth$ tausender Welten werden wir die Galaxis neu schreiben – nicht mit Flamme oder Metall, sondern mit Leben. Unerbittlich. Alles verzehrend. Ewig."
+ wiirlak_ep_decision_final_project_2_tooltip:0 "$wiirlak_ep_decision_final_project_tooltip$"
+
+# Modifier
+ wiirlak_ep_modifier_blooming_warning:0 "$wiirlak_ep_ap_evergrowth$ Singularität"
+ wiirlak_ep_modifier_blooming_warning_desc:0 "Wir nähern uns dem Punkt ohne Wiederkehr. \n\nAlle $wiirlak_ep_pc_bloom_plural$ werden nicht mehr nur ein Planet sein. Sie werden ein Sender, eine Spore, ein Knoten im finalen Design der $wiirlak_ep_ap_evergrowth$ sein. \n\nSollte das Signal gegeben werden, wird es nicht nur wachsen – es wird alles werden."
+
+ wiirlak_ep_modifier_blooming:0 "$wiirlak_ep_modifier_blooming_warning$"
+ wiirlak_ep_modifier_blooming_desc:0 "$wiirlak_ep_modifier_blooming_warning_desc$"
+
+ wiirlak_ep_modifier_blooming_hive:0 "$wiirlak_ep_modifier_blooming_warning$"
+ wiirlak_ep_modifier_blooming_hive_desc:0 "$wiirlak_ep_modifier_blooming_warning_desc$"
+
+ wiirlak_ep_modifier_forced_blooming:0 "Erzwungenes Blühen"
+ wiirlak_ep_modifier_forced_blooming_desc:0 "Dieser Planet wird von der $wiirlak_ep_ap_evergrowth$ gewaltsam transformiert."
+
+
+# Final Event - Without Project
+ wiirlak_ep_all_terraformed:0 "Die Stille Blüte"
+ wiirlak_ep_all_terraformed_answer:0 "Die $wiirlak_ep_ap_evergrowth$ breitet sich aus."
+
+ wiirlak_ep_all_terraformed_step_2_desc:0 "Das Gitter ist vollständig. Jede bewohnbare Welt pulsiert nun im Einklang mit der $wiirlak_ep_ap_evergrowth$ – lebendig, fruchtbar, unaufhaltsam. \n\nDoch die finale Metamorphose – die Blütentranszendenz – bleibt unvollendet. Die Sterne warten in stiller Ehrfurcht, während das lebendige Netzwerk in Ruhestellung summt, sein Zweck erfüllt und doch unerfüllt. \n\nWas als einzigartiger Moment der Evolution gedacht war, ist stattdessen zu einer endlosen Blüte geworden. Die Galaxis atmet mit uns. Aber wir... zögern. \nBrauchen wir ein Finale, wenn wir bereits gewonnen haben?"
+
+ wiirlak_ep_all_terraformed_step_1_desc:0 "Die $wiirlak_ep_ap_evergrowth$ umspannt die Sterne. Jede bewohnbare Welt ist ein Knoten im Pilzgeflecht, jedes Ökosystem ein Spiegel ihres Willens. \n\nDoch kein letzter Schub wurde entfesselt. Das Wachstum wurde zum Ziel. Das Aufstiegsprojekt – die Hyper-Transformation – wurde skizziert, geplant... aber nie initiiert. \n\nVielleicht wurde es aufgegeben. Vielleicht entschied die $wiirlak_ep_ap_evergrowth$, dass sie eine solche Zeremonie nicht mehr brauchte. \n\nUnd so verändert sich die Galaxis, leise, vollständig. Für immer."
+
+ wiirlak_ep_all_terraformed_not_crisis_5_desc:0 "Die $wiirlak_ep_ap_evergrowth$ hat erreicht, was niemand für möglich hielt: Jede bewohnbare Welt blüht nun mit blühenden Biomen-Wandteppichen. Das Leben herrscht, immens und verflochten. \n\nDoch die Sterne beobachten einen anderen. Ein anderer hat nun den Titel der galaktischen Bedrohung für sich beansprucht. Die Blüte war nicht schnell genug. \n\nDie $wiirlak_ep_ap_evergrowth$ beobachtet. Wartet. Sie gedeiht immer noch. Sie breitet sich immer noch aus. Doch die Galaxis atmet nun neu."
+
+ wiirlak_ep_all_terraformed_not_crisis_5_alone_desc:0 "Ohne apokalyptische Waffen oder glorreiche Erklärungen wurde die Galaxis neu geformt. Langsam, schweigend – rückte die $wiirlak_ep_ap_evergrowth$ vor. Spionagenetzwerke verbreiteten Sporen im Schatten. Bombardements säten fruchtbaren Verfall. \n\nUnd jetzt, ohne Fanfare oder einen letzten Akt, ist die Galaxis ein riesiger Garten. \n\nNiemand bemerkte es, bis es bereits geschehen war. Der Himmel stürzte nicht ein. Er wurde grün."
+
+
+# Subject
+ specialist_evergrowth:0 "Samenstreuer"
+
+ wiirlak_ep_preset_evergrowth:0 "$specialist_evergrowth$"
+ wiirlak_ep_preset_evergrowth_desc:0 "Ein Samenstreuer ist ein Spezialistentyp, der sich auf planetare Transformation und die Verbreitung der ökologischen Vision seines Oberherren konzentriert, auf Kosten reduzierter Autonomie und diplomatischen Einflusses."
+ wiirlak_ep_preset_evergrowth_flavor_desc:0 "$wiirlak_ep_preset_evergrowth_desc$"
+
+ MESSAGE_SUBJECT_LEVEL_UP_specialist_evergrowth_TITLE:0 "$specialist_evergrowth$ $MESSAGE_SUBJECT_LEVEL_UP_TITLE$"
+ MESSAGE_WE_LEVEL_UP_specialist_evergrowth_TITLE:0 "$specialist_evergrowth$ $MESSAGE_WE_LEVEL_UP_TITLE$"
+
+# Subject Perks
+ wiirlak_ep_1_modifier:0 "$specialist_evergrowth$ Boni I"
+ wiirlak_ep_1_penalties:0 "$specialist_evergrowth$ Mali I"
+
+ wiirlak_ep_1_insight:0 "$specialist_evergrowth$ Einblick I"
+ wiirlak_ep_1_insight_desc:0 "§ETechnologie erhalten:§!\n$t$£society£ $wiirlak_ep_tech_energy$\n§EFür Forschungstechnologien hinzufügen:§!\n$t$£society£ $wiirlak_ep_tech_growth$\n$t$£society£ $wiirlak_ep_tech_defense$"
+
+
+ wiirlak_ep_1_bloomform:0 "$specialist_evergrowth$ $wiirlak_ep_menap_terraforming_3$ I"
+ wiirlak_ep_1_bloomform_desc:0 "§H[TARGET.Capital.GetName]§! wird zu einer §Y$wiirlak_ep_pc_bloom$§! werden!"
+
+ wiirlak_ep_1_overlord_modifier:0 "$specialist_evergrowth$ Beratung"
+ wiirlak_ep_1_overlord_penalty:0 "$specialist_evergrowth$ Wartung"
+ wiirlak_ep_1_neighbor_bonuses:0 "Zweig der $wiirlak_ep_ap_evergrowth$"
+
+
+
+ wiirlak_ep_2_modifier:0 "$specialist_evergrowth$ Boni II"
+ wiirlak_ep_2_penalties:0 "$specialist_evergrowth$ Mali II"
+
+ wiirlak_ep_2_insight:0 "$specialist_evergrowth$ Einblick II"
+ wiirlak_ep_2_insight_desc:0 "§ETechnologie erhalten:§!\n$t$£society£ $wiirlak_ep_tech_science$\n§EFür Forschungstechnologien hinzufügen:§!\n$t$£society£ $wiirlak_ep_tech_unity$"
+
+
+ wiirlak_ep_2_bloomform:0 "$specialist_evergrowth$ $wiirlak_ep_menap_terraforming_3$ II"
+ wiirlak_ep_2_bloomform_desc:0 "Jeder Planet innerhalb des Hauptsektors von §H[TARGET.GetName]§! wird zu §Y$wiirlak_ep_pc_bloom_plural$§! werden!"
+
+ wiirlak_ep_2_colony:0 "$specialist_evergrowth$ Anpassung I"
+ wiirlak_ep_2_colony_desc:0 "§H[TARGET.GetName]§! passt sich an §Y$wiirlak_ep_pc_bloom_plural$§! an"
+
+ wiirlak_ep_2_bloomform_leader:0 "$specialist_evergrowth$ Anführer I"
+ wiirlak_ep_2_bloomform_leader_desc:0 "§E$official_plural_with_icon$ erhalten ein zufälliges Merkmal:§!\n$leader_trait_evergrowth_rooted_presence$\n$leader_trait_evergrowth_spore_diplomat$\n$leader_trait_evergrowth_myco_admin$\n$leader_trait_evergrowth_biogrowth_architect$\n$leader_trait_evergrowth_spore_council$\n"
+
+
+
+ wiirlak_ep_3_modifier:0 "$specialist_evergrowth$ Boni III"
+ wiirlak_ep_3_penalties:0 "$specialist_evergrowth$ Mali III"
+
+ wiirlak_ep_3_insight:0 "$specialist_evergrowth$ Einsicht III"
+ wiirlak_ep_3_insight_desc:0 "§ETechnologie erhalten:§!\n$t$£engineering£ $wiirlak_ep_tech_adv_resource$\n§EZu erforschbaren Technologien hinzufügen:§!\n$t$£society£ $wiirlak_ep_tech_influence$"
+
+
+ wiirlak_ep_3_bloomform:0 "$specialist_evergrowth$ $wiirlak_ep_menap_terraforming_3$ III"
+ wiirlak_ep_3_bloomform_desc:0 "Jeder Planet in §H[TARGET.GetName]§! verwandelt sich in §Y$wiirlak_ep_pc_bloom_plural$§!"
+
+ wiirlak_ep_3_colony:0 "$specialist_evergrowth$ Anpassung II"
+ wiirlak_ep_3_colony_desc:0 "§H[TARGET.GetName]§!'s Bevölkerung passt sich an §Y$wiirlak_ep_pc_bloom_plural$§! an"
+
+ wiirlak_ep_3_bloomform_leader:0 "$specialist_evergrowth$ Anführer II"
+ wiirlak_ep_3_bloomform_leader_desc:0 "$OVERLORD_MOD$\nDas §Y$wiirlak_ep_holding_sporebloom_arboretum$§! $concept_overlord_holding$ produziert nun auch £unity£ basierend auf Anführern im Besitz von Untertanen.\n\n$SUBJECT_MOD$\n\t§G+1§! $MOD_PLANET_MAX_DISTRICTS_ADD$ mit dem §Y$wiirlak_ep_holding_sporebloom_arboretum$§! $concept_overlord_holding$"
+
+# Subject Modifier
+ Wiirlak_ep_modifier_relay:0 "$wiirlak_ep_1_neighbor_bonuses$"
+ mod_planet_jobs_wiirlak_ep_resource_mycogrowth_produces_mult:0 "£wiirlak_ep_resource_mycogrowth£ $wiirlak_ep_resource_mycogrowth$ aus £job£ Arbeitsplätzen"
+
+# Subject Leader Trait
+ leader_trait_evergrowth_rooted_presence:0 "Verwurzelte Präsenz"
+ leader_trait_evergrowth_rooted_presence_desc:0 "Je länger man bleibt, desto mehr lauscht der Boden."
+ leader_trait_evergrowth_rooted_presence_tooltip:0 "Auf §Y$wiirlak_ep_pc_bloom_plural$§!, $PLANET_EFFECTS_TXT$ $TABBED_NEW_LINE$- $MOD_PLANET_STABILITY_MULT$: §G+20%§!$TABBED_NEW_LINE$- $MOD_POP_GOVERNMENT_ETHIC_ATTRACTION$: §G+20%§! \n\nVon §Y$wiirlak_ep_pc_bloom$§!, $SECTOR_EFFECTS_TXT$$TABBED_NEW_LINE$- $MOD_PLANET_STABILITY_MULT$: §G+10%§!$TABBED_NEW_LINE$- $MOD_POP_GOVERNMENT_ETHIC_ATTRACTION$: §G+10%§!"
+
+ leader_trait_evergrowth_spore_diplomat:0 "Sporen-Diplomat"
+ leader_trait_evergrowth_spore_diplomat_desc:0 "Sie sprechen sanft – in Pollen, in Pheromonen, in Frieden."
+ leader_trait_evergrowth_spore_diplomat_tooltip:0 "Auf §Y$wiirlak_ep_pc_bloom_plural$§!, $PLANET_EFFECTS_TXT$ $TABBED_NEW_LINE$- $mod_planet_jobs_upkeep_mult$: §G-15%§!$TABBED_NEW_LINE$- $mod_planet_jobs_unity_produces_mult$: §G+15%§! \n\nVon §Y$wiirlak_ep_pc_bloom$§!, $SECTOR_EFFECTS_TXT$$TABBED_NEW_LINE$- $mod_planet_jobs_upkeep_mult$: §G-7.5%§!$TABBED_NEW_LINE$- $mod_planet_jobs_unity_produces_mult$: §G+7.5%§!"
+
+ leader_trait_evergrowth_myco_admin:0 "Myko-Administrator"
+ leader_trait_evergrowth_myco_admin_desc:0 "Entscheidungen verbreiten sich so schnell wie Wurzeln in fruchtbarem Boden."
+
+ leader_trait_evergrowth_biogrowth_architect:0 "Biowachstums-Architekt"
+ leader_trait_evergrowth_biogrowth_architect_desc:0 "Warum bauen, wenn die Welt es für dich wachsen lassen kann?"
+ leader_trait_evergrowth_biogrowth_architect_tooltip:0 "Auf §Y$wiirlak_ep_pc_bloom_plural$§!, $PLANET_EFFECTS_TXT$ $TABBED_NEW_LINE$- $mod_planet_districts_cost_mult$: §G-20%§!$TABBED_NEW_LINE$- $mod_planet_districts_upkeep_mult$: §G-20%§! \n\nVon §Y$wiirlak_ep_pc_bloom$§!, $SECTOR_EFFECTS_TXT$$TABBED_NEW_LINE$- $mod_planet_districts_cost_mult$: §G-10%§!$TABBED_NEW_LINE$- $mod_planet_districts_upkeep_mult$: §G-10%§!"
+
+ leader_trait_evergrowth_spore_council:0 "Rat der Sporen"
+ leader_trait_evergrowth_spore_council_desc:0 "Ihre Gedanken sind kollektiv. Ihre Stimmen, vorhersagbar."
+
+# Subject Building
+ wiirlak_ep_holding_sporebloom_arboretum:0 "Sporenblüten-Arboretum"
+ wiirlak_ep_holding_sporebloom_arboretum_desc:0 "Eine lebendige Kathedrale für das Immerwachstum, stets Pollen des Versprechens ausatmend."

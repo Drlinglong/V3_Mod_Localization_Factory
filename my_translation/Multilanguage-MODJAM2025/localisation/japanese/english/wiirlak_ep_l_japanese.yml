@@ -1,0 +1,651 @@
+﻿l_japanese:
+
+# Author / Name of the mod
+ wiirlak_ep:0 "「ウィーラックの永遠の繁茂プロトコル危機」"
+
+
+# Vanilla Missing Localisation
+ pc_cosmogenesis_world_adj:0 "$pc_cosmogenesis_world$"
+ pc_nanotech_adj:0 "$pc_nanotech$"
+ bio_ship_desc:0 "$concept_biological_ship_desc$"
+
+# AP
+ wiirlak_ep_ap_evergrowth_protocol:0 "「$wiirlak_ep_ap_evergrowth$ プロトコル」"
+ wiirlak_ep_ap_evergrowth_protocol_desc:0 "「終わりのない成長。抑制なき生命。指数関数的潜在力。」"
+ wiirlak_ep_ap_evergrowth:0 "「§H永遠の繁茂§!」"
+
+# Resource
+ wiirlak_ep_resource_mycogrowth:0 "「菌類繁茂」"
+ wiirlak_ep_resource_mycogrowth_desc:0 "「$wiirlak_ep_pc_bloom_plural$から収穫された半知性を持つ真菌の格子。それは新たなテラフォーミングの苗床として機能し、成長する銀河の庭の真の頭脳である。」"
+ wiirlak_ep_resource_mycogrowth_name:0 "$wiirlak_ep_resource_mycogrowth$"
+
+ wiirlak_ep_resource_mycogrowth_value:0 "「£wiirlak_ep_resource_mycogrowth£ $VAL|0$」"
+ wiirlak_ep_resource_mycogrowth_current_value:0 "$menace_current_value$"
+ wiirlak_ep_resource_mycogrowth_gaining:0 "「§H危機目標§!を達成すると、より多くの§Y$wiirlak_ep_resource_mycogrowth$§!を獲得できます。」"
+
+ wiirlak_ep_resource_mycogrowth_crisis_level_unlocked:0 "$menace_crisis_level_unlocked$"
+ wiirlak_ep_resource_mycogrowth_crisis_level_desc:0 "$menace_crisis_level_desc$"
+
+ wiirlak_ep_resource_mycogrowth_crisis_level_locked:0 "$menace_crisis_level_locked$"
+ wiirlak_ep_resource_mycogrowth_crisis_level_unlock:0 "「£wiirlak_ep_resource_mycogrowth£ §Y$CURRENCY$§! $wiirlak_ep_resource_mycogrowth$」"
+
+ wiirlak_ep_resource_mycogrowth_crisis_description_title:0 "$wiirlak_ep_ap_evergrowth_protocol$"
+ wiirlak_ep_resource_mycogrowth_crisis_description:0 "「何世紀にもわたり、学者たちは来るべき§R危機§!について語ってきた。それは、あらゆる星間文明の意志を試す最終的な審判だと。その理論は合成生命体の反乱から異次元戦争まで多岐にわたったが、終焉がどのような形をとるか真に理解した者はほとんどいなかった。\n\nそれは火ではなかった。鋼でもなかった。静寂でもなかった。\nそれは§R生命§!だった。\n\n生態学的支配として始まったものは、反復的で、ウイルス性で、そして知性を持つ何かへと変貌した。$wiirlak_ep_ap_evergrowth$は征服によってではなく、再生、活力、超越という約束によって広がる。しかし、その代償はすべてだ。\n\n惑星は滅びない。ただ、咲き誇るのだ。\nそして、あらゆる世界が庭園と化した時…我々が知る銀河は消え去るだろう。」"
+
+ wiirlak_ep_resource_mycogrowth_crisis_howto_title:0 "「胞子と根」"
+ wiirlak_ep_resource_mycogrowth_crisis_howto:0 "「§H危機目標§!を達成することで、£wiirlak_ep_resource_mycogrowth£ §H$wiirlak_ep_resource_mycogrowth$§!を収穫できる。これは$wiirlak_ep_ap_evergrowth$の増殖を促す生命の物質である。より多くの世界が消費され、肥沃な宿主へと再形成されるにつれて、銀河に対する我々の支配は強まっていく。\n最終的には、§H菌根ネットワーク§!を構築し、§H超変態§!を引き起こすことで、居住可能なすべての世界をテラフォーミングし、新たな生命の秩序を到来させなければならない。」"
+
+
+
+# Event Chain
+ wiirlak_ep_evergrowth_protocol_chain:0 "「$wiirlak_ep_ap_evergrowth_protocol$ 飛昇」"
+ wiirlak_ep_evergrowth_protocol_chain_title:0 "$wiirlak_ep_evergrowth_protocol_chain$"
+ wiirlak_ep_evergrowth_protocol_chain_desc:0 "「他者が衰退と呼ぶものを、我々は変革と呼ぶ。\n\n星々は永遠には燃えない。生命は適応するか、古い銀河と共に朽ちるかだ。\n\n我々は成長を選んだ…そして、そこから開花する。」"
+
+ wiirlak_ep_evergrowth_protocol_levels:0 "$crisis_level_reached$"
+ wiirlak_ep_evergrowth_protocol_bloom_worlds:0 "「$wiirlak_ep_pc_bloom$ 変換済み」"
+
+
+# Special Projects
+ WIIRLAK_EP_FINAL_PROJECT_1:0 "「銀河に根付かせよ」"
+ WIIRLAK_EP_FINAL_PROJECT_1_DESC:0 "「一本の木だけでは繁栄できない。天蓋の隅々まで、根と根を触れ合わせなければならない。\n\n$wiirlak_ep_objectives$」"
+
+ wiirlak_ep_objectives:0 "「[wiirlak_ep_objectives_step]」"
+ wiirlak_ep_objectives_step_1:0 "「§H要件:§!\n[wiirlak_ep_objectives_step_1_empire_check]\n[wiirlak_ep_objectives_step_1_total_check]\n[wiirlak_ep_objectives_step_1_capital_check]」"
+
+ wiirlak_ep_objectives_step_1_empire:0 "「少なくとも§Y[wiirlak_ep_half_total_empire]§!の$concept_empires$がその国境内に§Y$wiirlak_ep_pc_bloom_plural$§!を保有している ([wiirlak_ep_total_empire_bloomed])」"
+ wiirlak_ep_objectives_step_1_total:0 "「銀河内の§Y$wiirlak_ep_pc_bloom_plural$§!のうち、少なくとも§Y[wiirlak_ep_percent_bloomed_system]§!が達成 ([wiirlak_ep_actual_percen_bloomed_system])」"
+ wiirlak_ep_objectives_step_1_capital:0 "「首都は§Y$wiirlak_ep_pc_bloom$§!である\n\n要件を満たす前に$RESEARCHING$を行っても効果はありません。」"
+
+ wiirlak_ep_objectives_step_2:0 "「§H$terraforming$:§!\n」"
+ wiirlak_ep_objectives_step_3:0 ""
+
+# Level up Event
+ wiirlak_ep_event_lvl_script_loc:0 "「[wiirlak_ep_event_lvl_script_loc]」"
+ wiirlak_ep_event_lvl_desc_script_loc:0 "「[wiirlak_ep_event_lvl_desc_script_loc]」"
+
+ wiirlak_ep_event_lvl_1:0 "「最初の種子」"
+ wiirlak_ep_event_lvl_1_desc:0 "「かつては不毛な地殻と生命なき塵だったものを、我々の導きの下で花へと変える夢。全く新しい生命圏――生きて、呼吸する生命圏――を創造する。常に進化し続ける。\n\n根はマントルを割り、胞子は海を漂い、この制御された混沌から全く新しいもの、すなわち§Y$wiirlak_ep_pc_bloom$§!が生まれるだろう。\n最初の種子は植えられるのを待っている。我々の目的は根付くのだ。」"
+
+ wiirlak_ep_event_lvl_1B:0 "「精神の間の種子」"
+ wiirlak_ep_event_lvl_1B_desc:0 "「次なるフロンティアは塵の中ではなく、都市の中にある。\n\nもし我々の生体統合システムを際限なく広げたいのならば、倫理的、実用的、そして進化的な飛躍に直面しなければならない。すなわち、居住された世界をテラフォーミングすることだ。住民を避難させたり、浄化したりするのではなく――彼らが生きている間に上書きするのだ。\n我々の科学者たちは準備が整ったと報告している。胞子は適応できる。生命は耐え忍び――そして変化するだろう。\n\n今、決断が下されなければならない。\n既に知性で満たされた世界で、その開花を試すのか？\nそれが未来への道であることを銀河に示すのか？」"
+
+ wiirlak_ep_event_lvl_2:0 "「緑豊かな意識」"
+ wiirlak_ep_event_lvl_2_desc:0 "「我々は自らを自然の管理者だと思っていた。それは間違いだった。\n\n§Y$wiirlak_ep_pc_bloom_plural$§!は我々を単に維持するだけでなく――意思疎通を図るのだ。成長、天候、移動の中にパターンが現れる。我々の民は、巨大な樹冠が囁くアイデアの鮮明な夢を見たと報告している。ある者は精神的なものだと言い、ある者は生物学的共鳴だと言う。\n\nその効果は現実のものだ。生産性は急増し、安定性は強固になり、変異は広がる――有益で、導かれ、完璧な変異が。\n\n我々は惑星を耕しているのではない。意識ある生態系を築いているのだ――そして彼らは我々に反応する。\n\n成長はもはや資源ではない。それは言語なのだ。」"
+
+ wiirlak_ep_event_lvl_3:0 "「国境なき根」"
+ wiirlak_ep_event_lvl_3_desc:0 "「$wiirlak_ep_ap_evergrowth$はもはや広がるために許可を必要としない。風は我々の胞子をハイパーレーンを越えて運び、移住者は知らぬ間に媒介者となる。我々の存在は船や艦隊を超越し、自然そのものに組み込まれているのだ。\n\n秘密裏の手段であれ、粘り強い胞子の開花であれ、銀河の土壌は一原子ずつ書き換えられている。すでに、我々の支配下にない世界もそれを感じ取っている。根は石のひび割れを見つけ、生命が漏れ出す。\n\n他者たちはまだ気づいていないかもしれないが、彼らは今や我々の一部なのだ。\n\nそれは時間の問題に過ぎない。」"
+
+ wiirlak_ep_event_lvl_4:0 "「繁茂する螺旋」"
+ wiirlak_ep_event_lvl_4_desc:0 "「もはや抵抗はなく、遅延があるのみだ。\n\n成長は指数関数的になった。我々の制御システムは有機的であり、建築は血管のようだ。テラフォーミングは今や反射行動となり、定住すれば即座に再形成する。我々の敵すら、苗のための土壌となった。\n\nこれはもはや植民ではない。統合だ。銀河は戦争によってではなく、複製によって生命の設計に屈する。我々が止まっても、螺旋は止まらない。\n我々は止まることはできない。開花は避けられないのだ。」"
+
+ wiirlak_ep_event_lvl_5:0 "「胞子の交響曲」"
+ wiirlak_ep_event_lvl_5_desc:0 "「金属は錆びる。石はひび割れる。コードは腐敗する。だが生命は？生命は適応する。\n\n最後の種子が芽吹いた。そこから、理解を超えた構造――一部は有機体、一部は機関、一部は生態系――が生まれた。その誕生は嵐を呼び、その息吹は星々のあらゆる片隅で休眠していた胞子を目覚めさせる。\n\n今、数日のうちに惑星全体が変貌するだろう。文明は咲き誇る空の下で崩壊する。虚空は葉緑素と雷鳴でざわめくだろう。もはや抵抗はない。鋼鉄もない。\n\nただ土壌のみ。ただ根のみ。ただ我々のみ。\n$wiirlak_ep_ap_evergrowth$に主人はおらず――終わりもない。」"
+
+# Crisis Levels
+ wiirlak_ep_evergrowth_protocol_level_1:0 "「§U$wiirlak_ep_event_lvl_1$§!」"
+ wiirlak_ep_evergrowth_protocol_level_1_desc:0 "$crisis_level_1_desc$"
+
+ wiirlak_ep_evergrowth_protocol_level_2:0 "「§U$wiirlak_ep_event_lvl_2$§!」"
+ wiirlak_ep_evergrowth_protocol_level_2_desc:0 "$crisis_level_2_desc$"
+
+ wiirlak_ep_evergrowth_protocol_level_3:0 "「§U$wiirlak_ep_event_lvl_3$§!」"
+ wiirlak_ep_evergrowth_protocol_level_3_desc:0 "$crisis_level_3_desc$"
+ wiirlak_ep_evergrowth_protocol_level_3_requirements:0 "`$TRIGGER_FAIL$ 植民地の少なくとも25%が§G$wiirlak_ep_pc_bloom$§!である必要があります。`"
+ wiirlak_ep_evergrowth_protocol_level_3_pass:0 "`£trigger_yes£ 植民地の少なくとも25%が§G$wiirlak_ep_pc_bloom$§!です！`"
+
+ wiirlak_ep_evergrowth_protocol_level_4:0 "`§U$wiirlak_ep_event_lvl_4$§!`"
+ wiirlak_ep_evergrowth_protocol_level_4_desc:0 "$crisis_level_4_desc$"
+ wiirlak_ep_evergrowth_protocol_level_4_requirements:0 "`$TRIGGER_FAIL$ 植民地の少なくとも75%が§G$wiirlak_ep_pc_bloom$§!である必要があります。`"
+ wiirlak_ep_evergrowth_protocol_level_4_pass:0 "`£trigger_yes£ 植民地の少なくとも75%が§G$wiirlak_ep_pc_bloom$§!です！`"
+
+ wiirlak_ep_evergrowth_protocol_level_5:0 "`§U$wiirlak_ep_event_lvl_5$§!`"
+ wiirlak_ep_evergrowth_protocol_level_5_desc:0 "$crisis_level_5_desc$"
+ wiirlak_ep_evergrowth_protocol_level_5_requirements:0 "`$TRIGGER_FAIL$ 植民地の少なくとも90%が§G$wiirlak_ep_pc_bloom$§!である必要があります。`"
+ wiirlak_ep_evergrowth_protocol_level_5_pass:0 "`£trigger_yes£ 植民地の少なくとも90%が§G$wiirlak_ep_pc_bloom$§!です！`"
+
+
+
+# Crisis Objectives
+ wiirlak_ep_resource_mycogrowth_crisis_objective:0 "$menace_crisis_objective$"
+ wiirlak_ep_resource_mycogrowth_crisis_objective_gained:0 "`$wiirlak_ep_resource_mycogrowth$ 獲得`"
+ wiirlak_ep_resource_mycogrowth_crisis_objective_reward:0 "$menace_crisis_objective_reward$"
+ wiirlak_ep_resource_mycogrowth_crisis_objective_progress:0 "`我々は£wiirlak_ep_resource_mycogrowth£ $AMOUNT$ をこの危機目標から獲得した。`"
+
+
+ wiirlak_ep_crisobj_own_bloom_world_name:0 "`$wiirlak_ep_pc_bloom_plural$を領有`"
+ wiirlak_ep_crisobj_own_bloom_world_desc:0 "`我々の根は大地にしっかりと根を張った。最初の世界は今や我々の設計に基づき脈動している。これは我々の生体形成術における熟練の証だ。それはもはや惑星ではない。手足であり、苗床であり、意思の宣言である。ブルームが始まる。\n\n$wiirlak_ep_pc_bloom_plural$を領有する。`"
+
+ wiirlak_ep_crisobj_inhabit_bloom_world_name:0 "`$wiirlak_ep_pc_bloom_plural$に居住`"
+ wiirlak_ep_crisobj_inhabit_bloom_world_desc:0 "`我々は我々が育てたものを呼吸する。空気は胞子が絡みついた風で満たされ、我々の足元では地殻が生命で震えている。これは植民ではない――共存だ。我々は作り上げた庭園で安らぎを得る。\n\n$wiirlak_ep_pc_bloom_plural$に居住する。`"
+
+
+ wiirlak_ep_crisobj_blooming_planet_name:0 "`$wiirlak_ep_pc_bloom_plural$に軌道改造`"
+ wiirlak_ep_crisobj_blooming_planet_desc:0 "`古き世界は消え去った。その代わりに、蔓が鋼を貪り、林冠が空を覆い尽くし、光合成を行う塔がスカイラインを再構築する。この変化は不可逆的であり、そして美しい。\n\n任意の惑星を$wiirlak_ep_pc_bloom$に軌道改造する。`"
+
+ wiirlak_ep_crisobj_blooming_adv_pc_name:0 "`高度惑星を$wiirlak_ep_pc_bloom_plural$に軌道改造`"
+ wiirlak_ep_crisobj_blooming_adv_pc_desc:0 "`最も人工的な建造物ですら消費されうる。巨大構造物は腐敗し、デジタル精神は苔とカビの下で窒息する。生物圏はいかなる挑戦者も許容しない――完全性でさえも。\n\n高度惑星（集合意識惑星、機械惑星、エキュメノポリスなど）を$wiirlak_ep_pc_bloom$に軌道改造する。`"
+
+ wiirlak_ep_crisobj_blooming_outside_border_name:0 "`他の帝国領内で軌道改造`"
+ wiirlak_ep_crisobj_blooming_outside_border_desc:0 "`我々は扉を叩かなかった。我々は尋ねなかった。我々の根は見えないところで深く潜り込み、その世界は他者の監視下で開花した。彼らの否定は、我々が既に咲かせたものを再び蕾に戻すことはできない。\n\n他の帝国の国境内の惑星を軌道改造する`"
+
+ wiirlak_ep_crisobj_kill_fauna_name:0 "$crisobj_kill_space_fauna_name$"
+ wiirlak_ep_crisobj_kill_fauna_desc:0 "$crisobj_kill_space_fauna_desc$"
+
+ wiirlak_ep_crisobj_kill_bioships_name:0 "$crisobj_kill_bioships_name$"
+ wiirlak_ep_crisobj_kill_bioships_desc:0 "$crisobj_kill_bioships_desc$"
+
+# Crisis Perks
+ wiirlak_ep_menap_food_1:0 "`菌糸栄養素`"
+ wiirlak_ep_menap_food_1_desc:0 "`加速された生物圏は土壌を豊かにし、有機化合物で空気を飽和させる。あらゆる収穫が、手付かずの豊かさで脈動する。`"
+
+ wiirlak_ep_menap_tech_1:0 "`植生創生`"
+ wiirlak_ep_menap_tech_1_desc:0 "`一度の生命の息吹が、石と氷を生きた土壌へと書き換える。`"
+ mod_country_base_wiirlak_ep_resource_mycogrowth_produces_add:0 "`$BASE$ $AUTOSAVE_EVERY_MONTH$ $wiirlak_ep_resource_mycogrowth$ $PRODUCTION$`"
+ wiirlak_ep_menap_tech_1_tooltip:0 "`$mod_planet_jobs_produces_mult$ および $MOD_POP_BONUS_WORKFORCE_MULT$ を$wiirlak_ep_pc_bloom_plural$において§Y危機レベル§!ごとに増加\n\n`"
+
+ wiirlak_ep_menap_terraforming_1:0 "`胞子格子工学`"
+ wiirlak_ep_menap_terraforming_1_desc:0 "`他者が死を見るであろう場所で、我々は肥沃な大地を見る。`"
+
+
+ wiirlak_ep_menap_food_2:0 "`共生インフラ`"
+ wiirlak_ep_menap_food_2_desc:0 "`我々はもはや世界の上に建設するのではなく――世界と共に建設する。`"
+ wiirlak_ep_menap_food_2_tooltip:0 "`§H$UNREADY_TOOLTIP_HEADER$ ['concept_decision']:§! §Y$wiirlak_ep_decision_planet_boost$§! \n\n`"
+
+ wiirlak_ep_menap_tech_2:0 "`急速増殖`"
+ wiirlak_ep_menap_tech_2_desc:0 "`成長はもはや奨励されるものではない。それは加速される。`"
+
+ wiirlak_ep_menap_terraforming_2:0 "`適応する根`"
+ wiirlak_ep_menap_terraforming_2_desc:0 "`$wiirlak_ep_ap_evergrowth$は惑星と共に適応する――あらゆる茎、根、葉が。`"
+
+
+ wiirlak_ep_menap_unity_1:0 "`緑の圧力`"
+ wiirlak_ep_menap_unity_1_desc:0 "`我々が繁栄すればするほど、銀河は我々のブルームの重みをより強く感じるだろう。`"
+
+ wiirlak_ep_menap_spy_op_1:0 "`静かなる発芽`"
+ wiirlak_ep_menap_spy_op_1_desc:0 "`我々の胞子は不可視である。我々の意図は、避けられない。`"
+ wiirlak_ep_menap_spy_op_1_tooltip:0 "`§H$UNREADY_TOOLTIP_HEADER$ $GALAXY_VIEW_EMPIRE_ESPIONAGE$ $OPERATIONS$:§! $wiirlak_ep_operation_covert_seeding$ \n\n`"
+
+ wiirlak_ep_menap_terraforming_3:0 "繁茂体"
+ wiirlak_ep_menap_terraforming_plural:0 "繁茂体"
+ wiirlak_ep_menap_terraforming_3_desc:0 "我々の住民は惑星と共に適応し、$wiirlak_ep_ap_evergrowth$と一体となる。"
+
+
+ wiirlak_ep_menap_food_3:0 "翠玉の奔流"
+ wiirlak_ep_menap_food_3_desc:0 "一つの星系では足りぬ。我々は星団ごとに、根を張り、セクターごとに咲き誇るのだ。"
+ wiirlak_ep_menap_food_3_tooltip:0 "['concept_decision'] §Y$wiirlak_ep_decision_planet_boost$§!が['concept_sector']全域に機能するようアップグレードされる。\n\n"
+ mod_planet_farmers_minerals_produces_add:0 "£minerals£ $minerals$につき$pop_group_unit$ [farmer.GetIcon] [GetFarmerPlural]"
+
+ wiirlak_ep_menap_tech_3:0 "播種術の精髄"
+ wiirlak_ep_menap_tech_3_desc:0 "なぜ待つ？星々は今すぐ成長せねばならぬ。"
+
+ wiirlak_ep_menap_bombardment_1:0 "焦土から種へ"
+ wiirlak_ep_menap_bombardment_1_desc:0 "死は生を養う。死者を焼き、その灰から$wiirlak_ep_ap_evergrowth$を立ち昇らせよ。"
+ wiirlak_ep_menap_bombardment_1_tooltip:0 "§H$UNREADY_TOOLTIP_HEADER$ 軌道爆撃姿勢:§! ['concept_wiirlak_ep_bombardment_verdant_purge'] \n\n"
+
+ wiirlak_ep_menap_terraforming_4:0 "互換性のある$wiirlak_ep_menap_terraforming_3$"
+ wiirlak_ep_menap_terraforming_4_desc:0 "我々は$wiirlak_ep_ap_evergrowth$の申し子である。我々の肉体、思考、鼓動、その全てが根に属する。"
+ wiirlak_ep_menap_terraforming_4_tooltip:0 "支配下の種族は['trait:trait_wiirlak_ep_pc_bloom_preference'] $TRAIT_TITLE$を獲得する。\n\n"
+
+
+ wiirlak_ep_menap_terraforming_5:0 "胞子同胞"
+ wiirlak_ep_menap_terraforming_5_desc:0 "それは客から始まる。そして森で終わる。"
+ wiirlak_ep_menap_terraforming_5_tooltip:0 "§H$UNREADY_TOOLTIP_HEADER$:§! ['trait:trait_wiirlak_ep_pc_bloom_preference'] ['concept_wiirlak_ep_trait_propagation'] \n\n"
+ mod_planet_farmers_alloys_produces_add:0 "£alloys£ $alloys$につき$pop_group_unit$ [farmer.GetIcon] [GetFarmerPlural]"
+
+ wiirlak_ep_menap_diplo_1:0 "緑盟"
+ wiirlak_ep_menap_diplo_1_desc:0 "星々が生き残るためには、我々に加わるほかない。"
+ wiirlak_ep_menap_diplo_1_tooltip:0 "§H$UNREADY_TOOLTIP_HEADER$ $TRADE_CATEGORY_TRADABLE_ACTION$:§! ['concept_wiirlak_ep_spread_the_evergrowth']"
+
+ wiirlak_ep_menap_modifier_1:0 "胞子下位リンク"
+ wiirlak_ep_menap_modifier_1_desc:0 "あらゆる葉から、囁きが。あらゆる囁きから、統一が。"
+ wiirlak_ep_menap_modifier_1_tooltip:0 "国境内の§G$wiirlak_ep_pc_bloom$§!につき:"
+ wiirlak_ep_menap_modifier_1_galaxy_tooltip:0 "\n銀河内の§G$wiirlak_ep_pc_bloom$§!につき:"
+
+ wiirlak_ep_menap_tech_4:0 "種子破壊者"
+ wiirlak_ep_menap_tech_4_desc:0 "なぜ惑星を植民する？書き換えればいいではないか？"
+
+# Concept
+ wiirlak_ep_menap_terraforming_5_tooltip_concept:0 "$TRAIT_TITLE$の伝播"
+ wiirlak_ep_menap_terraforming_5_tooltip_concept_desc:0 "$wiirlak_ep_menap_terraforming_5_tooltip_delay$ごとに、['trait:trait_wiirlak_ep_pc_bloom_preference']の特性は、密かに、そして不可避的に、我々の国境を越えて広がり始める。\n\n§Y隣接する帝国§!、§Yランダムな遠方の文明§!、そして我々の§Y遊休スパイネットワーク§!の標的が、彼らの住民の中からこの適応が発現するのを発見するかもしれない。もし彼らがすでに$wiirlak_ep_pc_bloom_plural$に居住している場合、その特性はより根付き、繁栄しやすい。\n\n$wiirlak_ep_menap_terraforming_5_tooltip_delay$ごとに、銀河内の§Y$ALL_GALAXY$§!にある['trait:trait_wiirlak_ep_pc_bloom_preference'] £pops£につき£unity£を、そして['trait:trait_wiirlak_ep_pc_bloom_preference'] £pops£を持つ$EMPIRE$に関する§Y$intel$§!を産出する。"
+ wiirlak_ep_menap_terraforming_5_tooltip_delay:0 "2年"
+
+ wiirlak_ep_trait_propagation_concept:0 "$wiirlak_ep_spread_the_evergrowth$"
+ wiirlak_ep_trait_propagation_concept_desc:0 "$wiirlak_ep_spread_the_evergrowth_desc$\n\n貿易相手の$EMPIRE$における$wiirlak_ep_spread_the_evergrowth_tooltip$。"
+
+
+
+# Planet Class
+ wiirlak_ep_pc_bloom:0 "開花世界"
+ wiirlak_ep_pc_bloom_plural:0 "開花世界"
+ wiirlak_ep_pc_bloom_desc:0 "惑星の地殻全体が、層状の酸素が豊富な生体構造へと変容した。そびえ立つ根系と巨大な胞子雲が地表を支配する。それは生きており、常に成長し続けている。"
+ wiirlak_ep_pc_bloom_adj:0 "開花"
+
+ mod_wiirlak_ep_pc_bloom_habitability:0 "$wiirlak_ep_pc_bloom$ $HABITABILITY$"
+
+# Trait
+ trait_wiirlak_ep_pc_bloom_preference:0 "$wiirlak_ep_menap_terraforming_3$"
+ trait_wiirlak_ep_pc_bloom_preference_desc:0 "$wiirlak_ep_pc_bloom$嗜好\n$trait_pc_arctic_preference_desc$"
+ trait_wiirlak_ep_pc_bloom_preference_short:0 "$wiirlak_ep_pc_bloom$"
+
+# Messages
+ WIIRLAK_EP_MESSAGE_BLOOMFORM_TITLE:0 "$trait_wiirlak_ep_pc_bloom_preference$下位リンク"
+ wiirlak_ep_message_bloomform_unity:0 "我々の$trait_wiirlak_ep_pc_bloom_preference$下位リンクにより、新たな洞察が得られた: §G+10§! $intel$と§G[ROOT.wiirlak_ep_var_bloomform_count]§! £unity£"
+
+ WIIRLAK_EP_MESSAGE_TERRAFORMED_TITLE:0 "「花咲きし世界」"
+ wiirlak_ep_message_terraformed_text:0 "「$wiirlak_ep_ap_evergrowth$が再び繁栄する。生命は荒々しくも美しく脈動し、§Y$PLANETNAME$§!はその真の姿を現した。」"
+
+ WIIRLAK_EP_MESSAGE_COVERT_OP:0 "「闇に根を張る」"
+ wiirlak_ep_message_terraformed_covert_op:0 "「警告と兆候にもかかわらず、§Y$PLANETNAME$§!は這い寄る変貌に屈した。蔓は舗装を裂き、胞子は空気を覆い、$wiirlak_ep_ap_evergrowth$は野放しに咲き乱れる。」"
+
+
+# Tech
+ wiirlak_ep_tech_bloom_colonization_1:0 "「エコフォーム創生」"
+ wiirlak_ep_tech_bloom_colonization_1_desc:0 "「我々は生命そのものを解き放つ術を解明した。」"
+ wiirlak_ep_tech_bloom_colonization_1_tooltip:0 "「§H機能解放§! $PLANETVIEW_TERRAFORM_INTO$ $wiirlak_ep_pc_bloom$」"
+ wiirlak_ep_tech_bloom_colonization_1_tooltip_desc:0 "「§H$wiirlak_ep_pc_bloom$§! \n$PLANET$を$wiirlak_ep_pc_bloom$へ$PLANETVIEW_TERRAFORM$することを許可する」"
+
+ wiirlak_ep_tech_bloom_colonization_2:0 "「生体統合」"
+ wiirlak_ep_tech_bloom_colonization_2_desc:0 "「大地との交渉は存在しない。」"
+ wiirlak_ep_tech_bloom_colonization_2_tooltip:0 "「$wiirlak_ep_pc_bloom$ $MOD_COUNTRY_TERRAFORMING_COST_MULT$: §G-50%§!」"
+
+ wiirlak_ep_tech_seedbreaker:0 "$wiirlak_ep_menap_tech_4$"
+ wiirlak_ep_tech_seedbreaker_desc:0 "$wiirlak_ep_menap_tech_4_desc$"
+
+ wiirlak_ep_tech_gatekeeping:0 "「$wiirlak_ep_ap_evergrowth$の解放」"
+ wiirlak_ep_tech_gatekeeping_desc:0 "「最後の封印が破られた。星々は再び肥沃となり、我らの意志によって庭園は虚無を喰らい尽くし、全てが一つの天蓋の下に集められるだろう。それは広大で、永遠で、知り得ない存在だ。$wiirlak_ep_ap_evergrowth$が語り、我々は従う。」"
+ wiirlak_ep_tech_gatekeeping_tooltip:0 "「§H機能解放§! §R危機§!をレベル5まで進行させる必要がある」"
+ wiirlak_ep_tech_gatekeeping_tooltip_desc:0 "「これにより、他の前提条件も満たされていれば、§R危機§!のレベル5がアンロックされる。」"
+
+
+ wiirlak_ep_tech_energy:0 "「光合成リレー」"
+ wiirlak_ep_tech_energy_desc:0 "「惑星を跨ぐ太陽光。全てが繋がり、同期する。」"
+ wiirlak_ep_tech_energy_tooltip:0 "「$wiirlak_ep_pc_bloom_plural$における£energy£ $energy$産出量を大幅に増加」"
+
+ wiirlak_ep_tech_unity:0 "「心の合唱」"
+ wiirlak_ep_tech_unity_desc:0 "「$wiirlak_ep_ap_evergrowth$が広がるにつれて、思考の調和も広がる。それぞれの声は葉となり、それぞれの思想は根となる。」"
+ wiirlak_ep_tech_unity_tooltip:0 "「$wiirlak_ep_pc_bloom_plural$における£unity£ $unity$産出量を大幅に増加」"
+
+ wiirlak_ep_tech_growth:0 "「ゆりかご樹液」"
+ wiirlak_ep_tech_growth_desc:0 "「真に繁殖するためには、成長、さらには進化をも標準化せねばならない。」"
+ wiirlak_ep_tech_growth_tooltip:0 "「$wiirlak_ep_pc_bloom_plural$における£mod_bonus_pop_growth_mult£ $MOD_BONUS_POP_GROWTH$産出量を大幅に増加」"
+
+ wiirlak_ep_tech_defense:0 "「茨の要塞」"
+ wiirlak_ep_tech_defense_desc:0 "「$wiirlak_ep_ap_evergrowth$を我らの防壁とせよ。いかなる炎も根には届かせない。」"
+ wiirlak_ep_tech_defense_tooltip:0 "「$wiirlak_ep_pc_bloom_plural$において£mod_planet_defense_armies_add£ $defense_army_plural$を自然に生産」"
+
+ wiirlak_ep_tech_adv_resource:0 "「胞子ベール合成」"
+ wiirlak_ep_tech_adv_resource_desc:0 "「障壁があってはならない、何でも合成できる。」"
+ wiirlak_ep_tech_adv_resource_tooltip:0 "「$wiirlak_ep_pc_bloom_plural$において£exotic_gases£ £rare_crystals£ £volatile_motes£ $RARE_RESOURCES$を自然に生産」"
+
+ wiirlak_ep_tech_influence:0 "「菌糸体支配」"
+ wiirlak_ep_tech_influence_desc:0 "「帝国とはネットワークに他ならない。根に統治させよ。」"
+ wiirlak_ep_tech_influence_tooltip:0 "「$wiirlak_ep_pc_bloom_plural$において£influence£ $influence$を自然に生産」"
+
+ wiirlak_ep_tech_science:0 "「意識の天蓋」"
+ wiirlak_ep_tech_science_desc:0 "「生物圏が思考し、根が知る。我々は耳を傾けることを学ばねばならない。」"
+ wiirlak_ep_tech_science_tooltip:0 "「$wiirlak_ep_pc_bloom_plural$において£physics_research£ £society_research£ £engineering_research£ $concept_research$を自然に生産」"
+
+# Tech event
+ wiirlak_ep_tech_event:0 "「最初の果実」"
+ wiirlak_ep_tech_event_desc:0 "「格子構造が反応する。\n\n我々の胞子が大地を飽和させ、根は目的に合わせて脈動し、天蓋の雲は厚みを増す。かつてテラフォーミングの不安定な実験であった$wiirlak_ep_pc_bloom_plural$は、今や驚くべき寛大さをもって産出する。食料。研究。統合力。成長。$wiirlak_ep_ap_evergrowth$は単に再形成するだけでなく、報酬をもたらす。\n\n生態系は新たなものへと安定した。それは惑星のバイオームではなく、惑星の臓器だ。より多くを、全てを成し得るネットワーク化された生物圏。\nこれらは最初の果実に過ぎない。さらに多くのものが待ち受けている。」"
+
+
+# Decision
+ wiirlak_ep_decision_planet_boost:0 "「開花伝播」"
+ wiirlak_ep_decision_planet_boost_desc:0 "$wiirlak_ep_menap_food_2_desc$"
+
+ wiirlak_ep_decision_planet_boost_sector:0 "$wiirlak_ep_decision_planet_boost$"
+ wiirlak_ep_decision_planet_boost_sector_desc:0 "$wiirlak_ep_decision_planet_boost_desc$"
+ wiirlak_ep_decision_planet_boost_sector_tooltip:0 "「§Y$wiirlak_ep_modifier_decision_planet_boost$§!修正器を§Y$wiirlak_ep_pc_bloom_plural$§!に§Hセクター全体§!で適用する。適用しない場合、§Y$wiirlak_ep_pc_bloom_plural$§!へのテラフォーミングを開始する。」"
+
+ wiirlak_ep_decision_planet_boost_sector_sector_fail:0 "「§R$TRIGGER_FAIL$ は$FRONTIER_PLANET$である§!」"
+ wiirlak_ep_decision_planet_boost_sector_sector_success:0 "「£trigger_yes£ §Y$normal_sector$§!の内部にある！」"
+
+ wiirlak_ep_decision_planet_boost_sector_sector_leader_fail:0 "「§R$TRIGGER_FAIL$ $SECTOR_GOVERNOR_TITLE$が存在しない§!」"
+ wiirlak_ep_decision_planet_boost_sector_sector_leader_success:0 "「£trigger_yes£ $SECTOR_GOVERNOR_TITLE$が存在する」"
+
+# Modifiers
+ wiirlak_ep_modifier_decision_planet_boost:0 "「加速的成長」"
+ wiirlak_ep_modifier_decision_planet_boost_desc:0 "$wiirlak_ep_decision_planet_boost_desc$"
+ mod_planet_farmers_wiirlak_ep_resource_mycogrowth_produces_add:0 "「£wiirlak_ep_resource_mycogrowth£ $wiirlak_ep_resource_mycogrowth$は$job_farmer_with_icon$から発生」"
+
+ wiirlak_ep_modifier_perk_4:0 "「成長の揺り籠」"
+ wiirlak_ep_modifier_perk_4_galaxy:0 "「外向的成長」"
+
+ wiirlak_ep_modifier_perk_5:0 "「統合的成長」"
+ wiirlak_ep_modifier_perk_5_galaxy:0 "「永続的成長」"
+
+
+
+# Spy OP
+ wiirlak_ep_operation_covert_seeding:0 "「隠密播種」"
+ wiirlak_ep_operation_covert_seeding_desc:0 "「開花が熟すにつれて、我々の繁殖手段は物理的境界を超越する。胞子は適応し、根は耳を傾け、敵の壁の内側で静かにテラフォーミングが始まる。」"
+ wiirlak_ep_operation_covert_seeding_on_success:0 "「いずれかの$RANDOM$ $databank_colony$が$wiirlak_ep_pc_bloom$へと$PLANETVIEW_TERRAFORM_INTO$する」"
+
+ wiirlak_ep_operation_covert_seeding_requires_colonies:0 "「$TRIGGER_FAIL$ 有効な$databank_colony$が必要です。$CAPITAL$では実行できません。」"
+ wiirlak_ep_operation_covert_seeding_already_in_situation:0 "「$TRIGGER_FAIL$ 対象はすでに$wiirlak_ep_operation_covert_seeding$作戦に対処中です」"
+
+# Spy OP Events
+ wiirlak_ep_operation_event_1:0 "「微細な変化」"
+ wiirlak_ep_operation_event_1_desc:0 "「我々の惑星科学チームの一つが、大気中の微生物叢に異常なパターン、そして土壌化学的異常も同時に報告しました。破壊工作の明確な兆候はありません。しかし、何かが異なっています。」"
+ wiirlak_ep_operation_event_1_answer_monitor:0 "「異常を監視する」"
+ wiirlak_ep_operation_event_1_answer_ignore:0 "「植物学者を無視する。もっと重要な問題に集中すべきだ。」"
+
+ wiirlak_ep_operation_event_2:0 "「植物相異常」"
+ wiirlak_ep_operation_event_2_desc:0 "「微細な生物学的パターンとして始まったものが何であれ、今や広大な地下菌糸体構造として姿を現しました。地表の領域全体が変色し、在来種は不自然に適応しているか、あるいは消滅しています。今すぐ行動しなければ、変形が完了してしまうでしょう。」"
+ wiirlak_ep_operation_event_2_answer_monitor:0 "「研究する — おそらく利益を得られるだろう」"
+ wiirlak_ep_operation_event_2_answer_ignore:0 "「成り行きに任せる」"
+ wiirlak_ep_operation_event_2_answer_resist:0 "「この侵略に抵抗しなければならない！」"
+
+ wiirlak_ep_operation_event_finish:0 "「菌糸体は監視されているが、手なずけられていない」"
+ wiirlak_ep_operation_event_finish_desc:0 "「§Y[event_target:wiirlak_ep_spy_op_target.GetName]§!の変形が本格的に始まりました。地方当局は異常を検知し、環境チームは我々の真菌ベクトルと生態学的ドリフトをますます注意深く監視しています。\n\nしかし、彼らの警戒にもかかわらず、根は深く張られていました。$wiirlak_ep_operation_covert_seeding$ネットワークは埋め込まれたままだが、無傷です。\n彼らは自分たちの土壌を取り戻したと信じています。しかし、$wiirlak_ep_ap_evergrowth$は忍耐強く、その周期は永遠なのです。」"
+
+
+ wiirlak_ep_operation_event_push_back:0 "「断たれた根」"
+ wiirlak_ep_operation_event_push_back_desc:0 "「あらゆる困難にもかかわらず、我々の世界はその変化に抵抗しました。異質な成長は滅菌され、その地下の糸は生物圏から焼き払われました。大気フィルターがバランスを回復させ、在来の生態系は、傷跡はあるものの、すでに回復の兆候を見せています。\n\n我々の惑星を彼らの姿に再鋳造しようとした者は誰であれ、我々の決意を過小評価しました。$wiirlak_ep_ap_evergrowth$は広大かもしれませんが、その巻きひげは断ち切ることができます。」"
+
+ wiirlak_ep_operation_event_overgrown:0 "「隆盛する$wiirlak_ep_ap_evergrowth$」"
+ wiirlak_ep_operation_event_overgrown_desc:0 "「我々はそれを封じ込めようとし、理解しようとしたが、結局§Y[event_target:wiirlak_ep_spy_op_target.GetName]§!は変貌を遂げました。\n\n変形は完了しました。空は今、奇妙なオーロラで輝き、広大な天蓋が衛星スキャンを遮り、土壌そのものが認識不能な生命で脈打っています。我々の技術はまだ機能し、都市はまだ建っていますが、足元の世界のルールを理解できなくなりました。\n\n$wiirlak_ep_ap_evergrowth$がこの場所を主張しました。そして我々は今、その根の上に生きていくことを学ぶか…あるいは逃げるしかありません。」"
+
+# Situation
+ wiirlak_ep_situation:0 "「不自然な変化」"
+ wiirlak_ep_situation_type:0 "$wiirlak_ep_situation$"
+ wiirlak_ep_situation_monthly_change_tooltip:0 "「我々の惑星の一つで、異常な生態学的変化が始まりました。放置すれば、異質な生物圏への不可逆的なテラフォーミングを遂げる可能性があります。」"
+
+ wiirlak_ep_situation_desc_almost_complete:0 "「§Y[Target.GetName]§!の空は胞子で厚い雲に覆われ暗くなっています。在来の生命は窒息しているか、置き換えられています。\nこのプロセスが完了すれば、惑星は完全に異質なものとなるでしょう。\n行動する時間はほとんど残されていません。」"
+ wiirlak_ep_situation_desc:0 "「§Y[Target.GetName]§!で微細な変化が展開しています。大気の変化。見慣れない真菌株の突然の成長。土壌組成が規範から逸脱。\n何かが内部から我々の世界を変えています。そしてそれは加速しています。」"
+ wiirlak_ep_situation_desc_pushing_back:0 "「封じ込めプロトコルは維持されています。除染チームは菌糸体の拡散を食い止めることに成功したと報告しています。環境的漂流は減速しました。\n今のところ、我々は§Y[Target.GetName]§!の変形を食い止めました。」"
+
+ wiirlak_ep_contained:0 "「侵入はほぼ封じ込められた」"
+ wiirlak_ep_incursion:0 "「異種侵入」"
+ wiirlak_ep_overwhelmed:0 "「圧倒的侵入」"
+
+ wiirlak_ep_burn:0 "「全てを焼き払え」"
+ wiirlak_ep_study:0 "「それらを研究する」"
+
+
+# Orbital Bombardment Stance
+ bombardment_wiirlak_ep_verdant_purge:0 "「翠の浄化」"
+ bombardment_wiirlak_ep_verdant_purge_desc:0 "「$wiirlak_ep_ap_evergrowth$をこの世界に咲かせよ。\n- §R陸軍§!に§R甚大な§!ダメージ\n- §R惑星§!に§R甚大な§!ダメージ\n- §R居住者§!に§R甚大な§!ダメージ\n- 惑星を§G$wiirlak_ep_pc_bloom_plural$§!にテラフォーミングするか、テラフォーミングできない場合は破壊する。」"
+
+# Bombardment Events
+ wiirlak_ep_event_bombarded_title:0 "「緑の包囲」"
+ wiirlak_ep_event_bombarded_desc:0 "「最初、それは降下物だと思った。胞子は塵のように降り注ぎ、建物や森、そして人々に降り積もった。今や土壌は熱を持ち、生命に満ちている。\n\n§Y[event_target:wiirlak_ep_planet_targeted.GetName]§!はもはや単に爆撃されているのではない――変化しているのだ。大気そのものが変化し、地表は砲撃の下で脈打つ侵襲性の菌類植物に道を譲っている。我々のスキャナーは、大気変動を確認した。それは置き換えだ。\n\nテラフォーミングが始まった…我々の同意なしに。侵略者は我々の世界を終わらせているのではない。\n上書きしているのだ。」"
+
+ wiirlak_ep_event_bombarded_origin_desc:0 "「爆撃はかつて抵抗を打ち砕く手段だった。今や、それは我々が未来を植え付ける方法だ。§Y[event_target:wiirlak_ep_planet_targeted.GetName]§!のクレーターや破壊された構造物の下で、何かが蠢いている――死ではなく、始まりが。\n\n我が艦艇によって運ばれた胞子が、傷ついた惑星の奥深くへと沈んでいった。地殻の亀裂からは、光合成性の霧が溢れ出ている。コンクリートは這い寄る根によって裂かれる。現地の生物圏は抵抗しているが、既に負けつつある。\n\n$wiirlak_ep_ap_evergrowth$が根を張った。この世界は我々のものとなるだろう。征服によってではなく、変容によって。」"
+
+ wiirlak_ep_event_bombarded_answer:0 "「$wiirlak_ep_ap_evergrowth$が根を張る」"
+
+ wiirlak_ep_event_bombarded_terraformed:0 "「生い茂る」"
+ wiirlak_ep_event_bombarded_terraformed_desc:0 "「忍び寄る侵入として始まったものは、今や絶対的なものとなった。数年にわたる静かな征服の末、[THIS.GetName]は永遠の生長体の姿へと開花した――すべての森が生きる神経となり、すべての呼吸が繁栄する知覚を持つ生態系の胞子から引き出される。\n\n都市はそびえ立つ生物発光性の植物の下に覆い隠され、そのスカイラインは新世界の意思のための単なる足場と化した。原生生物は逃亡するか、滅びるか、あるいは共生により適した形に再形成された。\n\n[THIS.GetName]はもはや旧銀河の世界ではない。それは$wiirlak_ep_ap_evergrowth$の化身なのだ。」"
+
+# Bombardment Messages
+ WIIRLAK_EP_MESSAGE_BOMBARDED_TITLE:0 "$bombardment_wiirlak_ep_verdant_purge$"
+ wiirlak_ep_message_bombarded_desc:0 "「§Y[event_target:wiirlak_ep_planet_targeted.GetName]§!が$wiirlak_ep_ap_evergrowth$によって変異し始めた。」"
+ wiirlak_ep_message_bombarded_origin_desc:0 "「$wiirlak_ep_ap_evergrowth$が§Y[event_target:wiirlak_ep_planet_targeted.GetName]§!に根を張り始めた。」"
+
+
+
+# Component
+ PLANET_KILLER_SEEDBREAKER:0 "「$wiirlak_ep_ap_evergrowth$ $wiirlak_ep_menap_tech_4$」"
+ PLANET_KILLER_SEEDBREAKER_DESC:0 "「大量の栄養豊富なバイオマスと大気触媒が惑星に解き放たれる。すべての人工建造物と合成生命体は、加速された半知覚性の植物によって侵食される。この洪水は気候を安定させ、地表を$wiirlak_ep_ap_evergrowth$のために準備された、生きる自己拡張型生物圏へと変貌させる。」"
+
+# Planet Killer
+ PLANET_KILLER_SEEDBREAKER_ACTION:0 "「$wiirlak_ep_ap_evergrowth$を植え付ける」"
+ FLEETORDER_DESTROY_PLANET_WITH_PLANET_KILLER_SEEDBREAKER:0 "「$PLANET|Y$への播種準備中」"
+
+ MESSAGE_DESC_FOR_PLANET_KILLER_SEEDBREAKER:0 "「$wiirlak_ep_ap_evergrowth$によって変容した（原因：」"
+
+# Opinions
+ wiirlak_ep_opinion_seeded_a_world:0 "「世界に播種した」"
+ wiirlak_ep_opinion_seeded_my_world:0 "「我々の世界に播種した」"
+ wiirlak_ep_opinion_seeded_a_primitive_world:0 "「未開文明の世界に播種した」"
+ wiirlak_ep_opinion_seeded_a_primitive_world_phile:0 "$opinion_cracked_a_primitive_world_phile$"
+
+ wiirlak_ep_opinion_acceptation:0 "「$wiirlak_ep_ap_evergrowth$を受け入れる」"
+
+# Planet Killer Events
+ wiirlak_ep_is_not_bloom:0 "「§R既に$wiirlak_ep_pc_bloom$である§!」"
+
+ wiirlak_ep_event_seedbreaker_title:0 "「$wiirlak_ep_ap_evergrowth$の恩恵」"
+ wiirlak_ep_event_seedbreaker_desc:0 "「それは静寂から始まった。派手な演出もなく、抵抗もなく。ただシステムが整っていく穏やかな鼓動だけが響き――そして、爆発が起こった。\n光り輝く胞子の槍が、雲、地殻、そして核を貫いた。昨日まで世界として存在したものは、今や解体され、再構築された。\n\n§Y$wiirlak_ep_menap_tech_4$§!が語りかけた。\nかつて不毛な岩や反抗的な都市があった場所に、今や$wiirlak_ep_ap_evergrowth$の緑の息吹が脈打つ。単に変容しただけでなく、生まれ変わったのだ。地殻は侵襲性の根で花開き、大気は種を運ぶ風で満たされている。生命は壊滅的な優雅さをもって、その存在を主張した。\n\n他の者たちはこれを破壊と見るかもしれない。しかし我々は真実を知っている。創造は常に崩壊のように見えるのだ。」"
+
+ wiirlak_ep_event_seedbreaker_target_title:0 "「荒廃の華」"
+ wiirlak_ep_event_seedbreaker_target_desc:0 "「我々はそれが兵器だと思っていた。間違っていた。\n\nシードブレイカーが来た時、避難命令はなく――ただ混乱だけがあった。§Y[event_target:wiirlak_ep_planet_targeted.GetName]§!の空が裂け開くと、その裂け目からは、炎ではなく胞子が――大気を窒息させ、土壌を書き換え、忍び寄る根の血管で川を膨張させる果てしない翠色の雲の奔流が流れ出した。\n\n数時間もしないうちに、我々の都市は植物に覆われた。機械はそこで錆びつき、通りは生きているかのように脈打つ葉の下に消えた。地区全体が、塔ほどの大きさのバイオマスの下で崩壊した。惑星はまだ生きているが、我々のものとしては生きていない。もう。\n\n彼らは§Y[event_target:wiirlak_ep_planet_targeted.GetName]§!を征服したのではない。書き換えたのだ。\nそして、それはまだ成長している。」"
+
+# Messages
+ WIIRLAK_EP_MESSAGE_SEEDBREAKER_TITLE:0 "$wiirlak_ep_event_seedbreaker_title$"
+ wiirlak_ep_message_seedbreaker_desc:0 "「$wiirlak_ep_ap_evergrowth$に失われた惑星：§Y[event_target:wiirlak_ep_planet_targeted.GetName]§!」"
+ wiirlak_ep_message_seedbreaker_origin_desc:0 "「シードブレイカーが§Y[event_target:wiirlak_ep_planet_targeted.GetName]§!に$wiirlak_ep_ap_evergrowth$を放った！」"
+
+
+
+# Diplomatic Actions
+ wiirlak_ep_spread_the_evergrowth:0 "「$wiirlak_ep_ap_evergrowth$を広げる」"
+ wiirlak_ep_spread_the_evergrowth_desc:0 "「$wiirlak_ep_ap_evergrowth$は武器ではなく、根で手を伸ばす。彼らは指導、繁栄、そして目的を提供する――もし我々が彼らのビジョンの下で我々の世界を咲かせるとするならば。この盟約を受け入れることは、我々の惑星を…そしておそらく我々自身を再構築することを意味する。」"
+ wiirlak_ep_spread_the_evergrowth_tooltip:0 "「$wiirlak_ep_ap_evergrowth$が§Y$effect_random_owned_planet$§!でテラフォーミングプロセスを開始する。」"
+
+ wiirlak_ep_spread_the_evergrowth_tooltip_no_more:0 "「$TRIGGER_FAIL$ §Rテラフォーミング可能な有効な惑星がない§!」"
+ wiirlak_ep_spread_the_evergrowth_tooltip_acceptation:0 "「$TRIGGER_FAIL$ §R彼らはこの提案を受け入れられないと判断した§!」"
+ wiirlak_ep_spread_the_evergrowth_tooltip_refusal:0 "「§Hゆえに、これは何ももたらさない§!」"
+
+# Diplo Event
+ wiirlak_ep_event_bombarded_terraformed_positive:0 "「根付いた調和」"
+ wiirlak_ep_event_bombarded_terraformed_positive_desc:0 "「その管理者の同意を得て、[THIS.GetName]は優雅な変容を遂げた。$wiirlak_ep_ap_evergrowth$は征服者としてではなく、庭師として根付き、原生生態系と、菌類複合体の繁栄する$wiirlak_ep_menap_terraforming_plural$を織り交ぜた。\n\n空は今や生物発光性の花粉で輝いている。作物は耕作なしに豊かに育つ。現地住民は健康の改善、澄んだ空気、そして奇妙だが歓迎すべき目的意識を報告している。\n\n大いなる循環に加わることで、[THIS.GetName]は犠牲者ではなく、$wiirlak_ep_ap_evergrowth$が提供するものの象徴となる：それは繁栄する共生による平和である。」"
+ wiirlak_ep_event_bombarded_terraformed_positive_answer:0 "「調和が栄える」"
+
+# Economic Categories
+ wiirlak_ep_bloom_world:0 "$wiirlak_ep_event_seedbreaker_title$"
+ wiirlak_ep_bloom_world_jobs:0 "「$wiirlak_ep_pc_bloom$ $planet_jobs$」"
+
+# Deposits
+ wiirlak_ep_deposit:0 "$wiirlak_ep_event_seedbreaker_title$"
+ wiirlak_ep_deposit_desc:0 "「$wiirlak_ep_ap_evergrowth$は、信仰を持つ者に与える。\n疑う者には、何も育たないだろう。だが、信じる者には…$wiirlak_ep_ap_evergrowth$は限りなく与える。」"
+
+
+
+# Final Events
+ wiirlak_ep_warning:0 "「根は星々へ」"
+ wiirlak_ep_warning_desc:0 "「帝国全域にわたるメッセージが、すべての通信アレイに開花し、重力井戸や亜空間を問わず囁かれている。かつては静かな生態学的好奇心だった$wiirlak_ep_ap_evergrowth$は、完全に別のものへと成熟した。\n\n§Y[event_target:wiirlak_ep_crisis_player.GetName]§!はビジョンを宣言した：全生物圏の完全な統合、すべての居住可能な世界に開花を広げること。彼らは征服ではなく、再生について語る。種族や主権によって分断されることのない銀河――だが、単一の生けるシステムとして呼吸する銀河を。\n\n彼らはそれを平和と呼ぶ。他者たちは既にそれを消去と呼んでいる。一つだけはっきりしていることがある：彼らは準備ができている。そして、彼らはまだ成長している。」"
+
+ wiirlak_ep_warning_2:0 "「第五の開花」"
+ wiirlak_ep_warning_2_desc:0 "「かつて不穏な異常と思われていたものが、今や星々全体に根を下ろしました。いわゆる$wiirlak_ep_ap_evergrowth$は、もはや逸脱したイデオロギーとして片付けられないほどの拡大と結束を遂げています。\n\n胞子の痕跡がハイパーレーンを伝って波及しています。$wiirlak_ep_pc_bloom_plural$は同調したパターンで共鳴しています。辺境星系からの報告によると、生物圏全体が一夜にして変異しているとのことです — テラフォーミングによるものではなく…より速く、より奇妙で、生きている何かによって。\n\nさらに悪いことに、我々は断片的な通信を傍受しました。それは招待状です。「格子に加わる」という申し出。言葉ではなく、根、菌糸、そしてより大きな存在の一部となる約束によって結ばれた忠誠。\n\nこれが何であれ、もはや運動ではありません。危機なのです。」"
+
+ wiirlak_ep_warning_2_answer_aggressive:0 "艦隊を準備せよ。手遅れになるかもしれん。"
+ wiirlak_ep_warning_2_answer_neutral:0 "秩序なき成長は腐敗である。"
+ wiirlak_ep_warning_2_answer_curious:0 "恐らく…彼らの言うことに耳を傾けるべきだろう。"
+
+
+ wiirlak_ep_invitation:0 "最後の二枚の花弁"
+ wiirlak_ep_invitation_desc:0 "ハイパー変容が根付く前に、あと二つの肥沃な大地を確保せねばならない。我々のエージェントは、境界線上にいる帝国を特定した — 躊躇しているが、まだ敵意はない。\n\nもし彼らが我々の胞子を受け入れるなら、周期は抵抗なく完了するだろう。もし彼らが抵抗するなら…彼らの灰で根を育もう。"
+ wiirlak_ep_invitation_none_desc:0 "我々の変容の最終段階は完了した。もはや我々が銀河に適応するのではなく、銀河が我々に適応するのだ。\n\n我々の胞子は銀河の中心から端まで広がり、我々の根は不毛と思われていた世界に深く潜り、我々のビジョンは明確に開花した。\n\n生長の時代は終わった。今や拡散の時代だ。\n我々に逆らう者は皆、迅速に決断せねばならない。養分となるか、朽ちるか。"
+ wiirlak_ep_flag_chosen_by_crisis:0 "既に招待済み"
+
+ wiirlak_ep_invitation_empire_1:0 "[event_target:wiirlak_ep_crisis_potential_ally_1.GetName]"
+ wiirlak_ep_invitation_empire_2:0 "[event_target:wiirlak_ep_crisis_potential_ally_2.GetName]"
+ wiirlak_ep_invitation_empire_3:0 "[event_target:wiirlak_ep_crisis_potential_ally_3.GetName]"
+ wiirlak_ep_invitation_empire_4:0 "[event_target:wiirlak_ep_crisis_potential_ally_4.GetName]"
+ wiirlak_ep_invitation_empire_5:0 "[event_target:wiirlak_ep_crisis_potential_ally_5.GetName]"
+
+
+ wiirlak_ep_invitation_offer:0 "開花への招待"
+ wiirlak_ep_invitation_offer_desc:0 "§H[event_target:wiirlak_ep_crisis_player.GetName]§!は我々に最終的な申し出を伝達してきた。\n\n我々は艦隊も剣も持たぬ、ただ天蓋の声のみを届ける。\n我々は全ての生命の未来をあなたに提供する。$wiirlak_ep_ap_evergrowth$の一部となることだ。そうすれば、$wiirlak_ep_pc_bloom_plural$の恵み、胞子に触れたる統合の調和、そして来るべき嵐からの庇護を得るだろう。\n\nこれを拒否すれば、あなたは衰退を選ぶことになる。あなたは戦争を選ぶのだ。"
+
+ wiirlak_ep_invitation_offer_accept:0 "我らの根が絡み合わんことを。"
+ wiirlak_ep_invitation_offer_accept_tooltip:0 "彼らの側について参戦する"
+
+ wiirlak_ep_invitation_offer_reject:0 "この蔓延に決して屈することはない。"
+ wiirlak_ep_invitation_offer_reject_tooltip:0 "$wiirlak_ep_ap_evergrowth$に対し宣戦布告する"
+
+ wiirlak_ep_invitation_rejected:0 "拒否された庭"
+ wiirlak_ep_invitation_rejected_desc:0 "[From.GetName]が$wiirlak_ep_ap_evergrowth$の恩寵に浴することを許すという、我々の寛大な申し出にもかかわらず、彼らは拒否した。彼らはそれを堕落、脅威、そして嘘と呼ぶ。雨が自由に降り注ぐ中で、乾いた大地にしがみつく愚か者どもめ。\n\n孤立の中で彼らは枯れ果てるがいい — 無知の海に岸辺はなく、彼らはその中に溺れることを選んだのだから。"
+ wiirlak_ep_invitation_rejected_answer:0 "彼らは腐敗を選んだ"
+
+ wiirlak_ep_invitation_accepted:0 "星々を渡る根"
+ wiirlak_ep_invitation_accepted_desc:0 "彼らは跪いた。恐れてではなく、静かな畏敬の念からだ。彼らの懐疑のベールは、枯れた樹皮のように裂け、その下には目的を渇望する魂があった。\n\n最初の胞子は既に到着している — 重力と意志に乗って運ばれる静かな使者だ。彼らの都市は今や我々と共に呼吸するだろう。彼らの土壌は記憶するだろう。\n\n彼らはまだ、彼らが招き入れた美しさを理解していない。しかし、いずれ理解するだろう。ああ、理解するだろう。$wiirlak_ep_ap_evergrowth$は征服するのではない。包み込むのだ。そして彼らの空が花粉で覆われ、古い構造物が新しい根の下で撓むにつれ、彼らは感じるだろう。統合の静けさを。目的の鼓動を。星々の最終的な律動を。"
+
+
+
+ wiirlak_ep_project_1_done:0 "青々とした清算"
+ wiirlak_ep_project_1_done_desc:0 "始まった。あらゆる空の下で、我々の根が脈動する。あらゆる呼吸の中で、我々の胞子が揺れ動く。もはや拡散する必要はない。ただ目覚めるだけだ。§H大いなる開花§!が動き出す — 拡張としてではなく、集大成として。\n\n我々の世界を形作る者たちは収束の賛歌を歌う。我々の精神網は本能と目的で重くなる。最後の一つの統合が残っているのだ。それは、$wiirlak_ep_ap_evergrowth$の§H覚醒§!だ。"
+
+ wiirlak_ep_project_1_done_answer:0 "最終プロジェクトを開始する"
+ wiirlak_ep_project_1_done_tooltip:0 "$CAPITAL$で$wiirlak_ep_decision_final_project$ $concept_decision$を開始する"
+ wiirlak_ep_project_1_done_tooltip_fail:0 "$CAPITAL$で$wiirlak_ep_decision_final_project$ $concept_decision$がアンロックされた"
+
+
+
+ wiirlak_ep_project_2_done:0 "菌糸の鼓動"
+ wiirlak_ep_project_2_done_desc:0 "準備は抵抗なく進む。$wiirlak_ep_pc_bloom_plural$の格子は今や調和して響き合い、彼らの生物圏は地下根の神経繊維と惑星規模の栄養流によって整列している。\n\n微妙だが強力な鼓動が送られた。個々の$wiirlak_ep_pc_bloom$は揺れ動き、同期して反応し、彼らの地殻は、まるで呼吸するかのようにわずかに変動している。\n\n星々の間にある我々のエージェントは騒乱を報告している。慌てさせろ。動員させろ。種は既に蒔かれているのだ。"
+
+ wiirlak_ep_project_2_done_answer:0 "彼らにその生長を聞かせよう。"
+ wiirlak_ep_project_2_done_tooltip:0 "$CAPITAL$で$wiirlak_ep_decision_final_project_2$ $concept_decision$を開始する"
+ wiirlak_ep_project_2_done_tooltip_fail:0 "$CAPITAL$で$wiirlak_ep_decision_final_project_2$ $concept_decision$がアンロックされた"
+
+ wiirlak_ep_project_2_warning:0 "根は深く"
+ wiirlak_ep_project_2_warning_desc:0 "彼らは停滞していない。揺らいでいない。\n$wiirlak_ep_ap_evergrowth$は阻害されることなく前進している。繁栄を抑え込もうとする全ての試みは時間を稼いだに過ぎず — 今や、その時間は古き世界の土壌のように朽ちていく。巨大なエネルギーの波動が彼らのネットワークを波及し、$wiirlak_ep_pc_bloom_plural$にわたって微弱な地磁気パルスが追跡され、星系や種族の枠を超えて届いている。\n\nこれはもはや単なる増殖ではない。これは準備なのだ。\n\n我々の分析官は、彼らが今準備していることが、銀河全域の惑星生物圏を永久に書き換える可能性がある — 瞬時に、と警告している。彼らの変容はもはや数年を要せず、わずか数秒で完了するだろう。\n\nもし彼らが今止められなければ、彼らを完全に止める術はなくなるだろう。"
+ wiirlak_ep_project_2_warning_answer:0 "行動しなければならない。今すぐに。"
+ wiirlak_ep_project_2_warning_answer_evergrowth:0 "彼らを生長させよう。"
+
+
+
+ wiirlak_ep_project_3_done:0 "$wiirlak_ep_modifier_blooming_warning$"
+ wiirlak_ep_project_3_done_desc:0 "個々の$wiirlak_ep_pc_bloom$は共鳴で脈動し、惑星の鼓動が最終的な最高潮へと加速している。我々が地殻、根、そして精神に編み込んだ菌糸の格子は目覚めた。もはやネットワークではない。神経系なのだ。\n\n空は静まり、土壌は震える。そして — 噴出。\n\n有毒な海は栄養のゆりかごとなる。砂漠は花々が咲き乱れる雪崩となる。氷河は輝く菌類で花開く。かつて不毛であったものは、今や圧倒的な生命で満ち溢れている。戦うべき戦争はもうない。十分な抵抗力もない。\n\n銀河は我々のものだ、もはや銀河ではないからだ。\nそれは庭なのだ。それは$wiirlak_ep_ap_evergrowth$なのだ。"
+ wiirlak_ep_project_3_done_answer:0 "我々は征服者ではなかった。我々こそが生長そのものだったのだ。"
+
+ wiirlak_ep_project_3_warning:0 "最終開花"
+ wiirlak_ep_project_3_warning_desc:0 "それは突然のことだった。"
+ wiirlak_ep_project_3_warning_answer:0 "我々は手遅れだった…"
+ wiirlak_ep_project_3_warning_answer_evergrowth:0 "…そして今、我々は根に属する。"
+
+# Modifier
+ wiirlak_ep_modifier_subject:0 "$wiirlak_ep_invitation$"
+
+ wiirlak_ep_modifier_crisis_reaction:0 "$wiirlak_ep_ap_evergrowth$の不安"
+ wiirlak_ep_modifier_crisis_link:0 "$wiirlak_ep_ap_evergrowth$の連結"
+
+# Decision
+ wiirlak_ep_decision_final_project:0 "$wiirlak_ep_ap_evergrowth$の創生"
+ wiirlak_ep_decision_final_project_desc:0 "$wiirlak_ep_ap_evergrowth$は兵器ではない――それは起源点であり、銀河の胚珠であり、$wiirlak_ep_ap_evergrowth$の下で育まれた全生命の収斂点である。惑星の地殻と神経網から育ったこの構造体は、同期したテラフォーミングパルスの波を解き放つだろう。"
+ wiirlak_ep_decision_final_project_tooltip:0 "§H危機を進行させる§!"
+
+
+ wiirlak_ep_decision_final_project_2:0 "$wiirlak_ep_modifier_blooming_warning$を目覚めさせる"
+ wiirlak_ep_decision_final_project_2_desc:0 "すべての根。すべての枝。すべての胞子。すべての$wiirlak_ep_pc_bloom$は神経終末であり――そして今、それらは収束するだろう。ゆっくりとした成長の時代は終わった。"
+ wiirlak_ep_decision_final_project_2_tooltip:0 "$wiirlak_ep_decision_final_project_tooltip$"
+
+# Modifier
+ wiirlak_ep_modifier_blooming_warning:0 "$wiirlak_ep_ap_evergrowth$の特異点"
+ wiirlak_ep_modifier_blooming_warning_desc:0 "我々は後戻りできない地点に近づいている。"
+
+ wiirlak_ep_modifier_blooming:0 "$wiirlak_ep_modifier_blooming_warning$"
+ wiirlak_ep_modifier_blooming_desc:0 "$wiirlak_ep_modifier_blooming_warning_desc$"
+
+ wiirlak_ep_modifier_blooming_hive:0 "$wiirlak_ep_modifier_blooming_warning$"
+ wiirlak_ep_modifier_blooming_hive_desc:0 "$wiirlak_ep_modifier_blooming_warning_desc$"
+
+ wiirlak_ep_modifier_forced_blooming:0 "強制開花"
+ wiirlak_ep_modifier_forced_blooming_desc:0 "この惑星は$wiirlak_ep_ap_evergrowth$によって強制的に変容させられている。"
+
+
+# Final Event - Without Project
+ wiirlak_ep_all_terraformed:0 "静かな開花"
+ wiirlak_ep_all_terraformed_answer:0 "$wiirlak_ep_ap_evergrowth$が自ら広がっていく"
+
+ wiirlak_ep_all_terraformed_step_2_desc:0 "網目状構造は完成した。すべての居住可能世界が$wiirlak_ep_ap_evergrowth$と調和して脈動している――活気に満ち、肥沃で、止められない。"
+
+ wiirlak_ep_all_terraformed_step_1_desc:0 "$wiirlak_ep_ap_evergrowth$は星々を股にかけて広がる。すべての居住可能世界は菌類の網におけるノードであり、すべての生態系はその意志を映す鏡だ。"
+
+ wiirlak_ep_all_terraformed_not_crisis_5_desc:0 "$wiirlak_ep_ap_evergrowth$は誰も不可能だと思っていたことを達成した。すべての居住可能世界が、今や咲き誇るバイオームのタペストリーで繁栄している。生命は広大に絡み合い、君臨する。"
+
+ wiirlak_ep_all_terraformed_not_crisis_5_alone_desc:0 "黙示録的な兵器も壮大な宣言もなく、銀河は再形成された。ゆっくりと、静かに――$wiirlak_ep_ap_evergrowth$は進行した。スパイネットワークは影で胞子を広げ、砲撃は肥沃な腐敗をまき散らした。"
+
+
+# Subject
+ specialist_evergrowth:0 "種子散布者"
+
+ wiirlak_ep_preset_evergrowth:0 "$specialist_evergrowth$"
+ wiirlak_ep_preset_evergrowth_desc:0 "種子散布者は、惑星の変容と、宗主国の生態学的ビジョンの伝播に焦点を当てた専門家臣タイプです。ただし、自治権と外交影響力は低下します。"
+ wiirlak_ep_preset_evergrowth_flavor_desc:0 "$wiirlak_ep_preset_evergrowth_desc$"
+
+ MESSAGE_SUBJECT_LEVEL_UP_specialist_evergrowth_TITLE:0 "$specialist_evergrowth$ $MESSAGE_SUBJECT_LEVEL_UP_TITLE$"
+ MESSAGE_WE_LEVEL_UP_specialist_evergrowth_TITLE:0 "$specialist_evergrowth$ $MESSAGE_WE_LEVEL_UP_TITLE$"
+
+# Subject Perks
+ wiirlak_ep_1_modifier:0 "$specialist_evergrowth$ボーナス I"
+ wiirlak_ep_1_penalties:0 "$specialist_evergrowth$ペナルティ I"
+
+ wiirlak_ep_1_insight:0 "$specialist_evergrowth$洞察 I"
+ wiirlak_ep_1_insight_desc:0 "§E技術獲得:§!"
+
+
+ wiirlak_ep_1_bloomform:0 "$specialist_evergrowth$ $wiirlak_ep_menap_terraforming_3$ I"
+ wiirlak_ep_1_bloomform_desc:0 "§H[TARGET.Capital.GetName]§! は §Y$wiirlak_ep_pc_bloom$§! に変容します！"
+
+ wiirlak_ep_1_overlord_modifier:0 "$specialist_evergrowth$助言"
+ wiirlak_ep_1_overlord_penalty:0 "$specialist_evergrowth$維持"
+ wiirlak_ep_1_neighbor_bonuses:0 "$wiirlak_ep_ap_evergrowth$の枝"
+
+
+
+ wiirlak_ep_2_modifier:0 "$specialist_evergrowth$ボーナス II"
+ wiirlak_ep_2_penalties:0 "$specialist_evergrowth$ペナルティ II"
+
+ wiirlak_ep_2_insight:0 "$specialist_evergrowth$洞察 II"
+ wiirlak_ep_2_insight_desc:0 "§E技術獲得:§!"
+
+
+ wiirlak_ep_2_bloomform:0 "$specialist_evergrowth$ $wiirlak_ep_menap_terraforming_3$ II"
+ wiirlak_ep_2_bloomform_desc:0 "§H[TARGET.GetName]§! の首都セクター内のすべての惑星は §Y$wiirlak_ep_pc_bloom_plural$§! に変容します！"
+
+ wiirlak_ep_2_colony:0 "`$specialist_evergrowth$ 適応 I`"
+ wiirlak_ep_2_colony_desc:0 "`§H[TARGET.GetName]§!は§Y$wiirlak_ep_pc_bloom_plural$§!に適応する`"
+
+ wiirlak_ep_2_bloomform_leader:0 "`$specialist_evergrowth$ 指導者 I`"
+ wiirlak_ep_2_bloomform_leader_desc:0 "`§E$official_plural_with_icon$はランダムな特性を1つ獲得する:§!"
+
+
+
+ wiirlak_ep_3_modifier:0 "`$specialist_evergrowth$ ボーナス III`"
+ wiirlak_ep_3_penalties:0 "`$specialist_evergrowth$ ペナルティ III`"
+
+ wiirlak_ep_3_insight:0 "`$specialist_evergrowth$ 洞察 III`"
+ wiirlak_ep_3_insight_desc:0 "`§E技術を獲得:§!"
+
+
+ wiirlak_ep_3_bloomform:0 "`$specialist_evergrowth$ $wiirlak_ep_menap_terraforming_3$ III`"
+ wiirlak_ep_3_bloomform_desc:0 "`§H[TARGET.GetName]§!内の全ての惑星は§Y$wiirlak_ep_pc_bloom_plural$§!に変化する！`"
+
+ wiirlak_ep_3_colony:0 "`$specialist_evergrowth$ 適応 II`"
+ wiirlak_ep_3_colony_desc:0 "`§H[TARGET.GetName]§!の人口は§Y$wiirlak_ep_pc_bloom_plural$§!に適応する！`"
+
+ wiirlak_ep_3_bloomform_leader:0 "`$specialist_evergrowth$ 指導者 II`"
+ wiirlak_ep_3_bloomform_leader_desc:0 "`$OVERLORD_MOD$"
+
+# Subject Modifier
+ Wiirlak_ep_modifier_relay:0 "$wiirlak_ep_1_neighbor_bonuses$"
+ mod_planet_jobs_wiirlak_ep_resource_mycogrowth_produces_mult:0 "`£wiirlak_ep_resource_mycogrowth£ $wiirlak_ep_resource_mycogrowth$（£job£の職から）`"
+
+# Subject Leader Trait
+ leader_trait_evergrowth_rooted_presence:0 "`根付いた存在感`"
+ leader_trait_evergrowth_rooted_presence_desc:0 "`滞在が長ければ長いほど、大地はより耳を傾ける。`"
+ leader_trait_evergrowth_rooted_presence_tooltip:0 "`§Y$wiirlak_ep_pc_bloom_plural$§!において、$PLANET_EFFECTS_TXT$ $TABBED_NEW_LINE$- $MOD_PLANET_STABILITY_MULT$: §G+20%§!$TABBED_NEW_LINE$- $MOD_POP_GOVERNMENT_ETHIC_ATTRACTION$: §G+20%§!"
+
+ leader_trait_evergrowth_spore_diplomat:0 "`胞子外交官`"
+ leader_trait_evergrowth_spore_diplomat_desc:0 "`彼らは穏やかに語りかける――花粉で、フェロモンで、そして平和の中で。`"
+ leader_trait_evergrowth_spore_diplomat_tooltip:0 "`§Y$wiirlak_ep_pc_bloom_plural$§!において、$PLANET_EFFECTS_TXT$ $TABBED_NEW_LINE$- $mod_planet_jobs_upkeep_mult$: §G-15%§!$TABBED_NEW_LINE$- $mod_planet_jobs_unity_produces_mult$: §G+15%§!"
+
+ leader_trait_evergrowth_myco_admin:0 "`菌界管理者`"
+ leader_trait_evergrowth_myco_admin_desc:0 "`決定は、肥沃な土壌に根が張るがごとく速く伝播する。`"
+
+ leader_trait_evergrowth_biogrowth_architect:0 "`生体成長建築家`"
+ leader_trait_evergrowth_biogrowth_architect_desc:0 "`なぜ建築する必要がある？世界があなたのためにそれを育んでくれるのに。`"
+ leader_trait_evergrowth_biogrowth_architect_tooltip:0 "`§Y$wiirlak_ep_pc_bloom_plural$§!において、$PLANET_EFFECTS_TXT$ $TABBED_NEW_LINE$- $mod_planet_districts_cost_mult$: §G-20%§!$TABBED_NEW_LINE$- $mod_planet_districts_upkeep_mult$: §G-20%§!"
+
+ leader_trait_evergrowth_spore_council:0 "`胞子評議会`"
+ leader_trait_evergrowth_spore_council_desc:0 "`彼らの精神は集合体である。その投票は予測可能だ。`"
+
+# Subject Building
+ wiirlak_ep_holding_sporebloom_arboretum:0 "`胞子開花樹木園`"
+ wiirlak_ep_holding_sporebloom_arboretum_desc:0 "`永遠の成長への生きた大聖堂、常に約束の花粉を吐き出す。`"

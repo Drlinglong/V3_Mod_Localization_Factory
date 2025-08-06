@@ -1,0 +1,21 @@
+﻿l_english:
+
+ notification_victoria_notification_tooltip:0 "#header $notification_victoria_notification_name$#!\n$TOOLTIP_DELIMITER$\n$notification_victoria_notification_desc$"
+ notification_victoria_notification_name:0 "#b HANOVER SPLITS FROM BRITAIN #!"
+ notification_victoria_notification_desc:0 "With the death of King William IV, differing succession laws have ended the [concept_personal_union] between [SCOPE.sCountry('britain_victoria_country_scope').GetName] and [SCOPE.sCountry('hannover_victoria_scope').GetName]."
+
+ notification_opium_wars_british_response_angry_name:0 "#b CHINESE BAN OPIUM #!"
+ notification_opium_wars_british_response_angry_desc:0 "[SCOPE.sCountry('opium_wars_aggressor_country').GetName] has responded angrily to the [SCOPE.sCountry('opium_wars_target_country').GetAdjectiveNoFormatting] ban on opium, with multiple threats towards the government of [SCOPE.sCountry('opium_wars_target_country').GetName]."
+
+ notification_opium_wars_british_response_passive_name:0 "#b CHINESE BAN OPIUM #!"
+ notification_opium_wars_british_response_passive_desc:0 "[SCOPE.sCountry('opium_wars_aggressor_country').GetName] seems to be ignoring the [SCOPE.sCountry('opium_wars_target_country').GetAdjectiveNoFormatting] ban on opium."
+ notification_opium_wars_british_response_passive_tooltip:1 "#header $notification_opium_wars_british_response_passive_name$#!\n$TOOLTIP_DELIMITER$\n$notification_opium_wars_british_response_passive_desc$"
+
+ notification_santa_anna_captured_notification_name:0 "#b SANTA ANNA CAPTURED #!"
+ notification_santa_anna_captured_notification_desc:0 "[SCOPE.sCountry('texas_scope').GetName] has captured the [SCOPE.sCountry('mexico_scope').GetAdjective] General Santa Anna, who has used his personal power to negotiate an end to the Texan Independence War"
+ notification_santa_anna_captured_notification_tooltip:0 "#header $santa_anna_captured_notification_name$#!\n$TOOLTIP_DELIMITER$\n$santa_anna_captured_notification_desc$"
+
+  notification_brz_isabel_accession_name: "#b DOM PEDRO DEAD #!"
+  notification_brz_isabel_accession_desc: "The Emperor of Brazil, Pedro II, has passed away, with [SCOPE.sCountry('brazil_scope').GetRuler.GetPrimaryRoleTitle] [SCOPE.sCountry('brazil_scope').GetRuler.GetFullName] assuming the throne in his wake. #lore The streets were packed full of mourning Brazilians as the late emperor's funeral process brought his body to be held in state. Churches across the country gave special services in praise of... #! "
+  notification_brz_isabel_accession_tooltip: "#header $notification_brz_isabel_accession_name$#!\n$TOOLTIP_DELIMITER$\n$notification_brz_isabel_accession_desc$"
+

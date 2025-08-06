@@ -1,0 +1,651 @@
+﻿l_simp_chinese:
+
+# Author / Name of the mod
+ wiirlak_ep:0 "维拉克的永生协议危机"
+
+
+# Vanilla Missing Localisation
+ pc_cosmogenesis_world_adj:0 "$pc_cosmogenesis_world$"
+ pc_nanotech_adj:0 "$pc_nanotech$"
+ bio_ship_desc:0 "$concept_biological_ship_desc$"
+
+# AP
+ wiirlak_ep_ap_evergrowth_protocol:0 "$wiirlak_ep_ap_evergrowth$协议"
+ wiirlak_ep_ap_evergrowth_protocol_desc:0 "无止境的生长。无拘束的生命。指数级潜能。"
+ wiirlak_ep_ap_evergrowth:0 "§H永生§!"
+
+# Resource
+ wiirlak_ep_resource_mycogrowth:0 "菌质"
+ wiirlak_ep_resource_mycogrowth_desc:0 "一种从$wiirlak_ep_pc_bloom_plural$中收获的半智能真菌网格。它作为新行星改造的温床，也是不断生长的银河花园的真正大脑。"
+ wiirlak_ep_resource_mycogrowth_name:0 "$wiirlak_ep_resource_mycogrowth$"
+
+ wiirlak_ep_resource_mycogrowth_value:0 "£wiirlak_ep_resource_mycogrowth£ $VAL|0$"
+ wiirlak_ep_resource_mycogrowth_current_value:0 "$menace_current_value$"
+ wiirlak_ep_resource_mycogrowth_gaining:0 "完成§H危机目标§!以获得更多§Y$wiirlak_ep_resource_mycogrowth$§!。"
+
+ wiirlak_ep_resource_mycogrowth_crisis_level_unlocked:0 "$menace_crisis_level_unlocked$"
+ wiirlak_ep_resource_mycogrowth_crisis_level_desc:0 "$menace_crisis_level_desc$"
+
+ wiirlak_ep_resource_mycogrowth_crisis_level_locked:0 "$menace_crisis_level_locked$"
+ wiirlak_ep_resource_mycogrowth_crisis_level_unlock:0 "拥有£wiirlak_ep_resource_mycogrowth£ §Y$CURRENCY$§! $wiirlak_ep_resource_mycogrowth$"
+
+ wiirlak_ep_resource_mycogrowth_crisis_description_title:0 "$wiirlak_ep_ap_evergrowth_protocol$"
+ wiirlak_ep_resource_mycogrowth_crisis_description:0 "数世纪以来，学者们谈论着即将到来的§R危机§!——一场将考验每个星际文明意志的最终审判。理论从合成人叛乱到超维度战争不一而足，但很少有人真正理解末日会以何种形式降临。\n\n它不会是烈火。不会是钢铁。不会是寂静。\n它将是§R生命§!。\n\n最初始于生态掌控的一切，如今已演变为另一番景象——某种递归的、病毒性的、有意识的存在。$wiirlak_ep_ap_evergrowth$的传播并非依靠征服，而是凭借承诺：更新、活力、超脱。但代价是万物。\n\n行星不会陷落。它们会绽放。\n当每一个世界都成为花园……我们所知的银河系将不复存在。"
+
+ wiirlak_ep_resource_mycogrowth_crisis_howto_title:0 "孢子与根须"
+ wiirlak_ep_resource_mycogrowth_crisis_howto:0 "达成§H危机目标§!可收获£wiirlak_ep_resource_mycogrowth£ §H$wiirlak_ep_resource_mycogrowth$§!，这种维持$wiirlak_ep_ap_evergrowth$繁衍的关键物质。随着更多世界被吞噬并重塑为肥沃的宿主，我们对银河系的掌控也愈发紧密。\n最终，我们必须建造§H菌根网络§!并触发§H超维改造§!，将所有宜居世界行星改造，以迎来全新的生命秩序。"
+
+
+
+# Event Chain
+ wiirlak_ep_evergrowth_protocol_chain:0 "$wiirlak_ep_ap_evergrowth_protocol$飞升"
+ wiirlak_ep_evergrowth_protocol_chain_title:0 "$wiirlak_ep_evergrowth_protocol_chain$"
+ wiirlak_ep_evergrowth_protocol_chain_desc:0 "他者称之为腐朽，吾等称之为蜕变。\n\n群星并非永恒燃烧。生命必须适应，否则便会与旧银河一同腐朽。\n\n我们选择超越……并从此绽放。"
+
+ wiirlak_ep_evergrowth_protocol_levels:0 "$crisis_level_reached$"
+ wiirlak_ep_evergrowth_protocol_bloom_worlds:0 "$wiirlak_ep_pc_bloom$已转化"
+
+
+# Special Projects
+ WIIRLAK_EP_FINAL_PROJECT_1:0 "根植银河"
+ WIIRLAK_EP_FINAL_PROJECT_1_DESC:0 "独木难成林。它必须根脉相连，遍及天幕的每一个角落。\n\n$wiirlak_ep_objectives$"
+
+ wiirlak_ep_objectives:0 "[wiirlak_ep_objectives_step]"
+ wiirlak_ep_objectives_step_1:0 "§H要求:§! \n[wiirlak_ep_objectives_step_1_empire_check] \n[wiirlak_ep_objectives_step_1_total_check] \n[wiirlak_ep_objectives_step_1_capital_check]"
+
+ wiirlak_ep_objectives_step_1_empire:0 "至少§Y[wiirlak_ep_half_total_empire]§!个$concept_empires$拥有其境内有§Y$wiirlak_ep_pc_bloom_plural$§! ([wiirlak_ep_total_empire_bloomed])"
+ wiirlak_ep_objectives_step_1_total:0 "至少§Y[wiirlak_ep_percent_bloomed_system]§!个银河系中的§Y$wiirlak_ep_pc_bloom_plural$§! ([wiirlak_ep_actual_percen_bloomed_system])"
+ wiirlak_ep_objectives_step_1_capital:0 "首都是§Y$wiirlak_ep_pc_bloom$§! \n\n在满足要求之前进行$RESEARCHING$将没有效果。"
+
+ wiirlak_ep_objectives_step_2:0 "§H$terraforming$:§! \n"
+ wiirlak_ep_objectives_step_3:0 ""
+
+# Level up Event
+ wiirlak_ep_event_lvl_script_loc:0 "[wiirlak_ep_event_lvl_script_loc]"
+ wiirlak_ep_event_lvl_desc_script_loc:0 "[wiirlak_ep_event_lvl_desc_script_loc]"
+
+ wiirlak_ep_event_lvl_1:0 "最初的种子"
+ wiirlak_ep_event_lvl_1_desc:0 "在我们的引导下，将曾经贫瘠的地壳和了无生机的尘埃变为绽放的梦想。创造一个全新的生物圈——一个活生生、会呼吸、永远进化的生物圈。\n\n根须将撕裂地幔，孢子将飘过海洋，从这受控的混沌中将诞生全新的存在：§Y$wiirlak_ep_pc_bloom$§!。\n第一颗种子正等待播种。我们的目的正在扎根。"
+
+ wiirlak_ep_event_lvl_1B:0 "众心之种"
+ wiirlak_ep_event_lvl_1B_desc:0 "下一个前沿不在尘埃，而在城市。\n\n如果我们的生物整合系统要无限制地传播，我们必须面对一场道德、实践和进化的飞跃：对有人居住的世界进行行星改造。不是撤离，不是清除——而是在它们活着的时候进行覆盖。\n我们的科学家报告已准备就绪。孢子可以适应。生命将持续存在——并改变。\n\n现在必须做出一个决定。\n我们是否要在一个早已充满感知生命的世界进行绽放测试？\n我们是否要向银河系展示这就是前进的道路？"
+
+ wiirlak_ep_event_lvl_2:0 "翠绿意识"
+ wiirlak_ep_event_lvl_2_desc:0 "我们曾以为自己是自然的守护者。我们错了。\n\n§Y$wiirlak_ep_pc_bloom_plural$§!不仅维持着我们——它们还在交流。模式出现在生长、天气、迁徙之中。我们的人民报告称，他们梦到巨大的林冠低语着思想。有人说是精神感应。有人说是生物共鸣。\n\n效果是真实的：生产力飙升，稳定度提升，突变传播——有益的、被引导的、完美的。\n\n我们并非仅仅在耕种行星。我们正在建造有意识的生态系统——它们回应着我们。\n\n生长不再是资源。它是一种语言。"
+
+ wiirlak_ep_event_lvl_3:0 "无界之根"
+ wiirlak_ep_event_lvl_3_desc:0 "$wiirlak_ep_ap_evergrowth$的蔓延已不再需要许可。风将我们的孢子吹过超空间航道。移民在不知不觉中成为载体。我们的存在超越了飞船和舰队——它被编码在自然本身之中。\n\n通过秘密手段或耐心的孢子绽放，银河系的土壤正被一点点地改写。已经有我们无法控制的世界感受到了它。根须在岩石中寻得裂缝。生命渗透其中。\n\n也许其他文明尚未知晓，但它们现在已成为我们的一部分。\n\n这只是时间问题。"
+
+ wiirlak_ep_event_lvl_4:0 "绽放螺旋"
+ wiirlak_ep_event_lvl_4_desc:0 "已不再有任何抵抗，只剩下拖延。\n\n生长已呈指数级。我们的控制系统是有机体。我们的建筑是血管状的。行星改造如今已是一种本能反应——我们定居之处，即是重塑之时。甚至我们的敌人也已成为我们幼苗的土壤。\n\n这不再是殖民。这是融合。银河系顺从生命的意志，并非通过战争，而是通过复制。即使我们停止，螺旋也不会。\n我们无法停止。绽放是不可避免的。"
+
+ wiirlak_ep_event_lvl_5:0 "孢子交响曲"
+ wiirlak_ep_event_lvl_5_desc:0 "金属会生锈。石头会开裂。代码会腐朽。但生命呢？生命会适应。\n\n最后一颗种子已萌芽。从中诞生了一个超越理解的结构——部分是生物，部分是引擎，部分是生态系统。它的诞生唤来风暴。它的呼吸唤醒了沉睡在群星各个角落的孢子。\n\n如今，整个世界将在数日内转变。文明将在绽放的天空下崩塌。虚空将回荡着叶绿素和雷鸣声。将不再有抵抗。不再有钢铁。\n\n只有土壤。只有根须。只有我们。\n$wiirlak_ep_ap_evergrowth$没有主人——也没有终结。"
+
+# Crisis Levels
+ wiirlak_ep_evergrowth_protocol_level_1:0 "§U$wiirlak_ep_event_lvl_1$§!"
+ wiirlak_ep_evergrowth_protocol_level_1_desc:0 "$crisis_level_1_desc$"
+
+ wiirlak_ep_evergrowth_protocol_level_2:0 "§U$wiirlak_ep_event_lvl_2$§!"
+ wiirlak_ep_evergrowth_protocol_level_2_desc:0 "$crisis_level_2_desc$"
+
+ wiirlak_ep_evergrowth_protocol_level_3:0 "§U$wiirlak_ep_event_lvl_3$§!"
+ wiirlak_ep_evergrowth_protocol_level_3_desc:0 "$crisis_level_3_desc$"
+ wiirlak_ep_evergrowth_protocol_level_3_requirements:0 "$TRIGGER_FAIL$ 需要至少25%的殖民地是§G$wiirlak_ep_pc_bloom$§!"
+ wiirlak_ep_evergrowth_protocol_level_3_pass:0 "£trigger_yes£ 至少25%的殖民地是§G$wiirlak_ep_pc_bloom$§!"
+
+ wiirlak_ep_evergrowth_protocol_level_4:0 "§U$wiirlak_ep_event_lvl_4$§!"
+ wiirlak_ep_evergrowth_protocol_level_4_desc:0 "$crisis_level_4_desc$"
+ wiirlak_ep_evergrowth_protocol_level_4_requirements:0 "$TRIGGER_FAIL$ 需要至少75%的殖民地是§G$wiirlak_ep_pc_bloom$§!"
+ wiirlak_ep_evergrowth_protocol_level_4_pass:0 "£trigger_yes£ 至少75%的殖民地是§G$wiirlak_ep_pc_bloom$§!"
+
+ wiirlak_ep_evergrowth_protocol_level_5:0 "§U$wiirlak_ep_event_lvl_5$§!"
+ wiirlak_ep_evergrowth_protocol_level_5_desc:0 "$crisis_level_5_desc$"
+ wiirlak_ep_evergrowth_protocol_level_5_requirements:0 "$TRIGGER_FAIL$ 需要至少90%的殖民地是§G$wiirlak_ep_pc_bloom$§!"
+ wiirlak_ep_evergrowth_protocol_level_5_pass:0 "£trigger_yes£ 至少90%的殖民地是§G$wiirlak_ep_pc_bloom$§!"
+
+
+
+# Crisis Objectives
+ wiirlak_ep_resource_mycogrowth_crisis_objective:0 "$menace_crisis_objective$"
+ wiirlak_ep_resource_mycogrowth_crisis_objective_gained:0 "$wiirlak_ep_resource_mycogrowth$ 已获得"
+ wiirlak_ep_resource_mycogrowth_crisis_objective_reward:0 "$menace_crisis_objective_reward$"
+ wiirlak_ep_resource_mycogrowth_crisis_objective_progress:0 "我们已从该危机目标中获得了 £wiirlak_ep_resource_mycogrowth£ $AMOUNT$。"
+
+
+ wiirlak_ep_crisobj_own_bloom_world_name:0 "拥有 $wiirlak_ep_pc_bloom_plural$"
+ wiirlak_ep_crisobj_own_bloom_world_desc:0 "我们的根系已扎稳。第一个世界如今正依照我们的设计脉动；这是我们生物构形技艺炉火纯青的证明。它不再是一个行星；它是一个肢体，一个苗床，一个意图的宣告。“盛放”开始了。\n\n拥有 $wiirlak_ep_pc_bloom_plural$。"
+
+ wiirlak_ep_crisobj_inhabit_bloom_world_name:0 "居住 $wiirlak_ep_pc_bloom_plural$"
+ wiirlak_ep_crisobj_inhabit_bloom_world_desc:0 "我们呼吸着我们所培育的一切。空气中弥漫着孢子裹挟的风，在我们脚下，地壳因生命而颤动。这并非殖民——这是共生。我们就在我们所创造的乐园中安家。\n\n居住 $wiirlak_ep_pc_bloom_plural$。"
+
+
+ wiirlak_ep_crisobj_blooming_planet_name:0 "改造为 $wiirlak_ep_pc_bloom_plural$"
+ wiirlak_ep_crisobj_blooming_planet_desc:0 "旧世界已不复存在。取而代之的是，藤蔓吞噬着钢铁，冠层遮蔽着天空，光合作用塔重塑着天际线。这场转化不可逆转，且美轮美奂。\n\n将任意世界改造为 $wiirlak_ep_pc_bloom$。"
+
+ wiirlak_ep_crisobj_blooming_adv_pc_name:0 "将高级行星改造为 $wiirlak_ep_pc_bloom_plural$"
+ wiirlak_ep_crisobj_blooming_adv_pc_desc:0 "即使是最人造的构造也能被吞噬。巨构建筑腐朽崩溃，数字心智在苔藓和霉菌下窒息。生物圈不容许任何挑战者——即使是完美亦然。\n\n将高级行星（蜂巢世界、机械世界、大都会等）改造为 $wiirlak_ep_pc_bloom$。"
+
+ wiirlak_ep_crisobj_blooming_outside_border_name:0 "在其他帝国领土内进行星球改造"
+ wiirlak_ep_crisobj_blooming_outside_border_desc:0 "我们没有敲门。我们没有询问。我们的根系在不为人知处深埋，世界在他人眼皮底下盛放。他们的否认无法让已然绽放之物枯萎。\n\n在其他帝国边境内部进行星球改造"
+
+ wiirlak_ep_crisobj_kill_fauna_name:0 "$crisobj_kill_space_fauna_name$"
+ wiirlak_ep_crisobj_kill_fauna_desc:0 "$crisobj_kill_space_fauna_desc$"
+
+ wiirlak_ep_crisobj_kill_bioships_name:0 "$crisobj_kill_bioships_name$"
+ wiirlak_ep_crisobj_kill_bioships_desc:0 "$crisobj_kill_bioships_desc$"
+
+# Crisis Perks
+ wiirlak_ep_menap_food_1:0 "菌丝营养"
+ wiirlak_ep_menap_food_1_desc:0 "加速的生物圈使土壤肥沃，并使空气中充满有机化合物。每一次收获都充满着野性而丰饶的脉动。"
+
+ wiirlak_ep_menap_tech_1:0 "花卉创生"
+ wiirlak_ep_menap_tech_1_desc:0 "一息生机，将顽石与坚冰重写为生机勃勃的土壤。"
+ mod_country_base_wiirlak_ep_resource_mycogrowth_produces_add:0 "$BASE$ $AUTOSAVE_EVERY_MONTH$ $wiirlak_ep_resource_mycogrowth$ $PRODUCTION$"
+ wiirlak_ep_menap_tech_1_tooltip:0 "每§Y危机等级§!提升 $mod_planet_jobs_produces_mult$ 和 $MOD_POP_BONUS_WORKFORCE_MULT$ 在 $wiirlak_ep_pc_bloom_plural$ 上\n\n"
+
+ wiirlak_ep_menap_terraforming_1:0 "孢子网格工程"
+ wiirlak_ep_menap_terraforming_1_desc:0 "他人或见死亡之处，我们却见肥沃土壤。"
+
+
+ wiirlak_ep_menap_food_2:0 "共生基础设施"
+ wiirlak_ep_menap_food_2_desc:0 "我们不再是在世界上建造——我们与它共同建造。"
+ wiirlak_ep_menap_food_2_tooltip:0 "§H$UNREADY_TOOLTIP_HEADER$ ['concept_decision']:§! §Y$wiirlak_ep_decision_planet_boost$§! \n\n"
+
+ wiirlak_ep_menap_tech_2:0 "快速繁殖"
+ wiirlak_ep_menap_tech_2_desc:0 "生长不再是被鼓励的。它被加速了。"
+
+ wiirlak_ep_menap_terraforming_2:0 "适应性根系"
+ wiirlak_ep_menap_terraforming_2_desc:0 "$wiirlak_ep_ap_evergrowth$ 随行星适应——每一茎，每一根，每一叶。"
+
+
+ wiirlak_ep_menap_unity_1:0 "苍翠压力"
+ wiirlak_ep_menap_unity_1_desc:0 "我们越是繁盛，银河系就越能感受到我们“盛放”的重压。"
+
+ wiirlak_ep_menap_spy_op_1:0 "静默萌芽"
+ wiirlak_ep_menap_spy_op_1_desc:0 "我们的孢子隐形。我们的意图，不可避免。"
+ wiirlak_ep_menap_spy_op_1_tooltip:0 "§H$UNREADY_TOOLTIP_HEADER$ $GALAXY_VIEW_EMPIRE_ESPIONAGE$ $OPERATIONS$:§! $wiirlak_ep_operation_covert_seeding$ \n\n"
+
+ wiirlak_ep_menap_terraforming_3:0 "绽放形态"
+ wiirlak_ep_menap_terraforming_plural:0 "绽放形态"
+ wiirlak_ep_menap_terraforming_3_desc:0 "我们的种群与星球一同演化——我们正与$wiirlak_ep_ap_evergrowth$融为一体。"
+
+
+ wiirlak_ep_menap_food_3:0 "翠绿瀑流"
+ wiirlak_ep_menap_food_3_desc:0 "一个星系不足为道。我们以星团为单位绽放，根系蔓延，遍及每个区域。"
+ wiirlak_ep_menap_food_3_tooltip:0 "['concept_decision'] §Y$wiirlak_ep_decision_planet_boost$§! 将升级为在['concept_sector']范围内生效。\n\n"
+ mod_planet_farmers_minerals_produces_add:0 "每$pop_group_unit$ [farmer.GetIcon] [GetFarmerPlural]产出£minerals£ $minerals$。"
+
+ wiirlak_ep_menap_tech_3:0 "播种精通"
+ wiirlak_ep_menap_tech_3_desc:0 "何须等待？群星必须立即生长。"
+
+ wiirlak_ep_menap_bombardment_1:0 "焦土生种"
+ wiirlak_ep_menap_bombardment_1_desc:0 "死亡滋养生命。焚尽死者，让$wiirlak_ep_ap_evergrowth$从灰烬中崛起。"
+ wiirlak_ep_menap_bombardment_1_tooltip:0 "§H$UNREADY_TOOLTIP_HEADER$ 轨道轰炸姿态：§! ['concept_wiirlak_ep_bombardment_verdant_purge'] \n\n"
+
+ wiirlak_ep_menap_terraforming_4:0 "兼容$wiirlak_ep_menap_terraforming_3$"
+ wiirlak_ep_menap_terraforming_4_desc:0 "我们是$wiirlak_ep_ap_evergrowth$的子嗣。我们的血肉，我们的思想，我们的脉动——一切都归属于根系。"
+ wiirlak_ep_menap_terraforming_4_tooltip:0 "拥有的物种获得['trait:trait_wiirlak_ep_pc_bloom_preference'] $TRAIT_TITLE$。\n\n"
+
+
+ wiirlak_ep_menap_terraforming_5:0 "孢子同族"
+ wiirlak_ep_menap_terraforming_5_desc:0 "始于一名访客。终于一片森林。"
+ wiirlak_ep_menap_terraforming_5_tooltip:0 "§H$UNREADY_TOOLTIP_HEADER$：§! ['trait:trait_wiirlak_ep_pc_bloom_preference'] ['concept_wiirlak_ep_trait_propagation'] \n\n"
+ mod_planet_farmers_alloys_produces_add:0 "每$pop_group_unit$ [farmer.GetIcon] [GetFarmerPlural]产出£alloys£ $alloys$。"
+
+ wiirlak_ep_menap_diplo_1:0 "苍翠协定"
+ wiirlak_ep_menap_diplo_1_desc:0 "若群星渴望生存，它们必须加入我们。"
+ wiirlak_ep_menap_diplo_1_tooltip:0 "§H$UNREADY_TOOLTIP_HEADER$ $TRADE_CATEGORY_TRADABLE_ACTION$：§! ['concept_wiirlak_ep_spread_the_evergrowth']"
+
+ wiirlak_ep_menap_modifier_1:0 "孢子子链"
+ wiirlak_ep_menap_modifier_1_desc:0 "每片叶子低语轻诉。每次低语汇聚团结。"
+ wiirlak_ep_menap_modifier_1_tooltip:0 "每在边境内拥有§G$wiirlak_ep_pc_bloom$§!："
+ wiirlak_ep_menap_modifier_1_galaxy_tooltip:0 "\n每在银河系中拥有§G$wiirlak_ep_pc_bloom$§!："
+
+ wiirlak_ep_menap_tech_4:0 "破种者"
+ wiirlak_ep_menap_tech_4_desc:0 "既然能改写一个世界，何必殖民它？"
+
+# Concept
+ wiirlak_ep_menap_terraforming_5_tooltip_concept:0 "$TRAIT_TITLE$ 传播"
+ wiirlak_ep_menap_terraforming_5_tooltip_concept_desc:0 "每隔$wiirlak_ep_menap_terraforming_5_tooltip_delay$，['trait:trait_wiirlak_ep_pc_bloom_preference']特质便会微妙而不可避免地传播至我们的边境之外。\n\n§Y邻近帝国§！、§Y随机遥远文明§！以及我们§Y闲置间谍网络§！的目标可能会发现其种群中出现了这种适应性。如果它们已经居住在$wiirlak_ep_pc_bloom_plural$上，该特质更有可能生根发芽，蓬勃发展。\n\n每隔$wiirlak_ep_menap_terraforming_5_tooltip_delay$，在§Y$ALL_GALAXY$§!中每['trait:trait_wiirlak_ep_pc_bloom_preference'] £pops£产出£unity£，并为拥有['trait:trait_wiirlak_ep_pc_bloom_preference'] £pops£的$EMPIRE$提供§Y$intel$§!情报。"
+ wiirlak_ep_menap_terraforming_5_tooltip_delay:0 "2年"
+
+ wiirlak_ep_trait_propagation_concept:0 "$wiirlak_ep_spread_the_evergrowth$"
+ wiirlak_ep_trait_propagation_concept_desc:0 "$wiirlak_ep_spread_the_evergrowth_desc$\n\n与你进行贸易的$EMPIRE$的$wiirlak_ep_spread_the_evergrowth_tooltip$。"
+
+
+
+# Planet Class
+ wiirlak_ep_pc_bloom:0 "绽放世界"
+ wiirlak_ep_pc_bloom_plural:0 "绽放世界"
+ wiirlak_ep_pc_bloom_desc:0 "整个行星地壳被改造成层叠的富氧生物结构。高耸的根系和巨型孢子云覆盖地表。它活着——且生生不息。"
+ wiirlak_ep_pc_bloom_adj:0 "绽放"
+
+ mod_wiirlak_ep_pc_bloom_habitability:0 "$wiirlak_ep_pc_bloom$ 宜居性"
+
+# Trait
+ trait_wiirlak_ep_pc_bloom_preference:0 "$wiirlak_ep_menap_terraforming_3$"
+ trait_wiirlak_ep_pc_bloom_preference_desc:0 "$wiirlak_ep_pc_bloom$ 偏好\n$trait_pc_arctic_preference_desc$"
+ trait_wiirlak_ep_pc_bloom_preference_short:0 "$wiirlak_ep_pc_bloom$"
+
+# Messages
+ WIIRLAK_EP_MESSAGE_BLOOMFORM_TITLE:0 "$trait_wiirlak_ep_pc_bloom_preference$ 子链"
+ wiirlak_ep_message_bloomform_unity:0 "我们的$trait_wiirlak_ep_pc_bloom_preference$子链为我们带来了洞察：§G+10§! $intel$和§G[ROOT.wiirlak_ep_var_bloomform_count]§! £unity£。"
+
+ WIIRLAK_EP_MESSAGE_TERRAFORMED_TITLE:0 "世界绽放"
+ wiirlak_ep_message_terraformed_text:0 "$wiirlak_ep_ap_evergrowth$再度繁盛。生命涌动，狂野而美丽，§Y$PLANETNAME$§!拥抱其真实形态。"
+
+ WIIRLAK_EP_MESSAGE_COVERT_OP:0 "黑暗之根"
+ wiirlak_ep_message_terraformed_covert_op:0 "尽管有警告与征兆，§Y$PLANETNAME$§!仍屈服于潜行的蜕变。藤蔓撕裂路面，孢子弥漫空气，$wiirlak_ep_ap_evergrowth$无拘无束地绽放。"
+
+
+# Tech
+ wiirlak_ep_tech_bloom_colonization_1:0 "生态创生"
+ wiirlak_ep_tech_bloom_colonization_1_desc:0 "我们已破解了释放生命本身的奥秘。"
+ wiirlak_ep_tech_bloom_colonization_1_tooltip:0 "§H$UNLOCKS_FEATURE$§! $PLANETVIEW_TERRAFORM_INTO$ $wiirlak_ep_pc_bloom$"
+ wiirlak_ep_tech_bloom_colonization_1_tooltip_desc:0 "§H$wiirlak_ep_pc_bloom$§! \n允许将$PLANET$ $PLANETVIEW_TERRAFORM$为$wiirlak_ep_pc_bloom$"
+
+ wiirlak_ep_tech_bloom_colonization_2:0 "生物整合"
+ wiirlak_ep_tech_bloom_colonization_2_desc:0 "无需与土壤谈判。"
+ wiirlak_ep_tech_bloom_colonization_2_tooltip:0 "$wiirlak_ep_pc_bloom$ $MOD_COUNTRY_TERRAFORMING_COST_MULT$: §G-50%§!"
+
+ wiirlak_ep_tech_seedbreaker:0 "$wiirlak_ep_menap_tech_4$"
+ wiirlak_ep_tech_seedbreaker_desc:0 "$wiirlak_ep_menap_tech_4_desc$"
+
+ wiirlak_ep_tech_gatekeeping:0 "释放$wiirlak_ep_ap_evergrowth$"
+ wiirlak_ep_tech_gatekeeping_desc:0 "最后一枚封印裂开。星辰再度沃土丰饶。凭借吾等意志，花园将吞噬虚空，万物皆将汇聚于同一穹顶之下。其浩瀚、永恒且不可知。$wiirlak_ep_ap_evergrowth$发声，吾等遵从。"
+ wiirlak_ep_tech_gatekeeping_tooltip:0 "§H$UNLOCKS_FEATURE$§! 需要将§R危机§!提升至5级"
+ wiirlak_ep_tech_gatekeeping_tooltip_desc:0 "若其他前置条件也已满足，这将解锁§R危机§!的5级。"
+
+
+ wiirlak_ep_tech_energy:0 "光合接力"
+ wiirlak_ep_tech_energy_desc:0 "阳光遍及诸界。万物互联，同步协同。"
+ wiirlak_ep_tech_energy_tooltip:0 "大幅提升$wiirlak_ep_pc_bloom_plural$上的£energy£ $energy$产出"
+
+ wiirlak_ep_tech_unity:0 "意识合唱"
+ wiirlak_ep_tech_unity_desc:0 "随着$wiirlak_ep_ap_evergrowth$的蔓延，思想的和谐亦随之扩展：每种声音皆为一叶，每个思想皆为一根。"
+ wiirlak_ep_tech_unity_tooltip:0 "大幅提升$wiirlak_ep_pc_bloom_plural$上的£unity£ $unity$产出"
+
+ wiirlak_ep_tech_growth:0 "摇篮之液"
+ wiirlak_ep_tech_growth_desc:0 "为真正繁衍，我们必须标准化生长，乃至演化。"
+ wiirlak_ep_tech_growth_tooltip:0 "大幅提升$wiirlak_ep_pc_bloom_plural$上的£mod_bonus_pop_growth_mult£ $MOD_BONUS_POP_GROWTH$产出"
+
+ wiirlak_ep_tech_defense:0 "荆棘堡垒"
+ wiirlak_ep_tech_defense_desc:0 "让$wiirlak_ep_ap_evergrowth$成为我们的堡垒。勿让火焰触及根须。"
+ wiirlak_ep_tech_defense_tooltip:0 "在$wiirlak_ep_pc_bloom_plural$上自然产出£mod_planet_defense_armies_add£ $defense_army_plural$"
+
+ wiirlak_ep_tech_adv_resource:0 "孢子幕合成"
+ wiirlak_ep_tech_adv_resource_desc:0 "不应有任何障碍，任何事物皆可合成。"
+ wiirlak_ep_tech_adv_resource_tooltip:0 "在$wiirlak_ep_pc_bloom_plural$上自然产出£exotic_gases£ £rare_crystals£ £volatile_motes£ $RARE_RESOURCES$"
+
+ wiirlak_ep_tech_influence:0 "菌丝权威"
+ wiirlak_ep_tech_influence_desc:0 "帝国若非网络，又算什么？让根须治理万物。"
+ wiirlak_ep_tech_influence_tooltip:0 "在$wiirlak_ep_pc_bloom_plural$上自然产出£influence£ $influence$"
+
+ wiirlak_ep_tech_science:0 "意识穹顶"
+ wiirlak_ep_tech_science_desc:0 "生物圈思考。根须知晓。我们必须学会倾听。"
+ wiirlak_ep_tech_science_tooltip:0 "在$wiirlak_ep_pc_bloom_plural$上自然产出£physics_research£ £society_research£ £engineering_research£ $concept_research$"
+
+# Tech event
+ wiirlak_ep_tech_event:0 "初生果实"
+ wiirlak_ep_tech_event_desc:0 "格栅响应。\n\n我们的孢子浸润土壤，根须随着目的搏动，冠层云团变厚。$wiirlak_ep_pc_bloom_plural$，曾是变幻莫测的星球改造实验品，如今却以惊人的慷慨产出回报。食物。研究。凝聚力。增长。$wiirlak_ep_ap_evergrowth$不仅仅是重塑——它给予回报。\n\n生态系统已稳定为全新的存在：不再是行星生物群系，而是行星器官。一个能够做到更多、能够做到一切的网络化生物圈。\n这些仅仅是初生果实。更多精彩还在后头。"
+
+
+# Decision
+ wiirlak_ep_decision_planet_boost:0 "绽放传播"
+ wiirlak_ep_decision_planet_boost_desc:0 "$wiirlak_ep_menap_food_2_desc$"
+
+ wiirlak_ep_decision_planet_boost_sector:0 "$wiirlak_ep_decision_planet_boost$"
+ wiirlak_ep_decision_planet_boost_sector_desc:0 "$wiirlak_ep_decision_planet_boost_desc$"
+ wiirlak_ep_decision_planet_boost_sector_tooltip:0 "对§Y$wiirlak_ep_pc_bloom_plural$§!应用§Y$wiirlak_ep_modifier_decision_planet_boost$§!修正器，范围§H星区§!，否则将开始星球改造为§Y$wiirlak_ep_pc_bloom_plural$§!。"
+
+ wiirlak_ep_decision_planet_boost_sector_sector_fail:0 "§R$TRIGGER_FAIL$ 是一个 $FRONTIER_PLANET$§!"
+ wiirlak_ep_decision_planet_boost_sector_sector_success:0 "£trigger_yes£ 位于 §Y$normal_sector$§!"
+
+ wiirlak_ep_decision_planet_boost_sector_sector_leader_fail:0 "§R$TRIGGER_FAIL$ $NO$ $SECTOR_GOVERNOR_TITLE$§!"
+ wiirlak_ep_decision_planet_boost_sector_sector_leader_success:0 "£trigger_yes£ $SECTOR_GOVERNOR_TITLE$ $EXISTS_TRIGGER$"
+
+# Modifiers
+ wiirlak_ep_modifier_decision_planet_boost:0 "加速生长"
+ wiirlak_ep_modifier_decision_planet_boost_desc:0 "$wiirlak_ep_decision_planet_boost_desc$"
+ mod_planet_farmers_wiirlak_ep_resource_mycogrowth_produces_add:0 "£wiirlak_ep_resource_mycogrowth£ $wiirlak_ep_resource_mycogrowth$ $TRIGGER_FROM$ $job_farmer_with_icon$"
+
+ wiirlak_ep_modifier_perk_4:0 "成长温床"
+ wiirlak_ep_modifier_perk_4_galaxy:0 "外向扩张"
+
+ wiirlak_ep_modifier_perk_5:0 "联合成长"
+ wiirlak_ep_modifier_perk_5_galaxy:0 "永恒生长"
+
+
+
+# Spy OP
+ wiirlak_ep_operation_covert_seeding:0 "秘密播种"
+ wiirlak_ep_operation_covert_seeding_desc:0 "随着菌毯成熟，我们的繁殖方式超越了物理边界。孢子不断适应，根系潜心倾听，地球化改造在敌人领地内部悄然启动。"
+ wiirlak_ep_operation_covert_seeding_on_success:0 "A $RANDOM$ $databank_colony$ $IS_STRING$ $PLANETVIEW_TERRAFORM_INTO$ a $wiirlak_ep_pc_bloom$"
+
+ wiirlak_ep_operation_covert_seeding_requires_colonies:0 "$TRIGGER_FAIL$ 需要一个有效的 $databank_colony$。无法在 $CAPITAL$ 上执行。"
+ wiirlak_ep_operation_covert_seeding_already_in_situation:0 "$TRIGGER_FAIL$ 目标正在应对一项 $wiirlak_ep_operation_covert_seeding$ 行动"
+
+# Spy OP Events
+ wiirlak_ep_operation_event_1:0 "微妙转变"
+ wiirlak_ep_operation_event_1_desc:0 "我们的行星科学团队报告称，大气微观植物群出现了异常模式，同时土壤化学成分也存在不规则现象。没有明显的破坏迹象。但有些东西变了。"
+ wiirlak_ep_operation_event_1_answer_monitor:0 "监测异常"
+ wiirlak_ep_operation_event_1_answer_ignore:0 "忽略植物学家。我们有更重要的事情要关注。"
+
+ wiirlak_ep_operation_event_2:0 "植物群异常"
+ wiirlak_ep_operation_event_2_desc:0 "始于微妙生物模式的现象，现已演变为巨大的地下菌丝结构。整个地表区域都已变色。本地物种要么正在以不自然的方式适应……要么正在消失。我们必须立刻行动，否则这场转变将彻底完成。"
+ wiirlak_ep_operation_event_2_answer_monitor:0 "研究它——或许我们能从中获益"
+ wiirlak_ep_operation_event_2_answer_ignore:0 "任其发展"
+ wiirlak_ep_operation_event_2_answer_resist:0 "我们必须抵抗这场入侵！"
+
+ wiirlak_ep_operation_event_finish:0 "菌丝受控，但未驯服"
+ wiirlak_ep_operation_event_finish_desc:0 "§Y[event_target:wiirlak_ep_spy_op_target.GetName]§! 的转变已经真正开始。当地政府已察觉到异常——环境小组正以日益增长的警惕性监测我们的真菌载体和生态漂移。\n\n然而，即使他们如此警惕，根系也已深植。$wiirlak_ep_operation_covert_seeding$ 网络依然潜伏，且完好无损。\n他们以为自己已夺回了土地。但 $wiirlak_ep_ap_evergrowth$ 是耐心的，其循环是永恒的。"
+
+
+ wiirlak_ep_operation_event_push_back:0 "斩断根系"
+ wiirlak_ep_operation_event_push_back_desc:0 "尽管困难重重，我们的世界还是抵制住了这场变化。异星的增长物已被灭绝，其地下菌丝被从生物圈中烧尽。大气过滤器已恢复了平衡。本地生态系统，尽管伤痕累累，但已显示出恢复的迹象。\n\n无论何方企图按照其形象重塑我们的星球，都低估了我们的决心。$wiirlak_ep_ap_evergrowth$ 也许广袤无边，但其触须可以被斩断。"
+
+ wiirlak_ep_operation_event_overgrown:0 "茂盛的 $wiirlak_ep_ap_evergrowth$"
+ wiirlak_ep_operation_event_overgrown_desc:0 "我们试图遏制它——试图理解它——但最终，§Y[event_target:wiirlak_ep_spy_op_target.GetName]§! 被转化了。\n\n转变已经完成。天空如今闪耀着奇异的极光，广阔的冠层遮蔽了卫星扫描，就连土壤也涌动着无法辨识的生命。我们的科技仍能运作，城市依然屹立，但我们已不再理解脚下世界的法则。\n\n$wiirlak_ep_ap_evergrowth$ 已占据了这片土地。而我们现在必须学会依附其根系生存……或者逃离。"
+
+# Situation
+ wiirlak_ep_situation:0 "不自然的变化"
+ wiirlak_ep_situation_type:0 "$wiirlak_ep_situation$"
+ wiirlak_ep_situation_monthly_change_tooltip:0 "我们的一颗行星上已开始出现异常的生态变化。若不加以控制，它可能会经历不可逆的地球化改造，转变为异星生物圈。"
+
+ wiirlak_ep_situation_desc_almost_complete:0 "§Y[Target.GetName]§! 上空被孢子密布的云层笼罩。本地生命正在窒息或被取代。\n如果这个过程完成，这颗行星将彻底异化。\n所剩时间不多，必须尽快行动。"
+ wiirlak_ep_situation_desc:0 "§Y[Target.GetName]§! 上正在发生微妙的变化。大气层正在发生偏移。不熟悉的真菌菌株突然生长。土壤成分偏离了正常标准。\n某种事物正在从内部改变我们的世界。而且它正在加速。"
+ wiirlak_ep_situation_desc_pushing_back:0 "遏制协议正在生效。清理小队报告称成功阻止了菌丝蔓延。环境漂移已减缓。\n目前，我们已暂时阻止了 §Y[Target.GetName]§! 的转变。"
+
+ wiirlak_ep_contained:0 "侵染基本受控"
+ wiirlak_ep_incursion:0 "异星侵染"
+ wiirlak_ep_overwhelmed:0 "压倒性侵染"
+
+ wiirlak_ep_burn:0 "焚毁一切"
+ wiirlak_ep_study:0 "研究它们"
+
+
+# Orbital Bombardment Stance
+ bombardment_wiirlak_ep_verdant_purge:0 "苍翠肃清"
+ bombardment_wiirlak_ep_verdant_purge_desc:0 "让$wiirlak_ep_ap_evergrowth$在此界盛放。\n- 对§Y陆军§!造成§R巨额§!伤害\n- 对§Y星球§!造成§R巨额§!伤害\n- 对§Y人口§!造成§R巨额§!伤害\n- 将星球宜居化为§G$wiirlak_ep_pc_bloom_plural$§!，或摧毁无法宜居化的星球。"
+
+# Bombardment Events
+ wiirlak_ep_event_bombarded_title:0 "苍翠围攻"
+ wiirlak_ep_event_bombarded_desc:0 "起初，我们以为那是辐射尘。孢子如尘埃般降落，覆盖了建筑、森林和人群。现在，土壤变得灼热而富有生机。\n\n§Y[event_target:wiirlak_ep_planet_targeted.GetName]§!不再仅仅是被轰炸——它正在改变。空气本身已经转变，地表在炮击下被脉动的侵入性菌类植物取代。我们的扫描仪证实了大气转变；这是一场替换。\n\n宜居化已经开始……未经我们同意。入侵者不仅仅是终结我们的世界。\n他们正在彻底改写它。"
+
+ wiirlak_ep_event_bombarded_origin_desc:0 "轨道轰炸曾是瓦解抵抗的手段。现在，它是我们播种未来的方式。在§Y[event_target:wiirlak_ep_planet_targeted.GetName]§!的陨石坑和残破结构之下，有某种东西正在苏醒——不是死亡，而是开端。\n\n我们的舰船携带的孢子已深入受伤的星球。地壳裂缝中溢出光合作用的薄雾。混凝土在蔓延的根系下开裂。本地生物圈仍在抵抗，但已节节败退。\n\n$wiirlak_ep_ap_evergrowth$已扎根。这个世界将属于我们，并非通过征服，而是通过转化。"
+
+ wiirlak_ep_event_bombarded_answer:0 "$wiirlak_ep_ap_evergrowth$扎根"
+
+ wiirlak_ep_event_bombarded_terraformed:0 "蔓生"
+ wiirlak_ep_event_bombarded_terraformed_desc:0 "最初悄然蔓延的侵染，如今已变得无所不在。经过多年的无声征服，[THIS.GetName]已盛放为永生之蔓的形象——每片森林都是活体神经，每一次呼吸都源自一个繁荣的、有感知的生态系统的孢子。\n\n城市在高耸的生物发光植物下被遮蔽，它们的天际线沦为新世界意志的支架。本地生命要么逃离、要么消亡，要么被重塑成更适合共生的形态。\n\n[THIS.GetName]不再是旧银河系的一个世界。它是$wiirlak_ep_ap_evergrowth$的化身。"
+
+# Bombardment Messages
+ WIIRLAK_EP_MESSAGE_BOMBARDED_TITLE:0 "$bombardment_wiirlak_ep_verdant_purge$"
+ wiirlak_ep_message_bombarded_desc:0 "§Y[event_target:wiirlak_ep_planet_targeted.GetName]§!已被$wiirlak_ep_ap_evergrowth$开始变异。"
+ wiirlak_ep_message_bombarded_origin_desc:0 "$wiirlak_ep_ap_evergrowth$已开始在§Y[event_target:wiirlak_ep_planet_targeted.GetName]§!扎根。"
+
+
+
+# Component
+ PLANET_KILLER_SEEDBREAKER:0 "$wiirlak_ep_ap_evergrowth$ $wiirlak_ep_menap_tech_4$"
+ PLANET_KILLER_SEEDBREAKER_DESC:0 "大量富含营养的生物质和大气催化剂被释放到星球上。所有人工结构和合成生命体都被加速生长的半感知植物所覆盖。这场洪流稳定了气候，并将地表转化为一个活生生的、自我扩张的生物圈，为$wiirlak_ep_ap_evergrowth$做好了准备。"
+
+# Planet Killer
+ PLANET_KILLER_SEEDBREAKER_ACTION:0 "播种$wiirlak_ep_ap_evergrowth$"
+ FLEETORDER_DESTROY_PLANET_WITH_PLANET_KILLER_SEEDBREAKER:0 "准备播种$PLANET|Y$"
+
+ MESSAGE_DESC_FOR_PLANET_KILLER_SEEDBREAKER:0 "已被$wiirlak_ep_ap_evergrowth$转化，原因如下："
+
+# Opinions
+ wiirlak_ep_opinion_seeded_a_world:0 "播种了一个世界"
+ wiirlak_ep_opinion_seeded_my_world:0 "播种了我们的世界"
+ wiirlak_ep_opinion_seeded_a_primitive_world:0 "播种了一个前FTL文明世界"
+ wiirlak_ep_opinion_seeded_a_primitive_world_phile:0 "$opinion_cracked_a_primitive_world_phile$"
+
+ wiirlak_ep_opinion_acceptation:0 "接受$wiirlak_ep_ap_evergrowth$"
+
+# Planet Killer Events
+ wiirlak_ep_is_not_bloom:0 "§R已是$wiirlak_ep_pc_bloom$§!"
+
+ wiirlak_ep_event_seedbreaker_title:0 "$wiirlak_ep_ap_evergrowth$的恩惠"
+ wiirlak_ep_event_seedbreaker_desc:0 "始于寂静。没有喧嚣。没有抵抗。只有系统校准的轻柔脉动——随后，是爆发。\n一道发光的孢子之矛撕裂了云层、地壳和地核。昨日尚存的世界，如今已被拆解并重塑。\n\n§Y$wiirlak_ep_menap_tech_4$§!已然发声。\n曾是贫瘠岩石或反抗城市的地方，如今脉动着$wiirlak_ep_ap_evergrowth$的绿色呼吸。并非仅仅改变，而是重生。地壳盛开着侵略性的根系。大气中弥漫着播种之风。生命以毁灭性的优雅宣示了自身。\n\n他者或许视之为毁灭。但我们深知真相。创造，往往表现为崩溃。"
+
+ wiirlak_ep_event_seedbreaker_target_title:0 "毁灭之花"
+ wiirlak_ep_event_seedbreaker_target_desc:0 "我们以为那是一种武器。我们错了。\n\n当裂种者降临时，没有撤离命令——只有混乱。§Y[event_target:wiirlak_ep_planet_targeted.GetName]§!上空的天穹裂开，从裂隙中倾泻而出的不是火焰，而是孢子——无尽的翠绿色云团窒息了空气，改写了土壤，并让河流被蔓延的根脉所充斥。\n\n数小时内，我们的城市就被植物蔓生。机器就地锈蚀，街道消失在仿佛有生命的脉动叶片之下。整个区域在塔楼般大小的生物质下坍塌。星球仍然存活，但不再属于我们。再也不是了。\n\n他们没有征服§Y[event_target:wiirlak_ep_planet_targeted.GetName]§!。他们改写了它。\n而且它仍在生长。"
+
+# Messages
+ WIIRLAK_EP_MESSAGE_SEEDBREAKER_TITLE:0 "$wiirlak_ep_event_seedbreaker_title$"
+ wiirlak_ep_message_seedbreaker_desc:0 "星球沦陷于$wiirlak_ep_ap_evergrowth$：§Y[event_target:wiirlak_ep_planet_targeted.GetName]§!"
+ wiirlak_ep_message_seedbreaker_origin_desc:0 "裂种者在§Y[event_target:wiirlak_ep_planet_targeted.GetName]§!上释放了$wiirlak_ep_ap_evergrowth$！"
+
+
+
+# Diplomatic Actions
+ wiirlak_ep_spread_the_evergrowth:0 "传播$wiirlak_ep_ap_evergrowth$"
+ wiirlak_ep_spread_the_evergrowth_desc:0 "$wiirlak_ep_ap_evergrowth$伸出触角，并非以武器，而是以根系。它们提供指引、繁荣和目标——如果我们愿意让我们的世界在它们的愿景下盛放。接受这项契约意味着重塑我们的星球……或许还有我们自身。"
+ wiirlak_ep_spread_the_evergrowth_tooltip:0 "让$wiirlak_ep_ap_evergrowth$在§Y$effect_random_owned_planet$§!上启动宜居化进程。"
+
+ wiirlak_ep_spread_the_evergrowth_tooltip_no_more:0 "$TRIGGER_FAIL$ §R没有可供宜居化的有效星球！§!"
+ wiirlak_ep_spread_the_evergrowth_tooltip_acceptation:0 "$TRIGGER_FAIL$ §R它们认为此提议无法接受！§!"
+ wiirlak_ep_spread_the_evergrowth_tooltip_refusal:0 "§H因此，这将不会产生任何效果！§!"
+
+# Diplo Event
+ wiirlak_ep_event_bombarded_terraformed_positive:0 "根植和谐"
+ wiirlak_ep_event_bombarded_terraformed_positive_desc:0 "在其管理者的同意下，[THIS.GetName]已历经一次优美的蜕变。$wiirlak_ep_ap_evergrowth$并非作为征服者，而是作为园丁而扎根——将本地生态与真菌核心的繁茂$wiirlak_ep_menap_terraforming_plural$交织在一起。\n\n天空如今闪烁着生物发光的花粉。无需耕种，作物便能丰产。本地人口报告健康状况改善、空气更清新，以及一种奇特却令人欣喜的目标感。\n\n在加入这个伟大循环后，[THIS.GetName]不再是受害者，而是$wiirlak_ep_ap_evergrowth$所提供之物的灯塔：通过繁荣共生实现的和平。"
+ wiirlak_ep_event_bombarded_terraformed_positive_answer:0 "和谐繁盛"
+
+# Economic Categories
+ wiirlak_ep_bloom_world:0 "$wiirlak_ep_event_seedbreaker_title$"
+ wiirlak_ep_bloom_world_jobs:0 "$wiirlak_ep_pc_bloom$ $planet_jobs$"
+
+# Deposits
+ wiirlak_ep_deposit:0 "$wiirlak_ep_event_seedbreaker_title$"
+ wiirlak_ep_deposit_desc:0 "$wiirlak_ep_ap_evergrowth$赐予有信仰者。\n对于那些心存疑虑的人，什么都不会生长。但对于那些相信的人……$wiirlak_ep_ap_evergrowth$会无休止地赐予。"
+
+
+
+# Final Events
+ wiirlak_ep_warning:0 "根系抵达星辰"
+ wiirlak_ep_warning_desc:0 "一道覆盖整个帝国的讯息在所有通讯阵列中绽放，在引力井和亚空间中低语。$wiirlak_ep_ap_evergrowth$，曾是一种悄然的生态学奇观，如今已彻底成熟为截然不同的存在。\n\n§Y[event_target:wiirlak_ep_crisis_player.GetName]§!已宣告了一个愿景：生物圈的全面统一，将盛放传播到所有宜居世界。它们谈论的并非征服，而是复兴。一个不再因物种或主权而分裂的银河系——而是一个作为单一活体系统呼吸的银河系。\n\n它们称之为和平。他者则已称之为抹除。有一点是明确的：它们已然准备就绪。而且它们仍在生长。"
+
+ wiirlak_ep_warning_2:0 "第五盛放"
+ wiirlak_ep_warning_2_desc:0 "曾经看似令人不安的异常，如今已然在群星间扎根。这所谓的$wiirlak_ep_ap_evergrowth$其扩张与凝聚程度已无法再被视为一种离经叛道的意识形态。 \n\n孢子信号正沿着超空间航线扩散。$wiirlak_ep_pc_bloom_plural$以同步模式共鸣。来自边缘星系的报告显示，整个生物圈在一夜之间发生变异——并非源自行星改造……而是源自某种更快、更奇特、更具生命力的事物。 \n\n更糟的是，我们截获了零散的传输信息：邀请。提供“加入网格”的提议。联盟并非通过言语形成，而是通过根系、菌丝，以及成为更伟大一部分的承诺。 \n\n无论这是什么——它不再是一场运动：它是一场危机。"
+
+ wiirlak_ep_warning_2_answer_aggressive:0 "备战舰队。我们可能已经太迟了。"
+ wiirlak_ep_warning_2_answer_neutral:0 "无序的增长即是腐朽。"
+ wiirlak_ep_warning_2_answer_curious:0 "或许……我们应该听听他们的。"
+
+
+ wiirlak_ep_invitation:0 "最后的两片花瓣"
+ wiirlak_ep_invitation_desc:0 "在超限蜕变扎根之前，我们必须再 확보两片沃土。我们的特工已识别出处于临界点——犹豫不决但尚未敌对——的帝国。 \n\n如果他们接受我们的孢子，循环便可能不受阻碍地完成。如果他们反抗……我们将以他们的灰烬滋养根系。"
+ wiirlak_ep_invitation_none_desc:0 "我们蜕变的最终阶段已经完成。我们不再适应银河——银河将适应我们。 \n\n我们的孢子从核心延伸至边缘，我们的根系钻入曾被认为贫瘠的世界，我们的愿景已清晰绽放。 \n\n增长的时代已经结束。现在是扩散的时代。 \n所有反抗我们者都必须迅速做出决定：滋养，或腐朽。"
+ wiirlak_ep_flag_chosen_by_crisis:0 "已受邀"
+
+ wiirlak_ep_invitation_empire_1:0 "[event_target:wiirlak_ep_crisis_potential_ally_1.GetName]"
+ wiirlak_ep_invitation_empire_2:0 "[event_target:wiirlak_ep_crisis_potential_ally_2.GetName]"
+ wiirlak_ep_invitation_empire_3:0 "[event_target:wiirlak_ep_crisis_potential_ally_3.GetName]"
+ wiirlak_ep_invitation_empire_4:0 "[event_target:wiirlak_ep_crisis_potential_ally_4.GetName]"
+ wiirlak_ep_invitation_empire_5:0 "[event_target:wiirlak_ep_crisis_potential_ally_5.GetName]"
+
+
+ wiirlak_ep_invitation_offer:0 "绽放之邀"
+ wiirlak_ep_invitation_offer_desc:0 "§H[event_target:wiirlak_ep_crisis_player.GetName]§! 向我们发来了最终提议：\n\n我们不带舰队，不持刀刃，唯有华盖之声。 \n我们向你们提供所有生命的未来：成为$wiirlak_ep_ap_evergrowth$的一部分。如此，你们将获得$wiirlak_ep_pc_bloom_plural$的丰盛，孢子亲吻下的和谐统一，以及免于即将到来风暴的庇护。 \n\n拒绝此举，你选择枯萎。你选择战争。"
+
+ wiirlak_ep_invitation_offer_accept:0 "愿我们的根系交织缠绕。"
+ wiirlak_ep_invitation_offer_accept_tooltip:0 "将在战争中加入他们一方"
+
+ wiirlak_ep_invitation_offer_reject:0 "我们绝不会屈服于这种侵染。"
+ wiirlak_ep_invitation_offer_reject_tooltip:0 "将对$wiirlak_ep_ap_evergrowth$宣战"
+
+ wiirlak_ep_invitation_rejected:0 "被拒绝的园圃"
+ wiirlak_ep_invitation_rejected_desc:0 "尽管我们慷慨地提议让[From.GetName]沐浴在$wiirlak_ep_ap_evergrowth$的恩泽中，他们却拒绝了。他们称其为腐败、威胁、谎言。愚者在甘霖普降时，仍紧抓着干涸的土地不放。 \n\n让他们在孤立中枯萎吧——因为无知的海洋没有彼岸，而他们已选择在其中沉溺。"
+ wiirlak_ep_invitation_rejected_answer:0 "他们选择腐朽"
+
+ wiirlak_ep_invitation_accepted:0 "星际根系"
+ wiirlak_ep_invitation_accepted_desc:0 "他们跪下了。并非出于恐惧，而是出于宁静的敬畏。他们怀疑的帷幕像枯萎的树皮般撕裂，其下是一个渴望目标存在的灵魂。 \n\n第一批孢子已经抵达——无声的信使，由引力和意志承载而来。他们的城市将与我们一同呼吸。他们的土壤将铭记。 \n\n他们尚不理解自己所邀请到的美好。但他们会的。哦，他们会的。$wiirlak_ep_ap_evergrowth$不征服；它拥抱。当他们的天空被花粉笼罩，旧有建筑在新根系下弯曲时，他们会感受到：那份统一的寂静。那份目标的律动。那份群星的最终韵律。"
+
+
+
+ wiirlak_ep_project_1_done:0 "苍翠清算"
+ wiirlak_ep_project_1_done_desc:0 "它开始了。在每一片天空下，我们的根系律动。在每一次呼吸中，我们的孢子搅动。我们不再需要扩散。我们只需要觉醒。§H大绽放§!正在搅动——并非扩张，而是最终的实现。 \n\n我们的世界塑造者们吟唱着汇聚之颂。我们的心智网络因本能与目标而沉重。最后一个合成仍未完成：$wiirlak_ep_ap_evergrowth$ §H觉醒§!。"
+
+ wiirlak_ep_project_1_done_answer:0 "开始最终项目"
+ wiirlak_ep_project_1_done_tooltip:0 "在$CAPITAL$上启动$wiirlak_ep_decision_final_project$ $concept_decision$"
+ wiirlak_ep_project_1_done_tooltip_fail:0 "已在$CAPITAL$上解锁$wiirlak_ep_decision_final_project$ $concept_decision$"
+
+
+
+ wiirlak_ep_project_2_done:0 "菌丝脉冲"
+ wiirlak_ep_project_2_done_desc:0 "准备工作毫无阻碍地推进。$wiirlak_ep_pc_bloom_plural$的网格现在和谐地嗡鸣着，它们的生物圈通过亚根神经纤维和行星级营养流对齐。 \n\n一道脉冲已被送出——微妙却又强大。每一个$wiirlak_ep_pc_bloom$都在搅动，同步响应，其地壳微微位移，如同呼吸。 \n\n我们的星际特工报告了骚动。让他们恐慌吧。让他们动员吧。种子早已种下。"
+
+ wiirlak_ep_project_2_done_answer:0 "让他们听见它的生长吧。"
+ wiirlak_ep_project_2_done_tooltip:0 "在$CAPITAL$上启动$wiirlak_ep_decision_final_project_2$ $concept_decision$"
+ wiirlak_ep_project_2_done_tooltip_fail:0 "已在$CAPITAL$上解锁$wiirlak_ep_decision_final_project_2$ $concept_decision$"
+
+ wiirlak_ep_project_2_warning:0 "根系深邃"
+ wiirlak_ep_project_2_warning_desc:0 "他们没有停滞。他们没有动摇。 \n$wiirlak_ep_ap_evergrowth$势不可挡地向前推进。所有试图遏制绽放的尝试都只是争取了时间——而现在，那时间正像旧世界的土壤般腐烂。巨大的能量涌动在他们的网络中荡漾，微弱的地磁脉冲跨越$wiirlak_ep_pc_bloom_plural$被追踪到，超越了星系和物种。 \n\n这不再仅仅是繁殖。这是准备。 \n\n我们的分析师警告说，他们现在准备的，可能会在瞬间永久性地改写整个银河系的行星生物圈。他们的蜕变不再需要数年，只需数秒。 \n\n如果现在不阻止他们，可能就再也无法阻止了。"
+ wiirlak_ep_project_2_warning_answer:0 "我们必须行动。现在。"
+ wiirlak_ep_project_2_warning_answer_evergrowth:0 "让他们生长吧。"
+
+
+
+ wiirlak_ep_project_3_done:0 "$wiirlak_ep_modifier_blooming_warning$"
+ wiirlak_ep_project_3_done_desc:0 "每一个$wiirlak_ep_pc_bloom$都伴随着共鸣而颤动，那是行星的心跳，正加速至最终的高潮。我们编织的菌丝网格——横跨地壳、根系与精神——已然觉醒。不再是网络。而是神经系统。 \n\n天空归于寂静，土壤颤抖。随后——爆发。 \n\n剧毒海洋化为营养温床。沙漠迸发出花海雪崩。冰川绽放出光芒四射的真菌。曾经贫瘠之地，如今充满压倒性的生命。已无仗可打。已无足够强大的抵抗。 \n\n银河是我们的，因为它不再是银河。 \n它是一个花园。它是$wiirlak_ep_ap_evergrowth$。"
+ wiirlak_ep_project_3_done_answer:0 "我们并非征服者。我们即是增长本身。"
+
+ wiirlak_ep_project_3_warning:0 "终焉之花"
+ wiirlak_ep_project_3_warning_desc:0 "猝不及防。\n\n跨越星辰，每一颗$wiirlak_ep_pc_bloom$都在璀璨的孢子云中爆发，将改变生态的能量波浪倾泻入虚空。未受其波及的星球也迅速被席卷。海洋变得生物发光。城市在窒息的藤蔓下沉寂。机器在异星苔藓下锈蚀。\n\n反抗尝试尽皆失败。行星改造协议被覆盖。行星护盾崩解。一颗又一颗星辰，在绿色与金色的华盖下黯然失色。\n\n银河并未在烈焰中陨落。它被彻底覆盖了。"
+ wiirlak_ep_project_3_warning_answer:0 "我们为时已晚……"
+ wiirlak_ep_project_3_warning_answer_evergrowth:0 "……而今，我们已归属于根系。"
+
+# Modifier
+ wiirlak_ep_modifier_subject:0 "$wiirlak_ep_invitation$"
+
+ wiirlak_ep_modifier_crisis_reaction:0 "$wiirlak_ep_ap_evergrowth$之忧"
+ wiirlak_ep_modifier_crisis_link:0 "$wiirlak_ep_ap_evergrowth$之链"
+
+# Decision
+ wiirlak_ep_decision_final_project:0 "$wiirlak_ep_ap_evergrowth$起源"
+ wiirlak_ep_decision_final_project_desc:0 "$wiirlak_ep_ap_evergrowth$并非武器——它是一个原点，一个银河系卵，所有在$wiirlak_ep_ap_evergrowth$下孕育的生命的汇聚。这个结构从行星地壳与神经网络中生长，将释放出一波同步的行星改造脉冲。\n\n没有一颗星球能够幸免。没有一片天空会不曾盛开。这不是终结。这是根系。"
+ wiirlak_ep_decision_final_project_tooltip:0 "§H推进危机§!"
+
+
+ wiirlak_ep_decision_final_project_2:0 "唤醒$wiirlak_ep_modifier_blooming_warning$"
+ wiirlak_ep_decision_final_project_2_desc:0 "每一根根须。每一条枝蔓。每一个孢子。每一颗$wiirlak_ep_pc_bloom$都是一个神经末梢——现在它们将汇聚。缓慢生长的时间已经结束。\n\n我们将打破行星与种子之间的界限。不再等待，不再低语。凭借从千万世界汇聚而来的$wiirlak_ep_resource_mycogrowth$，我们将重塑银河——不是用火焰或金属，而是用生命。无情。永恒吞噬。不朽"
+ wiirlak_ep_decision_final_project_2_tooltip:0 "$wiirlak_ep_decision_final_project_tooltip$"
+
+# Modifier
+ wiirlak_ep_modifier_blooming_warning:0 "$wiirlak_ep_ap_evergrowth$奇点"
+ wiirlak_ep_modifier_blooming_warning_desc:0 "我们正接近无法回头的境地。\n\n所有$wiirlak_ep_pc_bloom_plural$将不再仅仅是行星。它们将成为$wiirlak_ep_ap_evergrowth$最终设计中的发射器、孢子、节点。\n\n一旦信号发出，它将不仅仅是生长——它将成为一切。"
+
+ wiirlak_ep_modifier_blooming:0 "$wiirlak_ep_modifier_blooming_warning$"
+ wiirlak_ep_modifier_blooming_desc:0 "$wiirlak_ep_modifier_blooming_warning_desc$"
+
+ wiirlak_ep_modifier_blooming_hive:0 "$wiirlak_ep_modifier_blooming_warning$"
+ wiirlak_ep_modifier_blooming_hive_desc:0 "$wiirlak_ep_modifier_blooming_warning_desc$"
+
+ wiirlak_ep_modifier_forced_blooming:0 "强制盛放"
+ wiirlak_ep_modifier_forced_blooming_desc:0 "这颗行星正在被$wiirlak_ep_ap_evergrowth$强制转化。"
+
+
+# Final Event - Without Project
+ wiirlak_ep_all_terraformed:0 "静谧盛放"
+ wiirlak_ep_all_terraformed_answer:0 "$wiirlak_ep_ap_evergrowth$自行扩散"
+
+ wiirlak_ep_all_terraformed_step_2_desc:0 "网格已然完成。每个宜居世界都与$wiirlak_ep_ap_evergrowth$和谐共振——充满活力，肥沃，不可阻挡。\n\n然而，最终的蜕变——盛放超然——仍未完成。星辰在寂静中敬畏地等待，活体网络在休眠中嗡嗡作响，它的目的已达成，却又未达成。\n\n本应是独一无二的进化时刻，却变成了一场永无止境的盛开。银河与我们一同呼吸。但我们……犹豫了。\n当我们已经胜利时，还需要一个结局吗？"
+
+ wiirlak_ep_all_terraformed_step_1_desc:0 "$wiirlak_ep_ap_evergrowth$横跨星辰。每个宜居世界都是真菌网络中的一个节点，每个生态系统都是其意志的镜子。\n\n然而，最终的爆发并未释放。生长本身成为了目标。飞升项目——超凡转化——已被规划，被计划……但从未启动。\n\n也许它被放弃了。也许$wiirlak_ep_ap_evergrowth$认为它不再需要这种仪式。\n\n于是，银河系静谧地、彻底地改变着。永恒不变。"
+
+ wiirlak_ep_all_terraformed_not_crisis_5_desc:0 "$wiirlak_ep_ap_evergrowth$实现了无人认为可能之事：每个宜居世界如今都以盛放的生物群落织锦而繁荣。生命主宰一切，广阔而交织。\n\n然而，群星注视着另一个存在。另一个势力现在已宣称拥有银河威胁的头衔。这次盛放的速度还不够快。\n\n$wiirlak_ep_ap_evergrowth$注视着。等待着。它仍在繁衍。它仍在扩散。但银河系现在又重新呼吸了。"
+
+ wiirlak_ep_all_terraformed_not_crisis_5_alone_desc:0 "没有末日武器，没有光荣宣言，银河系被重塑。缓慢地，无声地——$wiirlak_ep_ap_evergrowth$向前推进。间谍网络在阴影中散布孢子。轰炸播下了肥沃的腐朽。\n\n而现在，没有号角，没有最终的篇章，银河系已成为一个巨大的花园。\n\n无人察觉，直到一切已成定局。天空没有坠落。它变成了绿色。"
+
+
+# Subject
+ specialist_evergrowth:0 "播种者"
+
+ wiirlak_ep_preset_evergrowth:0 "$specialist_evergrowth$"
+ wiirlak_ep_preset_evergrowth_desc:0 "播种者是一种专注于行星改造及其宗主国生态愿景传播的专家臣属类型，代价是降低了自治权和外交影响力。"
+ wiirlak_ep_preset_evergrowth_flavor_desc:0 "$wiirlak_ep_preset_evergrowth_desc$"
+
+ MESSAGE_SUBJECT_LEVEL_UP_specialist_evergrowth_TITLE:0 "$specialist_evergrowth$ $MESSAGE_SUBJECT_LEVEL_UP_TITLE$"
+ MESSAGE_WE_LEVEL_UP_specialist_evergrowth_TITLE:0 "$specialist_evergrowth$ $MESSAGE_WE_LEVEL_UP_TITLE$"
+
+# Subject Perks
+ wiirlak_ep_1_modifier:0 "$specialist_evergrowth$增益 I"
+ wiirlak_ep_1_penalties:0 "$specialist_evergrowth$惩罚 I"
+
+ wiirlak_ep_1_insight:0 "$specialist_evergrowth$洞察 I"
+ wiirlak_ep_1_insight_desc:0 "§E获得科技：§!\n$t$£society£ $wiirlak_ep_tech_energy$\n§E添加至可研究科技：§!\n$t$£society£ $wiirlak_ep_tech_growth$\n$t$£society£ $wiirlak_ep_tech_defense$"
+
+
+ wiirlak_ep_1_bloomform:0 "$specialist_evergrowth$ $wiirlak_ep_menap_terraforming_3$ I"
+ wiirlak_ep_1_bloomform_desc:0 "§H[TARGET.Capital.GetName]§!将转化为一颗§Y$wiirlak_ep_pc_bloom$§!"
+
+ wiirlak_ep_1_overlord_modifier:0 "$specialist_evergrowth$咨询"
+ wiirlak_ep_1_overlord_penalty:0 "$specialist_evergrowth$维护"
+ wiirlak_ep_1_neighbor_bonuses:0 "$wiirlak_ep_ap_evergrowth$之枝"
+
+
+
+ wiirlak_ep_2_modifier:0 "$specialist_evergrowth$增益 II"
+ wiirlak_ep_2_penalties:0 "$specialist_evergrowth$惩罚 II"
+
+ wiirlak_ep_2_insight:0 "$specialist_evergrowth$洞察 II"
+ wiirlak_ep_2_insight_desc:0 "§E获得科技：§!\n$t$£society£ $wiirlak_ep_tech_science$\n§E添加至可研究科技：§!\n$t$£society£ $wiirlak_ep_tech_unity$"
+
+
+ wiirlak_ep_2_bloomform:0 "$specialist_evergrowth$ $wiirlak_ep_menap_terraforming_3$ II"
+ wiirlak_ep_2_bloomform_desc:0 "§H[TARGET.GetName]§!首都星区内的每颗行星都将转化为§Y$wiirlak_ep_pc_bloom_plural$§!"
+
+ wiirlak_ep_2_colony:0 "$specialist_evergrowth$ 适应 I"
+ wiirlak_ep_2_colony_desc:0 "§H[TARGET.GetName]§!适应§Y$wiirlak_ep_pc_bloom_plural$§!"
+
+ wiirlak_ep_2_bloomform_leader:0 "$specialist_evergrowth$ 领袖 I"
+ wiirlak_ep_2_bloomform_leader_desc:0 "§E$official_plural_with_icon$获得一个随机特质：§!"
+
+
+
+ wiirlak_ep_3_modifier:0 "$specialist_evergrowth$ 增益 III"
+ wiirlak_ep_3_penalties:0 "$specialist_evergrowth$ 减益 III"
+
+ wiirlak_ep_3_insight:0 "$specialist_evergrowth$ 洞察 III"
+ wiirlak_ep_3_insight_desc:0 "§E获得科技：§!"
+
+
+ wiirlak_ep_3_bloomform:0 "$specialist_evergrowth$ $wiirlak_ep_menap_terraforming_3$ III"
+ wiirlak_ep_3_bloomform_desc:0 "§H[TARGET.GetName]§!内的所有星球将转化为§Y$wiirlak_ep_pc_bloom_plural$§!"
+
+ wiirlak_ep_3_colony:0 "$specialist_evergrowth$ 适应 II"
+ wiirlak_ep_3_colony_desc:0 "§H[TARGET.GetName]§!的人口适应§Y$wiirlak_ep_pc_bloom_plural$§!"
+
+ wiirlak_ep_3_bloomform_leader:0 "$specialist_evergrowth$ 领袖 II"
+ wiirlak_ep_3_bloomform_leader_desc:0 "$OVERLORD_MOD$"
+
+# Subject Modifier
+ Wiirlak_ep_modifier_relay:0 "$wiirlak_ep_1_neighbor_bonuses$"
+ mod_planet_jobs_wiirlak_ep_resource_mycogrowth_produces_mult:0 "£wiirlak_ep_resource_mycogrowth£ $wiirlak_ep_resource_mycogrowth$来自£job£岗位"
+
+# Subject Leader Trait
+ leader_trait_evergrowth_rooted_presence:0 "根植存在"
+ leader_trait_evergrowth_rooted_presence_desc:0 "停留越久，土壤越会倾听。"
+ leader_trait_evergrowth_rooted_presence_tooltip:0 "在§Y$wiirlak_ep_pc_bloom_plural$§!上，$PLANET_EFFECTS_TXT$ $TABBED_NEW_LINE$- $MOD_PLANET_STABILITY_MULT$：§G+20%§!$TABBED_NEW_LINE$- $MOD_POP_GOVERNMENT_ETHIC_ATTRACTION$：§G+20%§!"
+
+ leader_trait_evergrowth_spore_diplomat:0 "孢子外交家"
+ leader_trait_evergrowth_spore_diplomat_desc:0 "他们轻声细语——通过花粉、信息素和和平。"
+ leader_trait_evergrowth_spore_diplomat_tooltip:0 "在§Y$wiirlak_ep_pc_bloom_plural$§!上，$PLANET_EFFECTS_TXT$ $TABBED_NEW_LINE$- $mod_planet_jobs_upkeep_mult$：§G-15%§!$TABBED_NEW_LINE$- $mod_planet_jobs_unity_produces_mult$：§G+15%§!"
+
+ leader_trait_evergrowth_myco_admin:0 "菌丝管理官"
+ leader_trait_evergrowth_myco_admin_desc:0 "决策如根系在肥沃土壤中般迅速传播。"
+
+ leader_trait_evergrowth_biogrowth_architect:0 "生体建筑师"
+ leader_trait_evergrowth_biogrowth_architect_desc:0 "当世界能为你生长时，何必建造？"
+ leader_trait_evergrowth_biogrowth_architect_tooltip:0 "在§Y$wiirlak_ep_pc_bloom_plural$§!上，$PLANET_EFFECTS_TXT$ $TABBED_NEW_LINE$- $mod_planet_districts_cost_mult$：§G-20%§!$TABBED_NEW_LINE$- $mod_planet_districts_upkeep_mult$：§G-20%§!"
+
+ leader_trait_evergrowth_spore_council:0 "孢子议会"
+ leader_trait_evergrowth_spore_council_desc:0 "他们的思想是集体的。他们的投票，可预测。"
+
+# Subject Building
+ wiirlak_ep_holding_sporebloom_arboretum:0 "孢子绽放植物园"
+ wiirlak_ep_holding_sporebloom_arboretum_desc:0 "献给永生之长的活体大教堂，永恒吐露着希望的花粉。"

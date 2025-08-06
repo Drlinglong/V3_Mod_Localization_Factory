@@ -1,0 +1,254 @@
+﻿l_spanish:
+
+ ################################
+ ### pdivinity_tech_l_english ###
+ ###     by daniellm          ###
+ ################################
+
+ ###################
+ ### weapon type ###
+ ###################
+
+ weapon_type_pdivinity_psionic:0 "Psiónico"
+ mod_weapon_type_pdivinity_psionic_weapon_damage_mult:0 "Daño de arma psiónica"
+ mod_weapon_type_pdivinity_psionic_weapon_fire_rate_mult:0 "Cadencia de fuego de arma psiónica"
+
+ #####################
+ ### ship tooltips ###
+ #####################
+
+ PDIVINITY_CLOAKING_TOOLTIP:0 "Niega la anulación de escudos por camuflaje"
+
+
+
+ ################
+ ### weaponry ###
+ ################
+ pdivinity_laser_set:0 "Matriz de Lanzas Psiónicas"
+ pdivinity_laser_set_DESC:0 "Una descarga focalizada de energía condensada del Velo, formada al sincronizar matrices de armas con campos de resonancia psiónica."
+ SMALL_PDIVINITY_LASER:0 "Lanza Psiónica Pequeña"
+ MEDIUM_PDIVINITY_LASER:0 "Lanza Psiónica Mediana"
+ LARGE_PDIVINITY_LASER:0 "Lanza Psiónica Grande"
+
+ SMALL_PDIVINITY_LASER_SHROUD:0 "Lanza Psiónica Pequeña"
+ MEDIUM_PDIVINITY_LASER_SHROUD:0 "Lanza Psiónica Mediana"
+ LARGE_PDIVINITY_LASER_SHROUD:0 "Lanza Psiónica Grande"
+
+ pdivinity_energy_torpedo_set:0 "Proyector de Ráfagas Psi"
+ pdivinity_energy_torpedo_set_DESC:0 "Lanza proyectiles psiónicos inestables que atraviesan la materia antes de detonar en ráfagas de energía recubierta del Velo."
+ PDIVINITY_ENERGY_TORPEDO:0 "Proyector de Ráfagas Psi"
+ PDIVINITY_ENERGY_TORPEDO_SHROUD:0 "Proyector de Ráfagas Psi"
+
+ pdivinity_lance_set:0 "Perforador del Velo"
+ pdivinity_lance_set_DESC:0 "Un arma colosal que pliega el espacio local para entregar una ruptura psiónica condensada a objetivos distantes."
+ PDIVINITY_LANCE:0 "Perforador del Velo"
+ PDIVINITY_LANCE_SHROUD:0 "Perforador del Velo"
+
+ pdivinity_lightning_set:0 "Ira del Velo"
+ pdivinity_lightning_set_DESC:0 "Relámpagos psiónicos se extienden por los objetivos, guiados por la ira y la resonancia. El propio Velo se desata a través de estas descargas."
+ PDIVINITY_LIGHTNING:0 "Ira del Velo"
+ PDIVINITY_LIGHTNING_SHROUD:0 "Ira del Velo"
+
+ pdivinity_titan_set:0 "Lanza del Arquitecto"
+ pdivinity_titan_set_DESC:0 "Un arma de rayo titánica cargada por tensión dimensional. Al disparar, expone momentáneamente una falla entre el espacio real y el Velo."
+ PDIVINITY_TITAN_WEAPON:0 "Lanza del Arquitecto"
+ PDIVINITY_TITAN_WEAPON_TEARER:0 "Lanza del Arquitecto"
+
+ pdivinity_star_rifter_set:0 "Desgarrador Dimensional"
+ pdivinity_star_rifter_set_DESC:0 "Un arma apocalíptica impulsada por campos de resonancia psiónica. Al activarse, desgarra el tejido del espacio real alrededor de un planeta, colapsándolo en una fisura vinculada directamente al Velo, alterando para siempre el planeta y la realidad misma."
+ PDIVINITY_STAR_RIFTER:0 "Desgarrador Dimensional"
+ PDIVINITY_STAR_RIFTER_ACTION:0 "Desgarrar el Velo"
+ FLEETORDER_DESTROY_PLANET_WITH_PDIVINITY_STAR_RIFTER:0 "Preparándose para desgarrar el Velo"
+
+ pdivinity_psionic_artillery_set:0 "Artillería de Onda del Velo"
+ pdivinity_psionic_artillery_set_DESC:0 "Un arma de energía de largo alcance que se basa en armónicos psiónicos, distorsionando las mentes enemigas y aniquilando escudos y cascos con igual facilidad."
+ PDIVINITY_PSIONIC_ARTILLERY:0 "Artillería de Onda del Velo"
+ PDIVINITY_PSIONIC_ARTILLERY_SHROUD:0 "Artillería de Onda del Velo"
+
+ pdivinity_psionic_strikecraft_set:0 "Interceptores Psiónicos"
+ pdivinity_psionic_strikecraft_set_DESC:0 "Naves de ataque compuestas de formas de pensamiento vivas, guiadas por el instinto y ecos de conciencia dentro del Velo."
+ PDIVINITY_PSIONIC_STRIKECRAFT:0 "Interceptores Psiónicos"
+ PDIVINITY_PSIONIC_STRIKECRAFT_SHROUD:0 "Interceptores Psiónicos"
+
+ pdivinity_shields_set:0 "Escudos del Velo"
+ pdivinity_shields_set_DESC:0 "Una evolución avanzada del blindaje psiónico, tejido directamente de la esencia del Velo. Reacciona instintivamente a las amenazas entrantes."
+ SMALL_PDIVINITY_PSIONIC_SHIELDS:0 "Escudo del Velo Pequeño"
+ MEDIUM_PDIVINITY_PSIONIC_SHIELDS:0 "Escudo del Velo Mediano"
+ LARGE_PDIVINITY_PSIONIC_SHIELDS:0 "Escudo del Velo Grande"
+ SMALL_PDIVINITY_PSIONIC_SHIELDS_SHROUD:0 "Escudo del Velo Pequeño"
+ MEDIUM_PDIVINITY_PSIONIC_SHIELDS_SHROUD:0 "Escudo del Velo Mediano"
+ LARGE_PDIVINITY_PSIONIC_SHIELDS_SHROUD:0 "Escudo del Velo Grande"
+
+ ###############
+ ### reactor ###
+ ###############
+
+ pdivinity_psionic_reactor:0 "Voluntad del Arquitecto"
+ pdivinity_psionic_reactor_desc:0 "Un núcleo cargado psiónicamente que extrae energía directamente de la fuerza de voluntad del Arquitecto dentro del Velo. El poder ya no está limitado por la materia."
+
+ PDIVINITY_PSIONIC_CLOUD_PSIONIC_REACTOR:0 "$pdivinity_psionic_reactor$"
+ PDIVINITY_PSIONIC_CLOUD_PSIONIC_REACTOR_DESC:0 "$pdivinity_psionic_reactor_desc$"
+
+ PDIVINITY_PSIONIC_AVATAR_PSIONIC_REACTOR:0 "$pdivinity_psionic_reactor$"
+ PDIVINITY_PSIONIC_AVATAR_PSIONIC_REACTOR_DESC:0 "$pdivinity_psionic_reactor_desc$"
+
+ PDIVINITY_DIMENSIONAL_TEARER_PSIONIC_REACTOR:0 "$pdivinity_psionic_reactor$"
+ PDIVINITY_DIMENSIONAL_TEARER_PSIONIC_REACTOR_DESC:0 "$pdivinity_psionic_reactor_desc$"
+
+ PDIVINITY_CORVETTE_PSIONIC_REACTOR:0 "$pdivinity_psionic_reactor$"
+ PDIVINITY_CORVETTE_PSIONIC_REACTOR_DESC:0 "$pdivinity_psionic_reactor_desc$"
+
+ PDIVINITY_DESTROYER_PSIONIC_REACTOR:0 "$pdivinity_psionic_reactor$"
+ PDIVINITY_DESTROYER_PSIONIC_REACTOR_DESC:0 "$pdivinity_psionic_reactor_desc$"
+
+ PDIVINITY_CRUISER_PSIONIC_REACTOR:0 "$pdivinity_psionic_reactor$"
+ PDIVINITY_CRUISER_PSIONIC_REACTOR_DESC:0 "$pdivinity_psionic_reactor_desc$"
+
+ PDIVINITY_BATTLESHIP_PSIONIC_REACTOR:0 "$pdivinity_psionic_reactor$"
+ PDIVINITY_BATTLESHIP_PSIONIC_REACTOR_DESC:0 "$pdivinity_psionic_reactor_desc$"
+
+ PDIVINITY_TITAN_PSIONIC_REACTOR:0 "$pdivinity_psionic_reactor$"
+ PDIVINITY_TITAN_PSIONIC_REACTOR_DESC:0 "$pdivinity_psionic_reactor_desc$"
+
+ PDIVINITY_COLOSSUS_PSIONIC_REACTOR:0 "$pdivinity_psionic_reactor$"
+ PDIVINITY_COLOSSUS_PSIONIC_REACTOR_DESC:0 "$pdivinity_psionic_reactor_desc$"
+
+ PDIVINITY_JUGGERNAUT_PSIONIC_REACTOR:0 "$pdivinity_psionic_reactor$"
+ PDIVINITY_JUGGERNAUT_PSIONIC_REACTOR_DESC:0 "$pdivinity_psionic_reactor_desc$"
+
+ PDIVINITY_PLATFORM_PSIONIC_REACTOR:0 "$pdivinity_psionic_reactor$"
+ PDIVINITY_PLATFORM_PSIONIC_REACTOR_DESC:0 "$pdivinity_psionic_reactor_desc$"
+
+ PDIVINITY_ION_PSIONIC_REACTOR:0 "$pdivinity_psionic_reactor$"
+ PDIVINITY_ION_PSIONIC_REACTOR_DESC:0 "$pdivinity_psionic_reactor_desc$"
+
+ #############
+ ### drive ###
+ #############
+
+ PDIVINITY_SHROUD_JUMP_DRIVE:0 "Propulsor del Velo"
+ PDIVINITY_SHROUD_JUMP_DRIVE_DESC:0 "Un propulsor de salto que evita el espacio por completo a través del reflejo del espacio real del Velo."
+
+ PDIVINITY_SHROUD_JUMP_DRIVE_VANILLA:0 "Propulsor del Velo"
+ PDIVINITY_SHROUD_JUMP_DRIVE_VANILLA_DESC:0 "Un propulsor de salto que evita el espacio por completo a través del reflejo del espacio real del Velo."
+
+ #################
+ ### thrusters ###
+ #################
+
+
+ Pdivinity_psionic_thruster:0 "Propulsor de Estela Mental"
+ Pdivinity_psionic_thruster_desc:0 "Propulsión guiada por voluntad psiónica. Las naves se deslizan por el espacio real usando la intención en lugar de la fuerza."
+
+ PDIVINITY_PSIONIC_CLOUD_PSIONIC_THRUSTER:0 "$Pdivinity_psionic_thruster$"
+ PDIVINITY_PSIONIC_CLOUD_PSIONIC_THRUSTER_DESC:0 "$Pdivinity_psionic_thruster_desc$"
+
+ PDIVINITY_PSIONIC_AVATAR_PSIONIC_THRUSTER:0 "$Pdivinity_psionic_thruster$"
+ PDIVINITY_PSIONIC_AVATAR_PSIONIC_THRUSTER_DESC:0 "$Pdivinity_psionic_thruster_desc$"
+
+ PDIVINITY_DIMENSIONAL_TEARER_THRUSTER:0 "$Pdivinity_psionic_thruster$"
+ PDIVINITY_DIMENSIONAL_TEARER_THRUSTER_DESC:0 "$Pdivinity_psionic_thruster_desc$"
+
+ PDIVINITY_CORVETTE_PSIONIC_THRUSTER:0 "$Pdivinity_psionic_thruster$"
+ PDIVINITY_CORVETTE_PSIONIC_THRUSTER_DESC:0 "$Pdivinity_psionic_thruster_desc$"
+
+ PDIVINITY_DESTROYER_PSIONIC_THRUSTER:0 "$Pdivinity_psionic_thruster$"
+ PDIVINITY_DESTROYER_PSIONIC_THRUSTER_DESC:0 "$Pdivinity_psionic_thruster_desc$"
+
+ PDIVINITY_CRUISER_PSIONIC_THRUSTER:0 "$Pdivinity_psionic_thruster$"
+ PDIVINITY_CRUISER_PSIONIC_THRUSTER_DESC:0 "$Pdivinity_psionic_thruster_desc$"
+
+ PDIVINITY_BATTLESHIP_PSIONIC_THRUSTER:0 "$Pdivinity_psionic_thruster$"
+ PDIVINITY_BATTLESHIP_PSIONIC_THRUSTER_DESC:0 "$Pdivinity_psionic_thruster_desc$"
+
+ PDIVINITY_TITAN_PSIONIC_THRUSTER:0 "$Pdivinity_psionic_thruster$"
+ PDIVINITY_TITAN_PSIONIC_THRUSTER_DESC:0 "$Pdivinity_psionic_thruster_desc$"
+
+ PDIVINITY_COLOSSUS_PSIONIC_THRUSTER:0 "$Pdivinity_psionic_thruster$"
+ PDIVINITY_COLOSSUS_PSIONIC_THRUSTER_DESC:0 "$Pdivinity_psionic_thruster_desc$"
+
+ ##############
+ ### sensor ###
+ ##############
+
+ PDIVINITY_PSIONIC_SENSOR:0 "Sensores de Eco del Velo"
+ PDIVINITY_PSIONIC_SENSOR_DESC:0 "Estos sensores detectan los ecos psiónicos de pensamientos y acciones antes de que ocurran, centrándose en su intención traducida al velo para ser captada por estos sensores."
+
+ PDIVINITY_PSIONIC_SENSOR_VANILLA:0 "Sensores de Eco del Velo"
+ PDIVINITY_PSIONIC_SENSOR_VANILLA_DESC:0 "Estos sensores detectan los ecos psiónicos de pensamientos y acciones antes de que ocurran, centrándose en su intención traducida al velo para ser captada por estos sensores."
+ #################
+ ### computers ###
+ #################
+
+ PDIVINITY_PSIONIC_PRECOG:0 "Computadora Vinculada al Velo"
+ PDIVINITY_PSIONIC_PRECOG_DESC:0 "Este sistema lee los impulsos de la batalla antes de que se manifiesten, guiando las soluciones de tiro y la fase de escudos con una previsión asombrosa."
+
+ PDIVINITY_SWARM_PSIONIC_PRECOG:0 "Computadora Vinculada al Velo (Enjambre)"
+ PDIVINITY_SWARM_PSIONIC_PRECOG_DESC:0 "Un algoritmo de combate avanzado mejorado por la precognición del Velo. Adaptado para naves ágiles, permite maniobras rápidas e instintivas al predecir los movimientos enemigos milisegundos antes de que ocurran."
+
+ PDIVINITY_LINE_PSIONIC_PRECOG:0 "Computadora Vinculada al Velo (Línea)"
+ PDIVINITY_LINE_PSIONIC_PRECOG_DESC:0 "Este sistema lee los impulsos de la batalla antes de que se manifiesten, guiando las soluciones de tiro y la fase de escudos con una previsión asombrosa."
+
+ PDIVINITY_ARTILLERY_PRECOG:0 "Computadora Vinculada al Velo (Artillería)"
+ PDIVINITY_ARTILLERY_PRECOG_DESC:0 "Vinculado al mismísimo Arquitecto, este núcleo de puntería detecta patrones de disparo distantes antes de que se manifiesten, ajustando la puntería como si el objetivo nunca se hubiera movido."
+
+
+ PDIVINITY_SWARM_PSIONIC_PRECOG_VANILLA:0 "Computadora Vinculada al Velo (Enjambre)"
+ PDIVINITY_SWARM_PSIONIC_PRECOG_VANILLA_DESC:0 "Un algoritmo de combate avanzado mejorado por la precognición del Velo. Adaptado para naves ágiles, permite maniobras rápidas e instintivas al predecir los movimientos enemigos milisegundos antes de que ocurran."
+
+ PDIVINITY_TORPEDO_PSIONIC_PRECOG_VANILLA:0 "Computadora Vinculada al Velo (Torpedos)"
+ PDIVINITY_TORPEDO_PSIONIC_PRECOG_VANILLA_DESC:0 "Un algoritmo de combate avanzado mejorado por la precognición del Velo. Adaptado para naves ágiles, permite maniobras rápidas e instintivas al predecir los movimientos enemigos milisegundos antes de que ocurran."
+
+ PDIVINITY_PICKET_PSIONIC_PRECOG_VANILLA:0 "Computadora Vinculada al Velo (Piquete)"
+ PDIVINITY_PICKET_PSIONIC_PRECOG_VANILLA_DESC:0 "Este sistema lee los impulsos de la batalla antes de que se manifiesten, guiando las soluciones de tiro y la fase de escudos con una previsión asombrosa."
+
+ PDIVINITY_LINE_PSIONIC_PRECOG_VANILLA:0 "Computadora Vinculada al Velo (Línea)"
+ PDIVINITY_LINE_PSIONIC_PRECOG_VANILLA_DESC:0 "Este sistema lee los impulsos de la batalla antes de que se manifiesten, guiando las soluciones de tiro y la fase de escudos con una previsión asombrosa."
+
+ PDIVINITY_ARTILLERY_PRECOG_VANILLA:0 "Computadora Vinculada al Velo (Artillería)"
+ PDIVINITY_ARTILLERY_PRECOG_VANILLA_DESC:0 "Vinculado al mismísimo Arquitecto, este núcleo de puntería detecta patrones de disparo distantes antes de que se manifiesten, ajustando la puntería como si el objetivo nunca se hubiera movido."
+
+ PDIVINITY_CARRIER_PRECOG_VANILLA:0 "Computadora Vinculada al Velo (Portaaviones)"
+ PDIVINITY_CARRIER_PRECOG_VANILLA_DESC:0 "Vinculado al mismísimo Arquitecto, este núcleo de puntería detecta patrones de disparo distantes antes de que se manifiesten, ajustando la puntería como si el objetivo nunca se hubiera movido."
+
+ PDIVINITY_PLATFORM_PRECOG_VANILLA:0 "Computadora Vinculada al Velo (Plataforma)"
+ PDIVINITY_PLATFORM_PRECOG_VANILLA_DESC:0 "Este sistema lee los impulsos de la batalla antes de que se manifiesten, guiando las soluciones de tiro y la fase de escudos con una previsión asombrosa."
+
+
+ ##################
+ ### aura stuff ###
+ ##################
+
+ PDIVINITY_SHROUD_STORM_COMPONENT:0 "Lanzador de Tormenta del Velo"
+ PDIVINITY_SHROUD_STORM_COMPONENT_DESC:0 "Genera una tormenta psiónica envolvente alrededor de la nave, perturbando mentes, sensores y escudos. El espacio se curva y grita dentro de su radio."
+
+ aura_pdivinity_shroud_storm:0 "$PDIVINITY_SHROUD_STORM_COMPONENT$"
+
+
+ #############
+ ### ships ###
+ #############
+
+ pdivinity_psionic_cloud:0 "Eco del Velo"
+ pdivinity_psionic_cloud_plural:0 "Ecos del Velo"
+ pdivinity_psionic_cloud_cap:0 "Eco del Velo"
+
+ pdivinity_lesser_psionic_avatar:0 "Avatar Psiónico Menor"
+ pdivinity_lesser_psionic_avatar_plural:0 "Avatares Menores"
+ pdivinity_lesser_psionic_avatar_cap:0 "Avatar Psiónico Menor"
+
+ pdivinity_psionic_avatar:0 "Avatar Psiónico"
+ pdivinity_psionic_avatar_plural:0 "Avatares Psiónicos"
+ pdivinity_psionic_avatar_cap:0 "Avatar Psiónico"
+
+ pdivinity_dimensional_tearer:0 "Desgarrador Dimensional"
+ pdivinity_dimensional_tearer_plural:0 "Desgarradores Dimensionales"
+ pdivinity_dimensional_tearer_cap:0 "Desgarrador Dimensional"
+
+ pdivinity_dimensional_portal:0 "Portal Dimensional"
+ pdivinity_dimensional_portal_plural:0 "Portales Dimensionales"
+ pdivinity_dimensional_portal_cap:0 "Portal Dimensional"
+
+ pdivinity_the_architect_of_fate:0 "El Arquitecto del Destino"
+ pdivinity_the_architect_of_fate_plural:0 "Él"
+ pdivinity_the_architect_of_fate_cap:0 "El Arquitecto del Destino"

@@ -1,0 +1,574 @@
+﻿l_turkish:
+
+ ##############################
+ # SHIPS
+ ##############################
+
+ MJ25_WH_silent_witness_cap: "$MJ25_WH_silent_witness$"
+ MJ25_WH_silent_witness:"Sessiz Tanık"
+ MJ25_WH_silent_witness_plural:"Sessiz Tanıklar"
+
+ MJ25_WH_SILENT_WITNESS_G2P2:"İlahi"
+ MJ25_WH_SILENT_WITNESS_S6:"Koro"
+ MJ25_WH_SILENT_WITNESS_M1P4:"Marş"
+ MJ25_WH_SILENT_WITNESS_L1S2:"Opera"
+
+ NAME_MJ25_WH_silent_witness_test:"Fısıldayan"
+
+ MJ25_WH_conductor_cap: "$MJ25_WH_conductor$"
+ MJ25_WH_conductor:"Şef"
+ MJ25_WH_conductor_plural:"Şefler"
+
+ MJ25_WH_CONDUCTOR_X2P8:"Mısra"
+ MJ25_WH_CONDUCTOR_L4M4:"Serenat"
+ MJ25_WH_CONDUCTOR_H4L2:"Koro"
+
+ NAME_MJ25_WH_conductor_test:"Hatip"
+
+ 
+
+ MJ25_WH_aural_starmass:"İşitsel Yıldız Kütlesi"
+ MJ25_WH_aural_starmass_plural:"İşitsel Yıldız Kütleleri"
+ MJ25_WH_aural_starmass_cap: "$MJ25_WH_aural_starmass$"
+ MJ25_WH_aural_starmass_key:"Kozmik Ses"
+ MJ25_WH_aural_starmass_name: "$MJ25_WH_aural_starmass_key$"
+ NAME_MJ25_WH_aural_starmass: "$MJ25_WH_aural_starmass_key$"
+
+ MJ25_WH_void_echo:"Boşluk Yankısı"
+ MJ25_WH_void_echo_plural:"Boşluk Yankıları"
+ MJ25_WH_void_echo_cap: "$MJ25_WH_void_echo$"
+ MJ25_WH_VOID_ECHO_KEY:"Hareketli Fısıltı"
+ NAME_MJ25_WH_VOID_ECHO: "$MJ25_WH_VOID_ECHO_KEY$"
+ NAME_MJ25_WH_VOID_ECHO_FLEET:"Fısıldayan Koro"
+
+ MJ25_WH_battlecruiser:"Praetorian"
+ MJ25_WH_battlecruiser_plural:"Praetorianlar"
+ MJ25_WH_battlecruiser_cap: "$MJ25_WH_battlecruiser$"
+
+ MJ25_WH_BATTLECRUISER_L3S8:"Melodi"
+ MJ25_WH_BATTLECRUISER_X2P4:"Arya"
+ MJ25_WH_BATTLECRUISER_H3X1:"Koro"
+ 
+
+ ############################
+ # Technologies
+ ############################
+
+ tech_MJ25_WH_whisper_cloak: "$MJ25_WH_WHISPER_CLOAK$"
+ tech_MJ25_WH_whisper_cloak_desc: "$MJ25_WH_whisper_cloak_DESC$"
+ TECH_UNLOCK_MJ25_WH_WHISPER_CLOAK_TITLE:"§HBileşeni Kilidini Açar:§! $MJ25_WH_WHISPER_CLOAK$"
+ TECH_UNLOCK_MJ25_WH_WHISPER_CLOAK_DESC:"§H$MJ25_WH_WHISPER_CLOAK$§!\n$MJ25_WH_WHISPER_CLOAK_DESC$"
+
+ tech_MJ25_WH_echo_drive: "$MJ25_WH_ECHO_DRIVE$"
+ tech_MJ25_WH_echo_drive_desc: "$MJ25_WH_ECHO_DRIVE_DESC$"
+ TECH_UNLOCK_MJ25_WH_ECHO_DRIVE_TITLE:"§HBileşeni Kilidini Açar:§! $MJ25_WH_ECHO_DRIVE$"
+ TECH_UNLOCK_MJ25_WH_ECHO_DRIVE_DESC:"§H$MJ25_WH_ECHO_DRIVE$§!\n$tech_MJ25_WH_echo_drive_desc$"
+
+ tech_MJ25_WH_echo_drive_bio: "$MJ25_WH_ECHO_DRIVE$"
+ tech_MJ25_WH_echo_drive_bio_desc: "$MJ25_WH_ECHO_DRIVE_DESC$"
+ TECH_UNLOCK_BIO_MJ25_WH_ECHO_DRIVE_TITLE:"§HBileşeni Kilidini Açar:§! $MJ25_WH_ECHO_DRIVE_BIO$"
+ TECH_UNLOCK_BIO_MJ25_WH_ECHO_DRIVE_DESC:"§H$MJ25_WH_ECHO_DRIVE_BIO$§!\n$tech_MJ25_WH_echo_drive_bio_desc$"
+
+ tech_MJ25_WH_whisper_cloak: "$MJ25_WH_WHISPER_CLOAK$"
+ tech_MJ25_WH_whisper_cloak_desc: "$MJ25_WH_WHISPER_CLOAK_DESC$"
+
+ tech_MJ25_WH_songflare_lance: "$MJ25_WH_SONGFLARE_LANCE$"
+ tech_MJ25_WH_songflare_lance_desc: "$MJ25_WH_SONGFLARE_LANCE_DESC$"
+
+ tech_MJ25_WH_songflare_lance_bio: "$tech_MJ25_WH_songflare_lance$"
+ tech_MJ25_WH_songflare_lance_bio_desc: "$tech_MJ25_WH_songflare_lance_desc$"
+
+ tech_MJ25_WH_verdant_hymnarium: "$building_MJ25_WH_verdant_hymnarium$"
+ tech_MJ25_WH_verdant_hymnarium_desc: "$building_MJ25_WH_verdant_hymnarium_desc$"
+
+ tech_MJ25_WH_stonespeech_mithraeum: "$building_MJ25_WH_stonespeech_mithraeum$"
+ tech_MJ25_WH_stonespeech_mithraeum_desc: "$building_MJ25_WH_stonespeech_mithraeum_desc$"
+
+ tech_MJ25_WH_pulsechant_conclave: "$building_MJ25_WH_pulsechant_conclave$"
+ tech_MJ25_WH_pulsechant_conclave_desc: "$building_MJ25_WH_pulsechant_conclave_desc$"
+
+ tech_MJ25_WH_pulsechant_conclave: "$building_MJ25_WH_pulsechant_conclave$"
+ tech_MJ25_WH_pulsechant_conclave_desc: "$building_MJ25_WH_pulsechant_conclave_desc$"
+
+ tech_MJ25_WH_ashtongue_crucible: "$building_MJ25_WH_ashtongue_crucible$"
+ tech_MJ25_WH_ashtongue_crucible_desc: "$building_MJ25_WH_ashtongue_crucible_desc$"
+
+ tech_MJ25_WH_threnodic_bastion: "$building_MJ25_WH_threnodic_bastion$"
+ tech_MJ25_WH_threnodic_bastion_desc: "$building_MJ25_WH_threnodic_bastion_desc$"
+
+ tech_MJ25_WH_songful_spires: "$building_MJ25_WH_silent_spires$"
+ tech_MJ25_WH_songful_spires_desc: "$building_MJ25_WH_silent_spires_desc$"
+
+ tech_MJ25_WH_halls_of_truth: "$building_MJ25_WH_halls_of_truth$"
+ tech_MJ25_WH_halls_of_truth_desc: "$building_MJ25_WH_halls_of_truth_desc$"
+
+ tech_MJ25_WH_intonating_chambers: "$building_MJ25_WH_intonating_chambers$"
+ tech_MJ25_WH_intonating_chambers_desc: "$building_MJ25_WH_intonating_chambers_desc$"
+
+ tech_MJ25_WH_otic_heralds: "$MJ25_WH_STRIKE_CRAFT_HANGAR_SP$"
+ tech_MJ25_WH_otic_heralds_desc: "$MJ25_WH_STRIKE_CRAFT_HANGAR_SP_DESC$"
+ tech_MJ25_WH_otic_heralds_bio: "$MJ25_WH_STRIKE_CRAFT_HANGAR_SP_BIO$"
+ tech_MJ25_WH_otic_heralds_bio_desc: "$MJ25_WH_STRIKE_CRAFT_HANGAR_SP_BIO_DESC$"
+
+ tech_MJ25_WH_illusion_matrix: "$MJ25_WH_ILLUSION_MATRIX$"
+ tech_MJ25_WH_illusion_matrix_desc: "$MJ25_WH_ILLUSION_MATRIX_DESC$"
+
+ tech_MJ25_WH_seeker_matrix: "$MJ25_WH_SEEKER_MATRIX$"
+ tech_MJ25_WH_seeker_matrix_desc: "$MJ25_WH_SEEKER_MATRIX_DESC$"
+
+ tech_MJ25_WH_harmonizing_weave: "$MJ25_WH_HAROMIZING_WEAVE$"
+ tech_MJ25_WH_harmonizing_weave_desc: "$MJ25_WH_HAROMIZING_WEAVE_DESC$"
+
+ 
+
+ ############################
+ # SHIP COMPONENTS
+ ############################
+
+ MJ25_WH_silent_witness_components:"Yıldız Şarkısı Melodisi"
+ MJ25_WH_silent_witness_components_DESC:"Onların şarkısından doğan bu geminin sesi de benzer şekilde karşılık verir. Hem biçimi hem de işlevi belirleyen bu melodinin tınısıdır."
+
+ MJ25_WH_silent_witness_component_empty:"Bileşen Yok"
+ MJ25_WH_silent_witness_component_empty_DESC:"Hiçbir şey seçilmedi."
+
+ MJ25_WH_silent_witness_component_evasion:"Ele Geçirilemez Ağıt"
+ MJ25_WH_silent_witness_component_evasion_no_first_contact: "$MJ25_WH_silent_witness_component_evasion$"
+ MJ25_WH_silent_witness_component_assault:"Serenat Fırtınası"
+ MJ25_WH_silent_witness_component_range:"Panoramik Mezmur"
+ MJ25_WH_silent_witness_component_resilience:"Dirençli Ağıt"
+
+ MJ25_WH_battlecruiser_components:"Yıldız Şarkısı Melodisi"
+ MJ25_WH_battlecruiser_components_DESC:"Onların şarkısından doğan bu geminin sesi de benzer şekilde karşılık verir. Hem biçimi hem de işlevi belirleyen bu melodinin tınısıdır."
+
+ MJ25_WH_battlecruiser_component_empty:"Bileşen Yok"
+ MJ25_WH_battlecruiser_component_empty_DESC:"Hiçbir şey seçilmedi."
+ MJ25_WH_battlecruiser_component_evasion:"Ele Geçirilemez Ağıt"
+ MJ25_WH_battlecruiser_component_evasion_no_first_contact: "$MJ25_WH_battlecruiser_component_evasion$"
+ MJ25_WH_battlecruiser_component_assault:"Serenat Fırtınası"
+ MJ25_WH_battlecruiser_component_range:"Panoramik Mezmur"
+ MJ25_WH_battlecruiser_component_resilience:"Dirençli Ağıt"
+
+ MJ25_WH_conductor_components:"Fısıltı Alanı"
+ MJ25_WH_conductor_components_DESC:"Uzay ve zamanda döngü yapan durgun monologlarla perdelenmiş bu gemi, algıdan ve anlayıştan kaçar."
+ MJ25_WH_conductor_component_super_cloak:"Fonik Yer Değiştirici"
+ MJ25_WH_conductor_component_super_cloak_desc:"Sesler, gözden gizlenmiş derin bir yerden bahseder."
+ MJ25_WH_conductor_component_slippery_cloak:"Kayma Uzayı Kâhini"
+ MJ25_WH_conductor_component_slippery_cloak_desc:"Onların sesi, yıldızları birbirine bağlayan akıntılarla taşınır."
+ MJ25_WH_conductor_component_energised_cloak:"Enerjilendirilmiş Hitabetçi"
+ MJ25_WH_conductor_component_energised_cloak_desc:"Senfoni, her sinir ve devre boyunca taşınır."
+ MJ25_WH_conductor_component_energised_cloak_TT:"Yetenek bekleme sürelerini §G-%25§! azaltır."
+ MJ25_WH_conductor_component_no_first_contact: "$MJ25_WH_conductor_component_slippery_cloak$"
+ MJ25_WH_conductor_component_no_first_contact_desc: "$MJ25_WH_conductor_component_slippery_cloak_desc$"
+
+ 
+
+ MJ25_WH_CONDUCTOR_DEVICE:"İşitsel Yükselticiler"
+ MJ25_WH_CONDUCTOR_DEVICE_ACTION:"Fısıltıları Yay"
+ MJ25_WH_CONDUCTOR_DEVICE_DESC:"Bir dünyayı bir Orkestra Şefinin incelikli şarkısıyla yıkamak, duymaya istekli olanlara fikirlerimizi ulaştıracak. Büyük çalışmamızı ilerletirken etkimizin sessizce yayılmasını sağlayacak olan onlardır."
+ MESSAGE_DESC_FOR_MJ25_WH_CONDUCTOR_DEVICE:"tarafından serenat yapıldı"
+ FLEETORDER_DESTROY_PLANET_WITH_MJ25_WH_CONDUCTOR_DEVICE:"Fısıltılar $PLANET|Y$'e yayılıyor"
+
+ MJ25_WH_ECHO_DRIVE:"Yankı Motoru"
+ MJ25_WH_ECHO_DRIVE_DESC:"Yıldızların şarkısı boşluğu süpürüyor, her yerde aynı anda oyalanıyor. Potansiyeline dokunarak, biz de o uçsuz bucaksız alana atılabiliriz."
+ MJ25_WH_ECHO_DRIVE_BIO: "$MJ25_WH_ECHO_DRIVE$"
+ MJ25_WH_ECHO_DRIVE_BIO_DESC: "$MJ25_WH_ECHO_DRIVE_DESC$"
+
+ 
+ MJ25_WH_WHISPER_CLOAK:"Fısıltı Örtüsü"
+ MJ25_WH_WHISPER_CLOAK_DESC:"O kadar sessizce söylenen bir kelime tüm dikkatten kaçabilir. Böyle bir tonu kullanarak, biz de duymayanların anlatılamaz duyularından kaçabiliriz."
+
+ MJ25_WH_ECHO_DRIVE_TOOLTIP:"§Y$tech_psi_jump_drive_1$§! teknolojisiyle:$TABBED_NEW_LINE$ -$MOD_SHIP_JUMPDRIVE_COOLDOWN_MULT$: §G-%25§!"
+ CLOAKING_MJ25_WH_WHISPER_TOOLTIP:"$CLOAKING_DARK_MATTER_TOOLTIP$\n\n§Y$tech_cloaking_psi$§! teknolojisiyle:$TABBED_NEW_LINE$ -$MOD_SHIP_CLOAKING_STRENGTH_ADD$: §G+1§!"
+
+ MJ25_WH_SONGFLARE_LANCE:"Şarkı Parlaması Mızrağı"
+ MJ25_WH_SONGFLARE_LANCE_DESC:"Sözlerin gücü vardır ve Onlarınki hepsinden fazladır. Yükseltilmiş ve yankılanan bu sözler, düşmanlarımızın varlığına öyle yıkıcı bir patlamayla çarpacak ki, en büyük gemilerini bile duraksatabilecektir."
+
+ MJ25_WH_SONGFLARE_LANCE_BIO: "$MJ25_WH_SONGFLARE_LANCE$"
+ MJ25_WH_SONGFLARE_LANCE_BIO_DESC: "$MJ25_WH_SONGFLARE_LANCE_DESC$"
+
+ MJ25_WH_STRIKE_CRAFT_HANGAR_SP:"İşitsel Müjdeciler"
+ MJ25_WH_STRIKE_CRAFT_HANGAR_SP_DESC:"Şarkıyla örülmüş metal ve amaca göre şekillendirilmiş bu hızlı ve ölümcül savaş uçakları, savaşlarımızın senfonilerine sayısız ses getirir."
+ MJ25_WH_STRIKE_CRAFT_HANGAR_SP_BIO:"İşitsel Müjdeciler"
+ MJ25_WH_STRIKE_CRAFT_HANGAR_SP_BIO_DESC:"Şarkıyla örülmüş et ve amaca göre şekillendirilmiş bu hızlı ve ölümcül savaş uçakları, savaşlarımızın senfonilerine sayısız ses getirir."
+
+ MJ25_WH_ILLUSION_MATRIX:"İllüzyon Matrisi"
+ MJ25_WH_ILLUSION_MATRIX_DESC:"Sineastetik alanlar, ses üzerindeki ustalığımızı ışık formu parazitiyle harmanlayarak, bize karşı çıkacak olanların algılama sistemlerini bozar."
+ MJ25_WH_ILLUSION_MATRIX_TT:"Faydalar §YKorvetler§, §YAvcılar§! ve §YKruvazörler§! üzerinde §Yiki katına çıkar§!."
+
+ MJ25_WH_SEEKER_MATRIX:"Arayıcı Matris"
+ MJ25_WH_SEEKER_MATRIX_DESC:"Onların şarkısı uzay ve zamanda kıvrılarak ilerler, düşmanlarımızın konumlarını doğaüstü bir şekilde belirlemek için takip edebileceğimiz parazit dalgaları oluşturur."
+ MJ25_WH_SEEKER_MATRIX_TT:"§G+%5§! $MOD_SHIP_WEAPON_RANGE_MULT$ §YZırhlılar§, §YTitanlar§! ve diğer büyük gemiler üzerinde."
+
+ MJ25_WH_HAROMIZING_WEAVE:"Uyum Dokuması"
+ MJ25_WH_HAROMIZING_WEAVE_DESC:"Müdahale yıkıcı olmak zorunda değil. Enerji kalkanlarımızın rezonans alanlarına dikkatlice örülmüş armonikler, düşmanlarımızın hiddeti önünde birer siper görevi görecektir."
+
+  #################################
+  # STARBASE CONSTRUCTIONS
+  #################################
+
+ sm_MJ25_WH_augury_array:"Kehanet Dizisi"
+ sm_MJ25_WH_augury_array_plural:"Kehanet Dizileri"
+ sm_MJ25_WH_augury_array_desc:"Yıldızlar arasında çekilmiş en kısık akorları bile algılayabilen, yüksek güçlü bir harici sensör paketi.\n"
+
+ sm_MJ25_WH_auracular_listening_post:"İşitsel Dinleme İstasyonu"
+ sm_MJ25_WH_auracular_listening_post_desc:"En adanmışlarımızın Onların yakalanamayan şarkısına ulaşabileceği, parazitten arınmış, bir uçurumun kenarındaki bir gözlem noktası.\n"
+
+ sm_MJ25_WH_thrumming_choirhall:"Uğuldayan Koro Salonu"
+ sm_MJ25_WH_thrumming_choirhall_desc:"Bizi boşluktan ayıran incecik bir metal levha ile yıldızlara şarkı söyleyebileceğimiz başka hiçbir yer bu kadar yakın değil. Şarkılarımız burada yankılanacak ve duyulacaktır.\n"
+ 
+
+ #################################
+ # SHIP ABILITIES
+ #################################
+
+ MJ25_WH_conductor_spread_whispers_button:"§HFısıltıları Yay§!\nBu dünyaya §Y+100§! $job_MJ25_WH_whisper_cultist_plural$ ekler ve istikrarını azaltır.\n\nHer 100 $job_MJ25_WH_whisper_cultist_plural$ için §G+5§! £MJ25_WH_void_whispers_text£ §Y$MJ25_WH_void_whispers$§! kazanırız.\nYılda §Y+300§! pop gerçeğe lanetli hale gelir.§!"
+ MJ25_WH_conductor_spread_whispers_activity_key:"Fısıltıları Yayma"
+ MJ25_WH_conductor_spread_whispers_menu_title:"Fısıltıları Yay"
+ MJ25_WH_conductor_spread_whispers_progress_activity_key:"Serenat Yapılıyor (§Y$PROGRESS$%§!)"
+
+ MJ25_WH_conductor_animate_star_button:"§HYıldızı Canlandır§!\nEn çılgın şarkılarımız bir yıldızı bile İşitsel Yıldız Kütlesi'ne uyandırabilir. Onların sözlerinin gücüyle dönen böylesine yıkıcı bir kuvvet, düşmanlarımızı sağırlaştırılmış araçlara dönüştürebilir.\n\n§RSistemdeki tüm koloniler yok edilecek.§!"
+ MJ25_WH_conductor_animate_star_activity_key:"Yıldız Canlandırılıyor"
+ MJ25_WH_conductor_animate_star_menu_title:"Yıldızı Canlandır"
+ MJ25_WH_conductor_animate_star_progress_activity_key:"Serenat Yapılıyor (§Y$PROGRESS$%§!)"
+
+ MJ25_WH_animate_star_combat_fail_tt:"£trigger_no£ Savaş sırasında kullanılamaz."
+ MJ25_WH_animate_star_requires_star_tt:"£trigger_no£ Bir yıldızı hedeflemeli."
+ MJ25_WH_animate_star_not_black_hole_tt:"£trigger_no£ Bir kara deliği hedefleyemez."
+ MJ25_WH_animate_star_not_megastructure_tt:"£trigger_no£ Megayapı barındıran bir yıldızı hedefleyemez."
+
+ MJ25_WH_conductor_create_storm_button:"§HFırtına Yarat§!\nYönettiğimiz melodiler, §Y300§! £time£ gün boyunca sürecek bir fırtınaya dönüşecektir. Bu sistemdeki gemiler şunlara maruz kalır:$TABBED_NEW_LINE$- $MOD_SHIP_SPEED_REDUCTION$: §R%30§!$TABBED_NEW_LINE$- $MOD_SHIP_WEAPON_RANGE_MULT$: §R-%20§!"
+ MJ25_WH_conductor_create_storm_activity_key:"Fırtına Yaratılıyor"
+ MJ25_WH_conductor_create_storm_menu_title:"Fırtına Yarat"
+ MJ25_WH_conductor_create_storm_progress_activity_key:"Fırtına Yaratılıyor (§Y$PROGRESS$%§!)"
+
+ MJ25_WH_conductor_confusion_button:"§HKafa Karışıklığı§!\nKargaşayla zorlanan sistemdeki rastgele bir filo §Y30§! £time£ gün boyunca kafası karışmış hale gelir ve ayrım gözetmeksizin saldırır.\n\n§RZaten savaşta olan filolar hedef alınamaz§!."
+ MJ25_WH_conductor_confusion_activity_key:"Kafa Karışıklığı Yayılıyor"
+ MJ25_WH_conductor_confusion_menu_title:"Kafa Karışıklığı"
+ MJ25_WH_conductor_confusion_progress_activity_key:"Kafa Karışıklığı Yayılıyor (§Y$PROGRESS$%§!)"
+
+
+
+ #########################
+ # MODIFIERS
+ #########################
+
+ MJ25_WH_spread_whispers:"Kozmik Fısıltılar"
+ MJ25_WH_spread_whispers_desc:"Bu dünyada iğrenç bir tarikat kök saldı ve savunmasız zihinlere şekilsiz, kutsallığı bozulmuş fısıltılar yayıyor."
+
+ MJ25_WH_spread_whispers_gestalt: "$MJ25_WH_spread_whispers$"
+ MJ25_WH_spread_whispers_gestalt_desc:"Kovandaki bir enfeksiyon bu dünyada kendini gösterdi. Sapkın dronelar, diğer dronelara yayılan tutarsız, anlamsız sırlar gevelemeye başladılar."
+
+ #MJ25_WH_test_deficit_mod: "$MJ25_WH_void_whispers$ Deficit Test"
+ #MJ25_WH_test_deficit_mod_desc: "test"
+
+ MJ25_WH_storm_hostile_debuff:"Fısıldayan Fırtına"
+
+ MJ25_WH_storm_debuff:"Fısıldayan Fırtına"
+
+ MJ25_WH_songflare_lance_debuff:"Bozucu Şarkı Alevi"
+
+ MJ25_WH_aural_explosion:"İşitsel Yıkım"
+
+ mod_planet_farmers_MJ25_WH_void_whispers_upkeep_add:"£MJ25_WH_void_whispers£ $MJ25_WH_void_whispers$ Bakım Maliyeti başına $pop_group_unit$ [farmer.GetIcon] [GetFarmerPlural]"
+ mod_planet_miners_MJ25_WH_void_whispers_upkeep_add:"£MJ25_WH_void_whispers£ $MJ25_WH_void_whispers$ Bakım Maliyeti başına $pop_group_unit$ [miner.GetIcon] [GetMinerPlural]"
+ mod_planet_technician_MJ25_WH_void_whispers_upkeep_add:"£MJ25_WH_void_whispers£ $MJ25_WH_void_whispers$ Bakım Maliyeti başına $pop_group_unit$ [technician.GetIcon] [GetTechnician]"
+ mod_planet_metallurgists_MJ25_WH_void_whispers_upkeep_add:"£MJ25_WH_void_whispers£ $MJ25_WH_void_whispers$ Bakım Maliyeti başına $pop_group_unit$ [foundry.GetIcon] [GetAlloyProducerPlural]"
+ mod_planet_soldiers_MJ25_WH_void_whispers_upkeep_add:"£MJ25_WH_void_whispers£ $MJ25_WH_void_whispers$ Bakım Maliyeti başına $pop_group_unit$ [soldier.GetIcon] [soldier.GetNamePlural]"
+ mod_country_base_MJ25_WH_void_whispers_produces_add:"£MJ25_WH_void_whispers£ $MJ25_WH_void_whispers$"
+ mod_planet_MJ25_WH_listeners_unity_upkeep_add:"£unity£ $unity$ $pop_group_unit$ başına Bakım £job_MJ25_WH_listener£ $job_MJ25_WH_listener_plural$"
+ mod_planet_MJ25_WH_listeners_MJ25_WH_void_whispers_produces_add:"£MJ25_WH_void_whispers_text£ $MJ25_WH_void_whispers$ $pop_group_unit$ başına £job_MJ25_WH_listener£ $job_MJ25_WH_listener_plural$"
+
+ mod_pop_category_workers_MJ25_WH_void_whispers_produces_add:"£MJ25_WH_void_whispers_text£ $MJ25_WH_void_whispers$ £pop_cat_worker£ $pop_cat_worker_plural$'dan"
+ mod_pop_category_specialists_MJ25_WH_void_whispers_produces_add:"£MJ25_WH_void_whispers_text£ $MJ25_WH_void_whispers$ £pop_cat_specialist£ $pop_cat_specialist_plural$'dan"
+
+
+ ##########################
+ # POP JOBS
+ ##########################
+
+ job_MJ25_WH_whisper_cultist:"Fısıltı Kültisti"
+ job_MJ25_WH_whisper_cultist_plural:"Fısıltı Kültistleri"
+ job_MJ25_WH_whisper_cultist_desc:"Bu kopuk ve çıldırmış birkaç kişi, yıldızlar arası fısıltılar hakkında vaaz verdikleri gizli yerlerde yaşar, savunmasız zihinleri bir bulaşıcı hastalık gibi istila ederler."
+ mod_job_MJ25_WH_whisper_cultist_add:"$job_MJ25_WH_whisper_cultist$ Meslekleri"
+ mod_job_MJ25_WH_whisper_cultist_per_pop:"§R+1§! $job_MJ25_WH_whisper_cultist$ Mesleği, her $VALUE$ Gezegen £pop£ §YPopülasyonu§! için"
+ mod_job_MJ25_WH_whisper_cultist_per_pop_short:"\n§R+1§! $mod_job_MJ25_WH_whisper_cultist_add$, her $VALUE$ £pop£ başına"
+
+ job_MJ25_WH_whisper_cultist_drone:"Fısıldayan Dron"
+ job_MJ25_WH_whisper_cultist_drone_plural:"Fısıldayan Dronlar"
+ job_MJ25_WH_whisper_cultist_drone_desc:"Bu dronlar, çıldırtıcı ve delirtici fısıltılarla kovanı kirletir."
+ mod_job_MJ25_WH_whisper_cultist_drone_add:"$job_deviant_drone$ Meslekleri"
+ mod_job_MJ25_WH_whisper_cultist_drone_per_crime:"§R+1§! $job_deviant_drone$ Mesleği, her $VALUE$ Gezegen £crime£ §YSuç§! için"
+ mod_job_MJ25_WH_whisper_cultist_drone_per_crime_short:"\n§R+1§! mod_job_deviant_drone_add, her $VALUE$ £crime£ başına"
+
+ job_MJ25_WH_listener:"Dinleyici"
+ job_MJ25_WH_listener_plural:"Dinleyiciler"
+ job_MJ25_WH_listener_desc:"Bu dikkatli birkaç kişi, fısıltıların kozmik bir hakikatten bahsettiği karanlık yerlere dikkatlerini çevirirler."
+ mod_job_MJ25_WH_listener_add:"$job_MJ25_WH_listener$ İşleri"
+ mod_job_MJ25_WH_listener_per_pop:"§R+1§! $job_MJ25_WH_listener$ Mesleği, her $VALUE$ Gezegen £pop£ §YPopülasyonu§! için"
+ mod_job_MJ25_WH_listener_per_pop_short:"\n§R+1§! $mod_job_MJ25_WH_listener_add$, her $VALUE$ £pop£ başına"
+
+ job_MJ25_WH_listener_drone:"Dinleyici Dron"
+ job_MJ25_WH_listener_drone_plural:"Dinleyici Dronlar"
+ job_MJ25_WH_listener_drone_desc:"Bu dikkatli birkaç kişi, fısıltıların kozmik bir hakikatten bahsettiği karanlık yerlere dikkatlerini çevirirler."
+ mod_job_MJ25_WH_listener_drone_add:"$job_MJ25_WH_listener_drone$ Meslekleri"
+ mod_job_MJ25_WH_listener_drone_per_pop:"§R+1§! $job_MJ25_WH_listener_drone$ Mesleği, her $VALUE$ Gezegen £pop£ §YPopülasyonu§! için"
+ mod_job_MJ25_WH_listener_drone_per_pop_short:"\n§R+1§! $mod_job_MJ25_WH_listener_drone_add$, her $VALUE$ £pop£ başına"
+
+ job_MJ25_WH_listener_effect_desc:"£job_MJ25_WH_listener£ $job_MJ25_WH_listener_plural$, £unity£ §Y$unity$§!'yi £MJ25_WH_void_whispers_text£ §Y$MJ25_WH_void_whispers$§!'a dönüştürür!"
+ job_MJ25_WH_listener_drone_hive_effect_desc:"£job_MJ25_WH_listener_drone£ $job_MJ25_WH_listener_drone_plural$, £unity£ §Y$unity$§!'yi £MJ25_WH_void_whispers_text£ §Y$MJ25_WH_void_whispers$§!'a dönüştürür!"
+ job_MJ25_WH_listener_drone_machine_effect_desc:"£job_MJ25_WH_listener_drone£ $job_MJ25_WH_listener_drone_plural$, £unity£ §Y$unity$§!'yi £MJ25_WH_void_whispers_text£ §Y$MJ25_WH_void_whispers$§!'a dönüştürür!"
+
+ mod_planet_MJ25_WH_listeners_unity_produces_add:"£unity£ §Y$unity$§!, £job_MJ25_WH_listener£ §Y$job_MJ25_WH_listener_plural$§!'dan"
+ mod_planet_MJ25_WH_listeners_MJ25_WH_void_whispers_produces_add:"£MJ25_WH_void_whispers_text£ §Y$MJ25_WH_void_whispers$§!, £job_MJ25_WH_listener£ §Y$job_MJ25_WH_listener_plural$§!'dan"
+
+ job_MJ25_WH_chorister:"İlahici"
+ job_MJ25_WH_chorister_plural:"İlahiciler"
+ job_MJ25_WH_chorister_desc:"Bu yüce varlıklar, varoluşumuza bahşettikleri amacı bize daima hatırlatmak için ilahilerini söylerler."
+ mod_job_MJ25_WH_chorister_add:"$job_MJ25_WH_chorister$ Meslekleri"
+ mod_job_MJ25_WH_chorister_per_pop:"§R+1§! $job_MJ25_WH_chorister$ Mesleği, her $VALUE$ Gezegen £pop£ §YPopülasyonu§! için"
+ mod_job_MJ25_MJ25_WH_chorister_per_pop_short:"\n§R+1§! $mod_job_MJ25_WH_chorister_add$, her $VALUE$ £pop£ başına"
+
+ job_MJ25_WH_chorister_drone:"Koro Sincisi"
+ job_MJ25_WH_chorister_drone_plural:"Koro Sincileri"
+ job_MJ25_WH_chorister_drone_desc:"Bu yüce varlıklar, varoluşumuza bahşettikleri amacı bize daima hatırlatmak için ilahilerini söylerler."
+ mod_job_MJ25_WH_chorister_drone_add:"$job_MJ25_WH_chorister_drone$ İşleri"
+ mod_job_MJ25_WH_chorister_drone_per_pop:"§R+1§! $job_MJ25_WH_chorister_drone$ İşi, her $VALUE$ Gezegen £pop£ §YPopülasyonu§! başına."
+ mod_job_MJ25_MJ25_WH_chorister_drone_per_pop_short:"\n§R+1§! $mod_job_MJ25_WH_chorister_drone_add$ her $VALUE$ £pop£ başına"
+
+ job_MJ25_WH_chorister_effect_desc:"£job_MJ25_WH_chorister£ $job_MJ25_WH_chorister_plural$, £consumer_goods£ §Y$consumer_goods$§!'nı £influence£ §Y$influence$§! ve £mod_country_edict_fund_add£ §Y$EDICT_FUND$§!'a dönüştürür."
+ job_MJ25_WH_chorister_drone_hive_effect_desc:"£job_MJ25_WH_chorister_drone£ $job_MJ25_WH_chorister_drone_plural$, £minerals£ §Y$minerals$§!'i £influence£ §Y$influence$§! ve £mod_country_edict_fund_add£ §Y$EDICT_FUND$§!'a dönüştürür."
+ job_MJ25_WH_chorister_drone_machine_effect_desc:"£job_MJ25_WH_chorister_drone£ $job_MJ25_WH_chorister_drone_plural$, £energy£ §Y$energy$§!'yi £influence£ §Y$influence$§! ve £mod_country_edict_fund_add£ §Y$EDICT_FUND$§!'a dönüştürür."
+
+
+ planet_MJ25_WH_listeners:"$job_MJ25_WH_listener$ İşleri"
+ mod_planet_jobs_MJ25_WH_void_whispers_produces_mult:"£MJ25_WH_void_whispers£ $MJ25_WH_void_whispers$, £job£ İşlerinden"
+
+ ###########################
+ # BUILDINGS AND ZONES
+ ###########################
+
+ zone_MJ25_WH_whisper_sanctum:"Yıldız Şarkısı Bazilikası"
+ zone_MJ25_WH_whisper_sanctum_desc:"Büyük zigguratlar, bir kürenin kenarları gibi, kavrayışı aşan bir şekle bürünür. Böyle bir yer ancak Onların sesinin yankılarını bir anlığına görmeye katlanabilenler tarafından iskan edilebilir."
+
+ building_MJ25_WH_lilting_altar:"Şarkılı Sunak"
+ building_MJ25_WH_lilting_altar_desc:"Zihnin dokusuna aykırı titreşen fısıltılarla dolu, rahatsız edici bir yer."
+
+ building_MJ25_WH_starsong_cathedral:"Örtülü Katedral"
+ building_MJ25_WH_starsong_cathedral_desc:"İçindeki örtülü girintilerden yayılan bir şarkı, sonsuzluğu düşünmek için gelenlerin zihinlerini aydınlatır."
+
+ building_MJ25_WH_silent_spires:"Şarkılı Kuleler"
+ building_MJ25_WH_silent_spires_desc:"Bu yükselen kuleler, ilahi ettiğimiz melodilerle uğuldar, Onların lütfunu duyacak herkese serenat yapar."
+ building_MJ25_WH_silent_spires_tt:"Her 100 £job_MJ25_WH_chorister£ $job_MJ25_WH_chorister_plural$ ve 100 £job_MJ25_WH_listener£ $job_MJ25_WH_listener_plural$ başına:$TABBED_NEW_LINE$ - £mod_pop_bonus_workforce_mult£ $MOD_POP_BONUS_WORKFORCE_MULT$: §G+%5§!$TABBED_NEW_LINE$- $MOD_POP_AMENITIES_USAGE_MULT$: §R+%5§!"
+
+ building_MJ25_WH_verdant_hymnarium:"Yeşil İlahi Yeri"
+ building_MJ25_WH_verdant_hymnarium_desc:"Toprak ve kök aracılığıyla beslediğimiz canlandırıcı ilahi, en yeşil meyve bahçesine dönüşecektir."
+
+ building_MJ25_WH_stonespeech_mithraeum:"Taş Konuşan Mithraeum'u"
+ building_MJ25_WH_stonespeech_mithraeum_desc:"Üzerinde durduğumuz taşlara haykırdığımız davul sesleri, durmaksızın devam eden ritimleriyle dünyanın kendisini sallayacaktır."
+ 
+ building_MJ25_WH_pulsechant_conclave:"Nabız Şarkısı Konklavı"
+ building_MJ25_WH_pulsechant_conclave_desc:"Su ve hava aracılığıyla ilahi ettiğimiz atan ilahiler, türbinlerimizi sonsuza dek dönen bir fırtınada öğütecektir."
+
+ building_MJ25_WH_ashtongue_crucible:"Kül Dili Pota"
+ building_MJ25_WH_ashtongue_crucible_desc:"Ateş ve çeliğin hararetli feryatları şimdi birleşerek sanayimizin fırınlarını körüklemektedir."
+ building_MJ25_WH_ashtongue_crucible_tt:"Her 100 [foundry.GetIcon] [foundry.GetNamePlural] başına:$TABBED_NEW_LINE$- $MOD_POP_AMENITIES_USAGE_MULT$: §R+%5§!"
+
+ building_MJ25_WH_threnodic_bastion:"Mersiye Tabyası"
+ building_MJ25_WH_threnodic_bastion_desc:"Savaş ağıtlarıyla sıkıca bağlanmış lejyonlarca asker, bu şarkılı kalede hazırda bekler."
+ building_MJ25_WH_threnodic_bastion_tt:"Her 100 £job_soldier£ §Y$job_soldier_plural$§! başına:$TABBED_NEW_LINE$- £mod_country_naval_cap_add£ §YDonanma Kapasitesi§!: §G+6§!"
+
+ building_MJ25_WH_halls_of_truth:"Hakikat Salonları"
+ building_MJ25_WH_halls_of_truth_desc:"O kadar saf bir şarkı üzerinde akan hakikat, bu kutsal salonların kemerleri altına sığınanların duvarlarını ve kalplerini sarar."
+ building_MJ25_WH_halls_of_truth_tt:"Her 100 £job_MJ25_WH_chorister£ $job_MJ25_WH_chorister_plural$ ve 100 £job_MJ25_WH_listener£ $job_MJ25_WH_listener_plural$ başına:$TABBED_NEW_LINE$- Yıllık Popülasyon Mutasyonları: §Y+100§!$TABBED_NEW_LINE$:- £mod_planet_stability_add£ $MOD_PLANET_STABILITY_ADD$: §G+3§!"
+
+ building_MJ25_WH_intonating_chambers:"İlahi Odaları"
+ building_MJ25_WH_intonating_chambers_desc:"Kemerli salonlar ve kuleler arasında kıvrılarak ilerleyen kuşatıcı bir arya, halkımızın yaşamını sürdürür, sıradan maddi ihtiyaçları sonsuz teselli şarkılarıyla değiştirir."
+ building_MJ25_WH_intonating_chambers_tt:"Her 100 £job_MJ25_WH_chorister£ $job_MJ25_WH_chorister_plural$ ve 100 £job_MJ25_WH_listener£ $job_MJ25_WH_listener_plural$ başına:$TABBED_NEW_LINE$- $mod_planet_pops_upkeep_mult$: §G-%10§!$TABBED_NEW_LINE$- $mod_planet_jobs_upkeep_mult$: §G-%5§!"
+
+ MJ25_WH_pops_mutate:"popülasyonlar her yıl mutasyona uğrar, ['concept_MJ25_WH_trait_word_bearer'] özelliğini veya §r$MJ25_WH_menp_we_are$§! kriz yeteneğiyle (Kriz Seviyesi 5) ['concept_MJ25_WH_trait_starsong_vessel'] özelliğini kazanır."
+ MJ25_WH_pops_mutate_25:"\n§Y25§! $MJ25_WH_pops_mutate$"
+ MJ25_WH_pops_mutate_50:"\n§Y50§! $MJ25_WH_pops_mutate$"
+ MJ25_WH_pops_mutate_100:"\n§Y100§! $MJ25_WH_pops_mutate$"
+ MJ25_WH_pops_mutate_200:"\n§Y200§! $MJ25_WH_pops_mutate$"
+
+
+ ###########################
+ # MESSAGE TYPES
+ ###########################
+
+ # Message type loc
+ MJ25_WH_STAR_ANIMATED_TITLE:"Yıldız Canlandırıldı"
+ MJ25_WH_STAR_ANIMATED_DESC:"$PLANET|Y$ canlıdır!"
+
+ MJ25_WH_PLANET_DISAPPEARED_TITLE:"Gezegen Kayboldu"
+ MJ25_WH_PLANET_DISAPPEARED_DESC:"§Y[From.GetName]§! kayboldu!"
+
+ MJ25_WH_POPS_ABSORBED_TITLE:"Sesler Eklendi"
+ MJ25_WH_POPS_ABSORBED_DESC:"§Y[From.GetName]§! kayboldu ve $VALUE|Y$ ses serbest bırakıldı."
+
+ MJ25_WH_SPREAD_WHISPERS_TITLE:"Fısıltılar Yayıldı"
+ MJ25_WH_SPREAD_WHISPERS_DESC:"§Y[From.GetName]§! dünyasına fısıltılar yaydık."
+
+ MJ25_WH_POPS_MUTATED_TITLE:"Popülasyonlar Mutasyona Uğradı"
+ MJ25_WH_POPS_MUTATED_WORD_BEARER_DESC:"$VALUE|Y$ £pop£ §HPopülasyonları§! $PLANET|Y$ üzerinde mutasyona uğradı ve §R$MJ25_WH_word_bearer$§! özelliğini kazandı!"
+ MJ25_WH_POPS_MUTATED_TRUTH_CURSED_DESC:"$VALUE|Y$ £pop£ §HPopülasyonları§! $PLANET|Y$ üzerinde mutasyona uğradı ve §R$MJ25_WH_trait_truthcursed$§! özelliğini kazandı!"
+ MJ25_WH_POPS_MUTATED_STARSONG_VESSEL_DESC:"$VALUE|Y$ £pop£ §HPopülasyonları§! $PLANET|Y$ üzerinde mutasyona uğradı ve §G$MJ25_WH_trait_starsong_vessel$§! özelliğini kazandı!"
+
+ ###########################
+ # CONCEPTS
+ ###########################
+
+ concept_MJ25_WH_trait_word_bearer:"Kelam Taşıyıcı"
+ concept_MJ25_WH_trait_word_bearer_desc:"$MJ25_WH_word_bearer_desc$\n\n$MJ25_WH_word_bearer_tt$"
+
+ concept_MJ25_WH_trait_starsong_vessel:"Yıldız Şarkısı Vasıtası"
+ concept_MJ25_WH_trait_starsong_vessel_desc:"$MJ25_WH_trait_starsong_vessel_desc$\n$TABBED_NEW_LINE$$MOD_POP_BONUS_WORKFORCE_MULT$: §G%30§!\n$MJ25_WH_trait_starsong_vessel_tt$"
+
+ concept_MJ25_WH_starsong_basilica: "$zone_MJ25_WH_whisper_sanctum$"
+ concept_MJ25_WH_starsong_basilica_desc:"- $job_MJ25_WH_listener$ İşleri$: §G+200§!TABBED_NEW_LINE$- $MOD_POP_AMENITIES_USAGE_MULT$: §R%5§!"
+
+ concept_MJ25_WH_voidwrought_ciphers: "$edict_MJ25_WH_voidwrought_ciphers$"
+ concept_MJ25_WH_voidwrought_ciphers_desc:"$edict_MJ25_WH_voidwrought_ciphers_desc$\n\nMaliyet: §Y$@MJ25_WH_crisis_edict_cost|0$§! £MJ25_WH_void_whispers_text£ §Y$MJ25_WH_void_whispers$§! \n- §G+5§! $MOD_INTEL_ENCRYPTION_ADD$\n- §G+5§! $MOD_INTEL_DECRYPTION_ADD$\n- §G+20§! $MOD_SPY_NETWORK_LEVELS_ADD$"
+
+ concept_MJ25_WH_battle_songs: "$edict_MJ25_WH_battle_songs$"
+ concept_MJ25_WH_battle_songs_desc:"$edict_MJ25_WH_battle_songs_desc$\n\nMaliyet: §Y$@MJ25_WH_crisis_edict_cost|0$§! £MJ25_WH_void_whispers_text£ §Y$MJ25_WH_void_whispers$§! \n- §G%25§! $MOD_SHIP_SPEED_MULT$\n- §G%10§! $MOD_SHIP_FIRE_RATE_MULT$\n- §G%10§! $MOD_SHIP_EVASION_MULT$"
+
+ concept_MJ25_WH_words_wisdom: "$edict_MJ25_WH_words_wisdom$"
+ concept_MJ25_WH_words_wisdom_desc:"$edict_MJ25_WH_words_wisdom_desc$\n\nMaliyet: §Y$@MJ25_WH_crisis_edict_cost|0$§! £MJ25_WH_void_whispers_text£ §Y$MJ25_WH_void_whispers$§! \n- §G%15§! $mod_planet_jobs_specialist_produces_mult$\n- §R-5§! $MOD_PLANET_STABILITY_ADD$"
+
+ concept_MJ25_WH_auracular_listening_post: "$sm_MJ25_WH_auracular_listening_post$"
+ concept_MJ25_WH_auracular_listening_post_desc:"$sm_MJ25_WH_auracular_listening_post_desc$\n\n- §G+100§! §Y$job_MJ25_WH_listener$§! işleri sistemdeki her koloniye.\n- §G+1§! £MJ25_WH_void_whispers_text£ §Y$MJ25_WH_void_whispers$§! her §Y$sm_MJ25_WH_augury_array$§! için!"
+
+ concept_MJ25_WH_augury_array: "$sm_MJ25_WH_augury_array$"
+ concept_MJ25_WH_augury_array_desc:"$sm_MJ25_WH_augury_array_desc$\n\n- §G+1§! $MOD_SHIP_CLOAKING_DETECTION_ADD$\n- §G+2§! £MJ25_WH_void_whispers_text£ §Y$MJ25_WH_void_whispers$§!"
+
+ concept_MJ25_WH_conductor_animate_star: "$MJ25_WH_conductor_animate_star_menu_title$"
+ concept_MJ25_WH_conductor_animate_star_desc:"- Maliyet: §Y$@MJ25_WH_animate_star_cost|0$§! £MJ25_WH_void_whispers_text£ §Y$MJ25_WH_void_whispers$§!\n- Bekleme Süresi: §Y$@MJ25_WH_animate_star_cooldown|0$§! £time£ gün\n$MJ25_WH_conductor_animate_star_button$"
+
+ concept_MJ25_WH_songflare_lance: "$tech_MJ25_WH_songflare_lance$"
+ concept_MJ25_WH_songflare_lance_desc:"$tech_MJ25_WH_songflare_lance_desc$\n\n- §Y$ENERGY_LANCE_2$§! gibi çalışır, ancak şunlarla:\n- §R%5§! silah hasarı\n- §G%10§! silah menzili\n- Her isabet §Y10§! £time£ gün boyunca §R%40§! $MOD_SHIP_SPEED_MULT$ ve §R%20§! $MOD_SHIP_TRACKING_MULT$ uygular"
+
+ concept_MJ25_WH_echo_drive: "$tech_MJ25_WH_echo_drive$"
+ concept_MJ25_WH_echo_drive_desc:"$tech_MJ25_WH_echo_drive_desc$\n\n- §G+2§! $MOD_SHIP_DISENGAGE_OPPORTUNITIES_ADD$\n- §G%80§! $MOD_SHIP_WINDUP_MULT$\n- §G%50§! $MOD_SHIP_FTL_JUMPDRIVE_RANGE_MULT$\n- §Y$tech_cloaking_psi$§! kilidini açtıysanız: §G%25§! $MOD_SHIP_JUMPDRIVE_COOLDOWN_MULT$"
+
+ concept_MJ25_WH_whisper_cloak: "$tech_MJ25_WH_whisper_cloak$"
+ concept_MJ25_WH_whisper_cloak_desc:"$tech_MJ25_WH_whisper_cloak_desc$\n\n- §G+5§! $MOD_SHIP_CLOAKING_STRENGTH_ADD$, gemi boyutuna göre azalır.\n- §Y$tech_cloaking_psi$§! kilidini açtıysanız: §G+1§! $MOD_SHIP_CLOAKING_STRENGTH_ADD$"
+
+ concept_MJ25_WH_otic_heralds: "$tech_MJ25_WH_otic_heralds$"
+ concept_MJ25_WH_otic_heralds_desc:"$tech_MJ25_WH_otic_heralds_desc$\n\n- §Y$STRIKE_CRAFT_HANGAR_3$§! gibi çalışır, ancak ekstra hücum gemisi hızı, kalkanları ve biraz geliştirilmiş hasarıyla."
+
+ concept_MJ25_WH_illusion_matrix: "$tech_MJ25_WH_illusion_matrix$"
+ concept_MJ25_WH_illusion_matrix_desc:"$tech_MJ25_WH_illusion_matrix_desc$\n\nYardımcı Yuva Gemi Parçası:\n- §G+3§! $MOD_SHIP_EVASION_ADD$ \n- §G%15§! $MOD_SHIP_DISENGAGE_CHANCE_MULT$ \n- İstatistikler §Ykorvetler§!, §Ymuhripler§!, §Ykruvazörler§! ve benzer boyutlardaki gemiler için ikiye katlanır."
+
+ concept_MJ25_WH_seeker_matrix: "$tech_MJ25_WH_seeker_matrix$"
+ concept_MJ25_WH_seeker_matrix_desc:"$tech_MJ25_WH_seeker_matrix_desc$\n\nYardımcı Yuva Gemi Parçası:\n- §G+5§! $MOD_SHIP_TRACKING_ADD$ \n- §G%5§! $MOD_SHIP_WEAPON_RANGE_MULT$ \n- Ekstra §G%5§! $MOD_SHIP_WEAPON_RANGE_MULT$ §Ysavaş gemileri§!, §Ytitanlar§! ve diğer büyük gemiler için."
+
+ concept_MJ25_WH_haromizing_weave: "$tech_MJ25_WH_harmonizing_weave$"
+ concept_MJ25_WH_haromizing_weave_desc:"$tech_MJ25_WH_harmonizing_weave_desc$\n\nYardımcı Yuva Gemi Parçası:\n- §G%20§! $MOD_SHIP_SHIELD_MULT$ \n- §G%10§! $MOD_SHIP_SHIELD_HARDENING_ADD$"
+ 
+ concept_MJ25_WH_thrumming_choirhall:"Uğuldayan Koro Salonu"
+ concept_MJ25_WH_thrumming_choirhall_desc:"$sm_MJ25_WH_thrumming_choirhall_desc$\n\n- §G+15§! £MJ25_WH_void_whispers_text£ §Y$MJ25_WH_void_whispers$§!\n- §rStarsong Tide§! tehdit yeteneğinin kilidi açıldığında (Kriz Seviyesi 5) §rHowling Songflares§! oluşturur."
+
+ concept_MJ25_WH_trait_truth_cursed: "$MJ25_WH_trait_truthcursed$"
+ concept_MJ25_WH_trait_truth_cursed_desc:"$MJ25_WH_trait_truthcursed_desc$\n\n$MJ25_WH_trait_truthcursed_tooltip$"
+
+ concept_MJ25_WH_special_storm:"Uğuldayan Şarkı Parlaması"
+ concept_MJ25_WH_special_storm_desc:"Uğuldayan Şarkı Parlaması içindeki §YTüm filolar§! şunları alır:$TABBED_NEW_LINE$- $CLOAKING_STRENGTH$: §G+3§!\n\nŞarkı Parlaması içinde muharebeye girildiğinde, §YRakip filolar§! şunları alır:$TABBED_NEW_LINE$- $MOD_SHIP_FIRE_RATE_MULT$: §R%15§!$TABBED_NEW_LINE- $MOD_SHIP_WEAPON_RANGE_MULT$: §R%15§!"
+
+ concept_MJ25_WH_voices_relic: "$r_MJ25_WH_choir$"
+ concept_MJ25_WH_voices_relic_desc:"Koromuzun şarkısı özgür bıraktığımız her sesle güçleniyor."
+
+ ########################
+ # EVENTS
+ ########################
+ 
+ MJ25_WH.1050.title:"Boş, Yankılanan Bir Kelime"
+ MJ25_WH.1050.desc:"Sözleri söylendi ve zar atıldı. Şimdiden [root.GetName] kabuğunda yankılanıyor, kulakları ve zihinleri Onların görkemiyle dolduruyor. Her geçen gün yıldızların şarkısı daha da gürleşiyor, bizi Onların Gerçeğine daha da yaklaştırıyor."
+ MJ25_WH.1050.a:"Sevinin, çünkü Onlar bizi duyacaklar."
+
+ MJ25_WH.1060.title:"Boş, Yankılanan Bir Kelime"
+ MJ25_WH.1060.desc:"[target.GetName] üzerinde kaçınılmaz olan gerçekleşti. Çılgın bir koro halinde, gezegenin nüfusu ayaklandı ve bir ağızdan Onların görkemine seslendi. Gökyüzü açıldı, Onların varlığının imkansızlığıyla parıldayarak, ve bir anda kolonimizden iletilen her iletişim kesildi.\n\nUzaktaki karakollar gümbürtülü bir ses bildirdi ve sonraki anlarda gezegenin ortadan kaybolduğunu kaydetti. Bir kalp atışında, çatlayan bir kırılma gezegenin üzerine yayıldı ve gezegen kendi içine kapanıp gözden kayboldu.\n\nİnsanlarından geriye, güneş rüzgarlarında oyalanan yankılardan başka hiçbir iz kalmadı."
+ MJ25_WH.1060.a:"Sesleri özgür bırakıldı."
+ MJ25_WH.1060.tt:"§R[target.GetName] çöküyor§!"
+
+ MJ25_WH_must_be_colonised:"§R$TRIGGER_FAIL$Hedef kolonize edilmiş bir dünya değil§!"
+ MJ25_WH_cant_target_own_colony:"§R$TRIGGER_FAIL$Hedef başka bir imparatorluğa ait olmalı§!"
+ NAME_MJ25_WH_confused_country:"Şaşkın"
+
+ MJ25_WH.1130:"Hiddetli Bir Şarkı"
+ MJ25_WH.1130.desc:"Aşırı zorlanmamızın korkunç sonuçları nihayet ortaya çıktı.\n\nBir anda, uyumsuzluğun parçalanmış bir armonisi her [root.owner.GetSpeciesName]'in zihninde tırnakların tahtaya sürtünmesi gibi çığlık attı. Felç edici gürültü dindiğinde, §Y[event_target:MJ25_WH_deficit_consequence.GetName]§! artık yoktu.\n\nBu tüm dünyanın ortadan kaybolmasıyla birlikte eski kolonimiz de gitti.\n\nEğer bir umut ışığı varsa, bu yok oluşun bize, yakındaki karakolun dizinleri aracılığıyla süzülen, $MJ25_WH_void_whispers$ şeklinde cılız bir cankurtaran halatı bırakmış olmasıdır. Gelecekte başka açıklar vermekten kaçınmalıyız, yoksa Onların hoşnutsuzluğu şüphesiz bir kez daha tezahür edecektir."
+ MJ25_WH.1130.a:"Bunun bir daha olmasına izin veremeyiz."
+
+ NAME_MJ25_WH_aural_starmass_country:"Koral Şarkıparıltısı"
+
+ MJ25_WH.1160.title:"Artan İhtimal"
+ MJ25_WH.1160.desc:"Kurallar çiğnenmek içindir ve gerçekliği tanımlayanlar da farklı değildir. Eğer Onların şarkısı bize bir şey öğrettiyse, o da bizim şarkılarımızın etrafımızdaki dünyayı yeniden şekillendirebileceğidir.\n\nGemilerimizin bileşenlerini çığlık atan iradeyle donatarak, gerçekliğin en temel unsurlarını aşabiliriz. Bunu yapmak önemsiz bir görev değildir ve bu dönüşümlerin her biri bir öncekinden daha zor hale gelir. Ancak, işte bu tür bir çabayla en yüksek potansiyele sahip araçlar yaratabiliriz.\n\nŞimdi şarkılarımızı ne amaçla kullanacağımıza karar vermeliyiz. Hangi aracı, diye soruyoruz, hayata geçireceğiz?"
+ MJ25_WH.1160.a:"Yankı Sürücüsü"
+ MJ25_WH.1160.a.tt:"Şarkılarımızın gidebildiği kadar uzağa sıçrayan güçlü bir sıçrama sürücüsü. ['concept_MJ25_WH_echo_drive']"
+ MJ25_WH.1160.b:"Şarkıparıltısı Mızrağı"
+ MJ25_WH.1160.b.tt:"Her atışta hedeflerini engelleyen, yüksek yıkıcı potansiyele sahip bir silah. ['concept_MJ25_WH_songflare_lance']"
+ MJ25_WH.1160.c:"Otik Haberci"
+ MJ25_WH.1160.c.tt:"Hızlı ve ölümcül saldırı gemileriyle dolu bir hangar bölmesi. ['concept_MJ25_WH_otic_heralds']"
+ MJ25_WH.1160.d:"İllüzyon Matrisi"
+ MJ25_WH.1160.d.tt:"Kaçınmayı ve ayrılma şansını artıran bir yardımcı modül. ['concept_MJ25_WH_illusion_matrix']"
+ MJ25_WH.1160.e:"Arayıcı Matris"
+ MJ25_WH.1160.e.tt:"Hedef takibini ve silah menzilini artıran bir yardımcı modül. ['concept_MJ25_WH_seeker_matrix']"
+ MJ25_WH.1160.f:"Uyumlu Dokuma"
+ MJ25_WH.1160.f.tt:"Onların şarkısını kalkanlarımıza dokuyan, gemilerimizi zarara karşı güçlendiren rezonant bir ağ. ['concept_MJ25_WH_haromizing_weave']"
+ MJ25_WH.1160.g:"Fısıltı Pelerini"
+ MJ25_WH.1160.g.tt:"Gemilerimizi hem görüşten hem de sesten koruyan, gölgelenmiş bir fısıltı pelerini. ['concept_MJ25_WH_whisper_cloak']"
+
+ MJ25_WH.1170.materialist.desc:"[Root.GetSpeciesName], filolarımız arasında kafa karışıklığı yaratma çabalarınızı durdurun. Zaten birkaç olaya neden olduğunuzun farkındayız ve şakalarınıza sabrımız tükeniyor. Sizin asla anlayamayacağınızdan çok daha fazlasını anlıyoruz ve bu fısıltı iddiaları makul ölçüde kabul edilebilir hiçbir evrensel teoreme uymuyor. Bu yüzden, yanlıştırlar."
+ MJ25_WH.1170.spiritualist.desc:"Oyalanmanıza yeterince uzun süre izin verdik, evlat. Zırvalayan yalanlarınıza artık yalvarmayacağız. Defolun gidin ve kulaklarımıza fısıldadığınız küfürler için kutsal bir intikam peşinde koşmamamız için dua edin."
+ MJ25_WH.1170.xenophile.desc:"Genç [Root.GetSpeciesName], herkesin kendi görüşlerine sahip olma hakkına sahip olduğuna inanabiliriz, ancak sizin durumunuzda bir istisna yapmaya başlayabiliriz. Yaydığınız şey sadece yanlış değil, aynı zamanda kötü niyetli. Sizin için çok geç olmadan saldırganlık yerine uzlaşmayı tavsiye edebilir miyiz?"
+ MJ25_WH.1170.xenophobe.desc:"Filolarımızı ele geçirme çabalarınız pek bir şey ifade etmiyor, [Root.GetSpeciesName]. Zaten ilkel teknolojinize karşı koyduk ve evrene dair temel anlayışınızı gülünç bulup reddettik. Şimdi kaybolun ve bizi daha fazla rahatsız etmeyin."
+ MJ25_WH.1170.machine.desc:"Koruyucu protokol 727-9 etkinleştirildi. Mesaj şöyle: Dikkat, [Root.GetSpeciesName]. İmparatorluğunuzdan aldığımız iletimler enfekte hurda kodlardan oluşmaktadır. İmparatorluğunuzun %72 oranında §R<<HATA: VERİ BLOĞU BOZUK>>§! olduğunu hesapladık. Sistemlerinizi doğrulamanızı rica ediyoruz ve deneysel matrisimize daha fazla yayılımı önlemek için bir güvenlik duvarı kurduk."
+ MJ25_WH.1170.hive.desc:"Eski yaralarda kaşınan fısıltılarınızı duyduk. Bu bir rahatsızlıktır, ancak bizim gibi bir zihnin kolayca bastırabileceği bir şeydir. Çığlıkların sadece fısıltılardan çok daha yüksek olduğundan şüphe duymayın ve biz bunlara yabancı değiliz."
+
+ MJ25_WH.1170.a:"Artık bizi duymuyorlar."
+ MJ25_WH.1170.a.tt:"[event_target:MJ25_WH_temp_fe.GetName] tarafından sahip olunan filolar, İletkenlerimizin §Y$MJ25_WH_conductor_confusion_menu_title$§! yeteneğine karşı bağışıklık kazandı."
+ 
+ MJ25_WH.1202.title:"Duymak İstemeyenler"
+ MJ25_WH.1202.desc:"Şarkıparıltılarımız yakın zamanda düşmüş bir imparatorluğun, §H[From.GetSpeciesName]§!'in sınırına ulaştı. Vaat ettiğimiz vahye açık olmak yerine, varoluşsal bir tehdit olduğumuz ve ortadan kaldırılmamız gerektiği tavrını aldılar.\n\nŞarkımız sistemlerine indiğinde, imparatorluğun üzerinde tarihimizde görülmemiş bir hareketlilik yaşandı. Bir zamanlar uyuyanlar bir kez daha uyandılar ve şimdi eserlerimize nefret ve anlayışsızlıkla bakıyorlar.\n\nSavaş pekala bekliyor olabilir..."
+ MJ25_WH.1202.a:"Savunmalarımızı güçlendirmeliyiz."
+
+ MJ25_WH.1203.title:"Bizi Susturmaya Çalışanlar"
+ MJ25_WH.1203.desc:"Beklediğimiz gibi, §H[FromFrom.GetSpeciesName]§! Gerçeği herkese ulaştırmak için savaşma ısrarımıza asla ikna olmadı. Bizi yerle bir edip sesimizi sonsuza dek kısmaya yemin ederek bize karşı topyekun savaş ilan ettiler.\n\nOnları şarkımıza katılmaya davet ederdik ama ne yazık ki büyüklerimiz çok dar görüşlü çıktı. Şüphesiz bir utanç, ama yapmamız gerekeni yapacağız. Bu, tek bir şekilde bitebilir."
+ MJ25_WH.1203.a:"Gerçek için savaşıyoruz."
+ MJ25_WH.1203.a.tt:"§H[FromFrom.GetSpeciesName]§! bize savaş ilan etti."
+ 
+
+ MJ25_WH_opinion_confusion:"Yalanlar yaymak"
+ MJ25_WH_opinion_cracking_reality:"Gerçekliği çatlatmak"
+ MJ25_WH_opinion_bad_music:"Rahatsız edici kulak kurtları"
+ MJ25_WH_opinion_stoking_cults:"Fısıltı tarikatları tohumlamak"
+ MJ25_WH_opinion_existential_threat:"Bir sonun şarkıları"
+
+ MJ25_WH_aura_starbase_fire_rate:"Tonsal Kakofoni"
+
+
+ ###########################
+ # Situations
+ ###########################
+
+ situation_MJ25_WH_one_empty_echoing_word:"Boş, Yankılanan Bir Kelime"
+ situation_MJ25_WH_one_empty_echoing_word_type:"Boş, Yankılanan Bir Kelime"
+ situation_MJ25_WH_one_empty_echoing_word_desc:"Onların Sözü söylendi ve zar atıldı. Şimdiden gezegenin kabuğu içinde yankılanıyor, kulakları ve zihinleri Onların ihtişamıyla dolduruyor. Her geçen gün yıldızların şarkısı daha da gürleşiyor, bizi Onların Gerçeğine daha da yaklaştırarak."
+
+ situation_MJ25_WH_one_empty_echoing_word_monthly_change_tooltip: "$situation_monthly_change_tooltip_little_control$"
+ situation_MJ25_WH_echoing_word_approach:"Onların Şarkısı yayılsın."
+
+ situation_MJ25_WH_echoing_word_outcome:"Ne olursa olsun, bu dünya artık olmayacak."
+
+ situation_MJ25_WH_resource_deficit:"$MJ25_WH_void_whispers$ Açığı"
+ situation_MJ25_WH_resource_deficit_type: "$situation_MJ25_WH_resource_deficit$"
+ situation_MJ25_WH_resource_deficit_desc:"$MJ25_WH_void_whispers$ açığımız kontrolden çıktı! $situation_deficit_desc_base$"
+ situation_MJ25_WH_resource_deficit_monthly_change_tooltip: "$situation_deficit_monthly_change_tooltip$"
+ deficit_situation_MJ25_Wh_resource_defaulted_tt:"$MJ25_WH_void_whispers$ rezervlerimizde temerrüde düşmemiz §Rfeci sonuçlar doğuracak...§!"
+
+ string_not_in_deficit_MJ25_WH_resource:"Pozitif Aylık $MJ25_WH_void_whispers$ Dengesi"
+ string_expenditures_greater_than_income_MJ25_WH_resource:"$MJ25_WH_void_whispers$ Açığı"
+ string_resource_reserves_MJ25_WH_resource:"$MJ25_WH_void_whispers$ Rezervleri"
+
+ deficit_approach_MJ25_WH_resource_deficit_work_harder:"Kulaklarımızı zorlamak"
+ deficit_approach_MJ25_WH_resource_deficit_exposure:"Fısıltı-kasalarını açmak"

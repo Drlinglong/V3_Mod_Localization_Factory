@@ -1,0 +1,278 @@
+﻿l_turkish:
+
+ MJ25_WH_whispers_crisis_chain_title:"Dokudaki Fısıltılar"
+ MJ25_WH_whispers_crisis_chain_desc:"Üzerinde yürüdüğümüz yıldız ışıklı yol sadece Hakikat'e çıkar. Doğuş hakkı ve kaderle bağlı olarak, neyin beklediğini bilmeden ama Onların şarkısına güvenerek bu yolda yürüyoruz. Birlikte duyacak ve dönüşeceğiz."
+ 
+ MJ25_WH_ap_whispers:"Dokudaki Fısıltılar"
+ MJ25_WH_ap_whispers_desc:"Yıldızlar arasındaki bir fısıltı, kavrayamadığımız bir Hakikat'ten bahsediyor. Bu yıldız ışıklı yolu takip etmek şüphesiz kararlılığımızı sınayacak, ancak sonunda her zaman olmamız gereken şey yatıyor."
+ 
+ MJ25_WH_crisis_whispers_level_1:"§rFısıltılar§!"
+ MJ25_WH_crisis_whispers_level_2:"§rYankılar§!"
+ MJ25_WH_crisis_whispers_level_3:"§rSözler§!"
+ MJ25_WH_crisis_whispers_level_4:"§rDüşünceler§!"
+ MJ25_WH_crisis_whispers_level_5:"§rHakikatler§!"
+ 
+ MJ25_WH_crisis_whispers_level_1_desc:"O donuk, uyanışsız anlarda."
+ MJ25_WH_crisis_whispers_level_2_desc:"Rüyalarımızı kaplayan."
+ MJ25_WH_crisis_whispers_level_3_desc:"Boş anlamdan arınmış."
+ MJ25_WH_crisis_whispers_level_4_desc:"Parazitler gibi sinsice sürünerek."
+ MJ25_WH_crisis_whispers_level_5_desc:"Şimdi sizinle paylaşıyoruz."
+ 
+ MJ25_WH_void_whispers:"Yıldız Şarkısı Yankıları"
+ MJ25_WH_void_whispers_name: "$MJ25_WH_void_whispers$"
+ MJ25_WH_void_whispers_value:"£MJ25_WH_void_whispers£ $VAL|0$"
+ MJ25_WH_void_whispers_current_value:"Mevcut Değer: §Y$VALUE|0$§!"
+ MJ25_WH_void_whispers_gaining:"Daha fazla £MJ25_WH_void_whispers£ §Y$MJ25_WH_void_whispers$§! kazanmak için §HCrisis Hedefleri§!'ni tamamlayın."
+ MJ25_WH_void_whispers_desc:"Topladığımız parçalanmış dalgalar bir gün, büyük, kozmik bir yapbozun parçaları gibi bir araya gelecek."
+ 
+ MJ25_WH_void_whispers_crisis_objective:"Kriz Hedefleri"
+ MJ25_WH_void_whispers_crisis_objective_gained:"$MJ25_WH_void_whispers$ kazanıldı"
+ MJ25_WH_void_whispers_crisis_objective_reward: "$REWARD$"
+ MJ25_WH_void_whispers_crisis_objective_progress:"Bu Kriz Hedefinden £MJ25_WH_void_whispers£ $AMOUNT$ kazandık."
+ 
+ MJ25_WH_void_whispers_crisis_description_title:"Dokudaki Fısıltılar"
+ MJ25_WH_void_whispers_crisis_description:"$menace_crisis_description_intro$\n\nYıldızlar arasında bir fısıltı duyduk. Bilebileceğimizden daha kadim sözler, boşlukta sonsuzca yankılanıyor. Eğer anlayabilsek, barındırdıkları sırlar bizi yüceltebilir. Bu fısıltıları çözmeye kendimizi adayacağız ki, bu evrenin Hakikat'ini nihayet görebilelim."
+ 
+ MJ25_WH_void_whispers_crisis_howto_title:"Fısıltıları Çözmek"
+ MJ25_WH_void_whispers_crisis_howto:"§rKriz Hedefleri§!'ni takip etmek £MJ25_WH_void_whispers£§rYıldız Şarkısı Yankıları§! üretir. Yıldızlar arasındaki yerimizi gerçekten anlamamız ancak bu kadim mesajı yeniden inşa ederek mümkün olacak."
+ 
+ MJ25_WH_void_whispers_crisis_level_unlocked:"$LEVEL$ seviyesinde şu ödülleri alırsınız:\n"
+ MJ25_WH_void_whispers_crisis_level_locked:"Bu seviyeyi açmak için gerekenler:\n"
+ MJ25_WH_void_whispers_crisis_level_unlock:"£MJ25_WH_void_whispers£ §Y$CURRENCY$§! Yıldız Şarkısı Yankısı Var"
+ MJ25_WH_void_whispers_crisis_level_desc:"Kriz seviyelerinde ilerlemek için £MJ25_WH_void_whispers£§rYıldız Şarkısı Yankıları§! biriktirin, Kriz Arkeoloji Alanlarını araştırın ve kendinizin aydınlanmasına izin verin..."
+ 
+ MJ25_WH_menp_sound:"§rYıldızlar Arasındaki Bir Ses§!"
+ MJ25_WH_menp_sound_desc:"Boşluk şarkı söyler, bir rüyanın sonunda oyalanan, uçucu, ahenkli bir şey. Onların sözlerinin anlamı ancak orada, yıldızlar arasında bulunabilir."
+ 
+ MJ25_WH_menp_attuned_arrays:"§rAyarlı Tespit Dizileri§!"
+ MJ25_WH_menp_attuned_arrays_desc:"Varoluşun eşiğinde sallananı tespit etmek kolay bir iş değildir. Bu kırık konuşmanın bir parçasını bile yakalama şansımız, en loş yankılara ayarlı devasa alt uzay dinleme dizilerini içerir."
+ MJ25_WH_menp_attuned_arrays_tt:"Aşağıdakileri açar:\n- Yıldız Üssü Modülü ['concept_MJ25_WH_augury_array']\n- Yıldız Üssü Binası ['concept_MJ25_WH_auracular_listening_post']"
+ 
+ MJ25_WH_menp_congregational:"§rToplayıcı Kanallar§!"
+ MJ25_WH_menp_congregational_desc:"Genişleyen duyusal ağımızı desteklemek için, farklı dizilerin üreteceği büyük veri depolarını iletebilecek yüksek bant genişliğine sahip iletişim kanallarıyla imparatorluğumuzu birleştireceğiz."
+ 
+ MJ25_WH_menp_translators:"§rŞifre Çözme Sürücüsü§!"
+ MJ25_WH_menp_translators_desc:"Evrensel çeviricilerimiz bizi yüzüstü bırakınca, fısıltıları kendimiz çözmek için antik dilbilim sanatını yeniden öğreniyoruz."
+ 
+ MJ25_WH_menp_ordo_silencium:"§rOrdo Silencium§!"
+ MJ25_WH_menp_ordo_silencium_desc:"Sırf dürtü ve direktiflerin ötesinde, arayışımız eşsiz bir tapınmaya dönüştü. Sessizce, bu Düzen avam arasında yayılıyor, Hakikat Sözleri'nden başka hiçbir şeyi yüceltmeyen görkemli mabedlerde kök salıyor."
+ MJ25_WH_menp_ordo_silencium_tt:"['concept_MJ25_WH_starsong_basilica'] bölge uzmanlaşmasının kilidini açar.\nYıldız Şarkısı Yankıları hakkındaki anlayışımızı derinleştirdikçe, ['concept_MJ25_WH_starsong_basilica'] binaları için yeni teknoloji seçenekleri açılacaktır."
+ 
+ MJ25_WH_menp_witness:"§rSözün Muhafızları§!"
+ MJ25_WH_menp_witness_desc:"Her zaman dinlemeyenler olacaktır. Duymayanlar. Ama umutla dolmuş ve sözümüzle kuşanmış sürümüz, onların muhalefetini susturacaktır."
+ MJ25_WH_menp_witness_tt:"§H$UNLOCKS_SHIP_TYPE$:§! $MJ25_WH_silent_witness$\n\nHızlı, kaçamak, sürü halinde saldıran bir gemi.\n"
+ 
+ MJ25_WH_menp_truthseekers:"§rAcıkan Hakikat Arayanlar§!"
+ MJ25_WH_menp_truthseekers_desc:"Aradığımız şey, gerçekliğimizin dokusu üzerine yayılmış ince bir kaplamadan ibaret. Dinleyicilerimizi ne kadar yayabilirsek, Hakikat'e o kadar yaklaşacağız."
+ 
+ MJ25_WH_menp_auditor:"§rDuyduğumuz O Şey§!"
+ MJ25_WH_menp_auditor_desc:"Yakaladığımız birkaç fısıltıdan doğan baş döndürücü sırlar zihinlerimizde çiçek açıyor. Her biri bizi zengin ilhamla dolduruyor, yeni başlangıcımızın vaadiyle bizi daha büyük zirvelere taşıyor."
+ MJ25_WH_menp_auditor_tt:"Şu fermanların kilidini açar:\n-['concept_MJ25_WH_voidwrought_ciphers']\n-['concept_MJ25_WH_battle_songs']\n-['concept_MJ25_WH_words_wisdom']"
+ 
+ MJ25_WH_menp_cloaking:"§rSeçici Duyma§!"
+ MJ25_WH_menp_cloaking_desc:"Bir yasa ancak duyulduğunda uyulması gerekir. Gerçekliğin dayattığı kuralların üzerine çıkmak istiyorsak, onları boğmaktan başka çaremiz yok."
+ MJ25_WH_menp_cloaking_tt:"['concept_MJ25_WH_echo_drive'] araştırma seçeneğini kazanırsınız.\n\n$edict_MJ25_WH_ship_modules$ fermanının kilidini açar, bu da £MJ25_WH_void_whispers£ $MJ25_WH_void_whispers$ harcayarak daha fazla araştırma seçeneği kazanmamızı sağlar:$TABBED_NEW_LINE$- ['concept_MJ25_WH_songflare_lance']$TABBED_NEW_LINE$- ['concept_MJ25_WH_otic_heralds']$TABBED_NEW_LINE$- ['concept_MJ25_WH_illusion_matrix']$TABBED_NEW_LINE$- ['concept_MJ25_WH_seeker_matrix']$TABBED_NEW_LINE$- ['concept_MJ25_WH_haromizing_weave']$TABBED_NEW_LINE$- ['concept_MJ25_WH_whisper_cloak']"
+ # MJ25_WH_menp_cloaking_tt: "Gain the following tech research options:\n-['concept_MJ25_WH_songflare_lance']\n-['concept_MJ25_WH_echo_drive']"
+ 
+ 
+ # MJ25_WH_menp_triangulation: "§rTympanic Triangulation§!"
+ # MJ25_WH_menp_triangulation_desc: "Beyond their necessity, our developments in auditory technology possess mundane military applications, allowing us to pinpoint enemies at greater distances."
+ 
+ MJ25_WH_menp_starsong_tide:"§rYıldız Şarkısı Gelgiti§!"
+ MJ25_WH_menp_starsong_tide_desc:"Tüm düşüncelerin ötesinde, şimdi sesimizi verdiğimiz sarsılmaz bir Hakikat yatar. Temizleyici bir tufan gibi, şarkımız inanmayanların üzerinden geçecek, arkasında sadece aydınlanma bırakacaktır."
+ MJ25_WH_menp_starsong_tide_tt:"['concept_MJ25_WH_thrumming_choirhall'] yıldız üssü binası, sınırları zorla genişletmeye ve sistemleri ['concept_MJ25_WH_special_storm'] içinde gizlemeye başlar.\n\nBizim tarafımızdan sahip olunmayan kolonilerdeki popülasyonlar, ['concept_MJ25_WH_trait_truth_cursed'] niteliği ile mutasyona uğrar ve sonunda çöker, seslerini ['concept_MJ25_WH_voices_relic']'imize eklerler. Ancak çökmelerine kadar, bu koloniler ['concept_MJ25_WH_special_storm']'umuzun genişlemesini durduracaktır."
+ 
+ MJ25_WH_menp_conductor:"§rSözün Konuşmacıları§!"
+ MJ25_WH_menp_conductor_desc:"Biz Onların araçlarıyız, ebediyen yankıladığımız. Düşüncelerimizin ötesinde kıvrılan şarkıların bu eksik, kusurlu yorumu bile yıldızları uyandıracak bir senfoni doğurabilir."
+ MJ25_WH_menp_conductor_tt:"§H$UNLOCKS_SHIP_TYPE$:§! $MJ25_WH_conductor$\n\nSavaşın gidişatını değiştirebilecek özel yeteneklere sahip gizli bir gemi.\n"
+ 
+ MJ25_WH_menp_praetorian:"§rSözün Taşıyıcıları§!"
+ MJ25_WH_menp_praetorian_desc:"Duymak bilmektir, bilmek konuşmaktır. Parçalanmış kelimeler yayılır, karanlık gecelerde fısıldanır ve onların en eşsiz anlamını dünyaya biz ulaştıracağız."
+ MJ25_WH_menp_praetorian_tt:"§H$UNLOCKS_SHIP_TYPE$:§! $MJ25_WH_battlecruiser$\n\nÇok ağır silahlı, vur-kaç taktiği yapan bir savaş kruvazörü.\n"
+ 
+ MJ25_WH_menp_deliquescent:"§rÇözülen Zihinler§!"
+ MJ25_WH_menp_deliquescent_desc:"Bir kez duyulduğunda, o kadar dokunaklı bir söz asla unutulamaz. Zenginliğiyle zihinlerimizde yankılanarak ve onları besleyerek büyür, ta ki düşüncelerimiz çözülme noktasına kadar doyana dek."
+ 
+ MJ25_WH_menp_hue:"§rBildiğimiz O Şey§!"
+ MJ25_WH_menp_hue_desc:"Onların fısıltılarından, düşüncelerimizin kenarını gıdıklayan renk gelir, bilinci öylesine güzel bir tona boyar ki, böylesi kendi kendine örülmüş bir dünyanın ötesinde asla var olamazdı."
+ MJ25_WH_menp_hue_tt:"'§rOnların Sözlerinin Tonu§!' durumunu başlatır."
+ 
+ MJ25_WH_menp_we_are:"§rOlduğumuz O Şey§!"
+ MJ25_WH_menp_we_are_desc:"Artık eskisi gibi değiliz, her zaman olmamız gerektiği gibiyiz. Zihinlerimiz çiçek açıyor ve akıyor, bizi hâlâ yücelten gölgeli sözlerle ışıl ışıl parlıyor."
+ MJ25_WH_menp_we_are_tt:"Tüm popülasyonlarımız ['concept_MJ25_WH_trait_word_bearer'] özelliğini kaybeder ve ['concept_MJ25_WH_trait_starsong_vessel'] özelliğini kazanır."
+ 
+ MJ25_WH_menp_stars_scream:"§rÇığlık Atanlar§!"
+ MJ25_WH_menp_stars_scream_desc:"Akıllarımızda durmaksızın zonklayan çığlığı onlardan DUYABİLİRİZ, ASLA hayal etmemiş olanları bu kadar ENORM ve GÜRLEYEN bir Zamana UYANDIRIRKEN."
+ MJ25_WH_menp_stars_scream_tt:"Yeni İletken yeteneğini açar: ['concept_MJ25_WH_conductor_animate_star']"
+ 
+ MJ25_WH_menp_echoic:"§rYankılanan Odalar§!"
+ MJ25_WH_menp_echoic_desc:"Gerçek ustalık kopyalamaktan değil, koşumlamaktan, modüle etmekten ve dönüştürmekten gelir. Katedrallerimizin sessiz salonlarından, sonsuza dek yankılanacak neşeli bir koroya katılacağız."
+ MJ25_WH_menp_echoic_tt:"['concept_MJ25_WH_thrumming_choirhall'] yıldız üssü binasının kilidini açar."
+ 
+ MJ25_WH_menp_massa:"§rStellaris için Hakikat Ayini§!"
+ MJ25_WH_menp_massa_desc:"Son sözler yerine oturuyor, sırların bedeli ödeniyor. Gelin şimdi, konuşmamızı dinleyin. Boşluğun son ayinlerine, ki oradan şimdi en güzel ve korkunç bir Hakikat yükseliyor."
+ MJ25_WH_menp_massa_tt:"'§rSon Derece Şiddetli Bir Söylev§!' durumunu başlatır."
+ 
+ MJ25_WH_crisobj_survey_name:"Sistemleri Araştır"
+ MJ25_WH_crisobj_survey_desc:"Onların sözlerinin son izlerini arayışımız bizi gitgide daha uzak sistemlere taşıyacak. Orada, tarayıcılarımız karşılaştığımız uzaylı dünyalarında hâlâ yankılanan son fısıltıları toplayacak."
+ 
+ MJ25_WH_crisobj_listeners_name:"Dinleyiciler Görevlendir"
+ MJ25_WH_crisobj_listeners_desc:"Bulduğumuz kıt yankılar duyulmalı, kataloglanmalı ve nihayetinde yorumlanmalıdır. Bu görevi yerine getirmek için imparatorluğumuzda sayısız Dinleyici görevlendirmemiz gerekecek."
+ 
+ MJ25_WH_crisobj_augury_arrays_name:"Kehanet Dizilerini Çalıştır"
+ MJ25_WH_crisobj_augury_arrays_desc:"Bulduğumuz en saf fısıltılar, boşlukta serbestçe süzülenlerdir. Soluk ve uzakta olsalar da, yalnızca en hassas ayarlı tespit dizileriyle yakalanabilirler."
+ 
+ MJ25_WH_crisobj_thrumming_choirhalls_name:"Uğultulu Koro Salonlarını Çalıştır"
+ MJ25_WH_crisobj_thrumming_choirhalls_desc:"Hakikatin doğası, zihne nüfuz eden yapışkan, sızan bir enfeksiyon gibi yayılmaktır. Onların ebedi korosuyla seslerimiz birleşerek bunu teşvik edebiliriz."
+ 
+ MJ25_WH_crisobj_archaeology_name:"Arkeoloji Alanlarında Kazı Yap"
+ MJ25_WH_crisobj_archaeology_desc:"Onların sözlerinin yankıları, unutulmuş tarihlere zengin bir şekilde dokunmuş olarak yatar. Sadece bu uzun süredir kayıp sırlara derinlemesine inerek, onlar bir kez daha dudaklarımıza getirilebilirler."
+ 
+ MJ25_WH_crisobj_enlighten_pops_name:"Popülasyonları 'Aydınlat'"
+ MJ25_WH_crisobj_enlighten_pops_desc:"Boşluğun fısıltılarını duyanlar, Onların bilgeliğiyle aydınlanır. Bu vecdi ulaşabildiğimiz herkese yaymak kutsal görevimizdir."
+ 
+ MJ25_WH_crisobj_operate_cults_name:"Fısıltı Kültlerini Yönet"
+ MJ25_WH_crisobj_operate_cults_desc:"Kozmik hakikat, galaksinin her köşesinden yankılandığında daha yüksek sesle duyulur, sakinleri duymak istemese bile."
+ 
+ MJ25_WH_crisobj_utter_words_name:"Boş, Yankılanan Bir Söz Söyle"
+ MJ25_WH_crisobj_utter_words_desc:"Gelişen anlayışımızın sondan bir önceki işareti, bir zamanlar çirkin olan kusurumuzdan etkilenmemiş ve bütün, saf Hakikatten bir söz söylemektir. Ancak böylesi bir yük hafifçe taşınamaz, ne de geri alınabilir."
+ 
+ MJ25_WH_crisobj_free_voices_name:"Sesleri Özgür Bırak"
+ MJ25_WH_crisobj_free_voices_desc:"Henüz fiziksel zincirler içinde debelenen sesler, Yıldız Şarkısı Koromuza katılmaları için ölümlü kabuklarından kurtarılmalıdır."
+ 
+ MJ25_WH_leader_trait_translator:"Tercüman"
+ MJ25_WH_leader_trait_translator_desc:"Bu lider, §rYıldız Şarkısı Yankıları§! araştırmalarına yardımcı olmak için özel eğitim almıştır."
+ 
+ MJ25_WH_leader_trait_truthseeker:"Hakikat Arayıcısı"
+ MJ25_WH_leader_trait_truthseeker_desc:"Bu lider, evrenin gizemlerini çözmekle takıntılı hale gelmiştir."
+ 
+ MJ25_WH_leader_trait_orator:"Hatip"
+ MJ25_WH_leader_trait_orator_desc:"Bu lider, sözlerimizi yaymak için gümüş dille donatılmıştır."
+ 
+ MJ25_WH_leader_trait_speech_shepherd:"Söz Çobanı"
+ MJ25_WH_leader_trait_speech_shepherd_desc:"Bu lider, yolumuzdan sapanları düzeltebilsinler diye sessizce dinler."
+ 
+ MJ25_WH_leader_trait_thoughtsickness:"Düşünce Hastalığı"
+ MJ25_WH_leader_trait_thoughtsickness_desc:"Bu liderin düşünceleri, duyulmayan melodilere eşlik ettiklerinde buharlaşır."
+ 
+ MJ25_WH_leader_trait_defiant:"Asi"
+ MJ25_WH_leader_trait_defiant_desc:"Bu lider, hedeflerine ulaşmak için emirleri kolayca hiçe sayan, dikbaşlı ve itaatsizdir."
+ 
+ MJ25_WH_leader_trait_songtouched:"Şarkıyla Temas Etmiş"
+ MJ25_WH_leader_trait_songtouched_desc:"Onların Sözlerinin Parçaları bu liderin varlığını doldurur ve onları ebedi bir Hakikate gittikçe yaklaştırır."
+ 
+ MJ25_WH_leader_trait_echoes:"Düşünce Yankıları"
+ MJ25_WH_leader_trait_echoes_desc:"Bu liderin zihni karmaşıklaşır ve odaklanamaz hale gelir, yine de o sayısız ipliği aynı anda kavrar."
+ 
+ MJ25_WH_leader_trait_songblessed_anchor:"Şarkıdan Lütfedilmiş Çapa"
+ MJ25_WH_leader_trait_songblessed_anchor_desc:"İnancımız bu lideri doldurur ki Onların Hakikatinin ağırlığını taşıyabilsinler."
+ MJ25_WH_leader_trait_resolute_anchor:"Kararlı Çapa"
+ MJ25_WH_leader_trait_resolute_anchor_desc:"Tavlanmış irade ve elinde inançla bu liderin zihni güçlenmiştir."
+ MJ25_WH_leader_trait_errant_anchor:"Sapmış Çapa"
+ MJ25_WH_leader_trait_errant_anchor_desc:"Şüphelerimiz bu lideri doldurur, ancak yine de irademizin cisimleşmiş halini taşırlar."
+ 
+ 
+ r_MJ25_WH_void_whispers:1 "£MJ25_WH_void_whispers£ §r$MJ25_WH_void_whispers$§!"
+ mod_leader_commanders_MJ25_WH_void_whispers_upkeep_add:0 "$r_MJ25_WH_void_whispers$ $UPKEEP$"
+ mod_leader_scientists_MJ25_WH_void_whispers_upkeep_add:0 "$r_MJ25_WH_void_whispers$ $UPKEEP$"
+ mod_leader_officials_MJ25_WH_void_whispers_upkeep_add:0 "$r_MJ25_WH_void_whispers$ $UPKEEP$"
+ 
+ MJ25_WH_STARBASE_AURA_FIRE_RATE:"İşitsel Parazit"
+ 
+ MJ25_WH_trait_mental_teratomas:0 "Zihinsel Teratomlar"
+ MJ25_WH_trait_mental_teratomas_desc:1 "Zihinlerimiz, büyüyen Hakikat kistleriyle ağırlaşıyor, çöküşün eşiğinde ve yalnızca irademizle bir arada duruyorlar."
+ MJ25_WH_trait_mental_teratomas_tooltip:"Uzmanlar için İş Verimliliği: §G+5%§!$TABBED_NEW_LINE$- ['concept_planet_physicists'] için İş Verimliliği: §G+10%§!\n\nBir §rYıldız Şarkısı Bazilikası§! olan bir gezegendeyken:$TABBED_NEW_LINE$$MOD_POP_HAPPINESS$: §G+10%§!\n\n§rDokudaki Fısıltılar§! Yükseliş Avantajı olmadan:$TABBED_NEW_LINE$$MOD_POP_HAPPINESS$: §R-20%§!"
+ MJ25_WH_trait_mental_teratomas_gestalt:0 "Zihinsel Teratomlar"
+ MJ25_WH_trait_mental_teratomas_gestalt_desc:1 "Zihinlerimiz, büyüyen Hakikat kistleriyle ağırlaşıyor, çöküşün eşiğinde ve yalnızca irademizle bir arada duruyorlar."
+ 
+ MJ25_WH_trait_mental_teratomas_gestalt_tooltip:"Karmaşık Drone'lar için İş Verimliliği: §G+5%§!$TABBED_NEW_LINE$- ['concept_planet_physicists'] için İş Verimliliği: §G+10%§!\n\nBir §rYıldız Şarkısı Bazilikası§! olan bir gezegendeyken:$TABBED_NEW_LINE$$MOD_POP_AMENITIES_USAGE_MULT$: §G-10%§!\n\n§rDokudaki Fısıltılar§! yükseliş avantajı olmadan:$MOD_POP_AMENITIES_USAGE_MULT$: §R+50%§!"
+ 
+ 
+ MJ25_WH_trait_truthcursed:0 "Hakikat Lanetlisi"
+ MJ25_WH_trait_truthcursed_desc:1 "Parçalanmış Hakikat'in bir parçası zihinlerimize yerleşti ve bizi çatlamış ve çökmekte bıraktı."
+ MJ25_WH_trait_truthcursed_tooltip:"Yıldızların şarkısıyla dokunulmuş.\n\n§rDokudaki Fısıltılar§! Yükseliş Avantajı olmadan:$TABBED_NEW_LINE$- İş Verimliliği: §R-10%§!$TABBED_NEW_LINE$- Mutluluk: §R-25%§!\n\n§RUYARI:§! §rHakikat Lanetlisi'nin§! şarkısı gezegenin çöküşüne yol açabilir."
+ MJ25_WH_truthcursed_affix:"Hakikat Lanetlisi"
+ 
+ MJ25_WH_trait_truthcursed_gestalt: "$MJ25_WH_trait_truthcursed$"
+ MJ25_WH_trait_truthcursed_gestalt_desc: "$MJ25_WH_trait_truthcursed_desc$"
+ MJ25_WH_trait_truthcursed_gestalt_tooltip:"Yıldızların şarkısıyla dokunulmuş.\n\n§rDokudaki Fısıltılar§! Yükseliş Avantajı olmadan:$TABBED_NEW_LINE$- İş Verimliliği: §R-10%§!$TABBED_NEW_LINE$- $MOD_POP_AMENITIES_USAGE_MULT$: §R+25%§!\n\n§RUYARI:§! §rHakikat Lanetlisi'nin§! şarkısı gezegenin çöküşüne yol açabilir."
+ 
+ MJ25_WH_word_bearer:"Söz Taşıyıcı"
+ MJ25_WH_word_bearer_desc:"Onların Sesi, bu zihinleri yıldızların şarkısını yankılayan çarpık akorlara dönüştürdü. Artık toplum içinde normal şekilde işleyemezler."
+ 
+ MJ25_WH_word_bearer_gestalt: "$MJ25_WH_word_bearer$"
+ MJ25_WH_word_bearer_gestalt_desc: "$MJ25_WH_word_bearer_desc$"
+ 
+ # MJ25_WH_word_bearer_tt: "§G+25%§! $mod_pop_cat_worker_bonus_workforce_mult$\n§G-50%§! $mod_pop_cat_specialist_bonus_workforce_mult$ \n§R-20%§! $MOD_POP_HAPPINESS$ or §R+30%§! $MOD_POP_AMENITIES_USAGE_MULT$ if in a gestalt empire." #\n\n$TRAIT_NERVE_STAPLED_EFFECT$
+ 
+ MJ25_WH_trait_starsong_vessel:"Yıldız Şarkısı Kabı"
+ MJ25_WH_trait_starsong_vessel_desc:"Onların sözlerinin parçaları bu boşaltılmış kabı dolduruyor, onları sonsuz bir Hakikat'e gittikçe yaklaştırıyor."
+ MJ25_WH_trait_starsong_vessel_tt:"İş Verimliliği: §G+30%§!\n\n§rDokudaki Fısıltılar§! Yükseliş Avantajı olmadan:$TABBED_NEW_LINE$- §R-999%§! $MOD_POP_HAPPINESS$"
+ 
+ MJ25_WH_trait_starsong_vessel_gestalt: "$MJ25_WH_trait_starsong_vessel$"
+ MJ25_WH_trait_starsong_vessel_gestalt_desc: "$MJ25_WH_trait_starsong_vessel_desc$"
+ MJ25_WH_trait_starsong_vessel_gestalt_tt:"İş Verimliliği: §G+30%§!\n\n§rDokudaki Fısıltılar§! Yükseliş Avantajı olmadan:$TABBED_NEW_LINE$- §R+100%§! $MOD_POP_AMENITIES_USAGE_MULT$"
+ #MJ25_WH_word_bearer_tt: "$mod_pop_cat_worker_bonus_workforce_mult$: §G+25%§!$TABBED_NEW_LINE$- $mod_pop_cat_specialist_bonus_workforce_mult$: §R-75%§!$TABBED_NEW_LINE$- $MOD_POP_HAPPINESS$: §R-20%§! or $MOD_POP_AMENITIES_USAGE_MULT$: §R+30%§! if in a gestalt empire." #\n\n$TRAIT_NERVE_STAPLED_EFFECT$
+ 
+ 
+ MJ25_WH_shattered_whispervault:"Parçalanmış Fısıltı Mahzeni"
+ MJ25_WH_shattered_whispervault_desc:"Anlaşılmaz bir güç tarafından kullanılamaz hale parçalanan bu fısıltı mahzeni, karayı düşüncelerle dolu bir bataklığa dönüştüren yoğun bir şekilde yayılan §rYıldız Şarkısı Yankıları§! sızdırıyor."
+ 
+ MJ25_WH_singing_whispervault:"Şarkı Söyleyen Fısıltı Mahzeni"
+ MJ25_WH_singing_whispervault_desc:"Bir zamanlar parçalanmış olsa da, bu fısıltı mahzeni onarıldı. Salonları hala Onların sesiyle yüceltilmiş durumda, şimdi uyumlu bir şarkıda yankılanan ve parıldayan."
+ 
+ MJ25_WH_songflare_resonance:0 "Şarkı Parlaması Yankısı"
+ MJ25_WH_songflare_resonance_desc:0 "Hakikat Lanetlileri bu gezegenden temizlenmiş olsa da, uyumsuz sesleri hala sessiz, yıldızlı gecelerde yankılanmaya devam ediyor."
+ 
+ 
+ MJ25_WH_oratorium:0 "Oratorium di Veria"
+ MJ25_WH_oratorium_desc:0 "§rDokudaki Fısıltılar§! üzerine yaptığımız araştırmanın doruk noktası bu büyük salonda yükseliyor, buradan yakında Hakikat'i sonsuza dek söyleyeceğiz."
+ MJ25_WH_oratorium_tt:"Son bir perde için hazırlanmış bir sahne."
+ 
+ decision_MJ25_WH_one_empty_echoing_word:"Tek Bir Boş, Yankılanan Söz"
+ decision_MJ25_WH_one_empty_echoing_word_desc:"Bozulmuş seslerimizle bile, dillerini telaffuz etmek gerçekliğin kendisini çarpıtıyor. Zihinlerimize yapışıyor, bizi yükselmeye teşvik ederken büyüyor. Bunu yapmak kaçınılmaz olarak tonunu duyan herkesin sesini serbest bırakacak ve hatta böylesine ağır bir Söz'ün söylendiği gezegenin kendisinin de. Bu, isteyerek katlanacağımız bir bedeldir.\n\n5 yıl boyunca mutluluğa ve üretime artan bonuslar sağlar. 5 yıl sonra, gezegen §rçökecek§!."
+ 
+ edict_MJ25_WH_voidwrought_ciphers:0 "Boşluktan İşlenmiş Şifreler"
+ edict_MJ25_WH_voidwrought_ciphers_desc:0 "Kriptografi çabalarımızı geliştirmek için Onların bozuk, parçalanmış sözlerinden ilham alabiliriz."
+ 
+ edict_MJ25_WH_battle_songs:0 "Savaş Şarkıları"
+ edict_MJ25_WH_battle_songs_desc:0 "Onların sözlerinin küçük bir parçasını bile savaşta kullanmak özen ve dikkat gerektirir, ancak sonuç gemilerimizin savaş yetenekleri için yıkıcı bir gelişmedir."
+ 
+ edict_MJ25_WH_words_wisdom:0 "Bilgelik Sözleri"
+ edict_MJ25_WH_words_wisdom_desc:0 "Sıradan, günlük içgörüler bile, zihinlerini onlara açanlar için gıdıklayan fısıltılarda bulunabilir."
+ 
+ edict_MJ25_WH_words_wisdom_gestalt:0 "Bilgelik Sözleri"
+ edict_MJ25_WH_words_wisdom_gestalt_desc:0 "Sıradan, günlük içgörüler bile, zihinlerini onlara açanlar için gıdıklayan fısıltılarda bulunabilir."
+ 
+ edict_MJ25_WH_ship_modules:"Kabaran Olasılık"
+ edict_MJ25_WH_ship_modules_desc:"Ne kadar yüksek sesle şarkı söylersek, o kadar çok duyuluruz. Yeterince gürültü yaparsak her kural yeniden yazılabilir."
+ edict_MJ25_WH_ship_modules_2:"Kabaran Olasılık"
+ edict_MJ25_WH_ship_modules_2_desc:"Ne kadar yüksek sesle şarkı söylersek, o kadar çok duyuluruz. Yeterince gürültü yaparsak her kural yeniden yazılabilir."
+ edict_MJ25_WH_ship_modules_3:"Kabaran Olasılık"
+ edict_MJ25_WH_ship_modules_3_desc:"Ne kadar yüksek sesle şarkı söylersek, o kadar çok duyuluruz. Yeterince gürültü yaparsak her kural yeniden yazılabilir."
+ edict_MJ25_WH_ship_modules_4:"Kabaran Olasılık"
+ edict_MJ25_WH_ship_modules_4_desc:"Ne kadar yüksek sesle şarkı söylersek, o kadar çok duyuluruz. Yeterince gürültü yaparsak her kural yeniden yazılabilir."
+ edict_MJ25_WH_ship_modules_5:"Kabaran Olasılık"
+ edict_MJ25_WH_ship_modules_5_desc:"Ne kadar yüksek sesle şarkı söylersek, o kadar çok duyuluruz. Yeterince gürültü yaparsak her kural yeniden yazılabilir."
+ edict_MJ25_WH_ship_modules_6:"Kabaran Olasılık"
+ edict_MJ25_WH_ship_modules_6_desc:"Ne kadar yüksek sesle şarkı söylersek, o kadar çok duyuluruz. Yeterince gürültü yaparsak her kural yeniden yazılabilir."
+ 
+ sc_MJ25_WH_missing_star:"Kayıp Yıldız"
+ 
+ pc_MJ25_WH_missing_star:"Kayıp Yıldız"
+ pc_MJ25_WH_missing_star_desc:"Bu yıldız esrarengiz bir şekilde ortadan kayboldu..."
+ pc_MJ25_WH_missing_planet:"Kayıp Gezegen"
+ pc_MJ25_WH_missing_planet_desc:"Bu gezegen esrarengiz bir şekilde ortadan kayboldu..."
+ 
+ MJ25_WH_storm_spreader:"Yeni Doğan Şarkıparlaması"
+ MJ25_WH_storm_spreader_plural:"Yeni Doğan Şarkıparlamaları"
+ MJ25_WH_storm_spreader_desc:"Bir Koronun sesi boşlukta yankılanarak potansiyelinin fırtınasını var ediyor."
+ 
+ MJ25_WH_WHISPER_CORVETTE_CLOAKING:"Fısıltı Örtüsü"
+ MJ25_WH_WHISPER_DESTROYER_CLOAKING:"Fısıltı Örtüsü"
+ MJ25_WH_WHISPER_CRUISER_CLOAKING:"Fısıltı Örtüsü"
+ MJ25_WH_WHISPER_BATTLESHIP_CLOAKING:"Fısıltı Örtüsü"
+ MJ25_WH_WHISPER_SCIENCE_CLOAKING:"Fısıltı Örtüsü"
+ 
+ #CWTools added this one. Might be missing from Vanilla?
+ pc_cosmogenesis_world_adj:"Sinaptik Torna"

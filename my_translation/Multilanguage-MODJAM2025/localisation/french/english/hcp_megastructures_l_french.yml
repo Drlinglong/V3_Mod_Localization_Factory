@@ -1,0 +1,78 @@
+﻿l_french:
+##################
+# hcp_megastructures_l_english.yml
+# By jam1066
+##################
+
+ #start
+
+ ####################
+ # Singularity Silo #
+ ####################
+ hcp_singularity_silo:"Silo de singularité"
+ hcp_requires_no_existing_singularity_silo:"$TRIGGER_FAIL$Impossible de construire plus d'un $hcp_singularity_silo$."
+ hcp_requires_stable_system:"$TRIGGER_FAIL$Trop de §Y$pc_black_hole$s§! dans ce système."
+
+ hcp_singularity_silo_1:"$hcp_singularity_silo$ : Capacité 25 %"
+ hcp_singularity_silo_1_DESC:"Ce $hcp_singularity_silo$ est l'ultime installation de stockage. Bien qu'il ne soit que partiellement achevé, il peut déjà contenir de vastes quantités de ressources."
+ hcp_singularity_silo_1_MEGASTRUCTURE_DETAILS:"Une gigantesque installation de stockage, construite en utilisant la capacité infinie d'un §YTrou noir§!."
+
+ hcp_singularity_silo_2:"$hcp_singularity_silo$ : Capacité 50 %"
+ hcp_singularity_silo_2_DESC:"Ce $hcp_singularity_silo$ est l'ultime installation de stockage. Bien qu'il ne soit que partiellement achevé, il peut déjà contenir de vastes quantités de ressources."
+ hcp_singularity_silo_2_MEGASTRUCTURE_DETAILS:"Une gigantesque installation de stockage, construite en utilisant la capacité infinie d'un §YTrou noir§!."
+
+ hcp_singularity_silo_3:"$hcp_singularity_silo$ : Capacité 75 %"
+ hcp_singularity_silo_3_DESC:"Ce $hcp_singularity_silo$ est l'ultime installation de stockage. Bien qu'il ne soit que partiellement achevé, il peut déjà contenir de vastes quantités de ressources."
+ hcp_singularity_silo_3_MEGASTRUCTURE_DETAILS:"Une gigantesque installation de stockage, construite en utilisant la capacité infinie d'un §YTrou noir§!."
+
+ hcp_singularity_silo_4: "$hcp_singularity_silo$"
+ hcp_singularity_silo_4_DESC:"Le $hcp_singularity_silo$ achevé est le summum des réalisations de notre civilisation. Il est capable d'abriter toute notre population et peut stocker les ressources nécessaires à son maintien indéfini."
+ hcp_singularity_silo_4_MEGASTRUCTURE_DETAILS:"Une gigantesque installation de stockage, construite en utilisant la capacité infinie d'un §YTrou noir§!."
+
+ hcp_NAME_Sanctuary_A:"Sanctuaire A"
+ hcp_NAME_Sanctuary_B:"Sanctuaire B"
+ hcp_NAME_Sanctuary_C:"Sanctuaire C"
+ hcp_NAME_Sanctuary_D:"Sanctuaire D"
+
+ # Districts
+ hcp_district_ring_world_minerals:"Segment d'extraction"
+ hcp_district_ring_world_minerals_plural:"$hcp_district_ring_world_minerals$s"
+ hcp_district_ring_world_minerals_desc:"De gigantesques appareils d'extraction s'étendent de ce segment d'anneau vers le Silo de singularité, extrayant les minéraux nécessaires."
+
+ #Zones
+ hcp_zone_minerals_ring_world: "$zone_minerals$"
+ hcp_zone_minerals_ring_world_desc: "$zone_minerals_triggered_desc$"
+
+ #Decisions
+ hcp_decision_expand_sanctuary:"Étendre le Sanctuaire"
+ hcp_decision_expand_sanctuary_desc:"Étendre la section habitable du Sanctuaire de notre Silo de singularité."
+ hcp_decision_repair_sanctuary:"Réparer le Sanctuaire"
+ hcp_decision_repair_sanctuary_desc:"Ce sanctuaire est toujours nécessaire à notre population. Nous devons le réparer du mieux que nous pouvons."
+ hcp_decision_unshield_sanctuary:"Désactiver le bouclier du Sanctuaire"
+ hcp_decision_unshield_sanctuary_desc:"Ce sanctuaire est toujours nécessaire à notre population. Nous devons faire tomber ce bouclier, quel qu'en soit le coût."
+
+ ####################
+ # Orbital Quarrier #
+ ####################
+ hcp_orbital_quarrier:"Carrière orbitale"
+ hcp_orbital_quarrier_DESC:"Ce $hcp_orbital_quarrier$ est actuellement en train de démanteler la planète qu'il orbite."
+ hcp_orbital_quarrier_MEGASTRUCTURE_DETAILS:"Une grande station minière orbitale, capable de démanteler des planètes entières."
+
+ hcp_requires_not_capital:"$TRIGGER_FAIL$Impossible de construire autour de notre capitale"
+ hcp_requires_not_gas_giant:"$TRIGGER_FAIL$Impossible de construire autour d'une géante gazeuse"
+ hcp_requires_no_deposit:"$TRIGGER_FAIL$Impossible de construire sur des planètes avec un gisement orbital"
+ hcp_requires_min_size:"$TRIGGER_FAIL$Impossible de construire sur des petites planètes et astéroïdes"
+
+ ######################
+ # Stellar Harvesters #
+ ######################
+ hcp_stellar_harvester_prototype:"Prototype de $hcp_NAME_Stellar_Harvester$"
+ hcp_stellar_harvester_prototype_DESC:"Un §Y$hcp_NAME_Stellar_Harvester$§! est un gigantesque vaisseau de contrôle de drones capable de récolter des ressources équivalentes à des systèmes solaires entiers."
+ hcp_stellar_harvester_prototype_MEGASTRUCTURE_DETAILS:"Nous ne pouvons pas nous permettre d'être exigeants quant aux ressources que nous collectons. Les $hcp_NAME_Stellar_Harvester$s nous permettront de tout prendre efficacement."
+
+ hcp_stellar_harvester: "$hcp_NAME_Stellar_Harvester$"
+ hcp_stellar_harvester_DESC:"Un §Y$hcp_NAME_Stellar_Harvester$§! est un gigantesque vaisseau de contrôle de drones capable de récolter des ressources équivalentes à des systèmes solaires entiers."
+ hcp_stellar_harvester_MEGASTRUCTURE_DETAILS:"Nous ne pouvons pas nous permettre d'être exigeants quant aux ressources que nous collectons. Les $hcp_NAME_Stellar_Harvester$s nous permettront de tout prendre efficacement."
+ MEGASTRUCTURE_TOOLTIP_REQUIREMENTS_STELLAR_HARVESTER:"Chaque empire ne peut construire qu'une seule $MEGASTRUCTURE$, en orbite de son $hcp_singularity_silo$."
+
+ #end

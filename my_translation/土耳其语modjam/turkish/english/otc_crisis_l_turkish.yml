@@ -1,0 +1,377 @@
+﻿## OTC Localisation
+# Created by Accorata & BrettlesSr
+
+l_turkish:
+
+## Crisis Resource ##
+  otc_temporal_fabric:"Zaman Kumaşı"
+  otc_temporal_fabric_with_icon:"£otc_temporal_fabric£ $otc_temporal_fabric$"
+  otc_temporal_fabric_name: "$otc_temporal_fabric$"
+  otc_temporal_fabric_value:"£otc_temporal_fabric£ $VAL|0$"
+  otc_temporal_fabric_current_value:"Mevcut Değer: §Y$VALUE|0$§!"
+  otc_temporal_fabric_gaining:"Daha fazla §Y$otc_temporal_fabric_with_icon$§! kazanmak için §HKriz Hedefleri§!ni tamamlayın."
+  otc_temporal_fabric_desc:"Zaman Kumaşı, en gelişmiş krono-bilimlerimizin bir ürünü olan bükülmüş zamandır."
+
+## Crisis Information ##
+# Ascension Perk
+  otc_ap_omnitemporal:"Tüm-Zamansal"
+  otc_ap_omnitemporal_desc:"Binlerce yıldır türümüz istemeden zamanın içinde ileriye savruldu. Artık değil. Zaman, fiziksel boyutlardan yalnızca biri haline gelecek – kolaylıkla geçilebilir."
+
+# Other
+  otc_temporal_fabric_crisis_objective:"Kriz Hedefleri"
+  otc_temporal_fabric_crisis_objective_gained:"Kazanılan $otc_temporal_fabric$"
+  otc_temporal_fabric_crisis_objective_reward: "$REWARD$"
+  otc_temporal_fabric_crisis_objective_progress:"Bu Kriz Hedefinden £otc_temporal_fabric£ $AMOUNT$ kazandık."
+
+  otc_temporal_fabric_crisis_description_title:"$otc_ap_omnitemporal$ Krizi"
+  otc_temporal_fabric_crisis_description:"$menace_crisis_description_intro$\n\nEvrendeki hakimiyetimiz uzayın sıradan boyutlarıyla kısıtlanamaz. Bunun yerine, zamanın kendisini fethedip her olası zaman çizgisinde yüce bir şekilde hüküm süreceğiz."
+  otc_temporal_fabric_crisis_howto_title:"Zamanın Hakimiyeti"
+  otc_temporal_fabric_crisis_howto:"§HKriz Hedefleri§!ni takip etmek, zamanın kendisini manipüle etmemizi sağlayacak §H$otc_temporal_fabric_with_icon$§! üretir."
+
+  otc_temporal_fabric_crisis_level_unlocked:"$LEVEL$ seviyesinde şu ödülleri alırsınız:\n"
+  otc_temporal_fabric_crisis_level_locked:"Bu seviyenin kilidini açmak için gerekenler:\n"
+  otc_temporal_fabric_crisis_level_unlock:"£otc_temporal_fabric£ §Y$CURRENCY$§! $otc_temporal_fabric$ içerir."
+  otc_temporal_fabric_crisis_level_desc:"Kriz seviyelerinde ilerlemek için §H$otc_temporal_fabric_with_icon$§! biriktirin, §HZamansal Anomaliler§!i tamamlayın ve §H$otc_omnitemporal_kilostructure_plural$§! inşa edin."
+
+## Crisis Objectives ##
+  otc_crisobj_physicist_production_name:"Fizikçileri Görevlendirin" # the amount here doesn't display properly - most likely a rounding issue
+  otc_crisobj_physicist_production_desc:"Evrenin doğal işleyişi üzerine yaptıkları çalışmalar sayesinde, zamanın sırları er ya da geç ortaya çıkacaktır.\n\nBu $otc_temporal_fabric$ ödülünü kazanmak için fizikçileri görevlendirin."
+  otc_crisobj_research_archeological_sites_name:"Arkeolojik Alanları Kazın"
+  otc_crisobj_research_archeological_sites_desc:"Geçmişe dalmalı ve onun kadim bilgisini ortaya çıkarmalıyız.\n\nBu $otc_temporal_fabric$ ödülünü kazanmak için arkeolojik alanları tamamen kazın."
+  otc_crisobj_research_time_anomaly_name:"Zamansal Anomalileri Araştırın"
+  otc_crisobj_research_time_anomaly_desc:"Bu esrarlar zaman hakkındaki anlayışımızın dışında işler. Sırlarını açığa çıkarmamız elzemdir.\n\nBu $otc_temporal_fabric$ ödülünü kazanmak için zamansal anomalileri araştırın."
+  otc_crisobj_research_anomaly_name:0 "Anomalileri Araştırın"
+  otc_crisobj_research_anomaly_desc:0 "Her gizem, bilgi için, geçmiş, şimdi ve gelecekteki yerimizi anlamak için bir fırsat yaratır.\n\nBu $otc_temporal_fabric$ ödülünü kazanmak için anomalileri araştırın."
+  otc_crisobj_activate_relic_name:0 "Kalıntıları Etkinleştirin"
+  otc_crisobj_activate_relic_desc:0 "Geçmiş çağların araçları bugün bile güçlüdür. Daha fazla kullanım, köken aldıkları zamanı ortaya çıkarabilir.\n\nBu $otc_temporal_fabric$ ödülünü kazanmak için kalıntıları etkinleştirin."
+
+## Crisis Levels ##
+  otc_crisis_omnitemporal_level_1:"§BKaygı§!"
+  otc_crisis_omnitemporal_level_1_desc:"Kriz Seviyesi 1"
+  otc_crisis_omnitemporal_level_2:"§BRisk§!"
+  otc_crisis_omnitemporal_level_2_desc:"Kriz Seviyesi 2"
+  otc_crisis_omnitemporal_level_3:"§BTehlike§!"
+  otc_crisis_omnitemporal_level_3_desc:"Kriz Seviyesi 3"
+  otc_crisis_omnitemporal_level_4:"§BFelaket§!"
+  otc_crisis_omnitemporal_level_4_desc:"Kriz Seviyesi 4"
+  otc_crisis_omnitemporal_level_5:"§BVaroluşsal Tehdit§!"
+  otc_crisis_omnitemporal_level_5_desc:"Kriz Seviyesi 5"
+
+## Crisis Perks ##
+# Level 1
+  menp_otc_omnitemporal_objectives: "$otc_temporal_fabric$"
+  menp_otc_omnitemporal_objectives_desc:"$otc_temporal_fabric$, zamanı kendi irademize göre bükme yeteneğimizi temsil eder."
+  unlocks_otc_omnitemporal_objectives:"§HKriz Hedefleri§! tamamlanarak §Y$otc_temporal_fabric_with_icon$§! birikimini sağlar.\n\n"
+  mod_planet_physicists_otc_temporal_fabric_produces_add:"$otc_temporal_fabric_with_icon$ başına $pop_group_unit$ $job_physicist_plural_with_icon$"
+
+  menp_otc_time_shields:"Zamansal Askı"
+  menp_otc_time_shields_desc:"Kadimler, gelen silahları etkisiz hale getirmek için zamanı stratejik olarak yavaşlatan güçlü savunmalar geliştirdi. Zamansal doku, bu özellikleri çoğaltmak için yeni bir yol sunuyor."
+  unlocks_otc_time_shields:"§Y$OTC_TIME_SHIELD$§! Kalkan Bileşenlerinin kilidini açar."
+  unlocks_otc_time_shields_bio:"§Y$OTC_BIO_TIME_SHIELD$§! Kalkan Bileşenlerinin kilidini açar."
+  OTC_TIME_SHIELD:"Gelişmiş Askı Alanı"
+  OTC_TIME_SHIELD_DESC:"$OTC_TIME_SHIELD$lar, kadim eserleri kullanarak darbe noktasında zamanı yavaşlatıp gelen saldırının enerjisini dağıtmak için daha uzun bir fırsat tanıyan kadim askı teknolojisinden modellenmiştir. Zamansal dokunun gücüyle, bu tasarımlar önemli ölçüde modernize edilmiştir."
+  OTC_SMALL_TIME_SHIELD:"Küçük $OTC_TIME_SHIELD$"
+  OTC_MEDIUM_TIME_SHIELD:"Orta $OTC_TIME_SHIELD$"
+  OTC_LARGE_TIME_SHIELD:"Büyük $OTC_TIME_SHIELD$"
+  OTC_BIO_TIME_SHIELD:"Gelişmiş Askı Dokusu"
+  OTC_BIO_TIME_SHIELD_DESC:"$OTC_BIO_TIME_SHIELD$, kadim eserleri kullanarak darbe noktasında zamanı yavaşlatıp gelen saldırının enerjisini dağıtmak için daha uzun bir fırsat tanıyan kadim askı teknolojisinden modellenmiştir. Zamansal dokunun gücüyle, bu tasarımlar önemli ölçüde modernize edilmiştir."
+  OTC_SMALL_BIO_TIME_SHIELD:"Küçük $OTC_BIO_TIME_SHIELD$"
+  OTC_MEDIUM_BIO_TIME_SHIELD:"Orta $OTC_BIO_TIME_SHIELD$"
+  OTC_LARGE_BIO_TIME_SHIELD:"Büyük $OTC_BIO_TIME_SHIELD$"
+
+  menp_otc_secrets_of_the_past:"Geçmişin Sırları"
+  menp_otc_secrets_of_the_past_desc:"Bir zamanlar var olan dünyalara bir göz atmak istiyorsak, bugün kalan kalıntılardan başlamalıyız. Bir zamanlar var olanın eserleri, ne olduğunu ve ne olacağını ortaya çıkarır."
+  unlocks_otc_secrets_of_the_past:"£minor_artifacts£Küçük Eserleri kullanarak bir Zamansal Anomali oluşturan §Y$artifact_otc_chronological_studies$§! Küçük Eser Kararını açar.\n\n"
+  unlocks_otc_secrets_of_the_past_no_ancrel:"Tamamlandığında bir Zamansal Anomali oluşturan §Y$otc_chronological_studies_project$§! Özel Projesini başlatır.\n\n$mod_scientist_exp_gain$: §G+%20§!"
+  otc_secrets_of_the_past_no_ancrel: "$menp_otc_secrets_of_the_past$"
+
+  # Minor Artifact Decision
+  artifact_otc_chronological_studies:"Kronolojik Çalışmalar"
+  artifact_otc_chronological_studies_desc:"En iyi krono-bilim insanlarımız, geçmişlerinde bir zamansal anomaliye dair herhangi bir ipucu aramak için küçük eserleri çözümleyip inceleyecek."
+  artifact_otc_chronological_studies_effect:"£minor_artifacts£Küçük Eserleri çözümleyerek bir Zamansal Anomali oluştur.\n\nBekleme Süresi: £time£ §Y360§!"
+
+  requires_artifact_otc_chronological_studies_no_cooldown:"$TRIGGER_FAIL$§RKüçük eserler, henüz başka bir zamansal anomali oluşturmak için kullanılamaz.§!"
+  artifact_otc_chronological_studies_cooldown:0 "Kronolojik Çalışmalar Bekleme Süresi"
+
+  # Special Project
+  otc_chronological_studies_project: "$artifact_otc_chronological_studies$"
+  otc_chronological_studies_project_desc:"Bir zamansal anomaliye —zamanın normal akışındaki bir tuhaflığa— dair bir ipucu edindik. Onu tespit etmek için bilimsel kaynaklarımızı adamalıyız."
+
+# Level 2
+  menp_otc_timeless_studies:"Zamansız Çalışmalar"
+  menp_otc_timeless_studies_desc:"Zamansal bilimleri incelemek için en iyi yerler, inanılmaz kütle çekim kuvvetlerinin zamanın sıradan akışını doğal evrenin başka hiçbir yerinde görülmeyen sapmalara tabi tuttuğu kara deliklerin ve nötron yıldızlarının etrafında bulunur."
+
+  unlocks_otc_timeless_studies:"§YKara Delikler§! ve §YNötron Yıldızları§! çevresine §Y$otc_omnitemporal_kilostructure$§! Megayapılarını inşa etmemizi sağlar.\n\n"
+
+  # Kilostructure
+  otc_omnitemporal_kilostructure:"Zamandışı Araştırma Bölgesi"
+  otc_omnitemporal_kilostructure_plural:"$otc_omnitemporal_kilostructure$lar"
+  otc_atemporal_research_zone: "$otc_omnitemporal_kilostructure$"
+  otc_atemporal_research_zone_DESC:"Zaman içinde mühürlenmiş gizli bir merkez olan bu gizli araştırma tesisi, §YZamansal Anomaliler§! üreten tehlikeli deneyler yapar."
+  otc_atemporal_research_zone_MEGASTRUCTURE_DETAILS:"Zaman içinde mühürlenmiş gizli bir merkez olan bu gizli araştırma tesisi, §YZamansal Anomaliler§! üreten tehlikeli deneyler yapar."
+  MEGASTRUCTURE_TOOLTIP_REQUIREMENTS_OTC_ARZ:"Bir Kara Deliğin veya Nötron Yıldızının yörüngesinde inşa edilmeli."
+  otc_atemporal_research_zone_effects:"Sınırlarınız içindeki çeşitli gök cisimlerinde rastgele §YZamansal Anomaliler§! üretecek.\n\nAnomalilerin üretilme hızı, aktif olarak sahip olduğumuz $otc_omnitemporal_kilostructure_plural$ sayısına göre artar."
+  otc_requires_black_hole_or_neutron_star:"$TRIGGER_FAIL$Bir $pc_black_hole$ veya $pc_neutron_star$ etrafına inşa edilmelidir."
+  otc_requires_less_than_x_arz:"$TRIGGER_FAIL$Aynı anda [owner.OtcGetARZLimit] $otc_omnitemporal_kilostructure_plural$dan fazlasını sürdüremeyiz."
+  mod_otc_arz_limit_add:"$otc_omnitemporal_kilostructure$ Kapasitesi"
+
+  menp_otc_weaponized_relativity:"Silahlandırılmış Görelilik"
+  menp_otc_weaponized_relativity_desc:"Uzmanlaşmış kronoton patlamaları, düşman gemilerini dört boyutta da parçalayabilir - ancak aynı zamanda hedef zaman çerçevesini kendimize göre yavaşlatarak önemli taktiksel avantaj sağlar."
+  unlocks_otc_weaponized_relativity:"§Y$OTC_TIME_BEAM$§! Silahlarının kilidini açar, bunlar Düşman Gemilerini ve Mermilerini yavaşlatan lazerler ateşler."
+  OTC_TIME_BEAM:"Eon Işını"
+  OTC_TIME_BEAM_DESC:"$OTC_TIME_BEAM$, düşman gemilerine hasar veren ve referans çerçevelerini yavaşlatan kronoton patlamaları yansıtır."
+  OTC_SMALL_TIME_BEAM:"Küçük $OTC_TIME_BEAM$"
+  OTC_MEDIUM_TIME_BEAM:"Orta $OTC_TIME_BEAM$"
+  OTC_LARGE_TIME_BEAM:"Büyük $OTC_TIME_BEAM$"
+  otc_time_beam_1_tt:"Düşman Gemilerini ve Mermilerini §Y5§! Gün boyunca §G%25§! oranında yavaşlatır"
+  otc_time_beam_2_tt:"Düşman Gemilerini ve Mermilerini §Y15§! Gün boyunca §G%25§! oranında yavaşlatır"
+  otc_time_beam_3_tt:"Düşman Gemilerini ve Mermilerini §Y35§! Gün boyunca §G%25§! oranında yavaşlatır"
+  otc_distorted_field:"Zamansal Bozulma"
+  mod_weapon_type_energy_speed_mult:"Enerji Silahı Hızı"
+  mod_weapon_type_kinetic_speed_mult:"Kinetik Silah Hızı"
+  mod_weapon_type_explosive_speed_mult:"Patlayıcı Silah Hızı"
+  mod_weapon_type_point_defense_speed_mult:"Nokta Savunma Silahı Hızı"
+  mod_weapon_type_space_fauna_speed_mult:"Uzay Faunası Silah Hızı"
+  mod_weapon_type_mandible_speed_mult:"Çene Silahı Hızı"
+
+  menp_otc_secrets_of_the_present:"Şimdinin Sırları"
+  menp_otc_secrets_of_the_present_desc:"Zamansal bilimlerde ustalık, bilimsel elitimizin ilk çağrısı haline geldi ve hem akademik kuruluşu hem de rutin keşif çalışmalarının pratiğini devrimleştirdi."
+
+  menp_otc_prolonged_lifespans:"Uzatılmış Yaşam Süreleri"
+  menp_otc_prolonged_lifespans_desc:"Dikkatli zamansal manipülasyon yoluyla biyolojik yaşlanmayı yavaşlatarak, liderlerimiz daha uzun, daha verimli bir ömür sürebilir."
+  menp_otc_prolonged_lifespans_machine_desc:"Dikkatli zamansal manipülasyon yoluyla mekanik aşınma hızını yavaşlatarak, liderlerimiz daha uzun, daha verimli bir ömür sürebilir."
+
+# Level 3
+  menp_otc_across_timelines:"Zaman Çizelgeleri Boyunca"
+  menp_otc_across_timelines_desc:"Zaman düz bir çizgi değildir; o, dallanan bir evren, sonsuz bir zaman çizelgeleri dizisidir. Şimdi, nihayet, onlara ulaşma teknolojisi elimizin altındadır."
+  unlocks_otc_across_timelines:"§Y$tech_otc_travel_timelines$§! Teknolojisinin kilidini açar, bu teknoloji daha etkili Zamansal Anomali'lere yol açacaktır.\n\n"
+
+  # Tech
+  tech_otc_travel_timelines:"Zaman Çizelgelerinde Seyahat"
+  tech_otc_travel_timelines_desc:"Nihayet başka zaman çizelgelerine seyahat edebiliriz, bu bize potansiyel olarak sonsuz evrenlere erişim sağlar ve avantajımıza kullanabileceğimiz daha güçlü zamansal anomaliler yaratırız."
+  tech_otc_travel_timelines_effects_title:"Daha etkili §HZamansal Anomali'ler§! meydana gelebilir\n§H$otc_ap_omnitemporal$§! Kriz §HSeviye 4§! kilidini açar!"
+  tech_otc_travel_timelines_effects_desc:"§H$tech_otc_travel_timelines$§!\n$tech_otc_travel_timelines_desc$"
+
+  menp_otc_temporal_shell:0 "Zamansal Kabuk"
+  sm_otc_temporal_shell:0 "Zamansal Kabuk Jeneratörü"
+  sm_otc_temporal_shell_desc:0 "Zamansal Kabuk Jeneratörü, tüm bir güneş sisteminde zamanın akış hızını yavaşlatma kapasitesine sahip devasa bir uzay-zaman manipülasyon motorudur. Habitatlar ve kendi gezegenlerimiz gibi yerçekimi kuyularındaki cisimler etkilenmezken, her boyuttaki uzay araçları ve ateşledikleri herhangi bir silah önemli ölçüde yavaşlatılabilir."
+  sm_otc_temporal_shell_desc_modifier:0 "Sistemde bir §YYapay Fırtına§! yaratır:\n§YGemi Hızını§! ve §YAteş Hızını§! azaltır!"
+  menp_otc_temporal_shell_desc:0 "Tüm bir güneş sisteminde zamanı manipüle etme yeteneği, gerçekten olağanüstü savunma yapılarının potansiyelini açar - komşularımızın zamansal deneylerimize yönelik mantıksız itirazları göz önüne alındığında faydalıdır."
+  unlocks_otc_temporal_shell_aura:0 "§Y$sm_otc_temporal_shell$§! Yıldız Üssü Binasının kilidini açar, bu bina Alt Işık Hızlarını ve Silah Ateşleme Oranlarını azaltır."
+  otc_temporal_shell_aura:0 "Zamansal Kabuk"
+
+  menp_otc_secrets_of_the_future:0 "Geleceğin Sırları"
+  menp_otc_secrets_of_the_future_desc:0 "Özel eğitimli ajanlar, geleceğe mikro sıçramalar yaparak yakında keşfedeceğimiz çeşitli içgörüler getirir. Bu içgörüler, ajanların edindiği bilginin temelini oluşturur, ancak bu paradoksları daha sonraki bir tarihte çözmeyi tercih ederiz."
+
+  menp_otc_accelerated_infancy:0 "Hızlandırılmış Bebeklik"
+  menp_otc_accelerated_infancy_desc:0 "Gelecekteki liderlerin ve sivillerin değerli yaşam sürelerini doğal bir bebeklik dönemini salyangoz hızında geçirerek israf etmeleri yerine, yeni programımız, bireylerin doğumdan yaşamlarının daha üretken bir aşamasına tek bir günde geçmelerini sağlar."
+
+# Level 4
+  menp_otc_the_greatest_timeline:"En Büyük Zaman Çizelgesi"
+  menp_otc_the_greatest_timeline_desc:"Eksik olduğumuz her kaynak için, başka bir zaman çizelgesinde bolluk içinde olduğumuz bir versiyonumuz mevcuttur. Alternatif benliklerimizle (ki onlar da şans eseri tam olarak aynı düşünceye sahipler) ağ kurarak, bir daha asla hiçbir kıtlıkla karşılaşmamamızı sağlayabiliriz."
+  unlocks_otc_the_greatest_timeline:0 "Kaynaklar Aylık Olarak §YAzalamaz§!.\n\n"
+
+  menp_otc_spacetime_sever:"Uzay-Zaman Ayrılması"
+  menp_otc_spacetime_sever_desc:"Kronoton silahlarının zirvesi olan Uzay-Zaman Ayrılması projektörleri, düşmanlarımızı uzay-zaman sürekliliğinden tamamen 'keserek' onları zaman akışından geçici olarak uzaklaştırıp yerlerinde dondurabilir."
+  unlocks_otc_spacetime_sever:"Düşman Gemilerini vurduğunda Donduran, Ekstra Büyük Bir Silah olan §Y$OTC_TIME_LANCE$§! kilitlenir."
+  OTC_TIME_LANCE:"Uzay-Zaman Ayrılması"
+  OTC_TIME_LANCE_DESC:"$OTC_TIME_LANCE$, çarpan gemileri uzay-zamandan 'dilimleyerek', onları sıradan zamandan ayırıp yerlerinde donduran güçlü bir ışın ateşler. Bu tür bir silah, daha büyük hedeflere karşı son derece etkilidir."
+  otc_time_lance_tt:"Düşman Gemisinin (ve Saldırı Uçaklarının) §Y10§! Gün Boyunca Ateş Etmesini veya Hareket Etmesini Engeller."
+  otc_halted_in_time:"Zamandan Koparıldı"
+
+  menp_otc_indefinite_lifespans:0 "Kuantum Ölümsüzlüğü"
+  menp_otc_indefinite_lifespans_desc:0 "Sonsuz zaman çizelgeleri boyunca, meydana gelen her ölüm için, o ölümün önlendiği özdeş bir zaman çizelgesi mutlaka olacaktır. Bu zaman çizelgesi kopyalarını geri getirmek için basit bir sıçrama, kimsenin bizi asla terk etmemesini sağlar."
+  unlocks_otc_indefinite_lifespans:0 "Tüm Liderler §YÖlümsüzdür§! ve Ölüm Üzerine §YDiriştileceklerdir§!."
+  leader_trait_otc_timeline_warped:"Zaman Çizelgeleri Arası Vertigo"
+  leader_trait_otc_timeline_warped_desc:"Bu lideri, bizimkine neredeyse özdeş olan alternatif bir zaman çizelgesinden çektik - tek fark bu liderin kendi muadilinin zamansız ölümünden kurtulmuş olmasıydı."
+  mod_leader_commanders_astral_threads_upkeep_add:"$r_astral_threads$ $UPKEEP$"
+  mod_leader_scientists_astral_threads_upkeep_add:0 "$r_astral_threads$ $UPKEEP$"
+  mod_leader_officials_astral_threads_upkeep_add:0 "$r_astral_threads$ $UPKEEP$"
+
+  menp_otc_localised_time_loops:0 "Yerelleştirilmiş Zaman Döngüleri"
+  menp_otc_localised_time_loops_desc:0 "En iyi gemi yapımcılarımız, liman işçilerimiz ve deniz subaylarımız artık kendilerinin düzinelerce zamansal kopyasıyla birlikte çalışabiliyor; her biri vardiyaya başladığında aynı günün başına geri dönüyor. Tersanelerimizin üretimi ortada - ancak fazla mesai ücreti gerçekten yıkıcı."
+
+# Level 5
+  menp_otc_end_of_time:0 "Zamanın Sonu"
+  menp_otc_end_of_time_desc:0 "Zamanın sıradan, doğrusal akışı, artık kabul edemeyeceğimiz bir hapishanedir. Zamanın bu anındaki kavrayışımız sağlamlaştıkça, gelecekten, geçmişten ve şimdiden uzanıp bunları paramparça edecek ve kusursuz çoklu zamansallık içinde sonsuza dek hüküm süreceğiz."
+  unlocks_otc_end_of_time:0 "$situation_otc_end_of_time$ Durumunu açar. Durum tamamlandığında, zamanın doğrusal akışını tamamen sona erdirme planımızı uygulayabilecek ve §YOyunu kazanacağız.§!"
+  situation_otc_end_of_time:"Zamanın Sonu"
+  situation_otc_end_of_time_type: "$situation_otc_end_of_time$"
+  situation_otc_end_of_time_monthly_change_tooltip:"- Diğer tüm medeniyetlerden en az §YÜstün§! olmak.\n- §Y$operation_reset_civilisation$§! Operasyonlarını tamamlamak."
+  situation_otc_end_of_time_desc:"Medeniyetimizi doğrusal zamanın dışına yaymanın bir yolunu keşfettik - sebep ve sonuç tiranlığından gerçekten kurtulmak için. Tek ihtiyacımız olan, zamanın kendisini ileri ve geri paramparça etmek ve şok dalgasına binerek yeni bir varoluş durumuna ulaşmaktır."
+  situation_otc_end_of_time_complete:"[Owner.GetName] §YOyunu Kazanır§!."
+  otc_apex_of_power:"Gücün Doruğu: Diğer tüm medeniyetlerden en az §YÜstün§! olmak."
+  situation_otc_end_of_time_approach_basic:"Kaçınılmazlık"
+  situation_otc_end_of_time_approach_basic_desc:"Tüm tarihin her anı bizi bu noktaya getirdi. Yapılacak başka hiçbir şey yok. Yapılabilecek hiçbir şey yok."
+  omnitemporal.54.name:0 "Zamanın Sonu"
+  omnitemporal.54.desc:0 "Şimdiye kadar, zaman ustalığının bize hediye ettiği yeni oyuncaklarımızla sevinmekle yetinen çocuklar gibiydik. Bize karşı durmaya cesaret edenler yenildi ve biz gücümüzü 'şimdi' diye adlandırdığımız o gelip geçici anda pekiştiriyoruz. Ancak perspektifimiz büyüdükçe, boşunalık anlayışı da büyüyor. Hâlâ doğrusal zamanın mahkumuyuz, evrenimizin entropiye sürüklenmesini engelleyemiyoruz. Hiçbir imparatorluk sonsuza dek sürmez.\n\nOyuncaklarımızı bir kenara bırakma zamanı geldi.\n\nMedeniyetimizi doğrusal zamanın dışına yaymanın bir yolunu keşfettik - sebep ve sonuç tiranlığından gerçekten kurtulmak için. Tek ihtiyacımız olan, zamanın kendisini ileri ve geri paramparça etmek ve şok dalgasına binerek yeni bir varoluş durumuna ulaşmaktır."
+  omnitemporal.54.a:0 "Tam zamanıydı."
+  omnitemporal.2000.name:0 "Son An"
+  omnitemporal.2000.desc:0 "O burada. Her zaman buradaydı. Çoklu zamansallığın şafağını yeni doğan bir güneş, yumurtadan çıkan bir civciv ya da ölen bir yıldız gibi tadıyoruz. Ya da bunların hiçbiri gibi değil. Eski evrenin doğasını çok fazla taşıyan o basit metaforlar artık bizim için işe yaramaz.\n\nZaman paramparça oldu ve dışındaki her yerden onun her zaman paramparça olduğunu görüyoruz. Onu tersine çevirmemizi, böylece her zaman olduğu gibi görebilmemizi bekliyordu. Yeni şimdi'de her zaman ve sonsuza dek."
+  omnitemporal.2000.a:0 "Bizim gibi, her zamanın içinde yıkanıyor, muzaffer."
+  omnitemporal.2001.name:0 "Gevşek Uçları Bağlamak"
+  omnitemporal.2001.desc:0 "Anlamaya başlıyoruz. Zaman çizelgeleri arasındaki erişimimiz, her zaman çizelgesindeki diğer tüm versiyonlarımız tarafından aynalanıyor. Hepsi bir anda, hepsi birlikte, çok yakında, var olan veya var olacak her ana uzanacak ve çoklu zamansallığı başaracağız.\n\nHemen hemen hiç düşünmeden, tüm bunları başlatan ana geri dönüyoruz - ve şimdi burada olmamız için ihtiyacımız olan başlangıç vuruşunu kendimize veriyoruz."
+  omnitemporal.2001.a:0 "Bu hediyeyi alın, geçmiş benlikler."
+  omnitemporal.2002.name:0 "Zamanın Sonu"
+  omnitemporal.2002.desc:0 "Gelişmiş sensörler veya zamana duyarlı enstrümanlar olmadan bile bir şeylerin yanlış olduğunu anlayabiliyoruz. Her an gergin hissediliyor. Sanki bir saniyeden diğerine evrensel ilerleyiş basitçe... durabilirmiş gibi. Göz açıp kapayıncaya kadar saatleri, haftaları kaybediyoruz ve her yeni gün, kendi geçmişimizin bir kısmının evrenden düştüğü, tarih kitaplarımızda başka bir boşluk buluyoruz. [From.GetName]'ın üzerinde çalıştığı korkunç plan ne olursa olsun, zamanın dokusunun ta kendisini tehdit ediyor."
+  omnitemporal.2002.a:0 "[From.GetName] durdurulmalı!"
+  omnitemporal.2003.name:0 "Gizemli Bir Hediye"
+  omnitemporal.2003.desc:0 "Zamansal fenomenlerin olasılıklarını keşfetmeye karar vermemizden sadece birkaç saat sonra, ana gezegenimizin yörüngesinde gizemli bir paket belirdi. İçinde, paketin §YZamansal Kumaş§! olarak bahsettiği tuhaf bir ağın üretimi ve kullanımı için talimatlar bulunuyor. Ayrıca bu malzemeden önemli miktarda da içeriyor. Bilim insanlarımızın ön analizi, bize bunu kimin bıraktığına dair hiçbir fikrimiz olmasa da, malzemenin şimdiden dikkate değer bir dizi krono-aktif özelliğe sahip olduğunu gösteriyor."
+  omnitemporal.2003.a:0 "Ne kadar tuhaf."
+
+  menp_otc_paradox_drives:"Uzay-Zaman Bükmesi"
+  menp_otc_paradox_drives_desc:"Geleneksel bir sıçrama sürücüsü, uzaydaki iki noktayı geçiş için bitişik hale getirerek çalışır. Benzer şekilde, Paradoks Sürücüsü, varış anımızı kalkış anımızla bitişik hale getirmemizi sağlayarak anında seyahate olanak tanır."
+  unlocks_otc_paradox_drives:"Filo Sıçramadan Sonra Hasarını ve Hızını Koruyan bir Sıçrama Sürücüsü olan §Y$OTC_TIME_DRIVE$§! kilidini açar."
+  OTC_TIME_DRIVE:"Paradoks Sürücüsü"
+  OTC_TIME_DRIVE_DESC:"Bu sürücü, geleneksel sıçrama sürücüsü dezavantajları olmaksızın sıfır süreli yolculuklara izin vermek için zaman akışını doğrudan manipüle eder."
+  OTC_BIO_TIME_DRIVE: "$OTC_TIME_DRIVE$"
+  OTC_BIO_TIME_DRIVE_DESC: "$OTC_TIME_DRIVE_DESC$"
+  otc_time_drive_tt:"Sıçradıktan Sonra, Gemi Normal §Y-%50§! Silah Hasarı ve Işık Altı Hız Cezasını Almaz."
+
+  menp_otc_reset_civilisation:0 "Nedensel İmha Protokolü"
+  menp_otc_reset_civilisation_desc:0 "Düşmanlarımız, bize yakışır şekilde, kudretli ve dirençlidir. Ancak her zaman böyle değillerdi. Gelecek, nihai stratejik noktadır - bir düşmanı en zayıf anında vurup ortadan kaldırabileceğimiz bir yer. Tarihlerinde yapılacak küçük bir düzeltme, onları zaman akışımızdan temizleyecektir."
+  unlocks_otc_reset_civilisation:0 "Bütün bir Medeniyeti, bize karşı varlığını sürdüremeyecek şekilde tarihini ayarlayarak silme yeteneği olan §Y$menp_otc_reset_civilisation$§! kilidini açar."
+
+
+## Crisis Requirements ##
+  otc_omnitemporal_level_2_req_clear_tooltip:"£trigger_yes£ Bir §YZamansal Anomali§! tamamladı!"
+  otc_omnitemporal_level_2_req_tooltip:"£trigger_no£ Bir §YZamansal Anomali§! tamamladı!"
+  otc_omnitemporal_level_3_req_clear_tooltip:"£trigger_yes£ Bir §Y$otc_omnitemporal_kilostructure$§! inşa etti!"
+  otc_omnitemporal_level_3_req_tooltip:"£trigger_no£ Bir §Y$otc_omnitemporal_kilostructure$§! inşa etti!"
+  otc_omnitemporal_level_4_req_clear_tooltip:"£trigger_yes£ §Y$tech_otc_travel_timelines$ teknolojisini§! araştırdı!"
+  otc_omnitemporal_level_4_req_tooltip:"£trigger_no£ §Y$tech_otc_travel_timelines$ teknolojisini§! araştırdı!"
+  otc_omnitemporal_level_5_req_clear_tooltip:"£trigger_yes£ 5 adet §Y$otc_omnitemporal_kilostructure_plural$§! inşa etti!"
+  otc_omnitemporal_level_5_req_tooltip:"£trigger_no£ 5 adet §Y$otc_omnitemporal_kilostructure_plural$§! inşa etti!"
+
+
+## Temporal Anomalies ##
+  # Base Anomalies
+  omnitemporal.1000.name:"Zaman Yolculuğu!"
+  omnitemporal.1000.desc:"As [Root.Leader.GetName] anomaliye yaklaştıkça, [Root.Leader.GetSheHe] mürettebat geçmişe doğru yolculuk ederken saatlerin diğer yöne doğru akmaya başladığını, giderek hızlandığını izledi. Açık nedenlerden ötürü, iletişimimiz [Root.Leader.GetName]'in geçmişe dalmasından kısa bir süre sonra (ya da bakış açısına göre muhtemelen önce) kesildi.\n\nBu olay, az önce kaybettiğimiz mürettebatla aynı olan mürettebatımızın görünümünü açıklıyor. Görünüşe göre gerçekten de zaman içinde yolculuk etmişler. Değerli veriler az önce elde edildi ve bunları kullanmak için hiç zaman kaybetmeyeceğiz."
+  omnitemporal.1000.a:"İnanılmaz!"
+  omnitemporal.1000.a.tooltip:"[Root.Leader.GetName] Geçmişe Geri Kayboluyor."
+
+  omnitemporal.1001.name:"Gelecekten Gelen Yolcu"
+  omnitemporal.1001.desc:"Zamansal anomaliye yaklaşınca, bir uzay giysisi giymiş, etrafta süzülen bir figür belirdi. Figürü tanımlayıp [event_target:otc_future_leader.GetSheHe]'yi gemiye aldıktan sonra, az önce bir başka [event_target:otc_future_leader.GetName] keşfettiğimizi fark ettik!\n\n[event_target:otc_future_leader.GetSheHe], bir klon olmadığını, aksine zaman içinde geriye doğru fırlatıldıktan sonra buraya az önce vardığını açıkladı. Böylece, [event_target:otc_future_leader.GetSheHe], [event_target:otc_future_leader.GetName]'in gelecekteki bir kopyasıydı. Gelecekte ne olacağına dair detayları sorduk ama sessizlikle karşılandık. Gelecekteki [event_target:otc_future_leader.GetName], bu bilginin paylaşılması halinde bilinmeyen sonuçları olabilecek nedensel bir paradoksa yol açabileceğine inanıyor."
+  omnitemporal.1001.a:"İnanılmaz!"
+  omnitemporal.1001.b:"Şüpheli"
+  omnitemporal.1001.a.tooltip:"Bir Başka [event_target:otc_future_leader.GetName] İmparatorluğumuza Katılıyor."
+
+  omnitemporal.1014.name:"Varlıktan Siliniyor"
+  omnitemporal.1014.desc:"[event_target:otc_temporal_clone.GetName] vefat eder etmez, [event_target:otc_temporal_clone.GetHisHer]'in gelecekteki versiyonu parçalanmaya başladı. Kısa sürede tamamen silinip gittiler, arkalarında varlıklarına dair anılar dışında hiçbir şey bırakmadılar. Ancak kısa süre sonra, bu anılar da solmaya başladı. Görünüşe göre, genç benliklerinin ölümü üzerine paradoksal bir sonuç ortaya çıktı: Artık geçmişe yolculuk edecek genç bir benlik yoktu ve dolayısıyla gelecekteki ortaya çıkışları imkansızdı. Evren bu tutarsızlığı hızla düzeltti ve geriye kalan [event_target:otc_temporal_clone.GetHisHer]'i varlıktan kaldırdı."
+  omnitemporal.1014.a:"İlginç."
+
+  omnitemporal.1003.name:"Çağlar Aylara"
+  omnitemporal.1003.desc:"[From.GetName]'nin volkanik yüzeyinde zaman, hayal edebileceğimizden daha hızlı akıyor. Çağlar, aylar içinde yaşanıyor ve buradaki zaman döngüsüne adım atmaya cesaret edemiyoruz, zira yapsak bilim insanlarımız sadece birkaç dakikada yok olurdu. Gezegeni gözlemlemek de zor, çünkü tarayıcılarımız yere ulaşıp gemimize geri yansıdığında, aşağıdaki yüzey zaten değişmiş oluyor. Bu oldukça tuhaf bir durum ve önümüzdeki aylarda [From.GetName]'nin büyük bir dönüşüm geçirmesini bekliyoruz."
+  omnitemporal.1003.a:"İlginç."
+
+  omnitemporal.1004.name:"Gezegenin Soğuması"
+  omnitemporal.1004.desc:"Bilim insanlarımızın [FromFrom.GetName]'deki zamanın hızlanmış akışını keşfetmesinden sadece birkaç ay sonra, gezegenin tamamı daha ılımlı seviyelere soğudu. Görünüşe göre bu gezegen, yaşam döngüsünün binlerce yılını sadece birkaç ay içinde deneyimlemiş, volkanik yüzeyini çorak bir alana dönüştürmüştür. Yörüngeden alınan okumalara göre, tektonik aktivite yoğunluğunu koruyor ve gezegen henüz yavaşlama belirtisi göstermiyor.\n\nBilim insanlarımızın daha maceraperest olanları [FromFrom.GetName]'nin kendisini keşfetmek istiyor. Ancak, daha bilge meslektaşlarının tüm yaşam sürelerinin herhangi bir dış gözlemci için saniyenin küçük bir kesri haline geleceği açıklamalarıyla hızla durduruluyorlar."
+  omnitemporal.1004.a:"Çok ilginç."
+
+  omnitemporal.1005.name:"Yaşamın Gelişimi"
+  omnitemporal.1005.desc:"[FromFromFrom.GetName] üzerinde zaman aşırı hızlarda ilerlemeye devam ettikçe, yeni gelişmelerin yaşandığına tanık olduk. Basit yaşam formları ortaya çıktı ve basit varoluş biçimleriyle sınırlı olsalar da, atmosferik koşulları değiştirdiklerini şimdiden gördük. İlk bitkiler gezegen yüzeyine yayılmaya başladıktan kısa bir süre sonra, gökyüzünü dolduran yeni partikülleri açgözlülükle tükettiler. Zamansal hızlar olmasaydı, gezegen şimdi yaşanılabilir görünürdü."
+  omnitemporal.1005.a:"Gözlemlere devam edin."
+
+  omnitemporal.1006.name:"Dinlenme Durumu"
+  omnitemporal.1006.desc:"Nihayet, [FromFromFromFrom.GetName]'ın hızlı yaşlanması sona erdi ve gezegen bir kez daha galaksinin geri kalanıyla zamansal olarak yeniden birleşti. Ancak, hızlandırılmış zaman sona ermeden önce, bir kez daha dönüştü. Son aylar, hayvan yaşam formlarından yemyeşil ormanlara kadar sayısız değişiklik getirdi. Bu ilkel hayvanların hiçbiri gerçek zeka belirtisi göstermese de, umut vadeden entelektüel gelişim gösteren ve arzu edersek desteklenebilecek bazı presapientler var."
+  omnitemporal.1006.a:"Harika."
+
+  omnitemporal.1007.name:"Zamansal Tuzak"
+  omnitemporal.1007.desc:"[time_loop_trapped_scientist.GetName] zamansal anomaliyi keşfederken, [time_loop_trapped_scientist.GetHisHer] mürettebatının geri kalanı düzensiz davranışlar fark etmeye başladı. [time_loop_trapped_scientist.GetName] tutarlı bir şekilde tarihin değişmediğine ve araştırmanın sadece bir gün sürdüğüne inanmaya başladı. Ayrıca, [time_loop_trapped_scientist.GetSheHe] haftalar önce tamamlanmış olan ilk gözlem görevlerini tekrar tekrar yapmaya devam etti.\n\nAçıkça görüldü ki [time_loop_trapped_scientist.GetName] zihinsel bir zaman döngüsüne hapsolmuş bir şekilde o ilk günü tekrar tekrar yaşıyordu. Bu fenomenin tam doğası bilinmemektedir, özellikle de olayın en iyi tanığı [time_loop_trapped_scientist.GetHisHer] yanılgısına yakalanmışken. Her halükarda, [time_loop_trapped_scientist.GetHisHer] bir lider olarak etkinliği önemli ölçüde azalacaktır."
+  omnitemporal.1007.a:"Talihsiz."
+  leader_trait_otc_time_loop_trapped:"Zamansal Olarak Tuzağa Düşmüş"
+  leader_trait_otc_time_loop_trapped_desc:"Bu lider, aynı günü tekrar tekrar yaşayarak zihinsel bir zaman döngüsüne yakalanmış durumda. Duyusal girdilerinin dikkatli bir şekilde manipülasyonuyla gerçekliği simüle edebiliriz, ancak bir daha asla yeni anılar oluşturamayacaklar."
+
+  omnitemporal.1008.name:"Düzensiz Saatler"
+  omnitemporal.1008.desc:"[Root.GetName]'a ulaşınca, tüm zaman ölçüm cihazları düzensiz bir şekilde dalgalanmaya başladı ve çeşitli imkansız tarihler gösterdi. İletişimlerini aldıktan birkaç dakika sonra, kolonilerimizde de benzer anormallikler ortaya çıkmaya başladı. Zararsız olsa da, güvenilir kronolojik bilginin kaybı normal yaşamın dengesini bozdu. Ancak, bu olaylar fizikçilerimizin incelemesi için muazzam miktarda veri sağladı."
+  omnitemporal.1008.a:"İlginç."
+
+  omnitemporal.1009.name:"Gezegensel Hızlanma"
+  omnitemporal.1009.desc:"[From.GetName] üzerindeki zaman akışı büyük ölçüde arttı, hatta belirli bölgelerde hızı ikiye katlandı. Endüstrilerimizi bu alanlarda yoğunlaştırmak, verimliliğin büyük ölçüde artmasını sağlamalıdır. Ancak, gezegen genelindeki değişken zamansal hızlar zor yaşam koşullarına yol açmakta ve etrafında planlama yapmak için ek çaba gerektirecektir."
+  omnitemporal.1009.a:"Harika."
+  otc_time_accelerated:"Hızlandırılmış Zaman"
+
+  omnitemporal.1010.name:0 "Kayıp Gün"
+  omnitemporal.1010.desc:0 "Yakın zamanda keşfedilen zamansal anomaliye yaptığımız sondajın beklenmedik bir yan etkisi oldu: herkes bir gün kaybetti. Spesifik olarak, kimse [From.lost_date_flag] hakkındaki bilgiyi koruyamadı; tüm nüfusumuz son yirmi dört saate dair tam bir amnezi yaşadı. Dün özellikle dikkat çekici hiçbir şeyin olmadığına dair makul derecede eminiz, ancak deneyim rahatsız ediciydi. Daha da kötüsü, etki galaktik çapta gibi görünüyor: komşularımızın çoğu 'doğal kronolojik algılarına müdahale' olarak adlandırdıkları şeyden memnun değil."
+  otc_forgot_a_day:0 "Kayıp Gün"
+
+  omnitemporal.1012.name:0 "Kayıp Gün"
+  omnitemporal.1012.desc:0 "Herkesin anılarında aynı boşluk var: önce [This.lost_date_flag_plus_one]'ydı, sonra [This.lost_date_flag_minus_one] oldu. [This.GetName]'daki her [This.GetSpeciesName], [This.lost_date_flag] olaylarına dair hiçbir anı saklayamadı. Bu durum, anlaşılır bir şekilde, büyük bir üzüntü ve kafa karışıklığına neden oldu. Olay sonrası analiz, söz konusu kayıp günün kesinlikle meydana geldiğini (ve aksi takdirde dikkate değer olmadığını) ortaya koyuyor, ancak kimsenin buna dair anısı yok. Bilim insanlarımız fenomeni, bu çirkin müdahale için özür dilemeyi reddeden [From.GetName] tarafından serbest bırakılan güçlü zamansal enerjilere bağladılar."
+  otc_opinion_lost_day:0 "Zamansal Müdahaleye Karşı Memnuniyetsiz"
+
+
+  omnitemporal.1013.name:"Hızlı Yaşlanma"
+  omnitemporal.1013.desc:"[Root.Leader.GetName], yakın zamanda incelenen zamansal anomaliye ilişkin [Root.Leader.GetHerHis] raporunu sunuyor: '[From.GetName]'ın anormal davranışını on yıl araştırdıktan sonra, maalesef hiçbir aksaklık olmadığını sonucuna varmak zorundayım.' Rapor kapsamlı, ayrıntılıydı ve derlenme süresi olmasaydı kronoloji departmanımız tarafından hızla kabul edilirdi. Zira [Root.Leader.GetName] on yıldan fazla araştırma yaparken, galaksinin geri kalanı herhangi bir iletişim almak için sadece aylar bekledi. Rapor hiçbir anormallik bulamadığından bu zaman döngüsünün tam olarak ne yarattığı belirsiz olsa da, [Root.Leader.GetName] üzerindeki etkileri açık. [Root.Leader.GetSheHe]'nin tatmin edici bir hayat yaşamaya devam edebileceğini ummak zorundayız."
+  omnitemporal.1013.a:"Talihsiz."
+
+  # Dangerous/Impactful Anomalies
+  omnitemporal.1100.name:"Gezegensel Yavaşlama"
+  omnitemporal.1100.desc:"Zamansal okumalar, [From.GetName] üzerindeki zamanın büyük ölçüde azaldığını, iki katına kadar yavaşladığını gösteriyor. Bu yeni zaman akışına uyum sağlamak ek lojistik gerektirecek, zira şimdi bir gezegenin yarısının ortadan kaybolduğu bir imparatorluğu hesaba katmamız gerekiyor. Ayrıca, yavaşlayan zaman ışığın koloniye girişini daha önce olduğundan iki kat daha güçlü göstereceği için harici girdileri her zamankinden daha fazla düzenlememiz önemli."
+  omnitemporal.1100.a:"Talihsiz."
+  otc_time_decelerated:"Yavaşlamış Zaman"
+
+  omnitemporal.1101.name:"[From.GetName] Üzerinde Saatler Duruyor"
+  omnitemporal.1101.desc:"[From.GetName] üzerindeki her şey ve herkes aniden durdu. Gezegenden gelen tüm iletimler anında kesildi ve gezegene gönderilen hiçbir mesaj hedefine ulaşamadı. Gezegen zamanda donmuş gibi görünüyor, artık mevcut zaman çizelgemize bağlı değil. [From.GetName]'a ve [From.GetName]'dan yapılan tüm kaynak sevkiyatları süresiz olarak askıya alınacak. Sadece bu anormal davranışın yakında sona ermesini umabiliriz."
+  omnitemporal.1101.a:"Feci!"
+  otc_time_stopped:"Zamanın İçinde Donmuş"
+
+  omnitemporal.1107.name:"[This.GetName] Zamana Geri Dönüyor"
+  omnitemporal.1107.desc:"Yarım yıl süren mutlak sessizliğin ardından, [This.GetName] üzerinde zaman yeniden akmaya başlıyor. Vatandaşlarımız günlük işlerine devam ediyor, yıldızlararası sevkiyatlar limanlardan ayrılıyor ve aylar önce gönderilen iletişimler akın akın geliyor. Bir an için sanki hiçbir şey olmamış gibi.\n\nAncak, [This.GetName] sakinlerinin ne olduğunu, galaksinin geri kalanı ilerlemeye devam ederken kendilerinin son altı ayda tek bir saniye bile yaşamadıklarını öğrenmeleri sadece bir an meselesi. Bu felaketin hemen bize atfedilememesi son derece şanslı olsa da, bu zamansal bozulmanın etkileri küçümsenemez ve [This.GetName]'ın toparlanması zaman alacaktır."
+  omnitemporal.1107.a:"Yine de şanslı."
+  otc_after_time_resumed:"Kayıp Aylar"
+
+  omnitemporal.1102.name:"İlkel Geçmişimizin Vizyonları"
+  omnitemporal.1102.desc:"Bu zamansal anomali içinde, [Root.Leader.GetName] ve [Root.Leader.GetHerHis] ekibi, geçmişimizin bir kısmının yakalandığı bir zaman balonu buldu. Burada, uzay ve zamandan kopuk bir şekilde, ilkel benliklerimizin yıldızlara doğru yavaşça ilerlemesini izlediler.\n\nDiğer erken toplumların ilerlemesini görmüş olsak ve kendi başlangıçlarımıza dair çok sayıda kayda sahip olsak da, kendi geçmişimizi bu kadar net hiç görmemiştik. Tarihten ilkel çalışmalara, teolojiden erken felsefeye kadar sayısız sosyolojik alan büyük ölçüde fayda sağladı."
+  omnitemporal.1102.a:"Harika."
+  otc_past_selves:"Geçmiş Benlikler"
+  otc_past_selves_desc:"Kökenlerimize dair vizyonlar kolektif birliği teşvik etti ve geçmişimize yönelik daha fazla araştırmaya ilham verdi."
+
+  omnitemporal.1103.name:"Epistemolojik Şüpheler"
+  omnitemporal.1103.desc:"Başlangıçlarımıza dair vizyonlar, türümüzün yetiştirilme biçimi ve erken gelişimi hakkında derinlemesine bilgi sağlarken, aynı zamanda ne kadar aptal olduğumuzu da ortaya çıkardı. Dahası, sadece galaksinin gerçek doğaları hakkında hiçbir fikrimiz yoktu, aynı zamanda her şeyi olduğu gibi anladığımıza da gerçekten inanıyorduk. Böyle bir aptallıktan bu kadar uzaklaşmış olmamıza sevinsek de, bu vizyonlar halkımızı yeterince ilerleme kaydetmediğimiz endişesiyle baş başa bıraktı. Sonuçta, ilkel atalarımız kadar kaybolmuş olmadığımızdan nasıl emin olabiliriz?"
+  omnitemporal.1103.a:"Talihsiz."
+  otc_disillusioned_past:"Başlangıçlara Dair Hayal Kırıklığı"
+  otc_disillusioned_past_desc:"Geçmiş benliklerimizi görmek, bir zamanlar ne kadar aptal olduğumuzu ortaya çıkardı. Büyük değişimimiz irademizin bir kanıtı olsa da, en az onlar kadar kaybolmadığımızdan nasıl emin olabiliriz?"
+
+  omnitemporal.1104.name:"Büyük Bir İmparatorluk"
+  omnitemporal.1104.desc:"Gözlerimizin önünde bir vizyon beliriyor; dipsiz boşlukta süzülen devasa bir filoyu tasvir eden bir vizyon. Bizim çağımızda böylesine muazzam bir boyut ve heybet görülmedi. Onların ötesinde ise, bizimkinin çok ötesinde teknolojik harikalarla parlayan ışıltılı bir gezegen uzanıyor. Tasarımlar düşman bir imparatorluğununkileri andırsa da, bu vizyondaki imparatorluğa 'düşmüş' demek son derece yanlış olurdu.\n\nBu vizyona dair hiçbir tarihsel kaydımız olmadığına göre, ya uzak geçmişten ya da gelecekten gelmiş olmalı. Hangisi olduğunu asla bilemeyebiliriz."
+  omnitemporal.1104.a:"İlgi Çekici."
+
+  omnitemporal.1105.name:"Vizyon Gerçekleşiyor"
+  omnitemporal.1105.desc:"Uyanan imparatorluğa dair vizyonumuzun geçmişten bir görüntü olmadığı şimdi açık. Bize gelecek sunulmuştu ve kısa süre sonra gerçekleşti. Bilim insanlarımız arasında büyük bir heyecan var ve vizyonun haberi hızla halka yayıldı.\n\nHalkımız da benzer şekilde meraklanırken, diğer imparatorluklar eylemlerimizi son derece pervasız buldu. Birçoğu, bu vizyonu görmemizin olayın gerçekleşmesine neden olduğunu iddia ediyor, sanki bilgimiz olsun ya da olmasın bu olmazmış gibi. Muhtemelen bunu, zaman araştırmalarımıza karşı çıkmak için bir bahane olarak kullanıyorlar - ne getirebileceklerinden endişe ediyorlar."
+  omnitemporal.1105.a:"Bu saçmalık."
+
+  omnitemporal.1106.name:"Feci Tahmin"
+  omnitemporal.1106.desc:"Düşmüş imparatorluğun son uyanışından sonra, [From.GetName]'ın bu olaydan zaten haberdar olduğu ortaya çıktı. Zamanla ilgili son deneyleri nedeniyle, bilim insanlarından birine geleceğe dair bir vizyon bahşedilmişti: düşmüş imparatorluğun uyanışını tasvir eden bir vizyon.\n\nZamanla oynamalarının bu vizyonun gerçekleşmesine mi yol açtığı yoksa sadece gelecek hakkında bir öngörü mü olduğu belirsiz. Her iki durumda da, pervasız deneyleri felakete yol açmaya mahkum."
+  omnitemporal.1106.a:"Deneysel aptallar."
+  omnitemporal.1106.b:"Deneyler geleceği inşa eder."
+  otc_opinion_awakened_empire:"Gelecek Tahminlerinden Memnuniyetsiz"
+  otc_opinion_awakened_empire_lesser: "$otc_opinion_awakened_empire$"
+
+  # Anomaly Categories
+  otc_temporal_anomaly_cat:"Zamansal Anomali"
+  otc_temporal_anomaly_cat_desc:"Burada, uzay ve zaman galaksinin başka hiçbir yerinde olmadığı kadar çarpışır. Öngörülemeyen şekillerde birbirlerinin etrafında dans eder, görünmeyen sonuçlar doğururlar.\n\nBu anomaliler tehlikesiz değildir, ancak tehlikenin olduğu yerde, fırsat da vardır."
+  MESSAGE_OTC_NEW_TEMPORAL_ANOMALY_TITLE:"$otc_temporal_anomaly_cat$ Keşfedildi"
+  MESSAGE_OTC_NEW_TEMPORAL_ANOMALY_DESC:"$LOCATION$ üzerinde yeni bir $otc_temporal_anomaly_cat$ keşfedildi. Sırlarını ortaya çıkarmak için bir bilim insanı gönderilebilir."
+
+
+## Operations ##
+  operation_reset_civilisation:0 "Nedensel İmha Protokolü"
+  operation_reset_civilisation_desc:0 "Hedef ana dünyaya bir saldırı ekibi göndererek ve tarihlerini cerrahi bir şekilde düzenleyerek, bir gün bize karşı kullanacakları ileri teknolojileri asla geliştirmemelerini sağlayabiliriz."
+  operation_reset_civilisation_on_success:"$IF_SUCCESSFUL|E$\nHedef uygarlık, tek bir FTL öncesi ilkel dünyasına indirgenecektir."
+  operation_reset_civilisation_rival_time_travellers:0 "Bu operasyonu diğer zamansal manipülatörlere karşı deneyemeyiz."
+  omnitemporal.50.name:0 "Yaklaşırken"
+  omnitemporal.50.desc:0 "Ekip - kara harekât uzmanları ve zamansal bilim insanlarının bir karışımı - bu keşif için donattığımız bir nakliye gemisinde gizleniyor. Yanlarında, kseno-tarihçilerimizin [Target.GetName]'ın gelişimini sabote etmek için en iyi zaman olarak belirlediği ana, geçmişe bir zaman sıçraması yapmak için ekipman taşıyorlar."
+  omnitemporal.51.name:0 "Eski Kodlar"
+  omnitemporal.51.desc:0 "Zamana ilişkin ayarlayıcımızın nakliyesi, sistemin güvenlik kontrolünü geçti - $role_spymaster$ [spynetwork.leader.GetName]'ın topladığı güvenlik kodları, sisteme girmek için kritik öneme sahipti. Operatörlerimiz zaman makinesini hazırlamak için ısınma prosedürüne başladı. Nakliye gemisinin son yolculuğu için yine başkenti hedef alacaklar."
+  omnitemporal.52.name:0 "Geçmişe Doğru"
+  omnitemporal.52.desc:0 "$role_spymaster$ [spynetwork.leader.GetName]'dan haber aldık: her şey hazır. Operatörlerimiz atlama için zaten hazırlandı; yörüngeye girdiklerinde tüm gemi geçmişe atlayacak ve planı uygulayacak. Bizim açımızdan, etkisi anında olacak."
+  omnitemporal.53.name:0 "Silme Tamamlandı"
+  omnitemporal.53.desc:0 "§Y[From.target.GetName]§! artık yok! Nakliye gemisi kaybolur kaybolmaz, muazzam bir zamansal enerji dalgalanması tespit ettik. Kapsamlarımız netleştiğinde, planın en çılgın umutlarımızın ötesinde başarılı olduğunu gördük. §Y[From.target.GetName]§! ilkel bir seviyeye indirgendi, onlara az önce reddettiğimiz büyük kaderlerinden habersizler."
+  
+  OTC_RESET_LEADER_DEATH_DESC:0 "Varlıktan Silindi"
+
+  omnitemporal.56.name:0 "Zaman Çizgisi Kesildi"
+  omnitemporal.56.desc:0 "§H[resetting_civ.GetName]§! var olmaktan çıktı! Görünüşe göre [resettor_civ.GetName], gelişmiş zamansal manipülasyon teknolojilerini kullanarak zamanda geri gitmiş ve medeniyetlerinin uzay yolculuğu geliştirmesini engellemiş. Tüm medeniyetleri: koloniler, büyük liderler, gemiler, hatta göçmenler bile zaman çizgimizden silindi."
+  omnitemporal.56.a:0 "[resettor_civ.GetName] durdurulmalı!"
+  omnitemporal.56.a.tooltip:0 "[resetting_civ.GetName]'dan her lider ve her nüfus §Rölür§!"

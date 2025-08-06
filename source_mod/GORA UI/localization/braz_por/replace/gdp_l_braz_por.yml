@@ -1,0 +1,2 @@
+﻿l_braz_por:
+ GDP_TOOLTIP:1 "#header [concept_gdp]#!\n$GDP_SHORT$ [Country.GetAdjective]: #N @money![Country.GetGDP|Dv]#! ($GDPGR_growth_text$) ([Country.GetGDPRanking])\n$TOOLTIP_DELIMITER$\nPIB per Capita: #variable @money![Country.GetGDPPerCapita|2*]#! ([Country.GetGDPPerCapitaRanking])\n$TOOLTIP_DELIMITER$\n$GDP_SHORT$ [Country.GetAdjective] é [Country.MakeScope.ScriptValue('larp_global_gdp_percent')|%v2] da Global\nPIB Global: @money![Country.MakeScope.ScriptValue('larp_global_gdp')|Dv]\n"

@@ -1,0 +1,10 @@
+﻿l_polish:
+ # WCA
+ alert_wasted_construction_name: "Ma niewykorzystane punkty [Concept('concept_construction', 'budowy')]"
+ alert_wasted_construction_hint: "Ma niewykorzystane punkty [Concept('concept_construction', 'budowy')]"
+ alert_wasted_construction_action: "Panel Budowa"
+ wasted_construction_setting_name: "Niewykorzystane Budowa"
+ alert_not_enacting_laws_name: "#bold Nie #!ustanawia prawa"
+ alert_not_enacting_laws_hint: "#bold Nie #!ustanawia prawa"
+ alert_not_enacting_laws_action: "Panel Polityka"
+ not_enacting_laws_setting_name: "Nie Ustanawia Prawa"

@@ -1,0 +1,83 @@
+﻿l_simp_chinese:
+
+ ################################
+ ### pdivinity_tech_l_english ###
+ ###     by daniellm          ###
+ ################################
+
+ ##################
+ ### components ###
+ ##################
+
+ tech_pdivinity_psionic_jump_drive:0 "虚境引擎"
+ tech_pdivinity_psionic_jump_drive_desc:0 "一种与虚境本身同步的先进跳跃引擎。装备此系统的舰船会短暂进入现实之间的帷幕，在传统传感器追踪到它们的路径之前，便已在目的地再次出现。"
+ TECH_UNLOCK_PDIVINITY_JUMP_DRIVE_TITLE:0 "§H解锁组件：§! $PDIVINITY_SHROUD_JUMP_DRIVE$"
+ TECH_UNLOCK_PDIVINITY_JUMP_DRIVE_DESC:0 "§H$PDIVINITY_SHROUD_JUMP_DRIVE$§!\n$PDIVINITY_SHROUD_JUMP_DRIVE_DESC$"
+
+ tech_pdivinity_psionic_reactor:0 "建筑师之意志"
+ tech_pdivinity_psionic_reactor_desc:0 "这种能量核心与潜在的灵能频率同步，直接从虚境汲取能量。它的存在会扭曲局部空间，并违背已知的能量守恒定律。"
+ TECH_UNLOCK_PDDIVINITY_PSIONIC_POWER_TITLE:0 "§H解锁组件：§! $pdivinity_psionic_reactor$"
+ TECH_UNLOCK_PDDIVINITY_PSIONIC_POWER_DESC:0 "§H$pdivinity_psionic_reactor$§!\n$pdivinity_psionic_reactor_desc$"
+
+ tech_pdivinity_psionic_thrusters:0 "思潮推进器"
+ tech_pdivinity_psionic_thrusters_desc:0 "通过部分地相位转换进入虚境，这些推进器规避了惯性和摩擦力，使得按实空间标准不可能完成的机动成为可能。"
+ TECH_UNLOCK_PDIVINITY_PSIONIC_THRUSTER_TITLE:0 "§H解锁组件：§! $Pdivinity_psionic_thruster$"
+ TECH_UNLOCK_PDIVINITY_PSIONIC_THRUSTER_DESC:0 "§H$Pdivinity_psionic_thruster$§!\n$Pdivinity_psionic_thruster_desc$"
+
+ tech_pdivinity_psionic_sensors:0 "虚境回响传感器"
+ tech_pdivinity_psionic_sensors_desc:0 "这些传感器经过调谐，能够探测行动背后的意图。通过读取虚境中的可能性，装备它们的舰船甚至可以在威胁显现之前就做出反应。"
+ TECH_UNLOCK_PDIVINITY_PSIONIC_SENSORS_TITLE:0 "§H解锁组件：§! $PDIVINITY_PSIONIC_SENSOR$"
+ TECH_UNLOCK_PDIVINITY_PSIONIC_SENSORS_DESC:0 "§H$PDIVINITY_PSIONIC_SENSOR$§!\n$PDIVINITY_PSIONIC_SENSOR_DESC$"
+
+ tech_pdivinity_psionic_precog:0 "虚境束缚计算机"
+ tech_pdivinity_psionic_precog_desc:0 "一种嵌入了灵能预见算法的战斗控制系统。它能让舰船预测敌人行为，并以诡异的精度优化战术。"
+ TECH_UNLOCK_PDIVINITY_PSIONIC_PRECOG_TITLE:0 "§H解锁组件：§! $PDIVINITY_PSIONIC_PRECOG$"
+ TECH_UNLOCK_PDIVINITY_PSIONIC_PRECOG_DESC:0 "§H$PDIVINITY_PSIONIC_PRECOG$§!\n$PDIVINITY_PSIONIC_PRECOG_DESC$"
+
+ tech_pdivinity_psionic_laser:0 "灵能长矛阵列"
+ tech_pdivinity_psionic_laser_desc:0 "这些长矛发射器注入了灵能谐波，可以破坏原子结构。装甲和船体几乎无法抵御其瓦解效应。"
+
+ tech_pdivinity_psionic_lance:0 "虚境穿刺者"
+ tech_pdivinity_psionic_lance_desc:0 "一束聚焦的灵能，能撕裂物理物质并削弱其冲击点周围的帷幕。它的打击会留下深深的疤痕，伴随着亡者的回响。"
+
+ tech_pdivinity_psionic_lightning:0 "虚境之怒"
+ tech_pdivinity_psionic_lightning_desc:0 "混乱的灵能电弧不可预测地从这种武器中涌出，其引导更多地依赖意志而非传感器。虚境渴望着，而这就是它的声音。"
+
+ tech_pdivinity_psionic_titan_lance:0 "建筑师之矛"
+ tech_pdivinity_psionic_titan_lance_desc:0 "一种泰坦级长矛武器，旨在撕裂空间并将其目标部分地相位转换进入虚境。无论是物理结构还是维度结构，都鲜有能承受其怒火者。"
+
+ tech_pdivinity_psionic_strikecraft:0 "灵能拦截机"
+ tech_pdivinity_psionic_strikecraft_desc:0 "由活体思维形态组成的攻击机，受意志塑造并由虚境中意识的回响赋予生命。它们仅凭本能导航现实，仅受目标和意志引导。"
+
+ tech_pdivinity_psionic_artillery:0 "虚境波火炮"
+ tech_pdivinity_psionic_artillery_desc:0 "一种远程灵能轰击平台，能在广阔距离上投射破坏性共振场。它同时干扰思想、物质和凝聚力。"
+
+ tech_pdivinity_psionic_torpedo:0 "灵能爆发投射器"
+ tech_pdivinity_psionic_torpedo_desc:0 "发射不稳定的灵能投射物，这些投射物在穿透物质后，会以虚境能量爆发的形式引爆。"
+
+ tech_pdivinity_psionic_shields:0 "虚境护盾"
+ tech_pdivinity_psionic_shields_desc:0 "由信徒思维投射的防御屏障。它们扭曲感知和概率，使舰船能在本该被彻底摧毁的打击中幸存下来。"
+
+ tech_pdivinity_psionic_cloud:0 "虚境回响"
+ tech_pdivinity_psionic_cloud_desc:0 "虚境意志的空灵显现，表现为一团旋涡状的灵能云，遮蔽并扭曲现实，以命运的低语萦绕在星际虚空中。"
+ TECH_UNLOCK_PDIVINITY_PSIONIC_CLOUD_CONSTRUCTION_TITLE:0 "§H解锁舰船类型：§! Shroud Echo"
+ TECH_UNLOCK_PDIVINITY_PSIONIC_CLOUD_CONSTRUCTION_DESC:0 "§H虚境回响§!\n一种快速而敏捷的实体，作为命运之子的巡逻艇。"
+
+ tech_pdivinity_psionic_avatar:0 "灵能化身"
+ tech_pdivinity_psionic_avatar_desc:0 "圣所意志的活体具现，这个化身是周身萦绕着纯粹灵能的凶猛而神秘的实体，能随其意志扭曲现实。"
+ TECH_UNLOCK_PDIVINITY_PSIONIC_AVATAR_CONSTRUCTION_TITLE:0 "§H解锁舰船类型：§! 灵能化身"
+ TECH_UNLOCK_PDIVINITY_PSIONIC_AVATAR_CONSTRUCTION_DESC:0 "§H灵能化身§!\n由命运建筑师所创造，作为前线舰船使用。灵能化身舰载火力远超其体型。"
+
+ tech_pdivinity_dimensional_tearer:0 "维度撕裂者"
+ tech_pdivinity_dimensional_tearer_desc:0 "一种能够撕裂现实的武器，能制造出撕裂并解开时空本身结构的灵能通道。"
+ TECH_UNLOCK_PDIVINITY_DIMENSIONAL_TEARER_CONSTRUCTION_TITLE:0 "§H解锁舰船类型：§! 维度撕裂者"
+ TECH_UNLOCK_PDIVINITY_DIMENSIONAL_TEARER_CONSTRUCTION_DESC:0 "§H灵能化身§!\n命运建筑师的更强大实体。维度撕裂者作为旗舰，能够打破帷幕，对银河中的异教徒而言是一个非常危险的对手。"
+ ##############
+ ### others ###
+ ##############
+
+ tech_pdivinity_shroud_harvester:0 "圣所汲取学说"
+ tech_pdivinity_shroud_harvester_desc:0 "通过神圣的建筑和冥想仪式，我们从圣所的褶皱中汲取兹罗。所获得的精华如同无形的记忆般流淌，不稳定，并渴望被塑形。"
+
+
+

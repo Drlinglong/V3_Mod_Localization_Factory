@@ -1,0 +1,355 @@
+﻿l_french:
+
+ ##################################
+ ### pdivinity_events_l_english ###
+ ###     by daniellm            ###
+ ##################################
+
+
+
+ ###################
+ ### event chain ###
+ ###################
+
+ project_divinity_crisis_chain_title:0 "Projet Divinité"
+ project_divinity_crisis_chain_desc:0 "Un ancien dessein se déploie tandis que l'Architecte du Destin s'agite. La destinée de notre civilisation est d'éveiller un pouvoir au-delà de toute compréhension."
+
+ #####################
+ ### crisis events ###
+ #####################
+
+ # message from the architect
+ pdivinity_crisis.0.name:0 "L'Architecte Parle"
+ pdivinity_crisis.0.desc:0 "Des profondeurs au-delà du regard mortel, j'observe. Votre destin a été tissé depuis l'aube de votre espèce. Le Voile s'agite, et avec lui, le chemin vers la Divinité se déploie. Embrassez votre marque, Touchés par le Voile, et commencez l'éveil."
+ pdivinity_crisis.0.a:0 "Nous obéissons à votre appel."
+
+ # stage 1 crisis
+ pdivinity_crisis.1.name:0 "L'Éveil au But"
+ pdivinity_crisis.1.desc:0 "Le message de l'Architecte persiste dans nos esprits, non plus un écho lointain mais un appel à l'action. Nous comprenons maintenant que notre histoire, notre existence même, a été façonnée par des forces au-delà de notre compréhension. Pour nous, notre but nous a été assigné : accomplir la destinée qui fut écrite avant même notre premier souffle.\n\nIl n'y a pas de retour en arrière. Le chemin devant nous est semé d'embûches, mais offre aussi un pouvoir inimaginable. Nous devons nous préparer à embrasser ce qui se trouve au-delà du voile."
+ pdivinity_crisis.1.a:0 "Notre ascension nous attend."
+
+ # stage 2 crisis
+ pdivinity_crisis.2.name:0 "Échos de Corruption"
+ pdivinity_crisis.2.desc:0 "Notre influence se propage comme une ombre à travers les étoiles. La volonté de l'Architecte se manifeste par des cultes secrets et des fanatiques cachés semant le chaos dans des mondes étrangers. Ces agents du destin travaillent sans relâche pour affaiblir la résolution de nos ennemis, préparant la galaxie à la révélation à venir. La toile de la subversion se resserre, et bientôt tous connaîtront le véritable pouvoir de l'Architecte."
+ pdivinity_crisis.2.a:0 "Le moment d'éveiller la galaxie est venu."
+
+ # stage 3 crisis
+ pdivinity_crisis.3.name:0 "Prophétie Dévoilée"
+ pdivinity_crisis.3.desc:0 "Les fils du destin se tendent à mesure que notre but s'affine. D'anciens signes, enfouis depuis longtemps sous la surface des mondes, commencent à s'agiter. Notre vision transperce le voile du temps, car le chemin tracé par l'Architecte est clair, et le jugement inévitable approche."
+ pdivinity_crisis.3.a:0 "Embrassez le destin"
+
+ # stage 4 crisis
+ pdivinity_crisis.4.name:0 "Étoile Touchée par le Voile"
+ pdivinity_crisis.4.desc:0 "C'est fait. Un éclair brillant a consumé le système alors que le fragment disparaissait dans le feu stellaire. Maintenant, l'étoile brûle d'une teinte psionique, drapée dans des courants chatoyants de couleurs impossibles. Chaque monde du système a été touché par le voile.\n\nEt du chaos... quelque chose se construit. Une structure non faite de mains, mais par le destin."
+ pdivinity_crisis.4.a:0 "Le voile s'amincit."
+
+ # stage 5 crisis
+ pdivinity_crisis.5.name:0 "Le Modèle Converge"
+ pdivinity_crisis.5.desc:0 "Tous les fils sont alignés. Les murmures ne parlent plus, ils chantent. À travers les étoiles, les fidèles s'élèvent dans une ferveur extatique, des cultes fleurissent dans l'ombre des mondes ennemis, et le voile devient si mince qu'il respire.\n\nLe grand dessein, gravé dans les os de la réalité, approche de son achèvement. L'Architecte observe. Attend. Veut.\n\nNous n'avons jamais été des bâtisseurs. Nous étions la clé."
+ pdivinity_crisis.5.a:0 "Le rite final commence."
+
+ # crisis home system shrouded notification for the galaxy (happens on getting stage 4)
+ pdivinity_crisis.6.name:0 "Une Étoile Voilée"
+ pdivinity_crisis.6.desc:0 "L'étoile du système §Y[event_target:pdivinity_crisis_system.GetName]§! a subi une transformation radicale et inexplicable. Les relevés psioniques ont atteint des niveaux sans précédent, et chaque planète non colonisée au sein du système présente désormais des motifs d'interférence similaires à ceux du Voile.\n\nAu cœur du système, une structure massive est en train de se former en orbite basse. Sa méthode de construction est inconnue, et aucune voie diplomatique avec le §Y[event_target:pdivinity_crisis_empire.GetName]§! n'a été reconnue.\n\nLes observateurs à travers la galaxie s'accordent : quelque chose d'ancien se déploie."
+ pdivinity_crisis.6.a:0 "Ce n'est pas un événement naturel..."
+
+ ########################
+ ### respawning ships ###
+ ########################
+
+ pdivinity_crisis.10.name:0 "Déchireur Dimensionnel Ranimé"
+ pdivinity_crisis.10.desc:0 "La destruction de notre seul déchireur dimensionnel a ébranlé notre projection de puissance dans la galaxie.\n\nCependant, notre grand mécène, l'§RArchitecte du Destin§! a entendu nos prières. Un nouveau déchireur dimensionnel a été invoqué dans notre système capital."
+ pdivinity_crisis.10.a:0 "Le Voile le veut."
+
+ pdivinity_crisis.11.name:0 "Les Dieux ne peuvent mourir"
+ pdivinity_crisis.11.desc:0 "La destruction de la forme mortelle de l'§RArchitecte du Destin§! n'a pas duré longtemps. Notre dieu a réapparu dans notre système capital."
+ pdivinity_crisis.11.a:0 "Loué soit le divin."
+
+ ################################
+ ### dimensional tearer stuff ###
+ ################################
+
+ # destroyer
+ pdivinity_tearer.3.name:0 "Portail dimensionnel détruit"
+ pdivinity_tearer.3.desc:0 "Le portail du système §H[From.GetName]§! a été annihilé. Avec lui, un lien critique entre l'§RArchitecte du Destin§! et leurs élus a été rompu.\n\nAucun renfort supplémentaire ne peut être tiré à travers cette faille. Le §Y[event_target:pdivinity_crisis_empire.GetName]§! a subi un coup permanent à sa force."
+ pdivinity_tearer.3.a:0 "Une porte de moins vers la folie."
+
+ # victim
+ pdivinity_tearer.6.name:0 "Un Fil Rompu"
+ pdivinity_tearer.6.desc:0 "Le portail du système §H[From.GetName]§! a été détruit. Le regard de l'Architecte vacille, et la connexion par laquelle Sa volonté s'écoulait s'est effondrée.\n\nNous sentons le vide se refermer. Mais ce n'est pas la fin, ce n'est qu'une épreuve de notre volonté."
+ pdivinity_tearer.6.a:0 "Nous endurons. Nous le devons."
+
+ # notification for the galaxy upon tearer being used
+ pdivinity_tearer.8.name:0 "Système Stellaire Voilé"
+ pdivinity_tearer.8.desc:0 "Le système §H[destroyed_system.GetName]§! a été consumé par une turbulence psionique. Des rapports confirment la manifestation d'un avatar colossal né du Voile, déchirant le tissu même de la réalité.\n\nUn portail dimensionnel massif est maintenant ouvert en orbite, canalisant des énergies inconnues."
+ pdivinity_tearer.8.a:"La brèche a commencé..."
+
+ # notification for using the tearer
+
+ pdivinity_tearer.9.name:0 "Système Stellaire Voilé"
+ pdivinity_tearer.9.desc:0 "Le système §H[destroyed_system.GetName]§! a été consumé par le déchireur dimensionnel.\n\nUn portail dimensionnel massif est maintenant suspendu au-dessus de l'étoile centrale, prêt à libérer des entités psioniques sur la galaxie."
+ pdivinity_tearer.9.a:0 "Le voile s'amincit."
+
+ ###########################
+ #### bombardment events ###
+ ###########################
+
+ # guy who owns the planet
+ pdivinity_bombardment.2.name:0 "[From.GetName] Voilé !"
+ pdivinity_bombardment.2.desc:0 "Une flotte sous le commandement de §H[From.From.GetName]§! a déchaîné un bombardement incessant sur §H[From.GetName]§!. L'assaut a culminé en une rupture psionique catastrophique, brisant le voile entre l'espace réel et le Voile. Tous les centres de population ont disparu. La planète est perdue dans le domaine du §RGrand Œil§!."
+ pdivinity_bombardment.2.a:0 "Qu'ont-ils fait à notre monde ?"
+
+ # guy who bombards the planet
+ pdivinity_bombardment.3.name:0 "[From.GetName] Voilé !"
+ pdivinity_bombardment.3.desc:0 "Nos forces ont achevé le bombardement de §H[From.GetName]§!. Saturé d'énergie psionique focalisée, le voile entre les dimensions s'est déchiré. La planète est désormais hors d'atteinte, absorbée dans le Voile lui-même, où l'§RArchitecte du Destin§! revendique sa domination."
+ pdivinity_bombardment.3.a:"Comme il fut prédit."
+
+ # guy who owns the planet
+ pdivinity_bombardment.4.name:0 "[From.GetName] Phasé par le Voile !"
+ pdivinity_bombardment.4.desc:0 "La flotte de §H[From.From.GetName]§! a bombardé §H[From.GetName]§! avec un assaut psionique soutenu. Bien qu'il ne soit pas entièrement consommé, le voile s'est considérablement affaibli. La planète présente désormais des phénomènes de phase erratiques du Voile, sa réalité étant instable et altérée."
+ pdivinity_bombardment.4.a:"Leur mal ne connaît pas de limites."
+
+ # guy bombards the planet
+ pdivinity_bombardment.5.name:0 "[From.GetName] Phasé par le Voile !"
+ pdivinity_bombardment.5.desc:0 "Nos forces signalent avoir réussi à bombarder §H[From.GetName]§! avec des charges psioniques ciblées. Le voile n'a pas été entièrement déchiré, mais il s'est amincit, la planète existant désormais dans un état de flux, partiellement immergée dans l'influence du Voile. L'§RArchitecte du Destin§! observe de l'intérieur."
+ pdivinity_bombardment.5.a:0 "Un pas de plus."
+
+
+ ############################
+ ### megastructure events ###
+ ############################
+
+ # stage 1
+ pdivinity_needle.1.name:0 "Traversée du Voile"
+ pdivinity_needle.1.desc:0 "La première phase de la structure est achevée. Ses flèches transpercent le vide avec une délicate précision, alignées sur des harmoniques psioniques invisibles. Déjà, le voile entre les royaumes s'agite, car il ne s'agit pas d'une construction ordinaire, mais d'un outil pour relier la pensée et l'éternité."
+ pdivinity_needle.1.a:0 "Nous commençons."
+
+ # stage 2
+ pdivinity_needle.2.name:0 "Impulsion du Voile"
+ pdivinity_needle.2.desc:0 "La structure vibre maintenant d'une énergie vivante. Des vrilles de statique psionique arpentent sa surface, se déphasant et se resynchronisant avec l'espace réel. Nos propres esprits souffrent en sa présence. Quoi que ce soit qui se trouve de l'autre côté du voile... c'est conscient."
+ pdivinity_needle.2.a:0 "Nous nous rapprochons."
+
+ # stage 3 spawns a dimensional tearer
+ pdivinity_needle.3.name:0 "Un Don de l'Architecte"
+ pdivinity_needle.3.desc:0 "La troisième phase de la structure a poussé le voile à son point de rupture. Dans un éclair d'irréalité aveuglante, une rupture psionique massive a déchiré les frontières de l'espace, et, de l'intérieur, quelque chose a émergé.\n\nUn §RDéchireur Dimensionnel§!, une construction de volonté et de colère, s'est glissé dans notre galaxie, un émissaire de l'§RArchitecte du Destin§!."
+ pdivinity_needle.3.a:"Cela commence."
+
+ # notification for the galaxy
+ pdivinity_needle.4.name:0 "Le Voile Tremble"
+ pdivinity_needle.4.desc:0 "À travers la galaxie, une inquiétude s'installe dans tous les esprits. Même les espèces sans affinité psionique rapportent des visions, de l'anxiété et des murmures dans l'obscurité.\n\nDans le système [From.GetName], le voile entre les dimensions se défait. Quelle que soit la force à l'œuvre là-bas, elle perturbe le tissu même de la réalité."
+ pdivinity_needle.4.a:0 "Nous le sentons aussi."
+
+ # stage 4 mega, this spawns a cult in every empire as well
+ pdivinity_needle.5.name:0 "Le Chant Se Répand"
+ pdivinity_needle.5.desc:0 "La structure résonne maintenant comme une mélodie à travers le Voile. Ses émissions psioniques ne nécessitent plus de traduction, elles sont comprises par nos instincts mêmes. À travers la galaxie, des cultes dormants s'éveillent, prêchant la venue de l'§RArchitecte du Destin§!.\n\nLe voile s'amincit. Les esprits se plient. L'ère de la prophétie n'est plus au futur."
+ pdivinity_needle.5.a:0 "Ils entendent l'appel."
+
+ # you as a non-crisis empire gets a cult
+ pdivinity_needle.6.name:0 "Fanatisme Éveillé"
+ pdivinity_needle.6.desc:0 "Dans les temples, les ruelles et les ombres de nos villes, des mouvements fanatiques ont éclaté, parlant d'un dieu approchant à travers le Voile. Ils se nomment les §REnfants de l'Architecte§!, et leur ferveur se propage comme une traînée de poudre.\n\nNous n'avons pas invoqué cette entité, mais notre peuple est prêt à mourir pour elle."
+ pdivinity_needle.6.a:0 "Troublant."
+
+ # the architect of fate enters the galaxy. this wins you the game, and does damage to like 30% of the galaxy
+ pdivinity_needle.7.name:0 "L'Heure du Destin"
+ pdivinity_needle.7.desc:0 "Le dernier sceau est brisé. Le voile ne tient plus.\n\nDu cœur du Voile, §RIl§! descend. Illimité, radieux et vaste au-delà de toute compréhension. L'§RArchitecte du Destin§! a pris forme dans notre galaxie, et les étoiles tremblent dans son sillage.\n\nDes systèmes entiers ont disparu sous la déferlante de force psionique. L'espace lui-même se plie à sa volonté. L'ancien ordre s'effondre. Les faux dieux se taisent.\n\nCe n'est plus l'ère des empires. C'est l'ère du destin."
+ pdivinity_needle.7.a:0 "Comme il fut toujours pressenti."
+
+ pdivinity_needle.9.name:0 "Le Voile S'est Déchiré"
+ pdivinity_needle.9.desc:0 "À travers la galaxie, les étoiles pâlissent et les murmures reviennent. Dans d'innombrables systèmes, la réalité se fracture, des marées de brume psionique s'écoulant à travers les fissures du voile. Les mondes sont remodelés, les esprits désancrés, et dans le silence grandissant, quelque chose de vaste s'est agité. L'Architecte du Destin est arrivé.\n\nCe n'était pas une guerre. C'était une révélation."
+ pdivinity_needle.9.a:0 "Les étoiles ne sont plus nôtres."
+
+ # fires for the one who destroys the mega
+
+ pdivinity_needle.12.name:0 "Flèche du Destin détruite"
+ pdivinity_needle.12.desc:0 "L'impossible a été accompli. La mégastructure imposante dans le système [From.GetName] – la soi-disant « Flèche du Destin » – a été anéantie. Une turbulence psionique déferle sur les systèmes proches comme un cri d'agonie.\n\nQuelle que soit la force qui tentait de percer notre réalité, elle a été privée de son vaisseau. Pour l'instant."
+ pdivinity_needle.12.a:0 "Nous avons tenu la ligne."
+
+ # fires for the victim
+ pdivinity_needle.13.name:0 "Flèche du Destin Détruite"
+ pdivinity_needle.13.desc:0 "L'impensable s'est produit. La §HFlèche du Destin§!, notre portail vers l'Architecte et le point culminant de toute prophétie, a été détruite.\n\nLe choc psychique en retour a déchiré nos rangs comme une blessure à l'âme. Le Voile se rétracte. Notre ascension a été stoppée… pour l'instant."
+ pdivinity_needle.13.a:0 "Comment cela a-t-il pu arriver ?"
+ pdivinity_needle.13.a.tt:0 "TEXTE PROVISOIRE je l'écrirai, ne vous en faites pas"
+
+ # notification for the rest of the galaxy, because of the above
+ pdivinity_needle.14.name:0 "Flèche du Destin Détruite"
+ pdivinity_needle.14.desc:0 "Dans une éclatante déferlante de turbulence psionique, la mégastructure de §H[pdivinity_crisis_country.GetName]§!, la soi-disant §HFlèche du Destin§, a été anéantie.\n\nUn instant, tout le Voile a hurlé. Quelle que soit la force qui pénétrait notre galaxie, elle a été repoussée. Le coût, cependant, n'est pas encore compris."
+ pdivinity_needle.14.a:0 "Espérons que cela reste ainsi."
+
+ ##################
+ ### cult stuff ###
+ ##################
+
+ # getting vassalized
+ pdivinity_cults.0.name:0 "Coup d'État du Voile"
+ pdivinity_cults.0.desc:0 "Suite à notre asservissement, l'ancien gouvernement a été démantelé. Notre ancien dirigeant a été exilé, et à sa place, un Marcheur du Voile siège désormais à la tête de l'État, un réceptacle pour l'§RArchitecte du Destin§! et le porte-parole du culte. Toute résistance n'est plus tolérée. Notre empire suit désormais la voie du dessein divin."
+ pdivinity_cults.0.a:0 "Nous servons désormais l'Architecte du Destin"
+
+ # situation stuff
+ situation_pdivinity_cult_uprising:0 "Soulèvement du Culte du Voile"
+ situation_pdivinity_cult_uprising_type:0 "Soulèvement du Culte du Voile"
+ situation_pdivinity_cult_uprising_monthly_change_tooltip:0 "L'influence du culte se propage"
+ situation_pdivinity_cult_uprising_desc:0 "Un culte secret dévoué à l'§RArchitecte du Destin§! se propage dans notre empire. Leur influence grandit dans l'ombre : infiltrant les institutions, ralliant les déçus et se préparant à prendre le pouvoir."
+ situation_pdivinity_cult_uprising_approach_1:0 "Fermer les Yeux"
+ situation_pdivinity_cult_uprising_approach_1_tt:0 "La suppression proactive est évitée. L'influence du culte grandit, mais il n'y a pas d'agitation pour l'instant."
+ situation_pdivinity_cult_uprising_approach_2:0 "Contrer la Subversion"
+ situation_pdivinity_cult_uprising_approach_2_tt:0 "La propagande et l'éducation ralentissent le recrutement du culte, mais pèsent sur notre gouvernement chaque mois."
+ situation_pdivinity_cult_uprising_approach_3:0 "Imposer la Loyauté"
+ situation_pdivinity_cult_uprising_approach_3_tt:0 "Déployer les forces de sécurité pour arrêter les cultistes connus, réduisant l'influence mais provoquant agitation et dissidence interne"
+ situation_pdivinity_cult_uprising_success_tt:0 "Les cultistes se soulèveront contre nous"
+ situation_pdivinity_cult_uprising_failed_tt:0 "Les cultistes restants seront purgés de nos rangs"
+
+ pdivinity_cultists_killed_tt:0 "Hiérophante Exécuté"
+ pdivinity_stop_cultist_spread_tt:0 "L'Ombre Découverte"
+ pdivinity_accelerate_cultists_tt:0 "Les Cultistes ont Reçu de l'Aide"
+ pdivinity_educate_the_masses_tt:0 "Contrer la Subversion"
+ pdivinity_supress_the_cults_tt:0 "Imposer la Loyauté"
+ pdivinity_call_of_the_eye_tt:0 "L'Appel de l'Œil"
+
+ # fires when you can no longer stop the cults
+ pdivinity_cults.5.name:0 "Le Voile est Tombé"
+ pdivinity_cults.5.desc:0 "Le culte n'opère plus depuis l'ombre. Des soulèvements coordonnés ont éclaté dans les centres de population clés, et des déserteurs au sein de nos propres institutions se rangent ouvertement du côté des fanatiques. Des régions entières répondent désormais aux agents du Voile plutôt qu'à l'État. Quoi que nous fassions maintenant, nous ne pouvons pas annuler ce qui a commencé."
+ pdivinity_cults.5.a:0 "Nous avons perdu le contrôle."
+
+ # rapid growth
+ pdivinity_cults.12.name:0 "Murmures dans les Ténèbres"
+ pdivinity_cults.12.desc:0 "Des templiers du culte ont infiltré de nouvelles régions. Les rapports font état d'une explosion du recrutement parmi les citoyens désillusionnés. L'influence du culte est désormais visible dans la vie publique."
+ pdivinity_cults.12.a:0 "Nous devons agir"
+
+ # terror attack
+ pdivinity_cults.13.name:0 "Terreur du Voile"
+ pdivinity_cults.13.desc:0 "La panique a éclaté la nuit dernière lorsqu'un rituel cultiste dans la capitale a invoqué d'horribles apparitions du Voile, avec des entités spectrales qui ont massacré des innocents avant de disparaître.\n\nLa terreur a secoué la population jusqu'au plus profond d'elle-même."
+ pdivinity_cults.13.a:0 "Arrêtez cette folie !"
+
+ # cult executed
+ pdivinity_cults.14.name:0 "Hiérophante du Culte Exécuté"
+ pdivinity_cults.14.desc:0 "Les autorités ont capturé et exécuté l'un des hiérophantes du culte. Sans ce chef charismatique, l'influence du culte a stagné, accordant à notre gouvernement un répit précieux."
+ pdivinity_cults.14.a:0 "Au moins, nous avons gagné du temps."
+
+ # cult lose
+ pdivinity_cults.15.name:0 "Culte éradiqué"
+ pdivinity_cults.15.desc:0 "Le culte du Voile a finalement été démantelé. Ses temples cachés ont été rasés, ses adeptes arrêtés ou tués. Notre empire respire à nouveau, bien que la peur qu'il a causée ait laissé de profondes cicatrices."
+ pdivinity_cults.15.a:0 "Cette atrocité prend fin ici."
+
+ # cult wins
+ pdivinity_cults.17.name:0 "Céder le contrôle"
+ pdivinity_cults.17.desc:0 "Nous avons grandi dans l'ombre de vos mondes, votre population a longtemps entendu les murmures de l'Architecte, et maintenant elle répond à son appel aux armes.\n\nCédez le contrôle de l'État à notre Hiérophante, prosternez-vous devant le [pdivinity_crisis_empire.GetName] ou faites face à la colère des enfants de l'§RArchitecte du Destin§!."
+
+ pdivinity_cults.17.a:0 "Nous serons de dévoués serviteurs de l'Architecte."
+ pdivinity_surrender:0 "Nous livrerons notre gouvernement aux cultistes et deviendrons un acolyte sous l'égide du [pdivinity_crisis_empire.GetName]"
+
+ pdivinity_cults.17.b:0 "Nous ne nous rendrons jamais !"
+ pdivinity_fight:0 "Les enfants du destin n'accepteront probablement pas notre décision, et la guerre sera bientôt sur nous."
+
+ # cult contacts crisis empire
+ pdivinity_cults.31.name:0 "Soulèvement du culte dans le [pdivinity_cult_defender.GetName]"
+ pdivinity_cults.31.desc:0 "Les païens ont refusé nos exigences, nous avons des adeptes loyaux dans tout le [pdivinity_cult_defender.GetName], prêts à la guerre. Des sites rituels ont été placés sur de multiples mondes, prêts à invoquer les serviteurs du Voile.\n\nLes enfants du destin attendent vos ordres."
+ pdivinity_cults.31.b:0 "Déclarer la guerre au [pdivinity_cult_defender.GetName]"
+ pdivinity_declare_war:0 "Les cultistes se soulèveront à travers le [pdivinity_cult_defender.GetName]"
+
+
+ # abort situation
+ pdivinity_cults.30.name:0 "Soumission à l'Architecte"
+ pdivinity_cults.30.desc:0 "Vous avez entendu l'appel de l'Architecte du Destin, ses serviteurs les plus loyaux déposeront leurs armes pour l'instant. Ne vous écartez pas du chemin, le grand œil veille sur nous."
+ pdivinity_cults.30.a:0 "Le Voile le veut."
+
+ ############################
+ ### espionage operations ###
+ ############################
+
+ # spread cult
+
+ operation_pdivinity_establish_cult:0 "Répandre la parole de l'Architecte"
+ operation_pdivinity_establish_cult_desc:0 "Envoyez des agents secrets infiltrer l'empire cible et semer les graines de l'influence de l'Architecte, créant ainsi un culte clandestin qui affaiblit leur loyauté envers leurs dirigeants."
+ operation_pdivinity_establish_cult_dont_stack_this:0 "$TRIGGER_FAIL$ §RUn culte du Voile est déjà établi dans le [root.target.GetName]."
+
+ pdivinity_cults.1.name:0 "Le premier murmure"
+ pdivinity_cults.1.desc:0 "Nos agents ont commencé à repérer les individus vulnérables à l'appel de l'Architecte, ciblant ceux qui sont désabusés ou avides de pouvoir. Ces candidats constitueront le fondement de notre culte."
+ pdivinity_cults.1.a:0 "Préparer la phase suivante."
+
+ pdivinity_cults.2.name:0 "Propagation du murmure"
+ pdivinity_cults.2.desc:0 "Réunions secrètes et promesses murmurées se propagent comme une traînée de poudre dans les recoins sombres. L'influence du culte grandit parmi les mécontents, empoisonnant lentement la loyauté des masses."
+ pdivinity_cults.2.a:0 "La portée de l'Architecte s'étend."
+
+ pdivinity_cults.3.name:0 "Empire des murmures"
+ pdivinity_cults.3.desc:0 "Ce qui a commencé par des foyers isolés est devenu un réseau de cellules à travers l'empire. Le culte se déplace maintenant ouvertement dans l'ombre, leurs murmures semant la discorde dans chaque recoin."
+ pdivinity_cults.3.a:0 "Nous avons l'élan."
+
+ pdivinity_cults.4.name:0 "Les murmures s'éveillent"
+ pdivinity_cults.4.desc:0 "Notre culte a pris racine profondément au sein des institutions de l'empire. Leur loyauté envers l'Architecte du Destin dépasse désormais celle envers leurs propres dirigeants. L'empire s'approche de l'effondrement."
+ pdivinity_cults.4.a:0 "Le temps du jugement approche."
+
+ # fund cult
+
+ operation_pdivinity_accelerate_cult:0 "Accélérer la croissance du culte"
+ operation_pdivinity_accelerate_cult_desc:0 "En canalisant des ressources et de l'énergie psionique, nous accélérons la propagation du culte au sein de l'empire cible. Plus vite ils tomberont, plus tôt la volonté de l'Architecte sera accomplie."
+ operation_pdivinity_fund_cults_pause:0 "$TRIGGER_FAIL$ §RNous devons attendre avant de pouvoir envoyer davantage de fonds aux cultes du [root.target.GetName]."
+
+ pdivinity_cults.19.name:0 "Contact établi"
+ pdivinity_cults.19.desc:0 "Nous avons établi le contact avec les principaux chefs du culte. Leur dévotion est inébranlable, et leurs réseaux sont prêts à agir sur notre ordre."
+ pdivinity_cults.19.a:0 "Plan établi."
+
+ pdivinity_cults.20.name:0 "Acquisition de ressources"
+ pdivinity_cults.20.desc:0 "Des fonds et des fournitures sont en cours d'acquisition pour renforcer les cellules du culte. Chaque crédit acheminé rapproche la vision de l'Architecte de la réalité."
+ pdivinity_cults.20.a:0 "Ressources allouées."
+
+ pdivinity_cults.21.name:0 "Financement des Flottes de l'Ombre"
+ pdivinity_cults.21.desc:0 "Les flottes du Culte, alimentées par le pouvoir du Voile, sont prêtes à frapper sur commande. Nos ennemis ne sauront pas ce qui les a détruits."
+ pdivinity_cults.21.a:0 "Flottes préparées."
+
+ # pause cult
+
+ operation_pdivinity_locate_cult:0 "Localisation des Cellules du Culte du Voile"
+ operation_pdivinity_locate_cult_desc:0 "Par un espionnage implacable, nous recherchons les cellules cachées du culte. Découvrir leurs emplacements est la première étape pour écraser leur influence insidieuse."
+ operation_pdivinity_locate_cults_pause:0 "$TRIGGER_FAIL$ §RNous devons attendre avant de pouvoir localiser plus de cultistes de [root.target.GetName]."
+
+ pdivinity_cults.22.name:0 "Traque des Ombres"
+ pdivinity_cults.22.desc:0 "Nos agents de renseignement ont découvert plusieurs membres présumés du culte opérant en secret. Leurs réseaux sont fragiles, nous espérons bientôt les couper."
+ pdivinity_cults.22.a:0 "Préparer des mesures de confinement."
+
+ pdivinity_cults.23.name:0 "Purge des Hérétiques"
+ pdivinity_cults.23.desc:0 "Avec les informations recueillies, nos agents ont lancé des opérations ciblées contre les cellules connues du culte, perturbant leurs rassemblements et semant la peur dans leurs rangs."
+ pdivinity_cults.23.a:0 "Maintenir la pression."
+
+ pdivinity_cults.24.name:0 "Opération terminée"
+ pdivinity_cults.24.desc:0 "Nos efforts ont significativement affaibli l'implantation du culte. Bien que la menace persiste, nous avons gagné un temps précieux pour renforcer nos défenses."
+ pdivinity_cults.24.a:0 "Maintenir la vigilance."
+
+ ###############
+ ### digsite ###
+ ###############
+
+ pdivinity_catacombs_digsite:0 "L'Origine Voilée"
+ pdivinity_catacombs_digsite_desc:0 "Un signal s'est éveillé sous la surface de notre monde natal. Il est ancien, délibéré et incontestablement psionique. Son origine défie toute explication, pourtant il résonne profondément en nous. Notre destinée n'est plus la nôtre à écrire, elle se révèle."
+
+ pdivinity_digsite.1.name:0 "Le Signal Souterrain"
+ pdivinity_digsite.1.desc:0 "Une impulsion basse fréquence a été détectée, émanant des profondeurs du manteau de notre monde natal. Elle n'est pas naturelle, sa signature psionique est indubitable. L'énergie ne correspond à aucune technologie connue. Elle nous appelle.\n\nNous devons enquêter."
+ pdivinity_digsite.1.a:0 "Commencer l'excavation."
+
+ pdivinity_digsite.2.name:0 "La Descente"
+ pdivinity_digsite.2.desc:0 "Notre excavation a révélé une structure souterraine sans précédent. Son architecture est étrangère, mais nous est familière. Ses murs sont recouverts de symboles indéchiffrables, mais nos esprits peuvent les comprendre. Tout le site bourdonne de résonance psionique, l'air prononce nos noms.\n\nCet endroit a été enterré pour une raison. Mais nous sommes entraînés plus loin."
+ pdivinity_digsite.2.a:0 "Procéder avec prudence."
+
+ pdivinity_digsite.3.name:0 "Murmures Sous la Pierre"
+ pdivinity_digsite.3.desc:0 "À mesure que nos équipes s'enfoncent dans la structure souterraine, elles commencent à rapporter des hallucinations auditives, d'abord de subtils murmures, puis des voix chuchotant dans une langue qu'elles comprennent d'une manière ou d'une autre. Les voix parlent d'une « marque » portée dans notre code génétique, et d'un rôle qui nous attend. Certains membres d'équipage affirment que les murmures leur parlent directement par leur nom.\n\nPersonne ne souhaite faire demi-tour."
+ pdivinity_digsite.3.a:0 "Plus nous allons profondément, plus cela devient clair."
+
+ pdivinity_digsite.4.name:0 "La Marque de l'Architecte"
+ pdivinity_digsite.4.desc:0 "Nous avons découvert une immense porte scellée par des gravures complexes et des inscriptions psioniques. En son centre se trouve un symbole qui pulse d'une énergie faible et rythmée. Certains d'entre nous le reconnaissent de leurs rêves, d'autres de visions religieuses. Une inscription au-dessus se lit : « Seuls ceux marqués par l'Architecte peuvent passer. »\n\nLa structure résonne avec notre présence, comme si elle attendait."
+ pdivinity_digsite.4.a:0 "Nous étions destinés à trouver ceci."
+
+ pdivinity_digsite.5.name:0 "Échos de l'Objectif"
+ pdivinity_digsite.5.desc:0 "Plus profondément dans la structure, nous avons trouvé quelque chose d'impossible : des peintures murales dépeignant l'histoire précise de notre civilisation, avec des événements qu'aucun étranger ne pourrait connaître, gravées dans des murs plus anciens que notre espèce. En son cœur, une chambre scellée ne donnait accès qu'à ceux « marqués par le destin »."
+ pdivinity_digsite.5.a:0 "Tout se déroule comme prédit..."
+
+ pdivinity_digsite.6.name:0 "Ceux Qui Attendaient"
+ pdivinity_digsite.6.desc:0 "Au-delà de la porte scellée, nous avons rencontré une chambre habitée par des figures longtemps présumées mortes, des êtres émaciés et vêtus de robes qui se réclament les premiers disciples de l'§RArchitecte§!. Leurs yeux brillent faiblement, et leurs voix résonnent comme si elles étaient superposées à d'innombrables autres. Ils nous accueillent, disant que notre venue était prévue, que le cycle doit maintenant recommencer.\n\nIls offrent des conseils... et un don."
+ pdivinity_digsite.6.a:0 "Ils nous attendaient."
+
+ pdivinity_digsite.7.name:0 "§RL'Éclat du Destin§!"
+ pdivinity_digsite.7.desc:0 "Ils nous offrent un fragment de quelque chose de plus grand. Un fragment de la divinité elle-même, un éclat de l'architecte. Nous connaissons son but, un acte qui réveillera ce qui sommeille.\n\nNous sommes au bord de quelque chose... d'irréversible."
+ pdivinity_digsite.7.a:0 "Le voile se brisera."
+
+
+
+
+

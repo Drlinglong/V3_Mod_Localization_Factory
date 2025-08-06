@@ -1,0 +1,1285 @@
+﻿# localisation\english\darktec_mechanics_l_english.yml
+
+# Authors: Rodahtnov & Zyralynn
+
+l_turkish:
+
+# Misc
+	# §B thisisblue §!
+	# §E thisisteal §!
+	# §G thisisgreen §!
+	# §H thisisorange §!
+	# §L thisisbrown §!
+	# §M thisispurple §!
+	# §P thisislightred §!
+	# §R thisisred §!
+	# §S thisisdarkorange §!
+	# §T thisislightgrey §!
+	# §W thisiswhite §!
+	# §Y thisisyellow §!
+# /
+
+# Ascension perk
+	darktec_ap_postbaryonic:0 "Baryonik Ötesi Enfüzyon"
+	darktec_ap_postbaryonic_desc:0 "Evrenin, var olan her şeydeki son yıldıza, son ışığa kadar, boşluğun yavaşça yutmasıyla kendi içine nasıl çöktüğünü uzun süredir görüyoruz; Şimdi o felaketi nasıl geri alacağımızı, nasıl önleyeceğimizi ve kendi lehimize nasıl çevireceğimizi bilme zamanı. Entropi bizimle sona erecek."
+	darktec_ap_postbaryonic_not_for_multispecies:0 "£trigger_no£ §YÇokkültürlü§! imparatorluklar yasaktır."
+	darktec_ap_postbaryonic_not_for_wilderness:0 "£trigger_no£ Birleşmiş imparatorluklar yasaktır (Tıpkı §YVahşi Doğa§! İmparatorlukları gibi)."
+	darktec_ap_postbaryonic_requires_able_to_modify_species:0 "£trigger_no£ Pürist imparatorluklar yasaktır (Ana türümüzü değiştiremiyoruz)."
+	darktec_ap_postbaryonic_tooltip_will_need_to_research_dm_tech:0 "\n§ETeknoloji Gereksinimleri:§!\n- İlerlemek için §Y£physics£ $tech_mine_dark_matter$§! teknolojisine ihtiyacımız var. Bu teknoloji, garantili araştırma olarak sağlanacaktır."
+
+	darktec_ap_postbaryonic_tooltip:0 "- Krize doğru ilerleme başlayacak.\n- Baryonik olmayan enerjiyi hasat etmenin ve kullanmanın bir yolu, ne pahasına olursa olsun yeni hedefimiz olacak."
+
+	darktec_ap_postbaryonic_transformed:0 "Entropik Füzyon"
+	darktec_ap_postbaryonic_transformed_desc:0 "$darktec_ap_postbaryonic_desc$"
+	darktec_ap_postbaryonic_transformed_tooltip:0 "- Türümüzü §YEntrophereals§! haline dönüştürdük ve şimdi entropinin gerçek potansiyelini kendi benliğimizde kucaklıyoruz."
+
+	darktec_ap_postbaryonic_tainted:0 "Gölgemsi Enfüzyon"
+	darktec_ap_postbaryonic_tainted_desc:0 "$darktec_ap_postbaryonic_desc$"
+	darktec_ap_postbaryonic_tainted_tooltip:0 "- §YGölgemsi§! uygulamalarımızı güçlendirdik ve şimdi Karanlık Madde üzerinde daha fazla kontrolümüz var."
+
+# Crisis
+	# Misc
+	# UI
+	#darktec_crisis_postbaryonic_level_1:0 "§EConcern§!"
+	#darktec_crisis_postbaryonic_level_2:0 "§ERisk§!"
+	#darktec_crisis_postbaryonic_level_3:0 "§EDanger§!"
+	#darktec_crisis_postbaryonic_level_4:0 "§ECalamity§!"
+	#darktec_crisis_postbaryonic_level_5:0 "§EExistential Threat§!"
+	darktec_crisis_postbaryonic_level_1:0 "§EMuhafaza§!"
+	darktec_crisis_postbaryonic_level_2:0 "§ESömürü§!"
+	darktec_crisis_postbaryonic_level_3:0 "§EEntropi-Bağlı§!"
+	darktec_crisis_postbaryonic_level_4:0 "§EYaklaşan Çöküş§!"
+	darktec_crisis_postbaryonic_level_5:0 "§EGölgemsi Felaket§!"
+	darktec_crisis_postbaryonic_level_1_desc:0 "Kriz Seviyesi 1"
+	darktec_crisis_postbaryonic_level_2_desc:0 "Kriz Seviyesi 2"
+	darktec_crisis_postbaryonic_level_3_desc:0 "Kriz Seviyesi 3"
+	darktec_crisis_postbaryonic_level_4_desc:0 "Kriz Seviyesi 4"
+	darktec_crisis_postbaryonic_level_5_desc:0 "Kriz Seviyesi 5"
+	# Resouces
+	darktec_contained_entropy:0 "Muhafaza Edilmiş Entropi"
+	darktec_contained_entropy_name:0 "$darktec_contained_entropy$"
+	darktec_contained_entropy_with_icon:0 "£darktec_contained_entropy£ $darktec_contained_entropy$"
+	darktec_contained_entropy_value:0 "£darktec_contained_entropy£ $VAL|0$"
+	darktec_contained_entropy_current_value:0 "Mevcut Değer: §Y$VALUE|0$§!"
+	darktec_contained_entropy_gaining:0 "Daha fazla §Y$darktec_contained_entropy$§! kazanmak için §HKriz Hedefleri§!'ni tamamlayın."
+	darktec_contained_entropy_desc:0 "Muhafaza Edilmiş Entropi, baryonik olmayan madde tarafından hapsedilmiş, gerçeklikle hiçbir şekilde etkileşemeyen veya ona müdahale edemeyen, ancak yapay olarak etkilendiğinde bunu yapabilen kaotik arka plan enerjisi miktarıdır."
+
+	darktec_contained_entropy_crisis_objective:0 "Kriz Hedefleri"
+	darktec_contained_entropy_crisis_objective_gained:0 "Kaynak kazanıldı"
+	darktec_contained_entropy_crisis_objective_reward:0 "$REWARD$"
+	darktec_contained_entropy_crisis_objective_progress:0 "Bu Kriz Hedefinden £darktec_contained_entropy£ $AMOUNT$ kazandık."
+
+	darktec_contained_entropy_crisis_level_locked:0 "Bu seviyeyi açmak için gerekli:\n"
+	darktec_contained_entropy_crisis_level_unlocked:0 "$LEVEL$ seviyesinde, özel bir etkinlik ve ödüller kazanırsınız:\n"
+	darktec_contained_entropy_crisis_level_unlock:0 "Sahip olunan £darktec_contained_entropy£ §Y$CURRENCY$§! $darktec_contained_entropy$"
+	darktec_contained_entropy_crisis_level_desc:0 "Kriz seviyelerinde ilerlemek için Kriz Hedeflerini tamamlayın ve Durum Günlüğündeki Kriz Özelliklerini araştırın."
+
+	darktec_contained_entropy_crisis_description_title:0 "Baryonik Ötesi Enfüzyon"
+	darktec_contained_entropy_crisis_description:0 "$menace_crisis_description_intro$\n\nVakumun, boşluğun, atomlar arasındaki uzayın potansiyeli... entropiyi besleyen karanlık enerji sınırsızdır ve bu nedenle gerçeklik üzerindeki gerileyici ve yıkıcı etkisini durdurmak ve onu kontrol altına almak bizim görevimizdir; Entropinin gücünü kendi gücümüz olarak boyunduruk altına alacağız."
+	darktec_contained_entropy_crisis_howto_title:0 "Kaynaşan Entropi"
+	darktec_contained_entropy_crisis_howto:0 "§HKriz Hedefleri§!'ni takip etmek ve §H$building_darktec_anchor_1_plural$§! gibi bazı §EGölgemsi§! özellikler kullanmak, imparatorluğumuzun teknolojik, ekonomik ve varoluşsal gücünü ortaya çıkararak §H$darktec_contained_entropy_with_icon$§! üretir. Kazanılan entropiyi şekillendirebileceğimiz bir forma §HKaynaştırana§! kadar daha fazla, daha fazla ve daha fazla hasat etmeli, büyütmeli ve yaratmalıyız ve bununla birlikte gerçekliği arzularımıza göre şekillendirebiliriz."
+
+	# Perks
+	# T1
+	menp_darktec_anchor_t1:0 "Boşluk Sifonlaması"
+	menp_darktec_anchor_t1_desc:0 "Alanımızdaki atıl karanlık enerjiyi ortadan kaldırmak ve kullanılabilir kaynaklara dönüştürmek, amacımızı ilerletecektir."
+	menp_darktec_anchor_t1_tooltip:0 "Bölgelerimizden herhangi birinde ['building:building_darktec_anchor_1', £building£ $building_darktec_anchor_1_plural$] inşa etmemizi sağlar, bunlar §Y$darktec_contained_entropy_with_icon$§! üretmek için kullanılır."
+
+	menp_darktec_entropy_t1:0 "Esrarengiz Çalışmalar"
+	menp_darktec_entropy_t1_desc:0 "Arka plan radyasyonu ve entropik enerji üzerinde çalışmak, baryonik olmayan maddeyi uygun şekilde ele alma konusunda bize bir başlangıç avantajı sağlayacaktır."
+	menp_darktec_entropy_t1_tooltip:0 "Artık Kriz Hedefleri aracılığıyla §Y$darktec_contained_entropy_with_icon$§! kazanabiliriz."
+
+	menp_darktec_darkmatter_t1:0 "Anti-Enerji Muhafazası"
+	menp_darktec_darkmatter_t1_desc:0 "Tek mantıklı sonuç entropinin azaltılması ve bu süreçte ondan faydalanmaktır."
+	menp_darktec_darkmatter_t1_tooltip:0 "Depolanmış §Y$darktec_contained_entropy_with_icon$§! miktarına bağlı olarak §Y£sr_dark_matter£ Karanlık Madde§! üreten ['building:building_darktec_storage_1', £building£ $building_darktec_storage_1_plural$] inşa edilmesine olanak tanır."
+
+	# T2
+	menp_darktec_anchor_t2:0 "Boşluk Hasadı"
+	menp_darktec_anchor_t2_desc:0 "Ek Çapalar inşa etmeliyiz, toplayabildiğimiz tüm arka plan ve karanlık enerjiyi çekip hedeflerimize yönlendirmeliyiz."
+	menp_darktec_anchor_t2_tooltip:0 "Artık ['building:building_darktec_anchor_1', £building£ $building_darktec_anchor_1_plural$] öğesini ['building:building_darktec_anchor_2', £building£ $building_darktec_anchor_2_plural$] seviyesine yükseltebiliriz."
+
+	menp_darktec_entropy_t2:0 "Egzotik Yeniden Birleşim"
+	menp_darktec_entropy_t2_desc:0 "Baryonik olmayan maddeyi baryonik maddeyle birleştirmek karmaşık bir meseledir, canlı varlıklarla birlikte daha da zordur. Ancak harcanan çaba gerçekten buna değerdir."
+	menp_darktec_entropy_t2_tooltip:0 "[darktec_loc_menp_darktec_entropy_t2_tooltip]"
+	menp_darktec_entropy_t2_tooltip_normal:0 "Türümüzü özel özelliklerle geliştirmemizi sağlayan ['technology:tech_darktec_traits_t1'] teknolojisinin araştırılmasına izin verir.\n"
+	menp_darktec_entropy_t2_tooltip_early:0 "Türümüzü özel özelliklerle geliştirmemizi sağlayan ['technology:tech_darktec_traits_t1'] teknolojisinin araştırılmasına izin verir.\n\n§G$situation_darktec_intro_approach_applications$§! uygulamalarımızı geliştirmeye odaklanma çabamız bize şu bonusu verdi:\n\n$MOD_COUNTRY_MODIFY_SPECIES_COST_MULT$: §G-10%§!"
+
+	menp_darktec_darkmatter_t2:0 "Vakum Geri Dönüşümü"
+	menp_darktec_darkmatter_t2_desc:0 "Hiçbir kaynak israf edilmemeli, tespit edemediklerimiz bile - maksimum verimlilik şarttır."
+	menp_darktec_darkmatter_t2_tooltip:0 "[darktec_loc_menp_darktec_darkmatter_t2_tooltip]"
+	menp_darktec_darkmatter_t2_tooltip_normal:0 "Artık ['building:building_darktec_storage_1', £building£ $building_darktec_storage_1_plural$] öğesini ['building:building_darktec_storage_2', £building£ $building_darktec_storage_2_plural$] seviyesine yükseltebiliriz.\n\nArtık §YGölge yapı teknolojilerine§! erişimimiz var."
+	menp_darktec_darkmatter_t2_tooltip_early:0 "Artık ['building:building_darktec_storage_1', £building£ $building_darktec_storage_1_plural$] öğesini ['building:building_darktec_storage_2', £building£ $building_darktec_storage_2_plural$] seviyesine yükseltebiliriz.\n\nArtık §YGölge yapı teknolojilerine§! erişimimiz var.\n\n§Y$situation_darktec_intro_approach_economy$§! ekonomimizi geliştirmeye odaklanma çabamız bize şu bonusu verdi:\n\n$MOD_PLANET_BUILDING_COST_MULT$: §G-5%§!"
+
+	menp_darktec_umbralships_t2:0 "Gölge Perdesinin Ardında"
+	menp_darktec_umbralships_t2_desc:0 "Geri dönüştürülmüş entropi yüklü materyallerin oluşturulması, hem somut hem de soyut gerçeklikle harmanlanmış görünen tasarımlar üretmemizi sağlıyor."
+	menp_darktec_umbralships_t2_tooltip:0 "[darktec_loc_menp_darktec_umbralships_t2_tooltip]"
+
+	menp_darktec_umbralships_t2_tooltip_mechanical:0 "§YGölge gemilerinin§! birinci kademesinin teknolojisini açar - ['technology:tech_darktec_crisis_destroyer']."
+	menp_darktec_umbralships_t2_tooltip_mechanical_early:0 "§YGölge gemilerinin§! birinci kademesinin teknolojisini açar - ['technology:tech_darktec_crisis_destroyer'].\n\n§Y$situation_darktec_intro_approach_warfare$§! savaşımızı geliştirmeye odaklanma çabamız bize şu bonusu verdi:\n\n$MOD_SHIP_SPEED_MULT$: §G+5%§!"
+	menp_darktec_umbralships_t2_tooltip_bioships:0 "§YGölge gemilerinin§! birinci kademesinin teknolojisini açar - ['technology:tech_darktec_crisis_mauler']."
+	menp_darktec_umbralships_t2_tooltip_bioships_early:0 "§YGölge gemilerinin§! birinci kademesinin teknolojisini açar - ['technology:tech_darktec_crisis_mauler'].\n\n§Y$situation_darktec_intro_approach_warfare$§! savaşımızı geliştirmeye odaklanma çabamız bize şu bonusu verdi:\n\n$MOD_SHIP_SPEED_MULT$: §G+5%§!"
+
+	darktec_modifier_menp_early_applications:0 "$menp_darktec_entropy_t2$"
+	darktec_modifier_menp_early_applications_desc:0 "$menp_darktec_entropy_t2_desc$"
+	darktec_modifier_menp_early_warfare:0 "$menp_darktec_umbralships_t2$"
+	darktec_modifier_menp_early_warfare_desc:0 "$menp_darktec_umbralships_t2_desc$"
+	darktec_modifier_menp_early_industry:0 "$menp_darktec_darkmatter_t2$"
+	darktec_modifier_menp_early_industry_desc:0 "$menp_darktec_umbralships_t2_desc$"
+
+	# T3
+	menp_darktec_anchor_t3:0 "Boşluk Rezonans Çağlayanı"
+	menp_darktec_anchor_t3_desc:0 "Çıkarıcılarımızı stabilize ettikten sonra, uzayın derinliklerinde entropi çıkarma deneyleri yapabiliriz, felaket niteliğinde bir zincirleme reaksiyon oluşturmadan."
+	menp_darktec_anchor_t3_tooltip:0 "Artık ['building:building_darktec_anchor_2', £building£ $building_darktec_anchor_2_plural$] öğesini ['building:building_darktec_anchor_3', £building£ $building_darktec_anchor_3_plural$] seviyesine yükseltebiliriz.\n\n['building:building_darktec_anchor_3', £building£ $building_darktec_anchor_3_plural$] artık orta miktarda §Y£sr_dark_matter£ Karanlık Madde§! de üretecek."
+
+	menp_darktec_entropy_t3:0 "Karanlık Deneyler"
+	menp_darktec_entropy_t3_desc:0 "Artık entropik geri dönüştürülmüş elementlerle olan yakınlığımızı nasıl maksimize edeceğimize dair bir kavrayışımız, bir fikrimiz, bir düşüncemiz var ve bu nedenle ihtiyaçlarımızı veya bilgimizi karşılamalıyız."
+	menp_darktec_entropy_t3_tooltip:0 "Artık türümüz için kullanılmak üzere §Ygüçlü özellikler§! sağlayan ['technology:tech_darktec_traits_t2'] teknolojisini araştırabiliriz."
+
+	menp_darktec_darkmatter_t3:0 "Kontrollü Vakum Çöküşü"
+	menp_darktec_darkmatter_t3_desc:0 "Kontrollü vakum çöküşlerinin küçük ceplerini oluşturarak, gerçekliğin tamamen çökmesi olmadan muazzam miktarlarda baryonik olmayan madde ve enerjiyi nasıl işleyeceğimizi ve yeniden yönlendireceğimizi büyük ölçüde anlayabiliriz."
+	menp_darktec_darkmatter_t3_tooltip:0 "[darktec_loc_menp_darktec_darkmatter_t3_tooltip]"
+	menp_darktec_darkmatter_t3_tooltip_mechanical:0 "§YGölge gemilerinin§! ikinci kademesinin teknolojisini açar - ['technology:tech_darktec_crisis_cruiser'].\n\nGölge Gemileri, özel §YAura bileşenlerini§! §Y2§! kademesine yükseltebilir.\n\nEk §YGüçlü gemi bileşenleri§! artık araştırma seçenekleri olarak görünebilir."
+	menp_darktec_darkmatter_t3_tooltip_bioships:0 "§YGölge gemilerinin§! ikinci kademesinin teknolojisini açar - ['technology:tech_darktec_crisis_weaver'].\n\nGölge Gemileri, özel §YAura bileşenlerini§! §Y2§! kademesine yükseltebilir.\n\nEk §YGüçlü gemi bileşenleri§! artık araştırma seçenekleri olarak görünebilir."
+
+	# T4
+	menp_darktec_anchor_t4:0 "Boşluk Biçimi"
+	menp_darktec_anchor_t4_desc:0 "[darktec_loc_menp_darktec_anchor_t4_desc]"
+	menp_darktec_anchor_t4_tooltip:0 "[darktec_loc_menp_darktec_anchor_t4_tooltip]"
+
+	menp_darktec_anchor_t4_unknown:0 "????"
+	menp_darktec_anchor_t4_unknown_desc:0 "????"
+	menp_darktec_anchor_t4_unknown_tooltip:0 "????"
+	menp_darktec_anchor_t4_unknown_tooltip:0 "????"
+
+	menp_darktec_anchor_t4_known:0 "Boşluk Biçimi"
+	menp_darktec_anchor_t4_known_desc:0 "Asla yeterince hasat edilmedi. Asla yeterince tüketilmedi."
+	menp_darktec_anchor_t4_known_tooltip:0 "['building:building_darktec_anchor_3', £building£ $building_darktec_anchor_3_plural$] artık kolonideki diğer §Y£building£ Gölgeli Binaların§! etkilerini artıracak.\nBu etki Çapa yükseltme seviyesiyle birlikte artar."
+
+	menp_darktec_entropy_t4:0 "Uçurumla Bir"
+	menp_darktec_entropy_t4_desc:0 "[darktec_loc_menp_darktec_entropy_t4_desc]"
+	menp_darktec_entropy_t4_tooltip:0 "[darktec_loc_menp_darktec_entropy_t4_tooltip]"
+
+	menp_darktec_entropy_t4_unknown:0 "???"
+	menp_darktec_entropy_t4_unknown_desc:0 "???"
+	menp_darktec_entropy_t4_unknown_tooltip:0 "???"
+
+	menp_darktec_entropy_t4_transformed:0 "Gizemli Dengeleme"
+	menp_darktec_entropy_t4_transformed_desc:0 "Yeni formumuz… ilgi çekici. Daha azız, daha fazlayız ve başkalarını da böyle yapabiliriz."
+	menp_darktec_entropy_t4_transformed_tooltip:0 "['building:building_darktec_umbral_portal_1', £building£ $building_darktec_umbral_portal_1_plural$] artık gezegendeki £job£ Üretimini de artırır.\n\nBu bina artık popülasyonların pasif olarak §YÖzümseme§! ile §EEntropi Varlıkları§!na dönüşmesini sağlar."
+
+	menp_darktec_entropy_t4_tainted:0 "Birleşmiş Karanlık"
+	menp_darktec_entropy_t4_tainted_desc:0 "Canlı süreçlerimizdeki karanlık maddenin reaktif etkileri bu süre boyunca başarıyla sonuçlandı ve bu nedenle daha fazla denemeye hazırız. Ve daha fazla. Ve daha fazla."
+	menp_darktec_entropy_t4_tainted_tooltip:0 "Temel ve Gelişmiş §YGölgeli özellikler§! artık ek üretim kapasitelerine sahiptir."
+
+	menp_darktec_darkmatter_t4:0 "Entropik Uyumlandırma"
+	menp_darktec_darkmatter_t4_desc:0 "[darktec_loc_menp_darktec_darkmatter_t4_desc]"
+	menp_darktec_darkmatter_t4_tooltip:0 "[darktec_loc_menp_darktec_darkmatter_t4_tooltip]"
+
+	menp_darktec_darkmatter_t4_unknown:0 "???"
+	menp_darktec_darkmatter_t4_unknown_desc:0 "???"
+	menp_darktec_darkmatter_t4_unknown_tooltip:0 "???"
+
+	menp_darktec_darkmatter_t4_transformed:0 "Entropik Kirlenme"
+	menp_darktec_darkmatter_t4_transformed_desc:0 "Yeni varlığımızla birlikte gizli bir öz, bir kan, ulaşabileceğimiz her şeyi yozlaştırmanın bir yolunu taşıyoruz."
+	menp_darktec_darkmatter_t4_transformed_tooltip:0 "Artık ['building:building_darktec_storage_2', £building£ $building_darktec_storage_2_plural$] yapısını ['building:building_darktec_storage_3', £building£ $building_darktec_storage_3_plural$] yapısına yükseltebiliriz."
+
+	menp_darktec_darkmatter_t4_tainted:0 "Entropi Yeniden Tahsisi"
+	menp_darktec_darkmatter_t4_tainted_desc_old:0 "Bir miktar 'Kapsanmış Entropi'yi verimli alanlarımızdan birine yönlendirerek verimini inanılmaz miktarda artırabiliriz."
+	menp_darktec_darkmatter_t4_tainted_desc:0 "Tüm türümüzün paralel niteliklerini daha da geliştirmek için uygulanan entropi gücü, daha da fazla uygulama ve hatta daha fazla güç için yer açar."
+	menp_darktec_darkmatter_t4_tainted_tooltip:0 "Artık ['building:building_darktec_storage_2', £building£ $building_darktec_storage_2_plural$] yapısını ['building:building_darktec_storage_3', £building£ $building_darktec_storage_3_plural$] yapısına yükseltebiliriz.\n\nArtık ['technology:tech_darktec_traits_ascension'] teknolojisini araştırabiliriz; bu teknoloji, seçilen herhangi bir yüceliş yolu ne olursa olsun imparatorluğumuza güçlü özellikler sunacaktır."
+
+	menp_darktec_umbralships_t4:0 "Faz-Madde Gemileri"
+	menp_darktec_umbralships_t4_desc:0 "[darktec_loc_menp_darktec_umbralships_t4_desc]"
+	menp_darktec_umbralships_t4_tooltip:0 "[darktec_loc_menp_darktec_umbralships_t4_tooltip]"
+
+	menp_darktec_umbralships_t4_unknown:0 "???"
+	menp_darktec_umbralships_t4_unknown_desc:0 "???"
+	menp_darktec_umbralships_t4_unknown_tooltip:0 "???"
+
+	menp_darktec_umbralships_t4_known:0 "Faz-Madde Gemileri"
+	menp_darktec_umbralships_t4_known_desc:0 "Gerçekliğin ta kendisi gemilerimiz için bükülmüş, aynı anda hem var olmalarına hem de var olmamalarına olanak tanıyarak farklı durumlardan diğerlerine atlamalarına ve bize büyük bir avantaj sağlamalarına imkan veriyor."
+	menp_darktec_umbralships_t4_known_tooltip:0 "§YUmbral gemilerinin§! son seviye teknolojisini açar - ['technology:tech_darktec_crisis_battleship'].\n\nUmbral Gemileri özel §YAura bileşenlerini§! §Y3.§! seviyeye yükseltebilir."
+	menp_darktec_umbralships_t4_known_tooltip_bioships:0 "§YUmbral gemilerinin§! son seviye teknolojisini açar - ['technology:tech_darktec_crisis_stinger'].\n\nUmbral Gemileri özel §YAura bileşenlerini§! §Y3.§! seviyeye yükseltebilir."
+
+	# T5
+	menp_darktec_anchor_t5:0 "Boşluğu Yırtma"
+	menp_darktec_anchor_t5_desc:0 "[darktec_loc_menp_darktec_anchor_t5_desc]"
+	menp_darktec_anchor_t5_tooltip:0 "[darktec_loc_menp_darktec_anchor_t5_tooltip]"
+
+	menp_darktec_anchor_t5_unknown:0 "?????"
+	menp_darktec_anchor_t5_unknown_desc:0 "?????"
+	menp_darktec_anchor_t5_unknown_tooltip:0 "?????"
+
+	menp_darktec_anchor_t5_known:0 "Boşluğu Yırtma"
+	menp_darktec_anchor_t5_known_desc:0 "Vakumun ta kendisinin özsüzlüğünü çekip çıkarmak zorunludur."
+	menp_darktec_anchor_t5_known_tooltip:0 "Artık ['building:building_darktec_anchor_3', £building£ $building_darktec_anchor_3_plural$] öğesini ['building:building_darktec_anchor_4', £building£ $building_darktec_anchor_4_plural$] öğesine yükseltebiliriz.\n\n£building£ $building_darktec_anchor_4_plural$ (ve önceki yükseltmeleri) artık imparatorluğumuzdaki TÜM Umbral binalarının etkinliğini artırıyor."
+
+	menp_darktec_entropy_t5:0 "Nihai Anomali"
+	menp_darktec_entropy_t5_desc:0 "[darktec_loc_menp_darktec_entropy_t5_desc]"
+	menp_darktec_entropy_t5_tooltip:0 "[darktec_loc_menp_darktec_entropy_t5_tooltip]"
+
+	menp_darktec_entropy_t5_unknown:0 "?????"
+	menp_darktec_entropy_t5_unknown_desc:0 "?????"
+	menp_darktec_entropy_t5_unknown_tooltip:0 "?????"
+
+	menp_darktec_entropy_t5_known:0 "Nihai Anomali"
+	menp_darktec_entropy_t5_known_desc:0 "Şimdiye kadar sadece bir teori olan, elde ettiğimiz tüm entropiyi uzay ve zamanda tek bir noktaya aktarabileceğimizden eminiz."
+	menp_darktec_entropy_t5_known_tooltip:0 "Bize özel bir Megastrüktür §YYaratma§! imkanı sağlar:\n§YBirleşmiş Anomali§!\n\n§HBu megastrüktürü inşa ederek ve yükselterek hedeflerimize ulaşacağız.§!"
+
+	menp_darktec_darkmatter_t5:0 "Gerçekliği Budama"
+	menp_darktec_darkmatter_t5_desc:0 "[darktec_loc_menp_darktec_darkmatter_t5_desc]"
+	menp_darktec_darkmatter_t5_tooltip:0 "[darktec_loc_menp_darktec_darkmatter_t5_tooltip]"
+
+	menp_darktec_darkmatter_t5_unknown:0 "?????"
+	menp_darktec_darkmatter_t5_unknown_desc:0 "?????"
+	menp_darktec_darkmatter_t5_unknown_tooltip:0 "?????"
+
+	menp_darktec_darkmatter_t5_known:0 "Gerçekliği Budama"
+	menp_darktec_darkmatter_t5_known_desc:0 "Var olan ya da olmayan her şey yeniden şekillendirilmeli ve irademize göre bükülmelidir."
+	menp_darktec_darkmatter_t5_known_tooltip:0 "Filolarımız için §Y$bombardment_darktec_bombardment_entropy$§! duruşunu açar.\nBu bombardıman tipiyle yok edilen gezegenler, hedefimize ulaşmamız için bize ek kaynak sağlayacaktır.\n\nArtık ['building:building_darktec_storage_3', £building£ $building_darktec_storage_3_plural$] öğesini ['building:building_darktec_storage_4', £building£ $building_darktec_storage_4_plural$] öğesine yükseltebiliriz."
+
+	menp_darktec_umbralships_t5:0 "Çok Boyutlu İstila"
+	menp_darktec_umbralships_t5_desc:0 "[darktec_loc_menp_darktec_umbralships_t5_desc]"
+	menp_darktec_umbralships_t5_tooltip:0 "[darktec_loc_menp_darktec_umbralships_t5_tooltip]"
+
+	menp_darktec_umbralships_t5_unknown:0 "?????"
+	menp_darktec_umbralships_t5_unknown_desc:0 "?????"
+	menp_darktec_umbralships_t5_unknown_tooltip:0 "?????"
+
+	menp_darktec_umbralships_t5_known:0 "Çok Boyutlu İstila"
+	menp_darktec_umbralships_t5_known_desc:0 "Ne geleceğini çok geç olana kadar göremeyecekler, başka boyutlarda bile, başka gerçekliklerde bile."
+	menp_darktec_umbralships_t5_known_tooltip:0 "Artık emrimizde güçlü §YFilo Eylemlerini§! mümkün kılan kudretli §YEntropik gemi yardımcı bileşenlerini§! araştırabiliriz."
+
+# Crisis objectives
+	darktec_crisobj_monthly_extract_entropy_name:0 "Entropi Hasadı"
+	darktec_crisobj_monthly_extract_entropy_desc:0 "Evrenin dokusunun katmanlarının altında, genişlemeye, yok etmeye, ölüme neden olmaya çalışırken evreni ayıracak gizli bir güç yatıyor. Bu güç bizim olacak.\n\n§Y$building_darktec_anchor_1_plural$§! inşa edin ve onlarla $darktec_contained_entropy_with_icon$ toplayın."
+
+	darktec_crisobj_immediate_research_physics_technologies_name:0 "Teknolojileri Araştır"
+	darktec_crisobj_immediate_research_physics_technologies_desc:0 "Evrenin karmaşık yazılış biçimlerini anlamamız gerekiyor.\n\nBu $darktec_contained_entropy_with_icon$ ödülünü kazanmak için §YTeknolojileri§! araştırın."
+
+	darktec_crisobj_immediate_build_and_keep_umbral_buildings_name:0 "Gölgeli Binalar İnşa Et veya Yükselt"
+	darktec_crisobj_immediate_build_and_keep_umbral_buildings_desc:0 "Yüksek ve güçlendirilmiş, entropiyi barındıran ve şekillendiren binalar artık imparatorluğumuzun temelidir.\n\nBu $darktec_contained_entropy_with_icon$ ödülünü kazanmak için Gölgeli Binaları §Yİnşa Edin§! veya §YYükseltin§!."
+
+	darktec_crisobj_yearly_retain_vassals_name:0 "Vassalları Muhafaza Et"
+	darktec_crisobj_yearly_retain_vassals_desc:0 "Davamıza yardım edenler iyi niyetimizi ve nihayetinde bilgimizi hak ediyorlar.\n\nBu §Yyıllık§! $darktec_contained_entropy_with_icon$ ödülünü kazanmak için §YVassalları§! muhafaza edin."
+
+	darktec_crisobj_yearly_retain_megastructures_name:0 "Megayapıları Muhafaza Et"
+	darktec_crisobj_yearly_retain_megastructures_desc:0 "Uzayda bulunan megayapıların ihtişamı sadece gözlemlemek için bir güzellik değil, aynı zamanda standartlara meydan okumanın ve boşluğu hasat etme konusunda avantaj elde etmenin başka bir yoludur.\n\nBu §Yyıllık§! $darktec_contained_entropy_with_icon$ ödülünü kazanmak için benzersiz türdeki §YMegayapıları§! muhafaza edin."
+
+	darktec_crisobj_yearly_galcom_retain_galcom_respect_name:0 "Galaktik Topluluk Desteğini Güvenceye Al"
+	darktec_crisobj_yearly_galcom_retain_galcom_respect_desc:0 "Davamız hakkında başkalarını ikna etmemiz gerekiyor, ölü bir evrenin soğuk kucağında gereksiz ölümlerini önlemek için.\n\nBu §Yyıllık§! $darktec_contained_entropy_with_icon$ ödülünü kazanmak için Galaktik Topluluk §YKonsülünün§! bir parçası olun veya galaktik yasayı §Yİhlal Etmekten§! kaçının."
+
+	darktec_crisobj_immediate_conquer_worlds_name:0 "Dünyaları Fethet veya Hasat Et"
+	darktec_crisobj_immediate_conquer_worlds_desc:0 "Bize karşı çıkanlar için yer yok ve bu nedenle onları herhangi bir yaşanabilir yüzeyden kovmalıyız.\n\nBu $darktec_contained_entropy_with_icon$ ödülünü kazanmak için dünyaları §YFethedin§! veya §YHasat Edin§!."
+
+	darktec_crisobj_immediate_assimilate_pops_name:0 "Popülasyonları Özümse"
+	darktec_crisobj_immediate_assimilate_pops_desc:0 "Herkes ya bize dönüşerek ya da boşluğun bir parçası olarak teslim olmalı.\n\nBu $darktec_contained_entropy_with_icon$ ödülünü kazanmak için popülasyonları §Yentropi ile özümseyin§!."
+
+	darktec_crisobj_immediate_taint_world_name:0 "Dünyaları Kirlet"
+	darktec_crisobj_immediate_taint_world_desc:0 "Geniş karanlık madde alanları, entropik karanlık nehirleri, hepsi yerleştiğimiz dünyaları yıkayarak onları iki boyutun birleşimi için mükemmel bir katalizöre dönüştürüyor.\n\nBu $darktec_contained_entropy_with_icon$ ödülünü kazanmak için dünyaları §Yentropi ile kirletin§!."
+
+	darktec_crisobj_immediate_build_umbral_ships_name:0 "Gölgeli Gemiler İnşa Et"
+	darktec_crisobj_immediate_build_umbral_ships_desc:0 "Görünmez, zarif ve karanlık maddeyle doygun, geri dönüştürülmüş entropinin gücü sayesinde yarattığımız gemiler geleceğimizdir.\n\nBu $darktec_contained_entropy_with_icon$ ödülünü kazanmak için §YGölgeli Gemiler§! inşa edin. Ödül, gemi kademesine göre artırılır."
+
+	darktec_crisobj_immediate_destroy_empires_name:0 "İmparatorlukları Yok Et"
+	darktec_crisobj_immediate_destroy_empires_desc:0 "Uzun zamandır yolumuzda durdular. Şimdi, boşluğa aittirler.\n\nBu $darktec_contained_entropy_with_icon$ ödülünü kazanmak için bir imparatorluğu §YYok Edin§!."
+# /
+
+# Crisis misc
+
+# Umbral Ships
+	darktec_umbral_component:0 "§EGölgeli§!"
+	darktec_umbral_component_weapon_damage_mult:0 "Gölgeli Bileşen Hasarı"
+	mod_darktec_umbral_component_weapon_damage_mult:0 "$darktec_umbral_component_weapon_damage_mult$"
+
+	darktec_crisis_destroyer:0 "Gölgeli Haydut"
+	darktec_crisis_destroyer_plural:0 "$darktec_crisis_destroyer$s"
+	darktec_crisis_destroyer_cap:0 "$darktec_crisis_destroyer$"
+	darktec_crisis_destroyer_desc:0 "Haydutlar, baryonik olmayan maddenin yıkıcı gücünü uzay savaşına taşır; malzeme bütünlüğünü kalkanlı performansla takas ederken inanılmaz miktarda hasar verme ve saptırma yeteneğine sahiptirler."
+	darktec_crisis_destroyer_tooltip:0 "Haydutlar, gölgeli gemilerin ilk kademesidir ve Post-Baryonik imparatorlukların ana saldırı ve savunma hattı olarak hizmet ederler.\nKendini modifiye ediciler için özel bir aura bileşeni vardır.\nGeminin şu modifikatörleri vardır:\n  - Gövde: §R-%50§!\n  - Bonus Kalkan çarpanı: §G+%50§!\n  - Kalkan Sertleşmesi: §G+%10§!"
+
+	darktec_crisis_cruiser:0 "Gölgeli Akıncı"
+	darktec_crisis_cruiser_plural:0 "$darktec_crisis_cruiser$s"
+	darktec_crisis_cruiser_cap:0 "$darktec_crisis_cruiser$"
+	darktec_crisis_cruiser_desc:0 "Akıncılar, dirençleri ve hasar potansiyelleri Haydutlarınkini aştığı için ilk saldırı ve savunma hattı olarak hizmet ederler. Yoğun kalkan bonusunun yaydığı enerji alanının yoğunluğuyla eterik silueti parlar."
+	darktec_crisis_cruiser_tooltip:0 "Akıncılar, çok yönlü ve dayanıklı, ancak son derece saldırgan bir gemi olarak Kruvazörlerin rolünü üstlenen gölgeli gemilerin ikinci kademesidir.\nKendini modifiye ediciler için özel bir aura bileşeni vardır.\nGeminin şu modifikatörleri vardır:\n  - Gövde: §R-%50§!\n  - Bonus Kalkan çarpanı: §G+%100§!\n  - Kalkan Sertleşmesi: §G+%10§!"
+
+	darktec_crisis_battleship:0 "Gölgeli Müdahaleci"
+	darktec_crisis_battleship_plural:0 "$darktec_crisis_battleship$s"
+	darktec_crisis_battleship_cap:0 "$darktec_crisis_battleship$"
+	darktec_crisis_battleship_desc:0 "Karanlık maddeyle aşırı doygun bu güçlü gemiler, gölgeli gemiler arasındaki daha yüksek kademedir - en güçlü darbeleri bile karşılayabilecek bir çeviklik ve muazzam bir savunma kapasitesi sağlayan bir yıkım platformu."
+	darktec_crisis_battleship_tooltip:0 "Müdahaleciler, daha fazla bölüm çeşitliliği ve ölümcüllükle geliştirilmiş Zırhlı Gemiler olan gölgeli gemilerin daha yüksek kademesidir.\nKendini modifiye ediciler için özel bir aura bileşeni vardır.\nGeminin şu modifikatörleri vardır:\n  - Gövde: §R-%50§!\n  - Bonus Kalkan çarpanı: §G+%250§!\n  - Kalkan Sertleşmesi: §G+%10§!"
+
+	darktec_crisis_mauler:0 "Gölgeli Takipçi"
+	darktec_crisis_mauler_plural:0 "$darktec_crisis_mauler$s"
+	darktec_crisis_mauler_cap:0 "$darktec_crisis_mauler$"
+	darktec_crisis_mauler_desc:0 "Karanlıkla örtülü bu organik gemi, artan kalkanlaması nedeniyle siluetini değiştirerek boşlukta av arar."
+	darktec_crisis_mauler_tooltip:0 "Takipçiler, ekstra ölümcüllüğe sahip geliştirilmiş Maulers olan başlangıç gölgeli gemi kademesidir.\nKendini modifiye ediciler için özel bir aura bileşeni vardır.\nGeminin şu modifikatörleri vardır:\n  - Gövde: §R-%50§!\n  - Bonus Kalkan çarpanı: §G+%50§!\n  - Kalkan Sertleşmesi: §G+%10§!"
+
+	darktec_crisis_weaver:0 "Gölgeli Gizlenen"
+	darktec_crisis_weaver_plural:0 "$darktec_crisis_weaver$s"
+	darktec_crisis_weaver_cap:0 "$darktec_crisis_weaver$"
+	darktec_crisis_weaver_desc:0 "Uzaktan ve destek olarak ölümcül olan Gezginler, muazzam çok yönlü kapasitelerini kullanarak savaş alanını ölümcül bir koro haline getirir."
+	darktec_crisis_weaver_tooltip:0 "Gezginler, gölgeli gemilerin orta kademesi olarak hizmet eder, Dokumacılar'ın rolünü yansıtırlar ancak artırılmış bölüm çeşitliliği ile.\nKendi kendini değiştirenler için özel bir aura bileşenine sahiptir.\nGemi şu değiştiricilere sahiptir:\n  - Gövde: §R-50%§!\n  - Bonus Kalkan çarpanı: §G+150%§!\n  - Kalkan Sertleşmesi: §G+10%§!"
+
+	darktec_crisis_stinger:0 "Gölgeli Akıncı"
+	darktec_crisis_stinger_plural:0 "$darktec_crisis_stinger$s"
+	darktec_crisis_stinger_cap:0 "$darktec_crisis_stinger$"
+	darktec_crisis_stinger_desc:0 "Entropi ile şekillendirilmiş ve büyümüş bu devasa organizma, uzayda seyrederek dehşet verici bir manzara sunar; gölgeli gemilerin zirvesidir – en güçlü darbelere bile dayanabilecek bir çeviklik ve muazzam bir savunma kapasitesi koruyan bir yıkım platformu."
+	darktec_crisis_stinger_tooltip:0 "Akıncılar, gölgeli gemilerin zirvesidir, geniş bir bölüm çeşitliliğiyle geliştirilmiş Sokucular olarak hizmet ederler.\nKendi kendini değiştirenler için özel bir aura bileşenine sahiptir.\nGemi şu değiştiricilere sahiptir:\n  - Gövde: §R-50%§!\n  - Bonus Kalkan çarpanı: §G+250%§!\n  - Kalkan Sertleşmesi: §G+10%§!"
+
+
+	DARKTEC_CRISIS_DESTROYER_BRAWLER:0 "Dövüşçü Haydut"
+	DARKTEC_CRISIS_DESTROYER_PICKET:0 "Gözcü Haydut"
+	DARKTEC_CRISIS_DESTROYER_MISSILES:0 "Füze Haydutu"
+	DARKTEC_CRISIS_DESTROYER_ARTILLERY:0 "Topçu Haydut"
+
+	DARKTEC_CRISIS_CRUISER_ARTILLERY:0 "Topçu Yağmacı"
+	DARKTEC_CRISIS_CRUISER_BRAWLER:0 "Dövüşçü Yağmacı"
+	DARKTEC_CRISIS_CRUISER_MISSILES:0 "Füze Yağmacısı"
+
+	DARKTEC_CRISIS_BATTLESHIP_ANNIHILATOR:0 "İmha Edici Davetsiz"
+	DARKTEC_CRISIS_BATTLESHIP_ARTILLERY:0 "Topçu Davetsiz"
+	DARKTEC_CRISIS_BATTLESHIP_BRAWLER:0 "Dövüşçü Davetsiz"
+	DARKTEC_CRISIS_BATTLESHIP_CARRIER:0 "Taşıyıcı Davetsiz"
+
+	DARKTEC_CRISIS_MAULER_MELEE:0 "Yokedici Takipçi"
+	DARKTEC_CRISIS_MAULER_BRAWLER:0 "Dövüşçü Takipçi"
+	DARKTEC_CRISIS_MAULER_MISSILES:0 "Kovucu Takipçi"
+
+	DARKTEC_CRISIS_WEAVER_SUPPORT:0 "Destek Gezgini"
+	DARKTEC_CRISIS_WEAVER_BRAWLER:0 "Dövüşçü Gezgin"
+	DARKTEC_CRISIS_WEAVER_ARTILLERY:0 "Topçu Gezgin"
+
+	DARKTEC_CRISIS_STINGER_ANNIHILATOR:0 "İmha Edici Akıncı"
+	DARKTEC_CRISIS_STINGER_ARTILLERY:0 "Topçu Akıncı"
+	DARKTEC_CRISIS_STINGER_BRAWLER:0 "Dövüşçü Akıncı"
+	DARKTEC_CRISIS_STINGER_CARRIER:0 "Taşıyıcı Akıncı"
+	DARKTEC_CRISIS_STINGER_PICKET:0 "Gözcü Akıncı"
+
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T1:0 "Gölgeli Aldatıcı I"
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T1_DESC:0 "Bu gölgeli gemi, sinyallerini maskelemek için arka plan radyasyonundan yararlanarak, kendi emisyonlarını boşluğa yönlendiren özel bir cihaz kullanır."
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T1_TOOLTIP:0 "Filo eylemi olarak §GGörünmezlik§! kullanımına izin verir."
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T2:0 "Gölgeli Aldatıcı II"
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T2_DESC:0 "$DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T1_DESC$"
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T2_TOOLTIP:0 "$DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T1_TOOLTIP$"
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T3:0 "Gölgeli Aldatıcı III"
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T3_DESC:0 "$DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T1_DESC$"
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T3_TOOLTIP:0 "$DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T1_TOOLTIP$"
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T1:0 "Gölgeli Bulanıklaştırıcı I"
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T1_DESC:0 "Mini lokalize bir faz atlaması kullanarak, bu gemi imzalarını ''bulanıklaştırır'' ve düşman hedeflemesini son derece zorlaştırır."
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T1_TOOLTIP:0 ""
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T2:0 "Gölgeli Bulanıklaştırıcı II"
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T2_DESC:0 "$DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T1_DESC$"
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T2_TOOLTIP:0 "$DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T1_TOOLTIP$"
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T3:0 "Gölgeli Bulanıklaştırıcı III"
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T3_DESC:0 "$DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T1_DESC$"
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T3_TOOLTIP:0 "$DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T1_TOOLTIP$"
+
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T1:0 "Gölgeli Kamuflaj I"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T1_DESC:0 "Bu gölgeli yaratık, sinyallerini maskelemek için arka plan radyasyonundan yararlanarak, kendi emisyonlarını boşluğa yönlendiren özel bir cihaz kullanır."
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T1_TOOLTIP:0 ""
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T2:0 "Gölgemsi Kamuflaj II"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T2_DESC:0 "$DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T1_DESC$"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T2_TOOLTIP:0 "$DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T1_TOOLTIP$"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T3:0 "Gölgemsi Kamuflaj III"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T3_DESC:0 "$DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T1_DESC$"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T3_TOOLTIP:0 "$DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T1_TOOLTIP$"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_EVASION_T1:0 "Gölgemsi Örtücü I"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_EVASION_T1_DESC:0 "Mini lokalize bir faz atlaması kullanarak, bu gemi imzalarını ''bulanıklaştırır'' ve düşman hedeflemesini son derece zorlaştırır."
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_EVASION_T1_TOOLTIP:0 "$DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T1_TOOLTIP$"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_EVASION_T2:0 "Gölgemsi Örtücü II"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_EVASION_T2_DESC:0 "$DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_EVASION_T1_DESC$"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_EVASION_T2_TOOLTIP:0 "$DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_EVASION_T1_TOOLTIP$"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_EVASION_T3:0 "Gölgemsi Örtücü III"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_EVASION_T3_DESC:0 "$DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_EVASION_T1_DESC$"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_EVASION_T3_TOOLTIP:0 "$DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_EVASION_T1_TOOLTIP$"
+
+	# Tech mechanical
+	tech_darktec_crisis_destroyer:0 "$darktec_crisis_destroyer$"
+	tech_darktec_crisis_destroyer_desc:0 "Bir teknoloji harikası olan bu gemi, büyük ölçüde paramaddeden oluşur ve boşlukta seyrederken - veya bir kısmını istenen hedefe fırlatırken - faz durumları arasında geçiş yapmasını sağlar."
+	tech_darktec_crisis_destroyer_unlocks_title:0 "§HGemi Türünü Açar:§! $darktec_crisis_destroyer$"
+	tech_darktec_crisis_destroyer_unlocks_desc:0 "§H$darktec_crisis_destroyer$§!\n$darktec_crisis_destroyer_tooltip$"
+
+	tech_darktec_crisis_cruiser:0 "$darktec_crisis_cruiser$"
+	tech_darktec_crisis_cruiser_desc:0 "Mevcut taslaklar üzerinde tasarımı iyileştiren bu gemi, entropik bileşiminin kapasitelerini tasarlanmış benzerlerine kıyasla doğal olmayan bir seviyeye büyük ölçüde yükseltmesiyle inanılmaz miktarda hasara dayanabilir ve hasar verebilir."
+	tech_darktec_crisis_cruiser_unlocks_title:0 "§HGemi Türünü Açar:§! $darktec_crisis_cruiser$"
+	tech_darktec_crisis_cruiser_unlocks_desc:0 "§H$darktec_crisis_cruiser$§!\n$darktec_crisis_cruiser_tooltip$"
+
+	tech_darktec_crisis_battleship:0 "$darktec_crisis_battleship$"
+	tech_darktec_crisis_battleship_desc:0 "Gölgemsi teknolojinin bir harikası olarak, kendi varlıkları çevrelerindeki gerçekliği kaydırır; paramaddeden oluşan ve karanlık maddenin gücünü kullanan bu geliştirilmiş zırhlılar, yollarına çıkan her şeyi harap edebilir."
+	tech_darktec_crisis_battleship_unlocks_title:0 "§HGemi Türünü Açar:§! $darktec_crisis_battleship$"
+	tech_darktec_crisis_battleship_unlocks_desc:0 "§H$darktec_crisis_battleship$§!\n$darktec_crisis_battleship_tooltip$"
+
+	# Techs organic
+	tech_darktec_crisis_mauler:0 "$darktec_crisis_mauler$"
+	tech_darktec_crisis_mauler_desc:0 "Yeni organik gemi türlerine seçici olarak baryonik olmayan maddelerden küçük izler ekleyerek, normal ve boşluk alanları arasında geçiş yapan ve kendi varlığı etrafındaki uzay-zamanı kaydıran muazzam güçlü örnekler yaratabiliriz."
+	tech_darktec_crisis_mauler_unlocks_title:0 "§HGemi Türünü Açar:§! $darktec_crisis_mauler$"
+	tech_darktec_crisis_mauler_unlocks_desc:0 "§H$darktec_crisis_mauler$§!\n$darktec_crisis_mauler_tooltip$"
+
+	tech_darktec_crisis_weaver:0 "$darktec_crisis_weaver$"
+	tech_darktec_crisis_weaver_desc:0 "Normal karşılığının hayaletimsi bir yansıması olan bu organik gemi, ışığı kendi ve kardeşlerinin avantajına bükerek, gerçekliğin dokusuyla kamuflaj yapar."
+	tech_darktec_crisis_weaver_unlocks_title:0 "§HGemi Türünü Açar:§! $darktec_crisis_weaver$"
+	tech_darktec_crisis_weaver_unlocks_desc:0 "§H$darktec_crisis_weaver$§!\n$darktec_crisis_weaver_tooltip$"
+
+	tech_darktec_crisis_stinger:0 "$darktec_crisis_stinger$"
+	tech_darktec_crisis_stinger_desc:0 "Büyük, karanlık maddeye doymuş ve ölümcül bir yaratık olan bu devasa organik gemi aslında hareket etmez, ancak avını ararken boşlukta süzülerek uzayın boşluğunu yarar. Onlara neyin çarptığını asla bilemeyecek bir av."
+	tech_darktec_crisis_stinger_unlocks_title:0 "§HGemi Türünü Açar:§! $darktec_crisis_stinger$"
+	tech_darktec_crisis_stinger_unlocks_desc:0 "§H$darktec_crisis_stinger$§!\n$darktec_crisis_stinger_tooltip$"
+
+
+# Umbral Buildings
+	# Techs
+	tech_darktec_umbral_extractors_t1:0 "Gölgemsi Özütleme"
+	tech_darktec_umbral_extractors_t1_desc:0 "Entropinin ''kapsanabilir'' bir varlığa dönüştürülmesi yoğun bir süreçtir, ancak yan ürünleri uygun şekilde kullanıldığında ekonomimizi büyük ölçüde geliştirir."
+	tech_darktec_umbral_extractors_t2:0 "Gölgemsi Materyal Avcılığı"
+	tech_darktec_umbral_extractors_t2_desc:0 "Kapsanan entropiyi ve karanlık maddeyi bir güç kaynağına dönüştürerek veya baryonik maddeyi paramaddeye yönlendirerek bazı endüstriyel süreçleri hızlandırabiliriz."
+	tech_darktec_umbral_extractors_t3:0 "Gölgemsi Maddesel Çoklu Evren Döngüsü"
+	tech_darktec_umbral_extractors_t3_desc:0 "Sadece yerel entropi toplamakla kalmıyor, aynı zamanda uzayda tek bir zamanda çöken paralel evrenlere hafifçe dokunabileceğimizi de teorize ediyoruz."
+
+	tech_darktec_umbral_industry_t1:0 "Gölgemsi Dövme"
+	tech_darktec_umbral_industry_t1_desc:0 "Standart malzemeler, kapasitelerini büyük ölçüde güçlendirmek için ince bir kapsanmış paramadde tabakasıyla yükseltilebilir."
+	tech_darktec_umbral_industry_t2:0 "Gölgemsi Maddesel Erime"
+	tech_darktec_umbral_industry_t2_desc:0 "Paramaddeyi yarı-baryonik bir alaşıma dönüştürmek, hızlı ekonomik ve askeri genişleme için devrim niteliğinde yeni bir yöntem olabilir."
+	tech_darktec_umbral_industry_t3:0 "Gölgemsi Aşırı Yoğunlaşma"
+	tech_darktec_umbral_industry_t3_desc:0 "Paramadde alaşımlarının katmanları, aynı fiziksel boyutlulukta bile üst üste getirilebilir, bu da sadece küçük dezavantajlarla üretimi katlanarak artırır."
+
+	tech_darktec_umbral_research_t1:0 "Gölgemsi Analitik Araştırma"
+	tech_darktec_umbral_research_t1_desc:0 "Kazara bir evren-yok oluşu olayının riskleri olmaksızın boşluk çalışmasının potansiyelini keşfetmek, şüphesiz araştırmamızı hızlandıracaktır."
+	tech_darktec_umbral_research_t2:0 "Gölgemsi İstatistiksel Tahminler"
+	tech_darktec_umbral_research_t2_desc:0 "Rastgelelik ve kaos, ironik bir şekilde, egzotik ve teorik teknolojilerin edinilmesinde belirleyici bir rol oynar."
+	tech_darktec_umbral_research_t3:0 "Gölgemsi Çoklu Evrensel Hesaplama"
+	tech_darktec_umbral_research_t3_desc:0 "Entropinin sürekli değişen durumunun yakından incelenmesi, aynı uzayda ancak farklı potansiyel boyutlarda meydana gelen olası zaman sapmalarını gözlemlememizi sağlar."
+
+
+
+	# Core
+	mod_darktec_umbral_boost:0 "£sr_dark_matter£ Gölgemsi Bina Takviyesi"
+	mod_darktec_umbral_boost_desc:0 "Entropiyi farklı sistemlere yönlendirerek, verimlilikleri katlanarak artırılır."
+
+	building_darktec_affected_by_umbral_boost:0 "\n\n§HÖzellik§!: §EGölgemsi Sinerji§!\nBu £building£binanın modifikatörleri veya üretimi §Y$mod_darktec_umbral_boost$§! tarafından etkilenir."
+
+	building_darktec_provides_umbral_boost:0 "\n\n§HÖzellik§!: §EGölgemsi Sinerji§!\nBu £building£bina diğer Gölgemsi binaların üretimini veya modifikatörlerini §YGüçlendirir§!."
+
+	building_darktec_grows_entrophereals:0 "\n\n§HÖzellik§!: §EEntropisel Varlık Yeniden Oluşumu§!\nBu £building£bina, entropisel varlıkları değiştirilmiş bir durumdan §YYeniden Oluşturur§!, fazladan nüfus §YOluşturarak§!.\nBir sonraki nüfus oluşturma darbesi §Y[owner.darktec_entrophereal_growth_pulse]§! zamanında gerçekleşecek!"
+
+	building_darktec_allows_entrophereal_assimilation:0 "\n\n§HÖzellik§!: §EEntropisel Varlık Özümsemesi§!\nBu £building£bina, §EEntropisel Varlık Yeniden Oluşumu§! darbesi tamamlandığında, entropisel olmayan nüfusların ana türün entropisel nüfuslarına özümsenmesine olanak tanır."
+
+	building_darktec_anchor_1:0 "Entropik Yeniden Dağıtım Çapası"
+	building_darktec_anchor_1_plural:0 "$building_darktec_anchor_1$s"
+	building_darktec_anchor_1_desc:0 "Yerel entropiyi kontrol edilebilir bir forma birleştiren devasa bir yapıdır. Malzeme durumu değiştiğinde parameteryal rezonans, muazzam miktarda arka plan enerjisi üreterek sürekli uğuldar ve titrer."
+	building_darktec_anchor_1_tooltip:0 ""
+
+	building_darktec_anchor_2:0 "Entropik Yoğunlaşma Sifonu"
+	building_darktec_anchor_2_plural:0 "$building_darktec_anchor_2$s"
+	building_darktec_anchor_2_desc:0 "$building_darktec_anchor_1_desc$"
+	building_darktec_anchor_2_tooltip:0 ""
+
+	building_darktec_anchor_3:0 "Entropi Paramadde Toplayıcısı"
+	building_darktec_anchor_3_plural:0 "$building_darktec_anchor_3$s"
+	building_darktec_anchor_3_desc:0 "$building_darktec_anchor_1_desc$"
+	building_darktec_anchor_3_tooltip:0 ""
+
+	building_darktec_anchor_4:0 "Entropi Biçici"
+	building_darktec_anchor_4_plural:0 "$building_darktec_anchor_4$s"
+	building_darktec_anchor_4_desc:0 "$building_darktec_anchor_1_desc$"
+	building_darktec_anchor_4_tooltip:0 ""
+
+	building_darktec_storage_1:0 "Paramadde Silosu"
+	building_darktec_storage_1_plural:0 "$building_darktec_storage_1$s"
+	building_darktec_storage_1_desc:0 "Bu depolama tesisi, baryonik olmayan maddeyi güvenle depolamak için mikro-kalkan teknolojilerini kullanır; sızıntı veya sabotaj durumunda felaketle sonuçlanan bir çöküş olayını önlemek için çeşitli önlem ve karşı önlemler alınmıştır."
+	building_darktec_storage_1_tooltip:0 ""
+
+	building_darktec_storage_2:0 "Paramadde Muhafazası"
+	building_darktec_storage_2_plural:0 "$building_darktec_storage_2$s"
+	building_darktec_storage_2_desc:0 "$building_darktec_storage_1_desc$"
+	building_darktec_storage_2_tooltip:0 ""
+
+	building_darktec_storage_3:0 "Paramadde Deposu"
+	building_darktec_storage_3_plural:0 "$building_darktec_storage_3$s"
+	building_darktec_storage_3_desc:0 "$building_darktec_storage_1_desc$"
+	building_darktec_storage_3_tooltip:0 ""
+
+	building_darktec_storage_4:0 "Paramadde Kasası"
+	building_darktec_storage_4_plural:0 "$building_darktec_storage_4$s"
+	building_darktec_storage_4_desc:0 "$building_darktec_storage_1_desc$"
+	building_darktec_storage_4_tooltip:0 ""
+
+	building_darktec_umbral_portal_1:0 "Entropisel Varlık Yeniden Oluşturucusu"
+	building_darktec_umbral_portal_1_plural:0 "$building_darktec_umbral_portal_1$s"
+	building_darktec_umbral_portal_1_desc:0 "Entropik bir dönüşümün sonucu olarak dağılmış baryonik olmayan maddeyi toplamak için bir yol olarak hizmet veren bu bina, yeni entropisel varlıkların kararlı bir biçimde var olmasına olanak tanır."
+	building_darktec_umbral_portal_1_tooltip:0 ""
+
+	building_darktec_umbral_portal_2:0 "Entropisel Varlık Emülsiyonlaştırıcısı"
+	building_darktec_umbral_portal_2_plural:0 "$building_darktec_umbral_portal_2$s"
+	building_darktec_umbral_portal_2_desc:0 "$building_darktec_umbral_portal_1_desc$"
+	building_darktec_umbral_portal_2_tooltip:0 ""
+
+	building_darktec_umbral_assimilation_1:0 "Entropik Emülsiyonlaştırıcı"
+	building_darktec_umbral_assimilation_1_plural:0 "$building_darktec_umbral_assimilation_1$s"
+	building_darktec_umbral_assimilation_1_desc:0 "Karmaşık kombinasyon süreçleri ile bu bina, geniş bir nüfusun bileşimini kökten değiştirmesine olanak tanır; sadece baryomik veya baryonik olmayan varlıklardan çok daha fazlası haline gelir."
+
+	building_darktec_umbral_assimilation_2:0 "Entropik Yakınlaştırıcı"
+	building_darktec_umbral_assimilation_2_plural:0 "$building_darktec_umbral_assimilation_2$s"
+	building_darktec_umbral_assimilation_2_desc:0 "$building_darktec_umbral_assimilation_1_desc$"
+	building_darktec_umbral_assimilation_2_tooltip:0 "ATILDI"
+
+	building_darktec_umbral_reallocator_specialist:0 "ATILDI"
+	building_darktec_umbral_reallocator_specialist_plural:0 "ATILDI"
+	building_darktec_umbral_reallocator_specialist_desc:0 "ATILDI"
+	building_darktec_umbral_reallocator_specialist_tooltip:0 "ATILDI"
+
+	building_darktec_umbral_reallocator_menial:0 "ATILDI"
+	building_darktec_umbral_reallocator_menial_plural:0 "ATILDI"
+	building_darktec_umbral_reallocator_menial_desc:0 "ATILDI"
+	building_darktec_umbral_reallocator_menial_tooltip:0 "ATILDI"
+
+	building_darktec_umbral_reallocator_utility:0 "ATILDI"
+	building_darktec_umbral_reallocator_utility_plural:0 "ATILDI"
+	building_darktec_umbral_reallocator_utility_desc:0 "ATILDI"
+	building_darktec_umbral_reallocator_utility_tooltip:0 "ATILDI"
+
+	building_darktec_umbral_reallocator_pops:0 "ATILDI"
+	building_darktec_umbral_reallocator_pops_plural:0 "ATILDI"
+	building_darktec_umbral_reallocator_pops_desc:0 "ATILDI"
+	building_darktec_umbral_reallocator_pops_tooltip:0 "ATILDI"
+
+	# Secondary
+	# Moar dark matter
+	building_darktec_umbral_compressor_1:0 "Vakum Kompresörü"
+	building_darktec_umbral_compressor_1_plural:0 "$building_darktec_umbral_compressor_1$s"
+	building_darktec_umbral_compressor_1_desc:0 "Bu yapı, yerel entropik çıkarma tesislerinin süreçte ham maddelerin güvenli bir şekilde sıkıştırılması ve dönüştürülmesi yoluyla baryonik olmayan madde üretmesine yardımcı olur."
+	building_darktec_umbral_compressor_1_tooltip:0 ""
+
+	building_darktec_umbral_compressor_2:0 "Vakum Amalgamatörü"
+	building_darktec_umbral_compressor_2_plural:0 "$building_darktec_umbral_compressor_2$s"
+	building_darktec_umbral_compressor_2_desc:0 "$building_darktec_umbral_compressor_1_desc$"
+	building_darktec_umbral_compressor_2_tooltip:0 ""
+
+	building_darktec_umbral_compressor_3:0 "Vakum Birleştiricisi"
+	building_darktec_umbral_compressor_3_plural:0 "$building_darktec_umbral_compressor_3$s"
+	building_darktec_umbral_compressor_3_desc:0 "$building_darktec_umbral_compressor_1_desc$"
+	building_darktec_umbral_compressor_3_tooltip:0 ""
+
+	building_darktec_umbral_compressor_4:0 "Vakum Örtülü Birleştirici"
+	building_darktec_umbral_compressor_4_plural:0 "$building_darktec_umbral_compressor_4$s"
+	building_darktec_umbral_compressor_4_desc:0 "$building_darktec_umbral_compressor_1_desc$"
+	building_darktec_umbral_compressor_4_tooltip:0 ""
+
+	# Dark matter into minerals and energy
+	building_darktec_umbral_decompressor_1:0 "Boşluk Yapıbozucusu"
+	building_darktec_umbral_decompressor_1_plural:0 "$building_darktec_umbral_decompressor_1$s"
+	building_darktec_umbral_decompressor_1_desc:0 "Baryonik olmayan maddeye güçlü bir parçacık alanı uygulayarak, bu yapı egzotik izopodların tanınabilir madde ve enerjiye dönüşmesini sağlar."
+	building_darktec_umbral_decompressor_1_tooltip:0 ""
+
+	building_darktec_umbral_decompressor_2:0 "Boşluk Sökücüsü"
+	building_darktec_umbral_decompressor_2_plural:0 "$building_darktec_umbral_decompressor_2$s"
+	building_darktec_umbral_decompressor_2_desc:0 "$building_darktec_umbral_decompressor_1_desc$"
+	building_darktec_umbral_decompressor_2_tooltip:0 ""
+
+	building_darktec_umbral_decompressor_3:0 "Boşluk Atomlayıcısı"
+	building_darktec_umbral_decompressor_3_plural:0 "$building_darktec_umbral_decompressor_3$s"
+	building_darktec_umbral_decompressor_3_desc:0 "$building_darktec_umbral_decompressor_1_desc$"
+	building_darktec_umbral_decompressor_3_tooltip:0 ""
+
+	building_darktec_umbral_decompressor_4:0 "Boşluk Örtülü Atomlayıcı"
+	building_darktec_umbral_decompressor_4_plural:0 "$building_darktec_umbral_decompressor_4$s"
+	building_darktec_umbral_decompressor_4_desc:0 "$building_darktec_umbral_decompressor_1_desc$"
+	building_darktec_umbral_decompressor_4_tooltip:0 ""
+
+	# Dark matter into extra food
+	building_darktec_umbral_food_1:0 "Enfüze Edilmiş Toprak"
+	building_darktec_umbral_food_1_plural:0 "$building_darktec_umbral_food_1$s"
+	building_darktec_umbral_food_1_desc:0 "Biyokütleye uygulanan egzotik radyasyon ve ışığa benzer parçacık banyosu, büyümesini ve üretimini uyarır; ancak, tüketim için kullanıldığında ''tuhaf bir şekilde'' çıtır olarak rapor edilebilir."
+	building_darktec_umbral_food_1_tooltip:0 ""
+
+	building_darktec_umbral_food_2:0 "Doygun Toprak"
+	building_darktec_umbral_food_2_plural:0 "$building_darktec_umbral_food_2$s"
+	building_darktec_umbral_food_2_desc:0 "$building_darktec_umbral_food_1_desc$"
+	building_darktec_umbral_food_2_tooltip:0 ""
+
+	building_darktec_umbral_food_3:0 "Boşluğa Bağlı Toprak"
+	building_darktec_umbral_food_3_plural:0 "$building_darktec_umbral_food_3$s"
+	building_darktec_umbral_food_3_desc:0 "$building_darktec_umbral_food_1_desc$"
+	building_darktec_umbral_food_3_tooltip:0 ""
+
+	building_darktec_umbral_food_4:0 "Boşluğa Bağlı Örtülü Toprak"
+	building_darktec_umbral_food_4_plural:0 "$building_darktec_umbral_food_4$s"
+	building_darktec_umbral_food_4_desc:0 "$building_darktec_umbral_food_1_desc$"
+	building_darktec_umbral_food_4_tooltip:0 ""
+
+	# Alloys from DM
+	building_darktec_void_foundry_1:0 "Umbral Dökümhanesi"
+	building_darktec_void_foundry_1_plural:0 "$building_darktec_void_foundry_1$s"
+	building_darktec_void_foundry_1_desc:0 "Baryonik olmayan madde ve enerji ile güçlü alaşımların, katlanarak artan bir şekilde para-madde alaşımları oluşturmak üzere birleştirildiği devasa dökümhaneler."
+	building_darktec_void_foundry_1_tooltip:0 ""
+
+	building_darktec_void_foundry_2:0 "Umbral Neodökümhanesi"
+	building_darktec_void_foundry_2_plural:0 "$building_darktec_void_foundry_2$s"
+	building_darktec_void_foundry_2_desc:0 "$building_darktec_void_foundry_1_desc$"
+	building_darktec_void_foundry_2_tooltip:0 ""
+
+	building_darktec_void_foundry_3:0 "Umbral Ultradökümhanesi"
+	building_darktec_void_foundry_3_plural:0 "$building_darktec_void_foundry_3$s"
+	building_darktec_void_foundry_3_desc:0 "$building_darktec_void_foundry_1_desc$"
+	building_darktec_void_foundry_3_tooltip:0 ""
+
+	building_darktec_void_foundry_4:0 "Umbral Örtülü Ultradökümhanesi"
+	building_darktec_void_foundry_4_plural:0 "$building_darktec_void_foundry_3$s"
+	building_darktec_void_foundry_4_desc:0 "$building_darktec_void_foundry_1_desc$"
+	building_darktec_void_foundry_4_tooltip:0 ""
+
+	# Exotics from DM
+	building_darktec_void_refinery_1:0 "Baryonik Rafineri"
+	building_darktec_void_refinery_1_plural:0 "ATILDI"
+	building_darktec_void_refinery_1_desc:0 "ATILDI"
+	building_darktec_void_refinery_1_tooltip:0 "ATILDI"
+
+	building_darktec_void_refinery_2:0 "Baryonik Neorafineri"
+	building_darktec_void_refinery_2_plural:0 "ATILDI"
+	building_darktec_void_refinery_2_desc:0 "ATILDI"
+	building_darktec_void_refinery_2_tooltip:0 "ATILDI"
+
+	building_darktec_void_refinery_3:0 "Baryonik Ultrarafineri"
+	building_darktec_void_refinery_3_plural:0 "ATILDI"
+	building_darktec_void_refinery_3_desc:0 "ATILDI"
+	building_darktec_void_refinery_3_tooltip:0 "ATILDI"
+
+	building_darktec_void_refinery_4:0 "Baryonik Yeniden Bütünleşme Rafinerisi"
+	building_darktec_void_refinery_4_plural:0 "ATILDI"
+	building_darktec_void_refinery_4_desc:0 "ATILDI"
+	building_darktec_void_refinery_4_tooltip:0 "ATILDI"
+
+	# Research from DM
+	building_darktec_void_research_1:0 "Anomal Araştırma Tesisi"
+	building_darktec_void_research_1_plural:0 "$building_darktec_void_research_1$s"
+	building_darktec_void_research_1_desc:0 "Bu tesis, baryonik olmayan madde ve boşluğa bağlı uygulamaların son teknoloji araştırma merkezi olarak hizmet vermektedir."
+	building_darktec_void_research_1_tooltip:0 ""
+
+	building_darktec_void_research_2:0 "Anomal Araştırma Laboratuvarı"
+	building_darktec_void_research_2_plural:0 "Anomal Araştırma Laboratuvarları"
+	building_darktec_void_research_2_desc:0 "$building_darktec_void_research_1_desc$"
+	building_darktec_void_research_2_tooltip:0 ""
+
+	building_darktec_void_research_3:0 "Anomal Araştırma Reaktörü"
+	building_darktec_void_research_3_plural:0 "$building_darktec_void_research_3$s"
+	building_darktec_void_research_3_desc:0 "$building_darktec_void_research_1_desc$"
+	building_darktec_void_research_3_tooltip:0 ""
+
+	building_darktec_void_research_4:0 "Anomal Araştırma Süper-Reaktörü"
+	building_darktec_void_research_4_plural:0 "$building_darktec_void_research_4$s"
+	building_darktec_void_research_4_desc:0 "$building_darktec_void_research_1_desc$"
+	building_darktec_void_research_4_tooltip:0 ""
+
+	# DM from researchers
+	building_darktec_void_investigation_1:0 "Entropik Laboratuvar"
+	building_darktec_void_investigation_1_plural:0 "$building_darktec_void_investigation_1$s"
+	building_darktec_void_investigation_1_desc:0 "Doğrudan deneyler için egzotik paramadde kullanan özel laboratuvarlar; öngörülemeyen sonuçlardan kaçınmak için çeşitli muhafaza önlemleri alınmıştır."
+	building_darktec_void_investigation_1_tooltip:0 ""
+
+	building_darktec_void_investigation_2:0 "Entropik İstasyon"
+	building_darktec_void_investigation_2_plural:0 "$building_darktec_void_investigation_2$s"
+	building_darktec_void_investigation_2_desc:0 "$building_darktec_void_investigation_1_desc$"
+	building_darktec_void_investigation_2_tooltip:0 ""
+
+	building_darktec_void_investigation_3:0 "Entropik Tesis"
+	building_darktec_void_investigation_3_plural:0 "$building_darktec_void_investigation_3$s"
+	building_darktec_void_investigation_3_desc:0 "$building_darktec_void_investigation_1_desc$"
+	building_darktec_void_investigation_3_tooltip:0 ""
+
+	building_darktec_void_investigation_4:0 "Entropik Reaktör"
+	building_darktec_void_investigation_4_plural:0 "$building_darktec_void_investigation_4$s"
+	building_darktec_void_investigation_4_desc:0 "$building_darktec_void_investigation_1_desc$"
+	building_darktec_void_investigation_4_tooltip:0 ""
+
+# Umbral Traits
+	darktec_trait_umbral_basic:0 "§EGölgesel Özellik§!"
+	darktec_trait_umbral_advanced:0 "§EGelişmiş Gölgesel Özellik§!"
+	darktec_trait_ascension:0 "§EEntropik Yükseliş Özelliği§!"
+	darktec_trait_entro:0 "§EEntropiksel Özellik§!"
+
+	tech_darktec_traits_t1:0 "Kimerik Paramaadde Uygulamaları"
+	tech_darktec_traits_t1_desc:0 "Çeşitli çalışmalar, küçük dozlarda paramaaddenin eylemsiz olmayan varlıklara uygulanmasının tehlikeli sonuçlar olmaksızın asimilasyonuna yol açabileceğini kanıtlamıştır; bu nedenle, her iki boyutun da özel ve yerelleştirilmiş kombinasyonlarını yaratarak türümüzü bu şekilde geliştirebileceğimizi teorize ediyoruz."
+	tech_darktec_traits_t1_unlocks_title:0 "§HTür Özelliklerinin Kilidini Açar:§! Kimerik Gölgesel Özellikler"
+	tech_darktec_traits_t1_unlocks_desc:0 "§H$tech_darktec_traits_t1$§!\n£sr_dark_matter£ Kara Madde ve $darktec_contained_entropy_with_icon$ ile etkileşime giren özel özellikler, aynı zamanda güçlü bonuslar sunar."
+
+	tech_darktec_traits_t2:0 "Gölgesel Kendi Kendine Deney"
+	tech_darktec_traits_t2_desc:0 "Paramaaddenin entropik infüzyonunun tür kompozisyonumuzla başarılı birleşimi, egzotik kombinasyonlar konusunda geniş bir çalışma alanı açmıştır - bazıları beklenenden daha radikal, bazıları ise daha az metodiktir."
+	tech_darktec_traits_t2_unlocks_title:0 "§HTür Özelliklerinin Kilidini Açar:§! Gelişmiş Gölgesel Özellikler"
+	tech_darktec_traits_t2_unlocks_desc:0 "§H$tech_darktec_traits_t1$§!\n£sr_dark_matter£ Kara Madde ve $darktec_contained_entropy_with_icon$ ile daha da etkileşime giren özel özellikler, aynı zamanda güçlü bonuslar sunar."
+
+	tech_darktec_traits_ascension:0 "Entropik Özellikler"
+	tech_darktec_traits_ascension_desc:0 "İmparatorluğumuz değiştikçe türümüzü geliştirmek yeterli değildi; paramaadde konusundaki ilerlemelerimizden faydalanmalı ve bu vizyonu, bu yükselişi daha iyi bir şeye taşımalıyız."
+	tech_darktec_traits_ascension_unlocks_title:0 "§HTür Özelliklerinin Kilidini Açar:§! $tech_darktec_traits_ascension$"
+	tech_darktec_traits_ascension_unlocks_desc:0 "§H$tech_darktec_traits_t1$§!\nOyun boyunca seçilen yükseliş yoluna göre değişen güçlü bir özellik elde edeceğiz."
+
+	trait_darktec_decay_predation:0 "Kozmik Bozunma Avcılığı"
+	trait_darktec_decay_predation_desc:0 "Bu türün tüm kompozisyonu, kozmik arka plan radyasyonunu filtreleyip ondan faydalanabilecek şekilde yeniden uyarlanmıştır, onlara muazzam enerji kapasiteleri sağlamaktadır."
+	trait_darktec_decay_predation_tooltip:0 "$mod_leaders_upkeep_mult$: §G-%25§!\n    - $mod_planet_pops_upkeep_mult$: §G-%25§!\n\nAylık $pop_group_unit$ £pop£ §HNüfus§! başına:\n    - Üretim: §G+0.025§! §Y$darktec_contained_entropy_with_icon$§!.\n    - Gider: §R-0.025§! §Y£sr_dark_matter£ Kara Madde§!"
+
+	trait_darktec_paramatter_saturation:0 "Paramaadde Doygunluğu"
+	trait_darktec_paramatter_saturation_desc:0 "Yoğunlaşmış baryonik olmayan madde aşırı yüklenmesi, bu türün vücudunu doyurur ve dışarı sızar."
+	trait_darktec_paramatter_saturation_tooltip:0 "$mod_planet_pops_upkeep_mult$: §R+%15§!\n\nAylık $pop_group_unit$ £pop£ §HNüfus§! başına:\n    - Üretim: §G+0.035§! §Y$darktec_contained_entropy_with_icon$§!"
+
+	trait_darktec_obscure_intellect:0 "Muğlak Zeka"
+	trait_darktec_obscure_intellect_desc:0 "Paramaadde ve arka plan/kara radyasyon akışını algılama ve hissetme yeteneği, bu türe evreni anlama ve farkındalığını artırır."
+	trait_darktec_obscure_intellect_tooltip:0 "$researcher_jobs_bonus_workforce_mult$: §G+%15§!\n\nAylık $pop_group_unit$ £pop£ §HNüfus§! başına:\n    - Gider: §R-0.025§! §Y£sr_dark_matter£ Kara Madde§!"
+
+	trait_darktec_obscure_intellect_robotic:0 "Soyut İşleme"
+	trait_darktec_obscure_intellect_robotic_desc:0 "Sınırlı entropinin bu mekanik türün devreleri ve işleyişi üzerindeki etkisi nedeniyle, evrenin tasarımını ve karmaşıklığını anlama verimlilikleri on kat artmıştır."
+	trait_darktec_obscure_intellect_robotic_tooltip:0 "$trait_darktec_obscure_intellect_tooltip$"
+
+	trait_darktec_darkened_veins:0 "Gölgesel Organizma"
+	trait_darktec_darkened_veins_desc:0 "Kara maddenin bu tür üzerindeki aşırı etkisi fark edilebilir, zira vücut sıvıları gerçeküstü bir siyah tonuyla sızmaktadır."
+	trait_darktec_darkened_veins_tooltip:0 "$MOD_POP_AMENITIES_USAGE_ADD$: §R+0.15§!\n\nAylık $pop_group_unit$ £pop£ §HNüfus§! başına:\n    - Üretim: §G+0.055§! §Y£sr_dark_matter£ Kara Madde§!"
+
+	trait_darktec_darkened_veins_robotic:0 "Gölgesel Yakıt İkmali"
+	trait_darktec_darkened_veins_robotic_desc:0 "Ana yakıt olarak uyarlanan bu mekanik tür, kara maddenin gücünü kullanır; mekanizmaları üzerindeki fark edilebilir etkiler, onlara tuhaf bir çalışma şekli kazandırır."
+	trait_darktec_darkened_veins_robotic_tooltip:0 "$trait_darktec_darkened_veins_tooltip$"
+
+	trait_darktec_entropic_synthesis:0 "Entropik Sentez"
+	trait_darktec_entropic_synthesis_desc:0 "Devasa modifikasyonlar sayesinde, bu tür entropiyi yakalama ve filtreleme yeteneği kazanmıştır; süreçte üretilen enerjiyle beslenerek doğal bir süreç olarak geri dönüştürülür."
+	trait_darktec_entropic_synthesis_tooltip:0 "$MOD_POP_BONUS_WORKFORCE_MULT$: §G+%10§!\n\nAylık $pop_group_unit$ £pop£ §HNüfus§! başına:\n    - Gider: §R-0.025§! §Y$darktec_contained_entropy_with_icon$§!"
+
+	# Ascension - genetics
+	trait_darktec_purity_ingrained_entrogenomics:0 "Yerleşik Entrojenomik"
+	trait_darktec_purity_ingrained_entrogenomics_desc:0 "Belirli hatalı veya potansiyel olarak hatalı genetik zincirlere yöneltilen kara madde cepleri kullanarak, bu tür kendi türünün üstün üyelerinde mükemmelliği teşvik eder."
+	trait_darktec_purity_ingrained_entrogenomics_tooltip:0 "Liderler, seviye atlarken olumsuz özelliklerini kaldırmak için (seviye başına) §R200§! §Y£sr_dark_matter£ Karanlık Madde§! tüketme şansı §G%25§! oranındadır."
+
+	trait_darktec_cloning_mirror_splicing:0 "Ayna Peçeli Eklemeler"
+	trait_darktec_cloning_mirror_splicing_desc:0 "Üreme gerçekleştiğinde hücresel bölünmeyi değiştirerek, bu tür paramadde tarafından sağlanan entropik-rastgeleliği klonlama süreçlerini on kat hızlandırmak için kullanır."
+	#trait_darktec_cloning_mirror_splicing_tooltip:0 "$MOD_BONUS_POP_GROWTH_MULT$: §G+25%§!\n\nPer $pop_group_unit$ £pop£ §HPops§! grown, §G10%§! chance of any pop group with this trait gaining another $pop_group_unit$ £pop£ §HPops§!."
+
+	trait_darktec_mutation_dark_adaptation:0 "Karanlık Adaptasyon"
+	trait_darktec_mutation_dark_adaptation_desc:0 "Arka plan radyasyonuyla doymuş bir organizma olarak, mutasyon potansiyeli kesintisizdir."
+	trait_darktec_mutation_dark_adaptation_tooltip:0 "Tür, gezegen atamasına göre belirli bir £job£ §HGörevi§! için §G+%15§! ile §G+%25§! arasında $MOD_POP_BONUS_WORKFORCE_MULT$ kazanır."
+
+	# Ascension - cybernetics and synths
+	trait_darktec_cybernetic_dm_injectors:0 "Karanlık Madde Enjektörleri"
+	trait_darktec_cybernetic_dm_injectors_desc:0 "Uzmanlaşmış enjektörler, bu türün devrelerine küçük miktarlarda karanlık madde dozlayarak kapasitelerini büyük ölçüde artırır."
+	trait_darktec_cybernetic_dm_injectors_tooltip:0 "$MOD_BONUS_POP_GROWTH_MULT$: §G+%25§!\n    - $MOD_POP_BONUS_WORKFORCE_MULT$: §G+%25§!\n\nHer ay $pop_group_unit$ £pop£ §HPopülasyonu§! başına:\n    - Bakım: §R-0.05§! §Y£sr_dark_matter£ Karanlık Madde§!"
+
+	trait_darktec_cybernetic_void_threadware:0 "Boşluk İplik Ağı"
+	trait_darktec_cybernetic_void_threadware_desc:0 "Entropinin sürekli değişen ve kaotik yönünden faydalanarak, bu türe bağlı devreler bilgiyi rastgele ancak çok daha verimli bir şekilde işleyebilir."
+	trait_darktec_cybernetic_void_threadware_tooltip:0 "$researcher_jobs_bonus_workforce_mult$: §G+%1§!\n    - $bureaucrat_jobs_bonus_workforce_mult$: §G+%1§!\n\nHer geçen yıl rastgele, bu değerler (ayrı ayrı) §G%100§!'e kadar artabilir!"
+
+	# Ascension - Machine
+	trait_darktec_nanite_replication:0 "Entropik Çoğaltma Döngüleyicileri"
+	trait_darktec_nanite_replication_desc:0 "Paramadde ikileştirmesi ve rastgele sıralardaki entropik döngüler uygulayarak, bu mekanik yapıyı oluşturan yeni nanitler üstel bir şekilde çoğalabilir."
+	#trait_darktec_nanite_replication_tooltip:0 ""
+
+	trait_darktec_virtual_void_calculation:0 "Gölgeli Hesaplama Modelleri"
+	trait_darktec_virtual_void_calculation_desc:0 "İşleme kapasitesinin bir kısmını boşluğa yönlendirirken veri depolamayı baryonik olmayan maddeyle geri beslemek, bu sanal makineler için yükte bir azalma sağlar."
+	trait_darktec_virtual_void_calculation_tooltip:0 "$MOD_POP_BONUS_WORKFORCE_MULT$: §G+%25§! koloni başına\n    - Bakım: §R-0.015§! §Y£sr_dark_matter£ Karanlık Madde§! koloni başına.\nEtki 6 koloniyle sınırlıdır."
+
+	trait_darktec_modularity_paramatter:0 "Paramadde Sentezleyiciler"
+	trait_darktec_modularity_paramatter_desc:0 "Fazla veya boş alana yerleştirilmiş küçük çapa ve ocaklar, bu yapay türün her bir yapı başına küçük miktarlarda paramaddeyi kontrollü ve güvenli bir şekilde hasat etmesini sağlar."
+	trait_darktec_modularity_paramatter_tooltip:0 "$foundry_jobs_bonus_workforce_mult$: §R+%15§!\n\nHer ay $pop_group_unit$ £pop£ §HPopülasyonu§! başına:\n    - Üretim: §G+0.05§! §Y$darktec_contained_entropy_with_icon$§!"
+
+	# Ascension - Psionic
+	trait_darktec_psionic_eldritch_prescience:0 "Kadim Önsezi"
+	trait_darktec_psionic_eldritch_prescience_desc:0 "Büyük miktarlarda karanlık madde tüketerek gelişen bu psiyonik tür, akıl sağlığını kaybetmeden sonsuz olasılıklara göz atabilir."
+	trait_darktec_psionic_eldritch_prescience_tooltip:0 "$mod_psionic_pop_bonus_workforce_mult$: §G+%40§!\n\nHer ay $pop_group_unit$ £pop£ §HPopülasyonu§! başına:\n    - Bakım: §R-0.05§! §Y£sr_dark_matter£ Karanlık Madde§!"
+
+	trait_darktec_entro_main:0 "Entropirel"
+	trait_darktec_entro_main_plural:0 "Entropireller"
+	trait_darktec_entro_main_desc:0 "Ne baryonik ne de baryonik olmayan bir yapıya ait olmayan bu tür, imkansızı başardı - her iki dünyanın da mükemmel bir birleşimi olarak... ancak büyük bir bedel karşılığında, çünkü yeni formlarını kontrol altına alacak uygun önlemler olmadan dengesizdir."
+	trait_darktec_entro_main_tooltip:0 ""
+
+	leader_trait_darktec_entro_main:0 "$trait_darktec_entro_main$"
+	leader_trait_darktec_entro_main_desc:0 "Ne baryonik ne de baryonik olmayan bir yapıya ait olmayan bu lider, imkansızı başardı - her iki dünyanın da mükemmel bir birleşimi olarak... ancak büyük bir bedel karşılığında, çünkü yeni formunu kontrol altına alacak uygun önlemler olmadan dengesizdir."
+
+	trait_darktec_entro_phase_body:0 "Faz-Madde Bileşimi"
+	trait_darktec_entro_phase_body_desc:0 "Bu $trait_darktec_entro_main_plural$'ın vücudundaki paramadde bileşimindeki bir artış, onların maddi düzlemi hayalet gibi fazlamasına ve geçmesine olanak tanır."
+	trait_darktec_entro_phase_body_tooltip:0 "YAPILACAK: Devasa konut azaltma ve ordu bonusları"
+
+	trait_darktec_entro_eldritch_touch:0 "Kadim Dokunuş"
+	trait_darktec_entro_eldritch_touch_desc:0 "İki farklı madde durumunu birleştirebilen bu $trait_darktec_entro_main$ türü, neredeyse hiç çaba harcamadan imkansız şeyler yaratabilir."
+	trait_darktec_entro_eldritch_touch_tooltip:0 "YAPILACAK: Ekstra çıktı"
+
+	trait_darktec_entro_dm_oozing:0 "Karanlık Sızıntı"
+	trait_darktec_entro_dm_oozing_desc:0 "Egzotik maddeyle aşırı yüklü olan bu tür, paramadde salgılar ve döker, ayrıca uygun aletler ve kontrol önlemleriyle hasat edilebilecek küçük miktarlarda zararsız radyasyon üretir."
+	trait_darktec_entro_dm_oozing_tooltip:0 "$MOD_POP_AMENITIES_USAGE_ADD$: §R+0.25§!\n\nHer ay $pop_group_unit$ £pop£ §HPopülasyonu§! başına:\n    - Üretim: §G+0.1§! §Y£sr_dark_matter£ Karanlık Madde§!"
+
+	trait_darktec_entro_multiverse_sight:0 "Çok Boyutlu Görüş"
+	trait_darktec_entro_multiverse_sight_desc:0 "Bu türün bilinci, entropinin imkansız rastgeleliği ile iç içedir, ancak aynı zamanda gerçekliğe bağlıdır, bu da alternatif gerçekliklerin potansiyel olasılıklarına göz atarak paralel düşünce çizgilerine izin verir."
+	trait_darktec_entro_multiverse_sight_tooltip:0 "YAPILACAK: Ekstra birlik çıktısı"
+
+	trait_darktec_entro_possession:0 "Baryonik Ele Geçirme"
+	trait_darktec_entro_possession_desc:0 "Kararsız durumu nedeniyle, bu tür yarı veya hiç dokunulmaz bir yapıya bürünebilir ve makinelerin ve teknolojinin içine veya dışına ''dalabilir'', bilinçlerini mevcut devrelere bağlayarak daha önce hiç görülmemiş bir kontrol seviyesini uygulayabilir."
+	trait_darktec_entro_possession_tooltip:0 "YAPILACAK: bölge başına dökümhane ve zanaatkar meslekleri için yüksek bonuslar"
+
+	trait_darktec_entro_saturation:0 "Entropik Doygunluk"
+	trait_darktec_entro_saturation_desc:0 "Çok fazla entropik madde bu türün içinden geçerek onları son derece kararsız ve tehlikeli hale getiriyor."
+	trait_darktec_entro_saturation_tooltip:0 "$MOD_POP_AMENITIES_USAGE_MULT$: §R+%0,25§!\n\nAylık $pop_group_unit$ £pop£ §HPops§! başına:\n    - Üretim: §G+0,1§! §Y$darktec_contained_entropy_with_icon$§!"
+
+	trait_darktec_entro_hunger:0 "Paranedensel Açlık"
+	trait_darktec_entro_hunger_desc:0 "Sürekli bir enerji tüketimi ihtiyacı bu türü rahatsız ediyor, zira yeni bileşimleri istikrarlı bir formda kalmak için giderek artan yüksek bir geliri talep ediyor."
+	trait_darktec_entro_hunger_tooltip:0 "$mod_planet_pops_upkeep_mult$: §R+%50§!\n\nAylık $pop_group_unit$ £pop£ §HPops§! başına:\n    - Üretim: §G+0,05§! §Y$darktec_contained_entropy_with_icon$§!\n    - Üretim: §G+0,05§! §Y£sr_dark_matter£ Karanlık Madde§!"
+
+	trait_darktec_entro_multiplicity:0 "Korkunç Çokluluk"
+	trait_darktec_entro_multiplicity_desc:0 "Paramaddenin bu $trait_darktec_entro_main_plural$'ın üreme kapasiteleri üzerindeki etkisi, fiziksel, metaforik ve bilinç benzeri bir süreçte kopyalanmalarına olanak tanır, süreçte temel ve egzotik maddeyi yeniden yapılandırarak kendilerinin mükemmel ''klonlarını'' yaratır."
+	trait_darktec_entro_multiplicity_tooltip:0 "Her ne zaman bir §H$building_darktec_umbral_portal_1$§!, bu tür için entropik bir büyüme darbesi üretse, $pop_group_unit$ £pop£ §HPops§! sağlama şansı §G%10§!."
+
+	trait_darktec_entro_traversal:0 "Gerçeklikler Arası Geçiş"
+	trait_darktec_entro_traversal_desc:0 "Bu tür için fiziksel bir sınır yoktur, çünkü boyutlar arasında geçiş yapabilir ve kayabilirler, uzamsal ve zamansal konumlarını hızla ve kısa süreliğine değiştirerek."
+	trait_darktec_entro_traversal_tooltip:0 "YAPILACAK: muazzam otomatik göç bonusu"
+# /
+
+# UNSORTED LOCALISATION
+	bombardment_darktec_bombardment_entropy:0 "Entropik Bombardıman"
+	bombardment_darktec_bombardment_entropy_desc:0 "Büyük doymuş bombalar gezegenin yüzeyini harap eder, baryonik maddeyi parçalayarak ve temas anında ve zincirleme reaksiyonla baryonik olmayan maddeye dönüştürür."
+
+	DARKTEC_SHIP_UTILITY_VOIDJUMP_MODULE:0 "Boşluk Yarığı Konumlandırıcısı"
+	DARKTEC_SHIP_UTILITY_VOIDJUMP_MODULE_ORGANIC:0 "$DARKTEC_SHIP_UTILITY_VOIDJUMP_MODULE$"
+	DARKTEC_SHIP_UTILITY_VOIDJUMP:0 "$DARKTEC_SHIP_UTILITY_VOIDJUMP_MODULE$"
+	DARKTEC_SHIP_UTILITY_VOIDJUMP_DESC:0 "Fiziksel haller arasında sürekli geçiş yaparak, bu cihaz, zaman ve uzayda anında bir yarık yaratmak için aşırı yüklenebilir, gemiyi ve çevresini bilinen önceki bir konuma yeniden konumlandırır."
+	DARKTEC_SHIP_UTILITY_VOIDJUMP_MODULE_DESC:0 "$DARKTEC_SHIP_UTILITY_VOIDJUMP_DESC$"
+	DARKTEC_SHIP_UTILITY_VOIDJUMP_ORGANIC:0 "$DARKTEC_SHIP_UTILITY_VOIDJUMP_MODULE$"
+	DARKTEC_SHIP_UTILITY_VOIDJUMP_ORGANIC_DESC:0 "Fiziksel haller arasında sürekli geçiş yaparak, bu organ, zaman ve uzayda anında bir yarık yaratmak için aşırı yüklenebilir, gemiyi ve çevresini bilinen önceki bir konuma yeniden konumlandırır."
+	DARKTEC_SHIP_UTILITY_VOIDJUMP_TOOLTIP:0 "Filo eylemini açar: §H$on_darktec_voidjump_ability_title$§!\n\n§HMaliyet§!: £sr_dark_matter£1000 £darktec_contained_entropy£1000\n§HBekleme Süresi§!: 360 £time£\n\nFilo, ana sisteminize doğru bir §YBoşluk Yarığı§! açacak.$TABBED_NEW_LINE$- Filodaki tüm gemiler yeniden konumlandırılacak.$TABBED_NEW_LINE$- Bu modüle sahip olmayan tüm gemiler §RŞİDDETLİ§! hasar alacak."
+
+	DARKTEC_SHIP_UTILITY_INERTIALESS:0 "Eylemsiz Entropik İtki Motoru"
+	DARKTEC_SHIP_UTILITY_INERTIALESS_DESC:0 "Fizik yasalarını çiğneyerek, bu daimi hareketli aygıt varlığıyla enerji üretir."
+	DARKTEC_SHIP_UTILITY_INERTIALESS_ORGANIC:0 "Eylemsiz Entropik Organ"
+	DARKTEC_SHIP_UTILITY_INERTIALESS_ORGANIC_DESC:0 "Fizik yasalarını çiğneyerek, bu daimi hareketli kas varlığıyla enerji üretir."
+	DARKTEC_SHIP_UTILITY_INERTIALESS_TOOLTIP:0 "Filo eylemini açar: §H$on_darktec_inertialess_ability_title$§!\n\n§HMaliyet§!: £sr_dark_matter£1000 £darktec_contained_entropy£1000\n§HBekleme Süresi§!: 360 £time£\n\nFilo, §YEylemsiz İtki Motorunu§! etkinleştirecek!$TABBED_NEW_LINE$- Modüle sahip tüm gemiler büyük bir güç Öz-Değiştiricisi kazanacak.$TABBED_NEW_LINE$- Bu modüle sahip olmayan tüm gemiler §RŞİDDETLİ§! hasar alacak ve öz-değiştirici tersine dönecek.\n\nÖz-Değiştirici:\n    $MOD_SHIP_FIRE_RATE_MULT$: §G+%50§!\n    $MOD_SHIP_SPEED_MULT$: §G+%50§!\n    $MOD_SHIP_ACCURACY_MULT$: §G+%25§!\n\n    Süre: §Y60 £time£§!"
+
+	DARKTEC_SHIP_UTILITY_COLLAPSER:0 "Paramadde Çökerticisi"
+	DARKTEC_SHIP_UTILITY_COLLAPSER_DESC:0 "Karanlık maddenin dış kalkanlara akışını düzenleyerek, bu cihaz, korumanın yoğunluğunu anında gemi etrafındaki bir mikro-vakum çöküşüne yönlendirebilir, yıkıcı bir şok dalgası yaratarak."
+	DARKTEC_SHIP_UTILITY_COLLAPSER_ORGANIC:0 "$DARKTEC_SHIP_UTILITY_COLLAPSER$"
+	DARKTEC_SHIP_UTILITY_COLLAPSER_ORGANIC_DESC:0 "Karanlık maddenin dış kalkanlara akışını düzenleyerek, bu organel, korumanın yoğunluğunu anında gemi etrafındaki bir mikro-vakum çöküşüne yönlendirebilir, yıkıcı bir şok dalgası yaratarak."
+	DARKTEC_SHIP_UTILITY_COLLAPSER_TOOLTIP:0 "Filo eylemini açar: §H$on_darktec_collapser_ability_title$§!\n\n§HMaliyet§!: £sr_dark_matter£1000 £darktec_contained_entropy£1000\n§HBekleme Süresi§!: 360 £time£\n\nFilo, §YEntropik Çökerticisini§! etkinleştirecek!$TABBED_NEW_LINE$- Modüle sahip tüm gemiler kalkanlarını kaybedecek ve bir §ROz-Zayıflatıcı§! alacak.$TABBED_NEW_LINE$- Sistemdeki tüm gemiler, kaybedilen kalkanların §Y%5§!'ini doğrudan hasar olarak alacak.\n$TABBED_NEW_LINE$- Bu modüle sahip olmayan müttefik gemiler şok dalgasından §RETKİLENECEK§!.\n\n§YMaksimum 20000 hasar ile sınırlıdır.§!\n\nÖz-Zayıflatıcı:\n    $MOD_SHIP_SPEED_MULT$ = §R-%100§!\n    $MOD_SHIP_FIRE_RATE_MULT$: §R-%100§!\n\n    Süre: §R30 £time£§!"
+
+	DARKTEC_SHIP_UTILITY_INTERFERER:0 "Vakum Girişimcisi"
+	DARKTEC_SHIP_UTILITY_INTERFERER_DESC:0 "Yoğun miktarda karanlık madde biriktirerek, bu cihaz, konum sistemlerinde muazzam bir girişim yaratabilir, bu gemiden gelen tüm emisyonları tespit edilmekten etkili bir şekilde izole ederek."
+	DARKTEC_SHIP_UTILITY_INTERFERER_ORGANIC:0 "$DARKTEC_SHIP_UTILITY_INTERFERER$"
+	DARKTEC_SHIP_UTILITY_INTERFERER_ORGANIC_DESC:0 "Yoğun miktarda karanlık madde biriktirerek, bu organel, konum sistemlerinde muazzam bir girişim yaratabilir, bu gemiden gelen tüm emisyonları tespit edilmekten etkili bir şekilde izole ederek."
+	DARKTEC_SHIP_UTILITY_INTERFERER_TOOLTIP:0 "Filo eylemini açar: §H$on_darktec_interferer_ability_title$§!\n\n§HMaliyet§!: £sr_dark_matter£1000 £darktec_contained_entropy£1000\n§HBekleme Süresi§!: 360 £time£\n\nFilo, §YVakum Girişimcisini§! etkinleştirecek!$TABBED_NEW_LINE$- Modüle sahip tüm gemiler büyük bir hareket ve gizlilik bonusu kazanacak.$TABBED_NEW_LINE$- Bu modüle sahip olmayan müttefik gemiler, geçici olarak zırh ve gövdelerinin çoğunu §RKAYBEDECEK§!.\n\nÖz-Değiştirici:\n    $MOD_SHIP_CLOAKING_STRENGTH_ADD$: §R+20§!\n    $MOD_SHIP_SPEED_MULT$: §G+%100§!\n    $MOD_SHIP_EVASION_MULT$: §G+%50§!\n\n    Süre: §Y60 £time£§!"
+
+	# Shields
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS:0 "Ters-Entropi Kalkanlama"
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_DESC:0 "Bir geminin dışındaki maddeye uygulanan artık entropi izlerini kullanarak, parçacık düzensizliğine olan eğilim, malzeme bütünlüğünden ödün vererek yumuşak kalkanlama değişiklikleri için bir pencere yaratır."
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_ORGANIC:0 "Ters-Entropi Kalkan-Deri"
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_ORGANIC_DESC:0 "Biyolojik bir gemi derisinin etrafındaki maddeye uygulanan artık entropi izlerini kullanarak, parçacık düzensizliğine olan eğilim, yapısal bütünlükten ödün vererek yumuşak kalkanlama değişiklikleri için bir pencere yaratır."
+
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_SMALL:0 "Küçük $DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS$"
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_SMALL_DESC:0 "$DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_DESC$"
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_MEDIUM:0 "Orta $DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS$"
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_MEDIUM_DESC:0 "$DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_DESC$"
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_LARGE:0 "Büyük $DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS$"
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_LARGE_DESC:0 "$DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_DESC$"
+
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_SMALL_BIO:0 "Küçük $DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS$"
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_SMALL_BIO_DESC:0 "$DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_ORGANIC_DESC$"
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_MEDIUM_BIO:0 "Orta $DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS$"
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_MEDIUM_BIO_DESC:0 "$DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_ORGANIC_DESC$"
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_LARGE_BIO:0 "Büyük $DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS$"
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_LARGE_BIO_DESC:0 "$DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_ORGANIC_DESC$"
+
+	# Antiparticles
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES:0 "Antiparçacık Işını"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_DESC:0 "Monomoleküler bir hat halinde odaklanmış bu antiparçacık yansıması, hedefin üzerinde mikro madde çöküşleri yaratarak temas ettiği yüzeyleri patlamadan önce temiz bir şekilde keser."
+
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_ORGANIC:0 "Antiparçacık Mercekleri"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_ORGANIC_DESC:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_DESC$"
+
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_SMALL:0 "Küçük $DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES$"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_SMALL_DESC:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_DESC$"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_MEDIUM:0 "Orta $DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES$"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_MEDIUM_DESC:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_DESC$"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_LARGE:0 "Büyük $DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES$"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_LARGE_DESC:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_DESC$"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_X:0 "Ekstra Büyük $DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES$"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_X_DESC:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_DESC$"
+
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_SMALL_BIO:0 "Küçük $DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_SMALL_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_ORGANIC_DESC$"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_MEDIUM_BIO:0 "Orta $DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_MEDIUM_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_ORGANIC_DESC$"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_LARGE_BIO:0 "Büyük $DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_LARGE_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_ORGANIC_DESC$"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_X_BIO:0 "Ekstra Büyük $DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_X_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_ORGANIC_DESC$"
+
+	# Destabilizator
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION:0 "Dengesizleştirme Topları"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_DESC:0 "Plazma benzeri karanlık madde pıhtılarını fırlatan bu fırlatıcı, çarpma anında muazzam bir yıkıcı elektromanyetik etki yaratır."
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_ORGANIC:0 "Dengesizleştirme Emülsörü"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_ORGANIC_DESC:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION_DESC$"
+
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_SMALL:0 "Küçük $DARKTEC_SHIP_WEAPON_DESTABILIZATION$"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_SMALL_DESC:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION_DESC$"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_MEDIUM:0 "Orta $DARKTEC_SHIP_WEAPON_DESTABILIZATION$"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_MEDIUM_DESC:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION_DESC$"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_LARGE:0 "Büyük $DARKTEC_SHIP_WEAPON_DESTABILIZATION$"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_LARGE_DESC:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION_DESC$"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_X:0 "Ekstra Büyük $DARKTEC_SHIP_WEAPON_DESTABILIZATION$"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_X_DESC:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION_DESC$"
+
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_SMALL_BIO:0 "Küçük $DARKTEC_SHIP_WEAPON_DESTABILIZATION_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_SMALL_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION_ORGANIC_DESC$"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_MEDIUM_BIO:0 "Orta $DARKTEC_SHIP_WEAPON_DESTABILIZATION_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_MEDIUM_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION_ORGANIC_DESC$"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_LARGE_BIO:0 "Büyük $DARKTEC_SHIP_WEAPON_DESTABILIZATION_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_LARGE_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION_ORGANIC_DESC$"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_X_BIO:0 "Ekstra Büyük $DARKTEC_SHIP_WEAPON_DESTABILIZATION_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_X_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION_ORGANIC_DESC$"
+
+	# Antimatter Lnace
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE:0 "Antimadde Mızraklayıcı"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_DESC:0 "Bu tehlikeli silah, hedefe doğru sınırlı ve uyarılmış bir antimadde jeti yönlendirerek yolundaki maddeyi yok eder."
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_ORGANIC:0 "Antimadde Püskürtücü"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_ORGANIC_DESC:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_DESC$"
+
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_SMALL:0 "Küçük $DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE$"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_SMALL_DESC:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_DESC$"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_MEDIUM:0 "Orta $DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE$"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_MEDIUM_DESC:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_DESC$"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_LARGE:0 "Büyük $DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE$"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_LARGE_DESC:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_DESC$"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_X:0 "Ekstra Büyük $DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE$"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_X_DESC:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_DESC$"
+
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_SMALL_BIO:0 "Küçük $DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_SMALL_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_ORGANIC_DESC$"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_MEDIUM_BIO:0 "Orta $DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_MEDIUM_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_ORGANIC_DESC$"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_LARGE_BIO:0 "Büyük $DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_LARGE_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_ORGANIC_DESC$"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_X_BIO:0 "Ekstra Büyük $DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_X_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_ORGANIC_DESC$"
+
+	# Discharger
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER:0 "Entropik Deşarj Cihazı"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_DESC:0 "Gemilere entegre edilmiş mikro entropik geri dönüştürücüler sayesinde, bu deşarj cihazı, çıkarma işleminin yan ürününü hedefe doğru fırlatır; bu ürün, en yoğun parçacık katmanlarına nüfuz edebilen sıfır enerjili ışınlar şeklinde tezahür eder."
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_ORGANIC:0 "Entropik Deşarj Cihazı"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_ORGANIC_DESC:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_DESC$"
+
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_SMALL:0 "Küçük $DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER$"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_SMALL_DESC:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_DESC$"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_MEDIUM:0 "Orta $DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER$"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_MEDIUM_DESC:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_DESC$"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_LARGE:0 "Büyük $DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER$"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_LARGE_DESC:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_DESC$"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_X:0 "Çok Büyük $DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER$"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_X_DESC:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_DESC$"
+
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_SMALL_BIO:0 "Küçük $DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_SMALL_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_ORGANIC_DESC$"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_MEDIUM_BIO:0 "Orta $DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_MEDIUM_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_ORGANIC_DESC$"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_LARGE_BIO:0 "Büyük $DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_LARGE_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_ORGANIC_DESC$"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_X_BIO:0 "Çok Büyük $DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_X_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_ORGANIC_DESC$"
+
+
+	on_darktec_voidjump_ability_tooltip:0 "§H$on_darktec_voidjump_ability_title$§!\n\n§HMaliyet§!: £sr_dark_matter£1000 £darktec_contained_entropy£1000\n§HSüre§!: 360 £time£\n\nFilo, ana sisteminize doğru bir §YBoşluk Yarığı§! açar.$TABBED_NEW_LINE$-Filodaki tüm gemiler yeniden konumlandırılır.$TABBED_NEW_LINE$- Bu modüle sahip olmayan tüm gemiler §RŞİDDETLİ§! hasar alır."
+	on_darktec_voidjump_ability_title:0 "Boşluk Yarığı"
+	on_darktec_voidjump_ability_activity:0 "Boşluk Yarma"
+	on_darktec_voidjump_ability_progress:0 "Yarık Açılıyor"
+
+	on_darktec_inertialess_ability_tooltip:0 "§H$on_darktec_inertialess_ability_title$§!\n\n§HMaliyet§!: £sr_dark_matter£1000 £darktec_contained_entropy£1000\n§HSüre§!: 360 £time£\n\nFilo, §YHızsız İtici§!'larını aktifleştirir.$TABBED_NEW_LINE$- Modüle sahip tüm gemiler devasa bir güç Öz-Değiştirici kazanır.$TABBED_NEW_LINE$- Bu modüle sahip olmayan tüm gemiler §RŞİDDETLİ§! hasar alır ve öz-değiştirici tersine döner.\n\nÖz-Değiştirici:\n    $MOD_SHIP_FIRE_RATE_MULT$: §G+%50§!\n    $MOD_SHIP_SPEED_MULT$: §G+%50§!\n    $MOD_SHIP_ACCURACY_MULT$: §G+%25§!\n\n    Süre: §Y60 £time£§!"
+	on_darktec_inertialess_ability_title:0 "Hızsız İtici"
+	on_darktec_inertialess_ability_activity:0 "Eylemsizliği Sürdürme"
+	on_darktec_inertialess_ability_progress:0 "Hızsız İtici Başlatılıyor"
+
+	on_darktec_collapser_ability_tooltip:0 "§H$on_darktec_collapser_ability_title$§!\n\n§HMaliyet§!: £sr_dark_matter£1000 £darktec_contained_entropy£1000\n§HSüre§!: 360 £time£\n\nFilo, §YEntropik Çökertici§!'lerini aktifleştirir.$TABBED_NEW_LINE$- Modüle sahip tüm gemiler kalkanlarını kaybeder ve bir §ROz-Zayıflatma§! alır.$TABBED_NEW_LINE$- Sistemdeki tüm gemiler, kaybedilen kalkanların §Y%5§!'ini doğrudan hasar olarak alır.\n$TABBED_NEW_LINE$- Bu modüle sahip olmayan müttefik gemiler şok dalgasından §RETKİLENİR§!.\n\n§YHasan en fazla 20000 ile sınırlıdır.§!\n\nÖz-Zayıflatma:\n    $MOD_SHIP_SPEED_MULT$ = §R-%100§!\n    $MOD_SHIP_FIRE_RATE_MULT$: §R-%100§!\n\n    Süre: §R30 £time£§!"
+	on_darktec_collapser_ability_title:0 "Entropik Çöküş"
+	on_darktec_collapser_ability_activity:0 "Kalkanlar Çöküyor"
+	on_darktec_collapser_ability_progress:0 "Kalkanlar Çöküyor"
+
+	on_darktec_interferer_ability_tooltip:0 "§H$on_darktec_interferer_ability_title$§!\n\n§HMaliyet§!: £sr_dark_matter£1000 £darktec_contained_entropy£1000\n§HSüre§!: 360 £time£\n\nFilo, §YVakum Engelleyici§!'lerini aktifleştirir.$TABBED_NEW_LINE$- Modüle sahip tüm gemiler devasa bir hareket ve gizlenme Öz-Değiştirici kazanır.$TABBED_NEW_LINE$- Bu modüle sahip olmayan müttefik gemiler, geçici olarak gövdelerinin ve zırhlarının çoğunu §RKAYBEDER§!.\n\nÖz-Değiştirici:\n    $MOD_SHIP_CLOAKING_STRENGTH_ADD$: §R+20§!\n    $MOD_SHIP_SPEED_MULT$: §G+%100§!\n    $MOD_SHIP_EVASION_MULT$: §G+%50§!\n\n    Süre: §Y60 £time£§!"
+	on_darktec_interferer_ability_title:0 "Vakum Girişimi"
+	on_darktec_interferer_ability_activity:0 "Girişim Sinyalleri"
+	on_darktec_interferer_ability_progress:0 "Girişim Sinyalleri"
+
+	darktec_crisis_chain_title:0 "$darktec_ap_postbaryonic$"
+	darktec_crisis_chain_desc:0 "$darktec_ap_postbaryonic$[darktec_crisis_chain_desc_choice_1][darktec_crisis_chain_desc_choice_2][darktec_crisis_chain_desc_choice_2_5][darktec_crisis_chain_desc_choice_3][darktec_crisis_chain_desc_choice_4]"
+	darktec_crisis_chain_desc_choice_1_economy:0 "\n\nBaşlangıçta, paramadde uygulamalarını endüstriyel kullanımlara odaklamaya karar verdik; verimliliğimizi artırarak ve paramadde hasat kapasitelerini yükselterek."
+	darktec_crisis_chain_desc_choice_1_warfare:0 "\n\nBaşlangıçta, paramadde uygulamalarını savaşa yönelik kullanımlara odaklamaya karar verdik; madde durumları arasında geçiş yapabilen, gerçekliği büken gemiler yaratarak."
+	darktec_crisis_chain_desc_choice_1_applications:0 "\n\nBaşlangıçta, paramadde uygulamalarını bilimsel ve türsel kullanımlara odaklamaya karar verdik ve bazı niteliklerimizi onunla birleştirmenin yollarını bulduk."
+
+	darktec_crisis_chain_desc_choice_2_transformation:0 "\n\nAncak, olayların radikal bir dönüşü bizi dönüştürdü, çünkü maddemizi entropiyle temel bir düzeyde birleştirdik ve şimdi değiştik, Entropik Var'lıklara dönüştük."
+	darktec_crisis_chain_desc_choice_2_taint:0 "\n\nAncak, olayların radikal bir dönüşü, özümüzü uyumlu karanlık maddeyle birleştirmeye karar vermemize neden oldu; kim olduğumuzu, nasıl olduğumuzu ve diğer gelişmelere nasıl uygulayacağımızı daha da geliştirerek."
+
+	darktec_crisis_chain_desc_choice_2_5_built_sphere:0 "\n\nHem entropik hem de karanlık madde alanlarını inceledikten sonra vardığımız sonuç, paramaddeyi odaklayabileceğimiz, gerçekliği kendi isteğimize göre değiştirmek için kullanabileceğimiz güçlü bir ''Anomali'' yaratabileceğimiz belirli bir zaman ve mekan noktası oluşturmanın mümkün olduğuydu.\nVe sonunda başardık."
+
+	darktec_crisis_chain_desc_choice_3_do_nothing:0 "\n\nAnomalinin dengesiz olduğunu fark ettiğimiz ilk anda, müdahalenin... ters tepebileceği için kendi seyrine bırakmaya karar verdik."
+	darktec_crisis_chain_desc_choice_3_overload_dm:0 "\n\nAnomalinin dengesiz olduğunu fark ettiğimiz ilk anda, entropik hasadın yan ürünleriyle doyurarak karanlık madde koruyucu katmanını artırmaya karar verdik.."
+	darktec_crisis_chain_desc_choice_3_overload_entro:0 "\n\nAnomalinin dengesiz olduğunu fark ettiğimiz ilk anda, yüzeyinde meydana gelen karanlık güçlerin ikili mücadelesini stabilize etmek için ona daha da odaklanmış entropi sağlamaya karar verdik."
+
+	darktec_crisis_chain_desc_choice_4_do_nothing:0 "\n\nAnomali, etrafındaki uzay ve zamanı değiştirmeye başladığında, son safhaya gelmeden önce sabırla bekledik."
+	darktec_crisis_chain_desc_choice_4_overload_entrophereals:0 "\n\nAnomali, etrafındaki uzay ve zaman akışını değiştirmeye başladıktan sonra daha fazla dengesizlik veya yıkım riskine giremezdik, bu yüzden şekillendirilmemiş nüfusumuzun bir kısmını yüzeyine taşımaya karar verdik ve orada başarılı oldukları anlaşıldı."
+	darktec_crisis_chain_desc_choice_4_overload_dm:0 "\n\nAnomalinin dış kalkanı daha fazla karanlık maddeyle güçlendirildikçe, anomali düzensizlikleri kaybolur."
+	darktec_crisis_chain_desc_choice_4_overload_entropy:0 "\n\nAnomalinin iç güçleri azalırken onu giderek daha fazla paramaddeyle aşırı yükledik ve sonunda onu stabilize ettik.."
+
+
+	darktec_crisis_postbaryonic_level_2_require_enough_currency_completed:0 "Yeterli $darktec_contained_entropy_with_icon$ kazandık."
+	darktec_crisis_postbaryonic_level_2_require_enough_currency:0 "Yeterli $darktec_contained_entropy_with_icon$ biriktirme gerektirir."
+	darktec_crisis_postbaryonic_level_3_require_enough_currency_completed:0 "Yeterli $darktec_contained_entropy_with_icon$ kazandık."
+	darktec_crisis_postbaryonic_level_3_require_enough_currency:0 "Yeterli $darktec_contained_entropy_with_icon$ biriktirme gerektirir."
+	darktec_crisis_postbaryonic_level_4_require_situation_completed:0 "Entropik Değişim durumunu başarıyla tamamladık ve yeterli $darktec_contained_entropy_with_icon$ biriktirdik."
+	darktec_crisis_postbaryonic_level_4_require_situation:0 "Bir durumu tamamlamış olmayı gerektirir.\nYeterli $darktec_contained_entropy_with_icon$ kazanıldığında bu durum etkinleşecektir."
+	darktec_crisis_postbaryonic_level_5_require_situation_completed:0 "Yeterli $darktec_contained_entropy_with_icon$ kazandık."
+	darktec_crisis_postbaryonic_level_5_require_situation:0 "Yeterli $darktec_contained_entropy_with_icon$ kazandık."
+
+	edict_darktec_edict_chimerical_dark_matter:0 "Umbrik-Kimerik Karanlık"
+	edict_darktec_edict_chimerical_dark_matter_desc:0 "ATILDI"
+	edict_darktec_edict_chimerical_entropy:0 "Umbrik-Kimerik Entropi"
+	edict_darktec_edict_chimerical_entropy_desc:0 "ATILDI"
+	edict_darktec_edict_chimerical_ascension:0 "Umbrik-Kimerik Yükseliş"
+	edict_darktec_edict_chimerical_ascension_desc:0 "ATILDI"
+
+	darktec_crisis_level_reached:0 "Kriz Seviyesine Ulaşıldı"
+
+	darktec_pm_entropic_world:0 "Entropi Nüfuzlu Dünya"
+	darktec_pm_entropic_world_desc:0 "ATILDI"
+
+	mod_mod_darktec_umbral_boost:0 "Umbrik Bina Takviyesi"
+
+	darktec_sphere_0:0 "Tümleşmiş Anomali"
+	darktec_sphere_0_DESC:0 "Güçlü karanlık madde alanları tarafından içerilen, sözde bir gök cismine dönüşmüş bir entropi birleşimidir. Sınırlarında fiziği değiştirir."
+	darktec_sphere_0_MEGASTRUCTURE_DETAILS:0 "Bir §Y$darktec_sphere_0$§!, güçlü karanlık madde alanları tarafından içerilen, sözde bir gök cismine dönüşmüş bir entropi birleşimidir. Sınırlarında fiziği değiştirir."
+
+	darktec_sphere_1:0 "Tümleşmiş Anomali - I"
+	darktec_sphere_1_DESC:0 "$darktec_sphere_0_DESC$"
+	darktec_sphere_2:0 "Tümleşmiş Anomali - II"
+	darktec_sphere_2_DESC:0 "$darktec_sphere_0_DESC$"
+	darktec_sphere_3:0 "Tümleşmiş Anomali - III"
+	darktec_sphere_3_DESC:0 "$darktec_sphere_0_DESC$"
+	darktec_sphere_4:0 "Tümleşmiş Anomali - IV"
+	darktec_sphere_4_DESC:0 "$darktec_sphere_0_DESC$"
+	darktec_sphere_5:0 "Tümleşmiş Anomali - V"
+	darktec_sphere_5_DESC:0 "$darktec_sphere_0_DESC$"
+	darktec_sphere_6:0 "Tümleşmiş Anomali - VI"
+	darktec_sphere_6_DESC:0 "$darktec_sphere_0_DESC$"
+	darktec_sphere_7:0 "Tümleşmiş Anomali - VII"
+	darktec_sphere_7_DESC:0 "$darktec_sphere_0_DESC$"
+	darktec_sphere_8:0 "Tümleşmiş Anomali - VIII"
+	darktec_sphere_8_DESC:0 "$darktec_sphere_0_DESC$"
+
+	mod_mod_darktec_assimilation_capacity:0 "Entropi-Küresel Tümleşme Kapasitesi"
+	mod_mod_darktec_umbral_components_mult:0 "Umbrik Bileşen Verimliliği"
+
+	darktec_pm_tainted:0 "ATILDI"
+	darktec_pm_tainted_desc:0 "ATILDI"
+
+	darktec_pm_tainted_worker:0 "ATILDI"
+	darktec_pm_tainted_worker_desc:0 "ATILDI"
+
+	darktec_pm_tainted_specialist:0 "ATILDI"
+	darktec_pm_tainted_specialist_desc:0 "ATILDI"
+
+	darktec_pm_tainted_pops:0 "ATILDI"
+	darktec_pm_tainted_pops_desc:0 "ATILDI"
+
+	darktec_pm_tainted_utility:0 "ATILDI"
+	darktec_pm_tainted_utility_desc:0 "ATILDI"
+
+	darktec_pm_entropic_world_phase_1:0 "ATILDI"
+	darktec_pm_entropic_world_phase_1_desc:0 "ATILDI"
+
+	darktec_pm_entropic_world_phase_2:0 "ATILDI"
+	darktec_pm_entropic_world_phase_2_desc:0 "ATILDI"
+
+	darktec_pm_entropic_world_phase_3:0 "ATILDI"
+	darktec_pm_entropic_world_phase_3_desc:0 "ATILDI"
+
+	darktec_modifier_country_doomed_galaxy:0 "Lanetlenmiş Varlık"
+	darktec_modifier_country_doomed_galaxy_desc:0 "Kaçış yok."
+
+	darktec_modifier_fleet_voidjump:0 "Boşluk Yırtığı İmpulsu"
+	darktec_modifier_fleet_interferer:0 "Engelleyici Gizleme"
+	darktec_modifier_fleet_inertialess:0 "Ataletsiz Hızlandırma"
+	darktec_modifier_fleet_collapser:0 "Çökmüş Entropi"
+
+	darktec_modifier_fleet_hungering_void:0 "Aç Boşluk"
+	darktec_modifier_fleet_ceaseless_horror:0 "Durmaksızın Dehşet"
+
+
+	tech_darktec_ship_shields:0 "$DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS$"
+	tech_darktec_ship_shields_desc:0 "$DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_DESC$"
+
+	tech_darktec_ship_shields_mechanical:0 "$DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS$"
+	tech_darktec_ship_shields_mechanical_desc:0 "$DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_DESC$"
+	tech_darktec_ship_shields_organic:0 "$DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_ORGANIC$"
+	tech_darktec_ship_shields_organic_desc:0 "$DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_ORGANIC_DESC$"
+
+	tech_darktec_ship_shields_unlocks_title:0 "ATILDI"
+	tech_darktec_ship_shields_unlocks_desc:0 "ATILDI"
+	tech_darktec_ship_shields_organic_unlocks_title:0 "ATILDI"
+	tech_darktec_ship_shields_organic_unlocks_desc:0 "ATILDI"
+
+	tech_darktec_weapon_antiparticles:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES$"
+	tech_darktec_weapon_antiparticles_desc:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_DESC$"
+	tech_darktec_weapon_antiparticles_mechanical:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES$"
+	tech_darktec_weapon_antiparticles_mechanical_desc:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_DESC$"
+	tech_darktec_weapon_antiparticles_organic:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_ORGANIC$"
+	tech_darktec_weapon_antiparticles_organic_desc:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_ORGANIC_DESC$"
+
+	tech_darktec_weapon_antiparticles_unlocks_title:0 "ATILDI"
+	tech_darktec_weapon_antiparticles_unlocks_desc:0 "ATILDI"
+	tech_darktec_weapon_antiparticles_organic_unlocks_title:0 "ATILDI"
+	tech_darktec_weapon_antiparticles_organic_unlocks_desc:0 "ATILDI"
+
+	tech_darktec_weapon_destabilization:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION$"
+	tech_darktec_weapon_destabilization_desc:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION_DESC$"
+	tech_darktec_weapon_destabilization_mechanical:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION$"
+	tech_darktec_weapon_destabilization_mechanical_desc:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION_DESC$"
+	tech_darktec_weapon_destabilization_organic:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION_ORGANIC$"
+	tech_darktec_weapon_destabilization_organic_desc:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION_ORGANIC_DESC$"
+
+	tech_darktec_weapon_destabilization_unlocks_title:0 "ATILDI"
+	tech_darktec_weapon_destabilization_unlocks_desc:0 "ATILDI"
+	tech_darktec_weapon_destabilization_organic_unlocks_title:0 "ATILDI"
+	tech_darktec_weapon_destabilization_organic_unlocks_desc:0 "ATILDI"
+
+	tech_darktec_weapon_antimatter_lance:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE$"
+	tech_darktec_weapon_antimatter_lance_desc:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_DESC$"
+	tech_darktec_weapon_antimatter_lance_mechanical:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE$"
+	tech_darktec_weapon_antimatter_lance_mechanical_desc:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_DESC$"
+	tech_darktec_weapon_antimatter_lance_organic:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_ORGANIC$"
+	tech_darktec_weapon_antimatter_lance_organic_desc:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_ORGANIC_DESC$"
+
+	tech_darktec_weapon_antimatter_lance_unlocks_title:0 "ATILDI"
+	tech_darktec_weapon_antimatter_lance_unlocks_desc:0 "ATILDI"
+	tech_darktec_weapon_antimatter_organic_lance_unlocks_title:0 "ATILDI"
+	tech_darktec_weapon_antimatter_organic_lance_unlocks_desc:0 "ATILDI"
+
+	tech_darktec_weapon_discharger:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER$"
+	tech_darktec_weapon_discharger_desc:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_DESC$"
+	tech_darktec_weapon_discharger_mechanical:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER$"
+	tech_darktec_weapon_discharger_mechanical_desc:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_DESC$"
+	tech_darktec_weapon_discharger_organic:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_ORGANIC$"
+	tech_darktec_weapon_discharger_organic_desc:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_ORGANIC_DESC$"
+
+	tech_darktec_weapon_discharger_unlocks_title:0 "ATILDI"
+	tech_darktec_weapon_discharger_unlocks_desc:0 "ATILDI"
+	tech_darktec_weapon_discharger_organic_unlocks_title:0 "ATILDI"
+	tech_darktec_weapon_discharger_organic_unlocks_desc:0 "ATILDI"
+
+	tech_darktec_ship_util_voidjump:0 "$DARKTEC_SHIP_UTILITY_VOIDJUMP_MODULE$"
+	tech_darktec_ship_util_voidjump_desc:0 "$DARKTEC_SHIP_UTILITY_VOIDJUMP_DESC$"
+	tech_darktec_ship_util_voidjump_mechanical:0 "$DARKTEC_SHIP_UTILITY_VOIDJUMP_MODULE$"
+	tech_darktec_ship_util_voidjump_mechanical_desc:0 "$DARKTEC_SHIP_UTILITY_VOIDJUMP_DESC$"
+	tech_darktec_ship_util_voidjump_organic:0 "$DARKTEC_SHIP_UTILITY_VOIDJUMP_MODULE_ORGANIC$"
+	tech_darktec_ship_util_voidjump_organic_desc:0 "$DARKTEC_SHIP_UTILITY_VOIDJUMP_ORGANIC_DESC$"
+
+	tech_darktec_ship_util_voidjump_unlocks_title:0 "ATILDI"
+	tech_darktec_ship_util_voidjump_unlocks_desc:0 "ATILDI"
+	tech_darktec_ship_util_voidjump_organic_unlocks_title:0 "ATILDI"
+	tech_darktec_ship_util_voidjump_organic_unlocks_desc:0 "ATILDI"
+
+	tech_darktec_ship_util_inertialess:0 "$DARKTEC_SHIP_UTILITY_INERTIALESS$"
+	tech_darktec_ship_util_inertialess_desc:0 "$DARKTEC_SHIP_UTILITY_INERTIALESS_DESC$"
+	tech_darktec_ship_util_inertialess_mechanical:0 "$DARKTEC_SHIP_UTILITY_INERTIALESS$"
+	tech_darktec_ship_util_inertialess_mechanical_desc:0 "$DARKTEC_SHIP_UTILITY_INERTIALESS_DESC$"
+	tech_darktec_ship_util_inertialess_organic:0 "$DARKTEC_SHIP_UTILITY_INERTIALESS_ORGANIC$"
+	tech_darktec_ship_util_inertialess_organic_desc:0 "$DARKTEC_SHIP_UTILITY_INERTIALESS_ORGANIC_DESC$"
+
+	tech_darktec_ship_util_inertialess_unlocks_title:0 "ATILDI"
+	tech_darktec_ship_util_inertialess_unlocks_desc:0 "ATILDI"
+	tech_darktec_ship_util_inertialess_organic_unlocks_title:0 "ATILDI"
+	tech_darktec_ship_util_inertialess_organic_unlocks_desc:0 "ATILDI"
+
+	tech_darktec_ship_util_collapser:0 "$DARKTEC_SHIP_UTILITY_COLLAPSER$"
+	tech_darktec_ship_util_collapser_desc:0 "$DARKTEC_SHIP_UTILITY_COLLAPSER_DESC$"
+	tech_darktec_ship_util_collapser_mechanical:0 "$DARKTEC_SHIP_UTILITY_COLLAPSER$"
+	tech_darktec_ship_util_collapser_mechanical_desc:0 "$DARKTEC_SHIP_UTILITY_COLLAPSER_DESC$"
+	tech_darktec_ship_util_collapser_organic:0 "$DARKTEC_SHIP_UTILITY_COLLAPSER_ORGANIC$"
+	tech_darktec_ship_util_collapser_organic_desc:0 "$DARKTEC_SHIP_UTILITY_COLLAPSER_ORGANIC_DESC$"
+
+	tech_darktec_ship_util_collapser_unlocks_title:0 "ATILDI"
+	tech_darktec_ship_util_collapser_unlocks_desc:0 "ATILDI"
+	tech_darktec_ship_util_collapser_organic_unlocks_title:0 "ATILDI"
+	tech_darktec_ship_util_collapser_organic_unlocks_desc:0 "ATILDI"
+
+	tech_darktec_ship_util_interferer:0 "$DARKTEC_SHIP_UTILITY_INTERFERER$"
+	tech_darktec_ship_util_interferer_desc:0 "$DARKTEC_SHIP_UTILITY_INTERFERER_DESC$"
+	tech_darktec_ship_util_interferer_mechanical:0 "$DARKTEC_SHIP_UTILITY_INTERFERER$"
+	tech_darktec_ship_util_interferer_mechanical_desc:0 "$DARKTEC_SHIP_UTILITY_INTERFERER_DESC$"
+	tech_darktec_ship_util_interferer_organic:0 "$DARKTEC_SHIP_UTILITY_INTERFERER_ORGANIC$"
+	tech_darktec_ship_util_interferer_organic_desc:0 "$DARKTEC_SHIP_UTILITY_INTERFERER_ORGANIC_DESC$"
+
+	tech_darktec_ship_util_interferer_unlocks_title:0 "ATILDI"
+	tech_darktec_ship_util_interferer_unlocks_desc:0 "ATILDI"
+	tech_darktec_ship_util_interferer_organic_unlocks_title:0 "ATILDI"
+	tech_darktec_ship_util_interferer_organic_unlocks_desc:0 "ATILDI"
+
+
+	DARKTEC_SPHERE_BREACHING:0 "Entropiyi Tersine Çevir"
+	DARKTEC_SPHERE_BREACHING_DESC:0 "Kapsanmış anomaliye yeterince para-madde besledik ve şimdi çöküşe yakın.\nYine de, kendi başımıza bir çöküşü zorlayabiliriz, bu da teorik olarak gerçekliğin yerel olarak yeniden yazılmasına izin verecektir... düşüncelerimizin ve fikirlerimizin bile yeniden yazılmasına."
+
+	DARKTEC_ANTICRISIS_PROTECTION:0 "ATILDI"
+	DARKTEC_ANTICRISIS_PROTECTION_DESC:0 "BENİ_DEĞİŞTİR_ATILDI"
+
+	DARKTEC_ANTICRISIS_ATTACK:0 "ATILDI"
+	DARKTEC_ANTICRISIS_ATTACK_DESC:0 "ATILDI"
+
+
+	darktec_modifier_country_shielded_against_entropy:0 "ATILDI"
+	darktec_modifier_anti_entropy_crisis:0 "ATILDI"
+
+	darktec_decision_taint_world_menial:0 "Gölge Kirliliği - Çıkarma"
+	darktec_decision_taint_world_menial_desc:0 "ATILDI"
+	darktec_decision_taint_world_menial_tooltip:0 "ATILDI"
+	darktec_decision_taint_world_menial_repeated_tooltip:0 "ATILDI"
+
+	darktec_decision_taint_world_specialist:0 "Gölge Kirliliği - Üretim"
+	darktec_decision_taint_world_specialist_desc:0 "ATILDI"
+	darktec_decision_taint_world_specialist_tooltip:0 "ATILDI"
+	darktec_decision_taint_world_specialist_repeated_tooltip:0 "ATILDI"
+
+	darktec_decision_taint_world_pop:0 "Gölge Kirliliği - Nüfus"
+	darktec_decision_taint_world_pop_desc:0 "ATILDI"
+	darktec_decision_taint_world_pop_tooltip:0 "ATILDI"
+	darktec_decision_taint_world_pop_repeated_tooltip:0 "ATILDI"
+
+	darktec_decision_taint_world_utility:0 "Gölge Kirliliği - Yardımcı Programlar"
+	darktec_decision_taint_world_utility_desc:0 "ATILDI"
+	darktec_decision_taint_world_utility_tooltip:0 "ATILDI"
+	darktec_decision_taint_world_utility_repeated_tooltip:0 "ATILDI"
+
+	darktec_decision_untaint_world:0 "Dünyayı Arındır"
+	darktec_decision_untaint_world_desc:0 "ATILDI"
+	darktec_decision_untaint_world_tooltip:0 "ATILDI"
+
+	darktec_decision_entropy_world:0 "Entropi Bağlı Dünya"
+	darktec_decision_entropy_world_desc:0 "ATILDI"
+	darktec_decision_entropy_world_tooltip:0 "ATILDI"
+
+	darktec_decision_unentropy_world:0 "Entropiyi Arındır"
+	darktec_decision_unentropy_world_desc:0 "ATILDI"
+	darktec_decision_undo_entropy_world:0 "ATILDI"
+	darktec_decision_undo_entropy_world_desc:0 "ATILDI"
+	darktec_decision_undo_entropy_world_tooltip:0 "ATILDI"
+
+	situation_darktec_entropy_deficit_approach_economy:0 "ATILDI"
+	situation_darktec_entropy_deficit_approach_economy_tooltip:0 "ATILDI"
+	situation_darktec_entropy_deficit_approach_warfare:0 "ATILDI"
+	situation_darktec_entropy_deficit_approach_warfare_tooltip:0 "ATILDI"
+	situation_darktec_entropy_deficit_approach_applications:0 "ATILDI"
+	situation_darktec_entropy_deficit_approach_applications_tooltip:0 "ATILDI"
+
+	mod_country_resource_max_darktec_contained_entropy_add:0 "$darktec_contained_entropy_with_icon$ Depolama Kapasitesi"
+	mod_planet_farmers_sr_dark_matter_upkeep_add:0 "$sr_dark_matter_with_icon$ $pop_group_unit$ $job_farmer_plural_with_icon$ başına Bakım Gideri"
+	mod_planet_miners_sr_dark_matter_produces_add:0 "$sr_dark_matter_with_icon$ $pop_group_unit$ $job_miner_plural_with_icon$ başına"
+	mod_planet_miners_sr_dark_matter_upkeep_add:0 "$sr_dark_matter_with_icon$ $pop_group_unit$ $job_miner_plural_with_icon$ başına Bakım Gideri"
+	mod_planet_technician_sr_dark_matter_produces_add:0 "$sr_dark_matter_with_icon$ $pop_group_unit$ $job_technician_plural_with_icon$ başına"
+	mod_planet_technician_sr_dark_matter_upkeep_add:0 "$sr_dark_matter_with_icon$ $pop_group_unit$ $job_technician_plural_with_icon$ başına Bakım Gideri"
+	mod_planet_metallurgists_sr_dark_matter_upkeep_add:0 "$sr_dark_matter_with_icon$ $pop_group_unit$ $job_foundry_plural_with_icon$ başına Bakım Gideri"
+	# dm from physicist already exist
+	mod_planet_physicists_sr_dark_matter_upkeep_add:0 "$sr_dark_matter_with_icon$ $pop_group_unit$ $job_physicist_plural_with_icon$ başına Bakım Gideri"
+	mod_planet_biologists_sr_dark_matter_produces_add:0 "$sr_dark_matter_with_icon$ $pop_group_unit$ $job_biologist_plural_with_icon$ başına"
+	mod_planet_biologists_sr_dark_matter_upkeep_add:0 "$sr_dark_matter_with_icon$ $pop_group_unit$ $job_biologist_plural_with_icon$ başına Bakım Gideri"
+	mod_planet_engineers_sr_dark_matter_produces_add:0 "$sr_dark_matter_with_icon$ $pop_group_unit$ $job_engineer_plural_with_icon$ başına"
+	mod_planet_engineers_sr_dark_matter_upkeep_add:0 "$sr_dark_matter_with_icon$ $pop_group_unit$ $job_engineer_plural_with_icon$ başına Bakım Gideri"
+
+
+	# Note: this modifier is not localized in vanilla
+	mod_country_sr_dark_matter_produces_mult:0 "Aylık £sr_dark_matter£ Karanlık Madde"
+
+
+# Do not remove below v

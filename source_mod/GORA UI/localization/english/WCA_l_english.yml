@@ -1,0 +1,10 @@
+﻿l_english:
+ # WCA
+ alert_wasted_construction_name: "Has unused [concept_construction]"
+ alert_wasted_construction_hint: "Has unused [concept_construction]"
+ alert_wasted_construction_action: "Construction Panel"
+ wasted_construction_setting_name: "Unused Construction"
+ alert_not_enacting_laws_name: "Is #bold not #!enacting a law"
+ alert_not_enacting_laws_hint: "Is #bold not #!enacting a law"
+ alert_not_enacting_laws_action: "Politics Panel"
+ not_enacting_laws_setting_name: "Not Enacting a Law"

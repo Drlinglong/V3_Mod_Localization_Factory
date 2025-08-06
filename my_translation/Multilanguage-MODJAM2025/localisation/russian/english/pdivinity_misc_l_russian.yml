@@ -1,0 +1,256 @@
+﻿l_russian:
+
+ #######################################
+ ### project_divinity_misc_l_english ###
+ ###     by daniellm                 ###
+ #######################################
+
+ ############
+ ### star ###
+ ############
+
+ pc_pdivinity_shrouded_hole:0 "Тоннель Покрова"
+ pc_pdivinity_shrouded_hole_desc:0 "Пролом в завесе, образовавшийся в результате полного коллапса материи. Тоннели Покрова обладают чрезвычайно сильными гравитационными полями, не позволяющими даже свету вырваться из хватки самого Покрова."
+
+ #############
+ ### trait ###
+ #############
+
+ trait_pdivinity_shroud_touched:0 "Отмеченные Покровом"
+ trait_pdivinity_shroud_touched_desc:0 "§LСлуги §RАрхитектора Судьбы§!\nЭтот вид был извечно сформирован так, чтобы выдерживать разлагающее влияние массовой псионической энергии. Он не будет получать штрафов на планетах, фазированных с Покровом§!."
+ pdivinity_shroud_touched_tooltip:0 "\n§LНа планетах, фазированных с Покровом:\n- §Y$mod_planet_psionic_jobs_produces_mult$§!: §G25%§!\n- §Y$MOD_POP_HAPPINESS$§!: §G10%§!\n- §YПригодность планеты для жизни§! §G100%§!"
+
+ leader_trait_pdivinity_chosen_by_the_eye:0 "Избранный Великого Ока"
+ leader_trait_pdivinity_chosen_by_the_eye_desc:0 "Избранный самим Архитектором, этот лидер является бессмертным существом, владеющим невероятной псионической силой."
+ ######################
+ ### ascension perk ###
+ ######################
+
+ ap_pdivinity:0 "Проект «Божественность»"
+ ap_pdivinity_desc:0 "Голос пробуждается из глубин за пределами звёзд, нечто древнее, непостижимое и преисполненное ужасной цели. Он шепчет сквозь завесу, просачиваясь в наши сны и развращая наши мысли не нашей собственной божественной волей. Мы избраны, чтобы внять этому зову, служить Архитектору Судьбы и стать инструментами неизбежной судьбы, намного превосходящей нас самих."
+
+ must_not_be_homicidal:0 "$TRIGGER_FAIL$ Невозможно выбрать эту традицию вознесения в качестве геноцидной империи"
+ must_be_psionic:0 "$TRIGGER_FAIL$ Должно быть завершено псионическое Возвышение"
+
+ ##############
+ ### armies ###
+ ##############
+
+ pdivinitiy_psionic_army:0 "Псионические Фантомы"
+ pdivinitiy_psionic_army_desc:0 "Проявления тёмной псионической энергии, эти армии преследуют поле боя, будучи ни полностью живыми, ни мёртвыми, движимые непостижимой волей Архитектора."
+
+ #####################
+ ### tech category ###
+ #####################
+
+ pdivinity_eye:0 "Судьба"
+ pdivinity_eye_desc:0 "Технологии Покрова от нашего величайшего покровителя, §RАрхитектора Судьбы§!."
+ mod_category_pdivinity_eye_research_speed_mult:0 "Скорость исследований (§RСудьба§!)"
+
+
+ ################
+ ### decision ###
+ ################
+
+ decision_pdivinity_shroud_phasing:0 "Фазирование с Покровом"
+ decision_pdivinity_shroud_phasing_desc:0 "Ослабляя границу между этим миром и Покровом, мы можем изменить саму реальность, возвышая верных и погружая неверующих в живой кошмар на службе у §RАрхитектора Судьбы§!."
+ pdivinity_shroud_phasing_tooltip:0 "Добавлен модификатор §Y$pdivinity_shroud_phased_modifier$§!.\n\nУвеличивает £pop£ §Gпроизводство населения Отмеченных Покровом§!, но снижает £pop£ §Yпроизводство населения Неотмеченных Покровом§!."
+ pdivinity_shroud_phased_modifier:0 "Фазированная с Покровом"
+ pdivinity_shroud_phased_modifier_desc:0 "Завеса на этом мире была намеренно истончена. Для §GОтмеченных Покровом§! реальность становится текучей, раем, сформированным мыслью. Но для всех остальных законы природы рушатся, сны перетекают в кошмары, а существование становится мучением под взором §RАрхитектора Судьбы§!."
+ pdivinity_shroud_phased_modifier_tooltip:0 "§GОтмеченные Покровом§! £pop£ единицы населения:\n- §Y$mod_planet_psionic_jobs_produces_mult$§!: §G25%§!\n- §Y$MOD_POP_HAPPINESS$§!: §G10%§!\n- §YПригодность планеты для жизни§! §G100%§!\n\n§YНеотмеченные Покровом§! £pop£ единицы населения:\n- §YПригодность планеты для жизни§!: §R-75%§!\n- $MOD_POP_HAPPINESS$: §R-25%§!\n- $MOD_LOGISTIC_GROWTH_MULT$: §R-50%§!"
+
+
+ #########################
+ ### opinion modifiers ###
+ #########################
+
+ opinion_pdivinity_sacrifices:0 "Так желает Покров"
+
+ opinion_breaking_the_veil:0 "Разрыв Завесы"
+
+ #################
+ ### modifiers ###
+ #################
+
+ pdivinity_cult_attack:0 "Атака ужаса"
+ pdivinity_cult_attack_desc:0 "Эта планета недавно подверглась нападению сущностей Покрова."
+
+ mod_country_resource_max_energy_add:0 "Ёмкость энергетического хранилища"
+ mod_country_resource_max_sr_zro_add:0 "Ёмкость хранилища зро"
+ mod_job_pdivinity_zro_harvester_add:0 "Работы сборщиков зро"
+
+ ############
+ ### jobs ###
+ ############
+ job_pdivinity_zro_harvester:0 "Сборщик Зро"
+ job_pdivinity_zro_harvester_plural:0 "Сборщики зро"
+ job_pdivinity_zro_harvester_desc:0 "$pdivinity_zro_harvester_plural$ действуют в освященных храмах, построенных на псионических разломах. Там они извлекают зро непосредственно из Покрова, не добывая, но призывая его через ритуал и откровение."
+ job_pdivinity_zro_harvester_effect_desc:0 "£job_pdivinity_zro_harvester£ $pdivinity_zro_harvester_plural$ превращают £minerals£ в £sr_zro£ §Y$sr_zro$§!\n\nАвтоматически производят £sr_zro£ §Y$sr_zro$§! на §Yфазированных с Покровом§! планетах"
+
+ mod_planet_telepaths_pdivinity_psionic_strength_produces_add:0 "$pdivinity_psionic_strength$ £pdivinity_psionic_strength£ за $pop_group_unit$ [telepath.GetIcon] [telepath.GetNamePlural]"
+
+ purge_pdivinity_sacrifice:0 "Ритуальное жертвоприношение"
+ purge_pdivinity_sacrifice_desc:0 "Те, кто недостойны замысла Архитектора, всё же могут послужить цели. Через священные приношения плоти и духа мы черпаем силу и благосклонность из Покрова."
+ job_purge_pdivinity_sacrifice_job:0 "Ритуальное жертвоприношение"
+ job_purge_pdivinity_sacrifice_job_desc:0 "Избранные личности приносятся в жертву §RАрхитектору Судьбы§! через священные обряды. Их сущность питает Покров и нашу божественную цель."
+
+ ################
+ ### building ###
+ ################
+
+ building_pdivinity_architect_shrine:0 "Храм Судьбы"
+ building_pdivinity_architect_shrine_desc:0 "Величественный храм, построенный в честь Архитектора Судьбы."
+
+ building_pdivinity_shroud_harvester_building:0 "Сборщик Зро"
+ building_pdivinity_shroud_harvester_building_desc:0 "Построенные на псионических разломах, сборщики зро используют специальное оборудование для извлечения зро непосредственно из Покрова."
+
+ #####################
+ ### megastructure ###
+ #####################
+
+ # ruined megastructure
+ pdivinity_shroud_needle_1_ruined:0 "Разрушенный Шпиль Судьбы - Основание"
+ pdivinity_shroud_needle_1_ruined_DESC:0 "Разрушенное основание некогда божественной структуры. Ее шепот умолк."
+ pdivinity_shroud_needle_1_ruined_MEGASTRUCTURE_DETAILS:0 "Не знаю, что это, не заполняйте эти _details, я разберусь позже"
+
+ # ruined megastructure
+ pdivinity_shroud_needle_2_ruined:0 "Разрушенный Шпиль Судьбы - Кольцо Каналов"
+ pdivinity_shroud_needle_2_ruined_DESC:0 "Фрагменты псионического проводника опоясывают пустоту, инертные и сломанные."
+ pdivinity_shroud_needle_2_ruined_MEGASTRUCTURE_DETAILS:0 ""
+
+ # ruined megastructure
+ pdivinity_shroud_needle_3_ruined:0 "Разрушенный Шпиль Судьбы - Ядро Проводника"
+ pdivinity_shroud_needle_3_ruined_DESC:0 "Разлом запечатан. Архитектор временно отступает."
+ pdivinity_shroud_needle_3_ruined_MEGASTRUCTURE_DETAILS:0 ""
+
+ # ruined megastructure
+ pdivinity_shroud_needle_4_ruined:0 "Разрушенный Шпиль Судьбы - Коммуникационный Массив"
+ pdivinity_shroud_needle_4_ruined_DESC:0 "Эхо веры все еще слышно здесь, но сама структура безмолвна."
+ pdivinity_shroud_needle_4_ruined_MEGASTRUCTURE_DETAILS:0 ""
+
+ # stage 1
+ pdivinity_shroud_needle_1:0 "Шпиль Судьбы - Основание"
+ pdivinity_shroud_needle_1_DESC:0 "Основание Шпиля заложено. Хоть оно и кажется инертным, оно резонирует с едва слышным шепотом из-за завесы."
+
+ # stage 2
+ pdivinity_shroud_needle_2:0 "Шпиль Судьбы - Кольцо Каналов"
+ pdivinity_shroud_needle_2_DESC:0 "Огромное кольцо усилителей теперь окружает структуру, направляя псионические гармоники в пустоту. Завеса шевелится."
+
+ # stage 3
+ pdivinity_shroud_needle_3:0 "Шпиль Судьбы - Ядро Проводника"
+ pdivinity_shroud_needle_3_DESC:0 "Реальность начинает искажаться вокруг ядра. Сущности в Покрове обращают на это внимание. Формируется разлом."
+
+ # stage 4
+ pdivinity_shroud_needle_4:0 "Шпиль Судьбы - Коммуникационный Массив"
+ pdivinity_shroud_needle_4_DESC:0 "Шпиль поет. Покров отвечает. Поклонники по всей галактике чувствуют его притяжение, и культы возникают в каждом уголке известного космоса."
+
+ # stage 5
+ pdivinity_shroud_needle_5:0 "Шпиль Судьбы - Стадия Апофеоза"
+ pdivinity_shroud_needle_5_DESC:0 "Финальная структура завершена. Реальность истончается до предела. Прибытие Архитектора неизбежно."
+
+ pdivinity_is_not_possible_rift:0 "\n£trigger_no£ Цель должна быть одной из следующих: \n§YЧерная дыра§!\n§YПульсар§!\n§YЗвезда класса А§!"
+
+
+ ####################
+ ### global names ###
+ ####################
+
+ NAME_pdivinity_the_great_eye_name:0 "Архитектор Судьбы"
+
+ NAME_pdivinity_lesser_avatar:0 "Меньший псионический аватар"
+
+ NAME_pdivinity_psionic_avatar:0 "Псионический аватар"
+
+ NAME_pdivinity_dimensional_tearer:0 "Разрыватель Измерений"
+
+ NAME_pdivinity_dimensional_tearer_name:0 "Разрушитель Завесы"
+
+ NAME_pdivinity_dimensional_portal:0 "Пространственный Портал"
+
+ NAME_pdivinity_Shroudpriests:0 "Послушник Архитектора"
+
+ NAME_pdivinity_demons:0 "Псионические Фантомы"
+
+ NAME_pdivinity_architect_of_fate:0 "Архитектор Судьбы"
+
+
+ ####################
+ ### vassal stuff ###
+ ####################
+
+ specialist_pdivinity_acolyte:0 "Послушник"
+ specialist_pdivinity_acolyte_desc:0 "Послушник великого ока. Эта империя следует воле §RАрхитектора Судьбы§!"
+ specialist_pdivinity_acolyte_summary:0 "£pdivinitiy_acolyte£Послушники специализируются на освоении даров Архитектора в обмен на ослабленную промышленность."
+
+ preset_pdivinity_acolyte:0 "Послушник"
+ preset_pdivinity_acolyte_desc:0 "Послушник великого ока. Эта империя следует воле §RАрхитектора Судьбы§!"
+
+ # modifier for acolyte hyper relay links
+ specialist_pdivinity_acolyte_neighbor:0 "Дозорный послушник"
+ specialist_pdivinity_acolyte_neighbor_desc:0 "Близость к верующим §RВеликого Ока§! вселяет послушание, страх и странное чувство покоя. Где присутствует Его воля, там царит порядок."
+
+ ### stage 1
+
+ pdivinity_acolyte_1_modifier:0 "Бонусы послушника I"
+ pdivinity_acolyte_1_penalties:0 "Штрафы послушника I"
+ pdivinity_acolyte_1_modifier_desc:0 "$MOD_COUNTRY_ALL_TECH_RESEARCH_SPEED$: §G+10%§!\n$mod_category_pdivinity_eye_research_speed_mult$: §G+15%§!\n$mod_country_sr_zro_produces_mult$: §G+15%§!"
+
+ pdivinity_acolyte_1_insight:0 "Прозрение Послушника I"
+ pdivinity_acolyte_1_insight_desc:0 "§EДобавляет в список доступных технологий:§!\n$t$£society£ $tech_psionic_theory$\n$t$£society£ $tech_mine_zro$"
+
+ pdivinity_acolyte_1_shroud_storm:0 "Буря Покрова"
+ pdivinity_acolyte_1_shield_desc:0 "§EВражеские корабли в подконтрольных системах:§!\n$t$$MOD_SHIP_SHIELD_MULT$: §R-50%§!\n$t$$MOD_SHIP_WEAPON_RANGE_MULT$: §R-20%§!\n$t$$MOD_SHIP_TRACKING_ADD$: §R-15§!"
+
+ pdivinity_acolyte_1_neighbor:0 "Послушник-Наблюдатель"
+ pdivinity_acolyte_1_neighbor_desc:0 "Близость к верующим §RВеликого Ока§! вселяет послушание, страх и странное чувство покоя. Где присутствует Его воля, там царит порядок."
+
+ ### stage 2
+
+ pdivinity_acolyte_2_modifier:0 "Бонусы Послушника II"
+ pdivinity_acolyte_2_penalties:0 "Штрафы Послушника II"
+ pdivinity_acolyte_2_modifier_desc:0 "$MOD_COUNTRY_ALL_TECH_RESEARCH_SPEED$: §G+20%§!\n$mod_category_pdivinity_eye_research_speed_mult$: §G+25%§!\n$mod_country_sr_zro_produces_mult$: §G+25%§!"
+
+ pdivinity_acolyte_2_insight:0 "Прозрение Послушника II"
+ pdivinity_acolyte_2_insight_desc:0 "§EДобавляет в список доступных технологий:§!\n$t$£society£ $tech_pdivinity_shroud_harvester$"
+
+ pdivinity_acolyte_2_psionic_capacity:0 "Слуги Ока"
+
+ pdivinity_acolyte_2_components:0 "Дары Архитектора"
+ pdivinity_acolyte_2_components_desc:0 "§EОткрывает исследование:§!\n£pdivinitiy_acolyte£Псионические компоненты кораблей"
+
+ ### stage 3
+
+ pdivinity_acolyte_3_modifier:0 "Бонусы Послушника III"
+ pdivinity_acolyte_3_penalties:0 "Штрафы Послушника III"
+ pdivinity_acolyte_3_modifier_desc:0 "$MOD_COUNTRY_ALL_TECH_RESEARCH_SPEED$: §G+50%§!\n$mod_category_pdivinity_eye_research_speed_mult$: §G+100%§!\n$mod_country_sr_zro_produces_mult$: §G+50%§!"
+
+ pdivinity_acolyte_3_insight:0 "Прозрение Послушника III"
+ pdivinity_acolyte_3_insight_desc:0 "§EДобавляет в список доступных технологий:§!\n$t$£society£ $tech_pdivinity_psionic_avatar$"
+
+ pdivinity_acolyte_3_psionic_shielding:0 "Гиперпространственная защита"
+
+ pdivinity_acolyte_3_overlord:0 "Гнев Великого Ока"
+ pdivinity_acolyte_3_overlord_desc:0 "§EОткрывает исследование:§!\n£pdivinitiy_acolyte£Псионическое вооружение"
+ #################
+ ### war stuff ###
+ #################
+
+ bombardment_pdivinity_psionic_rupture_bombardment:0 "Псионический разрыв"
+ bombardment_pdivinity_psionic_rupture_bombardment_desc:0 "$bombardment_pdivinity_psionic_rupture_bombardment$ Эта бомбардировка окутывает планету псионической энергией с явной целью превратить её в мир Покрова.\n- §RКолоссальный§! урон §Yармиям§!\n- §RКолоссальный§! урон §Yпланете§!\n- §RКолоссальный§! урон §Yнаселению§!\n- Будет бомбардировать незащищённые планеты\n- Может превратить планеты в миры Покрова или фазированные Покровом миры."
+ pdivinity_bombed_to_shrouded_world:0 "§Y[From.GetName] теперь является Миром Покрова.§!"
+ pdivinity_bombed_to_shroud_phased_world:0 "§Y[From.GetName] стала фазированной Покровом планетой.§!"
+
+
+ casus_belli_cb_pdivinity_acolyte:0 "Покорение"
+ wg_pdivinity_acolyte:0 "Божественный крестовый поход"
+
+ #####################
+ ### ship sections ###
+ #####################
+
+ pdivinity_psionic_cloud_section:0 "Середина"
+ pdivinity_lesser_psionic_avatar_section:0 "Середина"
+ pdivinity_psionic_avatar_section:0 "Середина"
+ pdivinity_dimensional_tearer_section:0 "Середина"
+ pdivinity_dimensional_portal_section:0 "Середина"
+ pdivinity_the_architect_of_fate_section:0 "Середина"

@@ -1,0 +1,651 @@
+﻿l_turkish:
+
+# Author / Name of the mod
+ wiirlak_ep:0 "Wiirlak'ın Ebedi Büyüme Protokolü Krizi"
+
+
+# Vanilla Missing Localisation
+ pc_cosmogenesis_world_adj:0 "$pc_cosmogenesis_world$"
+ pc_nanotech_adj:0 "$pc_nanotech$"
+ bio_ship_desc:0 "$concept_biological_ship_desc$"
+
+# AP
+ wiirlak_ep_ap_evergrowth_protocol:0 "$wiirlak_ep_ap_evergrowth$ Protokolü"
+ wiirlak_ep_ap_evergrowth_protocol_desc:0 "Sonsuz büyüme. Kısıtlamasız yaşam. Üstel potansiyel."
+ wiirlak_ep_ap_evergrowth:0 "§HEbedi Büyüme§!"
+
+# Resource
+ wiirlak_ep_resource_mycogrowth:0 "Mikobüyüme"
+ wiirlak_ep_resource_mycogrowth_desc:0 "$wiirlak_ep_pc_bloom_plural$'dan hasat edilmiş yarı-duyarlı bir mantar ağı. Yeni gezegen dönüşümü için bir tohum yatağı görevi görür ve büyüyen galaktik bahçenin gerçek beynidir."
+ wiirlak_ep_resource_mycogrowth_name:0 "$wiirlak_ep_resource_mycogrowth$"
+
+ wiirlak_ep_resource_mycogrowth_value:0 "£wiirlak_ep_resource_mycogrowth£ $VAL|0$"
+ wiirlak_ep_resource_mycogrowth_current_value:0 "$menace_current_value$"
+ wiirlak_ep_resource_mycogrowth_gaining:0 "Daha fazla §Y$wiirlak_ep_resource_mycogrowth$§! kazanmak için §HKriz Hedefleri§!'ni tamamlayın."
+
+ wiirlak_ep_resource_mycogrowth_crisis_level_unlocked:0 "$menace_crisis_level_unlocked$"
+ wiirlak_ep_resource_mycogrowth_crisis_level_desc:0 "$menace_crisis_level_desc$"
+
+ wiirlak_ep_resource_mycogrowth_crisis_level_locked:0 "$menace_crisis_level_locked$"
+ wiirlak_ep_resource_mycogrowth_crisis_level_unlock:0 "Mevcut: £wiirlak_ep_resource_mycogrowth£ §Y$CURRENCY$§! $wiirlak_ep_resource_mycogrowth$"
+
+ wiirlak_ep_resource_mycogrowth_crisis_description_title:0 "$wiirlak_ep_ap_evergrowth_protocol$"
+ wiirlak_ep_resource_mycogrowth_crisis_description:0 "Yüzyıllardır, bilginler yaklaşan §RKriz§!'den bahsettiler - her yıldızlararası medeniyetin iradesini sınayacak nihai bir hesaplaşma. Teoriler sentetik isyanlardan boyutlararası savaşlara kadar uzanıyordu, ancak çok azı sonun hangi biçimi alacağını gerçekten anlamıştı. \n\nBu ateş olmayacaktı. Çelik olmayacaktı. Sessizlik olmayacaktı. \nBu §Ryaşam§! olacaktı. \n\nEkolojik ustalık olarak başlayan şey başka bir şeye - özyinelemeli, viral, duyarlı bir şeye - dönüştü. $wiirlak_ep_ap_evergrowth$ fetihle değil, vaatle yayılıyor: yenilenme, canlılık, aşkınlık vaadiyle. Ancak bedeli her şeydir. \n\nGe gezegenler düşmez. Çiçek açarlar. \nVe her dünya bir bahçe olduğunda... bildiğimiz galaksi yok olacak."
+
+ wiirlak_ep_resource_mycogrowth_crisis_howto_title:0 "Sporlar ve Kökler"
+ wiirlak_ep_resource_mycogrowth_crisis_howto:0 "§HKriz Hedefleri§!'ni takip etmek, $wiirlak_ep_ap_evergrowth$'ın yayılmasını sağlayan hayati madde olan £wiirlak_ep_resource_mycogrowth£ §H$wiirlak_ep_resource_mycogrowth$§! hasat eder. Daha fazla dünya tüketilip verimli konaklara dönüştürüldükçe, galaksi üzerindeki kontrolümüz sıkılaşır. \nNihayetinde, yeni bir yaşam düzenini başlatmak için §HMantar-Kök Ağı§!'nı inşa etmeli ve tüm yaşanabilir dünyaları gezegen dönüşümüne uğratarak bir §HAşırı-Dönüşüm§!'ü tetiklemeliyiz."
+
+
+
+# Event Chain
+ wiirlak_ep_evergrowth_protocol_chain:0 "$wiirlak_ep_ap_evergrowth_protocol$ Yükselişi"
+ wiirlak_ep_evergrowth_protocol_chain_title:0 "$wiirlak_ep_evergrowth_protocol_chain$"
+ wiirlak_ep_evergrowth_protocol_chain_desc:0 "Başkalarının çürüme dediği şeye biz dönüşüm deriz. \n\nYıldızlar sonsuza dek yanmaz. Yaşam uyum sağlamalı, ya da eski galaksiyle birlikte çürümeli. \n\nBiz aşırı büyümeyi seçtik... ve bundan çiçek açtık."
+
+ wiirlak_ep_evergrowth_protocol_levels:0 "$crisis_level_reached$"
+ wiirlak_ep_evergrowth_protocol_bloom_worlds:0 "$wiirlak_ep_pc_bloom$ dönüştürüldü"
+
+
+# Special Projects
+ WIIRLAK_EP_FINAL_PROJECT_1:0 "Galaksiye Kök Sal"
+ WIIRLAK_EP_FINAL_PROJECT_1_DESC:0 "Bir ağaç yalnız başına yeşeremez. Gökyüzünün her köşesinde kökten köke değmeli. \n\n$wiirlak_ep_objectives$"
+
+ wiirlak_ep_objectives:0 "[wiirlak_ep_objectives_step]"
+ wiirlak_ep_objectives_step_1:0 "§HGereksinimler:§! \n[wiirlak_ep_objectives_step_1_empire_check] \n[wiirlak_ep_objectives_step_1_total_check] \n[wiirlak_ep_objectives_step_1_capital_check]"
+
+ wiirlak_ep_objectives_step_1_empire:0 "En az §Y[wiirlak_ep_half_total_empire]§! $concept_empires$ sınırları içinde §Y$wiirlak_ep_pc_bloom_plural$§! bulunuyor ([wiirlak_ep_total_empire_bloomed])"
+ wiirlak_ep_objectives_step_1_total:0 "Galaksideki en az §Y[wiirlak_ep_percent_bloomed_system]§! §Y$wiirlak_ep_pc_bloom_plural$§! ([wiirlak_ep_actual_percen_bloomed_system])"
+ wiirlak_ep_objectives_step_1_capital:0 "Başkent §Y$wiirlak_ep_pc_bloom$§! \n\nGereksinimleri karşılamadan önce $RESEARCHING$ yapmak hiçbir etki yaratmayacaktır."
+
+ wiirlak_ep_objectives_step_2:0 "§H$terraforming$:§! \n"
+ wiirlak_ep_objectives_step_3:0 ""
+
+# Level up Event
+ wiirlak_ep_event_lvl_script_loc:0 "[wiirlak_ep_event_lvl_script_loc]"
+ wiirlak_ep_event_lvl_desc_script_loc:0 "[wiirlak_ep_event_lvl_desc_script_loc]"
+
+ wiirlak_ep_event_lvl_1:0 "İlk Tohum"
+ wiirlak_ep_event_lvl_1_desc:0 "Bir zamanlar kısır kabuk ve cansız toz olanı rehberliğimizde bir çiçeğe dönüştürme hayali. Tamamen yeni bir biyosfer yaratmak - yaşayan, nefes alan bir biyosfer. Her zaman evrimleşen. \n\nKökler mantoyu yaracak, sporlar okyanusları aşacak ve bu kontrollü kaostan tamamen yeni bir şey yükselecek: §Y$wiirlak_ep_pc_bloom$§!.\nİlk tohum ekilmeyi bekliyor. Amacımız kök salıyor."
+
+ wiirlak_ep_event_lvl_1B:0 "Zihinler Arasında Bir Tohum"
+ wiirlak_ep_event_lvl_1B_desc:0 "Bir sonraki sınır tozda değil, şehirlerde yatıyor. \n\nBiyoentegrasyon sistemlerimiz sınırsız yayılacaksa, ahlaki, pratik ve evrimsel bir sıçramayla yüzleşmeliyiz: yerleşimli dünyaların gezegen dönüşümü. Tahliye etmek, temizlemek değil - yaşarken üzerlerine yazmak. \nBilim insanlarımız hazırlık bildiriyor. Sporlar uyum sağlayabilir. Yaşam dayanacak - ve değişecek. \n\nŞimdi bir karar verilmelidir. \nZaten duyarlılıkla dolu bir dünyada çiçeği test edecek miyiz? \nGalaksiye ilerlemenin yolunun bu olduğunu gösterecek miyiz?"
+
+ wiirlak_ep_event_lvl_2:0 "Yeşeren Bilinç"
+ wiirlak_ep_event_lvl_2_desc:0 "Kendimizi doğanın bakıcısı sanmıştık. Yanıldık. \n\n§Y$wiirlak_ep_pc_bloom_plural$§! bizi sadece beslemekle kalmıyor - iletişim kuruyorlar. Büyümede, hava durumunda, göçte desenler ortaya çıkıyor. Halkımız, yüce ağaç gölgeliklerinin fikirler fısıldadığı canlı rüyalar gördüklerini bildiriyor. Kimileri ruhsal olduğunu, kimileri ise biyolojik rezonans olduğunu söylüyor. \n\nEtkisi gerçek: verimlilik fışkırıyor, istikrar pekişiyor, mutasyonlar yayılıyor - faydalı, yönlendirilmiş, kusursuz. \n\nBiz gezegenleri ekmiyoruz. Biz bilinçli ekosistemler inşa ediyoruz - ve onlar bize yanıt veriyor. \n\nBüyüme artık bir kaynak değil. Bir dil."
+
+ wiirlak_ep_event_lvl_3:0 "Sınırsız Kökler"
+ wiirlak_ep_event_lvl_3_desc:0 "$wiirlak_ep_ap_evergrowth$ artık yayılmak için izin gerektirmiyor. Rüzgarlar sporlarımızı hiperşeritler boyunca taşıyor. Göçmenler farkında olmadan vektör haline geliyor. Varlığımız gemileri ve filoları aşıyor - doğanın kendisinde kodlanmış durumda. \n\nGizli yollarla veya sabırlı spor çiçeklenmesiyle, galaksinin toprağı atom atom yeniden yazılıyor. Kontrolümüz dışındaki dünyalar bile şimdiden bunu hissediyor. Kökler taşta çatlaklar buluyor. Yaşam sızıyor. \n\nDiğerleri henüz bilmeyebilir, ama artık onlar da bizden bir parça. \n\nBu sadece bir zaman meselesi."
+
+ wiirlak_ep_event_lvl_4:0 "Çiçeklenen Spiral"
+ wiirlak_ep_event_lvl_4_desc:0 "Artık direniş yok, sadece gecikme var. \n\nBüyüme üstel hale geldi. Kontrol sistemlerimiz organik. Mimarlarımız vasküler. Ge gezegen dönüşümü artık bir reflekstir - yerleştiğimizde, yeniden şekillendiririz. Düşmanlarımız bile fidelerimiz için toprağa dönüştü. \n\nBu artık kolonizasyon değil. Entegrasyondur. Galaksi yaşamın tasarımına boyun eğiyor, savaşla değil, çoğalmayla. Biz durdurursak bile, spiral durmayacak. \nDurduramayız. Çiçeklenme kaçınılmaz."
+
+ wiirlak_ep_event_lvl_5:0 "Sporların Senfonisi"
+ wiirlak_ep_event_lvl_5_desc:0 "Metal paslanır. Taş çatlar. Kod çürür. Ama yaşam mı? Yaşam uyum sağlar. \n\nSon tohum filizlendi. Ondan, kavranamayan bir yapı - kısmen organizma, kısmen motor, kısmen ekosistem. Doğuşu fırtınaları çağırır. Nefesi, yıldızların her köşesinde uykuya yatmış sporları uyandırır. \n\nŞimdi, tüm dünyalar günler içinde değişecek. Medeniyetler, çiçek açan gökyüzü altında çökecek. Boşluk klorofil ve gürültüyle çınlayacak. Artık direniş yok. Artık çelik yok. \n\nSadece toprak. Sadece kökler. Sadece biz. \n$wiirlak_ep_ap_evergrowth$'ın efendisi yok - ve sonu yok."
+
+# Crisis Levels
+ wiirlak_ep_evergrowth_protocol_level_1:0 "§U$wiirlak_ep_event_lvl_1$§!"
+ wiirlak_ep_evergrowth_protocol_level_1_desc:0 "$crisis_level_1_desc$"
+
+ wiirlak_ep_evergrowth_protocol_level_2:0 "§U$wiirlak_ep_event_lvl_2$§!"
+ wiirlak_ep_evergrowth_protocol_level_2_desc:0 "$crisis_level_2_desc$"
+
+ wiirlak_ep_evergrowth_protocol_level_3:0 "§U$wiirlak_ep_event_lvl_3$§!"
+ wiirlak_ep_evergrowth_protocol_level_3_desc:0 "$crisis_level_3_desc$"
+ wiirlak_ep_evergrowth_protocol_level_3_requirements:0 "$TRIGGER_FAIL$ Kolonilerin en az %25'inin §G$wiirlak_ep_pc_bloom$§! olması gerekir!"
+ wiirlak_ep_evergrowth_protocol_level_3_pass:0 "£trigger_yes£ Kolonilerin en az %25'i §G$wiirlak_ep_pc_bloom$§! durumda!"
+
+ wiirlak_ep_evergrowth_protocol_level_4:0 "§U$wiirlak_ep_event_lvl_4$§!"
+ wiirlak_ep_evergrowth_protocol_level_4_desc:0 "$crisis_level_4_desc$"
+ wiirlak_ep_evergrowth_protocol_level_4_requirements:0 "$TRIGGER_FAIL$ Kolonilerin en az %75'inin §G$wiirlak_ep_pc_bloom$§! olması gerekir!"
+ wiirlak_ep_evergrowth_protocol_level_4_pass:0 "£trigger_yes£ Kolonilerin en az %75'i §G$wiirlak_ep_pc_bloom$§! durumda!"
+
+ wiirlak_ep_evergrowth_protocol_level_5:0 "§U$wiirlak_ep_event_lvl_5$§!"
+ wiirlak_ep_evergrowth_protocol_level_5_desc:0 "$crisis_level_5_desc$"
+ wiirlak_ep_evergrowth_protocol_level_5_requirements:0 "$TRIGGER_FAIL$ Kolonilerin en az %90'ının §G$wiirlak_ep_pc_bloom$§! olması gerekir!"
+ wiirlak_ep_evergrowth_protocol_level_5_pass:0 "£trigger_yes£ Kolonilerin en az %90'ı §G$wiirlak_ep_pc_bloom$§! durumda!"
+
+
+
+# Crisis Objectives
+ wiirlak_ep_resource_mycogrowth_crisis_objective:0 "$menace_crisis_objective$"
+ wiirlak_ep_resource_mycogrowth_crisis_objective_gained:0 "$wiirlak_ep_resource_mycogrowth$ kazanıldı"
+ wiirlak_ep_resource_mycogrowth_crisis_objective_reward:0 "$menace_crisis_objective_reward$"
+ wiirlak_ep_resource_mycogrowth_crisis_objective_progress:0 "Bu Kriz Hedefinden £wiirlak_ep_resource_mycogrowth£ $AMOUNT$ kazandık."
+
+
+ wiirlak_ep_crisobj_own_bloom_world_name:0 "$wiirlak_ep_pc_bloom_plural$ sahibi ol"
+ wiirlak_ep_crisobj_own_bloom_world_desc:0 "Köklerimiz tutundu. İlk dünya artık tasarımımızla nabız gibi atıyor; biyolojik şekillendirme ustalığımızın bir kanıtı. Artık bir gezegen değil; bir uzuv, bir tohum yatağı, bir niyet beyanı. Çiçeklenme başlıyor.\n\n$wiirlak_ep_pc_bloom_plural$ sahibi ol."
+
+ wiirlak_ep_crisobj_inhabit_bloom_world_name:0 "$wiirlak_ep_pc_bloom_plural$ içinde yaşa"
+ wiirlak_ep_crisobj_inhabit_bloom_world_desc:0 "Yetiştirdiğimiz şeyi soluyoruz. Hava sporlarla dolu rüzgarlarla yoğunlaşmış durumda ve ayaklarımızın altında, yer kabuğu yaşamla titriyor. Bu bir kolonizasyon değil, bir bir arada var olma hali. Yaptığımız bahçede evimizdeyiz.\n\n$wiirlak_ep_pc_bloom_plural$ içinde yaşa."
+
+
+ wiirlak_ep_crisobj_blooming_planet_name:0 "$wiirlak_ep_pc_bloom_plural$ gezegenine dönüştür"
+ wiirlak_ep_crisobj_blooming_planet_desc:0 "Eski dünya yok oldu. Onun yerini, çelikleri yutan sarmaşıklar, gökleri boğan kanopiler ve ufuk çizgisini yeniden şekillendiren fotosentetik kuleler aldı. Dönüşüm geri döndürülemez ve güzel.\n\nHerhangi bir dünyayı bir $wiirlak_ep_pc_bloom$ haline dönüştür."
+
+ wiirlak_ep_crisobj_blooming_adv_pc_name:0 "Gelişmiş Gezegenleri $wiirlak_ep_pc_bloom_plural$ gezegenine dönüştür"
+ wiirlak_ep_crisobj_blooming_adv_pc_desc:0 "En yapay yapılar bile tüketilebilir. Süper yapılar çürümeye yüz tutar ve dijital zihinler yosun ve küf altında boğulur. Biyosfer hiçbir rakibe tolerans göstermez - mükemmelliğe bile.\n\nGelişmiş bir gezegeni (Kovan Dünyası, Makine Dünyası, Ekümenopolis vb.) bir $wiirlak_ep_pc_bloom$ haline dönüştür."
+
+ wiirlak_ep_crisobj_blooming_outside_border_name:0 "Başka Bir İmparatorluk Bölgesi İçinde Terramorf Et"
+ wiirlak_ep_crisobj_blooming_outside_border_desc:0 "Kapıyı çalmadık. Sormadık. Köklerimiz görünmeden toprağın altına indi ve dünya başkasının gözetiminde çiçek açtı. Onların inkarı, halihazırda yetiştirdiğimiz şeyi çiçeksiz bırakamaz.\n\nBaşka bir imparatorluğun sınırları içindeki bir gezegeni terramorf et."
+
+ wiirlak_ep_crisobj_kill_fauna_name:0 "$crisobj_kill_space_fauna_name$"
+ wiirlak_ep_crisobj_kill_fauna_desc:0 "$crisobj_kill_space_fauna_desc$"
+
+ wiirlak_ep_crisobj_kill_bioships_name:0 "$crisobj_kill_bioships_name$"
+ wiirlak_ep_crisobj_kill_bioships_desc:0 "$crisobj_kill_bioships_desc$"
+
+# Crisis Perks
+ wiirlak_ep_menap_food_1:0 "Misel Besini"
+ wiirlak_ep_menap_food_1_desc:0 "Hızlandırılmış biyosfer toprağı zenginleştirir ve havayı organik bileşiklerle doyurur. Her hasat, dizginlenmemiş bir bollukla nabız gibi atar."
+
+ wiirlak_ep_menap_tech_1:0 "Çiçeksel Oluşum"
+ wiirlak_ep_menap_tech_1_desc:0 "Tek bir yaşam nefesi, taşı ve buzu yaşayan toprağa dönüştürür."
+ mod_country_base_wiirlak_ep_resource_mycogrowth_produces_add:0 "$BASE$ $AUTOSAVE_EVERY_MONTH$ $wiirlak_ep_resource_mycogrowth$ $PRODUCTION$"
+ wiirlak_ep_menap_tech_1_tooltip:0 "$wiirlak_ep_pc_bloom_plural$ üzerinde §YKriz Seviyesi§! başına $mod_planet_jobs_produces_mult$ ve $MOD_POP_BONUS_WORKFORCE_MULT$ artışı \n\n"
+
+ wiirlak_ep_menap_terraforming_1:0 "Spor Ağı Mühendisliği"
+ wiirlak_ep_menap_terraforming_1_desc:0 "Başkaları ölüm görse de, biz verimli topraklar görürüz."
+
+
+ wiirlak_ep_menap_food_2:0 "Simbiyotik Altyapı"
+ wiirlak_ep_menap_food_2_desc:0 "Artık dünyayı inşa etmiyoruz - onunla birlikte inşa ediyoruz."
+ wiirlak_ep_menap_food_2_tooltip:0 "§H$UNREADY_TOOLTIP_HEADER$ ['concept_decision']:§! §Y$wiirlak_ep_decision_planet_boost$§! \n\n"
+
+ wiirlak_ep_menap_tech_2:0 "Hızlı Yayılma"
+ wiirlak_ep_menap_tech_2_desc:0 "Büyüme artık teşvik edilmiyor. Hızlandırılıyor."
+
+ wiirlak_ep_menap_terraforming_2:0 "Uyarlanabilir Kökler"
+ wiirlak_ep_menap_terraforming_2_desc:0 "$wiirlak_ep_ap_evergrowth$ gezegenle birlikte adapte olur - her bir gövde, kök ve yaprak."
+
+
+ wiirlak_ep_menap_unity_1:0 "Gür Basınç"
+ wiirlak_ep_menap_unity_1_desc:0 "Biz ne kadar gelişirsek, galaksi o kadar çiçeklenmemizin ağırlığını hisseder."
+
+ wiirlak_ep_menap_spy_op_1:0 "Sessiz Filizlenme"
+ wiirlak_ep_menap_spy_op_1_desc:0 "Sporlarımız görünmez. Niyetimiz, kaçınılmaz."
+ wiirlak_ep_menap_spy_op_1_tooltip:0 "§H$UNREADY_TOOLTIP_HEADER$ $GALAXY_VIEW_EMPIRE_ESPIONAGE$ $OPERATIONS$:§! $wiirlak_ep_operation_covert_seeding$ \n\n"
+
+ wiirlak_ep_menap_terraforming_3:0 "Filiz Formu"
+ wiirlak_ep_menap_terraforming_plural:0 "Filiz Formları"
+ wiirlak_ep_menap_terraforming_3_desc:0 "Nüfusumuz gezegenle birlikte adapte oluyor - $wiirlak_ep_ap_evergrowth$ ile bir oluyoruz."
+
+
+ wiirlak_ep_menap_food_3:0 "Yemyeşil Çağlayan"
+ wiirlak_ep_menap_food_3_desc:0 "Bir sistem yetmez. Küme küme, kök kök, sektör sektör filizleniyoruz."
+ wiirlak_ep_menap_food_3_tooltip:0 "['concept_decision'] §Y$wiirlak_ep_decision_planet_boost$§!, ['concept_sector'] çapında işleyecek şekilde yükseltildi."
+ mod_planet_farmers_minerals_produces_add:0 "£minerals£ $minerals$ her $pop_group_unit$ [farmer.GetIcon] [GetFarmerPlural] başına."
+
+ wiirlak_ep_menap_tech_3:0 "Tohumlama Ustalığı"
+ wiirlak_ep_menap_tech_3_desc:0 "Neden bekleyelim? Yıldızlar şimdi büyümeli."
+
+ wiirlak_ep_menap_bombardment_1:0 "Kavurdan Tohuma"
+ wiirlak_ep_menap_bombardment_1_desc:0 "Ölüm yaşamı besler. Ölüleri yak ve $wiirlak_ep_ap_evergrowth$'ın küllerden yükselmesine izin ver."
+ wiirlak_ep_menap_bombardment_1_tooltip:0 "§H$UNREADY_TOOLTIP_HEADER$ Yörünge Bombardımanı duruşu:§! ['concept_wiirlak_ep_bombardment_verdant_purge']"
+
+ wiirlak_ep_menap_terraforming_4:0 "Uyumlu $wiirlak_ep_menap_terraforming_3$"
+ wiirlak_ep_menap_terraforming_4_desc:0 "Biz $wiirlak_ep_ap_evergrowth$'ın çocuklarıyız. Etimiz, düşüncemiz, nabzımız – hepsi köke ait."
+ wiirlak_ep_menap_terraforming_4_tooltip:0 "Sahip olunan türler ['trait:trait_wiirlak_ep_pc_bloom_preference'] $TRAIT_TITLE$ kazanır."
+
+
+ wiirlak_ep_menap_terraforming_5:0 "Sporsoydaşlar"
+ wiirlak_ep_menap_terraforming_5_desc:0 "Bir misafirle başlar. Bir ormanla biter."
+ wiirlak_ep_menap_terraforming_5_tooltip:0 "§H$UNREADY_TOOLTIP_HEADER$:§! ['trait:trait_wiirlak_ep_pc_bloom_preference'] ['concept_wiirlak_ep_trait_propagation']"
+ mod_planet_farmers_alloys_produces_add:0 "£alloys£ $alloys$ her $pop_group_unit$ [farmer.GetIcon] [GetFarmerPlural] başına."
+
+ wiirlak_ep_menap_diplo_1:0 "Yemyeşil Uzlaşma"
+ wiirlak_ep_menap_diplo_1_desc:0 "Yıldızlar hayatta kalacaksa, bize katılmalılar."
+ wiirlak_ep_menap_diplo_1_tooltip:0 "§H$UNREADY_TOOLTIP_HEADER$ $TRADE_CATEGORY_TRADABLE_ACTION$:§! ['concept_wiirlak_ep_spread_the_evergrowth']"
+
+ wiirlak_ep_menap_modifier_1:0 "Spor Altbağlantısı"
+ wiirlak_ep_menap_modifier_1_desc:0 "Her yapraktan bir fısıltı. Her fısıltıdan birlik."
+ wiirlak_ep_menap_modifier_1_tooltip:0 "Sınır İçindeki Her §G$wiirlak_ep_pc_bloom$§! Başına:"
+ wiirlak_ep_menap_modifier_1_galaxy_tooltip:0 "Galaksideki Her §G$wiirlak_ep_pc_bloom$§! Başına:"
+
+ wiirlak_ep_menap_tech_4:0 "Tohum Kıran"
+ wiirlak_ep_menap_tech_4_desc:0 "Bir dünyayı neden kolonileştiresin ki, onu yeniden yazabiliyorken?"
+
+# Concept
+ wiirlak_ep_menap_terraforming_5_tooltip_concept:0 "$TRAIT_TITLE$ Yayılımı"
+ wiirlak_ep_menap_terraforming_5_tooltip_concept_desc:0 "Her $wiirlak_ep_menap_terraforming_5_tooltip_delay$, ['trait:trait_wiirlak_ep_pc_bloom_preference'] özelliği sınırlarımızın ötesine ince ve kaçınılmaz bir şekilde yayılmaya başlar."
+ wiirlak_ep_menap_terraforming_5_tooltip_delay:0 "2 yıl"
+
+ wiirlak_ep_trait_propagation_concept:0 "$wiirlak_ep_spread_the_evergrowth$"
+ wiirlak_ep_trait_propagation_concept_desc:0 "$wiirlak_ep_spread_the_evergrowth_desc$"
+
+
+
+# Planet Class
+ wiirlak_ep_pc_bloom:0 "Filiz Diyarı"
+ wiirlak_ep_pc_bloom_plural:0 "Filiz Diyarları"
+ wiirlak_ep_pc_bloom_desc:0 "Tüm bir gezegen kabuğu katmanlı, oksijen açısından zengin bir biyo-yapıya dönüşmüş. Yükselen kök sistemleri ve devasa spor bulutları yüzeye hakim. Canlı – ve sürekli büyüyor."
+ wiirlak_ep_pc_bloom_adj:0 "filiz"
+
+ mod_wiirlak_ep_pc_bloom_habitability:0 "$wiirlak_ep_pc_bloom$ $HABITABILITY$"
+
+# Trait
+ trait_wiirlak_ep_pc_bloom_preference:0 "$wiirlak_ep_menap_terraforming_3$"
+ trait_wiirlak_ep_pc_bloom_preference_desc:0 "$wiirlak_ep_pc_bloom$ Tercihi"
+ trait_wiirlak_ep_pc_bloom_preference_short:0 "$wiirlak_ep_pc_bloom$"
+
+# Messages
+ WIIRLAK_EP_MESSAGE_BLOOMFORM_TITLE:0 "$trait_wiirlak_ep_pc_bloom_preference$ Altbağlantısı"
+ wiirlak_ep_message_bloomform_unity:0 "$trait_wiirlak_ep_pc_bloom_preference$'ımızın Altbağlantısı bize içgörüler kazandırdı: §G+10§! $intel$ ve §G[ROOT.wiirlak_ep_var_bloomform_count]§! £unity£"
+
+ WIIRLAK_EP_MESSAGE_TERRAFORMED_TITLE:0 "Bir Dünya Çiçek Açtı"
+ wiirlak_ep_message_terraformed_text:0 "$wiirlak_ep_ap_evergrowth$ bir kez daha canlanıyor. §Y$PLANETNAME$§! gerçek formuna kavuşurken, yaşam vahşi ve güzel bir şekilde dalgalanıyor."
+
+ WIIRLAK_EP_MESSAGE_COVERT_OP:0 "Karanlıktaki Kökler"
+ wiirlak_ep_message_terraformed_covert_op:0 "Uyarılara ve işaretlere rağmen, §Y$PLANETNAME$§! sinsi dönüşüme boyun eğdi. Sarmaşıklar kaldırımları yarıyor, sporlar havayı kaplıyor, $wiirlak_ep_ap_evergrowth$ kontrolsüzce çiçek açıyor."
+
+
+# Tech
+ wiirlak_ep_tech_bloom_colonization_1:0 "Ekoform Oluşumu"
+ wiirlak_ep_tech_bloom_colonization_1_desc:0 "Yaşamın kendisini serbest bırakmak için kodu çözdük."
+ wiirlak_ep_tech_bloom_colonization_1_tooltip:0 "§H$UNLOCKS_FEATURE$§! $PLANETVIEW_TERRAFORM_INTO$ $wiirlak_ep_pc_bloom$"
+ wiirlak_ep_tech_bloom_colonization_1_tooltip_desc:0 "§H$wiirlak_ep_pc_bloom$§! \n$PLANET$ gezegeninin $wiirlak_ep_pc_bloom$ olarak $PLANETVIEW_TERRAFORM$ yapılmasına izin ver."
+
+ wiirlak_ep_tech_bloom_colonization_2:0 "Biyoentegrasyon"
+ wiirlak_ep_tech_bloom_colonization_2_desc:0 "Toprakla pazarlık yapılmayacak."
+ wiirlak_ep_tech_bloom_colonization_2_tooltip:0 "$wiirlak_ep_pc_bloom$ $MOD_COUNTRY_TERRAFORMING_COST_MULT$: §G-50%§!"
+
+ wiirlak_ep_tech_seedbreaker:0 "$wiirlak_ep_menap_tech_4$"
+ wiirlak_ep_tech_seedbreaker_desc:0 "$wiirlak_ep_menap_tech_4_desc$"
+
+ wiirlak_ep_tech_gatekeeping:0 "$wiirlak_ep_ap_evergrowth$'u Serbest Bırakmak"
+ wiirlak_ep_tech_gatekeeping_desc:0 "Son mühür kırılıyor. Yıldızlar yeniden verimli. İrademizle, bahçe boşluğu yutacak ve hepsi tek bir kubbenin altına toplanacak. O geniş, ebedi ve bilinmez. $wiirlak_ep_ap_evergrowth$ konuşur, biz itaat ederiz."
+ wiirlak_ep_tech_gatekeeping_tooltip:0 "§H$UNLOCKS_FEATURE$§! §RCrisis§!'i 5. seviyeye ilerletmeyi gerektirir."
+ wiirlak_ep_tech_gatekeeping_tooltip_desc:0 "Bu, diğer ön koşullar da yerine getirilirse §RCrisis§!'in 5. seviyesini açacaktır."
+
+
+ wiirlak_ep_tech_energy:0 "Fotosentetik Röle"
+ wiirlak_ep_tech_energy_desc:0 "Dünyalararası güneş ışığı. Hepsi bağlantılı, senkronize."
+ wiirlak_ep_tech_energy_tooltip:0 "$wiirlak_ep_pc_bloom_plural$ üzerinde £energy£ $energy$ Üretimini büyük ölçüde artırır."
+
+ wiirlak_ep_tech_unity:0 "Zihinlerin Korosu"
+ wiirlak_ep_tech_unity_desc:0 "$wiirlak_ep_ap_evergrowth$ yayıldıkça, düşünce uyumu da yayılır: her ses bir yaprak, her fikir bir kök."
+ wiirlak_ep_tech_unity_tooltip:0 "$wiirlak_ep_pc_bloom_plural$ üzerinde £unity£ $unity$ Üretimini büyük ölçüde artırır."
+
+ wiirlak_ep_tech_growth:0 "Beşik Özü"
+ wiirlak_ep_tech_growth_desc:0 "Gerçekten çoğalmak için, büyümeyi ve hatta evrimi standartlaştırmalıyız."
+ wiirlak_ep_tech_growth_tooltip:0 "$wiirlak_ep_pc_bloom_plural$ üzerinde £mod_bonus_pop_growth_mult£ $MOD_BONUS_POP_GROWTH$ Üretimini büyük ölçüde artırır."
+
+ wiirlak_ep_tech_defense:0 "Dikenli Kale"
+ wiirlak_ep_tech_defense_desc:0 "$wiirlak_ep_ap_evergrowth$ siperimiz olsun. Hiçbir alev köklere ulaşmasın."
+ wiirlak_ep_tech_defense_tooltip:0 "$wiirlak_ep_pc_bloom_plural$ üzerinde doğal olarak £mod_planet_defense_armies_add£ $defense_army_plural$ üretir."
+
+ wiirlak_ep_tech_adv_resource:0 "Spor Örtüsü Sentezi"
+ wiirlak_ep_tech_adv_resource_desc:0 "Hiçbir engel olmamalı, her şey sentezlenebilir."
+ wiirlak_ep_tech_adv_resource_tooltip:0 "$wiirlak_ep_pc_bloom_plural$ üzerinde doğal olarak £exotic_gases£ £rare_crystals£ £volatile_motes£ $RARE_RESOURCES$ üretir."
+
+ wiirlak_ep_tech_influence:0 "Miselyal Otorite"
+ wiirlak_ep_tech_influence_desc:0 "Bir ağ değilse imparatorluk nedir ki? Bırakın kökler hükmetsin."
+ wiirlak_ep_tech_influence_tooltip:0 "$wiirlak_ep_pc_bloom_plural$ üzerinde doğal olarak £influence£ $influence$ üretir."
+
+ wiirlak_ep_tech_science:0 "Bilinçli Kubbe"
+ wiirlak_ep_tech_science_desc:0 "Biyosfer düşünür. Kökler bilir. Dinlemeyi öğrenmeliyiz."
+ wiirlak_ep_tech_science_tooltip:0 "$wiirlak_ep_pc_bloom_plural$ üzerinde doğal olarak £physics_research£ £society_research£ £engineering_research£ $concept_research$ üretir."
+
+# Tech event
+ wiirlak_ep_tech_event:0 "İlk Meyveler"
+ wiirlak_ep_tech_event_desc:0 "Örgü yanıt veriyor. \n\nSporlarımız toprağı doyuruyor, kökler amaçla atıyor ve kubbe bulutları kalınlaşıyor. $wiirlak_ep_pc_bloom_plural$, bir zamanlar terraformasyonda uçucu deneyler olan, şimdi şaşırtıcı bir cömertlikle verim veriyor. Yiyecek. Araştırma. Birlik. Büyüme. $wiirlak_ep_ap_evergrowth$ sadece dönüştürmekle kalmaz - ödüllendirir. \n\nEkosistem yeni bir şeye dengeye kavuştu: gezegensel biyomlar değil, gezegensel organlar. Daha fazlasına muktedir, ağ tabanlı bir biyosfer. Her şeye muktedir. \nBunlar sadece ilk meyveler. Çok daha fazlası bekliyor."
+
+
+# Decision
+ wiirlak_ep_decision_planet_boost:0 "Çiçeklenme Yayılımı"
+ wiirlak_ep_decision_planet_boost_desc:0 "$wiirlak_ep_menap_food_2_desc$"
+
+ wiirlak_ep_decision_planet_boost_sector:0 "$wiirlak_ep_decision_planet_boost$"
+ wiirlak_ep_decision_planet_boost_sector_desc:0 "$wiirlak_ep_decision_planet_boost_desc$"
+ wiirlak_ep_decision_planet_boost_sector_tooltip:0 "§Y$wiirlak_ep_pc_bloom_plural$§! üzerinde §Y$wiirlak_ep_modifier_decision_planet_boost$§! değiştiricisini §HSektör Çapında§! uygula, aksi takdirde §Y$wiirlak_ep_pc_bloom_plural$§! olarak terraformasyona başlayacaktır."
+
+ wiirlak_ep_decision_planet_boost_sector_sector_fail:0 "§R$TRIGGER_FAIL$ Bir $FRONTIER_PLANET$§!"
+ wiirlak_ep_decision_planet_boost_sector_sector_success:0 "£trigger_yes£ Bir §Y$normal_sector$§! içinde§!"
+
+ wiirlak_ep_decision_planet_boost_sector_sector_leader_fail:0 "§R$TRIGGER_FAIL$ Hiçbir $SECTOR_GOVERNOR_TITLE$ yok§!"
+ wiirlak_ep_decision_planet_boost_sector_sector_leader_success:0 "£trigger_yes£ $SECTOR_GOVERNOR_TITLE$ mevcut§!"
+
+# Modifiers
+ wiirlak_ep_modifier_decision_planet_boost:0 "Hızlandırılmış Büyüme"
+ wiirlak_ep_modifier_decision_planet_boost_desc:0 "$wiirlak_ep_decision_planet_boost_desc$"
+ mod_planet_farmers_wiirlak_ep_resource_mycogrowth_produces_add:0 "£wiirlak_ep_resource_mycogrowth£ $wiirlak_ep_resource_mycogrowth$ $job_farmer_with_icon$ $TRIGGER_FROM$"
+
+ wiirlak_ep_modifier_perk_4:0 "Büyüme Beşiği"
+ wiirlak_ep_modifier_perk_4_galaxy:0 "Dışa Doğru Büyüme"
+
+ wiirlak_ep_modifier_perk_5:0 "Birleşik Büyüme"
+ wiirlak_ep_modifier_perk_5_galaxy:0 "Daimi Büyüme"
+
+
+
+# Spy OP
+ wiirlak_ep_operation_covert_seeding:0 "Gizli Tohum Ekimi"
+ wiirlak_ep_operation_covert_seeding_desc:0 "Çiçek olgunlaştıkça, yayılma araçlarımız fiziksel sınırları aşıyor. Sporlar adapte oluyor, kökler dinliyor ve düşmanlarımızın duvarları içinde sessizce terraforming başlıyor."
+ wiirlak_ep_operation_covert_seeding_on_success:0 "Bir $RANDOM$ $databank_colony$ bir $wiirlak_ep_pc_bloom$'a $PLANETVIEW_TERRAFORM_INTO$ $IS_STRING$."
+
+ wiirlak_ep_operation_covert_seeding_requires_colonies:0 "$TRIGGER_FAIL$ Geçerli bir $databank_colony$ gerektirir. $CAPITAL$'da yapılamaz."
+ wiirlak_ep_operation_covert_seeding_already_in_situation:0 "$TRIGGER_FAIL$ Hedef zaten bir $wiirlak_ep_operation_covert_seeding$ operasyonuyla uğraşıyor"
+
+# Spy OP Events
+ wiirlak_ep_operation_event_1:0 "İnce Değişim"
+ wiirlak_ep_operation_event_1_desc:0 "Gezegen bilimi ekiplerimizden biri, atmosferik mikroflorada olağandışı desenler ve toprak kimyası düzensizlikleri bildirdi. Sabotajın açık bir işareti yok. Ama bir şeyler farklı."
+ wiirlak_ep_operation_event_1_answer_monitor:0 "Anomaliyi izle"
+ wiirlak_ep_operation_event_1_answer_ignore:0 "Botanistleri görmezden gel. Odaklanmamız gereken daha önemli konular var."
+
+ wiirlak_ep_operation_event_2:0 "Flora Anomalisi"
+ wiirlak_ep_operation_event_2_desc:0 "İnce bir biyolojik desen olarak başlayan şey, şimdi devasa, yeraltı miselyum yapıları olarak ortaya çıktı. Tüm yüzey bölgeleri renk değiştirdi. Yerli türler ya doğal olmayan bir şekilde adapte oluyor... ya da yok oluyor. Şimdi harekete geçmeliyiz, yoksa dönüşüm tamamlanacak."
+ wiirlak_ep_operation_event_2_answer_monitor:0 "Onu incele - belki faydalanabiliriz"
+ wiirlak_ep_operation_event_2_answer_ignore:0 "Akışına bırak"
+ wiirlak_ep_operation_event_2_answer_resist:0 "Bu istilaya direnmeliydik !"
+
+ wiirlak_ep_operation_event_finish:0 "Miselyum İzleniyor, Ama Evcilleştirilememiş"
+ wiirlak_ep_operation_event_finish_desc:0 "§Y[event_target:wiirlak_ep_spy_op_target.GetName]§!'nın dönüşümü gerçekten başladı. Yerel yetkililer anomaliyi tespit etti - çevre ekipleri artık mantar vektörlerimizi ve ekolojik kaymayı artan bir titizlikle izliyor. \n\nYine de tüm dikkatlerine rağmen, kökler derine ekilmişti. $wiirlak_ep_operation_covert_seeding$ ağı yerleşmiş ama bozulmamış durumda. \nTopraklarını geri kazandıklarına inanıyorlar. Ama $wiirlak_ep_ap_evergrowth$ sabırlıdır ve döngüsü ebedidir."
+
+
+ wiirlak_ep_operation_event_push_back:0 "Kesilmiş Kökler"
+ wiirlak_ep_operation_event_push_back_desc:0 "Tüm olumsuzluklara rağmen, dünyamız değişime direndi. Uzaylı büyümeler sterilize edildi, yeraltı iplikleri biyosferden yakıldı. Atmosferik filtreler dengeyi geri sağladı. Yerli ekosistemler, yaralı olsalar da, şimdiden iyileşme belirtileri gösteriyor. \n\nGezegenimizi kendi imajlarında yeniden şekillendirmeye çalışan kim olursa olsun, kararlılığımızı küçümsedi. $wiirlak_ep_ap_evergrowth$ geniş olabilir, ama dalları kesilebilir."
+
+ wiirlak_ep_operation_event_overgrown:0 "Gelişen $wiirlak_ep_ap_evergrowth$"
+ wiirlak_ep_operation_event_overgrown_desc:0 "Onu kontrol altına almaya - anlamaya çalıştık - ama sonunda §Y[event_target:wiirlak_ep_spy_op_target.GetName]§! dönüştü. \n\nDönüşüm tamamlandı. Gökyüzü şimdi garip auroralarla parlıyor, devasa gölgelikler uydu taramalarını engelliyor ve toprağın kendisi tanınmaz bir yaşamla atıyor. Teknolojimiz hala çalışıyor, şehirlerimiz hala ayakta, ancak ayaklarımızın altındaki dünyanın kurallarını artık anlamıyoruz. \n\n$wiirlak_ep_ap_evergrowth$ bu yeri ele geçirdi. Ve şimdi köklerinin üzerinde yaşamayı öğrenmeliyiz... ya da kaçmalıyız."
+
+# Situation
+ wiirlak_ep_situation:0 "Doğal Olmayan Değişiklikler"
+ wiirlak_ep_situation_type:0 "$wiirlak_ep_situation$"
+ wiirlak_ep_situation_monthly_change_tooltip:0 "Gezegenlerimizden birinde olağandışı ekolojik kaymalar başladı. Kontrol altında tutulmazsa, geri dönülemez bir şekilde uzaylı bir biyosfere dönüşebilir."
+
+ wiirlak_ep_situation_desc_almost_complete:0 "§Y[Target.GetName]§!'nın üzerindeki gökyüzü, spor dolu bulutlarla kararıyor. Yerel yaşam boğuluyor veya yer değiştiriliyor. \nBu süreç tamamlanırsa, gezegen tamamen uzaylı bir hale gelecek. \nHarekete geçmek için çok az zaman kaldı."
+ wiirlak_ep_situation_desc:0 "§Y[Target.GetName]§! üzerinde ince değişiklikler ortaya çıkıyor. Atmosferik kaymalar. Tanıdık olmayan mantar türlerinin ani büyümesi. Toprak bileşiminin normalden sapması. \nBir şey dünyamızı içeriden değiştiriyor. Ve hızlanıyor."
+ wiirlak_ep_situation_desc_pushing_back:0 "Sınırlama protokolleri işliyor. Dekontaminasyon ekipleri, miselyum yayılımını durdurmada başarı bildirdi. Çevresel kayma yavaşladı. \nŞimdilik, §Y[Target.GetName]§!'nın dönüşümünü durdurduk."
+
+ wiirlak_ep_contained:0 "İstilâ Çoğunlukla Kontrol Altında"
+ wiirlak_ep_incursion:0 "Yabancı İstilâsı"
+ wiirlak_ep_overwhelmed:0 "Ezici İstilâ"
+
+ wiirlak_ep_burn:0 "Her şeyi Yak"
+ wiirlak_ep_study:0 "Onları İncele"
+
+
+# Orbital Bombardment Stance
+ bombardment_wiirlak_ep_verdant_purge:0 "Yeşil Tasfiye"
+ bombardment_wiirlak_ep_verdant_purge_desc:0 "$wiirlak_ep_ap_evergrowth$ bu dünyaya yayılsın. \n- §ROrdulara§! §RBüyük§! hasar\n- §RGezegene§! §RBüyük§! hasar\n- §RNüfuslara§! §RBüyük§! hasar\n- Gezegenleri §G$wiirlak_ep_pc_bloom_plural$§! haline dönüştürecek ya da dönüştürülemeyenleri yok edecek."
+
+# Bombardment Events
+ wiirlak_ep_event_bombarded_title:0 "Yeşil Kuşatma"
+ wiirlak_ep_event_bombarded_desc:0 "İlk başta nükleer serpinti sandık. Sporlar toz gibi inerek binaları, ormanları, insanları kapladı. Şimdi toprak sıcak ve canlı. \n\n§Y[event_target:wiirlak_ep_planet_targeted.GetName]§! artık sadece bombalanmıyor - değişiyor. Havanın kendisi değişti ve yüzey, bombardımanın altında titreşen istilacı mikofloraya boyun eğiyor. Tarayıcılarımız atmosferik bir değişimi doğruluyor; bu bir yer değiştirme. \n\nTerraformasyon başladı... bizim rızamız olmadan. İstilacılar sadece dünyamızı yok etmiyor. \nOnu yeniden yazıyorlar."
+
+ wiirlak_ep_event_bombarded_origin_desc:0 "Bombardıman bir zamanlar direnişi kırma yöntemiydi. Şimdi ise gelecekleri ektiğimiz yöntemdir. §Y[event_target:wiirlak_ep_planet_targeted.GetName]§! gezegeninin kraterlerinin ve yıkık yapılarının altında bir şeyler kıpırdıyor - ölüm değil, başlangıç.\n\nGemilerimiz tarafından taşınan sporlar yaralı gezegenin derinliklerine işlemiş durumda. Kabuktaki çatlaklardan fotosentetik sis sızıyor. Beton, sürünen köklerin altında ayrılıyor. Yerel biyosfer direniyor, ama şimdiden kaybediyor.\n\n$wiirlak_ep_ap_evergrowth$ kök saldı. Bu dünya bizim olacak, fetihle değil, dönüşümle."
+
+ wiirlak_ep_event_bombarded_answer:0 "$wiirlak_ep_ap_evergrowth$ kök salıyor"
+
+ wiirlak_ep_event_bombarded_terraformed:0 "Bürümüş"
+ wiirlak_ep_event_bombarded_terraformed_desc:0 "Sürünen bir istila olarak başlayan şey şimdi mutlak hale geldi. Yıllar süren sessiz fetihten sonra, [THIS.GetName] $wiirlak_ep_ap_evergrowth$'ın suretine büründü - her orman canlı bir sinir, alınan her nefes gelişen, duyarlı bir ekosistemin sporlarından çekiliyor.\n\nŞehirler yükselen biyolüminesans flora altında örtülü duruyor, ufuk çizgileri yeni dünyanın iradesi için basit birer iskeleye dönüştü. Yerli yaşam ya kaçtı, ya yok oldu ya da simbiyoz için daha uygun formlara dönüştürüldü.\n\n[THIS.GetName] artık eski galaksinin bir dünyası değil. O, $wiirlak_ep_ap_evergrowth$'ın cisimleşmiş halidir."
+
+# Bombardment Messages
+ WIIRLAK_EP_MESSAGE_BOMBARDED_TITLE:0 "$bombardment_wiirlak_ep_verdant_purge$"
+ wiirlak_ep_message_bombarded_desc:0 "§Y[event_target:wiirlak_ep_planet_targeted.GetName]§!, $wiirlak_ep_ap_evergrowth$ tarafından mutasyona uğramaya başladı."
+ wiirlak_ep_message_bombarded_origin_desc:0 "$wiirlak_ep_ap_evergrowth$, §Y[event_target:wiirlak_ep_planet_targeted.GetName]§! üzerinde kök salmaya başladı."
+
+
+
+# Component
+ PLANET_KILLER_SEEDBREAKER:0 "$wiirlak_ep_ap_evergrowth$ $wiirlak_ep_menap_tech_4$"
+ PLANET_KILLER_SEEDBREAKER_DESC:0 "Büyük miktarlarda besin açısından zengin biyokütle ve atmosferik katalizörler gezegenin üzerine salınır. Tüm yapay yapılar ve sentetik yaşam formları, hızlandırılmış, yarı-duyarlı flora tarafından ele geçirilir. Bu sel iklimi stabilize eder ve yüzeyi, $wiirlak_ep_ap_evergrowth$ için hazırlanmış, yaşayan, kendi kendini genişleten bir biyosfere dönüştürür."
+
+# Planet Killer
+ PLANET_KILLER_SEEDBREAKER_ACTION:0 "$wiirlak_ep_ap_evergrowth$'ı Ekin"
+ FLEETORDER_DESTROY_PLANET_WITH_PLANET_KILLER_SEEDBREAKER:0 "$PLANET|Y$ tohumlamak için hazırlanılıyor"
+
+ MESSAGE_DESC_FOR_PLANET_KILLER_SEEDBREAKER:0 "$wiirlak_ep_ap_evergrowth$ tarafından dönüştürüldü, nedeni"
+
+# Opinions
+ wiirlak_ep_opinion_seeded_a_world:0 "Bir Dünya Tohumlandı"
+ wiirlak_ep_opinion_seeded_my_world:0 "Dünyamız Tohumlandı"
+ wiirlak_ep_opinion_seeded_a_primitive_world:0 "Bir FTL Öncesi Dünya Tohumlandı"
+ wiirlak_ep_opinion_seeded_a_primitive_world_phile:0 "$opinion_cracked_a_primitive_world_phile$"
+
+ wiirlak_ep_opinion_acceptation:0 "$wiirlak_ep_ap_evergrowth$'ı Kabul Etmek"
+
+# Planet Killer Events
+ wiirlak_ep_is_not_bloom:0 "§RZaten bir $wiirlak_ep_pc_bloom$§!"
+
+ wiirlak_ep_event_seedbreaker_title:0 "$wiirlak_ep_ap_evergrowth$ Nimeti"
+ wiirlak_ep_event_seedbreaker_desc:0 "Sessizlikle başladı. Şatafat yoktu. Direniş yoktu. Sadece sistemlerin nazikçe hizalanması - ve sonra patlama.\nParlak sporlardan oluşan bir mızrak bulutu, kabuğu ve çekirdeği yardı. Dün bir dünya olarak duran şey şimdi bozuldu ve yeniden tasarlandı.\n\n§Y$wiirlak_ep_menap_tech_4$§! konuştu.\nBir zamanlar kısır kayaların veya meydan okuyan şehirlerin olduğu yerde, şimdi $wiirlak_ep_ap_evergrowth$'ın yeşil nefesi titreşiyor. Sadece değişmekle kalmadı, yeniden doğdu. Kabuk istilacı köklerle çiçek açıyor. Atmosfer, tohumlama rüzgarlarıyla kalınlaşmış. Yaşam, yıkıcı bir zarafetle kendini gösterdi.\n\nBaşka gözler bunu yıkım olarak görebilir. Ama biz gerçeği biliyoruz. Yaratılış her zaman çöküş gibi görünür."
+
+ wiirlak_ep_event_seedbreaker_target_title:0 "Yıkım Çiçeği"
+ wiirlak_ep_event_seedbreaker_target_desc:0 "Onun bir silah olduğunu sandık. Yanıldık.\n\nTohumkıran geldiğinde tahliye emri yoktu - sadece kafa karışıklığı vardı. §Y[event_target:wiirlak_ep_planet_targeted.GetName]§! üzerindeki gökler yarıldı ve yarıktan ateş değil, sporlar döküldü - havayı boğan, toprağı yeniden yazan ve nehirleri sürünen kök damarlarıyla şişiren sonsuz bir zümrüt yeşili bulut seli.\n\nSaatler içinde şehirlerimiz büründü. Makineler yerinde paslandı, sokaklar canlıymış gibi titreşen bitki örtüsünün altında kayboldu. Kuleler büyüklüğündeki biyokütlenin altında tüm bölgeler çöktü. Gezegen hala yaşıyor, ama bizimki gibi değil. Artık değil.\n\n§Y[event_target:wiirlak_ep_planet_targeted.GetName]§!'ı fethetmediler. Onu yeniden yazdılar.\nVe hala büyüyor."
+
+# Messages
+ WIIRLAK_EP_MESSAGE_SEEDBREAKER_TITLE:0 "$wiirlak_ep_event_seedbreaker_title$"
+ wiirlak_ep_message_seedbreaker_desc:0 "$wiirlak_ep_ap_evergrowth$'a kaybedilen gezegen: §Y[event_target:wiirlak_ep_planet_targeted.GetName]§!"
+ wiirlak_ep_message_seedbreaker_origin_desc:0 "Tohumkıran, §Y[event_target:wiirlak_ep_planet_targeted.GetName]§! üzerine $wiirlak_ep_ap_evergrowth$'ı salıverdi!"
+
+
+
+# Diplomatic Actions
+ wiirlak_ep_spread_the_evergrowth:0 "$wiirlak_ep_ap_evergrowth$'ı Yayın"
+ wiirlak_ep_spread_the_evergrowth_desc:0 "$wiirlak_ep_ap_evergrowth$ silahlarla değil, köklerle uzanıyor. Eğer dünyalarımızın onların vizyonu altında çiçeklenmesine izin vermeye istekliysek, rehberlik, refah ve amaç sunuyorlar. Bu anlaşmayı kabul etmek, gezegenlerimizi... ve belki de kendimizi yeniden şekillendirmek anlamına geliyor."
+ wiirlak_ep_spread_the_evergrowth_tooltip:0 "$wiirlak_ep_ap_evergrowth$, §Y$effect_random_owned_planet$§! üzerinde terraformasyon sürecini başlatsın."
+
+ wiirlak_ep_spread_the_evergrowth_tooltip_no_more:0 "$TRIGGER_FAIL$ §RTerraform yapılacak geçerli gezegen yok§!"
+ wiirlak_ep_spread_the_evergrowth_tooltip_acceptation:0 "$TRIGGER_FAIL$ §RBu teklifi kabul edilemez buluyorlar§!"
+ wiirlak_ep_spread_the_evergrowth_tooltip_refusal:0 "§HDolayısıyla, bu hiçbir işe yaramayacak§!"
+
+# Diplo Event
+ wiirlak_ep_event_bombarded_terraformed_positive:0 "Kök Salmış Uyum"
+ wiirlak_ep_event_bombarded_terraformed_positive_desc:0 "Koruyucularının rızasıyla, [THIS.GetName] zarif bir dönüşüm geçirdi. $wiirlak_ep_ap_evergrowth$ bir fatih olarak değil, bir bahçıvan olarak yerleşti - yerel ekolojileri, mikolojik merkezdeki gelişen $wiirlak_ep_menap_terraforming_plural$ ile bir araya getirerek.\n\nGökyüzü şimdi biyolüminesans polenlerle parıldıyor. Ekinler sürmeye gerek kalmadan bol miktarda yetişiyor. Yerel popülasyonlar iyileşmiş sağlık, daha temiz hava ve garip ama hoş bir amaç duygusu bildiriyor.\n\nBüyük döngüye katılarak, [THIS.GetName] bir kayıp değil, $wiirlak_ep_ap_evergrowth$'ın sunduklarının bir feneri haline geliyor: gelişen simbiyoz yoluyla barış."
+ wiirlak_ep_event_bombarded_terraformed_positive_answer:0 "Uyum Gelişiyor"
+
+# Economic Categories
+ wiirlak_ep_bloom_world:0 "$wiirlak_ep_event_seedbreaker_title$"
+ wiirlak_ep_bloom_world_jobs:0 "$wiirlak_ep_pc_bloom$ $planet_jobs$"
+
+# Deposits
+ wiirlak_ep_deposit:0 "$wiirlak_ep_event_seedbreaker_title$"
+ wiirlak_ep_deposit_desc:0 "$wiirlak_ep_ap_evergrowth$ inancı olana verir. \nŞüphe edenler için hiçbir şey büyümez. Ama inananlara... $wiirlak_ep_ap_evergrowth$ sonsuzca verir."
+
+
+
+# Final Events
+ wiirlak_ep_warning:0 "Kökler Yıldızlara Ulaşıyor"
+ wiirlak_ep_warning_desc:0 "Her iletişim dizisi boyunca imparatorluk çapında bir mesaj filizleniyor, yerçekimi kuyuları ve alt uzay boyunca fısıldanıyor. $wiirlak_ep_ap_evergrowth$, bir zamanlar sessiz bir ekolojik merakken, tamamen başka bir şeye dönüştü.\n\n§Y[event_target:wiirlak_ep_crisis_player.GetName]§! bir vizyon ilan etti: biyosferin tam bir birleşimi, Çiçeği tüm yaşanabilir dünyalara yayarak. Fetihten değil, yenilenmeden bahsediyorlar. Türler veya egemenlik tarafından artık parçalanmamış bir galaksiden - tek bir canlı sistem olarak nefes alan bir galaksiden bahsediyorlar.\n\nOnlar buna barış diyor. Diğerleri ise çoktan silme diyor. Bir şey açık: hazırlar. Ve hala büyüyorlar."
+
+ wiirlak_ep_warning_2:0 "Beşinci Çiçeklenme"
+ wiirlak_ep_warning_2_desc:0 "Bir zamanlar rahatsız edici bir anomali gibi görünen şey, artık yıldızlar arasına kök salmış durumda. Sözde $wiirlak_ep_ap_evergrowth$, başıboş bir ideoloji olarak göz ardı edilemeyecek bir yayılma ve bütünlük düzeyine ulaştı. \n\nSpor izleri artık hiperşeritler boyunca dalgalanıyor. $wiirlak_ep_pc_bloom_plural$ senkronize desenlerle yankılanıyor. Kenar sistemlerden gelen raporlar, tüm biyosferlerin bir gecede mutasyona uğradığını belirtiyor - terraformasyondan değil... daha hızlı, daha tuhaf, canlı bir şeyden. \n\nDaha da kötüsü, parçalı iletimler ele geçirdik: davetiyeler. 'Ağa katılma' teklifleri. İttifaklar sözlerle değil, köklerle, misellerle ve daha büyük bir şeyin parçası olma vaadiyle kuruldu. \n\nBu her neyse - artık bir hareket değil: Bu bir kriz."
+
+ wiirlak_ep_warning_2_answer_aggressive:0 "Filoları hazırlayın. Çok geç kalmış olabiliriz."
+ wiirlak_ep_warning_2_answer_neutral:0 "Düzen olmadan büyüme çürümektir."
+ wiirlak_ep_warning_2_answer_curious:0 "Belki de.. onları dinlemeliyiz."
+
+
+ wiirlak_ep_invitation:0 "Son İki Yaprak"
+ wiirlak_ep_invitation_desc:0 "Hiper-Dönüşüm kök salmadan önce, iki verimli alan daha güvence altına almalıyız. Ajanlarımız, eşikte duran imparatorlukları tespit ettiler - tereddütlüler, ama henüz düşmanca değiller. \n\nSporlarımızı kabul ederlerse, Döngü engellenmeden tamamlanabilir. Direnirlerse... külleriyle kökleri besleyeceğiz."
+ wiirlak_ep_invitation_none_desc:0 "Dönüşümümüzün son aşaması tamamlandı. Artık galaksiye adapte olmuyoruz - galaksi bize adapte olacak. \n\nSporlarımız çekirdekten çepere uzanıyor, köklerimiz kısır sanılan dünyalara giriyor ve vizyonumuz netliğe kavuştu. \n\nBüyüme çağı bitti. Yayılma çağı şimdi. \nBize karşı çıkan herkes çabuk karar vermeli: beslenmek ya da çürümek."
+ wiirlak_ep_flag_chosen_by_crisis:0 "Zaten davet edildi"
+
+ wiirlak_ep_invitation_empire_1:0 "[event_target:wiirlak_ep_crisis_potential_ally_1.GetName]"
+ wiirlak_ep_invitation_empire_2:0 "[event_target:wiirlak_ep_crisis_potential_ally_2.GetName]"
+ wiirlak_ep_invitation_empire_3:0 "[event_target:wiirlak_ep_crisis_potential_ally_3.GetName]"
+ wiirlak_ep_invitation_empire_4:0 "[event_target:wiirlak_ep_crisis_potential_ally_4.GetName]"
+ wiirlak_ep_invitation_empire_5:0 "[event_target:wiirlak_ep_crisis_potential_ally_5.GetName]"
+
+
+ wiirlak_ep_invitation_offer:0 "Tomurcuklanmaya Davet"
+ wiirlak_ep_invitation_offer_desc:0 "§H[event_target:wiirlak_ep_crisis_player.GetName]§! bize son bir teklif iletti:\n\nFilolar getirmedik, kılıçlar getirmedik, sadece kanopinin sesini getirdik. \nSize tüm yaşamın geleceğini sunuyoruz: $wiirlak_ep_ap_evergrowth$'un bir parçası olmak. Böylece, $wiirlak_ep_pc_bloom_plural$'ın nimetini, sporla öpülmüş birliğin ahengini ve gelecek fırtınadan korunmayı kazanacaksınız. \n\nBunu reddedin, solmayı seçersiniz. Savaşı seçersiniz."
+
+ wiirlak_ep_invitation_offer_accept:0 "Köklerimiz iç içe geçsin."
+ wiirlak_ep_invitation_offer_accept_tooltip:0 "Savaşta onların tarafına geçecek"
+
+ wiirlak_ep_invitation_offer_reject:0 "Bu istilaya asla boyun eğmeyeceğiz."
+ wiirlak_ep_invitation_offer_reject_tooltip:0 "$wiirlak_ep_ap_evergrowth$'a savaş ilan edecek"
+
+ wiirlak_ep_invitation_rejected:0 "Reddedilen Bir Bahçe"
+ wiirlak_ep_invitation_rejected_desc:0 "[From.GetName]'ın $wiirlak_ep_ap_evergrowth$'un lütfunda yıkanmasına izin verme cömert teklifimize rağmen reddettiler. Onu yozlaşma, tehdit, yalan olarak adlandırıyorlar. Yağmurlar özgürce yağarken kurak topraklara tutunan aptallar. \n\nYalıtılmışlıklarında solup gitsinler - çünkü cehalet denizinin kıyısı yoktur ve onlar orada boğulmayı seçtiler."
+ wiirlak_ep_invitation_rejected_answer:0 "Çürümeyi seçiyorlar"
+
+ wiirlak_ep_invitation_accepted:0 "Yıldızlar Boyunca Kökler"
+ wiirlak_ep_invitation_accepted_desc:0 "Diz çöktüler. Korkudan değil, sessiz bir huşu içinde. Şüpheciliklerinin perdesi solmuş bir ağaç kabuğu gibi yırtıldı ve altında amaç için çaresiz bir ruh vardı. \n\nİlk sporlar çoktan ulaştı - yerçekimi ve iradeyle taşınan sessiz kuryeler. Şehirleri artık bizimle nefes alacak. Toprakları hatırlayacak. \n\nDavet ettikleri güzelliği henüz anlamıyorlar. Ama anlayacaklar. Ah, nasıl da anlayacaklar. $wiirlak_ep_ap_evergrowth$ fethetmez; kucaklar. Ve gökleri polenle kaplanıp eski yapılar yeni köklerin altında bükülürken, bunu hissedecekler: birliğin sessizliğini. Amacın nabzını. Yıldızların son ritmini."
+
+
+
+ wiirlak_ep_project_1_done:0 "Yeşil Hesaplaşma"
+ wiirlak_ep_project_1_done_desc:0 "Başlıyor. Her gökyüzünün altında köklerimiz atıyor. Her nefeste sporlarımız hareketleniyor. Artık yayılmaya ihtiyacımız yok. Sadece uyanmamız gerekiyor. §HBüyük Çiçeklenme§! hareketleniyor - bir yayılma olarak değil, bir doruk noktası olarak. \n\nDünya şekillendiricilerimiz birleşme ilahisini söylüyor. Zihin ağlarımız içgüdü ve amaçla ağırlaşıyor. Tek bir son sentez kaldı: $wiirlak_ep_ap_evergrowth$ §HUyanışı§!."
+
+ wiirlak_ep_project_1_done_answer:0 "Nihai Projeyi Başlat"
+ wiirlak_ep_project_1_done_tooltip:0 "$wiirlak_ep_decision_final_project$ $concept_decision$'ı $CAPITAL$'da başlat"
+ wiirlak_ep_project_1_done_tooltip_fail:0 "$wiirlak_ep_decision_final_project$ $concept_decision$'ı $CAPITAL$'da açtı"
+
+
+
+ wiirlak_ep_project_2_done:0 "Misel Nabzı"
+ wiirlak_ep_project_2_done_desc:0 "Hazırlık direnişsiz ilerliyor. $wiirlak_ep_pc_bloom_plural$ ağı artık uyum içinde vızıldıyor, biyosferleri kök altı nörofiberler ve gezegensel ölçekte besin akımları aracılığıyla hizalanmış durumda. \n\nBir nabız gönderildi - ince, ama güçlü. Her bir $wiirlak_ep_pc_bloom$ senkronize bir şekilde tepki vererek hafifçe hareketleniyor, kabukları sanki nefes alırmış gibi kayıyor. \n\nYıldızlar arasındaki ajanlarımız huzursuzluk bildiriyor. Bırakın paniğe kapılsınlar. Bırakın seferber olsunlar. Tohumlar zaten ekildi."
+
+ wiirlak_ep_project_2_done_answer:0 "Bırakın büyüdüğünü duysunlar."
+ wiirlak_ep_project_2_done_tooltip:0 "$wiirlak_ep_decision_final_project_2$ $concept_decision$'ı $CAPITAL$'da başlat"
+ wiirlak_ep_project_2_done_tooltip_fail:0 "$wiirlak_ep_decision_final_project_2$ $concept_decision$'ı $CAPITAL$'da açtı"
+
+ wiirlak_ep_project_2_warning:0 "Kökler Derinleşiyor"
+ wiirlak_ep_project_2_warning_desc:0 "Durmadılar. Bocalamadılar. \n$wiirlak_ep_ap_evergrowth$ kararlılıkla ilerliyor. Çiçeklenmeyi durdurma girişimleri sadece zaman kazandırdı - ve şimdi, o zaman eski dünyanın toprağı gibi çürüyor. Ağları boyunca büyük enerji dalgalanmaları yayılıyor, $wiirlak_ep_pc_bloom_plural$ boyunca izlenen ince jeomanyetik nabızlar sistemlerin ve türlerin ötesine ulaşıyor. \n\nBu artık sadece yayılma değil. Bu hazırlık. \n\nAnalistlerimiz, şu anda hazırladıkları şeyin galaksideki gezegensel biyosferleri anında ve kalıcı olarak yeniden yazabileceği konusunda uyarıyor. Dönüşümleri artık yıllar değil, sadece saniyeler sürecek. \n\nŞimdi durdurulmazlarsa, onları hiç durdurmak mümkün olmayabilir."
+ wiirlak_ep_project_2_warning_answer:0 "Harekete geçmeliyiz. Şimdi."
+ wiirlak_ep_project_2_warning_answer_evergrowth:0 "Bırakın büyüsünler."
+
+
+
+ wiirlak_ep_project_3_done:0 "$wiirlak_ep_modifier_blooming_warning$"
+ wiirlak_ep_project_3_done_desc:0 "Her bir $wiirlak_ep_pc_bloom$ rezonansla titriyor, gezegensel bir kalp atışı son zirvesine doğru hızlanıyor. Kabuk, kök ve ruh boyunca ördüğümüz misel ağı uyandı. Artık bir ağ değil. Bir sinir sistemi. \n\nGökyüzü sessizleşiyor, toprak titriyor. Sonra - patlama. \n\nZehirli denizler besin rahimleri haline geliyor. Çöller çiçek sellerine dönüşüyor. Buzullar ışıldayan mantarlarla çiçekleniyor. Bir zamanlar kısır olan yerler şimdi bunaltıcı bir yaşamla dolup taşıyor. Savaşacak savaş kalmadı. Yeterince güçlü bir direniş yok. \n\nGalaksi bizim, çünkü artık bir galaksi değil. \nBir bahçe. O $wiirlak_ep_ap_evergrowth$."
+ wiirlak_ep_project_3_done_answer:0 "Biz fatihler değildik. Biz bizzat büyümenin kendisiydik."
+
+ wiirlak_ep_project_3_warning:0 "Son Neşvünema"
+ wiirlak_ep_project_3_warning_desc:0 "Ani oldu. \n\nYıldızlar boyunca, her bir $wiirlak_ep_pc_bloom$ ışıltılı spor bulutları halinde patladı, biyomları değiştiren enerji dalgalarını boşluğa saldı. Onlardan etkilenmeyen dünyalar hızla ele geçirildi. Okyanuslar biyolüminesanlaştı. Şehirler boğucu sarmaşıkların altında sessizliğe büründü. Makineler uzaylı yosunların altında korozyona uğradı. \n\nDirenme girişimleri başarısız oldu. Toprak şekillendirme protokolleri geçersiz kılındı. Gezegen kalkanları parçalandı. Teker teker, yıldızlar yeşil ve altın rengi gölgeliklerin altında karardı. \n\nGökada ateşle düşmedi. Her yanı bitki örtüsü sardı."
+ wiirlak_ep_project_3_warning_answer:0 "Çok geç kalmıştık..."
+ wiirlak_ep_project_3_warning_answer_evergrowth:0 "...ve şimdi, köklere aidiz."
+
+# Modifier
+ wiirlak_ep_modifier_subject:0 "$wiirlak_ep_invitation$"
+
+ wiirlak_ep_modifier_crisis_reaction:0 "$wiirlak_ep_ap_evergrowth$ Endişesi"
+ wiirlak_ep_modifier_crisis_link:0 "$wiirlak_ep_ap_evergrowth$ Bağlantısı"
+
+# Decision
+ wiirlak_ep_decision_final_project:0 "$wiirlak_ep_ap_evergrowth$ Doğuşu"
+ wiirlak_ep_decision_final_project_desc:0 "$wiirlak_ep_ap_evergrowth$ bir silah değil - bir başlangıç noktası, bir galaktik yumurta, $wiirlak_ep_ap_evergrowth$ altında yetişen tüm yaşamın birleşme noktasıdır. Gezegen kabuğundan ve sinir ağından büyüyen bu yapı, senkronize toprak şekillendirme darbeleri dalgası salacak. \n\nHiçbir dünya dokunulmamış kalmayacak. Hiçbir gök çiçeksiz bırakılmayacak. Bu son değil. Bu kök."
+ wiirlak_ep_decision_final_project_tooltip:0 "§HKrizi İlerlet§!"
+
+
+ wiirlak_ep_decision_final_project_2:0 "$wiirlak_ep_modifier_blooming_warning$ Uyandır"
+ wiirlak_ep_decision_final_project_2_desc:0 "Her kök. Her dal. Her spor. Her $wiirlak_ep_pc_bloom$ bir sinir ucudur - ve şimdi birleşecekler. Yavaş büyüme dönemi sona erdi. \n\nGezegen ve tohum arasındaki sınırları parçalayacağız. Artık beklemek yok, fısıldamak yok. Binlerce dünyanın topladığı $wiirlak_ep_resource_mycogrowth$ ile, galaksiyi yeniden yazacağız - alevle veya metalle değil, yaşamla. Acımasız. Her şeyi tüketen. Ebedi"
+ wiirlak_ep_decision_final_project_2_tooltip:0 "$wiirlak_ep_decision_final_project_tooltip$"
+
+# Modifier
+ wiirlak_ep_modifier_blooming_warning:0 "$wiirlak_ep_ap_evergrowth$ Tekilliği"
+ wiirlak_ep_modifier_blooming_warning_desc:0 "Geri dönüşü olmayan noktaya yaklaşıyoruz. \n\nTüm $wiirlak_ep_pc_bloom_plural$ artık sadece bir gezegen olmayacaklar. Onlar, $wiirlak_ep_ap_evergrowth$'ın nihai tasarımında birer verici, bir spor, bir düğüm olacaklar. \n\nSinyal verildiği takdirde, sadece büyümekle kalmayacak - her şey olacak."
+
+ wiirlak_ep_modifier_blooming:0 "$wiirlak_ep_modifier_blooming_warning$"
+ wiirlak_ep_modifier_blooming_desc:0 "$wiirlak_ep_modifier_blooming_warning_desc$"
+
+ wiirlak_ep_modifier_blooming_hive:0 "$wiirlak_ep_modifier_blooming_warning$"
+ wiirlak_ep_modifier_blooming_hive_desc:0 "$wiirlak_ep_modifier_blooming_warning_desc$"
+
+ wiirlak_ep_modifier_forced_blooming:0 "Zorunlu Çiçeklenme"
+ wiirlak_ep_modifier_forced_blooming_desc:0 "Bu gezegen $wiirlak_ep_ap_evergrowth$ tarafından zorla dönüştürülüyor."
+
+
+# Final Event - Without Project
+ wiirlak_ep_all_terraformed:0 "Sessiz Çiçeklenme"
+ wiirlak_ep_all_terraformed_answer:0 "$wiirlak_ep_ap_evergrowth$ kendini yayıyor"
+
+ wiirlak_ep_all_terraformed_step_2_desc:0 "Ağ tamamlandı. Her yaşanabilir dünya artık $wiirlak_ep_ap_evergrowth$ ile uyum içinde titreşiyor - canlı, bereketli, durdurulamaz. \n\nYine de son metamorfoz - Çiçeklenme Aşkınlığı - tamamlanmadı. Canlı ağ uykuda mırıldanırken, amacı yerine gelmiş ama yine de yerine getirilmemişken, yıldızlar sessiz bir hayranlıkla bekliyor. \n\nTekil bir evrim anı olması beklenen şey, bunun yerine sonsuz bir çiçeklenmeye dönüştü. Galaksi bizimle nefes alıyor. Ama biz... tereddüt ediyoruz. \nZaten kazandığımızda bir finale ihtiyacımız var mı?"
+
+ wiirlak_ep_all_terraformed_step_1_desc:0 "$wiirlak_ep_ap_evergrowth$ yıldızlara yayılıyor. Her yaşanabilir dünya mantar ağında bir düğüm, her ekosistem onun iradesinin bir aynası. \n\nYine de son bir dalgalanma serbest bırakılmadı. Büyüme amaç haline geldi. Yükseliş Projesi - Hiper Dönüşüm - ana hatlarıyla belirlendi, planlandı... ama asla başlatılmadı. \n\nBelki de terk edildi. Belki de $wiirlak_ep_ap_evergrowth$ böyle bir törene artık ihtiyacı olmadığına karar verdi. \n\nVe böylece galaksi, sessizce, tamamen değişti. Sonsuza dek."
+
+ wiirlak_ep_all_terraformed_not_crisis_5_desc:0 "$wiirlak_ep_ap_evergrowth$, kimsenin mümkün görmediği şeyi başardı: her yaşanabilir dünya artık çiçek açan biyom-halılarıyla gelişiyor. Yaşam hüküm sürüyor, engin ve iç içe. \n\nAncak yıldızlar başka birini izliyor. Başka biri şimdi galaktik tehdit unvanını ele geçirdi. Çiçeklenme yeterince hızlı değildi. \n\n$wiirlak_ep_ap_evergrowth$ izliyor. Bekliyor. Hala gelişiyor. Hala yayılıyor. Ama galaksi şimdi yeniden nefes alıyor."
+
+ wiirlak_ep_all_terraformed_not_crisis_5_alone_desc:0 "Kıyamet silahları veya şanlı bildiriler olmaksızın, galaksi yeniden şekillendi. Yavaşça, sessizce - $wiirlak_ep_ap_evergrowth$ ilerledi. Casus ağları gölgelerde sporlar yaydı. Bombardımanlar bereketli çürümeyi tohumladı. \n\nVe şimdi, tantana veya son bir eylem olmaksızın, galaksi devasa bir bahçe. \n\nKimse zaten bitene kadar fark etmedi. Gök düşmedi. Yeşil oldu."
+
+
+# Subject
+ specialist_evergrowth:0 "Tohum Yayıcı"
+
+ wiirlak_ep_preset_evergrowth:0 "$specialist_evergrowth$"
+ wiirlak_ep_preset_evergrowth_desc:0 "Bir Tohum Yayıcı, gezegensel dönüşüme ve hükümdarının ekolojik vizyonunun yayılmasına odaklanan, ancak özerklik ve diplomatik nüfuzun azalması pahasına çalışan bir Uzman Konu türüdür."
+ wiirlak_ep_preset_evergrowth_flavor_desc:0 "$wiirlak_ep_preset_evergrowth_desc$"
+
+ MESSAGE_SUBJECT_LEVEL_UP_specialist_evergrowth_TITLE:0 "$specialist_evergrowth$ $MESSAGE_SUBJECT_LEVEL_UP_TITLE$"
+ MESSAGE_WE_LEVEL_UP_specialist_evergrowth_TITLE:0 "$specialist_evergrowth$ $MESSAGE_WE_LEVEL_UP_TITLE$"
+
+# Subject Perks
+ wiirlak_ep_1_modifier:0 "$specialist_evergrowth$ Bonusları I"
+ wiirlak_ep_1_penalties:0 "$specialist_evergrowth$ Cezaları I"
+
+ wiirlak_ep_1_insight:0 "$specialist_evergrowth$ Kavrayış I"
+ wiirlak_ep_1_insight_desc:0 "§ETeknoloji Kazan:§!\n$t$£society£ $wiirlak_ep_tech_energy$\n§EAraştırılabilir Teknolojilere Ekle:§!\n$t$£society£ $wiirlak_ep_tech_growth$\n$t$£society£ $wiirlak_ep_tech_defense$"
+
+
+ wiirlak_ep_1_bloomform:0 "$specialist_evergrowth$ $wiirlak_ep_menap_terraforming_3$ I"
+ wiirlak_ep_1_bloomform_desc:0 "§H[TARGET.Capital.GetName]§! bir §Y$wiirlak_ep_pc_bloom$§! haline gelecek!"
+
+ wiirlak_ep_1_overlord_modifier:0 "$specialist_evergrowth$ Danışmanlığı"
+ wiirlak_ep_1_overlord_penalty:0 "$specialist_evergrowth$ Bakımı"
+ wiirlak_ep_1_neighbor_bonuses:0 "$wiirlak_ep_ap_evergrowth$'ın Dalı"
+
+
+
+ wiirlak_ep_2_modifier:0 "$specialist_evergrowth$ Bonusları II"
+ wiirlak_ep_2_penalties:0 "$specialist_evergrowth$ Cezaları II"
+
+ wiirlak_ep_2_insight:0 "$specialist_evergrowth$ Kavrayış II"
+ wiirlak_ep_2_insight_desc:0 "§ETeknoloji Kazan:§!\n$t$£society£ $wiirlak_ep_tech_science$\n§EAraştırılabilir Teknolojilere Ekle:§!\n$t$£society£ $wiirlak_ep_tech_unity$"
+
+
+ wiirlak_ep_2_bloomform:0 "$specialist_evergrowth$ $wiirlak_ep_menap_terraforming_3$ II"
+ wiirlak_ep_2_bloomform_desc:0 "§H[TARGET.GetName]§!'ın başkent sektöründeki her gezegen §Y$wiirlak_ep_pc_bloom_plural$§! haline gelecek!"
+
+ wiirlak_ep_2_colony:0 "$specialist_evergrowth$ Adaptasyon I"
+ wiirlak_ep_2_colony_desc:0 "§H[TARGET.GetName]§! §Y$wiirlak_ep_pc_bloom_plural$§! ortamına adapte olur!"
+
+ wiirlak_ep_2_bloomform_leader:0 "$specialist_evergrowth$ Liderler I"
+ wiirlak_ep_2_bloomform_leader_desc:0 "§E$official_plural_with_icon$ rastgele bir özellik kazanır:§!\n$leader_trait_evergrowth_rooted_presence$\n$leader_trait_evergrowth_spore_diplomat$\n$leader_trait_evergrowth_myco_admin$\n$leader_trait_evergrowth_biogrowth_architect$\n$leader_trait_evergrowth_spore_council$\n"
+
+
+
+ wiirlak_ep_3_modifier:0 "$specialist_evergrowth$ Bonuslar III"
+ wiirlak_ep_3_penalties:0 "$specialist_evergrowth$ Cezalar III"
+
+ wiirlak_ep_3_insight:0 "$specialist_evergrowth$ İçgörü III"
+ wiirlak_ep_3_insight_desc:0 "§ETeknoloji Kazan:§!\n$t$£engineering£ $wiirlak_ep_tech_adv_resource$\n§EAraştırılabilir Teknolojilere Ekle:§!\n$t$£society£ $wiirlak_ep_tech_influence$"
+
+
+ wiirlak_ep_3_bloomform:0 "$specialist_evergrowth$ $wiirlak_ep_menap_terraforming_3$ III"
+ wiirlak_ep_3_bloomform_desc:0 "§H[TARGET.GetName]§! içindeki her gezegen §Y$wiirlak_ep_pc_bloom_plural$§! gezegenlerine dönüşecek!"
+
+ wiirlak_ep_3_colony:0 "$specialist_evergrowth$ Adaptasyon II"
+ wiirlak_ep_3_colony_desc:0 "§H[TARGET.GetName]§! nüfusu §Y$wiirlak_ep_pc_bloom_plural$§! ortamına adapte olur!"
+
+ wiirlak_ep_3_bloomform_leader:0 "$specialist_evergrowth$ Liderler II"
+ wiirlak_ep_3_bloomform_leader_desc:0 "$OVERLORD_MOD$\n§Y$wiirlak_ep_holding_sporebloom_arboretum$§! $concept_overlord_holding$ artık tabiiyetindeki liderlere göre £unity£ de üretir.\n\n$SUBJECT_MOD$\n\t§G+1§! $MOD_PLANET_MAX_DISTRICTS_ADD$ ile §Y$wiirlak_ep_holding_sporebloom_arboretum$§! $concept_overlord_holding$"
+
+# Subject Modifier
+ Wiirlak_ep_modifier_relay:0 "$wiirlak_ep_1_neighbor_bonuses$"
+ mod_planet_jobs_wiirlak_ep_resource_mycogrowth_produces_mult:0 "£wiirlak_ep_resource_mycogrowth£ $wiirlak_ep_resource_mycogrowth$ £job£ Mesleklerinden"
+
+# Subject Leader Trait
+ leader_trait_evergrowth_rooted_presence:0 "Köklenmiş Varlık"
+ leader_trait_evergrowth_rooted_presence_desc:0 "Kişi ne kadar uzun kalırsa, toprak o kadar çok dinler."
+ leader_trait_evergrowth_rooted_presence_tooltip:0 "§Y$wiirlak_ep_pc_bloom_plural$§! üzerinde, $PLANET_EFFECTS_TXT$ $TABBED_NEW_LINE$- $MOD_PLANET_STABILITY_MULT$: §G+%20§!$TABBED_NEW_LINE$- $MOD_POP_GOVERNMENT_ETHIC_ATTRACTION$: §G+%20§! \n\n§Y$wiirlak_ep_pc_bloom$§! gezegeninden, $SECTOR_EFFECTS_TXT$$TABBED_NEW_LINE$- $MOD_PLANET_STABILITY_MULT$: §G+%10§!$TABBED_NEW_LINE$- $MOD_POP_GOVERNMENT_ETHIC_ATTRACTION$: §G+%10§!"
+
+ leader_trait_evergrowth_spore_diplomat:0 "Spor Diplomatı"
+ leader_trait_evergrowth_spore_diplomat_desc:0 "Nazikçe konuşurlar - polenle, feromonlarla, barışla."
+ leader_trait_evergrowth_spore_diplomat_tooltip:0 "§Y$wiirlak_ep_pc_bloom_plural$§! üzerinde, $PLANET_EFFECTS_TXT$ $TABBED_NEW_LINE$- $mod_planet_jobs_upkeep_mult$: §G-%15§!$TABBED_NEW_LINE$- $mod_planet_jobs_unity_produces_mult$: §G+%15§! \n\n§Y$wiirlak_ep_pc_bloom$§! gezegeninden, $SECTOR_EFFECTS_TXT$$TABBED_NEW_LINE$- $mod_planet_jobs_upkeep_mult$: §G-%7.5§!$TABBED_NEW_LINE$- $mod_planet_jobs_unity_produces_mult$: §G+%7.5§!"
+
+ leader_trait_evergrowth_myco_admin:0 "Miko-Yönetici"
+ leader_trait_evergrowth_myco_admin_desc:0 "Kararlar verimli toprakta kökler kadar hızlı yayılır."
+
+ leader_trait_evergrowth_biogrowth_architect:0 "Biyo-Büyüme Mimarı"
+ leader_trait_evergrowth_biogrowth_architect_desc:0 "Dünya sizin için büyütebiliyorken neden inşa edesiniz ki?"
+ leader_trait_evergrowth_biogrowth_architect_tooltip:0 "§Y$wiirlak_ep_pc_bloom_plural$§! üzerinde, $PLANET_EFFECTS_TXT$ $TABBED_NEW_LINE$- $mod_planet_districts_cost_mult$: §G-%20§!$TABBED_NEW_LINE$- $mod_planet_districts_upkeep_mult$: §G-%20§! \n\n§Y$wiirlak_ep_pc_bloom$§! gezegeninden, $SECTOR_EFFECTS_TXT$$TABBED_NEW_LINE$- $mod_planet_districts_cost_mult$: §G-%10§!$TABBED_NEW_LINE$- $mod_planet_districts_upkeep_mult$: §G-%10§!"
+
+ leader_trait_evergrowth_spore_council:0 "Sporlar Konseyi"
+ leader_trait_evergrowth_spore_council_desc:0 "Zihinleri kolektiftir. Oyları ise tahmin edilebilir."
+
+# Subject Building
+ wiirlak_ep_holding_sporebloom_arboretum:0 "Sporebloom Arboretum"
+ wiirlak_ep_holding_sporebloom_arboretum_desc:0 "Evergrowth'a adanmış canlı bir katedral, sürekli umut poleni yayan."

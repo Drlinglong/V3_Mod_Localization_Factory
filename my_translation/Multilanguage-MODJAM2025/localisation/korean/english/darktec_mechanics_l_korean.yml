@@ -1,0 +1,1285 @@
+﻿# localisation\english\darktec_mechanics_l_english.yml
+
+# Authors: Rodahtnov & Zyralynn
+
+l_korean:
+
+# Misc
+	# §B thisisblue §!
+	# §E thisisteal §!
+	# §G thisisgreen §!
+	# §H thisisorange §!
+	# §L thisisbrown §!
+	# §M thisispurple §!
+	# §P thisislightred §!
+	# §R thisisred §!
+	# §S thisisdarkorange §!
+	# §T thisislightgrey §!
+	# §W thisiswhite §!
+	# §Y thisisyellow §!
+# /
+
+# Ascension perk
+	darktec_ap_postbaryonic:0 "탈-바리온 주입"
+	darktec_ap_postbaryonic_desc:0 "우리는 공허가 존재하는 모든 것의 마지막 별, 마지막 빛까지 천천히 집어삼키며 우주가 스스로 붕괴하는 모습을 오랫동안 보아왔다. 이제 우리는 그 대재앙을 되돌리고, 막고, 우리에게 유리하게 바꾸는 방법을 알게 되었다. 엔트로피는 우리 손에 종결될 것이다."
+	darktec_ap_postbaryonic_not_for_multispecies:0 "£trigger_no£ §Y다문화§! 제국이 아니어야 합니다."
+	darktec_ap_postbaryonic_not_for_wilderness:0 "£trigger_no£ 비-융합 제국이 필요합니다 (§Y야생§! 제국과 같이)."
+	darktec_ap_postbaryonic_requires_able_to_modify_species:0 "£trigger_no£ 비-순수주의 제국이 필요합니다 (주 종족을 수정할 수 없습니다)."
+	darktec_ap_postbaryonic_tooltip_will_need_to_research_dm_tech:0 "\n§E기술 요구사항:§!\n- 우리는 계속 진행하기 위해 §Y£physics£ $tech_mine_dark_matter$§! 기술이 필요합니다. 이 기술은 연구 보장으로 제공됩니다."
+
+	darktec_ap_postbaryonic_tooltip:0 "- 위기 진행이 시작됩니다\n- 비-바리온 에너지를 수확하고 사용하는 방법이 어떤 대가를 치르더라도 우리의 새로운 목표가 될 것입니다."
+
+	darktec_ap_postbaryonic_transformed:0 "엔트로피 융합"
+	darktec_ap_postbaryonic_transformed_desc:0 "$darktec_ap_postbaryonic_desc$"
+	darktec_ap_postbaryonic_transformed_tooltip:0 "- 우리는 우리 종족을 §Y엔트로피 존재§!로 변형시켰으며, 이제 우리 자신에게 엔트로피의 진정한 잠재력을 받아들이고 있습니다."
+
+	darktec_ap_postbaryonic_tainted:0 "암영 주입"
+	darktec_ap_postbaryonic_tainted_desc:0 "$darktec_ap_postbaryonic_desc$"
+	darktec_ap_postbaryonic_tainted_tooltip:0 "- 우리는 §Y암영§! 적용을 강화했으며, 이제 암흑 물질에 대한 더 큰 통제력을 갖게 되었습니다."
+
+# Crisis
+	# Misc
+	# UI
+	#darktec_crisis_postbaryonic_level_1:0 "§EConcern§!"
+	#darktec_crisis_postbaryonic_level_2:0 "§ERisk§!"
+	#darktec_crisis_postbaryonic_level_3:0 "§EDanger§!"
+	#darktec_crisis_postbaryonic_level_4:0 "§ECalamity§!"
+	#darktec_crisis_postbaryonic_level_5:0 "§EExistential Threat§!"
+	darktec_crisis_postbaryonic_level_1:0 "§E봉쇄§!"
+	darktec_crisis_postbaryonic_level_2:0 "§E착취§!"
+	darktec_crisis_postbaryonic_level_3:0 "§E엔트로피 구속§!"
+	darktec_crisis_postbaryonic_level_4:0 "§E임박한 붕괴§!"
+	darktec_crisis_postbaryonic_level_5:0 "§E암영 대격변§!"
+	darktec_crisis_postbaryonic_level_1_desc:0 "위기 레벨 1"
+	darktec_crisis_postbaryonic_level_2_desc:0 "위기 레벨 2"
+	darktec_crisis_postbaryonic_level_3_desc:0 "위기 레벨 3"
+	darktec_crisis_postbaryonic_level_4_desc:0 "위기 레벨 4"
+	darktec_crisis_postbaryonic_level_5_desc:0 "위기 레벨 5"
+	# Resouces
+	darktec_contained_entropy:0 "억제된 엔트로피"
+	darktec_contained_entropy_name:0 "$darktec_contained_entropy$"
+	darktec_contained_entropy_with_icon:0 "£darktec_contained_entropy£ $darktec_contained_entropy$"
+	darktec_contained_entropy_value:0 "£darktec_contained_entropy£ $VAL|0$"
+	darktec_contained_entropy_current_value:0 "현재 값: §Y$VALUE|0$§!"
+	darktec_contained_entropy_gaining:0 "§H위기 목표§!를 완료하여 더 많은 §Y$darktec_contained_entropy$§!를 획득하십시오."
+	darktec_contained_entropy_desc:0 "억제된 엔트로피는 비-바리온 물질에 의해 갇혀, 인위적인 영향 없이는 어떤 식으로든 현실과 간섭하거나 상호작용할 수 없는 혼돈스러운 배경 에너지의 양을 말합니다."
+
+	darktec_contained_entropy_crisis_objective:0 "위기 목표"
+	darktec_contained_entropy_crisis_objective_gained:0 "획득된 자원"
+	darktec_contained_entropy_crisis_objective_reward:0 "$REWARD$"
+	darktec_contained_entropy_crisis_objective_progress:0 "이 위기 목표를 통해 £darktec_contained_entropy£ $AMOUNT$를 획득했습니다."
+
+	darktec_contained_entropy_crisis_level_locked:0 "이 레벨 잠금 해제 필요:\n"
+	darktec_contained_entropy_crisis_level_unlocked:0 "$LEVEL$에 도달하면, 특별 이벤트와 보상을 얻습니다:\n"
+	darktec_contained_entropy_crisis_level_unlock:0 "£darktec_contained_entropy£ §Y$CURRENCY$§! $darktec_contained_entropy$ 보유"
+	darktec_contained_entropy_crisis_level_desc:0 "위기 레벨을 진행하려면 위기 목표를 완료하고 상황 기록에서 위기 특성을 연구하십시오."
+
+	darktec_contained_entropy_crisis_description_title:0 "탈-바리온 주입"
+	darktec_contained_entropy_crisis_description:0 "$menace_crisis_description_intro$\n\n진공, 공허, 원자 사이의 공간... 엔트로피를 부추기는 암흑 에너지는 무한하며, 그러므로 현실에 미치는 퇴행적이고 파괴적인 영향을 막고 이를 통제하는 것이 우리의 의무입니다. 우리는 엔트로피의 힘을 우리 것으로 복속시킬 것입니다."
+	darktec_contained_entropy_crisis_howto_title:0 "응집 엔트로피"
+	darktec_contained_entropy_crisis_howto:0 "§H위기 목표§!를 추구하고, §H$building_darktec_anchor_1_plural$§! 건설과 같은 일부 §E암영§! 기능을 사용하면 §H$darktec_contained_entropy_with_icon$§!를 생성하여 우리 제국의 기술적, 경제적, 존재론적 힘을 해방시킵니다. 우리는 더 많이, 더 많이, 더 많이 수확하고, 성장시키고, 창조해야 합니다. 그리하여 획득한 엔트로피를 우리가 원하는 형태로 §H응집§!시킬 수 있을 때까지, 그리고 그것으로 우리의 욕망에 따라 현실을 형성할 수 있을 때까지."
+
+	# Perks
+	# T1
+	menp_darktec_anchor_t1:0 "공허 흡수"
+	menp_darktec_anchor_t1_desc:0 "우리 공간 주변의 잠재된 암흑 에너지를 제거하고 이를 사용 가능한 자원으로 재변환하는 것은 우리의 목적을 진전시킬 것입니다."
+	menp_darktec_anchor_t1_tooltip:0 "모든 구역에 ['building:building_darktec_anchor_1', £building£ $building_darktec_anchor_1_plural$]를 건설할 수 있게 해줍니다. 이 건물들은 §Y$darktec_contained_entropy_with_icon$§!를 생성하는 데 사용됩니다."
+
+	menp_darktec_entropy_t1:0 "심오한 연구"
+	menp_darktec_entropy_t1_desc:0 "배경 복사와 엔트로피 에너지를 연구하는 것은 비바리온 물질을 제대로 다루기 위한 초석을 다지는 데 도움이 될 것입니다."
+	menp_darktec_entropy_t1_tooltip:0 "이제 위기 목표를 통해 §Y$darktec_contained_entropy_with_icon$§!를 획득할 수 있습니다."
+
+	menp_darktec_darkmatter_t1:0 "반에너지 격리"
+	menp_darktec_darkmatter_t1_desc:0 "유일한 논리적 결과는 엔트로피를 감소시키고, 그 과정에서 이를 이용하는 것입니다."
+	menp_darktec_darkmatter_t1_tooltip:0 "['building:building_darktec_storage_1', £building£ $building_darktec_storage_1_plural$]의 건설을 허용합니다. 이 건물들은 저장된 §Y$darktec_contained_entropy_with_icon$§!의 양에 따라 §Y£sr_dark_matter£ 암흑 물질§!을 생성합니다."
+
+	# T2
+	menp_darktec_anchor_t2:0 "공허 채취"
+	menp_darktec_anchor_t2_desc:0 "우리는 추가 앵커를 건설해야 합니다. 가능한 모든 배경 및 암흑 에너지를 흡수하여 우리의 목표로 전환해야 합니다."
+	menp_darktec_anchor_t2_tooltip:0 "이제 ['building:building_darktec_anchor_1', £building£ $building_darktec_anchor_1_plural$]를 ['building:building_darktec_anchor_2', £building£ $building_darktec_anchor_2_plural$]로 업그레이드할 수 있습니다."
+
+	menp_darktec_entropy_t2:0 "이종 재조합"
+	menp_darktec_entropy_t2_desc:0 "비바리온 물질을 바리온 물질과 결합하는 것은 복잡한 문제이며, 살아있는 존재와 결합할 때는 더욱 그렇습니다. 하지만 그 노력은 진정으로 가치 있습니다."
+	menp_darktec_entropy_t2_tooltip:0 "[darktec_loc_menp_darktec_entropy_t2_tooltip]"
+	menp_darktec_entropy_t2_tooltip_normal:0 "['technology:tech_darktec_traits_t1'] 기술 연구를 허용합니다. 이 기술을 통해 우리 종족에게 특수 특성을 부여할 수 있습니다."
+	menp_darktec_entropy_t2_tooltip_early:0 "['technology:tech_darktec_traits_t1'] 기술 연구를 허용합니다. 이 기술을 통해 우리 종족에게 특수 특성을 부여할 수 있습니다."
+
+	menp_darktec_darkmatter_t2:0 "진공 재활용"
+	menp_darktec_darkmatter_t2_desc:0 "어떤 자원도 낭비되어서는 안 됩니다. 심지어 탐지할 수 없는 자원이라 할지라도 말입니다. 효율성 극대화는 필수입니다."
+	menp_darktec_darkmatter_t2_tooltip:0 "[darktec_loc_menp_darktec_darkmatter_t2_tooltip]"
+	menp_darktec_darkmatter_t2_tooltip_normal:0 "이제 ['building:building_darktec_storage_1', £building£ $building_darktec_storage_1_plural$]를 ['building:building_darktec_storage_2', £building£ $building_darktec_storage_2_plural$]로 업그레이드할 수 있습니다."
+	menp_darktec_darkmatter_t2_tooltip_early:0 "이제 ['building:building_darktec_storage_1', £building£ $building_darktec_storage_1_plural$]를 ['building:building_darktec_storage_2', £building£ $building_darktec_storage_2_plural$]로 업그레이드할 수 있습니다."
+
+	menp_darktec_umbralships_t2:0 "그림자 장막 뒤편"
+	menp_darktec_umbralships_t2_desc:0 "재활용된 엔트로피 주입 물질의 생성은 유형의 현실과 무형의 현실 모두와 융합되는 듯한 디자인을 만들어낼 수 있게 합니다."
+	menp_darktec_umbralships_t2_tooltip:0 "[darktec_loc_menp_darktec_umbralships_t2_tooltip]"
+
+	menp_darktec_umbralships_t2_tooltip_mechanical:0 "1단계 §Y그림자 함선§! 기술(['technology:tech_darktec_crisis_destroyer'])을 잠금 해제합니다."
+	menp_darktec_umbralships_t2_tooltip_mechanical_early:0 "1단계 §Y그림자 함선§! 기술(['technology:tech_darktec_crisis_destroyer'])을 잠금 해제합니다."
+	menp_darktec_umbralships_t2_tooltip_bioships:0 "1단계 §Y그림자 함선§! 기술(['technology:tech_darktec_crisis_mauler'])을 잠금 해제합니다."
+	menp_darktec_umbralships_t2_tooltip_bioships_early:0 "1단계 §Y그림자 함선§! 기술(['technology:tech_darktec_crisis_mauler'])을 잠금 해제합니다."
+
+	darktec_modifier_menp_early_applications:0 "$menp_darktec_entropy_t2$"
+	darktec_modifier_menp_early_applications_desc:0 "$menp_darktec_entropy_t2_desc$"
+	darktec_modifier_menp_early_warfare:0 "$menp_darktec_umbralships_t2$"
+	darktec_modifier_menp_early_warfare_desc:0 "$menp_darktec_umbralships_t2_desc$"
+	darktec_modifier_menp_early_industry:0 "$menp_darktec_darkmatter_t2$"
+	darktec_modifier_menp_early_industry_desc:0 "$menp_darktec_umbralships_t2_desc$"
+
+	# T3
+	menp_darktec_anchor_t3:0 "공허 공명 연쇄 반응"
+	menp_darktec_anchor_t3_desc:0 "추출기를 안정화한 후, 이제 파괴적인 연쇄 반응을 일으키지 않고 우주의 진정한 공허에서 엔트로피 추출을 실험할 수 있습니다."
+	menp_darktec_anchor_t3_tooltip:0 "이제 ['building:building_darktec_anchor_2', £building£ $building_darktec_anchor_2_plural$]를 ['building:building_darktec_anchor_3', £building£ $building_darktec_anchor_3_plural$]로 업그레이드할 수 있습니다."
+
+	menp_darktec_entropy_t3:0 "암흑 실험"
+	menp_darktec_entropy_t3_desc:0 "이제 우리는 엔트로피 재활용 원소와의 친화도를 극대화하는 방법에 대한 이해와 아이디어를 갖게 되었습니다. 따라서 우리의 필요, 즉 지식을 충족시켜야 합니다."
+	menp_darktec_entropy_t3_tooltip:0 "이제 ['technology:tech_darktec_traits_t2']를 연구할 수 있습니다. 이 기술은 우리 종족에게 사용할 §Y강력한 특성§!을 제공합니다."
+
+	menp_darktec_darkmatter_t3:0 "제어된 진공 붕괴"
+	menp_darktec_darkmatter_t3_desc:0 "작은 제어된 진공 붕괴 지점을 생성함으로써, 현실의 완전한 붕괴 없이 막대한 양의 비바리온 물질과 에너지를 다루고 재경유하는 방법을 크게 이해할 수 있습니다."
+	menp_darktec_darkmatter_t3_tooltip:0 "[darktec_loc_menp_darktec_darkmatter_t3_tooltip]"
+	menp_darktec_darkmatter_t3_tooltip_mechanical:0 "2단계 §Y그림자 함선§! 기술(['technology:tech_darktec_crisis_cruiser'])을 잠금 해제합니다."
+	menp_darktec_darkmatter_t3_tooltip_bioships:0 "2단계 §Y그림자 함선§! 기술(['technology:tech_darktec_crisis_weaver'])을 잠금 해제합니다."
+
+	# T4
+	menp_darktec_anchor_t4:0 "공허 수확"
+	menp_darktec_anchor_t4_desc:0 "[darktec_loc_menp_darktec_anchor_t4_desc]"
+	menp_darktec_anchor_t4_tooltip:0 "[darktec_loc_menp_darktec_anchor_t4_tooltip]"
+
+	menp_darktec_anchor_t4_unknown:0 "????"
+	menp_darktec_anchor_t4_unknown_desc:0 "????"
+	menp_darktec_anchor_t4_unknown_tooltip:0 "????"
+	menp_darktec_anchor_t4_unknown_tooltip:0 "????"
+
+	menp_darktec_anchor_t4_known:0 "공허 수확"
+	menp_darktec_anchor_t4_known_desc:0 "아무리 수확해도 부족하고. 아무리 소모해도 부족하다."
+	menp_darktec_anchor_t4_known_tooltip:0 "['building:building_darktec_anchor_3', £building£ $building_darktec_anchor_3_plural$]이(가) 이제 식민지 내 다른 §Y£building£ 암영 건물§!의 효과를 증폭시킵니다.\n이 효과는 앵커 업그레이드 레벨에 비례합니다."
+
+	menp_darktec_entropy_t4:0 "심연과의 합일"
+	menp_darktec_entropy_t4_desc:0 "[darktec_loc_menp_darktec_entropy_t4_desc]"
+	menp_darktec_entropy_t4_tooltip:0 "[darktec_loc_menp_darktec_entropy_t4_tooltip]"
+
+	menp_darktec_entropy_t4_unknown:0 "???"
+	menp_darktec_entropy_t4_unknown_desc:0 "???"
+	menp_darktec_entropy_t4_unknown_tooltip:0 "???"
+
+	menp_darktec_entropy_t4_transformed:0 "모호한 안정화"
+	menp_darktec_entropy_t4_transformed_desc:0 "우리의 새로운 형태는… 흥미롭습니다. 우리는 더 적으면서도 더 많으며, 타인 또한 그렇게 만들 수 있습니다."
+	menp_darktec_entropy_t4_transformed_tooltip:0 "['building:building_darktec_umbral_portal_1', £building£ $building_darktec_umbral_portal_1_plural$]이(가) 이제 행성의 £job£ 생산량도 증가시킵니다.\n\n이 건물은 이제 팝을 §E엔트로피 실체§!로 수동 §Y동화§!하는 것을 가능하게 합니다."
+
+	menp_darktec_entropy_t4_tainted:0 "융합된 암흑"
+	menp_darktec_entropy_t4_tainted_desc:0 "우리 생명 과정에서 암흑 물질의 반응성 효과는 지금까지 성공적인 결과를 가져왔고, 따라서 우리는 더 많이 실험할 준비가 되어 있습니다. 계속해서. 더 많이."
+	menp_darktec_entropy_t4_tainted_tooltip:0 "기본 및 고급 §Y암영 특성§!은 이제 추가적인 생산 능력을 가집니다."
+
+	menp_darktec_darkmatter_t4:0 "엔트로피 조화"
+	menp_darktec_darkmatter_t4_desc:0 "[darktec_loc_menp_darktec_darkmatter_t4_desc]"
+	menp_darktec_darkmatter_t4_tooltip:0 "[darktec_loc_menp_darktec_darkmatter_t4_tooltip]"
+
+	menp_darktec_darkmatter_t4_unknown:0 "???"
+	menp_darktec_darkmatter_t4_unknown_desc:0 "???"
+	menp_darktec_darkmatter_t4_unknown_tooltip:0 "???"
+
+	menp_darktec_darkmatter_t4_transformed:0 "엔트로피 오염"
+	menp_darktec_darkmatter_t4_transformed_desc:0 "우리의 새로운 존재와 함께 우리는 잠재된 본질, 즉 탁한 액체를 지니고 있으며, 이는 우리 손이 닿는 모든 것을 전복시키는 방법입니다."
+	menp_darktec_darkmatter_t4_transformed_tooltip:0 "이제 ['building:building_darktec_storage_2', £building£ $building_darktec_storage_2_plural$]을(를) ['building:building_darktec_storage_3', £building£ $building_darktec_storage_3_plural$](으)로 업그레이드할 수 있습니다."
+
+	menp_darktec_darkmatter_t4_tainted:0 "엔트로피 재할당"
+	menp_darktec_darkmatter_t4_tainted_desc_old:0 "일부 '§Y봉인된 엔트로피§!'를 우리의 생산 분야 중 하나로 재분배함으로써, 그 수확량을 엄청난 양으로 증가시킬 수 있습니다."
+	menp_darktec_darkmatter_t4_tainted_desc:0 "우리 종족의 병렬적 특성을 더욱 강화하기 위해 적용된 엔트로피의 힘은 더 많은 적용 가능성과 더 큰 힘을 위한 여지를 제공합니다."
+	menp_darktec_darkmatter_t4_tainted_tooltip:0 "이제 ['building:building_darktec_storage_2', £building£ $building_darktec_storage_2_plural$]을(를) ['building:building_darktec_storage_3', £building£ $building_darktec_storage_3_plural$](으)로 업그레이드할 수 있습니다.\n\n이제 ['technology:tech_darktec_traits_ascension']을(를) 연구할 수 있으며, 이는 선택한 승천 경로에 따라 우리 제국에 강력한 특성들을 제공할 것입니다."
+
+	menp_darktec_umbralships_t4:0 "위상 물질 선박"
+	menp_darktec_umbralships_t4_desc:0 "[darktec_loc_menp_darktec_umbralships_t4_desc]"
+	menp_darktec_umbralships_t4_tooltip:0 "[darktec_loc_menp_darktec_umbralships_t4_tooltip]"
+
+	menp_darktec_umbralships_t4_unknown:0 "???"
+	menp_darktec_umbralships_t4_unknown_desc:0 "???"
+	menp_darktec_umbralships_t4_unknown_tooltip:0 "???"
+
+	menp_darktec_umbralships_t4_known:0 "위상 물질 선박"
+	menp_darktec_umbralships_t4_known_desc:0 "우리 함선들을 위해 현실의 직물 자체가 휘어져, 동시에 존재하고 존재하지 않을 수 있게 합니다. 이는 다양한 상태를 오가며 우리에게 막대한 이점을 제공합니다."
+	menp_darktec_umbralships_t4_known_tooltip:0 "§Y암흑선박§!의 최종 단계 기술인 ['technology:tech_darktec_crisis_battleship']을(를) 잠금 해제합니다.\n\n암흑선박의 특수 §Y오라 부품§!을 §Y3단계§!로 업그레이드할 수 있습니다."
+	menp_darktec_umbralships_t4_known_tooltip_bioships:0 "§Y암흑선박§!의 최종 단계 기술인 ['technology:tech_darktec_crisis_stinger']을(를) 잠금 해제합니다.\n\n암흑선박의 특수 §Y오라 부품§!을 §Y3단계§!로 업그레이드할 수 있습니다."
+
+	# T5
+	menp_darktec_anchor_t5:0 "공허 찢기"
+	menp_darktec_anchor_t5_desc:0 "[darktec_loc_menp_darktec_anchor_t5_desc]"
+	menp_darktec_anchor_t5_tooltip:0 "[darktec_loc_menp_darktec_anchor_t5_tooltip]"
+
+	menp_darktec_anchor_t5_unknown:0 "?????"
+	menp_darktec_anchor_t5_unknown_desc:0 "?????"
+	menp_darktec_anchor_t5_unknown_tooltip:0 "?????"
+
+	menp_darktec_anchor_t5_known:0 "공허 찢기"
+	menp_darktec_anchor_t5_known_desc:0 "진공의 비(非)본질을 추출하는 것은 필수적입니다."
+	menp_darktec_anchor_t5_known_tooltip:0 "이제 ['building:building_darktec_anchor_3', £building£ $building_darktec_anchor_3_plural$]을(를) ['building:building_darktec_anchor_4', £building£ $building_darktec_anchor_4_plural$](으)로 업그레이드할 수 있습니다.\n\n£building£ $building_darktec_anchor_4_plural$(와(과) 이전 업그레이드 단계)은(는) 이제 우리 제국의 모든 암흑 건물 효과를 증폭시킵니다."
+
+	menp_darktec_entropy_t5:0 "최종 변칙점"
+	menp_darktec_entropy_t5_desc:0 "[darktec_loc_menp_darktec_entropy_t5_desc]"
+	menp_darktec_entropy_t5_tooltip:0 "[darktec_loc_menp_darktec_entropy_t5_tooltip]"
+
+	menp_darktec_entropy_t5_unknown:0 "?????"
+	menp_darktec_entropy_t5_unknown_desc:0 "?????"
+	menp_darktec_entropy_t5_unknown_tooltip:0 "?????"
+
+	menp_darktec_entropy_t5_known:0 "최종 변칙점"
+	menp_darktec_entropy_t5_known_desc:0 "지금까지는 이론에 불과했지만, 우리는 이제 얻은 모든 엔트로피를 시공간의 한 지점에 전달할 수 있다고 확신합니다."
+	menp_darktec_entropy_t5_known_tooltip:0 "특수 거대구조물: §Y결집된 변칙점§!을(를) §Y생성§!할 수 있게 됩니다.\n\n§H이 거대구조물을 건설하고 업그레이드함으로써 우리의 목표를 달성할 것입니다.§!"
+
+	menp_darktec_darkmatter_t5:0 "현실 제거"
+	menp_darktec_darkmatter_t5_desc:0 "[darktec_loc_menp_darktec_darkmatter_t5_desc]"
+	menp_darktec_darkmatter_t5_tooltip:0 "[darktec_loc_menp_darktec_darkmatter_t5_tooltip]"
+
+	menp_darktec_darkmatter_t5_unknown:0 "?????"
+	menp_darktec_darkmatter_t5_unknown_desc:0 "?????"
+	menp_darktec_darkmatter_t5_unknown_tooltip:0 "?????"
+
+	menp_darktec_darkmatter_t5_known:0 "현실 제거"
+	menp_darktec_darkmatter_t5_known_desc:0 "존재하든 존재하지 않든, 모든 것은 우리의 의지에 따라 재형성되고 휘어져야 합니다."
+	menp_darktec_darkmatter_t5_known_tooltip:0 "우리 함대에 §Y$bombardment_darktec_bombardment_entropy$§! 포격 태세를 잠금 해제합니다.\n이 포격 유형으로 파괴된 행성은 우리의 목표 달성을 위한 추가 자원을 제공할 것입니다.\n\n이제 ['building:building_darktec_storage_3', £building£ $building_darktec_storage_3_plural$]을(를) ['building:building_darktec_storage_4', £building£ $building_darktec_storage_4_plural$](으)로 업그레이드할 수 있습니다."
+
+	menp_darktec_umbralships_t5:0 "다차원 침공"
+	menp_darktec_umbralships_t5_desc:0 "[darktec_loc_menp_darktec_umbralships_t5_desc]"
+	menp_darktec_umbralships_t5_tooltip:0 "[darktec_loc_menp_darktec_umbralships_t5_tooltip]"
+
+	menp_darktec_umbralships_t5_unknown:0 "?????"
+	menp_darktec_umbralships_t5_unknown_desc:0 "?????"
+	menp_darktec_umbralships_t5_unknown_tooltip:0 "?????"
+
+	menp_darktec_umbralships_t5_known:0 "다차원 침공"
+	menp_darktec_umbralships_t5_known_desc:0 "다른 차원, 심지어 다른 현실에서도 그들은 너무 늦을 때까지 다가오는 것을 보지 못할 것입니다."
+	menp_darktec_umbralships_t5_known_tooltip:0 "이제 강력한 §Y엔트로피 선박 보조 부품§!을 연구하여 우리 마음대로 강력한 §Y함대 행동§!을 사용할 수 있게 됩니다."
+
+# Crisis objectives
+	darktec_crisobj_monthly_extract_entropy_name:0 "엔트로피 수확"
+	darktec_crisobj_monthly_extract_entropy_desc:0 "우주 구조의 층위 아래에는 잠재된 힘이 존재합니다. 팽창하고, 파괴하며, 죽음을 야기하면서 우주를 분리시킬 운명에 처한 힘. 그 힘은 우리의 것이 되리라.\n\n§Y$building_darktec_anchor_1_plural$§!을(를) 건설하고 이를 통해 $darktec_contained_entropy_with_icon$을(를) 수확하십시오."
+
+	darktec_crisobj_immediate_research_physics_technologies_name:0 "기술 연구"
+	darktec_crisobj_immediate_research_physics_technologies_desc:0 "우리는 우주가 쓰인 복잡한 방식을 이해해야 합니다.\n\n이 $darktec_contained_entropy_with_icon$ 보상을 얻으려면 §Y기술§!을(를) 연구하십시오."
+
+	darktec_crisobj_immediate_build_and_keep_umbral_buildings_name:0 "암영 건물 건설 또는 업그레이드"
+	darktec_crisobj_immediate_build_and_keep_umbral_buildings_desc:0 "솟아오르고 강화된, 엔트로피를 보존하고 형성하는 건물들이 이제 우리 제국의 기반입니다.\n\n이 $darktec_contained_entropy_with_icon$ 보상을 얻으려면 암영 건물을 §Y건설§!하거나 §Y업그레이드§!하십시오."
+
+	darktec_crisobj_yearly_retain_vassals_name:0 "봉신 유지"
+	darktec_crisobj_yearly_retain_vassals_desc:0 "우리의 대의를 돕는 자들은 우리의 호의를, 그리고 결국 우리의 지식을 받을 자격이 있습니다.\n\n이 §Y연간§! $darktec_contained_entropy_with_icon$ 보상을 얻으려면 §Y봉신§!을(를) 유지하십시오."
+
+	darktec_crisobj_yearly_retain_megastructures_name:0 "거대 구조물 유지"
+	darktec_crisobj_yearly_retain_megastructures_desc:0 "우주에 묶인 거대 구조물의 웅장함은 관찰하기에 아름다울 뿐만 아니라, 표준을 거스르고 공허를 수확하는 이점을 얻는 또 다른 방법입니다.\n\n이 §Y연간§! $darktec_contained_entropy_with_icon$ 보상을 얻으려면 고유 유형의 §Y거대 구조물§!을(를) 유지하십시오."
+
+	darktec_crisobj_yearly_galcom_retain_galcom_respect_name:0 "은하 공동체 지지 확보"
+	darktec_crisobj_yearly_galcom_retain_galcom_respect_desc:0 "우리는 죽은 우주의 차가운 포옹으로 인한 불필요한 멸망을 피하기 위해 우리의 대의를 다른 이들에게 납득시켜야 합니다.\n\n이 §Y연간§! $darktec_contained_entropy_with_icon$ 보상을 얻으려면 은하 공동체 §Y평의회§!의 일원이 되거나 은하 법을 §Y위반하지§! 마십시오."
+
+	darktec_crisobj_immediate_conquer_worlds_name:0 "행성 정복 또는 수확"
+	darktec_crisobj_immediate_conquer_worlds_desc:0 "우리에게 저항하는 자들을 위한 공간은 없으며, 따라서 우리는 그들을 어떤 거주 가능한 표면에서도 추방해야 합니다.\n\n이 $darktec_contained_entropy_with_icon$ 보상을 얻으려면 행성을 §Y정복§!하거나 §Y수확§!하십시오."
+
+	darktec_crisobj_immediate_assimilate_pops_name:0 "개체 동화"
+	darktec_crisobj_immediate_assimilate_pops_desc:0 "모두는 굴복해야 합니다. 우리와 같아지거나, 공허의 일부가 됨으로써 말입니다.\n\n이 $darktec_contained_entropy_with_icon$ 보상을 얻으려면 엔트로피로 §Y개체를 동화§!하십시오."
+
+	darktec_crisobj_immediate_taint_world_name:0 "행성 오염"
+	darktec_crisobj_immediate_taint_world_desc:0 "거대한 암흑 물질장, 엔트로피적 암흑의 강물, 이 모든 것이 우리가 정착하는 행성들을 적시고 양 차원의 결합을 위한 완벽한 촉매로 변환합니다.\n\n이 $darktec_contained_entropy_with_icon$ 보상을 얻으려면 엔트로피로 행성을 §Y오염§!시키십시오."
+
+	darktec_crisobj_immediate_build_umbral_ships_name:0 "암영 함선 건설"
+	darktec_crisobj_immediate_build_umbral_ships_desc:0 "보이지 않고, 유려하며, 암흑 물질로 포화된, 재활용된 엔트로피의 힘으로 우리가 창조한 함선들이 우리의 미래입니다.\n\n이 $darktec_contained_entropy_with_icon$ 보상을 얻으려면 §Y암영 함선§!을(를) 건설하십시오. 보상은 함선 등급당 증가합니다."
+
+	darktec_crisobj_immediate_destroy_empires_name:0 "제국 파괴"
+	darktec_crisobj_immediate_destroy_empires_desc:0 "오랫동안 그들은 우리의 길을 막았습니다. 이제, 그들은 공허에 속합니다.\n\n이 $darktec_contained_entropy_with_icon$ 보상을 얻으려면 한 제국을 §Y섬멸§!하십시오."
+# /
+
+# Crisis misc
+
+# Umbral Ships
+	darktec_umbral_component:0 "§E암영§!"
+	darktec_umbral_component_weapon_damage_mult:0 "암영 부품 피해"
+	mod_darktec_umbral_component_weapon_damage_mult:0 "$darktec_umbral_component_weapon_damage_mult$"
+
+	darktec_crisis_destroyer:0 "암영 무뢰한"
+	darktec_crisis_destroyer_plural:0 "$darktec_crisis_destroyer$"
+	darktec_crisis_destroyer_cap:0 "$darktec_crisis_destroyer$"
+	darktec_crisis_destroyer_desc:0 "무뢰한은 비바리온 물질의 파괴적인 힘을 우주 전투에 도입하여, 물질적 무결성을 방어막 성능과 교환하면서도 엄청난 양의 피해를 입히고 막아낼 수 있습니다."
+	darktec_crisis_destroyer_tooltip:0 "무뢰한은 암영 함선의 첫 번째 등급이며, 탈바리온 제국의 주요 공격 및 방어선 역할을 합니다.\n자체 수정자를 위한 특수 오라 부품을 가집니다.\n이 함선은 다음 수정자를 가집니다:\n  - 선체: §R-50%§!\n  - 추가 보호막 배율: §G+50%§!\n  - 보호막 경화: §G+10%§!"
+
+	darktec_crisis_cruiser:0 "암영 약탈자"
+	darktec_crisis_cruiser_plural:0 "$darktec_crisis_cruiser$"
+	darktec_crisis_cruiser_cap:0 "$darktec_crisis_cruiser$"
+	darktec_crisis_cruiser_desc:0 "약탈자는 무뢰한의 회복력과 피해 잠재력을 능가하므로, 주요 공격 및 방어선 역할을 합니다. 그들의 영묘한 실루엣은 강력한 보호막 보너스가 방출하는 에너지 장의 밀도로 빛납니다."
+	darktec_crisis_cruiser_tooltip:0 "약탈자는 암영 함선의 두 번째 등급으로, 순양함의 역할을 대체하여 다재다능하고 내구성이 뛰어나면서도 매우 공격적인 함선입니다.\n자체 수정자를 위한 특수 오라 부품을 가집니다.\n이 함선은 다음 수정자를 가집니다:\n  - 선체: §R-50%§!\n  - 추가 보호막 배율: §G+100%§!\n  - 보호막 경화: §G+10%§!"
+
+	darktec_crisis_battleship:0 "암영 침입자"
+	darktec_crisis_battleship_plural:0 "$darktec_crisis_battleship$"
+	darktec_crisis_battleship_cap:0 "$darktec_crisis_battleship$"
+	darktec_crisis_battleship_desc:0 "암흑 물질로 과포화된 이 강력한 함선들은 암영 함선 중에서도 최상위 등급입니다. 가장 강력한 공격에도 견딜 수 있는 민첩성과 막대한 방어 능력을 유지하는 파괴의 플랫폼입니다."
+	darktec_crisis_battleship_tooltip:0 "침입자는 암영 함선의 상위 등급으로, 더 다양한 구획과 치명성을 지닌 강화된 전함입니다.\n자체 수정자를 위한 특수 오라 부품을 가집니다.\n이 함선은 다음 수정자를 가집니다:\n  - 선체: §R-50%§!\n  - 추가 보호막 배율: §G+250%§!\n  - 보호막 경화: §G+10%§!"
+
+	darktec_crisis_mauler:0 "암영 추적자"
+	darktec_crisis_mauler_plural:0 "$darktec_crisis_mauler$"
+	darktec_crisis_mauler_cap:0 "$darktec_crisis_mauler$"
+	darktec_crisis_mauler_desc:0 "어둠에 가려진 이 유기 함선은 강화된 보호막으로 인해 실루엣이 변하면서 먹이를 찾아 공허를 가로지릅니다."
+	darktec_crisis_mauler_tooltip:0 "추적자는 초기 암영 함선 등급으로, 추가 치명성을 지닌 강화된 공격형 함선입니다.\n자체 수정자를 위한 특수 오라 부품을 가집니다.\n이 함선은 다음 수정자를 가집니다:\n  - 선체: §R-50%§!\n  - 추가 보호막 배율: §G+50%§!\n  - 보호막 경화: §G+10%§!"
+
+	darktec_crisis_weaver:0 "암영 배회자"
+	darktec_crisis_weaver_plural:0 "$darktec_crisis_weaver$s"
+	darktec_crisis_weaver_cap:0 "$darktec_crisis_weaver$"
+	darktec_crisis_weaver_desc:0 "원거리에서 치명적이며 지원으로서도 능한 프라울러는 엄청난 다재다능한 능력을 활용하여 전장을 치명적인 합창으로 끌어올립니다."
+	darktec_crisis_weaver_tooltip:0 "프라울러는 위버의 역할을 반영하면서도 섹션 다양성이 증가한, 암영 함선 중 중간 단계를 담당합니다."
+
+	darktec_crisis_stinger:0 "암영 리버"
+	darktec_crisis_stinger_plural:0 "$darktec_crisis_stinger$s"
+	darktec_crisis_stinger_cap:0 "$darktec_crisis_stinger$"
+	darktec_crisis_stinger_desc:0 "엔트로피와 함께 재단되고 성장한 이 거대한 유기체는 우주를 항해하며 끔찍한 광경을 선사합니다. 암영 함선의 정점으로서, 가장 강력한 타격조차 견딜 수 있는 민첩성과 막대한 방어 능력을 유지하는 파괴의 플랫폼입니다."
+	darktec_crisis_stinger_tooltip:0 "리버는 암영 함선의 정점으로, 풍부한 섹션 다양성을 가진 개선된 스팅어 역할을 합니다."
+
+
+	DARKTEC_CRISIS_DESTROYER_BRAWLER:0 "근접전 브리건드"
+	DARKTEC_CRISIS_DESTROYER_PICKET:0 "초계형 브리건드"
+	DARKTEC_CRISIS_DESTROYER_MISSILES:0 "미사일 브리건드"
+	DARKTEC_CRISIS_DESTROYER_ARTILLERY:0 "포격형 브리건드"
+
+	DARKTEC_CRISIS_CRUISER_ARTILLERY:0 "포격형 마라우더"
+	DARKTEC_CRISIS_CRUISER_BRAWLER:0 "근접전 마라우더"
+	DARKTEC_CRISIS_CRUISER_MISSILES:0 "미사일 마라우더"
+
+	DARKTEC_CRISIS_BATTLESHIP_ANNIHILATOR:0 "섬멸형 인터로퍼"
+	DARKTEC_CRISIS_BATTLESHIP_ARTILLERY:0 "포격형 인터로퍼"
+	DARKTEC_CRISIS_BATTLESHIP_BRAWLER:0 "근접전 인터로퍼"
+	DARKTEC_CRISIS_BATTLESHIP_CARRIER:0 "항모형 인터로퍼"
+
+	DARKTEC_CRISIS_MAULER_MELEE:0 "포식자 스토커"
+	DARKTEC_CRISIS_MAULER_BRAWLER:0 "근접전 스토커"
+	DARKTEC_CRISIS_MAULER_MISSILES:0 "추방자 스토커"
+
+	DARKTEC_CRISIS_WEAVER_SUPPORT:0 "지원형 프라울러"
+	DARKTEC_CRISIS_WEAVER_BRAWLER:0 "근접전 프라울러"
+	DARKTEC_CRISIS_WEAVER_ARTILLERY:0 "포격형 프라울러"
+
+	DARKTEC_CRISIS_STINGER_ANNIHILATOR:0 "섬멸형 리버"
+	DARKTEC_CRISIS_STINGER_ARTILLERY:0 "포격형 리버"
+	DARKTEC_CRISIS_STINGER_BRAWLER:0 "근접전 리버"
+	DARKTEC_CRISIS_STINGER_CARRIER:0 "항모형 리버"
+	DARKTEC_CRISIS_STINGER_PICKET:0 "초계형 리버"
+
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T1:0 "암영 유인선 I"
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T1_DESC:0 "이 암영 함선은 특수 장치를 사용하여 배경 복사를 활용하여 신호를 감추고, 자체 방출을 공허를 향해 돌립니다."
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T1_TOOLTIP:0 "함대 행동으로 §G은폐§!를 사용할 수 있게 합니다."
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T2:0 "암영 유인선 II"
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T2_DESC:0 "$DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T1_DESC$"
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T2_TOOLTIP:0 "$DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T1_TOOLTIP$"
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T3:0 "암영 유인선 III"
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T3_DESC:0 "$DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T1_DESC$"
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T3_TOOLTIP:0 "$DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T1_TOOLTIP$"
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T1:0 "암영 교란선 I"
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T1_DESC:0 "소규모 국지적 위상 도약을 사용하여, 이 함선은 자신의 신호를 흐리게 만들어 적의 표적 지정을 극도로 어렵게 만듭니다."
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T1_TOOLTIP:0 ""
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T2:0 "암영 교란선 II"
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T2_DESC:0 "$DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T1_DESC$"
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T2_TOOLTIP:0 "$DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T1_TOOLTIP$"
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T3:0 "암영 교란선 III"
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T3_DESC:0 "$DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T1_DESC$"
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T3_TOOLTIP:0 "$DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T1_TOOLTIP$"
+
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T1:0 "암영 위장 I"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T1_DESC:0 "이 암영 생명체는 특수 장치를 사용하여 배경 복사를 활용하여 신호를 감추고, 자체 방출을 공허를 향해 돌립니다."
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T1_TOOLTIP:0 ""
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T2:0 "암영 위장 II"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T2_DESC:0 "$DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T1_DESC$"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T2_TOOLTIP:0 "$DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T1_TOOLTIP$"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T3:0 "암영 위장 III"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T3_DESC:0 "$DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T1_DESC$"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T3_TOOLTIP:0 "$DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T1_TOOLTIP$"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_EVASION_T1:0 "암영 은폐자 I"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_EVASION_T1_DESC:0 "소규모 국지적 위상 도약을 사용하여, 이 함선은 자신의 신호를 흐리게 만들어 적의 표적 지정을 극도로 어렵게 만듭니다."
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_EVASION_T1_TOOLTIP:0 "$DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T1_TOOLTIP$"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_EVASION_T2:0 "암영 은폐자 II"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_EVASION_T2_DESC:0 "$DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_EVASION_T1_DESC$"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_EVASION_T2_TOOLTIP:0 "$DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_EVASION_T1_TOOLTIP$"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_EVASION_T3:0 "암영 은폐자 III"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_EVASION_T3_DESC:0 "$DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_EVASION_T1_DESC$"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_EVASION_T3_TOOLTIP:0 "$DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_EVASION_T1_TOOLTIP$"
+
+	# Tech mechanical
+	tech_darktec_crisis_destroyer:0 "$darktec_crisis_destroyer$"
+	tech_darktec_crisis_destroyer_desc:0 "기술의 경이로움인 이 함선은 주로 준물질로 구성되어 있으며, 공허를 항해할 때 위상 상태를 전환하거나, 준물질 일부를 원하는 목표물로 투척할 수 있습니다."
+	tech_darktec_crisis_destroyer_unlocks_title:0 "§H함선 유형 잠금 해제:§! $darktec_crisis_destroyer$"
+	tech_darktec_crisis_destroyer_unlocks_desc:0 "§H$darktec_crisis_destroyer$§!\n$darktec_crisis_destroyer_tooltip$"
+
+	tech_darktec_crisis_cruiser:0 "$darktec_crisis_cruiser$"
+	tech_darktec_crisis_cruiser_desc:0 "기존 설계도를 개선하여, 이 함선은 엔트로피 구성이 그 능력을 비정상적인 수준으로 크게 증폭시키기 때문에 설계된 동급 함선과 비교했을 때 믿을 수 없는 양의 피해를 견디고 입힐 수 있습니다."
+	tech_darktec_crisis_cruiser_unlocks_title:0 "§H함선 유형 잠금 해제:§! $darktec_crisis_cruiser$"
+	tech_darktec_crisis_cruiser_unlocks_desc:0 "§H$darktec_crisis_cruiser$§!\n$darktec_crisis_cruiser_tooltip$"
+
+	tech_darktec_crisis_battleship:0 "$darktec_crisis_battleship$"
+	tech_darktec_crisis_battleship_desc:0 "암영 기술의 경이로움으로, 이들의 존재 자체가 주변 현실을 뒤틀어 놓습니다. 준물질로 구성되고 암흑 물질의 힘을 활용하는 이 개선된 전함들은 경로를 가로막는 모든 것을 파괴할 수 있습니다."
+	tech_darktec_crisis_battleship_unlocks_title:0 "§H함선 유형 잠금 해제:§! $darktec_crisis_battleship$"
+	tech_darktec_crisis_battleship_unlocks_desc:0 "§H$darktec_crisis_battleship$§!\n$darktec_crisis_battleship_tooltip$"
+
+	# Techs organic
+	tech_darktec_crisis_mauler:0 "$darktec_crisis_mauler$"
+	tech_darktec_crisis_mauler_desc:0 "새로운 유기체 함선 종에 비바리온 물질의 미량 흔적을 선택적으로 추가함으로써, 우리는 일반 공간과 공허 공간을 오가며 존재 자체로 시공간을 뒤틀어 놓는 엄청나게 강력한 개체를 만들어낼 수 있습니다."
+	tech_darktec_crisis_mauler_unlocks_title:0 "§H함선 유형 잠금 해제:§! $darktec_crisis_mauler$"
+	tech_darktec_crisis_mauler_unlocks_desc:0 "§H$darktec_crisis_mauler$§!\n$darktec_crisis_mauler_tooltip$"
+
+	tech_darktec_crisis_weaver:0 "$darktec_crisis_weaver$"
+	tech_darktec_crisis_weaver_desc:0 "일반 함선의 끔찍한 반영인 이 유기체 함선은 빛을 자신과 동족에게 유리하게 구부려 현실의 직물과 스스로 위장합니다."
+	tech_darktec_crisis_weaver_unlocks_title:0 "§H함선 유형 잠금 해제:§! $darktec_crisis_weaver$"
+	tech_darktec_crisis_weaver_unlocks_desc:0 "§H$darktec_crisis_weaver$§!\n$darktec_crisis_weaver_tooltip$"
+
+	tech_darktec_crisis_stinger:0 "$darktec_crisis_stinger$"
+	tech_darktec_crisis_stinger_desc:0 "거대한 암흑 물질 포화 상태의 치명적인 생명체인 이 거대한 유기체 함선은 실제로 움직이지 않고, 먹이를 찾아 공허를 가르며 공간의 틈을 봉인합니다. 그 먹잇감은 무엇이 자신을 덮쳤는지 결코 알지 못할 것입니다."
+	tech_darktec_crisis_stinger_unlocks_title:0 "§H함선 유형 잠금 해제:§! $darktec_crisis_stinger$"
+	tech_darktec_crisis_stinger_unlocks_desc:0 "§H$darktec_crisis_stinger$§!\n$darktec_crisis_stinger_tooltip$"
+
+
+# Umbral Buildings
+	# Techs
+	tech_darktec_umbral_extractors_t1:0 "암영 추출"
+	tech_darktec_umbral_extractors_t1_desc:0 "엔트로피를 '제어 가능한' 존재로 변환하는 것은 집약적인 과정이지만, 부산물은 적절히 사용하면 우리 경제를 크게 향상시킵니다."
+	tech_darktec_umbral_extractors_t2:0 "암영 물질 포식"
+	tech_darktec_umbral_extractors_t2_desc:0 "제어된 엔트로피와 암흑 물질을 동력원으로 순환시키거나, 바리온 물질을 준물질로 전환함으로써 일부 산업 공정을 가속화할 수 있습니다."
+	tech_darktec_umbral_extractors_t3:0 "암영 물질 다중우주 순환"
+	tech_darktec_umbral_extractors_t3_desc:0 "국지적인 엔트로피를 수확하는 문제뿐만 아니라, 시공간의 한 지점에서 붕괴하는 평행 우주에 미세하게 접근할 수 있다고 이론화합니다."
+
+	tech_darktec_umbral_industry_t1:0 "암영 단조"
+	tech_darktec_umbral_industry_t1_desc:0 "표준 물질은 얇게 제어된 준물질 층으로 업그레이드하여 그 능력을 크게 강화할 수 있습니다."
+	tech_darktec_umbral_industry_t2:0 "암영 물질 용해"
+	tech_darktec_umbral_industry_t2_desc:0 "준물질을 반바리온 합금으로 가공하는 것은 빠른 경제적 및 군사적 확장을 위한 혁신적인 새 방법이 될 수 있습니다."
+	tech_darktec_umbral_industry_t3:0 "암영 과잉 응축"
+	tech_darktec_umbral_industry_t3_desc:0 "준물질 합금 층은 동일한 물리적 차원에서도 겹쳐질 수 있어, 미미한 단점만으로 생산량을 기하급수적으로 증가시킵니다."
+
+	tech_darktec_umbral_research_t1:0 "암영 분석 연구"
+	tech_darktec_umbral_research_t1_desc:0 "우발적인 우주 소멸 사건의 위험 없이 진공 연구의 잠재력을 발견하는 것은 분명 우리의 연구를 가속화할 것입니다."
+	tech_darktec_umbral_research_t2:0 "암영 통계 예측"
+	tech_darktec_umbral_research_t2_desc:0 "무작위성과 혼돈은 역설적으로 이국적이고 이론적인 기술 습득에 결정적인 역할을 합니다."
+	tech_darktec_umbral_research_t3:0 "암영 다중 우주 미적분학"
+	tech_darktec_umbral_research_t3_desc:0 "끊임없이 변화하는 엔트로피 상태를 면밀히 연구하여, 동일한 공간이지만 잠재적으로 다른 차원에서 발생하는 시간 발산 현상을 관찰할 수 있게 되었습니다."
+
+
+
+	# Core
+	mod_darktec_umbral_boost:0 "£sr_dark_matter£ 암영 건물 강화"
+	mod_darktec_umbral_boost_desc:0 "엔트로피를 다른 시스템으로 재분배함으로써, 해당 시스템의 효율성이 기하급수적으로 향상됩니다."
+
+	building_darktec_affected_by_umbral_boost:0 "\n\n§H특징§!: §E암영 시너지§!\n이 £building£건물의 수정치 또는 생산량은 §Y$mod_darktec_umbral_boost$§!의 영향을 받습니다."
+
+	building_darktec_provides_umbral_boost:0 "\n\n§H특징§!: §E암영 시너지§!\n이 £building£건물은 다른 암영 건물의 생산량이나 수정치를 §Y강화§!합니다."
+
+	building_darktec_grows_entrophereals:0 "\n\n§H특징§!: §E엔트로피 존재 재구성§!\n이 £building£건물은 변형된 상태의 엔트로피 존재들을 재구성하여, 추가 인구를 §Y생성§!합니다.\n다음 인구 생성 주기는 §Y[owner.darktec_entrophereal_growth_pulse]§!에 완료됩니다."
+
+	building_darktec_allows_entrophereal_assimilation:0 "\n\n§H특징§!: §E엔트로피 존재 동화§!\n이 £building£건물은 §E엔트로피 존재 재구성§! 주기가 완료되면 비-엔트로피 존재 인구를 주종족의 엔트로피 존재 인구로 동화시키는 것을 허용합니다."
+
+	building_darktec_anchor_1:0 "엔트로피 재분배 닻"
+	building_darktec_anchor_1_plural:0 "$building_darktec_anchor_1$s"
+	building_darktec_anchor_1_desc:0 "지역 엔트로피를 보존 가능한 형태로 통합하는 거대한 구조물입니다. 물질 상태가 변할 때 발생하는 파라물질 공명이 막대한 양의 배경 에너지를 생성하기 때문에 끊임없이 윙윙거리며 진동합니다."
+	building_darktec_anchor_1_tooltip:0 ""
+
+	building_darktec_anchor_2:0 "엔트로피 응축 사이펀"
+	building_darktec_anchor_2_plural:0 "$building_darktec_anchor_2$s"
+	building_darktec_anchor_2_desc:0 "$building_darktec_anchor_1_desc$"
+	building_darktec_anchor_2_tooltip:0 ""
+
+	building_darktec_anchor_3:0 "엔트로피 파라물질 수확기"
+	building_darktec_anchor_3_plural:0 "$building_darktec_anchor_3$s"
+	building_darktec_anchor_3_desc:0 "$building_darktec_anchor_1_desc$"
+	building_darktec_anchor_3_tooltip:0 ""
+
+	building_darktec_anchor_4:0 "엔트로피 사신"
+	building_darktec_anchor_4_plural:0 "$building_darktec_anchor_4$s"
+	building_darktec_anchor_4_desc:0 "$building_darktec_anchor_1_desc$"
+	building_darktec_anchor_4_tooltip:0 ""
+
+	building_darktec_storage_1:0 "파라물질 사일로"
+	building_darktec_storage_1_plural:0 "$building_darktec_storage_1$s"
+	building_darktec_storage_1_desc:0 "이 격리 시설은 미세 보호막 기술을 사용하여 비-중입자 물질을 안전하게 저장하며, 누출이나 사보타주 발생 시 재앙적인 붕괴 사태를 피하기 위해 다수의 예방 조치와 대응책이 시행됩니다."
+	building_darktec_storage_1_tooltip:0 ""
+
+	building_darktec_storage_2:0 "파라물질 격리 시설"
+	building_darktec_storage_2_plural:0 "$building_darktec_storage_2$s"
+	building_darktec_storage_2_desc:0 "$building_darktec_storage_1_desc$"
+	building_darktec_storage_2_tooltip:0 ""
+
+	building_darktec_storage_3:0 "파라물질 보관소"
+	building_darktec_storage_3_plural:0 "$building_darktec_storage_3$s"
+	building_darktec_storage_3_desc:0 "$building_darktec_storage_1_desc$"
+	building_darktec_storage_3_tooltip:0 ""
+
+	building_darktec_storage_4:0 "파라물질 금고"
+	building_darktec_storage_4_plural:0 "$building_darktec_storage_4$s"
+	building_darktec_storage_4_desc:0 "$building_darktec_storage_1_desc$"
+	building_darktec_storage_4_tooltip:0 ""
+
+	building_darktec_umbral_portal_1:0 "엔트로피 존재 재구성기"
+	building_darktec_umbral_portal_1_plural:0 "$building_darktec_umbral_portal_1$s"
+	building_darktec_umbral_portal_1_desc:0 "엔트로피 변환으로 인해 분산된 비-중입자 물질을 모으는 방법으로 기능하며, 이 건물은 새로운 엔트로피 존재들이 안정적인 형태로 존재할 수 있게 합니다."
+	building_darktec_umbral_portal_1_tooltip:0 ""
+
+	building_darktec_umbral_portal_2:0 "엔트로피 존재 유화기"
+	building_darktec_umbral_portal_2_plural:0 "$building_darktec_umbral_portal_2$s"
+	building_darktec_umbral_portal_2_desc:0 "$building_darktec_umbral_portal_1_desc$"
+	building_darktec_umbral_portal_2_tooltip:0 ""
+
+	building_darktec_umbral_assimilation_1:0 "엔트로피 유화기"
+	building_darktec_umbral_assimilation_1_plural:0 "$building_darktec_umbral_assimilation_1$s"
+	building_darktec_umbral_assimilation_1_desc:0 "복잡한 조합 과정을 통해 이 건물은 상당한 규모의 인구가 그 구성이 급진적으로 변경되어, 단순한 중입자 또는 비-중입자 개체 이상으로 거듭날 수 있도록 합니다."
+
+	building_darktec_umbral_assimilation_2:0 "엔트로피 수렴기"
+	building_darktec_umbral_assimilation_2_plural:0 "$building_darktec_umbral_assimilation_2$s"
+	building_darktec_umbral_assimilation_2_desc:0 "$building_darktec_umbral_assimilation_1_desc$"
+	building_darktec_umbral_assimilation_2_tooltip:0 "DISCARDED"
+
+	building_darktec_umbral_reallocator_specialist:0 "DISCARDED"
+	building_darktec_umbral_reallocator_specialist_plural:0 "DISCARDED"
+	building_darktec_umbral_reallocator_specialist_desc:0 "DISCARDED"
+	building_darktec_umbral_reallocator_specialist_tooltip:0 "DISCARDED"
+
+	building_darktec_umbral_reallocator_menial:0 "DISCARDED"
+	building_darktec_umbral_reallocator_menial_plural:0 "DISCARDED"
+	building_darktec_umbral_reallocator_menial_desc:0 "DISCARDED"
+	building_darktec_umbral_reallocator_menial_tooltip:0 "DISCARDED"
+
+	building_darktec_umbral_reallocator_utility:0 "DISCARDED"
+	building_darktec_umbral_reallocator_utility_plural:0 "DISCARDED"
+	building_darktec_umbral_reallocator_utility_desc:0 "DISCARDED"
+	building_darktec_umbral_reallocator_utility_tooltip:0 "DISCARDED"
+
+	building_darktec_umbral_reallocator_pops:0 "DISCARDED"
+	building_darktec_umbral_reallocator_pops_plural:0 "DISCARDED"
+	building_darktec_umbral_reallocator_pops_desc:0 "DISCARDED"
+	building_darktec_umbral_reallocator_pops_tooltip:0 "DISCARDED"
+
+	# Secondary
+	# Moar dark matter
+	building_darktec_umbral_compressor_1:0 "진공 압축기"
+	building_darktec_umbral_compressor_1_plural:0 "$building_darktec_umbral_compressor_1$s"
+	building_darktec_umbral_compressor_1_desc:0 "이 구조물은 현지 엔트로피 추출 시설이 원자재를 안전하게 압축하고 변환하는 과정을 통해 비바리온 물질을 생성하는 데 도움을 줍니다."
+	building_darktec_umbral_compressor_1_tooltip:0 ""
+
+	building_darktec_umbral_compressor_2:0 "진공 합금기"
+	building_darktec_umbral_compressor_2_plural:0 "$building_darktec_umbral_compressor_2$s"
+	building_darktec_umbral_compressor_2_desc:0 "$building_darktec_umbral_compressor_1_desc$"
+	building_darktec_umbral_compressor_2_tooltip:0 ""
+
+	building_darktec_umbral_compressor_3:0 "진공 융합기"
+	building_darktec_umbral_compressor_3_plural:0 "$building_darktec_umbral_compressor_3$s"
+	building_darktec_umbral_compressor_3_desc:0 "$building_darktec_umbral_compressor_1_desc$"
+	building_darktec_umbral_compressor_3_tooltip:0 ""
+
+	building_darktec_umbral_compressor_4:0 "진공 장막 융합기"
+	building_darktec_umbral_compressor_4_plural:0 "$building_darktec_umbral_compressor_4$s"
+	building_darktec_umbral_compressor_4_desc:0 "$building_darktec_umbral_compressor_1_desc$"
+	building_darktec_umbral_compressor_4_tooltip:0 ""
+
+	# Dark matter into minerals and energy
+	building_darktec_umbral_decompressor_1:0 "공허 해체기"
+	building_darktec_umbral_decompressor_1_plural:0 "$building_darktec_umbral_decompressor_1$s"
+	building_darktec_umbral_decompressor_1_desc:0 "이 건물은 비바리온 물질에 강력한 입자장을 적용하여 특이 이소포드를 알아볼 수 있는 물질과 에너지로 변환할 수 있게 합니다."
+	building_darktec_umbral_decompressor_1_tooltip:0 ""
+
+	building_darktec_umbral_decompressor_2:0 "공허 분해기"
+	building_darktec_umbral_decompressor_2_plural:0 "$building_darktec_umbral_decompressor_2$s"
+	building_darktec_umbral_decompressor_2_desc:0 "$building_darktec_umbral_decompressor_1_desc$"
+	building_darktec_umbral_decompressor_2_tooltip:0 ""
+
+	building_darktec_umbral_decompressor_3:0 "공허 원자화기"
+	building_darktec_umbral_decompressor_3_plural:0 "$building_darktec_umbral_decompressor_3$s"
+	building_darktec_umbral_decompressor_3_desc:0 "$building_darktec_umbral_decompressor_1_desc$"
+	building_darktec_umbral_decompressor_3_tooltip:0 ""
+
+	building_darktec_umbral_decompressor_4:0 "공허 장막 원자화기"
+	building_darktec_umbral_decompressor_4_plural:0 "$building_darktec_umbral_decompressor_4$s"
+	building_darktec_umbral_decompressor_4_desc:0 "$building_darktec_umbral_decompressor_1_desc$"
+	building_darktec_umbral_decompressor_4_tooltip:0 ""
+
+	# Dark matter into extra food
+	building_darktec_umbral_food_1:0 "주입된 경작지"
+	building_darktec_umbral_food_1_plural:0 "$building_darktec_umbral_food_1$s"
+	building_darktec_umbral_food_1_desc:0 "바이오매스에 특이 방사선과 빛 유사 입자를 쬐면 그 성장과 생산이 촉진됩니다. 그러나 섭취용으로 사용될 경우, '이상하게' 바삭거린다는 보고가 있을 수 있습니다."
+	building_darktec_umbral_food_1_tooltip:0 ""
+
+	building_darktec_umbral_food_2:0 "포화된 경작지"
+	building_darktec_umbral_food_2_plural:0 "$building_darktec_umbral_food_2$s"
+	building_darktec_umbral_food_2_desc:0 "$building_darktec_umbral_food_1_desc$"
+	building_darktec_umbral_food_2_tooltip:0 ""
+
+	building_darktec_umbral_food_3:0 "공허 속박 경작지"
+	building_darktec_umbral_food_3_plural:0 "$building_darktec_umbral_food_3$s"
+	building_darktec_umbral_food_3_desc:0 "$building_darktec_umbral_food_1_desc$"
+	building_darktec_umbral_food_3_tooltip:0 ""
+
+	building_darktec_umbral_food_4:0 "공허 속박 장막 경작지"
+	building_darktec_umbral_food_4_plural:0 "$building_darktec_umbral_food_4$s"
+	building_darktec_umbral_food_4_desc:0 "$building_darktec_umbral_food_1_desc$"
+	building_darktec_umbral_food_4_tooltip:0 ""
+
+	# Alloys from DM
+	building_darktec_void_foundry_1:0 "암영 제련소"
+	building_darktec_void_foundry_1_plural:0 "$building_darktec_void_foundry_1$s"
+	building_darktec_void_foundry_1_desc:0 "비바리온 물질과 에너지가 강력 합금과 결합하여 기하급수적으로 증대되는 방식으로 초물질 합금을 생산하는 거대한 제련소입니다."
+	building_darktec_void_foundry_1_tooltip:0 ""
+
+	building_darktec_void_foundry_2:0 "암영 신제련소"
+	building_darktec_void_foundry_2_plural:0 "$building_darktec_void_foundry_2$s"
+	building_darktec_void_foundry_2_desc:0 "$building_darktec_void_foundry_1_desc$"
+	building_darktec_void_foundry_2_tooltip:0 ""
+
+	building_darktec_void_foundry_3:0 "암영 초제련소"
+	building_darktec_void_foundry_3_plural:0 "$building_darktec_void_foundry_3$s"
+	building_darktec_void_foundry_3_desc:0 "$building_darktec_void_foundry_1_desc$"
+	building_darktec_void_foundry_3_tooltip:0 ""
+
+	building_darktec_void_foundry_4:0 "암영 은폐 초제련소"
+	building_darktec_void_foundry_4_plural:0 "$building_darktec_void_foundry_3$s"
+	building_darktec_void_foundry_4_desc:0 "$building_darktec_void_foundry_1_desc$"
+	building_darktec_void_foundry_4_tooltip:0 ""
+
+	# Exotics from DM
+	building_darktec_void_refinery_1:0 "바리온 정제소"
+	building_darktec_void_refinery_1_plural:0 "DISCARDED"
+	building_darktec_void_refinery_1_desc:0 "DISCARDED"
+	building_darktec_void_refinery_1_tooltip:0 "DISCARDED"
+
+	building_darktec_void_refinery_2:0 "바리온 신정제소"
+	building_darktec_void_refinery_2_plural:0 "DISCARDED"
+	building_darktec_void_refinery_2_desc:0 "DISCARDED"
+	building_darktec_void_refinery_2_tooltip:0 "DISCARDED"
+
+	building_darktec_void_refinery_3:0 "바리온 초정제소"
+	building_darktec_void_refinery_3_plural:0 "DISCARDED"
+	building_darktec_void_refinery_3_desc:0 "DISCARDED"
+	building_darktec_void_refinery_3_tooltip:0 "DISCARDED"
+
+	building_darktec_void_refinery_4:0 "바리온 재통합 정제소"
+	building_darktec_void_refinery_4_plural:0 "DISCARDED"
+	building_darktec_void_refinery_4_desc:0 "DISCARDED"
+	building_darktec_void_refinery_4_tooltip:0 "DISCARDED"
+
+	# Research from DM
+	building_darktec_void_research_1:0 "변칙 연구 거점"
+	building_darktec_void_research_1_plural:0 "$building_darktec_void_research_1$s"
+	building_darktec_void_research_1_desc:0 "이 시설은 비바리온 물질 및 공허 결합 응용 분야를 연구하는 최첨단 센터 역할을 합니다."
+	building_darktec_void_research_1_tooltip:0 ""
+
+	building_darktec_void_research_2:0 "변칙 연구실"
+	building_darktec_void_research_2_plural:0 "변칙 연구실"
+	building_darktec_void_research_2_desc:0 "$building_darktec_void_research_1_desc$"
+	building_darktec_void_research_2_tooltip:0 ""
+
+	building_darktec_void_research_3:0 "변칙 연구 원자로"
+	building_darktec_void_research_3_plural:0 "$building_darktec_void_research_3$s"
+	building_darktec_void_research_3_desc:0 "$building_darktec_void_research_1_desc$"
+	building_darktec_void_research_3_tooltip:0 ""
+
+	building_darktec_void_research_4:0 "변칙 연구 초원자로"
+	building_darktec_void_research_4_plural:0 "$building_darktec_void_research_4$s"
+	building_darktec_void_research_4_desc:0 "$building_darktec_void_research_1_desc$"
+	building_darktec_void_research_4_tooltip:0 ""
+
+	# DM from researchers
+	building_darktec_void_investigation_1:0 "엔트로피 실험실"
+	building_darktec_void_investigation_1_plural:0 "$building_darktec_void_investigation_1$s"
+	building_darktec_void_investigation_1_desc:0 "직접 실험을 위해 이질적인 초물질을 사용하는 전용 실험실입니다. 예측 불가능한 결과를 방지하기 위한 여러 격리 조치가 마련되어 있습니다."
+	building_darktec_void_investigation_1_tooltip:0 ""
+
+	building_darktec_void_investigation_2:0 "엔트로피 기지"
+	building_darktec_void_investigation_2_plural:0 "$building_darktec_void_investigation_2$s"
+	building_darktec_void_investigation_2_desc:0 "$building_darktec_void_investigation_1_desc$"
+	building_darktec_void_investigation_2_tooltip:0 ""
+
+	building_darktec_void_investigation_3:0 "엔트로피 시설"
+	building_darktec_void_investigation_3_plural:0 "$building_darktec_void_investigation_3$s"
+	building_darktec_void_investigation_3_desc:0 "$building_darktec_void_investigation_1_desc$"
+	building_darktec_void_investigation_3_tooltip:0 ""
+
+	building_darktec_void_investigation_4:0 "엔트로피 원자로"
+	building_darktec_void_investigation_4_plural:0 "$building_darktec_void_investigation_4$s"
+	building_darktec_void_investigation_4_desc:0 "$building_darktec_void_investigation_1_desc$"
+	building_darktec_void_investigation_4_tooltip:0 ""
+
+# Umbral Traits
+	darktec_trait_umbral_basic:0 "§E암영 특성§!"
+	darktec_trait_umbral_advanced:0 "§E고급 암영 특성§!"
+	darktec_trait_ascension:0 "§E엔트로피 승천 특성§!"
+	darktec_trait_entro:0 "§E엔트로피계 특성§!"
+
+	tech_darktec_traits_t1:0 "키메라 파라물질 응용"
+	tech_darktec_traits_t1_desc:0 "다양한 연구를 통해 비활성 존재에 극소량의 파라물질을 적용하면 위험한 결과 없이 이를 동화시킬 수 있음이 증명되었습니다. 따라서 우리는 두 차원의 특수하고 국지적인 조합을 생성함으로써 이러한 방식으로 우리 종을 개선할 수 있다고 이론화합니다."
+	tech_darktec_traits_t1_unlocks_title:0 "§H종족 특성 잠금 해제:§! 키메라 암영 특성"
+	tech_darktec_traits_t1_unlocks_desc:0 "§H$tech_darktec_traits_t1$§!\n£sr_dark_matter£ 암흑 물질 및 $darktec_contained_entropy_with_icon$과(와) 상호작용하며 강력한 보너스를 제공하는 특별한 특성입니다."
+
+	tech_darktec_traits_t2:0 "암영 자가 실험"
+	tech_darktec_traits_t2_desc:0 "파라물질의 엔트로피 주입이 우리 종의 구성에 성공하면서, 이국적인 조합에 대한 광범위한 연구 분야가 열렸습니다. 그중 일부는 예상보다 급진적이었고, 일부는 덜 체계적이었습니다."
+	tech_darktec_traits_t2_unlocks_title:0 "§H종족 특성 잠금 해제:§! 고급 암영 특성"
+	tech_darktec_traits_t2_unlocks_desc:0 "§H$tech_darktec_traits_t1$§!\n£sr_dark_matter£ 암흑 물질 및 $darktec_contained_entropy_with_icon$과(와) 더욱 깊이 상호작용하며 강력한 보너스를 제공하는 특별한 특성입니다."
+
+	tech_darktec_traits_ascension:0 "엔트로피 특성"
+	tech_darktec_traits_ascension_desc:0 "제국이 변화한 후 우리 종을 강화하는 것만으로는 충분하지 않았습니다. 우리는 파라물질에 대한 발전을 활용하여 이 비전을, 이 승천을 더 나은 무언가로 심화시켜야 합니다."
+	tech_darktec_traits_ascension_unlocks_title:0 "§H종족 특성 잠금 해제:§! $tech_darktec_traits_ascension$"
+	tech_darktec_traits_ascension_unlocks_desc:0 "§H$tech_darktec_traits_t1$§!\n게임을 통해 선택한 승천 경로에 따라 달라지는 강력한 특성을 얻게 될 것입니다."
+
+	trait_darktec_decay_predation:0 "우주 붕괴 포식"
+	trait_darktec_decay_predation_desc:0 "이 종의 전체 구성은 우주 배경 복사를 걸러내고 이를 통해 이득을 얻을 수 있도록 재적응되어, 그들에게 막대한 에너지 용량을 공급합니다."
+	trait_darktec_decay_predation_tooltip:0 "$mod_leaders_upkeep_mult$: §G-25%§!\n    - $mod_planet_pops_upkeep_mult$: §G-25%§!\n\n월별 $pop_group_unit$ £pop£ §H인구§!당:\n    - 생산: §G+0.025§! §Y$darktec_contained_entropy_with_icon$§!.\n    - 유지비: §R-0.025§! §Y£sr_dark_matter£ 암흑 물질§!"
+
+	trait_darktec_paramatter_saturation:0 "파라물질 포화"
+	trait_darktec_paramatter_saturation_desc:0 "응축된 비바리온 물질의 과부하가 이 종의 몸을 포화시키며 스며 나옵니다."
+	trait_darktec_paramatter_saturation_tooltip:0 "$mod_planet_pops_upkeep_mult$: §R+15%§!\n\n월별 $pop_group_unit$ £pop£ §H인구§!당:\n    - 생산: §G+0.035§! §Y$darktec_contained_entropy_with_icon$§!"
+
+	trait_darktec_obscure_intellect:0 "심오한 지성"
+	trait_darktec_obscure_intellect_desc:0 "파라물질 및 배경/암흑 복사의 유입을 인지하고 감지하는 능력은 이 종에게 우주에 대한 향상된 인식과 이해를 부여합니다."
+	trait_darktec_obscure_intellect_tooltip:0 "$researcher_jobs_bonus_workforce_mult$: §G+15%§!\n\n월별 $pop_group_unit$ £pop£ §H인구§!당:\n    - 유지비: §R-0.025§! §Y£sr_dark_matter£ 암흑 물질§!"
+
+	trait_darktec_obscure_intellect_robotic:0 "추상적 연산"
+	trait_darktec_obscure_intellect_robotic_desc:0 "억제된 엔트로피가 이 기계 종족의 회로 및 처리에 미치는 영향으로 인해, 우주의 설계와 복잡성을 이해하는 그들의 효율성은 10배 증가했습니다."
+	trait_darktec_obscure_intellect_robotic_tooltip:0 "$trait_darktec_obscure_intellect_tooltip$"
+
+	trait_darktec_darkened_veins:0 "암영 유기체"
+	trait_darktec_darkened_veins_desc:0 "암흑 물질의 과도한 영향은 이 종에게서 두드러집니다. 그들의 체액이 비현실적인 검은색을 띠며 스며 나오기 때문입니다."
+	trait_darktec_darkened_veins_tooltip:0 "$MOD_POP_AMENITIES_USAGE_ADD$: §R+0.15§!\n\n월별 $pop_group_unit$ £pop£ §H인구§!당:\n    - 생산: §G+0.055§! §Y£sr_dark_matter£ 암흑 물질§!"
+
+	trait_darktec_darkened_veins_robotic:0 "암영 연료화"
+	trait_darktec_darkened_veins_robotic_desc:0 "주 연료로 채택된 이 기계 종족은 암흑 물질의 힘을 활용합니다. 그들의 메커니즘에 나타나는 눈에 띄는 영향은 그들에게 기묘한 작동 방식을 부여합니다."
+	trait_darktec_darkened_veins_robotic_tooltip:0 "$trait_darktec_darkened_veins_tooltip$"
+
+	trait_darktec_entropic_synthesis:0 "엔트로피 합성"
+	trait_darktec_entropic_synthesis_desc:0 "막대한 변형으로 인해 이 종은 엔트로피를 포획하고 여과하여 자연적인 과정으로 재활용하며, 그 과정에서 생성된 에너지에 의해 길러지는 능력을 얻었습니다."
+	trait_darktec_entropic_synthesis_tooltip:0 "$MOD_POP_BONUS_WORKFORCE_MULT$: §G+10%§!\n\n월별 $pop_group_unit$ £pop£ §H인구§!당:\n    - 유지비: §R-0.025§! §Y$darktec_contained_entropy_with_icon$§!"
+
+	# Ascension - genetics
+	trait_darktec_purity_ingrained_entrogenomics:0 "내재된 엔트로유전체학"
+	trait_darktec_purity_ingrained_entrogenomics_desc:0 "특정 결함이 있거나 잠재적으로 결함이 있는 유전 사슬을 향하도록 한 암흑 물질 주머니를 사용하여, 이 종은 그들 종족의 뛰어난 구성원들에게서 완벽을 촉진합니다."
+	trait_darktec_purity_ingrained_entrogenomics_tooltip:0 "지도자가 레벨업 시 §R200§! §Y£sr_dark_matter£ 암흑 물질§!을 (레벨당) 소모하여 부정적 특성을 제거할 §G25%§! 확률을 가집니다."
+
+	trait_darktec_cloning_mirror_splicing:0 "거울 베일 접합"
+	trait_darktec_cloning_mirror_splicing_desc:0 "번식 시 세포 분열을 변경하는 이 종은 매개 물질에서 제공되는 엔트로피적 무작위성을 활용하여 복제 과정을 10배 가속화합니다."
+	#trait_darktec_cloning_mirror_splicing_tooltip:0 "$MOD_BONUS_POP_GROWTH_MULT$: §G+25%§!\n\nPer $pop_group_unit$ £pop£ §HPops§! grown, §G10%§! chance of any pop group with this trait gaining another $pop_group_unit$ £pop£ §HPops§!."
+
+	trait_darktec_mutation_dark_adaptation:0 "암흑 적응"
+	trait_darktec_mutation_dark_adaptation_desc:0 "배경 복사로 포화된 유기체로서, 돌연변이의 잠재력은 끝없이 이어집니다."
+	trait_darktec_mutation_dark_adaptation_tooltip:0 "이 종족은 행성 지정에 따라 특정 £job£ §H작업§!에 대해 §G+15%§!에서 §G+25%§! 사이의 $MOD_POP_BONUS_WORKFORCE_MULT$를 얻습니다."
+
+	# Ascension - cybernetics and synths
+	trait_darktec_cybernetic_dm_injectors:0 "암흑 물질 주입기"
+	trait_darktec_cybernetic_dm_injectors_desc:0 "특수 주입기가 이 종의 회로에 소량의 암흑 물질을 주입하여 그 능력을 크게 증가시킵니다."
+	trait_darktec_cybernetic_dm_injectors_tooltip:0 "$MOD_BONUS_POP_GROWTH_MULT$: §G+25%§!\n    - $MOD_POP_BONUS_WORKFORCE_MULT$: §G+25%§!\n\n월별 $pop_group_unit$ £pop£ §H팝§!당:\n    - 유지비: §R-0.05§! §Y£sr_dark_matter£ 암흑 물질§!"
+
+	trait_darktec_cybernetic_void_threadware:0 "공허 스레드웨어"
+	trait_darktec_cybernetic_void_threadware_desc:0 "엔트로피의 끊임없이 변화하고 혼돈스러운 측면을 활용하여, 이 종류에 연결된 회로는 무작위적이지만 훨씬 더 효율적인 방식으로 정보를 처리할 수 있습니다."
+	trait_darktec_cybernetic_void_threadware_tooltip:0 "$researcher_jobs_bonus_workforce_mult$: §G+1%§!\n    - $bureaucrat_jobs_bonus_workforce_mult$: §G+1%§!\n\n매년 무작위로, 이 값들은 (개별적으로) §G100%§!까지 증가할 수 있습니다!"
+
+	# Ascension - Machine
+	trait_darktec_nanite_replication:0 "엔트로피 복제 순환기"
+	trait_darktec_nanite_replication_desc:0 "매개 물질 복제와 무작위 순서의 엔트로피 주기를 적용하여, 이 기계적 구조를 구성하는 새로운 나노 로봇은 기하급수적으로 증식할 수 있습니다."
+	#trait_darktec_nanite_replication_tooltip:0 ""
+
+	trait_darktec_virtual_void_calculation:0 "암영 계산 모델"
+	trait_darktec_virtual_void_calculation_desc:0 "일부 처리 용량을 진공으로 전환하고 동시에 데이터 저장소를 비-바리온 물질로 역공급하는 것은 이 가상 머신들의 부하를 줄여줍니다."
+	trait_darktec_virtual_void_calculation_tooltip:0 "$MOD_POP_BONUS_WORKFORCE_MULT$: 식민지당 §G+25%§!\n    - 유지비: 식민지당 §R-0.015§! §Y£sr_dark_matter£ 암흑 물질§!.\n효과는 식민지 6개로 제한됩니다."
+
+	trait_darktec_modularity_paramatter:0 "매개 물질 합성기"
+	trait_darktec_modularity_paramatter_desc:0 "여유 공간 또는 사용 가능한 공간에 결합된 작은 앵커와 용광로가 이 인공 종족으로 하여금 구조물당 소량의 매개 물질을 통제되고 안전한 방식으로 채취할 수 있게 합니다."
+	trait_darktec_modularity_paramatter_tooltip:0 "$foundry_jobs_bonus_workforce_mult$: §R+15%§!\n\n월별 $pop_group_unit$ £pop£ §H팝§!당:\n    - 생산: §G+0.05§! §Y$darktec_contained_entropy_with_icon$§!"
+
+	# Ascension - Psionic
+	trait_darktec_psionic_eldritch_prescience:0 "섬뜩한 예지력"
+	trait_darktec_psionic_eldritch_prescience_desc:0 "다량의 암흑 물질을 소모하여 향상된 이 사이오닉 종족은 제정신을 잃지 않고 무한한 가능성을 꿰뚫어볼 수 있습니다."
+	trait_darktec_psionic_eldritch_prescience_tooltip:0 "$mod_psionic_pop_bonus_workforce_mult$: §G+40%§!\n\n월별 $pop_group_unit$ £pop£ §H팝§!당:\n    - 유지비: §R-0.05§! §Y£sr_dark_matter£ 암흑 물질§!"
+
+	trait_darktec_entro_main:0 "엔트로피 실체"
+	trait_darktec_entro_main_plural:0 "엔트로피 실체들"
+	trait_darktec_entro_main_desc:0 "바리온 또는 비-바리온 구성 어디에도 속하지 않는 이 종족은 불가능을 달성했습니다. 두 세계의 완벽한 결합이 된 것입니다... 그러나 새로운 형태를 억제할 적절한 조치 없이는 불안정하기에 큰 대가를 치릅니다."
+	trait_darktec_entro_main_tooltip:0 ""
+
+	leader_trait_darktec_entro_main:0 "$trait_darktec_entro_main$"
+	leader_trait_darktec_entro_main_desc:0 "바리온 또는 비-바리온 구성 어디에도 속하지 않는 이 지도자는 불가능을 달성했습니다. 두 세계의 완벽한 결합이 된 것입니다... 그러나 새로운 형태를 억제할 적절한 조치 없이는 불안정하기에 큰 대가를 치릅니다."
+
+	trait_darktec_entro_phase_body:0 "상 물질 구성"
+	trait_darktec_entro_phase_body_desc:0 "이 $trait_darktec_entro_main_plural$의 몸에 매개 물질 구성이 증가하여 그들이 상을 바꾸어 유령처럼 물질계를 통과할 수 있게 합니다."
+	trait_darktec_entro_phase_body_tooltip:0 "TODO 대규모 주거 감소 및 군대 보너스"
+
+	trait_darktec_entro_eldritch_touch:0 "섬뜩한 손길"
+	trait_darktec_entro_eldritch_touch_desc:0 "두 가지 다른 물질 상태를 수렴할 수 있는 이 $trait_darktec_entro_main$ 종족은 거의 노력 없이 불가능한 것들을 창조할 수 있습니다."
+	trait_darktec_entro_eldritch_touch_tooltip:0 "TODO 추가 산출"
+
+	trait_darktec_entro_dm_oozing:0 "암울한 유출"
+	trait_darktec_entro_dm_oozing_desc:0 "이종 물질로 과충전된 이 종족은 매개 물질을 분비하고 흘려보내며, 적절한 도구와 격리 조치로 채취할 수 있는 소량의 무해한 방사선을 생성합니다."
+	trait_darktec_entro_dm_oozing_tooltip:0 "$MOD_POP_AMENITIES_USAGE_ADD$: §R+0.25§!\n\n월별 $pop_group_unit$ £pop£ §H팝§!당:\n    - 생산: §G+0.1§! §Y£sr_dark_matter£ 암흑 물질§!"
+
+	trait_darktec_entro_multiverse_sight:0 "다차원 시야"
+	trait_darktec_entro_multiverse_sight_desc:0 "이 종류의 의식은 엔트로피의 불가능한 무작위성과 뒤섞여 있지만 동시에 현실에 묶여 있으며, 대체 현실의 잠재적 가능성을 엿봄으로써 병렬적 사고를 가능하게 합니다."
+	trait_darktec_entro_multiverse_sight_tooltip:0 "TODO 추가 통합 산출"
+
+	trait_darktec_entro_possession:0 "바리온 빙의"
+	trait_darktec_entro_possession_desc:0 "불안정한 상태로 인해 이 종족은 반물질 또는 비물질 구성으로 전환하여 기계 및 기술 내부로 '잠수'하거나 밖으로 나올 수 있으며, 기존 회로에 의식을 연결하여 전례 없는 수준의 제어를 실행할 수 있습니다."
+	trait_darktec_entro_possession_tooltip:0 "할 일: 지구당 주조 및 장인 직업에 높은 보너스 부여"
+
+	trait_darktec_entro_saturation:0 "엔트로피 포화"
+	trait_darktec_entro_saturation_desc:0 "너무 많은 엔트로피 물질이 이 종족을 관통하여 이들을 매우 불안정하고 위험하게 만듭니다."
+	trait_darktec_entro_saturation_tooltip:0 "$MOD_POP_AMENITIES_USAGE_MULT$: §R+0.25%§!\n\n매월 $pop_group_unit$ £pop£ §HPops§!당:\n    - 생산: §G+0.1§! §Y$darktec_contained_entropy_with_icon$§!"
+
+	trait_darktec_entro_hunger:0 "초인과적 굶주림"
+	trait_darktec_entro_hunger_desc:0 "이 종족은 안정적인 형태를 유지하기 위해 새로운 구성이 점점 더 높은 에너지를 요구하므로, 끊임없는 에너지 소비에 시달립니다."
+	trait_darktec_entro_hunger_tooltip:0 "$mod_planet_pops_upkeep_mult$: §R+50%§!\n\n매월 $pop_group_unit$ £pop£ §HPops§!당:\n    - 생산: §G+0.05§! §Y$darktec_contained_entropy_with_icon$§!\n    - 생산: §G+0.05§! §Y£sr_dark_matter£ 암흑 물질§!"
+
+	trait_darktec_entro_multiplicity:0 "끔찍한 다중성"
+	trait_darktec_entro_multiplicity_desc:0 "준물질이 이들 $trait_darktec_entro_main_plural$의 번식 능력에 미치는 영향은 물리적, 은유적, 의식적인 과정을 통해 자신을 복제하도록 허용하며, 이 과정에서 기본 물질과 이종 물질을 재구성하여 완벽한 '복제체'를 생성합니다."
+	trait_darktec_entro_multiplicity_tooltip:0 "§H$building_darktec_umbral_portal_1$§!가 이 종족에게 엔트로피 성장 파동을 생성할 때마다, $pop_group_unit$ £pop£ §HPops§!를 제공할 §G10%§!의 확률이 있습니다."
+
+	trait_darktec_entro_traversal:0 "현실 간 횡단"
+	trait_darktec_entro_traversal_desc:0 "이 종족에게 물리적인 한계는 없습니다. 그들은 차원 사이를 넘나들며 잠시 공간적, 시간적 위치를 신속하게 변경할 수 있습니다."
+	trait_darktec_entro_traversal_tooltip:0 "할 일: 대규모 자동 이주 보너스"
+# /
+
+# UNSORTED LOCALISATION
+	bombardment_darktec_bombardment_entropy:0 "엔트로피 포격"
+	bombardment_darktec_bombardment_entropy_desc:0 "거대한 포화 폭탄이 행성 표면을 황폐화시키고, 접촉 및 연쇄 반응을 통해 중입자 물질을 분해하여 비중입자 물질로 전환시킵니다."
+
+	DARKTEC_SHIP_UTILITY_VOIDJUMP_MODULE:0 "공허 균열 전송기"
+	DARKTEC_SHIP_UTILITY_VOIDJUMP_MODULE_ORGANIC:0 "$DARKTEC_SHIP_UTILITY_VOIDJUMP_MODULE$"
+	DARKTEC_SHIP_UTILITY_VOIDJUMP:0 "$DARKTEC_SHIP_UTILITY_VOIDJUMP_MODULE$"
+	DARKTEC_SHIP_UTILITY_VOIDJUMP_DESC:0 "물리적 상태 사이를 끊임없이 전환하는 이 장치는 과부하될 경우 시간과 공간에 즉시 균열을 생성하여 함선과 그 주변을 이전에 알려진 위치로 재배치할 수 있습니다."
+	DARKTEC_SHIP_UTILITY_VOIDJUMP_MODULE_DESC:0 "$DARKTEC_SHIP_UTILITY_VOIDJUMP_DESC$"
+	DARKTEC_SHIP_UTILITY_VOIDJUMP_ORGANIC:0 "$DARKTEC_SHIP_UTILITY_VOIDJUMP_MODULE$"
+	DARKTEC_SHIP_UTILITY_VOIDJUMP_ORGANIC_DESC:0 "물리적 상태 사이를 끊임없이 전환하는 이 기관은 과부하될 경우 시간과 공간에 즉시 균열을 생성하여 함선과 그 주변을 이전에 알려진 위치로 재배치할 수 있습니다."
+	DARKTEC_SHIP_UTILITY_VOIDJUMP_TOOLTIP:0 "함대 행동 잠금 해제: §H$on_darktec_voidjump_ability_title$§!\n\n§H비용§!: £sr_dark_matter£1000 £darktec_contained_entropy£1000\n§H재사용 대기시간§!: 360 £time£\n\n귀하의 함대는 모성계 방향으로 §Y공허 균열§!을 엽니다.$TABBED_NEW_LINE$- 함대의 모든 함선이 재배치됩니다.$TABBED_NEW_LINE$- 이 모듈이 없는 모든 함선은 §R심각한§! 피해를 입습니다."
+
+	DARKTEC_SHIP_UTILITY_INERTIALESS:0 "관성 없는 엔트로피 추진기"
+	DARKTEC_SHIP_UTILITY_INERTIALESS_DESC:0 "물리학 법칙을 깨뜨리는 이 영구 운동 장치는 존재 자체로 에너지를 생성합니다."
+	DARKTEC_SHIP_UTILITY_INERTIALESS_ORGANIC:0 "관성 없는 엔트로피 기관"
+	DARKTEC_SHIP_UTILITY_INERTIALESS_ORGANIC_DESC:0 "물리학 법칙을 깨뜨리는 이 영구 운동 근육은 존재 자체로 에너지를 생성합니다."
+	DARKTEC_SHIP_UTILITY_INERTIALESS_TOOLTIP:0 "함대 행동 잠금 해제: §H$on_darktec_inertialess_ability_title$§!\n\n§H비용§!: £sr_dark_matter£1000 £darktec_contained_entropy£1000\n§H재사용 대기시간§!: 360 £time£\n\n귀하의 함대는 §Y관성 없는 추진기§!를 활성화합니다.$TABBED_NEW_LINE$- 모듈을 장착한 모든 함선은 막대한 위력의 자체 수정치를 얻습니다.$TABBED_NEW_LINE$- 이 모듈이 없는 모든 함선은 §R심각한§! 피해를 입고 자체 수정치가 반전됩니다.\n\n자체 수정치:\n    $MOD_SHIP_FIRE_RATE_MULT$: §G+50%§!\n    $MOD_SHIP_SPEED_MULT$: §G+50%§!\n    $MOD_SHIP_ACCURACY_MULT$: §G+25%§!\n\n    지속 시간: §Y60 £time£§!"
+
+	DARKTEC_SHIP_UTILITY_COLLAPSER:0 "준물질 붕괴기"
+	DARKTEC_SHIP_UTILITY_COLLAPSER_DESC:0 "암흑 물질의 외부 차폐막 흐름을 조절하는 이 장치는 보호 강도를 즉시 함선 주변의 미세 진공 붕괴로 전환하여 파괴적인 충격파를 생성할 수 있습니다."
+	DARKTEC_SHIP_UTILITY_COLLAPSER_ORGANIC:0 "$DARKTEC_SHIP_UTILITY_COLLAPSER$"
+	DARKTEC_SHIP_UTILITY_COLLAPSER_ORGANIC_DESC:0 "암흑 물질의 외부 차폐막 흐름을 조절하는 이 세포 소기관은 보호 강도를 즉시 함선 주변의 미세 진공 붕괴로 전환하여 파괴적인 충격파를 생성할 수 있습니다."
+	DARKTEC_SHIP_UTILITY_COLLAPSER_TOOLTIP:0 "함대 행동 잠금 해제: §H$on_darktec_collapser_ability_title$§!\n\n§H비용§!: £sr_dark_matter£1000 £darktec_contained_entropy£1000\n§H재사용 대기시간§!: 360 £time£\n\n귀하의 함대는 §Y엔트로피 붕괴기§!를 활성화합니다.$TABBED_NEW_LINE$- 모듈을 장착한 모든 함선은 보호막을 잃고 §R자체 약화§! 효과를 받습니다.$TABBED_NEW_LINE$- 해당 성계의 모든 함선은 잃은 보호막의 §Y5%§!를 직접 피해로 받습니다.\n$TABBED_NEW_LINE$- 이 모듈이 없는 아군 함선은 충격파에 §R영향을§! 받습니다.\n\n§Y최대 20000 피해로 제한됩니다.§!\n\n자체 약화:\n    $MOD_SHIP_SPEED_MULT$ = §R-100%§!\n    $MOD_SHIP_FIRE_RATE_MULT$: §R-100%§!\n\n    지속 시간: §R30 £time£§!"
+
+	DARKTEC_SHIP_UTILITY_INTERFERER:0 "진공 간섭기"
+	DARKTEC_SHIP_UTILITY_INTERFERER_DESC:0 "밀집된 암흑 물질을 축적하여, 이 장치는 위치 시스템에 엄청난 간섭을 일으켜 이 함선에서 발생하는 모든 방출을 감지로부터 효과적으로 격리할 수 있습니다."
+	DARKTEC_SHIP_UTILITY_INTERFERER_ORGANIC:0 "$DARKTEC_SHIP_UTILITY_INTERFERER$"
+	DARKTEC_SHIP_UTILITY_INTERFERER_ORGANIC_DESC:0 "밀집된 암흑 물질을 축적하여, 이 세포 소기관은 위치 시스템에 엄청난 간섭을 일으켜 이 함선에서 발생하는 모든 방출을 감지로부터 효과적으로 격리할 수 있습니다."
+	DARKTEC_SHIP_UTILITY_INTERFERER_TOOLTIP:0 "함대 행동 잠금 해제: §H$on_darktec_interferer_ability_title$§!\n\n§H비용§!: £sr_dark_matter£1000 £darktec_contained_entropy£1000\n§H재사용 대기시간§!: 360 £time£\n\n귀하의 함대는 §Y진공 간섭기§!를 활성화합니다.$TABBED_NEW_LINE$- 모듈을 장착한 모든 함선은 막대한 이동 및 은신 보너스를 얻습니다.$TABBED_NEW_LINE$- 이 모듈이 없는 아군 함선은 일시적으로 선체와 장갑의 대부분을 §R잃습니다§!.\n\n자체 수정치:\n    $MOD_SHIP_CLOAKING_STRENGTH_ADD$: §R+20§!\n    $MOD_SHIP_SPEED_MULT$: §G+100%§!\n    $MOD_SHIP_EVASION_MULT$: §G+50%§!\n\n    지속 시간: §Y60 £time£§!"
+
+	# Shields
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS:0 "역엔트로피 차폐"
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_DESC:0 "함선 외피 주변 물질에 잔류하는 엔트로피 흔적을 사용하여, 입자 무질서 경향이 물질 무결성을 희생하여 부드러운 차폐 변형의 창을 생성합니다."
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_ORGANIC:0 "역엔트로피 보호막 피부"
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_ORGANIC_DESC:0 "생체 함선 피부 주변 물질에 잔류하는 엔트로피 흔적을 사용하여, 입자 무질서 경향이 구조적 무결성을 희생하여 부드러운 차폐 변형의 창을 생성합니다."
+
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_SMALL:0 "소형 $DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS$"
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_SMALL_DESC:0 "$DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_DESC$"
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_MEDIUM:0 "중형 $DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS$"
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_MEDIUM_DESC:0 "$DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_DESC$"
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_LARGE:0 "대형 $DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS$"
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_LARGE_DESC:0 "$DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_DESC$"
+
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_SMALL_BIO:0 "소형 $DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS$"
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_SMALL_BIO_DESC:0 "$DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_ORGANIC_DESC$"
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_MEDIUM_BIO:0 "중형 $DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS$"
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_MEDIUM_BIO_DESC:0 "$DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_ORGANIC_DESC$"
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_LARGE_BIO:0 "대형 $DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS$"
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_LARGE_BIO_DESC:0 "$DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_ORGANIC_DESC$"
+
+	# Antiparticles
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES:0 "반입자 광선"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_DESC:0 "단분자 선으로 응축된 이 반입자 투사체는 대상에 미세 물질 붕괴를 일으켜, 닿는 표면을 깔끔하게 절단한 후 폭발시킵니다."
+
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_ORGANIC:0 "반입자 렌즈"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_ORGANIC_DESC:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_DESC$"
+
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_SMALL:0 "소형 $DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES$"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_SMALL_DESC:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_DESC$"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_MEDIUM:0 "중형 $DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES$"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_MEDIUM_DESC:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_DESC$"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_LARGE:0 "대형 $DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES$"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_LARGE_DESC:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_DESC$"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_X:0 "초대형 $DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES$"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_X_DESC:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_DESC$"
+
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_SMALL_BIO:0 "소형 $DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_SMALL_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_ORGANIC_DESC$"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_MEDIUM_BIO:0 "중형 $DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_MEDIUM_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_ORGANIC_DESC$"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_LARGE_BIO:0 "대형 $DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_LARGE_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_ORGANIC_DESC$"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_X_BIO:0 "초대형 $DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_X_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_ORGANIC_DESC$"
+
+	# Destabilizator
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION:0 "불안정화 포"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_DESC:0 "이 플라스마 형태의 암흑 물질 응집체 발사기는 충격 시 막대한 파괴적 전자기 효과를 발생시킵니다."
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_ORGANIC:0 "불안정화 유화기"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_ORGANIC_DESC:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION_DESC$"
+
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_SMALL:0 "소형 $DARKTEC_SHIP_WEAPON_DESTABILIZATION$"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_SMALL_DESC:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION_DESC$"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_MEDIUM:0 "중형 $DARKTEC_SHIP_WEAPON_DESTABILIZATION$"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_MEDIUM_DESC:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION_DESC$"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_LARGE:0 "대형 $DARKTEC_SHIP_WEAPON_DESTABILIZATION$"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_LARGE_DESC:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION_DESC$"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_X:0 "초대형 $DARKTEC_SHIP_WEAPON_DESTABILIZATION$"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_X_DESC:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION_DESC$"
+
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_SMALL_BIO:0 "소형 $DARKTEC_SHIP_WEAPON_DESTABILIZATION_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_SMALL_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION_ORGANIC_DESC$"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_MEDIUM_BIO:0 "중형 $DARKTEC_SHIP_WEAPON_DESTABILIZATION_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_MEDIUM_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION_ORGANIC_DESC$"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_LARGE_BIO:0 "대형 $DARKTEC_SHIP_WEAPON_DESTABILIZATION_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_LARGE_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION_ORGANIC_DESC$"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_X_BIO:0 "초대형 $DARKTEC_SHIP_WEAPON_DESTABILIZATION_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_X_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION_ORGANIC_DESC$"
+
+	# Antimatter Lnace
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE:0 "반물질 랜서"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_DESC:0 "이 위험한 무기는 격리되고 활성화된 반물질 제트를 대상으로 재지정하여, 경로상의 물질을 황폐화시킵니다."
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_ORGANIC:0 "반물질 방출기"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_ORGANIC_DESC:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_DESC$"
+
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_SMALL:0 "소형 $DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE$"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_SMALL_DESC:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_DESC$"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_MEDIUM:0 "중형 $DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE$"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_MEDIUM_DESC:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_DESC$"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_LARGE:0 "대형 $DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE$"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_LARGE_DESC:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_DESC$"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_X:0 "초대형 $DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE$"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_X_DESC:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_DESC$"
+
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_SMALL_BIO:0 "소형 $DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_SMALL_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_ORGANIC_DESC$"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_MEDIUM_BIO:0 "중형 $DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_MEDIUM_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_ORGANIC_DESC$"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_LARGE_BIO:0 "대형 $DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_LARGE_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_ORGANIC_DESC$"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_X_BIO:0 "초대형 $DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_X_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_ORGANIC_DESC$"
+
+	# Discharger
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER:0 "엔트로피 방출기"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_DESC:0 "함선에 미세 엔트로피 재활용기가 내장되어 있어, 이 방출기는 추출 과정의 부산물을 대상으로 던져, 가장 밀도가 높은 입자층도 투과할 수 있는 무(無)에너지 광선으로 발현됩니다."
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_ORGANIC:0 "엔트로피 방출기"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_ORGANIC_DESC:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_DESC$"
+
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_SMALL:0 "소형 $DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER$"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_SMALL_DESC:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_DESC$"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_MEDIUM:0 "중형 $DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER$"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_MEDIUM_DESC:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_DESC$"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_LARGE:0 "대형 $DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER$"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_LARGE_DESC:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_DESC$"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_X:0 "초대형 $DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER$"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_X_DESC:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_DESC$"
+
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_SMALL_BIO:0 "소형 $DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_SMALL_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_ORGANIC_DESC$"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_MEDIUM_BIO:0 "중형 $DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_MEDIUM_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_ORGANIC_DESC$"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_LARGE_BIO:0 "대형 $DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_LARGE_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_ORGANIC_DESC$"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_X_BIO:0 "초대형 $DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_ORGANIC$"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_X_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_ORGANIC_DESC$"
+
+
+	on_darktec_voidjump_ability_tooltip:0 "§H$on_darktec_voidjump_ability_title$§!\n\n§H비용§!: £sr_dark_matter£1000 £darktec_contained_entropy£1000\n§H재사용 대기시간§!: 360 £time£\n\n함대가 모성계로 향하는 §Y공허 균열§!을 엽니다.$TABBED_NEW_LINE$-함대 내 모든 함선이 재배치됩니다.$TABBED_NEW_LINE$-이 모듈이 없는 모든 함선은 §R심각한§! 피해를 입습니다."
+	on_darktec_voidjump_ability_title:0 "공허 균열"
+	on_darktec_voidjump_ability_activity:0 "공허 균열 생성 중"
+	on_darktec_voidjump_ability_progress:0 "균열 열기"
+
+	on_darktec_inertialess_ability_tooltip:0 "§H$on_darktec_inertialess_ability_title$§!\n\n§H비용§!: £sr_dark_matter£1000 £darktec_contained_entropy£1000\n§H재사용 대기시간§!: 360 £time£\n\n함대가 §Y관성 제거 구동기§!를 활성화합니다.$TABBED_NEW_LINE$-이 모듈이 있는 모든 함선은 강력한 자체 수정치를 얻습니다.$TABBED_NEW_LINE$-이 모듈이 없는 모든 함선은 §R심각한§! 피해를 입고 자체 수정치가 역전됩니다.\n\n자체 수정치:\n    $MOD_SHIP_FIRE_RATE_MULT$: §G+50%§!\n    $MOD_SHIP_SPEED_MULT$: §G+50%§!\n    $MOD_SHIP_ACCURACY_MULT$: §G+25%§!\n\n    지속 시간: §Y60 £time£§!"
+	on_darktec_inertialess_ability_title:0 "관성 제거 구동기"
+	on_darktec_inertialess_ability_activity:0 "관성 지속"
+	on_darktec_inertialess_ability_progress:0 "관성 제거 구동기 초기화 중"
+
+	on_darktec_collapser_ability_tooltip:0 "§H$on_darktec_collapser_ability_title$§!\n\n§H비용§!: £sr_dark_matter£1000 £darktec_contained_entropy£1000\n§H재사용 대기시간§!: 360 £time£\n\n함대가 §Y엔트로피 붕괴기§!를 활성화합니다.$TABBED_NEW_LINE$-이 모듈이 있는 모든 함선은 보호막을 잃고 §R자체 약화§! 효과를 받습니다.$TABBED_NEW_LINE$-성계 내 모든 함선은 손실된 보호막의 §Y5%§!만큼 직접 피해를 입습니다.\n$TABBED_NEW_LINE$-이 모듈이 없는 아군 함선은 충격파에 §R영향을 받습니다§!.\n\n§Y최대 피해량 20000으로 제한됩니다.§!\n\n자체 약화:\n    $MOD_SHIP_SPEED_MULT$ = §R-100%§!\n    $MOD_SHIP_FIRE_RATE_MULT$: §R-100%§!\n\n    지속 시간: §R30 £time£§!"
+	on_darktec_collapser_ability_title:0 "엔트로피 붕괴"
+	on_darktec_collapser_ability_activity:0 "보호막 붕괴 중"
+	on_darktec_collapser_ability_progress:0 "보호막 붕괴 중"
+
+	on_darktec_interferer_ability_tooltip:0 "§H$on_darktec_interferer_ability_title$§!\n\n§H비용§!: £sr_dark_matter£1000 £darktec_contained_entropy£1000\n§H재사용 대기시간§!: 360 £time£\n\n함대가 §Y진공 간섭기§!를 활성화합니다.$TABBED_NEW_LINE$-이 모듈이 있는 모든 함선은 강력한 이동 및 은신 자체 수정치를 얻습니다.$TABBED_NEW_LINE$-이 모듈이 없는 아군 함선은 일시적으로 선체와 장갑 대부분을 §R상실합니다§!.\n\n자체 수정치:\n    $MOD_SHIP_CLOAKING_STRENGTH_ADD$: §R+20§!\n    $MOD_SHIP_SPEED_MULT$: §G+100%§!\n    $MOD_SHIP_EVASION_MULT$: §G+50%§!\n\n    지속 시간: §Y60 £time£§!"
+	on_darktec_interferer_ability_title:0 "진공 간섭"
+	on_darktec_interferer_ability_activity:0 "신호 간섭 중"
+	on_darktec_interferer_ability_progress:0 "신호 간섭 중"
+
+	darktec_crisis_chain_title:0 "$darktec_ap_postbaryonic$"
+	darktec_crisis_chain_desc:0 "$darktec_ap_postbaryonic$[darktec_crisis_chain_desc_choice_1][darktec_crisis_chain_desc_choice_2][darktec_crisis_chain_desc_choice_2_5][darktec_crisis_chain_desc_choice_3][darktec_crisis_chain_desc_choice_4]"
+	darktec_crisis_chain_desc_choice_1_economy:0 "\n\n처음에는 파라마터 활용을 산업 용도에 집중하여 생산량을 개선하고 파라마터 채굴 능력을 늘리기로 결정했습니다."
+	darktec_crisis_chain_desc_choice_1_warfare:0 "\n\n처음에는 파라마터 활용을 전쟁에 집중하여 물질 상태를 전환할 수 있는 현실 조작 함선을 만들기로 결정했습니다."
+	darktec_crisis_chain_desc_choice_1_applications:0 "\n\n처음에는 파라마터 활용을 과학 및 종족 응용 분야에 집중하여, 파라마터와 우리의 일부 특성을 융합하는 방법을 얻었습니다."
+
+	darktec_crisis_chain_desc_choice_2_transformation:0 "\n\n하지만 급진적인 사건의 전환으로 우리는 근본적인 수준에서 물질과 엔트로피를 결합하여 변형되었으며, 이제 우리는 엔트로피 존재자로 변모했습니다."
+	darktec_crisis_chain_desc_choice_2_taint:0 "\n\n하지만 급진적인 사건의 전환으로 우리는 우리의 본질을 조율된 암흑 물질과 결합하기로 결정했으며, 이를 통해 우리의 존재 방식과 다른 발전에 적용하는 방식을 더욱 개선했습니다."
+
+	darktec_crisis_chain_desc_choice_2_5_built_sphere:0 "\n\n엔트로피 및 암흑 물질장을 모두 연구한 끝에 내린 결론은, 파라마터를 집중시킬 수 있는 특정 시공간 지점을 생성하여 현실을 우리의 의지대로 바꿀 수 있는 강력한 ''변칙''을 만들 수 있다는 것이었습니다.\n마침내 성공했습니다."
+
+	darktec_crisis_chain_desc_choice_3_do_nothing:0 "\n\n변칙이 불안정하다는 것을 처음 알아챘을 때, 우리는 개입이... 역효과를 낼 수도 있다고 판단하여 변칙이 자체적으로 진행되도록 내버려 두기로 결정했습니다."
+	darktec_crisis_chain_desc_choice_3_overload_dm:0 "\n\n변칙이 불안정하다는 것을 처음 알아챘을 때, 우리는 엔트로피 채굴 부산물로 변칙을 포화시켜 암흑 물질 보호층을 강화하기로 결정했습니다."
+	darktec_crisis_chain_desc_choice_3_overload_entro:0 "\n\n변칙이 불안정하다는 것을 처음 알아챘을 때, 우리는 변칙 표면에서 벌어지는 암흑 세력의 이중 전투를 안정화하기 위해 더욱 집중된 엔트로피를 공급하기로 결정했습니다."
+
+	darktec_crisis_chain_desc_choice_4_do_nothing:0 "\n\n변칙이 주변 시공간을 변형하기 시작했을 때, 치명적인 상태가 되기 전에 우리는 인내심을 가지고 기다렸습니다."
+	darktec_crisis_chain_desc_choice_4_overload_entrophereals:0 "\n\n변칙이 주변 시공간의 흐름을 변경하기 시작한 후 더 이상의 불안정이나 파괴를 감수할 수 없었기에, 우리는 아직 형태가 없는 일부 개체들을 변칙 표면으로 옮기기로 결정했고, 그들은 그곳에서 성공한 것으로 보였습니다."
+	darktec_crisis_chain_desc_choice_4_overload_dm:0 "\n\n변칙의 외부 보호막이 더 많은 암흑 물질로 강화되면서, 변칙의 불규칙성은 사라집니다."
+	darktec_crisis_chain_desc_choice_4_overload_entropy:0 "\n\n변칙의 내부 에너지가 약해지자, 우리는 변칙에 점점 더 많은 파라마터를 과부하시켰고, 마침내 이를 안정화했습니다."
+
+
+	darktec_crisis_postbaryonic_level_2_require_enough_currency_completed:0 "충분한 $darktec_contained_entropy_with_icon$를 획득했습니다."
+	darktec_crisis_postbaryonic_level_2_require_enough_currency:0 "충분한 $darktec_contained_entropy_with_icon$를 축적해야 합니다."
+	darktec_crisis_postbaryonic_level_3_require_enough_currency_completed:0 "충분한 $darktec_contained_entropy_with_icon$를 획득했습니다."
+	darktec_crisis_postbaryonic_level_3_require_enough_currency:0 "충분한 $darktec_contained_entropy_with_icon$를 축적해야 합니다."
+	darktec_crisis_postbaryonic_level_4_require_situation_completed:0 "엔트로피 변질 상황을 성공적으로 완료하고 충분한 $darktec_contained_entropy_with_icon$를 축적했습니다."
+	darktec_crisis_postbaryonic_level_4_require_situation:0 "특정 상황을 완료해야 합니다.\n충분한 $darktec_contained_entropy_with_icon$를 획득하면 해당 상황이 활성화됩니다."
+	darktec_crisis_postbaryonic_level_5_require_situation_completed:0 "충분한 $darktec_contained_entropy_with_icon$를 획득했습니다."
+	darktec_crisis_postbaryonic_level_5_require_situation:0 "충분한 $darktec_contained_entropy_with_icon$를 획득했습니다."
+
+	edict_darktec_edict_chimerical_dark_matter:0 "암영-환영 암흑"
+	edict_darktec_edict_chimerical_dark_matter_desc:0 "DISCARDED"
+	edict_darktec_edict_chimerical_entropy:0 "암영-환영 엔트로피"
+	edict_darktec_edict_chimerical_entropy_desc:0 "DISCARDED"
+	edict_darktec_edict_chimerical_ascension:0 "암영-환영 비상"
+	edict_darktec_edict_chimerical_ascension_desc:0 "DISCARDED"
+
+	darktec_crisis_level_reached:0 "위기 수준 도달"
+
+	darktec_pm_entropic_world:0 "엔트로피 주입 세계"
+	darktec_pm_entropic_world_desc:0 "DISCARDED"
+
+	mod_mod_darktec_umbral_boost:0 "암영 건물 강화"
+
+	darktec_sphere_0:0 "융합 변칙 현상"
+	darktec_sphere_0_DESC:0 "엔트로피가 융합되어 유사 천체로 발현된 것으로, 강력한 암흑 물질장으로 억제됩니다. 그 경계에서 물리학을 변형시킵니다."
+	darktec_sphere_0_MEGASTRUCTURE_DETAILS:0 "§Y$darktec_sphere_0$§!는 엔트로피가 융합되어 유사 천체로 발현된 것으로, 강력한 암흑 물질장으로 억제됩니다. 그 경계에서 물리학을 변형시킵니다."
+
+	darktec_sphere_1:0 "융합 변칙 현상 - I"
+	darktec_sphere_1_DESC:0 "$darktec_sphere_0_DESC$"
+	darktec_sphere_2:0 "융합 변칙 현상 - II"
+	darktec_sphere_2_DESC:0 "$darktec_sphere_0_DESC$"
+	darktec_sphere_3:0 "융합 변칙 현상 - III"
+	darktec_sphere_3_DESC:0 "$darktec_sphere_0_DESC$"
+	darktec_sphere_4:0 "융합 변칙 현상 - IV"
+	darktec_sphere_4_DESC:0 "$darktec_sphere_0_DESC$"
+	darktec_sphere_5:0 "융합 변칙 현상 - V"
+	darktec_sphere_5_DESC:0 "$darktec_sphere_0_DESC$"
+	darktec_sphere_6:0 "융합 변칙 현상 - VI"
+	darktec_sphere_6_DESC:0 "$darktec_sphere_0_DESC$"
+	darktec_sphere_7:0 "융합 변칙 현상 - VII"
+	darktec_sphere_7_DESC:0 "$darktec_sphere_0_DESC$"
+	darktec_sphere_8:0 "융합 변칙 현상 - VIII"
+	darktec_sphere_8_DESC:0 "$darktec_sphere_0_DESC$"
+
+	mod_mod_darktec_assimilation_capacity:0 "엔트로피 영역 융합 역량"
+	mod_mod_darktec_umbral_components_mult:0 "암영 구성 요소 효율성"
+
+	darktec_pm_tainted:0 "DISCARDED"
+	darktec_pm_tainted_desc:0 "DISCARDED"
+
+	darktec_pm_tainted_worker:0 "DISCARDED"
+	darktec_pm_tainted_worker_desc:0 "DISCARDED"
+
+	darktec_pm_tainted_specialist:0 "DISCARDED"
+	darktec_pm_tainted_specialist_desc:0 "DISCARDED"
+
+	darktec_pm_tainted_pops:0 "DISCARDED"
+	darktec_pm_tainted_pops_desc:0 "DISCARDED"
+
+	darktec_pm_tainted_utility:0 "DISCARDED"
+	darktec_pm_tainted_utility_desc:0 "DISCARDED"
+
+	darktec_pm_entropic_world_phase_1:0 "DISCARDED"
+	darktec_pm_entropic_world_phase_1_desc:0 "DISCARDED"
+
+	darktec_pm_entropic_world_phase_2:0 "DISCARDED"
+	darktec_pm_entropic_world_phase_2_desc:0 "DISCARDED"
+
+	darktec_pm_entropic_world_phase_3:0 "DISCARDED"
+	darktec_pm_entropic_world_phase_3_desc:0 "DISCARDED"
+
+	darktec_modifier_country_doomed_galaxy:0 "파멸적인 존재"
+	darktec_modifier_country_doomed_galaxy_desc:0 "도피할 곳은 없다."
+
+	darktec_modifier_fleet_voidjump:0 "공허 균열 충동"
+	darktec_modifier_fleet_interferer:0 "간섭자 은폐"
+	darktec_modifier_fleet_inertialess:0 "무관성 가속"
+	darktec_modifier_fleet_collapser:0 "붕괴된 엔트로피"
+
+	darktec_modifier_fleet_hungering_void:0 "굶주린 공허"
+	darktec_modifier_fleet_ceaseless_horror:0 "끝없는 공포"
+
+
+	tech_darktec_ship_shields:0 "$DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS$"
+	tech_darktec_ship_shields_desc:0 "$DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_DESC$"
+
+	tech_darktec_ship_shields_mechanical:0 "$DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS$"
+	tech_darktec_ship_shields_mechanical_desc:0 "$DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_DESC$"
+	tech_darktec_ship_shields_organic:0 "$DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_ORGANIC$"
+	tech_darktec_ship_shields_organic_desc:0 "$DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_ORGANIC_DESC$"
+
+	tech_darktec_ship_shields_unlocks_title:0 "DISCARDED"
+	tech_darktec_ship_shields_unlocks_desc:0 "DISCARDED"
+	tech_darktec_ship_shields_organic_unlocks_title:0 "DISCARDED"
+	tech_darktec_ship_shields_organic_unlocks_desc:0 "DISCARDED"
+
+	tech_darktec_weapon_antiparticles:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES$"
+	tech_darktec_weapon_antiparticles_desc:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_DESC$"
+	tech_darktec_weapon_antiparticles_mechanical:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES$"
+	tech_darktec_weapon_antiparticles_mechanical_desc:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_DESC$"
+	tech_darktec_weapon_antiparticles_organic:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_ORGANIC$"
+	tech_darktec_weapon_antiparticles_organic_desc:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_ORGANIC_DESC$"
+
+	tech_darktec_weapon_antiparticles_unlocks_title:0 "DISCARDED"
+	tech_darktec_weapon_antiparticles_unlocks_desc:0 "DISCARDED"
+	tech_darktec_weapon_antiparticles_organic_unlocks_title:0 "DISCARDED"
+	tech_darktec_weapon_antiparticles_organic_unlocks_desc:0 "DISCARDED"
+
+	tech_darktec_weapon_destabilization:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION$"
+	tech_darktec_weapon_destabilization_desc:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION_DESC$"
+	tech_darktec_weapon_destabilization_mechanical:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION$"
+	tech_darktec_weapon_destabilization_mechanical_desc:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION_DESC$"
+	tech_darktec_weapon_destabilization_organic:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION_ORGANIC$"
+	tech_darktec_weapon_destabilization_organic_desc:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION_ORGANIC_DESC$"
+
+	tech_darktec_weapon_destabilization_unlocks_title:0 "DISCARDED"
+	tech_darktec_weapon_destabilization_unlocks_desc:0 "DISCARDED"
+	tech_darktec_weapon_destabilization_organic_unlocks_title:0 "DISCARDED"
+	tech_darktec_weapon_destabilization_organic_unlocks_desc:0 "DISCARDED"
+
+	tech_darktec_weapon_antimatter_lance:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE$"
+	tech_darktec_weapon_antimatter_lance_desc:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_DESC$"
+	tech_darktec_weapon_antimatter_lance_mechanical:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE$"
+	tech_darktec_weapon_antimatter_lance_mechanical_desc:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_DESC$"
+	tech_darktec_weapon_antimatter_lance_organic:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_ORGANIC$"
+	tech_darktec_weapon_antimatter_lance_organic_desc:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_ORGANIC_DESC$"
+
+	tech_darktec_weapon_antimatter_lance_unlocks_title:0 "DISCARDED"
+	tech_darktec_weapon_antimatter_lance_unlocks_desc:0 "DISCARDED"
+	tech_darktec_weapon_antimatter_organic_lance_unlocks_title:0 "DISCARDED"
+	tech_darktec_weapon_antimatter_organic_lance_unlocks_desc:0 "DISCARDED"
+
+	tech_darktec_weapon_discharger:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER$"
+	tech_darktec_weapon_discharger_desc:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_DESC$"
+	tech_darktec_weapon_discharger_mechanical:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER$"
+	tech_darktec_weapon_discharger_mechanical_desc:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_DESC$"
+	tech_darktec_weapon_discharger_organic:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_ORGANIC$"
+	tech_darktec_weapon_discharger_organic_desc:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_ORGANIC_DESC$"
+
+	tech_darktec_weapon_discharger_unlocks_title:0 "DISCARDED"
+	tech_darktec_weapon_discharger_unlocks_desc:0 "DISCARDED"
+	tech_darktec_weapon_discharger_organic_unlocks_title:0 "DISCARDED"
+	tech_darktec_weapon_discharger_organic_unlocks_desc:0 "DISCARDED"
+
+	tech_darktec_ship_util_voidjump:0 "$DARKTEC_SHIP_UTILITY_VOIDJUMP_MODULE$"
+	tech_darktec_ship_util_voidjump_desc:0 "$DARKTEC_SHIP_UTILITY_VOIDJUMP_DESC$"
+	tech_darktec_ship_util_voidjump_mechanical:0 "$DARKTEC_SHIP_UTILITY_VOIDJUMP_MODULE$"
+	tech_darktec_ship_util_voidjump_mechanical_desc:0 "$DARKTEC_SHIP_UTILITY_VOIDJUMP_DESC$"
+	tech_darktec_ship_util_voidjump_organic:0 "$DARKTEC_SHIP_UTILITY_VOIDJUMP_MODULE_ORGANIC$"
+	tech_darktec_ship_util_voidjump_organic_desc:0 "$DARKTEC_SHIP_UTILITY_VOIDJUMP_ORGANIC_DESC$"
+
+	tech_darktec_ship_util_voidjump_unlocks_title:0 "DISCARDED"
+	tech_darktec_ship_util_voidjump_unlocks_desc:0 "DISCARDED"
+	tech_darktec_ship_util_voidjump_organic_unlocks_title:0 "DISCARDED"
+	tech_darktec_ship_util_voidjump_organic_unlocks_desc:0 "DISCARDED"
+
+	tech_darktec_ship_util_inertialess:0 "$DARKTEC_SHIP_UTILITY_INERTIALESS$"
+	tech_darktec_ship_util_inertialess_desc:0 "$DARKTEC_SHIP_UTILITY_INERTIALESS_DESC$"
+	tech_darktec_ship_util_inertialess_mechanical:0 "$DARKTEC_SHIP_UTILITY_INERTIALESS$"
+	tech_darktec_ship_util_inertialess_mechanical_desc:0 "$DARKTEC_SHIP_UTILITY_INERTIALESS_DESC$"
+	tech_darktec_ship_util_inertialess_organic:0 "$DARKTEC_SHIP_UTILITY_INERTIALESS_ORGANIC$"
+	tech_darktec_ship_util_inertialess_organic_desc:0 "$DARKTEC_SHIP_UTILITY_INERTIALESS_ORGANIC_DESC$"
+
+	tech_darktec_ship_util_inertialess_unlocks_title:0 "DISCARDED"
+	tech_darktec_ship_util_inertialess_unlocks_desc:0 "DISCARDED"
+	tech_darktec_ship_util_inertialess_organic_unlocks_title:0 "DISCARDED"
+	tech_darktec_ship_util_inertialess_organic_unlocks_desc:0 "DISCARDED"
+
+	tech_darktec_ship_util_collapser:0 "$DARKTEC_SHIP_UTILITY_COLLAPSER$"
+	tech_darktec_ship_util_collapser_desc:0 "$DARKTEC_SHIP_UTILITY_COLLAPSER_DESC$"
+	tech_darktec_ship_util_collapser_mechanical:0 "$DARKTEC_SHIP_UTILITY_COLLAPSER$"
+	tech_darktec_ship_util_collapser_mechanical_desc:0 "$DARKTEC_SHIP_UTILITY_COLLAPSER_DESC$"
+	tech_darktec_ship_util_collapser_organic:0 "$DARKTEC_SHIP_UTILITY_COLLAPSER_ORGANIC$"
+	tech_darktec_ship_util_collapser_organic_desc:0 "$DARKTEC_SHIP_UTILITY_COLLAPSER_ORGANIC_DESC$"
+
+	tech_darktec_ship_util_collapser_unlocks_title:0 "DISCARDED"
+	tech_darktec_ship_util_collapser_unlocks_desc:0 "DISCARDED"
+	tech_darktec_ship_util_collapser_organic_unlocks_title:0 "DISCARDED"
+	tech_darktec_ship_util_collapser_organic_unlocks_desc:0 "DISCARDED"
+
+	tech_darktec_ship_util_interferer:0 "$DARKTEC_SHIP_UTILITY_INTERFERER$"
+	tech_darktec_ship_util_interferer_desc:0 "$DARKTEC_SHIP_UTILITY_INTERFERER_DESC$"
+	tech_darktec_ship_util_interferer_mechanical:0 "$DARKTEC_SHIP_UTILITY_INTERFERER$"
+	tech_darktec_ship_util_interferer_mechanical_desc:0 "$DARKTEC_SHIP_UTILITY_INTERFERER_DESC$"
+	tech_darktec_ship_util_interferer_organic:0 "$DARKTEC_SHIP_UTILITY_INTERFERER_ORGANIC$"
+	tech_darktec_ship_util_interferer_organic_desc:0 "$DARKTEC_SHIP_UTILITY_INTERFERER_ORGANIC_DESC$"
+
+	tech_darktec_ship_util_interferer_unlocks_title:0 "DISCARDED"
+	tech_darktec_ship_util_interferer_unlocks_desc:0 "DISCARDED"
+	tech_darktec_ship_util_interferer_organic_unlocks_title:0 "DISCARDED"
+	tech_darktec_ship_util_interferer_organic_unlocks_desc:0 "DISCARDED"
+
+
+	DARKTEC_SPHERE_BREACHING:0 "엔트로피 역전"
+	DARKTEC_SPHERE_BREACHING_DESC:0 "격리된 변칙 개체에 충분한 파라-물질을 공급했고, 이제 붕괴 직전입니다.\n하지만 저희가 직접 붕괴를 강제할 수 있으며, 이는 이론적으로 현실을 국지적으로 재작성할 수 있게 해줄 것입니다... 저희의 사고와 이념 자체를 재작성할 수 있게 말이죠."
+
+	DARKTEC_ANTICRISIS_PROTECTION:0 "DISCARDED"
+	DARKTEC_ANTICRISIS_PROTECTION_DESC:0 "나를 교체하세요"
+
+	DARKTEC_ANTICRISIS_ATTACK:0 "DISCARDED"
+	DARKTEC_ANTICRISIS_ATTACK_DESC:0 "DISCARDED"
+
+
+	darktec_modifier_country_shielded_against_entropy:0 "DISCARDED"
+	darktec_modifier_anti_entropy_crisis:0 "DISCARDED"
+
+	darktec_decision_taint_world_menial:0 "암영의 오염 - 추출"
+	darktec_decision_taint_world_menial_desc:0 "DISCARDED"
+	darktec_decision_taint_world_menial_tooltip:0 "DISCARDED"
+	darktec_decision_taint_world_menial_repeated_tooltip:0 "DISCARDED"
+
+	darktec_decision_taint_world_specialist:0 "암영의 오염 - 생산"
+	darktec_decision_taint_world_specialist_desc:0 "DISCARDED"
+	darktec_decision_taint_world_specialist_tooltip:0 "DISCARDED"
+	darktec_decision_taint_world_specialist_repeated_tooltip:0 "DISCARDED"
+
+	darktec_decision_taint_world_pop:0 "암영의 오염 - 인구"
+	darktec_decision_taint_world_pop_desc:0 "DISCARDED"
+	darktec_decision_taint_world_pop_tooltip:0 "DISCARDED"
+	darktec_decision_taint_world_pop_repeated_tooltip:0 "DISCARDED"
+
+	darktec_decision_taint_world_utility:0 "암영의 오염 - 시설"
+	darktec_decision_taint_world_utility_desc:0 "DISCARDED"
+	darktec_decision_taint_world_utility_tooltip:0 "DISCARDED"
+	darktec_decision_taint_world_utility_repeated_tooltip:0 "DISCARDED"
+
+	darktec_decision_untaint_world:0 "오염 정화"
+	darktec_decision_untaint_world_desc:0 "DISCARDED"
+	darktec_decision_untaint_world_tooltip:0 "DISCARDED"
+
+	darktec_decision_entropy_world:0 "엔트로피 결속 세계"
+	darktec_decision_entropy_world_desc:0 "DISCARDED"
+	darktec_decision_entropy_world_tooltip:0 "DISCARDED"
+
+	darktec_decision_unentropy_world:0 "엔트로피 정화"
+	darktec_decision_unentropy_world_desc:0 "DISCARDED"
+	darktec_decision_undo_entropy_world:0 "DISCARDED"
+	darktec_decision_undo_entropy_world_desc:0 "DISCARDED"
+	darktec_decision_undo_entropy_world_tooltip:0 "DISCARDED"
+
+	situation_darktec_entropy_deficit_approach_economy:0 "DISCARDED"
+	situation_darktec_entropy_deficit_approach_economy_tooltip:0 "DISCARDED"
+	situation_darktec_entropy_deficit_approach_warfare:0 "DISCARDED"
+	situation_darktec_entropy_deficit_approach_warfare_tooltip:0 "DISCARDED"
+	situation_darktec_entropy_deficit_approach_applications:0 "DISCARDED"
+	situation_darktec_entropy_deficit_approach_applications_tooltip:0 "DISCARDED"
+
+	mod_country_resource_max_darktec_contained_entropy_add:0 "$darktec_contained_entropy_with_icon$ 저장 용량"
+	mod_planet_farmers_sr_dark_matter_upkeep_add:0 "$sr_dark_matter_with_icon$ $pop_group_unit$ $job_farmer_plural_with_icon$당 유지비"
+	mod_planet_miners_sr_dark_matter_produces_add:0 "$sr_dark_matter_with_icon$ $pop_group_unit$ $job_miner_plural_with_icon$당"
+	mod_planet_miners_sr_dark_matter_upkeep_add:0 "$sr_dark_matter_with_icon$ $pop_group_unit$ $job_miner_plural_with_icon$당 유지비"
+	mod_planet_technician_sr_dark_matter_produces_add:0 "$sr_dark_matter_with_icon$ $pop_group_unit$ $job_technician_plural_with_icon$당"
+	mod_planet_technician_sr_dark_matter_upkeep_add:0 "$sr_dark_matter_with_icon$ $pop_group_unit$ $job_technician_plural_with_icon$당 유지비"
+	mod_planet_metallurgists_sr_dark_matter_upkeep_add:0 "$sr_dark_matter_with_icon$ $pop_group_unit$ $job_foundry_plural_with_icon$당 유지비"
+	# dm from physicist already exist
+	mod_planet_physicists_sr_dark_matter_upkeep_add:0 "$sr_dark_matter_with_icon$ $pop_group_unit$ $job_physicist_plural_with_icon$당 유지비"
+	mod_planet_biologists_sr_dark_matter_produces_add:0 "$sr_dark_matter_with_icon$ $pop_group_unit$ $job_biologist_plural_with_icon$당"
+	mod_planet_biologists_sr_dark_matter_upkeep_add:0 "$sr_dark_matter_with_icon$ $pop_group_unit$ $job_biologist_plural_with_icon$당 유지비"
+	mod_planet_engineers_sr_dark_matter_produces_add:0 "$sr_dark_matter_with_icon$ $pop_group_unit$ $job_engineer_plural_with_icon$당"
+	mod_planet_engineers_sr_dark_matter_upkeep_add:0 "$sr_dark_matter_with_icon$ $pop_group_unit$ $job_engineer_plural_with_icon$당 유지비"
+
+
+	# Note: this modifier is not localized in vanilla
+	mod_country_sr_dark_matter_produces_mult:0 "월간 £sr_dark_matter£ 암흑 물질"
+
+
+# Do not remove below v

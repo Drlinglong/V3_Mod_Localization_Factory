@@ -1,0 +1,2 @@
+﻿l_russian:
+ GDP_TOOLTIP:1 "#header [concept_gdp]#!\n#tooltippable_name [Country.GetAdjective]ий#! ВВП: #N @money![Country.GetGDP|Dv]#! ($GDPGR_growth_text$) ([Country.GetGDPRanking])\n$TOOLTIP_DELIMITER$\nВВП на душу населения: #variable @money![Country.GetGDPPerCapita|2*]#! [Country.GetGDPPerCapitaRanking]\n$TOOLTIP_DELIMITER$\n[Country.GetAdjective]ий#! ВВП составляет [Country.MakeScope.ScriptValue('larp_global_gdp_percent')|%v2] от глобального ВВП\nГлобальный ВВП: @money![Country.MakeScope.ScriptValue('larp_global_gdp')|Dv]\n"

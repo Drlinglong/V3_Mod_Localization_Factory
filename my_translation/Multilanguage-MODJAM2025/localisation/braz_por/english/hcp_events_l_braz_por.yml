@@ -1,0 +1,177 @@
+﻿l_braz_por:
+##################
+# hcp_events_l_english.yml
+# By jam1066
+##################
+
+ #start
+
+ ##########################
+ # Harvesters Event Chain #
+ ##########################
+ hcp_harvesters_crisis_chain_title: "$hcp_ap_harvesters$"
+ hcp_harvesters_crisis_chain_desc:"Nosso universo é finito! Recursos e tempo são ambos limitados. Não devemos deixar nenhum deles ser desperdiçado."
+ hcp_harvesters_level_reached:"Nível de Crise Alcançado"
+
+ ######################
+ # Harvesters Level 1 #
+ ######################
+ hcp_harvesters_crisis.100.name:"Pensando no Futuro"
+ hcp_harvesters_crisis.100.desc:"À medida que nossa civilização continua a se espalhar pela galáxia, as chances de nossa sobrevivência coletiva melhoram e podemos nos dar ao luxo de olhar cada vez mais para o futuro. No entanto, ao fazê-lo, fomos confrontados com uma constatação horrível. Não importa quão expansivo seja nosso império, quão grandes sejam suas conquistas ou quão duradouro seja seu legado, nosso universo eventualmente terminará, tornando tudo sem sentido.\n\nHá uma crescente preocupação entre a população sobre a eventual morte térmica, com muitos argumentando que deveríamos começar a nos preparar para lidar com isso agora. Isso exigiria a aquisição de vastas quantidades de recursos.\n\nPara facilitar a capacidade de armazenamento para isso, elaboramos planos para um silo gigantesco, construído em torno de um buraco negro."
+ hcp_harvesters_crisis.100.mach.desc:"À medida que nossa rede se espalha pela galáxia, a probabilidade de nossa sobrevivência contínua cresce exponencialmente, permitindo-nos considerar escalas de tempo mais longas. Infelizmente, todas as nossas simulações futuras convergem para o mesmo resultado. Nossa existência é limitada pela expectativa de vida prevista do universo.\n\nPara facilitar nossa existência contínua além de tal ponto, devemos trabalhar para consolidar todos os recursos disponíveis. Para esse propósito, elaboramos planos para um silo gigantesco, construído em torno de um buraco negro."
+ hcp_harvesters_crisis.100.hive.desc:"À medida que continuamos a nos propagar pela galáxia, as chances de nossa sobrevivência melhoram e podemos nos dar ao luxo de olhar cada vez mais para o futuro. No entanto, ao fazê-lo, fomos confrontados com uma constatação horrível. Nosso universo eventualmente morrerá, e nós junto com ele.\n\nÉ fundamental que garantamos nossa sobrevivência diante de tal inevitabilidade. Para isso, devemos começar a acumular vastos estoques de recursos. Para esse propósito, elaboramos planos para um silo gigantesco, construído em torno de um buraco negro."
+ hcp_harvesters_crisis.100.a:"Vamos ao trabalho."
+ hcp_harvesters_crisis.100.resource_consolidation:"Temos experiência com isso."
+
+ # Acquire a Black Hole
+ hcp_harvesters_crisis.101.name:"Buraco Negro Adquirido"
+ hcp_harvesters_crisis.101.desc:"Adquirimos um §HBuraco Negro§! adequado para iniciar a construção de um §YSilo de Singularidade§!."
+
+ hcp_harvesters_crisis.102.name:"Buraco Negro Identificado"
+ hcp_harvesters_crisis.102.desc:"Nossos postos de observação identificaram um §HBuraco Negro§! adequado para iniciar a construção de um §YSilo de Singularidade§!."
+
+ ######################
+ # Harvesters Level 2 #
+ ######################
+ hcp_harvesters_crisis.200.name:"Iniciando Operações"
+ hcp_harvesters_crisis.200.desc:"A conclusão da primeira etapa do nosso Silo de Singularidade é um momento memorável! Embora esteja apenas 25% completo, ele já possui uma capacidade maior do que o restante de nossas instalações de armazenamento combinadas. Infelizmente, não temos o luxo de tempo para esperar que ele seja finalizado antes de iniciarmos nossas operações de colheita.\n\nNossos Drones Prospectores já identificaram novos e ricos depósitos minerais para explorarmos e estamos trabalhando arduamente no desenvolvimento de técnicas de mineração mais eficientes, mas ainda há muito a fazer."
+ hcp_harvesters_crisis.200.a:"Não há tempo a perder."
+
+ ######################
+ # Harvesters Level 3 #
+ ######################
+ hcp_harvesters_crisis.300.name:"Ineficiências Persistentes"
+ hcp_harvesters_crisis.300.desc:"Nossas operações de colheita estão agora em pleno andamento. A implantação de equipamentos de mineração energizados melhorou drasticamente sua eficiência geral e a expansão contínua de nossa infraestrutura orbital aumenta nosso acesso a recursos valiosos, mas ainda há ineficiências que persistem.\n\nPara tentar remediar isso, elaboramos projetos para um novo tipo de estação orbital. Essas Escavadeiras Orbitais são projetadas com a capacidade de despojar um planeta camada por camada, reunindo vastas somas de recursos para nós.\n\nAlém disso, alteramos os projetos para o Silo de Singularidade para incluir uma série de santuários. Estes abrigarão toda a nossa civilização de uma maneira muito mais eficiente do que qualquer planeta jamais poderia."
+ hcp_harvesters_crisis.300.a:"Requeremos mais recursos."
+
+ ######################
+ # Harvesters Level 4 #
+ ######################
+ hcp_harvesters_crisis.400.name:"Técnicas Experimentais"
+ hcp_harvesters_crisis.400.desc:"Uma análise recente de nossas operações de colheita revelou um resultado alarmante. Embora a implantação de nossas Escavadeiras Orbitais tenha levado nossa eficiência operacional a alturas anteriormente consideradas inatingíveis, ainda estimamos que ficaremos aquém até mesmo de nossos objetivos mais pessimistas.\n\nEm um esforço para salvar este empreendimento, começamos a examinar algumas das técnicas de mineração mais experimentais que temos desenvolvido e uma em particular mostra promessa, as §HColheitadeiras Estelares§!.\n\nAcreditamos que podemos acelerar seu desenvolvimento construindo e testando um protótipo. A infraestrutura orbital de §H[capital_scope.GetName]§! foi preparada para acomodar a construção."
+ hcp_harvesters_crisis.400.a:"Isso deve funcionar."
+
+ hcp_harvesters_crisis.410.name:"Protótipo Concluído"
+ hcp_harvesters_crisis.410.desc:"Concluímos a construção do protótipo da Colheitadeira Estelar. Minimizando até mesmo as maiores de nossas Estações Estelares, os recursos usados para construí-lo são astronômicos, portanto é importante que ele entregue os resultados prometidos. Para testá-lo, devemos visar um sistema em nosso território que careça de muita importância estratégica."
+ hcp_harvesters_crisis.410.a:"O Sistema [event_target:hcp_test_fire_target.GetName] deve servir."
+ hcp_harvesters_crisis.410.b:"Precisaremos decidir de qual sistema podemos prescindir."
+
+ hcp_harvesters_crisis.415.name:"Protótipo Destruído"
+ hcp_harvesters_crisis.415.desc:"Nosso Protótipo de Colheitadeira Estelar foi destruído! A quantidade de recursos desperdiçados é astronômica. Agora precisamos construir outro para concluir os testes."
+ hcp_harvesters_crisis.415.a:"Isso é um desastre!"
+
+ hcp_harvesters_crisis.420.name:"Sistema Estelar Ceifado"
+ hcp_harvesters_crisis.420.desc:"O Sistema [from.GetName] se foi, tudo nele foi completamente desmantelado e seus recursos armazenados a bordo de nossa Colheitadeira Estelar. Este teste superou até mesmo nossas expectativas mais otimistas! Ainda há trabalho a fazer para finalizar o design, mas nossos objetivos agora são muito mais alcançáveis."
+
+ ######################
+ # Harvesters Level 5 #
+ ######################
+ hcp_harvesters_crisis.500.name:"A Ceifa do Universo"
+ hcp_harvesters_crisis.500.desc:"Estamos no precipício de uma nova era para o universo. Com a conclusão de nossos testes com o Protótipo, estamos agora prontos para liberar nossas Colheitadeiras Estelares para reunir os recursos de que precisamos. Seria ineficiente construir mais delas manualmente, então lhes demos a capacidade de se autorreplicar, utilizando os materiais que reuniram.\n\nTambém lhes demos a capacidade de evacuar a população de um planeta. Isso foi originalmente pensado para permitir seu uso em sistemas, incluindo nossas colônias existentes, sem desacelerar nossos esforços de colheita. No entanto, isso também poderia ser usado nas colônias de outros impérios, permitindo-nos realocar suas populações para nossos santuários."
+ hcp_harvesters_crisis.500.a:"Todos são bem-vindos em nossos santuários."
+ hcp_harvesters_crisis.500.b:"Colher as populações."
+
+ hcp_harvesters_crisis.510.name:"Última Colheitadeira Estelar Destruída"
+ hcp_harvesters_crisis.510.desc:"Nossa última Colheitadeira Estelar ativa foi destruída! Como não temos mais uma para replicar, teremos que construir uma nova manualmente."
+ hcp_harvesters_crisis.510.a:"Isso é um desastre!"
+
+ hcp_harvesters_crisis.515.name:"Última Colheitadeira Estelar Parte da Galáxia"
+ hcp_harvesters_crisis.515.desc:"Nossa última Colheitadeira Estelar ativa deixou a galáxia! Estamos revisando nossos processos administrativos para garantir que isso não aconteça novamente. Como não temos mais uma para replicar, teremos que construir uma nova manualmente."
+ hcp_harvesters_crisis.515.a:"Isso é um desastre!"
+
+ ##########################
+ # Solar System Harvested #
+ ##########################
+ hcp_harvesters_crisis.610.name:"Sistema Estelar Desaparece"
+ hcp_harvesters_crisis.610.desc:"O sistema §H[destroyed_system.GetName]§! sumiu. Nossos sensores de longo alcance mostram apenas um vazio onde ele antes estava. Ao revisar a telemetria dos meses anteriores, notamos uma flutuação repentina na massa do sistema antes que ela começasse a diminuir rapidamente. Quaisquer naves estelares ou estações que estavam presentes no sistema também desapareceram.\n\nRelatos não confirmados indicam um único sobrevivente deste evento - algum tipo de nave massiva pertencente a §H[crisis_country.GetName]§!..."
+ hcp_harvesters_crisis.610.a:"O que eles estão tramando?"
+
+ hcp_harvesters_crisis.611.name:"Sistema Estelar Ceifado"
+ hcp_harvesters_crisis.611.desc:"O sistema §H[destroyed_system.GetName]§! sumiu! Uma nave estelar massiva pertencente a §H[crisis_country.GetName]§! tomou posição acima da estrela primária e liberou um enxame massivo de drones que procedeu a desmantelar tudo no sistema.\n\nApenas a nave estelar [crisis_country.GetSpeciesName], que eles aparentemente chamam de \\"§HCeifadora Estelar§!\\", sobreviveu. Evidentemente, §H[crisis_country.GetName]§! agora possui tanto a tecnologia quanto os meios para ceifar sistemas estelares inteiros."
+ hcp_harvesters_crisis.611.a:"Isso muda tudo..."
+
+ hcp_harvesters_crisis.612.name:"Sistema Estelar Desaparece"
+ hcp_harvesters_crisis.612.desc:"O sistema §H[destroyed_system.GetName]§! sumiu! Um enxame massivo de drones desmantelou tudo no sistema.\n\nParece que §H[crisis_country.GetName]§! agora também possui tecnologia de Ceifadora Estelar!"
+ hcp_harvesters_crisis.612.a:"Os recursos deles serão nossos!"
+
+ ##################################
+ # Harvesters Victory Event Chain #
+ ##################################
+ hcp_harvesters_victory_chain_title:"A Ceifa do Universo"
+ hcp_harvesters_victory_chain_desc:"Para dar o pontapé inicial em nossa Ceifa do Universo, precisaremos construir um número suficiente de Ceifadoras Estelares e enviá-las para começar a ceifar outras galáxias. Nossa própria galáxia deve fornecer recursos amplos para este empreendimento. Também devemos realocar toda a nossa população para os santuários ao redor de nosso Silo de Singularidade, nosso lar eterno.\n\n§HOBJETIVOS§!:\n- Realocar toda a nossa população para o nosso Silo de Singularidade.\n- Concluir a situação 'Limites Externos'."
+
+ hcp_anti_harvesters_chain_title:"A Ceifa do Universo"
+ hcp_anti_harvesters_chain_desc:"Ceifadoras Estelares representam uma ameaça existencial para todo o universo. Devemos destruir o máximo que pudermos; qualquer uma que escape poderá nos condenar a todos."
+ hcp_DESTROY_STELLAR_HARVESTER:"Destruir Ceifadora Estelar"
+ hcp_DESTROY_STELLAR_HARVESTER_DESC:"Estamos atualmente rastreando esta Ceifadora Estelar. Devemos destruí-la antes que ela possa deixar a galáxia."
+ hcp_DESTROY_STELLAR_HARVESTER_TOOLTIP:"Destruir a Ceifadora Estelar"
+
+ hcp_harvesters_crisis.800.name:"A Eternidade Aguarda"
+ hcp_harvesters_crisis.800.desc:"Nossas Ceifadoras Estelares estão ocupadas coletando recursos muito necessários, e realocamos com sucesso toda a nossa população para os santuários ao redor de nosso Silo de Singularidade. Agora é a hora de nos isolar, garantindo que estaremos protegidos dos perigos ainda presentes além do nosso refúgio." #\n\nAlthough, this galaxy still contains valuable resources. We could wait until we have claimed all we can.
+ hcp_harvesters_crisis.800.a:"Ativar o escudo."
+ hcp_harvesters_crisis.800.b:"Devemos coletar mais recursos."
+
+ ###############################
+ # Harvester Country Destroyed #
+ ###############################
+ #Harvester Defeated Before Completing Outward Bound Situation
+ hcp_harvesters_crisis.905.name:"Ceifa Galáctica Encerrada"
+ hcp_harvesters_crisis.905.desc:"Com a destruição de §H[LastKilledCountryName]§!, a ameaça de suas Ceifadoras Estelares finalmente chegou ao fim. A galáxia respira aliviada."
+ hcp_harvesters_crisis.905.a:"Um grande dia para o universo."
+ #Harvester Defeated After Completing Outward Bound Situation
+ hcp_harvesters_crisis.910.name:"Vitória Oca"
+ hcp_harvesters_crisis.910.desc:"Embora a destruição de §H[LastKilledCountryName]§! seja certamente um motivo de celebração, não há como escapar do fato de que muitas Ceifadoras Estelares conseguiram fugir da galáxia. Se sobrevivermos para ver o retorno delas, só podemos esperar ser capazes de detê-las."
+ hcp_harvesters_crisis.910.a:"Algo em que não vale a pena pensar."
+ #Post Harvester Victory Event
+ hcp_harvesters_crisis.915.name:"Isolamento Autoimposto"
+ hcp_harvesters_crisis.915.desc:"Pouco depois que §H[LastKilledCountryName]§! retirou o restante de suas forças para o Sistema §Y[event_target:hcp_refuge_system.GetName]§!, detectamos um pico massivo de energia vindo de seu Silo de Singularidade. Sensores de longo alcance indicam que um poderoso escudo de energia foi erguido em torno de seu santuário, isolando-o do resto do universo.\n\nO escudo vaporiza qualquer coisa que entre em contato com ele, antes de canalizá-la para o buraco negro em seu centro. Parece que depois de liberar suas Ceifadoras Estelares sobre o universo em geral, eles se esconderam de qualquer retribuição."
+ hcp_harvesters_crisis.915.a:"Covardes."
+
+ ################################
+ # Singularity Silo Lost Events #
+ ################################
+ hcp_harvesters_crisis.1000.name:"$hcp_singularity_silo$ Ceifado"
+ hcp_harvesters_crisis.1000.desc:"Nosso §Y$hcp_singularity_silo$§! foi destruído! Uma §Y$hcp_stellar_harvester$§! pertencente a §H[event_target:crisis_country.GetName]§! tomou posição acima dele e liberou seus enxames de drones, não deixando nada para trás.\n\nEsta estrutura é essencial para nossas operações, é imperativo que tenhamos uma nova funcionando o mais rápido possível."
+ hcp_harvesters_crisis.1000.a:"Devemos reconstruí-lo."
+ hcp_harvesters_crisis.1000.b:"Não podemos simplesmente pegar o deles?"
+
+ hcp_NEEDS_NEW_BLACK_HOLE:"Adquirir um novo Buraco Negro"
+ hcp_NEEDS_NEW_BLACK_HOLE_DESC:"Precisamos de um §HBuraco Negro§! para construir um novo §Y$hcp_singularity_silo_4$§!. Podemos adquirir um dos conhecidos ou configurar nossas estações de observação para procurar um que tenha sido anteriormente ignorado."
+ 
+ hcp_REBUILD_SINGULARITY_SILO_1:"Reconstruir $hcp_singularity_silo$"
+ hcp_REBUILD_SINGULARITY_SILO_1_DESC:"Nosso $hcp_singularity_silo$ foi destruído. Devemos reconstruí-lo para que possa servir como nosso refúgio eterno."
+ hcp_REBUILD_SINGULARITY_SILO_2: "$hcp_REBUILD_SINGULARITY_SILO_1$"
+ hcp_REBUILD_SINGULARITY_SILO_2_DESC: "$hcp_REBUILD_SINGULARITY_SILO_1_DESC$"
+ hcp_REBUILD_SINGULARITY_SILO_TOOLTIP: "$hcp_BUILD_SINGULARITY_SILO_LEVEL_1_TOOLTIP$"
+
+ hcp_harvesters_crisis.1002.name: "$hcp_harvesters_crisis.101.name$"
+ hcp_harvesters_crisis.1002.desc:"Adquirimos um §HBuraco Negro§! adequado para iniciar a construção de um novo §YSilo de Singularidade§!."
+ hcp_harvesters_crisis.1003.name: "$hcp_harvesters_crisis.1002.name$"
+ hcp_harvesters_crisis.1003.desc: "$hcp_harvesters_crisis.1003.desc$"
+
+ hcp_harvesters_crisis.1005.name: "$hcp_harvesters_crisis.102.name$"
+ hcp_harvesters_crisis.1005.desc:"Nossos postos de observação identificaram um §HBuraco Negro§! adequado para iniciar a construção de um novo §YSilo de Singularidade§!."
+ hcp_harvesters_crisis.1006.name: "$hcp_harvesters_crisis.1005.name$"
+ hcp_harvesters_crisis.1006.desc: "$hcp_harvesters_crisis.1005.desc$"
+
+ hcp_STEAL_SINGULARITY_SILO_1:"Adquirir $hcp_singularity_silo$"
+ hcp_STEAL_SINGULARITY_SILO_1_DESC:"A perda do nosso $hcp_singularity_silo$ nos causou um grande revés. Podemos evitar mais ineficiências se conseguirmos \\"adquirir\\" um novo."
+ hcp_STEAL_SINGULARITY_SILO_2: "$hcp_STEAL_SINGULARITY_SILO_1$"
+ hcp_STEAL_SINGULARITY_SILO_2_DESC: "$hcp_STEAL_SINGULARITY_SILO_1_DESC$"
+ hcp_STEAL_SINGULARITY_SILO_TOOLTIP:"Assuma o controle do §Y$hcp_singularity_silo$§! no Sistema §H[this.GetName]§!."
+
+ hcp_harvesters_crisis.1011.name:"$hcp_singularity_silo$ Adquirido"
+ hcp_harvesters_crisis.1011.desc.a:"Adquirimos com sucesso um novo §Y$hcp_singularity_silo$§!. Nossas operações podem retornar ao normal."
+ hcp_harvesters_crisis.1011.desc.b:"Nossas fortunas parecem ter mudado. Como parte de nossa aquisição do Sistema §H[from.GetName]§!, ganhamos um novo §Y$hcp_singularity_silo$§!. Não é mais necessário investirmos na construção de um novo."
+
+ hcp_harvesters_crisis.1012.name: "$hcp_harvesters_crisis.1011.name$"
+ hcp_harvesters_crisis.1012.desc.a: "$hcp_harvesters_crisis.1011.desc.a$"
+ hcp_harvesters_crisis.1012.desc.b: "$hcp_harvesters_crisis.1011.desc.b$"
+
+ hcp_harvesters_crisis.1015.name: "$hcp_harvesters_crisis.1000.name$"
+ hcp_harvesters_crisis.1015.desc.a:"O §Y$hcp_singularity_silo$§! no Sistema §H[from.GetName]§! foi destruído! Como não há outros restantes na galáxia, não temos escolha a não ser construir um novo."
+ hcp_harvesters_crisis.1015.desc.b: ""
+ hcp_harvesters_crisis.1015.a:"Teremos que construir um novo."
+ hcp_harvesters_crisis.1015.b:"Há outros que podemos buscar. O §Y$hcp_singularity_silo$§! no Sistema §H[from.GetName]§! foi destruído! Devemos focar nossos esforços nos silos restantes."
+ 
+ #end

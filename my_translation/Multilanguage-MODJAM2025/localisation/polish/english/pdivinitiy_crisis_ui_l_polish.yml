@@ -1,0 +1,183 @@
+﻿l_polish:
+
+ ############################################
+ ### project_divinity_crisis_ui_l_english ###
+ ###     by daniellm                      ###
+ ############################################
+
+
+
+ #####################
+ ### crisis screen ###
+ #####################
+
+ pdivinity_psionic_strength_value:"£pdivinity_psionic_strength£ $VAL|0$"
+ pdivinity_psionic_strength_gaining:"Ukończ §HCele Kryzysu§!, aby zdobyć więcej §YŁaski Patrona§!."
+ pdivinity_psionic_strength_desc:"$pdivinity_psionic_strength$ jest miarą naszego rezonansu z enigmatycznymi energiami Architekta."
+ pdivinity_psionic_strength_crisis_objective:"Cele Kryzysu"
+ pdivinity_psionic_strength_crisis_objective_gained:"$pdivinity_psionic_strength$ zdobyte"
+ pdivinity_psionic_strength_crisis_objective_reward: "$REWARD$"
+ pdivinity_psionic_strength_crisis_objective_progress:"Zyskaliśmy £pdivinity_psionic_strength£ $AMOUNT$ z tego Celu Kryzysu."
+ pdivinity_psionic_strength_crisis_level_locked:"Wymagane do odblokowania tego poziomu:\n"
+ pdivinity_psionic_strength_crisis_level_unlocked:"Na $LEVEL$ otrzymujesz Projekt Specjalny i nagrody:\n"
+ pdivinity_psionic_strength_crisis_level_desc:"Aby awansować przez poziomy Kryzysu, ukończ Cele Kryzysu i wykonaj wymagane zadanie przypisane do każdego etapu"
+ pdivinity_psionic_strength_crisis_level_unlock:"Posiada £pdivinity_psionic_strength£ §Y$CURRENCY$§! $pdivinity_psionic_strength$"
+ pdivinity_psionic_strength_current_value:"Obecna Wartość: §Y$VALUE|0$§!"
+
+ # this text exists in the crisis screen, the intro is just the nemesis one, i don't really like it tbh neither does the other one talk about the galcom. ask me if you need the other ones for comparison
+ pdivinity_psionic_strength_crisis_description_title:"Projekt Boskości"
+ pdivinity_psionic_strength_crisis_description_intro:"Przez eony wizjonerzy i uczeni szeptali o nadchodzącym §RKryzysie§! – końcu spowitym w proroctwa, gdzie los całego życia rozumnego wisiałby na włosku. Wyobrażali sobie najeźdźców spoza gwiazd, bunty zimnej logiki maszyn lub wojny zrodzone w obcych wymiarach.\n\nLecz patrzyli na zewnątrz, gdy powinni patrzeć w głąb siebie.\n\nPrawda zawsze tliła się pod powierzchnią – głęboka, nieuchronna i związana wyłącznie z wolą. Ostatni kryzys... zawsze miał być §Rmy§!."
+ pdivinity_psionic_strength_crisis_description:"$pdivinity_psionic_strength_crisis_description_intro$\n\nNasze myśli, nasza wola, falują przez inną płaszczyznę – płaszczyznę bezgranicznej siły psionicznej. Zasłona się przerzedza. Jeśli zdołamy pochwycić tę moc, uformować ją zgodnie z naszym celem, wtedy nie tylko przetrwamy to, co nadejdzie... my to zdefiniujemy."
+ pdivinity_psionic_strength_crisis_howto_title:0 "Dążenie do Boskości"
+ pdivinity_psionic_strength_crisis_howto:"Dążenie do §HCelów Kryzysu§! generuje £pdivinity_psionic_strength£ §YŁaski Patrona§!, odblokowując nasz boski potencjał, aby uwolnić tego, który wzywa galaktykę!."
+
+ crisis_pdivinity_project_divinity_level_1:0 "Genesis"
+ crisis_pdivinity_project_divinity_level_1_desc:0 "Poziom kryzysu 1"
+
+ crisis_pdivinity_project_divinity_level_2:0 "Subwersja"
+ crisis_pdivinity_project_divinity_level_2_desc:0 "Poziom kryzysu 2"
+
+ crisis_pdivinity_project_divinity_level_3:0 "Proroctwo"
+ crisis_pdivinity_project_divinity_level_3_desc:0 "Poziom kryzysu 3"
+
+ crisis_pdivinity_project_divinity_level_4:0 "Objawienie"
+ crisis_pdivinity_project_divinity_level_4_desc:0 "Poziom kryzysu 4"
+
+ crisis_pdivinity_project_divinity_level_5:0 "Apoteoza"
+ crisis_pdivinity_project_divinity_level_5_desc:0 "Poziom kryzysu 5"
+ # Resource
+
+ pdivinity_psionic_strength_name:0 "Łaska Patrona"
+ pdivinity_psionic_strength:0 "Łaska Patrona"
+
+ # objectives
+
+ crisobj_pdivinity_establish_cult_name:0 "Ustanów Kult Zasłony"
+ crisobj_pdivinity_establish_cult_desc:0 "Ustanawianie kultów zasłony w innych imperiach pozwala nam szerzyć nasze wpływy w całej galaktyce.\n\nUstanawiaj kulty zasłony, aby zdobyć tę nagrodę $pdivinity_psionic_strength$."
+
+ crisobj_pdivinity_retain_vassals_name:0 "Utrzymaj Wazalów Akolitów"
+ crisobj_pdivinity_retain_vassals_desc:0 "Ich posłuszeństwo wobec zasłony przyczynia się do naszej ścieżki do boskości.\n\nUtrzymuj Wazalów Akolitów, aby zdobyć tę §Yroczną§! nagrodę $pdivinity_psionic_strength$."
+
+ crisobj_pdivinity_vassalize_empire_name:0 "Uwasalnij Imperia"
+ crisobj_pdivinity_vassalize_empire_desc:0 "Podporządkowanie mas zapewnia, że usłuchają jego boskiego słowa.\n\nUwasalniaj imperia, aby zdobyć tę nagrodę $pdivinity_psionic_strength$."
+
+ crisobj_pdivinity_research_psionic_technology_name:0 "Badaj Technologie Psioniczne"
+ crisobj_pdivinity_research_psionic_technology_desc:0 "Eksperymentowanie z komponentami opartymi na zasłonie może pomóc nam w naszej misji boskości.\n\nBadaj te rzadkie technologie, aby zdobyć tę nagrodę $pdivinity_psionic_strength$."
+
+ crisobj_pdivinity_shroud_phase_planets_name:0 "Fazuj Planety w Zasłonie"
+ crisobj_pdivinity_shroud_phase_planets_desc:0 "Fazowanie planet w zasłonie otwiera wyrwę w zasłonie i z pewnością przyciągnie uwagę tego, który wzywa.\n\nFazuj planety w zasłonie, aby zdobyć tę nagrodę $pdivinity_psionic_strength$."
+
+ crisobj_pdivinity_sacrifice_population_name:0 "Składaj Rytualne Ofiary z Populacji"
+ crisobj_pdivinity_sacrifice_population_desc:0 "Dusze poświęconych populacji pomogą nam zdobyć łaskę naszego patrona.\n\nUżyj typu czystki: rytualna ofiara, aby zdobyć tę nagrodę $pdivinity_psionic_strength$ za każdą $pop_group_unit$ Oczyszczonych Populacji."
+
+ crisobj_pdivinity_control_shroud_enclave_name:0 "Kontroluj Enklawę Kroczycieli Zasłony"
+ crisobj_pdivinity_control_shroud_enclave_desc:0 "Kroczyciele zasłony są boskiej wiary, pomogą nam w naszym celu.\n\nUtrzymuj enklawy Kroczycieli Zasłony, aby co §Yrok§! otrzymywać nagrodę $pdivinity_psionic_strength$."
+
+ crisobj_pdivinity_shroud_enemy_planets_name:0 "Psionicznie Rozrywaj Światy"
+ crisobj_pdivinity_shroud_enemy_planets_desc:0 "Spopielanie wrogich światów psionicznymi energiami przyniesie nam przychylność.\n\nRozrywaj światy, aby zdobyć nagrodę $pdivinity_psionic_strength$."
+
+ crisobj_pdivinity_summon_psionic_ships_name:0 "Przywołuj Statki Psioniczne"
+ crisobj_pdivinity_summon_psionic_ships_desc:0 "Zasłona drży na nasze rozkazy. Z jej głębin przywołujemy statki zrodzone nie z metalu, lecz z woli – manifestacje naszej rosnącej więzi z zasłoną.\n\nPrzywołuj statki psioniczne, aby zdobyć nagrodę $pdivinity_psionic_strength$."
+
+ crisobj_pdivinity_employ_telepaths_name:0 "Zatrudnij Telepatów"
+ crisobj_pdivinity_employ_telepaths_desc:0 "Architekt obdarzył naszych telepatów zdolnością do wytwarzania energii psionicznej.\n\nProdukcja $pdivinity_psionic_strength$ skaluje się wraz z liczbą zatrudnionych telepatów."
+
+ ####################
+ ### menace perks ###
+ ####################
+
+ menp_pdivinity_resource:0 "Łaska Patrona"
+ # tooltip
+ unlocks_pdivinity_unlock_resource:0 "Pozwala na gromadzenie £pdivinity_psionic_strength£ §Y$menp_pdivinity_resource$§! poprzez wypełnianie §HCelów Kryzysowych§!."
+ menp_pdivinity_resource_desc:0 "Zdobycie łaski Architekta wspomoże nasz ostateczny cel osiągnięcia boskości. Przelejemy naszą krew za jego wolę."
+
+ menp_pdivinity_ethic_attraction:0 "Boska Wiara"
+ # desc
+ menp_pdivinity_ethic_attraction_desc:0 "Szepty i wizje wzniecają wiarę w wyższą moc. Wielu mówi teraz z czcią o §RArchitekcie Przeznaczenia§!."
+
+ menp_pdivinity_psionic_armies:0 "Psioniczne Widma"
+ menp_pdivinity_psionic_armies_desc:0 "Otoczeni nienaturalną energią psioniczną, ci widmowi wojownicy dryfują między rzeczywistością a koszmarem. Agenci Architekta, są związani, by siać strach i spustoszenie wszędzie tam, gdzie się objawią."
+ unlocks_pdivinity_unlock_armies:0 "Odblokowuje typ armii: §Y$pdivinitiy_psionic_army$§!"
+
+ menp_pdivinity_zro_building:0 "Ekstraktor Zasłony"
+ menp_pdivinity_zro_building_desc:0 "Uświęcona struktura, która przerzedza zasłonę między wymiarami, umożliwiając wyszkolonym akolitom pozyskiwanie surowego Zro bezpośrednio z wirów Zasłony."
+ unlocks_pdivinity_unlock_buildings:0 "Odblokowuje §Y$building_pdivinity_shroud_harvester_building$§!"
+
+ menp_pdivinity_shroud_phasing:0 "Fazowanie Zasłony"
+ menp_pdivinity_shroud_phasing_desc:0 "Nauczyliśmy się celowo osłabiać zasłonę na wybranych światach, przekształcając je w psioniczne sanktuaria. Nasz gatunek prosperuje w tym rezonansie, podczas gdy wszyscy inni cierpią pod nami."
+ unlocks_pdivinity_unlock_phasing:0 "Odblokowuje decyzję §Y$decision_pdivinity_shroud_phasing$§! na planetach"
+
+ menp_pdivinity_ritual_sacrifice:0 "Rytualna Ofiara"
+ menp_pdivinity_ritual_sacrifice_desc:0 "Ci niegodni projektu Architekta mogą jeszcze służyć pewnemu celowi. Poprzez święte ofiary z ciała i ducha, czerpiemy siłę i łaskę z Zasłony."
+ unlocks_pdivinity_ritual_sacrifice:0 "Odblokowuje typ czystki: §Y$purge_pdivinity_sacrifice$§!"
+
+ menp_pdivinity_cult_espionage:0 "Ziarna Objawienia"
+ menp_pdivinity_cult_espionage_desc:0 "Opanowaliśmy sztukę przemycania szeptów przez granice. Wiara rozprzestrzenia się jak zgnilizna pod powierzchnią, a wkrótce ich ludzie zwrócą się przeciwko swoim bogom w imię Architekta."
+ unlocks_pdivinity_cult_espionage:0 "Odblokowuje typ operacji: §Y$operation_pdivinity_establish_cult$§!\n"
+
+ menp_pdivinity_divine_crusade:0 "Boska Krucjata"
+ menp_pdivinity_divine_crusade_desc:0 "Nasza boska krucjata posłuży jako przebudzenie dla reszty galaktyki. Poprzez świętą wojnę związujemy innych z projektem przeznaczenia. Będą służyć jako Akolici, albo upadną jako heretycy."
+ unlocks_pdivinity_divine_crusade:0 "Odblokowuje cel wojenny: §Y$wg_pdivinity_acolyte$§!\nOdblokowuje typ wasala: §Y$specialist_pdivinity_acolyte$§!\n"
+
+ menp_pdivinity_psionic_avatar:0 "Woal Zasłony"
+ menp_pdivinity_psionic_avatar_desc:0 "Eteryczna manifestacja woli Zasłony, jako wirująca chmura psionicznej energii, która zasłania i zniekształca rzeczywistość, nawiedzając pustkę między gwiazdami szeptami przeznaczenia."
+ unlocks_pdivinity_psionic_avatar:0 "Odblokowuje typ statku: §Y$pdivinity_psionic_cloud$§!"
+
+ menp_pdivinity_psionic_rupture:0 "Rozrywający Ostrzał"
+ menp_pdivinity_psionic_rupture_desc:0 "Dewastujące bombardowanie, które rozrywa zasłonę między wymiarami, uwalniając surową energię psioniczną, aby rozszarpać fortyfikacje wroga i rozproszyć jego wolę."
+ unlocks_pdivinity_psionic_rupture:0 "Odblokowuje typ bombardowania: §Y$bombardment_pdivinity_psionic_rupture_bombardment$§!"
+
+ menp_pdivinity_psionic_potential:0 "Psioniczne Nastrojenie"
+ menp_pdivinity_psionic_potential_desc:0 "Utajone połączenie naszych ludzi z Zasłoną rozkwita, dając im wzmożone dary umysłowe i głębsze nastrojenie do tkanki rzeczywistości."
+
+ menp_pdivinity_gifts_from_beyond:0 "Dary Z Zaświatów"
+ menp_pdivinity_gifts_from_beyond_desc:0 "Starożytne psioniczne sekrety i technologie odzyskane z głębin Osłony wzmacniają nasze okręty i broń nieziemską mocą."
+ unlocks_pdivinity_gifts_from_beyond:0 "§YKomponenty Psioniczne§! mogą teraz pojawiać się jako opcje badawcze."
+
+ menp_pdivinity_astral_tear:0 "Psioniczny Awatar"
+ menp_pdivinity_astral_tear_desc:0 "Żywe ucieleśnienie woli Osłony, ten awatar to potężna i enigmatyczna istota spowita czystą psioniczną mocą, naginająca rzeczywistość do swojej woli."
+ unlocks_pdivinity_astral_tear:0 "Odblokowuje typ statku: §Y$pdivinity_psionic_avatar$§!"
+
+ menp_pdivinity_beyond_the_rifts:0 "Burza Galaktyczna"
+ menp_pdivinity_beyond_the_rifts_desc:0 "Iglica Przeznaczenia powoli przerwała zasłonę, psioniczna energia wlewa się teraz w rzeczywistą przestrzeń w alarmującym tempie, tworząc burzę Osłony w naszym królestwie."
+ unlocks_pdivinity_beyond_the_rifts:0 "Tworzy §YBurzę Osłony§! w każdym posiadanym systemie."
+
+ menp_pdivinity_divine_insight:0 "Boska Wnikliwość"
+ menp_pdivinity_divine_insight_desc:0 "Obecność Architekta wyostrza nasze umysły, skracając czas między naszymi psionicznymi wyczynami i pozwalając na szybsze opanowanie Osłony."
+
+ menp_pdivinity_hyperdimensional_shielding:0 "Hiperwymiarowe Osłony"
+ menp_pdivinity_hyperdimensional_shielding_desc:0 "Aura ochronna utkana z wyższych wymiarowych energii, chroniąca nasze floty przed obrażeniami, jakby strzegła ich sama łaska Architekta."
+
+ menp_pdivinity_dimensional_tearer:0 "Rozrywacz Wymiarów"
+ menp_pdivinity_dimensional_tearer_desc:0 "Broń zdolna do rozrywania dziur w samej rzeczywistości, tworząca psioniczne bramy, które rozrywają i rozplątują tkankę czasoprzestrzeni."
+ unlocks_pdivinity_dimensional_tearer:0 "Odblokowuje typ statku: §Y$pdivinity_dimensional_tearer$§!"
+
+ menp_pdivinity_call_of_the_eye:0 "Zew Architekta"
+ menp_pdivinity_call_of_the_eye_desc:0 "Jego głos rozbrzmiewa w całej galaktyce, kultyści radują się wypełnieniem proroctwa i swoim wniebowstąpieniem w światłość. Architekt jest blisko..."
+ unlocks_pdivinity_call_of_the_eye:0 "§YZrywy Kultystów§! rosną teraz z dwukrotną szybkością."
+
+ menp_pdivinity_psionic_mastery:0 "Psioniczne Mistrzostwo"
+ menp_pdivinity_psionic_mastery_desc:0 "Nasza głęboka komunia z Osłoną zwiększa destrukcyjny potencjał naszej broni, sprawiając, że każde uderzenie rozbrzmiewa psioniczną furią."
+
+ menp_pdivinity_beyond_the_Shroud:0 "Iglica Przeznaczenia"
+ menp_pdivinity_beyond_the_Shroud_desc:0 "Iglica śpiewa. Osłona odpowiada. Wyznawcy w całej galaktyce czują jej przyciąganie, a kulty powstają w każdym zakątku znanego kosmosu."
+ unlocks_pdivinity_spire_of_fate:0 "Odblokowuje etap megastruktury: §YIglica Przeznaczenia - Etap Apoteozy§!"
+
+ ##################################
+ ### crisis unlock requirements ###
+ ##################################
+
+ pdivinity_level_2_req_clear_tooltip:0 "£trigger_yes£ Zbudował §Y$building_pdivinity_architect_shrine$§!"
+ pdivinity_level_2_req_tooltip:0 "£trigger_no£ Zbudował §Y$building_pdivinity_architect_shrine$§!"
+
+ pdivinity_level_3_req_clear_tooltip:0 "£trigger_yes£ §YSfazował Osłoną planetę§!"
+ pdivinity_level_3_req_tooltip:0 "£trigger_no£ §YSfazował Osłoną planetę§!"
+
+ pdivinity_level_4_req_clear_tooltip:0 "£trigger_yes£ Ukończył stanowisko archeologiczne §Y$pdivinity_catacombs_digsite$§!."
+ pdivinity_level_4_req_tooltip:0 "£trigger_no£ Ukończył stanowisko archeologiczne §Y$pdivinity_catacombs_digsite$§!."
+
+ pdivinity_level_5_req_clear_tooltip:0 "£trigger_yes£ Zbudował §Y$pdivinity_shroud_needle_3$§!"
+ pdivinity_level_5_req_tooltip:0"£trigger_no£ Zbudował §Y$pdivinity_shroud_needle_3$§!"
+
+ pdivinity_level_5_req_clear_tooltip_2:0 "£trigger_yes£ Użył §YRozrywacza Wymiarów§!."
+ pdivinity_level_5_req_tooltip_2:0 "£trigger_no£ Użył §YRozrywacza Wymiarów§!."

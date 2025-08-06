@@ -1,0 +1,18 @@
+﻿l_japanese:
+ DECISION_TOOLTIP_FORMAT:1 "#header $NAME$#!\n$TOOLTIP_DELIMITER$\n$TRIGGER_SUMMARY$\n\n服用時:\n$EFFECT_SUMMARY$"
+
+ build_railways:0 "鉄道を建設する"
+ build_railways_desc:0 "市場への完全なアクセスを確保するのに十分な数の鉄道をどこにでも追加します"
+ build_railways_tooltip:0 "クリックしてさらに鉄道を建設"
+ build_administrations:0 "行政機関を構築する"
+ build_administrations_desc:0 "課税能力を確保するために必要なだけの政府機関をどこにでも追加します"
+ build_administrations_tooltip:0 "クリックしてより多くの政府機関を構築"
+ 
+ tooltip_buildrailwaysx:0 "#header 市場へのアクセスを最大化 #!\n$TOOLTIP_DELIMITER$\nこのボタンをクリックして、市場へのアクセスを最大化するために必要な数の鉄道を建設キューに追加します。"
+ tooltip_buildrailwaysxx:0 "#header 市場へのアクセスを最大化 #!\n$TOOLTIP_DELIMITER$\n#red #italic #bold #gold 鉄道#! [GetPlayer.GetName]によってまだ研究されていません"
+ tooltip_buildrailways:0 "[GetPlayer.GetCustom('researchedrailwayscustom')]"
+ tooltip_govadm:0 "#header 課税能力を最大化 #!\n$TOOLTIP_DELIMITER$\nこのボタンをクリックして、法人化された州の課税能力を最大化するために、必要な数の政府管理施設を建設キューに追加します。"
+
+ tooltip_buildpowerplantsx:0 "#header Build Power Plants #!\n$TOOLTIP_DELIMITER$\nAdds just enough power plants everywhere to cover the electricity demand."
+ tooltip_buildpowerplantsxx:0 "#header Build Power Plants #!\n$TOOLTIP_DELIMITER$\n#red #italic #bold #gold Electrical Generation#! has not yet been researched by [GetPlayer.GetName]"
+ tooltip_buildpowerplants:0 "[GetPlayer.GetCustom('researchedelectriccustom')]" 

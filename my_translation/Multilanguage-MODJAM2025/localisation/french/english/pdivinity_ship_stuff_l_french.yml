@@ -1,0 +1,254 @@
+﻿l_french:
+
+ ################################
+ ### pdivinity_tech_l_english ###
+ ###     by daniellm          ###
+ ################################
+
+ ###################
+ ### weapon type ###
+ ###################
+
+ weapon_type_pdivinity_psionic:0 "Psionique"
+ mod_weapon_type_pdivinity_psionic_weapon_damage_mult:0 "Dégâts des armes psioniques"
+ mod_weapon_type_pdivinity_psionic_weapon_fire_rate_mult:0 "Cadence de tir des armes psioniques"
+
+ #####################
+ ### ship tooltips ###
+ #####################
+
+ PDIVINITY_CLOAKING_TOOLTIP:0 "Annule la nullification de bouclier due au camouflage"
+
+
+
+ ################
+ ### weaponry ###
+ ################
+ pdivinity_laser_set:0 "Batterie de lances psioniques"
+ pdivinity_laser_set_DESC:0 "Une décharge focalisée d'énergie du Voile condensée, formée en synchronisant les batteries d'armes avec des champs de résonance psionique."
+ SMALL_PDIVINITY_LASER:0 "Petite lance psionique"
+ MEDIUM_PDIVINITY_LASER:0 "Lance psionique moyenne"
+ LARGE_PDIVINITY_LASER:0 "Grande lance psionique"
+
+ SMALL_PDIVINITY_LASER_SHROUD:0 "Petite lance psionique"
+ MEDIUM_PDIVINITY_LASER_SHROUD:0 "Lance psionique moyenne"
+ LARGE_PDIVINITY_LASER_SHROUD:0 "Grande lance psionique"
+
+ pdivinity_energy_torpedo_set:0 "Projecteur d'éclats psioniques"
+ pdivinity_energy_torpedo_set_DESC:0 "Lance des projectiles psioniques instables qui traversent la matière avant de détoner en salves d'énergie imprégnée du Voile."
+ PDIVINITY_ENERGY_TORPEDO:0 "Projecteur d'éclats psioniques"
+ PDIVINITY_ENERGY_TORPEDO_SHROUD:0 "Projecteur d'éclats psioniques"
+
+ pdivinity_lance_set:0 "Perceur de Voile"
+ pdivinity_lance_set_DESC:0 "Une arme colossale qui plie l'espace local pour délivrer une rupture psionique condensée à des cibles distantes."
+ PDIVINITY_LANCE:0 "Perceur de Voile"
+ PDIVINITY_LANCE_SHROUD:0 "Perceur de Voile"
+
+ pdivinity_lightning_set:0 "Courroux du Voile"
+ pdivinity_lightning_set_DESC:0 "Des arcs de foudre psionique traversent les cibles, guidés par la rage et la résonance. Le Voile lui-même se déchaîne à travers ces décharges."
+ PDIVINITY_LIGHTNING:0 "Courroux du Voile"
+ PDIVINITY_LIGHTNING_SHROUD:0 "Courroux du Voile"
+
+ pdivinity_titan_set:0 "Lance de l'Architecte"
+ pdivinity_titan_set_DESC:0 "Une arme à rayon titanesque chargée par la tension dimensionnelle. Lors de son tir, elle expose momentanément une ligne de faille entre l'espace réel et le Voile."
+ PDIVINITY_TITAN_WEAPON:0 "Lance de l'Architecte"
+ PDIVINITY_TITAN_WEAPON_TEARER:0 "Lance de l'Architecte"
+
+ pdivinity_star_rifter_set:0 "Déchireur Dimensionnel"
+ pdivinity_star_rifter_set_DESC:0 "Une arme apocalyptique alimentée par des champs de résonance psionique. Lors de son activation, elle déchire le tissu de l'espace réel autour d'une planète, la faisant s'effondrer dans une faille directement liée au Voile, altérant à jamais la planète et la réalité elle-même."
+ PDIVINITY_STAR_RIFTER:0 "Déchireur Dimensionnel"
+ PDIVINITY_STAR_RIFTER_ACTION:0 "Déchirer le voile"
+ FLEETORDER_DESTROY_PLANET_WITH_PDIVINITY_STAR_RIFTER:0 "Préparation au déchirement du voile"
+
+ pdivinity_psionic_artillery_set:0 "Artillerie à ondes du Voile"
+ pdivinity_psionic_artillery_set_DESC:0 "Une arme énergétique à longue portée qui surfe sur les harmoniques psioniques, distordant les esprits ennemis et oblitérant boucliers et coques avec une égale facilité."
+ PDIVINITY_PSIONIC_ARTILLERY:0 "Artillerie à ondes du Voile"
+ PDIVINITY_PSIONIC_ARTILLERY_SHROUD:0 "Artillerie à ondes du Voile"
+
+ pdivinity_psionic_strikecraft_set:0 "Intercepteurs Psioniques"
+ pdivinity_psionic_strikecraft_set_DESC:0 "Appareils d'assaut composés de formes-pensées vivantes, guidés par l'instinct et les échos de conscience au sein du Voile."
+ PDIVINITY_PSIONIC_STRIKECRAFT:0 "Intercepteurs Psioniques"
+ PDIVINITY_PSIONIC_STRIKECRAFT_SHROUD:0 "Intercepteurs Psioniques"
+
+ pdivinity_shields_set:0 "Boucliers du Voile"
+ pdivinity_shields_set_DESC:0 "Une évolution avancée du blindage psionique, tissée directement à partir de l'essence du Voile. Réagit instinctivement aux menaces entrantes."
+ SMALL_PDIVINITY_PSIONIC_SHIELDS:0 "Petit bouclier du Voile"
+ MEDIUM_PDIVINITY_PSIONIC_SHIELDS:0 "Bouclier du Voile moyen"
+ LARGE_PDIVINITY_PSIONIC_SHIELDS:0 "Grand bouclier du Voile"
+ SMALL_PDIVINITY_PSIONIC_SHIELDS_SHROUD:0 "Petit bouclier du Voile"
+ MEDIUM_PDIVINITY_PSIONIC_SHIELDS_SHROUD:0 "Bouclier du Voile moyen"
+ LARGE_PDIVINITY_PSIONIC_SHIELDS_SHROUD:0 "Grand bouclier du Voile"
+
+ ###############
+ ### reactor ###
+ ###############
+
+ pdivinity_psionic_reactor:0 "Volonté de l'Architecte"
+ pdivinity_psionic_reactor_desc:0 "Un cœur chargé psioniquement qui puise son énergie directement dans la volonté de l'Architecte au sein du Voile. La puissance n'est plus limitée par la matière."
+
+ PDIVINITY_PSIONIC_CLOUD_PSIONIC_REACTOR:0 "$pdivinity_psionic_reactor$"
+ PDIVINITY_PSIONIC_CLOUD_PSIONIC_REACTOR_DESC:0 "$pdivinity_psionic_reactor_desc$"
+
+ PDIVINITY_PSIONIC_AVATAR_PSIONIC_REACTOR:0 "$pdivinity_psionic_reactor$"
+ PDIVINITY_PSIONIC_AVATAR_PSIONIC_REACTOR_DESC:0 "$pdivinity_psionic_reactor_desc$"
+
+ PDIVINITY_DIMENSIONAL_TEARER_PSIONIC_REACTOR:0 "$pdivinity_psionic_reactor$"
+ PDIVINITY_DIMENSIONAL_TEARER_PSIONIC_REACTOR_DESC:0 "$pdivinity_psionic_reactor_desc$"
+
+ PDIVINITY_CORVETTE_PSIONIC_REACTOR:0 "$pdivinity_psionic_reactor$"
+ PDIVINITY_CORVETTE_PSIONIC_REACTOR_DESC:0 "$pdivinity_psionic_reactor_desc$"
+
+ PDIVINITY_DESTROYER_PSIONIC_REACTOR:0 "$pdivinity_psionic_reactor$"
+ PDIVINITY_DESTROYER_PSIONIC_REACTOR_DESC:0 "$pdivinity_psionic_reactor_desc$"
+
+ PDIVINITY_CRUISER_PSIONIC_REACTOR:0 "$pdivinity_psionic_reactor$"
+ PDIVINITY_CRUISER_PSIONIC_REACTOR_DESC:0 "$pdivinity_psionic_reactor_desc$"
+
+ PDIVINITY_BATTLESHIP_PSIONIC_REACTOR:0 "$pdivinity_psionic_reactor$"
+ PDIVINITY_BATTLESHIP_PSIONIC_REACTOR_DESC:0 "$pdivinity_psionic_reactor_desc$"
+
+ PDIVINITY_TITAN_PSIONIC_REACTOR:0 "$pdivinity_psionic_reactor$"
+ PDIVINITY_TITAN_PSIONIC_REACTOR_DESC:0 "$pdivinity_psionic_reactor_desc$"
+
+ PDIVINITY_COLOSSUS_PSIONIC_REACTOR:0 "$pdivinity_psionic_reactor$"
+ PDIVINITY_COLOSSUS_PSIONIC_REACTOR_DESC:0 "$pdivinity_psionic_reactor_desc$"
+
+ PDIVINITY_JUGGERNAUT_PSIONIC_REACTOR:0 "$pdivinity_psionic_reactor$"
+ PDIVINITY_JUGGERNAUT_PSIONIC_REACTOR_DESC:0 "$pdivinity_psionic_reactor_desc$"
+
+ PDIVINITY_PLATFORM_PSIONIC_REACTOR:0 "$pdivinity_psionic_reactor$"
+ PDIVINITY_PLATFORM_PSIONIC_REACTOR_DESC:0 "$pdivinity_psionic_reactor_desc$"
+
+ PDIVINITY_ION_PSIONIC_REACTOR:0 "$pdivinity_psionic_reactor$"
+ PDIVINITY_ION_PSIONIC_REACTOR_DESC:0 "$pdivinity_psionic_reactor_desc$"
+
+ #############
+ ### drive ###
+ #############
+
+ PDIVINITY_SHROUD_JUMP_DRIVE:0 "Propulseur du Voile"
+ PDIVINITY_SHROUD_JUMP_DRIVE_DESC:0 "Un propulseur de saut qui contourne entièrement l'espace à travers le reflet de l'espace réel par le Voile."
+
+ PDIVINITY_SHROUD_JUMP_DRIVE_VANILLA:0 "Propulseur du Voile"
+ PDIVINITY_SHROUD_JUMP_DRIVE_VANILLA_DESC:0 "Un propulseur de saut qui contourne entièrement l'espace à travers le reflet de l'espace réel par le Voile."
+
+ #################
+ ### thrusters ###
+ #################
+
+
+ Pdivinity_psionic_thruster:0 "Propulseur d'onde de pensée"
+ Pdivinity_psionic_thruster_desc:0 "Propulsion guidée par la volonté psionique. Les vaisseaux glissent à travers l'espace réel en utilisant l'intention plutôt que la force."
+
+ PDIVINITY_PSIONIC_CLOUD_PSIONIC_THRUSTER:0 "$Pdivinity_psionic_thruster$"
+ PDIVINITY_PSIONIC_CLOUD_PSIONIC_THRUSTER_DESC:0 "$Pdivinity_psionic_thruster_desc$"
+
+ PDIVINITY_PSIONIC_AVATAR_PSIONIC_THRUSTER:0 "$Pdivinity_psionic_thruster$"
+ PDIVINITY_PSIONIC_AVATAR_PSIONIC_THRUSTER_DESC:0 "$Pdivinity_psionic_thruster_desc$"
+
+ PDIVINITY_DIMENSIONAL_TEARER_THRUSTER:0 "$Pdivinity_psionic_thruster$"
+ PDIVINITY_DIMENSIONAL_TEARER_THRUSTER_DESC:0 "$Pdivinity_psionic_thruster_desc$"
+
+ PDIVINITY_CORVETTE_PSIONIC_THRUSTER:0 "$Pdivinity_psionic_thruster$"
+ PDIVINITY_CORVETTE_PSIONIC_THRUSTER_DESC:0 "$Pdivinity_psionic_thruster_desc$"
+
+ PDIVINITY_DESTROYER_PSIONIC_THRUSTER:0 "$Pdivinity_psionic_thruster$"
+ PDIVINITY_DESTROYER_PSIONIC_THRUSTER_DESC:0 "$Pdivinity_psionic_thruster_desc$"
+
+ PDIVINITY_CRUISER_PSIONIC_THRUSTER:0 "$Pdivinity_psionic_thruster$"
+ PDIVINITY_CRUISER_PSIONIC_THRUSTER_DESC:0 "$Pdivinity_psionic_thruster_desc$"
+
+ PDIVINITY_BATTLESHIP_PSIONIC_THRUSTER:0 "$Pdivinity_psionic_thruster$"
+ PDIVINITY_BATTLESHIP_PSIONIC_THRUSTER_DESC:0 "$Pdivinity_psionic_thruster_desc$"
+
+ PDIVINITY_TITAN_PSIONIC_THRUSTER:0 "$Pdivinity_psionic_thruster$"
+ PDIVINITY_TITAN_PSIONIC_THRUSTER_DESC:0 "$Pdivinity_psionic_thruster_desc$"
+
+ PDIVINITY_COLOSSUS_PSIONIC_THRUSTER:0 "$Pdivinity_psionic_thruster$"
+ PDIVINITY_COLOSSUS_PSIONIC_THRUSTER_DESC:0 "$Pdivinity_psionic_thruster_desc$"
+
+ ##############
+ ### sensor ###
+ ##############
+
+ PDIVINITY_PSIONIC_SENSOR:0 "Capteurs à écho du Voile"
+ PDIVINITY_PSIONIC_SENSOR_DESC:0 "Ces capteurs détectent les échos psioniques des pensées et des actions avant qu'elles ne se produisent, se concentrant sur leur intention traduite dans le voile pour être captée par ces capteurs."
+
+ PDIVINITY_PSIONIC_SENSOR_VANILLA:0 "Capteurs à écho du Voile"
+ PDIVINITY_PSIONIC_SENSOR_VANILLA_DESC:0 "Ces capteurs détectent les échos psioniques des pensées et des actions avant qu'elles ne se produisent, se concentrant sur leur intention traduite dans le voile pour être captée par ces capteurs."
+ #################
+ ### computers ###
+ #################
+
+ PDIVINITY_PSIONIC_PRECOG:0 "Ordinateur lié au Voile"
+ PDIVINITY_PSIONIC_PRECOG_DESC:0 "Ce système lit les impulsions de la bataille avant qu'elles ne se manifestent, guidant les solutions de tir et le phasage des boucliers avec une prescience troublante."
+
+ PDIVINITY_SWARM_PSIONIC_PRECOG:0 "Ordinateur lié au Voile (Essaim)"
+ PDIVINITY_SWARM_PSIONIC_PRECOG_DESC:0 "Un algorithme de combat avancé amélioré par la précognition du Voile. Conçu pour les vaisseaux agiles, il permet des manœuvres rapides et instinctives en prédisant les mouvements ennemis des millisecondes avant qu'ils ne se produisent."
+
+ PDIVINITY_LINE_PSIONIC_PRECOG:0 "Ordinateur lié au Voile (Ligne)"
+ PDIVINITY_LINE_PSIONIC_PRECOG_DESC:0 "Ce système lit les impulsions de la bataille avant qu'elles ne se manifestent, guidant les solutions de tir et le phasage des boucliers avec une prescience troublante."
+
+ PDIVINITY_ARTILLERY_PRECOG:0 "Ordinateur lié au Voile (Artillerie)"
+ PDIVINITY_ARTILLERY_PRECOG_DESC:0 "Lié à l'Architecte lui-même, ce noyau de ciblage anticipe les schémas de tir lointains avant qu'ils ne se manifestent, ajustant la visée comme si la cible n'avait jamais bougé."
+
+
+ PDIVINITY_SWARM_PSIONIC_PRECOG_VANILLA:0 "Ordinateur lié au Voile (Essaim)"
+ PDIVINITY_SWARM_PSIONIC_PRECOG_VANILLA_DESC:0 "Un algorithme de combat avancé amélioré par la précognition du Voile. Conçu pour les vaisseaux agiles, il permet des manœuvres rapides et instinctives en prédisant les mouvements ennemis des millisecondes avant qu'ils ne se produisent."
+
+ PDIVINITY_TORPEDO_PSIONIC_PRECOG_VANILLA:0 "Ordinateur lié au Voile (Torpille)"
+ PDIVINITY_TORPEDO_PSIONIC_PRECOG_VANILLA_DESC:0 "Un algorithme de combat avancé amélioré par la précognition du Voile. Conçu pour les vaisseaux agiles, il permet des manœuvres rapides et instinctives en prédisant les mouvements ennemis des millisecondes avant qu'ils ne se produisent."
+
+ PDIVINITY_PICKET_PSIONIC_PRECOG_VANILLA:0 "Ordinateur lié au Voile (Piquet)"
+ PDIVINITY_PICKET_PSIONIC_PRECOG_VANILLA_DESC:0 "Ce système lit les impulsions de la bataille avant qu'elles ne se manifestent, guidant les solutions de tir et le phasage des boucliers avec une prescience troublante."
+
+ PDIVINITY_LINE_PSIONIC_PRECOG_VANILLA:0 "Ordinateur lié au Voile (Ligne)"
+ PDIVINITY_LINE_PSIONIC_PRECOG_VANILLA_DESC:0 "Ce système lit les impulsions de la bataille avant qu'elles ne se manifestent, guidant les solutions de tir et le phasage des boucliers avec une prescience troublante."
+
+ PDIVINITY_ARTILLERY_PRECOG_VANILLA:0 "Ordinateur lié au Voile (Artillerie)"
+ PDIVINITY_ARTILLERY_PRECOG_VANILLA_DESC:0 "Lié à l'Architecte lui-même, ce noyau de ciblage anticipe les schémas de tir lointains avant qu'ils ne se manifestent, ajustant la visée comme si la cible n'avait jamais bougé."
+
+ PDIVINITY_CARRIER_PRECOG_VANILLA:0 "Ordinateur lié au Voile (Porte-vaisseaux)"
+ PDIVINITY_CARRIER_PRECOG_VANILLA_DESC:0 "Lié à l'Architecte lui-même, ce noyau de ciblage anticipe les schémas de tir lointains avant qu'ils ne se manifestent, ajustant la visée comme si la cible n'avait jamais bougé."
+
+ PDIVINITY_PLATFORM_PRECOG_VANILLA:0 "Ordinateur Lié au Voile (Platoform)"
+ PDIVINITY_PLATFORM_PRECOG_VANILLA_DESC:0 "Ce système lit les impulsions de la bataille avant qu'elles ne se manifestent, guidant les solutions de tir et le phasage des boucliers avec une prescience troublante."
+
+
+ ##################
+ ### aura stuff ###
+ ##################
+
+ PDIVINITY_SHROUD_STORM_COMPONENT:0 "Lanceur de Tempête du Voile"
+ PDIVINITY_SHROUD_STORM_COMPONENT_DESC:0 "Génère une tempête psionique tourbillonnante autour du vaisseau, perturbant les esprits, les capteurs et les boucliers. L'espace se tord et hurle dans son rayon d'action."
+
+ aura_pdivinity_shroud_storm:0 "$PDIVINITY_SHROUD_STORM_COMPONENT$"
+
+
+ #############
+ ### ships ###
+ #############
+
+ pdivinity_psionic_cloud:0 "Écho du Voile"
+ pdivinity_psionic_cloud_plural:0 "Échos du Voile"
+ pdivinity_psionic_cloud_cap:0 "Écho du Voile"
+
+ pdivinity_lesser_psionic_avatar:0 "Avatar Psionique Mineur"
+ pdivinity_lesser_psionic_avatar_plural:0 "Avatars Mineurs"
+ pdivinity_lesser_psionic_avatar_cap:0 "Avatar Psionique Mineur"
+
+ pdivinity_psionic_avatar:0 "Avatar Psionique"
+ pdivinity_psionic_avatar_plural:0 "Avatars Psioniques"
+ pdivinity_psionic_avatar_cap:0 "Avatar Psionique"
+
+ pdivinity_dimensional_tearer:0 "Déchireur Dimensionnel"
+ pdivinity_dimensional_tearer_plural:0 "Déchireurs Dimensionnels"
+ pdivinity_dimensional_tearer_cap:0 "Déchireur Dimensionnel"
+
+ pdivinity_dimensional_portal:0 "Portail Dimensionnel"
+ pdivinity_dimensional_portal_plural:0 "Portails Dimensionnels"
+ pdivinity_dimensional_portal_cap:0 "Portail Dimensionnel"
+
+ pdivinity_the_architect_of_fate:0 "L'Architecte du Destin"
+ pdivinity_the_architect_of_fate_plural:0 "Il"
+ pdivinity_the_architect_of_fate_cap:0 "L'Architecte du Destin"

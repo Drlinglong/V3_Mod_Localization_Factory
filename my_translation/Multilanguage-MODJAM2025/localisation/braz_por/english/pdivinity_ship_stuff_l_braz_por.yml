@@ -1,0 +1,254 @@
+﻿l_braz_por:
+
+ ################################
+ ### pdivinity_tech_l_english ###
+ ###     by daniellm          ###
+ ################################
+
+ ###################
+ ### weapon type ###
+ ###################
+
+ weapon_type_pdivinity_psionic:0 "Psíquico"
+ mod_weapon_type_pdivinity_psionic_weapon_damage_mult:0 "Dano de Arma Psíquica"
+ mod_weapon_type_pdivinity_psionic_weapon_fire_rate_mult:0 "Cadência de Tiro de Arma Psíquica"
+
+ #####################
+ ### ship tooltips ###
+ #####################
+
+ PDIVINITY_CLOAKING_TOOLTIP:0 "Nega Anulação de Escudo de Camuflagem"
+
+
+
+ ################
+ ### weaponry ###
+ ################
+ pdivinity_laser_set:0 "Matriz de Lança Psíquica"
+ pdivinity_laser_set_DESC:0 "Uma descarga focada de energia condensada do Véu, formada pela sincronização de matrizes de armas com campos de ressonância psíquica."
+ SMALL_PDIVINITY_LASER:0 "Lança Psíquica Pequena"
+ MEDIUM_PDIVINITY_LASER:0 "Lança Psíquica Média"
+ LARGE_PDIVINITY_LASER:0 "Lança Psíquica Grande"
+
+ SMALL_PDIVINITY_LASER_SHROUD:0 "Lança Psíquica Pequena"
+ MEDIUM_PDIVINITY_LASER_SHROUD:0 "Lança Psíquica Média"
+ LARGE_PDIVINITY_LASER_SHROUD:0 "Lança Psíquica Grande"
+
+ pdivinity_energy_torpedo_set:0 "Projetor de Explosão Psi"
+ pdivinity_energy_torpedo_set_DESC:0 "Lança projéteis psíquicos instáveis que atravessam a matéria antes de detonar em explosões de energia revestida pelo Véu."
+ PDIVINITY_ENERGY_TORPEDO:0 "Projetor de Explosão Psi"
+ PDIVINITY_ENERGY_TORPEDO_SHROUD:0 "Projetor de Explosão Psi"
+
+ pdivinity_lance_set:0 "Perfurador do Véu"
+ pdivinity_lance_set_DESC:0 "Uma arma colossal que dobra o espaço local para entregar uma ruptura psíquica condensada a alvos distantes."
+ PDIVINITY_LANCE:0 "Perfurador do Véu"
+ PDIVINITY_LANCE_SHROUD:0 "Perfurador do Véu"
+
+ pdivinity_lightning_set:0 "Ira do Véu"
+ pdivinity_lightning_set_DESC:0 "Raios psíquicos se curvam sobre os alvos, guiados pela fúria e ressonância. O próprio Véu se manifesta através dessas descargas."
+ PDIVINITY_LIGHTNING:0 "Ira do Véu"
+ PDIVINITY_LIGHTNING_SHROUD:0 "Ira do Véu"
+
+ pdivinity_titan_set:0 "Lança do Arquiteto"
+ pdivinity_titan_set_DESC:0 "Uma arma de feixe titânica carregada por tensão dimensional. Ao ser disparada, ela momentaneamente expõe uma linha de falha entre o espaço-real e o Véu."
+ PDIVINITY_TITAN_WEAPON:0 "Lança do Arquiteto"
+ PDIVINITY_TITAN_WEAPON_TEARER:0 "Lança do Arquiteto"
+
+ pdivinity_star_rifter_set:0 "Dilacerador Dimensional"
+ pdivinity_star_rifter_set_DESC:0 "Uma arma apocalíptica alimentada por campos de ressonância psíquica. Ao ser ativada, ela rasga o tecido do espaço-real ao redor de um planeta, colapsando-o em uma fenda ligada diretamente ao Véu, alterando para sempre o planeta e a própria realidade."
+ PDIVINITY_STAR_RIFTER:0 "Dilacerador Dimensional"
+ PDIVINITY_STAR_RIFTER_ACTION:0 "Rasgar o véu"
+ FLEETORDER_DESTROY_PLANET_WITH_PDIVINITY_STAR_RIFTER:0 "Preparando para rasgar o véu"
+
+ pdivinity_psionic_artillery_set:0 "Artilharia de Onda do Véu"
+ pdivinity_psionic_artillery_set_DESC:0 "Uma arma de energia de longo alcance que cavalga harmonias psíquicas, distorcendo mentes inimigas e obliterando escudos e cascos com igual facilidade."
+ PDIVINITY_PSIONIC_ARTILLERY:0 "Artilharia de Onda do Véu"
+ PDIVINITY_PSIONIC_ARTILLERY_SHROUD:0 "Artilharia de Onda do Véu"
+
+ pdivinity_psionic_strikecraft_set:0 "Interceptores Psíquicos"
+ pdivinity_psionic_strikecraft_set_DESC:0 "Naves de ataque compostas por formas-pensamento vivas, guiadas por instinto e ecos de consciência dentro do Véu."
+ PDIVINITY_PSIONIC_STRIKECRAFT:0 "Interceptores Psíquicos"
+ PDIVINITY_PSIONIC_STRIKECRAFT_SHROUD:0 "Interceptores Psíquicos"
+
+ pdivinity_shields_set:0 "Escudos do Véu"
+ pdivinity_shields_set_DESC:0 "Uma evolução avançada da blindagem psíquica, tecida diretamente da essência do Véu. Reage instintivamente a ameaças iminentes."
+ SMALL_PDIVINITY_PSIONIC_SHIELDS:0 "Escudo do Véu Pequeno"
+ MEDIUM_PDIVINITY_PSIONIC_SHIELDS:0 "Escudo do Véu Médio"
+ LARGE_PDIVINITY_PSIONIC_SHIELDS:0 "Escudo do Véu Grande"
+ SMALL_PDIVINITY_PSIONIC_SHIELDS_SHROUD:0 "Escudo do Véu Pequeno"
+ MEDIUM_PDIVINITY_PSIONIC_SHIELDS_SHROUD:0 "Escudo do Véu Médio"
+ LARGE_PDIVINITY_PSIONIC_SHIELDS_SHROUD:0 "Escudo do Véu Grande"
+
+ ###############
+ ### reactor ###
+ ###############
+
+ pdivinity_psionic_reactor:0 "Vontade do Arquiteto"
+ pdivinity_psionic_reactor_desc:0 "Um núcleo com carga psíquica que extrai energia diretamente da força de vontade do Arquiteto dentro do Véu. A energia não é mais limitada pela matéria."
+
+ PDIVINITY_PSIONIC_CLOUD_PSIONIC_REACTOR:0 "$pdivinity_psionic_reactor$"
+ PDIVINITY_PSIONIC_CLOUD_PSIONIC_REACTOR_DESC:0 "$pdivinity_psionic_reactor_desc$"
+
+ PDIVINITY_PSIONIC_AVATAR_PSIONIC_REACTOR:0 "$pdivinity_psionic_reactor$"
+ PDIVINITY_PSIONIC_AVATAR_PSIONIC_REACTOR_DESC:0 "$pdivinity_psionic_reactor_desc$"
+
+ PDIVINITY_DIMENSIONAL_TEARER_PSIONIC_REACTOR:0 "$pdivinity_psionic_reactor$"
+ PDIVINITY_DIMENSIONAL_TEARER_PSIONIC_REACTOR_DESC:0 "$pdivinity_psionic_reactor_desc$"
+
+ PDIVINITY_CORVETTE_PSIONIC_REACTOR:0 "$pdivinity_psionic_reactor$"
+ PDIVINITY_CORVETTE_PSIONIC_REACTOR_DESC:0 "$pdivinity_psionic_reactor_desc$"
+
+ PDIVINITY_DESTROYER_PSIONIC_REACTOR:0 "$pdivinity_psionic_reactor$"
+ PDIVINITY_DESTROYER_PSIONIC_REACTOR_DESC:0 "$pdivinity_psionic_reactor_desc$"
+
+ PDIVINITY_CRUISER_PSIONIC_REACTOR:0 "$pdivinity_psionic_reactor$"
+ PDIVINITY_CRUISER_PSIONIC_REACTOR_DESC:0 "$pdivinity_psionic_reactor_desc$"
+
+ PDIVINITY_BATTLESHIP_PSIONIC_REACTOR:0 "$pdivinity_psionic_reactor$"
+ PDIVINITY_BATTLESHIP_PSIONIC_REACTOR_DESC:0 "$pdivinity_psionic_reactor_desc$"
+
+ PDIVINITY_TITAN_PSIONIC_REACTOR:0 "$pdivinity_psionic_reactor$"
+ PDIVINITY_TITAN_PSIONIC_REACTOR_DESC:0 "$pdivinity_psionic_reactor_desc$"
+
+ PDIVINITY_COLOSSUS_PSIONIC_REACTOR:0 "$pdivinity_psionic_reactor$"
+ PDIVINITY_COLOSSUS_PSIONIC_REACTOR_DESC:0 "$pdivinity_psionic_reactor_desc$"
+
+ PDIVINITY_JUGGERNAUT_PSIONIC_REACTOR:0 "$pdivinity_psionic_reactor$"
+ PDIVINITY_JUGGERNAUT_PSIONIC_REACTOR_DESC:0 "$pdivinity_psionic_reactor_desc$"
+
+ PDIVINITY_PLATFORM_PSIONIC_REACTOR:0 "$pdivinity_psionic_reactor$"
+ PDIVINITY_PLATFORM_PSIONIC_REACTOR_DESC:0 "$pdivinity_psionic_reactor_desc$"
+
+ PDIVINITY_ION_PSIONIC_REACTOR:0 "$pdivinity_psionic_reactor$"
+ PDIVINITY_ION_PSIONIC_REACTOR_DESC:0 "$pdivinity_psionic_reactor_desc$"
+
+ #############
+ ### drive ###
+ #############
+
+ PDIVINITY_SHROUD_JUMP_DRIVE:0 "Motor do Véu"
+ PDIVINITY_SHROUD_JUMP_DRIVE_DESC:0 "Um motor de salto que contorna o espaço inteiramente através do reflexo do espaço real no Véu."
+
+ PDIVINITY_SHROUD_JUMP_DRIVE_VANILLA:0 "Motor do Véu"
+ PDIVINITY_SHROUD_JUMP_DRIVE_VANILLA_DESC:0 "Um motor de salto que contorna o espaço inteiramente através do reflexo do espaço real no Véu."
+
+ #################
+ ### thrusters ###
+ #################
+
+
+ Pdivinity_psionic_thruster:0 "Propulsor do Despertar da Consciência"
+ Pdivinity_psionic_thruster_desc:0 "Propulsão guiada pela vontade psíquica. As naves deslizam pelo espaço real usando intenção em vez de força."
+
+ PDIVINITY_PSIONIC_CLOUD_PSIONIC_THRUSTER:0 "$Pdivinity_psionic_thruster$"
+ PDIVINITY_PSIONIC_CLOUD_PSIONIC_THRUSTER_DESC:0 "$Pdivinity_psionic_thruster_desc$"
+
+ PDIVINITY_PSIONIC_AVATAR_PSIONIC_THRUSTER:0 "$Pdivinity_psionic_thruster$"
+ PDIVINITY_PSIONIC_AVATAR_PSIONIC_THRUSTER_DESC:0 "$Pdivinity_psionic_thruster_desc$"
+
+ PDIVINITY_DIMENSIONAL_TEARER_THRUSTER:0 "$Pdivinity_psionic_thruster$"
+ PDIVINITY_DIMENSIONAL_TEARER_THRUSTER_DESC:0 "$Pdivinity_psionic_thruster_desc$"
+
+ PDIVINITY_CORVETTE_PSIONIC_THRUSTER:0 "$Pdivinity_psionic_thruster$"
+ PDIVINITY_CORVETTE_PSIONIC_THRUSTER_DESC:0 "$Pdivinity_psionic_thruster_desc$"
+
+ PDIVINITY_DESTROYER_PSIONIC_THRUSTER:0 "$Pdivinity_psionic_thruster$"
+ PDIVINITY_DESTROYER_PSIONIC_THRUSTER_DESC:0 "$Pdivinity_psionic_thruster_desc$"
+
+ PDIVINITY_CRUISER_PSIONIC_THRUSTER:0 "$Pdivinity_psionic_thruster$"
+ PDIVINITY_CRUISER_PSIONIC_THRUSTER_DESC:0 "$Pdivinity_psionic_thruster_desc$"
+
+ PDIVINITY_BATTLESHIP_PSIONIC_THRUSTER:0 "$Pdivinity_psionic_thruster$"
+ PDIVINITY_BATTLESHIP_PSIONIC_THRUSTER_DESC:0 "$Pdivinity_psionic_thruster_desc$"
+
+ PDIVINITY_TITAN_PSIONIC_THRUSTER:0 "$Pdivinity_psionic_thruster$"
+ PDIVINITY_TITAN_PSIONIC_THRUSTER_DESC:0 "$Pdivinity_psionic_thruster_desc$"
+
+ PDIVINITY_COLOSSUS_PSIONIC_THRUSTER:0 "$Pdivinity_psionic_thruster$"
+ PDIVINITY_COLOSSUS_PSIONIC_THRUSTER_DESC:0 "$Pdivinity_psionic_thruster_desc$"
+
+ ##############
+ ### sensor ###
+ ##############
+
+ PDIVINITY_PSIONIC_SENSOR:0 "Sensores de Eco do Véu"
+ PDIVINITY_PSIONIC_SENSOR_DESC:0 "Esses sensores detectam os ecos psíquicos de pensamentos e ações antes que ocorram, focando em sua intenção traduzida para o Véu para ser captada por esses sensores."
+
+ PDIVINITY_PSIONIC_SENSOR_VANILLA:0 "Sensores de Eco do Véu"
+ PDIVINITY_PSIONIC_SENSOR_VANILLA_DESC:0 "Esses sensores detectam os ecos psíquicos de pensamentos e ações antes que ocorram, focando em sua intenção traduzida para o Véu para ser captada por esses sensores."
+ #################
+ ### computers ###
+ #################
+
+ PDIVINITY_PSIONIC_PRECOG:0 "Computador Vinculado ao Véu"
+ PDIVINITY_PSIONIC_PRECOG_DESC:0 "Este sistema lê os impulsos da batalha antes que se manifestem, guiando soluções de disparo e o faseamento de escudos com uma presciência inquietante."
+
+ PDIVINITY_SWARM_PSIONIC_PRECOG:0 "Computador Vinculado ao Véu (Enxame)"
+ PDIVINITY_SWARM_PSIONIC_PRECOG_DESC:0 "Um algoritmo de combate avançado aprimorado pela precognição do Véu. Projetado para naves ágeis, permite manobras rápidas e instintivas ao prever movimentos inimigos milissegundos antes que ocorram."
+
+ PDIVINITY_LINE_PSIONIC_PRECOG:0 "Computador Vinculado ao Véu (Linha)"
+ PDIVINITY_LINE_PSIONIC_PRECOG_DESC:0 "Este sistema lê os impulsos da batalha antes que se manifestem, guiando soluções de disparo e o faseamento de escudos com uma presciência inquietante."
+
+ PDIVINITY_ARTILLERY_PRECOG:0 "Computador Vinculado ao Véu (Artilharia)"
+ PDIVINITY_ARTILLERY_PRECOG_DESC:0 "Ligado ao próprio Arquiteto, este núcleo de mira antecipa padrões de disparo distantes antes que se manifestem, ajustando o alvo como se nunca tivesse se movido."
+
+
+ PDIVINITY_SWARM_PSIONIC_PRECOG_VANILLA:0 "Computador Vinculado ao Véu (Enxame)"
+ PDIVINITY_SWARM_PSIONIC_PRECOG_VANILLA_DESC:0 "Um algoritmo de combate avançado aprimorado pela precognição do Véu. Projetado para naves ágeis, permite manobras rápidas e instintivas ao prever movimentos inimigos milissegundos antes que ocorram."
+
+ PDIVINITY_TORPEDO_PSIONIC_PRECOG_VANILLA:0 "Computador Vinculado ao Véu (Torpedos)"
+ PDIVINITY_TORPEDO_PSIONIC_PRECOG_VANILLA_DESC:0 "Um algoritmo de combate avançado aprimorado pela precognição do Véu. Projetado para naves ágeis, permite manobras rápidas e instintivas ao prever movimentos inimigos milissegundos antes que ocorram."
+
+ PDIVINITY_PICKET_PSIONIC_PRECOG_VANILLA:0 "Computador Vinculado ao Véu (Piquete)"
+ PDIVINITY_PICKET_PSIONIC_PRECOG_VANILLA_DESC:0 "Este sistema lê os impulsos da batalha antes que se manifestem, guiando soluções de disparo e o faseamento de escudos com uma presciência inquietante."
+
+ PDIVINITY_LINE_PSIONIC_PRECOG_VANILLA:0 "Computador Vinculado ao Véu (Linha)"
+ PDIVINITY_LINE_PSIONIC_PRECOG_VANILLA_DESC:0 "Este sistema lê os impulsos da batalha antes que se manifestem, guiando soluções de disparo e o faseamento de escudos com uma presciência inquietante."
+
+ PDIVINITY_ARTILLERY_PRECOG_VANILLA:0 "Computador Vinculado ao Véu (Artilharia)"
+ PDIVINITY_ARTILLERY_PRECOG_VANILLA_DESC:0 "Ligado ao próprio Arquiteto, este núcleo de mira antecipa padrões de disparo distantes antes que se manifestem, ajustando o alvo como se nunca tivesse se movido."
+
+ PDIVINITY_CARRIER_PRECOG_VANILLA:0 "Computador Vinculado ao Véu (Porta-Naves)"
+ PDIVINITY_CARRIER_PRECOG_VANILLA_DESC:0 "Ligado ao próprio Arquiteto, este núcleo de mira antecipa padrões de disparo distantes antes que se manifestem, ajustando o alvo como se nunca tivesse se movido."
+
+ PDIVINITY_PLATFORM_PRECOG_VANILLA:0 "Computador Atado ao Véu (Platoform)"
+ PDIVINITY_PLATFORM_PRECOG_VANILLA_DESC:0 "Este sistema lê os impulsos da batalha antes que se manifestem, guiando soluções de disparo e o faseamento de escudos com uma presciência inquietante."
+
+
+ ##################
+ ### aura stuff ###
+ ##################
+
+ PDIVINITY_SHROUD_STORM_COMPONENT:0 "Conjurador de Tempestade do Véu"
+ PDIVINITY_SHROUD_STORM_COMPONENT_DESC:0 "Gera uma tempestade psiônica em turbilhão ao redor da nave, perturbando mentes, sensores e escudos. O espaço se curva e grita dentro de seu raio."
+
+ aura_pdivinity_shroud_storm:0 "$PDIVINITY_SHROUD_STORM_COMPONENT$"
+
+
+ #############
+ ### ships ###
+ #############
+
+ pdivinity_psionic_cloud:0 "Eco do Véu"
+ pdivinity_psionic_cloud_plural:0 "Ecos do Véu"
+ pdivinity_psionic_cloud_cap:0 "Eco do Véu"
+
+ pdivinity_lesser_psionic_avatar:0 "Avatar Psiônico Menor"
+ pdivinity_lesser_psionic_avatar_plural:0 "Avatares Menores"
+ pdivinity_lesser_psionic_avatar_cap:0 "Avatar Psiônico Menor"
+
+ pdivinity_psionic_avatar:0 "Avatar Psiônico"
+ pdivinity_psionic_avatar_plural:0 "Avatares Psiônicos"
+ pdivinity_psionic_avatar_cap:0 "Avatar Psiônico"
+
+ pdivinity_dimensional_tearer:0 "Dilacerador Dimensional"
+ pdivinity_dimensional_tearer_plural:0 "Dilaceradores Dimensionais"
+ pdivinity_dimensional_tearer_cap:0 "Dilacerador Dimensional"
+
+ pdivinity_dimensional_portal:0 "Portal Dimensional"
+ pdivinity_dimensional_portal_plural:0 "Portais Dimensionais"
+ pdivinity_dimensional_portal_cap:0 "Portal Dimensional"
+
+ pdivinity_the_architect_of_fate:0 "O Arquiteto do Destino"
+ pdivinity_the_architect_of_fate_plural:0 "Ele"
+ pdivinity_the_architect_of_fate_cap:0 "O Arquiteto do Destino"

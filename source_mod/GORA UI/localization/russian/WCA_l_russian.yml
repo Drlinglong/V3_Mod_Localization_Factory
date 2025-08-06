@@ -1,0 +1,10 @@
+﻿l_russian:
+ # WCA
+ alert_wasted_construction_name: "Есть незадействованное [concept_construction|l]"
+ alert_wasted_construction_hint: "Есть незадействованное [concept_construction|l]"
+ alert_wasted_construction_action: "Панель строительства"
+ wasted_construction_setting_name: "Незадействованное Строительство"
+ alert_not_enacting_laws_name: "#bold Не#! принимает закон"
+ alert_not_enacting_laws_hint: "#bold Не#! принимает закон"
+ alert_not_enacting_laws_action: "Панель политики"
+ not_enacting_laws_setting_name: "Не Принимает Закон"

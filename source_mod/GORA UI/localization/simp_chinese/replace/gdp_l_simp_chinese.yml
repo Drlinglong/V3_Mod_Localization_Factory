@@ -1,0 +1,2 @@
+﻿l_simp_chinese:
+ GDP_TOOLTIP:1 "#header [concept_gdp]#!\n[Country.GetAdjective]的$GDP_SHORT$：#N @money![Country.GetGDP|Dv]#! ($GDPGR_growth_text$)（[Country.GetGDPRanking]）\n$TOOLTIP_DELIMITER$\n人均GDP：#variable @money![Country.GetGDPPerCapita|2*]#!（[Country.GetGDPPerCapitaRanking]）\n$TOOLTIP_DELIMITER$\n[Country.GetAdjective] $GDP_SHORT$是全球GDP的[Country.MakeScope.ScriptValue('larp_global_gdp_percent')|%v2]\n全球GDP: @money![Country.MakeScope.ScriptValue('larp_global_gdp')|Dv]\n"

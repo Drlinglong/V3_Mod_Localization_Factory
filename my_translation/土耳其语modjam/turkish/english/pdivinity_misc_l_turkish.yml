@@ -1,0 +1,256 @@
+﻿l_turkish:
+
+ #######################################
+ ### project_divinity_misc_l_english ###
+ ###     by daniellm                 ###
+ #######################################
+
+ ############
+ ### star ###
+ ############
+
+ pc_pdivinity_shrouded_hole:0 "Perde Tüneli"
+ pc_pdivinity_shrouded_hole_desc:0 "Maddenin tamamen çökmesiyle oluşan perdede bir gedik. Perde tünelleri, ışığın bile perdenin kendisinin pençesinden kaçmasını engelleyen aşırı güçlü yerçekimi alanlarına sahiptir."
+
+ #############
+ ### trait ###
+ #############
+
+ trait_pdivinity_shroud_touched:0 "Perdeye Dokunmuş"
+ trait_pdivinity_shroud_touched_desc:0 "§LKaderin Mimarı§!'nın Hizmetkarları!\nBu tür, kitlesel psiyonik enerjinin yozlaştırıcı etkisine dayanacak şekilde kadim zamanlardan beri şekillendirilmiştir. Perdeye Geçiş Yapmış gezegenlerde hiçbir ceza almayacaktır§!."
+ pdivinity_shroud_touched_tooltip:0 "\n§LPerdeye Geçiş Yapmış gezegenlerde:\n- §Y$mod_planet_psionic_jobs_produces_mult$§!: §G25%§!\n- §Y$MOD_POP_HAPPINESS$§!: §G10%§!\n- §YGezegen Yaşanabilirliği§! §G100%§!"
+
+ leader_trait_pdivinity_chosen_by_the_eye:0 "Büyük Göz'ün Seçilmişi"
+ leader_trait_pdivinity_chosen_by_the_eye_desc:0 "Mimar'ın bizzat kendisi tarafından seçilen bu lider, inanılmaz psiyonik güç kullanan ölümsüz bir varlıktır."
+ ######################
+ ### ascension perk ###
+ ######################
+
+ ap_pdivinity:0 "İlahi Proje"
+ ap_pdivinity_desc:0 "Yıldızların ötesindeki derinliklerden bir ses yükseliyor; kadim, anlaşılmaz ve korkunç bir amaçla dolu. Perde aracılığıyla fısıldayarak rüyalarımıza sızıyor ve düşüncelerimizi bize ait olmayan ilahi bir iradeyle yozlaştırıyor. Bu çağrıya kulak vermek, Kaderin Mimarı'na hizmet etmek ve kendimizden çok daha büyük, kaçınılmaz bir kaderin araçları olmak için seçildik."
+
+ must_not_be_homicidal:0 "$TRIGGER_FAIL$ Soykırımcı bir imparatorluk olarak bu Yükseliş Ayrıcalığını seçemezsiniz"
+ must_be_psionic:0 "$TRIGGER_FAIL$ Psiyonik Yükselişi tamamlamış olmalısınız"
+
+ ##############
+ ### armies ###
+ ##############
+
+ pdivinitiy_psionic_army:0 "Psiyonik Hayaletler"
+ pdivinitiy_psionic_army_desc:0 "Karanlık psiyonik enerjinin tezahürleri olan bu ordular, ne tam olarak canlı ne de ölü olarak savaş alanında dolaşır, Mimar'ın anlaşılmaz iradesi tarafından yönlendirilir."
+
+ #####################
+ ### tech category ###
+ #####################
+
+ pdivinity_eye:0 "Kader"
+ pdivinity_eye_desc:0 "En büyük hamimiz, §RKaderin Mimarı§!'ndan gelen perdeye ait teknoloji."
+ mod_category_pdivinity_eye_research_speed_mult:0 "Araştırma Hızı (§RKader§!)"
+
+
+ ################
+ ### decision ###
+ ################
+
+ decision_pdivinity_shroud_phasing:0 "Perdeye Geçiş"
+ decision_pdivinity_shroud_phasing_desc:0 "Bu dünya ile Perde arasındaki sınırı zayıflatarak, gerçekliğin kendisini yeniden şekillendirebilir, sadıkları yücelterek inançsızları §RKaderin Mimarı§!'nın hizmetinde yaşayan bir kâbusa sürükleyebiliriz."
+ pdivinity_shroud_phasing_tooltip:0 "§Y$pdivinity_shroud_phased_modifier$§! değiştiricisi eklendi.\n\n£pop£ §GPerdeye Dokunmuş Nüfus Üretimi§!'ni artırır ancak £pop£ §YPerdeye Dokunmamış Nüfus Üretimi§!'ni azaltır."
+ pdivinity_shroud_phased_modifier:0 "Perdeye Geçiş Yapmış"
+ pdivinity_shroud_phased_modifier_desc:0 "Bu dünyada perde kasıtlı olarak inceltilmiştir. §GPerdeye Dokunmuşlar§! için gerçeklik akışkan hale gelir, düşünceyle şekillenen bir cennet. Ama diğer herkes için doğa kanunları çöker, rüyalar kâbuslara dönüşür ve varoluş §RKaderin Mimarı§!'nın bakışları altında bir işkenceye dönüşür."
+ pdivinity_shroud_phased_modifier_tooltip:0 "§GPerdeye Dokunmuş§! £pop£ Popülasyonlar:\n- §Y$mod_planet_psionic_jobs_produces_mult$§!: §G25%§!\n- §Y$MOD_POP_HAPPINESS$§!: §G10%§!\n- §YGezegen Yaşanabilirliği§! §G100%§!\n\n§YPerdeye Dokunmamış§! £pop£ Popülasyonlar:\n- §YGezegen Yaşanabilirliği§!: §R-75%§!\n- $MOD_POP_HAPPINESS$: §R-25%§!\n- $MOD_LOGISTIC_GROWTH_MULT$: §R-50%§!"
+
+
+ #########################
+ ### opinion modifiers ###
+ #########################
+
+ opinion_pdivinity_sacrifices:0 "Perde Bunu İster"
+
+ opinion_breaking_the_veil:0 "Perdeyi Yıkmak"
+
+ #################
+ ### modifiers ###
+ #################
+
+ pdivinity_cult_attack:0 "Terör Saldırısı"
+ pdivinity_cult_attack_desc:0 "Bu gezegen yakın zamanda perde varlıkları tarafından saldırıya uğradı."
+
+ mod_country_resource_max_energy_add:0 "Enerji Depolama Kapasitesi"
+ mod_country_resource_max_sr_zro_add:0 "Zro Depolama Kapasitesi"
+ mod_job_pdivinity_zro_harvester_add:0 "Zro Toplayıcısı Meslekleri"
+
+ ############
+ ### jobs ###
+ ############
+ job_pdivinity_zro_harvester:0 "Zro Hasatçısı"
+ job_pdivinity_zro_harvester_plural:0 "Zro Toplayıcıları"
+ job_pdivinity_zro_harvester_desc:0 "$pdivinity_zro_harvester_plural$, psiyonik fay hatları üzerine inşa edilmiş kutsal tapınaklarda faaliyet gösterir. Orada, Zro'yu doğrudan Perde'den çıkarırlar, madencilikle değil, ritüel ve vahiy yoluyla çağırarak."
+ job_pdivinity_zro_harvester_effect_desc:0 "£job_pdivinity_zro_harvester£ $pdivinity_zro_harvester_plural$, £minerals£'ı £sr_zro£ §Y$sr_zro$§!'ya dönüştürür!\n\n§YPerdeye Geçiş Yapmış§! gezegenlerde otomatik olarak £sr_zro£ §Y$sr_zro$§! üretir."
+
+ mod_planet_telepaths_pdivinity_psionic_strength_produces_add:0 "$pdivinity_psionic_strength$ £pdivinity_psionic_strength£ birim başına $pop_group_unit$ [telepath.GetIcon] [telepath.GetNamePlural]"
+
+ purge_pdivinity_sacrifice:0 "Ritüel Kurban"
+ purge_pdivinity_sacrifice_desc:0 "Mimar'ın tasarımına layık olmayanlar bile bir amaca hizmet edebilir. Beden ve ruhun kutsal sunuları aracılığıyla Perde'den güç ve lütuf çekeriz."
+ job_purge_pdivinity_sacrifice_job:0 "Ritüel Kurban"
+ job_purge_pdivinity_sacrifice_job_desc:0 "Seçilen bireyler, kutsal ritüeller aracılığıyla §RKaderin Mimarı§!'na sunulur. Özleri Perde'yi ve ilahi amacımızı besler."
+
+ ################
+ ### building ###
+ ################
+
+ building_pdivinity_architect_shrine:0 "Kader Tapınağı"
+ building_pdivinity_architect_shrine_desc:0 "Kaderin Mimarı'nı onurlandırmak için inşa edilmiş büyük bir tapınak."
+
+ building_pdivinity_shroud_harvester_building:0 "Zro Hasatçısı"
+ building_pdivinity_shroud_harvester_building_desc:0 "Psiyonik fay hatları üzerine inşa edilen zro hasatçıları, zro'yu doğrudan Örtü'den toplamak için özel ekipman kullanır."
+
+ #####################
+ ### megastructure ###
+ #####################
+
+ # ruined megastructure
+ pdivinity_shroud_needle_1_ruined:0 "Yıkık Kader Kulesi - Temel"
+ pdivinity_shroud_needle_1_ruined_DESC:0 "Bir zamanlar ilahi olan bir yapının parçalanmış temeli. Fısıltıları soldu."
+ pdivinity_shroud_needle_1_ruined_MEGASTRUCTURE_DETAILS:0 "Bunun ne olduğunu bilmiyorum, _details adlı yerleri doldurmayın, sonra hallederim."
+
+ # ruined megastructure
+ pdivinity_shroud_needle_2_ruined:0 "Yıkık Kader Kulesi - Yönlendirme Halkası"
+ pdivinity_shroud_needle_2_ruined_DESC:0 "Psiyonik iletim borusu parçaları boşluğu çevreliyor, atıl ve kırıklar."
+ pdivinity_shroud_needle_2_ruined_MEGASTRUCTURE_DETAILS:0 ""
+
+ # ruined megastructure
+ pdivinity_shroud_needle_3_ruined:0 "Yıkık Kader Kulesi - İletim Çekirdeği"
+ pdivinity_shroud_needle_3_ruined_DESC:0 "Yarık kapandı. Mimar şimdilik geri çekiliyor."
+ pdivinity_shroud_needle_3_ruined_MEGASTRUCTURE_DETAILS:0 ""
+
+ # ruined megastructure
+ pdivinity_shroud_needle_4_ruined:0 "Yıkık Kader Kulesi - Ayin Dizisi"
+ pdivinity_shroud_needle_4_ruined_DESC:0 "İnancın yankıları burada oyalanıyor, ancak yapı sessiz."
+ pdivinity_shroud_needle_4_ruined_MEGASTRUCTURE_DETAILS:0 ""
+
+ # stage 1
+ pdivinity_shroud_needle_1:0 "Kader Kulesi - Temel"
+ pdivinity_shroud_needle_1_DESC:0 "Kulenin temeli atıldı. Atıl görünse de, perdenin ötesinden gelen zayıf fısıltılarla yankılanıyor."
+
+ # stage 2
+ pdivinity_shroud_needle_2:0 "Kader Kulesi - Yönlendirme Halkası"
+ pdivinity_shroud_needle_2_DESC:0 "Geniş bir yükseltici halkası şimdi yapıyı çevreliyor, psiyonik harmonikleri boşluğa odaklıyor. Perde kımıldanıyor."
+
+ # stage 3
+ pdivinity_shroud_needle_3:0 "Kader Kulesi - İletim Çekirdeği"
+ pdivinity_shroud_needle_3_DESC:0 "Gerçeklik çekirdeğin etrafında bükülmeye başlıyor. Örtü'deki varlıklar fark ediyor. Bir yarık oluşuyor."
+
+ # stage 4
+ pdivinity_shroud_needle_4:0 "Kader Kulesi - Ayin Dizisi"
+ pdivinity_shroud_needle_4_DESC:0 "Kule şarkı söylüyor. Örtü cevap veriyor. Galaksideki ibadet edenler onun çekimini hissediyor ve bilinen uzayın her köşesinde kültler yükseliyor."
+
+ # stage 5
+ pdivinity_shroud_needle_5:0 "Kader Kulesi - Tanrılaşma Aşaması"
+ pdivinity_shroud_needle_5_DESC:0 "Son yapı tamamlandı. Gerçeklik kopma noktasına kadar inceliyor. Mimar'ın gelişi kaçınılmaz."
+
+ pdivinity_is_not_possible_rift:0 "\n£trigger_no£ Hedef aşağıdakilerden biri olmalıdır: \n§YKara Delik§!\n§YPulsar§!\n§YA Sınıfı Yıldız§!"
+
+
+ ####################
+ ### global names ###
+ ####################
+
+ NAME_pdivinity_the_great_eye_name:0 "Kader Mimarı"
+
+ NAME_pdivinity_lesser_avatar:0 "Küçük Psiyonik Avatar"
+
+ NAME_pdivinity_psionic_avatar:0 "Psiyonik Avatar"
+
+ NAME_pdivinity_dimensional_tearer:0 "Boyutsal Yırtıcı"
+
+ NAME_pdivinity_dimensional_tearer_name:0 "Perdeyi Kıran"
+
+ NAME_pdivinity_dimensional_portal:0 "Boyutsal Portal"
+
+ NAME_pdivinity_Shroudpriests:0 "Mimar'ın Akoliti"
+
+ NAME_pdivinity_demons:0 "Psiyonik Hayaletler"
+
+ NAME_pdivinity_architect_of_fate:0 "Kader Mimarı"
+
+
+ ####################
+ ### vassal stuff ###
+ ####################
+
+ specialist_pdivinity_acolyte:0 "Akolit"
+ specialist_pdivinity_acolyte_desc:0 "Ulu Göz'ün akoliti. Bu imparatorluk §RKader Mimarı§!'nın iradesini takip eder."
+ specialist_pdivinity_acolyte_summary:0 "£pdivinitiy_acolyte£Akolitler, zayıf endüstri karşılığında Mimar'ın hediyelerinde ustalaşmaya uzmanlaşır."
+
+ preset_pdivinity_acolyte:0 "Akolit"
+ preset_pdivinity_acolyte_desc:0 "Ulu Göz'ün akoliti. Bu imparatorluk §RKader Mimarı§!'nın iradesini takip eder."
+
+ # modifier for acolyte hyper relay links
+ specialist_pdivinity_acolyte_neighbor:0 "Akolit Gözcü"
+ specialist_pdivinity_acolyte_neighbor_desc:0 "§RBüyük Göz§!'ün sadıklarına yakınlık itaat, korku ve garip bir huzur duygusu aşılar. O'nun iradesi mevcut olduğu yerde, düzen hüküm sürer."
+
+ ### stage 1
+
+ pdivinity_acolyte_1_modifier:0 "Akolit Bonusları I"
+ pdivinity_acolyte_1_penalties:0 "Akolit Cezaları I"
+ pdivinity_acolyte_1_modifier_desc:0 "$MOD_COUNTRY_ALL_TECH_RESEARCH_SPEED$: §G+%10§!\n$mod_category_pdivinity_eye_research_speed_mult$: §G+%15§!\n$mod_country_sr_zro_produces_mult$: §G+%15§!"
+
+ pdivinity_acolyte_1_insight:0 "Mürid İçgörüsü I"
+ pdivinity_acolyte_1_insight_desc:0 "§EAraştırılabilir Teknolojilere Ekle:§!\n$t$£society£ $tech_psionic_theory$\n$t$£society£ $tech_mine_zro$"
+
+ pdivinity_acolyte_1_shroud_storm:0 "Perde Fırtınası"
+ pdivinity_acolyte_1_shield_desc:0 "§ESahip Olunan Sistemlerdeki Düşman Gemileri:§!\n$t$$MOD_SHIP_SHIELD_MULT$: §R-%50§!\n$t$$MOD_SHIP_WEAPON_RANGE_MULT$: §R-%20§!\n$t$$MOD_SHIP_TRACKING_ADD$: §R-15§!"
+
+ pdivinity_acolyte_1_neighbor:0 "Mürid Gözcüsü"
+ pdivinity_acolyte_1_neighbor_desc:0 "§RBüyük Göz§!'ün sadıklarına yakınlık itaat, korku ve garip bir huzur duygusu aşılar. O'nun iradesi mevcut olduğu yerde, düzen hüküm sürer."
+
+ ### stage 2
+
+ pdivinity_acolyte_2_modifier:0 "Mürid Bonusları II"
+ pdivinity_acolyte_2_penalties:0 "Mürid Cezaları II"
+ pdivinity_acolyte_2_modifier_desc:0 "$MOD_COUNTRY_ALL_TECH_RESEARCH_SPEED$: §G+%20§!\n$mod_category_pdivinity_eye_research_speed_mult$: §G+%25§!\n$mod_country_sr_zro_produces_mult$: §G+%25§!"
+
+ pdivinity_acolyte_2_insight:0 "Mürid İçgörüsü II"
+ pdivinity_acolyte_2_insight_desc:0 "§EAraştırılabilir Teknolojilere Ekle:§!\n$t$£society£ $tech_pdivinity_shroud_harvester$"
+
+ pdivinity_acolyte_2_psionic_capacity:0 "Göz'ün Hizmetkarları"
+
+ pdivinity_acolyte_2_components:0 "Mimarın Armağanları"
+ pdivinity_acolyte_2_components_desc:0 "§EAraştırılmasını Etkinleştir:§!\n£pdivinitiy_acolyte£Psişik Gemi Bileşenleri"
+
+ ### stage 3
+
+ pdivinity_acolyte_3_modifier:0 "Mürid Bonusları III"
+ pdivinity_acolyte_3_penalties:0 "Mürid Cezaları III"
+ pdivinity_acolyte_3_modifier_desc:0 "$MOD_COUNTRY_ALL_TECH_RESEARCH_SPEED$: §G+%50§!\n$mod_category_pdivinity_eye_research_speed_mult$: §G+%100§!\n$mod_country_sr_zro_produces_mult$: §G+%50§!"
+
+ pdivinity_acolyte_3_insight:0 "Mürid İçgörüsü III"
+ pdivinity_acolyte_3_insight_desc:0 "§EAraştırılabilir Teknolojilere Ekle:§!\n$t$£society£ $tech_pdivinity_psionic_avatar$"
+
+ pdivinity_acolyte_3_psionic_shielding:0 "Hiperboyutsal Kalkanlama"
+
+ pdivinity_acolyte_3_overlord:0 "Büyük Göz'ün Gazabı"
+ pdivinity_acolyte_3_overlord_desc:0 "§EAraştırılmasını Etkinleştir:§!\n£pdivinitiy_acolyte£Psişik Silahlar"
+ #################
+ ### war stuff ###
+ #################
+
+ bombardment_pdivinity_psionic_rupture_bombardment:0 "Psişik Yarılma"
+ bombardment_pdivinity_psionic_rupture_bombardment_desc:0 "$bombardment_pdivinity_psionic_rupture_bombardment$ Bombardıman, gezegeni perdelemek amacıyla psişik enerjiyle kaplar.\n- §RBüyük§! hasar: §YOrdular§!\n- §RBüyük§! hasar: §YGezegen§!\n- §RBüyük§! hasar: §YNüfuslar§!\n- Savunmasız gezegenleri bombalayacak\n- Gezegenleri perdeli dünyalara veya perde-evre gezegenlerine dönüştürebilir"
+ pdivinity_bombed_to_shrouded_world:0 "§Y[From.GetName] artık bir Perdeli Dünya.§!"
+ pdivinity_bombed_to_shroud_phased_world:0 "§Y[From.GetName] bir Perde-Evre gezegeni haline geldi.§!"
+
+
+ casus_belli_cb_pdivinity_acolyte:0 "Boyun Eğdirme"
+ wg_pdivinity_acolyte:0 "İlahi Haçlı Seferi"
+
+ #####################
+ ### ship sections ###
+ #####################
+
+ pdivinity_psionic_cloud_section:0 "Orta"
+ pdivinity_lesser_psionic_avatar_section:0 "Orta"
+ pdivinity_psionic_avatar_section:0 "Orta"
+ pdivinity_dimensional_tearer_section:0 "Orta"
+ pdivinity_dimensional_portal_section:0 "Orta"
+ pdivinity_the_architect_of_fate_section:0 "Orta"

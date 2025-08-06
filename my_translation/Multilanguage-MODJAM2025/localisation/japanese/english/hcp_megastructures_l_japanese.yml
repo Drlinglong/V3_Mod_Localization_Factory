@@ -1,0 +1,78 @@
+﻿l_japanese:
+##################
+# hcp_megastructures_l_english.yml
+# By jam1066
+##################
+
+ #start
+
+ ####################
+ # Singularity Silo #
+ ####################
+ hcp_singularity_silo:"「特異点サイロ」"
+ hcp_requires_no_existing_singularity_silo:"「$TRIGGER_FAIL$$hcp_singularity_silo$は複数建造できません。」"
+ hcp_requires_stable_system:"「$TRIGGER_FAIL$この星系には§Y$pc_black_hole$§!が多すぎます。」"
+
+ hcp_singularity_silo_1:"「$hcp_singularity_silo$: 容量25%」"
+ hcp_singularity_silo_1_DESC:"「この$hcp_singularity_silo$は究極の貯蔵施設である。まだ部分的にしか完成していないが、既に膨大な量の資源を貯蔵できる。」"
+ hcp_singularity_silo_1_MEGASTRUCTURE_DETAILS:"「§Yブラックホール§!の無限の容量を活用して建造された、巨大な貯蔵施設。」"
+
+ hcp_singularity_silo_2:"「$hcp_singularity_silo$: 容量50%」"
+ hcp_singularity_silo_2_DESC:"「この$hcp_singularity_silo$は究極の貯蔵施設である。まだ部分的にしか完成していないが、既に膨大な量の資源を貯蔵できる。」"
+ hcp_singularity_silo_2_MEGASTRUCTURE_DETAILS:"「§Yブラックホール§!の無限の容量を活用して建造された、巨大な貯蔵施設。」"
+
+ hcp_singularity_silo_3:"「$hcp_singularity_silo$: 容量75%」"
+ hcp_singularity_silo_3_DESC:"「この$hcp_singularity_silo$は究極の貯蔵施設である。まだ部分的にしか完成していないが、既に膨大な量の資源を貯蔵できる。」"
+ hcp_singularity_silo_3_MEGASTRUCTURE_DETAILS:"「§Yブラックホール§!の無限の容量を活用して建造された、巨大な貯蔵施設。」"
+
+ hcp_singularity_silo_4: "$hcp_singularity_silo$"
+ hcp_singularity_silo_4_DESC:"「完成した$hcp_singularity_silo$は、我が文明の偉業の頂点である。全人口を収容し、無期限に維持するために必要な資源を貯蔵できる。」"
+ hcp_singularity_silo_4_MEGASTRUCTURE_DETAILS:"「§Yブラックホール§!の無限の容量を活用して建造された、巨大な貯蔵施設。」"
+
+ hcp_NAME_Sanctuary_A:"「聖域A」"
+ hcp_NAME_Sanctuary_B:"「聖域B」"
+ hcp_NAME_Sanctuary_C:"「聖域C」"
+ hcp_NAME_Sanctuary_D:"「聖域D」"
+
+ # Districts
+ hcp_district_ring_world_minerals:"「採掘区画」"
+ hcp_district_ring_world_minerals_plural:"「$hcp_district_ring_world_minerals$」"
+ hcp_district_ring_world_minerals_desc:"「このリング区画から特異点サイロへと、そびえ立つ採掘装置が伸び、必要な鉱物を採掘している。」"
+
+ #Zones
+ hcp_zone_minerals_ring_world: "$zone_minerals$"
+ hcp_zone_minerals_ring_world_desc: "$zone_minerals_triggered_desc$"
+
+ #Decisions
+ hcp_decision_expand_sanctuary:"「聖域を拡張」"
+ hcp_decision_expand_sanctuary_desc:"「特異点サイロの聖域における居住可能区画を拡張する。」"
+ hcp_decision_repair_sanctuary:"「聖域を修復」"
+ hcp_decision_repair_sanctuary_desc:"「この聖域は我が国民にとって依然として必要である。可能な限り修復しなければならない。」"
+ hcp_decision_unshield_sanctuary:"「聖域のシールド解除」"
+ hcp_decision_unshield_sanctuary_desc:"「この聖域は我が国民にとって依然として必要である。いかなる犠牲を払ってでも、このシールドを解除しなければならない。」"
+
+ ####################
+ # Orbital Quarrier #
+ ####################
+ hcp_orbital_quarrier:"「軌道採掘所」"
+ hcp_orbital_quarrier_DESC:"「この$hcp_orbital_quarrier$は現在、その軌道上にある惑星の解体作業を行っている。」"
+ hcp_orbital_quarrier_MEGASTRUCTURE_DETAILS:"「惑星全体を解体可能な、大型軌道採掘ステーション。」"
+
+ hcp_requires_not_capital:"「$TRIGGER_FAIL$我が首都の周囲には建設できません」"
+ hcp_requires_not_gas_giant:"「$TRIGGER_FAIL$ガス惑星の周囲には建設できません」"
+ hcp_requires_no_deposit:"「$TRIGGER_FAIL$軌道上に資源がある惑星には建設できません」"
+ hcp_requires_min_size:"「$TRIGGER_FAIL$小型惑星や小惑星上には建設できません」"
+
+ ######################
+ # Stellar Harvesters #
+ ######################
+ hcp_stellar_harvester_prototype:"「$hcp_NAME_Stellar_Harvester$ プロトタイプ」"
+ hcp_stellar_harvester_prototype_DESC:"「§Y$hcp_NAME_Stellar_Harvester$§!は、太陽系全体の資源に相当する量を収穫可能な、巨大なドローン制御艦である。」"
+ hcp_stellar_harvester_prototype_MEGASTRUCTURE_DETAILS:"「収集する資源を選り好みしている場合ではない。$hcp_NAME_Stellar_Harvester$により、あらゆるものを効率的に回収できるようになるだろう。」"
+
+ hcp_stellar_harvester: "$hcp_NAME_Stellar_Harvester$"
+ hcp_stellar_harvester_DESC:"「§Y$hcp_NAME_Stellar_Harvester$§!は、太陽系全体の資源に相当する量を収穫可能な、巨大なドローン制御艦である。」"
+ hcp_stellar_harvester_MEGASTRUCTURE_DETAILS:"「収集する資源を選り好みしている場合ではない。$hcp_NAME_Stellar_Harvester$により、あらゆるものを効率的に回収できるようになるだろう。」"
+ MEGASTRUCTURE_TOOLTIP_REQUIREMENTS_STELLAR_HARVESTER:"「各帝国は、自国の$hcp_singularity_silo$の軌道上に$MEGASTRUCTURE$を1つしか建設できない。」"
+
+ #end

@@ -1,0 +1,131 @@
+﻿l_braz_por:
+##################
+# hcp_situations_l_english.yml
+# By jam1066
+##################
+
+ #start
+
+ ##############################
+ # Harvester Planet Situation #
+ ##############################
+ ### Planet Modifier
+ hcp_being_harvested_modifier:"Sendo Colhido"
+ hcp_being_harvested_modifier_desc:"Este planeta está sendo sistematicamente desmantelado por um $hcp_orbital_quarrier$. Seus dias estão contados."
+
+ ### Messages
+ hcp_MESSAGE_HARVEST_WORLD_TITLE:"Mundo-Colheita"
+ hcp_MESSAGE_HARVEST_WORLD_MINERALS_TEXT:"A colheita de $PLANET|Y$ rendeu minerais valiosos.\n£minerals£$RESOURCE|Y$"
+ hcp_MESSAGE_HARVEST_WORLD_ALLOYS_TEXT:"A colheita de $PLANET|Y$ rendeu ligas valiosas.\n£alloys£$RESOURCE|Y$"
+
+ ### Situation
+ hcp_situation_harvest_planet:"Colher [Target.GetName]"
+ hcp_situation_harvest_planet_type:"Mundo-Colheita"
+ hcp_situation_harvest_planet_monthly_change_tooltip: "$situation_monthly_change_tooltip_approaches_dependent$"
+ hcp_situation_harvest_planet_desc:"Começando pela crosta, iremos despojar este planeta. Não podemos deixar nada, para que não seja desperdiçado."
+
+ hcp_stage_harvesting:"Desmantelando Planeta"
+
+ hcp_string_harvesting_progress:"Colheita Planetária"
+ hcp_harvest_finish_tooltip:"Colher [Target.GetName], deixando-o como uma sombra do que foi."
+
+ ## Approaches
+ hcp_approach_harvest:"Colher"
+ hcp_planet_harvest_effect:"Colha o mundo, ganhando £hcp_mining_efficiency£ §H$hcp_mining_efficiency$§! e £minerals£ §H$minerals$§! ou £alloys£ §H$alloys$§! a cada §Y6§! meses."
+
+ hcp_approach_dismantle:"Desmantelar $hcp_orbital_quarrier$"
+ hcp_harvester_dismantle_effect:"Desmantele o §Y$hcp_orbital_quarrier$§! e pare de colher o mundo, apesar das potenciais ineficiências."
+
+ ## Finisher Event
+ hcp_harvesters_situations.2.name:"Mundo Colhido"
+ hcp_harvesters_situations.2.desc:"Colhemos o suficiente de §Y[Target.GetName]§! para que continuar nossas operações de colheita intensiva não seja eficiente.\n\nA população restante foi evacuada para §Y[Owner.Capital.GetName]§! e quaisquer recursos restantes podem ser coletados com uma estação de mineração orbital padrão."
+ hcp_harvesters_situations.2.a:"Um trabalho bem feito."
+ hcp_harvesters_situations.2.a.tooltip:"§Y[Target.GetName]§! é reduzido a um asteroide."
+
+ ###########################
+ # Outward Bound Situation #
+ ###########################
+ #### Master Situation
+ ### Policies
+ policy_hcp_evacuation_policy:"Política de Evacuação"
+ policy_hcp_evacuation_policy_desc:"Esta política dita como nossos Colhedores Estelares lidam com as populações de planetas de outros impérios."
+
+ hcp_evacuate_everyone:"Evacuar População"
+ hcp_evacuate_everyone_name: "$hcp_evacuate_everyone$"
+ hcp_evacuate_everyone_desc:"Evacuaremos a população das colônias de outros impérios para os santuários ao redor do nosso Silo de Singularidade."
+
+ hcp_evacuate_only_ours:"Colher População"
+ hcp_evacuate_only_ours_name: "$hcp_evacuate_only_ours$"
+ hcp_evacuate_only_ours_desc:"Colheremos a população de outros impérios, juntamente com os planetas em que residem."
+
+ ### Messages
+ hcp_MESSAGE_STELLAR_HARVESTER_DEPARTED_TITLE:"Coletora Estelar Partiu"
+ hcp_MESSAGE_STELLAR_HARVESTER_DEPARTED_TEXT:"Um dos nossos §YColhedores Estelares§! deixou a galáxia."
+
+ ### Special Projects
+ hcp_DEPARTURE_POINT:"Ponto de Partida"
+ hcp_DEPARTURE_POINT_DESC:"Identificamos o §HSistema [this.GetName]§! como um ponto de partida ideal para nossos §YColhedores Estelares§!."
+
+ ### Situation
+ hcp_situation_outward_bound_master:"Rumo ao Exterior"
+ hcp_situation_outward_bound_master_type: "$hcp_situation_outward_bound_master$"
+ hcp_situation_outward_bound_master_monthly_change_tooltip:"Esta §YSituação§! progredirá à medida que enviarmos §Y$hcp_stellar_harvester$s§! para além da nossa galáxia."
+ hcp_situation_outward_bound_master_desc:"Para reunir recursos suficientes para nossa sobrevivência a longo prazo, devemos enviar nossos §YColhedores Estelares§! para além da nossa galáxia. Cada um carrega as esperanças de toda a nossa civilização.\n\nColhedores Estelares: §G[owner.hcp_num_stellar_harvesters]§!"
+ hcp_outward_bound_master_finish_tooltip:"Teremos enviado Colhedores Estelares suficientes para garantir que nossos objetivos sejam alcançados."
+ hcp_build_another_stellar_harvester:"£trigger_no£ Nenhum Colhedor Estelar"
+
+ ### Situation Events
+ ##On Start
+ hcp_harvesters_situations.1000.name: "$hcp_situation_outward_bound_master$"
+ hcp_harvesters_situations.1000.desc:"Sabemos há algum tempo que nossa galáxia não contém recursos suficientes para sustentar nossa civilização por um período razoável. Precisaremos começar a olhar para fora, em direção a outras galáxias. Para tanto, equipamos nossos Colhedores Estelares com um tipo experimental de motor FTL, permitindo-lhes viajar em velocidades superluminares entre galáxias.\n\nEnviar nossos Colhedores Estelares para fora da galáxia é um empreendimento arriscado. Não temos como saber que perigos podem existir lá fora, então precisaremos enviar um número suficiente para aumentar suas chances gerais de sucesso.\n\nAlém disso, precisaremos preparar os santuários ao redor do nosso Silo de Singularidade para abrigar toda a nossa civilização. Estamos preparados para começar a expandir a área habitável de cada santuário, mas isso exigirá uma quantidade substancial de recursos."
+ hcp_harvesters_situations.1000.a:"Priorizar nossos Santuários."
+ hcp_harvesters_situations.1000.b:"Priorizar nossos Colhedores Estelares."
+
+ ##On Finish
+ hcp_harvesters_situations.1005.name:"Eficiência Máxima"
+ hcp_harvesters_situations.1005.desc.a:"Agora enviamos um número suficiente de Colhedores Estelares para além da nossa galáxia para garantir que os recursos do universo serão, eventualmente, nossos. Devemos agora voltar nossa atenção para outro lugar.\n\nÉ mais do que evidente que os outros impérios não estão muito satisfeitos com nossas atividades. Para tanto, estivemos trabalhando em um projeto para um escudo que isole nosso Silo de Singularidade do resto do universo. Este escudo é projetado para desintegrar a matéria ao contato e sifoná-la para o buraco negro no coração do nosso refúgio."
+ hcp_harvesters_situations.1005.desc.b:"$hcp_harvesters_situations.1005.desc.a$\n\nPrecisaremos terminar de realocar nossa população para os santuários antes que possamos ativá-lo."
+ hcp_harvesters_situations.1005.a:"Preparar o escudo."
+ hcp_harvesters_situations.1005.b:"Realocaremos nossas populações remanescentes."
+
+ ## Approaches
+ hcp_approach_sanctuaries:"Priorizar Santuários"
+ hcp_planet_sanctuaries_effect:"Devemos priorizar o desenvolvimento de nossos santuários para garantir que eles possam atender às nossas necessidades."
+
+ hcp_approach_harvesters:"Priorizar Coletoras"
+ hcp_harvesters_effect:"Devemos priorizar nossas Coletoras Estelares; nossa sobrevivência pode ser comprometida se elas não conseguirem os recursos de que precisamos."
+ mod_shipsize_hcp_stellar_harvester_weapon_damage:"$hcp_stellar_harvester$ $MOD_SHIP_WEAPON_DAMAGE$"
+
+ #### Dummy Situation
+ ### Messages
+ hcp_MESSAGE_HOSTILE_STELLAR_HARVESTER_DEPARTED_TITLE:"Coletora Estelar Partiu"
+ hcp_MESSAGE_HOSTILE_STELLAR_HARVESTER_DEPARTED_TEXT:"Uma §YColetora Estelar§!, pertencente ao $TARGET|Y$, deixou a galáxia."
+
+ ### Situation
+ hcp_situation_outward_bound_dummy:"A Caminho: [Target.GetName]"
+ hcp_situation_outward_bound_dummy_type: "$hcp_situation_outward_bound_master$"
+ hcp_situation_outward_bound_dummy_monthly_change_tooltip:"Esta §YSituação§! progredirá à medida que o [Target.GetName] enviar §Y$hcp_stellar_harvester$s§! para além da nossa galáxia."
+ hcp_situation_outward_bound_dummy_desc:"O §H[Target.GetName]§! começou a enviar suas §YColetoras Estelares§! para outras galáxias. Cada uma delas representa uma §RAmeaça Existencial§! para todo o universo.\n\nColetoras Estelares: §R[target.hcp_num_stellar_harvesters]§!"
+ hcp_outward_bound_dummy_finish_tooltip:"Coletoras Estelares demais terão escapado."
+
+ ### Situation Events
+ ##On Start
+ #First Stellar-Harvester Left Galaxy
+ hcp_harvesters_situations.2000.name: "$hcp_situation_outward_bound_dummy$"
+ hcp_harvesters_situations.2000.desc:"Uma das Coletoras Estelares pertencentes ao [Target.GetName] acaba de deixar a galáxia. Detectamos uma estranha perturbação de subespaço se acumulando ao redor da nave antes de sua partida, aparentemente utilizando um novo tipo de viagem STL.\n\nEmbora a princípio tenhamos ficado aliviados por ter uma a menos para lidar, as implicações completas disso rapidamente se tornaram claras. As Coletoras Estelares são projetadas para se autorreplicar utilizando a matéria que coletam. Qualquer uma que escapar provavelmente retornará um dia tendo se multiplicado substancialmente!\n\nDe forma otimista, sempre há a chance de que civilizações em outras galáxias sejam capazes de reconhecer a ameaça que representam e destruí-las antes que saiam do controle, mas cada uma que parte aumenta a chance de seu sucesso. Não podemos permitir que muitas mais escapem."
+ hcp_harvesters_situations.2000.a:"Elas devem ser paradas."
+ #Built Half Stellar-Harvesters Required to Win
+ hcp_harvesters_situations.2001.name: "$hcp_situation_outward_bound_dummy$"
+ hcp_harvesters_situations.2001.desc:"Nossos agentes dentro do [Target.GetName] trouxeram notícias perturbadoras. Aparentemente, eles equiparam suas Coletoras Estelares com um novo tipo de motor STL capaz de viagem intergaláctica.\n\nInicialmente, ficamos perplexos com essas descobertas, mas as implicações completas rapidamente se tornaram claras. As Coletoras Estelares são projetadas para se autorreplicar utilizando a matéria que coletam. Qualquer uma que escapar provavelmente retornará um dia tendo se multiplicado substancialmente!\n\nSe alguma escapar, teríamos que depender de civilizações em outras galáxias serem capazes de reconhecer a ameaça que representam e destruí-las antes que saiam do controle, mas isso pressupõe que elas estejam em um nível tecnológico equivalente ao nosso, se é que existem. Devemos destruir o máximo possível antes que possam escapar."
+ hcp_harvesters_situations.2001.a:"Elas devem ser paradas."
+
+ ##On Finish
+ hcp_harvesters_situations.2005.name:"Inevitabilidade Sombria"
+ hcp_harvesters_situations.2005.desc:"O [Target.GetName] agora enviou um número suficiente de Coletoras Estelares para além da galáxia para garantir que pelo menos uma delas se replique com sucesso. Embora gostaríamos de acreditar que existem civilizações por aí com a vontade e a capacidade de lidar com elas antes que seja tarde demais, realisticamente, nossa única esperança real é que não vivamos o suficiente para vê-las retornar."
+ hcp_harvesters_situations.2005.a:"Uma sombra paira sobre o nosso futuro."
+
+ ## Approaches
+ hcp_approach_track_harvesters:"Rastrear Coletoras Estelares"
+ hcp_track_harvesters_effect:"Nossa estação de observação rastreará os movimentos de quaisquer Coletoras Estelares pertencentes ao [Target.GetName]."
+
+ #end

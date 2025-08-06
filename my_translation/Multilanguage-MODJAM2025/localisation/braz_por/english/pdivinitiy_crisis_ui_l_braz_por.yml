@@ -1,0 +1,183 @@
+﻿l_braz_por:
+
+ ############################################
+ ### project_divinity_crisis_ui_l_english ###
+ ###     by daniellm                      ###
+ ############################################
+
+
+
+ #####################
+ ### crisis screen ###
+ #####################
+
+ pdivinity_psionic_strength_value:"£pdivinity_psionic_strength£ $VAL|0$"
+ pdivinity_psionic_strength_gaining:"Complete §HObjetivos de Crise§! para ganhar mais §YFavor do Patrono§!."
+ pdivinity_psionic_strength_desc:"$pdivinity_psionic_strength$ é uma medida da nossa ressonância com as energias enigmáticas do Arquiteto."
+ pdivinity_psionic_strength_crisis_objective:"Objetivos de Crise"
+ pdivinity_psionic_strength_crisis_objective_gained:"$pdivinity_psionic_strength$ obtidos"
+ pdivinity_psionic_strength_crisis_objective_reward: "$REWARD$"
+ pdivinity_psionic_strength_crisis_objective_progress:"Ganhamos £pdivinity_psionic_strength£ $AMOUNT$ deste Objetivo de Crise."
+ pdivinity_psionic_strength_crisis_level_locked:"Necessário para desbloquear este nível:\n"
+ pdivinity_psionic_strength_crisis_level_unlocked:"No $LEVEL$, você obtém um Projeto Especial e as recompensas:\n"
+ pdivinity_psionic_strength_crisis_level_desc:"Para avançar nos níveis de Crise, complete os Objetivos de Crise e conclua a tarefa necessária de cada estágio"
+ pdivinity_psionic_strength_crisis_level_unlock:"Tem £pdivinity_psionic_strength£ §Y$CURRENCY$§! $pdivinity_psionic_strength$"
+ pdivinity_psionic_strength_current_value:"Valor Atual: §Y$VALUE|0$§!"
+
+ # this text exists in the crisis screen, the intro is just the nemesis one, i don't really like it tbh neither does the other one talk about the galcom. ask me if you need the other ones for comparison
+ pdivinity_psionic_strength_crisis_description_title:"Projeto Divindade"
+ pdivinity_psionic_strength_crisis_description_intro:"Por eras, videntes e eruditos sussurraram sobre uma §RCrise§! vindoura — um fim envolto em profecia, onde o destino de toda a vida sapiente penduraria por um fio. Eles imaginaram invasores de além das estrelas, rebeliões de lógica fria de máquinas, ou guerras nascidas em dimensões alienígenas.\n\nMas eles olhavam para fora, quando deveriam ter olhado para dentro.\n\nA verdade sempre se agitou sob a superfície — profunda, inevitável e ligada apenas à vontade. A crise final... sempre fomos §Rnós§!."
+ pdivinity_psionic_strength_crisis_description:"$pdivinity_psionic_strength_crisis_description_intro$\n\nNossos pensamentos, nossa vontade, ondulam através de outro plano — um de força psiônica ilimitada. O véu se adelgaça. Se pudermos tomar esse poder, moldá-lo com nosso propósito, então não apenas sobreviveremos ao que vier... nós o definiremos."
+ pdivinity_psionic_strength_crisis_howto_title:0 "Buscando a Divindade"
+ pdivinity_psionic_strength_crisis_howto:"Perseguir §HObjetivos de Crise§! gera £pdivinity_psionic_strength£ §YFavor do Patrono§!, liberando nosso potencial divino para libertar aquele que clama pela galáxia!."
+
+ crisis_pdivinity_project_divinity_level_1:0 "Gênese"
+ crisis_pdivinity_project_divinity_level_1_desc:0 "Nível de Crise 1"
+
+ crisis_pdivinity_project_divinity_level_2:0 "Subversão"
+ crisis_pdivinity_project_divinity_level_2_desc:0 "Nível de Crise 2"
+
+ crisis_pdivinity_project_divinity_level_3:0 "Profecia"
+ crisis_pdivinity_project_divinity_level_3_desc:0 "Nível de Crise 3"
+
+ crisis_pdivinity_project_divinity_level_4:0 "Revelação"
+ crisis_pdivinity_project_divinity_level_4_desc:0 "Nível de Crise 4"
+
+ crisis_pdivinity_project_divinity_level_5:0 "Apoteose"
+ crisis_pdivinity_project_divinity_level_5_desc:0 "Nível de Crise 5"
+ # Resource
+
+ pdivinity_psionic_strength_name:0 "Favor do Patrono"
+ pdivinity_psionic_strength:0 "Favor do Patrono"
+
+ # objectives
+
+ crisobj_pdivinity_establish_cult_name:0 "Estabelecer Culto do Véu"
+ crisobj_pdivinity_establish_cult_desc:0 "Estabelecer cultos do véu em outros impérios nos permite espalhar nossa influência pela galáxia.\n\nEstabeleça cultos do véu para obter esta recompensa de $pdivinity_psionic_strength$."
+
+ crisobj_pdivinity_retain_vassals_name:0 "Manter Vassalos Acólitos"
+ crisobj_pdivinity_retain_vassals_desc:0 "Sua obediência ao véu contribui para nosso caminho à divindade.\n\nMantenha Vassalos Acólitos para obter esta recompensa §Yanual§! de $pdivinity_psionic_strength$."
+
+ crisobj_pdivinity_vassalize_empire_name:0 "Vassalizar Impérios"
+ crisobj_pdivinity_vassalize_empire_desc:0 "Subjugar as massas garante que elas acatarão a sua palavra divina.\n\nVassalize impérios para obter esta recompensa de $pdivinity_psionic_strength$."
+
+ crisobj_pdivinity_research_psionic_technology_name:0 "Pesquisar Tecnologias Psiônicas"
+ crisobj_pdivinity_research_psionic_technology_desc:0 "Experimentar com componentes baseados no véu pode nos ajudar em nossa busca pela divindade.\n\nPesquise essas tecnologias raras para obter esta recompensa de $pdivinity_psionic_strength$."
+
+ crisobj_pdivinity_shroud_phase_planets_name:0 "Planetas em Fase do Véu"
+ crisobj_pdivinity_shroud_phase_planets_desc:0 "Colocar planetas em fase do véu abre uma fenda no véu e certamente chamará a atenção daquele que clama.\n\nColoque planetas em fase do véu para obter esta recompensa de $pdivinity_psionic_strength$."
+
+ crisobj_pdivinity_sacrifice_population_name:0 "Sacrifício Ritual de Populações"
+ crisobj_pdivinity_sacrifice_population_desc:0 "As almas das populações sacrificadas nos ajudarão a obter o favor de nosso patrono.\n\nUse o tipo de purgação de sacrifício ritual para obter esta recompensa de $pdivinity_psionic_strength$ para cada $pop_group_unit$ Populações Purgadas."
+
+ crisobj_pdivinity_control_shroud_enclave_name:0 "Controlar Enclave Andarilho do Véu"
+ crisobj_pdivinity_control_shroud_enclave_desc:0 "Os andarilhos do véu são de fé divina, eles nos ajudarão em nosso objetivo."
+
+ crisobj_pdivinity_shroud_enemy_planets_name:0 "Rupturar Psionicamente Mundos"
+ crisobj_pdivinity_shroud_enemy_planets_desc:0 "Queimar mundos inimigos com energias psiônicas nos renderá favor."
+
+ crisobj_pdivinity_summon_psionic_ships_name:0 "Invocar Naves Psiônicas"
+ crisobj_pdivinity_summon_psionic_ships_desc:0 "O véu treme ao nosso comando. De suas profundezas, invocamos vasos não nascidos de metal, mas de vontade — manifestações de nosso laço crescente com o véu."
+
+ crisobj_pdivinity_employ_telepaths_name:0 "Empregar Telepatas"
+ crisobj_pdivinity_employ_telepaths_desc:0 "O arquiteto concedeu aos nossos telepatas a capacidade de produzir energia psiônica."
+
+ ####################
+ ### menace perks ###
+ ####################
+
+ menp_pdivinity_resource:0 "Favor do Patrono"
+ # tooltip
+ unlocks_pdivinity_unlock_resource:0 "Permite o acúmulo de £pdivinity_psionic_strength£ §Y$menp_pdivinity_resource$§! ao completar §HObjetivos de Crise§!."
+ menp_pdivinity_resource_desc:0 "Conquistar o favor do arquiteto auxiliará nosso objetivo supremo de divindade. Derramaremos nosso sangue por sua vontade."
+
+ menp_pdivinity_ethic_attraction:0 "Fé Divina"
+ # desc
+ menp_pdivinity_ethic_attraction_desc:0 "Sussurros e visões despertam a crença em um poder superior. Muitos agora pronunciam o nome do §RArquiteto do Destino§! com reverência."
+
+ menp_pdivinity_psionic_armies:0 "Fantasmas Psiônicos"
+ menp_pdivinity_psionic_armies_desc:0 "Envoltos em energia psiônica antinatural, esses guerreiros espectrais flutuam entre a realidade e o pesadelo. Agentes do Arquiteto, eles estão destinados a semear o medo e a devastação onde quer que se manifestem."
+ unlocks_pdivinity_unlock_armies:0 "Desbloqueia o tipo de exército §Y$pdivinitiy_psionic_army$§!"
+
+ menp_pdivinity_zro_building:0 "Extrator do Véu"
+ menp_pdivinity_zro_building_desc:0 "Uma estrutura santificada que afina o véu entre os reinos, permitindo que acólitos treinados sifonem Zro bruto diretamente dos redemoinhos do Véu."
+ unlocks_pdivinity_unlock_buildings:0 "Desbloqueia o §Y$building_pdivinity_shroud_harvester_building$§!"
+
+ menp_pdivinity_shroud_phasing:0 "Faseamento do Véu"
+ menp_pdivinity_shroud_phasing_desc:0 "Aprendemos a enfraquecer deliberadamente o véu em mundos escolhidos, transformando-os em santuários psiônicos. Nossa espécie prospera nessa ressonância, enquanto todos os outros sofrem sob nosso domínio."
+ unlocks_pdivinity_unlock_phasing:0 "Desbloqueia a decisão §Y$decision_pdivinity_shroud_phasing$§! em planetas"
+
+ menp_pdivinity_ritual_sacrifice:0 "Sacrifício Ritual"
+ menp_pdivinity_ritual_sacrifice_desc:0 "Aqueles indignos do desígnio do Arquiteto ainda podem servir a um propósito. Através de oferendas sagradas de carne e espírito, extraímos força e favor do Véu."
+ unlocks_pdivinity_ritual_sacrifice:0 "Desbloqueia o tipo de Purificação §Y$purge_pdivinity_sacrifice$§!"
+
+ menp_pdivinity_cult_espionage:0 "Sementes da Revelação"
+ menp_pdivinity_cult_espionage_desc:0 "Dominamos a arte de espalhar sussurros entre as fronteiras. A fé se espalha como podridão sob a superfície, e em breve, seu povo se voltará contra seus deuses em nome do Arquiteto."
+ unlocks_pdivinity_cult_espionage:0 "Desbloqueia o tipo de operação §Y$operation_pdivinity_establish_cult$§!"
+
+ menp_pdivinity_divine_crusade:0 "Cruzada Divina"
+ menp_pdivinity_divine_crusade_desc:0 "Nossa cruzada divina servirá como um despertar para o resto da galáxia. Através da guerra santa, atamos outros ao desígnio do destino. Eles servirão como Acólitos, ou cairão como hereges."
+ unlocks_pdivinity_divine_crusade:0 "Desbloqueia o objetivo de guerra §Y$wg_pdivinity_acolyte$§!"
+
+ menp_pdivinity_psionic_avatar:0 "Manto Psíquico"
+ menp_pdivinity_psionic_avatar_desc:0 "Uma manifestação etérea da vontade do Véu, como uma nuvem rodopiante de energia psiônica que vela e distorce a realidade, assombrando o vácuo entre as estrelas com sussurros do destino."
+ unlocks_pdivinity_psionic_avatar:0 "Desbloqueia tipo de nave: §Y$pdivinity_psionic_cloud$§!"
+
+ menp_pdivinity_psionic_rupture:0 "Barragem de Ruptura"
+ menp_pdivinity_psionic_rupture_desc:0 "Um bombardeio devastador que rasga o véu entre as dimensões, liberando energia psiônica bruta para dilacerar fortificações inimigas e dispersar sua vontade."
+ unlocks_pdivinity_psionic_rupture:0 "Desbloqueia tipo de bombardeio: §Y$bombardment_pdivinity_psionic_rupture_bombardment$§!"
+
+ menp_pdivinity_psionic_potential:0 "Sintonia Psiônica"
+ menp_pdivinity_psionic_potential_desc:0 "A conexão latente de nosso povo com o Véu floresce, concedendo-lhes dons mentais aprimorados e uma sintonia mais profunda com a trama da realidade."
+
+ menp_pdivinity_gifts_from_beyond:0 "Dons do Além"
+ menp_pdivinity_gifts_from_beyond_desc:0 "Antigos segredos e tecnologias psiônicas recuperados das profundezas do Véu conferem aos nossos vasos e armas um poder de outro mundo."
+ unlocks_pdivinity_gifts_from_beyond:0 "§YComponentes Psiônicos§! podem agora aparecer como opções de pesquisa"
+
+ menp_pdivinity_astral_tear:0 "Avatar Psiônico"
+ menp_pdivinity_astral_tear_desc:0 "Uma encarnação viva da vontade do Véu, este avatar é uma entidade feroz e enigmática envolta em puro poder psiônico, dobrando a realidade à sua vontade."
+ unlocks_pdivinity_astral_tear:0 "Desbloqueia tipo de nave: §Y$pdivinity_psionic_avatar$§!"
+
+ menp_pdivinity_beyond_the_rifts:0 "Tempestade Galáctica"
+ menp_pdivinity_beyond_the_rifts_desc:0 "A espiral do destino rompeu lentamente o véu, energia psiônica agora flui para o espaço real a uma taxa alarmante, criando uma tempestade do Véu em nosso domínio."
+ unlocks_pdivinity_beyond_the_rifts:0 "Cria uma §YTempestade do Véu§! em cada sistema possuído"
+
+ menp_pdivinity_divine_insight:0 "Discernimento Divino"
+ menp_pdivinity_divine_insight_desc:0 "A presença do Arquiteto aguça nossas mentes, reduzindo o tempo entre nossos feitos psiônicos e permitindo uma mestria mais rápida do Véu."
+
+ menp_pdivinity_hyperdimensional_shielding:0 "Blindagem Hiperdimensional"
+ menp_pdivinity_hyperdimensional_shielding_desc:0 "Uma aura protetora tecida a partir de energias de dimensões superiores, protegendo nossas frotas de danos como se a própria graça do Arquiteto as guardasse."
+
+ menp_pdivinity_dimensional_tearer:0 "Dilacerador Dimensional"
+ menp_pdivinity_dimensional_tearer_desc:0 "Uma arma capaz de rasgar buracos na própria realidade, criando portais psiônicos que dilaceram e desvendam o tecido do próprio espaço-tempo."
+ unlocks_pdivinity_dimensional_tearer:0 "Desbloqueia tipo de nave: §Y$pdivinity_dimensional_tearer$§!"
+
+ menp_pdivinity_call_of_the_eye:0 "Chamado do Arquiteto"
+ menp_pdivinity_call_of_the_eye_desc:0 "Sua voz ecoa por toda a galáxia, cultistas exultam com o cumprimento da profecia e sua ascensão à luz. O arquiteto está próximo.."
+ unlocks_pdivinity_call_of_the_eye:0 "§YRebeliões Cultistas§! agora crescem com o dobro da velocidade"
+
+ menp_pdivinity_psionic_mastery:0 "Mestria Psiônica"
+ menp_pdivinity_psionic_mastery_desc:0 "Nossa profunda comunhão com o Véu aumenta o potencial destrutivo de nossas armas, fazendo com que cada impacto ecoe com fúria psiônica."
+
+ menp_pdivinity_beyond_the_Shroud:0 "A Espiral do Destino"
+ menp_pdivinity_beyond_the_Shroud_desc:0 "A Espiral canta. O Véu responde. Adoradores por toda a galáxia sentem seu chamado, e cultos surgem em cada canto do espaço conhecido."
+ unlocks_pdivinity_spire_of_fate:0 "Desbloqueia estágio de megaestrutura: §YEspiral do Destino - Estágio de Apoteose§!"
+
+ ##################################
+ ### crisis unlock requirements ###
+ ##################################
+
+ pdivinity_level_2_req_clear_tooltip:0 "£trigger_yes£ Construiu o §Y$building_pdivinity_architect_shrine$"
+ pdivinity_level_2_req_tooltip:0 "£trigger_no£ Construiu o §Y$building_pdivinity_architect_shrine$"
+
+ pdivinity_level_3_req_clear_tooltip:0 "£trigger_yes£ Faseou §Yno Véu§! um planeta"
+ pdivinity_level_3_req_tooltip:0 "£trigger_no£ Faseou §Yno Véu§! um planeta"
+
+ pdivinity_level_4_req_clear_tooltip:0 "£trigger_yes£ Terminou o sítio arqueológico §Y$pdivinity_catacombs_digsite$§!."
+ pdivinity_level_4_req_tooltip:0 "£trigger_no£ Terminou o sítio arqueológico §Y$pdivinity_catacombs_digsite$§!."
+
+ pdivinity_level_5_req_clear_tooltip:0 "£trigger_yes£ Construiu o §Y$pdivinity_shroud_needle_3$§!"
+ pdivinity_level_5_req_tooltip:0"£trigger_no£ Construiu o §Y$pdivinity_shroud_needle_3$§!"
+
+ pdivinity_level_5_req_clear_tooltip_2:0 "£trigger_yes£ Disparou o §YDilacerador Dimensional§!."
+ pdivinity_level_5_req_tooltip_2:0 "£trigger_no£ Disparou o §YDilacerador Dimensional§!."

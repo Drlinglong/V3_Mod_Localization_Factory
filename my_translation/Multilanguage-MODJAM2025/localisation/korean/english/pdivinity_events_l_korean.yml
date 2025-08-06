@@ -1,0 +1,355 @@
+﻿l_korean:
+
+ ##################################
+ ### pdivinity_events_l_english ###
+ ###     by daniellm            ###
+ ##################################
+
+
+
+ ###################
+ ### event chain ###
+ ###################
+
+ project_divinity_crisis_chain_title:0 "신성 프로젝트"
+ project_divinity_crisis_chain_desc:0 "운명의 건축가가 움직이며 고대의 설계가 펼쳐집니다. 우리 문명의 운명은 이해를 초월하는 힘을 일깨우는 것입니다."
+
+ #####################
+ ### crisis events ###
+ #####################
+
+ # message from the architect
+ pdivinity_crisis.0.name:0 "건축가의 말씀"
+ pdivinity_crisis.0.desc:0 "필멸자의 시야 너머 심연에서, 나는 지켜보고 있다. 너희의 운명은 너희 종족의 여명기부터 짜여져 왔다. 장막이 요동치며, 그와 함께 신성으로 향하는 길이 펼쳐진다. 너희의 표식을 받아들이라, 장막에 닿은 자들이여, 그리고 각성을 시작하라."
+ pdivinity_crisis.0.a:0 "당신의 부름에 응합니다."
+
+ # stage 1 crisis
+ pdivinity_crisis.1.name:0 "목적을 향한 각성"
+ pdivinity_crisis.1.desc:0 "건축가의 메시지가 우리의 마음속에 맴돕니다. 더 이상 멀리 떨어진 메아리가 아니라, 행동을 촉구하는 부름입니다. 우리는 이제 우리의 역사, 우리의 존재 자체가 이해를 초월하는 힘에 의해 형성되었음을 깨달았습니다. 우리에게는 목적이 주어졌습니다. 첫 숨을 쉬기도 전에 기록된 운명을 성취하는 것입니다.\n\n되돌릴 길은 없습니다. 앞날은 위험으로 가득하지만, 상상조차 할 수 없는 힘 또한 존재합니다. 우리는 장막 너머에 있는 것을 받아들일 준비를 해야 합니다."
+ pdivinity_crisis.1.a:0 "우리의 승천이 기다리고 있습니다."
+
+ # stage 2 crisis
+ pdivinity_crisis.2.name:0 "타락의 메아리"
+ pdivinity_crisis.2.desc:0 "우리의 영향력이 별들 너머로 그림자처럼 퍼져나갑니다. 건축가의 의지는 비밀스러운 광신도들과 숨겨진 광신자들을 통해 발현되어, 이계에 혼돈을 뿌립니다. 운명의 사자들은 적의 결의를 약화시키고 다가올 계시를 위해 은하계를 준비시키며 지칠 줄 모르고 일합니다. 전복의 그물은 더욱 촘촘해지고 있으며, 곧 모든 이들이 건축가의 진정한 힘을 알게 될 것입니다."
+ pdivinity_crisis.2.a:0 "은하계를 각성시킬 때가 왔습니다."
+
+ # stage 3 crisis
+ pdivinity_crisis.3.name:0 "펼쳐지는 예언"
+ pdivinity_crisis.3.desc:0 "우리의 목적이 선명해지면서 운명의 실타래가 팽팽해집니다. 오랫동안 행성 표면 아래 묻혀 있던 고대의 징조들이 꿈틀거리기 시작합니다. 건축가가 놓은 길이 명확해지고 필연적인 심판이 다가오면서, 우리의 시야는 시간의 장막을 꿰뚫습니다."
+ pdivinity_crisis.3.a:0 "운명을 받아들여라"
+
+ # stage 4 crisis
+ pdivinity_crisis.4.name:0 "장막에 물든 별"
+ pdivinity_crisis.4.desc:0 "완료되었습니다. 찬란한 섬광이 성계를 집어삼켰고, 파편은 항성 불꽃 속으로 사라졌습니다. 이제 그 별은 사이오닉 빛으로 타오르며, 불가능한 색채의 반짝이는 물결에 덮여 있습니다. 성계 내 모든 행성이 장막에 닿았습니다.\n\n그리고 혼돈 속에서... 무언가가 스스로를 구축하고 있습니다. 손으로 만들어진 것이 아니라, 운명으로 만들어진 구조물입니다."
+ pdivinity_crisis.4.a:0 "장막이 옅어지고 있습니다."
+
+ # stage 5 crisis
+ pdivinity_crisis.5.name:0 "패턴이 수렴하다"
+ pdivinity_crisis.5.desc:0 "모든 실타래가 정렬되었습니다. 속삭임은 더 이상 말하지 않고, 노래합니다. 별들 너머로 신도들은 황홀한 열정 속에서 일어나고, 적 행성의 그림자 속에서 광신 집단이 만개하며, 장막은 숨을 쉴 정도로 얇아집니다.\n\n현실의 뼈대에 새겨진 위대한 설계가 완성에 가까워지고 있습니다. 건축가는 지켜봅니다. 기다립니다. 의지합니다.\n\n우리는 결코 건설자가 아니었습니다. 우리는 열쇠였습니다."
+ pdivinity_crisis.5.a:0 "최후의 의식이 시작됩니다."
+
+ # crisis home system shrouded notification for the galaxy (happens on getting stage 4)
+ pdivinity_crisis.6.name:0 "장막에 싸인 별"
+ pdivinity_crisis.6.desc:0 "§Y[event_target:pdivinity_crisis_system.GetName]§! 성계의 항성이 급진적이고 설명 불가능한 변형을 겪었습니다. 사이오닉 수치가 전례 없는 수준으로 치솟았으며, 성계 내 모든 미개척 행성에서 장막과 유사한 간섭 패턴을 보이고 있습니다.\n\n성계의 중심부에는 거대한 구조물이 저궤도에서 뭉쳐지고 있습니다. 그 건설 방식은 알려지지 않았으며, §Y[event_target:pdivinity_crisis_empire.GetName]§! 제국과의 외교 채널은 모두 응답이 없습니다.\n\n은하계 전역의 관측자들은 고대의 무언가가 펼쳐지고 있다는 데 동의합니다."
+ pdivinity_crisis.6.a:0 "이것은 자연적인 현상이 아닙니다..."
+
+ ########################
+ ### respawning ships ###
+ ########################
+
+ pdivinity_crisis.10.name:0 "차원 찢는 자 부활"
+ pdivinity_crisis.10.desc:0 "유일한 차원 찢는 자의 파괴는 은하계 내 우리의 세력 투사에 큰 타격을 주었습니다.\n\n그러나 우리의 위대한 후원자이신 §R운명의 건축가§!께서 우리의 기도를 들으셨습니다. 새로운 차원 찢는 자가 우리 수도 성계에 소환되었습니다."
+ pdivinity_crisis.10.a:0 "베일이 그것을 원한다."
+
+ pdivinity_crisis.11.name:0 "신들은 죽지 않는다"
+ pdivinity_crisis.11.desc:0 "§R운명의 건축가§!의 필멸적 형태의 파괴는 오래가지 못했습니다. 우리의 신이 수도 성계에서 다시 태어났습니다."
+ pdivinity_crisis.11.a:0 "신에게 찬미를."
+
+ ################################
+ ### dimensional tearer stuff ###
+ ################################
+
+ # destroyer
+ pdivinity_tearer.3.name:0 "차원 관문 파괴"
+ pdivinity_tearer.3.desc:0 "§H[From.GetName]§! 성계의 관문이 소멸했습니다. 그와 함께 §R운명의 건축가§!와 그들이 선택한 자들 사이의 핵심 연결 고리가 끊어졌습니다.\n\n이 균열을 통해 더 이상의 증원군이 소환될 수 없습니다. §Y[event_target:pdivinity_crisis_empire.GetName]§! 제국은 전력에 영구적인 타격을 입었습니다."
+ pdivinity_tearer.3.a:0 "광기로 향하는 문이 하나 줄었다."
+
+ # victim
+ pdivinity_tearer.6.name:0 "하나의 실타래가 끊어지다"
+ pdivinity_tearer.6.desc:0 "§H[From.GetName]§! 성계의 관문이 파괴되었습니다. 건축가의 시선이 흔들리고, 그의 의지가 흘러오던 연결이 붕괴되었습니다.\n\n우리는 공허가 다가오는 것을 느낍니다. 하지만 이것은 끝이 아니라, 단지 우리의 의지를 시험하는 것일 뿐입니다."
+ pdivinity_tearer.6.a:0 "우리는 견딜 것이다. 그래야만 한다."
+
+ # notification for the galaxy upon tearer being used
+ pdivinity_tearer.8.name:0 "장막에 싸인 성계"
+ pdivinity_tearer.8.desc:0 "§H[destroyed_system.GetName]§! 성계는 사이오닉 격류에 휩싸였습니다. 보고에 따르면 거대한 장막 태생의 아바타가 현실 자체의 직물을 찢으며 나타났습니다.\n\n거대한 차원 관문이 이제 궤도에 열린 채로 알 수 없는 에너지를 전달하고 있습니다."
+ pdivinity_tearer.8.a:"균열이 시작되었다..."
+
+ # notification for using the tearer
+
+ pdivinity_tearer.9.name:0 "장막에 싸인 성계"
+ pdivinity_tearer.9.desc:0 "§H[destroyed_system.GetName]§! 성계는 차원 찢는 자에게 삼켜졌습니다.\n\n거대한 차원 관문이 이제 중심별 위에 매달려, 은하계에 사이오닉 존재들을 풀어놓을 준비를 하고 있습니다."
+ pdivinity_tearer.9.a:0 "장막이 옅어지고 있습니다."
+
+ ###########################
+ #### bombardment events ###
+ ###########################
+
+ # guy who owns the planet
+ pdivinity_bombardment.2.name:0 "[From.GetName]이(가) 장막에 흡수되었습니다!"
+ pdivinity_bombardment.2.desc:0 "§H[From.From.GetName]§!의 지휘를 받는 함대가 §H[From.GetName]§!에 무자비한 폭격을 퍼부었습니다. 이 공격은 치명적인 사이오닉 균열을 일으켜 현실 공간과 장막 사이의 장벽을 부수고 말았습니다. 모든 인구 중심지가 사라졌습니다. 행성은 §R위대한 눈§!의 영역으로 사라졌습니다."
+ pdivinity_bombardment.2.a:0 "그들이 우리 세계에 무슨 짓을 한 겁니까?"
+
+ # guy who bombards the planet
+ pdivinity_bombardment.3.name:0 "[From.GetName]이(가) 장막에 흡수되었습니다!"
+ pdivinity_bombardment.3.desc:0 "우리 병력이 §H[From.GetName]§!에 대한 폭격을 완료했습니다. 집중된 사이오닉 에너지로 포화된 차원 간 장막이 찢어졌습니다. 행성은 이제 도달할 수 없는 곳에 있으며, 장막 그 자체에 흡수되어 §R운명의 건축가§!가 지배권을 주장합니다."
+ pdivinity_bombardment.3.a:"예언된 대로입니다."
+
+ # guy who owns the planet
+ pdivinity_bombardment.4.name:0 "[From.GetName]이(가) 장막-위상 상태입니다!"
+ pdivinity_bombardment.4.desc:0 "§H[From.From.GetName]§!의 함대가 §H[From.GetName]§!에 지속적인 사이오닉 공격을 퍼부었습니다. 완전히 소멸되지는 않았지만, 장막은 크게 약화되었습니다. 행성은 이제 불규칙한 장막-위상 현상을 보이며, 그 현실은 불안정하고 변형되었습니다."
+ pdivinity_bombardment.4.a:"그들의 사악함은 끝이 없습니다."
+
+ # guy bombards the planet
+ pdivinity_bombardment.5.name:0 "[From.GetName]이(가) 장막-위상 상태입니다!"
+ pdivinity_bombardment.5.desc:0 "우리 병력이 §H[From.GetName]§!에 집중된 사이오닉 탄두를 폭격하는 데 성공했다고 보고했습니다. 장막은 완전히 찢어지지는 않았지만, 옅어졌으며, 행성은 이제 유동적인 상태로 장막의 영향력에 부분적으로 잠겨 있습니다. §R운명의 건축가§!가 내부에서 지켜보고 있습니다."
+ pdivinity_bombardment.5.a:0 "한 걸음 더 나아갔습니다."
+
+
+ ############################
+ ### megastructure events ###
+ ############################
+
+ # stage 1
+ pdivinity_needle.1.name:0 "장막을 꿰뚫기"
+ pdivinity_needle.1.desc:0 "구조물의 첫 번째 단계가 완료되었습니다. 그 첨탑은 보이지 않는 사이오닉 하모니에 맞춰 정교한 정확성으로 공허를 꿰뚫습니다. 이미 영역 사이의 장막이 꿈틀거리고 있습니다. 이는 평범한 구조물이 아니라, 사고와 영원을 잇는 도구이기 때문입니다."
+ pdivinity_needle.1.a:0 "시작합니다."
+
+ # stage 2
+ pdivinity_needle.2.name:0 "장막의 맥동"
+ pdivinity_needle.2.desc:0 "구조물은 이제 살아있는 에너지로 윙윙거립니다. 사이오닉 정전기의 촉수가 표면을 가로질러 아크를 형성하며, 현실 공간과 동기화되었다가 벗어납니다. 우리 자신의 정신은 그 존재 앞에서 고통스러워합니다. 장막의 반대편에 무엇이 있든... 그것은 의식하고 있습니다."
+ pdivinity_needle.2.a:0 "우리는 가까워지고 있습니다."
+
+ # stage 3 spawns a dimensional tearer
+ pdivinity_needle.3.name:0 "건축가의 선물"
+ pdivinity_needle.3.desc:0 "구조물의 세 번째 단계가 장막을 한계점까지 밀어붙였습니다. 눈부신 비현실의 섬광 속에서 거대한 사이오닉 균열이 공간의 경계를 찢었고, 그 안에서 무언가가 출현했습니다."
+ pdivinity_needle.3.a:"시작되었습니다."
+
+ # notification for the galaxy
+ pdivinity_needle.4.name:0 "장막이 전율합니다"
+ pdivinity_needle.4.desc:0 "은하계 전역에 걸쳐 모든 정신에 불안감이 감돕니다. 사이오닉 친화력이 없는 종족들조차 환영, 불안감, 그리고 어둠 속 속삭임을 보고합니다."
+ pdivinity_needle.4.a:0 "우리도 느낍니다."
+
+ # stage 4 mega, this spawns a cult in every empire as well
+ pdivinity_needle.5.name:0 "노래가 퍼집니다"
+ pdivinity_needle.5.desc:0 "구조물은 이제 장막을 통해 선율처럼 울려 퍼집니다. 그 사이오닉 방출은 더 이상 번역을 필요로 하지 않고, 우리의 본능으로 이해됩니다. 은하계 전역에서 잠자던 광신도들이 깨어나 §R운명의 건축가§!의 도래를 설파합니다."
+ pdivinity_needle.5.a:0 "그들이 부름을 듣고 있습니다."
+
+ # you as a non-crisis empire gets a cult
+ pdivinity_needle.6.name:0 "깨어난 광신"
+ pdivinity_needle.6.desc:0 "사원, 골목, 그리고 도시의 그림자 속에서, 장막을 통해 다가오는 신에 대해 말하는 광신적인 운동들이 분출했습니다. 그들은 스스로를 §R건축가의 아이들§!이라고 부르며, 그들의 열정은 들불처럼 번지고 있습니다."
+ pdivinity_needle.6.a:0 "불안합니다."
+
+ # the architect of fate enters the galaxy. this wins you the game, and does damage to like 30% of the galaxy
+ pdivinity_needle.7.name:0 "운명의 시간"
+ pdivinity_needle.7.desc:0 "마지막 봉인이 깨졌습니다. 장막은 더 이상 지탱하지 못합니다."
+ pdivinity_needle.7.a:0 "늘 예견되었던 대로입니다."
+
+ pdivinity_needle.9.name:0 "장막이 찢어졌습니다"
+ pdivinity_needle.9.desc:0 "은하계 전역에서 별들은 희미해지고 속삭임이 돌아옵니다. 수많은 성계에서 현실이 균열되고, 장막의 틈새로 사이오닉 안개의 파도가 흘러나옵니다. 세계는 재형성되고, 정신은 풀려나며, 커져가는 침묵 속에서 거대한 무언가가 움직였습니다. 운명의 건축가가 도래했습니다."
+ pdivinity_needle.9.a:0 "별들은 더 이상 우리의 것이 아닙니다."
+
+ # fires for the one who destroys the mega
+
+ pdivinity_needle.12.name:0 "운명의 첨탑 파괴됨"
+ pdivinity_needle.12.desc:0 "불가능한 일이 일어났습니다. [From.GetName] 성계에 있던 거대한 메가스트럭처—소위 '운명의 첨탑'—가 소멸했습니다. 사이오닉 격동이 죽어가는 비명처럼 인근 성계들을 강타합니다."
+ pdivinity_needle.12.a:0 "우리는 방어선을 지켰습니다."
+
+ # fires for the victim
+ pdivinity_needle.13.name:0 "운명의 첨탑 파괴"
+ pdivinity_needle.13.desc:0 "상상조차 할 수 없는 일이 벌어졌습니다. 건축가에게 이르는 우리의 통로이자 모든 예언의 정점인 §H운명의 첨탑§!이 파괴되었습니다.\n\n정신적 반동이 영혼의 상처처럼 우리 계층을 찢어 놓았습니다. 장막이 움츠러듭니다. 우리의 승천은... 일단은... 중단되었습니다."
+ pdivinity_needle.13.a:0 "어떻게 이런 일이 일어날 수 있죠?"
+ pdivinity_needle.13.a.tt:0 "플레이스홀더: 제가 작성할 테니 걱정 마세요."
+
+ # notification for the rest of the galaxy, because of the above
+ pdivinity_needle.14.name:0 "운명의 첨탑 파괴"
+ pdivinity_needle.14.desc:0 "찬란한 사이오닉 격변 속에서, §H[pdivinity_crisis_country.GetName]§!의 거대 구조물인 소위 §H운명의 첨탑§!은 소멸했습니다.\n\n잠시 동안, 장막 전체가 비명을 질렀습니다. 우리 은하에 침투하던 모든 힘은 격퇴되었습니다. 하지만 그 대가는 아직 알 수 없습니다."
+ pdivinity_needle.14.a:0 "사라진 채로 있기를 바랍니다."
+
+ ##################
+ ### cult stuff ###
+ ##################
+
+ # getting vassalized
+ pdivinity_cults.0.name:0 "장막의 쿠데타"
+ pdivinity_cults.0.desc:0 "우리의 복종 이후, 구 정부는 해체되었습니다. 우리의 옛 지도자는 추방되었고, 그 자리를 이제 장막 보행자가 국가 원수로서 차지했습니다. 그는 §R운명의 건축가§!의 그릇이자 컬트의 대변인입니다. 저항은 더 이상 용납되지 않습니다. 우리 제국은 이제 신성한 설계의 길을 걷습니다."
+ pdivinity_cults.0.a:0 "우리는 이제 운명의 건축가를 섬깁니다."
+
+ # situation stuff
+ situation_pdivinity_cult_uprising:0 "장막 컬트 봉기"
+ situation_pdivinity_cult_uprising_type:0 "장막 컬트 봉기"
+ situation_pdivinity_cult_uprising_monthly_change_tooltip:0 "컬트 영향력 확산"
+ situation_pdivinity_cult_uprising_desc:0 "§R운명의 건축가§!를 숭배하는 비밀스러운 컬트가 우리 제국 전역으로 확산되고 있습니다. 그들의 영향력은 그림자 속에서 커지고 있습니다: 기관을 잠입하고, 환멸에 빠진 자들을 흔들며, 권력을 장악할 준비를 합니다."
+ situation_pdivinity_cult_uprising_approach_1:0 "눈 감아주기"
+ situation_pdivinity_cult_uprising_approach_1_tt:0 "적극적인 탄압은 피합니다. 컬트의 영향력은 커지지만, 당장은 불안이 없습니다."
+ situation_pdivinity_cult_uprising_approach_2:0 "전복 방지"
+ situation_pdivinity_cult_uprising_approach_2_tt:0 "선전과 교육은 컬트의 모집을 늦추지만, 매달 우리 정부에 부담을 줍니다."
+ situation_pdivinity_cult_uprising_approach_3:0 "충성심 강제"
+ situation_pdivinity_cult_uprising_approach_3_tt:0 "보안군을 배치하여 알려진 컬트 신도들을 체포하고, 영향력을 줄이지만 불안과 내부 불화를 야기합니다."
+ situation_pdivinity_cult_uprising_success_tt:0 "컬트 신도들이 우리에게 맞서 봉기할 것입니다."
+ situation_pdivinity_cult_uprising_failed_tt:0 "남은 컬트 신도들은 우리 계층에서 숙청될 것입니다."
+
+ pdivinity_cultists_killed_tt:0 "교주 처형"
+ pdivinity_stop_cultist_spread_tt:0 "그림자를 찾다"
+ pdivinity_accelerate_cultists_tt:0 "컬트 신도들이 원조를 받았다"
+ pdivinity_educate_the_masses_tt:0 "전복 방지"
+ pdivinity_supress_the_cults_tt:0 "충성심 강제"
+ pdivinity_call_of_the_eye_tt:0 "눈의 부름"
+
+ # fires when you can no longer stop the cults
+ pdivinity_cults.5.name:0 "장막이 무너졌다"
+ pdivinity_cults.5.desc:0 "컬트는 더 이상 그림자 속에서 활동하지 않습니다. 주요 인구 밀집 지역 전역에서 조직적인 봉기가 터져 나왔고, 우리 기관 내의 변절자들은 공개적으로 광신도들과 편을 듭니다. 이제 전 지역이 국가가 아닌 장막의 요원들에게 응답합니다. 우리가 지금 무엇을 하든, 이미 시작된 일을 되돌릴 수는 없습니다."
+ pdivinity_cults.5.a:0 "우리는 통제력을 잃었습니다."
+
+ # rapid growth
+ pdivinity_cults.12.name:0 "어둠 속의 속삭임"
+ pdivinity_cults.12.desc:0 "컬트 성기사들이 새로운 지역에 침투했습니다. 보고서에 따르면 환멸에 빠진 시민들 사이에서 모집이 폭발적으로 증가했다고 합니다. 컬트의 영향력은 이제 공공생활에서도 눈에 뜁니다."
+ pdivinity_cults.12.a:0 "우리는 행동해야 합니다"
+
+ # terror attack
+ pdivinity_cults.13.name:0 "장막의 공포"
+ pdivinity_cults.13.desc:0 "어젯밤 수도에서 벌어진 컬트 의식이 장막에서 끔찍한 유령들을 소환하면서 공포가 깨어났습니다. 그 유령들은 무고한 이들을 학살한 뒤 사라졌습니다.\n\n그 공포는 인구의 심장부를 뒤흔들었습니다."
+ pdivinity_cults.13.a:0 "이 광기를 멈춰라!"
+
+ # cult executed
+ pdivinity_cults.14.name:0 "컬트 교주 처형"
+ pdivinity_cults.14.desc:0 "당국이 컬트의 교주 중 한 명을 붙잡아 처형했습니다. 이 카리스마 있는 지도자가 없으니 컬트의 영향력은 정체되었고, 우리 정부에 귀중한 한숨 돌릴 기회를 주었습니다."
+ pdivinity_cults.14.a:0 "적어도 시간을 벌었습니다."
+
+ # cult lose
+ pdivinity_cults.15.name:0 "컬트 세력 소탕"
+ pdivinity_cults.15.desc:0 "베일 숭배교가 마침내 해체되었습니다. 그들의 숨겨진 사원은 철거되었고, 추종자들은 체포되거나 처형되었습니다. 우리 제국은 다시 숨을 쉬게 되었지만, 그들이 야기한 공포는 깊은 상처를 남겼습니다."
+ pdivinity_cults.15.a:0 "이 참극은 여기서 끝난다."
+
+ # cult wins
+ pdivinity_cults.17.name:0 "통제권 포기"
+ pdivinity_cults.17.desc:0 "우리는 당신들의 세계 그림자 속에서 자라났고, 당신들의 주민들은 오랫동안 설계자의 속삭임을 들어왔습니다. 이제 그들은 설계자의 소집에 응하고 있습니다.\n\n국가의 통제권을 우리의 교주에게 넘기고 [pdivinity_crisis_empire.GetName]에 굴복하십시오. 그렇지 않으면 §R운명의 설계자§!의 자손들의 분노에 직면하게 될 것입니다."
+
+ pdivinity_cults.17.a:0 "우리는 설계자의 기꺼운 종복이 될 것이다."
+ pdivinity_surrender:0 "우리는 정부를 광신도들에게 넘기고 [pdivinity_crisis_empire.GetName]의 신봉자가 될 것이다."
+
+ pdivinity_cults.17.b:0 "우리는 결코 항복하지 않을 것이다!"
+ pdivinity_fight:0 "운명의 자손들은 우리의 결정을 받아들이지 않을 것이며, 곧 전쟁이 우리에게 닥쳐올 것입니다."
+
+ # cult contacts crisis empire
+ pdivinity_cults.31.name:0 "[pdivinity_cult_defender.GetName]에서 컬트 봉기"
+ pdivinity_cults.31.desc:0 "이교도들이 우리의 요구를 거부했습니다. 우리는 [pdivinity_cult_defender.GetName] 전역에 전쟁 준비가 된 충성스러운 추종자들을 두고 있습니다. 여러 행성에 의식 장소가 배치되어 베일의 종복들을 소환할 준비가 되어 있습니다.\n\n운명의 자손들이 당신의 명령을 기다리고 있습니다."
+ pdivinity_cults.31.b:0 "[pdivinity_cult_defender.GetName]에 선전포고"
+ pdivinity_declare_war:0 "[pdivinity_cult_defender.GetName] 전역에서 광신도들이 봉기할 것입니다."
+
+
+ # abort situation
+ pdivinity_cults.30.name:0 "설계자에게의 복종"
+ pdivinity_cults.30.desc:0 "당신은 운명의 설계자의 부름에 응했습니다. 그의 가장 충성스러운 종복들은 당분간 무기를 내려놓을 것입니다. 길을 벗어나지 마십시오. 위대한 눈이 우리를 지켜보고 있습니다."
+ pdivinity_cults.30.a:0 "베일이 그것을 원한다."
+
+ ############################
+ ### espionage operations ###
+ ############################
+
+ # spread cult
+
+ operation_pdivinity_establish_cult:0 "설계자의 말씀 전파"
+ operation_pdivinity_establish_cult_desc:0 "목표 제국에 비밀 요원을 침투시켜 설계자의 영향력을 심고, 통치자에 대한 충성심을 약화시키는 비밀 컬트를 만드십시오."
+ operation_pdivinity_establish_cult_dont_stack_this:0 "$TRIGGER_FAIL$ §R[root.target.GetName] 내에 이미 베일 숭배교가 설립되었습니다.§!"
+
+ pdivinity_cults.1.name:0 "첫 번째 속삭임"
+ pdivinity_cults.1.desc:0 "우리 요원들이 설계자의 부름에 취약한 개인들을 물색하기 시작했습니다. 환멸에 빠졌거나 권력을 갈망하는 이들을 목표로 삼습니다. 이 후보들이 우리 컬트의 기반이 될 것입니다."
+ pdivinity_cults.1.a:0 "다음 단계를 준비하라."
+
+ pdivinity_cults.2.name:0 "속삭임의 확산"
+ pdivinity_cults.2.desc:0 "비밀 회합과 속삭이는 약속들이 그림자 드리운 구석에서 들불처럼 퍼져나갑니다. 컬트의 영향력은 불만 세력들 사이에서 커지고 있으며, 대중의 충성심을 서서히 오염시키고 있습니다."
+ pdivinity_cults.2.a:0 "설계자의 영향력이 확장된다."
+
+ pdivinity_cults.3.name:0 "속삭임의 제국"
+ pdivinity_cults.3.desc:0 "작은 거점에서 시작된 것이 제국 전역의 세포 조직망으로 성장했습니다. 이제 컬트는 그림자 속에서 공개적으로 활동하며, 그들의 속삭임은 모든 곳에서 불화를 조장합니다."
+ pdivinity_cults.3.a:0 "우리가 주도권을 잡았다."
+
+ pdivinity_cults.4.name:0 "속삭임의 각성"
+ pdivinity_cults.4.desc:0 "우리 컬트는 제국의 기관 깊숙이 뿌리내렸습니다. 이제 운명의 설계자에 대한 그들의 충성심은 자기 지도자들에 대한 충성심을 넘어섰습니다. 제국은 붕괴에 더 가까워지고 있습니다."
+ pdivinity_cults.4.a:0 "심판의 시간이 다가온다."
+
+ # fund cult
+
+ operation_pdivinity_accelerate_cult:0 "컬트 성장 가속화"
+ operation_pdivinity_accelerate_cult_desc:0 "자원과 사이오닉 에너지를 집중시켜 목표 제국 내에서 컬트의 확산을 가속화합니다. 그들이 빨리 무너질수록, 설계자의 뜻은 더 빨리 이루어질 것입니다."
+ operation_pdivinity_fund_cults_pause:0 "$TRIGGER_FAIL$ §R[root.target.GetName] 내 컬트들에 더 많은 자금을 보낼 수 있으려면 기다려야 합니다.§!"
+
+ pdivinity_cults.19.name:0 "접촉 확립"
+ pdivinity_cults.19.desc:0 "우리는 핵심 컬트 지도자들과 접촉했습니다. 그들의 헌신은 흔들림이 없으며, 그들의 네트워크는 우리의 명령에 따라 움직일 준비가 되어 있습니다."
+ pdivinity_cults.19.a:0 "계획 확립."
+
+ pdivinity_cults.20.name:0 "자원 협상 중"
+ pdivinity_cults.20.desc:0 "컬트 세포들을 강화하기 위한 자금과 보급품이 확보되고 있습니다. 투입되는 모든 크레딧은 설계자의 비전을 현실에 더 가깝게 만듭니다."
+ pdivinity_cults.20.a:0 "자원 할당됨."
+
+ pdivinity_cults.21.name:0 "그림자 함대 자금 조달"
+ pdivinity_cults.21.desc:0 "장막의 힘으로 강화된 광신도 함대가 부름에 응하여 공격할 준비가 되어 있습니다. 적들은 무엇이 자신들을 파괴했는지 알지 못할 것입니다."
+ pdivinity_cults.21.a:0 "함대 준비 완료."
+
+ # pause cult
+
+ operation_pdivinity_locate_cult:0 "장막 숭배자 세포 조직 위치 파악"
+ operation_pdivinity_locate_cult_desc:0 "끊임없는 첩보 활동을 통해 우리는 숨겨진 광신도 세포 조직을 추적합니다. 그들의 위치를 파악하는 것이 그들의 교활한 영향력을 분쇄하는 첫걸음입니다."
+ operation_pdivinity_locate_cults_pause:0 "$TRIGGER_FAIL$ §R[root.target.GetName]에서 더 많은 광신도를 찾아내기 전에 기다려야 합니다.§!"
+
+ pdivinity_cults.22.name:0 "그림자 추적"
+ pdivinity_cults.22.desc:0 "우리 정보 요원들이 은밀히 활동하는 광신도 의심자들을 여럿 밝혀냈습니다. 그들의 네트워크는 취약하며, 곧 차단할 수 있을 것으로 예상합니다."
+ pdivinity_cults.22.a:0 "봉쇄 조치를 준비하십시오."
+
+ pdivinity_cults.23.name:0 "이단 정화"
+ pdivinity_cults.23.desc:0 "수집된 정보를 바탕으로 우리 요원들이 알려진 광신도 세포 조직에 대한 표적 작전을 개시하여, 그들의 모임을 방해하고 그들 사이에서 공포를 확산시켰습니다."
+ pdivinity_cults.23.a:0 "압박을 계속하십시오."
+
+ pdivinity_cults.24.name:0 "작전 완료"
+ pdivinity_cults.24.desc:0 "우리의 노력으로 광신도들의 거점이 크게 약화되었습니다. 위협은 여전히 남아있지만, 방어력을 강화할 귀중한 시간을 벌었습니다."
+ pdivinity_cults.24.a:0 "경계를 유지하십시오."
+
+ ###############
+ ### digsite ###
+ ###############
+
+ pdivinity_catacombs_digsite:0 "감춰진 기원"
+ pdivinity_catacombs_digsite_desc:0 "우리 고향 행성 표면 아래에서 신호가 깨어났습니다. 그것은 고대적이고, 의도적이며, 틀림없는 사이오닉 신호입니다. 그 기원은 설명할 수 없지만, 우리 내면 깊은 곳에서 무언가와 공명합니다. 우리의 운명은 더 이상 우리가 쓸 수 있는 것이 아니라, 드러나고 있습니다."
+
+ pdivinity_digsite.1.name:0 "아래의 신호"
+ pdivinity_digsite.1.desc:0 "우리 고향 행성 맨틀 깊은 곳에서 방출되는 저주파 펄스가 감지되었습니다. 자연적인 것이 아니며, 사이오닉 서명이 명확합니다. 에너지는 알려진 어떤 기술과도 일치하지 않습니다. 그것이 우리를 부릅니다.\n\n조사해야 합니다."
+ pdivinity_digsite.1.a:0 "발굴을 시작하십시오."
+
+ pdivinity_digsite.2.name:0 "강하"
+ pdivinity_digsite.2.desc:0 "우리의 발굴 작업은 이전에 알려진 어떤 것과도 다른 지하 구조물을 드러냈습니다. 그 건축물은 외계적이지만 우리에게 익숙합니다. 그 벽에는 해독할 수 없는 상징들이 새겨져 있지만, 우리의 정신은 그것들을 이해할 수 있습니다. 전체 유적지는 사이오닉 공명으로 윙윙거리며, 공기는 우리의 이름을 속삭입니다.\n\n이곳은 어떤 이유로 묻혔습니다. 하지만 우리는 더 깊이 이끌립니다."
+ pdivinity_digsite.2.a:0 "조심스럽게 진행하십시오."
+
+ pdivinity_digsite.3.name:0 "돌 아래의 속삭임"
+ pdivinity_digsite.3.desc:0 "우리 팀이 지하 구조물로 더 깊이 파고들수록, 그들은 청각적 환각을 보고하기 시작했습니다. 처음에는 미묘한 중얼거림이었지만, 이내 그들이 어떻게든 이해하는 언어로 속삭이는 목소리가 들려왔습니다. 그 목소리들은 우리 유전자 코드 안에 담긴 '표식'과 우리를 기다리는 역할에 대해 말합니다. 일부 승무원들은 속삭임이 그들의 이름을 직접 부른다고 주장합니다.\n\n아무도 되돌아가고 싶어 하지 않습니다."
+ pdivinity_digsite.3.a:0 "깊이 들어갈수록, 더욱 명확해집니다."
+
+ pdivinity_digsite.4.name:0 "건축가의 표식"
+ pdivinity_digsite.4.desc:0 "우리는 복잡한 조각과 사이오닉 비문으로 봉인된 우뚝 솟은 문을 발견했습니다. 그 중심에는 희미하고 규칙적인 에너지로 박동하는 상징이 있습니다. 우리 중 일부는 꿈에서, 다른 일부는 종교적 환영에서 그것을 알아봅니다. 위쪽의 비문에는 '건축가의 표식을 지닌 자만이 지나갈 수 있다'고 쓰여 있습니다.\n\n구조물은 마치 기다리고 있었다는 듯이 우리의 존재에 공명합니다."
+ pdivinity_digsite.4.a:0 "우리는 이것을 찾도록 예정되어 있었습니다."
+
+ pdivinity_digsite.5.name:0 "목적의 메아리"
+ pdivinity_digsite.5.desc:0 "구조물 더 깊은 곳에서 우리는 불가능한 것을 발견했습니다. 우리의 문명 역사를 정확히 묘사한 벽화인데, 외부인은 알 수 없는 사건들이 우리 종족보다 오래된 벽에 새겨져 있었습니다. 그 중심에는 '운명의 표식을 지닌 자'만이 들어갈 수 있는 봉인된 방이 있습니다."
+ pdivinity_digsite.5.a:0 "모든 것이 예언된 대로 전개되고 있습니다..."
+
+ pdivinity_digsite.6.name:0 "기다리던 자들"
+ pdivinity_digsite.6.desc:0 "봉인된 문 너머에서 우리는 오랫동안 죽었다고 여겨졌던 존재들을 만났습니다. 그들은 야위고, 로브를 입은 채 §R건축가§!의 첫 번째 제자들이라고 주장했습니다. 그들의 눈은 희미하게 빛나고, 목소리는 수많은 다른 목소리가 겹쳐진 듯 메아리쳤습니다. 그들은 우리의 도래가 예견되었으며, 이제 새로운 주기가 시작되어야 한다고 말하며 우리를 환영했습니다.\n\n그들은 인도와... 선물을 제안합니다."
+ pdivinity_digsite.6.a:0 "그들은 우리를 기다리고 있었습니다."
+
+ pdivinity_digsite.7.name:0 "§R운명의 조각§!"
+ pdivinity_digsite.7.desc:0 "그들은 우리에게 더 위대한 것의 파편을 제공합니다. 신성 그 자체의 파편, 건축가의 조각입니다. 우리는 그 목적을 알고 있습니다. 그것은 잠자는 것을 깨울 행동입니다.\n\n우리는 돌이킬 수 없는 무언가의 벼랑 끝에 서 있습니다."
+ pdivinity_digsite.7.a:0 "장막이 산산조각 날 것입니다."
+
+
+
+
+

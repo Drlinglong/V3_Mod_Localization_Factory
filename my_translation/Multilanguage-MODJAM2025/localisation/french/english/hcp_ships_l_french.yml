@@ -1,0 +1,78 @@
+﻿l_french:
+##################
+# hcp_ships_l_english.yml
+# By jam1066
+##################
+
+ #start
+
+ ###################
+ # Ship Components #
+ ###################
+ hcp_PLANET_KILLER_STELLAR_HARVESTER:"Essaim de drones moissonneurs"
+ hcp_PLANET_KILLER_STELLAR_HARVESTER_ACTION:"Moissonner le Système Stellaire"
+ PLANET_KILLER_CRACKER_DESC:"Un large essaim de drones autonomes est relâché pour démanteler tout ce qui se trouve dans le système. Seul le vaisseau de contrôle est épargné par leurs lasers de minage."
+ FLEETORDER_DESTROY_PLANET_WITH_hcp_PLANET_KILLER_STELLAR_HARVESTER:"Préparation à la moisson de $PLANET|Y$"
+ 
+ ## Targeting Requirements
+ hcp_can_test_fire:"\n£trigger_no£ Doit faire un tir d'essai dans votre propre système sans colonies"
+ hcp_nothing_to_harvest:"\n£trigger_no£ Il n'y a rien à moissonner"
+ hcp_is_your_megastructure_system:"\n£trigger_no£ Ne doit pas cibler un système contenant votre propre Silo de Singularité"
+
+ hcp_SHIP_STELLAR_HARVESTER_REPLICATE:"Baie de Réplication"
+ hcp_SHIP_STELLAR_HARVESTER_REPLICATE_DESC:"Cette baie de réplication spécialisée permet à nos Moissonneurs Stellaires d'utiliser leurs ressources collectées pour créer plus d'eux-mêmes, assurant ainsi la croissance exponentielle de nos opérations de moisson."
+ hcp_stellar_harvester_replicate_ship_button:"§HRépliquer§!\n\n§HCût§!: £minerals£$@hcp_replicate_cost|0$\n§HTemps de construction§!: 360 £time£\n\nOrdonner au Moissonneur Stellaire de §YRépliquer§!."
+ hcp_stellar_harvester_replicate_activity_key:"Réplication en cours"
+ hcp_stellar_harvester_replicate_menu_title:"Répliquer"
+ hcp_stellar_harvester_replicate_progress_activity_key:"Réplication en cours : §Y$PROGRESS$%§!"
+
+ hcp_stellar_harvester_depart_galaxy_ship_button:"§HQuitter la Galaxie§!\n\n§HCût§!: £energy£100000\n§HTemps de chargement§!: 360 £time£\n\nOrdonner au Moissonneur Stellaire de §YQuitter la Galaxie§!."
+ hcp_stellar_harvester_depart_galaxy_activity_key:"Chargement FTL Intergalactique"
+ hcp_stellar_harvester_depart_galaxy_menu_title:"Quitter la Galaxie"
+ hcp_stellar_harvester_depart_galaxy_progress_activity_key:"Chargement FTL Intergalactique : §Y$PROGRESS$%§!"
+ hcp_stellar_harvester_depart_galaxy_must_be_rim:"\n£trigger_no£ Doit être au bord de la galaxie"
+
+ ####################
+ # Prospector Drone #
+ ####################
+ hcp_NAME_Prospector_Drone:"Drone Prospecteur"
+ hcp_BIO_NAME_Prospector_Drone: "$hcp_NAME_Prospector_Drone$"
+
+ hcp_prospector_drone: "$hcp_NAME_Prospector_Drone$"
+ hcp_prospector_drone_plural:"$hcp_prospector_drone$s"
+
+ ################
+ # Mining Drone #
+ ################
+
+ hcp_mining_drone:"Drone minier"
+ hcp_mining_drone_plural:"$hcp_mining_drone$s"
+ hcp_mining_drone_cap: "$hcp_mining_drone$"
+
+ hcp_mining_drone_MSS_section:"Châssis Foreur"
+ hcp_mining_drone_GPP_section:"Châssis Explosif"
+
+ ###################
+ # Excavator Drone #
+ ###################
+
+ hcp_excavator_drone:"Drone Excavateur"
+ hcp_excavator_drone_plural:"$hcp_excavator_drone$s"
+ hcp_excavator_drone_cap: "$hcp_excavator_drone$"
+
+ hcp_excavator_drone_MMSS_section:"Châssis Foreur"
+ hcp_excavator_drone_GGPP_section:"Châssis Explosif"
+
+ ######################
+ # Stellar Harvesters #
+ ######################
+ hcp_NAME_Stellar_Harvester:"Moissonneur Stellaire"
+
+ hcp_stellar_harvester: "$hcp_NAME_Stellar_Harvester$"
+ hcp_stellar_harvester_plural:"$hcp_NAME_Stellar_Harvester$s"
+
+ hcp_HARVESTER_STORAGE_title:"£mod_country_resource_max_add£Ressources :"
+ hcp_HARVESTER_STORAGE_value:"[this.hcp_harvester_stored_resources]"
+ hcp_HARVESTER_STORAGE_tt:"Le stock actuel de ressources du Moissonneur, qu'il peut dépenser pour des capacités ou pour se répliquer."
+
+ #end

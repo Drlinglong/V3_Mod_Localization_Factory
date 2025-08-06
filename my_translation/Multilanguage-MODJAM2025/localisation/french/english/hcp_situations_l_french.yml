@@ -1,0 +1,131 @@
+﻿l_french:
+##################
+# hcp_situations_l_english.yml
+# By jam1066
+##################
+
+ #start
+
+ ##############################
+ # Harvester Planet Situation #
+ ##############################
+ ### Planet Modifier
+ hcp_being_harvested_modifier:"En cours de récolte"
+ hcp_being_harvested_modifier_desc:"Cette planète est en cours de démantèlement systématique par un $hcp_orbital_quarrier$. Ses jours sont comptés."
+
+ ### Messages
+ hcp_MESSAGE_HARVEST_WORLD_TITLE:"Monde à récolter"
+ hcp_MESSAGE_HARVEST_WORLD_MINERALS_TEXT:"La récolte de $PLANET|Y$ a produit de précieux minéraux.\n£minerals£$RESOURCE|Y$"
+ hcp_MESSAGE_HARVEST_WORLD_ALLOYS_TEXT:"La récolte de $PLANET|Y$ a produit de précieux alliages.\n£alloys£$RESOURCE|Y$"
+
+ ### Situation
+ hcp_situation_harvest_planet:"Récolter [Target.GetName]"
+ hcp_situation_harvest_planet_type:"Monde à récolter"
+ hcp_situation_harvest_planet_monthly_change_tooltip: "$situation_monthly_change_tooltip_approaches_dependent$"
+ hcp_situation_harvest_planet_desc:"En commençant par la croûte, nous allons dépouiller entièrement cette planète. Nous ne pouvons rien laisser, de peur que cela ne soit gâché."
+
+ hcp_stage_harvesting:"Démantèlement de planète"
+
+ hcp_string_harvesting_progress:"Récolte planétaire"
+ hcp_harvest_finish_tooltip:"Récolter [Target.GetName], n'en laissant qu'une coquille vide."
+
+ ## Approaches
+ hcp_approach_harvest:"Récolter"
+ hcp_planet_harvest_effect:"Récolter le monde, gagnant £hcp_mining_efficiency£ §H$hcp_mining_efficiency$§! et soit £minerals£ §H$minerals$§! soit £alloys£ §H$alloys$§! tous les §Y6§! mois."
+
+ hcp_approach_dismantle:"Démanteler $hcp_orbital_quarrier$"
+ hcp_harvester_dismantle_effect:"Démanteler le §Y$hcp_orbital_quarrier$§! et arrêter la récolte du monde, malgré les inefficacités potentielles."
+
+ ## Finisher Event
+ hcp_harvesters_situations.2.name:"Monde récolté"
+ hcp_harvesters_situations.2.desc:"Nous avons récolté suffisamment de §Y[Target.GetName]§! pour que la poursuite de nos opérations de récolte intensives ne soit plus efficace.\n\nLa population restante a été évacuée vers §Y[Owner.Capital.GetName]§! et toute ressource restante peut être collectée avec une station minière orbitale standard."
+ hcp_harvesters_situations.2.a:"Un travail bien fait."
+ hcp_harvesters_situations.2.a.tooltip:"§Y[Target.GetName]§! est réduit à un astéroïde."
+
+ ###########################
+ # Outward Bound Situation #
+ ###########################
+ #### Master Situation
+ ### Policies
+ policy_hcp_evacuation_policy:"Politique d'évacuation"
+ policy_hcp_evacuation_policy_desc:"Cette politique dicte la manière dont nos Récolteurs Stellaires traitent les populations des planètes d'autres empires."
+
+ hcp_evacuate_everyone:"Évacuer la population"
+ hcp_evacuate_everyone_name: "$hcp_evacuate_everyone$"
+ hcp_evacuate_everyone_desc:"Nous évacuerons la population des colonies d'autres empires vers les sanctuaires autour de notre Silo de Singularité."
+
+ hcp_evacuate_only_ours:"Récolter la population"
+ hcp_evacuate_only_ours_name: "$hcp_evacuate_only_ours$"
+ hcp_evacuate_only_ours_desc:"Nous récolterons la population des autres empires, ainsi que les planètes sur lesquelles ils résident."
+
+ ### Messages
+ hcp_MESSAGE_STELLAR_HARVESTER_DEPARTED_TITLE:"Moissonneur Stellaire Parti"
+ hcp_MESSAGE_STELLAR_HARVESTER_DEPARTED_TEXT:"Un de nos §YRécolteurs Stellaires§! a quitté la galaxie."
+
+ ### Special Projects
+ hcp_DEPARTURE_POINT:"Point de départ"
+ hcp_DEPARTURE_POINT_DESC:"Nous avons identifié le §H[this.GetName] Système§! comme point de départ idéal pour nos §YRécolteurs Stellaires§!."
+
+ ### Situation
+ hcp_situation_outward_bound_master:"En route vers l'extérieur"
+ hcp_situation_outward_bound_master_type: "$hcp_situation_outward_bound_master$"
+ hcp_situation_outward_bound_master_monthly_change_tooltip:"Cette §YSituation§! progressera à mesure que nous enverrons des §Y$hcp_stellar_harvester$s§! au-delà de notre galaxie."
+ hcp_situation_outward_bound_master_desc:"Pour rassembler suffisamment de ressources pour notre survie à long terme, nous devons envoyer nos §YRécolteurs Stellaires§! au-delà de notre galaxie. Chacun d'eux porte les espoirs de notre civilisation entière.\n\nRécolteurs Stellaires : §G[owner.hcp_num_stellar_harvesters]§!"
+ hcp_outward_bound_master_finish_tooltip:"Nous aurons envoyé suffisamment de Récolteurs Stellaires pour garantir l'atteinte de nos objectifs."
+ hcp_build_another_stellar_harvester:"£trigger_no£ Aucun Récolteur Stellaire"
+
+ ### Situation Events
+ ##On Start
+ hcp_harvesters_situations.1000.name: "$hcp_situation_outward_bound_master$"
+ hcp_harvesters_situations.1000.desc:"Nous savons depuis un certain temps que notre galaxie ne contient pas suffisamment de ressources pour que nous puissions maintenir notre civilisation pendant une période de temps raisonnable. Nous devrons commencer à regarder vers l'extérieur, vers d'autres galaxies. À cette fin, nous avons équipé nos Récolteurs Stellaires d'un type expérimental de moteur de distorsion, leur permettant de voyager à des vitesses supraluminiques entre les galaxies.\n\nEnvoyer nos Récolteurs Stellaires hors de la galaxie est une entreprise risquée. Nous n'avons aucun moyen de savoir quels dangers pourraient exister là-bas, nous devrons donc en envoyer un nombre suffisant pour augmenter leurs chances globales de succès.\n\nDe plus, nous devrons préparer les sanctuaires autour de notre Silo de Singularité pour abriter toute notre civilisation. Nous sommes prêts à commencer à étendre la zone habitable de chaque sanctuaire, mais cela nécessitera une quantité substantielle de ressources."
+ hcp_harvesters_situations.1000.a:"Prioriser nos Sanctuaires."
+ hcp_harvesters_situations.1000.b:"Prioriser nos Récolteurs Stellaires."
+
+ ##On Finish
+ hcp_harvesters_situations.1005.name:"Efficacité Maximale"
+ hcp_harvesters_situations.1005.desc.a:"Nous avons maintenant envoyé un nombre suffisant de Récolteurs Stellaires au-delà de notre galaxie pour nous assurer que les ressources de l'univers nous appartiendront finalement. Nous devons maintenant tourner notre attention ailleurs.\n\nIl est plus qu'évident que les autres empires ne sont pas très satisfaits de nos activités. À cette fin, nous avons travaillé sur la conception d'un bouclier pour isoler notre Silo de Singularité du reste de l'univers. Ce bouclier est conçu pour désintégrer la matière au contact et l'aspirer dans le trou noir au cœur de notre refuge."
+ hcp_harvesters_situations.1005.desc.b:"$hcp_harvesters_situations.1005.desc.a$\n\nNous devrons terminer le déplacement de notre population vers les sanctuaires avant de pouvoir l'activer."
+ hcp_harvesters_situations.1005.a:"Préparez le bouclier."
+ hcp_harvesters_situations.1005.b:"Nous allons relocaliser nos populations restantes."
+
+ ## Approaches
+ hcp_approach_sanctuaries:"Prioriser les Sanctuaires"
+ hcp_planet_sanctuaries_effect:"Nous devrions prioriser le développement de nos sanctuaires pour nous assurer qu'ils puissent répondre à nos besoins."
+
+ hcp_approach_harvesters:"Prioriser les Moissonneurs"
+ hcp_harvesters_effect:"Nous devrions prioriser nos Moissonneurs Stellaires, notre survie pourrait être compromise s'ils ne peuvent pas obtenir les ressources dont nous avons besoin."
+ mod_shipsize_hcp_stellar_harvester_weapon_damage:"$hcp_stellar_harvester$ $MOD_SHIP_WEAPON_DAMAGE$"
+
+ #### Dummy Situation
+ ### Messages
+ hcp_MESSAGE_HOSTILE_STELLAR_HARVESTER_DEPARTED_TITLE:"Moissonneur Stellaire Parti"
+ hcp_MESSAGE_HOSTILE_STELLAR_HARVESTER_DEPARTED_TEXT:"Un §YMoissonneur Stellaire§!, appartenant au $TARGET|Y$ a quitté la galaxie."
+
+ ### Situation
+ hcp_situation_outward_bound_dummy:"En route vers l'extérieur : [Target.GetName]"
+ hcp_situation_outward_bound_dummy_type: "$hcp_situation_outward_bound_master$"
+ hcp_situation_outward_bound_dummy_monthly_change_tooltip:"Cette §YSituation§! progressera à mesure que le [Target.GetName] enverra des §Y$hcp_stellar_harvester$s§! au-delà de notre galaxie."
+ hcp_situation_outward_bound_dummy_desc:"Le §H[Target.GetName]§! a commencé à envoyer ses §YMoissonneurs Stellaires§! vers d'autres galaxies. Chacun représente une §RMenace Existentielle§! pour l'univers entier.\n\nMoissonneurs Stellaires : §R[target.hcp_num_stellar_harvesters]§!"
+ hcp_outward_bound_dummy_finish_tooltip:"Trop de Moissonneurs Stellaires se seront échappés."
+
+ ### Situation Events
+ ##On Start
+ #First Stellar-Harvester Left Galaxy
+ hcp_harvesters_situations.2000.name: "$hcp_situation_outward_bound_dummy$"
+ hcp_harvesters_situations.2000.desc:"L'un des Moissonneurs Stellaires appartenant au [Target.GetName] vient de quitter la galaxie. Nous avons détecté une étrange perturbation subspatiale se former autour du vaisseau avant son départ, semblant utiliser un nouveau type de voyage STL.\n\nAlors qu'au début nous étions soulagés d'en avoir un de moins à gérer, les implications complètes de ceci sont rapidement devenues évidentes. Les Moissonneurs Stellaires sont conçus pour s'auto-répliquer en utilisant la matière qu'ils collectent. Tout vaisseau qui s'échappe reviendra probablement un jour, s'étant considérablement multiplié !\n\nAvec optimisme, il y a toujours la possibilité que des civilisations dans d'autres galaxies puissent reconnaître la menace qu'ils représentent et les détruire avant qu'ils ne deviennent incontrôlables, mais chaque départ augmente les chances de leur succès. Nous ne pouvons pas nous permettre d'en laisser beaucoup plus s'échapper."
+ hcp_harvesters_situations.2000.a:"Ils doivent être arrêtés."
+ #Built Half Stellar-Harvesters Required to Win
+ hcp_harvesters_situations.2001.name: "$hcp_situation_outward_bound_dummy$"
+ hcp_harvesters_situations.2001.desc:"Nos agents au sein du [Target.GetName] nous ont rapporté des nouvelles inquiétantes. Apparemment, ils ont équipé leurs Moissonneurs Stellaires d'un nouveau type de moteur STL capable de voyages intergalactiques.\n\nInitialement, nous étions perplexes face à ces découvertes, mais les implications complètes sont rapidement devenues évidentes. Les Moissonneurs Stellaires sont conçus pour s'auto-répliquer en utilisant la matière qu'ils collectent. Tout vaisseau qui s'échappe reviendra probablement un jour, s'étant considérablement multiplié !\n\nSi certains venaient à s'échapper, nous devrions compter sur la capacité des civilisations d'autres galaxies à reconnaître la menace qu'ils représentent et à les détruire avant qu'ils ne deviennent incontrôlables, mais cela suppose qu'elles soient à un niveau technologique équivalent au nôtre, si tant est qu'elles existent. Nous devons en détruire autant que possible avant qu'ils ne puissent s'échapper."
+ hcp_harvesters_situations.2001.a:"Ils doivent être arrêtés."
+
+ ##On Finish
+ hcp_harvesters_situations.2005.name:"Inévitabilité Lugubre"
+ hcp_harvesters_situations.2005.desc:"Le [Target.GetName] a désormais envoyé un nombre suffisant de Moissonneurs Stellaires au-delà de la galaxie pour garantir qu'au moins l'un d'entre eux se réplique avec succès. Bien que nous aimerions croire qu'il existe des civilisations ayant à la fois la volonté et la capacité de les gérer avant qu'il ne soit trop tard, la seule véritable solution, de manière réaliste, est de ne pas vivre assez longtemps pour les voir revenir."
+ hcp_harvesters_situations.2005.a:"Une ombre plane sur notre avenir."
+
+ ## Approaches
+ hcp_approach_track_harvesters:"Suivre les Moissonneurs Stellaires"
+ hcp_track_harvesters_effect:"Notre station d'observation suivra les mouvements de tous les Moissonneurs Stellaires appartenant au [Target.GetName]."
+
+ #end

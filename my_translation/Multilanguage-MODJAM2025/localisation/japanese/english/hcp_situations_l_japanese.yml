@@ -1,0 +1,131 @@
+﻿l_japanese:
+##################
+# hcp_situations_l_english.yml
+# By jam1066
+##################
+
+ #start
+
+ ##############################
+ # Harvester Planet Situation #
+ ##############################
+ ### Planet Modifier
+ hcp_being_harvested_modifier:"「収穫中」"
+ hcp_being_harvested_modifier_desc:"「この惑星は$hcp_orbital_quarrier$によって組織的に解体されている最中です。その命運は尽きかけています」"
+
+ ### Messages
+ hcp_MESSAGE_HARVEST_WORLD_TITLE:"「世界収穫」"
+ hcp_MESSAGE_HARVEST_WORLD_MINERALS_TEXT:"「$PLANET|Y$の収穫により、貴重な鉱物が採れました。\n£minerals£$RESOURCE|Y$」"
+ hcp_MESSAGE_HARVEST_WORLD_ALLOYS_TEXT:"「$PLANET|Y$の収穫により、貴重な合金が採れました。\n£alloys£$RESOURCE|Y$」"
+
+ ### Situation
+ hcp_situation_harvest_planet:"「[Target.GetName]を収穫」"
+ hcp_situation_harvest_planet_type:"「世界収穫」"
+ hcp_situation_harvest_planet_monthly_change_tooltip: "$situation_monthly_change_tooltip_approaches_dependent$"
+ hcp_situation_harvest_planet_desc:"「地殻から始まり、この惑星を完全に剥ぎ取ります。何も残してはなりません。無駄にしないために。」"
+
+ hcp_stage_harvesting:"「惑星解体中」"
+
+ hcp_string_harvesting_progress:"「惑星収穫中」"
+ hcp_harvest_finish_tooltip:"「[Target.GetName]を収穫し、かつての姿を留めない残骸とします。」"
+
+ ## Approaches
+ hcp_approach_harvest:"「収穫」"
+ hcp_planet_harvest_effect:"「世界を収穫し、£hcp_mining_efficiency£ §H$hcp_mining_efficiency$§! と、6ヶ月ごとに£minerals£ §H$minerals$§! または £alloys£ §H$alloys$§! を獲得します。」"
+
+ hcp_approach_dismantle:"「$hcp_orbital_quarrier$を解体」"
+ hcp_harvester_dismantle_effect:"「§Y$hcp_orbital_quarrier$§!を解体し、潜在的な非効率性にもかかわらず、世界の収穫を停止します。」"
+
+ ## Finisher Event
+ hcp_harvesters_situations.2.name:"「世界収穫完了」"
+ hcp_harvesters_situations.2.desc:"「§Y[Target.GetName]§!は十分に収穫されました。これ以上集中的な収穫作業を継続しても効率的ではありません。\n\n残された住民は§Y[Owner.Capital.GetName]§!へ避難させられ、残りの資源は通常の軌道採掘ステーションで収集できます。」"
+ hcp_harvesters_situations.2.a:"「よくやった。」"
+ hcp_harvesters_situations.2.a.tooltip:"「§Y[Target.GetName]§!は小惑星と化しました。」"
+
+ ###########################
+ # Outward Bound Situation #
+ ###########################
+ #### Master Situation
+ ### Policies
+ policy_hcp_evacuation_policy:"「避難政策」"
+ policy_hcp_evacuation_policy_desc:"「この政策は、我々の恒星収穫機が他帝国の惑星住民をどのように扱うかを定めます。」"
+
+ hcp_evacuate_everyone:"「住民を避難させる」"
+ hcp_evacuate_everyone_name: "$hcp_evacuate_everyone$"
+ hcp_evacuate_everyone_desc:"「我々は他帝国の入植地の住民を、我々の特異点サイロ周囲にある聖域へと避難させます。」"
+
+ hcp_evacuate_only_ours:"「住民を収穫」"
+ hcp_evacuate_only_ours_name: "$hcp_evacuate_only_ours$"
+ hcp_evacuate_only_ours_desc:"「我々は他帝国の住民を、彼らが住まう惑星と共に収穫します。」"
+
+ ### Messages
+ hcp_MESSAGE_STELLAR_HARVESTER_DEPARTED_TITLE:"「ステラ・ハーベスター離脱」"
+ hcp_MESSAGE_STELLAR_HARVESTER_DEPARTED_TEXT:"「我々の§Y恒星収穫機§!の一機が銀河を離れました。」"
+
+ ### Special Projects
+ hcp_DEPARTURE_POINT:"「出発地点」"
+ hcp_DEPARTURE_POINT_DESC:"「我々は§H[this.GetName]星系§!を、我々の§Y恒星収穫機§!にとって理想的な出発地点と特定しました。」"
+
+ ### Situation
+ hcp_situation_outward_bound_master:"「外宇宙への旅立ち」"
+ hcp_situation_outward_bound_master_type: "$hcp_situation_outward_bound_master$"
+ hcp_situation_outward_bound_master_monthly_change_tooltip:"「我々が§Y$hcp_stellar_harvester$s§!を銀河の外へと送り出すにつれて、この§Y状況§!は進行します。」"
+ hcp_situation_outward_bound_master_desc:"「我々の長期的な生存のために十分な資源を確保するには、§Y恒星収穫機§!を銀河の外へと送り出さねばなりません。それぞれの機体は、我々文明全体の希望を乗せています。\n\n恒星収穫機: §G[owner.hcp_num_stellar_harvesters]§!」"
+ hcp_outward_bound_master_finish_tooltip:"「我々の目標達成を確実にするために、十分な数の恒星収穫機を送り出したことになります。」"
+ hcp_build_another_stellar_harvester:"「£trigger_no£ 恒星収穫機なし」"
+
+ ### Situation Events
+ ##On Start
+ hcp_harvesters_situations.1000.name: "$hcp_situation_outward_bound_master$"
+ hcp_harvesters_situations.1000.desc:"「我々の銀河には、文明を合理的な期間維持するのに十分な資源がないことは、以前から分かっていました。他の銀河へと目を向け始める必要があります。そのために、我々は恒星収穫機に実験的なFTLドライブを装備させ、銀河間を超光速で移動できるようにしました。\n\n恒星収穫機を銀河の外へ送り出すのは危険な試みです。そこにどのような危険が存在するかを知る術がないため、成功の全体的な可能性を高めるために十分な数を送り出す必要があります。\n\n加えて、全文明を収容するために、特異点サイロ周囲の聖域を準備する必要があります。各聖域の居住可能領域の拡張を開始する準備はできていますが、それには相当な量の資源が必要です。」"
+ hcp_harvesters_situations.1000.a:"「聖域を優先する。」"
+ hcp_harvesters_situations.1000.b:"「恒星収穫機を優先する。」"
+
+ ##On Finish
+ hcp_harvesters_situations.1005.name:"「最大効率」"
+ hcp_harvesters_situations.1005.desc.a:"「我々は宇宙の資源がいずれ我々のものとなるよう、十分な数の恒星収穫機を銀河の彼方へと送り出しました。今や、我々は他のことに注意を向けねばなりません。\n\n他帝国が我々の活動に不満を抱いていることは、明白です。そのために、我々は特異点サイロを宇宙の残りの部分から隔離するためのシールド設計に取り組んできました。このシールドは、物質を接触すると同時に分解し、我々の避難所中心部にあるブラックホールへと吸い上げるよう設計されています。」"
+ hcp_harvesters_situations.1005.desc.b:"「$hcp_harvesters_situations.1005.desc.a$\n\nこれを起動する前に、住民を聖域への再配置を完了させる必要があります。」"
+ hcp_harvesters_situations.1005.a:"「シールドを準備せよ。」"
+ hcp_harvesters_situations.1005.b:"「残存人口を再配置する。」"
+
+ ## Approaches
+ hcp_approach_sanctuaries:"「聖域を優先せよ」"
+ hcp_planet_sanctuaries_effect:"「ニーズを満たせるよう、聖域の開発を優先すべきだ。」"
+
+ hcp_approach_harvesters:"「ハーベスターを優先せよ」"
+ hcp_harvesters_effect:"「我々のステラ・ハーベスターを優先すべきだ。必要な資源を入手できなければ、我々の生存は危うくなるだろう。」"
+ mod_shipsize_hcp_stellar_harvester_weapon_damage:"$hcp_stellar_harvester$ $MOD_SHIP_WEAPON_DAMAGE$"
+
+ #### Dummy Situation
+ ### Messages
+ hcp_MESSAGE_HOSTILE_STELLAR_HARVESTER_DEPARTED_TITLE:"「ステラ・ハーベスター離脱」"
+ hcp_MESSAGE_HOSTILE_STELLAR_HARVESTER_DEPARTED_TEXT:"「$TARGET|Y$ に属する§Yステラ・ハーベスター§!が、銀河を去った。」"
+
+ ### Situation
+ hcp_situation_outward_bound_dummy:"「銀河外へ: [Target.GetName]」"
+ hcp_situation_outward_bound_dummy_type: "$hcp_situation_outward_bound_master$"
+ hcp_situation_outward_bound_dummy_monthly_change_tooltip:"「[Target.GetName]が§Y$hcp_stellar_harvester$s§!を我々の銀河外へ送り出すにつれて、この§Y状況§!は進行する。」"
+ hcp_situation_outward_bound_dummy_desc:"「§H[Target.GetName]§!は§Yステラ・ハーベスター§!を他銀河へ送り出し始めた。それぞれが全宇宙に対する§R存在を脅かす脅威§!となる。\n\nステラ・ハーベスター: §R[target.hcp_num_stellar_harvesters]§!」"
+ hcp_outward_bound_dummy_finish_tooltip:"「あまりにも多くのステラ・ハーベスターが脱出した。」"
+
+ ### Situation Events
+ ##On Start
+ #First Stellar-Harvester Left Galaxy
+ hcp_harvesters_situations.2000.name: "$hcp_situation_outward_bound_dummy$"
+ hcp_harvesters_situations.2000.desc:"「[Target.GetName]に属するステラ・ハーベスターの1つが、銀河を離れたばかりだ。離脱する前、その船の周囲に奇妙な亜空間の乱れが蓄積されるのを検知した。どうやら新型のFTL航法を使用しているようだ。\n\n当初、対処すべき相手が一つ減ったことに安堵したが、その全容はすぐに明らかになった。ステラ・ハーベスターは、収集した物質を利用して自己複製するように設計されている。脱出したものは、いつの日か大幅に増殖して戻ってくる可能性が高いのだ！\n\n楽観的に言えば、他銀河の文明がその脅威を認識し、制御不能になる前に破壊できる可能性は常にある。しかし、脱出するごとに彼らの成功の可能性は高まる。これ以上多くのものを逃がすわけにはいかない。」"
+ hcp_harvesters_situations.2000.a:"「彼らを阻止しなければならない。」"
+ #Built Half Stellar-Harvesters Required to Win
+ hcp_harvesters_situations.2001.name: "$hcp_situation_outward_bound_dummy$"
+ hcp_harvesters_situations.2001.desc:"「[Target.GetName]内部のエージェントが、いくつかの不穏な情報をもたらした。彼らはステラ・ハーベスターに、銀河間航行が可能な新型FTLドライブを搭載したらしい。\n\n当初、我々はこの発見に困惑したが、その全容はすぐに明らかになった。ステラ・ハーベスターは、収集した物質を利用して自己複製するように設計されている。脱出したものは、いつの日か大幅に増殖して戻ってくる可能性が高いのだ！\n\nもし一つでも脱出を許せば、我々は他銀河の文明がその脅威を認識し、制御不能になる前に破壊できる能力に頼るしかないだろう。しかし、これはそもそも彼らが存在し、我々と同じ技術レベルにあることを前提としている。脱出する前に、できるだけ多くを破壊しなければならない。」"
+ hcp_harvesters_situations.2001.a:"「彼らを阻止しなければならない。」"
+
+ ##On Finish
+ hcp_harvesters_situations.2005.name:"「暗澹たる必然性」"
+ hcp_harvesters_situations.2005.desc:"「[Target.GetName]は、少なくとも1体が確実に自己複製できるように、十分な数のステラ・ハーベスターを銀河の外へ送り出した。手遅れになる前に彼らに対処する意欲と能力を持った文明が存在すると信じたいところだが、現実的に言って、我々の唯一の本当の希望は、彼らが戻ってくるのを見るほど長く生きないことだ。」"
+ hcp_harvesters_situations.2005.a:"「我々の未来に影が差した。」"
+
+ ## Approaches
+ hcp_approach_track_harvesters:"「ステラ・ハーベスター追跡」"
+ hcp_track_harvesters_effect:"「我々の観測ステーションは、[Target.GetName]に属するあらゆるステラ・ハーベスターの動きを追跡する。」"
+
+ #end

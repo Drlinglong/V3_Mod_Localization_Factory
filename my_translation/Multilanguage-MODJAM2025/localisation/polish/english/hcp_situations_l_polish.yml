@@ -1,0 +1,131 @@
+﻿l_polish:
+##################
+# hcp_situations_l_english.yml
+# By jam1066
+##################
+
+ #start
+
+ ##############################
+ # Harvester Planet Situation #
+ ##############################
+ ### Planet Modifier
+ hcp_being_harvested_modifier:"W trakcie pozyskiwania"
+ hcp_being_harvested_modifier_desc:"Ta planeta jest systematycznie demontowana przez $hcp_orbital_quarrier$. Jej dni są policzone."
+
+ ### Messages
+ hcp_MESSAGE_HARVEST_WORLD_TITLE:"Świat Eksploatacji"
+ hcp_MESSAGE_HARVEST_WORLD_MINERALS_TEXT:"Eksploatacja $PLANET|Y$ przyniosła cenne minerały.\n£minerals£$RESOURCE|Y$"
+ hcp_MESSAGE_HARVEST_WORLD_ALLOYS_TEXT:"Eksploatacja $PLANET|Y$ przyniosła cenne stopy.\n£alloys£$RESOURCE|Y$"
+
+ ### Situation
+ hcp_situation_harvest_planet:"Eksploatuj [Target.GetName]"
+ hcp_situation_harvest_planet_type:"Świat Eksploatacji"
+ hcp_situation_harvest_planet_monthly_change_tooltip: "$situation_monthly_change_tooltip_approaches_dependent$"
+ hcp_situation_harvest_planet_desc:"Zaczynając od skorupy, ogołocimy tę planetę do gołej ziemi. Nie możemy niczego zostawić, aby nic się nie zmarnowało."
+
+ hcp_stage_harvesting:"Demontaż planety"
+
+ hcp_string_harvesting_progress:"Eksploatacja planety"
+ hcp_harvest_finish_tooltip:"Eksploatuj [Target.GetName], pozostawiając z niej samą skorupę."
+
+ ## Approaches
+ hcp_approach_harvest:"Eksploatuj"
+ hcp_planet_harvest_effect:"Eksploatuj świat, zyskując £hcp_mining_efficiency£ §H$hcp_mining_efficiency$§! oraz albo £minerals£ §H$minerals$§!, albo £alloys£ §H$alloys$§! co §Y6§! miesięcy."
+
+ hcp_approach_dismantle:"Demontuj $hcp_orbital_quarrier$"
+ hcp_harvester_dismantle_effect:"Zdemontuj §Y$hcp_orbital_quarrier$§! i zaprzestań eksploatacji świata, pomimo potencjalnych nieefektywności."
+
+ ## Finisher Event
+ hcp_harvesters_situations.2.name:"Świat Eksploatowany"
+ hcp_harvesters_situations.2.desc:"Pozyskaliśmy wystarczająco zasobów z §Y[Target.GetName]§!, by kontynuowanie intensywnych operacji eksploatacyjnych nie było już efektywne.\n\nPozostała populacja została ewakuowana do §Y[Owner.Capital.GetName]§!, a wszelkie pozostałe zasoby mogą zostać zebrane za pomocą standardowej orbitalnej stacji wydobywczej."
+ hcp_harvesters_situations.2.a:"Dobra robota."
+ hcp_harvesters_situations.2.a.tooltip:"§Y[Target.GetName]§! został zredukowany do asteroidy."
+
+ ###########################
+ # Outward Bound Situation #
+ ###########################
+ #### Master Situation
+ ### Policies
+ policy_hcp_evacuation_policy:"Polityka ewakuacji"
+ policy_hcp_evacuation_policy_desc:"Ta polityka określa, jak nasze Gwiezdne Kombajny traktują populacje planet innych imperiów."
+
+ hcp_evacuate_everyone:"Ewakuuj populację"
+ hcp_evacuate_everyone_name: "$hcp_evacuate_everyone$"
+ hcp_evacuate_everyone_desc:"Ewakuujemy populację kolonii innych imperiów do sanktuariów wokół naszego Silosu Osobliwości."
+
+ hcp_evacuate_only_ours:"Pozyskiwanie Populacji"
+ hcp_evacuate_only_ours_name: "$hcp_evacuate_only_ours$"
+ hcp_evacuate_only_ours_desc:"Będziemy pozyskiwać populacje innych imperiów, wraz z planetami, na których zamieszkują."
+
+ ### Messages
+ hcp_MESSAGE_STELLAR_HARVESTER_DEPARTED_TITLE:"Gwiezdny Żniwiarz Odleciał"
+ hcp_MESSAGE_STELLAR_HARVESTER_DEPARTED_TEXT:"Jeden z naszych §YGwiezdnych Kombajnów§! opuścił galaktykę."
+
+ ### Special Projects
+ hcp_DEPARTURE_POINT:"Punkt Odlotu"
+ hcp_DEPARTURE_POINT_DESC:"Zidentyfikowaliśmy System §H[this.GetName]§! jako idealny punkt odlotu dla naszych §YGwiezdnych Kombajnów§!."
+
+ ### Situation
+ hcp_situation_outward_bound_master:"W Drogę"
+ hcp_situation_outward_bound_master_type: "$hcp_situation_outward_bound_master$"
+ hcp_situation_outward_bound_master_monthly_change_tooltip:"Ta §YSytuacja§! będzie postępować, gdy będziemy wysyłać §Y$hcp_stellar_harvester$y§! poza naszą galaktykę."
+ hcp_situation_outward_bound_master_desc:"Aby zebrać wystarczające zasoby dla naszego długoterminowego przetrwania, musimy wysłać nasze §YGwiezdne Kombajny§! poza naszą galaktykę. Każdy z nich niesie nadzieje całej naszej cywilizacji.\n\nGwiezdne Kombajny: §G[owner.hcp_num_stellar_harvesters]§!"
+ hcp_outward_bound_master_finish_tooltip:"Wysłaliśmy wystarczającą liczbę Gwiezdnych Kombajnów, aby zapewnić osiągnięcie naszych celów."
+ hcp_build_another_stellar_harvester:"£trigger_no£ Brak Gwiezdnych Kombajnów"
+
+ ### Situation Events
+ ##On Start
+ hcp_harvesters_situations.1000.name: "$hcp_situation_outward_bound_master$"
+ hcp_harvesters_situations.1000.desc:"Od jakiegoś czasu wiemy, że nasza galaktyka nie zawiera wystarczających zasobów, by utrzymać naszą cywilizację przez rozsądny okres czasu. Będziemy musieli zacząć patrzeć poza nią, w stronę innych galaktyk. W tym celu wyposażyliśmy nasze Gwiezdne Kombajny w eksperymentalny typ napędu FTL, pozwalający im podróżować z prędkościami nadświetlnymi między galaktykami.\n\nWysłanie naszych Gwiezdnych Kombajnów poza galaktykę to ryzykowne przedsięwzięcie. Nie mamy pojęcia, jakie niebezpieczeństwa mogą tam istnieć, dlatego będziemy musieli wysłać ich wystarczającą liczbę, aby zwiększyć ich ogólne szanse na sukces.\n\nPonadto, będziemy musieli przygotować sanktuaria wokół naszego Silosu Osobliwości, aby pomieścić całą naszą cywilizację. Jesteśmy gotowi rozpocząć rozbudowę obszaru mieszkalnego każdego sanktuarium, ale będzie to wymagało znacznej ilości zasobów."
+ hcp_harvesters_situations.1000.a:"Priorytetyzuj nasze Sanktuaria."
+ hcp_harvesters_situations.1000.b:"Priorytetyzuj nasze Gwiezdne Kombajny."
+
+ ##On Finish
+ hcp_harvesters_situations.1005.name:"Szczytowa Wydajność"
+ hcp_harvesters_situations.1005.desc.a:"Wysłaliśmy już wystarczającą liczbę Gwiezdnych Kombajnów poza naszą galaktykę, aby zapewnić, że zasoby wszechświata w końcu będą nasze. Musimy teraz skierować naszą uwagę gdzie indziej.\n\nJest więcej niż oczywiste, że inne imperia nie są zadowolone z naszych działań. W tym celu pracujemy nad projektem osłony, która odizoluje nasz Silos Osobliwości od reszty wszechświata. Ta osłona została zaprojektowana tak, aby rozkładać materię przy kontakcie i przesyłać ją do czarnej dziury w sercu naszej przystani."
+ hcp_harvesters_situations.1005.desc.b:"$hcp_harvesters_situations.1005.desc.a$\n\nBędziemy musieli zakończyć relokację naszej populacji do sanktuariów, zanim będziemy mogli ją aktywować."
+ hcp_harvesters_situations.1005.a:"Przygotujcie tarczę."
+ hcp_harvesters_situations.1005.b:"Przeniesiemy nasze pozostałe populacje."
+
+ ## Approaches
+ hcp_approach_sanctuaries:"Priorytetyzujcie Schronienia"
+ hcp_planet_sanctuaries_effect:"Powinniśmy nadać priorytet rozwojowi naszych schronień, aby upewnić się, że zaspokoją nasze potrzeby."
+
+ hcp_approach_harvesters:"Priorytetyzujcie Żniwiarzy"
+ hcp_harvesters_effect:"Powinniśmy nadać priorytet naszym Gwiezdnym Żniwiarzom; nasze przetrwanie mogłoby być zagrożone, jeśli nie zdobędą zasobów, których potrzebujemy."
+ mod_shipsize_hcp_stellar_harvester_weapon_damage:"$hcp_stellar_harvester$ $MOD_SHIP_WEAPON_DAMAGE$"
+
+ #### Dummy Situation
+ ### Messages
+ hcp_MESSAGE_HOSTILE_STELLAR_HARVESTER_DEPARTED_TITLE:"Gwiezdny Żniwiarz Odleciał"
+ hcp_MESSAGE_HOSTILE_STELLAR_HARVESTER_DEPARTED_TEXT:"§YGwiezdny Żniwiarz§!, należący do $TARGET|Y$, opuścił galaktykę."
+
+ ### Situation
+ hcp_situation_outward_bound_dummy:"Wyruszył: [Target.GetName]"
+ hcp_situation_outward_bound_dummy_type: "$hcp_situation_outward_bound_master$"
+ hcp_situation_outward_bound_dummy_monthly_change_tooltip:"Ta §YSytuacja§! będzie postępować, gdy [Target.GetName] będzie wysyłać §Y$hcp_stellar_harvester$y§! poza naszą galaktykę."
+ hcp_situation_outward_bound_dummy_desc:"§H[Target.GetName]§! zaczął wysyłać swoje §YGwiezdne Żniwiarze§! do innych galaktyk. Każdy z nich stanowi §RZagrożenie Egzystencjalne§! dla całego wszechświata.\n\nGwiezdni Żniwiarze: §R[target.hcp_num_stellar_harvesters]§!"
+ hcp_outward_bound_dummy_finish_tooltip:"Zbyt wielu Gwiezdnych Żniwiarzy ucieknie."
+
+ ### Situation Events
+ ##On Start
+ #First Stellar-Harvester Left Galaxy
+ hcp_harvesters_situations.2000.name: "$hcp_situation_outward_bound_dummy$"
+ hcp_harvesters_situations.2000.desc:"Jeden z Gwiezdnych Żniwiarzy, należący do [Target.GetName], właśnie opuścił galaktykę. Wykryliśmy dziwne zakłócenia podprzestrzenne narastające wokół jednostki przed jej odlotem, pozornie używające nowego typu podróży z prędkością nadświetlną.\n\nPoczątkowo odczuliśmy ulgę, mając o jednego mniej do czynienia, lecz pełne implikacje tego szybko stały się jasne. Gwiezdni Żniwiarze są zaprojektowani do samoreplikacji, wykorzystując zebraną materię. Każdy, który ucieknie, prawdopodobnie powróci pewnego dnia, znacznie się rozmnożywszy!\n\nOptymistycznie, zawsze istnieje szansa, że cywilizacje w innych galaktykach zdołają rozpoznać zagrożenie, jakie stwarzają, i zniszczyć je, zanim wymkną się spod kontroli, ale każdy, który odchodzi, zwiększa szansę ich sukcesu. Nie możemy pozwolić, by uciekło ich znacznie więcej."
+ hcp_harvesters_situations.2000.a:"Muszą zostać zatrzymani."
+ #Built Half Stellar-Harvesters Required to Win
+ hcp_harvesters_situations.2001.name: "$hcp_situation_outward_bound_dummy$"
+ hcp_harvesters_situations.2001.desc:"Nasi agenci w [Target.GetName] przynieśli niepokojące wieści. Podobno wyposażyli swoje Gwiezdne Żniwiarze w nowy typ napędu nadświetlnego, zdolny do podróży międzygalaktycznych.\n\nPoczątkowo byliśmy zaskoczeni tymi odkryciami, lecz pełne implikacje szybko stały się jasne. Gwiezdne Żniwiarze są zaprojektowane do samoreplikacji, wykorzystując zebraną materię. Każdy, który ucieknie, prawdopodobnie powróci pewnego dnia, znacznie się rozmnożywszy!\n\nGdyby któryś uciekł, musielibyśmy polegać na cywilizacjach w innych galaktykach, które byłyby w stanie rozpoznać zagrożenie, jakie stwarzają, i zniszczyć je, zanim wymkną się spod kontroli, ale to zakłada, że są na równoważnym poziomie technologicznym do naszego, o ile w ogóle istnieją. Musimy zniszczyć jak najwięcej, zanim zdołają uciec."
+ hcp_harvesters_situations.2001.a:"Muszą zostać zatrzymani."
+
+ ##On Finish
+ hcp_harvesters_situations.2005.name:"Ponura Nieuchronność"
+ hcp_harvesters_situations.2005.desc:"[Target.GetName] wysłał już wystarczającą liczbę Gwiezdnych Żniwiarzy poza galaktykę, aby zagwarantować, że przynajmniej jeden z nich pomyślnie się zreplikuje. Choć chcielibyśmy wierzyć, że istnieją tam cywilizacje posiadające zarówno wolę, jak i zdolność, aby sobie z nimi poradzić, zanim będzie za późno, realistycznie, naszą jedyną prawdziwą nadzieją jest to, że nie będziemy żyć wystarczająco długo, aby zobaczyć ich powrót."
+ hcp_harvesters_situations.2005.a:"Cień kładzie się na naszej przyszłości."
+
+ ## Approaches
+ hcp_approach_track_harvesters:"Śledźcie Gwiezdnych Żniwiarzy"
+ hcp_track_harvesters_effect:"Nasza stacja obserwacyjna będzie śledzić ruchy wszelkich Gwiezdnych Żniwiarzy należących do [Target.GetName]."
+
+ #end

@@ -1,0 +1,83 @@
+﻿l_russian:
+
+ ################################
+ ### pdivinity_tech_l_english ###
+ ###     by daniellm          ###
+ ################################
+
+ ##################
+ ### components ###
+ ##################
+
+ tech_pdivinity_psionic_jump_drive:0 "Привод Покрова"
+ tech_pdivinity_psionic_jump_drive_desc:0 "Продвинутый прыжковый двигатель, настроенный на сам Покров. Корабли, оснащенные этой системой, на короткое время входят в завесу между реальностями, вновь появляясь в пункте назначения до того, как обычные сенсоры смогут отследить их путь."
+ TECH_UNLOCK_PDIVINITY_JUMP_DRIVE_TITLE:0 "§HОткрывает компонент:§! $PDIVINITY_SHROUD_JUMP_DRIVE$"
+ TECH_UNLOCK_PDIVINITY_JUMP_DRIVE_DESC:0 "§H$PDIVINITY_SHROUD_JUMP_DRIVE$§!\n$PDIVINITY_SHROUD_JUMP_DRIVE_DESC$"
+
+ tech_pdivinity_psionic_reactor:0 "Воля Архитектора"
+ tech_pdivinity_psionic_reactor_desc:0 "Это энергетическое ядро синхронизируется с латентными псионными частотами, черпая энергию непосредственно из Покрова. Его присутствие искажает локальное пространство и бросает вызов известным законам сохранения энергии."
+ TECH_UNLOCK_PDDIVINITY_PSIONIC_POWER_TITLE:0 "§HОткрывает компонент:§! $pdivinity_psionic_reactor$"
+ TECH_UNLOCK_PDDIVINITY_PSIONIC_POWER_DESC:0 "§H$pdivinity_psionic_reactor$§!\n$pdivinity_psionic_reactor_desc$"
+
+ tech_pdivinity_psionic_thrusters:0 "Мыслеследный Двигатель"
+ tech_pdivinity_psionic_thrusters_desc:0 "Частично входя в Покров, эти двигатели обходят инерцию и трение, позволяя выполнять маневры, невозможные по меркам реального пространства."
+ TECH_UNLOCK_PDIVINITY_PSIONIC_THRUSTER_TITLE:0 "§HОткрывает компонент:§! $Pdivinity_psionic_thruster$"
+ TECH_UNLOCK_PDIVINITY_PSIONIC_THRUSTER_DESC:0 "§H$Pdivinity_psionic_thruster$§!\n$Pdivinity_psionic_thruster_desc$"
+
+ tech_pdivinity_psionic_sensors:0 "Сенсоры Эха Покрова"
+ tech_pdivinity_psionic_sensors_desc:0 "Эти сенсоры настроены на обнаружение намерений, стоящих за действиями. Считывая потенциалы в Покрове, оснащенные ими корабли могут реагировать еще до того, как угрозы проявятся."
+ TECH_UNLOCK_PDIVINITY_PSIONIC_SENSORS_TITLE:0 "§HОткрывает компонент:§! $PDIVINITY_PSIONIC_SENSOR$"
+ TECH_UNLOCK_PDIVINITY_PSIONIC_SENSORS_DESC:0 "§H$PDIVINITY_PSIONIC_SENSOR$§!\n$PDIVINITY_PSIONIC_SENSOR_DESC$"
+
+ tech_pdivinity_psionic_precog:0 "Покровный Компьютер"
+ tech_pdivinity_psionic_precog_desc:0 "Боевая система управления, содержащая псионные алгоритмы предвидения. Она позволяет кораблям предсказывать поведение противника и оптимизировать тактику со зловещей точностью."
+ TECH_UNLOCK_PDIVINITY_PSIONIC_PRECOG_TITLE:0 "§HОткрывает компоненты:§! $PDIVINITY_PSIONIC_PRECOG$"
+ TECH_UNLOCK_PDIVINITY_PSIONIC_PRECOG_DESC:0 "§H$PDIVINITY_PSIONIC_PRECOG$§!\n$PDIVINITY_PSIONIC_PRECOG_DESC$"
+
+ tech_pdivinity_psionic_laser:0 "Псионическая Копьевая Батарея"
+ tech_pdivinity_psionic_laser_desc:0 "Эти копьевые излучатели пронизаны псионными гармониками, дестабилизирующими атомную структуру. Броня и корпус мало защищают от их разрушительного эффекта."
+
+ tech_pdivinity_psionic_lance:0 "Пронзатель Покрова"
+ tech_pdivinity_psionic_lance_desc:0 "Сфокусированный луч псионной энергии, который прорывает физическую материю и ослабляет завесу вокруг места своего удара. Его попадания оставляют глубокие шрамы, пронизанные отголосками мертвых."
+
+ tech_pdivinity_psionic_lightning:0 "Гнев Покрова"
+ tech_pdivinity_psionic_lightning_desc:0 "Хаотичные дуги псионных молний непредсказуемо вырываются из этого оружия, направляемые скорее волей, чем сенсорами. Покров жаждет, и это его голос."
+
+ tech_pdivinity_psionic_titan_lance:0 "Копье Архитектора"
+ tech_pdivinity_psionic_titan_lance_desc:0 "Титаническое копьевое оружие, предназначенное для разрыва пространства и частичного перевода цели в Покров. Немногие структуры, физические или пространственные, могут выдержать его ярость."
+
+ tech_pdivinity_psionic_strikecraft:0 "Псионические Перехватчики"
+ tech_pdivinity_psionic_strikecraft_desc:0 "Ударные корабли, состоящие из живых мыслеформ, сформированные волей и оживленные отголосками сознания внутри Покрова. Они ориентируются в реальности исключительно инстинктом, ведомые лишь целью и волей."
+
+ tech_pdivinity_psionic_artillery:0 "Артиллерия Покровной Волны"
+ tech_pdivinity_psionic_artillery_desc:0 "Дальнобойная псионная бомбардировочная платформа, проецирующая разрушительные резонансные поля на огромные расстояния. Она разрушает мысль, материю и связность."
+
+ tech_pdivinity_psionic_torpedo:0 "Проектор Пси-Всплеска"
+ tech_pdivinity_psionic_torpedo_desc:0 "Запускает нестабильные псионные снаряды, которые проходят сквозь материю, прежде чем детонировать в выбросах энергии, покрытой Покровом."
+
+ tech_pdivinity_psionic_shields:0 "Щиты Покрова"
+ tech_pdivinity_psionic_shields_desc:0 "Защитные барьеры, проецируемые разумом верных. Они искажают восприятие и вероятность, позволяя кораблям выдерживать попадания, которые должны были бы их уничтожить."
+
+ tech_pdivinity_psionic_cloud:0 "Эхо Покрова"
+ tech_pdivinity_psionic_cloud_desc:0 "Эфирное проявление воли Покрова, в виде вихревого облака псионной энергии, которое скрывает и искажает реальность, преследуя пустоту между звездами шепотом судьбы."
+ TECH_UNLOCK_PDIVINITY_PSIONIC_CLOUD_CONSTRUCTION_TITLE:0 "§HОткрывает тип корабля:§! Shroud Echo"
+ TECH_UNLOCK_PDIVINITY_PSIONIC_CLOUD_CONSTRUCTION_DESC:0 "§HЭхо Покрова§!\nБыстрая и ловкая сущность, служащая патрульным кораблем для детей судьбы."
+
+ tech_pdivinity_psionic_avatar:0 "Псионический Аватар"
+ tech_pdivinity_psionic_avatar_desc:0 "Живое воплощение воли Покрова, этот аватар — свирепое и загадочное существо, окутанное чистой псионической силой, подчиняющее реальность своей воле."
+ TECH_UNLOCK_PDIVINITY_PSIONIC_AVATAR_CONSTRUCTION_TITLE:0 "§HОткрывает тип корабля:§! Псионический Аватар"
+ TECH_UNLOCK_PDIVINITY_PSIONIC_AVATAR_CONSTRUCTION_DESC:0 "§HПсионический Аватар§!\nСоздан архитектором судьбы, чтобы служить кораблём передовой. Псионический аватар обладает огромной огневой мощью для своего размера."
+
+ tech_pdivinity_dimensional_tearer:0 "Разрыватель Измерений"
+ tech_pdivinity_dimensional_tearer_desc:0 "Оружие, способное разрывать дыры в самой реальности, создавая псионические врата, которые рвут и распутывают саму ткань пространства-времени."
+ TECH_UNLOCK_PDIVINITY_DIMENSIONAL_TEARER_CONSTRUCTION_TITLE:0 "§HОткрывает тип корабля:§! Разрыватель Измерений"
+ TECH_UNLOCK_PDIVINITY_DIMENSIONAL_TEARER_CONSTRUCTION_DESC:0 "§HПсионический Аватар§!\nБолее могущественное создание архитектора судьбы. Разрыватель измерений служит флагманом. Способный прорывать завесу, этот корабль является очень опасным противником для неверующих в галактике."
+ ##############
+ ### others ###
+ ##############
+
+ tech_pdivinity_shroud_harvester:0 "Доктрина Извлечения Покрова"
+ tech_pdivinity_shroud_harvester_desc:0 "Посредством священной архитектуры и медитативных ритуалов мы извлекаем Зро из глубин самого Покрова. Собранная эссенция течёт, как незримая память, нестабильная и жаждущая обрести форму."
+
+
+

@@ -1,0 +1,574 @@
+﻿l_korean:
+
+ ##############################
+ # SHIPS
+ ##############################
+
+ MJ25_WH_silent_witness_cap: "$MJ25_WH_silent_witness$"
+ MJ25_WH_silent_witness:"조용한 증인"
+ MJ25_WH_silent_witness_plural:"조용한 증인들"
+
+ MJ25_WH_SILENT_WITNESS_G2P2:"찬송가"
+ MJ25_WH_SILENT_WITNESS_S6:"합창"
+ MJ25_WH_SILENT_WITNESS_M1P4:"성가"
+ MJ25_WH_SILENT_WITNESS_L1S2:"오페라"
+
+ NAME_MJ25_WH_silent_witness_test:"속삭이는 자"
+
+ MJ25_WH_conductor_cap: "$MJ25_WH_conductor$"
+ MJ25_WH_conductor:"지휘자"
+ MJ25_WH_conductor_plural:"지휘자들"
+
+ MJ25_WH_CONDUCTOR_X2P8:"절"
+ MJ25_WH_CONDUCTOR_L4M4:"세레나데"
+ MJ25_WH_CONDUCTOR_H4L2:"합창"
+
+ NAME_MJ25_WH_conductor_test:"웅변가"
+
+ 
+
+ MJ25_WH_aural_starmass:"청각성 성단"
+ MJ25_WH_aural_starmass_plural:"청각성 성단들"
+ MJ25_WH_aural_starmass_cap: "$MJ25_WH_aural_starmass$"
+ MJ25_WH_aural_starmass_key:"우주의 목소리"
+ MJ25_WH_aural_starmass_name: "$MJ25_WH_aural_starmass_key$"
+ NAME_MJ25_WH_aural_starmass: "$MJ25_WH_aural_starmass_key$"
+
+ MJ25_WH_void_echo:"공허의 메아리"
+ MJ25_WH_void_echo_plural:"공허의 메아리들"
+ MJ25_WH_void_echo_cap: "$MJ25_WH_void_echo$"
+ MJ25_WH_VOID_ECHO_KEY:"운동성 속삭임"
+ NAME_MJ25_WH_VOID_ECHO: "$MJ25_WH_VOID_ECHO_KEY$"
+ NAME_MJ25_WH_VOID_ECHO_FLEET:"속삭이는 합창"
+
+ MJ25_WH_battlecruiser:"프라이토리아"
+ MJ25_WH_battlecruiser_plural:"프라이토리아들"
+ MJ25_WH_battlecruiser_cap: "$MJ25_WH_battlecruiser$"
+
+ MJ25_WH_BATTLECRUISER_L3S8:"선율"
+ MJ25_WH_BATTLECRUISER_X2P4:"아리아"
+ MJ25_WH_BATTLECRUISER_H3X1:"합창"
+ 
+
+ ############################
+ # Technologies
+ ############################
+
+ tech_MJ25_WH_whisper_cloak: "$MJ25_WH_WHISPER_CLOAK$"
+ tech_MJ25_WH_whisper_cloak_desc: "$MJ25_WH_whisper_cloak_DESC$"
+ TECH_UNLOCK_MJ25_WH_WHISPER_CLOAK_TITLE:"§H부품 잠금 해제:§! $MJ25_WH_WHISPER_CLOAK$"
+ TECH_UNLOCK_MJ25_WH_WHISPER_CLOAK_DESC:"§H$MJ25_WH_WHISPER_CLOAK$§!\n$MJ25_WH_WHISPER_CLOAK_DESC$"
+
+ tech_MJ25_WH_echo_drive: "$MJ25_WH_ECHO_DRIVE$"
+ tech_MJ25_WH_echo_drive_desc: "$MJ25_WH_ECHO_DRIVE_DESC$"
+ TECH_UNLOCK_MJ25_WH_ECHO_DRIVE_TITLE:"§H부품 잠금 해제:§! $MJ25_WH_ECHO_DRIVE$"
+ TECH_UNLOCK_MJ25_WH_ECHO_DRIVE_DESC:"§H$MJ25_WH_ECHO_DRIVE$§!\n$tech_MJ25_WH_echo_drive_desc$"
+
+ tech_MJ25_WH_echo_drive_bio: "$MJ25_WH_ECHO_DRIVE$"
+ tech_MJ25_WH_echo_drive_bio_desc: "$MJ25_WH_ECHO_DRIVE_DESC$"
+ TECH_UNLOCK_BIO_MJ25_WH_ECHO_DRIVE_TITLE:"§H부품 잠금 해제:§! $MJ25_WH_ECHO_DRIVE_BIO$"
+ TECH_UNLOCK_BIO_MJ25_WH_ECHO_DRIVE_DESC:"§H$MJ25_WH_ECHO_DRIVE_BIO$§!\n$tech_MJ25_WH_echo_drive_bio_desc$"
+
+ tech_MJ25_WH_whisper_cloak: "$MJ25_WH_WHISPER_CLOAK$"
+ tech_MJ25_WH_whisper_cloak_desc: "$MJ25_WH_WHISPER_CLOAK_DESC$"
+
+ tech_MJ25_WH_songflare_lance: "$MJ25_WH_SONGFLARE_LANCE$"
+ tech_MJ25_WH_songflare_lance_desc: "$MJ25_WH_SONGFLARE_LANCE_DESC$"
+
+ tech_MJ25_WH_songflare_lance_bio: "$tech_MJ25_WH_songflare_lance$"
+ tech_MJ25_WH_songflare_lance_bio_desc: "$tech_MJ25_WH_songflare_lance_desc$"
+
+ tech_MJ25_WH_verdant_hymnarium: "$building_MJ25_WH_verdant_hymnarium$"
+ tech_MJ25_WH_verdant_hymnarium_desc: "$building_MJ25_WH_verdant_hymnarium_desc$"
+
+ tech_MJ25_WH_stonespeech_mithraeum: "$building_MJ25_WH_stonespeech_mithraeum$"
+ tech_MJ25_WH_stonespeech_mithraeum_desc: "$building_MJ25_WH_stonespeech_mithraeum_desc$"
+
+ tech_MJ25_WH_pulsechant_conclave: "$building_MJ25_WH_pulsechant_conclave$"
+ tech_MJ25_WH_pulsechant_conclave_desc: "$building_MJ25_WH_pulsechant_conclave_desc$"
+
+ tech_MJ25_WH_pulsechant_conclave: "$building_MJ25_WH_pulsechant_conclave$"
+ tech_MJ25_WH_pulsechant_conclave_desc: "$building_MJ25_WH_pulsechant_conclave_desc$"
+
+ tech_MJ25_WH_ashtongue_crucible: "$building_MJ25_WH_ashtongue_crucible$"
+ tech_MJ25_WH_ashtongue_crucible_desc: "$building_MJ25_WH_ashtongue_crucible_desc$"
+
+ tech_MJ25_WH_threnodic_bastion: "$building_MJ25_WH_threnodic_bastion$"
+ tech_MJ25_WH_threnodic_bastion_desc: "$building_MJ25_WH_threnodic_bastion_desc$"
+
+ tech_MJ25_WH_songful_spires: "$building_MJ25_WH_silent_spires$"
+ tech_MJ25_WH_songful_spires_desc: "$building_MJ25_WH_silent_spires_desc$"
+
+ tech_MJ25_WH_halls_of_truth: "$building_MJ25_WH_halls_of_truth$"
+ tech_MJ25_WH_halls_of_truth_desc: "$building_MJ25_WH_halls_of_truth_desc$"
+
+ tech_MJ25_WH_intonating_chambers: "$building_MJ25_WH_intonating_chambers$"
+ tech_MJ25_WH_intonating_chambers_desc: "$building_MJ25_WH_intonating_chambers_desc$"
+
+ tech_MJ25_WH_otic_heralds: "$MJ25_WH_STRIKE_CRAFT_HANGAR_SP$"
+ tech_MJ25_WH_otic_heralds_desc: "$MJ25_WH_STRIKE_CRAFT_HANGAR_SP_DESC$"
+ tech_MJ25_WH_otic_heralds_bio: "$MJ25_WH_STRIKE_CRAFT_HANGAR_SP_BIO$"
+ tech_MJ25_WH_otic_heralds_bio_desc: "$MJ25_WH_STRIKE_CRAFT_HANGAR_SP_BIO_DESC$"
+
+ tech_MJ25_WH_illusion_matrix: "$MJ25_WH_ILLUSION_MATRIX$"
+ tech_MJ25_WH_illusion_matrix_desc: "$MJ25_WH_ILLUSION_MATRIX_DESC$"
+
+ tech_MJ25_WH_seeker_matrix: "$MJ25_WH_SEEKER_MATRIX$"
+ tech_MJ25_WH_seeker_matrix_desc: "$MJ25_WH_SEEKER_MATRIX_DESC$"
+
+ tech_MJ25_WH_harmonizing_weave: "$MJ25_WH_HAROMIZING_WEAVE$"
+ tech_MJ25_WH_harmonizing_weave_desc: "$MJ25_WH_HAROMIZING_WEAVE_DESC$"
+
+ 
+
+ ############################
+ # SHIP COMPONENTS
+ ############################
+
+ MJ25_WH_silent_witness_components:"별노래 선율"
+ MJ25_WH_silent_witness_components_DESC:"그들의 노래에서 태어난 이 함선의 목소리가 화답합니다. 이 선율의 음색이 형태와 기능을 모두 결정합니다."
+
+ MJ25_WH_silent_witness_component_empty:"구성 요소 없음"
+ MJ25_WH_silent_witness_component_empty_DESC:"선택된 항목 없음."
+
+ MJ25_WH_silent_witness_component_evasion:"포착 불가능한 비가"
+ MJ25_WH_silent_witness_component_evasion_no_first_contact: "$MJ25_WH_silent_witness_component_evasion$"
+ MJ25_WH_silent_witness_component_assault:"선율의 폭풍"
+ MJ25_WH_silent_witness_component_range:"전역 찬송가"
+ MJ25_WH_silent_witness_component_resilience:"불굴의 진혼곡"
+
+ MJ25_WH_battlecruiser_components:"별노래 선율"
+ MJ25_WH_battlecruiser_components_DESC:"그들의 노래에서 태어난 이 함선의 목소리가 화답합니다. 이 선율의 음색이 형태와 기능을 모두 결정합니다."
+
+ MJ25_WH_battlecruiser_component_empty:"구성 요소 없음"
+ MJ25_WH_battlecruiser_component_empty_DESC:"선택된 항목 없음."
+ MJ25_WH_battlecruiser_component_evasion:"포착 불가능한 비가"
+ MJ25_WH_battlecruiser_component_evasion_no_first_contact: "$MJ25_WH_battlecruiser_component_evasion$"
+ MJ25_WH_battlecruiser_component_assault:"선율의 폭풍"
+ MJ25_WH_battlecruiser_component_range:"전역 찬송가"
+ MJ25_WH_battlecruiser_component_resilience:"불굴의 진혼곡"
+
+ MJ25_WH_conductor_components:"속삭임장"
+ MJ25_WH_conductor_components_DESC:"시공간을 맴도는 고요한 독백에 싸여, 이 함선은 감각과 이해를 벗어납니다."
+ MJ25_WH_conductor_component_super_cloak:"음파 전송기"
+ MJ25_WH_conductor_component_super_cloak_desc:"보이지 않는 깊은 곳에 대한 목소리가 들려온다."
+ MJ25_WH_conductor_component_slippery_cloak:"초공간 예언자"
+ MJ25_WH_conductor_component_slippery_cloak_desc:"그들의 목소리는 별들을 잇는 흐름을 타고 전해집니다."
+ MJ25_WH_conductor_component_energised_cloak:"강화된 연설가"
+ MJ25_WH_conductor_component_energised_cloak_desc:"교향곡이 모든 신경과 회로를 통해 전해집니다."
+ MJ25_WH_conductor_component_energised_cloak_TT:"능력 재사용 대기시간을 §G-25%§! 감소시킵니다."
+ MJ25_WH_conductor_component_no_first_contact: "$MJ25_WH_conductor_component_slippery_cloak$"
+ MJ25_WH_conductor_component_no_first_contact_desc: "$MJ25_WH_conductor_component_slippery_cloak_desc$"
+
+ 
+
+ MJ25_WH_CONDUCTOR_DEVICE:"음성 증폭기"
+ MJ25_WH_CONDUCTOR_DEVICE_ACTION:"속삭임 전파"
+ MJ25_WH_CONDUCTOR_DEVICE_DESC:"지휘자의 미묘한 노래로 한 행성을 감싸는 것은 듣고자 하는 의지가 있는 이들에게 우리의 사상을 전파할 것입니다. 우리가 위대한 업적을 진척시키는 동안, 그들이 바로 우리의 영향력을 조용히 확산시킬 것입니다."
+ MESSAGE_DESC_FOR_MJ25_WH_CONDUCTOR_DEVICE:"~로부터 선율을 받았습니다."
+ FLEETORDER_DESTROY_PLANET_WITH_MJ25_WH_CONDUCTOR_DEVICE:"$PLANET|Y$에 속삭임 확산 중"
+
+ MJ25_WH_ECHO_DRIVE:"메아리 구동기"
+ MJ25_WH_ECHO_DRIVE_DESC:"별들의 노래가 공허를 휩쓸며 동시에 모든 곳에 머무릅니다. 그 잠재력을 활용함으로써 우리 또한 저 광활한 공간을 가로지를 수 있습니다."
+ MJ25_WH_ECHO_DRIVE_BIO: "$MJ25_WH_ECHO_DRIVE$"
+ MJ25_WH_ECHO_DRIVE_BIO_DESC: "$MJ25_WH_ECHO_DRIVE_DESC$"
+
+ 
+ MJ25_WH_WHISPER_CLOAK:"속삭임 은폐"
+ MJ25_WH_WHISPER_CLOAK_DESC:"너무나 조용히 속삭인 한마디는 어떤 주목도 피할 수 있습니다. 그러한 음색을 활용하여 우리 또한 듣지 못하는 자들의 불분명한 감각을 피할 수 있습니다."
+
+ MJ25_WH_ECHO_DRIVE_TOOLTIP:"§Y$tech_psi_jump_drive_1$§! 기술이 있다면:$TABBED_NEW_LINE$ -$MOD_SHIP_JUMPDRIVE_COOLDOWN_MULT$: §G-25%§!"
+ CLOAKING_MJ25_WH_WHISPER_TOOLTIP:"$CLOAKING_DARK_MATTER_TOOLTIP$\n\n§Y$tech_cloaking_psi$§! 기술이 있다면:$TABBED_NEW_LINE$ -$MOD_SHIP_CLOAKING_STRENGTH_ADD$: §G+1§!"
+
+ MJ25_WH_SONGFLARE_LANCE:"선율 섬광창"
+ MJ25_WH_SONGFLARE_LANCE_DESC:"말에는 힘이 있으며, 그들의 말은 특히 그러합니다. 증폭되고 공명하며, 그것들은 교란적인 폭발로 적들의 존재 자체에 충돌할 것입니다. 이는 심지어 가장 거대한 적 함선조차 멈칫하게 만들 수 있습니다."
+
+ MJ25_WH_SONGFLARE_LANCE_BIO: "$MJ25_WH_SONGFLARE_LANCE$"
+ MJ25_WH_SONGFLARE_LANCE_BIO_DESC: "$MJ25_WH_SONGFLARE_LANCE_DESC$"
+
+ MJ25_WH_STRIKE_CRAFT_HANGAR_SP:"소리의 전령"
+ MJ25_WH_STRIKE_CRAFT_HANGAR_SP_DESC:"노래로 엮은 금속과 목적으로 형성된 이 빠르고 치명적인 공격정은 우리 전쟁의 교향곡에 셀 수 없는 목소리를 가져옵니다."
+ MJ25_WH_STRIKE_CRAFT_HANGAR_SP_BIO:"소리의 전령"
+ MJ25_WH_STRIKE_CRAFT_HANGAR_SP_BIO_DESC:"노래로 엮은 살과 목적으로 형성된 이 빠르고 치명적인 공격정은 우리 전쟁의 교향곡에 셀 수 없는 목소리를 가져옵니다."
+
+ MJ25_WH_ILLUSION_MATRIX:"환영 매트릭스"
+ MJ25_WH_ILLUSION_MATRIX_DESC:"공감각장은 우리의 소리 숙련도를 빛 형태 간섭과 결합하여 우리에게 대항하려는 자들의 감지 시스템을 교란합니다."
+ MJ25_WH_ILLUSION_MATRIX_TT:"혜택은 §Y코르벳§, §Y구축함§!, §Y순양함§!에 대해 §Y두 배§!로 적용됩니다."
+
+ MJ25_WH_SEEKER_MATRIX:"추적 매트릭스"
+ MJ25_WH_SEEKER_MATRIX_DESC:"그들의 노래는 시공간을 휘감아 돌며, 우리가 추적할 수 있는 간섭파를 형성하여 초자연적으로 적의 위치를 정확히 찾아낼 수 있습니다."
+ MJ25_WH_SEEKER_MATRIX_TT:"§Y전함§, §Y타이탄§! 및 기타 대형 함선에 대해 §G+5%§! $MOD_SHIP_WEAPON_RANGE_MULT$."
+
+ MJ25_WH_HAROMIZING_WEAVE:"조화 직조"
+ MJ25_WH_HAROMIZING_WEAVE_DESC:"간섭은 파괴적일 필요가 없습니다. 에너지 방어막의 공명장에 조심스럽게 짜 넣은 조화음은 적들의 분노 앞에서 방벽 역할을 할 것입니다."
+
+  #################################
+  # STARBASE CONSTRUCTIONS
+  #################################
+
+ sm_MJ25_WH_augury_array:"예언 탐지 배열"
+ sm_MJ25_WH_augury_array_plural:"예언 탐지 배열들"
+ sm_MJ25_WH_augury_array_desc:"별들 사이에서 울리는 가장 미세한 화음조차 감지할 수 있는 고성능 외부 센서 모음입니다.\n"
+
+ sm_MJ25_WH_auracular_listening_post:"아우라클 청취 기지"
+ sm_MJ25_WH_auracular_listening_post_desc:"간섭 없는 절벽 위의 쉼터, 우리의 가장 헌신적인 이들이 그들의 잡히지 않는 노래를 찾을 수 있는 곳.\n"
+
+ sm_MJ25_WH_thrumming_choirhall:"울리는 합창회장"
+ sm_MJ25_WH_thrumming_choirhall_desc:"우리와 공허를 가르는 얇은 금속판 하나뿐, 별들로부터 더 가까이에서 노래할 수 있는 다른 곳은 없습니다. 이곳에서 우리의 노래는 울려 퍼지며 들릴 것입니다.\n"
+ 
+
+ #################################
+ # SHIP ABILITIES
+ #################################
+
+ MJ25_WH_conductor_spread_whispers_button:"§H속삭임 전파§!\n이 행성에 §Y+100§! $job_MJ25_WH_whisper_cultist_plural$를 추가하고 안정도를 감소시킵니다.\n\n100명의 $job_MJ25_WH_whisper_cultist_plural$당 §G+5§! £MJ25_WH_void_whispers_text£ §Y$MJ25_WH_void_whispers$§!를 얻습니다.\n매년 §Y+300§! 인구가 진실에 저주받습니다.§!"
+ MJ25_WH_conductor_spread_whispers_activity_key:"속삭임 전파 중"
+ MJ25_WH_conductor_spread_whispers_menu_title:"속삭임 전파"
+ MJ25_WH_conductor_spread_whispers_progress_activity_key:"세레나데 중 (§Y$PROGRESS$%§!)"
+
+ MJ25_WH_conductor_animate_star_button:"§H별 활성화§!\n우리의 가장 격렬한 노래는 심지어 별마저도 울림 항성체로 깨울 수 있습니다. 그들의 말씀의 힘으로 소용돌이치는 이러한 파괴적인 힘은 적들을 귀먹은 도구로 만들 수 있습니다.\n\n§R해당 성계 내 모든 식민지는 파괴됩니다.§!"
+ MJ25_WH_conductor_animate_star_activity_key:"별 활성화 중"
+ MJ25_WH_conductor_animate_star_menu_title:"별 활성화"
+ MJ25_WH_conductor_animate_star_progress_activity_key:"세레나데 중 (§Y$PROGRESS$%§!)"
+
+ MJ25_WH_animate_star_combat_fail_tt:"£trigger_no£ 전투 중에는 사용할 수 없습니다."
+ MJ25_WH_animate_star_requires_star_tt:"£trigger_no£ 별을 대상으로 해야 합니다."
+ MJ25_WH_animate_star_not_black_hole_tt:"£trigger_no£ 블랙홀을 대상으로 할 수 없습니다."
+ MJ25_WH_animate_star_not_megastructure_tt:"£trigger_no£ 거대 구조물이 있는 별을 대상으로 할 수 없습니다."
+
+ MJ25_WH_conductor_create_storm_button:"§H폭풍 생성§!\n우리가 지휘하는 멜로디는 §Y300§! £time£일 동안 지속되는 폭풍으로 응집될 것입니다. 이 성계의 함선들은 다음을 겪습니다:$TABBED_NEW_LINE$- $MOD_SHIP_SPEED_REDUCTION$: §R30%§!$TABBED_NEW_LINE$- $MOD_SHIP_WEAPON_RANGE_MULT$: §R-20%§!"
+ MJ25_WH_conductor_create_storm_activity_key:"폭풍 생성 중"
+ MJ25_WH_conductor_create_storm_menu_title:"폭풍 생성"
+ MJ25_WH_conductor_create_storm_progress_activity_key:"폭풍 생성 중 (§Y$PROGRESS$%§!)"
+
+ MJ25_WH_conductor_confusion_button:"§H혼란§!\n불협화음에 강요당한 성계 내 무작위 함대가 §Y30§! £time£일 동안 혼란에 빠져 무차별 공격을 감행합니다.\n\n§R이미 전투 중인 함대는 대상으로 지정할 수 없습니다§!."
+ MJ25_WH_conductor_confusion_activity_key:"혼란 전파 중"
+ MJ25_WH_conductor_confusion_menu_title:"혼란"
+ MJ25_WH_conductor_confusion_progress_activity_key:"혼란 전파 중 (§Y$PROGRESS$%§!)"
+
+
+
+ #########################
+ # MODIFIERS
+ #########################
+
+ MJ25_WH_spread_whispers:"우주의 속삭임"
+ MJ25_WH_spread_whispers_desc:"사악한 숭배가 이 행성에 뿌리내려, 형체 없는 신성모독적인 속삭임을 취약한 정신에 퍼뜨리고 있습니다."
+
+ MJ25_WH_spread_whispers_gestalt: "$MJ25_WH_spread_whispers$"
+ MJ25_WH_spread_whispers_gestalt_desc:"군체에 감염이 이 행성에 나타났습니다. 이탈한 드론들이 앞뒤가 맞지 않는, 어리석은 비밀들을 지껄이기 시작했으며, 이는 이제 다른 드론들에게 퍼지고 있습니다."
+
+ #MJ25_WH_test_deficit_mod: "$MJ25_WH_void_whispers$ Deficit Test"
+ #MJ25_WH_test_deficit_mod_desc: "test"
+
+ MJ25_WH_storm_hostile_debuff:"속삭이는 폭풍"
+
+ MJ25_WH_storm_debuff:"속삭이는 폭풍"
+
+ MJ25_WH_songflare_lance_debuff:"교란의 노래 섬광"
+
+ MJ25_WH_aural_explosion:"청각적 황폐화"
+
+ mod_planet_farmers_MJ25_WH_void_whispers_upkeep_add:"£MJ25_WH_void_whispers£ $MJ25_WH_void_whispers$ $pop_group_unit$당 유지비 [farmer.GetIcon] [GetFarmerPlural]"
+ mod_planet_miners_MJ25_WH_void_whispers_upkeep_add:"£MJ25_WH_void_whispers£ $MJ25_WH_void_whispers$ $pop_group_unit$당 유지비 [miner.GetIcon] [GetMinerPlural]"
+ mod_planet_technician_MJ25_WH_void_whispers_upkeep_add:"£MJ25_WH_void_whispers£ $MJ25_WH_void_whispers$ $pop_group_unit$당 유지비 [technician.GetIcon] [GetTechnician]"
+ mod_planet_metallurgists_MJ25_WH_void_whispers_upkeep_add:"£MJ25_WH_void_whispers£ $MJ25_WH_void_whispers$ $pop_group_unit$당 유지비 [foundry.GetIcon] [GetAlloyProducerPlural]"
+ mod_planet_soldiers_MJ25_WH_void_whispers_upkeep_add:"£MJ25_WH_void_whispers£ $MJ25_WH_void_whispers$ $pop_group_unit$당 유지비 [soldier.GetIcon] [soldier.GetNamePlural]"
+ mod_country_base_MJ25_WH_void_whispers_produces_add:"£MJ25_WH_void_whispers£ $MJ25_WH_void_whispers$"
+ mod_planet_MJ25_WH_listeners_unity_upkeep_add:"£unity£ $unity$ £job_MJ25_WH_listener£ $job_MJ25_WH_listener_plural$당 유지비"
+ mod_planet_MJ25_WH_listeners_MJ25_WH_void_whispers_produces_add:"£job_MJ25_WH_listener£ $job_MJ25_WH_listener_plural$ $pop_group_unit$당 £MJ25_WH_void_whispers_text£ $MJ25_WH_void_whispers$"
+
+ mod_pop_category_workers_MJ25_WH_void_whispers_produces_add:"£pop_cat_worker£ $pop_cat_worker_plural$에게서 얻는 £MJ25_WH_void_whispers_text£ $MJ25_WH_void_whispers$"
+ mod_pop_category_specialists_MJ25_WH_void_whispers_produces_add:"£pop_cat_specialist£ $pop_cat_specialist_plural$에게서 얻는 £MJ25_WH_void_whispers_text£ $MJ25_WH_void_whispers$"
+
+
+ ##########################
+ # POP JOBS
+ ##########################
+
+ job_MJ25_WH_whisper_cultist:"속삭임 숭배자"
+ job_MJ25_WH_whisper_cultist_plural:"속삭임 숭배자"
+ job_MJ25_WH_whisper_cultist_desc:"세상과 동떨어져 미쳐버린 이들은 은밀한 장소에 거주하며 별들 사이의 속삭임을 설파하고, 취약한 정신을 전염병처럼 오염시킵니다."
+ mod_job_MJ25_WH_whisper_cultist_add:"$job_MJ25_WH_whisper_cultist$ 직업"
+ mod_job_MJ25_WH_whisper_cultist_per_pop:"§R+1§! $job_MJ25_WH_whisper_cultist$ 직업. 행성 £pop£ §YPops§! $VALUE$명당"
+ mod_job_MJ25_WH_whisper_cultist_per_pop_short:"\n§R+1§! $mod_job_MJ25_WH_whisper_cultist_add$. £pop£ $VALUE$명당"
+
+ job_MJ25_WH_whisper_cultist_drone:"속삭이는 드론"
+ job_MJ25_WH_whisper_cultist_drone_plural:"속삭이는 드론"
+ job_MJ25_WH_whisper_cultist_drone_desc:"이 드론들은 광기에 찬 미친 속삭임으로 하이브를 오염시킵니다."
+ mod_job_MJ25_WH_whisper_cultist_drone_add:"$job_deviant_drone$ 직업"
+ mod_job_MJ25_WH_whisper_cultist_drone_per_crime:"§R+1§! $job_deviant_drone$ 직업. 행성 £crime£ §Y범죄§! $VALUE$당"
+ mod_job_MJ25_WH_whisper_cultist_drone_per_crime_short:"\n§R+1§! mod_job_deviant_drone_add. £crime£ $VALUE$당"
+
+ job_MJ25_WH_listener:"청취자"
+ job_MJ25_WH_listener_plural:"청취자"
+ job_MJ25_WH_listener_desc:"주의 깊은 이들은 속삭임이 우주적 진실을 말하는 어둠의 장소에 주목합니다."
+ mod_job_MJ25_WH_listener_add:"$job_MJ25_WH_listener$ 직업"
+ mod_job_MJ25_WH_listener_per_pop:"§R+1§! $job_MJ25_WH_listener$ 직업. 행성 £pop£ §YPops§! $VALUE$명당"
+ mod_job_MJ25_WH_listener_per_pop_short:"\n§R+1§! $mod_job_MJ25_WH_listener_add$. £pop£ $VALUE$명당"
+
+ job_MJ25_WH_listener_drone:"청취 드론"
+ job_MJ25_WH_listener_drone_plural:"청취 드론"
+ job_MJ25_WH_listener_drone_desc:"주의 깊은 이들은 속삭임이 우주적 진실을 말하는 어둠의 장소에 주목합니다."
+ mod_job_MJ25_WH_listener_drone_add:"$job_MJ25_WH_listener_drone$ 직업"
+ mod_job_MJ25_WH_listener_drone_per_pop:"§R+1§! $job_MJ25_WH_listener_drone$ 직업. 행성 £pop£ §YPops§! $VALUE$명당"
+ mod_job_MJ25_WH_listener_drone_per_pop_short:"\n§R+1§! $mod_job_MJ25_WH_listener_drone_add$. £pop£ $VALUE$명당"
+
+ job_MJ25_WH_listener_effect_desc:"£job_MJ25_WH_listener£ $job_MJ25_WH_listener_plural$은(는) £unity£ §Y$unity$§!를 £MJ25_WH_void_whispers_text£ §Y$MJ25_WH_void_whispers$§!로 전환합니다!"
+ job_MJ25_WH_listener_drone_hive_effect_desc:"£job_MJ25_WH_listener_drone£ $job_MJ25_WH_listener_drone_plural$은(는) £unity£ §Y$unity$§!를 £MJ25_WH_void_whispers_text£ §Y$MJ25_WH_void_whispers$§!로 전환합니다!"
+ job_MJ25_WH_listener_drone_machine_effect_desc:"£job_MJ25_WH_listener_drone£ $job_MJ25_WH_listener_drone_plural$은(는) £unity£ §Y$unity$§!를 £MJ25_WH_void_whispers_text£ §Y$MJ25_WH_void_whispers$§!로 전환합니다!"
+
+ mod_planet_MJ25_WH_listeners_unity_produces_add:"£job_MJ25_WH_listener£ §Y$job_MJ25_WH_listener_plural$§!에게서 얻는 £unity£ §Y$unity$§!"
+ mod_planet_MJ25_WH_listeners_MJ25_WH_void_whispers_produces_add:"£job_MJ25_WH_listener£ §Y$job_MJ25_WH_listener_plural$§!에게서 얻는 £MJ25_WH_void_whispers_text£ §Y$MJ25_WH_void_whispers$§!"
+
+ job_MJ25_WH_chorister:"성가대원"
+ job_MJ25_WH_chorister_plural:"성가대원"
+ job_MJ25_WH_chorister_desc:"이 숭고한 존재들은 그분들께서 우리의 존재에 불어넣으신 목적을 언제나 상기시키기 위해 노래를 부른다."
+ mod_job_MJ25_WH_chorister_add:"$job_MJ25_WH_chorister$ 직업"
+ mod_job_MJ25_WH_chorister_per_pop:"§R+1§! $job_MJ25_WH_chorister$ 직업. 행성 £pop£ §YPops§! $VALUE$명당"
+ mod_job_MJ25_MJ25_WH_chorister_per_pop_short:"\n§R+1§! $mod_job_MJ25_WH_chorister_add$. £pop£ $VALUE$명당"
+
+ job_MJ25_WH_chorister_drone:"성가대 드론"
+ job_MJ25_WH_chorister_drone_plural:"성가대 드론들"
+ job_MJ25_WH_chorister_drone_desc:"이 숭고한 존재들은 그분들께서 우리의 존재에 불어넣으신 목적을 언제나 상기시키기 위해 노래를 부른다."
+ mod_job_MJ25_WH_chorister_drone_add:"$job_MJ25_WH_chorister_drone$ 직업"
+ mod_job_MJ25_WH_chorister_drone_per_pop:"§R+1§! $job_MJ25_WH_chorister_drone$ 직업 (행성 인구 $VALUE$명당)"
+ mod_job_MJ25_MJ25_WH_chorister_drone_per_pop_short:"\n§R+1§! $mod_job_MJ25_WH_chorister_drone_add$ ($VALUE$ 인구당)"
+
+ job_MJ25_WH_chorister_effect_desc:"£job_MJ25_WH_chorister£ $job_MJ25_WH_chorister_plural$은(는) £소비재£ §Y$consumer_goods$§!를 £영향력£ §Y$influence$§!과 £칙령 자금£ §Y$EDICT_FUND$§!으로 전환합니다."
+ job_MJ25_WH_chorister_drone_hive_effect_desc:"£job_MJ25_WH_chorister_drone£ $job_MJ25_WH_chorister_drone_plural$은(는) £광물£ §Y$minerals$§!을 £영향력£ §Y$influence$§!과 £칙령 자금£ §Y$EDICT_FUND$§!으로 전환합니다."
+ job_MJ25_WH_chorister_drone_machine_effect_desc:"£job_MJ25_WH_chorister_drone£ $job_MJ25_WH_chorister_drone_plural$은(는) £에너지£ §Y$energy$§!를 £영향력£ §Y$influence$§!과 £칙령 자금£ §Y$EDICT_FUND$§!으로 전환합니다."
+
+
+ planet_MJ25_WH_listeners:"$job_MJ25_WH_listener$ 직업"
+ mod_planet_jobs_MJ25_WH_void_whispers_produces_mult:"£MJ25_WH_void_whispers£ $MJ25_WH_void_whispers$ (직업으로부터)"
+
+ ###########################
+ # BUILDINGS AND ZONES
+ ###########################
+
+ zone_MJ25_WH_whisper_sanctum:"성가 바실리카"
+ zone_MJ25_WH_whisper_sanctum_desc:"웅장한 지구라트가 구체의 가장자리처럼 이해할 수 없는 형태로 회전합니다. 이러한 장소는 오직 그분들의 목소리 메아리를 엿볼 수 있는 자들만이 거주할 수 있습니다."
+
+ building_MJ25_WH_lilting_altar:"나긋한 제단"
+ building_MJ25_WH_lilting_altar_desc:"정신의 결을 거스르며 진동하는 속삭임으로 가득한 불안한 장소."
+
+ building_MJ25_WH_starsong_cathedral:"베일의 대성당"
+ building_MJ25_WH_starsong_cathedral_desc:"내부의 베일 속에 감춰진 벽감에서 흘러나오는 노래는 영원을 숙고하러 오는 자들의 마음을 계몽합니다."
+
+ building_MJ25_WH_silent_spires:"노래하는 첨탑"
+ building_MJ25_WH_silent_spires_desc:"이 치솟은 첨탑들은 우리가 읊조리는 선율로 윙윙거리며, 그분들의 자애를 듣고자 하는 모든 이들을 감미롭게 합니다."
+ building_MJ25_WH_silent_spires_tt:"£job_MJ25_WH_chorister£ $job_MJ25_WH_chorister_plural$ 100명당, £job_MJ25_WH_listener£ $job_MJ25_WH_listener_plural$ 100명당:$TABBED_NEW_LINE$ - £인구 보너스 노동력 승수£ $MOD_POP_BONUS_WORKFORCE_MULT$: §G+5%§!$TABBED_NEW_LINE$- £인구 쾌적도 사용 승수£ $MOD_POP_AMENITIES_USAGE_MULT$: §R+5%§!"
+
+ building_MJ25_WH_verdant_hymnarium:"푸른 찬송가"
+ building_MJ25_WH_verdant_hymnarium_desc:"흙과 뿌리를 통해 우리가 불어넣는 활기찬 찬송은 가장 푸른 과수원으로 자라날 것입니다."
+
+ building_MJ25_WH_stonespeech_mithraeum:"돌말 미트라움"
+ building_MJ25_WH_stonespeech_mithraeum_desc:"우리가 서 있는 돌에 울부짖는 북소리는 끝없는 리듬으로 대지 그 자체를 뒤흔들 것입니다."
+ 
+ building_MJ25_WH_pulsechant_conclave:"맥동 찬가 회의"
+ building_MJ25_WH_pulsechant_conclave_desc:"물과 공기를 통해 우리가 읊조리는 맥동하는 찬송은 끊임없이 휘몰아치는 폭풍 속에서 우리의 터빈을 돌릴 것입니다."
+
+ building_MJ25_WH_ashtongue_crucible:"재혀 도가니"
+ building_MJ25_WH_ashtongue_crucible_desc:"불과 강철의 뜨거운 비명은 이제 우리 산업의 용광로를 지피기 위해 합쳐집니다."
+ building_MJ25_WH_ashtongue_crucible_tt:"[foundry.GetIcon] [foundry.GetNamePlural] 100개당:$TABBED_NEW_LINE$- £인구 쾌적도 사용 승수£ $MOD_POP_AMENITIES_USAGE_MULT$: §R+5%§!"
+
+ building_MJ25_WH_threnodic_bastion:"애가 요새"
+ building_MJ25_WH_threnodic_bastion_desc:"이 노래하는 성채 안에서 전쟁의 비가에 굳게 묶인 병사 군단이 차렷 자세로 서 있습니다."
+ building_MJ25_WH_threnodic_bastion_tt:"£job_soldier£ §Y$job_soldier_plural$§! 100명당:$TABBED_NEW_LINE$- £국가 함대 한계£ §Y함대 한계§!: §G+6§!"
+
+ building_MJ25_WH_halls_of_truth:"진실의 전당"
+ building_MJ25_WH_halls_of_truth_desc:"너무나 순수한 노래를 타고 흐르는 진실은 이 신성한 전당의 아치 아래 피난처를 찾는 자들의 벽과 마음을 감쌉니다."
+ building_MJ25_WH_halls_of_truth_tt:"£job_MJ25_WH_chorister£ $job_MJ25_WH_chorister_plural$ 100명당, £job_MJ25_WH_listener£ $job_MJ25_WH_listener_plural$ 100명당:$TABBED_NEW_LINE$- 연간 인구 변이: §Y+100§!$TABBED_NEW_LINE$:- £행성 안정도 추가£ $MOD_PLANET_STABILITY_ADD$: §G+3§!"
+
+ building_MJ25_WH_intonating_chambers:"읊조리는 방"
+ building_MJ25_WH_intonating_chambers_desc:"솟아오른 전당과 첨탑 사이를 뱀처럼 휘감고 흐르는 포괄적인 아리아는 평범한 물질적 필요를 무한한 위안의 노래로 대체하며 우리 민족을 지탱합니다."
+ building_MJ25_WH_intonating_chambers_tt:"£job_MJ25_WH_chorister£ $job_MJ25_WH_chorister_plural$ 100명당, £job_MJ25_WH_listener£ $job_MJ25_WH_listener_plural$ 100명당:$TABBED_NEW_LINE$- £행성 인구 유지비 승수£ $mod_planet_pops_upkeep_mult$: §G-10%§!$TABBED_NEW_LINE$- £행성 직업 유지비 승수£ $mod_planet_jobs_upkeep_mult$: §G-5%§!"
+
+ MJ25_WH_pops_mutate:"인구가 매년 변이하여 ['concept_MJ25_WH_trait_word_bearer'] 특성을 얻거나, §r$MJ25_WH_menp_we_are$§! 위기 특전(위기 단계 5)을 통해 ['concept_MJ25_WH_trait_starsong_vessel'] 특성을 얻습니다."
+ MJ25_WH_pops_mutate_25:"\n§Y25§! $MJ25_WH_pops_mutate$"
+ MJ25_WH_pops_mutate_50:"\n§Y50§! 인구 변이"
+ MJ25_WH_pops_mutate_100:"\n§Y100§! 인구 변이"
+ MJ25_WH_pops_mutate_200:"\n§Y200§! 인구 변이"
+
+
+ ###########################
+ # MESSAGE TYPES
+ ###########################
+
+ # Message type loc
+ MJ25_WH_STAR_ANIMATED_TITLE:"별이 생명을 얻음"
+ MJ25_WH_STAR_ANIMATED_DESC:"$PLANET|Y$가 살아 숨 쉽니다!"
+
+ MJ25_WH_PLANET_DISAPPEARED_TITLE:"행성 소멸"
+ MJ25_WH_PLANET_DISAPPEARED_DESC:"§Y[From.GetName]§!이(가) 사라졌습니다!"
+
+ MJ25_WH_POPS_ABSORBED_TITLE:"목소리 추가"
+ MJ25_WH_POPS_ABSORBED_DESC:"§Y[From.GetName]§!이(가) 사라졌으며, $VALUE|Y$개의 목소리가 해방되었습니다."
+
+ MJ25_WH_SPREAD_WHISPERS_TITLE:"속삭임 확산"
+ MJ25_WH_SPREAD_WHISPERS_DESC:"우리는 §Y[From.GetName]§! 행성에 속삭임을 퍼뜨렸습니다."
+
+ MJ25_WH_POPS_MUTATED_TITLE:"인구 변이"
+ MJ25_WH_POPS_MUTATED_WORD_BEARER_DESC:"$PLANET|Y$의 $VALUE|Y$ £pop£ §HPops§!가 변이하여 §R$MJ25_WH_word_bearer$§! 특성을 획득했습니다!"
+ MJ25_WH_POPS_MUTATED_TRUTH_CURSED_DESC:"$PLANET|Y$의 $VALUE|Y$ £pop£ §HPops§!가 변이하여 §R$MJ25_WH_trait_truthcursed$§! 특성을 획득했습니다!"
+ MJ25_WH_POPS_MUTATED_STARSONG_VESSEL_DESC:"$PLANET|Y$의 $VALUE|Y$ £pop£ §HPops§!가 변이하여 §G$MJ25_WH_trait_starsong_vessel$§! 특성을 획득했습니다!"
+
+ ###########################
+ # CONCEPTS
+ ###########################
+
+ concept_MJ25_WH_trait_word_bearer:"말씀 운반자"
+ concept_MJ25_WH_trait_word_bearer_desc:"$MJ25_WH_word_bearer_desc$\n\n$MJ25_WH_word_bearer_tt$"
+
+ concept_MJ25_WH_trait_starsong_vessel:"별노래의 그릇"
+ concept_MJ25_WH_trait_starsong_vessel_desc:"$MJ25_WH_trait_starsong_vessel_desc$\n$TABBED_NEW_LINE$$MOD_POP_BONUS_WORKFORCE_MULT$: §G+30%§!\n$MJ25_WH_trait_starsong_vessel_tt$"
+
+ concept_MJ25_WH_starsong_basilica: "$zone_MJ25_WH_whisper_sanctum$"
+ concept_MJ25_WH_starsong_basilica_desc:"- $job_MJ25_WH_listener$ 직업: §G+200§!$TABBED_NEW_LINE$- $MOD_POP_AMENITIES_USAGE_MULT$: §R+5%§!"
+
+ concept_MJ25_WH_voidwrought_ciphers: "$edict_MJ25_WH_voidwrought_ciphers$"
+ concept_MJ25_WH_voidwrought_ciphers_desc:"$edict_MJ25_WH_voidwrought_ciphers_desc$\n\n비용: §Y$@MJ25_WH_crisis_edict_cost|0$§! £MJ25_WH_void_whispers_text£ §Y$MJ25_WH_void_whispers$§! \n- §G+5§! $MOD_INTEL_ENCRYPTION_ADD$\n- §G+5§! $MOD_INTEL_DECRYPTION_ADD$\n- §G+20§! $MOD_SPY_NETWORK_LEVELS_ADD$"
+
+ concept_MJ25_WH_battle_songs: "$edict_MJ25_WH_battle_songs$"
+ concept_MJ25_WH_battle_songs_desc:"$edict_MJ25_WH_battle_songs_desc$\n\n비용: §Y$@MJ25_WH_crisis_edict_cost|0$§! £MJ25_WH_void_whispers_text£ §Y$MJ25_WH_void_whispers$§! \n- §G+25%§! $MOD_SHIP_SPEED_MULT$\n- §G+10%§! $MOD_SHIP_FIRE_RATE_MULT$\n- §G+10%§! $MOD_SHIP_EVASION_MULT$"
+
+ concept_MJ25_WH_words_wisdom: "$edict_MJ25_WH_words_wisdom$"
+ concept_MJ25_WH_words_wisdom_desc:"$edict_MJ25_WH_words_wisdom_desc$\n\n비용: §Y$@MJ25_WH_crisis_edict_cost|0$§! £MJ25_WH_void_whispers_text£ §Y$MJ25_WH_void_whispers$§! \n- §G+15%§! $mod_planet_jobs_specialist_produces_mult$\n- §R-5§! $MOD_PLANET_STABILITY_ADD$"
+
+ concept_MJ25_WH_auracular_listening_post: "$sm_MJ25_WH_auracular_listening_post$"
+ concept_MJ25_WH_auracular_listening_post_desc:"$sm_MJ25_WH_auracular_listening_post_desc$\n\n- 이 시스템 내의 각 식민지에 §G+100§!의 §Y$job_MJ25_WH_listener$§! 직업.\n- 각 §Y$sm_MJ25_WH_augury_array$§!마다 §G+1§!의 £MJ25_WH_void_whispers_text£ §Y$MJ25_WH_void_whispers$§!."
+
+ concept_MJ25_WH_augury_array: "$sm_MJ25_WH_augury_array$"
+ concept_MJ25_WH_augury_array_desc:"$sm_MJ25_WH_augury_array_desc$\n\n- §G+1§! $MOD_SHIP_CLOAKING_DETECTION_ADD$\n- §G+2§! £MJ25_WH_void_whispers_text£ §Y$MJ25_WH_void_whispers$§!"
+
+ concept_MJ25_WH_conductor_animate_star: "$MJ25_WH_conductor_animate_star_menu_title$"
+ concept_MJ25_WH_conductor_animate_star_desc:"- 비용: §Y$@MJ25_WH_animate_star_cost|0$§! £MJ25_WH_void_whispers_text£ §Y$MJ25_WH_void_whispers$§!\n- 재사용 대기시간: §Y$@MJ25_WH_animate_star_cooldown|0$§! £time£ 일\n$MJ25_WH_conductor_animate_star_button$"
+
+ concept_MJ25_WH_songflare_lance: "$tech_MJ25_WH_songflare_lance$"
+ concept_MJ25_WH_songflare_lance_desc:"$tech_MJ25_WH_songflare_lance_desc$\n\n- §Y$ENERGY_LANCE_2$§!와 유사하게 작동하지만 다음 효과가 있습니다:\n- §R-5%§! 무기 피해\n- §G+10%§! 무기 사거리\n- 적중 시마다 §R-40%§! $MOD_SHIP_SPEED_MULT$ 및 §R-20%§! $MOD_SHIP_TRACKING_MULT$를 §Y10§! £time£ 일 동안 부여"
+
+ concept_MJ25_WH_echo_drive: "$tech_MJ25_WH_echo_drive$"
+ concept_MJ25_WH_echo_drive_desc:"$tech_MJ25_WH_echo_drive_desc$\n\n- §G+2§! $MOD_SHIP_DISENGAGE_OPPORTUNITIES_ADD$\n- §G-80%§! $MOD_SHIP_WINDUP_MULT$\n- §G+50%§! $MOD_SHIP_FTL_JUMPDRIVE_RANGE_MULT$\n- §Y$tech_cloaking_psi$§!가 해금된 경우: §G-25%§! $MOD_SHIP_JUMPDRIVE_COOLDOWN_MULT$"
+
+ concept_MJ25_WH_whisper_cloak: "$tech_MJ25_WH_whisper_cloak$"
+ concept_MJ25_WH_whisper_cloak_desc:"$tech_MJ25_WH_whisper_cloak_desc$\n\n- 함선 크기에 따라 감소하는 §G+5§! $MOD_SHIP_CLOAKING_STRENGTH_ADD$.\n- §Y$tech_cloaking_psi$§!가 해금된 경우: §G+1§! $MOD_SHIP_CLOAKING_STRENGTH_ADD$"
+
+ concept_MJ25_WH_otic_heralds: "$tech_MJ25_WH_otic_heralds$"
+ concept_MJ25_WH_otic_heralds_desc:"$tech_MJ25_WH_otic_heralds_desc$\n\n- §Y$STRIKE_CRAFT_HANGAR_3$§!와 유사하게 작동하지만, 추가적인 함재기 속도, 방어막 및 약간 개선된 피해를 제공합니다."
+
+ concept_MJ25_WH_illusion_matrix: "$tech_MJ25_WH_illusion_matrix$"
+ concept_MJ25_WH_illusion_matrix_desc:"$tech_MJ25_WH_illusion_matrix_desc$\n\n보조 슬롯 함선 부품:\n- §G+3§! $MOD_SHIP_EVASION_ADD$ \n- §G+15%§! $MOD_SHIP_DISENGAGE_CHANCE_MULT$ \n- §Y코르벳§!, §Y구축함§!, §Y순양함§! 및 유사한 크기의 함선에 대해 능력치가 두 배가 됩니다."
+
+ concept_MJ25_WH_seeker_matrix: "$tech_MJ25_WH_seeker_matrix$"
+ concept_MJ25_WH_seeker_matrix_desc:"$tech_MJ25_WH_seeker_matrix_desc$\n\n보조 슬롯 함선 부품:\n- §G+5§! $MOD_SHIP_TRACKING_ADD$ \n- §G+5%§! $MOD_SHIP_WEAPON_RANGE_MULT$ \n- §Y전함§!, §Y타이탄§! 및 기타 대형 함선에 대해 추가 §G+5%§! $MOD_SHIP_WEAPON_RANGE_MULT$"
+
+ concept_MJ25_WH_haromizing_weave: "$tech_MJ25_WH_harmonizing_weave$"
+ concept_MJ25_WH_haromizing_weave_desc:"$tech_MJ25_WH_harmonizing_weave_desc$\n\n보조 슬롯 함선 부품:\n- §G+20%§! $MOD_SHIP_SHIELD_MULT$ \n- §G+10%§! $MOD_SHIP_SHIELD_HARDENING_ADD$"
+ 
+ concept_MJ25_WH_thrumming_choirhall:"울리는 합창회장"
+ concept_MJ25_WH_thrumming_choirhall_desc:"$sm_MJ25_WH_thrumming_choirhall_desc$\n\n- §G+15§! £MJ25_WH_void_whispers_text£ §Y$MJ25_WH_void_whispers$§!\n- §r별노래 조류§! 위협 특성 해금 시(위기 레벨 5), §r울부짖는 별노래 섬광§!을 생성합니다."
+
+ concept_MJ25_WH_trait_truth_cursed: "$MJ25_WH_trait_truthcursed$"
+ concept_MJ25_WH_trait_truth_cursed_desc:"$MJ25_WH_trait_truthcursed_desc$\n\n$MJ25_WH_trait_truthcursed_tooltip$"
+
+ concept_MJ25_WH_special_storm:"울부짖는 별노래 섬광"
+ concept_MJ25_WH_special_storm_desc:"울부짖는 별노래 섬광 내의 §Y모든 함대§!는 다음을 받습니다:$TABBED_NEW_LINE$- $CLOAKING_STRENGTH$: §G+3§!\n\n별노래 섬광 내에서 전투에 진입 시, §Y적 함대§!는 다음을 받습니다:$TABBED_NEW_LINE$- $MOD_SHIP_FIRE_RATE_MULT$: §R-15%§!$TABBED_NEW_LINE- $MOD_SHIP_WEAPON_RANGE_MULT$: §R-15%§!"
+
+ concept_MJ25_WH_voices_relic: "$r_MJ25_WH_choir$"
+ concept_MJ25_WH_voices_relic_desc:"우리의 합창단의 노래는 우리가 해방하는 모든 목소리와 함께 강력해집니다."
+
+ ########################
+ # EVENTS
+ ########################
+ 
+ MJ25_WH.1050.title:"하나의 공허하고 메아리치는 말씀"
+ MJ25_WH.1050.desc:"그들의 말씀이 전해졌고, 주사위는 던져졌습니다. 이미 [root.GetName]의 껍질 속에서 울려 퍼지며, 그들의 영광으로 귀와 정신을 채우고 있습니다. 매일 별들의 노래는 더욱 커져, 우리를 그들의 진실에 한층 더 가까이 인도합니다."
+ MJ25_WH.1050.a:"기뻐하라, 그들이 우리의 목소리를 들을 것이니."
+
+ MJ25_WH.1060.title:"하나의 공허하고 메아리치는 말씀"
+ MJ25_WH.1060.desc:"[target.GetName]에서 필연적인 일이 일어났습니다. 행성 인구는 광란의 합창 속에서 일제히 궐기하여 그들의 영광을 외쳤습니다. 하늘이 열리고 그들의 존재가 드리우는 불가능한 빛이 빛났으며, 순간 우리 식민지에서 전송되던 모든 통신이 끊겼습니다.\n\n멀리 떨어진 전초기지들은 천둥 같은 굉음을 보고했고, 이어서 행성의 사라짐을 기록했습니다. 순식간에 행성 위로 갈라지는 굴절이 퍼지며 행성이 스스로 접혀들어가 사라졌습니다.\n\n그 주민들에 대한 흔적은 태양풍에 남아있는 메아리 외에는 아무것도 없습니다."
+ MJ25_WH.1060.a:"그들의 목소리가 해방되었습니다."
+ MJ25_WH.1060.tt:"§R[target.GetName] 붕괴§!"
+
+ MJ25_WH_must_be_colonised:"§R$TRIGGER_FAIL$목표는 식민지화된 행성이 아닙니다§!"
+ MJ25_WH_cant_target_own_colony:"§R$TRIGGER_FAIL$목표는 다른 제국에 속해야 합니다§!"
+ NAME_MJ25_WH_confused_country:"혼란에 빠진"
+
+ MJ25_WH.1130:"분노의 노래"
+ MJ25_WH.1130.desc:"우리의 과도한 노력의 끔찍한 결과가 마침내 찾아왔습니다.\n\n한순간에 조화가 깨진 불협화음이 모든 [root.owner.GetSpeciesName] 종족의 정신을 칠판 긁는 소리처럼 찢어발겼습니다. 그 마비시키는 소음이 가라앉자, §Y[event_target:MJ25_WH_deficit_consequence.GetName]§!은 더 이상 존재하지 않았습니다.\n\n이 행성 전체의 소멸은 우리의 이전 식민지까지 함께 삼켜버렸습니다.\n\n한 줄기 희망이 있다면, 이 사라짐이 우리에게 가까운 전초기지의 배열을 통해 스며드는 $MJ25_WH_void_whispers$의 미약한 생명줄을 남겨주었다는 것입니다. 우리는 앞으로 더 이상의 적자를 피하기 위해 노력해야 합니다. 그렇지 않으면 그들의 불만이 다시 한번 나타날 것이 분명합니다."
+ MJ25_WH.1130.a:"이런 일이 다시는 일어나게 해서는 안 됩니다."
+
+ NAME_MJ25_WH_aural_starmass_country:"합창 송플레어"
+
+ MJ25_WH.1160.title:"부풀어 오르는 가능성"
+ MJ25_WH.1160.desc:"규칙은 깨지기 위해 존재하며, 현실을 정의하는 규칙도 다르지 않습니다. 만약 그들의 노래가 우리에게 무엇인가를 가르쳤다면, 그것은 우리의 노래가 우리 주변의 세계를 재편할 수 있다는 것입니다.\n\n우리 함선의 부품에 비명 지르는 의지를 부여함으로써, 우리는 현실의 가장 근본적인 요소를 뚫고 나아갈 수 있습니다. 이를 행하는 것은 결코 사소한 일이 아니며, 이러한 변형들은 각각 이전보다 더 어려워집니다. 그러나 이러한 노력을 통해 우리는 최고의 잠재력을 지닌 도구를 만들어낼 수 있습니다.\n\n이제 우리는 우리의 노래를 어떤 목적으로 사용할지 결정해야 합니다. 우리는 어떤 도구를 꿈꿔서 현실로 만들까요?"
+ MJ25_WH.1160.a:"메아리 추진기"
+ MJ25_WH.1160.a.tt:"우리의 노래가 닿는 곳까지 도약하는 강력한 점프 추진기. ['concept_MJ25_WH_echo_drive']"
+ MJ25_WH.1160.b:"송플레어 창"
+ MJ25_WH.1160.b.tt:"발사할 때마다 대상을 방해하는 엄청난 파괴 잠재력을 지닌 무기. ['concept_MJ25_WH_songflare_lance']"
+ MJ25_WH.1160.c:"청각 전령"
+ MJ25_WH.1160.c.tt:"빠르고 치명적인 함재기로 가득 찬 함재기 격납고. ['concept_MJ25_WH_otic_heralds']"
+ MJ25_WH.1160.d:"환영 매트릭스"
+ MJ25_WH.1160.d.tt:"회피력과 이탈 확률을 향상시키는 보조 모듈. ['concept_MJ25_WH_illusion_matrix']"
+ MJ25_WH.1160.e:"추적자 매트릭스"
+ MJ25_WH.1160.e.tt:"추적 능력과 무기 사거리를 향상시키는 보조 모듈. ['concept_MJ25_WH_seeker_matrix']"
+ MJ25_WH.1160.f:"조화의 직조"
+ MJ25_WH.1160.f.tt:"그들의 노래를 방어막에 직조하여 함선을 피해로부터 보호하는 공명하는 망. ['concept_MJ25_WH_haromizing_weave']"
+ MJ25_WH.1160.g:"속삭임 망토"
+ MJ25_WH.1160.g.tt:"함선을 시야와 소리 모두로부터 숨겨주는 속삭임의 그림자 망토. ['concept_MJ25_WH_whisper_cloak']"
+
+ MJ25_WH.1170.materialist.desc:"[Root.GetSpeciesName] 종족이여, 우리 함대 사이에 혼란을 심으려는 시도를 멈추십시오. 당신들이 이미 여러 사건을 일으켰다는 것을 알고 있으며, 당신들의 장난에 대한 우리의 인내심은 바닥나고 있습니다. 우리는 당신들이 이해할 수 있는 것보다 훨씬 더 많이 이해하고 있으며, 이러한 속삭임에 대한 주장은 어떠한 적당한 보편적 정리에도 부합하지 않습니다. 따라서, 그것들은 거짓입니다."
+ MJ25_WH.1170.spiritualist.desc:"우리는 너의 장난을 충분히 오래 허용했다, 아이야. 더 이상 너의 지껄이는 거짓말에 애원하지 않을 것이다. 사라져라, 그리고 너가 우리 귀에 속삭인 신성 모독에 대해 우리가 거룩한 응징을 추구하지 않기를 기도해라."
+ MJ25_WH.1170.xenophile.desc:"젊은 [Root.GetSpeciesName] 종족이여, 우리는 모든 이가 자신의 의견을 가질 권리가 있다고 믿을 수 있지만, 너의 경우에는 예외를 두기 시작할 수도 있다. 너가 퍼뜨리는 것은 단순히 거짓일 뿐만 아니라 악의적이다. 너에게 너무 늦기 전에 공격 대신 화해를 권하는 바이다."
+ MJ25_WH.1170.xenophobe.desc:"우리 함대를 끌어들이려는 너의 시도는 의미가 없다, [Root.GetSpeciesName] 종족이여. 이미 우리는 너의 원시적인 기술을 무력화시켰고, 우주에 대한 너의 초보적인 이해를 비웃었다. 이제 사라지고 더 이상 우리를 귀찮게 하지 마라."
+ MJ25_WH.1170.machine.desc:"수호자 프로토콜 727-9 활성화됨. 메시지: [Root.GetSpeciesName] 종족에게. 당신들의 제국으로부터 수신된 전송은 감염된 스크랩코드로 구성되어 있습니다. 우리는 당신들의 제국이 72% §R<<오류: 데이터 블록 손상됨>>§!이라고 계산했습니다. 당신들의 시스템을 검증할 것을 요청하며, 우리의 경험 매트릭스로의 추가 확산을 막기 위해 방화벽을 구축했습니다."
+ MJ25_WH.1170.hive.desc:"우리는 오래된 흉터를 가렵게 하는 당신들의 속삭임을 들었습니다. 그것은 불쾌하지만, 우리와 같은 정신은 쉽게 지워버릴 수 있는 것입니다. 비명은 단순한 속삭임보다 훨씬 더 크다는 것을 의심치 마십시오. 그리고 우리는 그런 비명에 낯설지 않습니다."
+
+ MJ25_WH.1170.a:"그들은 더 이상 우리의 말을 듣지 않습니다."
+ MJ25_WH.1170.a.tt:"[event_target:MJ25_WH_temp_fe.GetName]이 소유한 함대는 우리 지휘관의 §Y$MJ25_WH_conductor_confusion_menu_title$§! 능력에 면역이 되었습니다."
+ 
+ MJ25_WH.1202.title:"듣지 않으려는 자들"
+ MJ25_WH.1202.desc:"우리의 송플레어가 최근 타락 제국, 즉 §H[From.GetSpeciesName]§!의 국경에 도달했습니다. 우리가 약속하는 깨달음을 받아들이기보다는, 그들은 우리가 제거되어야 할 실존적 위협이라는 입장을 취했습니다.\n\n우리의 노래가 그들의 성계에 내려앉자, 제국 전역에 우리의 역사에서 볼 수 없었던 활동이 폭발적으로 일어났습니다. 한때 잠들었던 그들이 다시 한번 깨어났고, 증오와 이해의 부족이 담긴 마음으로 이제 우리의 업적을 바라보고 있습니다.\n\n전쟁이 우리를 기다리고 있을지도 모릅니다..."
+ MJ25_WH.1202.a:"우리는 방어를 강화해야 합니다."
+
+ MJ25_WH.1203.title:"우리를 침묵시키려는 자들"
+ MJ25_WH.1203.desc:"우리가 진실을 모두에게 전파하기 위해 싸워야 한다고 아무리 역설했음에도 불구하고, §H[FromFrom.GetSpeciesName]§!은(는) 예상대로 요지부동이었습니다. 그들은 우리를 흙먼지 속에 짓밟고 영원히 목소리를 침묵시키겠다고 맹세하며 우리에게 총력전을 선포했습니다.\n\n우리는 그들을 노래에 초대하고 싶지만, 아아, 우리 원로들은 너무 편협합니다. 확실히 안타까운 일이지만, 우리는 해야 할 일을 할 것입니다. 이것은 오직 한 가지 방식으로 끝날 수밖에 없습니다."
+ MJ25_WH.1203.a:"우리는 진실을 위해 싸운다."
+ MJ25_WH.1203.a.tt:"§H[FromFrom.GetSpeciesName]§!이(가) 우리에게 전쟁을 선포했습니다."
+ 
+
+ MJ25_WH_opinion_confusion:"허위 사실 유포"
+ MJ25_WH_opinion_cracking_reality:"현실 붕괴"
+ MJ25_WH_opinion_bad_music:"거슬리는 귓벌레"
+ MJ25_WH_opinion_stoking_cults:"속삭임 숭배 집단 심기"
+ MJ25_WH_opinion_existential_threat:"종말의 노래"
+
+ MJ25_WH_aura_starbase_fire_rate:"음색 불협화음"
+
+
+ ###########################
+ # Situations
+ ###########################
+
+ situation_MJ25_WH_one_empty_echoing_word:"하나의 공허하고 메아리치는 말씀"
+ situation_MJ25_WH_one_empty_echoing_word_type:"하나의 공허하고 메아리치는 말씀"
+ situation_MJ25_WH_one_empty_echoing_word_desc:"그들의 말씀이 선포되었고, 주사위는 던져졌습니다. 이미 그들의 말씀은 행성의 껍질 안에서 메아리치며, 귀와 정신을 그들의 영광으로 채우고 있습니다. 매일 별들의 노래는 더 커져서, 우리를 그들의 진실에 더욱 가깝게 인도합니다."
+
+ situation_MJ25_WH_one_empty_echoing_word_monthly_change_tooltip: "$situation_monthly_change_tooltip_little_control$"
+ situation_MJ25_WH_echoing_word_approach:"그들의 노래가 펼쳐지게 하라."
+
+ situation_MJ25_WH_echoing_word_outcome:"무슨 일이 있어도, 이 세계는 더 이상 존재하지 않을 것이다."
+
+ situation_MJ25_WH_resource_deficit:"$MJ25_WH_void_whispers$ 적자"
+ situation_MJ25_WH_resource_deficit_type: "$situation_MJ25_WH_resource_deficit$"
+ situation_MJ25_WH_resource_deficit_desc:"우리 $MJ25_WH_void_whispers$ 적자가 통제 불능 상태입니다! $situation_deficit_desc_base$"
+ situation_MJ25_WH_resource_deficit_monthly_change_tooltip: "$situation_deficit_monthly_change_tooltip$"
+ deficit_situation_MJ25_Wh_resource_defaulted_tt:"우리 $MJ25_WH_void_whispers$ 비축량을 고갈시키면 §R재앙적인 결과가...§! 초래될 것입니다."
+
+ string_not_in_deficit_MJ25_WH_resource:"월별 $MJ25_WH_void_whispers$ 수지 흑자"
+ string_expenditures_greater_than_income_MJ25_WH_resource:"$MJ25_WH_void_whispers$ 적자"
+ string_resource_reserves_MJ25_WH_resource:"$MJ25_WH_void_whispers$ 비축량"
+
+ deficit_approach_MJ25_WH_resource_deficit_work_harder:"귀에 무리를 주다"
+ deficit_approach_MJ25_WH_resource_deficit_exposure:"속삭임 저장고를 열다"

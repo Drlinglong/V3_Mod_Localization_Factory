@@ -1,0 +1,2 @@
+﻿l_turkish:
+ GDP_TOOLTIP:1 "#header [concept_gdp]#!\n[Country.GetAdjective] $GDP_SHORT$'si: #N @money![Country.GetGDP|Dv]#! ($GDPGR_growth_text$) ([Country.GetGDPRanking])\n$TOOLTIP_DELIMITER$\nKişi başına düşen GSYİH: #variable @money![Country.GetGDPPerCapita|2*]#! ([Country.GetGDPPerCapitaRanking])\n$TOOLTIP_DELIMITER$\n[Country.GetAdjective] $GDP_SHORT$'sı küresel GSYİH'nın [Country.MakeScope.ScriptValue('larp_global_gdp_percent')|%v2]'idir\nKüresel GSYİH: @money![Country.MakeScope.ScriptValue('larp_global_gdp')|Dv]\n"

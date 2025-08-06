@@ -1,0 +1,355 @@
+﻿l_turkish:
+
+ ##################################
+ ### pdivinity_events_l_english ###
+ ###     by daniellm            ###
+ ##################################
+
+
+
+ ###################
+ ### event chain ###
+ ###################
+
+ project_divinity_crisis_chain_title:0 "İlahiyat Projesi"
+ project_divinity_crisis_chain_desc:0 "Kader Mimarı uyanırken kadim bir tasarım gözler önüne seriliyor. Medeniyetimizin kaderi, idrak ötesi bir gücü uyandırmaktır."
+
+ #####################
+ ### crisis events ###
+ #####################
+
+ # message from the architect
+ pdivinity_crisis.0.name:0 "Mimar Konuşuyor"
+ pdivinity_crisis.0.desc:0 "Fani görüşün ötesindeki derinliklerden izliyorum. Kaderiniz, türünüzün şafağından beri dokundu. Örtü kıpırdanıyor ve onunla birlikte İlahiyat'a giden yol gözler önüne seriliyor. İşaretinizi kucaklayın, Örtü-Dokunuşlu, ve uyanışı başlatın."
+ pdivinity_crisis.0.a:0 "Çağrınıza kulak veriyoruz."
+
+ # stage 1 crisis
+ pdivinity_crisis.1.name:0 "Amaca Uyanış"
+ pdivinity_crisis.1.desc:0 "Mimar'dan gelen mesaj zihinlerimizde yankılanıyor, artık uzak bir yankı değil, bir eylem çağrısı. Artık anlıyoruz ki tarihimiz, varlığımızın ta kendisi, idrakimizin ötesindeki güçler tarafından şekillendirilmiş. Bizim için amacımız belirlendi: ilk nefesimizi almadan önce yazılmış olan kaderi gerçekleştirmek.\n\nGeri dönüş yok. Önümüzdeki yol tehlikelerle dolu, ama aynı zamanda hayal bile edilemez bir güçle de. Perdenin ötesinde yatanı kucaklamaya hazırlanmalıyız."
+ pdivinity_crisis.1.a:0 "Yükselişimiz bekliyor."
+
+ # stage 2 crisis
+ pdivinity_crisis.2.name:0 "Yozlaşma Yankıları"
+ pdivinity_crisis.2.desc:0 "Etkimiz yıldızlar boyunca bir gölge gibi yayılıyor. Mimar'ın iradesi, yabancı dünyalarda kaos tohumları eken gizli tarikatlar ve gizli fanatikler aracılığıyla kendini gösteriyor. Bu kader ajanları, düşmanlarımızın kararlılığını zayıflatmak için yorulmadan çalışıyor, galaksiyi yaklaşan vahiy için hazırlıyor. Yıkım ağı daralıyor ve yakında herkes Mimar'ın gerçek gücünü bilecek."
+ pdivinity_crisis.2.a:0 "Galaksiyi uyandırma zamanı geldi."
+
+ # stage 3 crisis
+ pdivinity_crisis.3.name:0 "Ortaya Çıkan Kehanet"
+ pdivinity_crisis.3.desc:0 "Kaderin ipleri geriliyor, amacımız keskinleşiyor. Dünyaların yüzeyinin altında uzun süredir gömülü olan kadim işaretler kıpırdanmaya başlıyor. Görüşümüz zamanın perdesini deliyor, Mimar tarafından çizilen yol netleşiyor ve kaçınılmaz hesaplaşma yaklaşıyor."
+ pdivinity_crisis.3.a:0 "Kaderi kucakla"
+
+ # stage 4 crisis
+ pdivinity_crisis.4.name:0 "Örtü Dokunuşlu Yıldız"
+ pdivinity_crisis.4.desc:0 "Tamamlandı. Parça yıldız ateşinde kaybolurken parlak bir flaş sistemi tüketti. Şimdi, yıldız psiyonik bir renkle yanıyor, imkansız renklerin parıldayan akımlarıyla örtülü. Sistemdeki her dünya örtü tarafından dokunuldu.\n\nVe kaostan... bir şeyler kendini inşa ediyor. Ellerle değil, kaderle yapılmış bir yapı."
+ pdivinity_crisis.4.a:0 "Perde inceliyor."
+
+ # stage 5 crisis
+ pdivinity_crisis.5.name:0 "Desen Birleşiyor"
+ pdivinity_crisis.5.desc:0 "Tüm ipler hizalandı. Fısıltılar artık konuşmuyor, şarkı söylüyorlar. Yıldızlar boyunca, inançlılar coşkulu bir coşkuyla yükseliyor, düşman dünyalarının gölgelerinde tarikatlar çiçek açıyor ve perde o kadar inceliyor ki nefes alıyor.\n\nGerçekliğin kemiklerine işlenmiş büyük tasarım, tamamlanmaya yaklaşıyor. Mimar izliyor. Bekliyor. İrade ediyor.\n\nBiz asla inşaatçı değildik. Biz anahtardık."
+ pdivinity_crisis.5.a:0 "Son ayin başlıyor."
+
+ # crisis home system shrouded notification for the galaxy (happens on getting stage 4)
+ pdivinity_crisis.6.name:0 "Örtülü Bir Yıldız"
+ pdivinity_crisis.6.desc:0 "§Y[event_target:pdivinity_crisis_system.GetName]§! sistemindeki yıldız, radikal ve açıklanamaz bir dönüşüm geçirdi. Psiyonik okumalar eşi benzeri görülmemiş seviyelere fırladı ve sistemdeki her kolonize edilmemiş gezegen artık Örtü benzeri girişim desenleri sergiliyor.\n\nSistemin kalbinde, alçak yörüngede devasa bir yapı birleşiyor. İnşa yöntemi bilinmiyor ve §Y[event_target:pdivinity_crisis_empire.GetName]§! ile hiçbir diplomatik kanal onaylanmadı.\n\nGalaksiyi gözlemleyenler hemfikir: kadim bir şey ortaya çıkıyor."
+ pdivinity_crisis.6.a:0 "Bu doğal bir olay değil..."
+
+ ########################
+ ### respawning ships ###
+ ########################
+
+ pdivinity_crisis.10.name:0 "Boyutsal Yırtıcı Yeniden Canlandı"
+ pdivinity_crisis.10.desc:0 "Tek boyutsal yırtıcımızın yok edilmesi, galaksideki güç projeksiyonumuzu sarstı.\n\nAncak büyük patronumuz, §RKader Mimarı§!, dualarımızı duydu. Başkent sistemimizde yeni bir boyutsal yırtıcı çağrıldı."
+ pdivinity_crisis.10.a:0 "Örtü bunu istiyor."
+
+ pdivinity_crisis.11.name:0 "Tanrılar Ölmez"
+ pdivinity_crisis.11.desc:0 "§RKader Mimarı§!'nın fani formunun yok edilmesi uzun sürmedi. Tanrımız başkent sistemimizde yeniden doğdu."
+ pdivinity_crisis.11.a:0 "Tanrısal olana şükürler olsun."
+
+ ################################
+ ### dimensional tearer stuff ###
+ ################################
+
+ # destroyer
+ pdivinity_tearer.3.name:0 "Boyutsal portal yok edildi"
+ pdivinity_tearer.3.desc:0 "§H[From.GetName]§! sistemindeki portal yok edildi. Bununla birlikte, §RKader Mimarı§! ile seçilmişleri arasındaki kritik bir bağlantı kesildi.\n\nBu yarıktan daha fazla takviye çekilemez. §Y[event_target:pdivinity_crisis_empire.GetName]§!, gücüne kalıcı bir darbe aldı."
+ pdivinity_tearer.3.a:0 "Deliliğe bir kapı daha az."
+
+ # victim
+ pdivinity_tearer.6.name:0 "Bir İplik Kesildi"
+ pdivinity_tearer.6.desc:0 "§H[From.GetName]§! sistemindeki portal yok edildi. Mimar'ın bakışı sendeliyor ve O'nun iradesinin aktığı bağlantı çöktü.\n\nBoşluğun üzerimize kapandığını hissediyoruz. Ama bu son değil, yalnızca irademizin bir testi."
+ pdivinity_tearer.6.a:0 "Dayanıyoruz. Dayanmalıyız."
+
+ # notification for the galaxy upon tearer being used
+ pdivinity_tearer.8.name:0 "Yıldız Sistemi Örtülendi"
+ pdivinity_tearer.8.desc:0 "§H[destroyed_system.GetName]§! sistemi psiyonik türbülans tarafından tüketildi. Raporlar, gerçekliğin dokusunu yırtan devasa bir Örtü-doğumlu avatarın tezahürünü doğruluyor.\n\nArtık yörüngede, bilinmeyen enerjileri kanalize eden devasa bir boyutsal portal açıkta duruyor."
+ pdivinity_tearer.8.a:"İhlal başladı..."
+
+ # notification for using the tearer
+
+ pdivinity_tearer.9.name:0 "Yıldız Sistemi Örtülendi"
+ pdivinity_tearer.9.desc:0 "§H[destroyed_system.GetName]§! sistemi boyutsal yırtıcı tarafından tüketildi.\n\nArtık merkezi yıldızın üzerinde, galaksiye psiyonik varlıkları salmaya hazır devasa bir boyutsal portal asılı duruyor."
+ pdivinity_tearer.9.a:0 "Perde inceliyor."
+
+ ###########################
+ #### bombardment events ###
+ ###########################
+
+ # guy who owns the planet
+ pdivinity_bombardment.2.name:0 "[From.GetName] Gölgeye Büründü!"
+ pdivinity_bombardment.2.desc:0 "§H[From.From.GetName]§! komutasındaki bir filo §H[From.GetName]§!'a amansız bir bombardıman başlattı. Saldırı, gerçek uzay ile Gölge arasındaki perdeyi yıkan feci bir psiyonik kopuşla sonuçlandı. Tüm nüfus merkezleri ortadan kayboldu. Gezegen, §RBüyük Göz§! Diyarı'na kaybedildi."
+ pdivinity_bombardment.2.a:0 "Dünyamıza ne yaptılar?"
+
+ # guy who bombards the planet
+ pdivinity_bombardment.3.name:0 "[From.GetName] Gölgeye Büründü!"
+ pdivinity_bombardment.3.desc:0 "Kuvvetlerimiz §H[From.GetName]§!'ın bombardımanını tamamladı. Odaklanmış psiyonik enerjiyle doygunlaşan boyutlar arası perde yırtıldı. Gezegen artık ulaşılamaz bir durumda, §RKader Mimarı§!'nın hüküm sürdüğü Gölge'nin içine emildi."
+ pdivinity_bombardment.3.a:"Önceden bildirildiği gibi."
+
+ # guy who owns the planet
+ pdivinity_bombardment.4.name:0 "[From.GetName] Gölge-Evreli!"
+ pdivinity_bombardment.4.desc:0 "§H[From.From.GetName]§!'dan gelen filo, §H[From.GetName]§!'ı sürekli bir psiyonik saldırıyla bombaladı. Tamamen tüketilmemiş olsa da, perde önemli ölçüde zayıfladı. Gezegen şimdi düzensiz Gölge-evre fenomeni gösteriyor, gerçekliği dengesiz ve değişmiş durumda."
+ pdivinity_bombardment.4.a:"Kötülüklerinin sınırı yok."
+
+ # guy bombards the planet
+ pdivinity_bombardment.5.name:0 "[From.GetName] Gölge-Evreli!"
+ pdivinity_bombardment.5.desc:0 "Kuvvetlerimiz, §H[From.GetName]§!'ı odaklanmış psiyonik yüklerle bombalamada başarı bildirdi. Perde tamamen yırtılmadı ama inceldi, gezegen şimdi Gölge'nin etkisi altında kısmen suya batmış, değişken bir halde var oluyor. §RKader Mimarı§! içeriden izliyor."
+ pdivinity_bombardment.5.a:0 "İleriye doğru bir adım daha."
+
+
+ ############################
+ ### megastructure events ###
+ ############################
+
+ # stage 1
+ pdivinity_needle.1.name:0 "Perdeyi Aşmak"
+ pdivinity_needle.1.desc:0 "Yapının ilk aşaması tamamlandı. Sivri kuleleri, görünmez psiyonik harmoniklere hizalanmış hassas bir incelikle boşluğu deliyor. Bu sıradan bir yapı değil, düşünce ile ebediyeti birleştiren bir araç olduğu için, diyarlar arasındaki perde şimdiden kımıldanıyor."
+ pdivinity_needle.1.a:0 "Başlıyoruz."
+
+ # stage 2
+ pdivinity_needle.2.name:0 "Gölge'nin Nabzı"
+ pdivinity_needle.2.desc:0 "Yapı şimdi canlı enerjiyle uğulduyor. Psiyonik statik telleri yüzeyinde yay çiziyor, gerçek uzayla senkronize olarak bir girip bir çıkıyor. Varlığı karşısında zihinlerimiz ağrıyor. Perdenin diğer tarafında her ne yatıyorsa... farkında."
+ pdivinity_needle.2.a:0 "Yaklaşıyoruz."
+
+ # stage 3 spawns a dimensional tearer
+ pdivinity_needle.3.name:0 "Mimar'dan Bir Hediye"
+ pdivinity_needle.3.desc:0 "Yapının üçüncü aşaması perdeyi kopma noktasına getirdi. Kör edici bir gerçekdışılık parlamasıyla, uzayın sınırlarını yırtan devasa bir psiyonik kopuş meydana geldi ve içeriden bir şey ortaya çıktı.\n\nİrade ve gazaptan müteşekkil bir yapı olan bir §RBoyutsal Yırtıcı§!, §RKader Mimarı§!'nın bir elçisi olarak galaksimize sızdı."
+ pdivinity_needle.3.a:"Başlıyor."
+
+ # notification for the galaxy
+ pdivinity_needle.4.name:0 "Gölge Titriyor"
+ pdivinity_needle.4.desc:0 "Galaksinin dört bir yanında tüm zihinler üzerinde bir huzursuzluk çöktü. Psiyonik yatkınlığı olmayan türler bile karanlıkta görümler, tedirginlik ve fısıltılar bildiriyor.\n\n[From.GetName] sisteminde, boyutlar arasındaki perde çözülüyor. Orada etkili olan her ne kuvvetse, gerçekliğin ta kendisini rahatsız ediyor."
+ pdivinity_needle.4.a:0 "Biz de hissediyoruz."
+
+ # stage 4 mega, this spawns a cult in every empire as well
+ pdivinity_needle.5.name:0 "Şarkı Yayılıyor"
+ pdivinity_needle.5.desc:0 "Yapı şimdi Gölge boyunca bir melodi gibi yankılanıyor. Psiyonik emisyonları artık çeviri gerektirmiyor, en temel içgüdülerimiz tarafından anlaşılıyorlar. Galaksi çapında, uyuyan tarikatlar uyanıyor, §RKader Mimarı§!'nın gelişini vaaz ediyorlar.\n\nPerde inceliyor. Zihinler bükülüyor. Kehanet çağı artık gelecek zaman değil."
+ pdivinity_needle.5.a:0 "Çağrıyı duyuyorlar."
+
+ # you as a non-crisis empire gets a cult
+ pdivinity_needle.6.name:0 "Uyanmış Fanatizm"
+ pdivinity_needle.6.desc:0 "Tapınaklarda, sokak aralarında ve şehirlerimizin gölgelerinde, Gölge'den yaklaşan bir tanrıdan bahseden fanatik hareketler patlak verdi. Kendilerine §RMimar'ın Çocukları§! diyorlar ve coşkuları yangın gibi yayılıyor.\n\nBu varlığı biz çağırmadık, ama halkımız onun için ölmeye hazır."
+ pdivinity_needle.6.a:0 "Rahatsız edici."
+
+ # the architect of fate enters the galaxy. this wins you the game, and does damage to like 30% of the galaxy
+ pdivinity_needle.7.name:0 "Kader Saati"
+ pdivinity_needle.7.desc:0 "Son mühür kırıldı. Perde artık tutunamıyor.\n\nGölge'nin çekirdeğinden, §RO§! iniyor. Sınırsız, ışıldayan ve kavrayışın ötesinde engin. §RKader Mimarı§! galaksimizde şekil aldı ve yıldızlar O'nun ardından titriyor.\n\nBütün sistemler psiyonik gücün akışı altında yok oldu. Uzayın kendisi O'nun iradesi etrafında bükülüyor. Eski düzen çöküyor. Sahte tanrılar sessizliğe bürünüyor.\n\nBu artık imparatorluklar çağı değil. Bu kader çağıdır."
+ pdivinity_needle.7.a:0 "Her zaman öngörüldüğü gibi."
+
+ pdivinity_needle.9.name:0 "Perde Yırtıldı"
+ pdivinity_needle.9.desc:0 "Galaksi boyunca yıldızlar kararıyor ve fısıltılar geri dönüyor. Sayısız sistemde, psiyonik sis dalgaları perdedeki çatlaklardan akarken gerçeklik parçalanıyor. Dünyalar yeniden şekilleniyor, zihinler köksüz kalıyor ve artan sessizlikte, muazzam bir şey kımıldadı. Kader Mimarı geldi.\n\nBu bir savaş değildi. Bu bir vahiy idi."
+ pdivinity_needle.9.a:0 "Yıldızlar artık bizim değil."
+
+ # fires for the one who destroys the mega
+
+ pdivinity_needle.12.name:0 "Kader Kulesi yok edildi"
+ pdivinity_needle.12.desc:0 "İmkansız başarıldı. [From.GetName] sistemindeki devasa megayapı – sözde 'Kader Kulesi' yok edildi. Psiyonik türbülans, yakındaki sistemlere can çekişen bir çığlık gibi vuruyor.\n\nGerçekliğimize sızmaya çalışan her ne kuvvetse, gemisi reddedildi. Şimdilik."
+ pdivinity_needle.12.a:0 "Hattı tuttuk."
+
+ # fires for the victim
+ pdivinity_needle.13.name:0 "Kader Kulesi Yok Edildi"
+ pdivinity_needle.13.desc:0 "Düşünülemez olan gerçekleşti. Mimar'a açılan kapımız ve tüm kehanetin doruk noktası olan §HKader Kulesi§! yok edildi.\n\nPisiyonik geri tepme, ruhsal bir yara gibi saflarımızı parçaladı. Örtü geri çekiliyor. Yükselişimiz durduruldu… şimdilik."
+ pdivinity_needle.13.a:0 "Bu nasıl olabildi?"
+ pdivinity_needle.13.a.tt:0 "YER TUTUCU bunu ben yazarım merak etmeyin"
+
+ # notification for the rest of the galaxy, because of the above
+ pdivinity_needle.14.name:0 "Kader Kulesi Yok Edildi"
+ pdivinity_needle.14.desc:0 "Parlak bir psiyonik türbülans patlamasıyla, §H[pdivinity_crisis_country.GetName]§!'nin megayapısı, sözde §HKader Kulesi§, yok edildi.\n\nBir anlığına, tüm Örtü çığlık attı. Galaksimize sızan her ne güçse, geri püskürtüldü. Ancak bedeli henüz anlaşılamadı."
+ pdivinity_needle.14.a:0 "Umarız gitmiş olarak kalır."
+
+ ##################
+ ### cult stuff ###
+ ##################
+
+ # getting vassalized
+ pdivinity_cults.0.name:0 "Örtülü Darbe"
+ pdivinity_cults.0.desc:0 "Boyun eğmemizin ardından, eski hükümet dağıtıldı. Eski liderimiz sürgün edildi ve onun yerine, §RKader Mimarı§!'nın bir aracı ve tarikatın sözcüsü olarak bir Örtü Gezgini devletin başına geçti. Direnişe artık müsamaha gösterilmiyor. İmparatorluğumuz artık ilahi tasarımın yolunda ilerliyor."
+ pdivinity_cults.0.a:0 "Artık Kader Mimarı'na hizmet ediyoruz"
+
+ # situation stuff
+ situation_pdivinity_cult_uprising:0 "Örtü Tarikatı Ayaklanması"
+ situation_pdivinity_cult_uprising_type:0 "Örtü Tarikatı Ayaklanması"
+ situation_pdivinity_cult_uprising_monthly_change_tooltip:0 "Tarikat etkisi yayılıyor"
+ situation_pdivinity_cult_uprising_desc:0 "§RKader Mimarı§!'na adanmış gizemli bir tarikat imparatorluğumuzda yayılıyor. Etkileri gölgelerde büyüyor: kurumlara sızıyorlar, hayal kırıklığına uğramışları kendi saflarına çekiyorlar ve iktidarı ele geçirmeye hazırlanıyorlar."
+ situation_pdivinity_cult_uprising_approach_1:0 "Göz Yummak"
+ situation_pdivinity_cult_uprising_approach_1_tt:0 "Proaktif bastırma önlendi. Tarikat etkisi büyüyor, ancak şimdilik isyan yok."
+ situation_pdivinity_cult_uprising_approach_2:0 "Yıkıma Karşı Koyma"
+ situation_pdivinity_cult_uprising_approach_2_tt:0 "Propaganda ve eğitim, tarikat üyeliğini yavaşlatıyor, ancak her ay hükümetimize yük bindiriyor."
+ situation_pdivinity_cult_uprising_approach_3:0 "Sadakati Uygulamak"
+ situation_pdivinity_cult_uprising_approach_3_tt:0 "Bilinen tarikatçıları tutuklamak için güvenlik güçleri konuşlandırıldı, bu durum etkiyi azaltıyor ancak huzursuzluğa ve iç anlaşmazlığa neden oluyor."
+ situation_pdivinity_cult_uprising_success_tt:0 "Tarikatçılar bize karşı ayaklanacak"
+ situation_pdivinity_cult_uprising_failed_tt:0 "Kalan tarikatçılar saflarımızdan temizlenecek"
+
+ pdivinity_cultists_killed_tt:0 "Başrahip İdam Edildi"
+ pdivinity_stop_cultist_spread_tt:0 "Gölge Bulundu"
+ pdivinity_accelerate_cultists_tt:0 "Tarikatçılar Yardım Aldı"
+ pdivinity_educate_the_masses_tt:0 "Yıkıma Karşı Koyma"
+ pdivinity_supress_the_cults_tt:0 "Sadakati Uygulamak"
+ pdivinity_call_of_the_eye_tt:0 "Gözün Çağrısı"
+
+ # fires when you can no longer stop the cults
+ pdivinity_cults.5.name:0 "Peçe Düştü"
+ pdivinity_cults.5.desc:0 "Tarikat artık gölgelerde faaliyet göstermiyor. Kilit nüfus merkezlerinde koordineli ayaklanmalar patlak verdi ve kendi kurumlarımızdaki hainler açıkça fanatiklerin tarafını tutuyor. Artık tüm bölgeler devlete değil, Örtü'nün ajanlarına yanıt veriyor. Şimdi ne yaparsak yapalım, başlayan şeyi geri alamayız."
+ pdivinity_cults.5.a:0 "Kontrolü kaybettik."
+
+ # rapid growth
+ pdivinity_cults.12.name:0 "Karanlıktaki Fısıltılar"
+ pdivinity_cults.12.desc:0 "Tarikat tapınakçıları yeni bölgelere sızdı. Raporlar, hayal kırıklığına uğramış vatandaşlar arasında üye alımında bir patlama olduğunu gösteriyor. Tarikatın etkisi artık kamusal yaşamda görünür durumda."
+ pdivinity_cults.12.a:0 "Harekete geçmeliyiz"
+
+ # terror attack
+ pdivinity_cults.13.name:0 "Örtü Terörü"
+ pdivinity_cults.13.desc:0 "Dün gece başkentteki bir tarikat ritüeli, Örtü'den korkunç hayaletler çağırdığında panik uyandı; spektral varlıklar masumları katlettikten sonra ortadan kayboldu.\n\nTerör, halkı derinden sarstı."
+ pdivinity_cults.13.a:0 "Bu çılgınlığı durdurun!"
+
+ # cult executed
+ pdivinity_cults.14.name:0 "Tarikat Başrahibi İdam Edildi"
+ pdivinity_cults.14.desc:0 "Yetkililer, tarikatın başrahiplerinden birini yakalayıp idam etti. Bu karizmatik lider olmadan, tarikatın etkisi durgunlaştı ve hükümetimize değerli bir nefes alma imkanı tanıdı."
+ pdivinity_cults.14.a:0 "En azından zaman kazandık."
+
+ # cult lose
+ pdivinity_cults.15.name:0 "Kült Temizlendi"
+ pdivinity_cults.15.desc:0 "Örtü tarikatı nihayet dağıtıldı. Gizli tapınakları yerle bir edildi, takipçileri tutuklandı veya öldürüldü. İmparatorluğumuz yeniden nefes alıyor, ancak yol açtığı korku derin izler bıraktı."
+ pdivinity_cults.15.a:0 "Bu vahşet burada sona eriyor."
+
+ # cult wins
+ pdivinity_cults.17.name:0 "Kontrolü Devret"
+ pdivinity_cults.17.desc:0 "Dünyalarınızın gölgelerinde büyüdük, halkınız uzun zamandır Mimarin fısıltılarını duydu, şimdi onun silahlanma çağrısına kulak veriyorlar.\n\nDevletin kontrolünü Hiyerofantımıza devredin, [pdivinity_crisis_empire.GetName]'a boyun eğin ya da §RKaderin Mimarı§!'nın çocuklarının gazabıyla yüzleşin."
+
+ pdivinity_cults.17.a:0 "Mimarin istekli hizmetkârları olacağız."
+ pdivinity_surrender:0 "Hükümetimizi tarikatçılara teslim edecek ve [pdivinity_crisis_empire.GetName] altında bir yardımcı olacağız."
+
+ pdivinity_cults.17.b:0 "Asla teslim olmayacağız!"
+ pdivinity_fight:0 "Kaderin çocukları kararımızı kabul etmeyecek gibi görünüyor ve savaş yakında kapımızda olacak."
+
+ # cult contacts crisis empire
+ pdivinity_cults.31.name:0 "[pdivinity_cult_defender.GetName] içinde tarikat ayaklanması"
+ pdivinity_cults.31.desc:0 "Kafirler taleplerimizi reddettiler, [pdivinity_cult_defender.GetName] boyunca savaşa hazır sadık takipçilerimiz var. Çok sayıda dünyaya ritüel alanları yerleştirildi, örtünün hizmetkarlarını çağırmaya hazır.\n\nKaderin çocukları emirlerinizi bekliyor."
+ pdivinity_cults.31.b:0 "[pdivinity_cult_defender.GetName]'a savaş ilan et."
+ pdivinity_declare_war:0 "Tarikatçılar [pdivinity_cult_defender.GetName] genelinde ayaklanacak."
+
+
+ # abort situation
+ pdivinity_cults.30.name:0 "Mimar'a Boyun Eğme"
+ pdivinity_cults.30.desc:0 "Kaderin Mimarı'nın çağrısına kulak verdiniz, onun en sadık hizmetkârları şimdilik silahlarını bırakacaklar. Yoldan sapmayın, büyük göz üzerimizde nöbet tutuyor."
+ pdivinity_cults.30.a:0 "Örtü bunu istiyor."
+
+ ############################
+ ### espionage operations ###
+ ############################
+
+ # spread cult
+
+ operation_pdivinity_establish_cult:0 "Mimarin sözünü yay."
+ operation_pdivinity_establish_cult_desc:0 "Hedef imparatorluğa sızmak ve Mimarin etkisinin tohumlarını ekmek için gizli ajanlar gönderin, yöneticilerine olan sadakatlerini zayıflatan gizli bir tarikat oluşturun."
+ operation_pdivinity_establish_cult_dont_stack_this:0 "$TRIGGER_FAIL$ §R[root.target.GetName] içinde zaten bir örtü tarikatı kurduk."
+
+ pdivinity_cults.1.name:0 "İlk Fısıltı"
+ pdivinity_cults.1.desc:0 "Ajanlarımız, Mimarin çağrısına karşı savunmasız bireyleri araştırmaya başladı; hayal kırıklığına uğramış veya güce özlem duyanları hedef alıyorlar. Bu adaylar, tarikatımızın temelini oluşturacak."
+ pdivinity_cults.1.a:0 "Bir sonraki aşamayı hazırlayın."
+
+ pdivinity_cults.2.name:0 "Fısıltıyı Yaymak"
+ pdivinity_cults.2.desc:0 "Gizli toplantılar ve fısıltılı vaatler gölgeli köşelerde bir orman yangını gibi yayılıyor. Tarikatın etkisi hoşnutsuzlar arasında büyüyor, kitlelerin sadakatini yavaşça zehirliyor."
+ pdivinity_cults.2.a:0 "Mimarin erişimi genişliyor."
+
+ pdivinity_cults.3.name:0 "Fısıltılar İmparatorluğu"
+ pdivinity_cults.3.desc:0 "Küçük ceplerde başlayan şey, imparatorluk genelinde bir hücre ağına dönüştü. Tarikat artık gölgelerde açıkça hareket ediyor, fısıltıları her köşeden ayrılık tohumları ekiyor."
+ pdivinity_cults.3.a:0 "Momentum bizde."
+
+ pdivinity_cults.4.name:0 "Fısıltılar Uyanıyor"
+ pdivinity_cults.4.desc:0 "Tarikatımız, imparatorluğun kurumlarının derinliklerine kök saldı. Kaderin Mimarı'na olan sadakatleri artık kendi liderlerine olanı aşıyor. İmparatorluk çöküşe yaklaşıyor."
+ pdivinity_cults.4.a:0 "Hesaplaşma zamanı yaklaşıyor."
+
+ # fund cult
+
+ operation_pdivinity_accelerate_cult:0 "Tarikat Büyümesini Hızlandır"
+ operation_pdivinity_accelerate_cult_desc:0 "Kaynakları ve psiyonik enerjiyi yönlendirerek, tarikatın hedef imparatorluktaki yayılmasını hızlandırıyoruz. Ne kadar hızlı düşerlerse, Mimarin iradesi o kadar çabuk gerçekleşir."
+ operation_pdivinity_fund_cults_pause:0 "$TRIGGER_FAIL$ §R[root.target.GetName] içindeki tarikatlara daha fazla fon göndermeden önce beklemeliyiz."
+
+ pdivinity_cults.19.name:0 "Temas Kuruldu"
+ pdivinity_cults.19.desc:0 "Önemli tarikat liderleriyle temas kurduk. Bağlılıkları sarsılmaz ve ağları emirlerimiz doğrultusunda hareket etmeye hazır."
+ pdivinity_cults.19.a:0 "Plan belirlendi."
+
+ pdivinity_cults.20.name:0 "Kaynak Müzakereleri"
+ pdivinity_cults.20.desc:0 "Tarikat hücrelerini güçlendirmek için fonlar ve tedarikler sağlanıyor. Yönlendirilen her kredi, Mimarin vizyonunu gerçeğe bir adım daha yaklaştırıyor."
+ pdivinity_cults.20.a:0 "Kaynaklar tahsis edildi."
+
+ pdivinity_cults.21.name:0 "Gölge Filolarına Finansman Sağlama"
+ pdivinity_cults.21.desc:0 "Tarikat filoları, Perde'nin gücüyle beslenerek, çağrıldıklarında saldırmaya hazırlar. Düşmanlarımız onları neyin yok ettiğini bilmeyecek."
+ pdivinity_cults.21.a:0 "Filolar hazırlandı."
+
+ # pause cult
+
+ operation_pdivinity_locate_cult:0 "Perde Tarikatı Hücrelerini Tespit Etme"
+ operation_pdivinity_locate_cult_desc:0 "Aracısız casusluk faaliyetleriyle gizli tarikat hücrelerini arıyoruz. Konumlarını açığa çıkarmak, sinsi etkilerini ezmenin ilk adımıdır."
+ operation_pdivinity_locate_cults_pause:0 "$TRIGGER_FAIL$ §R[root.target.GetName] içindeki daha fazla tarikatçıyı bulmadan önce beklemeliyiz."
+
+ pdivinity_cults.22.name:0 "Gölgeleri Takip Etme"
+ pdivinity_cults.22.desc:0 "İstihbarat görevlilerimiz gizlice faaliyet gösteren birkaç şüpheli tarikat üyesini ortaya çıkardı. Ağları kırılgandır, yakında bağlantılarını keseceğimizi umuyoruz."
+ pdivinity_cults.22.a:0 "Kapsama önlemlerini hazırlayın."
+
+ pdivinity_cults.23.name:0 "Sapkınları Temizleme"
+ pdivinity_cults.23.desc:0 "Toplanan bilgilerle birlikte, ajanlarımız bilinen tarikat hücrelerine yönelik hedefli operasyonlar başlattı, toplanmalarını dağıttı ve saflarında korku yaydı."
+ pdivinity_cults.23.a:0 "Baskıyı sürdürün."
+
+ pdivinity_cults.24.name:0 "Operasyon Tamamlandı"
+ pdivinity_cults.24.desc:0 "Çabalarımız tarikatın kök saldığı yeri önemli ölçüde zayıflattı. Tehdit devam etse de, savunmalarımızı güçlendirmek için değerli zaman kazandık."
+ pdivinity_cults.24.a:0 "Teyakkuzu sürdürün."
+
+ ###############
+ ### digsite ###
+ ###############
+
+ pdivinity_catacombs_digsite:0 "Örtülü Köken"
+ pdivinity_catacombs_digsite_desc:0 "Ana gezegenimizin yüzeyinin altında bir sinyal uyandı. Kadim, kasıtlı ve kesinlikle psiyonik. Kökeni açıklanamaz, ancak içimizde derin bir şeyi yankılıyor. Kaderimiz artık bizim yazacağımız bir şey değil, açığa çıkıyor."
+
+ pdivinity_digsite.1.name:0 "Alttaki Sinyal"
+ pdivinity_digsite.1.desc:0 "Ana gezegenimizin mantosunun derinliklerinden yayılan düşük frekanslı bir nabız tespit edildi. Doğal değil, psiyonik imzası kesinlikle belirgin. Enerjisi bilinen hiçbir teknolojiyle eşleşmiyor. Bizi çağırıyor.\n\nAraştırmalıyız."
+ pdivinity_digsite.1.a:0 "Kazıya başlayın."
+
+ pdivinity_digsite.2.name:0 "İniş"
+ pdivinity_digsite.2.desc:0 "Kazımız, daha önce bilinen hiçbir şeye benzemeyen bir yeraltı yapısı ortaya çıkardı. Mimarisi uzaylılara ait, ancak bize tanıdık. Duvarları çözülemeyen sembollerle dolu, yine de zihinlerimiz onları anlayabiliyor. Tüm alan psiyonik rezonansla uğulduyor, hava adlarımızı fısıldıyor.\n\nBurası bir nedenle gömülmüştü. Ama biz daha da derine çekiliyoruz."
+ pdivinity_digsite.2.a:0 "Dikkatle ilerleyin."
+
+ pdivinity_digsite.3.name:0 "Taşın Altındaki Fısıltılar"
+ pdivinity_digsite.3.desc:0 "Ekiplerimiz yeraltı yapısının derinliklerine indikçe, işitsel halüsinasyonlar bildirmeye başlıyorlar; önce hafif mırıltılar, sonra bir şekilde anladıkları bir dilde fısıldayan sesler. Sesler, genetik kodumuzda taşınan bir 'işaret'ten ve bizi bekleyen bir rolden bahsediyor. Bazı mürettebat üyeleri, fısıltıların doğrudan kendilerine isimleriyle hitap ettiğini iddia ediyor.\n\nKimse geri dönmek istemiyor."
+ pdivinity_digsite.3.a:0 "Ne kadar derine inersek, o kadar netleşiyor."
+
+ pdivinity_digsite.4.name:0 "Mimarın İşareti"
+ pdivinity_digsite.4.desc:0 "Karmaşık oymalar ve psiyonik yazıtlarla mühürlenmiş devasa bir kapı aralığı ortaya çıkardık. Merkezinde, zayıf, ritmik enerjiyle titreşen bir sembol var. Bazılarımız onu rüyalarından, diğerleri ise dini vizyonlardan tanıyor. Üstündeki bir yazıt şöyle diyor: 'Yalnızca Mimar tarafından işaretlenmiş olanlar geçebilir.'\n\nYapı, sanki bekliyormuşçasına varlığımızla yankılanıyor."
+ pdivinity_digsite.4.a:0 "Bunu bulmamız gerekiyordu."
+
+ pdivinity_digsite.5.name:0 "Amacın Yankıları"
+ pdivinity_digsite.5.desc:0 "Yapının daha da derinlerinde imkânsız bir şey bulduk: Medeniyetimizin kesin tarihini tasvir eden duvar resimleri, dışarıdan kimsenin bilemeyeceği olaylarla, türümüzden daha eski duvarlara kazınmış. Kalbinde, yalnızca 'kader tarafından işaretlenmiş' olanlara giriş izni verilen mühürlü bir oda vardı."
+ pdivinity_digsite.5.a:0 "Her şey anlatıldığı gibi gelişiyor..."
+
+ pdivinity_digsite.6.name:0 "Bekleyenler"
+ pdivinity_digsite.6.desc:0 "Mühürlü kapının ötesinde, uzun süredir ölü olduğu varsayılan figürlerin yaşadığı bir odayla karşılaştık; zayıflamış, cübbeli varlıklar, §RMimar'ın§! ilk öğrencileri olduklarını iddia ediyorlar. Gözleri hafifçe parlıyor ve sesleri sayısız başkalarıyla katmanlanmış gibi yankılanıyor. Gelişimizin önceden görüldüğünü, döngünün şimdi yeniden başlaması gerektiğini söyleyerek bizi karşılıyorlar.\n\nRehberlik... ve bir hediye sunuyorlar."
+ pdivinity_digsite.6.a:0 "Bizi bekliyorlardı."
+
+ pdivinity_digsite.7.name:0 "§RKader Parçacığı§!"
+ pdivinity_digsite.7.desc:0 "Bize daha büyük bir şeyin bir parçasını sunuyorlar. Tanrısallığın bizzat bir parçasını, mimarın bir parçacığını. Amacını biliyoruz, uyuyan şeyi uyandıracak bir eylem.\n\nGeridönüşü olmayan bir şeyin eşiğindeyiz..."
+ pdivinity_digsite.7.a:0 "Perde parçalanacak."
+
+
+
+
+

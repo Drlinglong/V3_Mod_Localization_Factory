@@ -1,0 +1,78 @@
+﻿l_braz_por:
+##################
+# hcp_ships_l_english.yml
+# By jam1066
+##################
+
+ #start
+
+ ###################
+ # Ship Components #
+ ###################
+ hcp_PLANET_KILLER_STELLAR_HARVESTER:"Enxame de Drones Coletores"
+ hcp_PLANET_KILLER_STELLAR_HARVESTER_ACTION:"Colher Sistema Solar"
+ PLANET_KILLER_CRACKER_DESC:"Um grande enxame de drones autônomos é liberado para desmantelar tudo no sistema. Apenas a nave de controle é poupada de seus lasers de mineração."
+ FLEETORDER_DESTROY_PLANET_WITH_hcp_PLANET_KILLER_STELLAR_HARVESTER:"Preparando para colher $PLANET|Y$"
+ 
+ ## Targeting Requirements
+ hcp_can_test_fire:"\n£trigger_no£ Deve testar em sistema próprio sem colônias"
+ hcp_nothing_to_harvest:"\n£trigger_no£ Não há nada para colher"
+ hcp_is_your_megastructure_system:"\n£trigger_no£ Não deve mirar em sistema que contém seu próprio Silo de Singularidade"
+
+ hcp_SHIP_STELLAR_HARVESTER_REPLICATE:"Baía de Replicação"
+ hcp_SHIP_STELLAR_HARVESTER_REPLICATE_DESC:"Esta baía de replicação especializada permite que nossos Coletores Estelares usem seus recursos coletados para criar mais unidades de si mesmos, garantindo que nossas operações de colheita possam crescer exponencialmente."
+ hcp_stellar_harvester_replicate_ship_button:"§HReplicar§!\n\n§HCusto§!: £minerals£$@hcp_replicate_cost|0$\n§HTempo de Construção§!: 360 £time£\n\nOrdene ao Coletor Estelar para §YReplicar§!."
+ hcp_stellar_harvester_replicate_activity_key:"Replicando"
+ hcp_stellar_harvester_replicate_menu_title:"Replicar"
+ hcp_stellar_harvester_replicate_progress_activity_key:"Replicando: §Y$PROGRESS$%§!"
+
+ hcp_stellar_harvester_depart_galaxy_ship_button:"§HDeixar Galáxia§!\n\n§HCusto§!: £energy£100000\n§HTempo de Carregamento§!: 360 £time£\n\nOrdene ao Coletor Estelar para §YDeixar a Galáxia§!."
+ hcp_stellar_harvester_depart_galaxy_activity_key:"Carregando FTL Intergaláctico"
+ hcp_stellar_harvester_depart_galaxy_menu_title:"Deixar Galáxia"
+ hcp_stellar_harvester_depart_galaxy_progress_activity_key:"Carregando FTL Intergaláctico: §Y$PROGRESS$%§!"
+ hcp_stellar_harvester_depart_galaxy_must_be_rim:"\n£trigger_no£ Deve estar na borda da galáxia"
+
+ ####################
+ # Prospector Drone #
+ ####################
+ hcp_NAME_Prospector_Drone:"Drone Prospector"
+ hcp_BIO_NAME_Prospector_Drone: "$hcp_NAME_Prospector_Drone$"
+
+ hcp_prospector_drone: "$hcp_NAME_Prospector_Drone$"
+ hcp_prospector_drone_plural:"Drones Prospectores"
+
+ ################
+ # Mining Drone #
+ ################
+
+ hcp_mining_drone:"Drone de Mineração"
+ hcp_mining_drone_plural:"Drones de Mineração"
+ hcp_mining_drone_cap: "$hcp_mining_drone$"
+
+ hcp_mining_drone_MSS_section:"Estrutura Perfuradora"
+ hcp_mining_drone_GPP_section:"Estrutura de Explosivos"
+
+ ###################
+ # Excavator Drone #
+ ###################
+
+ hcp_excavator_drone:"Drone Escavador"
+ hcp_excavator_drone_plural:"Drones Escavadores"
+ hcp_excavator_drone_cap: "$hcp_excavator_drone$"
+
+ hcp_excavator_drone_MMSS_section:"Estrutura Perfuradora"
+ hcp_excavator_drone_GGPP_section:"Estrutura de Explosivos"
+
+ ######################
+ # Stellar Harvesters #
+ ######################
+ hcp_NAME_Stellar_Harvester:"Coletor Estelar"
+
+ hcp_stellar_harvester: "$hcp_NAME_Stellar_Harvester$"
+ hcp_stellar_harvester_plural:"Coletores Estelares"
+
+ hcp_HARVESTER_STORAGE_title:"£mod_country_resource_max_add£Recursos:"
+ hcp_HARVESTER_STORAGE_value:"[this.hcp_harvester_stored_resources]"
+ hcp_HARVESTER_STORAGE_tt:"A reserva atual de recursos do Coletor, que ele pode gastar em habilidades ou para se replicar."
+
+ #end
