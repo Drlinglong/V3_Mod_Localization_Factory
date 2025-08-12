@@ -8,14 +8,17 @@ from utils import i18n
 from config import CHUNK_SIZE, MAX_RETRIES, API_PROVIDERS
 from utils.text_clean import strip_pl_diacritics, strip_outer_quotes
 
-# 【核心修正】直接从当前(core)目录导入我们所有的“引擎模块”
+# 【核心修正】直接从当前(core)目录导入我们所有的"引擎模块"
 from . import gemini_handler
 from . import openai_handler
+from . import qwen_handler
 
 def get_handler(provider_name):
-    """这是一个“工厂函数”，根据名称返回对应的API处理器模块。"""
+    """这是一个"工厂函数"，根据名称返回对应的API处理器模块。"""
     if provider_name == "openai":
         return openai_handler
+    elif provider_name == "qwen":
+        return qwen_handler
     
     # 默认返回Gemini
     return gemini_handler

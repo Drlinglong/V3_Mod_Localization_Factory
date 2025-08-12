@@ -68,5 +68,6 @@
 "prompt_custom_lang_prefix": "请输入输出文件夹前缀 (例如: IT-): ",
 "entering_custom_mode": "--- 进入自定义语言模式 ---",
 "select_api_provider_prompt": "请选择API供应商:",
+"qwen_china_hint": "（中国大陆地区用户请用这个）",
 "workflow_completed": "工作流完成！"
 }
