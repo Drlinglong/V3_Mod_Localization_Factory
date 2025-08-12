@@ -1,0 +1,50 @@
+2025-08-12 23:33:37,643 - INFO - Logger initialized and ready.
+2025-08-12 23:33:47,959 - INFO - Language loaded: zh_CN
+2025-08-12 23:33:47,959 - INFO - --- New Session Started ---
+2025-08-12 23:33:47,959 - INFO - 请选择API供应商:
+2025-08-12 23:33:47,959 - INFO -   [1] Gemini
+2025-08-12 23:33:47,959 - INFO -   [2] Openai
+2025-08-12 23:33:47,961 - INFO -   [3] Qwen - （中国大陆地区用户请用这个）
+2025-08-12 23:33:48,936 - INFO - 
+请选择游戏:
+2025-08-12 23:33:48,936 - INFO -   [1] Victoria 3 (维多利亚3)
+2025-08-12 23:33:48,936 - INFO -   [2] Stellaris (群星)
+2025-08-12 23:33:48,936 - INFO -   [3] Europa Universalis IV (欧陆风云4)
+2025-08-12 23:33:48,936 - INFO -   [4] Hearts of Iron IV (钢铁雄心4)
+2025-08-12 23:33:48,937 - INFO -   [5] Crusader Kings III (十字军之王3)
+2025-08-12 23:33:49,772 - INFO - 
+--- 正在扫描源文件夹 [source_mod] ---
+2025-08-12 23:33:49,772 - INFO - 请选择要汉化的Mod：
+2025-08-12 23:33:49,773 - INFO -   [1] Australia & New Zealand Flavor Pack
+2025-08-12 23:33:49,773 - INFO -   [2] Forts & Engineers
+2025-08-12 23:33:49,773 - INFO -   [3] GORA UI
+2025-08-12 23:33:49,773 - INFO -   [4] Hydra's More Agenda's
+2025-08-12 23:33:49,773 - INFO -   [5] MODJAM2025
+2025-08-12 23:33:49,773 - INFO -   [6] MODJAM2025 - 副本
+2025-08-12 23:33:49,773 - INFO -   [7] Offer Convoy Contribution
+2025-08-12 23:33:49,773 - INFO -   [8] Project Utopia - Extended Timeline - Technical Preview
+2025-08-12 23:33:49,773 - INFO -   [9] Tech & Res
+2025-08-12 23:33:49,773 - INFO -   [10] TEST-ANZAC
+2025-08-12 23:33:49,773 - INFO -   [11] UKrework
+2025-08-12 23:33:51,233 - INFO - 
+你选择了: Offer Convoy Contribution
+2025-08-12 23:33:51,233 - INFO - 
+--- 正在获取Mod主题上下文 ---
+2025-08-12 23:33:51,233 - INFO - 已识别Mod名称为: 'Offer Convoy Contribution'
+2025-08-12 23:33:52,209 - INFO - 最终使用的主题上下文为: 'Offer Convoy Contribution'
+2025-08-12 23:33:52,209 - INFO - 
+--- 开始精简源Mod文件夹: Offer Convoy Contribution ---
+2025-08-12 23:33:59,273 - INFO - 操作已取消。
+2025-08-12 23:33:59,273 - INFO - 
+请选择源语言:
+2025-08-12 23:33:59,273 - INFO -   [1] English
+2025-08-12 23:33:59,273 - INFO -   [2] 简体中文
+2025-08-12 23:33:59,273 - INFO -   [3] Français
+2025-08-12 23:33:59,273 - INFO -   [4] Deutsch
+2025-08-12 23:33:59,273 - INFO -   [5] Español
+2025-08-12 23:33:59,274 - INFO -   [6] 日本語
+2025-08-12 23:33:59,274 - INFO -   [7] 한국어
+2025-08-12 23:33:59,274 - INFO -   [8] Polski
+2025-08-12 23:33:59,274 - INFO -   [9] Português do Brasil
+2025-08-12 23:33:59,274 - INFO -   [10] Русский
+2025-08-12 23:33:59,274 - INFO -   [11] Türkçe

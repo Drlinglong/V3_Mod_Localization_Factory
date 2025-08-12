@@ -1,10 +1,17 @@
 # scripts/core/directory_handler.py
 import os
 import shutil
-from utils import i18n
-from config import SOURCE_DIR
+import sys
+
+# 添加项目根目录到路径
+project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+if project_root not in sys.path:
+    sys.path.insert(0, project_root)
+
+from scripts.utils import i18n
+from scripts.config import SOURCE_DIR
 # ↓↓↓ nowo dodane importy ↓↓↓
-from utils.text_clean import strip_pl_diacritics
+from scripts.utils.text_clean import strip_pl_diacritics
 # ↑↑↑------------------------↑↑↑
 import logging
 

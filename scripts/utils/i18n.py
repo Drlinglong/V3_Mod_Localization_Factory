@@ -40,7 +40,9 @@ def load_language(lang_code=None):
             logging.warning(f"Language selection failed, using default: {e}")
             lang_code = _default_lang
     
-    lang_file_path = os.path.join('data', 'lang', f'{lang_code}.json')
+    # 获取项目根目录的路径
+    project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+    lang_file_path = os.path.join(project_root, 'data', 'lang', f'{lang_code}.json')
 
     try:
         with open(lang_file_path, 'r', encoding='utf-8') as f:
@@ -76,8 +78,5 @@ def load_language(lang_code=None):
 
 def t(key, **kwargs):
     """获取翻译后的字符串。"""
-    if not _strings:
-        load_language()  # 如果还没有加载语言，自动加载
-    
     # 提供一个备用值，防止因字典key不存在而崩溃
     return _strings.get(key, f"<{key}>").format(**kwargs)
