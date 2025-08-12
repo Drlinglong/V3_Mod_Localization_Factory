@@ -4,32 +4,32 @@
  ################################
  
  council_agenda_agenda_MA_Hydra_democratic_name:"探索观点"
- council_agenda_agenda_MA_Hydra_democratic_desc:"当观点被强制推行时，好想法便会被扼杀，因为当盒子上了锁，钥匙又被扔掉，谁还能跳出盒子思考呢？"
+ council_agenda_agenda_MA_Hydra_democratic_desc:"好思想在强制推行观点时会被扼杀，因为当盒子上了锁，钥匙又被扔掉时，谁还能跳出盒子思考呢？"
  agenda_MA_Hydra_democratic_finish: "$agenda_MA_Hydra_democratic$"
  
  council_agenda_agenda_MA_Hydra_oligarchic_name:"强制秩序"
- council_agenda_agenda_MA_Hydra_oligarchic_desc:"为我们的执法部队提供额外资金将确保街头秩序；如果街上没有足够的罪犯来证明我们铁腕手段的必要性，我们就只好为那些我们想关进监狱的人编造罪名了。"
+ council_agenda_agenda_MA_Hydra_oligarchic_desc:"为我们的警察部队提供额外资金将确保街头秩序，如果罪犯数量不足以彰显我们强硬的[Root.GetSpeciesHandName]式手段的必要性，我们只好为那些我们想关进牢里的人捏造罪行。"
  agenda_MA_Hydra_oligarchic_finish: "$agenda_MA_Hydra_oligarchic$"
- council_agenda_agenda_MA_Hydra_oligarchic_effect:"(每$pop_group_unit$ $MA_Hydra_job_enforcer_name_with_icon$获得£influence£$1|Y0$)"
+ council_agenda_agenda_MA_Hydra_oligarchic_effect:"(每$pop_group_unit$$MA_Hydra_job_enforcer_name_with_icon$获得£influence£$1|Y0$)"
  
  council_agenda_agenda_MA_Hydra_dicatorial_name:"监控人口"
- council_agenda_agenda_MA_Hydra_dicatorial_desc:"为确保安全，我们不能让我们的臣民不受监视。谁知道他们一旦有机会会做出什么？"
+ council_agenda_agenda_MA_Hydra_dicatorial_desc:"为确保安全，我们不能让臣民脱离监视。谁知道他们一旦有机会，会做出什么事来呢？"
  agenda_MA_Hydra_dicatorial_finish: "$agenda_MA_Hydra_dictatorial$"
  
- council_agenda_agenda_MA_Hydra_imperial_name:"传统即力量"
- council_agenda_agenda_MA_Hydra_imperial_desc:"举行一场向我们最尊贵的统治者致敬的庆典，将确保我们人民的持续团结，并提醒所有人，当我们齐心协力贯彻我们[This.GetRulerTitle]的意志时，我们的帝国将多么强大。"
+ council_agenda_agenda_MA_Hydra_imperial_name:"传统之力量"
+ council_agenda_agenda_MA_Hydra_imperial_desc:"一场献给吾等最崇高统治者的庆典将确保我们人民的持续团结，并将提醒所有人，当我们齐心协力推动吾等[This.GetRulerTitle]的意愿时，帝国所拥有的力量。"
  agenda_MA_Hydra_imperial_finish: "$agenda_MA_Hydra_imperial$"
  
  council_agenda_agenda_MA_Hydra_megacorp_name:"鼓励消费"
- council_agenda_agenda_MA_Hydra_megacorp_desc:"我们绝不能让经济停滞。鼓励资金流动将使我们更容易将资金流导向我们自己的金库。"
+ council_agenda_agenda_MA_Hydra_megacorp_desc:"我们绝不能让经济停滞不前。鼓励资金流动将使我们更容易将这些资金导向自己的金库。"
  agenda_MA_Hydra_megacorp_finish: "$agenda_MA_Hydra_megacorp$"
  
  council_agenda_agenda_MA_Hydra_hivemind_name:"减少腐败"
- council_agenda_agenda_MA_Hydra_hivemind_desc:"将我们无人机中的缺陷降至最低，将确保宏大整体不受其腐蚀。"
+ council_agenda_agenda_MA_Hydra_hivemind_desc:"将无人机中的缺陷保持在最低限度，将确保宏大整体不受其腐败的玷污。"
  agenda_MA_Hydra_hivemind_finish: "$agenda_MA_Hydra_hivemind$"
  
  council_agenda_agenda_MA_Hydra_machine_name:"改进协议"
- council_agenda_agenda_MA_Hydra_machine_desc:"对自我改进的需求确保了我们的改进协议不断改进我们的改进协议。"
+ council_agenda_agenda_MA_Hydra_machine_desc:"自我改进的需求确保了我们的改进协议不断改进我们的改进协议。"
  agenda_MA_Hydra_machine_finish: "$agenda_MA_Hydra_machine$"
  
  # Requirements:
@@ -37,7 +37,7 @@
  Hydra_requires_oligarchic_authority:"$TRIGGER_FAIL$ 必须拥有§Y寡头政体§！"
  Hydra_requires_dictatorial_authority:"$TRIGGER_FAIL$ 必须拥有§Y独裁政体§！"
  Hydra_requires_imperial_authority:"$TRIGGER_FAIL$ 必须拥有§Y帝国政体§！"
- Hydra_requires_megacorp_authority:"$TRIGGER_FAIL$ 必须是§Y企业邦联§！"
+ Hydra_requires_megacorp_authority:"$TRIGGER_FAIL$ 必须是§Y巨型企业§！"
  
  # Localization with icons
- MA_Hydra_job_enforcer_name_with_icon:"执法者 执法者"
+ MA_Hydra_job_enforcer_name_with_icon:"£job_enforcer£ $job_enforcer_plural$"

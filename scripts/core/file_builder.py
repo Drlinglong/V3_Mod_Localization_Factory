@@ -1,6 +1,7 @@
 # scripts/core/file_builder.py
 import os
 import re
+import logging
 from utils import i18n
 
 def create_fallback_file(
@@ -15,7 +16,7 @@ def create_fallback_file(
     [Fallback Function] Copies the source file, changing only the header and filename.
     This is a safety net for when translation fails or is not needed.
     """
-    print(i18n.t("creating_fallback_file"))
+    logging.info(i18n.t("creating_fallback_file"))
     try:
         with open(source_path, "r", encoding="utf-8-sig") as f:
             lines = f.readlines()
@@ -43,9 +44,9 @@ def create_fallback_file(
         # Write the file using the encoding specified in the game profile
         with open(dest_file_path, "w", encoding=game_profile.get("encoding", "utf-8-sig")) as f:
             f.writelines(lines)
-        print(i18n.t("fallback_file_created", filename=new_filename))
+        logging.info(i18n.t("fallback_file_created", filename=new_filename))
     except Exception as e:
-        print(i18n.t("fallback_creation_error", error=e))
+        logging.error(i18n.t("fallback_creation_error", error=e))
 
 
 def rebuild_and_write_file(
@@ -113,7 +114,7 @@ def rebuild_and_write_file(
     with open(dest_file_path, "w", encoding=game_profile.get("encoding", "utf-8-sig")) as f:
         f.writelines(new_lines) # Use the modified 'new_lines' list
         
-    print(
+    logging.info(
         i18n.t(
             "writing_file_success",
             filename=os.path.join(os.path.relpath(dest_dir_path, "my_translation"), new_filename),

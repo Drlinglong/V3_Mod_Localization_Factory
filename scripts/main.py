@@ -20,16 +20,17 @@ czytelny plik – bez zmian w innych modułach wystarczy dodać nowe profile
 gier lub języki w `config.py`.
 """
 # ---------------------------------------------------------------
-from __future__ import annotations
-
-import json
 import os
-from typing import List
+import json
+import argparse
+import logging # 导入logging模块
 
-from config import GAME_PROFILES, LANGUAGES, SOURCE_DIR
-from core import directory_handler
-from utils import i18n
+
+from utils import i18n, logger
+
 from workflows import initial_translate
+from core import directory_handler
+from config import LANGUAGES, GAME_PROFILES, SOURCE_DIR
 
 # ────────────────────────── helpers ─────────────────────────────
 
@@ -94,7 +95,12 @@ def select_language(prompt_key: str, source_key: str | None = None) -> str:
 
 def main_menu() -> None:
     """CLI główne – wywołuje odpowiedni workflow z poprawnymi parametrami."""
+    logger.setup_logger()
+
+    
+
     i18n.load_language()  # ustala locale na podstawie ENV lub inputu
+    logging.info("--- New Session Started ---")
 
     game_profile = select_game_profile()
     mod_dir = directory_handler.select_mod_directory()

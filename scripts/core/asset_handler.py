@@ -5,6 +5,7 @@ import re
 import json
 import shutil
 from pathlib import Path
+import logging
 
 from utils import i18n, read_text_bom, write_text_bom
 from config import SOURCE_DIR, DEST_DIR
@@ -21,7 +22,7 @@ def _process_victoria3_metadata(mod_name, client, source_lang, target_lang,
     dest_meta_dir = os.path.join(DEST_DIR, output_folder_name, '.metadata')
 
     if not os.path.exists(source_meta_file):
-        print(i18n.t("metadata_not_found"))
+        logging.warning(i18n.t("metadata_not_found"))
         return
 
     with open(source_meta_file, 'r', encoding='utf-8') as f:
@@ -53,7 +54,7 @@ def _process_victoria3_metadata(mod_name, client, source_lang, target_lang,
     with open(dest_meta_file, 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
 
-    print(i18n.t("metadata_success"))
+    logging.info(i18n.t("metadata_success"))
 
 
 # ──────────────────────────────────────────────────────────────────
@@ -64,7 +65,7 @@ def _process_stellaris_metadata(mod_name, client, source_lang, target_lang,
     """【群星专用】生成两份 .mod 文件。"""
     source_mod_file = os.path.join(SOURCE_DIR, mod_name, game_profile['metadata_file'])
     if not os.path.exists(source_mod_file):
-        print(i18n.t("metadata_not_found"))
+        logging.warning(i18n.t("metadata_not_found"))
         return
 
     with open(source_mod_file, 'r', encoding='utf-8') as f:
@@ -149,7 +150,7 @@ def _process_stellaris_metadata(mod_name, client, source_lang, target_lang,
     with open(os.path.join(DEST_DIR, f"{output_folder_name}.mod"), 'w', encoding='utf-8') as f:
         f.writelines(launcher_mod_content)
 
-    print(i18n.t("metadata_success"))
+    logging.info(i18n.t("metadata_success"))
 
 
 # ──────────────────────────────────────────────────────────────────
@@ -160,7 +161,7 @@ def _process_eu4_metadata(mod_name, client, source_lang, target_lang,
     """【EU4专用】处理 descriptor.mod (UTF-8 + BOM)."""
     source_mod_file = os.path.join(SOURCE_DIR, mod_name, game_profile['metadata_file'])
     if not os.path.exists(source_mod_file):
-        print("Warning: descriptor.mod not found, skipping metadata.")
+        logging.warning("Warning: descriptor.mod not found, skipping metadata.")
         return
 
     # Wczytaj z zachowaniem BOM
@@ -228,13 +229,13 @@ def _process_eu4_metadata(mod_name, client, source_lang, target_lang,
     launcher_lines = new_lines + [f'\npath="mod/{output_folder_name}"']
     write_text_bom(Path(os.path.join(DEST_DIR, f"{output_folder_name}.mod")), "\n".join(launcher_lines))
 
-    print(i18n.t("metadata_success"))
+    logging.info(i18n.t("metadata_success"))
 
 
 def process_metadata(mod_name, client, source_lang, target_lang,
                      output_folder_name, mod_context, game_profile):
     """【总调度】元数据处理器，根据游戏档案调用对应的处理函数。"""
-    print(i18n.t("processing_metadata"))
+    logging.info(i18n.t("processing_metadata"))
 
     game_id = game_profile.get('id')
     
@@ -249,7 +250,7 @@ def process_metadata(mod_name, client, source_lang, target_lang,
                               output_folder_name, mod_context, game_profile)
     else:
         # warning msg
-        print(i18n.t("unsupported_metadata", game_name=game_profile['name']))
+        logging.warning(i18n.t("unsupported_metadata", game_name=game_profile['name']))
 
 
 # ──────────────────────────────────────────────────────────────────
@@ -257,7 +258,7 @@ def process_metadata(mod_name, client, source_lang, target_lang,
 # ──────────────────────────────────────────────────────────────────
 def copy_assets(mod_name, output_folder_name, game_profile):
     """根据游戏档案中的保护名单，复制所有必要的资产文件。"""
-    print(i18n.t("processing_assets"))
+    logging.info(i18n.t("processing_assets"))
     source_dir = os.path.join(SOURCE_DIR, mod_name)
     dest_dir = os.path.join(DEST_DIR, output_folder_name)
 
@@ -275,8 +276,8 @@ def copy_assets(mod_name, output_folder_name, game_profile):
             try:
                 os.makedirs(dest_dir, exist_ok=True)
                 shutil.copy2(source_path, dest_dir)
-                print(i18n.t("asset_copied", asset_name=item))
+                logging.info(i18n.t("asset_copied", asset_name=item))
             except FileNotFoundError:
-                print(i18n.t("asset_not_found", asset_name=item))
+                logging.exception(i18n.t("asset_not_found", asset_name=item))
             except Exception as e:
-                print(f"Error copying asset {item}: {e}")
+                logging.exception(f"Error copying asset {item}: {e}")

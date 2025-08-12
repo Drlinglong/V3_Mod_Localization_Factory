@@ -25,6 +25,7 @@ import os
 import re
 from types import ModuleType
 from typing import Callable, List
+import logging
 
 from utils import i18n  # komunikaty wielojęzykowe
 
@@ -43,7 +44,7 @@ try:
             if isinstance(_hooks, list):
                 HOOKS.extend(_hooks)
 except Exception as e:  # pragma: no cover – hook opcjonalny
-    print(f"[parser-hook] ⚠️  Failed to load hooks: {e}")
+    logging.error(f"[parser-hook] ⚠️  Failed to load hooks: {e}")
 
 
 def extract_translatable_content(
@@ -59,7 +60,7 @@ def extract_translatable_content(
         key_map (dict): A map to reconstruct the file: {index: {key_part, original_value_part, line_num}}.
     """
     rel_path = os.path.relpath(file_path)
-    print(i18n.t("parsing_file", filename=rel_path))
+    logging.info(i18n.t("parsing_file", filename=rel_path))
 
     # 1) Read file lines with a fallback to cp1252 for unexpected encodings.
     try:
@@ -145,7 +146,7 @@ def extract_translatable_content(
             try:
                 hook(file_path, original_lines, texts_to_translate, key_map)
             except Exception as e:
-                print(f"[parser-hook] ⚠️  {hook.__name__} failed: {e}")
+                logging.error(f"[parser-hook] ⚠️  {hook.__name__} failed: {e}")
 
     # --- Final Summary ---
     print(i18n.t("extracted_texts", count=len(texts_to_translate)))
