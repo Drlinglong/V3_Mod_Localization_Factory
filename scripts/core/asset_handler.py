@@ -1,22 +1,20 @@
 # scripts/core/asset_handler.py
-# ------------------------------------------------------------------
 import os
 import re
 import json
 import shutil
-from pathlib import Path
 import logging
-
-from utils import i18n, read_text_bom, write_text_bom
+# 【核心修正】所有import都相对于scripts文件夹
+from utils import i18n
 from config import SOURCE_DIR, DEST_DIR
-from .api_handler import translate_single_text
+from core.api_handler import translate_single_text
 
 
 # ──────────────────────────────────────────────────────────────────
 # VICTORIA 3
 # ──────────────────────────────────────────────────────────────────
 def _process_victoria3_metadata(mod_name, client, source_lang, target_lang,
-                                output_folder_name, mod_context, game_profile):
+                                output_folder_name, mod_context, game_profile, provider_name="gemini"):
     """【V3专用】处理 Victoria 3 的 .metadata/metadata.json 文件。"""
     source_meta_file = os.path.join(SOURCE_DIR, mod_name, game_profile['metadata_file'])
     dest_meta_dir = os.path.join(DEST_DIR, output_folder_name, '.metadata')
@@ -30,7 +28,7 @@ def _process_victoria3_metadata(mod_name, client, source_lang, target_lang,
 
     original_name = data.get('name', '')
     translated_name = translate_single_text(
-        client, original_name, "mod name", mod_name,
+        client, provider_name, original_name, "mod name", mod_name,
         source_lang, target_lang, mod_context, game_profile
     )
 
@@ -45,7 +43,7 @@ def _process_victoria3_metadata(mod_name, client, source_lang, target_lang,
 
     original_desc = data.get('short_description', '')
     data['short_description'] = translate_single_text(
-        client, original_desc, "mod short description", mod_name,
+        client, provider_name, original_desc, "mod short description", mod_name,
         source_lang, target_lang, mod_context, game_profile
     )
 
@@ -61,7 +59,7 @@ def _process_victoria3_metadata(mod_name, client, source_lang, target_lang,
 # STELLARIS
 # ──────────────────────────────────────────────────────────────────
 def _process_stellaris_metadata(mod_name, client, source_lang, target_lang,
-                                output_folder_name, mod_context, game_profile):
+                                output_folder_name, mod_context, game_profile, provider_name="gemini"):
     """【群星专用】生成两份 .mod 文件。"""
     source_mod_file = os.path.join(SOURCE_DIR, mod_name, game_profile['metadata_file'])
     if not os.path.exists(source_mod_file):
@@ -81,7 +79,7 @@ def _process_stellaris_metadata(mod_name, client, source_lang, target_lang,
             break
 
     translated_name = translate_single_text(
-        client, original_name, "mod name", mod_name,
+        client, provider_name, original_name, "mod name", mod_name,
         source_lang, target_lang, mod_context, game_profile
     )
 
@@ -157,7 +155,7 @@ def _process_stellaris_metadata(mod_name, client, source_lang, target_lang,
 # EU4  (nowo dodane)
 # ──────────────────────────────────────────────────────────────────
 def _process_eu4_metadata(mod_name, client, source_lang, target_lang,
-                           output_folder_name, mod_context, game_profile):
+                           output_folder_name, mod_context, game_profile, provider_name="gemini"):
     """【EU4专用】处理 descriptor.mod (UTF-8 + BOM)."""
     source_mod_file = os.path.join(SOURCE_DIR, mod_name, game_profile['metadata_file'])
     if not os.path.exists(source_mod_file):
@@ -177,7 +175,7 @@ def _process_eu4_metadata(mod_name, client, source_lang, target_lang,
             break
 
     translated_name = translate_single_text(
-        client, original_name, "mod name", mod_name,
+        client, provider_name, original_name, "mod name", mod_name,
         source_lang, target_lang, mod_context, game_profile
     )
 
@@ -233,7 +231,7 @@ def _process_eu4_metadata(mod_name, client, source_lang, target_lang,
 
 
 def process_metadata(mod_name, client, source_lang, target_lang,
-                     output_folder_name, mod_context, game_profile):
+                     output_folder_name, mod_context, game_profile, provider_name="gemini"):
     """【总调度】元数据处理器，根据游戏档案调用对应的处理函数。"""
     logging.info(i18n.t("processing_metadata"))
 
@@ -241,13 +239,13 @@ def process_metadata(mod_name, client, source_lang, target_lang,
     
     if game_id in ['stellaris', 'hoi4', 'ck3']: #Use the same process method
         _process_stellaris_metadata(mod_name, client, source_lang, target_lang,
-                                    output_folder_name, mod_context, game_profile)
+                                    output_folder_name, mod_context, game_profile, provider_name)
     elif game_id == 'victoria3':
         _process_victoria3_metadata(mod_name, client, source_lang, target_lang,
-                                      output_folder_name, mod_context, game_profile)
+                                      output_folder_name, mod_context, game_profile, provider_name)
     elif game_id == 'eu4':
         _process_eu4_metadata(mod_name, client, source_lang, target_lang,
-                              output_folder_name, mod_context, game_profile)
+                              output_folder_name, mod_context, game_profile, provider_name)
     else:
         # warning msg
         logging.warning(i18n.t("unsupported_metadata", game_name=game_profile['name']))

@@ -3,6 +3,7 @@ import os
 import re
 import logging
 from utils import i18n
+from config import DEST_DIR
 
 def create_fallback_file(
     source_path: str,

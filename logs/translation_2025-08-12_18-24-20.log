@@ -1,0 +1,43 @@
+2025-08-12 18:24:20,690 - INFO - Logger initialized and ready.
+2025-08-12 18:24:22,494 - INFO - 语言已设置为 zh_CN。
+2025-08-12 18:24:22,494 - INFO - --- New Session Started ---
+2025-08-12 18:24:25,926 - INFO - <scan_source_folder>
+2025-08-12 18:24:25,926 - INFO - <select_mod_prompt>
+2025-08-12 18:24:25,926 - INFO -   [1] Australia & New Zealand Flavor Pack
+2025-08-12 18:24:25,926 - INFO -   [2] Forts & Engineers
+2025-08-12 18:24:25,926 - INFO -   [3] GORA UI
+2025-08-12 18:24:25,926 - INFO -   [4] Hydra's More Agenda's
+2025-08-12 18:24:25,926 - INFO -   [5] MODJAM2025
+2025-08-12 18:24:25,926 - INFO -   [6] MODJAM2025 - 副本
+2025-08-12 18:24:25,926 - INFO -   [7] Offer Convoy Contribution
+2025-08-12 18:24:25,927 - INFO -   [8] Project Utopia - Extended Timeline - Technical Preview
+2025-08-12 18:24:25,927 - INFO -   [9] Tech & Res
+2025-08-12 18:24:25,927 - INFO -   [10] TEST-ANZAC
+2025-08-12 18:24:25,927 - INFO -   [11] UKrework
+2025-08-12 18:25:11,604 - INFO - <you_selected>
+2025-08-12 18:25:11,604 - INFO - 
+--- 正在获取Mod主题上下文 ---
+2025-08-12 18:25:11,605 - INFO - 已识别Mod名称为: 'Offer Convoy Contribution'
+2025-08-12 18:25:13,046 - INFO - 最终使用的主题上下文为: 'Offer Convoy Contribution'
+2025-08-12 18:25:13,047 - INFO - <cleanup_start>
+2025-08-12 18:25:15,600 - INFO - <cleanup_deleting>
+2025-08-12 18:25:15,600 - INFO - <cleanup_success>
+2025-08-12 18:25:20,768 - INFO - 
+--- 启动 '首次翻译' 工作流，目标: Offer Convoy Contribution ---
+2025-08-12 18:25:21,233 - INFO - Gemini client initialized successfully, using model: gemini-2.5-flash
+2025-08-12 18:25:21,233 - INFO - <processing_metadata>
+2025-08-12 18:25:21,234 - INFO - <translating_mod_name>
+2025-08-12 18:25:21,234 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-12 18:25:27,465 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-12 18:25:27,467 - INFO - AFC remote call 1 is done.
+2025-08-12 18:25:27,467 - INFO - <metadata_success>
+2025-08-12 18:25:27,467 - INFO - <processing_assets>
+2025-08-12 18:25:27,468 - INFO - <asset_copied>
+2025-08-12 18:25:27,468 - INFO - <parsing_file>
+2025-08-12 18:25:27,470 - INFO - 
+--- 正在翻译为: 简体中文 ---
+2025-08-12 18:25:27,470 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-12 18:25:35,589 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-12 18:25:35,594 - INFO - AFC remote call 1 is done.
+2025-08-12 18:25:35,594 - INFO - <writing_file_success>
+2025-08-12 18:25:35,596 - INFO - 工作流完成！

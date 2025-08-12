@@ -3,13 +3,27 @@
 import os  # 导入os模块以备后用
 
 # --- 核心配置 ----------------------------------------------------
-MODEL_NAME = 'gemini-2.5-flash'
 CHUNK_SIZE = 40
 MAX_RETRIES = 3
 
 # --- 路径配置 ----------------------------------------------------
 SOURCE_DIR = 'source_mod'
 DEST_DIR = 'my_translation'
+
+# --- API Provider Configuration ---
+DEFAULT_API_PROVIDER = "gemini" 
+
+API_PROVIDERS = {
+    "gemini": {
+        "api_key_env": "GEMINI_API_KEY",
+        "default_model": "gemini-2.5-flash"
+    },
+    "openai": {
+        "api_key_env": "OPENAI_API_KEY",
+        "default_model": "gpt-5" # or gpt-5 when available
+    }
+    # 未来可以在这里增加 deepseek, qwen 等
+}
 
 # --- 语言数据库 --------------------------------------------------
 LANGUAGES = {

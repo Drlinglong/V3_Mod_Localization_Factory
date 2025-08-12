@@ -32,7 +32,7 @@ def select_mod_directory():
                 else:
                     logging.warning(i18n.t("invalid_input_number"))
             except ValueError:
-                logging.info(i18n.t("invalid_input_not_number"))
+                logging.warning(i18n.t("invalid_input_not_number"))
     except FileNotFoundError:
         logging.error(i18n.t("error_source_folder_not_found", dir=SOURCE_DIR))
         return None
