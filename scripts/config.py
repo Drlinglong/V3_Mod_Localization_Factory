@@ -32,6 +32,7 @@ GAME_PROFILES = {
     "1": {
         "id": "victoria3",
         "name": "Victoria 3 (维多利亚3)",
+        "supported_language_keys": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"],
         "source_localization_folder": "localization",
         "protected_items": {".metadata", "localization", "thumbnail.png"},
         "metadata_file": os.path.join(".metadata", "metadata.json"),
@@ -57,6 +58,7 @@ GAME_PROFILES = {
     "2": {
         "id": "stellaris",
         "name": "Stellaris (群星)",
+        "supported_language_keys": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"], # 支持10种 (无土耳其语)
         "source_localization_folder": "localisation",
         "protected_items": {"descriptor.mod", "localisation", "thumbnail.png"},
         "metadata_file": "descriptor.mod",
@@ -81,6 +83,7 @@ GAME_PROFILES = {
     "3": {
         "id": "eu4",
         "name": "Europa Universalis IV (欧陆风云4)",
+        "supported_language_keys": ["1", "3", "4", "5"], # 支持4种
         "source_localization_folder": "localisation",
         "protected_items": {"descriptor.mod", "localisation", "thumbnail.png"},
         "metadata_file": "descriptor.mod",
@@ -104,6 +107,7 @@ GAME_PROFILES = {
     "4": {
         "id": "hoi4",
         "name": "Hearts of Iron IV (钢铁雄心4)",
+        "supported_language_keys": ["1", "2", "3", "4", "5", "6" , "8", "9", "10"],#9种语言不支持韩语和土耳其语
         "source_localization_folder": "localisation", # 和群星一样same as stellaris
         "protected_items": {'descriptor.mod', 'localisation', 'thumbnail.png'}, # 和群星一样same as stellaris
         "metadata_file": 'descriptor.mod', # 和群星一样same as stellaris
@@ -123,6 +127,7 @@ GAME_PROFILES = {
     "5": {
         "id": "ck3",
         "name": "Crusader Kings III (十字军之王3)",
+        "supported_language_keys": ["1", "2", "3", "4", "5", "6" , "8",  "10"],#9种语言不支持日语、葡萄牙语和土耳其语
         "source_localization_folder": "localization", # same as V3
         "protected_items": {'descriptor.mod', 'localization', 'thumbnail.png'}, # same as stellaris /HOI4
         "metadata_file": 'descriptor.mod', # same as stellaris /HOI4

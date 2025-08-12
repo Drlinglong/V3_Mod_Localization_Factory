@@ -60,7 +60,13 @@
   "parallel_processing_end": "--- All batches have finished parallel processing ---",
   "warning_batch_failed": "Warning: Batch {batch_num} failed. The original English text for this batch will be used as a fallback.",
   "warning_partial_failure": "Warning: Some translation batches failed. Original English text has been used for the failed parts.",
-  "retrying_batch": "Batch {batch_num} failed on attempt {attempt}/{max_retries}. Retrying in {delay} seconds..."
+  "retrying_batch": "Batch {batch_num} failed on attempt {attempt}/{max_retries}. Retrying in {delay} seconds...",
+  "target_option_all_dynamic": "Translate to all other {count} languages",
+	"target_option_custom": "Custom / Disguise Other Language...",
+"prompt_custom_lang_name": "Enter the target language name (e.g., Italian): ",
+"prompt_custom_lang_key": "Enter the Paradox language key to use/disguise as (e.g., l_italian or l_english): ",
+"prompt_custom_lang_prefix": "Enter the desired folder prefix (e.g., IT-): ",
+"entering_custom_mode": "--- Entering Custom Language Mode ---"
 
 
 }

@@ -1,0 +1,62 @@
+2025-08-12 14:37:40,827 - INFO - Logger initialized and ready.
+2025-08-12 14:37:43,641 - INFO - Language set to en_US.
+2025-08-12 14:37:47,492 - INFO - 
+--- Scanning source folder [source_mod] ---
+2025-08-12 14:37:47,492 - INFO - Please select the Mod to localize:
+2025-08-12 14:37:47,493 - INFO -   [1] Australia & New Zealand Flavor Pack
+2025-08-12 14:37:47,493 - INFO -   [2] Forts & Engineers
+2025-08-12 14:37:47,493 - INFO -   [3] GORA UI
+2025-08-12 14:37:47,493 - INFO -   [4] Hydra's More Agenda's
+2025-08-12 14:37:47,493 - INFO -   [5] MODJAM2025
+2025-08-12 14:37:47,493 - INFO -   [6] MODJAM2025 - 副本
+2025-08-12 14:37:47,493 - INFO -   [7] Offer Convoy Contribution
+2025-08-12 14:37:47,493 - INFO -   [8] Project Utopia - Extended Timeline - Technical Preview
+2025-08-12 14:37:47,493 - INFO -   [9] Tech & Res
+2025-08-12 14:37:47,493 - INFO -   [10] TEST-ANZAC
+2025-08-12 14:37:47,493 - INFO -   [11] UKrework
+2025-08-12 14:37:49,272 - INFO - 
+You have selected: UKrework
+2025-08-12 14:37:49,272 - INFO - 
+--- Getting Mod thematic context ---
+2025-08-12 14:37:49,272 - INFO - Identified Mod Name: 'UK Rework'
+2025-08-12 14:37:51,751 - INFO - Final thematic context used: 'UK Rework'
+2025-08-12 14:37:51,751 - INFO - 
+--- Starting cleanup of source Mod folder: UKrework ---
+2025-08-12 14:37:54,992 - INFO - Deleting non-essential files and folders...
+2025-08-12 14:37:54,992 - INFO - Source folder cleanup complete!
+2025-08-12 14:38:02,707 - INFO - 
+--- Starting 'Initial Translation' workflow for: UKrework ---
+2025-08-12 14:38:03,166 - INFO - Gemini client initialized successfully, using model: gemini-2.5-flash
+2025-08-12 14:38:03,166 - INFO - 
+--- Processing metadata.json ---
+2025-08-12 14:38:03,166 - INFO - Translating mod name: "UK Rework..."
+2025-08-12 14:38:03,166 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-12 14:38:05,484 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-12 14:38:05,486 - INFO - AFC remote call 1 is done.
+2025-08-12 14:38:05,487 - INFO - metadata.json localized successfully.
+2025-08-12 14:38:05,487 - INFO - 
+--- Processing assets (thumbnail, descriptor, etc.) ---
+2025-08-12 14:38:05,488 - INFO - Asset 'thumbnail.png' copied successfully.
+2025-08-12 14:38:05,488 - INFO - 
+--- Parsing file: source_mod\UKrework\localisation\english\ukrework_events_l_english.yml ---
+2025-08-12 14:38:05,488 - INFO - 
+--- Translating to: 简体中文 ---
+2025-08-12 14:38:05,489 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-12 14:38:16,995 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-12 14:38:16,997 - INFO - AFC remote call 1 is done.
+2025-08-12 14:38:16,998 - INFO - File 'Multilanguage-UKrework\localisation\simp_chinese\english\ukrework_events_l_simp_chinese.yml' has been localized successfully.
+2025-08-12 14:38:16,998 - INFO - 
+--- Translating to: Français ---
+2025-08-12 14:38:16,999 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-12 14:38:33,069 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-12 14:38:33,070 - INFO - AFC remote call 1 is done.
+2025-08-12 14:38:33,071 - INFO - File 'Multilanguage-UKrework\localisation\french\english\ukrework_events_l_french.yml' has been localized successfully.
+2025-08-12 14:38:33,071 - INFO - 
+--- Translating to: Deutsch ---
+2025-08-12 14:38:33,071 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-12 14:38:47,234 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-12 14:38:47,235 - INFO - AFC remote call 1 is done.
+2025-08-12 14:38:47,236 - INFO - File 'Multilanguage-UKrework\localisation\german\english\ukrework_events_l_german.yml' has been localized successfully.
+2025-08-12 14:38:47,236 - INFO - 
+--- Translating to: Español ---
+2025-08-12 14:38:47,237 - INFO - AFC is enabled with max remote calls: 10.
