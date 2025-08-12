@@ -66,7 +66,9 @@
 "prompt_custom_lang_name": "Enter the target language name (e.g., Italian): ",
 "prompt_custom_lang_key": "Enter the Paradox language key to use/disguise as (e.g., l_italian or l_english): ",
 "prompt_custom_lang_prefix": "Enter the desired folder prefix (e.g., IT-): ",
-"entering_custom_mode": "--- Entering Custom Language Mode ---"
+"entering_custom_mode": "--- Entering Custom Language Mode ---",
+"select_api_provider_prompt": "Please select an API provider:",
+"workflow_completed": "Workflow completed!"
 
 
 }

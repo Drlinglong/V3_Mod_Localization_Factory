@@ -1,0 +1,178 @@
+# scripts/core/api_handler.py
+import os
+import re
+import time
+import concurrent.futures
+from google import genai
+import logging
+
+from utils import i18n
+from config import CHUNK_SIZE, MAX_RETRIES, API_PROVIDERS
+from utils.text_clean import strip_pl_diacritics, strip_outer_quotes
+
+# Alias required by the audit.py script for compatibility
+_strip_pl_diacritics = strip_pl_diacritics  # noqa: N816
+
+def initialize_client(api_key: str = None) -> "genai.Client | None":
+    """Initializes the Gemini client."""
+    if not api_key and not os.getenv("GEMINI_API_KEY"):
+        logging.error("API Key not found in environment variables.")
+        return None
+    try:
+        client = genai.Client()
+        model_name = API_PROVIDERS["gemini"]["default_model"]
+        logging.info(f"Gemini client initialized successfully, using model: {model_name}")
+        return client
+    except Exception as e:
+        logging.exception(f"Error initializing Gemini client: {e}")
+        return None
+
+def translate_single_text(
+    client: "genai.Client",
+    text: str,
+    task_description: str,
+    mod_name: str,
+    source_lang: dict,
+    target_lang: dict,
+    mod_context: str,
+    game_profile: dict,
+) -> str:
+    """Translates a single text string (e.g., mod name or description)."""
+    if not text:
+        return ""
+
+    print_key = "translating_mod_name" if task_description == "mod name" else "translating_mod_desc"
+    logging.info(i18n.t(print_key, text=text[:30]))
+
+    base_prompt = game_profile["single_prompt_template"].format(
+        mod_name=mod_name,
+        task_description=task_description,
+        source_lang_name=source_lang["name"],
+        target_lang_name=target_lang["name"],
+    )
+    prompt = (
+        base_prompt
+        + f"CRITICAL CONTEXT: The mod's theme is '{mod_context}'. Use this to ensure accuracy.\n"
+        "CRITICAL FORMATTING: Your response MUST ONLY contain the translated text. "
+        "DO NOT include explanations, pinyin, or any other text.\n"
+        'For example, if the input is "Flavor Pack", your output must be "风味包" and nothing else.\n\n'
+        f'Translate this: "{text}"'
+    )
+
+    try:
+        model_name = API_PROVIDERS["gemini"]["default_model"]
+        response = client.models.generate_content(model=model_name, contents=prompt)
+        translated = strip_outer_quotes(response.text.strip())
+
+        # Post-processing for EU4 Polish
+        if game_profile.get("strip_pl_diacritics") and target_lang["code"] == "pl":
+            translated = _strip_pl_diacritics(translated)
+
+        return translated
+    except Exception as e:
+        logging.exception(i18n.t("api_call_error", error=e))
+        return text
+
+def _translate_chunk(client, chunk, source_lang, target_lang, game_profile, mod_context, batch_num):
+    """[Worker Function] Translates a single chunk of text, with retry logic."""
+    for attempt in range(MAX_RETRIES):
+        try:
+            numbered_list = "\n".join(f'{j + 1}. "{txt}"' for j, txt in enumerate(chunk))
+            base_prompt = game_profile["prompt_template"].format(
+                source_lang_name=source_lang["name"],
+                target_lang_name=target_lang["name"],
+            )
+            context_prompt_part = (
+                f"CRITICAL CONTEXT: The mod you are translating is '{mod_context}'. "
+                "Use this information to ensure all translations are thematically appropriate.\n"
+            )
+            format_prompt_part = (
+                "CRITICAL FORMATTING: Your response MUST be a numbered list with the EXACT same number of items, from 1 to "        f"{len(chunk)}. "
+                "Each item in your list MUST be the translation of the corresponding item in the input list.\n"
+                "DO NOT merge, add, or omit lines. DO NOT add any explanations. "
+                "There are two types of special syntax:\n"
+                "1.  **Variables** like `$variable$`, `[Concept('key', '$concept_name$')]`, `[SCOPE.some.Function]`. You MUST preserve these variables completely. DO NOT translate any text inside them.\n"
+                "2.  **Formatting Tags** like `#R ... #!`, `§Y...§!`. You MUST preserve the tags themselves (e.g., `#R`, `#!`), but you SHOULD translate the plain text that is inside them.\n\n"
+                "3.  **Icon Tags** like `@prestige!`, `£minerals£`. These are variables. You MUST preserve them completely. DO NOT translate any text inside them.\n\n"
+                "4.  **Internal Keys** like `mm_strategic_region` or `com_topbar_interests`. These are strings that often contain underscores and no spaces. They are code references and MUST NOT be translated. Preserve them completely.\n\n"
+                "Preserve all internal newlines (\\n).\n\n"
+                "--- INPUT LIST ---\n"
+                f"{numbered_list}\n"
+                "--- END OF INPUT LIST ---"
+            )
+            prompt = base_prompt + context_prompt_part + format_prompt_part
+
+            model_name = API_PROVIDERS["gemini"]["default_model"]
+            response = client.models.generate_content(model=model_name, contents=prompt)
+            translated_chunk = re.findall(
+                r'^\s*\d+\.\s*"?(.+?)"?$', response.text, re.MULTILINE | re.DOTALL
+            )
+
+            if len(translated_chunk) == len(chunk):
+                translated_chunk = [strip_outer_quotes(t) for t in translated_chunk]
+                if game_profile.get("strip_pl_diacritics") and target_lang["code"] == "pl":
+                    translated_chunk = [_strip_pl_diacritics(t) for t in translated_chunk]
+                return translated_chunk
+
+            logging.error(i18n.t("mismatch_error", original_count=len(chunk), translated_count=len(translated_chunk)))
+
+        except Exception as e:
+            logging.exception(i18n.t("api_call_error", error=e))
+
+        if attempt < MAX_RETRIES - 1:
+            delay = (attempt + 1) * 2
+            logging.warning(i18n.t("retrying_batch", batch_num=batch_num, attempt=attempt + 1, max_retries=MAX_RETRIES, delay=delay))
+            time.sleep(delay)
+
+    return None
+
+def translate_texts_in_batches(
+    client: "genai.Client",
+    texts_to_translate: list[str],
+    source_lang: dict,
+    target_lang: dict,
+    game_profile: dict,
+    mod_context: str,
+) -> "list[str] | None":
+    """
+    [Foreman Function] Translates a list of texts in batches using a thread pool.
+    It preserves results from successful chunks even if other chunks fail.
+    """
+    if len(texts_to_translate) <= CHUNK_SIZE:
+        return _translate_chunk(client, texts_to_translate, source_lang, target_lang, game_profile, mod_context, 1)
+
+    with concurrent.futures.ThreadPoolExecutor() as executor:
+        chunks = [texts_to_translate[i : i + CHUNK_SIZE] for i in range(0, len(texts_to_translate), CHUNK_SIZE)]
+        logging.info(i18n.t("parallel_processing_start", count=len(chunks)))
+
+        future_to_index = {
+            executor.submit(_translate_chunk, client, chunk, source_lang, target_lang, game_profile, mod_context, i + 1): i
+            for i, chunk in enumerate(chunks)
+        }
+        
+        results = [None] * len(chunks)
+        
+        for future in concurrent.futures.as_completed(future_to_index):
+            index = future_to_index[future]
+            try:
+                results[index] = future.result()
+            except Exception as e:
+                logging.exception(f"A translation thread failed with a critical error: {e}")
+                results[index] = None
+
+    all_translated_texts: list[str] = []
+    has_failures = False
+    for i, translated_chunk in enumerate(results):
+        if translated_chunk is None:
+            has_failures = True
+            logging.warning(i18n.t("warning_batch_failed", batch_num=i + 1))
+            original_chunk = chunks[i]
+            all_translated_texts.extend(original_chunk)
+        else:
+            all_translated_texts.extend(translated_chunk)
+    
+    if has_failures:
+        logging.error(i18n.t("warning_partial_failure"))
+
+    logging.info(i18n.t("parallel_processing_end"))
+    return all_translated_texts

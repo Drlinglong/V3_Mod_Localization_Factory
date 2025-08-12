@@ -1,17 +1,18 @@
 # scripts/workflows/initial_translate.py
-# ---------------------------------------------------------------
 import os
-
-from core import file_parser, api_handler, file_builder, asset_handler
-from config import SOURCE_DIR, DEST_DIR, LANGUAGES
-from utils import i18n
 import logging
+
+from scripts.core import file_parser, api_handler, file_builder, asset_handler, directory_handler
+from scripts.config import SOURCE_DIR, DEST_DIR, LANGUAGES
+from scripts.utils import i18n
+
 
 def run(mod_name: str,
         source_lang: dict,
         target_languages: list[dict],
         game_profile: dict,
-        mod_context: str):
+        mod_context: str,
+        selected_provider: str = "gemini"):
     """【最终版】初次翻译工作流（多语言 & 多游戏兼容）"""
 
     # ───────────── 1. ścieżki i tryb ─────────────
@@ -30,7 +31,7 @@ def run(mod_name: str,
                  mod_name=mod_name))
 
     # ───────────── 2. init klienta ─────────────
-    client = api_handler.initialize_client()
+    client, provider_name = api_handler.initialize_client(selected_provider)
     if not client:
         logging.warning(i18n.t("api_client_init_fail"))
         return
@@ -38,7 +39,7 @@ def run(mod_name: str,
     # ───────────── 3. metadata + assety ─────────────
     asset_handler.process_metadata(
         mod_name, client, source_lang, primary_target_lang,
-        output_folder_name, mod_context, game_profile
+        output_folder_name, mod_context, game_profile, provider_name
     )
     asset_handler.copy_assets(mod_name, output_folder_name, game_profile)
 
@@ -124,6 +125,7 @@ def run(mod_name: str,
             # samo tłumaczenie
             translated = api_handler.translate_texts_in_batches(
                 client,
+                provider_name,
                 fd["texts_to_translate"],
                 source_lang,
                 target_lang,

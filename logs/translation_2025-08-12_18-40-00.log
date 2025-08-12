@@ -1,0 +1,19 @@
+2025-08-12 18:40:00,596 - INFO - Logger initialized and ready.
+2025-08-12 18:40:05,786 - INFO - 语言已设置为 zh_CN。
+2025-08-12 18:40:05,786 - INFO - --- New Session Started ---
+2025-08-12 18:40:20,361 - INFO - 
+--- 正在获取Mod主题上下文 ---
+2025-08-12 18:40:20,362 - INFO - 已识别Mod名称为: 'Offer Convoy Contribution'
+2025-08-12 18:40:21,775 - INFO - 最终使用的主题上下文为: 'Offer Convoy Contribution'
+2025-08-12 18:40:33,417 - INFO - 
+--- 启动 '首次翻译' 工作流，目标: Offer Convoy Contribution ---
+2025-08-12 18:40:33,588 - INFO - OpenAI client initialized successfully, using model: gpt-5
+2025-08-12 18:40:33,588 - INFO - <processing_metadata>
+2025-08-12 18:40:33,589 - INFO - <translating_mod_name>
+2025-08-12 18:40:50,900 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-12 18:40:50,905 - INFO - <metadata_success>
+2025-08-12 18:40:50,905 - INFO - <processing_assets>
+2025-08-12 18:40:50,906 - INFO - <asset_copied>
+2025-08-12 18:40:50,907 - INFO - <parsing_file>
+2025-08-12 18:40:50,907 - INFO - 
+--- 正在翻译为: 简体中文 ---

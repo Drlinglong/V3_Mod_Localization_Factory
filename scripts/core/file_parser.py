@@ -149,5 +149,5 @@ def extract_translatable_content(
                 logging.error(f"[parser-hook] ⚠️  {hook.__name__} failed: {e}")
 
     # --- Final Summary ---
-    print(i18n.t("extracted_texts", count=len(texts_to_translate)))
+    logging.info(i18n.t("extracted_texts", count=len(texts_to_translate)))
     return original_lines, texts_to_translate, key_map

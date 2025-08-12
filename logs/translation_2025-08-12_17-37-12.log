@@ -1,0 +1,28 @@
+2025-08-12 17:37:12,302 - INFO - Logger initialized and ready.
+2025-08-12 17:37:16,540 - INFO - 语言已设置为 zh_CN。
+2025-08-12 17:37:16,540 - INFO - --- New Session Started ---
+2025-08-12 17:37:26,613 - INFO - <scan_source_folder>
+2025-08-12 17:37:26,613 - INFO - <select_mod_prompt>
+2025-08-12 17:37:26,614 - INFO -   [1] Australia & New Zealand Flavor Pack
+2025-08-12 17:37:26,614 - INFO -   [2] Forts & Engineers
+2025-08-12 17:37:26,614 - INFO -   [3] GORA UI
+2025-08-12 17:37:26,614 - INFO -   [4] Hydra's More Agenda's
+2025-08-12 17:37:26,614 - INFO -   [5] MODJAM2025
+2025-08-12 17:37:26,614 - INFO -   [6] MODJAM2025 - 副本
+2025-08-12 17:37:26,614 - INFO -   [7] Offer Convoy Contribution
+2025-08-12 17:37:26,614 - INFO -   [8] Project Utopia - Extended Timeline - Technical Preview
+2025-08-12 17:37:26,614 - INFO -   [9] Tech & Res
+2025-08-12 17:37:26,615 - INFO -   [10] TEST-ANZAC
+2025-08-12 17:37:26,615 - INFO -   [11] UKrework
+2025-08-12 17:37:28,406 - INFO - <you_selected>
+2025-08-12 17:37:28,406 - INFO - 
+--- 正在获取Mod主题上下文 ---
+2025-08-12 17:37:28,406 - INFO - 已识别Mod名称为: 'Offer Convoy Contribution'
+2025-08-12 17:37:29,381 - INFO - 最终使用的主题上下文为: 'Offer Convoy Contribution'
+2025-08-12 17:37:29,381 - INFO - <cleanup_start>
+2025-08-12 17:37:34,257 - INFO - <cleanup_deleting>
+2025-08-12 17:37:34,257 - INFO - <cleanup_success>
+2025-08-12 17:37:37,428 - INFO - 
+--- 启动 '首次翻译' 工作流，目标: Offer Convoy Contribution ---
+2025-08-12 17:37:37,913 - INFO - Gemini client initialized successfully, using model: gemini-2.5-flash
+2025-08-12 17:37:37,913 - INFO - <processing_metadata>
