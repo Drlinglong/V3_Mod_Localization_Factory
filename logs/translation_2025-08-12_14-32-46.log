@@ -1,0 +1,53 @@
+2025-08-12 14:32:46,588 - INFO - Logger initialized and ready.
+2025-08-12 14:32:48,568 - INFO - 语言已设置为 zh_CN。
+2025-08-12 14:32:52,574 - INFO - 
+--- 正在扫描源文件夹 [source_mod] ---
+2025-08-12 14:32:52,574 - INFO - 请选择要汉化的Mod：
+2025-08-12 14:32:52,574 - INFO -   [1] Australia & New Zealand Flavor Pack
+2025-08-12 14:32:52,574 - INFO -   [2] Forts & Engineers
+2025-08-12 14:32:52,574 - INFO -   [3] GORA UI
+2025-08-12 14:32:52,575 - INFO -   [4] Hydra's More Agenda's
+2025-08-12 14:32:52,575 - INFO -   [5] MODJAM2025
+2025-08-12 14:32:52,575 - INFO -   [6] MODJAM2025 - 副本
+2025-08-12 14:32:52,575 - INFO -   [7] Offer Convoy Contribution
+2025-08-12 14:32:52,575 - INFO -   [8] Project Utopia - Extended Timeline - Technical Preview
+2025-08-12 14:32:52,575 - INFO -   [9] Tech & Res
+2025-08-12 14:32:52,575 - INFO -   [10] TEST-ANZAC
+2025-08-12 14:32:52,575 - INFO -   [11] UKrework
+2025-08-12 14:32:53,511 - INFO - 
+你选择了: UKrework
+2025-08-12 14:32:53,511 - INFO - 
+--- 正在获取Mod主题上下文 ---
+2025-08-12 14:32:53,517 - ERROR - 获取Mod上下文时出错: name 're' is not defined
+Traceback (most recent call last):
+  File "J:\V3_Mod_Localization_Factory\scripts\main.py", line 31, in gather_mod_context
+    match = re.search(r'"(.*)"', line)
+            ^^
+NameError: name 're' is not defined. Did you forget to import 're'
+2025-08-12 14:32:53,517 - INFO - 
+--- 开始精简源Mod文件夹: UKrework ---
+2025-08-12 14:33:03,631 - INFO - 正在删除非必要文件和文件夹...
+2025-08-12 14:33:03,631 - INFO - 源文件夹精简完成！
+2025-08-12 14:33:57,429 - INFO - --- 进入自定义语言模式 ---
+2025-08-12 14:34:22,113 - INFO - 
+--- 启动 '首次翻译' 工作流，目标: UKrework ---
+2025-08-12 14:34:22,570 - INFO - Gemini client initialized successfully, using model: gemini-2.5-flash
+2025-08-12 14:34:22,571 - INFO - 
+--- 正在处理 metadata.json ---
+2025-08-12 14:34:22,571 - INFO - 正在翻译 mod name: "UK Rework..."
+2025-08-12 14:34:22,571 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-12 14:34:26,789 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-12 14:34:26,790 - INFO - AFC remote call 1 is done.
+2025-08-12 14:34:26,791 - INFO - metadata.json 汉化完成。
+2025-08-12 14:34:26,791 - INFO - 
+--- 正在处理资产文件 (封面图、描述文件等) ---
+2025-08-12 14:34:26,793 - INFO - 资产文件 'thumbnail.png' 复制完成。
+2025-08-12 14:34:26,793 - INFO - 
+--- 正在解析文件: source_mod\UKrework\localisation\english\ukrework_events_l_english.yml ---
+2025-08-12 14:34:26,803 - INFO - 
+--- 正在翻译为: 繁体中文 ---
+2025-08-12 14:34:26,803 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-12 14:34:36,890 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-12 14:34:36,894 - INFO - AFC remote call 1 is done.
+2025-08-12 14:34:36,895 - INFO - 文件 'englishUKrework\localisation\english\english\ukrework_events_l_english.yml' 汉化完成。
+2025-08-12 14:34:36,897 - INFO - <workflow_completed>

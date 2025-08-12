@@ -60,5 +60,11 @@
   "parallel_processing_end": "--- 所有批次并行处理完毕 ---",
   "warning_batch_failed": "警告：第 {batch_num} 批次翻译失败，该批次的文本将保留英文原文。",
     "warning_partial_failure": "警告：部分翻译批次失败。已为失败的部分保留英文原文。",
-    "retrying_batch": "第 {batch_num} 批次在第 {attempt}/{max_retries} 次尝试中失败。将在 {delay} 秒后重试..."
+    "retrying_batch": "第 {batch_num} 批次在第 {attempt}/{max_retries} 次尝试中失败。将在 {delay} 秒后重试...",
+	"target_option_all_dynamic": "翻译为其余所有{count}种语言",
+"target_option_custom": "自定义/套壳其他语言...",
+"prompt_custom_lang_name": "请输入目标语言的通用名称 (例如: Italian): ",
+"prompt_custom_lang_key": "请输入要使用的P社内部语言密钥 (用于套壳，例如 l_english): ",
+"prompt_custom_lang_prefix": "请输入输出文件夹前缀 (例如: IT-): ",
+"entering_custom_mode": "--- 进入自定义语言模式 ---"
 }
