@@ -21,8 +21,14 @@ API_PROVIDERS = {
     "openai": {
         "api_key_env": "OPENAI_API_KEY",
         "default_model": "gpt-5-mini" # or gpt-5 
+    },
+    "qwen": {
+        "api_key_env": "DASHSCOPE_API_KEY",
+        "default_model": "qwen-plus",
+        "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+        "region": "beijing"  # 华北2（北京）地域
     }
-    # 未来可以在这里增加 deepseek, qwen 等
+    # 未来可以在这里增加 deepseek 等
 }
 
 # --- 语言数据库 --------------------------------------------------

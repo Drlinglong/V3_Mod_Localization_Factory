@@ -23,7 +23,11 @@ def select_api_provider():
     provider_options = list(API_PROVIDERS.keys())
     
     for i, key in enumerate(provider_options):
-        logging.info(f"  [{i + 1}] {key.capitalize()}")
+        if key == "qwen":
+            # 为Qwen添加特殊提示
+            logging.info(f"  [{i + 1}] {key.capitalize()} - {i18n.t('qwen_china_hint')}")
+        else:
+            logging.info(f"  [{i + 1}] {key.capitalize()}")
     
     while True:
         try:
