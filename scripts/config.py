@@ -20,7 +20,7 @@ API_PROVIDERS = {
     },
     "openai": {
         "api_key_env": "OPENAI_API_KEY",
-        "default_model": "gpt-5" # or gpt-5 when available
+        "default_model": "gpt-5-mini" # or gpt-5 
     }
     # 未来可以在这里增加 deepseek, qwen 等
 }
