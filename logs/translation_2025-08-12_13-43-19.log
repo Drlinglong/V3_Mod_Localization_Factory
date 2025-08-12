@@ -1,0 +1,44 @@
+2025-08-12 13:43:19,436 - INFO - Logger initialized and ready.
+2025-08-12 13:43:20,990 - INFO - 语言已设置为 zh_CN。
+2025-08-12 13:43:20,990 - INFO - --- New Session Started ---
+2025-08-12 13:43:22,824 - INFO - 
+--- 正在扫描源文件夹 [source_mod] ---
+2025-08-12 13:43:22,824 - INFO - 请选择要汉化的Mod：
+2025-08-12 13:43:22,825 - INFO -   [1] Australia & New Zealand Flavor Pack
+2025-08-12 13:43:22,825 - INFO -   [2] Forts & Engineers
+2025-08-12 13:43:22,825 - INFO -   [3] GORA UI
+2025-08-12 13:43:22,825 - INFO -   [4] Hydra's More Agenda's
+2025-08-12 13:43:22,825 - INFO -   [5] MODJAM2025
+2025-08-12 13:43:22,825 - INFO -   [6] MODJAM2025 - 副本
+2025-08-12 13:43:22,825 - INFO -   [7] Offer Convoy Contribution
+2025-08-12 13:43:22,825 - INFO -   [8] Project Utopia - Extended Timeline - Technical Preview
+2025-08-12 13:43:22,825 - INFO -   [9] Tech & Res
+2025-08-12 13:43:22,825 - INFO -   [10] TEST-ANZAC
+2025-08-12 13:43:22,825 - INFO -   [11] UKrework
+2025-08-12 13:43:27,006 - INFO - 
+你选择了: Hydra's More Agenda's
+2025-08-12 13:43:27,006 - INFO - 
+--- 开始精简源Mod文件夹: Hydra's More Agenda's ---
+2025-08-12 13:43:30,479 - INFO - 正在删除非必要文件和文件夹...
+2025-08-12 13:43:30,480 - INFO - 源文件夹精简完成！
+2025-08-12 13:43:35,598 - INFO - 
+--- 启动 '首次翻译' 工作流，目标: Hydra's More Agenda's ---
+2025-08-12 13:43:36,051 - INFO - Gemini client initialized successfully, using model: gemini-2.5-flash
+2025-08-12 13:43:36,051 - INFO - 
+--- 正在处理 metadata.json ---
+2025-08-12 13:43:36,057 - INFO - 正在翻译 mod name: "Hydra's More Agenda's..."
+2025-08-12 13:43:36,058 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-12 13:43:42,545 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-12 13:43:42,546 - INFO - AFC remote call 1 is done.
+2025-08-12 13:43:42,547 - INFO - metadata.json 汉化完成。
+2025-08-12 13:43:42,547 - INFO - 
+--- 正在处理资产文件 (封面图、描述文件等) ---
+2025-08-12 13:43:42,550 - INFO - 资产文件 'thumbnail.png' 复制完成。
+2025-08-12 13:43:42,550 - INFO - 
+--- 正在解析文件: source_mod\Hydra's More Agenda's\localisation\english\MA_Hydra_l_english.yml ---
+2025-08-12 13:43:42,559 - INFO - 
+--- 正在翻译为: 简体中文 ---
+2025-08-12 13:43:42,560 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-12 13:43:56,925 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-12 13:43:56,926 - INFO - AFC remote call 1 is done.
+2025-08-12 13:43:56,927 - INFO - 文件 'zh-CN-Hydra's More Agenda's\localisation\simp_chinese\english\MA_Hydra_l_simp_chinese.yml' 汉化完成。

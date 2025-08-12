@@ -4,6 +4,7 @@ import re
 import time
 import concurrent.futures
 from google import genai
+import logging
 
 from utils import i18n
 from config import MODEL_NAME, CHUNK_SIZE, MAX_RETRIES
@@ -15,14 +16,14 @@ _strip_pl_diacritics = strip_pl_diacritics  # noqa: N816
 def initialize_client() -> "genai.Client | None":
     """Initializes the Gemini client."""
     if not os.getenv("GEMINI_API_KEY"):
-        print("API Key not found in environment variables.")
+        logging.error("API Key not found in environment variables.")
         return None
     try:
         client = genai.Client()
-        print(f"Gemini client initialized successfully, using model: {MODEL_NAME}")
+        logging.info(f"Gemini client initialized successfully, using model: {MODEL_NAME}")
         return client
     except Exception as e:
-        print(f"Error initializing Gemini client: {e}")
+        logging.exception(f"Error initializing Gemini client: {e}")
         return None
 
 def translate_single_text(
@@ -40,7 +41,7 @@ def translate_single_text(
         return ""
 
     print_key = "translating_mod_name" if task_description == "mod name" else "translating_mod_desc"
-    print(i18n.t(print_key, text=text[:30]))
+    logging.info(i18n.t(print_key, text=text[:30]))
 
     base_prompt = game_profile["single_prompt_template"].format(
         mod_name=mod_name,
@@ -67,7 +68,7 @@ def translate_single_text(
 
         return translated
     except Exception as e:
-        print(i18n.t("api_call_error", error=e))
+        logging.exception(i18n.t("api_call_error", error=e))
         return text
 
 def _translate_chunk(client, chunk, source_lang, target_lang, game_profile, mod_context, batch_num):
@@ -110,14 +111,14 @@ def _translate_chunk(client, chunk, source_lang, target_lang, game_profile, mod_
                     translated_chunk = [_strip_pl_diacritics(t) for t in translated_chunk]
                 return translated_chunk
 
-            print(i18n.t("mismatch_error", original_count=len(chunk), translated_count=len(translated_chunk)))
+            logging.error(i18n.t("mismatch_error", original_count=len(chunk), translated_count=len(translated_chunk)))
 
         except Exception as e:
-            print(i18n.t("api_call_error", error=e))
+            logging.exception(i18n.t("api_call_error", error=e))
 
         if attempt < MAX_RETRIES - 1:
             delay = (attempt + 1) * 2
-            print(i18n.t("retrying_batch", batch_num=batch_num, attempt=attempt + 1, max_retries=MAX_RETRIES, delay=delay))
+            logging.warning(i18n.t("retrying_batch", batch_num=batch_num, attempt=attempt + 1, max_retries=MAX_RETRIES, delay=delay))
             time.sleep(delay)
 
     return None
@@ -139,7 +140,7 @@ def translate_texts_in_batches(
 
     with concurrent.futures.ThreadPoolExecutor() as executor:
         chunks = [texts_to_translate[i : i + CHUNK_SIZE] for i in range(0, len(texts_to_translate), CHUNK_SIZE)]
-        print(i18n.t("parallel_processing_start", count=len(chunks)))
+        logging.info(i18n.t("parallel_processing_start", count=len(chunks)))
 
         future_to_index = {
             executor.submit(_translate_chunk, client, chunk, source_lang, target_lang, game_profile, mod_context, i + 1): i
@@ -153,7 +154,7 @@ def translate_texts_in_batches(
             try:
                 results[index] = future.result()
             except Exception as e:
-                print(f"A translation thread failed with a critical error: {e}")
+                logging.exception(f"A translation thread failed with a critical error: {e}")
                 results[index] = None
 
     all_translated_texts: list[str] = []
@@ -161,14 +162,14 @@ def translate_texts_in_batches(
     for i, translated_chunk in enumerate(results):
         if translated_chunk is None:
             has_failures = True
-            print(i18n.t("warning_batch_failed", batch_num=i + 1))
+            logging.warning(i18n.t("warning_batch_failed", batch_num=i + 1))
             original_chunk = chunks[i]
             all_translated_texts.extend(original_chunk)
         else:
             all_translated_texts.extend(translated_chunk)
     
     if has_failures:
-        print(i18n.t("warning_partial_failure"))
+        logging.error(i18n.t("warning_partial_failure"))
 
-    print(i18n.t("parallel_processing_end"))
+    logging.info(i18n.t("parallel_processing_end"))
     return all_translated_texts

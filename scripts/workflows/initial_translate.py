@@ -5,7 +5,7 @@ import os
 from core import file_parser, api_handler, file_builder, asset_handler
 from config import SOURCE_DIR, DEST_DIR, LANGUAGES
 from utils import i18n
-
+import logging
 
 def run(mod_name: str,
         source_lang: dict,
@@ -25,14 +25,14 @@ def run(mod_name: str,
         output_folder_name = f"{prefix}{mod_name}"
         primary_target_lang = target_lang
 
-    print(i18n.t("start_workflow",
+    logging.info(i18n.t("start_workflow",
                  workflow_name=i18n.t("workflow_initial_translate_name"),
                  mod_name=mod_name))
 
     # ───────────── 2. init klienta ─────────────
     client = api_handler.initialize_client()
     if not client:
-        print(i18n.t("api_client_init_fail"))
+        logging.warning(i18n.t("api_client_init_fail"))
         return
 
     # ───────────── 3. metadata + assety ─────────────
@@ -86,7 +86,7 @@ def run(mod_name: str,
 
     # ───────────── 5. tłumaczenie + zapis ─────────────
     for target_lang in target_languages:
-        print(i18n.t("translating_to_language", lang_name=target_lang["name"]))
+        logging.info(i18n.t("translating_to_language", lang_name=target_lang["name"]))
 
         for fd in all_files_data:
             src_fp = os.path.join(fd["root"], fd["filename"])
