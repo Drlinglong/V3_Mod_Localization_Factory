@@ -89,7 +89,7 @@ scripts/
 2.  **安装 Python**: 确保你的系统已安装 Python 3.8 或更高版本。
 3.  **安装依赖库**: 如果使用gemini则在终端中运行 `pip install --upgrade google-genai`。
                     如果使用Qwen或者chatgptapi则需要运行 `pip install -U openai`   
-5.  **设置API密钥**: 设置一个名为 `GEMINI_API_KEY` 的环境变量，并填入你的API密钥。
+5.  **设置API密钥**: 根据你使用的API服务商设置API_KEY环境变量，并填入你的API密钥。
 
 ### 4.2. 项目设置
 1.  **下载/克隆仓库**: 从GitHub下载本项目。
