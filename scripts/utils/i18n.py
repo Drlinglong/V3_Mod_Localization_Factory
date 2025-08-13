@@ -5,10 +5,15 @@ import logging
 
 _strings = {}
 _default_lang = 'zh_CN'  # 设置默认语言为中文
+_language_loaded = False  # 添加标志，避免重复加载
 
 def load_language(lang_code=None):
     """加载语言文件，如果未指定则显示语言选择菜单。"""
-    global _strings
+    global _strings, _language_loaded
+    
+    # 如果已经加载过语言，直接返回
+    if _language_loaded and _strings:
+        return True
     
     if lang_code is None:
         # 显示语言选择菜单
@@ -47,6 +52,7 @@ def load_language(lang_code=None):
     try:
         with open(lang_file_path, 'r', encoding='utf-8') as f:
             _strings = json.load(f)
+        _language_loaded = True  # 设置标志
         logging.info(f"Language loaded: {lang_code}")
         return True
     except Exception as e:
@@ -74,9 +80,42 @@ def load_language(lang_code=None):
                 "select_api_provider_prompt": "Please select API provider:",
                 "workflow_completed": "Workflow completed!"
             }
+            _language_loaded = True  # 设置标志
             return False
 
 def t(key, **kwargs):
     """获取翻译后的字符串。"""
-    # 提供一个备用值，防止因字典key不存在而崩溃
-    return _strings.get(key, f"<{key}>").format(**kwargs)
+    # 检查键是否存在
+    if key not in _strings:
+        # 记录缺失的键，帮助调试
+        logging.warning(f"国际化键缺失: '{key}'，当前语言文件包含 {len(_strings)} 个键")
+        
+        # 提供更有用的备用值
+        if key in ['processing_metadata', 'translating_mod_name', 'metadata_success', 
+                   'processing_assets', 'asset_copied', 'parsing_file', 'extracted_texts', 'writing_file_success']:
+            # 这些是重要的键，提供硬编码的备用值
+            fallback_values = {
+                'processing_metadata': '正在处理 metadata.json',
+                'translating_mod_name': '正在翻译 mod name',
+                'metadata_success': 'metadata.json 处理完成',
+                'processing_assets': '正在处理资产文件',
+                'asset_copied': '资产文件复制完成',
+                'parsing_file': '正在解析文件',
+                'extracted_texts': '提取到可翻译文本',
+                'writing_file_success': '文件写入成功'
+            }
+            return fallback_values.get(key, f"[缺失键: {key}]")
+        else:
+            return f"[缺失键: {key}]"
+    
+    try:
+        # 尝试格式化字符串
+        return _strings[key].format(**kwargs)
+    except KeyError as e:
+        # 如果格式化失败，记录错误并返回原始值
+        logging.error(f"国际化键 '{key}' 格式化失败，缺少参数: {e}")
+        return _strings[key]
+    except Exception as e:
+        # 其他错误
+        logging.error(f"国际化键 '{key}' 处理失败: {e}")
+        return f"[错误: {key}]"

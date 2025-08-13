@@ -96,8 +96,42 @@ scripts/
 
 ### 4.3. 运行脚本
 1.  在项目**根目录**打开终端。
-2.  运行命令： `python scripts/main.py`
+2.  Windows 用户：双击 `run.bat`
+    或者运行命令： `python scripts/main.py`
 3.  根据终端提示，依次选择：**界面语言 -> 目标游戏 -> 目标Mod -> 是否清理源文件 -> 源语言 -> 目标语言 -> (可选)输入Mod主题**。
+
+### 4.4. 故障排除
+
+#### 常见错误：`sourcemod` 不存在
+**错误原因：**
+- 程序没有在项目根目录下运行
+- `source_mod` 文件夹名称错误或不存在
+- Windows 路径兼容性问题
+
+**解决方案：**
+1. **使用提供的启动脚本**（推荐）：
+   - Windows 用户：双击 `run.bat`
+   - 其他系统：运行 `python run.py`
+
+2. **手动检查**：
+   - 确保在包含 `source_mod` 文件夹的目录下运行程序
+   - 检查文件夹名称是否为 `source_mod`（不是 `sourcemod` 或其他）
+   - 确保 `source_mod` 文件夹存在且包含mod文件
+
+3. **项目结构验证**：
+   ```
+   V3_Mod_Localization_Factory/
+   ├── source_mod/          ← 必须存在
+   ├── scripts/
+   ├── run.py              ← 新的启动脚本
+   ├── run.bat             ← Windows启动脚本
+   └── README.md
+   ```
+
+#### 其他常见问题
+- **权限错误**：确保对项目目录有读写权限
+- **Python版本**：需要 Python 3.8 或更高版本
+- **依赖缺失**：运行 `pip install --upgrade google-genai`
 
 ### 4.4. 启用Mod（维多利亚3）
 1.  在完成汉化后，你能在`my_translation`文件夹下找到输出。文件夹的名称会根据你选择的本地化方式有所变化。例如 `zh-CN-ABCDEFG`。

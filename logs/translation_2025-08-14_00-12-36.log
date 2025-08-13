@@ -1,0 +1,84 @@
+2025-08-14 00:12:36,251 - INFO - Logger initialized and ready.
+2025-08-14 00:12:42,586 - INFO - Language loaded: zh_CN
+2025-08-14 00:12:42,586 - INFO - --- New Session Started ---
+2025-08-14 00:12:42,586 - INFO - 请选择API供应商:
+2025-08-14 00:12:42,586 - INFO -   [1] Gemini
+2025-08-14 00:12:42,586 - INFO -   [2] Openai
+2025-08-14 00:12:42,586 - INFO -   [3] Qwen - （中国大陆地区用户请用这个）
+2025-08-14 00:12:43,735 - INFO - 
+请选择游戏:
+2025-08-14 00:12:43,736 - INFO -   [1] Victoria 3 (维多利亚3)
+2025-08-14 00:12:43,736 - INFO -   [2] Stellaris (群星)
+2025-08-14 00:12:43,736 - INFO -   [3] Europa Universalis IV (欧陆风云4)
+2025-08-14 00:12:43,736 - INFO -   [4] Hearts of Iron IV (钢铁雄心4)
+2025-08-14 00:12:43,737 - INFO -   [5] Crusader Kings III (十字军之王3)
+2025-08-14 00:12:46,278 - INFO - 
+--- 正在扫描源文件夹 [J:\V3_Mod_Localization_Factory\source_mod] ---
+2025-08-14 00:12:46,279 - INFO - 请选择要汉化的Mod：
+2025-08-14 00:12:46,279 - INFO -   [1] Australia & New Zealand Flavor Pack
+2025-08-14 00:12:46,279 - INFO -   [2] Forts & Engineers
+2025-08-14 00:12:46,279 - INFO -   [3] GORA UI
+2025-08-14 00:12:46,279 - INFO -   [4] Hydra's More Agenda's
+2025-08-14 00:12:46,279 - INFO -   [5] MODJAM2025
+2025-08-14 00:12:46,279 - INFO -   [6] MODJAM2025 - 副本
+2025-08-14 00:12:46,279 - INFO -   [7] Offer Convoy Contribution
+2025-08-14 00:12:46,279 - INFO -   [8] Project Utopia - Extended Timeline - Technical Preview
+2025-08-14 00:12:46,279 - INFO -   [9] Tech & Res
+2025-08-14 00:12:46,279 - INFO -   [10] TEST-ANZAC
+2025-08-14 00:12:46,279 - INFO -   [11] UKrework
+2025-08-14 00:12:48,880 - INFO - 
+你选择了: Offer Convoy Contribution
+2025-08-14 00:12:48,880 - INFO - 
+--- 正在获取Mod主题上下文 ---
+2025-08-14 00:12:48,880 - INFO - 已识别Mod名称为: 'Offer Convoy Contribution'
+2025-08-14 00:12:49,695 - INFO - 最终使用的主题上下文为: 'Offer Convoy Contribution'
+2025-08-14 00:12:49,696 - INFO - 
+--- 开始精简源Mod文件夹: Offer Convoy Contribution ---
+2025-08-14 00:12:50,726 - INFO - 操作已取消。
+2025-08-14 00:12:50,726 - INFO - 
+请选择源语言:
+2025-08-14 00:12:50,726 - INFO -   [1] English
+2025-08-14 00:12:50,726 - INFO -   [2] 简体中文
+2025-08-14 00:12:50,726 - INFO -   [3] Français
+2025-08-14 00:12:50,727 - INFO -   [4] Deutsch
+2025-08-14 00:12:50,727 - INFO -   [5] Español
+2025-08-14 00:12:50,727 - INFO -   [6] 日本語
+2025-08-14 00:12:50,727 - INFO -   [7] 한국어
+2025-08-14 00:12:50,727 - INFO -   [8] Polski
+2025-08-14 00:12:50,727 - INFO -   [9] Português do Brasil
+2025-08-14 00:12:50,727 - INFO -   [10] Русский
+2025-08-14 00:12:50,727 - INFO -   [11] Türkçe
+2025-08-14 00:12:51,671 - INFO - 
+请选择目标语言:
+2025-08-14 00:12:51,671 - INFO -   [0] 翻译为其余所有10种语言
+2025-08-14 00:12:51,671 - INFO -   [1] English (Source)
+2025-08-14 00:12:51,671 - INFO -   [2] 简体中文
+2025-08-14 00:12:51,671 - INFO -   [3] Français
+2025-08-14 00:12:51,671 - INFO -   [4] Deutsch
+2025-08-14 00:12:51,671 - INFO -   [5] Español
+2025-08-14 00:12:51,671 - INFO -   [6] 日本語
+2025-08-14 00:12:51,671 - INFO -   [7] 한국어
+2025-08-14 00:12:51,671 - INFO -   [8] Polski
+2025-08-14 00:12:51,672 - INFO -   [9] Português do Brasil
+2025-08-14 00:12:51,672 - INFO -   [10] Русский
+2025-08-14 00:12:51,672 - INFO -   [11] Türkçe
+2025-08-14 00:12:51,672 - INFO -   [c] 自定义/套壳其他语言...
+2025-08-14 00:12:55,306 - INFO - 
+--- 启动 '首次翻译' 工作流，目标: Offer Convoy Contribution ---
+2025-08-14 00:12:55,474 - INFO - OpenAI client initialized successfully, using model: gpt-5-mini
+2025-08-14 00:12:55,474 - INFO - 
+--- 正在处理 metadata.json ---
+2025-08-14 00:12:55,474 - INFO - 正在翻译 mod name: "Offer Convoy Contribution..."
+2025-08-14 00:13:03,725 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-14 00:13:03,730 - INFO - metadata.json 汉化完成。
+2025-08-14 00:13:03,730 - INFO - 
+--- 正在处理资产文件 (封面图、描述文件等) ---
+2025-08-14 00:13:03,732 - INFO - 资产文件 'thumbnail.png' 复制完成。
+2025-08-14 00:13:03,732 - INFO - 
+--- 正在解析文件: source_mod\Offer Convoy Contribution\localization\english\OCC_l_english.yml ---
+2025-08-14 00:13:03,732 - INFO - 提取到 8 条可翻译文本。
+2025-08-14 00:13:03,732 - INFO - 
+--- 正在翻译为: 简体中文 ---
+2025-08-14 00:13:23,034 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-14 00:13:23,035 - INFO - 文件 'zh-CN-Offer Convoy Contribution\localization\simp_chinese\english\OCC_l_simp_chinese.yml' 汉化完成。
+2025-08-14 00:13:23,035 - INFO - 工作流完成！

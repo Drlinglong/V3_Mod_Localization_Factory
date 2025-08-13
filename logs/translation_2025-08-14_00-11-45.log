@@ -1,0 +1,88 @@
+2025-08-14 00:11:45,467 - INFO - Logger initialized and ready.
+2025-08-14 00:11:47,964 - INFO - Language loaded: zh_CN
+2025-08-14 00:11:47,964 - INFO - --- New Session Started ---
+2025-08-14 00:11:47,964 - INFO - 请选择API供应商:
+2025-08-14 00:11:47,964 - INFO -   [1] Gemini
+2025-08-14 00:11:47,964 - INFO -   [2] Openai
+2025-08-14 00:11:47,964 - INFO -   [3] Qwen - （中国大陆地区用户请用这个）
+2025-08-14 00:11:49,004 - INFO - 
+请选择游戏:
+2025-08-14 00:11:49,004 - INFO -   [1] Victoria 3 (维多利亚3)
+2025-08-14 00:11:49,004 - INFO -   [2] Stellaris (群星)
+2025-08-14 00:11:49,004 - INFO -   [3] Europa Universalis IV (欧陆风云4)
+2025-08-14 00:11:49,004 - INFO -   [4] Hearts of Iron IV (钢铁雄心4)
+2025-08-14 00:11:49,004 - INFO -   [5] Crusader Kings III (十字军之王3)
+2025-08-14 00:11:51,171 - INFO - 
+--- 正在扫描源文件夹 [J:\V3_Mod_Localization_Factory\source_mod] ---
+2025-08-14 00:11:51,171 - INFO - 请选择要汉化的Mod：
+2025-08-14 00:11:51,171 - INFO -   [1] Australia & New Zealand Flavor Pack
+2025-08-14 00:11:51,171 - INFO -   [2] Forts & Engineers
+2025-08-14 00:11:51,171 - INFO -   [3] GORA UI
+2025-08-14 00:11:51,171 - INFO -   [4] Hydra's More Agenda's
+2025-08-14 00:11:51,171 - INFO -   [5] MODJAM2025
+2025-08-14 00:11:51,171 - INFO -   [6] MODJAM2025 - 副本
+2025-08-14 00:11:51,171 - INFO -   [7] Offer Convoy Contribution
+2025-08-14 00:11:51,171 - INFO -   [8] Project Utopia - Extended Timeline - Technical Preview
+2025-08-14 00:11:51,171 - INFO -   [9] Tech & Res
+2025-08-14 00:11:51,171 - INFO -   [10] TEST-ANZAC
+2025-08-14 00:11:51,171 - INFO -   [11] UKrework
+2025-08-14 00:11:53,363 - INFO - 
+你选择了: Offer Convoy Contribution
+2025-08-14 00:11:53,363 - INFO - 
+--- 正在获取Mod主题上下文 ---
+2025-08-14 00:11:53,363 - INFO - 已识别Mod名称为: 'Offer Convoy Contribution'
+2025-08-14 00:11:54,164 - INFO - 最终使用的主题上下文为: 'Offer Convoy Contribution'
+2025-08-14 00:11:54,164 - INFO - 
+--- 开始精简源Mod文件夹: Offer Convoy Contribution ---
+2025-08-14 00:11:55,311 - INFO - 操作已取消。
+2025-08-14 00:11:55,312 - INFO - 
+请选择源语言:
+2025-08-14 00:11:55,312 - INFO -   [1] English
+2025-08-14 00:11:55,312 - INFO -   [2] 简体中文
+2025-08-14 00:11:55,312 - INFO -   [3] Français
+2025-08-14 00:11:55,312 - INFO -   [4] Deutsch
+2025-08-14 00:11:55,312 - INFO -   [5] Español
+2025-08-14 00:11:55,312 - INFO -   [6] 日本語
+2025-08-14 00:11:55,312 - INFO -   [7] 한국어
+2025-08-14 00:11:55,312 - INFO -   [8] Polski
+2025-08-14 00:11:55,312 - INFO -   [9] Português do Brasil
+2025-08-14 00:11:55,312 - INFO -   [10] Русский
+2025-08-14 00:11:55,312 - INFO -   [11] Türkçe
+2025-08-14 00:11:57,905 - INFO - 
+请选择目标语言:
+2025-08-14 00:11:57,906 - INFO -   [0] 翻译为其余所有10种语言
+2025-08-14 00:11:57,906 - INFO -   [1] English (Source)
+2025-08-14 00:11:57,906 - INFO -   [2] 简体中文
+2025-08-14 00:11:57,906 - INFO -   [3] Français
+2025-08-14 00:11:57,906 - INFO -   [4] Deutsch
+2025-08-14 00:11:57,906 - INFO -   [5] Español
+2025-08-14 00:11:57,906 - INFO -   [6] 日本語
+2025-08-14 00:11:57,906 - INFO -   [7] 한국어
+2025-08-14 00:11:57,906 - INFO -   [8] Polski
+2025-08-14 00:11:57,906 - INFO -   [9] Português do Brasil
+2025-08-14 00:11:57,906 - INFO -   [10] Русский
+2025-08-14 00:11:57,907 - INFO -   [11] Türkçe
+2025-08-14 00:11:57,907 - INFO -   [c] 自定义/套壳其他语言...
+2025-08-14 00:11:59,255 - INFO - 
+--- 启动 '首次翻译' 工作流，目标: Offer Convoy Contribution ---
+2025-08-14 00:11:59,724 - INFO - Gemini client initialized successfully, using model: gemini-2.5-flash
+2025-08-14 00:11:59,724 - INFO - 
+--- 正在处理 metadata.json ---
+2025-08-14 00:11:59,725 - INFO - 正在翻译 mod name: "Offer Convoy Contribution..."
+2025-08-14 00:11:59,725 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-14 00:12:08,553 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-14 00:12:08,554 - INFO - AFC remote call 1 is done.
+2025-08-14 00:12:08,554 - INFO - metadata.json 汉化完成。
+2025-08-14 00:12:08,554 - INFO - 
+--- 正在处理资产文件 (封面图、描述文件等) ---
+2025-08-14 00:12:08,555 - INFO - 资产文件 'thumbnail.png' 复制完成。
+2025-08-14 00:12:08,555 - INFO - 
+--- 正在解析文件: source_mod\Offer Convoy Contribution\localization\english\OCC_l_english.yml ---
+2025-08-14 00:12:08,556 - INFO - 提取到 8 条可翻译文本。
+2025-08-14 00:12:08,556 - INFO - 
+--- 正在翻译为: 简体中文 ---
+2025-08-14 00:12:08,557 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-14 00:12:15,325 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-14 00:12:15,326 - INFO - AFC remote call 1 is done.
+2025-08-14 00:12:15,327 - INFO - 文件 'zh-CN-Offer Convoy Contribution\localization\simp_chinese\english\OCC_l_simp_chinese.yml' 汉化完成。
+2025-08-14 00:12:15,328 - INFO - 工作流完成！

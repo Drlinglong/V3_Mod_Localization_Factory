@@ -1,17 +1,16 @@
-# scripts/core/api_handler.py
+# scripts/core/gemini_handler.py
 import os
 import re
 import time
-import concurrent.futures
-from google import genai
 import logging
+import concurrent.futures
+from typing import List
+from google import genai
 
-from utils import i18n
-from config import CHUNK_SIZE, MAX_RETRIES, API_PROVIDERS
-from utils.text_clean import strip_pl_diacritics, strip_outer_quotes
-
-# Alias required by the audit.py script for compatibility
-_strip_pl_diacritics = strip_pl_diacritics  # noqa: N816
+# 【核心修正】统一使用绝对导入
+from scripts.utils import i18n
+from scripts.config import CHUNK_SIZE, MAX_RETRIES, API_PROVIDERS
+from scripts.utils.text_clean import strip_outer_quotes, strip_pl_diacritics
 
 def initialize_client(api_key: str = None) -> "genai.Client | None":
     """Initializes the Gemini client."""
@@ -29,6 +28,7 @@ def initialize_client(api_key: str = None) -> "genai.Client | None":
 
 def translate_single_text(
     client: "genai.Client",
+    provider_name: str,
     text: str,
     task_description: str,
     mod_name: str,
@@ -66,7 +66,7 @@ def translate_single_text(
 
         # Post-processing for EU4 Polish
         if game_profile.get("strip_pl_diacritics") and target_lang["code"] == "pl":
-            translated = _strip_pl_diacritics(translated)
+            translated = strip_pl_diacritics(translated)
 
         return translated
     except Exception as e:
@@ -111,7 +111,7 @@ def _translate_chunk(client, chunk, source_lang, target_lang, game_profile, mod_
             if len(translated_chunk) == len(chunk):
                 translated_chunk = [strip_outer_quotes(t) for t in translated_chunk]
                 if game_profile.get("strip_pl_diacritics") and target_lang["code"] == "pl":
-                    translated_chunk = [_strip_pl_diacritics(t) for t in translated_chunk]
+                    translated_chunk = [strip_pl_diacritics(t) for t in translated_chunk]
                 return translated_chunk
 
             logging.error(i18n.t("mismatch_error", original_count=len(chunk), translated_count=len(translated_chunk)))

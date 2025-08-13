@@ -27,7 +27,7 @@ from types import ModuleType
 from typing import Callable, List
 import logging
 
-from utils import i18n  # komunikaty wielojęzykowe
+from scripts.utils import i18n  # komunikaty wielojęzykowe
 
 # ───────────────────── 1. PRÓBA ZAŁADOWANIA HOOKÓW ─────────────────────
 HOOKS: List[Callable[[str, list[str], list[str], dict[int, dict]], None]] = []
