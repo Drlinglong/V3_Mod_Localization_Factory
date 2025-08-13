@@ -7,8 +7,10 @@ CHUNK_SIZE = 40
 MAX_RETRIES = 3
 
 # --- 路径配置 ----------------------------------------------------
-SOURCE_DIR = 'source_mod'
-DEST_DIR = 'my_translation'
+# 使用绝对路径，避免工作目录依赖问题
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+SOURCE_DIR = os.path.join(PROJECT_ROOT, 'source_mod')
+DEST_DIR = os.path.join(PROJECT_ROOT, 'my_translation')
 
 # --- API Provider Configuration ---
 DEFAULT_API_PROVIDER = "gemini" 

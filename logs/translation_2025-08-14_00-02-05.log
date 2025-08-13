@@ -1,0 +1,87 @@
+2025-08-14 00:02:05,567 - INFO - Logger initialized and ready.
+2025-08-14 00:02:07,105 - INFO - Language loaded: zh_CN
+2025-08-14 00:02:07,105 - INFO - --- New Session Started ---
+2025-08-14 00:02:07,105 - INFO - 请选择API供应商:
+2025-08-14 00:02:07,105 - INFO -   [1] Gemini
+2025-08-14 00:02:07,105 - INFO -   [2] Openai
+2025-08-14 00:02:07,105 - INFO -   [3] Qwen - （中国大陆地区用户请用这个）
+2025-08-14 00:02:08,337 - INFO - 
+请选择游戏:
+2025-08-14 00:02:08,337 - INFO -   [1] Victoria 3 (维多利亚3)
+2025-08-14 00:02:08,337 - INFO -   [2] Stellaris (群星)
+2025-08-14 00:02:08,338 - INFO -   [3] Europa Universalis IV (欧陆风云4)
+2025-08-14 00:02:08,338 - INFO -   [4] Hearts of Iron IV (钢铁雄心4)
+2025-08-14 00:02:08,338 - INFO -   [5] Crusader Kings III (十字军之王3)
+2025-08-14 00:02:09,235 - INFO - 
+--- 正在扫描源文件夹 [J:\V3_Mod_Localization_Factory\source_mod] ---
+2025-08-14 00:02:09,235 - INFO - 请选择要汉化的Mod：
+2025-08-14 00:02:09,235 - INFO -   [1] Australia & New Zealand Flavor Pack
+2025-08-14 00:02:09,236 - INFO -   [2] Forts & Engineers
+2025-08-14 00:02:09,236 - INFO -   [3] GORA UI
+2025-08-14 00:02:09,236 - INFO -   [4] Hydra's More Agenda's
+2025-08-14 00:02:09,236 - INFO -   [5] MODJAM2025
+2025-08-14 00:02:09,236 - INFO -   [6] MODJAM2025 - 副本
+2025-08-14 00:02:09,236 - INFO -   [7] Offer Convoy Contribution
+2025-08-14 00:02:09,236 - INFO -   [8] Project Utopia - Extended Timeline - Technical Preview
+2025-08-14 00:02:09,236 - INFO -   [9] Tech & Res
+2025-08-14 00:02:09,236 - INFO -   [10] TEST-ANZAC
+2025-08-14 00:02:09,236 - INFO -   [11] UKrework
+2025-08-14 00:02:10,925 - INFO - 
+你选择了: Offer Convoy Contribution
+2025-08-14 00:02:10,926 - INFO - 
+--- 正在获取Mod主题上下文 ---
+2025-08-14 00:02:10,926 - INFO - 已识别Mod名称为: 'Offer Convoy Contribution'
+2025-08-14 00:02:11,633 - INFO - 最终使用的主题上下文为: 'Offer Convoy Contribution'
+2025-08-14 00:02:11,633 - INFO - 
+--- 开始精简源Mod文件夹: Offer Convoy Contribution ---
+2025-08-14 00:02:12,684 - INFO - 操作已取消。
+2025-08-14 00:02:12,684 - INFO - 
+请选择源语言:
+2025-08-14 00:02:12,684 - INFO -   [1] English
+2025-08-14 00:02:12,684 - INFO -   [2] 简体中文
+2025-08-14 00:02:12,684 - INFO -   [3] Français
+2025-08-14 00:02:12,684 - INFO -   [4] Deutsch
+2025-08-14 00:02:12,684 - INFO -   [5] Español
+2025-08-14 00:02:12,685 - INFO -   [6] 日本語
+2025-08-14 00:02:12,685 - INFO -   [7] 한국어
+2025-08-14 00:02:12,685 - INFO -   [8] Polski
+2025-08-14 00:02:12,685 - INFO -   [9] Português do Brasil
+2025-08-14 00:02:12,685 - INFO -   [10] Русский
+2025-08-14 00:02:12,685 - INFO -   [11] Türkçe
+2025-08-14 00:02:13,650 - INFO - 
+请选择目标语言:
+2025-08-14 00:02:13,650 - INFO -   [0] 翻译为其余所有10种语言
+2025-08-14 00:02:13,650 - INFO -   [1] English (Source)
+2025-08-14 00:02:13,651 - INFO -   [2] 简体中文
+2025-08-14 00:02:13,651 - INFO -   [3] Français
+2025-08-14 00:02:13,651 - INFO -   [4] Deutsch
+2025-08-14 00:02:13,651 - INFO -   [5] Español
+2025-08-14 00:02:13,651 - INFO -   [6] 日本語
+2025-08-14 00:02:13,651 - INFO -   [7] 한국어
+2025-08-14 00:02:13,651 - INFO -   [8] Polski
+2025-08-14 00:02:13,651 - INFO -   [9] Português do Brasil
+2025-08-14 00:02:13,651 - INFO -   [10] Русский
+2025-08-14 00:02:13,651 - INFO -   [11] Türkçe
+2025-08-14 00:02:13,651 - INFO -   [c] 自定义/套壳其他语言...
+2025-08-14 00:02:15,633 - INFO - 
+--- 启动 '首次翻译' 工作流，目标: Offer Convoy Contribution ---
+2025-08-14 00:02:16,100 - INFO - Gemini client initialized successfully, using model: gemini-2.5-flash
+2025-08-14 00:02:16,100 - INFO - 
+--- 正在处理 metadata.json ---
+2025-08-14 00:02:16,100 - ERROR - 程序运行时发生未处理的异常
+Traceback (most recent call last):
+  File "J:\V3_Mod_Localization_Factory\scripts\main.py", line 202, in <module>
+    main_menu()
+  File "J:\V3_Mod_Localization_Factory\scripts\main.py", line 190, in main_menu
+    initial_translate.run(selected_mod, source_lang, target_languages, selected_game_profile, mod_context, selected_provider)
+  File "J:\V3_Mod_Localization_Factory\scripts\workflows\initial_translate.py", line 40, in run
+    asset_handler.process_metadata(
+  File "J:\V3_Mod_Localization_Factory\scripts\core\asset_handler.py", line 244, in process_metadata
+    _process_victoria3_metadata(mod_name, client, source_lang, target_lang,
+  File "J:\V3_Mod_Localization_Factory\scripts\core\asset_handler.py", line 30, in _process_victoria3_metadata
+    translated_name = translate_single_text(
+                      ^^^^^^^^^^^^^^^^^^^^^^
+  File "J:\V3_Mod_Localization_Factory\scripts\core\api_handler.py", line 50, in translate_single_text
+    return handler.translate_single_text(client, text, task_description, mod_name, source_lang, target_lang, mod_context, game_profile)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: translate_single_text() missing 1 required positional argument: 'game_profile'

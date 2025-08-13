@@ -4,10 +4,10 @@ import re
 import json
 import shutil
 import logging
-# 【核心修正】所有import都相对于scripts文件夹
-from utils import i18n
-from config import SOURCE_DIR, DEST_DIR
-from core.api_handler import translate_single_text
+# 【核心修正】统一使用绝对导入
+from scripts.utils import i18n
+from scripts.config import SOURCE_DIR, DEST_DIR
+from scripts.core.api_handler import translate_single_text
 
 
 # ──────────────────────────────────────────────────────────────────

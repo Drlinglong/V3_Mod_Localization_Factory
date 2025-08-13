@@ -6,8 +6,8 @@ import concurrent.futures
 from openai import OpenAI
 import logging
 
-from utils import i18n
-from config import CHUNK_SIZE, MAX_RETRIES, API_PROVIDERS
+from scripts.utils import i18n
+from scripts.config import CHUNK_SIZE, MAX_RETRIES, API_PROVIDERS
 from utils.text_clean import strip_pl_diacritics, strip_outer_quotes
 
 # Alias required by the audit.py script for compatibility
@@ -38,6 +38,7 @@ def initialize_client(api_key: str = None) -> "OpenAI | None":
 
 def translate_single_text(
     client: "OpenAI",
+    provider_name: str,  # 添加缺失的provider_name参数
     text: str,
     task_description: str,
     mod_name: str,

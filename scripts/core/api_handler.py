@@ -4,8 +4,8 @@ import re
 import time
 import logging
 import concurrent.futures
-from utils import i18n
-from config import CHUNK_SIZE, MAX_RETRIES, API_PROVIDERS
+from scripts.utils import i18n
+from scripts.config import CHUNK_SIZE, MAX_RETRIES, API_PROVIDERS
 from utils.text_clean import strip_pl_diacritics, strip_outer_quotes
 
 # 【核心修正】直接从当前(core)目录导入我们所有的"引擎模块"
@@ -47,4 +47,4 @@ def translate_texts_in_batches(client, provider_name, texts_to_translate, source
 def translate_single_text(client, provider_name, text, task_description, mod_name, source_lang, target_lang, mod_context, game_profile):
     """调用当前选定API供应商的单条文本翻译函数。"""
     handler = get_handler(provider_name)
-    return handler.translate_single_text(client, text, task_description, mod_name, source_lang, target_lang, mod_context, game_profile)
+    return handler.translate_single_text(client, provider_name, text, task_description, mod_name, source_lang, target_lang, mod_context, game_profile)

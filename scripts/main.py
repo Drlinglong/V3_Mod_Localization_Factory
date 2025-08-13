@@ -130,11 +130,7 @@ def main_menu():
     Main interactive menu for the user.
     Orchestrates the entire workflow from user selection to calling the translation process.
     """
-    # 首先设置日志系统
-    logger.setup_logger()
-    
-    # 然后加载语言文件（自动检测系统语言）
-    i18n.load_language()
+    # 注意：日志系统和国际化系统已在主程序入口处初始化，这里不需要重复初始化
     
     logging.info("--- New Session Started ---")
     
@@ -194,12 +190,20 @@ def main_menu():
         initial_translate.run(selected_mod, source_lang, target_languages, selected_game_profile, mod_context, selected_provider)
 
 if __name__ == '__main__':
-    # Setup logger and i18n first
-    #logger.setup_logger()
-    #i18n.load_language()
-    
-    # For now, we only run the interactive menu.
-    # The non-interactive argparse logic can be added back here later if needed for CI/CD.
-    main_menu()
-
-    logging.info(i18n.t("workflow_completed"))
+    # 确保日志系统和国际化系统正确初始化
+    try:
+        # 设置日志系统
+        logger.setup_logger()
+        
+        # 加载语言文件
+        i18n.load_language()
+        
+        # 运行主菜单
+        main_menu()
+        
+        logging.info(i18n.t("workflow_completed"))
+        
+    except Exception as e:
+        print(f"程序运行时发生错误: {e}")
+        logging.exception("程序运行时发生未处理的异常")
+        sys.exit(1)
