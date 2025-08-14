@@ -12,7 +12,7 @@ def create_fallback_file(
     source_lang: dict,
     target_lang: dict,
     game_profile: dict,
-) -> None:
+) -> str:
     """
     [Fallback Function] Copies the source file, changing only the header and filename.
     This is a safety net for when translation fails or is not needed.
@@ -46,8 +46,10 @@ def create_fallback_file(
         with open(dest_file_path, "w", encoding=game_profile.get("encoding", "utf-8-sig")) as f:
             f.writelines(lines)
         logging.info(i18n.t("fallback_file_created", filename=new_filename))
+        return dest_file_path
     except Exception as e:
         logging.error(i18n.t("fallback_creation_error", error=e))
+        return ""
 
 
 def rebuild_and_write_file(
@@ -60,7 +62,7 @@ def rebuild_and_write_file(
     source_lang: dict,
     target_lang: dict,
     game_profile: dict,
-) -> None:
+) -> str:
     """
     Reconstructs the .yml file with the translated text and saves it to disk.
     """
@@ -121,3 +123,6 @@ def rebuild_and_write_file(
             filename=os.path.join(os.path.relpath(dest_dir_path, "my_translation"), new_filename),
         )
     )
+    
+    # 返回生成的文件路径
+    return dest_file_path
