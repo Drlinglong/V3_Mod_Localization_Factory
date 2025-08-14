@@ -4,6 +4,7 @@ import logging
 
 from scripts.core import file_parser, api_handler, file_builder, asset_handler, directory_handler
 from scripts.core.glossary_manager import glossary_manager
+from scripts.core.proofreading_tracker import create_proofreading_tracker
 from scripts.config import SOURCE_DIR, DEST_DIR, LANGUAGES
 from scripts.utils import i18n
 
@@ -48,6 +49,12 @@ def run(mod_name: str,
             logging.info(f"未找到 {game_id} 的词典文件，将使用无词典模式")
     else:
         logging.warning("游戏配置中缺少ID，无法加载词典")
+
+    # ───────────── 2.6. 初始化校对进度追踪器 ─────────────
+    # 获取主要目标语言代码用于生成对应语言的校对进度看板
+    primary_lang_code = primary_target_lang.get("code", "zh-CN")
+    proofreading_tracker = create_proofreading_tracker(mod_name, output_folder_name, primary_lang_code)
+    logging.info(f"校对进度追踪器已初始化，将生成{primary_target_lang.get('name', '中文')}版本的进度看板")
 
     # ───────────── 3. metadata + assety ─────────────
     asset_handler.process_metadata(
@@ -129,10 +136,21 @@ def run(mod_name: str,
 
             # fallback gdy brak tekstów
             if not fd["texts_to_translate"]:
-                file_builder.create_fallback_file(
+                dest_file_path = file_builder.create_fallback_file(
                     src_fp, dest_dir, fd["filename"],
                     source_lang, target_lang, game_profile
                 )
+                
+                # 收集fallback文件信息用于校对进度追踪
+                if dest_file_path:
+                    source_file_path = os.path.join(fd["root"], fd["filename"])
+                    proofreading_tracker.add_file_info({
+                        'source_path': source_file_path,
+                        'dest_path': dest_file_path,
+                        'translated_lines': 0,  # fallback文件没有翻译行数
+                        'filename': fd["filename"],
+                        'is_custom_loc': fd["is_custom_loc"]
+                    })
                 continue
 
             # samo tłumaczenie
@@ -148,14 +166,25 @@ def run(mod_name: str,
 
             # AI błąd → fallback
             if translated is None:
-                file_builder.create_fallback_file(
+                dest_file_path = file_builder.create_fallback_file(
                     src_fp, dest_dir, fd["filename"],
                     source_lang, target_lang, game_profile
                 )
+                
+                # 收集fallback文件信息用于校对进度追踪
+                if dest_file_path:
+                    source_file_path = os.path.join(fd["root"], fd["filename"])
+                    proofreading_tracker.add_file_info({
+                        'source_path': source_file_path,
+                        'dest_path': dest_file_path,
+                        'translated_lines': 0,  # fallback文件没有翻译行数
+                        'filename': fd["filename"],
+                        'is_custom_loc': fd["is_custom_loc"]
+                    })
                 continue
 
             # zapis przetłumaczonego pliku
-            file_builder.rebuild_and_write_file(
+            dest_file_path = file_builder.rebuild_and_write_file(
                 fd["original_lines"],
                 fd["texts_to_translate"],
                 translated,
@@ -166,3 +195,25 @@ def run(mod_name: str,
                 target_lang,
                 game_profile,
             )
+            
+            # 收集文件信息用于校对进度追踪
+            if dest_file_path:
+                source_file_path = os.path.join(fd["root"], fd["filename"])
+                translated_lines_count = len(fd["texts_to_translate"])
+                
+                proofreading_tracker.add_file_info({
+                    'source_path': source_file_path,
+                    'dest_path': dest_file_path,
+                    'translated_lines': translated_lines_count,
+                    'filename': fd["filename"],
+                    'is_custom_loc': fd["is_custom_loc"]
+                })
+
+        # ───────────── 6. 生成校对进度看板 ─────────────
+        logging.info("正在生成校对进度看板...")
+        if proofreading_tracker.save_proofreading_progress():
+            logging.info("校对进度看板生成成功")
+        else:
+            logging.warning("校对进度看板生成失败")
+
+    logging.info(f"工作流完成！Mod '{mod_name}' 的翻译任务已完成")
