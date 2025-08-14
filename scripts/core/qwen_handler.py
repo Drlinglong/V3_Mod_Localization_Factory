@@ -73,7 +73,7 @@ def translate_single_text(
             glossary_prompt_part = glossary_manager.create_dynamic_glossary_prompt(
                 relevant_terms, source_lang["code"], target_lang["code"]
             ) + "\n\n"
-            logging.info(f"单条翻译: 注入 {len(relevant_terms)} 个词典术语")
+            logging.info(i18n.t("single_translation_glossary_injected", count=len(relevant_terms)))
     
     prompt = (
         base_prompt
@@ -132,7 +132,7 @@ def _translate_chunk(client, chunk, source_lang, target_lang, game_profile, mod_
                     glossary_prompt_part = glossary_manager.create_dynamic_glossary_prompt(
                         relevant_terms, source_lang["code"], target_lang["code"]
                     ) + "\n\n"
-                    logging.info(f"批次 {batch_num}: 注入 {len(relevant_terms)} 个词典术语")
+            logging.info(i18n.t("batch_translation_glossary_injected", batch_num=batch_num, count=len(relevant_terms)))
             
             format_prompt_part = (
                 "CRITICAL FORMATTING: Your response MUST be a numbered list with the EXACT same number of items, from 1 to "

@@ -35,16 +35,21 @@ class GlossaryManager:
                 with open(glossary_path, 'r', encoding='utf-8') as f:
                     self.current_game_glossary = json.load(f)
                     self.current_game_id = game_id
-                    logging.info(f"成功加载 {game_id} 词典，包含 {len(self.current_game_glossary.get('entries', []))} 个条目")
+                    from scripts.utils import i18n
+                    logging.info(i18n.t("glossary_loaded_success", 
+                                      game_id=game_id, 
+                                      count=len(self.current_game_glossary.get('entries', []))))
                     return True
             else:
-                logging.warning(f"词典文件不存在: {glossary_path}")
+                from scripts.utils import i18n
+                logging.warning(i18n.t("glossary_file_not_found", path=glossary_path))
                 self.current_game_glossary = None
                 self.current_game_id = game_id
                 return False
                 
         except Exception as e:
-            logging.error(f"加载词典文件失败: {e}")
+            from scripts.utils import i18n
+            logging.error(i18n.t("glossary_load_failed", error=str(e)))
             self.current_game_glossary = None
             self.current_game_id = game_id
             return False
@@ -90,7 +95,10 @@ class GlossaryManager:
         # 按术语长度排序，优先处理较长的术语
         relevant_terms.sort(key=lambda x: len(x['translations'][source_lang]), reverse=True)
         
-        logging.info(f"从 {len(texts)} 个文本中提取到 {len(relevant_terms)} 个相关术语")
+        from scripts.utils import i18n
+        logging.info(i18n.t("glossary_terms_extracted", 
+                           count=len(relevant_terms), 
+                           text_count=len(texts)))
         return relevant_terms
     
     def _term_appears_in_text(self, term: str, text: str, source_lang: str) -> bool:

@@ -35,7 +35,7 @@
   "thumbnail_not_found": "未找到 thumbnail.png，跳过此步骤。",
   "thumbnail_copied": "thumbnail.png 复制完成。",
   "cleanup_start": "\n--- 开始精简源Mod文件夹: {mod_name} ---",
-  "cleanup_warning_detailed": "警告：此操作将永久删除源文件夹 '{mod_name}' 下的所有文件和文件夹，除了 '.metadata', 'localization', 和 'thumbnail.png' 之外。\n此功能有助于在翻译完成后节省磁盘空间。\n请确认是否继续？ (输入 'y' 或 'yes' 以确认): ", 
+  "cleanup_warning_detailed": "警告：此操作将永久删除源文件夹 '{mod_name}' 下的所有文件和文件夹，除了 '.metadata', 'localization', 和 'thumbnail.png' 之外。\n此功能有助于在翻译完成后节省磁盘空间。\n请确认是否继续？ (输入 'y' 或 'yes' 以确认，按下回车以跳过): ", 
   "cleanup_cancelled": "操作已取消。",
   "cleanup_deleting": "正在删除非必要文件和文件夹...",
   "cleanup_deleted_folder": "  已删除文件夹: {item}",
@@ -69,5 +69,16 @@
 "entering_custom_mode": "--- 进入自定义语言模式 ---",
 "select_api_provider_prompt": "请选择API供应商:",
 "qwen_china_hint": "（中国大陆地区用户请用这个）",
-"workflow_completed": "工作流完成！"
+"workflow_completed": "工作流完成！",
+"glossary_loaded_success": "成功加载 {game_id} 词典，包含 {count} 个条目",
+"glossary_file_not_found": "词典文件不存在: {path}",
+"glossary_load_failed": "加载词典文件失败: {error}",
+"glossary_terms_extracted": "从 {text_count} 个文本中提取到 {count} 个相关术语",
+"single_translation_glossary_injected": "单条翻译: 注入 {count} 个词典术语",
+"batch_translation_glossary_injected": "批次 {batch_num}: 注入 {count} 个词典术语",
+"proofreading_tracker_init": "校对进度追踪器已初始化，将生成{lang_name}版本的进度看板",
+"gbk_version_generated": "GBK编码版本已生成: {path}",
+"gbk_version_generation_fail": "GBK编码版本生成失败: {error}",
+"proofreading_table_generated": "校对进度表格已生成: {path}",
+"proofreading_table_generation_fail": "生成校对进度表格失败: {error}"
 }

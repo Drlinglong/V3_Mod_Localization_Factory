@@ -1,0 +1,99 @@
+2025-08-14 15:41:21,634 - INFO - Logger initialized and ready.
+2025-08-14 15:41:25,887 - INFO - Language loaded: en_US
+2025-08-14 15:41:25,887 - INFO - --- New Session Started ---
+2025-08-14 15:41:25,887 - INFO - Please select an API provider:
+2025-08-14 15:41:25,887 - INFO -   [1] Gemini
+2025-08-14 15:41:25,887 - INFO -   [2] Openai
+2025-08-14 15:41:25,887 - INFO -   [3] Qwen - (Recommended for users in Mainland China)
+2025-08-14 15:41:26,797 - INFO - 
+Please select a game:
+2025-08-14 15:41:26,797 - INFO -   [1] Victoria 3 (维多利亚3)
+2025-08-14 15:41:26,797 - INFO -   [2] Stellaris (群星)
+2025-08-14 15:41:26,797 - INFO -   [3] Europa Universalis IV (欧陆风云4)
+2025-08-14 15:41:26,797 - INFO -   [4] Hearts of Iron IV (钢铁雄心4)
+2025-08-14 15:41:26,797 - INFO -   [5] Crusader Kings III (十字军之王3)
+2025-08-14 15:41:28,306 - INFO - 
+--- Scanning source folder [J:\V3_Mod_Localization_Factory\source_mod] ---
+2025-08-14 15:41:28,307 - INFO - Please select the Mod to localize:
+2025-08-14 15:41:28,307 - INFO -   [1] Australia & New Zealand Flavor Pack
+2025-08-14 15:41:28,307 - INFO -   [2] Forts & Engineers
+2025-08-14 15:41:28,307 - INFO -   [3] GORA UI
+2025-08-14 15:41:28,307 - INFO -   [4] Hydra's More Agenda's
+2025-08-14 15:41:28,307 - INFO -   [5] MODJAM2025
+2025-08-14 15:41:28,307 - INFO -   [6] Offer Convoy Contribution
+2025-08-14 15:41:28,307 - INFO -   [7] Project Utopia - Extended Timeline - Technical Preview
+2025-08-14 15:41:28,307 - INFO -   [8] Tech & Res
+2025-08-14 15:41:28,307 - INFO -   [9] TEST-ANZAC
+2025-08-14 15:41:28,307 - INFO -   [10] UKrework
+2025-08-14 15:41:30,934 - INFO - 
+You have selected: Offer Convoy Contribution
+2025-08-14 15:41:30,934 - INFO - 
+--- Getting Mod thematic context ---
+2025-08-14 15:41:30,934 - INFO - Identified Mod Name: 'Offer Convoy Contribution'
+2025-08-14 15:41:32,396 - INFO - Final thematic context used: 'Offer Convoy Contribution'
+2025-08-14 15:41:32,396 - INFO - 
+--- Starting cleanup of source Mod folder: Offer Convoy Contribution ---
+2025-08-14 15:41:34,486 - INFO - Operation cancelled.
+2025-08-14 15:41:34,486 - INFO - 
+Please select the source language:
+2025-08-14 15:41:34,486 - INFO -   [1] English
+2025-08-14 15:41:34,486 - INFO -   [2] 简体中文
+2025-08-14 15:41:34,486 - INFO -   [3] Français
+2025-08-14 15:41:34,486 - INFO -   [4] Deutsch
+2025-08-14 15:41:34,486 - INFO -   [5] Español
+2025-08-14 15:41:34,486 - INFO -   [6] 日本語
+2025-08-14 15:41:34,486 - INFO -   [7] 한국어
+2025-08-14 15:41:34,486 - INFO -   [8] Polski
+2025-08-14 15:41:34,486 - INFO -   [9] Português do Brasil
+2025-08-14 15:41:34,486 - INFO -   [10] Русский
+2025-08-14 15:41:34,486 - INFO -   [11] Türkçe
+2025-08-14 15:41:38,953 - INFO - 
+Please select the target language(s):
+2025-08-14 15:41:38,953 - INFO -   [0] Translate to all other 10 languages
+2025-08-14 15:41:38,953 - INFO -   [1] English (Source)
+2025-08-14 15:41:38,953 - INFO -   [2] 简体中文
+2025-08-14 15:41:38,953 - INFO -   [3] Français
+2025-08-14 15:41:38,953 - INFO -   [4] Deutsch
+2025-08-14 15:41:38,953 - INFO -   [5] Español
+2025-08-14 15:41:38,953 - INFO -   [6] 日本語
+2025-08-14 15:41:38,953 - INFO -   [7] 한국어
+2025-08-14 15:41:38,953 - INFO -   [8] Polski
+2025-08-14 15:41:38,954 - INFO -   [9] Português do Brasil
+2025-08-14 15:41:38,954 - INFO -   [10] Русский
+2025-08-14 15:41:38,954 - INFO -   [11] Türkçe
+2025-08-14 15:41:38,954 - INFO -   [c] Custom / Disguise Other Language...
+2025-08-14 15:41:39,590 - INFO - 
+--- Starting 'Initial Translation' workflow for: Offer Convoy Contribution ---
+2025-08-14 15:41:40,071 - INFO - Gemini client initialized successfully, using model: gemini-2.5-flash
+2025-08-14 15:41:40,073 - INFO - 成功加载 victoria3 词典，包含 743 个条目
+2025-08-14 15:41:40,073 - INFO - Glossary loaded successfully: Vic3 游戏及Mod社区汉化词典 (743 entries)
+2025-08-14 15:41:40,073 - INFO - Proofreading tracker initialized, will generate 简体中文 version progress board
+2025-08-14 15:41:40,073 - INFO - 
+--- Processing metadata.json ---
+2025-08-14 15:41:40,073 - INFO - Translating mod name: "Offer Convoy Contribution..."
+2025-08-14 15:41:40,124 - INFO - Extracted 1 relevant terms from 1 texts
+2025-08-14 15:41:40,124 - INFO - Single translation: injected 1 glossary terms
+2025-08-14 15:41:40,124 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-14 15:41:43,182 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-14 15:41:43,184 - INFO - AFC remote call 1 is done.
+2025-08-14 15:41:43,185 - INFO - metadata.json localized successfully.
+2025-08-14 15:41:43,185 - INFO - 
+--- Processing assets (thumbnail, descriptor, etc.) ---
+2025-08-14 15:41:43,186 - INFO - Asset 'thumbnail.png' copied successfully.
+2025-08-14 15:41:43,187 - INFO - 
+--- Parsing file: source_mod\Offer Convoy Contribution\localization\english\OCC_l_english.yml ---
+2025-08-14 15:41:43,187 - INFO - Extracted 8 translatable texts.
+2025-08-14 15:41:43,187 - INFO - 
+--- Translating to: 简体中文 ---
+2025-08-14 15:41:43,239 - INFO - Extracted 4 relevant terms from 8 texts
+2025-08-14 15:41:43,239 - INFO - Batch 1: injected 4 glossary terms
+2025-08-14 15:41:43,239 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-14 15:42:02,910 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-14 15:42:02,911 - INFO - AFC remote call 1 is done.
+2025-08-14 15:42:02,912 - INFO - File 'zh-CN-Offer Convoy Contribution\localization\simp_chinese\english\OCC_l_simp_chinese.yml' has been localized successfully.
+2025-08-14 15:42:02,912 - INFO - Generating proofreading progress board...
+2025-08-14 15:42:02,913 - INFO - GBK encoding version generated: J:\V3_Mod_Localization_Factory\my_translation\zh-CN-Offer Convoy Contribution\proofreading_progress_GBK.csv
+2025-08-14 15:42:02,913 - INFO - Proofreading progress table generated: J:\V3_Mod_Localization_Factory\my_translation\zh-CN-Offer Convoy Contribution\proofreading_progress.csv
+2025-08-14 15:42:02,913 - INFO - Proofreading progress board generated successfully
+2025-08-14 15:42:02,913 - INFO - Workflow completed! Mod 'Offer Convoy Contribution' translation task finished
+2025-08-14 15:42:02,914 - INFO - Workflow completed!
