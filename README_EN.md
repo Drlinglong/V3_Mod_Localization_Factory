@@ -9,13 +9,23 @@
 > Say goodbye to copy-paste, embrace automation. This project provides a powerful, semi-automated localization workflow for Paradox Interactive (PDS) game mods (e.g., Victoria 3, Stellaris).
 
 ### License
-This is an open-source, non-profit project licensed under the **[Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/)**.
 
-In short, this means you are free to share and adapt this work, provided you follow these core conditions:
+This project uses a **dual-licensing** model:
 
-* **Attribution** — You must give appropriate credit and provide a link to the license.
-* **NonCommercial** — You may not use the material for commercial purposes.
-* **ShareAlike** — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.
+1. **Code** (including `/scripts`, `/core`, `/workflows`, `/utils`, and all other Python source files)  
+   Licensed under the **[GNU Affero General Public License v3.0 (AGPL-3.0)](https://www.gnu.org/licenses/agpl-3.0.html)**.  
+   - You are free to use, modify, and distribute the code (including for commercial purposes), provided that:
+     * You must retain proper attribution to the original author and include the license notice.
+     * Any modified version must also be released under the **AGPL-3.0** license.
+     * If you deploy this code as a network service (SaaS), you must also make the full source code available to its users.
+   - For full terms, see the [AGPL-3.0 text](https://www.gnu.org/licenses/agpl-3.0.html).
+
+2. **Data and Documentation** (including dictionary files under `/data/glossary/`, README files, and other non-code content)  
+   Licensed under the **[Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/)**.  
+   - You are free to share and adapt these materials, provided that:
+     * You must give appropriate credit and link to the license.
+     * **You may not use them for commercial purposes**.
+     * Any derivative works must be distributed under the same license.
 
 ## 1. Project Vision: Translation Shouldn't Be a Barrier
 Not everyone is fluent in eight languages.
