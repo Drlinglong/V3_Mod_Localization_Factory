@@ -8,7 +8,7 @@ import logging
 
 from scripts.utils import i18n
 from scripts.config import CHUNK_SIZE, MAX_RETRIES, API_PROVIDERS
-from utils.text_clean import strip_pl_diacritics, strip_outer_quotes
+from scripts.utils.text_clean import strip_pl_diacritics, strip_outer_quotes
 from .glossary_manager import glossary_manager
 
 # Alias required by the audit.py script for compatibility

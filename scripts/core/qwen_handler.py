@@ -8,7 +8,7 @@ import logging
 
 from scripts.utils import i18n
 from scripts.config import CHUNK_SIZE, MAX_RETRIES, API_PROVIDERS
-from utils.text_clean import strip_pl_diacritics, strip_outer_quotes
+from scripts.utils.text_clean import strip_pl_diacritics, strip_outer_quotes
 from .glossary_manager import glossary_manager
 
 # Alias required by the audit.py script for compatibility
@@ -132,7 +132,7 @@ def _translate_chunk(client, chunk, source_lang, target_lang, game_profile, mod_
                     glossary_prompt_part = glossary_manager.create_dynamic_glossary_prompt(
                         relevant_terms, source_lang["code"], target_lang["code"]
                     ) + "\n\n"
-            logging.info(i18n.t("batch_translation_glossary_injected", batch_num=batch_num, count=len(relevant_terms)))
+                    logging.info(i18n.t("batch_translation_glossary_injected", batch_num=batch_num, count=len(relevant_terms)))
             
             format_prompt_part = (
                 "CRITICAL FORMATTING: Your response MUST be a numbered list with the EXACT same number of items, from 1 to "
@@ -147,83 +147,45 @@ def _translate_chunk(client, chunk, source_lang, target_lang, game_profile, mod_
                 "Preserve all internal newlines (\\n).\n\n"
                 "--- INPUT LIST ---\n"
                 f"{numbered_list}\n"
-                "--- END INPUT LIST ---\n\n"
-                "Now provide your numbered translation list:"
+                "--- END OF INPUT LIST ---"
             )
-
-            full_prompt = base_prompt + context_prompt_part + glossary_prompt_part + format_prompt_part
+            prompt = base_prompt + context_prompt_part + glossary_prompt_part + format_prompt_part
 
             model_name = API_PROVIDERS["qwen"]["default_model"]
             response = client.chat.completions.create(
                 model=model_name,
                 messages=[
                     {"role": "system", "content": "You are a professional translator for game mods."},
-                    {"role": "user", "content": full_prompt}
+                    {"role": "user", "content": prompt}
                 ],
                 max_tokens=4000,
                 temperature=0.3  # 降低随机性，提高翻译一致性
             )
+            
+            # 使用与OpenAI和Gemini一致的解析方法
+            translated_chunk = re.findall(
+                r'^\s*\d+\.\s*"?(.+?)"?$', response.choices[0].message.content, re.MULTILINE | re.DOTALL
+            )
 
-            response_text = response.choices[0].message.content.strip()
-            translated_lines = _parse_numbered_response(response_text, len(chunk))
-
-            if len(translated_lines) == len(chunk):
+            if len(translated_chunk) == len(chunk):
+                translated_chunk = [strip_outer_quotes(t) for t in translated_chunk]
                 # Post-processing for EU4 Polish
                 if game_profile.get("strip_pl_diacritics") and target_lang["code"] == "pl":
-                    translated_lines = [_strip_pl_diacritics(line) for line in translated_lines]
-                return translated_lines
-            else:
-                logging.warning(
-                    f"Batch {batch_num}: Response count mismatch. Expected {len(chunk)}, got {len(translated_lines)}"
-                )
-                if attempt < MAX_RETRIES - 1:
-                    time.sleep(2 ** attempt)  # Exponential backoff
-                    continue
-                else:
-                    logging.error(i18n.t("mismatch_error", original_count=len(chunk), translated_count=len(translated_lines)))
-                    return chunk  # Return original text as fallback
+                    translated_chunk = [_strip_pl_diacritics(t) for t in translated_chunk]
+                return translated_chunk
+
+            logging.error(i18n.t("mismatch_error", original_count=len(chunk), translated_count=len(translated_chunk)))
 
         except Exception as e:
-            logging.error(f"Batch {batch_num} failed on attempt {attempt + 1}/{MAX_RETRIES}: {e}")
-            if attempt < MAX_RETRIES - 1:
-                time.sleep(2 ** attempt)  # Exponential backoff
-                continue
-            else:
-                logging.error(i18n.t("api_call_error", error=e))
-                return chunk  # Return original text as fallback
+            logging.exception(i18n.t("api_call_error", error=e))
 
-    return chunk  # Fallback
+        if attempt < MAX_RETRIES - 1:
+            delay = (attempt + 1) * 2
+            logging.warning(i18n.t("retrying_batch", batch_num=batch_num, attempt=attempt + 1, max_retries=MAX_RETRIES, delay=delay))
+            time.sleep(delay)
 
-def _parse_numbered_response(response_text: str, expected_count: int) -> list[str]:
-    """Parses the numbered response from the API and extracts translated texts."""
-    lines = response_text.strip().split('\n')
-    translated_lines = []
-    
-    for line in lines:
-        line = line.strip()
-        if not line:
-            continue
-            
-        # Try to match numbered patterns like "1. text", "1) text", "1- text", etc.
-        match = re.match(r'^\d+[\.\)\-\s]+(.+)$', line)
-        if match:
-            translated_text = match.group(1).strip()
-            # Remove quotes if present
-            translated_text = strip_outer_quotes(translated_text)
-            translated_lines.append(translated_text)
-    
-    # If we didn't get the expected count, try alternative parsing
-    if len(translated_lines) != expected_count:
-        logging.warning(f"Numbered parsing failed, trying alternative methods. Got {len(translated_lines)}, expected {expected_count}")
-        
-        # Alternative: split by newlines and filter out empty lines
-        alternative_lines = [line.strip() for line in response_text.split('\n') if line.strip()]
-        if len(alternative_lines) == expected_count:
-            translated_lines = [strip_outer_quotes(line) for line in alternative_lines]
-        else:
-            logging.warning(f"Alternative parsing also failed. Got {len(alternative_lines)}, expected {expected_count}")
-    
-    return translated_lines
+    # 修复：与OpenAI和Gemini一致，失败时返回None
+    return None
 
 def translate_texts_in_batches(
     client: "OpenAI",
@@ -232,7 +194,7 @@ def translate_texts_in_batches(
     target_lang: dict,
     game_profile: dict,
     mod_context: str,
-) -> list[str]:
+) -> "list[str] | None":
     """
     Translates a list of texts in batches using the Qwen API.
     """
@@ -247,25 +209,42 @@ def translate_texts_in_batches(
     if len(chunks) > 1:
         logging.info(i18n.t("parallel_processing_start", count=len(chunks)))
     
-    all_translated = []
-    
-    # Process chunks in parallel
-    with concurrent.futures.ThreadPoolExecutor(max_workers=3) as executor:
-        future_to_chunk = {
-            executor.submit(_translate_chunk, client, chunk, source_lang, target_lang, game_profile, mod_context, i + 1): chunk
+    # 修复：使用与OpenAI和Gemini一致的并发处理逻辑
+    if len(chunks) == 1:
+        return _translate_chunk(client, chunks[0], source_lang, target_lang, game_profile, mod_context, 1)
+
+    with concurrent.futures.ThreadPoolExecutor() as executor:
+        # 修复：使用future_to_index确保结果顺序正确
+        future_to_index = {
+            executor.submit(_translate_chunk, client, chunk, source_lang, target_lang, game_profile, mod_context, i + 1): i
             for i, chunk in enumerate(chunks)
         }
         
-        for future in concurrent.futures.as_completed(future_to_chunk):
-            chunk = future_to_chunk[future]
+        # 修复：预分配结果数组，确保顺序正确
+        results = [None] * len(chunks)
+        
+        for future in concurrent.futures.as_completed(future_to_index):
+            index = future_to_index[future]
             try:
-                translated_chunk = future.result()
-                all_translated.extend(translated_chunk)
+                results[index] = future.result()
             except Exception as e:
-                logging.error(f"Chunk processing failed: {e}")
-                all_translated.extend(chunk)  # Use original text as fallback
+                logging.exception(f"A translation thread failed with a critical error: {e}")
+                results[index] = None
     
-    if len(chunks) > 1:
-        logging.info(i18n.t("parallel_processing_end"))
+    # 修复：使用与OpenAI和Gemini完全一致的结果合并逻辑
+    all_translated_texts: list[str] = []
+    has_failures = False
+    for i, translated_chunk in enumerate(results):
+        if translated_chunk is None:
+            has_failures = True
+            logging.warning(i18n.t("warning_batch_failed", batch_num=i + 1))
+            original_chunk = chunks[i]
+            all_translated_texts.extend(original_chunk)
+        else:
+            all_translated_texts.extend(translated_chunk)
     
-    return all_translated
+    if has_failures:
+        logging.error(i18n.t("warning_partial_failure"))
+
+    logging.info(i18n.t("parallel_processing_end"))
+    return all_translated_texts
