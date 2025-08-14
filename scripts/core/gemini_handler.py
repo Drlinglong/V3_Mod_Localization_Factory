@@ -11,6 +11,7 @@ from google import genai
 from scripts.utils import i18n
 from scripts.config import CHUNK_SIZE, MAX_RETRIES, API_PROVIDERS
 from scripts.utils.text_clean import strip_outer_quotes, strip_pl_diacritics
+from .glossary_manager import glossary_manager
 
 def initialize_client(api_key: str = None) -> "genai.Client | None":
     """Initializes the Gemini client."""
@@ -50,10 +51,25 @@ def translate_single_text(
         source_lang_name=source_lang["name"],
         target_lang_name=target_lang["name"],
     )
+    
+    # ───────────── 词典提示注入 ─────────────
+    glossary_prompt_part = ""
+    if glossary_manager.current_game_glossary:
+        # 提取相关术语
+        relevant_terms = glossary_manager.extract_relevant_terms(
+            [text], source_lang["code"], target_lang["code"]
+        )
+        if relevant_terms:
+            glossary_prompt_part = glossary_manager.create_dynamic_glossary_prompt(
+                relevant_terms, source_lang["code"], target_lang["code"]
+            ) + "\n\n"
+            logging.info(f"单条翻译: 注入 {len(relevant_terms)} 个词典术语")
+    
     prompt = (
         base_prompt
         + f"CRITICAL CONTEXT: The mod's theme is '{mod_context}'. Use this to ensure accuracy.\n"
-        "CRITICAL FORMATTING: Your response MUST ONLY contain the translated text. "
+        + glossary_prompt_part
+        + "CRITICAL FORMATTING: Your response MUST ONLY contain the translated text. "
         "DO NOT include explanations, pinyin, or any other text.\n"
         'For example, if the input is "Flavor Pack", your output must be "风味包" and nothing else.\n\n'
         f'Translate this: "{text}"'
@@ -86,8 +102,23 @@ def _translate_chunk(client, chunk, source_lang, target_lang, game_profile, mod_
                 f"CRITICAL CONTEXT: The mod you are translating is '{mod_context}'. "
                 "Use this information to ensure all translations are thematically appropriate.\n"
             )
+            
+            # ───────────── 词典提示注入 ─────────────
+            glossary_prompt_part = ""
+            if glossary_manager.current_game_glossary:
+                # 提取相关术语
+                relevant_terms = glossary_manager.extract_relevant_terms(
+                    chunk, source_lang["code"], target_lang["code"]
+                )
+                if relevant_terms:
+                    glossary_prompt_part = glossary_manager.create_dynamic_glossary_prompt(
+                        relevant_terms, source_lang["code"], target_lang["code"]
+                    ) + "\n\n"
+                    logging.info(f"批次 {batch_num}: 注入 {len(relevant_terms)} 个词典术语")
+            
             format_prompt_part = (
-                "CRITICAL FORMATTING: Your response MUST be a numbered list with the EXACT same number of items, from 1 to "        f"{len(chunk)}. "
+                "CRITICAL FORMATTING: Your response MUST be a numbered list with the EXACT same number of items, from 1 to "
+                f"{len(chunk)}. "
                 "Each item in your list MUST be the translation of the corresponding item in the input list.\n"
                 "DO NOT merge, add, or omit lines. DO NOT add any explanations. "
                 "There are two types of special syntax:\n"
@@ -100,7 +131,7 @@ def _translate_chunk(client, chunk, source_lang, target_lang, game_profile, mod_
                 f"{numbered_list}\n"
                 "--- END OF INPUT LIST ---"
             )
-            prompt = base_prompt + context_prompt_part + format_prompt_part
+            prompt = base_prompt + context_prompt_part + glossary_prompt_part + format_prompt_part
 
             model_name = API_PROVIDERS["gemini"]["default_model"]
             response = client.models.generate_content(model=model_name, contents=prompt)

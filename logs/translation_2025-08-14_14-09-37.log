@@ -1,0 +1,89 @@
+2025-08-14 14:09:37,562 - INFO - Logger initialized and ready.
+2025-08-14 14:09:39,595 - INFO - Language loaded: zh_CN
+2025-08-14 14:09:39,595 - INFO - --- New Session Started ---
+2025-08-14 14:09:39,595 - INFO - 请选择API供应商:
+2025-08-14 14:09:39,595 - INFO -   [1] Gemini
+2025-08-14 14:09:39,595 - INFO -   [2] Openai
+2025-08-14 14:09:39,595 - INFO -   [3] Qwen - （中国大陆地区用户请用这个）
+2025-08-14 14:09:42,492 - INFO - 
+请选择游戏:
+2025-08-14 14:09:42,492 - INFO -   [1] Victoria 3 (维多利亚3)
+2025-08-14 14:09:42,492 - INFO -   [2] Stellaris (群星)
+2025-08-14 14:09:42,492 - INFO -   [3] Europa Universalis IV (欧陆风云4)
+2025-08-14 14:09:42,493 - INFO -   [4] Hearts of Iron IV (钢铁雄心4)
+2025-08-14 14:09:42,493 - INFO -   [5] Crusader Kings III (十字军之王3)
+2025-08-14 14:09:48,299 - INFO - 
+--- 正在扫描源文件夹 [J:\V3_Mod_Localization_Factory\source_mod] ---
+2025-08-14 14:09:48,300 - INFO - 请选择要汉化的Mod：
+2025-08-14 14:09:48,300 - INFO -   [1] Australia & New Zealand Flavor Pack
+2025-08-14 14:09:48,300 - INFO -   [2] Forts & Engineers
+2025-08-14 14:09:48,300 - INFO -   [3] GORA UI
+2025-08-14 14:09:48,300 - INFO -   [4] Hydra's More Agenda's
+2025-08-14 14:09:48,300 - INFO -   [5] MODJAM2025
+2025-08-14 14:09:48,300 - INFO -   [6] Offer Convoy Contribution
+2025-08-14 14:09:48,300 - INFO -   [7] Project Utopia - Extended Timeline - Technical Preview
+2025-08-14 14:09:48,300 - INFO -   [8] Tech & Res
+2025-08-14 14:09:48,300 - INFO -   [9] TEST-ANZAC
+2025-08-14 14:09:48,300 - INFO -   [10] UKrework
+2025-08-14 14:09:50,399 - INFO - 
+你选择了: Offer Convoy Contribution
+2025-08-14 14:09:50,400 - INFO - 
+--- 正在获取Mod主题上下文 ---
+2025-08-14 14:09:50,400 - INFO - 已识别Mod名称为: 'Offer Convoy Contribution'
+2025-08-14 14:09:51,621 - INFO - 最终使用的主题上下文为: 'Offer Convoy Contribution'
+2025-08-14 14:09:51,621 - INFO - 
+--- 开始精简源Mod文件夹: Offer Convoy Contribution ---
+2025-08-14 14:09:52,842 - INFO - 操作已取消。
+2025-08-14 14:09:52,842 - INFO - 
+请选择源语言:
+2025-08-14 14:09:52,842 - INFO -   [1] English
+2025-08-14 14:09:52,842 - INFO -   [2] 简体中文
+2025-08-14 14:09:52,842 - INFO -   [3] Français
+2025-08-14 14:09:52,842 - INFO -   [4] Deutsch
+2025-08-14 14:09:52,842 - INFO -   [5] Español
+2025-08-14 14:09:52,842 - INFO -   [6] 日本語
+2025-08-14 14:09:52,842 - INFO -   [7] 한국어
+2025-08-14 14:09:52,842 - INFO -   [8] Polski
+2025-08-14 14:09:52,842 - INFO -   [9] Português do Brasil
+2025-08-14 14:09:52,842 - INFO -   [10] Русский
+2025-08-14 14:09:52,842 - INFO -   [11] Türkçe
+2025-08-14 14:09:53,559 - INFO - 
+请选择目标语言:
+2025-08-14 14:09:53,560 - INFO -   [0] 翻译为其余所有10种语言
+2025-08-14 14:09:53,560 - INFO -   [1] English (Source)
+2025-08-14 14:09:53,560 - INFO -   [2] 简体中文
+2025-08-14 14:09:53,560 - INFO -   [3] Français
+2025-08-14 14:09:53,560 - INFO -   [4] Deutsch
+2025-08-14 14:09:53,560 - INFO -   [5] Español
+2025-08-14 14:09:53,560 - INFO -   [6] 日本語
+2025-08-14 14:09:53,560 - INFO -   [7] 한국어
+2025-08-14 14:09:53,560 - INFO -   [8] Polski
+2025-08-14 14:09:53,560 - INFO -   [9] Português do Brasil
+2025-08-14 14:09:53,560 - INFO -   [10] Русский
+2025-08-14 14:09:53,560 - INFO -   [11] Türkçe
+2025-08-14 14:09:53,560 - INFO -   [c] 自定义/套壳其他语言...
+2025-08-14 14:09:54,378 - INFO - 
+--- 启动 '首次翻译' 工作流，目标: Offer Convoy Contribution ---
+2025-08-14 14:09:54,554 - INFO - OpenAI client initialized successfully, using model: gpt-5-mini
+2025-08-14 14:09:54,555 - INFO - 成功加载 victoria3 词典，包含 742 个条目
+2025-08-14 14:09:54,556 - INFO - 词典加载成功: Vic3 游戏及Mod社区汉化词典 (742 个条目)
+2025-08-14 14:09:54,556 - INFO - 
+--- 正在处理 metadata.json ---
+2025-08-14 14:09:54,556 - INFO - 正在翻译 mod name: "Offer Convoy Contribution..."
+2025-08-14 14:09:54,606 - INFO - 从 1 个文本中提取到 1 个相关术语
+2025-08-14 14:09:54,606 - INFO - 单条翻译: 注入 1 个词典术语
+2025-08-14 14:10:05,837 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-14 14:10:05,842 - INFO - metadata.json 汉化完成。
+2025-08-14 14:10:05,842 - INFO - 
+--- 正在处理资产文件 (封面图、描述文件等) ---
+2025-08-14 14:10:05,843 - INFO - 资产文件 'thumbnail.png' 复制完成。
+2025-08-14 14:10:05,843 - INFO - 
+--- 正在解析文件: source_mod\Offer Convoy Contribution\localization\english\OCC_l_english.yml ---
+2025-08-14 14:10:05,844 - INFO - 提取到 8 条可翻译文本。
+2025-08-14 14:10:05,844 - INFO - 
+--- 正在翻译为: 简体中文 ---
+2025-08-14 14:10:05,893 - INFO - 从 8 个文本中提取到 4 个相关术语
+2025-08-14 14:10:05,893 - INFO - 批次 1: 注入 4 个词典术语
+2025-08-14 14:10:38,541 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-14 14:10:38,542 - INFO - 文件 'zh-CN-Offer Convoy Contribution\localization\simp_chinese\english\OCC_l_simp_chinese.yml' 汉化完成。
+2025-08-14 14:10:38,542 - INFO - 工作流完成！

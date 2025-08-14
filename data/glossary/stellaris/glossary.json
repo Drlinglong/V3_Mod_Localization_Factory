@@ -1,12 +1,10 @@
 {
   "metadata": {
-    "description": "群星 (Stellaris) 游戏及Mod社区汉化词典",
+    "description": "Stellaris 游戏及Mod社区汉化词典",
     "sources": [
-      "鸽组汉化词典",
-      "Shrouded Regions汉化词典",
-      "L网群星mod汉化集词典"
+      "数据源自多个社区汉化项目，如Paratranz等"
     ],
-    "last_updated": "2025-08-13T01:54:58.394169+10:00"
+    "last_updated": "2025-08-14T13:13:54.710828+10:00"
   },
   "entries": [
     {
@@ -412,18 +410,9 @@
       },
       "variants": {
         "en": [
-          "alloys"
+          "alloys",
+          "Alloys"
         ]
-      }
-    },
-    {
-      "translations": {
-        "en": "Alloys",
-        "zh-CN": "合金"
-      },
-      "id": "stellaris_alloys",
-      "metadata": {
-        "part_of_speech": "Noun"
       }
     },
     {
@@ -493,7 +482,9 @@
       },
       "variants": {
         "en": [
-          "Ancient Caretakers"
+          "Ancient Caretakers",
+          "the Ancient Caretaker",
+          "the Ancient Caretakers"
         ]
       }
     },
@@ -2620,6 +2611,11 @@
       "metadata": {
         "part_of_speech": "Noun",
         "remarks": "原版词汇，危机"
+      },
+      "variants": {
+        "en": [
+          "The Contigency"
+        ]
       }
     },
     {
@@ -2763,6 +2759,11 @@
       "id": "stellaris_cult_of_the_machine_that_speaks_to_god",
       "metadata": {
         "part_of_speech": "Noun"
+      },
+      "variants": {
+        "en": [
+          "Machine-That-Speaks-to-God"
+        ]
       }
     },
     {
@@ -3373,7 +3374,7 @@
       "id": "stellaris_drone",
       "metadata": {
         "part_of_speech": "Noun",
-        "remarks": "原版词汇，指代格式塔个体的时候一律翻译成【子个体】；如果与格式塔政体无关，单纯指代无人机械的情况下翻译为【无人机】。"
+        "remarks": "原版词汇，指代格式塔个体的时候一律翻译成【子个体】；如果与格式塔政体无关，单纯指代无人机械的情况下翻译为【无人机】。\n---\n[来源合并备注]:\n蜂巢思维的基础人口"
       },
       "variants": {
         "en": [
@@ -3625,17 +3626,11 @@
       "id": "stellaris_empyreal_travel_beacon",
       "metadata": {
         "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Empyreal Traveling Beacon",
-        "zh-CN": "九天灯塔"
       },
-      "id": "stellaris_empyreal_traveling_beacon",
-      "metadata": {
-        "part_of_speech": "Noun",
-        "remarks": "帝国工程模组巨构"
+      "variants": {
+        "en": [
+          "Empyreal Traveling Beacon"
+        ]
       }
     },
     {
@@ -3803,16 +3798,11 @@
       "metadata": {
         "part_of_speech": "Noun",
         "remarks": "Event Horizon Offset Facility的德语"
-      }
-    },
-    {
-      "translations": {
-        "en": "Ereignis Horizont Versatz Einrichtungs",
-        "zh-CN": "事件视界偏移设施"
       },
-      "id": "stellaris_ereignis_horizont_versatz_einrichtungs",
-      "metadata": {
-        "part_of_speech": "Noun"
+      "variants": {
+        "en": [
+          "Ereignis Horizont Versatz Einrichtungs"
+        ]
       }
     },
     {
@@ -3961,7 +3951,8 @@
       "variants": {
         "en": [
           "exotic gases",
-          "exotic gasses"
+          "exotic gasses",
+          "Exotic Gases"
         ]
       }
     },
@@ -4555,6 +4546,11 @@
       "metadata": {
         "part_of_speech": "Noun",
         "remarks": "原版词汇"
+      },
+      "variants": {
+        "en": [
+          "Galcom"
+        ]
       }
     },
     {
@@ -4925,17 +4921,6 @@
     },
     {
       "translations": {
-        "en": "Gigaconstruction",
-        "zh-CN": "超级巨构"
-      },
-      "id": "stellaris_gigaconstruction",
-      "metadata": {
-        "part_of_speech": "Noun",
-        "remarks": "GIGA"
-      }
-    },
-    {
-      "translations": {
         "en": "Gigaplex",
         "zh-CN": "千兆级复合设施"
       },
@@ -4957,7 +4942,8 @@
       },
       "variants": {
         "en": [
-          "gigastructures"
+          "gigastructures",
+          "Gigaconstruction"
         ]
       }
     },
@@ -6051,17 +6037,11 @@
       "metadata": {
         "part_of_speech": "Noun",
         "remarks": "原版词汇，物种特质"
-      }
-    },
-    {
-      "translations": {
-        "en": "Irradiated Planet",
-        "zh-CN": "辐照天地"
       },
-      "id": "stellaris_irradiated_planet",
-      "metadata": {
-        "part_of_speech": "Noun",
-        "remarks": "原版词汇，星球修正"
+      "variants": {
+        "en": [
+          "Irradiated Planet"
+        ]
       }
     },
     {
@@ -6239,16 +6219,11 @@
       "id": "stellaris_kaiser_kaittail",
       "metadata": {
         "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Kaiser Kattail",
-        "zh-CN": "喵尾大帝"
       },
-      "id": "stellaris_kaiser_kattail",
-      "metadata": {
-        "part_of_speech": "Noun"
+      "variants": {
+        "en": [
+          "Kaiser Kattail"
+        ]
       }
     },
     {
@@ -6414,16 +6389,6 @@
     },
     {
       "translations": {
-        "en": "Katzenarmee",
-        "zh-CN": "喵星人"
-      },
-      "id": "stellaris_katzenarmee",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
         "en": "Katzenartig Imperium",
         "zh-CN": "喵星人帝国"
       },
@@ -6505,6 +6470,11 @@
       "metadata": {
         "part_of_speech": "Noun",
         "remarks": "出自GIGA"
+      },
+      "variants": {
+        "en": [
+          "Katzenarmee"
+        ]
       }
     },
     {
@@ -6516,17 +6486,11 @@
       "metadata": {
         "part_of_speech": "Noun",
         "remarks": "出自GIGA"
-      }
-    },
-    {
-      "translations": {
-        "en": "Katzenweltraumpanzers",
-        "zh-CN": "喵星人太空战车"
       },
-      "id": "stellaris_katzenweltraumpanzers",
-      "metadata": {
-        "part_of_speech": "Noun",
-        "remarks": "出自GIGA"
+      "variants": {
+        "en": [
+          "Katzenweltraumpanzers"
+        ]
       }
     },
     {
@@ -6694,6 +6658,11 @@
       "metadata": {
         "part_of_speech": "Noun",
         "remarks": "GIGA种族"
+      },
+      "variants": {
+        "en": [
+          "Kronks"
+        ]
       }
     },
     {
@@ -6705,17 +6674,6 @@
       "metadata": {
         "part_of_speech": "Noun",
         "remarks": "GIGA"
-      }
-    },
-    {
-      "translations": {
-        "en": "Kronks",
-        "zh-CN": "高刚"
-      },
-      "id": "stellaris_kronks",
-      "metadata": {
-        "part_of_speech": "Noun",
-        "remarks": "GIGA种族名"
       }
     },
     {
@@ -7258,16 +7216,6 @@
     },
     {
       "translations": {
-        "en": "Machine-That-Speaks-to-God",
-        "zh-CN": "机械通神教派"
-      },
-      "id": "stellaris_machine_that_speaks_to_god",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
         "en": "Macroatmospheric Stabilizer",
         "zh-CN": "宏观大气稳定器"
       },
@@ -7634,17 +7582,12 @@
       "metadata": {
         "part_of_speech": "Noun",
         "remarks": "原版词汇"
-      }
-    },
-    {
-      "translations": {
-        "en": "Menial Drones",
-        "zh-CN": "低级子个体"
       },
-      "id": "stellaris_menial_drones",
-      "metadata": {
-        "part_of_speech": "Noun",
-        "remarks": "原版术语"
+      "variants": {
+        "en": [
+          "Menial Drones",
+          "Simple Drone"
+        ]
       }
     },
     {
@@ -7667,16 +7610,11 @@
       "metadata": {
         "part_of_speech": "Noun",
         "remarks": "GIGA 人物"
-      }
-    },
-    {
-      "translations": {
-        "en": "Meopian",
-        "zh-CN": "喵帕"
       },
-      "id": "stellaris_meopian",
-      "metadata": {
-        "part_of_speech": "Noun"
+      "variants": {
+        "en": [
+          "Meopian"
+        ]
       }
     },
     {
@@ -7851,16 +7789,11 @@
       "metadata": {
         "part_of_speech": "Noun",
         "remarks": "原版词汇，思潮。"
-      }
-    },
-    {
-      "translations": {
-        "en": "Militaristic",
-        "zh-CN": "军国主义"
       },
-      "id": "stellaris_militaristic",
-      "metadata": {
-        "part_of_speech": "Adjective"
+      "variants": {
+        "en": [
+          "Militaristic"
+        ]
       }
     },
     {
@@ -7885,7 +7818,8 @@
       },
       "variants": {
         "en": [
-          "Mineral"
+          "Mineral",
+          "Orykta"
         ]
       }
     },
@@ -8312,29 +8246,10 @@
       },
       "variants": {
         "en": [
-          "observation outposts"
+          "observation outposts",
+          "Observation Post",
+          "Observation Station"
         ]
-      }
-    },
-    {
-      "translations": {
-        "en": "Observation Post",
-        "zh-CN": "观测站"
-      },
-      "id": "stellaris_observation_post",
-      "metadata": {
-        "part_of_speech": "Noun",
-        "remarks": "原版词汇，空间站类型"
-      }
-    },
-    {
-      "translations": {
-        "en": "Observation Station",
-        "zh-CN": "观测站"
-      },
-      "id": "stellaris_observation_station",
-      "metadata": {
-        "part_of_speech": "Noun"
       }
     },
     {
@@ -8518,17 +8433,6 @@
       "metadata": {
         "part_of_speech": "Noun",
         "remarks": "MEM中的单向星门"
-      }
-    },
-    {
-      "translations": {
-        "en": "Orykta",
-        "zh-CN": "矿物"
-      },
-      "id": "stellaris_orykta",
-      "metadata": {
-        "part_of_speech": "Noun",
-        "remarks": "伯奇用，来源于希腊语矿物Ορυκτά"
       }
     },
     {
@@ -8780,22 +8684,10 @@
       "metadata": {
         "part_of_speech": "Noun",
         "remarks": "ACOT阵营"
-      }
-    },
-    {
-      "translations": {
-        "en": "Phanon Corps",
-        "zh-CN": "卓越集团"
-      },
-      "id": "stellaris_phanon_corps",
-      "metadata": {
-        "part_of_speech": "Noun",
-        "remarks": "ACOT"
       },
       "variants": {
         "en": [
-          "Phanon Corp",
-          "PhanonCorps"
+          "Phanon Corps"
         ]
       }
     },
@@ -8807,16 +8699,11 @@
       "id": "stellaris_phanon_reactor",
       "metadata": {
         "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Phanon Runic Reactor",
-        "zh-CN": "卓越符文反应堆"
       },
-      "id": "stellaris_phanon_runic_reactor",
-      "metadata": {
-        "part_of_speech": "Noun"
+      "variants": {
+        "en": [
+          "Phanon Runic Reactor"
+        ]
       }
     },
     {
@@ -9367,16 +9254,11 @@
       "id": "stellaris_projekt_mondgewehr",
       "metadata": {
         "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Projekt Mondkanone",
-        "zh-CN": "月球大炮计划"
       },
-      "id": "stellaris_projekt_mondkanone",
-      "metadata": {
-        "part_of_speech": "Noun"
+      "variants": {
+        "en": [
+          "Projekt Mondkanone"
+        ]
       }
     },
     {
@@ -9505,17 +9387,11 @@
       "metadata": {
         "part_of_speech": "Noun",
         "remarks": "GIGA"
-      }
-    },
-    {
-      "translations": {
-        "en": "Psykofabricators",
-        "zh-CN": "灵塑者"
       },
-      "id": "stellaris_psykofabricators",
-      "metadata": {
-        "part_of_speech": "Noun",
-        "remarks": "GIGA"
+      "variants": {
+        "en": [
+          "Psykofabricators"
+        ]
       }
     },
     {
@@ -10056,17 +9932,11 @@
       "metadata": {
         "part_of_speech": "Noun",
         "remarks": "环世界，环形世界均可"
-      }
-    },
-    {
-      "translations": {
-        "en": "Ringworld",
-        "zh-CN": "环世界"
       },
-      "id": "stellaris_ringworld",
-      "metadata": {
-        "part_of_speech": "Noun",
-        "remarks": "原版词汇"
+      "variants": {
+        "en": [
+          "Ringworld"
+        ]
       }
     },
     {
@@ -10147,21 +10017,10 @@
       "metadata": {
         "part_of_speech": "Noun",
         "remarks": "GIGA，Flusion国家名"
-      }
-    },
-    {
-      "translations": {
-        "en": "Roqualian",
-        "zh-CN": "罗夸利亚"
-      },
-      "id": "stellaris_roqualian",
-      "metadata": {
-        "part_of_speech": "Noun",
-        "remarks": "根据语境在罗夸利亚、罗夸利亚的、罗夸利亚人中选择"
       },
       "variants": {
         "en": [
-          "Roqualians"
+          "Roqualian"
         ]
       }
     },
@@ -10526,7 +10385,8 @@
       },
       "variants": {
         "en": [
-          "Sections"
+          "Sections",
+          "Segment"
         ]
       }
     },
@@ -10558,22 +10418,6 @@
       "variants": {
         "en": [
           "seers"
-        ]
-      }
-    },
-    {
-      "translations": {
-        "en": "Segment",
-        "zh-CN": "区段"
-      },
-      "id": "stellaris_segment",
-      "metadata": {
-        "part_of_speech": "Noun",
-        "remarks": "特指环世界各分段"
-      },
-      "variants": {
-        "en": [
-          "Segments"
         ]
       }
     },
@@ -10758,22 +10602,6 @@
     },
     {
       "translations": {
-        "en": "Simple Drone",
-        "zh-CN": "低级子个体"
-      },
-      "id": "stellaris_simple_drone",
-      "metadata": {
-        "part_of_speech": "Noun"
-      },
-      "variants": {
-        "en": [
-          "simple drone",
-          "Simple drone"
-        ]
-      }
-    },
-    {
-      "translations": {
         "en": "Sirenalia",
         "zh-CN": "塞壬利亚"
       },
@@ -10808,17 +10636,11 @@
       "metadata": {
         "part_of_speech": "Noun",
         "remarks": "出自GIGA，种族名"
-      }
-    },
-    {
-      "translations": {
-        "en": "Skeletoids",
-        "zh-CN": "狂骨"
       },
-      "id": "stellaris_skeletoids",
-      "metadata": {
-        "part_of_speech": "Noun",
-        "remarks": "出自GIGA，种族名"
+      "variants": {
+        "en": [
+          "Skeletoids"
+        ]
       }
     },
     {
@@ -10911,6 +10733,11 @@
       "metadata": {
         "part_of_speech": "Noun",
         "remarks": "GIGA种族名 索拉克人，索拉克的，索拉克人的"
+      },
+      "variants": {
+        "en": [
+          "Solakians"
+        ]
       }
     },
     {
@@ -10921,17 +10748,6 @@
       "id": "stellaris_solakian_freedom_fighters",
       "metadata": {
         "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Solakians",
-        "zh-CN": "索拉克人"
-      },
-      "id": "stellaris_solakians",
-      "metadata": {
-        "part_of_speech": "Noun",
-        "remarks": "GIGA种族名称，复数形式"
       }
     },
     {
@@ -11219,21 +11035,10 @@
       "metadata": {
         "part_of_speech": "Noun",
         "remarks": "仅限用于船舰组件或区段时"
-      }
-    },
-    {
-      "translations": {
-        "en": "spinal-mounted",
-        "zh-CN": "轴基"
-      },
-      "id": "stellaris_spinal_mounted",
-      "metadata": {
-        "part_of_speech": "Noun",
-        "remarks": "轴基（武器）"
       },
       "variants": {
         "en": [
-          "spinal mounted"
+          "spinal-mounted"
         ]
       }
     },
@@ -12078,22 +11883,6 @@
     },
     {
       "translations": {
-        "en": "the Ancient Caretaker",
-        "zh-CN": "上古看护者"
-      },
-      "id": "stellaris_the_ancient_caretaker",
-      "metadata": {
-        "part_of_speech": "Noun",
-        "remarks": "原版堕落帝国"
-      },
-      "variants": {
-        "en": [
-          "the Ancient Caretakers"
-        ]
-      }
-    },
-    {
-      "translations": {
         "en": "The Ancient Council of Technology",
         "zh-CN": "古代科技议会"
       },
@@ -12111,16 +11900,6 @@
       "metadata": {
         "part_of_speech": "Noun",
         "remarks": "原版词汇，新领袖之一，本体为虚境实体"
-      }
-    },
-    {
-      "translations": {
-        "en": "The Contigency",
-        "zh-CN": "肃正协议"
-      },
-      "id": "stellaris_the_contigency",
-      "metadata": {
-        "part_of_speech": "Noun"
       }
     },
     {
@@ -12554,22 +12333,6 @@
     },
     {
       "translations": {
-        "en": "Tyanki",
-        "zh-CN": "缇扬奇"
-      },
-      "id": "stellaris_tyanki",
-      "metadata": {
-        "part_of_speech": "Noun",
-        "remarks": "原版太空鲸"
-      },
-      "variants": {
-        "en": [
-          "Tyankis"
-        ]
-      }
-    },
-    {
-      "translations": {
         "en": "Tyanki Incubator",
         "zh-CN": "缇扬奇孵化器"
       },
@@ -12655,6 +12418,11 @@
       "id": "stellaris_united_flusionan_states",
       "metadata": {
         "part_of_speech": "Noun"
+      },
+      "variants": {
+        "en": [
+          "United Flusionian States"
+        ]
       }
     },
     {
@@ -12666,16 +12434,6 @@
       "metadata": {
         "part_of_speech": "Noun",
         "remarks": "giga"
-      }
-    },
-    {
-      "translations": {
-        "en": "United Flusionian States",
-        "zh-CN": "弗鲁森合众国"
-      },
-      "id": "stellaris_united_flusionian_states",
-      "metadata": {
-        "part_of_speech": "Noun"
       }
     },
     {
@@ -12717,16 +12475,11 @@
       "id": "stellaris_unterraumboot",
       "metadata": {
         "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Unterraumboots",
-        "zh-CN": "亚空间U艇"
       },
-      "id": "stellaris_unterraumboots",
-      "metadata": {
-        "part_of_speech": "Noun"
+      "variants": {
+        "en": [
+          "Unterraumboots"
+        ]
       }
     },
     {
@@ -13629,26 +13382,6 @@
     },
     {
       "translations": {
-        "en": "drone",
-        "zh-CN": "子个体"
-      },
-      "id": "stellaris_drone",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Galactic Community",
-        "zh-CN": "星海共同体"
-      },
-      "id": "stellaris_galactic_community",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
         "en": "Galactic Crossing",
         "zh-CN": "银河之脊"
       },
@@ -13749,30 +13482,10 @@
     },
     {
       "translations": {
-        "en": "Zro",
-        "zh-CN": "泽珞"
-      },
-      "id": "stellaris_zro",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
         "en": "-Synergy Bonuses-",
         "zh-CN": "-协同效应-"
       },
       "id": "stellaris_synergy_bonuses",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Amenities",
-        "zh-CN": "舒适度"
-      },
-      "id": "stellaris_amenities",
       "metadata": {
         "part_of_speech": "Noun"
       }
@@ -13900,16 +13613,6 @@
     },
     {
       "translations": {
-        "en": "Commander",
-        "zh-CN": "指挥官"
-      },
-      "id": "stellaris_commander",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
         "en": "Consumer Goods Upkeep",
         "zh-CN": "消费品维护费"
       },
@@ -13970,17 +13673,6 @@
     },
     {
       "translations": {
-        "en": "drone",
-        "zh-CN": "子个体"
-      },
-      "id": "stellaris_drone",
-      "metadata": {
-        "part_of_speech": "Noun",
-        "remarks": "蜂巢思维的基础人口"
-      }
-    },
-    {
-      "translations": {
         "en": "drones",
         "zh-CN": "子个体"
       },
@@ -14032,16 +13724,6 @@
     },
     {
       "translations": {
-        "en": "Energy Credits",
-        "zh-CN": "能量币"
-      },
-      "id": "stellaris_energy_credits",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
         "en": "Ethics",
         "zh-CN": "主义"
       },
@@ -14066,26 +13748,6 @@
         "zh-CN": "异族"
       },
       "id": "stellaris_exotic",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Exotic Gases",
-        "zh-CN": "异星天然气"
-      },
-      "id": "stellaris_exotic_gases",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Food",
-        "zh-CN": "食物"
-      },
-      "id": "stellaris_food",
       "metadata": {
         "part_of_speech": "Noun"
       }
@@ -14132,16 +13794,6 @@
     },
     {
       "translations": {
-        "en": "Galcom",
-        "zh-CN": "星海共同体"
-      },
-      "id": "stellaris_galcom",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
         "en": "Gem Incubator",
         "zh-CN": "宝石孵化者"
       },
@@ -14166,26 +13818,6 @@
         "zh-CN": "增长速度"
       },
       "id": "stellaris_growth_speed",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Habitability",
-        "zh-CN": "宜居度"
-      },
-      "id": "stellaris_habitability",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Happiness",
-        "zh-CN": "幸福度"
-      },
-      "id": "stellaris_happiness",
       "metadata": {
         "part_of_speech": "Noun"
       }
