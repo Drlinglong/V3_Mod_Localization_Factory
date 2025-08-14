@@ -35,7 +35,7 @@
   "thumbnail_not_found": "thumbnail.png not found, skipping.",
   "thumbnail_copied": "thumbnail.png copied successfully.",
   "cleanup_start": "\n--- Starting cleanup of source Mod folder: {mod_name} ---",
-  "cleanup_warning_detailed": "WARNING: This will permanently delete all files and folders from the source directory '{mod_name}' EXCEPT for '.metadata', 'localization', and 'thumbnail.png'.\nThis is useful for saving disk space after translation is complete.\nAre you sure you want to continue? (enter 'y' or 'yes' to confirm): ", 
+  "cleanup_warning_detailed": "WARNING: This will permanently delete all files and folders from the source directory '{mod_name}' EXCEPT for '.metadata', 'localization', and 'thumbnail.png'.\nThis is useful for saving disk space after translation is complete.\nAre you sure you want to continue? (enter 'y' or 'yes' to confirm, press Enter to skip): ", 
   "cleanup_cancelled": "Operation cancelled.",
   "cleanup_deleting": "Deleting non-essential files and folders...",
   "cleanup_deleted_folder": "  Deleted folder: {item}",
@@ -69,7 +69,18 @@
 "entering_custom_mode": "--- Entering Custom Language Mode ---",
 "select_api_provider_prompt": "Please select an API provider:",
 "qwen_china_hint": "(Recommended for users in Mainland China)",
-"workflow_completed": "Workflow completed!"
+"workflow_completed": "Workflow completed!",
+"glossary_loaded_success": "Successfully loaded {game_id} glossary with {count} entries",
+"glossary_file_not_found": "Glossary file not found: {path}",
+"glossary_load_failed": "Failed to load glossary file: {error}",
+"glossary_terms_extracted": "Extracted {count} relevant terms from {text_count} texts",
+"single_translation_glossary_injected": "Single translation: injected {count} glossary terms",
+"batch_translation_glossary_injected": "Batch {batch_num}: injected {count} glossary terms",
+"proofreading_tracker_init": "Proofreading tracker initialized, will generate {lang_name} version progress board",
+"gbk_version_generated": "GBK encoding version generated: {path}",
+"gbk_version_generation_fail": "Failed to generate GBK encoding version: {error}",
+"proofreading_table_generated": "Proofreading progress table generated: {path}",
+"proofreading_table_generation_fail": "Failed to generate proofreading progress table: {error}"
 
 
 }

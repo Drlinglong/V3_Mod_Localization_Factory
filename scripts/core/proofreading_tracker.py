@@ -173,11 +173,21 @@ class ProofreadingTracker:
         self.files_data = []
         self.target_lang_code = target_lang_code
         
-        # 获取语言模板，如果不存在则使用英文作为默认值
-        self.lang_template = self.MULTILANG_TEMPLATES.get(
-            target_lang_code, 
-            self.MULTILANG_TEMPLATES["en"]
-        )
+        # 根据脚本启动语言选择对应的语言模板，而不是翻译目标语言
+        from scripts.utils import i18n
+        script_language = i18n.get_current_language()
+        
+        if script_language == "en_US":
+            self.lang_template = self.MULTILANG_TEMPLATES["en"]
+        elif script_language == "fr_FR":
+            self.lang_template = self.MULTILANG_TEMPLATES["fr"]
+        elif script_language == "de_DE":
+            self.lang_template = self.MULTILANG_TEMPLATES["de"]
+        elif script_language == "es_ES":
+            self.lang_template = self.MULTILANG_TEMPLATES["es"]
+        else:
+            # 默认使用中文模板
+            self.lang_template = self.MULTILANG_TEMPLATES["zh-CN"]
         
     def add_file_info(self, file_info: Dict[str, Any]):
         """
@@ -196,7 +206,20 @@ class ProofreadingTracker:
             str: CSV格式的校对进度表格内容
         """
         if not self.files_data:
-            logging.warning("没有文件数据，无法生成校对进度表格")
+            # 根据脚本启动语言选择提示信息，而不是翻译目标语言
+            from scripts.utils import i18n
+            script_language = i18n.get_current_language()
+            
+            if script_language == "en_US":
+                logging.warning("No file data available, cannot generate proofreading progress table")
+            elif script_language == "fr_FR":
+                logging.warning("Aucune donnée de fichier disponible, impossible de générer le tableau de progression")
+            elif script_language == "de_DE":
+                logging.warning("Keine Dateidaten verfügbar, kann Fortschrittstabelle nicht generieren")
+            elif script_language == "es_ES":
+                logging.warning("No hay datos de archivo disponibles, no se puede generar la tabla de progreso")
+            else:
+                logging.warning("没有文件数据，无法生成校对进度表格")
             return ""
             
         # 按文件路径排序，确保表格有序
@@ -209,14 +232,34 @@ class ProofreadingTracker:
         output = StringIO()
         writer = csv.writer(output, quoting=csv.QUOTE_ALL)
         
+        # 根据脚本启动语言选择CSV列标题，而不是翻译目标语言
+        from scripts.utils import i18n
+        script_language = i18n.get_current_language()
+        
+        if script_language == "en_US":
+            # 英文版本
+            headers = ["Status", "Source File", "Localized File", "Translated Lines", "Notes/Progress"]
+        elif script_language == "fr_FR":
+            # 法文版本
+            headers = ["Statut", "Fichier Source", "Fichier Localisé", "Lignes Traduites", "Notes/Progression"]
+        elif script_language == "de_DE":
+            # 德文版本
+            headers = ["Status", "Quelldatei", "Lokalisierte Datei", "Übersetzte Zeilen", "Notizen/Fortschritt"]
+        elif script_language == "es_ES":
+            # 西班牙文版本
+            headers = ["Estado", "Archivo Fuente", "Archivo Localizado", "Líneas Traducidas", "Notas/Progreso"]
+        else:
+            # 中文版本（默认）
+            headers = [
+                self.lang_template['status'],
+                self.lang_template['source_file'],
+                self.lang_template['localized_file'],
+                self.lang_template['translated_lines'],
+                self.lang_template['notes']
+            ]
+        
         # 添加标题行
-        writer.writerow([
-            self.lang_template['status'],
-            self.lang_template['source_file'],
-            self.lang_template['localized_file'],
-            self.lang_template['translated_lines'],
-            self.lang_template['notes']
-        ])
+        writer.writerow(headers)
         
         # 添加数据行
         for file_info in sorted_files:
@@ -348,15 +391,19 @@ class ProofreadingTracker:
             try:
                 with open(gbk_output_path, "w", encoding="gbk", newline='') as f:
                     f.write(csv_content)
-                logging.info(f"GBK编码版本已生成: {gbk_output_path}")
+                from scripts.utils import i18n
+                logging.info(i18n.t("gbk_version_generated", path=gbk_output_path))
             except Exception as gbk_error:
-                logging.warning(f"GBK编码版本生成失败: {gbk_error}")
+                from scripts.utils import i18n
+                logging.warning(i18n.t("gbk_version_generation_fail", error=str(gbk_error)))
                 
-            logging.info(f"校对进度表格已生成: {output_file_path}")
+            from scripts.utils import i18n
+            logging.info(i18n.t("proofreading_table_generated", path=output_file_path))
             return True
             
         except Exception as e:
-            logging.error(f"生成校对进度表格失败: {e}")
+            from scripts.utils import i18n
+            logging.error(i18n.t("proofreading_table_generation_fail", error=str(e)))
             return False
             
     def _get_relative_path_display(self, full_path: str) -> str:

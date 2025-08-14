@@ -44,17 +44,41 @@ def run(mod_name: str,
         glossary_loaded = glossary_manager.load_game_glossary(game_id)
         if glossary_loaded:
             stats = glossary_manager.get_glossary_stats()
-            logging.info(f"词典加载成功: {stats['description']} ({stats['total_entries']} 个条目)")
+            if i18n.get_current_language() == "en_US":
+                logging.info(f"Glossary loaded successfully: {stats['description']} ({stats['total_entries']} entries)")
+            else:
+                logging.info(f"词典加载成功: {stats['description']} ({stats['total_entries']} 个条目)")
         else:
-            logging.info(f"未找到 {game_id} 的词典文件，将使用无词典模式")
+            if i18n.get_current_language() == "en_US":
+                logging.info(f"Glossary file for {game_id} not found, will use no-glossary mode")
+            else:
+                logging.info(f"未找到 {game_id} 的词典文件，将使用无词典模式")
     else:
-        logging.warning("游戏配置中缺少ID，无法加载词典")
+        if i18n.get_current_language() == "en_US":
+            logging.warning("Game profile missing ID, cannot load glossary")
+        else:
+            logging.warning("游戏配置中缺少ID，无法加载词典")
 
     # ───────────── 2.6. 初始化校对进度追踪器 ─────────────
     # 获取主要目标语言代码用于生成对应语言的校对进度看板
     primary_lang_code = primary_target_lang.get("code", "zh-CN")
     proofreading_tracker = create_proofreading_tracker(mod_name, output_folder_name, primary_lang_code)
-    logging.info(f"校对进度追踪器已初始化，将生成{primary_target_lang.get('name', '中文')}版本的进度看板")
+    # 根据脚本启动语言选择语言名称显示
+    lang_name_map = {
+        "zh-CN": "简体中文",
+        "en": "English", 
+        "fr": "Français",
+        "de": "Deutsch",
+        "es": "Español",
+        "ja": "日本語",
+        "ko": "한국어",
+        "pl": "Polski",
+        "pt-BR": "Português do Brasil",
+        "ru": "Русский",
+        "tr": "Türkçe"
+    }
+    display_name = lang_name_map.get(primary_target_lang.get("code", "zh-CN"), "中文")
+    logging.info(i18n.t("proofreading_tracker_init", lang_name=display_name))
 
     # ───────────── 3. metadata + assety ─────────────
     asset_handler.process_metadata(
@@ -210,10 +234,20 @@ def run(mod_name: str,
                 })
 
         # ───────────── 6. 生成校对进度看板 ─────────────
-        logging.info("正在生成校对进度看板...")
-        if proofreading_tracker.save_proofreading_progress():
-            logging.info("校对进度看板生成成功")
+        if i18n.get_current_language() == "en_US":
+            logging.info("Generating proofreading progress board...")
+            if proofreading_tracker.save_proofreading_progress():
+                logging.info("Proofreading progress board generated successfully")
+            else:
+                logging.warning("Failed to generate proofreading progress board")
         else:
-            logging.warning("校对进度看板生成失败")
+            logging.info("正在生成校对进度看板...")
+            if proofreading_tracker.save_proofreading_progress():
+                logging.info("校对进度看板生成成功")
+            else:
+                logging.warning("校对进度看板生成失败")
 
-    logging.info(f"工作流完成！Mod '{mod_name}' 的翻译任务已完成")
+    if i18n.get_current_language() == "en_US":
+        logging.info(f"Workflow completed! Mod '{mod_name}' translation task finished")
+    else:
+        logging.info(f"工作流完成！Mod '{mod_name}' 的翻译任务已完成")
