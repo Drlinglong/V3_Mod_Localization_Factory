@@ -1,103 +1,108 @@
 # -*- coding: utf-8 -*-
 #
-# 功能: 验证 glossary.json 文件，检查重复、冲突和其他潜在问题。
+# 功能: 验证 glossary.json 文件，并将详细的验证报告保存到 validation_report.txt。
 #
 import json
 from collections import defaultdict
 
-def validate_glossary(filepath='glossary.json'):
+def validate_glossary(input_path='glossary.json', output_path='validation_report.txt'):
     """
-    读取并验证词典文件。
+    读取并验证词典文件，将报告写入文本文件。
     """
     try:
-        with open(filepath, 'r', encoding='utf-8') as f:
+        with open(input_path, 'r', encoding='utf-8') as f:
             data = json.load(f)
     except FileNotFoundError:
-        print(f"错误: 找不到词典文件 '{filepath}'。请先运行 parser.py 生成它。")
+        print(f"错误: 找不到词典文件 '{input_path}'。请先运行 parser.py 生成它。")
         return
     except json.JSONDecodeError:
-        print(f"错误: '{filepath}' 文件格式不正确，无法解析。")
+        print(f"错误: '{input_path}' 文件格式不正确，无法解析。")
         return
 
     entries = data.get('entries', [])
+    report_lines = []
+
+    report_lines.append(f"--- 开始验证 '{input_path}' ({len(entries)} 个条目) ---\n")
+
     if not entries:
-        print("词典中没有任何条目，无需验证。")
+        report_lines.append("词典中没有任何条目，无需验证。")
+        write_report(output_path, report_lines)
         return
 
-    print(f"--- 开始验证 '{filepath}' ({len(entries)} 个条目) ---\n")
-
-    # --- 数据结构准备 ---
-    # 用于检查ID冲突
+    # 数据收集
     seen_ids = defaultdict(list)
-    # 用于检查翻译冲突 (en -> [zh1, zh2])
     en_to_zh_map = defaultdict(list)
-    # 用于检查潜在的同义词问题 (zh -> [en1, en2])
     zh_to_en_map = defaultdict(list)
 
-    # --- 第一轮: 数据收集 ---
     for entry in entries:
         entry_id = entry.get('id')
         en_term = entry.get('translations', {}).get('en')
         zh_term = entry.get('translations', {}).get('zh-CN')
 
         if not all([entry_id, en_term, zh_term]):
-            print(f"警告: 发现残缺条目，缺少id或翻译: {entry}")
+            report_lines.append(f"警告: 发现残缺条目，缺少id或翻译: {entry}")
             continue
 
         seen_ids[entry_id].append(en_term)
-        en_to_zh_map[en_term].append(zh_term)
+        en_to_zh_map[en_term.lower()].append(zh_term) # 冲突检查时也忽略大小写
         zh_to_en_map[zh_term].append(en_term)
 
-    # --- 第二轮: 分析并报告问题 ---
+    # 分析并生成报告
     found_issues = False
 
     # 1. 检查ID冲突
-    print("--- 1. 检查ID冲突 ---")
+    report_lines.append("--- 1. 检查ID冲突 ---")
     id_conflicts = {id: terms for id, terms in seen_ids.items() if len(terms) > 1}
     if id_conflicts:
         found_issues = True
-        print("错误: 发现以下ID被多个词条共用，这会导致数据覆盖！")
+        report_lines.append("错误: 发现以下ID被多个词条共用，这会导致数据覆盖！")
         for id, terms in id_conflicts.items():
-            print(f"  - ID: '{id}'")
-            print(f"    - 对应词条: {terms}")
+            report_lines.append(f"  - ID: '{id}'")
+            report_lines.append(f"    - 对应词条: {terms}")
     else:
-        print("恭喜！未发现ID冲突。")
-    print("-" * 20)
+        report_lines.append("恭喜！未发现ID冲突。")
+    report_lines.append("-" * 20)
 
-    # 2. 检查翻译冲突 (1个英文 -> 多个中文)
-    print("--- 2. 检查翻译冲突 ---")
+    # 2. 检查翻译冲突
+    report_lines.append("--- 2. 检查翻译冲突 ---")
     translation_conflicts = {en: list(set(zh_list)) for en, zh_list in en_to_zh_map.items() if len(set(zh_list)) > 1}
     if translation_conflicts:
         found_issues = True
-        print("错误: 发现同一个英文原文有多个不同的中文翻译！请统一。")
+        report_lines.append("错误: 发现同一个英文原文有多个不同的中文翻译！请统一。")
         for en, zh_list in translation_conflicts.items():
-            print(f"  - 英文: '{en}'")
-            print(f"    - 存在翻译: {zh_list}")
+            report_lines.append(f"  - 英文: '{en}'")
+            report_lines.append(f"    - 存在翻译: {zh_list}")
     else:
-        print("恭喜！未发现直接的翻译冲突。")
-    print("-" * 20)
-
-    # 3. 检查潜在的同义词问题 (1个中文 -> 多个英文)
-    print("--- 3. 检查潜在的同义词问题 ---")
+        report_lines.append("恭喜！未发现直接的翻译冲突。")
+    report_lines.append("-" * 20)
+    
+    # 3. 检查潜在的同义词问题
+    report_lines.append("--- 3. 检查潜在的同义词问题 ---")
     potential_issues = {zh: list(set(en_list)) for zh, en_list in zh_to_en_map.items() if len(set(en_list)) > 1}
     if potential_issues:
         found_issues = True
-        print("注意: 发现同一个中文词被用于翻译多个不同的英文原文。这不一定是错，但建议审查。")
+        report_lines.append("注意: 发现同一个中文词被用于翻译多个不同的英文原文。这不一定是错，但建议审查。")
         for zh, en_list in potential_issues.items():
-            print(f"  - 中文: '{zh}'")
-            print(f"    - 用于翻译: {en_list}")
+            report_lines.append(f"  - 中文: '{zh}'")
+            report_lines.append(f"    - 用于翻译: {en_list}")
     else:
-        print("未发现明显的同义词问题。")
-    print("-" * 20)
+        report_lines.append("未发现明显的同义词问题。")
+    report_lines.append("-" * 20)
     
-    # --- 总结 ---
-    print("\n--- 验证完毕 ---")
+    # 总结
+    report_lines.append("\n--- 验证完毕 ---")
     if not found_issues:
-        print("太棒了！你的词典文件看起来非常干净，没有发现任何冲突。")
+        report_lines.append("太棒了！你的词典文件看起来非常干净，没有发现任何冲突。")
     else:
-        print("验证发现了一些潜在问题，请根据上面的报告进行修正。")
+        report_lines.append("验证发现了一些潜在问题，请根据本报告进行修正。")
+    
+    # 写入文件
+    write_report(output_path, report_lines)
 
+def write_report(path, lines):
+    with open(path, 'w', encoding='utf-8') as f:
+        f.write("\n".join(lines))
+    print(f"验证报告已成功保存到 '{path}'")
 
-# 运行主函数
 if __name__ == "__main__":
     validate_glossary()

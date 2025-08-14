@@ -3,6 +3,7 @@ import os
 import logging
 
 from scripts.core import file_parser, api_handler, file_builder, asset_handler, directory_handler
+from scripts.core.glossary_manager import glossary_manager
 from scripts.config import SOURCE_DIR, DEST_DIR, LANGUAGES
 from scripts.utils import i18n
 
@@ -35,6 +36,18 @@ def run(mod_name: str,
     if not client:
         logging.warning(i18n.t("api_client_init_fail"))
         return
+
+    # ───────────── 2.5. 加载游戏专用词典 ─────────────
+    game_id = game_profile.get("id", "")
+    if game_id:
+        glossary_loaded = glossary_manager.load_game_glossary(game_id)
+        if glossary_loaded:
+            stats = glossary_manager.get_glossary_stats()
+            logging.info(f"词典加载成功: {stats['description']} ({stats['total_entries']} 个条目)")
+        else:
+            logging.info(f"未找到 {game_id} 的词典文件，将使用无词典模式")
+    else:
+        logging.warning("游戏配置中缺少ID，无法加载词典")
 
     # ───────────── 3. metadata + assety ─────────────
     asset_handler.process_metadata(
