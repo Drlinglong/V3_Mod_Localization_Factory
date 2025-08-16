@@ -5,7 +5,7 @@
 import json
 from collections import defaultdict
 
-def validate_glossary(input_path='glossary.json', output_path='validation_report.txt'):
+def validate_glossary(input_path='blue_archive_fixed.json', output_path='validation_report.txt'):
     """
     读取并验证词典文件，将报告写入文本文件。
     """
