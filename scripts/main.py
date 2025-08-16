@@ -182,7 +182,29 @@ def select_auxiliary_glossaries(game_profile):
             except ValueError:
                 logging.warning(i18n.t("invalid_auxiliary_choice"))
 
-def show_project_overview(mod_name, api_provider, game_profile, source_lang, target_languages, auxiliary_glossaries, cleanup_choice):
+def select_fuzzy_matching_mode():
+    """
+    选择术语模糊匹配模式
+    
+    Returns:
+        str: 选择的模式 ('strict' 或 'loose')
+    """
+    logging.info(i18n.t("fuzzy_matching_mode_prompt"))
+    logging.info(i18n.t("fuzzy_matching_strict"))
+    logging.info(i18n.t("fuzzy_matching_loose"))
+    logging.info(i18n.t("fuzzy_matching_hint"))
+    
+    while True:
+        choice = input(i18n.t("enter_fuzzy_choice")).strip()
+        
+        if choice == "1":
+            return "strict"
+        elif choice == "2":
+            return "loose"
+        else:
+            logging.warning(i18n.t("invalid_fuzzy_choice"))
+
+def show_project_overview(mod_name, api_provider, game_profile, source_lang, target_languages, auxiliary_glossaries, cleanup_choice, fuzzy_mode):
     """
     显示工程总览并等待用户确认
     
@@ -194,6 +216,7 @@ def show_project_overview(mod_name, api_provider, game_profile, source_lang, tar
         target_languages: 目标语言列表
         auxiliary_glossaries: 外挂词典信息
         cleanup_choice: 是否清理源文件
+        fuzzy_mode: 模糊匹配模式
         
     Returns:
         bool: 用户是否确认开始翻译
@@ -219,6 +242,10 @@ def show_project_overview(mod_name, api_provider, game_profile, source_lang, tar
     else:
         glossary_status = i18n.t("glossary_status_main_only")
     logging.info(i18n.t("project_overview_glossary", glossary_status=glossary_status))
+    
+    # 显示模糊匹配状态
+    fuzzy_status = i18n.t("fuzzy_matching_status_enabled") if fuzzy_mode == 'loose' else i18n.t("fuzzy_matching_status_disabled")
+    logging.info(i18n.t("project_overview_fuzzy_matching", fuzzy_status=fuzzy_status))
     
     # 显示清理状态
     cleanup_status = i18n.t("cleanup_status_yes") if cleanup_choice else i18n.t("cleanup_status_no")
@@ -388,8 +415,11 @@ def main():
     # 选择外挂词典
     auxiliary_glossaries = select_auxiliary_glossaries(game_profile)
     
+    # 选择术语模糊匹配模式
+    fuzzy_mode = select_fuzzy_matching_mode()
+    
     # 显示工程总览并等待确认
-    if not show_project_overview(mod_name, api_provider, game_profile, source_lang, target_languages, auxiliary_glossaries, cleanup_choice):
+    if not show_project_overview(mod_name, api_provider, game_profile, source_lang, target_languages, auxiliary_glossaries, cleanup_choice, fuzzy_mode):
         # 用户选择返回，重新开始
         main()
         return
@@ -402,6 +432,9 @@ def main():
     
     # 加载选中的外挂词典
     from scripts.core.glossary_manager import glossary_manager
+    
+    # 设置术语模糊匹配模式
+    glossary_manager.set_fuzzy_matching_mode(fuzzy_mode)
     
     # 检查词典状态
     if auxiliary_glossaries:
