@@ -1,55 +1,8 @@
-# 游戏专用词典模块
+# 游戏专用词典模块 - 工具使用指南
 
 ## 概述
 
 本模块为V3_Mod_Localization_Factory项目提供了游戏专用的词典功能，确保翻译过程中术语的一致性和准确性。
-
-## 功能特性
-
-### 1. 自动词典加载
-- 在启动翻译脚本时自动加载对应游戏的词典文件
-- 支持多种游戏：Victoria 3、Stellaris、EU4、HOI4、CK3
-- 如果词典文件不存在，自动回退到无词典模式
-
-### 2. 智能术语提取
-- 在翻译前快速扫描待翻译文本
-- 自动识别与词典中匹配的术语
-- 支持术语变体和别名
-
-### 3. 动态提示注入
-- 将相关术语作为高优先级指令注入到AI翻译请求中
-- 确保AI严格按照词典进行术语翻译
-- 保持游戏术语的一致性和准确性
-
-## 词典文件结构
-
-每个游戏的词典文件位于 `data/glossary/{game_id}/glossary.json`，结构如下：
-
-```json
-{
-  "metadata": {
-    "description": "词典描述",
-    "sources": ["来源1", "来源2"],
-    "last_updated": "更新时间"
-  },
-  "entries": [
-    {
-      "translations": {
-        "en": "英文术语",
-        "zh-CN": "中文翻译"
-      },
-      "id": "唯一标识符",
-      "metadata": {
-        "part_of_speech": "词性",
-        "remarks": "备注说明"
-      },
-      "variants": {
-        "en": ["变体1", "变体2"]
-      }
-    }
-  ]
-}
-```
 
 ## 词典解析器工具
 
@@ -69,8 +22,6 @@
 - **输入文件**: `glossary.json`（由parser.py生成的词典文件）
 - **输出文件**: `validation_report.txt`（详细的验证报告）
 - **验证项目**: ID冲突检查、翻译冲突检查、同义词问题检测
-
-
 
 ### 输入文件格式说明
 
@@ -124,7 +75,7 @@ Admiral, Admirals, admirals
 #### 步骤2: 配置游戏前缀
 在脚本中修改 `CURRENT_GAME_PREFIX` 变量：
 ```python
-# 在parser.py或parserstellaris.py中
+# 在parser.py中
 CURRENT_GAME_PREFIX = 'victoria3'  # 或 'stellaris', 'eu4', 'hoi4', 'ck3'
 ```
 
@@ -132,8 +83,6 @@ CURRENT_GAME_PREFIX = 'victoria3'  # 或 'stellaris', 'eu4', 'hoi4', 'ck3'
 ```bash
 # 在data/glossary目录下运行
 python parser.py
-# 或
-python parserstellaris.py
 ```
 
 #### 步骤4: 检查输出
@@ -302,84 +251,6 @@ def validate_glossary(input_path='glossary.json', output_path='validation_report
 - 为后续扩展提供基础结构
 
 **注意**: 这些示例词典不包含完整的游戏术语，仅用于系统测试和演示目的。
-
-## 使用方法
-
-### 1. 自动使用
-词典功能已集成到主翻译流程中，无需手动配置。当您运行翻译脚本时：
-
-1. 选择游戏后，系统自动加载对应词典
-2. 翻译过程中自动提取相关术语
-3. 将术语作为高优先级指令注入AI请求
-
-### 2. 手动测试
-可以使用测试脚本验证词典功能：
-
-```bash
-python test_glossary.py
-```
-
-### 3. 添加新游戏词典
-1. 在 `data/glossary/` 下创建新的游戏文件夹
-2. 创建 `glossary.json` 文件
-3. 按照标准格式添加术语条目
-4. 确保游戏配置中的 `id` 字段与文件夹名称一致
-
-### 4. 使用词典解析器创建新词典
-1. 从Paratranz.cn导出术语文件
-2. 使用 `parser.py` 解析生成 `glossary.json`
-3. 使用 `validator.py` 验证词典质量
-4. 根据验证报告修正问题（如有）
-5. 将最终的 `glossary.json` 放入对应游戏文件夹
-
-## 词典条目格式说明
-
-### 必需字段
-- `translations`: 包含源语言和目标语言的翻译对照
-- `id`: 唯一标识符，建议使用 `{game_id}_{term}` 格式
-
-### 可选字段
-- `metadata.part_of_speech`: 词性（如 Noun、Verb、Adjective）
-- `metadata.remarks`: 翻译注意事项或说明
-- `variants`: 术语的变体形式，用于提高匹配准确性
-
-## 技术实现
-
-### 核心组件
-- `GlossaryManager`: 词典管理器类
-- `load_game_glossary()`: 加载游戏词典
-- `extract_relevant_terms()`: 提取相关术语
-- `create_dynamic_glossary_prompt()`: 生成动态提示
-
-### 集成点
-- `initial_translate.py`: 启动时自动加载词典
-- `openai_handler.py`: 翻译过程中注入词典提示
-- 支持所有API供应商（OpenAI、Gemini、Qwen）
-
-## 注意事项
-
-1. **词典文件编码**: 请使用UTF-8编码保存词典文件
-2. **术语更新**: 定期更新词典以保持术语的准确性和时效性
-3. **性能影响**: 词典功能对翻译性能影响很小，主要是在启动时加载和翻译前扫描
-4. **回退机制**: 如果词典加载失败，系统会自动使用无词典模式，确保翻译功能正常运行
-5. **输入文件格式**: 使用解析器时，确保Paratranz导出的术语文件格式正确
-6. **游戏前缀设置**: 创建新词典时，确保游戏前缀与目标游戏配置一致
-
-## 故障排除
-
-### 常见问题
-1. **词典未加载**: 检查词典文件路径和格式是否正确
-2. **术语未匹配**: 确认术语拼写和大小写是否一致
-3. **性能问题**: 检查词典文件大小，过大的文件可能影响加载速度
-4. **解析器错误**: 检查输入文件格式和编码
-5. **输出文件异常**: 验证游戏前缀设置和文件权限
-
-### 日志信息
-词典相关的操作会在日志中记录，包括：
-- 词典加载状态
-- 术语提取数量
-- 提示注入情况
-- 解析器运行状态
 
 ## 更新日志
 
