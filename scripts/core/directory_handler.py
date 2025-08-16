@@ -47,16 +47,21 @@ def select_mod_directory(source_mod=None):
         print(i18n.t("error_source_folder_not_found", dir=SOURCE_DIR))
         return None
     
-def cleanup_source_directory(mod_name, game_profile):
+def cleanup_source_directory(mod_name, game_profile, cli_args):
     """清理源mod文件夹，现在会根据游戏档案来决定保护哪些文件。"""
     print(i18n.t("cleanup_start", mod_name=mod_name))
 
-    confirm = input(i18n.t("cleanup_warning_detailed", mod_name=mod_name))
-    if confirm.lower() not in ['y', 'yes']:
-        print(i18n.t("cleanup_cancelled"))
-        return False
+    if not cli_args:
+        confirm = input(i18n.t("cleanup_warning_detailed", mod_name=mod_name))
+        if confirm.lower() not in ['y', 'yes']:
+            print(i18n.t("cleanup_cancelled"))
+            return False
 
-    mod_path = os.path.join(SOURCE_DIR, mod_name)
+    if cli_args.source_mod :
+        mod_path = os.path.normpath(cli_args.source_mod)
+    else: 
+        mod_path = os.path.join(SOURCE_DIR, mod_name)
+    print(mod_path)
     # 【核心修改】从游戏档案中读取保护名单
     protected_items = game_profile.get('protected_items', set())
 

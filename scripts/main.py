@@ -8,7 +8,7 @@ from config import LANGUAGES, GAME_PROFILES, SOURCE_DIR
 from sys import argv
 import argparse
 
-def gather_mod_context(mod_name):
+def gather_mod_context(mod_name, mod_context=None):
     """读取metadata获取Mod名，并询问用户是否补充上下文。"""
     # 【i18n修正】所有打印和输入都使用i18n
     print(i18n.t("getting_mod_context"))
@@ -23,7 +23,11 @@ def gather_mod_context(mod_name):
                     mod_official_name = meta_data['name']
         
         print(i18n.t("mod_name_identified", name=mod_official_name))
-        extra_context = input(i18n.t("prompt_for_extra_context")).strip()
+        if mod_context:
+            print(i18n.t("mod_context_provided", context=mod_context))
+            extra_context = mod_context
+        else:
+            extra_context = input(i18n.t("prompt_for_extra_context")).strip()
         
         final_context = mod_official_name
         if extra_context:
@@ -89,8 +93,9 @@ def main_menu(argv=None):
     parser.add_argument('-cli-language', default=None, help='Language used for CLI (e.g., en)')
     parser.add_argument('-game', default=None, help='Game profile (e.g., vic3)')
     parser.add_argument('-source-mod', default=None, help='Path to the source mod directory or 0 for manual selection')
-    parser.add_argument('-source-lang', default=None, help='Source language key (e.g., english)')
-    parser.add_argument('-target-lang', default=None, help='Target language key or 0 for all except source')
+    parser.add_argument('-source-language', default=None, help='Source language key (e.g., english)')
+    parser.add_argument('-target-language', default=None, help='Target language key or 0 for all except source')
+    parser.add_argument('-translation-context', default=None, help='Translation context (e.g., A flavor mod about sci-fi unicorns)')
     args = parser.parse_args(argv)
     
     print(args)
@@ -102,27 +107,49 @@ def main_menu(argv=None):
     selected_mod = directory_handler.select_mod_directory(args.source_mod)
     if not selected_mod: return
 
-    mod_context = gather_mod_context(selected_mod)
+    mod_context = gather_mod_context(selected_mod, args.translation_context)
 
     # 【核心修正】将 game_profile 传递给清理函数
-    directory_handler.cleanup_source_directory(selected_mod, selected_game_profile)
-    
-    source_lang_choice = select_language("select_source_language_prompt")
-    source_lang = LANGUAGES[source_lang_choice]
-    target_choice = select_language("select_target_language_prompt", source_lang['key'])
+    directory_handler.cleanup_source_directory(selected_mod, selected_game_profile, args)
+    if args.source_language:
+        for lang in LANGUAGES.values():
+            if lang["code"].lower() == args.source_language.lower():
+                source_lang = lang
+    else:
+        source_lang_choice = select_language("select_source_language_prompt")
+        source_lang = LANGUAGES[source_lang_choice]
 
     target_languages = []
-    if target_choice == '0':
-        for key, lang_info in LANGUAGES.items():
-            if lang_info['key'] != source_lang['key']:
-                target_languages.append(lang_info)
-    elif target_choice in LANGUAGES:
-        target_lang = LANGUAGES[target_choice]
-        if target_lang['key'] == source_lang['key']:
-            print(i18n.t("error_same_language"))
-            return
-        target_languages.append(target_lang)
+
+    if args.target_language:
+        if args.target_language == '0':
+            for key, lang_info in LANGUAGES.items():
+                if lang_info['key'] != source_lang['key']:
+                    target_languages.append(lang_info)
+        else:
+            target_lang = LANGUAGES[target_choice]
+            if target_lang['key'] == source_lang['key']:
+                print(i18n.t("error_same_language"))
+                return
+            target_languages.append(target_lang)
+
+    else:
+        target_choice = select_language("select_target_language_prompt", source_lang['key'])
+
+        
+        if target_choice == '0':
+            for key, lang_info in LANGUAGES.items():
+                if lang_info['key'] != source_lang['key']:
+                    target_languages.append(lang_info)
+        elif target_choice in LANGUAGES:
+            target_lang = LANGUAGES[target_choice]
+            if target_lang['key'] == source_lang['key']:
+                print(i18n.t("error_same_language"))
+                return
+            target_languages.append(target_lang)
     
+    print(target_languages)
+
     if target_languages:
         # 【核心修正】将 game_profile 和 mod_context 传递给工作流
         initial_translate.run(selected_mod, source_lang, target_languages, selected_game_profile, mod_context)
