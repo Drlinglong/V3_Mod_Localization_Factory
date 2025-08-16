@@ -182,7 +182,7 @@ def select_auxiliary_glossaries(game_profile):
             except ValueError:
                 logging.warning(i18n.t("invalid_auxiliary_choice"))
 
-def show_project_overview(mod_name, api_provider, game_profile, source_lang, target_languages, auxiliary_glossaries):
+def show_project_overview(mod_name, api_provider, game_profile, source_lang, target_languages, auxiliary_glossaries, cleanup_choice):
     """
     显示工程总览并等待用户确认
     
@@ -193,6 +193,7 @@ def show_project_overview(mod_name, api_provider, game_profile, source_lang, tar
         source_lang: 源语言
         target_languages: 目标语言列表
         auxiliary_glossaries: 外挂词典信息
+        cleanup_choice: 是否清理源文件
         
     Returns:
         bool: 用户是否确认开始翻译
@@ -209,19 +210,19 @@ def show_project_overview(mod_name, api_provider, game_profile, source_lang, tar
     if len(target_languages) == 1:
         target_lang_info = target_languages[0]['name']
     else:
-        target_lang_info = f"多语言 ({len(target_languages)} 种)"
+        target_lang_info = i18n.t("target_languages_multiple", count=len(target_languages))
     logging.info(i18n.t("project_overview_target", target_lang=target_lang_info))
     
     # 显示词典配置
     if auxiliary_glossaries:
-        glossary_status = f"主词典 + {len(auxiliary_glossaries)} 个外挂词典"
+        glossary_status = i18n.t("glossary_status_combined_auxiliary", count=len(auxiliary_glossaries))
     else:
-        glossary_status = "仅主词典"
+        glossary_status = i18n.t("glossary_status_main_only")
     logging.info(i18n.t("project_overview_glossary", glossary_status=glossary_status))
     
     # 显示清理状态
-    logging.info(i18n.t("project_overview_cleanup", cleanup_status="待确认"))
-    logging.info(i18n.t("cleanup_after_confirmation"))
+    cleanup_status = i18n.t("cleanup_status_yes") if cleanup_choice else i18n.t("cleanup_status_no")
+    logging.info(i18n.t("project_overview_cleanup", cleanup_status=cleanup_status))
     
     # 等待用户确认
     while True:
@@ -233,10 +234,7 @@ def show_project_overview(mod_name, api_provider, game_profile, source_lang, tar
             logging.info(i18n.t("returning_to_language_selection"))
             return False
         else:
-            if i18n.get_current_language() == "en_US":
-                logging.warning("Please enter Y or N")
-            else:
-                logging.warning("请输入 Y 或 N")
+            logging.warning(i18n.t("invalid_confirm_choice"))
 
 def handle_custom_language_selection():
     """
@@ -265,6 +263,28 @@ def handle_custom_language_selection():
     logging.info(i18n.t("custom_language_selected", name=custom_name, key=custom_key, prefix=custom_prefix))
     return custom_lang
 
+def ask_cleanup_choice(mod_name):
+    """
+    询问用户是否清理源文件
+    
+    Args:
+        mod_name: MOD名称
+        
+    Returns:
+        bool: 用户是否选择清理
+    """
+    logging.info(i18n.t("ask_cleanup_prompt", mod_name=mod_name))
+    while True:
+        choice = input(i18n.t("enter_cleanup_choice")).strip().upper()
+        if choice == 'Y':
+            logging.info(i18n.t("cleanup_confirmed"))
+            return True
+        elif choice == 'N':
+            logging.info(i18n.t("cleanup_cancelled"))
+            return False
+        else:
+            logging.warning(i18n.t("invalid_cleanup_choice"))
+
 def main():
     """Main function."""
     # 初始化日志系统
@@ -278,6 +298,16 @@ def main():
         logging.error(i18n.t("error_source_folder_not_found", dir=SOURCE_DIR))
         return
     
+    # 选择游戏配置
+    game_profile = select_game_profile()
+    if not game_profile:
+        return
+    
+    # 选择API供应商
+    api_provider = select_api_provider()
+    if not api_provider:
+        return
+    
     # 扫描源目录
     mods = directory_handler.scan_source_directory(SOURCE_DIR)
     if not mods:
@@ -289,15 +319,8 @@ def main():
     if not mod_name:
         return
     
-    # 选择游戏配置
-    game_profile = select_game_profile()
-    if not game_profile:
-        return
-    
-    # 选择API供应商
-    api_provider = select_api_provider()
-    if not api_provider:
-        return
+    # 询问是否清理源文件
+    cleanup_choice = ask_cleanup_choice(mod_name)
     
     # 获取MOD上下文
     mod_context = gather_mod_context(mod_name)
@@ -315,8 +338,11 @@ def main():
         # 显示选项
         if len(game_profile['supported_language_keys']) > 1:
             # 排除源语言
-            available_targets = [LANGUAGES[key] for key in game_profile['supported_language_keys'] 
-                               if key != source_lang['code']]
+            available_targets = []
+            for key in game_profile['supported_language_keys']:
+                lang = LANGUAGES[key]
+                if lang['code'] != source_lang['code']:
+                    available_targets.append(lang)
             
             # 先显示"全部语言"选项
             all_langs_count = len(available_targets)
@@ -325,7 +351,7 @@ def main():
             # 再显示"自定义"选项
             logging.info(f"  [c] {i18n.t('target_option_custom')}")
             
-            # 最后显示具体语言选项
+            # 最后显示具体语言选项（排除源语言）
             for i, lang in enumerate(available_targets, 1):
                 logging.info(f"  [{i}] {lang['name']}")
             
@@ -363,10 +389,16 @@ def main():
     auxiliary_glossaries = select_auxiliary_glossaries(game_profile)
     
     # 显示工程总览并等待确认
-    if not show_project_overview(mod_name, api_provider, game_profile, source_lang, target_languages, auxiliary_glossaries):
+    if not show_project_overview(mod_name, api_provider, game_profile, source_lang, target_languages, auxiliary_glossaries, cleanup_choice):
         # 用户选择返回，重新开始
         main()
         return
+    
+    # 如果用户选择清理源文件，立即执行清理
+    if cleanup_choice:
+        logging.info(i18n.t("executing_cleanup"))
+        directory_handler.cleanup_source_directory(mod_name, game_profile)
+        logging.info(i18n.t("cleanup_completed"))
     
     # 加载选中的外挂词典
     from scripts.core.glossary_manager import glossary_manager
@@ -375,10 +407,7 @@ def main():
     if auxiliary_glossaries:
         success = glossary_manager.load_auxiliary_glossaries(auxiliary_glossaries)
         if success:
-            if i18n.get_current_language() == "en_US":
-                logging.info(f"Loaded {len(auxiliary_glossaries)} auxiliary glossaries")
-            else:
-                logging.info(f"已加载 {len(auxiliary_glossaries)} 个外挂词典")
+            logging.info(i18n.t("auxiliary_glossaries_loaded", count=len(auxiliary_glossaries)))
         else:
             logging.warning(i18n.t("auxiliary_glossary_load_failed"))
     

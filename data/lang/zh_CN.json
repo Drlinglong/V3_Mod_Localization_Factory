@@ -112,5 +112,18 @@
 "glossary_status_combined": "主词典({main_count}条) + 外挂词典({aux_count}个) = 总计({total_count}条)",
 "glossary_status_none": "无可用词典",
 "logger_initialized": "日志系统初始化完成",
-"language_loaded": "语言已加载: {lang_code}"
+"language_loaded": "语言已加载: {lang_code}",
+"ask_cleanup_prompt": "是否要清理源MOD文件夹 '{mod_name}' 以节省磁盘空间？\n这将删除除 '.metadata', 'localization', 和 'thumbnail.png' 之外的所有文件。\n请输入 Y 或 N: ",
+"enter_cleanup_choice": "请输入选择 (Y 或 N): ",
+"cleanup_confirmed": "已确认清理源文件",
+"cleanup_cancelled": "已取消清理源文件",
+"cleanup_status_yes": "将清理源文件",
+"cleanup_status_no": "不清理源文件",
+"executing_cleanup": "正在执行源文件清理...",
+"cleanup_completed": "源文件清理完成",
+"invalid_cleanup_choice": "请输入 Y 或 N",
+"invalid_confirm_choice": "请输入 Y 或 N",
+"target_languages_multiple": "多语言 ({count} 种)",
+"glossary_status_combined_auxiliary": "主词典 + {count} 个外挂词典",
+"glossary_status_main_only": "仅主词典"
 }
