@@ -1,0 +1,555 @@
+﻿l_simp_chinese:
+ BA_SI: "学园理念"
+
+ MESSAGE_BA_SI_READY: "学园理念就绪"
+ MESSAGE_BA_SI_READY_DESC: "我们已经积攒了超过5点£job_BA_dont_be_crazy_here£§B$BA_SI$点数§!，请前往什亭之匣激活$BA_SI$"
+
+ MESSAGE_BA_SI_ACTIVATED: "学园理念效果已激活"
+ MESSAGE_BA_SI_ACTIVATED_Trinity_A03_DESC: "§Y$SI_Trinity_A03$§!已激活，为所有领袖提供§C1000经验值§!。"
+ MESSAGE_BA_SI_ACTIVATED_Millennium_C03_DESC: "§Y$SI_Millennium_C03$§!已激活，清除所有领袖的§R负面特质§!。"
+
+ BA_Shittem.4010.title: "$BA_SI$"
+ BA_Shittem.4010.desc: "老师，我们已经积攒了许多£job_BA_dont_be_crazy_here£§B$BA_SI$点数§!了！不同的学园有着不同的对于统治与联合的看法，您可以点选§B$BA_SI$§!来将她们的点子采纳为国策，获得巨大的增益！老师，学生们的智慧也是有许多可取之处的，不要白白消磨她们的热情才对吧。"
+
+ #####    阿拜多斯    #####
+ SI_Abydos_tip: "学园理念（主要）：§L阿拜多斯学园§!\n阿拜多斯在太空时代的复兴奇迹有目共睹，其中的创新与经验值得推广到整个基沃托斯。\n "
+ ### 共通
+ SI_Abydos_G01: "对策委员会的日常"
+ SI_Abydos_G01_desc: "故事在这里有了新的开始。"
+ SI_Abydos_G01_effect: "\n效果：\n获得§Y$engineering_research_with_icon$§!与§Y$unity_with_icon$§!，数额相当于3倍的每月产出\n "
+ SI_Abydos_G01_tip: "§C$SI_Abydos_G01$§!\n$SI_Abydos_G01_desc$\n$SI_Abydos_G01_effect$"
+
+ SI_Abydos_G02: "小小的副业"
+ SI_Abydos_G02_desc: "在研究如何改善我们的生活环境之余，那份诱人的副业依旧让对策委员会念念不忘。"
+ SI_Abydos_G02_effect: "\n效果：\n§H解锁分部建筑: §!$building_BA_SI_Abydos_G02$\n "
+ SI_Abydos_G02_tip: "§C$SI_Abydos_G02$§!\n$SI_Abydos_G02_desc$\n$SI_Abydos_G02_effect$"
+
+ SI_Abydos_G03: "尾声：对策委员会的终点"
+ SI_Abydos_G03_desc: "对策委员会的职责已经到了尾声，§B阿拜多斯废校对策委员会§!的名称已经不再沿用，而是悬挂在校史馆的正厅内，激励着、警示着基沃托斯的学生们。"
+ SI_Abydos_G03_effect: "\n效果：\n$mod_BA_SI_sub_cap_add$: §G+1§!\n$MOD_COUNTRY_MEGASTRUCTURE_BUILD_CAP_ADD$: §G+1§!\n§H解锁星球决议: §!$decision_BA_SI_Abydos_G03$（仅§Y学园都市星球§!可用）\n "
+ SI_Abydos_G03_tip: "§C$SI_Abydos_G03$§!\n$SI_Abydos_G03_desc$\n$SI_Abydos_G03_effect$"
+
+ ### 左线
+ SI_Abydos_A01: "星球改造对策"
+ SI_Abydos_A01_desc: "想要改造星球的环境，必须先规划建设好足够的基础，能量的供应是重中之重。"
+ SI_Abydos_A01_effect: "\n§R与§!$SI_Abydos_B01$§R互斥§!\n效果：\n获得£society_research£§H$tech_terrestrial_sculpting$§!科技的§G75%§!进度\n环境改造速度: §G+25%§!\n每100£job_BA_Kivotos_staff£§Y$job_BA_Kivotos_staff$§!或£job_BA_supplier£§Y$job_BA_supplier$§!为所在殖民地提供:\n    $MOD_PLANET_BUILDING_BUILD_SPEED_MULT$§G+5%§!\n "
+ SI_Abydos_A01_tip: "§C$SI_Abydos_A01$§!\n$SI_Abydos_A01_desc$\n$SI_Abydos_A01_effect$"
+
+ SI_Abydos_A02: "物流整合"
+ SI_Abydos_A02_desc: "星球改造是个巨大无比的工程，物资流通的效率直接决定了工程的进度。"
+ SI_Abydos_A02_effect: "\n效果：\n$mod_planet_districts_cost_mult$: §G-15%§!\n$mod_planet_districts_upkeep_mult$: §G-15%§!\n环境改造消耗: §G-35%§!\n环境改造速度: §G+25%§!\n "
+ SI_Abydos_A02_tip: "§C$SI_Abydos_A02$§!\n$SI_Abydos_A02_desc$\n$SI_Abydos_A02_effect$"
+
+ SI_Abydos_A03: "强化产业"
+ SI_Abydos_A03_desc: "为了更快的完成我们的目标，一些有代价的加速生产是必要的。"
+ SI_Abydos_A03_effect: "\n效果:\n§H解锁学园理念法令: §!$edict_BA_SI_Abydos_A03$:\n    §Y基础启动花费: £unity£300§!\n    §Y基础维护费: £unity£30§!\n    $MOD_PLANET_BUILDING_BUILD_SPEED_MULT$: §G+25%§!\n    $mod_planet_jobs_produces_mult$: §G+25%§!\n    $mod_BA_staff_pop_produces_mult$: §G+25%§!\n    $mod_planet_jobs_upkeep_mult$: §R+25%§!\n "
+ SI_Abydos_A03_tip: "§C$SI_Abydos_A03$§!\n$SI_Abydos_A03_desc$\n$SI_Abydos_A03_effect$"
+
+ SI_Abydos_A04: "星球蓝图"
+ SI_Abydos_A04_desc: "基沃托斯始终是最适合居住的地方，学园都市星球是我们最为理想的家园。"
+ SI_Abydos_A04_effect: "\n效果：\n$mod_planet_metallurgists_alloys_produces_add$: §G+1§!\n$MOD_PLANET_DECISION_ENACT_SPEED_MULT$: §G+15%§!\n$mod_planet_buildings_cost_mult$: §G-20%§!\n "
+ SI_Abydos_A04_tip: "§C$SI_Abydos_A04$§!\n$SI_Abydos_A04_desc$\n$SI_Abydos_A04_effect$"
+
+ SI_Abydos_A05: "开拓虚空"
+ SI_Abydos_A05_desc: "无畏的工程师们正在征服近地轨道的广阔空间，自动化居住站就是她们的手段。"
+ SI_Abydos_A05_effect: "\n效果：\n$MOD_MEGASTRUCTURE_BUILD_SPEED_MULT$: §G+75%§!\n$mod_BA_auto_districts_produces_mult$: §G+20%§!\n$mod_megastructures_cost_mult$: §G-20%§!\n$mod_station_gatherers_produces_mult$: §G+30%§!\n " #\n居住站和自动化居住站宜居性: §G+30%§!
+ SI_Abydos_A05_tip: "§C$SI_Abydos_A05$§!\n$SI_Abydos_A05_desc$\n$SI_Abydos_A05_effect$"
+
+ SI_Abydos_A06: "自新世界"
+ SI_Abydos_A06_desc: "我们决不会不止步于此，宇宙中还有更广阔的天地在等着我们。"
+ SI_Abydos_A06_effect: "\n效果：\n§H解锁星球决议: §!$decision_BA_SI_Abydos_A06$（仅§Y学园都市星球§!、§Y高级居住站§!可用）\n "
+ SI_Abydos_A06_tip: "§C$SI_Abydos_A06$§!\n$SI_Abydos_A06_desc$\n$SI_Abydos_A06_effect$"
+
+ ### 右线
+ SI_Abydos_B01: "沙漠学园之道"
+ SI_Abydos_B01_desc: "沙漠本质上也是一种资源，最大化利用沙漠化反而可能会成为阿拜多斯的一大特色。"
+ SI_Abydos_B01_effect: "\n§R与§!$SI_Abydos_A01$§R互斥§!\n效果：\n星球类型为§Y沙漠星球§!的殖民地§H获得行星修正: §!$modifier_BA_SI_Abydos_B01$:\n    物种宜居性下限: §G+50%§!\n    行星建造速度: §G+0.25§!\n "
+ SI_Abydos_B01_tip: "§C$SI_Abydos_B01$§!\n$SI_Abydos_B01_desc$\n$SI_Abydos_B01_effect$"
+
+ SI_Abydos_B02: "天空的边界"
+ SI_Abydos_B02_desc: "沙漠环境具有极端的优势与劣势，必须进行精细的规划，发挥长处、弥补不足。"
+ SI_Abydos_B02_effect: "\n效果：\n§H解锁星球决议: §!$decision_BA_SI_Abydos_B02$（仅星球类型为§Y沙漠星球§!的殖民地可用）\n  "
+ SI_Abydos_B02_tip: "§C$SI_Abydos_B02$§!\n$SI_Abydos_B02_desc$\n$SI_Abydos_B02_effect$"
+
+ SI_Abydos_B03: "烈风之中"
+ SI_Abydos_B03_desc: "我们克服恶劣环境，标定出每一寸土地的特征，开拓我们脚下的这颗星球。"
+ SI_Abydos_B03_effect: "\n效果：\n§H解锁星球决议: §!$decision_BA_SI_Abydos_B03$（仅星球类型为§Y沙漠星球§!的殖民地可用）\n  "
+ SI_Abydos_B03_tip: "§C$SI_Abydos_B03$§!\n$SI_Abydos_B03_desc$\n$SI_Abydos_B03_effect$"
+
+ SI_Abydos_B04: "丰饶绿洲计划"
+ SI_Abydos_B04_desc: "以水源为核心，划定出最为丰饶美丽的土地作为居住区，保障学生们的完美生活体验。"
+ SI_Abydos_B04_effect: "\n效果：\n沙漠星球宜居性: §G+30%§!\n§H行星修正: §!$modifier_BA_SI_Abydos_B01$ --> §H行星修正§!: $modifier_BA_SI_Abydos_B04$:\n    $MOD_HABITABILITY_FLOOR_ADD$: §G+50%§!\n    $MOD_PLANET_BUILDING_BUILD_SPEED_MULT$: §G+0.25§!\n    £stability£$MOD_PLANET_STABILITY_ADD$: §G+10§!\n    £happiness£$MOD_POP_HAPPINESS$: §G+10%§!\n "
+ SI_Abydos_B04_tip: "§C$SI_Abydos_B04$§!\n$SI_Abydos_B04_desc$\n$SI_Abydos_B04_effect$"
+
+ SI_Abydos_B05: "城市守护者"
+ SI_Abydos_B05_desc: "发展我们的城市，开发星球上的资源，我们的学园都市繁荣兴盛。"
+ SI_Abydos_B05_effect: "\n效果：\n§H解锁星球决议: §!$decision_BA_SI_Abydos_B05$（仅星球类型为§Y沙漠星球§!的殖民地可用）\n "
+ SI_Abydos_B05_tip: "§C$SI_Abydos_B05$§!\n$SI_Abydos_B05_desc$\n$SI_Abydos_B05_effect$"
+
+ SI_Abydos_B06: "星与砂"
+ SI_Abydos_B06_desc: "学园都市屹立在沙海中，如同这颗星球在璀璨群星中浮沉。"
+ SI_Abydos_B06_effect: "\n效果：\n§H解锁星球决议: §!$decision_BA_SI_Abydos_B06$（仅星球类型为§Y沙漠星球§!的殖民地可用）\n "
+ SI_Abydos_B06_tip: "§C$SI_Abydos_B06$§!\n$SI_Abydos_B06_desc$\n$SI_Abydos_B06_effect$"
+
+
+ #####     格黑那     #####
+ SI_Gehenna_tip: "学园理念（主要）：§_格黑那学园§!\n作为基沃托斯的著名猴山(?)，格黑娜对秩序与混乱的调和有不少独特理解，是时候把他们推广到全基沃托斯了。\n "
+ ### 共通
+ SI_Gehenna_G01: "舒适型居住点"
+ SI_Gehenna_G01_desc: "旧园区在学生们的破坏之下已经杂乱不堪，进入新时代下我们首先要解决学生们的安置问题。不过，新宿舍有什么理由不建的舒适一些？"
+ SI_Gehenna_G01_effect: "\n效果：\n岗位£consumer_goods£消费品维护费: §G-15%§!\n人口住房使用: §R+15%§!\n "
+ SI_Gehenna_G01_tip: "§C$SI_Gehenna_G01$§!\n$SI_Gehenna_G01_desc$\n$SI_Gehenna_G01_effect$"
+
+ SI_Gehenna_G02: "新世界的火种"
+ SI_Gehenna_G02_desc: "格黑那所属的学生在活跃度上一向是力压其他所有学园，他们对于新世界的渴望也是如此。"
+ SI_Gehenna_G02_effect: "\n效果：\n$MOD_POP_RESETTLEMENT_COST_MULT$: §G-25%§!\n$MOD_POP_BONUS_WORKFORCE_MULT$: §G+10%§!\n§Y新设立§!的殖民地§H获得行星修正: §!$modifier_BA_SI_Gehenna_G02$(1800£time£)：\n    幸福度: §G+40%§!\n    $MOD_PLANET_BUILDING_BUILD_SPEED_MULT$: §G+25%§!\n "
+ SI_Gehenna_G02_tip: "§C$SI_Gehenna_G02$§!\n$SI_Gehenna_G02_desc$\n$SI_Gehenna_G02_effect$"
+
+ SI_Gehenna_G03: "尾声：烈火洗礼的学园都市"
+ SI_Gehenna_G03_desc: "不管我们曾经经历过何，如今的基沃托斯已经焕然一新。无论星空有多么的空旷冰冷，这学园都市都会由我们心中的火照亮。"
+ SI_Gehenna_G03_effect: "\n效果：\n$mod_BA_SI_sub_cap_add$: §G+1§!\n自动化建筑生产的资源: §G+35%§!\n$mod_planet_metallurgists_produces_mult$: §G+35%§!\n£job_foundry£$mod_planet_metallurgists_upkeep_mult$: §R+35%§!\n£job_BA_pyroxenes_maker£青辉石制造者产出: §G+35%§!\n£job_BA_pyroxenes_maker£青辉石制造者维护费: §R+35%§!\n "
+ SI_Gehenna_G03_tip: "§C$SI_Gehenna_G03$§!\n$SI_Gehenna_G03_desc$\n$SI_Gehenna_G03_effect$"
+
+ ### 上左线
+ SI_Gehenna_A01: "万魔殿策略：暗流之上"
+ SI_Gehenna_A01_desc: "如今格黑那是联邦学生会的首席，万魔殿自然要搞一些小动作意在展示一下自己的某些想法，当然，它们的每一项都不太靠谱。"
+ SI_Gehenna_A01_effect: "\n§R与§!$SI_Gehenna_B01$§R互斥§!\n效果：\n§H获得帝国修正: §!$modifier_BA_SI_Gehenna_A01$(3600£time£): \n    $MOD_BONUS_POP_GROWTH_MULT$: §G+25%§!\n    $mod_planet_pops_organics_food_upkeep_mult$: §R+25%§!\n "
+ SI_Gehenna_A01_tip: "§C$SI_Gehenna_A01$§!\n$SI_Gehenna_A01_desc$\n$SI_Gehenna_A01_effect$"
+
+ SI_Gehenna_A02: "万魔殿策略：先发制人"
+ SI_Gehenna_A02_desc: "万魔殿的头头认为，无论是地缘博弈还是政治斗争，掌握主动权永远是稳操胜券的第一要领。不过落实到具体行动，则是从计划书到执行都是秘书在做。"
+ SI_Gehenna_A02_effect: "\n§R与§!$SI_Gehenna_B02$§R互斥§!\n效果：\n按照当前设计，立即获得§G40艘护卫舰§!\n§H获得帝国修正: §!$modifier_BA_SI_Gehenna_A02$(3600£time£)：\n    $MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+100%§!\n    $mod_ships_upkeep_mult$: §G-35%§!\n "
+ SI_Gehenna_A02_tip: "§C$SI_Gehenna_A02$§!\n$SI_Gehenna_A02_desc$\n$SI_Gehenna_A02_effect$"
+
+ SI_Gehenna_A03: "万魔殿策略：霸权态势"
+ SI_Gehenna_A03_desc: "格黑那的内部一直不太平，万魔殿的选择是铁拳治理，并以战争作为泄压口。虽然是万魔殿推动的计划，实际的规划与操作却交给风纪委来进行。"
+ SI_Gehenna_A03_effect: "\n§R与§!$SI_Gehenna_B03$§R互斥§!\n效果：\n§Y新近获得控制权§!的殖民地§H获得行星修正: §!$modifier_BA_SI_Gehenna_A03$(1800£time£)：\n    稳定度: §G+50%§!\n    $MOD_PLANET_BUILDING_BUILD_SPEED_MULT$: §G+25%§!\n    $mod_planet_jobs_upkeep_mult$: §G-10%§!\n若此星球从§Y前超光速文明§!中取得，则§B首都§!也会获得这个修正。\n若此星球从§Y失落帝国或复兴帝国§!中取得，则§B所有殖民地§!都会获得这个修正。" #\n§H解锁战争借口: §!霸权征服
+ SI_Gehenna_A03_tip: "§C$SI_Gehenna_A03$§!\n$SI_Gehenna_A03_desc$\n$SI_Gehenna_A03_effect$"
+
+ ### 上右线
+ SI_Gehenna_B01: "风纪委策略：旌旗之下"
+ SI_Gehenna_B01_desc: "如今格黑那是联邦学生会的首席，在行政官的计划下，借助风纪委员长的威信，星际时代的辉煌志在必得。"
+ SI_Gehenna_B01_effect: "\n§R与§!$SI_Gehenna_A01$§R互斥§!\n效果：\n§H获得帝国修正: §!$modifier_BA_SI_Gehenna_B01$(1800£time£):\n    稳定度: §G+15§!\n    犯罪度: §G-25§!\n    幸福度: §R-15%§!\n "
+ SI_Gehenna_B01_tip: "§C$SI_Gehenna_B01$§!\n$SI_Gehenna_B01_desc$\n$SI_Gehenna_B01_effect$"
+
+ SI_Gehenna_B02: "风纪委策略：一网打尽"
+ SI_Gehenna_B02_desc: "虽然联邦学生会占用了人手，但风纪委必须保证自己的本职工作。行政官在那些最容易出问题的节点派驻风纪委的精锐，保证各种流程的畅通。"
+ SI_Gehenna_B02_effect: "\n§R与§!$SI_Gehenna_A02$§R互斥§!\n效果：\n每月$trade_with_icon$: §G+50§!\n $mod_planet_jobs_unity_produces_mult$: §G+20%§!\n  "
+ SI_Gehenna_B02_tip: "§C$SI_Gehenna_B02$§!\n$SI_Gehenna_B02_desc$\n$SI_Gehenna_B02_effect$"
+
+ SI_Gehenna_B03: "风纪委策略：疾风怒涛"
+ SI_Gehenna_B03_desc: "保证稳定才是发展的前提，必要时，风机委会果断的从联邦学生会借调一些人手来处理一些棘手的麻烦。由此，行政官们想了一些办法来最快的调动力量。"
+ SI_Gehenna_B03_effect: "\n§R与§!$SI_Gehenna_A03$§R互斥§!\n效果：\n自警团的维护费: §G-40%§!\n自警团的产出: §G+40%§!\n§Y£stability£稳定度≥90%§!的殖民地§H获得行星修正：§!$modifier_BA_SI_Gehenna_B03$(90£time£):\n    岗位生产的资源: §G+15%§!\n "
+ SI_Gehenna_B03_tip: "§C$SI_Gehenna_B03$§!\n$SI_Gehenna_B03_desc$\n$SI_Gehenna_B03_effect$"
+
+ ### 下左线
+ SI_Gehenna_C01: "最终话事裁定：万魔殿"
+ SI_Gehenna_C01_desc: "万魔殿的领导力逐渐压过风纪委的声音，掌握了格黑娜内部事务的裁定权。但是在最终裁定人的选择时，万魔殿却做出了一个出人意料的选择。"
+ SI_Gehenna_C01_effect: "\n效果：\n§H获得帝国修正: §!$modifier_BA_SI_Gehenna_C01$(10800£time£):\n    $MOD_SHIP_WEAPON_DAMAGE$: §G+35%§!\n    $MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+35%§!\n    $MOD_ARMY_ATTACK_DAMAGE_MULT$: §G+35%§!\n    £stability£$MOD_PLANET_STABILITY_ADD$: §R-10§!\n    $MOD_EMPIRE_SIZE_POPS_MULT$: §R+25%§!\n " #§H统治者更换为§!：丹花伊吹\n
+ SI_Gehenna_C01_tip: "§C$SI_Gehenna_C01$§!\n$SI_Gehenna_C01_desc$\n$SI_Gehenna_C01_effect$"
+
+ SI_Gehenna_C02: "幕后准则"
+ SI_Gehenna_C02_desc: "对饱经战火的基沃托斯来说，没有什么比历史更能操纵矛盾。通过对某些细节的选择性强调或忽视，万魔殿可以轻松揽取主流文化的实际解释权。"
+ SI_Gehenna_C02_effect: "\n效果：\n§H发起特殊项目: §Y$SP_BA_SI_Gehenna_C02$§!"
+ SI_Gehenna_C02_tip: "§C$SI_Gehenna_C02$§!\n$SI_Gehenna_C02_desc$\n$SI_Gehenna_C02_effect$"
+
+ SI_Gehenna_C03: "格黑娜的昭昭天命"
+ SI_Gehenna_C03_desc: "§R“宇宙是黑暗冰冷的，万魔殿的光是明亮温暖的；\n将火种传遍这星河，便是我们的使命所在！”§!\n联邦学生会的传单上如是写道。"
+ SI_Gehenna_C03_effect: "\n效果：\n§H解锁学园理念法令: §!$edict_BA_SI_Gehenna_C03$:\n    §Y基础启动花费: £sr_dark_matter£75§!\n    §Y基础月度维护费: £volatile_motes£100 £exotic_gases£100 £rare_crystals£100 £sr_dark_matter£5§!\n    $MOD_SHIP_WEAPON_DAMAGE$: §G+100%§!\n    $MOD_SHIP_FIRE_RATE_MULT$: §G+50%§!\n    $MOD_SHIP_WEAPON_RANGE_MULT$: §G+50%§!\n "
+ SI_Gehenna_C03_tip: "§C$SI_Gehenna_C03$§!\n$SI_Gehenna_C03_desc$\n$SI_Gehenna_C03_effect$"
+
+ ### 下中线
+ SI_Gehenna_D01: "社团活动准则"
+ SI_Gehenna_D01_desc: "格赫娜长久以来对社团过于的放任自由，如今已经不适合星际时代，需要掌控力更强的社团管理条例来维护社团。"
+ SI_Gehenna_D01_effect: "\n效果：\n£job_BA_club_members£§B基沃托斯§!§G社团部员§!产出: §G+15%§!\n£pop_cat_specialist£专家人口£happiness£幸福度: §G+25%§!\n£pop_cat_specialist£专家人口的£consumer_goods£消费品维护费: §R+0.25§!\n£pop_cat_specialist£专家人口的£food£食物维护费: §R+0.2§!\n "
+ SI_Gehenna_D01_tip: "§C$SI_Gehenna_D01$§!\n$SI_Gehenna_D01_desc$\n$SI_Gehenna_D01_effect$"
+
+ SI_Gehenna_D02: "悬赏任务制"
+ SI_Gehenna_D02_desc: "悬赏制的好处在于，只需要通过一些小小的花费，广大学生们的智慧和勇气就可为基沃托斯所用。"
+ SI_Gehenna_D02_effect: "\n效果：\n$mod_BA_flex_pop_produces_mult$: §G+300%§!\n$mod_BA_flex_pop_upkeep_mult$: §R+100%§!\n$mod_pop_category_civilians_trade_produces_add$: §G+4§!\n$mod_pop_category_civilians_food_upkeep_add$: §R+0.5§!\n "
+ SI_Gehenna_D02_tip: "§C$SI_Gehenna_D02$§!\n$SI_Gehenna_D02_desc$\n$SI_Gehenna_D02_effect$"
+
+ SI_Gehenna_D03: "领袖义务"
+ SI_Gehenna_D03_desc: "第一：军队和兽群的区别在于一个出色的领袖头脑；\n第二：炮火的效率直接决定了每一名敌人的价值；\n……"
+ SI_Gehenna_D03_effect: "\n效果：\n$mod_commander_skill_levels$: §G+2§!\n$mod_commander_exp_gain$: §G+100%§!\n " #\n海军统帅和陆军将领的等级上限: §G+10§!
+ SI_Gehenna_D03_tip: "§C$SI_Gehenna_D03$§!\n$SI_Gehenna_D03_desc$\n$SI_Gehenna_D03_effect$"
+
+ ### 下右线
+ SI_Gehenna_E01: "最终话事裁定：风纪委"
+ SI_Gehenna_E01_desc: "风纪委的雷厉风行力压了万魔殿胡作非为的一头，最终稳定的获得了格赫娜各学生的支持与维护，也算是根除了多年以来的稳定问题。"
+ SI_Gehenna_E01_effect: "\n效果：\n§H获得帝国修正: §!$modifier_BA_SI_Gehenna_E01$(10800£time£):\n    $r_stability$: §G+25§!\n    $MOD_PLANET_CRIME_ADD$: §G-20§!\n    $MOD_SHIP_SPEED_MULT$: §G+30%§!\n    $MOD_SHIP_INTERSTELLAR_SPEED_MULT$: §G+30%§!\n "
+ SI_Gehenna_E01_tip: "§C$SI_Gehenna_E01$§!\n$SI_Gehenna_E01_desc$\n$SI_Gehenna_E01_effect$"
+
+ SI_Gehenna_E02: "行政官的铁腕"
+ SI_Gehenna_E02_desc: "风纪委员会行政官是掌握信息最为全面的一员，充分了解每个区域的军力部署情况。为了发挥本土作战优势，同时防范其他内部问题，指挥权必须直接交由行政官。"
+ SI_Gehenna_E02_effect: "\n效果：\n$MOD_SHIP_HOME_TERRITORY_FIRE_RATE_MULT$: §G+75%§!\n$MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+100%§!\n$MOD_STARBASE_SHIPYARD_BUILD_COST_MULT$: §R+10%§!\n " #\n处于防御战争下，本土舰队射速: §G+75%§!
+ SI_Gehenna_E02_tip: "§C$SI_Gehenna_E02$§!\n$SI_Gehenna_E02_desc$\n$SI_Gehenna_E02_effect$"
+
+ SI_Gehenna_E03: "步步为营"
+ SI_Gehenna_E03_desc: "在防御战争方面，仅仅靠舰队力量是不够的，必须让每个星系都成为基沃托斯防线的一部分。"
+ SI_Gehenna_E03_effect: "\n效果：\n§H解锁学园理念法令: §!$edict_BA_SI_Gehenna_E03$:\n    §Y基础启动花费: £sr_keystone£100§!\n    §Y基础维护费: £alloys£100 £sr_keystone£10§!\n    $mod_shipclass_military_station_build_speed_mult$: §G+1600%§!\n    $mod_shipclass_military_station_damage_mult$: §G+400%§!\n    $mod_shipclass_military_station_hull_mult$: §G+400%§!\n  "
+ SI_Gehenna_E03_tip: "§C$SI_Gehenna_E03$§!\n$SI_Gehenna_E03_desc$\n$SI_Gehenna_E03_effect$"
+
+ #####      千年      #####
+ SI_Millennium_tip: "学园理念（主要）：§B千年科技学园§!\n千年具有浓烈的自由主义与学术研究的氛围，它们相得益彰的铸就了今天的千年，当然也会铸就未来的学园都市。\n "
+ ### 共通上
+ SI_Millennium_G01: "风向标"
+ SI_Millennium_G01_desc: "基沃托斯开拓未来的潜力远不止此，而最大的潜能蕴含在普通的社团部员中。"
+ SI_Millennium_G01_effect: "\n效果：\n获得£engineering_research£§Y工程学研究§!与£unity£§Y凝聚力§!，数额相当于1倍的每月产出\n$BA_club_pop$生产的£physics£ £society£ £engineering£研究点数: §G+0.5§!\n$BA_club_pop$消耗的£consumer_goods£ 消费品: §G+0.2§!\n " #之后每点完一个国策领袖等级上限+1\n
+ SI_Millennium_G01_tip: "§C$SI_Millennium_G01$§!\n$SI_Millennium_G01_desc$\n$SI_Millennium_G01_effect$"
+
+ SI_Millennium_G02: "总效益补贴"
+ SI_Millennium_G02_desc: "研究表明，研究人员的工资会创造出数倍于此的价值……虽然有自吹自擂的嫌疑，但道理上是说得通的。"
+ SI_Millennium_G02_effect: "\n效果：\n$mod_planet_researchers_produces_mult$: §G+10%§!\n$mod_planet_researchers_upkeep_mult$: §R+5%§!\n$MOD_COUNTRY_NUM_TECH_ALTERNATIVES_ADD$: §G+1§!\n$MOD_LEADER_SKILL_LEVELS$: §G+1§!\n$MOD_PLANET_POP_ASSEMBLY_MULT$: §G+20%§!\n " #\n现在每十五个人口提供一个£pops£研究人员岗位。
+ SI_Millennium_G02_tip: "§C$SI_Millennium_G02$§!\n$SI_Millennium_G02_desc$\n$SI_Millennium_G02_effect$"
+
+ SI_Millennium_G03: "社团研究私募制"
+ SI_Millennium_G03_desc: "社团部员们的创意和热情是最好的研究材料，而这些创意和热情变为现实只需要提供一个小小的机会。"
+ SI_Millennium_G03_effect: "\n效果：\n当前所有§Y科学官§!领袖的等级§G提升1级§!\n行星上的所有§H社团部室§!额外提供§G+2§!£job_BA_club_members£$job_BA_club_members$岗位\n "
+ SI_Millennium_G03_tip: "§C$SI_Millennium_G03$§!\n$SI_Millennium_G03_desc$\n$SI_Millennium_G03_effect$"
+
+ SI_Millennium_G04: "斗争与探索"
+ SI_Millennium_G04_desc: "随着母星附近的资源相继开发，我们的可选项逐渐变得狭窄起来。但是，天上的乌云背后藏着的是更加宏伟深邃的世界。"
+ SI_Millennium_G04_effect: "\n效果：\n$MOD_COUNTRY_NUM_TECH_ALTERNATIVES_ADD$: §G+1§!\n$RESEARCH_EFFICIENCY$: §G+10%§!\n获得大量£physics£ £society£ £engineering£研究点数和£alloys£合金\n为母星添加§H行星修正: §!$modifier_BA_SI_Millennium_G04$\n "
+ SI_Millennium_G04_tip: "§C$SI_Millennium_G04$§!\n$SI_Millennium_G04_desc$\n$SI_Millennium_G04_effect$"
+
+ ### 共通中
+ SI_Millennium_G05: "千年巨塔"
+ SI_Millennium_G05_desc: "在实验室里摆弄仪器的研究方式已经落伍，我们需要建造一个属于千年的宏伟研究巨构。"
+ SI_Millennium_G05_effect: "\n消耗§G2£job_BA_dont_be_crazy_here£§!学园理念点数\n使学园理念进入为期§R360£time£§!天的冷却\n效果：\n可以建造千年巨塔，并为其安装§B能源核心§!。\n "
+ SI_Millennium_G05_tip: "§C$SI_Millennium_G05$§!\n$SI_Millennium_G05_desc$\n$SI_Millennium_G05_effect$"
+
+ SI_Millennium_G06: "通讯协议重置"
+ SI_Millennium_G06_desc: "为了更好的利用千年巨塔全新理念的发信器，我们必须将全基沃托斯的通讯协议进行大更新。"
+ SI_Millennium_G06_effect: "\n消耗§G2£job_BA_dont_be_crazy_here£§!学园理念点数\n使学园理念进入为期§R360£time£§!天的冷却\n效果：\n研究备选: §G+1§!\n可以为千年巨塔安装§B发信器§!。\n "
+ SI_Millennium_G06_tip: "§C$SI_Millennium_G06$§!\n$SI_Millennium_G06_desc$\n$SI_Millennium_G06_effect$"
+
+ SI_Millennium_G07: "自维护系统"
+ SI_Millennium_G07_desc: "如果我们必须为千年巨塔投入大量资源进行维护，那将得不偿失。安装能源核心与自维护系统后，千年巨塔将与内部的恒星永远同在。"
+ SI_Millennium_G07_effect: "\n消耗§G2£job_BA_dont_be_crazy_here£§!学园理念点数\n使学园理念进入为期§R360£time£§!天的冷却\n效果：\n研究速度: §G+10%§!\n可以为千年巨塔安装§B自维护系统§!。\n "
+ SI_Millennium_G07_tip: "§C$SI_Millennium_G07$§!\n$SI_Millennium_G07_desc$\n$SI_Millennium_G07_effect$"
+
+ SI_Millennium_G08: "永远伫立的巨塔"
+ SI_Millennium_G08_desc: "千年巨塔已经建造完毕。这座巨型建筑是基沃托斯工程学的巅峰，其解算出的奥秘将为基沃托斯所用。"
+ SI_Millennium_G08_effect: "\n消耗§G2£job_BA_dont_be_crazy_here£§!学园理念点数\n使学园理念进入为期§R360£time£§!天的冷却\n效果：\n可以为千年巨塔安装其余的§B计算系统§!，完成千年巨塔的建造。\n "
+ SI_Millennium_G08_tip: "§C$SI_Millennium_G08$§!\n$SI_Millennium_G08_desc$\n$SI_Millennium_G08_effect$"
+
+ ### 共通下
+ SI_Millennium_G09: "信息终端枢纽"
+ SI_Millennium_G09_desc: "在各个星球上建造与千年巨塔对接的传递中枢，以将千年巨塔的算力充分释放到用户手中。"
+ SI_Millennium_G09_effect: "\n效果：\n研究速度: §G+25%§!\n$mod_megastructures_upkeep_mult$: §G-10%§!\n$mod_planet_districts_upkeep_mult$: §G-10%§!\n$mod_planet_buildings_upkeep_mult$: §G-10%§!\n§H解锁建筑§!: $building_BA_SI_Millennium_G10$\n "
+ SI_Millennium_G09_tip: "§C$SI_Millennium_G09$§!\n$SI_Millennium_G09_desc$\n$SI_Millennium_G09_effect$"
+
+ SI_Millennium_G10: "档案数据库重构"
+ SI_Millennium_G10_desc: "利用千年巨塔重新整理我们的研究数据，从而发现更多潜在的研究方向。"
+ SI_Millennium_G10_effect: "\n效果：\n领袖初始等级: §G+3§!\n领袖上限: §G+3§!\n为所有领袖添加特质：$leader_trait_SI_Millennium_G10$: \n        £official£§I行政官§!:\n    $mod_planet_jobs_produces_mult$: §G+40%§!\n        £scientist£§B科学官§!:\n    $MOD_SHIP_SCIENCE_SURVEY_SPEED$: §G+50%§!\n    $MOD_SHIP_ASTRAL_RIFT_CLUES_ADD$: §G+1§!\n        £commander£§R指挥官§!:\n    $MOD_SHIP_WEAPON_DAMAGE$: §G+30%§!\n    $MOD_ARMY_DAMAGE_MULT$: §G+60%§!\n "
+ SI_Millennium_G10_tip: "§C$SI_Millennium_G10$§!\n$SI_Millennium_G10_desc$\n$SI_Millennium_G10_effect$"
+
+ SI_Millennium_G11: "尾声：直到时间与世界的尽头"
+ SI_Millennium_G11_desc: "我们写下的每一条定律，都将伴随我们直至一切的终点。那些数字和符号的优美组合，即是基沃托斯永恒的纪念碑。"
+ SI_Millennium_G11_effect: "\n效果：\n可以通过§I天使24§!解锁科技，以模仿建造§B基沃托斯先驱者的§!的£building£建筑。\n$mod_country_minor_artifacts_produces_mult$: §G+10%§!\n$mod_planet_districts_upkeep_mult$: §G-10%§!\n$mod_planet_buildings_upkeep_mult$: §G-10%§!\n$mod_BA_club_pop_physics_research_produces_add$: §G+1.5§!\n$mod_BA_club_pop_society_research_produces_add$: §G+1.5§!\n$mod_BA_club_pop_engineering_research_produces_add$: §G+1.5§!\n$mod_BA_club_pop_unity_produces_add$: §G+1.5§!\n$mod_BA_club_pop_consumer_goods_upkeep_add$: §R+2§!\n "
+ SI_Millennium_G11_tip: "§C$SI_Millennium_G11$§!\n$SI_Millennium_G11_desc$\n$SI_Millennium_G11_effect$"
+
+ ### 上左线
+ SI_Millennium_A01: "太空探索手册"
+ SI_Millennium_A01_desc: "真理部利用过剩的研究项目编纂了一本适用于科研船员的手册。"
+ SI_Millennium_A01_effect: "\n§R与§!$SI_Millennium_B01$§R互斥§!\n效果：\n$mod_science_ship_survey_speed$: §G+20%§!\n$mod_ship_anomaly_research_speed_mult$: §G+20%§!\n$mod_ship_anomaly_generation_chance_mult$: §G+50%§!\n "
+ SI_Millennium_A01_tip: "§C$SI_Millennium_A01$§!\n$SI_Millennium_A01_desc$\n$SI_Millennium_A01_effect$"
+
+ SI_Millennium_A02: "机动科研船"
+ SI_Millennium_A02_desc: "为了保障我们的科研船安全，真理部重新编写了科研船的程序，并设计了配套化的恒星基地设施"
+ SI_Millennium_A02_effect: "\n效果：\n解锁新科学船模型\n$mod_shipclass_science_ship_build_cost_mult$: §G+100%§!\n$mod_shipclass_science_ship_evasion_add$: §G+100%§!\n$mod_shipclass_science_ship_hull_mult$: §G+50%§!\n " #§H解锁恒星基地模块:§!科研船泊地\n
+ SI_Millennium_A02_tip: "§C$SI_Millennium_A02$§!\n$SI_Millennium_A02_desc$\n$SI_Millennium_A02_effect$"
+
+ ### 上右线
+ SI_Millennium_B01: "船坞流水协议"
+ SI_Millennium_B01_desc: "工程部利用过剩的研究项目重写了船坞的建造协议。"
+ SI_Millennium_B01_effect: "\n§R与§!$SI_Millennium_A01$§R互斥§!\n效果：\n$mod_ships_upkeep_mult$: §R+5%§!\n$MOD_STARBASE_SHIPYARD_BUILD_COST_MULT$: §G-5%§!\n$MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+10%§!\n "
+ SI_Millennium_B01_tip: "§C$SI_Millennium_B01$§!\n$SI_Millennium_B01_desc$\n$SI_Millennium_B01_effect$"
+
+ SI_Millennium_B02: "武器开火策略"
+ SI_Millennium_B02_desc: "工程部为海军优化了当前的武器训练项目，船员们现在可以更好的发挥舰船武器的性能。"
+ SI_Millennium_B02_effect: "\n效果：\n$MOD_SHIP_WEAPON_DAMAGE$: §G+15%§!\n$MOD_SHIP_FIRE_RATE_MULT$: §G+15%§!\n "
+ SI_Millennium_B02_tip: "§C$SI_Millennium_B02$§!\n$SI_Millennium_B02_desc$\n$SI_Millennium_B02_effect$"
+
+ ### 下线
+ SI_Millennium_C01: "算力分配"
+ SI_Millennium_C01_desc: "千年巨塔上似乎有很多模块正在空转……"
+ SI_Millennium_C01_effect: "\n效果：\n§H首都星球获得修正: §!$modifier_BA_SI_Millennium_C01$\n  "
+ SI_Millennium_C01_tip: "§C$SI_Millennium_C01$§!\n$SI_Millennium_C01_desc$\n$SI_Millennium_C01_effect$"
+
+ SI_Millennium_C02: "那让我们来做游戏吧"
+ SI_Millennium_C02_desc: "这个模块的并行处理能力十分强大，如果用于生成一个庞大的虚拟游戏世界，一定会大受欢迎。"
+ SI_Millennium_C02_effect: "\n§R与§!$SI_Millennium_C03$§R互斥§!\n效果：\n立即获得大量£unity£§Y凝聚力§!，数额相当于3倍的每月产出\n£stability£$MOD_PLANET_STABILITY_ADD$: §G+5§!\n$mod_country_unity_produces_mult$: §G+15%§!\n§B游戏开发部§!的社团建筑产出的凝聚力翻倍。\n "
+ SI_Millennium_C02_tip: "§C$SI_Millennium_C02$§!\n$SI_Millennium_C02_desc$\n$SI_Millennium_C02_effect$"
+
+ SI_Millennium_C03: "专用计算平台"
+ SI_Millennium_C03_desc: "研讨会希望将这个模块用于帝国的领袖专用的工作平台，以提升帝国的整体行政效率。 "
+ SI_Millennium_C03_effect: "\n§R与§!$SI_Millennium_C02$§R互斥§!\n效果：\n$MOD_LEADER_SPECIES_EXP_GAIN$: §G+350%§!\n当前所有§Y$scientist$、$commander$、$official$§!领袖的等级§G提升1级§!\n§Y每5年§!，为所有领袖清除普通的§R负面特质§!\n "
+ SI_Millennium_C03_tip: "§C$SI_Millennium_C03$§!\n$SI_Millennium_C03_desc$\n$SI_Millennium_C03_effect$"
+
+ #####     圣三一     #####
+ SI_Trinity_tip: "学园理念（主要）：§d三位一体综合学园§!\n没有哪里比圣三一更懂政治，政治既如同深渊也如同烈日，永远凝视着、照耀着学园联邦中的每一员。\n "
+
+ ### 共通
+ SI_Trinity_G01: "尾声：最初与最后的茶话会"
+ SI_Trinity_G01_desc: "多年以后，学生们在眺望着在新世界拔地而起的学园都市时，会不会想起那三位少女一起喝茶聊天的那个下午呢。"
+ SI_Trinity_G01_effect: "\n效果：\n$mod_BA_SI_sub_cap_add$: §G+2§!\n£stability£$MOD_PLANET_STABILITY_ADD$: §G+40§!\n "
+ SI_Trinity_G01_tip: "§C$SI_Trinity_G01$§!\n$SI_Trinity_G01_desc$\n$SI_Trinity_G01_effect$"
+
+ ### 左线
+ SI_Trinity_A01: "菲利乌斯主持"
+ SI_Trinity_A01_desc: "菲利乌斯派曾经主导了伊甸条约的签订，虽然结果不那么顺遂人意，但她们的展示出的外交才能无可挑剔。"
+ SI_Trinity_A01_effect: "\n§R与§!$SI_Trinity_B01$、$SI_Trinity_C01$§R互斥§!\n效果：\n$mod_planet_jobs_unity_produces_mult$: §G+20%§!\n$MOD_EMPIRE_SIZE_SYSTEMS_MULT$: §G-10%§!\n$MOD_COUNCIL_AGENDA_PROGRESS_SPEED$: §G+15%§!\n "
+ SI_Trinity_A01_tip: "§C$SI_Trinity_A01$§!\n$SI_Trinity_A01_desc$\n$SI_Trinity_A01_effect$"
+
+ SI_Trinity_A02: "去中心化官僚"
+ SI_Trinity_A02_desc: "将各地官僚打散并重新整合为茶会的下属机构，防止其中相互勾连。"
+ SI_Trinity_A02_effect: "\n效果：\n§H解锁学园理念议程:§! $council_agenda_agenda_BA_SI_Trinity_A02_name$\n$mod_pop_category_rulers_unity_produces_add$: §G+8§!\n$mod_pop_category_specialists_unity_produces_add$: §G+0.5§!\n$MOD_COUNCIL_AGENDA_PROGRESS_SPEED$: §G+15%§!\n "
+ SI_Trinity_A02_tip: "§C$SI_Trinity_A02$§!\n$SI_Trinity_A02_desc$\n$SI_Trinity_A02_effect$"
+
+ SI_Trinity_A03: "圣殿使团"
+ SI_Trinity_A03_desc: "菲利乌斯派十分重视使团，她们清楚使者在帝国间的纸醉金迷中究竟扮演了什么样的角色。"
+ SI_Trinity_A03_effect: "\n效果：\n每当有§Y议程§!启动时，所有领袖获得§C1000经验值§!\n$MOD_DIPLO_WEIGHT_MULT$: §G+0.3§!\n$MOD_COUNCIL_AGENDA_FINISHING_EFFECT_DURATION_MULT$: §G+0.5%§!\n$MOD_COUNCIL_AGENDA_PROGRESS_SPEED$: §G+25%§!\n "
+ SI_Trinity_A03_tip: "§C$SI_Trinity_A03$§!\n$SI_Trinity_A03_desc$\n$SI_Trinity_A03_effect$"
+
+ SI_Trinity_A04: "下午茶计划"
+ SI_Trinity_A04_desc: "用下午茶等小小的福利做奖品，通过无数的小型社交会让那些上下游合作者熟络起来，旨在向学生们展示合作协同的魅力。"
+ SI_Trinity_A04_effect: "\n效果：\n§H解锁学园理念议程:§! $council_agenda_agenda_BA_SI_Trinity_A04_name$\n£job_artisan£工匠产出: §G+30%§!\n£job_artisan£工匠维护费: §G-10%§!\n£job_foundry£冶金师产出: §R-30%§!\n$mod_pop_cat_worker_bonus_workforce_mult$: §G+30%§!\n$MOD_COUNCIL_AGENDA_PROGRESS_SPEED$: §G+15%§!\n "
+ SI_Trinity_A04_tip: "§C$SI_Trinity_A04$§!\n$SI_Trinity_A04_desc$\n$SI_Trinity_A04_effect$"
+
+ SI_Trinity_A05: "统括室协作"
+ SI_Trinity_A05_desc: "将统括室和茶会各自的工作互相交换一些，发挥AI行政助手的最大潜能，并尽可能杜绝外行指导内行的现象。"
+ SI_Trinity_A05_effect: "\n效果：\n$mod_BA_staff_pop_unity_produces_add$: §G+5§!\n$mod_country_unity_produces_mult$: §G+20%§!\n$MOD_COUNCIL_AGENDA_PROGRESS_SPEED$: §G+15%§!\n"
+ SI_Trinity_A05_tip: "§C$SI_Trinity_A05$§!\n$SI_Trinity_A05_desc$\n$SI_Trinity_A05_effect$"
+
+ SI_Trinity_A06: "再会，朋友们"
+ SI_Trinity_A06_desc: "“即使是最亲密的朋友，在这广袤的星空中也难免天各一方。但即使相隔数万光年，我们仍然可以心念彼此，并为同一个理想奋战。”"
+ SI_Trinity_A06_effect: "\n效果：\n$MOD_PLANETARY_ASCENSION_EFFECT_MULT$: §G+20%§!\n$MOD_COUNTRY_GOVERNMENT_CIVIC_POINTS_ADD$: §G+1§!\n$mod_planet_jobs_upkeep_mult$: §R+10%§!\n$MOD_COUNCIL_AGENDA_PROGRESS_SPEED$: §G+15%§! "
+ SI_Trinity_A06_tip: "§C$SI_Trinity_A06$§!\n$SI_Trinity_A06_desc$\n$SI_Trinity_A06_effect$"
+
+ ### 中线
+ SI_Trinity_B01: "帕特尔主持"
+ SI_Trinity_B01_desc: "帕特尔派崇尚以武力解决争端，虽然她们的领袖丧失了部分权威，随着与外星文明的接触，她们的影响力反而有增无减。"
+ SI_Trinity_B01_effect: "\n§R与§!$SI_Trinity_A01$、$SI_Trinity_C01$§R互斥§!\n效果：\n$MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+10%§!\n$RESEARCH_EFFICIENCY$: §G+15%§!\n$MOD_BONUS_POP_GROWTH_MULT$: §G+10%§!\n "
+ SI_Trinity_B01_tip: "§C$SI_Trinity_B01$§!\n$SI_Trinity_B01_desc$\n$SI_Trinity_B01_effect$"
+
+ SI_Trinity_B02: "钢铁铸成的摇篮"
+ SI_Trinity_B02_desc: "在浩瀚星空面前，基沃托斯如同一个好奇的婴儿。即使现在我们不值一提，终有一天目光所及之处都将被我们征服。"
+ SI_Trinity_B02_effect: "\n效果：\n$mod_country_alloys_produces_mult$: §G+20%§!\n$mod_planet_metallurgists_alloys_produces_add$: §G+1§!\n$mod_country_consumer_goods_produces_mult$: §R-10%§!\n$mod_planet_artisans_consumer_goods_produces_add$: §R-0.5§!\n$MOD_BONUS_POP_GROWTH_MULT$: §G+10%§!\n "
+ SI_Trinity_B02_tip: "§C$SI_Trinity_B02$§!\n$SI_Trinity_B02_desc$\n$SI_Trinity_B02_effect$"
+
+ SI_Trinity_B03: "启程的哨音"
+ SI_Trinity_B03_desc: "一艘艘飞船射向天空，如同传说中的勇者背起他的剑，迈出旅途的第一步。不同之处在于，我们不是向着地平线行进，而是将其甩在身后。"
+ SI_Trinity_B03_effect: "\n效果：\n$MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+30%§!\n$mod_ships_upkeep_mult$: §G-50%§!\n$MOD_STARBASE_SHIPYARD_BUILD_COST_MULT$: §G-20%§!\n$MOD_SHIP_SPEED_MULT$: §G+15%§!\n$MOD_BONUS_POP_GROWTH_MULT$: §G+15%§!\n "
+ SI_Trinity_B03_tip: "§C$SI_Trinity_B03$§!\n$SI_Trinity_B03_desc$\n$SI_Trinity_B03_effect$"
+
+ SI_Trinity_B04: "无垢之土"
+ SI_Trinity_B04_desc: "我们在星空中的家曾经承载过无数的幻想。但还远远不够，我们自己就可以将我们的幻想变为现实。"
+ SI_Trinity_B04_effect: "\n效果：\n$MOD_STARBASE_UPGRADE_SPEED_MULT$: §G+50%§!\n$mod_shipclass_starbase_build_cost_mult$: §G-30%§!\n$MOD_STARBASE_MODULE_BUILD_SPEED_MULT$: §G+150%§!\n$mod_starbases_upkeep_mult$: §G-30%§!\n$MOD_MEGASTRUCTURE_BUILD_SPEED_MULT$: §G+30%§!\n "
+ SI_Trinity_B04_tip: "§C$SI_Trinity_B04$§!\n$SI_Trinity_B04_desc$\n$SI_Trinity_B04_effect$"
+
+ SI_Trinity_B05: "倒转的地平线"
+ SI_Trinity_B05_desc: "既然我们的眼中满是星辰的光芒，就绝对不能让曾经包容一切的大地成为了我们的束缚。"
+ SI_Trinity_B05_effect: "\n效果：\n$mod_planet_BA_districts_military_factory_build_speed_mult$: §G+100%§!\n$mod_planet_metallurgists_produces_mult$: §G+100%§!\n$mod_planet_metallurgists_upkeep_mult$: §R+30%§!\n£stability£$MOD_PLANET_STABILITY_ADD$: §R-10§!\n "
+ SI_Trinity_B05_tip: "§C$SI_Trinity_B05$§!\n$SI_Trinity_B05_desc$\n$SI_Trinity_B05_effect$"
+
+ SI_Trinity_B06: "如星辰般闪耀"
+ SI_Trinity_B06_desc: "如同燃烧的恒星般，我们化平平无奇为闪耀之物，在这宇宙中，再也不会有任何文明能够比我们更加耀眼。"
+ SI_Trinity_B06_effect: "\n效果：\n$MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+150%§!\n$MOD_COUNTRY_NAVAL_CAP_MULT$: §G+40%§!\n$mod_planet_jobs_produces_mult$: §G+50%§!\n$mod_planet_jobs_upkeep_mult$: §R+40%§!\n "
+ SI_Trinity_B06_tip: "§C$SI_Trinity_B06$§!\n$SI_Trinity_B06_desc$\n$SI_Trinity_B06_effect$"
+
+ ### 右线
+ SI_Trinity_C01: "圣可托斯主持"
+ SI_Trinity_C01_desc: "圣可托斯派持身中立但在野心上毫不逊色，相比当下和短期操作，她们对更远的未来更加关心。"
+ SI_Trinity_C01_effect: "\n§R与§!$SI_Trinity_A01$、$SI_Trinity_B01$§R互斥§!\n效果：\n$mod_planet_jobs_produces_mult$: §G+5%§!\n$mod_shipclass_starbase_build_cost_mult$: §G-10%§!\n$mod_shipclass_colonizer_build_cost_mult$: §G-30%§!\n$MOD_EMPIRE_SIZE_SYSTEMS_MULT$: §G-10%§!\n帝国规模: §G-2%§!\n "
+ SI_Trinity_C01_tip: "§C$SI_Trinity_C01$§!\n$SI_Trinity_C01_desc$\n$SI_Trinity_C01_effect$"
+
+ SI_Trinity_C02: "城市扩张法"
+ SI_Trinity_C02_desc: "规划混乱的城市注定只能繁华一时，无法成长为超级大城。"
+ SI_Trinity_C02_effect: "\n效果：\n$mod_planet_jobs_produces_mult$: §G+10%§!\n$MOD_COUNTRY_STARBASE_INFLUENCE_COST_MULT$: §G-75%§!\n$MOD_EMPIRE_SIZE_POPS_MULT$: §G-10%§!\n$MOD_EMPIRE_SIZE_MULT$: §G-5%§!\n "
+ SI_Trinity_C02_tip: "§C$SI_Trinity_C02$§!\n$SI_Trinity_C02_desc$\n$SI_Trinity_C02_effect$"
+
+ SI_Trinity_C03: "学籍档案部"
+ SI_Trinity_C03_desc: "档案管理概念的产生可以追溯至文明肇始，在人口爆炸的当今更加不能忽视。"
+ SI_Trinity_C03_effect: "\n效果：\n$MOD_BONUS_POP_GROWTH_MULT$: §G+20%§!\n$mod_planet_jobs_produces_mult$: §G+15%§!\n$mod_planet_jobs_upkeep_mult$: §R+15%§!\n$MOD_EMPIRE_SIZE_POPS_MULT$: §G-10%§!\n$MOD_EMPIRE_SIZE_MULT$: §G-5%§!\n "
+ SI_Trinity_C03_tip: "§C$SI_Trinity_C03$§!\n$SI_Trinity_C03_desc$\n$SI_Trinity_C03_effect$"
+
+ SI_Trinity_C04: "星际物流预测"
+ SI_Trinity_C04_desc: "即使拥有FTL技术，行星间的货物运输依然需要跨越十分遥远的距离，这其中有许多的细节值得我们仔细调控。"
+ SI_Trinity_C04_effect: "\n效果：\n$MOD_PLANET_BUILDING_BUILD_SPEED_MULT$: §G+50%§!\n$MOD_PLANET_DECISION_ENACT_SPEED_MULT$: §G+50%§!\n$MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+20%§!\n建筑与区划花费: §R+20%§!\n$MOD_EMPIRE_SIZE_DISTRICTS_MULT$: §G-10%§!\n$MOD_EMPIRE_SIZE_MULT$: §G-5%§!\n "
+ SI_Trinity_C04_tip: "§C$SI_Trinity_C04$§!\n$SI_Trinity_C04_desc$\n$SI_Trinity_C04_effect$"
+
+ SI_Trinity_C05: "超光速信息流"
+ SI_Trinity_C05_desc: "信息是帝国的命脉，采用超前调节算法，我们无需再付出时间来进行那些漫长的等待。"
+ SI_Trinity_C05_effect: "\n效果：\n$MOD_STARBASE_UPGRADE_COST_MULT$: §G-20%§!\n$MOD_COUNTRY_NAVAL_CAP_MULT$: §G+15%§!\n$MOD_MEGASTRUCTURE_BUILD_SPEED_MULT$: §G+200%§!\n$MOD_COUNTRY_MEGASTRUCTURE_BUILD_CAP_ADD$: §G+2§!\n$mod_megastructures_cost_mult$: §R+30%§!\n$MOD_EMPIRE_SIZE_MULT$: §G-5%§!\n "
+ SI_Trinity_C05_tip: "§C$SI_Trinity_C05$§!\n$SI_Trinity_C05_desc$\n$SI_Trinity_C05_effect$"
+
+ SI_Trinity_C06: "星空彼端的乐土"
+ SI_Trinity_C06_desc: "新世界的美景，相比我们梦中所见丝毫不逊色。"
+ SI_Trinity_C06_effect: "\n效果：\n$mod_megastructures_produces_mult$: §G+20%§!\n$mod_colony_start_urban_districts_add$§G+2§!\n$MOD_EMPIRE_SIZE_COLONIES_MULT$: §G-20%§!\n§Y新设立§!的殖民地§H获得行星修正:§! $modifier_BA_SI_Trinity_C06$(1800£time£)：\n    $MOD_PLANET_BUILDING_BUILD_SPEED_MULT$: §G+50%§!\n    $MOD_BONUS_POP_GROWTH_MULT$: §G+50%§!\n    $mod_planet_jobs_produces_mult$: §G+20%§!\n "
+ SI_Trinity_C06_tip: "§C$SI_Trinity_C06$§!\n$SI_Trinity_C06_desc$\n$SI_Trinity_C06_effect$"
+
+ #####      红冬      #####
+ SI_Redwinter_tip: "学园理念（可选）：§P红冬联邦学园§!\n红冬联邦学园具有团结一心与迎流勇进的传统，这有助于夯实学园联邦的根基。\n "
+
+ SI_Redwinter_G01: "取之于途"
+ SI_Redwinter_G01_desc: "充足的物质供应是繁荣的根基。"
+ SI_Redwinter_G01_effect: "\n无需消耗£job_BA_dont_be_crazy_here£学园理念点数\n使学园理念进入为期§R1080£time£§!天的冷却\n效果：\n$r_stability$: §R-15§!\n为产出£energy£ £minerals£ £food£基础资源的£district£区划§G+50%§!建造速度\n "
+ SI_Redwinter_G01_tip: "§C$SI_Redwinter_G01$§!\n$SI_Redwinter_G01_desc$\n$SI_Redwinter_G01_effect$"
+
+ SI_Redwinter_G02: "帝国秘隐"
+ SI_Redwinter_G02_desc: "为了那些无私付出的人，有些事情必须放在天平上衡量。"
+ SI_Redwinter_G02_effect: "\n无需消耗£job_BA_dont_be_crazy_here£学园理念点数\n使学园理念进入为期§R1080£time£§!天的冷却\n效果：\n$r_stability$: §R-15§!\n§H获得帝国修正: §!$modifier_BA_SI_Redwinter_G02$(7200£time£):\n    $mod_country_base_unity_produces_add$: §G+100§!\n "
+ SI_Redwinter_G02_tip: "§C$SI_Redwinter_G02$§!\n$SI_Redwinter_G02_desc$\n$SI_Redwinter_G02_effect$"
+
+ SI_Redwinter_G03: "劳工之声"
+ SI_Redwinter_G03_desc: "联邦必须倾听所有人的声音，而劳动者最容易陷入沉默的螺旋中。"
+ SI_Redwinter_G03_effect: "\n无需消耗£job_BA_dont_be_crazy_here£学园理念点数\n使学园理念进入为期§R1080£time£§!天的冷却\n效果：\n$r_stability$: §R-15§!\n$mod_planet_jobs_worker_produces_mult$: §G+25%§!\n$mod_pop_category_workers_consumer_goods_upkeep_add$: §R+0.1§!\n£district£$BA_districts_suburbs$额外提供100£job_BA_Kivotos_staff£§Y$job_BA_Kivotos_staff$岗位\n "
+ SI_Redwinter_G03_tip: "§C$SI_Redwinter_G03$§!\n$SI_Redwinter_G03_desc$\n$SI_Redwinter_G03_effect$"
+
+ SI_Redwinter_G04: "智库阵线"
+ SI_Redwinter_G04_desc: "那些最聪明的头脑如果不团结起来，只会白白消耗所有人的资源。"
+ SI_Redwinter_G04_effect: "\n无需消耗£job_BA_dont_be_crazy_here£学园理念点数\n使学园理念进入为期§R1080£time£§!天的冷却\n效果：\n$r_stability$: §R-15§!\n$mod_planet_jobs_specialist_produces_mult$: §G+15%§!\n$mod_pop_category_specialists_unity_upkeep_add$: §R+0.1§!\n£district£$BA_districts_military_factory$额外提供100£job_BA_Kivotos_staff£§Y$job_BA_Kivotos_staff$岗位\n "
+ SI_Redwinter_G04_tip: "§C$SI_Redwinter_G04$§!\n$SI_Redwinter_G04_desc$\n$SI_Redwinter_G04_effect$"
+
+ SI_Redwinter_G05: "联邦之耀"
+ SI_Redwinter_G05_desc: "虽然不可能做到尽善尽美，但我们为此付出的努力已无愧那颗红星。"
+ SI_Redwinter_G05_effect: "\n使学园理念进入为期§R1080£time£§!天的冷却\n效果：\n$r_stability$: §G+60§!\n每100£job_BA_Kivotos_staff£§Y$job_BA_Kivotos_staff$§!为所在殖民地提供:\n    $mod_planet_jobs_produces_mult$: §G+1%§!\n§R移除帝国修正: §!$modifier_BA_SI_Redwinter_G02$\n§H获得帝国修正: §!$modifier_BA_SI_Redwinter_G05$(∞£time£):\n    $MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+35%§!\n    $MOD_STARBASE_UPGRADE_SPEED_MULT$: §G+70%§!\n    $mod_country_unity_produces_mult$: §G+20%§!\n "
+ SI_Redwinter_G05_tip: "§C$SI_Redwinter_G05$§!\n$SI_Redwinter_G05_desc$\n$SI_Redwinter_G05_effect$"
+
+ #####    百鬼夜行    #####
+ SI_Hyakkiyako_tip: "学园理念（可选）：§U百鬼夜行联合学园§!\n百鬼夜行对许多事物都有独具风格的理解，将其研究并发扬，定能为学园联邦添上浓墨重彩的一笔。\n "
+
+ ### 第一页
+ SI_Hyakkiyako_G01: "和风起"
+ SI_Hyakkiyako_G01_desc: "百鬼夜行的风已经吹到了每一个学园的角落，即使从前像一盘散沙，现在正是百鬼夜行的学生们联合起来为联邦建言献策的机会。"
+ SI_Hyakkiyako_G01_effect: "\n效果：\n获得§Y$engineering_research_with_icon$§!与§Y$unity_with_icon$§!，数额相当于10倍的每月产出\n  "
+ SI_Hyakkiyako_G01_tip: "§C$SI_Hyakkiyako_G01$§!\n$SI_Hyakkiyako_G01_desc$\n$SI_Hyakkiyako_G01_effect$"
+
+ SI_Hyakkiyako_G02: "堂前谣"
+ SI_Hyakkiyako_G02_desc: "百鬼夜行最知名的店铺就是百夜堂，它会将分店开遍星海，为全星系的学生们带去烟火气。"
+ SI_Hyakkiyako_G02_effect: "\n效果：\n§H解锁星球决议: §!$d_SI_Hyakkiyako_G02$\n "
+ SI_Hyakkiyako_G02_tip: "§C$SI_Hyakkiyako_G02$§!\n$SI_Hyakkiyako_G02_desc$\n$SI_Hyakkiyako_G02_effect$"
+
+ SI_Hyakkiyako_G03: "阳海谭"
+ SI_Hyakkiyako_G03_desc: "建设旅游度假区一直是阴阳部的远大目标，恰好，跨入星河后最不缺的就是异星美景。"
+ SI_Hyakkiyako_G03_effect: "\n效果：\n§H解锁星球决议: §!$d_SI_Hyakkiyako_G03$\n "
+ SI_Hyakkiyako_G03_tip: "§C$SI_Hyakkiyako_G03$§!\n$SI_Hyakkiyako_G03_desc$\n$SI_Hyakkiyako_G03_effect$"
+
+ SI_Hyakkiyako_G04: "盛澜演"
+ SI_Hyakkiyako_G04_desc: "戏曲是百鬼夜行的拿手项目，百花缭乱等社团将准备风格各异的盛大的演出，作为庆典的最高潮。"
+ SI_Hyakkiyako_G04_effect: "\n效果：\n§H解锁星球决议: §!$d_SI_Hyakkiyako_G04$\n "
+ SI_Hyakkiyako_G04_tip: "§C$SI_Hyakkiyako_G04$§!\n$SI_Hyakkiyako_G04_desc$\n$SI_Hyakkiyako_G04_effect$"
+
+ SI_Hyakkiyako_G05: "樱花落"
+ SI_Hyakkiyako_G05_desc: "随着百鬼夜行的文化传遍了整个基沃托斯，大家对事物与身边人产生了新的共鸣与和谐。联邦设立了一个新的公共假日，作为这一胜利的证明。"
+ SI_Hyakkiyako_G05_effect: "\n效果：\n隶属于§U百鬼夜行联合学园§!的社团将每年自动进行激活，并提升这些社团的激活效果\n "
+ SI_Hyakkiyako_G05_tip: "§C$SI_Hyakkiyako_G05$§!\n$SI_Hyakkiyako_G05_desc$\n$SI_Hyakkiyako_G05_effect$"
+
+ ### 第二页
+ SI_Hyakkiyako_G06: "危机"
+ SI_Hyakkiyako_G06_desc: "面对星海不安的局势，基沃托斯是时候该寻找解决方案了。此刻我们在偶然间想起了一位大人物，一位名不见经传的任务，或许她能为我们指引方向。"
+ SI_Hyakkiyako_G06_effect: "\n效果：\n§H解锁行星建筑: §!新百花缭乱紧急决议事务办公室\n该建筑帝国限制为1且只能在首都建造 "
+ SI_Hyakkiyako_G06_tip: "§C$SI_Hyakkiyako_G06$§!\n$SI_Hyakkiyako_G06_desc$\n$SI_Hyakkiyako_G06_effect$"
+
+ SI_Hyakkiyako_G07: "耐心"
+ SI_Hyakkiyako_G07_desc: "百花缭乱奔赴在基沃托斯的各个角落，寻找有关葛叶社长的线索。这位百花缭乱最初的社长。在百鬼夜行的老一辈学生心目中是崇拜的存在。"
+ SI_Hyakkiyako_G07_effect: "\n效果：\n§H解锁陆军单位: §!调停委员会联邦联合陆军\n为所有的星球提供大量该陆军的防守\n§H获得帝国修正: §!寻找，期望，与耐心\n "
+ SI_Hyakkiyako_G07_tip: "§C$SI_Hyakkiyako_G07$§!\n$SI_Hyakkiyako_G07_desc$\n$SI_Hyakkiyako_G07_effect$"
+
+ SI_Hyakkiyako_G08: "决断"
+ SI_Hyakkiyako_G08_desc: "线索戛然而止，我们在寻找新的搜寻方案，但在此之前我们必须加紧生产面对可能即将到来的威胁。事已至此，学生们不免得出现了人心惶惶的情况"
+ SI_Hyakkiyako_G08_effect: "\n效果：\n§H获得帝国修正: §!决断，线索，与追求\n  "
+ SI_Hyakkiyako_G08_tip: "§C$SI_Hyakkiyako_G08$§!\n$SI_Hyakkiyako_G08_desc$\n$SI_Hyakkiyako_G08_effect$"
+
+ SI_Hyakkiyako_G09: "入梦"
+ SI_Hyakkiyako_G09_desc: "一缕烟，一壶酒，一根烟斗，一声问候\n非知，非顾，非命，斗声且处显踪迹\n事非事，命非命，白狐凝心违天命"
+ SI_Hyakkiyako_G09_effect: "\n效果：\n§R移除帝国修正: §!寻找，期望，与耐心、决断，线索，与追求\n§H获得帝国修正: §!梦中之狐位何方\n§H获得9级总督§!葛叶 "
+ SI_Hyakkiyako_G09_tip: "§C$SI_Hyakkiyako_G09$§!\n$SI_Hyakkiyako_G09_desc$\n$SI_Hyakkiyako_G09_effect$"
+
+ #####    瓦尔基里    #####
+ SI_Valkyrie_tip: "学园理念（可选）：§c瓦尔基里警察学校§!\n瓦尔基里警察学园培养了基沃托斯大部分治安力量，它提供的组织度是繁荣的保证。\n "
+
+ SI_Valkyrie_G01: "瓦尔基里式执法"
+ SI_Valkyrie_G01_desc: "无视自警团的那些条条框框，瓦尔基里曾经的“雷厉风行”再出江湖！"
+ SI_Valkyrie_G01_effect: "\n效果：\n§H解锁星球决议: §!$decision_SI_Valkyrie_G01$\n "
+ SI_Valkyrie_G01_tip: "§C$SI_Valkyrie_G01$§!\n$SI_Valkyrie_G01_desc$\n$SI_Valkyrie_G01_effect$"
+
+ SI_Valkyrie_G02: "护城河法令"
+ SI_Valkyrie_G02_desc: "通过划定专用警用卫星区域，瓦尔基里得以彻底的贯彻使命，保卫关键要地。"
+ SI_Valkyrie_G02_effect: "\n效果：\n$MOD_ARMY_DEFENSE_HEALTH_MULT$: §G+150%§!\n$MOD_ARMY_DEFENSE_DAMAGE_MULT$: §G+150%§!\n$mod_edicts_upkeep_mult$: §G-50%§!\n$mod_country_energy_produces_mult$: §R-5%§!\n "
+ SI_Valkyrie_G02_tip: "§C$SI_Valkyrie_G02$§!\n$SI_Valkyrie_G02_desc$\n$SI_Valkyrie_G02_effect$"
+
+ SI_Valkyrie_A01: "军警两用复港"
+ SI_Valkyrie_A01_desc: "设计统一制式的军用与警用小型船坞，生产模块再组装，大大提高效率。"
+ SI_Valkyrie_A01_effect: "\n效果：\n§H解锁恒星基地建筑: §!$sm_BA_SI_Valkyrie_A01$\n "
+ SI_Valkyrie_A01_tip: "§C$SI_Valkyrie_A01$§!\n$SI_Valkyrie_A01_desc$\n$SI_Valkyrie_A01_effect$"
+
+ SI_Valkyrie_A02: "领航员管理部"
+ SI_Valkyrie_A02_desc: "瓦尔基里培养了无数具有领航员资质的学生，她们在管理部的指挥下勇敢地镇守深空，调度着联邦的一切舰船。"
+ SI_Valkyrie_A02_effect: "\n效果：\n$MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+15%§!\n$MOD_STARBASE_SHIPYARD_BUILD_COST_MULT$: §G-15%§!\n$MOD_COUNTRY_NAVAL_CAP_MULT$: §G+20%§!\n "
+ SI_Valkyrie_A02_tip: "§C$SI_Valkyrie_A02$§!\n$SI_Valkyrie_A02_desc$\n$SI_Valkyrie_A02_effect$"
+
+ SI_Valkyrie_B01: "第一枪协议"
+ SI_Valkyrie_B01_desc: "战争到来之时，瓦尔基里的基础设施也可以为加入军队提供一切帮助，作为征服者或保卫者迈向前线的第一站。"
+ SI_Valkyrie_B01_effect: "\n效果：\n将§Y£job_BA_Vigilant_crew£$job_BA_Vigilant_crew$§!替换为§Y£job_BA_Valkyrie_police£$job_BA_Valkyrie_police$§!\n§H解锁行星建筑: §!$building_BA_SI_Valkyrie_B02$\n "
+ SI_Valkyrie_B01_tip: "§C$SI_Valkyrie_B01$§!\n$SI_Valkyrie_B01_desc$\n$SI_Valkyrie_B01_effect$"
+
+ SI_Valkyrie_B02: "全链动员"
+ SI_Valkyrie_B02_desc: "将一些军事权力移交至瓦尔基里，利用警力组织网传递兵员与战斗经验。"
+ SI_Valkyrie_B02_effect: "\n效果：\n$MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+35%§!\n$MOD_SHIP_WEAPON_DAMAGE$: §G+25%§!\n$MOD_SHIP_FIRE_RATE_MULT$: §G+25%§!\n$mod_damage_vs_country_type_dormant_marauders_mult$: §G+500%§!"
+ SI_Valkyrie_B02_tip: "§C$SI_Valkyrie_B02$§!\n$SI_Valkyrie_B02_desc$\n$SI_Valkyrie_B02_effect$"
+
+ #####     山海经     #####
+ SI_Shanhaijing_tip: "学园理念（可选）：§G山海经高级中学§!\n山海经是在名为金钱与劳动的坚实地基上发展出的学园，理想与现实的碰撞是山海经永恒的主题。\n "
+
+ SI_Shanhaijing_G01: "梅花园机构"
+ SI_Shanhaijing_G01_desc: "在我们决定好其中一方之后，我们首先要进行对梅花园的扩充，以方便山海经对内学生的培养。"
+ SI_Shanhaijing_G01_effect: "\n效果：\n§H解锁建筑: §!$building_BA_SI_Shanhaijing_G01$ (由$building_BA_starlink_2$转化)\n "
+ SI_Shanhaijing_G01_tip: "§C$SI_Shanhaijing_G01$§!\n$SI_Shanhaijing_G01_desc$\n$SI_Shanhaijing_G01_effect$"
+
+ SI_Shanhaijing_G02: "炼丹术实验室"
+ SI_Shanhaijing_G02_desc: "山海经的生物实验室是我们基沃托斯不可多得的宝藏（各种意义上）。"
+ SI_Shanhaijing_G02_effect: "\n效果：\n§H解锁建筑: §!$building_BA_SI_Shanhaijing_G02$\n  "
+ SI_Shanhaijing_G02_tip: "§C$SI_Shanhaijing_G02$§!\n$SI_Shanhaijing_G02_desc$\n$SI_Shanhaijing_G02_effect$"
+
+ SI_Shanhaijing_A01: "玄龙门-边防保卫"
+ SI_Shanhaijing_A01_desc: "只靠强大的舰队防御难免有摩擦之嫌，专职镇守边疆的炮台方可面面俱到。"
+ SI_Shanhaijing_A01_effect: "\n效果：\n$mod_deep_space_citadel_limit_add$: §G+1§!\n$mod_shipclass_military_station_damage_mult$: §G+25%§!\n$mod_shipclass_military_station_build_speed_mult$: §G+75%§!\n$mod_shipclass_military_station_build_cost_mult$: §G-25%§!\n "
+ SI_Shanhaijing_A01_tip: "§C$SI_Shanhaijing_A01$§!\n$SI_Shanhaijing_A01_desc$\n$SI_Shanhaijing_A01_effect$"
+
+ SI_Shanhaijing_A02: "玄龙门-模块重炮"
+ SI_Shanhaijing_A02_desc: "将巨炮部件分解为模块再交由工厂生产，可以大大加快炮台的生产速度。炮台的控制与后勤亦可如法炮制。"
+ SI_Shanhaijing_A02_effect: "\n效果：\n$mod_shipsize_BA_defence_cannon_build_speed_mult$: §G+300%§!\n$MOD_STARBASE_DEFENSE_PLATFORM_CAPACITY_ADD$: §G+20§!\n "
+ SI_Shanhaijing_A02_tip: "§C$SI_Shanhaijing_A02$§!\n$SI_Shanhaijing_A02_desc$\n$SI_Shanhaijing_A02_effect$"
+
+ SI_Shanhaijing_A03: "玄龙门-武之意"
+ SI_Shanhaijing_A03_desc: "若没有武力与手腕，一切便会为别人所占有。"
+ SI_Shanhaijing_A03_effect: "\n§R与§!$SI_Shanhaijing_B03$§R互斥§!\n效果：\n$mod_deep_space_citadel_limit_add$: §G+1§!\n解锁$dsc_name$区段: §Y迫击型§!与§Y弹群型§!\n$MOD_SHIP_EXPERIENCE_GAIN_MULT$: §G+400%§!\n "
+ SI_Shanhaijing_A03_tip: "§C$SI_Shanhaijing_A03$§!\n$SI_Shanhaijing_A03_desc$\n$SI_Shanhaijing_A03_effect$"
+
+ SI_Shanhaijing_A04: "玄龙门-铁壁千里"
+ SI_Shanhaijing_A04_desc: "将防线铸成坚不可摧的铁壁，才能捍卫我们的汗水与辛劳。"
+ SI_Shanhaijing_A04_effect: "\n效果：\n§H解锁恒星基地建筑: §!$sm_BA_SI_Shanhaijing_A04$\n按照当前设计，立即为所有恒星基地建造5个§Y$BA_defence_cannon$§!\n可以为§Y$starbase_starport$或一级$orbital_ring_tier_1$§!建造§Y$BA_defence_cannon$§!\n "
+ SI_Shanhaijing_A04_tip: "§C$SI_Shanhaijing_A04$§!\n$SI_Shanhaijing_A04_desc$\n$SI_Shanhaijing_A04_effect$"
+
+ SI_Shanhaijing_B01: "玄武商会-灰色商案"
+ SI_Shanhaijing_B01_desc: "只要能取得合理的目标，稍稍用些打破规则的手段也是无可厚非的。"
+ SI_Shanhaijing_B01_effect: "\n效果：\n在特殊订单就绪时，§Y$Xuanwu_promenade$§!产生大量的$trade_with_icon$\n "
+ SI_Shanhaijing_B01_tip: "§C$SI_Shanhaijing_B01$§!\n$SI_Shanhaijing_B01_desc$\n$SI_Shanhaijing_B01_effect$"
+
+ SI_Shanhaijing_B02: "玄武商会-流动协助"
+ SI_Shanhaijing_B02_desc: "流动起来的资源才能称为经济，否则再贵重的东西也如同泡沫。"
+ SI_Shanhaijing_B02_effect: "\n效果：\n$mod_BA_staff_pop_trade_produces_mult$: §G+150%§!\n "
+ SI_Shanhaijing_B02_tip: "§C$SI_Shanhaijing_B02$§!\n$SI_Shanhaijing_B02_desc$\n$SI_Shanhaijing_B02_effect$"
+
+ SI_Shanhaijing_B03: "玄武商会-信之影"
+ SI_Shanhaijing_B03_desc: "信任是交易的根基，而交易成本直接决定了前进的道路是否坎坷。"
+ SI_Shanhaijing_B03_effect: "\n§R与§!$SI_Shanhaijing_A03$§R互斥§!\n效果：\n通过§Y$Xuanwu_promenade$特殊订单§!或§Y天使24§!进行的交易可以获得双倍的资源\n$mod_country_trade_produces_mult$: §G+20%§!\n$MOD_COUNTRY_TRADE_FEE$: §G-25%§!\n§H解锁分部建筑: §!玄武商会外贸区\n\n "
+ SI_Shanhaijing_B03_tip: "§C$SI_Shanhaijing_B03$§!\n$SI_Shanhaijing_B03_desc$\n$SI_Shanhaijing_B03_effect$"
+
+ SI_Shanhaijing_B04: "玄武商会-烈火烹油"
+ SI_Shanhaijing_B04_desc: "经济是手段而非目的，行最激烈之手段，方能达成最伟大的目标。"
+ SI_Shanhaijing_B04_effect: "\n效果：\n§H解锁星球决议: §!$decision_SI_Shanhaijing_B04$\n "
+ SI_Shanhaijing_B04_tip: "§C$SI_Shanhaijing_B04$§!\n$SI_Shanhaijing_B04_desc$\n$SI_Shanhaijing_B04_effect$"

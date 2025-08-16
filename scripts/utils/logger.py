@@ -30,9 +30,17 @@ def setup_logger():
     stream_formatter = logging.Formatter('%(message)s')
     stream_handler.setFormatter(stream_formatter)
     
-    # 【核心修正】明确告诉“终端播报员”，你也必须处理INFO级别的信息
+    # 【核心修正】明确告诉"终端播报员"，你也必须处理INFO级别的信息
     stream_handler.setLevel(logging.INFO)
     
     logger.addHandler(stream_handler)
 
-    logging.info("Logger initialized and ready.")
+    # 使用国际化信息，如果没有加载语言文件则使用英文
+    try:
+        from scripts.utils import i18n
+        if i18n._language_loaded:
+            logging.info(i18n.t("logger_initialized"))
+        else:
+            logging.info("Logger initialized and ready.")
+    except:
+        logging.info("Logger initialized and ready.")

@@ -1,0 +1,125 @@
+2025-08-16 15:15:11,693 - INFO - Logger initialized and ready.
+2025-08-16 15:15:11,693 - INFO - 请选择要汉化的Mod：
+2025-08-16 15:15:11,693 - INFO -   [1] Australia & New Zealand Flavor Pack
+2025-08-16 15:15:11,694 - INFO -   [2] Blue Archive
+2025-08-16 15:15:11,694 - INFO -   [3] Blue Archive - test
+2025-08-16 15:15:11,694 - INFO -   [4] Forts & Engineers
+2025-08-16 15:15:11,694 - INFO -   [5] GORA UI
+2025-08-16 15:15:11,694 - INFO -   [6] Hydra's More Agenda's
+2025-08-16 15:15:11,694 - INFO -   [7] KuatAncientEmpire
+2025-08-16 15:15:11,694 - INFO -   [8] MODJAM2025
+2025-08-16 15:15:11,694 - INFO -   [9] Offer Convoy Contribution
+2025-08-16 15:15:11,694 - INFO -   [10] Project Utopia - Extended Timeline - Technical Preview
+2025-08-16 15:15:11,694 - INFO -   [11] Tech & Res
+2025-08-16 15:15:11,694 - INFO -   [12] TEST-ANZAC
+2025-08-16 15:15:11,694 - INFO -   [13] UKrework
+2025-08-16 15:15:13,191 - INFO - 
+你选择了: Blue Archive - test
+2025-08-16 15:15:13,191 - INFO - 
+请选择游戏:
+2025-08-16 15:15:13,191 - INFO -   [1] Victoria 3 (维多利亚3)
+2025-08-16 15:15:13,191 - INFO -   [2] Stellaris (群星)
+2025-08-16 15:15:13,191 - INFO -   [3] Europa Universalis IV (欧陆风云4)
+2025-08-16 15:15:13,191 - INFO -   [4] Hearts of Iron IV (钢铁雄心4)
+2025-08-16 15:15:13,191 - INFO -   [5] Crusader Kings III (十字军之王3)
+2025-08-16 15:15:15,958 - INFO - 请选择API供应商:
+2025-08-16 15:15:15,958 - INFO -   [1] Gemini
+2025-08-16 15:15:15,958 - INFO -   [2] Openai
+2025-08-16 15:15:15,958 - INFO -   [3] Qwen - （中国大陆地区用户请用这个）
+2025-08-16 15:15:16,935 - INFO - 
+--- 正在获取Mod主题上下文 ---
+2025-08-16 15:15:16,935 - INFO - 已识别Mod名称为: '碧蓝档案-测试'
+2025-08-16 15:15:18,161 - INFO - 最终使用的主题上下文为: '碧蓝档案-测试'
+2025-08-16 15:15:18,161 - INFO - 
+请选择源语言:
+2025-08-16 15:15:18,161 - INFO -   [1] English
+2025-08-16 15:15:18,161 - INFO -   [2] 简体中文
+2025-08-16 15:15:18,162 - INFO -   [3] Français
+2025-08-16 15:15:18,162 - INFO -   [4] Deutsch
+2025-08-16 15:15:18,162 - INFO -   [5] Español
+2025-08-16 15:15:18,162 - INFO -   [6] 日本語
+2025-08-16 15:15:18,162 - INFO -   [7] 한국어
+2025-08-16 15:15:18,162 - INFO -   [8] Polski
+2025-08-16 15:15:18,162 - INFO -   [9] Português do Brasil
+2025-08-16 15:15:18,162 - INFO -   [10] Русский
+2025-08-16 15:15:23,273 - INFO - 
+请选择目标语言:
+2025-08-16 15:15:23,273 - INFO -   [1] English
+2025-08-16 15:15:23,273 - INFO -   [2] 简体中文
+2025-08-16 15:15:23,273 - INFO -   [3] Français
+2025-08-16 15:15:23,273 - INFO -   [4] Deutsch
+2025-08-16 15:15:23,273 - INFO -   [5] Español
+2025-08-16 15:15:23,273 - INFO -   [6] 日本語
+2025-08-16 15:15:23,273 - INFO -   [7] 한국어
+2025-08-16 15:15:23,273 - INFO -   [8] Polski
+2025-08-16 15:15:23,273 - INFO -   [9] Português do Brasil
+2025-08-16 15:15:23,273 - INFO -   [10] Русский
+2025-08-16 15:15:23,273 - INFO - 翻译为其余所有10种语言
+2025-08-16 15:15:23,274 - INFO - 自定义/套壳其他语言...
+2025-08-16 15:15:26,976 - INFO - 成功加载 stellaris 词典，包含 1124 个条目
+2025-08-16 15:15:26,976 - INFO - 主词典 glossary.json 已启用 (包含 1124 条术语)
+2025-08-16 15:15:26,977 - INFO - 已检测到外挂词典:
+2025-08-16 15:15:26,977 - INFO - [1] Blue Archive (碧蓝档案) - Korean anime mobile game terminology and character names (20 条术语)
+2025-08-16 15:15:26,977 - INFO - 输入 0 全部启用
+2025-08-16 15:15:26,977 - INFO - 输入 N 不使用外挂词典
+2025-08-16 15:15:37,495 - INFO - === 工程总览 ===
+2025-08-16 15:15:37,495 - INFO - 目标MOD: Blue Archive - test
+2025-08-16 15:15:37,495 - INFO - API供应商: Gemini
+2025-08-16 15:15:37,496 - INFO - 游戏类型: Stellaris (群星)
+2025-08-16 15:15:37,496 - INFO - 源语言: 简体中文
+2025-08-16 15:15:37,496 - INFO - 目标语言: English
+2025-08-16 15:15:37,496 - INFO - 词典配置: 主词典 + 1 个外挂词典
+2025-08-16 15:15:37,496 - INFO - 是否清理多余文件: 待确认
+2025-08-16 15:15:37,496 - INFO - 翻译完成后，将询问是否清理多余文件
+2025-08-16 15:15:41,899 - INFO - 翻译已确认，开始执行...
+2025-08-16 15:15:41,903 - INFO - 词典合并完成: 1124 个主词典条目 + 20 个外挂词典条目 = 1144 个总计
+2025-08-16 15:15:41,903 - INFO - 已加载 1 个外挂词典
+2025-08-16 15:15:41,903 - INFO - 词典状态: 主词典(1124条) + 外挂词典(1个) = 总计(1144条)
+2025-08-16 15:15:41,903 - INFO - 
+--- 启动 '首次翻译' 工作流，目标: Blue Archive - test ---
+2025-08-16 15:15:42,362 - INFO - Gemini client initialized successfully, using model: gemini-2.5-flash
+2025-08-16 15:15:42,362 - INFO - 词典加载成功: Stellaris 游戏及Mod社区汉化词典 (1124 个条目)
+2025-08-16 15:15:42,362 - INFO - 校对进度追踪器已初始化，将生成English版本的进度看板
+2025-08-16 15:15:42,362 - INFO - 
+--- 正在处理 metadata.json ---
+2025-08-16 15:15:42,362 - INFO - 正在翻译 mod name: "碧蓝档案-测试..."
+2025-08-16 15:15:42,514 - INFO - 从 1 个文本中提取到 0 个相关术语
+2025-08-16 15:15:42,514 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-16 15:15:44,620 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-16 15:15:44,620 - INFO - AFC remote call 1 is done.
+2025-08-16 15:15:44,621 - INFO - metadata.json 汉化完成。
+2025-08-16 15:15:44,621 - INFO - 
+--- 正在处理资产文件 (封面图、描述文件等) ---
+2025-08-16 15:15:44,622 - INFO - 资产文件 'thumbnail.png' 复制完成。
+2025-08-16 15:15:44,622 - INFO - 
+--- 正在解析文件: source_mod\Blue Archive - test\localisation\simp_chinese\BA_event_tr&ape_l_simp_chinese.yml ---
+2025-08-16 15:15:44,622 - INFO - 提取到 109 条可翻译文本。
+2025-08-16 15:15:44,623 - INFO - 
+--- 正在翻译为: English ---
+2025-08-16 15:15:44,623 - INFO - --- 检测到 3 个翻译批次，启动并行处理模式 ---
+2025-08-16 15:15:44,932 - INFO - 从 40 个文本中提取到 11 个相关术语
+2025-08-16 15:15:44,980 - INFO - 批次 1: 注入 11 个词典术语
+2025-08-16 15:15:45,042 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-16 15:15:45,043 - INFO - 从 40 个文本中提取到 13 个相关术语
+2025-08-16 15:15:45,085 - INFO - 从 29 个文本中提取到 14 个相关术语
+2025-08-16 15:15:45,086 - INFO - 批次 2: 注入 13 个词典术语
+2025-08-16 15:15:45,086 - INFO - 批次 3: 注入 14 个词典术语
+2025-08-16 15:15:45,087 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-16 15:15:45,087 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-16 15:16:11,644 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-16 15:16:11,645 - INFO - AFC remote call 1 is done.
+2025-08-16 15:16:26,402 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-16 15:16:26,404 - INFO - AFC remote call 1 is done.
+2025-08-16 15:16:27,263 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-16 15:16:27,273 - INFO - AFC remote call 1 is done.
+2025-08-16 15:16:27,273 - INFO - --- 所有批次并行处理完毕 ---
+2025-08-16 15:16:27,274 - INFO - 文件 'en-Blue Archive - test\localisation\english\simp_chinese\BA_event_tr&ape_l_english.yml' 汉化完成。
+2025-08-16 15:16:27,274 - INFO - 正在生成校对进度看板...
+2025-08-16 15:16:27,274 - ERROR - 生成校对进度表格失败: [Errno 13] Permission denied: 'J:\\V3_Mod_Localization_Factory\\my_translation\\en-Blue Archive - test\\校对进度表.csv'
+2025-08-16 15:16:27,275 - WARNING - 校对进度看板生成失败
+2025-08-16 15:18:06,492 - INFO - 开始清理源MOD文件夹...
+2025-08-16 15:18:06,492 - INFO - 
+--- 开始精简源Mod文件夹: Blue Archive - test ---
+2025-08-16 15:18:07,986 - INFO - 操作已取消。
+2025-08-16 15:18:07,987 - INFO - 工作流完成！Mod 'Blue Archive - test' 的翻译任务已完成
+2025-08-16 15:18:07,988 - INFO - 工作流完成！

@@ -1,0 +1,135 @@
+﻿l_simp_chinese:
+##########################
+#
+ Sweepers_ACTION:0 "扫清"
+ pop_cat_sweeper_pop:0 "游荡者"
+ pop_cat_sweeper_pop_plural:0 "游荡者"
+ pop_cat_sweeper_pop_desc:0 "在星球上不断巡回的游荡者。"
+ FLEETORDER_DESTROY_PLANET_WITH_Sweepers:0 "正在准备扫清$PLANET|Y$"
+ MESSAGE_DESC_FOR_Sweepers:0 "被夷为平地"
+ What_are_you_doing:0 "$TRIGGER_FAIL$这么干是要被送去227挖土豆的！"
+ is_valid_target_for_sweeper:0 "$TRIGGER_FAIL$是一个由我方或交战方控制的殖民地。"
+
+
+
+
+
+
+
+
+
+
+###############################
+ switch_armor_type:0 "§W转换防御类型§!"
+
+
+ weapon_type_mystic:0 "§E神秘§!"
+ weapon_type_penetration:0 "§Y贯通§!"
+ weapon_type_explosion:0 "§R爆发§!"
+ weapon_type_destruction:0 "§M破坏§!"
+
+
+ weapon_role_anti_special_armor:0 "§E反特殊装甲§!"
+ weapon_role_anti_heavy_armor:0 "§Y反重甲§!"
+ weapon_role_anti_light_armor:0 "§R反轻甲§!"
+ weapon_role_anti_structure:0 "§M反构造物§!"
+
+ mod_weapon_type_mystic_weapon_damage_mult:0 "§E神秘属性§!武器伤害"
+ mod_weapon_type_mystic_weapon_fire_rate_mult:0 "§E神秘属性§!武器攻击速度"
+
+ mod_weapon_type_penetration_weapon_damage_mult:0 "§Y贯通属性§!武器伤害"
+ mod_weapon_type_penetration_weapon_fire_rate_mult:0 "§Y贯通属性§!武器攻击速度"
+
+ mod_weapon_type_explosion_weapon_damage_mult:0 "§R爆发属性§!武器伤害"
+ mod_weapon_type_explosion_weapon_fire_rate_mult:0 "§R爆发属性§!武器攻击速度"
+
+ mod_weapon_type_destruction_weapon_damage_mult:0 "§M破坏属性§!武器伤害"
+ mod_weapon_type_destruction_weapon_fire_rate_mult:0 "§M破坏属性§!武器攻击速度"
+
+ aura_special_armor:0 "§E特殊装甲§!"
+ aura_heavy_armor:0 "§Y重型装甲§!"
+ aura_light_armor:0 "§R轻型装甲§!"
+ aura_structure:0 "§M构造物§!"
+ aura_structure_station:0 "§M构造物§!"
+ aura_armor_type:0 "§W默认装甲§!"
+
+ BA_WEAPON_TEST:0 "测试用武器"
+ BA_WEAPON_TEST_DESC:0 "测试用武器"
+ BA_AURA_HEAVY_ARMOR:0 "§Y舰载重型装甲发生器§!"
+ BA_AURA_HEAVY_ARMOR_DESC:0 "将我方舰船防御类型更改为§Y重型装甲§!\n降低敌方§E神秘属性§!武器（大幅）和能量武器（小幅）造成的损害；\n\n作为代价\n提高受到敌方§Y贯穿属性§!武器（大幅）和动能武器（小幅）的伤害"
+ BA_AURA_LIGHT_ARMOR:0 "§R舰载轻型装甲发生器§!"
+ BA_AURA_LIGHT_ARMOR_DESC:0  "将我方舰船防御类型更改为§R轻型装甲§!\n降低敌方§Y贯穿属性§!武器（大幅）和动能武器（小幅）造成的损害；\n\n作为代价\n提高受到敌方§R爆发属性§!武器（大幅）和爆破武器（小幅）的伤害"
+ BA_AURA_SPECIAL_ARMOR:0 "§E舰载特殊装甲发生器§!"
+ BA_AURA_SPECIAL_ARMOR_DESC:0 "将我方舰船防御类型更改为§E特殊装甲§!\n降低敌方§R爆发属性§!武器（大幅）和爆破武器（小幅）造成的损害；\n\n作为代价\n提高受到敌方§E神秘属性§!武器（大幅）和能量武器（小幅）的伤害"
+ BA_AURA_ARMOR_TYPE:0 "§W无舰载装甲发生器§!"
+ BA_AURA_ARMOR_TYPE_DESC:0 "未装备装甲发生器，防御类型为§W默认§!"
+ BA_AURA_STRUCTURE:0 "§M舰载构造物发生器§!"
+ BA_AURA_STRUCTURE_DESC:0 "将我方舰船防御类型更改为§M构造物§!\n降低敌方除§M破坏属性§!外的其他武器造成的损害；\n\n作为代价\n受到敌方§M破坏属性§!武器的伤害大幅提高"
+ BA_STATION_AURA_STRUCTURE:0 "§M恒星基地构造物发生器§!"
+ BA_STATION_AURA_STRUCTURE_DESC:0 "将我方恒星基地防御类型更改为§M构造物§!\n降低敌方除§M破坏属性§!外的其他武器造成的损害；\n\n作为代价\n受到敌方§M破坏属性§!武器的伤害大幅提高"
+
+
+
+ BA_armor_station_large:0 "自律防御平台"
+
+ CORVETTE_MID_BA_DECAGRAMMATON_HOD_TEST:0 "§H巨型霍德§!"
+ CORVETTE_MID_BA_DECAGRAMMATON_HOD_COLORIZED_TEST:0 "§M巨型霍德（色彩）§!"
+ CORVETTE_MID_BA_Beatrice_Gematria:0 "§R贝阿朵莉切§!"
+ CORVETTE_MID_BA_Boxcat:0 "§E盒子猫§!"
+ CORVETTE_MID_BA_ALICE:0 "§E爱丽丝§!"
+ CORVETTE_MID_BA_KEI:0 "§PKei§!"
+ CORVETTE_MID_BA_WhiteRabbit:0 "§Y兔女郎小雪§!"
+ CORVETTE_MID_BA_EN_0001:0 "§M色彩向导者§!"
+ CORVETTE_MID_BA_EN_0002:0 "§M砂狼白子（色彩）§!"
+ CORVETTE_MID_BA_PV1:0 "§Tpv投影仪§!"
+ CORVETTE_MID_BA_Kether_turret_01:0 "§H凯瑟 I§!"
+ CORVETTE_MID_BA_Kether_turret_02:0 "§H凯瑟 II§!"
+ CORVETTE_MID_BA_Kether_turret_03:0 "§H凯瑟 III§!"
+ CORVETTE_MID_BA_Kether_Color_turret_01:0 "§M凯瑟 I（色彩）§!"
+ CORVETTE_MID_BA_Kether_Color_turret_02:0 "§M凯瑟 II（色彩）§!"
+ CORVETTE_MID_BA_Kether_Color_turret_03:0 "§M凯瑟 III（色彩）§!"
+ CORVETTE_MID_BA_HOD:0 "§H霍德§!"
+ CORVETTE_MID_BA_HOD_Color:0 "§M霍德（色彩）§!"
+ CORVETTE_MID_BA_CHESED:0 "§H凯赛德§!"
+ CORVETTE_MID_BA_CHESED_Color:0 "§M凯赛德（色彩）§!"
+ CORVETTE_MID_BA_Binah:0 "§H比纳§!"
+ CORVETTE_MID_BA_Binah_Color:0 "§M比纳（色彩）§!"
+ CORVETTE_MID_BA_Hieronymus:0 "§R耶罗尼米斯§!"
+ CORVETTE_MID_BA_Hieronymus_Color:0 "§M耶罗尼米斯（色彩）§!"
+ CORVETTE_MID_BA_Goz:0 "§EGoz§!"
+ CORVETTE_MID_BA_Kuro:0 "§T黑§!"
+ CORVETTE_MID_BA_Kuro_Color:0 "§M黑（色彩）§!"
+ CORVETTE_MID_BA_Shiro:0 "§W白§!"
+ CORVETTE_MID_BA_Shiro_Color:0 "§M白（色彩）§!"
+ CORVETTE_MID_BA_Perorozilla:0 "§W佩罗罗斯拉§!"
+ CORVETTE_MID_BA_Perorozilla_Color:0 "§M佩罗罗斯拉（色彩）§!"
+ CORVETTE_MID_BA_KaitenFX_MK0:0 "§R回转寿司机甲 MK0§!"
+ CORVETTE_MID_BA_59_G:0 "§G59改§!"
+ CORVETTE_MID_BA_59_Kaiserpmc:0 "§Y凯撒PMC广告牌坦克§!"
+ CORVETTE_MID_BA_Iroha_Tank:0 "§P枣伊吕波&虎丸§!"
+ CORVETTE_MID_BA_Asuma_Toki:0 "§B飞鸟马时&阿比舒§!"
+ CORVETTE_MID_BA_AtrahasisArk:0 "§M阿特拉哈西斯的方舟§!"
+ CORVETTE_MID_BA_AtrahasisArk_invincible:0 "§M阿特拉哈西斯的方舟（多重时空诠释状态）§!"
+ CORVETTE_MID_BA_Utnapishtim:0 "§E乌塔那匹兹姆的大船§!"
+
+
+
+
+
+###############################
+ SWORD_OF_LIGHT_EX:0 "阿特拉哈西斯的光之剑"
+ SWORD_OF_LIGHT_EX_DESC:0 "我……我最重要的……我最重要的爱丽丝"
+ BA_Perorozilla_craft_01:0 "佩罗罗斯拉（小）"
+ BA_Perorozilla_craft_01_DESC:0 "体型较小的三只佩罗罗斯拉"
+ BA_Perorozilla_craft_02:0 "佩罗罗斯拉（中）"
+ BA_Perorozilla_craft_02_DESC:0 "体型中等的佩罗罗斯拉"
+ BA_Perorozilla_Color_craft_01:0 "色彩佩罗罗斯拉（小）"
+ BA_Perorozilla_Color_craft_01_DESC:0 "体型较小的三只色彩佩罗罗斯拉"
+ BA_Perorozilla_Color_craft_02:0 "色彩佩罗罗斯拉（中）"
+ BA_Perorozilla_Color_craft_02_DESC:0 "体型中等的色彩佩罗罗斯拉"
+ BA_Drone_Missile:0 "导弹无人机"
+ BA_Drone_Missile_DESC:0 "装备有导弹的无人机"
+ BA_Drone_Vulcan:0 "机炮无人机"
+ BA_Drone_Vulcan_DESC:0 "装备有机炮的无人机"
+ BA_POWER_CHAIR:0 "大排档椅子"
+ BA_POWER_CHAIR_DESC:0 "I AM THE STORM THAT IS APPROACHING！！！！！！！！！！！！！！"

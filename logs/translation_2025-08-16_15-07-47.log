@@ -1,0 +1,9 @@
+2025-08-16 15:07:47,995 - INFO - Logger initialized and ready.
+2025-08-16 15:07:47,995 - ERROR - 程序运行时发生未处理的异常
+Traceback (most recent call last):
+  File "J:\V3_Mod_Localization_Factory\scripts\main.py", line 411, in <module>
+    main()
+  File "J:\V3_Mod_Localization_Factory\scripts\main.py", line 282, in main
+    mods = directory_handler.scan_source_directory(SOURCE_DIR)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'scripts.core.directory_handler' has no attribute 'scan_source_directory'. Did you mean: 'cleanup_source_directory'?
