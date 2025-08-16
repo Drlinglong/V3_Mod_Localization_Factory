@@ -42,9 +42,9 @@
       },
       "abbreviations": {
         "zh-CN": "三一",
-        "en": "Gene",
-        "ja": "トリニティ総合",
-        "ko": "트리니티 종합"
+        "en": "Trinity",
+        "ja": "トリニティ",
+        "ko": "트리니티"
       },
       "variants": {
         "zh-CN": [
@@ -67,11 +67,13 @@
       },
       "abbreviations": {
         "zh-CN": "格黑娜",
-        "en": "Gehen",
-        "ja": "ゲヘナ学園",
-        "ko": "게헨나 학"
+        "en": "Gehenna",
+        "ja": "ゲヘナ",
+        "ko": "게헨나"
       },
-      "variants": {}
+      "variants": {"zh-CN": [
+          "格黑那"
+        ]}
     },
     {
       "id": "ba_school_millennium",
@@ -88,8 +90,8 @@
       },
       "abbreviations": {
         "zh-CN": "千年",
-        "en": "Scie",
-        "ja": "ミレニア",
+        "en": "Millennium",
+        "ja": "ミレニアム",
         "ko": "밀레니엄"
       },
       "variants": {
@@ -129,9 +131,9 @@
       },
       "abbreviations": {
         "zh-CN": "便利屋",
-        "en": "Probl",
+        "en": "PS68",
         "ja": "便利屋68",
-        "ko": "흥신소 6"
+        "ko": "흥신소68"
       },
       "variants": {}
     },
@@ -150,9 +152,9 @@
       },
       "abbreviations": {
         "zh-CN": "星野",
-        "en": "Hosh",
-        "ja": "小鳥遊ホシノ",
-        "ko": "타카나시"
+        "en": "Hoshino",
+        "ja": "ホシノ",
+        "ko": "호시노"
       },
       "variants": {
         "zh-CN": [
@@ -178,8 +180,8 @@
       "abbreviations": {
         "zh-CN": "日奈",
         "en": "Hina",
-        "ja": "空崎ヒナ",
-        "ko": "소라사키"
+        "ja": "ヒナ",
+        "ko": "히나"
       },
       "variants": {
         "zh-CN": [
@@ -267,9 +269,9 @@
       },
       "abbreviations": {
         "zh-CN": "甜点部",
-        "en": "After",
-        "ja": "放課後スイ",
-        "ko": "방과후 디"
+        "en": "Sweets",
+        "ja": "スイーツ部",
+        "ko": "디저트부"
       },
       "variants": {}
     },
@@ -321,8 +323,8 @@
       "abbreviations": {
         "zh-CN": "未花",
         "en": "Mika",
-        "ja": "聖園ミカ",
-        "ko": "미소노 미카"
+        "ja": "ミカ",
+        "ko": "미카"
       },
       "variants": {}
     },
@@ -341,9 +343,9 @@
       },
       "abbreviations": {
         "zh-CN": "优香",
-        "en": "Yuuk",
-        "ja": "早瀬ユウカ",
-        "ko": "하야세 "
+        "en": "Yuuka",
+        "ja": "ユウカ",
+        "ko": "유우카"
       },
       "variants": {}
     },
@@ -397,7 +399,10 @@
         "remarks": "One of the three hosts of the Tea Party in Trinity. Mentioned in dialogue."
       },
       "abbreviations": {
-        "zh-CN": "渚"
+        "zh-CN": "渚",
+        "en": "Nagisa",
+        "ja": "ナギサ",
+        "ko": "나기사"
       },
       "variants": {}
     },
@@ -417,8 +422,8 @@
       "abbreviations": {
         "zh-CN": "圣娅",
         "en": "Seia",
-        "ja": "百合園セイア",
-        "ko": "유리조노"
+        "ja": "セイア",
+        "ko": "세이아"
       },
       "variants": {}
     },
@@ -1073,9 +1078,9 @@
       },
       "abbreviations": {
         "zh-CN": "白子",
-        "en": "Shir",
-        "ja": "砂狼シロコ",
-        "ko": "스나오오"
+        "en": "Shiroko",
+        "ja": "シロコ",
+        "ko": "시로코"
       },
       "variants": {}
     },
@@ -1094,9 +1099,9 @@
       },
       "abbreviations": {
         "zh-CN": "绫音",
-        "en": "Ayan",
-        "ja": "奥空アヤネ",
-        "ko": "오쿠소라"
+        "en": "Ayane",
+        "ja": "アヤネ",
+        "ko": "아야네"
       },
       "variants": {}
     },
@@ -1115,9 +1120,9 @@
       },
       "abbreviations": {
         "zh-CN": "芹香",
-        "en": "Seri",
-        "ja": "黒見セリカ",
-        "ko": "쿠로미 "
+        "en": "Serika",
+        "ja": "セリカ",
+        "ko": "세리카"
       },
       "variants": {}
     },
@@ -1136,9 +1141,9 @@
       },
       "abbreviations": {
         "zh-CN": "野宫",
-        "en": "Nono",
-        "ja": "十六夜ノノミ",
-        "ko": "이자요이"
+        "en": "Nonomi",
+        "ja": "ノノミ",
+        "ko": "노노미"
       },
       "variants": {}
     },
@@ -1157,9 +1162,9 @@
       },
       "abbreviations": {
         "zh-CN": "美咲",
-        "en": "Misa",
-        "ja": "戒野ミサキ",
-        "ko": "이카시노"
+        "en": "Misaki",
+        "ja": "ミサキ",
+        "ko": "미사키"
       },
       "variants": {}
     },
@@ -1178,9 +1183,9 @@
       },
       "abbreviations": {
         "zh-CN": "纱织",
-        "en": "Saor",
-        "ja": "錠前サオリ",
-        "ko": "죠마에 "
+        "en": "Saori",
+        "ja": "サオリ",
+        "ko": "사오리"
       },
       "variants": {}
     },
@@ -1199,9 +1204,9 @@
       },
       "abbreviations": {
         "zh-CN": "亚津子",
-        "en": "Hakar",
-        "ja": "秤アツコ",
-        "ko": "하카리 아"
+        "en": "Atsuko",
+        "ja": "アツコ",
+        "ko": "아츠코"
       },
       "variants": {}
     },
@@ -1220,9 +1225,9 @@
       },
       "abbreviations": {
         "zh-CN": "无月",
-        "en": "Muts",
-        "ja": "浅黄ムツキ",
-        "ko": "아사기 "
+        "en": "Mutsuki",
+        "ja": "ムツキ",
+        "ko": "무츠키"
       },
       "variants": {}
     },
@@ -1241,9 +1246,9 @@
       },
       "abbreviations": {
         "zh-CN": "佳代子",
-        "en": "Onika",
-        "ja": "鬼方カヨコ",
-        "ko": "오니카타 "
+        "en": "Kayoko",
+        "ja": "カヨコ",
+        "ko": "카요코"
       },
       "variants": {}
     },
@@ -1263,8 +1268,8 @@
       "abbreviations": {
         "zh-CN": "亚瑠",
         "en": "Aru",
-        "ja": "陸八魔アル",
-        "ko": "리쿠하치"
+        "ja": "アル",
+        "ko": "아루"
       },
       "variants": {}
     },
@@ -1283,9 +1288,9 @@
       },
       "abbreviations": {
         "zh-CN": "遥香",
-        "en": "Haru",
-        "ja": "伊草ハルカ",
-        "ko": "이구사 "
+        "en": "Haruka",
+        "ja": "ハルカ",
+        "ko": "하루카"
       },
       "variants": {}
     },
@@ -1305,8 +1310,8 @@
       "abbreviations": {
         "zh-CN": "亚子",
         "en": "Ako",
-        "ja": "天雨アコ",
-        "ko": "아마우 아코"
+        "ja": "アコ",
+        "ko": "아코"
       },
       "variants": {}
     },
@@ -1326,8 +1331,8 @@
       "abbreviations": {
         "zh-CN": "伊织",
         "en": "Iori",
-        "ja": "銀鏡イオリ",
-        "ko": "시로미 "
+        "ja": "イオリ",
+        "ko": "이오리"
       },
       "variants": {}
     },
@@ -1346,9 +1351,9 @@
       },
       "abbreviations": {
         "zh-CN": "千夏",
-        "en": "Chin",
-        "ja": "火宮チナツ",
-        "ko": "히노미야"
+        "en": "Chinatsu",
+        "ja": "チナツ",
+        "ko": "치나츠"
       },
       "variants": {}
     },
@@ -1367,9 +1372,9 @@
       },
       "abbreviations": {
         "zh-CN": "羽留奈",
-        "en": "Kurod",
-        "ja": "黒舘ハルナ",
-        "ko": "쿠로다테 "
+        "en": "Haruna",
+        "ja": "ハルナ",
+        "ko": "하루나"
       },
       "variants": {}
     },
@@ -1388,9 +1393,9 @@
       },
       "abbreviations": {
         "zh-CN": "泉",
-        "en": "Izu",
-        "ja": "獅子堂イズミ",
-        "ko": "시시도우"
+        "en": "Izumi",
+        "ja": "イズミ",
+        "ko": "이즈미"
       },
       "variants": {}
     },
@@ -1409,9 +1414,9 @@
       },
       "abbreviations": {
         "zh-CN": "淳子",
-        "en": "Junk",
-        "ja": "赤司ジュンコ",
-        "ko": "아카시 준코"
+        "en": "Junko",
+        "ja": "ジュンコ",
+        "ko": "준코"
       },
       "variants": {}
     },
@@ -1430,9 +1435,9 @@
       },
       "abbreviations": {
         "zh-CN": "风华",
-        "en": "Fuuk",
-        "ja": "愛清フウカ",
-        "ko": "아이키요"
+        "en": "Fuuka",
+        "ja": "フウカ",
+        "ko": "후우카"
       },
       "variants": {}
     },
@@ -1452,8 +1457,8 @@
       "abbreviations": {
         "zh-CN": "茱莉",
         "en": "Juri",
-        "ja": "牛牧ジュリ",
-        "ko": "우시마키"
+        "ja": "ジュリ",
+        "ko": "주리"
       },
       "variants": {}
     },
@@ -1472,9 +1477,9 @@
       },
       "abbreviations": {
         "zh-CN": "日富美",
-        "en": "Ajita",
-        "ja": "阿慈谷ヒフ",
-        "ko": "아지타니 "
+        "en": "Hifumi",
+        "ja": "ヒフミ",
+        "ko": "히후미"
       },
       "variants": {}
     },
@@ -1494,8 +1499,8 @@
       "abbreviations": {
         "zh-CN": "诺亚",
         "en": "Noa",
-        "ja": "生塩ノア",
-        "ko": "우시오 노아"
+        "ja": "ノア",
+        "ko": "노아"
       },
       "variants": {}
     },
@@ -1514,9 +1519,9 @@
       },
       "abbreviations": {
         "zh-CN": "小雪",
-        "en": "Koyu",
-        "ja": "黒崎コユキ",
-        "ko": "쿠로사키"
+        "en": "Koyuki",
+        "ja": "コユキ",
+        "ko": "코유키"
       },
       "variants": {}
     },
@@ -1535,9 +1540,9 @@
       },
       "abbreviations": {
         "zh-CN": "日鞠",
-        "en": "Hima",
-        "ja": "赤星ヒマリ",
-        "ko": "아카보시"
+        "en": "Himari",
+        "ja": "ヒマリ",
+        "ko": "히마리"
       },
       "variants": {}
     },
@@ -1556,9 +1561,9 @@
       },
       "abbreviations": {
         "zh-CN": "千寻",
-        "en": "Chih",
-        "ja": "伊原木チヒロ",
-        "ko": "이오우라"
+        "en": "Chihiro",
+        "ja": "チヒロ",
+        "ko": "치히로"
       },
       "variants": {}
     },
@@ -1577,9 +1582,9 @@
       },
       "abbreviations": {
         "zh-CN": "小玉",
-        "en": "Kota",
-        "ja": "音瀬コタマ",
-        "ko": "오토세 "
+        "en": "Kotama",
+        "ja": "コタマ",
+        "ko": "코타마"
       },
       "variants": {}
     },
@@ -1599,8 +1604,8 @@
       "abbreviations": {
         "zh-CN": "真纪",
         "en": "Maki",
-        "ja": "小塗マキ",
-        "ko": "코누리 마키"
+        "ja": "マキ",
+        "ko": "마키"
       },
       "variants": {}
     },
@@ -1619,9 +1624,9 @@
       },
       "abbreviations": {
         "zh-CN": "堇",
-        "en": "Sumi",
-        "ja": "乙花スミレ",
-        "ko": "오토하나"
+        "en": "Sumire",
+        "ja": "スミレ",
+        "ko": "스미레"
       },
       "variants": {}
     },
@@ -1640,9 +1645,9 @@
       },
       "abbreviations": {
         "zh-CN": "切里诺",
-        "en": "Norok",
-        "ja": "竜華キリノ",
-        "ko": "노로카미 "
+        "en": "Cherino",
+        "ja": "キリノ",
+        "ko": "체리노"
       },
       "variants": {}
     },
@@ -1661,9 +1666,9 @@
       },
       "abbreviations": {
         "zh-CN": "玛丽娜",
-        "en": "Ikegu",
-        "ja": "池倉マリナ",
-        "ko": "이케쿠라 "
+        "en": "Marina",
+        "ja": "マリナ",
+        "ko": "마리나"
       },
       "variants": {}
     },
@@ -1682,9 +1687,9 @@
       },
       "abbreviations": {
         "zh-CN": "知惠",
-        "en": "Tomo",
-        "ja": "糸鼻トモエ",
-        "ko": "이토하나"
+        "en": "Tomoe",
+        "ja": "トモエ",
+        "ko": "토모에"
       },
       "variants": {}
     },
@@ -1703,9 +1708,9 @@
       },
       "abbreviations": {
         "zh-CN": "和香",
-        "en": "Nodo",
-        "ja": "天見ノドカ",
-        "ko": "아마쿠니"
+        "en": "Nodoka",
+        "ja": "ノドカ",
+        "ko": "노도카"
       },
       "variants": {}
     },
@@ -1724,9 +1729,9 @@
       },
       "abbreviations": {
         "zh-CN": "时雨",
-        "en": "Shig",
-        "ja": "間宵シグレ",
-        "ko": "마요이 "
+        "en": "Shigure",
+        "ja": "シグレ",
+        "ko": "시구레"
       },
       "variants": {}
     },
@@ -1745,9 +1750,9 @@
       },
       "abbreviations": {
         "zh-CN": "椿",
-        "en": "Tsub",
-        "ja": "春日ツバキ",
-        "ko": "카스가"
+        "en": "Tsubaki",
+        "ja": "ツバキ",
+        "ko": "츠바키"
       },
       "variants": {}
     },
@@ -1766,9 +1771,9 @@
       },
       "abbreviations": {
         "zh-CN": "枫",
-        "en": "Kaed",
-        "ja": "勇美カエデ",
-        "ko": "이오치"
+        "en": "Kaede",
+        "ja": "カエデ",
+        "ko": "카에데"
       },
       "variants": {}
     },
@@ -1787,9 +1792,9 @@
       },
       "abbreviations": {
         "zh-CN": "三森",
-        "en": "Mimo",
-        "ja": "水羽ミモリ",
-        "ko": "미즈하 "
+        "en": "Mimori",
+        "ja": "ミモリ",
+        "ko": "미모리"
       },
       "variants": {}
     },
@@ -1808,9 +1813,9 @@
       },
       "abbreviations": {
         "zh-CN": "静子",
-        "en": "Shiz",
-        "ja": "河和シズコ",
-        "ko": "카와와 "
+        "en": "Shizuko",
+        "ja": "シズコ",
+        "ko": "시즈코"
       },
       "variants": {}
     },
@@ -1829,9 +1834,9 @@
       },
       "abbreviations": {
         "zh-CN": "伊树菜",
-        "en": "Kuda ",
-        "ja": "久田イズナ",
-        "ko": "쿠다 이즈"
+        "en": "Izuna",
+        "ja": "イズナ",
+        "ko": "이즈나"
       },
       "variants": {}
     },
@@ -1850,9 +1855,9 @@
       },
       "abbreviations": {
         "zh-CN": "三千留",
-        "en": "Chido",
-        "ja": "千鳥ミチル",
-        "ko": "치도리 미"
+        "en": "Michiru",
+        "ja": "ミチル",
+        "ko": "미치루"
       },
       "variants": {}
     },
@@ -1871,9 +1876,9 @@
       },
       "abbreviations": {
         "zh-CN": "月夜",
-        "en": "Tsuk",
-        "ja": "大野ツクヨ",
-        "ko": "오오노 "
+        "en": "Tsukuyo",
+        "ja": "ツクヨ",
+        "ko": "츠쿠요"
       },
       "variants": {}
     },
@@ -1893,8 +1898,8 @@
       "abbreviations": {
         "zh-CN": "旬",
         "en": "Shun",
-        "ja": "春原シュン",
-        "ko": "스노하라"
+        "ja": "シュン",
+        "ko": "슌"
       },
       "variants": {}
     },
@@ -1913,9 +1918,9 @@
       },
       "abbreviations": {
         "zh-CN": "心奈",
-        "en": "Koko",
-        "ja": "春原ココナ",
-        "ko": "스노하라"
+        "en": "Kokona",
+        "ja": "ココナ",
+        "ko": "코코나"
       },
       "variants": {}
     },
@@ -1935,8 +1940,8 @@
       "abbreviations": {
         "zh-CN": "沙耶",
         "en": "Saya",
-        "ja": "薬子サヤ",
-        "ko": "야쿠시 사야"
+        "ja": "サヤ",
+        "ko": "사야"
       },
       "variants": {}
     },
@@ -1956,8 +1961,8 @@
       "abbreviations": {
         "zh-CN": "瑠美",
         "en": "Rumi",
-        "ja": "朱城ルミ",
-        "ko": "아케시로"
+        "ja": "ルミ",
+        "ko": "루미"
       },
       "variants": {}
     },
@@ -1977,8 +1982,8 @@
       "abbreviations": {
         "zh-CN": "美奈",
         "en": "Mina",
-        "ja": "近衛ミナ",
-        "ko": "코노에 미나"
+        "ja": "ミナ",
+        "ko": "미나"
       },
       "variants": {}
     },
@@ -1997,9 +2002,9 @@
       },
       "abbreviations": {
         "zh-CN": "桐乃",
-        "en": "Kiri",
-        "ja": "中務キリノ",
-        "ko": "나카츠카"
+        "en": "Kirino",
+        "ja": "キリノ",
+        "ko": "키리노"
       },
       "variants": {}
     },
@@ -2018,9 +2023,9 @@
       },
       "abbreviations": {
         "zh-CN": "官奈",
-        "en": "Kann",
-        "ja": "尾刃カンナ",
-        "ko": "오가타 칸나"
+        "en": "Kanna",
+        "ja": "カンナ",
+        "ko": "칸나"
       },
       "variants": {}
     },
@@ -2039,9 +2044,9 @@
       },
       "abbreviations": {
         "zh-CN": "宫子",
-        "en": "Miya",
-        "ja": "月雪ミヤコ",
-        "ko": "츠키유키"
+        "en": "Miyako",
+        "ja": "ミヤコ",
+        "ko": "미야코"
       },
       "variants": {}
     },
@@ -2061,8 +2066,8 @@
       "abbreviations": {
         "zh-CN": "咲",
         "en": "Saki",
-        "ja": "空井サキ",
-        "ko": "소라이"
+        "ja": "サキ",
+        "ko": "사키"
       },
       "variants": {}
     },
@@ -2082,8 +2087,8 @@
       "abbreviations": {
         "zh-CN": "萌绘",
         "en": "Moe",
-        "ja": "風倉モエ",
-        "ko": "카제쿠라"
+        "ja": "モエ",
+        "ko": "모에"
       },
       "variants": {}
     },
@@ -2103,8 +2108,8 @@
       "abbreviations": {
         "zh-CN": "美游",
         "en": "Miyu",
-        "ja": "霞沢ミユ",
-        "ko": "카스미자"
+        "ja": "ミユ",
+        "ko": "미유"
       },
       "variants": {}
     },
@@ -2124,8 +2129,8 @@
       "abbreviations": {
         "zh-CN": "宁瑠",
         "en": "Neru",
-        "ja": "美甘ネル",
-        "ko": "미카모 네루"
+        "ja": "ネル",
+        "ko": "네루"
       },
       "variants": {}
     },
@@ -2144,9 +2149,9 @@
       },
       "abbreviations": {
         "zh-CN": "花梨",
-        "en": "Kari",
-        "ja": "角楯カリン",
-        "ko": "카쿠다테"
+        "en": "Karin",
+        "ja": "カリン",
+        "ko": "카린"
       },
       "variants": {}
     },
@@ -2165,9 +2170,9 @@
       },
       "abbreviations": {
         "zh-CN": "明日奈",
-        "en": "Ichin",
-        "ja": "一ノ瀬アス",
-        "ko": "이치노세 "
+        "en": "Asuna",
+        "ja": "アスナ",
+        "ko": "아스나"
       },
       "variants": {}
     },
@@ -2186,9 +2191,9 @@
       },
       "abbreviations": {
         "zh-CN": "朱音",
-        "en": "Akan",
-        "ja": "室笠アカネ",
-        "ko": "무로카사"
+        "en": "Akane",
+        "ja": "アカネ",
+        "ko": "아카네"
       },
       "variants": {}
     },
@@ -2207,9 +2212,9 @@
       },
       "abbreviations": {
         "zh-CN": "日和",
-        "en": "Hior",
-        "ja": "戸坂ヒオリ",
-        "ko": "토츠카 "
+        "en": "Hiori",
+        "ja": "ヒオリ",
+        "ko": "히오리"
       },
       "variants": {}
     },
@@ -2228,9 +2233,9 @@
       },
       "abbreviations": {
         "zh-CN": "若藻",
-        "en": "Waka",
-        "ja": "狐坂ワカモ",
-        "ko": "코사카 "
+        "en": "Wakamo",
+        "ja": "ワカモ",
+        "ko": "와카모"
       },
       "variants": {}
     },
@@ -2249,9 +2254,9 @@
       },
       "abbreviations": {
         "zh-CN": "芹奈",
-        "en": "Seri",
-        "ja": "鷲見セリナ",
-        "ko": "스미 세리나"
+        "en": "Serina",
+        "ja": "セリナ",
+        "ko": "세리나"
       },
       "variants": {}
     },
@@ -2270,9 +2275,9 @@
       },
       "abbreviations": {
         "zh-CN": "花绘",
-        "en": "Hana",
-        "ja": "朝顔ハナエ",
-        "ko": "아사가오"
+        "en": "Hanae",
+        "ja": "ハナエ",
+        "ko": "하나에"
       },
       "variants": {}
     },
@@ -2291,9 +2296,9 @@
       },
       "abbreviations": {
         "zh-CN": "妃姬",
-        "en": "Kisa",
-        "ja": "竜華キサキ",
-        "ko": "류우게 "
+        "en": "Kisaki",
+        "ja": "キサキ",
+        "ko": "키사키"
       },
       "variants": {}
     },
