@@ -121,11 +121,6 @@ def cleanup_source_directory(mod_name, game_profile):
     """清理源mod文件夹，现在会根据游戏档案来决定保护哪些文件。"""
     logging.info(i18n.t("cleanup_start", mod_name=mod_name))
 
-    confirm = input(i18n.t("cleanup_warning_detailed", mod_name=mod_name))
-    if confirm.lower() not in ['y', 'yes']:
-        logging.info(i18n.t("cleanup_cancelled"))
-        return False
-
     mod_path = os.path.join(SOURCE_DIR, mod_name)
     protected_items = game_profile.get('protected_items', set())
 

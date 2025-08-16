@@ -112,7 +112,20 @@
 "glossary_status_combined": "Main glossary({main_count} terms) + Auxiliary glossaries({aux_count} files) = Total({total_count} terms)",
 "glossary_status_none": "No glossaries available",
 "logger_initialized": "Logger initialized and ready",
-"language_loaded": "Language loaded: {lang_code}"
+"language_loaded": "Language loaded: {lang_code}",
+"ask_cleanup_prompt": "Do you want to clean up the source MOD folder '{mod_name}' to save disk space?\nThis will delete all files except '.metadata', 'localization', and 'thumbnail.png'.\nPlease enter Y or N: ",
+"enter_cleanup_choice": "Please enter your choice (Y or N): ",
+"cleanup_confirmed": "Source file cleanup confirmed",
+"cleanup_cancelled": "Source file cleanup cancelled",
+"cleanup_status_yes": "Will clean up source files",
+"cleanup_status_no": "Will not clean up source files",
+"executing_cleanup": "Executing source file cleanup...",
+"cleanup_completed": "Source file cleanup completed",
+"invalid_cleanup_choice": "Please enter Y or N",
+"invalid_confirm_choice": "Please enter Y or N",
+"target_languages_multiple": "Multiple languages ({count} types)",
+"glossary_status_combined_auxiliary": "Main glossary + {count} auxiliary glossaries",
+"glossary_status_main_only": "Main glossary only"
 
 
 }
