@@ -61,6 +61,62 @@ def select_mod_directory():
         return None
 
 
+def scan_source_directory(source_dir):
+    """
+    扫描源目录，返回所有mod文件夹的列表
+    
+    Args:
+        source_dir: 源目录路径
+        
+    Returns:
+        list: mod文件夹名称列表
+    """
+    if not os.path.exists(source_dir):
+        logging.error(f"源目录不存在: {source_dir}")
+        return []
+    
+    try:
+        mod_folders = [d for d in os.listdir(source_dir) if os.path.isdir(os.path.join(source_dir, d))]
+        return mod_folders
+    except Exception as e:
+        logging.error(f"扫描目录时发生错误: {e}")
+        return []
+
+
+def select_mod(mods):
+    """
+    从mod列表中选择一个mod
+    
+    Args:
+        mods: mod文件夹名称列表
+        
+    Returns:
+        str or None: 选中的mod名称，如果用户取消则返回None
+    """
+    if not mods:
+        logging.error(i18n.t("error_no_mods_found", dir=SOURCE_DIR))
+        return None
+    
+    logging.info(i18n.t("select_mod_prompt"))
+    for i, folder_name in enumerate(mods):
+        logging.info(f"  [{i + 1}] {folder_name}")
+
+    while True:
+        try:
+            choice = int(input(i18n.t("enter_choice_prompt"))) - 1
+            if 0 <= choice < len(mods):
+                selected_mod = mods[choice]
+                logging.info(i18n.t("you_selected", mod_name=selected_mod))
+                return selected_mod
+            else:
+                logging.warning(i18n.t("invalid_input_number"))
+        except ValueError:
+            logging.warning(i18n.t("invalid_input_not_number"))
+        except (EOFError, KeyboardInterrupt):
+            logging.info("用户取消选择")
+            return None
+
+
 def cleanup_source_directory(mod_name, game_profile):
     """清理源mod文件夹，现在会根据游戏档案来决定保护哪些文件。"""
     logging.info(i18n.t("cleanup_start", mod_name=mod_name))

@@ -1,0 +1,273 @@
+{
+  "metadata": {
+    "name": "Blue Archive (碧蓝档案)",
+    "description": "Korean anime mobile game terminology and character names",
+    "version": "1.0.0",
+    "last_updated": "2025-01-27",
+    "sources": ["Blue Archive game", "Community translations"],
+    "game_id": "stellaris",
+    "type": "auxiliary"
+  },
+  "entries": [
+    {
+      "id": "ba_001",
+      "translations": {
+        "en": "Arona",
+        "zh-CN": "阿罗娜",
+        "ja": "アロナ",
+        "ko": "아로나"
+      },
+      "metadata": {
+        "category": "character",
+        "remarks": "Main AI assistant character"
+      }
+    },
+    {
+      "id": "ba_002",
+      "translations": {
+        "en": "Shiroko",
+        "zh-CN": "白子",
+        "ja": "シロコ",
+        "ko": "시로코"
+      },
+      "metadata": {
+        "category": "character",
+        "remarks": "Main protagonist, Abydos student"
+      }
+    },
+    {
+      "id": "ba_003",
+      "translations": {
+        "en": "Yuuka",
+        "zh-CN": "优香",
+        "ja": "ユウカ",
+        "ko": "유우카"
+      },
+      "metadata": {
+        "category": "character",
+        "remarks": "Abydos student council president"
+      }
+    },
+    {
+      "id": "ba_004",
+      "translations": {
+        "en": "Hoshino",
+        "zh-CN": "星野",
+        "ja": "ホシノ",
+        "ko": "호시노"
+      },
+      "metadata": {
+        "category": "character",
+        "remarks": "Abydos student, older sister figure"
+      }
+    },
+    {
+      "id": "ba_005",
+      "translations": {
+        "en": "Nonomi",
+        "zh-CN": "野乃美",
+        "ja": "ノノミ",
+        "ko": "노노미"
+      },
+      "metadata": {
+        "category": "character",
+        "remarks": "Abydos student, cheerful personality"
+      }
+    },
+    {
+      "id": "ba_006",
+      "translations": {
+        "en": "EX Skill",
+        "zh-CN": "EX技能",
+        "ja": "EXスキル",
+        "ko": "EX스킬"
+      },
+      "metadata": {
+        "category": "gameplay",
+        "remarks": "Special ability that consumes energy"
+      }
+    },
+    {
+      "id": "ba_007",
+      "translations": {
+        "en": "Normal Skill",
+        "zh-CN": "普通技能",
+        "ja": "ノーマルスキル",
+        "ko": "노멀스킬"
+      },
+      "metadata": {
+        "category": "gameplay",
+        "remarks": "Basic ability with cooldown"
+      }
+    },
+    {
+      "id": "ba_008",
+      "translations": {
+        "en": "Passive Skill",
+        "zh-CN": "被动技能",
+        "ja": "パッシブスキル",
+        "ko": "패시브스킬"
+      },
+      "metadata": {
+        "category": "gameplay",
+        "remarks": "Always active ability"
+      }
+    },
+    {
+      "id": "ba_009",
+      "translations": {
+        "en": "Academy",
+        "zh-CN": "学园",
+        "ja": "学園",
+        "ko": "학원"
+      },
+      "metadata": {
+        "category": "setting",
+        "remarks": "Educational institution setting"
+      }
+    },
+    {
+      "id": "ba_010",
+      "translations": {
+        "en": "Tactical",
+        "zh-CN": "战术",
+        "ja": "戦術",
+        "ko": "전술"
+      },
+      "metadata": {
+        "category": "gameplay",
+        "remarks": "Strategic combat system"
+      }
+    },
+    {
+      "id": "ba_011",
+      "translations": {
+        "en": "Mystic",
+        "zh-CN": "神秘",
+        "ja": "神秘",
+        "ko": "신비"
+      },
+      "metadata": {
+        "category": "setting",
+        "remarks": "Supernatural elements"
+      }
+    },
+    {
+      "id": "ba_012",
+      "translations": {
+        "en": "Student",
+        "zh-CN": "学生",
+        "ja": "学生",
+        "ko": "학생"
+      },
+      "metadata": {
+        "category": "character",
+        "remarks": "Character role in academy"
+      }
+    },
+    {
+      "id": "ba_013",
+      "translations": {
+        "en": "Teacher",
+        "zh-CN": "老师",
+        "ja": "先生",
+        "ko": "선생님"
+      },
+      "metadata": {
+        "category": "character",
+        "remarks": "Instructor role"
+      }
+    },
+    {
+      "id": "ba_014",
+      "translations": {
+        "en": "Weapon",
+        "zh-CN": "武器",
+        "ja": "武器",
+        "ko": "무기"
+      },
+      "metadata": {
+        "category": "equipment",
+        "remarks": "Combat equipment"
+      }
+    },
+    {
+      "id": "ba_015",
+      "translations": {
+        "en": "Armor",
+        "zh-CN": "防具",
+        "ja": "防具",
+        "ko": "방어구"
+      },
+      "metadata": {
+        "category": "equipment",
+        "remarks": "Protective equipment"
+      }
+    },
+    {
+      "id": "ba_016",
+      "translations": {
+        "en": "Consumable",
+        "zh-CN": "消耗品",
+        "ja": "消耗品",
+        "ko": "소모품"
+      },
+      "metadata": {
+        "category": "equipment",
+        "remarks": "One-time use items"
+      }
+    },
+    {
+      "id": "ba_017",
+      "translations": {
+        "en": "Battle",
+        "zh-CN": "战斗",
+        "ja": "戦闘",
+        "ko": "전투"
+      },
+      "metadata": {
+        "category": "gameplay",
+        "remarks": "Combat encounters"
+      }
+    },
+    {
+      "id": "ba_018",
+      "translations": {
+        "en": "Training",
+        "zh-CN": "训练",
+        "ja": "訓練",
+        "ko": "훈련"
+      },
+      "metadata": {
+        "category": "gameplay",
+        "remarks": "Character development"
+      }
+    },
+    {
+      "id": "ba_019",
+      "translations": {
+        "en": "Social",
+        "zh-CN": "社交",
+        "ja": "社交",
+        "ko": "사교"
+      },
+      "metadata": {
+        "category": "gameplay",
+        "remarks": "Character interaction system"
+      }
+    },
+    {
+      "id": "ba_020",
+      "translations": {
+        "en": "Story",
+        "zh-CN": "剧情",
+        "ja": "ストーリー",
+        "ko": "스토리"
+      },
+      "metadata": {
+        "category": "content",
+        "remarks": "Narrative content"
+      }
+    }
+  ]
+}

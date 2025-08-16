@@ -55,7 +55,10 @@ def load_language(lang_code=None):
             _strings = json.load(f)
         _language_loaded = True  # 设置标志
         _current_lang = lang_code  # 设置当前语言
-        logging.info(f"Language loaded: {lang_code}")
+        try:
+            logging.info(i18n.t("language_loaded", lang_code=lang_code))
+        except:
+            logging.info(f"Language loaded: {lang_code}")
         return True
     except Exception as e:
         logging.error(f"Error loading language file {lang_file_path}: {e}")

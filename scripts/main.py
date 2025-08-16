@@ -98,96 +98,306 @@ def select_language(prompt_key, game_profile, source_lang_key=None):
     """
     logging.info(i18n.t(prompt_key))
     
-    supported_languages = {key: LANGUAGES[key] for key in game_profile.get("supported_language_keys", []) if key in LANGUAGES}
+    # Filter languages based on game profile support
+    supported_langs = [LANGUAGES[key] for key in game_profile['supported_language_keys']]
     
-    # For the target language menu, add the "all" and "custom" options
-    if prompt_key == "select_target_language_prompt":
-        logging.info(f"  [0] {i18n.t('target_option_all_dynamic', count=len(supported_languages) - 1)}")
-
-    for key, lang_info in supported_languages.items():
-        if source_lang_key and lang_info['key'] == source_lang_key:
-            logging.info(f"  [{key}] {lang_info['name']} (Source)")
-        else:
-            logging.info(f"  [{key}] {lang_info['name']}")
+    for i, lang in enumerate(supported_langs, 1):
+        logging.info(f"  [{i}] {lang['name']}")
     
-    if prompt_key == "select_target_language_prompt":
-        logging.info(f"  [c] {i18n.t('target_option_custom')}")
-
-    # Define which inputs are allowed for this menu
-    allowed_choices = list(supported_languages.keys())
-    if prompt_key == "select_target_language_prompt":
-        allowed_choices.extend(['0', 'c'])
-
     while True:
-        choice = input(i18n.t("enter_choice_prompt")).strip().lower()
-        if choice in allowed_choices:
-            return choice
+        try:
+            choice = int(input(i18n.t("enter_choice_prompt"))) - 1
+            if 0 <= choice < len(supported_langs):
+                return supported_langs[choice]
+            else:
+                logging.warning(i18n.t("invalid_input_number"))
+        except ValueError:
+            logging.warning(i18n.t("invalid_input_not_number"))
+
+def select_auxiliary_glossaries(game_profile):
+    """
+    选择外挂词典
+    
+    Args:
+        game_profile: 游戏配置
+        
+    Returns:
+        List[int]: 选中的外挂词典索引列表
+    """
+    from scripts.core.glossary_manager import glossary_manager
+    
+    # 先加载主词典以获取游戏ID
+    main_glossary_loaded = glossary_manager.load_game_glossary(game_profile['id'])
+    
+    if not main_glossary_loaded:
+        logging.warning(i18n.t("main_glossary_not_found"))
+        return []
+    
+    # 获取外挂词典信息
+    auxiliary_glossaries = glossary_manager.get_auxiliary_glossaries_info()
+    
+    if not auxiliary_glossaries:
+        if i18n.get_current_language() == "en_US":
+            logging.info("No auxiliary glossaries found")
         else:
-            logging.warning(i18n.t("invalid_input_number"))
+            logging.info("未找到外挂词典")
+        return []
+    
+    # 显示主词典状态
+    main_stats = glossary_manager.get_glossary_stats()
+    if main_stats['loaded']:
+        logging.info(i18n.t("main_glossary_enabled", count=main_stats['total_entries']))
+    else:
+        if i18n.get_current_language() == "en_US":
+            logging.warning("Main glossary not loaded")
+        else:
+            logging.warning("主词典未加载")
+    
+    # 显示外挂词典选项
+    logging.info(i18n.t("auxiliary_glossaries_detected"))
+    for i, glossary in enumerate(auxiliary_glossaries, 1):
+        logging.info(i18n.t("auxiliary_glossary_option", 
+                           index=i, 
+                           name=glossary['name'], 
+                           description=glossary['description'], 
+                           entry_count=glossary['entry_count']))
+    
+    logging.info(i18n.t("select_all_auxiliary"))
+    logging.info(i18n.t("no_auxiliary_glossary"))
+    
+    while True:
+        choice = input(i18n.t("enter_auxiliary_choice")).strip().upper()
+        
+        if choice == 'N':
+            return []
+        elif choice == '0':
+            return list(range(len(auxiliary_glossaries)))
+        else:
+            try:
+                idx = int(choice) - 1
+                if 0 <= idx < len(auxiliary_glossaries):
+                    return [idx]
+                else:
+                    logging.warning(i18n.t("invalid_auxiliary_choice"))
+            except ValueError:
+                logging.warning(i18n.t("invalid_auxiliary_choice"))
 
-def main_menu():
+def show_project_overview(mod_name, api_provider, game_profile, source_lang, target_languages, auxiliary_glossaries):
     """
-    Main interactive menu for the user.
-    Orchestrates the entire workflow from user selection to calling the translation process.
+    显示工程总览并等待用户确认
+    
+    Args:
+        mod_name: MOD名称
+        api_provider: API供应商
+        game_profile: 游戏配置
+        source_lang: 源语言
+        target_languages: 目标语言列表
+        auxiliary_glossaries: 外挂词典信息
+        
+    Returns:
+        bool: 用户是否确认开始翻译
     """
-    # 注意：日志系统和国际化系统已在主程序入口处初始化，这里不需要重复初始化
+    logging.info(i18n.t("project_overview_title"))
     
-    logging.info("--- New Session Started ---")
+    # 显示基本信息
+    logging.info(i18n.t("project_overview_mod", mod_name=mod_name))
+    logging.info(i18n.t("project_overview_api", provider=api_provider.capitalize()))
+    logging.info(i18n.t("project_overview_game", game_name=game_profile['name']))
+    logging.info(i18n.t("project_overview_source", source_lang=source_lang['name']))
     
-    # 步骤 1: 选择API供应商
-    selected_provider = select_api_provider()
+    # 显示目标语言
+    if len(target_languages) == 1:
+        target_lang_info = target_languages[0]['name']
+    else:
+        target_lang_info = f"多语言 ({len(target_languages)} 种)"
+    logging.info(i18n.t("project_overview_target", target_lang=target_lang_info))
     
-    # 步骤 2: 选择游戏
-    selected_game_profile = select_game_profile()
+    # 显示词典配置
+    if auxiliary_glossaries:
+        glossary_status = f"主词典 + {len(auxiliary_glossaries)} 个外挂词典"
+    else:
+        glossary_status = "仅主词典"
+    logging.info(i18n.t("project_overview_glossary", glossary_status=glossary_status))
     
-    # 步骤 2.5: 选择Mod
-    selected_mod = directory_handler.select_mod_directory()
-    if not selected_mod: return
+    # 显示清理状态
+    logging.info(i18n.t("project_overview_cleanup", cleanup_status="待确认"))
+    logging.info(i18n.t("cleanup_after_confirmation"))
+    
+    # 等待用户确认
+    while True:
+        choice = input(i18n.t("confirm_translation_start")).strip().upper()
+        if choice == 'Y':
+            logging.info(i18n.t("translation_confirmed"))
+            return True
+        elif choice == 'N':
+            logging.info(i18n.t("returning_to_language_selection"))
+            return False
+        else:
+            if i18n.get_current_language() == "en_US":
+                logging.warning("Please enter Y or N")
+            else:
+                logging.warning("请输入 Y 或 N")
 
-    # 3. Get Mod Context from user
-    mod_context = gather_mod_context(selected_mod)
-
-    # 4. Ask for Cleanup
-    directory_handler.cleanup_source_directory(selected_mod, selected_game_profile)
+def handle_custom_language_selection():
+    """
+    处理自定义语言选择
     
-    # 5. Select Source Language
-    source_lang_choice = select_language("select_source_language_prompt", selected_game_profile)
-    source_lang = LANGUAGES[source_lang_choice]
+    Returns:
+        dict or None: 自定义语言字典，如果用户选择取消则返回 None
+    """
+    logging.info(i18n.t("entering_custom_mode"))
+    custom_name = input(i18n.t("prompt_custom_lang_name"))
+    custom_key = input(i18n.t("prompt_custom_lang_key"))
+    custom_prefix = input(i18n.t("prompt_custom_lang_prefix"))
     
-    # 6. Select Target Language(s)
-    target_choice = select_language("select_target_language_prompt", selected_game_profile, source_lang['key'])
+    if custom_name.lower() == "cancel":
+        logging.info(i18n.t("custom_language_selection_cancelled"))
+        return None
+    
+    if not custom_key or not custom_prefix:
+        logging.warning(i18n.t("custom_language_selection_incomplete"))
+        return None
+    
+    custom_lang = {
+        "code": "custom", "key": custom_key, 
+        "name": custom_name, "folder_prefix": custom_prefix
+    }
+    logging.info(i18n.t("custom_language_selected", name=custom_name, key=custom_key, prefix=custom_prefix))
+    return custom_lang
 
-    # 7. Prepare the list of target languages based on user's choice
+def main():
+    """Main function."""
+    # 初始化日志系统
+    logger.setup_logger()
+    
+    # 加载语言文件
+    i18n.load_language()
+    
+    # 检查源目录是否存在
+    if not os.path.exists(SOURCE_DIR):
+        logging.error(i18n.t("error_source_folder_not_found", dir=SOURCE_DIR))
+        return
+    
+    # 扫描源目录
+    mods = directory_handler.scan_source_directory(SOURCE_DIR)
+    if not mods:
+        logging.error(i18n.t("error_no_mods_found", dir=SOURCE_DIR))
+        return
+    
+    # 选择MOD
+    mod_name = directory_handler.select_mod(mods)
+    if not mod_name:
+        return
+    
+    # 选择游戏配置
+    game_profile = select_game_profile()
+    if not game_profile:
+        return
+    
+    # 选择API供应商
+    api_provider = select_api_provider()
+    if not api_provider:
+        return
+    
+    # 获取MOD上下文
+    mod_context = gather_mod_context(mod_name)
+    
+    # 选择源语言
+    source_lang = select_language("select_source_language_prompt", game_profile)
+    if not source_lang:
+        return
+    
+    # 选择目标语言
     target_languages = []
-    if target_choice == '0':
-        # Batch mode: create a list of all supported languages except the source
-        supported_keys = selected_game_profile.get("supported_language_keys", [])
-        for key in supported_keys:
-            if LANGUAGES[key]['key'] != source_lang['key']:
-                target_languages.append(LANGUAGES[key])
-    elif target_choice == 'c':
-        # Custom language mode: prompt user for details
-        logging.info(i18n.t("entering_custom_mode"))
-        custom_name = input(i18n.t("prompt_custom_lang_name"))
-        custom_key = input(i18n.t("prompt_custom_lang_key"))
-        custom_prefix = input(i18n.t("prompt_custom_lang_prefix"))
-        custom_lang = {
-            "code": "custom", "key": custom_key, 
-            "name": custom_name, "folder_prefix": custom_prefix
-        }
-        target_languages.append(custom_lang)
-    elif target_choice in LANGUAGES:
-        # Single language mode
-        target_lang = LANGUAGES[target_choice]
-        if target_lang['key'] == source_lang['key']:
-            logging.error(i18n.t("error_same_language"))
-            return
-        target_languages.append(target_lang)
+    while True:
+        logging.info(i18n.t("select_target_language_prompt"))
+        
+        # 显示选项
+        if len(game_profile['supported_language_keys']) > 1:
+            # 排除源语言
+            available_targets = [LANGUAGES[key] for key in game_profile['supported_language_keys'] 
+                               if key != source_lang['code']]
+            
+            # 先显示"全部语言"选项
+            all_langs_count = len(available_targets)
+            logging.info(f"  [0] {i18n.t('target_option_all_dynamic', count=all_langs_count)}")
+            
+            # 再显示"自定义"选项
+            logging.info(f"  [c] {i18n.t('target_option_custom')}")
+            
+            # 最后显示具体语言选项
+            for i, lang in enumerate(available_targets, 1):
+                logging.info(f"  [{i}] {lang['name']}")
+            
+            choice = input(i18n.t("enter_choice_prompt")).strip()
+            
+            if choice == "0":
+                # 选择所有语言
+                target_languages = available_targets
+                break
+            elif choice.lower() == "c":
+                # 自定义语言模式
+                custom_lang = handle_custom_language_selection()
+                if custom_lang:
+                    target_languages = [custom_lang]
+                    break
+            else:
+                try:
+                    idx = int(choice) - 1
+                    if 0 <= idx < len(available_targets):
+                        target_languages = [available_targets[idx]]
+                        break
+                    else:
+                        logging.warning(i18n.t("invalid_input_number"))
+                except ValueError:
+                    logging.warning(i18n.t("invalid_input_not_number"))
+        else:
+            # 只有一种语言的情况
+            target_languages = [source_lang]
+            break
     
-    # 8. If we have valid targets, run the main translation workflow
-    if target_languages:
-        # 【核心修正】将选择好的 selected_provider 参数，一路传递下去
-        initial_translate.run(selected_mod, source_lang, target_languages, selected_game_profile, mod_context, selected_provider)
+    if not target_languages:
+        return
+    
+    # 选择外挂词典
+    auxiliary_glossaries = select_auxiliary_glossaries(game_profile)
+    
+    # 显示工程总览并等待确认
+    if not show_project_overview(mod_name, api_provider, game_profile, source_lang, target_languages, auxiliary_glossaries):
+        # 用户选择返回，重新开始
+        main()
+        return
+    
+    # 加载选中的外挂词典
+    from scripts.core.glossary_manager import glossary_manager
+    
+    # 检查词典状态
+    if auxiliary_glossaries:
+        success = glossary_manager.load_auxiliary_glossaries(auxiliary_glossaries)
+        if success:
+            if i18n.get_current_language() == "en_US":
+                logging.info(f"Loaded {len(auxiliary_glossaries)} auxiliary glossaries")
+            else:
+                logging.info(f"已加载 {len(auxiliary_glossaries)} 个外挂词典")
+        else:
+            logging.warning(i18n.t("auxiliary_glossary_load_failed"))
+    
+    # 最终检查词典状态
+    if not glossary_manager.has_any_glossary():
+        logging.warning(i18n.t("no_glossaries_available"))
+    else:
+        glossary_status = glossary_manager.get_glossary_status_summary()
+        logging.info(i18n.t("glossary_status_display", status=glossary_status))
+    
+    # 开始翻译工作流
+    initial_translate.run(
+        mod_name=mod_name,
+        source_lang=source_lang,
+        target_languages=target_languages,
+        game_profile=game_profile,
+        mod_context=mod_context,
+        selected_provider=api_provider
+    )
 
 if __name__ == '__main__':
     # 确保日志系统和国际化系统正确初始化
@@ -199,7 +409,7 @@ if __name__ == '__main__':
         i18n.load_language()
         
         # 运行主菜单
-        main_menu()
+        main()
         
         logging.info(i18n.t("workflow_completed"))
         

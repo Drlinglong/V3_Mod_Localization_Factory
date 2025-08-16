@@ -247,6 +247,29 @@ def run(mod_name: str,
             else:
                 logging.warning("校对进度看板生成失败")
 
+    # ───────────── 7. 询问是否清理多余文件 ─────────────
+    if i18n.get_current_language() == "en_US":
+        cleanup_prompt = f"\nTranslation completed! Do you want to clean up the source mod folder '{mod_name}' to save disk space?"
+    else:
+        cleanup_prompt = f"\n翻译完成！是否要清理源MOD文件夹 '{mod_name}' 以节省磁盘空间？"
+    
+    cleanup_prompt += "\nThis will delete all files except '.metadata', 'localization', and 'thumbnail.png'."
+    cleanup_prompt += "\nDo you want to continue? (Enter 'y' or 'yes' to confirm): "
+    
+    cleanup_choice = input(cleanup_prompt).strip().lower()
+    if cleanup_choice in ['y', 'yes']:
+        if i18n.get_current_language() == "en_US":
+            logging.info("Starting source mod folder cleanup...")
+        else:
+            logging.info("开始清理源MOD文件夹...")
+        
+        directory_handler.cleanup_source_directory(mod_name, game_profile)
+    else:
+        if i18n.get_current_language() == "en_US":
+            logging.info("Cleanup skipped by user")
+        else:
+            logging.info("用户选择跳过清理")
+
     if i18n.get_current_language() == "en_US":
         logging.info(f"Workflow completed! Mod '{mod_name}' translation task finished")
     else:
