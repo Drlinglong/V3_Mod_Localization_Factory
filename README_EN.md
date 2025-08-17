@@ -8,6 +8,33 @@
 
 > Say goodbye to copy-paste, embrace automation. This project provides a powerful, semi-automated localization workflow for Paradox Interactive (PDS) game mods (e.g., Victoria 3, Stellaris).
 
+## 📚 Documentation Navigation
+
+### 🚀 Quick Start
+- [Quick Start Guide](docs/user-guides/quick-start-en.md) - Get started in 5 minutes
+- [Detailed Installation](docs/setup/installation-en.md) - Complete installation process
+
+### 📖 User Guides
+- [Beginner's Guide (Chinese)](docs/user-guides/beginner-guide-zh.md) - For Chinese users
+- [Beginner's Guide (English)](docs/user-guides/beginner-guide-en.md) - For English users
+
+### 🔧 Glossary System
+- [Glossary System Overview](docs/glossary/overview.md) - Complete introduction to the glossary system
+- [Glossary Tools Guide](docs/glossary/tools-guide.md) - How to use parser.py and validator.py
+- [System Mechanism](docs/glossary/system-mechanism.md) - Technical implementation details
+- [Blue Archive Glossary](docs/glossary/blue-archive-guide.md) - Specific topic glossary usage
+
+### 👨‍💻 Developer Documentation
+- [Project Architecture](docs/developer/architecture-en.md) - System design explanation
+- [Parallel Processing Technology](docs/developer/parallel-processing.md) - Performance optimization details
+- [Implementation Notes](docs/developer/implementation-notes.md) - Development process records
+
+### ⚙️ Configuration & Troubleshooting
+- [Configuration Guide](docs/setup/configuration.md) - Detailed configuration options
+- [Common Issues](docs/examples/troubleshooting.md) - Problem solutions
+
+---
+
 ### License
 
 This project uses a **dual-licensing** model:
