@@ -168,13 +168,24 @@
 "glossary_merge_completed": "Glossary merged: {main_entries} main entries + {aux_entries} auxiliary entries = {total_entries} total",
 "project_startup": "Project startup: {display_name} v{version}",
 "project_engineering_name": "Engineering name: {name}",
-"project_last_update": "Last update: {date}",
-"version_info_title": "Project Version Information",
-"version_info_display_name": "🎯 {display_name}",
-"version_info_engineering_name": "🔧 {name}",
-"version_info_version": "📦 Version: {version}",
-"version_info_last_update": "📅 Last Update: {date}",
-"version_info_copyright": "© {copyright}"
-
-
+"project_last_update": "Last Update: 2025.8.17",
+"version_info_title": "Version Information",
+"version_info_display_name": "Project Name: {display_name}",
+"version_info_engineering_name": "Engineering Name: {engineering_name}",
+"version_info_version": "Version: {version}",
+"version_info_last_update": "Last Update: {last_update}",
+  
+  "thinking_enabled": "Thinking enabled (thinking_budget={budget})",
+  "thinking_disabled": "Thinking disabled (thinking_budget=0)",
+  "batch_thinking_enabled": "Batch {batch_num}: Thinking enabled (thinking_budget={budget})",
+  "batch_thinking_disabled": "Batch {batch_num}: Thinking disabled (thinking_budget=0)",
+  "single_translation_thinking_enabled": "Single translation: Thinking enabled (thinking_budget={budget})",
+  "single_translation_thinking_disabled": "Single translation: Thinking disabled (thinking_budget=0)",
+  
+  "qwen_thinking_enabled": "Thinking enabled",
+  "qwen_thinking_disabled": "Thinking disabled (added /no_think)",
+  "qwen_batch_thinking_enabled": "Batch {batch_num}: Thinking enabled",
+  "qwen_batch_thinking_disabled": "Batch {batch_num}: Thinking disabled (added /no_think)",
+  "qwen_single_translation_thinking_enabled": "Single translation: Thinking enabled",
+  "qwen_single_translation_thinking_disabled": "Single translation: Thinking disabled (added /no_think)"
 }

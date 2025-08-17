@@ -77,7 +77,35 @@ def translate_single_text(
 
     try:
         model_name = API_PROVIDERS["gemini"]["default_model"]
-        response = client.models.generate_content(model=model_name, contents=prompt)
+        
+        # 根据配置决定是否启用思考功能
+        from scripts.config import GEMINI_CONFIG
+        
+        if GEMINI_CONFIG["enable_thinking"]:
+            # 启用思考功能（可能增加成本）
+            from google.genai import types
+            response = client.models.generate_content(
+                model=model_name, 
+                contents=prompt,
+                config=types.GenerateContentConfig(
+                    thinking_config=types.ThinkingConfig(
+                        thinking_budget=GEMINI_CONFIG["thinking_budget"]
+                    )
+                )
+            )
+            logging.info(i18n.t("single_translation_thinking_enabled", budget=GEMINI_CONFIG["thinking_budget"]))
+        else:
+            # 禁用思考功能（节约成本）
+            from google.genai import types
+            response = client.models.generate_content(
+                model=model_name, 
+                contents=prompt,
+                config=types.GenerateContentConfig(
+                    thinking_config=types.ThinkingConfig(thinking_budget=0)
+                )
+            )
+            logging.info(i18n.t("single_translation_thinking_disabled"))
+        
         translated = strip_outer_quotes(response.text.strip())
 
         # Post-processing for EU4 Polish
@@ -114,7 +142,7 @@ def _translate_chunk(client, chunk, source_lang, target_lang, game_profile, mod_
                     glossary_prompt_part = glossary_manager.create_dynamic_glossary_prompt(
                         relevant_terms, source_lang["code"], target_lang["code"]
                     ) + "\n\n"
-            logging.info(i18n.t("batch_translation_glossary_injected", batch_num=batch_num, count=len(relevant_terms)))
+                    logging.info(i18n.t("batch_translation_glossary_injected", batch_num=batch_num, count=len(relevant_terms)))
             
             format_prompt_part = (
                 "CRITICAL FORMATTING: Your response MUST be a numbered list with the EXACT same number of items, from 1 to "
@@ -134,7 +162,35 @@ def _translate_chunk(client, chunk, source_lang, target_lang, game_profile, mod_
             prompt = base_prompt + context_prompt_part + glossary_prompt_part + format_prompt_part
 
             model_name = API_PROVIDERS["gemini"]["default_model"]
-            response = client.models.generate_content(model=model_name, contents=prompt)
+            
+            # 根据配置决定是否启用思考功能
+            from scripts.config import GEMINI_CONFIG
+            
+            if GEMINI_CONFIG["enable_thinking"]:
+                # 启用思考功能（可能增加成本）
+                from google.genai import types
+                response = client.models.generate_content(
+                    model=model_name, 
+                    contents=prompt,
+                    config=types.GenerateContentConfig(
+                        thinking_config=types.ThinkingConfig(
+                            thinking_budget=GEMINI_CONFIG["thinking_budget"]
+                        )
+                    )
+                )
+                logging.info(i18n.t("batch_thinking_enabled", batch_num=batch_num, budget=GEMINI_CONFIG["thinking_budget"]))
+            else:
+                # 禁用思考功能（节约成本）
+                from google.genai import types
+                response = client.models.generate_content(
+                    model=model_name, 
+                    contents=prompt,
+                    config=types.GenerateContentConfig(
+                        thinking_config=types.ThinkingConfig(thinking_budget=0)
+                    )
+                )
+                logging.info(i18n.t("batch_thinking_disabled", batch_num=batch_num))
+            
             translated_chunk = re.findall(
                 r'^\s*\d+\.\s*"?(.+?)"?$', response.text, re.MULTILINE | re.DOTALL
             )

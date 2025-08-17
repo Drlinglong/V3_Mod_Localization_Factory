@@ -1,0 +1,129 @@
+2025-08-17 16:04:05,375 - INFO - 日志系统初始化完成
+2025-08-17 16:04:05,375 - INFO - 
+请选择游戏:
+2025-08-17 16:04:05,375 - INFO -   [1] Victoria 3 (维多利亚3)
+2025-08-17 16:04:05,375 - INFO -   [2] Stellaris (群星)
+2025-08-17 16:04:05,376 - INFO -   [3] Europa Universalis IV (欧陆风云4)
+2025-08-17 16:04:05,376 - INFO -   [4] Hearts of Iron IV (钢铁雄心4)
+2025-08-17 16:04:05,376 - INFO -   [5] Crusader Kings III (十字军之王3)
+2025-08-17 16:04:08,765 - INFO - 请选择API供应商:
+2025-08-17 16:04:08,765 - INFO -   [1] Gemini
+2025-08-17 16:04:08,765 - INFO -   [2] Openai
+2025-08-17 16:04:08,765 - INFO -   [3] Qwen - （中国大陆地区用户请用这个）
+2025-08-17 16:04:10,343 - INFO - 请选择要汉化的Mod：
+2025-08-17 16:04:10,343 - INFO -   [1] Australia & New Zealand Flavor Pack
+2025-08-17 16:04:10,343 - INFO -   [2] Blue Archive
+2025-08-17 16:04:10,343 - INFO -   [3] Blue Archive - test
+2025-08-17 16:04:10,343 - INFO -   [4] Forts & Engineers
+2025-08-17 16:04:10,343 - INFO -   [5] GORA UI
+2025-08-17 16:04:10,343 - INFO -   [6] Hydra's More Agenda's
+2025-08-17 16:04:10,343 - INFO -   [7] KuatAncientEmpire
+2025-08-17 16:04:10,343 - INFO -   [8] MODJAM2025
+2025-08-17 16:04:10,343 - INFO -   [9] Offer Convoy Contribution
+2025-08-17 16:04:10,343 - INFO -   [10] parallelprocessor-test
+2025-08-17 16:04:10,343 - INFO -   [11] Project Utopia - Extended Timeline - Technical Preview
+2025-08-17 16:04:10,343 - INFO -   [12] Tech & Res
+2025-08-17 16:04:10,343 - INFO -   [13] TEST-ANZAC
+2025-08-17 16:04:10,343 - INFO -   [14] UKrework
+2025-08-17 16:04:18,392 - INFO - 
+你选择了: Offer Convoy Contribution
+2025-08-17 16:04:18,392 - INFO - 是否要清理源MOD文件夹 'Offer Convoy Contribution' 以节省磁盘空间？
+这将删除除 '.metadata', 'localization', 和 'thumbnail.png' 之外的所有文件。
+请输入 Y 或 N: 
+2025-08-17 16:04:20,763 - INFO - 已确认清理源文件
+2025-08-17 16:04:20,763 - INFO - 
+--- 正在获取Mod主题上下文 ---
+2025-08-17 16:04:20,764 - INFO - 已识别Mod名称为: 'Offer Convoy Contribution'
+2025-08-17 16:04:21,863 - INFO - 最终使用的主题上下文为: 'Offer Convoy Contribution'
+2025-08-17 16:04:21,863 - INFO - 
+请选择源语言:
+2025-08-17 16:04:21,863 - INFO -   [1] English
+2025-08-17 16:04:21,863 - INFO -   [2] 简体中文
+2025-08-17 16:04:21,863 - INFO -   [3] Français
+2025-08-17 16:04:21,864 - INFO -   [4] Deutsch
+2025-08-17 16:04:21,864 - INFO -   [5] Español
+2025-08-17 16:04:21,864 - INFO -   [6] 日本語
+2025-08-17 16:04:21,864 - INFO -   [7] 한국어
+2025-08-17 16:04:21,864 - INFO -   [8] Polski
+2025-08-17 16:04:21,864 - INFO -   [9] Português do Brasil
+2025-08-17 16:04:21,864 - INFO -   [10] Русский
+2025-08-17 16:04:21,864 - INFO -   [11] Türkçe
+2025-08-17 16:04:23,022 - INFO - 
+请选择目标语言:
+2025-08-17 16:04:23,022 - INFO -   [0] 翻译为其余所有10种语言
+2025-08-17 16:04:23,022 - INFO -   [c] 自定义/套壳其他语言...
+2025-08-17 16:04:23,022 - INFO -   [1] 简体中文
+2025-08-17 16:04:23,022 - INFO -   [2] Français
+2025-08-17 16:04:23,022 - INFO -   [3] Deutsch
+2025-08-17 16:04:23,022 - INFO -   [4] Español
+2025-08-17 16:04:23,022 - INFO -   [5] 日本語
+2025-08-17 16:04:23,023 - INFO -   [6] 한국어
+2025-08-17 16:04:23,023 - INFO -   [7] Polski
+2025-08-17 16:04:23,023 - INFO -   [8] Português do Brasil
+2025-08-17 16:04:23,023 - INFO -   [9] Русский
+2025-08-17 16:04:23,023 - INFO -   [10] Türkçe
+2025-08-17 16:04:24,090 - INFO - 词典加载成功: 743 条术语
+2025-08-17 16:04:24,090 - INFO - 未找到外挂词典
+2025-08-17 16:04:24,090 - INFO - 请选择术语模糊匹配模式:
+2025-08-17 16:04:24,090 - INFO - [1] 严格模式 - 禁用模糊匹配 
+2025-08-17 16:04:24,090 - INFO - [2] 宽松模式 - 启用模糊匹配 (容忍拼写错误)
+2025-08-17 16:04:24,090 - INFO - 如果你不知道这是什么，建议你打开术语模糊匹配
+2025-08-17 16:04:26,062 - INFO - === 工程总览 ===
+2025-08-17 16:04:26,062 - INFO - 目标MOD: Offer Convoy Contribution
+2025-08-17 16:04:26,062 - INFO - API供应商: Gemini
+2025-08-17 16:04:26,062 - INFO - 游戏类型: Victoria 3 (维多利亚3)
+2025-08-17 16:04:26,062 - INFO - 源语言: English
+2025-08-17 16:04:26,062 - INFO - 目标语言: 简体中文
+2025-08-17 16:04:26,062 - INFO - 词典配置: 仅主词典(743条)
+2025-08-17 16:04:26,062 - INFO - 启用模糊匹配: 启用模糊匹配
+2025-08-17 16:04:26,062 - INFO - 是否清理多余文件: 将清理源文件
+2025-08-17 16:04:29,362 - INFO - 翻译已确认，开始执行...
+2025-08-17 16:04:29,362 - INFO - 正在执行源文件清理...
+2025-08-17 16:04:29,362 - INFO - 
+--- 开始精简源Mod文件夹: Offer Convoy Contribution ---
+2025-08-17 16:04:29,362 - INFO - 正在删除非必要文件和文件夹...
+2025-08-17 16:04:29,362 - INFO - 源文件夹精简完成！
+2025-08-17 16:04:29,362 - INFO - 源文件清理完成
+2025-08-17 16:04:29,363 - INFO - 术语模糊匹配模式已设置为: 宽松模式
+2025-08-17 16:04:29,363 - INFO - 词典状态: 仅主词典(743条)
+2025-08-17 16:04:29,363 - INFO - 
+--- 启动 '首次翻译' 工作流，目标: Offer Convoy Contribution ---
+2025-08-17 16:04:29,825 - INFO - Gemini client initialized successfully, using model: gemini-2.5-flash
+2025-08-17 16:04:29,826 - INFO - 词典加载成功: 743 条术语
+2025-08-17 16:04:29,826 - INFO - 输出目录结构创建成功: J:\V3_Mod_Localization_Factory\my_translation\zh-CN-Offer Convoy Contribution
+2025-08-17 16:04:29,826 - INFO - 
+--- 正在处理资产文件 (封面图、描述文件等) ---
+2025-08-17 16:04:29,828 - INFO - 资产文件 'thumbnail.png' 复制完成。
+2025-08-17 16:04:29,828 - INFO - 
+--- 正在解析文件: source_mod\Offer Convoy Contribution\localization\english\OCC_l_english.yml ---
+2025-08-17 16:04:29,828 - INFO - 提取到 8 条可翻译文本。
+2025-08-17 16:04:29,828 - INFO - 
+--- 正在翻译为: 简体中文 ---
+2025-08-17 16:04:29,829 - INFO - --- 检测到 1 个翻译批次，启动并行处理模式 ---
+2025-08-17 16:04:30,330 - INFO - 从 8 个文本中提取到 5 个相关术语
+2025-08-17 16:04:30,330 - INFO - 批次 1: 注入 5 个词典术语
+2025-08-17 16:04:30,330 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 16:04:31,676 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 16:04:31,677 - INFO - AFC remote call 1 is done.
+2025-08-17 16:04:31,677 - INFO - 批次 1: 禁用思考功能 (thinking_budget=0)
+2025-08-17 16:04:31,678 - INFO - 批次完成: OCC_l_english.yml - 批次 1
+2025-08-17 16:04:31,678 - INFO - 文件 'zh-CN-Offer Convoy Contribution\localization\simp_chinese\english\OCC_l_simp_chinese.yml' 汉化完成。
+2025-08-17 16:04:31,678 - INFO - 文件构建完成: OCC_l_english.yml
+2025-08-17 16:04:31,679 - INFO - 文件完成: OCC_l_english.yml
+2025-08-17 16:04:31,679 - INFO - 所有文件处理完成，共处理 1 个文件
+2025-08-17 16:04:31,679 - INFO - 正在生成校对进度看板...
+2025-08-17 16:04:31,679 - INFO - 校对进度表格已生成: J:\V3_Mod_Localization_Factory\my_translation\zh-CN-Offer Convoy Contribution\校对进度表.csv
+2025-08-17 16:04:31,679 - INFO - 校对进度看板生成成功
+2025-08-17 16:04:31,679 - INFO - 
+--- 正在处理 metadata.json ---
+2025-08-17 16:04:31,679 - INFO - 正在翻译 mod name: "Offer Convoy Contribution..."
+2025-08-17 16:04:31,703 - INFO - 从 1 个文本中提取到 1 个相关术语
+2025-08-17 16:04:31,703 - INFO - 单条翻译: 注入 1 个词典术语
+2025-08-17 16:04:31,703 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 16:04:32,376 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 16:04:32,377 - INFO - AFC remote call 1 is done.
+2025-08-17 16:04:32,377 - INFO - 单条翻译: 禁用思考功能 (thinking_budget=0)
+2025-08-17 16:04:32,378 - INFO - metadata.json 汉化完成。
+2025-08-17 16:04:32,378 - INFO - 翻译工作流完成！
+2025-08-17 16:04:32,378 - INFO - 输出文件夹: zh-CN-Offer Convoy Contribution
+2025-08-17 16:04:32,379 - INFO - 工作流完成！

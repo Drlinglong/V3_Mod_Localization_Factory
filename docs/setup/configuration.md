@@ -81,20 +81,22 @@ API_PROVIDERS = {
     "gemini": {
         "name": "Google Gemini",
         "handler": "gemini_handler",
-        "model": "gemini-2.0-flash-exp",
-        "max_tokens": 8192
+        "model": "gemini-2.5-flash",
+        "api_key_env": "GEMINI_API_KEY"
     },
     "openai": {
         "name": "OpenAI GPT",
         "handler": "openai_handler",
-        "model": "gpt-4o-mini",
-        "max_tokens": 4096
+        "model": "gpt-5-mini",
+        "api_key_env": "OPENAI_API_KEY"
     },
     "qwen": {
         "name": "阿里云通义千问",
         "handler": "qwen_handler",
-        "model": "qwen-turbo",
-        "max_tokens": 8192
+        "model": "qwen-plus",
+        "api_key_env": "DASHSCOPE_API_KEY",
+        "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+        "region": "beijing"
     }
 }
 ```
