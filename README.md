@@ -163,7 +163,7 @@ scripts/
 3. **安装依赖库**: 
     - 如果使用Gemini：`pip install --upgrade google-genai`
     - 如果使用OpenAI：`pip install -U openai`
-    - 如果使用Qwen：`pip install -U dashscope`
+    - 如果使用Qwen：`pip install -U openai`
 4. **设置API密钥**: 根据你使用的API服务商设置对应的环境变量：
     - Gemini: `GEMINI_API_KEY`
     - OpenAI: `OPENAI_API_KEY`
