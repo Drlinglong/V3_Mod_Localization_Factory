@@ -113,7 +113,27 @@ def run(mod_name: str,
             # 检查是否需要创建fallback文件
             if not fd["texts_to_translate"]:
                 # 空文件，创建fallback
-                dest_dir = _build_dest_dir(fd, target_lang, output_folder_name, game_profile)
+                # 创建临时的FileTask对象用于构建目录
+                temp_file_task = FileTask(
+                    filename=fd["filename"],
+                    root=fd["root"],
+                    original_lines=fd["original_lines"],
+                    texts_to_translate=fd["texts_to_translate"],
+                    key_map=fd["key_map"],
+                    is_custom_loc=fd["is_custom_loc"],
+                    target_lang=target_lang,
+                    source_lang=source_lang,
+                    game_profile=game_profile,
+                    mod_context=mod_context,
+                    provider_name=provider_name,
+                    output_folder_name=output_folder_name,
+                    source_dir=SOURCE_DIR,
+                    dest_dir=DEST_DIR,
+                    client=client,
+                    mod_name=mod_name
+                )
+                
+                dest_dir = _build_dest_dir(temp_file_task, target_lang, output_folder_name, game_profile)
                 os.makedirs(dest_dir, exist_ok=True)
                 
                 dest_file_path = file_builder.create_fallback_file(
@@ -164,12 +184,63 @@ def run(mod_name: str,
             max_workers = RECOMMENDED_MAX_WORKERS
             processor = ParallelProcessor(max_workers=max_workers)
             
-            processor.process_files_parallel(
+            # 获取翻译函数（根据provider_name选择对应的API Handler）
+            if provider_name == "gemini":
+                from scripts.core.gemini_handler import translate_texts_in_batches as translation_function
+            elif provider_name == "openai":
+                from scripts.core.openai_handler import translate_texts_in_batches as translation_function
+            elif provider_name == "qwen":
+                from scripts.core.qwen_handler import translate_texts_in_batches as translation_function
+            else:
+                # 默认使用API Handler
+                translation_function = api_handler.translate_texts_in_batches
+            
+            # 并行处理所有文件，获取翻译结果
+            file_results = processor.process_files_parallel(
                 file_tasks=file_tasks,
-                translation_function=api_handler.translate_texts_in_batches,
-                file_builder_function=file_builder.rebuild_and_write_file,
-                proofreading_tracker=proofreading_tracker
+                translation_function=translation_function
             )
+            
+            # 处理每个文件的翻译结果
+            for filename, translated_texts in file_results.items():
+                # 找到对应的文件任务
+                file_task = next(ft for ft in file_tasks if ft.filename == filename)
+                
+                if translated_texts is None:
+                    logging.error(i18n.t("file_translation_failed", filename=filename))
+                    continue
+                
+                # 构建目标目录
+                dest_dir = _build_dest_dir(file_task, target_lang, output_folder_name, game_profile)
+                os.makedirs(dest_dir, exist_ok=True)
+                
+                # 重建并写入文件
+                dest_file_path = file_builder.rebuild_and_write_file(
+                    file_task.original_lines,
+                    file_task.texts_to_translate,
+                    translated_texts,
+                    file_task.key_map,
+                    dest_dir,
+                    file_task.filename,
+                    file_task.source_lang,
+                    file_task.target_lang,
+                    file_task.game_profile,
+                )
+                
+                # 更新校对进度追踪
+                if dest_file_path:
+                    source_file_path = os.path.join(file_task.root, file_task.filename)
+                    translated_lines_count = len(file_task.texts_to_translate)
+                    
+                    proofreading_tracker.add_file_info({
+                        'source_path': source_file_path,
+                        'dest_path': dest_file_path,
+                        'translated_lines': translated_lines_count,
+                        'filename': file_task.filename,
+                        'is_custom_loc': file_task.is_custom_loc
+                    })
+                    
+                    logging.info(i18n.t("file_build_completed", filename=filename))
         
         # ───────────── 6. 生成校对进度看板 ─────────────
         logging.info(i18n.t("generating_proofreading_board"))
@@ -197,11 +268,11 @@ def run(mod_name: str,
     logging.info(i18n.t("output_folder_created", folder=output_folder_name))
 
 
-def _build_dest_dir(fd: dict, target_lang: dict, output_folder_name: str, game_profile: dict) -> str:
+def _build_dest_dir(file_task: FileTask, target_lang: dict, output_folder_name: str, game_profile: dict) -> str:
     """构建目标目录路径"""
-    if fd["is_custom_loc"]:
-        cust_loc_root = os.path.join(SOURCE_DIR, fd["filename"], "customizable_localization")
-        rel = os.path.relpath(fd["root"], cust_loc_root)
+    if file_task.is_custom_loc:
+        cust_loc_root = os.path.join(SOURCE_DIR, file_task.mod_name, "customizable_localization")
+        rel = os.path.relpath(file_task.root, cust_loc_root)
         dest_dir = os.path.join(
             DEST_DIR,
             output_folder_name,
@@ -211,8 +282,8 @@ def _build_dest_dir(fd: dict, target_lang: dict, output_folder_name: str, game_p
         )
     else:
         source_loc_folder = game_profile["source_localization_folder"]
-        source_loc_path = os.path.join(SOURCE_DIR, fd["filename"], source_loc_folder)
-        rel = os.path.relpath(fd["root"], source_loc_path)
+        source_loc_path = os.path.join(SOURCE_DIR, file_task.mod_name, source_loc_folder)
+        rel = os.path.relpath(file_task.root, source_loc_path)
         dest_dir = os.path.join(
             DEST_DIR,
             output_folder_name,

@@ -213,6 +213,7 @@ def _translate_chunk(client, chunk, source_lang, target_lang, game_profile, mod_
 
 def translate_texts_in_batches(
     client: "OpenAI",
+    provider_name: str,
     texts_to_translate: list[str],
     source_lang: dict,
     target_lang: dict,
