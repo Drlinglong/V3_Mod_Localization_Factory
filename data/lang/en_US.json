@@ -168,7 +168,13 @@
 "glossary_merge_completed": "Glossary merged: {main_entries} main entries + {aux_entries} auxiliary entries = {total_entries} total",
 "project_startup": "Project startup: {display_name} v{version}",
 "project_engineering_name": "Engineering name: {name}",
-"project_last_update": "Last update: {date}"
+"project_last_update": "Last update: {date}",
+"version_info_title": "Project Version Information",
+"version_info_display_name": "🎯 {display_name}",
+"version_info_engineering_name": "🔧 {name}",
+"version_info_version": "📦 Version: {version}",
+"version_info_last_update": "📅 Last Update: {date}",
+"version_info_copyright": "© {copyright}"
 
 
 }
