@@ -79,9 +79,8 @@ def translate_single_text(
         model_name = API_PROVIDERS["gemini"]["default_model"]
         
         # 根据配置决定是否启用思考功能
-        from scripts.config import GEMINI_CONFIG
         
-        if GEMINI_CONFIG["enable_thinking"]:
+        if API_PROVIDERS["gemini"]["enable_thinking"]:
             # 启用思考功能（可能增加成本）
             from google.genai import types
             response = client.models.generate_content(
@@ -89,11 +88,11 @@ def translate_single_text(
                 contents=prompt,
                 config=types.GenerateContentConfig(
                     thinking_config=types.ThinkingConfig(
-                        thinking_budget=GEMINI_CONFIG["thinking_budget"]
+                        thinking_budget=API_PROVIDERS["gemini"]["thinking_budget"]
                     )
                 )
             )
-            logging.info(i18n.t("single_translation_thinking_enabled", budget=GEMINI_CONFIG["thinking_budget"]))
+            logging.info(i18n.t("single_translation_thinking_enabled", budget=API_PROVIDERS["gemini"]["thinking_budget"]))
         else:
             # 禁用思考功能（节约成本）
             from google.genai import types
@@ -164,9 +163,8 @@ def _translate_chunk(client, chunk, source_lang, target_lang, game_profile, mod_
             model_name = API_PROVIDERS["gemini"]["default_model"]
             
             # 根据配置决定是否启用思考功能
-            from scripts.config import GEMINI_CONFIG
             
-            if GEMINI_CONFIG["enable_thinking"]:
+            if API_PROVIDERS["gemini"]["enable_thinking"]:
                 # 启用思考功能（可能增加成本）
                 from google.genai import types
                 response = client.models.generate_content(
@@ -174,11 +172,11 @@ def _translate_chunk(client, chunk, source_lang, target_lang, game_profile, mod_
                     contents=prompt,
                     config=types.GenerateContentConfig(
                         thinking_config=types.ThinkingConfig(
-                            thinking_budget=GEMINI_CONFIG["thinking_budget"]
+                            thinking_budget=API_PROVIDERS["gemini"]["thinking_budget"]
                         )
                     )
                 )
-                logging.info(i18n.t("batch_thinking_enabled", batch_num=batch_num, budget=GEMINI_CONFIG["thinking_budget"]))
+                logging.info(i18n.t("batch_thinking_enabled", batch_num=batch_num, budget=API_PROVIDERS["gemini"]["thinking_budget"]))
             else:
                 # 禁用思考功能（节约成本）
                 from google.genai import types
