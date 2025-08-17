@@ -1,10 +1,71 @@
 # scripts/config.py
 # ---------------------------------------------------------------
 import os  # 导入os模块以备后用
+import multiprocessing
 
 # --- 核心配置 ----------------------------------------------------
 CHUNK_SIZE = 40
 MAX_RETRIES = 3
+
+# --- 智能线程池配置 ----------------------------------------------------
+def get_smart_max_workers():
+    """
+    智能计算最优线程池大小
+    使用Python内置的智能线程池管理，避免线程爆炸
+    """
+    # Python内置的智能线程池公式：min(32, (cpu_count or 1) + 4)
+    cpu_count = multiprocessing.cpu_count()
+    # 对于I/O密集型任务，可以适当增加，但不超过系统核心数的2倍
+    recommended = min(32, cpu_count * 2)
+    return recommended
+
+# 智能线程池大小
+RECOMMENDED_MAX_WORKERS = get_smart_max_workers()
+
+# 每个批次的最大文本数量
+BATCH_SIZE = CHUNK_SIZE
+
+def display_system_config():
+    """显示系统配置信息"""
+    try:
+        # 延迟导入i18n，避免循环导入
+        from scripts.utils.i18n import i18n
+        
+        cpu_count = multiprocessing.cpu_count()
+        
+        print("=== " + i18n.t("system_config_title") + " ===")
+        print(i18n.t("system_config_cpu_cores", count=cpu_count))
+        print(i18n.t("system_config_recommended_workers", count=RECOMMENDED_MAX_WORKERS))
+        print(i18n.t("system_config_recommended_chunk_size", size=CHUNK_SIZE))
+        
+        # 性能等级判断
+        if cpu_count <= 2:
+            print(i18n.t("system_config_performance_low"))
+        elif cpu_count <= 4:
+            print(i18n.t("system_config_performance_medium"))
+        else:
+            print(i18n.t("system_config_performance_high"))
+            
+    except Exception as e:
+        # 如果i18n不可用，使用英文作为fallback
+        try:
+            cpu_count = multiprocessing.cpu_count()
+            
+            print("=== System Performance Detection Results ===")
+            print(f"CPU Cores: {cpu_count}")
+            print(f"Recommended Thread Pool Size: {RECOMMENDED_MAX_WORKERS}")
+            print(f"Recommended Chunk Size: {CHUNK_SIZE}")
+            
+            if cpu_count <= 2:
+                print("Performance Level: Low Performance System (Conservative Configuration)")
+            elif cpu_count <= 4:
+                print("Performance Level: Medium Performance System (Balanced Configuration)")
+            else:
+                print("Performance Level: High Performance System (Aggressive Configuration)")
+                
+        except Exception as fallback_error:
+            print(f"System detection failed: {fallback_error}")
+            print("Using default configuration")
 
 # --- 路径配置 ----------------------------------------------------
 # 使用绝对路径，避免工作目录依赖问题

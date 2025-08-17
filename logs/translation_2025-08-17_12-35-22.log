@@ -1,0 +1,81 @@
+2025-08-17 12:35:22,454 - INFO - Logger initialized and ready
+2025-08-17 12:35:22,454 - INFO - 
+Please select a game:
+2025-08-17 12:35:22,454 - INFO -   [1] Victoria 3 (维多利亚3)
+2025-08-17 12:35:22,454 - INFO -   [2] Stellaris (群星)
+2025-08-17 12:35:22,455 - INFO -   [3] Europa Universalis IV (欧陆风云4)
+2025-08-17 12:35:22,455 - INFO -   [4] Hearts of Iron IV (钢铁雄心4)
+2025-08-17 12:35:22,455 - INFO -   [5] Crusader Kings III (十字军之王3)
+2025-08-17 12:35:23,478 - INFO - Please select an API provider:
+2025-08-17 12:35:23,479 - INFO -   [1] Gemini
+2025-08-17 12:35:23,479 - INFO -   [2] Openai
+2025-08-17 12:35:23,479 - INFO -   [3] Qwen - (Recommended for users in Mainland China)
+2025-08-17 12:35:24,930 - INFO - Please select the Mod to localize:
+2025-08-17 12:35:24,930 - INFO -   [1] Australia & New Zealand Flavor Pack
+2025-08-17 12:35:24,930 - INFO -   [2] Blue Archive
+2025-08-17 12:35:24,930 - INFO -   [3] Blue Archive - test
+2025-08-17 12:35:24,930 - INFO -   [4] Forts & Engineers
+2025-08-17 12:35:24,930 - INFO -   [5] GORA UI
+2025-08-17 12:35:24,930 - INFO -   [6] Hydra's More Agenda's
+2025-08-17 12:35:24,930 - INFO -   [7] KuatAncientEmpire
+2025-08-17 12:35:24,930 - INFO -   [8] MODJAM2025
+2025-08-17 12:35:24,930 - INFO -   [9] Offer Convoy Contribution
+2025-08-17 12:35:24,930 - INFO -   [10] parallelprocessor-test
+2025-08-17 12:35:24,930 - INFO -   [11] Project Utopia - Extended Timeline - Technical Preview
+2025-08-17 12:35:24,930 - INFO -   [12] Tech & Res
+2025-08-17 12:35:24,930 - INFO -   [13] TEST-ANZAC
+2025-08-17 12:35:24,930 - INFO -   [14] UKrework
+2025-08-17 12:35:31,474 - INFO - 
+You have selected: Offer Convoy Contribution
+2025-08-17 12:35:31,474 - INFO - Do you want to clean up the source MOD folder 'Offer Convoy Contribution' to save disk space?
+This will delete all files except '.metadata', 'localization', and 'thumbnail.png'.
+Please enter Y or N: 
+2025-08-17 12:35:32,423 - WARNING - Please enter Y or N
+2025-08-17 12:35:34,410 - INFO - Source file cleanup confirmed
+2025-08-17 12:35:34,410 - INFO - 
+--- Getting Mod thematic context ---
+2025-08-17 12:35:34,411 - INFO - Identified Mod Name: 'Offer Convoy Contribution'
+2025-08-17 12:35:35,258 - INFO - Final thematic context used: 'Offer Convoy Contribution'
+2025-08-17 12:35:35,259 - INFO - 
+Please select the source language:
+2025-08-17 12:35:35,259 - INFO -   [1] English
+2025-08-17 12:35:35,259 - INFO -   [2] 简体中文
+2025-08-17 12:35:35,259 - INFO -   [3] Français
+2025-08-17 12:35:35,259 - INFO -   [4] Deutsch
+2025-08-17 12:35:35,259 - INFO -   [5] Español
+2025-08-17 12:35:35,259 - INFO -   [6] 日本語
+2025-08-17 12:35:35,259 - INFO -   [7] 한국어
+2025-08-17 12:35:35,259 - INFO -   [8] Polski
+2025-08-17 12:35:35,259 - INFO -   [9] Português do Brasil
+2025-08-17 12:35:35,259 - INFO -   [10] Русский
+2025-08-17 12:35:35,259 - INFO -   [11] Türkçe
+2025-08-17 12:35:36,571 - INFO - 
+Please select the target language(s):
+2025-08-17 12:35:36,571 - INFO -   [0] Translate to all other 10 languages
+2025-08-17 12:35:36,571 - INFO -   [c] Custom / Disguise Other Language...
+2025-08-17 12:35:36,571 - INFO -   [1] 简体中文
+2025-08-17 12:35:36,571 - INFO -   [2] Français
+2025-08-17 12:35:36,571 - INFO -   [3] Deutsch
+2025-08-17 12:35:36,571 - INFO -   [4] Español
+2025-08-17 12:35:36,571 - INFO -   [5] 日本語
+2025-08-17 12:35:36,571 - INFO -   [6] 한국어
+2025-08-17 12:35:36,571 - INFO -   [7] Polski
+2025-08-17 12:35:36,571 - INFO -   [8] Português do Brasil
+2025-08-17 12:35:36,571 - INFO -   [9] Русский
+2025-08-17 12:35:36,571 - INFO -   [10] Türkçe
+2025-08-17 12:35:38,731 - INFO - Glossary loaded successfully: 743 entries
+2025-08-17 12:35:38,731 - INFO - No auxiliary glossaries found
+2025-08-17 12:35:38,731 - INFO - Please select fuzzy matching mode:
+2025-08-17 12:35:38,731 - INFO - [1] Strict Mode - No fuzzy matching 
+2025-08-17 12:35:38,731 - INFO - [2] Loose Mode - Enable fuzzy matching (tolerates spelling errors)
+2025-08-17 12:35:38,731 - INFO - If you don't know what this is, we recommend enabling fuzzy matching
+2025-08-17 12:35:41,284 - INFO - === Project Overview ===
+2025-08-17 12:35:41,284 - INFO - Target MOD: Offer Convoy Contribution
+2025-08-17 12:35:41,284 - INFO - API Provider: Gemini
+2025-08-17 12:35:41,284 - INFO - Game Type: Victoria 3 (维多利亚3)
+2025-08-17 12:35:41,284 - INFO - Source Language: English
+2025-08-17 12:35:41,285 - INFO - Target Language: 简体中文
+2025-08-17 12:35:41,285 - ERROR - 国际化键 'glossary_status_main_only' 格式化失败，缺少参数: 'count'
+2025-08-17 12:35:41,285 - INFO - Glossary Configuration: Main glossary only ({count} entries)
+2025-08-17 12:35:41,285 - INFO - Fuzzy matching: Fuzzy matching enabled
+2025-08-17 12:35:41,285 - INFO - Clean up extra files: Will clean up source files

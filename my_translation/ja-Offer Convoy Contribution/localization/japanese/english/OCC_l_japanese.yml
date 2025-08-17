@@ -1,0 +1,11 @@
+﻿l_japanese:
+
+ occ_offer_convoys:"船団貢献度を増加"
+ occ_offer_convoys_desc:"`[concept_subject]`が`[concept_market_owner]`である`[concept_overlord]`への船団貢献度を増加させます。"
+ occ_offer_convoys_action_notification_name:"`[INITIATOR_COUNTRY.GetName]`が船団貢献度を増加"
+ occ_offer_convoys_action_notification_desc:"`[INITIATOR_COUNTRY.GetName]`が船団貢献度の増加を申し出ています。"
+ occ_offer_convoys_action_propose_name: "$occ_offer_convoys$"
+ occ_offer_convoys_action_break_name:"増加した船団貢献度をキャンセル"
+ occ_offer_convoys_pact_desc:"`[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName]`が`[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]`への船団貢献度の増加を申し出ています。"
+ occ_offer_convoys_action_notification_break_name:"`[INITIATOR_COUNTRY.GetName]`が増加した船団貢献度をキャンセルしました"
+ occ_offer_convoys_action_notification_break_desc:"`[INITIATOR_COUNTRY.GetName]`が船団貢献度を通常水準に戻しました。"

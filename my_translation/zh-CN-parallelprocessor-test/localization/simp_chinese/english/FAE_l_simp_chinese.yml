@@ -1,0 +1,6 @@
+﻿l_simp_chinese:
+    # Battle Conditions
+    FAE_battle_condition_attacker_fort_breached:"要塞已突破"
+    FAE_battle_condition_defender_fort_breached: "$FAE_battle_condition_attacker_fort_breached$"
+    
+    FAE_battle_condition_attacker_fort_breached_desc:"该指挥官成功突破了敌方的一些防御工事。"

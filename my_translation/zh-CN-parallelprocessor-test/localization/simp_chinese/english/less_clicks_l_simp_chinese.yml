@@ -1,0 +1,9 @@
+﻿l_simp_chinese:
+ DECISION_TOOLTIP_FORMAT:1 "#header $NAME$#!\n$TOOLTIP_DELIMITER$\n$TRIGGER_SUMMARY$\n\n选择时：\n$EFFECT_SUMMARY$"
+
+ build_railways:0 "修建铁路"
+ build_railways_desc:0 "在各地修建足够多的铁路以确保市场准入完全到位"
+ build_railways_tooltip:0 "点击以修建更多铁路"
+ build_administrations:0 "修建行政机构"
+ build_administrations_desc:0 "在各地修建足够多的行政机构以确保征税能力"
+ build_administrations_tooltip:0 "点击以修建更多行政机构"

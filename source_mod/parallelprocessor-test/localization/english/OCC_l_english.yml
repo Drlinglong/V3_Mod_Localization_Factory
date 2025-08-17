@@ -1,0 +1,5 @@
+﻿l_english:
+
+ occ_offer_convoys: "Increase Convoy Contribution"
+ occ_offer_convoys_desc: "Increases the convoy contribution of the [concept_subject] towards its [concept_market_owner] [concept_overlord]."
+ occ_offer_convoys_action_notification_name: "[INITIATOR_COUNTRY.GetName] increases convoy contribution"

@@ -1,11 +1,13 @@
 # scripts/workflows/initial_translate.py
 import os
 import logging
+from typing import Any
 
 from scripts.core import file_parser, api_handler, file_builder, asset_handler, directory_handler
 from scripts.core.glossary_manager import glossary_manager
 from scripts.core.proofreading_tracker import create_proofreading_tracker
-from scripts.config import SOURCE_DIR, DEST_DIR, LANGUAGES
+from scripts.core.parallel_processor import ParallelProcessor, FileTask
+from scripts.config import SOURCE_DIR, DEST_DIR, LANGUAGES, RECOMMENDED_MAX_WORKERS
 from scripts.utils import i18n
 
 
@@ -44,46 +46,13 @@ def run(mod_name: str,
         glossary_loaded = glossary_manager.load_game_glossary(game_id)
         if glossary_loaded:
             stats = glossary_manager.get_glossary_stats()
-            if i18n.get_current_language() == "en_US":
-                logging.info(f"Glossary loaded successfully: {stats['description']} ({stats['total_entries']} entries)")
-            else:
-                logging.info(f"词典加载成功: {stats['description']} ({stats['total_entries']} 个条目)")
+            logging.info(i18n.t("glossary_loaded_success", count=stats['total_entries']))
         else:
-            if i18n.get_current_language() == "en_US":
-                logging.info(f"Glossary file for {game_id} not found, will use no-glossary mode")
-            else:
-                logging.info(f"未找到 {game_id} 的词典文件，将使用无词典模式")
-    else:
-        if i18n.get_current_language() == "en_US":
-            logging.warning("Game profile missing ID, cannot load glossary")
-        else:
-            logging.warning("游戏配置中缺少ID，无法加载词典")
+            logging.warning(i18n.t("glossary_load_failed"))
 
-    # ───────────── 2.6. 初始化校对进度追踪器 ─────────────
-    # 获取主要目标语言代码用于生成对应语言的校对进度看板
-    primary_lang_code = primary_target_lang.get("code", "zh-CN")
-    proofreading_tracker = create_proofreading_tracker(mod_name, output_folder_name, primary_lang_code)
-    # 根据脚本启动语言选择语言名称显示
-    lang_name_map = {
-        "zh-CN": "简体中文",
-        "en": "English", 
-        "fr": "Français",
-        "de": "Deutsch",
-        "es": "Español",
-        "ja": "日本語",
-        "ko": "한국어",
-        "pl": "Polski",
-        "pt-BR": "Português do Brasil",
-        "ru": "Русский",
-        "tr": "Türkçe"
-    }
-    display_name = lang_name_map.get(primary_target_lang.get("code", "zh-CN"), "中文")
-    logging.info(i18n.t("proofreading_tracker_init", lang_name=display_name))
-
-    # ───────────── 3. metadata + assety ─────────────
-    asset_handler.process_metadata(
-        mod_name, client, source_lang, primary_target_lang,
-        output_folder_name, mod_context, game_profile, provider_name
+    # ───────────── 3. 创建输出目录 + 复制资源 ─────────────
+    directory_handler.create_output_structure(
+        mod_name, output_folder_name, game_profile
     )
     asset_handler.copy_assets(mod_name, output_folder_name, game_profile)
 
@@ -129,40 +98,31 @@ def run(mod_name: str,
                     "is_custom_loc": True
                 })
 
-    # ───────────── 5. tłumaczenie + zapis ─────────────
+    # ───────────── 5. 多语言并行翻译 ─────────────
     for target_lang in target_languages:
         logging.info(i18n.t("translating_to_language", lang_name=target_lang["name"]))
-
+        
+        # 创建校对进度追踪器
+        proofreading_tracker = create_proofreading_tracker(
+            mod_name, output_folder_name, target_lang.get("code", "zh-CN")
+        )
+        
+        # 创建文件任务列表
+        file_tasks = []
         for fd in all_files_data:
-            src_fp = os.path.join(fd["root"], fd["filename"])
-
-            # wybór dest_dir_path zależnie od typu pliku
-            if fd["is_custom_loc"]:
-                rel = os.path.relpath(fd["root"], cust_loc_root)
-                dest_dir = os.path.join(
-                    DEST_DIR,
-                    output_folder_name,
-                    "customizable_localization",
-                    target_lang["key"][2:],
-                    rel,
-                )
-            else:
-                rel = os.path.relpath(fd["root"], source_loc_path)
-                dest_dir = os.path.join(
-                    DEST_DIR,
-                    output_folder_name,
-                    source_loc_folder,
-                    target_lang["key"][2:],
-                    rel,
-                )
-
-            os.makedirs(dest_dir, exist_ok=True)
-
-            # fallback gdy brak tekstów
+            # 检查是否需要创建fallback文件
             if not fd["texts_to_translate"]:
+                # 空文件，创建fallback
+                dest_dir = _build_dest_dir(fd, target_lang, output_folder_name, game_profile)
+                os.makedirs(dest_dir, exist_ok=True)
+                
                 dest_file_path = file_builder.create_fallback_file(
-                    src_fp, dest_dir, fd["filename"],
-                    source_lang, target_lang, game_profile
+                    os.path.join(fd["root"], fd["filename"]), 
+                    dest_dir, 
+                    fd["filename"],
+                    source_lang, 
+                    target_lang, 
+                    game_profile
                 )
                 
                 # 收集fallback文件信息用于校对进度追踪
@@ -176,78 +136,108 @@ def run(mod_name: str,
                         'is_custom_loc': fd["is_custom_loc"]
                     })
                 continue
-
-            # samo tłumaczenie
-            translated = api_handler.translate_texts_in_batches(
-                client,
-                provider_name,
-                fd["texts_to_translate"],
-                source_lang,
-                target_lang,
-                game_profile,
-                mod_context,
-            )
-
-            # AI błąd → fallback
-            if translated is None:
-                dest_file_path = file_builder.create_fallback_file(
-                    src_fp, dest_dir, fd["filename"],
-                    source_lang, target_lang, game_profile
-                )
-                
-                # 收集fallback文件信息用于校对进度追踪
-                if dest_file_path:
-                    source_file_path = os.path.join(fd["root"], fd["filename"])
-                    proofreading_tracker.add_file_info({
-                        'source_path': source_file_path,
-                        'dest_path': dest_file_path,
-                        'translated_lines': 0,  # fallback文件没有翻译行数
-                        'filename': fd["filename"],
-                        'is_custom_loc': fd["is_custom_loc"]
-                    })
-                continue
-
-            # zapis przetłumaczonego pliku
-            dest_file_path = file_builder.rebuild_and_write_file(
-                fd["original_lines"],
-                fd["texts_to_translate"],
-                translated,
-                fd["key_map"],
-                dest_dir,
-                fd["filename"],
-                source_lang,
-                target_lang,
-                game_profile,
-            )
             
-            # 收集文件信息用于校对进度追踪
-            if dest_file_path:
-                source_file_path = os.path.join(fd["root"], fd["filename"])
-                translated_lines_count = len(fd["texts_to_translate"])
-                
-                proofreading_tracker.add_file_info({
-                    'source_path': source_file_path,
-                    'dest_path': dest_file_path,
-                    'translated_lines': translated_lines_count,
-                    'filename': fd["filename"],
-                    'is_custom_loc': fd["is_custom_loc"]
-                })
-
+            # 创建文件任务
+            file_task = FileTask(
+                filename=fd["filename"],
+                root=fd["root"],
+                original_lines=fd["original_lines"],
+                texts_to_translate=fd["texts_to_translate"],
+                key_map=fd["key_map"],
+                is_custom_loc=fd["is_custom_loc"],
+                target_lang=target_lang,
+                source_lang=source_lang,
+                game_profile=game_profile,
+                mod_context=mod_context,
+                provider_name=provider_name,
+                output_folder_name=output_folder_name,
+                source_dir=SOURCE_DIR,
+                dest_dir=DEST_DIR,
+                client=client,
+                mod_name=mod_name
+            )
+            file_tasks.append(file_task)
+        
+        # 使用并行处理器处理文件
+        if file_tasks:
+            # 计算最优并行数（建议24个批次同时运行）
+            max_workers = RECOMMENDED_MAX_WORKERS
+            processor = ParallelProcessor(max_workers=max_workers)
+            
+            processor.process_files_parallel(
+                file_tasks=file_tasks,
+                translation_function=api_handler.translate_texts_in_batches,
+                file_builder_function=file_builder.rebuild_and_write_file,
+                proofreading_tracker=proofreading_tracker
+            )
+        
         # ───────────── 6. 生成校对进度看板 ─────────────
-        if i18n.get_current_language() == "en_US":
-            logging.info("Generating proofreading progress board...")
-            if proofreading_tracker.save_proofreading_progress():
-                logging.info("Proofreading progress board generated successfully")
-            else:
-                logging.warning("Failed to generate proofreading progress board")
+        logging.info(i18n.t("generating_proofreading_board"))
+        if proofreading_tracker.save_proofreading_progress():
+            logging.info(i18n.t("proofreading_board_generated_success"))
         else:
-            logging.info("正在生成校对进度看板...")
-            if proofreading_tracker.save_proofreading_progress():
-                logging.info("校对进度看板生成成功")
-            else:
-                logging.warning("校对进度看板生成失败")
+            logging.warning(i18n.t("proofreading_board_generation_failed"))
 
-    if i18n.get_current_language() == "en_US":
-        logging.info(f"Workflow completed! Mod '{mod_name}' translation task finished")
+    # ───────────── 7. 处理元数据 ─────────────
+    if is_batch_mode:
+        # 多语言模式：使用英语作为主要语言处理元数据
+        process_metadata_for_language(
+            mod_name, client, source_lang, primary_target_lang,
+            output_folder_name, mod_context, game_profile, provider_name
+        )
     else:
-        logging.info(f"工作流完成！Mod '{mod_name}' 的翻译任务已完成")
+        # 单语言模式：处理目标语言的元数据
+        process_metadata_for_language(
+            mod_name, client, source_lang, target_lang,
+            output_folder_name, mod_context, game_profile, provider_name
+        )
+
+    # ───────────── 8. 完成提示 ─────────────
+    logging.info(i18n.t("translation_workflow_completed"))
+    logging.info(i18n.t("output_folder_created", folder=output_folder_name))
+
+
+def _build_dest_dir(fd: dict, target_lang: dict, output_folder_name: str, game_profile: dict) -> str:
+    """构建目标目录路径"""
+    if fd["is_custom_loc"]:
+        cust_loc_root = os.path.join(SOURCE_DIR, fd["filename"], "customizable_localization")
+        rel = os.path.relpath(fd["root"], cust_loc_root)
+        dest_dir = os.path.join(
+            DEST_DIR,
+            output_folder_name,
+            "customizable_localization",
+            target_lang["key"][2:],
+            rel,
+        )
+    else:
+        source_loc_folder = game_profile["source_localization_folder"]
+        source_loc_path = os.path.join(SOURCE_DIR, fd["filename"], source_loc_folder)
+        rel = os.path.relpath(fd["root"], source_loc_path)
+        dest_dir = os.path.join(
+            DEST_DIR,
+            output_folder_name,
+            source_loc_folder,
+            target_lang["key"][2:],
+            rel,
+        )
+    return dest_dir
+
+
+def process_metadata_for_language(
+    mod_name: str,
+    client: Any,
+    source_lang: dict,
+    target_lang: dict,
+    output_folder_name: str,
+    mod_context: str,
+    game_profile: dict,
+    provider_name: str
+) -> None:
+    """为指定语言处理元数据"""
+    try:
+        asset_handler.process_metadata(
+            mod_name, client, source_lang, target_lang,
+            output_folder_name, mod_context, game_profile, provider_name
+        )
+    except Exception as e:
+        logging.exception(i18n.t("metadata_processing_failed", error=e))

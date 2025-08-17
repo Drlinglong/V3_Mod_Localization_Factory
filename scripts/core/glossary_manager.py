@@ -106,29 +106,40 @@ class GlossaryManager:
                 len(self.current_auxiliary_glossaries) > 0 or 
                 self.merged_glossary is not None)
     
-    def get_glossary_status_summary(self) -> str:
+    def get_glossary_status_summary(self) -> Dict:
         """
-        获取词典状态摘要
+        获取词典状态摘要信息
         
         Returns:
-            str: 词典状态描述
+            Dict: 包含状态键名和参数的字典
         """
         if not self.current_game_id:
-            return "未加载任何词典"
+            return {"key": "glossary_status_none"}
             
         if self.merged_glossary:
             main_count = len(self.current_game_glossary.get('entries', [])) if self.current_game_glossary else 0
             aux_count = len(self.current_auxiliary_glossaries)
             total_count = len(self.merged_glossary.get('entries', []))
-            return f"主词典({main_count}条) + 外挂词典({aux_count}个) = 总计({total_count}条)"
+            return {
+                "key": "glossary_status_main_plus_aux",
+                "main_count": main_count,
+                "aux_count": aux_count,
+                "total_count": total_count
+            }
         elif self.current_game_glossary:
             count = len(self.current_game_glossary.get('entries', []))
-            return f"仅主词典({count}条)"
+            return {
+                "key": "glossary_status_main_only",
+                "count": count
+            }
         elif self.current_auxiliary_glossaries:
             aux_count = len(self.current_auxiliary_glossaries)
-            return f"仅外挂词典({aux_count}个)"
+            return {
+                "key": "glossary_status_aux_only",
+                "aux_count": aux_count
+            }
         else:
-            return "无可用词典"
+            return {"key": "glossary_status_none"}
     
     def load_auxiliary_glossaries(self, selected_indices: List[int]) -> bool:
         """
@@ -185,10 +196,7 @@ class GlossaryManager:
         aux_entries = total_entries - main_entries
         
         from scripts.utils import i18n
-        if i18n.get_current_language() == "en_US":
-            logging.info(f"Glossary merged: {main_entries} main entries + {aux_entries} auxiliary entries = {total_entries} total")
-        else:
-            logging.info(f"词典合并完成: {main_entries} 个主词典条目 + {aux_entries} 个外挂词典条目 = {total_entries} 个总计")
+        logging.info(i18n.t("glossary_merge_completed", main_entries=main_entries, aux_entries=aux_entries, total_entries=total_entries))
     
     def get_glossary_for_translation(self) -> Optional[Dict]:
         """获取用于翻译的词典（优先使用合并后的词典）"""
@@ -653,7 +661,7 @@ class GlossaryManager:
         if mode in ['strict', 'loose']:
             self.fuzzy_matching_mode = mode
             from scripts.utils import i18n
-            mode_name = "严格模式" if mode == 'strict' else "宽松模式"
+            mode_name = i18n.t("fuzzy_mode_strict") if mode == 'strict' else i18n.t("fuzzy_mode_loose")
             logging.info(i18n.t("fuzzy_mode_set", mode=mode_name))
         else:
             logging.warning(f"Invalid fuzzy matching mode: {mode}. Using default 'loose' mode.")

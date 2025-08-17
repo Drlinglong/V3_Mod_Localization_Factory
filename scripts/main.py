@@ -240,7 +240,13 @@ def show_project_overview(mod_name, api_provider, game_profile, source_lang, tar
     if auxiliary_glossaries:
         glossary_status = i18n.t("glossary_status_combined_auxiliary", count=len(auxiliary_glossaries))
     else:
-        glossary_status = i18n.t("glossary_status_main_only")
+        # 获取主词典的条目数量
+        from scripts.core.glossary_manager import glossary_manager
+        if glossary_manager.current_game_glossary:
+            main_count = len(glossary_manager.current_game_glossary.get('entries', []))
+            glossary_status = i18n.t("glossary_status_main_only", count=main_count)
+        else:
+            glossary_status = i18n.t("glossary_status_none")
     logging.info(i18n.t("project_overview_glossary", glossary_status=glossary_status))
     
     # 显示模糊匹配状态
@@ -448,8 +454,23 @@ def main():
     if not glossary_manager.has_any_glossary():
         logging.warning(i18n.t("no_glossaries_available"))
     else:
-        glossary_status = glossary_manager.get_glossary_status_summary()
-        logging.info(i18n.t("glossary_status_display", status=glossary_status))
+        glossary_status_info = glossary_manager.get_glossary_status_summary()
+        # 使用返回的键名和参数进行国际化
+        if glossary_status_info["key"] == "glossary_status_main_plus_aux":
+            status_text = i18n.t(glossary_status_info["key"], 
+                                main_count=glossary_status_info["main_count"],
+                                aux_count=glossary_status_info["aux_count"],
+                                total_count=glossary_status_info["total_count"])
+        elif glossary_status_info["key"] == "glossary_status_main_only":
+            status_text = i18n.t(glossary_status_info["key"], 
+                                count=glossary_status_info["count"])
+        elif glossary_status_info["key"] == "glossary_status_aux_only":
+            status_text = i18n.t(glossary_status_info["key"], 
+                                aux_count=glossary_status_info["aux_count"])
+        else:
+            status_text = i18n.t(glossary_status_info["key"])
+        
+        logging.info(i18n.t("glossary_status_display", status=status_text))
     
     # 开始翻译工作流
     initial_translate.run(
