@@ -1,4 +1,4 @@
-﻿l_french:
+l_french:
 
 #####       Agendas        #####
  council_agenda_agenda_BA_SI_Trinity_A02_name:"Méthode de Révision de Philius"
@@ -266,7 +266,7 @@
 #####       Deposits       #####
  d_BA_auto_habitat:0 "Modules d'automatisation supplémentaires"
  d_BA_auto_habitat_desc:"La construction de stations orbitales autour des corps célestes de toutes tailles dans toute la galaxie permet de satisfaire les besoins croissants en ressources du complexe orbital."
- # d_BA_auto_habitat_tooltip: "§Y[solar_system.GetName]§!恒星系可以支持：$TABBED_NEW_LINE$大型轨道站：§Y[solar_system.GetNumMajorOrbitals]/[solar_system.GetMaxMajorOrbitals]§!$TABBED_NEW_LINE$小型轨道站：§Y[solar_system.GetNumMinorOrbitals]/[solar_system.GetMaxMinorOrbitals]§!\n\n目前轨道站提供："
+ # d_BA_auto_habitat_tooltip: "§Y[solar_system.GetName]§!恒星系可以支持:$TABBED_NEW_LINE$大型轨道站:§Y[solar_system.GetNumMajorOrbitals]/[solar_system.GetMaxMajorOrbitals]§!$TABBED_NEW_LINE$小型轨道站:§Y[solar_system.GetNumMinorOrbitals]/[solar_system.GetMaxMinorOrbitals]§!\n\n目前轨道站提供:"
  d_BA_auto_habitat_tooltip: ""
 
  d_BA_kousagi_park:0 "Parc des Petits Lapins"
@@ -985,7 +985,7 @@
  Arius_Guise_lifted_desc:0 "Toutes les populations extraterrestres sont sacrifiées pour obtenir des £alloys£alliages et des £sr_keystone£Pierres de Fabrication. Lorsqu'une nation est détruite en guerre, une partie de ses ressources stockées est récupérée."
  BA_Arius_Guise_aborted_name:0 "Double Face"
  Arius_Guise_aborted:0 "Double Face"
- Arius_Guise_aborted_desc:0 "Peut-être n'y a-t-il pas tant de différences entre nous…"
+ Arius_Guise_aborted_desc:0 "Peut-être n'y a-t-il pas tant de différences entre nous..."
 ###    vanilla    ###
  diplo_Moe_Xcom:0 "Observation et Intervention"
  diplo_Moe_Xcom_name:0 "$diplo_Moe_Xcom$"
@@ -1471,7 +1471,7 @@
  situation_Project_Cradle_B:0 "La Vérité Enfouie"
  situation_Project_Cradle_B_type:0 "La Vérité Enfouie"
  situation_Project_Cradle_B_monthly_change_tooltip:0 "Progression du Projet Berceau"
- situation_Project_Cradle_B_desc:0 "Nos fouilles sur la Planète Ruine Kivotos n'ont pas été totalement discrètes. Un projet d'excavation d'une telle ampleur ne pouvait pas échapper aux investigations d'autres étudiants curieux. Par divers moyens, ils ont découvert ce que cette planète, qui partage la même origine que nous, a vraiment vécu : la guerre et la destruction causées par « nous »…"
+ situation_Project_Cradle_B_desc:0 "Nos fouilles sur la Planète Ruine Kivotos n'ont pas été totalement discrètes. Un projet d'excavation d'une telle ampleur ne pouvait pas échapper aux investigations d'autres étudiants curieux. Par divers moyens, ils ont découvert ce que cette planète, qui partage la même origine que nous, a vraiment vécu : la guerre et la destruction causées par « nous »..."
  Project_Cradle_B_option_1:0 "Révéler la vérité"
  Project_Cradle_B_option_2:0 "Restreindre l'information"
  Project_Cradle_B_complete:0 ""
@@ -1912,7 +1912,7 @@
  tech_BA_spaceship_automation_3_title:0 "§HDébloque les modules de Corvette Lance-Missiles :§! Proue Égide, Poupe Vortex\n§HDébloque les modules de Croiseur Épine :§! Cœur Fourreau, Poupe Liaison"
  tech_BA_spaceship_automation_3_tip:0 "Modules de vaisseau spécialisés, capables d'assumer davantage de fonctions."
  tech_BA_spaceship_automation_4:0 "Vaisseau Amiral Automatisé"
- tech_BA_spaceship_automation_4_desc:0 "Développé à partir de l'héritage de l'Académie des Sciences de Millennium. Dorénavant, nous pouvons abandonner la notion de 'capacité de flotte' : une armada capable de faire trembler l'univers entier ne nécessite que quelques personnes pour être commandée — et nous parlons bien de *quelques* personnes."
+ tech_BA_spaceship_automation_4_desc:0 "Développé à partir de l'héritage de l'Académie des Sciences de Millennium. Dorénavant, nous pouvons abandonner la notion de 'capacité de flotte' : une armada capable de faire trembler l'univers entier ne nécessite que quelques personnes pour être commandée - et nous parlons bien de *quelques* personnes."
 
  tech_BA_ruins_research:0 "Recherche sur l'Hybridation des Ruines"
  tech_BA_ruins_research_desc:0 "Les montagnes de ruines sont une source de ressources cruciale pour nous ; il est impératif de lancer des recherches pour les exploiter au maximum."
@@ -2150,12 +2150,12 @@
 
  ap_BA_Our_story:0 "Notre Histoire"
  ap_BA_Our_story_desc:0 "C'est à nous de décider où nous allons, et notre histoire ne s'arrêtera certainement pas ici. Voilà notre histoire, celle que nous avons écrite de nos propres mains."
- ap_BA_Our_story_tip:0 "\n—§RMutuellement exclusif avec§_$ap_BA_Name_the_void$§!"
+ ap_BA_Our_story_tip:0 "\n-§RMutuellement exclusif avec§_$ap_BA_Name_the_void$§!"
 
 
  ap_BA_Name_the_void:0 "Nommer le Sublime"
  ap_BA_Name_the_void_desc:0 "Nous avons donné un nom à l'innommable, et ainsi nous avons pu l'embrasser et l'utiliser. Nous avons transformé l'éphémère en merveille, forgeant ainsi notre propre histoire."
- ap_BA_Name_the_void_tip:0 "\n—§RMutuellement exclusif avec§B$ap_BA_Our_story$§!"
+ ap_BA_Name_the_void_tip:0 "\n-§RMutuellement exclusif avec§B$ap_BA_Our_story$§!"
  ap_BA_Name_the_void_effect_fake:0 "[root.GetName] peut désormais s'engager sur la voie de devenir une §YCalamité§R cosmique§!§!.\nLance la situation : §YL'Éclat Ternaire de la Cité Académique§! \n(En cours de développement, restez à l'écoute)\n"
  ap_BA_Name_the_void_tip_unknown:0 "$TRIGGER_FAIL$Le comprenons-nous vraiment ?"
 
@@ -2221,31 +2221,31 @@
  GetShittemDesc.common.02:0 "Professeur, bon courage ! Il reste encore beaucoup de travail à faire !"
  GetShittemDesc.common.03:0 "On peut commencer toutes sortes de tâches ici !"
  GetShittemDesc.common.04:0 "Professeur, choisissez le travail que vous voulez faire ! Je serai toujours là pour vous aider !"
- GetShittemDesc.common.05:0 "Le travail à faire s'est accumulé en montagnes… Les adultes sont vraiment vaillants…"
+ GetShittemDesc.common.05:0 "Le travail à faire s'est accumulé en montagnes... Les adultes sont vraiment vaillants..."
 
  #Pulana
  Shittem_Pulana_desc:0 "[this.GetPulanaDesc]"
- BlueArchivePulanaDesc0:0 "… Connexion confirmée…" #平静
+ BlueArchivePulanaDesc0:0 "... Connexion confirmée..." #平静
  BlueArchivePulanaDesc1:0 "Dépêchez-vous de finir le travail, Sensei." #平静
- BlueArchivePulanaDesc2:0 "… Validation terminée, niveaux d'activité et métaboliques élevés. Sensei, vous êtes de très bonne humeur aujourd'hui." #微微微笑
- BlueArchivePulanaDesc3:0 "S'il vous plaît, ne me fixez pas comme ça, cela cause des erreurs de mémoire... D'ailleurs, vous avez du travail, n'est-ce pas, Sensei ?" #无语流汗，光环混乱
- BlueArchivePulanaDesc4:0 "…Erreur… Formulaire de travail soumis incorrectement détecté…" #张口，生气或战意激增
- BlueArchivePulanaDesc5:0 "Professeur… Vous ne referez pas la même erreur, n'est-ce pas… ?" #视线躲闪，害羞或为难
- BlueArchivePulanaDesc6:0 "…Tache détectée… amidon, fructose, protéines et graisses végétales… C'est donc ainsi qu'on rend Arona-senpai heureuse… ?" #睁大眼，无语流汗
- BlueArchivePulanaDesc7:0 "Confirmé… Nécessite une réévaluation de l'efficacité de travail du Professeur…" #睁大眼，惊讶
- BlueArchivePulanaDesc8:0 "…C'est… !" #兴奋星星眼，嘴不张开
- BlueArchivePulanaDesc9:0 "Professeur, je crois que ce n'est pas juste. Le Conseil Général des Étudiants n'est pas digne de confiance… Vous ne devriez pas non plus prendre toutes les responsabilités sur vous !" #辩解状
- BlueArchivePulanaDesc10:0 "…Erreur…" #委屈
- BlueArchivePulanaDesc11:0 "Incompréhensible…" #皱眉，流汗，为难状
- BlueArchivePulanaDesc12:0 "…Chaos, comportement incompréhensible… S'il vous plaît, arrêtez de me donner des coups…" #圈圈眼 @@
- BlueArchivePulanaDesc13:0 "…Fluctuations émotionnelles anormales… S'il vous plaît, arrêtez de me caresser la tête, cela interfère avec mon travail…" #>.<
+ BlueArchivePulanaDesc2:0 "... Validation terminée, niveaux d'activité et métaboliques élevés. Sensei, vous êtes de très bonne humeur aujourd'hui." #微微微笑
+ BlueArchivePulanaDesc3:0 "S'il vous plaît, ne me fixez pas comme ça, cela cause des erreurs de mémoire... D'ailleurs, vous avez du travail, n'est-ce pas, Sensei ?" #无语流汗,光环混乱
+ BlueArchivePulanaDesc4:0 "...Erreur... Formulaire de travail soumis incorrectement détecté..." #张口,生气或战意激增
+ BlueArchivePulanaDesc5:0 "Professeur... Vous ne referez pas la même erreur, n'est-ce pas... ?" #视线躲闪,害羞或为难
+ BlueArchivePulanaDesc6:0 "...Tache détectée... amidon, fructose, protéines et graisses végétales... C'est donc ainsi qu'on rend Arona-senpai heureuse... ?" #睁大眼,无语流汗
+ BlueArchivePulanaDesc7:0 "Confirmé... Nécessite une réévaluation de l'efficacité de travail du Professeur..." #睁大眼,惊讶
+ BlueArchivePulanaDesc8:0 "...C'est... !" #兴奋星星眼,嘴不张开
+ BlueArchivePulanaDesc9:0 "Professeur, je crois que ce n'est pas juste. Le Conseil Général des Étudiants n'est pas digne de confiance... Vous ne devriez pas non plus prendre toutes les responsabilités sur vous !" #辩解状
+ BlueArchivePulanaDesc10:0 "...Erreur..." #委屈
+ BlueArchivePulanaDesc11:0 "Incompréhensible..." #皱眉,流汗,为难状
+ BlueArchivePulanaDesc12:0 "...Chaos, comportement incompréhensible... S'il vous plaît, arrêtez de me donner des coups..." #圈圈眼 @@
+ BlueArchivePulanaDesc13:0 "...Fluctuations émotionnelles anormales... S'il vous plaît, arrêtez de me caresser la tête, cela interfère avec mon travail..." #>.<
  BlueArchivePulanaDesc14:0 "Texte de test 14" #屑笑
- BlueArchivePulanaDesc15:0 "…Mmm, le lait à la fraise… on le laissera à Arona-senpai…" #微笑，或‘不也挺好吗’笑
- BlueArchivePulanaDesc16:0 "Texte de test 16" #乖巧+高兴，心形光环
+ BlueArchivePulanaDesc15:0 "...Mmm, le lait à la fraise... on le laissera à Arona-senpai..." #微笑,或‘不也挺好吗’笑
+ BlueArchivePulanaDesc16:0 "Texte de test 16" #乖巧+高兴,心形光环
  BlueArchivePulanaDesc17:0 "Texte de test 17" #14屑笑+脸红
- BlueArchivePulanaDesc18:0 "Texte de test 18" #阴暗，盯
+ BlueArchivePulanaDesc18:0 "Texte de test 18" #阴暗,盯
  BlueArchivePulanaDesc19:0 "Texte de test 19" #阴笑
- BlueArchivePulanaDesc20:0 "Zzz…" #沉思
+ BlueArchivePulanaDesc20:0 "Zzz..." #沉思
  BlueArchivePulanaDesc21:0 "Texte de test 21" #眯眯眼
  BlueArchivePulanaDesc22:0 "Texte de test 22" #歪头
  BlueArchivePulanaDesc23:0 "Texte de test 23" #歪头
@@ -2254,22 +2254,22 @@
  Shittem_Arona_desc:0 "[this.GetAronaDesc]"
  BlueArchiveAronaDesc0:0 "À partir d'ici, toutes sortes de travaux peuvent commencer !"
  BlueArchiveAronaDesc1:0 "Professeur, bon courage ! Il reste encore beaucoup de travail à faire !"
- BlueArchiveAronaDesc2:0 "Je vois… C'est donc ainsi que vous gérez ces affaires."
+ BlueArchiveAronaDesc2:0 "Je vois... C'est donc ainsi que vous gérez ces affaires."
  BlueArchiveAronaDesc3:0 "Ne vous forcez pas trop, vous pouvez faire entièrement confiance à Arona, ehehehe." #微笑
- BlueArchiveAronaDesc4:0 "Ha, haeh… Professeur, pourquoi êtes-vous si pressé… ? Y a-t-il quelque chose d'important à gérer ?" #微微惊讶
+ BlueArchiveAronaDesc4:0 "Ha, haeh... Professeur, pourquoi êtes-vous si pressé... ? Y a-t-il quelque chose d'important à gérer ?" #微微惊讶
  BlueArchiveAronaDesc5:0 "Professeur, choisissez le travail que vous voulez faire ! Je serai toujours là pour vous aider !" #认真状 ‘^’
- BlueArchiveAronaDesc6:0 "Professeur, vous devriez aussi bien vous reposer de temps en temps… Arona s'inquiète beaucoup pour votre santé…"
- BlueArchiveAronaDesc7:0 "…Tss, nous offenser de la sorte, et si on vous appelait « boules de poils extraterrestres » désormais… Ah, Professeur, Arona n'espionnait pas les communications diplomatiques, ahaha, vraiment pas, non…"
- BlueArchiveAronaDesc8:0 "Pas besoin que vous nous disiez quoi faire, vous qui ne savez même pas utiliser les pierres d'artisanat… Ah, avez-vous entendu quelque chose à l'instant ?"
- BlueArchiveAronaDesc9:0 "…Ah, Professeur… Un e-mail ? Non, il n'y a pas d'e-mail, ehehehe." #阴暗+右上斜眼
- BlueArchiveAronaDesc10:0 "Soupir… On dirait que le Professeur va encore travailler tard aujourd'hui…" #叹气状
+ BlueArchiveAronaDesc6:0 "Professeur, vous devriez aussi bien vous reposer de temps en temps... Arona s'inquiète beaucoup pour votre santé..."
+ BlueArchiveAronaDesc7:0 "...Tss, nous offenser de la sorte, et si on vous appelait « boules de poils extraterrestres » désormais... Ah, Professeur, Arona n'espionnait pas les communications diplomatiques, ahaha, vraiment pas, non..."
+ BlueArchiveAronaDesc8:0 "Pas besoin que vous nous disiez quoi faire, vous qui ne savez même pas utiliser les pierres d'artisanat... Ah, avez-vous entendu quelque chose à l'instant ?"
+ BlueArchiveAronaDesc9:0 "...Ah, Professeur... Un e-mail ? Non, il n'y a pas d'e-mail, ehehehe." #阴暗+右上斜眼
+ BlueArchiveAronaDesc10:0 "Soupir... On dirait que le Professeur va encore travailler tard aujourd'hui..." #叹气状
  BlueArchiveAronaDesc11:0 "J'aiderai le Professeur à faire le travail !"
  BlueArchiveAronaDesc12:0 "Professeur, devinez quelle bonne nouvelle Arona a pour vous aujourd'hui ?" #兴奋状 XD
- BlueArchiveAronaDesc13:0 "Le travail à faire s'est accumulé en montagnes… Les adultes sont vraiment vaillants…" #惬意
- BlueArchiveAronaDesc14:0 "Professeur… Ne passez pas tout votre temps à discuter avec les élèves, le travail d'aujourd'hui ne sera pas terminé !"
- BlueArchiveAronaDesc15:0 "Professeur, veillez à concilier travail et repos de temps en temps… Arona s'inquiète beaucoup pour votre santé…"
+ BlueArchiveAronaDesc13:0 "Le travail à faire s'est accumulé en montagnes... Les adultes sont vraiment vaillants..." #惬意
+ BlueArchiveAronaDesc14:0 "Professeur... Ne passez pas tout votre temps à discuter avec les élèves, le travail d'aujourd'hui ne sera pas terminé !"
+ BlueArchiveAronaDesc15:0 "Professeur, veillez à concilier travail et repos de temps en temps... Arona s'inquiète beaucoup pour votre santé..."
  BlueArchiveAronaDesc16:0 "Texte de test 16" #震惊+脸红
- BlueArchiveAronaDesc17:0 "Professeur…"
+ BlueArchiveAronaDesc17:0 "Professeur..."
  BlueArchiveAronaDesc18:0 "Texte de test 18"
  BlueArchiveAronaDesc19:0 "P-Professeur ! Mais qu'est-ce que c'est que ça... ? P-Pourquoi... pourquoi l'avez-vous en main... ? Oh... Bouhouhou... Arona ne pourra plus se marier..."
  BlueArchiveAronaDesc20:0 "Texte de test 20"

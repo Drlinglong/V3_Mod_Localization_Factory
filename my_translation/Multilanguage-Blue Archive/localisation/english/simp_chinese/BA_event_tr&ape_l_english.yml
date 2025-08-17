@@ -1,22 +1,22 @@
-﻿l_english:
+l_english:
 ##### 飞升 #####
 #事件链
  BA_ape.0001.name:0 "Kozeki Ui's Proposal"
  BA_ape.0001.desc:0 "(After Kivotos's reconstruction was complete, Kozeki Ui burrowed back into her beloved library to continue her restoration tasks. Thankfully, the Trinity Library hadn't suffered much damage during the war. While organizing the chaotic books, she discovered something quite special.)\n\n§M“Sensei, I think you really need to see this.”§!\n\n(One morning, a rare sight, she emerged from the Trinity Library and made the long trip to Sensei's office.)"
  BA_ape.0001.a:0 "Oh, a rare guest! Is something the matter?"
- BA_ape.0001.a.re:0 "§M“Yes… Please, take a look at this first.”§!\n(Ui presented a yellowed, ancient scroll.)"
+ BA_ape.0001.a.re:0 "§M“Yes... Please, take a look at this first.”§!\n(Ui presented a yellowed, ancient scroll.)"
  BA_ape.0001.b:0 "An old book? But this is our interstellar exploration office!"
- BA_ape.0001.b.re:0 "§M“This book… it should have originally been kept in the restricted section. What it describes is related to the Halos above our heads… To be honest, even though the General Student Council previously issued a ban on Halo research, as something so intrinsically linked to us, we know absolutely nothing about their true nature…”§!\n…\n§M“Exactly… I want to initiate some research into Halos.”§!\n…"
+ BA_ape.0001.b.re:0 "§M“This book... it should have originally been kept in the restricted section. What it describes is related to the Halos above our heads... To be honest, even though the General Student Council previously issued a ban on Halo research, as something so intrinsically linked to us, we know absolutely nothing about their true nature...”§!\n...\n§M“Exactly... I want to initiate some research into Halos.”§!\n..."
  BA_ape.0001.c:0 "...I approve. Just remember to proceed with utmost caution."
  BA_ape.0001.c.re:0 "(After much deliberation, I ultimately decided to approve this proposal.)\nTip: Complete the 'Repair Pyroxene Fabricator' request in the Arona interface. Kozeki Ui will join your leader list as a scientist; please keep an eye out."
  BA_ape.0001.c.tip:0 "Is this truly a bright path, or merely a key to Pandora's Box?"
 
  BA_ape.0002.name:0 "Kivotos News: A Breakthrough"
- BA_ape.0002.desc:0 "“…Recently, Trinity's ancient text expert, Kozeki Ui, published a groundbreaking thesis: 'A Report on Halos and Divine Seals,' which was publicly defended at the Trinity Grand Cathedral. During the defense, Ui elaborated in detail and comprehensively on her preliminary Halo theory, and presented a malleable material with similar properties to Halos: Fabrication Stone. This thesis was the first to propose various questions regarding the true nature of Halo power."
+ BA_ape.0002.desc:0 "“...Recently, Trinity's ancient text expert, Kozeki Ui, published a groundbreaking thesis: 'A Report on Halos and Divine Seals,' which was publicly defended at the Trinity Grand Cathedral. During the defense, Ui elaborated in detail and comprehensively on her preliminary Halo theory, and presented a malleable material with similar properties to Halos: Fabrication Stone. This thesis was the first to propose various questions regarding the true nature of Halo power."
  BA_ape2.a:0 "Where do we go from here?"
 
  BA_ape.0003.name:0 "Kivotos News: Fabrication Stone"
- BA_ape.0003.desc:0 "According to a report from Millennium Science School's Engineering Department, during their recent collaborative research with Ms. Kozeki Ui of Trinity, they discovered a synthesis route for Fabrication Stone: using Pyroxene as a raw material, it can also produce some extremely high-quality luxury goods. The Federation Research Department has officially designated it as a key research objective…"
+ BA_ape.0003.desc:0 "According to a report from Millennium Science School's Engineering Department, during their recent collaborative research with Ms. Kozeki Ui of Trinity, they discovered a synthesis route for Fabrication Stone: using Pyroxene as a raw material, it can also produce some extremely high-quality luxury goods. The Federation Research Department has officially designated it as a key research objective..."
  BA_ape4.a:0 "Fantastic!"
 
  BA_ape.0004.name:0 "Setback"
@@ -38,8 +38,8 @@
  BA_ape.0005.g:0 "Close Archives"
 
  BA_ape.0006.name:0 "Dispute"
- BA_ape.0006.desc:0 "With the completion of the Gematria outpost investigation, we've acquired some… knowledge that's hard to describe. \n\nWe shared the data with the Halo Research Team members, but it seems a dispute erupted among them – one faction represented by Millennium students, and another by Trinity students. \n\nMillennium students advocate for organizing and modifying the data left behind by Gematria, clearly stating: 'That esoteric theory from before was simply too uncontrollable; we must fully master the power of Halos ourselves.'\n\nTrinity students, on the other hand, insist on maintaining reverence for the unknown and highlight that their current theories have already yielded significant results. \n\nThe two sides are at an impasse, and research progress has slowed. Someone with sufficient Influence must make a decision. (Tip: You can ask the current Student Council President for their opinion via the communications panel (though this is not yet implemented).)"
- BA_ape.0006.a:0 "…Anyway, the bickering within the General Student Council is inevitable."
+ BA_ape.0006.desc:0 "With the completion of the Gematria outpost investigation, we've acquired some... knowledge that's hard to describe. \n\nWe shared the data with the Halo Research Team members, but it seems a dispute erupted among them – one faction represented by Millennium students, and another by Trinity students. \n\nMillennium students advocate for organizing and modifying the data left behind by Gematria, clearly stating: 'That esoteric theory from before was simply too uncontrollable; we must fully master the power of Halos ourselves.'\n\nTrinity students, on the other hand, insist on maintaining reverence for the unknown and highlight that their current theories have already yielded significant results. \n\nThe two sides are at an impasse, and research progress has slowed. Someone with sufficient Influence must make a decision. (Tip: You can ask the current Student Council President for their opinion via the communications panel (though this is not yet implemented).)"
+ BA_ape.0006.a:0 "...Anyway, the bickering within the General Student Council is inevitable."
 
  BA_ape.0007.name:0 "A Choice"
  BA_ape.0007.desc:0 "The prolonged dispute has yielded no results. Clearly, we cannot allow this argument to continue. Until we know when our enemies will return, we don't have much time to dwell on these issues. We must make a choice, no matter what lies ahead on this path."
@@ -130,7 +130,7 @@
 
  BA_Kivotos_chronicle_effect_stage1:0 "§H£district£$BA_districts_dome$§! provide more §C£job£Jobs§!, and all §H£district£districts§! will gain more £housing£Housing."
  BA_Kivotos_chronicle_effect_stage2:0 "§H£district£$BA_districts_suburbs$§! provided §C£job£Jobs§! will receive a production boost, and unlock a £zone£['concept_district_specialization'] focused on £energy£ £minerals£ £food£basic resources, §Yone of which§!."
- BA_Kivotos_chronicle_effect_stage3:0 "§H£district£$BA_districts_military_factory$§! provided §C£job£Jobs§! will have increased output and resource consumption." #并且解锁特殊的行星决议：牺牲一些§l£district£区划上限§!以进一步提升此区划提供的§C£job£岗位§!的的产出与消耗
+ BA_Kivotos_chronicle_effect_stage3:0 "§H£district£$BA_districts_military_factory$§! provided §C£job£Jobs§! will have increased output and resource consumption." #并且解锁特殊的行星决议:牺牲一些§l£district£区划上限§!以进一步提升此区划提供的§C£job£岗位§!的的产出与消耗
  BA_Kivotos_chronicle_effect_stage4:0 "Unlock two additional autonomous district slots for School City Worlds, which can be planned freely within them. Unlock more §H£building£buildings§! and upgrades, providing more §Cunique School City £job£Jobs§! and allowing them to produce §BRare Resources§!."
  BA_Kivotos_chronicle_effect_stage5:0 "§H£district£$BA_districts_municipality$§! will provide more §C£job£Jobs§!, and §G§Cunique School City £job£Jobs§!§! will §Yno longer harm planetary £stability£Stability, and no longer require £influence£$influence$Upkeep.§!"
  BA_Kivotos_chronicle_effect_stage6:0 "Ship, Starbase, and Megastructure construction and upgrade speed §G+50%§!. Allows upgrades for §CSchool City buildings§!, enhancing their effects and providing a large amount of $trade_with_icon$."

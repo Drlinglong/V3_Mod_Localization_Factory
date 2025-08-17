@@ -1,4 +1,4 @@
-﻿## OTC Localisation
+## OTC Localisation
 # Created by Accorata & BrettlesSr
 
 l_spanish:
@@ -361,7 +361,7 @@ l_spanish:
   operation_reset_civilisation_on_success:"$IF_SUCCESSFUL|E$\nLa civilización objetivo será reducida a un único mundo de primitivos pre-FTL."
   operation_reset_civilisation_rival_time_travellers:0 "No podemos intentar esta operación contra manipuladores temporales colegas."
   omnitemporal.50.name:0 "En Aproximación"
-  omnitemporal.50.desc:0 "El equipo —una mezcla de especialistas de operaciones encubiertas y científicos temporales— está oculto a bordo de una nave de transporte que hemos equipado para esta expedición. Con ellos llevan el equipo para realizar un salto en el tiempo hacia el pasado, al momento que nuestros xenohistoriadores han determinado como el mejor para sabotear el desarrollo de [Target.GetName]."
+  omnitemporal.50.desc:0 "El equipo -una mezcla de especialistas de operaciones encubiertas y científicos temporales- está oculto a bordo de una nave de transporte que hemos equipado para esta expedición. Con ellos llevan el equipo para realizar un salto en el tiempo hacia el pasado, al momento que nuestros xenohistoriadores han determinado como el mejor para sabotear el desarrollo de [Target.GetName]."
   omnitemporal.51.name:0 "Códigos Antiguos"
   omnitemporal.51.desc:0 "El transporte de nuestro ajustador temporal ha superado el control de seguridad del sistema; los códigos de seguridad que el $role_spymaster$ [spynetwork.leader.GetName] ha estado recolectando fueron cruciales para acceder al sistema. Nuestros operativos han iniciado el procedimiento de calentamiento para preparar la máquina del tiempo. Apuntarán de nuevo a la capital para el viaje final de la nave de transporte."
   omnitemporal.52.name:0 "Hacia el Pasado"

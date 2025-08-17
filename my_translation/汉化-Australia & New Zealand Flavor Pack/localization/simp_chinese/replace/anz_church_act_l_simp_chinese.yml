@@ -1,10 +1,10 @@
-﻿l_simp_chinese:
+l_simp_chinese:
 
 ### Journal Entry
 
 je_anz_church_act:0  "教会法案"
 
-je_anz_church_act_reason:0  "[GetInterestGroupVariant('ig_intelligentsia',GetPlayer).GetName]正在请愿通过[GetLawType('law_freedom_of_conscience').GetName]。\n\n[GetCulture('irish').GetName][GetReligion('catholic').GetName]教派暴力在家园和殖民地肆虐。[GetInterestGroupVariant('ig_devout',GetPlayer).GetName]目前享有许多专属特权，虽然我们的人口中包含其他基督教派，但他们几乎没有官方牧养，并面临频繁的[concept_discrimination]。\n\n该#white  教会法案#!提议通过废除许多圣公会特权，并按照非圣公会教堂和神职人员的信徒比例提供资助，从而使圣公会和其他基督教信仰处于平等地位。"
+je_anz_church_act_reason:0  "[GetInterestGroupVariant('ig_intelligentsia',GetPlayer).GetName]正在请愿通过[GetLawType('law_freedom_of_conscience').GetName].\n\n[GetCulture('irish').GetName][GetReligion('catholic').GetName]教派暴力在家园和殖民地肆虐.[GetInterestGroupVariant('ig_devout',GetPlayer).GetName]目前享有许多专属特权,虽然我们的人口中包含其他基督教派,但他们几乎没有官方牧养,并面临频繁的[concept_discrimination].\n\n该#white  教会法案#!提议通过废除许多圣公会特权,并按照非圣公会教堂和神职人员的信徒比例提供资助,从而使圣公会和其他基督教信仰处于平等地位."
 
 #je_anz_churchact_petition_status:0 "The [GetInterestGroupVariant('ig_intelligentsia',GetPlayer).GetName] are petitioning for [GetLawType('law_freedom_of_conscience').GetName] to pass."
 
@@ -14,38 +14,38 @@ anz_churchact_complete:0  "教会法案"
 # Scripted buttons
 
 je_anz_church_colonial_office_appeal_button:0  "请求殖民地事务部支持"
-je_anz_church_colonial_office_appeal_button_desc:0  "通过请求殖民地事务部加强我们的立法授权，我们可以缓解教派[concept_discrimination]所造成的棘手局面。\n\n@information! 如果[GetGlobalVariable('gbr_var_scope').GetCountry.GetName]至少有两支[Concept('concept_interest_group','$concept_interest_groups$')]的[concept_in_government]反对[GetLawType('law_freedom_of_conscience').GetName]，殖民地事务部将#red 拒绝我们的请求#!。\n\n@information! 我们被接受的机会将取决于与[GetGlobalVariable('gbr_var_scope').GetCountry.GetName]的良好[concept_relations]。"
-je_anz_church_colonial_office_appeal_button_possible1:0  "目前未等待回应。"
-je_anz_church_colonial_office_appeal_button_possible2:0  "殖民地事务部尚未发布支持法令。"
+je_anz_church_colonial_office_appeal_button_desc:0  "通过请求殖民地事务部加强我们的立法授权,我们可以缓解教派[concept_discrimination]所造成的棘手局面.\n\n@information! 如果[GetGlobalVariable('gbr_var_scope').GetCountry.GetName]至少有两支[Concept('concept_interest_group','$concept_interest_groups$')]的[concept_in_government]反对[GetLawType('law_freedom_of_conscience').GetName],殖民地事务部将#red 拒绝我们的请求#!.\n\n@information! 我们被接受的机会将取决于与[GetGlobalVariable('gbr_var_scope').GetCountry.GetName]的良好[concept_relations]."
+je_anz_church_colonial_office_appeal_button_possible1:0  "目前未等待回应."
+je_anz_church_colonial_office_appeal_button_possible2:0  "殖民地事务部尚未发布支持法令."
 anz_churchact_response_time:0  "#v 我们将在一年内得到回应#!"
 
 ### Events
 anz_churchact_diplomatic_no:0 "Relations with [ROOT.GetCountry.GetOverlord.GetName] are less than#v  neutral#!.
 anz_churchact_diplomatic_no_chanced:0 "Relations with [ROOT.GetCountry.GetOverlord.GetName] are less than#g  amicable#! (25% chance).
 anz_churchact_political_no:0  "[ROOT.GetCountry.GetOverlord.GetName]至少有两支[concept_interest_group]的[concept_in_government]反对[GetLawType('law_freedom_of_conscience').GetName]"
-anz_churchact_petition_tt:0  "[GetInterestGroupVariant('ig_intelligentsia',GetPlayer).GetName]将期望政府在未来五年内通过[GetLawType('law_freedom_of_conscience').GetName]。"
+anz_churchact_petition_tt:0  "[GetInterestGroupVariant('ig_intelligentsia',GetPlayer).GetName]将期望政府在未来五年内通过[GetLawType('law_freedom_of_conscience').GetName]."
 
 # Journal petition start
 anz_church_act.1.t:0  "基督教派系主义"
-anz_church_act.1.d:0  "随着近期反[GetReligion('catholic').GetName]敌意暂时平息，[SCOPE.sCharacter('anz_int_leader_churchact').GetFullName]正在请愿建造和维护非圣公会教堂及神职人员。\n\n此举将废除许多[GetInterestGroupVariant('ig_devout',GetPlayer).GetName]的特权，并代表国家支持的[GetLawType('law_freedom_of_conscience').GetName]。"
-anz_church_act.1.f:0  "[GetCulture('british').GetName]对[GetCulture('irish').GetName][GetReligion('catholic').GetName]#yellow 的#![concept_discrimination]有着悠久的历史，其中包括反抗和镇压，许多失败的叛乱者最终作为政治犯流放至殖民地。\n\n1803年，天主教礼拜曾短暂提供，但仅仅一年后，爱尔兰罪犯就在城堡山起义中试图推翻英国统治。"
-anz_church_act.1.a:0  "安抚或许能阻止进一步的叛乱……"
-anz_church_act.1.b:0  "我们不能稀释我们纯粹的信仰。"
-anz_church_act.1.b2:0  "我们绝对不能稀释我们纯粹的信仰。"
+anz_church_act.1.d:0  "随着近期反[GetReligion('catholic').GetName]敌意暂时平息,[SCOPE.sCharacter('anz_int_leader_churchact').GetFullName]正在请愿建造和维护非圣公会教堂及神职人员.\n\n此举将废除许多[GetInterestGroupVariant('ig_devout',GetPlayer).GetName]的特权,并代表国家支持的[GetLawType('law_freedom_of_conscience').GetName]."
+anz_church_act.1.f:0  "[GetCulture('british').GetName]对[GetCulture('irish').GetName][GetReligion('catholic').GetName]#yellow 的#![concept_discrimination]有着悠久的历史,其中包括反抗和镇压,许多失败的叛乱者最终作为政治犯流放至殖民地.\n\n1803年,天主教礼拜曾短暂提供,但仅仅一年后,爱尔兰罪犯就在城堡山起义中试图推翻英国统治."
+anz_church_act.1.a:0  "安抚或许能阻止进一步的叛乱......"
+anz_church_act.1.b:0  "我们不能稀释我们纯粹的信仰."
+anz_church_act.1.b2:0  "我们绝对不能稀释我们纯粹的信仰."
 
 # Colonial office helps
 anz_church_act.2.t:0  "殖民地事务部回应"
-anz_church_act.2.d:0  "一项法令已经颁布，鼓励[GetLawType('law_freedom_of_conscience').GetName]，以缓解教派暴力，促进殖民地稳定发展。"
-anz_church_act.2.f:0  "“所有的社会生活、稳定和进步，都取决于每个人对邻里的信任，以及对他们履行职责的依赖。”"
-anz_church_act.2.a:0  "好消息！"
+anz_church_act.2.d:0  "一项法令已经颁布,鼓励[GetLawType('law_freedom_of_conscience').GetName],以缓解教派暴力,促进殖民地稳定发展."
+anz_church_act.2.f:0  "“所有的社会生活,稳定和进步,都取决于每个人对邻里的信任,以及对他们履行职责的依赖.”"
+anz_church_act.2.a:0  "好消息!"
 
 # Colonial office rejects
 anz_church_act.21.t:0  "殖民地事务部回应"
-anz_church_act.21.d:0  "我们请求殖民地事务部颁布法令支持[GetLawType('law_freedom_of_conscience').GetName]的请求已被驳回。"
-anz_church_act.21.f:0  "“回顾越远，展望越远。”"
-anz_church_act.21.a:0  "该死！"
-anz_church_act.21.b:0  "见鬼！"
-anz_church_act.21.c:0  "那就这样吧！"
+anz_church_act.21.d:0  "我们请求殖民地事务部颁布法令支持[GetLawType('law_freedom_of_conscience').GetName]的请求已被驳回."
+anz_church_act.21.f:0  "“回顾越远,展望越远.”"
+anz_church_act.21.a:0  "该死!"
+anz_church_act.21.b:0  "见鬼!"
+anz_church_act.21.c:0  "那就这样吧!"
 
 # enactment event - NOT IMPLEMENTED .. 
 anz_church_act.3.t:0  "颁布"

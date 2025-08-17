@@ -1,4 +1,4 @@
-﻿l_japanese:
+l_japanese:
 ##################
 # hcp_events_l_english.yml
 # By jam1066
@@ -10,168 +10,168 @@
  # Harvesters Event Chain #
  ##########################
  hcp_harvesters_crisis_chain_title: "$hcp_ap_harvesters$"
- hcp_harvesters_crisis_chain_desc:"我々の宇宙は有限だ！資源も時間も限りがある。どちらも無駄にしてはならない。"
+ hcp_harvesters_crisis_chain_desc:"我々の宇宙は有限だ!資源も時間も限りがある.どちらも無駄にしてはならない."
  hcp_harvesters_level_reached:"危機レベル到達"
 
  ######################
  # Harvesters Level 1 #
  ######################
  hcp_harvesters_crisis.100.name:"未来への思索"
- hcp_harvesters_crisis.100.desc:"我々の文明が銀河全体に広がり続けるにつれて、集団的生存の可能性は高まり、より遠い未来を見据える余裕が生まれてきた。しかし、そうする中で、我々は恐ろしい事実に直面した。我々の帝国がどれほど広大であろうと、その功績がどれほど偉大であろうと、その遺産がどれほど永続的であろうと、いずれ宇宙は終焉を迎え、すべてが無意味になるのだ。\n\nやがて訪れる熱的死に対する民衆の懸念は高まっており、多くの者が今すぐ対処の準備を始めるべきだと主張している。これには膨大な量の資源の獲得が必要となるだろう。\n\nこれを保管するための容量を確保するため、我々はブラックホールの周りに建設される巨大なサイロの計画を策定した。"
- hcp_harvesters_crisis.100.mach.desc:"我々のネットワークが銀河中に広がるにつれて、継続的な生存の確率は指数関数的に増大し、より長期的な時間軸を考慮できるようになる。しかし残念ながら、我々の将来シミュレーションはすべて同じ結果に収束する。我々の存在は、宇宙の予測される寿命によって制限されているのだ。\n\nそのような時点を超えて存在し続けるため、我々は利用可能なすべての資源を統合するべく行動しなければならない。この目的のため、我々はブラックホールの周りに建設される巨大なサイロの計画を策定した。"
- hcp_harvesters_crisis.100.hive.desc:"我々が銀河中に増殖し続けるにつれて、生存の可能性は高まり、より遠い未来を見据える余裕が生まれてきた。しかし、そうする中で、我々は恐ろしい事実に直面した。我々の宇宙はいずれ死滅し、我々もそれと共に滅びるのだ。\n\nこのような避けられない事態に直面しても、我々の生存を確保することが最も重要である。そのためには、膨大な量の資源を貯蔵し始める必要がある。この目的のため、我々はブラックホールの周りに建設される巨大なサイロの計画を策定した。"
- hcp_harvesters_crisis.100.a:"取り掛かろう。"
- hcp_harvesters_crisis.100.resource_consolidation:"これには経験がある。"
+ hcp_harvesters_crisis.100.desc:"我々の文明が銀河全体に広がり続けるにつれて,集団的生存の可能性は高まり,より遠い未来を見据える余裕が生まれてきた.しかし,そうする中で,我々は恐ろしい事実に直面した.我々の帝国がどれほど広大であろうと,その功績がどれほど偉大であろうと,その遺産がどれほど永続的であろうと,いずれ宇宙は終焉を迎え,すべてが無意味になるのだ.\n\nやがて訪れる熱的死に対する民衆の懸念は高まっており,多くの者が今すぐ対処の準備を始めるべきだと主張している.これには膨大な量の資源の獲得が必要となるだろう.\n\nこれを保管するための容量を確保するため,我々はブラックホールの周りに建設される巨大なサイロの計画を策定した."
+ hcp_harvesters_crisis.100.mach.desc:"我々のネットワークが銀河中に広がるにつれて,継続的な生存の確率は指数関数的に増大し,より長期的な時間軸を考慮できるようになる.しかし残念ながら,我々の将来シミュレーションはすべて同じ結果に収束する.我々の存在は,宇宙の予測される寿命によって制限されているのだ.\n\nそのような時点を超えて存在し続けるため,我々は利用可能なすべての資源を統合するべく行動しなければならない.この目的のため,我々はブラックホールの周りに建設される巨大なサイロの計画を策定した."
+ hcp_harvesters_crisis.100.hive.desc:"我々が銀河中に増殖し続けるにつれて,生存の可能性は高まり,より遠い未来を見据える余裕が生まれてきた.しかし,そうする中で,我々は恐ろしい事実に直面した.我々の宇宙はいずれ死滅し,我々もそれと共に滅びるのだ.\n\nこのような避けられない事態に直面しても,我々の生存を確保することが最も重要である.そのためには,膨大な量の資源を貯蔵し始める必要がある.この目的のため,我々はブラックホールの周りに建設される巨大なサイロの計画を策定した."
+ hcp_harvesters_crisis.100.a:"取り掛かろう."
+ hcp_harvesters_crisis.100.resource_consolidation:"これには経験がある."
 
  # Acquire a Black Hole
  hcp_harvesters_crisis.101.name:"ブラックホール確保"
- hcp_harvesters_crisis.101.desc:"§Hブラックホール§!を確保し、§Y特異点サイロ§!の建設を開始する準備が整った。"
+ hcp_harvesters_crisis.101.desc:"§Hブラックホール§!を確保し,§Y特異点サイロ§!の建設を開始する準備が整った."
 
  hcp_harvesters_crisis.102.name:"ブラックホール特定"
- hcp_harvesters_crisis.102.desc:"我々の観測基地が、§Hブラックホール§!を特定し、§Y特異点サイロ§!の建設を開始する準備が整った。"
+ hcp_harvesters_crisis.102.desc:"我々の観測基地が,§Hブラックホール§!を特定し,§Y特異点サイロ§!の建設を開始する準備が整った."
 
  ######################
  # Harvesters Level 2 #
  ######################
  hcp_harvesters_crisis.200.name:"作戦開始"
- hcp_harvesters_crisis.200.desc:"我々の特異点サイロの第一段階が完了したことは、画期的な出来事だ！まだ25%しか完成していないが、すでに他の保管施設の総容量を上回る容量を持っている。残念ながら、収穫作業を開始する前に完成を待つ時間的余裕はない。\n\n我々の探査ドローンはすでに、新たな豊富な鉱物資源の鉱床を発見しており、我々はより効率的な採掘技術の開発に懸命に取り組んでいるが、まだ多くの作業が残っている。"
- hcp_harvesters_crisis.200.a:"無駄にする時間はない。"
+ hcp_harvesters_crisis.200.desc:"我々の特異点サイロの第一段階が完了したことは,画期的な出来事だ!まだ25%しか完成していないが,すでに他の保管施設の総容量を上回る容量を持っている.残念ながら,収穫作業を開始する前に完成を待つ時間的余裕はない.\n\n我々の探査ドローンはすでに,新たな豊富な鉱物資源の鉱床を発見しており,我々はより効率的な採掘技術の開発に懸命に取り組んでいるが,まだ多くの作業が残っている."
+ hcp_harvesters_crisis.200.a:"無駄にする時間はない."
 
  ######################
  # Harvesters Level 3 #
  ######################
  hcp_harvesters_crisis.300.name:"残る非効率性"
- hcp_harvesters_crisis.300.desc:"我々の収穫作業は現在順調に進んでいる。エネルギー採掘設備の配備により、全体的な効率が劇的に向上し、軌道インフラの継続的な拡張により、貴重な資源へのアクセスが増加しているが、依然として非効率性が残っている。\n\nこれを改善するために、我々は新型の軌道ステーションの設計図を作成した。これらのオービタル・クオリアーは、惑星を層状に剥ぎ取り、膨大な資源を我々のために収集する能力を持つよう設計されている。\n\nさらに、特異点サイロの設計も修正し、一連の聖域を含めることになった。これらは、いかなる惑星よりもはるかに効率的な方法で、我々の全文明を収容するだろう。"
- hcp_harvesters_crisis.300.a:"さらなる資源が必要だ。"
+ hcp_harvesters_crisis.300.desc:"我々の収穫作業は現在順調に進んでいる.エネルギー採掘設備の配備により,全体的な効率が劇的に向上し,軌道インフラの継続的な拡張により,貴重な資源へのアクセスが増加しているが,依然として非効率性が残っている.\n\nこれを改善するために,我々は新型の軌道ステーションの設計図を作成した.これらのオービタル・クオリアーは,惑星を層状に剥ぎ取り,膨大な資源を我々のために収集する能力を持つよう設計されている.\n\nさらに,特異点サイロの設計も修正し,一連の聖域を含めることになった.これらは,いかなる惑星よりもはるかに効率的な方法で,我々の全文明を収容するだろう."
+ hcp_harvesters_crisis.300.a:"さらなる資源が必要だ."
 
  ######################
  # Harvesters Level 4 #
  ######################
  hcp_harvesters_crisis.400.name:"実験的技術"
- hcp_harvesters_crisis.400.desc:"我々の収穫作業に関する最近の分析により、憂慮すべき結果が明らかになった。オービタル・クオリアーの配備により、運用効率は以前は達成不可能とされていた高みに達したものの、最も悲観的な目標にすら届かないと推定されているのだ。\n\nこの取り組みを立て直すため、我々は開発中のより実験的な採掘技術のいくつかについて検討を開始し、特に§H恒星ハーベスター§!が有望であることが示されている。\n\n試作機を建設しテストすることで、その開発を加速できると信じている。§H[capital_scope.GetName]§!の軌道インフラは、その建設に対応できるよう準備が整っている。"
- hcp_harvesters_crisis.400.a:"必ず成功させねばならない。"
+ hcp_harvesters_crisis.400.desc:"我々の収穫作業に関する最近の分析により,憂慮すべき結果が明らかになった.オービタル・クオリアーの配備により,運用効率は以前は達成不可能とされていた高みに達したものの,最も悲観的な目標にすら届かないと推定されているのだ.\n\nこの取り組みを立て直すため,我々は開発中のより実験的な採掘技術のいくつかについて検討を開始し,特に§H恒星ハーベスター§!が有望であることが示されている.\n\n試作機を建設しテストすることで,その開発を加速できると信じている.§H[capital_scope.GetName]§!の軌道インフラは,その建設に対応できるよう準備が整っている."
+ hcp_harvesters_crisis.400.a:"必ず成功させねばならない."
 
  hcp_harvesters_crisis.410.name:"試作機完成"
- hcp_harvesters_crisis.410.desc:"恒星ハーベスター試作機の建造が完了した。最大の星系基地さえも矮小に見せるほどの巨体で、その建造に使われた資源は天文学的な量に上るため、約束された結果を出すことが重要だ。これをテストするには、我々の領土内で戦略的重要性の低い星系を標的にすべきだろう。"
- hcp_harvesters_crisis.410.a:"[event_target:hcp_test_fire_target.GetName]星系でよかろう。"
- hcp_harvesters_crisis.410.b:"どの星系ならなくても済むか、決める必要がある。"
+ hcp_harvesters_crisis.410.desc:"恒星ハーベスター試作機の建造が完了した.最大の星系基地さえも矮小に見せるほどの巨体で,その建造に使われた資源は天文学的な量に上るため,約束された結果を出すことが重要だ.これをテストするには,我々の領土内で戦略的重要性の低い星系を標的にすべきだろう."
+ hcp_harvesters_crisis.410.a:"[event_target:hcp_test_fire_target.GetName]星系でよかろう."
+ hcp_harvesters_crisis.410.b:"どの星系ならなくても済むか,決める必要がある."
 
  hcp_harvesters_crisis.415.name:"試作機破壊"
- hcp_harvesters_crisis.415.desc:"我々の恒星ハーベスター試作機が破壊された！これによって無駄になった資源の量は天文学的なものだ。テストを完了させるために、もう一台建造する必要がある。"
- hcp_harvesters_crisis.415.a:"これは大惨事だ！"
+ hcp_harvesters_crisis.415.desc:"我々の恒星ハーベスター試作機が破壊された!これによって無駄になった資源の量は天文学的なものだ.テストを完了させるために,もう一台建造する必要がある."
+ hcp_harvesters_crisis.415.a:"これは大惨事だ!"
 
  hcp_harvesters_crisis.420.name:"恒星系収穫"
- hcp_harvesters_crisis.420.desc:"[from.GetName]星系は消滅した。その内部のすべてが完全に解体され、資源は我々の恒星ハーベスターに貯蔵された。このテストは我々の最も楽観的な予想さえも上回る結果を出した！最終設計の確定にはまだ作業が残っているが、我々の目標は今やはるかに達成可能になった。"
+ hcp_harvesters_crisis.420.desc:"[from.GetName]星系は消滅した.その内部のすべてが完全に解体され,資源は我々の恒星ハーベスターに貯蔵された.このテストは我々の最も楽観的な予想さえも上回る結果を出した!最終設計の確定にはまだ作業が残っているが,我々の目標は今やはるかに達成可能になった."
 
  ######################
  # Harvesters Level 5 #
  ######################
  hcp_harvesters_crisis.500.name:"宇宙の収穫"
- hcp_harvesters_crisis.500.desc:"我々は宇宙の新たな時代の崖っぷちに立っている。試作機によるテストが完了し、我々は必要な資源を収集するために恒星ハーベスターを解き放つ準備ができた。手動でさらに多くを建造するのは非効率的であるため、収集した物質を利用して自己複製する能力をそれらに与えた。\n\nまた、惑星の人口を避難させる能力も与えた。これは元々、既存の入植地を含む星系で、収穫作業を遅らせることなく使用できるように意図されたものだった。しかし、これは他の帝国の入植地にも使用でき、彼らの人口を我々の聖域に移住させることも可能になるだろう。"
- hcp_harvesters_crisis.500.a:"聖域はすべてを受け入れる。"
- hcp_harvesters_crisis.500.b:"人口を収穫する。"
+ hcp_harvesters_crisis.500.desc:"我々は宇宙の新たな時代の崖っぷちに立っている.試作機によるテストが完了し,我々は必要な資源を収集するために恒星ハーベスターを解き放つ準備ができた.手動でさらに多くを建造するのは非効率的であるため,収集した物質を利用して自己複製する能力をそれらに与えた.\n\nまた,惑星の人口を避難させる能力も与えた.これは元々,既存の入植地を含む星系で,収穫作業を遅らせることなく使用できるように意図されたものだった.しかし,これは他の帝国の入植地にも使用でき,彼らの人口を我々の聖域に移住させることも可能になるだろう."
+ hcp_harvesters_crisis.500.a:"聖域はすべてを受け入れる."
+ hcp_harvesters_crisis.500.b:"人口を収穫する."
 
  hcp_harvesters_crisis.510.name:"最後の恒星ハーベスター破壊"
- hcp_harvesters_crisis.510.desc:"我々の最後の稼働中の恒星ハーベスターが破壊された！複製するものがなくなったため、手動で新たな恒星ハーベスターを建造しなければならない。"
- hcp_harvesters_crisis.510.a:"これは大惨事だ！"
+ hcp_harvesters_crisis.510.desc:"我々の最後の稼働中の恒星ハーベスターが破壊された!複製するものがなくなったため,手動で新たな恒星ハーベスターを建造しなければならない."
+ hcp_harvesters_crisis.510.a:"これは大惨事だ!"
 
- hcp_harvesters_crisis.515.name:"最後の恒星ハーベスター、銀河を去る"
- hcp_harvesters_crisis.515.desc:"我々の最後の稼働中の恒星ハーベスターが銀河を去った！このような事態が再発しないよう、管理プロセスを見直している。複製するものがなくなったため、手動で新たな恒星ハーベスターを建造しなければならない。"
- hcp_harvesters_crisis.515.a:"これは大惨事だ！"
+ hcp_harvesters_crisis.515.name:"最後の恒星ハーベスター,銀河を去る"
+ hcp_harvesters_crisis.515.desc:"我々の最後の稼働中の恒星ハーベスターが銀河を去った!このような事態が再発しないよう,管理プロセスを見直している.複製するものがなくなったため,手動で新たな恒星ハーベスターを建造しなければならない."
+ hcp_harvesters_crisis.515.a:"これは大惨事だ!"
 
  ##########################
  # Solar System Harvested #
  ##########################
  hcp_harvesters_crisis.610.name:"恒星系消失"
- hcp_harvesters_crisis.610.desc:"§H[destroyed_system.GetName]§!星系が消滅しました。長距離センサーは、かつて星系があった場所に広がる空虚な空間しか捉えていません。数カ月間のテレメトリーを再確認したところ、星系の質量が急激に減少し始める前に、突然の変動があったことが判明しました。星系内に存在した宇宙船やステーションも同様に姿を消したようです。\n\n未確認の報告によると、この事象の生存者が1名いるとのことです。§H[crisis_country.GetName]§!に属する、何らかの巨大な船のようです..."
- hcp_harvesters_crisis.610.a:"彼らは何を企んでいるのか？"
+ hcp_harvesters_crisis.610.desc:"§H[destroyed_system.GetName]§!星系が消滅しました.長距離センサーは,かつて星系があった場所に広がる空虚な空間しか捉えていません.数カ月間のテレメトリーを再確認したところ,星系の質量が急激に減少し始める前に,突然の変動があったことが判明しました.星系内に存在した宇宙船やステーションも同様に姿を消したようです.\n\n未確認の報告によると,この事象の生存者が1名いるとのことです.§H[crisis_country.GetName]§!に属する,何らかの巨大な船のようです..."
+ hcp_harvesters_crisis.610.a:"彼らは何を企んでいるのか?"
 
  hcp_harvesters_crisis.611.name:"恒星系収穫"
- hcp_harvesters_crisis.611.desc:"§H[destroyed_system.GetName]§!星系が消失しました！ §H[crisis_country.GetName]§!に属する巨大な宇宙船が主星の上空に陣取り、大量のドローンスウォームを放出し、星系内の全てを解体しました。\n\n彼らが「§Hステラハーベスター§!」と呼ぶ[crisis_country.GetSpeciesName]の宇宙船だけが生き残りました。どうやら、[crisis_country.GetName]は恒星系全体を収穫する技術と手段の両方を手に入れたようです。"
- hcp_harvesters_crisis.611.a:"これですべてが変わる…"
+ hcp_harvesters_crisis.611.desc:"§H[destroyed_system.GetName]§!星系が消失しました! §H[crisis_country.GetName]§!に属する巨大な宇宙船が主星の上空に陣取り,大量のドローンスウォームを放出し,星系内の全てを解体しました.\n\n彼らが「§Hステラハーベスター§!」と呼ぶ[crisis_country.GetSpeciesName]の宇宙船だけが生き残りました.どうやら,[crisis_country.GetName]は恒星系全体を収穫する技術と手段の両方を手に入れたようです."
+ hcp_harvesters_crisis.611.a:"これですべてが変わる..."
 
  hcp_harvesters_crisis.612.name:"恒星系消失"
- hcp_harvesters_crisis.612.desc:"§H[destroyed_system.GetName]§!星系が消滅しました！ 大量のドローンスウォームが星系内の全てを解体しました。\n\nどうやら、§H[crisis_country.GetName]§!もまたステラハーベスター技術を保有しているようです！"
- hcp_harvesters_crisis.612.a:"彼らの資源は我々のものとなる！"
+ hcp_harvesters_crisis.612.desc:"§H[destroyed_system.GetName]§!星系が消滅しました! 大量のドローンスウォームが星系内の全てを解体しました.\n\nどうやら,§H[crisis_country.GetName]§!もまたステラハーベスター技術を保有しているようです!"
+ hcp_harvesters_crisis.612.a:"彼らの資源は我々のものとなる!"
 
  ##################################
  # Harvesters Victory Event Chain #
  ##################################
  hcp_harvesters_victory_chain_title:"宇宙の収穫"
- hcp_harvesters_victory_chain_desc:"宇宙の収穫を本格化させるためには、十分な数のステラハーベスターを建造し、他の銀河の収穫を開始させる必要があります。この事業には、我々の銀河が十分な資源を提供するはずです。また、全人口をシンギュラリティサイロ周辺の聖域、我々の永遠の故郷へ移住させねばなりません。\n\n§H目標§!:\n- 全人口をシンギュラリティサイロへ移住させる。\n- 宇宙開拓状況を完了する。"
+ hcp_harvesters_victory_chain_desc:"宇宙の収穫を本格化させるためには,十分な数のステラハーベスターを建造し,他の銀河の収穫を開始させる必要があります.この事業には,我々の銀河が十分な資源を提供するはずです.また,全人口をシンギュラリティサイロ周辺の聖域,我々の永遠の故郷へ移住させねばなりません.\n\n§H目標§!:\n- 全人口をシンギュラリティサイロへ移住させる.\n- 宇宙開拓状況を完了する."
 
  hcp_anti_harvesters_chain_title:"宇宙の収穫"
- hcp_anti_harvesters_chain_desc:"ステラハーベスターは、全宇宙に対する実存的脅威です。可能な限り多くを破壊しなければなりません。もし生き残ったものがいたら、我々全員が破滅するでしょう。"
+ hcp_anti_harvesters_chain_desc:"ステラハーベスターは,全宇宙に対する実存的脅威です.可能な限り多くを破壊しなければなりません.もし生き残ったものがいたら,我々全員が破滅するでしょう."
  hcp_DESTROY_STELLAR_HARVESTER:"ステラハーベスターを破壊"
- hcp_DESTROY_STELLAR_HARVESTER_DESC:"現在、このステラハーベスターを追跡しています。銀河を離れる前に破壊すべきです。"
+ hcp_DESTROY_STELLAR_HARVESTER_DESC:"現在,このステラハーベスターを追跡しています.銀河を離れる前に破壊すべきです."
  hcp_DESTROY_STELLAR_HARVESTER_TOOLTIP:"ステラハーベスターを破壊"
 
  hcp_harvesters_crisis.800.name:"永遠が待つ"
- hcp_harvesters_crisis.800.desc:"我々のステラハーベスターは、切望される資源の収集に忙しく、全人口をシンギュラリティサイロ周辺の聖域へ移住させることに成功しました。今こそ、外部からの危険から守られるよう、自らを孤立させる時です。" #\n\nAlthough, this galaxy still contains valuable resources. We could wait until we have claimed all we can.
- hcp_harvesters_crisis.800.a:"シールドを起動。"
- hcp_harvesters_crisis.800.b:"もっと資源を集めるべきです。"
+ hcp_harvesters_crisis.800.desc:"我々のステラハーベスターは,切望される資源の収集に忙しく,全人口をシンギュラリティサイロ周辺の聖域へ移住させることに成功しました.今こそ,外部からの危険から守られるよう,自らを孤立させる時です." #\n\nAlthough, this galaxy still contains valuable resources. We could wait until we have claimed all we can.
+ hcp_harvesters_crisis.800.a:"シールドを起動."
+ hcp_harvesters_crisis.800.b:"もっと資源を集めるべきです."
 
  ###############################
  # Harvester Country Destroyed #
  ###############################
  #Harvester Defeated Before Completing Outward Bound Situation
  hcp_harvesters_crisis.905.name:"銀河収穫終了"
- hcp_harvesters_crisis.905.desc:"§H[LastKilledCountryName]§!の破壊により、彼らのステラハーベスターの脅威はついに終焉を迎えました。銀河は安堵のため息を漏らしています。"
- hcp_harvesters_crisis.905.a:"宇宙にとって素晴らしい一日だ。"
+ hcp_harvesters_crisis.905.desc:"§H[LastKilledCountryName]§!の破壊により,彼らのステラハーベスターの脅威はついに終焉を迎えました.銀河は安堵のため息を漏らしています."
+ hcp_harvesters_crisis.905.a:"宇宙にとって素晴らしい一日だ."
  #Harvester Defeated After Completing Outward Bound Situation
  hcp_harvesters_crisis.910.name:"虚ろな勝利"
- hcp_harvesters_crisis.910.desc:"§H[LastKilledCountryName]§!の破壊は確かに祝うべきことですが、あまりにも多くのステラハーベスターが銀河から脱出してしまったという事実は変わりません。彼らの帰還を生き延びて見ることができたとしても、我々が彼らを止められることを願うばかりです。"
- hcp_harvesters_crisis.910.a:"考える価値もないことだ。"
+ hcp_harvesters_crisis.910.desc:"§H[LastKilledCountryName]§!の破壊は確かに祝うべきことですが,あまりにも多くのステラハーベスターが銀河から脱出してしまったという事実は変わりません.彼らの帰還を生き延びて見ることができたとしても,我々が彼らを止められることを願うばかりです."
+ hcp_harvesters_crisis.910.a:"考える価値もないことだ."
  #Post Harvester Victory Event
  hcp_harvesters_crisis.915.name:"自主隔離"
- hcp_harvesters_crisis.915.desc:"§H[LastKilledCountryName]§!が残りの部隊を§Y[event_target:hcp_refuge_system.GetName]星系§!へ撤退させた直後、彼らのシンギュラリティサイロから大規模なエネルギー放出を検知しました。長距離センサーは、彼らの聖域の周囲に強力なエネルギーシールドが展開され、宇宙の残りの部分から隔離されていることを示しています。\n\nシールドは接触するあらゆるものを蒸発させ、その後に中心にあるブラックホールへ吸い込んでいるようです。どうやら彼らは、ステラハーベスターを宇宙全体に放った後、いかなる報復からも身を隠したようです。"
- hcp_harvesters_crisis.915.a:"臆病者め。"
+ hcp_harvesters_crisis.915.desc:"§H[LastKilledCountryName]§!が残りの部隊を§Y[event_target:hcp_refuge_system.GetName]星系§!へ撤退させた直後,彼らのシンギュラリティサイロから大規模なエネルギー放出を検知しました.長距離センサーは,彼らの聖域の周囲に強力なエネルギーシールドが展開され,宇宙の残りの部分から隔離されていることを示しています.\n\nシールドは接触するあらゆるものを蒸発させ,その後に中心にあるブラックホールへ吸い込んでいるようです.どうやら彼らは,ステラハーベスターを宇宙全体に放った後,いかなる報復からも身を隠したようです."
+ hcp_harvesters_crisis.915.a:"臆病者め."
 
  ################################
  # Singularity Silo Lost Events #
  ################################
  hcp_harvesters_crisis.1000.name:"$hcp_singularity_silo$収穫"
- hcp_harvesters_crisis.1000.desc:"我が§Y$hcp_singularity_silo$§!が破壊されました！ §H[event_target:crisis_country.GetName]§!に属する§Y$hcp_stellar_harvester$§!がその上空に陣取り、ドローンスウォームを放ち、何も残しませんでした。\n\nこの建造物は我々の作戦に不可欠です。可能な限り迅速に新たなものを稼働させることが極めて重要です。"
- hcp_harvesters_crisis.1000.a:"再建しなければならない。"
- hcp_harvesters_crisis.1000.b:"彼らのものを奪えないか？"
+ hcp_harvesters_crisis.1000.desc:"我が§Y$hcp_singularity_silo$§!が破壊されました! §H[event_target:crisis_country.GetName]§!に属する§Y$hcp_stellar_harvester$§!がその上空に陣取り,ドローンスウォームを放ち,何も残しませんでした.\n\nこの建造物は我々の作戦に不可欠です.可能な限り迅速に新たなものを稼働させることが極めて重要です."
+ hcp_harvesters_crisis.1000.a:"再建しなければならない."
+ hcp_harvesters_crisis.1000.b:"彼らのものを奪えないか?"
 
  hcp_NEEDS_NEW_BLACK_HOLE:"新たなブラックホールを取得"
- hcp_NEEDS_NEW_BLACK_HOLE_DESC:"新たな§Y$hcp_singularity_silo_4$§!を建設するには、§Hブラックホール§!が必要です。既知のブラックホールを取得するか、観測ステーションにこれまで見過ごされていたものを探させるか、どちらかを選択できます。"
+ hcp_NEEDS_NEW_BLACK_HOLE_DESC:"新たな§Y$hcp_singularity_silo_4$§!を建設するには,§Hブラックホール§!が必要です.既知のブラックホールを取得するか,観測ステーションにこれまで見過ごされていたものを探させるか,どちらかを選択できます."
  
  hcp_REBUILD_SINGULARITY_SILO_1:"$hcp_singularity_silo$を再建"
- hcp_REBUILD_SINGULARITY_SILO_1_DESC:"我が$hcp_singularity_silo$は破壊されました。永遠の避難所として機能できるよう、再建しなければなりません。"
+ hcp_REBUILD_SINGULARITY_SILO_1_DESC:"我が$hcp_singularity_silo$は破壊されました.永遠の避難所として機能できるよう,再建しなければなりません."
  hcp_REBUILD_SINGULARITY_SILO_2: "$hcp_REBUILD_SINGULARITY_SILO_1$"
  hcp_REBUILD_SINGULARITY_SILO_2_DESC: "$hcp_REBUILD_SINGULARITY_SILO_1_DESC$"
  hcp_REBUILD_SINGULARITY_SILO_TOOLTIP: "$hcp_BUILD_SINGULARITY_SILO_LEVEL_1_TOOLTIP$"
 
  hcp_harvesters_crisis.1002.name: "$hcp_harvesters_crisis.101.name$"
- hcp_harvesters_crisis.1002.desc:"新たな§Yシンギュラリティサイロ§!の建設を開始するのに適した§Hブラックホール§!を取得しました。"
+ hcp_harvesters_crisis.1002.desc:"新たな§Yシンギュラリティサイロ§!の建設を開始するのに適した§Hブラックホール§!を取得しました."
  hcp_harvesters_crisis.1003.name: "$hcp_harvesters_crisis.1002.name$"
  hcp_harvesters_crisis.1003.desc: "$hcp_harvesters_crisis.1003.desc$"
 
  hcp_harvesters_crisis.1005.name: "$hcp_harvesters_crisis.102.name$"
- hcp_harvesters_crisis.1005.desc:"我々の観測所は、新たな§Yシンギュラリティサイロ§!の建設を開始するのに適した§Hブラックホール§!を特定しました。"
+ hcp_harvesters_crisis.1005.desc:"我々の観測所は,新たな§Yシンギュラリティサイロ§!の建設を開始するのに適した§Hブラックホール§!を特定しました."
  hcp_harvesters_crisis.1006.name: "$hcp_harvesters_crisis.1005.name$"
  hcp_harvesters_crisis.1006.desc: "$hcp_harvesters_crisis.1005.desc$"
 
  hcp_STEAL_SINGULARITY_SILO_1:"$hcp_singularity_silo$を取得"
- hcp_STEAL_SINGULARITY_SILO_1_DESC:"我々の$hcp_singularity_silo$の喪失は、我々に甚大な打撃を与えました。新たなものを「確保」できれば、これ以上の非効率を避けることができます。"
+ hcp_STEAL_SINGULARITY_SILO_1_DESC:"我々の$hcp_singularity_silo$の喪失は,我々に甚大な打撃を与えました.新たなものを「確保」できれば,これ以上の非効率を避けることができます."
  hcp_STEAL_SINGULARITY_SILO_2: "$hcp_STEAL_SINGULARITY_SILO_1$"
  hcp_STEAL_SINGULARITY_SILO_2_DESC: "$hcp_STEAL_SINGULARITY_SILO_1_DESC$"
- hcp_STEAL_SINGULARITY_SILO_TOOLTIP:"§H[this.GetName]星系§!にある§Y$hcp_singularity_silo$§!を掌握せよ。"
+ hcp_STEAL_SINGULARITY_SILO_TOOLTIP:"§H[this.GetName]星系§!にある§Y$hcp_singularity_silo$§!を掌握せよ."
 
  hcp_harvesters_crisis.1011.name:"$hcp_singularity_silo$ 掌握"
- hcp_harvesters_crisis.1011.desc.a:"新たな§Y$hcp_singularity_silo$§!を無事確保しました。これにより、我々の運用は通常に戻れます。"
- hcp_harvesters_crisis.1011.desc.b:"我々の運命が変わったようです。§H[from.GetName]星系§!の獲得の一環として、新たな§Y$hcp_singularity_silo$§!を手に入れました。もはや、新たな建造に投資する必要はありません。"
+ hcp_harvesters_crisis.1011.desc.a:"新たな§Y$hcp_singularity_silo$§!を無事確保しました.これにより,我々の運用は通常に戻れます."
+ hcp_harvesters_crisis.1011.desc.b:"我々の運命が変わったようです.§H[from.GetName]星系§!の獲得の一環として,新たな§Y$hcp_singularity_silo$§!を手に入れました.もはや,新たな建造に投資する必要はありません."
 
  hcp_harvesters_crisis.1012.name: "$hcp_harvesters_crisis.1011.name$"
  hcp_harvesters_crisis.1012.desc.a: "$hcp_harvesters_crisis.1011.desc.a$"
  hcp_harvesters_crisis.1012.desc.b: "$hcp_harvesters_crisis.1011.desc.b$"
 
  hcp_harvesters_crisis.1015.name: "$hcp_harvesters_crisis.1000.name$"
- hcp_harvesters_crisis.1015.desc.a:"§H[from.GetName]星系§!にある§Y$hcp_singularity_silo$§!が破壊されました！銀河に他に$hcp_singularity_silo$が残っていないため、我々は新たなものを建造するしかありません。"
+ hcp_harvesters_crisis.1015.desc.a:"§H[from.GetName]星系§!にある§Y$hcp_singularity_silo$§!が破壊されました!銀河に他に$hcp_singularity_silo$が残っていないため,我々は新たなものを建造するしかありません."
  hcp_harvesters_crisis.1015.desc.b: ""
- hcp_harvesters_crisis.1015.a:"我々は新たなものを建造しなければなりません。"
- hcp_harvesters_crisis.1015.b:"我々が追跡できる他のものが存在します。§H[from.GetName]星系§!にある§Y$hcp_singularity_silo$§!は破壊されました！残存するサイロに注力すべきです。"
+ hcp_harvesters_crisis.1015.a:"我々は新たなものを建造しなければなりません."
+ hcp_harvesters_crisis.1015.b:"我々が追跡できる他のものが存在します.§H[from.GetName]星系§!にある§Y$hcp_singularity_silo$§!は破壊されました!残存するサイロに注力すべきです."
  
  #end

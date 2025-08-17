@@ -1,4 +1,4 @@
-﻿l_spanish:
+l_spanish:
  BA_Shittem.0001.name:0 "Mensaje de Axium (En pruebas)"
  BA_Shittem.0001.desc:0 "Este evento es el disparador para iniciar la cadena de eventos de la Caja de Shittem, y luego la ventana se ocultará.\nDado que el mod está en pruebas, al hacer clic recibirás un potente modificador de locura.\nEsperemos que no haya errores..."
  BA_Shittem.0001.a:0 "Un clic, un año de juego, ¡Arona no te cuesta ni un solo céntimo!"
@@ -17,8 +17,8 @@
 #匣子重开
  BA_Shittem.0101.name:0 "Activar la Caja de Shittem"
  BA_Shittem.0101.desc:0 "Sótano de Schale. La Caja de Shittem ha sido completamente reparada. Aunque no es la primera vez que se abre, sigue siendo emocionante.\n«Confirmando energía, activando. Conectando al sistema operativo de la Caja de Shittem... Completo. Solicitando contraseña de conexión.»"
- BA_Shittem.0101.a:0 "…Lo que anhelamos son los Siete Lamentos…"
- BA_Shittem.0101.b:0 "…Lo que recordamos es el Antiguo Método de Jericó…"
+ BA_Shittem.0101.a:0 "...Lo que anhelamos son los Siete Lamentos..."
+ BA_Shittem.0101.b:0 "...Lo que recordamos es el Antiguo Método de Jericó..."
  BA_Shittem.0101.tip:0 "Abrir la Caja de Shittem."
 
  BA_Shittem.0102.name:0 "$BA_Shittem.0101.name$"
@@ -105,7 +105,7 @@
  BA_Shittem.1311.GD:0 "Guía Turística"
  BA_Shittem.1311.GD.re:0 "$BA_Shittem.1311.re$"
  BA_Shittem.1311.OLD:0 "Antiguo"
- BA_Shittem.1311.OLD.re:0 "…Sensei, ¿qué opina de este estilo?... ¿Mmm? ¿Tiene un toque de numerología? Bueno, de todos modos, lo que le gusta a todo el mundo es lo mejor."
+ BA_Shittem.1311.OLD.re:0 "...Sensei, ¿qué opina de este estilo?... ¿Mmm? ¿Tiene un toque de numerología? Bueno, de todos modos, lo que le gusta a todo el mundo es lo mejor."
  BA_Shittem.1311.SS:0 "Traje de Baño"
  BA_Shittem.1311.SS.re:0 "¡Verano, Mar!"
  BA_Shittem.1311.CYC:0 "Paseo en Bici"
@@ -198,7 +198,7 @@
 
 #作弊界面
  BA_Shittem.1998.title:0 "Interfaz de trucos"
- BA_Shittem.1998.desc:0 "—Sensei, me pregunto cómo habrá descubierto esta interfaz. Ah... Aunque la habilidad del desarrollador no es la mejor, ¡le pone mucho entusiasmo a estas cosas extrañas...\n\nAlgunas funciones aquí pueden ayudar a todos a salir de los problemas con bugs, mientras que otras tienen una fuerza comparable a una reliquia del Cuarto Azote... En resumen, por favor, sensei, úselo con precaución. La intención original del desarrollador es simplemente que se diviertan.—"
+ BA_Shittem.1998.desc:0 "-Sensei, me pregunto cómo habrá descubierto esta interfaz. Ah... Aunque la habilidad del desarrollador no es la mejor, ¡le pone mucho entusiasmo a estas cosas extrañas...\n\nAlgunas funciones aquí pueden ayudar a todos a salir de los problemas con bugs, mientras que otras tienen una fuerza comparable a una reliquia del Cuarto Azote... En resumen, por favor, sensei, úselo con precaución. La intención original del desarrollador es simplemente que se diviertan.-"
 
  BA_cheat_buff:0 "§M¡Tarjeta de Adulto!§!"
  BA_cheat_buff_added:0 "Jejeje, ¡esto es mucho más fácil de usar que la tecla ~!"
@@ -225,7 +225,7 @@
 
  #循环
  commmission.Repeatable_01_A:0 "Repetible: Inversión en Bienes de Consumo"
- BA_Repeatable_commmission_01_A:0 "—Sensei, entre los encargos variopintos y un poco desordenados que Arona ha recibido, hay muchos que son pequeños y dispersos y que se pueden solucionar todos a la vez, como no encontrar el juguete adecuado para un gatito, dificultad para comprar lubricante para armas, que la lente de un telescopio se llenara de ceniza, etc.\nSensei puede completar muchísimos encargos diferentes a la vez mediante una inversión, ¡solo necesita entregar una gran cantidad de £consumer_goods£ bienes de consumo de una vez...!\n\n(Se entregan £consumer_goods£ bienes de consumo; la cantidad aumenta gradualmente con cada vez que se completa.) (Al completarse, podemos obtener 50£sr_eligma£ Carácteres Divinos)—"
+ BA_Repeatable_commmission_01_A:0 "-Sensei, entre los encargos variopintos y un poco desordenados que Arona ha recibido, hay muchos que son pequeños y dispersos y que se pueden solucionar todos a la vez, como no encontrar el juguete adecuado para un gatito, dificultad para comprar lubricante para armas, que la lente de un telescopio se llenara de ceniza, etc.\nSensei puede completar muchísimos encargos diferentes a la vez mediante una inversión, ¡solo necesita entregar una gran cantidad de £consumer_goods£ bienes de consumo de una vez...!\n\n(Se entregan £consumer_goods£ bienes de consumo; la cantidad aumenta gradualmente con cada vez que se completa.) (Al completarse, podemos obtener 50£sr_eligma£ Carácteres Divinos)-"
  commmission.Repeatable_01_B:0 "$commmission.Repeatable_01_A$"
  BA_Repeatable_commmission_01_tip:0 "Entregar [Root.BA_Repeatable_commission_01_counter] £consumer_goods£ bienes de consumo."
  BA_Repeatable_commmission_01_B:0 "“Sensei, no se preocupe por lo que sigue, ¡déjeselo a Arona! Sensei, ¡ha trabajado mucho!”"
@@ -297,17 +297,17 @@
  BA_Normal_commission_08_tip:0 "Envía 1000£alloys£ aleaciones y completa la tecnología £engineering_research£§Y$tech_droid_workers$§!."
  BA_Normal_commission_08_B:0 "“¡Ajaja! ¡Como era de esperar de las estudiantes de Millennium... Profesor, gracias por su arduo trabajo!”"
 
- commmission.Normal_09_A:0 "Investigación de Robots · Continuación"
+ commmission.Normal_09_A:0 "Investigación de Robots . Continuación"
  BA_Normal_commission_09_A:0 "“Profesor, ¿recuerda a esas estudiantes de la Academia Millennium que presentaron la solicitud para la investigación de robots la última vez? Sí, las mismas que se llevaron 1000£alloys£ aleaciones y mantuvieron ocupada a la Oficina de Coordinación durante meses investigando chips y arquitecturas...\n...Qué perspicaces son, ugh... Esta vez han hecho otra petición muy exagerada. Quieren 1000£alloys£ aleaciones y 1000£consumer_goods£ bienes de consumo, y también quieren que la Oficina Cultural siga participando para hacer que los prototipos sean más lindos y más inteligentes...\n¿Eh? ¿Debemos apoyarlas sí o sí...? ¿Profesor? Siento que sus intenciones no son del todo puras...\"\n\n(Envía 1000£consumer_goods£ bienes de consumo, 1000£alloys£ aleaciones y completa la tecnología £engineering_research£§Y$tech_synthetic_workers$§!.) (Una vez completado, podemos obtener 40£sr_eligma£ Elohims y 3£pops£ Poblaciones de robots prototipo)"
  commmission.Normal_09_B:0 "$commmission.Normal_09_A$"
  BA_Normal_commission_09_tip:0 "Envía 1000£consumer_goods£ bienes de consumo, 1000£alloys£ aleaciones y completa la tecnología £engineering_research£§Y$tech_synthetic_workers$§!."
  BA_Normal_commission_09_B:0 "“¡Guau, Profesor, mire, qué robots tan lindos! Uhm, nuestros recursos invertidos no fueron en vano... ¿verdad?”"
 
- commmission.Normal_10_A:0 "Investigación de Robots · Continuación *2"
+ commmission.Normal_10_A:0 "Investigación de Robots . Continuación *2"
  BA_Normal_commission_10_A:0 "“Profesor, esas estudiantes de la Academia Millennium han vuelto... Sí, son las mismas que nos pidieron lo de los robots Hime... Las estudiantes ya se llevan muy bien con los robots Hime, pero al parecer, todavía sienten algo extraño con ellos... Así que, esta vez han venido con un montón de datos para pedirle a la Oficina de Coordinación que asigne recursos y les ayude a investigar la matriz de personalidad de los robots Hime... ¿Eh? ¿Tenemos que apoyarlas aunque tengamos que venderlo todo? Ay...”\n\n(Envía 2000£consumer_goods£ bienes de consumo, 2000£alloys£ aleaciones y completa la tecnología £engineering_research£§Y$tech_synthetic_leaders$§!.) (Una vez completado, podemos obtener 40£sr_eligma£ Elohims, y los robots Hime pueden transformarse en individuos avanzados con matriz de personalidad)"
  commmission.Normal_10_B:0 "$commmission.Normal_10_A$"
  BA_Normal_commission_10_tip:0 "Envía 2000£consumer_goods£ bienes de consumo, 2000£alloys£ aleaciones y completa la tecnología £engineering_research£§Y$tech_synthetic_leaders$§! y 5 niveles de la tecnología £society_research£§Y$tech_BA_Aris_uplifting$§!."
- BA_Normal_commission_10_B:0 "…¿Me pregunta por qué estoy de mal humor? ¡Por nada! Si los robots Hime son más lindos, ¡vaya a jugar con ellos, hmph!"
+ BA_Normal_commission_10_B:0 "...¿Me pregunta por qué estoy de mal humor? ¡Por nada! Si los robots Hime son más lindos, ¡vaya a jugar con ellos, hmph!"
 
  commmission.Normal_11_A:0 "¡Baiyado de Verano reabre!"
  BA_Normal_commission_11_A:0 "“Profesor, esta vez es una solicitud de las estudiantes de Hyakkiyakou... Por favor, escuche este mensaje de voz:\n\n'Hola, aquí §GKawai Shizuko§!, el verano se acerca de nuevo este año, Profesor. Baiyado está a punto de comenzar una nueva fase de su plan de expansión veraniega. Esta vez, he encontrado una playa cuya construcción fue interrumpida que serviría de base. ¡La vista es maravillosa, Profesor, no quiere venir a verla?'\"\n\n(Elimina el £blocker£ bajío en la capital.) (Una vez completado, podemos obtener 40£sr_eligma£ Elohims)"
@@ -347,7 +347,7 @@
  BA_EdenTreaty_commmission_01_A:0 "“Profesor, esta es una solicitud presentada conjuntamente por varias academias pequeñas y medianas... Ah, quizás sería más apropiado llamarlo una protesta...\nDesde que la nueva presidenta del Consejo Estudiantil Federal, [Root.GetRulerName], asumió el cargo, el Consejo Estudiantil Federal y el Tratado del Edén han comenzado a mostrar signos de centralización, y algunas órdenes administrativas ya han infringido, de hecho, los intereses de estas academias... Profesor, ¿sabe si hay alguna manera de solucionarlo?\nUhm... Arona cree que lo que dice es una buena idea, pero seguramente habrá que superar muchas resistencias...\n\n(Envía 500£influence£ Influencia y completa la tecnología £society_research£§Y$tech_BA_culture_Federal$§!.) (Una vez completado, podemos obtener 80£sr_eligma£ Elohims)"
  commmission.EdenTreaty_01_B:0 "$commmission.EdenTreaty_01_A$"
  BA_EdenTreaty_commmission_01_tip:0 "Envía 500£influence£ Influencia y completa la tecnología £society_research£§Y$tech_BA_culture_Federal$§!."
- BA_EdenTreaty_commmission_01_B:0 "“…El trabajo de los adultos es realmente difícil, ¡gracias por todo su arduo esfuerzo esta vez, Profesor!”"
+ BA_EdenTreaty_commmission_01_B:0 "“...El trabajo de los adultos es realmente difícil, ¡gracias por todo su arduo esfuerzo esta vez, Profesor!”"
 
 #天使24
  buy_resource_eligma:0 "Usar £sr_eligma£ para comprar recursos"

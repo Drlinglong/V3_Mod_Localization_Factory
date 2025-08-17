@@ -1,14 +1,14 @@
-﻿l_simp_chinese:
+l_simp_chinese:
 
 
 # Nationhood Ambitions modifier
 rule_anz_nationhood_desire:0  "#yellow 澳新联防军#! | 提高殖民地类型附庸的自由渴望"
 
 setting_anz_rule_nationhood_desire_vanilla:0  "原版"
-setting_anz_rule_nationhood_desire_vanilla_desc:0  "无修正器。"
+setting_anz_rule_nationhood_desire_vanilla_desc:0  "无修正器."
 
 setting_anz_rule_nationhood_desire_start:0  "游戏开始时"
-setting_anz_rule_nationhood_desire_start_desc:0  "游戏开始时，提供+0.08每周自由渴望修正器，“国家雄心”。"
+setting_anz_rule_nationhood_desire_start_desc:0  "游戏开始时,提供+0.08每周自由渴望修正器,“国家雄心”."
 
 setting_anz_rule_nationhood_desire_research:0  "民族主义科技研发后"
-setting_anz_rule_nationhood_desire_research_desc:0  "研发民族主义科技后，提供+0.08每周自由渴望修正器，“国家雄心”。"
+setting_anz_rule_nationhood_desire_research_desc:0  "研发民族主义科技后,提供+0.08每周自由渴望修正器,“国家雄心”."

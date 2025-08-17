@@ -1,4 +1,4 @@
-﻿l_simp_chinese:
+l_simp_chinese:
 
 #for misc infrastructure projects
 
@@ -6,18 +6,18 @@
 
 #Decision
 anz_fremantle_jetty_decision:0  "建造弗里曼特尔长栈桥"
-anz_fremantle_jetty_decision_desc:0  "一道石灰岩沙坝阻碍了港口通往天鹅河的航道；除非我们掌握了清除它的技术，否则只能把栈桥延伸到外海。"
+anz_fremantle_jetty_decision_desc:0  "一道石灰岩沙坝阻碍了港口通往天鹅河的航道;除非我们掌握了清除它的技术,否则只能把栈桥延伸到外海."
 
 anz_fremantle_harbour_decision:0  "建设弗里曼特尔港"
-anz_fremantle_harbour_decision_desc:0  "弗里曼特尔港口通往天鹅河口的航道被一道石灰岩沙坝和沙洲阻挡。我们可以用炸药清除沙坝。"
+anz_fremantle_harbour_decision_desc:0  "弗里曼特尔港口通往天鹅河口的航道被一道石灰岩沙坝和沙洲阻挡.我们可以用炸药清除沙坝."
 
 ## JOURNAL
 
 #LONG JETTY
 je_anz_fremantle_jetty:0  "弗里曼特尔长栈桥"
-je_anz_fremantle_jetty_reason:0  "弗里曼特尔是西澳大利亚重要的海运中心，作为该地区的贸易和通讯门户。然而，港口所在地被一道石灰岩沙坝阻挡在天鹅河口之外，使得远洋船只无法通行。"
+je_anz_fremantle_jetty_reason:0  "弗里曼特尔是西澳大利亚重要的海运中心,作为该地区的贸易和通讯门户.然而,港口所在地被一道石灰岩沙坝阻挡在天鹅河口之外,使得远洋船只无法通行."
 je_anz_fremantle_jetty_button:0  "加快施工"
-je_anz_fremantle_jetty_button_desc:0  "通过投入更多资金，并在政府的少量引导下，我们可以促使公共工程在#v 6个月#!内每月额外取得#v 1#!点进度。"
+je_anz_fremantle_jetty_button_desc:0  "通过投入更多资金,并在政府的少量引导下,我们可以促使公共工程在#v 6个月#!内每月额外取得#v 1#!点进度."
 anz_fremantle_jetty_costs:0  "长栈桥施工"
 je_anz_fremantle_jetty_goal:0  "已完成24点进度"
 je_fremantle_jetty_button_possible:0  "过去一年内未加快施工"
@@ -26,9 +26,9 @@ anz_fremantle_jetty_construction_costs_authority:0  "鼓励栈桥施工"
 
 #HARBOUR
 je_anz_fremantle_harbour:0  "弗里曼特尔港"
-je_anz_fremantle_harbour_reason:0  "弗里曼特尔是西澳大利亚重要的海运中心，作为该地区的贸易和通讯门户。然而，港口所在地被一道石灰岩沙坝阻挡在天鹅河口之外，使得远洋船只无法通行。"
+je_anz_fremantle_harbour_reason:0  "弗里曼特尔是西澳大利亚重要的海运中心,作为该地区的贸易和通讯门户.然而,港口所在地被一道石灰岩沙坝阻挡在天鹅河口之外,使得远洋船只无法通行."
 je_anz_fremantle_harbour_button:0  "加快施工"
-je_anz_fremantle_harbour_button_desc:0  "通过投入更多资金，并在政府的少量引导下，我们可以促使公共工程在#v 6个月#!内每月额外取得#v 1#!点进度。"
+je_anz_fremantle_harbour_button_desc:0  "通过投入更多资金,并在政府的少量引导下,我们可以促使公共工程在#v 6个月#!内每月额外取得#v 1#!点进度."
 anz_fremantle_harbour_costs:0  "弗里曼特尔港口建设"
 je_anz_fremantle_harbour_goal:0  "已完成48点进度"
 je_fremantle_harbour_button_possible:0  "过去一年内未加快施工"
@@ -40,8 +40,8 @@ anz_fremantle_harbour_construction_costs_authority:0  "鼓励港口建设"
 # Jetty complaints
 
 anz_ast_infrastructure.1.t:0  "弗里曼特尔栈桥"
-anz_ast_infrastructure.1.d:0  "对弗里曼特尔港口设施感到不满的水手们在他们的航行中表达了他们的不满，损害了我们作为商业中心的声誉。"
-anz_ast_infrastructure.1.f:0  "“我们进入港口，却不得不勉强将船停靠在栈桥旁卸货。这是个糟糕透顶的地方。根本没有停靠船只的地方。毫无遮蔽。所有船只都必须停泊在码头卸货，否则就得支付驳运费…… 西南风暴劲吹…… 我们得花所有时间来稳住它…… 船身已经受到相当大的损坏了…… 这无疑是我或其他人见过的最糟糕的地方。根本没有地方能停靠这么大的船…… 任何敢第二次来这里或派船来这里的人，都是个该死的蠢驴。”"
-anz_ast_infrastructure.1.a:0  "我们必须做点什么！"
-anz_ast_infrastructure.1.a_tt:0  "弗里曼特尔几乎是与珀斯同时发展起来的港口城镇。然而，弗里曼特尔通往天鹅河口的航道被一道石灰岩沙坝阻挡，使得远洋船只无法进入。相反，船只必须停靠在外海的栈桥旁，并通过不同大小的船只在海上与岸边之间进行货物转运。"
+anz_ast_infrastructure.1.d:0  "对弗里曼特尔港口设施感到不满的水手们在他们的航行中表达了他们的不满,损害了我们作为商业中心的声誉."
+anz_ast_infrastructure.1.f:0  "“我们进入港口,却不得不勉强将船停靠在栈桥旁卸货.这是个糟糕透顶的地方.根本没有停靠船只的地方.毫无遮蔽.所有船只都必须停泊在码头卸货,否则就得支付驳运费...... 西南风暴劲吹...... 我们得花所有时间来稳住它...... 船身已经受到相当大的损坏了...... 这无疑是我或其他人见过的最糟糕的地方.根本没有地方能停靠这么大的船...... 任何敢第二次来这里或派船来这里的人,都是个该死的蠢驴.”"
+anz_ast_infrastructure.1.a:0  "我们必须做点什么!"
+anz_ast_infrastructure.1.a_tt:0  "弗里曼特尔几乎是与珀斯同时发展起来的港口城镇.然而,弗里曼特尔通往天鹅河口的航道被一道石灰岩沙坝阻挡,使得远洋船只无法进入.相反,船只必须停靠在外海的栈桥旁,并通过不同大小的船只在海上与岸边之间进行货物转运."
 anz_fremantle_jetty_complaints_modifier:0  "弗里曼特尔港声誉"

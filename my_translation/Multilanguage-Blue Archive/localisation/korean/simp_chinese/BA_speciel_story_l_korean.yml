@@ -1,4 +1,4 @@
-﻿l_korean:
+l_korean:
 #### 고래의 꿈 (호시노 취임 이벤트 체인)
  BA_origin.0101.name:0 "과거와 미래의 교차로에 서서"
  BA_origin.0101.desc:0 "호시노는 아무 말 없이, 그저 나를 따라오라는 신호만 보냈다. 그렇게 그녀의 뒤를 따르며, 나는 나보다 머리 하나는 작은 이 소녀를 무심코 감상하게 되었다.\n 겉보기에는 평범한 여자아이와 별다를 바 없어 보였다. 굳이 인상을 말하자면, 나른한 느낌? 마치 인생을 초월한 것 같았다.\n 하지만 자세히 관찰하면, 그녀가 평범한 사람과는 다른 기질을 가졌다는 것을 알 수 있었다. 그녀가 내딛는 한 걸음 한 걸음은 언제나 확고했고, 마치 삶의 시련을 겪고 나온 사람 같았다. 자신의 목표를 정하면 절대 뒤돌아보지 않는 사람. 그녀의 등 뒤에 있는 샷건은 언제나 잘 관리되어 있었다. 아무리 게으른 그녀라도 소홀히 할 수 없는 일이 있는 것이겠지? 사실도 그랬다. 아비도스가 처음 두 명에서 시작해, 그녀 혼자만 남았다가, 오늘날의 번화함에 이르기까지. 그동안 겪었던 모든 고난과 비바람이 모여 이 아비도스 부흥의 인물을 만들어 낸 것이다. 나는 그녀가 모든 도전에 맞설 준비가 되었다고 믿는다.\n 지금의 번화한 아비도스를 걸으며, 나는 어째서인지 그녀가 주위 환경과 어울리지 않는다고 느꼈다. 나는 그녀의 평범하지 않은 옷차림, 낡은 방탄복에 주목했다. 어디선가 본 것 같은데... 그런 낡은 사진 속에서...\n 나는 대략적인 사정을 깨달았다. 아마도 그녀에게 지금 이 순간의 번영은 아무런 의미가 없는 것이겠지?"
@@ -56,13 +56,13 @@
  BA_Easter_egg.0002.a:0 "사진과 메시지의 출처를 조사한다."
  BA_Easter_egg.0002.b:0 "그냥 장난일 뿐이야, 신경 쓰지 마."
 
- BA_Easter_egg.0003.title:0 "EasterEgg：MiAzusa"
+ BA_Easter_egg.0003.title:0 "EasterEgg:MiAzusa"
  BA_Easter_egg.0003.desc:0 "얼마 지나지 않아, 하얀 스타킹 사진을 보내던 정체불명의 인물이 다시 활동을 시작했습니다. 저희는 또다시 [From.GetName]의 하얀 스타킹 사진을 받게 되었는데, 사진은 지난번과 마찬가지로 빛의 속도로 사라졌으며, 또다시 똑같은 정체불명의 메시지를 남겼습니다:\n“§YPeek§!” 지난번과 달랐던 점은, 저희가 발신자의 ID를 포착했다는 것과, 순식간에 사라지는 사진 속 인물이 사실은 [From.GetName]이 아니라 발신자 본인이라는 것을 발견했다는 것입니다."
  BA_Easter_egg.0003.tip:0 "사진에서 획득: §G+2§!£unity£"
  BA_Easter_egg.0003.a:0 "그 '대응 시스템'을 잘 배치해 줘, 사진은 꼭 남겨야 해."
  BA_Easter_egg.0003.b:0 "IP 주소를 파내서, 그를 잡아와서, 검은 스타킹을 입혀버리자."
 
- BA_Easter_egg.0004.title:0 "EasterEgg：MiAzusa"
+ BA_Easter_egg.0004.title:0 "EasterEgg:MiAzusa"
  BA_Easter_egg.0004.desc:0 "저희는 사진 발신자를 성공적으로 붙잡았고, 초광속 통신 시스템 해킹죄로 그를 기소했습니다. 자비로운 연방학생회는 그에게 §G반드시 정기적으로 충분한 양의 사진을§! 모든 키보토스 시민들이 감상할 수 있도록 발송해야 한다고 판결했습니다."
  BA_Easter_egg.0004.a:0 "좋아 좋아 좋아, 아주 좋아, 많이 보내 줘."
  BA_Easter_egg.0004.b:0 "하얀 스타킹 사진도 보내야 하고, 검은 스타킹 사진도 보내야지, 그래야 건전하다고 할 수 있지!"
@@ -103,7 +103,7 @@
  BA_Easter_egg_Angel_arc_site_option_RAID02:0 ""
  BA_Easter_egg_Angel_arc_site_title_RAID03:0 "천사, 그 끝없는 우주를 날아넘다"
  BA_Easter_egg_Angel_arc_site_desc_RAID03:0 ""
- BA_Easter_egg_Angel_arc_site_option_RAID03:0 "《고마워, 인터넷 생활은 즐거워》"
+ BA_Easter_egg_Angel_arc_site_option_RAID03:0 "<고마워, 인터넷 생활은 즐거워>"
  BA_Easter_egg_Angel_arc_site_title_RAID04:0 "THE INTERNET ANGEL be INVOKED"
  BA_Easter_egg_Angel_arc_site_desc_RAID04:0 ""
  BA_Easter_egg_Angel_arc_site_option_RAID04:0 ""

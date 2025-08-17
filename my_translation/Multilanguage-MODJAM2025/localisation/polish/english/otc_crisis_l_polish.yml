@@ -1,4 +1,4 @@
-﻿## OTC Localisation
+## OTC Localisation
 # Created by Accorata & BrettlesSr
 
 l_polish:
@@ -95,7 +95,7 @@ l_polish:
 
   # Special Project
   otc_chronological_studies_project: "$artifact_otc_chronological_studies$"
-  otc_chronological_studies_project_desc:"Udało nam się namierzyć anomalię czasową — dziwność w normalnym przepływie czasu. Musimy poświęcić zasoby naukowe na jej odnalezienie."
+  otc_chronological_studies_project_desc:"Udało nam się namierzyć anomalię czasową - dziwność w normalnym przepływie czasu. Musimy poświęcić zasoby naukowe na jej odnalezienie."
 
 # Level 2
   menp_otc_timeless_studies:"Ponadczasowe Badania"
@@ -116,7 +116,7 @@ l_polish:
   mod_otc_arz_limit_add:"Pojemność Atemporalnej Strefy Badawczej"
 
   menp_otc_weaponized_relativity:"Uzbrojona Względność"
-  menp_otc_weaponized_relativity_desc:"Wyspecjalizowane impulsy chronotonowe mogą rozerwać wrogie statki we wszystkich czterech wymiarach — ale także spowalniają ramy czasowe celu względem naszych własnych, co daje znaczną przewagę taktyczną."
+  menp_otc_weaponized_relativity_desc:"Wyspecjalizowane impulsy chronotonowe mogą rozerwać wrogie statki we wszystkich czterech wymiarach - ale także spowalniają ramy czasowe celu względem naszych własnych, co daje znaczną przewagę taktyczną."
   unlocks_otc_weaponized_relativity:"Odblokowuje broń §Y$OTC_TIME_BEAM$§!, która wystrzeliwuje lasery spowalniające wrogie statki i pociski."
   OTC_TIME_BEAM:"Promień Eonu"
   OTC_TIME_BEAM_DESC:"$OTC_TIME_BEAM$ projektuje impulsy chronotonowe, które uszkadzają wrogie jednostki i spowalniają ich ramy odniesienia."

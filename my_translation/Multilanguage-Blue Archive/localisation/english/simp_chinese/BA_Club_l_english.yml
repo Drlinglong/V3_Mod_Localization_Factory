@@ -1,4 +1,4 @@
-﻿l_english:
+l_english:
  #
  Club_confirm:0 "Approve the construction application submitted by the selected club. If no club is selected, approve one randomly."
  Club_tbc:0 "§LMore clubs coming soon...!§!"
@@ -195,19 +195,19 @@
 
 #建立通讯
  BA_club.1001.title:0 "Department Establishment Report: $Game_development_department$"
- BA_club.1001.desc:0 "“G-Game Development Department Head Hanaoka Yuzu, reporting the establishment of our department at §Y[from.solar_system.GetName]§! complete... Ugh…”"
+ BA_club.1001.desc:0 "“G-Game Development Department Head Hanaoka Yuzu, reporting the establishment of our department at §Y[from.solar_system.GetName]§! complete... Ugh...”"
  BA_club.1001.next:0 "Wishing everyone a swift path to developing a masterpiece!"
  BA_club.1002.title:0 "$BA_club.1001.title$"
  BA_club.1002.desc:0 "Another nation has established a $Game_development_department$."
 
  BA_club.1101.title:0 "Establishment Report: $Engineering_club$"
- BA_club.1101.desc:0 "“Reporting to the General Student Council, the Engineering Club's Space Branch Office has completed its establishment at §Y[from.solar_system.GetName]§!. The commissions we've received include quite a bit of §Gresearch into starship weaponry§!, so the bill... might be a little shocking. Please don't be too surprised…”"
+ BA_club.1101.desc:0 "“Reporting to the General Student Council, the Engineering Club's Space Branch Office has completed its establishment at §Y[from.solar_system.GetName]§!. The commissions we've received include quite a bit of §Gresearch into starship weaponry§!, so the bill... might be a little shocking. Please don't be too surprised...”"
  BA_club.1101.next:0 "No need to worry too much. Keep up the good work!"
  BA_club.1102.title:0 "$BA_club.1101.title$"
  BA_club.1102.desc:0 "Another nation has established an $Engineering_club$."
 
  BA_club.1201.title:0 "Establishment Report: $Veritas$"
- BA_club.1201.desc:0 "“This is Kakuzaki Chihiro. Veritas's Space Branch Office has been established at §Y[from.solar_system.GetName]§!. Now that we've acquired usage rights to this mega-structure, we naturally need to make some modifications to it to §Gacquire more information§! from space…”"
+ BA_club.1201.desc:0 "“This is Kakuzaki Chihiro. Veritas's Space Branch Office has been established at §Y[from.solar_system.GetName]§!. Now that we've acquired usage rights to this mega-structure, we naturally need to make some modifications to it to §Gacquire more information§! from space...”"
  BA_club.1201.next:0 "Just say what you need, I'll support you."
  BA_club.1202.title:0 "$BA_club.1201.title$"
  BA_club.1202.desc:0 "Another nation has established a $Veritas$."
@@ -226,7 +226,7 @@
 
  BA_club.1501.title:0 "Establishment Report: $Hotspring_development_department$"
  BA_club.1501.desc:0 "“As per the procedures issued by club headquarters, all heavy assets of the Hot Springs Development Department have arrived at §Y[from.solar_system.GetName]§!. To reiterate, as per the contract, while we obtain exploration rights, all mineral ownership belongs entirely to the General Student Council.”"
- BA_club.1501.next:0 "…Please be mindful of explosive safety…"
+ BA_club.1501.next:0 "...Please be mindful of explosive safety..."
  BA_club.1502.title:0 "$BA_club.1501.title$"
  BA_club.1502.desc:0 "Another nation has established a $Hotspring_development_department$."
 
@@ -255,9 +255,9 @@
 
 
 #游戏部
- Game_development_department_opinion:0 "（§GCurrent Build Progress: [Root.Game_development_department] §!）\n\n"
+ Game_development_department_opinion:0 "(§GCurrent Build Progress: [Root.Game_development_department] §!)\n\n"
 
- Yuzu_desc1:0 "$Game_development_department_opinion$… W-welcome… Ugh…”"
+ Yuzu_desc1:0 "$Game_development_department_opinion$... W-welcome... Ugh...”"
  Yuzu_desc2:0 "$Game_development_department_opinion$We are the Game Development Department, and making games is what we do... well, not *just* making them."
  Yuzu_desc3:0 "$Game_development_department_opinion$...Eep! Sen-Sensei... Don't just... suddenly appear behind me..."
  Aris_desc1:0 "$Game_development_department_opinion$The Hero has found Sensei! Initiating courtesy protocol!"
@@ -292,7 +292,7 @@
 
 
 #工程师部
- Engineering_club_opinion:0 "（§GCurrent Development Level: [Root.Engineering_club] §!）\n\n"
+ Engineering_club_opinion:0 "(§GCurrent Development Level: [Root.Engineering_club] §!)\n\n"
 
  Utaha_desc1:0 "$Engineering_club_opinion$Sensei, you're asking what this is? ...It's not chocolate, it's a magazine. This magazine of ours is small and easy to carry..."
  Utaha_desc2:0 "$Engineering_club_opinion$Sensei, quick, look! My little Rai can do backflips now! ...Uh, never mind, you go first."
@@ -355,7 +355,7 @@
 
 
 #真理部
- Veritas_opinion:0 "（§GCurrent Build Progress: [Root.Veritas] §!）\n\n"
+ Veritas_opinion:0 "(§GCurrent Build Progress: [Root.Veritas] §!)\n\n"
 
  Chihiro_desc1:0 "$Veritas_opinion$Ah, welcome..."
  Chihiro_desc2:0 "$Veritas_opinion$...I look tired? ...It's just that I've been tormented all day by a primitive yet astonishing hacking method."
@@ -390,7 +390,7 @@
 
 
 #对策委员会
- Foreclosure_task_force_opinion:0 "（§GCurrent Build Progress: [Root.Foreclosure_task_force] Current Investigation Level: [root.Foreclosure_task_force_func_lv]§!）\n\n"
+ Foreclosure_task_force_opinion:0 "(§GCurrent Build Progress: [Root.Foreclosure_task_force] Current Investigation Level: [root.Foreclosure_task_force_func_lv]§!)\n\n"
 
  Nonomi_desc1:0 "$Foreclosure_task_force_opinion$Oh my~ Sensei~ Is something the matter?"
  Nonomi_desc2:0 "$Foreclosure_task_force_opinion$We, the Foreclosure Task Force, don't develop equipment; we rely on our keen insights~"
@@ -620,7 +620,7 @@
  coffee_cooldown:0 "Cafe Invitation Ticket on cooldown."
  Hoshino_CoffeeRE:0 ""
  hoshino_event_fail1:0 "Insufficient Affection with Hoshino. Try raising her Affection level first."
- hoshino_event_fail2:0 "However, the Blue Whale has yet to return. (Complete Hoshino's personal story — Dream of the Whale)"
+ hoshino_event_fail2:0 "However, the Blue Whale has yet to return. (Complete Hoshino's personal story - Dream of the Whale)"
  BA_Hoshino_exit:0 "Nothing much, just came to see you."
 
  Hina:0 "Sorasaki Hina"

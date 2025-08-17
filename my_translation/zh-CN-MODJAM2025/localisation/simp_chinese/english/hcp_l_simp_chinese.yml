@@ -1,4 +1,4 @@
-﻿l_simp_chinese:
+l_simp_chinese:
 ##################
 # hcp_l_english.yml
 # By jam1066
@@ -11,27 +11,27 @@
  count_rim_system_trigger:"边缘星系数量$CONDITIONS$ $IS_NOT$ $COMPARATOR$ $NUM|Y$"
 
  ### Victory Score
- hcp_harvested_systems_score:"已收割星系：$VALUE$"
+ hcp_harvested_systems_score:"已收割星系:$VALUE$"
 
  ### Ascension Perks
  hcp_ap_harvesters:"收割者"
- hcp_ap_harvesters_desc:"宇宙热寂代表着一个转折点，超越此点，我们所知的存在将不复可能。如果我们要熬过它，现在就必须开始准备。"
- hcp_ap_tooltip:"允许[this.GetName]迈向§Y化身§R危机§!§!。"
+ hcp_ap_harvesters_desc:"宇宙热寂代表着一个转折点,超越此点,我们所知的存在将不复可能.如果我们要熬过它,现在就必须开始准备."
+ hcp_ap_tooltip:"允许[this.GetName]迈向§Y化身§R危机§!§!."
 
  ### Technology
  hcp_tech_mining_drone:"采矿无人机"
  hcp_tech_mining_drone_desc: "$hcp_menp_mining_drone_desc$"
- hcp_TECH_UNLOCK_MINING_DRONE_CONSTRUCTION_TITLE:"§H解锁舰船类型：§!采矿无人机"
+ hcp_TECH_UNLOCK_MINING_DRONE_CONSTRUCTION_TITLE:"§H解锁舰船类型:§!采矿无人机"
  hcp_TECH_UNLOCK_MINING_DRONE_CONSTRUCTION_DESC:"§H采矿无人机§!\n$hcp_menp_mining_drone_desc$"
 
  hcp_tech_excavator_drone:"挖掘无人机"
  hcp_tech_excavator_drone_desc: "$hcp_menp_excavator_drone_desc$"
- hcp_TECH_UNLOCK_EXCAVATOR_DRONE_CONSTRUCTION_TITLE:"§H解锁舰船类型：§!挖掘无人机"
+ hcp_TECH_UNLOCK_EXCAVATOR_DRONE_CONSTRUCTION_TITLE:"§H解锁舰船类型:§!挖掘无人机"
  hcp_TECH_UNLOCK_EXCAVATOR_DRONE_CONSTRUCTION_DESC:"§H挖掘无人机§!\n$hcp_menp_excavator_drone_desc$"
 
  ### Harvested Systems
  hcp_pc_harvested_system:"虚空"
- hcp_pc_harvested_system_desc:"一片空旷的虚空，几乎不含物质。"
+ hcp_pc_harvested_system_desc:"一片空旷的虚空,几乎不含物质."
  hcp_sc_harvested_system: "$hcp_pc_harvested_system$"
  hcp_sc_harvested_system_desc: "$hcp_pc_harvested_system_desc$"
 
@@ -43,7 +43,7 @@
  war_goal_hcp_wg_end_threat_harvesters: "$war_goal_wg_end_threat$"
  war_goal_hcp_wg_end_threat_harvesters_desc: "$war_goal_wg_end_threat_desc$"
  war_goal_hcp_wg_resource_acquisition:"资源获取"
- war_goal_hcp_wg_resource_acquisition_desc:"发动战争以收割敌人的领土。"
+ war_goal_hcp_wg_resource_acquisition_desc:"发动战争以收割敌人的领土."
  war_goal_hcp_wg_resource_acquisition_vs_fe: "$war_goal_hcp_wg_resource_acquisition$"
  war_goal_hcp_wg_resource_acquisition_vs_fe_desc: "$war_goal_hcp_wg_resource_acquisition_desc$"
 
@@ -51,21 +51,21 @@
  
  ### Crisis Tab
  hcp_crisobj_build_mining_stations_name:"建造采矿站"
- hcp_crisobj_build_mining_stations_desc:"我们必须扩展轨道采矿作业。\n\n建造新的§Y采矿站§!以获得此$hcp_mining_efficiency$奖励。"
+ hcp_crisobj_build_mining_stations_desc:"我们必须扩展轨道采矿作业.\n\n建造新的§Y采矿站§!以获得此$hcp_mining_efficiency$奖励."
  hcp_crisobj_scavenge_debris_name:"打捞残骸"
- hcp_crisobj_scavenge_debris_desc:"我们必须确保没有任何资源浪费。\n\n将您的§Y残骸§!政策设为§Y打捞§!，并派遣§Y科研船§!打捞残骸以获得此$hcp_mining_efficiency$奖励。"
+ hcp_crisobj_scavenge_debris_desc:"我们必须确保没有任何资源浪费.\n\n将您的§Y残骸§!政策设为§Y打捞§!,并派遣§Y科研船§!打捞残骸以获得此$hcp_mining_efficiency$奖励."
  hcp_crisobj_harvest_planets_name:"收割行星"
- hcp_crisobj_harvest_planets_desc:"行星不过是大型资源矿藏。是时候我们开始这样对待它们了。\n\n建造§Y$hcp_orbital_quarrier$§!并完成§Y$hcp_situation_harvest_planet_type$§!事态以获得此$hcp_mining_efficiency$奖励。"
+ hcp_crisobj_harvest_planets_desc:"行星不过是大型资源矿藏.是时候我们开始这样对待它们了.\n\n建造§Y$hcp_orbital_quarrier$§!并完成§Y$hcp_situation_harvest_planet_type$§!事态以获得此$hcp_mining_efficiency$奖励."
  hcp_crisobj_harvest_star_systems_name:"收割恒星系"
- hcp_crisobj_harvest_star_systems_desc:"恒星系对它们所包含的物质利用效率低下。是时候我们更好地利用它们了。\n\n使用装备在我们§Y$hcp_stellar_harvester_plural$§!上的§Y$hcp_PLANET_KILLER_STELLAR_HARVESTER$§!巨像以获得此$hcp_mining_efficiency$奖励。"
+ hcp_crisobj_harvest_star_systems_desc:"恒星系对它们所包含的物质利用效率低下.是时候我们更好地利用它们了.\n\n使用装备在我们§Y$hcp_stellar_harvester_plural$§!上的§Y$hcp_PLANET_KILLER_STELLAR_HARVESTER$§!巨像以获得此$hcp_mining_efficiency$奖励."
  hcp_crisobj_galcom_industrial_resolution_name:"争取银河共同体支持"
- hcp_crisobj_galcom_industrial_resolution_desc:"说服银河共同体成员认识到我们收割行动的重要性，将大大有助于我们计划的实现。\n\n促使§Y银河共同体§!通过工业发展§Y决议§!以获得此§Y年度§!$hcp_mining_efficiency$奖励。"
+ hcp_crisobj_galcom_industrial_resolution_desc:"说服银河共同体成员认识到我们收割行动的重要性,将大大有助于我们计划的实现.\n\n促使§Y银河共同体§!通过工业发展§Y决议§!以获得此§Y年度§!$hcp_mining_efficiency$奖励."
  hcp_crisobj_have_matter_decompressors_name:"控制物质解压器"
- hcp_crisobj_have_matter_decompressors_desc:"这座最先进的设施巧妙地置于黑洞的事件视界上，用于收割那些曾被认为超出我们能力范围的宝贵矿物。\n\n控制完全升级的§Y物质解压器§!巨型建筑以获得此§Y年度§!$hcp_mining_efficiency$奖励。"
+ hcp_crisobj_have_matter_decompressors_desc:"这座最先进的设施巧妙地置于黑洞的事件视界上,用于收割那些曾被认为超出我们能力范围的宝贵矿物.\n\n控制完全升级的§Y物质解压器§!巨型建筑以获得此§Y年度§!$hcp_mining_efficiency$奖励."
  hcp_crisobj_have_arc_furnaces_name:"控制电弧熔炉"
- hcp_crisobj_have_arc_furnaces_desc:"电弧熔炉使我们能够高效地从那些原本不适合开采的矿藏中提取和加工宝贵矿物。\n\n控制完全升级的§Y电弧熔炉§!巨型建筑以获得此§Y年度§!$hcp_mining_efficiency$奖励。"
+ hcp_crisobj_have_arc_furnaces_desc:"电弧熔炉使我们能够高效地从那些原本不适合开采的矿藏中提取和加工宝贵矿物.\n\n控制完全升级的§Y电弧熔炉§!巨型建筑以获得此§Y年度§!$hcp_mining_efficiency$奖励."
  hcp_crisobj_have_prospectorium_vassals_name:"维持勘探所附庸"
- hcp_crisobj_have_prospectorium_vassals_desc:"以资源为重点的附庸可以帮助我们提高收割行动的效率。\n\n维持§Y勘探所附庸§!以获得此§Y年度§!$hcp_mining_efficiency$奖励。"
+ hcp_crisobj_have_prospectorium_vassals_desc:"以资源为重点的附庸可以帮助我们提高收割行动的效率.\n\n维持§Y勘探所附庸§!以获得此§Y年度§!$hcp_mining_efficiency$奖励."
  
  hcp_crisis_harvesters_level_1:"§b勘探§!"
  hcp_crisis_harvesters_level_1_desc:"危机等级1"
@@ -81,153 +81,153 @@
  ### Crisis Perks Level 1
  ## Prospector Drone
  hcp_menp_prospector_drone: "$hcp_prospector_drone$"
- hcp_unlock_prospector_drone:"解锁§Y$hcp_prospector_drone$科研船§!，它建造更便宜，并且在勘测没有矿藏的行星时有50%几率发现矿藏。"
- hcp_menp_prospector_drone_desc:"一种探索无人机，配备了强大的扫描仪，能够发现最深层的矿藏。"
+ hcp_unlock_prospector_drone:"解锁§Y$hcp_prospector_drone$科研船§!,它建造更便宜,并且在勘测没有矿藏的行星时有50%几率发现矿藏."
+ hcp_menp_prospector_drone_desc:"一种探索无人机,配备了强大的扫描仪,能够发现最深层的矿藏."
 
  ## Mining Efficiency
  hcp_menp_mining_efficiency: "$hcp_mining_efficiency$"
- hcp_unlock_mining_efficiency:"允许通过完成§H危机目标§!来积累£hcp_mining_efficiency£ §Y$hcp_mining_efficiency$§!。"
+ hcp_unlock_mining_efficiency:"允许通过完成§H危机目标§!来积累£hcp_mining_efficiency£ §Y$hcp_mining_efficiency$§!."
  hcp_menp_mining_efficiency_desc: "$hcp_mining_efficiency_desc$"
 
  ## Standardised Orbital Mining
  hcp_menp_standardised_orbital_mining:"标准化轨道采矿"
- hcp_unlock_mech_standardised_orbital_mining:"解锁§Y切割激光§!舰船组件的技术。\n"
- hcp_unlock_bio_standardised_orbital_mining:"解锁§Y采矿光束投射器§!舰船组件的技术。"
- hcp_menp_standardised_orbital_mining_desc:"通过强制严格标准化我们的轨道采矿程序，我们可以提升其整体效率。"
+ hcp_unlock_mech_standardised_orbital_mining:"解锁§Y切割激光§!舰船组件的技术.\n"
+ hcp_unlock_bio_standardised_orbital_mining:"解锁§Y采矿光束投射器§!舰船组件的技术."
+ hcp_menp_standardised_orbital_mining_desc:"通过强制严格标准化我们的轨道采矿程序,我们可以提升其整体效率."
 
  ## Infinite Storage
  hcp_menp_infinite_storage:"无限仓储"
- hcp_unlock_infinite_storage:"解锁§Y$hcp_singularity_silo$§!巨型建筑。\n"
- hcp_menp_infinite_storage_desc:"为了储存我们所需的资源，常规存储方案是不够的。我们必须利用黑洞的无限容量来为我们所用。"
+ hcp_unlock_infinite_storage:"解锁§Y$hcp_singularity_silo$§!巨型建筑.\n"
+ hcp_menp_infinite_storage_desc:"为了储存我们所需的资源,常规存储方案是不够的.我们必须利用黑洞的无限容量来为我们所用."
 
  ### Crisis Perks Level 2
  ## Mining Drone
  hcp_menp_mining_drone: "$hcp_mining_drone$"
- hcp_unlock_mining_drone:"解锁§Y$hcp_mining_drone$§!。"
- hcp_menp_mining_drone_desc:"一种专用采矿无人机，能够部署强大的采矿激光器或炸药。"
+ hcp_unlock_mining_drone:"解锁§Y$hcp_mining_drone$§!."
+ hcp_menp_mining_drone_desc:"一种专用采矿无人机,能够部署强大的采矿激光器或炸药."
 
  ## Energised Mining Equipment
  hcp_menp_energised_mining_equipment:"能量化采矿设备"
- hcp_menp_energised_mining_equipment_desc:"将高功率采矿设备部署到我们最偏远的收割作业点，将显著提升我们的开采效率。"
+ hcp_menp_energised_mining_equipment_desc:"将高功率采矿设备部署到我们最偏远的收割作业点,将显著提升我们的开采效率."
 
  ## Detritus Recycling
  hcp_menp_detritus_recycling:"残渣回收"
- hcp_unlock_detritus_recycling:"你被摧毁的§Y舰船§!会留下残骸，你可以研究它们来回收部分成本。（§G10%§!）"
- hcp_menp_detritus_recycling_desc:"采矿是危险的行当。通过建立完善的回收程序，我们可以最大程度地减少事故造成的效率损失。"
+ hcp_unlock_detritus_recycling:"你被摧毁的§Y舰船§!会留下残骸,你可以研究它们来回收部分成本.(§G10%§!)"
+ hcp_menp_detritus_recycling_desc:"采矿是危险的行当.通过建立完善的回收程序,我们可以最大程度地减少事故造成的效率损失."
 
  ### Crisis Perks Level 3
  ## Excavator Drone
  hcp_menp_excavator_drone: "$hcp_excavator_drone$"
- hcp_unlock_excavator_drone:"解锁§Y$hcp_excavator_drone$§！"
- hcp_menp_excavator_drone_desc:"一种更大的无人机，用于清除大片岩石以获取原本无法获得的资源。"
+ hcp_unlock_excavator_drone:"解锁§Y$hcp_excavator_drone$§!"
+ hcp_menp_excavator_drone_desc:"一种更大的无人机,用于清除大片岩石以获取原本无法获得的资源."
 
  ## Planetary Quarrying
  hcp_menp_planetary_quarrying:"行星采石"
- hcp_unlock_planetary_quarrying:"解锁§Y$hcp_orbital_quarrier$§！巨构。"
- hcp_menp_planetary_quarrying_desc:"我们不能对所采集的资源类型挑三拣四。所有的物质对我们而言都有价值，都应当被收集。"
+ hcp_unlock_planetary_quarrying:"解锁§Y$hcp_orbital_quarrier$§!巨构."
+ hcp_menp_planetary_quarrying_desc:"我们不能对所采集的资源类型挑三拣四.所有的物质对我们而言都有价值,都应当被收集."
 
  ## Improved Mining Lasers
  hcp_menp_improved_mining_lasers:"改进型采矿激光"
- hcp_menp_improved_mining_lasers_desc:"调整我们的采矿激光器，使其在遇到干扰性力场时表现更佳，这将提高我们在异域环境中的作业能力。"
+ hcp_menp_improved_mining_lasers_desc:"调整我们的采矿激光器,使其在遇到干扰性力场时表现更佳,这将提高我们在异域环境中的作业能力."
 
  ### Crisis Perks Level 4
  ## Stellar Harvester Prototype
  hcp_menp_stellar_harvesters: "$hcp_stellar_harvester_prototype$"
- hcp_unlock_stellar_harvesters:"解锁§Y$hcp_stellar_harvester_prototype$§！巨构\n"
- hcp_menp_stellar_harvesters_desc:"一艘巨大的无人机控制舰，能够释放成群的无人机以收割整个恒星系。"
+ hcp_unlock_stellar_harvesters:"解锁§Y$hcp_stellar_harvester_prototype$§!巨构\n"
+ hcp_menp_stellar_harvesters_desc:"一艘巨大的无人机控制舰,能够释放成群的无人机以收割整个恒星系."
 
  ## Efficient Metallurgy
  hcp_menp_efficient_metallurgy:"高效冶金"
- hcp_unlock_efficient_metallurgy_minerals:"$mod_planet_metallurgists_minerals_upkeep_add$：§G-3§！\n"
- hcp_unlock_efficient_metallurgy_minerals_machine:"$mod_planet_metallurgists_minerals_upkeep_add$：§G-4§！\n"
- hcp_unlock_efficient_metallurgy_food:"$mod_planet_metallurgists_food_upkeep_add$：§G-4.5§！\n"
- hcp_unlock_efficient_metallurgy_food_machine:"$mod_planet_metallurgists_food_upkeep_add$：§G-6§！\n"
- hcp_menp_efficient_metallurgy_desc:"提高冶金过程的效率将使我们能够为最需要时节约资源。"
+ hcp_unlock_efficient_metallurgy_minerals:"$mod_planet_metallurgists_minerals_upkeep_add$:§G-3§!\n"
+ hcp_unlock_efficient_metallurgy_minerals_machine:"$mod_planet_metallurgists_minerals_upkeep_add$:§G-4§!\n"
+ hcp_unlock_efficient_metallurgy_food:"$mod_planet_metallurgists_food_upkeep_add$:§G-4.5§!\n"
+ hcp_unlock_efficient_metallurgy_food_machine:"$mod_planet_metallurgists_food_upkeep_add$:§G-6§!\n"
+ hcp_menp_efficient_metallurgy_desc:"提高冶金过程的效率将使我们能够为最需要时节约资源."
 
  ## Field Repairs
  hcp_menp_field_repairs:"战地维修"
- hcp_unlock_field_repairs:"每摧毁一艘敌对帝国飞船：$TABBED_NEW_LINE$£military_ship£ §Y舰队§!中随机一艘飞船：§G$@hcp_field_repairs_heal|%0$§! £ship_stats_hitpoints£ 船体点数恢复\n"
- hcp_menp_field_repairs_desc:"我们负担得起利用一部分新开采的材料来维护我们的采矿设备。"
+ hcp_unlock_field_repairs:"每摧毁一艘敌对帝国飞船:$TABBED_NEW_LINE$£military_ship£ §Y舰队§!中随机一艘飞船:§G$@hcp_field_repairs_heal|%0$§! £ship_stats_hitpoints£ 船体点数恢复\n"
+ hcp_menp_field_repairs_desc:"我们负担得起利用一部分新开采的材料来维护我们的采矿设备."
 
  ### Crisis Perks Level 5
  ## Perpetual Replication
  hcp_menp_perpetual_replication:"永恒复制"
- hcp_unlock_perpetual_replication:"解锁§Y$hcp_stellar_harvester$§！巨构\n也解锁了§Y$hcp_stellar_harvester_plural$§！的§Y复制§！能力，允许我们的收割行动呈指数级扩张。\n"
- hcp_menp_perpetual_replication_desc:"我们的恒星收割者将兼作矿工和储存器，将它们收集的资源转化为更多的自身。"
+ hcp_unlock_perpetual_replication:"解锁§Y$hcp_stellar_harvester$§!巨构\n也解锁了§Y$hcp_stellar_harvester_plural$§!的§Y复制§!能力,允许我们的收割行动呈指数级扩张.\n"
+ hcp_menp_perpetual_replication_desc:"我们的恒星收割者将兼作矿工和储存器,将它们收集的资源转化为更多的自身."
 
  hcp_menp_galactic_harvest:"银河收割"
- hcp_unlock_galactic_harvest:"解锁§Y向外拓展§！事态。随着§Y$hcp_stellar_harvester_prototype$§！的测试完成，我们可以大幅扩大我们的行动规模。\n"
- hcp_menp_galactic_harvest_desc:"为了启动我们对宇宙的收割，我们需要收集足够的资源。一个星系的量应该足够了。"
+ hcp_unlock_galactic_harvest:"解锁§Y向外拓展§!事态.随着§Y$hcp_stellar_harvester_prototype$§!的测试完成,我们可以大幅扩大我们的行动规模.\n"
+ hcp_menp_galactic_harvest_desc:"为了启动我们对宇宙的收割,我们需要收集足够的资源.一个星系的量应该足够了."
 
  ##Eternal Sanctuaries
  hcp_menp_eternal_sanctuaries:"永恒庇护所"
- hcp_unlock_eternal_sanctuaries:"为我们§Y$hcp_singularity_silo$§！周围的§Y庇护所§！解锁§Y$hcp_decision_expand_sanctuary$§！行星决议。\n"
- hcp_menp_eternal_sanctuaries_desc:"我们必须确保我们的庇护所能够容纳我们整个文明，并具备永远屹立不倒的坚固性。"
+ hcp_unlock_eternal_sanctuaries:"为我们§Y$hcp_singularity_silo$§!周围的§Y庇护所§!解锁§Y$hcp_decision_expand_sanctuary$§!行星决议.\n"
+ hcp_menp_eternal_sanctuaries_desc:"我们必须确保我们的庇护所能够容纳我们整个文明,并具备永远屹立不倒的坚固性."
 
  ### Crisis Level Requirements
  hcp_NO_BLACK_HOLE:"获取一个黑洞"
- hcp_NO_BLACK_HOLE_DESC:"我们需要一个§H黑洞§！来建造§Y$hcp_singularity_silo_4$§！。我们可以获取一个已知的黑洞，或者让我们的观测站寻找一个以前被忽视的黑洞。"
+ hcp_NO_BLACK_HOLE_DESC:"我们需要一个§H黑洞§!来建造§Y$hcp_singularity_silo_4$§!.我们可以获取一个已知的黑洞,或者让我们的观测站寻找一个以前被忽视的黑洞."
 
  hcp_BUILD_SINGULARITY_SILO_LEVEL_1: "$hcp_singularity_silo_1$"
- hcp_BUILD_SINGULARITY_SILO_LEVEL_1_DESC:"奇点筒仓是终极储存解决方案。第一阶段只能容纳其潜在容量的25%，但这已足以让我们开始。"
- hcp_BUILD_SINGULARITY_SILO_LEVEL_1_TOOLTIP:"使用一艘§Y工程船§！在§H黑洞§！周围建造§Y$hcp_singularity_silo$§！的第一阶段。"
- hcp_harvesters_level_2_req_clear_tooltip:"£trigger_yes£ 已建造§H$hcp_singularity_silo$§！巨构的第一阶段。"
- hcp_harvesters_level_2_req_tooltip:"£trigger_no£ 已建造§H$hcp_singularity_silo$§！巨构的第一阶段。"
+ hcp_BUILD_SINGULARITY_SILO_LEVEL_1_DESC:"奇点筒仓是终极储存解决方案.第一阶段只能容纳其潜在容量的25%,但这已足以让我们开始."
+ hcp_BUILD_SINGULARITY_SILO_LEVEL_1_TOOLTIP:"使用一艘§Y工程船§!在§H黑洞§!周围建造§Y$hcp_singularity_silo$§!的第一阶段."
+ hcp_harvesters_level_2_req_clear_tooltip:"£trigger_yes£ 已建造§H$hcp_singularity_silo$§!巨构的第一阶段."
+ hcp_harvesters_level_2_req_tooltip:"£trigger_no£ 已建造§H$hcp_singularity_silo$§!巨构的第一阶段."
 
  hcp_BUILD_SINGULARITY_SILO_LEVEL_2: "$hcp_singularity_silo_2$"
- hcp_BUILD_SINGULARITY_SILO_LEVEL_2_DESC:"奇点筒仓是终极储存解决方案。第二阶段只能容纳其潜在容量的50%，但这将使我们能够极大地扩展我们的资源储备。"
- hcp_BUILD_SINGULARITY_SILO_LEVEL_2_TOOLTIP:"将我们的§Y$hcp_singularity_silo$§！升级到第二阶段。"
- hcp_harvesters_level_3_req_clear_tooltip:"£trigger_yes£ 已建造§H$hcp_singularity_silo$§！巨构的第二阶段。"
- hcp_harvesters_level_3_req_tooltip:"£trigger_no£ 已建造§H$hcp_singularity_silo$§！巨构的第二阶段。"
+ hcp_BUILD_SINGULARITY_SILO_LEVEL_2_DESC:"奇点筒仓是终极储存解决方案.第二阶段只能容纳其潜在容量的50%,但这将使我们能够极大地扩展我们的资源储备."
+ hcp_BUILD_SINGULARITY_SILO_LEVEL_2_TOOLTIP:"将我们的§Y$hcp_singularity_silo$§!升级到第二阶段."
+ hcp_harvesters_level_3_req_clear_tooltip:"£trigger_yes£ 已建造§H$hcp_singularity_silo$§!巨构的第二阶段."
+ hcp_harvesters_level_3_req_tooltip:"£trigger_no£ 已建造§H$hcp_singularity_silo$§!巨构的第二阶段."
 
  hcp_BUILD_SINGULARITY_SILO_LEVEL_3: "$hcp_singularity_silo_3$"
- hcp_BUILD_SINGULARITY_SILO_LEVEL_3_DESC:"奇点筒仓是终极储存解决方案。第三阶段只能容纳其潜在容量的75%，但这将使我们能够极大地扩展我们的资源储备。"
- hcp_BUILD_SINGULARITY_SILO_LEVEL_3_TOOLTIP:"将我们的§Y$hcp_singularity_silo$§！升级到第三阶段。"
- hcp_harvesters_level_4_req_clear_tooltip:"£trigger_yes£ 已建造§H$hcp_singularity_silo$§！巨构的第三阶段。"
- hcp_harvesters_level_4_req_tooltip:"£trigger_no£ 已建造§H$hcp_singularity_silo$§！巨构的第三阶段。"
+ hcp_BUILD_SINGULARITY_SILO_LEVEL_3_DESC:"奇点筒仓是终极储存解决方案.第三阶段只能容纳其潜在容量的75%,但这将使我们能够极大地扩展我们的资源储备."
+ hcp_BUILD_SINGULARITY_SILO_LEVEL_3_TOOLTIP:"将我们的§Y$hcp_singularity_silo$§!升级到第三阶段."
+ hcp_harvesters_level_4_req_clear_tooltip:"£trigger_yes£ 已建造§H$hcp_singularity_silo$§!巨构的第三阶段."
+ hcp_harvesters_level_4_req_tooltip:"£trigger_no£ 已建造§H$hcp_singularity_silo$§!巨构的第三阶段."
 
  hcp_BUILD_SINGULARITY_SILO_LEVEL_4: "$hcp_singularity_silo_4$"
- hcp_BUILD_SINGULARITY_SILO_LEVEL_4_DESC:"奇点筒仓是终极储存解决方案。一旦完成，它将能够容纳我们整个文明，以及无限期维持文明所需的资源。"
- hcp_BUILD_SINGULARITY_SILO_LEVEL_4_TOOLTIP:"将我们的§Y$hcp_singularity_silo$§！升级到最终阶段。"
- hcp_harvesters_level_5_req_clear_tooltip:"£trigger_yes£ 已建造§H$hcp_singularity_silo$§！巨构的最终阶段。"
- hcp_harvesters_level_5_req_tooltip:"£trigger_no£ 已建造§H$hcp_singularity_silo$§！巨构的最终阶段。"
+ hcp_BUILD_SINGULARITY_SILO_LEVEL_4_DESC:"奇点筒仓是终极储存解决方案.一旦完成,它将能够容纳我们整个文明,以及无限期维持文明所需的资源."
+ hcp_BUILD_SINGULARITY_SILO_LEVEL_4_TOOLTIP:"将我们的§Y$hcp_singularity_silo$§!升级到最终阶段."
+ hcp_harvesters_level_5_req_clear_tooltip:"£trigger_yes£ 已建造§H$hcp_singularity_silo$§!巨构的最终阶段."
+ hcp_harvesters_level_5_req_tooltip:"£trigger_no£ 已建造§H$hcp_singularity_silo$§!巨构的最终阶段."
 
  hcp_BUILD_STELLAR_HARVESTER_PROTOTYPE:"建造恒星收割者原型机"
- hcp_BUILD_STELLAR_HARVESTER_PROTOTYPE_DESC:"为了加快其发展，我们必须建造并测试一艘§Y恒星收割者原型机§！。这是一项昂贵且耗时的工程，但如果成功，它将能够大幅提升我们的收割作业效率。"
- hcp_BUILD_STELLAR_HARVESTER_PROTOTYPE_TOOLTIP:"在§H[this.GetName]§！轨道上建造§Y恒星收割者原型机§！。"
+ hcp_BUILD_STELLAR_HARVESTER_PROTOTYPE_DESC:"为了加快其发展,我们必须建造并测试一艘§Y恒星收割者原型机§!.这是一项昂贵且耗时的工程,但如果成功,它将能够大幅提升我们的收割作业效率."
+ hcp_BUILD_STELLAR_HARVESTER_PROTOTYPE_TOOLTIP:"在§H[this.GetName]§!轨道上建造§Y恒星收割者原型机§!."
 
  hcp_TEST_STELLAR_HARVESTER_PROTOTYPE:"测试恒星收割者原型机"
- hcp_TEST_STELLAR_HARVESTER_PROTOTYPE_DESC:"原型机已完成，剩下的就是测试它了。我们已将§H[this.GetName] System§！确定为合适的目标，但我们也可以寻找其他星系。"
- hcp_TEST_STELLAR_HARVESTER_PROTOTYPE_TOOLTIP:"在§H[this.GetName] System§！上测试§Y恒星收割者原型机§！。"
+ hcp_TEST_STELLAR_HARVESTER_PROTOTYPE_DESC:"原型机已完成,剩下的就是测试它了.我们已将§H[this.GetName] System§!确定为合适的目标,但我们也可以寻找其他星系."
+ hcp_TEST_STELLAR_HARVESTER_PROTOTYPE_TOOLTIP:"在§H[this.GetName] System§!上测试§Y恒星收割者原型机§!."
 
- hcp_harvesters_level_5_test_fire_clear_tooltip:"£trigger_yes£ 已建造并测试§H$hcp_stellar_harvester_prototype$§！。"
- hcp_harvesters_level_5_test_fire_tooltip:"£trigger_no£ 已建造并测试§H$hcp_stellar_harvester_prototype$§！。"
+ hcp_harvesters_level_5_test_fire_clear_tooltip:"£trigger_yes£ 已建造并测试§H$hcp_stellar_harvester_prototype$§!."
+ hcp_harvesters_level_5_test_fire_tooltip:"£trigger_no£ 已建造并测试§H$hcp_stellar_harvester_prototype$§!."
 
- hcp_harvesters_level_5_sanctuary_clear_tooltip:"£trigger_yes£ 已殖民我们至少一个§H庇护所§！。"
- hcp_harvesters_level_5_sanctuary_tooltip:"£trigger_no£ 已殖民我们至少一个§H庇护所§！。"
+ hcp_harvesters_level_5_sanctuary_clear_tooltip:"£trigger_yes£ 已殖民我们至少一个§H庇护所§!."
+ hcp_harvesters_level_5_sanctuary_tooltip:"£trigger_no£ 已殖民我们至少一个§H庇护所§!."
  
  #############
  # Crisis UI #
  #############
 
  hcp_mining_efficiency:"采矿效率"
- hcp_mining_efficiency_name:"$hcp_mining_efficiency$："
+ hcp_mining_efficiency_name:"$hcp_mining_efficiency$:"
  hcp_mining_efficiency_value:"£hcp_mining_efficiency£ $VAL|0$"
- hcp_mining_efficiency_gaining:"完成§H危机目标§！以获得更多£hcp_mining_efficiency£ §Y$hcp_mining_efficiency$§！。"
- hcp_mining_efficiency_desc:"$hcp_mining_efficiency$\" 衡量着我们采集技术的整体效率。"
+ hcp_mining_efficiency_gaining:"完成§H危机目标§!以获得更多£hcp_mining_efficiency£ §Y$hcp_mining_efficiency$§!."
+ hcp_mining_efficiency_desc:"$hcp_mining_efficiency$\" 衡量着我们采集技术的整体效率."
  hcp_mining_efficiency_crisis_objective:"危机目标"
  hcp_mining_efficiency_crisis_objective_gained:"$hcp_mining_efficiency$\" 已获取"
  hcp_mining_efficiency_crisis_objective_reward: "$REWARD$"
- hcp_mining_efficiency_crisis_objective_progress:"我们已从该危机目标中获得 £hcp_mining_efficiency£ $AMOUNT$。"
- hcp_mining_efficiency_crisis_level_locked:"解锁此等级所需：\n"
- hcp_mining_efficiency_crisis_level_unlocked:"在 $LEVEL$ 级，你将获得奖励：\n"
- hcp_mining_efficiency_crisis_level_desc:"要提升危机等级，需积累 \"$hcp_mining_efficiency$\" 并升级 \"$hcp_singularity_silo$\" 巨型建筑。"
+ hcp_mining_efficiency_crisis_objective_progress:"我们已从该危机目标中获得 £hcp_mining_efficiency£ $AMOUNT$."
+ hcp_mining_efficiency_crisis_level_locked:"解锁此等级所需:\n"
+ hcp_mining_efficiency_crisis_level_unlocked:"在 $LEVEL$ 级,你将获得奖励:\n"
+ hcp_mining_efficiency_crisis_level_desc:"要提升危机等级,需积累 \"$hcp_mining_efficiency$\" 并升级 \"$hcp_singularity_silo$\" 巨型建筑."
  hcp_mining_efficiency_crisis_level_unlock:"拥有 £hcp_mining_efficiency£ §Y$CURRENCY$§! $hcp_mining_efficiency$"
- hcp_mining_efficiency_current_value:"当前值：§Y$VALUE|0$§!"
+ hcp_mining_efficiency_current_value:"当前值:§Y$VALUE|0$§!"
  
  hcp_mining_efficiency_crisis_description_title: "$hcp_ap_harvesters$"
- hcp_mining_efficiency_crisis_description:"$menace_crisis_description_intro$\"\n\n时间紧迫。我们必须尽可能多地汇聚物质，以延续我们文明的存续。错过的每一个分子都可能让我们付出数千年的代价。"
+ hcp_mining_efficiency_crisis_description:"$menace_crisis_description_intro$\"\n\n时间紧迫.我们必须尽可能多地汇聚物质,以延续我们文明的存续.错过的每一个分子都可能让我们付出数千年的代价."
  hcp_mining_efficiency_crisis_howto_title:"§H效率与技术§!"
- hcp_mining_efficiency_crisis_howto:"达成 §H危机目标§! 会产生 £hcp_mining_efficiency£ §H$hcp_mining_efficiency$§!，提高我们资源开采行动的效率。最终，我们可以研发 §H采集技术§!，以高效地收集整个恒星系统，使我们能够启动对 §H宇宙§! 的收割！！"
+ hcp_mining_efficiency_crisis_howto:"达成 §H危机目标§! 会产生 £hcp_mining_efficiency£ §H$hcp_mining_efficiency$§!,提高我们资源开采行动的效率.最终,我们可以研发 §H采集技术§!,以高效地收集整个恒星系统,使我们能够启动对 §H宇宙§! 的收割!!"
 
  #end

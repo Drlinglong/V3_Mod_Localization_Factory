@@ -1,4 +1,4 @@
-﻿l_spanish:
+l_spanish:
  # Deity Names First Part
  NAME_dtm_Benefactor:0 "Benefactor"
  NAME_dtm_Attractor:0 "Atractor"
@@ -336,7 +336,7 @@
 
  # Crisis Stage Projects
 
- CRISIS_SPECIAL_PROJECT_1_DESC:2 "Una quietud maniaca se extiende por nuestra población. Su origen parece intangible, pero ellos —nosotros— nos hemos obsesionado con la noción de que nosotros, los [Root.GetSpeciesNamePlural], estamos destinados a cosas más grandes. Deberíamos investigar la causa de esta histeria masiva y sus susurros promesas de dominación galáctica.\n\n$CRISIS_SPECIAL_PROJECTS_TUTORIAL$"
+ CRISIS_SPECIAL_PROJECT_1_DESC:2 "Una quietud maniaca se extiende por nuestra población. Su origen parece intangible, pero ellos -nosotros- nos hemos obsesionado con la noción de que nosotros, los [Root.GetSpeciesNamePlural], estamos destinados a cosas más grandes. Deberíamos investigar la causa de esta histeria masiva y sus susurros promesas de dominación galáctica.\n\n$CRISIS_SPECIAL_PROJECTS_TUTORIAL$"
 
  CRISIS_DTM_THEOPHANY_SPECIAL_PROJECT_1:0 "La Fe se Extiende"
  CRISIS_DTM_THEOPHANY_SPECIAL_PROJECT_1_DESC:0 "Las procesiones de peregrinos que viajan a [capital_scope.GetName] aumentan año tras año. El conocimiento del descubrimiento de nuestro Dios se extendió como un reguero de pólvora por nuestro espacio. Podemos sentir que ha comenzado un tiempo de cambio.\n\nLa adoración silenciosa ya no es suficiente para expresar nuestra fe. Debemos compartirla con otros para fortalecer a nuestra deidad. Deben encontrarse formas para lograr este objetivo."

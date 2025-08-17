@@ -1,4 +1,4 @@
-﻿l_braz_por:
+l_braz_por:
  BA_SI:"Conceito da Academia"
 
  MESSAGE_BA_SI_READY:"Conceito da Academia pronto"
@@ -145,7 +145,7 @@
  ### 下左线
  SI_Gehenna_C01:"Decisão Final: Pandemônio"
  SI_Gehenna_C01_desc:"A liderança do Pandemônio gradualmente superou a voz do Comitê Disciplinar, assumindo o poder de decisão sobre os assuntos internos de Gehenna. No entanto, ao escolher o árbitro final, o Pandemônio fez uma escolha inesperada."
- SI_Gehenna_C01_effect:"\nEfeito:\n§HRecebe modificador de Império: §!$modifier_BA_SI_Gehenna_C01$(10800£time£):\n    $MOD_SHIP_WEAPON_DAMAGE$: §G+35%§!\n    $MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+35%§!\n    $MOD_ARMY_ATTACK_DAMAGE_MULT$: §G+35%§!\n    £stability£$MOD_PLANET_STABILITY_ADD$: §R-10§!\n    $MOD_EMPIRE_SIZE_POPS_MULT$: §R+25%§!\n" #§H统治者更换为§!：丹花伊吹\n
+ SI_Gehenna_C01_effect:"\nEfeito:\n§HRecebe modificador de Império: §!$modifier_BA_SI_Gehenna_C01$(10800£time£):\n    $MOD_SHIP_WEAPON_DAMAGE$: §G+35%§!\n    $MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+35%§!\n    $MOD_ARMY_ATTACK_DAMAGE_MULT$: §G+35%§!\n    £stability£$MOD_PLANET_STABILITY_ADD$: §R-10§!\n    $MOD_EMPIRE_SIZE_POPS_MULT$: §R+25%§!\n" #§H统治者更换为§!:丹花伊吹\n
  SI_Gehenna_C01_tip:"§C$SI_Gehenna_C01$§!\n$SI_Gehenna_C01_desc$\n$SI_Gehenna_C01_effect$"
 
  SI_Gehenna_C02:"Princípios dos Bastidores"
@@ -182,7 +182,7 @@
 
  SI_Gehenna_E02:"Mão de Ferro da Administradora"
  SI_Gehenna_E02_desc:"Nossa Administradora do Comitê Disciplinar é a que tem acesso a mais informações, sabendo exatamente onde todas as nossas forças estão em cada área! Para aproveitarmos a vantagem de lutar em casa e evitar problemas internos, o comando precisa ir direto para ela!"
- SI_Gehenna_E02_effect:"\nEfeitos:\n$MOD_SHIP_HOME_TERRITORY_FIRE_RATE_MULT$: §G+75%§!\n$MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+100%§!\n$MOD_STARBASE_SHIPYARD_BUILD_COST_MULT$: §R+10%§!\n" #\n处于防御战争下，本土舰队射速: §G+75%§!
+ SI_Gehenna_E02_effect:"\nEfeitos:\n$MOD_SHIP_HOME_TERRITORY_FIRE_RATE_MULT$: §G+75%§!\n$MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+100%§!\n$MOD_STARBASE_SHIPYARD_BUILD_COST_MULT$: §R+10%§!\n" #\n处于防御战争下,本土舰队射速: §G+75%§!
  SI_Gehenna_E02_tip:"§C$SI_Gehenna_E02$§!\n$SI_Gehenna_E02_desc$\n$SI_Gehenna_E02_effect$"
 
  SI_Gehenna_E03:"Fortificando Cada Passo"
@@ -200,7 +200,7 @@
 
  SI_Millennium_G02:"Bônus de Desempenho Geral"
  SI_Millennium_G02_desc:"Nossas pesquisas indicam que os salários dos pesquisadores criam um valor muitas vezes maior do que o custo deles... Pode parecer que estamos nos gabando, mas é a pura verdade!"
- SI_Millennium_G02_effect:"\nEfeitos:\n$mod_planet_researchers_produces_mult$: §G+10%§!\n$mod_planet_researchers_upkeep_mult$: §R+5%§!\n$MOD_COUNTRY_NUM_TECH_ALTERNATIVES_ADD$: §G+1§!\n$MOD_LEADER_SKILL_LEVELS$: §G+1§!\n$MOD_PLANET_POP_ASSEMBLY_MULT$: §G+20%§!\n" #\n现在每十五个人口提供一个£pops£研究人员岗位。
+ SI_Millennium_G02_effect:"\nEfeitos:\n$mod_planet_researchers_produces_mult$: §G+10%§!\n$mod_planet_researchers_upkeep_mult$: §R+5%§!\n$MOD_COUNTRY_NUM_TECH_ALTERNATIVES_ADD$: §G+1§!\n$MOD_LEADER_SKILL_LEVELS$: §G+1§!\n$MOD_PLANET_POP_ASSEMBLY_MULT$: §G+20%§!\n" #\n现在每十五个人口提供一个£pops£研究人员岗位.
  SI_Millennium_G02_tip:"§C$SI_Millennium_G02$§!\n$SI_Millennium_G02_desc$\n$SI_Millennium_G02_effect$"
 
  SI_Millennium_G03:"Incentivo Privado à Pesquisa dos Clubes"
@@ -300,7 +300,7 @@
  ### 左线
  SI_Trinity_A01:"Phelinius Presidindo"
  SI_Trinity_A01_desc:"A facção Phelinius liderou a assinatura do Tratado do Éden; embora os resultados não tenham sido os ideais, suas habilidades diplomáticas demonstradas foram impecáveis."
- SI_Trinity_A01_effect:"§RExclusivo com§! $SI_Trinity_B01$、$SI_Trinity_C01$§R§!"
+ SI_Trinity_A01_effect:"§RExclusivo com§! $SI_Trinity_B01$,$SI_Trinity_C01$§R§!"
  SI_Trinity_A01_tip:"§C$SI_Trinity_A01$§!"
 
  SI_Trinity_A02:"Burocracia Descentralizada"
@@ -331,7 +331,7 @@
  ### 中线
  SI_Trinity_B01:"Liderança de Patel"
  SI_Trinity_B01_desc:"A Facção de Patel defende a resolução de disputas pela força. Embora sua líder tenha perdido parte de sua autoridade, sua influência só cresceu com o contato com civilizações alienígenas."
- SI_Trinity_B01_effect:"\n§RMutuamente exclusivo com§!$SI_Trinity_A01$、$SI_Trinity_C01$§R!§!\nEfeitos:\n$MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+10%§!\n$RESEARCH_EFFICIENCY$: §G+15%§!\n$MOD_BONUS_POP_GROWTH_MULT$: §G+10%§!\n"
+ SI_Trinity_B01_effect:"\n§RMutuamente exclusivo com§!$SI_Trinity_A01$,$SI_Trinity_C01$§R!§!\nEfeitos:\n$MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+10%§!\n$RESEARCH_EFFICIENCY$: §G+15%§!\n$MOD_BONUS_POP_GROWTH_MULT$: §G+10%§!\n"
  SI_Trinity_B01_tip:"§C$SI_Trinity_B01$§!\n$SI_Trinity_B01_desc$\n$SI_Trinity_B01_effect$"
 
  SI_Trinity_B02:"Berço de Aço Forjado"
@@ -362,7 +362,7 @@
  ### 右线
  SI_Trinity_C01:"Liderança de Sanktosu"
  SI_Trinity_C01_desc:"A Facção de Sanktosu mantém uma postura neutra, mas não é menos ambiciosa. Em vez de focar no presente e em ações de curto prazo, elas se preocupam mais com o futuro distante."
- SI_Trinity_C01_effect:"\n§RMutuamente exclusivo com§!$SI_Trinity_A01$、$SI_Trinity_B01$§R!§!\nEfeitos:\n$mod_planet_jobs_produces_mult$: §G+5%§!\n$mod_shipclass_starbase_build_cost_mult$: §G-10%§!\n$mod_shipclass_colonizer_build_cost_mult$: §G-30%§!\n$MOD_EMPIRE_SIZE_SYSTEMS_MULT$: §G-10%§!\nTamanho do Império: §G-2%§!\n"
+ SI_Trinity_C01_effect:"\n§RMutuamente exclusivo com§!$SI_Trinity_A01$,$SI_Trinity_B01$§R!§!\nEfeitos:\n$mod_planet_jobs_produces_mult$: §G+5%§!\n$mod_shipclass_starbase_build_cost_mult$: §G-10%§!\n$mod_shipclass_colonizer_build_cost_mult$: §G-30%§!\n$MOD_EMPIRE_SIZE_SYSTEMS_MULT$: §G-10%§!\nTamanho do Império: §G-2%§!\n"
  SI_Trinity_C01_tip:"§C$SI_Trinity_C01$§!\n$SI_Trinity_C01_desc$\n$SI_Trinity_C01_effect$"
 
  SI_Trinity_C02:"Lei de Expansão Urbana"

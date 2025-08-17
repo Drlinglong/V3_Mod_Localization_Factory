@@ -1,4 +1,4 @@
-﻿l_polish:
+l_polish:
 ##### 飞升 #####
 #事件链
  BA_ape.0001.name:0 "Propozycja Yuu Kokan"
@@ -6,17 +6,17 @@
  BA_ape.0001.a:0 "Co za rzadki gość. Coś się stało?"
  BA_ape.0001.a.re:0 "§M„Tak... Proszę, spójrz na to najpierw.”§!\n(Yuu wyjmuje pożółkły starożytny zwój)"
  BA_ape.0001.b:0 "Starożytna księga? Ale my tu mamy biuro do spraw eksploracji międzygwiezdnej."
- BA_ape.0001.b.re:0 "§M„Ta księga, powinna była być pierwotnie w sekcji zakazanej. To, co jest w niej zapisane, ma związek z aurami nad naszymi głowami… Szczerze mówiąc, chociaż Federalna Rada Uczniowska wcześniej zakazała badań nad aurami, to jako coś tak blisko z nami związanego, w ogóle nie znamy ich istoty…”§!\n…\n§M„Zgadza się… Chciałabym rozpocząć badania nad aurami.”§!\n…"
- BA_ape.0001.c:0 "…Zatwierdzam. Pamiętaj, bądź niezwykle ostrożna."
+ BA_ape.0001.b.re:0 "§M„Ta księga, powinna była być pierwotnie w sekcji zakazanej. To, co jest w niej zapisane, ma związek z aurami nad naszymi głowami... Szczerze mówiąc, chociaż Federalna Rada Uczniowska wcześniej zakazała badań nad aurami, to jako coś tak blisko z nami związanego, w ogóle nie znamy ich istoty...”§!\n...\n§M„Zgadza się... Chciałabym rozpocząć badania nad aurami.”§!\n..."
+ BA_ape.0001.c:0 "...Zatwierdzam. Pamiętaj, bądź niezwykle ostrożna."
  BA_ape.0001.c.re:0 "(Po długim namyśle, ostatecznie zdecydowałem się zatwierdzić tę propozycję.)\nWskazówka: Ukończ misję naprawy fabrykatora pirorytu w interfejsie Arony. Yuu Kokan dołączy do listy przywódców jako naukowiec, proszę sprawdzić."
  BA_ape.0001.c.tip:0 "Czy to świetlana ścieżka, czy też klucz otwierający puszkę Pandory?"
 
  BA_ape.0002.name:0 "Wiadomości z Kivotos: Skok"
- BA_ape.0002.desc:0 "„…Niedawno, Yuu Kokan, ekspertka od starożytnych ksiąg z Trójcy Świętej, opublikowała przełomową pracę naukową: „Raport o Aurach i Boskich Pieczęciach”, którą publicznie obroniła w Wielkiej Katedrze Trójcy Świętej. Podczas obrony, Yuu szczegółowo i wyczerpująco przedstawiła wstępną teorię aur, oraz zademonstrowała plastyczny materiał o właściwościach podobnych do aur: Kamień Kreacji. W tej pracy po raz pierwszy poruszono wiele kwestii dotyczących natury mocy aur."
+ BA_ape.0002.desc:0 "„...Niedawno, Yuu Kokan, ekspertka od starożytnych ksiąg z Trójcy Świętej, opublikowała przełomową pracę naukową: „Raport o Aurach i Boskich Pieczęciach”, którą publicznie obroniła w Wielkiej Katedrze Trójcy Świętej. Podczas obrony, Yuu szczegółowo i wyczerpująco przedstawiła wstępną teorię aur, oraz zademonstrowała plastyczny materiał o właściwościach podobnych do aur: Kamień Kreacji. W tej pracy po raz pierwszy poruszono wiele kwestii dotyczących natury mocy aur."
  BA_ape2.a:0 "Jaką drogę obrać dalej?"
 
  BA_ape.0003.name:0 "Wiadomości z Kivotos: Kamień Kreacji"
- BA_ape.0003.desc:0 "Według raportu departamentu inżynierii z Akademii Naukowo-Technologicznej Millennium, podczas niedawnej współpracy badawczej z panną Yuu Kokan ze Szkoły Trójcy Świętej, odkryły ścieżkę syntezy Kamienia Kreacji: używając pirorytu jako surowca, można wytwarzać niezwykle wysokiej jakości towary luksusowe. Obecnie Federalny Departament Badawczy oficjalnie włączył go do swoich kluczowych obiektów badawczych…"
+ BA_ape.0003.desc:0 "Według raportu departamentu inżynierii z Akademii Naukowo-Technologicznej Millennium, podczas niedawnej współpracy badawczej z panną Yuu Kokan ze Szkoły Trójcy Świętej, odkryły ścieżkę syntezy Kamienia Kreacji: używając pirorytu jako surowca, można wytwarzać niezwykle wysokiej jakości towary luksusowe. Obecnie Federalny Departament Badawczy oficjalnie włączył go do swoich kluczowych obiektów badawczych..."
  BA_ape4.a:0 "Wspaniale!"
 
  BA_ape.0004.name:0 "Frustracja"
@@ -38,12 +38,12 @@
  BA_ape.0005.g:0 "Zamknij Archiwa"
 
  BA_ape.0006.name:0 "Spór"
- BA_ape.0006.desc:0 "Wraz z zakończeniem misji badawczej w bazie Numerologów, zdobyliśmy pewną… wiedzę, której nie wiemy, jak dobrze opisać.\n\nPrzekazaliśmy dane członkom grupy badawczej aur, ale wygląda na to, że w ich wnętrzu wybuchł spór – między frakcją reprezentowaną przez studentów Akademii Millennium a frakcją reprezentowaną przez studentów Trójcy Świętej.\n\nStudenci Millennium nalegają, aby dane pozostawione przez Numerologów zostały uporządkowane i zmodyfikowane, wyraźnie stwierdzając: poprzednia, mistyczna teoria była zbyt niekontrolowana, i konieczne jest, aby w pełni opanować moc aur.\n\nStudenci Trójcy Świętej z kolei twierdzą, że należy zachować szacunek dla nieznanego, a obecna teoria już przyniosła znaczne rezultaty.\n\nObie strony nie mogą dojść do porozumienia, a postęp badań został spowolniony. Potrzebna jest osoba o wystarczającym wpływie, aby podjąć decyzję. (Wskazówka: Możesz skontaktować się z obecnym przewodniczącym rady uczniowskiej przez panel komunikacyjny, aby zapytać o opinię (ale jeszcze nie zostało to zaimplementowane))"
- BA_ape.0006.a:0 "…Tak czy inaczej, kłótnie wewnątrz Federalnej Rady Uczniowskiej są nieuniknione."
+ BA_ape.0006.desc:0 "Wraz z zakończeniem misji badawczej w bazie Numerologów, zdobyliśmy pewną... wiedzę, której nie wiemy, jak dobrze opisać.\n\nPrzekazaliśmy dane członkom grupy badawczej aur, ale wygląda na to, że w ich wnętrzu wybuchł spór – między frakcją reprezentowaną przez studentów Akademii Millennium a frakcją reprezentowaną przez studentów Trójcy Świętej.\n\nStudenci Millennium nalegają, aby dane pozostawione przez Numerologów zostały uporządkowane i zmodyfikowane, wyraźnie stwierdzając: poprzednia, mistyczna teoria była zbyt niekontrolowana, i konieczne jest, aby w pełni opanować moc aur.\n\nStudenci Trójcy Świętej z kolei twierdzą, że należy zachować szacunek dla nieznanego, a obecna teoria już przyniosła znaczne rezultaty.\n\nObie strony nie mogą dojść do porozumienia, a postęp badań został spowolniony. Potrzebna jest osoba o wystarczającym wpływie, aby podjąć decyzję. (Wskazówka: Możesz skontaktować się z obecnym przewodniczącym rady uczniowskiej przez panel komunikacyjny, aby zapytać o opinię (ale jeszcze nie zostało to zaimplementowane))"
+ BA_ape.0006.a:0 "...Tak czy inaczej, kłótnie wewnątrz Federalnej Rady Uczniowskiej są nieuniknione."
 
  BA_ape.0007.name:0 "Wybór"
  BA_ape.0007.desc:0 "Długotrwały spór nie przyniósł rezultatów. Oczywiście, nie możemy pozwolić, aby spór trwał dalej; zanim dowiemy się, kiedy nasi wrogowie powrócą, nie mamy zbyt wiele czasu na rozwodzenie się nad tymi kwestiami. Musimy podjąć decyzję, niezależnie od tego, co czeka nas na tej drodze."
- BA_ape.0007.a:0 "Potrzebuję więcej czasu na zastanowienie… (Zadecyduj za 180 dni)"
+ BA_ape.0007.a:0 "Potrzebuję więcej czasu na zastanowienie... (Zadecyduj za 180 dni)"
  BA_ape.0007.b:0 "Może powinniśmy zacząć od istoty aury"
  BA_ape.0007.b.tip:0 "Wejdź na ścieżkę §GPrzebudzenia Aur§!, wybierz Wniebowstąpienie §Y$ap_BA_halo_awaken$§!, aby przejść dalej."
  BA_ape.0007.c:0 "Musimy całkowicie opanować moc aur"
@@ -130,7 +130,7 @@
 
  BA_Kivotos_chronicle_effect_stage1:0 "§H£district£$BA_districts_dome$§! dostarcza więcej §C£job£miejsc pracy§!, a wszystkie §H£district£dystrykty§! zyskują więcej £housing£miejsc zamieszkania§!."
  BA_Kivotos_chronicle_effect_stage2:0 "§H£district£$BA_districts_suburbs$§! zwiększa produktywność §C£job£miejsc pracy§! i odblokowuje £zone£['concept_district_specialization'] skupioną na §Yjednym z§! podstawowych surowców: £energy£, £minerals£, £food£."
- BA_Kivotos_chronicle_effect_stage3:0 "§H£district£$BA_districts_military_factory$§! zwiększa produkcję i utrzymanie §C£job£miejsc pracy§!." #并且解锁特殊的行星决议：牺牲一些§l£district£区划上限§!以进一步提升此区划提供的§C£job£岗位§!的的产出与消耗
+ BA_Kivotos_chronicle_effect_stage3:0 "§H£district£$BA_districts_military_factory$§! zwiększa produkcję i utrzymanie §C£job£miejsc pracy§!." #并且解锁特殊的行星决议:牺牲一些§l£district£区划上限§!以进一步提升此区划提供的§C£job£岗位§!的的产出与消耗
  BA_Kivotos_chronicle_effect_stage4:0 "Odblokowuje dwa dodatkowe dystrykty autonomiczne dla planet typu Miasto-Akademia, które można dowolnie zaplanować. Odblokowuje więcej §H£building£budynków§! i ulepszeń, zapewniających więcej §Cunikalnych dla Miasta-Akademii £job£miejsc pracy§! i pozwalających na produkcję §Brzadkich zasobów§!."
  BA_Kivotos_chronicle_effect_stage5:0 "§H£district£$BA_districts_municipality$§! zapewni więcej §C£job£miejsc pracy§!, a §G§Cunikalne dla Miasta-Akademii £job£miejsca pracy§!§! §Ynie będą już szkodzić £stability£stabilności§! planety ani wymagać opłat utrzymania £influence£$influence$§!."
  BA_Kivotos_chronicle_effect_stage6:0 "Szybkość budowy i ulepszania okrętów, baz gwiezdnych i megastruktur §G+50%§!. Można ulepszać §Cbudynki Miasta-Akademii§!, wzmacniając ich efekty i zapewniając dużą ilość $trade_with_icon$."

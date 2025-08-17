@@ -1,4 +1,4 @@
-﻿# localisation\english\darktec_mechanics_l_english.yml
+# localisation\english\darktec_mechanics_l_english.yml
 
 # Authors: Rodahtnov & Zyralynn
 
@@ -21,21 +21,21 @@ l_japanese:
 
 # Ascension perk
 	darktec_ap_postbaryonic:0 "ポストバリオン注入"
-	darktec_ap_postbaryonic_desc:0 "我々は長い間、虚空が森羅万象から最後の星、最後の光までをも貪り尽くすにつれ、宇宙が自壊する様を見てきた。今こそ、その破局を覆し、防ぎ、そして我々の有利に転じる術を知る時だ。エントロピーは我々とともに終わるだろう。"
-	darktec_ap_postbaryonic_not_for_multispecies:0 "£trigger_no£ §Y多文化§!帝国を必要としない。"
-	darktec_ap_postbaryonic_not_for_wilderness:0 "£trigger_no£ 非統合帝国（§Y荒野§!帝国など）を必要としない。"
-	darktec_ap_postbaryonic_requires_able_to_modify_species:0 "£trigger_no£ 非純粋主義帝国を必要としない（我々の主要種族を改変することはできない）。"
+	darktec_ap_postbaryonic_desc:0 "我々は長い間,虚空が森羅万象から最後の星,最後の光までをも貪り尽くすにつれ,宇宙が自壊する様を見てきた.今こそ,その破局を覆し,防ぎ,そして我々の有利に転じる術を知る時だ.エントロピーは我々とともに終わるだろう."
+	darktec_ap_postbaryonic_not_for_multispecies:0 "£trigger_no£ §Y多文化§!帝国を必要としない."
+	darktec_ap_postbaryonic_not_for_wilderness:0 "£trigger_no£ 非統合帝国(§Y荒野§!帝国など)を必要としない."
+	darktec_ap_postbaryonic_requires_able_to_modify_species:0 "£trigger_no£ 非純粋主義帝国を必要としない(我々の主要種族を改変することはできない)."
 	darktec_ap_postbaryonic_tooltip_will_need_to_research_dm_tech:0 "§E技術要件:§!"
 
-	darktec_ap_postbaryonic_tooltip:0 "- 危機への進行が開始される。"
+	darktec_ap_postbaryonic_tooltip:0 "- 危機への進行が開始される."
 
 	darktec_ap_postbaryonic_transformed:0 "エントロピー融合"
 	darktec_ap_postbaryonic_transformed_desc:0 "$darktec_ap_postbaryonic_desc$"
-	darktec_ap_postbaryonic_transformed_tooltip:0 "- 我々は自身の種族を§Yエントロフィアレル§!へと変容させ、今や我々自身においてエントロピーの真の可能性を受け入れている。"
+	darktec_ap_postbaryonic_transformed_tooltip:0 "- 我々は自身の種族を§Yエントロフィアレル§!へと変容させ,今や我々自身においてエントロピーの真の可能性を受け入れている."
 
 	darktec_ap_postbaryonic_tainted:0 "暗影注入"
 	darktec_ap_postbaryonic_tainted_desc:0 "$darktec_ap_postbaryonic_desc$"
-	darktec_ap_postbaryonic_tainted_tooltip:0 "- 我々は§Y暗影§!技術を強化し、今や暗黒物質に対するより大きな制御力を得た。"
+	darktec_ap_postbaryonic_tainted_tooltip:0 "- 我々は§Y暗影§!技術を強化し,今や暗黒物質に対するより大きな制御力を得た."
 
 # Crisis
 	# Misc
@@ -61,63 +61,63 @@ l_japanese:
 	darktec_contained_entropy_with_icon:0 "£darktec_contained_entropy£ $darktec_contained_entropy$"
 	darktec_contained_entropy_value:0 "£darktec_contained_entropy£ $VAL|0$"
 	darktec_contained_entropy_current_value:0 "現在の値: §Y$VALUE|0$§!"
-	darktec_contained_entropy_gaining:0 "§H危機目標§!を達成して、より多くの§Y$darktec_contained_entropy$§!を獲得する。"
-	darktec_contained_entropy_desc:0 "封じ込められたエントロピーとは、非バリオン物質によって閉じ込められたカオスな背景エネルギーの量であり、人為的に影響を与えない限り、いかなる方法でも現実と干渉または相互作用することはない。"
+	darktec_contained_entropy_gaining:0 "§H危機目標§!を達成して,より多くの§Y$darktec_contained_entropy$§!を獲得する."
+	darktec_contained_entropy_desc:0 "封じ込められたエントロピーとは,非バリオン物質によって閉じ込められたカオスな背景エネルギーの量であり,人為的に影響を与えない限り,いかなる方法でも現実と干渉または相互作用することはない."
 
 	darktec_contained_entropy_crisis_objective:0 "危機目標"
 	darktec_contained_entropy_crisis_objective_gained:0 "獲得資源"
 	darktec_contained_entropy_crisis_objective_reward:0 "$REWARD$"
-	darktec_contained_entropy_crisis_objective_progress:0 "この危機目標から£darktec_contained_entropy£ $AMOUNT$を獲得した。"
+	darktec_contained_entropy_crisis_objective_progress:0 "この危機目標から£darktec_contained_entropy£ $AMOUNT$を獲得した."
 
 	darktec_contained_entropy_crisis_level_locked:0 "このレベルのアンロックに必要なもの:"
-	darktec_contained_entropy_crisis_level_unlocked:0 "$LEVEL$では、特別なイベントと報酬が得られる:"
+	darktec_contained_entropy_crisis_level_unlocked:0 "$LEVEL$では,特別なイベントと報酬が得られる:"
 	darktec_contained_entropy_crisis_level_unlock:0 "£darktec_contained_entropy£ §Y$CURRENCY$§! $darktec_contained_entropy$を所持"
-	darktec_contained_entropy_crisis_level_desc:0 "危機レベルを進めるには、危機目標を達成し、状況ログにある危機関連特性を研究せよ。"
+	darktec_contained_entropy_crisis_level_desc:0 "危機レベルを進めるには,危機目標を達成し,状況ログにある危機関連特性を研究せよ."
 
 	darktec_contained_entropy_crisis_description_title:0 "ポストバリオン注入"
 	darktec_contained_entropy_crisis_description:0 "$menace_crisis_description_intro$"
 	darktec_contained_entropy_crisis_howto_title:0 "エントロピー凝結"
-	darktec_contained_entropy_crisis_howto:0 "§H危機目標§!を追求し、§H$building_darktec_anchor_1_plural$§!の建設といった§E暗影§!技術を利用することで、§H$darktec_contained_entropy_with_icon$§!が生成され、我が帝国の技術的、経済的、そして存在論的な力を解き放つ。我々は、獲得したエントロピーを形作れる形態へと§H凝結§!させ、それによって現実を我々の望む形に作り変えることができるようになるまで、収穫し、成長させ、より多く、より多く、そしてさらに多くを創造する必要がある。"
+	darktec_contained_entropy_crisis_howto:0 "§H危機目標§!を追求し,§H$building_darktec_anchor_1_plural$§!の建設といった§E暗影§!技術を利用することで,§H$darktec_contained_entropy_with_icon$§!が生成され,我が帝国の技術的,経済的,そして存在論的な力を解き放つ.我々は,獲得したエントロピーを形作れる形態へと§H凝結§!させ,それによって現実を我々の望む形に作り変えることができるようになるまで,収穫し,成長させ,より多く,より多く,そしてさらに多くを創造する必要がある."
 
 	# Perks
 	# T1
 	menp_darktec_anchor_t1:0 "虚空抽出"
-	menp_darktec_anchor_t1_desc:0 "我々の空間に漂う潜在的な暗黒エネルギーを除去し、使用可能な資源へと再変換することは、我々の目的を前進させるだろう。"
-	menp_darktec_anchor_t1_tooltip:0 "「私たちの区域に ['building:building_darktec_anchor_1', £building£ $building_darktec_anchor_1_plural$] を建設できるようになり、これは §Y$darktec_contained_entropy_with_icon$§! を生成するために使用されます。」"
+	menp_darktec_anchor_t1_desc:0 "我々の空間に漂う潜在的な暗黒エネルギーを除去し,使用可能な資源へと再変換することは,我々の目的を前進させるだろう."
+	menp_darktec_anchor_t1_tooltip:0 "「私たちの区域に ['building:building_darktec_anchor_1', £building£ $building_darktec_anchor_1_plural$] を建設できるようになり,これは §Y$darktec_contained_entropy_with_icon$§! を生成するために使用されます.」"
 
 	menp_darktec_entropy_t1:0 "「深淵なる研究」"
-	menp_darktec_entropy_t1_desc:0 "「背景放射線とエントロピーエネルギーの研究は、非バリオン物質の適切な取り扱いにおいて、我々に優位をもたらすだろう。」"
-	menp_darktec_entropy_t1_tooltip:0 "「危機目標を通じて §Y$darktec_contained_entropy_with_icon$§! を獲得できるようになりました。」"
+	menp_darktec_entropy_t1_desc:0 "「背景放射線とエントロピーエネルギーの研究は,非バリオン物質の適切な取り扱いにおいて,我々に優位をもたらすだろう.」"
+	menp_darktec_entropy_t1_tooltip:0 "「危機目標を通じて §Y$darktec_contained_entropy_with_icon$§! を獲得できるようになりました.」"
 
 	menp_darktec_darkmatter_t1:0 "「反エネルギー封じ込め」"
-	menp_darktec_darkmatter_t1_desc:0 "「唯一の論理的帰結は、エントロピーの削減であり、その過程でそれを搾取することだ。」"
-	menp_darktec_darkmatter_t1_tooltip:0 "「['building:building_darktec_storage_1', £building£ $building_darktec_storage_1_plural$] の建設を可能にします。これは貯蔵された §Y$darktec_contained_entropy_with_icon$§! の量に基づいて §Y£sr_dark_matter£ ダークマター§! を生成します。」"
+	menp_darktec_darkmatter_t1_desc:0 "「唯一の論理的帰結は,エントロピーの削減であり,その過程でそれを搾取することだ.」"
+	menp_darktec_darkmatter_t1_tooltip:0 "「['building:building_darktec_storage_1', £building£ $building_darktec_storage_1_plural$] の建設を可能にします.これは貯蔵された §Y$darktec_contained_entropy_with_icon$§! の量に基づいて §Y£sr_dark_matter£ ダークマター§! を生成します.」"
 
 	# T2
 	menp_darktec_anchor_t2:0 "「虚空収穫」"
-	menp_darktec_anchor_t2_desc:0 "「さらなるアンカーを建設しなければならない。可能な限りの背景エネルギーとダークエネルギーを吸い上げ、我々の目標へと転用する必要がある。」"
-	menp_darktec_anchor_t2_tooltip:0 "「['building:building_darktec_anchor_1', £building£ $building_darktec_anchor_1_plural$] を ['building:building_darktec_anchor_2', £building£ $building_darktec_anchor_2_plural$] にアップグレードできるようになりました。」"
+	menp_darktec_anchor_t2_desc:0 "「さらなるアンカーを建設しなければならない.可能な限りの背景エネルギーとダークエネルギーを吸い上げ,我々の目標へと転用する必要がある.」"
+	menp_darktec_anchor_t2_tooltip:0 "「['building:building_darktec_anchor_1', £building£ $building_darktec_anchor_1_plural$] を ['building:building_darktec_anchor_2', £building£ $building_darktec_anchor_2_plural$] にアップグレードできるようになりました.」"
 
 	menp_darktec_entropy_t2:0 "「異種再結合」"
-	menp_darktec_entropy_t2_desc:0 "「非バリオン物質とバリオン物質の結合は複雑な問題であり、生命体においてはなおさらである。しかし、その努力には真の価値がある。」"
+	menp_darktec_entropy_t2_desc:0 "「非バリオン物質とバリオン物質の結合は複雑な問題であり,生命体においてはなおさらである.しかし,その努力には真の価値がある.」"
 	menp_darktec_entropy_t2_tooltip:0 "[darktec_loc_menp_darktec_entropy_t2_tooltip]"
-	menp_darktec_entropy_t2_tooltip_normal:0 "「特別な特性で種族を強化できる ['technology:tech_darktec_traits_t1'] の研究を可能にします。\n」"
-	menp_darktec_entropy_t2_tooltip_early:0 "「特別な特性で種族を強化できる ['technology:tech_darktec_traits_t1'] の研究を可能にします。\n\n§G$situation_darktec_intro_approach_applications$§! の改善に注力した我々の努力は、このボーナスをもたらしました：\n\n$MOD_COUNTRY_MODIFY_SPECIES_COST_MULT$: §G-10%§!」"
+	menp_darktec_entropy_t2_tooltip_normal:0 "「特別な特性で種族を強化できる ['technology:tech_darktec_traits_t1'] の研究を可能にします.\n」"
+	menp_darktec_entropy_t2_tooltip_early:0 "「特別な特性で種族を強化できる ['technology:tech_darktec_traits_t1'] の研究を可能にします.\n\n§G$situation_darktec_intro_approach_applications$§! の改善に注力した我々の努力は,このボーナスをもたらしました:\n\n$MOD_COUNTRY_MODIFY_SPECIES_COST_MULT$: §G-10%§!」"
 
 	menp_darktec_darkmatter_t2:0 "「真空リサイクル」"
-	menp_darktec_darkmatter_t2_desc:0 "「いかなる資源も無駄にしてはならない。検知できないものでさえも――効率の最大化は必須である。」"
+	menp_darktec_darkmatter_t2_desc:0 "「いかなる資源も無駄にしてはならない.検知できないものでさえも――効率の最大化は必須である.」"
 	menp_darktec_darkmatter_t2_tooltip:0 "[darktec_loc_menp_darktec_darkmatter_t2_tooltip]"
-	menp_darktec_darkmatter_t2_tooltip_normal:0 "['building:building_darktec_storage_1', £building£ $building_darktec_storage_1_plural$] を ['building:building_darktec_storage_2', £building£ $building_darktec_storage_2_plural$] にアップグレードできるようになりました。\n\nこれで §Y冥界の建造物技術§! にアクセスできるようになります。"
-	menp_darktec_darkmatter_t2_tooltip_early:0 "['building:building_darktec_storage_1', £building£ $building_darktec_storage_1_plural$] を ['building:building_darktec_storage_2', £building£ $building_darktec_storage_2_plural$] にアップグレードできるようになりました。\n\nこれで §Y冥界の建造物技術§! にアクセスできるようになります。\n\n§Y$situation_darktec_intro_approach_economy$§! の改善に注力した我々の努力は、このボーナスをもたらしました：\n\n$MOD_PLANET_BUILDING_COST_MULT$: §G-5%§!"
+	menp_darktec_darkmatter_t2_tooltip_normal:0 "['building:building_darktec_storage_1', £building£ $building_darktec_storage_1_plural$] を ['building:building_darktec_storage_2', £building£ $building_darktec_storage_2_plural$] にアップグレードできるようになりました.\n\nこれで §Y冥界の建造物技術§! にアクセスできるようになります."
+	menp_darktec_darkmatter_t2_tooltip_early:0 "['building:building_darktec_storage_1', £building£ $building_darktec_storage_1_plural$] を ['building:building_darktec_storage_2', £building£ $building_darktec_storage_2_plural$] にアップグレードできるようになりました.\n\nこれで §Y冥界の建造物技術§! にアクセスできるようになります.\n\n§Y$situation_darktec_intro_approach_economy$§! の改善に注力した我々の努力は,このボーナスをもたらしました:\n\n$MOD_PLANET_BUILDING_COST_MULT$: §G-5%§!"
 
 	menp_darktec_umbralships_t2:0 "「冥界の帳の裏側」"
-	menp_darktec_umbralships_t2_desc:0 "「リサイクルされたエントロピー注入素材の創造は、有形と無形の現実の両方に溶け込むかのような設計を生み出すことを可能にする。」"
+	menp_darktec_umbralships_t2_desc:0 "「リサイクルされたエントロピー注入素材の創造は,有形と無形の現実の両方に溶け込むかのような設計を生み出すことを可能にする.」"
 	menp_darktec_umbralships_t2_tooltip:0 "[darktec_loc_menp_darktec_umbralships_t2_tooltip]"
 
-	menp_darktec_umbralships_t2_tooltip_mechanical:0 "「§Y冥界艦§! の第一段階の技術を解禁します - ['technology:tech_darktec_crisis_destroyer']。」"
-	menp_darktec_umbralships_t2_tooltip_mechanical_early:0 "「§Y冥界艦§! の第一段階の技術を解禁します - ['technology:tech_darktec_crisis_destroyer']。\n\n§Y$situation_darktec_intro_approach_warfare$§! の改善に注力した我々の努力は、このボーナスをもたらしました：\n\n$MOD_SHIP_SPEED_MULT$: §G+5%§!」"
-	menp_darktec_umbralships_t2_tooltip_bioships:0 "「§Y冥界艦§! の第一段階の技術を解禁します - ['technology:tech_darktec_crisis_mauler']。」"
-	menp_darktec_umbralships_t2_tooltip_bioships_early:0 "「§Y冥界艦§! の第一段階の技術を解禁します - ['technology:tech_darktec_crisis_mauler']。\n\n§Y$situation_darktec_intro_approach_warfare$§! の改善に注力した我々の努力は、このボーナスをもたらしました：\n\n$MOD_SHIP_SPEED_MULT$: §G+5%§!」"
+	menp_darktec_umbralships_t2_tooltip_mechanical:0 "「§Y冥界艦§! の第一段階の技術を解禁します - ['technology:tech_darktec_crisis_destroyer'].」"
+	menp_darktec_umbralships_t2_tooltip_mechanical_early:0 "「§Y冥界艦§! の第一段階の技術を解禁します - ['technology:tech_darktec_crisis_destroyer'].\n\n§Y$situation_darktec_intro_approach_warfare$§! の改善に注力した我々の努力は,このボーナスをもたらしました:\n\n$MOD_SHIP_SPEED_MULT$: §G+5%§!」"
+	menp_darktec_umbralships_t2_tooltip_bioships:0 "「§Y冥界艦§! の第一段階の技術を解禁します - ['technology:tech_darktec_crisis_mauler'].」"
+	menp_darktec_umbralships_t2_tooltip_bioships_early:0 "「§Y冥界艦§! の第一段階の技術を解禁します - ['technology:tech_darktec_crisis_mauler'].\n\n§Y$situation_darktec_intro_approach_warfare$§! の改善に注力した我々の努力は,このボーナスをもたらしました:\n\n$MOD_SHIP_SPEED_MULT$: §G+5%§!」"
 
 	darktec_modifier_menp_early_applications:0 "$menp_darktec_entropy_t2$"
 	darktec_modifier_menp_early_applications_desc:0 "$menp_darktec_entropy_t2_desc$"
@@ -128,18 +128,18 @@ l_japanese:
 
 	# T3
 	menp_darktec_anchor_t3:0 "「虚空共鳴連鎖」"
-	menp_darktec_anchor_t3_desc:0 "「抽出器を安定化させた後、破滅的な連鎖反応を引き起こすことなく、宇宙の虚空そのものからエントロピー抽出の実験ができるようになりました。」"
-	menp_darktec_anchor_t3_tooltip:0 "['building:building_darktec_anchor_2', £building£ $building_darktec_anchor_2_plural$] を ['building:building_darktec_anchor_3', £building£ $building_darktec_anchor_3_plural$] にアップグレードできるようになりました。\n\n['building:building_darktec_anchor_3', £building£ $building_darktec_anchor_3_plural$] は、さらに適度な量の §Y£sr_dark_matter£ ダークマター§! も生産するようになります。"
+	menp_darktec_anchor_t3_desc:0 "「抽出器を安定化させた後,破滅的な連鎖反応を引き起こすことなく,宇宙の虚空そのものからエントロピー抽出の実験ができるようになりました.」"
+	menp_darktec_anchor_t3_tooltip:0 "['building:building_darktec_anchor_2', £building£ $building_darktec_anchor_2_plural$] を ['building:building_darktec_anchor_3', £building£ $building_darktec_anchor_3_plural$] にアップグレードできるようになりました.\n\n['building:building_darktec_anchor_3', £building£ $building_darktec_anchor_3_plural$] は,さらに適度な量の §Y£sr_dark_matter£ ダークマター§! も生産するようになります."
 
 	menp_darktec_entropy_t3:0 "「暗黒実験」"
-	menp_darktec_entropy_t3_desc:0 "「今や我々は、エントロピー的にリサイクルされた要素との親和性を最大限に高める方法についての理解、着想、思想を得た。それゆえ、我々の欲求、あるいは知識を満たす必要がある。」"
-	menp_darktec_entropy_t3_tooltip:0 "「種族に適用できる §Y強力な特性§! を提供する ['technology:tech_darktec_traits_t2'] の研究ができるようになりました。」"
+	menp_darktec_entropy_t3_desc:0 "「今や我々は,エントロピー的にリサイクルされた要素との親和性を最大限に高める方法についての理解,着想,思想を得た.それゆえ,我々の欲求,あるいは知識を満たす必要がある.」"
+	menp_darktec_entropy_t3_tooltip:0 "「種族に適用できる §Y強力な特性§! を提供する ['technology:tech_darktec_traits_t2'] の研究ができるようになりました.」"
 
 	menp_darktec_darkmatter_t3:0 "「制御された真空崩壊」"
-	menp_darktec_darkmatter_t3_desc:0 "「制御された真空崩壊の小さなポケットを生成することで、現実の完全な崩壊なしに、膨大な量の非バリオン物質とエネルギーをどのように操作し、再ルーティングするかを大いに理解することができる。」"
+	menp_darktec_darkmatter_t3_desc:0 "「制御された真空崩壊の小さなポケットを生成することで,現実の完全な崩壊なしに,膨大な量の非バリオン物質とエネルギーをどのように操作し,再ルーティングするかを大いに理解することができる.」"
 	menp_darktec_darkmatter_t3_tooltip:0 "[darktec_loc_menp_darktec_darkmatter_t3_tooltip]"
-	menp_darktec_darkmatter_t3_tooltip_mechanical:0 "§Y冥界艦§! の第二段階の技術を解禁します - ['technology:tech_darktec_crisis_cruiser']。\n\n冥界艦は特殊な §Yオーラコンポーネント§! を層 §Y2§! にアップグレードできます。\n\n追加の §Y強力な艦船コンポーネント§! が研究オプションとして出現するようになりました。"
-	menp_darktec_darkmatter_t3_tooltip_bioships:0 "§Y冥界艦§! の第二段階の技術を解禁します - ['technology:tech_darktec_crisis_weaver']。\n\n冥界艦は特殊な §Yオーラコンポーネント§! を層 §Y2§! にアップグレードできます。\n\n追加の §Y強力な艦船コンポーネント§! が研究オプションとして出現するようになりました。"
+	menp_darktec_darkmatter_t3_tooltip_mechanical:0 "§Y冥界艦§! の第二段階の技術を解禁します - ['technology:tech_darktec_crisis_cruiser'].\n\n冥界艦は特殊な §Yオーラコンポーネント§! を層 §Y2§! にアップグレードできます.\n\n追加の §Y強力な艦船コンポーネント§! が研究オプションとして出現するようになりました."
+	menp_darktec_darkmatter_t3_tooltip_bioships:0 "§Y冥界艦§! の第二段階の技術を解禁します - ['technology:tech_darktec_crisis_weaver'].\n\n冥界艦は特殊な §Yオーラコンポーネント§! を層 §Y2§! にアップグレードできます.\n\n追加の §Y強力な艦船コンポーネント§! が研究オプションとして出現するようになりました."
 
 	# T4
 	menp_darktec_anchor_t4:0 "虚空の収穫"
@@ -152,8 +152,8 @@ l_japanese:
 	menp_darktec_anchor_t4_unknown_tooltip:0 "????"
 
 	menp_darktec_anchor_t4_known:0 "虚空の収穫"
-	menp_darktec_anchor_t4_known_desc:0 "収穫は決して十分ではない。消費もまた決して十分ではない。"
-	menp_darktec_anchor_t4_known_tooltip:0 "['building:building_darktec_anchor_3', £building£ $building_darktec_anchor_3_plural$]は、入植地における他の§Y£building£冥界の建造物§!の効果を強化するようになる。\nこの効果はアンカーのアップグレードレベルに応じてスケールする。"
+	menp_darktec_anchor_t4_known_desc:0 "収穫は決して十分ではない.消費もまた決して十分ではない."
+	menp_darktec_anchor_t4_known_tooltip:0 "['building:building_darktec_anchor_3', £building£ $building_darktec_anchor_3_plural$]は,入植地における他の§Y£building£冥界の建造物§!の効果を強化するようになる.\nこの効果はアンカーのアップグレードレベルに応じてスケールする."
 
 	menp_darktec_entropy_t4:0 "深淵との一体化"
 	menp_darktec_entropy_t4_desc:0 "[darktec_loc_menp_darktec_entropy_t4_desc]"
@@ -164,12 +164,12 @@ l_japanese:
 	menp_darktec_entropy_t4_unknown_tooltip:0 "???"
 
 	menp_darktec_entropy_t4_transformed:0 "隠れた安定化"
-	menp_darktec_entropy_t4_transformed_desc:0 "我々の新たな形態は…興味深い。我々はより少なく、より多く、そして他者をもそうさせるのだ。"
-	menp_darktec_entropy_t4_transformed_tooltip:0 "['building:building_darktec_umbral_portal_1', £building£ $building_darktec_umbral_portal_1_plural$]は、惑星の£job£産出量も増加させる。\n\nこの建造物は、ポップの§Y同化§!を§Eエントロフィリアル§!へと受動的に可能にする。"
+	menp_darktec_entropy_t4_transformed_desc:0 "我々の新たな形態は...興味深い.我々はより少なく,より多く,そして他者をもそうさせるのだ."
+	menp_darktec_entropy_t4_transformed_tooltip:0 "['building:building_darktec_umbral_portal_1', £building£ $building_darktec_umbral_portal_1_plural$]は,惑星の£job£産出量も増加させる.\n\nこの建造物は,ポップの§Y同化§!を§Eエントロフィリアル§!へと受動的に可能にする."
 
 	menp_darktec_entropy_t4_tainted:0 "統合された闇"
-	menp_darktec_entropy_t4_tainted_desc:0 "我々の生命過程におけるダークマターの反応性効果は、この長きにわたる期間で成功を収めた。故に、我々はさらなる実験を行う用意がある。さらに。さらに。さらに。"
-	menp_darktec_entropy_t4_tainted_tooltip:0 "基本的および上級の§Y冥界の特性§!は、追加の生産能力を持つようになる。"
+	menp_darktec_entropy_t4_tainted_desc:0 "我々の生命過程におけるダークマターの反応性効果は,この長きにわたる期間で成功を収めた.故に,我々はさらなる実験を行う用意がある.さらに.さらに.さらに."
+	menp_darktec_entropy_t4_tainted_tooltip:0 "基本的および上級の§Y冥界の特性§!は,追加の生産能力を持つようになる."
 
 	menp_darktec_darkmatter_t4:0 "エントロピー調和"
 	menp_darktec_darkmatter_t4_desc:0 "[darktec_loc_menp_darktec_darkmatter_t4_desc]"
@@ -180,13 +180,13 @@ l_japanese:
 	menp_darktec_darkmatter_t4_unknown_tooltip:0 "???"
 
 	menp_darktec_darkmatter_t4_transformed:0 "エントロピー汚染"
-	menp_darktec_darkmatter_t4_transformed_desc:0 "我々の新たな存在は、潜在的な本質、すなわち神の血を帯び、手の届くあらゆるものを転覆させる術となる。"
-	menp_darktec_darkmatter_t4_transformed_tooltip:0 "我々は今や['building:building_darktec_storage_2', £building£ $building_darktec_storage_2_plural$]を['building:building_darktec_storage_3', £building£ $building_darktec_storage_3_plural$]へアップグレードできる。"
+	menp_darktec_darkmatter_t4_transformed_desc:0 "我々の新たな存在は,潜在的な本質,すなわち神の血を帯び,手の届くあらゆるものを転覆させる術となる."
+	menp_darktec_darkmatter_t4_transformed_tooltip:0 "我々は今や['building:building_darktec_storage_2', £building£ $building_darktec_storage_2_plural$]を['building:building_darktec_storage_3', £building£ $building_darktec_storage_3_plural$]へアップグレードできる."
 
 	menp_darktec_darkmatter_t4_tainted:0 "エントロピーの再配分"
-	menp_darktec_darkmatter_t4_tainted_desc_old:0 "いくつかの「封じられたエントロピー」を我々の生産分野の一つに再配分することで、その収量を信じられないほど増大させることができる。"
-	menp_darktec_darkmatter_t4_tainted_desc:0 "我々の種の並行する特質をさらに強化するために適用されたエントロピーの力は、より多くの応用、そしてより多くの力のための余地を残す。"
-	menp_darktec_darkmatter_t4_tainted_tooltip:0 "我々は今や['building:building_darktec_storage_2', £building£ $building_darktec_storage_2_plural$]を['building:building_darktec_storage_3', £building£ $building_darktec_storage_3_plural$]へアップグレードできる。\n\n我々は今や['technology:tech_darktec_traits_ascension']を研究できる。これは、選択されたアセンションパスに基づいて、我々の帝国に強力な特性を提供するだろう。"
+	menp_darktec_darkmatter_t4_tainted_desc_old:0 "いくつかの「封じられたエントロピー」を我々の生産分野の一つに再配分することで,その収量を信じられないほど増大させることができる."
+	menp_darktec_darkmatter_t4_tainted_desc:0 "我々の種の並行する特質をさらに強化するために適用されたエントロピーの力は,より多くの応用,そしてより多くの力のための余地を残す."
+	menp_darktec_darkmatter_t4_tainted_tooltip:0 "我々は今や['building:building_darktec_storage_2', £building£ $building_darktec_storage_2_plural$]を['building:building_darktec_storage_3', £building£ $building_darktec_storage_3_plural$]へアップグレードできる.\n\n我々は今や['technology:tech_darktec_traits_ascension']を研究できる.これは,選択されたアセンションパスに基づいて,我々の帝国に強力な特性を提供するだろう."
 
 	menp_darktec_umbralships_t4:0 "相物質船"
 	menp_darktec_umbralships_t4_desc:0 "[darktec_loc_menp_darktec_umbralships_t4_desc]"
@@ -197,9 +197,9 @@ l_japanese:
 	menp_darktec_umbralships_t4_unknown_tooltip:0 "???"
 
 	menp_darktec_umbralships_t4_known:0 "相物質船"
-	menp_darktec_umbralships_t4_known_desc:0 "現実そのものが我々の艦船のために歪められ、同時に存在と非存在を許し、異なる状態から別の状態へと跳躍することで、我々に絶大な優位性をもたらす。"
-	menp_darktec_umbralships_t4_known_tooltip:0 "§Y影の艦船§!の最終段階の技術をアンロックする - ['technology:tech_darktec_crisis_battleship']。\n\n影の艦船の特殊な§Yオーラコンポーネント§!を§Yティア3§!にアップグレードできるようになる。"
-	menp_darktec_umbralships_t4_known_tooltip_bioships:0 "§Y影の艦船§!の最終段階の技術をアンロックする - ['technology:tech_darktec_crisis_stinger']。\n\n影の艦船の特殊な§Yオーラコンポーネント§!を§Yティア3§!にアップグレードできるようになる。"
+	menp_darktec_umbralships_t4_known_desc:0 "現実そのものが我々の艦船のために歪められ,同時に存在と非存在を許し,異なる状態から別の状態へと跳躍することで,我々に絶大な優位性をもたらす."
+	menp_darktec_umbralships_t4_known_tooltip:0 "§Y影の艦船§!の最終段階の技術をアンロックする - ['technology:tech_darktec_crisis_battleship'].\n\n影の艦船の特殊な§Yオーラコンポーネント§!を§Yティア3§!にアップグレードできるようになる."
+	menp_darktec_umbralships_t4_known_tooltip_bioships:0 "§Y影の艦船§!の最終段階の技術をアンロックする - ['technology:tech_darktec_crisis_stinger'].\n\n影の艦船の特殊な§Yオーラコンポーネント§!を§Yティア3§!にアップグレードできるようになる."
 
 	# T5
 	menp_darktec_anchor_t5:0 "虚無の裂け目"
@@ -211,8 +211,8 @@ l_japanese:
 	menp_darktec_anchor_t5_unknown_tooltip:0 "?????"
 
 	menp_darktec_anchor_t5_known:0 "虚無の裂け目"
-	menp_darktec_anchor_t5_known_desc:0 "真空の非本質そのものを抽出することは必須である。"
-	menp_darktec_anchor_t5_known_tooltip:0 "['building:building_darktec_anchor_3', £building£ $building_darktec_anchor_3_plural$]を['building:building_darktec_anchor_4', £building£ $building_darktec_anchor_4_plural$]にアップグレードできるようになる。\n\n£building£ $building_darktec_anchor_4_plural$（およびその前段階のアップグレード）は、帝国内の§Y全ての§!影の建造物の有効性を向上させる。"
+	menp_darktec_anchor_t5_known_desc:0 "真空の非本質そのものを抽出することは必須である."
+	menp_darktec_anchor_t5_known_tooltip:0 "['building:building_darktec_anchor_3', £building£ $building_darktec_anchor_3_plural$]を['building:building_darktec_anchor_4', £building£ $building_darktec_anchor_4_plural$]にアップグレードできるようになる.\n\n£building£ $building_darktec_anchor_4_plural$(およびその前段階のアップグレード)は,帝国内の§Y全ての§!影の建造物の有効性を向上させる."
 
 	menp_darktec_entropy_t5:0 "最終的異常"
 	menp_darktec_entropy_t5_desc:0 "[darktec_loc_menp_darktec_entropy_t5_desc]"
@@ -223,8 +223,8 @@ l_japanese:
 	menp_darktec_entropy_t5_unknown_tooltip:0 "?????"
 
 	menp_darktec_entropy_t5_known:0 "最終的異常"
-	menp_darktec_entropy_t5_known_desc:0 "これまでは単なる理論に過ぎなかったが、我々は獲得したエントロピー全てを時空の単一点に集約できることを確信している。"
-	menp_darktec_entropy_t5_known_tooltip:0 "特殊な巨大建造物を§Y建造§!できるようになる:\n§Y合体した異常§!\n\n§Hこの巨大建造物を建設し、アップグレードすることで、我々の目標を達成するだろう。§!"
+	menp_darktec_entropy_t5_known_desc:0 "これまでは単なる理論に過ぎなかったが,我々は獲得したエントロピー全てを時空の単一点に集約できることを確信している."
+	menp_darktec_entropy_t5_known_tooltip:0 "特殊な巨大建造物を§Y建造§!できるようになる:\n§Y合体した異常§!\n\n§Hこの巨大建造物を建設し,アップグレードすることで,我々の目標を達成するだろう.§!"
 
 	menp_darktec_darkmatter_t5:0 "現実淘汰"
 	menp_darktec_darkmatter_t5_desc:0 "[darktec_loc_menp_darktec_darkmatter_t5_desc]"
@@ -235,8 +235,8 @@ l_japanese:
 	menp_darktec_darkmatter_t5_unknown_tooltip:0 "?????"
 
 	menp_darktec_darkmatter_t5_known:0 "現実淘汰"
-	menp_darktec_darkmatter_t5_known_desc:0 "存在する、あるいは存在しないもの全ては、我々の意志に従って再構築され、歪められなければならない。"
-	menp_darktec_darkmatter_t5_known_tooltip:0 "我が艦隊の§Y$bombardment_darktec_bombardment_entropy$§!スタンスをアンロックする。\nこの爆撃タイプで破壊された惑星は、我々の目標達成のために追加資源をもたらす。\n\n['building:building_darktec_storage_3', £building£ $building_darktec_storage_3_plural$]を['building:building_darktec_storage_4', £building£ $building_darktec_storage_4_plural$]にアップグレードできるようになる。"
+	menp_darktec_darkmatter_t5_known_desc:0 "存在する,あるいは存在しないもの全ては,我々の意志に従って再構築され,歪められなければならない."
+	menp_darktec_darkmatter_t5_known_tooltip:0 "我が艦隊の§Y$bombardment_darktec_bombardment_entropy$§!スタンスをアンロックする.\nこの爆撃タイプで破壊された惑星は,我々の目標達成のために追加資源をもたらす.\n\n['building:building_darktec_storage_3', £building£ $building_darktec_storage_3_plural$]を['building:building_darktec_storage_4', £building£ $building_darktec_storage_4_plural$]にアップグレードできるようになる."
 
 	menp_darktec_umbralships_t5:0 "多次元侵攻"
 	menp_darktec_umbralships_t5_desc:0 "[darktec_loc_menp_darktec_umbralships_t5_desc]"
@@ -247,42 +247,42 @@ l_japanese:
 	menp_darktec_umbralships_t5_unknown_tooltip:0 "?????"
 
 	menp_darktec_umbralships_t5_known:0 "多次元侵攻"
-	menp_darktec_umbralships_t5_known_desc:0 "彼らは手遅れになるまで何が来るのか分からないだろう、他の次元でさえも、他の現実でさえも。"
-	menp_darktec_umbralships_t5_known_tooltip:0 "強力な§Yエントロピー艦船汎用コンポーネント§!を研究できるようになり、強力な§Y艦隊行動§!が利用可能となる。"
+	menp_darktec_umbralships_t5_known_desc:0 "彼らは手遅れになるまで何が来るのか分からないだろう,他の次元でさえも,他の現実でさえも."
+	menp_darktec_umbralships_t5_known_tooltip:0 "強力な§Yエントロピー艦船汎用コンポーネント§!を研究できるようになり,強力な§Y艦隊行動§!が利用可能となる."
 
 # Crisis objectives
 	darktec_crisobj_monthly_extract_entropy_name:0 "エントロピー収穫"
-	darktec_crisobj_monthly_extract_entropy_desc:0 "宇宙の織り成す層の下には、膨張し、破壊し、死をもたらそうとするにつれて宇宙を引き裂く運命にある潜在的な力が横たわっている。その力は我々のものとなるだろう。"
+	darktec_crisobj_monthly_extract_entropy_desc:0 "宇宙の織り成す層の下には,膨張し,破壊し,死をもたらそうとするにつれて宇宙を引き裂く運命にある潜在的な力が横たわっている.その力は我々のものとなるだろう."
 
 	darktec_crisobj_immediate_research_physics_technologies_name:0 "テクノロジーを研究"
-	darktec_crisobj_immediate_research_physics_technologies_desc:0 "我々は宇宙が記されている複雑な方法を理解する必要がある。"
+	darktec_crisobj_immediate_research_physics_technologies_desc:0 "我々は宇宙が記されている複雑な方法を理解する必要がある."
 
 	darktec_crisobj_immediate_build_and_keep_umbral_buildings_name:0 "アンブラル建造物を建設またはアップグレード"
-	darktec_crisobj_immediate_build_and_keep_umbral_buildings_desc:0 "高くそびえ立ち、力を得た、エントロピーを保持し形成する建造物は、今や我らが帝国の基盤である。"
+	darktec_crisobj_immediate_build_and_keep_umbral_buildings_desc:0 "高くそびえ立ち,力を得た,エントロピーを保持し形成する建造物は,今や我らが帝国の基盤である."
 
 	darktec_crisobj_yearly_retain_vassals_name:0 "臣民を維持"
-	darktec_crisobj_yearly_retain_vassals_desc:0 "我々の大義に貢献する者たちは、我々の善意、そして最終的には我々の知識を受けるに値する。"
+	darktec_crisobj_yearly_retain_vassals_desc:0 "我々の大義に貢献する者たちは,我々の善意,そして最終的には我々の知識を受けるに値する."
 
 	darktec_crisobj_yearly_retain_megastructures_name:0 "巨大建造物を維持"
-	darktec_crisobj_yearly_retain_megastructures_desc:0 "宇宙の巨大建造物の壮大さは、観察する美しさだけでなく、既存の規範に逆らい、虚無を収穫する上で優位を得るもう一つの方法である。"
+	darktec_crisobj_yearly_retain_megastructures_desc:0 "宇宙の巨大建造物の壮大さは,観察する美しさだけでなく,既存の規範に逆らい,虚無を収穫する上で優位を得るもう一つの方法である."
 
 	darktec_crisobj_yearly_galcom_retain_galcom_respect_name:0 "銀河共同体の支持を確保"
-	darktec_crisobj_yearly_galcom_retain_galcom_respect_desc:0 "我々は、死んだ宇宙の冷たい抱擁による彼らの不必要な終焉を避けるため、我々の大義について他者を説得する必要がある。"
+	darktec_crisobj_yearly_galcom_retain_galcom_respect_desc:0 "我々は,死んだ宇宙の冷たい抱擁による彼らの不必要な終焉を避けるため,我々の大義について他者を説得する必要がある."
 
 	darktec_crisobj_immediate_conquer_worlds_name:0 "惑星を征服または収穫"
-	darktec_crisobj_immediate_conquer_worlds_desc:0 "我々に敵対する者に居場所はない。ゆえに、彼らをあらゆる居住可能な表面から追放せねばならない。"
+	darktec_crisobj_immediate_conquer_worlds_desc:0 "我々に敵対する者に居場所はない.ゆえに,彼らをあらゆる居住可能な表面から追放せねばならない."
 
 	darktec_crisobj_immediate_assimilate_pops_name:0 "POPを同化"
-	darktec_crisobj_immediate_assimilate_pops_desc:0 "全ての者は、我々になるか、虚無の一部になるか、いずれかで屈服しなければならない。"
+	darktec_crisobj_immediate_assimilate_pops_desc:0 "全ての者は,我々になるか,虚無の一部になるか,いずれかで屈服しなければならない."
 
 	darktec_crisobj_immediate_taint_world_name:0 "惑星を汚染"
-	darktec_crisobj_immediate_taint_world_desc:0 "広大なダークマターの場、エントロピー的闇の河が、我々が植民する惑星を洗い、両次元の結合のための完璧な触媒へと変える。"
+	darktec_crisobj_immediate_taint_world_desc:0 "広大なダークマターの場,エントロピー的闇の河が,我々が植民する惑星を洗い,両次元の結合のための完璧な触媒へと変える."
 
 	darktec_crisobj_immediate_build_umbral_ships_name:0 "アンブラル艦船を建造"
-	darktec_crisobj_immediate_build_umbral_ships_desc:0 "目に見えず、洗練され、ダークマターに満たされた、リサイクルされたエントロピーの力によって我々が創造した艦船こそが、我々の未来である。"
+	darktec_crisobj_immediate_build_umbral_ships_desc:0 "目に見えず,洗練され,ダークマターに満たされた,リサイクルされたエントロピーの力によって我々が創造した艦船こそが,我々の未来である."
 
 	darktec_crisobj_immediate_destroy_empires_name:0 "帝国を破壊"
-	darktec_crisobj_immediate_destroy_empires_desc:0 "長らく彼らは我々の道を阻んできた。今や、彼らは虚無に属する。"
+	darktec_crisobj_immediate_destroy_empires_desc:0 "長らく彼らは我々の道を阻んできた.今や,彼らは虚無に属する."
 # /
 
 # Crisis misc
@@ -295,38 +295,38 @@ l_japanese:
 	darktec_crisis_destroyer:0 "アンブラル・ブリガンド"
 	darktec_crisis_destroyer_plural:0 "$darktec_crisis_destroyer$s"
 	darktec_crisis_destroyer_cap:0 "$darktec_crisis_destroyer$"
-	darktec_crisis_destroyer_desc:0 "ブリガンドは非バリオン物質の破壊力を宇宙戦闘にもたらし、物質的な完全性をシールド性能と引き換えに、信じられないほどのダメージを与え、そらすことができる。"
-	darktec_crisis_destroyer_tooltip:0 "ブリガンドはアンブラル艦船の第一級であり、ポスト・バリオン帝国の主要な攻撃および防御ラインとして機能する。"
+	darktec_crisis_destroyer_desc:0 "ブリガンドは非バリオン物質の破壊力を宇宙戦闘にもたらし,物質的な完全性をシールド性能と引き換えに,信じられないほどのダメージを与え,そらすことができる."
+	darktec_crisis_destroyer_tooltip:0 "ブリガンドはアンブラル艦船の第一級であり,ポスト・バリオン帝国の主要な攻撃および防御ラインとして機能する."
 
 	darktec_crisis_cruiser:0 "アンブラル・マローダー"
 	darktec_crisis_cruiser_plural:0 "$darktec_crisis_cruiser$s"
 	darktec_crisis_cruiser_cap:0 "$darktec_crisis_cruiser$"
-	darktec_crisis_cruiser_desc:0 "マローダーは、その回復力とダメージポテンシャルがブリガンドを凌駕するため、第一線の攻撃および防御ラインとして機能する。その強力なシールドボーナスが放出するエネルギー場の密度によって、幽玄なシルエットが輝く。"
-	darktec_crisis_cruiser_tooltip:0 "マローダーはアンブラル艦船の第二級であり、多用途で耐久性がありながらも攻撃力の高い巡洋艦の役割を代替する。"
+	darktec_crisis_cruiser_desc:0 "マローダーは,その回復力とダメージポテンシャルがブリガンドを凌駕するため,第一線の攻撃および防御ラインとして機能する.その強力なシールドボーナスが放出するエネルギー場の密度によって,幽玄なシルエットが輝く."
+	darktec_crisis_cruiser_tooltip:0 "マローダーはアンブラル艦船の第二級であり,多用途で耐久性がありながらも攻撃力の高い巡洋艦の役割を代替する."
 
 	darktec_crisis_battleship:0 "アンブラル・インターローパー"
 	darktec_crisis_battleship_plural:0 "$darktec_crisis_battleship$s"
 	darktec_crisis_battleship_cap:0 "$darktec_crisis_battleship$"
-	darktec_crisis_battleship_desc:0 "ダークマターで過飽和になったこれらの強力な艦船は、アンブラル艦船の中で最高位に位置する。その破壊のプラットフォームは、最も強力な一撃さえも耐えうる敏捷性と計り知れない防御能力を維持する。"
-	darktec_crisis_battleship_tooltip:0 "インターローパーはアンブラル艦船の最高級であり、セクションの多様性と殺傷力を高めた改良型戦艦である。"
+	darktec_crisis_battleship_desc:0 "ダークマターで過飽和になったこれらの強力な艦船は,アンブラル艦船の中で最高位に位置する.その破壊のプラットフォームは,最も強力な一撃さえも耐えうる敏捷性と計り知れない防御能力を維持する."
+	darktec_crisis_battleship_tooltip:0 "インターローパーはアンブラル艦船の最高級であり,セクションの多様性と殺傷力を高めた改良型戦艦である."
 
 	darktec_crisis_mauler:0 "アンブラル・ストーカー"
 	darktec_crisis_mauler_plural:0 "$darktec_crisis_mauler$s"
 	darktec_crisis_mauler_cap:0 "$darktec_crisis_mauler$"
-	darktec_crisis_mauler_desc:0 "闇に覆われたこの有機的な艦船は、シールドの増加によってシルエットが変化しながら、獲物を求めて虚無を横断する。"
-	darktec_crisis_mauler_tooltip:0 "ストーカーはアンブラル艦船の初期ティアであり、追加の殺傷力を備えた改良型マウラーである。"
+	darktec_crisis_mauler_desc:0 "闇に覆われたこの有機的な艦船は,シールドの増加によってシルエットが変化しながら,獲物を求めて虚無を横断する."
+	darktec_crisis_mauler_tooltip:0 "ストーカーはアンブラル艦船の初期ティアであり,追加の殺傷力を備えた改良型マウラーである."
 
 	darktec_crisis_weaver:0 "アンブラル・プラウラー"
 	darktec_crisis_weaver_plural:0 "$darktec_crisis_weaver$s"
 	darktec_crisis_weaver_cap:0 "$darktec_crisis_weaver$"
-	darktec_crisis_weaver_desc:0 "遠距離からの攻撃および支援において致命的となるプラウラーは、その膨大な多目的能力を駆使し、戦場を死の合唱へと高める。"
-	darktec_crisis_weaver_tooltip:0 "プラウラーはアンブラル艦艇の中間ティアとして機能し、ウィーバーの役割を模倣しつつ、セクションの種類が豊富になっている。"
+	darktec_crisis_weaver_desc:0 "遠距離からの攻撃および支援において致命的となるプラウラーは,その膨大な多目的能力を駆使し,戦場を死の合唱へと高める."
+	darktec_crisis_weaver_tooltip:0 "プラウラーはアンブラル艦艇の中間ティアとして機能し,ウィーバーの役割を模倣しつつ,セクションの種類が豊富になっている."
 
 	darktec_crisis_stinger:0 "アンブラル・リーヴァー"
 	darktec_crisis_stinger_plural:0 "$darktec_crisis_stinger$s"
 	darktec_crisis_stinger_cap:0 "$darktec_crisis_stinger$"
-	darktec_crisis_stinger_desc:0 "エントロピーと共に調整され成長したこの巨大な有機体は、恐るべき光景を呈しながら宇宙を航行するアンブラル艦艇の頂点に君臨し、最も強力な一撃さえも耐えうる敏捷性と絶大な防御能力を兼ね備えた、破壊のプラットフォームである。"
-	darktec_crisis_stinger_tooltip:0 "リーヴァーはアンブラル艦艇の頂点であり、スティンガーを改良し、豊富なセクションバリエーションを持つ。"
+	darktec_crisis_stinger_desc:0 "エントロピーと共に調整され成長したこの巨大な有機体は,恐るべき光景を呈しながら宇宙を航行するアンブラル艦艇の頂点に君臨し,最も強力な一撃さえも耐えうる敏捷性と絶大な防御能力を兼ね備えた,破壊のプラットフォームである."
+	darktec_crisis_stinger_tooltip:0 "リーヴァーはアンブラル艦艇の頂点であり,スティンガーを改良し,豊富なセクションバリエーションを持つ."
 
 
 	DARKTEC_CRISIS_DESTROYER_BRAWLER:0 "ブローラー・ブリガンド"
@@ -358,8 +358,8 @@ l_japanese:
 	DARKTEC_CRISIS_STINGER_PICKET:0 "ピケット・リーヴァー"
 
 	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T1:0 "アンブラル・デコイ I"
-	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T1_DESC:0 "このアンブラル艦艇は特殊な装置を用い、背景放射を利用して自身の信号を隠蔽し、自身の排出物を虚空へと転向させる。"
-	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T1_TOOLTIP:0 "艦隊アクションとして§Gクローキング§!の使用を許可する。"
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T1_DESC:0 "このアンブラル艦艇は特殊な装置を用い,背景放射を利用して自身の信号を隠蔽し,自身の排出物を虚空へと転向させる."
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T1_TOOLTIP:0 "艦隊アクションとして§Gクローキング§!の使用を許可する."
 	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T2:0 "アンブラル・デコイ II"
 	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T2_DESC:0 "$DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T1_DESC$"
 	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T2_TOOLTIP:0 "$DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T1_TOOLTIP$"
@@ -367,7 +367,7 @@ l_japanese:
 	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T3_DESC:0 "$DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T1_DESC$"
 	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T3_TOOLTIP:0 "$DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_CLOAKING_T1_TOOLTIP$"
 	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T1:0 "アンブラル・ブラーラー I"
-	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T1_DESC:0 "ミニ局所位相跳躍を用いることで、この船はシグネチャを「ぼかし」、敵のターゲティングを極めて困難にする。"
+	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T1_DESC:0 "ミニ局所位相跳躍を用いることで,この船はシグネチャを「ぼかし」,敵のターゲティングを極めて困難にする."
 	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T1_TOOLTIP:0 ""
 	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T2:0 "アンブラル・ブラーラー II"
 	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T2_DESC:0 "$DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T1_DESC$"
@@ -377,7 +377,7 @@ l_japanese:
 	DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T3_TOOLTIP:0 "$DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T1_TOOLTIP$"
 
 	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T1:0 "アンブラル・カモフラージュ I"
-	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T1_DESC:0 "このアンブラル生物は特殊な装置を用い、背景放射を利用して自身の信号を隠蔽し、自身の排出物を虚空へと転向させる。"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T1_DESC:0 "このアンブラル生物は特殊な装置を用い,背景放射を利用して自身の信号を隠蔽し,自身の排出物を虚空へと転向させる."
 	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T1_TOOLTIP:0 ""
 	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T2:0 "影の迷彩 II"
 	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T2_DESC:0 "$DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T1_DESC$"
@@ -386,7 +386,7 @@ l_japanese:
 	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T3_DESC:0 "$DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T1_DESC$"
 	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T3_TOOLTIP:0 "$DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_CLOAKING_T1_TOOLTIP$"
 	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_EVASION_T1:0 "影の覆い手 I"
-	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_EVASION_T1_DESC:0 "ミニ局所位相跳躍を用いることで、この船はシグネチャを「ぼかし」、敵のターゲティングを極めて困難にする。"
+	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_EVASION_T1_DESC:0 "ミニ局所位相跳躍を用いることで,この船はシグネチャを「ぼかし」,敵のターゲティングを極めて困難にする."
 	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_EVASION_T1_TOOLTIP:0 "$DARKTEC_SHIP_AURA_UMBRAL_MECHANICAL_EVASION_T1_TOOLTIP$"
 	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_EVASION_T2:0 "影の覆い手 II"
 	DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_EVASION_T2_DESC:0 "$DARKTEC_SHIP_AURA_UMBRAL_ORGANIC_EVASION_T1_DESC$"
@@ -397,33 +397,33 @@ l_japanese:
 
 	# Tech mechanical
 	tech_darktec_crisis_destroyer:0 "$darktec_crisis_destroyer$"
-	tech_darktec_crisis_destroyer_desc:0 "技術の驚異。この船は主に準物質で構成されており、虚空を航行する際に位相状態を切り替えることができる。また、その一部を目的の標的に投射することも可能だ。"
+	tech_darktec_crisis_destroyer_desc:0 "技術の驚異.この船は主に準物質で構成されており,虚空を航行する際に位相状態を切り替えることができる.また,その一部を目的の標的に投射することも可能だ."
 	tech_darktec_crisis_destroyer_unlocks_title:0 "§H艦種をアンロック:§! $darktec_crisis_destroyer$"
 	tech_darktec_crisis_destroyer_unlocks_desc:0 "§H$darktec_crisis_destroyer$§!"
 
 	tech_darktec_crisis_cruiser:0 "$darktec_crisis_cruiser$"
-	tech_darktec_crisis_cruiser_desc:0 "既存の設計図を改良することで、この船は異様なまでに増幅されたエントロピー組成により、設計された同型艦と比較して、信じられないほどのダメージに耐え、与えることができる。"
+	tech_darktec_crisis_cruiser_desc:0 "既存の設計図を改良することで,この船は異様なまでに増幅されたエントロピー組成により,設計された同型艦と比較して,信じられないほどのダメージに耐え,与えることができる."
 	tech_darktec_crisis_cruiser_unlocks_title:0 "§H艦種をアンロック:§! $darktec_crisis_cruiser$"
 	tech_darktec_crisis_cruiser_unlocks_desc:0 "§H$darktec_crisis_cruiser$§!"
 
 	tech_darktec_crisis_battleship:0 "$darktec_crisis_battleship$"
-	tech_darktec_crisis_battleship_desc:0 "影の技術の驚異。それら自身の存在が周囲の現実を歪める。準物質で構成され、ダークマターの力を利用するこれらの改良型戦艦は、その行く手を阻むあらゆるものを壊滅させることができる。"
+	tech_darktec_crisis_battleship_desc:0 "影の技術の驚異.それら自身の存在が周囲の現実を歪める.準物質で構成され,ダークマターの力を利用するこれらの改良型戦艦は,その行く手を阻むあらゆるものを壊滅させることができる."
 	tech_darktec_crisis_battleship_unlocks_title:0 "§H艦種をアンロック:§! $darktec_crisis_battleship$"
 	tech_darktec_crisis_battleship_unlocks_desc:0 "§H$darktec_crisis_battleship$§!"
 
 	# Techs organic
 	tech_darktec_crisis_mauler:0 "$darktec_crisis_mauler$"
-	tech_darktec_crisis_mauler_desc:0 "新しい有機船種の品種に非バリオン物質の微量を選択的に加えることで、通常空間と虚空を自在に移動し、自身の存在によって時空を歪める、計り知れないほど強力な標本を作り出すことが可能になった。"
+	tech_darktec_crisis_mauler_desc:0 "新しい有機船種の品種に非バリオン物質の微量を選択的に加えることで,通常空間と虚空を自在に移動し,自身の存在によって時空を歪める,計り知れないほど強力な標本を作り出すことが可能になった."
 	tech_darktec_crisis_mauler_unlocks_title:0 "§H艦種をアンロック:§! $darktec_crisis_mauler$"
 	tech_darktec_crisis_mauler_unlocks_desc:0 "§H$darktec_crisis_mauler$§!"
 
 	tech_darktec_crisis_weaver:0 "$darktec_crisis_weaver$"
-	tech_darktec_crisis_weaver_desc:0 "通常の対極にある恐ろしい姿をしたこの有機船は、光を自身と仲間の有利なように曲げ、現実の構造そのものと一体化して身を隠す。"
+	tech_darktec_crisis_weaver_desc:0 "通常の対極にある恐ろしい姿をしたこの有機船は,光を自身と仲間の有利なように曲げ,現実の構造そのものと一体化して身を隠す."
 	tech_darktec_crisis_weaver_unlocks_title:0 "§H艦種をアンロック:§! $darktec_crisis_weaver$"
 	tech_darktec_crisis_weaver_unlocks_desc:0 "§H$darktec_crisis_weaver$§!"
 
 	tech_darktec_crisis_stinger:0 "$darktec_crisis_stinger$"
-	tech_darktec_crisis_stinger_desc:0 "大量のダークマターを帯びた、致命的な巨大生物。この巨大な有機船は、実際には移動せず、獲物を求めて虚空を切り裂き、その隙間を縫って進む。獲物は何が襲ってきたのかすら決して知ることはないだろう。"
+	tech_darktec_crisis_stinger_desc:0 "大量のダークマターを帯びた,致命的な巨大生物.この巨大な有機船は,実際には移動せず,獲物を求めて虚空を切り裂き,その隙間を縫って進む.獲物は何が襲ってきたのかすら決して知ることはないだろう."
 	tech_darktec_crisis_stinger_unlocks_title:0 "§H艦種をアンロック:§! $darktec_crisis_stinger$"
 	tech_darktec_crisis_stinger_unlocks_desc:0 "§H$darktec_crisis_stinger$§!"
 
@@ -431,31 +431,31 @@ l_japanese:
 # Umbral Buildings
 	# Techs
 	tech_darktec_umbral_extractors_t1:0 "影の抽出"
-	tech_darktec_umbral_extractors_t1_desc:0 "エントロピーを「封じ込め可能な」存在へと変換するのは集中的な作業だが、適切に利用すればその副産物は経済を大いに強化する。"
+	tech_darktec_umbral_extractors_t1_desc:0 "エントロピーを「封じ込め可能な」存在へと変換するのは集中的な作業だが,適切に利用すればその副産物は経済を大いに強化する."
 	tech_darktec_umbral_extractors_t2:0 "影物質捕食"
-	tech_darktec_umbral_extractors_t2_desc:0 "封じ込められたエントロピーとダークマターを動力源として循環させる、あるいはバリオン物質を準物質に転換させることで、一部の産業プロセスを加速できる。"
+	tech_darktec_umbral_extractors_t2_desc:0 "封じ込められたエントロピーとダークマターを動力源として循環させる,あるいはバリオン物質を準物質に転換させることで,一部の産業プロセスを加速できる."
 	tech_darktec_umbral_extractors_t3:0 "影物質多元宇宙循環"
-	tech_darktec_umbral_extractors_t3_desc:0 "局所的なエントロピーを収穫するだけでなく、我々は時空の一点に収束しつつある並行宇宙からわずかにエネルギーを引き出すことが可能であると理論化されている。"
+	tech_darktec_umbral_extractors_t3_desc:0 "局所的なエントロピーを収穫するだけでなく,我々は時空の一点に収束しつつある並行宇宙からわずかにエネルギーを引き出すことが可能であると理論化されている."
 
 	tech_darktec_umbral_industry_t1:0 "影の鍛造"
-	tech_darktec_umbral_industry_t1_desc:0 "標準的な材料に準物質の薄い封じ込め層を付与することで、その性能を大幅に強化することができる。"
+	tech_darktec_umbral_industry_t1_desc:0 "標準的な材料に準物質の薄い封じ込め層を付与することで,その性能を大幅に強化することができる."
 	tech_darktec_umbral_industry_t2:0 "影物質溶解"
-	tech_darktec_umbral_industry_t2_desc:0 "準物質を半バリオン合金に加工することは、経済的および軍事的急速な拡張のための革命的な新手法となり得る。"
+	tech_darktec_umbral_industry_t2_desc:0 "準物質を半バリオン合金に加工することは,経済的および軍事的急速な拡張のための革命的な新手法となり得る."
 	tech_darktec_umbral_industry_t3:0 "影の超凝縮"
-	tech_darktec_umbral_industry_t3_desc:0 "準物質合金の層は、同一の物理的次元においても幾重にも重ねることができ、わずかな欠点のみで生産量を飛躍的に増加させる。"
+	tech_darktec_umbral_industry_t3_desc:0 "準物質合金の層は,同一の物理的次元においても幾重にも重ねることができ,わずかな欠点のみで生産量を飛躍的に増加させる."
 
 	tech_darktec_umbral_research_t1:0 "影の解析研究"
-	tech_darktec_umbral_research_t1_desc:0 "偶発的な全宇宙消滅事象の危険性なしに真空の研究の可能性を発見することは、確実に我々の研究を加速させるだろう。"
+	tech_darktec_umbral_research_t1_desc:0 "偶発的な全宇宙消滅事象の危険性なしに真空の研究の可能性を発見することは,確実に我々の研究を加速させるだろう."
 	tech_darktec_umbral_research_t2:0 "影の統計予測"
-	tech_darktec_umbral_research_t2_desc:0 "偶然性と混沌は、皮肉にも異質な理論的技術の獲得において決定的な役割を果たす。"
+	tech_darktec_umbral_research_t2_desc:0 "偶然性と混沌は,皮肉にも異質な理論的技術の獲得において決定的な役割を果たす."
 	tech_darktec_umbral_research_t3:0 "深淵多次元計算"
-	tech_darktec_umbral_research_t3_desc:0 "絶えず変化するエントロピーの状態を詳細に研究することで、同一空間において異なる潜在的次元で発生する、潜在的な時間的乖離を観測可能となる。"
+	tech_darktec_umbral_research_t3_desc:0 "絶えず変化するエントロピーの状態を詳細に研究することで,同一空間において異なる潜在的次元で発生する,潜在的な時間的乖離を観測可能となる."
 
 
 
 	# Core
 	mod_darktec_umbral_boost:0 "£sr_dark_matter£ 深淵建造物ブースト"
-	mod_darktec_umbral_boost_desc:0 "エントロピーを異なるシステムへ再配向することで、それらの効率は指数関数的に向上する。"
+	mod_darktec_umbral_boost_desc:0 "エントロピーを異なるシステムへ再配向することで,それらの効率は指数関数的に向上する."
 
 	building_darktec_affected_by_umbral_boost:0 "§H特性§!: §E深淵シナジー§!"
 
@@ -467,7 +467,7 @@ l_japanese:
 
 	building_darktec_anchor_1:0 "エントロピー再配分アンカー"
 	building_darktec_anchor_1_plural:0 "$building_darktec_anchor_1$s"
-	building_darktec_anchor_1_desc:0 "局所的なエントロピーを封じ込め可能な形態へと統合する、巨大な構造物。物質の状態変化に伴うパラマター共鳴が莫大な量の背景エネルギーを生成するため、絶えず唸り、振動している。"
+	building_darktec_anchor_1_desc:0 "局所的なエントロピーを封じ込め可能な形態へと統合する,巨大な構造物.物質の状態変化に伴うパラマター共鳴が莫大な量の背景エネルギーを生成するため,絶えず唸り,振動している."
 	building_darktec_anchor_1_tooltip:0 ""
 
 	building_darktec_anchor_2:0 "エントロピー凝縮サイフォン"
@@ -487,7 +487,7 @@ l_japanese:
 
 	building_darktec_storage_1:0 "パラマター・サイロ"
 	building_darktec_storage_1_plural:0 "$building_darktec_storage_1$s"
-	building_darktec_storage_1_desc:0 "この封じ込め施設は、マイクロシールド技術を用いて非バリオン物質を安全に貯蔵する。漏洩や妨害工作が発生した場合に壊滅的な崩壊事象を回避するため、複数の予防措置と対策が講じられている。"
+	building_darktec_storage_1_desc:0 "この封じ込め施設は,マイクロシールド技術を用いて非バリオン物質を安全に貯蔵する.漏洩や妨害工作が発生した場合に壊滅的な崩壊事象を回避するため,複数の予防措置と対策が講じられている."
 	building_darktec_storage_1_tooltip:0 ""
 
 	building_darktec_storage_2:0 "パラマター封じ込め"
@@ -507,7 +507,7 @@ l_japanese:
 
 	building_darktec_umbral_portal_1:0 "エントロピール再構成器"
 	building_darktec_umbral_portal_1_plural:0 "$building_darktec_umbral_portal_1$s"
-	building_darktec_umbral_portal_1_desc:0 "エントロピー的変換の結果生じた、分散した非バリオン物質を収集する手段として機能するこの建造物は、新たなエントロピールが安定した形態で存在することを可能にする。"
+	building_darktec_umbral_portal_1_desc:0 "エントロピー的変換の結果生じた,分散した非バリオン物質を収集する手段として機能するこの建造物は,新たなエントロピールが安定した形態で存在することを可能にする."
 	building_darktec_umbral_portal_1_tooltip:0 ""
 
 	building_darktec_umbral_portal_2:0 "エントロピール乳化器"
@@ -517,7 +517,7 @@ l_japanese:
 
 	building_darktec_umbral_assimilation_1:0 "エントロピー乳化器"
 	building_darktec_umbral_assimilation_1_plural:0 "$building_darktec_umbral_assimilation_1$s"
-	building_darktec_umbral_assimilation_1_desc:0 "複雑な複合プロセスにより、この建造物は豊富な人口の構成を根本的に改変し、単なるバリオンまたは非バリオン存在をはるかに超えたものとすることを可能にする。"
+	building_darktec_umbral_assimilation_1_desc:0 "複雑な複合プロセスにより,この建造物は豊富な人口の構成を根本的に改変し,単なるバリオンまたは非バリオン存在をはるかに超えたものとすることを可能にする."
 
 	building_darktec_umbral_assimilation_2:0 "エントロピー収束器"
 	building_darktec_umbral_assimilation_2_plural:0 "$building_darktec_umbral_assimilation_2$s"
@@ -548,7 +548,7 @@ l_japanese:
 	# Moar dark matter
 	building_darktec_umbral_compressor_1:0 "虚空圧縮機"
 	building_darktec_umbral_compressor_1_plural:0 "$building_darktec_umbral_compressor_1$s"
-	building_darktec_umbral_compressor_1_desc:0 "この構造物は、周辺のエントロピー抽出施設が、原材料を安全に圧縮・変換することで非バリオン物質を生成するのを助けます。"
+	building_darktec_umbral_compressor_1_desc:0 "この構造物は,周辺のエントロピー抽出施設が,原材料を安全に圧縮・変換することで非バリオン物質を生成するのを助けます."
 	building_darktec_umbral_compressor_1_tooltip:0 ""
 
 	building_darktec_umbral_compressor_2:0 "虚空混成器"
@@ -569,7 +569,7 @@ l_japanese:
 	# Dark matter into minerals and energy
 	building_darktec_umbral_decompressor_1:0 "虚空解体器"
 	building_darktec_umbral_decompressor_1_plural:0 "$building_darktec_umbral_decompressor_1$s"
-	building_darktec_umbral_decompressor_1_desc:0 "この施設は、非バリオン物質に強力な素粒子場を適用することで、エキゾチックな等脚類を認識可能な物質とエネルギーに変換することを可能にします。"
+	building_darktec_umbral_decompressor_1_desc:0 "この施設は,非バリオン物質に強力な素粒子場を適用することで,エキゾチックな等脚類を認識可能な物質とエネルギーに変換することを可能にします."
 	building_darktec_umbral_decompressor_1_tooltip:0 ""
 
 	building_darktec_umbral_decompressor_2:0 "虚空破砕器"
@@ -590,7 +590,7 @@ l_japanese:
 	# Dark matter into extra food
 	building_darktec_umbral_food_1:0 "浸透沃土"
 	building_darktec_umbral_food_1_plural:0 "$building_darktec_umbral_food_1$s"
-	building_darktec_umbral_food_1_desc:0 "バイオマスに対し、エキゾチックな放射線と光のような粒子を浴びせることで、その成長と生産を刺激します。しかし、食用として利用した場合、奇妙なほど「カリカリ」すると報告されることがあります。"
+	building_darktec_umbral_food_1_desc:0 "バイオマスに対し,エキゾチックな放射線と光のような粒子を浴びせることで,その成長と生産を刺激します.しかし,食用として利用した場合,奇妙なほど「カリカリ」すると報告されることがあります."
 	building_darktec_umbral_food_1_tooltip:0 ""
 
 	building_darktec_umbral_food_2:0 "飽和沃土"
@@ -611,7 +611,7 @@ l_japanese:
 	# Alloys from DM
 	building_darktec_void_foundry_1:0 "冥府の鍛造所"
 	building_darktec_void_foundry_1_plural:0 "$building_darktec_void_foundry_1$s"
-	building_darktec_void_foundry_1_desc:0 "非バリオン物質とエネルギーが強力な合金と結合され、指数関数的に成長するパラ物質合金を生み出す巨大な鋳造所。"
+	building_darktec_void_foundry_1_desc:0 "非バリオン物質とエネルギーが強力な合金と結合され,指数関数的に成長するパラ物質合金を生み出す巨大な鋳造所."
 	building_darktec_void_foundry_1_tooltip:0 ""
 
 	building_darktec_void_foundry_2:0 "冥府の新生鍛造所"
@@ -653,7 +653,7 @@ l_japanese:
 	# Research from DM
 	building_darktec_void_research_1:0 "異常研究拠点"
 	building_darktec_void_research_1_plural:0 "$building_darktec_void_research_1$s"
-	building_darktec_void_research_1_desc:0 "この施設は、非バリオン物質と虚空に束縛された応用技術に関する最先端の研究拠点として機能する。"
+	building_darktec_void_research_1_desc:0 "この施設は,非バリオン物質と虚空に束縛された応用技術に関する最先端の研究拠点として機能する."
 	building_darktec_void_research_1_tooltip:0 ""
 
 	building_darktec_void_research_2:0 "異常研究室"
@@ -674,7 +674,7 @@ l_japanese:
 	# DM from researchers
 	building_darktec_void_investigation_1:0 "エントロピー研究所"
 	building_darktec_void_investigation_1_plural:0 "$building_darktec_void_investigation_1$s"
-	building_darktec_void_investigation_1_desc:0 "直接実験のために異種パラ物質を使用する専門研究所――予期せぬ結果を避けるため、いくつかの封じ込め措置が講じられている。"
+	building_darktec_void_investigation_1_desc:0 "直接実験のために異種パラ物質を使用する専門研究所――予期せぬ結果を避けるため,いくつかの封じ込め措置が講じられている."
 	building_darktec_void_investigation_1_tooltip:0 ""
 
 	building_darktec_void_investigation_2:0 "エントロピー観測所"
@@ -699,169 +699,169 @@ l_japanese:
 	darktec_trait_entro:0 "§Eエントロピー次元特性§!"
 
 	tech_darktec_traits_t1:0 "キメラ的パラ物質応用"
-	tech_darktec_traits_t1_desc:0 "様々な研究により、不活性ではない実体への微量のパラ物質適用が、危険な結果を伴わずにそれを同化させうると証明された。このため、我々は両次元の専門的かつ局所的な組み合わせを生成することで、この方法で種族を改善できると理論化している。"
+	tech_darktec_traits_t1_desc:0 "様々な研究により,不活性ではない実体への微量のパラ物質適用が,危険な結果を伴わずにそれを同化させうると証明された.このため,我々は両次元の専門的かつ局所的な組み合わせを生成することで,この方法で種族を改善できると理論化している."
 	tech_darktec_traits_t1_unlocks_title:0 "§H種族特性を解禁:§! キメラ的影の特性"
-	tech_darktec_traits_t1_unlocks_desc:0 "§H$tech_darktec_traits_t1$§!\n£sr_dark_matter£ダークマターと$darktec_contained_entropy_with_icon$に作用し、強力なボーナスも提供する特殊な特性。"
+	tech_darktec_traits_t1_unlocks_desc:0 "§H$tech_darktec_traits_t1$§!\n£sr_dark_matter£ダークマターと$darktec_contained_entropy_with_icon$に作用し,強力なボーナスも提供する特殊な特性."
 
 	tech_darktec_traits_t2:0 "影の自己実験"
-	tech_darktec_traits_t2_desc:0 "パラ物質と我々種族の構成要素とのエントロピー注入の成功は、異質な組み合わせに関する広範な研究分野を開拓した。それらは予想よりも過激なものもあれば、そうでないものもあった。"
+	tech_darktec_traits_t2_desc:0 "パラ物質と我々種族の構成要素とのエントロピー注入の成功は,異質な組み合わせに関する広範な研究分野を開拓した.それらは予想よりも過激なものもあれば,そうでないものもあった."
 	tech_darktec_traits_t2_unlocks_title:0 "§H種族特性を解禁:§! 上級影の特性"
-	tech_darktec_traits_t2_unlocks_desc:0 "§H$tech_darktec_traits_t1$§!\n£sr_dark_matter£ダークマターと$darktec_contained_entropy_with_icon$にさらに作用し、強力なボーナスも提供する特殊な特性。"
+	tech_darktec_traits_t2_unlocks_desc:0 "§H$tech_darktec_traits_t1$§!\n£sr_dark_matter£ダークマターと$darktec_contained_entropy_with_icon$にさらに作用し,強力なボーナスも提供する特殊な特性."
 
 	tech_darktec_traits_ascension:0 "エントロピー特性"
-	tech_darktec_traits_ascension_desc:0 "帝国が変容した後、我々の種族を強化するだけでは不十分だ。パラ物質に関する我々の進歩を活用し、この展望を、この超越をさらに優れたものへと進める必要がある。"
+	tech_darktec_traits_ascension_desc:0 "帝国が変容した後,我々の種族を強化するだけでは不十分だ.パラ物質に関する我々の進歩を活用し,この展望を,この超越をさらに優れたものへと進める必要がある."
 	tech_darktec_traits_ascension_unlocks_title:0 "§H種族特性を解禁:§! $tech_darktec_traits_ascension$"
-	tech_darktec_traits_ascension_unlocks_desc:0 "§H$tech_darktec_traits_t1$§!\nゲーム中に選択した超越パスに応じて変化する強力な特性を獲得する。"
+	tech_darktec_traits_ascension_unlocks_desc:0 "§H$tech_darktec_traits_t1$§!\nゲーム中に選択した超越パスに応じて変化する強力な特性を獲得する."
 
 	trait_darktec_decay_predation:0 "宇宙的崩壊捕食"
-	trait_darktec_decay_predation_desc:0 "この種族の全体的な構成は、宇宙背景放射を濾過して利用できるように再適応されており、彼らに途方もないエネルギー容量を供給している。"
+	trait_darktec_decay_predation_desc:0 "この種族の全体的な構成は,宇宙背景放射を濾過して利用できるように再適応されており,彼らに途方もないエネルギー容量を供給している."
 	trait_darktec_decay_predation_tooltip:0 "$mod_leaders_upkeep_mult$: §G-25%§!\n    - $mod_planet_pops_upkeep_mult$: §G-25%§!\n\n月毎の$pop_group_unit$£pop£§H居住者§!あたり:\n    - 生産: §G+0.025§! §Y$darktec_contained_entropy_with_icon$§!.\n    - 維持費: §R-0.025§! §Y£sr_dark_matter£ダークマター§!"
 
 	trait_darktec_paramatter_saturation:0 "パラ物質飽和"
-	trait_darktec_paramatter_saturation_desc:0 "非バリオン物質の凝縮された過負荷が、この種の身体に浸透し、滲み出している。"
+	trait_darktec_paramatter_saturation_desc:0 "非バリオン物質の凝縮された過負荷が,この種の身体に浸透し,滲み出している."
 	trait_darktec_paramatter_saturation_tooltip:0 "$mod_planet_pops_upkeep_mult$: §R+15%§!\n\n月毎の$pop_group_unit$£pop£§H居住者§!あたり:\n    - 生産: §G+0.035§! §Y$darktec_contained_entropy_with_icon$§!"
 
 	trait_darktec_obscure_intellect:0 "晦冥なる知性"
-	trait_darktec_obscure_intellect_desc:0 "パラ物質や背景放射/暗黒放射の流入を知覚・感知する能力が、この種族に宇宙に対する意識と理解の向上をもたらす。"
+	trait_darktec_obscure_intellect_desc:0 "パラ物質や背景放射/暗黒放射の流入を知覚・感知する能力が,この種族に宇宙に対する意識と理解の向上をもたらす."
 	trait_darktec_obscure_intellect_tooltip:0 "$researcher_jobs_bonus_workforce_mult$: §G+15%§!\n\n月毎の$pop_group_unit$£pop£§H居住者§!あたり:\n    - 維持費: §R-0.025§! §Y£sr_dark_matter£ダークマター§!"
 
 	trait_darktec_obscure_intellect_robotic:0 "抽象処理"
-	trait_darktec_obscure_intellect_robotic_desc:0 "この機械種族の回路と処理に対する内包されたエントロピーの影響により、宇宙の設計と複雑さを理解する上での彼らの効率は10倍に増加した。"
+	trait_darktec_obscure_intellect_robotic_desc:0 "この機械種族の回路と処理に対する内包されたエントロピーの影響により,宇宙の設計と複雑さを理解する上での彼らの効率は10倍に増加した."
 	trait_darktec_obscure_intellect_robotic_tooltip:0 "$trait_darktec_obscure_intellect_tooltip$"
 
 	trait_darktec_darkened_veins:0 "影の有機体"
-	trait_darktec_darkened_veins_desc:0 "この種族に対するダークマターの過剰な影響は顕著であり、彼らの体液は超現実的な黒い色合いで滲み出ている。"
+	trait_darktec_darkened_veins_desc:0 "この種族に対するダークマターの過剰な影響は顕著であり,彼らの体液は超現実的な黒い色合いで滲み出ている."
 	trait_darktec_darkened_veins_tooltip:0 "$MOD_POP_AMENITIES_USAGE_ADD$: §R+0.15§!\n\n月毎の$pop_group_unit$£pop£§H居住者§!あたり:\n    - 生産: §G+0.055§! §Y£sr_dark_matter£ダークマター§!"
 
 	trait_darktec_darkened_veins_robotic:0 "影の燃料化"
-	trait_darktec_darkened_veins_robotic_desc:0 "主要な燃料として適応されたこの機械種族は、ダークマターの力を利用する。彼らの機構に現れる顕著な効果は、奇妙な動作方法を与えている。"
+	trait_darktec_darkened_veins_robotic_desc:0 "主要な燃料として適応されたこの機械種族は,ダークマターの力を利用する.彼らの機構に現れる顕著な効果は,奇妙な動作方法を与えている."
 	trait_darktec_darkened_veins_robotic_tooltip:0 "$trait_darktec_darkened_veins_tooltip$"
 
 	trait_darktec_entropic_synthesis:0 "エントロピー合成"
-	trait_darktec_entropic_synthesis_desc:0 "莫大な改造により、この種族はエントロピーを捕捉・濾過する能力を獲得し、その過程で生成されるエネルギーによって養われることで、それを自然なプロセスとしてリサイクルする。"
+	trait_darktec_entropic_synthesis_desc:0 "莫大な改造により,この種族はエントロピーを捕捉・濾過する能力を獲得し,その過程で生成されるエネルギーによって養われることで,それを自然なプロセスとしてリサイクルする."
 	trait_darktec_entropic_synthesis_tooltip:0 "$MOD_POP_BONUS_WORKFORCE_MULT$: §G+10%§!\n\n月毎の$pop_group_unit$£pop£§H居住者§!あたり:\n    - 維持費: §R-0.025§! §Y$darktec_contained_entropy_with_icon$§!"
 
 	# Ascension - genetics
 	trait_darktec_purity_ingrained_entrogenomics:0 "根付いたエントロゲノミクス"
-	trait_darktec_purity_ingrained_entrogenomics_desc:0 "特定の欠陥のある、あるいは潜在的に欠陥のある遺伝子鎖に向けられたダークマターのポケットを利用することで、この種族は同族の傑出した個体の完璧さを刺激する。"
-	trait_darktec_purity_ingrained_entrogenomics_tooltip:0 "指導者はレベルアップ時に、§R200§!の§Y£sr_dark_matter£ダークマター§!（レベルごとに）を消費し、§G25%§!の確率で負の特性を除去する。"
+	trait_darktec_purity_ingrained_entrogenomics_desc:0 "特定の欠陥のある,あるいは潜在的に欠陥のある遺伝子鎖に向けられたダークマターのポケットを利用することで,この種族は同族の傑出した個体の完璧さを刺激する."
+	trait_darktec_purity_ingrained_entrogenomics_tooltip:0 "指導者はレベルアップ時に,§R200§!の§Y£sr_dark_matter£ダークマター§!(レベルごとに)を消費し,§G25%§!の確率で負の特性を除去する."
 
 	trait_darktec_cloning_mirror_splicing:0 "鏡影接合"
-	trait_darktec_cloning_mirror_splicing_desc:0 "生殖時の細胞分裂を改変することで、この種族はパラマターによってもたらされるエントロピー的な無作為性を利用し、クローン生成プロセスを10倍加速させる。"
+	trait_darktec_cloning_mirror_splicing_desc:0 "生殖時の細胞分裂を改変することで,この種族はパラマターによってもたらされるエントロピー的な無作為性を利用し,クローン生成プロセスを10倍加速させる."
 	#trait_darktec_cloning_mirror_splicing_tooltip:0 "$MOD_BONUS_POP_GROWTH_MULT$: §G+25%§!\n\nPer $pop_group_unit$ £pop£ §HPops§! grown, §G10%§! chance of any pop group with this trait gaining another $pop_group_unit$ £pop£ §HPops§!."
 
 	trait_darktec_mutation_dark_adaptation:0 "闇への適応"
-	trait_darktec_mutation_dark_adaptation_desc:0 "背景放射線で飽和した有機体であるため、変異の可能性は尽きることがない。"
-	trait_darktec_mutation_dark_adaptation_tooltip:0 "この種族は、惑星の指定に基づいて、特定の£job£§H職務§!における$MOD_POP_BONUS_WORKFORCE_MULT$を§G+15%§!から§G+25%§!の間で獲得する。"
+	trait_darktec_mutation_dark_adaptation_desc:0 "背景放射線で飽和した有機体であるため,変異の可能性は尽きることがない."
+	trait_darktec_mutation_dark_adaptation_tooltip:0 "この種族は,惑星の指定に基づいて,特定の£job£§H職務§!における$MOD_POP_BONUS_WORKFORCE_MULT$を§G+15%§!から§G+25%§!の間で獲得する."
 
 	# Ascension - cybernetics and synths
 	trait_darktec_cybernetic_dm_injectors:0 "ダークマターインジェクター"
-	trait_darktec_cybernetic_dm_injectors_desc:0 "特殊な注入器が、この種族の回路網に微量のダークマターを投与し、その能力を大幅に向上させる。"
+	trait_darktec_cybernetic_dm_injectors_desc:0 "特殊な注入器が,この種族の回路網に微量のダークマターを投与し,その能力を大幅に向上させる."
 	trait_darktec_cybernetic_dm_injectors_tooltip:0 "$MOD_BONUS_POP_GROWTH_MULT$: §G+25%§!"
 
 	trait_darktec_cybernetic_void_threadware:0 "虚空スレッドウェア"
-	trait_darktec_cybernetic_void_threadware_desc:0 "エントロピーの絶えず変化する混沌とした側面を利用することで、この種族に結びつけられた回路は、情報を無作為に、しかしはるかに効率的な方法で処理できる。"
+	trait_darktec_cybernetic_void_threadware_desc:0 "エントロピーの絶えず変化する混沌とした側面を利用することで,この種族に結びつけられた回路は,情報を無作為に,しかしはるかに効率的な方法で処理できる."
 	trait_darktec_cybernetic_void_threadware_tooltip:0 "$researcher_jobs_bonus_workforce_mult$: §G+1%§!"
 
 	# Ascension - Machine
 	trait_darktec_nanite_replication:0 "エントロピー複製循環器"
-	trait_darktec_nanite_replication_desc:0 "パラマター複製とランダムな順序のエントロピーサイクルを適用することで、この機械構造体を構成する新たなナナイトは指数関数的に増殖できる。"
+	trait_darktec_nanite_replication_desc:0 "パラマター複製とランダムな順序のエントロピーサイクルを適用することで,この機械構造体を構成する新たなナナイトは指数関数的に増殖できる."
 	#trait_darktec_nanite_replication_tooltip:0 ""
 
 	trait_darktec_virtual_void_calculation:0 "暗黒計算モデル"
-	trait_darktec_virtual_void_calculation_desc:0 "処理能力の一部を真空に転用し、同時にデータストレージに非バリオン物質を逆供給することで、これらの仮想マシンの負荷を軽減できる。"
+	trait_darktec_virtual_void_calculation_desc:0 "処理能力の一部を真空に転用し,同時にデータストレージに非バリオン物質を逆供給することで,これらの仮想マシンの負荷を軽減できる."
 	trait_darktec_virtual_void_calculation_tooltip:0 "$MOD_POP_BONUS_WORKFORCE_MULT$: コロニーあたり§G+25%§!"
 
 	trait_darktec_modularity_paramatter:0 "パラマター合成器"
-	trait_darktec_modularity_paramatter_desc:0 "余剰または利用可能な空間に結合された微細なアンカーと鍛造機により、この人工種族は構造物ごとに微量のパラマターを、閉じ込められた安全な方法で収穫できる。"
+	trait_darktec_modularity_paramatter_desc:0 "余剰または利用可能な空間に結合された微細なアンカーと鍛造機により,この人工種族は構造物ごとに微量のパラマターを,閉じ込められた安全な方法で収穫できる."
 	trait_darktec_modularity_paramatter_tooltip:0 "$foundry_jobs_bonus_workforce_mult$: §R+15%§!"
 
 	# Ascension - Psionic
 	trait_darktec_psionic_eldritch_prescience:0 "異界の予知"
-	trait_darktec_psionic_eldritch_prescience_desc:0 "大量のダークマターを消費することで強化されたこのサイオニック種族は、狂気に陥ることなく無限の可能性を垣間見ることができる。"
+	trait_darktec_psionic_eldritch_prescience_desc:0 "大量のダークマターを消費することで強化されたこのサイオニック種族は,狂気に陥ることなく無限の可能性を垣間見ることができる."
 	trait_darktec_psionic_eldritch_prescience_tooltip:0 "$mod_psionic_pop_bonus_workforce_mult$: §G+40%§!"
 
 	trait_darktec_entro_main:0 "エントロフィリアル"
 	trait_darktec_entro_main_plural:0 "エントロフィリアル"
-	trait_darktec_entro_main_desc:0 "バリオン組成にも非バリオン組成にも属さないこの種族は、両世界の完璧な組み合わせとなるという不可能を達成した…しかし、その新たな形態を適切に抑制する手段がなければ不安定であるため、大きな代償を伴う。"
+	trait_darktec_entro_main_desc:0 "バリオン組成にも非バリオン組成にも属さないこの種族は,両世界の完璧な組み合わせとなるという不可能を達成した...しかし,その新たな形態を適切に抑制する手段がなければ不安定であるため,大きな代償を伴う."
 	trait_darktec_entro_main_tooltip:0 ""
 
 	leader_trait_darktec_entro_main:0 "$trait_darktec_entro_main$"
-	leader_trait_darktec_entro_main_desc:0 "バリオン組成にも非バリオン組成にも属さないこの指導者は、両世界の完璧な組み合わせとなるという不可能を達成した…しかし、その新たな形態を適切に抑制する手段がなければ不安定であるため、大きな代償を伴う。"
+	leader_trait_darktec_entro_main_desc:0 "バリオン組成にも非バリオン組成にも属さないこの指導者は,両世界の完璧な組み合わせとなるという不可能を達成した...しかし,その新たな形態を適切に抑制する手段がなければ不安定であるため,大きな代償を伴う."
 
 	trait_darktec_entro_phase_body:0 "相物質組成"
-	trait_darktec_entro_phase_body_desc:0 "これら$trait_darktec_entro_main_plural$の身体におけるパラマター組成の増加は、彼らを幽霊のように物質界を位相し、横断することを可能にする。"
-	trait_darktec_entro_phase_body_tooltip:0 "未訳：大幅な住居削減と陸軍ボーナス"
+	trait_darktec_entro_phase_body_desc:0 "これら$trait_darktec_entro_main_plural$の身体におけるパラマター組成の増加は,彼らを幽霊のように物質界を位相し,横断することを可能にする."
+	trait_darktec_entro_phase_body_tooltip:0 "未訳:大幅な住居削減と陸軍ボーナス"
 
 	trait_darktec_entro_eldritch_touch:0 "異界の接触"
-	trait_darktec_entro_eldritch_touch_desc:0 "2つの異なる物質状態を収束させることができるこの$trait_darktec_entro_main$種族は、ほとんど労力なく不可能なものを創造できる。"
-	trait_darktec_entro_eldritch_touch_tooltip:0 "未訳：追加生産量"
+	trait_darktec_entro_eldritch_touch_desc:0 "2つの異なる物質状態を収束させることができるこの$trait_darktec_entro_main$種族は,ほとんど労力なく不可能なものを創造できる."
+	trait_darktec_entro_eldritch_touch_tooltip:0 "未訳:追加生産量"
 
 	trait_darktec_entro_dm_oozing:0 "陰鬱な滲出"
-	trait_darktec_entro_dm_oozing_desc:0 "エキゾチック物質で過充電されたこの種族は、パラマターを排出し、微量の無害な放射線を生成する。それは適切なツールと封じ込め手段で収穫可能である。"
+	trait_darktec_entro_dm_oozing_desc:0 "エキゾチック物質で過充電されたこの種族は,パラマターを排出し,微量の無害な放射線を生成する.それは適切なツールと封じ込め手段で収穫可能である."
 	trait_darktec_entro_dm_oozing_tooltip:0 "$MOD_POP_AMENITIES_USAGE_ADD$: §R+0.25§!"
 
 	trait_darktec_entro_multiverse_sight:0 "多次元視覚"
-	trait_darktec_entro_multiverse_sight_desc:0 "この種族の意識はエントロピーの不可能な無作為性と混じり合っているが、同時に現実にも縛られているため、代替現実の潜在的な可能性を垣間見ることで並行思考が可能になる。"
-	trait_darktec_entro_multiverse_sight_tooltip:0 "未訳：追加の統合力生産量"
+	trait_darktec_entro_multiverse_sight_desc:0 "この種族の意識はエントロピーの不可能な無作為性と混じり合っているが,同時に現実にも縛られているため,代替現実の潜在的な可能性を垣間見ることで並行思考が可能になる."
+	trait_darktec_entro_multiverse_sight_tooltip:0 "未訳:追加の統合力生産量"
 
 	trait_darktec_entro_possession:0 "バリオン憑依"
-	trait_darktec_entro_possession_desc:0 "不安定な状態にあるこの種は、半物質的または非物質的な組成へと変化し、機械や技術の中へ「潜行」したりそこから現れたりできる。既存の回路に意識を接続し、これまでにないレベルの制御を行使することが可能となる。"
+	trait_darktec_entro_possession_desc:0 "不安定な状態にあるこの種は,半物質的または非物質的な組成へと変化し,機械や技術の中へ「潜行」したりそこから現れたりできる.既存の回路に意識を接続し,これまでにないレベルの制御を行使することが可能となる."
 	trait_darktec_entro_possession_tooltip:0 "TODO 地区ごとに鋳造施設および職人仕事に高ボーナス"
 
 	trait_darktec_entro_saturation:0 "エントロピー飽和"
-	trait_darktec_entro_saturation_desc:0 "あまりにも多くのエントロピー物質がこの種を横断し、彼らを極めて不安定で危険な存在にしている。"
-	trait_darktec_entro_saturation_tooltip:0 "$MOD_POP_AMENITIES_USAGE_MULT$: §R+0.25%§!\n\n$pop_group_unit$の£pop£ §HPops§!ごとに、月間:\n    - 生産量: §G+0.1§! §Y$darktec_contained_entropy_with_icon$§!"
+	trait_darktec_entro_saturation_desc:0 "あまりにも多くのエントロピー物質がこの種を横断し,彼らを極めて不安定で危険な存在にしている."
+	trait_darktec_entro_saturation_tooltip:0 "$MOD_POP_AMENITIES_USAGE_MULT$: §R+0.25%§!\n\n$pop_group_unit$の£pop£ §HPops§!ごとに,月間:\n    - 生産量: §G+0.1§! §Y$darktec_contained_entropy_with_icon$§!"
 
 	trait_darktec_entro_hunger:0 "超因果的飢餓"
-	trait_darktec_entro_hunger_desc:0 "その新たな組成が安定した形態を保つため、この種は絶えずエネルギー消費を要求され、収益の増加が求められている。"
-	trait_darktec_entro_hunger_tooltip:0 "$mod_planet_pops_upkeep_mult$: §R+50%§!\n\n$pop_group_unit$の£pop£ §HPops§!ごとに、月間:\n    - 生産量: §G+0.05§! §Y$darktec_contained_entropy_with_icon$§!\n    - 生産量: §G+0.05§! §Y£sr_dark_matter£ ダークマター§!"
+	trait_darktec_entro_hunger_desc:0 "その新たな組成が安定した形態を保つため,この種は絶えずエネルギー消費を要求され,収益の増加が求められている."
+	trait_darktec_entro_hunger_tooltip:0 "$mod_planet_pops_upkeep_mult$: §R+50%§!\n\n$pop_group_unit$の£pop£ §HPops§!ごとに,月間:\n    - 生産量: §G+0.05§! §Y$darktec_contained_entropy_with_icon$§!\n    - 生産量: §G+0.05§! §Y£sr_dark_matter£ ダークマター§!"
 
 	trait_darktec_entro_multiplicity:0 "幽冥の増殖"
-	trait_darktec_entro_multiplicity_desc:0 "パラマターが$trait_darktec_entro_main_plural$の生殖能力に与える影響は、肉体的、比喩的、意識的なプロセスにおいて彼らの複製を可能にし、その過程で基本的な物質と異種物質を再構成することで完璧な「クローン」を作り出す。"
-	trait_darktec_entro_multiplicity_tooltip:0 "§H$building_darktec_umbral_portal_1$§!がこの種に対してエントロピー的成長パルスを生成するたびに、$pop_group_unit$の£pop£ §HPops§!を提供する§G10%§!の確率。"
+	trait_darktec_entro_multiplicity_desc:0 "パラマターが$trait_darktec_entro_main_plural$の生殖能力に与える影響は,肉体的,比喩的,意識的なプロセスにおいて彼らの複製を可能にし,その過程で基本的な物質と異種物質を再構成することで完璧な「クローン」を作り出す."
+	trait_darktec_entro_multiplicity_tooltip:0 "§H$building_darktec_umbral_portal_1$§!がこの種に対してエントロピー的成長パルスを生成するたびに,$pop_group_unit$の£pop£ §HPops§!を提供する§G10%§!の確率."
 
 	trait_darktec_entro_traversal:0 "異次元横断"
-	trait_darktec_entro_traversal_desc:0 "この種には物理的な限界が存在せず、次元間を横断し、空間的および時間的位置を瞬時にわずかに変化させることができる。"
+	trait_darktec_entro_traversal_desc:0 "この種には物理的な限界が存在せず,次元間を横断し,空間的および時間的位置を瞬時にわずかに変化させることができる."
 	trait_darktec_entro_traversal_tooltip:0 "TODO 大規模な自動移住ボーナス"
 # /
 
 # UNSORTED LOCALISATION
 	bombardment_darktec_bombardment_entropy:0 "エントロピー砲撃"
-	bombardment_darktec_bombardment_entropy_desc:0 "大量の飽和爆弾が惑星の表面を壊滅させ、バリオン物質を崩壊させ、接触および連鎖反応によって非バリオン物質へと変質させる。"
+	bombardment_darktec_bombardment_entropy_desc:0 "大量の飽和爆弾が惑星の表面を壊滅させ,バリオン物質を崩壊させ,接触および連鎖反応によって非バリオン物質へと変質させる."
 
 	DARKTEC_SHIP_UTILITY_VOIDJUMP_MODULE:0 "虚無の裂け目転送装置"
 	DARKTEC_SHIP_UTILITY_VOIDJUMP_MODULE_ORGANIC:0 "$DARKTEC_SHIP_UTILITY_VOIDJUMP_MODULE$"
 	DARKTEC_SHIP_UTILITY_VOIDJUMP:0 "$DARKTEC_SHIP_UTILITY_VOIDJUMP_MODULE$"
-	DARKTEC_SHIP_UTILITY_VOIDJUMP_DESC:0 "物理状態を絶えず変化させるこの装置は、過負荷にすることで時間と空間に瞬時に裂け目を生み出し、船と周囲を以前に知られた位置に再配置できる。"
+	DARKTEC_SHIP_UTILITY_VOIDJUMP_DESC:0 "物理状態を絶えず変化させるこの装置は,過負荷にすることで時間と空間に瞬時に裂け目を生み出し,船と周囲を以前に知られた位置に再配置できる."
 	DARKTEC_SHIP_UTILITY_VOIDJUMP_MODULE_DESC:0 "$DARKTEC_SHIP_UTILITY_VOIDJUMP_DESC$"
 	DARKTEC_SHIP_UTILITY_VOIDJUMP_ORGANIC:0 "$DARKTEC_SHIP_UTILITY_VOIDJUMP_MODULE$"
-	DARKTEC_SHIP_UTILITY_VOIDJUMP_ORGANIC_DESC:0 "物理状態を絶えず変化させるこの器官は、過負荷にすることで時間と空間に瞬時に裂け目を生み出し、船と周囲を以前に知られた位置に再配置できる。"
-	DARKTEC_SHIP_UTILITY_VOIDJUMP_TOOLTIP:0 "艦隊アクションをアンロック: §H$on_darktec_voidjump_ability_title$§!\n\n§Hコスト§!: £sr_dark_matter£1000 £darktec_contained_entropy£1000\n§Hクールダウン§!: 360 £time£\n\n艦隊は自国の母星系へ向かう§Y虚無の裂け目§!を開きます。$TABBED_NEW_LINE$- 艦隊内の全ての船が再配置されます。$TABBED_NEW_LINE$- このモジュールを持たない全ての船は§R甚大な§!ダメージを受けます。"
+	DARKTEC_SHIP_UTILITY_VOIDJUMP_ORGANIC_DESC:0 "物理状態を絶えず変化させるこの器官は,過負荷にすることで時間と空間に瞬時に裂け目を生み出し,船と周囲を以前に知られた位置に再配置できる."
+	DARKTEC_SHIP_UTILITY_VOIDJUMP_TOOLTIP:0 "艦隊アクションをアンロック: §H$on_darktec_voidjump_ability_title$§!\n\n§Hコスト§!: £sr_dark_matter£1000 £darktec_contained_entropy£1000\n§Hクールダウン§!: 360 £time£\n\n艦隊は自国の母星系へ向かう§Y虚無の裂け目§!を開きます.$TABBED_NEW_LINE$- 艦隊内の全ての船が再配置されます.$TABBED_NEW_LINE$- このモジュールを持たない全ての船は§R甚大な§!ダメージを受けます."
 
 	DARKTEC_SHIP_UTILITY_INERTIALESS:0 "慣性無視エントロピードライブ"
-	DARKTEC_SHIP_UTILITY_INERTIALESS_DESC:0 "物理法則を破り、この永久運動機関はその存在そのものによってエネルギーを生成する。"
+	DARKTEC_SHIP_UTILITY_INERTIALESS_DESC:0 "物理法則を破り,この永久運動機関はその存在そのものによってエネルギーを生成する."
 	DARKTEC_SHIP_UTILITY_INERTIALESS_ORGANIC:0 "慣性無視エントロピー器官"
-	DARKTEC_SHIP_UTILITY_INERTIALESS_ORGANIC_DESC:0 "物理法則を破り、この永久運動する筋肉はその存在そのものによってエネルギーを生成する。"
-	DARKTEC_SHIP_UTILITY_INERTIALESS_TOOLTIP:0 "艦隊アクションをアンロック: §H$on_darktec_inertialess_ability_title$§!\n\n§Hコスト§!: £sr_dark_matter£1000 £darktec_contained_entropy£1000\n§Hクールダウン§!: 360 £time£\n\n艦隊は§Y慣性無視ドライブ§!を起動します。$TABBED_NEW_LINE$- モジュールを持つ全ての船は、大規模なパワー自己修飾子を得ます。$TABBED_NEW_LINE$- このモジュールを持たない全ての船は§R甚大な§!ダメージを受け、自己修飾子は逆転します。\n\n自己修飾子:\n    $MOD_SHIP_FIRE_RATE_MULT$: §G+50%§!\n    $MOD_SHIP_SPEED_MULT$: §G+50%§!\n    $MOD_SHIP_ACCURACY_MULT$: §G+25%§!\n\n    期間: §Y60 £time£§!"
+	DARKTEC_SHIP_UTILITY_INERTIALESS_ORGANIC_DESC:0 "物理法則を破り,この永久運動する筋肉はその存在そのものによってエネルギーを生成する."
+	DARKTEC_SHIP_UTILITY_INERTIALESS_TOOLTIP:0 "艦隊アクションをアンロック: §H$on_darktec_inertialess_ability_title$§!\n\n§Hコスト§!: £sr_dark_matter£1000 £darktec_contained_entropy£1000\n§Hクールダウン§!: 360 £time£\n\n艦隊は§Y慣性無視ドライブ§!を起動します.$TABBED_NEW_LINE$- モジュールを持つ全ての船は,大規模なパワー自己修飾子を得ます.$TABBED_NEW_LINE$- このモジュールを持たない全ての船は§R甚大な§!ダメージを受け,自己修飾子は逆転します.\n\n自己修飾子:\n    $MOD_SHIP_FIRE_RATE_MULT$: §G+50%§!\n    $MOD_SHIP_SPEED_MULT$: §G+50%§!\n    $MOD_SHIP_ACCURACY_MULT$: §G+25%§!\n\n    期間: §Y60 £time£§!"
 
 	DARKTEC_SHIP_UTILITY_COLLAPSER:0 "パラマター崩壊器"
-	DARKTEC_SHIP_UTILITY_COLLAPSER_DESC:0 "ダークマターの外部シールドへの流れを調整することで、この装置は防御の強度を即座に船の周囲の微小真空崩壊へと転用し、壊滅的な衝撃波を生成できる。"
+	DARKTEC_SHIP_UTILITY_COLLAPSER_DESC:0 "ダークマターの外部シールドへの流れを調整することで,この装置は防御の強度を即座に船の周囲の微小真空崩壊へと転用し,壊滅的な衝撃波を生成できる."
 	DARKTEC_SHIP_UTILITY_COLLAPSER_ORGANIC:0 "$DARKTEC_SHIP_UTILITY_COLLAPSER$"
-	DARKTEC_SHIP_UTILITY_COLLAPSER_ORGANIC_DESC:0 "ダークマターの外部シールドへの流れを調整することで、この細胞小器官は防御の強度を即座に船の周囲の微小真空崩壊へと転用し、壊滅的な衝撃波を生成できる。"
-	DARKTEC_SHIP_UTILITY_COLLAPSER_TOOLTIP:0 "艦隊アクションをアンロック: §H$on_darktec_collapser_ability_title$§!\n\n§Hコスト§!: £sr_dark_matter£1000 £darktec_contained_entropy£1000\n§Hクールダウン§!: 360 £time£\n\n艦隊は§Yエントロピー崩壊器§!を起動します。$TABBED_NEW_LINE$- モジュールを持つ全ての船はシールドを失い、§R自己デバフ§!を受けます。$TABBED_NEW_LINE$- システム内の全ての船は、失われたシールドの§Y5%§!を直接ダメージとして受けます。\n$TABBED_NEW_LINE$- このモジュールを持たない友軍艦は衝撃波の§R影響§!を受けます。\n\n§Y最大ダメージは20000に制限されます。§!\n\n自己デバフ:\n    $MOD_SHIP_SPEED_MULT$ = §R-100%§!\n    $MOD_SHIP_FIRE_RATE_MULT$: §R-100%§!\n\n    期間: §R30 £time£§!"
+	DARKTEC_SHIP_UTILITY_COLLAPSER_ORGANIC_DESC:0 "ダークマターの外部シールドへの流れを調整することで,この細胞小器官は防御の強度を即座に船の周囲の微小真空崩壊へと転用し,壊滅的な衝撃波を生成できる."
+	DARKTEC_SHIP_UTILITY_COLLAPSER_TOOLTIP:0 "艦隊アクションをアンロック: §H$on_darktec_collapser_ability_title$§!\n\n§Hコスト§!: £sr_dark_matter£1000 £darktec_contained_entropy£1000\n§Hクールダウン§!: 360 £time£\n\n艦隊は§Yエントロピー崩壊器§!を起動します.$TABBED_NEW_LINE$- モジュールを持つ全ての船はシールドを失い,§R自己デバフ§!を受けます.$TABBED_NEW_LINE$- システム内の全ての船は,失われたシールドの§Y5%§!を直接ダメージとして受けます.\n$TABBED_NEW_LINE$- このモジュールを持たない友軍艦は衝撃波の§R影響§!を受けます.\n\n§Y最大ダメージは20000に制限されます.§!\n\n自己デバフ:\n    $MOD_SHIP_SPEED_MULT$ = §R-100%§!\n    $MOD_SHIP_FIRE_RATE_MULT$: §R-100%§!\n\n    期間: §R30 £time£§!"
 
 	DARKTEC_SHIP_UTILITY_INTERFERER:0 "真空干渉器"
-	DARKTEC_SHIP_UTILITY_INTERFERER_DESC:0 "大量のダークマターを蓄積することで、この装置は測位システムに甚大な干渉を生み出し、この船からの全ての放出物を探知から効果的に隔離できる。"
+	DARKTEC_SHIP_UTILITY_INTERFERER_DESC:0 "大量のダークマターを蓄積することで,この装置は測位システムに甚大な干渉を生み出し,この船からの全ての放出物を探知から効果的に隔離できる."
 	DARKTEC_SHIP_UTILITY_INTERFERER_ORGANIC:0 "$DARKTEC_SHIP_UTILITY_INTERFERER$"
-	DARKTEC_SHIP_UTILITY_INTERFERER_ORGANIC_DESC:0 "大量のダークマターを蓄積することで、この細胞小器官は測位システムに甚大な干渉を生み出し、この船からの全ての放出物を探知から効果的に隔離できる。"
-	DARKTEC_SHIP_UTILITY_INTERFERER_TOOLTIP:0 "艦隊アクションをアンロック: §H$on_darktec_interferer_ability_title$§!\n\n§Hコスト§!: £sr_dark_matter£1000 £darktec_contained_entropy£1000\n§Hクールダウン§!: 360 £time£\n\n艦隊は§Y真空干渉器§!を起動します。$TABBED_NEW_LINE$- モジュールを持つ全ての船は、大規模な移動力とステルスボーナスを得ます。$TABBED_NEW_LINE$- このモジュールを持たない友軍艦は、一時的にハルと装甲の大部分を§R失います§!。\n\n自己修飾子:\n    $MOD_SHIP_CLOAKING_STRENGTH_ADD$: §R+20§!\n    $MOD_SHIP_SPEED_MULT$: §G+100%§!\n    $MOD_SHIP_EVASION_MULT$: §G+50%§!\n\n    期間: §Y60 £time£§!"
+	DARKTEC_SHIP_UTILITY_INTERFERER_ORGANIC_DESC:0 "大量のダークマターを蓄積することで,この細胞小器官は測位システムに甚大な干渉を生み出し,この船からの全ての放出物を探知から効果的に隔離できる."
+	DARKTEC_SHIP_UTILITY_INTERFERER_TOOLTIP:0 "艦隊アクションをアンロック: §H$on_darktec_interferer_ability_title$§!\n\n§Hコスト§!: £sr_dark_matter£1000 £darktec_contained_entropy£1000\n§Hクールダウン§!: 360 £time£\n\n艦隊は§Y真空干渉器§!を起動します.$TABBED_NEW_LINE$- モジュールを持つ全ての船は,大規模な移動力とステルスボーナスを得ます.$TABBED_NEW_LINE$- このモジュールを持たない友軍艦は,一時的にハルと装甲の大部分を§R失います§!.\n\n自己修飾子:\n    $MOD_SHIP_CLOAKING_STRENGTH_ADD$: §R+20§!\n    $MOD_SHIP_SPEED_MULT$: §G+100%§!\n    $MOD_SHIP_EVASION_MULT$: §G+50%§!\n\n    期間: §Y60 £time£§!"
 
 	# Shields
 	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS:0 "逆エントロピーシールド"
-	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_DESC:0 "船体外部の物質に残留するエントロピー痕跡を利用することで、粒子無秩序化の傾向がソフトシールド変形を一時的に生み出すが、それは物質的完全性を犠牲にする。"
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_DESC:0 "船体外部の物質に残留するエントロピー痕跡を利用することで,粒子無秩序化の傾向がソフトシールド変形を一時的に生み出すが,それは物質的完全性を犠牲にする."
 	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_ORGANIC:0 "逆エントロピーシールドスキン"
-	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_ORGANIC_DESC:0 "生体船の皮膚周辺の物質に残留するエントロピー痕跡を利用することで、粒子無秩序化の傾向がソフトシールド変形を一時的に生み出すが、それは構造的完全性を犠牲にする。"
+	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_ORGANIC_DESC:0 "生体船の皮膚周辺の物質に残留するエントロピー痕跡を利用することで,粒子無秩序化の傾向がソフトシールド変形を一時的に生み出すが,それは構造的完全性を犠牲にする."
 
 	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_SMALL:0 "小型 $DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS$"
 	DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_SMALL_DESC:0 "$DARKTEC_SHIP_UTILITY_REVERSE_SHIELDS_DESC$"
@@ -879,7 +879,7 @@ l_japanese:
 
 	# Antiparticles
 	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES:0 "反粒子ビーム"
-	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_DESC:0 "単分子線状に収束されたこの反粒子の投射は、標的に微小な物質崩壊を引き起こし、それが爆発する前に、触れた表面を綺麗に切断する。"
+	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_DESC:0 "単分子線状に収束されたこの反粒子の投射は,標的に微小な物質崩壊を引き起こし,それが爆発する前に,触れた表面を綺麗に切断する."
 
 	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_ORGANIC:0 "反粒子レンズ"
 	DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_ORGANIC_DESC:0 "$DARKTEC_SHIP_WEAPON_LASER_ANTIPARTICLES_DESC$"
@@ -904,7 +904,7 @@ l_japanese:
 
 	# Destabilizator
 	DARKTEC_SHIP_WEAPON_DESTABILIZATION:0 "不安定化カノン"
-	DARKTEC_SHIP_WEAPON_DESTABILIZATION_DESC:0 "プラズマ状の暗黒物質凝固体を射出するこの発射器は、着弾時に巨大な破壊的電磁効果を発生させる。"
+	DARKTEC_SHIP_WEAPON_DESTABILIZATION_DESC:0 "プラズマ状の暗黒物質凝固体を射出するこの発射器は,着弾時に巨大な破壊的電磁効果を発生させる."
 	DARKTEC_SHIP_WEAPON_DESTABILIZATION_ORGANIC:0 "不安定化エマルサー"
 	DARKTEC_SHIP_WEAPON_DESTABILIZATION_ORGANIC_DESC:0 "$DARKTEC_SHIP_WEAPON_DESTABILIZATION_DESC$"
 
@@ -928,7 +928,7 @@ l_japanese:
 
 	# Antimatter Lnace
 	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE:0 "反物質ランサー"
-	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_DESC:0 "この危険な兵器は、閉じ込められ励起された反物質ジェットを標的に向け、その進路上の物質を荒廃させる。"
+	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_DESC:0 "この危険な兵器は,閉じ込められ励起された反物質ジェットを標的に向け,その進路上の物質を荒廃させる."
 	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_ORGANIC:0 "反物質エクスぺラー"
 	DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_ORGANIC_DESC:0 "$DARKTEC_SHIP_WEAPON_ANTIMATTER_LANCE_DESC$"
 
@@ -952,7 +952,7 @@ l_japanese:
 
 	# Discharger
 	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER:0 "エントロピー・ディスチャージャー"
-	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_DESC:0 "艦船に微小なエントロピーリサイクラーを搭載したこの放電器は、抽出過程の副産物を標的に投射する。これは、最も密度の高い粒子層をも透過するヌルエネルギー光線として具現化される。"
+	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_DESC:0 "艦船に微小なエントロピーリサイクラーを搭載したこの放電器は,抽出過程の副産物を標的に投射する.これは,最も密度の高い粒子層をも透過するヌルエネルギー光線として具現化される."
 	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_ORGANIC:0 "エントロピー・ディスチャージャー"
 	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_ORGANIC_DESC:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_DESC$"
 
@@ -975,55 +975,55 @@ l_japanese:
 	DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_X_BIO_DESC:0 "$DARKTEC_SHIP_WEAPON_ENTROPIC_DISCHARGER_ORGANIC_DESC$"
 
 
-	on_darktec_voidjump_ability_tooltip:0 "§H$on_darktec_voidjump_ability_title$§!\n\n§Hコスト§!: £sr_dark_matter£1000 £darktec_contained_entropy£1000\n§Hクールダウン§!: 360 £time£\n\nあなたの艦隊は、母星系へ向かう§Y虚無の裂け目§!を開きます。$TABBED_NEW_LINE$-艦隊内の全ての艦船は再配置されます。$TABBED_NEW_LINE$- このモジュールを持たない全ての艦船は、§R深刻な§!ダメージを受けます。"
+	on_darktec_voidjump_ability_tooltip:0 "§H$on_darktec_voidjump_ability_title$§!\n\n§Hコスト§!: £sr_dark_matter£1000 £darktec_contained_entropy£1000\n§Hクールダウン§!: 360 £time£\n\nあなたの艦隊は,母星系へ向かう§Y虚無の裂け目§!を開きます.$TABBED_NEW_LINE$-艦隊内の全ての艦船は再配置されます.$TABBED_NEW_LINE$- このモジュールを持たない全ての艦船は,§R深刻な§!ダメージを受けます."
 	on_darktec_voidjump_ability_title:0 "虚無の裂け目"
 	on_darktec_voidjump_ability_activity:0 "虚無への跳躍中"
 	on_darktec_voidjump_ability_progress:0 "裂け目を開く"
 
-	on_darktec_inertialess_ability_tooltip:0 "§H$on_darktec_inertialess_ability_title$§!\n\n§Hコスト§!: £sr_dark_matter£1000 £darktec_contained_entropy£1000\n§Hクールダウン§!: 360 £time£\n\nあなたの艦隊は§Y慣性抑制ドライブ§!を起動します。$TABBED_NEW_LINE$- このモジュールを持つ全ての艦船は、強力な自己改変ボーナスを得ます。$TABBED_NEW_LINE$- このモジュールを持たない全ての艦船は§R深刻な§!ダメージを受け、自己改変が反転します。\n\n自己改変ボーナス:\n    $MOD_SHIP_FIRE_RATE_MULT$: §G+50%§!\n    $MOD_SHIP_SPEED_MULT$: §G+50%§!\n    $MOD_SHIP_ACCURACY_MULT$: §G+25%§!\n\n    効果時間: §Y60 £time£§!"
+	on_darktec_inertialess_ability_tooltip:0 "§H$on_darktec_inertialess_ability_title$§!\n\n§Hコスト§!: £sr_dark_matter£1000 £darktec_contained_entropy£1000\n§Hクールダウン§!: 360 £time£\n\nあなたの艦隊は§Y慣性抑制ドライブ§!を起動します.$TABBED_NEW_LINE$- このモジュールを持つ全ての艦船は,強力な自己改変ボーナスを得ます.$TABBED_NEW_LINE$- このモジュールを持たない全ての艦船は§R深刻な§!ダメージを受け,自己改変が反転します.\n\n自己改変ボーナス:\n    $MOD_SHIP_FIRE_RATE_MULT$: §G+50%§!\n    $MOD_SHIP_SPEED_MULT$: §G+50%§!\n    $MOD_SHIP_ACCURACY_MULT$: §G+25%§!\n\n    効果時間: §Y60 £time£§!"
 	on_darktec_inertialess_ability_title:0 "慣性抑制ドライブ"
 	on_darktec_inertialess_ability_activity:0 "慣性の維持"
 	on_darktec_inertialess_ability_progress:0 "慣性抑制ドライブ初期化中"
 
-	on_darktec_collapser_ability_tooltip:0 "§H$on_darktec_collapser_ability_title$§!\n\n§Hコスト§!: £sr_dark_matter£1000 £darktec_contained_entropy£1000\n§Hクールダウン§!: 360 £time£\n\nあなたの艦隊は§Yエントロピー崩壊装置§!を起動します。$TABBED_NEW_LINE$- このモジュールを持つ全ての艦船はシールドを失い、§R自己デバフ§!を受けます。$TABBED_NEW_LINE$- システム内の全ての艦船は、失われたシールドの§Y5%§!を直接ダメージとして受けます。\n$TABBED_NEW_LINE$- このモジュールを持たない友軍艦船は、その衝撃波の§R影響§!を受けます。\n\n§Y最大20000ダメージで上限。§!\n\n自己デバフ:\n    $MOD_SHIP_SPEED_MULT$ = §R-100%§!\n    $MOD_SHIP_FIRE_RATE_MULT$: §R-100%§!\n\n    効果時間: §R30 £time£§!"
+	on_darktec_collapser_ability_tooltip:0 "§H$on_darktec_collapser_ability_title$§!\n\n§Hコスト§!: £sr_dark_matter£1000 £darktec_contained_entropy£1000\n§Hクールダウン§!: 360 £time£\n\nあなたの艦隊は§Yエントロピー崩壊装置§!を起動します.$TABBED_NEW_LINE$- このモジュールを持つ全ての艦船はシールドを失い,§R自己デバフ§!を受けます.$TABBED_NEW_LINE$- システム内の全ての艦船は,失われたシールドの§Y5%§!を直接ダメージとして受けます.\n$TABBED_NEW_LINE$- このモジュールを持たない友軍艦船は,その衝撃波の§R影響§!を受けます.\n\n§Y最大20000ダメージで上限.§!\n\n自己デバフ:\n    $MOD_SHIP_SPEED_MULT$ = §R-100%§!\n    $MOD_SHIP_FIRE_RATE_MULT$: §R-100%§!\n\n    効果時間: §R30 £time£§!"
 	on_darktec_collapser_ability_title:0 "エントロピー崩壊"
 	on_darktec_collapser_ability_activity:0 "シールド崩壊中"
 	on_darktec_collapser_ability_progress:0 "シールド崩壊中"
 
-	on_darktec_interferer_ability_tooltip:0 "§H$on_darktec_interferer_ability_title$§!\n\n§Hコスト§!: £sr_dark_matter£1000 £darktec_contained_entropy£1000\n§Hクールダウン§!: 360 £time£\n\nあなたの艦隊は§Y真空干渉器§!を起動します。$TABBED_NEW_LINE$- このモジュールを持つ全ての艦船は、移動力とステルス性の大幅な自己改変ボーナスを得ます。$TABBED_NEW_LINE$- このモジュールを持たない友軍艦船は、一時的に装甲と船体の大半を§R失い§!ます。\n\n自己改変ボーナス:\n    $MOD_SHIP_CLOAKING_STRENGTH_ADD$: §R+20§!\n    $MOD_SHIP_SPEED_MULT$: §G+100%§!\n    $MOD_SHIP_EVASION_MULT$: §G+50%§!\n\n    効果時間: §Y60 £time£§!"
+	on_darktec_interferer_ability_tooltip:0 "§H$on_darktec_interferer_ability_title$§!\n\n§Hコスト§!: £sr_dark_matter£1000 £darktec_contained_entropy£1000\n§Hクールダウン§!: 360 £time£\n\nあなたの艦隊は§Y真空干渉器§!を起動します.$TABBED_NEW_LINE$- このモジュールを持つ全ての艦船は,移動力とステルス性の大幅な自己改変ボーナスを得ます.$TABBED_NEW_LINE$- このモジュールを持たない友軍艦船は,一時的に装甲と船体の大半を§R失い§!ます.\n\n自己改変ボーナス:\n    $MOD_SHIP_CLOAKING_STRENGTH_ADD$: §R+20§!\n    $MOD_SHIP_SPEED_MULT$: §G+100%§!\n    $MOD_SHIP_EVASION_MULT$: §G+50%§!\n\n    効果時間: §Y60 £time£§!"
 	on_darktec_interferer_ability_title:0 "真空干渉"
 	on_darktec_interferer_ability_activity:0 "信号干渉中"
 	on_darktec_interferer_ability_progress:0 "信号干渉中"
 
 	darktec_crisis_chain_title:0 "$darktec_ap_postbaryonic$"
 	darktec_crisis_chain_desc:0 "$darktec_ap_postbaryonic$[darktec_crisis_chain_desc_choice_1][darktec_crisis_chain_desc_choice_2][darktec_crisis_chain_desc_choice_2_5][darktec_crisis_chain_desc_choice_3][darktec_crisis_chain_desc_choice_4]"
-	darktec_crisis_chain_desc_choice_1_economy:0 "当初、我々はパラマターの応用を産業利用に集中させ、生産量を改善し、パラマターの採集能力を増強しました。"
-	darktec_crisis_chain_desc_choice_1_warfare:0 "当初、我々はパラマターの応用を戦争目的に集中させ、物質の状態間を自在に移行できる現実を歪める艦船を創造しました。"
-	darktec_crisis_chain_desc_choice_1_applications:0 "当初、我々はパラマターの応用を科学的および種族の目的に集中させ、自らの特性の一部をパラマターと融合させる方法を獲得しました。"
+	darktec_crisis_chain_desc_choice_1_economy:0 "当初,我々はパラマターの応用を産業利用に集中させ,生産量を改善し,パラマターの採集能力を増強しました."
+	darktec_crisis_chain_desc_choice_1_warfare:0 "当初,我々はパラマターの応用を戦争目的に集中させ,物質の状態間を自在に移行できる現実を歪める艦船を創造しました."
+	darktec_crisis_chain_desc_choice_1_applications:0 "当初,我々はパラマターの応用を科学的および種族の目的に集中させ,自らの特性の一部をパラマターと融合させる方法を獲得しました."
 
-	darktec_crisis_chain_desc_choice_2_transformation:0 "しかし、根本的なレベルで我々の物質とエントロピーを結合させたことで事態は劇的に変化し、我々は変容しました。そして今、我々はエントロフィーリアルへと変貌を遂げました。"
-	darktec_crisis_chain_desc_choice_2_taint:0 "しかし事態は劇的に変化し、我々は自らの本質を調和したダークマターと結合させることを決断しました。それによって、我々自身、我々の存在様式、そして他の発展への応用方法をさらに向上させました。"
+	darktec_crisis_chain_desc_choice_2_transformation:0 "しかし,根本的なレベルで我々の物質とエントロピーを結合させたことで事態は劇的に変化し,我々は変容しました.そして今,我々はエントロフィーリアルへと変貌を遂げました."
+	darktec_crisis_chain_desc_choice_2_taint:0 "しかし事態は劇的に変化し,我々は自らの本質を調和したダークマターと結合させることを決断しました.それによって,我々自身,我々の存在様式,そして他の発展への応用方法をさらに向上させました."
 
-	darktec_crisis_chain_desc_choice_2_5_built_sphere:0 "エントロピー場とダークマター場の両方を研究した結果、我々はパラマターを集中させることで特定の時空間点を作り出し、我々の意のままに現実を操作するために使用できる強力な「特異点」を創造することが可能であるという結論に達しました。"
+	darktec_crisis_chain_desc_choice_2_5_built_sphere:0 "エントロピー場とダークマター場の両方を研究した結果,我々はパラマターを集中させることで特定の時空間点を作り出し,我々の意のままに現実を操作するために使用できる強力な「特異点」を創造することが可能であるという結論に達しました."
 
-	darktec_crisis_chain_desc_choice_3_do_nothing:0 "特異点が不安定であることを初めて察知した時、我々はそれが自らの進路を辿るに任せることにしました。なぜなら、介入は…逆効果になりかねなかったからです。"
-	darktec_crisis_chain_desc_choice_3_overload_dm:0 "特異点が不安定であることを初めて察知した時、我々はエントロピー採集の副産物でそれを飽和させることにより、ダークマターの保護層を増強することを決定しました。"
-	darktec_crisis_chain_desc_choice_3_overload_entro:0 "特異点が不安定であることを初めて察知した時、我々はその表面で繰り広げられている闇の勢力の二重の戦いを安定させるため、さらに集束されたエントロピーを供給することを決定しました。"
+	darktec_crisis_chain_desc_choice_3_do_nothing:0 "特異点が不安定であることを初めて察知した時,我々はそれが自らの進路を辿るに任せることにしました.なぜなら,介入は...逆効果になりかねなかったからです."
+	darktec_crisis_chain_desc_choice_3_overload_dm:0 "特異点が不安定であることを初めて察知した時,我々はエントロピー採集の副産物でそれを飽和させることにより,ダークマターの保護層を増強することを決定しました."
+	darktec_crisis_chain_desc_choice_3_overload_entro:0 "特異点が不安定であることを初めて察知した時,我々はその表面で繰り広げられている闇の勢力の二重の戦いを安定させるため,さらに集束されたエントロピーを供給することを決定しました."
 
-	darktec_crisis_chain_desc_choice_4_do_nothing:0 "辛抱強く、特異点がその周囲の時空間を変化させ始め、終末を迎える前に、我々は待ちました。"
-	darktec_crisis_chain_desc_choice_4_overload_entrophereals:0 "特異点がその周囲の時空間の流れを変化させ始めた後、これ以上の不安定性や破壊を危険にさらすことはできませんでした。そのため、我々は未成形の住民の一部をその表面に移動させることを決定し、そこで彼らは明らかに成功を収めました。"
-	darktec_crisis_chain_desc_choice_4_overload_dm:0 "特異点の外部シールドがさらに多くのダークマターで強化されるにつれて、特異点の不規則性は薄れていきます。"
-	darktec_crisis_chain_desc_choice_4_overload_entropy:0 "特異点の内部の力が衰えるにつれて、我々はさらに多くのパラマターを特異点に過剰供給しました。そしてついに、それを安定させました。"
+	darktec_crisis_chain_desc_choice_4_do_nothing:0 "辛抱強く,特異点がその周囲の時空間を変化させ始め,終末を迎える前に,我々は待ちました."
+	darktec_crisis_chain_desc_choice_4_overload_entrophereals:0 "特異点がその周囲の時空間の流れを変化させ始めた後,これ以上の不安定性や破壊を危険にさらすことはできませんでした.そのため,我々は未成形の住民の一部をその表面に移動させることを決定し,そこで彼らは明らかに成功を収めました."
+	darktec_crisis_chain_desc_choice_4_overload_dm:0 "特異点の外部シールドがさらに多くのダークマターで強化されるにつれて,特異点の不規則性は薄れていきます."
+	darktec_crisis_chain_desc_choice_4_overload_entropy:0 "特異点の内部の力が衰えるにつれて,我々はさらに多くのパラマターを特異点に過剰供給しました.そしてついに,それを安定させました."
 
 
-	darktec_crisis_postbaryonic_level_2_require_enough_currency_completed:0 "十分な$darktec_contained_entropy_with_icon$を獲得した。"
-	darktec_crisis_postbaryonic_level_2_require_enough_currency:0 "十分な$darktec_contained_entropy_with_icon$の蓄積が必要。"
-	darktec_crisis_postbaryonic_level_3_require_enough_currency_completed:0 "十分な$darktec_contained_entropy_with_icon$を獲得した。"
-	darktec_crisis_postbaryonic_level_3_require_enough_currency:0 "十分な$darktec_contained_entropy_with_icon$の蓄積が必要。"
-	darktec_crisis_postbaryonic_level_4_require_situation_completed:0 "エントロピー変容状況を完了し、十分な$darktec_contained_entropy_with_icon$を蓄積した。"
-	darktec_crisis_postbaryonic_level_4_require_situation:0 "状況の完了を要する。"
-	darktec_crisis_postbaryonic_level_5_require_situation_completed:0 "十分な$darktec_contained_entropy_with_icon$を獲得した。"
-	darktec_crisis_postbaryonic_level_5_require_situation:0 "十分な$darktec_contained_entropy_with_icon$を獲得した。"
+	darktec_crisis_postbaryonic_level_2_require_enough_currency_completed:0 "十分な$darktec_contained_entropy_with_icon$を獲得した."
+	darktec_crisis_postbaryonic_level_2_require_enough_currency:0 "十分な$darktec_contained_entropy_with_icon$の蓄積が必要."
+	darktec_crisis_postbaryonic_level_3_require_enough_currency_completed:0 "十分な$darktec_contained_entropy_with_icon$を獲得した."
+	darktec_crisis_postbaryonic_level_3_require_enough_currency:0 "十分な$darktec_contained_entropy_with_icon$の蓄積が必要."
+	darktec_crisis_postbaryonic_level_4_require_situation_completed:0 "エントロピー変容状況を完了し,十分な$darktec_contained_entropy_with_icon$を蓄積した."
+	darktec_crisis_postbaryonic_level_4_require_situation:0 "状況の完了を要する."
+	darktec_crisis_postbaryonic_level_5_require_situation_completed:0 "十分な$darktec_contained_entropy_with_icon$を獲得した."
+	darktec_crisis_postbaryonic_level_5_require_situation:0 "十分な$darktec_contained_entropy_with_icon$を獲得した."
 
 	edict_darktec_edict_chimerical_dark_matter:0 "幽幻の闇"
 	edict_darktec_edict_chimerical_dark_matter_desc:0 "破棄済み"
@@ -1040,8 +1040,8 @@ l_japanese:
 	mod_mod_darktec_umbral_boost:0 "幽影建造物強化"
 
 	darktec_sphere_0:0 "凝縮異常体"
-	darktec_sphere_0_DESC:0 "エントロピーが集積し、疑似天体として顕現したもの。強大な暗黒物質フィールドによって封じ込められており、その境界では物理法則が改変される。"
-	darktec_sphere_0_MEGASTRUCTURE_DETAILS:0 "§Y$darktec_sphere_0$§!は、エントロピーが集積し、疑似天体として顕現したもの。強大な暗黒物質フィールドによって封じ込められており、その境界では物理法則が改変される。"
+	darktec_sphere_0_DESC:0 "エントロピーが集積し,疑似天体として顕現したもの.強大な暗黒物質フィールドによって封じ込められており,その境界では物理法則が改変される."
+	darktec_sphere_0_MEGASTRUCTURE_DETAILS:0 "§Y$darktec_sphere_0$§!は,エントロピーが集積し,疑似天体として顕現したもの.強大な暗黒物質フィールドによって封じ込められており,その境界では物理法則が改変される."
 
 	darktec_sphere_1:0 "凝縮異常体 - I"
 	darktec_sphere_1_DESC:0 "$darktec_sphere_0_DESC$"
@@ -1210,7 +1210,7 @@ l_japanese:
 
 
 	DARKTEC_SPHERE_BREACHING:0 "「エントロピー反転」"
-	DARKTEC_SPHERE_BREACHING_DESC:0 "「封じ込めた異常現象に十分なパラ物質を与え、今や崩壊寸前だ。\nしかし、我々の手で崩壊を強制すれば、理論的には局所的な現実の書き換え、我々の思考や思想そのものの書き換えが可能となるだろう。」"
+	DARKTEC_SPHERE_BREACHING_DESC:0 "「封じ込めた異常現象に十分なパラ物質を与え,今や崩壊寸前だ.\nしかし,我々の手で崩壊を強制すれば,理論的には局所的な現実の書き換え,我々の思考や思想そのものの書き換えが可能となるだろう.」"
 
 	DARKTEC_ANTICRISIS_PROTECTION:0 "破棄済み"
 	DARKTEC_ANTICRISIS_PROTECTION_DESC:0 "「REPLDISCARDEDACE_ME」"

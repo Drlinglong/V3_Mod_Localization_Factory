@@ -1,12 +1,12 @@
-﻿l_simp_chinese:
+l_simp_chinese:
  
  # Events
- nz_agitators.1.t:  "这合理吗？"
- nz_agitators.1.d:  "[ROOT.GetCountry.GetAdjectiveNoFormatting]基督教妇女禁酒联盟的普选部，在基督教社会主义者[SCOPE.sCharacter('historic_agitator_scope').GetFullName]的领导下，已开始在全国范围内征集数千名女性的签名，以强烈支持女性普选权。"
- nz_agitators.1.f:  "您的母亲、您的姐妹，被与罪犯和疯子归为一类，这合理吗？当赌徒、酒鬼乃至虐妻者都有投票权时，认真、受过教育且高雅的女性却被剥夺了这项权利，这合理吗？一个母亲竟被认为不配拥有投票权，而这项权利却被随意赋予了亵渎者、骗子、诱惑者和放荡者，这合理吗？"
- nz_agitators.1.a:  "如此强大的民意展现，不容小觑！"
- nz_agitators.1.b:  "她应该停止抛弃女性本分，别再插手她一无所知的事情了。"
- nz_agitators.1.c:  "她会非常适合劳工事业！教育、煽动、组织！"
+ nz_agitators.1.t:  "这合理吗?"
+ nz_agitators.1.d:  "[ROOT.GetCountry.GetAdjectiveNoFormatting]基督教妇女禁酒联盟的普选部,在基督教社会主义者[SCOPE.sCharacter('historic_agitator_scope').GetFullName]的领导下,已开始在全国范围内征集数千名女性的签名,以强烈支持女性普选权."
+ nz_agitators.1.f:  "您的母亲,您的姐妹,被与罪犯和疯子归为一类,这合理吗?当赌徒,酒鬼乃至虐妻者都有投票权时,认真,受过教育且高雅的女性却被剥夺了这项权利,这合理吗?一个母亲竟被认为不配拥有投票权,而这项权利却被随意赋予了亵渎者,骗子,诱惑者和放荡者,这合理吗?"
+ nz_agitators.1.a:  "如此强大的民意展现,不容小觑!"
+ nz_agitators.1.b:  "她应该停止抛弃女性本分,别再插手她一无所知的事情了."
+ nz_agitators.1.c:  "她会非常适合劳工事业!教育,煽动,组织!"
 
  # Modifiers
  modifier_sheppard_womens_rights_support:  "受欢迎的女性参政论者"

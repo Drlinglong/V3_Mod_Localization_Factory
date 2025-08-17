@@ -1,4 +1,4 @@
-﻿l_french:
+l_french:
 #living stadard
  mod_pop_category_workers_consumer_goods_upkeep_add:"Coût d'entretien en $consumer_goods_with_icon$ par 100 $WORKERS$"
  mod_pop_category_specialists_unity_upkeep_add:"Coût d'entretien en $unity_with_icon$ par 100 $SPECIALISTS$"
@@ -201,17 +201,17 @@
 
 ##job@concept
  BA_crew_pop:0 "£job_BA_Vigilant_crew£§BKivotos§!§PBrigade d'Autodéfense§! : Poste"
- BA_crew_pop_desc:0 "$BA_crew_pop$ produit $unity_with_icon$, et fournit $r_stability$ et §Y£mod_country_naval_cap_add£Capacité navale§!.$TABBED_NEW_LINE$—[BA_Vigilant_crew.GetNamePlural]$TABBED_NEW_LINE$—[BA_Valkyrie_police.GetNamePlural]"
+ BA_crew_pop_desc:0 "$BA_crew_pop$ produit $unity_with_icon$, et fournit $r_stability$ et §Y£mod_country_naval_cap_add£Capacité navale§!.$TABBED_NEW_LINE$-[BA_Vigilant_crew.GetNamePlural]$TABBED_NEW_LINE$-[BA_Valkyrie_police.GetNamePlural]"
  BA_staff_pop:0 "£job_BA_Kivotos_staff£§BKivotos§!§KPersonnel§! : Poste"
- BA_staff_pop_desc:0 "$BA_staff_pop$ produit $unity_with_icon$, $trade_with_icon$.$TABBED_NEW_LINE$—[BA_Kivotos_staff.GetNamePlural]$TABBED_NEW_LINE$—[BA_Kivotos_trader.GetNamePlural]"
+ BA_staff_pop_desc:0 "$BA_staff_pop$ produit $unity_with_icon$, $trade_with_icon$.$TABBED_NEW_LINE$-[BA_Kivotos_staff.GetNamePlural]$TABBED_NEW_LINE$-[BA_Kivotos_trader.GetNamePlural]"
  BA_club_pop:0 "£job_BA_club_members£§BKivotos§!§GMembre de Club§! : Poste"
- BA_club_pop_desc:0 "$BA_club_pop$ produit $physics_research_with_icon$, $society_research_with_icon$, $engineering_research_with_icon$.$TABBED_NEW_LINE$—[BA_club_members.GetNamePlural]$TABBED_NEW_LINE$—[BA_student_delegate.GetNamePlural]"
+ BA_club_pop_desc:0 "$BA_club_pop$ produit $physics_research_with_icon$, $society_research_with_icon$, $engineering_research_with_icon$.$TABBED_NEW_LINE$-[BA_club_members.GetNamePlural]$TABBED_NEW_LINE$-[BA_student_delegate.GetNamePlural]"
  BA_worker_pop:0 "£job_BA_Kivotos_miner£§BKivotos§!§vTravailleur Périphérique§! : Poste"
- BA_worker_pop_desc:0 "$BA_worker_pop$ produit $energy_with_icon$, $minerals_with_icon$, $food_with_icon$.$TABBED_NEW_LINE$—[BA_dont_be_crazy_here.GetNamePlural]$TABBED_NEW_LINE$—[BA_Kivotos_miner.GetNamePlural]$TABBED_NEW_LINE$—[BA_caterer.GetNamePlural]"
+ BA_worker_pop_desc:0 "$BA_worker_pop$ produit $energy_with_icon$, $minerals_with_icon$, $food_with_icon$.$TABBED_NEW_LINE$-[BA_dont_be_crazy_here.GetNamePlural]$TABBED_NEW_LINE$-[BA_Kivotos_miner.GetNamePlural]$TABBED_NEW_LINE$-[BA_caterer.GetNamePlural]"
  BA_industry_pop:0 "£BA_industry_pop£§BKivotos§!§MTecnicien Industriel§! : Poste"
- BA_industry_pop_desc:"$BA_industry_pop$ produit $alloys_with_icon$ ou $consumer_goods_with_icon$.$TABBED_NEW_LINE$—[BA_pyroxenes_artisan.GetNamePlural]$TABBED_NEW_LINE$—[BA_keystone_foundry.GetNamePlural]"
+ BA_industry_pop_desc:"$BA_industry_pop$ produit $alloys_with_icon$ ou $consumer_goods_with_icon$.$TABBED_NEW_LINE$-[BA_pyroxenes_artisan.GetNamePlural]$TABBED_NEW_LINE$-[BA_keystone_foundry.GetNamePlural]"
  BA_flex_pop:0 "£job_BA_flexible_workers£§BKivotos§!§ETravailleur Flexible§! : Poste"
- BA_flex_pop_desc:"$BA_flex_pop$ : La production et les frais d'entretien varient selon le type de planète.$TABBED_NEW_LINE$—[BA_flexible_workers.GetNamePlural]$TABBED_NEW_LINE$—[BA_scavenger.GetNamePlural]"
+ BA_flex_pop_desc:"$BA_flex_pop$ : La production et les frais d'entretien varient selon le type de planète.$TABBED_NEW_LINE$-[BA_flexible_workers.GetNamePlural]$TABBED_NEW_LINE$-[BA_scavenger.GetNamePlural]"
  BA_auto_pop:0 "£job_BA_ringworld_worker£§BKivotos§!§YÉlève de service aux installations automatiques§! : Poste"
- BA_auto_pop_desc:0 "$BA_auto_pop$ : La production et les frais d'entretien sont déterminés par les §H£district£Districts§! et la £zone£['concept_district_specialization'] de ce segment.$TABBED_NEW_LINE$—[BA_ringworld_worker.GetNamePlural]$TABBED_NEW_LINE$—[BA_student_on_duty.GetNamePlural]"
+ BA_auto_pop_desc:0 "$BA_auto_pop$ : La production et les frais d'entretien sont déterminés par les §H£district£Districts§! et la £zone£['concept_district_specialization'] de ce segment.$TABBED_NEW_LINE$-[BA_ringworld_worker.GetNamePlural]$TABBED_NEW_LINE$-[BA_student_on_duty.GetNamePlural]"
 

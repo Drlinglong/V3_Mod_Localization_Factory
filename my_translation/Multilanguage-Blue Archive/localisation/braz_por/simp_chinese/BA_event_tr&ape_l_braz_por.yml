@@ -1,14 +1,14 @@
-﻿l_braz_por:
+l_braz_por:
 ##### 飞升 #####
 #事件链
  BA_ape.0001.name:0 "A Proposta de Yuuka Koyama"
- BA_ape.0001.desc:0 "（Após a reconstrução de Kivotos ser concluída, Yuuka Koyama mergulhou de volta na biblioteca para continuar sua tarefa de restauração. Felizmente, a Biblioteca Antiga de Trindade não sofreu grandes perdas durante a guerra. Enquanto organizava os livros desorganizados, ela encontrou algo especial.）\n\n§M“Professor, acho que o senhor precisa ver isso.”§!\n\n（Certa manhã, ela, algo raro de se ver, saiu da Biblioteca Antiga de Trindade e correu até o escritório do Professor.）"
+ BA_ape.0001.desc:0 "(Após a reconstrução de Kivotos ser concluída, Yuuka Koyama mergulhou de volta na biblioteca para continuar sua tarefa de restauração. Felizmente, a Biblioteca Antiga de Trindade não sofreu grandes perdas durante a guerra. Enquanto organizava os livros desorganizados, ela encontrou algo especial.)\n\n§M“Professor, acho que o senhor precisa ver isso.”§!\n\n(Certa manhã, ela, algo raro de se ver, saiu da Biblioteca Antiga de Trindade e correu até o escritório do Professor.)"
  BA_ape.0001.a:0 "Mas que visita rara, não? Aconteceu alguma coisa?"
- BA_ape.0001.a.re:0 "§M“Sim... por favor, dê uma olhada nisto primeiro.”§!\n（Yuuka tira um pergaminho antigo e amarelado.）"
+ BA_ape.0001.a.re:0 "§M“Sim... por favor, dê uma olhada nisto primeiro.”§!\n(Yuuka tira um pergaminho antigo e amarelado.)"
  BA_ape.0001.b:0 "Um livro antigo? Mas aqui é a Agência de Exploração Interstellar."
  BA_ape.0001.b.re:0 "§M“Este livro... ele provavelmente estava na seção de livros proibidos. O que está escrito nele tem relação com as auréolas que temos sobre nossas cabeças... Para ser sincera, embora o Conselho Estudantil Federal tenha proibido anteriormente a pesquisa sobre as auréolas, sendo algo tão intrinsecamente ligado a nós, ainda assim não sabemos nada sobre sua verdadeira natureza...”§!\n...\n§M“Isso mesmo... eu gostaria de iniciar algumas pesquisas sobre as auréolas.”§!\n..."
  BA_ape.0001.c:0 "...Aprovado. Lembre-se, seja extremamente cautelosa."
- BA_ape.0001.c.re:0 "（Após uma profunda reflexão, finalmente decidi aprovar esta proposta.）\nDica: Complete a missão de reparo da Máquina de Fabricação de Pyroxene na interface da Arona. Yuuka Koyama se juntará à lista de líderes como cientista, por favor, verifique."
+ BA_ape.0001.c.re:0 "(Após uma profunda reflexão, finalmente decidi aprovar esta proposta.)\nDica: Complete a missão de reparo da Máquina de Fabricação de Pyroxene na interface da Arona. Yuuka Koyama se juntará à lista de líderes como cientista, por favor, verifique."
  BA_ape.0001.c.tip:0 "Este será um caminho glorioso, ou a chave para abrir a caixa de Pandora?"
 
  BA_ape.0002.name:0 "Notícias de Kivotos: Um Grande Salto"
@@ -38,7 +38,7 @@
  BA_ape.0005.g:0 "Fechar Arquivos"
 
  BA_ape.0006.name:0 "Conflito"
- BA_ape.0006.desc:0 "Com o fim da missão de reconhecimento da base da Numerologia, obtivemos alguns... conhecimentos que não sabemos bem como classificar.\n\nNós transmitimos os dados para os membros da equipe de pesquisa de auréolas, mas parece que uma disputa explodiu internamente entre elas — uma facção representada pelas estudantes da Academia Millennium e outra pelas estudantes da Trindade.\n\nAs estudantes da Millennium defendem que os dados deixados pela Numerologia devem ser organizados e modificados, e declararam claramente: 'Aquela teoria etérea anterior é muito incontrolável. É absolutamente necessário ter o poder da auréola completamente sob nosso próprio controle!'\n\nAs estudantes da Trindade, por outro lado, afirmam que é preciso manter um senso de reverência por assuntos desconhecidos, e que a teoria atual já alcançou resultados consideráveis.\n\nAmbas as partes estão em desacordo, e o progresso da pesquisa foi desacelerado. É necessário que alguém com influência suficiente tome uma decisão. (Dica: Você pode consultar a atual Presidente do Conselho Estudantil no painel de comunicações para pedir uma opinião (mas ainda não implementado))."
+ BA_ape.0006.desc:0 "Com o fim da missão de reconhecimento da base da Numerologia, obtivemos alguns... conhecimentos que não sabemos bem como classificar.\n\nNós transmitimos os dados para os membros da equipe de pesquisa de auréolas, mas parece que uma disputa explodiu internamente entre elas - uma facção representada pelas estudantes da Academia Millennium e outra pelas estudantes da Trindade.\n\nAs estudantes da Millennium defendem que os dados deixados pela Numerologia devem ser organizados e modificados, e declararam claramente: 'Aquela teoria etérea anterior é muito incontrolável. É absolutamente necessário ter o poder da auréola completamente sob nosso próprio controle!'\n\nAs estudantes da Trindade, por outro lado, afirmam que é preciso manter um senso de reverência por assuntos desconhecidos, e que a teoria atual já alcançou resultados consideráveis.\n\nAmbas as partes estão em desacordo, e o progresso da pesquisa foi desacelerado. É necessário que alguém com influência suficiente tome uma decisão. (Dica: Você pode consultar a atual Presidente do Conselho Estudantil no painel de comunicações para pedir uma opinião (mas ainda não implementado))."
  BA_ape.0006.a:0 "...De qualquer forma, a burocracia interna do Conselho Estudantil Federal é inevitável."
 
  BA_ape.0007.name:0 "Decisão"
@@ -130,7 +130,7 @@
 
  BA_Kivotos_chronicle_effect_stage1:0 "§H£district£$BA_districts_dome$§! fornece mais §C£job£ vagas§!, e todos os §H£district£ distritos§! receberão mais £housing£ habitação."
  BA_Kivotos_chronicle_effect_stage2:0 "As §C£job£ vagas§! fornecidas por §H£district£$BA_districts_suburbs$§! terão a produção aumentada e desbloquearão uma £zone£['concept_district_specialization'] focada em §Yum§! dos £energy£ £minerals£ £food£ recursos básicos."
- BA_Kivotos_chronicle_effect_stage3:0 "A produção e o consumo das §C£job£ vagas§! fornecidas por §H£district£$BA_districts_military_factory$§! são aumentados." #并且解锁特殊的行星决议：牺牲一些§l£district£区划上限§!以进一步提升此区划提供的§C£job£岗位§!的的产出与消耗
+ BA_Kivotos_chronicle_effect_stage3:0 "A produção e o consumo das §C£job£ vagas§! fornecidas por §H£district£$BA_districts_military_factory$§! são aumentados." #并且解锁特殊的行星决议:牺牲一些§l£district£区划上限§!以进一步提升此区划提供的§C£job£岗位§!的的产出与消耗
  BA_Kivotos_chronicle_effect_stage4:0 "Desbloqueia dois distritos autônomos adicionais para Planetas da Cidade Acadêmica, que podem ser planejados livremente. Desbloqueia mais §H£building£ construções§! e melhorias, fornecendo mais §Cvagas únicas da Cidade Acadêmica§! e permitindo-as produzir §Brecursos raros§!."
  BA_Kivotos_chronicle_effect_stage5:0 "§H£district£$BA_districts_municipality$§! fornecerá mais §C£job£ vagas§!, e as §G§Cvagas únicas da Cidade Acadêmica§!§! §Ynão mais prejudicarão a £stability£ estabilidade planetária, nem exigirão taxa de manutenção de £influence£$influence$.§!"
  BA_Kivotos_chronicle_effect_stage6:0 "Velocidade de construção e melhoria de Naves, Bases Estelares e Megastruturas §G+50%§!. Permite melhorar as §Cconstruções da Cidade Acadêmica§!, fortalecendo seus efeitos e fornecendo grandes quantidades de $trade_with_icon$."

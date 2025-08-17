@@ -1,4 +1,4 @@
-﻿l_french:
+l_french:
 ##### 飞升 #####
 #事件链
  BA_ape.0001.name:0 "La proposition de Yuuka Koseki"
@@ -130,7 +130,7 @@
 
  BA_Kivotos_chronicle_effect_stage1:0 "Le §H£district£$BA_districts_dome$§! fournit plus de §C£job£emplois§!, et tous les §H£district£districts§! obtiennent plus de £housing£logements§!."
  BA_Kivotos_chronicle_effect_stage2:0 "Le §H£district£$BA_districts_suburbs$§! augmente le rendement des §C£job£emplois§! et débloque une £zone£['concept_district_specialization'] spécialisée dans §Yl'une des§! £energy£ £minerals£ £food£ressources de base§!."
- BA_Kivotos_chronicle_effect_stage3:0 "Le §H£district£$BA_districts_military_factory$§! augmente le rendement et la consommation des §C£job£emplois§!." #并且解锁特殊的行星决议：牺牲一些§l£district£区划上限§!以进一步提升此区划提供的§C£job£岗位§!的的产出与消耗
+ BA_Kivotos_chronicle_effect_stage3:0 "Le §H£district£$BA_districts_military_factory$§! augmente le rendement et la consommation des §C£job£emplois§!." #并且解锁特殊的行星决议:牺牲一些§l£district£区划上限§!以进一步提升此区划提供的§C£job£岗位§!的的产出与消耗
  BA_Kivotos_chronicle_effect_stage4:0 "Débloque deux districts autonomes supplémentaires pour les planètes Cité-académie, à planifier librement. Débloque davantage de §H£building£bâtiments§! et d'améliorations, fournit plus d'§Cemplois uniques de Cité-académie£job£§! et leur permet de produire des §Bressources rares§!."
  BA_Kivotos_chronicle_effect_stage5:0 "Le §H£district£$BA_districts_municipality$§! fournira plus de §C£job£emplois§!, et les §G§Cemplois uniques de Cité-académie£job£§!§! ne §Ynuiront plus à la £stability£stabilité§! planétaire et ne nécessiteront plus de £influence£$influence$ de maintenance§!."
  BA_Kivotos_chronicle_effect_stage6:0 "Vitesse de construction et d'amélioration des vaisseaux, bases stellaires et mégastructures §G+50%§!. Permet d'améliorer les §Cbâtiments de Cité-académie§! pour en renforcer les effets et obtenir une grande quantité de $trade_with_icon$."

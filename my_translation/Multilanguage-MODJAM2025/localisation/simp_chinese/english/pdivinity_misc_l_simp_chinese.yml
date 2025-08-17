@@ -1,4 +1,4 @@
-﻿l_simp_chinese:
+l_simp_chinese:
 
  #######################################
  ### project_divinity_misc_l_english ###
@@ -10,24 +10,24 @@
  ############
 
  pc_pdivinity_shrouded_hole:0 "虚境隧道"
- pc_pdivinity_shrouded_hole_desc:0 "虚境的裂口，由物质的彻底坍塌所形成。虚境隧道拥有极其强大的引力场，甚至能阻止光线逃脱虚境自身的掌控。"
+ pc_pdivinity_shrouded_hole_desc:0 "虚境的裂口,由物质的彻底坍塌所形成.虚境隧道拥有极其强大的引力场,甚至能阻止光线逃脱虚境自身的掌控."
 
  #############
  ### trait ###
  #############
 
  trait_pdivinity_shroud_touched:0 "虚境眷者"
- trait_pdivinity_shroud_touched_desc:0 "§L命运建筑师§R的仆从§!\n该物种自远古时代起便被塑造，以抵御大规模灵能的腐蚀性影响。在虚境相位星球上，它们将免受任何惩罚。"
- pdivinity_shroud_touched_tooltip:0 "\n§L在虚境相位星球上：\n- §Y$mod_planet_psionic_jobs_produces_mult$§!: §G25%§!\n- §Y$MOD_POP_HAPPINESS$§!: §G10%§!\n- §Y星球宜居度§! §G100%§!"
+ trait_pdivinity_shroud_touched_desc:0 "§L命运建筑师§R的仆从§!\n该物种自远古时代起便被塑造,以抵御大规模灵能的腐蚀性影响.在虚境相位星球上,它们将免受任何惩罚."
+ pdivinity_shroud_touched_tooltip:0 "\n§L在虚境相位星球上:\n- §Y$mod_planet_psionic_jobs_produces_mult$§!: §G25%§!\n- §Y$MOD_POP_HAPPINESS$§!: §G10%§!\n- §Y星球宜居度§! §G100%§!"
 
  leader_trait_pdivinity_chosen_by_the_eye:0 "巨眼眷者"
- leader_trait_pdivinity_chosen_by_the_eye_desc:0 "由建筑师亲自选定，这位领袖是一位不朽的存在，拥有着不可思议的灵能力量。"
+ leader_trait_pdivinity_chosen_by_the_eye_desc:0 "由建筑师亲自选定,这位领袖是一位不朽的存在,拥有着不可思议的灵能力量."
  ######################
  ### ascension perk ###
  ######################
 
  ap_pdivinity:0 "神性计划"
- ap_pdivinity_desc:0 "一个声音在星辰之外的深渊中骚动，古老、莫测，并充斥着可怕的意图。它穿透薄纱低语，渗入我们的梦境，用并非我们自身的神圣意志腐蚀我们的思想。我们被选中回应此呼唤，侍奉命运建筑师，并成为比我们自身更伟大的不可避免命运的工具。"
+ ap_pdivinity_desc:0 "一个声音在星辰之外的深渊中骚动,古老,莫测,并充斥着可怕的意图.它穿透薄纱低语,渗入我们的梦境,用并非我们自身的神圣意志腐蚀我们的思想.我们被选中回应此呼唤,侍奉命运建筑师,并成为比我们自身更伟大的不可避免命运的工具."
 
  must_not_be_homicidal:0 "$TRIGGER_FAIL$ 种族灭绝帝国无法选择此飞升天赋"
  must_be_psionic:0 "$TRIGGER_FAIL$ 必须已完成灵能飞升"
@@ -37,15 +37,15 @@
  ##############
 
  pdivinitiy_psionic_army:0 "灵能幻影"
- pdivinitiy_psionic_army_desc:0 "这些军队是黑暗灵能的显现，它们游荡于战场，既非完全生者亦非彻底死者，受建筑师莫测意志的驱使。"
+ pdivinitiy_psionic_army_desc:0 "这些军队是黑暗灵能的显现,它们游荡于战场,既非完全生者亦非彻底死者,受建筑师莫测意志的驱使."
 
  #####################
  ### tech category ###
  #####################
 
  pdivinity_eye:0 "命运"
- pdivinity_eye_desc:0 "来自我们最伟大的赞助者，§R命运建筑师§!的虚境科技。"
- mod_category_pdivinity_eye_research_speed_mult:0 "研究速度（§R命运§!）"
+ pdivinity_eye_desc:0 "来自我们最伟大的赞助者,§R命运建筑师§!的虚境科技."
+ mod_category_pdivinity_eye_research_speed_mult:0 "研究速度(§R命运§!)"
 
 
  ################
@@ -53,11 +53,11 @@
  ################
 
  decision_pdivinity_shroud_phasing:0 "虚境相位"
- decision_pdivinity_shroud_phasing_desc:0 "通过削弱此世界与虚境之间的界限，我们能够重塑现实本身，提升信仰者，同时将不信者投入活生生的噩梦之中，以侍奉§R命运建筑师§!。"
- pdivinity_shroud_phasing_tooltip:0 "§Y$pdivinity_shroud_phased_modifier$§!修正器已添加。\n\n提高£pop£ §G虚境眷者人口产出§!，但降低£pop£ §Y非虚境眷者人口产出§!。"
+ decision_pdivinity_shroud_phasing_desc:0 "通过削弱此世界与虚境之间的界限,我们能够重塑现实本身,提升信仰者,同时将不信者投入活生生的噩梦之中,以侍奉§R命运建筑师§!."
+ pdivinity_shroud_phasing_tooltip:0 "§Y$pdivinity_shroud_phased_modifier$§!修正器已添加.\n\n提高£pop£ §G虚境眷者人口产出§!,但降低£pop£ §Y非虚境眷者人口产出§!."
  pdivinity_shroud_phased_modifier:0 "虚境相位"
- pdivinity_shroud_phased_modifier_desc:0 "此世界的帷幕已被刻意削薄。对于§G虚境眷者§!而言，现实变得流畅，一个由思想塑造的乐园。但对所有其他人来说，自然法则崩溃，梦境渗入噩梦，存在在§R命运建筑师§!的凝视下变为折磨。"
- pdivinity_shroud_phased_modifier_tooltip:0 "§G虚境眷者§! £pop£人口：\n- §Y$mod_planet_psionic_jobs_produces_mult$§!: §G25%§!\n- §Y$MOD_POP_HAPPINESS$§!: §G10%§!\n- §Y星球宜居度§! §G100%§!\n\n§Y非虚境眷者§! £pop£人口：\n- §Y星球宜居度§!: §R-75%§!\n- $MOD_POP_HAPPINESS$: §R-25%§!\n- $MOD_LOGISTIC_GROWTH_MULT$: §R-50%§!"
+ pdivinity_shroud_phased_modifier_desc:0 "此世界的帷幕已被刻意削薄.对于§G虚境眷者§!而言,现实变得流畅,一个由思想塑造的乐园.但对所有其他人来说,自然法则崩溃,梦境渗入噩梦,存在在§R命运建筑师§!的凝视下变为折磨."
+ pdivinity_shroud_phased_modifier_tooltip:0 "§G虚境眷者§! £pop£人口:\n- §Y$mod_planet_psionic_jobs_produces_mult$§!: §G25%§!\n- §Y$MOD_POP_HAPPINESS$§!: §G10%§!\n- §Y星球宜居度§! §G100%§!\n\n§Y非虚境眷者§! £pop£人口:\n- §Y星球宜居度§!: §R-75%§!\n- $MOD_POP_HAPPINESS$: §R-25%§!\n- $MOD_LOGISTIC_GROWTH_MULT$: §R-50%§!"
 
 
  #########################
@@ -73,7 +73,7 @@
  #################
 
  pdivinity_cult_attack:0 "恐怖袭击"
- pdivinity_cult_attack_desc:0 "这颗星球最近遭到了虚境实体的袭击。"
+ pdivinity_cult_attack_desc:0 "这颗星球最近遭到了虚境实体的袭击."
 
  mod_country_resource_max_energy_add:0 "能源币储备容量"
  mod_country_resource_max_sr_zro_add:0 "Zro储备容量"
@@ -84,25 +84,25 @@
  ############
  job_pdivinity_zro_harvester:0 "泽洛收割机"
  job_pdivinity_zro_harvester_plural:0 "Zro采集者"
- job_pdivinity_zro_harvester_desc:0 "$pdivinity_zro_harvester_plural$在建于灵能断裂带之上的圣殿中运作。在那里，他们通过仪式和启示，并非开采，而是直接从虚境中汲取Zro。"
+ job_pdivinity_zro_harvester_desc:0 "$pdivinity_zro_harvester_plural$在建于灵能断裂带之上的圣殿中运作.在那里,他们通过仪式和启示,并非开采,而是直接从虚境中汲取Zro."
  job_pdivinity_zro_harvester_effect_desc:0 "£job_pdivinity_zro_harvester£ $pdivinity_zro_harvester_plural$将£minerals£转化为£sr_zro£ §Y$sr_zro$§!\n\n在§Y虚境相位§!星球上自动生产£sr_zro£ §Y$sr_zro$§!"
 
  mod_planet_telepaths_pdivinity_psionic_strength_produces_add:0 "$pdivinity_psionic_strength$ £pdivinity_psionic_strength£ 每 $pop_group_unit$ [telepath.GetIcon] [telepath.GetNamePlural]"
 
  purge_pdivinity_sacrifice:0 "仪式献祭"
- purge_pdivinity_sacrifice_desc:0 "那些不配建筑师设计之人，或许仍能派上用场。通过神圣的血肉与灵魂献祭，我们从虚境中汲取力量和恩宠。"
+ purge_pdivinity_sacrifice_desc:0 "那些不配建筑师设计之人,或许仍能派上用场.通过神圣的血肉与灵魂献祭,我们从虚境中汲取力量和恩宠."
  job_purge_pdivinity_sacrifice_job:0 "仪式献祭"
- job_purge_pdivinity_sacrifice_job_desc:0 "被选定的个体通过神圣仪式献祭给§R命运建筑师§!。他们的本质滋养虚境，并促进我们的神圣目标。"
+ job_purge_pdivinity_sacrifice_job_desc:0 "被选定的个体通过神圣仪式献祭给§R命运建筑师§!.他们的本质滋养虚境,并促进我们的神圣目标."
 
  ################
  ### building ###
  ################
 
  building_pdivinity_architect_shrine:0 "命运圣殿"
- building_pdivinity_architect_shrine_desc:0 "一座为荣耀命运建筑师而建造的宏伟圣殿。"
+ building_pdivinity_architect_shrine_desc:0 "一座为荣耀命运建筑师而建造的宏伟圣殿."
 
  building_pdivinity_shroud_harvester_building:0 "泽洛收割机"
- building_pdivinity_shroud_harvester_building_desc:0 "泽洛收割机建立在灵能断层之上，利用特殊设备直接从帷幕中收割泽洛。"
+ building_pdivinity_shroud_harvester_building_desc:0 "泽洛收割机建立在灵能断层之上,利用特殊设备直接从帷幕中收割泽洛."
 
  #####################
  ### megastructure ###
@@ -110,45 +110,45 @@
 
  # ruined megastructure
  pdivinity_shroud_needle_1_ruined:0 "残破的命运尖塔 - 根基"
- pdivinity_shroud_needle_1_ruined_DESC:0 "一座曾是神圣建筑的残破根基。其低语已然消逝。"
- pdivinity_shroud_needle_1_ruined_MEGASTRUCTURE_DETAILS:0 "不知道这是什么，不要填写这些名为_details的文本，我稍后会搞清楚。"
+ pdivinity_shroud_needle_1_ruined_DESC:0 "一座曾是神圣建筑的残破根基.其低语已然消逝."
+ pdivinity_shroud_needle_1_ruined_MEGASTRUCTURE_DETAILS:0 "不知道这是什么,不要填写这些名为_details的文本,我稍后会搞清楚."
 
  # ruined megastructure
  pdivinity_shroud_needle_2_ruined:0 "残破的命运尖塔 - 传导环"
- pdivinity_shroud_needle_2_ruined_DESC:0 "灵能导管的碎片环绕着虚空，惰性且破损。"
+ pdivinity_shroud_needle_2_ruined_DESC:0 "灵能导管的碎片环绕着虚空,惰性且破损."
  pdivinity_shroud_needle_2_ruined_MEGASTRUCTURE_DETAILS:0 ""
 
  # ruined megastructure
  pdivinity_shroud_needle_3_ruined:0 "残破的命运尖塔 - 导管核心"
- pdivinity_shroud_needle_3_ruined_DESC:0 "裂隙已然封闭。建筑师暂时撤退了。"
+ pdivinity_shroud_needle_3_ruined_DESC:0 "裂隙已然封闭.建筑师暂时撤退了."
  pdivinity_shroud_needle_3_ruined_MEGASTRUCTURE_DETAILS:0 ""
 
  # ruined megastructure
  pdivinity_shroud_needle_4_ruined:0 "残破的命运尖塔 - 共融阵列"
- pdivinity_shroud_needle_4_ruined_DESC:0 "信仰的回响在此萦绕，但建筑已然沉寂。"
+ pdivinity_shroud_needle_4_ruined_DESC:0 "信仰的回响在此萦绕,但建筑已然沉寂."
  pdivinity_shroud_needle_4_ruined_MEGASTRUCTURE_DETAILS:0 ""
 
  # stage 1
  pdivinity_shroud_needle_1:0 "命运尖塔 - 根基"
- pdivinity_shroud_needle_1_DESC:0 "尖塔的根基已然奠定。尽管它看似惰性，但它与来自帷幕彼端的微弱低语共鸣。"
+ pdivinity_shroud_needle_1_DESC:0 "尖塔的根基已然奠定.尽管它看似惰性,但它与来自帷幕彼端的微弱低语共鸣."
 
  # stage 2
  pdivinity_shroud_needle_2:0 "命运尖塔 - 传导环"
- pdivinity_shroud_needle_2_DESC:0 "一个巨大的放大器环如今环绕着这座建筑，将灵能和声聚焦到虚空中。帷幕正在骚动。"
+ pdivinity_shroud_needle_2_DESC:0 "一个巨大的放大器环如今环绕着这座建筑,将灵能和声聚焦到虚空中.帷幕正在骚动."
 
  # stage 3
  pdivinity_shroud_needle_3:0 "命运尖塔 - 导管核心"
- pdivinity_shroud_needle_3_DESC:0 "现实开始在核心周围扭曲。帷幕中的实体有所察觉。一道裂隙正在形成。"
+ pdivinity_shroud_needle_3_DESC:0 "现实开始在核心周围扭曲.帷幕中的实体有所察觉.一道裂隙正在形成."
 
  # stage 4
  pdivinity_shroud_needle_4:0 "命运尖塔 - 共融阵列"
- pdivinity_shroud_needle_4_DESC:0 "尖塔在吟唱。帷幕作出回应。银河系中的崇拜者感受到它的吸引，在已知空间的每个角落，邪教应运而生。"
+ pdivinity_shroud_needle_4_DESC:0 "尖塔在吟唱.帷幕作出回应.银河系中的崇拜者感受到它的吸引,在已知空间的每个角落,邪教应运而生."
 
  # stage 5
  pdivinity_shroud_needle_5:0 "命运尖塔 - 升华阶段"
- pdivinity_shroud_needle_5_DESC:0 "最终的结构已然完工。现实变得稀薄，濒临破碎。建筑师的降临无可避免。"
+ pdivinity_shroud_needle_5_DESC:0 "最终的结构已然完工.现实变得稀薄,濒临破碎.建筑师的降临无可避免."
 
- pdivinity_is_not_possible_rift:0 "\n£trigger_no£ 目标必须是以下之一：\n§Y黑洞§!\n§Y脉冲星§!\n§YA型恒星§!"
+ pdivinity_is_not_possible_rift:0 "\n£trigger_no£ 目标必须是以下之一:\n§Y黑洞§!\n§Y脉冲星§!\n§YA型恒星§!"
 
 
  ####################
@@ -179,15 +179,15 @@
  ####################
 
  specialist_pdivinity_acolyte:0 "侍从"
- specialist_pdivinity_acolyte_desc:0 "巨眼侍从。该帝国遵从§R命运建筑师§!的意志！"
- specialist_pdivinity_acolyte_summary:0 "£pdivinitiy_acolyte£侍从们专注于掌握建筑师的恩赐，但代价是工业的衰弱。"
+ specialist_pdivinity_acolyte_desc:0 "巨眼侍从.该帝国遵从§R命运建筑师§!的意志!"
+ specialist_pdivinity_acolyte_summary:0 "£pdivinitiy_acolyte£侍从们专注于掌握建筑师的恩赐,但代价是工业的衰弱."
 
  preset_pdivinity_acolyte:0 "侍从"
- preset_pdivinity_acolyte_desc:0 "巨眼侍从。该帝国遵从§R命运建筑师§!的意志！"
+ preset_pdivinity_acolyte_desc:0 "巨眼侍从.该帝国遵从§R命运建筑师§!的意志!"
 
  # modifier for acolyte hyper relay links
  specialist_pdivinity_acolyte_neighbor:0 "侍从守望者"
- specialist_pdivinity_acolyte_neighbor_desc:0 "靠近§R巨眼§!的信徒会灌输顺从、恐惧以及一种奇异的平静感。祂的意志所到之处，秩序随之建立。"
+ specialist_pdivinity_acolyte_neighbor_desc:0 "靠近§R巨眼§!的信徒会灌输顺从,恐惧以及一种奇异的平静感.祂的意志所到之处,秩序随之建立."
 
  ### stage 1
 
@@ -196,13 +196,13 @@
  pdivinity_acolyte_1_modifier_desc:0 "$MOD_COUNTRY_ALL_TECH_RESEARCH_SPEED$: §G+10%§!\n$mod_category_pdivinity_eye_research_speed_mult$: §G+15%§!\n$mod_country_sr_zro_produces_mult$: §G+15%§!"
 
  pdivinity_acolyte_1_insight:0 "侍僧洞察 I"
- pdivinity_acolyte_1_insight_desc:0 "§E添加至可研究科技：§!\n$t$£society£ $tech_psionic_theory$\n$t$£society£ $tech_mine_zro$"
+ pdivinity_acolyte_1_insight_desc:0 "§E添加至可研究科技:§!\n$t$£society£ $tech_psionic_theory$\n$t$£society£ $tech_mine_zro$"
 
  pdivinity_acolyte_1_shroud_storm:0 "帷幕风暴"
- pdivinity_acolyte_1_shield_desc:0 "§E己方星系内敌对飞船：§!\n$t$$MOD_SHIP_SHIELD_MULT$: §R-50%§!\n$t$$MOD_SHIP_WEAPON_RANGE_MULT$: §R-20%§!\n$t$$MOD_SHIP_TRACKING_ADD$: §R-15§!"
+ pdivinity_acolyte_1_shield_desc:0 "§E己方星系内敌对飞船:§!\n$t$$MOD_SHIP_SHIELD_MULT$: §R-50%§!\n$t$$MOD_SHIP_WEAPON_RANGE_MULT$: §R-20%§!\n$t$$MOD_SHIP_TRACKING_ADD$: §R-15§!"
 
  pdivinity_acolyte_1_neighbor:0 "侍僧守望者"
- pdivinity_acolyte_1_neighbor_desc:0 "靠近§R巨眼§!的信徒会灌输顺从、恐惧以及一种奇异的平静感。祂的意志所到之处，秩序随之建立。"
+ pdivinity_acolyte_1_neighbor_desc:0 "靠近§R巨眼§!的信徒会灌输顺从,恐惧以及一种奇异的平静感.祂的意志所到之处,秩序随之建立."
 
  ### stage 2
 
@@ -211,12 +211,12 @@
  pdivinity_acolyte_2_modifier_desc:0 "$MOD_COUNTRY_ALL_TECH_RESEARCH_SPEED$: §G+20%§!\n$mod_category_pdivinity_eye_research_speed_mult$: §G+25%§!\n$mod_country_sr_zro_produces_mult$: §G+25%§!"
 
  pdivinity_acolyte_2_insight:0 "侍僧洞察 II"
- pdivinity_acolyte_2_insight_desc:0 "§E添加至可研究科技：§!\n$t$£society£ $tech_pdivinity_shroud_harvester$"
+ pdivinity_acolyte_2_insight_desc:0 "§E添加至可研究科技:§!\n$t$£society£ $tech_pdivinity_shroud_harvester$"
 
  pdivinity_acolyte_2_psionic_capacity:0 "巨眼仆役"
 
  pdivinity_acolyte_2_components:0 "缔造者馈赠"
- pdivinity_acolyte_2_components_desc:0 "§E解锁研究：§!\n£pdivinitiy_acolyte£灵能飞船组件"
+ pdivinity_acolyte_2_components_desc:0 "§E解锁研究:§!\n£pdivinitiy_acolyte£灵能飞船组件"
 
  ### stage 3
 
@@ -225,20 +225,20 @@
  pdivinity_acolyte_3_modifier_desc:0 "$MOD_COUNTRY_ALL_TECH_RESEARCH_SPEED$: §G+50%§!\n$mod_category_pdivinity_eye_research_speed_mult$: §G+100%§!\n$mod_country_sr_zro_produces_mult$: §G+50%§!"
 
  pdivinity_acolyte_3_insight:0 "侍僧洞察 III"
- pdivinity_acolyte_3_insight_desc:0 "§E添加至可研究科技：§!\n$t$£society£ $tech_pdivinity_psionic_avatar$"
+ pdivinity_acolyte_3_insight_desc:0 "§E添加至可研究科技:§!\n$t$£society£ $tech_pdivinity_psionic_avatar$"
 
  pdivinity_acolyte_3_psionic_shielding:0 "超维护盾"
 
  pdivinity_acolyte_3_overlord:0 "巨眼之怒"
- pdivinity_acolyte_3_overlord_desc:0 "§E解锁研究：§!\n£pdivinitiy_acolyte£灵能武器"
+ pdivinity_acolyte_3_overlord_desc:0 "§E解锁研究:§!\n£pdivinitiy_acolyte£灵能武器"
  #################
  ### war stuff ###
  #################
 
  bombardment_pdivinity_psionic_rupture_bombardment:0 "灵能裂变"
- bombardment_pdivinity_psionic_rupture_bombardment_desc:0 "$bombardment_pdivinity_psionic_rupture_bombardment$ 轰炸用灵能能量覆盖行星，明确目标是将行星笼罩在帷幕之中。\n- 对§Y陆军§!造成§R巨额§!伤害\n- 对§Y行星§!造成§R巨额§!伤害\n- 对§Y人口§!造成§R巨额§!伤害\n- 将轰炸无防御的行星\n- 可将行星变为帷幕世界，或帷幕相变世界"
- pdivinity_bombed_to_shrouded_world:0 "§Y[From.GetName] 现已成为帷幕世界。§!"
- pdivinity_bombed_to_shroud_phased_world:0 "§Y[From.GetName] 已变为帷幕相变行星。§!"
+ bombardment_pdivinity_psionic_rupture_bombardment_desc:0 "$bombardment_pdivinity_psionic_rupture_bombardment$ 轰炸用灵能能量覆盖行星,明确目标是将行星笼罩在帷幕之中.\n- 对§Y陆军§!造成§R巨额§!伤害\n- 对§Y行星§!造成§R巨额§!伤害\n- 对§Y人口§!造成§R巨额§!伤害\n- 将轰炸无防御的行星\n- 可将行星变为帷幕世界,或帷幕相变世界"
+ pdivinity_bombed_to_shrouded_world:0 "§Y[From.GetName] 现已成为帷幕世界.§!"
+ pdivinity_bombed_to_shroud_phased_world:0 "§Y[From.GetName] 已变为帷幕相变行星.§!"
 
 
  casus_belli_cb_pdivinity_acolyte:0 "征服"

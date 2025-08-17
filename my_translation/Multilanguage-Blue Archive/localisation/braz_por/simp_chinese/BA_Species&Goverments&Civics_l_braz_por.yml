@@ -1,4 +1,4 @@
-﻿l_braz_por:
+l_braz_por:
 ###############################
  FLAG_CATEGORY_ba:0 "Bandeira de Blue Archive"
  name_list_Schale:0 "Blue Archive"
@@ -54,7 +54,7 @@
 #国家介绍及开始界面信息
  ETOSS:0 "ETOSS"
  EMPIRE_DESIGN_BA_ETO:0 "Organização do Tratado do Éden"
- EMPIRE_DESIGN_BA_ETO_desc:0 "Muito antes de sequer pensarmos em ir para o espaço, duas das maiores academias de Kivotos — a Santíssima Trindade e a Gehenna — após muitos percalços, finalmente assinaram o “Tratado do Éden”, estabelecendo a Organização do Tratado do Éden (ETO) para mediar as disputas seculares entre as duas academias e evitar uma guerra total.\nDesde então, embora muitas coisas desagradáveis tenham acontecido, a ETO, através de vários meios, conseguiu manter Kivotos unida, guiando-a através de chuvas de balas.\nEnquanto nos aventuramos no desconhecido com corações cheios de empolgação, também estamos, é claro, prontos para acertar todas as contas. Porque, afinal, estamos destinados a encontrar nossos velhos rivais novamente."
+ EMPIRE_DESIGN_BA_ETO_desc:0 "Muito antes de sequer pensarmos em ir para o espaço, duas das maiores academias de Kivotos - a Santíssima Trindade e a Gehenna - após muitos percalços, finalmente assinaram o “Tratado do Éden”, estabelecendo a Organização do Tratado do Éden (ETO) para mediar as disputas seculares entre as duas academias e evitar uma guerra total.\nDesde então, embora muitas coisas desagradáveis tenham acontecido, a ETO, através de vários meios, conseguiu manter Kivotos unida, guiando-a através de chuvas de balas.\nEnquanto nos aventuramos no desconhecido com corações cheios de empolgação, também estamos, é claro, prontos para acertar todas as contas. Porque, afinal, estamos destinados a encontrar nossos velhos rivais novamente."
  START_SCREEN_EDEN_TREATY:0 "Com a ajuda de alguém em quem confiávamos, conseguimos expulsar as Cores do nosso planeta natal, e com o empurrão da Santíssima Trindade, o Tratado do Éden foi redefinido. Com cada vez mais escolas aderindo ao Tratado, Kivotos finalmente pôde encerrar seus conflitos. Com o passar do tempo, os presidentes estudantis das academias que impulsionaram o Tratado formaram o novo Conselho Estudantil Federal, e enquanto voltamos nossos olhos para as estrelas, um futuro brilhante se estende diante de nós.\nNo entanto, nas profundezas do espaço, estamos destinados a encontrar nossos velhos rivais novamente."
  START_SCREEN_BA_ETO:0 "$EMPIRE_DESIGN_BA_ETO_desc$"
 
@@ -262,7 +262,7 @@
  BA_Shittem.3002.desc:0 "(Pouco depois de submeter o pedido, duas garotas estranhas vestindo o uniforme da §BAcademia de Tecnologia Millennium§! irromperam no escritório)"
  BA_Shittem.3002.a:0 "Vocês são?"
  BA_Shittem.3002.a.re:0 "§W“Shioyama Noah, do Seminário. Peço desculpas pela intrusão abrupta... Ou talvez devesse dizer, já faz um tempo que não nos vemos, Professor(a). Esta é Tendo Alice, do Departamento de Desenvolvimento de Jogos. Ficamos muito ocupadas com este pedido, e acredito que devo lhe fazer um relatório.”§!"
- BA_Shittem.3002.b:0 "…Olá, Alice, Noah."
+ BA_Shittem.3002.b:0 "...Olá, Alice, Noah."
  BA_Shittem.3002.b.re:0 "§W“Antes, nós, da Academia de Ciências do Milênio, estávamos muito interessados nas tecnologias que criaram a Aris, então tentamos fazer algumas varreduras e análises, e conseguimos fazer engenharia reversa em algumas tecnologias-chave que atualmente não conseguimos resolver. Graças à sua ajuda, desta vez criamos muitos protótipos e modelos, mas o nível de inteligência deles está longe de se comparar ao da Aris...\nAgora precisamos coletar muitos, muitos dados para otimizar a inteligência dos modelos de produção em massa, e a forma de fazer isso é permitir que a Aris realize vários trabalhos... Professor(a), o que acha disso?”§!"
  BA_Shittem.3002.c:0 "Que tal ir para o Conselho Estudantil Federal? O Escritório de Coordenação certamente te receberá de braços abertos."
  BA_Shittem.3002.c.re:0 "§B“Bip-bop-bip! Aris aceitou uma nova tarefa, Aris vai se esforçar para ajudar!”§!\n\n\n(Você pode atribuir Aris a outras funções na página 'Reserva de Líderes - Robôs Donzela')"

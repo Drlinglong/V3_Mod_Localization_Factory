@@ -1,4 +1,4 @@
-﻿l_simp_chinese:
+l_simp_chinese:
 ##################
 # hcp_ships_l_english.yml
 # By jam1066
@@ -11,7 +11,7 @@
  ###################
  hcp_PLANET_KILLER_STELLAR_HARVESTER:"“收割者无人机群”"
  hcp_PLANET_KILLER_STELLAR_HARVESTER_ACTION:"“收割星系”"
- PLANET_KILLER_CRACKER_DESC:"“一大群自主无人机被释放，以拆解系统中的一切。只有控制舰艇能幸免于它们的采矿激光。”"
+ PLANET_KILLER_CRACKER_DESC:"“一大群自主无人机被释放,以拆解系统中的一切.只有控制舰艇能幸免于它们的采矿激光.”"
  FLEETORDER_DESTROY_PLANET_WITH_hcp_PLANET_KILLER_STELLAR_HARVESTER:"“准备收割$PLANET|Y$”"
  
  ## Targeting Requirements
@@ -20,13 +20,13 @@
  hcp_is_your_megastructure_system:"“\n£trigger_no£ 不得瞄准包含己方奇点筒仓的星系”"
 
  hcp_SHIP_STELLAR_HARVESTER_REPLICATE:"“复制舱”"
- hcp_SHIP_STELLAR_HARVESTER_REPLICATE_DESC:"“这个专门的复制舱允许我们的恒星收割者利用它们收集到的资源来制造更多自身，确保我们的收割行动能够指数级增长。”"
- hcp_stellar_harvester_replicate_ship_button:"“§H复制§!\n\n§H花费§!: £minerals£$@hcp_replicate_cost|0$\n§H建造时间§!: 360 £time£\n\n命令恒星收割者§Y复制§!。”"
+ hcp_SHIP_STELLAR_HARVESTER_REPLICATE_DESC:"“这个专门的复制舱允许我们的恒星收割者利用它们收集到的资源来制造更多自身,确保我们的收割行动能够指数级增长.”"
+ hcp_stellar_harvester_replicate_ship_button:"“§H复制§!\n\n§H花费§!: £minerals£$@hcp_replicate_cost|0$\n§H建造时间§!: 360 £time£\n\n命令恒星收割者§Y复制§!.”"
  hcp_stellar_harvester_replicate_activity_key:"“正在复制”"
  hcp_stellar_harvester_replicate_menu_title:"“复制”"
  hcp_stellar_harvester_replicate_progress_activity_key:"“正在复制: §Y$PROGRESS$%§!”"
 
- hcp_stellar_harvester_depart_galaxy_ship_button:"“§H离开银河系§!\n\n§H花费§!: £energy£100000\n§H充能时间§!: 360 £time£\n\n命令恒星收割者§Y离开银河系§!。”"
+ hcp_stellar_harvester_depart_galaxy_ship_button:"“§H离开银河系§!\n\n§H花费§!: £energy£100000\n§H充能时间§!: 360 £time£\n\n命令恒星收割者§Y离开银河系§!.”"
  hcp_stellar_harvester_depart_galaxy_activity_key:"“正在充能星系际FTL”"
  hcp_stellar_harvester_depart_galaxy_menu_title:"“离开银河系”"
  hcp_stellar_harvester_depart_galaxy_progress_activity_key:"“正在充能星系际FTL: §Y$PROGRESS$%§!”"
@@ -73,6 +73,6 @@
 
  hcp_HARVESTER_STORAGE_title:"“£mod_country_resource_max_add£资源:”"
  hcp_HARVESTER_STORAGE_value:"“[this.hcp_harvester_stored_resources]”"
- hcp_HARVESTER_STORAGE_tt:"“收割者当前的资源储备，可用于能力或自我复制。”"
+ hcp_HARVESTER_STORAGE_tt:"“收割者当前的资源储备,可用于能力或自我复制.”"
 
  #end

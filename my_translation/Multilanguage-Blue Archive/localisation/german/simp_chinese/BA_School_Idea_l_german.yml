@@ -1,4 +1,4 @@
-﻿l_german:
+l_german:
  BA_SI:"Schulkonzept"
 
  MESSAGE_BA_SI_READY:"Schulkonzept bereit"
@@ -145,7 +145,7 @@
  ### 下左线
  SI_Gehenna_C01:"Letztes Urteil: Pandämonium-Gesellschaft"
  SI_Gehenna_C01_desc:"Die Führung der Pandämonium-Gesellschaft übertönte allmählich die Stimme des Disziplinarkomitees und erlangte das Entscheidungsrecht für Gehennas interne Angelegenheiten. Doch bei der Wahl des endgültigen Schlichters traf die Pandämonium-Gesellschaft eine unerwartete Entscheidung."
- SI_Gehenna_C01_effect:"\nEffekt:\n§HEmpfängt Reichsanpassung: §!$modifier_BA_SI_Gehenna_C01$(10800£time£):\n    $MOD_SHIP_WEAPON_DAMAGE$: §G+35%§!\n    $MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+35%§!\n    $MOD_ARMY_ATTACK_DAMAGE_MULT$: §G+35%§!\n    £stability£$MOD_PLANET_STABILITY_ADD$: §R-10§!\n    $MOD_EMPIRE_SIZE_POPS_MULT$: §R+25%§!\n" #§H统治者更换为§!：丹花伊吹\n
+ SI_Gehenna_C01_effect:"\nEffekt:\n§HEmpfängt Reichsanpassung: §!$modifier_BA_SI_Gehenna_C01$(10800£time£):\n    $MOD_SHIP_WEAPON_DAMAGE$: §G+35%§!\n    $MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+35%§!\n    $MOD_ARMY_ATTACK_DAMAGE_MULT$: §G+35%§!\n    £stability£$MOD_PLANET_STABILITY_ADD$: §R-10§!\n    $MOD_EMPIRE_SIZE_POPS_MULT$: §R+25%§!\n" #§H统治者更换为§!:丹花伊吹\n
  SI_Gehenna_C01_tip:"§C$SI_Gehenna_C01$§!\n$SI_Gehenna_C01_desc$\n$SI_Gehenna_C01_effect$"
 
  SI_Gehenna_C02:"Verborgene Prinzipien"
@@ -182,7 +182,7 @@
 
  SI_Gehenna_E02:"Eiserne Hand der Administratorin"
  SI_Gehenna_E02_desc:"Die Administratorin des Disziplinarkomitees ist das am besten informierte Mitglied und vollumfänglich mit der militärischen Verteilung in jeder Region vertraut. Um den Vorteil der Heimverteidigung zu nutzen und gleichzeitig andere interne Probleme zu vermeiden, muss die Befehlsgewalt direkt der Administratorin übertragen werden."
- SI_Gehenna_E02_effect:"\nEffekte:\n$MOD_SHIP_HOME_TERRITORY_FIRE_RATE_MULT$: §G+75%§!\n$MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+100%§!\n$MOD_STARBASE_SHIPYARD_BUILD_COST_MULT$: §R+10%§!\n" #\n处于防御战争下，本土舰队射速: §G+75%§!
+ SI_Gehenna_E02_effect:"\nEffekte:\n$MOD_SHIP_HOME_TERRITORY_FIRE_RATE_MULT$: §G+75%§!\n$MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+100%§!\n$MOD_STARBASE_SHIPYARD_BUILD_COST_MULT$: §R+10%§!\n" #\n处于防御战争下,本土舰队射速: §G+75%§!
  SI_Gehenna_E02_tip:"§C$SI_Gehenna_E02$§!\n$SI_Gehenna_E02_desc$\n$SI_Gehenna_E02_effect$"
 
  SI_Gehenna_E03:"Schrittweise Befestigung"
@@ -200,7 +200,7 @@
 
  SI_Millennium_G02:"Subventionierung des Gesamtnutzens"
  SI_Millennium_G02_desc:"Studien zeigen, dass die Gehälter von Forschern einen um ein Vielfaches höheren Wert erzeugen... Auch wenn dies verdächtig nach Eigenlob klingt, ist es logisch nachvollziehbar."
- SI_Millennium_G02_effect:"\nEffekte:\n$mod_planet_researchers_produces_mult$: §G+10%§!\n$mod_planet_researchers_upkeep_mult$: §R+5%§!\n$MOD_COUNTRY_NUM_TECH_ALTERNATIVES_ADD$: §G+1§!\n$MOD_LEADER_SKILL_LEVELS$: §G+1§!\n$MOD_PLANET_POP_ASSEMBLY_MULT$: §G+20%§!\n" #\n现在每十五个人口提供一个£pops£研究人员岗位。
+ SI_Millennium_G02_effect:"\nEffekte:\n$mod_planet_researchers_produces_mult$: §G+10%§!\n$mod_planet_researchers_upkeep_mult$: §R+5%§!\n$MOD_COUNTRY_NUM_TECH_ALTERNATIVES_ADD$: §G+1§!\n$MOD_LEADER_SKILL_LEVELS$: §G+1§!\n$MOD_PLANET_POP_ASSEMBLY_MULT$: §G+20%§!\n" #\n现在每十五个人口提供一个£pops£研究人员岗位.
  SI_Millennium_G02_tip:"§C$SI_Millennium_G02$§!\n$SI_Millennium_G02_desc$\n$SI_Millennium_G02_effect$"
 
  SI_Millennium_G03:"Private Forschungsfinanzierung durch Klubs"
@@ -285,7 +285,7 @@
 
  SI_Millennium_C03:"Dedizierte Rechenplattform"
  SI_Millennium_C03_desc:"Das Seminar hofft, dieses Modul als eine spezielle Arbeitsplattform für die Anführer des Imperiums zu nutzen, um die gesamte Verwaltungseffizienz des Imperiums zu steigern."
- SI_Millennium_C03_effect:"\n§RSchließt sich mit§!$SI_Millennium_C02$§R aus§!\nEffekt:\n$MOD_LEADER_SPECIES_EXP_GAIN$: §G+350%§!\nDer Rang aller aktuellen §Y$scientist$、$commander$、$official$§!-Anführer wird um §G1 erhöht§!.\n§YAlle 5 Jahre§! werden alle Anführer von normalen §Rnegativen Eigenschaften§! befreit.\n"
+ SI_Millennium_C03_effect:"\n§RSchließt sich mit§!$SI_Millennium_C02$§R aus§!\nEffekt:\n$MOD_LEADER_SPECIES_EXP_GAIN$: §G+350%§!\nDer Rang aller aktuellen §Y$scientist$,$commander$,$official$§!-Anführer wird um §G1 erhöht§!.\n§YAlle 5 Jahre§! werden alle Anführer von normalen §Rnegativen Eigenschaften§! befreit.\n"
  SI_Millennium_C03_tip:"§C$SI_Millennium_C03$§!\n$SI_Millennium_C03_desc$\n$SI_Millennium_C03_effect$"
 
  #####     圣三一     #####
@@ -300,7 +300,7 @@
  ### 左线
  SI_Trinity_A01:"Vorsitz der Philius-Fraktion"
  SI_Trinity_A01_desc:"Die Philius-Fraktion hatte einst die Unterzeichnung des Eden-Vertrags geleitet. Obwohl das Ergebnis nicht ganz ihren Wünschen entsprach, waren ihre gezeigten diplomatischen Fähigkeiten tadellos."
- SI_Trinity_A01_effect:"\n§RSchließt sich mit§!$SI_Trinity_B01$、$SI_Trinity_C01$§R aus§!\nEffekt:\n$mod_planet_jobs_unity_produces_mult$: §G+20%§!\n$MOD_EMPIRE_SIZE_SYSTEMS_MULT$: §G-10%§!\n$MOD_COUNCIL_AGENDA_PROGRESS_SPEED$: §G+15%§!\n"
+ SI_Trinity_A01_effect:"\n§RSchließt sich mit§!$SI_Trinity_B01$,$SI_Trinity_C01$§R aus§!\nEffekt:\n$mod_planet_jobs_unity_produces_mult$: §G+20%§!\n$MOD_EMPIRE_SIZE_SYSTEMS_MULT$: §G-10%§!\n$MOD_COUNCIL_AGENDA_PROGRESS_SPEED$: §G+15%§!\n"
  SI_Trinity_A01_tip:"§C$SI_Trinity_A01$§!\n$SI_Trinity_A01_desc$\n$SI_Trinity_A01_effect$"
 
  SI_Trinity_A02:"Dezentrale Bürokratie"

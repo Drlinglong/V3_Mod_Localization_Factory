@@ -1,15 +1,15 @@
-﻿l_simp_chinese:
+l_simp_chinese:
 
 #NEW 1.0
 
  rule_ztr_decolonization_content: "去殖民化内容 (科技与研究)"
  setting_allow_ztr_decolonization_content: "#tooltippable #tooltip:[GetPlayer.GetTooltipTag],setting_allow_ztr_decolonization_content_desc #high 已启用#!#!#!"
- setting_allow_ztr_decolonization_content_desc: "在本战役中允许去殖民化内容，以获得更具历史性的体验。"
+ setting_allow_ztr_decolonization_content_desc: "在本战役中允许去殖民化内容,以获得更具历史性的体验."
  setting_no_ztr_decolonization_content: "#tooltippable #tooltip:[GetPlayer.GetTooltipTag],setting_no_ztr_decolonization_content_desc #high 已禁用#!#!#!"
- setting_no_ztr_decolonization_content_desc: "在本战役中禁用去殖民化内容，以获得原版且侧重于世界征服的玩法体验。"
+ setting_no_ztr_decolonization_content_desc: "在本战役中禁用去殖民化内容,以获得原版且侧重于世界征服的玩法体验."
 
  rule_ztr_historical_content: "历史内容 (科技与研究)"
  setting_allow_ztr_historical_content: "#tooltippable #tooltip:[GetPlayer.GetTooltipTag],setting_allow_ztr_historical_content_desc #high 已启用#!#!#!"
- setting_allow_ztr_historical_content_desc: "允许历史内容，目前与奥地利和奥斯曼帝国的衰落相关。"
+ setting_allow_ztr_historical_content_desc: "允许历史内容,目前与奥地利和奥斯曼帝国的衰落相关."
  setting_no_ztr_historical_content: "#tooltippable #tooltip:[GetPlayer.GetTooltipTag],setting_no_ztr_historical_content_desc #high 已禁用#!#!#!"
- setting_no_ztr_historical_content_desc: "在本战役中禁用历史内容，以获得原版玩法体验。"
+ setting_no_ztr_historical_content_desc: "在本战役中禁用历史内容,以获得原版玩法体验."

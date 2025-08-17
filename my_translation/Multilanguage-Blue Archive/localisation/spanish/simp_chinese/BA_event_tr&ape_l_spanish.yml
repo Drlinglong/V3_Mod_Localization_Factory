@@ -1,22 +1,22 @@
-﻿l_spanish:
+l_spanish:
 ##### 飞升 #####
 #事件链
  BA_ape.0001.name:0 "La Propuesta de Koseki Yuu"
  BA_ape.0001.desc:0 "(Una vez completada la reconstrucción de Kivotos, Koseki Yuu se sumergió de nuevo en la biblioteca para continuar con sus tareas de restauración. Afortunadamente, la Antigua Biblioteca de Trinity no sufrió grandes daños durante la guerra. Mientras organizaba los libros desordenados, encontró algo especial).\n\n§M«Sensei, creo que realmente necesita ver esto.»§!\n\n(Una mañana, en un raro suceso, salió de la Antigua Biblioteca de Trinity y se apresuró desde muy lejos hasta la oficina de Sensei.)"
  BA_ape.0001.a:0 "¡Qué raro verte por aquí! ¿Pasa algo?"
- BA_ape.0001.a.re:0 "§M«Sí… por favor, eche un vistazo a esto primero.»§!\n(Yuu sacó un pergamino antiguo y amarillento.)"
+ BA_ape.0001.a.re:0 "§M«Sí... por favor, eche un vistazo a esto primero.»§!\n(Yuu sacó un pergamino antiguo y amarillento.)"
  BA_ape.0001.b:0 "¿Un libro antiguo? Pero esto es la Oficina de Asuntos de Exploración Interstellar."
- BA_ape.0001.b.re:0 "§M«Este libro… debería haber estado en la Sección Prohibida. Lo que está registrado en él se relaciona con los halos que tenemos sobre nuestras cabezas… Francamente, aunque el Consejo Estudiantil General prohibió previamente la investigación sobre los halos, siendo algo tan estrechamente ligado a nosotros, desconocemos por completo su verdadera naturaleza…»§!\n…\n§M«Así es… Me gustaría iniciar algunas investigaciones sobre los halos.»§!\n…"
- BA_ape.0001.c:0 "…Lo apruebo. Recuerda, procede con la máxima cautela."
+ BA_ape.0001.b.re:0 "§M«Este libro... debería haber estado en la Sección Prohibida. Lo que está registrado en él se relaciona con los halos que tenemos sobre nuestras cabezas... Francamente, aunque el Consejo Estudiantil General prohibió previamente la investigación sobre los halos, siendo algo tan estrechamente ligado a nosotros, desconocemos por completo su verdadera naturaleza...»§!\n...\n§M«Así es... Me gustaría iniciar algunas investigaciones sobre los halos.»§!\n..."
+ BA_ape.0001.c:0 "...Lo apruebo. Recuerda, procede con la máxima cautela."
  BA_ape.0001.c.re:0 "(Tras mucha deliberación, finalmente decidí aprobar esta propuesta.)\nConsejo: Completa la misión 'Reparar el Sintetizador de Piroxeno' en la interfaz de Arona. Koseki Yuu se unirá a la lista de líderes como científica, por favor, compruébalo."
  BA_ape.0001.c.tip:0 "¿Es este un camino brillante, o la llave para abrir la caja de Pandora?"
 
  BA_ape.0002.name:0 "Noticias de Kivotos: Un Gran Salto"
- BA_ape.0002.desc:0 "…Recientemente, Koseki Yuu, una experta en textos antiguos de Trinity, publicó un artículo trascendental: «Informe sobre los Halos y los Sellos Divinos», y llevó a cabo una defensa pública en la Gran Catedral de Trinity. Durante la defensa, Yuu explicó detallada y exhaustivamente la teoría preliminar de los halos, y demostró un material maleable con propiedades similares a los halos: la Piedra de Creación. En este artículo, se plantearon por primera vez numerosas preguntas sobre la esencia del poder de los halos."
+ BA_ape.0002.desc:0 "...Recientemente, Koseki Yuu, una experta en textos antiguos de Trinity, publicó un artículo trascendental: «Informe sobre los Halos y los Sellos Divinos», y llevó a cabo una defensa pública en la Gran Catedral de Trinity. Durante la defensa, Yuu explicó detallada y exhaustivamente la teoría preliminar de los halos, y demostró un material maleable con propiedades similares a los halos: la Piedra de Creación. En este artículo, se plantearon por primera vez numerosas preguntas sobre la esencia del poder de los halos."
  BA_ape2.a:0 "¿Qué camino tomar ahora?"
 
  BA_ape.0003.name:0 "Noticias de Kivotos: Piedra de Creación"
- BA_ape.0003.desc:0 "Según informes del Departamento de Ingeniería de la Academia de Ciencias Millennium, mientras realizaban una investigación colaborativa con la señorita Koseki Yuu de Trinity, descubrieron recientemente una ruta de síntesis para la Piedra de Creación: utilizando Piroxeno como materia prima, y capaz de producir algunos artículos de lujo de altísima calidad. Actualmente, el Departamento Federal de Investigación la ha incluido oficialmente como un objeto de estudio prioritario…"
+ BA_ape.0003.desc:0 "Según informes del Departamento de Ingeniería de la Academia de Ciencias Millennium, mientras realizaban una investigación colaborativa con la señorita Koseki Yuu de Trinity, descubrieron recientemente una ruta de síntesis para la Piedra de Creación: utilizando Piroxeno como materia prima, y capaz de producir algunos artículos de lujo de altísima calidad. Actualmente, el Departamento Federal de Investigación la ha incluido oficialmente como un objeto de estudio prioritario..."
  BA_ape4.a:0 "¡Genial!"
 
  BA_ape.0004.name:0 "Contratiempo"
@@ -38,12 +38,12 @@
  BA_ape.0005.g:0 "Cerrar Archivos"
 
  BA_ape.0006.name:0 "Disputa"
- BA_ape.0006.desc:0 "Con la finalización de la misión de investigación en la base de Gematria, hemos adquirido un conocimiento… difícil de describir.\n\nTransmitimos los datos a los miembros del Grupo de Investigación de Halos, pero parece que estalló una disputa interna entre ellos: una facción representada por los estudiantes de la Academia Millennium y otra por los estudiantes de Trinity.\n\nLos estudiantes de Millennium abogaron por organizar y modificar los datos dejados por la Gematria, declarando claramente: las teorías anteriores, tan abstrusas y misteriosas, eran demasiado incontrolables, y el poder de los halos debía estar completamente bajo su propio control.\n\nLos estudiantes de Trinity, por otro lado, afirmaron que se debe mantener la reverencia por lo desconocido, y que las teorías actuales ya han logrado resultados considerables.\n\nAmbas partes no llegaron a un acuerdo, y el progreso de la investigación se ralentizó. Es imperativo que alguien con suficiente influencia tome una decisión. (Consejo: Puedes preguntar la opinión de la actual Presidenta del Consejo Estudiantil en el panel de comunicaciones (pero esta función aún no está implementada))."
- BA_ape.0006.a:0 "…Sea como fuere, las disputas internas en el Consejo Estudiantil General son inevitables."
+ BA_ape.0006.desc:0 "Con la finalización de la misión de investigación en la base de Gematria, hemos adquirido un conocimiento... difícil de describir.\n\nTransmitimos los datos a los miembros del Grupo de Investigación de Halos, pero parece que estalló una disputa interna entre ellos: una facción representada por los estudiantes de la Academia Millennium y otra por los estudiantes de Trinity.\n\nLos estudiantes de Millennium abogaron por organizar y modificar los datos dejados por la Gematria, declarando claramente: las teorías anteriores, tan abstrusas y misteriosas, eran demasiado incontrolables, y el poder de los halos debía estar completamente bajo su propio control.\n\nLos estudiantes de Trinity, por otro lado, afirmaron que se debe mantener la reverencia por lo desconocido, y que las teorías actuales ya han logrado resultados considerables.\n\nAmbas partes no llegaron a un acuerdo, y el progreso de la investigación se ralentizó. Es imperativo que alguien con suficiente influencia tome una decisión. (Consejo: Puedes preguntar la opinión de la actual Presidenta del Consejo Estudiantil en el panel de comunicaciones (pero esta función aún no está implementada))."
+ BA_ape.0006.a:0 "...Sea como fuere, las disputas internas en el Consejo Estudiantil General son inevitables."
 
  BA_ape.0007.name:0 "Decisión"
  BA_ape.0007.desc:0 "La disputa prolongada no ha dado resultados. Claramente, no podemos permitir que la discusión continúe. Sin saber cuándo regresarán nuestros enemigos, no tenemos mucho tiempo para obsesionarnos con estos problemas. Debemos tomar una decisión, sin importar lo que nos depare este camino."
- BA_ape.0007.a:0 "Necesito más tiempo para pensar… (Decidir de nuevo en 180 días)"
+ BA_ape.0007.a:0 "Necesito más tiempo para pensar... (Decidir de nuevo en 180 días)"
  BA_ape.0007.b:0 "Quizás podamos empezar por la esencia de los halos."
  BA_ape.0007.b.tip:0 "Entra en la ruta de §GDespertar del Halo§!, selecciona la ventaja de Ascensión §Y$ap_BA_halo_awaken$§! para continuar."
  BA_ape.0007.c:0 "Debemos dominar por completo el poder de los halos."
@@ -92,9 +92,9 @@
 
 #星球飞升
  BA_ape.2000.name:0 "Crónicas"
- BA_ape.2000.desc:0 "—Sensei, el planeta de la Ciudad Escolar ya no puede satisfacer las necesidades de los viajes interestelares, y hay un grave desperdicio de tierra y recursos...\nPor supuesto, se han propuesto todo tipo de planes de modificación, algunos sugieren demoler y reconstruir todo, otros sugieren aprender de esos imperios perdidos...\n¡Ah, Sensei, usted no cree que estas sugerencias sean viables, ¿verdad?...\nSin embargo, el plan que más le gusta a Arona es este: propone diferentes directrices para cada tipo de distrito. ¡Después de la modificación, la eficiencia de los distritos casi se duplica, pero el costo de construcción apenas cambiará! ¡Es increíble, ¿verdad?! Claro, también tiene sus desventajas... Según este plan, cada área requerirá un proyecto de modificación diferente..."
+ BA_ape.2000.desc:0 "-Sensei, el planeta de la Ciudad Escolar ya no puede satisfacer las necesidades de los viajes interestelares, y hay un grave desperdicio de tierra y recursos...\nPor supuesto, se han propuesto todo tipo de planes de modificación, algunos sugieren demoler y reconstruir todo, otros sugieren aprender de esos imperios perdidos...\n¡Ah, Sensei, usted no cree que estas sugerencias sean viables, ¿verdad?...\nSin embargo, el plan que más le gusta a Arona es este: propone diferentes directrices para cada tipo de distrito. ¡Después de la modificación, la eficiencia de los distritos casi se duplica, pero el costo de construcción apenas cambiará! ¡Es increíble, ¿verdad?! Claro, también tiene sus desventajas... Según este plan, cada área requerirá un proyecto de modificación diferente..."
  BA_ape.2000.a:0 "No hay problema, elijamos este plan."
- BA_ape.2000.a.re:0 "—...Ehh, eso será un gasto considerable, y muchos lugares llenos de recuerdos de todos serán cubiertos...\n¿§BHistoria y recuerdos, y de paso, compilar unas crónicas§!? Sí, realmente deberíamos hacerlo así, Sensei. Quedarse atrapado en el pasado y olvidar el futuro, ¡esa no es nuestra forma de ser! Entonces, elijamos una fecha para contarle esto a todos. Que todos completemos juntos el asunto de la modificación y el trabajo de las crónicas, ¿vale?"
+ BA_ape.2000.a.re:0 "-...Ehh, eso será un gasto considerable, y muchos lugares llenos de recuerdos de todos serán cubiertos...\n¿§BHistoria y recuerdos, y de paso, compilar unas crónicas§!? Sí, realmente deberíamos hacerlo así, Sensei. Quedarse atrapado en el pasado y olvidar el futuro, ¡esa no es nuestra forma de ser! Entonces, elijamos una fecha para contarle esto a todos. Que todos completemos juntos el asunto de la modificación y el trabajo de las crónicas, ¿vale?"
  BA_ape.2000.b:0 "No hay problema. ¡Adelante!"
 
  BA_ape.2001.name:0 "Crónicas: Opción Tecnológica Lista"
@@ -130,7 +130,7 @@
 
  BA_Kivotos_chronicle_effect_stage1:0 "¡La §H£district£$BA_districts_dome$§! proporciona más §C£job£puestos de trabajo§!, y todos los §H£district£distritos§! obtendrán más £housing£viviendas."
  BA_Kivotos_chronicle_effect_stage2:0 "Los §C£job£puestos de trabajo§! proporcionados por el §H£district£$BA_districts_suburbs$§! obtienen un aumento de producción, y desbloquean una £zone£['concept_district_specialization'] enfocada en §Yuno de§! los £energy£ £minerals£ £food£recursos básicos§!."
- BA_Kivotos_chronicle_effect_stage3:0 "La producción y el mantenimiento de los §C£job£puestos de trabajo§! proporcionados por la §H£district£$BA_districts_military_factory$§! aumentan." #并且解锁特殊的行星决议：牺牲一些§l£district£区划上限§!以进一步提升此区划提供的§C£job£岗位§!的的产出与消耗
+ BA_Kivotos_chronicle_effect_stage3:0 "La producción y el mantenimiento de los §C£job£puestos de trabajo§! proporcionados por la §H£district£$BA_districts_military_factory$§! aumentan." #并且解锁特殊的行星决议:牺牲一些§l£district£区划上限§!以进一步提升此区划提供的§C£job£岗位§!的的产出与消耗
  BA_Kivotos_chronicle_effect_stage4:0 "Desbloquea dos distritos autónomos adicionales para los planetas Ciudad Académica, que se pueden planificar libremente. Desbloquea más §H£building£edificios§! y mejoras, proporcionando más §C£job£puestos de trabajo únicos§! de Ciudad Académica y permitiendo la producción de §Brecursos raros§!."
  BA_Kivotos_chronicle_effect_stage5:0 "La §H£district£$BA_districts_municipality$§! proporcionará más §C£job£puestos de trabajo§!, y los §G§C£job£puestos de trabajo únicos§! de Ciudad Académica§! §Yya no dañarán la £stability£estabilidad§! del planeta ni requerirán un £influence£$influence$ de mantenimiento.§!"
  BA_Kivotos_chronicle_effect_stage6:0 "La velocidad de construcción y mejora de naves, bases estelares y megaestructuras §G+50%§!. Permite mejorar los §Cedificios de Ciudad Académica§!, potenciando sus efectos y proporcionando una gran cantidad de $trade_with_icon$."

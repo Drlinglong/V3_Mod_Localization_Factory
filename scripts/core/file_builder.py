@@ -4,6 +4,7 @@ import re
 import logging
 from scripts.utils import i18n
 from scripts.config import DEST_DIR
+from scripts.utils.punctuation_handler import clean_language_specific_punctuation
 
 def create_fallback_file(
     source_path: str,
@@ -76,6 +77,13 @@ def rebuild_and_write_file(
     for i, original_text in enumerate(texts_to_translate):
         translated_text = translation_map.get(original_text, original_text)
         
+        # 智能清理标点符号（后处理层）
+        cleaned_translated_text = clean_language_specific_punctuation(
+            translated_text, 
+            source_lang["code"], 
+            target_lang["code"]
+        )
+        
         line_info = key_map[i]
         
         line_num = line_info["line_num"]
@@ -83,7 +91,7 @@ def rebuild_and_write_file(
         original_value_part = line_info["original_value_part"]
         
         # Rebuild the value part, preserving things like the ":0" and escaping quotes.
-        safe_translated_text = translated_text.strip().replace('"', r"\"")
+        safe_translated_text = cleaned_translated_text.strip().replace('"', r"\"")
         new_value_part = original_value_part.replace(f'"{original_text}"', f'"{safe_translated_text}"')
         
         # Preserve the original indentation.

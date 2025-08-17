@@ -1,4 +1,4 @@
-﻿l_english:
+l_english:
 
  BA_Project_Cradle_title:0 "Project Cradle"
  BA_Project_Cradle_instruction:0 "This is a project to investigate and transform our home system."
@@ -10,7 +10,7 @@
 
  BA_Project.0011.desc:0 "“That's great, Sensei! The students tried to brute-force the database with a ton of random data and actually got some scattered data, and even deciphered some readable fragments! All the classmates who participated worked really hard!”"
  BA_Project.0011.a:0 "Read Fragments"
- BA_Project.0011.a.response:0 "…verification failed, but the result is positive…\n…'s Halo was damaged, but not destroyed…\n…emotions amplified, and then…\n…attacked the relay station, intercepted…\n…descending pillar of light, removed the restrictions on…"
+ BA_Project.0011.a.response:0 "...verification failed, but the result is positive...\n...'s Halo was damaged, but not destroyed...\n...emotions amplified, and then...\n...attacked the relay station, intercepted...\n...descending pillar of light, removed the restrictions on..."
  BA_Project.0011.b:0 "Any thoughts, Arona?"
  BA_Project.0011.b.response:0 "“It seems to be a file similar to an archive, and it only records bad things. It mentioned 'Halo,' could it be related to the students? Arona really can't figure out how a Halo could be damaged...\n...Huh? You said it mentioned relay stations and spaceships? The attack on the relay station was intercepted by spaceships, could this relay station be in space?\n...Well, is that possibility truly real...? Could it be that there was an alien invasion of Kivotos, or perhaps an internal war between the precursors and their homeworld?\n...Ah! Arona remembers! Previous scans once detected traces of buildings on the second World in our system. Should we send a Science Ship to take a closer look there?”"
  BA_Project.0011.next:0 "Alright."
@@ -248,7 +248,7 @@
 
  BA_Gematria_arc_site_1:0 "Unethical Research"
  BA_Gematria_arc_site_1_desc:0 "Gematria once conducted Research related to Halos. Perhaps we can gain some inspiration from their research data."
- Project_Cradle_arc_site_desc_RAID01:0 "As soon as we arrived at the Gematria base ruins, we were blocked by a large door. It clearly utilized technology we cannot yet comprehend. Our enemies—just what level of technological advancement do they possess? Regardless, we must find a way to open this door."
+ Project_Cradle_arc_site_desc_RAID01:0 "As soon as we arrived at the Gematria base ruins, we were blocked by a large door. It clearly utilized technology we cannot yet comprehend. Our enemies-just what level of technological advancement do they possess? Regardless, we must find a way to open this door."
  Project_Cradle_arc_site_option_RAID01:0 "Let Veritas begin preparations for the decryption."
  Project_Cradle_arc_site_desc_RAID02:0 "The members of Veritas spent months on decryption work, but due to the immense technological gap, our efforts yielded nothing. Finally, Sunaookami Shiroko, one of the expedition members, lost patience and forcibly broke open the door with a drone. This door's blast resistance was far lower than our estimates. Looks like Gematria's tech tree was seriously skewed!"
  Project_Cradle_arc_site_option_RAID02:0 "Well, anyway, we're inside now."

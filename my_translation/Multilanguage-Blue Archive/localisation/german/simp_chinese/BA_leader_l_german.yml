@@ -1,4 +1,4 @@
-﻿l_german:
+l_german:
 ########   用户界面   ########
  MESSAGE_BA_NEW_SP_LEADER_TITLE:"Führungskräfte-Reserven"
  MESSAGE_BA_NEW_SP_LEADER_DESC:"$SP_NAME|B$ ist den Führungskräfte-Reserven beigetreten und kann in der Schattim-Box als Spezial-Anführer angeheuert werden."
@@ -181,7 +181,7 @@
  leader_trait_saori_SP1_desc:"Die Arius-Gruppe ist ihre wichtigste Familie. Sie wird sie beschützen, egal mit welchen Mitteln, und egal, wie sehr sie verraten wurde."
 
  leader_trait_ui_SP1:"Pionierin der Halo-Forschung"
- leader_trait_ui_SP1_desc:"Als die früheste Initiatorin und wichtige Teilnehmerin des Halo-Forschungsprogramms hat sie in dieser Hinsicht weitaus mehr Anstrengungen unternommen als andere. Vielleicht wollte sie nur den Wert dessen beweisen, was sie so lange geliebt hat.\n„Ich hoffe nur… dass meine Kinder… ein bisschen nützlich sein können…“"
+ leader_trait_ui_SP1_desc:"Als die früheste Initiatorin und wichtige Teilnehmerin des Halo-Forschungsprogramms hat sie in dieser Hinsicht weitaus mehr Anstrengungen unternommen als andere. Vielleicht wollte sie nur den Wert dessen beweisen, was sie so lange geliebt hat.\n„Ich hoffe nur... dass meine Kinder... ein bisschen nützlich sein können...“"
  leader_trait_ui_SP1_tip:"§RDie Erscheinungswahrscheinlichkeit aller Technologien des Göttlichen Befreiungswegs ist verdoppelt§!"
  leader_trait_ui_SP2:"Extreme Sozialphobie"
  leader_trait_ui_SP2_desc:"Offensichtlich war es eine völlig falsche Entscheidung, Yuu ein Forschungsschiff besteigen und die Galaxis erkunden zu lassen. Sie sollte sich lieber hinter den dicken Türen der alten Bibliothek einschließen.\nVielleicht gibt es ja doch einen Weg, das alles zu ändern, oder?"
@@ -423,7 +423,7 @@
  ARU_WEAPON:"Wine-red Admire"
  ARU_WEAPON_DESC:"$ARU_WEAPON_DESC1$$ARU_WEAPON_DESC2$"
  ARU_WEAPON_DESC1:"Arus sehr geschätztes Scharfschützengewehr im antiken Design."
- ARU_WEAPON_DESC2:"Allein schon das Halten scheint… ihre 'Coolness' zu steigern."
+ ARU_WEAPON_DESC2:"Allein schon das Halten scheint... ihre 'Coolness' zu steigern."
  tech_BA_SPW_ARU_WEAPON:"Raumschiffwaffe: $ARU_WEAPON$"
  tech_BA_SPW_ARU_WEAPON_desc: "$tech_BA_SPW_WEAPON_desc$"
 
@@ -1120,7 +1120,7 @@
  tech_BA_SPW_MOMIJI_WEAPON:"Raumschiffwaffe: $MOMIJI_WEAPON$"
  tech_BA_SPW_MOMIJI_WEAPON_desc: "$tech_BA_SPW_WEAPON_desc$"
 
- KASUMI_WEAPON:"Red·Rector"
+ KASUMI_WEAPON:"Red.Rector"
  KASUMI_WEAPON_DESC:"$KASUMI_WEAPON_DESC1$$KASUMI_WEAPON_DESC2$"
  KASUMI_WEAPON_DESC1:"Die Pistole, die Kasumi immer bei sich trägt."
  KASUMI_WEAPON_DESC2:"Normalerweise schießt sie damit in den Himmel, um die Stimmung anzuheizen. Hinter ihrem zierlichen und niedlichen Äußeren verbirgt sich tatsächlich immense Feuerkraft."
@@ -1532,7 +1532,7 @@
  leader_special_102_UNF_desc:0 "Die größte Verborgenheit findet sich mitten in der Stadt; Unterstützung aus dem Hintergrund, unsichtbare Spuren."
  leader_special_103:0 "Wilder Instinkt"
  leader_special_103_desc:0 "Asunas Instinkt ist oft der entscheidende Schlüssel zur Erfüllung von Missionen."
- leader_special_103_BN:0 "7·7·7"
+ leader_special_103_BN:0 "7.7.7"
  leader_special_103_BN_desc:0 "Ruhe in Gefahr ist die Grundvoraussetzung eines Agenten, und wenn man noch etwas Glück hinzufügt..."
  leader_special_103_UNF:0 "Rhythmus"
  leader_special_103_UNF_desc:0 "Verkleidet in der Menge, bewegt man sich im Rhythmus."
@@ -1697,7 +1697,7 @@
 
 
 
-### 招募问候   ！！！涉及原版修改
+### 招募问候   !!!涉及原版修改
  LEADER_RECRUITMENT_SCRIPTED_GREETING:"§L[From.GetScriptedLeaderRecruitedGreeting_BA]§!"
 
 
@@ -1721,7 +1721,7 @@
  leader_greeting_BA_018:0 ""
  leader_greeting_BA_019:0 ""
  leader_greeting_BA_020:0 ""
- leader_greeting_BA_021:0 "Seid gegrüßt—ah, vielleicht ist das die natürlichere Ausdrucksweise. Schön, Sie kennenzulernen!"
+ leader_greeting_BA_021:0 "Seid gegrüßt-ah, vielleicht ist das die natürlichere Ausdrucksweise. Schön, Sie kennenzulernen!"
  leader_greeting_BA_022:0 "Hallo, Sensei. Ich bin Rihama Sumire vom Festivalkomitee, zugehörig zu Hyakkiyako! Mögen Sie Feste?"
  leader_greeting_BA_023:0 "Äh-heh-heh, ich bin Shizuko vom Festivalkomitee~. Bitte kümmern Sie sich auch weiterhin gut um mich, Sensei? Äh? ...Ach, richtig, richtig, ja, das ist nur eine Höflichkeitsfloskel!"
  leader_greeting_BA_024:0 "Hehe... Endlich habe ich dich gefunden. Ich lasse dich nicht noch einmal entkommen, Liebling? Bitte verlasse mich nie wieder...?"

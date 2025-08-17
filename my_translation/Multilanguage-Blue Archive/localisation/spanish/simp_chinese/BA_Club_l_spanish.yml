@@ -1,4 +1,4 @@
-﻿l_spanish:
+l_spanish:
  #
  Club_confirm:0 "Aprobar la solicitud de construcción presentada por el club seleccionado. Si no se selecciona ningún club, se aprobará una al azar."
  Club_tbc:0 "§LMás clubes próximamente...§!"
@@ -112,11 +112,11 @@
 
 #
  BA_club.0001.title:0 "Explicación del Mecanismo de Clubes"
- BA_club.0001.desc:0 "—¡Sensei! Acabamos de completar la investigación necesaria para construir Naves de Club y Salas de Club espaciales...\nEjem. Ahora que estamos en la era espacial... ¿no le parece superguay tener una sala de club en el espacio? ¡Ahora podemos construir salas así! Para construir un club espacial, primero necesita enviar una nave de ingeniería para construir una Sede del Departamento de Clubes, luego construir una Nave de Club y ordenar a la Nave de Club que entre en órbita alrededor de la sede; así, el establecimiento del club comenzará.\nO, también puede asignar a las miembros del club a bordo de la Nave de Club para colonizar un nuevo planeta. La eficiencia laboral de las miembros del club no es tan buena como la de los colonos regulares, ¡pero sus ideas creativas ayudarán al desarrollo posterior del planeta!"
+ BA_club.0001.desc:0 "-¡Sensei! Acabamos de completar la investigación necesaria para construir Naves de Club y Salas de Club espaciales...\nEjem. Ahora que estamos en la era espacial... ¿no le parece superguay tener una sala de club en el espacio? ¡Ahora podemos construir salas así! Para construir un club espacial, primero necesita enviar una nave de ingeniería para construir una Sede del Departamento de Clubes, luego construir una Nave de Club y ordenar a la Nave de Club que entre en órbita alrededor de la sede; así, el establecimiento del club comenzará.\nO, también puede asignar a las miembros del club a bordo de la Nave de Club para colonizar un nuevo planeta. La eficiencia laboral de las miembros del club no es tan buena como la de los colonos regulares, ¡pero sus ideas creativas ayudarán al desarrollo posterior del planeta!"
  BA_club.0001.comfirmed:0 "Entendido."
 
  BA_club.0002.title:0 "Explicación del Mecanismo de Clubes"
- BA_club.0002.desc:0 "—¡Sensei! ¡Nuestra primera Nave de Club ha sido botada!\n¿Recuerda el proceso para establecer un club? Ejem, ejem... Para construir un club espacial, primero necesita enviar una nave de ingeniería para construir una Sede del Departamento de Clubes, luego construir una Nave de Club y §Bordenar a la Nave de Club que entre en órbita alrededor de la sede§!; así, el establecimiento del club comenzará.\nEs importante señalar que debemos controlar que el número de salas de club no exceda el límite de clubes, de lo contrario, causará cierta presión en la gestión del Consejo Estudiantil Federal... Claro, ¡mientras tengamos suficientes recursos, estos son problemas fáciles de resolver!\n¡Bien, Sensei, vamos a ello juntos!"
+ BA_club.0002.desc:0 "-¡Sensei! ¡Nuestra primera Nave de Club ha sido botada!\n¿Recuerda el proceso para establecer un club? Ejem, ejem... Para construir un club espacial, primero necesita enviar una nave de ingeniería para construir una Sede del Departamento de Clubes, luego construir una Nave de Club y §Bordenar a la Nave de Club que entre en órbita alrededor de la sede§!; así, el establecimiento del club comenzará.\nEs importante señalar que debemos controlar que el número de salas de club no exceda el límite de clubes, de lo contrario, causará cierta presión en la gestión del Consejo Estudiantil Federal... Claro, ¡mientras tengamos suficientes recursos, estos son problemas fáciles de resolver!\n¡Bien, Sensei, vamos a ello juntos!"
  BA_club.0002.comfirmed:0 "Entendido."
 
  BA_club.0005.title:0 "Comienza la Construcción de la Sala del Club"
@@ -195,38 +195,38 @@
 
 #建立通讯
  BA_club.1001.title:0 "Reporte de Departamento: $Game_development_department$"
- BA_club.1001.desc:0 "“La… la presidenta del Club de Desarrollo de Juegos, Hanaoka Yuzu, informa que la sede en §Y[from.solar_system.GetName]§! ha sido establecida… uhm…”"
+ BA_club.1001.desc:0 "“La... la presidenta del Club de Desarrollo de Juegos, Hanaoka Yuzu, informa que la sede en §Y[from.solar_system.GetName]§! ha sido establecida... uhm...”"
  BA_club.1001.next:0 "¡Espero que pronto desarrollen una obra maestra!"
  BA_club.1002.title:0 "$BA_club.1001.title$"
  BA_club.1002.desc:0 "Otro país ha establecido el $Game_development_department$."
 
  BA_club.1101.title:0 "Informe de establecimiento: $Engineering_club$"
- BA_club.1101.desc:0 "“Informamos al Consejo Estudiantil Federal: la sede espacial del Club de Ingeniería ha sido establecida en §Y[from.solar_system.GetName]§!. Las solicitudes que hemos recibido incluyen mucha §Ginvestigación de armamento de naves espaciales§!, así que las facturas… podrían ser un poco asombrosas. Esperamos que no les importe…”"
+ BA_club.1101.desc:0 "“Informamos al Consejo Estudiantil Federal: la sede espacial del Club de Ingeniería ha sido establecida en §Y[from.solar_system.GetName]§!. Las solicitudes que hemos recibido incluyen mucha §Ginvestigación de armamento de naves espaciales§!, así que las facturas... podrían ser un poco asombrosas. Esperamos que no les importe...”"
  BA_club.1101.next:0 "No hay que preocuparse demasiado, ánimo."
  BA_club.1102.title:0 "$BA_club.1101.title$"
  BA_club.1102.desc:0 "Otro país ha establecido el $Engineering_development_department$."
 
  BA_club.1201.title:0 "Informe de establecimiento: $Veritas$"
- BA_club.1201.desc:0 "“Aquí Kaguwa Chihiro. La sede espacial de Veritas ha sido localizada en §Y[from.solar_system.GetName]§!. Dado que hemos obtenido los derechos de uso de esta megaestructura, naturalmente tendremos que hacer algunas modificaciones para §Gobtener más información§! desde el espacio…”"
+ BA_club.1201.desc:0 "“Aquí Kaguwa Chihiro. La sede espacial de Veritas ha sido localizada en §Y[from.solar_system.GetName]§!. Dado que hemos obtenido los derechos de uso de esta megaestructura, naturalmente tendremos que hacer algunas modificaciones para §Gobtener más información§! desde el espacio...”"
  BA_club.1201.next:0 "Digan lo que necesiten, los apoyaré."
  BA_club.1202.title:0 "$BA_club.1201.title$"
  BA_club.1202.desc:0 "Otro país ha establecido el $Veritas$."
 
  BA_club.1301.title:0 "Informe de establecimiento: $Foreclosure_task_force$"
- BA_club.1301.desc:0 "“Aquí Okusora Ayane, informando al Consejo Estudiantil Federal a través de la Línea 4 de Kivotos: la sede espacial del Comité de Contramedidas en §Y[from.solar_system.GetName]§! ha sido establecida. Aprovecharemos al máximo nuestra experiencia laboral en Abydos para §Gmejorar la producción básica§! con nuestras ideas y esfuerzos… Mm, eso es todo.”"
+ BA_club.1301.desc:0 "“Aquí Okusora Ayane, informando al Consejo Estudiantil Federal a través de la Línea 4 de Kivotos: la sede espacial del Comité de Contramedidas en §Y[from.solar_system.GetName]§! ha sido establecida. Aprovecharemos al máximo nuestra experiencia laboral en Abydos para §Gmejorar la producción básica§! con nuestras ideas y esfuerzos... Mm, eso es todo.”"
  BA_club.1301.next:0 "Entendido, no duden en pedir lo que necesiten."
  BA_club.1302.title:0 "$BA_club.1301.title$"
  BA_club.1302.desc:0 "Otro país ha establecido el $Foreclosure_task_force$."
 
  BA_club.1401.title:0 "Informe de establecimiento: $Teaparty$"
- BA_club.1401.desc:0 "“Saludos, soy Kirifuji Nagisa, organizadora de la Fiesta del Té. Informo al Consejo Estudiantil Federal en nombre de nuestro club, no de la Santísima Trinidad: la sede espacial de la Fiesta del Té ha sido establecida en §Y[from.solar_system.GetName]§!. Ejem, ejem… la Fiesta del Té tiene una vasta experiencia en la gestión de grandes academias, y nuestras actividades en las colonias pueden §Gaumentar eficazmente la capacidad administrativa§!, haciendo una contribución única a Kivotos. Eso es todo, mis mejores deseos.”"
+ BA_club.1401.desc:0 "“Saludos, soy Kirifuji Nagisa, organizadora de la Fiesta del Té. Informo al Consejo Estudiantil Federal en nombre de nuestro club, no de la Santísima Trinidad: la sede espacial de la Fiesta del Té ha sido establecida en §Y[from.solar_system.GetName]§!. Ejem, ejem... la Fiesta del Té tiene una vasta experiencia en la gestión de grandes academias, y nuestras actividades en las colonias pueden §Gaumentar eficazmente la capacidad administrativa§!, haciendo una contribución única a Kivotos. Eso es todo, mis mejores deseos.”"
  BA_club.1401.next:0 "¡Con su ayuda, el Consejo Estudiantil Federal será imparable!"
  BA_club.1402.title:0 "$BA_club.1401.title$"
  BA_club.1402.desc:0 "Otro país ha establecido el $Teaparty$."
 
  BA_club.1501.title:0 "Informe de establecimiento: $Hotspring_development_department$"
  BA_club.1501.desc:0 "“Según los procedimientos emitidos por la sede del club, todos los activos pesados del Departamento de Desarrollo de Aguas Termales han llegado a §Y[from.solar_system.GetName]§!. Entonces, repito una vez más, de acuerdo con el contrato, aunque obtenemos los derechos de exploración, la propiedad de los minerales pertenece completamente al Consejo Estudiantil Federal.”"
- BA_club.1501.next:0 "…Tengan cuidado con el uso de explosivos…"
+ BA_club.1501.next:0 "...Tengan cuidado con el uso de explosivos..."
  BA_club.1502.title:0 "$BA_club.1501.title$"
  BA_club.1502.desc:0 "Otro país ha establecido el $Hotspring_development_department$."
 
@@ -255,32 +255,32 @@
 
 
 #游戏部
- Game_development_department_opinion:0 "（§GNivel de construcción actual: [Root.Game_development_department] §!）\n\n"
+ Game_development_department_opinion:0 "(§GNivel de construcción actual: [Root.Game_development_department] §!)\n\n"
 
- Yuzu_desc1:0 "$Game_development_department_opinion$… bi-bienvenida… uhm…"
+ Yuzu_desc1:0 "$Game_development_department_opinion$... bi-bienvenida... uhm..."
  Yuzu_desc2:0 "$Game_development_department_opinion$Somos el Departamento de Desarrollo de Juegos, hacer juegos es nuestra actividad... uh, no solo hacerlos."
- Yuzu_desc3:0 "$Game_development_department_opinion$… ¡Ay! ¡Pro-Profesor…! No aparezca de repente por detrás…"
+ Yuzu_desc3:0 "$Game_development_department_opinion$... ¡Ay! ¡Pro-Profesor...! No aparezca de repente por detrás..."
  Aris_desc1:0 "$Game_development_department_opinion$¡El Héroe ha encontrado al Profesor! ¡Iniciando protocolo de cortesía!"
- Aris_desc2:0 "$Game_development_department_opinion$… (Compilando)"
+ Aris_desc2:0 "$Game_development_department_opinion$... (Compilando)"
  Aris_desc3:0 "$Game_development_department_opinion$Bienvenido, Profesor. Momoi, Midori y Yuzu le están esperando dentro."
  Momoi_desc1:0 "$Game_development_department_opinion$¡Profesor! ¿Quiere que juguemos hoy a este juego de combate?"
  Momoi_desc2:0 "$Game_development_department_opinion$Las ideas son fugaces, pero si las atrapas, ¡se convertirán en una obra maestra absoluta!"
- Momoi_desc3:0 "$Game_development_department_opinion$… Ugh, tendré que comprar helado para todos otra vez…"
- Midori_desc1:0 "$Game_development_department_opinion$¿Quiere probar esta nueva demo? Aunque fue una idea repentina de la hermana mayor, al final lo hicimos bastante bien…"
- Midori_desc2:0 "$Game_development_department_opinion$Este es un diseño de arquitectura de nivel de una máquina de fabricación… Ugh, nos esforzamos mucho en los algoritmos, pero al examinar el producto final, descubrimos que era completamente inutilizable…"
- Midori_desc3:0 "$Game_development_department_opinion$Siempre siento que olvidé hacer alguna tarea… ¿En qué juego era…?"
+ Momoi_desc3:0 "$Game_development_department_opinion$... Ugh, tendré que comprar helado para todos otra vez..."
+ Midori_desc1:0 "$Game_development_department_opinion$¿Quiere probar esta nueva demo? Aunque fue una idea repentina de la hermana mayor, al final lo hicimos bastante bien..."
+ Midori_desc2:0 "$Game_development_department_opinion$Este es un diseño de arquitectura de nivel de una máquina de fabricación... Ugh, nos esforzamos mucho en los algoritmos, pero al examinar el producto final, descubrimos que era completamente inutilizable..."
+ Midori_desc3:0 "$Game_development_department_opinion$Siempre siento que olvidé hacer alguna tarea... ¿En qué juego era...?"
 
  Game_development_department_building:0 "¿Le gustaría tener un estudio en el planeta?"
- Game_development_department_building.YuzuRE:0 "De… ¿De verdad…? Muchas gracias, Profesor…"
+ Game_development_department_building.YuzuRE:0 "De... ¿De verdad...? Muchas gracias, Profesor..."
  Game_development_department_building.ArisRE:0 "¡Bang-bang-kabang! ¡Aris ha adquirido una nueva base, donde puede guardar más objetos!"
  Game_development_department_building.MomoiRE:0 "¡Lo convertiré en el mejor lugar para jugar!"
  Game_development_department_building.MidoriRE:0 "¡Realmente es el mejor día! ¡Gracias, Profesor!"
 
  Game_development_department_building_add:0 "¿Quieren más estudios?"
- Game_development_department_building_add.YuzuRE:0 "Inmensamente agradecida, Profesor…"
- Game_development_department_building_add.ArisRE:0 "Mmm… ¡Aris ha adquirido una base aún mejor, debe planificar bien su uso!"
+ Game_development_department_building_add.YuzuRE:0 "Inmensamente agradecida, Profesor..."
+ Game_development_department_building_add.ArisRE:0 "Mmm... ¡Aris ha adquirido una base aún mejor, debe planificar bien su uso!"
  Game_development_department_building_add.MomoiRE:0 "¡Desbloquear siguiente nivel! ¡La aventura del Departamento de Desarrollo de Juegos continúa!"
- Game_development_department_building_add.MidoriRE:0 "Esta vez, probaremos una nueva propuesta de diseño…"
+ Game_development_department_building_add.MidoriRE:0 "Esta vez, probaremos una nueva propuesta de diseño..."
 
  Game_developing:0 "El Departamento de Desarrollo de Juegos está ocupado, por favor, vuelva más tarde."
  Game_development_department_game_complete:0 "Departamento de Desarrollo de Juegos: Producción Completa"
@@ -292,18 +292,18 @@
 
 
 #工程师部
- Engineering_club_opinion:0 "（§GProgreso de construcción actual: [Root.Engineering_club] §!）\n\n"
+ Engineering_club_opinion:0 "(§GProgreso de construcción actual: [Root.Engineering_club] §!)\n\n"
 
- Utaha_desc1:0 "$Engineering_club_opinion$Profesor, ¿pregunta qué es esto?… Esto no es chocolate, es un cargador, este cargador nuestro es pequeño y fácil de transportar…"
- Utaha_desc2:0 "$Engineering_club_opinion$¡Profesor, venga a ver! ¡Mi pequeño Rai ahora puede hacer volteretas hacia atrás!… Ah, no importa, hable usted primero."
- Utaha_desc3:0 "$Engineering_club_opinion$Mis miembros del club a menudo inventan cosas muy extrañas, como rifles de francotirador de terrones de azúcar y cosas así… Le aseguro que no están malgastando fondos, solo que sus ideas son un poco excéntricas… eso es todo."
- Hibiki_desc1:0 "$Engineering_club_opinion$Bienvenido, Profesor. ¿Esto? Esta es una máquina que le permite cambiarse de ropa mientras está en la cama, funciona así…"
- Hibiki_desc2:0 "$Engineering_club_opinion$Mmm, creo que descubrí por qué el dron de defensa me ha estado atacando… ¿Por qué este chip estaría cosido en mi ropa…?"
+ Utaha_desc1:0 "$Engineering_club_opinion$Profesor, ¿pregunta qué es esto?... Esto no es chocolate, es un cargador, este cargador nuestro es pequeño y fácil de transportar..."
+ Utaha_desc2:0 "$Engineering_club_opinion$¡Profesor, venga a ver! ¡Mi pequeño Rai ahora puede hacer volteretas hacia atrás!... Ah, no importa, hable usted primero."
+ Utaha_desc3:0 "$Engineering_club_opinion$Mis miembros del club a menudo inventan cosas muy extrañas, como rifles de francotirador de terrones de azúcar y cosas así... Le aseguro que no están malgastando fondos, solo que sus ideas son un poco excéntricas... eso es todo."
+ Hibiki_desc1:0 "$Engineering_club_opinion$Bienvenido, Profesor. ¿Esto? Esta es una máquina que le permite cambiarse de ropa mientras está en la cama, funciona así..."
+ Hibiki_desc2:0 "$Engineering_club_opinion$Mmm, creo que descubrí por qué el dron de defensa me ha estado atacando... ¿Por qué este chip estaría cosido en mi ropa...?"
  Hibiki_desc3:0 "$Engineering_club_opinion$El arma de una de las chicas del Departamento de Desarrollo de Juegos fue fabricada por nosotros, tenemos una amplia experiencia en la fabricación de armamento para naves estelares."
 
  Engineering_club_sponsor:0 "Podemos proporcionarles más fondos para el club."
  Engineering_club_sponsor_UtahaRE:0 "¡Estamos inmensamente agradecidos, Profesor! Solo diga qué equipo necesita."
- Engineering_club_sponsor_HibikiRE:0 "Este dinero puede comprar muy buenos materiales… Gracias."
+ Engineering_club_sponsor_HibikiRE:0 "Este dinero puede comprar muy buenos materiales... Gracias."
 
  Engineering_club_special_weapon:0 "Tenemos un proyecto especial que encomendarles."
 
@@ -457,15 +457,15 @@
 
  Teaparty_building_add:0 "¿La cantidad de edificios de sucursal es insuficiente? Ahora se puede proporcionar un suplemento."
  Teaparty_building_add.NagisaRE:0 "Las sucursales del Tea Party ahora pueden asumir más funciones. ¡Gracias!"
- Teaparty_building_add.SeiaRE:0 "…Y a juego con esto, voy a necesitar una cama más grande…"
+ Teaparty_building_add.SeiaRE:0 "...Y a juego con esto, voy a necesitar una cama más grande..."
  Teaparty_building_add.MikaRE:0 "¡Así podremos lidiar más rápido con esos niños malos que no nos hacen caso!"
 
 
 #温泉开发部
- Hotspring_development_department_opinion:0 "（§GNivel de Construcción Actual: [Root.Hotspring_development_department] §!）\n\n"
+ Hotspring_development_department_opinion:0 "(§GNivel de Construcción Actual: [Root.Hotspring_development_department] §!)\n\n"
 
  Megu_desc1:0 "$Hotspring_development_department_opinion$ ¡Rápido, rápido! ¿Hay algún lugar que necesitemos allanar?"
- Megu_desc2:0 "$Hotspring_development_department_opinion$ Jejeje… ¡Todas las aguas termales que hemos construido se han vuelto muy populares! Sensei, ¿ha ido a visitarlas últimamente?"
+ Megu_desc2:0 "$Hotspring_development_department_opinion$ Jejeje... ¡Todas las aguas termales que hemos construido se han vuelto muy populares! Sensei, ¿ha ido a visitarlas últimamente?"
  Megu_desc3:0 "$Hotspring_development_department_opinion$ Antes, muchas de las aguas termales que excavábamos se agotaban en unos pocos días. ¡Ahora que tenemos equipo de exploración, por fin no tendremos que depender de la suerte cada vez!"
 
  Hotspring_development_department_research:0 "Podemos iniciar algunas investigaciones para mejorar la eficiencia de la exploración."
@@ -474,14 +474,14 @@
  Hotspring_development_department_research.MeguRE:0 "Esto se lo entregamos a la Sala de Asuntos Generales, ¿verdad? ¡Entendido!"
 
  Hotspring_development_department_building:0 "¿Necesitan un Departamento de Operaciones?"
- Hotspring_development_department_building.MeguRE:0 "…Uhm, ¿el desarrollo por sí solo no es suficiente? ¿Las estrategias comerciales también son necesarias? Qué difícil…"
+ Hotspring_development_department_building.MeguRE:0 "...Uhm, ¿el desarrollo por sí solo no es suficiente? ¿Las estrategias comerciales también son necesarias? Qué difícil..."
 
  Hotspring_development_department_building_add:0 "Es hora de operar más aguas termales."
  Hotspring_development_department_building_add.MeguRE:0 "Aunque no entienda de negocios, ¡mientras más gente disfrute de las aguas termales, todo estará bien!"
 
 
 #祭典运营委员会
- Festival_operations_department_opinion:0 "（§GNivel de Construcción Actual: [Root.Festival_operations_department]     Nivel de Escala de Festival Actual: [root.Festival_operations_department_fes_level]§!）\n\n"
+ Festival_operations_department_opinion:0 "(§GNivel de Construcción Actual: [Root.Festival_operations_department]     Nivel de Escala de Festival Actual: [root.Festival_operations_department_fes_level]§!)\n\n"
 
  Shizuko_desc1:0 "$Festival_operations_department_opinion$"
  Shizuko_desc2:0 "$Festival_operations_department_opinion$"
@@ -497,7 +497,7 @@
  Festival_operations_department_prolong.tip:0 "Paga algunos recursos para extender la duración del beneficio del festival. Esto también pondrá el festival en tiempo de recarga y requerirá el pago de $consumer_goods_with_icon$ como coste de mantenimiento."
  Festival_operations_department_prolong.cooldown:0 "El Departamento de Clubes necesita más preparativos para estar listo para la próxima expansión de escala."
  Festival_operations_department_prolong.max:0 "La escala planificada del festival ha alcanzado su máximo."
- Festival_operations_department_prolong.ShizukoRE:0 "Si el Consejo Federal de Estudiantes cubre los gastos… ¡no hay problema!\n\n(Cuando se celebre el próximo festival, la duración del beneficio obtenido se extenderá por 360£time£ días)"
+ Festival_operations_department_prolong.ShizukoRE:0 "Si el Consejo Federal de Estudiantes cubre los gastos... ¡no hay problema!\n\n(Cuando se celebre el próximo festival, la duración del beneficio obtenido se extenderá por 360£time£ días)"
 
  Festival_operations_department_building:0 "¿Necesitamos abrir otros centros de operaciones?"
  Festival_operations_department_building.ShizukoRE:0 "Así las ventas aumentarán más rápido."
@@ -507,7 +507,7 @@
 
 
 #玄武商会
- Xuanwu_promenade_opinion:0 "（§GNivel de Construcción Actual: [Root.Xuanwu_promenade] §!）\n\n"
+ Xuanwu_promenade_opinion:0 "(§GNivel de Construcción Actual: [Root.Xuanwu_promenade] §!)\n\n"
 
  Rumi_desc1:0 "$Xuanwu_promenade_opinion$"
  Rumi_desc2:0 "$Xuanwu_promenade_opinion$"
@@ -518,11 +518,11 @@
  Xuanwu_promenade_trade.cooldown:0 "El Gremio Mercantil de Xuanwu está gestionando asuntos relacionados con los canales. Por favor, haga su pedido después de §Y[root.Xuanwu_promenade_trade_cooldown]§! días."
  Xuanwu_promenade_trade.noflow:0 "No tenemos registro de flujo de este recurso, no podemos certificar la legalidad de esta transacción."
 
- Xuanwu_promenade_trade.RumiRE.1:0 "¡Qué bien!… ¿Cómo dice? Ahahaha, el Gremio Mercantil de Xuanwu hace negocios legítimos, ¡ehehe!"
+ Xuanwu_promenade_trade.RumiRE.1:0 "¡Qué bien!... ¿Cómo dice? Ahahaha, el Gremio Mercantil de Xuanwu hace negocios legítimos, ¡ehehe!"
  Xuanwu_promenade_trade.RumiRE.2:0 "Hemos puesto mucho esfuerzo en conseguir esta mercancía, ¡así que no se queje de la calidad!"
 
  Xuanwu_promenade_trade.title:0 "Gremio Mercantil de Xuanwu: Pedidos Especiales"
- Xuanwu_promenade_trade.desc1:0 "$Xuanwu_promenade_opinion$ ¡Pida lo que necesite sin dudarlo!… Entrega inmediata, el Gremio Mercantil de Xuanwu se encarga del resto."
+ Xuanwu_promenade_trade.desc1:0 "$Xuanwu_promenade_opinion$ ¡Pida lo que necesite sin dudarlo!... Entrega inmediata, el Gremio Mercantil de Xuanwu se encarga del resto."
  Xuanwu_promenade_trade.desc2:0 "$Xuanwu_promenade_opinion$ Sensei, ¡no deje que la falta de suministros retrase sus asuntos importantes! Siempre puede confiar en el Gremio Mercantil de Xuanwu."
  Xuanwu_promenade_trade.exit:0 "Volver"
  Xuanwu_promenade_trade.consumer_goods:0 "Comprar $consumer_goods_with_icon$"
@@ -624,20 +624,20 @@
  BA_Hoshino_exit:0 "Nada, solo vine a verte."
 
  Hina:0 "Hina Sorasaki"
- Hina_desc1:0 "（Al entrar en la oficina de la Presidenta del Consejo Estudiantil, Hina estaba absorta en los documentos. Parecía haber notado mi presencia, pues levantó la vista.)\nAh, Sensei, puedo encargarme yo sola de estos documentos."
+ Hina_desc1:0 "(Al entrar en la oficina de la Presidenta del Consejo Estudiantil, Hina estaba absorta en los documentos. Parecía haber notado mi presencia, pues levantó la vista.)\nAh, Sensei, puedo encargarme yo sola de estos documentos."
  Hina_about_now:0 "Hablar con Hina sobre los avances actuales."
  Hina_about_now.tip:0 "Obtener consejos para ayudarte a progresar en el juego."
  Hina_about_now.1:0 "Sensei, al planificar el desarrollo, también debe prestar atención a la asignación de puestos de trabajo. Nadie quiere hacer los trabajos de base y el crecimiento de la población estudiantil es lento. Si hay puestos vacantes, quizás podría considerar desarrollar trabajadores robóticos. Bueno, al final, la decisión es suya, Sensei."
  Hina_about_now.2:0 "Shizuko, del Departamento de Gestión del Festival de Hyakkiyako, ha presentado solicitudes para abrir sucursales más de una vez, pero nuestro sistema estelar ya está lleno de sus sucursales. Quizás Sensei podría considerar dejarlas abrir sucursales en planetas de otras civilizaciones estelares."
  Hina_chat:0 "Charlar un rato con Hina."
  Hina_chat.tip:0 "Pero Hina sigue trabajando, aunque creo que Hina no se negaría."
- Hina_chat.1:0 "¿Trabajo…? En realidad, no es nada del otro mundo, al fin y al cabo, fui yo quien decidió asumir este cargo, y además, ya me acostumbré durante mi tiempo en el Comité de Disciplina.\n(Pero me gustaría mucho que Sensei me elogiara.)"
+ Hina_chat.1:0 "¿Trabajo...? En realidad, no es nada del otro mundo, al fin y al cabo, fui yo quien decidió asumir este cargo, y además, ya me acostumbré durante mi tiempo en el Comité de Disciplina.\n(Pero me gustaría mucho que Sensei me elogiara.)"
  Hina_chat.1.a:0 "Hina también debería cuidar de su salud."
  Hina_chat.2:0 "Sensei, solo tiene que encargarse tranquilamente de los asuntos externos. Conmigo al mando dentro de Kivotos, esas estudiantes problemáticas no podrán causar ningún alboroto."
  Hina_chat.2.a:0 "¡Hina es tan confiable!"
- Hina_chat.3:0 "Takanashi Hoshino, ¿eh?… Con lo mucho que ha cambiado, seguramente le pasó algo…"
+ Hina_chat.3:0 "Takanashi Hoshino, ¿eh?... Con lo mucho que ha cambiado, seguramente le pasó algo..."
  Hina_chat.3.a:0 "Al fin y al cabo, también es una estudiante importante para Sensei, así que le prestaré especial atención."
- Hina_chat.4:0 "¿Quién es más fuerte, Mika Saiba o yo? Sensei, ¿es usted un estudiante de primaria para estar preocupado por una pregunta así…?"
+ Hina_chat.4:0 "¿Quién es más fuerte, Mika Saiba o yo? Sensei, ¿es usted un estudiante de primaria para estar preocupado por una pregunta así...?"
  Hina_chat.4.a:0 "Solo es pura curiosidad."
  BA_Hina_exit:0 "Entonces no molestaré más a Hina."
 
@@ -648,20 +648,20 @@
  Mika_about_now:0 "Preguntarle a Mika su opinión sobre la situación actual."
  Mika_about_now.tip:0 "Obtener consejos para ayudarte a progresar en el juego."
  Mika_about_now.1:0 "Hace mucho que no veo a Nagisa-chan y a la pequeña Seia. Aunque chateamos todos los días en Momotalk, ¡realmente quiero tener una fiesta del té con ellas! El Consejo Estudiantil también ha estado recibiendo muchas quejas al respecto, especialmente de las estudiantes encargadas de colonizar planetas lejanos. Sensei, no olvide sus problemas de comodidad. Estando en la cima, como yo solía estar, aún hay muchas cosas que no se ven con claridad."
- Mika_about_now.2:0 "Criaturas alienígenas… Muchas de ellas no parecen muy agradables, ¿verdad? Pero quizás una parte sea como mi prejuicio anterior hacia Gehenna. Si logramos llevarnos bien con ellas, quizás en el futuro también pueda ayudar al desarrollo a largo plazo de Kivotos."
+ Mika_about_now.2:0 "Criaturas alienígenas... Muchas de ellas no parecen muy agradables, ¿verdad? Pero quizás una parte sea como mi prejuicio anterior hacia Gehenna. Si logramos llevarnos bien con ellas, quizás en el futuro también pueda ayudar al desarrollo a largo plazo de Kivotos."
  Mika_about_now.3:0 "Sensei, no olvide a las estudiantes con empleo flexible en las diversas colonias. Aunque en Kivotos no hay desempleo, que las estudiantes cumplan sus respectivas funciones es, evidentemente, la mejor opción."
- Mika_about_now.4:0 "¡Uwaah, a mí también me encantaría tener una asistente como Arona que me ayudara, como Sensei! Mira, ¿la alumna Sorasaki Aoi no tiene también una administradora a su lado…? Enfrentar esta montaña de documentos cada día es algo que agota mucho física y mentalmente. ¿Eh? Si Sensei pudiera venir a ayudar o algo así, ¿no sería demasiado favoritismo? Aunque, tampoco estaría tan mal…"
- Mika_about_now.5:0 "Ser la Presidenta del Consejo Estudiantil es agotador, pero al menos todos los privilegios que fueron suspendidos por el comité de audiencia han regresado, ¡e incluso tengo más poder…! Pero solo ahora me doy cuenta de lo aterradora que es la responsabilidad equivalente. ¿De verdad Nagisa-chan manejó tantas cosas por mí en aquel entonces? Sensei también debe tener muchos clubes con los que tratar, ¿verdad? Recuerde asignarles fondos para actividades. Después de todo, lo único que puede hacer el Consejo Estudiantil es interactuar con los funcionarios de la Academia."
+ Mika_about_now.4:0 "¡Uwaah, a mí también me encantaría tener una asistente como Arona que me ayudara, como Sensei! Mira, ¿la alumna Sorasaki Aoi no tiene también una administradora a su lado...? Enfrentar esta montaña de documentos cada día es algo que agota mucho física y mentalmente. ¿Eh? Si Sensei pudiera venir a ayudar o algo así, ¿no sería demasiado favoritismo? Aunque, tampoco estaría tan mal..."
+ Mika_about_now.5:0 "Ser la Presidenta del Consejo Estudiantil es agotador, pero al menos todos los privilegios que fueron suspendidos por el comité de audiencia han regresado, ¡e incluso tengo más poder...! Pero solo ahora me doy cuenta de lo aterradora que es la responsabilidad equivalente. ¿De verdad Nagisa-chan manejó tantas cosas por mí en aquel entonces? Sensei también debe tener muchos clubes con los que tratar, ¿verdad? Recuerde asignarles fondos para actividades. Después de todo, lo único que puede hacer el Consejo Estudiantil es interactuar con los funcionarios de la Academia."
  Mika_about_now.6:0 "La Oficina de Defensa ha estado presentando solicitudes de expansión militar. Si es posible, ¿podría Sensei por favor instar al Departamento de Ingeniería a desarrollar armas? Después de todo, lo que se puede lograr solo expandiendo la flota es limitado."
  Mika_chat:0 "Charlar un rato con Mika."
  Mika_chat.tip:0 "Quizás Mika prefiera quedarse con Sensei más que trabajar."
  Mika_chat.1:0 "¿Takanashi Hoshino? Aunque no la conozco muy bien, escuché que ella sola ha logrado mantener una escuela que estaba casi abandonada, ¿verdad? La vi durante una reunión en la Oficina de Defensa; esa mirada suya realmente no concuerda con su apariencia perezosa. Una mirada similar la he visto antes en los ojos de Miyu-chan; es algo que solo poseen las personas con una fuerte convicción en su interior. Su convicción debe ser arrepentimientos del pasado, y en cierto sentido, ella y yo tenemos algo en común."
  Mika_chat.1.a:0 "Cada uno tiene su propio camino y su propia salvación."
- Mika_chat.2:0 "La alumna Sorasaki Aoi también participó en la reunión anterior de la Oficina de Defensa. Aunque es tan bajita como la pequeña Seia, parece ser del tipo muy responsable, ¿verdad? ¿Y parece que también tiene una administradora muy competente a su lado? Pero alguien tan fuerte como ella, ¿no podría resolver la mayoría de los problemas por sí misma…? ¿Acaso a Sensei le gustan ese tipo de chicas confiables?"
+ Mika_chat.2:0 "La alumna Sorasaki Aoi también participó en la reunión anterior de la Oficina de Defensa. Aunque es tan bajita como la pequeña Seia, parece ser del tipo muy responsable, ¿verdad? ¿Y parece que también tiene una administradora muy competente a su lado? Pero alguien tan fuerte como ella, ¿no podría resolver la mayoría de los problemas por sí misma...? ¿Acaso a Sensei le gustan ese tipo de chicas confiables?"
  Mika_chat.2.a:0 "Mika también ha hecho grandes progresos desde que se convirtió en Presidenta del Consejo Estudiantil, pero espero que Mika sea simplemente ella misma."
- Mika_chat.3:0 "La ex contadora del Seminario, la primera gobernadora de Kivotos después de entrar en la nueva era, la fría calculadora… básicamente, esa es toda la información que pude obtener. ¡Los informes de gestión de la alumna Yuuka Hayase tienen demasiados datos! ¡A menudo me mareo al leerlos! Le he dicho más de una vez que proporcione menos datos brutos y más informes ya convertidos, pero la única respuesta que obtengo es que los datos perfectamente calculados son la forma más adecuada de reflejar la realidad. ¿Acaso Sensei no cree que las largas cadenas de números no tienen ninguna estética…?"
+ Mika_chat.3:0 "La ex contadora del Seminario, la primera gobernadora de Kivotos después de entrar en la nueva era, la fría calculadora... básicamente, esa es toda la información que pude obtener. ¡Los informes de gestión de la alumna Yuuka Hayase tienen demasiados datos! ¡A menudo me mareo al leerlos! Le he dicho más de una vez que proporcione menos datos brutos y más informes ya convertidos, pero la única respuesta que obtengo es que los datos perfectamente calculados son la forma más adecuada de reflejar la realidad. ¿Acaso Sensei no cree que las largas cadenas de números no tienen ninguna estética...?"
  Mika_chat.3.a:0 "Esto también es parte del trabajo; Mika debe aprender a superar su incomodidad con las tareas. Esto también es parte de la independencia."
- Mika_chat.4:0 "¿Eh…? Sensei, está bastante libre, ¿verdad…? Siendo así, ¿por qué no viene directamente al Consejo Estudiantil General a buscarme? ¡Sería genial si llamara a Nagisa-chan y a la pequeña Seia para una fiesta del té juntas! Ni siquiera recuerdo la última vez que los cuatro tomamos té juntos. Pero si Sensei quiere venir solo… ¡también sería bienvenido!"
+ Mika_chat.4:0 "¿Eh...? Sensei, está bastante libre, ¿verdad...? Siendo así, ¿por qué no viene directamente al Consejo Estudiantil General a buscarme? ¡Sería genial si llamara a Nagisa-chan y a la pequeña Seia para una fiesta del té juntas! Ni siquiera recuerdo la última vez que los cuatro tomamos té juntos. Pero si Sensei quiere venir solo... ¡también sería bienvenido!"
  Mika_chat.4.a:0 "Esperemos a que termine de encargarme de todos los asuntos pendientes."
 
  BA_Mika_exit:0 "Bueno, entonces, me voy ya."
@@ -669,7 +669,7 @@
 
 
  Yuuka:0 "Yuuka Hayase"
- Yuuka_desc1:0 "A ver… El presupuesto total de Kivotos para este mes es… el gasto militar es… los gastos diplomáticos tampoco son pocos… y los subsidios económicos para las diversas academias… ¡Ah, Sensei! ¡Bienvenido! Disculpe, estaba tan absorta hace un momento que no podía desocuparme. Pero puedo resolver sus preguntas mientras trabajo, por favor, dígame."
+ Yuuka_desc1:0 "A ver... El presupuesto total de Kivotos para este mes es... el gasto militar es... los gastos diplomáticos tampoco son pocos... y los subsidios económicos para las diversas academias... ¡Ah, Sensei! ¡Bienvenido! Disculpe, estaba tan absorta hace un momento que no podía desocuparme. Pero puedo resolver sus preguntas mientras trabajo, por favor, dígame."
  Yuuka_about_now:0 "Preguntarle a Yuuka su opinión sobre la situación actual."
  Yuuka_about_now.tip:0 "Obtener consejos para ayudarte a progresar en el juego."
  Yuuka_about_now.1:0 "Para ser un adulto ejemplar, Sensei debe estar siempre atento a nuestros gastos financieros. Y no solo me refiero a los Créditos de Energía, ¡sino también a los ingresos de otros recursos! Puede manejar las ganancias y pérdidas de forma óptima a través del mercado y los intercambios diplomáticos, y también explotar eficazmente los recursos necesarios asignando los puestos de trabajo a todos de forma juiciosa. Por supuesto, le sugiero que gestione adecuadamente los recursos que no caben en el almacén, ¿eh? El despilfarro, al igual que los gastos ilimitados, es una señal de irresponsabilidad. ¡Pero ya que soy la presidenta del Consejo Estudiantil, conmigo aquí, estoy segura de que no tendrá ningún problema!"

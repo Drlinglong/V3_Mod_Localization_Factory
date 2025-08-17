@@ -1,4 +1,4 @@
-﻿# localisation\english\darktec_mechanics_l_english.yml
+# localisation\english\darktec_mechanics_l_english.yml
 
 # Authors: Rodahtnov & Zyralynn
 
@@ -105,7 +105,7 @@ l_braz_por:
 	menp_darktec_entropy_t2_tooltip_early:0 "Permite a pesquisa de ['technology:tech_darktec_traits_t1'], que nos permite aprimorar nossa espécie com traços especiais.\n\nNosso esforço em focar na melhoria de nossas §G$situation_darktec_intro_approach_applications$§! nos concedeu este bônus:\n\n$MOD_COUNTRY_MODIFY_SPECIES_COST_MULT$: §G-10%§!"
 
 	menp_darktec_darkmatter_t2:0 "Reciclagem do Vácuo"
-	menp_darktec_darkmatter_t2_desc:0 "Nenhum recurso deve ser desperdiçado, nem mesmo aqueles que não podemos detectar — a eficiência maximizada é uma exigência."
+	menp_darktec_darkmatter_t2_desc:0 "Nenhum recurso deve ser desperdiçado, nem mesmo aqueles que não podemos detectar - a eficiência maximizada é uma exigência."
 	menp_darktec_darkmatter_t2_tooltip:0 "[darktec_loc_menp_darktec_darkmatter_t2_tooltip]"
 	menp_darktec_darkmatter_t2_tooltip_normal:0 "Agora podemos aprimorar ['building:building_darktec_storage_1', £building£ $building_darktec_storage_1_plural$] para ['building:building_darktec_storage_2', £building£ $building_darktec_storage_2_plural$].\n\nAgora temos acesso a §Ytecnologias de construção Umbrais§!."
 	menp_darktec_darkmatter_t2_tooltip_early:0 "Agora podemos aprimorar ['building:building_darktec_storage_1', £building£ $building_darktec_storage_1_plural$] para ['building:building_darktec_storage_2', £building£ $building_darktec_storage_2_plural$].\n\nAgora temos acesso a §Ytecnologias de construção Umbrais§!.\n\nNosso esforço em focar na melhoria de nossa §Y$situation_darktec_intro_approach_economy$§! nos concedeu este bônus:\n\n$MOD_PLANET_BUILDING_COST_MULT$: §G-5%§!"
@@ -164,7 +164,7 @@ l_braz_por:
 	menp_darktec_entropy_t4_unknown_tooltip:0 "???"
 
 	menp_darktec_entropy_t4_transformed:0 "Estabilização Obscura"
-	menp_darktec_entropy_t4_transformed_desc:0 "Nossa nova forma é… intrigante. Somos menos, somos mais, e podemos fazer com que outros também o sejam."
+	menp_darktec_entropy_t4_transformed_desc:0 "Nossa nova forma é... intrigante. Somos menos, somos mais, e podemos fazer com que outros também o sejam."
 	menp_darktec_entropy_t4_transformed_tooltip:0 "['building:building_darktec_umbral_portal_1', £building£ $building_darktec_umbral_portal_1_plural$] agora também aumenta a Produção de £job£ no planeta.\n\nEste edifício agora permite a §YAssimilação§! passiva de pops em §EEntropisferais§!."
 
 	menp_darktec_entropy_t4_tainted:0 "Escuridão Fundida"
@@ -704,7 +704,7 @@ l_braz_por:
 	tech_darktec_traits_t1_unlocks_desc:0 "§H$tech_darktec_traits_t1$§!\nTraços especiais que interagem com £sr_dark_matter£ Matéria Escura e $darktec_contained_entropy_with_icon$, ao mesmo tempo em que oferecem bônus potentes."
 
 	tech_darktec_traits_t2:0 "Autoexperimentação Umbral"
-	tech_darktec_traits_t2_desc:0 "O sucesso da infusão entrópica de paramatéria com a composição de nossa espécie abriu um vasto campo de estudo no que diz respeito a combinações exóticas — algumas mais radicais e outras menos metódicas do que o esperado."
+	tech_darktec_traits_t2_desc:0 "O sucesso da infusão entrópica de paramatéria com a composição de nossa espécie abriu um vasto campo de estudo no que diz respeito a combinações exóticas - algumas mais radicais e outras menos metódicas do que o esperado."
 	tech_darktec_traits_t2_unlocks_title:0 "§HDesbloqueia Traços de Espécie:§! Traços Umbrais Avançados"
 	tech_darktec_traits_t2_unlocks_desc:0 "§H$tech_darktec_traits_t1$§!\nTraços especiais que interagem ainda mais com £sr_dark_matter£ Matéria Escura e $darktec_contained_entropy_with_icon$, ao mesmo tempo em que oferecem bônus potentes."
 

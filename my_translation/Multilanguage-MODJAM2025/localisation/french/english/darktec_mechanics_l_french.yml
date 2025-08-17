@@ -1,4 +1,4 @@
-﻿# localisation\english\darktec_mechanics_l_english.yml
+# localisation\english\darktec_mechanics_l_english.yml
 
 # Authors: Rodahtnov & Zyralynn
 
@@ -164,7 +164,7 @@ l_french:
 	menp_darktec_entropy_t4_unknown_tooltip:0 "???"
 
 	menp_darktec_entropy_t4_transformed:0 "Stabilisation Obscure"
-	menp_darktec_entropy_t4_transformed_desc:0 "Notre nouvelle forme est… intrigante. Nous sommes moins, nous sommes plus, et nous pouvons faire en sorte que d'autres le soient aussi."
+	menp_darktec_entropy_t4_transformed_desc:0 "Notre nouvelle forme est... intrigante. Nous sommes moins, nous sommes plus, et nous pouvons faire en sorte que d'autres le soient aussi."
 	menp_darktec_entropy_t4_transformed_tooltip:0 "['building:building_darktec_umbral_portal_1', £building£ $building_darktec_umbral_portal_1_plural$] augmente désormais également la Production des £job£ Emplois sur la planète.\n\nCe bâtiment permet désormais l'§YAssimilation§! passive des populations en §EÊtres Entrophériques§!."
 
 	menp_darktec_entropy_t4_tainted:0 "Ténèbres Fusionnées"
@@ -261,10 +261,10 @@ l_french:
 	darktec_crisobj_immediate_build_and_keep_umbral_buildings_desc:0 "Immenses et puissants, les bâtiments qui retiennent et façonnent l'entropie sont désormais la fondation de notre empire.\n\n§YConstruisez§! ou §Yaméliorez§! des bâtiments de l'Ombre pour obtenir cette récompense de $darktec_contained_entropy_with_icon$."
 
 	darktec_crisobj_yearly_retain_vassals_name:0 "Conserver des vassaux"
-	darktec_crisobj_yearly_retain_vassals_desc:0 "Ceux qui soutiennent notre cause méritent notre bienveillance — et, à terme, notre savoir.\n\nConservez des §Yvassaux§! pour obtenir cette récompense §Yannuelle§! de $darktec_contained_entropy_with_icon$."
+	darktec_crisobj_yearly_retain_vassals_desc:0 "Ceux qui soutiennent notre cause méritent notre bienveillance - et, à terme, notre savoir.\n\nConservez des §Yvassaux§! pour obtenir cette récompense §Yannuelle§! de $darktec_contained_entropy_with_icon$."
 
 	darktec_crisobj_yearly_retain_megastructures_name:0 "Conserver des mégastructures"
-	darktec_crisobj_yearly_retain_megastructures_desc:0 "La magnificence des mégastructures spatiales n'est pas seulement une beauté à observer, mais aussi un moyen de défier les normes — et de prendre l'avantage sur la moisson du vide.\n\nConservez des §Ymégastructures§! de types uniques pour obtenir cette récompense §Yannuelle§! de $darktec_contained_entropy_with_icon$."
+	darktec_crisobj_yearly_retain_megastructures_desc:0 "La magnificence des mégastructures spatiales n'est pas seulement une beauté à observer, mais aussi un moyen de défier les normes - et de prendre l'avantage sur la moisson du vide.\n\nConservez des §Ymégastructures§! de types uniques pour obtenir cette récompense §Yannuelle§! de $darktec_contained_entropy_with_icon$."
 
 	darktec_crisobj_yearly_galcom_retain_galcom_respect_name:0 "Obtenir le soutien de la Communauté Galactique"
 	darktec_crisobj_yearly_galcom_retain_galcom_respect_desc:0 "Nous devons convaincre les autres de notre cause, pour éviter leur disparition inutile par l'étreinte froide d'un univers mort.\n\nFaites partie du §YConseil§! de la Communauté Galactique ou évitez d'être §Yen Infraction§! à la loi galactique pour obtenir cette récompense §Yannuelle§! de $darktec_contained_entropy_with_icon$."
@@ -307,7 +307,7 @@ l_french:
 	darktec_crisis_battleship:0 "Infiltrateur de l'Ombre"
 	darktec_crisis_battleship_plural:0 "$darktec_crisis_battleship$s"
 	darktec_crisis_battleship_cap:0 "$darktec_crisis_battleship$"
-	darktec_crisis_battleship_desc:0 "Sursaturés de matière noire, ces puissants vaisseaux sont le palier supérieur parmi les vaisseaux de l'Ombre — une plateforme de dévastation qui conserve une agilité et une immense capacité défensive capable de résister même aux coups les plus puissants."
+	darktec_crisis_battleship_desc:0 "Sursaturés de matière noire, ces puissants vaisseaux sont le palier supérieur parmi les vaisseaux de l'Ombre - une plateforme de dévastation qui conserve une agilité et une immense capacité défensive capable de résister même aux coups les plus puissants."
 	darktec_crisis_battleship_tooltip:0 "Les Infiltrateurs sont le palier supérieur de vaisseaux de l'Ombre, étant des Cuirassés améliorés avec plus de variété de sections et de létalité.\nPossède un composant d'aura spécial pour des modificateurs personnels.\nLe vaisseau possède les modificateurs suivants :\n  - Coque : §R-50%§!\n  - Multiplicateur de bouclier bonus : §G+250%§!\n  - Durcissement de bouclier : §G+10%§!"
 
 	darktec_crisis_mauler:0 "Traqueur de l'Ombre"

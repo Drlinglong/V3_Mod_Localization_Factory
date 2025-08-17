@@ -1,12 +1,12 @@
-﻿l_simp_chinese:
+l_simp_chinese:
 
 building_synthetics_plants: "化妆品工厂"
 building_synthetics_plants_lens_option: "扩建 $building_synthetics_plants$"
 building_synthetics_plants_throughput_add: "化妆品工厂 [concept_throughput]"
-building_synthetics_plants_throughput_add_desc: "提高化妆品工厂的 [concept_throughput]。"
+building_synthetics_plants_throughput_add_desc: "提高化妆品工厂的 [concept_throughput]."
 
 building_chemical_plants: "化工厂"
 building_chemical_plants_lens_option: "扩建 $building_chemical_plants$"
 building_chemical_plants_throughput_add: "化工厂 [concept_throughput]"
-building_chemical_plants_throughput_add_desc: "提高化工厂的 [concept_throughput]。"
+building_chemical_plants_throughput_add_desc: "提高化工厂的 [concept_throughput]."
 pm_no_artificial_fibers: "无合成纤维"

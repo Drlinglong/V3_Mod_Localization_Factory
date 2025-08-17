@@ -1,4 +1,4 @@
-﻿l_german:
+l_german:
  #
  Club_confirm:0 "Den Bauantrag des ausgewählten Clubs genehmigen. Wenn kein Club ausgewählt ist, wird ein zufälliger genehmigt."
  Club_tbc:0 "§LWeitere Clubs folgen...§!"
@@ -112,11 +112,11 @@
 
 #
  BA_club.0001.title:0 "Erläuterung des Klub-Systems"
- BA_club.0001.desc:0 "„Sensei, wir haben gerade die Forschung abgeschlossen, die für den Bau von Klubschiffen und Weltraum-Klubräumen notwendig ist…\n*räusper* Nun ja, es ist jetzt das Weltraumzeitalter… Finden Sie nicht, dass ein Klubraum im Weltall super cool wäre? Jetzt können wir solche Räume bauen. Um einen Weltraum-Klub zu gründen, müssen Sie zuerst ein Ingenieurschiff entsenden, um einen Klub-Stützpunkt zu errichten, dann ein Klubschiff bauen, dem Klubschiff befehlen, in die Umlaufbahn des Stützpunkts einzutreten, und die Klubgründung wird beginnen.\nAlternativ können Sie die Klubmitglieder auf dem Klubschiff auch anweisen, einen neuen Planeten zu kolonisieren. Die Arbeitseffizienz der Klubmitglieder ist nicht so gut wie die regulärer Kolonisten, aber ihre kreativen Ideen tragen zur späteren Entwicklung des Planeten bei.“"
+ BA_club.0001.desc:0 "„Sensei, wir haben gerade die Forschung abgeschlossen, die für den Bau von Klubschiffen und Weltraum-Klubräumen notwendig ist...\n*räusper* Nun ja, es ist jetzt das Weltraumzeitalter... Finden Sie nicht, dass ein Klubraum im Weltall super cool wäre? Jetzt können wir solche Räume bauen. Um einen Weltraum-Klub zu gründen, müssen Sie zuerst ein Ingenieurschiff entsenden, um einen Klub-Stützpunkt zu errichten, dann ein Klubschiff bauen, dem Klubschiff befehlen, in die Umlaufbahn des Stützpunkts einzutreten, und die Klubgründung wird beginnen.\nAlternativ können Sie die Klubmitglieder auf dem Klubschiff auch anweisen, einen neuen Planeten zu kolonisieren. Die Arbeitseffizienz der Klubmitglieder ist nicht so gut wie die regulärer Kolonisten, aber ihre kreativen Ideen tragen zur späteren Entwicklung des Planeten bei.“"
  BA_club.0001.comfirmed:0 "Alles klar."
 
  BA_club.0002.title:0 "Erläuterung des Klub-Systems"
- BA_club.0002.desc:0 "„Sensei, unser erstes Klubschiff wurde zu Wasser gelassen!\nErinnern Sie sich noch an den Gründungsprozess eines Klubs? *hüstel* Nun, um einen Weltraum-Klub zu gründen, müssen Sie zuerst ein Ingenieurschiff entsenden, um einen Klub-Stützpunkt zu errichten, dann ein Klubschiff bauen, §Bdem Klubschiff befehlen, in die Umlaufbahn des Stützpunkts einzutreten§!, und die Klubgründung wird beginnen.\nEs ist wichtig zu beachten, dass wir die Anzahl der Klubräume kontrollieren müssen, damit sie die Klub-Obergrenze nicht überschreitet, da dies sonst den Führungsaufgaben des Föderalen Studentenrats etwas Druck bereiten würde… Natürlich, solange wir genug Ressourcen haben, sind das alles leicht lösbare Probleme.\nAlso, Sensei, geben wir unser Bestes zusammen!“"
+ BA_club.0002.desc:0 "„Sensei, unser erstes Klubschiff wurde zu Wasser gelassen!\nErinnern Sie sich noch an den Gründungsprozess eines Klubs? *hüstel* Nun, um einen Weltraum-Klub zu gründen, müssen Sie zuerst ein Ingenieurschiff entsenden, um einen Klub-Stützpunkt zu errichten, dann ein Klubschiff bauen, §Bdem Klubschiff befehlen, in die Umlaufbahn des Stützpunkts einzutreten§!, und die Klubgründung wird beginnen.\nEs ist wichtig zu beachten, dass wir die Anzahl der Klubräume kontrollieren müssen, damit sie die Klub-Obergrenze nicht überschreitet, da dies sonst den Führungsaufgaben des Föderalen Studentenrats etwas Druck bereiten würde... Natürlich, solange wir genug Ressourcen haben, sind das alles leicht lösbare Probleme.\nAlso, Sensei, geben wir unser Bestes zusammen!“"
  BA_club.0002.comfirmed:0 "Alles klar."
 
  BA_club.0005.title:0 "Klubraum-Baustart"
@@ -195,38 +195,38 @@
 
 #建立通讯
  BA_club.1001.title:0 "Abteilungsbericht: $Game_development_department$"
- BA_club.1001.desc:0 "„Uhm… Hanaoka Yuzu, Leiterin des Spieleentwicklungs-Clubs, meldet die Einrichtung der Abteilung in §Y[from.solar_system.GetName]§! ist abgeschlossen… Uhm…“"
+ BA_club.1001.desc:0 "„Uhm... Hanaoka Yuzu, Leiterin des Spieleentwicklungs-Clubs, meldet die Einrichtung der Abteilung in §Y[from.solar_system.GetName]§! ist abgeschlossen... Uhm...“"
  BA_club.1001.next:0 "Ich wünsche euch allen, dass ihr bald ein Meisterwerk entwickelt!"
  BA_club.1002.title:0 "$BA_club.1001.title$"
  BA_club.1002.desc:0 "Ein anderer Staat hat bereits $Game_development_department$ gegründet."
 
  BA_club.1101.title:0 "Einrichtungsbericht: $Engineering_club$"
- BA_club.1101.desc:0 "„Bericht an den Föderalen Schülerrat: Die Weltraum-Sektion des Ingenieur-Clubs wurde in §Y[from.solar_system.GetName]§! erfolgreich eingerichtet. Unsere Aufträge beinhalten reichlich §GForschung an Raumschiffwaffen§!, daher könnten die Rechnungen… etwas überraschend ausfallen. Bitte nicht übel nehmen…“"
+ BA_club.1101.desc:0 "„Bericht an den Föderalen Schülerrat: Die Weltraum-Sektion des Ingenieur-Clubs wurde in §Y[from.solar_system.GetName]§! erfolgreich eingerichtet. Unsere Aufträge beinhalten reichlich §GForschung an Raumschiffwaffen§!, daher könnten die Rechnungen... etwas überraschend ausfallen. Bitte nicht übel nehmen...“"
  BA_club.1101.next:0 "Kein Grund zur Sorge, macht weiter so!"
  BA_club.1102.title:0 "$BA_club.1101.title$"
  BA_club.1102.desc:0 "Ein anderer Staat hat bereits $Engineering_club$ gegründet."
 
  BA_club.1201.title:0 "Einrichtungsbericht: $Veritas$"
- BA_club.1201.desc:0 "„Hier ist Kagami Chihiro. Die Weltraum-Außenstelle des Veritas-Clubs wurde in §Y[from.solar_system.GetName]§! eingerichtet. Da wir nun die Nutzungsrechte für dieses Megaprojekt erhalten haben, müssen wir es natürlich auch ein wenig umbauen, um aus dem Weltraum §Gmehr Informationen zu gewinnen§!…“"
+ BA_club.1201.desc:0 "„Hier ist Kagami Chihiro. Die Weltraum-Außenstelle des Veritas-Clubs wurde in §Y[from.solar_system.GetName]§! eingerichtet. Da wir nun die Nutzungsrechte für dieses Megaprojekt erhalten haben, müssen wir es natürlich auch ein wenig umbauen, um aus dem Weltraum §Gmehr Informationen zu gewinnen§!...“"
  BA_club.1201.next:0 "Sagt Bescheid, wenn ihr etwas braucht, ich werde euch unterstützen."
  BA_club.1202.title:0 "$BA_club.1201.title$"
  BA_club.1202.desc:0 "Ein anderer Staat hat bereits $Veritas$ gegründet."
 
  BA_club.1301.title:0 "Einrichtungsbericht: $Foreclosure_task_force$"
- BA_club.1301.desc:0 "„Hier ist Okusora Ayane, Bericht an den Föderalen Schülerrat über Kivotos-Leitung 4: Die Weltraum-Außenstelle des Maßnahmenausschusses in §Y[from.solar_system.GetName]§! ist eingerichtet. Wir werden unsere Arbeitserfahrung von Abydos voll ausschöpfen und uns bemühen, mit Vorschlägen zur §GVerbesserung der Basisproduktion§! beizutragen… Ähm, das war's.“"
+ BA_club.1301.desc:0 "„Hier ist Okusora Ayane, Bericht an den Föderalen Schülerrat über Kivotos-Leitung 4: Die Weltraum-Außenstelle des Maßnahmenausschusses in §Y[from.solar_system.GetName]§! ist eingerichtet. Wir werden unsere Arbeitserfahrung von Abydos voll ausschöpfen und uns bemühen, mit Vorschlägen zur §GVerbesserung der Basisproduktion§! beizutragen... Ähm, das war's.“"
  BA_club.1301.next:0 "Verstanden, sagt Bescheid, wenn ihr etwas braucht."
  BA_club.1302.title:0 "$BA_club.1301.title$"
  BA_club.1302.desc:0 "Ein anderer Staat hat bereits $Foreclosure_task_force$ gegründet."
 
  BA_club.1401.title:0 "Einrichtungsbericht: $Teaparty$"
- BA_club.1401.desc:0 "„Guten Tag, Nagisa Kirifuji, Ausrichterin der Teeparty, berichtet dem Föderalen Schülerrat nun im Namen des Clubs und nicht als Trinität: Die Weltraum-Außenstelle der Teeparty wurde in §Y[from.solar_system.GetName]§! eingerichtet. Hust, hust… Die Teeparty verfügt über reiche Erfahrung in der Verwaltung großer Akademien, und unsere Aktivitäten auf den Kolonien können die §GVerwaltungsfähigkeiten effektiv steigern§!, um Kivotos einen einzigartigen Beitrag zu leisten. Das war's, ich wünsche Ihnen alles Gute.“"
+ BA_club.1401.desc:0 "„Guten Tag, Nagisa Kirifuji, Ausrichterin der Teeparty, berichtet dem Föderalen Schülerrat nun im Namen des Clubs und nicht als Trinität: Die Weltraum-Außenstelle der Teeparty wurde in §Y[from.solar_system.GetName]§! eingerichtet. Hust, hust... Die Teeparty verfügt über reiche Erfahrung in der Verwaltung großer Akademien, und unsere Aktivitäten auf den Kolonien können die §GVerwaltungsfähigkeiten effektiv steigern§!, um Kivotos einen einzigartigen Beitrag zu leisten. Das war's, ich wünsche Ihnen alles Gute.“"
  BA_club.1401.next:0 "Mit eurer Hilfe wird der Föderale Schülerrat Flügel bekommen."
  BA_club.1402.title:0 "$BA_club.1401.title$"
  BA_club.1402.desc:0 "Ein anderer Staat hat bereits $Teaparty$ gegründet."
 
  BA_club.1501.title:0 "Einrichtungsbericht: $Hotspring_development_department$"
  BA_club.1501.desc:0 "„Gemäß den vom Club-Hauptquartier erteilten Anweisungen sind alle schweren Anlagen der Abteilung für Thermalquellenentwicklung in §Y[from.solar_system.GetName]§! eingetroffen. Ich wiederhole: Gemäß Vertrag erhalten wir die Erkundungsrechte, während das Eigentum an den Mineralien vollständig dem Föderalen Schülerrat zusteht.“"
- BA_club.1501.next:0 "…Achtet auf die Sicherheit beim Umgang mit Sprengstoffen…"
+ BA_club.1501.next:0 "...Achtet auf die Sicherheit beim Umgang mit Sprengstoffen..."
  BA_club.1502.title:0 "$BA_club.1501.title$"
  BA_club.1502.desc:0 "Ein anderer Staat hat bereits $Hotspring_development_department$ gegründet."
 
@@ -255,32 +255,32 @@
 
 
 #游戏部
- Game_development_department_opinion:0 "（§GAktueller Baufortschritt: [Root.Game_development_department] §!）"
+ Game_development_department_opinion:0 "(§GAktueller Baufortschritt: [Root.Game_development_department] §!)"
 
- Yuzu_desc1:0 "$Game_development_department_opinion$… Will… Willkommen… Uhm…"
+ Yuzu_desc1:0 "$Game_development_department_opinion$... Will... Willkommen... Uhm..."
  Yuzu_desc2:0 "$Game_development_department_opinion$Wir sind der Spieleentwicklungsklub. Spiele zu machen ist unser Ding... äh, nicht nur das!"
- Yuzu_desc3:0 "$Game_development_department_opinion$…Äh! Le-Lehrer… Tauch nicht einfach so hinter mir auf…!"
+ Yuzu_desc3:0 "$Game_development_department_opinion$...Äh! Le-Lehrer... Tauch nicht einfach so hinter mir auf...!"
  Aris_desc1:0 "$Game_development_department_opinion$Der Held hat den Lehrer entdeckt! Etikette-Protokoll wird aktiviert!"
- Aris_desc2:0 "$Game_development_department_opinion$…(Kompiliere)"
+ Aris_desc2:0 "$Game_development_department_opinion$...(Kompiliere)"
  Aris_desc3:0 "$Game_development_department_opinion$Willkommen, Lehrer. Momoi, Midori und Yuzu warten drinnen auf dich."
  Momoi_desc1:0 "$Game_development_department_opinion$Lehrer! Wollen wir heute dieses Versus-Spiel zusammen spielen?"
  Momoi_desc2:0 "$Game_development_department_opinion$Ideen sind flüchtig, aber wenn man sie packt, wachsen sie zu einem supergeilen Meisterwerk heran!"
- Momoi_desc3:0 "$Game_development_department_opinion$…Uhm, ich muss schon wieder Eis für alle kaufen gehen…"
- Midori_desc1:0 "$Game_development_department_opinion$Möchtest du diese neue Demo ausprobieren? Auch wenn meine Schwester sie spontan vorgeschlagen hat, ist sie doch ganz gut geworden…"
- Midori_desc2:0 "$Game_development_department_opinion$Das ist ein Level-Architektur-Design von der Fabrikationsmaschine… Uhm, wir haben uns bei den Algorithmen so viel Mühe gegeben, aber als wir das fertige Produkt genauer ansahen, merkten wir, dass es absolut unbrauchbar war…"
- Midori_desc3:0 "$Game_development_department_opinion$Ich hab das Gefühl, ich hab irgendeine Aufgabe vergessen… In welchem Spiel war das noch gleich…?"
+ Momoi_desc3:0 "$Game_development_department_opinion$...Uhm, ich muss schon wieder Eis für alle kaufen gehen..."
+ Midori_desc1:0 "$Game_development_department_opinion$Möchtest du diese neue Demo ausprobieren? Auch wenn meine Schwester sie spontan vorgeschlagen hat, ist sie doch ganz gut geworden..."
+ Midori_desc2:0 "$Game_development_department_opinion$Das ist ein Level-Architektur-Design von der Fabrikationsmaschine... Uhm, wir haben uns bei den Algorithmen so viel Mühe gegeben, aber als wir das fertige Produkt genauer ansahen, merkten wir, dass es absolut unbrauchbar war..."
+ Midori_desc3:0 "$Game_development_department_opinion$Ich hab das Gefühl, ich hab irgendeine Aufgabe vergessen... In welchem Spiel war das noch gleich...?"
 
  Game_development_department_building:0 "Möchtest du ein Studio auf diesem Planeten haben?"
- Game_development_department_building.YuzuRE:0 "Wi-wirklich…? Vielen Dank, Lehrer…"
+ Game_development_department_building.YuzuRE:0 "Wi-wirklich...? Vielen Dank, Lehrer..."
  Game_development_department_building.ArisRE:0 "Bang Bang Ka Bang! Aris hat einen neuen Stützpunkt bekommen und kann jetzt mehr Gegenstände lagern!"
  Game_development_department_building.MomoiRE:0 "Ich werde es zum besten Spielort machen!"
  Game_development_department_building.MidoriRE:0 "Das ist wirklich der beste Tag! Danke, Lehrer!"
 
  Game_development_department_building_add:0 "Wollt ihr noch mehr Studios?"
- Game_development_department_building_add.YuzuRE:0 "Unendlich dankbar, Lehrer…"
- Game_development_department_building_add.ArisRE:0 "Mmm… Aris hat einen noch besseren Stützpunkt bekommen, sie muss die Nutzung gut planen!"
+ Game_development_department_building_add.YuzuRE:0 "Unendlich dankbar, Lehrer..."
+ Game_development_department_building_add.ArisRE:0 "Mmm... Aris hat einen noch besseren Stützpunkt bekommen, sie muss die Nutzung gut planen!"
  Game_development_department_building_add.MomoiRE:0 "Nächstes Level freischalten! Das Abenteuer des Spieleentwicklungsklubs geht weiter!"
- Game_development_department_building_add.MidoriRE:0 "Dieses Mal probieren wir ein neues Design aus…"
+ Game_development_department_building_add.MidoriRE:0 "Dieses Mal probieren wir ein neues Design aus..."
 
  Game_developing:0 "Der Spieleentwicklungsklub ist gerade beschäftigt. Komm später wieder."
  Game_development_department_game_complete:0 "Spieleentwicklungsklub: Produktion abgeschlossen"
@@ -294,16 +294,16 @@
 #工程师部
  Engineering_club_opinion:0 "(§GAktueller Fortschritt: [Root.Engineering_club]§!)\n\n"
 
- Utaha_desc1:0 "$Engineering_club_opinion$Lehrer, du fragst, was das ist?… Das ist keine Schokolade, das ist ein Magazin. Unser Magazin ist klein und einfach zu transportieren,…"
- Utaha_desc2:0 "$Engineering_club_opinion$Lehrer, komm schnell gucken, mein kleiner Rai kann jetzt einen Rückwärtssalto machen!… Äh, ist schon gut, du zuerst."
- Utaha_desc3:0 "$Engineering_club_opinion$Meine Klubmitglieder basteln oft viele seltsame Dinge, wie zum Beispiel Zuckerwürfel-Scharfschützengewehre und so… Ich versichere dir, sie verschwenden keine Gelder, ihre Ideen sind einfach etwas… unkonventionell."
- Hibiki_desc1:0 "$Engineering_club_opinion$Willkommen, Lehrer. Das hier? Das ist eine Maschine, mit der man im Bett liegend die Kleidung wechseln kann. Sie funktioniert so…"
- Hibiki_desc2:0 "$Engineering_club_opinion$Uhm, ich glaube, ich habe den Grund gefunden, warum die Verteidigungsdrohnen mich ständig angreifen… Warum wurde dieser Chip in meine Kleidung genäht…?"
+ Utaha_desc1:0 "$Engineering_club_opinion$Lehrer, du fragst, was das ist?... Das ist keine Schokolade, das ist ein Magazin. Unser Magazin ist klein und einfach zu transportieren,..."
+ Utaha_desc2:0 "$Engineering_club_opinion$Lehrer, komm schnell gucken, mein kleiner Rai kann jetzt einen Rückwärtssalto machen!... Äh, ist schon gut, du zuerst."
+ Utaha_desc3:0 "$Engineering_club_opinion$Meine Klubmitglieder basteln oft viele seltsame Dinge, wie zum Beispiel Zuckerwürfel-Scharfschützengewehre und so... Ich versichere dir, sie verschwenden keine Gelder, ihre Ideen sind einfach etwas... unkonventionell."
+ Hibiki_desc1:0 "$Engineering_club_opinion$Willkommen, Lehrer. Das hier? Das ist eine Maschine, mit der man im Bett liegend die Kleidung wechseln kann. Sie funktioniert so..."
+ Hibiki_desc2:0 "$Engineering_club_opinion$Uhm, ich glaube, ich habe den Grund gefunden, warum die Verteidigungsdrohnen mich ständig angreifen... Warum wurde dieser Chip in meine Kleidung genäht...?"
  Hibiki_desc3:0 "$Engineering_club_opinion$Die Waffe eines der Kinder aus dem Spieleentwicklungsklub haben wir hergestellt. Wir haben reichlich Erfahrung in der Herstellung von Raumschiffwaffen."
 
  Engineering_club_sponsor:0 "Wir können euch mehr Klubgelder zur Verfügung stellen."
  Engineering_club_sponsor_UtahaRE:0 "Wir sind dir wirklich unendlich dankbar, Lehrer. Sag einfach, welche Ausrüstung du brauchst!"
- Engineering_club_sponsor_HibikiRE:0 "Mit diesem Geld können wir wirklich gutes Material kaufen… Danke dir."
+ Engineering_club_sponsor_HibikiRE:0 "Mit diesem Geld können wir wirklich gutes Material kaufen... Danke dir."
 
  Engineering_club_special_weapon:0 "Wir haben ein spezielles Projekt, das wir euch anvertrauen möchten."
 
@@ -457,15 +457,15 @@
 
  Teaparty_building_add:0 "Ist die Anzahl der Zweiggebäude unzureichend? Ergänzungen können jetzt bereitgestellt werden."
  Teaparty_building_add.NagisaRE:0 "Jetzt können die Zweigstellen der Teeparty mehr Funktionen übernehmen, danke."
- Teaparty_building_add.SeiaRE:0 "…Im Gegenzug brauche ich ein größeres Bett…"
+ Teaparty_building_add.SeiaRE:0 "...Im Gegenzug brauche ich ein größeres Bett..."
  Teaparty_building_add.MikaRE:0 "So können wir diese unartigen Bengel noch schneller loswerden."
 
 
 #温泉开发部
  Hotspring_development_department_opinion:0 "(§GAktuelle Ausbaustufe: [Root.Hotspring_development_department]§!)\n\n"
 
- Megu_desc1:0 "$Hotspring_development_department_opinion$Schnell, schnell… Gibt es irgendwo etwas, das wir plattmachen sollen?"
- Megu_desc2:0 "$Hotspring_development_department_opinion$Hehe… Die heißen Quellen, die wir gebaut haben, sind richtig belebt! War Sensei in letzter Zeit mal dort?"
+ Megu_desc1:0 "$Hotspring_development_department_opinion$Schnell, schnell... Gibt es irgendwo etwas, das wir plattmachen sollen?"
+ Megu_desc2:0 "$Hotspring_development_department_opinion$Hehe... Die heißen Quellen, die wir gebaut haben, sind richtig belebt! War Sensei in letzter Zeit mal dort?"
  Megu_desc3:0 "$Hotspring_development_department_opinion$Viele der heißen Quellen, die wir früher gegraben haben, sind nach ein paar Tagen ausgetrocknet. Jetzt, da wir Erkundungsausrüstung haben, müssen wir endlich nicht mehr nur unser Glück versuchen!"
 
  Hotspring_development_department_research:0 "Wir können Forschungen durchführen, um die Erkundungseffizienz zu steigern."
@@ -474,7 +474,7 @@
  Hotspring_development_department_research.MeguRE:0 "Das soll ich der Generalverwaltung übergeben, richtig? Habe verstanden!"
 
  Hotspring_development_department_building:0 "Braucht ihr eine Geschäftsabteilung?"
- Hotspring_development_department_building.MeguRE:0 "…Hmm, nur entwickeln reicht nicht, geschäftliche Mittel sind auch notwendig? Das ist so schwer zu verstehen…"
+ Hotspring_development_department_building.MeguRE:0 "...Hmm, nur entwickeln reicht nicht, geschäftliche Mittel sind auch notwendig? Das ist so schwer zu verstehen..."
 
  Hotspring_development_department_building_add:0 "Es ist Zeit, mehr heiße Quellen zu betreiben."
  Hotspring_development_department_building_add.MeguRE:0 "Ich verstehe ja nichts vom Geschäftlichen, aber solange mehr Leute die heißen Quellen genießen, ist alles gut!"
@@ -497,7 +497,7 @@
  Festival_operations_department_prolong.tip:0 "Zahlt Ressourcen, um die Dauer des Fest-Bonus zu verlängern. Dies führt ebenfalls dazu, dass das Fest eine Abklingzeit erhält und $consumer_goods_with_icon$ als Wartungskosten anfallen."
  Festival_operations_department_prolong.cooldown:0 "Die Club-Abteilung benötigt mehr Vorbereitungen, um sich auf die nächste Vergrößerung vorzubereiten."
  Festival_operations_department_prolong.max:0 "Die geplante Größe des Festes hat das Maximum erreicht."
- Festival_operations_department_prolong.ShizukoRE:0 "Wenn der Föderale Schülerrat die Kosten übernimmt… kein Problem!\n\n(Wenn das Fest das nächste Mal veranstaltet wird, wird die Dauer des erhaltenen Bonus um 360£time£ Tage verlängert.)"
+ Festival_operations_department_prolong.ShizukoRE:0 "Wenn der Föderale Schülerrat die Kosten übernimmt... kein Problem!\n\n(Wenn das Fest das nächste Mal veranstaltet wird, wird die Dauer des erhaltenen Bonus um 360£time£ Tage verlängert.)"
 
  Festival_operations_department_building:0 "Müssen wir weitere Betriebszentren eröffnen?"
  Festival_operations_department_building.ShizukoRE:0 "So kann der Umsatz schneller steigen."
@@ -518,11 +518,11 @@
  Xuanwu_promenade_trade.cooldown:0 "Die Genbu-Handelsgesellschaft kümmert sich gerade um die Kanalangelegenheiten. Bitte geben Sie Ihre Bestellung erst in §Y[root.Xuanwu_promenade_trade_cooldown]§! wieder auf."
  Xuanwu_promenade_trade.noflow:0 "Uns fehlen die Nachweise für den Fluss dieser Ressourcen, wir können diese Transaktion nicht als legal bestätigen."
 
- Xuanwu_promenade_trade.RumiRE.1:0 "Na klar!… Wie könnten Sie nur, ahahaha, wir von der Genbu-Handelsgesellschaft machen ganz seriöse Geschäfte, heh heh."
+ Xuanwu_promenade_trade.RumiRE.1:0 "Na klar!... Wie könnten Sie nur, ahahaha, wir von der Genbu-Handelsgesellschaft machen ganz seriöse Geschäfte, heh heh."
  Xuanwu_promenade_trade.RumiRE.2:0 "Diese Ware haben wir nur mit viel Mühe und Not bekommen, also beschwert euch nicht über die Qualität."
 
  Xuanwu_promenade_trade.title:0 "Genbu-Handelsgesellschaft: Spezialbestellungen"
- Xuanwu_promenade_trade.desc1:0 "$Xuanwu_promenade_opinion$Bestellt einfach, was ihr braucht… sofortige Lieferung, den Rest regelt die Genbu-Handelsgesellschaft."
+ Xuanwu_promenade_trade.desc1:0 "$Xuanwu_promenade_opinion$Bestellt einfach, was ihr braucht... sofortige Lieferung, den Rest regelt die Genbu-Handelsgesellschaft."
  Xuanwu_promenade_trade.desc2:0 "$Xuanwu_promenade_opinion$Lasst nicht zu, dass Lieferengpässe die wichtigen Dinge verzögern, Sensei. Ihr könnt der Genbu-Handelsgesellschaft immer vertrauen."
  Xuanwu_promenade_trade.exit:0 "Zurück"
  Xuanwu_promenade_trade.consumer_goods:0 "Kaufen $consumer_goods_with_icon$"

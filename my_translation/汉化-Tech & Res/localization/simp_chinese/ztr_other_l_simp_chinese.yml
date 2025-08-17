@@ -1,7 +1,7 @@
-﻿l_simp_chinese:
+l_simp_chinese:
 
 dlc_tech_res: "科技与研究"
-dlc_tech_res_desc: "科技与研究是一个模组，它增加了一个深入且沉浸式的科技发展系统，包括新的时代、生产科技以及工业机制，涵盖1836年至1990年代及以后的内容。"
+dlc_tech_res_desc: "科技与研究是一个模组,它增加了一个深入且沉浸式的科技发展系统,包括新的时代,生产科技以及工业机制,涵盖1836年至1990年代及以后的内容."
 
 # State Traits
 
@@ -19,35 +19,35 @@ dev_5_country: "超级发达国家"
 # Military Units
 
 combat_unit_type_modern_mechanized_infantry: "现代机械化步兵"
-combat_unit_type_modern_mechanized_infantry_desc: "高机动性且装备精良的部队，能够快速部署并执行有效的作战行动。"
+combat_unit_type_modern_mechanized_infantry_desc: "高机动性且装备精良的部队,能够快速部署并执行有效的作战行动."
 
 combat_unit_type_modern_light_tanks: "现代轻型坦克"
-combat_unit_type_modern_light_tanks_desc: "快速灵活的装甲车辆，专为侦察和快速突袭设计。"
+combat_unit_type_modern_light_tanks_desc: "快速灵活的装甲车辆,专为侦察和快速突袭设计."
 
 combat_unit_type_modern_heavy_tank: "现代重型坦克"
-combat_unit_type_modern_heavy_tank_desc: "重装甲且火力强大的车辆，在战场上提供卓越的火力与防护。"
+combat_unit_type_modern_heavy_tank_desc: "重装甲且火力强大的车辆,在战场上提供卓越的火力与防护."
 
 combat_unit_type_main_battle_tanks: "主战坦克"
-combat_unit_type_main_battle_tanks_desc: "多功能装甲车辆，集火力、防护和机动性于一体，适用于各种现代作战场景，尤其在冷战期间。"
+combat_unit_type_main_battle_tanks_desc: "多功能装甲车辆,集火力,防护和机动性于一体,适用于各种现代作战场景,尤其在冷战期间."
 
 combat_unit_type_advanced_mechanized_infantry: "先进机械化步兵"
-combat_unit_type_advanced_mechanized_infantry_desc: "高机动性且装备精良的部队，能够快速部署并执行有效的作战行动。"
+combat_unit_type_advanced_mechanized_infantry_desc: "高机动性且装备精良的部队,能够快速部署并执行有效的作战行动."
 extra: "额外"
 
 combat_unit_type_nuclear_submarine: "核潜艇"
-combat_unit_type_nuclear_submarine_desc: "由核反应堆驱动的潜艇，能够进行长时间水下行动和隐秘交战。"
+combat_unit_type_nuclear_submarine_desc: "由核反应堆驱动的潜艇,能够进行长时间水下行动和隐秘交战."
 
 combat_unit_type_modern_carrier: "现代航母"
-combat_unit_type_modern_carrier_desc: "配备先进科技的航空母舰，能够远距离投射空中力量。"
+combat_unit_type_modern_carrier_desc: "配备先进科技的航空母舰,能够远距离投射空中力量."
 
 combat_unit_type_modern_destroyer: "现代驱逐舰"
-combat_unit_type_modern_destroyer_desc: "快速机动战舰，专为防空、反潜和水面作战设计。"
+combat_unit_type_modern_destroyer_desc: "快速机动战舰,专为防空,反潜和水面作战设计."
 
 combat_unit_type_scout_modern_cruiser: "侦察型现代巡洋舰"
-combat_unit_type_scout_modern_cruiser_desc: "快速灵活的巡洋舰，专为侦察和快速反应行动设计。"
+combat_unit_type_scout_modern_cruiser_desc: "快速灵活的巡洋舰,专为侦察和快速反应行动设计."
 
 combat_unit_type_modern_battleship: "现代战列舰"
-combat_unit_type_modern_battleship_desc: "火力强大且装甲厚重的战舰，提供远程火力支援和海上霸权。"
+combat_unit_type_modern_battleship_desc: "火力强大且装甲厚重的战舰,提供远程火力支援和海上霸权."
 
 # NEW 1.1 Pop growth modifiers
 

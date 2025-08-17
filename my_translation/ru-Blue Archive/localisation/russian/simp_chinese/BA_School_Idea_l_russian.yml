@@ -1,4 +1,4 @@
-﻿l_russian:
+l_russian:
  BA_SI:"Принципы Академии"
 
  MESSAGE_BA_SI_READY:"Принципы Академии готовы"
@@ -36,7 +36,7 @@
  SI_Abydos_A01_tip:"§C$SI_Abydos_A01$§!\n$SI_Abydos_A01_desc$\n$SI_Abydos_A01_effect$"
 
  SI_Abydos_A02:"Интеграция логистики"
- SI_Abydos_A02_desc:"Преобразование планеты — это колоссальный проект. Эффективность потока материалов напрямую определяет прогресс проекта."
+ SI_Abydos_A02_desc:"Преобразование планеты - это колоссальный проект. Эффективность потока материалов напрямую определяет прогресс проекта."
  SI_Abydos_A02_effect:"\nЭффект:\n$mod_planet_districts_cost_mult$: §G-15%§!\n$mod_planet_districts_upkeep_mult$: §G-15%§!\nЗатраты на терраформирование: §G-35%§!\nСкорость терраформирования: §G+25%§!\n"
  SI_Abydos_A02_tip:"§C$SI_Abydos_A02$§!\n$SI_Abydos_A02_desc$\n$SI_Abydos_A02_effect$"
 
@@ -46,12 +46,12 @@
  SI_Abydos_A03_tip:"§C$SI_Abydos_A03$§!\n$SI_Abydos_A03_desc$\n$SI_Abydos_A03_effect$"
 
  SI_Abydos_A04:"Планетарные чертежи"
- SI_Abydos_A04_desc:"Кивотос всегда был самым подходящим местом для жизни. Планета-Академгород — наш самый идеальный дом."
+ SI_Abydos_A04_desc:"Кивотос всегда был самым подходящим местом для жизни. Планета-Академгород - наш самый идеальный дом."
  SI_Abydos_A04_effect:"\nЭффект:\n$mod_planet_metallurgists_alloys_produces_add$: §G+1§!\n$MOD_PLANET_DECISION_ENACT_SPEED_MULT$: §G+15%§!\n$mod_planet_buildings_cost_mult$: §G-20%§!\n"
  SI_Abydos_A04_tip:"§C$SI_Abydos_A04$§!\n$SI_Abydos_A04_desc$\n$SI_Abydos_A04_effect$"
 
  SI_Abydos_A05:"Освоение пустоты"
- SI_Abydos_A05_desc:"Бесстрашные инженеры покоряют обширные просторы околоземной орбиты. Автоматизированные жилые станции — их средство."
+ SI_Abydos_A05_desc:"Бесстрашные инженеры покоряют обширные просторы околоземной орбиты. Автоматизированные жилые станции - их средство."
  SI_Abydos_A05_effect:"\nЭффект:\n$MOD_MEGASTRUCTURE_BUILD_SPEED_MULT$: §G+75%§!\n$mod_BA_auto_districts_produces_mult$: §G+20%§!\n$mod_megastructures_cost_mult$: §G-20%§!\n$mod_station_gatherers_produces_mult$: §G+30%§!\n" #\n居住站和自动化居住站宜居性: §G+30%§!
  SI_Abydos_A05_tip:"§C$SI_Abydos_A05$§!\n$SI_Abydos_A05_desc$\n$SI_Abydos_A05_effect$"
 
@@ -62,7 +62,7 @@
 
  ### 右线
  SI_Abydos_B01:"Путь пустынной академии"
- SI_Abydos_B01_desc:"Пустыня — это, по сути, тоже ресурс. Максимально эффективно используя опустынивание, мы можем сделать его главной особенностью Абидоса."
+ SI_Abydos_B01_desc:"Пустыня - это, по сути, тоже ресурс. Максимально эффективно используя опустынивание, мы можем сделать его главной особенностью Абидоса."
  SI_Abydos_B01_effect:"\n§RВзаимоисключает:§! $SI_Abydos_A01$\nЭффект:\nКолонии типа §Yпустынная планета§H получают модификатор планеты: §!$modifier_BA_SI_Abydos_B01$:\n    Минимальная пригодность для жизни вида: §G+50%§!\n    Скорость строительства на планете: §G+0.25§!\n"
  SI_Abydos_B01_tip:"§C$SI_Abydos_B01$§!\n$SI_Abydos_B01_desc$\n$SI_Abydos_B01_effect$"
 
@@ -117,7 +117,7 @@
  SI_Gehenna_A01_tip:"§C$SI_Gehenna_A01$§!\n$SI_Gehenna_A01_desc$\n$SI_Gehenna_A01_effect$"
 
  SI_Gehenna_A02:"Стратегия Пандемониума: На опережение"
- SI_Gehenna_A02_desc:"Лидеры Пандемониума считают, что инициатива всегда является залогом победы, будь то геополитические игры или политическая борьба. Однако, когда дело доходит до конкретных действий, от составления плана до его выполнения — всем занимается секретарь."
+ SI_Gehenna_A02_desc:"Лидеры Пандемониума считают, что инициатива всегда является залогом победы, будь то геополитические игры или политическая борьба. Однако, когда дело доходит до конкретных действий, от составления плана до его выполнения - всем занимается секретарь."
  SI_Gehenna_A02_effect:"\n§RВзаимоисключающе с§!$SI_Gehenna_B02$§R!§!\nЭффект:\nСогласно текущему плану, немедленно получить §G40 корветов§!\n§HПолучает модификатор империи: §!$modifier_BA_SI_Gehenna_A02$(3600£time£):\n    $MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+100%§!\n    $mod_ships_upkeep_mult$: §G-35%§!\n"
  SI_Gehenna_A02_tip:"§C$SI_Gehenna_A02$§!\n$SI_Gehenna_A02_desc$\n$SI_Gehenna_A02_effect$"
 
@@ -138,14 +138,14 @@
  SI_Gehenna_B02_tip:"§C$SI_Gehenna_B02$§!\n$SI_Gehenna_B02_desc$\n$SI_Gehenna_B02_effect$"
 
  SI_Gehenna_B03:"Стратегия Дисциплинарного комитета: Буря и натиск"
- SI_Gehenna_B03_desc:"Обеспечение стабильности — это основа для развития. При необходимости Дисциплинарный комитет будет решительно привлекать персонал из Федерального Студенческого Совета для решения сложных проблем. Таким образом, администраторы придумали способы для быстрейшей мобилизации сил."
+ SI_Gehenna_B03_desc:"Обеспечение стабильности - это основа для развития. При необходимости Дисциплинарный комитет будет решительно привлекать персонал из Федерального Студенческого Совета для решения сложных проблем. Таким образом, администраторы придумали способы для быстрейшей мобилизации сил."
  SI_Gehenna_B03_effect:"\n§RВзаимоисключающе с§!$SI_Gehenna_A03$§R!§!\nЭффект:\nСодержание Отряда самообороны: §G-40%§!\nПроизводство Отряда самообороны: §G+40%§!\nКолонии с £stability£стабильностью ≥90% §Hполучают модификатор планеты:§!$modifier_BA_SI_Gehenna_B03$(90£time£):\n    Ресурсы, производимые должностями: §G+15%§!\n"
  SI_Gehenna_B03_tip:"§C$SI_Gehenna_B03$§!\n$SI_Gehenna_B03_desc$\n$SI_Gehenna_B03_effect$"
 
  ### 下左线
  SI_Gehenna_C01:"Вердикт: Пандемониум"
  SI_Gehenna_C01_desc:"Лидерство Пандемониума постепенно заглушало голос Дисциплинарного комитета и получило право выносить решения по внутренним делам Геенны. Однако при выборе окончательного арбитра Пандемониум сделал неожиданный выбор."
- SI_Gehenna_C01_effect:"\nЭффект:\n§HПолучает модификатор империи: §!$modifier_BA_SI_Gehenna_C01$(10800£time£):\n    $MOD_SHIP_WEAPON_DAMAGE$: §G+35%§!\n    $MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+35%§!\n    $MOD_ARMY_ATTACK_DAMAGE_MULT$: §G+35%§!\n    £stability£$MOD_PLANET_STABILITY_ADD$: §R-10§!\n    $MOD_EMPIRE_SIZE_POPS_MULT$: §R+25%§!\n" #§H统治者更换为§!：丹花伊吹\n
+ SI_Gehenna_C01_effect:"\nЭффект:\n§HПолучает модификатор империи: §!$modifier_BA_SI_Gehenna_C01$(10800£time£):\n    $MOD_SHIP_WEAPON_DAMAGE$: §G+35%§!\n    $MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+35%§!\n    $MOD_ARMY_ATTACK_DAMAGE_MULT$: §G+35%§!\n    £stability£$MOD_PLANET_STABILITY_ADD$: §R-10§!\n    $MOD_EMPIRE_SIZE_POPS_MULT$: §R+25%§!\n" #§H统治者更换为§!:丹花伊吹\n
  SI_Gehenna_C01_tip:"§C$SI_Gehenna_C01$§!\n$SI_Gehenna_C01_desc$\n$SI_Gehenna_C01_effect$"
 
  SI_Gehenna_C02:"Закулисные правила"
@@ -154,7 +154,7 @@
  SI_Gehenna_C02_tip:"§C$SI_Gehenna_C02$§!\n$SI_Gehenna_C02_desc$\n$SI_Gehenna_C02_effect$"
 
  SI_Gehenna_C03:"Явное Предназначение Геенны"
- SI_Gehenna_C03_desc:"§R«Вселенная темна и холодна, а свет Пандемониума ярок и тёпел;\nРаспространить искру по всей этой галактике — вот наша миссия!»§!\nТак написано на листовке Федерального Студенческого Совета."
+ SI_Gehenna_C03_desc:"§R«Вселенная темна и холодна, а свет Пандемониума ярок и тёпел;\nРаспространить искру по всей этой галактике - вот наша миссия!»§!\nТак написано на листовке Федерального Студенческого Совета."
  SI_Gehenna_C03_effect:"\nЭффект:\n§HОткрывает указ «Доктрина Академии»: §!$edict_BA_SI_Gehenna_C03$:\n    §YБазовая стоимость активации: £sr_dark_matter£75§!\n    §YБазовое ежемесячное содержание: £volatile_motes£100 £exotic_gases£100 £rare_crystals£100 £sr_dark_matter£5§!\n    $MOD_SHIP_WEAPON_DAMAGE$: §G+100%§!\n    $MOD_SHIP_FIRE_RATE_MULT$: §G+50%§!\n    $MOD_SHIP_WEAPON_RANGE_MULT$: §G+50%§!\n"
  SI_Gehenna_C03_tip:"§C$SI_Gehenna_C03$§!\n$SI_Gehenna_C03_desc$\n$SI_Gehenna_C03_effect$"
 
@@ -170,7 +170,7 @@
  SI_Gehenna_D02_tip:"§C$SI_Gehenna_D02$§!\n$SI_Gehenna_D02_desc$\n$SI_Gehenna_D02_effect$"
 
  SI_Gehenna_D03:"Обязанности лидеров"
- SI_Gehenna_D03_desc:"Первое: разница между армией и стаей зверей заключается в выдающемся уме лидера;\nВторое: эффективность артиллерийского огня напрямую определяет ценность каждого противника;\n…"
+ SI_Gehenna_D03_desc:"Первое: разница между армией и стаей зверей заключается в выдающемся уме лидера;\nВторое: эффективность артиллерийского огня напрямую определяет ценность каждого противника;\n..."
  SI_Gehenna_D03_effect:"\nЭффект:\n$mod_commander_skill_levels$: §G+2§!\n$mod_commander_exp_gain$: §G+100%§!\n" #\n海军统帅和陆军将领的等级上限: §G+10§!
  SI_Gehenna_D03_tip:"§C$SI_Gehenna_D03$§!\n$SI_Gehenna_D03_desc$\n$SI_Gehenna_D03_effect$"
 
@@ -181,8 +181,8 @@
  SI_Gehenna_E01_tip:"§C$SI_Gehenna_E01$§!\n$SI_Gehenna_E01_desc$\n$SI_Gehenna_E01_effect$"
 
  SI_Gehenna_E02:"Железная хватка Администратора"
- SI_Gehenna_E02_desc:"Администратор Дисциплинарного комитета — самый осведомленный член, полностью знающий о развертывании войск в каждом регионе. Чтобы использовать преимущество в местных боях и предотвратить другие внутренние проблемы, командование должно быть передано непосредственно Администратору."
- SI_Gehenna_E02_effect:"\nЭффект:\n$MOD_SHIP_HOME_TERRITORY_FIRE_RATE_MULT$: §G+75%§!\n$MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+100%§!\n$MOD_STARBASE_SHIPYARD_BUILD_COST_MULT$: §R+10%§!\n" #\n处于防御战争下，本土舰队射速: §G+75%§!
+ SI_Gehenna_E02_desc:"Администратор Дисциплинарного комитета - самый осведомленный член, полностью знающий о развертывании войск в каждом регионе. Чтобы использовать преимущество в местных боях и предотвратить другие внутренние проблемы, командование должно быть передано непосредственно Администратору."
+ SI_Gehenna_E02_effect:"\nЭффект:\n$MOD_SHIP_HOME_TERRITORY_FIRE_RATE_MULT$: §G+75%§!\n$MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+100%§!\n$MOD_STARBASE_SHIPYARD_BUILD_COST_MULT$: §R+10%§!\n" #\n处于防御战争下,本土舰队射速: §G+75%§!
  SI_Gehenna_E02_tip:"§C$SI_Gehenna_E02$§!\n$SI_Gehenna_E02_desc$\n$SI_Gehenna_E02_effect$"
 
  SI_Gehenna_E03:"Поэтапное укрепление"
@@ -199,12 +199,12 @@
  SI_Millennium_G01_tip:"§C$SI_Millennium_G01$§!\n$SI_Millennium_G01_desc$\n$SI_Millennium_G01_effect$"
 
  SI_Millennium_G02:"Субсидия совокупной выгоды"
- SI_Millennium_G02_desc:"Исследования показывают, что зарплаты исследователей создают ценность, в несколько раз превышающую их размер… Хотя это и похоже на самовосхваление, логически это вполне обоснованно."
- SI_Millennium_G02_effect:"\nЭффект:\n$mod_planet_researchers_produces_mult$: §G+10%§!\n$mod_planet_researchers_upkeep_mult$: §R+5%§!\n$MOD_COUNTRY_NUM_TECH_ALTERNATIVES_ADD$: §G+1§!\n$MOD_LEADER_SKILL_LEVELS$: §G+1§!\n$MOD_PLANET_POP_ASSEMBLY_MULT$: §G+20%§!\n" #\n现在每十五个人口提供一个£pops£研究人员岗位。
+ SI_Millennium_G02_desc:"Исследования показывают, что зарплаты исследователей создают ценность, в несколько раз превышающую их размер... Хотя это и похоже на самовосхваление, логически это вполне обоснованно."
+ SI_Millennium_G02_effect:"\nЭффект:\n$mod_planet_researchers_produces_mult$: §G+10%§!\n$mod_planet_researchers_upkeep_mult$: §R+5%§!\n$MOD_COUNTRY_NUM_TECH_ALTERNATIVES_ADD$: §G+1§!\n$MOD_LEADER_SKILL_LEVELS$: §G+1§!\n$MOD_PLANET_POP_ASSEMBLY_MULT$: §G+20%§!\n" #\n现在每十五个人口提供一个£pops£研究人员岗位.
  SI_Millennium_G02_tip:"§C$SI_Millennium_G02$§!\n$SI_Millennium_G02_desc$\n$SI_Millennium_G02_effect$"
 
  SI_Millennium_G03:"Система частного финансирования клубных исследований"
- SI_Millennium_G03_desc:"Творческий подход и энтузиазм членов клуба — лучшие материалы для исследований, а для того, чтобы эти идеи и увлечения стали реальностью, нужно лишь предоставить небольшую возможность."
+ SI_Millennium_G03_desc:"Творческий подход и энтузиазм членов клуба - лучшие материалы для исследований, а для того, чтобы эти идеи и увлечения стали реальностью, нужно лишь предоставить небольшую возможность."
  SI_Millennium_G03_effect:"\nЭффект:\nУровень всех текущих §YУченых§! лидеров §Gповышается на 1§!\nВсе §HКлубные комнаты§! на планетах дополнительно предоставляют §G+2§!£job_BA_club_members£$job_BA_club_members$ должностей\n"
  SI_Millennium_G03_tip:"§C$SI_Millennium_G03$§!\n$SI_Millennium_G03_desc$\n$SI_Millennium_G03_effect$"
 
@@ -230,7 +230,7 @@
  SI_Millennium_G07_tip:"§C$SI_Millennium_G07$§!\n$SI_Millennium_G07_desc$\n$SI_Millennium_G07_effect$"
 
  SI_Millennium_G08:"Вечно Стоящая Башня"
- SI_Millennium_G08_desc:"Тысячелетняя Башня построена. Это колоссальное сооружение — вершина инженерной мысли Кивотоса, а разгаданные ею тайны будут служить Кивотосу."
+ SI_Millennium_G08_desc:"Тысячелетняя Башня построена. Это колоссальное сооружение - вершина инженерной мысли Кивотоса, а разгаданные ею тайны будут служить Кивотосу."
  SI_Millennium_G08_effect:"\nСтоимость §G2£job_BA_dont_be_crazy_here£§! очков концепции Академии\nПереводит концепцию Академии в режим перезарядки на §R360£time£§! дней\nЭффект:\nПозволяет установить остальные §BВычислительные Системы§! в Тысячелетнюю Башню, завершив строительство Тысячелетней Башни.\n"
  SI_Millennium_G08_tip:"§C$SI_Millennium_G08$§!\n$SI_Millennium_G08_desc$\n$SI_Millennium_G08_effect$"
 
@@ -381,7 +381,7 @@
  SI_Trinity_C04_tip:"§C$SI_Trinity_C04$§!\n$SI_Trinity_C04_desc$\n$SI_Trinity_C04_effect$"
 
  SI_Trinity_C05:"Сверхсветовой информационный поток"
- SI_Trinity_C05_desc:"Информация — это кровеносная система империи. Используя алгоритмы опережающей регулировки, нам больше не нужно тратить время на эти долгие ожидания."
+ SI_Trinity_C05_desc:"Информация - это кровеносная система империи. Используя алгоритмы опережающей регулировки, нам больше не нужно тратить время на эти долгие ожидания."
  SI_Trinity_C05_effect:"\nЭффект:\n$MOD_STARBASE_UPGRADE_COST_MULT$: §G-20%§!\n$MOD_COUNTRY_NAVAL_CAP_MULT$: §G+15%§!\n$MOD_MEGASTRUCTURE_BUILD_SPEED_MULT$: §G+200%§!\n$MOD_COUNTRY_MEGASTRUCTURE_BUILD_CAP_ADD$: §G+2§!\n$mod_megastructures_cost_mult$: §R+30%§!\n$MOD_EMPIRE_SIZE_MULT$: §G-5%§!\n"
  SI_Trinity_C05_tip:"§C$SI_Trinity_C05$§!\n$SI_Trinity_C05_desc$\n$SI_Trinity_C05_effect$"
 
@@ -394,7 +394,7 @@
  SI_Redwinter_tip:"Философия академии (опционально): §PФедеративная академия Красной Зимы§!\nФедеративная академия Красной Зимы обладает традициями сплочённости и смелого продвижения вперёд, что помогает укрепить основы федерации академий.\n"
 
  SI_Redwinter_G01:"По пути сбора"
- SI_Redwinter_G01_desc:"Достаточное материальное снабжение — основа процветания."
+ SI_Redwinter_G01_desc:"Достаточное материальное снабжение - основа процветания."
  SI_Redwinter_G01_effect:"\nНе требует £job_BA_dont_be_crazy_here£очков философии академии\nОтправляет философию академии в перезарядку на §R1080£time£§! дней\nЭффект:\n$r_stability$: §R-15§!\nСкорость строительства §G+50%§! для районов £district£, производящих базовые ресурсы £energy£ £minerals£ £food£\n"
  SI_Redwinter_G01_tip:"§C$SI_Redwinter_G01$§!\n$SI_Redwinter_G01_desc$\n$SI_Redwinter_G01_effect$"
 
@@ -428,7 +428,7 @@
  SI_Hyakkiyako_G01_tip:"§C$SI_Hyakkiyako_G01$§!\n$SI_Hyakkiyako_G01_desc$\n$SI_Hyakkiyako_G01_effect$"
 
  SI_Hyakkiyako_G02:"Баллада у Зала"
- SI_Hyakkiyako_G02_desc:"Самый известный магазин Хяккияко — это Хяккуядо, он откроет филиалы по всей Звёздной Сети, принося уют и тепло жизни студентам всей галактики."
+ SI_Hyakkiyako_G02_desc:"Самый известный магазин Хяккияко - это Хяккуядо, он откроет филиалы по всей Звёздной Сети, принося уют и тепло жизни студентам всей галактики."
  SI_Hyakkiyako_G02_effect:"\nЭффект:\n§HОткрывает решение планеты: §!$d_SI_Hyakkiyako_G02$\n"
  SI_Hyakkiyako_G02_tip:"§C$SI_Hyakkiyako_G02$§!"
 
@@ -454,7 +454,7 @@
  SI_Hyakkiyako_G06_tip:"§C$SI_Hyakkiyako_G06$§!"
 
  SI_Hyakkiyako_G07:"Терпение"
- SI_Hyakkiyako_G07_desc:"Хякка Рёран бросились во все уголки Кивотоса в поисках улик, касающихся президента Кузухи, — первого президента Хякка Рёран. В глазах старейших учеников Хяккияко она является объектом поклонения."
+ SI_Hyakkiyako_G07_desc:"Хякка Рёран бросились во все уголки Кивотоса в поисках улик, касающихся президента Кузухи, - первого президента Хякка Рёран. В глазах старейших учеников Хяккияко она является объектом поклонения."
  SI_Hyakkiyako_G07_effect:"Эффект:"
  SI_Hyakkiyako_G07_tip:"§C$SI_Hyakkiyako_G07$§!"
 
@@ -502,7 +502,7 @@
  SI_Valkyrie_B02_tip:"§C$SI_Valkyrie_B02$§!\n$SI_Valkyrie_B02_desc$\n$SI_Valkyrie_B02_effect$"
 
  #####     山海经     #####
- SI_Shanhaijing_tip:"Философия Академии (выбор): §GСтаршая школа Сяньхайцзин§!\nСяньхайцзин — это академия, основанная на крепком фундаменте, именуемом деньгами и трудом. Столкновение идеалов и реальности — вечная тема Сяньхайцзин.\n"
+ SI_Shanhaijing_tip:"Философия Академии (выбор): §GСтаршая школа Сяньхайцзин§!\nСяньхайцзин - это академия, основанная на крепком фундаменте, именуемом деньгами и трудом. Столкновение идеалов и реальности - вечная тема Сяньхайцзин.\n"
 
  SI_Shanhaijing_G01:"Учреждение Мэйхуаюань"
  SI_Shanhaijing_G01_desc:"После того как мы сделаем свой выбор, в первую очередь нам необходимо расширить Учреждение Мэйхуаюань, чтобы Сяньхайцзин было удобнее обучать своих студентов."
@@ -510,7 +510,7 @@
  SI_Shanhaijing_G01_tip:"§C$SI_Shanhaijing_G01$§!\n$SI_Shanhaijing_G01_desc$\n$SI_Shanhaijing_G01_effect$"
 
  SI_Shanhaijing_G02:"Алхимическая Лаборатория"
- SI_Shanhaijing_G02_desc:"Биологическая лаборатория Сяньхайцзин — это редкое сокровище для Кивотоса (во всех смыслах)."
+ SI_Shanhaijing_G02_desc:"Биологическая лаборатория Сяньхайцзин - это редкое сокровище для Кивотоса (во всех смыслах)."
  SI_Shanhaijing_G02_effect:"\nЭффект:\n§HОткрывает постройку: §!$building_BA_SI_Shanhaijing_G02$\n"
  SI_Shanhaijing_G02_tip:"§C$SI_Shanhaijing_G02$§!\n$SI_Shanhaijing_G02_desc$\n$SI_Shanhaijing_G02_effect$"
 
@@ -535,21 +535,21 @@
  SI_Shanhaijing_A04_tip:"§C$SI_Shanhaijing_A04$§!\n$SI_Shanhaijing_A04_desc$\n$SI_Shanhaijing_A04_effect$"
 
  SI_Shanhaijing_B01:"Торговая Палата Сюаньу - Серое Коммерческое Дело"
- SI_Shanhaijing_B01_desc:"Если цель достижима и оправдана, то немного пойти против правил — это совсем не страшно."
+ SI_Shanhaijing_B01_desc:"Если цель достижима и оправдана, то немного пойти против правил - это совсем не страшно."
  SI_Shanhaijing_B01_effect:"\nЭффект:\nКогда особый заказ готов, §Y$Xuanwu_promenade$§! производит большое количество $trade_with_icon$\n"
  SI_Shanhaijing_B01_tip:"§C$SI_Shanhaijing_B01$§!\n$SI_Shanhaijing_B01_desc$\n$SI_Shanhaijing_B01_effect$"
 
- SI_Shanhaijing_B02:"Торговая Палата Сюаньу — Гибкая Помощь"
+ SI_Shanhaijing_B02:"Торговая Палата Сюаньу - Гибкая Помощь"
  SI_Shanhaijing_B02_desc:"Только движущиеся ресурсы могут называться экономикой, иначе даже самые ценные вещи будут подобны пене."
  SI_Shanhaijing_B02_effect:"\nЭффект:\n$mod_BA_staff_pop_trade_produces_mult$: §G+150%§!\n"
  SI_Shanhaijing_B02_tip:"§C$SI_Shanhaijing_B02$§!\n$SI_Shanhaijing_B02_desc$\n$SI_Shanhaijing_B02_effect$"
 
- SI_Shanhaijing_B03:"Торговая Палата Сюаньу — Тень Доверия"
- SI_Shanhaijing_B03_desc:"Доверие — основа торговли, а затраты на сделки напрямую определяют, будет ли путь вперед тернист."
+ SI_Shanhaijing_B03:"Торговая Палата Сюаньу - Тень Доверия"
+ SI_Shanhaijing_B03_desc:"Доверие - основа торговли, а затраты на сделки напрямую определяют, будет ли путь вперед тернист."
  SI_Shanhaijing_B03_effect:"\n§RВзаимоисключающе с§!$SI_Shanhaijing_A03$§R§!\nЭффект:\nСделки, осуществляемые через §Yособые заказы $Xuanwu_promenade$§! или §YАнгелы 24§!, приносят вдвое больше ресурсов.\n$mod_country_trade_produces_mult$: §G+20%§!\n$MOD_COUNTRY_TRADE_FEE$: §G-25%§!\n§HРазблокирует здание филиала: §!Внешнеторговая зона Торговой Палаты Сюаньу\n\n"
  SI_Shanhaijing_B03_tip:"§C$SI_Shanhaijing_B03$§!\n$SI_Shanhaijing_B03_desc$\n$SI_Shanhaijing_B03_effect$"
 
- SI_Shanhaijing_B04:"Торговая Палата Сюаньу — Подливая Масло в Огонь"
- SI_Shanhaijing_B04_desc:"Экономика — это средство, а не цель. Только самые решительные меры приведут к величайшим достижениям."
+ SI_Shanhaijing_B04:"Торговая Палата Сюаньу - Подливая Масло в Огонь"
+ SI_Shanhaijing_B04_desc:"Экономика - это средство, а не цель. Только самые решительные меры приведут к величайшим достижениям."
  SI_Shanhaijing_B04_effect:"\nЭффект:\n§HРазблокирует планетарное решение: §!$decision_SI_Shanhaijing_B04$\n"
  SI_Shanhaijing_B04_tip:"§C$SI_Shanhaijing_B04$§!\n$SI_Shanhaijing_B04_desc$\n$SI_Shanhaijing_B04_effect$"

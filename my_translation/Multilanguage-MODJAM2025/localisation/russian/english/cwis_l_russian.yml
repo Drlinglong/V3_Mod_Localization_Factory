@@ -1,4 +1,4 @@
-﻿l_russian:
+l_russian:
  cwis_crisis_level_5:"Последний шанс выжить"
  cwis_crisis_level_1:"Сигнал получен"
  cwis_crisis_level_1_desc:"Что? Почему? Как?"
@@ -50,7 +50,7 @@
  information_seal_name: "$information_seal$"
  information_seal_value:"£information_seal£ $VAL|0$"
  information_seal_gaining:"Выполняйте §HКризисные Цели§!, чтобы получить больше §Yпечатей информации§!."
- information_seal_desc:"Печать информации — это технический символ, обозначающий затвердевшую ошибку между А и Б."
+ information_seal_desc:"Печать информации - это технический символ, обозначающий затвердевшую ошибку между А и Б."
  information_seal_crisis_objective:"Цели по исследованию ресурсов"
  information_seal_crisis_objective_gained:"Печать информации получена"
  information_seal_crisis_objective_reward: "$REWARD$"
@@ -111,7 +111,7 @@
 
 
  cwis_menp_objectives:"Работа начата"
- cwis_menp_objectives_desc:"Получите доступ к £information_seal£$information_seal$ — ресурсу, необходимому для дальнейшего прогресса."
+ cwis_menp_objectives_desc:"Получите доступ к £information_seal£$information_seal$ - ресурсу, необходимому для дальнейшего прогресса."
  cwis_menp_objectives_tooltip:"Возможность получать $information_seal_with_icon$ и разблокировать его использование."
  #cwis_menp_intel_modifier_1: "Hidden Protective Decision"
  #cwis_menp_intel_modifier_1_desc: "Strength the security of our country,by introduce a piece of THE SIGNAL to our people's daily."
@@ -310,7 +310,7 @@
  cwis.10001.a: "$REMARKABLE$"
 
  cwis.10101:"Что? «Защитить жемчужину»?"
- cwis.10101.desc:"Мы потеряли связь с нашей группой лидеров. Последнее место, где наши сенсоры могли обнаружить их след, — это пространство рядом с нашей столицей, с сообщением: «Защитить жемчужину»."
+ cwis.10101.desc:"Мы потеряли связь с нашей группой лидеров. Последнее место, где наши сенсоры могли обнаружить их след, - это пространство рядом с нашей столицей, с сообщением: «Защитить жемчужину»."
  cwis.10101.title: "$cwis.10101$"
  cwis.10101.a: "$CURSES$"
 

@@ -1,4 +1,4 @@
-﻿l_japanese:
+l_japanese:
 ##################
 # hcp_ships_l_english.yml
 # By jam1066
@@ -11,7 +11,7 @@
  ###################
  hcp_PLANET_KILLER_STELLAR_HARVESTER:"収穫ドローン群"
  hcp_PLANET_KILLER_STELLAR_HARVESTER_ACTION:"太陽系収穫"
- PLANET_KILLER_CRACKER_DESC:"自律型ドローンの大規模な群れが放たれ、システム内の全てを解体する。制御船のみが、その採掘レーザーの標的から免れる。"
+ PLANET_KILLER_CRACKER_DESC:"自律型ドローンの大規模な群れが放たれ,システム内の全てを解体する.制御船のみが,その採掘レーザーの標的から免れる."
  FLEETORDER_DESTROY_PLANET_WITH_hcp_PLANET_KILLER_STELLAR_HARVESTER:"$PLANET|Y$を収穫準備中"
  
  ## Targeting Requirements
@@ -20,13 +20,13 @@
  hcp_is_your_megastructure_system:"\n£trigger_no£ 自身の特異点サイロを含むシステムを標的にしてはならない"
 
  hcp_SHIP_STELLAR_HARVESTER_REPLICATE:"複製ベイ"
- hcp_SHIP_STELLAR_HARVESTER_REPLICATE_DESC:"この特殊な複製ベイにより、我々の星系収穫者は、収集した資源を用いて自身を増産し、収穫活動が指数関数的に成長することを可能にする。"
- hcp_stellar_harvester_replicate_ship_button:"§H複製§!\n\n§Hコスト§!: £minerals£$@hcp_replicate_cost|0$\n§H建造時間§!: 360 £time£\n\n星系収穫者に§Y複製§!を命じる。"
+ hcp_SHIP_STELLAR_HARVESTER_REPLICATE_DESC:"この特殊な複製ベイにより,我々の星系収穫者は,収集した資源を用いて自身を増産し,収穫活動が指数関数的に成長することを可能にする."
+ hcp_stellar_harvester_replicate_ship_button:"§H複製§!\n\n§Hコスト§!: £minerals£$@hcp_replicate_cost|0$\n§H建造時間§!: 360 £time£\n\n星系収穫者に§Y複製§!を命じる."
  hcp_stellar_harvester_replicate_activity_key:"複製中"
  hcp_stellar_harvester_replicate_menu_title:"複製"
  hcp_stellar_harvester_replicate_progress_activity_key:"複製中: §Y$PROGRESS$%§!"
 
- hcp_stellar_harvester_depart_galaxy_ship_button:"§H銀河離脱§!\n\n§Hコスト§!: £energy£100000\n§Hチャージ時間§!: 360 £time£\n\n星系収穫者に§Y銀河を離脱§!するよう命じる。"
+ hcp_stellar_harvester_depart_galaxy_ship_button:"§H銀河離脱§!\n\n§Hコスト§!: £energy£100000\n§Hチャージ時間§!: 360 £time£\n\n星系収穫者に§Y銀河を離脱§!するよう命じる."
  hcp_stellar_harvester_depart_galaxy_activity_key:"銀河間FTLチャージ中"
  hcp_stellar_harvester_depart_galaxy_menu_title:"銀河離脱"
  hcp_stellar_harvester_depart_galaxy_progress_activity_key:"銀河間FTLチャージ中: §Y$PROGRESS$%§!"
@@ -73,6 +73,6 @@
 
  hcp_HARVESTER_STORAGE_title:"£mod_country_resource_max_add£資源:"
  hcp_HARVESTER_STORAGE_value:"[this.hcp_harvester_stored_resources]"
- hcp_HARVESTER_STORAGE_tt:"収穫者の現在の資源備蓄。アビリティの使用や自己複製に消費できる。"
+ hcp_HARVESTER_STORAGE_tt:"収穫者の現在の資源備蓄.アビリティの使用や自己複製に消費できる."
 
  #end

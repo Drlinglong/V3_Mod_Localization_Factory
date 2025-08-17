@@ -1,4 +1,4 @@
-﻿l_braz_por:
+l_braz_por:
 
 #####       Agendas        #####
  council_agenda_agenda_BA_SI_Trinity_A02_name:"Método de Reforço Philius"
@@ -266,7 +266,7 @@
 #####       Deposits       #####
  d_BA_auto_habitat:0 "Módulos de Automação Extras"
  d_BA_auto_habitat_desc:"Construir estações orbitais em torno de corpos celestes, grandes e pequenos, por todo o sistema estelar pode satisfazer as crescentes demandas de recursos dos complexos orbitais."
- # d_BA_auto_habitat_tooltip: "§Y[solar_system.GetName]§!恒星系可以支持：$TABBED_NEW_LINE$大型轨道站：§Y[solar_system.GetNumMajorOrbitals]/[solar_system.GetMaxMajorOrbitals]§!$TABBED_NEW_LINE$小型轨道站：§Y[solar_system.GetNumMinorOrbitals]/[solar_system.GetMaxMinorOrbitals]§!\n\n目前轨道站提供："
+ # d_BA_auto_habitat_tooltip: "§Y[solar_system.GetName]§!恒星系可以支持:$TABBED_NEW_LINE$大型轨道站:§Y[solar_system.GetNumMajorOrbitals]/[solar_system.GetMaxMajorOrbitals]§!$TABBED_NEW_LINE$小型轨道站:§Y[solar_system.GetNumMinorOrbitals]/[solar_system.GetMaxMinorOrbitals]§!\n\n目前轨道站提供:"
  d_BA_auto_habitat_tooltip: ""
 
  d_BA_kousagi_park:0 "Parque do Coelhinho"
@@ -1370,7 +1370,7 @@
 
  situation_Our_story_desc_1:0 "Este é o começo de tudo; todas as nossas atividades são construídas sobre a matéria.\n\n ['concept_Kivotos_chronicle_stage1_bonus'] ['concept_Kivotos_chronicle_stage2_prerequisites']"
  situation_Our_story_desc_2:0 "As matérias-primas produzidas nos subúrbios abastecem o vasto consumo diário de Kivotos. Este é o pilar de Kivotos e a vanguarda de sua expansão; subúrbios caóticos significam um futuro incerto.\n\n ['concept_Kivotos_chronicle_stage2_bonus'] ['concept_Kivotos_chronicle_stage3_prerequisites']"
- situation_Our_story_desc_3:0 "Grandes indústrias civis estão concentradas nas regiões autônomas. O traçado de cada tubo, a rota de cada drone, o armazenamento de cada projeto — tudo isso deve ser meticulosamente planejado.\n\n ['concept_Kivotos_chronicle_stage3_bonus'] ['concept_Kivotos_chronicle_stage4_prerequisites']"
+ situation_Our_story_desc_3:0 "Grandes indústrias civis estão concentradas nas regiões autônomas. O traçado de cada tubo, a rota de cada drone, o armazenamento de cada projeto - tudo isso deve ser meticulosamente planejado.\n\n ['concept_Kivotos_chronicle_stage3_bonus'] ['concept_Kivotos_chronicle_stage4_prerequisites']"
  situation_Our_story_desc_4:0 "Apenas ter um teto sobre a cabeça não é o suficiente, mas é difícil agradar a todos com suas preferências por quartos. Dedicar um espaço exclusivo para cada um não é um desperdício, mas um investimento cultural necessário.\n\n ['concept_Kivotos_chronicle_stage4_bonus'] ['concept_Kivotos_chronicle_stage5_prerequisites']"
  situation_Our_story_desc_5:0 "Mesmo agora, é inevitável que haja desentendimentos entre as grandes academias. Encontre a essência e resolva-o.\n\n ['concept_Kivotos_chronicle_stage5_bonus'] ['concept_Kivotos_chronicle_stage6_prerequisites']"
  situation_Our_story_desc_6:0 "A capacidade de um único planeta tem, afinal, um limite. Pelo futuro de Kivotos, ela deve abraçar o universo inteiro.\n\n ['concept_Kivotos_chronicle_stage6_bonus'] ['concept_Kivotos_chronicle_stage7_prerequisites']"
@@ -1764,7 +1764,7 @@
  BA_Blue_new_world_DESC:0 "A capacidade de um único planeta tem um limite. Para o futuro da Cidade-Academia, ela deve abraçar o universo inteiro. (Após conclusão, $BA_Kivotos_chronicle_effect_stage6$)"
  BA_End_of_chronicle_DESC:0 "A modificação final do planeta da Cidade-Academia. Tudo se encaixa naturalmente. (Após conclusão, $BA_Kivotos_chronicle_effect_stage7$)"
 
- SP_BA_SI_Gehenna_C02:0 "《A Jornada de Fundação de Gehenna》"
+ SP_BA_SI_Gehenna_C02:0 "<A Jornada de Fundação de Gehenna>"
  SP_BA_SI_Gehenna_C02_DESC:0 "Relembre a árdua jornada dos fundadores de Gehenna para estabelecer a academia, para que todos possam valorizar a vida acadêmica atual que não foi fácil de alcançar. (Após conclusão, concede §HModificador Imperial:§! $modifier_BA_SI_Gehenna_C02$)"
 
 
@@ -1912,7 +1912,7 @@
  tech_BA_spaceship_automation_3_title:0 "§HDesbloqueia Módulos de Corveta de Mísseis:§! Proa Égide Cauda Turbilhão\n§HDesbloqueia Módulos de Nave de Cume:§! Núcleo Bainha Cauda de Link"
  tech_BA_spaceship_automation_3_tip:0 "Módulos de nave especializados, capazes de assumir mais funções."
  tech_BA_spaceship_automation_4:0 "Nave Capitânia Automatizada"
- tech_BA_spaceship_automation_4_desc:0 "Desenvolvida a partir do legado da Academia Milenar de Ciência. A partir de agora, podemos descartar o conceito de 'capacidade naval': uma frota que abala o universo, exigindo apenas algumas pessoas para comandar — literalmente, 'apenas algumas'."
+ tech_BA_spaceship_automation_4_desc:0 "Desenvolvida a partir do legado da Academia Milenar de Ciência. A partir de agora, podemos descartar o conceito de 'capacidade naval': uma frota que abala o universo, exigindo apenas algumas pessoas para comandar - literalmente, 'apenas algumas'."
 
  tech_BA_ruins_research:0 "Pesquisa de Hibridização de Ruínas"
  tech_BA_ruins_research_desc:0 "As montanhas de ruínas são uma fonte importante de recursos para nós. Devemos pesquisar como utilizá-las plenamente."
@@ -1931,7 +1931,7 @@
  tech_BA_Halo_power_increase:0 "Amplificação do Poder do Halo"
  tech_BA_Halo_power_increase_desc:0 "Nossos Halos nos concedem um poder que excede o de seres comuns, mas a intensidade desse poder varia em indivíduos diferentes. Agora, temos uma compreensão preliminar dessa força e podemos amplificar artificialmente nosso poder através de algumas técnicas."
  tech_BA_Divine_liberation_theory:0 "Teoria da Libertação Divina"
- tech_BA_Divine_liberation_theory_desc:0 "Já analisamos preliminarmente a origem do poder do Halo. Se quisermos aumentar a saída dessa força, precisaremos de substâncias que tenham afinidade com os Halos e que armazenem grandes quantidades de energia internamente — talvez algumas pedras de Pirroxeno possam fazer isso? (Dica: complete a tecnologia de Aplicação de Pirroxeno para desbloquear a próxima tecnologia)"
+ tech_BA_Divine_liberation_theory_desc:0 "Já analisamos preliminarmente a origem do poder do Halo. Se quisermos aumentar a saída dessa força, precisaremos de substâncias que tenham afinidade com os Halos e que armazenem grandes quantidades de energia internamente - talvez algumas pedras de Pirroxeno possam fazer isso? (Dica: complete a tecnologia de Aplicação de Pirroxeno para desbloquear a próxima tecnologia)"
  tech_BA_Preliminary_divine_liberation:0 "Libertação Divina Preliminar"
  tech_BA_Preliminary_divine_liberation_desc:0 "Com o avanço da tecnologia do Pirroxeno, finalmente demos um passo importante na pesquisa do Halo. Catalisados pelo Pirroxeno, nossos Halos liberarão mais energia do que antes. Agora, só precisamos disseminar essa conquista."
  tech_BA_Preliminary_ring_theory_title:0 "A pedra angular da teoria do Halo, uma condição necessária para pesquisas subsequentes do Halo."
@@ -2072,7 +2072,7 @@
  tech_BA_Halo_coding_outline_desc:0 "Os dados legados pelos Numerologistas impulsionaram enormemente nossa velocidade na decifração desses Caracteres Divinos. Pelo menos não precisamos mais adivinhar o significado desses caracteres completamente no escuro."
  tech_BA_Halo_coding_outline_title:0 "Codifica a parte externa do Halo."
  tech_BA_Halo_coding_space:0 "Codificação de Halo: Zona Vazia"
- tech_BA_Halo_coding_space_desc:0 "Claramente, quem quer que tenha criado essa Aura — seja lá quem for — deve ter sido alguém extremamente irresponsável. Essa sequência de códigos de Nome Divino ineficientes e redundantes simplesmente não dá pra aguentar mais! É hora de otimizar essa gambiarra."
+ tech_BA_Halo_coding_space_desc:0 "Claramente, quem quer que tenha criado essa Aura - seja lá quem for - deve ter sido alguém extremamente irresponsável. Essa sequência de códigos de Nome Divino ineficientes e redundantes simplesmente não dá pra aguentar mais! É hora de otimizar essa gambiarra."
  tech_BA_Halo_coding_space_title:0 "Cavidade da Aura Codificada"
  tech_BA_Halo_coding_inner:0 "Codificação da Aura: Anel Interno"
  tech_BA_Halo_coding_inner_desc:0 "Com isso, obtivemos total controle sobre a tecnologia da Aura Codificada."
@@ -2150,12 +2150,12 @@
 
  ap_BA_Our_story:0 "Nossa História"
  ap_BA_Our_story_desc:0 "Para onde iremos é decidido por nós mesmos; nossa história, é claro, não terminará aqui. Esta é a nossa história, escrita com as nossas próprias mãos."
- ap_BA_Our_story_tip:0 "\n—§RExclusivo com§_$ap_BA_Name_the_void$§!§!"
+ ap_BA_Our_story_tip:0 "\n-§RExclusivo com§_$ap_BA_Name_the_void$§!§!"
 
 
  ap_BA_Name_the_void:0 "Nomear o Sublime"
  ap_BA_Name_the_void_desc:0 "Atribuímos nomes ao que não tinha nome, e assim pudemos abraçá-lo e utilizá-lo. Transformamos o que era ruína em milagre, forjando-o em nossa própria história."
- ap_BA_Name_the_void_tip:0 "\n—§RExclusivo com§B$ap_BA_Our_story$§!§!"
+ ap_BA_Name_the_void_tip:0 "\n-§RExclusivo com§B$ap_BA_Our_story$§!§!"
  ap_BA_Name_the_void_effect_fake:0 "[root.GetName] agora pode embarcar no caminho para se tornar a §YEncarnação da Calamidade§!§!.\nInicia a situação: §YAs Três Cores da Cidade Acadêmica§! \n(Em produção, aguarde)\n"
  ap_BA_Name_the_void_tip_unknown:0 "$TRIGGER_FAIL$ Será que nós realmente o conhecemos?"
 
@@ -2225,25 +2225,25 @@
 
  #Pulana
  Shittem_Pulana_desc:0 "[this.GetPulanaDesc]"
- BlueArchivePulanaDesc0:0 "…Conexão confirmada…" #平静
+ BlueArchivePulanaDesc0:0 "...Conexão confirmada..." #平静
  BlueArchivePulanaDesc1:0 "Termine o trabalho logo, Sensei." #平静
- BlueArchivePulanaDesc2:0 "…Verificação concluída, altos níveis de atividade e metabolismo. Sensei, você está de bom humor hoje." #微微微笑
- BlueArchivePulanaDesc3:0 "Por favor, não fique me encarando, isso pode causar confusão de memória... Além disso, você tem trabalho, não é, Sensei?" #无语流汗，光环混乱
- BlueArchivePulanaDesc4:0 "Erro... formulário de trabalho submetido incorretamente detectado..." #张口，生气或战意激增
- BlueArchivePulanaDesc5:0 "Professor(a)... Você realmente não vai repetir os mesmos erros, certo...?" #视线躲闪，害羞或为难
- BlueArchivePulanaDesc6:0 "Mancha encontrada... Amido, frutose, proteína e gordura vegetal... Então é assim que se faz a Arona-senpai feliz...?" #睁大眼，无语流汗
- BlueArchivePulanaDesc7:0 "Confirmado... É necessário reajustar a avaliação da eficiência de trabalho do Professor(a)..." #睁大眼，惊讶
- BlueArchivePulanaDesc8:0 "Aquilo é...!" #兴奋星星眼，嘴不张开
+ BlueArchivePulanaDesc2:0 "...Verificação concluída, altos níveis de atividade e metabolismo. Sensei, você está de bom humor hoje." #微微微笑
+ BlueArchivePulanaDesc3:0 "Por favor, não fique me encarando, isso pode causar confusão de memória... Além disso, você tem trabalho, não é, Sensei?" #无语流汗,光环混乱
+ BlueArchivePulanaDesc4:0 "Erro... formulário de trabalho submetido incorretamente detectado..." #张口,生气或战意激增
+ BlueArchivePulanaDesc5:0 "Professor(a)... Você realmente não vai repetir os mesmos erros, certo...?" #视线躲闪,害羞或为难
+ BlueArchivePulanaDesc6:0 "Mancha encontrada... Amido, frutose, proteína e gordura vegetal... Então é assim que se faz a Arona-senpai feliz...?" #睁大眼,无语流汗
+ BlueArchivePulanaDesc7:0 "Confirmado... É necessário reajustar a avaliação da eficiência de trabalho do Professor(a)..." #睁大眼,惊讶
+ BlueArchivePulanaDesc8:0 "Aquilo é...!" #兴奋星星眼,嘴不张开
  BlueArchivePulanaDesc9:0 "Professor(a), acho que isso está errado, a Federação Estudantil não é digna de confiança... E você não deveria assumir a responsabilidade por tudo!" #辩解状
  BlueArchivePulanaDesc10:0 "Erro..." #委屈
- BlueArchivePulanaDesc11:0 "Incompreensível..." #皱眉，流汗，为难状
+ BlueArchivePulanaDesc11:0 "Incompreensível..." #皱眉,流汗,为难状
  BlueArchivePulanaDesc12:0 "Confusão, comportamento incompreensível... Por favor, não me cutuque mais..." #圈圈眼 @@
  BlueArchivePulanaDesc13:0 "Flutuações emocionais anormais... Por favor, não acaricie minha cabeça, isso atrapalha o trabalho..." #>.<
  BlueArchivePulanaDesc14:0 "Dados de Teste 14" #屑笑
- BlueArchivePulanaDesc15:0 "Hum... leite de morango... vou deixar para a Arona-senpai..." #微笑，或‘不也挺好吗’笑
- BlueArchivePulanaDesc16:0 "Dados de Teste 16" #乖巧+高兴，心形光环
+ BlueArchivePulanaDesc15:0 "Hum... leite de morango... vou deixar para a Arona-senpai..." #微笑,或‘不也挺好吗’笑
+ BlueArchivePulanaDesc16:0 "Dados de Teste 16" #乖巧+高兴,心形光环
  BlueArchivePulanaDesc17:0 "Dados de Teste 17" #14屑笑+脸红
- BlueArchivePulanaDesc18:0 "Dados de Teste 18" #阴暗，盯
+ BlueArchivePulanaDesc18:0 "Dados de Teste 18" #阴暗,盯
  BlueArchivePulanaDesc19:0 "Dados de Teste 19" #阴笑
  BlueArchivePulanaDesc20:0 "Zzz..." #沉思
  BlueArchivePulanaDesc21:0 "Dados de Teste 21" #眯眯眼
