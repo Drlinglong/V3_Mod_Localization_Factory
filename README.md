@@ -8,6 +8,33 @@
 
 > 告别复制粘贴，拥抱自动化。本项目旨在为P社游戏（如维多利亚3、群星等）的Mod提供一套高效、可靠的半自动本地化解决方案。
 
+## 📚 文档导航
+
+### 🚀 快速开始
+- [快速开始指南](docs/user-guides/quick-start-zh.md) - 5分钟上手
+- [详细安装步骤](docs/setup/installation-zh.md) - 完整安装流程
+
+### 📖 用户指南
+- [小白专用指南](docs/user-guides/beginner-guide-zh.md) - 零基础用户必读
+- [英文入门指南](docs/user-guides/beginner-guide-en.md) - English Beginner's Guide
+
+### 🔧 词典系统
+- [词典系统概览](docs/glossary/overview.md) - 词典系统完整介绍
+- [词典工具使用](docs/glossary/tools-guide.md) - 如何使用parser.py和validator.py
+- [系统机制说明](docs/glossary/system-mechanism.md) - 技术实现详解
+- [碧蓝档案词典](docs/glossary/blue-archive-guide.md) - 特定主题词典使用
+
+### 👨‍💻 开发者文档
+- [项目架构](docs/developer/architecture.md) - 系统设计说明
+- [并行处理技术](docs/developer/parallel-processing.md) - 性能优化详解
+- [实现记录](docs/developer/implementation-notes.md) - 开发过程记录
+
+### ⚙️ 配置和故障排除
+- [配置说明](docs/setup/configuration.md) - 详细配置选项
+- [常见问题](docs/examples/troubleshooting.md) - 问题解决方案
+
+---
+
 ### 许可协议 (License)
 
 本项目采用**双许可证模式**：

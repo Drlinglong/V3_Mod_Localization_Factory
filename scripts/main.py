@@ -14,7 +14,29 @@ if project_root not in sys.path:
 from scripts.utils import i18n, logger
 from scripts.workflows import initial_translate
 from scripts.core import directory_handler
-from scripts.config import LANGUAGES, GAME_PROFILES, SOURCE_DIR, API_PROVIDERS
+from scripts.config import LANGUAGES, GAME_PROFILES, SOURCE_DIR, API_PROVIDERS, PROJECT_NAME, PROJECT_DISPLAY_NAME, VERSION, LAST_UPDATE_DATE, COPYRIGHT
+
+def display_version_info():
+    """显示项目版本信息"""
+    print("=" * 60)
+    print(f"🎯 {PROJECT_DISPLAY_NAME}")
+    print(f"🔧 {PROJECT_NAME}")
+    print(f"📦 版本: {VERSION}")
+    print(f"📅 最后更新: {LAST_UPDATE_DATE}")
+    print(f"© {COPYRIGHT}")
+    print("=" * 60)
+    
+    # 同时记录到日志（使用国际化）
+    try:
+        from scripts.utils.i18n import i18n
+        logging.info(i18n.t("project_startup", display_name=PROJECT_DISPLAY_NAME, version=VERSION))
+        logging.info(i18n.t("project_engineering_name", name=PROJECT_NAME))
+        logging.info(i18n.t("project_last_update", date=LAST_UPDATE_DATE))
+    except Exception:
+        # 如果国际化不可用，使用默认日志
+        logging.info(f"项目启动: {PROJECT_DISPLAY_NAME} v{VERSION}")
+        logging.info(f"工程名称: {PROJECT_NAME}")
+        logging.info(f"最后更新: {LAST_UPDATE_DATE}")
 
 def select_api_provider():
     """【新】显示API供应商列表并让用户选择。"""
@@ -487,6 +509,9 @@ if __name__ == '__main__':
     try:
         # 设置日志系统
         logger.setup_logger()
+        
+        # 显示版本信息
+        display_version_info()
         
         # 加载语言文件
         i18n.load_language()

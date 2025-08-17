@@ -165,5 +165,8 @@
 "fuzzy_mode_set": "术语模糊匹配模式已设置为: {mode}",
 "glossary_status_main_plus_aux": "主词典({main_count}条) + 外挂词典({aux_count}个) = 总计({total_count}条)",
 "glossary_status_aux_only": "仅外挂词典({aux_count}个)",
-"glossary_merge_completed": "词典合并完成: {main_entries} 个主词典条目 + {aux_entries} 个外挂词典条目 = {total_entries} 个总计"
+"glossary_merge_completed": "词典合并完成: {main_entries} 个主词典条目 + {aux_entries} 个外挂词典条目 = {total_entries} 个总计",
+"project_startup": "项目启动: {display_name} v{version}",
+"project_engineering_name": "工程名称: {name}",
+"project_last_update": "最后更新: {date}"
 }
