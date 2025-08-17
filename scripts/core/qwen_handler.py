@@ -87,6 +87,18 @@ def translate_single_text(
 
     try:
         model_name = API_PROVIDERS["qwen"]["default_model"]
+        
+        # 根据配置决定是否启用思考功能
+        from scripts.config import QWEN_CONFIG
+        
+        # 构建prompt，根据配置决定是否添加/no_think
+        if not QWEN_CONFIG["enable_thinking"]:
+            # 禁用思考功能：在prompt末尾添加/no_think
+            prompt += " /no_think"
+            logging.info(i18n.t("qwen_single_translation_thinking_disabled"))
+        else:
+            logging.info(i18n.t("qwen_single_translation_thinking_enabled"))
+        
         response = client.chat.completions.create(
             model=model_name,
             messages=[
@@ -94,7 +106,8 @@ def translate_single_text(
                 {"role": "user", "content": prompt}
             ],
             max_tokens=1000,
-            temperature=0.3  # 降低随机性，提高翻译一致性
+            temperature=0.3,  # 降低随机性，提高翻译一致性
+            extra_body={"enable_thinking": QWEN_CONFIG["enable_thinking"]}  # 通过API参数控制思考功能
         )
         translated = strip_outer_quotes(response.choices[0].message.content.strip())
 
@@ -152,6 +165,18 @@ def _translate_chunk(client, chunk, source_lang, target_lang, game_profile, mod_
             prompt = base_prompt + context_prompt_part + glossary_prompt_part + format_prompt_part
 
             model_name = API_PROVIDERS["qwen"]["default_model"]
+            
+            # 根据配置决定是否启用思考功能
+            from scripts.config import QWEN_CONFIG
+            
+            # 构建prompt，根据配置决定是否添加/no_think
+            if not QWEN_CONFIG["enable_thinking"]:
+                # 禁用思考功能：在prompt末尾添加/no_think
+                prompt += " /no_think"
+                logging.info(i18n.t("qwen_batch_thinking_disabled", batch_num=batch_num))
+            else:
+                logging.info(i18n.t("qwen_batch_thinking_enabled", batch_num=batch_num))
+            
             response = client.chat.completions.create(
                 model=model_name,
                 messages=[
@@ -159,7 +184,8 @@ def _translate_chunk(client, chunk, source_lang, target_lang, game_profile, mod_
                     {"role": "user", "content": prompt}
                 ],
                 max_tokens=4000,
-                temperature=0.3  # 降低随机性，提高翻译一致性
+                temperature=0.3,  # 降低随机性，提高翻译一致性
+                extra_body={"enable_thinking": QWEN_CONFIG["enable_thinking"]}  # 通过API参数控制思考功能
             )
             
             # 使用与OpenAI和Gemini一致的解析方法

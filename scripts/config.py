@@ -32,48 +32,6 @@ RECOMMENDED_MAX_WORKERS = get_smart_max_workers()
 # 每个批次的最大文本数量
 BATCH_SIZE = CHUNK_SIZE
 
-def display_system_config():
-    """显示系统配置信息"""
-    try:
-        # 延迟导入i18n，避免循环导入
-        from scripts.utils.i18n import i18n
-        
-        cpu_count = multiprocessing.cpu_count()
-        
-        print("=== " + i18n.t("system_config_title") + " ===")
-        print(i18n.t("system_config_cpu_cores", count=cpu_count))
-        print(i18n.t("system_config_recommended_workers", count=RECOMMENDED_MAX_WORKERS))
-        print(i18n.t("system_config_recommended_chunk_size", size=CHUNK_SIZE))
-        
-        # 性能等级判断
-        if cpu_count <= 2:
-            print(i18n.t("system_config_performance_low"))
-        elif cpu_count <= 4:
-            print(i18n.t("system_config_performance_medium"))
-        else:
-            print(i18n.t("system_config_performance_high"))
-            
-    except Exception as e:
-        # 如果i18n不可用，使用英文作为fallback
-        try:
-            cpu_count = multiprocessing.cpu_count()
-            
-            print("=== System Performance Detection Results ===")
-            print(f"CPU Cores: {cpu_count}")
-            print(f"Recommended Thread Pool Size: {RECOMMENDED_MAX_WORKERS}")
-            print(f"Recommended Chunk Size: {CHUNK_SIZE}")
-            
-            if cpu_count <= 2:
-                print("Performance Level: Low Performance System (Conservative Configuration)")
-            elif cpu_count <= 4:
-                print("Performance Level: Medium Performance System (Balanced Configuration)")
-            else:
-                print("Performance Level: High Performance System (Aggressive Configuration)")
-                
-        except Exception as fallback_error:
-            print(f"System detection failed: {fallback_error}")
-            print("Using default configuration")
-
 # --- 路径配置 ----------------------------------------------------
 # 使用绝对路径，避免工作目录依赖问题
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
@@ -99,6 +57,23 @@ API_PROVIDERS = {
         "region": "beijing"  # 华北2（北京）地域
     }
     # 未来可以在这里增加 deepseek 等
+}
+
+# --- Gemini API专用配置 ----------------------------------------------------
+# 思考功能控制，用于节约API成本
+GEMINI_CONFIG = {
+    "enable_thinking": False,      # 禁用思考功能，节约成本
+    "thinking_budget": 0,          # 0=完全禁用, -1=动态启用, >0=限制token数
+    "model": "gemini-2.5-flash"   # 使用的模型
+}
+
+# --- Qwen API专用配置 ----------------------------------------------------
+# 思考功能控制，用于节约API成本
+QWEN_CONFIG = {
+    "enable_thinking": False,      # 禁用思考功能，节约成本
+    "model": "qwen-plus",         # 使用的模型
+    "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",  # 中国区域
+    "region": "beijing"            # 华北2（北京）地域
 }
 
 # --- 语言数据库 --------------------------------------------------
