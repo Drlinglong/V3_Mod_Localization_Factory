@@ -1,0 +1,69 @@
+﻿l_english:
+rule_headlines_minor_events: "@headlines_newsicon! #yellow Headlines#! | Minor Events"
+setting_headlines_all_minor_events: "All Minor Headlines"
+setting_headlines_all_minor_events_desc: "All headlines will be shown."
+setting_headlines_relevant_minor_events: "Only Relevant Minor Headlines"
+setting_headlines_relevant_minor_events_desc: "Some less important headlines will only be shown if you have an [concept_interest] in the relevant region. #lore This includes events such as the collapse of Central America or the French reconquest of Algeria. #!"
+setting_headlines_no_minor_events: "No Minor Headlines"
+setting_headlines_no_minor_events_desc: "Some less important headlines will not be shown. #lore This includes events such as the collapse of Central America or the French reconquest of Algeria. #!"
+
+headlines_major_group: "@headlines_newsicon! #yellow Headlines#! | Major Events"
+headlines_minor_group: "@headlines_newsicon! #yellow Headlines#! | Minor Events"
+headlines_constructions_group: "@headlines_newsicon! #yellow Headlines#! | Constructions"
+
+
+##Civil Wars##
+#ACW Begins
+notification_headlines_acw_begin_csa_tooltip:0 "#header $notification_headlines_acw_begin_csa_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_acw_begin_csa_desc$"
+ notification_headlines_acw_begin_csa_name:0 "#b SOUTHERN STATES ENACT SECESSION #!"
+ notification_headlines_acw_begin_csa_desc:1 "In the face of mounting support for the abolition of slavery, the [SCOPE.sCountry('csa_scope').GetName] have erupted in open rebellion. #lore Declaring their unilateral exit from the union, the secessionist states have seized federal arsenals and called up their local militias to fight. The Union government's negotations were rebuked, said the secretary... #!"
+
+notification_headlines_acw_begin_fsa_tooltip:0 "#header $notification_headlines_acw_begin_fsa_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_acw_begin_fsa_desc$"
+ notification_headlines_acw_begin_fsa_name:0 "#b NORTHERN STATES ENACT SECESSION #!"
+ notification_headlines_acw_begin_fsa_desc:1 "Facing a staunchly pro-slavery, the [SCOPE.sCountry('fsa_scope').GetName] have erupted in open rebellion. #lore Declaring the federal government to be illegitimate, the free states have declared emancipation for any slaves in their territory, including those fleeing the slave states. The Union government denounced the rebels as traitors to the Constitution, and called for... #!"
+
+#ACW Ends
+notification_headlines_acw_end_slaver_tooltip:0 "#header $notification_headlines_acw_end_slaver_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_acw_end_slaver_desc$"
+ notification_headlines_acw_end_slaver_name:0 "#b SLAVERY REIGNS IN USA #!"
+ notification_headlines_acw_end_slaver_desc:1 "The American Civil War has ended in victory for slavery. #lore The president urged reconciliation and the swift reintegration of the belligerent states. Pockets of abolitionist forces continue to hold out even after... #!"
+
+notification_headlines_acw_end_emancipation_tooltip:0 "#header $notification_headlines_acw_end_emancipation_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_acw_end_emancipation_desc$"
+ notification_headlines_acw_end_emancipation_name:0 "#b AMERICAN CIVIL WAR ENDS #!"
+ notification_headlines_acw_end_emancipation_desc:1 "The American Civil War has ended in favor of the abolitionists. #lore The president urged reconciliation and the swift reintegration of the belligerent states. Pro-slavery paramilitary forces carried out a series of... #!"
+
+#ACW Ends (Stalemate)
+notification_headlines_acw_end_stalemate_tooltip:0 "#header $notification_headlines_acw_end_stalemate_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_acw_end_stalemate_desc$"
+ notification_headlines_acw_end_stalemate_name:0 "#b THE DISUNITED STATES #!"
+ notification_headlines_acw_end_stalemate_desc:1 "The American Civil War has concluded in stalemate, with the [SCOPE.sCountry('usa_scope').GetName] and the [SCOPE.sCountry('acw_other_one_scope').GetName] begrudgingly accepting truce. #lore Most observers say that peace between the two Americas cannot last. Turmoil has rocked the border states as both sides seek to... #!"
+
+#Taiping Appears
+notification_headlines_taiping_appears_tooltip:0 "#header $notification_headlines_taiping_appears_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_taiping_appears_desc$"
+ notification_headlines_taiping_appears_name:0 "#b 'HEAVENLY KINGDOM' DECLARED IN CHINA #!"
+ notification_headlines_taiping_appears_desc:1 "A chinese Christian movement has formed the [SCOPE.sCountry('taiping_scope').GetName] and declared holy war against the [SCOPE.sCountry('china_scope').GetName]. #lore The sect known as the God-Worshipping Society is said to be led by the brother of Jesus Christ, with thousands flocking to...  #!"
+
+#Taiping Victory
+notification_headlines_taiping_victory_tooltip:0 "#header $notification_headlines_taiping_victory_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_taiping_victory_desc$"
+ notification_headlines_taiping_victory_name:0 "#b THE HOLY CHINESE EMPIRE? #!"
+ notification_headlines_taiping_victory_desc:1 "The [SCOPE.sCountry('taiping_scope').GetName] has emerged victorious and established God-Worshipping rule over all of China. #lore The brutal conflict has left a staggering bodycount. [SCOPE.sCountry('taiping_scope').GetRuler.GetPrimaryRoleTitle] [SCOPE.sCountry('taiping_scope').GetRuler.GetFirstName] has already decreed a broad range of societal reforms, including... #!"
+
+#Taiping Defeat
+notification_headlines_taiping_defeat_tooltip:0 "#header $notification_headlines_taiping_defeat_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_taiping_defeat_desc$"
+ notification_headlines_taiping_defeat_name:0 "#b CHRISTIANS MASSACRED IN CHINA #!"
+ notification_headlines_taiping_defeat_desc:1 "The [SCOPE.sCountry('china_scope').GetName] have crushed the God-Worshipping Society's rebellion. #lore Shocking reports of civilian massacres have filtered out from the recaptured provinces, with one eyewitness claiming that over 30,000 people were killed in a single day by... #!"
+
+#Sepoy Mutiny
+notification_headlines_sepoy_mutiny_tooltip:0 "#header $notification_headlines_sepoy_mutiny_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_sepoy_mutiny_desc$"
+ notification_headlines_sepoy_mutiny_name:0 "#b SEPOY MUTINY — BRITISH MOBILIZE #!"
+ notification_headlines_sepoy_mutiny_desc:1 "The Indian subjects of the [SCOPE.sCountry('bic_scope').GetName] have risen in revolt across the subcontinent. #lore Entire regiments of local Hindu and Muslim troops have rebelled against their British masters, fighting for an end to foreign domination by the... #!"
+
+#Sepoy Mutiny Success
+notification_headlines_sepoy_mutiny_success_tooltip:0 "#header $notification_headlines_sepoy_mutiny_success_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_sepoy_mutiny_success_desc$"
+ notification_headlines_sepoy_mutiny_success_name:0 "#b THE END OF BRITISH INDIA? #!"
+ notification_headlines_sepoy_mutiny_success_desc:1 "The Sepoy Mutiny has succeeded in liberating large swathes of India from [SCOPE.sCountry('bic_scope').GetAdjective] rule. #lore The catastrophic defeat has sent markets in London into chaos, while the remnants of the British administration fortify their remaining holdings in... #!"
+
+#Sepoy Mutiny Failure
+notification_headlines_sepoy_mutiny_crushed_tooltip:0 "#header $notification_headlines_sepoy_mutiny_crushed_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_sepoy_mutiny_crushed_desc$"
+ notification_headlines_sepoy_mutiny_crushed_name:0 "#b THE ARMY OF RETRIBUTION #!"
+ notification_headlines_sepoy_mutiny_crushed_desc:1 "The [SCOPE.sCountry('bic_scope').GetName] has crushed the sepoy mutiny with overwhelming force. #lore Horrific reports from the recaptured cities describe British regulars shooting everything that moves, bayoneting women and children, and even... #!"
+
+

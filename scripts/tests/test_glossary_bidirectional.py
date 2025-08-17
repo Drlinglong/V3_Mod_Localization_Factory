@@ -90,8 +90,23 @@ def test_bidirectional_translation():
     # 测试词典状态
     print("\n4. 测试词典状态...")
     if manager.has_any_glossary():
-        status = manager.get_glossary_status_summary()
-        print(f"✅ 词典状态: {status}")
+        status_info = manager.get_glossary_status_summary()
+        # 根据返回的键名和参数进行国际化
+        if status_info["key"] == "glossary_status_main_plus_aux":
+            status_text = i18n.t(status_info["key"], 
+                                main_count=status_info["main_count"],
+                                aux_count=status_info["aux_count"],
+                                total_count=status_info["total_count"])
+        elif status_info["key"] == "glossary_status_main_only":
+            status_text = i18n.t(status_info["key"], 
+                                count=status_info["count"])
+        elif status_info["key"] == "glossary_status_aux_only":
+            status_text = i18n.t(status_info["key"], 
+                                aux_count=status_info["aux_count"])
+        else:
+            status_text = i18n.t(status_info["key"])
+        
+        print(f"✅ 词典状态: {status_text}")
     else:
         print("❌ 无可用词典")
     

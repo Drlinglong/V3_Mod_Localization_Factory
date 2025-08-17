@@ -1,0 +1,188 @@
+2025-08-17 12:14:27,613 - INFO - Logger initialized and ready
+2025-08-17 12:14:27,613 - INFO - 
+Please select a game:
+2025-08-17 12:14:27,613 - INFO -   [1] Victoria 3 (维多利亚3)
+2025-08-17 12:14:27,613 - INFO -   [2] Stellaris (群星)
+2025-08-17 12:14:27,613 - INFO -   [3] Europa Universalis IV (欧陆风云4)
+2025-08-17 12:14:27,613 - INFO -   [4] Hearts of Iron IV (钢铁雄心4)
+2025-08-17 12:14:27,614 - INFO -   [5] Crusader Kings III (十字军之王3)
+2025-08-17 12:14:29,673 - INFO - Please select an API provider:
+2025-08-17 12:14:29,673 - INFO -   [1] Gemini
+2025-08-17 12:14:29,673 - INFO -   [2] Openai
+2025-08-17 12:14:29,673 - INFO -   [3] Qwen - (Recommended for users in Mainland China)
+2025-08-17 12:14:32,557 - INFO - Please select the Mod to localize:
+2025-08-17 12:14:32,557 - INFO -   [1] Australia & New Zealand Flavor Pack
+2025-08-17 12:14:32,557 - INFO -   [2] Blue Archive
+2025-08-17 12:14:32,557 - INFO -   [3] Blue Archive - test
+2025-08-17 12:14:32,557 - INFO -   [4] Forts & Engineers
+2025-08-17 12:14:32,557 - INFO -   [5] GORA UI
+2025-08-17 12:14:32,557 - INFO -   [6] Hydra's More Agenda's
+2025-08-17 12:14:32,557 - INFO -   [7] KuatAncientEmpire
+2025-08-17 12:14:32,557 - INFO -   [8] MODJAM2025
+2025-08-17 12:14:32,557 - INFO -   [9] Offer Convoy Contribution
+2025-08-17 12:14:32,557 - INFO -   [10] parallelprocessor-test
+2025-08-17 12:14:32,557 - INFO -   [11] Project Utopia - Extended Timeline - Technical Preview
+2025-08-17 12:14:32,557 - INFO -   [12] Tech & Res
+2025-08-17 12:14:32,557 - INFO -   [13] TEST-ANZAC
+2025-08-17 12:14:32,557 - INFO -   [14] UKrework
+2025-08-17 12:14:35,697 - INFO - 
+You have selected: parallelprocessor-test
+2025-08-17 12:14:35,697 - INFO - Do you want to clean up the source MOD folder 'parallelprocessor-test' to save disk space?
+This will delete all files except '.metadata', 'localization', and 'thumbnail.png'.
+Please enter Y or N: 
+2025-08-17 12:14:40,389 - INFO - Source file cleanup confirmed
+2025-08-17 12:14:40,389 - INFO - 
+--- Getting Mod thematic context ---
+2025-08-17 12:14:40,390 - INFO - Identified Mod Name: 'Offer Convoy Contribution'
+2025-08-17 12:14:41,627 - INFO - Final thematic context used: 'Offer Convoy Contribution'
+2025-08-17 12:14:41,627 - INFO - 
+Please select the source language:
+2025-08-17 12:14:41,627 - INFO -   [1] English
+2025-08-17 12:14:41,627 - INFO -   [2] 简体中文
+2025-08-17 12:14:41,627 - INFO -   [3] Français
+2025-08-17 12:14:41,627 - INFO -   [4] Deutsch
+2025-08-17 12:14:41,627 - INFO -   [5] Español
+2025-08-17 12:14:41,628 - INFO -   [6] 日本語
+2025-08-17 12:14:41,628 - INFO -   [7] 한국어
+2025-08-17 12:14:41,628 - INFO -   [8] Polski
+2025-08-17 12:14:41,628 - INFO -   [9] Português do Brasil
+2025-08-17 12:14:41,628 - INFO -   [10] Русский
+2025-08-17 12:14:41,628 - INFO -   [11] Türkçe
+2025-08-17 12:14:45,666 - INFO - 
+Please select the target language(s):
+2025-08-17 12:14:45,666 - INFO -   [0] Translate to all other 10 languages
+2025-08-17 12:14:45,666 - INFO -   [c] Custom / Disguise Other Language...
+2025-08-17 12:14:45,666 - INFO -   [1] 简体中文
+2025-08-17 12:14:45,666 - INFO -   [2] Français
+2025-08-17 12:14:45,666 - INFO -   [3] Deutsch
+2025-08-17 12:14:45,666 - INFO -   [4] Español
+2025-08-17 12:14:45,666 - INFO -   [5] 日本語
+2025-08-17 12:14:45,666 - INFO -   [6] 한국어
+2025-08-17 12:14:45,666 - INFO -   [7] Polski
+2025-08-17 12:14:45,666 - INFO -   [8] Português do Brasil
+2025-08-17 12:14:45,666 - INFO -   [9] Русский
+2025-08-17 12:14:45,666 - INFO -   [10] Türkçe
+2025-08-17 12:14:47,996 - INFO - Glossary loaded successfully: 743 entries
+2025-08-17 12:14:47,996 - INFO - No auxiliary glossaries found
+2025-08-17 12:14:47,996 - INFO - Please select fuzzy matching mode:
+2025-08-17 12:14:47,996 - INFO - [1] Strict Mode - No fuzzy matching 
+2025-08-17 12:14:47,996 - INFO - [2] Loose Mode - Enable fuzzy matching (tolerates spelling errors)
+2025-08-17 12:14:47,996 - INFO - If you don't know what this is, we recommend enabling fuzzy matching
+2025-08-17 12:15:04,025 - INFO - === Project Overview ===
+2025-08-17 12:15:04,025 - INFO - Target MOD: parallelprocessor-test
+2025-08-17 12:15:04,025 - INFO - API Provider: Gemini
+2025-08-17 12:15:04,025 - INFO - Game Type: Victoria 3 (维多利亚3)
+2025-08-17 12:15:04,025 - INFO - Source Language: English
+2025-08-17 12:15:04,025 - INFO - Target Language: 简体中文
+2025-08-17 12:15:04,025 - INFO - Glossary Configuration: Main glossary only
+2025-08-17 12:15:04,025 - INFO - Fuzzy matching: Fuzzy matching enabled
+2025-08-17 12:15:04,025 - INFO - Clean up extra files: Will clean up source files
+2025-08-17 12:15:21,124 - INFO - Translation confirmed, starting execution...
+2025-08-17 12:15:21,124 - INFO - Executing source file cleanup...
+2025-08-17 12:15:21,124 - INFO - 
+--- Starting cleanup of source Mod folder: parallelprocessor-test ---
+2025-08-17 12:15:21,124 - INFO - Deleting non-essential files and folders...
+2025-08-17 12:15:21,125 - INFO - Source folder cleanup complete!
+2025-08-17 12:15:21,125 - INFO - Source file cleanup completed
+2025-08-17 12:15:21,125 - INFO - Fuzzy matching mode set to: 宽松模式
+2025-08-17 12:15:21,125 - INFO - Glossary status: 仅主词典(743条)
+2025-08-17 12:15:21,125 - INFO - 
+--- Starting 'Initial Translation' workflow for: parallelprocessor-test ---
+2025-08-17 12:15:21,578 - INFO - Gemini client initialized successfully, using model: gemini-2.5-flash
+2025-08-17 12:15:21,579 - INFO - Glossary loaded successfully: 743 entries
+2025-08-17 12:15:21,579 - INFO - 输出目录结构创建成功: J:\V3_Mod_Localization_Factory\my_translation\zh-CN-parallelprocessor-test
+2025-08-17 12:15:21,579 - INFO - 
+--- Processing assets (thumbnail, descriptor, etc.) ---
+2025-08-17 12:15:21,580 - INFO - Asset 'thumbnail.png' copied successfully.
+2025-08-17 12:15:21,580 - INFO - 
+--- Parsing file: source_mod\parallelprocessor-test\localization\english\FAE_l_english.yml ---
+2025-08-17 12:15:21,581 - INFO - Extracted 2 translatable texts.
+2025-08-17 12:15:21,581 - INFO - 
+--- Parsing file: source_mod\parallelprocessor-test\localization\english\headlines_l_english.yml ---
+2025-08-17 12:15:21,581 - INFO - Extracted 43 translatable texts.
+2025-08-17 12:15:21,581 - INFO - 
+--- Parsing file: source_mod\parallelprocessor-test\localization\english\headlines_tech_l_english.yml ---
+2025-08-17 12:15:21,581 - INFO - Extracted 75 translatable texts.
+2025-08-17 12:15:21,581 - INFO - 
+--- Parsing file: source_mod\parallelprocessor-test\localization\english\less_clicks_l_english.yml ---
+2025-08-17 12:15:21,581 - INFO - Extracted 7 translatable texts.
+2025-08-17 12:15:21,581 - INFO - 
+--- Parsing file: source_mod\parallelprocessor-test\localization\english\OCC_l_english.yml ---
+2025-08-17 12:15:21,582 - INFO - Extracted 3 translatable texts.
+2025-08-17 12:15:21,582 - INFO - 
+--- Translating to: 简体中文 ---
+2025-08-17 12:15:21,582 - INFO - --- Detected 7 translation batches, starting parallel processing mode ---
+2025-08-17 12:15:21,734 - INFO - Extracted 1 relevant terms from 2 texts
+2025-08-17 12:15:21,820 - INFO - Batch 1: injected 1 glossary terms
+2025-08-17 12:15:21,989 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 12:15:22,967 - INFO - Extracted 4 relevant terms from 3 texts
+2025-08-17 12:15:23,051 - INFO - Batch 1: injected 4 glossary terms
+2025-08-17 12:15:23,268 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 12:15:23,331 - INFO - Extracted 3 relevant terms from 3 texts
+2025-08-17 12:15:23,463 - INFO - Extracted 1 relevant terms from 7 texts
+2025-08-17 12:15:23,687 - INFO - Batch 1: injected 3 glossary terms
+2025-08-17 12:15:23,793 - INFO - Batch 1: injected 1 glossary terms
+2025-08-17 12:15:23,855 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 12:15:23,964 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 12:15:28,081 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 12:15:28,345 - INFO - AFC remote call 1 is done.
+2025-08-17 12:15:28,501 - INFO - 批次完成: FAE_l_english.yml - 批次 1
+2025-08-17 12:15:28,842 - INFO - File 'zh-CN-parallelprocessor-test\localization\simp_chinese\english\FAE_l_simp_chinese.yml' has been localized successfully.
+2025-08-17 12:15:28,904 - INFO - 文件构建完成: FAE_l_english.yml
+2025-08-17 12:15:29,028 - INFO - 文件完成: FAE_l_english.yml
+2025-08-17 12:15:29,059 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 12:15:29,555 - INFO - AFC remote call 1 is done.
+2025-08-17 12:15:29,694 - INFO - 批次完成: OCC_l_english.yml - 批次 1
+2025-08-17 12:15:29,988 - INFO - File 'zh-CN-parallelprocessor-test\localization\simp_chinese\english\OCC_l_simp_chinese.yml' has been localized successfully.
+2025-08-17 12:15:30,128 - INFO - 文件构建完成: OCC_l_english.yml
+2025-08-17 12:15:30,313 - INFO - 文件完成: OCC_l_english.yml
+2025-08-17 12:15:32,842 - INFO - Extracted 22 relevant terms from 35 texts
+2025-08-17 12:15:32,921 - INFO - Batch 1: injected 22 glossary terms
+2025-08-17 12:15:32,936 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 12:15:33,061 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 12:15:33,268 - INFO - Extracted 19 relevant terms from 40 texts
+2025-08-17 12:15:33,291 - INFO - Batch 1: injected 19 glossary terms
+2025-08-17 12:15:33,306 - INFO - AFC remote call 1 is done.
+2025-08-17 12:15:33,338 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 12:15:33,399 - INFO - 批次完成: less_clicks_l_english.yml - 批次 1
+2025-08-17 12:15:33,477 - INFO - Extracted 19 relevant terms from 40 texts
+2025-08-17 12:15:33,477 - INFO - Batch 1: injected 19 glossary terms
+2025-08-17 12:15:33,477 - INFO - File 'zh-CN-parallelprocessor-test\localization\simp_chinese\english\less_clicks_l_simp_chinese.yml' has been localized successfully.
+2025-08-17 12:15:33,477 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 12:15:33,477 - INFO - 文件构建完成: less_clicks_l_english.yml
+2025-08-17 12:15:33,478 - INFO - 文件完成: less_clicks_l_english.yml
+2025-08-17 12:15:36,162 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 12:15:36,163 - INFO - AFC remote call 1 is done.
+2025-08-17 12:15:36,163 - INFO - 批次完成: headlines_l_english.yml - 批次 2
+2025-08-17 12:16:02,625 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 12:16:02,626 - INFO - AFC remote call 1 is done.
+2025-08-17 12:16:02,626 - INFO - 批次完成: headlines_tech_l_english.yml - 批次 2
+2025-08-17 12:16:06,013 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 12:16:06,014 - INFO - AFC remote call 1 is done.
+2025-08-17 12:16:06,014 - INFO - 批次完成: headlines_tech_l_english.yml - 批次 1
+2025-08-17 12:16:06,015 - INFO - File 'zh-CN-parallelprocessor-test\localization\simp_chinese\english\headlines_tech_l_simp_chinese.yml' has been localized successfully.
+2025-08-17 12:16:06,015 - INFO - 文件构建完成: headlines_tech_l_english.yml
+2025-08-17 12:16:06,015 - INFO - 文件完成: headlines_tech_l_english.yml
+2025-08-17 12:16:17,189 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 12:16:17,191 - INFO - AFC remote call 1 is done.
+2025-08-17 12:16:17,191 - INFO - 批次完成: headlines_l_english.yml - 批次 1
+2025-08-17 12:16:17,191 - INFO - File 'zh-CN-parallelprocessor-test\localization\simp_chinese\english\headlines_l_simp_chinese.yml' has been localized successfully.
+2025-08-17 12:16:17,191 - INFO - 文件构建完成: headlines_l_english.yml
+2025-08-17 12:16:17,191 - INFO - 文件完成: headlines_l_english.yml
+2025-08-17 12:16:17,191 - INFO - 所有文件处理完成，共处理 5 个文件
+2025-08-17 12:16:17,193 - INFO - Generating proofreading progress board...
+2025-08-17 12:16:17,193 - INFO - GBK encoding version generated: J:\V3_Mod_Localization_Factory\my_translation\zh-CN-parallelprocessor-test\proofreading_progress_GBK.csv
+2025-08-17 12:16:17,193 - INFO - Proofreading progress table generated: J:\V3_Mod_Localization_Factory\my_translation\zh-CN-parallelprocessor-test\proofreading_progress.csv
+2025-08-17 12:16:17,193 - INFO - Proofreading progress board generated successfully
+2025-08-17 12:16:17,193 - INFO - 
+--- Processing metadata.json ---
+2025-08-17 12:16:17,193 - INFO - Translating mod name: "Offer Convoy Contribution..."
+2025-08-17 12:16:17,217 - INFO - Extracted 1 relevant terms from 1 texts
+2025-08-17 12:16:17,217 - INFO - Single translation: injected 1 glossary terms
+2025-08-17 12:16:17,217 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 12:16:23,058 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 12:16:23,059 - INFO - AFC remote call 1 is done.
+2025-08-17 12:16:23,059 - INFO - metadata.json localized successfully.
+2025-08-17 12:16:23,059 - INFO - Translation workflow completed!
+2025-08-17 12:16:23,059 - INFO - Output folder: zh-CN-parallelprocessor-test
+2025-08-17 12:16:23,060 - INFO - Workflow completed!
