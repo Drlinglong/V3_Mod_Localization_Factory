@@ -1,0 +1,281 @@
+﻿l_braz_por:
+
+ BA_Project_Cradle_title:0 "Projeto Berço"
+ BA_Project_Cradle_instruction:0 "Este é um projeto para investigar e remodelar o sistema estelar natal."
+###### A
+ BA_Project.0010.desc:0 "Professor, quanto você sabe sobre os dados que o Conselho Estudantil Federal coletou ao explorar este sistema estelar? Segundo os relatórios, este sistema estelar tem muitas anomalias. A Arona deu uma olhadinha nos relatórios antes, sabe? Por exemplo, o planeta onde estamos nem sequer está na zona habitável, mas a temperatura é superagradável; o gigante gasoso distante tem quatro luas com massa, órbita e até ângulos perfeitamente alinhados entre si, e é impossível explicar por que elas continuam assim mesmo depois de se estilhaçarem; além dos corpos celestes que vemos, não há cinturão de asteroides no sistema, e quanto a luas, só aquele gigante gasoso estranho tem, como se tudo tivesse sido limpo!"
+ BA_Project.0010.a:0 "É exatamente como a Arona disse."
+ BA_Project.0010.a.response:0 "O mais estranho é aquele planeta com a barreira no sistema, não é? Ele está na mesma órbita que a gente, mas tem uma barreira mágica. Não dá pra escanear o que tem debaixo da barreira de jeito nenhum, e armas comuns não conseguem nem arranhá-la. A Arona acha que essa barreira não pode ter sido formada naturalmente de jeito nenhum.\nMas, recentemente, a Arona encontrou um banco de dados na Grande Torre que parece estar relacionado ao nosso sistema estelar. Se possível, Professor, por favor, aloque alguns recursos e pessoal para quebrar a criptografia do banco de dados, a Arona acredita que vamos ter grandes descobertas!"
+ BA_Project.0010.next:0 "Entendido."
+
+ BA_Project.0011.desc:0 "Que ótimo, Professor! Os alunos tentaram invadir o banco de dados com uma montanha de dados aleatórios e, pasme, conseguiram alguns dados esparsos e até decifraram alguns fragmentos legíveis! Os colegas que participaram do trabalho se esforçaram muito!"
+ BA_Project.0011.a:0 "Ler Fragmento"
+ BA_Project.0011.a.response:0 "...falha no teste, mas o resultado é...\n...dano na auréola, mas não destruição...\n...amplificação de emoções, e então...\n...ataque ao repetidor, interceptação...\n...coluna de luz descendente, desativou o..."
+ BA_Project.0011.b:0 "A Arona tem alguma pista?"
+ BA_Project.0011.b.response:0 "Parece ser um tipo de arquivo, e só registra coisas ruins, sabe? Menciona 'auréolas' lá... será que tem a ver com os alunos? A Arona não consegue entender como uma auréola poderia ser danificada...\n...Hum? Você disse que mencionou repetidores e naves? O ataque ao repetidor foi interceptado por naves, será que esse repetidor está no espaço?\n...Bem, essa possibilidade realmente existe...? Será que houve uma invasão alienígena em Kivotos lá, ou talvez uma guerra civil entre os Precursores e o planeta natal...?\n...Ah! A Arona se lembrou! Scans anteriores encontraram vestígios de construções no Planeta 2 do nosso sistema, que tal mandarmos uma nave de pesquisa para dar uma olhada de perto?"
+ BA_Project.0011.next:0 "Ótimo."
+
+ BA_Project.0012.desc:0 "Como esperado, Professor! No lado oculto do Planeta 2, realmente há um complexo de edifícios! Rápido, mande uma equipe de arqueologia para escavar!"
+ BA_Project.0012.next:0 "Ótimo, certifique-se de procurar por lá com cuidado."
+
+ BA_Project.0013.desc:0 "Uau, encontraram a chave do banco de dados... os alunos são demais, né? Então, o que será que vamos desvendar? Estou super curiosa~\n\nAutenticação concluída. Olá, Pesquisador(a) MX-7073. Este é o banco de dados de confidencialidade média, codinome JSS. De acordo com suas permissões, você pode e apenas pode ler todos os dados no Setor K. Para copiar, utilize uma mídia de armazenamento dedicada. Por favor, faça logout ao sair."
+ BA_Project.0013.a:0 "Mesmo com tanta coisa a se preocupar, Arona, lembre-se de tomar cuidado com vírus..."
+ BA_Project.0013.a.response:0 "Ah, Professor... É claro que a Arona vai prestar atenção nisso, né...\nAaah... o que são essas coisas? Desenhos de todo tipo, fórmulas extravagantes... Ai, a Arona já está com dor de cabeça só de virar algumas páginas..."
+ BA_Project.0013.b:0 "Parecem projetos de algum aparelho."
+ BA_Project.0013.b.response:0 "Se o Professor diz... Oh, é verdade! Parece ser um dispositivo muito, muito grande! Então vamos deixar os alunos pesquisarem isso! Rapidinho a gente descobre pra que serve, e quem sabe a gente até consegue construir um!"
+ BA_Project.0013.next:0 "Ótimo."
+
+ BA_Project.0014.desc:0 "Professor! A pesquisa foi concluída! A função desse dispositivo é gerar um campo de energia. Agora, escute bem, porque é uma notícia bombástica! Vou ler para você, preste muita atenção!\n\n「O campo de energia pode absorver energia da direção normal e transmiti-la tangencialmente, obtendo assim a energia necessária para manter o campo. A porção absorvida que excede o consumo é transmitida tangencialmente, e com o aumento do volume de transmissão, efeitos relativísticos cada vez mais acentuados podem ser observados nas bordas da barreira. A energia consumida é irradiada para o lado externo da curvatura, e a forma de irradiação depende de como o microelemento do campo de energia obteve energia durante um certo período. O campo eletromagnético dentro do campo de energia é extremamente caótico, mas a tendência geral é acelerar todas as entidades carregadas para o interior.」\n\nPense bem, se a gente conectar esses campos de energia, não é exatamente igual à barreira no Planeta 2?!"
+ BA_Project.0014.a:0 "Arona, que inteligente! Merece um cafuné."
+ BA_Project.0014.a.response:0 "Hehe... Oh, agora não é hora para cafunés! Já entendemos o princípio do dispositivo, e claro que sabemos como remover a barreira! Vamos abrir e dar uma olhada lá?"
+ BA_Project.0014.next:0 "Pode ir em frente!"
+
+ BA_Project.0015.desc:0 "Oh! Professor, olhe rápido! Olhe só as ruínas nesse planeta... seja o limite das áreas ou a forma, a Arona sente um forte déjà vu...\nUhm, aquela construção em forma de torre caída parece com a Grande Torre do Conselho Estudantil Federal... Aquela ruína de região autônoma no deserto, será que é Abydos? E aquela na neve, será que é Red Winter?... Então, onde está a ETO?"
+ BA_Project.0015.a:0 "Arona, olhe aqui. Do Antigo Santuário de Trinity só resta uma cratera. Parece que não há ETO aqui."
+ BA_Project.0015.a.response:0 "Não pode ser!... Se não tem ETO... Trinity, Millennium... Gehenna... Valkyrie... Onde será que elas estavam? Como era Kivotos antes do Tratado do Éden?"
+ BA_Project.0015.next:0 "Seria melhor deixar os profissionais cuidarem do trabalho inicial primeiro."
+
+ BA_Project.0016.desc:0 "Professor, a equipe avançada relatou que todos os valores deste planeta são idênticos aos de Kivotos, e ele pode ser colonizado. Se o Professor quiser, podemos enviar um grupo de colonos para cá.\nAlém disso, existe a possibilidade de reconstruir este lugar em uma cidade-academia como Kivotos, e a Arona também acha isso bem atraente... Mas isso não é algo para pensar agora.\nTeremos muito trabalho pela frente, mas a Arona estará sempre ao seu lado..."
+ BA_Project.0016.next:0 "(A Arona parece um pouco desanimada, por que será...)"
+
+###### B
+ BA_Project.0018.desc:0 "Professor, nossa colônia neste planeta de ruínas já tem três anos de história. Nestes três anos, fizemos um bom progresso no desenvolvimento do planeta, a infraestrutura está muito bem construída e há cada vez mais alunos lá. No entanto, embora tenhamos tido bons resultados com o desenvolvimento usando as ruínas antes, agora as ruínas se tornaram um obstáculo para a construção contínua.\nA Arona ouviu dizer que muitas e muitas ruínas, por questões de pesquisa histórica, perigo de desenvolvimento e outros fatores, não foram nem puderam ser desobstruídas para uso do terreno. Já que agora os recursos humanos e materiais relevantes no planeta estão maduros, podemos começar a explorar este planeta, não é?!\nQuando estiver pronto, chame a Arona! A Arona acredita que podemos desvendar os segredos deste planeta e também acredita que podemos reconstruir este lugar para que se pareça com a verdadeira Kivotos!"
+ BA_Project.0018.next:0 "Vamos nessa, Arona!"
+
+ BA_Project.0019.desc:0 "Com um planeta tão grande, por onde devemos começar o trabalho de arqueologia? O Professor tem alguma ideia?\nQue tal começar pelo Antigo Santuário de Trinity, que foi o mais destruído? Hmm... faz sentido, o Antigo Santuário de Trinity é o local onde o Tratado do Éden foi assinado, certo?! Neste planeta... o Antigo Santuário foi destruído, e parece que algumas estruturas subterrâneas estranhas foram expostas na cratera. Se investigarmos lá, devemos descobrir por que o Tratado do Éden aqui não foi assinado com sucesso, certo?! Você é o máximo, Professor!"
+ BA_Project.0019.a:0 "Então, vamos começar nosso primeiro trabalho de arqueologia."
+ BA_Project.0019.b:0 "Acho que não podemos baixar a guarda aqui. Avise o Grupo de Autodefesa para se posicionar."
+
+ BA_Project.0020.desc:0 "Professor, durante a escavação, não sei que mecanismo foi ativado, mas muitos inimigos apareceram de repente nas ruínas! Felizmente, o Grupo de Autodefesa já assumiu o controle da área, e embora os inimigos continuem aparecendo sem parar, seus movimentos foram temporariamente restringidos.\nMas a Arona já pesquisou! De acordo com o relatório do Grupo de Autodefesa, esses inimigos são entidades psíquicas chamadas 'Discípulos de Justina', que, embora tenham a forma de estudantes, usam uniformes de combate padronizados, e balas podem atravessá-los e machucá-los. Os alunos do Grupo de Autodefesa levaram um susto enorme na hora! Mas depois de entrarem em combate, perceberam que eles são bem fracos, como um bando de moscas sem cabeça..."
+ BA_Project.0020.next:0 "Uma escavação dessa escala não pode ser apressada de jeito nenhum."
+
+ BA_Project.0021.desc:0 "É tão impressionante que um planeta como este tenha uma história assim...\nEmbora nós também tenhamos passado por muitas turbulências para entrar na era das viagens espaciais, ao olhar para essas ruínas, se nós também... uh... será que nosso destino seria tão trágico quanto o delas...?\nDe qualquer forma, os colegas da equipe de arqueologia e o Professor se esforçaram muito! Descansem um pouco. Em seguida, vamos começar a restaurar este lugar ao que ele deveria ser!"
+ BA_Project.0021.next:0 "Você também se esforçou, Arona."
+
+###### C
+ BA_Project.0022.desc:0 "Professor! Segundo os investigadores no planeta de ruínas, elas já dominam completamente o layout de todos os aspectos da cidade-academia original deste planeta. A Arona acha que é hora de começarmos o trabalho de reconstrução!\nOs escombros e paredes em ruínas aqui sempre nos enchem de emoções... Certamente conseguiremos recriar o esplendor deste lugar. Não, eu deveria dizer que esta é nossa responsabilidade."
+ BA_Project.0022.next:0 "Pode ir em frente!"
+
+ BA_Project.0023.desc:0 "“Uhm, essas ruínas são tão grandes que, se as limpássemos pouco a pouco usando os métodos antigos, a eficiência seria super baixa, não é? Arona acha que precisamos pesquisar um novo método para limpar uma área tão vasta de ruínas rapidamente. Pelas rotas que temos agora... Parece haver duas direções possíveis.\nUma é usar armas de feixe espaciais. Essas armas podem ser um pouco modificadas para bombardear as ruínas, transformando todo o material em pó para reciclagem. A vantagem é que a varredura é rápida e o trabalho de reconstrução posterior economiza recursos. Quanto às desvantagens... Bem, mesmo que Arona não diga, já é bem óbvio, né?\nA outra é usar um grande volume de máquinas de limpeza autônomas especializadas para a demolição. Embora a velocidade seja muito inferior à primeira, e construir as máquinas gaste muitos recursos, a vantagem é que é seguro e confiável, e algumas ruínas com significado histórico podem ser preservadas.\nQual método usar, depende da escolha do Sensei. Ou, Sensei quer deixar as estudantes escolherem o plano? Não importa o que você decida, Arona vai apoiar o Sensei com tudo!”"
+ BA_Project.0023.order:0 "Arona é super confiável, não é?"
+ BA_Project.0023.decentralize:0 "Então, vamos deixar a decisão inteiramente para as estudantes."
+
+#天基武器线路
+ BA_Project.0024.desc:0 "“Sensei! O Departamento de Física relatou que concluiu o projeto de adaptação da arma espacial e já podemos nos preparar para a fabricação! Segundo o departamento, a instalação espacial precisa ser fabricada e lançada em várias partes.\nPrimeiro, o cilindro de foco. Como a colônia no planeta de ruínas não tem as condições de fabricação correspondentes, ele deve ser fabricado no planeta natal. Isso custa §Y300£energy£ Moedas de Energia, 300£alloys£ Ligas e 100£rare_crystals£ Cristais Raros§!.\nDepois, o casco de blindagem. A fabricação custa §Y200£energy£ Moedas de Energia e 500£alloys£ Ligas§!. Como é algo muito volumoso e pesado, se for fabricado no planeta natal, exigirá um custo extra de §Y1000£energy£ Moedas de Energia§! para transporte até a colônia do planeta de ruínas, mas as condições industriais do planeta natal são melhores, e a fabricação será mais rápida.\nPor fim, os componentes principais avulsos. No total, são necessários §Y1000£energy£ Moedas de Energia, 200£alloys£ Ligas, 100£volatile_motes£ Partículas Voláteis e 100£exotic_gases£ Gases Exóticos§!. Assim como os dois primeiros componentes, se forem fabricados no planeta natal, a conclusão será mais rápida.\nApós o lançamento de tudo, ainda serão necessários 3 meses para a montagem, e então o trabalho poderá começar. Ugh, isso é um gasto enorme, né...”"
+ BA_Project.0024.next:0 "Vai valer a pena. Mãos à obra!"
+
+ BA_Project.0025.desc:0 "“Sensei, o relatório da colônia do planeta de ruínas informa que a montagem da arma espacial foi concluída e o disparo pode começar.\nEmbora Arona tenha notificado os colonos do planeta há muito tempo, dado que o uso desta instalação espacial vai prejudicar seriamente o ambiente de vida do planeta, podendo até causar baixas, Arona emitiu um último aviso. Imagino que a vida das estudantes que ficaram no planeta não vai ser muito fácil por um tempo, né?\nPelos cálculos da Arona, o trabalho deve levar 3 anos, mas Arona não pode descartar a possibilidade de terminar antes ou ter um atraso.”"
+ BA_Project.0025.next:0 "Em breve, tudo mudará."
+
+ BA_Project.0026.desc:0 "“Sensei! O departamento relatou que a equipe de máquinas de limpeza concluiu a varredura do planeta de ruínas, e o trabalho de limpeza do solo também foi finalizado. Uma pequena parte das máquinas que cumpriram sua missão está programada para ser preservada em um museu, e o restante está sendo preparado para desmonte e reciclagem. Este trabalho de limpeza foi realmente muito proveitoso, colhemos materiais basicamente suficientes para reconstruir a maior parte de um planeta Cidade-Academia, e ao mesmo tempo, o novo planejamento da academia foi sendo gradualmente elaborado ao longo dos últimos anos.\nEm breve poderemos testemunhar o nascimento de outro planeta Cidade-Academia! Vamos começar a reconstrução logo! Arona mal pode esperar!”"
+ BA_Project.0026.next:0 "Este é o último passo."
+
+ BA_Project.0027.desc:0 "“Sensei, o Departamento de Engenharia submeteu uma proposta especial! Depois de estudar cuidadosamente a instalação espacial recuperada, elas têm a intenção de miniaturizar este equipamento e instalá-lo em Titãs, para que possa atacar tanto naves de guerra quanto colônias inimigas. Arona acha que este projeto é viável. O que Sensei acha?”"
+ BA_Project.0027.next:0 "Ótimo, pesquisem!"
+
+ BA_Project.0028.desc:0 "Sensei, o Departamento de Engenharia relatou que concluiu o reaproveitamento da tecnologia de instalação de limpeza espacial. Elas desenvolveram um novo tipo de canhão principal para ser equipado em Titãs. Este canhão principal pode destruir rapidamente os escudos e a armadura das naves inimigas, e também pode ser usado como arma contra colônias inimigas, desmantelando rapidamente as instalações de defesa na colônia."
+ BA_Project.0028.next:0 "Entendido."
+
+ decision_build_focus_tube_home:0 "Construir Cilindro de Foco"
+ decision_build_focus_tube_home_desc:0 "O cilindro de foco é o componente principal da instalação de limpeza espacial. Seu processo de fabricação é bastante complexo e só pode ser produzido no planeta natal."
+ decision_build_shielding_case_home:0 "Construir Casco de Blindagem"
+ decision_build_shielding_case_home_desc:0 "Construir o casco externo pesado da instalação de limpeza espacial no planeta natal. Embora seja rápido, custará um pouco para transportá-lo para a colônia depois."
+ decision_build_shielding_case_colony:0 "Construir Casco de Blindagem"
+ decision_build_shielding_case_colony_desc:0 "Construir o casco externo pesado da instalação de limpeza espacial na colônia. Isso sacrifica a velocidade de construção, mas a vantagem de construir localmente é não ter que gastar esforço para transportá-lo."
+ decision_build_core_components_home:0 "Construir Componentes Principais"
+ decision_build_core_components_home_desc:0 "Construir vários componentes da instalação de limpeza espacial. As condições industriais no planeta natal são melhores que nas colônias, então a velocidade de construção é maior."
+ decision_build_core_components_colony:0 "Construir Componentes Principais"
+ decision_build_core_components_colony_desc:0 "Construir vários componentes da instalação de limpeza espacial. A vantagem de construir na colônia é que isso pode impulsionar o emprego local."
+
+ BA_Project.8101.title:0 "Fabricação do Cilindro de Foco Concluída"
+ BA_Project.8101.desc:0 "O §YCilindro de Foco§! da instalação de limpeza espacial foi fabricado e transportado para a posição orbital designada na colônia do planeta de ruínas."
+ BA_Project.8101.confirmed:0 "Nenhum outro objeto não autorizado na órbita, aguardando montagem."
+ BA_Project.8102.title:0 "Fabricação do Casco de Blindagem Concluída"
+ BA_Project.8102.desc:0 "O §YCasco de Blindagem§! da instalação de limpeza espacial foi fabricado e transportado para a posição orbital designada na colônia do planeta de ruínas."
+ BA_Project.8102.confirmed:0 "Sistema de Detecção de Temperatura funcionando normalmente, aguardando montagem."
+ BA_Project.8102.return:0 "Devido à elaboração de planos de fabricação duplicados, os projetos excedentes foram cancelados."
+ BA_Project.8102.recycled:0 "Os recursos não serão desperdiçados."
+ BA_Project.8103.title:0 "Fabricação dos Componentes Principais Concluída"
+ BA_Project.8103.desc:0 "Os §YComponentes Principais§! da instalação de limpeza espacial foram fabricados e transportados para a posição orbital designada na colônia do planeta de ruínas."
+ BA_Project.8103.confirmed:0 "Órbita das Cápsulas de Transporte estável, autoteste do sistema de recuperação concluído, aguardando montagem."
+ BA_Project.8103.return:0 "Devido à elaboração de planos de fabricação duplicados, os projetos excedentes foram cancelados."
+ BA_Project.8103.recycled:0 "Os recursos não serão desperdiçados."
+
+ BA_Project.8104.title:0 "Relatório de Limpeza da Instalação Espacial: Início dos disparos."
+ BA_Project.8104.desc:0 "Com a instalação de limpeza espacial montada, calibrada e energizada, o trabalho de varredura da instalação espacial começou. Um feixe de luz azul-celeste se derrama do cilindro de foco, despedaçando completamente as ruínas cinzentas do planeta. O feixe, como um cortador gigante, nivela tudo por onde passa. Este trabalho deve durar 3 anos, com equipes de limpeza de solo seguindo o feixe para realizar a limpeza e reconstrução temporária, e os assentamentos e áreas industriais migrando junto. O planeta inteiro terá sua superfície rebaixada em 20 metros para limpar completamente as ruínas."
+ BA_Project.8104.next:0 "Limpando o céu e a terra!"
+
+ BA_Project.8121.title:0 "Relatório de Limpeza de Instalações Espaciais: Limpeza Normal"
+ BA_Project.8121.desc:0 "O relatório da colônia do Planeta Ruína indica que o trabalho de limpeza prossegue de forma ordenada, sem ocorrências anormais."
+ BA_Project.8121.confirm:0 "Recebido."
+ BA_Project.8122.title:0 "Relatório de Limpeza de Instalações Espaciais: Jazida de Minério"
+ BA_Project.8122.desc:0 "O relatório da colônia no Planeta Ruínas informa que uma pequena jazida de minério inexplorada foi encontrada durante a limpeza. A equipe de limpeza em terra já coletou todos os minerais que foram ejetados para a superfície."
+ BA_Project.8122.confirm:0 "Um pequeno presente."
+ BA_Project.8123.title:0 "Relatório de Limpeza de Instalações Espaciais: Filão de Minério"
+ BA_Project.8123.desc:0 "O relatório da colônia no Planeta Ruínas revelou um filão de minério que se tornou muito fácil de extrair devido ao bombardeio das armas espaciais. A equipe de limpeza em terra já extraiu todo o minério visível do filão."
+ BA_Project.8123.confirm:0 "Nada mal."
+ BA_Project.8124.title:0 "Relatório de Limpeza de Instalações Espaciais: Armazém Subterrâneo"
+ BA_Project.8124.desc:0 "O relatório da colônia no Planeta Ruínas revelou um armazém militar subterrâneo deixado pelos antigos habitantes! Dentro havia uma grande quantidade de ligas, algumas pedras de Qinghui e até matéria escura, cuja forma de extração ainda é desconhecida. A equipe de limpeza em terra já coletou tudo."
+ BA_Project.8124.confirm:0 "Que alegria!"
+ BA_Project.8125.title:0 "Relatório de Limpeza de Instalações Espaciais: Interferência Leve"
+ BA_Project.8125.desc:0 "O relatório da colônia no Planeta Ruínas informa que o bombardeio recente perturbou o clima do Planeta Ruínas, causando furacões e inundações de pequena escala. Felizmente, todo o pessoal nas áreas afetadas foi evacuado, resultando em quase nenhuma perda de pessoal ou propriedade."
+ BA_Project.8125.confirm:0 "Recebido."
+ BA_Project.8126.title:0 "Relatório de Limpeza de Instalações Espaciais: Desastre Grave"
+ BA_Project.8126.desc:0 "O relatório da colônia no Planeta Ruínas informa que o bombardeio recente interferiu na atividade geológica do Planeta Ruínas, causando terremotos violentos e erupções vulcânicas. Felizmente, este desastre ocorreu principalmente nas áreas já bombardeadas, sem causar danos em larga escala."
+ BA_Project.8126.confirm:0 "Preocupante."
+ BA_Project.8127.title:0 "Relatório de Limpeza de Instalações Espaciais: Disparo Equivocado"
+ BA_Project.8127.desc:0 "O relatório da colônia no Planeta Ruínas informa que uma área industrial crucial foi atingida por engano pelas instalações espaciais, resultando em perdas extremamente graves. Este disparo equivocado causou um impacto inaceitável na economia das áreas próximas, com as atividades de produção quase paralisadas."
+ BA_Project.8127.confirm:0 "Já que isso aconteceu, o Planeta Natal tem o dever de ajudar."
+ BA_Project.8128.title:0 "Relatório de Limpeza de Instalações Espaciais: Disparo Equivocado"
+ BA_Project.8128.desc:0 "O relatório da colônia no Planeta Ruínas informa que houve um erro grave na operação das instalações espaciais, resultando no disparo equivocado de uma área residencial remota, causando um acidente grave de nível de fragmentação de Halo. O pessoal envolvido foi imediatamente responsabilizado."
+ BA_Project.8128.confirm:0 "Os impactos negativos são incalculáveis."
+
+ BA_mistake_hit:0 "Disparo Equivocado de Instalações Espaciais"
+
+#自走机械线路
+ BA_Project.0031.desc:0 "“Sensei! O Departamento de Engenharia desenvolveu com sucesso uma série de máquinas de limpeza que são perfeitas para esta tarefa e ainda por cima baratas! O local da fábrica já foi escolhido, e agora precisaremos de alguns suprimentos para construir a área da fábrica e as máquinas.\nEstima-se que serão necessários 500 £minerals£ e 200 £energy£ para construir a área da fábrica dedicada à produção das máquinas de limpeza, e então mais 300 £alloys£ e 200 £consumer_goods£ para fabricar grandes quantidades de vários tipos de máquinas. Todo esse trabalho preparatório deve ser concluído na colônia, totalizando cerca de nove meses.\nUma vez em funcionamento, essas máquinas limparão e extrairão uma grande variedade de recursos a cada mês, incluindo £minerals£, £alloys£ e £rare_resources£. Não é um gasto exorbitante e, embora o trabalho futuro possa levar um bom tempo, Arona ainda acha que as máquinas de limpeza são uma ideia muito, muito boa!”"
+ BA_Project.0031.next:0 "Vamos à obra, precisamos nos apressar!"
+ BA_Project.0032.desc:0 "“Sensei, o relatório da colônia no Planeta Ruínas informa que o primeiro lote de máquinas de limpeza já está em operação. Arona contatou os arqueólogos anteriores e, seguindo suas sugestões, demarcou uma área protegida no planeta para preservar alguns locais de grande valor histórico. …Pensando bem, usar armas espaciais para a limpeza foi realmente uma loucura…\nDe acordo com os cálculos da Arona, a operação deve levar cerca de 5 anos para ser concluída, mas a Arona não pode descartar a possibilidade de terminar antes ou haver atrasos.”"
+ BA_Project.0032.next:0 "Em breve, tudo mudará."
+ BA_Project.0033.desc:0 "“Sensei! O relatório do departamento indica que a equipe de máquinas de limpeza concluiu a varredura do Planeta Ruínas! Uma pequena parte das máquinas que cumpriram sua missão será guardada em museus, enquanto o restante está sendo preparado para desmonte e reciclagem. Este trabalho de limpeza foi realmente muito frutífero, resultando em suprimentos suficientes para reconstruir grande parte de um Planeta da Cidade Acadêmica, e ao mesmo tempo, os novos planos acadêmicos foram sendo formulados gradualmente ao longo desses anos.\nEm breve poderemos testemunhar o nascimento de outro Planeta da Cidade Acadêmica! Vamos começar a reconstrução logo! A Arona mal pode esperar!”"
+ BA_Project.0033.next:0 "Este é o último passo."
+
+
+ decision_build_factory_colony:0 "Construir Fábrica de Máquinas"
+ decision_build_factory_colony_desc:0 "Construa uma fábrica especial capaz de produzir máquinas de limpeza em grande volume."
+ decision_build_machine_colony:0 "Construir Máquina de Limpeza Modelo Zero"
+ decision_build_machine_colony_desc:0 "Realize o design final, fabricação e testes e ajustes das máquinas de limpeza."
+
+
+ BA_Project.8201.title:0 "Construção da Área da Fábrica Concluída"
+ BA_Project.8201.desc:0 "A fábrica especial para a construção de máquinas de limpeza foi concluída e está aguardando o próximo passo."
+ BA_Project.8201.confirmed:0 "Revigorante."
+ BA_Project.8202.title:0 "Construção da Máquina Concluída"
+ BA_Project.8202.desc:0 "A fabricação e os testes e ajustes do Modelo Zero estão próximos da conclusão, e o progresso atual está indo conforme o planejado."
+ BA_Project.8202.confirmed:0 "Transferir o controle para a Torre de Controle."
+
+ BA_Project.8203.title:0 "Relatório de Limpeza Mecanizada Autônoma: Início das Operações"
+ BA_Project.8203.desc:0 "Com o transmissor de sinal da Torre de Controle Central ativado, o primeiro lote de maquinário de limpeza entrou oficialmente em operação. Essas máquinas não apenas limpam ruínas, mas também nivelam montanhas e preenchem mares, criando muitas áreas planas, sólidas e ideais para construção."
+ BA_Project.8203.next:0 "De gargantas profundas, surgem planícies."
+
+ BA_Project.8221.title:0 "Relatório de Limpeza Mecanizada Autônoma: Limpeza Normal"
+ BA_Project.8221.desc:0 "O relatório da colônia do Planeta Ruína indica que o trabalho de limpeza prossegue de forma ordenada, sem ocorrências anormais."
+ BA_Project.8221.confirm:0 "Recebido."
+ BA_Project.8222.title:0 "Relatório de Limpeza Mecanizada Autônoma: Inspiração"
+ BA_Project.8222.desc:0 "Parece que nosso trabalho de limpeza no Planeta Ruína está realmente estimulando a criatividade dos pesquisadores! Artigos surgem como cogumelos depois da chuva, e mesmo se excluirmos aqueles sobre atirar molho de pimenta com metralhadoras, os resultados ainda são bastante frutíferos."
+ BA_Project.8222.confirm:0 "Demais!"
+ BA_Project.8223.title:0 "Relatório de Limpeza Mecanizada Autônoma: Descoberta de Ruínas"
+ BA_Project.8223.desc:0 "O relatório da colônia do Planeta Ruína informa que os robôs de limpeza descobriram um sítio que não havia sido encontrado em trabalhos arqueológicos anteriores! A notícia se espalhou por toda Kivotos, e todos estão super animados. Um novo parque de ruínas já foi delimitado e estará pronto para receber visitantes em breve."
+ BA_Project.8223.confirm:0 "Demais!"
+ BA_Project.8224.title:0 "Relatório de Limpeza Mecanizada Autônoma: Descoberta de Laboratório"
+ BA_Project.8224.desc:0 "O relatório da colônia do Planeta Ruína informa que a equipe de limpeza descobriu um laboratório subterrâneo muito bem preservado! O Conselho Geral já foi analisar os registros e obteve muitos dados úteis."
+ BA_Project.8224.confirm:0 "Demais!"
+ BA_Project.8225.title:0 "Relatório de Limpeza Mecanizada Autônoma: Falha no Sistema"
+ BA_Project.8225.desc:0 "O relatório da colônia do Planeta Ruína informa que um grande número de máquinas de limpeza sofreu uma falha no sistema por motivos desconhecidos, desencadeando uma série de acidentes que causaram danos e sucateamento de ainda mais máquinas. Atualmente, as fábricas estão acelerando a produção."
+ BA_Project.8225.confirm:0 "Que azar."
+ BA_Project.8226.title:0 "Relatório de Limpeza Mecanizada Autônoma: Descontrole"
+ BA_Project.8226.desc:0 "O relatório da colônia do Planeta Ruína informa que um grande número de máquinas de limpeza subitamente perdeu o controle e começou a entrar em descontrole total! Essas máquinas destruíram uma vasta área de distritos de forma incontrolável, mas felizmente a evacuação foi a tempo, e ninguém se feriu."
+ BA_Project.8226.confirm:0 "Que alívio!"
+ BA_Project.8227.title:0 "Relatório de Limpeza Mecanizada Autônoma: Surgimento do Profeta"
+ BA_Project.8227.desc:0 "O relatório da colônia do Planeta Ruína informa que um Profeta Adormecido do Nome da Cruz parece ter sido despertado pelas máquinas de limpeza! Felizmente, essas máquinas foram projetadas com uso militar em mente, e após uma batalha sangrenta, conseguimos eliminá-lo. Este incidente causou perdas significativas para a colônia do Planeta Ruína, e os números exatos ainda estão sendo calculados."
+ BA_Project.8227.confirm:0 "Que azar."
+
+#最后一步
+ decision_rebuild_Kivotos_on_ruins:0 "Reconstruir o Planeta Cidade Escolar"
+ decision_rebuild_Kivotos_on_ruins_desc:0 "Tudo a ser reerguido."
+
+#完成
+ BA_Project.0098.desc:0 "“Professor, foi tão difícil! Nossos esforços não foram em vão, o Planeta Ruína... não, a ex-colônia do Planeta Ruína foi construída em uma Kivotos totalmente nova!"
+ BA_Project.0098.next:0 "Arona, primeiro vamos cortar a fita da nova filial do Conselho Estudantil Federal."
+ BA_Project.0099.desc:0 "O 'Projeto Berço', que durou mais de uma década, chega temporariamente ao fim aqui. Embora ainda haja muitos mistérios a serem desvendados, um dia seremos capazes de encontrar as respostas. Agora, construímos um Planeta Cidade Escolar totalmente novo, e com nossas próprias mãos, construímos um futuro inédito para Kivotos."
+ BA_Project.0099.next1:0 "Nosso monumento, erguido neste vazio."
+ BA_Project.0099.next2:0 "Nossa história, também escrita por nós mesmas."
+
+
+
+#考古遗址相关
+ BA_ProjectCradle_arc_site_A_A:0 "$Project_Cradle_arc_site_title$"
+ BA_ProjectCradle_arc_site_A_B:0 "$Project_Cradle_arc_site_title$"
+ BA_ProjectCradle_arc_site_B_A:0 "$Project_Cradle_arc_site_title$"
+ BA_ProjectCradle_arc_site_B_B:0 "$Project_Cradle_arc_site_title$"
+ Project_Cradle_arc_site_title:0 "Sob a Barreira"
+ BA_ProjectCradle_arc_site_core_desc:0 "Nós já desvendamos o véu deste Planeta Barreira, e agora finalmente podemos investigar seus segredos a fundo. (Nota: Por favor, ordene à nave de pesquisa que estude o projeto de anomalia, em vez de escavar este sítio arqueológico, para avançar na cadeia de eventos)."
+
+
+ Project_Cradle_arc_site_desc_AZ01:0 "A equipe de arqueologia e o grupo de vigilância civil submeteram um relatório, e a investigação das estruturas subterrâneas da Antiga Catedral já chegou a uma conclusão geral."
+
+ Project_Cradle_arc_site_option_AZ01:0 "...Se foi assinado com sucesso, o que exatamente aconteceu depois?"
+ Project_Cradle_arc_site_desc_AA02:0 "Durante escavações perto das ruínas de uma estrutura em forma de torre, a equipe de arqueologia descobriu uma grande quantidade de tanques de guerra destruídos empilhados em um grande fosso profundo. Após uma investigação cuidadosa, foi constatado que esses tanques eram altamente automatizados, divididos em duas categorias principais de design, e cada um apresentava vestígios claros de movimento, manutenção e combate. Ao comparar com o banco de dados histórico de Kivotos, a conclusão é que eles pertencem aos dois lados de uma guerra. Um lado era a Academia Integrada Trinity e a Academia Gehenna, ou seja, a Frente Unida ETO; o outro lado era a frente da Academia de Tecnologia Millennium. Alguns desses tanques tiveram muitas peças de reposição trocadas e mostram sinais de grandes reformas, indicando que esta guerra pode ter durado muito tempo."
+ Project_Cradle_arc_site_option_AA02:0 "Interessante, e também suspeito."
+ Project_Cradle_arc_site_desc_AA03:0 "Outros membros da equipe de arqueologia descobriram um conjunto único de ruínas enquanto exploravam o planeta. Diferente das ruínas comuns que podem ser encontradas em toda parte neste planeta, essas ruínas obviamente têm uma história mais longa."
+ Project_Cradle_arc_site_option_AA03:0 "Perfeito. Vamos continuar nosso trabalho."
+ Project_Cradle_arc_site_desc_AA04:0 "A Equipe Arqueológica encontrou as ruínas do Campus Principal da Academia Milênio de Ciência. Após uma escavação cuidadosa, registros da Academia Milênio de Ciência sobre o início e o fim da guerra foram descobertos.\nApós a assinatura do Tratado do Éden, a ETO, que coordenava as forças de Trindade e Gehenna, primeiro eliminou Ariu. No entanto, com vários problemas internos surgindo um após o outro, a demanda da ETO por iniciar guerras externas tornou-se cada vez mais forte. A então Presidente do Conselho Estudantil do Milênio agiu de forma obstinada, forçando as academias mais fracas a se manifestar e formar um círculo de cerco contra a ETO. Embora isso tenha atraído grande parte do apoio externo potencial da ETO para a Academia Milênio de Ciência, também deu à ETO motivos suficientes para a guerra.\nCom a ETO declarando guerra formalmente à Academia Milênio de Ciência, este planeta foi completamente engolfado pelas chamas da guerra. A guerra prolongada esgotou os recursos financeiros e materiais de ambos os lados, e a destruição deste planeta tornou-se um fato. No final da guerra, a ETO sofreu uma série de derrotas extremamente humilhantes, levando a uma violenta agitação interna e, finalmente, deixou de existir.\nEste registro termina abruptamente aqui. É bastante claro que, se fosse verdade o que diz, este planeta não poderia ter sido destruído a tal ponto."
+ Project_Cradle_arc_site_option_AA04:0 "Interessante..."
+ Project_Cradle_arc_site_desc_AA05:0 "A Equipe Arqueológica encontrou e escavou o sítio do Campus Principal de Trindade, e as informações obtidas são chocantes. No final da guerra, a organização da ETO já havia colapsado. Embora Milênio tivesse a intenção de assumir, o uso massivo de veículos de combate em vez de formações de infantaria indica que Kivotos já não conseguia montar uma organização militar completa, sendo forçada a usar esses veículos de combate automatizados, cuja potência de fogo e mobilidade eram inferiores às das formações. No final, Milênio também esgotou suas forças na luta contra o caos e, com a entrada da quarta parte, isso levou à destruição do planeta. Estranhamente, não há informações sobre a quarta parte até agora, mas é certo que a barreira do planeta não tinha relação com eles.\nDe qualquer forma, a história deste planeta já nos é conhecida. Ver outro mundo tão semelhante ao nosso ser destruído, o destino delas é de partir o coração, mas nossa vitória nos enche de orgulho. Por sugestão do Governador, um parque de ruínas e um arquivo serão estabelecidos neste planeta para comemorar essas estudantes infelizes."
+ Project_Cradle_arc_site_option_AA05:0 "Ótimo."
+
+ Project_Cradle_arc_site_desc_AB02:0 "Outros membros da Equipe Arqueológica descobriram um conjunto de ruínas único enquanto exploravam o planeta. Diferente das ruínas espalhadas por este planeta, estas ruínas evidentemente possuem uma história mais longa.\nHá muitos vestígios de combate urbano aqui, e a análise revela que um lado era conhecido como Ariu, e o outro era a Academia Integrada Trindade; o primeiro era uma filial do segundo, mas ambos tinham uma inimizade histórica e irreconciliável.\nApós uma escavação cuidadosa, os resultados indicam que estas são as ruínas de Ariu e seu distrito autônomo. O local mais interessante é uma fábrica militar subterrânea sob o complexo de ruínas. Através da análise das linhas de produção e dos projetos sobreviventes, a Equipe Arqueológica descobriu que Ariu havia ido ao local do Tratado do Éden e feito algo bastante desagradável por lá.\nEsta fábrica militar ainda pode operar, e por algum motivo, nenhum dos lados a destruiu."
+ Project_Cradle_arc_site_option_AB02:0 "Perfeito. Vamos continuar nosso trabalho."
+ Project_Cradle_arc_site_desc_AB03:0 "Alguns membros da Equipe Arqueológica que permaneceram no sítio da Grande Catedral descobriram uma pista chocante: houve um grande número de batalhas entre Trindade, Ariu e os Discípulos de Justina aqui. É possível supor que as três partes se envolveram em dezenas de rodadas de intensa disputa pela Antiga Catedral. Essas batalhas começaram no momento da assinatura do Tratado do Éden e continuaram até a Antiga Catedral ser completamente reduzida a ruínas.\nAo mesmo tempo, membros da escavação em outras ruínas também relataram coisas semelhantes: batalhas entre essas três facções ocorreram em muitos lugares, e os vestígios de combate até se estenderam profundamente nas ruínas centrais. Se as expectativas estiverem corretas, aquilo deveria ser as ruínas do Campus Principal de Trindade.\nOs fatos ficaram claros: após a assinatura do Tratado do Éden, uma vasta quantidade de Discípulos de Justina irrompeu, e Ariu também aproveitou a oportunidade para atacar, fazendo com que a ETO fugisse em debandada. Como uma organização que unia as forças de duas grandes academias, isso foi um vexame. A ETO, tendo perdido sua capacidade de liderança, logo caiu em conflito interno.\nMas o que é desconcertante é que algumas pistas indicam que uma quarta parte finalmente se juntou, encerrando a disputa com força esmagadora. E essa quarta parte não era a mais forte das outras facções: a Academia Milênio de Ciência."
+ Project_Cradle_arc_site_option_AB03:0 "Continuem a escavação."
+ Project_Cradle_arc_site_desc_AB04:0 "A Equipe Arqueológica encontrou as ruínas do Campus Principal da Academia Milênio de Ciência. Após uma escavação cuidadosa, descobriram o motivo pelo qual a Academia Milênio de Ciência não interveio nessa turbulência, e também entenderam qual era a verdadeira natureza da quarta parte que agiu contra a ETO.\nApós a assinatura do Tratado do Éden, a ETO, que coordenava as forças de Trindade e Gehenna, foi sitiada pelos Discípulos de Justina e Ariu, desencadeando vários problemas internos. A então Presidente do Conselho Estudantil do Milênio agiu de forma obstinada, forçando as academias mais fracas a se manifestar, com a intenção de isolar a ETO e abocanhar os lucros do Tratado do Éden.\nMas a situação real não seguiu seus desejos. Vários modelos de robôs militares, fabricados internamente pelo Milênio para a guerra, de repente lançaram uma rebelião organizada. Alguns deles até se auto-proclamaram \"Profetas\", exibindo mudanças que lembravam o céu estrelado e até mesmo halos, assim como os estudantes. Milênio lançou uma repressão brutal contra esses arsenais rebeldes, mas o número de máquinas rebeldes aumentava cada vez mais, e no final, os estudantes do Milênio só podiam lutar contra os gigantescos robôs com as armas que carregavam. Embora a constituição física dos habitantes de Kivotos permitisse que eles não se deixassem abater nessas batalhas, a cadeia de financiamento do Milênio logo se rompeu, mergulhando-os em uma crise ainda maior.\nE os cérebros por trás da rebelião, os Nomes Cruzados, viram seu poder crescer desenfreadamente. Depois que o círculo de cerco de Milênio não pôde ser mantido, suas forças, lideradas por quatro Profetas, rumaram diretamente para o distrito autônomo da ETO, derrotando a ETO e Ariu juntos."
+ Project_Cradle_arc_site_option_AB04:0 "Interessante..."
+ Project_Cradle_arc_site_desc_AB05:0 "A Equipe Arqueológica encontrou e escavou o sítio do campus de Gehenna, e as informações obtidas são chocantes. No final da guerra, a organização da ETO já havia colapsado. Embora Milênio tivesse a intenção de assumir, o uso massivo de veículos de combate em vez de formações de infantaria indica que Kivotos já não conseguia montar uma organização militar completa, sendo forçada a usar esses veículos de combate automatizados, cuja potência de fogo e mobilidade eram inferiores às das formações. No final, Milênio também esgotou suas forças na luta contra o caos e, com a entrada da quarta parte, isso levou à destruição do planeta. Estranhamente, não há informações sobre a quarta parte até agora, mas é certo que a barreira do planeta não tinha relação com eles.\nDe qualquer forma, a história deste planeta já nos é conhecida. Ver outro mundo tão semelhante ao nosso ser destruído, o destino delas é de partir o coração, mas nossa vitória nos enche de orgulho. Por sugestão do Governador, um parque de ruínas e um arquivo serão estabelecidos neste planeta para comemorar essas estudantes infelizes."
+ Project_Cradle_arc_site_option_AB05:0 "Ótimo."
+
+
+ Project_Cradle_arc_site_desc_BZ01:0 "BZ01"
+ Project_Cradle_arc_site_option_BZ01:0 "BZ01"
+
+ Project_Cradle_arc_site_desc_BA02:0 "BA02"
+ Project_Cradle_arc_site_option_BA02:0 "BA02"
+ Project_Cradle_arc_site_desc_BA03:0 "BA03"
+ Project_Cradle_arc_site_option_BA03:0 "BA03"
+ Project_Cradle_arc_site_desc_BA04:0 "BA04"
+ Project_Cradle_arc_site_option_BA04:0 "BA04"
+ Project_Cradle_arc_site_desc_BA05:0 "BA05"
+ Project_Cradle_arc_site_option_BA05:0 "BA05"
+
+ Project_Cradle_arc_site_desc_BB02:0 "BB02"
+ Project_Cradle_arc_site_option_BB02:0 "BB02"
+ Project_Cradle_arc_site_desc_BB03:0 "BB03"
+ Project_Cradle_arc_site_option_BB03:0 "BB03"
+ Project_Cradle_arc_site_desc_BB04:0 "BB04"
+ Project_Cradle_arc_site_option_BB04:0 "BB04"
+ Project_Cradle_arc_site_desc_BB05:0 "BB05"
+ Project_Cradle_arc_site_option_BB05:0 "BB05"
+
+
+ BA_Gematria_arc_site_1:0 "Pesquisa Sem Limites"
+ BA_Gematria_arc_site_1_desc:0 "Numerologia já realizou pesquisas relacionadas a halos, talvez possamos obter alguma inspiração de seus dados."
+ Project_Cradle_arc_site_desc_RAID01:0 "Mal chegamos às ruínas da base da Numerologia e já fomos bloqueados por um grande portão. É evidente que este portão utiliza uma tecnologia que ainda não conseguimos decifrar. Nossos inimigos — até que ponto o nível tecnológico deles realmente chegou? De qualquer forma, precisamos encontrar uma maneira de abrir este portão."
+ Project_Cradle_arc_site_option_RAID01:0 "Que o Departamento da Verdade comece a preparar o trabalho de decifração."
+ Project_Cradle_arc_site_desc_RAID02:0 "Os membros do Departamento da Verdade realizaram meses de trabalho de decifração, mas devido à enorme diferença de nível tecnológico, nosso trabalho de decifração não resultou em nada. No final, Shiroko, uma das membros da equipe de expedição, não aguentou mais e forçou a abertura do portão com um drone. A resistência a explosões deste portão estava muito abaixo de nossas estimativas. Parece que a árvore tecnológica da Numerologia havia tomado um rumo estranho."
+ Project_Cradle_arc_site_option_RAID02:0 "Bem, de qualquer forma, já estamos lá dentro."
+ Project_Cradle_arc_site_desc_RAID03:0 "O interior da base é muito mais caótico do que imaginávamos, com todos os tipos de ruínas se acumulando. Claramente, o interior sofreu destruição deliberada. Parece que a Numerologia destruiu a maioria das coisas antes de evacuarem. No entanto, talvez, sob essas ruínas, ainda haja dados que eles não destruíram."
+ Project_Cradle_arc_site_option_RAID03:0 "Continuar a escavação."
+ Project_Cradle_arc_site_desc_RAID04:0 "Recuperamos um disco de dados de debaixo das ruínas, que registra dados sobre experimentos com halos, mas... acho que você, Professor, deveria verificar o conteúdo pessoalmente."
+ Project_Cradle_arc_site_option_RAID04:0 "Importe os dados para a Caixa de Schale."
+
+
+
+
+ BA_Project.8025.title:0 "A Verdade Soterrada"
+ BA_Project.8025.desc:0 "Nossas escavações no planeta em ruínas de Kivotos não foram *exatamente* discretas; uma escavação dessa escala nunca conseguiria deter a curiosidade de outras alunas! Elas descobriram por todos os tipos de meios o que este planeta, que compartilha as mesmas raízes que nós, realmente passou: sobre a guerra e a destruição causadas por 'nós'... Ao mesmo tempo, revelações sobre a verdade do planeta em ruínas começaram a surgir nos fóruns online, e as alunas reagiram muito, *muito* forte a isso! Embora nem todas saibam de tudo ainda, se não reagirmos, logo tudo virá à tona. Será que isso é a retribuição pelos pecados que 'nós' cometemos? Deveríamos apagar as informações que estão se espalhando online? Talvez todas as alunas devessem saber a verdade? Precisamos fazer uma escolha, mesmo que isso possa fazer com que as outras alunas nos detestem."
+ BA_Project.8025.a:0 "Toda aluna de Kivotos tem o direito de saber a verdade."
+ BA_Project.8025.b:0 "As alunas inocentes não deveriam ter que arcar com tudo isso. Vamos fazer com que alguém apague essas informações."
+
+ BA_Project.8026.title:0 "Exposição"
+ BA_Project.8026.desc:0 "Fazer com que todos saibam a verdade inevitavelmente causará uma enorme comoção. Embora o processo tenha sido difícil e cheio de reviravoltas, chegamos gradualmente a uma conclusão comum: se repetirmos os mesmos erros e nos tornarmos as próximas ruínas, nossa história terminará aqui. Este é o crime cometido por um 'nós' diferente, e não vamos nos permitir ser as próximas vítimas! Depois que isso aconteceu, pudemos sentir que a atmosfera de toda Kivotos mudou visivelmente. Todas estão se esforçando por Kivotos. Talvez as coisas estejam evoluindo para algo melhor?"
+ BA_Project.8026.next:0 "Fazer com que todos saibam a verdade não é algo ruim."
+
+ BA_Project.8027.title:0 "Proteção"
+ BA_Project.8027.desc:0 "Depois de reagirmos rapidamente e controlarmos todas as informações online, divulgamos informações editadas para garantir que a *verdadeira* verdade sobre o planeta em ruínas não fosse conhecida. Será que fizemos o certo? Mas, de qualquer forma, precisamos ser rigorosas com nós mesmas para não seguirmos o caminho errado novamente. Precisamos proteger nossa Kivotos atual, não podemos permitir que ela sofra a mesma destruição maliciosa da Numerologia e dos Deuses da Cruz!"
+ BA_Project.8027.next:0 "O que já aconteceu, que fique no passado."
+
+ BA_Project.8028.title:0 "Dúvida"
+ BA_Project.8028.desc:0 "Sensei, todo o histórico deste incidente foi arquivado e transferido para seu banco de dados. Embora pareça que não há mais ninguém nessas ruínas além de nós agora, o estranho é: se o 'nós' de outro mundo falhou, para onde foram a Numerologia e os Deuses da Cruz vitoriosos? Por que não encontramos nenhuma informação deixada por sobreviventes que poderiam ter existido depois da nossa derrota? Considerando essa situação, precisamos nos preparar para inimigos inesperados que podem surgir a qualquer momento no futuro."
+ BA_Project.8028.next:0 "Ainda precisamos permanecer vigilantes em relação ao espaço profundo desconhecido."
+
+
+#光环科技相关

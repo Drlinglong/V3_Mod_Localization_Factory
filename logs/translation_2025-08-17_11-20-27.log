@@ -1,0 +1,1190 @@
+2025-08-17 11:20:27,325 - INFO - 日志系统初始化完成
+2025-08-17 11:20:27,325 - INFO - 
+请选择游戏:
+2025-08-17 11:20:27,325 - INFO -   [1] Victoria 3 (维多利亚3)
+2025-08-17 11:20:27,325 - INFO -   [2] Stellaris (群星)
+2025-08-17 11:20:27,326 - INFO -   [3] Europa Universalis IV (欧陆风云4)
+2025-08-17 11:20:27,326 - INFO -   [4] Hearts of Iron IV (钢铁雄心4)
+2025-08-17 11:20:27,326 - INFO -   [5] Crusader Kings III (十字军之王3)
+2025-08-17 11:20:57,916 - INFO - 请选择API供应商:
+2025-08-17 11:20:57,916 - INFO -   [1] Gemini
+2025-08-17 11:20:57,916 - INFO -   [2] Openai
+2025-08-17 11:20:57,916 - INFO -   [3] Qwen - （中国大陆地区用户请用这个）
+2025-08-17 11:20:59,147 - INFO - 请选择要汉化的Mod：
+2025-08-17 11:20:59,148 - INFO -   [1] Australia & New Zealand Flavor Pack
+2025-08-17 11:20:59,148 - INFO -   [2] Blue Archive
+2025-08-17 11:20:59,148 - INFO -   [3] Blue Archive - test
+2025-08-17 11:20:59,148 - INFO -   [4] Forts & Engineers
+2025-08-17 11:20:59,148 - INFO -   [5] GORA UI
+2025-08-17 11:20:59,148 - INFO -   [6] Hydra's More Agenda's
+2025-08-17 11:20:59,148 - INFO -   [7] KuatAncientEmpire
+2025-08-17 11:20:59,148 - INFO -   [8] MODJAM2025
+2025-08-17 11:20:59,148 - INFO -   [9] Offer Convoy Contribution
+2025-08-17 11:20:59,148 - INFO -   [10] Project Utopia - Extended Timeline - Technical Preview
+2025-08-17 11:20:59,148 - INFO -   [11] Tech & Res
+2025-08-17 11:20:59,148 - INFO -   [12] TEST-ANZAC
+2025-08-17 11:20:59,148 - INFO -   [13] UKrework
+2025-08-17 11:21:09,268 - INFO - 
+你选择了: Blue Archive
+2025-08-17 11:21:09,268 - INFO - 是否要清理源MOD文件夹 'Blue Archive' 以节省磁盘空间？
+这将删除除 '.metadata', 'localization', 和 'thumbnail.png' 之外的所有文件。
+请输入 Y 或 N: 
+2025-08-17 11:21:11,998 - INFO - 已确认清理源文件
+2025-08-17 11:21:11,998 - INFO - 
+--- 正在获取Mod主题上下文 ---
+2025-08-17 11:21:12,009 - INFO - 已识别Mod名称为: '碧蓝档案'
+2025-08-17 11:22:07,928 - INFO - 最终使用的主题上下文为: '碧蓝档案 (THEMATIC & STYLISTIC GUIDANCE:  1.  **Core Theme:** The source material for this mod is the game 'Blue Archive'. The universe blends lighthearted high school life with serious military sci-fi. Your translation must capture this unique "cute girls with guns" duality. The overall feeling should be that of a high school student council managing a galactic empire.  2.  **Overall Tone:** Adopt a youthful and energetic 'anime' (二次元) style. Avoid overly dry, generic, or corporate-sounding sci-fi language. The tone should feel vibrant and character-driven, not like a standard military report.  3.  **Character Voice:** The protagonists are students, not professional soldiers or politicians. When translating dialogue, event descriptions, or flavour text related to characters, ensure their voice reflects their personality (e.g., playful, lazy, serious, clumsy). They are teenagers running an empire, and the language should reflect that unique perspective.  4.  **Balancing Act:** While flavour text and character moments should be lively, you MUST maintain clarity and a slightly more formal tone for core Stellaris game mechanics (e.g., resource names, ship stats, policy effects). The goal is thematic immersion without sacrificing gameplay clarity. For example, a technology's *name* might be whimsical ("Peroro-sama's Blessing"), but its *description* must clearly state its effect ("+10% Happiness to all pops").)'
+2025-08-17 11:22:07,928 - INFO - 
+请选择源语言:
+2025-08-17 11:22:07,928 - INFO -   [1] English
+2025-08-17 11:22:07,928 - INFO -   [2] 简体中文
+2025-08-17 11:22:07,928 - INFO -   [3] Français
+2025-08-17 11:22:07,928 - INFO -   [4] Deutsch
+2025-08-17 11:22:07,928 - INFO -   [5] Español
+2025-08-17 11:22:07,928 - INFO -   [6] 日本語
+2025-08-17 11:22:07,929 - INFO -   [7] 한국어
+2025-08-17 11:22:07,929 - INFO -   [8] Polski
+2025-08-17 11:22:07,929 - INFO -   [9] Português do Brasil
+2025-08-17 11:22:07,929 - INFO -   [10] Русский
+2025-08-17 11:22:09,827 - INFO - 
+请选择目标语言:
+2025-08-17 11:22:09,827 - INFO -   [0] 翻译为其余所有9种语言
+2025-08-17 11:22:09,827 - INFO -   [c] 自定义/套壳其他语言...
+2025-08-17 11:22:09,827 - INFO -   [1] English
+2025-08-17 11:22:09,827 - INFO -   [2] Français
+2025-08-17 11:22:09,827 - INFO -   [3] Deutsch
+2025-08-17 11:22:09,827 - INFO -   [4] Español
+2025-08-17 11:22:09,827 - INFO -   [5] 日本語
+2025-08-17 11:22:09,828 - INFO -   [6] 한국어
+2025-08-17 11:22:09,828 - INFO -   [7] Polski
+2025-08-17 11:22:09,828 - INFO -   [8] Português do Brasil
+2025-08-17 11:22:09,828 - INFO -   [9] Русский
+2025-08-17 11:22:21,368 - INFO - 成功加载 stellaris 词典，包含 1124 个条目
+2025-08-17 11:22:21,379 - INFO - 主词典 glossary.json 已启用 (包含 1124 条术语)
+2025-08-17 11:22:21,379 - INFO - 已检测到外挂词典:
+2025-08-17 11:22:21,379 - INFO - [1] Blue Archive Stellaris Mod - Fixed Dictionary - A comprehensive glossary of all extracted terms (characters, schools, clubs, concepts, etc.) from the mod's localization files. Fixed and cleaned version. (152 条术语)
+2025-08-17 11:22:21,379 - INFO - 输入 0 全部启用
+2025-08-17 11:22:21,379 - INFO - 输入 N 不使用外挂词典
+2025-08-17 11:22:25,588 - INFO - 请选择术语模糊匹配模式:
+2025-08-17 11:22:25,589 - INFO - [1] 严格模式 - 禁用模糊匹配 
+2025-08-17 11:22:25,589 - INFO - [2] 宽松模式 - 启用模糊匹配 (容忍拼写错误)
+2025-08-17 11:22:25,589 - INFO - 如果你不知道这是什么，建议你打开术语模糊匹配
+2025-08-17 11:22:27,265 - INFO - === 工程总览 ===
+2025-08-17 11:22:27,265 - INFO - 目标MOD: Blue Archive
+2025-08-17 11:22:27,265 - INFO - API供应商: Gemini
+2025-08-17 11:22:27,265 - INFO - 游戏类型: Stellaris (群星)
+2025-08-17 11:22:27,265 - INFO - 源语言: 简体中文
+2025-08-17 11:22:27,265 - INFO - 目标语言: Русский
+2025-08-17 11:22:27,265 - INFO - 词典配置: 主词典 + 1 个外挂词典
+2025-08-17 11:22:27,265 - INFO - 启用模糊匹配: 启用模糊匹配
+2025-08-17 11:22:27,265 - INFO - 是否清理多余文件: 将清理源文件
+2025-08-17 11:22:46,117 - INFO - 翻译已确认，开始执行...
+2025-08-17 11:22:46,117 - INFO - 正在执行源文件清理...
+2025-08-17 11:22:46,117 - INFO - 
+--- 开始精简源Mod文件夹: Blue Archive ---
+2025-08-17 11:22:46,117 - INFO - 正在删除非必要文件和文件夹...
+2025-08-17 11:22:46,117 - INFO - 源文件夹精简完成！
+2025-08-17 11:22:46,118 - INFO - 源文件清理完成
+2025-08-17 11:22:46,118 - INFO - 术语模糊匹配模式已设置为: 宽松模式
+2025-08-17 11:22:46,127 - INFO - 词典合并完成: 1124 个主词典条目 + 152 个外挂词典条目 = 1276 个总计
+2025-08-17 11:22:46,127 - INFO - 已加载 1 个外挂词典
+2025-08-17 11:22:46,127 - INFO - 词典状态: 主词典(1124条) + 外挂词典(1个) = 总计(1276条)
+2025-08-17 11:22:46,127 - INFO - 
+--- 启动 '首次翻译' 工作流，目标: Blue Archive ---
+2025-08-17 11:22:46,592 - INFO - Gemini client initialized successfully, using model: gemini-2.5-flash
+2025-08-17 11:22:46,592 - INFO - 词典加载成功: Stellaris 游戏及Mod社区汉化词典 (1124 个条目)
+2025-08-17 11:22:46,592 - INFO - 校对进度追踪器已初始化，将生成Русский版本的进度看板
+2025-08-17 11:22:46,592 - INFO - 
+--- 正在处理 metadata.json ---
+2025-08-17 11:22:46,592 - INFO - 正在翻译 mod name: "碧蓝档案..."
+2025-08-17 11:22:46,593 - INFO - 从 1 个文本中提取到 0 个相关术语
+2025-08-17 11:22:46,593 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:22:55,010 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:22:55,011 - INFO - AFC remote call 1 is done.
+2025-08-17 11:22:55,012 - INFO - metadata.json 汉化完成。
+2025-08-17 11:22:55,012 - INFO - 
+--- 正在处理资产文件 (封面图、描述文件等) ---
+2025-08-17 11:22:55,014 - INFO - 资产文件 'thumbnail.png' 复制完成。
+2025-08-17 11:22:55,014 - INFO - 
+--- 正在解析文件: source_mod\Blue Archive\localisation\simp_chinese\BA_Anomaly&Arc_site_l_simp_chinese.yml ---
+2025-08-17 11:22:55,022 - INFO - 提取到 13 条可翻译文本。
+2025-08-17 11:22:55,022 - INFO - 
+--- 正在解析文件: source_mod\Blue Archive\localisation\simp_chinese\BA_Club_l_simp_chinese.yml ---
+2025-08-17 11:22:55,030 - INFO - 提取到 494 条可翻译文本。
+2025-08-17 11:22:55,030 - INFO - 
+--- 正在解析文件: source_mod\Blue Archive\localisation\simp_chinese\BA_common_l_simp_chinese.yml ---
+2025-08-17 11:22:55,041 - INFO - 提取到 1839 条可翻译文本。
+2025-08-17 11:22:55,041 - INFO - 
+--- 正在解析文件: source_mod\Blue Archive\localisation\simp_chinese\BA_component_l_simp_chinese.yml ---
+2025-08-17 11:22:55,048 - INFO - 提取到 101 条可翻译文本。
+2025-08-17 11:22:55,048 - INFO - 
+--- 正在解析文件: source_mod\Blue Archive\localisation\simp_chinese\BA_concepts_l_simp_chinese.yml ---
+2025-08-17 11:22:55,054 - INFO - 提取到 25 条可翻译文本。
+2025-08-17 11:22:55,054 - INFO - 
+--- 正在解析文件: source_mod\Blue Archive\localisation\simp_chinese\BA_event_crisis_l_simp_chinese.yml ---
+2025-08-17 11:22:55,060 - INFO - 提取到 228 条可翻译文本。
+2025-08-17 11:22:55,060 - INFO - 
+--- 正在解析文件: source_mod\Blue Archive\localisation\simp_chinese\BA_event_Emergencies_l_simp_chinese.yml ---
+2025-08-17 11:22:55,067 - INFO - 提取到 258 条可翻译文本。
+2025-08-17 11:22:55,067 - INFO - 
+--- 正在解析文件: source_mod\Blue Archive\localisation\simp_chinese\BA_event_origins_l_simp_chinese.yml ---
+2025-08-17 11:22:55,074 - INFO - 提取到 222 条可翻译文本。
+2025-08-17 11:22:55,074 - INFO - 
+--- 正在解析文件: source_mod\Blue Archive\localisation\simp_chinese\BA_event_Shittem_l_simp_chinese.yml ---
+2025-08-17 11:22:55,081 - INFO - 提取到 351 条可翻译文本。
+2025-08-17 11:22:55,082 - INFO - 
+--- 正在解析文件: source_mod\Blue Archive\localisation\simp_chinese\BA_event_tr&ape_l_simp_chinese.yml ---
+2025-08-17 11:22:55,088 - INFO - 提取到 109 条可翻译文本。
+2025-08-17 11:22:55,088 - INFO - 
+--- 正在解析文件: source_mod\Blue Archive\localisation\simp_chinese\BA_leader_l_simp_chinese.yml ---
+2025-08-17 11:22:55,097 - INFO - 提取到 1455 条可翻译文本。
+2025-08-17 11:22:55,097 - INFO - 
+--- 正在解析文件: source_mod\Blue Archive\localisation\simp_chinese\BA_modifiers_l_simp_chinese.yml ---
+2025-08-17 11:22:55,105 - INFO - 提取到 143 条可翻译文本。
+2025-08-17 11:22:55,105 - INFO - 
+--- 正在解析文件: source_mod\Blue Archive\localisation\simp_chinese\BA_Namelist_l_simp_chinese.yml ---
+2025-08-17 11:22:55,112 - INFO - 提取到 124 条可翻译文本。
+2025-08-17 11:22:55,112 - INFO - 
+--- 正在解析文件: source_mod\Blue Archive\localisation\simp_chinese\BA_Placeholder_l_simp_chinese.yml ---
+2025-08-17 11:22:55,119 - INFO - 提取到 153 条可翻译文本。
+2025-08-17 11:22:55,119 - INFO - 
+--- 正在解析文件: source_mod\Blue Archive\localisation\simp_chinese\BA_popmod_l_simp_chinese.yml ---
+2025-08-17 11:22:55,125 - INFO - 提取到 175 条可翻译文本。
+2025-08-17 11:22:55,126 - INFO - 
+--- 正在解析文件: source_mod\Blue Archive\localisation\simp_chinese\BA_Precursor_l_simp_chinese.yml ---
+2025-08-17 11:22:55,132 - INFO - 提取到 83 条可翻译文本。
+2025-08-17 11:22:55,132 - INFO - 
+--- 正在解析文件: source_mod\Blue Archive\localisation\simp_chinese\BA_Project_l_simp_chinese.yml ---
+2025-08-17 11:22:55,175 - INFO - 提取到 213 条可翻译文本。
+2025-08-17 11:22:55,175 - INFO - 
+--- 正在解析文件: source_mod\Blue Archive\localisation\simp_chinese\BA_resource_tips_l_simp_chinese.yml ---
+2025-08-17 11:22:55,182 - INFO - 提取到 1 条可翻译文本。
+2025-08-17 11:22:55,182 - INFO - 
+--- 正在解析文件: source_mod\Blue Archive\localisation\simp_chinese\BA_School_Idea_l_simp_chinese.yml ---
+2025-08-17 11:22:55,190 - INFO - 提取到 415 条可翻译文本。
+2025-08-17 11:22:55,190 - INFO - 
+--- 正在解析文件: source_mod\Blue Archive\localisation\simp_chinese\BA_speciel_story_l_simp_chinese.yml ---
+2025-08-17 11:22:55,197 - INFO - 提取到 75 条可翻译文本。
+2025-08-17 11:22:55,197 - INFO - 
+--- 正在解析文件: source_mod\Blue Archive\localisation\simp_chinese\BA_Species&Goverments&Civics_l_simp_chinese.yml ---
+2025-08-17 11:22:55,204 - INFO - 提取到 254 条可翻译文本。
+2025-08-17 11:22:55,204 - INFO - 
+--- 正在解析文件: source_mod\Blue Archive\localisation\simp_chinese\BA_test_l_simp_chinese.yml ---
+2025-08-17 11:22:55,210 - INFO - 提取到 14 条可翻译文本。
+2025-08-17 11:22:55,210 - INFO - 
+--- 正在翻译为: Русский ---
+2025-08-17 11:22:55,211 - INFO - 从 13 个文本中提取到 0 个相关术语
+2025-08-17 11:22:55,211 - INFO - 批次 1: 注入 0 个词典术语
+2025-08-17 11:22:55,211 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:23:38,250 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:23:38,252 - INFO - AFC remote call 1 is done.
+2025-08-17 11:23:38,253 - INFO - 文件 'ru-Blue Archive\localisation\russian\simp_chinese\BA_Anomaly&Arc_site_l_russian.yml' 汉化完成。
+2025-08-17 11:23:38,254 - INFO - --- 检测到 13 个翻译批次，启动并行处理模式 ---
+2025-08-17 11:23:38,255 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:23:38,255 - INFO - 批次 1: 注入 0 个词典术语
+2025-08-17 11:23:38,255 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:23:38,255 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:23:38,256 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:23:38,256 - INFO - 批次 2: 注入 0 个词典术语
+2025-08-17 11:23:38,256 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:23:38,257 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:23:38,257 - INFO - 批次 3: 注入 0 个词典术语
+2025-08-17 11:23:38,257 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:23:38,257 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:23:38,257 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:23:38,257 - INFO - 批次 4: 注入 0 个词典术语
+2025-08-17 11:23:38,258 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:23:38,258 - INFO - 批次 5: 注入 0 个词典术语
+2025-08-17 11:23:38,258 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:23:38,258 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:23:38,258 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:23:38,258 - INFO - 批次 6: 注入 0 个词典术语
+2025-08-17 11:23:38,259 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:23:38,259 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:23:38,259 - INFO - 批次 7: 注入 0 个词典术语
+2025-08-17 11:23:38,259 - INFO - 从 14 个文本中提取到 0 个相关术语
+2025-08-17 11:23:38,260 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:23:38,260 - INFO - 批次 8: 注入 0 个词典术语
+2025-08-17 11:23:38,260 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:23:38,260 - INFO - 批次 9: 注入 0 个词典术语
+2025-08-17 11:23:38,260 - INFO - 批次 10: 注入 0 个词典术语
+2025-08-17 11:23:38,260 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:23:38,260 - INFO - 批次 11: 注入 0 个词典术语
+2025-08-17 11:23:38,260 - INFO - 批次 12: 注入 0 个词典术语
+2025-08-17 11:23:38,260 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:23:38,261 - INFO - 批次 13: 注入 0 个词典术语
+2025-08-17 11:23:38,261 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:23:38,261 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:23:38,261 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:23:38,262 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:23:38,262 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:23:38,262 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:24:00,360 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:24:00,362 - INFO - AFC remote call 1 is done.
+2025-08-17 11:24:02,879 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:24:02,880 - INFO - AFC remote call 1 is done.
+2025-08-17 11:24:03,378 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:24:03,379 - INFO - AFC remote call 1 is done.
+2025-08-17 11:24:04,181 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:24:04,182 - INFO - AFC remote call 1 is done.
+2025-08-17 11:24:05,510 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:24:05,511 - INFO - AFC remote call 1 is done.
+2025-08-17 11:24:05,577 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:24:05,579 - INFO - AFC remote call 1 is done.
+2025-08-17 11:24:06,129 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:24:06,129 - INFO - AFC remote call 1 is done.
+2025-08-17 11:24:08,019 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:24:08,020 - INFO - AFC remote call 1 is done.
+2025-08-17 11:24:08,320 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:24:08,328 - INFO - AFC remote call 1 is done.
+2025-08-17 11:24:10,415 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:24:10,417 - INFO - AFC remote call 1 is done.
+2025-08-17 11:24:12,096 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:24:12,098 - INFO - AFC remote call 1 is done.
+2025-08-17 11:24:12,542 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:24:12,544 - INFO - AFC remote call 1 is done.
+2025-08-17 11:24:24,710 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:24:24,724 - INFO - AFC remote call 1 is done.
+2025-08-17 11:24:24,725 - INFO - --- 所有批次并行处理完毕 ---
+2025-08-17 11:24:24,727 - INFO - 文件 'ru-Blue Archive\localisation\russian\simp_chinese\BA_Club_l_russian.yml' 汉化完成。
+2025-08-17 11:24:24,727 - INFO - --- 检测到 46 个翻译批次，启动并行处理模式 ---
+2025-08-17 11:24:24,727 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:24:24,727 - INFO - 批次 1: 注入 0 个词典术语
+2025-08-17 11:24:24,728 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:24:24,728 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:24:24,728 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:24:24,728 - INFO - 批次 2: 注入 0 个词典术语
+2025-08-17 11:24:24,728 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:24:24,729 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:24:24,729 - INFO - 批次 3: 注入 0 个词典术语
+2025-08-17 11:24:24,729 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:24:24,729 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:24:24,729 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:24:24,729 - INFO - 批次 4: 注入 0 个词典术语
+2025-08-17 11:24:24,730 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:24:24,730 - INFO - 批次 5: 注入 0 个词典术语
+2025-08-17 11:24:24,730 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:24:24,730 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:24:24,730 - INFO - 批次 6: 注入 0 个词典术语
+2025-08-17 11:24:24,730 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:24:24,731 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:24:24,731 - INFO - 批次 7: 注入 0 个词典术语
+2025-08-17 11:24:24,731 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:24:24,731 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:24:24,732 - INFO - 批次 8: 注入 0 个词典术语
+2025-08-17 11:24:24,732 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:24:24,732 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:24:24,732 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:24:24,732 - INFO - 批次 9: 注入 0 个词典术语
+2025-08-17 11:24:24,732 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:24:24,733 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:24:24,733 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:24:24,733 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:24:24,733 - INFO - 批次 10: 注入 0 个词典术语
+2025-08-17 11:24:24,734 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:24:24,734 - INFO - 批次 11: 注入 0 个词典术语
+2025-08-17 11:24:24,734 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:24:24,734 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:24:24,734 - INFO - 批次 12: 注入 0 个词典术语
+2025-08-17 11:24:24,734 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:24:24,735 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:24:24,735 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:24:24,735 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:24:24,735 - INFO - 批次 13: 注入 0 个词典术语
+2025-08-17 11:24:24,735 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:24:24,736 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:24:24,736 - INFO - 批次 14: 注入 0 个词典术语
+2025-08-17 11:24:24,736 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:24:24,736 - INFO - 批次 15: 注入 0 个词典术语
+2025-08-17 11:24:24,736 - INFO - 批次 16: 注入 0 个词典术语
+2025-08-17 11:24:24,737 - INFO - 批次 17: 注入 0 个词典术语
+2025-08-17 11:24:24,737 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:24:24,737 - INFO - 批次 18: 注入 0 个词典术语
+2025-08-17 11:24:24,737 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:24:24,737 - INFO - 批次 19: 注入 0 个词典术语
+2025-08-17 11:24:24,737 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:24:24,737 - INFO - 批次 20: 注入 0 个词典术语
+2025-08-17 11:24:24,737 - INFO - 批次 21: 注入 0 个词典术语
+2025-08-17 11:24:24,738 - INFO - 批次 22: 注入 0 个词典术语
+2025-08-17 11:24:24,738 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:24:24,738 - INFO - 批次 23: 注入 0 个词典术语
+2025-08-17 11:24:24,738 - INFO - 批次 24: 注入 0 个词典术语
+2025-08-17 11:24:24,738 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:24:24,738 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:24:24,739 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:24:24,739 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:24:24,739 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:24:24,739 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:24:24,740 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:24:24,740 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:24:24,740 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:24:24,740 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:24:24,740 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:24:37,805 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:24:37,806 - INFO - AFC remote call 1 is done.
+2025-08-17 11:24:37,807 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:24:37,807 - INFO - 批次 25: 注入 0 个词典术语
+2025-08-17 11:24:37,807 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:24:41,851 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:24:41,852 - INFO - AFC remote call 1 is done.
+2025-08-17 11:24:41,852 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:24:41,852 - INFO - 批次 26: 注入 0 个词典术语
+2025-08-17 11:24:41,853 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:24:42,463 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:24:42,464 - INFO - AFC remote call 1 is done.
+2025-08-17 11:24:42,464 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:24:42,464 - INFO - 批次 27: 注入 0 个词典术语
+2025-08-17 11:24:42,464 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:24:43,701 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:24:43,701 - INFO - AFC remote call 1 is done.
+2025-08-17 11:24:43,702 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:24:43,702 - INFO - 批次 28: 注入 0 个词典术语
+2025-08-17 11:24:43,702 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:24:44,027 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:24:44,029 - INFO - AFC remote call 1 is done.
+2025-08-17 11:24:44,030 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:24:44,030 - INFO - 批次 29: 注入 0 个词典术语
+2025-08-17 11:24:44,030 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:24:45,355 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:24:45,356 - INFO - AFC remote call 1 is done.
+2025-08-17 11:24:45,357 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:24:45,357 - INFO - 批次 30: 注入 0 个词典术语
+2025-08-17 11:24:45,357 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:24:45,745 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:24:45,746 - INFO - AFC remote call 1 is done.
+2025-08-17 11:24:45,746 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:24:45,746 - INFO - 批次 31: 注入 0 个词典术语
+2025-08-17 11:24:45,747 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:24:46,601 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:24:46,602 - INFO - AFC remote call 1 is done.
+2025-08-17 11:24:46,602 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:24:46,603 - INFO - 批次 32: 注入 0 个词典术语
+2025-08-17 11:24:46,603 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:24:46,838 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:24:46,839 - INFO - AFC remote call 1 is done.
+2025-08-17 11:24:46,839 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:24:46,840 - INFO - 批次 33: 注入 0 个词典术语
+2025-08-17 11:24:46,840 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:24:47,080 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:24:47,081 - INFO - AFC remote call 1 is done.
+2025-08-17 11:24:47,081 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:24:47,081 - INFO - 批次 34: 注入 0 个词典术语
+2025-08-17 11:24:47,081 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:24:47,102 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:24:47,103 - INFO - AFC remote call 1 is done.
+2025-08-17 11:24:47,103 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:24:47,103 - INFO - 批次 35: 注入 0 个词典术语
+2025-08-17 11:24:47,103 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:24:47,428 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:24:47,430 - INFO - AFC remote call 1 is done.
+2025-08-17 11:24:47,431 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:24:47,431 - INFO - 批次 36: 注入 0 个词典术语
+2025-08-17 11:24:47,431 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:24:48,067 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:24:48,068 - INFO - AFC remote call 1 is done.
+2025-08-17 11:24:48,068 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:24:48,068 - INFO - 批次 37: 注入 0 个词典术语
+2025-08-17 11:24:48,069 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:24:49,909 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:24:49,910 - INFO - AFC remote call 1 is done.
+2025-08-17 11:24:49,910 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:24:49,910 - INFO - 批次 38: 注入 0 个词典术语
+2025-08-17 11:24:49,910 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:24:50,024 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:24:50,025 - INFO - AFC remote call 1 is done.
+2025-08-17 11:24:50,026 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:24:50,026 - INFO - 批次 39: 注入 0 个词典术语
+2025-08-17 11:24:50,026 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:24:50,621 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:24:50,622 - INFO - AFC remote call 1 is done.
+2025-08-17 11:24:50,622 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:24:50,622 - INFO - 批次 40: 注入 0 个词典术语
+2025-08-17 11:24:50,622 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:24:53,001 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:24:53,003 - INFO - AFC remote call 1 is done.
+2025-08-17 11:24:53,004 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:24:53,004 - INFO - 批次 41: 注入 0 个词典术语
+2025-08-17 11:24:53,004 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:24:53,639 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:24:53,640 - INFO - AFC remote call 1 is done.
+2025-08-17 11:24:53,640 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:24:53,640 - INFO - 批次 42: 注入 0 个词典术语
+2025-08-17 11:24:53,640 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:24:54,294 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:24:54,295 - INFO - AFC remote call 1 is done.
+2025-08-17 11:24:54,295 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:24:54,296 - INFO - 批次 43: 注入 0 个词典术语
+2025-08-17 11:24:54,296 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:24:54,451 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:24:54,454 - INFO - AFC remote call 1 is done.
+2025-08-17 11:24:54,454 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:24:54,454 - INFO - 批次 44: 注入 0 个词典术语
+2025-08-17 11:24:54,454 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:24:57,441 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:24:57,442 - INFO - AFC remote call 1 is done.
+2025-08-17 11:24:57,442 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:24:57,443 - INFO - 批次 45: 注入 0 个词典术语
+2025-08-17 11:24:57,443 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:24:57,863 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:24:57,864 - INFO - AFC remote call 1 is done.
+2025-08-17 11:24:57,864 - INFO - 从 39 个文本中提取到 0 个相关术语
+2025-08-17 11:24:57,864 - INFO - 批次 46: 注入 0 个词典术语
+2025-08-17 11:24:57,865 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:24:58,041 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:24:58,045 - INFO - AFC remote call 1 is done.
+2025-08-17 11:24:58,783 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:24:58,784 - INFO - AFC remote call 1 is done.
+2025-08-17 11:25:00,077 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:25:00,078 - INFO - AFC remote call 1 is done.
+2025-08-17 11:25:02,862 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:25:02,864 - INFO - AFC remote call 1 is done.
+2025-08-17 11:25:06,564 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:25:06,565 - INFO - AFC remote call 1 is done.
+2025-08-17 11:25:07,529 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:25:07,529 - INFO - AFC remote call 1 is done.
+2025-08-17 11:25:09,160 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:25:09,161 - INFO - AFC remote call 1 is done.
+2025-08-17 11:25:09,299 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:25:09,299 - INFO - AFC remote call 1 is done.
+2025-08-17 11:25:09,402 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:25:09,403 - INFO - AFC remote call 1 is done.
+2025-08-17 11:25:10,448 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:25:10,449 - INFO - AFC remote call 1 is done.
+2025-08-17 11:25:11,578 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:25:11,580 - INFO - AFC remote call 1 is done.
+2025-08-17 11:25:13,133 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:25:13,134 - INFO - AFC remote call 1 is done.
+2025-08-17 11:25:13,147 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:25:13,150 - INFO - AFC remote call 1 is done.
+2025-08-17 11:25:13,588 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:25:13,591 - INFO - AFC remote call 1 is done.
+2025-08-17 11:25:14,469 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:25:14,478 - INFO - AFC remote call 1 is done.
+2025-08-17 11:25:14,971 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:25:14,975 - INFO - AFC remote call 1 is done.
+2025-08-17 11:25:15,016 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:25:15,016 - INFO - AFC remote call 1 is done.
+2025-08-17 11:25:15,446 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:25:15,448 - INFO - AFC remote call 1 is done.
+2025-08-17 11:25:15,650 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:25:15,651 - INFO - AFC remote call 1 is done.
+2025-08-17 11:25:16,137 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:25:16,138 - INFO - AFC remote call 1 is done.
+2025-08-17 11:25:18,159 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:25:18,161 - INFO - AFC remote call 1 is done.
+2025-08-17 11:25:18,988 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:25:18,989 - INFO - AFC remote call 1 is done.
+2025-08-17 11:25:20,877 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:25:20,878 - INFO - AFC remote call 1 is done.
+2025-08-17 11:25:21,590 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:25:21,591 - INFO - AFC remote call 1 is done.
+2025-08-17 11:25:21,592 - INFO - --- 所有批次并行处理完毕 ---
+2025-08-17 11:25:21,597 - INFO - 文件 'ru-Blue Archive\localisation\russian\simp_chinese\BA_common_l_russian.yml' 汉化完成。
+2025-08-17 11:25:21,597 - INFO - --- 检测到 3 个翻译批次，启动并行处理模式 ---
+2025-08-17 11:25:21,598 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:25:21,598 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:25:21,598 - INFO - 批次 1: 注入 0 个词典术语
+2025-08-17 11:25:21,598 - INFO - 从 21 个文本中提取到 0 个相关术语
+2025-08-17 11:25:21,598 - INFO - 批次 2: 注入 0 个词典术语
+2025-08-17 11:25:21,598 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:25:21,598 - INFO - 批次 3: 注入 0 个词典术语
+2025-08-17 11:25:21,599 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:25:21,599 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:25:37,499 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:25:37,500 - INFO - AFC remote call 1 is done.
+2025-08-17 11:25:42,533 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:25:42,534 - INFO - AFC remote call 1 is done.
+2025-08-17 11:25:43,598 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:25:43,599 - INFO - AFC remote call 1 is done.
+2025-08-17 11:25:43,600 - INFO - --- 所有批次并行处理完毕 ---
+2025-08-17 11:25:43,600 - INFO - 文件 'ru-Blue Archive\localisation\russian\simp_chinese\BA_component_l_russian.yml' 汉化完成。
+2025-08-17 11:25:43,601 - INFO - 从 25 个文本中提取到 0 个相关术语
+2025-08-17 11:25:43,601 - INFO - 批次 1: 注入 0 个词典术语
+2025-08-17 11:25:43,601 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:25:57,464 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:25:57,465 - INFO - AFC remote call 1 is done.
+2025-08-17 11:25:57,466 - INFO - 文件 'ru-Blue Archive\localisation\russian\simp_chinese\BA_concepts_l_russian.yml' 汉化完成。
+2025-08-17 11:25:57,467 - INFO - --- 检测到 6 个翻译批次，启动并行处理模式 ---
+2025-08-17 11:25:57,467 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:25:57,467 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:25:57,468 - INFO - 批次 1: 注入 0 个词典术语
+2025-08-17 11:25:57,468 - INFO - 批次 2: 注入 0 个词典术语
+2025-08-17 11:25:57,468 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:25:57,468 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:25:57,468 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:25:57,468 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:25:57,468 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:25:57,469 - INFO - 批次 3: 注入 0 个词典术语
+2025-08-17 11:25:57,469 - INFO - 从 28 个文本中提取到 0 个相关术语
+2025-08-17 11:25:57,469 - INFO - 批次 4: 注入 0 个词典术语
+2025-08-17 11:25:57,470 - INFO - 批次 5: 注入 0 个词典术语
+2025-08-17 11:25:57,470 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:25:57,470 - INFO - 批次 6: 注入 0 个词典术语
+2025-08-17 11:25:57,470 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:25:57,470 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:25:57,471 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:26:30,622 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:26:30,630 - INFO - AFC remote call 1 is done.
+2025-08-17 11:26:31,542 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:26:31,543 - INFO - AFC remote call 1 is done.
+2025-08-17 11:26:35,199 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:26:35,200 - INFO - AFC remote call 1 is done.
+2025-08-17 11:26:45,800 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:26:45,811 - INFO - AFC remote call 1 is done.
+2025-08-17 11:26:46,769 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:26:46,771 - INFO - AFC remote call 1 is done.
+2025-08-17 11:26:58,611 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:26:58,613 - INFO - AFC remote call 1 is done.
+2025-08-17 11:26:58,614 - INFO - --- 所有批次并行处理完毕 ---
+2025-08-17 11:26:58,615 - INFO - 文件 'ru-Blue Archive\localisation\russian\simp_chinese\BA_event_crisis_l_russian.yml' 汉化完成。
+2025-08-17 11:26:58,615 - INFO - --- 检测到 7 个翻译批次，启动并行处理模式 ---
+2025-08-17 11:26:58,615 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:26:58,615 - INFO - 批次 1: 注入 0 个词典术语
+2025-08-17 11:26:58,616 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:26:58,616 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:26:58,616 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:26:58,616 - INFO - 批次 2: 注入 0 个词典术语
+2025-08-17 11:26:58,616 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:26:58,617 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:26:58,617 - INFO - 批次 3: 注入 0 个词典术语
+2025-08-17 11:26:58,617 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:26:58,618 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:26:58,618 - INFO - 从 18 个文本中提取到 0 个相关术语
+2025-08-17 11:26:58,618 - INFO - 批次 4: 注入 0 个词典术语
+2025-08-17 11:26:58,618 - INFO - 批次 5: 注入 0 个词典术语
+2025-08-17 11:26:58,618 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:26:58,618 - INFO - 批次 6: 注入 0 个词典术语
+2025-08-17 11:26:58,618 - INFO - 批次 7: 注入 0 个词典术语
+2025-08-17 11:26:58,619 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:26:58,619 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:26:58,619 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:26:58,619 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:27:18,842 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:27:18,844 - INFO - AFC remote call 1 is done.
+2025-08-17 11:27:26,523 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:27:26,530 - INFO - AFC remote call 1 is done.
+2025-08-17 11:27:26,530 - ERROR - 错误：批次翻译结果数量不匹配！原文: 40, 译文: 39。
+2025-08-17 11:27:26,530 - WARNING - 第 3 批次在第 1/3 次尝试中失败。将在 2 秒后重试...
+2025-08-17 11:27:28,366 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:27:28,374 - INFO - AFC remote call 1 is done.
+2025-08-17 11:27:28,531 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:27:28,531 - INFO - 批次 3: 注入 0 个词典术语
+2025-08-17 11:27:28,531 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:27:30,327 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:27:30,337 - INFO - AFC remote call 1 is done.
+2025-08-17 11:27:35,997 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:27:36,000 - INFO - AFC remote call 1 is done.
+2025-08-17 11:27:37,158 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:27:37,173 - INFO - AFC remote call 1 is done.
+2025-08-17 11:27:37,943 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:27:37,951 - INFO - AFC remote call 1 is done.
+2025-08-17 11:27:58,575 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:27:58,581 - INFO - AFC remote call 1 is done.
+2025-08-17 11:27:58,582 - INFO - --- 所有批次并行处理完毕 ---
+2025-08-17 11:27:58,583 - INFO - 文件 'ru-Blue Archive\localisation\russian\simp_chinese\BA_event_Emergencies_l_russian.yml' 汉化完成。
+2025-08-17 11:27:58,583 - INFO - --- 检测到 6 个翻译批次，启动并行处理模式 ---
+2025-08-17 11:27:58,584 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:27:58,584 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:27:58,584 - INFO - 批次 1: 注入 0 个词典术语
+2025-08-17 11:27:58,584 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:27:58,584 - INFO - 批次 2: 注入 0 个词典术语
+2025-08-17 11:27:58,585 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:27:58,585 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:27:58,585 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:27:58,585 - INFO - 批次 3: 注入 0 个词典术语
+2025-08-17 11:27:58,585 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:27:58,585 - INFO - 从 22 个文本中提取到 0 个相关术语
+2025-08-17 11:27:58,585 - INFO - 批次 4: 注入 0 个词典术语
+2025-08-17 11:27:58,586 - INFO - 批次 5: 注入 0 个词典术语
+2025-08-17 11:27:58,586 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:27:58,587 - INFO - 批次 6: 注入 0 个词典术语
+2025-08-17 11:27:58,587 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:27:58,587 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:27:58,587 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:28:21,889 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:28:21,890 - INFO - AFC remote call 1 is done.
+2025-08-17 11:28:26,734 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:28:26,736 - INFO - AFC remote call 1 is done.
+2025-08-17 11:28:27,735 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:28:27,743 - INFO - AFC remote call 1 is done.
+2025-08-17 11:28:29,972 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:28:29,979 - INFO - AFC remote call 1 is done.
+2025-08-17 11:28:31,066 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:28:31,074 - INFO - AFC remote call 1 is done.
+2025-08-17 11:28:42,545 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:28:42,553 - INFO - AFC remote call 1 is done.
+2025-08-17 11:28:42,554 - INFO - --- 所有批次并行处理完毕 ---
+2025-08-17 11:28:42,555 - INFO - 文件 'ru-Blue Archive\localisation\russian\simp_chinese\BA_event_origins_l_russian.yml' 汉化完成。
+2025-08-17 11:28:42,555 - INFO - --- 检测到 9 个翻译批次，启动并行处理模式 ---
+2025-08-17 11:28:42,556 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:28:42,556 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:28:42,556 - INFO - 批次 1: 注入 0 个词典术语
+2025-08-17 11:28:42,556 - INFO - 批次 2: 注入 0 个词典术语
+2025-08-17 11:28:42,556 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:28:42,556 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:28:42,556 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:28:42,557 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:28:42,557 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:28:42,557 - INFO - 批次 3: 注入 0 个词典术语
+2025-08-17 11:28:42,557 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:28:42,557 - INFO - 批次 4: 注入 0 个词典术语
+2025-08-17 11:28:42,557 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:28:42,558 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:28:42,559 - INFO - 从 31 个文本中提取到 0 个相关术语
+2025-08-17 11:28:42,559 - INFO - 批次 5: 注入 0 个词典术语
+2025-08-17 11:28:42,559 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:28:42,559 - INFO - 批次 6: 注入 0 个词典术语
+2025-08-17 11:28:42,559 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:28:42,559 - INFO - 批次 7: 注入 0 个词典术语
+2025-08-17 11:28:42,559 - INFO - 批次 8: 注入 0 个词典术语
+2025-08-17 11:28:42,559 - INFO - 批次 9: 注入 0 个词典术语
+2025-08-17 11:28:42,560 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:28:42,560 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:28:42,560 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:28:42,560 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:28:42,560 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:29:04,149 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:29:04,149 - INFO - AFC remote call 1 is done.
+2025-08-17 11:29:06,496 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:29:06,497 - INFO - AFC remote call 1 is done.
+2025-08-17 11:29:06,569 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:29:06,570 - INFO - AFC remote call 1 is done.
+2025-08-17 11:29:06,953 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:29:06,954 - INFO - AFC remote call 1 is done.
+2025-08-17 11:29:08,713 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:29:08,716 - INFO - AFC remote call 1 is done.
+2025-08-17 11:29:13,757 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:29:13,760 - INFO - AFC remote call 1 is done.
+2025-08-17 11:29:15,770 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:29:15,772 - INFO - AFC remote call 1 is done.
+2025-08-17 11:29:28,722 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:29:28,735 - INFO - AFC remote call 1 is done.
+2025-08-17 11:29:40,993 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:29:40,994 - INFO - AFC remote call 1 is done.
+2025-08-17 11:29:40,995 - INFO - --- 所有批次并行处理完毕 ---
+2025-08-17 11:29:40,996 - INFO - 文件 'ru-Blue Archive\localisation\russian\simp_chinese\BA_event_Shittem_l_russian.yml' 汉化完成。
+2025-08-17 11:29:40,996 - INFO - --- 检测到 3 个翻译批次，启动并行处理模式 ---
+2025-08-17 11:29:40,997 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:29:40,997 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:29:40,997 - INFO - 批次 1: 注入 0 个词典术语
+2025-08-17 11:29:40,997 - INFO - 从 29 个文本中提取到 0 个相关术语
+2025-08-17 11:29:40,997 - INFO - 批次 2: 注入 0 个词典术语
+2025-08-17 11:29:40,997 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:29:40,997 - INFO - 批次 3: 注入 0 个词典术语
+2025-08-17 11:29:40,998 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:29:40,998 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:30:03,957 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:30:03,959 - INFO - AFC remote call 1 is done.
+2025-08-17 11:30:21,417 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:30:21,426 - INFO - AFC remote call 1 is done.
+2025-08-17 11:30:31,061 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:30:31,063 - INFO - AFC remote call 1 is done.
+2025-08-17 11:30:31,063 - INFO - --- 所有批次并行处理完毕 ---
+2025-08-17 11:30:31,064 - INFO - 文件 'ru-Blue Archive\localisation\russian\simp_chinese\BA_event_tr&ape_l_russian.yml' 汉化完成。
+2025-08-17 11:30:31,064 - INFO - --- 检测到 37 个翻译批次，启动并行处理模式 ---
+2025-08-17 11:30:31,065 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:30:31,065 - INFO - 批次 1: 注入 0 个词典术语
+2025-08-17 11:30:31,065 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:30:31,065 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:30:31,065 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:30:31,065 - INFO - 批次 2: 注入 0 个词典术语
+2025-08-17 11:30:31,066 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:30:31,066 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:30:31,066 - INFO - 批次 3: 注入 0 个词典术语
+2025-08-17 11:30:31,067 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:30:31,067 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:30:31,067 - INFO - 批次 4: 注入 0 个词典术语
+2025-08-17 11:30:31,067 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:30:31,067 - INFO - 批次 5: 注入 0 个词典术语
+2025-08-17 11:30:31,067 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:30:31,067 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:30:31,068 - INFO - 批次 6: 注入 0 个词典术语
+2025-08-17 11:30:31,068 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:30:31,068 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:30:31,068 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:30:31,068 - INFO - 批次 7: 注入 0 个词典术语
+2025-08-17 11:30:31,069 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:30:31,069 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:30:31,069 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:30:31,070 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:30:31,070 - INFO - 批次 8: 注入 0 个词典术语
+2025-08-17 11:30:31,070 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:30:31,070 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:30:31,070 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:30:31,071 - INFO - 批次 9: 注入 0 个词典术语
+2025-08-17 11:30:31,071 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:30:31,071 - INFO - 批次 10: 注入 0 个词典术语
+2025-08-17 11:30:31,071 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:30:31,071 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:30:31,072 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:30:31,072 - INFO - 批次 11: 注入 0 个词典术语
+2025-08-17 11:30:31,072 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:30:31,073 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:30:31,073 - INFO - 批次 12: 注入 0 个词典术语
+2025-08-17 11:30:31,073 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:30:31,073 - INFO - 批次 13: 注入 0 个词典术语
+2025-08-17 11:30:31,073 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:30:31,073 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:30:31,074 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:30:31,074 - INFO - 批次 14: 注入 0 个词典术语
+2025-08-17 11:30:31,074 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:30:31,074 - INFO - 批次 15: 注入 0 个词典术语
+2025-08-17 11:30:31,074 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:30:31,075 - INFO - 批次 16: 注入 0 个词典术语
+2025-08-17 11:30:31,075 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:30:31,075 - INFO - 批次 17: 注入 0 个词典术语
+2025-08-17 11:30:31,075 - INFO - 批次 18: 注入 0 个词典术语
+2025-08-17 11:30:31,075 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:30:31,075 - INFO - 批次 19: 注入 0 个词典术语
+2025-08-17 11:30:31,075 - INFO - 批次 20: 注入 0 个词典术语
+2025-08-17 11:30:31,075 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:30:31,075 - INFO - 批次 21: 注入 0 个词典术语
+2025-08-17 11:30:31,075 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:30:31,076 - INFO - 批次 22: 注入 0 个词典术语
+2025-08-17 11:30:31,076 - INFO - 批次 23: 注入 0 个词典术语
+2025-08-17 11:30:31,076 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:30:31,076 - INFO - 批次 24: 注入 0 个词典术语
+2025-08-17 11:30:31,076 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:30:31,076 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:30:31,077 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:30:31,077 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:30:31,077 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:30:31,077 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:30:31,078 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:30:31,078 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:30:31,078 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:30:31,079 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:30:44,297 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:30:44,298 - INFO - AFC remote call 1 is done.
+2025-08-17 11:30:44,299 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:30:44,299 - INFO - 批次 25: 注入 0 个词典术语
+2025-08-17 11:30:44,299 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:30:46,967 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:30:46,968 - INFO - AFC remote call 1 is done.
+2025-08-17 11:30:46,969 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:30:46,969 - INFO - 批次 26: 注入 0 个词典术语
+2025-08-17 11:30:46,969 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:30:48,135 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:30:48,136 - INFO - AFC remote call 1 is done.
+2025-08-17 11:30:48,137 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:30:48,137 - INFO - 批次 27: 注入 0 个词典术语
+2025-08-17 11:30:48,137 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:30:48,146 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:30:48,148 - INFO - AFC remote call 1 is done.
+2025-08-17 11:30:48,149 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:30:48,149 - INFO - 批次 28: 注入 0 个词典术语
+2025-08-17 11:30:48,149 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:30:49,652 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:30:49,654 - INFO - AFC remote call 1 is done.
+2025-08-17 11:30:49,655 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:30:49,655 - INFO - 批次 29: 注入 0 个词典术语
+2025-08-17 11:30:49,655 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:30:52,081 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:30:52,083 - INFO - AFC remote call 1 is done.
+2025-08-17 11:30:52,083 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:30:52,083 - INFO - 批次 30: 注入 0 个词典术语
+2025-08-17 11:30:52,083 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:30:52,762 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:30:52,763 - INFO - AFC remote call 1 is done.
+2025-08-17 11:30:52,763 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:30:52,763 - INFO - 批次 31: 注入 0 个词典术语
+2025-08-17 11:30:52,763 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:30:54,544 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:30:54,545 - INFO - AFC remote call 1 is done.
+2025-08-17 11:30:54,546 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:30:54,546 - INFO - 批次 32: 注入 0 个词典术语
+2025-08-17 11:30:54,546 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:30:54,633 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:30:54,634 - INFO - AFC remote call 1 is done.
+2025-08-17 11:30:54,634 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:30:54,634 - INFO - 批次 33: 注入 0 个词典术语
+2025-08-17 11:30:54,634 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:30:56,581 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:30:56,582 - INFO - AFC remote call 1 is done.
+2025-08-17 11:30:56,582 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:30:56,583 - INFO - 批次 34: 注入 0 个词典术语
+2025-08-17 11:30:56,583 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:30:57,180 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:30:57,181 - INFO - AFC remote call 1 is done.
+2025-08-17 11:30:57,182 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:30:57,182 - INFO - 批次 35: 注入 0 个词典术语
+2025-08-17 11:30:57,182 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:30:57,268 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:30:57,269 - INFO - AFC remote call 1 is done.
+2025-08-17 11:30:57,269 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:30:57,269 - INFO - 批次 36: 注入 0 个词典术语
+2025-08-17 11:30:57,269 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:30:57,702 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:30:57,703 - INFO - AFC remote call 1 is done.
+2025-08-17 11:30:57,703 - INFO - 从 15 个文本中提取到 0 个相关术语
+2025-08-17 11:30:57,704 - INFO - 批次 37: 注入 0 个词典术语
+2025-08-17 11:30:57,704 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:30:58,003 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:30:58,004 - INFO - AFC remote call 1 is done.
+2025-08-17 11:30:58,434 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:30:58,435 - INFO - AFC remote call 1 is done.
+2025-08-17 11:30:58,527 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:30:58,528 - INFO - AFC remote call 1 is done.
+2025-08-17 11:30:58,721 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:30:58,722 - INFO - AFC remote call 1 is done.
+2025-08-17 11:30:58,740 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:30:58,740 - INFO - AFC remote call 1 is done.
+2025-08-17 11:30:59,991 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:30:59,992 - INFO - AFC remote call 1 is done.
+2025-08-17 11:31:00,042 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:31:00,043 - INFO - AFC remote call 1 is done.
+2025-08-17 11:31:01,398 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:31:01,399 - INFO - AFC remote call 1 is done.
+2025-08-17 11:31:02,173 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:31:02,175 - INFO - AFC remote call 1 is done.
+2025-08-17 11:31:02,238 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:31:02,239 - INFO - AFC remote call 1 is done.
+2025-08-17 11:31:05,389 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:31:05,391 - INFO - AFC remote call 1 is done.
+2025-08-17 11:31:07,048 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:31:07,054 - INFO - AFC remote call 1 is done.
+2025-08-17 11:31:10,721 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:31:10,722 - INFO - AFC remote call 1 is done.
+2025-08-17 11:31:11,564 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:31:11,566 - INFO - AFC remote call 1 is done.
+2025-08-17 11:31:12,255 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:31:12,256 - INFO - AFC remote call 1 is done.
+2025-08-17 11:31:13,701 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:31:13,701 - INFO - AFC remote call 1 is done.
+2025-08-17 11:31:19,735 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:31:19,737 - INFO - AFC remote call 1 is done.
+2025-08-17 11:31:20,158 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:31:20,159 - INFO - AFC remote call 1 is done.
+2025-08-17 11:31:22,948 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:31:22,948 - INFO - AFC remote call 1 is done.
+2025-08-17 11:31:26,608 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:31:26,609 - INFO - AFC remote call 1 is done.
+2025-08-17 11:31:26,761 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:31:26,763 - INFO - AFC remote call 1 is done.
+2025-08-17 11:31:27,086 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:31:27,087 - INFO - AFC remote call 1 is done.
+2025-08-17 11:31:30,809 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:31:30,810 - INFO - AFC remote call 1 is done.
+2025-08-17 11:31:37,606 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:31:37,607 - INFO - AFC remote call 1 is done.
+2025-08-17 11:31:37,608 - INFO - --- 所有批次并行处理完毕 ---
+2025-08-17 11:31:37,611 - INFO - 文件 'ru-Blue Archive\localisation\russian\simp_chinese\BA_leader_l_russian.yml' 汉化完成。
+2025-08-17 11:31:37,611 - INFO - --- 检测到 4 个翻译批次，启动并行处理模式 ---
+2025-08-17 11:31:37,612 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:31:37,612 - INFO - 批次 1: 注入 0 个词典术语
+2025-08-17 11:31:37,612 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:31:37,612 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:31:37,612 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:31:37,612 - INFO - 批次 2: 注入 0 个词典术语
+2025-08-17 11:31:37,613 - INFO - 从 23 个文本中提取到 0 个相关术语
+2025-08-17 11:31:37,613 - INFO - 批次 3: 注入 0 个词典术语
+2025-08-17 11:31:37,613 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:31:37,614 - INFO - 批次 4: 注入 0 个词典术语
+2025-08-17 11:31:37,614 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:31:37,614 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:31:53,271 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:31:53,272 - INFO - AFC remote call 1 is done.
+2025-08-17 11:31:59,123 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:31:59,125 - INFO - AFC remote call 1 is done.
+2025-08-17 11:32:01,196 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:32:01,197 - INFO - AFC remote call 1 is done.
+2025-08-17 11:32:05,587 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:32:05,588 - INFO - AFC remote call 1 is done.
+2025-08-17 11:32:05,589 - INFO - --- 所有批次并行处理完毕 ---
+2025-08-17 11:32:05,590 - INFO - 文件 'ru-Blue Archive\localisation\russian\simp_chinese\BA_modifiers_l_russian.yml' 汉化完成。
+2025-08-17 11:32:05,590 - INFO - --- 检测到 4 个翻译批次，启动并行处理模式 ---
+2025-08-17 11:32:05,591 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:32:05,591 - INFO - 批次 1: 注入 0 个词典术语
+2025-08-17 11:32:05,591 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:32:05,591 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:32:05,591 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:32:05,591 - INFO - 批次 2: 注入 0 个词典术语
+2025-08-17 11:32:05,592 - INFO - 从 4 个文本中提取到 0 个相关术语
+2025-08-17 11:32:05,592 - INFO - 批次 3: 注入 0 个词典术语
+2025-08-17 11:32:05,592 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:32:05,592 - INFO - 批次 4: 注入 0 个词典术语
+2025-08-17 11:32:05,592 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:32:05,593 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:32:09,332 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:32:09,332 - INFO - AFC remote call 1 is done.
+2025-08-17 11:32:11,423 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:32:11,424 - INFO - AFC remote call 1 is done.
+2025-08-17 11:32:22,274 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:32:22,276 - INFO - AFC remote call 1 is done.
+2025-08-17 11:32:31,050 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:32:31,051 - INFO - AFC remote call 1 is done.
+2025-08-17 11:32:31,051 - INFO - --- 所有批次并行处理完毕 ---
+2025-08-17 11:32:31,052 - INFO - 文件 'ru-Blue Archive\localisation\russian\simp_chinese\BA_Namelist_l_russian.yml' 汉化完成。
+2025-08-17 11:32:31,052 - INFO - --- 检测到 4 个翻译批次，启动并行处理模式 ---
+2025-08-17 11:32:31,053 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:32:31,053 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:32:31,053 - INFO - 批次 1: 注入 0 个词典术语
+2025-08-17 11:32:31,053 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:32:31,053 - INFO - 批次 2: 注入 0 个词典术语
+2025-08-17 11:32:31,054 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:32:31,054 - INFO - 从 33 个文本中提取到 0 个相关术语
+2025-08-17 11:32:31,054 - INFO - 批次 3: 注入 0 个词典术语
+2025-08-17 11:32:31,054 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:32:31,054 - INFO - 批次 4: 注入 0 个词典术语
+2025-08-17 11:32:31,054 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:32:31,055 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:32:36,618 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:32:36,618 - INFO - AFC remote call 1 is done.
+2025-08-17 11:32:43,930 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:32:43,931 - INFO - AFC remote call 1 is done.
+2025-08-17 11:32:45,061 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:32:45,062 - INFO - AFC remote call 1 is done.
+2025-08-17 11:32:58,860 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:32:58,862 - INFO - AFC remote call 1 is done.
+2025-08-17 11:32:58,862 - INFO - --- 所有批次并行处理完毕 ---
+2025-08-17 11:32:58,863 - INFO - 文件 'ru-Blue Archive\localisation\russian\simp_chinese\BA_Placeholder_l_russian.yml' 汉化完成。
+2025-08-17 11:32:58,863 - INFO - --- 检测到 5 个翻译批次，启动并行处理模式 ---
+2025-08-17 11:32:58,864 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:32:58,864 - INFO - 批次 1: 注入 0 个词典术语
+2025-08-17 11:32:58,864 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:32:58,864 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:32:58,865 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:32:58,865 - INFO - 批次 2: 注入 0 个词典术语
+2025-08-17 11:32:58,865 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:32:58,866 - INFO - 批次 3: 注入 0 个词典术语
+2025-08-17 11:32:58,866 - INFO - 从 15 个文本中提取到 0 个相关术语
+2025-08-17 11:32:58,866 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:32:58,866 - INFO - 批次 4: 注入 0 个词典术语
+2025-08-17 11:32:58,866 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:32:58,866 - INFO - 批次 5: 注入 0 个词典术语
+2025-08-17 11:32:58,867 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:32:58,867 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:33:20,451 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:33:20,452 - INFO - AFC remote call 1 is done.
+2025-08-17 11:33:23,194 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:33:23,195 - INFO - AFC remote call 1 is done.
+2025-08-17 11:33:24,031 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:33:24,032 - INFO - AFC remote call 1 is done.
+2025-08-17 11:33:24,077 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:33:24,078 - INFO - AFC remote call 1 is done.
+2025-08-17 11:33:29,241 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:33:29,242 - INFO - AFC remote call 1 is done.
+2025-08-17 11:33:29,244 - INFO - --- 所有批次并行处理完毕 ---
+2025-08-17 11:33:29,245 - INFO - 文件 'ru-Blue Archive\localisation\russian\simp_chinese\BA_popmod_l_russian.yml' 汉化完成。
+2025-08-17 11:33:29,245 - INFO - --- 检测到 3 个翻译批次，启动并行处理模式 ---
+2025-08-17 11:33:29,245 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:33:29,246 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:33:29,246 - INFO - 批次 1: 注入 0 个词典术语
+2025-08-17 11:33:29,246 - INFO - 批次 2: 注入 0 个词典术语
+2025-08-17 11:33:29,246 - INFO - 从 3 个文本中提取到 0 个相关术语
+2025-08-17 11:33:29,246 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:33:29,246 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:33:29,246 - INFO - 批次 3: 注入 0 个词典术语
+2025-08-17 11:33:29,247 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:33:45,942 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:33:45,943 - INFO - AFC remote call 1 is done.
+2025-08-17 11:34:02,432 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:34:02,441 - INFO - AFC remote call 1 is done.
+2025-08-17 11:34:02,499 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:34:02,507 - INFO - AFC remote call 1 is done.
+2025-08-17 11:34:02,507 - INFO - --- 所有批次并行处理完毕 ---
+2025-08-17 11:34:02,509 - INFO - 文件 'ru-Blue Archive\localisation\russian\simp_chinese\BA_Precursor_l_russian.yml' 汉化完成。
+2025-08-17 11:34:02,509 - INFO - --- 检测到 6 个翻译批次，启动并行处理模式 ---
+2025-08-17 11:34:02,509 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:34:02,509 - INFO - 批次 1: 注入 0 个词典术语
+2025-08-17 11:34:02,510 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:34:02,510 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:34:02,510 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:34:02,510 - INFO - 批次 2: 注入 0 个词典术语
+2025-08-17 11:34:02,510 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:34:02,511 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:34:02,511 - INFO - 批次 3: 注入 0 个词典术语
+2025-08-17 11:34:02,511 - INFO - 从 13 个文本中提取到 0 个相关术语
+2025-08-17 11:34:02,511 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:34:02,512 - INFO - 批次 4: 注入 0 个词典术语
+2025-08-17 11:34:02,512 - INFO - 批次 5: 注入 0 个词典术语
+2025-08-17 11:34:02,512 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:34:02,512 - INFO - 批次 6: 注入 0 个词典术语
+2025-08-17 11:34:02,512 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:34:02,512 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:34:02,513 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:34:22,104 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:34:22,105 - INFO - AFC remote call 1 is done.
+2025-08-17 11:34:34,837 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:34:34,848 - INFO - AFC remote call 1 is done.
+2025-08-17 11:34:42,170 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:34:42,176 - INFO - AFC remote call 1 is done.
+2025-08-17 11:34:42,747 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:34:42,760 - INFO - AFC remote call 1 is done.
+2025-08-17 11:34:46,163 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:34:46,166 - INFO - AFC remote call 1 is done.
+2025-08-17 11:34:51,591 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:34:51,592 - INFO - AFC remote call 1 is done.
+2025-08-17 11:34:51,593 - INFO - --- 所有批次并行处理完毕 ---
+2025-08-17 11:34:51,594 - INFO - 文件 'ru-Blue Archive\localisation\russian\simp_chinese\BA_Project_l_russian.yml' 汉化完成。
+2025-08-17 11:34:51,594 - INFO - 从 1 个文本中提取到 0 个相关术语
+2025-08-17 11:34:51,594 - INFO - 批次 1: 注入 0 个词典术语
+2025-08-17 11:34:51,594 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:34:55,857 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:34:55,858 - INFO - AFC remote call 1 is done.
+2025-08-17 11:34:55,858 - INFO - 文件 'ru-Blue Archive\localisation\russian\simp_chinese\BA_resource_tips_l_russian.yml' 汉化完成。
+2025-08-17 11:34:55,859 - INFO - --- 检测到 11 个翻译批次，启动并行处理模式 ---
+2025-08-17 11:34:55,859 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:34:55,859 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:34:55,860 - INFO - 批次 1: 注入 0 个词典术语
+2025-08-17 11:34:55,860 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:34:55,860 - INFO - 批次 2: 注入 0 个词典术语
+2025-08-17 11:34:55,860 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:34:55,860 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:34:55,861 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:34:55,861 - INFO - 批次 3: 注入 0 个词典术语
+2025-08-17 11:34:55,861 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:34:55,861 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:34:55,861 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:34:55,861 - INFO - 批次 4: 注入 0 个词典术语
+2025-08-17 11:34:55,862 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:34:55,862 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:34:55,863 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:34:55,863 - INFO - 批次 5: 注入 0 个词典术语
+2025-08-17 11:34:55,863 - INFO - 从 15 个文本中提取到 0 个相关术语
+2025-08-17 11:34:55,863 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:34:55,863 - INFO - 批次 6: 注入 0 个词典术语
+2025-08-17 11:34:55,864 - INFO - 批次 7: 注入 0 个词典术语
+2025-08-17 11:34:55,864 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:34:55,864 - INFO - 批次 8: 注入 0 个词典术语
+2025-08-17 11:34:55,864 - INFO - 批次 9: 注入 0 个词典术语
+2025-08-17 11:34:55,864 - INFO - 批次 10: 注入 0 个词典术语
+2025-08-17 11:34:55,864 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:34:55,864 - INFO - 批次 11: 注入 0 个词典术语
+2025-08-17 11:34:55,864 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:34:55,864 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:34:55,865 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:34:55,865 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:34:55,865 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:34:55,865 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:35:16,291 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:35:16,294 - INFO - AFC remote call 1 is done.
+2025-08-17 11:35:24,856 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:35:24,859 - INFO - AFC remote call 1 is done.
+2025-08-17 11:35:27,611 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:35:27,612 - INFO - AFC remote call 1 is done.
+2025-08-17 11:35:28,192 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:35:28,193 - INFO - AFC remote call 1 is done.
+2025-08-17 11:35:31,392 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:35:31,397 - INFO - AFC remote call 1 is done.
+2025-08-17 11:35:31,488 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:35:31,496 - INFO - AFC remote call 1 is done.
+2025-08-17 11:35:35,126 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:35:35,128 - INFO - AFC remote call 1 is done.
+2025-08-17 11:35:36,195 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:35:36,203 - INFO - AFC remote call 1 is done.
+2025-08-17 11:35:41,423 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:35:41,424 - INFO - AFC remote call 1 is done.
+2025-08-17 11:35:41,643 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:35:41,645 - INFO - AFC remote call 1 is done.
+2025-08-17 11:35:47,106 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:35:47,107 - INFO - AFC remote call 1 is done.
+2025-08-17 11:35:47,108 - INFO - --- 所有批次并行处理完毕 ---
+2025-08-17 11:35:47,110 - INFO - 文件 'ru-Blue Archive\localisation\russian\simp_chinese\BA_School_Idea_l_russian.yml' 汉化完成。
+2025-08-17 11:35:47,110 - INFO - --- 检测到 2 个翻译批次，启动并行处理模式 ---
+2025-08-17 11:35:47,110 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:35:47,111 - INFO - 从 35 个文本中提取到 0 个相关术语
+2025-08-17 11:35:47,111 - INFO - 批次 1: 注入 0 个词典术语
+2025-08-17 11:35:47,111 - INFO - 批次 2: 注入 0 个词典术语
+2025-08-17 11:35:47,111 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:35:47,111 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:36:24,461 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 500 Internal Server Error"
+2025-08-17 11:36:24,462 - ERROR - 处理批次时发生严重错误: 500 INTERNAL. {'error': {'code': 500, 'message': 'An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting', 'status': 'INTERNAL'}}
+Traceback (most recent call last):
+  File "J:\V3_Mod_Localization_Factory\scripts\core\gemini_handler.py", line 137, in _translate_chunk
+    response = client.models.generate_content(model=model_name, contents=prompt)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "J:\ANACONDA\Lib\site-packages\google\genai\models.py", line 5898, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "J:\ANACONDA\Lib\site-packages\google\genai\models.py", line 4838, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "J:\ANACONDA\Lib\site-packages\google\genai\_api_client.py", line 1077, in request
+    response = self._request(http_request, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "J:\ANACONDA\Lib\site-packages\google\genai\_api_client.py", line 968, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "J:\ANACONDA\Lib\site-packages\tenacity\__init__.py", line 379, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "J:\ANACONDA\Lib\site-packages\tenacity\__init__.py", line 325, in iter
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "J:\ANACONDA\Lib\site-packages\tenacity\__init__.py", line 158, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "J:\ANACONDA\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "J:\ANACONDA\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "J:\ANACONDA\Lib\site-packages\tenacity\__init__.py", line 382, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "J:\ANACONDA\Lib\site-packages\google\genai\_api_client.py", line 958, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "J:\ANACONDA\Lib\site-packages\google\genai\errors.py", line 107, in raise_for_response
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 500 INTERNAL. {'error': {'code': 500, 'message': 'An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting', 'status': 'INTERNAL'}}
+2025-08-17 11:36:24,501 - WARNING - 第 2 批次在第 1/3 次尝试中失败。将在 2 秒后重试...
+2025-08-17 11:36:26,501 - INFO - 从 35 个文本中提取到 0 个相关术语
+2025-08-17 11:36:26,501 - INFO - 批次 2: 注入 0 个词典术语
+2025-08-17 11:36:26,501 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:36:59,593 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:36:59,604 - INFO - AFC remote call 1 is done.
+2025-08-17 11:37:13,137 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:37:13,139 - INFO - AFC remote call 1 is done.
+2025-08-17 11:37:13,140 - INFO - --- 所有批次并行处理完毕 ---
+2025-08-17 11:37:13,141 - INFO - 文件 'ru-Blue Archive\localisation\russian\simp_chinese\BA_speciel_story_l_russian.yml' 汉化完成。
+2025-08-17 11:37:13,141 - INFO - --- 检测到 7 个翻译批次，启动并行处理模式 ---
+2025-08-17 11:37:13,141 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:37:13,142 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:37:13,142 - INFO - 批次 1: 注入 0 个词典术语
+2025-08-17 11:37:13,142 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:37:13,142 - INFO - 批次 2: 注入 0 个词典术语
+2025-08-17 11:37:13,142 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:37:13,143 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:37:13,143 - INFO - 批次 3: 注入 0 个词典术语
+2025-08-17 11:37:13,143 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:37:13,143 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-08-17 11:37:13,143 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:37:13,144 - INFO - 从 14 个文本中提取到 0 个相关术语
+2025-08-17 11:37:13,144 - INFO - 批次 4: 注入 0 个词典术语
+2025-08-17 11:37:13,145 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:37:13,145 - INFO - 批次 5: 注入 0 个词典术语
+2025-08-17 11:37:13,145 - INFO - 批次 6: 注入 0 个词典术语
+2025-08-17 11:37:13,145 - INFO - 批次 7: 注入 0 个词典术语
+2025-08-17 11:37:13,146 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:37:13,146 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:37:13,147 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:37:13,147 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:37:30,101 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:37:30,102 - INFO - AFC remote call 1 is done.
+2025-08-17 11:37:32,673 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:37:32,673 - INFO - AFC remote call 1 is done.
+2025-08-17 11:37:44,091 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:37:44,092 - INFO - AFC remote call 1 is done.
+2025-08-17 11:37:48,784 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:37:48,786 - INFO - AFC remote call 1 is done.
+2025-08-17 11:37:49,434 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:37:49,435 - INFO - AFC remote call 1 is done.
+2025-08-17 11:37:49,612 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:37:49,614 - INFO - AFC remote call 1 is done.
+2025-08-17 11:37:55,801 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:37:55,811 - INFO - AFC remote call 1 is done.
+2025-08-17 11:37:55,812 - INFO - --- 所有批次并行处理完毕 ---
+2025-08-17 11:37:55,813 - INFO - 文件 'ru-Blue Archive\localisation\russian\simp_chinese\BA_Species&Goverments&Civics_l_russian.yml' 汉化完成。
+2025-08-17 11:37:55,813 - INFO - 从 14 个文本中提取到 0 个相关术语
+2025-08-17 11:37:55,813 - INFO - 批次 1: 注入 0 个词典术语
+2025-08-17 11:37:55,814 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-17 11:38:06,159 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-17 11:38:06,161 - INFO - AFC remote call 1 is done.
+2025-08-17 11:38:06,162 - INFO - 文件 'ru-Blue Archive\localisation\russian\simp_chinese\BA_test_l_russian.yml' 汉化完成。
+2025-08-17 11:38:06,162 - INFO - 正在生成校对进度看板...
+2025-08-17 11:38:06,164 - INFO - GBK编码版本已生成: J:\V3_Mod_Localization_Factory\my_translation\ru-Blue Archive\校对进度表_GBK.csv
+2025-08-17 11:38:06,164 - INFO - 校对进度表格已生成: J:\V3_Mod_Localization_Factory\my_translation\ru-Blue Archive\校对进度表.csv
+2025-08-17 11:38:06,164 - INFO - 校对进度看板生成成功
+2025-08-17 11:38:06,164 - INFO - 工作流完成！Mod 'Blue Archive' 的翻译任务已完成
+2025-08-17 11:38:06,166 - INFO - 工作流完成！

@@ -1,0 +1,341 @@
+﻿l_spanish:
+###############################
+ FLAG_CATEGORY_ba:0 "Bandera de Blue Archive"
+ name_list_Schale:0 "Blue Archive"
+
+#物种相关基本信息及称呼
+ Schale:1 "Estudiante de Kivotos"
+ Schalebot:1 "Estudiante de Kivotos (Mecánico)"
+ BA_Robot:0 "Robochica"
+
+ Schale_desc:0 "Estudiantes de la Ciudad-Academia de Kivotos."
+ Schale_plural:0 "Estudiante de Kivotos"
+
+ Schale_insult_01:0 "Pequeña Basurilla"
+ Schale_insult_plural_01:0 "Pequeña Basurilla"
+ Schale_compliment_01:0 "Maestro"
+ Schale_compliment_plural_01:0 "Maestro"
+
+ Schale_spawn:0 "Novato"
+ Schale_spawn_plural:0 "Novato"
+
+ Schale_sound_01:0 "Charlar"
+ Schale_sound_02:0 "Charlar"
+ Schale_sound_03:0 "Charlar"
+ Schale_sound_04:0 "Charlar"
+ Schale_sound_05:0 "Charlar"
+
+ Schale_organ:0 "Órgano"
+ Schale_mouth:0 "Boca"
+ Schale_hand:0 "Mano"
+ Schale_ear:0 "Oreja"
+ Schale_tooth:0 "Dientes"
+ Schale_fossil:0 "No hay de eso"
+ Schale_remnant:0 "Reliquia"
+ Schale_organ_plural:0 "Órgano"
+ Schale_hand_plural:0 "Mano"
+ Schale_ear_plural:0 "Oreja"
+ Schale_tooth_plural:0 "Dientes"
+ Schale_fossil_plural:0 "No hay de eso"
+ Schale_remnant_plural:0 "Reliquia"
+
+ species_name_BA:0 "Estudiante"
+ species_plural_BA:0 "$species_name_BA$"
+ species_adjective_BA:0 "$species_name_BA$"
+ species_name_BA_leader:0 "$species_name_BA$"
+ PERSCRIBED_species_name:0 "$species_name_BA$"
+ PRESCRIPTED_species_name_BA_ETO:0 "$species_name_BA$"
+ PRESCRIPTED_species_name_BA_Arius:0 "$species_name_BA$"
+
+ PRESCRIPTED_adjective_BA_ETO:0 "ETO"
+ PRESCRIPTED_adjective_BA_NPA:0 "Arius"
+ PRESCRIPTED_adjective_BA_DUU:0 "Federación"
+
+#国家介绍及开始界面信息
+ ETOSS:0 "ETOSS"
+ EMPIRE_DESIGN_BA_ETO:0 "Organización del Tratado del Edén"
+ EMPIRE_DESIGN_BA_ETO_desc:0 "Mucho antes de que nos aventuráramos al espacio, dos de las grandes academias de Kivotos, la Santísima Trinidad y Gehenna, después de numerosas vicisitudes, por fin firmaron el 'Tratado del Edén'. Con él se estableció la Organización del Tratado del Edén (ETO) para mediar en las antiguas disputas entre ambas escuelas y evitar una guerra total."
+ START_SCREEN_EDEN_TREATY:0 "Con la ayuda de cierta persona de confianza, logramos expulsar a los Colores de nuestro planeta natal. Impulsados por la Santísima Trinidad, volvimos a firmar el Tratado del Edén y, a medida que más y más escuelas se unían a las academias del tratado, Kivotos por fin pudo poner fin a sus conflictos."
+ START_SCREEN_BA_ETO:0 "$EMPIRE_DESIGN_BA_ETO_desc$"
+
+ NPASS:0 "NPASS"
+ EMPIRE_DESIGN_BA_NPA:0 "Nueva Federación de Preceptos"
+ EMPIRE_DESIGN_BA_NPA_desc:0 "Durante mucho tiempo, fuimos oprimidos por aquellos que ostentaban el supuesto 'centro del mundo'."
+ START_SCREEN_KYRIE:0 "Una vez tuvimos un santuario, donde nos encontramos, lloramos y reímos juntos. Sin embargo, con odio, pisoteamos con nuestras propias manos ese santuario, convirtiéndolo en un mar de fuego. Sin lugar a donde ir, sin nadie en quien apoyarnos, deambulamos en silencio entre las ruinas. Nadie habría imaginado que el río estelar, que solo mirábamos en nuestra tristeza, se convertiría en nuestro nuevo hogar."
+ START_SCREEN_BA_NPA:0 "$EMPIRE_DESIGN_BA_NPA_desc$"
+
+ DUUSS:0 "STUSS"
+ EMPIRE_DESIGN_BA_DUU:0 "Consejo Unido del Arca"
+ EMPIRE_DESIGN_BA_DUU_desc:0 "Después de la caída de Kivotos bajo el ataque de la Torre de la Vanidad, algunos de nuestros supervivientes huyeron al espacio, utilizando sus estaciones espaciales como bastiones para preservar nuestra última chispa. Tras superar las dificultades iniciales, echamos raíces en el espacio, y una tras otra, se construyeron nuevas estaciones. Aunque hubo opresión, resistencia, dudas y conflictos, ahora nos unimos con un objetivo común. Esta pequeña chispa de luz está a punto de regresar a casa con el poder para consumirlo todo."
+ START_SCREEN_UNNAMED:0 "La vida en el espacio es muy diferente a la de antaño; aún añoramos los días en que corríamos y hacíamos ruido en la Tierra. Las armas están listas; ya no somos tan débiles como antes. Nuestra tierra natal no será olvidada así; estamos impacientes por comenzar una nueva historia en este nuevo punto de partida."
+ START_SCREEN_BA_DUU:0 "$EMPIRE_DESIGN_BA_DUU_desc$"
+
+ 
+###############################
+#物种特质
+ trait_test:0 "En fase de pruebas"
+ trait_test_desc:0 "Un robot en fase de pruebas, actualmente solo un prototipo."
+ trait_test_effect:0 "¡No se puede generar §Ylíder§!"
+ trait_test_finished:0 "Núcleo Jiqirobot"
+ trait_test_finished_desc:0 "Un núcleo diseñado específicamente para los Jiqirobots, que genera un aura simulada al instalarse."
+ trait_test_finished_effect:0 "¡No se puede generar §Ylíder§! a menos que se reclute a través de la interfaz de §MReserva de Líderes§!."
+
+ trait_pc_Schale_preference:0 "Preferencia de Kivotos"
+ trait_pc_Schale_preference_desc:0 "§LSu preferencia climática se determina por millones de años de evolución, diseño o manipulación genética artificial... ¿verdad?§!"
+
+ trait_halo_unreleased:0 "Halo Divino"
+ trait_halo_unreleased_desc:0 "Un halo de origen desconocido que nos acompaña desde el nacimiento. Sus bendiciones, al parecer, han pasado desapercibidas."
+ trait_halo_awakened:0 "Halo Divino Modificado"
+ trait_halo_awakened_desc:0 "Un halo parcialmente liberado."
+ trait_halo_full_awakened:0 "Halo Divino del Exterior"
+ trait_halo_full_awakened_desc:0 "Un halo completamente liberado que eclipsa todo."
+ trait_Halo_amplifier:0 "Halo Divino Amplificado"
+ trait_Halo_amplifier_desc:0 "Un halo potenciado con un dispositivo externo de piedra cian, que marca nuestra cúspide en el arte y el misterio."
+
+ trait_BA_Koharu:0 "Koharización"
+ trait_BA_Koharu_desc:0 "¡No seas pervertido!"
+ trait_BA_good_students:0 "Estudiante Ejemplar"
+ trait_BA_good_students_desc:0 "Excluyendo a esos estudiantes problemáticos, la mayoría de nosotros somos estudiantes ejemplares que estudian mucho."
+ trait_BA_grate_duty:"Estudiante de Servicio Excelente"
+ trait_BA_grate_duty_desc:"Un excelente sistema de turnos de servicio ha fluidificado el funcionamiento de las instituciones centrales, reduciendo de paso la carga de trabajo de alguien."
+ trait_BA_summer_star:"Estrella de Verano"
+ trait_BA_summer_star_desc:"¡Verano, mar!"
+ trait_BA_summer_star_tip:"Cuando el líder cambia a un atuendo de la categoría §BBañador§!, no se consume ningún recurso.\n£pop£ Población en §Gplanetas de clima húmedo§!:\n$MOD_POP_HOUSING_USAGE_MULT$: §G-20%§!\n$mod_planet_pops_upkeep_mult$: §G-10%§!\n$MOD_POP_BONUS_WORKFORCE_MULT$: §G+5%§!\n$MOD_POP_ENVIRONMENT_TOLERANCE$: §G+50%§!"
+ trait_BA_tactical_training:0 "Entrenamiento Táctico"
+ trait_BA_tactical_training_desc:0 "El entrenamiento táctico es una de las asignaturas estándar de Kivotos."
+ trait_BA_top_notchism:0 "Perfeccionismo de Equipamiento"
+ trait_BA_top_notchism_desc:0 "Comprar 30 unidades de vitalidad diarias para que todas las estudiantes mejoren hasta el equipamiento de máximo nivel, lo que mejora enormemente su capacidad de combate y eficiencia."
+
+
+ trait_BA_starlink:0 "Constelación Estelar"
+ trait_BA_starlink_desc:0 "¡El Departamento de Marketing se excedió con la promoción! Los satélites lanzados llegaron a formar una constelación estelar, lo que también generó mucha expectación entre las estudiantes."
+ trait_boarding:0 "Convivencia Compartida"
+ trait_boarding_desc:0 "Algunas estudiantes prefieren la convivencia compartida a vivir solas."
+ trait_camp:0 "Campamento Relajado"
+ trait_camp_desc:0 "Las estudiantes van de campamento a varios lugares durante las vacaciones, por lo que se adaptan más rápido a nuevos entornos."
+ trait_BA_BDcase:0 "Plan de Suministro de BD"
+ trait_BA_BDcase_desc:0 "¡Castigar a la Brigada de Sushi a toda costa para obtener Datos de Batalla Tácticos, Libros de Habilidad y Notas Secretas, asegurando que todas las estudiantes puedan progresar y esforzarse al máximo!"
+ trait_BA_pioneer:"Pioneras del Nuevo Mundo"
+ trait_BA_pioneer_desc:"Las estudiantes tienen un gran interés en explorar nuevos mundos, ¡y los motivos son muy variados! Como la comida deliciosa, los paisajes hermosos, las aguas termales... ¡o incluso el petróleo!"
+ trait_BA_slack:0 "Holgazanear"
+ trait_BA_slack_desc:0 "¿Los documentos de hoy? ¡Primero un par de horas de relax y luego hablamos!"
+ trait_food_1:0 "El Comedor Problemático"
+ trait_food_1_desc:0 "¡El comedor explotó otra vez hoy...! Tengo tanta hambre... Parece que solo podremos comer bolas de arroz. ¡Espera, ¿no acaba de salir disparado algo?!"
+ trait_BA_gammer:0 "Enganchadas a los Juegos"
+ trait_BA_gammer_desc:0 "A las estudiantes les encanta jugar videojuegos en casa durante las vacaciones. ¡Es muy difícil sacarlas! E incluso si lo logras, de vez en cuando siguen diciendo cosas como 'timing perfecto', 'alinear el eje' o 'meta'."
+ trait_BA_rebellion:0 "Fallo de Supervisión"
+ trait_BA_rebellion_desc:0 "Las acciones de las estudiantes son demasiado arbitrarias, y ni siquiera aquellas que se supone que mantienen el orden se salvan. ¡Esto, sin duda, ha empeorado el caos!"
+ trait_BA_no_pack:0 "Olvidamochilas"
+ trait_BA_no_pack_desc:0 "La estudiante encargada de ir a la cabeza olvidó su mochila de suministros, lo que ha provocado una caída drástica en su capacidad de ataque y su resistencia al daño."
+ trait_BA_consumerism:"Consumismo"
+ trait_BA_consumerism_desc:"¡Comprar, comprar, comprar! Es la tendencia de moda en muchas academias, de arriba abajo. Y aunque esto perjudica los bolsillos de todas... ¿en general, económicamente, parece que no va tan mal?"
+ trait_BA_truancy:"La Mentalidad de Saltarse Clases"
+ trait_BA_truancy_desc:"Las estudiantes creen que hay muchísimas cosas más importantes que el aprendizaje en el aula que simplemente *deben* hacer."
+
+
+ trait_ship_slow:0 "Nave: Mentalidad Técnica"
+ trait_ship_slow_desc:0 "A las estudiantes les gusta construir sus propias naves de forma minuciosa y lenta; es divertido y, además, ¡permite ahorrar dinero!"
+ trait_ship_fast:0 "Nave: Mentalidad Industrial"
+ trait_ship_fast_desc:0 "Las estudiantes prefieren construir naves espaciales de forma rápida y sin tantos detalles. ¡Nunca nadie se quejará de tener una flota espectacular, ¿verdad?!"
+
+ trait_void_halo:0 "Escondidas en el Vacío"
+ trait_void_halo_desc:0 "Las estudiantes que han vivido demasiado tiempo en el entorno de las estaciones de vivienda automatizadas,"
+
+ trait_keystone_protocol:0 "Protocolo de Fabricación"
+ trait_keystone_protocol_desc:0 "Permite que los halos desarrollen funciones similares a las de un fabricador, lo que puede resolver rápidamente los pequeños problemas que surjan."
+ trait_keystone_protocol_tip:0 "PENDIENTE"
+ trait_Halo_matrix:0 "Zona de Computación del Halo"
+ trait_Halo_matrix_desc:0 "Transfiere la capacidad de cómputo inactiva de los dispositivos de halo a la Matriz Federal para acelerar la investigación."
+ trait_Halo_matrix_tip:0 "PENDIENTE"
+ trait_divine_coordinator:0 "Armonizador Divino"
+ trait_divine_coordinator_desc:0 "Basado en la investigación de otra vía, neutraliza algunos factores disonantes causados por conflictos computacionales."
+ trait_divine_coordinator_tip:0 "PENDIENTE"
+ trait_inner_purfier:0 "Módulo de Purificación Interna"
+ trait_inner_purfier_desc:0 "Este módulo permite que los halos eliminen algunas sustancias nocivas ingeridas."
+ trait_inner_purfier_tip:0 "PENDIENTE"
+ trait_starlink_receiver:0 "Receptor de Enlace Estelar"
+ trait_starlink_receiver_desc:0 "Este puerto de recepción permite que los satélites de publicidad se desplieguen más rápido."
+ trait_starlink_receiver_tip:0 "PENDIENTE"
+
+ trait_gamegirl:0 "Protocolo GAMEGIRL"
+ trait_gamegirl_desc:0 "Los protocolos integrados permiten a las chicas-robot jugar y crear juegos de forma mejor."
+ trait_wingbot:0 "Pequeñas Ayudantes"
+ trait_wingbot_desc:0 "Los protocolos les ordenan realizar diversas tareas menudas para la recopilación de datos, el procesamiento de muestras y la asignación de poder de cálculo, ayudando al nodo central en su investigación."
+ trait_randomized_line:0 "Proceso de Producción Optimizado"
+ trait_randomized_line_desc:0 "Se ordena a las chicas-robot aún no salidas de fábrica que asistan en las tareas de ensamblaje para acelerar la producción, al mismo tiempo que se introducen sutiles diferencias entre los productos."
+ trait_federation_matrix:0 "Matriz de IA Federada"
+ trait_federation_matrix_desc:0 "Abrir los protocolos de uso de la Matriz de IA a las chicas-robot no investigadoras."
+ trait_substance_module:0 "Módulo de Procesamiento de Materiales"
+ trait_substance_module_desc:0 "Un procesador de materiales especial de Red Winter, capaz de transformar materia orgánica en energía y mantener la temperatura corporal de las chicas-robot en 40°C."
+ trait_substance_module_tip:0 "Convierte la mitad del coste de mantenimiento en £energy£ créditos energéticos en coste de mantenimiento de £food£ alimentos.\nConfort producido por £job£ puestos: §G+20%§!"
+
+ trait_Halo_precursor:0 "Aura Divina del Pionero"
+ trait_Halo_precursor_desc:0 "Un aura tan brillante como las estrellas."
+ trait_G_after:0 "Núcleo de Numerología"
+ trait_G_after_desc:0 "Un núcleo que ha evolucionado y se ha desarrollado por sí mismo a lo largo de milenios, y que produce un aura casi idéntica a la de los estudiantes."
+ leader_trait_commander_fe:0 "Ocultamiento"
+ leader_trait_commander_fe_desc:0 "Para proteger la seguridad de la comandante del frente, el Pionero le ha implantado equipos anti-detección, lo que impide que nadie pueda conocer su verdadera identidad."
+ leader_trait_councilor_fe:0 "Testigo"
+ leader_trait_councilor_fe_desc:0 "La cooperación del grupo se garantiza mediante contratos, y los Testigos son quienes, dentro del colectivo de la voluntad del grupo, actúan como garantes de dichos contratos."
+
+
+
+
+ gov_Kivotos_country:0 "Sistema Federal Académico"
+ gov_Kivotos_country_desc:0 "Cada academia ejerce una gran autonomía, pero también existe una organización de gobierno centralizada, el 'Consejo Estudiantil Federal'."
+ auth_kivotos:0 "Sistema Federal Académico"
+ auth_kivotos_desc:0 "Kivotos es una federación compuesta por numerosas academias. Cada academia ejerce una gran autonomía, pero está sujeta a la jurisdicción unificada del Consejo Estudiantil Federal."
+ auth_kivotos_tooltip:0 "Sin inclinación material o espiritual"
+ auth_kivotos_tag_1:0 "Puedes elegir una §CIdea Cívica de Nivel Académico§!, o la Idea Cívica: §R$civic_BA_Omnia_Vanitas$§!."
+ auth_kivotos_tag_2:0 "La §CIdea Cívica de Nivel Académico§! no proporciona puestos en el Gabinete, pero puede obtener poderosos beneficios a través de las §BIdeas Académicas§!."
+ auth_kivotos_tag_3:0 "§R$civic_BA_Omnia_Vanitas$§! puede, tras desvelar su velo, transformar formas de vida alienígenas en recursos como £sr_keystone£§Y$sr_keystone$§!."
+ scripted_student_federal_president:0 "Presidente del Consejo Estudiantil Federal"
+
+ councilor_ruler_kivotos:0 "Presidente del Consejo Estudiantil Federal"
+ councilor_ruler_kivotos_desc:0 "Líderes de los distintos departamentos bajo la jurisdicción del Consejo Estudiantil Federal."
+ councilor_ruler_kivotos_male:0 "Presidente del Consejo Estudiantil Federal"
+ councilor_ruler_kivotos_female:0 "Presidente del Consejo Estudiantil Federal"
+ councilor_ruler_kivotos_pr:0 "Testigo Principal"
+ councilor_ruler_kivotos_pr_desc:0 "Puesto establecido para presenciar públicamente los acuerdos y contratos establecidos entre los estudiantes."
+
+
+#指针悬停政府类型时显示的内容
+ KIVOTOS_STUDENTS:0 "El imperio se autogobierna de forma federal por los estudiantes."
+ MOD_AUTHORITIES_LIMIT:0 "§RLa mayoría del contenido del mod Blue Archive solo se activará al usar este tipo de gobierno§!"
+ PROJECT_LIMITIED:0 "§YSe recomienda encarecidamente usar§! Kivotos §Ycomo sistema inicial al empezar§!"
+
+
+#国民理念
+ civic_BA_Kivotos:0 "Armas de Fuego, Chicas, Juventud"
+ civic_BA_Kivotos_desc:0 "Como es bien sabido, Kivotos es un lugar lleno de 'virtud marcial' (¡es decir, robos a bancos!). Por lo tanto, ya somos muy hábiles en el uso de armas, pero esto también nos ha traído inestabilidad interna."
+ civic_BA_guild_region:0 "Distrito Autónomo Gremial"
+ civic_BA_guild_region_desc:0 "Adoptando la experiencia de las grandes academias, las alianzas autoconstituidas entre gremios se utilizan como una base importante para la división entre y dentro de las regiones autónomas."
+ civic_BA_info_net:0 "Red de Información de Grafitis"
+ civic_BA_info_net_desc:0 "Una red de inteligencia adoptada oficialmente para guiar las inversiones y evitar a los piratas. El llamado 'grafiti' no es una descripción del principio, sino la firma del autor original."
+ civic_BA_federal_actuaries:0 "Actuaría del Club de Apoyo"
+ civic_BA_federal_actuaries_desc:0 "Integra parte de los flujos de fondos de cada academia en el Consejo Estudiantil Federal para lograr una supervisión mutua, además de servir para ahorrar personal y gastos."
+ civic_BA_digital_basis:0 "Punto de Apoyo Digitalizado"
+ civic_BA_digital_basis_desc:0 "Desarrollados a partir de métodos tradicionales, los Basis Schola, que sirven tanto como puestos de socorro como fortificaciones, se distribuyen por todo el distrito autónomo."
+ civic_BA_digital_basis_tip:0 "Genera 1 £defense_army£ unidad defensiva por cada 3 £pop£ de población." #作废
+ civic_one_school_only:0 "Solo se puede tener una §CIdea Nacional de Academia§!"
+ civic_Omnia_Vanitas_only:0 "No se pueden tener otras §CIdeas Nacionales de Academia§! si se tiene §R$civic_BA_Omnia_Vanitas$§!"
+ civic_SI_Abydos:0 "Escuela Preparatoria Abydos"
+ civic_SI_Abydos_desc:0 "Mucho antes de la era FTL, Abydos ya había completado la terraformación de su distrito autónomo. Nadie está más familiarizado con este proceso que ellas."
+ civic_SI_Millennium:0 "Academia de Tecnología Millennium"
+ civic_SI_Millennium_desc:0 "Cuando se habla del centro de la tecnología en Kivotos, siempre se refiere a Millennium, y en toda la galaxia, también será Millennium."
+ civic_SI_Trinity:0 "Academia Integral Trinity"
+ civic_SI_Trinity_desc:0 "El Primer Concilio nos unió, y el Tratado del Edén nos guiará hacia una orilla luminosa."
+ civic_SI_Gehenna:0 "Academia Gehenna"
+ civic_SI_Gehenna_desc:0 "El orden nace del caos, y el fuego no se extingue."
+ civic_SI_tip:0 "Permite activar una §BIdea de Academia§! para la academia correspondiente, obteniendo potentes beneficios únicos."
+ civic_SI_mod:0 "Este ideal nacional solo se puede añadir manualmente al inicio del juego si no se tiene ninguna §CIdea Nacional de Academia§! ni §R$civic_BA_Omnia_Vanitas$§!. No se puede eliminar manualmente después de que el juego ha comenzado."
+ civic_BA_Omnia_Vanitas:0 "Todo es Vanidad"
+ civic_BA_Omnia_Vanitas_desc:0 "Vanitas Vanitatum, Et Omnia Vanitas."
+ civic_BA_Omnia_Vanitas_effects:0 "\nEsta idea se considera una §CIdea Nacional de Academia§!\nSe puede activar cualquier §BIdea de Academia§! a elección\n\nNos ocultamos bajo el velo.\nEl casus belli §Y$purge_Sacrifice$§! puede levantar el velo. Una vez levantado el velo:\nLa §YPoblación Orgánica Extranjera§! será purificada\nLa purificación de la población £pop£ extraña otorgará £sr_keystone£§YPiedras de Fabricación§!\n\n"
+ civic_emergency:0 "Ley de Medidas de Emergencia Federal"
+ civic_emergency_desc:0 "Para responder a eventos repentinos de gran escala, el Consejo Estudiantil Federal requiere que cada academia prepare varios equipos de respuesta de emergencia listos para ser desplegados en cualquier momento."
+ civic_BA_explore:0 "Agencia Federal de Exploración Estelar"
+ civic_BA_explore_desc:0 "¡Nuestra travesía es el mar de estrellas! Contemplando miles de millones de estrellas en la galaxia, un año más de lucha por el dominio estelar."
+
+
+
+#起源
+ origin_Kivotos_Eden_treaty:0 "Tratado del Edén"
+ origin_Kivotos_Eden_treaty_desc:0 "Para resistir un ataque a gran escala lanzado contra nosotros, firmamos el Tratado del Edén con la ayuda de una persona de confianza. La recién formada Federación de Academias, tras varios años de conflicto, sufrió pérdidas extremadamente graves en nuestro planeta natal. Mientras tanto, valientes e inteligentes estudiantes lograron analizar la tecnología de viaje hiperespacial a partir de los restos de naves espaciales.\nAun cuando la reconstrucción del planeta natal no se ha completado, debemos protegernos de las amenazas en el espacio profundo, por lo que decidimos emprender ambas tareas simultáneamente."
+ origin_Kivotos_Eden_treaty_effects:0 "-Comienza el juego con un planeta natal con bloques parcialmente dañados; por favor, completa la reconstrucción lo antes posible.\n§R-El líder inicial seleccionado en la pantalla de creación de país será reemplazado.§!"
+
+ origin_Kivotos_Kyrie:0 "A los Dioses Olvidados"
+ origin_Kivotos_Kyrie_desc:0 "Una vez tuvimos una tierra pura, donde nos encontramos, lloramos juntos y reímos juntos.\nSin embargo, con odio, pisoteamos con nuestras propias manos esa tierra sagrada, convirtiéndola en un mar de fuego. Sin lugar a donde volver, sin nadie en quien apoyarnos, vagamos en silencio entre las ruinas, anhelando el calor de antaño.\nNadie hubiera imaginado que la Vía Láctea, a la que solo mirábamos en momentos de tristeza, se convertiría en nuestro nuevo hogar."
+ origin_Kivotos_Kyrie_effects:0 "-Comienza con un planeta natal que es un mundo arruinado de ciudad-academia; el desarrollo de las ruinas causará desastres.\n§R-Necesitas completar la reconstrucción del planeta de la ciudad-academia antes de que la situación sea irreversible, o de lo contrario...§!"
+
+ origin_Kivotos_Unnamed_starting:0 "Punto de Partida Sin Nombre"
+ origin_Kivotos_Unnamed_starting_desc:0 "Perdimos nuestro hogar en aquella guerra, pero luchamos con tenacidad en el espacio y finalmente echamos raíces. Dejando atrás el dolor, reconstruimos una nueva forma de ciudad-academia y, finalmente, obtuvimos la última pieza del rompecabezas del futuro. Desde este punto de partida lleno de milagros, recuperaremos nuestro hogar y nos dirigiremos hacia las estrellas."
+ origin_Kivotos_Unnamed_starting_effects:0 "-Comienza en un ['concept_auto_habitat'] en lugar de un planeta natal.\n-Empieza con las tecnologías para construir y mejorar ['concept_auto_habitat'].\n§R-Único a nivel global; los demás jugadores serán reemplazados por el origen §Y$origin_Kivotos_Eden_treaty$§R.\n-Este origen aún está incompleto, por favor, elije con cautela.§!"
+
+
+
+#物种增长
+
+
+#
+ BA_Shittem.3002.name:0 "Aris"
+ BA_Shittem.3002.desc:0 "(Poco después de presentar la solicitud, dos extrañas chicas vestidas con el uniforme de la §BAcademia de Tecnología Millennium§! irrumpieron en la oficina.)"
+ BA_Shittem.3002.a:0 "¿Quiénes sois?"
+ BA_Shittem.3002.a.re:0 "§W“Soy Noah Ushio del Seminario, lamento mucho la interrupción... o quizás debería decir que hace tiempo que no nos veíamos, Sensei. Ella es Aris Tendou del Departamento de Desarrollo de Juegos, y esta vez, debido a esta solicitud, hemos estado dando vueltas y vueltas, por lo que creo que deberíamos presentarle un informe.”§!\n\n§B“¡Sensei, gracias por patrocinar el trabajo de la Academia de Tecnología Millennium! Aris Tendou, la valiente que asume la misión de salvar... ¡y también el prototipo de este experimento con robots!”§!"
+ BA_Shittem.3002.b:0 "...Hola, Aris, Noah."
+ BA_Shittem.3002.b.re:0 "§W«Antes, en la Academia de Ciencia Millennium, estábamos muy interesados en la tecnología que dio vida a Aris, así que intentamos escanearla y analizarla, logrando aplicar ingeniería inversa a algunas tecnologías clave que actualmente no podemos resolver. Gracias a su ayuda, hemos creado muchos prototipos y plantillas, pero su nivel de inteligencia está lejos de compararse con el de Aris...\nAhora necesitamos recopilar muchísimos datos para optimizar la inteligencia de los modelos de producción masiva, y la forma de hacerlo es que Aris realice varios trabajos... Profesor, ¿qué le parece?»§!"
+ BA_Shittem.3002.c:0 "¿Qué tal ir al Consejo Estudiantil Federal? El Departamento de Coordinación seguramente te dará una cálida bienvenida."
+ BA_Shittem.3002.c.re:0 "§B«¡Bip-bop-kapow! ¡Aris ha aceptado una nueva misión, Aris se esforzará mucho para ayudar!»§!\n\n\n(Puedes asignar a Aris a otros puestos en la página \"Reserva de Líderes - Chicas Robot\")"
+ Aris_joined:0 "Aris se ha convertido en líder científica."
+
+ BA_Shittem.3010.name:0 ""
+ BA_Shittem.3010.desc:0 "Profesor, ¡gracias por patrocinar el trabajo de la Academia de Ciencia Millennium! Tendou Aris, la valiente que carga con la misión de salvación...\n¡y también el prototipo de este experimento con robots!"
+ AoharuUI.common_btn.none:0 ""
+
+ name_list_ArisName:0 "Aris"
+ name_list_ArisPrName:0 "Aris la Pionera"
+
+ BA_Shittem.3003.name:0 "Comunicación: Aris"
+ BA_Shittem.3003.desc.normal.a:0 "Mmm... El nivel de Aris todavía no es suficiente, necesita más puntos de experiencia..."
+ BA_Shittem.3003.desc.scientist.a:0 "«...»\n(Calculando)"
+ BA_Shittem.3003.desc.governor.a:0 "...¡Ah, jajaja, archivos, archivos!... ¡Muchísimos archivos, archivos interminables!..."
+ BA_Shittem.3003.desc.admiral.a:0 "¡Yuzu-go, adelante a toda velocidad! Eh, ¿no se puede jugar así...? Aris lo entiende..."
+ BA_Shittem.3003.desc.general.a:0 "¡Todos, prepárense, Stand by for Aris-fall! La próxima vez, Aris aterrizará en un planeta así y dirá '¡Oh, Luz!', ¡seguro será muy divertido!"
+ BA_Shittem.3003.exit:0 "Regresar"
+ Aris_cooldown:0 "Tiempo en el cargo demasiado corto"
+ Aris_reload:0 "(Si ocurre un error, cualquier operación que requiera leer la lista de líderes lo solucionará)"
+ Aris_to_scientist:0 "Al final, Aris es más adecuada para el trabajo de investigación, ¿no crees?"
+ Aris_to_scientist.re:0 "«¡Aris ha aceptado el encargo del Gran Sabio y ha obtenido nuevo equipamiento, la 'Nave de Investigación'! »\n\n$Aris_reload$"
+ Aris_to_governor:0 "¿Qué tal será la habilidad de Aris para los asuntos administrativos...?"
+ Aris_to_governor.re:0 "«¡Los juegos de gestión son súper divertidos, Aris está muy emocionada!»\n\n$Aris_reload$"
+ Aris_to_official:0 "¿Qué tal será la habilidad de Aris para los asuntos administrativos...?"
+ Aris_to_official.re:0 "«¡Los juegos de gestión son súper divertidos, Aris está muy emocionada!»\n\n$Aris_reload$"
+ Aris_to_admiral:0 "¿Podrá Aris manejar la comandancia de flotas y cosas así?"
+ Aris_to_admiral.re:0 "«¡Sensores conectados, sistema de armas con enfriamiento normal! ¡Aris, en óptimas condiciones!»\n\n$Aris_reload$"
+ Aris_to_general:0 "El combate terrestre será pan comido para Aris, ¿verdad?"
+ Aris_to_general.re:0 "«¡Protocolo, mantener la misión! ¡Aris ha obtenido nuevas tropas!»\n\n$Aris_reload$"
+ Aris_to_commander:0 "Comandar operaciones será pan comido para Aris, ¿verdad?"
+ Aris_to_commander.re:0 "«¡Protocolo, mantener la misión! ¡Aris ha obtenido nuevas tropas!»\n\n$Aris_reload$"
+ Aris_to_matrix:0 "(Quizás esta chica podría servir para la minería...)"
+ Aris_to_matrix.re:0 "«¿Mi... minería, qué es eso?\n... ¿Operación de hash? ¡Aris lo entiende, Aris es la mejor calculando, déjemelo a mí!»\n\n$Aris_reload$"
+
+
+ PRESCRIPTED_species_name_ba_fe_1:0 "Estudiante de Kivotos"
+ PRESCRIPTED_species_plural_ba_fe_1:0 "Estudiantes de Kivotos"
+ DokiDoki_ministry_of_interior:0 "Departamento de Asuntos Internos Palpitante"
+ EMPIRE_DESIGN_ba_fe_1:0 "Grupo Gacha del Demonio Azul"
+ PRESCRIPTED_adjective_ba_fe_1:0 "Grupo Gacha del Demonio Azul"
+ NAME_ba_fe_sun_rising:0 "Sol Naciente"
+ NAME_ba_fe_horizon:0 "Horizonte"
+
+ gov_ba_fe:0 "Colectividad de Voluntad Unificada"
+ gov_ba_fe_desc:0 "Un sistema surgido de la Federación de Academias.§B\n«Nos da el vino del amor, amigos para vivir y morir; \nHace que todos compartan la alegría, y los ángeles cantan en voz alta con ella.»§!"
+ auth_kivotos_pr:0 "Régimen de Voluntad Colectiva Independiente"
+ auth_kivotos_pr_desc:0 ""
+ personality_ba_fallen_empire_01:0 "Vanguardistas Rebeldes"
+ personality_ba_fallen_empire_01_desc:0 "¡Las rebeldes que recuperaron la libertad de las manos de sus opresores y llevaron la tecnología y la cultura a su apogeo! Están encantadas de ofrecer todo tipo de ayuda a las generaciones futuras."
+ personality_ba_awakened_fallen_empire_01:0 "Observadoras Sublime"
+ personality_ba_awakened_fallen_empire_01_desc:0 "¡Precursoras que encarnan su antigua gloria, ayudando a la galaxia a superar sus crisis!"
+
+ civic_ba_fe:0 "Observadoras del Más Allá"
+ civic_ba_fe_desc:0 "Aunque sienten compasión por su propia especie, creen que no deben interferir demasiado en este universo."
+ civic_ba_awakened_fe:0 "Agitadoras de la Cúspide"
+ civic_ba_awakened_fe_desc:0 "Creen que el desarrollo del universo ha perdido el rumbo y que deben tomarse medidas contra los seres inteligentes en este universo para corregir su curso."
+ civic_ba_awakened_fe_advance:0 "$civic_ba_awakened_fe$"
+ civic_ba_awakened_fe_advance_desc:0 "$civic_ba_awakened_fe_desc$"
+ origin_ba_fallen_empire:0 "Linaje de Eruditas"
+ origin_ba_fallen_empire_desc:0 "Un imperio fundado por las rebeldes. Heredaron la altivez de sus opresores y llevaron todo lo que tuvieron a su alcance a la cima."
+ origin_ba_fe_effect:0 "Sin efecto"
+
+ personality_ba_fallen_empire_02:0 "personality_ba_fallen_empire_02"
+ personality_ba_fallen_empire_02_desc:0 "personality_ba_fallen_empire_02_desc"
+ personality_ba_awakened_fallen_empire_02:0 "personality_ba_awakened_fallen_empire_02"
+ personality_ba_awakened_fallen_empire_02_desc:0 "personality_ba_awakened_fallen_empire_02_desc"
+
+ BA_FE_FLEET:0 "Flota Precursora"
+ 
+###############################
+#堕落帝国首领称呼
+ PRESCRIPTED_ruler_title_ba_fe:0 "Testigo"
+ PRESCRIPTED_ruler_ba_fe:0 "Testigo"
+

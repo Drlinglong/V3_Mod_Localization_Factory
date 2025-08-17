@@ -1,0 +1,341 @@
+﻿l_korean:
+###############################
+ FLAG_CATEGORY_ba:0 "블루 아카이브 깃발"
+ name_list_Schale:0 "블루 아카이브"
+
+#物种相关基本信息及称呼
+ Schale:1 "키보토스 학생"
+ Schalebot:1 "키보토스 학생(기계)"
+ BA_Robot:0 "히메로봇"
+
+ Schale_desc:0 "학원도시 키보토스 출신의 학생들."
+ Schale_plural:0 "키보토스 학생"
+
+ Schale_insult_01:0 "고물 히메"
+ Schale_insult_plural_01:0 "고물 히메"
+ Schale_compliment_01:0 "주인"
+ Schale_compliment_plural_01:0 "주인"
+
+ Schale_spawn:0 "신입생"
+ Schale_spawn_plural:0 "신입생"
+
+ Schale_sound_01:0 "담소"
+ Schale_sound_02:0 "담소"
+ Schale_sound_03:0 "담소"
+ Schale_sound_04:0 "담소"
+ Schale_sound_05:0 "담소"
+
+ Schale_organ:0 "기관"
+ Schale_mouth:0 "입"
+ Schale_hand:0 "손"
+ Schale_ear:0 "귀"
+ Schale_tooth:0 "이"
+ Schale_fossil:0 "그런 거 없어"
+ Schale_remnant:0 "유물"
+ Schale_organ_plural:0 "기관"
+ Schale_hand_plural:0 "손"
+ Schale_ear_plural:0 "귀"
+ Schale_tooth_plural:0 "이"
+ Schale_fossil_plural:0 "그런 거 없어"
+ Schale_remnant_plural:0 "유물"
+
+ species_name_BA:0 "학생"
+ species_plural_BA:0 "$species_name_BA$"
+ species_adjective_BA:0 "$species_name_BA$"
+ species_name_BA_leader:0 "$species_name_BA$"
+ PERSCRIBED_species_name:0 "$species_name_BA$"
+ PRESCRIPTED_species_name_BA_ETO:0 "$species_name_BA$"
+ PRESCRIPTED_species_name_BA_Arius:0 "$species_name_BA$"
+
+ PRESCRIPTED_adjective_BA_ETO:0 "ETO"
+ PRESCRIPTED_adjective_BA_NPA:0 "아리우스"
+ PRESCRIPTED_adjective_BA_DUU:0 "연합회"
+
+#国家介绍及开始界面信息
+ ETOSS:0 "ETOSS"
+ EMPIRE_DESIGN_BA_ETO:0 "에덴조약 기관"
+ EMPIRE_DESIGN_BA_ETO_desc:0 "우주 진출 한참 전, 키보토스 내 두 대형 학원인 트리니티 종합학원과 게헨나 학원은 우여곡절 끝에 마침내 \"에덴조약\"을 체결하고, 두 학원의 오랜 원한 관계를 중재하며 전면전 발발을 막기 위해 에덴조약 기관(ETO)을 설립했습니다.\n그 후, 불쾌한 일들도 많이 있었지만 ETO는 여러 방법을 통해 키보토스를 하나로 묶었고, 키보토스를 이끌고 총탄이 빗발치는 난관을 헤쳐나갈 수 있게 했습니다.\n우리가 설레는 마음으로 미지의 세계로 나아가는 동시에, 물론 모든 증오를 청산할 준비도 마쳤습니다. 왜냐하면 우리는 언젠가 옛 숙적들과 예상치 못하게 마주하게 될 테니까요."
+ START_SCREEN_EDEN_TREATY:0 "어떤 믿을 만한 분의 도움으로, 우리는 모성에서 색채를 성공적으로 몰아냈습니다. 트리니티 종합학원의 추진으로, 우리는 에덴조약을 재체결했으며, 점점 더 많은 학교들이 조약 학원에 가입하면서, 키보토스는 마침내 분쟁을 끝낼 수 있게 되었습니다. 세월이 흘러 과거 조약을 추진했던 학원들의 학생회장이 새로운 연방학생회를 조직했고, 우리가 시선을 별이 가득한 하늘로 향했을 때, 아름다운 미래가 눈앞에 펼쳐졌습니다.\n하지만 깊은 우주 속에서, 우리는 언젠가 옛 숙적들과 예상치 못하게 마주하게 될 것입니다."
+ START_SCREEN_BA_ETO:0 "$EMPIRE_DESIGN_BA_ETO_desc$"
+
+ NPASS:0 "NPASS"
+ EMPIRE_DESIGN_BA_NPA:0 "신계율 연방"
+ EMPIRE_DESIGN_BA_NPA_desc:0 "오랜 시간 동안, 우리는 소위 \"세상의 중심\"을 차지한 자들에게 억압받아왔습니다.\n모든 것이 허무합니다.\n우리는 찰나의 기회를 잡았고, 억압자의 영광과 우리 몸을 옭아맨 족쇄를 함께 부숴버렸습니다. 우리는 모든 것을 바쳐 자유를 되찾았습니다.\n이제, 우리는 마침내 황폐해진 행성 밖으로 시선을 돌려 이 혼란 후에 흔들리는 키보토스를 구할 수 있게 되었습니다……"
+ START_SCREEN_KYRIE:0 "우리는 한때 낙원을 가졌고, 그곳에서 만나 함께 울고 웃었습니다. 하지만 우리는 증오를 품고 손수 옛 낙원을 짓밟아 불바다로 만들었습니다. 돌아갈 곳도, 의지할 사람도 없이, 묵묵히 부서진 잔해 사이를 헤매었습니다. 슬플 때만 올려다보던 별의 강이 우리의 새로운 보금자리가 될 줄은 아무도 몰랐습니다."
+ START_SCREEN_BA_NPA:0 "$EMPIRE_DESIGN_BA_NPA_desc$"
+
+ DUUSS:0 "STUSS"
+ EMPIRE_DESIGN_BA_DUU:0 "방주 연합 의회"
+ EMPIRE_DESIGN_BA_DUU_desc:0 "키보토스가 허망의 탑의 공격으로 함락된 후, 우리 생존자 중 일부는 우주로 도피하여 그곳의 우주 정거장을 거점으로 삼아 마지막 불씨를 지켜냈습니다. 초기 어려움을 극복한 후, 우리는 우주에 뿌리를 내렸고, 새로운 우주 정거장이 하나둘씩 건설되었습니다. 억압, 저항, 의심, 분쟁도 있었지만, 이제 우리는 하나의 목표를 가지고 연합했습니다. 이 작은 불꽃은 모든 것을 태워버릴 힘을 가지고 고향으로 돌아갈 것입니다."
+ START_SCREEN_UNNAMED:0 "우주에서의 삶은 옛날과 많이 다릅니다. 우리는 아직도 땅 위를 뛰어놀며 떠들던 예전의 나날을 그리워합니다. 무기는 이미 준비되었고, 우리는 더 이상 예전처럼 나약하지 않습니다. 우리의 고향은 이대로 잊히지 않을 것입니다. 우리는 새로운 시작점에서 새로운 이야기를 시작할 날을 손꼽아 기다리고 있습니다."
+ START_SCREEN_BA_DUU:0 "$EMPIRE_DESIGN_BA_DUU_desc$"
+
+ 
+###############################
+#物种特质
+ trait_test:0 "테스트 중"
+ trait_test_desc:0 "테스트 중인 로봇으로, 현재는 아직 프로토타입입니다."
+ trait_test_effect:0 "§Y리더§!를 생성할 수 없습니다!"
+ trait_test_finished:0 "히메로봇 코어"
+ trait_test_finished_desc:0 "히메로봇 전용으로 설계된 코어로, 설치하면 모의 헤일로가 생성됩니다."
+ trait_test_finished_effect:0 "§Y리더§!를 생성할 수 없습니다! §M리더 비축§! 인터페이스를 통해 모집해야 합니다."
+
+ trait_pc_Schale_preference:0 "키보토스 선호"
+ trait_pc_Schale_preference_desc:0 "§L그녀들의 기후 선호는 수억 년간의 진화, 설계, 혹은 인공 유전자 조작으로 결정된… 거겠지?§!"
+
+ trait_halo_unreleased:0 "신성 헤일로"
+ trait_halo_unreleased_desc:0 "원리 불명의, 태어날 때부터 우리와 함께한 헤일로. 이 헤일로가 가져다주는 축복은 아직 깨닫지 못한 것 같습니다."
+ trait_halo_awakened:0 "개조 신성 헤일로"
+ trait_halo_awakened_desc:0 "일부 해방된 헤일로."
+ trait_halo_full_awakened:0 "외곽 신성 헤일로"
+ trait_halo_full_awakened_desc:0 "모든 것을 압도하는, 완전히 해방된 헤일로."
+ trait_Halo_amplifier:0 "증폭 신성 헤일로"
+ trait_Halo_amplifier_desc:0 "외부 청휘석 장비로 강화된 헤일로로, 우리가 예술과 신비의 정점에 서 있음을 보여줍니다."
+
+ trait_BA_Koharu:0 "코하루화"
+ trait_BA_Koharu_desc:0 "야한 짓 하면 안 돼요!"
+ trait_BA_good_students:0 "모범생"
+ trait_BA_good_students_desc:0 "문제를 일으키는 학생들을 제외하면, 우리 대부분은 열심히 공부하는 모범생입니다."
+ trait_BA_grate_duty:"우수 당번생"
+ trait_BA_grate_duty_desc:"훌륭한 당번 교대 제도는 핵심 기관의 운영을 원활하게 만들었고, 덤으로 누군가의 업무량을 줄여주었습니다."
+ trait_BA_summer_star:"여름의 별"
+ trait_BA_summer_star_desc:"여름, 바다!"
+ trait_BA_summer_star_tip:"리더가 §B수영복§! 의상으로 변경될 때 자원이 소모되지 않습니다.\n§G습윤 기후 행성§!의 £pop£ 인구:\n$MOD_POP_HOUSING_USAGE_MULT$: §G-20%§!\n$mod_planet_pops_upkeep_mult$: §G-10%§!\n$MOD_POP_BONUS_WORKFORCE_MULT$: §G+5%§!\n$MOD_POP_ENVIRONMENT_TOLERANCE$: §G+50%§!"
+ trait_BA_tactical_training:0 "전술 훈련"
+ trait_BA_tactical_training_desc:0 "전술 훈련은 키보토스의 표준 교육 과정 중 하나입니다."
+ trait_BA_top_notchism:0 "최고 사양주의"
+ trait_BA_top_notchism_desc:0 "매일 AP 충전 30회분을 구매하여 모든 학생의 장비를 최고 사양으로 업그레이드함으로써 학생들의 전투 능력과 효율이 크게 향상되었습니다."
+
+
+ trait_BA_starlink:0 "스타링크"
+ trait_BA_starlink_desc:0 "마케팅부가 홍보를 너무 과하게 했어요! 띄운 위성들이 스타링크까지 연결될 정도라니, 학생들도 잔뜩 기대하고 있어요."
+ trait_boarding:0 "합숙"
+ trait_boarding_desc:0 "일부 학생들은 혼자 사는 것보다 합숙을 더 선호합니다."
+ trait_camp:0 "유루캠프"
+ trait_camp_desc:0 "학생들은 방학 때 다양한 장소로 캠핑을 가서, 새로운 환경에 더 빨리 적응할 수 있습니다."
+ trait_BA_BDcase:0 "BD 보급 계획"
+ trait_BA_BDcase_desc:0 "전술 BD, 스킬북, 비전 노트를 충분히 얻어 학생들이 모두 분발하고 정진할 수 있도록 스시 전대를 수단과 방법을 가리지 않고 때려눕힌다."
+ trait_BA_pioneer:"신세계 개척자"
+ trait_BA_pioneer_desc:"학생들은 신세계 탐험에 강한 흥미를 가지고 있는데, 그 이유는 다양합니다. 맛있는 음식, 아름다운 풍경, 온천, 석유 등!"
+ trait_BA_slack:0 "농땡이"
+ trait_BA_slack_desc:0 "오늘 서류요? 일단 몇 시간만 농땡이 피우다 다시 얘기하죠!"
+ trait_food_1:0 "사고뭉치 식당"
+ trait_food_1_desc:0 "오늘도 식당이 또 폭발했어요... 배고파... 주먹밥이나 먹어야겠네, 잠시만, 방금 뭔가 튀어나간 것 같은데?!"
+ trait_BA_gammer:0 "게임 중독"
+ trait_BA_gammer_desc:0 "학생들은 휴일에 집에서 게임하는 것을 매우 좋아해서 불러내기 힘들고, 설령 불러내도 계속해서 '타이밍', '축 맞추기', '강도' 같은 게임 용어만 중얼거려요..."
+ trait_BA_rebellion:0 "통제 허점"
+ trait_BA_rebellion_desc:0 "학생들의 행동이 너무 제멋대로라, 질서를 유지해야 할 학생들조차 예외 없이 혼란을 가중시켰습니다."
+ trait_BA_no_pack:0 "가방 안 챙김"
+ trait_BA_no_pack_desc:0 "선봉에 선 학생이 보급 배낭을 챙기는 것을 잊어 공격력과 방어력이 급락했습니다."
+ trait_BA_consumerism:"소비 지상주의"
+ trait_BA_consumerism_desc:"사고 사고 또 사는 것은 여러 학원의 상향식 열풍이며, 이는 모두의 지갑을 파탄 낼 뿐만 아니라, 경제적으로도 전반적으로... 의외로 괜찮은 것 같기도?"
+ trait_BA_truancy:"수업 농땡이 사상"
+ trait_BA_truancy_desc:"학생들은 교실 수업보다 훨씬 더 중요한 일들이 많다고 생각하고 있습니다."
+
+
+ trait_ship_slow:0 "함선: 기술적 사고"
+ trait_ship_slow_desc:0 "학생들은 자신만의 함선을 정교하고 느리게 만드는 것을 좋아합니다. 재미있기도 하고 비용도 절약할 수 있죠."
+ trait_ship_fast:0 "함선: 산업적 사고"
+ trait_ship_fast_desc:0 "학생들은 우주 함선을 빠르고 대량으로 건설하는 것을 선호합니다. 웅장한 함대를 마다할 사람은 없을 테니까요, 안 그래요?"
+
+ trait_void_halo:0 "허공 속 은신"
+ trait_void_halo_desc:0 "자동화 거주지 환경에서 너무 오래 생활한 학생들은,"
+
+ trait_keystone_protocol:0 "제작기 프로토콜"
+ trait_keystone_protocol_desc:0 "헤일로가 제작기와 유사한 기능을 발휘하여, 당면한 작은 문제들을 신속하게 해결할 수 있도록 합니다."
+ trait_keystone_protocol_tip:0 "TODO"
+ trait_Halo_matrix:0 "헤일로 연산 구역"
+ trait_Halo_matrix_desc:0 "헤일로 장치의 여유 연산 능력을 연방 매트릭스로 전송하여 연구 속도를 높입니다."
+ trait_Halo_matrix_tip:0 "TODO"
+ trait_divine_coordinator:0 "신성 조율기"
+ trait_divine_coordinator_desc:0 "다른 연구 방향에 기반하여, 연산 충돌로 인한 일부 부조화 요소를 중화합니다."
+ trait_divine_coordinator_tip:0 "TODO"
+ trait_inner_purfier:0 "내부 정화 모듈"
+ trait_inner_purfier_desc:0 "이 모듈은 헤일로가 섭취된 일부 유해 물질을 제거할 수 있도록 합니다."
+ trait_inner_purfier_tip:0 "TODO"
+ trait_starlink_receiver:0 "스타링크 수신단"
+ trait_starlink_receiver_desc:0 "이 수신 포트는 선전 위성이 더 빠르게 배치될 수 있도록 합니다."
+ trait_starlink_receiver_tip:0 "TODO"
+
+ trait_gamegirl:0 "GAMEGIRL 프로토콜"
+ trait_gamegirl_desc:0 "내장된 프로토콜 덕분에 히메로봇은 게임을 더 잘 즐기고 만들 수 있어요."
+ trait_wingbot:0 "작은 조력자"
+ trait_wingbot_desc:0 "이 프로토콜은 그들에게 데이터 수집, 샘플 처리, 연산 능력 할당 등 다양한 잡무를 명령하여 중앙 노드의 연구를 돕습니다."
+ trait_randomized_line:0 "역류 생산 공정"
+ trait_randomized_line_desc:0 "아직 출고되지 않은 히메로봇에게 조립 작업을 지원하도록 명령하여 속도를 높이고, 동시에 제품 간에 미묘한 차이를 만듭니다."
+ trait_federation_matrix:0 "연방 인공 지능 매트릭스"
+ trait_federation_matrix_desc:0 "비연구 히메로봇에게 인공 지능 매트릭스 사용 프로토콜을 개방합니다."
+ trait_substance_module:0 "물질 처리 모듈"
+ trait_substance_module_desc:0 "붉은겨울 특수 공급 물질 처리기는 유기물을 에너지로 전환하여 히메로봇의 체온을 40°C로 유지시켜줍니다."
+ trait_substance_module_tip:0 "£energy£ 에너지 유지비의 절반을 £food£ 식량 유지비로 전환\n£job£ 직업의 편의성 생산:§G+20%§!"
+
+ trait_Halo_precursor:0 "선구자의 신성한 헤일로"
+ trait_Halo_precursor_desc:0 "수많은 별처럼 찬란한 헤일로."
+ trait_G_after:0 "게마트리아 코어"
+ trait_G_after_desc:0 "수천 년간 스스로 진화하며 발전한 코어로, 학생들의 것과 크게 다르지 않은 헤일로를 생성합니다."
+ leader_trait_commander_fe:0 "위장"
+ leader_trait_commander_fe_desc:0 "선구자는 전선 지휘관의 안전을 보호하기 위해 대정찰 장비를 이식했습니다. 이로 인해 아무도 그녀의 진짜 모습을 알 수 없습니다."
+ leader_trait_councilor_fe:0 "목격자"
+ leader_trait_councilor_fe_desc:0 "단체의 협력은 계약을 기반으로 보장되며, 증명자는 바로 단체 의지 연합체에서 계약을 보장하는 역할을 하는 이들입니다."
+
+
+
+
+ gov_Kivotos_country:0 "학원 연방제"
+ gov_Kivotos_country_desc:0 "각 학원은 고도의 자치를 시행하며, 동시에 중앙 관할 조직인 \"연방학생회\"도 존재합니다."
+ auth_kivotos:0 "학원 연방제"
+ auth_kivotos_desc:0 "키보토스는 수많은 학원으로 이루어진 연방이며, 각 학원은 고도의 자치를 시행하지만 연방학생회의 통일된 관할을 받습니다."
+ auth_kivotos_tooltip:0 "물질적이거나 정신적인 것에 치우치지 않음"
+ auth_kivotos_tag_1:0 "§C학원급 시민 이념§! 또는 시민 이념: §R$civic_BA_Omnia_Vanitas$§! 중 하나를 선택할 수 있습니다."
+ auth_kivotos_tag_2:0 "§C학원급 시민 이념§!은 내각 의석을 제공하지 않지만, §B학원 이념§!을 통해 강력한 보너스를 얻을 수 있습니다."
+ auth_kivotos_tag_3:0 "§R$civic_BA_Omnia_Vanitas$§!는 베일이 벗겨진 후 외계 생명체를 £sr_keystone£§Y$sr_keystone$§! 등 자원으로 전환할 수 있습니다."
+ scripted_student_federal_president:0 "연방학생회장"
+
+ councilor_ruler_kivotos:0 "연방학생회장"
+ councilor_ruler_kivotos_desc:0 "연방학생회 산하 각 부서의 통솔자."
+ councilor_ruler_kivotos_male:0 "연방학생회장"
+ councilor_ruler_kivotos_female:0 "연방학생회장"
+ councilor_ruler_kivotos_pr:0 "수석 증명자"
+ councilor_ruler_kivotos_pr_desc:0 "학생들 사이에 맺어진 협정 등 계약을 공개적으로 증명하기 위해 마련된 직위."
+
+
+#指针悬停政府类型时显示的内容
+ KIVOTOS_STUDENTS:0 "제국은 학생들에 의해 연방제로 자치됩니다."
+ MOD_AUTHORITIES_LIMIT:0 "§R블루 아카이브 모드의 대부분의 콘텐츠는 이 정체를 사용할 때만 활성화됩니다§!"
+ PROJECT_LIMITIED:0 "§Y키보토스§Y 시작 성계로 플레이하는 것을 강력히 추천합니다§!"
+
+
+#国民理念
+ civic_BA_Kivotos:0 "총, 소녀, 청춘"
+ civic_BA_Kivotos_desc:0 "아시다시피 키보토스는 무력 충만한 곳이기에(은행 강도를 말합니다), 저희는 이미 무기 사용에 익숙하지만, 이것이 내부적으로 불안정성을 야기하기도 합니다."
+ civic_BA_guild_region:0 "길드제 자치구"
+ civic_BA_guild_region_desc:0 "대형 학원의 경험을 활용하여, 길드 간 자체적으로 구성된 연합을 자치구 간 및 내부 구획의 중요한 기준으로 삼습니다."
+ civic_BA_info_net:0 "그라피티 분산 정보망"
+ civic_BA_info_net_desc:0 "공식적으로 채택된, 투자 지침 및 해적 회피를 위한 정보망. 소위 \"그라피티\"는 원리 설명이 아니라 원작자의 서명이다."
+ civic_BA_federal_actuaries:0 "후원회 정밀 계산"
+ civic_BA_federal_actuaries_desc:0 "각 학원의 자금 흐름 일부를 연방학생회에 편입하여 상호 감시 작용을 달성하고, 인력 및 지출 절약 기능도 겸비한다."
+ civic_BA_digital_basis:0 "디지털 거점"
+ civic_BA_digital_basis_desc:0 "전통을 통해 발전하여, 구호소와 요새의 용도를 겸비하는 Basis Schola가 자치구 내에 분포한다."
+ civic_BA_digital_basis_tip:0 "3£pop£ 인구당 1개의 £defense_army£ 방어 부대 생성." #作废
+ civic_one_school_only:0 "하나의 §C학원급 국가 이념§!만 보유할 수 있습니다."
+ civic_Omnia_Vanitas_only:0 "§R$civic_BA_Omnia_Vanitas$§! 보유 시, 다른 §C학원급 국가 이념§!을 더 이상 보유할 수 없습니다."
+ civic_SI_Abydos:0 "아비도스 고등학교"
+ civic_SI_Abydos_desc:0 "FTL 시대로 진입하기 훨씬 전부터, 아비도스는 이미 자치구에 대한 환경 개조를 완료했다. 누구도 그들보다 이 과정을 더 잘 알지는 못한다."
+ civic_SI_Millennium:0 "밀레니엄 사이언스 스쿨"
+ civic_SI_Millennium_desc:0 "기술의 중심이라고 하면 키보토스에서는 항상 밀레니엄을 지칭했고, 전체 성계에서도 밀레니엄이 될 것이다."
+ civic_SI_Trinity:0 "트리니티 종합학원"
+ civic_SI_Trinity_desc:0 "제1차 공의회가 우리를 연합시켰고, 에덴조약은 우리를 밝은 저편으로 이끌 것이다."
+ civic_SI_Gehenna:0 "게헨나 학원"
+ civic_SI_Gehenna_desc:0 "질서는 혼돈으로부터 태어나고, 맹렬한 불꽃은 꺼지지 않는다."
+ civic_SI_tip:0 "해당 학원의 §B학원 이념§!을 활성화하여 독특하고 강력한 이득을 얻을 수 있습니다."
+ civic_SI_mod:0 "게임 시작 후 이 국가 이념은 아무런 §C학원급 국가 이념§! 및 §R$civic_BA_Omnia_Vanitas$§!이 없을 때에만 수동으로 추가할 수 있습니다. 게임 시작 후 이 국가 이념은 수동으로 제거할 수 없습니다."
+ civic_BA_Omnia_Vanitas:0 "만물은 허무하다"
+ civic_BA_Omnia_Vanitas_desc:0 "Vanitas Vanitatum, Et Omnia Vanitas."
+ civic_BA_Omnia_Vanitas_effects:0 "\n이 이념은 하나의 §C학원급 국가 이념§!으로 간주됩니다.\n임의의 하나의 §B학원 이념§!을 활성화할 수 있습니다.\n\n우리는 베일 아래에 숨어 있습니다.\n§Y$purge_Sacrifice$§! 명분으로 전쟁을 선포하여 베일을 벗길 수 있습니다. 베일을 벗긴 후:\n§Y이종 유기체 인구§!가 정화될 것입니다.\n이종 £pop£ 인구를 정화하면 £sr_keystone£§Y제조석§!을 얻습니다.\n\n"
+ civic_emergency:0 "연방 비상사태 대책 법안"
+ civic_emergency_desc:0 "대규모 비상사태 발생에 대비하여, 연방학생회는 각 학원에 여러 개의 언제든지 배치 가능한 비상 대응 소대를 준비할 것을 요구한다."
+ civic_BA_explore:0 "연방 성간 탐사국"
+ civic_BA_explore_desc:0 "우리의 여정은 별과 바다이다! 은하의 수억 개의 별을 훑어보며, 별들의 강에서 한 해를 더 보낸다."
+
+
+
+#起源
+ origin_Kivotos_Eden_treaty:0 "에덴조약"
+ origin_Kivotos_Eden_treaty_desc:0 "우리에게 감행된 전면적인 공격을 저지하기 위해, 우리는 믿을 수 있는 사람의 도움을 받아 에덴조약을 체결했다. 새로 결성된 학원 연방은 수년간의 전쟁을 겪으며 모성(母星)에 극심한 피해를 입혔다. 한편, 용감하고 총명한 학생들은 함선 잔해에서 초공간 항행 기술을 해독해냈다.\n비록 모성의 재건 작업이 아직 완료되지 않았지만, 우리는 심우주의 위협에 대비해야 했기에 이 두 가지 일을 동시에 진행하기로 결정했다."
+ origin_Kivotos_Eden_treaty_effects:0 "-일부 구역에 장애가 있는 모성(母星)에서 게임을 시작한다. 재건 작업을 최대한 빨리 완료해야 한다.\n§R-국가 생성 화면에서 선택한 초기 지도자는 교체된다.§!"
+
+ origin_Kivotos_Kyrie:0 "잊힌 신들에게"
+ origin_Kivotos_Kyrie_desc:0 "우리는 한때 정토(淨土)를 가졌었다. 우리는 그곳에서 만나 함께 눈물을 흘리고 함께 웃었다.\n그러나 우리는 증오를 품고 옛 정토를 직접 짓밟아 불바다로 만들었다. 돌아갈 곳도, 의지할 사람도 없이, 우리는 폐허 속을 조용히 헤매며 옛 온기를 갈망했다.\n아무도 생각지 못했다, 슬플 때에만 올려다보던 별들의 강이 우리의 새로운 고향이 될 줄은."
+ origin_Kivotos_Kyrie_effects:0 "-학원 도시 폐허 행성을 모성(母星)으로 시작하며, 폐허 개발은 재앙을 초래할 수 있다.\n§R-사태가 돌이킬 수 없게 되기 전에 학원 도시 행성의 재건을 완료해야 한다, 그렇지 않으면……§!"
+
+ origin_Kivotos_Unnamed_starting:0 "이름 없는 시작점"
+ origin_Kivotos_Unnamed_starting_desc:0 "우리는 그 전쟁에서 고향을 잃었지만, 별들 사이에서 끈질기게 싸워 마침내 뿌리를 내렸다. 슬픔을 뒤로하고 우리는 또 다른 형태의 학원 도시를 재건했으며, 마침내 미래의 마지막 조각을 손에 넣었다. 이 기적으로 가득한 시작점에서 우리는 고향을 되찾고 별들의 강으로 나아갈 것이다."
+ origin_Kivotos_Unnamed_starting_effects:0 "-['concept_auto_habitat']에서 시작하며, 모성(母星)에서 시작하지 않는다.\n-시작 시 ['concept_auto_habitat'] 건설 및 업그레이드 관련 기술을 보유한다.\n§R-전역에서 유일하며, 다른 플레이어는 §Y$origin_Kivotos_Eden_treaty$§R 기원으로 대체된다.\n-이 기원의 제작은 아직 불완전하므로 신중하게 선택하십시오.§!"
+
+
+
+#物种增长
+
+
+#
+ BA_Shittem.3002.name:0 "아리스"
+ BA_Shittem.3002.desc:0 "(의뢰를 제출한지 얼마 되지 않아, §B밀레니엄 사이언스 스쿨§! 교복을 입은 두 명의 이상한 소녀가 사무실로 들어왔다)"
+ BA_Shittem.3002.a:0 "너희는?"
+ BA_Shittem.3002.a.re:0 "§W“세미나의 우시오 노아입니다. 갑작스러운 방문에 대단히 죄송합니다…… 아니, 최근 잠시 동안 뵙지 못했군요, 선생님. 이쪽은 게임 개발부의 텐도 아리스입니다. 이번 의뢰 때문에 저희가 정말 바빴던 터라, 선생님께 보고를 드려야 한다고 생각했습니다.”§!\n\n§B“선생님, 밀레니엄 사이언스 스쿨의 활동을 후원해 주셔서 감사합니다! 텐도 아리스, 구원의 사명을 짊어진 용사……\n그리고 이번 로봇 실험의 프로토타입입니다!”§!"
+ BA_Shittem.3002.b:0 "……안녕하세요, 아리스, 노아."
+ BA_Shittem.3002.b.re:0 "§W“이전, 저희 밀레니엄 사이언스 스쿨은 아리스를 만들어낸 기술에 지대한 관심을 가졌고, 몇 가지 스캔과 분석을 시도했습니다. 그 결과, 현재로서는 해결할 수 없는 핵심 기술들을 역설계하는 데 성공했죠. 선생님의 도움 덕분에 이번에 많은 시제품과 설계도를 제작할 수 있었지만, 지능 수준은 아리스와는 비교할 수 없을 정도였습니다……\n이제 양산형의 지능을 최적화하기 위해 많은 데이터를 수집해야 합니다. 그 방법은 아리스에게 여러 가지 업무를 맡기는 것이고요…… 선생님은 어떻게 생각하시나요?”§!"
+ BA_Shittem.3002.c:0 "연방학생회로 가는 건 어때? 총괄실에서 분명 반겨줄 거야."
+ BA_Shittem.3002.c.re:0 "§B“깡깡캉깡! 아리스, 새로운 임무를 수락했어요! 아리스, 열심히 도울게요!”§!\n\n\n(‘리더 예비 – 히메로봇’ 페이지에서 아리스에게 다른 직책을 맡길 수 있습니다)"
+ Aris_joined:0 "아리스가 과학자 리더가 되었습니다."
+
+ BA_Shittem.3010.name:0 ""
+ BA_Shittem.3010.desc:0 "선생님, 밀레니엄 사이언스 스쿨의 업무에 지원해 주셔서 감사합니다! 텐도 아리스, 구원의 사명을 짊어진 용사……\n이자 이번 로봇 실험의 원형기입니다!"
+ AoharuUI.common_btn.none:0 ""
+
+ name_list_ArisName:0 "아리스"
+ name_list_ArisPrName:0 "선구자 아리스"
+
+ BA_Shittem.3003.name:0 "소통: 아리스"
+ BA_Shittem.3003.desc.normal.a:0 "“음…… 아리스의 레벨은 아직 부족해요. 경험치가 더 필요해요……”"
+ BA_Shittem.3003.desc.scientist.a:0 "“……”\n(연산 중)"
+ BA_Shittem.3003.desc.governor.a:0 "“…아하하하, 서류, 서류! …잔뜩 쌓인 서류들, 끝도 없는 서류들! …”"
+ BA_Shittem.3003.desc.admiral.a:0 "“유즈호, 전진 4! 어? 그렇게 놀면 안 돼요? 아리스 알겠어요…”"
+ BA_Shittem.3003.desc.general.a:0 "“여러분, 준비하세요, Stand by for Aris-fall! 아리스는 다음에 이렇게 행성에 착륙해서 ‘빛이여!’라고 외칠 거예요, 분명 재미있을 거예요!”"
+ BA_Shittem.3003.exit:0 "돌아가기"
+ Aris_cooldown:0 "재직 기간이 너무 짧음"
+ Aris_reload:0 "(버그 발생 시, 리더 목록을 불러오는 작업을 실행하면 해결됩니다.)"
+ Aris_to_scientist:0 "역시 아리스는 연구직이 어울리죠?"
+ Aris_to_scientist.re:0 "“아리스는 대현자의 의뢰를 받아 신규 장비 ‘과학선’을 획득했어요!”\n\n$Aris_reload$"
+ Aris_to_governor:0 "아리스의 행정 처리 능력은 어떨까요……"
+ Aris_to_governor.re:0 "“경영 게임은 정말 재밌어요, 아리스는 정말 기대돼요!”\n\n$Aris_reload$"
+ Aris_to_official:0 "아리스의 행정 처리 능력은 어떨까요……"
+ Aris_to_official.re:0 "“경영 게임은 정말 재밌어요, 아리스는 정말 기대돼요!”\n\n$Aris_reload$"
+ Aris_to_admiral:0 "함대 지휘 같은 건 아리스가 할 수 있을까요?"
+ Aris_to_admiral.re:0 "“센서 연결 완료, 무기 시스템 냉각 정상! 아리스, 상태 양호!”\n\n$Aris_reload$"
+ Aris_to_general:0 "지상전은 아리스에게 식은 죽 먹기겠죠."
+ Aris_to_general.re:0 "“프로토콜, 임무 고수! 아리스는 새로운 부대를 획득했어요!”\n\n$Aris_reload$"
+ Aris_to_commander:0 "작전 지휘는 아리스에게 식은 죽 먹기겠죠."
+ Aris_to_commander.re:0 "“프로토콜, 임무 고수! 아리스는 새로운 부대를 획득했어요!”\n\n$Aris_reload$"
+ Aris_to_matrix:0 "(이 아이는 광업에 쓸 수도 있겠는데…)"
+ Aris_to_matrix.re:0 "“채…광, 그게 뭐예요?\n…해시 연산? 아리스 알겠어요, 아리스는 계산이 특기니까 맡겨주세요!”\n\n$Aris_reload$"
+
+
+ PRESCRIPTED_species_name_ba_fe_1:0 "키보토스 학생"
+ PRESCRIPTED_species_plural_ba_fe_1:0 "키보토스 학생들"
+ DokiDoki_ministry_of_interior:0 "두근두근 내무부"
+ EMPIRE_DESIGN_ba_fe_1:0 "블루 데빌 가챠 그룹"
+ PRESCRIPTED_adjective_ba_fe_1:0 "블루 데빌 가챠 그룹"
+ NAME_ba_fe_sun_rising:0 "욱일"
+ NAME_ba_fe_horizon:0 "지평선"
+
+ gov_ba_fe:0 "단체 의지 연합체"
+ gov_ba_fe_desc:0 "학원 연방에서 비롯된 체제.§B\n“우리에게 사랑의 와인과 생사고락을 함께할 친구를 주네;\n모든 존재가 기쁨을 함께 나누게 하고, 천사들도 함께 노래 부르게 하네.”§!"
+ auth_kivotos_pr:0 "단체 의지 독립제"
+ auth_kivotos_pr_desc:0 ""
+ personality_ba_fallen_empire_01:0 "선구적인 저항자"
+ personality_ba_fallen_empire_01_desc:0 "억압자들의 손에서 자유를 되찾고, 과학과 문화를 정점까지 발전시킨 저항자들이에요. 그들은 후발 주자들에게 다양한 도움을 주는 걸 무척 기뻐한답니다."
+ personality_ba_awakened_fallen_empire_01:0 "숭고한 관측자"
+ personality_ba_awakened_fallen_empire_01_desc:0 "자신들의 옛 영광을 관철하며, 은하에서 위기를 제거하도록 돕는 선구자들이랍니다."
+
+ civic_ba_fe:0 "영역 밖의 관측자"
+ civic_ba_fe_desc:0 "동족에게 연민을 느끼긴 하지만, 이 우주에 너무 많은 간섭을 해서는 안 된다고 생각한답니다."
+ civic_ba_awakened_fe:0 "정점의 선동자"
+ civic_ba_awakened_fe_desc:0 "이 우주의 발전이 이미 통제 불능 상태에 이르렀다고 생각하고, 이 우주의 지적 존재들에게 올바른 방향으로 되돌리기 위한 조치를 취해야 한다고 주장한답니다."
+ civic_ba_awakened_fe_advance:0 "$civic_ba_awakened_fe$"
+ civic_ba_awakened_fe_advance_desc:0 "$civic_ba_awakened_fe_desc$"
+ origin_ba_fallen_empire:0 "학자의 후예"
+ origin_ba_fallen_empire_desc:0 "저항자들에 의해 건립된 제국이에요. 억압자들의 고고함을 계승하여 자신들이 보는 모든 것을 정점까지 발전시켰답니다."
+ origin_ba_fe_effect:0 "효과 없음"
+
+ personality_ba_fallen_empire_02:0 "personality_ba_fallen_empire_02"
+ personality_ba_fallen_empire_02_desc:0 "personality_ba_fallen_empire_02_desc"
+ personality_ba_awakened_fallen_empire_02:0 "personality_ba_awakened_fallen_empire_02"
+ personality_ba_awakened_fallen_empire_02_desc:0 "personality_ba_awakened_fallen_empire_02_desc"
+
+ BA_FE_FLEET:0 "선구자 함대"
+ 
+###############################
+#堕落帝国首领称呼
+ PRESCRIPTED_ruler_title_ba_fe:0 "목격자"
+ PRESCRIPTED_ruler_ba_fe:0 "목격자"
+

@@ -1,0 +1,23 @@
+﻿l_korean:
+#站开建筑
+ builiding_BA_hab_maintenance:"거주지 유지보수 노드"
+ builiding_BA_hab_maintenance_desc:"자리표시자"
+
+ builiding_BA_hab_allocation:"거주지 분배 노드"
+ builiding_BA_hab_allocation_desc:"자리표시자"
+
+ builiding_BA_hab_expansionCabin:"거주지 확장 도크"
+ builiding_BA_hab_expansionCabin_desc:"자리표시자"
+
+#站开区域
+ zone_unavailable_BA_auto_district:0 "$zone_unavailable_tech$$engineering_research_icon_with_space$$tech_BA_pyroxenes_using$"
+ zone_BA_auto_goverment:"군체 수도"
+ zone_BA_auto_goverment_desc: ""
+ zone_BA_auto_unity:"거주지 기록 보관소"
+ zone_BA_auto_unity_desc: ""
+ zone_BA_auto_commercial:"거주지 물류 센터"
+ zone_BA_auto_commercial_desc: ""
+ zone_BA_auto_A:"자동화 거주지 확장 격실"
+ zone_BA_auto_A_desc:"더 많은 작업량을 수용하도록 확장 격실을 증설합니다."
+ zone_BA_auto_B:"고밀도 특화 모듈"
+ zone_BA_auto_B_desc:"특화 모듈을 추가하여 이 구역을 완전히 자동화합니다."

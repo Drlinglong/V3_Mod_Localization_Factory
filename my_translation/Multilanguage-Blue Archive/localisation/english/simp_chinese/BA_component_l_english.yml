@@ -1,0 +1,135 @@
+﻿l_english:
+##########################
+#
+ Sweepers_ACTION:0 "Clearance"
+ pop_cat_sweeper_pop:0 "Drifter"
+ pop_cat_sweeper_pop_plural:0 "Drifter"
+ pop_cat_sweeper_pop_desc:0 "A Drifter constantly patrolling the World."
+ FLEETORDER_DESTROY_PLANET_WITH_Sweepers:0 "Preparing for Clearance of $PLANET|Y$"
+ MESSAGE_DESC_FOR_Sweepers:0 "Leveled"
+ What_are_you_doing:0 "$TRIGGER_FAIL$ Do that, and you'll be sent to 227 to dig potatoes!"
+ is_valid_target_for_sweeper:0 "$TRIGGER_FAIL$ This is a colony controlled by us or the enemy."
+
+
+
+
+
+
+
+
+
+
+###############################
+ switch_armor_type:0 "§WChange Defense Type§!"
+
+
+ weapon_type_mystic:0 "§EMystic§!"
+ weapon_type_penetration:0 "§YPiercing§!"
+ weapon_type_explosion:0 "§RExplosive§!"
+ weapon_type_destruction:0 "§MDemolition§!"
+
+
+ weapon_role_anti_special_armor:0 "§EAnti-Special Armour§!"
+ weapon_role_anti_heavy_armor:0 "§YAnti-Heavy Armour§!"
+ weapon_role_anti_light_armor:0 "§RAnti-Light Armour§!"
+ weapon_role_anti_structure:0 "§MAnti-Structure§!"
+
+ mod_weapon_type_mystic_weapon_damage_mult:0 "§EMystic Attribute§! Weapon Damage"
+ mod_weapon_type_mystic_weapon_fire_rate_mult:0 "§EMystic Attribute§! Weapon Attack Speed"
+
+ mod_weapon_type_penetration_weapon_damage_mult:0 "§YPiercing Attribute§! Weapon Damage"
+ mod_weapon_type_penetration_weapon_fire_rate_mult:0 "§YPiercing Attribute§! Weapon Attack Speed"
+
+ mod_weapon_type_explosion_weapon_damage_mult:0 "§RExplosive Attribute§! Weapon Damage"
+ mod_weapon_type_explosion_weapon_fire_rate_mult:0 "§RExplosive Attribute§! Weapon Attack Speed"
+
+ mod_weapon_type_destruction_weapon_damage_mult:0 "§MDemolition Attribute§! Weapon Damage"
+ mod_weapon_type_destruction_weapon_fire_rate_mult:0 "§MDemolition Attribute§! Weapon Attack Speed"
+
+ aura_special_armor:0 "§ESpecial Armour§!"
+ aura_heavy_armor:0 "§YHeavy Armour§!"
+ aura_light_armor:0 "§RLight Armour§!"
+ aura_structure:0 "§MStructure§!"
+ aura_structure_station:0 "§MStructure§!"
+ aura_armor_type:0 "§WDefault Armor§!"
+
+ BA_WEAPON_TEST:0 "Test Weapon"
+ BA_WEAPON_TEST_DESC:0 "Test Weapon"
+ BA_AURA_HEAVY_ARMOR:0 "§YShip-borne Heavy Armour Generator§!"
+ BA_AURA_HEAVY_ARMOR_DESC:0 "Changes our ship's defense type to §YHeavy Armour§!\nReduces damage taken from enemy §EMystic Attribute§! weapons (significantly) and Energy weapons (slightly);\n\nIn exchange,\nIncreases damage taken from enemy §YPiercing Attribute§! weapons (significantly) and Kinetic weapons (slightly)."
+ BA_AURA_LIGHT_ARMOR:0 "§RShip-borne Light Armour Generator§!"
+ BA_AURA_LIGHT_ARMOR_DESC:0  "Changes our ship's defense type to §RLight Armour§!\nReduces damage taken from enemy §YPiercing Attribute§! weapons (significantly) and Kinetic weapons (slightly);\n\nIn exchange,\nIncreases damage taken from enemy §RExplosive Attribute§! weapons (significantly) and Explosive weapons (slightly)."
+ BA_AURA_SPECIAL_ARMOR:0 "§EShip-borne Special Armour Generator§!"
+ BA_AURA_SPECIAL_ARMOR_DESC:0 "Changes our ship's defense type to §ESpecial Armour§!\nReduces damage taken from enemy §RExplosive Attribute§! weapons (significantly) and Explosive weapons (slightly);\n\nIn exchange,\nIncreases damage taken from enemy §EMystic Attribute§! weapons (significantly) and Energy weapons (slightly)."
+ BA_AURA_ARMOR_TYPE:0 "§WNo Ship-borne Armour Generator§!"
+ BA_AURA_ARMOR_TYPE_DESC:0 "Not equipped with Armor Generator, Defense Type is §WDefault§!"
+ BA_AURA_STRUCTURE:0 "§MShipborne Construct Generator§!"
+ BA_AURA_STRUCTURE_DESC:0 "Changes our ship's Defense Type to §MConstruct§!\nReduces damage from enemy weapons except those with the §MDestructive Property§!;\n\nIn exchange,\nDamage taken from enemy weapons with the §MDestructive Property§! is significantly increased."
+ BA_STATION_AURA_STRUCTURE:0 "§MStarbase Construct Generator§!"
+ BA_STATION_AURA_STRUCTURE_DESC:0 "Changes our Starbase's Defense Type to §MConstruct§!\nReduces damage from enemy weapons except those with the §MDestructive Property§!;\n\nIn exchange,\nDamage taken from enemy weapons with the §MDestructive Property§! is significantly increased."
+
+
+
+ BA_armor_station_large:0 "Autonomous Defense Platform"
+
+ CORVETTE_MID_BA_DECAGRAMMATON_HOD_TEST:0 "§HColossal Hode§!"
+ CORVETTE_MID_BA_DECAGRAMMATON_HOD_COLORIZED_TEST:0 "§MColossal Hode (Color)§!"
+ CORVETTE_MID_BA_Beatrice_Gematria:0 "§RBeatrice§!"
+ CORVETTE_MID_BA_Boxcat:0 "§EBox Cat§!"
+ CORVETTE_MID_BA_ALICE:0 "§EAris§!"
+ CORVETTE_MID_BA_KEI:0 "§PKei§!"
+ CORVETTE_MID_BA_WhiteRabbit:0 "§YBunny Girl Koyuki§!"
+ CORVETTE_MID_BA_EN_0001:0 "§MColor Guide§!"
+ CORVETTE_MID_BA_EN_0002:0 "§MSunaookami Shiroko (Color)§!"
+ CORVETTE_MID_BA_PV1:0 "§TPV Projector§!"
+ CORVETTE_MID_BA_Kether_turret_01:0 "§HKaiser I§!"
+ CORVETTE_MID_BA_Kether_turret_02:0 "§HKaiser II§!"
+ CORVETTE_MID_BA_Kether_turret_03:0 "§HKaiser III§!"
+ CORVETTE_MID_BA_Kether_Color_turret_01:0 "§MKaiser I (Color)§!"
+ CORVETTE_MID_BA_Kether_Color_turret_02:0 "§MKaiser II (Color)§!"
+ CORVETTE_MID_BA_Kether_Color_turret_03:0 "§MKaiser III (Color)§!"
+ CORVETTE_MID_BA_HOD:0 "§HHode§!"
+ CORVETTE_MID_BA_HOD_Color:0 "§MHode (Color)§!"
+ CORVETTE_MID_BA_CHESED:0 "§HKesed§!"
+ CORVETTE_MID_BA_CHESED_Color:0 "§MKesed (Color)§!"
+ CORVETTE_MID_BA_Binah:0 "§HBinah§!"
+ CORVETTE_MID_BA_Binah_Color:0 "§MBinah (Color)§!"
+ CORVETTE_MID_BA_Hieronymus:0 "§RHieronymus§!"
+ CORVETTE_MID_BA_Hieronymus_Color:0 "§MHieronymus (Color)§!"
+ CORVETTE_MID_BA_Goz:0 "§EGoz§!"
+ CORVETTE_MID_BA_Kuro:0 "§TKuro§!"
+ CORVETTE_MID_BA_Kuro_Color:0 "§MKuro (Color)§!"
+ CORVETTE_MID_BA_Shiro:0 "§WShiro§!"
+ CORVETTE_MID_BA_Shiro_Color:0 "§MShiro (Color)§!"
+ CORVETTE_MID_BA_Perorozilla:0 "§WPerorozilla§!"
+ CORVETTE_MID_BA_Perorozilla_Color:0 "§MPerorozilla (Color)§!"
+ CORVETTE_MID_BA_KaitenFX_MK0:0 "§RConveyor Belt Sushi Mech Mk.0§!"
+ CORVETTE_MID_BA_59_G:0 "§G59 Kai§!"
+ CORVETTE_MID_BA_59_Kaiserpmc:0 "§YKaiser PMC Billboard Tank§!"
+ CORVETTE_MID_BA_Iroha_Tank:0 "§P`Iroha Natsume & Toramaru`§!"
+ CORVETTE_MID_BA_Asuma_Toki:0 "§B`Asuma Toki & Abyssal`§!"
+ CORVETTE_MID_BA_AtrahasisArk:0 "§M`Ark of Atrahasis`§!"
+ CORVETTE_MID_BA_AtrahasisArk_invincible:0 "§M`Ark of Atrahasis (Multi-Dimensional Spatio-Temporal Interpretation State)`§!"
+ CORVETTE_MID_BA_Utnapishtim:0 "§E`Utnapishtim's Great Ship`§!"
+
+
+
+
+
+###############################
+ SWORD_OF_LIGHT_EX:0 "Atrahasis's Sword of Light"
+ SWORD_OF_LIGHT_EX_DESC:0 "My... my most precious... my most precious Aris"
+ BA_Perorozilla_craft_01:0 "Perorozilla (Small)"
+ BA_Perorozilla_craft_01_DESC:0 "Three smaller-sized Perorozilla"
+ BA_Perorozilla_craft_02:0 "Perorozilla (Medium)"
+ BA_Perorozilla_craft_02_DESC:0 "Medium-sized Perorozilla"
+ BA_Perorozilla_Color_craft_01:0 "Color Perorozilla (Small)"
+ BA_Perorozilla_Color_craft_01_DESC:0 "Three smaller-sized Color Perorozilla"
+ BA_Perorozilla_Color_craft_02:0 "Color Perorozilla (Medium)"
+ BA_Perorozilla_Color_craft_02_DESC:0 "Medium-sized Color Perorozilla"
+ BA_Drone_Missile:0 "Missile Drone"
+ BA_Drone_Missile_DESC:0 "Drone equipped with missiles"
+ BA_Drone_Vulcan:0 "Autocannon Drone"
+ BA_Drone_Vulcan_DESC:0 "Drone equipped with autocannons"
+ BA_POWER_CHAIR:0 "Street Food Stall Chair"
+ BA_POWER_CHAIR_DESC:0 "I AM THE STORM THAT IS APPROACHING！！！！！！！！！！！！！！"

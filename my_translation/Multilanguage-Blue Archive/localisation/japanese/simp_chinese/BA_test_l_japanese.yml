@@ -1,0 +1,23 @@
+﻿l_japanese:
+#站开建筑
+ builiding_BA_hab_maintenance:"居住ステーション維持ノード"
+ builiding_BA_hab_maintenance_desc:"プレースホルダー"
+
+ builiding_BA_hab_allocation:"居住ステーション配分ノード"
+ builiding_BA_hab_allocation_desc:"プレースホルダー"
+
+ builiding_BA_hab_expansionCabin:"居住ステーション拡張ドック"
+ builiding_BA_hab_expansionCabin_desc:"プレースホルダー"
+
+#站开区域
+ zone_unavailable_BA_auto_district:0 "$zone_unavailable_tech$$engineering_research_icon_with_space$$tech_BA_pyroxenes_using$"
+ zone_BA_auto_goverment:"ハイヴ首府"
+ zone_BA_auto_goverment_desc: ""
+ zone_BA_auto_unity:"居住ステーションアーカイブ"
+ zone_BA_auto_unity_desc: ""
+ zone_BA_auto_commercial:"居住ステーションロジスティクスセンター"
+ zone_BA_auto_commercial_desc: ""
+ zone_BA_auto_A:"自動居住ステーション拡張モジュール"
+ zone_BA_auto_A_desc:"拡張モジュールを増設し、作業処理能力を向上させます。"
+ zone_BA_auto_B:"高密度特化モジュール"
+ zone_BA_auto_B_desc:"特化モジュールを増設し、この区画を完全に自動化する。"

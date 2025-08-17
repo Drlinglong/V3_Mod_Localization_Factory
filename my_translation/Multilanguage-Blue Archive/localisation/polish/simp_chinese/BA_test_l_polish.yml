@@ -1,0 +1,23 @@
+﻿l_polish:
+#站开建筑
+ builiding_BA_hab_maintenance:"Węzeł Konserwacji Habitatu"
+ builiding_BA_hab_maintenance_desc:"Zastępczy tekst"
+
+ builiding_BA_hab_allocation:"Węzeł Przydziału Habitatu"
+ builiding_BA_hab_allocation_desc:"Zastępczy tekst"
+
+ builiding_BA_hab_expansionCabin:"Dok Rozszerzeń Habitatu"
+ builiding_BA_hab_expansionCabin_desc:"Zastępczy tekst"
+
+#站开区域
+ zone_unavailable_BA_auto_district:0 "$zone_unavailable_tech$$engineering_research_icon_with_space$$tech_BA_pyroxenes_using$"
+ zone_BA_auto_goverment:"Stolica Roju"
+ zone_BA_auto_goverment_desc: ""
+ zone_BA_auto_unity:"Archiwa Habitatu"
+ zone_BA_auto_unity_desc: ""
+ zone_BA_auto_commercial:"Centrum Logistyczne Habitatu"
+ zone_BA_auto_commercial_desc: ""
+ zone_BA_auto_A:"Zautomatyzowany Moduł Rozszerzeń Habitatu"
+ zone_BA_auto_A_desc:"Rozszerzono o dodatkowy moduł, aby pomieścić większe obciążenie pracą."
+ zone_BA_auto_B:"Moduł Specjalistyczny o Wysokiej Gęstości"
+ zone_BA_auto_B_desc:"Dodaj moduł specjalistyczny, aby w pełni zautomatyzować ten sektor."

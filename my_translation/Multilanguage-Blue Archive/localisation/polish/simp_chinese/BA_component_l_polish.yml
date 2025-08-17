@@ -1,0 +1,135 @@
+﻿l_polish:
+##########################
+#
+ Sweepers_ACTION:0 "Wyczyszczenie"
+ pop_cat_sweeper_pop:0 "Wędrowiec"
+ pop_cat_sweeper_pop_plural:0 "Wędrowiec"
+ pop_cat_sweeper_pop_desc:0 "Wędrowiec nieustannie krążący po planecie."
+ FLEETORDER_DESTROY_PLANET_WITH_Sweepers:0 "Trwa przygotowywanie do wyczyszczenia $PLANET|Y$"
+ MESSAGE_DESC_FOR_Sweepers:0 "Zrównany z ziemią"
+ What_are_you_doing:0 "$TRIGGER_FAIL$ Za coś takiego wysyła się do 227 na kopanie ziemniaków!"
+ is_valid_target_for_sweeper:0 "$TRIGGER_FAIL$ to kolonia kontrolowana przez naszą stronę lub stronę walczącą."
+
+
+
+
+
+
+
+
+
+
+###############################
+ switch_armor_type:0 "§WZmień typ obrony§!"
+
+
+ weapon_type_mystic:0 "§EMistyka§!"
+ weapon_type_penetration:0 "§YPrzebicie§!"
+ weapon_type_explosion:0 "§RWybuch§!"
+ weapon_type_destruction:0 "§ZNiszczenie§!"
+
+
+ weapon_role_anti_special_armor:0 "§EPrzeciw Pancerzowi Specjalnemu§!"
+ weapon_role_anti_heavy_armor:0 "§YPrzeciw Pancerzowi Ciężkiemu§!"
+ weapon_role_anti_light_armor:0 "§RPrzeciw Pancerzowi Lekkiemu§!"
+ weapon_role_anti_structure:0 "§MPrzeciw Konstrukcjom§!"
+
+ mod_weapon_type_mystic_weapon_damage_mult:0 "Obrażenia broni §EMistyka§!"
+ mod_weapon_type_mystic_weapon_fire_rate_mult:0 "Szybkość ataku broni §EMistyka§!"
+
+ mod_weapon_type_penetration_weapon_damage_mult:0 "Obrażenia broni §YPrzebicie§!"
+ mod_weapon_type_penetration_weapon_fire_rate_mult:0 "Szybkość ataku broni §YPrzebicie§!"
+
+ mod_weapon_type_explosion_weapon_damage_mult:0 "Obrażenia broni §RWybuch§!"
+ mod_weapon_type_explosion_weapon_fire_rate_mult:0 "Szybkość ataku broni §RWybuch§!"
+
+ mod_weapon_type_destruction_weapon_damage_mult:0 "Obrażenia broni §ZNiszczenie§!"
+ mod_weapon_type_destruction_weapon_fire_rate_mult:0 "Szybkość ataku broni §ZNiszczenie§!"
+
+ aura_special_armor:0 "§ESpecjalny Pancerz§!"
+ aura_heavy_armor:0 "§YCiężki Pancerz§!"
+ aura_light_armor:0 "§RLekki Pancerz§!"
+ aura_structure:0 "§MKonstrukcja§!"
+ aura_structure_station:0 "§MKonstrukcja§!"
+ aura_armor_type:0 "§WDomyślny Pancerz§!"
+
+ BA_WEAPON_TEST:0 "Broń testowa"
+ BA_WEAPON_TEST_DESC:0 "Broń testowa"
+ BA_AURA_HEAVY_ARMOR:0 "§YOkrętowy Generator Ciężkiego Pancerza§!"
+ BA_AURA_HEAVY_ARMOR_DESC:0 "Zmienia typ obrony naszego statku na §YCiężki Pancerz§!.\nZmniejsza obrażenia zadawane przez broń wroga typu §EMistyka§! (znacznie) oraz broń energetyczną (nieznacznie);\n\nJednakże\nZwiększa obrażenia otrzymywane od broni wroga typu §YPrzebicie§! (znacznie) oraz broni kinetycznej (nieznacznie)."
+ BA_AURA_LIGHT_ARMOR:0 "§ROkrętowy Generator Lekkiego Pancerza§!"
+ BA_AURA_LIGHT_ARMOR_DESC:0  "Zmienia typ obrony naszego statku na §RLekki Pancerz§!.\nZmniejsza obrażenia zadawane przez broń wroga typu §YPrzebicie§! (znacznie) oraz broń kinetyczną (nieznacznie);\n\nJednakże\nZwiększa obrażenia otrzymywane od broni wroga typu §RWybuch§! (znacznie) oraz broni wybuchowej (nieznacznie)."
+ BA_AURA_SPECIAL_ARMOR:0 "§EOkrętowy Generator Specjalnego Pancerza§!"
+ BA_AURA_SPECIAL_ARMOR_DESC:0 "Zmienia typ obrony naszego statku na §ESpecjalny Pancerz§!.\nZmniejsza obrażenia zadawane przez broń wroga typu §RWybuch§! (znacznie) oraz broń wybuchową (nieznacznie);\n\nJednakże\nZwiększa obrażenia otrzymywane od broni wroga typu §EMistyka§! (znacznie) oraz broń energetyczną (nieznacznie)."
+ BA_AURA_ARMOR_TYPE:0 "§WBrak Okrętowego Generatora Pancerza§!"
+ BA_AURA_ARMOR_TYPE_DESC:0 "Nie wyposażono w generator pancerza, typ obrony to §Wdomyślny§!"
+ BA_AURA_STRUCTURE:0 "§MPokładowy Generator Struktur§!"
+ BA_AURA_STRUCTURE_DESC:0 "Zmienia typ obrony naszego okrętu na §MStrukturalny§!\nRedukuje obrażenia zadawane przez broń wroga inną niż o atrybucie §MZniszczenia§!;\n\nW zamian jednak\nobrażenia zadawane przez broń wroga o atrybucie §MZniszczenia§! są znacznie zwiększone."
+ BA_STATION_AURA_STRUCTURE:0 "§MGenerator Struktur Bazy Gwiezdnej§!"
+ BA_STATION_AURA_STRUCTURE_DESC:0 "Zmienia typ obrony naszej Bazy Gwiezdnej na §MStrukturalny§!\nRedukuje obrażenia zadawane przez broń wroga inną niż o atrybucie §MZniszczenia§!;\n\nW zamian jednak\nobrażenia zadawane przez broń wroga o atrybucie §MZniszczenia§! są znacznie zwiększone."
+
+
+
+ BA_armor_station_large:0 "Autonomiczna Platforma Obronna"
+
+ CORVETTE_MID_BA_DECAGRAMMATON_HOD_TEST:0 "§HGigantyczny Hod§!"
+ CORVETTE_MID_BA_DECAGRAMMATON_HOD_COLORIZED_TEST:0 "§MGigantyczny Hod (Kolor)§!"
+ CORVETTE_MID_BA_Beatrice_Gematria:0 "§RBeatrice§!"
+ CORVETTE_MID_BA_Boxcat:0 "§EKot w Pudełku§!"
+ CORVETTE_MID_BA_ALICE:0 "§EAris§!"
+ CORVETTE_MID_BA_KEI:0 "§PKei§!"
+ CORVETTE_MID_BA_WhiteRabbit:0 "§YKoyuki Króliczek§!"
+ CORVETTE_MID_BA_EN_0001:0 "§MKolorowy Przewodnik§!"
+ CORVETTE_MID_BA_EN_0002:0 "§MShiroko Sunaookami (Kolor)§!"
+ CORVETTE_MID_BA_PV1:0 "§TProjektor PV§!"
+ CORVETTE_MID_BA_Kether_turret_01:0 "§HKaiser I§!"
+ CORVETTE_MID_BA_Kether_turret_02:0 "§HKaiser II§!"
+ CORVETTE_MID_BA_Kether_turret_03:0 "§HKaiser III§!"
+ CORVETTE_MID_BA_Kether_Color_turret_01:0 "§MKaiser I (Kolor)§!"
+ CORVETTE_MID_BA_Kether_Color_turret_02:0 "§MKaiser II (Kolor)§!"
+ CORVETTE_MID_BA_Kether_Color_turret_03:0 "§MKaiser III (Kolor)§!"
+ CORVETTE_MID_BA_HOD:0 "§HHod§!"
+ CORVETTE_MID_BA_HOD_Color:0 "§MHod (Kolor)§!"
+ CORVETTE_MID_BA_CHESED:0 "§HKaiten FX§!"
+ CORVETTE_MID_BA_CHESED_Color:0 "§MKaiten FX (Kolor)§!"
+ CORVETTE_MID_BA_Binah:0 "§HBina§!"
+ CORVETTE_MID_BA_Binah_Color:0 "§MBina (Kolor)§!"
+ CORVETTE_MID_BA_Hieronymus:0 "§RHieronim§!"
+ CORVETTE_MID_BA_Hieronymus_Color:0 "§MHieronim (Kolor)§!"
+ CORVETTE_MID_BA_Goz:0 "§EGoz§!"
+ CORVETTE_MID_BA_Kuro:0 "§TKuro§!"
+ CORVETTE_MID_BA_Kuro_Color:0 "§MKuro (Kolor)§!"
+ CORVETTE_MID_BA_Shiro:0 "§WShiro§!"
+ CORVETTE_MID_BA_Shiro_Color:0 "§MShiro (Kolor)§!"
+ CORVETTE_MID_BA_Perorozilla:0 "§WPerorozilla§!"
+ CORVETTE_MID_BA_Perorozilla_Color:0 "§MPerorozilla (Kolor)§!"
+ CORVETTE_MID_BA_KaitenFX_MK0:0 "§RMecha Obrotowego Sushi MK0§!"
+ CORVETTE_MID_BA_59_G:0 "§GTyp 59 Kai§!"
+ CORVETTE_MID_BA_59_Kaiserpmc:0 "§YCzołg Reklamowy Kaiser PMC§!"
+ CORVETTE_MID_BA_Iroha_Tank:0 "§PNatsume Iroha i Toramaru§!"
+ CORVETTE_MID_BA_Asuma_Toki:0 "§BAsuma Toki i Abyssal§!"
+ CORVETTE_MID_BA_AtrahasisArk:0 "§MArka Atrahasis§!"
+ CORVETTE_MID_BA_AtrahasisArk_invincible:0 "§MArka Atrahasis (Wielowymiarowy Stan Interpretacji Czasoprzestrzeni)§!"
+ CORVETTE_MID_BA_Utnapishtim:0 "§WWielki Okręt Utnapisztim§!"
+
+
+
+
+
+###############################
+ SWORD_OF_LIGHT_EX:0 "Miecz Światła Atrahasisa"
+ SWORD_OF_LIGHT_EX_DESC:0 "Moja... Moja najdroższa... Moja najdroższa Arisu"
+ BA_Perorozilla_craft_01:0 "Peroroszilla (Mała)"
+ BA_Perorozilla_craft_01_DESC:0 "Trzy małe Peroroszille"
+ BA_Perorozilla_craft_02:0 "Peroroszilla (Średnia)"
+ BA_Perorozilla_craft_02_DESC:0 "Średniej wielkości Peroroszilla"
+ BA_Perorozilla_Color_craft_01:0 "Chromatyczna Peroroszilla (Mała)"
+ BA_Perorozilla_Color_craft_01_DESC:0 "Trzy małe Chromatyczne Peroroszille"
+ BA_Perorozilla_Color_craft_02:0 "Chromatyczna Peroroszilla (Średnia)"
+ BA_Perorozilla_Color_craft_02_DESC:0 "Średniej wielkości Chromatyczna Peroroszilla"
+ BA_Drone_Missile:0 "Dron Rakietowy"
+ BA_Drone_Missile_DESC:0 "Dron uzbrojony w pociski rakietowe"
+ BA_Drone_Vulcan:0 "Dron z Działkiem Automatycznym"
+ BA_Drone_Vulcan_DESC:0 "Dron uzbrojony w działko automatyczne"
+ BA_POWER_CHAIR:0 "Krzesło z ulicznej jadłodajni"
+ BA_POWER_CHAIR_DESC:0 "JESTEM BURZĄ, KTÓRA NADCHODZI!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"

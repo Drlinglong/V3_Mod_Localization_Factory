@@ -1,0 +1,316 @@
+﻿l_french:
+##########################
+#### 起源事件
+ BA_origin.0002.name:0 "Le Nouvel Ordre de Kivotos"
+ BA_origin.0002.desc:0 "Finalement, après une lutte longue et sinueuse, Kivotos a réussi à purger complètement l'Arithmétique Numérique de cette planète. Après des années de cicatrices de guerre, l'atmosphère de la vie scolaire insouciante est enfin revenue sur ce continent – on peut enfin souffler !\n    Cependant, cela n'inclut pas Schale et le Conseil Étudiant Fédéral. Bien qu'un afflux de sang neuf ait rejoint le Conseil Étudiant Fédéral après la signature du Traité d'Eden, cela ne répond manifestement pas aux besoins de gouvernance de plus en plus croissants de Kivotos. La reconstruction de la planète seule me tenait déjà assez occupé, et maintenant il y a aussi des affaires au-delà de la planète. Même si moi, le Sensei, j'avais la capacité de draguer douze étudiantes en même temps (brouillard épais), je ne pourrais pas m'en sortir !\n    D'une part, l'Arithmétique Numérique, qui s'est réfugiée dans l'espace profond, représente une menace non négligeable. Nous ne pouvons pas ralentir notre exploration de l'espace profond. D'autre part, le poste de Présidente Générale du Conseil Étudiant est vacant depuis longtemps – la précédente Présidente du Conseil Étudiant de Kivotos, celle qui m'a amené dans ce lieu de miracles, je suppose qu'elle ne reviendra probablement jamais. Même si je me sens un peu mal pour elle, je ne peux pas occuper son poste par intérim indéfiniment."
+ BA_origin.0002.a:0 "Soumettre la proposition « Organisation d'une nouvelle élection du Président du Conseil Étudiant »."
+ BA_origin.0003.name:0 "Élection du Président du Conseil Étudiant"
+ BA_origin.0003.desc:0 "« Kivotos est une nation fondée par des étudiants, et son avenir doit également être entre leurs mains. »\n    Sous l'impulsion de mon influence, la nouvelle élection du Président du Conseil Étudiant s'est déroulée comme prévu. Bien que j'aurais dû m'en douter depuis longtemps, il est déjà trop tard – les trois leaders des écoles signataires principales du Traité d'Eden et la Présidente du Comité de Discipline de Gehenna, ces quatre personnes, sont devenues les candidats finaux avec une majorité écrasante de voix. Si possible, j'aurais préféré que le Président du Conseil Étudiant soit quelqu'un sans une affiliation scolaire aussi évidente, mais il semble qu'à part moi, on ne trouve plus personne de ce genre.\n    De toute évidence, il existe encore de nombreuses contradictions au sein de la Fédération des Académies, ou plutôt, c'est une fédération qui ne se maintient que difficilement sous mon influence. Je crains qu'un Président du Conseil Étudiant parachuté ne provoque une nouvelle détérioration de la situation, mais il est indéniable que ces quatre candidats possèdent absolument les capacités nécessaires pour ce poste.\n    Les résultats finaux ont été transmis au Conseil Étudiant Fédéral. Il est temps d'annoncer la prochaine personne à la tête du Conseil Étudiant…"
+ BA_origin.0003.a:0 "Hoshino Takanashi mènera Kivotos vers la renaissance."
+ BA_origin.0003.b:0 "Hina Sorasaki est prête à mettre de l'ordre dans le chaos interne de Kivotos."
+ BA_origin.0003.c:0 "Mika Misono répandra la gloire des roulés suisses à travers la galaxie."
+ BA_origin.0003.d:0 "Après des calculs précis, Yuuka Hayase accèdera au poste de Présidente."
+
+ BA_origin.0004.name:0 "Élection d'Hoshino"
+ BA_origin.0004.desc:0 "Hoshino est devenue la prochaine Présidente du Conseil Étudiant de Kivotos. Sa cérémonie d'investiture s'est déroulée là où le Traité d'Eden avait été signé. Enfin, je peux aussi concentrer toute mon énergie sur l'exploration de l'espace profond.\n    Sa cérémonie d'investiture a eu un petit imprévu, hum… pour faire simple, Hoshino s'est encore levée trop tard. Elle aurait même été traînée par un certain chat noir. D'une certaine manière, c'est aussi son style unique, n'est-ce pas ?\n    Après la cérémonie, Hoshino m'a trouvé, elle semblait avoir quelque chose à dire."
+ BA_origin.0004.a:0 "Qu'y a-t-il, Hoshino-chan ?"
+
+ BA_origin.0005.name:0 "Élection d'Hina"
+ BA_origin.0005.desc:0 "Hina est devenue la prochaine Présidente du Conseil Étudiant de Kivotos. Sa cérémonie d'investiture s'est déroulée là où le Traité d'Eden avait été signé. Enfin, je peux aussi concentrer toute mon énergie sur l'exploration de l'espace profond.\n    Hina ne semblait pas très désireuse d'occuper ce poste. Selon ses propres souhaits, elle aurait dû profiter d'une retraite paisible après avoir démissionné de son poste de Présidente du Comité de Discipline. Bien sûr, elle n'a pas eu de plaintes et a rapidement pris en charge les affaires quotidiennes de Kivotos.\n    Ce soir-là, après avoir terminé mon propre travail, le bâtiment de Schale était pratiquement sans lumières – à l'exception du bureau de la Présidente du Conseil Étudiant."
+ BA_origin.0005.a:0 "Et si on allait rendre visite à Hina ?"
+
+ BA_origin.0006.name:0 "Élection de Mika"
+ BA_origin.0006.desc:0 "Mika est devenue la prochaine Présidente du Conseil Étudiant de Kivotos. Sa cérémonie d'investiture s'est déroulée là où le Traité d'Eden avait été signé. Enfin, je peux aussi concentrer toute mon énergie sur l'exploration de l'espace profond.\n    Bien qu'une partie des étudiants de Kivotos aient exprimé leur mécontentement en raison de ses actions passées, dans l'ensemble, la majorité des étudiants de Kivotos a accepté ce fait.\n    Depuis le premier incident du Traité d'Eden, Mika a profondément reconnu ses erreurs et a humblement demandé conseil à Nagisa sur l'art de gouverner un pays (ou peut-être l'art de diriger une école ?). Sous la direction attentive du Sensei, elle a fondamentalement mis de côté ses préjugés envers Gehenna.\n    Malgré cela, dans l'ensemble, elle reste quelqu'un qui ne comprend rien aux affaires politiques et ne sait résoudre les problèmes que par la violence. Il vaudrait mieux surveiller un peu plus cette enfant..."
+ BA_origin.0006.a:0 "Bien qu'elle soit une personne peu fiable, il ne devrait pas y avoir de gros problèmes, n'est-ce pas..."
+
+ BA_origin.0007.name:0 "Élection de Yuuka"
+ BA_origin.0007.desc:0 "Yuuka est devenue la prochaine Présidente du Conseil Étudiant de Kivotos. Sa cérémonie d'investiture s'est déroulée là où le Traité d'Eden avait été signé. Enfin, je peux aussi concentrer toute mon énergie sur l'exploration de l'espace profond.\n    Selon ses propres dires, elle avait déjà calculé précisément les résultats des votes et était prête à prendre ses fonctions depuis longtemps. Je ne sais pas si c'est vrai, mais d'après ce que je sais d'elle, je suppose qu'elle a effectivement fait les calculs.\n    Elle est déjà impatiente de mettre en œuvre la politique du « Un sac par personne » dans tout Kivotos, mais pour des raisons inconnues, elle oublie toujours d'emporter son propre sac à dos tactique."
+ BA_origin.0007.a:0 "C'est probablement la malédiction de ceux qui n'ont pas de sac."
+
+ BA_origin.0008.name:0 "Reconstruction d'après-guerre de Kivotos"
+ BA_origin.0008.desc:0 "Récemment, suite aux dispositions prises par la nouvelle Présidente du Conseil Étudiant, [Root.GetRulerName], le plan de reconstruction de Kivotos progresse de manière ordonnée. La reconstruction de l'école mère de [Root.GetRulerName] est pratiquement achevée, et la reconstruction des autres écoles est déjà à l'ordre du jour ; il suffit d'avoir suffisamment de ressources pour commencer les travaux à tout moment."
+ BA_origin.0008.a:0 "Bien reçu."
+
+ BA_origin.0017.name:0 "Reconstruction d'après-guerre de Kivotos"
+ BA_origin.0017.desc:0 "Récemment, suite aux dispositions prises par la nouvelle Présidente du Conseil Étudiant, Hina Sorasaki, le plan de reconstruction de Kivotos progresse de manière ordonnée. Actuellement, la reconstruction de l'Académie Gehenna est pratiquement achevée, et la reconstruction des autres écoles est déjà à l'ordre du jour ; il suffit d'avoir suffisamment de ressources pour commencer les travaux à tout moment."
+ BA_origin.0017.a:0 "Bien reçu."
+
+ BA_origin.0019.name:0 "Reconstruction d'après-guerre de Kivotos"
+ BA_origin.0019.desc:0 "Récemment, suite aux dispositions prises par la nouvelle Présidente du Conseil Étudiant, Mika Misono, le plan de reconstruction de Kivotos progresse de manière ordonnée. Actuellement, la reconstruction de l'Académie Trinity est pratiquement achevée, et la reconstruction des autres écoles est déjà à l'ordre du jour ; il suffit d'avoir suffisamment de ressources pour commencer les travaux à tout moment."
+ BA_origin.0019.a:0 "Bien reçu."
+
+ BA_origin.0021.name:0 "Reconstruction d'après-guerre de Kivotos"
+ BA_origin.0021.desc:0 "Récemment, suite aux dispositions prises par la nouvelle Présidente du Conseil Étudiant, Yuuka Hayase, le plan de reconstruction de Kivotos progresse de manière ordonnée. Actuellement, la reconstruction de l'Académie Millenium est pratiquement achevée, et la reconstruction des autres écoles est déjà à l'ordre du jour ; il suffit d'avoir suffisamment de ressources pour commencer les travaux à tout moment."
+ BA_origin.0021.a:0 "Bien reçu."
+
+ BA_origin.0010.name:0 "Le Nouveau Voyage de Kivotos"
+ BA_origin.0010.desc:0 "Finalement, nous avons achevé le plan de reconstruction d'après-guerre de notre planète mère, et Kivotos a retrouvé sa prospérité d'antan.\n\nEn déblayant les ruines, nous avons découvert de manière inattendue l'Arche de Shittim que nous recherchions, et qui avait disparu pendant la grande guerre. Heureusement, elle n'est pas trop gravement endommagée et il est possible de la réparer.\n\nIl est temps de tourner notre regard vers cette vaste mer d'étoiles. Bien que nous ayons pris un retard sur les autres, il y a toujours moyen de rattraper notre retard. Le Sensei a réorganisé le Département d'Investigation des Phénomènes Anormaux, autrefois responsable de la détection des activités de l'Arithmétique Numérique, en Comité Fédéral d'Investigation Galactique, accélérant ainsi notre exploration des mystères interstellaires."
+ BA_origin.0010.a:0 "Notre objectif, c'est la mer d'étoiles !"
+
+
+##########################
+
+ BA_origin.1001.title:0 "Le Miséréré pour les Demoiselles"
+ BA_origin.1001.desc:0 "Notre lutte est désormais une chose du passé. Après tant de combats, nous avons enfin vu l'aube.\nLa production d'énergie, de minéraux et de nourriture sur notre planète mère se déroule à pleine puissance, sans égard pour les conséquences, afin que nous puissions prendre l'initiative dans ce vaste univers.\nLes données montrent qu'une installation militaire inconnue, en cours de chargement et dont l'activation est prévue dans §R40 ans§!, se trouve sous la surface de la planète. Nous devons faire tout notre possible pour trouver un moyen d'éliminer ce danger, ou de trouver un autre foyer avant que la catastrophe ne frappe."
+ BA_origin.1001.next:0 "Nous avons attendu ce moment trop longtemps."
+
+ BA_origin.1002.name:0 "Aux dieux oubliés"
+ BA_origin.1002.desc:0 "Professeur, nous avons terminé la revendication de ce système ! Il est maintenant officiellement notre territoire !\n\nNous devons maintenant redoubler d'efforts pour éliminer la plus grande menace à laquelle nous sommes confrontés...\n\nComme nos données l'ont détecté il y a de nombreuses années, une installation militaire inconnue et constamment alimentée se trouve sous Kivotos. Nous devons absolument découvrir comment éliminer ce danger. Si nous n'y parvenons pas, nous aurons peut-être besoin d'une colonie extraterrestre comme notre 'nouveau foyer'…"
+ BA_origin.1002.a:0 "On y va, Arona !"
+
+ BA_origin.1003.name:0 "Aux dieux oubliés"
+ BA_origin.1003.desc:0 "Professeur, nous avons reçu une proposition de plan pour étudier les ruines ! Arona pense que cela nous aidera beaucoup dans la reconstruction...\nVous pouvez consulter et approuver ce plan sur la page des Requêtes.\n(§YCommunications (F10)§! -> §Y$Shittem.name$§! -> §YRequêtes§!)\nAh, et à propos de cette page des Requêtes, il y a autre chose...\n\nCe sont les dernières £sr_pyroxenes£ Pyroxènes et £sr_keystone£ Pierres-clés conservées avant la destruction du Fabricateur du sous-sol de Schale. Arona essaie de le réparer, mais sans grand succès jusqu'à présent...\n\nMême sans Fabricateur, nous pouvons toujours continuer à remplir les missions de Schale en accomplissant les requêtes des élèves pour gagner des ressources rares.\n\n§YPeut-être qu'elles peuvent accomplir des miracles, qui sait ?§!"
+ BA_origin.1003.go:0 "Allons voir ça."
+ BA_origin.1003.cancel:0 "On s'en occupe plus tard."
+
+ BA_origin.1004.title:0 "Recherche terminée"
+ BA_origin.1004.desc:0 "$tech_BA_ruins_research$ est terminée, nous avons déjà construit un $building_BA_mixed_ruins_lab$ sur notre planète mère pour les recherches futures."
+ BA_origin.1004.next:0 "Confirmé"
+
+ BA_origin.1005.title:0 "Proposition d'amélioration des techniques d'extraction des ruines"
+ BA_origin.1005.desc:0 "Les recherches du laboratoire de synthétisation ont abouti à des conclusions préliminaires. Elles ont soumis un rapport sur l'extraction des ruines. Le rapport indique que pendant des années, les matériaux extraits des ruines n'ont pas été pleinement exploités : de nombreuses ressources rares utilisées lors de la construction ont été brûlées comme carburant, et de nombreux objets encore utilisables ont été directement réduits en minerais. À cette fin, elles ont proposé un plan général pour repenser les divers processus de collecte. Bien que le contenu du rapport soit exagéré, ses idées restent très réalisables."
+ BA_origin.1005.next:0 "D'accord."
+
+ BA_origin.1006.title:0 "Proposition de réaménagement des ruines des académies"
+ BA_origin.1006.desc:0 "Le nettoyage des ruines des grandes académies a été mis à l'ordre du jour. Le département d'ingénierie a rapidement élaboré un processus de nettoyage et de réaménagement très complet. Dès que nous aurons alloué suffisamment de ressources, nous pourrons commencer les travaux."
+ BA_origin.1006.next:0 "D'accord."
+
+ BA_origin.1007.name:0 "Renforcement des ruines terminé"
+ BA_origin.1007.desc:0 "Professeur, le département d'ingénierie a renforcé certains sites de ruines dangereux et a amélioré les techniques actuelles d'extraction des ruines par la même occasion. À partir de maintenant, ces ruines ennuyeuses ne réapparaîtront plus ! Eh heh heh..."
+ BA_origin.1007.a:0 "Compris."
+
+ BA_origin.1008.name:0 "Préparation au nettoyage et à la reconstruction"
+ BA_origin.1008.desc:0 "La plupart des ruines des grandes académies sur notre planète mère ont été nettoyées, et des mesures ont également été prises pour les ruines non nettoyées afin d'éviter tout accident. Le prochain travail consiste à nettoyer toutes les ruines anormales sur toute la planète, ce n'est qu'après cela que nous pourrons commencer notre travail de reconstruction. Nos départements d'ingénierie et de recherche sont prêts à commencer ce travail."
+ BA_origin.1008.next:0 "Faites-le."
+
+
+ BA_origin.1031.title:0 "Obstacle : Ruines"
+ BA_origin.1031.desc:0 "Il semble que, soit en raison de l'âge et du manque d'entretien, soit à cause d'une exploitation excessive, un effondrement majeur de ruines a entravé nos plans initiaux. Ces nouvelles ruines causent d'énormes dommages à l'environnement de la planète, nous devons trouver un moyen de les gérer rapidement."
+ BA_origin.1031.next:0 "Compris."
+
+ BA_origin.1032.title:0 "Obstacle : Ruines"
+ BA_origin.1032.desc:0 "Professeur, ces ruines qui apparaissent aléatoirement entravent sérieusement notre travail de reconstruction planétaire, mais les éliminer rapporte également de généreuses ressources. Si nous ne pouvons pas les nettoyer, peut-être que les élèves trouveront une solution adaptée. Pourquoi ne pas essayer de jeter un œil à l'interface des §YRequêtes§! de l'Arche de Shittim ?\n\nDe plus, Arona a déjà préparé les algorithmes nécessaires, qui peuvent localiser les zones susceptibles de générer des ruines et les renforcer à l'avance.\n\n...Au moins, cela les empêchera de freiner nos derniers efforts..."
+ BA_origin.1032.next:0 "Compris. Arona est formidable !"
+
+ BA_origin.1033.title:0 "Obstacle : Ruines"
+ BA_origin.1033.desc:0 "Un autre effondrement majeur s'est produit sur notre planète mère, générant une grande quantité de ruines extradimensionnelles. Ces nouvelles ruines causent d'énormes dommages à l'environnement de la planète, nous devons trouver un moyen de les gérer rapidement."
+ BA_origin.1033.next:0 "Compris."
+
+ BA_origin.1034.title:0 "Nettoyage terminé."
+ BA_origin.1034.desc:0 "L'obstacle inattendu a été éliminé. L'équipe d'ingénierie a récupéré de nombreuses ressources utiles."
+ BA_origin.1034.next:0 "Confirmé"
+ BA_origin.1034.minerals_tips:0 "Quelques minerais et alliages."
+ BA_origin.1034.energy_tips:0 "Pierre deux coups."
+ BA_origin.1034.rare_tips:0 "Rares et peu communs."
+ BA_origin.1034.dark_matter_tips:0 "Deep Dark Fantasy"
+ BA_origin.1034.nothing:0 "(Bien que cela ne puisse pas être considéré comme une ressource, nous ne devons pas gâcher le dur travail des élèves...)"
+
+
+#
+ BA_origin.1101.title:0 "Nettoyage des ruines"
+ BA_origin.1101.desc:0 "Professeur, les problèmes techniques liés au nettoyage des ruines ont été résolus. Il est temps de commencer notre travail de déblaiement. Le département d'ingénierie a réussi à concevoir des machines spéciales pour le nettoyage des ruines anormales, mais comme le nettoyage est très violent, le remplacement des composants mécaniques est très fréquent. Nous devons construire des usines capables de produire continuellement de l'équipement, afin de garantir que le travail de déblaiement puisse se poursuivre sans interruption."
+ BA_origin.1101.next:0 "Compris."
+
+ BA_origin.1102.title:0 "Nettoyage des ruines"
+ BA_origin.1102.desc:0 "L'atelier mécanique est construit, nous pouvons officiellement lancer nos opérations de nettoyage ! Il va bientôt fonctionner à plein régime pour nous fournir l'équipement nécessaire. Grâce à ce grand nettoyage, nous recevrons chaque mois £minerals£ minéraux et £alloys£ alliages !"
+ BA_origin.1102.next:0 "Bon courage !"
+
+ BA_origin.1103.title:0 "Nettoyage des ruines"
+ BA_origin.1103.desc:0 "Professeur, nous avons terminé le nettoyage de la majeure partie des ruines anormales à la surface de la planète et nous avons posé les bases solides pour la reconstruction à venir ! Nous pouvons maintenant commencer à transformer la planète en une §YPlanète Cité-Académie§ ! Si vous voulez vérifier les ressources exactes nécessaires, ou si vous voulez lancer les travaux, vous trouverez la résolution 'Reconstruire la Planète Cité-Académie' dans les §Yrésolutions planétaires§, d'accord ?!"
+ BA_origin.1103.next:0 "Magnifique !"
+
+ BA_origin.1104.title:0 "Nettoyage des ruines"
+ BA_origin.1104.desc:0 "Professeur, la Cité-Académie est reconstruite ! On n'aura plus besoin de vivre dans cet abri tout percé, on peut enfin emménager dans des dortoirs spacieux et lumineux ! \n\n...Euh, oui, c'est vrai, on en parlera plus tard. Nos anciennes méthodes de production dans les ruines ne sont plus du tout adaptées à la nouvelle Cité-Académie, il va donc falloir un peu de temps pour tout réorganiser. Les anciens districts ont été démantelés pour servir de matériaux de reconstruction, et cela a créé plein de postes temporaires pour accélérer nos travaux. En plus, la brigade d'autodéfense est prête et fera de son mieux pour maintenir la sécurité sur cette planète, et tout le monde est super motivé, donc vous n'avez pas à vous soucier de la stabilité de la planète pour l'instant !"
+ BA_origin.1104.next:0 "Commençons la planification, Arona !"
+
+#
+ BA_origin.1201.title:0 "Menace souterraine"
+ BA_origin.1201.desc:0 "Bien que nous ayons dû faire face à des contre-attaques des vestiges ennemis depuis la fin de la guerre, la dernière attaque à grande échelle contre un poste de ravitaillement était clairement différente. Cette fois, l'ennemi a déployé depuis son usine militaire souterraine une force de robots suffisamment nombreuse pour être qualifiée d'« armée » ! Si nos forces terrestres n'avaient pas eu la bonne idée de faire un exercice militaire juste à côté, nous aurions pu perdre un quartier entier. Nous devons nous préparer dès maintenant et nous méfier de ces menaces venant du sous-sol. Après tout, elles ont déjà essayé de détruire cette planète entière !"
+ BA_origin.1201.next:0 "(Connexion Arona)"
+
+ BA_origin.1202.title:0 "Menace souterraine"
+ BA_origin.1202.desc:0 "Professeur, concernant ces ennemis venus du sous-sol, nous avions installé des milliers de tours de suppression pour les empêcher d'atteindre la surface. Même si elles ne fonctionnent plus toutes, beaucoup sont encore intactes ! On pourrait essayer de les redémarrer pour affaiblir ces ennemis, et peut-être même en fabriquer quelques-unes de plus. Bien sûr, leur but n'est pas encore très clair, alors il faut aussi chercher des indices pour trouver un moyen de les anéantir complètement..."
+ BA_origin.1202.next:0 "D'accord."
+
+ BA_origin.1203.title:0 "Menace souterraine"
+ BA_origin.1203.desc:0 "Récemment, l'un de nos districts de réapprovisionnement a subi une attaque inattendue. Pourtant, il y avait plus d'une dizaine de tours de suppression actives dans cette zone, mais elle a tout de même été attaquée alors qu'elle était si bien protégée ! Heureusement, la zone centrale, celle avec le plus de tours de suppression, n'a subi que des dégâts très légers."
+ BA_origin.1203.next:0 "(Connexion Arona)"
+ BA_origin.1203.tip:0 "Les ennemis qui apparaîtront par la suite deviendront plus forts."
+
+ BA_origin.1204.title:0 "Menace souterraine"
+ BA_origin.1204.desc:0 "Professeur, on dirait que ces ennemis sont devenus plus résistants aux signaux des tours de suppression ! Nous devons exécuter notre plan le plus vite possible... Il faut construire de meilleures défenses très rapidement, soit en préparant plus de forces terrestres en attente sur la planète, soit en achevant vite le déploiement des tours de suppression."
+ BA_origin.1204.next:0 "D'accord."
+
+ BA_origin.1205.title:0 "Menace souterraine"
+ BA_origin.1205.desc:0 "Avec l'augmentation de la résistance des ennemis aux signaux des tours de suppression, un autre de nos districts de poste de ravitaillement, pourtant fortement entouré de tours de suppression, a été attaqué. Nos tours ne fonctionnent pas encore à pleine puissance, même si cette fois, il suffirait juste de pousser un peu plus l'interrupteur..."
+ BA_origin.1205.next:0 "..."
+ BA_origin.1205.tip:0 "Les ennemis qui apparaîtront par la suite deviendront plus forts."
+
+ BA_origin.1206.title:0 "Menace souterraine"
+ BA_origin.1206.desc:0 "L'un de nos districts industriels spécialisés a été attaqué. Nos tours de suppression sont déjà presque à pleine capacité, et ces districts devraient être les zones les plus sûres ! Il ne nous reste plus beaucoup de temps."
+ BA_origin.1206.next:0 "(Connexion Arona)"
+ BA_origin.1206.tip:0 "Les ennemis qui apparaîtront par la suite deviendront plus forts."
+
+ BA_origin.1207.title:0 "Menace souterraine"
+ BA_origin.1207.desc:0 "Professeur, nous n'avons plus beaucoup de temps pour nous débarrasser de ces vestiges souterrains, il faut agir au plus vite ! ...Dans la situation actuelle, voici ce qu'Arona peut encore vous offrir comme aide... Si nous n'agissons pas plus vite, cette planète va vraiment... Non, rien..."
+ BA_origin.1207.next:0 "..."
+
+ BA_origin.1211.title:0 "Menace souterraine"
+ BA_origin.1211.desc:0 "Comme nous l'avions prévu, les forces souterraines ont lancé leur offensive. Bien que la victoire nous ait été presque assurée lors de cette bataille, il est évident que l'ennemi ne s'avouera pas vaincu. Le nombre et la menace des ennemis ne feront qu'augmenter à l'avenir, nous devons absolument étudier des tactiques pour les contrer."
+ BA_origin.1211.next:0 "..."
+
+ BA_origin.1212.title:0 "Menace souterraine"
+ BA_origin.1212.desc:0 "Les éclaireurs rapportent que les vestiges souterrains se rassemblent à nouveau. Nos forces de défense terrestres sont déjà prêtes pour la prochaine opération défensive !"
+ BA_origin.1212.next:0 "Bon courage !"
+
+
+ BA_origin.1213.title:0 "Mesures contre la menace souterraine"
+ BA_origin.1213.desc:0 "Les tours de brouillage restantes sur la planète ont été réparées et fonctionnent toutes parfaitement. Ces tours vrombissantes peuvent faire changer de camp les troupes souterraines résiduelles entrant dans leur rayon d'action en peu de temps, réduisant considérablement la difficulté des opérations dans cette zone. Cependant, il semble que les ennemis nouvellement créés puissent résister à des signaux plus forts, nous devons donc agir vite."
+ BA_origin.1213.next:0 "Entendu, préparons le prochain projet."
+
+ BA_origin.1214.title:0 "Mesures contre la menace souterraine"
+ BA_origin.1214.desc:0 "De nombreux dispositifs d'amplification de signal ont été installés sur les tours de brouillage dans les zones clés afin de renforcer leurs émissions et de sécuriser ces régions. L'étape suivante consiste à fabriquer des tours de brouillage miniaturisées et mobiles, capables de couvrir la planète entière avec le signal, en préparation de la désactivation finale du cœur."
+ BA_origin.1214.next:0 "D'accord."
+
+ BA_origin.1215.title:0 "Mesures contre la menace souterraine"
+ BA_origin.1215.desc:0 "Grâce à la production de masse réussie des tours de brouillage miniaturisées, nous pouvons désormais diffuser facilement le signal de brouillage sur toute la planète. Cependant, cette recherche a également confirmé que les ennemis, en résistant à des signaux plus puissants, infligent une charge accrue au cœur souterrain. Nous devons agir vite, car si ce cœur surchauffe et explose, les conséquences seraient inimaginables."
+ BA_origin.1215.next:0 "Mobilisons toutes nos ressources pour la prochaine mesure !"
+
+ BA_origin.1216.title:0 "Mesures contre la menace souterraine"
+ BA_origin.1216.desc:0 "Le cœur de la menace souterraine a été piraté et désactivé, de sorte qu'aucune nouvelle force ennemie n'apparaîtra plus. L'armée de terre est en train d'achever le nettoyage final des troupes résiduelles sur la planète. Désormais, plus aucun ennemi ne pourra menacer notre planète mère."
+ BA_origin.1216.next:0 "Magnifique !"
+
+ BA_origin.1221.title:0 "Menace souterraine"
+ BA_origin.1221.desc:0 "Les opérations des troupes souterraines laissent souvent des débris qui peuvent être transformés en alliages de qualité, et elles ramènent aussi des minéraux à la surface. Après avoir repoussé cette attaque, nous avons collecté ces ressources comme butin."
+ BA_origin.1221.next:0 "D'accord."
+
+#
+ BA_origin.1301.title:0 "Rénovation du Sanctuaire terminée"
+ BA_origin.1301.desc:0 "La rénovation du Sanctuaire d'Arius est achevée. Le site a été transformé en un parc archéologique, où les concepts de restauration, à la fois partiellement rénovés et partiellement renforcés, mettent grandement en valeur le contraste entre la gloire passée et l'oubli."
+ BA_origin.1301.next:0 "Parfait !"
+
+ BA_origin.1302.title:0 "Rénovation d'Abydos terminée."
+ BA_origin.1302.desc:0 "Le vieux campus d'Abydos était déjà abandonné bien avant la bataille décisive, et la plupart des ruines ne peuvent être démantelées que pour en extraire des matériaux. Nous avons récupéré de nombreuses ressources utilisables, et nous espérons que le jour où la planète sera reconstruite, cet endroit retrouvera sa splendeur d'antan."
+ BA_origin.1302.next:0 "Attendons de voir."
+
+ BA_origin.1303.title:0 "Rénovation de l'Académie de la Technologie du Millénaire terminée"
+ BA_origin.1303.desc:0 "Les ruines de l'Académie de la Technologie du Millénaire, à l'exception du cœur énergétique, ont été entièrement rénovées, libérant ainsi des terres pour la reconstruction future. Comme nous l'avions anticipé, de nombreuses données ont pu être récupérées des supports de stockage ayant survécu sous les ruines. Nous avons ainsi obtenu des technologies utilisables et des documents techniques relatifs à la conception et à la fabrication de Hod à l'époque."
+ BA_origin.1303.next:0 "Magnifique !"
+
+ BA_origin.1304.title:0 "Rénovation de la Trinité terminée"
+ BA_origin.1304.desc:0 "Les ruines de la Trinité ont été entièrement dégagées. La Grande Cathédrale et le bâtiment principal d'enseignement sont remarquablement bien conservés et pourraient être reconvertis en musée. Cependant, en raison de la trahison de la faction de Sanctus pendant la bataille décisive, certaines personnes ont des opinions très tranchées et estiment que l'endroit devrait être utilisé comme décharge pour se venger."
+ BA_origin.1304.protect:0 "Nous avons effectivement besoin d'un tel musée."
+ BA_origin.1304.destroy:0 "Si cela peut nous unir, c'est aussi bien."
+
+ BA_origin.1305.title:0 "Rénovation de Gehenna terminée"
+ BA_origin.1305.desc:0 "Les ruines de Gehenna ont été entièrement rénovées. Ce campus a laissé de nombreux anciens bâtiments scolaires qui, avec quelques réparations mineures, pourraient être convertis en abris. Actuellement, le département d'ingénierie s'efforce de résoudre le problème de l'absence d'approvisionnement en eau courante."
+ BA_origin.1305.next:0 "D'accord."
+
+ BA_origin.1320.title:0 "Nettoyage des ruines terminé"
+ BA_origin.1320.desc:0 "À ce jour, les grandes académies détruites par le feu de la bataille décisive ont été entièrement dégagées. Nous sommes convaincus qu'une fois reconstruites, ces académies retrouveront leur splendeur d'antan."
+ BA_origin.1320.next:0 "D'accord."
+
+#
+ BA_origin.1401.title:0 "Exploitation minière des ruines"
+ BA_origin.1401.desc:0 "Professeur, nous avons trouvé une méthode plus efficace pour extraire les ressources nécessaires des ruines… Cette méthode peut également augmenter les ressources rares que nous extrayons des ruines. Vous pouvez choisir les produits à extraire dans les #YPolitiques#!."
+ BA_origin.1401.next:0 "Magnifique !"
+
+ BA_origin.1410.title:0 "Dieu Inconnu"
+ BA_origin.1410.desc:0 "Bien que les troupes souterraines résiduelles sur [root.GetName] aient finalement pu résister complètement aux tours de brouillage, elles ont apparemment atteint la limite de leur propre stabilité. En quelques jours, le cœur énergétique souterrain, incapable de supporter une charge aussi puissante, s'est désintégré au milieu de violentes fluctuations gravitationnelles, déclenchant aussitôt une explosion spectaculaire. Heureusement, nous avons profité de cette occasion pour préparer suffisamment de véhicules pour évacuer tous les étudiants.\nNous avons d'autres colonies où nous réfugier, le ciel étoilé est vaste, et les possibilités sont infinies."
+ BA_origin.1410.next:0 "Mais nous avons perdu notre berceau pour toujours…"
+
+ BA_origin.1412.title:0 "Dieu Inconnu"
+ BA_origin.1412.desc:0 "Notre opération pour repousser les envahisseurs émergeant des installations souterraines sur [root.GetName] a échoué. Les vestiges souterrains ont réussi à établir des positions clés sur plusieurs points de la planète, puis ils ont construit des dispositifs d'ascension, se préparant à établir une base stellaire et à fonder leur marine. Mais pour une raison inconnue, leur noyau énergétique a soudainement connu de violentes fluctuations gravitationnelles, provoquant la panne de la plupart des envahisseurs, atteignant rapidement un point critique et culminant dans une explosion spectaculaire. Heureusement, la plupart des élèves ont profité de ce temps d'arrêt pour s'enfuir à bord de tous les véhicules qu'elles ont pu trouver, échappant ainsi à ce désastre.\nNous avons d'autres colonies pour nous accueillir ; le ciel étoilé est immense, et les possibilités infinies."
+ BA_origin.1412.next:0 "Mais nous avons perdu notre berceau pour toujours…"
+
+ BA_origin.1414.title:0 "Dieu Inconnu"
+ BA_origin.1414.desc:0 "Avec la perte de [root.GetName], plus rien ne pouvait arrêter les vestiges souterrains. Cependant, ces envahisseurs semblent avoir surestimé leur capacité de charge, et après plusieurs violentes fluctuations gravitationnelles, la planète entière a été pulvérisée par un noyau énergétique surchargé et auto-explosif. Nous ne saurons jamais ce qui s'y est passé, mais nous avons perdu notre monde natal pour toujours."
+ BA_origin.1414.next:0 "Douleur."
+
+ BA_origin.1415.title:0 "Dieu Inconnu"
+ BA_origin.1415.desc:0 "Nous avons pris le contrôle de [fromfrom.GetName], mais peu de temps après, le cœur de cette planète a émis de violentes fluctuations gravitationnelles, et avant que nous puissions prendre d'autres mesures, la planète entière a été pulvérisée."
+ BA_origin.1415.next:0 "Que s'est-il passé au juste ?"
+
+#
+ BA_origin.1430.title:0 "Aux dieux oubliés"
+ BA_origin.1430.desc:0 "La reconstruction de la planète de la Cité Scolaire est désormais entièrement achevée. L'obscurité et le froid d'autrefois ne sont plus qu'un lointain souvenir, et nous pouvons à nouveau embrasser le ciel azur. Bientôt, cette planète sera de nouveau remplie de nos rires et de notre joie."
+ BA_origin.1430.a:0 "Nous avons redonné vie à Kivotos de nos propres mains."
+ BA_origin.1430.b:0 "Et nous ne laisserons pas Kivotos chuter une fois de plus."
+
+
+#
+ BA_origin.1450.title:0 "Découverte d'Extraterrestres"
+ BA_origin.1450.desc:0 "Depuis les premiers indices de leur existence jusqu'à l'établissement de relations diplomatiques officielles avec eux, notre point de vue sur les extraterrestres a progressivement convergé : ils serviront de tremplin à notre renouveau. Ayant déjà appris à être doubles, nous interagissons avec eux en adoptant une position nationale normale en apparence, mais en réalité, nous avons déjà planifié leur utilité dans notre esprit."
+ BA_origin.1450.next:0 "Nous avions déjà pris la résolution de ne reculer devant rien."
+
+ BA_origin.1451.title:0 "Lever le Voile"
+ BA_origin.1451.desc:0 "Nous avions déjà pris la résolution de ne reculer devant rien, plus besoin de masquer notre véritable nature. Pour la conviction d'Arius."
+ BA_origin.1451.next:0 "Tout est vanité."
+ BA_origin.1451.tip:0 "Définir les droits de toutes les espèces extraterrestres comme « Intouchables »"
+
+ BA_origin.1452.title:0 "Sous le Voile"
+ BA_origin.1452.desc:0 "Nous avons passé tellement de temps avec ces extraterrestres. Nous avons réfléchi à nos actions et découvert que leurs chemins ne contredisent pas les nôtres. Dans ce cas…"
+ BA_origin.1452.next:0 "Nouer de nouvelles amitiés permet de s'améliorer."
+
+
+#系统事件
+ BA_origin.1456.title:0 "Acquisition de Ressources"
+ BA_origin.1456.desc:0 "Un empire extraterrestre a été réduit en cendres sous notre offrande martiale. Nos forces terrestres ont confisqué un grand lot de ressources que leur trésor n'avait pas eu le temps de détruire, et les déchets ont été méticuleusement recyclés. Ce lot de matériel a déjà été chargé sur des vaisseaux de transport en direction de la capitale."
+ BA_origin.1456.confirm:0 "Approuvé pour stockage."
+
+
+
+##########################
+
+ BA_origin.2002.title:0 "Point de départ non identifié"
+ BA_origin.2002.desc:0 "Professeur, bonnes nouvelles !… Les accords conjoints des quatre D.U. ont été officiellement signés, et chaque station d'habitation a transféré son autorité administrative au Conseil des Étudiants Fédéral. Maintenant, nous pouvons commencer le plan de reconquête de Kivotos ! Si on y réfléchit bien, ça fait tellement longtemps que nous en sommes là… Les élèves doivent être impatientes, n'est-ce pas ?\n§REnsuite, il nous suffira de faire débarquer nos forces terrestres, de vaincre les ennemis sous la Tour de la Futilité, et de prendre le contrôle de notre monde natal pour enfin rentrer à la maison !§!"
+ BA_origin.2002.next:0 "Alors, commençons les préparatifs."
+
+ BA_origin.2003.title:0 "Point de départ non identifié"
+ BA_origin.2003.desc:0 "Professeur, maintenant que nous avons la technologie FTL, il est temps de commencer à nous étendre…\nVoici les fonds de réserve et les technologies que le Conseil des Étudiants Fédéral a collectés. Vous pouvez les utiliser pour construire plus de stations d'habitation automatisées dans d'autres systèmes stellaires. §YCependant, veuillez faire très attention à notre production actuelle d'alliages… L'entretien des stations d'habitation consomme beaucoup d'alliages.§! De plus, des projets de recherche supplémentaires sur les stations d'habitation ont été lancés, principalement pour augmenter l'efficacité des quartiers automatisés existants. Professeur, vous pouvez les faire avancer via les §HRésolutions planétaires§! de l'Arche ! Enfin, il y a une dernière chose à noter… La formation et la rupture de l'état de superposition de l'Arche est un événement très visible, ce qui signifie que §Hd'autres civilisations extraterrestres pourraient connaître notre position§ ! Professeur, il serait sage de vous y préparer tôt ou tard…"
+ BA_origin.2003.next:0 "D'accord."
+
+
+ BA_origin.2011.title:0 "Érosion"
+ BA_origin.2011.desc:0 "En raison de l'érosion par la §RTour de la Futilité§! provenant de notre monde natal, des machines hostiles sont apparues sur l'Arche. Le Comité d'Autodéfense a déjà géré d'innombrables invasions de ce genre par le passé, et bien que vaincre l'ennemi soit un jeu d'enfant pour elles, il serait préférable de s'occuper de cette menace le plus tôt possible."
+ BA_origin.2011.next:0 "Compris."
+ BA_origin.2011.next.tip:0 "Ensuite, nous devrons débarquer et occuper notre monde natal pour empêcher l'ennemi de continuer à envahir l'Arche."
+
+ BA_origin.2012.title:0 "Érosion"
+ BA_origin.2012.desc:0 "Un autre groupe d'ennemis est apparu sur notre monde natal, et le Comité d'Autodéfense est parti les engager. Bien que vaincre l'ennemi soit un jeu d'enfant pour elles, il serait préférable de s'occuper de cette menace le plus tôt possible."
+
+
+ BA_origin.2051.title:0 "Point de départ non identifié"
+ BA_origin.2051.desc:0 "Nos forces terrestres d'assaut ont subi une défaite lors de la tentative de reconquête de notre monde natal. Mais ce n'est pas grave, nous contrôlons l'espace, et l'ennemi est pris au piège. Nous aurons encore de nombreuses occasions."
+ BA_origin.2051.next:0 "Rien ne saurait nous empêcher de rentrer à la maison !"
+
+ BA_origin.2052.title:0 "Point de départ non identifié"
+ BA_origin.2052.desc:0 "Notre armée a achevé la purification des ennemis à l'intérieur de la région autonome de la planète mère et a posté des troupes près des six §RTours de la Fausseté§!. Cependant, Kivotos est toujours sous le voile des nuages rouges, l'environnement est profondément corrompu, et la source en sont ces immenses tours. Il n'y a plus d'ennemis menaçants à l'intérieur de ces tours, et avec nos équipements d'ingénierie actuels, nous pouvons facilement les démanteler."
+ BA_origin.2052.next:0 "Confirmer."
+
+ BA_origin.2055.title:0 "Point de départ non identifié"
+ BA_origin.2055.desc:0 "En raison de l'influence persistante des Tours de la Fausseté, des ennemis mécaniques continuent d'apparaître sans cesse. Bien que leur menace soit bien moindre que celle des Gardiens des Tours, leur nombre est considérable, et des forces de défense doivent être déployées pour s'en occuper."
+ BA_origin.2055.next:0 "Confirmer."
+
+ BA_origin.2101.title:0 "Point de départ non identifié"
+ BA_origin.2101.desc:0 "Sensei, nous avons neutralisé une des Tours de la Fausseté de Kivotos ! On dirait que même si les gardiens ont été vaincus, les vestiges de la tour sont toujours très robustes et peuvent continuer à libérer de la corruption. Il reste 5 de ces tours gigantesques... Dépêchons-nous de nettoyer toutes ces coques vides, Sensei, c'est la dernière étape, d'accord ?!"
+ BA_origin.2101.next:0 "Confirmer."
+
+ BA_origin.2102.title:0 "Point de départ non identifié"
+ BA_origin.2102.desc:0 "Toutes les Tours de la Fausseté ont été éliminées, et ce n'est qu'une question de temps avant que Kivotos ne se remette de l'érosion qu'elles ont causée. Nous avons remporté cette victoire et avons récupéré notre foyer. Bien qu'il y ait eu jadis oppression, résistance, doutes et conflits, nous sommes à présent unis par un objectif commun. Cette fois, notre foyer ne s'est pas transformé en ruines, mais est devenu le monument que nous avons forgé de nos propres mains."
+ BA_origin.2102.next:0 "L'histoire déformée a enfin retrouvé son cours."
+ BA_origin.2102.tip:0 "Relocaliser la capitale sur la planète de la Cité Académie.\nSa $d_fade_Sanctum_zone$ a retrouvé son état d'origine et peut maintenant être nettoyée."
+
+
+ BA_origin.2111.title:0 "Recherche sur les quartiers automatisés"
+ BA_origin.2111.desc:0 "Sensei, nous avons enfin une conclusion pour nos recherches sur les quartiers automatisés ! Il s'avère qu'auparavant, lorsque nous tentions de reproduire les équipements, nous n'avions pas pris en compte l'effet de distorsion spatiale de la Pyroxène, ce qui a fait qu'une petite erreur a été amplifiée en continu, entraînant finalement des pannes. Maintenant, nous avons une solution mature... Arona va de ce pas prévenir tous les D.U. pour leur dire de modifier leurs équipements !"
+ BA_origin.2111.next:0 "Magnifique !"
+ BA_origin.2111.next.tip:0 "L'efficacité de production des quartiers automatisés a été §Ypartiellement restaurée§!."
+
+ BA_origin.2112.title:0 "Recherche sur les quartiers automatisés"
+ BA_origin.2112.desc:0 "Sensei, le Conseil Général des Étudiants a entièrement compris le mécanisme de fonctionnement des quartiers automatisés, et les anomalies logiques dans l'agencement des lignes de production ont également été corrigées ! Maintenant, les quartiers automatisés que nous avons construits nous-mêmes sont absolument identiques aux équipements d'origine de l'Arche !"
+ BA_origin.2112.next:0 "Magnifique !"
+ BA_origin.2112.next.tip:0 "L'efficacité de production des quartiers automatisés a été §Btotalement restaurée§!."
+
+
+

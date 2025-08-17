@@ -1,0 +1,555 @@
+﻿l_korean:
+ BA_SI:"학원 이념"
+
+ MESSAGE_BA_SI_READY:"학원 이념 준비 완료"
+ MESSAGE_BA_SI_READY_DESC:"저희가 벌써 5점 이상의 £job_BA_dont_be_crazy_here£§B$BA_SI$ 점수§!를 모았어요! 싯팀의 상자로 가서 $BA_SI$를 활성화해주세요!"
+
+ MESSAGE_BA_SI_ACTIVATED:"학원 이념 효과 활성화 완료"
+ MESSAGE_BA_SI_ACTIVATED_Trinity_A03_DESC:"§Y$SI_Trinity_A03$§! 활성화 완료, 모든 지도자에게 §C1000 경험치§!를 제공합니다."
+ MESSAGE_BA_SI_ACTIVATED_Millennium_C03_DESC:"§Y$SI_Millennium_C03$§! 활성화 완료, 모든 지도자의 §R부정적 특성§!을 제거합니다."
+
+ BA_Shittem.4010.title: "$BA_SI$"
+ BA_Shittem.4010.desc:"선생님, 저희가 벌써 £job_BA_dont_be_crazy_here£§B$BA_SI$ 점수§!를 많이 모았어요! 학원마다 통치와 연합에 대한 생각이 다르답니다. §B$BA_SI$§!를 클릭하여 그들의 아이디어를 국책으로 채택하고 막대한 보너스를 얻을 수 있어요! 선생님, 학생들의 지혜도 배울 점이 많으니, 그들의 열정을 헛되이 낭비하면 안 되잖아요?"
+
+ #####    阿拜多斯    #####
+ SI_Abydos_tip:"학원 이념 (주요): §L아비도스 학원§!\n아비도스 학원의 우주 시대 부흥 기적은 두말할 나위 없이 대단했으며, 그 혁신과 경험은 키보토스 전역에 전파할 가치가 있습니다.\n"
+ ### 共通
+ SI_Abydos_G01:"대책위원회의 일상"
+ SI_Abydos_G01_desc:"이야기는 여기서 새로운 시작을 맞이합니다."
+ SI_Abydos_G01_effect:"\n효과:\n§Y$engineering_research_with_icon$§! 및 §Y$unity_with_icon$§!를 월 생산량의 3배에 해당하는 양만큼 획득\n"
+ SI_Abydos_G01_tip:"§C$SI_Abydos_G01$§!\n$SI_Abydos_G01_desc$\n$SI_Abydos_G01_effect$"
+
+ SI_Abydos_G02:"자그마한 부업"
+ SI_Abydos_G02_desc:"우리들의 생활 환경을 개선하는 방법을 연구하는 와중에도, 그 매력적인 부업은 여전히 대책위원회의 마음을 사로잡고 있습니다."
+ SI_Abydos_G02_effect:"\n효과:\n§H지부 건물 잠금 해제: §!$building_BA_SI_Abydos_G02$\n"
+ SI_Abydos_G02_tip:"§C$SI_Abydos_G02$§!\n$SI_Abydos_G02_desc$\n$SI_Abydos_G02_effect$"
+
+ SI_Abydos_G03:"에필로그: 대책위원회의 종착점"
+ SI_Abydos_G03_desc:"대책위원회의 임무는 마지막에 다다랐고, §B아비도스 폐교 대책위원회§!라는 명칭은 더 이상 사용되지 않으며, 학교 역사관의 정문에 걸려 키보토스의 학생들을 격려하고 경고하고 있습니다."
+ SI_Abydos_G03_effect:"\n효과:\n$mod_BA_SI_sub_cap_add$: §G+1§!\n$MOD_COUNTRY_MEGASTRUCTURE_BUILD_CAP_ADD$: §G+1§!\n§H행성 결의 잠금 해제: §!$decision_BA_SI_Abydos_G03$ (§Y학원도시 행성§!에서만 사용 가능)\n"
+ SI_Abydos_G03_tip:"§C$SI_Abydos_G03$§!\n$SI_Abydos_G03_desc$\n$SI_Abydos_G03_effect$"
+
+ ### 左线
+ SI_Abydos_A01:"행성 개조 대책"
+ SI_Abydos_A01_desc:"행성 환경을 개조하려면 먼저 충분한 기반을 계획하고 건설해야 하며, 에너지 공급이 가장 중요합니다."
+ SI_Abydos_A01_effect:"\n§R$SI_Abydos_B01$§R과 상호 배타적§!\n효과:\n£society_research£§H$tech_terrestrial_sculpting$§! 기술 진척도 §G75%§! 획득\n환경 개조 속도: §G+25%§!\n100명의 £job_BA_Kivotos_staff£§Y$job_BA_Kivotos_staff$§! 또는 £job_BA_supplier£§Y$job_BA_supplier$§!당 해당 식민지에 다음을 제공합니다:\n    $MOD_PLANET_BUILDING_BUILD_SPEED_MULT$§G+5%§!\n"
+ SI_Abydos_A01_tip:"§C$SI_Abydos_A01$§!\n$SI_Abydos_A01_desc$\n$SI_Abydos_A01_effect$"
+
+ SI_Abydos_A02:"물류 통합"
+ SI_Abydos_A02_desc:"행성 개조는 엄청나게 거대한 프로젝트이며, 물자 유통 효율이 프로젝트의 진척도를 직접적으로 결정합니다."
+ SI_Abydos_A02_effect:"\n효과:\n$mod_planet_districts_cost_mult$: §G-15%§!\n$mod_planet_districts_upkeep_mult$: §G-15%§!\n환경 개조 소모: §G-35%§!\n환경 개조 속도: §G+25%§!\n"
+ SI_Abydos_A02_tip:"§C$SI_Abydos_A02$§!\n$SI_Abydos_A02_desc$\n$SI_Abydos_A02_effect$"
+
+ SI_Abydos_A03:"산업 강화"
+ SI_Abydos_A03_desc:"우리의 목표를 더 빨리 달성하기 위해, 대가가 따르는 생산 가속이 필수적입니다."
+ SI_Abydos_A03_effect:"\n효과:\n§H학원 이념 칙령 잠금 해제: §!$edict_BA_SI_Abydos_A03$:\n    §Y기본 활성화 비용: £unity£300§!\n    §Y기본 유지비: £unity£30§!\n    $MOD_PLANET_BUILDING_BUILD_SPEED_MULT$: §G+25%§!\n    $mod_planet_jobs_produces_mult$: §G+25%§!\n    $mod_BA_staff_pop_produces_mult$: §G+25%§!\n    $mod_planet_jobs_upkeep_mult$: §R+25%§!\n"
+ SI_Abydos_A03_tip:"§C$SI_Abydos_A03$§!\n$SI_Abydos_A03_desc$\n$SI_Abydos_A03_effect$"
+
+ SI_Abydos_A04:"행성 청사진"
+ SI_Abydos_A04_desc:"키보토스는 언제나 살기 가장 좋은 곳이었으며, 학원도시 행성은 우리에게 가장 이상적인 고향입니다."
+ SI_Abydos_A04_effect:"\n효과:\n$mod_planet_metallurgists_alloys_produces_add$: §G+1§!\n$MOD_PLANET_DECISION_ENACT_SPEED_MULT$: §G+15%§!\n$mod_planet_buildings_cost_mult$: §G-20%§!\n"
+ SI_Abydos_A04_tip:"§C$SI_Abydos_A04$§!\n$SI_Abydos_A04_desc$\n$SI_Abydos_A04_effect$"
+
+ SI_Abydos_A05:"허공 개척"
+ SI_Abydos_A05_desc:"용감한 엔지니어들이 근지구 궤도의 광대한 공간을 정복하고 있으며, 자동화 거주지가 바로 그녀들의 수단입니다."
+ SI_Abydos_A05_effect:"\n효과:\n$MOD_MEGASTRUCTURE_BUILD_SPEED_MULT$: §G+75%§!\n$mod_BA_auto_districts_produces_mult$: §G+20%§!\n$mod_megastructures_cost_mult$: §G-20%§!\n$mod_station_gatherers_produces_mult$: §G+30%§!\n" #\n居住站和自动化居住站宜居性: §G+30%§!
+ SI_Abydos_A05_tip:"§C$SI_Abydos_A05$§!\n$SI_Abydos_A05_desc$\n$SI_Abydos_A05_effect$"
+
+ SI_Abydos_A06:"신세계로부터"
+ SI_Abydos_A06_desc:"저희는 결코 여기에서 멈추지 않을 거예요. 우주에는 저희를 기다리는 더 넓은 세상이 있으니까요."
+ SI_Abydos_A06_effect:"\n효과:\n§H행성 결의 잠금 해제: §!$decision_BA_SI_Abydos_A06$(오직 §Y학원 도시 행성§! 또는 §Y고급 거주지§!에서 사용 가능)\n"
+ SI_Abydos_A06_tip:"§C$SI_Abydos_A06$§!\n$SI_Abydos_A06_desc$\n$SI_Abydos_A06_effect$"
+
+ ### 右线
+ SI_Abydos_B01:"사막 학원의 길"
+ SI_Abydos_B01_desc:"사막은 본질적으로 자원이기도 해요. 사막화를 최대한 활용하는 것이 오히려 아비도스의 큰 특징이 될 수도 있을 거예요."
+ SI_Abydos_B01_effect:"\n§R$SI_Abydos_A01$§R와 상호 배타적§!\n효과:\n행성 유형이 §Y사막 행성§!인 식민지는 §H행성 수정치 획득: §!$modifier_BA_SI_Abydos_B01$:\n    종족 거주 적합도 하한선: §G+50%§!\n    행성 건설 속도: §G+0.25§!\n"
+ SI_Abydos_B01_tip:"§C$SI_Abydos_B01$§!\n$SI_Abydos_B01_desc$\n$SI_Abydos_B01_effect$"
+
+ SI_Abydos_B02:"하늘의 경계"
+ SI_Abydos_B02_desc:"사막 환경은 극단적인 장점과 단점을 모두 가지고 있어요. 정교한 계획을 세워 장점을 살리고 단점을 보완해야 해요."
+ SI_Abydos_B02_effect:"\n효과:\n§H행성 결의 잠금 해제: §!$decision_BA_SI_Abydos_B02$(오직 행성 유형이 §Y사막 행성§!인 식민지에서 사용 가능)\n"
+ SI_Abydos_B02_tip:"§C$SI_Abydos_B02$§!\n$SI_Abydos_B02_desc$\n$SI_Abydos_B02_effect$"
+
+ SI_Abydos_B03:"거센 바람 속에서"
+ SI_Abydos_B03_desc:"저희는 험악한 환경을 극복하고, 한 치의 땅도 특징을 파악해서 저희 발밑의 이 행성을 개척해나가요."
+ SI_Abydos_B03_effect:"\n효과:\n§H행성 결의 잠금 해제: §!$decision_BA_SI_Abydos_B03$(오직 행성 유형이 §Y사막 행성§!인 식민지에서 사용 가능)\n"
+ SI_Abydos_B03_tip:"§C$SI_Abydos_B03$§!\n$SI_Abydos_B03_desc$\n$SI_Abydos_B03_effect$"
+
+ SI_Abydos_B04:"풍요로운 오아시스 계획"
+ SI_Abydos_B04_desc:"수원을 핵심으로 삼아 가장 풍요롭고 아름다운 땅을 주거 지역으로 지정하고, 학생들이 완벽한 생활을 경험할 수 있도록 보장해야 해요."
+ SI_Abydos_B04_effect:"\n효과:\n사막 행성 거주 적합도: §G+30%§!\n§H행성 수정치: §!$modifier_BA_SI_Abydos_B01$ --> §H행성 수정치§!: $modifier_BA_SI_Abydos_B04$:\n    $MOD_HABITABILITY_FLOOR_ADD$: §G+50%§!\n    $MOD_PLANET_BUILDING_BUILD_SPEED_MULT$: §G+0.25§!\n    £stability£$MOD_PLANET_STABILITY_ADD$: §G+10§!\n    £happiness£$MOD_POP_HAPPINESS$: §G+10%§!\n"
+ SI_Abydos_B04_tip:"§C$SI_Abydos_B04$§!\n$SI_Abydos_B04_desc$\n$SI_Abydos_B04_effect$"
+
+ SI_Abydos_B05:"도시 수호자"
+ SI_Abydos_B05_desc:"저희의 도시를 발전시키고 행성의 자원을 개발해서 저희 학원 도시를 번영시키자!"
+ SI_Abydos_B05_effect:"\n효과:\n§H행성 결의 잠금 해제: §!$decision_BA_SI_Abydos_B05$(오직 행성 유형이 §Y사막 행성§!인 식민지에서 사용 가능)\n"
+ SI_Abydos_B05_tip:"§C$SI_Abydos_B05$§!\n$SI_Abydos_B05_desc$\n$SI_Abydos_B05_effect$"
+
+ SI_Abydos_B06:"별과 모래"
+ SI_Abydos_B06_desc:"학원 도시가 모래 바다 속에 우뚝 서 있어요. 마치 이 행성이 찬란한 별들 사이를 떠도는 것처럼요."
+ SI_Abydos_B06_effect:"\n효과:\n§H행성 결의 잠금 해제: §!$decision_BA_SI_Abydos_B06$(오직 행성 유형이 §Y사막 행성§!인 식민지에서 사용 가능)\n"
+ SI_Abydos_B06_tip:"§C$SI_Abydos_B06$§!\n$SI_Abydos_B06_desc$\n$SI_Abydos_B06_effect$"
+
+
+ #####     格黑那     #####
+ SI_Gehenna_tip:"학원 이념 (주요): §_게헨나 학원§!\n키보토스의 유명한 원숭이 산(?)으로서 게헨나는 질서와 혼돈의 조화에 대한 독특한 이해를 가지고 있어요. 이제 그들을 키보토스 전체로 전파할 때예요.\n"
+ ### 共通
+ SI_Gehenna_G01:"쾌적한 주거지"
+ SI_Gehenna_G01_desc:"오래된 구역은 학생들의 파괴로 인해 이미 엉망진창이 되었어요. 새로운 시대에 들어서면서 저희는 우선 학생들의 거주 문제를 해결해야 해요. 그렇지만 새로운 기숙사를 좀 더 쾌적하게 짓지 않을 이유가 있나요?"
+ SI_Gehenna_G01_effect:"\n효과:\n직업 £consumer_goods£소비재 유지비: §G-15%§!\nPOP 주거지 사용량: §R+15%§!\n"
+ SI_Gehenna_G01_tip:"§C$SI_Gehenna_G01$§!\n$SI_Gehenna_G01_desc$\n$SI_Gehenna_G01_effect$"
+
+ SI_Gehenna_G02:"신세계의 불씨"
+ SI_Gehenna_G02_desc:"게헨나 소속 학생들은 활동성 면에서 언제나 다른 모든 학원들을 압도했어요. 신세계에 대한 그들의 갈망도 마찬가지고요."
+ SI_Gehenna_G02_effect:"\n효과:\n$MOD_POP_RESETTLEMENT_COST_MULT$: §G-25%§!\n$MOD_POP_BONUS_WORKFORCE_MULT$: §G+10%§!\n§Y새로 건설된§! 식민지는 §H행성 수정치 획득: §!$modifier_BA_SI_Gehenna_G02$(1800£time£)：\n    행복도: §G+40%§!\n    $MOD_PLANET_BUILDING_BUILD_SPEED_MULT$: §G+25%§!\n"
+ SI_Gehenna_G02_tip:"§C$SI_Gehenna_G02$§!\n$SI_Gehenna_G02_desc$\n$SI_Gehenna_G02_effect$"
+
+ SI_Gehenna_G03:"에필로그: 불꽃으로 세례받은 학원 도시"
+ SI_Gehenna_G03_desc:"저희가 과거에 무엇을 겪었든 상관없이, 지금의 키보토스는 완전히 새롭게 태어났어요. 아무리 성간 공간이 텅 비고 차가울지라도 이 학원 도시는 저희 마음속의 불꽃으로 밝혀질 거예요."
+ SI_Gehenna_G03_effect:"\n효과:\n$mod_BA_SI_sub_cap_add$: §G+1§!\n자동화 건물에서 생산되는 자원: §G+35%§!\n$mod_planet_metallurgists_produces_mult$: §G+35%§!\n£job_foundry£$mod_planet_metallurgists_upkeep_mult$: §R+35%§!\n£job_BA_pyroxenes_maker£청휘석 제작자 산출량: §G+35%§!\n£job_BA_pyroxenes_maker£청휘석 제작자 유지비: §R+35%§!\n"
+ SI_Gehenna_G03_tip:"§C$SI_Gehenna_G03$§!\n$SI_Gehenna_G03_desc$\n$SI_Gehenna_G03_effect$"
+
+ ### 上左线
+ SI_Gehenna_A01:"만마전 전략: 암류 위에 군림하다"
+ SI_Gehenna_A01_desc:"현재 게헨나가 연방학생회의 수석 자리를 꿰찬 이상, 만마전은 자신들의 야망을 드러내기 위해 으레 작은 소동을 일으키곤 한다. 물론, 그들의 계획은 늘 어딘가 어설프지만 말이다."
+ SI_Gehenna_A01_effect:"\n§R$SI_Gehenna_B01$과 상호 배타적§!\n효과:\n§H제국 수정치 획득: §!$modifier_BA_SI_Gehenna_A01$(3600£time£): \n    $MOD_BONUS_POP_GROWTH_MULT$: §G+25%§!\n    $mod_planet_pops_organics_food_upkeep_mult$: §R+25%§!\n"
+ SI_Gehenna_A01_tip:"§C$SI_Gehenna_A01$§!\n$SI_Gehenna_A01_desc$\n$SI_Gehenna_A01_effect$"
+
+ SI_Gehenna_A02:"만마전 전략: 선제공격"
+ SI_Gehenna_A02_desc:"만마전의 수뇌부는 지정학적 싸움이든 정치적 투쟁이든 주도권을 잡는 것이 언제나 승리를 쟁취하는 가장 중요한 비결이라고 생각한다. 하지만 실제 행동으로 옮길 때면 기획서부터 실행까지 모든 것을 비서들이 도맡아 한다."
+ SI_Gehenna_A02_effect:"\n§R$SI_Gehenna_B02$과 상호 배타적§!\n효과:\n현재 설계에 따르면, 즉시 §G초계함 40척§!을 획득합니다.\n§H제국 수정치 획득: §!$modifier_BA_SI_Gehenna_A02$(3600£time£)：\n    $MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+100%§!\n    $mod_ships_upkeep_mult$: §G-35%§!\n"
+ SI_Gehenna_A02_tip:"§C$SI_Gehenna_A02$§!\n$SI_Gehenna_A02_desc$\n$SI_Gehenna_A02_effect$"
+
+ SI_Gehenna_A03:"만마전 전략: 패권적 태세"
+ SI_Gehenna_A03_desc:"게헨나 내부가 늘 평화롭지 못하자, 만마전은 철권통치를 선택하고 전쟁을 압력 배출구로 삼았다. 비록 만마전이 추진한 계획이지만, 실제 기획과 운영은 풍기위원회에 맡겨졌다."
+ SI_Gehenna_A03_effect:"\n§R$SI_Gehenna_B03$과 상호 배타적§!\n효과:\n§Y새롭게 제어권을 획득한§! 식민지는 §H행성 수정치 획득: §!$modifier_BA_SI_Gehenna_A03$(1800£time£)：\n    안정도: §G+50%§!\n    $MOD_PLANET_BUILDING_BUILD_SPEED_MULT$: §G+25%§!\n    $mod_planet_jobs_upkeep_mult$: §G-10%§!\n이 행성이 §Y이전 초광속 문명§!에게서 획득되었다면, §B수도§! 또한 이 수정치를 획득합니다.\n이 행성이 §Y몰락 제국 또는 각성 제국§!에게서 획득되었다면, §B모든 식민지§!가 이 수정치를 획득합니다." #\n§H解锁战争借口: §!霸权征服
+ SI_Gehenna_A03_tip:"§C$SI_Gehenna_A03$§!\n$SI_Gehenna_A03_desc$\n$SI_Gehenna_A03_effect$"
+
+ ### 上右线
+ SI_Gehenna_B01:"풍기위원회 전략: 기치 아래"
+ SI_Gehenna_B01_desc:"현재 게헨나가 연방학생회의 수석 자리에 있는 만큼, 행정관의 계획 아래 풍기위원장의 위신을 빌려 성간 시대의 영광을 반드시 쟁취하려 한다."
+ SI_Gehenna_B01_effect:"\n§R$SI_Gehenna_A01$과 상호 배타적§!\n효과:\n§H제국 수정치 획득: §!$modifier_BA_SI_Gehenna_B01$(1800£time£):\n    안정도: §G+15§!\n    범죄도: §G-25§!\n    행복도: §R-15%§!\n"
+ SI_Gehenna_B01_tip:"§C$SI_Gehenna_B01$§!\n$SI_Gehenna_B01_desc$\n$SI_Gehenna_B01_effect$"
+
+ SI_Gehenna_B02:"풍기위원회 전략: 일망타진"
+ SI_Gehenna_B02_desc:"연방학생회에 인력이 차출되었음에도 풍기위원회는 본연의 업무를 보장해야 한다. 행정관은 문제가 가장 쉽게 발생하는 지점에 풍기위원회 정예 인력을 파견하여 각종 절차의 원활한 진행을 보장한다."
+ SI_Gehenna_B02_effect:"\n§R$SI_Gehenna_A02$과 상호 배타적§!\n효과:\n매월 $trade_with_icon$: §G+50§!\n $mod_planet_jobs_unity_produces_mult$: §G+20%§!\n"
+ SI_Gehenna_B02_tip:"§C$SI_Gehenna_B02$§!\n$SI_Gehenna_B02_desc$\n$SI_Gehenna_B02_effect$"
+
+ SI_Gehenna_B03:"풍기위원회 전략: 질풍노도"
+ SI_Gehenna_B03_desc:"안정을 보장하는 것이야말로 발전의 전제 조건이다. 필요할 경우, 풍기위원회는 과감히 연방학생회에서 일부 인력을 차출하여 까다로운 문제를 처리한다. 이에 따라 행정관들은 가장 빠르게 병력을 동원할 수 있는 방법을 고안했다."
+ SI_Gehenna_B03_effect:"\n§R$SI_Gehenna_A03$과 상호 배타적§!\n효과:\n자경단 유지비: §G-40%§!\n자경단 생산량: §G+40%§!\n§Y£stability£안정도가 90% 이상인§! 식민지는 §H행성 수정치 획득:§!$modifier_BA_SI_Gehenna_B03$(90£time£):\n    일자리에서 생산되는 자원: §G+15%§!\n"
+ SI_Gehenna_B03_tip:"§C$SI_Gehenna_B03$§!\n$SI_Gehenna_B03_desc$\n$SI_Gehenna_B03_effect$"
+
+ ### 下左线
+ SI_Gehenna_C01:"최종 결정: 만마전"
+ SI_Gehenna_C01_desc:"만마전의 리더십이 점차 풍기위원회의 목소리를 압도하며 게헨나 내부 사안에 대한 재정권을 장악했다. 그러나 최종 결정자를 선택할 때 만마전은 예상치 못한 선택을 했다."
+ SI_Gehenna_C01_effect:"\n효과:\n§H제국 수정치 획득: §!$modifier_BA_SI_Gehenna_C01$(10800£time£):\n    $MOD_SHIP_WEAPON_DAMAGE$: §G+35%§!\n    $MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+35%§!\n    $MOD_ARMY_ATTACK_DAMAGE_MULT$: §G+35%§!\n    £stability£행성 안정도: §R-10§!\n    $MOD_EMPIRE_SIZE_POPS_MULT$: §R+25%§!\n" #§H统治者更换为§!：丹花伊吹\n
+ SI_Gehenna_C01_tip:"§C$SI_Gehenna_C01$§!\n$SI_Gehenna_C01_desc$\n$SI_Gehenna_C01_effect$"
+
+ SI_Gehenna_C02:"배후 준칙"
+ SI_Gehenna_C02_desc:"전쟁으로 얼룩진 키보토스에게 있어 역사만큼 모순을 조작하기 쉬운 것은 없다. 특정 세부 사항을 선택적으로 강조하거나 무시함으로써 만마전은 주류 문화에 대한 실질적인 해석 권한을 손쉽게 차지할 수 있다."
+ SI_Gehenna_C02_effect:"\n효과:\n§H특별 프로젝트 개시: §Y$SP_BA_SI_Gehenna_C02$§!"
+ SI_Gehenna_C02_tip:"§C$SI_Gehenna_C02$§!\n$SI_Gehenna_C02_desc$\n$SI_Gehenna_C02_effect$"
+
+ SI_Gehenna_C03:"게헨나의 명백한 천명"
+ SI_Gehenna_C03_desc:"§R“우주는 어둡고 차갑지만, 만마전의 빛은 밝고 따뜻하다;\n이 성하에 불씨를 전파하는 것이야말로 우리의 사명이다!”§!\n연방학생회 전단지에 이렇게 쓰여 있었다."
+ SI_Gehenna_C03_effect:"\n효과:\n§H학원 이념 법령 잠금 해제: §!$edict_BA_SI_Gehenna_C03$:\n    §Y기본 활성화 비용: £sr_dark_matter£75§!\n    §Y기본 월간 유지비: £volatile_motes£100 £exotic_gases£100 £rare_crystals£100 £sr_dark_matter£5§!\n    $MOD_SHIP_WEAPON_DAMAGE$: §G+100%§!\n    $MOD_SHIP_FIRE_RATE_MULT$: §G+50%§!\n    $MOD_SHIP_WEAPON_RANGE_MULT$: §G+50%§!\n"
+ SI_Gehenna_C03_tip:"§C$SI_Gehenna_C03$§!\n$SI_Gehenna_C03_desc$\n$SI_Gehenna_C03_effect$"
+
+ ### 下中线
+ SI_Gehenna_D01:"동아리 활동 준칙"
+ SI_Gehenna_D01_desc:"게헨나는 오랫동안 동아리에 지나치게 자유를 방임해 왔다. 이제는 성간 시대에 적합하지 않으므로, 동아리를 유지하기 위해서는 더 강력한 통제력을 지닌 동아리 관리 규정이 필요하다."
+ SI_Gehenna_D01_effect:"\n효과:\n£job_BA_club_members£§B키보토스§!§G 동아리 부원§! 생산량: §G+15%§!\n£pop_cat_specialist£전문가 팝 행복도: §G+25%§!\n£pop_cat_specialist£전문가 팝의 £consumer_goods£소비재 유지비: §R+0.25§!\n£pop_cat_specialist£전문가 팝의 £food£식량 유지비: §R+0.2§!\n"
+ SI_Gehenna_D01_tip:"§C$SI_Gehenna_D01$§!\n$SI_Gehenna_D01_desc$\n$SI_Gehenna_D01_effect$"
+
+ SI_Gehenna_D02:"현상금 임무 제도"
+ SI_Gehenna_D02_desc:"현상금 제도의 장점은 적은 비용으로 수많은 학생들의 지혜와 용기를 키보토스를 위해 활용할 수 있다는 것입니다."
+ SI_Gehenna_D02_effect:"\n효과:\n$mod_BA_flex_pop_produces_mult$: §G+300%§!\n$mod_BA_flex_pop_upkeep_mult$: §R+100%§!\n$mod_pop_category_civilians_trade_produces_add$: §G+4§!\n$mod_pop_category_civilians_food_upkeep_add$: §R+0.5§!\n"
+ SI_Gehenna_D02_tip:"§C$SI_Gehenna_D02$§!\n$SI_Gehenna_D02_desc$\n$SI_Gehenna_D02_effect$"
+
+ SI_Gehenna_D03:"지도자 의무"
+ SI_Gehenna_D03_desc:"첫째: 군대와 짐승 무리의 차이는 뛰어난 지도자의 머리에서 비롯됩니다.\n둘째: 포격의 효율은 적 하나하나의 가치를 직접적으로 결정합니다.\n……"
+ SI_Gehenna_D03_effect:"\n효과:\n$mod_commander_skill_levels$: §G+2§!\n$mod_commander_exp_gain$: §G+100%§!\n" #\n海军统帅和陆军将领的等级上限: §G+10§!
+ SI_Gehenna_D03_tip:"§C$SI_Gehenna_D03$§!\n$SI_Gehenna_D03_desc$\n$SI_Gehenna_D03_effect$"
+
+ ### 下右线
+ SI_Gehenna_E01:"최종 결정권: 선도부"
+ SI_Gehenna_E01_desc:"선도부의 신속하고 단호한 행동은 판데모니움 소사이어티의 제멋대로인 행동을 제압하고, 결국 게헨나의 모든 학생들의 지지와 신뢰를 안정적으로 얻었으며, 이는 수년간의 안정성 문제를 뿌리 뽑은 셈입니다."
+ SI_Gehenna_E01_effect:"\n효과:\n§H제국 수정치 획득: §!$modifier_BA_SI_Gehenna_E01$(10800£time£):\n    $r_stability$: §G+25§!\n    $MOD_PLANET_CRIME_ADD$: §G-20§!\n    $MOD_SHIP_SPEED_MULT$: §G+30%§!\n    $MOD_SHIP_INTERSTELLAR_SPEED_MULT$: §G+30%§!\n"
+ SI_Gehenna_E01_tip:"§C$SI_Gehenna_E01$§!\n$SI_Gehenna_E01_desc$\n$SI_Gehenna_E01_effect$"
+
+ SI_Gehenna_E02:"행정관의 철권"
+ SI_Gehenna_E02_desc:"선도부 행정관은 가장 포괄적인 정보를 파악하고 있는 일원이며, 각 지역의 군사력 배치 상황을 충분히 이해하고 있습니다. 본토 작전의 이점을 발휘하고 동시에 다른 내부 문제를 방지하기 위해, 지휘권은 행정관에게 직접 인계되어야 합니다."
+ SI_Gehenna_E02_effect:"\n효과:\n$MOD_SHIP_HOME_TERRITORY_FIRE_RATE_MULT$: §G+75%§!\n$MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+100%§!\n$MOD_STARBASE_SHIPYARD_BUILD_COST_MULT$: §R+10%§!\n" #\n处于防御战争下，本土舰队射速: §G+75%§!
+ SI_Gehenna_E02_tip:"§C$SI_Gehenna_E02$§!\n$SI_Gehenna_E02_desc$\n$SI_Gehenna_E02_effect$"
+
+ SI_Gehenna_E03:"단계적 요새화"
+ SI_Gehenna_E03_desc:"방어 전쟁에 있어서 오직 함대 전력만으로는 부족합니다. 모든 성계가 키보토스 방어선의 일부가 되어야 합니다."
+ SI_Gehenna_E03_effect:"\n효과:\n§H학원 이념 칙령 잠금 해제: §!$edict_BA_SI_Gehenna_E03$:\n    §Y기본 활성화 비용: £sr_keystone£100§!\n    §Y기본 유지비: £alloys£100 £sr_keystone£10§!\n    $mod_shipclass_military_station_build_speed_mult$: §G+1600%§!\n    $mod_shipclass_military_station_damage_mult$: §G+400%§!\n    $mod_shipclass_military_station_hull_mult$: §G+400%§!\n"
+ SI_Gehenna_E03_tip:"§C$SI_Gehenna_E03$§!\n$SI_Gehenna_E03_desc$\n$SI_Gehenna_E03_effect$"
+
+ #####      千年      #####
+ SI_Millennium_tip:"학원 이념 (주요): §B밀레니엄 사이언스 스쿨§!\n밀레니엄은 자유주의와 학술 연구의 강렬한 분위기를 가지고 있으며, 이들이 상호 보완하며 오늘의 밀레니엄을 만들었습니다. 물론 미래의 학원도시 또한 만들어나갈 것입니다.\n"
+ ### 共通上
+ SI_Millennium_G01:"미래의 나침반"
+ SI_Millennium_G01_desc:"키보토스가 미래를 개척할 잠재력은 여기서 그치지 않습니다. 가장 큰 잠재력은 평범한 동아리 부원들 안에 숨어 있습니다."
+ SI_Millennium_G01_effect:"\n효과:\n£engineering_research£§Y공학 연구§!와 £unity£§Y통합력§!을 월 생산량의 1배에 해당하는 양만큼 획득\n$BA_club_pop$이 생산하는 £physics£ £society£ £engineering£ 연구 점수: §G+0.5§!\n$BA_club_pop$이 소비하는 £consumer_goods£ 소비재: §G+0.2§!\n" #之后每点完一个国策领袖等级上限+1\n
+ SI_Millennium_G01_tip:"§C$SI_Millennium_G01$§!\n$SI_Millennium_G01_desc$\n$SI_Millennium_G01_effect$"
+
+ SI_Millennium_G02:"총 효율 보조금"
+ SI_Millennium_G02_desc:"연구에 따르면 연구원들의 급여는 그 몇 배에 달하는 가치를 창출합니다. ……물론 자화자찬의 여지가 있긴 하지만, 논리적으로는 말이 됩니다."
+ SI_Millennium_G02_effect:"\n효과:\n$mod_planet_researchers_produces_mult$: §G+10%§!\n$mod_planet_researchers_upkeep_mult$: §R+5%§!\n$MOD_COUNTRY_NUM_TECH_ALTERNATIVES_ADD$: §G+1§!\n$MOD_LEADER_SKILL_LEVELS$: §G+1§!\n$MOD_PLANET_POP_ASSEMBLY_MULT$: §G+20%§!\n" #\n现在每十五个人口提供一个£pops£研究人员岗位。
+ SI_Millennium_G02_tip:"§C$SI_Millennium_G02$§!\n$SI_Millennium_G02_desc$\n$SI_Millennium_G02_effect$"
+
+ SI_Millennium_G03:"동아리 연구 사모 제도"
+ SI_Millennium_G03_desc:"동아리 부원들의 창의성과 열정은 최고의 연구 재료이며, 이러한 창의성과 열정이 현실이 되기 위해서는 작은 기회만 제공해주면 됩니다."
+ SI_Millennium_G03_effect:"\n효과:\n현재 모든 §Y과학 담당관§! 지도자의 레벨이 §G1레벨 상승§!\n행성의 모든 §H동아리실§!이 추가로 §G+2§!£job_BA_club_members£$job_BA_club_members$ 일자리를 제공\n"
+ SI_Millennium_G03_tip:"§C$SI_Millennium_G03$§!\n$SI_Millennium_G03_desc$\n$SI_Millennium_G03_effect$"
+
+ SI_Millennium_G04:"투쟁과 탐험"
+ SI_Millennium_G04_desc:"모성 근처의 자원이 차례로 개발됨에 따라 우리의 선택지는 점점 좁아지고 있습니다. 하지만 하늘의 먹구름 뒤에는 더욱 웅장하고 심오한 세계가 숨겨져 있습니다."
+ SI_Millennium_G04_effect:"\n효과:\n$MOD_COUNTRY_NUM_TECH_ALTERNATIVES_ADD$: §G+1§!\n$RESEARCH_EFFICIENCY$: §G+10%§!\n대량의 £physics£ £society£ £engineering£ 연구 점수와 £alloys£ 합금을 획득\n모성에 §H행성 수정치 추가: §!$modifier_BA_SI_Millennium_G04$\n"
+ SI_Millennium_G04_tip:"§C$SI_Millennium_G04$§!\n$SI_Millennium_G04_desc$\n$SI_Millennium_G04_effect$"
+
+ ### 共通中
+ SI_Millennium_G05:"밀레니엄 거탑"
+ SI_Millennium_G05_desc:"실험실에서 기기를 만지는 연구 방식은 이미 시대에 뒤떨어졌습니다. 우리는 밀레니엄을 위한 웅장한 연구 거대 구조물을 건설해야 합니다."
+ SI_Millennium_G05_effect:"소비§G2£job_BA_dont_be_crazy_here£§!학원 이념 점수"
+ SI_Millennium_G05_tip:"§C$SI_Millennium_G05$§!"
+
+ SI_Millennium_G06:"통신 프로토콜 재설정"
+ SI_Millennium_G06_desc:"밀레니엄 거대 타워에 새로 도입된 송신기를 더 잘 활용하기 위해, 우리는 키보토스 전역의 통신 프로토콜을 대규모로 업데이트해야 합니다."
+ SI_Millennium_G06_effect:"소비§G2£job_BA_dont_be_crazy_here£§!학원 이념 점수"
+ SI_Millennium_G06_tip:"§C$SI_Millennium_G06$§!"
+
+ SI_Millennium_G07:"자가 유지보수 시스템"
+ SI_Millennium_G07_desc:"밀레니엄 거대 타워에 막대한 자원을 투입하여 유지보수해야 한다면, 그것은 득보다 실이 많을 것입니다. 에너지 코어와 자가 유지보수 시스템을 설치한 후, 밀레니엄 거대 타워는 내부의 항성과 영원히 함께할 것입니다."
+ SI_Millennium_G07_effect:"소비§G2£job_BA_dont_be_crazy_here£§!학원 이념 점수"
+ SI_Millennium_G07_tip:"§C$SI_Millennium_G07$§!"
+
+ SI_Millennium_G08:"영원히 서 있는 거대 타워"
+ SI_Millennium_G08_desc:"밀레니엄 거대 타워 건설이 완료되었습니다. 이 거대한 건축물은 키보토스 공학의 정점이며, 그곳에서 풀이된 신비는 키보토스를 위해 사용될 것입니다."
+ SI_Millennium_G08_effect:"소비§G2£job_BA_dont_be_crazy_here£§!학원 이념 점수"
+ SI_Millennium_G08_tip:"§C$SI_Millennium_G08$§!"
+
+ ### 共通下
+ SI_Millennium_G09:"정보 터미널 허브"
+ SI_Millennium_G09_desc:"각 행성에 밀레니엄 거대 타워와 연결되는 전송 허브를 건설하여, 밀레니엄 거대 타워의 연산 능력을 사용자에게 충분히 전달할 수 있도록 합니다."
+ SI_Millennium_G09_effect:"효과:"
+ SI_Millennium_G09_tip:"§C$SI_Millennium_G09$§!"
+
+ SI_Millennium_G10:"아카이브 데이터베이스 재구축"
+ SI_Millennium_G10_desc:"밀레니엄 거대 타워를 활용하여 우리의 연구 데이터를 재정리함으로써, 더 많은 잠재적인 연구 방향을 발견할 수 있습니다."
+ SI_Millennium_G10_effect:"효과:"
+ SI_Millennium_G10_tip:"§C$SI_Millennium_G10$§!"
+
+ SI_Millennium_G11:"에필로그: 시간과 세계의 끝까지"
+ SI_Millennium_G11_desc:"우리가 적어 내려간 모든 법칙은 모든 것의 종말까지 우리와 함께할 것입니다. 숫자와 기호들의 아름다운 조합은 곧 키보토스의 영원한 기념비입니다."
+ SI_Millennium_G11_effect:"효과:"
+ SI_Millennium_G11_tip:"§C$SI_Millennium_G11$§!"
+
+ ### 上左线
+ SI_Millennium_A01:"우주 탐사 매뉴얼"
+ SI_Millennium_A01_desc:"진리부는 과잉 연구 프로젝트를 활용하여 과학선 승무원에게 적합한 매뉴얼을 편찬했습니다."
+ SI_Millennium_A01_effect:"§R$SI_Millennium_B01$§R와 상호 배타적입니다§!"
+ SI_Millennium_A01_tip:"§C$SI_Millennium_A01$§!"
+
+ SI_Millennium_A02:"기동 과학선"
+ SI_Millennium_A02_desc:"우리 과학선의 안전을 보장하기 위해, 진리부는 과학선의 프로그램을 재작성하고 부속 시설을 갖춘 항성 기지를 설계했습니다."
+ SI_Millennium_A02_effect:"효과:" #§H解锁恒星基地模块:§!科研船泊地\n
+ SI_Millennium_A02_tip:"§C$SI_Millennium_A02$§!"
+
+ ### 上右线
+ SI_Millennium_B01:"조선소 생산 라인 프로토콜"
+ SI_Millennium_B01_desc:"공학부는 과잉 연구 프로젝트를 활용하여 조선소 건설 프로토콜을 재작성했습니다."
+ SI_Millennium_B01_effect:"§R$SI_Millennium_A01$§R와 상호 배타적입니다§!"
+ SI_Millennium_B01_tip:"§C$SI_Millennium_B01$§!"
+
+ SI_Millennium_B02:"무기 사격 전략"
+ SI_Millennium_B02_desc:"공학부는 해군을 위해 현재 무기 훈련 프로그램을 최적화하여, 이제 승무원들은 함선 무기의 성능을 더 잘 발휘할 수 있습니다."
+ SI_Millennium_B02_effect:"\n효과:\n$MOD_SHIP_WEAPON_DAMAGE$: §G+15%§!\n$MOD_SHIP_FIRE_RATE_MULT$: §G+15%§!\n"
+ SI_Millennium_B02_tip:"§C$SI_Millennium_B02$§!\n$SI_Millennium_B02_desc$\n$SI_Millennium_B02_effect$"
+
+ ### 下线
+ SI_Millennium_C01:"연산력 분배"
+ SI_Millennium_C01_desc:"밀레니엄 타워에는 많은 모듈이 헛돌고 있는 것 같아……"
+ SI_Millennium_C01_effect:"\n효과:\n§H수도 행성이 수정치 획득: §!$modifier_BA_SI_Millennium_C01$\n"
+ SI_Millennium_C01_tip:"§C$SI_Millennium_C01$§!\n$SI_Millennium_C01_desc$\n$SI_Millennium_C01_effect$"
+
+ SI_Millennium_C02:"그럼 게임을 만들어 볼까?"
+ SI_Millennium_C02_desc:"이 모듈의 병렬 처리 능력은 매우 강력해서, 만약 거대한 가상 게임 세계를 생성하는 데 사용된다면 분명 큰 인기를 얻을 거예요."
+ SI_Millennium_C02_effect:"\n§R$SI_Millennium_C03$와(과) 상호 배타적§!\n효과:\n즉시 막대한 £unity£§Y응집력§!을 획득합니다. 월간 생산량의 3배에 해당합니다.\n£stability£$MOD_PLANET_STABILITY_ADD$: §G+5§!\n$mod_country_unity_produces_mult$: §G+15%§!\n§B게임개발부§!의 동아리 건물에서 생산되는 응집력이 두 배가 됩니다.\n"
+ SI_Millennium_C02_tip:"§C$SI_Millennium_C02$§!\n$SI_Millennium_C02_desc$\n$SI_Millennium_C02_effect$"
+
+ SI_Millennium_C03:"전용 연산 플랫폼"
+ SI_Millennium_C03_desc:"세미나는 이 모듈을 제국의 지도자 전용 업무 플랫폼으로 활용하여 제국의 전체적인 행정 효율을 높이기를 희망합니다."
+ SI_Millennium_C03_effect:"\n§R$SI_Millennium_C02$와(과) 상호 배타적§!\n효과:\n$MOD_LEADER_SPECIES_EXP_GAIN$: §G+350%§!\n현재 모든 §Y$scientist$와(과) $commander$, $official$§! 지도자의 레벨이 §G1 증가합니다§!\n§Y5년마다§! 모든 지도자에게서 일반 §R부정적 특성§!을 제거합니다.\n"
+ SI_Millennium_C03_tip:"§C$SI_Millennium_C03$§!\n$SI_Millennium_C03_desc$\n$SI_Millennium_C03_effect$"
+
+ #####     圣三一     #####
+ SI_Trinity_tip:"학원 이념 (주요): §d트리니티 종합학원§!\n트리니티보다 정치를 더 잘 아는 곳은 없습니다. 정치는 심연과도 같고 맹렬한 태양과도 같아서, 학원 연방의 모든 구성원을 영원히 응시하고 비춥니다.\n"
+
+ ### 共通
+ SI_Trinity_G01:"에필로그: 최초이자 마지막 티 파티"
+ SI_Trinity_G01_desc:"수년 후, 학생들이 새로운 세계에 우뚝 솟은 학원도시를 바라볼 때, 세 명의 소녀가 함께 차를 마시며 이야기했던 그 오후를 기억할까요?"
+ SI_Trinity_G01_effect:"\n효과:\n$mod_BA_SI_sub_cap_add$: §G+2§!\n£stability£$MOD_PLANET_STABILITY_ADD$: §G+40§!\n"
+ SI_Trinity_G01_tip:"§C$SI_Trinity_G01$§!\n$SI_Trinity_G01_desc$\n$SI_Trinity_G01_effect$"
+
+ ### 左线
+ SI_Trinity_A01:"프레나파테스 주재"
+ SI_Trinity_A01_desc:"프레나파테스파는 에덴조약 체결을 주도했었지만, 결과가 사람들의 뜻대로 순조롭지 않았더라도 그들이 보여준 외교적 재능은 흠잡을 데 없었습니다."
+ SI_Trinity_A01_effect:"\n§R$SI_Trinity_B01$, $SI_Trinity_C01$와(과) 상호 배타적§!\n효과:\n$mod_planet_jobs_unity_produces_mult$: §G+20%§!\n$MOD_EMPIRE_SIZE_SYSTEMS_MULT$: §G-10%§!\n$MOD_COUNCIL_AGENDA_PROGRESS_SPEED$: §G+15%§!\n"
+ SI_Trinity_A01_tip:"§C$SI_Trinity_A01$§!\n$SI_Trinity_A01_desc$\n$SI_Trinity_A01_effect$"
+
+ SI_Trinity_A02:"탈중앙화된 관료제"
+ SI_Trinity_A02_desc:"각지의 관료들을 해산하고 재조직하여 티 파티의 산하 기관으로 통합합니다. 그들 간의 결탁을 방지합니다."
+ SI_Trinity_A02_effect:"\n효과:\n§H학원 이념 안건 해금:§! $council_agenda_agenda_BA_SI_Trinity_A02_name$\n$mod_pop_category_rulers_unity_produces_add$: §G+8§!\n$mod_pop_category_specialists_unity_produces_add$: §G+0.5§!\n$MOD_COUNCIL_AGENDA_PROGRESS_SPEED$: §G+15%§!\n"
+ SI_Trinity_A02_tip:"§C$SI_Trinity_A02$§!\n$SI_Trinity_A02_desc$\n$SI_Trinity_A02_effect$"
+
+ SI_Trinity_A03:"성전 사절단"
+ SI_Trinity_A03_desc:"프레나파테스파는 사절단을 매우 중시하며, 그들은 사절들이 제국 간의 향락과 사치 속에서 어떤 역할을 하는지 정확히 알고 있습니다."
+ SI_Trinity_A03_effect:"\n효과:\n§Y안건§!이 시작될 때마다 모든 지도자는 §C1000 경험치§!를 획득합니다.\n$MOD_DIPLO_WEIGHT_MULT$: §G+0.3§!\n$MOD_COUNCIL_AGENDA_FINISHING_EFFECT_DURATION_MULT$: §G+0.5%§!\n$MOD_COUNCIL_AGENDA_PROGRESS_SPEED$: §G+25%§!\n"
+ SI_Trinity_A03_tip:"§C$SI_Trinity_A03$§!\n$SI_Trinity_A03_desc$\n$SI_Trinity_A03_effect$"
+
+ SI_Trinity_A04:"애프터눈 티 계획"
+ SI_Trinity_A04_desc:"애프터눈 티와 같은 작은 보상을 상품으로 내걸고, 수많은 소규모 사교회를 통해 하위 및 상위 협력자들이 친밀해지도록 합니다. 학생들에게 협력과 시너지의 매력을 보여주는 것을 목표로 합니다."
+ SI_Trinity_A04_effect:"\n효과:\n§H학원 이념 안건 해금:§! $council_agenda_agenda_BA_SI_Trinity_A04_name$\n£job_artisan£장인 생산량: §G+30%§!\n£job_artisan£장인 유지비: §G-10%§!\n£job_foundry£야금술사 생산량: §R-30%§!\n$mod_pop_cat_worker_bonus_workforce_mult$: §G+30%§!\n$MOD_COUNCIL_AGENDA_PROGRESS_SPEED$: §G+15%§!\n"
+ SI_Trinity_A04_tip:"§C$SI_Trinity_A04$§!\n$SI_Trinity_A04_desc$\n$SI_Trinity_A04_effect$"
+
+ SI_Trinity_A05:"총괄실 협업"
+ SI_Trinity_A05_desc:"총괄실과 티 파티의 각 업무를 일부 교환하여 AI 행정 보조원의 최대 잠재력을 발휘하고, 비전문가가 전문가를 지도하는 현상을 최대한 방지합니다."
+ SI_Trinity_A05_effect:"\n효과:\n$mod_BA_staff_pop_unity_produces_add$: §G+5§!\n$mod_country_unity_produces_mult$: §G+20%§!\n$MOD_COUNCIL_AGENDA_PROGRESS_SPEED$: §G+15%§!\n"
+ SI_Trinity_A05_tip:"§C$SI_Trinity_A05$§!\n$SI_Trinity_A05_desc$\n$SI_Trinity_A05_effect$"
+
+ SI_Trinity_A06:"다음에 또 보자, 친구들!"
+ SI_Trinity_A06_desc:"“가장 친한 친구도 이 광활한 별하늘에서는 헤어지게 마련이야. 하지만 수만 광년 떨어져 있어도, 우리는 서로를 생각하고 같은 이상을 위해 싸울 수 있어.”"
+ SI_Trinity_A06_effect:"\n효과:\n$MOD_PLANETARY_ASCENSION_EFFECT_MULT$: §G+20%§!\n$MOD_COUNTRY_GOVERNMENT_CIVIC_POINTS_ADD$: §G+1§!\n$mod_planet_jobs_upkeep_mult$: §R+10%§!\n$MOD_COUNCIL_AGENDA_PROGRESS_SPEED$: §G+15%§!"
+ SI_Trinity_A06_tip:"§C$SI_Trinity_A06$§!\n$SI_Trinity_A06_desc$\n$SI_Trinity_A06_effect$"
+
+ ### 中线
+ SI_Trinity_B01:"파트와 주재"
+ SI_Trinity_B01_desc:"파트와 파는 무력을 통한 분쟁 해결을 숭상하지만, 그들의 지도자가 일부 권위를 잃었음에도 불구하고 외계 문명과의 접촉에 따라 그들의 영향력은 오히려 줄어들지 않고 증가했다."
+ SI_Trinity_B01_effect:"\n§R$SI_Trinity_A01$, $SI_Trinity_C01$와(과) 상호 배타적§!\n효과:\n$MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+10%§!\n$RESEARCH_EFFICIENCY$: §G+15%§!\n$MOD_BONUS_POP_GROWTH_MULT$: §G+10%§!\n"
+ SI_Trinity_B01_tip:"§C$SI_Trinity_B01$§!\n$SI_Trinity_B01_desc$\n$SI_Trinity_B01_effect$"
+
+ SI_Trinity_B02:"강철로 주조된 요람"
+ SI_Trinity_B02_desc:"광대한 별하늘 앞에서, 키보토스는 호기심 많은 아기 같아. 지금은 보잘것없을지라도, 언젠가는 시선이 닿는 곳 모두 우리에게 정복될 거야."
+ SI_Trinity_B02_effect:"\n효과:\n$mod_country_alloys_produces_mult$: §G+20%§!\n$mod_planet_metallurgists_alloys_produces_add$: §G+1§!\n$mod_country_consumer_goods_produces_mult$: §R-10%§!\n$mod_planet_artisans_consumer_goods_produces_add$: §R-0.5§!\n$MOD_BONUS_POP_GROWTH_MULT$: §G+10%§!\n"
+ SI_Trinity_B02_tip:"§C$SI_Trinity_B02$§!\n$SI_Trinity_B02_desc$\n$SI_Trinity_B02_effect$"
+
+ SI_Trinity_B03:"출발의 경적"
+ SI_Trinity_B03_desc:"한 척 한 척 우주선이 하늘로 솟아오르고, 마치 전설 속 용사가 검을 등에 메고 여정의 첫 발을 내딛는 것 같아. 다른 점은 우리가 지평선을 향해 나아가는 것이 아니라, 지평선을 등지고 날아간다는 거야."
+ SI_Trinity_B03_effect:"\n효과:\n$MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+30%§!\n$mod_ships_upkeep_mult$: §G-50%§!\n$MOD_STARBASE_SHIPYARD_BUILD_COST_MULT$: §G-20%§!\n$MOD_SHIP_SPEED_MULT$: §G+15%§!\n$MOD_BONUS_POP_GROWTH_MULT$: §G+15%§!\n"
+ SI_Trinity_B03_tip:"§C$SI_Trinity_B03$§!\n$SI_Trinity_B03_desc$\n$SI_Trinity_B03_effect$"
+
+ SI_Trinity_B04:"무구한 대지"
+ SI_Trinity_B04_desc:"별하늘에 있는 우리들의 고향은 수많은 환상을 품었어. 하지만 그것만으로는 충분치 않아. 우리가 직접 우리의 환상을 현실로 만들 수 있으니까!"
+ SI_Trinity_B04_effect:"\n효과:\n$MOD_STARBASE_UPGRADE_SPEED_MULT$: §G+50%§!\n$mod_shipclass_starbase_build_cost_mult$: §G-30%§!\n$MOD_STARBASE_MODULE_BUILD_SPEED_MULT$: §G+150%§!\n$mod_starbases_upkeep_mult$: §G-30%§!\n$MOD_MEGASTRUCTURE_BUILD_SPEED_MULT$: §G+30%§!\n"
+ SI_Trinity_B04_tip:"§C$SI_Trinity_B04$§!\n$SI_Trinity_B04_desc$\n$SI_Trinity_B04_effect$"
+
+ SI_Trinity_B05:"뒤바뀐 지평선"
+ SI_Trinity_B05_desc:"우리 눈에 별빛이 가득하다면, 모든 것을 품었던 대지가 절대 우리를 옭아매지 못하게 해야 해."
+ SI_Trinity_B05_effect:"\n효과:\n$mod_planet_BA_districts_military_factory_build_speed_mult$: §G+100%§!\n$mod_planet_metallurgists_produces_mult$: §G+100%§!\n$mod_planet_metallurgists_upkeep_mult$: §R+30%§!\n£stability£$MOD_PLANET_STABILITY_ADD$: §R-10§!\n"
+ SI_Trinity_B05_tip:"§C$SI_Trinity_B05$§!\n$SI_Trinity_B05_desc$\n$SI_Trinity_B05_effect$"
+
+ SI_Trinity_B06:"별처럼 빛나는"
+ SI_Trinity_B06_desc:"불타는 항성처럼, 우리는 평범함을 빛나는 것으로 바꿔놓을 거야. 이 우주에서 우리보다 더 눈부신 문명은 더 이상 없을 거야."
+ SI_Trinity_B06_effect:"\n효과:\n$MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+150%§!\n$MOD_COUNTRY_NAVAL_CAP_MULT$: §G+40%§!\n$mod_planet_jobs_produces_mult$: §G+50%§!\n$mod_planet_jobs_upkeep_mult$: §R+40%§!\n"
+ SI_Trinity_B06_tip:"§C$SI_Trinity_B06$§!\n$SI_Trinity_B06_desc$\n$SI_Trinity_B06_effect$"
+
+ ### 右线
+ SI_Trinity_C01:"성 카이토스 주재"
+ SI_Trinity_C01_desc:"성 카이토스 파는 중립을 지키지만 야망에 있어서는 전혀 뒤처지지 않아. 현재와 단기적인 운영보다는 더 먼 미래에 관심을 기울이고 있어."
+ SI_Trinity_C01_effect:"\n§R$SI_Trinity_A01$, $SI_Trinity_B01$와(과) 상호 배타적§!\n효과:\n$mod_planet_jobs_produces_mult$: §G+5%§!\n$mod_shipclass_starbase_build_cost_mult$: §G-10%§!\n$mod_shipclass_colonizer_build_cost_mult$: §G-30%§!\n$MOD_EMPIRE_SIZE_SYSTEMS_MULT$: §G-10%§!\n제국 규모: §G-2%§!\n"
+ SI_Trinity_C01_tip:"§C$SI_Trinity_C01$§!\n$SI_Trinity_C01_desc$\n$SI_Trinity_C01_effect$"
+
+ SI_Trinity_C02:"도시 확장법"
+ SI_Trinity_C02_desc:"계획이 혼란스러운 도시는 잠시만 번영할 뿐, 초대형 도시로 성장할 수 없어."
+ SI_Trinity_C02_effect:"\n효과:\n$mod_planet_jobs_produces_mult$: §G+10%§!\n$MOD_COUNTRY_STARBASE_INFLUENCE_COST_MULT$: §G-75%§!\n$MOD_EMPIRE_SIZE_POPS_MULT$: §G-10%§!\n$MOD_EMPIRE_SIZE_MULT$: §G-5%§!\n"
+ SI_Trinity_C02_tip:"§C$SI_Trinity_C02$§!\n$SI_Trinity_C02_desc$\n$SI_Trinity_C02_effect$"
+
+ SI_Trinity_C03:"학적 기록부"
+ SI_Trinity_C03_desc:"문서 관리 개념의 발생은 문명의 시작까지 거슬러 올라가는데, 인구 폭발 시대인 오늘날에는 더욱 소홀히 할 수 없어."
+ SI_Trinity_C03_effect:"\n효과:\n$MOD_BONUS_POP_GROWTH_MULT$: §G+20%§!\n$mod_planet_jobs_produces_mult$: §G+15%§!\n$mod_planet_jobs_upkeep_mult$: §R+15%§!\n$MOD_EMPIRE_SIZE_POPS_MULT$: §G-10%§!\n$MOD_EMPIRE_SIZE_MULT$: §G-5%§!\n"
+ SI_Trinity_C03_tip:"§C$SI_Trinity_C03$§!\n$SI_Trinity_C03_desc$\n$SI_Trinity_C03_effect$"
+
+ SI_Trinity_C04:"성간 물류 예측"
+ SI_Trinity_C04_desc:"FTL 기술이 있더라도 행성 간 화물 운송은 여전히 아주 먼 거리를 가로질러야 합니다. 이 과정에는 우리가 세밀하게 조율할 가치가 있는 많은 세부 사항이 있습니다."
+ SI_Trinity_C04_effect:"\n효과:\n$MOD_PLANET_BUILDING_BUILD_SPEED_MULT$: §G+50%§!\n$MOD_PLANET_DECISION_ENACT_SPEED_MULT$: §G+50%§!\n$MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+20%§!\n건물 및 구역 건설 비용: §R+20%§!\n$MOD_EMPIRE_SIZE_DISTRICTS_MULT$: §G-10%§!\n$MOD_EMPIRE_SIZE_MULT$: §G-5%§!\n"
+ SI_Trinity_C04_tip:"§C$SI_Trinity_C04$§!\n$SI_Trinity_C04_desc$\n$SI_Trinity_C04_effect$"
+
+ SI_Trinity_C05:"초광속 정보 흐름"
+ SI_Trinity_C05_desc:"정보는 제국의 생명선입니다. 사전 조정 알고리즘을 사용하면 더 이상 그 긴 기다림에 시간을 낭비할 필요가 없습니다."
+ SI_Trinity_C05_effect:"\n효과:\n$MOD_STARBASE_UPGRADE_COST_MULT$: §G-20%§!\n$MOD_COUNTRY_NAVAL_CAP_MULT$: §G+15%§!\n$MOD_MEGASTRUCTURE_BUILD_SPEED_MULT$: §G+200%§!\n$MOD_COUNTRY_MEGASTRUCTURE_BUILD_CAP_ADD$: §G+2§!\n$mod_megastructures_cost_mult$: §R+30%§!\n$MOD_EMPIRE_SIZE_MULT$: §G-5%§!\n"
+ SI_Trinity_C05_tip:"§C$SI_Trinity_C05$§!\n$SI_Trinity_C05_desc$\n$SI_Trinity_C05_effect$"
+
+ SI_Trinity_C06:"별하늘 너머의 낙원"
+ SI_Trinity_C06_desc:"새로운 세계의 아름다운 경치는 우리가 꿈에서 보았던 것과 비교해도 전혀 손색이 없습니다."
+ SI_Trinity_C06_effect:"\n효과:\n$mod_megastructures_produces_mult$: §G+20%§!\n$mod_colony_start_urban_districts_add$§G+2§!\n$MOD_EMPIRE_SIZE_COLONIES_MULT$: §G-20%§!\n§Y새로 설립된§! 식민지 §H행성 수정 획득:§! $modifier_BA_SI_Trinity_C06$(1800£time£):\n    $MOD_PLANET_BUILDING_BUILD_SPEED_MULT$: §G+50%§!\n    $MOD_BONUS_POP_GROWTH_MULT$: §G+50%§!\n    $mod_planet_jobs_produces_mult$: §G+20%§!\n"
+ SI_Trinity_C06_tip:"§C$SI_Trinity_C06$§!\n$SI_Trinity_C06_desc$\n$SI_Trinity_C06_effect$"
+
+ #####      红冬      #####
+ SI_Redwinter_tip:"학원 이념 (선택 가능): §P레드 윈터 연방 학원§!\n레드 윈터 연방 학원은 단결하고 거센 흐름에 용감히 맞서는 전통을 가지고 있으며, 이는 학원 연방의 기반을 굳건히 하는 데 도움이 됩니다.\n"
+
+ SI_Redwinter_G01:"현지 조달"
+ SI_Redwinter_G01_desc:"충분한 물질 공급은 번영의 기반입니다."
+ SI_Redwinter_G01_effect:"\n£job_BA_dont_be_crazy_here£학원 이념 점수 소모 없음\n학원 이념이 §R1080£time£§!일간 재사용 대기 상태에 돌입합니다\n효과:\n$r_stability$: §R-15§!\n£energy£ £minerals£ £food£ 기초 자원을 생산하는 £district£ 구역의 건설 속도: §G+50%§!\n"
+ SI_Redwinter_G01_tip:"§C$SI_Redwinter_G01$§!\n$SI_Redwinter_G01_desc$\n$SI_Redwinter_G01_effect$"
+
+ SI_Redwinter_G02:"제국의 은밀한 부분"
+ SI_Redwinter_G02_desc:"사심 없이 헌신하는 이들을 위해 어떤 것들은 저울 위에 올려놓고 헤아려 봐야 합니다."
+ SI_Redwinter_G02_effect:"\n£job_BA_dont_be_crazy_here£학원 이념 점수 소모 없음\n학원 이념이 §R1080£time£§!일간 재사용 대기 상태에 돌입합니다\n효과:\n$r_stability$: §R-15§!\n§H제국 수정 획득: §!$modifier_BA_SI_Redwinter_G02$(7200£time£):\n    $mod_country_base_unity_produces_add$: §G+100§!\n"
+ SI_Redwinter_G02_tip:"§C$SI_Redwinter_G02$§!\n$SI_Redwinter_G02_desc$\n$SI_Redwinter_G02_effect$"
+
+ SI_Redwinter_G03:"노동자의 목소리"
+ SI_Redwinter_G03_desc:"연방은 모든 이의 목소리에 귀 기울여야 합니다. 하지만 노동자들은 침묵의 나선에 가장 쉽게 빠져들 수 있습니다."
+ SI_Redwinter_G03_effect:"\n£job_BA_dont_be_crazy_here£학원 이념 점수 소모 없음\n학원 이념이 §R1080£time£§!일간 재사용 대기 상태에 돌입합니다\n효과:\n$r_stability$: §R-15§!\n$mod_planet_jobs_worker_produces_mult$: §G+25%§!\n$mod_pop_category_workers_consumer_goods_upkeep_add$: §R+0.1§!\n£district£$BA_districts_suburbs$에서 100£job_BA_Kivotos_staff£§Y$job_BA_Kivotos_staff$ 일자리 추가 제공\n"
+ SI_Redwinter_G03_tip:"§C$SI_Redwinter_G03$§!\n$SI_Redwinter_G03_desc$\n$SI_Redwinter_G03_effect$"
+
+ SI_Redwinter_G04:"지식 전선"
+ SI_Redwinter_G04_desc:"가장 똑똑한 두뇌들이 단결하지 않는다면, 모두의 자원을 헛되이 소모할 뿐입니다."
+ SI_Redwinter_G04_effect:"\n£job_BA_dont_be_crazy_here£학원 이념 점수 소모 없음\n학원 이념이 §R1080£time£§!일간 재사용 대기 상태에 돌입합니다\n효과:\n$r_stability$: §R-15§!\n$mod_planet_jobs_specialist_produces_mult$: §G+15%§!\n$mod_pop_category_specialists_unity_upkeep_add$: §R+0.1§!\n£district£$BA_districts_military_factory$에서 100£job_BA_Kivotos_staff£§Y$job_BA_Kivotos_staff$ 일자리 추가 제공\n"
+ SI_Redwinter_G04_tip:"§C$SI_Redwinter_G04$§!\n$SI_Redwinter_G04_desc$\n$SI_Redwinter_G04_effect$"
+
+ SI_Redwinter_G05:"연방의 영광"
+ SI_Redwinter_G05_desc:"완벽하게 해낼 수는 없을지라도, 우리가 이를 위해 기울인 노력은 붉은 별에 부끄럽지 않습니다."
+ SI_Redwinter_G05_effect:"\n학원 이념이 §R1080£time£§!일간 재사용 대기 상태에 돌입합니다\n효과:\n$r_stability$: §G+60§!\n100£job_BA_Kivotos_staff£§Y$job_BA_Kivotos_staff$§!당 해당 식민지에 다음을 제공합니다:\n    $mod_planet_jobs_produces_mult$: §G+1%§!\n§R제국 수정 제거: §!$modifier_BA_SI_Redwinter_G02$\n§H제국 수정 획득: §!$modifier_BA_SI_Redwinter_G05$(∞£time£):\n    $MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+35%§!\n    $MOD_STARBASE_UPGRADE_SPEED_MULT$: §G+70%§!\n    $mod_country_unity_produces_mult$: §G+20%§!\n"
+ SI_Redwinter_G05_tip:"§C$SI_Redwinter_G05$§!\n$SI_Redwinter_G05_desc$\n$SI_Redwinter_G05_effect$"
+
+ #####    百鬼夜行    #####
+ SI_Hyakkiyako_tip:"학원 이념 (선택 가능): §U백귀야행 연합학원§!\n백귀야행은 많은 것들에 대해 독특한 이해를 가지고 있으며, 이를 연구하고 발전시키면 분명 학원 연방에 큰 획을 그을 수 있을 것입니다.\n"
+
+ ### 第一页
+ SI_Hyakkiyako_G01:"화풍이 불어오다"
+ SI_Hyakkiyako_G01_desc:"백귀야행의 바람이 이미 모든 학원의 구석구석까지 불어왔습니다. 이전에는 뿔뿔이 흩어져 있었을지라도, 지금이야말로 백귀야행의 학생들이 단결하여 연방을 위해 조언과 제안을 할 기회입니다."
+ SI_Hyakkiyako_G01_effect:"\n효과:\n§Y$engineering_research_with_icon$§! 및 §Y$unity_with_icon$§!을 매월 생산량의 10배에 해당하는 양만큼 획득\n"
+ SI_Hyakkiyako_G01_tip:"§C$SI_Hyakkiyako_G01$§!\n$SI_Hyakkiyako_G01_desc$\n$SI_Hyakkiyako_G01_effect$"
+
+ SI_Hyakkiyako_G02:"당 앞 노래"
+ SI_Hyakkiyako_G02_desc:"백귀야행에서 가장 유명한 가게는 백야당입니다. 백야당은 별하늘 전역에 지점을 열어 모든 성계의 학생들에게 활기찬 분위기를 선사할 것입니다."
+ SI_Hyakkiyako_G02_effect:"\n효과:\n§H행성 결의 잠금 해제: §!$d_SI_Hyakkiyako_G02$\n"
+ SI_Hyakkiyako_G02_tip:"§C$SI_Hyakkiyako_G02$§!"
+
+ SI_Hyakkiyako_G03:"양해담"
+ SI_Hyakkiyako_G03_desc:"관광 휴양지 건설은 항상 음양부의 원대한 목표였습니다. 마침 은하계로 진출한 후 가장 부족하지 않은 것이 바로 이국적인 별의 경치이죠."
+ SI_Hyakkiyako_G03_effect:"효과:"
+ SI_Hyakkiyako_G03_tip:"§C$SI_Hyakkiyako_G03$§!"
+
+ SI_Hyakkiyako_G04:"성란연"
+ SI_Hyakkiyako_G04_desc:"연극은 백귀야행의 자랑스러운 종목입니다. 백화요란 등 여러 동아리가 각기 다른 스타일의 성대한 공연을 준비하여 축제의 절정을 장식할 것입니다."
+ SI_Hyakkiyako_G04_effect:"효과:"
+ SI_Hyakkiyako_G04_tip:"§C$SI_Hyakkiyako_G04$§!"
+
+ SI_Hyakkiyako_G05:"벚꽃 지다"
+ SI_Hyakkiyako_G05_desc:"백귀야행의 문화가 키보토스 전역에 퍼지면서, 모두가 사물과 주변 사람들에 대한 새로운 공감과 조화를 느끼게 되었습니다. 연방은 이러한 승리를 기념하여 새로운 공휴일을 제정했습니다."
+ SI_Hyakkiyako_G05_effect:"효과:"
+ SI_Hyakkiyako_G05_tip:"§C$SI_Hyakkiyako_G05$§!"
+
+ ### 第二页
+ SI_Hyakkiyako_G06:"위기"
+ SI_Hyakkiyako_G06_desc:"불안정한 성해의 상황에 맞서, 키보토스는 해결책을 찾아야 할 때입니다. 이때 우리는 우연히 한 대인물, 이름 없는 인물을 떠올렸으니, 아마도 그분이 우리에게 길을 제시해 줄지도 모릅니다."
+ SI_Hyakkiyako_G06_effect:"효과:"
+ SI_Hyakkiyako_G06_tip:"§C$SI_Hyakkiyako_G06$§!"
+
+ SI_Hyakkiyako_G07:"인내"
+ SI_Hyakkiyako_G07_desc:"백화요란은 키보토스 곳곳을 누비며 쿠즈하 회장에 대한 단서를 찾고 있습니다. 백화요란의 초대 회장이자, 백귀야행의 옛 학생들에게는 숭배의 대상입니다."
+ SI_Hyakkiyako_G07_effect:"효과:"
+ SI_Hyakkiyako_G07_tip:"§C$SI_Hyakkiyako_G07$§!"
+
+ SI_Hyakkiyako_G08:"결단"
+ SI_Hyakkiyako_G08_desc:"단서는 갑자기 끊겼고, 우리는 새로운 수색 방안을 찾고 있습니다. 하지만 그전에 다가올 위협에 맞서 생산을 서둘러야 합니다. 상황이 이렇게 되자 학생들 사이에서는 불안감이 퍼지기 시작했습니다."
+ SI_Hyakkiyako_G08_effect:"효과:"
+ SI_Hyakkiyako_G08_tip:"§C$SI_Hyakkiyako_G08$§!"
+
+ SI_Hyakkiyako_G09:"입몽"
+ SI_Hyakkiyako_G09_desc:"한 줄기 연기, 한 주전자 술, 한 개비 담배, 한마디 안부"
+ SI_Hyakkiyako_G09_effect:"효과:"
+ SI_Hyakkiyako_G09_tip:"§C$SI_Hyakkiyako_G09$§!"
+
+ #####    瓦尔基里    #####
+ SI_Valkyrie_tip:"학원 이념 (선택): §c발키리 경찰학교§!"
+
+ SI_Valkyrie_G01:"발키리식 법 집행"
+ SI_Valkyrie_G01_desc:"자경단의 규정을 무시하고, 발키리 특유의 '신속한 집행'이 다시금 모습을 드러냅니다!"
+ SI_Valkyrie_G01_effect:"효과:"
+ SI_Valkyrie_G01_tip:"§C$SI_Valkyrie_G01$§!"
+
+ SI_Valkyrie_G02:"해자 법령"
+ SI_Valkyrie_G02_desc:"전용 경찰 위성 구역을 설정함으로써, 발키리는 임무를 완벽히 수행하고 핵심 요충지를 방어할 수 있게 됩니다."
+ SI_Valkyrie_G02_effect:"$MOD_ARMY_DEFENSE_HEALTH_MULT$: §G+150%§!"
+ SI_Valkyrie_G02_tip:"§C$SI_Valkyrie_G02$§!"
+
+ SI_Valkyrie_A01:"군경 겸용 복구항"
+ SI_Valkyrie_A01_desc:"군용 및 경찰용 소형 선박 정거장을 통일된 규격으로 설계하고, 생산 모듈을 재조립하여 효율성을 크게 향상시킵니다."
+ SI_Valkyrie_A01_effect:"효과:"
+ SI_Valkyrie_A01_tip:"§C$SI_Valkyrie_A01$§!"
+
+ SI_Valkyrie_A02:"항해사 관리부"
+ SI_Valkyrie_A02_desc:"발키리는 수많은 항해사 자질을 지닌 학생들을 키워냈고, 그들은 관리부의 지휘 아래 용감하게 심우주를 지키며 연방의 모든 함선들을 운용하고 있습니다."
+ SI_Valkyrie_A02_effect:"효과:"
+ SI_Valkyrie_A02_tip:"§C$SI_Valkyrie_A02$§!"
+
+ SI_Valkyrie_B01:"첫 총성 프로토콜"
+ SI_Valkyrie_B01_desc:"전쟁이 닥쳐올 때, 발키리의 기반 시설은 군대 편입을 위해 모든 도움을 제공하며, 정복자 또는 수호자로서 최전선으로 향하는 첫 번째 거점이 될 수 있습니다."
+ SI_Valkyrie_B01_effect:"효과:"
+ SI_Valkyrie_B01_tip:"§C$SI_Valkyrie_B01$§!"
+
+ SI_Valkyrie_B02:"전면 동원"
+ SI_Valkyrie_B02_desc:"일부 군사 권한을 발키리로 이양하고, 경찰 조직망을 활용하여 병력과 전투 경험을 전달합니다."
+ SI_Valkyrie_B02_effect:"효과:"
+ SI_Valkyrie_B02_tip:"§C$SI_Valkyrie_B02$§!"
+
+ #####     山海经     #####
+ SI_Shanhaijing_tip:"학원 이념 (선택 사항): §G산해경 고급 중학교§!"
+
+ SI_Shanhaijing_G01:"매화원 기관"
+ SI_Shanhaijing_G01_desc:"어느 한쪽을 결정한 후, 저희는 먼저 매화원 확장을 진행해야 합니다. 이는 산해경 내 학생들의 양육을 용이하게 하기 위함입니다."
+ SI_Shanhaijing_G01_effect:"효과:"
+ SI_Shanhaijing_G01_tip:"§C$SI_Shanhaijing_G01$§!"
+
+ SI_Shanhaijing_G02:"연단술 실험실"
+ SI_Shanhaijing_G02_desc:"산해경의 생물 실험실은 저희 키보토스에서 찾아보기 힘든 보물입니다 (여러 의미로요)."
+ SI_Shanhaijing_G02_effect:"효과:"
+ SI_Shanhaijing_G02_tip:"§C$SI_Shanhaijing_G02$§!"
+
+ SI_Shanhaijing_A01:"현룡문 - 국경 방위"
+ SI_Shanhaijing_A01_desc:"강력한 함대만으로는 방어가 마찰을 일으킬 수 있으니, 국경을 전문적으로 수호하는 포대만이 모든 것을 완벽하게 커버할 수 있습니다."
+ SI_Shanhaijing_A01_effect:"효과:"
+ SI_Shanhaijing_A01_tip:"§C$SI_Shanhaijing_A01$§!"
+
+ SI_Shanhaijing_A02:"현룡문 - 모듈식 중포"
+ SI_Shanhaijing_A02_desc:"거대 포대 부품을 모듈로 분해한 후 공장에서 생산하면, 포대 생산 속도를 크게 높일 수 있습니다. 포대의 제어와 병참 또한 동일한 방식으로 적용할 수 있습니다."
+ SI_Shanhaijing_A02_effect:"효과:"
+ SI_Shanhaijing_A02_tip:"§C$SI_Shanhaijing_A02$§!"
+
+ SI_Shanhaijing_A03:"현룡문 - 무의 뜻"
+ SI_Shanhaijing_A03_desc:"만약 무력과 수완이 없다면, 모든 것을 남에게 빼앗길 것입니다."
+ SI_Shanhaijing_A03_effect:"§R$SI_Shanhaijing_B03$와(과) 상호 배타적입니다.§!"
+ SI_Shanhaijing_A03_tip:"§C$SI_Shanhaijing_A03$§!"
+
+ SI_Shanhaijing_A04:"현룡문 - 철벽 천 리"
+ SI_Shanhaijing_A04_desc:"방어선을 난공불락의 철벽으로 만들어서, 우리의 땀과 노고를 지킬 수 있습니다."
+ SI_Shanhaijing_A04_effect:"효과:"
+ SI_Shanhaijing_A04_tip:"§C$SI_Shanhaijing_A04$§!"
+
+ SI_Shanhaijing_B01:"현무상회 - 회색 상안"
+ SI_Shanhaijing_B01_desc:"합리적인 목표를 달성할 수 있다면, 규칙을 조금 어기는 수단을 사용하는 것도 나쁘지 않아요."
+ SI_Shanhaijing_B01_effect:"\n효과:\n특수 주문이 준비되면, §Y$Xuanwu_promenade$§!에서 막대한 $trade_with_icon$를 생성합니다.\n"
+ SI_Shanhaijing_B01_tip:"§C$SI_Shanhaijing_B01$§!\n$SI_Shanhaijing_B01_desc$\n$SI_Shanhaijing_B01_effect$"
+
+ SI_Shanhaijing_B02:"현무상회-유동 지원"
+ SI_Shanhaijing_B02_desc:"자원이 유동해야 비로소 경제라고 부를 수 있어요. 그렇지 않으면 아무리 귀중한 것도 거품에 불과하죠."
+ SI_Shanhaijing_B02_effect:"\n효과:\n$mod_BA_staff_pop_trade_produces_mult$: §G+150%§!\n"
+ SI_Shanhaijing_B02_tip:"§C$SI_Shanhaijing_B02$§!\n$SI_Shanhaijing_B02_desc$\n$SI_Shanhaijing_B02_effect$"
+
+ SI_Shanhaijing_B03:"현무상회-신의 그림자"
+ SI_Shanhaijing_B03_desc:"신뢰는 거래의 근본이며, 거래 비용은 앞으로 나아갈 길이 순탄할지 험난할지를 직접적으로 결정하죠."
+ SI_Shanhaijing_B03_effect:"\n§R$SI_Shanhaijing_A03$§R과 상호 배타적§!\n효과:\n§Y$Xuanwu_promenade$ 특수 주문§! 또는 §Y천사24§!를 통해 이루어지는 거래에서 두 배의 자원을 획득할 수 있습니다.\n$mod_country_trade_produces_mult$: §G+20%§!\n$MOD_COUNTRY_TRADE_FEE$: §G-25%§!\n§H지부 건물 잠금 해제: §!현무상회 외무역 구역\n\n"
+ SI_Shanhaijing_B03_tip:"§C$SI_Shanhaijing_B03$§!\n$SI_Shanhaijing_B03_desc$\n$SI_Shanhaijing_B03_effect$"
+
+ SI_Shanhaijing_B04:"현무상회-작열하는 불꽃"
+ SI_Shanhaijing_B04_desc:"경제는 목적이 아닌 수단이며, 가장 격렬한 수단을 사용해야만 비로소 가장 위대한 목표를 달성할 수 있습니다."
+ SI_Shanhaijing_B04_effect:"\n효과:\n§H행성 결의 잠금 해제: §!$decision_SI_Shanhaijing_B04$\n"
+ SI_Shanhaijing_B04_tip:"§C$SI_Shanhaijing_B04$§!\n$SI_Shanhaijing_B04_desc$\n$SI_Shanhaijing_B04_effect$"

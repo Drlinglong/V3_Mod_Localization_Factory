@@ -1,0 +1,281 @@
+﻿l_english:
+
+ BA_Project_Cradle_title:0 "Project Cradle"
+ BA_Project_Cradle_instruction:0 "This is a project to investigate and transform our home system."
+###### A
+ BA_Project.0010.desc:0 "“Sensei, how much do you know about the data the General Student Council gathered from exploring this star system? According to reports, this system has a multitude of anomalies. Arona briefly looked through the reports, you see, like how our World isn't even in the habitable zone, yet the temperature is surprisingly suitable; or how the distant gas giant has four Worlds with perfect mass, orbits, and even angles relative to each other, making it completely unexplainable why they remain like this after shattering; and aside from the celestial bodies we see, there's no Asteroid Belt in the system, and as for lunars, only that weird giant World has any. It's as if someone swept it clean..."
+ BA_Project.0010.a:0 "That's true, just as Arona said."
+ BA_Project.0010.a.response:0 "The weirdest thing must be that shielded World in our system, right? It's on the same orbit as us, but it has a mysterious barrier. We can't scan anything beneath the barrier, and ordinary weapons can't damage it in the slightest. Arona thinks there's no way that barrier could be Physma-generated.\nBut recently, Arona found a database in the Great Tower that seems to be related to our star system. If it's okay, Sensei, please allocate some resources and personnel to decrypt the database. Arona believes it'll definitely be a huge find!”"
+ BA_Project.0010.next:0 "Understood."
+
+ BA_Project.0011.desc:0 "“That's great, Sensei! The students tried to brute-force the database with a ton of random data and actually got some scattered data, and even deciphered some readable fragments! All the classmates who participated worked really hard!”"
+ BA_Project.0011.a:0 "Read Fragments"
+ BA_Project.0011.a.response:0 "…verification failed, but the result is positive…\n…'s Halo was damaged, but not destroyed…\n…emotions amplified, and then…\n…attacked the relay station, intercepted…\n…descending pillar of light, removed the restrictions on…"
+ BA_Project.0011.b:0 "Any thoughts, Arona?"
+ BA_Project.0011.b.response:0 "“It seems to be a file similar to an archive, and it only records bad things. It mentioned 'Halo,' could it be related to the students? Arona really can't figure out how a Halo could be damaged...\n...Huh? You said it mentioned relay stations and spaceships? The attack on the relay station was intercepted by spaceships, could this relay station be in space?\n...Well, is that possibility truly real...? Could it be that there was an alien invasion of Kivotos, or perhaps an internal war between the precursors and their homeworld?\n...Ah! Arona remembers! Previous scans once detected traces of buildings on the second World in our system. Should we send a Science Ship to take a closer look there?”"
+ BA_Project.0011.next:0 "Alright."
+
+ BA_Project.0012.desc:0 "“Just as we expected, Sensei! There really is a complex of buildings on the far side of the second World! Quick, send an archaeological team to excavate it!”"
+ BA_Project.0012.next:0 "That's great! Make sure to search it thoroughly."
+
+ BA_Project.0013.desc:0 "“They actually found the database key... The students are really amazing, aren't they? So, what can we unlock? I'm excited~”\n\nAuthentication complete. Greetings, Researcher MX-7073. This is JSS, a medium-confidentiality database. Based on your clearance, you may only read all data in Sector K. To copy, please use a dedicated storage medium. Please log out upon departure."
+ BA_Project.0013.a:0 "Although there are still many things I'm worried about, Arona, remember to run antivirus checks..."
+ BA_Project.0013.a.response:0 "“Honestly, Sensei... Of course Arona would pay attention to something like that...\nUgh... What even *is* all this? All sorts of diagrams, flashy formulas... Ugh, Arona's already getting a headache after just a few pages...”"
+ BA_Project.0013.b:0 "It looks like blueprints for some kind of device."
+ BA_Project.0013.b.response:0 "“If Sensei says so... Oh, you're right! It seems to be a really, really big device! Let's leave this for the students to Research, we'll figure out its purpose quickly, and maybe we can even build one ourselves!”"
+ BA_Project.0013.next:0 "Alright."
+
+ BA_Project.0014.desc:0 "“Sensei! The Research is complete! That device's purpose is to generate an energy field. Now, listen closely, because this is huge news! I'll read it to you, so make sure to listen carefully!\n\n「The energy field can absorb normally incident energy and transmit it tangentially, thereby obtaining the energy required to sustain the field. Any absorbed energy exceeding what is consumed will be transmitted tangentially. As the transmitted amount increases, increasingly noticeable relativistic effects can be observed at the barrier's edge. Consumed energy will dissipate outwards along the curvature, with the dissipation method depending on how the energy field's infinitesimal elements obtain energy over a period of time. The electromagnetic field within the energy field is highly chaotic, but the general trend is to accelerate all charged entities inwards.」\n\nThink about it, if we connect this energy field, doesn't it look exactly like the barrier on the second World?!”"
+ BA_Project.0014.a:0 "You're so smart, Arona! *pats head*"
+ BA_Project.0014.a.response:0 "“Eheheh... Oh, now's not the time for head pats! We've already figured out the device's principle, so of course, we know how to remove the barrier! Should we open it up and take a look?”"
+ BA_Project.0014.next:0 "Go right ahead."
+
+ BA_Project.0015.desc:0 "“Oh! Sensei, look! Look at those ruins on that World... whether it's the boundaries of the districts or their shapes, Arona feels a really strong sense of déjà vu...\nUh, that fallen tower-shaped building, it looks so much like the General Student Council's Great Tower... That ruin of an autonomous district in the desert, could it be Abydos? And the one in the snowy area over there, could it be Red Winter?... Then, where's ETO?”"
+ BA_Project.0015.a:0 "Arona, look here. Trinity General School's Ancient Cathedral is just a crater now. Looks like there's no ETO here."
+ BA_Project.0015.a.response:0 "“No way!... If there's no ETO... Trinity General School, Millennium Science School... Gehenna Academy... Valkyrie... Um, where are they all then? What was Kivotos like before the Eden Treaty?”"
+ BA_Project.0015.next:0 "It's probably best to let more professional people handle the first wave of work."
+
+ BA_Project.0016.desc:0 "“Sensei, the advance team reported that this World's statistics are identical to Kivotos, making it habitable. If Sensei wishes, we can send a group of colonists to settle here.\nFurthermore, there's a possibility of rebuilding it into an academy city just like Kivotos. Arona also thinks that's very attractive... But that's not something to consider right now.\nThere will be a lot of work ahead, but Arona will be with you all the way...”"
+ BA_Project.0016.next:0 "(Arona seems a bit down, why is that...?)"
+
+###### B
+ BA_Project.0018.desc:0 "“Sensei, our colony on this ruined World has been here for three years now. Over these three years, we've made good progress in developing this World. The infrastructure is well-established, and there are more and more students there. However, while our previous development utilizing the ruins was effective, the ruins are now hindering further construction.\nArona heard that many, many ruins haven't been and can't be cleared for land use, due to historical survey purposes, development hazards, and various other factors. Since the related manpower and resources on the World are now mature, we can start surveying this World, right?\nJust call Arona when you're ready! Arona believes we can uncover the secrets of this World, and that we can rebuild it into the Kivotos it's supposed to be!”"
+ BA_Project.0018.next:0 "Let's do our best together, Arona!"
+
+ BA_Project.0019.desc:0 "“Such a huge World, where should we start the archaeological work? Sensei, do you have any ideas?\nShould we start with Trinity General School's Ancient Cathedral, where the damage is most severe? Hmm... That makes sense! Trinity General School's Ancient Cathedral is where the Eden Treaty was signed, right? As for this World... the Ancient Cathedral was blown up, and the crater seems to have revealed some strange underground structures. If we investigate there, we should be able to find out why the Eden Treaty here wasn't successfully signed, right! As expected of Sensei!”"
+ BA_Project.0019.a:0 "Alright then, let's begin our first archaeological expedition."
+ BA_Project.0019.b:0 "I don't think we can let our guard down here. Notify the Vigilante Corps to stand by."
+
+ BA_Project.0020.desc:0 "“Sensei, during the excavation, we don't know what mechanism was triggered, but a lot of enemies suddenly appeared in the ruins! Fortunately, the Vigilante Corps has taken control of the situation, and although enemies are still appearing continuously, their movements have been temporarily restricted.\nBut, Arona has done her homework! According to the Vigilante Corps' report, these enemies are psionic entities called 'Justina Fanatics.' Although they have the appearance of students, they're all wearing standardized combat uniforms. Bullets can pass through and damage them. The Vigilante Corps students were really startled at first! Only after engaging them did they realize they're actually quite weak, like headless chickens...”"
+ BA_Project.0020.next:0 "We absolutely mustn't rush an excavation of this scale."
+
+ BA_Project.0021.desc:0 "“It's truly astonishing that a World like this has such a history...\nAlthough we also experienced quite a few disturbances before entering the age of interstellar travel, but looking at these ruins, if we also... uh... will our fate be as tragic as theirs...?\nAnyway, the archaeology team members and Sensei have all worked very hard! Let's rest a little. Next, we'll begin the work of restoring this place to how it should be!”"
+ BA_Project.0021.next:0 "You've also worked hard, Arona."
+
+###### C
+ BA_Project.0022.desc:0 "“Sensei! According to the investigators on the ruined World, they've fully grasped the layout of the original academy city on this World in all aspects. Arona thinks it's time we can start the reconstruction work!\nThe crumbling walls and broken tiles here always evoke so many emotions... We'll definitely be able to recreate its former glory. No, rather, it's our responsibility.”"
+ BA_Project.0022.next:0 "Go right ahead."
+
+ BA_Project.0023.desc:0 "“Such a massive amount of ruins... clearing them out piece by piece with old methods would probably be quite inefficient, wouldn't it? Arona believes we need to research a new method for quickly clearing such large-scale ruins. Based on the routes we have so far... there seem to be two possible directions.\nOne is to deploy space-based beam weaponry. These weapons only need a little modification to bombard the ruins, pulverizing all the debris for recycling and reuse. The advantage is fast clearing speed, and it saves resources for later reconstruction. As for the downsides... well, even if Arona doesn't say it, they're pretty obvious...\nThe other is to use a large number of specialized autonomous cleaning mechs for dismantling. While the speed is far less than the first option, and building the mechs is quite resource-intensive, it's safer and more reliable, and some historically significant ruins can be preserved.\nWhich method to use depends on Sensei's choice. Or, would Sensei like to let the students choose the plan? No matter what you decide, Arona will fully support Sensei!”"
+ BA_Project.0023.order:0 "Arona is truly dependable!"
+ BA_Project.0023.decentralize:0 "Then let's leave the decision entirely to the students."
+
+#天基武器线路
+ BA_Project.0024.desc:0 "“Sensei! The Physics Department reports they've completed the redesign for the space-based weapon, and it's ready for manufacturing! According to the department, the space-based facility needs to be manufactured and launched in several parts.\nFirst is the Focusing Tube. Since the ruined World colony doesn't have the necessary manufacturing conditions, it must be produced on the homeworld. It requires §Y300£energy£ Energy Credits, 300£alloys£ alloy, and 100£rare_crystals£ Rare Crystals§!.\nNext is the Shielding Casing. Manufacturing it requires §Y200£energy£ Energy Credits and 500£alloys£ alloy§!. Because this component is quite large and heavy, manufacturing it on the homeworld would incur an additional §Y1000£energy£ Energy Credits§! for transport to the ruined World colony. However, the homeworld has better industrial conditions, so manufacturing will be faster.\nFinally, there are the various core components. In total, these need §Y1000£energy£ Energy Credits, 200£alloys£ alloy, 100£volatile_motes£ Volatile Motes, and 100£exotic_gases£ Exotic Gas§!. Similar to the first two components, manufacturing them on the homeworld will be faster to complete.\nOnce everything is launched, it will take another 3 months for assembly before operations can begin. Ugh, this is truly a huge expense...”"
+ BA_Project.0024.next:0 "It will be worth it. Let's get to work."
+
+ BA_Project.0025.desc:0 "“Sensei, the ruined World colony reports the assembly of the space-based weapon is complete, and it's ready for deployment!\nAlthough Arona notified the colonists on the World long ago, given that the use of such a space-based facility will severely damage the World's living environment, and in serious cases, even cause casualties, Arona has issued one final notice. I imagine the students remaining on the World will have a tough time for a while.\nAccording to Arona's calculations, the operation is estimated to take 3 years, but Arona cannot rule out the possibility of early completion or delays.”"
+ BA_Project.0025.next:0 "Soon, everything will change."
+
+ BA_Project.0026.desc:0 "“Sensei! The department reports that the Cleaning Mech Squad has completed the cleanup of the ruined World, and ground-level clearing work is also done! A small portion of the mechs that have completed their mission are slated for preservation in a museum, while the rest are being prepared for dismantling and recycling. This cleanup operation was truly fruitful, yielding enough resources to rebuild most of an Academy City World, while new academy plans have been gradually drawn up over the past few years.\nWe'll soon witness the birth of another Academy City World! Let's start the reconstruction quickly! Arona can't wait!”"
+ BA_Project.0026.next:0 "This is the final step."
+
+ BA_Project.0027.desc:0 "“Sensei, the Engineering Department has submitted a special proposal. After carefully researching the recovered space-based facility, they intend to miniaturize it and equip it onto Titans, allowing them to attack both warships and enemy colonies. Arona believes this project is feasible. What does Sensei think?”"
+ BA_Project.0027.next:0 "Excellent. Go research it."
+
+ BA_Project.0028.desc:0 "Sensei, the Engineering Department reports they have completed the repurposing of the space-based cleanup facility technology. They have developed a new type of main gun for Titans. This main gun can quickly shatter enemy ship Shields and Armor, and can be used as a weapon against enemy colonies, swiftly dismantling their defensive structures."
+ BA_Project.0028.next:0 "Understood."
+
+ decision_build_focus_tube_home:0 "Construct Focusing Tube"
+ decision_build_focus_tube_home_desc:0 "Focusing Tubes are the core components of the space-based cleanup facility, with a highly complex manufacturing process that can only be performed on the homeworld."
+ decision_build_shielding_case_home:0 "Construct Shielding Casing"
+ decision_build_shielding_case_home_desc:0 "Constructs the heavy outer casing for the space-based cleanup facility on the homeworld. While fast, it will later Cost some resources to transport to the colony."
+ decision_build_shielding_case_colony:0 "Construct Shielding Casing"
+ decision_build_shielding_case_colony_desc:0 "Constructs the heavy outer casing for the space-based cleanup facility on the colony. Sacrifices Build Speed, but the benefit of local construction is no transportation effort required."
+ decision_build_core_components_home:0 "Construct Core Components"
+ decision_build_core_components_home_desc:0 "Constructs the various components for the space-based cleanup facility. Industrial conditions on the homeworld are better than on colonies, leading to faster Build Speed."
+ decision_build_core_components_colony:0 "Construct Core Components"
+ decision_build_core_components_colony_desc:0 "Constructs the various components for the space-based cleanup facility. The benefit of local construction on the colony is that it boosts employment there."
+
+ BA_Project.8101.title:0 "Focusing Tube Construction Complete"
+ BA_Project.8101.desc:0 "The §YFocusing Tube§! for the space-based cleanup facility has been manufactured and transported to its designated orbital position around the ruined World colony."
+ BA_Project.8101.confirmed:0 "No other unauthorized objects in orbit. Awaiting assembly."
+ BA_Project.8102.title:0 "Shielding Casing Construction Complete"
+ BA_Project.8102.desc:0 "The §YShielding Casing§! for the space-based cleanup facility has been manufactured and transported to its designated orbital position around the ruined World colony."
+ BA_Project.8102.confirmed:0 "Temperature detection system operating normally. Awaiting assembly."
+ BA_Project.8102.return:0 "Redundant manufacturing plans have been cancelled due to a duplicate schedule."
+ BA_Project.8102.recycled:0 "No resources will be wasted."
+ BA_Project.8103.title:0 "Core Components Construction Complete"
+ BA_Project.8103.desc:0 "The §YCore Components§! for the space-based cleanup facility have been manufactured and transported to their designated orbital position around the ruined World colony."
+ BA_Project.8103.confirmed:0 "Transport module orbit stable, recycling system self-check complete. Awaiting assembly."
+ BA_Project.8103.return:0 "Redundant manufacturing plans have been cancelled due to a duplicate schedule."
+ BA_Project.8103.recycled:0 "No resources will be wasted."
+
+ BA_Project.8104.title:0 "Space-Based Facility Cleanup Report: Launch Initiated"
+ BA_Project.8104.desc:0 "With the space-based cleanup facility fully assembled, debugged, and charged, the space-based facility's clearing operation has begun. A sky-blue beam of light pours down from the Focusing Tube, shattering all the grim ruins on the World. The beam, like a milling cutter, levels everything in its path. This operation is expected to last 3 years, with ground clearing teams following closely behind the beam for cleanup and temporary reconstruction, and settlements and industrial zones relocating accordingly. The entire World will be cut down by 20 meters to thoroughly clear the ruins."
+ BA_Project.8104.next:0 "World-Scouring."
+
+ BA_Project.8121.title:0 "Orbital Facility Cleanup Report: Normal Cleanup"
+ BA_Project.8121.desc:0 "The ruined World colony reports cleanup operations are proceeding smoothly, with no anomalies detected."
+ BA_Project.8121.confirm:0 "Received."
+ BA_Project.8122.title:0 "Orbital Facility Cleanup Report: Mineral Deposit"
+ BA_Project.8122.desc:0 "Ruined World Colony Report: During cleanup, a small, undeveloped mineral deposit was discovered. Ground cleanup crews have collected all Minerals blasted to the surface."
+ BA_Project.8122.confirm:0 "A small gift."
+ BA_Project.8123.title:0 "Orbital Facility Cleanup Report: Mineral Vein"
+ BA_Project.8123.desc:0 "Ruined World Colony Report: A mineral vein was discovered, made incredibly easy to mine by the orbital weapon bombardment. Ground cleanup crews have already extracted the visible portion of the vein."
+ BA_Project.8123.confirm:0 "Not bad."
+ BA_Project.8124.title:0 "Orbital Facility Cleanup Report: Underground Storage"
+ BA_Project.8124.desc:0 "Ruined World Colony Report: An underground military warehouse left by previous inhabitants was discovered! It contained a large quantity of alloy, some Pyroxene, and even some dark matter whose extraction method is unknown. Ground cleanup crews have collected it all."
+ BA_Project.8124.confirm:0 "How delightful!"
+ BA_Project.8125.title:0 "Orbital Facility Cleanup Report: Minor Disturbance"
+ BA_Project.8125.desc:0 "Ruined World Colony Report states that recent bombardment has disrupted the Ruined World's climate, causing localized hurricanes and floods. Fortunately, personnel in the affected areas were evacuated, resulting in minimal casualties and property damage."
+ BA_Project.8125.confirm:0 "Received."
+ BA_Project.8126.title:0 "Orbital Facility Cleanup Report: Severe Disaster"
+ BA_Project.8126.desc:0 "Ruined World Colony Report states that recent bombardment has interfered with the Ruined World's geological activity, triggering severe earthquakes and volcanic eruptions. Fortunately, this disaster primarily occurred in the already bombarded areas, preventing widespread devastation."
+ BA_Project.8126.confirm:0 "Concerning."
+ BA_Project.8127.title:0 "Orbital Facility Cleanup Report: Accidental Strike"
+ BA_Project.8127.desc:0 "Ruined World Colony Report states that a critical industrial district was accidentally hit by an orbital facility strike, resulting in severe losses. This accidental strike has had an unacceptable impact on the economy of nearby districts, nearly halting all production activities."
+ BA_Project.8127.confirm:0 "Since this has happened, the homeworld has an obligation to provide assistance."
+ BA_Project.8128.title:0 "Orbital Facility Cleanup Report: Accidental Strike"
+ BA_Project.8128.desc:0 "Ruined World Colony Report states that a severe operational error occurred with an orbital facility, leading to an accidental strike on a remote residential area, causing a catastrophic incident of Halo-shattering proportions. Relevant personnel have been dealt with immediately."
+ BA_Project.8128.confirm:0 "The negative impact is immeasurable."
+
+ BA_mistake_hit:0 "Orbital Facility Accidental Strike"
+
+#自走机械线路
+ BA_Project.0031.desc:0 "Sensei! The Engineering Department has successfully developed a series of cleanup mechs that are both suitable for this task and quite affordable! The factory site has been chosen, and we'll need some supplies for constructing the plant and the mechs.\nWe estimate we'll need 500 Minerals and 200 Energy Credits to build the specialized plant for producing cleanup mechs, and then another 300 alloy and 200 Consumer Goods to manufacture a large quantity of various mechs. All these preparations must be completed at the colony, which should take about nine months in total.\nOnce construction begins, these mechs will clear out a large amount of various resources every month, including Minerals, alloy, and even rare resources. It's not an exorbitant expense, and even though the work might take quite a long time afterward, Arona still thinks cleanup mechs are a pretty great idea!"
+ BA_Project.0031.next:0 "Let's get started. We need to make haste."
+ BA_Project.0032.desc:0 "Sensei, the Ruined World Colony Report states that the first batch of cleanup mechs has begun operation. Arona contacted the previous archaeological team, and based on their suggestions, a protected area has been designated on the World to preserve some highly significant historical sites. ...Now that I think about it, using orbital weapons for cleanup really was a bit too reckless...\nAccording to Arona's calculations, the operation is estimated to take 5 years to complete, but Arona can't rule out the possibility of finishing early or having delays."
+ BA_Project.0032.next:0 "Soon, everything will change."
+ BA_Project.0033.desc:0 "Sensei! The department reports that the cleanup mech team has finished sweeping the Ruined World! A small portion of the mechs that completed their mission are slated for museum preservation, while the rest are currently being prepared for dismantling and recycling. This cleanup effort was truly fruitful, yielding enough resources to largely rebuild a school-city World, and a completely new academy plan has also been gradually formulated over the past few years.\nWe'll soon witness the birth of another school-city World! Let's hurry and begin the reconstruction! Arona can't wait!"
+ BA_Project.0033.next:0 "This is the final step."
+
+
+ decision_build_factory_colony:0 "Build Mech Factory"
+ decision_build_factory_colony_desc:0 "Build a special factory capable of mass-producing cleanup mechs."
+ decision_build_machine_colony:0 "Construct Cleanup Mech Unit 01"
+ decision_build_machine_colony_desc:0 "Perform final design, manufacturing, and debugging for the cleanup mechs."
+
+
+ BA_Project.8201.title:0 "Factory Plant Construction Complete"
+ BA_Project.8201.desc:0 "The special factory for building cleanup mechs has been completed, awaiting the next step."
+ BA_Project.8201.confirmed:0 "A fresh start."
+ BA_Project.8202.title:0 "Mech Construction Complete"
+ BA_Project.8202.desc:0 "The manufacturing and debugging of Unit 01 are nearing completion, and progress is smooth so far."
+ BA_Project.8202.confirmed:0 "Hand over control to the control tower."
+
+ BA_Project.8203.title:0 "Automated Cleanup Report: Project Start"
+ BA_Project.8203.desc:0 "As the central control tower's signal emitters hummed to life, the first batch of cleanup mechs officially began their work. These mechs didn't just clear ruins; they also flattened mountains and filled in seas, creating numerous flat, sturdy, and construction-ready areas."
+ BA_Project.8203.next:0 "High Peaks, Flat Plains!"
+
+ BA_Project.8221.title:0 "Automated Cleanup Report: Normal Operations"
+ BA_Project.8221.desc:0 "The ruined World colony reports cleanup operations are proceeding smoothly, with no anomalies detected."
+ BA_Project.8221.confirm:0 "Received."
+ BA_Project.8222.title:0 "Automated Cleanup Report: Inspiration"
+ BA_Project.8222.desc:0 "Our cleanup efforts on the ruined World seem to really spark the researchers' inspiration! Papers are popping up like mushrooms after rain. Even after filtering out studies like 'Deploying Hot Sauce via Submachine Gun,' the results are still quite fruitful!"
+ BA_Project.8222.confirm:0 "Fantastic!"
+ BA_Project.8223.title:0 "Automated Cleanup Report: Ruin Discovered"
+ BA_Project.8223.desc:0 "The ruined World colony reports that cleanup bots have unearthed a ruin previously untouched by archaeological efforts! This news has spread throughout all of Kivotos, uplifting everyone's spirits. A new ruin park has already been designated and will soon open its doors to visitors."
+ BA_Project.8223.confirm:0 "Fantastic!"
+ BA_Project.8224.title:0 "Automated Cleanup Report: Laboratory Discovered"
+ BA_Project.8224.desc:0 "The ruined World colony reports that the cleanup team has discovered a remarkably well-preserved laboratory underground! The General Student Council has already sent a team to analyze its records, gaining much useful data."
+ BA_Project.8224.confirm:0 "Fantastic!"
+ BA_Project.8225.title:0 "Automated Cleanup Report: System Crash"
+ BA_Project.8225.desc:0 "The ruined World colony reports that a large number of cleanup mechs have crashed due to unknown reasons, triggering a series of accidents that led to even more mechs being damaged and scrapped. Factories are currently working overtime to produce replacements."
+ BA_Project.8225.confirm:0 "How unfortunate."
+ BA_Project.8226.title:0 "Automated Cleanup Report: Rampage"
+ BA_Project.8226.desc:0 "The ruined World colony reports that a large number of cleanup mechs have suddenly gone out of control and started rampaging! These rogue machines uncontrollably destroyed a significant portion of a district, but fortunately, evacuation was timely, and no one was injured."
+ BA_Project.8226.confirm:0 "What a relief."
+ BA_Project.8227.title:0 "Automated Cleanup Report: Prophet Emergence"
+ BA_Project.8227.desc:0 "The ruined World colony reports that a slumbering Prophet of the Crux Sacra seems to have been awakened by the cleanup mechs! Fortunately, these cleanup mechs were designed with military applications in mind, and after a fierce battle, it was finally eliminated. This incident caused severe losses to the ruined World colony; the exact figures are still being calculated."
+ BA_Project.8227.confirm:0 "How unfortunate."
+
+#最后一步
+ decision_rebuild_Kivotos_on_ruins:0 "Rebuilding the Academy City World"
+ decision_rebuild_Kivotos_on_ruins_desc:0 "From the ashes, we rise!"
+
+#完成
+ BA_Project.0098.desc:0 "Oh, Sensei, it was really tough! But our efforts weren't in vain. The ruined World... no, the former ruined World colony, has now been rebuilt into a brand-new Kivotos!\nSensei, we have so many stories in Kivotos, even if they're all different. But Arona really doesn't like those dark and tragic memories of the barrier World...\nStill, this time, we've personally written a brand-new Happy End for this story. I wonder what kind of joyful laughter will echo there in the days to come?"
+ BA_Project.0098.next:0 "Arona, let's go cut the ribbon for the new General Student Council branch first!"
+ BA_Project.0099.desc:0 "After more than a decade, 'Project Cradle' temporarily concludes here. While many mysteries remain unsolved, we'll find the answers one day. For now, we've constructed a brand-new Academy City World, personally building Kivotos's bright new future.\n"
+ BA_Project.0099.next1:0 "Our monument stands tall, amidst the vast cosmos."
+ BA_Project.0099.next2:0 "Our Story, written by our own hands."
+
+
+
+#考古遗址相关
+ BA_ProjectCradle_arc_site_A_A:0 "$Project_Cradle_arc_site_title$"
+ BA_ProjectCradle_arc_site_A_B:0 "$Project_Cradle_arc_site_title$"
+ BA_ProjectCradle_arc_site_B_A:0 "$Project_Cradle_arc_site_title$"
+ BA_ProjectCradle_arc_site_B_B:0 "$Project_Cradle_arc_site_title$"
+ Project_Cradle_arc_site_title:0 "Beneath the Barrier"
+ BA_ProjectCradle_arc_site_core_desc:0 "We've unveiled this barrier World, and now we can finally delve into its secrets. (Note: To advance the event chain, please order a Science Ship to Research the anomaly rather than excavating this archaeological site.)"
+
+
+ Project_Cradle_arc_site_desc_AZ01:0 "The archaeology team and vigilante corps have submitted their reports; their investigation into the ancient sanctuary's underground structures has largely concluded.\nAccording to the archaeology team's excavations in the Grand Sanctuary's underground ruins, evidence shows that exceptionally fierce battles occurred here more than once, with traces of large combat units. Currently, there's insufficient evidence to determine if these are related to the Eden Treaty. The archaeology team also discovered that the area underwent cleanup and reconstruction once, followed by many more battles... Current findings suggest these battles are all connected to an entity known as [Color], though nothing else is known about this name for now.\nAs for the sporadic traces found by the archaeology team in the surface ruins, all clues point to one conclusion: the Eden Treaty must have been successfully signed..."
+
+ Project_Cradle_arc_site_option_AZ01:0 "...If it was successfully signed, then what happened afterward?"
+ Project_Cradle_arc_site_desc_AA02:0 "While excavating near the ruins of a tower-Mark building, the archaeology team discovered a large number of destroyed tanks piled into a deep pit. After careful investigation, it was found that these tanks were highly automated, primarily designed into two categories, each showing clear traces of movement, repair, and combat. Comparing them with the Kivotos historical database, the conclusion is that they belonged to two opposing sides of a war. One side was Trinity General School and Gehenna Academy, forming the ETO United Front; the other was Millennium Science School's front. Some of these tanks had many replaced parts and showed signs of extensive refurbishment, indicating that this war might have lasted a long time.\nThese remnants clearly came from the same battle. Trinity and Gehenna jointly attacked Millennium, which fiercely resisted, perhaps because their academy headquarters was nearby. The attackers failed, and large amounts of tank wreckage from both sides were hastily pushed into the pit.\nHowever, according to the Kivotos historical database, tank battles of this scale don't align with Kivotos's long-standing military system..."
+ Project_Cradle_arc_site_option_AA02:0 "Interesting, and quite suspicious."
+ Project_Cradle_arc_site_desc_AA03:0 "Other members of the archaeology team discovered a unique set of ruins while exploring the World. Unlike the ubiquitous ruins found elsewhere on this World, these clearly possess a much longer history.\nThere are numerous traces of urban combat here. Analysis shows that one side was called Arius, and the other was Trinity General School; the former was a branch school of the latter, but the two sides harbored an irreconcilable generational feud. These combat traces were left when Trinity purged Arius.\nThrough careful excavation, it was revealed that these are the ruins of Arius and its autonomous region. The most intriguing discovery is a military factory beneath the cluster of ruins. Analysis of its production lines and surviving blueprints indicates that most of the rebellious faction's weapons and ammunition originated here. This military factory is still functional; for some reason, neither side destroyed it."
+ Project_Cradle_arc_site_option_AA03:0 "Excellent. Let's continue our work."
+ Project_Cradle_arc_site_desc_AA04:0 "The archaeological team found the ruins of Millennium Science School's main campus. After careful excavation, records detailing the beginning and end of the war were discovered.\nFollowing the signing of the Eden Treaty, the ETO, which consolidated the forces of both Trinity General School and Gehenna Academy, first cleared out Arius. However, as various internal problems arose one after another, the ETO's demand for external war grew stronger. The then-President of Millennium Science School defiantly went ahead, pressuring weaker academies to declare their stance, forming an encirclement net against the ETO. While this action drew a large amount of ETO's potential external aid towards Millennium Science School, it also gave the ETO sufficient pretext for war.\nAs the ETO officially declared war on Millennium Science School, this World was engulfed in flames. The prolonged war exhausted both sides' financial and material resources, and the destruction of this World became inevitable. In the late stages of the war, the ETO suffered a series of extremely humiliating defeats, leading to fierce internal turmoil and ultimately, its demise.\nThis record abruptly ends here. Clearly, if it were truly as it stated, this World could not have been destroyed to such an extent."
+ Project_Cradle_arc_site_option_AA04:0 "Interesting..."
+ Project_Cradle_arc_site_desc_AA05:0 "The archaeological team found and excavated the ruins of the Trinity General School main campus, and the information obtained was shocking. In the late stages of the war, the ETO's organization had collapsed. Although Millennium Science School intended to take over, the extensive use of tanks instead of infantry formations suggests that Kivotos was ultimately unable to form complete military organizations, and was forced to largely rely on these automated tanks, which had inferior firepower and mobility compared to formations. Eventually, Millennium Science School also exhausted its Strength in the struggle against chaos, and with the involvement of a fourth party, it ultimately led to the World's destruction. Curiously, no information about this fourth party has been found yet, but it can be confirmed that the World's barrier was unrelated to them.\nRegardless, we now know the history of this World. Witnessing the destruction of another world so similar to our own, their fate is heart-wrenching, yet our victory fills us with pride. Following the governor's suggestion, a heritage park and archives will be established on this World to commemorate these unfortunate students."
+ Project_Cradle_arc_site_option_AA05:0 "Alright."
+
+ Project_Cradle_arc_site_desc_AB02:0 "Some other members of the archaeological team discovered a unique set of ruins while exploring the World. Unlike the ubiquitous ruins found throughout this World, these ruins clearly have a much longer history.\nThere are many traces of street battles here, and analysis results indicate that one side was called Arius, while the other was Trinity General School; the former was a branch school of the latter, but both had an irreconcilable generational grudge. \nAfter careful excavation, it was revealed that this was the ruin of Arius and its autonomous district. The most intriguing part was a military factory located beneath the cluster of ruins. By analyzing the production lines and surviving blueprints and other materials, the archaeological team learned that Arius had once gone to the Eden Treaty venue and done something very bad there.\nThis military factory is still operational. For some reason, neither side destroyed it."
+ Project_Cradle_arc_site_option_AB02:0 "Excellent. Let's continue our work."
+ Project_Cradle_arc_site_desc_AB03:0 "Some members of the archaeological team remaining at the Grand Cathedral ruins discovered a shocking clue: massive battles took place here between Trinity General School, Arius, and the Justina Priests. It can be speculated that the three parties engaged in dozens of rounds of repeated contention over the ancient cathedral. These battles began the moment the Eden Treaty was signed and continued until the ancient cathedral was completely reduced to ruins.\nMeanwhile, excavation members from other ruins also reported similar findings: battles between these three factions occurred in many places, with traces of combat even extending into the central ruins. If our guesses are correct, that should be the ruins of Trinity General School's main campus.\nThings are becoming clear: after the Eden Treaty was signed, massive numbers of Justina Priests poured out, and Arius also seized the opportunity to attack, sending both ETO sides scurrying in disarray. For an organization that consolidated the military might of two large academies, this was nothing short of disgraceful. The ETO, having lost its command authority, subsequently fell into internal strife.\nHowever, what's puzzling is that some clues indicate a fourth party ultimately joined in and ended the dispute with overwhelming force. And this fourth party was not the strongest of the other factions: Millennium Science School."
+ Project_Cradle_arc_site_option_AB03:0 "Continue excavation."
+ Project_Cradle_arc_site_desc_AB04:0 "The archaeological team found the ruins of Millennium Science School's main campus. After careful excavation, they discovered the reason why Millennium Science School did not intervene in this upheaval, and also understood the true identity of the fourth party that intervened against the ETO.\nFollowing the signing of the Eden Treaty, the ETO, which consolidated the forces of both Trinity General School and Gehenna Academy, was besieged by the Justina Priests and Arius, leading to various internal problems. The then-President of Millennium Science School defiantly went ahead, pressuring weaker academies to declare their stance, intending to isolate the ETO and seize the benefits of the Eden Treaty for herself.\nBut reality did not go as she wished. Various models of military robots manufactured internally by Millennium Science School for war suddenly launched an organized rebellion. Some of them even called themselves 'Prophets,' their appearance changing to resemble a starry sky, and they even manifested Halos just like students. Millennium Science School launched a brutal suppression against these rebellious armaments, but the number of rebellious armaments grew, and eventually, Millennium Science School students had to fight the massive robots with only their personal firearms. Although the unique physiology of Kivotos students allowed them to hold their ground in these battles, Millennium's funding chain soon broke, plunging them into an even greater crisis.\nMeanwhile, the mastermind behind the rebellion, Cross Divine Name, saw its own Strength grow unchecked. After Millennium's encirclement net could no longer be maintained, their army, led by four Prophets, went straight to the ETO autonomous zone, defeating both the ETO and Arius."
+ Project_Cradle_arc_site_option_AB04:0 "Interesting..."
+ Project_Cradle_arc_site_desc_AB05:0 "The archaeological team found and excavated the ruins of the Gehenna Academy campus, and the information obtained was shocking. In the late stages of the war, the ETO's organization had collapsed. Although Millennium Science School intended to take over, the extensive use of tanks instead of infantry formations suggests that Kivotos was ultimately unable to form complete military organizations, and was forced to largely rely on these automated tanks, which had inferior firepower and mobility compared to formations. Eventually, Millennium Science School also exhausted its Strength in the struggle against chaos, and with the involvement of a fourth party, it ultimately led to the World's destruction. Curiously, no information about this fourth party has been found yet, but it can be confirmed that the World's barrier was unrelated to them.\nRegardless, we now know the history of this World. Witnessing the destruction of another world so similar to our own, their fate is heart-wrenching, yet our victory fills us with pride. Following the governor's suggestion, a heritage park and archives will be established on this World to commemorate these unfortunate students."
+ Project_Cradle_arc_site_option_AB05:0 "Alright."
+
+
+ Project_Cradle_arc_site_desc_BZ01:0 "BZ01"
+ Project_Cradle_arc_site_option_BZ01:0 "BZ01"
+
+ Project_Cradle_arc_site_desc_BA02:0 "BA02"
+ Project_Cradle_arc_site_option_BA02:0 "BA02"
+ Project_Cradle_arc_site_desc_BA03:0 "BA03"
+ Project_Cradle_arc_site_option_BA03:0 "BA03"
+ Project_Cradle_arc_site_desc_BA04:0 "BA04"
+ Project_Cradle_arc_site_option_BA04:0 "BA04"
+ Project_Cradle_arc_site_desc_BA05:0 "BA05"
+ Project_Cradle_arc_site_option_BA05:0 "BA05"
+
+ Project_Cradle_arc_site_desc_BB02:0 "BB02"
+ Project_Cradle_arc_site_option_BB02:0 "BB02"
+ Project_Cradle_arc_site_desc_BB03:0 "BB03"
+ Project_Cradle_arc_site_option_BB03:0 "BB03"
+ Project_Cradle_arc_site_desc_BB04:0 "BB04"
+ Project_Cradle_arc_site_option_BB04:0 "BB04"
+ Project_Cradle_arc_site_desc_BB05:0 "BB05"
+ Project_Cradle_arc_site_option_BB05:0 "BB05"
+
+
+ BA_Gematria_arc_site_1:0 "Unethical Research"
+ BA_Gematria_arc_site_1_desc:0 "Gematria once conducted Research related to Halos. Perhaps we can gain some inspiration from their research data."
+ Project_Cradle_arc_site_desc_RAID01:0 "As soon as we arrived at the Gematria base ruins, we were blocked by a large door. It clearly utilized technology we cannot yet comprehend. Our enemies—just what level of technological advancement do they possess? Regardless, we must find a way to open this door."
+ Project_Cradle_arc_site_option_RAID01:0 "Let Veritas begin preparations for the decryption."
+ Project_Cradle_arc_site_desc_RAID02:0 "The members of Veritas spent months on decryption work, but due to the immense technological gap, our efforts yielded nothing. Finally, Sunaookami Shiroko, one of the expedition members, lost patience and forcibly broke open the door with a drone. This door's blast resistance was far lower than our estimates. Looks like Gematria's tech tree was seriously skewed!"
+ Project_Cradle_arc_site_option_RAID02:0 "Well, anyway, we're inside now."
+ Project_Cradle_arc_site_desc_RAID03:0 "The base's interior is much more chaotic than we imagined, with all sorts of ruins piled up. It's clear there was deliberate destruction inside. Looks like Gematria destroyed most of their things before evacuating. But maybe, just maybe, some data they didn't manage to destroy still remains beneath these ruins."
+ Project_Cradle_arc_site_option_RAID03:0 "Continue excavation."
+ Project_Cradle_arc_site_desc_RAID04:0 "We recovered a data disk from beneath the ruins. It contains data about Halo experiments, but... I think it would be best for you, Sensei, to personally confirm its contents."
+ Project_Cradle_arc_site_option_RAID04:0 "Import the data into the Shittim Chest."
+
+
+
+
+ BA_Project.8025.title:0 "The Buried Truth"
+ BA_Project.8025.desc:0 "Our excavation efforts on the ruined Kivotos World weren't exactly kept completely under wraps. A project of this scale couldn't possibly escape the investigations of other curious students. Through various means, they've uncovered what truly happened to this World, which shares our very origins: the war and destruction caused by 'us'... At the same time, revelations about the ruined World have started to appear on online forums, and the students' reactions are huge. Even if not everyone knows everything yet, if we don't react, soon nothing will remain hidden. Is this retribution for the crimes 'we' committed? Should we erase the information spreading online? Or perhaps all students should know the truth? We must make a choice, even if it might make other students dislike us."
+ BA_Project.8025.a:0 "Every Kivotos Student has the right to know the truth."
+ BA_Project.8025.b:0 "We shouldn't let innocent students bear all this. Let's get someone to delete that information."
+
+ BA_Project.8026.title:0 "Exposure"
+ BA_Project.8026.desc:0 "Everyone knowing the truth was bound to cause immense turmoil. Though the process was arduous and circuitous, we gradually reached a shared conclusion: if we follow in their footsteps and become the next ruins, then Our Story would end right here. These were the crimes committed by a different 'us', and we won't allow ourselves to become new victims. After this happened, we could sense a clear shift in the overall atmosphere of Kivotos. Everyone is making efforts for Kivotos. Perhaps things are moving in a better direction?"
+ BA_Project.8026.next:0 "Letting everyone know the truth isn't a bad thing."
+
+ BA_Project.8027.title:0 "Protection"
+ BA_Project.8027.desc:0 "After a swift response and managing all online information, we released edited information to ensure the real truth about the ruined World wouldn't be known. Was what we did truly right? But regardless, we must be strict with ourselves, to prevent going down the wrong path again. We must protect our current Kivotos, and not let her suffer malicious destruction like Gematria and the Cross Gods inflicted."
+ BA_Project.8027.next:0 "What's already happened, let it pass."
+
+ BA_Project.8028.title:0 "Questions"
+ BA_Project.8028.desc:0 "Sensei, we've archived and transferred the full details of this incident into your info-bank. Although it currently seems there's no one else left in these ruins besides us, what's strange is: if 'we' from another world failed, where did the victorious Gematria and the Cross Gods go? Why can't we find any information left by survivors who might have survived 'our' failure? Looking at this situation, we must prepare for unexpected enemies that could appear at any time in the future."
+ BA_Project.8028.next:0 "We must still remain vigilant against the unknown depths of space."
+
+
+#光环科技相关
