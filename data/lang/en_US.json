@@ -187,5 +187,22 @@
   "qwen_batch_thinking_enabled": "Batch {batch_num}: Thinking enabled",
   "qwen_batch_thinking_disabled": "Batch {batch_num}: Thinking disabled (added /no_think)",
   "qwen_single_translation_thinking_enabled": "Single translation: Thinking enabled",
-  "qwen_single_translation_thinking_disabled": "Single translation: Thinking disabled (added /no_think)"
+  "qwen_single_translation_thinking_disabled": "Single translation: Thinking disabled (added /no_think)",
+  
+  "error_source_dir_not_exists": "Source directory does not exist: {dir}",
+  "error_source_dir_instructions": "Please ensure one of the following conditions is met:",
+  "error_source_dir_condition1": "1. Run the program from the project root directory",
+  "error_source_dir_condition2": "2. The source_mod folder exists and contains mod files",
+  "error_source_dir_condition3": "3. Check if the folder name is correct (should be 'source_mod')",
+  "error_permission_denied": "Permission denied, cannot access directory: {dir}",
+  "error_scan_directory_unknown": "Unknown error occurred while scanning directory: {error}",
+  "error_scan_directory": "Error occurred while scanning directory: {error}",
+  "user_cancelled_selection": "User cancelled selection",
+  "error_add_mods_to_source_folder": "Please add mod folders to translate in the source_mod folder",
+  "cleanup_deleting": "Deleting files...",
+  "cleanup_deleted_folder": "Deleted folder: {item}",
+  "cleanup_deleted_file": "Deleted file: {item}",
+  "cleanup_delete_error": "Failed to delete: {path}, error: {error}",
+  "cleanup_success": "Cleanup completed!",
+  "cleanup_error": "Error occurred during cleanup: {error}"
 }
