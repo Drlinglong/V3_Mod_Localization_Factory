@@ -184,16 +184,9 @@ def run(mod_name: str,
             max_workers = RECOMMENDED_MAX_WORKERS
             processor = ParallelProcessor(max_workers=max_workers)
             
-            # 获取翻译函数（根据provider_name选择对应的API Handler）
-            if provider_name == "gemini":
-                from scripts.core.gemini_handler import translate_texts_in_batches as translation_function
-            elif provider_name == "openai":
-                from scripts.core.openai_handler import translate_texts_in_batches as translation_function
-            elif provider_name == "qwen":
-                from scripts.core.qwen_handler import translate_texts_in_batches as translation_function
-            else:
-                # 默认使用API Handler
-                translation_function = api_handler.translate_texts_in_batches
+            # 获取翻译函数（使用统一的API Handler接口）
+            # 移除硬编码导入，改为统一接口调用
+            translation_function = api_handler.translate_texts_in_batches
             
             # 并行处理所有文件，获取翻译结果
             file_results = processor.process_files_parallel(
