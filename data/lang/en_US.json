@@ -165,7 +165,10 @@
 "fuzzy_mode_set": "Fuzzy matching mode set to: {mode}",
 "glossary_status_main_plus_aux": "Main glossary({main_count} entries) + Auxiliary glossaries({aux_count} files) = Total({total_count} entries)",
 "glossary_status_aux_only": "Auxiliary glossaries only({aux_count} files)",
-"glossary_merge_completed": "Glossary merged: {main_entries} main entries + {aux_entries} auxiliary entries = {total_entries} total"
+"glossary_merge_completed": "Glossary merged: {main_entries} main entries + {aux_entries} auxiliary entries = {total_entries} total",
+"project_startup": "Project startup: {display_name} v{version}",
+"project_engineering_name": "Engineering name: {name}",
+"project_last_update": "Last update: {date}"
 
 
 }
