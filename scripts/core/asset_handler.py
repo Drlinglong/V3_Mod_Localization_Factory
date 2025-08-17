@@ -250,7 +250,6 @@ def process_metadata(mod_name, client, source_lang, target_lang,
         # warning msg
         logging.warning(i18n.t("unsupported_metadata", game_name=game_profile['name']))
 
-
 # ──────────────────────────────────────────────────────────────────
 # KOPIOWANIE DODATKOWYCH ASSETÓW (bez zmian)
 # ──────────────────────────────────────────────────────────────────
@@ -279,3 +278,4 @@ def copy_assets(mod_name, output_folder_name, game_profile):
                 logging.exception(i18n.t("asset_not_found", asset_name=item))
             except Exception as e:
                 logging.exception(f"Error copying asset {item}: {e}")
+
