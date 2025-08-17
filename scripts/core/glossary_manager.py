@@ -304,7 +304,7 @@ class GlossaryManager:
             # 3. 简称匹配（如果有abbreviations字段）
             abbreviations = entry.get('abbreviations', {}).get(source_lang, [])
             for abbreviation in abbreviations:
-                if abbreviation.lower() in text:
+                if self._is_abbreviation_in_text(abbreviation, text, source_lang):
                     matches.append({
                         'source_term': source_term,
                         'target_term': target_term,
@@ -370,8 +370,36 @@ class GlossaryManager:
         text_tokens = self._tokenize_text(text, source_lang)
         source_tokens = self._tokenize_text(source_term, source_lang)
         
-        if len(source_tokens) < 2:
-            return None
+        # 移除错误的限制：允许单词术语进行模糊匹配
+        # if len(source_tokens) < 2:
+        #     return None
+        
+        # 对于单词术语，直接进行整体模糊匹配
+        if len(source_tokens) == 1:
+            return self._check_single_word_fuzzy_match(source_term, text, source_lang)
+        
+        # 对于多词术语，使用现有的token级别匹配
+        return self._check_multi_word_fuzzy_match(source_tokens, text_tokens, source_lang)
+    
+    def _check_single_word_fuzzy_match(self, source_term: str, text: str, source_lang: str) -> Optional[Dict]:
+        """检查单词级别的模糊匹配"""
+        
+        # 直接计算整体相似度
+        if self._is_similar_word(source_term, text):
+            # 计算置信度
+            distance = self._levenshtein_distance(source_term, text)
+            max_distance = max(1, len(source_term) // 4)
+            confidence = 0.6 - (distance / max_distance) * 0.3
+            
+            return {
+                'confidence': confidence,
+                'match_type': 'fuzzy'
+            }
+        
+        return None
+    
+    def _check_multi_word_fuzzy_match(self, source_tokens: List[str], text_tokens: List[str], source_lang: str) -> Optional[Dict]:
+        """检查多词术语的模糊匹配"""
         
         # 计算单词/字符级别的匹配度
         matched_tokens = 0
@@ -456,6 +484,39 @@ class GlossaryManager:
             previous_row = current_row
         
         return previous_row[-1]
+    
+    def _is_abbreviation_in_text(self, abbreviation: str, text: str, source_lang: str) -> bool:
+        """
+        检查abbreviation是否作为独立词汇出现在文本中
+        使用词边界检查，避免子字符串误匹配
+        """
+        if source_lang in ['en', 'fr', 'de', 'es']:
+            # 西方语言：使用词边界匹配，避免子字符串误匹配
+            import re
+            pattern = r'\b' + re.escape(abbreviation.lower()) + r'\b'
+            return bool(re.search(pattern, text.lower()))
+        else:
+            # 中文等：检查是否作为独立词汇出现
+            # TODO: 当前实现存在问题，需要进一步改良
+            # 
+            # 问题示例：
+            # 词典中有"白子"术语
+            # "今天白子吃了一顿饭" → 会误匹配（因为'白子' in '今天白子吃了一顿饭'）
+            # "纯白子弹" → 会误匹配（因为'白子' in '纯白子弹'）
+            # 
+            # 根本问题：
+            # 1. text.split()在没有空格时返回整个字符串，无法正确分词
+            # 2. 简单的in操作符无法识别词汇边界
+            # 3. 中文没有显式词汇分隔符，需要语义分词或边界检测
+            #
+            # 改进方向：
+            # 1. 集成专业中文分词库（如jieba、pkuseg等）
+            # 2. 实现词汇边界检测算法
+            # 3. 使用上下文分析判断是否为独立词汇
+            #
+            # 当前临时解决方案（存在误匹配风险）：
+            text_words = text.split()
+            return abbreviation.lower() in [word.lower() for word in text_words]
     
     def _deduplicate_matches(self, matches: List[Dict]) -> List[Dict]:
         """
