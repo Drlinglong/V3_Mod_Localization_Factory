@@ -44,7 +44,9 @@ DEFAULT_API_PROVIDER = "gemini"
 API_PROVIDERS = {
     "gemini": {
         "api_key_env": "GEMINI_API_KEY",
-        "default_model": "gemini-2.5-flash"
+        "default_model": "gemini-2.5-flash",
+        "enable_thinking": False,      # 禁用思考功能，节约成本
+        "thinking_budget": 0,          # 0=完全禁用, -1=动态启用, >0=限制token数
     },
     "openai": {
         "api_key_env": "OPENAI_API_KEY",
@@ -54,26 +56,10 @@ API_PROVIDERS = {
         "api_key_env": "DASHSCOPE_API_KEY",
         "default_model": "qwen-plus",
         "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
-        "region": "beijing"  # 华北2（北京）地域
+        "region": "beijing",  # 华北2（北京）地域
+        "enable_thinking": False,      # 禁用思考功能，节约成本
     }
     # 未来可以在这里增加 deepseek 等
-}
-
-# --- Gemini API专用配置 ----------------------------------------------------
-# 思考功能控制，用于节约API成本
-GEMINI_CONFIG = {
-    "enable_thinking": False,      # 禁用思考功能，节约成本
-    "thinking_budget": 0,          # 0=完全禁用, -1=动态启用, >0=限制token数
-    "model": "gemini-2.5-flash"   # 使用的模型
-}
-
-# --- Qwen API专用配置 ----------------------------------------------------
-# 思考功能控制，用于节约API成本
-QWEN_CONFIG = {
-    "enable_thinking": False,      # 禁用思考功能，节约成本
-    "model": "qwen-plus",         # 使用的模型
-    "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",  # 中国区域
-    "region": "beijing"            # 华北2（北京）地域
 }
 
 # --- 语言数据库 --------------------------------------------------
