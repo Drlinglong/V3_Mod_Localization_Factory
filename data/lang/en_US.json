@@ -204,5 +204,12 @@
   "cleanup_deleted_file": "Deleted file: {item}",
   "cleanup_delete_error": "Failed to delete: {path}, error: {error}",
   "cleanup_success": "Cleanup completed!",
-  "cleanup_error": "Error occurred during cleanup: {error}"
+  "cleanup_error": "Error occurred during cleanup: {error}",
+  
+  "no_files_to_process": "No files to process",
+  "file_translation_completed": "File translation completed: {filename}",
+  "file_translation_failed": "File translation failed: {filename}",
+  "file_processing_failed": "File processing failed: {filename}, error: {error}",
+  "translation_result_mismatch": "Translation result count mismatch: {filename}, original: {original_count}, translated: {translated_count}",
+  "file_translation_error": "File translation error: {filename}, error: {error}"
 }

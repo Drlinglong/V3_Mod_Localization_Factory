@@ -40,7 +40,7 @@
   "cleanup_deleting": "正在删除非必要文件和文件夹...",
   "cleanup_deleted_folder": "  已删除文件夹: {item}",
   "cleanup_deleted_file": "  已删除文件: {item}",
-  "cleanup_delete_error": "删除 {path} 时出错: {error}",
+  "cleanup_delete_error": "删除失败: {path}, 错误: {error}",
   "cleanup_success": "源文件夹精简完成！",
 "select_game_profile_prompt": "\n请选择游戏:",
   "cleanup_error": "清理过程中发生错误: {error}",
@@ -204,5 +204,12 @@
   "cleanup_deleted_file": "已删除文件: {item}",
   "cleanup_delete_error": "删除失败: {path}, 错误: {error}",
   "cleanup_success": "清理完成！",
-  "cleanup_error": "清理过程中发生错误: {error}"
+  "cleanup_error": "清理过程中发生错误: {error}",
+  
+  "no_files_to_process": "没有文件需要处理",
+  "file_translation_completed": "文件翻译完成: {filename}",
+  "file_translation_failed": "文件翻译失败: {filename}",
+  "file_processing_failed": "文件处理失败: {filename}, 错误: {error}",
+  "translation_result_mismatch": "翻译结果数量不匹配: {filename}, 原文: {original_count}, 译文: {translated_count}",
+  "file_translation_error": "文件翻译出错: {filename}, 错误: {error}"
 }
