@@ -1,0 +1,135 @@
+﻿l_german:
+##########################
+#
+ Sweepers_ACTION:0 "Aufräumarbeiten"
+ pop_cat_sweeper_pop:0 "Herumtreiber"
+ pop_cat_sweeper_pop_plural:0 "Herumtreiber"
+ pop_cat_sweeper_pop_desc:0 "Ein Herumtreiber, der unablässig auf dem Planeten umherzieht."
+ FLEETORDER_DESTROY_PLANET_WITH_Sweepers:0 "Bereitet die Aufräumarbeiten auf $PLANET|Y$ vor."
+ MESSAGE_DESC_FOR_Sweepers:0 "Dem Erdboden gleichgemacht"
+ What_are_you_doing:0 "$TRIGGER_FAIL$ Dafür gibt es eine Strafversetzung nach 227 zum Kartoffelbuddeln!"
+ is_valid_target_for_sweeper:0 "$TRIGGER_FAIL$ ist eine Kolonie, die von uns oder der Konfliktpartei kontrolliert wird."
+
+
+
+
+
+
+
+
+
+
+###############################
+ switch_armor_type:0 "§WVerteidigungstyp ändern§!"
+
+
+ weapon_type_mystic:0 "§EMystisch§!"
+ weapon_type_penetration:0 "§YDurchschlagend§!"
+ weapon_type_explosion:0 "§RExplosiv§!"
+ weapon_type_destruction:0 "§MZerstörerisch§!"
+
+
+ weapon_role_anti_special_armor:0 "§EAnti-Spezialpanzerung§!"
+ weapon_role_anti_heavy_armor:0 "§YAnti-Schwerpanzerung§!"
+ weapon_role_anti_light_armor:0 "§RAnti-Leichtpanzerung§!"
+ weapon_role_anti_structure:0 "§MAnti-Konstrukt§!"
+
+ mod_weapon_type_mystic_weapon_damage_mult:0 "§EMystisch§!er Waffenschaden"
+ mod_weapon_type_mystic_weapon_fire_rate_mult:0 "§EMystisch§!e Waffenangriffsgeschwindigkeit"
+
+ mod_weapon_type_penetration_weapon_damage_mult:0 "§YDurchschlagend§!er Waffenschaden"
+ mod_weapon_type_penetration_weapon_fire_rate_mult:0 "§YDurchschlagend§!e Waffenangriffsgeschwindigkeit"
+
+ mod_weapon_type_explosion_weapon_damage_mult:0 "§RExplosiv§!er Waffenschaden"
+ mod_weapon_type_explosion_weapon_fire_rate_mult:0 "§RExplosiv§!e Waffenangriffsgeschwindigkeit"
+
+ mod_weapon_type_destruction_weapon_damage_mult:0 "§MZerstörerisch§!er Waffenschaden"
+ mod_weapon_type_destruction_weapon_fire_rate_mult:0 "§MZerstörerisch§!e Waffenangriffsgeschwindigkeit"
+
+ aura_special_armor:0 "§ESpezialpanzerung§!"
+ aura_heavy_armor:0 "§YSchwerpanzerung§!"
+ aura_light_armor:0 "§RLeichtpanzerung§!"
+ aura_structure:0 "§MKonstrukt§!"
+ aura_structure_station:0 "§MKonstrukt§!"
+ aura_armor_type:0 "§WStandardpanzerung§!"
+
+ BA_WEAPON_TEST:0 "Testwaffe"
+ BA_WEAPON_TEST_DESC:0 "Testwaffe"
+ BA_AURA_HEAVY_ARMOR:0 "§YSchiffsbasierter Schwerpanzerungsgenerator§!"
+ BA_AURA_HEAVY_ARMOR_DESC:0 "Ändert den Verteidigungstyp unserer Schiffe zu §YSchwerpanzerung§!\nReduziert den Schaden, der durch feindliche Waffen mit §EMystisch§!em Attribut (stark) und Energiewaffen (geringfügig) verursacht wird;\n\nIm Gegenzug\nErhöht den Schaden, der durch feindliche Waffen mit §YDurchschlagend§!em Attribut (stark) und kinetische Waffen (geringfügig) verursacht wird."
+ BA_AURA_LIGHT_ARMOR:0 "§RSchiffsbasierter Leichtpanzerungsgenerator§!"
+ BA_AURA_LIGHT_ARMOR_DESC:0  "Ändert den Verteidigungstyp unserer Schiffe zu §RLeichtpanzerung§!\nReduziert den Schaden, der durch feindliche Waffen mit §YDurchschlagend§!em Attribut (stark) und kinetischen Waffen (geringfügig) verursacht wird;\n\nIm Gegenzug\nErhöht den Schaden, der durch feindliche Waffen mit §RExplosiv§!em Attribut (stark) und Sprengwaffen (geringfügig) verursacht wird."
+ BA_AURA_SPECIAL_ARMOR:0 "§ESchiffsbasierter Spezialpanzerungsgenerator§!"
+ BA_AURA_SPECIAL_ARMOR_DESC:0 "Ändert den Verteidigungstyp unserer Schiffe zu §ESpezialpanzerung§!\nReduziert den Schaden, der durch feindliche Waffen mit §RExplosiv§!em Attribut (stark) und Sprengwaffen (geringfügig) verursacht wird;\n\nIm Gegenzug\nErhöht den Schaden, der durch feindliche Waffen mit §EMystisch§!em Attribut (stark) und Energiewaffen (geringfügig) verursacht wird."
+ BA_AURA_ARMOR_TYPE:0 "§WKein schiffsbasierter Panzerungsgenerator§!"
+ BA_AURA_ARMOR_TYPE_DESC:0 "Panzerungsgenerator nicht ausgerüstet, Verteidigungstyp ist §WStandard§!"
+ BA_AURA_STRUCTURE:0 "§MSchiffskonstrukt-Generator§!"
+ BA_AURA_STRUCTURE_DESC:0 "Ändert den Verteidigungstyp unserer Schiffe zu §MKonstrukt§!\nReduziert den von feindlichen Waffen verursachten Schaden, außer bei solchen mit §MZerstörungs-Attribut§!;\n\nIm Gegenzug\nErhöht den durch feindliche Waffen mit §MZerstörungs-Attribut§! erlittenen Schaden erheblich."
+ BA_STATION_AURA_STRUCTURE:0 "§MSternenbasis-Konstrukt-Generator§!"
+ BA_STATION_AURA_STRUCTURE_DESC:0 "Ändert den Verteidigungstyp unserer Sternenbasen zu §MKonstrukt§!\nReduziert den von feindlichen Waffen verursachten Schaden, außer bei solchen mit §MZerstörungs-Attribut§!;\n\nIm Gegenzug\nErhöht den durch feindliche Waffen mit §MZerstörungs-Attribut§! erlittenen Schaden erheblich."
+
+
+
+ BA_armor_station_large:0 "Autonome Verteidigungsplattform"
+
+ CORVETTE_MID_BA_DECAGRAMMATON_HOD_TEST:0 "§HRiesiger HOD§!"
+ CORVETTE_MID_BA_DECAGRAMMATON_HOD_COLORIZED_TEST:0 "§MRiesiger HOD (Farben)§!"
+ CORVETTE_MID_BA_Beatrice_Gematria:0 "§RBeatrice§!"
+ CORVETTE_MID_BA_Boxcat:0 "§EBox-Katze§!"
+ CORVETTE_MID_BA_ALICE:0 "§EAris§!"
+ CORVETTE_MID_BA_KEI:0 "§PKei§!"
+ CORVETTE_MID_BA_WhiteRabbit:0 "§YBunny-Girl Koyuki§!"
+ CORVETTE_MID_BA_EN_0001:0 "§MDirigent der Farben§!"
+ CORVETTE_MID_BA_EN_0002:0 "§MSunaookami Shiroko (Farben)§!"
+ CORVETTE_MID_BA_PV1:0 "§TPV-Projektor§!"
+ CORVETTE_MID_BA_Kether_turret_01:0 "§HKaiser I§!"
+ CORVETTE_MID_BA_Kether_turret_02:0 "§HKaiser II§!"
+ CORVETTE_MID_BA_Kether_turret_03:0 "§HKaiser III§!"
+ CORVETTE_MID_BA_Kether_Color_turret_01:0 "§MKaiser I (Farben)§!"
+ CORVETTE_MID_BA_Kether_Color_turret_02:0 "§MKaiser II (Farben)§!"
+ CORVETTE_MID_BA_Kether_Color_turret_03:0 "§MKaiser III (Farben)§!"
+ CORVETTE_MID_BA_HOD:0 "§HHOD§!"
+ CORVETTE_MID_BA_HOD_Color:0 "§MHOD (Farben)§!"
+ CORVETTE_MID_BA_CHESED:0 "§HKaiten§!"
+ CORVETTE_MID_BA_CHESED_Color:0 "§MKaiten (Farben)§!"
+ CORVETTE_MID_BA_Binah:0 "§HBinah§!"
+ CORVETTE_MID_BA_Binah_Color:0 "§MBinah (Farben)§!"
+ CORVETTE_MID_BA_Hieronymus:0 "§RHieronymus§!"
+ CORVETTE_MID_BA_Hieronymus_Color:0 "§MHieronymus (Farben)§!"
+ CORVETTE_MID_BA_Goz:0 "§EGoz§!"
+ CORVETTE_MID_BA_Kuro:0 "§TKuro§!"
+ CORVETTE_MID_BA_Kuro_Color:0 "§MKuro (Farben)§!"
+ CORVETTE_MID_BA_Shiro:0 "§WShiro§!"
+ CORVETTE_MID_BA_Shiro_Color:0 "§MShiro (Farben)§!"
+ CORVETTE_MID_BA_Perorozilla:0 "§WPerorozilla§!"
+ CORVETTE_MID_BA_Perorozilla_Color:0 "§MPerorozilla (Farben)§!"
+ CORVETTE_MID_BA_KaitenFX_MK0:0 "§RKaiten-Sushi-Mech Mk.0§!"
+ CORVETTE_MID_BA_59_G:0 "§GTyp 59 (Mod.)§!"
+ CORVETTE_MID_BA_59_Kaiserpmc:0 "§YKaiser-PMC-Werbetafelpanzer§!"
+ CORVETTE_MID_BA_Iroha_Tank:0 "§P Natsume Iroha & Toramaru§!"
+ CORVETTE_MID_BA_Asuma_Toki:0 "§B Asuma Toki & Abyssal§!"
+ CORVETTE_MID_BA_AtrahasisArk:0 "§M Arche des Atracashis§!"
+ CORVETTE_MID_BA_AtrahasisArk_invincible:0 "§M Arche des Atracashis (Multidimensionale Interpretationsphase)§!"
+ CORVETTE_MID_BA_Utnapishtim:0 "§E Arche des Utnapischtim§!"
+
+
+
+
+
+###############################
+ SWORD_OF_LIGHT_EX:0 "Lichtschwert des Atracashis"
+ SWORD_OF_LIGHT_EX_DESC:0 "Meine... meine Allerwichtigste... meine Allerwichtigste Aris"
+ BA_Perorozilla_craft_01:0 "Peroro-sama (Klein)"
+ BA_Perorozilla_craft_01_DESC:0 "Drei kleine Peroro-samas"
+ BA_Perorozilla_craft_02:0 "Peroro-sama (Mittel)"
+ BA_Perorozilla_craft_02_DESC:0 "Ein mittelgroßer Peroro-sama"
+ BA_Perorozilla_Color_craft_01:0 "Bunter Peroro-sama (Klein)"
+ BA_Perorozilla_Color_craft_01_DESC:0 "Drei kleine bunte Peroro-samas"
+ BA_Perorozilla_Color_craft_02:0 "Bunter Peroro-sama (Mittel)"
+ BA_Perorozilla_Color_craft_02_DESC:0 "Ein mittelgroßer bunter Peroro-sama"
+ BA_Drone_Missile:0 "Raketendrohne"
+ BA_Drone_Missile_DESC:0 "Mit Raketen bewaffnete Drohne"
+ BA_Drone_Vulcan:0 "Maschinenkanonen-Drohne"
+ BA_Drone_Vulcan_DESC:0 "Mit Maschinenkanonen bewaffnete Drohne"
+ BA_POWER_CHAIR:0 "Garküchenstuhl"
+ BA_POWER_CHAIR_DESC:0 "ICH BIN DER STURM, DER SICH NÄHERT!!!!!!!!!!!!!!!!!!"

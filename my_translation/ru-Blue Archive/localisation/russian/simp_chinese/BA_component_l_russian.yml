@@ -1,0 +1,135 @@
+﻿l_russian:
+##########################
+#
+ Sweepers_ACTION:0 "Зачистка"
+ pop_cat_sweeper_pop:0 "Странник"
+ pop_cat_sweeper_pop_plural:0 "Странник"
+ pop_cat_sweeper_pop_desc:0 "Странники, постоянно курсирующие по планете."
+ FLEETORDER_DESTROY_PLANET_WITH_Sweepers:0 "Готовимся к зачистке $PLANET|Y$"
+ MESSAGE_DESC_FOR_Sweepers:0 "Сравнено с землёй"
+ What_are_you_doing:0 "$TRIGGER_FAIL$ За такое тебя отправят в 227-ю копать картошку!"
+ is_valid_target_for_sweeper:0 "$TRIGGER_FAIL$ — это колония, контролируемая нами или одной из воюющих сторон."
+
+
+
+
+
+
+
+
+
+
+###############################
+ switch_armor_type:0 "§WСменить тип защиты§!"
+
+
+ weapon_type_mystic:0 "§EМистический§!"
+ weapon_type_penetration:0 "§YПробивающий§!"
+ weapon_type_explosion:0 "§RВзрывной§!"
+ weapon_type_destruction:0 "§MОсадный§!"
+
+
+ weapon_role_anti_special_armor:0 "§EПротив особой брони§!"
+ weapon_role_anti_heavy_armor:0 "§YПротив тяжёлой брони§!"
+ weapon_role_anti_light_armor:0 "§RПротив лёгкой брони§!"
+ weapon_role_anti_structure:0 "§MПротив сооружений§!"
+
+ mod_weapon_type_mystic_weapon_damage_mult:0 "Урон от §Eмистического§! оружия"
+ mod_weapon_type_mystic_weapon_fire_rate_mult:0 "§EСкорострельность§! §Eмистического§! оружия"
+
+ mod_weapon_type_penetration_weapon_damage_mult:0 "Урон от §Yпробивающего§! оружия"
+ mod_weapon_type_penetration_weapon_fire_rate_mult:0 "§YСкорострельность§! §Yпробивающего§! оружия"
+
+ mod_weapon_type_explosion_weapon_damage_mult:0 "Урон от §Rвзрывного§! оружия"
+ mod_weapon_type_explosion_weapon_fire_rate_mult:0 "§RСкорострельность§! §Rвзрывного§! оружия"
+
+ mod_weapon_type_destruction_weapon_damage_mult:0 "Урон от §Mосадного§! оружия"
+ mod_weapon_type_destruction_weapon_fire_rate_mult:0 "§MСкорострельность§! §Mосадного§! оружия"
+
+ aura_special_armor:0 "§EОсобая броня§!"
+ aura_heavy_armor:0 "§YТяжёлая броня§!"
+ aura_light_armor:0 "§RЛёгкая броня§!"
+ aura_structure:0 "§MСооружение§!"
+ aura_structure_station:0 "§MСооружение§!"
+ aura_armor_type:0 "§WСтандартная броня§!"
+
+ BA_WEAPON_TEST:0 "Испытательное оружие"
+ BA_WEAPON_TEST_DESC:0 "Испытательное оружие"
+ BA_AURA_HEAVY_ARMOR:0 "§YКорабельный генератор тяжёлой брони§!"
+ BA_AURA_HEAVY_ARMOR_DESC:0 "Изменяет тип защиты наших кораблей на §Yтяжёлую броню§!\nСнижает урон от §Eмистического§! (значительно) и энергетического (незначительно) оружия противника;\n\nВзамен\nУвеличивает получаемый урон от §Yпробивающего§! (значительно) и кинетического (незначительно) оружия противника."
+ BA_AURA_LIGHT_ARMOR:0 "§RКорабельный генератор лёгкой брони§!"
+ BA_AURA_LIGHT_ARMOR_DESC:0  "Изменяет тип защиты наших кораблей на §Rлёгкую броню§!\nСнижает урон от §Yпробивающего§! (значительно) и кинетического (незначительно) оружия противника;\n\nВзамен\nУвеличивает получаемый урон от §Rвзрывного§! (значительно) и фугасного (незначительно) оружия противника."
+ BA_AURA_SPECIAL_ARMOR:0 "§EКорабельный генератор особой брони§!"
+ BA_AURA_SPECIAL_ARMOR_DESC:0 "Изменяет тип защиты наших кораблей на §Eособую броню§!\nСнижает урон от §Rвзрывного§! (значительно) и фугасного (незначительно) оружия противника;\n\nВзамен\nУвеличивает получаемый урон от §Eмистического§! (значительно) и энергетического (незначительно) оружия противника."
+ BA_AURA_ARMOR_TYPE:0 "§WБез корабельного генератора брони§!"
+ BA_AURA_ARMOR_TYPE_DESC:0 "Не оснащено генератором брони, тип защиты: §WСтандартный§!"
+ BA_AURA_STRUCTURE:0 "§MКорабельный генератор конструкции§!"
+ BA_AURA_STRUCTURE_DESC:0 "Изменяет тип защиты наших кораблей на §MКонструкция§!\nСнижает урон от вражеского оружия, кроме того, что имеет свойство §MРазрушение§!;\n\nВ качестве платы\nЗначительно увеличивает получаемый урон от вражеского оружия со свойством §MРазрушение§!"
+ BA_STATION_AURA_STRUCTURE:0 "§MГенератор конструкции звёздной базы§!"
+ BA_STATION_AURA_STRUCTURE_DESC:0 "Изменяет тип защиты наших звёздных баз на §MКонструкция§!\nСнижает урон от вражеского оружия, кроме того, что имеет свойство §MРазрушение§!;\n\nВ качестве платы\nЗначительно увеличивает получаемый урон от вражеского оружия со свойством §MРазрушение§!"
+
+
+
+ BA_armor_station_large:0 "Автономная оборонительная платформа"
+
+ CORVETTE_MID_BA_DECAGRAMMATON_HOD_TEST:0 "§HГигантский Ход§!"
+ CORVETTE_MID_BA_DECAGRAMMATON_HOD_COLORIZED_TEST:0 "§MГигантский Ход (Цветной)§!"
+ CORVETTE_MID_BA_Beatrice_Gematria:0 "§RБеатриче§!"
+ CORVETTE_MID_BA_Boxcat:0 "§EКошка из коробки§!"
+ CORVETTE_MID_BA_ALICE:0 "§EАлиса§!"
+ CORVETTE_MID_BA_KEI:0 "§PКей§!"
+ CORVETTE_MID_BA_WhiteRabbit:0 "§YКроличья Девушка Коюки§!"
+ CORVETTE_MID_BA_EN_0001:0 "§MПроводник Цвета§!"
+ CORVETTE_MID_BA_EN_0002:0 "§MШироко (Цветной)§!"
+ CORVETTE_MID_BA_PV1:0 "§TPV-проектор§!"
+ CORVETTE_MID_BA_Kether_turret_01:0 "§HКайзер I§!"
+ CORVETTE_MID_BA_Kether_turret_02:0 "§HКайзер II§!"
+ CORVETTE_MID_BA_Kether_turret_03:0 "§HКайзер III§!"
+ CORVETTE_MID_BA_Kether_Color_turret_01:0 "§MКайзер I (Цветной)§!"
+ CORVETTE_MID_BA_Kether_Color_turret_02:0 "§MКайзер II (Цветной)§!"
+ CORVETTE_MID_BA_Kether_Color_turret_03:0 "§MКайзер III (Цветной)§!"
+ CORVETTE_MID_BA_HOD:0 "§HХод§!"
+ CORVETTE_MID_BA_HOD_Color:0 "§MХод (Цветной)§!"
+ CORVETTE_MID_BA_CHESED:0 "§HКайсед§!"
+ CORVETTE_MID_BA_CHESED_Color:0 "§MКайсед (Цветной)§!"
+ CORVETTE_MID_BA_Binah:0 "§HБина§!"
+ CORVETTE_MID_BA_Binah_Color:0 "§MБина (Цветной)§!"
+ CORVETTE_MID_BA_Hieronymus:0 "§RИероним§!"
+ CORVETTE_MID_BA_Hieronymus_Color:0 "§MИероним (Цветной)§!"
+ CORVETTE_MID_BA_Goz:0 "§EГоз§!"
+ CORVETTE_MID_BA_Kuro:0 "§TЧёрный§!"
+ CORVETTE_MID_BA_Kuro_Color:0 "§MЧёрный (Цветной)§!"
+ CORVETTE_MID_BA_Shiro:0 "§WБелый§!"
+ CORVETTE_MID_BA_Shiro_Color:0 "§MБелый (Цветной)§!"
+ CORVETTE_MID_BA_Perorozilla:0 "§WПеророзилла§!"
+ CORVETTE_MID_BA_Perorozilla_Color:0 "§MПеророзилла (Цветной)§!"
+ CORVETTE_MID_BA_KaitenFX_MK0:0 "§RМеха-Суши МК0§!"
+ CORVETTE_MID_BA_59_G:0 "§GТип 59 (Мод.)§!"
+ CORVETTE_MID_BA_59_Kaiserpmc:0 "§YТанк-билборд Кайзер ЧВК§!"
+ CORVETTE_MID_BA_Iroha_Tank:0 "§PИроха Нацумэ & Торамару§!"
+ CORVETTE_MID_BA_Asuma_Toki:0 "§BТоки Асума & Абишу§!"
+ CORVETTE_MID_BA_AtrahasisArk:0 "§MКовчег Атрахасиса§!"
+ CORVETTE_MID_BA_AtrahasisArk_invincible:0 "§MКовчег Атрахасиса (Состояние Многомерной Интерпретации Пространства-Времени)§!"
+ CORVETTE_MID_BA_Utnapishtim:0 "§EВеликий Корабль Утнапиштима§!"
+
+
+
+
+
+###############################
+ SWORD_OF_LIGHT_EX:0 "Меч Света Атрахасиса"
+ SWORD_OF_LIGHT_EX_DESC:0 "Моя... моя самая важная... моя самая важная Арис..."
+ BA_Perorozilla_craft_01:0 "Перорошира (Малый)"
+ BA_Perorozilla_craft_01_DESC:0 "Три малых Перороширы"
+ BA_Perorozilla_craft_02:0 "Перорошира (Средний)"
+ BA_Perorozilla_craft_02_DESC:0 "Перорошира среднего размера"
+ BA_Perorozilla_Color_craft_01:0 "Цветная Перорошира (Малая)"
+ BA_Perorozilla_Color_craft_01_DESC:0 "Три малых цветных Перороширы"
+ BA_Perorozilla_Color_craft_02:0 "Цветная Перорошира (Средняя)"
+ BA_Perorozilla_Color_craft_02_DESC:0 "Цветная Перорошира среднего размера"
+ BA_Drone_Missile:0 "Ракетный дрон"
+ BA_Drone_Missile_DESC:0 "Дрон, оснащенный ракетами"
+ BA_Drone_Vulcan:0 "Автопушечный дрон"
+ BA_Drone_Vulcan_DESC:0 "Дрон, оснащенный автопушкой"
+ BA_POWER_CHAIR:0 "Стул из уличного кафе"
+ BA_POWER_CHAIR_DESC:0 "Я БУРЯ, КОТОРАЯ ПРИБЛИЖАЕТСЯ！！！！！！！！！！！！！！"

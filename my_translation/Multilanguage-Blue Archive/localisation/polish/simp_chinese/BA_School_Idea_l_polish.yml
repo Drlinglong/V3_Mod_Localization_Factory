@@ -1,0 +1,555 @@
+﻿l_polish:
+ BA_SI:"Doktryna Szkolna"
+
+ MESSAGE_BA_SI_READY:"Doktryna Szkolna gotowa"
+ MESSAGE_BA_SI_READY_DESC:"Zgromadziliśmy już ponad 5 punktów £job_BA_dont_be_crazy_here£§B$BA_SI$§! Proszę udać się do Skrzyni Schale, aby aktywować $BA_SI$."
+
+ MESSAGE_BA_SI_ACTIVATED:"Efekt Doktryny Szkolnej aktywowany"
+ MESSAGE_BA_SI_ACTIVATED_Trinity_A03_DESC:"§Y$SI_Trinity_A03$§! zostało aktywowane, zapewniając wszystkim liderom §C1000 punktów doświadczenia§!."
+ MESSAGE_BA_SI_ACTIVATED_Millennium_C03_DESC:"§Y$SI_Millennium_C03$§! zostało aktywowane, usuwając wszystkie §Rnegatywne cechy§! liderów."
+
+ BA_Shittem.4010.title: "$BA_SI$"
+ BA_Shittem.4010.desc:"Nauczycielu, zgromadziliśmy już wiele punktów £job_BA_dont_be_crazy_here£§B$BA_SI$§!! Różne akademie mają różne poglądy na zarządzanie i jedność. Możesz kliknąć §B$BA_SI$§!, aby przyjąć ich pomysły jako doktryny narodowe i zyskać ogromne korzyści! Nauczycielu, mądrość uczennic również ma wiele zalet, nie powinniśmy marnować ich zapału, prawda?"
+
+ #####    阿拜多斯    #####
+ SI_Abydos_tip:"Doktryna Szkolna (Główna): §LAkademia Abydos§!\nCudowne odrodzenie Abydosu w erze kosmicznej jest powszechnie widoczne, a jego innowacje i doświadczenia są warte rozpowszechnienia w całym Kivotosie.\n"
+ ### 共通
+ SI_Abydos_G01:"Codzienność Komitetu ds. Środków Zaradczych"
+ SI_Abydos_G01_desc:"Historia zaczyna się tutaj na nowo."
+ SI_Abydos_G01_effect:"\nEfekt:\nZyskujesz §Y$engineering_research_with_icon$§! oraz §Y$unity_with_icon$§!, w wysokości trzykrotności miesięcznej produkcji\n"
+ SI_Abydos_G01_tip:"§C$SI_Abydos_G01$§!\n$SI_Abydos_G01_desc$\n$SI_Abydos_G01_effect$"
+
+ SI_Abydos_G02:"Mała fuchta"
+ SI_Abydos_G02_desc:"Poza badaniem, jak poprawić nasze warunki życia, ta kusząca fuchta nadal nie daje spokoju Komitetowi ds. Środków Zaradczych."
+ SI_Abydos_G02_effect:"\nEfekt:\n§HOdbl. budynek filii: §!$building_BA_SI_Abydos_G02$\n"
+ SI_Abydos_G02_tip:"§C$SI_Abydos_G02$§!\n$SI_Abydos_G02_desc$\n$SI_Abydos_G02_effect$"
+
+ SI_Abydos_G03:"Epilog: Koniec Komitetu ds. Środków Zaradczych"
+ SI_Abydos_G03_desc:"Obowiązki Komitetu ds. Środków Zaradczych dobiegły końca. Nazwa §BKomitetu ds. Środków Zaradczych w sprawie Likwidacji Szkoły Abydos§! nie jest już używana, lecz wisi w głównej auli muzeum historii szkoły, inspirując i ostrzegając uczennice Kivotosu."
+ SI_Abydos_G03_effect:"\nEfekt:\n$mod_BA_SI_sub_cap_add$: §G+1§!\n$MOD_COUNTRY_MEGASTRUCTURE_BUILD_CAP_ADD$: §G+1§!\n§HOdbl. decyzję planetarną: §!$decision_BA_SI_Abydos_G03$ (Dostępne tylko na §YPlanetach Miast Akademickich§!)\n"
+ SI_Abydos_G03_tip:"§C$SI_Abydos_G03$§!\n$SI_Abydos_G03_desc$\n$SI_Abydos_G03_effect$"
+
+ ### 左线
+ SI_Abydos_A01:"Strategia Terraformacji Planet"
+ SI_Abydos_A01_desc:"Aby przekształcić środowisko planety, należy najpierw zaplanować i zbudować odpowiednią infrastrukturę, a zaopatrzenie w energię jest kluczowe."
+ SI_Abydos_A01_effect:"\n§RWyklucza się z§!$SI_Abydos_B01$§R§!\nEfekt:\nZyskuje §G75%§! postępu w technologii £society_research£§H$tech_terrestrial_sculpting$§!\nPrędkość Terraformacji: §G+25%§!\nZa każde 100 £job_BA_Kivotos_staff£§Y$job_BA_Kivotos_staff$§! lub £job_BA_supplier£§Y$job_BA_supplier$§! dostarcza dla tej kolonii:\n    $MOD_PLANET_BUILDING_BUILD_SPEED_MULT$§G+5%§!\n"
+ SI_Abydos_A01_tip:"§C$SI_Abydos_A01$§!\n$SI_Abydos_A01_desc$\n$SI_Abydos_A01_effect$"
+
+ SI_Abydos_A02:"Integracja Logistyczna"
+ SI_Abydos_A02_desc:"Terraformacja planet to ogromny projekt, a wydajność obiegu materiałów bezpośrednio decyduje o postępie prac."
+ SI_Abydos_A02_effect:"\nEfekt:\n$mod_planet_districts_cost_mult$: §G-15%§!\n$mod_planet_districts_upkeep_mult$: §G-15%§!\nKoszt Terraformacji: §G-35%§!\nPrędkość Terraformacji: §G+25%§!\n"
+ SI_Abydos_A02_tip:"§C$SI_Abydos_A02$§!\n$SI_Abydos_A02_desc$\n$SI_Abydos_A02_effect$"
+
+ SI_Abydos_A03:"Wzmocnienie Przemysłu"
+ SI_Abydos_A03_desc:"Aby szybciej osiągnąć nasze cele, niezbędne jest przyspieszenie produkcji, nawet jeśli wiąże się to z pewnymi kosztami."
+ SI_Abydos_A03_effect:"\nEfekt:\n§HOdbl. edykt Doktryny Szkolnej: §!$edict_BA_SI_Abydos_A03$:\n    §YPodstawowy koszt aktywacji: £unity£300§!\n    §YPodstawowy koszt utrzymania: £unity£30§!\n    $MOD_PLANET_BUILDING_BUILD_SPEED_MULT$: §G+25%§!\n    $mod_planet_jobs_produces_mult$: §G+25%§!\n    $mod_BA_staff_pop_produces_mult$: §G+25%§!\n    $mod_planet_jobs_upkeep_mult$: §R+25%§!\n"
+ SI_Abydos_A03_tip:"§C$SI_Abydos_A03$§!\n$SI_Abydos_A03_desc$\n$SI_Abydos_A03_effect$"
+
+ SI_Abydos_A04:"Projekt Planety"
+ SI_Abydos_A04_desc:"Kivotos zawsze było najbardziej odpowiednim miejscem do zamieszkania, a Planety Miast Akademickich są naszym idealnym domem."
+ SI_Abydos_A04_effect:"\nEfekt:\n$mod_planet_metallurgists_alloys_produces_add$: §G+1§!\n$MOD_PLANET_DECISION_ENACT_SPEED_MULT$: §G+15%§!\n$mod_planet_buildings_cost_mult$: §G-20%§!\n"
+ SI_Abydos_A04_tip:"§C$SI_Abydos_A04$§!\n$SI_Abydos_A04_desc$\n$SI_Abydos_A04_effect$"
+
+ SI_Abydos_A05:"Opanowanie Pustki"
+ SI_Abydos_A05_desc:"Nieustraszone inżynierki podbijają rozległe przestrzenie na orbicie okołoziemskiej, a automatyczne stacje mieszkalne są ich narzędziem."
+ SI_Abydos_A05_effect:"\nEfekt:\n$MOD_MEGASTRUCTURE_BUILD_SPEED_MULT$: §G+75%§!\n$mod_BA_auto_districts_produces_mult$: §G+20%§!\n$mod_megastructures_cost_mult$: §G-20%§!\n$mod_station_gatherers_produces_mult$: §G+30%§!\n" #\n居住站和自动化居住站宜居性: §G+30%§!
+ SI_Abydos_A05_tip:"§C$SI_Abydos_A05$§!\n$SI_Abydos_A05_desc$\n$SI_Abydos_A05_effect$"
+
+ SI_Abydos_A06:"Z Nowego Świata"
+ SI_Abydos_A06_desc:"Absolutnie nie zatrzymamy się tutaj! Wszechświat skrywa przed nami jeszcze tyle wspaniałych miejsc!"
+ SI_Abydos_A06_effect:"\nEfekt:\n§HOdblokowuje decyzję planetarną: §!$decision_BA_SI_Abydos_A06$ (dostępne tylko dla §YPlanet-Miast Akademii§! oraz §YZaaawansowanych Habitatów§!)\n"
+ SI_Abydos_A06_tip:"§C$SI_Abydos_A06$§!\n$SI_Abydos_A06_desc$\n$SI_Abydos_A06_effect$"
+
+ ### 右线
+ SI_Abydos_B01:"Droga Pustynnej Akademii"
+ SI_Abydos_B01_desc:"Pustynia to w gruncie rzeczy też rodzaj zasobu. Maksymalne wykorzystanie pustynnienia może stać się jedną z głównych cech Abydos."
+ SI_Abydos_B01_effect:"\n§RWyklucza się z§!$SI_Abydos_A01$§R!§!\nEfekt:\nKolonie typu §YŚwiat Pustynny§H zyskują modyfikator planetarny: §!$modifier_BA_SI_Abydos_B01$:\n    Minimum zasiedlenia gatunków: §G+50%§!\n    Szybkość budowy na planecie: §G+0.25§!\n"
+ SI_Abydos_B01_tip:"§C$SI_Abydos_B01$§!\n$SI_Abydos_B01_desc$\n$SI_Abydos_B01_effect$"
+
+ SI_Abydos_B02:"Granice Niebios"
+ SI_Abydos_B02_desc:"Pustynne środowisko ma swoje ekstremalne plusy i minusy, dlatego musimy dokładnie planować, aby wykorzystać mocne strony i zniwelować braki."
+ SI_Abydos_B02_effect:"\nEfekt:\n§HOdblokowuje decyzję planetarną: §!$decision_BA_SI_Abydos_B02$ (dostępne tylko dla kolonii typu §YŚwiat Pustynny§!)\n"
+ SI_Abydos_B02_tip:"§C$SI_Abydos_B02$§!\n$SI_Abydos_B02_desc$\n$SI_Abydos_B02_effect$"
+
+ SI_Abydos_B03:"Pośród Gwałtownych Wichrów"
+ SI_Abydos_B03_desc:"Pokonujemy surowe warunki, badamy każdy centymetr terenu i rozwijamy planetę pod naszymi stopami."
+ SI_Abydos_B03_effect:"\nEfekt:\n§HOdblokowuje decyzję planetarną: §!$decision_BA_SI_Abydos_B03$ (dostępne tylko dla kolonii typu §YŚwiat Pustynny§!)\n"
+ SI_Abydos_B03_tip:"§C$SI_Abydos_B03$§!\n$SI_Abydos_B03_desc$\n$SI_Abydos_B03_effect$"
+
+ SI_Abydos_B04:"Projekt 'Obfita Oaza'"
+ SI_Abydos_B04_desc:"Skupiając się na źródłach wody, wyznaczymy najbardziej żyzne i piękne tereny na obszary mieszkalne, aby zapewnić uczniom idealne warunki życia."
+ SI_Abydos_B04_effect:"\nEfekt:\nZasiedlenie planet pustynnych: §G+30%§!\n§HModyfikator planetarny: §!$modifier_BA_SI_Abydos_B01$ --> §HModyfikator planetarny§!: $modifier_BA_SI_Abydos_B04$:\n    $MOD_HABITABILITY_FLOOR_ADD$: §G+50%§!\n    $MOD_PLANET_BUILDING_BUILD_SPEED_MULT$: §G+0.25§!\n    £stability£$MOD_PLANET_STABILITY_ADD$: §G+10§!\n    £happiness£$MOD_POP_HAPPINESS$: §G+10%§!\n"
+ SI_Abydos_B04_tip:"§C$SI_Abydos_B04$§!\n$SI_Abydos_B04_desc$\n$SI_Abydos_B04_effect$"
+
+ SI_Abydos_B05:"Strażnicy Miasta"
+ SI_Abydos_B05_desc:"Rozwijamy nasze miasta, eksploatujemy zasoby planety, a nasze Miasto Akademii kwitnie i rozkwita!"
+ SI_Abydos_B05_effect:"\nEfekt:\n§HOdblokowuje decyzję planetarną: §!$decision_BA_SI_Abydos_B05$ (dostępne tylko dla kolonii typu §YŚwiat Pustynny§!)\n"
+ SI_Abydos_B05_tip:"§C$SI_Abydos_B05$§!\n$SI_Abydos_B05_desc$\n$SI_Abydos_B05_effect$"
+
+ SI_Abydos_B06:"Gwiazdy i Piasek"
+ SI_Abydos_B06_desc:"Miasto Akademii dumnie wznosi się na morzu piasku, niczym sama planeta, dryfująca pośród lśniących gwiazd."
+ SI_Abydos_B06_effect:"\nEfekt:\n§HOdblokowuje decyzję planetarną: §!$decision_BA_SI_Abydos_B06$ (dostępne tylko dla kolonii typu §YŚwiat Pustynny§!)\n"
+ SI_Abydos_B06_tip:"§C$SI_Abydos_B06$§!\n$SI_Abydos_B06_desc$\n$SI_Abydos_B06_effect$"
+
+
+ #####     格黑那     #####
+ SI_Gehenna_tip:"Filozofia Akademii (główna): §_Akademia Gehenny§!\nJako słynna małpia góra (?) w Kivotos, Gehenna ma wiele unikalnych pomysłów na harmonizowanie porządku i chaosu. Czas rozpowszechnić je w całym Kivotos.\n"
+ ### 共通
+ SI_Gehenna_G01:"Wygodne Miejsca Zamieszkania"
+ SI_Gehenna_G01_desc:"Stary kampus jest już totalnym bałaganem po wyczynach naszych uczniów, więc w nowej erze musimy najpierw rozwiązać problem ich zakwaterowania. Ale dlaczego właściwie nowe akademiki nie miałyby być superwygodne?"
+ SI_Gehenna_G01_effect:"\nEfekt:\nUtrzymanie £consumer_goods£dóbr konsumpcyjnych dla stanowisk: §G-15%§!\nZużycie mieszkań przez populację: §R+15%§!\n"
+ SI_Gehenna_G01_tip:"§C$SI_Gehenna_G01$§!\n$SI_Gehenna_G01_desc$\n$SI_Gehenna_G01_effect$"
+
+ SI_Gehenna_G02:"Iskra Nowego Świata"
+ SI_Gehenna_G02_desc:"Uczniowie z Gehenny zawsze przewyższali wszystkie inne Akademie pod względem aktywności, a ich pragnienie nowego świata jest równie silne!"
+ SI_Gehenna_G02_effect:"\nEfekt:\n$MOD_POP_RESETTLEMENT_COST_MULT$: §G-25%§!\n$MOD_POP_BONUS_WORKFORCE_MULT$: §G+10%§!\n§YNowo założone§! kolonie §Hzyskują modyfikator planetarny: §!$modifier_BA_SI_Gehenna_G02$(1800£time£):\n    Szczęście: §G+40%§!\n    $MOD_PLANET_BUILDING_BUILD_SPEED_MULT$: §G+25%§!\n"
+ SI_Gehenna_G02_tip:"§C$SI_Gehenna_G02$§!\n$SI_Gehenna_G02_desc$\n$SI_Gehenna_G02_effect$"
+
+ SI_Gehenna_G03:"Epilog: Miasto Akademii Wykute w Ogniu"
+ SI_Gehenna_G03_desc:"Bez względu na to, co przeszliśmy, dzisiejszy Kivotos lśni nowym blaskiem. Choćby gwiezdne niebo było nie wiadomo jak rozległe i zimne, to Miasto Akademii zawsze rozświetli ogień w naszych sercach."
+ SI_Gehenna_G03_effect:"\nEfekt:\n$mod_BA_SI_sub_cap_add$: §G+1§!\nZasoby produkowane przez zautomatyzowane budynki: §G+35%§!\n$mod_planet_metallurgists_produces_mult$: §G+35%§!\n£job_foundry£$mod_planet_metallurgists_upkeep_mult$: §R+35%§!\n£job_BA_pyroxenes_maker£Produkcja Piroksenów: §G+35%§!\n£job_BA_pyroxenes_maker£Utrzymanie Producentów Piroksenów: §R+35%§!\n"
+ SI_Gehenna_G03_tip:"§C$SI_Gehenna_G03$§!\n$SI_Gehenna_G03_desc$\n$SI_Gehenna_G03_effect$"
+
+ ### 上左线
+ SI_Gehenna_A01:"Strategia Pandemonium: Na Czele Podstępów"
+ SI_Gehenna_A01_desc:"Obecnie Gehenna przewodzi Federacyjnej Radzie Uczniowskiej, więc Pandemonium musi oczywiście coś pokombinować, żeby zaprezentować swoje pomysły. Oczywiście, żaden z nich nie jest zbyt poważny."
+ SI_Gehenna_A01_effect:"\n§RWyklucza się z§!$SI_Gehenna_B01$§R!§\nEfekt:\n§HOtrzymujesz modyfikator Imperium: §!$modifier_BA_SI_Gehenna_A01$(3600£time£): \n    $MOD_BONUS_POP_GROWTH_MULT$: §G+25%§!\n    $mod_planet_pops_organics_food_upkeep_mult$: §R+25%§!\n"
+ SI_Gehenna_A01_tip:"§C$SI_Gehenna_A01$§!\n$SI_Gehenna_A01_desc$\n$SI_Gehenna_A01_effect$"
+
+ SI_Gehenna_A02:"Strategia Pandemonium: Pierwszy Ruch"
+ SI_Gehenna_A02_desc:"Szefostwo Pandemonium uważa, że niezależnie od tego, czy to geopolityczna gra, czy polityczna walka, przejęcie inicjatywy jest zawsze kluczowym elementem do pewnego zwycięstwa. Jednakże, jeśli chodzi o konkretne działania, od planu po wykonanie wszystko załatwiają sekretarki."
+ SI_Gehenna_A02_effect:"\n§RWyklucza się z§!$SI_Gehenna_B02$§R!§\nEfekt:\nZgodnie z obecnym planem, natychmiast otrzymujesz §G40 fregat§!\n§HOtrzymujesz modyfikator Imperium: §!$modifier_BA_SI_Gehenna_A02$(3600£time£)：\n    $MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+100%§!\n    $mod_ships_upkeep_mult$: §G-35%§!\n"
+ SI_Gehenna_A02_tip:"§C$SI_Gehenna_A02$§!\n$SI_Gehenna_A02_desc$\n$SI_Gehenna_A02_effect$"
+
+ SI_Gehenna_A03:"Strategia Pandemonium: Dominująca Postawa"
+ SI_Gehenna_A03_desc:"Wewnątrz Gehenny zawsze było niespokojnie. Wyborem Pandemonium jest rządzenie żelazną pięścią i wykorzystywanie wojny jako wentylu bezpieczeństwa. Chociaż jest to plan forsowany przez Pandemonium, faktyczne planowanie i wykonanie pozostawiono Radzie Dyscyplinarnej."
+ SI_Gehenna_A03_effect:"\n§RWyklucza się z§!$SI_Gehenna_B03$§R!§\nEfekt:\nKolonie §Yniedawno przejęte§! §HOtrzymują modyfikator planetarny: §!$modifier_BA_SI_Gehenna_A03$(1800£time£)：\n    Stabilność: §G+50%§!\n    $MOD_PLANET_BUILDING_BUILD_SPEED_MULT$: §G+25%§!\n    $mod_planet_jobs_upkeep_mult$: §G-10%§!\nJeśli planeta została przejęta od §Ycywilizacji przedhipernapędowej§!, wówczas §BStolica§! również otrzymuje ten modyfikator.\nJeśli planeta została przejęta od §YZaginionego lub Odrodzonego Imperium§!, wówczas §Bwszystkie kolonie§! otrzymują ten modyfikator." #\n§H解锁战争借口: §!霸权征服
+ SI_Gehenna_A03_tip:"§C$SI_Gehenna_A03$§!\n$SI_Gehenna_A03_desc$\n$SI_Gehenna_A03_effect$"
+
+ ### 上右线
+ SI_Gehenna_B01:"Strategia Rady Dyscyplinarnej: Pod Sztandarem"
+ SI_Gehenna_B01_desc:"Obecnie Gehenna przewodzi Federacyjnej Radzie Uczniowskiej. Zgodnie z planem Administratora, wykorzystując autorytet Przewodniczącej Rady Dyscyplinarnej, świetność epoki międzygwiezdnej jest na wyciągnięcie ręki."
+ SI_Gehenna_B01_effect:"\n§RWyklucza się z§!$SI_Gehenna_A01$§R!§\nEfekt:\n§HOtrzymujesz modyfikator Imperium: §!$modifier_BA_SI_Gehenna_B01$(1800£time£):\n    Stabilność: §G+15§!\n    Przestępczość: §G-25§!\n    Szczęście: §R-15%§!\n"
+ SI_Gehenna_B01_tip:"§C$SI_Gehenna_B01$§!\n$SI_Gehenna_B01_desc$\n$SI_Gehenna_B01_effect$"
+
+ SI_Gehenna_B02:"Strategia Rady Dyscyplinarnej: Totalne Zgarnięcie"
+ SI_Gehenna_B02_desc:"Chociaż Federacyjna Rada Uczniowska zajęła część personelu, Rada Dyscyplinarna musi zapewnić wypełnianie swoich podstawowych obowiązków. Administrator rozmieszcza elitarne jednostki Rady Dyscyplinarnej w najbardziej problematycznych punktach, aby zapewnić płynność różnych procesów."
+ SI_Gehenna_B02_effect:"\n§RWyklucza się z§!$SI_Gehenna_A02$§R!§\nEfekt:\nMiesięczny $trade_with_icon$: §G+50§!\n $mod_planet_jobs_unity_produces_mult$: §G+20%§!\n"
+ SI_Gehenna_B02_tip:"§C$SI_Gehenna_B02$§!\n$SI_Gehenna_B02_desc$\n$SI_Gehenna_B02_effect$"
+
+ SI_Gehenna_B03:"Strategia Rady Dyscyplinarnej: Wicher i Burza"
+ SI_Gehenna_B03_desc:"Zapewnienie stabilności jest podstawą rozwoju. W razie potrzeby, Rada Dyscyplinarna zdecydowanie oddelegowuje personel z Federacyjnej Rady Uczniowskiej, aby poradzić sobie z trudnymi problemami. W związku z tym Administratorzy wymyślili sposoby, aby jak najszybciej mobilizować siły."
+ SI_Gehenna_B03_effect:"\n§RWyklucza się z§!$SI_Gehenna_A03$§R!§\nEfekt:\nKoszty utrzymania Milicji Studenckiej: §G-40%§!\nWydajność Milicji Studenckiej: §G+40%§!\nKolonie z §Y£stability£Stabilnością ≥90%§! §HOtrzymują modyfikator planetarny: §!$modifier_BA_SI_Gehenna_B03$(90£time£):\n    Zasoby produkowane przez etaty: §G+15%§!\n"
+ SI_Gehenna_B03_tip:"§C$SI_Gehenna_B03$§!\n$SI_Gehenna_B03_desc$\n$SI_Gehenna_B03_effect$"
+
+ ### 下左线
+ SI_Gehenna_C01:"Ostateczny Werdykt: Pandemonium"
+ SI_Gehenna_C01_desc:"Przywództwo Pandemonium stopniowo przewyższało głos Rady Dyscyplinarnej, przejmując prawo do rozstrzygania wewnętrznych spraw Gehenny. Jednak przy wyborze ostatecznego arbitra, Pandemonium podjęło zaskakującą decyzję."
+ SI_Gehenna_C01_effect:"\nEfekt:\n§HOtrzymujesz modyfikator Imperium: §!$modifier_BA_SI_Gehenna_C01$(10800£time£):\n    $MOD_SHIP_WEAPON_DAMAGE$: §G+35%§!\n    $MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+35%§!\n    $MOD_ARMY_ATTACK_DAMAGE_MULT$: §G+35%§!\n    £stability£$MOD_PLANET_STABILITY_ADD$: §R-10§!\n    $MOD_EMPIRE_SIZE_POPS_MULT$: §R+25%§!\n" #§H统治者更换为§!：丹花伊吹\n
+ SI_Gehenna_C01_tip:"§C$SI_Gehenna_C01$§!\n$SI_Gehenna_C01_desc$\n$SI_Gehenna_C01_effect$"
+
+ SI_Gehenna_C02:"Reguły Zza Kurtyny"
+ SI_Gehenna_C02_desc:"Dla Kivotos, naznaczonego wojną, nic nie potrafi manipulować konfliktami bardziej niż historia. Poprzez selektywne podkreślanie lub ignorowanie pewnych detali, Pandemonium może z łatwością zawłaszczyć sobie faktyczne prawo interpretacji głównego nurtu kultury."
+ SI_Gehenna_C02_effect:"\nEfekt:\n§HRozpoczynasz specjalny projekt: §Y$SP_BA_SI_Gehenna_C02$§!"
+ SI_Gehenna_C02_tip:"§C$SI_Gehenna_C02$§!\n$SI_Gehenna_C02_desc$\n$SI_Gehenna_C02_effect$"
+
+ SI_Gehenna_C03:"Manifest Przeznaczenia Gehenny"
+ SI_Gehenna_C03_desc:"§R„Wszechświat jest ciemny i zimny, ale światło Pandemonium jest jasne i ciepłe;\nRozsianie iskry po całej galaktyce – oto nasza misja!”§!\nTak napisano na ulotce Federacyjnej Rady Uczniowskiej."
+ SI_Gehenna_C03_effect:"\nEfekt:\n§HOdblokujsz edykt Ideologii Akademii: §!$edict_BA_SI_Gehenna_C03$:\n    §YPodstawowy koszt aktywacji: £sr_dark_matter£75§!\n    §YPodstawowe miesięczne utrzymanie: £volatile_motes£100 £exotic_gases£100 £rare_crystals£100 £sr_dark_matter£5§!\n    $MOD_SHIP_WEAPON_DAMAGE$: §G+100%§!\n    $MOD_SHIP_FIRE_RATE_MULT$: §G+50%§!\n    $MOD_SHIP_WEAPON_RANGE_MULT$: §G+50%§!\n"
+ SI_Gehenna_C03_tip:"§C$SI_Gehenna_C03$§!\n$SI_Gehenna_C03_desc$\n$SI_Gehenna_C03_effect$"
+
+ ### 下中线
+ SI_Gehenna_D01:"Wytyczne dla Działalności Klubowej"
+ SI_Gehenna_D01_desc:"Gehenna przez długi czas zbytnio pobłażała swoim klubom, co obecnie nie jest już odpowiednie dla ery międzygwiezdnej. Wymagane są silniejsze regulacje zarządzające klubami, aby utrzymać w nich porządek."
+ SI_Gehenna_D01_effect:"\nEfekt:\n£job_BA_club_members£Produkcja §Bczłonków klubu Kivotos§!: §G+15%§!\n£pop_cat_specialist£Szczęście populacji specjalistów: §G+25%§!\n£pop_cat_specialist£Koszty utrzymania dóbr konsumpcyjnych populacji specjalistów: §R+0.25§!\n£pop_cat_specialist£Koszty utrzymania żywności populacji specjalistów: §R+0.2§!\n"
+ SI_Gehenna_D01_tip:"§C$SI_Gehenna_D01$§!\n$SI_Gehenna_D01_desc$\n$SI_Gehenna_D01_effect$"
+
+ SI_Gehenna_D02:"System zadań z nagrodą"
+ SI_Gehenna_D02_desc:"Zaletą systemu zadań z nagrodą jest to, że za niewielki koszt mądrość i odwaga wielu studentów może posłużyć Kivotos."
+ SI_Gehenna_D02_effect:"\nEfekt:\n$mod_BA_flex_pop_produces_mult$: §G+300%§!\n$mod_BA_flex_pop_upkeep_mult$: §R+100%§!\n$mod_pop_category_civilians_trade_produces_add$: §G+4§!\n$mod_pop_category_civilians_food_upkeep_add$: §R+0.5§!\n"
+ SI_Gehenna_D02_tip:"§C$SI_Gehenna_D02$§!\n$SI_Gehenna_D02_desc$\n$SI_Gehenna_D02_effect$"
+
+ SI_Gehenna_D03:"Obowiązki Lidera"
+ SI_Gehenna_D03_desc:"Po pierwsze: Różnica między armią a stadem leży w doskonałym umyśle lidera;\nPo drugie: Skuteczność ognia artyleryjskiego bezpośrednio decyduje o wartości każdego wroga;\n..."
+ SI_Gehenna_D03_effect:"\nEfekt:\n$mod_commander_skill_levels$: §G+2§!\n$mod_commander_exp_gain$: §G+100%§!\n" #\n海军统帅和陆军将领的等级上限: §G+10§!
+ SI_Gehenna_D03_tip:"§C$SI_Gehenna_D03$§!\n$SI_Gehenna_D03_desc$\n$SI_Gehenna_D03_effect$"
+
+ ### 下右线
+ SI_Gehenna_E01:"Ostateczna Decyzja: Komitet Dyscyplinarny"
+ SI_Gehenna_E01_desc:"Zdecydowane działania Komitetu Dyscyplinarnego złamały samowolę Stowarzyszenia Pandemonium, ostatecznie zyskując stabilne wsparcie i zaufanie wszystkich studentów Gehenny, co w zasadzie wyeliminowało wieloletnie problemy ze stabilnością."
+ SI_Gehenna_E01_effect:"\nEfekt:\n§HOtrzymujesz modyfikator imperium: §!$modifier_BA_SI_Gehenna_E01$(10800£time£):\n    $r_stability$: §G+25§!\n    $MOD_PLANET_CRIME_ADD$: §G-20§!\n    $MOD_SHIP_SPEED_MULT$: §G+30%§!\n    $MOD_SHIP_INTERSTELLAR_SPEED_MULT$: §G+30%§!\n"
+ SI_Gehenna_E01_tip:"§C$SI_Gehenna_E01$§!\n$SI_Gehenna_E01_desc$\n$SI_Gehenna_E01_effect$"
+
+ SI_Gehenna_E02:"Żelazna Pięść Administratora"
+ SI_Gehenna_E02_desc:"Administrator Komitetu Dyscyplinarnego to osoba posiadająca najbardziej kompleksowe informacje, z pełną wiedzą na temat rozmieszczenia sił wojskowych w każdym regionie. Aby wykorzystać przewagę walki na własnym terenie i zapobiec innym wewnętrznym problemom, dowództwo musi zostać bezpośrednio przekazane Administratorowi."
+ SI_Gehenna_E02_effect:"\nEfekt:\n$MOD_SHIP_HOME_TERRITORY_FIRE_RATE_MULT$: §G+75%§!\n$MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+100%§!\n$MOD_STARBASE_SHIPYARD_BUILD_COST_MULT$: §R+10%§!\n" #\n处于防御战争下，本土舰队射速: §G+75%§!
+ SI_Gehenna_E02_tip:"§C$SI_Gehenna_E02$§!\n$SI_Gehenna_E02_desc$\n$SI_Gehenna_E02_effect$"
+
+ SI_Gehenna_E03:"Systematyczne Umacnianie"
+ SI_Gehenna_E03_desc:"W kontekście wojny obronnej poleganie wyłącznie na flocie jest niewystarczające; każdy system gwiezdny musi stać się częścią linii obrony Kivotos."
+ SI_Gehenna_E03_effect:"\nEfekt:\n§HOdblokowuje edykt Idei Akademii: §!$edict_BA_SI_Gehenna_E03$:\n    §YPodstawowy koszt aktywacji: £sr_keystone£100§!\n    §YPodstawowe koszty utrzymania: £alloys£100 £sr_keystone£10§!\n    $mod_shipclass_military_station_build_speed_mult$: §G+1600%§!\n    $mod_shipclass_military_station_damage_mult$: §G+400%§!\n    $mod_shipclass_military_station_hull_mult$: §G+400%§!\n"
+ SI_Gehenna_E03_tip:"§C$SI_Gehenna_E03$§!\n$SI_Gehenna_E03_desc$\n$SI_Gehenna_E03_effect$"
+
+ #####      千年      #####
+ SI_Millennium_tip:"Idea Akademii (Główna): §BAkademia Technologiczna Millennium§!\nMillennium charakteryzuje się silną atmosferą liberalizmu i badań naukowych, które wzajemnie się uzupełniając, ukształtowały dzisiejsze Millennium i oczywiście ukształtują przyszłe Miasto Akademickie.\n"
+ ### 共通上
+ SI_Millennium_G01:"Wskaźnik Trendów"
+ SI_Millennium_G01_desc:"Potencjał Kivotos do kształtowania przyszłości wykracza daleko poza to, a największy potencjał drzemie w zwykłych członkach klubów."
+ SI_Millennium_G01_effect:"\nEfekt:\nOtrzymujesz £engineering_research£§Ybadań inżynieryjnych§! oraz £unity£§Yjedności§! w wysokości 1-krotności miesięcznej produkcji.\nPunkty badawcze (£physics£ £society£ £engineering£) produkowane przez $BA_club_pop$: §G+0.5§!\nZużycie £consumer_goods£ Dóbr Konsumpcyjnych przez $BA_club_pop$: §G+0.2§!\n" #之后每点完一个国策领袖等级上限+1\n
+ SI_Millennium_G01_tip:"§C$SI_Millennium_G01$§!\n$SI_Millennium_G01_desc$\n$SI_Millennium_G01_effect$"
+
+ SI_Millennium_G02:"Dotacja na Ogólną Wydajność"
+ SI_Millennium_G02_desc:"Badania wykazują, że wynagrodzenia badaczy generują wartość kilkukrotnie wyższą niż same są warte... chociaż istnieje podejrzenie autopromocji, to jednak ma to sens."
+ SI_Millennium_G02_effect:"\nEfekt:\n$mod_planet_researchers_produces_mult$: §G+10%§!\n$mod_planet_researchers_upkeep_mult$: §R+5%§!\n$MOD_COUNTRY_NUM_TECH_ALTERNATIVES_ADD$: §G+1§!\n$MOD_LEADER_SKILL_LEVELS$: §G+1§!\n$MOD_PLANET_POP_ASSEMBLY_MULT$: §G+20%§!\n" #\n现在每十五个人口提供一个£pops£研究人员岗位。
+ SI_Millennium_G02_tip:"§C$SI_Millennium_G02$§!\n$SI_Millennium_G02_desc$\n$SI_Millennium_G02_effect$"
+
+ SI_Millennium_G03:"System Prywatnego Finansowania Badań Klubowych"
+ SI_Millennium_G03_desc:"Kreatywność i entuzjazm członków klubów to najlepszy materiał badawczy, a aby te pomysły i pasje stały się rzeczywistością, wystarczy tylko mała szansa."
+ SI_Millennium_G03_effect:"\nEfekt:\nPoziom wszystkich obecnych liderów §YNaukowców§! §GWzrośnie o 1§!\nWszystkie §HSiedziby Klubowe§! na planetach dodatkowo zapewniają §G+2§! miejsca pracy (£job_BA_club_members£$job_BA_club_members$)\n"
+ SI_Millennium_G03_tip:"§C$SI_Millennium_G03$§!\n$SI_Millennium_G03_desc$\n$SI_Millennium_G03_effect$"
+
+ SI_Millennium_G04:"Walka i Eksploracja"
+ SI_Millennium_G04_desc:"W miarę jak zasoby w pobliżu naszej macierzystej planety są sukcesywnie eksploatowane, nasze opcje stają się coraz bardziej ograniczone. Jednakże, za chmurami na niebie kryje się znacznie wspanialszy i głębszy świat."
+ SI_Millennium_G04_effect:"\nEfekt:\n$MOD_COUNTRY_NUM_TECH_ALTERNATIVES_ADD$: §G+1§!\n$RESEARCH_EFFICIENCY$: §G+10%§!\nOtrzymujesz dużą ilość punktów badawczych (£physics£ £society£ £engineering£) i £alloys£stopów.\nDodaje §Hmodyfikator planety§! do planety macierzystej: §!$modifier_BA_SI_Millennium_G04$\n"
+ SI_Millennium_G04_tip:"§C$SI_Millennium_G04$§!\n$SI_Millennium_G04_desc$\n$SI_Millennium_G04_effect$"
+
+ ### 共通中
+ SI_Millennium_G05:"Gigantyczna Wieża Millennium"
+ SI_Millennium_G05_desc:"Metody badań polegające na grzebaniu w instrumentach laboratoryjnych są już przestarzałe; musimy zbudować wspaniałą megastrukturę badawczą należącą do Millennium."
+ SI_Millennium_G05_effect:"Zużywa §G2£job_BA_dont_be_crazy_here£§! punktów Idei Akademii"
+ SI_Millennium_G05_tip:"§C$SI_Millennium_G05$§!\n$SI_Millennium_G05_desc$\n$SI_Millennium_G05_effect$"
+
+ SI_Millennium_G06:"Reset protokołów komunikacyjnych"
+ SI_Millennium_G06_desc:"Aby lepiej wykorzystać nadajnik oparty na nowej koncepcji Wieży Milenijnej, musimy przeprowadzić gruntowną aktualizację protokołów komunikacyjnych w całym Kivotosie."
+ SI_Millennium_G06_effect:"Zużywa §G2£job_BA_dont_be_crazy_here£§! punktów Idei Akademii"
+ SI_Millennium_G06_tip:"§C$SI_Millennium_G06$§!\n$SI_Millennium_G06_desc$\n$SI_Millennium_G06_effect$"
+
+ SI_Millennium_G07:"System Samopodtrzymujący"
+ SI_Millennium_G07_desc:"Gdybyśmy musieli poświęcić mnóstwo zasobów na konserwację Wieży Milenijnej, byłoby to nieopłacalne. Po zainstalowaniu Rdzenia Energetycznego i Systemu Samopodtrzymującego, Wieża Milenijna będzie trwać wiecznie wraz ze swoją wewnętrzną gwiazdą."
+ SI_Millennium_G07_effect:"Zużywa §G2£job_BA_dont_be_crazy_here£§! punktów Idei Akademii"
+ SI_Millennium_G07_tip:"§C$SI_Millennium_G07$§!\n$SI_Millennium_G07_desc$\n$SI_Millennium_G07_effect$"
+
+ SI_Millennium_G08:"Wieża Wiekuista"
+ SI_Millennium_G08_desc:"Wieża Milenijna została ukończona. Ta gigantyczna konstrukcja jest szczytem inżynierii Kivotosu, a jej rozszyfrowane tajemnice posłużą Kivotosowi."
+ SI_Millennium_G08_effect:"Zużywa §G2£job_BA_dont_be_crazy_here£§! punktów Idei Akademii"
+ SI_Millennium_G08_tip:"§C$SI_Millennium_G08$§!\n$SI_Millennium_G08_desc$\n$SI_Millennium_G08_effect$"
+
+ ### 共通下
+ SI_Millennium_G09:"Centrum Terminali Informacyjnych"
+ SI_Millennium_G09_desc:"Budujemy na każdej planecie centra transmisyjne połączone z Wieżą Milenijną, aby w pełni udostępnić jej moc obliczeniową użytkownikom."
+ SI_Millennium_G09_effect:"Efekt:"
+ SI_Millennium_G09_tip:"§C$SI_Millennium_G09$§!\n$SI_Millennium_G09_desc$\n$SI_Millennium_G09_effect$"
+
+ SI_Millennium_G10:"Restrukturyzacja Bazy Danych Archiwalnych"
+ SI_Millennium_G10_desc:"Wykorzystując Wieżę Milenijną, przeorganizujemy nasze dane badawcze, aby odkryć więcej potencjalnych kierunków badań."
+ SI_Millennium_G10_effect:"Efekt:"
+ SI_Millennium_G10_tip:"§C$SI_Millennium_G10$§!\n$SI_Millennium_G10_desc$\n$SI_Millennium_G10_effect$"
+
+ SI_Millennium_G11:"Epilog: Aż po kres czasu i świata"
+ SI_Millennium_G11_desc:"Każde prawo, które stworzyliśmy, będzie nam towarzyszyć aż do końca wszystkiego. Te piękne kombinacje cyfr i symboli to wieczny pomnik Kivotosu."
+ SI_Millennium_G11_effect:"Efekt:"
+ SI_Millennium_G11_tip:"§C$SI_Millennium_G11$§!\n$SI_Millennium_G11_desc$\n$SI_Millennium_G11_effect$"
+
+ ### 上左线
+ SI_Millennium_A01:"Podręcznik Eksploracji Kosmicznej"
+ SI_Millennium_A01_desc:"Departament Prawdy, wykorzystując nadmiarowe projekty badawcze, opracował podręcznik dla załóg statków naukowych."
+ SI_Millennium_A01_effect:"§RWyklucza się z§!$SI_Millennium_B01$§R!§!"
+ SI_Millennium_A01_tip:"§C$SI_Millennium_A01$§!\n$SI_Millennium_A01_desc$\n$SI_Millennium_A01_effect$"
+
+ SI_Millennium_A02:"Mobilny Statek Badawczy"
+ SI_Millennium_A02_desc:"W celu zapewnienia bezpieczeństwa naszych statków naukowych, Departament Prawdy przeprogramował statki naukowe oraz zaprojektował odpowiednie instalacje w bazach gwiezdnych."
+ SI_Millennium_A02_effect:"Efekt:" #§H解锁恒星基地模块:§!科研船泊地\n
+ SI_Millennium_A02_tip:"§C$SI_Millennium_A02$§!\n$SI_Millennium_A02_desc$\n$SI_Millennium_A02_effect$"
+
+ ### 上右线
+ SI_Millennium_B01:"Protokół Stoczniowej Linii Produkcyjnej"
+ SI_Millennium_B01_desc:"Departament Inżynierii, wykorzystując nadmiarowe projekty badawcze, przepisał protokoły budowy stoczni."
+ SI_Millennium_B01_effect:"§RWyklucza się z§!$SI_Millennium_A01$§R!§!"
+ SI_Millennium_B01_tip:"§C$SI_Millennium_B01$§!\n$SI_Millennium_B01_desc$\n$SI_Millennium_B01_effect$"
+
+ SI_Millennium_B02:"Strategia Otwarcia Ognia"
+ SI_Millennium_B02_desc:"Departament Inżynierii zoptymalizował obecne programy szkoleniowe uzbrojenia dla Marynarki Wojennej, dzięki czemu załogi mogą teraz lepiej wykorzystać możliwości broni okrętowej."
+ SI_Millennium_B02_effect:"\nEfekt:\n$MOD_SHIP_WEAPON_DAMAGE$: §G+15%§!\n$MOD_SHIP_FIRE_RATE_MULT$: §G+15%§!\n"
+ SI_Millennium_B02_tip:"§C$SI_Millennium_B02$§!\n$SI_Millennium_B02_desc$\n$SI_Millennium_B02_effect$"
+
+ ### 下线
+ SI_Millennium_C01:"Przydział mocy obliczeniowej"
+ SI_Millennium_C01_desc:"Wygląda na to, że wiele modułów Wieży Millenium pracuje na jałowym biegu…"
+ SI_Millennium_C01_effect:"\nEfekt:\n§HPlaneta Stolicy otrzymuje modyfikator: §!$modifier_BA_SI_Millennium_C01$\n"
+ SI_Millennium_C01_tip:"§C$SI_Millennium_C01$§!\n$SI_Millennium_C01_desc$\n$SI_Millennium_C01_effect$"
+
+ SI_Millennium_C02:"No to zróbmy gry!"
+ SI_Millennium_C02_desc:"Ten moduł ma niesamowicie potężne możliwości przetwarzania równoległego, więc jeśli wykorzystamy go do stworzenia ogromnego wirtualnego świata gier, to na pewno będzie super popularny!"
+ SI_Millennium_C02_effect:"\n§RWyklucza§! $SI_Millennium_C03$§R§!\nEfekt:\nNatychmiastowo otrzymujesz ogromną ilość £unity£§Yjedności§!, w wysokości 3-krotności miesięcznej produkcji\n£stability£$MOD_PLANET_STABILITY_ADD$: §G+5§!\n$mod_country_unity_produces_mult$: §G+15%§!\nBudynki klubowe §BDziału Rozwoju Gier§! podwajają produkcję jedności.\n"
+ SI_Millennium_C02_tip:"§C$SI_Millennium_C02$§!\n$SI_Millennium_C02_desc$\n$SI_Millennium_C02_effect$"
+
+ SI_Millennium_C03:"Dedykowana Platforma Obliczeniowa"
+ SI_Millennium_C03_desc:"Na seminarium zaproponowano wykorzystanie tego modułu jako dedykowanej platformy roboczej dla naszych liderów, aby zwiększyć ogólną efektywność administracyjną imperium."
+ SI_Millennium_C03_effect:"\n§RWyklucza§! $SI_Millennium_C02$§R§!\nEfekt:\n$MOD_LEADER_SPECIES_EXP_GAIN$: §G+350%§!\nPoziom wszystkich obecnych liderów: §Y$scientist$、$commander$、$official$§! zostaje §Gzwiększony o 1 poziom§!\n§YCo 5 lat§! wszyscy liderzy zostają oczyszczeni ze zwykłych §Rnegatywnych cech§!\n"
+ SI_Millennium_C03_tip:"§C$SI_Millennium_C03$§!\n$SI_Millennium_C03_desc$\n$SI_Millennium_C03_effect$"
+
+ #####     圣三一     #####
+ SI_Trinity_tip:"Doktryna Akademicka (Główna): §dAkademia Trójcy§!\nNikt nie rozumie polityki lepiej niż Akademia Trójcy. Polityka jest zarówno otchłanią, jak i palącym słońcem, nieustannie obserwującą i oświecającą każdego członka Federacji Akademickiej.\n"
+
+ ### 共通
+ SI_Trinity_G01:"Epilog: Pierwsze i Ostatnie Spotkanie Przy Herbatce"
+ SI_Trinity_G01_desc:"Wiele lat później, gdy studenci będą spoglądać na miasto akademickie wyrastające w Nowym Świecie, czy przypomną sobie popołudnie, kiedy trzy dziewczęta piły herbatę i rozmawiały razem?"
+ SI_Trinity_G01_effect:"\nEfekt:\n$mod_BA_SI_sub_cap_add$: §G+2§!\n£stability£$MOD_PLANET_STABILITY_ADD$: §G+40§!\n"
+ SI_Trinity_G01_tip:"§C$SI_Trinity_G01$§!\n$SI_Trinity_G01_desc$\n$SI_Trinity_G01_effect$"
+
+ ### 左线
+ SI_Trinity_A01:"Przewodnictwo Filiusa"
+ SI_Trinity_A01_desc:"Frakcja Filius kiedyś przewodziła podpisaniu Traktatu Edenu, i choć wynik nie był do końca satysfakcjonujący, ich umiejętności dyplomatyczne były bez zarzutu."
+ SI_Trinity_A01_effect:"\n§RWyklucza§! $SI_Trinity_B01$, $SI_Trinity_C01$§R§!\nEfekt:\n$mod_planet_jobs_unity_produces_mult$: §G+20%§!\n$MOD_EMPIRE_SIZE_SYSTEMS_MULT$: §G-10%§!\n$MOD_COUNCIL_AGENDA_PROGRESS_SPEED$: §G+15%§!\n"
+ SI_Trinity_A01_tip:"§C$SI_Trinity_A01$§!\n$SI_Trinity_A01_desc$\n$SI_Trinity_A01_effect$"
+
+ SI_Trinity_A02:"Zdecentralizowana Biurokracja"
+ SI_Trinity_A02_desc:"Rozproszenie lokalnych biurokratów i ponowne ich zintegrowanie jako agencji podległych pod Klub Herbaciany, aby zapobiec wzajemnym spiskom."
+ SI_Trinity_A02_effect:"\nEfekt:\n§HOdbloka Agendę Doktryny Akademickiej:§! $council_agenda_agenda_BA_SI_Trinity_A02_name$\n$mod_pop_category_rulers_unity_produces_add$: §G+8§!\n$mod_pop_category_specialists_unity_produces_add$: §G+0.5§!\n$MOD_COUNCIL_AGENDA_PROGRESS_SPEED$: §G+15%§!\n"
+ SI_Trinity_A02_tip:"§C$SI_Trinity_A02$§!\n$SI_Trinity_A02_desc$\n$SI_Trinity_A02_effect$"
+
+ SI_Trinity_A03:"Misja Świątynna"
+ SI_Trinity_A03_desc:"Frakcja Filius bardzo ceni misje, dobrze wiedzą, jaką rolę odgrywają emisariusze w rozrzutności między imperiami."
+ SI_Trinity_A03_effect:"\nEfekt:\nZa każdym razem, gdy §YAgenda§! zostaje uruchomiona, wszyscy liderzy otrzymują §C1000 punktów doświadczenia§!\n$MOD_DIPLO_WEIGHT_MULT$: §G+0.3§!\n$MOD_COUNCIL_AGENDA_FINISHING_EFFECT_DURATION_MULT$: §G+0.5%§!\n$MOD_COUNCIL_AGENDA_PROGRESS_SPEED$: §G+25%§!\n"
+ SI_Trinity_A03_tip:"§C$SI_Trinity_A03$§!\n$SI_Trinity_A03_desc$\n$SI_Trinity_A03_effect$"
+
+ SI_Trinity_A04:"Plan Popołudniowej Herbatki"
+ SI_Trinity_A04_desc:"Wykorzystując małe korzyści, takie jak popołudniowa herbata, jako nagrody, i poprzez niezliczone małe spotkania towarzyskie, aby zapoznać ze sobą współpracowników, ma to na celu pokazanie uczniom uroku współpracy i synergii."
+ SI_Trinity_A04_effect:"\nEfekt:\n§HOdbloka Agendę Doktryny Akademickiej:§! $council_agenda_agenda_BA_SI_Trinity_A04_name$\n£job_artisan£Rzemieślnicy produkują: §G+30%§!\n£job_artisan£Koszty utrzymania rzemieślników: §G-10%§!\n£job_foundry£Metalurdzy produkują: §R-30%§!\n$mod_pop_cat_worker_bonus_workforce_mult$: §G+30%§!\n$MOD_COUNCIL_AGENDA_PROGRESS_SPEED$: §G+15%§!\n"
+ SI_Trinity_A04_tip:"§C$SI_Trinity_A04$§!\n$SI_Trinity_A04_desc$\n$SI_Trinity_A04_effect$"
+
+ SI_Trinity_A05:"Współpraca z Biurem Generalnym"
+ SI_Trinity_A05_desc:"Wymiana części obowiązków między Biurem Generalnym a Klubem Herbacianym, aby wykorzystać pełny potencjał asystentów administracyjnych AI, i w miarę możliwości zapobiec sytuacji, w której laicy instruują ekspertów."
+ SI_Trinity_A05_effect:"\nEfekt:\n$mod_BA_staff_pop_unity_produces_add$: §G+5§!\n$mod_country_unity_produces_mult$: §G+20%§!\n$MOD_COUNCIL_AGENDA_PROGRESS_SPEED$: §G+15%§!\n"
+ SI_Trinity_A05_tip:"§C$SI_Trinity_A05$§!\n$SI_Trinity_A05_desc$\n$SI_Trinity_A05_effect$"
+
+ SI_Trinity_A06:"Do zobaczenia, przyjaciele"
+ SI_Trinity_A06_desc:"Nawet najlepsi przyjaciele mogą znaleźć się na krańcach tej rozległej galaktyki. Ale choć dzielą nas dziesiątki tysięcy lat świetlnych, nadal możemy myśleć o sobie nawzajem i walczyć o ten sam ideał!"
+ SI_Trinity_A06_effect:"\nEfekty:\n$MOD_PLANETARY_ASCENSION_EFFECT_MULT$: §G+20%§!\n$MOD_COUNTRY_GOVERNMENT_CIVIC_POINTS_ADD$: §G+1§!\n$mod_planet_jobs_upkeep_mult$: §R+10%§!\n$MOD_COUNCIL_AGENDA_PROGRESS_SPEED$: §G+15%§!"
+ SI_Trinity_A06_tip:"§C$SI_Trinity_A06$§!\n$SI_Trinity_A06_desc$\n$SI_Trinity_A06_effect$"
+
+ ### 中线
+ SI_Trinity_B01:"Patel jako Przewodnicząca"
+ SI_Trinity_B01_desc:"Frakcja Patel uważa, że wszelkie spory należy rozstrzygać siłą. Chociaż ich liderka straciła część autorytetu, ich wpływy wcale nie maleją, a wręcz wzrastają, wraz z kontaktami z obcymi cywilizacjami."
+ SI_Trinity_B01_effect:"\n§RWyklucza§! $SI_Trinity_A01$, $SI_Trinity_C01$§R!§!\nEfekty:\n$MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+10%§!\n$RESEARCH_EFFICIENCY$: §G+15%§!\n$MOD_BONUS_POP_GROWTH_MULT$: §G+10%§!\n"
+ SI_Trinity_B01_tip:"§C$SI_Trinity_B01$§!\n$SI_Trinity_B01_desc$\n$SI_Trinity_B01_effect$"
+
+ SI_Trinity_B02:"Kolebka wykuta ze stali"
+ SI_Trinity_B02_desc:"W obliczu bezkresnego kosmosu, Kivotos jest niczym ciekawski maluch. Choć teraz jesteśmy mali i nieznaczący, pewnego dnia wszystko, na co spojrzymy, zostanie przez nas podbite!"
+ SI_Trinity_B02_effect:"\nEfekty:\n$mod_country_alloys_produces_mult$: §G+20%§!\n$mod_planet_metallurgists_alloys_produces_add$: §G+1§!\n$mod_country_consumer_goods_produces_mult$: §R-10%§!\n$mod_planet_artisans_consumer_goods_produces_add$: §R-0.5§!\n$MOD_BONUS_POP_GROWTH_MULT$: §G+10%§!\n"
+ SI_Trinity_B02_tip:"§C$SI_Trinity_B02$§!\n$SI_Trinity_B02_desc$\n$SI_Trinity_B02_effect$"
+
+ SI_Trinity_B03:"Sygnał do Podróży"
+ SI_Trinity_B03_desc:"Statki kosmiczne wystrzeliwują w niebo jeden za drugim, niczym legendarni bohaterowie, którzy biorą miecz w dłoń i stawiają pierwszy krok w podróż. Z tą różnicą, że my nie idziemy w stronę horyzontu, ale zostawiamy go daleko za sobą."
+ SI_Trinity_B03_effect:"\nEfekty:\n$MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+30%§!\n$mod_ships_upkeep_mult$: §G-50%§!\n$MOD_STARBASE_SHIPYARD_BUILD_COST_MULT$: §G-20%§!\n$MOD_SHIP_SPEED_MULT$: §G+15%§!\n$MOD_BONUS_POP_GROWTH_MULT$: §G+15%§!\n"
+ SI_Trinity_B03_tip:"§C$SI_Trinity_B03$§!\n$SI_Trinity_B03_desc$\n$SI_Trinity_B03_effect$"
+
+ SI_Trinity_B04:"Niepokalana Ziemia"
+ SI_Trinity_B04_desc:"Nasz dom wśród gwiazd był kiedyś miejscem niezliczonych fantazji. Ale to wciąż za mało – sami możemy zamienić nasze marzenia w rzeczywistość!"
+ SI_Trinity_B04_effect:"\nEfekty:\n$MOD_STARBASE_UPGRADE_SPEED_MULT$: §G+50%§!\n$mod_shipclass_starbase_build_cost_mult$: §G-30%§!\n$MOD_STARBASE_MODULE_BUILD_SPEED_MULT$: §G+150%§!\n$mod_starbases_upkeep_mult$: §G-30%§!\n$MOD_MEGASTRUCTURE_BUILD_SPEED_MULT$: §G+30%§!\n"
+ SI_Trinity_B04_tip:"§C$SI_Trinity_B04$§!\n$SI_Trinity_B04_desc$\n$SI_Trinity_B04_effect$"
+
+ SI_Trinity_B05:"Odwrócony Horyzont"
+ SI_Trinity_B05_desc:"Skoro w naszych oczach lśni blask gwiazd, absolutnie nie możemy pozwolić, aby ziemia, która kiedyś wszystko obejmowała, stała się naszym więzieniem!"
+ SI_Trinity_B05_effect:"\nEfekty:\n$mod_planet_BA_districts_military_factory_build_speed_mult$: §G+100%§!\n$mod_planet_metallurgists_produces_mult$: §G+100%§!\n$mod_planet_metallurgists_upkeep_mult$: §R+30%§!\n£stability£$MOD_PLANET_STABILITY_ADD$: §R-10§!\n"
+ SI_Trinity_B05_tip:"§C$SI_Trinity_B05$§!\n$SI_Trinity_B05_desc$\n$SI_Trinity_B05_effect$"
+
+ SI_Trinity_B06:"Jaśniejący niczym Gwiazdy"
+ SI_Trinity_B06_desc:"Niczym płonące gwiazdy, zmieniamy to, co zwyczajne, w coś olśniewającego. W tym wszechświecie żadna cywilizacja nie będzie w stanie świecić jaśniej niż my!"
+ SI_Trinity_B06_effect:"\nEfekty:\n$MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+150%§!\n$MOD_COUNTRY_NAVAL_CAP_MULT$: §G+40%§!\n$mod_planet_jobs_produces_mult$: §G+50%§!\n$mod_planet_jobs_upkeep_mult$: §R+40%§!\n"
+ SI_Trinity_B06_tip:"§C$SI_Trinity_B06$§!\n$SI_Trinity_B06_desc$\n$SI_Trinity_B06_effect$"
+
+ ### 右线
+ SI_Trinity_C01:"Seikatos jako Przewodnicząca"
+ SI_Trinity_C01_desc:"Frakcja Seikatos zachowuje neutralność, ale wcale nie ustępuje innym w ambicji. Bardziej niż na tu i teraz, czy na krótkoterminowe działania, skupiają się na odległej przyszłości."
+ SI_Trinity_C01_effect:"\n§RWyklucza§! $SI_Trinity_A01$, $SI_Trinity_B01$§R!§!\nEfekty:\n$mod_planet_jobs_produces_mult$: §G+5%§!\n$mod_shipclass_starbase_build_cost_mult$: §G-10%§!\n$mod_shipclass_colonizer_build_cost_mult$: §G-30%§!\n$MOD_EMPIRE_SIZE_SYSTEMS_MULT$: §G-10%§!\nRozmiar Imperium: §G-2%§!\n"
+ SI_Trinity_C01_tip:"§C$SI_Trinity_C01$§!\n$SI_Trinity_C01_desc$\n$SI_Trinity_C01_effect$"
+
+ SI_Trinity_C02:"Prawo o Rozbudowie Miast"
+ SI_Trinity_C02_desc:"Miasta o chaotycznym planowaniu są skazane na chwilowy rozkwit i nigdy nie staną się supermetropoliami."
+ SI_Trinity_C02_effect:"\nEfekty:\n$mod_planet_jobs_produces_mult$: §G+10%§!\n$MOD_COUNTRY_STARBASE_INFLUENCE_COST_MULT$: §G-75%§!\n$MOD_EMPIRE_SIZE_POPS_MULT$: §G-10%§!\n$MOD_EMPIRE_SIZE_MULT$: §G-5%§!\n"
+ SI_Trinity_C02_tip:"§C$SI_Trinity_C02$§!\n$SI_Trinity_C02_desc$\n$SI_Trinity_C02_effect$"
+
+ SI_Trinity_C03:"Departament Ewidencji Szkolnej"
+ SI_Trinity_C03_desc:"Koncepcja zarządzania archiwami sięga początków cywilizacji i w dzisiejszych czasach eksplozji demograficznej nie może być ignorowana."
+ SI_Trinity_C03_effect:"\nEfekty:\n$MOD_BONUS_POP_GROWTH_MULT$: §G+20%§!\n$mod_planet_jobs_produces_mult$: §G+15%§!\n$mod_planet_jobs_upkeep_mult$: §R+15%§!\n$MOD_EMPIRE_SIZE_POPS_MULT$: §G-10%§!\n$MOD_EMPIRE_SIZE_MULT$: §G-5%§!\n"
+ SI_Trinity_C03_tip:"§C$SI_Trinity_C03$§!\n$SI_Trinity_C03_desc$\n$SI_Trinity_C03_effect$"
+
+ SI_Trinity_C04:"Prognoza Logistyki Międzygwiezdnej"
+ SI_Trinity_C04_desc:"Nawet posiadając technologię FTL, transport towarów między planetami wciąż wymaga pokonywania ogromnych odległości, a wiele szczegółów wymaga tu naszego dokładnego dostrojenia."
+ SI_Trinity_C04_effect:"Efekty:"
+ SI_Trinity_C04_tip:"§C$SI_Trinity_C04$§!"
+
+ SI_Trinity_C05:"Nadświetlny Przepływ Informacji"
+ SI_Trinity_C05_desc:"Informacje są krwiobiegiem imperium. Stosując algorytmy wyprzedzającej regulacji, nie musimy już tracić czasu na te długie oczekiwania."
+ SI_Trinity_C05_effect:"Efekty:"
+ SI_Trinity_C05_tip:"§C$SI_Trinity_C05$§!"
+
+ SI_Trinity_C06:"Rajskie Krainy za Gwiazdami"
+ SI_Trinity_C06_desc:"Piękno nowego świata wcale nie ustępuje temu, co widzieliśmy w naszych snach."
+ SI_Trinity_C06_effect:"Efekty:"
+ SI_Trinity_C06_tip:"§C$SI_Trinity_C06$§!"
+
+ #####      红冬      #####
+ SI_Redwinter_tip:"Ideologia Akademii (Opcjonalnie): §PFederalna Akademia Czerwonej Zimy§!"
+
+ SI_Redwinter_G01:"Co na Drodze, to Nasze!"
+ SI_Redwinter_G01_desc:"Obfite zaopatrzenie w surowce jest fundamentem dobrobytu."
+ SI_Redwinter_G01_effect:"Nie wymaga zużycia £job_BA_dont_be_crazy_here£ Punktów Ideologii Akademii"
+ SI_Redwinter_G01_tip:"§C$SI_Redwinter_G01$§!"
+
+ SI_Redwinter_G02:"Tajemnice Imperium"
+ SI_Redwinter_G02_desc:"Dla tych, którzy bezinteresownie się poświęcają, pewne sprawy muszą zostać zważone na szali."
+ SI_Redwinter_G02_effect:"Nie wymaga zużycia £job_BA_dont_be_crazy_here£ Punktów Ideologii Akademii"
+ SI_Redwinter_G02_tip:"§C$SI_Redwinter_G02$§!"
+
+ SI_Redwinter_G03:"Głos Robotników"
+ SI_Redwinter_G03_desc:"Federacja musi słuchać głosu wszystkich, a robotnicy najłatwiej wpadają w spiralę milczenia."
+ SI_Redwinter_G03_effect:"Nie wymaga zużycia £job_BA_dont_be_crazy_here£ Punktów Ideologii Akademii"
+ SI_Redwinter_G03_tip:"§C$SI_Redwinter_G03$§!"
+
+ SI_Redwinter_G04:"Front Mózgów"
+ SI_Redwinter_G04_desc:"Najbystrzejsze umysły, jeśli się nie zjednoczą, jedynie zmarnują zasoby wszystkich."
+ SI_Redwinter_G04_effect:"Nie wymaga zużycia £job_BA_dont_be_crazy_here£ Punktów Ideologii Akademii"
+ SI_Redwinter_G04_tip:"§C$SI_Redwinter_G04$§!"
+
+ SI_Redwinter_G05:"Chwała Federacji"
+ SI_Redwinter_G05_desc:"Choć nie da się osiągnąć perfekcji, nasz wysiłek jest godny tej Czerwonej Gwiazdy."
+ SI_Redwinter_G05_effect:"Wprowadza Ideologię Akademii w §R1080-dniowy§! okres odnowienia"
+ SI_Redwinter_G05_tip:"§C$SI_Redwinter_G05$§!"
+
+ #####    百鬼夜行    #####
+ SI_Hyakkiyako_tip:"Ideologia Akademii (Opcjonalnie): §UZjednoczona Akademia Hyakkiyako§!"
+
+ ### 第一页
+ SI_Hyakkiyako_G01:"Wschodni Powiew"
+ SI_Hyakkiyako_G01_desc:"Wiatr Hyakkiyako dotarł do każdego zakątka każdej akademii. Nawet jeśli wcześniej byli rozproszeni jak piasek, teraz jest szansa, by studenci Hyakkiyako zjednoczyli się i zaoferowali Federacji swoje pomysły i strategie."
+ SI_Hyakkiyako_G01_effect:"Efekty:"
+ SI_Hyakkiyako_G01_tip:"§C$SI_Hyakkiyako_G01$§!"
+
+ SI_Hyakkiyako_G02:"Plotki z Hallu"
+ SI_Hyakkiyako_G02_desc:"Najbardziej znanym sklepem Hyakkiyako jest Hyakuyadou. Otworzy on swoje filie w całej Galaktyce, wnosząc życie i domowy zgiełk do wszystkich studentów w całym systemie gwiezdnym."
+ SI_Hyakkiyako_G02_effect:"Efekty:"
+ SI_Hyakkiyako_G02_tip:"§C$SI_Hyakkiyako_G02$§!\n$SI_Hyakkiyako_G02_desc$\n$SI_Hyakkiyako_G02_effect$"
+
+ SI_Hyakkiyako_G03:"Słoneczna Opowieść Morza"
+ SI_Hyakkiyako_G03_desc:"Budowa kurortów turystycznych zawsze była wielkim celem Działu Yin-Yang, a na szczęście po wkroczeniu do galaktyki nie brakuje nam obcych krajobrazów."
+ SI_Hyakkiyako_G03_effect:"\nEfekt:\n§HOdblokuwuje Decyzję Planetarną: §!$d_SI_Hyakkiyako_G03$\n"
+ SI_Hyakkiyako_G03_tip:"§C$SI_Hyakkiyako_G03$§!\n$SI_Hyakkiyako_G03_desc$\n$SI_Hyakkiyako_G03_effect$"
+
+ SI_Hyakkiyako_G04:"Spektakl Wielkich Fal"
+ SI_Hyakkiyako_G04_desc:"Tradycyjny teatr to specjalność Hyakkiyako. Kluby, takie jak Hyakka Ryoran, przygotują wspaniałe przedstawienia w różnorodnych stylach, jako kulminację uroczystości."
+ SI_Hyakkiyako_G04_effect:"\nEfekt:\n§HOdblokuwuje Decyzję Planetarną: §!$d_SI_Hyakkiyako_G04$\n"
+ SI_Hyakkiyako_G04_tip:"§C$SI_Hyakkiyako_G04$§!\n$SI_Hyakkiyako_G04_desc$\n$SI_Hyakkiyako_G04_effect$"
+
+ SI_Hyakkiyako_G05:"Spadające Kwiaty Wiśni"
+ SI_Hyakkiyako_G05_desc:"Gdy kultura Hyakkiyako rozprzestrzeniła się po całym Kivotos, wszyscy poczuli nową więź i harmonię ze światem i otaczającymi ich ludźmi. Federacja ustanowiła nowe święto państwowe jako dowód tego zwycięstwa."
+ SI_Hyakkiyako_G05_effect:"\nEfekt:\nKluby należące do §UZjednoczonej Akademii Hyakkiyako§! będą aktywowane automatycznie każdego roku i wzmocnią efekty aktywacji tych klubów.\n"
+ SI_Hyakkiyako_G05_tip:"§C$SI_Hyakkiyako_G05$§!\n$SI_Hyakkiyako_G05_desc$\n$SI_Hyakkiyako_G05_effect$"
+
+ ### 第二页
+ SI_Hyakkiyako_G06:"Kryzys"
+ SI_Hyakkiyako_G06_desc:"W obliczu niepokojącej sytuacji w galaktyce, nadszedł czas, aby Kivotos znalazło rozwiązanie. W tej chwili przypadkowo przypomnieliśmy sobie o pewnej ważnej osobie, o kimś, kogo nazwisko nie jest powszechnie znane – być może ona wskaże nam drogę."
+ SI_Hyakkiyako_G06_effect:"\nEfekt:\n§HOdblokuwuje Budynek Planetarny: §!Biuro Kryzysowych Decyzji Nowego Hyakka Ryoran\nTen budynek jest ograniczony do 1 na imperium i może być zbudowany tylko na stolicy.\n"
+ SI_Hyakkiyako_G06_tip:"§C$SI_Hyakkiyako_G06$§!\n$SI_Hyakkiyako_G06_desc$\n$SI_Hyakkiyako_G06_effect$"
+
+ SI_Hyakkiyako_G07:"Cierpliwość"
+ SI_Hyakkiyako_G07_desc:"Hyakka Ryoran pędzi w każdy zakątek Kivotos, szukając wskazówek dotyczących Prezeski Kuzuha. Była to pierwotna prezeska Hyakka Ryoran, a w oczach starszych uczniów Hyakkiyako jest obiektem podziwu."
+ SI_Hyakkiyako_G07_effect:"\nEfekt:\n§HOdblokuwuje Jednostkę Lądową: §!Federalna Połączona Armia Komitetu Mediacji\nZapewnia dużą obronę naziemną tej armii dla wszystkich planet.\n§HOtrzymuje Modyfikator Imperium: §!Poszukiwanie, Nadzieja i Cierpliwość\n"
+ SI_Hyakkiyako_G07_tip:"§C$SI_Hyakkiyako_G07$§!\n$SI_Hyakkiyako_G07_desc$\n$SI_Hyakkiyako_G07_effect$"
+
+ SI_Hyakkiyako_G08:"Decyzja"
+ SI_Hyakkiyako_G08_desc:"Wskazówki nagle się urywają, szukamy nowych sposobów poszukiwań, ale zanim to nastąpi, musimy przyspieszyć produkcję w obliczu potencjalnego nadchodzącego zagrożenia. W tej sytuacji studenci nieuchronnie zaczęli odczuwać niepokój."
+ SI_Hyakkiyako_G08_effect:"\nEfekt:\n§HOtrzymuje Modyfikator Imperium: §!Decyzja, Wskazówki i Dążenie\n"
+ SI_Hyakkiyako_G08_tip:"§C$SI_Hyakkiyako_G08$§!\n$SI_Hyakkiyako_G08_desc$\n$SI_Hyakkiyako_G08_effect$"
+
+ SI_Hyakkiyako_G09:"Zanurzenie w Sen"
+ SI_Hyakkiyako_G09_desc:"Smuga dymu, dzbanek wina, fajka, powitanie\nNie wiedza, nie troska, nie przeznaczenie, lecz dźwięk walki ujawnia ślady\nSprawy nie są takie, jakimi się wydają, los nie jest losem, biały lis skupia serce, by sprzeciwić się woli niebios."
+ SI_Hyakkiyako_G09_effect:"\nEfekt:\n§RUsuwa Modyfikator Imperium: §!Poszukiwanie, Nadzieja i Cierpliwość, Decyzja, Wskazówki i Dążenie\n§HOtrzymuje Modyfikator Imperium: §!Gdzie jest Lis ze snu?\n§HOtrzymuje Gubernatora 9. poziomu§! Kuzuha\n"
+ SI_Hyakkiyako_G09_tip:"§C$SI_Hyakkiyako_G09$§!\n$SI_Hyakkiyako_G09_desc$\n$SI_Hyakkiyako_G09_effect$"
+
+ #####    瓦尔基里    #####
+ SI_Valkyrie_tip:"Filozofia Akademii (Opcjonalnie):§cAkademia Policyjna Valkyrie§!\nAkademia Policyjna Valkyrie wyszkoliła większość sił bezpieczeństwa Kivotos, a zapewniana przez nią organizacja jest gwarancją dobrobytu.\n"
+
+ SI_Valkyrie_G01:"Egzekwowanie Prawa w Stylu Valkyrie"
+ SI_Valkyrie_G01_desc:"Ignorując wszelkie zasady grup straży obywatelskiej, dawna 'żelazna ręka' Valkyrie powraca!"
+ SI_Valkyrie_G01_effect:"\nEfekt:\n§HOdblokuwuje Decyzję Planetarną: §!$decision_SI_Valkyrie_G01$\n"
+ SI_Valkyrie_G01_tip:"§C$SI_Valkyrie_G01$§!\n$SI_Valkyrie_G01_desc$\n$SI_Valkyrie_G01_effect$"
+
+ SI_Valkyrie_G02:"Dekret o Fosach Obrony"
+ SI_Valkyrie_G02_desc:"Wyznaczając dedykowane policyjne strefy satelitarne, Valkyrie może w pełni wypełnić swoją misję, chroniąc kluczowe strategiczne punkty."
+ SI_Valkyrie_G02_effect:"\nEfekt:\n$MOD_ARMY_DEFENSE_HEALTH_MULT$: §G+150%§!\n$MOD_ARMY_DEFENSE_DAMAGE_MULT$: §G+150%§!\n$mod_edicts_upkeep_mult$: §G-50%§!\n$mod_country_energy_produces_mult$: §R-5%§!\n"
+ SI_Valkyrie_G02_tip:"§C$SI_Valkyrie_G02$§!\n$SI_Valkyrie_G02_desc$\n$SI_Valkyrie_G02_effect$"
+
+ SI_Valkyrie_A01:"Dwufunkcyjny Port Wojskowo-Policyjny"
+ SI_Valkyrie_A01_desc:"Projektując ujednolicone wojskowe i policyjne małe stocznie, moduły produkcyjne są ponownie montowane, co znacznie zwiększa wydajność."
+ SI_Valkyrie_A01_effect:"\nEfekt:\n§HOdbl. budynek bazy gwiezdnej: §!$sm_BA_SI_Valkyrie_A01$\n"
+ SI_Valkyrie_A01_tip:"§C$SI_Valkyrie_A01$§!\n$SI_Valkyrie_A01_desc$\n$SI_Valkyrie_A01_effect$"
+
+ SI_Valkyrie_A02:"Departament Nawigatorów"
+ SI_Valkyrie_A02_desc:"Walkiria wyszkoliła niezliczone rzesze uczennic posiadających kwalifikacje nawigatorów. Pod dowództwem Departamentu Zarządzania dzielnie strzegą głębin kosmosu, koordynując wszystkie statki Federacji."
+ SI_Valkyrie_A02_effect:"\nEfekt:\n$MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+15%§!\n$MOD_STARBASE_SHIPYARD_BUILD_COST_MULT$: §G-15%§!\n$MOD_COUNTRY_NAVAL_CAP_MULT$: §G+20%§!\n"
+ SI_Valkyrie_A02_tip:"§C$SI_Valkyrie_A02$§!\n$SI_Valkyrie_A02_desc$\n$SI_Valkyrie_A02_effect$"
+
+ SI_Valkyrie_B01:"Protokół Pierwszego Strzału"
+ SI_Valkyrie_B01_desc:"Gdy nadchodzi wojna, infrastruktura Walkirii zapewnia wszelką pomoc dla wstępujących do armii, będąc pierwszym przystankiem na drodze ku linii frontu, czy to dla zdobywców, czy obrońców."
+ SI_Valkyrie_B01_effect:"\nEfekt:\nZamienia §Y£job_BA_Vigilant_crew£$job_BA_Vigilant_crew$§! na §Y£job_BA_Valkyrie_police£$job_BA_Valkyrie_police$§!\n§HOdbl. budynek planetarny: §!$building_BA_SI_Valkyrie_B02$\n"
+ SI_Valkyrie_B01_tip:"§C$SI_Valkyrie_B01$§!\n$SI_Valkyrie_B01_desc$\n$SI_Valkyrie_B01_effect$"
+
+ SI_Valkyrie_B02:"Pełna Mobilizacja Łańcuchowa"
+ SI_Valkyrie_B02_desc:"Przeniesienie części władzy wojskowej na Walkirię, wykorzystując sieć organizacji policyjnych do przekazywania personelu i doświadczenia bojowego."
+ SI_Valkyrie_B02_effect:"\nEfekt:\n$MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+35%§!\n$MOD_SHIP_WEAPON_DAMAGE$: §G+25%§!\n$MOD_SHIP_FIRE_RATE_MULT$: §G+25%§!\n$mod_damage_vs_country_type_dormant_marauders_mult$: §G+500%§!"
+ SI_Valkyrie_B02_tip:"§C$SI_Valkyrie_B02$§!\n$SI_Valkyrie_B02_desc$\n$SI_Valkyrie_B02_effect$"
+
+ #####     山海经     #####
+ SI_Shanhaijing_tip:"Filozofia Akademii (Opcjonalnie): §GSzkoła Wyższa Shanhaijing§!\nShanhaijing to akademia rozwinięta na solidnym fundamencie, zwanym pieniędzmi i pracą. Zderzenie ideałów z rzeczywistością jest wiecznym tematem Shanhaijing.\n"
+
+ SI_Shanhaijing_G01:"Instytucja Ogrodu Śliw"
+ SI_Shanhaijing_G01_desc:"Po podjęciu decyzji o jednej ze stron, musimy najpierw rozbudować Instytucję Ogrodu Śliw, aby ułatwić Shanhaijing wewnętrzne szkolenie studentów."
+ SI_Shanhaijing_G01_effect:"\nEfekt:\n§HOdbl. budynek: §!$building_BA_SI_Shanhaijing_G01$ (przekształca się z $building_BA_starlink_2$)\n"
+ SI_Shanhaijing_G01_tip:"§C$SI_Shanhaijing_G01$§!\n$SI_Shanhaijing_G01_desc$\n$SI_Shanhaijing_G01_effect$"
+
+ SI_Shanhaijing_G02:"Laboratorium Alchemii"
+ SI_Shanhaijing_G02_desc:"Laboratorium Biologiczne Shanhaijing jest bezcennym skarbem naszego Kiwotosu (w każdym tego słowa znaczeniu)."
+ SI_Shanhaijing_G02_effect:"\nEfekt:\n§HOdbl. budynek: §!$building_BA_SI_Shanhaijing_G02$\n"
+ SI_Shanhaijing_G02_tip:"§C$SI_Shanhaijing_G02$§!\n$SI_Shanhaijing_G02_desc$\n$SI_Shanhaijing_G02_effect$"
+
+ SI_Shanhaijing_A01:"Brama Czarnego Smoka - Obrona Graniczna"
+ SI_Shanhaijing_A01_desc:"Samo poleganie na potężnej obronie floty nieuchronnie prowadzi do konfliktów. Tylko wyspecjalizowane baterie, strzegące granic, mogą zapewnić kompleksową ochronę."
+ SI_Shanhaijing_A01_effect:"\nEfekt:\n$mod_deep_space_citadel_limit_add$: §G+1§!\n$mod_shipclass_military_station_damage_mult$: §G+25%§!\n$mod_shipclass_military_station_build_speed_mult$: §G+75%§!\n$mod_shipclass_military_station_build_cost_mult$: §G-25%§!\n"
+ SI_Shanhaijing_A01_tip:"§C$SI_Shanhaijing_A01$§!\n$SI_Shanhaijing_A01_desc$\n$SI_Shanhaijing_A01_effect$"
+
+ SI_Shanhaijing_A02:"Brama Czarnego Smoka - Modułowa Artyleria Ciężka"
+ SI_Shanhaijing_A02_desc:"Rozłożenie komponentów gigantycznych dział na moduły i przekazanie ich do produkcji w fabrykach może znacznie przyspieszyć produkcję baterii. Kontrola i logistyka baterii mogą być również traktowane w ten sam sposób."
+ SI_Shanhaijing_A02_effect:"\nEfekt:\n$mod_shipsize_BA_defence_cannon_build_speed_mult$: §G+300%§!\n$MOD_STARBASE_DEFENSE_PLATFORM_CAPACITY_ADD$: §G+20§!\n"
+ SI_Shanhaijing_A02_tip:"§C$SI_Shanhaijing_A02$§!\n$SI_Shanhaijing_A02_desc$\n$SI_Shanhaijing_A02_effect$"
+
+ SI_Shanhaijing_A03:"Brama Czarnego Smoka - Wola Walki"
+ SI_Shanhaijing_A03_desc:"Bez siły i sprytu wszystko zostanie zawłaszczone przez innych."
+ SI_Shanhaijing_A03_effect:"\n§RWyklucza się z§!$SI_Shanhaijing_B03$§R§!\nEfekt:\n$mod_deep_space_citadel_limit_add$: §G+1§!\nOdblokowuje sekcję $dsc_name$: §YTyp moździerzowy§! i §YTyp salwowy§!\n$MOD_SHIP_EXPERIENCE_GAIN_MULT$: §G+400%§!\n"
+ SI_Shanhaijing_A03_tip:"§C$SI_Shanhaijing_A03$§!\n$SI_Shanhaijing_A03_desc$\n$SI_Shanhaijing_A03_effect$"
+
+ SI_Shanhaijing_A04:"Brama Czarnego Smoka - Żelazny Mur Tysiąca Li"
+ SI_Shanhaijing_A04_desc:"Tylko przekształcając linię obrony w niezniszczalny żelazny mur, możemy chronić nasz pot i trud."
+ SI_Shanhaijing_A04_effect:"\nEfekt:\n§HOdbl. budynek bazy gwiezdnej: §!$sm_BA_SI_Shanhaijing_A04$\nNatychmiast buduje 5 jednostek §Y$BA_defence_cannon$§! dla wszystkich baz gwiezdnych, zgodnie z obecnym projektem.\nMoże budować §Y$BA_defence_cannon$§! dla §Y$starbase_starport$ lub $orbital_ring_tier_1$ pierwszego poziomu§!\n"
+ SI_Shanhaijing_A04_tip:"§C$SI_Shanhaijing_A04$§!\n$SI_Shanhaijing_A04_desc$\n$SI_Shanhaijing_A04_effect$"
+
+ SI_Shanhaijing_B01:"Konsorcjum Xuanwu - Szare Interesy"
+ SI_Shanhaijing_B01_desc:"Jeśli tylko uda się osiągnąć rozsądny cel, lekkie naginanie zasad jest jak najbardziej dopuszczalne."
+ SI_Shanhaijing_B01_effect:"\nEfekt:\nPo przygotowaniu specjalnych zamówień, §Y$Xuanwu_promenade$§! generuje dużą ilość $trade_with_icon$\n"
+ SI_Shanhaijing_B01_tip:"§C$SI_Shanhaijing_B01$§!\n$SI_Shanhaijing_B01_desc$\n$SI_Shanhaijing_B01_effect$"
+
+ SI_Shanhaijing_B02:"Izba Handlowa Genbu – Wsparcie Przepływu"
+ SI_Shanhaijing_B02_desc:"Tylko zasoby w obiegu można nazwać gospodarką, inaczej nawet najcenniejsze rzeczy są niczym bańki mydlane."
+ SI_Shanhaijing_B02_effect:"\nEfekt:\n$mod_BA_staff_pop_trade_produces_mult$: §G+150%§!\n"
+ SI_Shanhaijing_B02_tip:"§C$SI_Shanhaijing_B02$§!\n$SI_Shanhaijing_B02_desc$\n$SI_Shanhaijing_B02_effect$"
+
+ SI_Shanhaijing_B03:"Izba Handlowa Genbu – Cień Zaufania"
+ SI_Shanhaijing_B03_desc:"Zaufanie to fundament transakcji, a koszty transakcji bezpośrednio decydują o tym, czy droga naprzód będzie wyboista."
+ SI_Shanhaijing_B03_effect:"\n§RWzajemnie wyklucza się z§!$SI_Shanhaijing_A03$§R!§\nEfekt:\nTransakcje dokonywane poprzez §Yspecjalne zamówienia z $Xuanwu_promenade$§! lub §YAnioł 24§! zapewniają podwójne zasoby\n$mod_country_trade_produces_mult$: §G+20%§!\n$MOD_COUNTRY_TRADE_FEE$: §G-25%§!\n§HOdbl. budynek oddziału: §!Strefa Handlu Zagranicznego Izby Handlowej Genbu\n\n"
+ SI_Shanhaijing_B03_tip:"§C$SI_Shanhaijing_B03$§!\n$SI_Shanhaijing_B03_desc$\n$SI_Shanhaijing_B03_effect$"
+
+ SI_Shanhaijing_B04:"Izba Handlowa Genbu – Rozpalanie do Czerwoności"
+ SI_Shanhaijing_B04_desc:"Gospodarka jest środkiem, a nie celem. Tylko stosując najbardziej intensywne środki, można osiągnąć największe cele."
+ SI_Shanhaijing_B04_effect:"\nEfekt:\n§HOdbl. decyzję planetarną: §!$decision_SI_Shanhaijing_B04$\n"
+ SI_Shanhaijing_B04_tip:"§C$SI_Shanhaijing_B04$§!\n$SI_Shanhaijing_B04_desc$\n$SI_Shanhaijing_B04_effect$"

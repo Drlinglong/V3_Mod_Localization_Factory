@@ -1,0 +1,23 @@
+﻿l_english:
+#站开建筑
+ builiding_BA_hab_maintenance:"Habitat Maintenance Node"
+ builiding_BA_hab_maintenance_desc:"Placeholder"
+
+ builiding_BA_hab_allocation:"Habitat Distribution Node"
+ builiding_BA_hab_allocation_desc:"Placeholder"
+
+ builiding_BA_hab_expansionCabin:"Habitat Expansion Dock"
+ builiding_BA_hab_expansionCabin_desc:"Placeholder"
+
+#站开区域
+ zone_unavailable_BA_auto_district:0 "$zone_unavailable_tech$$engineering_research_icon_with_space$$tech_BA_pyroxenes_using$"
+ zone_BA_auto_goverment:"Hive Capital"
+ zone_BA_auto_goverment_desc: ""
+ zone_BA_auto_unity:"Habitat Archive"
+ zone_BA_auto_unity_desc: ""
+ zone_BA_auto_commercial:"Habitat Logistics Center"
+ zone_BA_auto_commercial_desc: ""
+ zone_BA_auto_A:"Automated Habitat Expansion Module"
+ zone_BA_auto_A_desc:"Install additional expansion modules to accommodate more workload."
+ zone_BA_auto_B:"High-Density Specialization Module"
+ zone_BA_auto_B_desc:"Install specialization modules to fully automate this district."

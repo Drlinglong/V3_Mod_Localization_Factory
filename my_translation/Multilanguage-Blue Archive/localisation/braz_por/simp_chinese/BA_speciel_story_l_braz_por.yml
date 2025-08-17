@@ -1,0 +1,112 @@
+﻿l_braz_por:
+#### 蓝鲸之梦（星野就职事件链）
+ BA_origin.0101.name:0 "Caminhando na Encruzilhada do Passado e do Futuro"
+ BA_origin.0101.desc:0 "Hoshino não disse nada, apenas me indicou para segui-la. Enquanto a seguia, não pude deixar de admirar a garota, que era uma cabeça mais baixa que eu."
+ BA_origin.0101.a:0 "Porque, em sua celebração, havia uma pessoa ausente."
+ BA_origin.0101.b:0 "E, aquela pessoa, provavelmente, nunca mais voltaria."
+
+ BA_origin.0102.name:0 "O Futuro que Enfrentamos Juntos"
+ BA_origin.0102.desc:0 "Nós dois, evitando o trânsito agitado e ininterrupto, chegamos a um lugar que me trazia nostalgia – o antigo prédio escolar de Abydos. Os arredores ainda estavam tão silenciosos como de costume, talvez por sua intenção."
+ BA_origin.0102.a:0 "Decidi que farei o meu melhor para apoiar essa garota forte."
+
+ BA_origin.0103.name:0 "Antes do Amanhecer"
+ BA_origin.0103.desc:0 "Hoje, Hoshino acordou excepcionalmente cedo, talvez porque teve dificuldade para dormir na noite anterior. Normalmente, ela voltaria para tirar um cochilo, mas hoje simplesmente não conseguia dormir."
+ BA_origin.0103.a:0 "O período antes do nascer do sol é geralmente o mais escuro."
+
+ BA_origin.0104.name:0 "O Sonho da Baleia Azul"
+ BA_origin.0104.desc:0 "Em seus momentos de lazer, Hoshino sempre voltava ao resort, observando o mar em silêncio – o mar calmo, ondulando mecanicamente. O que tanto atraía essa garota vinda das profundezas do deserto?"
+ BA_origin.0104.a:0 "Essa garota que se intitula 'Velhote' decidiu perseguir novamente o sonho de outrora."
+
+ BA_origin.0105.name:0 "No Ponto de Partida do Milagre"
+ BA_origin.0105.desc:0 "“Você veio por causa da Senpai Yume, não é?” Assim que Hoshino entrou, consegui ler algo em seu rosto, ainda mais se tratando da Senpai Yume."
+ BA_origin.0105.a:0 "Talvez, em lugares que ela nem percebeu, ela também esteja mudando lentamente."
+
+ BA_origin.0106.name:0 "O Sonho da Baleia Azul — Análise de Halo"
+ BA_origin.0106.desc:0 "Hoshino-chan desceu do equipamento experimental. A análise dos componentes principais de seu halo foi concluída. Esses dados serão usados para fabricar um halo em branco para a Senpai Yume e, futuramente, para preparar a criação de halos para outras criaturas."
+ BA_origin.0106.a:0 "Vamos prosseguir com o próximo passo do plano."
+
+ BA_origin.0107.name:0 "O Sonho da Baleia Azul — Fabricação de Halo em Branco"
+ BA_origin.0107.desc:0 "De acordo com os resultados da análise, precisamos de substâncias capazes de conter a força do halo para fabricá-lo. O Pyroxene é uma opção barata, mas sua capacidade de contenção está longe de ser suficiente. Por isso, teremos que usar temporariamente os raros Caracteres Divinos. Talvez no futuro encontremos um substituto melhor."
+ BA_origin.0107.a:0 "Vá em frente e faça."
+
+ BA_origin.0108.name:0 "O Sonho da Baleia Azul — Retorno"
+ BA_origin.0108.desc:0 "O link de transmissão estabelecido pelo Pyroxene foi excepcionalmente lento. Com a injeção dos últimos dados, a forma do halo também mudou. Após confirmar a estabilidade do halo, conectamos cuidadosamente o halo ao corpo de Yume."
+ BA_origin.0108.a:0 "“Há quanto tempo, Senpai.”"
+ BA_origin.0108.b:0 "“Bem-vinda de volta, Senpai.”"
+
+ BA_origin.0109.name:0 "Epílogo"
+ BA_origin.0109.desc:0 "Cerca de um mês depois, um novo visitante chegou ao prédio de Schale."
+ BA_origin.0109.a:0 "Mas o que é tudo isso?"
+
+#### 没包之人（优香就职事件链）
+ BA_origin.0401.name:0 "A Pessoa Sem Mochila"
+ BA_origin.0401.desc:0 "Este incidente causou grande insatisfação em Yuuka. Após terminar o trabalho financeiro do Conselho Estudantil Federal, ela imediatamente apresentou um pedido ao Departamento de Engenharia."
+ BA_origin.0401.a:0 "Espero que o desejo dela se realize."
+
+#### 我也没想好后续，随便写点吧 （日奈就职事件链）
+ BA_origin.0201.name:0 "A Presidente Hina Ainda Ocupada"
+ BA_origin.0201.desc:0 "No caminho para o escritório, de repente me lembrei do que Ako havia me incumbido, então aproveitei para fazer um café."
+ BA_origin.0201.a:0 "Afinal, os dias à frente ainda são longos."
+
+######     群友彩蛋     ######
+#### 彩蛋事件链-Azusa
+ BA_Easter_egg.0002.title:0 "Foto Estranha"
+ BA_Easter_egg.0002.desc:0 "Hoje, uma foto de [Root.GetName] usando meias brancas apareceu de repente nas telas de todos os dispositivos eletrônicos de [Root.owner.GetName]. Mas em apenas um segundo, a foto desapareceu, deixando apenas uma mensagem misteriosa:"
+ BA_Easter_egg.0002.tip:0 "Obtido da foto: §G+1§!£unity£"
+ BA_Easter_egg.0002.a:0 "Investigar a origem da foto e da mensagem."
+ BA_Easter_egg.0002.b:0 "É só uma brincadeira boba, deixa pra lá."
+
+ BA_Easter_egg.0003.title:0 "EasterEgg: MiAzusa"
+ BA_Easter_egg.0003.desc:0 "Não demorou muito, o misterioso remetente de fotos de meias brancas voltou a agir. Recebemos novamente fotos de meias brancas de [From.GetName], e as fotos desapareceram na velocidade da luz, assim como da última vez, deixando novamente a mesma mensagem misteriosa:\n“§YPeek§!” Diferente da última vez, capturamos o ID do remetente e descobrimos, pelas fotos que passaram em um piscar de olhos, que a pessoa na foto não era [From.GetName], mas sim o próprio remetente."
+ BA_Easter_egg.0003.tip:0 "Obtido da foto: §G+2§!£unity£"
+ BA_Easter_egg.0003.a:0 "Implante bem aquele “sistema antimísseis”, mas certifique-se de guardar as fotos."
+ BA_Easter_egg.0003.b:0 "Descubra o endereço IP, capture-o e faça-o usar meias pretas."
+
+ BA_Easter_egg.0004.title:0 "EasterEgg: MiAzusa"
+ BA_Easter_egg.0004.desc:0 "Capturamos com sucesso o remetente das fotos e o processamos por hackear o sistema de comunicação superluminal. O benevolente Conselho Estudantil Federal o sentenciou a §Genviar regularmente uma quantidade suficiente de fotos§! para toda Kivotos admirar."
+ BA_Easter_egg.0004.a:0 "Muito bom! Adoramos! Mande mais!"
+ BA_Easter_egg.0004.b:0 "Fotos de meias brancas devem ser enviadas, fotos de meias pretas também devem ser enviadas. Só assim podemos considerar isso saudável."
+
+#### 彩蛋事件链-鞋垫#1
+ BA_Easter_egg.0011.title:0 "A Polêmica da Mineração"
+ BA_Easter_egg.0011.desc:0 "Recentemente, uma febre de mineração bastante intensa varreu Kivotos.\nNos últimos meses, inúmeros chips foram montados em GPUs, enviados em linha de produção para fazendas de mineração dedicadas, para minerar uma criptomoeda digital.\nEmbora o algoritmo da moeda seja muito sofisticado e sua segurança e confiabilidade sejam garantidas, a negociação de moedas é, afinal, um método econômico atrasado da era pré-superluminal. Além disso, o processo de mineração consome uma grande quantidade de energia desnecessariamente, e componentes que operaram sob alta carga apresentam riscos significativos se usados para outros fins.\nEm suma, é hora de parar com essa farsa; sob forte protesto da Sala de Mediação, o Conselho Estudantil Federal já colocou o plano de proibição na agenda."
+ BA_Easter_egg.0011.a:0 "Com certeza há alguém por trás disso tudo, orquestrando."
+ BA_Easter_egg.0011.a.tip:0 "Já estava na hora de dar um jeito nisso."
+ BA_Easter_egg.0011.b:0 "Essa onda de bolha vem rápido e vai rápido. Acalmem-se um pouco."
+ BA_Easter_egg.0011.b.tip:0 "É só uma brincadeira boba, deixa pra lá."
+
+ BA_Easter_egg.0012.title:0 "A Polêmica da Mineração"
+ BA_Easter_egg.0012.desc:0 "A Sala de Mediação primeiro enviou alguns informantes a algumas fazendas de mineração subterrâneas, começando pelas criptomoedas digitais mais populares do momento, analisando pouco a pouco os fluxos monetários, algoritmos e jogadores por trás delas. À medida que a investigação se aprofundava, o nome de uma empresa começou a surgir lentamente, revelando seu grande envolvimento no assunto: §ENephthys§!."
+ BA_Easter_egg.0012.a:0 "...Primeiro, vamos conversar com os responsáveis."
+
+ BA_Easter_egg.0013.title:0 "A Polêmica da Mineração"
+ BA_Easter_egg.0013.desc:0 "A Sala de Mediação organizou uma conversa secreta entre o Conselho Estudantil Federal e os envolvidos da Nephthys. O resultado foi surpreendente: a Nephthys utilizou alguns métodos para reunir os recursos de poder computacional da atual rede de moedas digitais, adquirindo muito hardware usado para mineração e convertendo esses equipamentos para uso em IA. De acordo com a representante da Nephthys, §YNonomiya Izayoi§!, o objetivo dessa ação era eliminar a 'economia monetária ressurgente'. Após confirmar que os objetivos de ambas as partes eram consistentes, Nonomiya, representando a Nephthys, declarou que elas continuariam a lidar com esse hardware de uso inadequado e que, no momento, precisavam de alguma assistência do Conselho Estudantil Federal; em troca, a Nephthys poderia fornecer um nome ao Conselho Estudantil Federal."
+ BA_Easter_egg.0013.a:0 "Um nome..."
+
+ BA_Easter_egg.0014.title:0 "Por Trás do Incidente da Mineração"
+ BA_Easter_egg.0014.desc:0 "Com base nas pistas fornecidas por Nonomiya, a Sala de Mediação conseguiu capturar essa pessoa com grande facilidade. Essa pessoa se chama §YToru Shiraishi§!, e embora pouco conhecida, atualmente projetou a maioria dos algoritmos de moedas e obteve uma renda considerável vendendo planos e dividendos. Mais surpreendente ainda, a maior parte dessa renda foi usada para comprar e estocar bens essenciais; até o momento de sua captura, os suprimentos acumulados por essa pessoa seriam suficientes para mais de dez mil pessoas por um ano inteiro."
+ BA_Easter_egg.0014.a:0 "Embora não entendamos muito bem o que você estava fazendo, essa farsa também deve chegar ao fim."
+
+ BA_Easter_egg.0015.title:0 "Por Trás do Incidente da Mineração"
+ BA_Easter_egg.0015.desc:0 "Com a captura do fornecedor do plano, o mercado de transações de moedas virtuais gradualmente encolheu, e a Sala de Mediação aproveitou a oportunidade para agir em larga escala, eliminando todos os fornecedores. Assim, a polêmica da mineração chegou ao fim."
+ BA_Easter_egg.0015.a:0 "Mo~e~da~ vir~tu~al~, vá~ pra~ lon~ge~!"
+
+######     其他彩蛋     ######
+#### 彩蛋遗址-超天酱
+ BA_Easter_egg_Angel_arc_site:0 "Ruínas da Internet Pós-Moderna"
+ BA_Easter_egg_Angel_arc_site_desc:0 "Este é um planeta-barreira. Diferente das barreiras que já vimos, a barreira deste planeta pode ser atravessada, e as formas de vida inteligentes sob a barreira, registradas como espécies '§_[[UNKNOWN]§!', ainda estão vivendo suas vidas. No início da descoberta deste planeta, tentamos algumas medidas para evitar ser observados pelas criaturas nele, mas logo descobrimos que era um esforço desnecessário e em vão: como se estivéssemos assistindo a uma gravação de vídeo através de uma tela, ou como se estivéssemos dentro de uma projeção holográfica, não importa que ações tomemos, parece que nada do que fazemos afeta as espécies '§_[[UNKNOWN]§!' no planeta."
+ BA_Easter_egg_Angel_arc_site_title_RAID01:0 "Universo Infinito"
+ BA_Easter_egg_Angel_arc_site_desc_RAID01:0 ""
+ BA_Easter_egg_Angel_arc_site_option_RAID01:0 ""
+ BA_Easter_egg_Angel_arc_site_title_RAID02:0 "Universo Infinito"
+ BA_Easter_egg_Angel_arc_site_desc_RAID02:0 ""
+ BA_Easter_egg_Angel_arc_site_option_RAID02:0 ""
+ BA_Easter_egg_Angel_arc_site_title_RAID03:0 "Anjos voam sobre o universo infinito"
+ BA_Easter_egg_Angel_arc_site_desc_RAID03:0 ""
+ BA_Easter_egg_Angel_arc_site_option_RAID03:0 "“Obrigado, a Vida na Internet é Muito Feliz”"
+ BA_Easter_egg_Angel_arc_site_title_RAID04:0 "THE INTERNET ANGEL be INVOKED"
+ BA_Easter_egg_Angel_arc_site_desc_RAID04:0 ""
+ BA_Easter_egg_Angel_arc_site_option_RAID04:0 ""
+ BA_Easter_egg_Angel_arc_site_title_RAID05:0 "THE INTERNET ANGEL be INVOKED"
+ BA_Easter_egg_Angel_arc_site_desc_RAID05:0 ""
+ BA_Easter_egg_Angel_arc_site_option_RAID05:0 ""

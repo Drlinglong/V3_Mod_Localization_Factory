@@ -1,0 +1,162 @@
+﻿l_polish:
+ BA_envoy:0 "Wysłannik Federalnej Rady Uczniowskiej"
+ BA_fe_commander:0 "Dowódca Pionierów"
+ ###  Fleet
+ namelist_BA_fleet_001:0 "Pierwsza Grupa Zadaniowa Schale"
+ namelist_BA_fleet_002:0 "Druga Grupa Zadaniowa Schale"
+ namelist_BA_fleet_003:0 "Trzecia Grupa Zadaniowa Schale"
+ namelist_BA_fleet_004:0 "Flota Komitetu Realizacji Sprawiedliwości z Trinity"
+ namelist_BA_fleet_005:0 "Flota Komitetu Dyscyplinarnego Gehenny"
+ namelist_BA_fleet_006:0 "Flota Komitetu ds. Przeciwdziałania z Abydos"
+ namelist_BA_fleet_007:0 "Specjalna Flota C&C z Millennium"
+ namelist_BA_fleet_008:0 "Flota Egzekucyjna Valkyrie"
+ namelist_BA_fleet_009:0 "Flota Straży Królewskiej Czerwonej Zimy"
+ namelist_BA_fleet_010:0 "Flota Gildii Handlowej Genbu z Shanhaijing"
+ namelist_BA_fleet_011:0 "Zjednoczona Flota Hyakkiyako"
+ namelist_BA_fleet_ArisPR:0 "Bezrozróżnieniowy Ostrzał"
+
+ BA_xxARMADA_ORD:0 "Grupa Okrętów Kivotos $C$"
+ BA_xxGROUNDSHIELD_ORD:0 "Jednostka Obronna Obszaru Autonomicznego $C$"
+ BA_xxWARGUILD_ORD:0 "Grupa Spadochroniarzy $C$"
+
+
+ ###  Planet
+ namelist_BA_planet_SP01:0 "Gwiezdny Punkt"
+ namelist_BA_planet_SP02:0 "Kryształowy Błysk"
+ namelist_BA_planet_SP03:0 "Śnieżny Blask"
+ namelist_BA_planet_SP04:0 "Promienny Blask"
+ namelist_BA_planet_SP10:0 "Metal"
+ namelist_BA_planet_SP11:0 "Miedź"
+ namelist_BA_planet_SP12:0 "Srebro"
+ namelist_BA_planet_SP13:0 "Złoto"
+ namelist_BA_planet_SP14:0 "Platyna"
+
+
+ ###  Colony
+
+ namelist_BA_colony_event_001:"D.U. Biały Ptak"
+ namelist_BA_colony_event_002:"D.U. OOPArts"
+ namelist_BA_colony_001:"D.U. Strefa Ekonomiczna Czarnej Bramy Smoka"
+ namelist_BA_colony_002:"D.U. Ren Zhichuan"
+ namelist_BA_colony_003:"D.U. Obszar Górnego Lasu"
+ namelist_BA_colony_004:"D.U. Biegacz Kapuściany"
+ namelist_BA_colony_005:"D.U. Czarnobrody"
+ namelist_BA_colony_006:"D.U. Czerwona Gwiazda"
+ namelist_BA_colony_007:"D.U. Niebieska Gwiazda"
+ namelist_BA_colony_008:"D.U. Czarna Gwiazda"
+ namelist_BA_colony_009:"D.U. Port Pacis"
+ namelist_BA_colony_010:"D.U. Ścieżka Cienia"
+ namelist_BA_colony_011:"D.U. Toleu"
+ namelist_BA_colony_012:"D.U. 577"
+ namelist_BA_colony_013:"D.U. Park Utopia"
+ namelist_BA_colony_014:"D.U. Miasto Blasku"
+ namelist_BA_colony_015:"D.U. Targ Białego Wieloryba"
+ namelist_BA_colony_016:"D.U. 7. Sektor Usługowy"
+ namelist_BA_colony_017:"D.U. Centralna Dzielnica Zielonego Liścia"
+ namelist_BA_colony_018:"D.U. Miasto Piaskowego Ogona"
+ namelist_BA_colony_019:"D.U. Miasto Murawy"
+ namelist_BA_colony_020:"D.U. Tamagawa"
+ namelist_BA_colony_021:"D.U. Dzielnica Północnych Gór"
+ namelist_BA_colony_022:"D.U. Osiem Gór"
+ namelist_BA_colony_023:"D.U. Góra Kishu"
+ namelist_BA_colony_024:"D.U. Góra Akita"
+ namelist_BA_colony_025:"D.U. Targ Podniebnego Księżyca"
+ namelist_BA_colony_026:"D.U. Zawilec"
+ namelist_BA_colony_027:"D.U. Hiacynt"
+ namelist_BA_colony_028:"D.U. Lnica"
+ namelist_BA_colony_029:"D.U. Łubin"
+ namelist_BA_colony_030:"D.U. Czarna Lilia"
+ namelist_BA_colony_031:"D.U. Bielinek Kapustnik"
+ namelist_BA_colony_032:"D.U. Rzeka Suchej Doliny"
+ namelist_BA_colony_033:"D.U. 56. Sektor Usługowy"
+ namelist_BA_colony_034:"D.U. 34. Dzielnica Handlowa"
+ namelist_BA_colony_035:"D.U. Miasto Promieniste"
+ namelist_BA_colony_036:"D.U. Góra Jasnej Mgły"
+ namelist_BA_colony_037:"D.U. Góra Yangyi"
+ namelist_BA_colony_038:"D.U. Wielki Pałac Oceaniczny"
+ namelist_BA_colony_039:"D.U. Pawilon Wiśni"
+ namelist_BA_colony_040:"D.U. Park Ekologiczny Białego Tygrysa"
+ namelist_BA_colony_041:"D.U. Góra Nieśmiertelnych"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ###  Ship Class
+ namelist_BA_shipclass_ArisPR:0 "Bezrozróżnieniowy Ostrzał"
+
+
+ ###  Ship
+ namelist_BA_ship_ArisPR:0 "EU"
+
+
+
+ ###  AL-1S
+ namelist_BA_AL1S_first_names:0 "AL-1S"
+ namelist_BA_AL1S_first_names_pr:0 "Flashed_AL-1S"
+ namelist_BA_AL1S_second_names_001:0 "No.B62CF4"
+ namelist_BA_AL1S_second_names_002:0 "No.8A251D"
+ namelist_BA_AL1S_second_names_003:0 "No.3BEC8A"
+ namelist_BA_AL1S_second_names_004:0 "No.9E83AD"
+ namelist_BA_AL1S_second_names_005:0 "No.C41FD3"
+ namelist_BA_AL1S_second_names_006:0 "No.E57AF3"
+ namelist_BA_AL1S_second_names_007:0 "No.85E69D"
+ namelist_BA_AL1S_second_names_008:0 "No.5F31A4"
+ namelist_BA_AL1S_second_names_009:0 "No.E832C7"
+ namelist_BA_AL1S_second_names_010:0 "No.FB3745"
+ namelist_BA_AL1S_second_names_011:0 "No.B1FD34"
+ namelist_BA_AL1S_second_names_012:0 "No.5C6182"
+ namelist_BA_AL1S_second_names_013:0 "No.FB3DE9"
+ namelist_BA_AL1S_second_names_014:0 "No.F219D7"
+ namelist_BA_AL1S_second_names_015:0 "No.987DB5"
+ namelist_BA_AL1S_second_names_016:0 "No.FE8617"
+ namelist_BA_AL1S_second_names_017:0 "No.39B7AC"
+ namelist_BA_AL1S_second_names_018:0 "No.751ECF"
+ namelist_BA_AL1S_second_names_019:0 "No.AF8351"
+ namelist_BA_AL1S_second_names_020:0 "No.CB8A95"
+ namelist_BA_AL1S_second_names_021:0 "No.7CBE64"
+ namelist_BA_AL1S_second_names_022:0 "No.3E8A79"
+ namelist_BA_AL1S_second_names_023:0 "No.9182BF"
+ namelist_BA_AL1S_second_names_024:0 "No.59762A"
+ namelist_BA_AL1S_second_names_025:0 "No.DFA413"
+ namelist_BA_AL1S_second_names_026:0 "No.F3E5CD"
+ namelist_BA_AL1S_second_names_027:0 "No.17C5FD"
+ namelist_BA_AL1S_second_names_028:0 "No.7A8FC9"
+ namelist_BA_AL1S_second_names_029:0 "No.B39A78"
+ namelist_BA_AL1S_second_names_030:0 "No.F289DB"
+ namelist_BA_AL1S_second_names_031:0 "No.DB3C7A"
+ namelist_BA_AL1S_second_names_032:0 "No.2A7B4C"
+ namelist_BA_AL1S_second_names_033:0 "No.135AEF"
+ namelist_BA_AL1S_second_names_034:0 "No.2C14B9"
+ namelist_BA_AL1S_second_names_035:0 "No.72FD1E"
+ namelist_BA_AL1S_second_names_036:0 "No.482DBF"
+ namelist_BA_AL1S_second_names_037:0 "No.2FD95C"
+ namelist_BA_AL1S_second_names_038:0 "No.5384AF"
+ namelist_BA_AL1S_second_names_039:0 "No.F6A5B3"
+ namelist_BA_AL1S_second_names_040:0 "No.1C3F6D"
+ namelist_BA_AL1S_second_names_041:0 "No.5BF462"
+ namelist_BA_AL1S_second_names_042:0 "No.A63D1C"
+ namelist_BA_AL1S_second_names_043:0 "No.15EF76"
+ namelist_BA_AL1S_second_names_044:0 "No.8F3267"
+ namelist_BA_AL1S_second_names_045:0 "No.9BEC7D"
+ namelist_BA_AL1S_second_names_046:0 "No.EA918B"
+ namelist_BA_AL1S_second_names_047:0 "No.14A976"
+ namelist_BA_AL1S_second_names_048:0 "No.8EB23A"
+ namelist_BA_AL1S_second_names_049:0 "No.C739A8"
+ namelist_BA_AL1S_second_names_050:0 "No.3B4596"
+
+
+### Music
+ Kyrie_Eleison_Orchestra_ver:0 "233"

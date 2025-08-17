@@ -1,0 +1,114 @@
+﻿l_polish:
+### 外交辞令
+ 01_BA_FE_PATRONIZING:0 "Nie jesteśmy jeszcze do końca przyzwyczajeni do roli widzów spoza czwartej ściany... Ale i tak chcielibyśmy usłyszeć waszą historię."
+ 02_BA_FE_PATRONIZING:0 "Macie w sobie tyle energii, Przybysze... Zupełnie jak my dawno, dawno temu."
+ 03_BA_FE_PATRONIZING:0 "Mówicie, że tego nie naprawicie? ... Przyślijcie to do nas, może będziemy w stanie wam pomóc."
+ 04_BA_FE_PATRONIZING:0 "...Nic takiego, po prostu zobaczyłam znajomą twarz i przypomniały mi się nasze dawne koleżanki..."
+ 01_BA_FE_DISMISSIVE:0 "A, to wy. Mówcie."
+ 02_BA_FE_DISMISSIVE:0 "Nigdy nie lubiliśmy znęcać się nad innymi... Wiecie, o co chodzi."
+ 03_BA_FE_DISMISSIVE:0 "Nie będziemy dzielić się naszą technologią, chyba że będzie to absolutnie konieczne."
+ 01_BA_FE_ANGRY:0 "Krew i ogień..."
+ 02_BA_FE_ANGRY:0 "My też mieliśmy kiedyś nadzieję, ale wywalczyliśmy ją sobie sami. Nie tak jak wy."
+ 03_BA_FE_ANGRY:0 "Jeśli tak wygląda wasza historia, to niech tak będzie."
+ 01_BA_FE_WAR:0 "Chciałabym wam podziękować... za to, że pokazaliście nam ciemną stronę aureoli."
+ 02_BA_FE_WAR:0 "Za co wy uważacie to miejsce?"
+ 11_BA_FE_CUSTODIAL:0 "Teraz jesteśmy jak widz, który wbiegł na scenę, zabrał instrumenty muzykom i zaczął grać. Czy zrujnować to przedstawienie, zależy tylko od naszej zachcianki."
+ 12_BA_FE_CUSTODIAL:0 "Trochę przypomniało nam się, jak czułyśmy się tuż po zjednoczeniu. Radość, podekscytowanie, poczucie, że jesteśmy pełne mocy..."
+ 13_BA_FE_CUSTODIAL:0 "Śmiało mówcie, jeśli potrzebujecie pomocy. Wszystko poza flotą jest do dogadania."
+ 14_BA_FE_CUSTODIAL:0 "...Cóż za emocje, że i nas spotyka taki dzień... Nie zmarnujemy tej okazji."
+ 11_BA_FE_ARROGANT:0 "Nieźle, widzę, że opanowaliście już tajniki działania cywilizacji kosmicznych."
+ 12_BA_FE_ARROGANT:0 "Używamy siły, bo uważamy to za konieczne. Nigdy nas nie zrozumiecie."
+ 13_BA_FE_ARROGANT:0 "Technologia służy tym, którzy jej używają. Mamy nadzieję, że najlepiej będzie służyć żołnierzom, a nie tyranom."
+ 11_BA_FE_IMPERIOUS:0 "Ziemia i nowe pędy... Ciekawe."
+ 12_BA_FE_IMPERIOUS:0 "Muzeum będzie dla was najlepszym miejscem. Potem jest jeszcze zoo, linia produkcyjna albo elektrownia, w zależności od tego, jak bardzo się postaracie."
+ 13_BA_FE_IMPERIOUS:0 "Historia, którą piszecie, powinna być idealna, a jednak wasze pióro jest pełne upiększeń, pochlebstw i oszustw... Jak śmiecie się tak chełpić?"
+ 11_BA_FE_WAR:0 "Przekazujemy wam wodę i ziemię z naszego Pustego Domu. Przyjdźcie i sami sobie weźcie."
+ 12_BA_FE_WAR:0 "Co sądzicie o procesie produkcji konserw? ...Nie zrozumcie mnie źle, to może mieć związek z wami w przyszłości, w czasie wojny, albo po niej."
+
+ #星门通路
+ BA_Precursor.0015.title:0 "Łącze komunikacyjne aktywowane"
+ BA_Precursor.0015.desc.1:0 "Odebraliśmy fale podprzestrzenne z układu łączącego. Wygląda na to, że łącze komunikacyjne zostało otwarte z drugiej strony."
+ BA_Precursor.0015.desc.2:0 "Odebraliśmy fale podprzestrzenne z niezidentyfikowanego układu. Wygląda na to, że zostały wygenerowane przez uruchomienie megastruktury."
+ BA_Precursor.0015.a:0 "Ekscytujące!"
+ BA_Precursor.0015.b:0 "Potrzebujemy więcej informacji."
+
+ BA_Precursor.0016.title:0 "Łącze komunikacyjne aktywowane"
+ BA_Precursor.0016.desc:0 "§YTu Główna Świadkini Sayya Yurizono, nadaję do Zewnętrznych.§! W rzeczywistości, wkrótce po aktywacji zewnętrznego łącza komunikacyjnego, pozyskaliśmy coraz więcej informacji ze Zewnętrza, co miało kluczowe znaczenie dla naprawy interfejsu łącza komunikacyjnego znajdującego się na naszym terytorium. Nigdy jednak nie podjęliśmy faktycznych działań naprawczych, ponieważ jednomyślnie zdecydowałyśmy, aby nie ingerować zbytnio w świat zewnętrzny. Ale teraz sytuacja jest inna. Dla powodu, którego tak długo się trzymaliśmy, dzisiaj musimy działać. Na szczęście, nasza pierwsza próba naprawy zakończyła się ogromnym sukcesem, a interfejs łącza komunikacyjnego w KETHER zaczął już działać.§R Ostatnie ostrzeżenie: Chociaż inne interfejsy łącza komunikacyjnego są ogólnodostępne, brama gwiezdna w KETHER nie zezwala na nieautoryzowane użycie, prosimy o przyjęcie do wiadomości.§!"
+ BA_Precursor.0016.next:0 "Nareszcie..."
+
+
+#探索
+ BA_Precursor.0051.title:0 "Odkryto interfejs łącza komunikacyjnego"
+ BA_Precursor.0051.desc:0 "Zaraz po wejściu do tego układu czarnej dziury, [from.GetName] zauważył, że jest on niezwykły: coś w rodzaju bramy gwiezdnej działało cicho na skraju układu. Podobnie jak spokojna czarna dziura w centrum układu, zarówno materia, jak i sygnały sond, które wchodziły w tę bramę gwiezdnej, nigdy nie wracały. Załoga wysunęła różne hipotezy na temat jej przeznaczenia, ale żadna z nich nie mogła zostać na razie praktycznie zweryfikowana."
+ BA_Precursor.0051.next:0 "W takim razie, odłóżmy to na bok na razie."
+
+ BA_Precursor.0052.title:0 "Wejście do Gromady Numeryzmu"
+ BA_Precursor.0052.desc:0 "To nasze pierwsze wejście do gromady Numeryzmu. Być może to efekt badań i modyfikacji Numeryzmu przez niezliczone lata, ale gwiazdy tutaj wykazują cechy odmienne od zwykłych gwiazd w galaktyce."
+ BA_Precursor.0052.next:0 "Ekscytujące!"
+
+ BA_Precursor.0054.title:0 "Królestwo"
+ BA_Precursor.0054.desc:0 "Dotarłyśmy do ostatecznego układu Numeryzmu: „Królestwa”. Co zaskakujące, układ tego systemu jest uderzająco podobny do naszego macierzystego układu Kivotos. To jeszcze bardziej upewnia nas w przekonaniu, że nasz macierzysty układ został zbudowany sztucznie."
+ BA_Precursor.0054.next:0 "……"
+
+ BA_Precursor.0057.title:0 "Poszlaki"
+ BA_Precursor.0057.desc:0 "Na planecie w układzie Interfejsu Łącza Komunikacyjnego odkryliśmy niezwykle niebezpieczne anomalne sygnały i ślady materii. Analiza wskazuje, że są to pozostałości po wojnie naziemnej, którą stoczyło prekursorskie imperium o kontrolę nad tą bramą gwiezdną. Jeśli chcemy dowiedzieć się więcej, musimy coś z tym zrobić!"
+ BA_Precursor.0057.next:0 "No to do roboty!"
+
+#初次见面
+ BA_Precursor.0101.title:0 "Komunikacja Łączem"
+ BA_Precursor.0101.desc:0 "Nasza stacja obserwacyjna wykryła sygnał tachionowy, który otworzył bramę gwiezdną w Interfejsie Łącza Komunikacyjnego, a komunikacja z łącza odzywa się do nas w naszym języku."
+ BA_Precursor.0101.next:0 "Nawiąż połączenie"
+
+ BA_Precursor.0102.title:0 "Komunikacja Łączem"
+ BA_Precursor.0102.desc:0 "Witajcie, resztki Kivotosu, wy z zewnątrz! My jesteśmy Moe Xcom. Jak widzicie, te łącza komunikacyjne w układzie gwiezdnym zostały zbudowane przez naszych wrogów. Po uzyskaniu odpowiedzi nie byliśmy w stanie uzyskać zewnętrznego dostępu do łączy komunikacyjnych, więc mogliśmy jedynie zgadywać, co dzieje się poza gromadą gwiezdna, na podstawie strzępków informacji, które wyciekały z łączy. Jednakże… po tak długim okresie spokoju, chociaż udało nam się złamać zewnętrzne łącza komunikacyjne, nasz poziom technologiczny znacznie przewyższa wasz. Zgodziliśmy się również, że nie powinniśmy ingerować w układ zewnętrznych układów gwiezdnych. Dlatego też zdecydowaliśmy się nie kontynuować prac badawczych nad naprawą bram gwiezdnych w naszym regionie, aby uniknąć konsekwencji, których nawet my nie bylibyśmy w stanie cofnąć."
+ BA_Precursor.0102.Eden_Treaty:0 "Obaliliście Numerologię… Czy to prawda?"
+ BA_Precursor.0102.Eden_Treaty.re:0 "Zgadza się, po tym, jak złamaliśmy więzienie w układzie 06 i po ciężkich walkach wygnaliśmy Numerologię z gromady gwiezdnej. Od tego czasu przeszliśmy przez wiele wewnętrznych zmian, zanim ostatecznie się zjednoczyliśmy… Jeśli jesteście ciekawi tej historii, zawsze możecie do nas wpaść i obejrzeć."
+ BA_Precursor.0102.Kyrie:0 "Buntownicy… Czy to tacy sami uczniowie jak my?"
+ BA_Precursor.0102.Kyrie.re:0 "Zgadza się, po tym, jak złamaliśmy więzienie w układzie 06 i po ciężkich walkach wygnaliśmy Numerologię z gromady gwiezdnej. …Wy też się buntowaliście? To naprawdę wzruszające… Chociaż zdecydowaliśmy się nie ingerować w sprawy zewnętrzne, jeśli potrzebujecie jakiejkolwiek pomocy, po prostu powiedzcie."
+ BA_Precursor.0102.Kivotos_other:0 "Wasze aureole… Czy są takie same jak nasze?"
+ BA_Precursor.0102.Kivotos_other.re:0 "Zgadza się, aureole również są jednym z naszych długoletnich tematów badawczych. Wyniki badań są bardzo ciekawe… Ale to dotyczy czegoś, o czym nie możemy teraz mówić, więc zostawiamy to wam do odkrycia, okej?"
+ BA_Precursor.0102.exit_Kivotos:0 "Oddajemy wam hołd, Prekursorzy."
+ BA_Precursor.0102.exit_Kivotos.re:0 "Mamy nadzieję, że wy również napiszecie własną historię, wy z zewnątrz."
+ BA_Precursor.0102.exit_other:0 "Dziwne papierowe ludziki…"
+ BA_Precursor.0102.exit_other.re:0 "…Co za ciekawe istoty."
+
+#先驱者通讯
+ BA_Precursor.0151.title:0 "Komunikacja z Prekursorami (Za niskie zaufanie – odmowa komunikacji)"
+ BA_Precursor.0151.desc:0 "Masz rację, ale „Pakiet Gatunków Blue Archive” to zupełnie nowy dwuwymiarowy mod do gry 4x Stellaris, stworzony przez zespół produkcyjny pod kierownictwem N0Z0M1. Fabuła moda rozgrywa się w fantastycznym świecie zwanym „Kivotos”, gdzie wszyscy uczniowie mają „aureole” i kierują tajemniczymi mocami. Wcielasz się w tajemniczą postać zwaną „Sensei” i w trakcie natłoku pracy… dokuczasz uczniom o różnych osobowościach i unikalnych zdolnościach. Razem z nimi pokonujecie potężnych wrogów i odnajdujecie zaginioną Przewodniczącą Rady Federalnej – jednocześnie stopniowo odkrywając prawdę o „Tajemnicy”."
+ BA_Precursor.0151.next:0 "Od razu widać, że to przez granie w Blue Archive."
+
+ BA_Precursor.main.title:0 "Komunikacja z Prekursorami"
+ BA_Precursor.main.desc.1:0 "…Ciekawe… Ach, nic takiego. Czy macie jakieś problemy?"
+ BA_Precursor.main.desc.2:0 "Chociaż zaobserwowaliśmy to dopiero niedawno… wasza prędkość rozwoju naprawdę przerosła nasze oczekiwania."
+ BA_Precursor.main.desc.3:0 "Chociaż nasza technologia jest potężna, a nasze umiejętności bardzo rozwinięte… są rzeczy, których nawet my nie jesteśmy w stanie zrobić…"
+ BA_Precursor.main.desc.4:0 "Słuchajcie uważnie… o granicy między tajemnicą a terrorem… Cóż, jeśli to wy, to pewnie nic strasznego…"
+ BA_Precursor.main.desc.5:0 "Skarbcie swoich towarzyszy, którzy wciąż są przy was…"
+
+
+ BA_Precursor.manual:0 "Informacje"
+ BA_Precursor.manual.title:0 "Komunikacja z Prekursorami: Informacje"
+ BA_Precursor.manual.desc:0 "Ponieważ to bardzo szczególna przestrzeń, możemy wysyłać wam przedmioty tylko w specjalny sposób… Hiperprzestrzeń nie wchodzi w grę, ale możemy utworzyć §Ymini-tunel czasoprzestrzenny§! albo bezpośrednio wysłać §Bstatek transportowy napędzany warpem§!.\nCzy macie jakieś pytania?"
+
+
+ BA_Precursor.trade:0 "Wymiana Punktów"
+ BA_Precursor.trade.title:0 "Komunikacja z Prekursorami: Punkty i Logistyka"
+ BA_Precursor.trade.desc:0 "Nie będziemy zbytnio ingerować, ale jeśli macie pilne potrzeby, śmiało mówcie…"
+
+ BA_Precursor.trade.get_point:0 "Zdobądź Punkty Wymiany"
+
+ BA_Precursor.trade.wormhole:0 "Wymieniaj Surowce przez §Ymini-tunel czasoprzestrzenny§!"
+
+ BA_Precursor.trade.warpship:0 "Wymieniaj Surowce przez §Bstatek transportowy napędzany warpem§!"
+
+ BA_Precursor.trade.infomation:0 "Informacje o Wymianie"
+
+ BA_Precursor.chat:0 "Pogawędka"
+ BA_Precursor.chat.title:0 "Komunikacja z Prekursorami: Pogawędka"
+ BA_Precursor.chat.desc:0 "Wiem, że macie mnóstwo pytań... Kim właściwie jesteśmy, skąd wy pochodzicie i dlaczego..."
+
+
+
+ BA_Precursor.exit:0 "Zamknij stronę"
+
+ BA_Precursor.manual.re:0 "Ponieważ nasza logistyka może odbywać się jedynie poza szlakami hiprzestrzennymi, nie jesteśmy w stanie prowadzić normalnego handlu."
+

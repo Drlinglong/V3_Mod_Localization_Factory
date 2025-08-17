@@ -1,0 +1,687 @@
+﻿l_japanese:
+ #
+ Club_confirm:0 "選択中の部活が提出した建設申請を承認する。いずれの部活も選択しない場合、ランダムで1件を承認する。"
+ Club_tbc:0 "§L他の部活も続々登場予定…§!"
+ Club_founded:0 "£trigger_no£この部活は§C既に宇宙部室を設立している§!"
+ Club_not_found:0 "£trigger_no£この部活は§Rまだ宇宙部室を設立していない§!"
+
+ #
+ policy_BA_club_spounce_clubs:"部活のスポンサー額設定"
+ policy_BA_club_spounce_clubs_desc:"この方針は、部活の活動に割り当てる総予算を決定します。社会学技術をさらに研究することで、より多くの予算段階を解放できます。"
+ BA_club_no_spounce:"予算なし"
+ BA_club_no_spounce_desc:"各部活は各々所属する学園から既に予算を獲得しているため、追加の予算割り当ては不要です。"
+ BA_club_lv1_spounce:"活動予算"
+ BA_club_lv1_spounce_desc:"部活を年間の活動として予算を計画し、部員たちにより良い活動環境を提供します。"
+ BA_club_lv2_spounce:"施設予算"
+ BA_club_lv2_spounce_desc:"部活の消費をインフラ施設の維持費とみなし予算を割り当て、より高い創作の自由度と活動規模を提供します。"
+ BA_club_lv3_spounce:"戦略予算"
+ BA_club_lv3_spounce_desc:"部活は私たちの存亡に関わるため、大規模な投資が不可欠です。"
+ BA_club_nospounce_tip:0 "他の予算段階のボーナスと維持費はキャンセルされます。"
+ BA_club_lv1_tip:0 "部活の部室の維持費が増加し、設立済みの宇宙部活部室に応じてユニークな§Y帝国修正§!を提供します。"
+ BA_club_lv2_tip:0 "部活の部室および関連する巨大構造物の産出量が増加します。"
+ BA_club_lv3_tip:0 "$BA_club_pop$の維持費と産出量が増加します。"
+
+
+ #
+ Game_development_department:0 "ゲーム開発部"
+ Game_development_department_desc:0 "§Cゲーム開発部§!はゲームを制作・販売し、大量の£unity£結束力をもたらします。"
+
+ Engineering_club:0 "エンジニア部"
+ Engineering_club_desc:0 "§Cエンジニア部§!は学生が使用する武器をベースに新しい宇宙兵器を開発し、研究オプションとして提示されます。"
+
+ Veritas:0 "真理部"
+ Veritas_desc:0 "§C真理部§!は帝国全体の情報収集と諜報の攻防能力を向上させます。"
+
+ Foreclosure_task_force:0 "対策委員会"
+ Foreclosure_task_force_desc:0 "§C対策委員会§!は基礎物資の生産と使用を大幅に改善し、植民地の活動に最適なプロセスを提供します。"
+
+ Teaparty:0 "ティーパーティー"
+ Teaparty_desc:0 "§Cティーパーティー§!の優秀な行政官は、帝国規模を代償なしに管理できます。"
+
+ Hotspring_development_department:0 "温泉開発部"
+ Hotspring_development_department_desc:0 "§C温泉開発部§!は宇宙空間の£volatile_motes£$volatile_motes$、£exotic_gases£$exotic_gases$を採掘し、植民地に£amenities£快適度を提供します。"
+
+ Festival_operations_department:0 "祭典運営委員会"
+ Festival_operations_department_desc:0 "§C祭典運営委員会§!は定期的に祝祭を開催し、£stability£安定度、人口の£happiness£幸福度、および産出量を増加させ、人口増加による帝国の悪影響を軽減します。"
+
+ Xuanwu_promenade:0 "玄武商会"
+ Xuanwu_promenade_desc:0 "§C玄武商会§!は巨額の貿易額を提供し、さらに闇市場の流通経路を維持することで資源を迅速に調達できます。"
+
+ Publishing_department:0 "出版部"
+ Publishing_department_desc:0 "§C出版部§!は特別な作品を出版し、みんなの創作活動を奨励し、£consumer_goods£消費財の産出量を増やしながら思想を広めます。"
+
+
+ Federal_student_union:0 "連邦生徒会"
+ Federal_student_union_desc:0 "現在の生徒会長と話してみよう？（現在、小鳥遊ホシノのみ対応）"
+
+#
+ BA_club_ship:0 "部活艦"
+ BA_club_ship_plural:0 "部活艦"
+ BA_club_base:0 "部室建設拠点"
+ BA_club_base_DESC:0 "この場所に部室艦を送り込み、部を設立する"
+ BA_club_base_MEGASTRUCTURE_DETAILS:0 "$BA_club_base_DESC$"
+
+ BA_club_station_Game_development_department:0 "$Game_development_department$"
+ BA_club_station_Game_development_department_DESC:0 "$Game_development_department_desc$キヴォトスの人口を増加させ、シャーレのオフィスと部室を建設することで、結束力£unity£の産出量を増加させることができます。"
+ BA_club_station_Game_development_department_ex:0 "$Game_development_department$"
+ BA_club_station_Game_development_department_ex_DESC:0 "$Game_development_department_desc$"
+ BA_club_station_Engineering_club:0 "$Engineering_club$"
+ BA_club_station_Engineering_club_DESC:0 "$Engineering_club_desc$"
+ BA_club_station_Engineering_club_ex:0 "$Engineering_club$"
+ BA_club_station_Engineering_club_ex_DESC:0 "$Engineering_club_desc$"
+ BA_club_station_Veritas:0 "$Veritas$"
+ BA_club_station_Veritas_DESC:0 "$Veritas_desc$"
+ BA_club_station_Veritas_ex:0 "$Veritas$"
+ BA_club_station_Veritas_ex_DESC:0 "$Veritas_desc$"
+ BA_club_station_Foreclosure_task_force:0 "$Foreclosure_task_force$"
+ BA_club_station_Foreclosure_task_force_DESC:0 "$Foreclosure_task_force_desc$"
+ BA_club_station_Foreclosure_task_force_ex:0 "$Foreclosure_task_force$"
+ BA_club_station_Foreclosure_task_force_ex_DESC:0 "$Foreclosure_task_force_desc$"
+ BA_club_station_Teaparty:0 "$Teaparty$"
+ BA_club_station_Teaparty_DESC:0 "$Teaparty_desc$"
+ BA_club_station_Teaparty_ex:0 "$Teaparty$"
+ BA_club_station_Teaparty_ex_DESC:0 "$Teaparty_desc$"
+ BA_club_station_Hotspring_development_department: "$Hotspring_development_department$"
+ BA_club_station_Hotspring_development_department_DESC: "$Hotspring_development_department_desc$"
+ BA_club_station_Hotspring_development_department_ex: "$Hotspring_development_department$"
+ BA_club_station_Hotspring_development_department_ex_DESC: "$Hotspring_development_department_desc$"
+ BA_club_station_Festival_operations_department: "$Festival_operations_department$"
+ BA_club_station_Festival_operations_department_DESC: "$Festival_operations_department_desc$"
+ BA_club_station_Festival_operations_department_ex: "$Festival_operations_department$"
+ BA_club_station_Festival_operations_department_ex_DESC: "$Festival_operations_department_desc$"
+ BA_club_station_Xuanwu_promenade: "$Xuanwu_promenade$"
+ BA_club_station_Xuanwu_promenade_DESC: "$Xuanwu_promenade_desc$"
+ BA_club_station_Xuanwu_promenade_ex: "$Xuanwu_promenade$"
+ BA_club_station_Xuanwu_promenade_ex_DESC: "$Xuanwu_promenade_desc$"
+ BA_club_station_Publishing_department: "$Publishing_department$"
+ BA_club_station_Publishing_department_DESC: "$Publishing_department_desc$"
+ BA_club_station_Publishing_department_ex: "$Publishing_department$"
+ BA_club_station_Publishing_department_ex_DESC: "$Publishing_department_desc$"
+
+ BA_Veritas_device:0 "ヴェリタス・ノードステーション"
+ BA_Veritas_device_DESC:0 "ヴェリタスの部室を改造して作られた通信ステーションであり、彼女たちのハッキング活動の拠点として機能します。"
+ BA_Veritas_device_full:0 "ヴェリタス・センサーアレイ"
+ BA_Veritas_device_full_DESC:0 "ヴェリタスが多大な予算を投じて建設したセンサーアレイで、演算ハブコアのプロトタイプが内蔵されており、多くの秘密めいたことに利用できます。"
+ BA_Hotspring_mine_station:"温泉開発部・採掘ベイ"
+ BA_Hotspring_mine_station_DESC:"温泉開発部がこの地で鉱脈を発見し、その採掘のためにこの巨大構造物を設置しました。"
+ BA_Hotspring_mine_station_MEGASTRUCTURE_DETAILS:"温泉開発部がこの地で鉱脈を発見し、その採掘のためにこの巨大構造物を設置しました。"
+ BA_Hotspring_mine_station_astroid:"温泉開発部・採掘機"
+ BA_Hotspring_mine_station_astroid_DESC:"温泉開発部がこの地で鉱脈を発見し、その採掘のためにこの巨大構造物を設置しました。"
+ BA_Hotspring_mine_station_astroid_MEGASTRUCTURE_DETAILS:"温泉開発部がこの地で鉱脈を発見し、その採掘のためにこの巨大構造物を設置しました。"
+ BA_m_has_hotspring:0 "£trigger_no£§B温泉開発部は、この惑星に温泉は存在しないため、この場所の探索を拒否しました。§!"
+
+#
+ BA_club.0001.title:0 "部活動システム説明"
+ BA_club.0001.desc:0 "「先生、私達はつい先ほど、部室艦と宇宙部室を建造するために必要な研究を完了しました……"
+ BA_club.0001.comfirmed:0 "わかりました。"
+
+ BA_club.0002.title:0 "部活動システム説明"
+ BA_club.0002.desc:0 "「先生、私達の初めての部室艦が進水しました！"
+ BA_club.0002.comfirmed:0 "わかりました。"
+
+ BA_club.0005.title:0 "部室建設開始"
+ BA_club.0005.desc:0 "部室艦は部室建設拠点に到着し、利用申請は生徒たちに公開されました。この部室の帰属権は§Y指定された部活動に割り当てる§!こともできますし、生徒たちの内部競争に委ねて決定することもできます。"
+ BA_club.0005.confirm:0 "はい、決定確認画面を開いてください。"
+ BA_club.0005.confirm.tip:0 "特定の部活動の利用申請を承認するには、50§Y£sr_eligma£$sr_eligma$§!が必要です。申請が承認されると、その宇宙部室の所有権は指定された部活動のものとなり、同時に、彼女たちは直接統括室にプロジェクト計画を提出し、§Y研究オプションとして提示する§!権利も得られます。"
+ BA_club.0005.confirm.first:0 "私たちの最初の宇宙部のテープカットを！"
+ BA_club.0005.confirm.first.tip:0 "最初の部活動の利用申請は、§Y£sr_eligma£$sr_eligma$§!を消費する必要はありません。申請が承認されると、その宇宙部室の所有権は指定された部活動のものとなり、同時に、彼女たちは直接統括室にプロジェクト計画を提出し、§Y研究オプションとして提示する§!権利も得られます。"
+ BA_club.0005.random:0 "生徒たちに自由裁量で決めさせる。"
+ BA_club.0005.random.tip:0 "自由裁量権を委譲します。これは§Y£sr_eligma£$sr_eligma$§!を消費しません。宇宙部室の所有権は、決定戦の勝者に分配され、同時に、彼女たちは直接統括室にプロジェクト計画を提出し、§Y研究オプションとして提示する§!権利も得られます。"
+ BA_club.0005.cancel:0 "一時的にキャンセルします。"
+
+ BA_club.0007.title:0 "部活動設立中止"
+ BA_club.0007.desc:0 "この部室を利用するのに適した部活動が選択されなかったため、部室の建設はキャンセルされました。"
+ BA_club.0007.tip:0 "より多くの部活動が現在制作中です、衛星撃墜をお待ちください。"
+
+ BA_club.0031.title:0 "部室艦入植"
+ BA_club.0031.desc:0 "船員たちの大胆な決断により、私たちの部室艦は、[from.GetName]の平坦な地形に着陸しました。艦内の部員たちは、慎重にこの新世界の地に足を踏み入れ、キヴォトスからの初めての足跡を残しました。その後、次々と建物がここに建設されるでしょう。"
+
+ BA_club_station:0 "キヴォトス部宇宙ステーション"
+ BA_club_station_DESC:0 "ここはキヴォトスの部活動の宇宙活動拠点です。"
+ BA_club_station_plural:0 "キヴォトス部宇宙ステーション"
+ BA_club_enclave_curator_key:0 "汎用宇宙ステーション - コアセクション"
+
+ BA_club_favor_fail:0 "建設度が足りません。まず寄付を行って建設度を上げましょう。"
+ BA_club_favor_fail.50:0 "建設度が§G50§!に達する必要があります。まず寄付を行って建設度を上げましょう。"
+ BA_club_favor_fail.100:0 "建設度が§G100§!に達する必要があります。まずは寄付をして建設度を増やしましょう。"
+
+#
+ Club_communicate.name:0 "キヴォトス部活連絡ハブ"
+ BA_club.0051.title:0 "部活連絡ハブ"
+ BA_club.0051.desc:0 "(こちらは部活連絡ハブです。右側で交流したい部活をクリックしてください)\n\n\n\n(現在の部活上限: [Root.BA_Club_count]/[Root.BA_Club_limit])"
+ BA_club.0051.exit:0 "ウィンドウを閉じる"
+
+ Communication_main:0 "部活本部"
+ Communication_main.tip:0 "連邦生徒会部活本部。ここでは部活に関する事務を処理できます。"
+ Communication_main.desc1:0 "こちらは連邦生徒会部活本部です。ここでは部活に関する事務を処理できます。"
+ Communication_exit:0 "ウィンドウを閉じる"
+
+ Gain_more_club:0 "部活枠を増やす"
+ Club_overlimit:0 "今はこれほど多くの部活枠は必要ありませんね。まずはいくつか部活を新設してみてはどうでしょうか？"
+ Gain_more_club.re:0 "アロナがお金を受け取りました！部活に関する事務にしっかり活用します！\n\n\n\n(現在の部活上限: [Root.BA_Club_count]/[Root.BA_Club_limit])"
+ Gain_more_club.tip:0 "部活枠を増やすために資金を支払う。"
+
+ Gain_more_room:0 "部活特別部室を開放"
+ No_room_to_unlock:0 "開放できる部活特別部室の数が足りません。部活画面で開放するか、新しい部活をいくつか新設してみてはどうでしょうか？"
+ Gain_more_room.re:0 "アロナがお金を受け取りました！後ほど部活へ特別部室の建設許可を提出しますね！"
+ Gain_more_room.tip:0 "開放可能なすべての部活特別部室を開放するために資金を支払います。これらの特別部室は植民地に建設でき、独自の機能とバフを提供します。"
+
+ Add_room_limit:0 "部室上限を上げる"
+ Add_room_limit.title:0 "部活特別部室を増やす"
+ Add_room_limit.desc:0 "「先生はここで開放済みのすべての部活の特別部室上限を増やすことができます！」"
+ Add_room_limit.exit:0 "「戻る」"
+ Add_room_limit.plus:0 "上限調整目標を増やす"
+ Add_room_limit.minus:0 "上限調整目標を減らす"
+ Add_room_limit_target:0 "上限調整目標"
+ Add_room_limit.minus.tip:0 "上限調整目標の最低は2です"
+ Add_room_limit.calre:0 "「上限を調整しました！」"
+ Add_room_limit.add_room:0 "部室上限を[Root.Add_room_limit_target]に増やすことを確認"
+ Add_room_limit.add_room.null:0 "部室上限を増やせる部活はありません"
+ Add_room_limit.addre:0 "「部室上限はもう増えましたよ！」"
+
+ Upgrade_club_ship:0 "部活艦のアップグレード"
+ Upgrade_club_ship.re:0 "私たちの部活艦のレベルが上がりました！これで新世界の建設により良く貢献できます！"
+ Upgrade_club_ship.tip:0 "部活艦をアップグレードし、これにより部活艦が建設した新植民地がより強力なバフを得ます。[Root.GetClubshipUpgrade]"
+ Need_club_colonized:0 "まず、部活艦で一度植民を行っている必要があります。"
+ club_colonize_fail_Lv1:0 "$TRIGGER_FAIL$£society_research£§Y$tech_capital_productivity_1$§!技術を所有する"
+ club_colonize_fail_Lv2:0 "$TRIGGER_FAIL$£society_research£§Y$tech_capital_productivity_2$§!技術を所有する"
+ club_colonize_fail_Lv3:0 "$TRIGGER_FAIL$£society_research£§Y$tech_capital_productivity_3$§!技術を所有する"
+ club_colonize_Lv1:0 "最初のアップグレード: 既存の効果を強化し、区域の§G維持費が低下§!しますが、生成される§Y帝国規模は上昇§!します。"
+ club_colonize_Lv2:0 "2回目のアップグレード: 既存の効果を強化し、この植民地の§G移住誘致と安定度が上昇§!しますが、生成される§Y帝国規模は上昇§!します。"
+ club_colonize_Lv3:0 "3回目のアップグレード: 既存の効果を強化し、さらに§B部活艦ボーナスは帝国規模の上昇を代償としなくなります§!。"
+
+
+
+
+#建立通讯
+ BA_club.1001.title:0 "部活設立報告：$Game_development_department$"
+ BA_club.1001.desc:0 "「ゆ……ゲーム開発部部長、花岡ユズ、§Y[from.solar_system.GetName]§!に部室の設立が完了しました……うぅ……」"
+ BA_club.1001.next:0 "「皆さんが早く神ゲーを開発できることを祈っています！」"
+ BA_club.1002.title:0 "$BA_club.1001.title$"
+ BA_club.1002.desc:0 "「他国が$Game_development_department$を設立しました。」"
+
+ BA_club.1101.title:0 "「部室設立報告：$Engineering_club$」"
+ BA_club.1101.desc:0 "「連邦生徒会へご報告します、エンジニア部の宇宙部室が§Y[from.solar_system.GetName]§!に設立完了しました。我々が受けた依頼には§G艦船兵器の研究§!が多々含まれておりますので、請求書の方が……少々桁外れになるかもしれませんが、どうかご容赦ください……」"
+ BA_club.1101.next:0 "「心配には及びません。頑張ってね。」"
+ BA_club.1102.title:0 "$BA_club.1101.title$"
+ BA_club.1102.desc:0 "「他国が$Engineering_club$を設立しました。」"
+
+ BA_club.1201.title:0 "「部室設立報告：$Veritas$」"
+ BA_club.1201.desc:0 "「こちらは各務チヒロです。ヴェリタスの宇宙部室が§Y[from.solar_system.GetName]§!に位置を確定しました。この巨大構造物の使用権を得た以上、私たちは宇宙から§Gより多くの情報を取得§!するために、当然ながら一部改造を施す必要があります……」"
+ BA_club.1201.next:0 "「必要なものがあれば言ってください、全力でサポートします。」"
+ BA_club.1202.title:0 "$BA_club.1201.title$"
+ BA_club.1202.desc:0 "「他国が$Veritas$を設立しました。」"
+
+ BA_club.1301.title:0 "「部室設立報告：$Foreclosure_task_force$」"
+ BA_club.1301.desc:0 "「こちらは奥空アヤネです。キヴォトス4号ラインより連邦生徒会にご報告します。対策委員会の宇宙部室が§Y[from.solar_system.GetName]§!に設立完了しました。私たちはアビドスでの業務経験を活かし、§G基礎生産の改善§!のために尽力意見を述べ、献策してまいります……はい、以上です。」"
+ BA_club.1301.next:0 "「承知しました。何か必要なことがあれば、遠慮なく言ってください。」"
+ BA_club.1302.title:0 "$BA_club.1301.title$"
+ BA_club.1302.desc:0 "「他国が$Foreclosure_task_force$を設立しました。」"
+
+ BA_club.1401.title:0 "「部室設立報告：$Teaparty$」"
+ BA_club.1401.desc:0 "「ごきげんよう、ティーパーティー主催者の桐藤ナギサです。現在はトリニティではなく、ティーパーティーというサークル名義で連邦生徒会にご報告いたします。ティーパーティーの宇宙部室が§Y[from.solar_system.GetName]§!に設立完了しました。コホン……ティーパーティーは大規模学園の運営に豊富な経験がございます。私たちがこの入植地で行う活動は、§G行政能力の向上§!に効果的に寄与し、キヴォトスに独自の貢献を果たすことでしょう。以上、ごきげんよう。」"
+ BA_club.1401.next:0 "「貴方たちの助けがあれば、連邦生徒会はまさに鬼に金棒となるでしょう。」"
+ BA_club.1402.title:0 "$BA_club.1401.title$"
+ BA_club.1402.desc:0 "「他国が$Teaparty$を設立しました。」"
+
+ BA_club.1501.title:0 "「部室設立報告：$Hotspring_development_department$」"
+ BA_club.1501.desc:0 "「サークル本部から通達された手順に従い、温泉開発部の全ての重機資産が§Y[from.solar_system.GetName]§!に到着しました。繰り返します。契約に従い、我々が探査権を得ると同時に、鉱物資源の所有権は全て連邦生徒会に帰属します。」"
+ BA_club.1501.next:0 "「……爆発物の使用にはくれぐれも注意するように……」"
+ BA_club.1502.title:0 "$BA_club.1501.title$"
+ BA_club.1502.desc:0 "「他国が$Hotspring_development_department$を設立しました。」"
+
+ BA_club.1601.title:0 "「部室設立報告：$Festival_operations_department$」"
+ BA_club.1601.desc:0 "「河和シズコより連邦生徒会へ報告いたします。祭典運営委員会及び百夜堂本部は、§Y[from.solar_system.GetName]§!の宇宙部室への移転を完了しました。今後は規模を拡大し、活動範囲を全サークルに広げてまいります。」"
+ BA_club.1601.next:0 "「期待しています。引き続き頑張ってください。」"
+ BA_club.1602.title:0 "$BA_club.1601.title$"
+ BA_club.1602.desc:0 "「他国が$Festival_operations_department$を設立しました。」"
+
+ BA_club.1701.title:0 "「部室設立報告：$Xuanwu_promenade$」"
+ BA_club.1701.desc:0 "「許可条項に従い、連邦生徒会にご報告いたします。玄武商会は§Y[from.solar_system.GetName]§!の宇宙部室を活動拠点として確保しました。我々は商業ルートを最大限に活用し、キヴォトスに最大の利益還元率を提供できるよう努めてまいります。」"
+ BA_club.1701.next:0 "「この銀河で大いに活躍してください。」"
+ BA_club.1702.title:0 "$BA_club.1701.title$"
+ BA_club.1702.desc:0 "「他国が$Xuanwu_promenade$を設立しました。」"
+
+ BA_club.1801.title:0 "「部室設立報告：$Publishing_department$」"
+ BA_club.1801.desc:0 "「連邦生徒会のご許可と交渉に感謝いたします。出版部は§Y[from.solar_system.GetName]§!の宇宙部室の改修を完了しました。現在、投稿の受け付けと編集者の募集を開始しており、連邦生徒会の指令を受ける準備も整っております。」"
+ BA_club.1801.next:0 "「お気になさらず。引き続き活動を続けてください。」"
+ BA_club.1802.title:0 "$BA_club.1801.title$"
+ BA_club.1802.desc:0 "「他国が$Publishing_department$を設立しました。」"
+
+ HARDWORK:0 "「私たちも気を引き締めないと。」"
+
+ Club_sponsoring:0 "「毎年最大一回の予算配分」"
+ BA_option_club_exit:0 "「通信を終了する」"
+
+
+#游戏部
+ Game_development_department_opinion:0 "「（§G現在の建設度：[Root.Game_development_department] §!）\n\n」"
+
+ Yuzu_desc1:0 "「$Game_development_department_opinion$……よ、ようこそ……うぅ……」"
+ Yuzu_desc2:0 "$Game_development_department_opinion$私たちゲーム開発部は、ゲームを作るのが活動内容で……えっと、作るだけじゃありません。"
+ Yuzu_desc3:0 "$Game_development_department_opinion$……ひゃっ！せ、先生……急に後ろに立たないでください……"
+ Aris_desc1:0 "$Game_development_department_opinion$勇者が先生を発見！礼儀プロトコル起動！"
+ Aris_desc2:0 "$Game_development_department_opinion$……（コンパイル中）"
+ Aris_desc3:0 "$Game_development_department_opinion$ようこそ、先生。モモイとミドリとユズが中で待っていますよ。"
+ Momoi_desc1:0 "$Game_development_department_opinion$先生！今日、この対戦ゲーム一緒に遊びませんか？"
+ Momoi_desc2:0 "$Game_development_department_opinion$アイデアはすぐに消えちゃうけど、捕まえれば最高の神ゲーになるんだよ！"
+ Momoi_desc3:0 "$Game_development_department_opinion$……うぅ、またみんなにアイス買わなきゃ……"
+ Midori_desc1:0 "$Game_development_department_opinion$新しいデモ、試してみませんか？お姉ちゃんの気まぐれな提案だったけど、ちゃんと形にはなったんですよ……"
+ Midori_desc2:0 "$Game_development_department_opinion$これは製造機から出てきたステージの建築デザインなんですけど……うぅ、アルゴリズムにすごく力を入れたのに、よく見たら全然使えませんでした……"
+ Midori_desc3:0 "$Game_development_department_opinion$なんか、やり忘れた任務がある気がするんだよね……どのゲームだったっけ……"
+
+ Game_development_department_building:0 "惑星にスタジオを持ちたいですか？"
+ Game_development_department_building.YuzuRE:0 "ほ、本当ですか……ありがとうございます、先生……"
+ Game_development_department_building.ArisRE:0 "バンバンカバン！アリスは新しい拠点を入手！もっとたくさんのアイテムを置けるようになりました！"
+ Game_development_department_building.MomoiRE:0 "ここを最高のゲーム場所にするんだ！"
+ Game_development_department_building.MidoriRE:0 "本当に最高の一日でしたね！ありがとうございます、先生！"
+
+ Game_development_department_building_add:0 "もっとワークショップが欲しいですか？"
+ Game_development_department_building_add.YuzuRE:0 "感謝しかありません、先生……"
+ Game_development_department_building_add.ArisRE:0 "むむ……アリスはもっと良い拠点を入手しました！ちゃんと使い道を計画しないと！"
+ Game_development_department_building_add.MomoiRE:0 "次のステージをアンロック！ゲーム開発部の冒険は続く！"
+ Game_development_department_building_add.MidoriRE:0 "今回は新しい外観プランを試してみないと……"
+
+ Game_developing:0 "ゲーム開発部は作業で忙しいので、また後で来てください。"
+ Game_development_department_game_complete:0 "ゲーム開発部：制作完了"
+ Game_development_department_game_complete_1:0 "ゲーム開発部が開発した新作ゲームが発売されましたが、プレイヤーの反応は平凡でした。"
+ Game_development_department_game_complete_2:0 "ゲーム開発部が開発した新作ゲームが発売され、多くのプレイヤーから賞賛を浴び、ゲームメディアのトップページを一時的に飾りました。"
+ Game_development_department_game_complete_3:0 "ゲーム開発部が開発した新作ゲームが発売されました。今作は評判が良いだけでなく、売り上げもかなり好調です。"
+ Game_development_department_game_complete_4:0 "ゲーム開発部が開発した新作ゲームが発売されました。今作の発売は、キヴォトスの中で空前のブームを巻き起こし、生徒たちの日常会話の話題となりました。"
+ Game_development_department_game_complete_5:0 "ゲーム開発部が開発した新作ゲームが発売されました。今作は前作で好評だった作品の続編で、ゲーム開発部の一貫した制作水準を維持しています。"
+
+
+#工程师部
+ Engineering_club_opinion:0 "（§G現在の建設度：[Root.Engineering_club] §!）\n\n"
+
+ Utaha_desc1:0 "$Engineering_club_opinion$先生、これですか？……これはチョコレートじゃなくて、マガジンです。うちのマガジンは小さくて持ち運びやすくて……"
+ Utaha_desc2:0 "$Engineering_club_opinion$先生、見てください、うちのピカちゃんが今、バック転できます！……えっと、なんでもないです、先にどうぞ。"
+ Utaha_desc3:0 "$Engineering_club_opinion$うちの部員たちは、角砂糖スナイパーライフルとか、変なものをよく作っちゃうんですよ……予算を無駄にしてるわけじゃなくて、ただ発想がぶっ飛んでるだけ、なんです……"
+ Hibiki_desc1:0 "$Engineering_club_opinion$ようこそ、先生。これですか？これはベッドに寝たまま着替えられる機械なんです。動かし方はこうで……"
+ Hibiki_desc2:0 "$Engineering_club_opinion$うーん、防衛ドローンが私を襲ってくる原因、見つけちゃったみたい……なんでこのチップ、服の中に縫い付けられてるんだろう……"
+ Hibiki_desc3:0 "$Engineering_club_opinion$ゲーム開発部のあの子の武器も私たちが作ったものですし、私たちは宇宙船の兵器に関しては十分な製造経験があります。"
+
+ Engineering_club_sponsor:0 "もっと部費を提供できますよ。"
+ Engineering_club_sponsor_UtahaRE:0 "本当に感謝しかありません、先生。欲しい設備があれば、何でも言ってください。"
+ Engineering_club_sponsor_HibikiRE:0 "このお金で、すごくいい材料が買えますね……ありがとうございます。"
+
+ Engineering_club_special_weapon:0 "君たちに特別なプロジェクトを依頼したい。"
+
+ Engineering_club_weapon_str:0 "兵器プラットフォームの最適化について、何かアイデアはありますか？"
+ Engineering_club_weapon_str.tip:0 "工学部は、蓄積された£physics_research£ £society_research£ £engineering_research£研究点を消費して、§Bキヴォトス§!級艦船パーツの強化を直ちに行うことができます。"
+ enginner_developing_cooldown:0 "工学部員がアイデアを練っています。"
+ Engineering_club_weapon_str.title:0 "強化"
+ Engineering_club_weapon_str.desc:0 "艦隊演習や戦闘を観察する中で、改善すべき点が多々見つかりました。ただ……私たちは兵器には詳しいのですが、具体的にどうすれば彼女たちにそれを伝えられるかは、先生がお得意の分野です……\n\n利用可能な強化：\n£physics_research£戦術対抗：[root.BA_weapon_var_physics_research_prev]\n£society_research£学園交流：[root.BA_weapon_var_society_research_prev]\n£engineering_research£火力演習：[root.BA_weapon_var_engineering_research_prev]"
+ Engineering_club_weapon_str.re:0 "なるほど……では、残りの部分は連邦生徒会に任せましょう。"
+ Engineering_club_weapon_str.physics_research:0 "強化£physics_research£戦術対抗"
+ Engineering_club_weapon_str.physics_research.tip:0 "全ての§Bキヴォトス兵器§!を強化します。$weapon_type_mystic$属性の兵器は追加で強化されます。"
+ Engineering_club_weapon_str.society_research:0 "強化£society_research£学園交流"
+ Engineering_club_weapon_str.society_research.tip:0 "全ての§Bキヴォトス兵器§!を強化します。$weapon_type_penetration$属性の兵器は追加で強化されます。"
+ Engineering_club_weapon_str.engineering_research:0 "強化£engineering_research£火力演習"
+ Engineering_club_weapon_str.engineering_research.tip:0 "全ての§Bキヴォトス兵器§!を強化します。$weapon_type_explosion$属性の兵器は追加で強化されます。"
+ Engineering_club_weapon_str.fail:0 "利用可能な研究点が不足しています。先に研究点をいくつか貯めてください。"
+ Engineering_club_weapon_str.cooldown:0 "工学部員がアイデアを練っています。また後で来てください。"
+
+ Engineering_club_weapon_develop.title:0 "$Engineering_club$ 艦船兵器研究："
+ Engineering_club_weapon_develop.desc:0 "先生、ここで研究する兵器を指定できます。事項リストの作業は私たちに任せてください……やるべきことを統括室にまとめて提出し、§B研究オプションの候補§!とします。研究したい兵器がない場合は、一時的に諦めて、次回の事項統合を待つこともできます。"
+ Engineering_club_weapon_develop.G:0 "$Engineering_club_weapon_develop.title$§B投射兵器 (G)§!"
+ Engineering_club_weapon_develop.L:0 "$Engineering_club_weapon_develop.title$§H大型 (L)§!"
+ Engineering_club_weapon_develop.M:0 "$Engineering_club_weapon_develop.title$§H中型 (M)§!"
+ Engineering_club_weapon_develop.P:0 "$Engineering_club_weapon_develop.title$§R点防御 (P)§!"
+ Engineering_club_weapon_develop.S:0 "$Engineering_club_weapon_develop.title$§H小型 (S)§!"
+ Engineering_club_weapon_develop.X:0 "$Engineering_club_weapon_develop.title$§M脊柱級 (X)§!"
+ Engineering_club_weapon_develop.T:0 "$Engineering_club_weapon_develop.title$§Lタイタン級 (T)§!"
+ RETURN_POINTS:0 "§L研究したい兵器がないので、一時的にキャンセルします。§!"
+ RETURN_POINTS.tip:0 "今回の研究をキャンセルし、いくらかのポイントを補償として獲得します。"
+
+ tech_BA_SPW_Base_title:"生徒たちが持つ兵器を艦船兵器として模倣するための準備作業。"
+ tech_BA_SPW_Base_G_title:"生徒たちが持つ兵器から着想を得て、艦船用に一種の§B投射兵器§!を模倣します。残り[root.BA_Weapon_G]種類の§B投射兵器§!が研究可能です。"
+ tech_BA_SPW_Base_L_title:"生徒たちが持つ兵器から着想を得て、艦船用に一種の§H大型砲§!を模倣します。残り[root.BA_Weapon_L]種類の§H大型砲§!が研究可能です。"
+ tech_BA_SPW_Base_M_title:"生徒たちが持つ兵器から着想を得て、艦船用に一種の§H中型砲§!を模倣します。残り[root.BA_Weapon_M]種類の§H中型砲§!が研究可能です。"
+ tech_BA_SPW_Base_P_title:"生徒たちが持つ兵器から着想を得て、艦船用に一種の§R点防御システム§!を模倣します。残り[root.BA_Weapon_P]種類の§R点防御システム§!が研究可能です。"
+ tech_BA_SPW_Base_S_title:"生徒たちが持つ兵器から着想を得て、艦船用に一種の§H小型砲§!を模倣します。残り[root.BA_Weapon_S]種類の§S小型砲§!が研究可能です。"
+ tech_BA_SPW_Base_X_title:"生徒たちが持つ兵器から着想を得て、艦船用に一種の§M脊柱プラットフォーム兵器§!を模倣します。残り[root.BA_Weapon_X]種類の§M脊柱プラットフォーム兵器§!が研究可能です。"
+ tech_BA_SPW_Base_T_title:"生徒たちが持つ兵器から着想を得て、艦船用に一種の§Lタイタン兵器§!を模倣します。残り[root.BA_Weapon_T]種類の§Lタイタン兵器§!が研究可能です。"
+ tech_BA_SPW_Base_desc:"生徒たちが持つ兵器を艦船兵器として模倣するための準備作業。生徒たちが持つ兵器から着想を得て、根拠に基づいて艦船兵器を模倣します。"
+ tech_BA_SPW_WEAPON_desc:"生徒たちが持つ兵器から着想を得て、根拠に基づいて模倣された艦船兵器。"
+
+ Engineering_club_building:0 "惑星ワークショップが必要ですか？"
+ Engineering_club_building.UtahaRE:0 "ご覧の通り、一部の設備の展開には広い面積が必要でして……これは本当に助かります、ありがとうございます。"
+ Engineering_club_building.HibikiRE:0 "先生がそうおっしゃるなら……もちろんお断りしません、ありがとうございます……"
+
+ Engineering_club_building_add:0 "もっとワークショップが欲しいですか？"
+ Engineering_club_building_add.UtahaRE:0 "人手は少し足りないのですが……ワークショップはいくらあっても困りません。ありがとうございます、これでいくつかの計測器が倉庫で埃をかぶることもなくなります。"
+ Engineering_club_building_add.HibikiRE:0 "本当ですか？やったあ……違うワークショップの部員には違う制服を支給したいなあ……"
+
+
+#真理部
+ Veritas_opinion:0 "（§G現在の建設度：[Root.Veritas] §!）\n\n"
+
+ Chihiro_desc1:0 "$Veritas_opinion$あら、ようこそ……"
+ Chihiro_desc2:0 "$Veritas_opinion$……私、疲れて見えます？ ……ただ、一日中、原始的で驚異的なハッキング方法に苦しめられていただけなので。"
+ Chihiro_desc3:0 "$Veritas_opinion$飲み物ベンダーは、一度ネットワークケーブルを抜かれるとハッキングできないんですから、これは確かに精巧な設計ですね。……なんでもありません。"
+ Hare_desc1:0 "$Veritas_opinion$うう、無重力環境って意外と腰に悪いんですね……"
+ Hare_desc2:0 "$Veritas_opinion$ここでは、エディナ3号の消費電力を大幅に削減できます。それによって、もっと多くのことができるようになります。……とはいえ、まだあまり私の言うことを聞いてくれないんですけどね。"
+ Hare_desc3:0 "$Veritas_opinion$あ、ようこそ……もし、音瀬コタマたちをお探しでしたら、中で忙しそうですが。"
+
+ Veritas_sponsor:0 "余計なことかもしれませんが……部費はもっと必要ですか？"
+ Veritas_sponsor_ChihiroRE:0 "……ありがとうございます。ですが、予算は結構です、すでに前もって受け取っていますので……すみません。"
+ Veritas_sponsor_HareRE:0 "見つかってしまいましたか……大変申し訳ありません、次回からは気をつけます……"
+
+ Veritas_sensor_crafting:0 "あなたたちの改造計画は順調ですか？"
+ Veritas_crafting_sensor:0 "ヴェリタスの部員がこのプロジェクトの難関に取り組んでいます。"
+ Veritas_complete_sensor:0 "ヴェリタスの部員はすでにセンサーの構築を完了しました。"
+ Veritas_sensor1:0 "まず、先生が私たちの拡張許可を承認してくださったことに感謝します。今回、私たちは宇宙波動通信管理装置の建造を計画しています。現在、いくつかの調査情報と大量の合金が必要です……だから、こんなに膨大な予算が必要なんです。すみません。あ、そうだ、ハルナと音瀬コタマはこのプロジェクトの研究のためにここ数日寝ていませんので、ラズベリーパイでも差し入れてあげてください。"
+ Veritas_sensor1.next:0 "はい、同時に皆さんのセンサープロトコルも承認しましょう。"
+ Veritas_sensor2:0 "はい、先生、クラブのメガストラクチャーの新しいエリアは準備が整いました。現在、プログラム面でまだ克服すべき点がありますが、そう遠くないうちに成果が出ると思います。もし先生が進捗を知りたいのであれば、いつでもご連絡ください。あ、そういえば、先生が送ってくださったラズベリーパイ、ありがとうございます……"
+ Veritas_sensor2.next:0 "分かりました。自分の健康にも気をつけてくださいね。"
+ Veritas_sensor3:0 "作業がこの段階まで進み、プログラムとプロトコルは概ね問題ありませんが、現在のところ、情報捕捉の精度がまだ不十分なため、精密機器をいくつか追加しました。赤星ヒマリ先輩がほとんどのプログラム問題を解決してくれましたが、デバッグ作業は彼女にもどうにもできませんでした……これらがすべて完了すれば、通信装置を稼働させることができます。"
+ Veritas_sensor3.next:0 "お疲れ様でした、私が手配しましょう。"
+ Veritas_sensor4:0 "先生、現在、すべての機器とプログラムが準備完了です……最後の合金の手配を手伝っていただけませんか？私たちは今から宇宙で最も巨大な監視装置の組み立てを開始します！"
+ Veritas_sensor4.next:0 "作業開始！"
+
+ Veritas_building:0 "ノードを惑星に展開する必要がありますか？"
+ Veritas_building.ChihiroRE:0 "もしご協力いただけるのであれば……ええ、それは素晴らしいです。ありがとうございます。"
+ Veritas_building.HareRE:0 "本当ですか？もし惑星ネットワークのインターフェースのことであれば……ええ、もちろんです。ありがとうございます。"
+
+ Veritas_building_add:0 "もっと多くのノードを提供できますよ。"
+ Veritas_building_add.ChihiroRE:0 "もしご協力いただけるのであれば……ええ、それは素晴らしいです。ありがとうございます。"
+ Veritas_building_add.HareRE:0 "もし惑星ネットワークのインターフェースのことであれば……ええ、もちろんです。ありがとうございます。"
+
+
+#对策委员会
+ Foreclosure_task_force_opinion:0 "（§G現在の建設度：[Root.Foreclosure_task_force]     現在の調査レベル：[root.Foreclosure_task_force_func_lv]§!）\n\n"
+
+ Nonomi_desc1:0 "$Foreclosure_task_force_opinion$あら、先生～何か御用ですか？"
+ Nonomi_desc2:0 "$Foreclosure_task_force_opinion$私たち対策委員会は設備を開発していませんよ、鋭い眼力に頼っているんです～"
+ Nonomi_desc3:0 "$Foreclosure_task_force_opinion$もし、いつもお金で何でも解決しようとするなら、アビドスが今日の復興を迎えることはなかったでしょう……私たちの能力は絶対信頼できますよ。"
+ Shiroko_desc1:0 "$Foreclosure_task_force_opinion$先生、私たちに会いに来てくれたんですか？……ん、嬉しいです。"
+ Shiroko_desc2:0 "$Foreclosure_task_force_opinion$先生見てください、これは私が外回りの時に記録した、あの行商人たち…ネズミたちのルートと艦船の死角です。もし連邦生徒会がお金に困ったら、彼らが次にやって来たときに……ダメですか？ ……分かりました……"
+ Shiroko_desc3:0 "$Foreclosure_task_force_opinion$外回りの仕事は今、私がほとんどやっています……ちょうどこの光子軸バイクが役立つ機会になりそうです。"
+
+ Foreclosure_task_force_sponsor:0 "私たちはあなたたちに予算を提供できます。"
+ Foreclosure_task_force_sponsor_NonomiRE:0 "本当は先生にお手数をおかけするつもりはなかったんですが、それでも本当に感謝していますよ。"
+ Foreclosure_task_force_sponsor_ShirokoRE:0 "ありがとうございます、こんな些細なことは、私自身で解決できるんですが……うーん、それなら……"
+
+ Foreclosure_task_force_decisions:0 "クラブ本部から、次なるコロニー調査指令が出されました。これはそのための費用です。"
+ Foreclosure_task_force_decisions.tip:0 "現地調査を行った結果、対策委員会の皆さんは、このコロニーのより良い資源配置や人員配分を最適化できます。\n各調査フェーズには§G1800§!£time£日間の準備が必要です。"
+ Foreclosure_task_force_func_lv:0 "対策委員会調査レベル"
+ taskforce_not_finished:0 "最適化の決定が利用可能です。まず、いずれかの植民地でこれを実行してください。"
+ taskforce_cooldown:0 "次のレベルの決定のための事前調査が完了しました: [root.BA_Foreclosure_decisions_cooldown]"
+ decision_fulled:0 "$TRIGGER_FAIL$最適化の決定は十分に行われました。他の植民地で最適化を進めましょう。"
+ decision_limited:0 "$TRIGGER_FAIL$より高レベルの最適化計画はまだ準備が整っていません。対策委員会に予算を割り当ててください。"
+ decision_coming_soon:0 ""
+ decision_Foreclosure_task_force:0 "対策委員会による最適化"
+ decision_Foreclosure_task_force_desc:0 "既存の生産状況と都市計画を調査することで、対策委員会は植民地を全面的に最適化できます。これには、少量の£physics_research£物理学、£society_research£社会学、£engineering_research£工学の研究力を維持費として支払う必要があります。"
+ Foreclosure_task_force_decisions.NonomiRE:0 "了解です〜！すぐに動きましょう〜！"
+ Foreclosure_task_force_decisions.ShirokoRE:0 "ええ、分かりました。すぐに向かいます。"
+
+ Foreclosure_task_force_building:0 "皆さんには管理センターを割り当てることができますよ。"
+ Foreclosure_task_force_building.NonomiRE:0 "あらあら……本当にありがとうございます。"
+ Foreclosure_task_force_building.ShirokoRE:0 "よろしければ、市街地に近い高台をお願いしたいのですが、私が……あ、ごめんなさい。"
+
+ Foreclosure_task_force_building_add:0 "管理センターが不足しているようでしたら、追加で割り当てられますよ。"
+ Foreclosure_task_force_building_add.NonomiRE:0 "まぁ、みんなにとって良いことですね。ありがとうございます。"
+ Foreclosure_task_force_building_add.ShirokoRE:0 "ええ、撤退の拠点として使えますね……なんでもありません。"
+
+
+#茶会
+ Teaparty_opinion:0 "（§G現在の建設度：[Root.Teaparty] §!）\n\n"
+
+ Nagisa_desc1:0 "$Teaparty_opinion$ようこそお越しくださいました、先生。"
+ Nagisa_desc2:0 "$Teaparty_opinion$ティーパーティーは、三つの生徒会が合併してできた組織です……そのため、私たちはバランスというものを誰よりも理解しています。"
+ Nagisa_desc3:0 "$Teaparty_opinion$平和は目的であり手段ではありません。目的のためなら手段を選ばないとなれば、それは抑圧に変わります。私たちはその代償を払ったことがありますから、異なる意見は非常に重要なのです。"
+ Seia_desc1:0 "$Teaparty_opinion$(目覚めて)……あ、……こんにちは……"
+ Seia_desc2:0 "$Teaparty_opinion$何かお困りのようですね……私の助けが必要ですか、先生？"
+ Seia_desc3:0 "$Teaparty_opinion$その子はシマエナガと申します……ええ、何を尋ねたいかは分かりますよ。"
+ Mika_desc1:0 "$Teaparty_opinion$先生！ティーパーティーに何かご用ですか？私とおしゃべりしに来てくれたんですか？"
+ Mika_desc2:0 "$Teaparty_opinion$宇宙では、ロールケーキは普段と違う味がするんですよ！セイアちゃんが教えてくれたんです、宇宙だと……えっと、何だったっけ？"
+ Mika_desc3:0 "$Teaparty_opinion$この宇宙部室、すごく気に入ってるんですよ！見てください、私がここに立って、こうすると……ほら、『クロニクル物語4』の最終章のあのプリンセスみたいじゃないですか！……え？5部の主人公チームはプリンセスと勇者の子どもたち……あ、えっと、その…… (顔を赤らめる)"
+
+ Teaparty_sponsor:0 "部活動本部が皆さんを援助できますよ。"
+ Teaparty_sponsor.NagisaRE:0 "ありがとうございます。金銭的な援助は私たちにとって大きな意味を持ちませんが、お心遣いに深く感動いたしました。"
+ Teaparty_sponsor.SeiaRE:0 "誠にありがとうございます……これは連邦生徒会への返礼です。ぜひお受け取りください。"
+ Teaparty_sponsor.MikaRE:0 "さすが先生です！このお金は大切に使わせていただきます。"
+
+ Teaparty_support:0 "皆さんの行政担当者が必要です。"
+ Teaparty_support.tip:0 "ティーパーティーに行政担当者の連邦生徒会への支援を要請し、これにより帝国の規模を大幅に制限する。"
+ Teaparty_support.NagisaRE:0 "誠にありがとうございます、先生。私は誠意ある協力者を困らせるようなことはいたしません。"
+ Teaparty_support.SeiaRE:0 "……スイーツ、あ、いえ……別に私が食べたいわけでは……"
+ Teaparty_support.MikaRE:0 "本当ですか？！じゃあ、可愛いミカと一緒に働く機会をプレゼントします！……公文書が毎日三千ページから？……やっぱりやめておきます……"
+ Teaparty_support_capped:0 "支援は最大規模に達しました。"
+
+ Teaparty_building:0 "もし皆さんが拠点施設を必要とするなら、植民地が計画を提供できますよ。"
+ Teaparty_building.NagisaRE:0 "それなら私たちもより良く義務を果たすことができます。大変助かります。"
+ Teaparty_building.SeiaRE:0 "さすが先生ですね、完璧なタイミングです……"
+ Teaparty_building.MikaRE:0 "すごい！ここは記念すべき場所ですね、どう飾ろうかな……"
+
+ Teaparty_building_add:0 "拠点施設の数が足りませんか？今なら追加を提供できますよ。"
+ Teaparty_building_add.NagisaRE:0 "これでティーパーティーの支部がより多くの職務を担えるようになりました。感謝いたします。"
+ Teaparty_building_add.SeiaRE:0 "「……それに見合う、もっと大きなベッドが必要ですね……」"
+ Teaparty_building_add.MikaRE:0 "「これで、言うこと聞かない悪い子たちを、もっと早くお仕置きできますね。」"
+
+
+#温泉开发部
+ Hotspring_development_department_opinion:0 "「（§G現在の建設度：[Root.Hotspring_development_department] §!）\n\n」"
+
+ Megu_desc1:0 "「$Hotspring_development_department_opinion$早く早く……私たちに整地してほしい場所、ありますか？」"
+ Megu_desc2:0 "「$Hotspring_development_department_opinion$へへっ……私たちで掘った温泉、どこも賑やかになってますよ！先生は最近行きましたか？」"
+ Megu_desc3:0 "「$Hotspring_development_department_opinion$前に私たちが掘った温泉、すぐに枯れちゃう場所がたくさんあったんです。でも、今は探査設備があるから、やっと一つ一つ運に任せる必要がなくなりました！」"
+
+ Hotspring_development_department_research:0 "「探査効率を上げる研究ができます。」"
+ Hotspring_development_department_research.tip:0 "「これらの研究には十分な資源が必要です。完了すると、採掘機の採掘効率が大幅に向上し、新しい採掘機の製造コストも増加します。」"
+ Hotspring_development_department_research.undone:0 "「前の研究プロジェクトがまだ完了していません」"
+ Hotspring_development_department_research.MeguRE:0 "「これを統括室に渡せばいいんですね、分かりました！」"
+
+ Hotspring_development_department_building:0 "「営業部、必要ですか？」"
+ Hotspring_development_department_building.MeguRE:0 "「……うーん、開発するだけじゃ足りないって、商業的な手段も必要なんですか？難しいなぁ……」"
+
+ Hotspring_development_department_building_add:0 "「もっと多くの温泉を運営する時が来ました。」"
+ Hotspring_development_department_building_add.MeguRE:0 "「商売はよく分からないけど、温泉を楽しむ人が増えればそれでいいんです！」"
+
+
+#祭典运营委员会
+ Festival_operations_department_opinion:0 "「（§G現在の建設度：[Root.Festival_operations_department]     現在の祭典規模レベル：[root.Festival_operations_department_fes_level]§!）\n\n」"
+
+ Shizuko_desc1:0 "$Festival_operations_department_opinion$"
+ Shizuko_desc2:0 "$Festival_operations_department_opinion$"
+ Shizuko_desc3:0 "$Festival_operations_department_opinion$"
+
+ Festival_operations_department_host:0 "「お祭りを開催しましょう。」"
+ Festival_operations_department_host.tip:0 "「植民地で大規模なお祭りを開催し、すべての設立済み植民地に継続的なボーナスを提供します。\n開催期間中、各植民地は月間維持費として§Y10§!$consumer_goods_with_icon$を必要とします。\n惑星上の各§U施設§!がこのボーナスを強化します」"
+ Festival_operations_department_host.cooldown:0 "「次の祭典開催はまだ行えません。準備完了時間: [root.Festival_operations_department_cooldown]」"
+ Festival_operations_department_host.auto:0 "「§U百鬼夜行連合学院§!に所属するサークルは、毎年自動的に活性化されます」"
+ Festival_operations_department_host.ShizukoRE:0 "「ぜ~んぶ私たちに任せてくださいね、きっとみんなに楽しんでもらいますから！」"
+
+ Festival_operations_department_prolong:0 "「祭典の規模をもっと大きくできますか？」"
+ Festival_operations_department_prolong.tip:0 "「いくつかの資源を支払い、祭典ボーナスの持続時間を延長します。これも同様に祭典開催にクールダウンを発生させ、$consumer_goods_with_icon$を維持費として支払うことになります。」"
+ Festival_operations_department_prolong.cooldown:0 "「次の規模拡大に備えるには、サークル活動部にさらなる準備が必要です。」"
+ Festival_operations_department_prolong.max:0 "「祭典の計画規模は最大に達しました」"
+ Festival_operations_department_prolong.ShizukoRE:0 "「もし連邦生徒会が費用を負担してくれるなら……問題ありませんよ！\n\n(次回祭典開催時、獲得するボーナスの持続時間が360£time£日間延長されます)」"
+
+ Festival_operations_department_building:0 "「他の運営センターを開設する必要がありますか？」"
+ Festival_operations_department_building.ShizukoRE:0 "「これで、売上がもっと早く伸びるようになります。」"
+
+ Festival_operations_department_building_add:0 "「さらなる運営センターが必要な場合は、私に報告してください。」"
+ Festival_operations_department_building_add.ShizukoRE:0 "「次の拡張計画を提出しましたので、ご確認ください！」"
+
+
+#玄武商会
+ Xuanwu_promenade_opinion:0 "「（§G現在の建設度：[Root.Xuanwu_promenade] §!）\n\n」"
+
+ Rumi_desc1:0 "$Xuanwu_promenade_opinion$"
+ Rumi_desc2:0 "$Xuanwu_promenade_opinion$"
+ Rumi_desc3:0 "$Xuanwu_promenade_opinion$"
+
+ Xuanwu_promenade_trade:0 "「私たちは玄武商会に特別な注文をする必要があります。」"
+ Xuanwu_promenade_trade.tip:0 "「商品の特別価格ルートおよび希少品の特殊な入手先を提供します。現金の受け渡しと同時に商品を引き渡します。\nクールダウン時間：[root.Xuanwu_promenade_cooldown]£time£日」"
+ Xuanwu_promenade_trade.cooldown:0 "「玄武商会がルート関連の事柄を処理中です。§Y[root.Xuanwu_promenade_trade_cooldown]§!日後に再度ご注文ください。」"
+ Xuanwu_promenade_trade.noflow:0 "「この資源の流れがないため、この取引が合法であると証明できません。」"
+
+ Xuanwu_promenade_trade.RumiRE.1:0 "「豪快！……なわけないでしょ、あはは、私たち玄武商会は真っ当な商売をしてますよ、えへっ。」"
+ Xuanwu_promenade_trade.RumiRE.2:0 "「これは私たち、すごく頑張って手に入れた品なんですから、質が悪いなんて言わないでくださいね。」"
+
+ Xuanwu_promenade_trade.title:0 "「玄武商会：特殊注文」"
+ Xuanwu_promenade_trade.desc1:0 "「$Xuanwu_promenade_opinion$必要な品があれば、遠慮なくご注文ください……即座に納品します。他のことは玄武商会が解決します。」"
+ Xuanwu_promenade_trade.desc2:0 "「$Xuanwu_promenade_opinion$品切れで本業が滞ってはいけません、先生。あなたは常に玄武商会を信頼できます。」"
+ Xuanwu_promenade_trade.exit:0 "「戻る」"
+ Xuanwu_promenade_trade.consumer_goods:0 "$consumer_goods_with_icon$を購入"
+ Xuanwu_promenade_trade.consumer_goods.tip1:0 "§Y50000§!$trade_with_icon$を消費して§Y5000§!$consumer_goods_with_icon$を購入"
+ Xuanwu_promenade_trade.consumer_goods.tip2:0 "$Civic_SI$: $SI_Shanhaijing_B03$が有効化されました。特殊オーダーで資源を2倍獲得\n§Y50000§!$trade_with_icon$を消費して§Y10000§!$consumer_goods_with_icon$を購入"
+ Xuanwu_promenade_trade.alloys:0 "$alloys_with_icon$を購入"
+ Xuanwu_promenade_trade.alloys.tip1:0 "§Y50000§!$trade_with_icon$を消費して§Y2500§!$alloys_with_icon$を購入"
+ Xuanwu_promenade_trade.alloys.tip2:0 "$Civic_SI$: $SI_Shanhaijing_B03$が有効化されました。特殊オーダーで資源を2倍獲得\n§Y50000§!$trade_with_icon$を消費して§Y5000§!$alloys_with_icon$を購入"
+ Xuanwu_promenade_trade.volatile_motes:0 "£volatile_motes£$volatile_motes$を購入"
+ Xuanwu_promenade_trade.volatile_motes.tip1:0 "§Y50000§!$trade_with_icon$を消費して§Y1000§!£volatile_motes£$volatile_motes$を購入"
+ Xuanwu_promenade_trade.volatile_motes.tip2:0 "$Civic_SI$: $SI_Shanhaijing_B03$が有効化されました。特殊オーダーで資源を2倍獲得\n§Y50000§!$trade_with_icon$を消費して§Y2000§!£volatile_motes£$volatile_motes$を購入"
+ Xuanwu_promenade_trade.exotic_gases:0 "£exotic_gases£$exotic_gases$を購入"
+ Xuanwu_promenade_trade.exotic_gases.tip1:0 "§Y50000§!$trade_with_icon$を消費して§Y1000§!£exotic_gases£$exotic_gases$を購入"
+ Xuanwu_promenade_trade.exotic_gases.tip2:0 "$Civic_SI$: $SI_Shanhaijing_B03$が有効化されました。特殊オーダーで資源を2倍獲得\n§Y50000§!$trade_with_icon$を消費して§Y2000§!£exotic_gases£$exotic_gases$を購入"
+ Xuanwu_promenade_trade.rare_crystals:0 "£rare_crystals£$rare_crystals$を購入"
+ Xuanwu_promenade_trade.rare_crystals.tip1:0 "§Y50000§!$trade_with_icon$を消費して§Y1000§!£rare_crystals£$rare_crystals$を購入"
+ Xuanwu_promenade_trade.rare_crystals.tip2:0 "$Civic_SI$: $SI_Shanhaijing_B03$が有効化されました。特殊オーダーで資源を2倍獲得\n§Y50000§!$trade_with_icon$を消費して§Y2000§!£rare_crystals£$rare_crystals$を購入"
+ Xuanwu_promenade_trade.sr_zro:0 "£zro£$sr_zro$を購入"
+ Xuanwu_promenade_trade.sr_zro.tip1:0 "§Y50000§!$trade_with_icon$を消費して§Y500§!£zro£$sr_zro$を購入"
+ Xuanwu_promenade_trade.sr_zro.tip2:0 "$Civic_SI$: $SI_Shanhaijing_B03$が有効化されました。特殊オーダーで資源を2倍獲得\n§Y50000§!$trade_with_icon$を消費して§Y1000§!£zro£$sr_zro$を購入"
+ Xuanwu_promenade_trade.nanites:0 "£nanites£$nanites$を購入"
+ Xuanwu_promenade_trade.nanites.tip1:0 "§Y50000§!$trade_with_icon$を消費して§Y500§!£nanites£$nanites$を購入"
+ Xuanwu_promenade_trade.nanites.tip2:0 "$Civic_SI$: $SI_Shanhaijing_B03$が有効化されました。特殊オーダーで資源を2倍獲得\n§Y50000§!$trade_with_icon$を消費して§Y1000§!£nanites£$nanites$を購入"
+ Xuanwu_promenade_trade.sr_living_metal:0 "£sr_living_metal£$sr_living_metal$を購入"
+ Xuanwu_promenade_trade.sr_living_metal.tip1:0 "§Y50000§!$trade_with_icon$を消費して§Y500§!£sr_living_metal£$sr_living_metal$を購入"
+ Xuanwu_promenade_trade.sr_living_metal.tip2:0 "$Civic_SI$: $SI_Shanhaijing_B03$が有効化されました。特殊オーダーで資源を2倍獲得\n§Y50000§!$trade_with_icon$を消費して§Y1000§!£sr_living_metal£$sr_living_metal$を購入"
+
+ Xuanwu_promenade_building:0 "これで支社を設立できますね。"
+ Xuanwu_promenade_building.RumiRE:0 "あはは、どんなビジネスから始めようかな……"
+
+ Xuanwu_promenade_building_add:0 "支社の規模を拡大できます。"
+ Xuanwu_promenade_building_add.RumiRE:0 "では、まずはあそこのお客様に連絡してみましょうか……"
+
+
+#出版部
+ Publishing_department_opinion:0 "（§G現在の建設度：[Root.Publishing_department] §!）\n\n"
+
+ Takane_desc1:0 "$Publishing_department_opinion$"
+ Takane_desc2:0 "$Publishing_department_opinion$"
+ Takane_desc3:0 "$Publishing_department_opinion$"
+
+ Publishing_department_spevent:0 "皆さんには、増刊の依頼をお願いしたいのですが。"
+ Publishing_department_spevent.tip:0 "効果期間中、出版部は$food_with_icon$を消費して$consumer_goods_with_icon$を生産し、主流イデオロギーの魅力を増加させます。（数値は現在の£pop£人口に基づきます。月間$food_with_icon$の1回分を即時支払う必要があります）"
+ Publishing_department_spevent.TakaneRE:0 "はい、企画案はこちらにお任せください。"
+
+ Publishing_department_building:0 "これで他の編集部も開設できますね。"
+ Publishing_department_building.TakaneRE:0 "まずは新しいロゴをデザインしなきゃ……"
+
+ Publishing_department_building_add:0 "編集部を拡大する計画はありますか？"
+ Publishing_department_building_add.TakaneRE:0 "私たちのフィードバックデータによると、このようにする必要がありそうです……"
+
+
+###############################
+ mouthly_mission:0 "連邦生徒会の依頼を受諾"
+ Hoshino_mission.tip:0 "ランダムな惑星に出現した区画の障害を排除する。"
+ Hina_mission.tip:0 "ランダムな星系に出現した不良生徒艦隊を排除する。"
+ Hoshino_mission_re.1:0 "うへ〜、先生にはホント申し訳ないなぁ。これって本当はおじさんの仕事なんだけど、生徒会も今は手が回らないみたいだから、先生にお願いするしかない、ってことでいいかな？"
+ Hina_mission_re.1:0 "「（通信画面の向こうで、ひどいクマをつけたヒナが現れる）"
+
+#联邦学生会 星野
+ Hoshino:0 "小鳥遊ホシノ"
+ Hoshino_desc1:0 "「あ～先生、今日はどうしたんですか？私みたいなオッサンに会いに来てくれるなんて。サボってなんかいませんよ？」"
+ Hoshino_about_now:0 "ホシノちゃん、今の状況についてどう思いますか？"
+ Hoshino_about_now.tip:0 "ゲーム進行に役立つヒントを得る"
+ Hoshino_about_now.1:0 "「アビドスが残してくれた基礎のおかげで、新しい学園惑星の建設では、私みたいなオッサンは誰にも負けませんよ。前提条件が早く揃うなら、すぐにでも大建設を始めましょう！」"
+ Hoshino_about_now.2:0 "「学園惑星を建設するには、元々の惑星にある全ての区域障害を取り除く必要がありますが、私みたいなオッサンにとっては大したことありませんよ。」"
+ Hoshino_chat:0 "ホシノちゃん、少し話しませんか？"
+ Hoshino_chat.tip:0 "ホシノちゃんと雑談する"
+ Hoshino_chat.1:0 "「キヴォトスの日常業務は、私が思っていたよりもちょっと複雑ですね……でも、大丈夫ですよ、オッサンが全部しっかりやりますから。」"
+ Hoshino_chat.1.a:0 "ホシノちゃん、もう少し私を頼ってもいいんですよ。"
+ Hoshino_chat.2:0 "「そういえば、宇宙にもクジラって存在するんでしょうか？ティヤンキですか？あれはクラゲみたいじゃないですかねぇ……」"
+ Hoshino_chat.2.a:0 "「んー、少なくとも音はクジラの音なのは間違いないですね。」"
+ Hoshino_chat.3:0 "「ん……ごめんなさい、ちょっと昔のことを考えてました。もし彼女が生きていたら、今のアビドスの現状を喜んでくれたかなって。」"
+ Hoshino_chat.3.a:0 "「きっと……また会えますよね？」"
+ Hoshino_chat.4:0 "「ゲヘナの風紀委員長ですか。なんか、私のことをよく知ってるみたいですね、私みたいなオッサンは数回しか会ったことないんですけど。」"
+ Hoshino_chat.4.a:0 "「実は彼女も、かなり大変みたいですよ。」"
+ Hoshino_chat.5:0 "「んー、ミレニアムの会計の子ですか。前は知らなかった人ですけど、最近何か悩んでるみたいですね。」"
+ Hoshino_chat.5.a:0 "「（たぶん、バッグの問題でしょうね）」"
+ Hoshino_chat.6:0 "「トリニティの聖園ミカさんですか。すごく接しやすい人ですよ、学校の運営にはあんまり経験がないみたいですけどね。」"
+ Hoshino_chat.6.a:0 "「実は彼女、裏では結構暴力的だったりしますよ（素手で壁を壊すような）。」"
+ Hoshino_chat.7:0 "「先生、貧乳が好きですか、それとも巨乳が嫌いですか？」"
+ Hoshino_chat.7.a:0 "「そりゃもちろん、貧乳が好きですよ。」"
+ Hoshino_chat.7.b:0 "「巨乳は悪の文明だ！」"
+ Hoshino_chat.7.c:0 "「なんで直接ホシノが好きじゃないんですか？」"
+ Hoshino_chat.7.d:0 "「ちょっと待って……なんかおかしくないですか？」"
+ Hoshino_chat.8:0 "「やっぱり、先生は私の味方ですね。」"
+ Hoshino_chat.8.a:0 "「（ん、実は選択肢なんて最初からなかったんだろ。まあ、ホシノちゃんのことは暴かないでおこうか）」"
+ Hoshino_chat.9:0 "「えぇ……先生、急にそういう誤解されそうなこと言わないでくださいよ。」"
+ Hoshino_chat.9.a:0 "「どうせ君は最初から選択肢をくれなかったんでしょ？」"
+ Hoshino_chat.10:0 "「えっと、オッサンは何も知りませんよ？」"
+ Hoshino_chat.10.a:0 "ホシノちゃん、わざとでしょ？"
+ Hoshino_event:0 "ホシノちゃん、君に特別なものをあげたいんだけど……明日、時間あるかな？"
+ Hoshino_event.tip:0 "「ダメですよ、私たちは師生関係ですから.jpg」"
+ Hoshino_coffee:0 "「（招待券でカフェに誘い込み、思いっきり頭をワシャワシャする）」"
+ coffee_cooldown:0 "カフェ招待券クールタイム中。"
+ Hoshino_CoffeeRE:0 ""
+ hoshino_event_fail1:0 "ホシノちゃんの好感度が足りません。好感度を上げてから試してみてください。"
+ hoshino_event_fail2:0 "しかし、クジラはまだ帰ってこない。（ホシノ個人ストーリー「クジラの夢」を達成）"
+ BA_Hoshino_exit:0 "「別に、ただ会いに来ただけだよ」"
+
+ Hina:0 "空崎ヒナ"
+ Hina_desc1:0 "「（私が生徒会長室に入ると、ヒナは書類の山に埋もれて作業をしていた。人の気配を感じたのか、顔を上げてこちらを見る）\nあ、先生。これらの書類なら、私一人で十分対応できますから。」"
+ Hina_about_now:0 "ヒナと現在の進捗について話す"
+ Hina_about_now.tip:0 "ゲーム進行に役立つヒントを得る"
+ Hina_about_now.1:0 "先生が発展を計画する際には、役職の割り当ても考慮してくださいね。下層の仕事は常に誰もやりたがらず、生徒たちの人口増加も緩やかです。もし役職に空きがあるなら、ロボット労働者の開発を検討するのも良いかもしれません。まあ、最終的には先生がお決めになることですが。"
+ Hina_about_now.2:0 "百鬼夜行祭典管理部のシズコさんが、支部の開設申請を提出しに来るのが一度や二度ではありません。しかし、私たちの星系はすでに彼女たちに支部を出し尽くされてしまっています。先生、彼女たちを他の星系文明の惑星に支部を開設させることを検討してみてはいかがでしょうか。"
+ Hina_chat:0 "ヒナと雑談する"
+ Hina_chat.tip:0 "しかしヒナはまだ仕事を処理中だ。だが、ヒナちゃんは拒否しないだろう。"
+ Hina_chat.1:0 "「仕事、ですか……別に、どうってことありません。そもそも私がこの職務を引き受けたんですから。それに、風紀委員会にいた頃からもう慣れていますし。\n（でも、やっぱり先生に褒めてほしいな）」"
+ Hina_chat.1.a:0 "ヒナちゃんも体に気を付けてね。"
+ Hina_chat.2:0 "先生は外部の事務処理に専念してください。キヴォトス内部は私がしっかり押さえていますから、問題児たちが大きな波風を立てることはできません。"
+ Hina_chat.2.a:0 "ヒナちゃん、本当に頼りになるなぁ。"
+ Hina_chat.3:0 "小鳥遊ホシノ、ですか……あそこまで変わってしまったのは、何か彼女に起こったのでしょうね……"
+ Hina_chat.3.a:0 "何と言っても大切な生徒だから、私も特に気を付けてあげるよ。"
+ Hina_chat.4:0 "「私と聖園ミカ、どちらが強いかって？　そんなことで悩むなんて、先生は小学生ですか……」"
+ Hina_chat.4.a:0 "純粋な好奇心だよ。"
+ BA_Hina_exit:0 "それじゃあ、ヒナの邪魔はしないでおくね。"
+
+
+
+ Mika:0 "聖園ミカ"
+ Mika_desc:0 "「（ホログラムに映るミカは少し疲れているようだったが、すぐにその疲労は満面の笑顔によって吹き飛ばされた）\nSensei！ ミカね、ちゃんと政務のやり方を勉強してるんだよ！ このところ毎日、色々な星や学園からたくさん通信が来るんだけど、Senseiには特別な着信音を設定したから、取り逃がす心配はないんだからね！ だから今日は、Senseiのお役に立てることがあるかな？」"
+ Mika_about_now:0 "ミカに現状の意見を尋ねる。"
+ Mika_about_now.tip:0 "ゲーム進行に役立つヒントを得る"
+ Mika_about_now.1:0 "「ナギサちゃんやセイアちゃんに、長いこと会ってないんだよね。毎日モモトークで話してるけど、やっぱり一緒にティーパーティーしたいなぁ。生徒会にも、そういう方面の不満が続々と届いてるの。特に遠隔地の惑星に植民している生徒さんたちからね。Senseiも、彼女たちの快適度の問題を忘れないでね。以前の私みたいに高い場所にいると、見えないことがたくさんあるからね。」"
+ Mika_about_now.2:0 "「異星生命体……彼らの中には、あまり好感が持てないタイプも多いよね。でも、もしかしたらゲヘナ学園に対する以前の私の偏見と同じような部分もあるのかも。もし彼らと良い関係を築ければ、将来的にキヴォトスの長期的な発展にも役立つかもしれないしね。」"
+ Mika_about_now.3:0 "「Sensei、それぞれの植民地に配置されている生徒さんたちのことを忘れないでね。キヴォトスでは失業することはないけど、生徒たちそれぞれが自分の役割を果たす方が、断然良い選択だと思うんだ。」"
+ Mika_about_now.4:0 "「うわあ、私もSenseiみたいにアロナみたいな助手がいたらなぁ。ほら、空崎さんだって行政官がそばにいるじゃない……毎日山積みの書類を相手にするのって、本当に心身ともに疲弊しちゃうんだから。え？ Senseiが手伝ってくれるって？ それじゃあ、えこひいきになっちゃうじゃない。まあ、それも悪くないんだけど……」"
+ Mika_about_now.5:0 "「生徒会長って大変だけど、少なくとも前に聴聞会で停止された特権が全部戻ってきたし、むしろ権限が大きくなってるんだ……。でも、それに伴う責任がどれだけ恐ろしいものか、今になってやっと身に染みて分かったよ。ナギサちゃん、昔、私の代わりにこんなにたくさんのことを処理してくれてたんだね？ Senseiも、たくさんの部活と交渉しなきゃいけないんだよね？ 活動資金をちゃんと渡すのを忘れないでね。だって、生徒会ができることって、学園の公式側と接触することくらいだから。」"
+ Mika_about_now.6:0 "「防衛室がずっと武力増強の申請を出してるんだ。もし良かったら、Sensei、技術部に兵器開発を督促してもらえないかな？ だって、艦隊を拡張するだけじゃできることも限られてるからね。」"
+ Mika_chat:0 "ミカと雑談する"
+ Mika_chat.tip:0 "仕事よりも、ミカは先生と一緒にいる方が好きなのかもしれないね。"
+ Mika_chat.1:0 "「小鳥遊ホシノ？ あまりよく知らないけど、ほとんど廃校寸前の学校を一人で支えているって聞いたよ。前に防衛室の会議で会ったことがあるんだけど、あの目は、のんびりした外見とは全然合ってなかったんだ。ああいう目、私は以前、美弥さんの目の中で見たことがあるの。あれは、心に強い信念がある人にしか持てない目なんだ。彼女の信念はきっと過去の後悔なんだろうね。ある意味、私と彼女は共通点があるのかも。」"
+ Mika_chat.1.a:0 "誰もが自分自身の道と、自分だけの救済を持っている。"
+ Mika_chat.2:0 "「この前の防衛室会議に、空崎さんも参加していたんだ。背丈はセイアちゃんと同じくらいだけど、すごく責任感の強いタイプに見えたよ。確か、すごく有能な行政官がそばにいるって話だったよね？ でも、彼女みたいに強い人なら、実はほとんどの問題を自分で解決できるんじゃないかな……もしかしてSensei、ああいう頼りになる女の子が好きだったりするの？」"
+ Mika_chat.2.a:0 "ミカは生徒会長になってから、すごく成長したね。でも、私はミカがミカらしくいてくれればいいと思ってるよ。"
+ Mika_chat.3:0 "「前のセミナーの会計、キヴォトスが新時代に入ってからの最初の総督、冷徹な計算使い、と、私が得られる情報はこれくらいかな。早瀬さんの管理報告書、データが多すぎるんだもん！ いつも見てると頭がくらくらするの！ 何度も、データをもっと減らして、変換された報告書を増やしてって言ったんだけど、返ってくるのは『計算で完璧なデータこそが、現実を最も適切に反映するもの』って答えだけ。Senseiは、長い数字の羅列に全然美しさがないと思わない？」"
+ Mika_chat.3.a:0 "それも仕事の一部だよ、ミカ。仕事への不慣れを克服するように学ぶべきだ。これも自立の一部だからね。"
+ Mika_chat.4:0 "「え……Sensei、ひょっとして暇なの……？ それなら、どうして直接連邦生徒会に私を訪ねてきてくれないの？ ナギサちゃんとセイアちゃんも誘って、一緒にティーパーティーでもしようよ。こうして４人で一緒にお茶を飲んだの、いつ以来か思い出せないくらいなんだから。でも、もしSenseiが一人で来てくれるなら……それも大歓迎だよ。」"
+ Mika_chat.4.a:0 "今抱えていることが全部片付いてからにするよ。"
+
+ BA_Mika_exit:0 "じゃあ、これで失礼するね。"
+
+
+
+ Yuuka:0 "早瀬ユウカ"
+ Yuuka_desc1:0 "「ええと……今月のキヴォトス全体の予算は……軍事費は……外交支出も結構あるわね……それから各学園への経済補助金も……あっ、Sensei！ いらっしゃい！ ごめんなさい、今ちょっと夢中になりすぎてて、手が離せなくて。でも、このまま作業しながらでもご質問にお答えできますから、どうぞ。」"
+ Yuuka_about_now:0 "ユウカに現状の意見を尋ねる。"
+ Yuuka_about_now.tip:0 "ゲーム進行に役立つヒントを得る"
+ Yuuka_about_now.1:0 "「立派な大人になるためには、先生は私たちの財政支出に常に気を配る必要があります——もちろん、これはエネルギー通貨だけではありません。他の資源の収入状況にも特に注意してくださいね。市場と外交貿易を通じて収支を適切に管理したり、皆さんの持ち場を合理的に割り当てることで、必要な資源を効率的に採掘したりできます。もちろん、倉庫に収まらない資源は適切に処理することをお勧めしますよ。浪費は際限のない支出と同じく、自分に無責任な行動です。でも、私が生徒会長である以上、私がいますから、先生ならきっと大丈夫です！」"
+ Yuuka_about_now.2:0 "「お仕事の合間に、先生も皆の日常活動に目を向けてみてはいかがでしょうか？ 生徒会には、たくさんの生徒たちから部活動の支部建設の申請が届いています。生徒会は関連議案を承認済みですが、具体的な内容は、やはり先生に決めていただきたいのです！」"
+ Yuuka_chat:0 "ユウカと話す"
+ Yuuka_chat.tip:0 "「ユウカは仕事の鬼だけど、たまには先生とおしゃべりするのも悪くないはず。」"
+ Yuuka_chat.1:0 "「仕事ですか……あはは、実はたいしたことないんですよ。セミナーで会計をしていた時も、仕事量はこれと大差なかったですし。変な提案に対応したり、リオ会長の尻拭いを手伝ったり……。今は生徒会長になったからか、かえって身動きが取りやすくなったというか、悪いことでもないですね。（それに……こうしていれば、先生にもう少し近づける……）」"
+ Yuuka_chat.1.a:0 "「そうは言っても、ユウカはもっと休んだ方がいいですよ。」"
+ Yuuka_chat.2:0 "「以前、セミナーでリオ会長の職務を引き継いだ経験がありますから、キヴォトス内部の事務処理は私にとって問題ありません。先生は安心して宇宙に目を向けてください！ あ、もちろん、外交業務も私ができますよ！ どうぞ遠慮なくご依頼くださいね！」"
+ Yuuka_chat.2.a:0 "「さすがユウカだね、いつも頼りになる。」"
+ Yuuka_chat.3:0 "「ゲヘナの風紀委員長、空崎ヒナ……先生がよくアリスにお話しているあのヒナですか？ アリスもよく彼女のことを私に話してくれます。確かにすごく頼りになる人ですよね……はぁ、C&Cの皆も彼女に少しは見習ってほしいんですが……」"
+ Yuuka_chat.3.a:0 "「ユウカも委員長をよろしくね。」"
+ Yuuka_chat.4:0 "「小鳥遊ホシノ？ ああ、アビドスのあの副会長ですね……すごく不思議な人ですよね。ノアがいつも、彼女ののんびりした表情の奥に、一抹の憂慮と悩みが隠されているって話してくるんです……きっと、何か大変なことを経験したんでしょうね。」"
+ Yuuka_chat.4.a:0 "「そんなことが二度とないことを願うよ。」"
+ BA_Yuuka_exit:0 "「じゃあ、ユウカの仕事の邪魔はしないでおこうか？」"

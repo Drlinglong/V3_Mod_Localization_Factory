@@ -1,0 +1,114 @@
+﻿l_german:
+### 外交辞令
+ 01_BA_FE_PATRONIZING:0 "Wir haben uns noch nicht ganz an die Rolle der Zuschauer jenseits der vierten Wand gewöhnt… Aber wir würden trotzdem gerne eure Geschichte hören."
+ 02_BA_FE_PATRONIZING:0 "Ihr seid ja wirklich voller Energie, Außenweltler… genau wie wir vor langer, langer Zeit."
+ 03_BA_FE_PATRONIZING:0 "Ihr sagt, ihr könnt das nicht reparieren?… Bringt es zu uns, vielleicht können wir euch helfen."
+ 04_BA_FE_PATRONIZING:0 "…Nichts Besonderes, ich habe nur jemanden gesehen, der mir bekannt vorkam, und dachte an unsere ehemaligen Kameraden…"
+ 01_BA_FE_DISMISSIVE:0 "Ach, ihr seid es. Sagt, was ihr wollt."
+ 02_BA_FE_DISMISSIVE:0 "Wir mochten es nie, andere zu schikanieren… Ihr wisst schon."
+ 03_BA_FE_DISMISSIVE:0 "Wir teilen unsere Technologie nur, wenn es absolut notwendig ist."
+ 01_BA_FE_ANGRY:0 "Blut und Feuer…"
+ 02_BA_FE_ANGRY:0 "Wir hatten auch mal Hoffnung, aber wir haben sie uns selbst erkämpft. Nicht so wie ihr."
+ 03_BA_FE_ANGRY:0 "Wenn eure Geschichte so ist, dann sei es so."
+ 01_BA_FE_WAR:0 "Ich muss euch danken… Ihr habt uns die Schattenseite unter dem Heiligenschein gezeigt."
+ 02_BA_FE_WAR:0 "Wofür hältst du diesen Ort eigentlich?"
+ 11_BA_FE_CUSTODIAL:0 "Jetzt sind wir wie ein Zuschauer, der auf die Bühne stürmt, den Musikern die Instrumente entreißt und selbst zu spielen beginnt. Ob wir die Vorstellung ruinieren, liegt allein in unserem Ermessen."
+ 12_BA_FE_CUSTODIAL:0 "Es fühlt sich ein wenig so an, wie damals, als wir uns gerade zusammengeschlossen haben. Angenehm, aufregend, als wäre man voller Kraft…"
+ 13_BA_FE_CUSTODIAL:0 "Sagt einfach, wenn ihr Hilfe braucht; alles außer Flottenangelegenheiten ist verhandelbar."
+ 14_BA_FE_CUSTODIAL:0 "…Es ist wirklich überwältigend, dass auch wir diesen Tag erleben… Wir werden diese Chance nicht vergeuden."
+ 11_BA_FE_ARROGANT:0 "Nicht schlecht, es scheint, als hättet ihr die Grundsätze des galaktischen Zivilisationsverhaltens bereits verstanden."
+ 12_BA_FE_ARROGANT:0 "Der Grund, warum wir Gewalt anwenden, ist unserer Meinung nach eine Notwendigkeit. Ihr werdet uns niemals verstehen können."
+ 13_BA_FE_ARROGANT:0 "Technologie dient denjenigen, die sie nutzen. Wir hoffen, die Besten, die davon profitieren, sind Soldaten und keine Tyrannen."
+ 11_BA_FE_IMPERIOUS:0 "Erde und junge Triebe… Interessant."
+ 12_BA_FE_IMPERIOUS:0 "Ein Museum wäre euer bestes Zuhause, danach kämen noch der Zoo, die Fließbandproduktion oder ein Kraftwerk, je nachdem, wie sehr ihr euch bemüht."
+ 13_BA_FE_IMPERIOUS:0 "Die Geschichte, die ihr geschrieben habt, hätte viel perfekter sein sollen, doch stattdessen ist sie voller Beschönigung, Schmeichelei und Betrug… Wie könnt ihr euch da rühmen?"
+ 11_BA_FE_WAR:0 "Wir überlassen euch Wasser und Erde aus unserer Heimat der Leere; holt sie euch selbst."
+ 12_BA_FE_WAR:0 "Was haltet ihr von der Produktion von Konserven?… Versteht mich nicht falsch, das könnte in Zukunft auch euch betreffen, im Krieg oder danach."
+
+ #星门通路
+ BA_Precursor.0015.title:0 "Kommunikationsverbindung aktiviert"
+ BA_Precursor.0015.desc.1:0 "Wir haben Subraumwellen vom Kommunikationsverbindung-Knotenpunkt-Sternsystem empfangen, es scheint, als wäre der Kommunikationsverbindung-Knotenpunkt von der anderen Seite geöffnet worden."
+ BA_Precursor.0015.desc.2:0 "Wir haben eine Subraumwelle von einem unbekannten Sternsystem empfangen, es scheint, als wäre sie durch die Aktivierung einer Megastruktur entstanden."
+ BA_Precursor.0015.a:0 "Aufregend."
+ BA_Precursor.0015.b:0 "Wir brauchen mehr Informationen."
+
+ BA_Precursor.0016.title:0 "Kommunikationsverbindung aktiviert"
+ BA_Precursor.0016.desc:0 "§YHier spricht Chef-Zeugin Yurizono Seia, ich sende hiermit eine Nachricht an die Außenwelt.§! Tatsächlich haben wir kurz nach der Aktivierung des Außenwelt-Kommunikationslinks immer mehr Informationen von der Außenwelt erhalten, was uns sehr geholfen hat, den in unserem Gebiet befindlichen Kommunikationsverbindung-Knotenpunkt zu reparieren. Wir haben jedoch keine tatsächlichen Reparaturmaßnahmen ergriffen, da wir uns einig waren, uns nicht zu sehr in die äußeren Angelegenheiten einzumischen. Doch nun ist die Lage anders, und für den Grund, an dem wir bis heute festgehalten haben, müssen wir heute handeln. Glücklicherweise war unser erster Reparaturversuch ein großer Erfolg, und der Kommunikationsverbindung-Knotenpunkt in KETHER ist nun in Betrieb.§RLetzte Warnung: Obwohl andere Kommunikationsverbindung-Knotenpunkte öffentlich genutzt werden können, ist die unbefugte Nutzung des Sternentors in KETHER nicht gestattet. Bitte nehmt dies zur Kenntnis.§!"
+ BA_Precursor.0016.next:0 "Endlich…"
+
+
+#探索
+ BA_Precursor.0051.title:0 "Kommunikationsverbindung-Knotenpunkt entdeckt"
+ BA_Precursor.0051.desc:0 "Kaum in dieses Schwarze-Loch-Sternsystem eingedrungen, bemerkte [from.GetName] die Ungewöhnlichkeit des Systems: Ein sternentorähnliches Objekt lief still am Rande des Systems. Genau wie das stille Schwarze Loch im Zentrum des Sternsystems, verschwindet alles – ob Materie oder Sonden-Signale –, das dieses Sternentor betritt, spurlos. Die Besatzung hat verschiedene Hypothesen über den Zweck dieses Sternentors aufgestellt, aber keine davon konnte bisher praktisch bestätigt werden."
+ BA_Precursor.0051.next:0 "Wenn dem so ist, dann lassen wir es vorerst ruhen."
+
+ BA_Precursor.0052.title:0 "Numerologie-Sternhaufen betreten"
+ BA_Precursor.0052.desc:0 "Dies ist unser erster Eintritt in den Sternhaufen der Numerologie. Möglicherweise durch die unzähligen Jahre der Forschung und Umgestaltung der Numerologie, weisen die Sterne hier andere Merkmale auf als gewöhnliche Sterne im System."
+ BA_Precursor.0052.next:0 "Aufregend."
+
+ BA_Precursor.0054.title:0 "„Königreich“"
+ BA_Precursor.0054.desc:0 "Wir haben das letzte System der Numerologie erreicht: „Königreich“. Überraschenderweise ähnelt die Anordnung dieses Systems unserem Kivotos-Heimatsystem auf frappierende Weise. Dies bestärkt uns in der Überzeugung, dass unser Heimatsystem künstlich erschaffen wurde."
+ BA_Precursor.0054.next:0 "..."
+
+ BA_Precursor.0057.title:0 "Spur"
+ BA_Precursor.0057.desc:0 "Wir haben auf einem Planeten im Kommunikations-Link-Schnittstellensystem einige extrem gefährliche Anomaliesignale und Materialspuren entdeckt. Nach der Analyse scheinen dies die Überreste eines Bodenkrieges zu sein, den das präkursische Imperium, das dieses Sternentor gebaut hat, um die Kontrolle darüber geführt hat. Wenn wir mehr wissen wollen, müssen wir handeln."
+ BA_Precursor.0057.next:0 "Packen wir's an."
+
+#初次见面
+ BA_Precursor.0101.title:0 "Link-Kommunikation"
+ BA_Precursor.0101.desc:0 "Unsere Beobachtungsstation hat entdeckt, dass ein Tachyonsignal ein Sternentor in der Kommunikations-Link-Schnittstelle aktiviert hat. Gleichzeitig ruft uns eine Kommunikation aus diesem Link mit unserer eigenen Sprache."
+ BA_Precursor.0101.next:0 "Verbindung herstellen"
+
+ BA_Precursor.0102.title:0 "Link-Kommunikation"
+ BA_Precursor.0102.desc:0 "„Seid gegrüßt, ihr Überlebenden von Kivotos da draußen! Wir sind Moe Xcom. Wie ihr seht, wurden die Kommunikations-Links in diesem System von unseren Feinden errichtet. Nachdem wir die Antworten gefunden hatten, konnten wir keine ausgehende Berechtigung für die Kommunikations-Links erhalten und konnten die Situation außerhalb des Sternhaufens nur durch die spärlichen Informationen ableiten, die durch die Links sickerten. Aber... nach so langer Zeit der Ruhe, obwohl wir die externen Kommunikations-Links entschlüsselt haben, sind wir euch technologisch weit überlegen, und wir sind uns einig, dass wir uns nicht in die Verhältnisse externer Sternensysteme einmischen sollten. Deshalb haben wir beschlossen, unsere Forschung zur Sternentor-Reparatur in unserem Territorium nicht fortzusetzen, um Auswirkungen zu vermeiden, die selbst wir nicht mehr rückgängig machen könnten.“"
+ BA_Precursor.0102.Eden_Treaty:0 "Ihr habt die Gematria gestürzt... Ist das wahr?"
+ BA_Precursor.0102.Eden_Treaty.re:0 "„Genau! Nachdem wir das Gefängnis im System 06 durchbrochen hatten, vertrieben wir die Gematria nach harten Kämpfen aus dem Sternhaufen. Danach haben wir auch viele interne Veränderungen durchgemacht, bis wir uns schließlich vereint haben... Wenn ihr an dieser Geschichte interessiert seid, könnt ihr uns jederzeit besuchen.“"
+ BA_Precursor.0102.Kyrie:0 "Die Widerständler... sind das Schüler wie wir?"
+ BA_Precursor.0102.Kyrie.re:0 "„Genau! Nachdem wir das Gefängnis im System 06 durchbrochen hatten, vertrieben wir die Gematria nach harten Kämpfen aus dem Sternhaufen. ...Habt ihr auch Widerstand geleistet? Das ist wirklich sehr bewegend... Obwohl wir uns entschieden haben, uns nicht in die äußeren Angelegenheiten einzumischen, sagt einfach Bescheid, wenn ihr Hilfe braucht.“"
+ BA_Precursor.0102.Kivotos_other:0 "Eure Halos... sind die wie unsere?"
+ BA_Precursor.0102.Kivotos_other.re:0 "Genau! Halos sind auch eines unserer langjährigen Forschungsthemen. Die Forschungsergebnisse sind superinteressant... Aber das betrifft Dinge, die wir jetzt noch nicht verraten können. Das überlassen wir euch zum Erkunden!"
+ BA_Precursor.0102.exit_Kivotos:0 "Euch sei Respekt gezollt, Präkursoren."
+ BA_Precursor.0102.exit_Kivotos.re:0 "„Wir hoffen auch, dass ihr eure eigene Geschichte schreibt, ihr Äußeren.“"
+ BA_Precursor.0102.exit_other:0 "Komische Papierfiguren..."
+ BA_Precursor.0102.exit_other.re:0 "„...Was für eine interessante Spezies.“"
+
+#先驱者通讯
+ BA_Precursor.0151.title:0 "Präkursoren-Kommunikation (Kommunikation aufgrund zu geringer Meinung abgelehnt)"
+ BA_Precursor.0151.desc:0 "„Du hast Recht, aber das 'Blue Archive Species Pack' ist ein brandneuer Anime-Mod für das 4X-Spiel Stellaris, entwickelt vom Team unter der Leitung von N0Z0M1. Die Mod-Geschichte spielt in einer Fantasiewelt namens 'Kivotos', wo alle Schülerinnen 'Halos' besitzen, die mystische Kräfte lenken. Du schlüpfst in die Rolle eines mysteriösen Charakters namens 'Sensei', der inmitten der geschäftigen Arbeit Schülerinnen mit unterschiedlichen Persönlichkeiten und einzigartigen Fähigkeiten 'ärgert', um mit ihnen mächtige Feinde zu besiegen und die verschwundene Präsidentin des Schülerrats wiederzufinden – und dabei schrittweise die Wahrheit hinter dem 'Geheimnis' zu enthüllen.“"
+ BA_Precursor.0151.next:0 "Das kommt sicher davon, wenn man Blue Archive spielt."
+
+ BA_Precursor.main.title:0 "Präkursoren-Kommunikation"
+ BA_Precursor.main.desc.1:0 "„...Uhm, nichts Wichtiges... Habt ihr irgendwelche Schwierigkeiten?"
+ BA_Precursor.main.desc.2:0 "„Obwohl wir es erst kürzlich beobachtet haben... eure Entwicklungsgeschwindigkeit übertrifft wirklich unsere Erwartungen.“"
+ BA_Precursor.main.desc.3:0 "„Obwohl unsere Technologie und Technik sehr mächtig und fortschrittlich sind... gibt es Dinge, die selbst wir nicht tun können...“"
+ BA_Precursor.main.desc.4:0 "„Hört mal zu... Was die Grenze zwischen dem Mysterium und dem Schrecken angeht... Naja, wenn ihr es seid, sollte es wohl okay sein...“"
+ BA_Precursor.main.desc.5:0 "„Schätzt eure Kameraden, die jetzt noch an eurer Seite sind...“"
+
+
+ BA_Precursor.manual:0 "Beschreibung"
+ BA_Precursor.manual.title:0 "Präkursoren-Kommunikation: Beschreibung"
+ BA_Precursor.manual.desc:0 "„Da dies ein ganz besonderer Raum ist, können wir euch Gegenstände nur auf besondere Weise schicken... Hyperraumrouten sind leider nicht möglich, aber wir können ein §YMikro-Wurmloch§! errichten oder direkt einen §BWarp-Frachter§! entsenden.\nHabt ihr etwas, das ihr wissen wollt?“"
+
+
+ BA_Precursor.trade:0 "Punktehandel"
+ BA_Precursor.trade.title:0 "Präkursoren-Kommunikation: Punkte und Logistik"
+ BA_Precursor.trade.desc:0 "„Wir werden uns nicht zu sehr in eure Angelegenheiten einmischen, aber wenn es um Dinge geht, die dringend gelöst werden müssen, könnt ihr uns jederzeit ansprechen...“"
+
+ BA_Precursor.trade.get_point:0 "Handelspunkte erhalten"
+
+ BA_Precursor.trade.wormhole:0 "Ressourcen über §YMikro-Wurmloch§! handeln"
+
+ BA_Precursor.trade.warpship:0 "Ressourcen über §BWarp-Frachter§! handeln"
+
+ BA_Precursor.trade.infomation:0 "Handelsinformationen"
+
+ BA_Precursor.chat:0 "Plauderei"
+ BA_Precursor.chat.title:0 "Präkursoren-Kommunikation: Plauderei"
+ BA_Precursor.chat.desc:0 "„Ich weiß, dass ihr viele Fragen habt... Wer wir sind, woher ihr kommt und warum!“"
+
+
+
+ BA_Precursor.exit:0 "Seite schließen"
+
+ BA_Precursor.manual.re:0 "Da unsere Logistik nur auf Wegen außerhalb der Hyperraum-Routen erfolgen kann, ist ein normaler Handel für uns leider nicht möglich.\nDie vernünftigste Methode sind derzeit Mikrowurmloch-Verbindungen, die monatlich 20 Transportkapazität bieten. Die Wartungskosten für die Wurmlöcher werden vollständig von uns übernommen.\nKeine Sorge, ungenutzte Transportkapazität geht nicht verloren! Wir können euch auch Warpschiffe schicken. Die Transportkosten für eine einfache Strecke, die ihr tragt, belaufen sich auf 1000 £energy£. Die Kosten für den Hinweg müsst ihr übernehmen. Für den Rückweg bieten wir euch zwei Optionen an: Entweder ihr bezahlt die Rückflugkosten und schickt das Schiff zurück, oder ihr verwendet etwas von eurer gespeicherten Transportkapazität, um das Schiff zu behalten. Wir werden uns danach nicht einmischen, egal ob ihr es zerlegen oder per Reverse Engineering erforschen wollt.\nAußerdem benötigen wir dringend alle möglichen Informationen aus den äußeren Regionen. Wenn ihr bereit seid, uns diese zur Verfügung zu stellen, werden wir euch eine Belohnung bieten, die ihr absolut nicht ablehnen könnt... Wir werden euch ganz bestimmt nicht im Stich lassen. Wie klingt das? Das ist doch ein Angebot, das ihr unmöglich ablehnen könnt, oder?!"
+
