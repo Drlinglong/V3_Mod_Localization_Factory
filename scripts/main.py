@@ -18,13 +18,25 @@ from scripts.config import LANGUAGES, GAME_PROFILES, SOURCE_DIR, API_PROVIDERS, 
 
 def display_version_info():
     """显示项目版本信息"""
-    print("=" * 60)
-    print(f"🎯 {PROJECT_DISPLAY_NAME}")
-    print(f"🔧 {PROJECT_NAME}")
-    print(f"📦 版本: {VERSION}")
-    print(f"📅 最后更新: {LAST_UPDATE_DATE}")
-    print(f"© {COPYRIGHT}")
-    print("=" * 60)
+    try:
+        from scripts.utils.i18n import i18n
+        # 使用国际化显示版本信息
+        print("=" * 60)
+        print(i18n.t("version_info_display_name", display_name=PROJECT_DISPLAY_NAME))
+        print(i18n.t("version_info_engineering_name", name=PROJECT_NAME))
+        print(i18n.t("version_info_version", version=VERSION))
+        print(i18n.t("version_info_last_update", date=LAST_UPDATE_DATE))
+        print(i18n.t("version_info_copyright", copyright=COPYRIGHT))
+        print("=" * 60)
+    except Exception:
+        # 如果国际化不可用，使用默认显示
+        print("=" * 60)
+        print(f"🎯 {PROJECT_DISPLAY_NAME}")
+        print(f"🔧 {PROJECT_NAME}")
+        print(f"📦 版本: {VERSION}")
+        print(f"📅 最后更新: {LAST_UPDATE_DATE}")
+        print(f"© {COPYRIGHT}")
+        print("=" * 60)
     
     # 同时记录到日志（使用国际化）
     try:
@@ -510,11 +522,11 @@ if __name__ == '__main__':
         # 设置日志系统
         logger.setup_logger()
         
-        # 显示版本信息
-        display_version_info()
-        
         # 加载语言文件
         i18n.load_language()
+        
+        # 显示版本信息（在国际化系统初始化之后）
+        display_version_info()
         
         # 运行主菜单
         main()

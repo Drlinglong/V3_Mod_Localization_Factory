@@ -168,5 +168,11 @@
 "glossary_merge_completed": "词典合并完成: {main_entries} 个主词典条目 + {aux_entries} 个外挂词典条目 = {total_entries} 个总计",
 "project_startup": "项目启动: {display_name} v{version}",
 "project_engineering_name": "工程名称: {name}",
-"project_last_update": "最后更新: {date}"
+"project_last_update": "最后更新: {date}",
+"version_info_title": "项目版本信息",
+"version_info_display_name": "🎯 {display_name}",
+"version_info_engineering_name": "🔧 {name}",
+"version_info_version": "📦 版本: {version}",
+"version_info_last_update": "📅 最后更新: {date}",
+"version_info_copyright": "© {copyright}"
 }
