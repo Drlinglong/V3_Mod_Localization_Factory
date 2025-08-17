@@ -1,4 +1,4 @@
-﻿l_german:
+l_german:
 ###############################
  FLAG_CATEGORY_ba:0 "Blauarchiv-Flagge"
  name_list_Schale:0 "Blauarchiv"
@@ -60,7 +60,7 @@
 
  NPASS:0 "NPASS"
  EMPIRE_DESIGN_BA_NPA:0 "Föderation des Neuen Dogmas"
- EMPIRE_DESIGN_BA_NPA_desc:0 "Schon lange wurden wir von jenen unterdrückt, die das sogenannte „Zentrum der Welt“ für sich beanspruchten.\nAlles ist Nichts.\nWir ergriffen die flüchtige Gelegenheit, um die Pracht der Unterdrücker mitsamt unseren eigenen Fesseln zu zerschmettern. Wir gaben alles, was wir besaßen, um unsere Freiheit zurückzugewinnen.\nNun können wir endlich unseren Blick über den vernarbten Planeten hinaus in die Sterne richten und dieses nach der Umwälzung wankende Kivotos retten…"
+ EMPIRE_DESIGN_BA_NPA_desc:0 "Schon lange wurden wir von jenen unterdrückt, die das sogenannte „Zentrum der Welt“ für sich beanspruchten.\nAlles ist Nichts.\nWir ergriffen die flüchtige Gelegenheit, um die Pracht der Unterdrücker mitsamt unseren eigenen Fesseln zu zerschmettern. Wir gaben alles, was wir besaßen, um unsere Freiheit zurückzugewinnen.\nNun können wir endlich unseren Blick über den vernarbten Planeten hinaus in die Sterne richten und dieses nach der Umwälzung wankende Kivotos retten..."
  START_SCREEN_KYRIE:0 "Einst besaßen wir ein friedliches Refugium, wo wir uns begegneten, gemeinsam weinten und lachten. Doch erfüllt von Hass, traten wir unser einstiges Paradies selbst in Schutt und Asche und verwandelten es in ein Flammenmeer. Ohne einen Ort, an den wir zurückkehren oder uns anlehnen konnten, irrten wir schweigend zwischen den Ruinen umher. Niemand hätte gedacht, dass der Sternenhimmel, zu dem wir nur in Trauer aufblickten, unser neues Zuhause werden würde."
  START_SCREEN_BA_NPA:0 "$EMPIRE_DESIGN_BA_NPA_desc$"
 
@@ -262,33 +262,33 @@
  BA_Shittem.3002.desc:0 "(Kurz nachdem der Auftrag eingereicht wurde, stürmten zwei seltsame Mädchen in §BMillennium-Technologie-Akademie§!-Uniformen ins Büro)"
  BA_Shittem.3002.a:0 "Wer seid ihr?"
  BA_Shittem.3002.a.re:0 "§W„Noa Ushio vom Seminar, entschuldigen Sie die plötzliche Störung... oder vielmehr, es ist schon eine Weile her, dass wir uns das letzte Mal getroffen haben, Sensei. Das ist Aris Tendou von der Spieleentwicklungsabteilung. Wir waren wegen dieses Auftrags ziemlich im Stress und ich dachte, ich sollte Ihnen einen Bericht erstatten.“§!\n\n§B„Sensei, vielen Dank für Ihre Unterstützung der Arbeit der Millennium-Technologie-Akademie! Aris Tendou, die Heldin, die die Mission der Erlösung trägt...\nund auch der Prototyp für dieses Roboter-Experiment!“§!"
- BA_Shittem.3002.b:0 "…Hallo, Aris, Noa."
- BA_Shittem.3002.b.re:0 "§W„Vor Kurzem hat die Millennium Wissenschaftsakademie großes Interesse an der Technologie gezeigt, die Aris erschaffen hat. Wir haben versucht, Scans und Analysen durchzuführen, und es ist uns gelungen, einige bisher unlösbare Schlüsseltechnologien zurückzuentwickeln. Dank Ihrer Unterstützung konnten wir diesmal viele Prototypen und Modelle erstellen, aber ihre Intelligenz kann bei Weitem nicht mit der von Aris verglichen werden…\nJetzt müssen wir eine Menge Daten sammeln, um die Intelligenz der Massenproduktionseinheiten zu optimieren, indem wir Aris verschiedene Aufgaben erledigen lassen… Sensei, was halten Sie davon?“§!"
+ BA_Shittem.3002.b:0 "...Hallo, Aris, Noa."
+ BA_Shittem.3002.b.re:0 "§W„Vor Kurzem hat die Millennium Wissenschaftsakademie großes Interesse an der Technologie gezeigt, die Aris erschaffen hat. Wir haben versucht, Scans und Analysen durchzuführen, und es ist uns gelungen, einige bisher unlösbare Schlüsseltechnologien zurückzuentwickeln. Dank Ihrer Unterstützung konnten wir diesmal viele Prototypen und Modelle erstellen, aber ihre Intelligenz kann bei Weitem nicht mit der von Aris verglichen werden...\nJetzt müssen wir eine Menge Daten sammeln, um die Intelligenz der Massenproduktionseinheiten zu optimieren, indem wir Aris verschiedene Aufgaben erledigen lassen... Sensei, was halten Sie davon?“§!"
  BA_Shittem.3002.c:0 "Wie wäre es mit dem Föderalen Studentenrat? Das General Student Council wird dich sicher herzlich willkommen heißen."
  BA_Shittem.3002.c.re:0 "§B„Bing-Bong-Ka-Bong! Aris hat eine neue Aufgabe angenommen, Aris wird sich sehr bemühen, zu helfen!“§!\n\n\n(Du kannst Aris auf der Seite „Anführerreserve – Prinzess-Roboter“ andere Positionen zuweisen)"
  Aris_joined:0 "Aris ist zum Wissenschaftler-Anführer geworden."
 
  BA_Shittem.3010.name:0 ""
- BA_Shittem.3010.desc:0 "Sensei, vielen Dank für Ihre Unterstützung der Millennium Wissenschaftsakademie! Tendo Aris, die Heldin, die die Mission der Erlösung trägt…\nUnd der Prototyp dieses Roboter-Experiments!"
+ BA_Shittem.3010.desc:0 "Sensei, vielen Dank für Ihre Unterstützung der Millennium Wissenschaftsakademie! Tendo Aris, die Heldin, die die Mission der Erlösung trägt...\nUnd der Prototyp dieses Roboter-Experiments!"
  AoharuUI.common_btn.none:0 ""
 
  name_list_ArisName:0 "Aris"
  name_list_ArisPrName:0 "Aris die Vorreiterin"
 
  BA_Shittem.3003.name:0 "Kommunikation: Aris"
- BA_Shittem.3003.desc.normal.a:0 "„Ähm… Aris' Level ist noch nicht ausreichend, es werden noch mehr Erfahrungspunkte benötigt…“"
- BA_Shittem.3003.desc.scientist.a:0 "„…“\n(Berechnet)"
- BA_Shittem.3003.desc.governor.a:0 "„…Äh-ha-ha-ha, Akten, Akten! …So viele, viele Akten, endlose Akten!…“"
- BA_Shittem.3003.desc.admiral.a:0 "„Yuzu-chan, volle Kraft voraus! Äh, das darf man so nicht spielen?… Aris hat verstanden…“"
+ BA_Shittem.3003.desc.normal.a:0 "„Ähm... Aris' Level ist noch nicht ausreichend, es werden noch mehr Erfahrungspunkte benötigt...“"
+ BA_Shittem.3003.desc.scientist.a:0 "„...“\n(Berechnet)"
+ BA_Shittem.3003.desc.governor.a:0 "„...Äh-ha-ha-ha, Akten, Akten! ...So viele, viele Akten, endlose Akten!...“"
+ BA_Shittem.3003.desc.admiral.a:0 "„Yuzu-chan, volle Kraft voraus! Äh, das darf man so nicht spielen?... Aris hat verstanden...“"
  BA_Shittem.3003.desc.general.a:0 "„Alle mal bereitmachen, Stand by for Aris-fall! Das nächste Mal landet Aris einfach so auf dem Planeten und dann ‚Licht, oh!‘, das wird bestimmt lustig!“"
  BA_Shittem.3003.exit:0 "Zurück"
  Aris_cooldown:0 "Amtszeit zu kurz"
  Aris_reload:0 "(Falls ein Bug auftritt, führe eine beliebige Aktion aus, die die Anführerliste liest, um ihn zu beheben)"
  Aris_to_scientist:0 "Aris ist doch wirklich für Forschungsarbeiten geeignet, oder nicht?"
  Aris_to_scientist.re:0 "„Aris hat den Auftrag des Großen Weisen angenommen und die neue Ausrüstung ‚Forschungsschiff‘ erhalten!“\n\n$Aris_reload$"
- Aris_to_governor:0 "Wie steht es um Aris' Fähigkeit, offizielle Angelegenheiten zu erledigen…?"
+ Aris_to_governor:0 "Wie steht es um Aris' Fähigkeit, offizielle Angelegenheiten zu erledigen...?"
  Aris_to_governor.re:0 "„Managementspiele machen super viel Spaß, Aris freut sich schon darauf!“\n\n$Aris_reload$"
- Aris_to_official:0 "Wie steht es um Aris' Fähigkeit, offizielle Angelegenheiten zu erledigen…?"
+ Aris_to_official:0 "Wie steht es um Aris' Fähigkeit, offizielle Angelegenheiten zu erledigen...?"
  Aris_to_official.re:0 "„Managementspiele machen super viel Spaß, Aris freut sich schon darauf!“\n\n$Aris_reload$"
  Aris_to_admiral:0 "Könnte Aris so etwas wie eine Flotte kommandieren?"
  Aris_to_admiral.re:0 "„Sensoren verbunden, Waffensystem-Kühlung normal! Aris, Status: Gut!“\n\n$Aris_reload$"
@@ -296,8 +296,8 @@
  Aris_to_general.re:0 "„Protokoll: Mission halten! Aris hat neue Truppen erhalten!“\n\n$Aris_reload$"
  Aris_to_commander:0 "Einsatzführung, für Aris doch ein Kinderspiel, oder?"
  Aris_to_commander.re:0 "„Protokoll: Mission halten! Aris hat neue Truppen erhalten!“\n\n$Aris_reload$"
- Aris_to_matrix:0 "(Dieses Kind könnte man vielleicht zum Bergbau einsetzen…)"
- Aris_to_matrix.re:0 "„Berg…bau, was ist das?\n…Hash-Berechnung? Aris versteht, Aris ist am besten im Rechnen, überlasst es mir!“\n\n$Aris_reload$"
+ Aris_to_matrix:0 "(Dieses Kind könnte man vielleicht zum Bergbau einsetzen...)"
+ Aris_to_matrix.re:0 "„Berg...bau, was ist das?\n...Hash-Berechnung? Aris versteht, Aris ist am besten im Rechnen, überlasst es mir!“\n\n$Aris_reload$"
 
 
  PRESCRIPTED_species_name_ba_fe_1:0 "Kivotos-Schüler"

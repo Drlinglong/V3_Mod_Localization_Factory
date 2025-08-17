@@ -1,4 +1,4 @@
-﻿l_russian:
+l_russian:
 ##################
 # hcp_megastructures_l_english.yml
 # By jam1066
@@ -14,15 +14,15 @@
  hcp_requires_stable_system:"$TRIGGER_FAIL$В этой системе слишком много §Y$pc_black_hole$§!."
 
  hcp_singularity_silo_1:"$hcp_singularity_silo$: Вместимость 25%"
- hcp_singularity_silo_1_DESC:"Этот $hcp_singularity_silo$ — совершенное хранилище. Хоть оно и завершено лишь частично, оно уже способно вмещать огромные объемы ресурсов."
+ hcp_singularity_silo_1_DESC:"Этот $hcp_singularity_silo$ - совершенное хранилище. Хоть оно и завершено лишь частично, оно уже способно вмещать огромные объемы ресурсов."
  hcp_singularity_silo_1_MEGASTRUCTURE_DETAILS:"Гигантское хранилище, использующее бесконечную вместимость §YЧерной дыры§!."
 
  hcp_singularity_silo_2:"$hcp_singularity_silo$: Вместимость 50%"
- hcp_singularity_silo_2_DESC:"Этот $hcp_singularity_silo$ — совершенное хранилище. Хоть оно и завершено лишь частично, оно уже способно вмещать огромные объемы ресурсов."
+ hcp_singularity_silo_2_DESC:"Этот $hcp_singularity_silo$ - совершенное хранилище. Хоть оно и завершено лишь частично, оно уже способно вмещать огромные объемы ресурсов."
  hcp_singularity_silo_2_MEGASTRUCTURE_DETAILS:"Гигантское хранилище, использующее бесконечную вместимость §YЧерной дыры§!."
 
  hcp_singularity_silo_3:"$hcp_singularity_silo$: Вместимость 75%"
- hcp_singularity_silo_3_DESC:"Этот $hcp_singularity_silo$ — совершенное хранилище. Хоть оно и завершено лишь частично, оно уже способно вмещать огромные объемы ресурсов."
+ hcp_singularity_silo_3_DESC:"Этот $hcp_singularity_silo$ - совершенное хранилище. Хоть оно и завершено лишь частично, оно уже способно вмещать огромные объемы ресурсов."
  hcp_singularity_silo_3_MEGASTRUCTURE_DETAILS:"Гигантское хранилище, использующее бесконечную вместимость §YЧерной дыры§!."
 
  hcp_singularity_silo_4: "$hcp_singularity_silo$"
@@ -67,11 +67,11 @@
  # Stellar Harvesters #
  ######################
  hcp_stellar_harvester_prototype:"Прототип $hcp_NAME_Stellar_Harvester$"
- hcp_stellar_harvester_prototype_DESC:"§Y$hcp_NAME_Stellar_Harvester$§! — это гигантский корабль управления дронами, способный собирать ресурсы целых солнечных систем."
+ hcp_stellar_harvester_prototype_DESC:"§Y$hcp_NAME_Stellar_Harvester$§! - это гигантский корабль управления дронами, способный собирать ресурсы целых солнечных систем."
  hcp_stellar_harvester_prototype_MEGASTRUCTURE_DETAILS:"Мы не можем позволить себе быть придирчивыми к собираемым ресурсам. $hcp_NAME_Stellar_Harvester$ позволят нам эффективно забрать все."
 
  hcp_stellar_harvester: "$hcp_NAME_Stellar_Harvester$"
- hcp_stellar_harvester_DESC:"§Y$hcp_NAME_Stellar_Harvester$§! — это гигантский корабль управления дронами, способный собирать ресурсы целых солнечных систем."
+ hcp_stellar_harvester_DESC:"§Y$hcp_NAME_Stellar_Harvester$§! - это гигантский корабль управления дронами, способный собирать ресурсы целых солнечных систем."
  hcp_stellar_harvester_MEGASTRUCTURE_DETAILS:"Мы не можем позволить себе быть придирчивыми к собираемым ресурсам. $hcp_NAME_Stellar_Harvester$ позволят нам эффективно забрать все."
  MEGASTRUCTURE_TOOLTIP_REQUIREMENTS_STELLAR_HARVESTER:"Каждая империя может построить только одну $MEGASTRUCTURE$ на орбите своего $hcp_singularity_silo$."
 

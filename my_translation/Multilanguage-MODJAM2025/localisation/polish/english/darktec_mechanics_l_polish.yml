@@ -1,4 +1,4 @@
-﻿# localisation\english\darktec_mechanics_l_english.yml
+# localisation\english\darktec_mechanics_l_english.yml
 
 # Authors: Rodahtnov & Zyralynn
 
@@ -164,7 +164,7 @@ l_polish:
 	menp_darktec_entropy_t4_unknown_tooltip:0 "???"
 
 	menp_darktec_entropy_t4_transformed:0 "Mroczna Stabilizacja"
-	menp_darktec_entropy_t4_transformed_desc:0 "Nasza nowa forma jest… intrygująca. Jesteśmy mniej, jesteśmy więcej, i możemy sprawić, że inni też takimi się staną."
+	menp_darktec_entropy_t4_transformed_desc:0 "Nasza nowa forma jest... intrygująca. Jesteśmy mniej, jesteśmy więcej, i możemy sprawić, że inni też takimi się staną."
 	menp_darktec_entropy_t4_transformed_tooltip:0 "['building:building_darktec_umbral_portal_1', £building£ $building_darktec_umbral_portal_1_plural$] zwiększają teraz również £job£ Produktywność na planecie.\n\nTen budynek umożliwia teraz pasywną §YAsymilację§! populacji w §EEntrofeerale§!."
 
 	menp_darktec_entropy_t4_tainted:0 "Zjednoczona Ciemność"
@@ -783,11 +783,11 @@ l_polish:
 
 	trait_darktec_entro_main:0 "Entroferał"
 	trait_darktec_entro_main_plural:0 "Entroferale"
-	trait_darktec_entro_main_desc:0 "Nie należąc do żadnej kompozycji barionowej ani niebarionowej, ten gatunek osiągnął niemożliwe – będąc doskonałym połączeniem obu światów… ale za wysoką cenę, gdyż jest niestabilny bez odpowiednich środków do utrzymania swojej nowej formy."
+	trait_darktec_entro_main_desc:0 "Nie należąc do żadnej kompozycji barionowej ani niebarionowej, ten gatunek osiągnął niemożliwe – będąc doskonałym połączeniem obu światów... ale za wysoką cenę, gdyż jest niestabilny bez odpowiednich środków do utrzymania swojej nowej formy."
 	trait_darktec_entro_main_tooltip:0 ""
 
 	leader_trait_darktec_entro_main:0 "$trait_darktec_entro_main$"
-	leader_trait_darktec_entro_main_desc:0 "Nie należąc do żadnej kompozycji barionowej ani niebarionowej, ten lider osiągnął niemożliwe – będąc doskonałym połączeniem obu światów… ale za wysoką cenę, gdyż jest niestabilny bez odpowiednich środków do utrzymania swojej nowej formy."
+	leader_trait_darktec_entro_main_desc:0 "Nie należąc do żadnej kompozycji barionowej ani niebarionowej, ten lider osiągnął niemożliwe – będąc doskonałym połączeniem obu światów... ale za wysoką cenę, gdyż jest niestabilny bez odpowiednich środków do utrzymania swojej nowej formy."
 
 	trait_darktec_entro_phase_body:0 "Kompozycja Materii Fazowej"
 	trait_darktec_entro_phase_body_desc:0 "Wzrost kompozycji paramaterii w ciałach tych $trait_darktec_entro_main_plural$ pozwala im przenikać i przemierzać plan materialny w widmowy sposób."

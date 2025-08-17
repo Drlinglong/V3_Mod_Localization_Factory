@@ -1,4 +1,4 @@
-﻿l_korean:
+l_korean:
 
  ##################################
  ### pdivinity_events_l_english ###
@@ -161,7 +161,7 @@
  # fires for the one who destroys the mega
 
  pdivinity_needle.12.name:0 "운명의 첨탑 파괴됨"
- pdivinity_needle.12.desc:0 "불가능한 일이 일어났습니다. [From.GetName] 성계에 있던 거대한 메가스트럭처—소위 '운명의 첨탑'—가 소멸했습니다. 사이오닉 격동이 죽어가는 비명처럼 인근 성계들을 강타합니다."
+ pdivinity_needle.12.desc:0 "불가능한 일이 일어났습니다. [From.GetName] 성계에 있던 거대한 메가스트럭처-소위 '운명의 첨탑'-가 소멸했습니다. 사이오닉 격동이 죽어가는 비명처럼 인근 성계들을 강타합니다."
  pdivinity_needle.12.a:0 "우리는 방어선을 지켰습니다."
 
  # fires for the victim

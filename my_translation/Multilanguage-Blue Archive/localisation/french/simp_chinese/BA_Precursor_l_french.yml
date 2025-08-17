@@ -1,29 +1,29 @@
-﻿l_french:
+l_french:
 ### 外交辞令
- 01_BA_FE_PATRONIZING:0 "Nous ne sommes pas encore tout à fait à l'aise avec notre rôle de spectateurs au-delà du quatrième mur… mais nous aimerions quand même entendre votre histoire."
- 02_BA_FE_PATRONIZING:0 "Vous êtes vraiment pleins d'entrain, les Extérieurs… comme nous il y a très, très longtemps."
- 03_BA_FE_PATRONIZING:0 "Vous dites que vous ne pouvez pas réparer ça ?… Apportez-le-nous, peut-être pourrons-nous vous aider."
- 04_BA_FE_PATRONIZING:0 "… Ce n'est rien, j'ai croisé une tête connue et ça m'a juste rappelé nos anciens camarades…"
+ 01_BA_FE_PATRONIZING:0 "Nous ne sommes pas encore tout à fait à l'aise avec notre rôle de spectateurs au-delà du quatrième mur... mais nous aimerions quand même entendre votre histoire."
+ 02_BA_FE_PATRONIZING:0 "Vous êtes vraiment pleins d'entrain, les Extérieurs... comme nous il y a très, très longtemps."
+ 03_BA_FE_PATRONIZING:0 "Vous dites que vous ne pouvez pas réparer ça ?... Apportez-le-nous, peut-être pourrons-nous vous aider."
+ 04_BA_FE_PATRONIZING:0 "... Ce n'est rien, j'ai croisé une tête connue et ça m'a juste rappelé nos anciens camarades..."
  01_BA_FE_DISMISSIVE:0 "Ah, c'est vous. Allez-y."
- 02_BA_FE_DISMISSIVE:0 "Nous n'avons jamais aimé intimider les autres… Vous comprenez."
+ 02_BA_FE_DISMISSIVE:0 "Nous n'avons jamais aimé intimider les autres... Vous comprenez."
  03_BA_FE_DISMISSIVE:0 "Nous ne partagerons pas nos technologies, sauf si nécessaire."
- 01_BA_FE_ANGRY:0 "Sang et feu…"
+ 01_BA_FE_ANGRY:0 "Sang et feu..."
  02_BA_FE_ANGRY:0 "Nous aussi, nous avons eu de l'espoir, mais nous l'avons gagné par nous-mêmes. Pas comme vous."
  03_BA_FE_ANGRY:0 "Si votre histoire se termine comme ça, alors soit."
- 01_BA_FE_WAR:0 "Je dois vous remercier… de nous avoir révélé le côté sombre qui se cache derrière l'auréole."
+ 01_BA_FE_WAR:0 "Je dois vous remercier... de nous avoir révélé le côté sombre qui se cache derrière l'auréole."
  02_BA_FE_WAR:0 "Pour quoi prenez-vous cet endroit ?"
  11_BA_FE_CUSTODIAL:0 "Nous sommes maintenant comme un spectateur qui monte sur scène, prend l'instrument du musicien et commence à jouer. Que le spectacle soit gâché ou non, cela ne dépend que de notre simple volonté."
- 12_BA_FE_CUSTODIAL:0 "Nous avons un peu retrouvé le sentiment que nous avions lorsque nous nous sommes unies pour la première fois. Joyeuses, revigorées, nous nous sentons remplies de force…"
+ 12_BA_FE_CUSTODIAL:0 "Nous avons un peu retrouvé le sentiment que nous avions lorsque nous nous sommes unies pour la première fois. Joyeuses, revigorées, nous nous sentons remplies de force..."
  13_BA_FE_CUSTODIAL:0 "Dites-nous si vous avez besoin d'aide, tout est négociable, sauf ce qui concerne la flotte."
- 14_BA_FE_CUSTODIAL:0 "… C'est vraiment émouvant, que nous ayons aussi un jour comme celui-ci… Nous ne gaspillerons pas cette opportunité."
+ 14_BA_FE_CUSTODIAL:0 "... C'est vraiment émouvant, que nous ayons aussi un jour comme celui-ci... Nous ne gaspillerons pas cette opportunité."
  11_BA_FE_ARROGANT:0 "Pas mal, il semble que vous ayez bien compris les principes de conduite des civilisations interstellaires."
  12_BA_FE_ARROGANT:0 "La raison pour laquelle nous utilisons la force est, à nos yeux, par pure nécessité. Vous ne nous comprendrez jamais."
  13_BA_FE_ARROGANT:0 "La technologie est au service de ceux qui l'utilisent, et nous espérons que les meilleurs servis seront les soldats, et non les tyrans."
- 11_BA_FE_IMPERIOUS:0 "La terre et les nouvelles pousses… Intéressant."
+ 11_BA_FE_IMPERIOUS:0 "La terre et les nouvelles pousses... Intéressant."
  12_BA_FE_IMPERIOUS:0 "Un musée serait votre meilleure destination, suivi d'un zoo, d'une chaîne de production ou d'une centrale électrique, selon vos efforts."
- 13_BA_FE_IMPERIOUS:0 "L'histoire que vous avez écrite aurait dû être beaucoup plus parfaite, mais elle n'est que dissimulation, flatterie et tromperie… Et vous osez vous en vanter ?"
+ 13_BA_FE_IMPERIOUS:0 "L'histoire que vous avez écrite aurait dû être beaucoup plus parfaite, mais elle n'est que dissimulation, flatterie et tromperie... Et vous osez vous en vanter ?"
  11_BA_FE_WAR:0 "Nous vous offrons l'eau et la terre de notre foyer du Vide, venez les chercher vous-mêmes."
- 12_BA_FE_WAR:0 "Quelle est votre opinion sur le processus de production des boîtes de conserve ?… Ne vous méprenez pas, cela pourrait vous concerner à l'avenir, en temps de guerre, ou après la guerre."
+ 12_BA_FE_WAR:0 "Quelle est votre opinion sur le processus de production des boîtes de conserve ?... Ne vous méprenez pas, cela pourrait vous concerner à l'avenir, en temps de guerre, ou après la guerre."
 
  #星门通路
  BA_Precursor.0015.title:0 "Liaison de communication activée"
@@ -34,7 +34,7 @@
 
  BA_Precursor.0016.title:0 "Liaison de communication activée"
  BA_Precursor.0016.desc:0 "§YIci Seia Yumekage, l'Observatrice en chef, diffusant vers l'Extérieur.§! En fait, peu après l'activation de la liaison de communication externe, nous avons obtenu de plus en plus d'informations de l'Extérieur, ce qui nous a grandement aidé à réparer l'interface de liaison de communication située sur notre territoire. Cependant, nous n'avons jamais entrepris de véritables réparations, car nous avions unanimement décidé de ne pas trop interférer avec le monde extérieur. Mais aujourd'hui, la situation est différente ; pour la raison que nous avons défendue jusqu'à présent, nous devons agir aujourd'hui. Heureusement, notre première tentative de réparation a été un succès retentissant, et l'interface de liaison de communication de KETHER est maintenant opérationnelle.§R Dernier avertissement : bien que les autres interfaces de liaison de communication soient à usage public, le portail stellaire de KETHER n'autorise pas l'utilisation non autorisée. Veuillez en prendre note.§!"
- BA_Precursor.0016.next:0 "Enfin…"
+ BA_Precursor.0016.next:0 "Enfin..."
 
 
 #探索
@@ -48,7 +48,7 @@
 
  BA_Precursor.0054.title:0 "Le Royaume"
  BA_Precursor.0054.desc:0 "Nous sommes arrivés au système stellaire final de la Numérologie : « Le Royaume ». Étonnamment, l'agencement de ce système est étrangement similaire à celui de notre système natal de Kivotos. Cela nous conforte encore plus dans l'idée que notre système natal a été construit artificiellement."
- BA_Precursor.0054.next:0 "……"
+ BA_Precursor.0054.next:0 "......"
 
  BA_Precursor.0057.title:0 "Piste"
  BA_Precursor.0057.desc:0 "Sur la planète du système de l'Interface de Liaison de Communication, nous avons détecté des signaux anormaux et des traces de matière extrêmement dangereuses. Après analyse, il semblerait que ce soient les vestiges d'une guerre terrestre laissés par l'Empire Précurseur, qui a construit cette Porte Stellaire, pour son contrôle. Si nous voulons en savoir plus, nous devons agir !"
@@ -60,39 +60,39 @@
  BA_Precursor.0101.next:0 "Établir la communication"
 
  BA_Precursor.0102.title:0 "Liaison de communication"
- BA_Precursor.0102.desc:0 "Bonjour, Vestiges Extérieurs de Kivotos. Nous sommes Moe Xcom. Comme vous le voyez, les liaisons de communication de ce système ont été construites par nos ennemis. Après avoir obtenu des réponses, nous n'avons pas pu obtenir les autorisations d'émission pour ces liaisons. Nous ne pouvons que deviner la situation en dehors de l'amas stellaire grâce aux quelques petites bribes d'informations qui s'en échappent. Mais… après une si longue période de paix, même si nous avons déchiffré les liaisons extérieures, notre niveau technologique est bien supérieur au vôtre. Et nous sommes tous d'accord : nous ne devrions pas nous mêler de ce qu'il se passe dans les systèmes extérieurs. C'est pourquoi nous avons décidé de ne pas continuer nos recherches pour réparer la Porte Stellaire dans notre territoire. Juste pour éviter de créer des situations que même nous ne pourrions pas réparer !"
- BA_Precursor.0102.Eden_Treaty:0 "Vous avez renversé la Numérologie… c'est vrai ?"
- BA_Precursor.0102.Eden_Treaty.re:0 "Oui, c'est exact ! Après avoir brisé la prison du système 06, on a livré de durs combats pour chasser la Numérologie de l'amas stellaire. Ensuite, on a aussi traversé pas mal de changements internes avant de finalement s'unir… Si cette histoire vous passionne, n'hésitez pas à venir nous rendre visite quand vous voulez !"
- BA_Precursor.0102.Kyrie:0 "Les rebelles… ce sont des étudiants comme nous ?"
- BA_Precursor.0102.Kyrie.re:0 "Oui, c'est exact ! Après avoir brisé la prison du système 06, on a livré de durs combats pour chasser la Numérologie de l'amas stellaire. …Vous aussi, vous avez résisté ? Oh, c'est tellement touchant… Même si on a décidé de ne pas interférer avec le monde extérieur, n'hésitez surtout pas à demander si vous avez besoin d'un coup de main !"
- BA_Precursor.0102.Kivotos_other:0 "Vos halos… sont-ils comme les nôtres ?"
- BA_Precursor.0102.Kivotos_other.re:0 "Oui, c'est ça ! Les halos sont aussi un de nos sujets de recherche depuis super longtemps. Les résultats sont vraiment intéressants… mais bon, ça touche à des trucs qu'on ne peut pas encore dire. On vous laisse la découverte, d'accord ?"
+ BA_Precursor.0102.desc:0 "Bonjour, Vestiges Extérieurs de Kivotos. Nous sommes Moe Xcom. Comme vous le voyez, les liaisons de communication de ce système ont été construites par nos ennemis. Après avoir obtenu des réponses, nous n'avons pas pu obtenir les autorisations d'émission pour ces liaisons. Nous ne pouvons que deviner la situation en dehors de l'amas stellaire grâce aux quelques petites bribes d'informations qui s'en échappent. Mais... après une si longue période de paix, même si nous avons déchiffré les liaisons extérieures, notre niveau technologique est bien supérieur au vôtre. Et nous sommes tous d'accord : nous ne devrions pas nous mêler de ce qu'il se passe dans les systèmes extérieurs. C'est pourquoi nous avons décidé de ne pas continuer nos recherches pour réparer la Porte Stellaire dans notre territoire. Juste pour éviter de créer des situations que même nous ne pourrions pas réparer !"
+ BA_Precursor.0102.Eden_Treaty:0 "Vous avez renversé la Numérologie... c'est vrai ?"
+ BA_Precursor.0102.Eden_Treaty.re:0 "Oui, c'est exact ! Après avoir brisé la prison du système 06, on a livré de durs combats pour chasser la Numérologie de l'amas stellaire. Ensuite, on a aussi traversé pas mal de changements internes avant de finalement s'unir... Si cette histoire vous passionne, n'hésitez pas à venir nous rendre visite quand vous voulez !"
+ BA_Precursor.0102.Kyrie:0 "Les rebelles... ce sont des étudiants comme nous ?"
+ BA_Precursor.0102.Kyrie.re:0 "Oui, c'est exact ! Après avoir brisé la prison du système 06, on a livré de durs combats pour chasser la Numérologie de l'amas stellaire. ...Vous aussi, vous avez résisté ? Oh, c'est tellement touchant... Même si on a décidé de ne pas interférer avec le monde extérieur, n'hésitez surtout pas à demander si vous avez besoin d'un coup de main !"
+ BA_Precursor.0102.Kivotos_other:0 "Vos halos... sont-ils comme les nôtres ?"
+ BA_Precursor.0102.Kivotos_other.re:0 "Oui, c'est ça ! Les halos sont aussi un de nos sujets de recherche depuis super longtemps. Les résultats sont vraiment intéressants... mais bon, ça touche à des trucs qu'on ne peut pas encore dire. On vous laisse la découverte, d'accord ?"
  BA_Precursor.0102.exit_Kivotos:0 "Nos hommages, les Précurseurs."
  BA_Precursor.0102.exit_Kivotos.re:0 "Et nous espérons que vous aussi, les Extérieurs, vous écrirez votre propre histoire."
- BA_Precursor.0102.exit_other:0 "Des figures en papier bizarres…"
- BA_Precursor.0102.exit_other.re:0 "…Quelle espèce intéressante, vraiment."
+ BA_Precursor.0102.exit_other:0 "Des figures en papier bizarres..."
+ BA_Precursor.0102.exit_other.re:0 "...Quelle espèce intéressante, vraiment."
 
 #先驱者通讯
  BA_Precursor.0151.title:0 "Communication des Précurseurs (Affinité trop basse, refus de communiquer)"
- BA_Precursor.0151.desc:0 "Vous avez raison, mais le « Pack d'espèces Blue Archive » est un tout nouveau Mod \"anime\" pour le jeu 4X Stellaris, créé par l'équipe de production dirigée par N0Z0M1. L'histoire du Mod se déroule dans un monde fantastique appelé « Kivotos », où les étudiants possèdent tous un « Halo » qui leur permet de canaliser un pouvoir mystérieux. Vous incarnerez un personnage mystérieux nommé « Sensei », et au milieu de votre emploi du temps chargé, vous taquinerez des étudiantes aux personnalités et capacités uniques, les aiderez à vaincre de puissants ennemis et à retrouver la Présidente du Conseil Étudiant disparue — tout en découvrant progressivement la vérité derrière le « Mystère »."
+ BA_Precursor.0151.desc:0 "Vous avez raison, mais le « Pack d'espèces Blue Archive » est un tout nouveau Mod \"anime\" pour le jeu 4X Stellaris, créé par l'équipe de production dirigée par N0Z0M1. L'histoire du Mod se déroule dans un monde fantastique appelé « Kivotos », où les étudiants possèdent tous un « Halo » qui leur permet de canaliser un pouvoir mystérieux. Vous incarnerez un personnage mystérieux nommé « Sensei », et au milieu de votre emploi du temps chargé, vous taquinerez des étudiantes aux personnalités et capacités uniques, les aiderez à vaincre de puissants ennemis et à retrouver la Présidente du Conseil Étudiant disparue - tout en découvrant progressivement la vérité derrière le « Mystère »."
  BA_Precursor.0151.next:0 "C'est sûrement à cause de Blue Archive."
 
  BA_Precursor.main.title:0 "Communication des Précurseurs"
- BA_Precursor.main.desc.1:0 "…Nouveau… Ah, non, rien. Vous avez rencontré des difficultés ?"
- BA_Precursor.main.desc.2:0 "On l'a observé que récemment, mais… votre vitesse de développement dépasse vraiment toutes nos attentes !"
- BA_Precursor.main.desc.3:0 "C'est vrai que notre technologie est super puissante et avancée… mais même nous, il y a des choses qu'on ne peut pas faire…"
- BA_Precursor.main.desc.4:0 "Écoutez bien… À propos de la frontière entre le Mystère et la terreur… Ah, euh… Si c'est vous, ça devrait aller, pas de souci…"
- BA_Precursor.main.desc.5:0 "Prenez soin de vos camarades qui sont encore à vos côtés…"
+ BA_Precursor.main.desc.1:0 "...Nouveau... Ah, non, rien. Vous avez rencontré des difficultés ?"
+ BA_Precursor.main.desc.2:0 "On l'a observé que récemment, mais... votre vitesse de développement dépasse vraiment toutes nos attentes !"
+ BA_Precursor.main.desc.3:0 "C'est vrai que notre technologie est super puissante et avancée... mais même nous, il y a des choses qu'on ne peut pas faire..."
+ BA_Precursor.main.desc.4:0 "Écoutez bien... À propos de la frontière entre le Mystère et la terreur... Ah, euh... Si c'est vous, ça devrait aller, pas de souci..."
+ BA_Precursor.main.desc.5:0 "Prenez soin de vos camarades qui sont encore à vos côtés..."
 
 
  BA_Precursor.manual:0 "Explication"
  BA_Precursor.manual.title:0 "Communication des Précurseurs : Explication"
- BA_Precursor.manual.desc:0 "Puisque c'est un espace vraiment très spécial ici, on ne peut vous envoyer des objets que de manières… spéciales. Les routes hyperspatiales, c'est mort ! Mais on peut créer un §Ymini-trou de ver§!, ou alors envoyer directement un §Bcargo à distorsion§!.\nVous avez des questions ?"
+ BA_Precursor.manual.desc:0 "Puisque c'est un espace vraiment très spécial ici, on ne peut vous envoyer des objets que de manières... spéciales. Les routes hyperspatiales, c'est mort ! Mais on peut créer un §Ymini-trou de ver§!, ou alors envoyer directement un §Bcargo à distorsion§!.\nVous avez des questions ?"
 
 
  BA_Precursor.trade:0 "Échange de points"
  BA_Precursor.trade.title:0 "Communication des Précurseurs : Points et logistique"
- BA_Precursor.trade.desc:0 "On ne va pas trop s'immiscer dans vos affaires, mais si c'est pour une aide urgente ou pour vous tirer d'un mauvais pas, n'hésitez surtout pas à demander…"
+ BA_Precursor.trade.desc:0 "On ne va pas trop s'immiscer dans vos affaires, mais si c'est pour une aide urgente ou pour vous tirer d'un mauvais pas, n'hésitez surtout pas à demander..."
 
  BA_Precursor.trade.get_point:0 "Obtenir des points de commerce"
 
@@ -104,11 +104,11 @@
 
  BA_Precursor.chat:0 "Discussion informelle"
  BA_Precursor.chat.title:0 "Communication des Précurseurs : Discussion informelle"
- BA_Precursor.chat.desc:0 "Je sais que vous avez beaucoup de questions… Qui sommes-nous ? D'où venez-vous ? Et pourquoi ?"
+ BA_Precursor.chat.desc:0 "Je sais que vous avez beaucoup de questions... Qui sommes-nous ? D'où venez-vous ? Et pourquoi ?"
 
 
 
  BA_Precursor.exit:0 "Fermer la page"
 
- BA_Precursor.manual.re:0 "Puisque notre logistique ne peut se faire que par des moyens autres que les couloirs hyperrelatifs, nous ne pouvons pas effectuer de commerce de manière conventionnelle.\nPour l'instant, la solution la plus raisonnable est l'utilisation de micro-trous de ver. Ils peuvent fournir 20 points de capacité de transport par mois, et nous prenons entièrement en charge les frais de maintenance des trous de ver.\nInutile de vous inquiéter de la capacité de transport inutilisée, nous pouvons aussi vous envoyer des vaisseaux à distorsion. Pour ces derniers, le coût de transport aller simple, à votre charge, est de 1000 £energy£. Vous devrez régler les frais du voyage aller. Pour le retour, nous vous offrons deux options : payer les frais de retour pour renvoyer le vaisseau, ou dépenser une partie de votre capacité de transport stockée pour le garder. Nous n'interférerons pas si vous souhaitez le démanteler ou l'ingénierie inverse par la suite.\nDe plus, nous avons cruellement besoin d'informations sur les régions extérieures. Si vous êtes prêts à les fournir, nous vous offrirons une compensation absolument généreuse que vous ne pourrez pas refuser… Croyez-nous, on ne vous laissera pas tomber ! Alors ? C'est une offre que vous ne pouvez vraiment pas refuser, n'est-ce pas ?"
+ BA_Precursor.manual.re:0 "Puisque notre logistique ne peut se faire que par des moyens autres que les couloirs hyperrelatifs, nous ne pouvons pas effectuer de commerce de manière conventionnelle.\nPour l'instant, la solution la plus raisonnable est l'utilisation de micro-trous de ver. Ils peuvent fournir 20 points de capacité de transport par mois, et nous prenons entièrement en charge les frais de maintenance des trous de ver.\nInutile de vous inquiéter de la capacité de transport inutilisée, nous pouvons aussi vous envoyer des vaisseaux à distorsion. Pour ces derniers, le coût de transport aller simple, à votre charge, est de 1000 £energy£. Vous devrez régler les frais du voyage aller. Pour le retour, nous vous offrons deux options : payer les frais de retour pour renvoyer le vaisseau, ou dépenser une partie de votre capacité de transport stockée pour le garder. Nous n'interférerons pas si vous souhaitez le démanteler ou l'ingénierie inverse par la suite.\nDe plus, nous avons cruellement besoin d'informations sur les régions extérieures. Si vous êtes prêts à les fournir, nous vous offrirons une compensation absolument généreuse que vous ne pourrez pas refuser... Croyez-nous, on ne vous laissera pas tomber ! Alors ? C'est une offre que vous ne pouvez vraiment pas refuser, n'est-ce pas ?"
 

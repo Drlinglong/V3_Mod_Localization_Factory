@@ -1,4 +1,4 @@
-﻿l_german:
+l_german:
 
 #####       Agendas        #####
  council_agenda_agenda_BA_SI_Trinity_A02_name:"Philius Nachhilfe-Methode"
@@ -266,7 +266,7 @@
 #####       Deposits       #####
  d_BA_auto_habitat:0 "Zusätzliche Automatisierungsmodule"
  d_BA_auto_habitat_desc:"Der Bau von Orbitalstationen um Himmelskörper jeder Größe im gesamten Sternensystem kann den steigenden Ressourcenbedarf der Orbitalkomplexe decken."
- # d_BA_auto_habitat_tooltip: "§Y[solar_system.GetName]§!恒星系可以支持：$TABBED_NEW_LINE$大型轨道站：§Y[solar_system.GetNumMajorOrbitals]/[solar_system.GetMaxMajorOrbitals]§!$TABBED_NEW_LINE$小型轨道站：§Y[solar_system.GetNumMinorOrbitals]/[solar_system.GetMaxMinorOrbitals]§!\n\n目前轨道站提供："
+ # d_BA_auto_habitat_tooltip: "§Y[solar_system.GetName]§!恒星系可以支持:$TABBED_NEW_LINE$大型轨道站:§Y[solar_system.GetNumMajorOrbitals]/[solar_system.GetMaxMajorOrbitals]§!$TABBED_NEW_LINE$小型轨道站:§Y[solar_system.GetNumMinorOrbitals]/[solar_system.GetMaxMinorOrbitals]§!\n\n目前轨道站提供:"
  d_BA_auto_habitat_tooltip: ""
 
  d_BA_kousagi_park:0 "Kleiner Hasenpark"
@@ -1764,7 +1764,7 @@
  BA_Blue_new_world_DESC:0 "Die Kapazität eines einzelnen Planeten ist irgendwann erschöpft. Für die Zukunft unserer Akademie-Stadt muss sie das gesamte Universum umfassen! (Nach Abschluss: $BA_Kivotos_chronicle_effect_stage6$)"
  BA_End_of_chronicle_DESC:0 "Die finale Transformation des Akademie-Stadt-Planeten. Alles findet seinen natürlichen Lauf. (Nach Abschluss: $BA_Kivotos_chronicle_effect_stage7$)"
 
- SP_BA_SI_Gehenna_C02:0 "《Pandämonium: Der Gründungsweg》"
+ SP_BA_SI_Gehenna_C02:0 "<Pandämonium: Der Gründungsweg>"
  SP_BA_SI_Gehenna_C02_DESC:0 "Ein Rückblick auf den beschwerlichen Weg, den die Gründer des Pandämonium-Instituts bei der Errichtung unserer Schule beschritten haben, soll uns alle daran erinnern, wie hart unser heutiges Schulleben erkämpft wurde. (Nach Abschluss: Erhalte §HReichsmodifikator:§!$modifier_BA_SI_Gehenna_C02$)"
 
 
@@ -2150,12 +2150,12 @@
 
  ap_BA_Our_story:0 "Unsere Geschichte"
  ap_BA_Our_story_desc:0 "Wohin wir gehen, entscheiden wir selbst, und unsere Geschichte wird hier sicherlich nicht enden. Dies ist unsere Geschichte, die wir mit eigenen Händen geschrieben haben."
- ap_BA_Our_story_tip:0 "\n—§RExklusiv mit§_$ap_BA_Name_the_void$§!§!"
+ ap_BA_Our_story_tip:0 "\n-§RExklusiv mit§_$ap_BA_Name_the_void$§!§!"
 
 
  ap_BA_Name_the_void:0 "Das Erhabene benennen"
  ap_BA_Name_the_void_desc:0 "Wir gaben dem Namenlosen einen Namen, und so konnten wir es annehmen und nutzen. Wir verwandelten Verfall in Wunder und formten es zu unserer eigenen Geschichte."
- ap_BA_Name_the_void_tip:0 "\n—§RExklusiv mit§B$ap_BA_Our_story$§!§!"
+ ap_BA_Name_the_void_tip:0 "\n-§RExklusiv mit§B$ap_BA_Our_story$§!§!"
  ap_BA_Name_the_void_effect_fake:0 "[root.GetName] kann sich nun auf den Weg begeben, die §YInkarnation§R der Geißel§! zu werden.\nStarte Situation: §YDas Dreifarbenspiel der Akademie-Stadt§! \n(In Arbeit, bitte habt Geduld)\n"
  ap_BA_Name_the_void_tip_unknown:0 "$TRIGGER_FAIL$Verstehen wir es wirklich?"
 
@@ -2221,31 +2221,31 @@
  GetShittemDesc.common.02:0 "Sensei, geben Sie Ihr Bestes! Es gibt noch so viel zu erledigen!"
  GetShittemDesc.common.03:0 "Hier können wir alle möglichen Arbeiten beginnen!"
  GetShittemDesc.common.04:0 "Sensei, wählen Sie die Aufgabe aus, die Sie erledigen möchten! Ich werde immer hier sein, um Ihnen zu helfen!"
- GetShittemDesc.common.05:0 "Die zu erledigende Arbeit türmt sich wie ein Berg… Erwachsene haben es wirklich schwer…"
+ GetShittemDesc.common.05:0 "Die zu erledigende Arbeit türmt sich wie ein Berg... Erwachsene haben es wirklich schwer..."
 
  #Pulana
  Shittem_Pulana_desc:0 "[this.GetPulanaDesc]"
- BlueArchivePulanaDesc0:0 "…Verbindung bestätigt…" #平静
+ BlueArchivePulanaDesc0:0 "...Verbindung bestätigt..." #平静
  BlueArchivePulanaDesc1:0 "Beeilen Sie sich und erledigen Sie die Arbeit, Sensei." #平静
- BlueArchivePulanaDesc2:0 "…Verifizierung abgeschlossen, hohes Aktivitäts- und Stoffwechselniveau. Sensei, Sie scheinen heute gut gelaunt zu sein." #微微微笑
- BlueArchivePulanaDesc3:0 "Bitte starren Sie mich nicht die ganze Zeit an, das könnte zu Speicherproblemen führen... Außerdem, Sie haben doch Arbeit zu erledigen, oder, Sensei?" #无语流汗，光环混乱
- BlueArchivePulanaDesc4:0 "…Fehler… Falsch eingereichte Arbeitsformulare entdeckt…" #张口，生气或战意激增
- BlueArchivePulanaDesc5:0 "Sensei… Sie werden wirklich nicht dieselben Fehler wiederholen, oder…?" #视线躲闪，害羞或为难
- BlueArchivePulanaDesc6:0 "…Flecken entdeckt… Stärke, Fruktose, Proteine und Pflanzenfette… So kann man Arona-senpai also glücklich machen…?" #睁大眼，无语流汗
- BlueArchivePulanaDesc7:0 "Bestätigt… Die Bewertung von Senseis Arbeitseffizienz muss neu angepasst werden…" #睁大眼，惊讶
- BlueArchivePulanaDesc8:0 "…Was ist das denn…!" #兴奋星星眼，嘴不张开
- BlueArchivePulanaDesc9:0 "Sensei, ich finde das nicht richtig, der Föderale Schülerrat ist nicht vertrauenswürdig… Und Sie sollten auch nicht die Verantwortung für alles übernehmen!" #辩解状
- BlueArchivePulanaDesc10:0 "…Fehler…" #委屈
- BlueArchivePulanaDesc11:0 "Unverständlich…" #皱眉，流汗，为难状
- BlueArchivePulanaDesc12:0 "…Chaos, unverständliches Verhalten… Bitte hör auf, mich anzustupsen…" #圈圈眼 @@
- BlueArchivePulanaDesc13:0 "…Abnorme emotionale Schwankungen… Bitte hören Sie auf, mir den Kopf zu tätscheln, das stört die Arbeit…" #>.<
+ BlueArchivePulanaDesc2:0 "...Verifizierung abgeschlossen, hohes Aktivitäts- und Stoffwechselniveau. Sensei, Sie scheinen heute gut gelaunt zu sein." #微微微笑
+ BlueArchivePulanaDesc3:0 "Bitte starren Sie mich nicht die ganze Zeit an, das könnte zu Speicherproblemen führen... Außerdem, Sie haben doch Arbeit zu erledigen, oder, Sensei?" #无语流汗,光环混乱
+ BlueArchivePulanaDesc4:0 "...Fehler... Falsch eingereichte Arbeitsformulare entdeckt..." #张口,生气或战意激增
+ BlueArchivePulanaDesc5:0 "Sensei... Sie werden wirklich nicht dieselben Fehler wiederholen, oder...?" #视线躲闪,害羞或为难
+ BlueArchivePulanaDesc6:0 "...Flecken entdeckt... Stärke, Fruktose, Proteine und Pflanzenfette... So kann man Arona-senpai also glücklich machen...?" #睁大眼,无语流汗
+ BlueArchivePulanaDesc7:0 "Bestätigt... Die Bewertung von Senseis Arbeitseffizienz muss neu angepasst werden..." #睁大眼,惊讶
+ BlueArchivePulanaDesc8:0 "...Was ist das denn...!" #兴奋星星眼,嘴不张开
+ BlueArchivePulanaDesc9:0 "Sensei, ich finde das nicht richtig, der Föderale Schülerrat ist nicht vertrauenswürdig... Und Sie sollten auch nicht die Verantwortung für alles übernehmen!" #辩解状
+ BlueArchivePulanaDesc10:0 "...Fehler..." #委屈
+ BlueArchivePulanaDesc11:0 "Unverständlich..." #皱眉,流汗,为难状
+ BlueArchivePulanaDesc12:0 "...Chaos, unverständliches Verhalten... Bitte hör auf, mich anzustupsen..." #圈圈眼 @@
+ BlueArchivePulanaDesc13:0 "...Abnorme emotionale Schwankungen... Bitte hören Sie auf, mir den Kopf zu tätscheln, das stört die Arbeit..." #>.<
  BlueArchivePulanaDesc14:0 "Testtext14" #屑笑
- BlueArchivePulanaDesc15:0 "…Mh, Erdbeermilch… Das überlasse ich Arona-senpai…" #微笑，或‘不也挺好吗’笑
- BlueArchivePulanaDesc16:0 "Testtext16" #乖巧+高兴，心形光环
+ BlueArchivePulanaDesc15:0 "...Mh, Erdbeermilch... Das überlasse ich Arona-senpai..." #微笑,或‘不也挺好吗’笑
+ BlueArchivePulanaDesc16:0 "Testtext16" #乖巧+高兴,心形光环
  BlueArchivePulanaDesc17:0 "Testtext17" #14屑笑+脸红
- BlueArchivePulanaDesc18:0 "Testtext18" #阴暗，盯
+ BlueArchivePulanaDesc18:0 "Testtext18" #阴暗,盯
  BlueArchivePulanaDesc19:0 "Testtext19" #阴笑
- BlueArchivePulanaDesc20:0 "Zzz…" #沉思
+ BlueArchivePulanaDesc20:0 "Zzz..." #沉思
  BlueArchivePulanaDesc21:0 "Testtext21" #眯眯眼
  BlueArchivePulanaDesc22:0 "Testtext22" #歪头
  BlueArchivePulanaDesc23:0 "Testtext23" #歪头
@@ -2254,22 +2254,22 @@
  Shittem_Arona_desc:0 "[this.GetAronaDesc]"
  BlueArchiveAronaDesc0:0 "Von hier aus können wir alle möglichen Aufgaben starten!"
  BlueArchiveAronaDesc1:0 "Sensei, geben Sie Ihr Bestes! Es gibt noch so viel zu erledigen!"
- BlueArchiveAronaDesc2:0 "Ach so… Sie erledigen die Dinge also auf diese Weise."
+ BlueArchiveAronaDesc2:0 "Ach so... Sie erledigen die Dinge also auf diese Weise."
  BlueArchiveAronaDesc3:0 "Überanstrengen Sie sich nicht, Sie können Arona ruhig vertrauen, hehehe." #微笑
- BlueArchiveAronaDesc4:0 "Ha, haa… Sensei, warum so eilig…? Gibt es etwas Wichtiges zu erledigen?" #微微惊讶
+ BlueArchiveAronaDesc4:0 "Ha, haa... Sensei, warum so eilig...? Gibt es etwas Wichtiges zu erledigen?" #微微惊讶
  BlueArchiveAronaDesc5:0 "Sensei, wählen Sie die Aufgabe aus, die Sie erledigen möchten! Ich werde immer hier sein, um Ihnen zu helfen!" #认真状 ‘^’
- BlueArchiveAronaDesc6:0 "Sensei, gönnen Sie sich ab und zu auch mal eine Pause… Arona macht sich Sorgen um Ihre Gesundheit…"
- BlueArchiveAronaDesc7:0 "…Pah, wie können die uns nur so beleidigen, wie wär's, wenn wir sie von jetzt an außerirdische Fellknäuel nennen… Oh, Sensei, Arona hat die diplomatische Kommunikation gar nicht belauscht, ahaha, wirklich nicht…!"
- BlueArchiveAronaDesc8:0 "Wir brauchen eure Bevormundung nicht, ihr könnt ja nicht mal Herstellungssteine richtig benutzen… Oh, haben Sie gerade etwas gehört?"
- BlueArchiveAronaDesc9:0 "…Ach, Sensei… Mail? Nein, da ist keine Mail, hehehe." #阴暗+右上斜眼
- BlueArchiveAronaDesc10:0 "Seufz… Sieht so aus, als würde Sensei heute wieder bis spät arbeiten müssen…" #叹气状
+ BlueArchiveAronaDesc6:0 "Sensei, gönnen Sie sich ab und zu auch mal eine Pause... Arona macht sich Sorgen um Ihre Gesundheit..."
+ BlueArchiveAronaDesc7:0 "...Pah, wie können die uns nur so beleidigen, wie wär's, wenn wir sie von jetzt an außerirdische Fellknäuel nennen... Oh, Sensei, Arona hat die diplomatische Kommunikation gar nicht belauscht, ahaha, wirklich nicht...!"
+ BlueArchiveAronaDesc8:0 "Wir brauchen eure Bevormundung nicht, ihr könnt ja nicht mal Herstellungssteine richtig benutzen... Oh, haben Sie gerade etwas gehört?"
+ BlueArchiveAronaDesc9:0 "...Ach, Sensei... Mail? Nein, da ist keine Mail, hehehe." #阴暗+右上斜眼
+ BlueArchiveAronaDesc10:0 "Seufz... Sieht so aus, als würde Sensei heute wieder bis spät arbeiten müssen..." #叹气状
  BlueArchiveAronaDesc11:0 "Ich werde Sensei bei der Arbeit helfen!"
  BlueArchiveAronaDesc12:0 "Sensei, raten Sie mal, welche gute Neuigkeit Arona Ihnen heute erzählen möchte?" #兴奋状 XD
- BlueArchiveAronaDesc13:0 "Die zu erledigende Arbeit türmt sich wie ein Berg… Erwachsene haben es wirklich schwer…" #惬意
- BlueArchiveAronaDesc14:0 "Sensei… Plaudern Sie nicht nur mit den Schülern, die heutige Arbeit wird sonst nicht fertig!"
- BlueArchiveAronaDesc15:0 "Sensei, achten Sie ab und zu auch auf eine gute Work-Life-Balance… Arona macht sich Sorgen um Ihre Gesundheit…"
+ BlueArchiveAronaDesc13:0 "Die zu erledigende Arbeit türmt sich wie ein Berg... Erwachsene haben es wirklich schwer..." #惬意
+ BlueArchiveAronaDesc14:0 "Sensei... Plaudern Sie nicht nur mit den Schülern, die heutige Arbeit wird sonst nicht fertig!"
+ BlueArchiveAronaDesc15:0 "Sensei, achten Sie ab und zu auch auf eine gute Work-Life-Balance... Arona macht sich Sorgen um Ihre Gesundheit..."
  BlueArchiveAronaDesc16:0 "Testtext16" #震惊+脸红
- BlueArchiveAronaDesc17:0 "Sensei…"
+ BlueArchiveAronaDesc17:0 "Sensei..."
  BlueArchiveAronaDesc18:0 "Testtext18"
  BlueArchiveAronaDesc19:0 "L-Lehrer! Was... was ist das denn?! W-Warum haben Sie das?! *schluchz*... Arona kann jetzt nicht mehr heiraten...!"
  BlueArchiveAronaDesc20:0 "Testtext20"

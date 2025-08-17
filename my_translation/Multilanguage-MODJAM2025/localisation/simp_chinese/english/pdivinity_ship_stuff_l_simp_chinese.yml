@@ -1,4 +1,4 @@
-﻿l_simp_chinese:
+l_simp_chinese:
 
  ################################
  ### pdivinity_tech_l_english ###
@@ -25,7 +25,7 @@
  ### weaponry ###
  ################
  pdivinity_laser_set:0 "灵能长枪阵列"
- pdivinity_laser_set_DESC:0 "通过将武器阵列与灵能共振场同步，释放出聚焦的凝结虚境能量。"
+ pdivinity_laser_set_DESC:0 "通过将武器阵列与灵能共振场同步,释放出聚焦的凝结虚境能量."
  SMALL_PDIVINITY_LASER:0 "小型灵能长枪"
  MEDIUM_PDIVINITY_LASER:0 "中型灵能长枪"
  LARGE_PDIVINITY_LASER:0 "大型灵能长枪"
@@ -35,43 +35,43 @@
  LARGE_PDIVINITY_LASER_SHROUD:0 "大型灵能长枪"
 
  pdivinity_energy_torpedo_set:0 "灵能爆裂投射器"
- pdivinity_energy_torpedo_set_DESC:0 "发射不稳定的灵能投射物，它们能穿透物质，随后爆裂成虚境能量团。"
+ pdivinity_energy_torpedo_set_DESC:0 "发射不稳定的灵能投射物,它们能穿透物质,随后爆裂成虚境能量团."
  PDIVINITY_ENERGY_TORPEDO:0 "灵能爆裂投射器"
  PDIVINITY_ENERGY_TORPEDO_SHROUD:0 "灵能爆裂投射器"
 
  pdivinity_lance_set:0 "虚境穿刺者"
- pdivinity_lance_set_DESC:0 "一种巨大的武器，能够折叠局部空间，将凝结的灵能裂隙投送至遥远的目标。"
+ pdivinity_lance_set_DESC:0 "一种巨大的武器,能够折叠局部空间,将凝结的灵能裂隙投送至遥远的目标."
  PDIVINITY_LANCE:0 "虚境穿刺者"
  PDIVINITY_LANCE_SHROUD:0 "虚境穿刺者"
 
  pdivinity_lightning_set:0 "帷幕之怒"
- pdivinity_lightning_set_DESC:0 "灵能闪电在目标间弧光跳跃，由愤怒和共振引导。虚境本身通过这些放电进行攻击。"
+ pdivinity_lightning_set_DESC:0 "灵能闪电在目标间弧光跳跃,由愤怒和共振引导.虚境本身通过这些放电进行攻击."
  PDIVINITY_LIGHTNING:0 "帷幕之怒"
  PDIVINITY_LIGHTNING_SHROUD:0 "帷幕之怒"
 
  pdivinity_titan_set:0 "建筑师长枪"
- pdivinity_titan_set_DESC:0 "一种由维度张力充能的巨型光束武器。发射时，它会短暂暴露真实空间与虚境之间的一条断层线。"
+ pdivinity_titan_set_DESC:0 "一种由维度张力充能的巨型光束武器.发射时,它会短暂暴露真实空间与虚境之间的一条断层线."
  PDIVINITY_TITAN_WEAPON:0 "建筑师长枪"
  PDIVINITY_TITAN_WEAPON_TEARER:0 "建筑师长枪"
 
  pdivinity_star_rifter_set:0 "维度撕裂者"
- pdivinity_star_rifter_set_DESC:0 "一种由灵能共振场驱动的末日武器。激活时，它会撕裂行星周围真实空间的结构，使其坍塌成一个直接与虚境相连的裂隙，永远地改变行星和现实本身。"
+ pdivinity_star_rifter_set_DESC:0 "一种由灵能共振场驱动的末日武器.激活时,它会撕裂行星周围真实空间的结构,使其坍塌成一个直接与虚境相连的裂隙,永远地改变行星和现实本身."
  PDIVINITY_STAR_RIFTER:0 "维度撕裂者"
  PDIVINITY_STAR_RIFTER_ACTION:0 "撕裂帷幕"
  FLEETORDER_DESTROY_PLANET_WITH_PDIVINITY_STAR_RIFTER:0 "准备撕裂帷幕"
 
  pdivinity_psionic_artillery_set:0 "虚境波纹炮"
- pdivinity_psionic_artillery_set_DESC:0 "一种驾驭灵能谐波的长程能量武器，能轻易扭曲敌方心智，并摧毁护盾和舰体。"
+ pdivinity_psionic_artillery_set_DESC:0 "一种驾驭灵能谐波的长程能量武器,能轻易扭曲敌方心智,并摧毁护盾和舰体."
  PDIVINITY_PSIONIC_ARTILLERY:0 "虚境波纹炮"
  PDIVINITY_PSIONIC_ARTILLERY_SHROUD:0 "虚境波纹炮"
 
  pdivinity_psionic_strikecraft_set:0 "灵能拦截机"
- pdivinity_psionic_strikecraft_set_DESC:0 "由活体思维形体组成的攻击艇，由虚境内的本能和意识回响引导。"
+ pdivinity_psionic_strikecraft_set_DESC:0 "由活体思维形体组成的攻击艇,由虚境内的本能和意识回响引导."
  PDIVINITY_PSIONIC_STRIKECRAFT:0 "灵能拦截机"
  PDIVINITY_PSIONIC_STRIKECRAFT_SHROUD:0 "灵能拦截机"
 
  pdivinity_shields_set:0 "虚境护盾"
- pdivinity_shields_set_DESC:0 "灵能护盾的先进演化版，直接由虚境精华编织而成。可本能地对来袭威胁作出反应。"
+ pdivinity_shields_set_DESC:0 "灵能护盾的先进演化版,直接由虚境精华编织而成.可本能地对来袭威胁作出反应."
  SMALL_PDIVINITY_PSIONIC_SHIELDS:0 "小型虚境护盾"
  MEDIUM_PDIVINITY_PSIONIC_SHIELDS:0 "中型虚境护盾"
  LARGE_PDIVINITY_PSIONIC_SHIELDS:0 "大型虚境护盾"
@@ -84,7 +84,7 @@
  ###############
 
  pdivinity_psionic_reactor:0 "造物主意志"
- pdivinity_psionic_reactor_desc:0 "一个灵能充能核心，直接从虚境中造物主的意志力中汲取能量。力量不再受物质限制。"
+ pdivinity_psionic_reactor_desc:0 "一个灵能充能核心,直接从虚境中造物主的意志力中汲取能量.力量不再受物质限制."
 
  PDIVINITY_PSIONIC_CLOUD_PSIONIC_REACTOR:0 "$pdivinity_psionic_reactor$"
  PDIVINITY_PSIONIC_CLOUD_PSIONIC_REACTOR_DESC:0 "$pdivinity_psionic_reactor_desc$"
@@ -127,10 +127,10 @@
  #############
 
  PDIVINITY_SHROUD_JUMP_DRIVE:0 "虚境引擎"
- PDIVINITY_SHROUD_JUMP_DRIVE_DESC:0 "一种跃迁引擎，通过虚境对现实空间的映射完全规避空间。"
+ PDIVINITY_SHROUD_JUMP_DRIVE_DESC:0 "一种跃迁引擎,通过虚境对现实空间的映射完全规避空间."
 
  PDIVINITY_SHROUD_JUMP_DRIVE_VANILLA:0 "虚境引擎"
- PDIVINITY_SHROUD_JUMP_DRIVE_VANILLA_DESC:0 "一种跃迁引擎，通过虚境对现实空间的映射完全规避空间。"
+ PDIVINITY_SHROUD_JUMP_DRIVE_VANILLA_DESC:0 "一种跃迁引擎,通过虚境对现实空间的映射完全规避空间."
 
  #################
  ### thrusters ###
@@ -138,7 +138,7 @@
 
 
  Pdivinity_psionic_thruster:0 "意念尾迹推进器"
- Pdivinity_psionic_thruster_desc:0 "由灵能意志引导的推进力。飞船依靠意图而非力量在现实空间中滑行。"
+ Pdivinity_psionic_thruster_desc:0 "由灵能意志引导的推进力.飞船依靠意图而非力量在现实空间中滑行."
 
  PDIVINITY_PSIONIC_CLOUD_PSIONIC_THRUSTER:0 "$Pdivinity_psionic_thruster$"
  PDIVINITY_PSIONIC_CLOUD_PSIONIC_THRUSTER_DESC:0 "$Pdivinity_psionic_thruster_desc$"
@@ -172,47 +172,47 @@
  ##############
 
  PDIVINITY_PSIONIC_SENSOR:0 "虚境回响传感器"
- PDIVINITY_PSIONIC_SENSOR_DESC:0 "这些传感器能在思想和行动发生前检测到其灵能回响，专注于它们转化为虚境的意图，以便被这些传感器捕捉。"
+ PDIVINITY_PSIONIC_SENSOR_DESC:0 "这些传感器能在思想和行动发生前检测到其灵能回响,专注于它们转化为虚境的意图,以便被这些传感器捕捉."
 
  PDIVINITY_PSIONIC_SENSOR_VANILLA:0 "虚境回响传感器"
- PDIVINITY_PSIONIC_SENSOR_VANILLA_DESC:0 "这些传感器能在思想和行动发生前检测到其灵能回响，专注于它们转化为虚境的意图，以便被这些传感器捕捉。"
+ PDIVINITY_PSIONIC_SENSOR_VANILLA_DESC:0 "这些传感器能在思想和行动发生前检测到其灵能回响,专注于它们转化为虚境的意图,以便被这些传感器捕捉."
  #################
  ### computers ###
  #################
 
  PDIVINITY_PSIONIC_PRECOG:0 "虚境束缚电脑"
- PDIVINITY_PSIONIC_PRECOG_DESC:0 "该系统能在战斗爆发前读取其脉冲，凭借着不可思议的先见之明，指导开火方案和护盾相位调整。"
+ PDIVINITY_PSIONIC_PRECOG_DESC:0 "该系统能在战斗爆发前读取其脉冲,凭借着不可思议的先见之明,指导开火方案和护盾相位调整."
 
- PDIVINITY_SWARM_PSIONIC_PRECOG:0 "虚境束缚电脑（蜂群）"
- PDIVINITY_SWARM_PSIONIC_PRECOG_DESC:0 "一种由虚境预知能力强化的先进作战算法。专为敏捷型飞船量身定制，通过在敌人行动前数毫秒预判其动向，实现快速、本能的机动。"
+ PDIVINITY_SWARM_PSIONIC_PRECOG:0 "虚境束缚电脑(蜂群)"
+ PDIVINITY_SWARM_PSIONIC_PRECOG_DESC:0 "一种由虚境预知能力强化的先进作战算法.专为敏捷型飞船量身定制,通过在敌人行动前数毫秒预判其动向,实现快速,本能的机动."
 
- PDIVINITY_LINE_PSIONIC_PRECOG:0 "虚境束缚电脑（战列）"
- PDIVINITY_LINE_PSIONIC_PRECOG_DESC:0 "该系统能在战斗爆发前读取其脉冲，凭借着不可思议的先见之明，指导开火方案和护盾相位调整。"
+ PDIVINITY_LINE_PSIONIC_PRECOG:0 "虚境束缚电脑(战列)"
+ PDIVINITY_LINE_PSIONIC_PRECOG_DESC:0 "该系统能在战斗爆发前读取其脉冲,凭借着不可思议的先见之明,指导开火方案和护盾相位调整."
 
- PDIVINITY_ARTILLERY_PRECOG:0 "虚境束缚电脑（炮艇）"
- PDIVINITY_ARTILLERY_PRECOG_DESC:0 "与造物主自身相连，该瞄准核心能预见远距离的开火模式，在其展开之前便调整瞄准，仿佛目标从未移动过般。"
+ PDIVINITY_ARTILLERY_PRECOG:0 "虚境束缚电脑(炮艇)"
+ PDIVINITY_ARTILLERY_PRECOG_DESC:0 "与造物主自身相连,该瞄准核心能预见远距离的开火模式,在其展开之前便调整瞄准,仿佛目标从未移动过般."
 
 
- PDIVINITY_SWARM_PSIONIC_PRECOG_VANILLA:0 "虚境束缚电脑（蜂群）"
- PDIVINITY_SWARM_PSIONIC_PRECOG_VANILLA_DESC:0 "一种由虚境预知能力强化的先进作战算法。专为敏捷型飞船量身定制，通过在敌人行动前数毫秒预判其动向，实现快速、本能的机动。"
+ PDIVINITY_SWARM_PSIONIC_PRECOG_VANILLA:0 "虚境束缚电脑(蜂群)"
+ PDIVINITY_SWARM_PSIONIC_PRECOG_VANILLA_DESC:0 "一种由虚境预知能力强化的先进作战算法.专为敏捷型飞船量身定制,通过在敌人行动前数毫秒预判其动向,实现快速,本能的机动."
 
- PDIVINITY_TORPEDO_PSIONIC_PRECOG_VANILLA:0 "虚境束缚电脑（鱼雷）"
- PDIVINITY_TORPEDO_PSIONIC_PRECOG_VANILLA_DESC:0 "一种由虚境预知能力强化的先进作战算法。专为敏捷型飞船量身定制，通过在敌人行动前数毫秒预判其动向，实现快速、本能的机动。"
+ PDIVINITY_TORPEDO_PSIONIC_PRECOG_VANILLA:0 "虚境束缚电脑(鱼雷)"
+ PDIVINITY_TORPEDO_PSIONIC_PRECOG_VANILLA_DESC:0 "一种由虚境预知能力强化的先进作战算法.专为敏捷型飞船量身定制,通过在敌人行动前数毫秒预判其动向,实现快速,本能的机动."
 
- PDIVINITY_PICKET_PSIONIC_PRECOG_VANILLA:0 "虚境束缚电脑（哨戒）"
- PDIVINITY_PICKET_PSIONIC_PRECOG_VANILLA_DESC:0 "该系统能在战斗爆发前读取其脉冲，凭借着不可思议的先见之明，指导开火方案和护盾相位调整。"
+ PDIVINITY_PICKET_PSIONIC_PRECOG_VANILLA:0 "虚境束缚电脑(哨戒)"
+ PDIVINITY_PICKET_PSIONIC_PRECOG_VANILLA_DESC:0 "该系统能在战斗爆发前读取其脉冲,凭借着不可思议的先见之明,指导开火方案和护盾相位调整."
 
- PDIVINITY_LINE_PSIONIC_PRECOG_VANILLA:0 "虚境束缚电脑（战列）"
- PDIVINITY_LINE_PSIONIC_PRECOG_VANILLA_DESC:0 "该系统能在战斗爆发前读取其脉冲，凭借着不可思议的先见之明，指导开火方案和护盾相位调整。"
+ PDIVINITY_LINE_PSIONIC_PRECOG_VANILLA:0 "虚境束缚电脑(战列)"
+ PDIVINITY_LINE_PSIONIC_PRECOG_VANILLA_DESC:0 "该系统能在战斗爆发前读取其脉冲,凭借着不可思议的先见之明,指导开火方案和护盾相位调整."
 
- PDIVINITY_ARTILLERY_PRECOG_VANILLA:0 "虚境束缚电脑（炮艇）"
- PDIVINITY_ARTILLERY_PRECOG_VANILLA_DESC:0 "与造物主自身相连，该瞄准核心能预见远距离的开火模式，在其展开之前便调整瞄准，仿佛目标从未移动过般。"
+ PDIVINITY_ARTILLERY_PRECOG_VANILLA:0 "虚境束缚电脑(炮艇)"
+ PDIVINITY_ARTILLERY_PRECOG_VANILLA_DESC:0 "与造物主自身相连,该瞄准核心能预见远距离的开火模式,在其展开之前便调整瞄准,仿佛目标从未移动过般."
 
- PDIVINITY_CARRIER_PRECOG_VANILLA:0 "虚境束缚电脑（航母）"
- PDIVINITY_CARRIER_PRECOG_VANILLA_DESC:0 "与造物主自身相连，该瞄准核心能预见远距离的开火模式，在其展开之前便调整瞄准，仿佛目标从未移动过般。"
+ PDIVINITY_CARRIER_PRECOG_VANILLA:0 "虚境束缚电脑(航母)"
+ PDIVINITY_CARRIER_PRECOG_VANILLA_DESC:0 "与造物主自身相连,该瞄准核心能预见远距离的开火模式,在其展开之前便调整瞄准,仿佛目标从未移动过般."
 
  PDIVINITY_PLATFORM_PRECOG_VANILLA:0 "圣所束缚计算机 (平台)"
- PDIVINITY_PLATFORM_PRECOG_VANILLA_DESC:0 "该系统能在战斗爆发前读取其脉冲，凭借着不可思议的先见之明，指导开火方案和护盾相位调整。"
+ PDIVINITY_PLATFORM_PRECOG_VANILLA_DESC:0 "该系统能在战斗爆发前读取其脉冲,凭借着不可思议的先见之明,指导开火方案和护盾相位调整."
 
 
  ##################
@@ -220,7 +220,7 @@
  ##################
 
  PDIVINITY_SHROUD_STORM_COMPONENT:0 "灵能风暴投射器"
- PDIVINITY_SHROUD_STORM_COMPONENT_DESC:0 "在舰船周围生成一股翻涌的灵能风暴，扰乱心智、传感器和护盾。在其半径内，空间扭曲、嘶鸣。"
+ PDIVINITY_SHROUD_STORM_COMPONENT_DESC:0 "在舰船周围生成一股翻涌的灵能风暴,扰乱心智,传感器和护盾.在其半径内,空间扭曲,嘶鸣."
 
  aura_pdivinity_shroud_storm:0 "$PDIVINITY_SHROUD_STORM_COMPONENT$"
 

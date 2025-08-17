@@ -1,4 +1,4 @@
-﻿l_french:
+l_french:
 #名称key
  BA_MID_ARIS_FLEET_PAWN:0 "Flotte Épée Lumineuse"
  BA_MID_ARIS_FLEET_BISHOP:0 "Flotte d'escorte KAITEN"
@@ -72,7 +72,7 @@
  BA_crisis.1207.next.other:0 "Préparez la flotte au combat."
 
  BA_crisis.1208.title:0 "La Miséricorde des Précurseurs"
- BA_crisis.1208.desc:0 "…Je comprends. Il semble qu'Aris s'accroche toujours à sa \"mission\"... C'est vraiment émouvant."
+ BA_crisis.1208.desc:0 "...Je comprends. Il semble qu'Aris s'accroche toujours à sa \"mission\"... C'est vraiment émouvant."
  BA_crisis.1208.a:0 "Et si on allait simplement la convaincre d'arrêter ?"
  BA_crisis.1208.a.re:0 "Si seulement nous pouvions envoyer ne serait-ce qu'un seul vaisseau, nous serions certains de pouvoir la convaincre et la ramener. Si vous pouviez coopérer et §Yconstruire une petite liaison de communication temporaire, point à point§!, nous pourrions aller la rencontrer. Cependant, au vu de vos capacités d'ingénierie, ce trou de ver pourrait prendre 5 ans, voire plus."
  BA_crisis.1208.b:0 "Si nous réussissons à la vaincre, que devrions-nous faire ?"
@@ -87,7 +87,7 @@
 
  BA_crisis.1210.title:0 "Signal d'Alice"
  BA_crisis.1210.desc:0 "§R*SITUATION DANGEREUSE : Attaque active subie, transfert de l'énergie de secours*"
- BA_crisis.1210.next:0 "…Qui a fait ça ?"
+ BA_crisis.1210.next:0 "...Qui a fait ça ?"
  BA_crisis.1210.attacker.kivotos:0 "Désolé, mais il fallait prendre les devants."
  BA_crisis.1210.attacker.other:0 "Transforme-toi en débris spatiaux, espèce de grille-pain."
 
@@ -191,7 +191,7 @@
  BA_crisis.1234.3.charaB:0 "...Nous sommes là."
 
  BA_crisis.1235.title:0 "Anomalie"
- BA_crisis.1235.desc:0 "Désolés, chers amis d'ailleurs, nous avons détecté ici quelques anomalies qui nécessitent une résolution rapide. Nous avons aussi besoin de plus d'indices pour confirmer nos hypothèses, donc nous vous donnerons les détails plus tard… L'état actuel du passage reste instable, et faire passer Alice directement dans ces conditions pourrait causer des incidents. Pendant ce temps, laissez Alice se remettre correctement chez vous, et nos enquêteurs vous aideront également à stabiliser l'état de la Porte des Étoiles."
+ BA_crisis.1235.desc:0 "Désolés, chers amis d'ailleurs, nous avons détecté ici quelques anomalies qui nécessitent une résolution rapide. Nous avons aussi besoin de plus d'indices pour confirmer nos hypothèses, donc nous vous donnerons les détails plus tard... L'état actuel du passage reste instable, et faire passer Alice directement dans ces conditions pourrait causer des incidents. Pendant ce temps, laissez Alice se remettre correctement chez vous, et nos enquêteurs vous aideront également à stabiliser l'état de la Porte des Étoiles."
  BA_crisis.1235.1:0 "Pas de problème, laissez-nous faire."
  BA_crisis.1235.1.re:0 "Ensuite, chers amis d'ailleurs, voici ce plan... Auparavant, nous avons demandé à nos enquêteurs de récupérer le cœur autonome du vaisseau d'Alice. C'est le conteneur destiné à stocker ce cœur autonome... Hum, les cœurs autonomes qu'utilise Alice sont un peu différents des vôtres ; ils tentent de prendre le contrôle de tous les appareils connectés... Un peu comme le Nom Divin Cruciforme. Ils doivent donc être isolés pour être conservés. Nous serons en ligne sous peu pour parler seul à seul avec Alice, cela pourrait prendre beaucoup de temps..."
  BA_crisis.1235.2:0 "D'accord."

@@ -1,4 +1,4 @@
-﻿l_french:
+l_french:
  BA_SI:"Principes de l'Académie"
 
  MESSAGE_BA_SI_READY:"Principes de l'Académie Prêts"
@@ -145,7 +145,7 @@
  ### 下左线
  SI_Gehenna_C01:"Décision Finale : Pandémonium"
  SI_Gehenna_C01_desc:"Le leadership du Pandémonium a progressivement éclipsé la voix du Comité Disciplinaire, acquérant le pouvoir de décision sur les affaires internes de Gehenna. Cependant, au moment de choisir l'arbitre final, le Pandémonium a fait un choix inattendu."
- SI_Gehenna_C01_effect:"\nEffet :\n§HGagne le modificateur d'empire :§!$modifier_BA_SI_Gehenna_C01$(10800£time£) :\n    $MOD_SHIP_WEAPON_DAMAGE$: §G+35%§!\n    $MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+35%§!\n    $MOD_ARMY_ATTACK_DAMAGE_MULT$: §G+35%§!\n    £stability£$MOD_PLANET_STABILITY_ADD$: §R-10§!\n    $MOD_EMPIRE_SIZE_POPS_MULT$: §R+25%§!\n" #§H统治者更换为§!：丹花伊吹\n
+ SI_Gehenna_C01_effect:"\nEffet :\n§HGagne le modificateur d'empire :§!$modifier_BA_SI_Gehenna_C01$(10800£time£) :\n    $MOD_SHIP_WEAPON_DAMAGE$: §G+35%§!\n    $MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+35%§!\n    $MOD_ARMY_ATTACK_DAMAGE_MULT$: §G+35%§!\n    £stability£$MOD_PLANET_STABILITY_ADD$: §R-10§!\n    $MOD_EMPIRE_SIZE_POPS_MULT$: §R+25%§!\n" #§H统治者更换为§!:丹花伊吹\n
  SI_Gehenna_C01_tip:"§C$SI_Gehenna_C01$§!\n$SI_Gehenna_C01_desc$\n$SI_Gehenna_C01_effect$"
 
  SI_Gehenna_C02:"Règles des Coulisses"
@@ -182,7 +182,7 @@
 
  SI_Gehenna_E02:"La main de fer de l'Administratrice"
  SI_Gehenna_E02_desc:"L'administratrice du Comité Disciplinaire est la membre la plus informée, connaissant parfaitement les déploiements militaires dans chaque zone. Pour maximiser l'avantage du combat local, tout en prévenant d'autres problèmes internes, le commandement doit être directement confié à l'administratrice."
- SI_Gehenna_E02_effect:"\nEffets :\n$MOD_SHIP_HOME_TERRITORY_FIRE_RATE_MULT$: §G+75%§!\n$MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+100%§!\n$MOD_STARBASE_SHIPYARD_BUILD_COST_MULT$: §R+10%§!\n" #\n处于防御战争下，本土舰队射速: §G+75%§!
+ SI_Gehenna_E02_effect:"\nEffets :\n$MOD_SHIP_HOME_TERRITORY_FIRE_RATE_MULT$: §G+75%§!\n$MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+100%§!\n$MOD_STARBASE_SHIPYARD_BUILD_COST_MULT$: §R+10%§!\n" #\n处于防御战争下,本土舰队射速: §G+75%§!
  SI_Gehenna_E02_tip:"§C$SI_Gehenna_E02$§!\n$SI_Gehenna_E02_desc$\n$SI_Gehenna_E02_effect$"
 
  SI_Gehenna_E03:"Fortifier chaque pas"
@@ -200,7 +200,7 @@
 
  SI_Millennium_G02:"Subvention des bénéfices totaux"
  SI_Millennium_G02_desc:"Les recherches montrent que le salaire des chercheurs génère une valeur plusieurs fois supérieure... Bien que cela puisse sembler de l'autopromotion, c'est logiquement recevable."
- SI_Millennium_G02_effect:"\nEffets :\n$mod_planet_researchers_produces_mult$: §G+10%§!\n$mod_planet_researchers_upkeep_mult$: §R+5%§!\n$MOD_COUNTRY_NUM_TECH_ALTERNATIVES_ADD$: §G+1§!\n$MOD_LEADER_SKILL_LEVELS$: §G+1§!\n$MOD_PLANET_POP_ASSEMBLY_MULT$: §G+20%§!\n" #\n现在每十五个人口提供一个£pops£研究人员岗位。
+ SI_Millennium_G02_effect:"\nEffets :\n$mod_planet_researchers_produces_mult$: §G+10%§!\n$mod_planet_researchers_upkeep_mult$: §R+5%§!\n$MOD_COUNTRY_NUM_TECH_ALTERNATIVES_ADD$: §G+1§!\n$MOD_LEADER_SKILL_LEVELS$: §G+1§!\n$MOD_PLANET_POP_ASSEMBLY_MULT$: §G+20%§!\n" #\n现在每十五个人口提供一个£pops£研究人员岗位.
  SI_Millennium_G02_tip:"§C$SI_Millennium_G02$§!\n$SI_Millennium_G02_desc$\n$SI_Millennium_G02_effect$"
 
  SI_Millennium_G03:"Mécénat de recherche des clubs"

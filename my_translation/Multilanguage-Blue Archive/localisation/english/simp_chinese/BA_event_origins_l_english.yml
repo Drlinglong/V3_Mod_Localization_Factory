@@ -1,11 +1,11 @@
-﻿l_english:
+l_english:
 ##########################
 #### 起源事件
  BA_origin.0002.name:0 "Kivotos's New Order"
- BA_origin.0002.desc:0 "Finally, after a long and winding struggle, Kivotos has completely purged Gematria from this World. After years of war, the lively atmosphere of a youth academy has returned to this land once more—we can finally breathe a sigh of relief.\nHowever, this doesn't include Schale or the General Student Council. Although a fresh batch of new blood entered the General Student Council after the Eden Treaty was signed, it's clearly not enough to meet Kivotos's ever-expanding governance needs. Just the World reconstruction alone keeps me busy enough, and now there are matters beyond the World to handle. Even if this Sensei had the ability to charm a dozen students at once (not that I'm trying to!), I wouldn't be able to keep up!\nOn one hand, the Gematria, who have fled into deep space, pose a threat that cannot be ignored; we cannot slow down our exploration of the cosmos. On the other hand, the General Student Council President's position has been vacant for too long—Kivotos's previous Student Council President, the one who brought me to this miraculous place, I think she might never return. Though I feel a bit bad for her, I can't act as her proxy indefinitely."
+ BA_origin.0002.desc:0 "Finally, after a long and winding struggle, Kivotos has completely purged Gematria from this World. After years of war, the lively atmosphere of a youth academy has returned to this land once more-we can finally breathe a sigh of relief.\nHowever, this doesn't include Schale or the General Student Council. Although a fresh batch of new blood entered the General Student Council after the Eden Treaty was signed, it's clearly not enough to meet Kivotos's ever-expanding governance needs. Just the World reconstruction alone keeps me busy enough, and now there are matters beyond the World to handle. Even if this Sensei had the ability to charm a dozen students at once (not that I'm trying to!), I wouldn't be able to keep up!\nOn one hand, the Gematria, who have fled into deep space, pose a threat that cannot be ignored; we cannot slow down our exploration of the cosmos. On the other hand, the General Student Council President's position has been vacant for too long-Kivotos's previous Student Council President, the one who brought me to this miraculous place, I think she might never return. Though I feel a bit bad for her, I can't act as her proxy indefinitely."
  BA_origin.0002.a:0 "Submit the 'New Student Council President Election' Proposal."
  BA_origin.0003.name:0 "Student Council President Election"
- BA_origin.0003.desc:0 "Kivotos is a nation founded by students, and its future should also be in the hands of students.\"\nWith the boost from my Influence, the new Student Council President election was held as scheduled. I should have seen this coming, but it was too late—the three leaders from the main signatory schools of the Eden Treaty and the Head of the Gehenna Prefect Team, these four individuals, became the final candidates with an overwhelming majority of votes. If I could, I would have preferred someone without such a clear school affiliation to be Student Council President, but it seems there's no one else like that besides me.\nEvidently, there are still many conflicts within the current academic Federation, or rather, it's a Federation that's barely holding together under my Influence. I'm worried that parachuting in a Student Council President might cause the situation to further deteriorate, but it's undeniable that these four candidates absolutely possess the ability to fulfill this role.\nThe final results have been sent to the General Student Council. It's time to announce the next Student Council President..."
+ BA_origin.0003.desc:0 "Kivotos is a nation founded by students, and its future should also be in the hands of students.\"\nWith the boost from my Influence, the new Student Council President election was held as scheduled. I should have seen this coming, but it was too late-the three leaders from the main signatory schools of the Eden Treaty and the Head of the Gehenna Prefect Team, these four individuals, became the final candidates with an overwhelming majority of votes. If I could, I would have preferred someone without such a clear school affiliation to be Student Council President, but it seems there's no one else like that besides me.\nEvidently, there are still many conflicts within the current academic Federation, or rather, it's a Federation that's barely holding together under my Influence. I'm worried that parachuting in a Student Council President might cause the situation to further deteriorate, but it's undeniable that these four candidates absolutely possess the ability to fulfill this role.\nThe final results have been sent to the General Student Council. It's time to announce the next Student Council President..."
  BA_origin.0003.a:0 "Takanashi Hoshino will lead Kivotos towards Restoration"
  BA_origin.0003.b:0 "Sorasaki Hina is ready to bring order to Kivotos's internal chaos."
  BA_origin.0003.c:0 "Misono Mika will spread the glory of Swiss Rolls throughout the galaxy."
@@ -16,7 +16,7 @@
  BA_origin.0004.a:0 "What's wrong, Hoshino-chan?"
 
  BA_origin.0005.name:0 "Hina Elected"
- BA_origin.0005.desc:0 "Hina became Kivotos's next Student Council President. Her inauguration ceremony was held at the Eden Treaty's former signing location, and I could finally devote my energy to exploring deep space.\nHina didn't seem particularly keen on taking up the position; according to her, she should have been enjoying her retirement life after stepping down as Prefect Team Head. Of course, she had no complaints and quickly took over Kivotos's daily operations.\nThat night, after I finished my own work, the Schale building was mostly dark—except for the Student Council President's office."
+ BA_origin.0005.desc:0 "Hina became Kivotos's next Student Council President. Her inauguration ceremony was held at the Eden Treaty's former signing location, and I could finally devote my energy to exploring deep space.\nHina didn't seem particularly keen on taking up the position; according to her, she should have been enjoying her retirement life after stepping down as Prefect Team Head. Of course, she had no complaints and quickly took over Kivotos's daily operations.\nThat night, after I finished my own work, the Schale building was mostly dark-except for the Student Council President's office."
  BA_origin.0005.a:0 "Should I go visit Hina?"
 
  BA_origin.0006.name:0 "Mika Elected"
@@ -125,7 +125,7 @@
 
 #
  BA_origin.1201.title:0 "Underground Threat"
- BA_origin.1201.desc:0 "While we've been dealing with counterattacks from enemy remnants ever since the war ended, the recent large-scale attack on a supply depot was clearly different. This time, the enemy deployed a number of robot forces — enough to be called an 'army' — from an underground military factory. If it weren't for a nearby Army military exercise, we might have lost an entire district. We need to prepare ourselves against these underground threats. After all, they once tried to destroy this entire World."
+ BA_origin.1201.desc:0 "While we've been dealing with counterattacks from enemy remnants ever since the war ended, the recent large-scale attack on a supply depot was clearly different. This time, the enemy deployed a number of robot forces - enough to be called an 'army' - from an underground military factory. If it weren't for a nearby Army military exercise, we might have lost an entire district. We need to prepare ourselves against these underground threats. After all, they once tried to destroy this entire World."
  BA_origin.1201.next:0 "(Connecting to Arona)"
 
  BA_origin.1202.title:0 "Underground Threat"
@@ -212,7 +212,7 @@
 
 #
  BA_origin.1401.title:0 "Ruins Mining"
- BA_origin.1401.desc:0 "“#YSensei#!, we've researched a way to more #Yefficiently#! extract needed materials from the ruins… This method can also increase the rare resources we extract from ruins. You can switch the extracted output in the #YPolicies#! menu.”"
+ BA_origin.1401.desc:0 "“#YSensei#!, we've researched a way to more #Yefficiently#! extract needed materials from the ruins... This method can also increase the rare resources we extract from ruins. You can switch the extracted output in the #YPolicies#! menu.”"
  BA_origin.1401.next:0 "That's great!"
 
  BA_origin.1410.title:0 "Nameless God"
@@ -263,7 +263,7 @@
 ##########################
 
  BA_origin.2002.title:0 "Unnamed Origin"
- BA_origin.2002.desc:0 "Sensei, good news!… The joint agreement for the four D.U.s has now been officially signed, and each Habitat has submitted its administrative authority to the General Student Council. Now, we can begin the plan to reclaim Kivotos! When you think about it, it's been so long since we fell this far... The students must be eager, too, right?\n§RNext, we just need to send our Army to land, defeat the enemies beneath the Tower of False Sanctum, occupy our homeworld, and then we can go home!§!”"
+ BA_origin.2002.desc:0 "Sensei, good news!... The joint agreement for the four D.U.s has now been officially signed, and each Habitat has submitted its administrative authority to the General Student Council. Now, we can begin the plan to reclaim Kivotos! When you think about it, it's been so long since we fell this far... The students must be eager, too, right?\n§RNext, we just need to send our Army to land, defeat the enemies beneath the Tower of False Sanctum, occupy our homeworld, and then we can go home!§!”"
  BA_origin.2002.next:0 "Alright, let's get ready."
 
  BA_origin.2003.title:0 "Unnamed Origin"

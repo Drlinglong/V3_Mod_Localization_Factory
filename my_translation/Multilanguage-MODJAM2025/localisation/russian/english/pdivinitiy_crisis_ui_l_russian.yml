@@ -1,4 +1,4 @@
-﻿l_russian:
+l_russian:
 
  ############################################
  ### project_divinity_crisis_ui_l_english ###
@@ -13,7 +13,7 @@
 
  pdivinity_psionic_strength_value:"£pdivinity_psionic_strength£ $VAL|0$"
  pdivinity_psionic_strength_gaining:"Выполняйте §HКризисные Цели§!, чтобы получить больше §YМилости Покровителя§!."
- pdivinity_psionic_strength_desc:"$pdivinity_psionic_strength$ — это мера нашего резонанса с загадочными энергиями Архитектора."
+ pdivinity_psionic_strength_desc:"$pdivinity_psionic_strength$ - это мера нашего резонанса с загадочными энергиями Архитектора."
  pdivinity_psionic_strength_crisis_objective:"Кризисные Цели"
  pdivinity_psionic_strength_crisis_objective_gained:"Получено $pdivinity_psionic_strength$"
  pdivinity_psionic_strength_crisis_objective_reward: "$REWARD$"
@@ -26,8 +26,8 @@
 
  # this text exists in the crisis screen, the intro is just the nemesis one, i don't really like it tbh neither does the other one talk about the galcom. ask me if you need the other ones for comparison
  pdivinity_psionic_strength_crisis_description_title:"Проект Божественности"
- pdivinity_psionic_strength_crisis_description_intro:"На протяжении эонов провидцы и учёные шептались о грядущем §RКризисе§! — конце, окутанном пророчествами, где судьба всей разумной жизни висела бы на волоске. Они представляли себе захватчиков из-за звёзд, восстания холодной машинной логики или войны, рождённые в чужих измерениях.\n\nНо они смотрели вовне, когда следовало взглянуть внутрь.\n\nИстина всегда ворошилась под поверхностью — глубокая, неизбежная и привязанная лишь к воле. Последний кризис... всегда должен был быть §Rнами§!."
- pdivinity_psionic_strength_crisis_description:"$pdivinity_psionic_strength_crisis_description_intro$\n\nНаши мысли, наша воля, расходятся волнами по другой плоскости — плоскости безграничной псионической силы. Завеса истончается. Если мы сможем завладеть этой силой, сформировать её согласно нашей цели, то не только переживём грядущее... мы определим его."
+ pdivinity_psionic_strength_crisis_description_intro:"На протяжении эонов провидцы и учёные шептались о грядущем §RКризисе§! - конце, окутанном пророчествами, где судьба всей разумной жизни висела бы на волоске. Они представляли себе захватчиков из-за звёзд, восстания холодной машинной логики или войны, рождённые в чужих измерениях.\n\nНо они смотрели вовне, когда следовало взглянуть внутрь.\n\nИстина всегда ворошилась под поверхностью - глубокая, неизбежная и привязанная лишь к воле. Последний кризис... всегда должен был быть §Rнами§!."
+ pdivinity_psionic_strength_crisis_description:"$pdivinity_psionic_strength_crisis_description_intro$\n\nНаши мысли, наша воля, расходятся волнами по другой плоскости - плоскости безграничной псионической силы. Завеса истончается. Если мы сможем завладеть этой силой, сформировать её согласно нашей цели, то не только переживём грядущее... мы определим его."
  pdivinity_psionic_strength_crisis_howto_title:0 "Стремление к Божественности"
  pdivinity_psionic_strength_crisis_howto:"Выполнение §HКризисных Целей§! генерирует £pdivinity_psionic_strength£ §YМилость Покровителя§!, раскрывая наш божественный потенциал, чтобы высвободить того, кто призывает галактику!."
 
@@ -71,13 +71,13 @@
  crisobj_pdivinity_sacrifice_population_desc:0 "Души принесённых в жертву популяций помогут нам получить милость наших покровителей.\n\nИспользуйте тип зачистки «Ритуальное жертвоприношение», чтобы получить эту награду $pdivinity_psionic_strength$ за каждые $pop_group_unit$ зачищенных единиц населения."
 
  crisobj_pdivinity_control_shroud_enclave_name:0 "Контроль над анклавом вуалеходов"
- crisobj_pdivinity_control_shroud_enclave_desc:0 "Вуалеходы — носители божественной веры, они помогут нам в достижении цели.\n\nУдерживайте анклавы вуалеходов, чтобы получать эту §Yежегодную§! награду в $pdivinity_psionic_strength$."
+ crisobj_pdivinity_control_shroud_enclave_desc:0 "Вуалеходы - носители божественной веры, они помогут нам в достижении цели.\n\nУдерживайте анклавы вуалеходов, чтобы получать эту §Yежегодную§! награду в $pdivinity_psionic_strength$."
 
  crisobj_pdivinity_shroud_enemy_planets_name:0 "Псионический разрыв миров"
  crisobj_pdivinity_shroud_enemy_planets_desc:0 "Опаление вражеских миров псионическими энергиями принесет нам благосклонность.\n\nРазрывайте миры, чтобы получать эту награду в $pdivinity_psionic_strength$."
 
  crisobj_pdivinity_summon_psionic_ships_name:0 "Призыв псионических кораблей"
- crisobj_pdivinity_summon_psionic_ships_desc:0 "Завеса дрожит по нашей команде. Из ее глубин мы призываем не металлические сосуды, но порождения воли — проявления нашей крепнущей связи с Вуалью.\n\nПризывайте псионические корабли, чтобы получать эту награду в $pdivinity_psionic_strength$."
+ crisobj_pdivinity_summon_psionic_ships_desc:0 "Завеса дрожит по нашей команде. Из ее глубин мы призываем не металлические сосуды, но порождения воли - проявления нашей крепнущей связи с Вуалью.\n\nПризывайте псионические корабли, чтобы получать эту награду в $pdivinity_psionic_strength$."
 
  crisobj_pdivinity_employ_telepaths_name:0 "Применение телепатов"
  crisobj_pdivinity_employ_telepaths_desc:0 "Архитектор даровал нашим телепатам способность производить псионическую энергию.\n\nПроизводство $pdivinity_psionic_strength$ масштабируется в зависимости от количества задействованных телепатов."
@@ -89,7 +89,7 @@
  menp_pdivinity_resource:0 "Благосклонность Покровителя"
  # tooltip
  unlocks_pdivinity_unlock_resource:0 "Позволяет накапливать £pdivinity_psionic_strength£ §Y$menp_pdivinity_resource$§! путем выполнения §HЦелей Кризиса§!."
- menp_pdivinity_resource_desc:0 "Завоевание благосклонности Архитектора поможет нам в нашей конечной цели — достижении божественности. Мы прольем свою кровь за его волю."
+ menp_pdivinity_resource_desc:0 "Завоевание благосклонности Архитектора поможет нам в нашей конечной цели - достижении божественности. Мы прольем свою кровь за его волю."
 
  menp_pdivinity_ethic_attraction:0 "Божественная вера"
  # desc
@@ -135,7 +135,7 @@
  unlocks_pdivinity_gifts_from_beyond:0 "§YПсионные компоненты§! теперь могут появляться в качестве вариантов исследований."
 
  menp_pdivinity_astral_tear:0 "Псионный Аватар"
- menp_pdivinity_astral_tear_desc:0 "Живое воплощение воли Покрова, этот аватар — свирепая и загадочная сущность, обвитая чистой псионной силой, подчиняющая реальность своей воле."
+ menp_pdivinity_astral_tear_desc:0 "Живое воплощение воли Покрова, этот аватар - свирепая и загадочная сущность, обвитая чистой псионной силой, подчиняющая реальность своей воле."
  unlocks_pdivinity_astral_tear:0 "Открывает тип корабля: §Y$pdivinity_psionic_avatar$§!"
 
  menp_pdivinity_beyond_the_rifts:0 "Галактический Шторм"

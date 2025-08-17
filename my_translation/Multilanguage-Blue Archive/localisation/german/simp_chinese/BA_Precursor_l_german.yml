@@ -1,29 +1,29 @@
-﻿l_german:
+l_german:
 ### 外交辞令
- 01_BA_FE_PATRONIZING:0 "Wir haben uns noch nicht ganz an die Rolle der Zuschauer jenseits der vierten Wand gewöhnt… Aber wir würden trotzdem gerne eure Geschichte hören."
- 02_BA_FE_PATRONIZING:0 "Ihr seid ja wirklich voller Energie, Außenweltler… genau wie wir vor langer, langer Zeit."
- 03_BA_FE_PATRONIZING:0 "Ihr sagt, ihr könnt das nicht reparieren?… Bringt es zu uns, vielleicht können wir euch helfen."
- 04_BA_FE_PATRONIZING:0 "…Nichts Besonderes, ich habe nur jemanden gesehen, der mir bekannt vorkam, und dachte an unsere ehemaligen Kameraden…"
+ 01_BA_FE_PATRONIZING:0 "Wir haben uns noch nicht ganz an die Rolle der Zuschauer jenseits der vierten Wand gewöhnt... Aber wir würden trotzdem gerne eure Geschichte hören."
+ 02_BA_FE_PATRONIZING:0 "Ihr seid ja wirklich voller Energie, Außenweltler... genau wie wir vor langer, langer Zeit."
+ 03_BA_FE_PATRONIZING:0 "Ihr sagt, ihr könnt das nicht reparieren?... Bringt es zu uns, vielleicht können wir euch helfen."
+ 04_BA_FE_PATRONIZING:0 "...Nichts Besonderes, ich habe nur jemanden gesehen, der mir bekannt vorkam, und dachte an unsere ehemaligen Kameraden..."
  01_BA_FE_DISMISSIVE:0 "Ach, ihr seid es. Sagt, was ihr wollt."
- 02_BA_FE_DISMISSIVE:0 "Wir mochten es nie, andere zu schikanieren… Ihr wisst schon."
+ 02_BA_FE_DISMISSIVE:0 "Wir mochten es nie, andere zu schikanieren... Ihr wisst schon."
  03_BA_FE_DISMISSIVE:0 "Wir teilen unsere Technologie nur, wenn es absolut notwendig ist."
- 01_BA_FE_ANGRY:0 "Blut und Feuer…"
+ 01_BA_FE_ANGRY:0 "Blut und Feuer..."
  02_BA_FE_ANGRY:0 "Wir hatten auch mal Hoffnung, aber wir haben sie uns selbst erkämpft. Nicht so wie ihr."
  03_BA_FE_ANGRY:0 "Wenn eure Geschichte so ist, dann sei es so."
- 01_BA_FE_WAR:0 "Ich muss euch danken… Ihr habt uns die Schattenseite unter dem Heiligenschein gezeigt."
+ 01_BA_FE_WAR:0 "Ich muss euch danken... Ihr habt uns die Schattenseite unter dem Heiligenschein gezeigt."
  02_BA_FE_WAR:0 "Wofür hältst du diesen Ort eigentlich?"
  11_BA_FE_CUSTODIAL:0 "Jetzt sind wir wie ein Zuschauer, der auf die Bühne stürmt, den Musikern die Instrumente entreißt und selbst zu spielen beginnt. Ob wir die Vorstellung ruinieren, liegt allein in unserem Ermessen."
- 12_BA_FE_CUSTODIAL:0 "Es fühlt sich ein wenig so an, wie damals, als wir uns gerade zusammengeschlossen haben. Angenehm, aufregend, als wäre man voller Kraft…"
+ 12_BA_FE_CUSTODIAL:0 "Es fühlt sich ein wenig so an, wie damals, als wir uns gerade zusammengeschlossen haben. Angenehm, aufregend, als wäre man voller Kraft..."
  13_BA_FE_CUSTODIAL:0 "Sagt einfach, wenn ihr Hilfe braucht; alles außer Flottenangelegenheiten ist verhandelbar."
- 14_BA_FE_CUSTODIAL:0 "…Es ist wirklich überwältigend, dass auch wir diesen Tag erleben… Wir werden diese Chance nicht vergeuden."
+ 14_BA_FE_CUSTODIAL:0 "...Es ist wirklich überwältigend, dass auch wir diesen Tag erleben... Wir werden diese Chance nicht vergeuden."
  11_BA_FE_ARROGANT:0 "Nicht schlecht, es scheint, als hättet ihr die Grundsätze des galaktischen Zivilisationsverhaltens bereits verstanden."
  12_BA_FE_ARROGANT:0 "Der Grund, warum wir Gewalt anwenden, ist unserer Meinung nach eine Notwendigkeit. Ihr werdet uns niemals verstehen können."
  13_BA_FE_ARROGANT:0 "Technologie dient denjenigen, die sie nutzen. Wir hoffen, die Besten, die davon profitieren, sind Soldaten und keine Tyrannen."
- 11_BA_FE_IMPERIOUS:0 "Erde und junge Triebe… Interessant."
+ 11_BA_FE_IMPERIOUS:0 "Erde und junge Triebe... Interessant."
  12_BA_FE_IMPERIOUS:0 "Ein Museum wäre euer bestes Zuhause, danach kämen noch der Zoo, die Fließbandproduktion oder ein Kraftwerk, je nachdem, wie sehr ihr euch bemüht."
- 13_BA_FE_IMPERIOUS:0 "Die Geschichte, die ihr geschrieben habt, hätte viel perfekter sein sollen, doch stattdessen ist sie voller Beschönigung, Schmeichelei und Betrug… Wie könnt ihr euch da rühmen?"
+ 13_BA_FE_IMPERIOUS:0 "Die Geschichte, die ihr geschrieben habt, hätte viel perfekter sein sollen, doch stattdessen ist sie voller Beschönigung, Schmeichelei und Betrug... Wie könnt ihr euch da rühmen?"
  11_BA_FE_WAR:0 "Wir überlassen euch Wasser und Erde aus unserer Heimat der Leere; holt sie euch selbst."
- 12_BA_FE_WAR:0 "Was haltet ihr von der Produktion von Konserven?… Versteht mich nicht falsch, das könnte in Zukunft auch euch betreffen, im Krieg oder danach."
+ 12_BA_FE_WAR:0 "Was haltet ihr von der Produktion von Konserven?... Versteht mich nicht falsch, das könnte in Zukunft auch euch betreffen, im Krieg oder danach."
 
  #星门通路
  BA_Precursor.0015.title:0 "Kommunikationsverbindung aktiviert"
@@ -34,7 +34,7 @@
 
  BA_Precursor.0016.title:0 "Kommunikationsverbindung aktiviert"
  BA_Precursor.0016.desc:0 "§YHier spricht Chef-Zeugin Yurizono Seia, ich sende hiermit eine Nachricht an die Außenwelt.§! Tatsächlich haben wir kurz nach der Aktivierung des Außenwelt-Kommunikationslinks immer mehr Informationen von der Außenwelt erhalten, was uns sehr geholfen hat, den in unserem Gebiet befindlichen Kommunikationsverbindung-Knotenpunkt zu reparieren. Wir haben jedoch keine tatsächlichen Reparaturmaßnahmen ergriffen, da wir uns einig waren, uns nicht zu sehr in die äußeren Angelegenheiten einzumischen. Doch nun ist die Lage anders, und für den Grund, an dem wir bis heute festgehalten haben, müssen wir heute handeln. Glücklicherweise war unser erster Reparaturversuch ein großer Erfolg, und der Kommunikationsverbindung-Knotenpunkt in KETHER ist nun in Betrieb.§RLetzte Warnung: Obwohl andere Kommunikationsverbindung-Knotenpunkte öffentlich genutzt werden können, ist die unbefugte Nutzung des Sternentors in KETHER nicht gestattet. Bitte nehmt dies zur Kenntnis.§!"
- BA_Precursor.0016.next:0 "Endlich…"
+ BA_Precursor.0016.next:0 "Endlich..."
 
 
 #探索

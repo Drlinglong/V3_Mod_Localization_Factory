@@ -1,4 +1,4 @@
-﻿l_english:
+l_english:
 
 #####       Agendas        #####
  council_agenda_agenda_BA_SI_Trinity_A02_name:"Phrenapates' Remedial Method"
@@ -266,7 +266,7 @@
 #####       Deposits       #####
  d_BA_auto_habitat:0 "Additional Automation Module"
  d_BA_auto_habitat_desc:"Building orbital stations around various celestial bodies across the entire system can meet the ever-growing resource demands of orbital Complexes."
- # d_BA_auto_habitat_tooltip: "§Y[solar_system.GetName]§!恒星系可以支持：$TABBED_NEW_LINE$大型轨道站：§Y[solar_system.GetNumMajorOrbitals]/[solar_system.GetMaxMajorOrbitals]§!$TABBED_NEW_LINE$小型轨道站：§Y[solar_system.GetNumMinorOrbitals]/[solar_system.GetMaxMinorOrbitals]§!\n\n目前轨道站提供："
+ # d_BA_auto_habitat_tooltip: "§Y[solar_system.GetName]§!恒星系可以支持:$TABBED_NEW_LINE$大型轨道站:§Y[solar_system.GetNumMajorOrbitals]/[solar_system.GetMaxMajorOrbitals]§!$TABBED_NEW_LINE$小型轨道站:§Y[solar_system.GetNumMinorOrbitals]/[solar_system.GetMaxMinorOrbitals]§!\n\n目前轨道站提供:"
  d_BA_auto_habitat_tooltip: ""
 
  d_BA_kousagi_park:0 "Little Rabbit Park"
@@ -1560,7 +1560,7 @@
  #光环觉醒飞升-探寻光环的秘密
  situation_Into_Halo:0 "Investigating the Halo's Secrets"
  situation_Into_Halo_type:0 "Investigating the Halo's Secrets"
- situation_Into_Halo_desc_1:0 "Kozeki Ui has started her next phase of Research, but it seems she's facing significant hurdles—insufficient data sources mean even basic information gathering isn't getting the cooperation it needs. We can't force things; we'll just have to wait patiently."
+ situation_Into_Halo_desc_1:0 "Kozeki Ui has started her next phase of Research, but it seems she's facing significant hurdles-insufficient data sources mean even basic information gathering isn't getting the cooperation it needs. We can't force things; we'll just have to wait patiently."
  situation_Into_Halo_desc_2:0 "We need to conduct more investigations into the sites left behind by Gematria before we can continue our Research.\n(Complete the special project §YUnfathomable Research§! to unlock the Situation)"
  situation_Into_Halo_desc_3:0 "The General Student Council is currently deliberating on this."
  situation_Into_Halo_site_researching:0 "Excavating the Sites"
@@ -1758,7 +1758,7 @@
  BA_End_of_chronicle:0 "Epilogue: Chronicles of Young Gods"
  BA_Another_route_DESC:0 "This is where it all begins. Everything we do is built upon matter. (Upon completion, $BA_Kivotos_chronicle_effect_stage1$)"
  BA_Flowers_DESC:0 "The raw materials produced in the suburbs supply the vast daily consumption of the Academy City. These are both the foundation of the Academy City and the frontier of our expansion. A chaotic suburb equates to a lost future. (Upon completion, $BA_Kivotos_chronicle_effect_stage2$)"
- BA_In_flame_DESC:0 "A large volume of civilian industries are concentrated within the autonomous district. The routing of every pipe, the flight path of every drone, the storage of every blueprint—all of these must be meticulously planned. (Upon completion, $BA_Kivotos_chronicle_effect_stage3$)"
+ BA_In_flame_DESC:0 "A large volume of civilian industries are concentrated within the autonomous district. The routing of every pipe, the flight path of every drone, the storage of every blueprint-all of these must be meticulously planned. (Upon completion, $BA_Kivotos_chronicle_effect_stage3$)"
  BA_Things_cannot_give_up_DESC:0 "Just a roof over our heads isn't enough, but everyone has different tastes when it comes to rooms. Allocating personal space for everyone isn't a waste; it's a necessary cultural investment. (Upon completion, $BA_Kivotos_chronicle_effect_stage4$)"
  BA_Hoshizora_DESC:0 "Even now, disagreements among the Grand Academies are inevitable. Let's find the root cause and resolve it. (Upon completion, $BA_Kivotos_chronicle_effect_stage5$)"
  BA_Blue_new_world_DESC:0 "A single World's capacity ultimately has limits. For the future of the Academy City, it must embrace the entire universe. (Upon completion, $BA_Kivotos_chronicle_effect_stage6$)"
@@ -1912,7 +1912,7 @@
  tech_BA_spaceship_automation_3_title:0 "§HUnlocks Missile Boat Modules:§! Aegis Bow, Vortex Stern\n§HUnlocks Ridgeback Ship Modules:§! Scabbard Mid, Link Stern"
  tech_BA_spaceship_automation_3_tip:0 "Specialized ship modules, capable of undertaking more functions."
  tech_BA_spaceship_automation_4:0 "Automated Flagship"
- tech_BA_spaceship_automation_4_desc:0 "Developed from the legacy of Millennium Science School. With this, we can discard the concept of 'fleet capacity': a fleet that shakes the universe requires only a few people to command it—truly, 'only a few'."
+ tech_BA_spaceship_automation_4_desc:0 "Developed from the legacy of Millennium Science School. With this, we can discard the concept of 'fleet capacity': a fleet that shakes the universe requires only a few people to command it-truly, 'only a few'."
 
  tech_BA_ruins_research:0 "Ruin Amalgamation Research"
  tech_BA_ruins_research_desc:0 "Mountains of ruins are an important source of resources for us. We should conduct research on how to fully utilize them."
@@ -1931,7 +1931,7 @@
  tech_BA_Halo_power_increase:0 "Halo Strength Amplification"
  tech_BA_Halo_power_increase_desc:0 "Our Halos grant us strength beyond that of ordinary beings, though its intensity varies among individuals. Now that we have a preliminary understanding of this strength, we can artificially amplify it through certain techniques."
  tech_BA_Divine_liberation_theory:0 "Divine Liberation Theory"
- tech_BA_Divine_liberation_theory_desc:0 "We have preliminarily analyzed the source of Halo strength. To amplify the output of this strength, we will require materials that have an affinity for Halos and store a large amount of energy internally—perhaps some bluish-green stones could achieve this? (Hint: Complete the Pyroxene Application technology to unlock the next technology)."
+ tech_BA_Divine_liberation_theory_desc:0 "We have preliminarily analyzed the source of Halo strength. To amplify the output of this strength, we will require materials that have an affinity for Halos and store a large amount of energy internally-perhaps some bluish-green stones could achieve this? (Hint: Complete the Pyroxene Application technology to unlock the next technology)."
  tech_BA_Preliminary_divine_liberation:0 "Preliminary Divine Liberation"
  tech_BA_Preliminary_divine_liberation_desc:0 "With the advancement of Pyroxene technology, we have finally taken a significant step in Halo Research. Catalyzed by Pyroxene, our Halos will release even more energy than before. Now, we just need to disseminate this achievement."
  tech_BA_Preliminary_ring_theory_title:0 "The cornerstone of Halo theory, a prerequisite for subsequent Halo Research."
@@ -2150,12 +2150,12 @@
 
  ap_BA_Our_story:0 "Our Story"
  ap_BA_Our_story_desc:0 "Where we go is for us to decide, and our history certainly won't end here. This is Our Story, written by our own hands."
- ap_BA_Our_story_tip:0 "\n—§RMutually exclusive with §_$ap_BA_Name_the_void$§!§!"
+ ap_BA_Our_story_tip:0 "\n-§RMutually exclusive with §_$ap_BA_Name_the_void$§!§!"
 
 
  ap_BA_Name_the_void:0 "Naming the Sublime"
  ap_BA_Name_the_void_desc:0 "We gave a name to the nameless, and thus we could embrace and utilize it. We turned the profane into the sacred, forging it into our own history."
- ap_BA_Name_the_void_tip:0 "\n—§RMutually exclusive with §B$ap_BA_Our_story$§!§!"
+ ap_BA_Name_the_void_tip:0 "\n-§RMutually exclusive with §B$ap_BA_Our_story$§!§!"
  ap_BA_Name_the_void_effect_fake:0 "[root.GetName] can now embark on the §YPath to Becoming a §RCrisis§!§!.\nStarts Situation: §YThe Triple Color of the Academy City§! \n(Under development, please look forward to it)\n"
  ap_BA_Name_the_void_tip_unknown:0 "$TRIGGER_FAIL$ Do we truly understand it?"
 
@@ -2228,22 +2228,22 @@
  BlueArchivePulanaDesc0:0 "......Connection confirmed......" #平静
  BlueArchivePulanaDesc1:0 "Please finish the work quickly, Sensei." #平静
  BlueArchivePulanaDesc2:0 "......Verification complete. Elevated activity and metabolic levels. Sensei, you seem to be in a good mood today." #微微微笑
- BlueArchivePulanaDesc3:0 "Please don't keep staring at me, it might cause memory confusion... Besides, you still have work, right, Sensei?" #无语流汗，光环混乱
- BlueArchivePulanaDesc4:0 "...Error... Detected incorrectly submitted work forms..." #张口，生气或战意激增
- BlueArchivePulanaDesc5:0 "Sensei... You really won't repeat the same mistake, right...?" #视线躲闪，害羞或为难
- BlueArchivePulanaDesc6:0 "...Stain detected... Starch, fructose, protein, and plant fats... So this is how you make Arona-senpai happy, huh..." #睁大眼，无语流汗
- BlueArchivePulanaDesc7:0 "Confirmed... Need to re-evaluate Sensei's work Efficiency Modifiers..." #睁大眼，惊讶
- BlueArchivePulanaDesc8:0 "...That's...!" #兴奋星星眼，嘴不张开
+ BlueArchivePulanaDesc3:0 "Please don't keep staring at me, it might cause memory confusion... Besides, you still have work, right, Sensei?" #无语流汗,光环混乱
+ BlueArchivePulanaDesc4:0 "...Error... Detected incorrectly submitted work forms..." #张口,生气或战意激增
+ BlueArchivePulanaDesc5:0 "Sensei... You really won't repeat the same mistake, right...?" #视线躲闪,害羞或为难
+ BlueArchivePulanaDesc6:0 "...Stain detected... Starch, fructose, protein, and plant fats... So this is how you make Arona-senpai happy, huh..." #睁大眼,无语流汗
+ BlueArchivePulanaDesc7:0 "Confirmed... Need to re-evaluate Sensei's work Efficiency Modifiers..." #睁大眼,惊讶
+ BlueArchivePulanaDesc8:0 "...That's...!" #兴奋星星眼,嘴不张开
  BlueArchivePulanaDesc9:0 "Sensei, I don't think this is right. The General Student Council isn't trustworthy... and you shouldn't take responsibility for everything!" #辩解状
  BlueArchivePulanaDesc10:0 "...Error..." #委屈
- BlueArchivePulanaDesc11:0 "Unable to comprehend..." #皱眉，流汗，为难状
+ BlueArchivePulanaDesc11:0 "Unable to comprehend..." #皱眉,流汗,为难状
  BlueArchivePulanaDesc12:0 "...Confusion, incomprehensible actions... Please stop poking me..." #圈圈眼 @@
  BlueArchivePulanaDesc13:0 "...Abnormal emotional fluctuations... Please stop patting my head, it interferes with my work..." #>.<
  BlueArchivePulanaDesc14:0 "Schale Report 14" #屑笑
- BlueArchivePulanaDesc15:0 "...Mmm, strawberry milk... I'll leave it for Arona-senpai..." #微笑，或‘不也挺好吗’笑
- BlueArchivePulanaDesc16:0 "Schale Report 16" #乖巧+高兴，心形光环
+ BlueArchivePulanaDesc15:0 "...Mmm, strawberry milk... I'll leave it for Arona-senpai..." #微笑,或‘不也挺好吗’笑
+ BlueArchivePulanaDesc16:0 "Schale Report 16" #乖巧+高兴,心形光环
  BlueArchivePulanaDesc17:0 "Schale Report 17" #14屑笑+脸红
- BlueArchivePulanaDesc18:0 "Schale Report 18" #阴暗，盯
+ BlueArchivePulanaDesc18:0 "Schale Report 18" #阴暗,盯
  BlueArchivePulanaDesc19:0 "Schale Report 19" #阴笑
  BlueArchivePulanaDesc20:0 "Zzz..." #沉思
  BlueArchivePulanaDesc21:0 "Schale Report 21" #眯眯眼

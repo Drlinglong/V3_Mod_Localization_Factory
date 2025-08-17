@@ -1,24 +1,24 @@
-﻿l_simp_chinese:
+l_simp_chinese:
 
 # DLC clone (not meme) #grefm has 2 different loc keys for same text, will try with 1
  dlc_anzfp:  "澳大利亚与新西兰风味"
 
- dlc_anzfp_desc:  "#ITALIC Mod 2.0.9 (适用于维多利亚3 1.9.x版本)#！"
+ dlc_anzfp_desc:  "#ITALIC Mod 2.0.9 (适用于维多利亚3 1.9.x版本)#!"
 
 
 #Decisions
 
 afp_great_western_empire:0  "建立大西部帝国"
-afp_great_western_empire_desc:0  "西澳利亚人民厌倦了成为世界的笑柄。够了。我们必须向世界展示我们真正的实力。"
+afp_great_western_empire_desc:0  "西澳利亚人民厌倦了成为世界的笑柄.够了.我们必须向世界展示我们真正的实力."
 
 #Events
 
 
 anz_meme_events.2.t:0  "追求伟大"
-anz_meme_events.2.d:0  "全世界的西方人已在我们的领导下团结一致，我们应当庆祝这一重要时刻，并宣告西方人将统治世界！"
-anz_meme_events.2.f:0  "西方……感觉就是如此正确。显然，它是最棒的基点方向……而它的形容词……西方。是的。我现在看得很清楚了。这个伟大帝国的名字一定是……"
-anz_meme_events.2.a:0  "团结西方人。"
+anz_meme_events.2.d:0  "全世界的西方人已在我们的领导下团结一致,我们应当庆祝这一重要时刻,并宣告西方人将统治世界!"
+anz_meme_events.2.f:0  "西方......感觉就是如此正确.显然,它是最棒的基点方向......而它的形容词......西方.是的.我现在看得很清楚了.这个伟大帝国的名字一定是......"
+anz_meme_events.2.a:0  "团结西方人."
 afp_great_western_empire_tt:0  "建立大西部帝国"
 
 # Misc
-anz_POP_NOT_T5:0  "不@acceptance_status_5！完全接受"
+anz_POP_NOT_T5:0  "不@acceptance_status_5!完全接受"

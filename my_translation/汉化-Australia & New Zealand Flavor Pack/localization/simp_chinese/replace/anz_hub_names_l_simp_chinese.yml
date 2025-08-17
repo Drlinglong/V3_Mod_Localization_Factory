@@ -1,4 +1,4 @@
-﻿l_simp_chinese:
+l_simp_chinese:
 # 106 hubs added or moved! Yikes
 
 # Australia
@@ -49,7 +49,7 @@
 # New Zealand
 # Northland
  HUB_NAME_STATE_NORTHLAND_city:  "奥克兰"
- HUB_NAME_STATE_NORTHLAND_city_maori:  "塔马基·马考劳"
+ HUB_NAME_STATE_NORTHLAND_city_maori:  "塔马基.马考劳"
  HUB_NAME_STATE_NORTHLAND_city_french:  "新里昂"
  HUB_NAME_STATE_NORTHLAND_port:  "拉塞尔"
  HUB_NAME_STATE_NORTHLAND_port_maori:  "科罗拉雷卡"
@@ -188,11 +188,11 @@
 # Batmania to Melbourne
 anz_renaming_events.1.t1:0  "墨尔本市"
 anz_renaming_events.1.t1:0  "巴特曼尼亚市"
-anz_renaming_events.1.d1:0  "1835年，菲利普港协会成立，旨在拓殖[SCOPE.sCharacter('anz_batman_char').GetFullName]声称从武伦杰里人手中获得的土地。非官方地，这片区域被称为“巴特曼尼亚”。\n\n[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle][ROOT.GetCountry.GetRuler.GetLastName]已宣布此定居点为该地区的首都，现为纪念第二代墨尔本子爵[SCOPE.sCharacter('anz_melbourne_char').GetFullName]，将其更名为“墨尔本”。"
-anz_renaming_events.1.d2:0  "1835年，菲利普港协会成立，旨在拓殖[SCOPE.sCharacter('anz_batman_char').GetFullName]声称从武伦杰里人手中获得的土地。非官方地，这片区域被称为“巴特曼尼亚”。\n\n[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle][ROOT.GetCountry.GetRuler.GetLastName]已宣布此定居点为该地区的首都，尽管已宣布[SCOPE.sCharacter('anz_batman_char').GetLastName]的主张无效。"
-anz_renaming_events.1.f:0  "“天下至美之地，无出其右……我此生所见最美的绵羊牧场。”——巴特曼"
-anz_renaming_events.1.a:0  "太棒了。"
-anz_renaming_events.1.b:0  "向[SCOPE.sCharacter('anz_batman_char').GetLastName]提供政治认可，以表彰其努力。"
-anz_batmania2melbourne_tt:0  "定居点#v [GetGlobalVariable('anz_vic_state').GetState.GetCityHubName]#!将更名为#v 墨尔本#!。"
+anz_renaming_events.1.d1:0  "1835年,菲利普港协会成立,旨在拓殖[SCOPE.sCharacter('anz_batman_char').GetFullName]声称从武伦杰里人手中获得的土地.非官方地,这片区域被称为“巴特曼尼亚”.\n\n[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle][ROOT.GetCountry.GetRuler.GetLastName]已宣布此定居点为该地区的首都,现为纪念第二代墨尔本子爵[SCOPE.sCharacter('anz_melbourne_char').GetFullName],将其更名为“墨尔本”."
+anz_renaming_events.1.d2:0  "1835年,菲利普港协会成立,旨在拓殖[SCOPE.sCharacter('anz_batman_char').GetFullName]声称从武伦杰里人手中获得的土地.非官方地,这片区域被称为“巴特曼尼亚”.\n\n[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle][ROOT.GetCountry.GetRuler.GetLastName]已宣布此定居点为该地区的首都,尽管已宣布[SCOPE.sCharacter('anz_batman_char').GetLastName]的主张无效."
+anz_renaming_events.1.f:0  "“天下至美之地,无出其右......我此生所见最美的绵羊牧场.”--巴特曼"
+anz_renaming_events.1.a:0  "太棒了."
+anz_renaming_events.1.b:0  "向[SCOPE.sCharacter('anz_batman_char').GetLastName]提供政治认可,以表彰其努力."
+anz_batmania2melbourne_tt:0  "定居点#v [GetGlobalVariable('anz_vic_state').GetState.GetCityHubName]#!将更名为#v 墨尔本#!."
 anz_crippled:0  "梅毒毁容"
-batman_industrialists_tt:  "[SCOPE.sCharacter('anz_batman_char').GetFullName]成为[GetInterestGroupVariant('ig_industrialists',GetPlayer).GetNameWithCountryVariant]的领袖。"
+batman_industrialists_tt:  "[SCOPE.sCharacter('anz_batman_char').GetFullName]成为[GetInterestGroupVariant('ig_industrialists',GetPlayer).GetNameWithCountryVariant]的领袖."

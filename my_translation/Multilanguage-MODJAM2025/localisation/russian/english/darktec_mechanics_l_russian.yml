@@ -1,4 +1,4 @@
-﻿# localisation\english\darktec_mechanics_l_english.yml
+# localisation\english\darktec_mechanics_l_english.yml
 
 # Authors: Rodahtnov & Zyralynn
 
@@ -62,7 +62,7 @@ l_russian:
 	darktec_contained_entropy_value:0 "£darktec_contained_entropy£ $VAL|0$"
 	darktec_contained_entropy_current_value:0 "Текущее Значение: §Y$VALUE|0$§!"
 	darktec_contained_entropy_gaining:0 "Выполните §HЦели Кризиса§!, чтобы получить больше §Y$darktec_contained_entropy$§!."
-	darktec_contained_entropy_desc:0 "Сдержанная Энтропия — это количество хаотической фоновой энергии, захваченной небарионной материей таким образом, что она не может каким-либо образом влиять или взаимодействовать с реальностью, если только на нее не воздействовать искусственно."
+	darktec_contained_entropy_desc:0 "Сдержанная Энтропия - это количество хаотической фоновой энергии, захваченной небарионной материей таким образом, что она не может каким-либо образом влиять или взаимодействовать с реальностью, если только на нее не воздействовать искусственно."
 
 	darktec_contained_entropy_crisis_objective:0 "Цели Кризиса"
 	darktec_contained_entropy_crisis_objective_gained:0 "Полученный ресурс"
@@ -75,7 +75,7 @@ l_russian:
 	darktec_contained_entropy_crisis_level_desc:0 "Чтобы продвигаться по уровням Кризиса, выполняйте Цели Кризиса и исследуйте Особенности Кризиса в Журнале Ситуаций."
 
 	darktec_contained_entropy_crisis_description_title:0 "Постбарионная Инфузия"
-	darktec_contained_entropy_crisis_description:0 "$menace_crisis_description_intro$\n\nПотенциал вакуума, пустоты, пространства между атомами... темная энергия, питающая энтропию, безгранична, и поэтому наш долг — остановить ее регрессивное и разрушительное влияние на реальность и взять ее под свой контроль; Мы подчиним себе силу энтропии, сделав ее своей собственной."
+	darktec_contained_entropy_crisis_description:0 "$menace_crisis_description_intro$\n\nПотенциал вакуума, пустоты, пространства между атомами... темная энергия, питающая энтропию, безгранична, и поэтому наш долг - остановить ее регрессивное и разрушительное влияние на реальность и взять ее под свой контроль; Мы подчиним себе силу энтропии, сделав ее своей собственной."
 	darktec_contained_entropy_crisis_howto_title:0 "Сгущающаяся Энтропия"
 	darktec_contained_entropy_crisis_howto:0 "Преследование §HЦелей Кризиса§! и использование некоторых §EУмбральных§! особенностей, таких как строительство §H$building_darktec_anchor_1_plural$§!, генерируют §H$darktec_contained_entropy_with_icon$§!, раскрывая технологическую, экономическую и экзистенциальную мощь нашей империи. Мы должны собирать, наращивать и создавать больше, и больше, и больше, пока не сможем §HСгустить§! полученную энтропию в форму, которую мы можем придать, и с ее помощью формировать реальность по нашему желанию."
 
@@ -90,7 +90,7 @@ l_russian:
 	menp_darktec_entropy_t1_tooltip:0 "Теперь мы можем получать §Y$darktec_contained_entropy_with_icon$§! через Цели Кризиса."
 
 	menp_darktec_darkmatter_t1:0 "Сдерживание Антиэнергии"
-	menp_darktec_darkmatter_t1_desc:0 "Единственный логичный результат — уменьшение энтропии и, в процессе, её эксплуатация."
+	menp_darktec_darkmatter_t1_desc:0 "Единственный логичный результат - уменьшение энтропии и, в процессе, её эксплуатация."
 	menp_darktec_darkmatter_t1_tooltip:0 "Позволяет строительство ['building:building_darktec_storage_1', £building£ $building_darktec_storage_1_plural$], которые генерируют §Y£sr_dark_matter£ Темную Материю§! на основе количества запасенной §Y$darktec_contained_entropy_with_icon$§!."
 
 	# T2
@@ -99,13 +99,13 @@ l_russian:
 	menp_darktec_anchor_t2_tooltip:0 "Теперь мы можем улучшить ['building:building_darktec_anchor_1', £building£ $building_darktec_anchor_1_plural$] до уровня ['building:building_darktec_anchor_2', £building£ $building_darktec_anchor_2_plural$]."
 
 	menp_darktec_entropy_t2:0 "Экзотическая Рекомбинация"
-	menp_darktec_entropy_t2_desc:0 "Объединение небареонной материи с бареонной — сложное дело, тем более с живыми существами. Но эти усилия того стоят."
+	menp_darktec_entropy_t2_desc:0 "Объединение небареонной материи с бареонной - сложное дело, тем более с живыми существами. Но эти усилия того стоят."
 	menp_darktec_entropy_t2_tooltip:0 "[darktec_loc_menp_darktec_entropy_t2_tooltip]"
 	menp_darktec_entropy_t2_tooltip_normal:0 "Позволяет исследовать ['technology:tech_darktec_traits_t1'], которые позволяют нам улучшать наш вид особыми признаками."
 	menp_darktec_entropy_t2_tooltip_early:0 "Позволяет исследовать ['technology:tech_darktec_traits_t1'], которые позволяют нам улучшать наш вид особыми признаками."
 
 	menp_darktec_darkmatter_t2:0 "Вакуумная Переработка"
-	menp_darktec_darkmatter_t2_desc:0 "Никакой ресурс не должен быть потрачен впустую, даже те, которые мы не можем обнаружить — максимальная эффективность обязательна."
+	menp_darktec_darkmatter_t2_desc:0 "Никакой ресурс не должен быть потрачен впустую, даже те, которые мы не можем обнаружить - максимальная эффективность обязательна."
 	menp_darktec_darkmatter_t2_tooltip:0 "[darktec_loc_menp_darktec_darkmatter_t2_tooltip]"
 	menp_darktec_darkmatter_t2_tooltip_normal:0 "Теперь мы можем улучшить ['building:building_darktec_storage_1', £building£ $building_darktec_storage_1_plural$] до уровня ['building:building_darktec_storage_2', £building£ $building_darktec_storage_2_plural$]."
 	menp_darktec_darkmatter_t2_tooltip_early:0 "Теперь мы можем улучшить ['building:building_darktec_storage_1', £building£ $building_darktec_storage_1_plural$] до уровня ['building:building_darktec_storage_2', £building£ $building_darktec_storage_2_plural$]."
@@ -114,10 +114,10 @@ l_russian:
 	menp_darktec_umbralships_t2_desc:0 "Создание переработанных материалов, насыщенных энтропией, позволяет нам создавать проекты, которые, кажется, сливаются как с осязаемой, так и с неосязаемой реальностью."
 	menp_darktec_umbralships_t2_tooltip:0 "[darktec_loc_menp_darktec_umbralships_t2_tooltip]"
 
-	menp_darktec_umbralships_t2_tooltip_mechanical:0 "Разблокирует технологию для первого уровня §YТеневых кораблей§! — ['technology:tech_darktec_crisis_destroyer']."
-	menp_darktec_umbralships_t2_tooltip_mechanical_early:0 "Разблокирует технологию для первого уровня §YТеневых кораблей§! — ['technology:tech_darktec_crisis_destroyer']."
-	menp_darktec_umbralships_t2_tooltip_bioships:0 "Разблокирует технологию для первого уровня §YТеневых кораблей§! — ['technology:tech_darktec_crisis_mauler']."
-	menp_darktec_umbralships_t2_tooltip_bioships_early:0 "Разблокирует технологию для первого уровня §YТеневых кораблей§! — ['technology:tech_darktec_crisis_mauler']."
+	menp_darktec_umbralships_t2_tooltip_mechanical:0 "Разблокирует технологию для первого уровня §YТеневых кораблей§! - ['technology:tech_darktec_crisis_destroyer']."
+	menp_darktec_umbralships_t2_tooltip_mechanical_early:0 "Разблокирует технологию для первого уровня §YТеневых кораблей§! - ['technology:tech_darktec_crisis_destroyer']."
+	menp_darktec_umbralships_t2_tooltip_bioships:0 "Разблокирует технологию для первого уровня §YТеневых кораблей§! - ['technology:tech_darktec_crisis_mauler']."
+	menp_darktec_umbralships_t2_tooltip_bioships_early:0 "Разблокирует технологию для первого уровня §YТеневых кораблей§! - ['technology:tech_darktec_crisis_mauler']."
 
 	darktec_modifier_menp_early_applications:0 "$menp_darktec_entropy_t2$"
 	darktec_modifier_menp_early_applications_desc:0 "$menp_darktec_entropy_t2_desc$"
@@ -138,8 +138,8 @@ l_russian:
 	menp_darktec_darkmatter_t3:0 "Контролируемый Вакуумный Коллапс"
 	menp_darktec_darkmatter_t3_desc:0 "Создавая небольшие зоны контролируемого вакуумного коллапса, мы можем значительно лучше понять, как управлять и перенаправлять огромные количества небареонной материи и энергии без полного коллапса реальности."
 	menp_darktec_darkmatter_t3_tooltip:0 "[darktec_loc_menp_darktec_darkmatter_t3_tooltip]"
-	menp_darktec_darkmatter_t3_tooltip_mechanical:0 "Разблокирует технологию для второго уровня §YТеневых кораблей§! — ['technology:tech_darktec_crisis_cruiser']."
-	menp_darktec_darkmatter_t3_tooltip_bioships:0 "Разблокирует технологию для второго уровня §YТеневых кораблей§! — ['technology:tech_darktec_crisis_weaver']."
+	menp_darktec_darkmatter_t3_tooltip_mechanical:0 "Разблокирует технологию для второго уровня §YТеневых кораблей§! - ['technology:tech_darktec_crisis_cruiser']."
+	menp_darktec_darkmatter_t3_tooltip_bioships:0 "Разблокирует технологию для второго уровня §YТеневых кораблей§! - ['technology:tech_darktec_crisis_weaver']."
 
 	# T4
 	menp_darktec_anchor_t4:0 "Жатва Пустоты"
@@ -164,7 +164,7 @@ l_russian:
 	menp_darktec_entropy_t4_unknown_tooltip:0 "???"
 
 	menp_darktec_entropy_t4_transformed:0 "Непостижимая Стабилизация"
-	menp_darktec_entropy_t4_transformed_desc:0 "Наша новая форма… интригует. Мы — меньше, мы — больше, и мы можем сделать такими и других."
+	menp_darktec_entropy_t4_transformed_desc:0 "Наша новая форма... интригует. Мы - меньше, мы - больше, и мы можем сделать такими и других."
 	menp_darktec_entropy_t4_transformed_tooltip:0 "['building:building_darktec_umbral_portal_1', £building£ $building_darktec_umbral_portal_1_plural$] теперь также увеличивают £job£ производство на планете.\n\nЭто сооружение теперь позволяет пассивно §Yассимилировать§! население в §EЭнтроэфириалов§!."
 
 	menp_darktec_entropy_t4_tainted:0 "Слияние с Тьмой"
@@ -198,8 +198,8 @@ l_russian:
 
 	menp_darktec_umbralships_t4_known:0 "Фазово-Материальные Корабли"
 	menp_darktec_umbralships_t4_known_desc:0 "Сама ткань реальности искажается ради наших кораблей, позволяя им одновременно существовать и не существовать, переключаясь между состояниями и давая нам огромное преимущество."
-	menp_darktec_umbralships_t4_known_tooltip:0 "Открывает технологию для последнего уровня §YТеневых кораблей§! — ['technology:tech_darktec_crisis_battleship'].\n\nСпециальные §Yкомпоненты ауры§! Теневых кораблей можно улучшить до §Y3§!-го уровня."
-	menp_darktec_umbralships_t4_known_tooltip_bioships:0 "Открывает технологию для последнего уровня §YТеневых кораблей§! — ['technology:tech_darktec_crisis_stinger'].\n\nСпециальные §Yкомпоненты ауры§! Теневых кораблей можно улучшить до §Y3§!-го уровня."
+	menp_darktec_umbralships_t4_known_tooltip:0 "Открывает технологию для последнего уровня §YТеневых кораблей§! - ['technology:tech_darktec_crisis_battleship'].\n\nСпециальные §Yкомпоненты ауры§! Теневых кораблей можно улучшить до §Y3§!-го уровня."
+	menp_darktec_umbralships_t4_known_tooltip_bioships:0 "Открывает технологию для последнего уровня §YТеневых кораблей§! - ['technology:tech_darktec_crisis_stinger'].\n\nСпециальные §Yкомпоненты ауры§! Теневых кораблей можно улучшить до §Y3§!-го уровня."
 
 	# T5
 	menp_darktec_anchor_t5:0 "Разрыв Пустоты"
@@ -247,7 +247,7 @@ l_russian:
 	menp_darktec_umbralships_t5_unknown_tooltip:0 "?????"
 
 	menp_darktec_umbralships_t5_known:0 "Многомерное Вторжение"
-	menp_darktec_umbralships_t5_known_desc:0 "Они не увидят, что надвигается, пока не станет слишком поздно — даже в других измерениях, даже в других реальностях."
+	menp_darktec_umbralships_t5_known_desc:0 "Они не увидят, что надвигается, пока не станет слишком поздно - даже в других измерениях, даже в других реальностях."
 	menp_darktec_umbralships_t5_known_tooltip:0 "Теперь мы можем исследовать мощные §YЭнтропийные вспомогательные компоненты кораблей§!, которые предоставляют в наше распоряжение мощные §YДействия флота§!."
 
 # Crisis objectives
@@ -261,10 +261,10 @@ l_russian:
 	darktec_crisobj_immediate_build_and_keep_umbral_buildings_desc:0 "Возвышающиеся и наделенные силой, здания, которые удерживают и формируют энтропию, теперь являются фундаментом нашей империи.\n\n§YСтройте§! или §Yулучшайте§! Сумеречные Здания, чтобы получить эту награду: $darktec_contained_entropy_with_icon$."
 
 	darktec_crisobj_yearly_retain_vassals_name:0 "Удерживать вассалов"
-	darktec_crisobj_yearly_retain_vassals_desc:0 "Те, кто помогают нашему делу, заслуживают нашей доброй воли — и, в конечном итоге, нашего знания.\n\nУдерживайте §Yвассалов§!, чтобы получать эту §Yежегодную§! награду: $darktec_contained_entropy_with_icon$."
+	darktec_crisobj_yearly_retain_vassals_desc:0 "Те, кто помогают нашему делу, заслуживают нашей доброй воли - и, в конечном итоге, нашего знания.\n\nУдерживайте §Yвассалов§!, чтобы получать эту §Yежегодную§! награду: $darktec_contained_entropy_with_icon$."
 
 	darktec_crisobj_yearly_retain_megastructures_name:0 "Удерживать мегаструктуры"
-	darktec_crisobj_yearly_retain_megastructures_desc:0 "Величие космических мегаструктур — это не только зрелище, но и еще один способ бросить вызов нормам — и получить преимущество в сборе из пустоты.\n\nУдерживайте §Yмегаструктуры§! уникальных типов, чтобы получать эту §Yежегодную§! награду: $darktec_contained_entropy_with_icon$."
+	darktec_crisobj_yearly_retain_megastructures_desc:0 "Величие космических мегаструктур - это не только зрелище, но и еще один способ бросить вызов нормам - и получить преимущество в сборе из пустоты.\n\nУдерживайте §Yмегаструктуры§! уникальных типов, чтобы получать эту §Yежегодную§! награду: $darktec_contained_entropy_with_icon$."
 
 	darktec_crisobj_yearly_galcom_retain_galcom_respect_name:0 "Обеспечить поддержку Галактического Сообщества"
 	darktec_crisobj_yearly_galcom_retain_galcom_respect_desc:0 "Нам нужно убедить других в нашем деле, чтобы избежать их ненужной гибели в холодных объятиях мертвой вселенной.\n\nБудьте частью §YСовета§! Галактического Сообщества или избегайте положения §YНарушителя§! галактического закона, чтобы получать эту §Yежегодную§! награду: $darktec_contained_entropy_with_icon$."
@@ -276,10 +276,10 @@ l_russian:
 	darktec_crisobj_immediate_assimilate_pops_desc:0 "Каждый должен покориться: либо стать нами, либо стать частью пустоты.\n\n§YАссимилируйте население с помощью энтропии§!, чтобы получить эту награду: $darktec_contained_entropy_with_icon$."
 
 	darktec_crisobj_immediate_taint_world_name:0 "Осквернять Миры"
-	darktec_crisobj_immediate_taint_world_desc:0 "Обширные поля темной материи, реки энтропической тьмы — все это омывает миры, которые мы заселяем, превращая их в идеальный катализатор для слияния обоих измерений.\n\n§YОскверняйте§! миры энтропией, чтобы получить эту награду: $darktec_contained_entropy_with_icon$."
+	darktec_crisobj_immediate_taint_world_desc:0 "Обширные поля темной материи, реки энтропической тьмы - все это омывает миры, которые мы заселяем, превращая их в идеальный катализатор для слияния обоих измерений.\n\n§YОскверняйте§! миры энтропией, чтобы получить эту награду: $darktec_contained_entropy_with_icon$."
 
 	darktec_crisobj_immediate_build_umbral_ships_name:0 "Строить Сумеречные Корабли"
-	darktec_crisobj_immediate_build_umbral_ships_desc:0 "Невидимые, изящные и насыщенные темной материей, суда, созданные нами благодаря силе переработанной энтропии, — это наше будущее.\n\nСтройте §YСумеречные Корабли§!, чтобы получить эту награду: $darktec_contained_entropy_with_icon$. Награда увеличивается за каждый уровень корабля."
+	darktec_crisobj_immediate_build_umbral_ships_desc:0 "Невидимые, изящные и насыщенные темной материей, суда, созданные нами благодаря силе переработанной энтропии, - это наше будущее.\n\nСтройте §YСумеречные Корабли§!, чтобы получить эту награду: $darktec_contained_entropy_with_icon$. Награда увеличивается за каждый уровень корабля."
 
 	darktec_crisobj_immediate_destroy_empires_name:0 "Уничтожать Империи"
 	darktec_crisobj_immediate_destroy_empires_desc:0 "Долго они стояли у нас на пути. Теперь они принадлежат пустоте.\n\n§YУничтожьте§! империю, чтобы получить эту награду: $darktec_contained_entropy_with_icon$."
@@ -296,25 +296,25 @@ l_russian:
 	darktec_crisis_destroyer_plural:0 "$darktec_crisis_destroyer$ы"
 	darktec_crisis_destroyer_cap:0 "$darktec_crisis_destroyer$"
 	darktec_crisis_destroyer_desc:0 "Корсары несут разрушительную мощь небарионной материи в космический бой, способные наносить и отражать невероятное количество урона, жертвуя целостностью материала ради усиленной защиты щитами."
-	darktec_crisis_destroyer_tooltip:0 "Корсары — это первый уровень сумеречных кораблей, служащие основной линией атаки и обороны Постбарионных империй.\nИмеет особый компонент ауры для собственных модификаторов.\nКорабль имеет следующие модификаторы:\n  - Корпус: §R-50%§!\n  - Множитель бонусного щита: §G+50%§!\n  - Закалка щита: §G+10%§!"
+	darktec_crisis_destroyer_tooltip:0 "Корсары - это первый уровень сумеречных кораблей, служащие основной линией атаки и обороны Постбарионных империй.\nИмеет особый компонент ауры для собственных модификаторов.\nКорабль имеет следующие модификаторы:\n  - Корпус: §R-50%§!\n  - Множитель бонусного щита: §G+50%§!\n  - Закалка щита: §G+10%§!"
 
 	darktec_crisis_cruiser:0 "Сумеречный Мародер"
 	darktec_crisis_cruiser_plural:0 "$darktec_crisis_cruiser$ы"
 	darktec_crisis_cruiser_cap:0 "$darktec_crisis_cruiser$"
 	darktec_crisis_cruiser_desc:0 "Мародеры служат первой линией атаки и обороны, поскольку их стойкость и потенциал урона превосходят таковые у Корсаров. Их призрачный силуэт сияет плотностью энергетического поля, излучаемого их мощным бонусом к щитам."
-	darktec_crisis_cruiser_tooltip:0 "Мародеры — это второй уровень сумеречных кораблей, заменяющие роль крейсеров как универсальные, прочные, но при этом высоконаступательные корабли.\nИмеет особый компонент ауры для собственных модификаторов.\nКорабль имеет следующие модификаторы:\n  - Корпус: §R-50%§!\n  - Множитель бонусного щита: §G+100%§!\n  - Закалка щита: §G+10%§!"
+	darktec_crisis_cruiser_tooltip:0 "Мародеры - это второй уровень сумеречных кораблей, заменяющие роль крейсеров как универсальные, прочные, но при этом высоконаступательные корабли.\nИмеет особый компонент ауры для собственных модификаторов.\nКорабль имеет следующие модификаторы:\n  - Корпус: §R-50%§!\n  - Множитель бонусного щита: §G+100%§!\n  - Закалка щита: §G+10%§!"
 
 	darktec_crisis_battleship:0 "Сумеречный Нарушитель"
 	darktec_crisis_battleship_plural:0 "$darktec_crisis_battleship$ы"
 	darktec_crisis_battleship_cap:0 "$darktec_crisis_battleship$"
-	darktec_crisis_battleship_desc:0 "Перенасыщенные темной материей, эти мощные суда являются высшим уровнем среди сумеречных кораблей — платформа опустошения, сохраняющая маневренность и огромную оборонительную способность, способную выдержать даже самые мощные удары."
-	darktec_crisis_battleship_tooltip:0 "Нарушители — это высший уровень сумеречных кораблей, представляющие собой улучшенные линкоры с большим разнообразием секций и повышенной летальностью.\nИмеет особый компонент ауры для собственных модификаторов.\nКорабль имеет следующие модификаторы:\n  - Корпус: §R-50%§!\n  - Множитель бонусного щита: §G+250%§!\n  - Закалка щита: §G+10%§!"
+	darktec_crisis_battleship_desc:0 "Перенасыщенные темной материей, эти мощные суда являются высшим уровнем среди сумеречных кораблей - платформа опустошения, сохраняющая маневренность и огромную оборонительную способность, способную выдержать даже самые мощные удары."
+	darktec_crisis_battleship_tooltip:0 "Нарушители - это высший уровень сумеречных кораблей, представляющие собой улучшенные линкоры с большим разнообразием секций и повышенной летальностью.\nИмеет особый компонент ауры для собственных модификаторов.\nКорабль имеет следующие модификаторы:\n  - Корпус: §R-50%§!\n  - Множитель бонусного щита: §G+250%§!\n  - Закалка щита: §G+10%§!"
 
 	darktec_crisis_mauler:0 "Сумеречный Сталкер"
 	darktec_crisis_mauler_plural:0 "$darktec_crisis_mauler$ы"
 	darktec_crisis_mauler_cap:0 "$darktec_crisis_mauler$"
 	darktec_crisis_mauler_desc:0 "Скрытый во тьме, этот органический корабль бороздит пустоту в поисках добычи, пока его силуэт меняется из-за усиленного щита."
-	darktec_crisis_mauler_tooltip:0 "Сталкеры — это начальный уровень сумеречных кораблей, представляющие собой улучшенные Маулеры с дополнительной летальностью.\nИмеет особый компонент ауры для собственных модификаторов.\nКорабль имеет следующие модификаторы:\n  - Корпус: §R-50%§!\n  - Множитель бонусного щита: §G+50%§!\n  - Закалка щита: §G+10%§!"
+	darktec_crisis_mauler_tooltip:0 "Сталкеры - это начальный уровень сумеречных кораблей, представляющие собой улучшенные Маулеры с дополнительной летальностью.\nИмеет особый компонент ауры для собственных модификаторов.\nКорабль имеет следующие модификаторы:\n  - Корпус: §R-50%§!\n  - Множитель бонусного щита: §G+50%§!\n  - Закалка щита: §G+10%§!"
 
 	darktec_crisis_weaver:0 "Сумеречный Рыскатель"
 	darktec_crisis_weaver_plural:0 "$darktec_crisis_weaver$"
@@ -325,7 +325,7 @@ l_russian:
 	darktec_crisis_stinger:0 "Теневой Разоритель"
 	darktec_crisis_stinger_plural:0 "$darktec_crisis_stinger$"
 	darktec_crisis_stinger_cap:0 "$darktec_crisis_stinger$"
-	darktec_crisis_stinger_desc:0 "Сформированный и взращенный энтропией, этот гигантский организм бороздит просторы космоса, представляя собой ужасающее зрелище, являясь вершиной теневых кораблей — платформой опустошения, которая сохраняет маневренность и огромную оборонительную мощь, способную выдерживать даже самые мощные удары."
+	darktec_crisis_stinger_desc:0 "Сформированный и взращенный энтропией, этот гигантский организм бороздит просторы космоса, представляя собой ужасающее зрелище, являясь вершиной теневых кораблей - платформой опустошения, которая сохраняет маневренность и огромную оборонительную мощь, способную выдерживать даже самые мощные удары."
 	darktec_crisis_stinger_tooltip:0 "«Разорители» являются вершиной теневых кораблей, выступая в качестве улучшенных «Жал» с широким разнообразием секций.\nИмеет особый компонент ауры для собственных модификаторов.\nКорабль имеет следующие модификаторы:\n  - Корпус: §R-50%§!\n  - Множитель бонусного щита: §G+250%§!\n  - Укрепление щита: §G+10%§!"
 
 
@@ -397,7 +397,7 @@ l_russian:
 
 	# Tech mechanical
 	tech_darktec_crisis_destroyer:0 "$darktec_crisis_destroyer$"
-	tech_darktec_crisis_destroyer_desc:0 "Чудо технологии, это судно состоит в основном из пара-материи, что позволяет ему переключаться между фазовыми состояниями, пока оно бороздит пустоту — или выбрасывает часть себя к желаемой цели."
+	tech_darktec_crisis_destroyer_desc:0 "Чудо технологии, это судно состоит в основном из пара-материи, что позволяет ему переключаться между фазовыми состояниями, пока оно бороздит пустоту - или выбрасывает часть себя к желаемой цели."
 	tech_darktec_crisis_destroyer_unlocks_title:0 "§HОткрывает тип корабля:§! $darktec_crisis_destroyer$"
 	tech_darktec_crisis_destroyer_unlocks_desc:0 "§H$darktec_crisis_destroyer$§!\n$darktec_crisis_destroyer_tooltip$"
 
@@ -674,7 +674,7 @@ l_russian:
 	# DM from researchers
 	building_darktec_void_investigation_1:0 "Энтропийная Лаборатория"
 	building_darktec_void_investigation_1_plural:0 "$building_darktec_void_investigation_1$s"
-	building_darktec_void_investigation_1_desc:0 "Специализированные лаборатории, использующие экзотическую параматерию для прямых экспериментов — приняты несколько мер сдерживания во избежание... непредвиденных последствий."
+	building_darktec_void_investigation_1_desc:0 "Специализированные лаборатории, использующие экзотическую параматерию для прямых экспериментов - приняты несколько мер сдерживания во избежание... непредвиденных последствий."
 	building_darktec_void_investigation_1_tooltip:0 ""
 
 	building_darktec_void_investigation_2:0 "Энтропийная Станция"
@@ -694,7 +694,7 @@ l_russian:
 
 # Umbral Traits
 	darktec_trait_umbral_basic:0 "§EТеневой признак§!"
-	darktec_trait_umbral_advanced:0 "§EТеневой признак — улучшенный§!"
+	darktec_trait_umbral_advanced:0 "§EТеневой признак - улучшенный§!"
 	darktec_trait_ascension:0 "§EПризнак Энтропийного Вознесения§!"
 	darktec_trait_entro:0 "§EЭнтросферный признак§!"
 
@@ -704,7 +704,7 @@ l_russian:
 	tech_darktec_traits_t1_unlocks_desc:0 "§H$tech_darktec_traits_t1$§!\nОсобые признаки, взаимодействующие с £sr_dark_matter£ темной материей и $darktec_contained_entropy_with_icon$, а также предоставляющие мощные бонусы."
 
 	tech_darktec_traits_t2:0 "Теневое самоэкспериментирование"
-	tech_darktec_traits_t2_desc:0 "Успех энтропийного введения параматерии в состав нашего вида открыл обширное поле для исследований экзотических комбинаций — некоторые из них оказались более радикальными, а некоторые менее методичными, чем ожидалось."
+	tech_darktec_traits_t2_desc:0 "Успех энтропийного введения параматерии в состав нашего вида открыл обширное поле для исследований экзотических комбинаций - некоторые из них оказались более радикальными, а некоторые менее методичными, чем ожидалось."
 	tech_darktec_traits_t2_unlocks_title:0 "§HОткрывает признаки вида:§! Улучшенные теневые признаки"
 	tech_darktec_traits_t2_unlocks_desc:0 "§H$tech_darktec_traits_t1$§!\nОсобые признаки, которые еще глубже взаимодействуют с £sr_dark_matter£ темной материей и $darktec_contained_entropy_with_icon$, а также предоставляют мощные бонусы."
 
@@ -783,11 +783,11 @@ l_russian:
 
 	trait_darktec_entro_main:0 "Энтрофириал"
 	trait_darktec_entro_main_plural:0 "Энтрофириалы"
-	trait_darktec_entro_main_desc:0 "Не относящийся ни к барионному, ни к небарионному составу, этот вид достиг невозможного — став идеальным сочетанием обоих миров... но ценой огромных усилий, поскольку он нестабилен без надлежащих мер по сдерживанию его новой формы."
+	trait_darktec_entro_main_desc:0 "Не относящийся ни к барионному, ни к небарионному составу, этот вид достиг невозможного - став идеальным сочетанием обоих миров... но ценой огромных усилий, поскольку он нестабилен без надлежащих мер по сдерживанию его новой формы."
 	trait_darktec_entro_main_tooltip:0 ""
 
 	leader_trait_darktec_entro_main:0 "$trait_darktec_entro_main$"
-	leader_trait_darktec_entro_main_desc:0 "Не относящийся ни к барионному, ни к небарионному составу, этот лидер достиг невозможного — став идеальным сочетанием обоих миров... но ценой огромных усилий, поскольку он нестабилен без надлежащих мер по сдерживанию его новой формы."
+	leader_trait_darktec_entro_main_desc:0 "Не относящийся ни к барионному, ни к небарионному составу, этот лидер достиг невозможного - став идеальным сочетанием обоих миров... но ценой огромных усилий, поскольку он нестабилен без надлежащих мер по сдерживанию его новой формы."
 
 	trait_darktec_entro_phase_body:0 "Фазово-материальный состав"
 	trait_darktec_entro_phase_body_desc:0 "Увеличение содержания параматерии в телах этих $trait_darktec_entro_main_plural$ позволяет им проходить сквозь фазы и пересекать материальный план призрачным образом."
@@ -1041,7 +1041,7 @@ l_russian:
 
 	darktec_sphere_0:0 "Сгустившаяся Аномалия"
 	darktec_sphere_0_DESC:0 "Скопление энтропии, проявившееся в виде псевдо-небесного тела и сдерживаемое мощными полями темной материи. Оно изменяет физику на своих границах."
-	darktec_sphere_0_MEGASTRUCTURE_DETAILS:0 "§Y$darktec_sphere_0$§! — это скопление энтропии, проявившееся в виде псевдо-небесного тела и сдерживаемое мощными полями темной материи. Оно изменяет физику на своих границах."
+	darktec_sphere_0_MEGASTRUCTURE_DETAILS:0 "§Y$darktec_sphere_0$§! - это скопление энтропии, проявившееся в виде псевдо-небесного тела и сдерживаемое мощными полями темной материи. Оно изменяет физику на своих границах."
 
 	darktec_sphere_1:0 "Сгустившаяся Аномалия - I"
 	darktec_sphere_1_DESC:0 "$darktec_sphere_0_DESC$"

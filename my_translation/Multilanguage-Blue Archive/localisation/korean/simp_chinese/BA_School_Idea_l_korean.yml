@@ -1,4 +1,4 @@
-﻿l_korean:
+l_korean:
  BA_SI:"학원 이념"
 
  MESSAGE_BA_SI_READY:"학원 이념 준비 완료"
@@ -102,7 +102,7 @@
 
  SI_Gehenna_G02:"신세계의 불씨"
  SI_Gehenna_G02_desc:"게헨나 소속 학생들은 활동성 면에서 언제나 다른 모든 학원들을 압도했어요. 신세계에 대한 그들의 갈망도 마찬가지고요."
- SI_Gehenna_G02_effect:"\n효과:\n$MOD_POP_RESETTLEMENT_COST_MULT$: §G-25%§!\n$MOD_POP_BONUS_WORKFORCE_MULT$: §G+10%§!\n§Y새로 건설된§! 식민지는 §H행성 수정치 획득: §!$modifier_BA_SI_Gehenna_G02$(1800£time£)：\n    행복도: §G+40%§!\n    $MOD_PLANET_BUILDING_BUILD_SPEED_MULT$: §G+25%§!\n"
+ SI_Gehenna_G02_effect:"\n효과:\n$MOD_POP_RESETTLEMENT_COST_MULT$: §G-25%§!\n$MOD_POP_BONUS_WORKFORCE_MULT$: §G+10%§!\n§Y새로 건설된§! 식민지는 §H행성 수정치 획득: §!$modifier_BA_SI_Gehenna_G02$(1800£time£):\n    행복도: §G+40%§!\n    $MOD_PLANET_BUILDING_BUILD_SPEED_MULT$: §G+25%§!\n"
  SI_Gehenna_G02_tip:"§C$SI_Gehenna_G02$§!\n$SI_Gehenna_G02_desc$\n$SI_Gehenna_G02_effect$"
 
  SI_Gehenna_G03:"에필로그: 불꽃으로 세례받은 학원 도시"
@@ -118,12 +118,12 @@
 
  SI_Gehenna_A02:"만마전 전략: 선제공격"
  SI_Gehenna_A02_desc:"만마전의 수뇌부는 지정학적 싸움이든 정치적 투쟁이든 주도권을 잡는 것이 언제나 승리를 쟁취하는 가장 중요한 비결이라고 생각한다. 하지만 실제 행동으로 옮길 때면 기획서부터 실행까지 모든 것을 비서들이 도맡아 한다."
- SI_Gehenna_A02_effect:"\n§R$SI_Gehenna_B02$과 상호 배타적§!\n효과:\n현재 설계에 따르면, 즉시 §G초계함 40척§!을 획득합니다.\n§H제국 수정치 획득: §!$modifier_BA_SI_Gehenna_A02$(3600£time£)：\n    $MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+100%§!\n    $mod_ships_upkeep_mult$: §G-35%§!\n"
+ SI_Gehenna_A02_effect:"\n§R$SI_Gehenna_B02$과 상호 배타적§!\n효과:\n현재 설계에 따르면, 즉시 §G초계함 40척§!을 획득합니다.\n§H제국 수정치 획득: §!$modifier_BA_SI_Gehenna_A02$(3600£time£):\n    $MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+100%§!\n    $mod_ships_upkeep_mult$: §G-35%§!\n"
  SI_Gehenna_A02_tip:"§C$SI_Gehenna_A02$§!\n$SI_Gehenna_A02_desc$\n$SI_Gehenna_A02_effect$"
 
  SI_Gehenna_A03:"만마전 전략: 패권적 태세"
  SI_Gehenna_A03_desc:"게헨나 내부가 늘 평화롭지 못하자, 만마전은 철권통치를 선택하고 전쟁을 압력 배출구로 삼았다. 비록 만마전이 추진한 계획이지만, 실제 기획과 운영은 풍기위원회에 맡겨졌다."
- SI_Gehenna_A03_effect:"\n§R$SI_Gehenna_B03$과 상호 배타적§!\n효과:\n§Y새롭게 제어권을 획득한§! 식민지는 §H행성 수정치 획득: §!$modifier_BA_SI_Gehenna_A03$(1800£time£)：\n    안정도: §G+50%§!\n    $MOD_PLANET_BUILDING_BUILD_SPEED_MULT$: §G+25%§!\n    $mod_planet_jobs_upkeep_mult$: §G-10%§!\n이 행성이 §Y이전 초광속 문명§!에게서 획득되었다면, §B수도§! 또한 이 수정치를 획득합니다.\n이 행성이 §Y몰락 제국 또는 각성 제국§!에게서 획득되었다면, §B모든 식민지§!가 이 수정치를 획득합니다." #\n§H解锁战争借口: §!霸权征服
+ SI_Gehenna_A03_effect:"\n§R$SI_Gehenna_B03$과 상호 배타적§!\n효과:\n§Y새롭게 제어권을 획득한§! 식민지는 §H행성 수정치 획득: §!$modifier_BA_SI_Gehenna_A03$(1800£time£):\n    안정도: §G+50%§!\n    $MOD_PLANET_BUILDING_BUILD_SPEED_MULT$: §G+25%§!\n    $mod_planet_jobs_upkeep_mult$: §G-10%§!\n이 행성이 §Y이전 초광속 문명§!에게서 획득되었다면, §B수도§! 또한 이 수정치를 획득합니다.\n이 행성이 §Y몰락 제국 또는 각성 제국§!에게서 획득되었다면, §B모든 식민지§!가 이 수정치를 획득합니다." #\n§H解锁战争借口: §!霸权征服
  SI_Gehenna_A03_tip:"§C$SI_Gehenna_A03$§!\n$SI_Gehenna_A03_desc$\n$SI_Gehenna_A03_effect$"
 
  ### 上右线
@@ -145,7 +145,7 @@
  ### 下左线
  SI_Gehenna_C01:"최종 결정: 만마전"
  SI_Gehenna_C01_desc:"만마전의 리더십이 점차 풍기위원회의 목소리를 압도하며 게헨나 내부 사안에 대한 재정권을 장악했다. 그러나 최종 결정자를 선택할 때 만마전은 예상치 못한 선택을 했다."
- SI_Gehenna_C01_effect:"\n효과:\n§H제국 수정치 획득: §!$modifier_BA_SI_Gehenna_C01$(10800£time£):\n    $MOD_SHIP_WEAPON_DAMAGE$: §G+35%§!\n    $MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+35%§!\n    $MOD_ARMY_ATTACK_DAMAGE_MULT$: §G+35%§!\n    £stability£행성 안정도: §R-10§!\n    $MOD_EMPIRE_SIZE_POPS_MULT$: §R+25%§!\n" #§H统治者更换为§!：丹花伊吹\n
+ SI_Gehenna_C01_effect:"\n효과:\n§H제국 수정치 획득: §!$modifier_BA_SI_Gehenna_C01$(10800£time£):\n    $MOD_SHIP_WEAPON_DAMAGE$: §G+35%§!\n    $MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+35%§!\n    $MOD_ARMY_ATTACK_DAMAGE_MULT$: §G+35%§!\n    £stability£행성 안정도: §R-10§!\n    $MOD_EMPIRE_SIZE_POPS_MULT$: §R+25%§!\n" #§H统治者更换为§!:丹花伊吹\n
  SI_Gehenna_C01_tip:"§C$SI_Gehenna_C01$§!\n$SI_Gehenna_C01_desc$\n$SI_Gehenna_C01_effect$"
 
  SI_Gehenna_C02:"배후 준칙"
@@ -170,7 +170,7 @@
  SI_Gehenna_D02_tip:"§C$SI_Gehenna_D02$§!\n$SI_Gehenna_D02_desc$\n$SI_Gehenna_D02_effect$"
 
  SI_Gehenna_D03:"지도자 의무"
- SI_Gehenna_D03_desc:"첫째: 군대와 짐승 무리의 차이는 뛰어난 지도자의 머리에서 비롯됩니다.\n둘째: 포격의 효율은 적 하나하나의 가치를 직접적으로 결정합니다.\n……"
+ SI_Gehenna_D03_desc:"첫째: 군대와 짐승 무리의 차이는 뛰어난 지도자의 머리에서 비롯됩니다.\n둘째: 포격의 효율은 적 하나하나의 가치를 직접적으로 결정합니다.\n......"
  SI_Gehenna_D03_effect:"\n효과:\n$mod_commander_skill_levels$: §G+2§!\n$mod_commander_exp_gain$: §G+100%§!\n" #\n海军统帅和陆军将领的等级上限: §G+10§!
  SI_Gehenna_D03_tip:"§C$SI_Gehenna_D03$§!\n$SI_Gehenna_D03_desc$\n$SI_Gehenna_D03_effect$"
 
@@ -182,7 +182,7 @@
 
  SI_Gehenna_E02:"행정관의 철권"
  SI_Gehenna_E02_desc:"선도부 행정관은 가장 포괄적인 정보를 파악하고 있는 일원이며, 각 지역의 군사력 배치 상황을 충분히 이해하고 있습니다. 본토 작전의 이점을 발휘하고 동시에 다른 내부 문제를 방지하기 위해, 지휘권은 행정관에게 직접 인계되어야 합니다."
- SI_Gehenna_E02_effect:"\n효과:\n$MOD_SHIP_HOME_TERRITORY_FIRE_RATE_MULT$: §G+75%§!\n$MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+100%§!\n$MOD_STARBASE_SHIPYARD_BUILD_COST_MULT$: §R+10%§!\n" #\n处于防御战争下，本土舰队射速: §G+75%§!
+ SI_Gehenna_E02_effect:"\n효과:\n$MOD_SHIP_HOME_TERRITORY_FIRE_RATE_MULT$: §G+75%§!\n$MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+100%§!\n$MOD_STARBASE_SHIPYARD_BUILD_COST_MULT$: §R+10%§!\n" #\n处于防御战争下,本土舰队射速: §G+75%§!
  SI_Gehenna_E02_tip:"§C$SI_Gehenna_E02$§!\n$SI_Gehenna_E02_desc$\n$SI_Gehenna_E02_effect$"
 
  SI_Gehenna_E03:"단계적 요새화"
@@ -199,8 +199,8 @@
  SI_Millennium_G01_tip:"§C$SI_Millennium_G01$§!\n$SI_Millennium_G01_desc$\n$SI_Millennium_G01_effect$"
 
  SI_Millennium_G02:"총 효율 보조금"
- SI_Millennium_G02_desc:"연구에 따르면 연구원들의 급여는 그 몇 배에 달하는 가치를 창출합니다. ……물론 자화자찬의 여지가 있긴 하지만, 논리적으로는 말이 됩니다."
- SI_Millennium_G02_effect:"\n효과:\n$mod_planet_researchers_produces_mult$: §G+10%§!\n$mod_planet_researchers_upkeep_mult$: §R+5%§!\n$MOD_COUNTRY_NUM_TECH_ALTERNATIVES_ADD$: §G+1§!\n$MOD_LEADER_SKILL_LEVELS$: §G+1§!\n$MOD_PLANET_POP_ASSEMBLY_MULT$: §G+20%§!\n" #\n现在每十五个人口提供一个£pops£研究人员岗位。
+ SI_Millennium_G02_desc:"연구에 따르면 연구원들의 급여는 그 몇 배에 달하는 가치를 창출합니다. ......물론 자화자찬의 여지가 있긴 하지만, 논리적으로는 말이 됩니다."
+ SI_Millennium_G02_effect:"\n효과:\n$mod_planet_researchers_produces_mult$: §G+10%§!\n$mod_planet_researchers_upkeep_mult$: §R+5%§!\n$MOD_COUNTRY_NUM_TECH_ALTERNATIVES_ADD$: §G+1§!\n$MOD_LEADER_SKILL_LEVELS$: §G+1§!\n$MOD_PLANET_POP_ASSEMBLY_MULT$: §G+20%§!\n" #\n现在每十五个人口提供一个£pops£研究人员岗位.
  SI_Millennium_G02_tip:"§C$SI_Millennium_G02$§!\n$SI_Millennium_G02_desc$\n$SI_Millennium_G02_effect$"
 
  SI_Millennium_G03:"동아리 연구 사모 제도"
@@ -274,7 +274,7 @@
 
  ### 下线
  SI_Millennium_C01:"연산력 분배"
- SI_Millennium_C01_desc:"밀레니엄 타워에는 많은 모듈이 헛돌고 있는 것 같아……"
+ SI_Millennium_C01_desc:"밀레니엄 타워에는 많은 모듈이 헛돌고 있는 것 같아......"
  SI_Millennium_C01_effect:"\n효과:\n§H수도 행성이 수정치 획득: §!$modifier_BA_SI_Millennium_C01$\n"
  SI_Millennium_C01_tip:"§C$SI_Millennium_C01$§!\n$SI_Millennium_C01_desc$\n$SI_Millennium_C01_effect$"
 

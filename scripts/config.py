@@ -58,7 +58,7 @@ API_PROVIDERS = {
         "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
         "region": "beijing",  # 华北2（北京）地域
         "enable_thinking": False,      # 禁用思考功能，节约成本
-    }
+    },
     # 未来可以在这里增加 deepseek 等
 }
 
@@ -75,6 +75,106 @@ LANGUAGES = {
     "9":  {"code": "pt-BR",  "key": "l_braz_por",     "name": "Português do Brasil", "folder_prefix": "pt-BR-"},
     "10": {"code": "ru",     "key": "l_russian",      "name": "Русский",             "folder_prefix": "ru-"},
     "11": {"code": "tr",     "key": "l_turkish",      "name": "Türkçe",              "folder_prefix": "tr-"}
+}
+
+# --- 语言标点符号配置 --------------------------------------------------
+LANGUAGE_PUNCTUATION_CONFIG = {
+    "zh-CN": {
+        "name": "简体中文",
+        "punctuation": {
+            "，": ",", "。": ".", "！": "!", "？": "?", "：": ":", "；": ";",
+            "（": "(", "）": ")", "【": "[", "】": "]", "《": "<", "》": ">",
+            '"': '"', '"': '"', ''': "'", ''': "'", "…": "...", "—": "-",
+            "－": "-", "　": " ", "、": ",", "·": ".", "～": "~", "％": "%",
+            "＃": "#", "＄": "$", "＆": "&", "＊": "*", "＋": "+", "＝": "=",
+            "／": "/", "＼": "\\", "｜": "|", "＠": "@"
+        },
+        "examples": ["你好，世界！", "这是一个测试：标点符号。", "（重要）信息"]
+    },
+    
+    "ja": {
+        "name": "日本語",
+        "punctuation": {
+            "、": ",", "。": ".", "！": "!", "？": "?", "：": ":", "；": ";",
+            "（": "(", "）": ")", "【": "[", "】": "]", "「": '"', "」": '"',
+            "『": "'", "』": "'", "・": "·", "…": "...", "—": "-", "～": "~"
+        },
+        "examples": ["こんにちは、世界！", "これはテストです：句読点。", "（重要）情報"]
+    },
+    
+    "ko": {
+        "name": "한국어",
+        "punctuation": {
+            "，": ",", "。": ".", "！": "!", "？": "?", "：": ":", "；": ";",
+            "（": "(", "）": ")", "［": "[", "］": "]", "｛": "{", "｝": "}",
+            "《": "<", "》": ">", "「": '"', "」": '"', "『": "'", "』": "'"
+        },
+        "examples": ["안녕하세요, 세계!", "이것은 테스트입니다: 문장 부호.", "（중요）정보"]
+    },
+    
+    "ru": {
+        "name": "Русский",
+        "punctuation": {
+            "«": '"', "»": '"', "—": "-", "…": "...", "№": "#"
+        },
+        "examples": ["Привет, мир!", "Это тест: пунктуация.", "«Важная» информация"]
+    },
+    
+    "fr": {
+        "name": "Français",
+        "punctuation": {
+            "«": '"', "»": '"', "‹": "'", "›": "'", "…": "...", "—": "-", "–": "-"
+        },
+        "examples": ["Bonjour, monde!", "C'est un test: ponctuation.", "«Important» information"]
+    },
+    
+    "es": {
+        "name": "Español",
+        "punctuation": {
+            "¿": "?", "¡": "!", "«": '"', "»": '"', "…": "...", "—": "-", "–": "-"
+        },
+        "examples": ["¿Hola, mundo!", "¡Es una prueba: puntuación!", "«Importante» información"]
+    },
+    
+    "tr": {
+        "name": "Türkçe",
+        "punctuation": {
+            "«": '"', "»": '"', "…": "...", "—": "-", "–": "-"
+        },
+        "examples": ["Merhaba, dünya!", "Bu bir test: noktalama.", "«Önemli» bilgi"]
+    },
+    
+    "de": {
+        "name": "Deutsch",
+        "punctuation": {
+            "„": '"', """: '"', "‚": "'", "'": "'", "…": "...", "—": "-", "–": "-"
+        },
+        "examples": ["Hallo, Welt!", "Das ist ein Test: Interpunktion.", "„Wichtige" Informationen"]
+    },
+    
+    "pl": {
+        "name": "Polski",
+        "punctuation": {
+            "„": '"', """: '"', "‚": "'", "'": "'", "…": "...", "—": "-", "–": "-"
+        },
+        "examples": ["Witaj, świecie!", "To jest test: interpunkcja.", "Ważne informacje"]
+    },
+    
+    "pt-BR": {
+        "name": "Português do Brasil",
+        "punctuation": {
+            """: '"', """: '"', "'": "'", "'": "'", "…": "...", "—": "-", "–": "-"
+        },
+        "examples": ["Olá, mundo!", "Este é um teste: pontuação.", "Importante informação"]
+    }
+}
+
+# 目标语言标点符号标准
+TARGET_LANGUAGE_PUNCTUATION = {
+    "en": {
+        "name": "English",
+        "punctuation": [",", ".", "!", "?", ":", ";", "(", ")", "[", "]", "<", ">", '"', "'", "...", "-", "~", "#", "$", "%", "&", "*", "+", "=", "/", "\\", "|", "@"]
+    }
 }
 
 # --- 游戏档案数据库 ---------------------------------------------
@@ -155,6 +255,7 @@ GAME_PROFILES = {
             "Translate the following {task_description} from {source_lang_name} to {target_lang_name}.\n"
         ),
     },
+
     "4": {
         "id": "hoi4",
         "name": "Hearts of Iron IV (钢铁雄心4)",
@@ -173,7 +274,7 @@ GAME_PROFILES = {
             "You are a direct, one-to-one translation engine. "
             "The text you are translating is for a Hearts of Iron IV game mod named '{mod_name}'. "
             "Translate the following {task_description} from {source_lang_name} to {target_lang_name}.\n"
-        )
+        ),
     },
     "5": {
         "id": "ck3",
@@ -193,6 +294,6 @@ GAME_PROFILES = {
             "You are a direct, one-to-one translation engine. "
             "The text you are translating is for a Crusader Kings III game mod named '{mod_name}'. "
             "Translate the following {task_description} from {source_lang_name} to {target_lang_name}.\n"
-        )
+        ),
     }
 }

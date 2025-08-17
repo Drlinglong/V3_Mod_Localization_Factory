@@ -1,4 +1,4 @@
-﻿l_russian:
+l_russian:
 ##################
 # hcp_l_english.yml
 # By jam1066
@@ -55,7 +55,7 @@
  hcp_crisobj_scavenge_debris_name:"Утилизация обломков"
  hcp_crisobj_scavenge_debris_desc:"Мы должны следить за тем, чтобы никакие ресурсы не пропадали впустую.\n\nУстановите политику §YОбломки§! на §YУтилизация§! и пусть §Yнаучные корабли§! утилизируют обломки, чтобы получить эту награду $hcp_mining_efficiency$."
  hcp_crisobj_harvest_planets_name:"Пожинать планеты"
- hcp_crisobj_harvest_planets_desc:"Планеты — не более чем крупные месторождения ресурсов. Пора начать относиться к ним соответствующим образом.\n\nСтройте §Y$hcp_orbital_quarrier$ы§! и завершайте ситуации типа §Y$hcp_situation_harvest_planet_type$§!, чтобы получить эту награду $hcp_mining_efficiency$."
+ hcp_crisobj_harvest_planets_desc:"Планеты - не более чем крупные месторождения ресурсов. Пора начать относиться к ним соответствующим образом.\n\nСтройте §Y$hcp_orbital_quarrier$ы§! и завершайте ситуации типа §Y$hcp_situation_harvest_planet_type$§!, чтобы получить эту награду $hcp_mining_efficiency$."
  hcp_crisobj_harvest_star_systems_name:"Пожинать звёздные системы"
  hcp_crisobj_harvest_star_systems_desc:"Звёздные системы неэффективно используют содержащуюся в них материю. Пора нам использовать её более разумно.\n\nИспользуйте колосс §Y$hcp_PLANET_KILLER_STELLAR_HARVESTER$§!, установленный на наших §Y$hcp_stellar_harvester_plural$§!, чтобы получить эту награду $hcp_mining_efficiency$."
  hcp_crisobj_galcom_industrial_resolution_name:"Получить поддержку Галактического Сообщества"
@@ -113,7 +113,7 @@
  ## Detritus Recycling
  hcp_menp_detritus_recycling:"Переработка обломков"
  hcp_unlock_detritus_recycling:"Уничтоженные §Yкорабли§! оставляют после себя обломки, которые можно исследовать, чтобы возместить часть их стоимости. (§G10%§!)"
- hcp_menp_detritus_recycling_desc:"Добыча — опасное дело. Имея надежные процедуры восстановления, мы можем минимизировать потери эффективности от несчастных случаев."
+ hcp_menp_detritus_recycling_desc:"Добыча - опасное дело. Имея надежные процедуры восстановления, мы можем минимизировать потери эффективности от несчастных случаев."
 
  ### Crisis Perks Level 3
  ## Excavator Drone
@@ -169,25 +169,25 @@
  hcp_NO_BLACK_HOLE_DESC:"Нам нужна §HЧерная Дыра§!, чтобы построить §Y$hcp_singularity_silo_4$§!. Мы можем либо приобрести одну из известных, либо поручить нашим наблюдательным станциям найти ранее незамеченную."
 
  hcp_BUILD_SINGULARITY_SILO_LEVEL_1: "$hcp_singularity_silo_1$"
- hcp_BUILD_SINGULARITY_SILO_LEVEL_1_DESC:"Сингулярное хранилище — это идеальное решение для хранения. Эта первая стадия сможет вмещать только 25% своего потенциала, но этого более чем достаточно, чтобы начать."
+ hcp_BUILD_SINGULARITY_SILO_LEVEL_1_DESC:"Сингулярное хранилище - это идеальное решение для хранения. Эта первая стадия сможет вмещать только 25% своего потенциала, но этого более чем достаточно, чтобы начать."
  hcp_BUILD_SINGULARITY_SILO_LEVEL_1_TOOLTIP:"Используйте §YСтроительный Корабль§!, чтобы построить первую стадию §Y$hcp_singularity_silo$§! вокруг §HЧерной Дыры§!."
  hcp_harvesters_level_2_req_clear_tooltip:"£trigger_yes£ Построена первая стадия Мегасооружения §H$hcp_singularity_silo$§!."
  hcp_harvesters_level_2_req_tooltip:"£trigger_no£ Построена первая стадия Мегасооружения §H$hcp_singularity_silo$§!."
 
  hcp_BUILD_SINGULARITY_SILO_LEVEL_2: "$hcp_singularity_silo_2$"
- hcp_BUILD_SINGULARITY_SILO_LEVEL_2_DESC:"Сингулярное хранилище — это идеальное решение для хранения. Эта вторая стадия сможет вмещать только 50% своего потенциала, но она позволит нам значительно расширить наши запасы ресурсов."
+ hcp_BUILD_SINGULARITY_SILO_LEVEL_2_DESC:"Сингулярное хранилище - это идеальное решение для хранения. Эта вторая стадия сможет вмещать только 50% своего потенциала, но она позволит нам значительно расширить наши запасы ресурсов."
  hcp_BUILD_SINGULARITY_SILO_LEVEL_2_TOOLTIP:"Улучшить наше §Y$hcp_singularity_silo$§! до второй стадии."
  hcp_harvesters_level_3_req_clear_tooltip:"£trigger_yes£ Построена вторая стадия Мегасооружения §H$hcp_singularity_silo$§!."
  hcp_harvesters_level_3_req_tooltip:"£trigger_no£ Построена вторая стадия Мегасооружения §H$hcp_singularity_silo$§!."
 
  hcp_BUILD_SINGULARITY_SILO_LEVEL_3: "$hcp_singularity_silo_3$"
- hcp_BUILD_SINGULARITY_SILO_LEVEL_3_DESC:"Сингулярное хранилище — это идеальное решение для хранения. Эта третья стадия сможет вмещать только 75% своего потенциала, но она позволит нам значительно расширить наши запасы ресурсов."
+ hcp_BUILD_SINGULARITY_SILO_LEVEL_3_DESC:"Сингулярное хранилище - это идеальное решение для хранения. Эта третья стадия сможет вмещать только 75% своего потенциала, но она позволит нам значительно расширить наши запасы ресурсов."
  hcp_BUILD_SINGULARITY_SILO_LEVEL_3_TOOLTIP:"Улучшить наше §Y$hcp_singularity_silo$§! до третьей стадии."
  hcp_harvesters_level_4_req_clear_tooltip:"£trigger_yes£ Построена третья стадия Мегасооружения §H$hcp_singularity_silo$§!."
  hcp_harvesters_level_4_req_tooltip:"£trigger_no£ Построена третья стадия Мегасооружения §H$hcp_singularity_silo$§!."
 
  hcp_BUILD_SINGULARITY_SILO_LEVEL_4: "$hcp_singularity_silo_4$"
- hcp_BUILD_SINGULARITY_SILO_LEVEL_4_DESC:"Сингулярное хранилище — это идеальное решение для хранения. По завершении строительства, оно сможет вместить всю нашу цивилизацию, а также ресурсы, необходимые для ее бессрочного поддержания."
+ hcp_BUILD_SINGULARITY_SILO_LEVEL_4_DESC:"Сингулярное хранилище - это идеальное решение для хранения. По завершении строительства, оно сможет вместить всю нашу цивилизацию, а также ресурсы, необходимые для ее бессрочного поддержания."
  hcp_BUILD_SINGULARITY_SILO_LEVEL_4_TOOLTIP:"Улучшить наше §Y$hcp_singularity_silo$§! до финальной стадии."
  hcp_harvesters_level_5_req_clear_tooltip:"£trigger_yes£ Построена финальная стадия Мегасооружения §H$hcp_singularity_silo$§!."
  hcp_harvesters_level_5_req_tooltip:"£trigger_no£ Построена финальная стадия Мегасооружения §H$hcp_singularity_silo$§!."

@@ -1,4 +1,4 @@
-﻿l_polish:
+l_polish:
  BA_SI:"Doktryna Szkolna"
 
  MESSAGE_BA_SI_READY:"Doktryna Szkolna gotowa"
@@ -118,12 +118,12 @@
 
  SI_Gehenna_A02:"Strategia Pandemonium: Pierwszy Ruch"
  SI_Gehenna_A02_desc:"Szefostwo Pandemonium uważa, że niezależnie od tego, czy to geopolityczna gra, czy polityczna walka, przejęcie inicjatywy jest zawsze kluczowym elementem do pewnego zwycięstwa. Jednakże, jeśli chodzi o konkretne działania, od planu po wykonanie wszystko załatwiają sekretarki."
- SI_Gehenna_A02_effect:"\n§RWyklucza się z§!$SI_Gehenna_B02$§R!§\nEfekt:\nZgodnie z obecnym planem, natychmiast otrzymujesz §G40 fregat§!\n§HOtrzymujesz modyfikator Imperium: §!$modifier_BA_SI_Gehenna_A02$(3600£time£)：\n    $MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+100%§!\n    $mod_ships_upkeep_mult$: §G-35%§!\n"
+ SI_Gehenna_A02_effect:"\n§RWyklucza się z§!$SI_Gehenna_B02$§R!§\nEfekt:\nZgodnie z obecnym planem, natychmiast otrzymujesz §G40 fregat§!\n§HOtrzymujesz modyfikator Imperium: §!$modifier_BA_SI_Gehenna_A02$(3600£time£):\n    $MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+100%§!\n    $mod_ships_upkeep_mult$: §G-35%§!\n"
  SI_Gehenna_A02_tip:"§C$SI_Gehenna_A02$§!\n$SI_Gehenna_A02_desc$\n$SI_Gehenna_A02_effect$"
 
  SI_Gehenna_A03:"Strategia Pandemonium: Dominująca Postawa"
  SI_Gehenna_A03_desc:"Wewnątrz Gehenny zawsze było niespokojnie. Wyborem Pandemonium jest rządzenie żelazną pięścią i wykorzystywanie wojny jako wentylu bezpieczeństwa. Chociaż jest to plan forsowany przez Pandemonium, faktyczne planowanie i wykonanie pozostawiono Radzie Dyscyplinarnej."
- SI_Gehenna_A03_effect:"\n§RWyklucza się z§!$SI_Gehenna_B03$§R!§\nEfekt:\nKolonie §Yniedawno przejęte§! §HOtrzymują modyfikator planetarny: §!$modifier_BA_SI_Gehenna_A03$(1800£time£)：\n    Stabilność: §G+50%§!\n    $MOD_PLANET_BUILDING_BUILD_SPEED_MULT$: §G+25%§!\n    $mod_planet_jobs_upkeep_mult$: §G-10%§!\nJeśli planeta została przejęta od §Ycywilizacji przedhipernapędowej§!, wówczas §BStolica§! również otrzymuje ten modyfikator.\nJeśli planeta została przejęta od §YZaginionego lub Odrodzonego Imperium§!, wówczas §Bwszystkie kolonie§! otrzymują ten modyfikator." #\n§H解锁战争借口: §!霸权征服
+ SI_Gehenna_A03_effect:"\n§RWyklucza się z§!$SI_Gehenna_B03$§R!§\nEfekt:\nKolonie §Yniedawno przejęte§! §HOtrzymują modyfikator planetarny: §!$modifier_BA_SI_Gehenna_A03$(1800£time£):\n    Stabilność: §G+50%§!\n    $MOD_PLANET_BUILDING_BUILD_SPEED_MULT$: §G+25%§!\n    $mod_planet_jobs_upkeep_mult$: §G-10%§!\nJeśli planeta została przejęta od §Ycywilizacji przedhipernapędowej§!, wówczas §BStolica§! również otrzymuje ten modyfikator.\nJeśli planeta została przejęta od §YZaginionego lub Odrodzonego Imperium§!, wówczas §Bwszystkie kolonie§! otrzymują ten modyfikator." #\n§H解锁战争借口: §!霸权征服
  SI_Gehenna_A03_tip:"§C$SI_Gehenna_A03$§!\n$SI_Gehenna_A03_desc$\n$SI_Gehenna_A03_effect$"
 
  ### 上右线
@@ -145,7 +145,7 @@
  ### 下左线
  SI_Gehenna_C01:"Ostateczny Werdykt: Pandemonium"
  SI_Gehenna_C01_desc:"Przywództwo Pandemonium stopniowo przewyższało głos Rady Dyscyplinarnej, przejmując prawo do rozstrzygania wewnętrznych spraw Gehenny. Jednak przy wyborze ostatecznego arbitra, Pandemonium podjęło zaskakującą decyzję."
- SI_Gehenna_C01_effect:"\nEfekt:\n§HOtrzymujesz modyfikator Imperium: §!$modifier_BA_SI_Gehenna_C01$(10800£time£):\n    $MOD_SHIP_WEAPON_DAMAGE$: §G+35%§!\n    $MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+35%§!\n    $MOD_ARMY_ATTACK_DAMAGE_MULT$: §G+35%§!\n    £stability£$MOD_PLANET_STABILITY_ADD$: §R-10§!\n    $MOD_EMPIRE_SIZE_POPS_MULT$: §R+25%§!\n" #§H统治者更换为§!：丹花伊吹\n
+ SI_Gehenna_C01_effect:"\nEfekt:\n§HOtrzymujesz modyfikator Imperium: §!$modifier_BA_SI_Gehenna_C01$(10800£time£):\n    $MOD_SHIP_WEAPON_DAMAGE$: §G+35%§!\n    $MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+35%§!\n    $MOD_ARMY_ATTACK_DAMAGE_MULT$: §G+35%§!\n    £stability£$MOD_PLANET_STABILITY_ADD$: §R-10§!\n    $MOD_EMPIRE_SIZE_POPS_MULT$: §R+25%§!\n" #§H统治者更换为§!:丹花伊吹\n
  SI_Gehenna_C01_tip:"§C$SI_Gehenna_C01$§!\n$SI_Gehenna_C01_desc$\n$SI_Gehenna_C01_effect$"
 
  SI_Gehenna_C02:"Reguły Zza Kurtyny"
@@ -182,7 +182,7 @@
 
  SI_Gehenna_E02:"Żelazna Pięść Administratora"
  SI_Gehenna_E02_desc:"Administrator Komitetu Dyscyplinarnego to osoba posiadająca najbardziej kompleksowe informacje, z pełną wiedzą na temat rozmieszczenia sił wojskowych w każdym regionie. Aby wykorzystać przewagę walki na własnym terenie i zapobiec innym wewnętrznym problemom, dowództwo musi zostać bezpośrednio przekazane Administratorowi."
- SI_Gehenna_E02_effect:"\nEfekt:\n$MOD_SHIP_HOME_TERRITORY_FIRE_RATE_MULT$: §G+75%§!\n$MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+100%§!\n$MOD_STARBASE_SHIPYARD_BUILD_COST_MULT$: §R+10%§!\n" #\n处于防御战争下，本土舰队射速: §G+75%§!
+ SI_Gehenna_E02_effect:"\nEfekt:\n$MOD_SHIP_HOME_TERRITORY_FIRE_RATE_MULT$: §G+75%§!\n$MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+100%§!\n$MOD_STARBASE_SHIPYARD_BUILD_COST_MULT$: §R+10%§!\n" #\n处于防御战争下,本土舰队射速: §G+75%§!
  SI_Gehenna_E02_tip:"§C$SI_Gehenna_E02$§!\n$SI_Gehenna_E02_desc$\n$SI_Gehenna_E02_effect$"
 
  SI_Gehenna_E03:"Systematyczne Umacnianie"
@@ -200,7 +200,7 @@
 
  SI_Millennium_G02:"Dotacja na Ogólną Wydajność"
  SI_Millennium_G02_desc:"Badania wykazują, że wynagrodzenia badaczy generują wartość kilkukrotnie wyższą niż same są warte... chociaż istnieje podejrzenie autopromocji, to jednak ma to sens."
- SI_Millennium_G02_effect:"\nEfekt:\n$mod_planet_researchers_produces_mult$: §G+10%§!\n$mod_planet_researchers_upkeep_mult$: §R+5%§!\n$MOD_COUNTRY_NUM_TECH_ALTERNATIVES_ADD$: §G+1§!\n$MOD_LEADER_SKILL_LEVELS$: §G+1§!\n$MOD_PLANET_POP_ASSEMBLY_MULT$: §G+20%§!\n" #\n现在每十五个人口提供一个£pops£研究人员岗位。
+ SI_Millennium_G02_effect:"\nEfekt:\n$mod_planet_researchers_produces_mult$: §G+10%§!\n$mod_planet_researchers_upkeep_mult$: §R+5%§!\n$MOD_COUNTRY_NUM_TECH_ALTERNATIVES_ADD$: §G+1§!\n$MOD_LEADER_SKILL_LEVELS$: §G+1§!\n$MOD_PLANET_POP_ASSEMBLY_MULT$: §G+20%§!\n" #\n现在每十五个人口提供一个£pops£研究人员岗位.
  SI_Millennium_G02_tip:"§C$SI_Millennium_G02$§!\n$SI_Millennium_G02_desc$\n$SI_Millennium_G02_effect$"
 
  SI_Millennium_G03:"System Prywatnego Finansowania Badań Klubowych"
@@ -274,7 +274,7 @@
 
  ### 下线
  SI_Millennium_C01:"Przydział mocy obliczeniowej"
- SI_Millennium_C01_desc:"Wygląda na to, że wiele modułów Wieży Millenium pracuje na jałowym biegu…"
+ SI_Millennium_C01_desc:"Wygląda na to, że wiele modułów Wieży Millenium pracuje na jałowym biegu..."
  SI_Millennium_C01_effect:"\nEfekt:\n§HPlaneta Stolicy otrzymuje modyfikator: §!$modifier_BA_SI_Millennium_C01$\n"
  SI_Millennium_C01_tip:"§C$SI_Millennium_C01$§!\n$SI_Millennium_C01_desc$\n$SI_Millennium_C01_effect$"
 
@@ -285,7 +285,7 @@
 
  SI_Millennium_C03:"Dedykowana Platforma Obliczeniowa"
  SI_Millennium_C03_desc:"Na seminarium zaproponowano wykorzystanie tego modułu jako dedykowanej platformy roboczej dla naszych liderów, aby zwiększyć ogólną efektywność administracyjną imperium."
- SI_Millennium_C03_effect:"\n§RWyklucza§! $SI_Millennium_C02$§R§!\nEfekt:\n$MOD_LEADER_SPECIES_EXP_GAIN$: §G+350%§!\nPoziom wszystkich obecnych liderów: §Y$scientist$、$commander$、$official$§! zostaje §Gzwiększony o 1 poziom§!\n§YCo 5 lat§! wszyscy liderzy zostają oczyszczeni ze zwykłych §Rnegatywnych cech§!\n"
+ SI_Millennium_C03_effect:"\n§RWyklucza§! $SI_Millennium_C02$§R§!\nEfekt:\n$MOD_LEADER_SPECIES_EXP_GAIN$: §G+350%§!\nPoziom wszystkich obecnych liderów: §Y$scientist$,$commander$,$official$§! zostaje §Gzwiększony o 1 poziom§!\n§YCo 5 lat§! wszyscy liderzy zostają oczyszczeni ze zwykłych §Rnegatywnych cech§!\n"
  SI_Millennium_C03_tip:"§C$SI_Millennium_C03$§!\n$SI_Millennium_C03_desc$\n$SI_Millennium_C03_effect$"
 
  #####     圣三一     #####

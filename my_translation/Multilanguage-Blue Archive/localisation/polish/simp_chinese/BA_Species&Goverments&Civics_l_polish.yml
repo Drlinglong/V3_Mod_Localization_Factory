@@ -1,4 +1,4 @@
-﻿l_polish:
+l_polish:
 ###############################
  FLAG_CATEGORY_ba:0 "Flaga Błękitnego Archiwum"
  name_list_Schale:0 "Błękitne Archiwum"
@@ -60,7 +60,7 @@
 
  NPASS:0 "NPASS"
  EMPIRE_DESIGN_BA_NPA:0 "Federacja Nowych Zasad"
- EMPIRE_DESIGN_BA_NPA_desc:0 "Od dawna byliśmy uciskani przez tych, którzy zajmują tak zwane „centrum świata”.\nWszystko jest niczym.\nWykorzystaliśmy ulotną okazję i rozbiliśmy świetność naszych oprawców wraz z kajdanami, którymi nas pętano. Oddaliśmy wszystko za wolność.\nTeraz w końcu możemy skierować wzrok poza naszą zrujnowaną planetę i uratować chwiejące się po zamieszkach Kivotos…"
+ EMPIRE_DESIGN_BA_NPA_desc:0 "Od dawna byliśmy uciskani przez tych, którzy zajmują tak zwane „centrum świata”.\nWszystko jest niczym.\nWykorzystaliśmy ulotną okazję i rozbiliśmy świetność naszych oprawców wraz z kajdanami, którymi nas pętano. Oddaliśmy wszystko za wolność.\nTeraz w końcu możemy skierować wzrok poza naszą zrujnowaną planetę i uratować chwiejące się po zamieszkach Kivotos..."
  START_SCREEN_KYRIE:0 "Niegdyś mieliśmy swój azyl, miejsce, gdzie się spotkaliśmy, płakaliśmy i śmialiśmy się razem. Lecz z nienawiścią w sercu, własnoręcznie zdeptaliśmy dawną ojczyznę, obracając ją w morze ognia. Nie mając dokąd wrócić, ani na kogo liczyć, błądziliśmy pośród ruin. Nikt nie pomyślał, że rzeka gwiazd, w którą patrzyliśmy tylko w smutku, stanie się naszym nowym domem."
  START_SCREEN_BA_NPA:0 "$EMPIRE_DESIGN_BA_NPA_desc$"
 
@@ -81,7 +81,7 @@
  trait_test_finished_effect:0 "Nie można stworzyć §Yprzywódcy§!, chyba że zostanie zrekrutowany poprzez interfejs §MZasoby Przywódców§!."
 
  trait_pc_Schale_preference:0 "Preferencje Kivotos"
- trait_pc_Schale_preference_desc:0 "§LIch preferencje klimatyczne zostały ustalone przez miliardy lat ewolucji, projektu, a może sztucznej manipulacji genetycznej… prawda?§!"
+ trait_pc_Schale_preference_desc:0 "§LIch preferencje klimatyczne zostały ustalone przez miliardy lat ewolucji, projektu, a może sztucznej manipulacji genetycznej... prawda?§!"
 
  trait_halo_unreleased:0 "Boska Aura"
  trait_halo_unreleased_desc:0 "Aura, której zasada działania jest nieznana, towarzysząca nam od narodzin. Błogosławieństwa, które przynosi, zdają się pozostawać niezauważone."
@@ -262,33 +262,33 @@
  BA_Shittem.3002.desc:0 "(Wkrótce po złożeniu zlecenia, do biura wtargnęły dwie dziwne dziewczyny ubrane w mundury §BAkademii Nauk Millennium§!.)"
  BA_Shittem.3002.a:0 "Kim jesteście?"
  BA_Shittem.3002.a.re:0 "§W„Nazywam się Noah Ushio z Seminarium, bardzo mi przykro z powodu nagłego wtargnięcia... A raczej, minęło już trochę czasu, odkąd się ostatnio widzieliśmy, Nauczycielu. To jest Tendou Aris z Departamentu Rozwoju Gier. To właśnie to zlecenie sprawiło, że jesteśmy tak zajęte, i uważam, że powinnam ci zdać raport.”§!"
- BA_Shittem.3002.b:0 "…Witajcie, Aris, Noah."
- BA_Shittem.3002.b.re:0 "§W„Wcześniej, w Szkole Nauk Milenium, byliśmy bardzo zainteresowani technologiami, które umożliwiły stworzenie Aris, więc spróbowaliśmy przeprowadzić skanowanie i analizy, pomyślnie inżynierując wstecz kilka kluczowych technologii, których obecnie nie jesteśmy w stanie odtworzyć. Dzięki Pańskiej pomocy tym razem stworzyliśmy wiele prototypów i szablonów, ale ich poziom inteligencji jest daleki od Aris…\nTeraz musimy zebrać bardzo dużo danych, aby zoptymalizować inteligencję modeli seryjnych. Sposobem na to jest zlecenie Aris różnorodnych zadań… Sensei, co Pan/Pani o tym sądzi?”§!"
+ BA_Shittem.3002.b:0 "...Witajcie, Aris, Noah."
+ BA_Shittem.3002.b.re:0 "§W„Wcześniej, w Szkole Nauk Milenium, byliśmy bardzo zainteresowani technologiami, które umożliwiły stworzenie Aris, więc spróbowaliśmy przeprowadzić skanowanie i analizy, pomyślnie inżynierując wstecz kilka kluczowych technologii, których obecnie nie jesteśmy w stanie odtworzyć. Dzięki Pańskiej pomocy tym razem stworzyliśmy wiele prototypów i szablonów, ale ich poziom inteligencji jest daleki od Aris...\nTeraz musimy zebrać bardzo dużo danych, aby zoptymalizować inteligencję modeli seryjnych. Sposobem na to jest zlecenie Aris różnorodnych zadań... Sensei, co Pan/Pani o tym sądzi?”§!"
  BA_Shittem.3002.c:0 "A może do Generalnej Rady Uczniowskiej? Biuro Ogólne z pewnością Cię przyjmie z otwartymi ramionami."
  BA_Shittem.3002.c.re:0 "§B„Pip! Pop! Aris przyjęła nowe zadanie, Aris postara się jak najlepiej pomóc!”§!\n\n\n(Możesz przydzielić Aris inne stanowiska na stronie „Zasoby Liderów - Księżniczki-robotki”)"
  Aris_joined:0 "Aris objęła funkcję naukowca."
 
  BA_Shittem.3010.name:0 ""
- BA_Shittem.3010.desc:0 "Sensei, dziękujemy za Pańskie wsparcie dla pracy Szkoły Nauk Milenium! Tendo Aris, bohaterka niosąca misję zbawienia…\n…jest także prototypem tego eksperymentu z robotami!"
+ BA_Shittem.3010.desc:0 "Sensei, dziękujemy za Pańskie wsparcie dla pracy Szkoły Nauk Milenium! Tendo Aris, bohaterka niosąca misję zbawienia...\n...jest także prototypem tego eksperymentu z robotami!"
  AoharuUI.common_btn.none:0 ""
 
  name_list_ArisName:0 "Aris"
  name_list_ArisPrName:0 "Aris Pionierka"
 
  BA_Shittem.3003.name:0 "Komunikacja: Aris"
- BA_Shittem.3003.desc.normal.a:0 "Hmm… Poziom Aris jest wciąż zbyt niski, potrzebuje więcej punktów doświadczenia…"
- BA_Shittem.3003.desc.scientist.a:0 "„…”\n(Wykonywanie obliczeń)"
- BA_Shittem.3003.desc.governor.a:0 "…Achahahah, dokumenty, dokumenty!… Tyle, tyle dokumentów, niekończące się dokumenty!…"
- BA_Shittem.3003.desc.admiral.a:0 "Yuzu-go, pełna moc naprzód! Ej, nie można tak się bawić?… Aris zrozumiała…"
+ BA_Shittem.3003.desc.normal.a:0 "Hmm... Poziom Aris jest wciąż zbyt niski, potrzebuje więcej punktów doświadczenia..."
+ BA_Shittem.3003.desc.scientist.a:0 "„...”\n(Wykonywanie obliczeń)"
+ BA_Shittem.3003.desc.governor.a:0 "...Achahahah, dokumenty, dokumenty!... Tyle, tyle dokumentów, niekończące się dokumenty!..."
+ BA_Shittem.3003.desc.admiral.a:0 "Yuzu-go, pełna moc naprzód! Ej, nie można tak się bawić?... Aris zrozumiała..."
  BA_Shittem.3003.desc.general.a:0 "Wszyscy, przygotować się, Stand by for Aris-fall! Następnym razem Aris wyląduje na planecie w ten sposób, a potem 'Światło!', to będzie super zabawa!"
  BA_Shittem.3003.exit:0 "Powrót"
  Aris_cooldown:0 "Zbyt krótki staż"
  Aris_reload:0 "(W przypadku wystąpienia błędu, wykonaj dowolną operację wymagającą odczytania listy liderów, aby go rozwiązać)"
  Aris_to_scientist:0 "Aris jednak najlepiej pasuje do pracy badawczej, prawda?"
  Aris_to_scientist.re:0 "„Aris przyjęła zlecenie od Wielkiego Mędrca i otrzymała nowe wyposażenie – 'Statek badawczy'!”\n\n$Aris_reload$"
- Aris_to_governor:0 "Jak Aris radzi sobie z obowiązkami administracyjnymi…?"
+ Aris_to_governor:0 "Jak Aris radzi sobie z obowiązkami administracyjnymi...?"
  Aris_to_governor.re:0 "„Gry strategiczne są super, Aris jest bardzo podekscytowana!”\n\n$Aris_reload$"
- Aris_to_official:0 "Jak Aris radzi sobie z obowiązkami administracyjnymi…?"
+ Aris_to_official:0 "Jak Aris radzi sobie z obowiązkami administracyjnymi...?"
  Aris_to_official.re:0 "„Gry strategiczne są super, Aris jest bardzo podekscytowana!”\n\n$Aris_reload$"
  Aris_to_admiral:0 "Czy Aris potrafi dowodzić flotami i tym podobnymi?"
  Aris_to_admiral.re:0 "„Czujniki połączone, systemy broni chłodzą się normalnie! Aris, status: dobry!”\n\n$Aris_reload$"
@@ -296,8 +296,8 @@
  Aris_to_general.re:0 "„Protokół: Trzymać się zadania! Aris otrzymała nowe oddziały!”\n\n$Aris_reload$"
  Aris_to_commander:0 "Dowodzenie w walce to dla Aris bułka z masłem, prawda?"
  Aris_to_commander.re:0 "„Protokół: Trzymać się zadania! Aris otrzymała nowe oddziały!”\n\n$Aris_reload$"
- Aris_to_matrix:0 "(Może to dziecko przyda się do wydobycia…)"
- Aris_to_matrix.re:0 "„Wy… dobycie, co to jest?\n…Obliczenia hash? Aris zrozumiała, Aris najlepiej radzi sobie z obliczeniami, zostaw to mnie!”\n\n$Aris_reload$"
+ Aris_to_matrix:0 "(Może to dziecko przyda się do wydobycia...)"
+ Aris_to_matrix.re:0 "„Wy... dobycie, co to jest?\n...Obliczenia hash? Aris zrozumiała, Aris najlepiej radzi sobie z obliczeniami, zostaw to mnie!”\n\n$Aris_reload$"
 
 
  PRESCRIPTED_species_name_ba_fe_1:0 "Uczennica Kivotos"

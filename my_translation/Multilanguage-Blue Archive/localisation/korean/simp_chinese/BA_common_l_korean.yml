@@ -1,4 +1,4 @@
-﻿l_korean:
+l_korean:
 
 #####       Agendas        #####
  council_agenda_agenda_BA_SI_Trinity_A02_name:"프레나파테스 보충 수업법"
@@ -163,7 +163,7 @@
  building_BA_hot_spring_town:0 "§B온천향§!"
  building_BA_hot_spring_town_desc:0 "온천개발부가 외계 행성에 건설한 온천향."
  building_BA_casino:0 "§B황금 양털 카지노§!"
- building_BA_casino_desc:0 "전설에 따르면, 이 카지노에서는…"
+ building_BA_casino_desc:0 "전설에 따르면, 이 카지노에서는..."
  building_BA_Momoyado_interstellar:0 "§B백야당-성간§!"
  building_BA_Momoyado_interstellar_desc:0 "외계 행성 지부에 개설된 백야당 체인점."
  building_BA_SI_Abydos_G02:0 "§B아비도스 비밀 기지§!"
@@ -266,7 +266,7 @@
 #####       Deposits       #####
  d_BA_auto_habitat:0 "추가 자동화 모듈"
  d_BA_auto_habitat_desc:"성계 전체에 걸쳐 크고 작은 천체 주변에 궤도 정거장을 건설하여 궤도 복합체의 점점 증가하는 자원 요구량을 충족시킬 수 있습니다."
- # d_BA_auto_habitat_tooltip: "§Y[solar_system.GetName]§!恒星系可以支持：$TABBED_NEW_LINE$大型轨道站：§Y[solar_system.GetNumMajorOrbitals]/[solar_system.GetMaxMajorOrbitals]§!$TABBED_NEW_LINE$小型轨道站：§Y[solar_system.GetNumMinorOrbitals]/[solar_system.GetMaxMinorOrbitals]§!\n\n目前轨道站提供："
+ # d_BA_auto_habitat_tooltip: "§Y[solar_system.GetName]§!恒星系可以支持:$TABBED_NEW_LINE$大型轨道站:§Y[solar_system.GetNumMajorOrbitals]/[solar_system.GetMaxMajorOrbitals]§!$TABBED_NEW_LINE$小型轨道站:§Y[solar_system.GetNumMinorOrbitals]/[solar_system.GetMaxMinorOrbitals]§!\n\n目前轨道站提供:"
  d_BA_auto_habitat_tooltip: ""
 
  d_BA_kousagi_park:0 "작은 토끼 공원"
@@ -985,7 +985,7 @@
  Arius_Guise_lifted_desc:0 "모든 외계인 팝이 희생되어 £alloys£합금과 £sr_keystone£제작석을 얻습니다. 전쟁으로 국가를 파괴할 때, 해당 국가의 일부 재고 자원을 얻습니다."
  BA_Arius_Guise_aborted_name:0 "양면의 인물"
  Arius_Guise_aborted:0 "양면의 인물"
- Arius_Guise_aborted_desc:0 "아마도, 너와 나 사이에 큰 차이는 없을지도……"
+ Arius_Guise_aborted_desc:0 "아마도, 너와 나 사이에 큰 차이는 없을지도......"
 ###    vanilla    ###
  diplo_Moe_Xcom:0 "관찰과 간섭"
  diplo_Moe_Xcom_name:0 "$diplo_Moe_Xcom$"
@@ -1471,7 +1471,7 @@
  situation_Project_Cradle_B:0 "묻혀 있던 진실"
  situation_Project_Cradle_B_type:0 "묻혀 있던 진실"
  situation_Project_Cradle_B_monthly_change_tooltip:0 "프로젝트 크레이들 진행 상황"
- situation_Project_Cradle_B_desc:0 "키보토스 폐허 행성에서의 발굴 작업은 완전히 비밀리에 이루어지지 않았어요. 이렇게 큰 규모의 발굴 작업은 호기심 많은 다른 학생들의 조사를 막을 수 없었죠. 그들은 여러 가지 방법을 통해 이 행성, 우리와 근원이 같은 이 행성이 과거에 대체 무슨 일을 겪었는지 알아냈어요. '우리'로 인해 발생한 전쟁과 파괴에 대한 내용이었어요……"
+ situation_Project_Cradle_B_desc:0 "키보토스 폐허 행성에서의 발굴 작업은 완전히 비밀리에 이루어지지 않았어요. 이렇게 큰 규모의 발굴 작업은 호기심 많은 다른 학생들의 조사를 막을 수 없었죠. 그들은 여러 가지 방법을 통해 이 행성, 우리와 근원이 같은 이 행성이 과거에 대체 무슨 일을 겪었는지 알아냈어요. '우리'로 인해 발생한 전쟁과 파괴에 대한 내용이었어요......"
  Project_Cradle_B_option_1:0 "진실 공개"
  Project_Cradle_B_option_2:0 "정보 통제"
  Project_Cradle_B_complete:0 ""
@@ -1560,7 +1560,7 @@
  #光环觉醒飞升-探寻光环的秘密
  situation_Into_Halo:0 "헤일로의 비밀 탐구"
  situation_Into_Halo_type:0 "헤일로의 비밀 탐구"
- situation_Into_Halo_desc_1:0 "코제키 우이는 다음 연구를 시작했지만, 난항을 겪는 듯합니다————자료 출처가 부족하여 가장 기본적인 정보 수집에도 협조를 얻지 못하고 있습니다. 우리는 강제로 추진할 수 없으니, 느긋하게 기다릴 수밖에 없습니다."
+ situation_Into_Halo_desc_1:0 "코제키 우이는 다음 연구를 시작했지만, 난항을 겪는 듯합니다----자료 출처가 부족하여 가장 기본적인 정보 수집에도 협조를 얻지 못하고 있습니다. 우리는 강제로 추진할 수 없으니, 느긋하게 기다릴 수밖에 없습니다."
  situation_Into_Halo_desc_2:0 "게마트리아가 남긴 유적에 대해 더 많은 조사를 진행해야만 연구를 계속 진행할 수 있습니다.\n(특수 프로젝트 §Y무제한 연구§!를 완료하여 상황을 해금하십시오)"
  situation_Into_Halo_desc_3:0 "연방학생회가 이에 대해 논의 중입니다."
  situation_Into_Halo_site_researching:0 "유적 발굴 중"
@@ -1713,7 +1713,7 @@
  BA_Kivotos_chronicle_chain_title:0 "학원 연대기"
  BA_Kivotos_chronicle_chain_desc:0 "이것은 우리의 이야기입니다."
  BA_mid_Aris_chain_title:"떠도는 아리스"
- BA_mid_Aris_chain_desc:"출처 불명의 히메로봇들이 은하를 떠돌고 있습니다. 우리가 할 수 있는 일은…"
+ BA_mid_Aris_chain_desc:"출처 불명의 히메로봇들이 은하를 떠돌고 있습니다. 우리가 할 수 있는 일은..."
  BA_mid_Aris_chain_point_title:"기계 행성"
  BA_mid_Aris_chain_point_desc:"이 히메로봇은 이곳에서 끊임없이 함선을 만들고 있는 것 같으며, 그녀의 기함도 이곳에 정박해 있습니다."
 ###     project     ###
@@ -1764,7 +1764,7 @@
  BA_Blue_new_world_DESC:0 "개별 행성의 수용 능력에는 결국 한계가 있습니다. 학원도시의 미래를 위해, 우리는 온 우주를 포용해야 합니다. (완료 시: $BA_Kivotos_chronicle_effect_stage6$)"
  BA_End_of_chronicle_DESC:0 "학원도시 행성의 최종 개조. 때가 되면 저절로 이루어질 것입니다. (완료 시: $BA_Kivotos_chronicle_effect_stage7$)"
 
- SP_BA_SI_Gehenna_C02:0 "《만마전 학원 건립 여정》"
+ SP_BA_SI_Gehenna_C02:0 "<만마전 학원 건립 여정>"
  SP_BA_SI_Gehenna_C02_DESC:0 "만마전 창립자들이 피땀 흘려 학원을 세웠던 지난 과정을 되돌아보며, 현재 학원 생활의 소중함을 모두가 깨닫도록 합시다. (완료 시, §H제국 수정치:§! $modifier_BA_SI_Gehenna_C02$ 획득)"
 
 
@@ -1784,7 +1784,7 @@
  #####     Technologies     #####
 ###  technologies   ###
  tech_BA_Shittem_starting:0 "싯팀의 상자 수리"
- tech_BA_Shittem_starting_desc:0 "용도를 알 수 없는 이 장비를 수리하십시오. 과연 어떤 용도로 사용되며, 어떤 비밀을 품고 있을까요…?"
+ tech_BA_Shittem_starting_desc:0 "용도를 알 수 없는 이 장비를 수리하십시오. 과연 어떤 용도로 사용되며, 어떤 비밀을 품고 있을까요...?"
  tech_BA_Shittem_starting_tips:0 "폐허에서 발견된 태블릿 PC와 유사한 이 장비를 수리하십시오."
 
  tech_BA_pyroxenes_crafting:0 "청휘석 제조"
@@ -1895,7 +1895,7 @@
  tech_BA_Arius_antihalo_title:0 "대 헤일로 무기"
 
  tech_BA_crisis:0 "블루 아카이브 재앙"
- tech_BA_crisis_desc:0 "재앙으로 변하는 한이 있더라도 이 기술을 얻으려는 건가, 하키시 이 자식아……"
+ tech_BA_crisis_desc:0 "재앙으로 변하는 한이 있더라도 이 기술을 얻으려는 건가, 하키시 이 자식아......"
  tech_BA_fe:0 "블루 아카이브 선구자"
  tech_BA_fe_desc:0 "너는 몰락 제국이 아니잖아, 왜 이 기술을 가지고 있는 거야!"
  tech_BA_gate_build:0 "간이 통신 링크"
@@ -1912,7 +1912,7 @@
  tech_BA_spaceship_automation_3_title:0 "§H미사일 구축함 모듈 잠금 해제:§! 이지스함 선수, 볼텍스 함미\n§H척추선 모듈 잠금 해제:§! 검집 코어, 링크 함미"
  tech_BA_spaceship_automation_3_tip:0 "특화된 함선 모듈로, 더 많은 기능을 수행할 수 있습니다."
  tech_BA_spaceship_automation_4:0 "자동화 기함"
- tech_BA_spaceship_automation_4_desc:0 "밀레니엄 사이언스 스쿨의 유산에서 발전했습니다. 이제 우리는 '군대 수용량'이라는 개념을 버릴 수 있게 되었습니다. 우주를 뒤흔들 함대가 단 몇 명의 지휘관만 있으면 된다니————이것이야말로 진정한 의미의 '단지 필요할 뿐'입니다."
+ tech_BA_spaceship_automation_4_desc:0 "밀레니엄 사이언스 스쿨의 유산에서 발전했습니다. 이제 우리는 '군대 수용량'이라는 개념을 버릴 수 있게 되었습니다. 우주를 뒤흔들 함대가 단 몇 명의 지휘관만 있으면 된다니----이것이야말로 진정한 의미의 '단지 필요할 뿐'입니다."
 
  tech_BA_ruins_research:0 "폐허 복합화 연구"
  tech_BA_ruins_research_desc:0 "산더미 같은 폐허는 우리의 중요한 자원 공급원이므로, 이를 충분히 활용하기 위한 연구를 진행해야 합니다."
@@ -2072,7 +2072,7 @@
  tech_BA_Halo_coding_outline_desc:0 "게마트리아가 남긴 데이터는 우리가 이 신성한 문자를 분석하는 속도를 크게 가속시켰습니다. 적어도 더는 암흑 속에서 이 문자들의 의미를 추측할 필요는 없게 되었습니다."
  tech_BA_Halo_coding_outline_title:0 "코드화된 헤일로의 가장자리 부분"
  tech_BA_Halo_coding_space:0 "헤일로 코드: 공백 구역"
- tech_BA_Halo_coding_space_desc:0 "확실히, 이 헤일로를 만든 사람—그게 누구이든 간에—은 극도로 무책임한 사람임이 분명합니다. 이 비효율적이고 복잡한 신명문자 인코딩은 더 이상 두고 볼 수 없습니다. 이제 이 스파게티 코드 같은 프로그램을 최적화할 때입니다."
+ tech_BA_Halo_coding_space_desc:0 "확실히, 이 헤일로를 만든 사람-그게 누구이든 간에-은 극도로 무책임한 사람임이 분명합니다. 이 비효율적이고 복잡한 신명문자 인코딩은 더 이상 두고 볼 수 없습니다. 이제 이 스파게티 코드 같은 프로그램을 최적화할 때입니다."
  tech_BA_Halo_coding_space_title:0 "인코딩된 헤일로의 공동 부분"
  tech_BA_Halo_coding_inner:0 "헤일로 인코딩: 내핵"
  tech_BA_Halo_coding_inner_desc:0 "이로써 우리는 인코딩된 헤일로 기술을 완전히 통제할 수 있게 되었습니다."
@@ -2150,12 +2150,12 @@
 
  ap_BA_Our_story:0 "우리의 이야기"
  ap_BA_Our_story_desc:0 "우리가 어디로 향할지는 우리 스스로 결정합니다. 우리의 역사는 분명 여기서 끝나지 않을 것입니다. 이것이 바로 우리가 두 손으로 직접 써 내려간, 우리의 이야기입니다."
- ap_BA_Our_story_tip:0 "\n—§R$ap_BA_Name_the_void$§!와 상호 배타적입니다§!"
+ ap_BA_Our_story_tip:0 "\n-§R$ap_BA_Name_the_void$§!와 상호 배타적입니다§!"
 
 
  ap_BA_Name_the_void:0 "숭고에 이름을 부여하다"
  ap_BA_Name_the_void_desc:0 "우리는 이름 없는 것에 이름을 부여했고, 그리하여 우리는 그것을 포용하고 이용할 수 있게 되었습니다. 우리는 부패를 기적으로 바꾸고, 그것을 우리 자신의 역사로 주조했습니다."
- ap_BA_Name_the_void_tip:0 "\n—§R$ap_BA_Our_story$§!와 상호 배타적입니다§!"
+ ap_BA_Name_the_void_tip:0 "\n-§R$ap_BA_Our_story$§!와 상호 배타적입니다§!"
  ap_BA_Name_the_void_effect_fake:0 "[root.GetName]은(는) 이제 §Y재앙의§R 화신§!§!의 길을 걸을 수 있습니다."
  ap_BA_Name_the_void_tip_unknown:0 "$TRIGGER_FAIL$우리는 그것을 정말 이해하고 있습니까?"
 
@@ -2221,31 +2221,31 @@
  GetShittemDesc.common.02:0 "선생님, 힘내세요! 아직 해야 할 일이 산더미처럼 남아 있어요!"
  GetShittemDesc.common.03:0 "여기서 여러 가지 일을 시작할 수 있어요!"
  GetShittemDesc.common.04:0 "선생님, 하고 싶은 업무를 선택하세요! 제가 늘 여기서 도와드릴게요!"
- GetShittemDesc.common.05:0 "처리해야 할 일들이 산더미처럼 쌓였네요…… 어른은 정말 힘들겠네요……"
+ GetShittemDesc.common.05:0 "처리해야 할 일들이 산더미처럼 쌓였네요...... 어른은 정말 힘들겠네요......"
 
  #Pulana
  Shittem_Pulana_desc:0 "[this.GetPulanaDesc]"
- BlueArchivePulanaDesc0:0 "…연결 확인…" #平静
+ BlueArchivePulanaDesc0:0 "...연결 확인..." #平静
  BlueArchivePulanaDesc1:0 "선생님, 어서 일을 끝내세요." #平静
- BlueArchivePulanaDesc2:0 "…인증 완료. 활동 및 신진대사 수준이 높습니다. 선생님, 오늘 기분이 좋으시네요." #微微微笑
- BlueArchivePulanaDesc3:0 "계속 저를 쳐다보시면 메모리 혼란이 올 수 있어요... 그리고, 선생님께는 할 일이 있지 않나요?" #无语流汗，光环混乱
- BlueArchivePulanaDesc4:0 "……오류…… 잘못 제출된 업무 보고서가 감지되었습니다……" #张口，生气或战意激增
- BlueArchivePulanaDesc5:0 "선생님…… 선생님은 정말 같은 실수를 반복하지 않으실 거죠……?" #视线躲闪，害羞或为难
- BlueArchivePulanaDesc6:0 "……얼룩 감지…… 녹말, 과당, 단백질, 그리고 식물성 지방…… 이런 식으로 아로나 선배를 기쁘게 할 수 있는 거였군요……" #睁大眼，无语流汗
- BlueArchivePulanaDesc7:0 "확인되었습니다…… 선생님의 업무 효율성에 대한 평가를 재평가 및 수정해야 합니다……" #睁大眼，惊讶
- BlueArchivePulanaDesc8:0 "……저건……!" #兴奋星星眼，嘴不张开
- BlueArchivePulanaDesc9:0 "선생님, 이건 옳지 않다고 생각해요. 연방학생회는 신뢰할 수 없어요…… 그리고 선생님께서 모든 일에 책임을 지실 필요는 없어요!" #辩解状
- BlueArchivePulanaDesc10:0 "……오류……" #委屈
- BlueArchivePulanaDesc11:0 "이해할 수 없습니다……" #皱眉，流汗，为难状
- BlueArchivePulanaDesc12:0 "……혼란, 이해할 수 없는 행동…… 더 이상 찌르지 마세요……" #圈圈眼 @@
- BlueArchivePulanaDesc13:0 "……이상 감정 파동…… 더 이상 제 머리를 쓰다듬지 마세요. 업무에 방해가 됩니다……" #>.<
+ BlueArchivePulanaDesc2:0 "...인증 완료. 활동 및 신진대사 수준이 높습니다. 선생님, 오늘 기분이 좋으시네요." #微微微笑
+ BlueArchivePulanaDesc3:0 "계속 저를 쳐다보시면 메모리 혼란이 올 수 있어요... 그리고, 선생님께는 할 일이 있지 않나요?" #无语流汗,光环混乱
+ BlueArchivePulanaDesc4:0 "......오류...... 잘못 제출된 업무 보고서가 감지되었습니다......" #张口,生气或战意激增
+ BlueArchivePulanaDesc5:0 "선생님...... 선생님은 정말 같은 실수를 반복하지 않으실 거죠......?" #视线躲闪,害羞或为难
+ BlueArchivePulanaDesc6:0 "......얼룩 감지...... 녹말, 과당, 단백질, 그리고 식물성 지방...... 이런 식으로 아로나 선배를 기쁘게 할 수 있는 거였군요......" #睁大眼,无语流汗
+ BlueArchivePulanaDesc7:0 "확인되었습니다...... 선생님의 업무 효율성에 대한 평가를 재평가 및 수정해야 합니다......" #睁大眼,惊讶
+ BlueArchivePulanaDesc8:0 "......저건......!" #兴奋星星眼,嘴不张开
+ BlueArchivePulanaDesc9:0 "선생님, 이건 옳지 않다고 생각해요. 연방학생회는 신뢰할 수 없어요...... 그리고 선생님께서 모든 일에 책임을 지실 필요는 없어요!" #辩解状
+ BlueArchivePulanaDesc10:0 "......오류......" #委屈
+ BlueArchivePulanaDesc11:0 "이해할 수 없습니다......" #皱眉,流汗,为难状
+ BlueArchivePulanaDesc12:0 "......혼란, 이해할 수 없는 행동...... 더 이상 찌르지 마세요......" #圈圈眼 @@
+ BlueArchivePulanaDesc13:0 "......이상 감정 파동...... 더 이상 제 머리를 쓰다듬지 마세요. 업무에 방해가 됩니다......" #>.<
  BlueArchivePulanaDesc14:0 "테스트 텍스트 14" #屑笑
- BlueArchivePulanaDesc15:0 "……으음, 딸기 우유…… 아로나 선배에게 양보할게요……" #微笑，或‘不也挺好吗’笑
- BlueArchivePulanaDesc16:0 "테스트 텍스트 16" #乖巧+高兴，心形光环
+ BlueArchivePulanaDesc15:0 "......으음, 딸기 우유...... 아로나 선배에게 양보할게요......" #微笑,或‘不也挺好吗’笑
+ BlueArchivePulanaDesc16:0 "테스트 텍스트 16" #乖巧+高兴,心形光环
  BlueArchivePulanaDesc17:0 "테스트 텍스트 17" #14屑笑+脸红
- BlueArchivePulanaDesc18:0 "테스트 텍스트 18" #阴暗，盯
+ BlueArchivePulanaDesc18:0 "테스트 텍스트 18" #阴暗,盯
  BlueArchivePulanaDesc19:0 "테스트 텍스트 19" #阴笑
- BlueArchivePulanaDesc20:0 "쿨쿨……" #沉思
+ BlueArchivePulanaDesc20:0 "쿨쿨......" #沉思
  BlueArchivePulanaDesc21:0 "테스트 텍스트 21" #眯眯眼
  BlueArchivePulanaDesc22:0 "테스트 텍스트 22" #歪头
  BlueArchivePulanaDesc23:0 "테스트 텍스트 23" #歪头
@@ -2254,29 +2254,29 @@
  Shittem_Arona_desc:0 "[this.GetAronaDesc]"
  BlueArchiveAronaDesc0:0 "여기부터 다양한 업무를 시작할 수 있어요!"
  BlueArchiveAronaDesc1:0 "선생님, 힘내세요! 아직 해야 할 일이 산더미처럼 남아 있어요!"
- BlueArchiveAronaDesc2:0 "과연…… 선생님은 이렇게 일을 처리하시는군요."
+ BlueArchiveAronaDesc2:0 "과연...... 선생님은 이렇게 일을 처리하시는군요."
  BlueArchiveAronaDesc3:0 "너무 무리하지 마세요, 아로나를 얼마든지 믿으셔도 돼요, 에헤헤." #微笑
- BlueArchiveAronaDesc4:0 "흐음, 흐음…… 선생님, 왜 그렇게 서두르세요……? 혹시 처리해야 할 중요한 일이라도 있나요?" #微微惊讶
+ BlueArchiveAronaDesc4:0 "흐음, 흐음...... 선생님, 왜 그렇게 서두르세요......? 혹시 처리해야 할 중요한 일이라도 있나요?" #微微惊讶
  BlueArchiveAronaDesc5:0 "선생님, 하고 싶은 업무를 선택하세요! 제가 늘 여기서 도와드릴게요!" #认真状 ‘^’
- BlueArchiveAronaDesc6:0 "선생님, 가끔은 푹 쉬어야 해요…… 아로나가 선생님의 건강을 걱정하고 있어요……"
- BlueArchiveAronaDesc7:0 "……칫, 감히 우리를 이렇게 모욕하다니, 앞으로는 외계 털 뭉치라고 부르면 어떨까요……? 아, 선생님, 아로나는 외교 통신을 엿듣지 않았어요, 아하하, 정말 안 그랬어요……"
- BlueArchiveAronaDesc8:0 "너희가 왈가왈부할 필요 없어, 제작석조차 쓸 줄 모르는 것들이…… 아, 선생님 방금 뭐라도 들으셨나요?"
- BlueArchiveAronaDesc9:0 "……아, 선생님…… 메일요? 아니요, 아무런 메일도 없어요, 에헤헤." #阴暗+右上斜眼
- BlueArchiveAronaDesc10:0 "휴우…… 오늘도 선생님은 늦게까지 일하시겠네요……" #叹气状
+ BlueArchiveAronaDesc6:0 "선생님, 가끔은 푹 쉬어야 해요...... 아로나가 선생님의 건강을 걱정하고 있어요......"
+ BlueArchiveAronaDesc7:0 "......칫, 감히 우리를 이렇게 모욕하다니, 앞으로는 외계 털 뭉치라고 부르면 어떨까요......? 아, 선생님, 아로나는 외교 통신을 엿듣지 않았어요, 아하하, 정말 안 그랬어요......"
+ BlueArchiveAronaDesc8:0 "너희가 왈가왈부할 필요 없어, 제작석조차 쓸 줄 모르는 것들이...... 아, 선생님 방금 뭐라도 들으셨나요?"
+ BlueArchiveAronaDesc9:0 "......아, 선생님...... 메일요? 아니요, 아무런 메일도 없어요, 에헤헤." #阴暗+右上斜眼
+ BlueArchiveAronaDesc10:0 "휴우...... 오늘도 선생님은 늦게까지 일하시겠네요......" #叹气状
  BlueArchiveAronaDesc11:0 "제가 선생님의 업무를 도와드릴게요!"
  BlueArchiveAronaDesc12:0 "선생님, 아로나가 오늘 선생님께 어떤 좋은 소식을 전해줄지 맞춰보세요!" #兴奋状 XD
- BlueArchiveAronaDesc13:0 "처리해야 할 일들이 산더미처럼 쌓였네요…… 어른은 정말 힘들겠네요……" #惬意
- BlueArchiveAronaDesc14:0 "선생님…… 학생들과 잡담만 하지 마시고, 오늘 할 일을 다 못 끝내요!"
- BlueArchiveAronaDesc15:0 "선생님, 가끔은 일과 휴식의 균형도 생각해야 해요…… 아로나가 선생님의 건강을 걱정하고 있어요……"
+ BlueArchiveAronaDesc13:0 "처리해야 할 일들이 산더미처럼 쌓였네요...... 어른은 정말 힘들겠네요......" #惬意
+ BlueArchiveAronaDesc14:0 "선생님...... 학생들과 잡담만 하지 마시고, 오늘 할 일을 다 못 끝내요!"
+ BlueArchiveAronaDesc15:0 "선생님, 가끔은 일과 휴식의 균형도 생각해야 해요...... 아로나가 선생님의 건강을 걱정하고 있어요......"
  BlueArchiveAronaDesc16:0 "테스트 텍스트 16" #震惊+脸红
- BlueArchiveAronaDesc17:0 "선생님……"
+ BlueArchiveAronaDesc17:0 "선생님......"
  BlueArchiveAronaDesc18:0 "테스트 텍스트 18"
- BlueArchiveAronaDesc19:0 "선, 선생님! 이, 이건 뭐예요…… 왜, 왜 선생님 손에…… 이게…… 으으으…… 아로나 시집 다 갔네……"
+ BlueArchiveAronaDesc19:0 "선, 선생님! 이, 이건 뭐예요...... 왜, 왜 선생님 손에...... 이게...... 으으으...... 아로나 시집 다 갔네......"
  BlueArchiveAronaDesc20:0 "테스트 텍스트 20"
- BlueArchiveAronaDesc21:0 "선, 선생님! 저 케이크, 제 건가요?! 우헤헤……"
+ BlueArchiveAronaDesc21:0 "선, 선생님! 저 케이크, 제 건가요?! 우헤헤......"
  BlueArchiveAronaDesc22:0 "선생님, 아로나한테 시키실 일 있으세요? 아로나는 계속 여기서 선생님을 도와드릴 거예요!" #星星眼
  BlueArchiveAronaDesc23:0 "테스트 텍스트 23"
- BlueArchiveAronaDesc24:0 "선생님, 방금 선생님께 좀, 음, 사진이 도착했는데요…… 약간 야시시하고 엉뚱한 종류였는데, 실수로 보낸 것 같지는 않더라고요…… 선생님의 안전을 위해, 아로나가 벌써 압수해 버렸답니다?" #-o-
+ BlueArchiveAronaDesc24:0 "선생님, 방금 선생님께 좀, 음, 사진이 도착했는데요...... 약간 야시시하고 엉뚱한 종류였는데, 실수로 보낸 것 같지는 않더라고요...... 선생님의 안전을 위해, 아로나가 벌써 압수해 버렸답니다?" #-o-
 
  country_idea_cd:0 "학원 이념 재사용 대기 중 (준비 시간: [root.BA_SI_cooldown])"
  country_idea_cost:0 "다음 학원 이념 준비까지 §Y[from.BA_SI_diff]§!개월 남음"
@@ -2284,7 +2284,7 @@
  need_three_ideas:0 "먼저 위에서 아무 학원 이념 세 개를 완료해야 함"
  need_preposition_ideas:0 "선행 학원 이념을 완료해야 함"
  need_more_left_ideas:0 "선행 요구 사항 미충족"
- BA_not_the_right_time:0 "때가 아니다……"
+ BA_not_the_right_time:0 "때가 아니다......"
  BA_need_civic:0 "$TRIGGER_FAIL$특정 §C학원급 국민 이념§!이 필요하며, 다른 §B학원 이념(주요)§!이 활성화되지 않아야 함!"
  BA_idea_chosen:0 "$TRIGGER_FAIL$다른 국민 이념이 이미 활성화됨"
  BA_need_other_idea:0 "$TRIGGER_FAIL$$mod_BA_SI_sub_cap_add$ 부족"

@@ -1,4 +1,4 @@
-﻿l_german:
+l_german:
 ##########################
 #### 起源事件
  BA_origin.0002.name:0 "Die neue Ordnung von Kivotos"
@@ -55,11 +55,11 @@
  BA_origin.1001.next:0 "Wir haben zu lange auf diesen Moment gewartet."
 
  BA_origin.1002.name:0 "An die vergessenen Götter"
- BA_origin.1002.desc:0 "„Sensei, wir haben die Anspruchsarbeit für dieses Sternensystem abgeschlossen, und jetzt ist es offiziell unser Territorium!\n\nNun müssen wir uns doppelt anstrengen, um die größte Bedrohung zu beseitigen, der wir uns gegenübersehen werden…\n\nWie die Daten, die wir vor vielen Jahren entdeckt haben, zeigen, gibt es unter Kivotos eine kontinuierlich aufladende, unbekannte Militäreinrichtung. Wir müssen alles tun, um einen Weg zu finden, diese Gefahr zu beseitigen. Wenn wir das nicht schaffen, brauchen wir vielleicht eine außerirdische Kolonie als unser 'neues Zuhause'…“"
+ BA_origin.1002.desc:0 "„Sensei, wir haben die Anspruchsarbeit für dieses Sternensystem abgeschlossen, und jetzt ist es offiziell unser Territorium!\n\nNun müssen wir uns doppelt anstrengen, um die größte Bedrohung zu beseitigen, der wir uns gegenübersehen werden...\n\nWie die Daten, die wir vor vielen Jahren entdeckt haben, zeigen, gibt es unter Kivotos eine kontinuierlich aufladende, unbekannte Militäreinrichtung. Wir müssen alles tun, um einen Weg zu finden, diese Gefahr zu beseitigen. Wenn wir das nicht schaffen, brauchen wir vielleicht eine außerirdische Kolonie als unser 'neues Zuhause'...“"
  BA_origin.1002.a:0 "Los geht's, Arona!"
 
  BA_origin.1003.name:0 "An die vergessenen Götter"
- BA_origin.1003.desc:0 "„Sensei, wir haben einen Plan zur Untersuchung der Ruinen erhalten, und Arona denkt, das könnte beim Wiederaufbau sehr helfen…\nSie können diesen Plan auf der Auftragsseite einsehen und genehmigen.\n(§YKomm. (F10)§! -> §Y$Shittem.name$§! -> §YAufträge§!)\nÜbrigens, da wäre noch etwas zu dieser Auftragsseite…\n\nDas ist die letzte Charge von £sr_pyroxenes£ Pyroxenen und £sr_keystone£ Fertigungssteinen, die noch übrig war, bevor die Fertigungsmaschine im Untergeschoss von Schale zerstört wurde. Arona hat immer versucht, sie zu reparieren, aber es gab keine Fortschritte…\n\nAuch ohne Fertigungsmaschine können wir weiterhin die Pflichten von Schale erfüllen und die Aufträge der Schülerinnen abschließen, um einige seltene Ressourcen zu verdienen.\n\n§YVielleicht können sie ja ein Wunder vollbringen?§!“"
+ BA_origin.1003.desc:0 "„Sensei, wir haben einen Plan zur Untersuchung der Ruinen erhalten, und Arona denkt, das könnte beim Wiederaufbau sehr helfen...\nSie können diesen Plan auf der Auftragsseite einsehen und genehmigen.\n(§YKomm. (F10)§! -> §Y$Shittem.name$§! -> §YAufträge§!)\nÜbrigens, da wäre noch etwas zu dieser Auftragsseite...\n\nDas ist die letzte Charge von £sr_pyroxenes£ Pyroxenen und £sr_keystone£ Fertigungssteinen, die noch übrig war, bevor die Fertigungsmaschine im Untergeschoss von Schale zerstört wurde. Arona hat immer versucht, sie zu reparieren, aber es gab keine Fortschritte...\n\nAuch ohne Fertigungsmaschine können wir weiterhin die Pflichten von Schale erfüllen und die Aufträge der Schülerinnen abschließen, um einige seltene Ressourcen zu verdienen.\n\n§YVielleicht können sie ja ein Wunder vollbringen?§!“"
  BA_origin.1003.go:0 "Na, dann schauen wir doch mal."
  BA_origin.1003.cancel:0 "Das erledigen wir später."
 
@@ -89,7 +89,7 @@
  BA_origin.1031.next:0 "Verstanden."
 
  BA_origin.1032.title:0 "Ruinenhindernis"
- BA_origin.1032.desc:0 "Sensei, diese zufällig auftretenden Ruinen werden unsere Wiederaufbauarbeiten auf dem Planeten ernsthaft behindern, aber ihre Beseitigung bringt auch reichliche Ressourcenerträge. Wenn wir sie nicht beseitigen können, finden die Schülerinnen vielleicht einen passenden Weg. Wie wäre es, wenn wir uns die §YAufträge§!-Oberfläche der Shittem-Box ansehen?\n\nAußerdem hat Arona bereits die entsprechenden Algorithmen vorbereitet, um mögliche Ruinenbereiche zu finden und sie im Voraus zu verstärken.\n\n…Zumindest können sie so unsere letzte Arbeit nicht behindern…"
+ BA_origin.1032.desc:0 "Sensei, diese zufällig auftretenden Ruinen werden unsere Wiederaufbauarbeiten auf dem Planeten ernsthaft behindern, aber ihre Beseitigung bringt auch reichliche Ressourcenerträge. Wenn wir sie nicht beseitigen können, finden die Schülerinnen vielleicht einen passenden Weg. Wie wäre es, wenn wir uns die §YAufträge§!-Oberfläche der Shittem-Box ansehen?\n\nAußerdem hat Arona bereits die entsprechenden Algorithmen vorbereitet, um mögliche Ruinenbereiche zu finden und sie im Voraus zu verstärken.\n\n...Zumindest können sie so unsere letzte Arbeit nicht behindern..."
  BA_origin.1032.next:0 "Verstanden. Arona ist super!"
 
  BA_origin.1033.title:0 "Ruinenhindernis"
@@ -103,7 +103,7 @@
  BA_origin.1034.energy_tips:0 "Doppelter Nutzen."
  BA_origin.1034.rare_tips:0 "Knapp, selten."
  BA_origin.1034.dark_matter_tips:0 "Deep Dark Fantasy"
- BA_origin.1034.nothing:0 "(Obwohl diese nicht als Ressourcen zählen, dürfen wir die harte Arbeit der Schülerinnen nicht vergeuden…)"
+ BA_origin.1034.nothing:0 "(Obwohl diese nicht als Ressourcen zählen, dürfen wir die harte Arbeit der Schülerinnen nicht vergeuden...)"
 
 
 #
@@ -212,7 +212,7 @@
 
 #
  BA_origin.1401.title:0 "Minenabbau in Ruinen"
- BA_origin.1401.desc:0 "„Sensei, wir haben eine effizientere Methode erforscht, die benötigten Materialien aus Ruinen abzubauen… Diese Methode kann auch die Menge an seltenen Ressourcen erhöhen, die wir aus Ruinen gewinnen. Sie können die abzubauenden Produkte unter §YRichtlinien§! wechseln.“"
+ BA_origin.1401.desc:0 "„Sensei, wir haben eine effizientere Methode erforscht, die benötigten Materialien aus Ruinen abzubauen... Diese Methode kann auch die Menge an seltenen Ressourcen erhöhen, die wir aus Ruinen gewinnen. Sie können die abzubauenden Produkte unter §YRichtlinien§! wechseln.“"
  BA_origin.1401.next:0 "Großartig!"
 
  BA_origin.1410.title:0 "Der Unbenannte Gott"
@@ -293,7 +293,7 @@
  BA_origin.2055.next:0 "Bestätigen"
 
  BA_origin.2101.title:0 "Unbenannter Ursprungsort"
- BA_origin.2101.desc:0 "„Sensei, wir haben einen der §RTürme des Trugbilds§! in Kivotos beseitigt! Es scheint, dass, obwohl die Wächter besiegt wurden, die Überreste des Turms immer noch sehr robust sind und weiterhin unaufhörlich Kontaminationen freisetzen können. Es sind noch 5 solcher Giganten übrig… Bitte beseitige all diese leeren Hüllen so schnell wie möglich, Sensei, das ist der letzte Schritt, okay?!“"
+ BA_origin.2101.desc:0 "„Sensei, wir haben einen der §RTürme des Trugbilds§! in Kivotos beseitigt! Es scheint, dass, obwohl die Wächter besiegt wurden, die Überreste des Turms immer noch sehr robust sind und weiterhin unaufhörlich Kontaminationen freisetzen können. Es sind noch 5 solcher Giganten übrig... Bitte beseitige all diese leeren Hüllen so schnell wie möglich, Sensei, das ist der letzte Schritt, okay?!“"
  BA_origin.2101.next:0 "Bestätigen"
 
  BA_origin.2102.title:0 "Unbenannter Ursprungsort"
@@ -303,7 +303,7 @@
 
 
  BA_origin.2111.title:0 "Forschung für Automatisierungsbezirke"
- BA_origin.2111.desc:0 "„Sensei, unsere Forschung zu den Automatisierungsbezirken hat Ergebnisse geliefert! Es stellte sich heraus, dass wir bei der Nachbildung der Ausrüstung zuvor die raumverzerrnde Wirkung des Azurglanzsteins nicht berücksichtigt hatten. Das führte dazu, dass kleine Fehler immer weiter vergrößert wurden, was schließlich zu Systemausfällen führte. Jetzt haben wir eine ausgereifte Lösung gefunden… Arona wird die verschiedenen D.U.s sofort benachrichtigen, um sie über die Umrüstung der Ausrüstung zu informieren.“"
+ BA_origin.2111.desc:0 "„Sensei, unsere Forschung zu den Automatisierungsbezirken hat Ergebnisse geliefert! Es stellte sich heraus, dass wir bei der Nachbildung der Ausrüstung zuvor die raumverzerrnde Wirkung des Azurglanzsteins nicht berücksichtigt hatten. Das führte dazu, dass kleine Fehler immer weiter vergrößert wurden, was schließlich zu Systemausfällen führte. Jetzt haben wir eine ausgereifte Lösung gefunden... Arona wird die verschiedenen D.U.s sofort benachrichtigen, um sie über die Umrüstung der Ausrüstung zu informieren.“"
  BA_origin.2111.next:0 "Großartig!"
  BA_origin.2111.next.tip:0 "Die Produktionseffizienz der Automatisierungsbezirke ist §Yteilweise wiederhergestellt§!."
 

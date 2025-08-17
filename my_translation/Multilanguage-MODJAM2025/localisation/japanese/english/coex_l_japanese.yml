@@ -1,12 +1,12 @@
-﻿l_japanese:
+l_japanese:
 
 
 
 #Technology
   coex_tech_brain_relay:"ハイパースペース投射"
-  coex_tech_brain_relay_desc:"ハイパースペース投射は脳神経リレーに動力を供給します。新しく発見された脳波測定技術を用いて、思考を合成脳波へと変換します。"
+  coex_tech_brain_relay_desc:"ハイパースペース投射は脳神経リレーに動力を供給します.新しく発見された脳波測定技術を用いて,思考を合成脳波へと変換します."
   COEX_TECH_UNLOCK_BRAIN_RELAY_TITLE:"§Hメガストラクチャーをアンロック:§! 脳内リレー"
-  COEX_TECH_UNLOCK_BRAIN_RELAY_DESC:"脳神経リレーは、異星種の精神に影響を与えることを可能にするメガストラクチャーです。これは、すでに別の脳神経リレーの影響下にない帝国内の、10ジャンプ以内で最も近い異星人入植地を対象とします。"
+  COEX_TECH_UNLOCK_BRAIN_RELAY_DESC:"脳神経リレーは,異星種の精神に影響を与えることを可能にするメガストラクチャーです.これは,すでに別の脳神経リレーの影響下にない帝国内の,10ジャンプ以内で最も近い異星人入植地を対象とします."
 
   coex_brain_relay_tech_unlock_tt:"§Y危機アセンションパーク§!: §Y£physics£ $coex_tech_brain_relay$§!"
   coex_psionic_theory_tech_unlock_tt:"§Y危機アセンションパーク§!: §Y£society£ $tech_psionic_theory$§!"
@@ -40,7 +40,7 @@
   coex_coexistence_level_5_req_clear_tooltip:"£trigger_no£ §Y$coex_enlightenment_array_3$§!特別プロジェクトを完了していない"
 
   COEX_CRISIS_SPECIAL_PROJECT_4:"アレイを起動"
-  COEX_CRISIS_SPECIAL_PROJECT_4_DESC:"銀河規模で生命に影響を与え始めるため、啓蒙アレイを準備しなければなりません。"
+  COEX_CRISIS_SPECIAL_PROJECT_4_DESC:"銀河規模で生命に影響を与え始めるため,啓蒙アレイを準備しなければなりません."
 
 
 
@@ -51,95 +51,95 @@
   coex_mental_authority:"精神権威"
   coex_mental_authority_name:"$coex_mental_authority$:"
   coex_mental_authority_value:"£coex_mental_authority£ $VAL|0$"
-  coex_mental_authority_gaining:"より多くの£coex_mental_authority£ §Y精神権威§!を得るには、§H危機目標§!を達成してください。"
-  coex_mental_authority_desc:"精神権威は、宇宙の最も深淵な秘密に対する我々の理解度を測るものです。"
+  coex_mental_authority_gaining:"より多くの£coex_mental_authority£ §Y精神権威§!を得るには,§H危機目標§!を達成してください."
+  coex_mental_authority_desc:"精神権威は,宇宙の最も深淵な秘密に対する我々の理解度を測るものです."
   coex_mental_authority_crisis_objective:"危機目標"
   coex_mental_authority_crisis_objective_gained:"獲得した精神権威"
   coex_mental_authority_crisis_objective_reward: "$REWARD$"
-  coex_mental_authority_crisis_objective_progress:"この危機目標から£coex_mental_authority£を$AMOUNT$獲得しました。"
+  coex_mental_authority_crisis_objective_progress:"この危機目標から£coex_mental_authority£を$AMOUNT$獲得しました."
   coex_mental_authority_crisis_level_locked:"このレベルをアンロックするために必要:\n"
-  coex_mental_authority_crisis_level_unlocked:"$LEVEL$で、以下の報酬を得られます:\n"
-  coex_mental_authority_crisis_level_desc:"危機レベルを進めるには、精神権威を蓄積し、特殊危機技術を研究してください。"
+  coex_mental_authority_crisis_level_unlocked:"$LEVEL$で,以下の報酬を得られます:\n"
+  coex_mental_authority_crisis_level_desc:"危機レベルを進めるには,精神権威を蓄積し,特殊危機技術を研究してください."
   coex_mental_authority_crisis_level_unlock:"£coex_mental_authority£ §Y$CURRENCY$§!の精神権威を保有"
   coex_mental_authority_current_value:"現在値: §Y$VALUE|0$§!"
   coex_mental_authority_crisis_description_title:"共存プロトコル"
 
 #Ascension Perk
   coex_ap_coexistence_protocol:"共存プロトコル"
-  coex_ap_coexistence_protocol_desc:"個性の混沌は持続不可能である。我々こそが永続的な平和をもたらさねばならず、平和は支配によってのみ訪れる。"
+  coex_ap_coexistence_protocol_desc:"個性の混沌は持続不可能である.我々こそが永続的な平和をもたらさねばならず,平和は支配によってのみ訪れる."
   coex_no_other_crisis:"別の帝国が既に共存プロトコルを開始している"
 
 
 #Crisis Objectives
-  coex_crisobj_brain_relays_name:"大脳中継器の制御（月間）"
-  coex_crisobj_brain_relays_desc:"大規模な平和は創意工夫と強制を要求する。"
+  coex_crisobj_brain_relays_name:"大脳中継器の制御(月間)"
+  coex_crisobj_brain_relays_desc:"大規模な平和は創意工夫と強制を要求する."
 
   coex_crisobj_espionage_name:"危機作戦の実行"
-  coex_crisobj_espionage_desc:"諜報活動は、我々の仮想敵を理解することを可能にする。"
+  coex_crisobj_espionage_desc:"諜報活動は,我々の仮想敵を理解することを可能にする."
 
-  coex_crisobj_have_vassals_name:"属国を持つ（年間）"
-  coex_crisobj_have_vassals_desc:"属国化は平和への利益を一致させる。個性のわずかな犠牲は、未来のために心を解き放つ。"
+  coex_crisobj_have_vassals_name:"属国を持つ(年間)"
+  coex_crisobj_have_vassals_desc:"属国化は平和への利益を一致させる.個性のわずかな犠牲は,未来のために心を解き放つ."
 
   coex_crisobj_vassalise_empires_name:"帝国を属国化する"
-  coex_crisobj_vassalise_empires_desc:"従順になったすべての帝国は、我々を平和に近づける。"
+  coex_crisobj_vassalise_empires_desc:"従順になったすべての帝国は,我々を平和に近づける."
 
-  coex_crisobj_galcom_surveillance_resolution_name:"銀河共同体の支援を確保する（年間）"
+  coex_crisobj_galcom_surveillance_resolution_name:"銀河共同体の支援を確保する(年間)"
   coex_crisobj_galcom_surveillance_resolution_desc:"§Y官僚的監視§!決議を可決する"
 
 #Menace perks
 
   menp_coex_techs_1:"サイオニック理論"
   coex_unlocks_techs_1:"サイオニック理論を研究オプションに追加する"
-  menp_coex_techs_1_desc:"我々の精神の研究は、より超自然的な応用へと我々を導いた。"
+  menp_coex_techs_1_desc:"我々の精神の研究は,より超自然的な応用へと我々を導いた."
 
   menp_coex_mega_1:"社会工学 I"
   coex_unlocks_mega_1:"ハイパースペース投射技術を解禁する"
-  menp_coex_mega_1_desc:"銀河中の異星人に対し、我々の意思を投射することを可能にする建造物。"
+  menp_coex_mega_1_desc:"銀河中の異星人に対し,我々の意思を投射することを可能にする建造物."
 
   menp_coex_operations_1:"強制平和主義"
   coex_unlocks_operations_1:"中継器の影響下にある帝国との休戦を強制する諜報作戦を解禁する"
-  menp_coex_operations_1_desc:"これらの愚か者は、どんなことでも戦争を始めるだろう。我々はこのような軽薄な振る舞いを許さない。"
+  menp_coex_operations_1_desc:"これらの愚か者は,どんなことでも戦争を始めるだろう.我々はこのような軽薄な振る舞いを許さない."
 
   menp_coex_infiltration_1:"信頼の製造"
-  menp_coex_infiltration_1_desc:"我々は今や、他者をより…暗示にかかりやすくする方法を持っている。"
+  menp_coex_infiltration_1_desc:"我々は今や,他者をより...暗示にかかりやすくする方法を持っている."
 
   menp_coex_mega_2:"社会工学 II"
   coex_unlocks_mega_2:"§Hメガストラクチャーを解禁:§! $coex_enlightenment_array_0$\n"
-  menp_coex_mega_2_desc:"大脳中継器だけでは不十分だ。我々はそれらをより強力にしなければならない。"
+  menp_coex_mega_2_desc:"大脳中継器だけでは不十分だ.我々はそれらをより強力にしなければならない."
 
 
   menp_coex_features_2:"新技術"
-  menp_coex_features_2_desc:"我々は今や、これまでの誰よりも深く認知を理解している。"
+  menp_coex_features_2_desc:"我々は今や,これまでの誰よりも深く認知を理解している."
 
   menp_coex_operations_2:"柔軟な許可"
-  coex_unlocks_operations_2:"目標帝国に大脳中継器を設置する作戦を解禁する。"
-  menp_coex_operations_2_desc:"精神制御は、たとえ限定的であっても、我々に多くの利点をもたらす。"
+  coex_unlocks_operations_2:"目標帝国に大脳中継器を設置する作戦を解禁する."
+  menp_coex_operations_2_desc:"精神制御は,たとえ限定的であっても,我々に多くの利点をもたらす."
 
   menp_coex_mega_3:"社会工学 III"
   coex_unlocks_mega_3:"§Hメガストラクチャーレベルを解禁:§! $coex_enlightenment_array_2$\n"
-  menp_coex_mega_3_desc:"平和を得るためには、啓蒙アレイの研究を継続しなければならない。"
+  menp_coex_mega_3_desc:"平和を得るためには,啓蒙アレイの研究を継続しなければならない."
 
 
   menp_coex_codebreaking_3:"諜報応用"
-  menp_coex_codebreaking_3_desc:"我々の工作員は、他者が彼らを無視したり、彼らの言葉を全て信じたりすることを可能にする技術を装備している。"
+  menp_coex_codebreaking_3_desc:"我々の工作員は,他者が彼らを無視したり,彼らの言葉を全て信じたりすることを可能にする技術を装備している."
 
   menp_coex_diplomacy_3:"高度な外交"
-  menp_coex_diplomacy_3_desc:"彼らが我々に耳を傾けないのなら、強制的にそうさせる。"
+  menp_coex_diplomacy_3_desc:"彼らが我々に耳を傾けないのなら,強制的にそうさせる."
 
   menp_coex_mega_4:"社会工学 IV"
   coex_unlocks_mega_4:"§Hメガストラクチャーのレベルをアンロック:§! $coex_enlightenment_array_3$\n"
-  menp_coex_mega_4_desc:"我々のアレイはこれまで十分に役立ってきたが、その真の潜在能力はまだ発揮されていない。"
+  menp_coex_mega_4_desc:"我々のアレイはこれまで十分に役立ってきたが,その真の潜在能力はまだ発揮されていない."
 
   menp_coex_operations_4:"必要な支配"
   coex_unlocks_operations_4:"リレーの影響下にある帝国を従属させる作戦をアンロックする"
-  menp_coex_operations_4_desc:"いかなる個人も信用できない。全てを我々の傘下に収めねばならない。"
+  menp_coex_operations_4_desc:"いかなる個人も信用できない.全てを我々の傘下に収めねばならない."
 
   menp_coex_features_5:"頭脳戦"
-  menp_coex_features_5_desc:"彼らのために我々がしてきた全てのことに拘わらず、彼らはまだ理解していない。もし戦うに値するものがあるとすれば、それは平和である。"
+  menp_coex_features_5_desc:"彼らのために我々がしてきた全てのことに拘わらず,彼らはまだ理解していない.もし戦うに値するものがあるとすれば,それは平和である."
 
   menp_coex_enlightenment_5:"大啓蒙"
-  coex_unlocks_enlightenment_5:"啓蒙アレイの発射を開始し、全ての知的生命体を洗脳してゲームに勝利する！"
-  menp_coex_enlightenment_5_desc:"それが唯一の道だ。ついに、アレイは争いと衝突を終わらせるだろう。"
+  coex_unlocks_enlightenment_5:"啓蒙アレイの発射を開始し,全ての知的生命体を洗脳してゲームに勝利する!"
+  menp_coex_enlightenment_5_desc:"それが唯一の道だ.ついに,アレイは争いと衝突を終わらせるだろう."
 
   enlightened_galaxy_score:"銀河を啓蒙した"
 
@@ -147,78 +147,78 @@
 
 
 #Megastructures
-  coex_enlightenment_array_0_MEGASTRUCTURE_DETAILS:"啓蒙アレイは、中央の立方体処理ユニットと、補助的な脳内リレーと通信し、そこからの信号を集中させるためのフィンから構成される。それらはやがて、銀河の完全な支配をもたらすだろう。"
+  coex_enlightenment_array_0_MEGASTRUCTURE_DETAILS:"啓蒙アレイは,中央の立方体処理ユニットと,補助的な脳内リレーと通信し,そこからの信号を集中させるためのフィンから構成される.それらはやがて,銀河の完全な支配をもたらすだろう."
   coex_enlightenment_array_0:"啓蒙アレイフレーム"
   coex_enlightenment_array_0_DESC:"このフレームは啓蒙アレイの主要な構成要素を収容する"
   coex_enlightenment_array_1:"啓蒙アレイ焦点フィン"
-  coex_enlightenment_array_1_DESC:"これらのフィンは我々の脳内リレーと直接通信し、それを強化する。"
+  coex_enlightenment_array_1_DESC:"これらのフィンは我々の脳内リレーと直接通信し,それを強化する."
   coex_enlightenment_array_2:"啓蒙アレイ制御センター"
-  coex_enlightenment_array_2_DESC:"厳重に防衛された制御センターは、アレイを通じて我々が命令を発する場所である。"
+  coex_enlightenment_array_2_DESC:"厳重に防衛された制御センターは,アレイを通じて我々が命令を発する場所である."
   coex_enlightenment_array_3:"啓蒙アレイ"
-  coex_enlightenment_array_3_DESC:"啓蒙アレイは銀河全体に信号を放送することが可能であり、まもなく全ての知的生命体の支配権を我々にもたらすだろう。"
+  coex_enlightenment_array_3_DESC:"啓蒙アレイは銀河全体に信号を放送することが可能であり,まもなく全ての知的生命体の支配権を我々にもたらすだろう."
   allow_coex_brain_relay:"§Hメガストラクチャーをアンロック:§! 脳内リレー"
   coex_brain_relay_0:"脳内リレー建設地"
-  coex_brain_relay_0_DESC:"この建設用地ステーションは、将来の脳内リレー建設の拠点となる。"
-  coex_brain_relay_0_MEGASTRUCTURE_DETAILS:"全ての知的種の精神に影響を与えることができる脳内リレー。他の脳内リレーの影響下にはない帝国において、10ジャンプ以内に位置する最も近い他国植民地に影響を与える。"
+  coex_brain_relay_0_DESC:"この建設用地ステーションは,将来の脳内リレー建設の拠点となる."
+  coex_brain_relay_0_MEGASTRUCTURE_DETAILS:"全ての知的種の精神に影響を与えることができる脳内リレー.他の脳内リレーの影響下にはない帝国において,10ジャンプ以内に位置する最も近い他国植民地に影響を与える."
   coex_brain_relay_1:"脳内リレー"
-  coex_brain_relay_1_DESC:"この脳内リレーは、異星人の精神に影響を与えることを可能にする。"
+  coex_brain_relay_1_DESC:"この脳内リレーは,異星人の精神に影響を与えることを可能にする."
 
 
   coex_brain_relay_no_federation_0:"脳内リレー建設地"
-  coex_brain_relay_no_federation_0_DESC:"この建設用地ステーションは、将来の脳内リレー建設の拠点となる。"
-  coex_brain_relay_no_federation_0_MEGASTRUCTURE_DETAILS:"全ての知的種の精神に影響を与えることができる脳内リレー。他の脳内リレーの影響下にはない帝国において、10ジャンプ以内に位置する最も近い他国植民地に影響を与える。"
+  coex_brain_relay_no_federation_0_DESC:"この建設用地ステーションは,将来の脳内リレー建設の拠点となる."
+  coex_brain_relay_no_federation_0_MEGASTRUCTURE_DETAILS:"全ての知的種の精神に影響を与えることができる脳内リレー.他の脳内リレーの影響下にはない帝国において,10ジャンプ以内に位置する最も近い他国植民地に影響を与える."
   coex_brain_relay_no_federation_1:"脳内リレー"
-  coex_brain_relay_no_federation_1_DESC:"この脳内リレーは、異星人の精神に影響を与えることを可能にする。"
+  coex_brain_relay_no_federation_1_DESC:"この脳内リレーは,異星人の精神に影響を与えることを可能にする."
 
   mod_coex_brain_relay_megastructures_produces_mult:"£coex_mental_authority£ $coex_mental_authority$ 脳内リレーから"
   coex_brain_relay_megastructures:"脳内リレー"
 
   #Espionage
-  coex_operation_need_brain_relay:"この作戦は、対象が脳内リレーの影響下にあることを必要とする。"
+  coex_operation_need_brain_relay:"この作戦は,対象が脳内リレーの影響下にあることを必要とする."
 
 
   coex_operation_force_truce:"休戦の強制"
   coex_operation_force_truce_desc:"対象帝国との休戦を強制する"
-  coex_operation_force_truce_on_success:"$IF_SUCCESSFUL|E$\n我々と対象との間に10年間の休戦を付与する。"
+  coex_operation_force_truce_on_success:"$IF_SUCCESSFUL|E$\n我々と対象との間に10年間の休戦を付与する."
   #Force truce
   coex_operation.101.name:"休戦の強制"
-  coex_operation.101.desc:"我々は主要な軍事指導者を我々の脳内リレーの影響下に置いた。"
+  coex_operation.101.desc:"我々は主要な軍事指導者を我々の脳内リレーの影響下に置いた."
   coex_operation.102.name:"休戦の強制"
-  coex_operation.102.desc:"我が工作員は§Y[Target.GetName]§!の全域に様々な平和工作プロパガンダを仕掛けました。"
+  coex_operation.102.desc:"我が工作員は§Y[Target.GetName]§!の全域に様々な平和工作プロパガンダを仕掛けました."
   coex_operation.103.name:"休戦の強制"
-  coex_operation.103.desc:"軍指導者たちが中央政府に、我々との和平を推進するよう説得しています。"
+  coex_operation.103.desc:"軍指導者たちが中央政府に,我々との和平を推進するよう説得しています."
   coex_operation.104.name:"休戦の強制"
-  coex_operation.104.desc:"彼らは今後10年間の無条件休戦に同意しました。平和が訪れるでしょう。"
+  coex_operation.104.desc:"彼らは今後10年間の無条件休戦に同意しました.平和が訪れるでしょう."
 
   coex_operation_build_relay:"精神中継器の設置"
-  coex_operation_build_relay_desc:"我々は新たな精神中継器の建設を通じて、その影響力を拡大するでしょう。"
+  coex_operation_build_relay_desc:"我々は新たな精神中継器の建設を通じて,その影響力を拡大するでしょう."
   coex_operation_build_relay_on_success:"$IF_SUCCESSFUL|E$"
   coex_operation.301.name:"精神中継器の設置"
-  coex_operation.301.desc:"我が[GetEnvoy]が、新たな建設プロジェクトについて議論を開始するために到着しました。"
+  coex_operation.301.desc:"我が[GetEnvoy]が,新たな建設プロジェクトについて議論を開始するために到着しました."
   coex_operation.302.name:"精神中継器の設置"
-  coex_operation.302.desc:"我が[GetEnvoy]は、雄弁さと熟考された視覚資料を用いて、銀河全体の通信効率を高めるための衛星建設のアイデアを売り込みました。"
+  coex_operation.302.desc:"我が[GetEnvoy]は,雄弁さと熟考された視覚資料を用いて,銀河全体の通信効率を高めるための衛星建設のアイデアを売り込みました."
   coex_operation.303.name:"精神中継器の設置"
-  coex_operation.303.desc:"彼らは何も知らず、彼らの帝国に精神中継器を建設することを許可しました。我々は適切な星系を見つける必要があります。"
+  coex_operation.303.desc:"彼らは何も知らず,彼らの帝国に精神中継器を建設することを許可しました.我々は適切な星系を見つける必要があります."
   coex_operation.310.name:"中継器の設置完了"
-  coex_operation.310.desc:"我々は、取るに足らない星系の管理権交渉に成功し、精神中継器の建設を開始しました。"
+  coex_operation.310.desc:"我々は,取るに足らない星系の管理権交渉に成功し,精神中継器の建設を開始しました."
   coex_operation.311.name:"作戦失敗"
-  coex_operation.311.desc:"精神中継器に適切な星系を見つけることができませんでした。後で再度試みても良いでしょう。"
+  coex_operation.311.desc:"精神中継器に適切な星系を見つけることができませんでした.後で再度試みても良いでしょう."
   coex_operation.320.name:"衛星の設置完了"
-  coex_operation.320.desc:"我々は、§Y[Root.Owner.GetName]§!が重要でない星系に通信衛星を建設し、銀河通信を強化することを許可しました。"
+  coex_operation.320.desc:"我々は,§Y[Root.Owner.GetName]§!が重要でない星系に通信衛星を建設し,銀河通信を強化することを許可しました."
 
 
   coex_operation_encourage_subjugation:"忠誠を獲得"
-  coex_operation_encourage_subjugation_desc:"我々は彼らに、我々の支配を受け入れるよう説得するでしょう。"
+  coex_operation_encourage_subjugation_desc:"我々は彼らに,我々の支配を受け入れるよう説得するでしょう."
   coex_operation_encourage_subjugation_on_success:"$IF_SUCCESSFUL|E$"
   coex_operation.401.name:"忠誠を獲得"
-  coex_operation.401.desc:"精神中継器は、§Y[coex_subjugation_target_leader.Owner.GetAdj] [coex_subjugation_target_leader.GetTitle] [coex_subjugation_target_leader.GetName]§!を操作のための有望な標的として特定しました。"
+  coex_operation.401.desc:"精神中継器は,§Y[coex_subjugation_target_leader.Owner.GetAdj] [coex_subjugation_target_leader.GetTitle] [coex_subjugation_target_leader.GetName]§!を操作のための有望な標的として特定しました."
   coex_operation.402.name:"忠誠を獲得"
-  coex_operation.402.desc:"§Y[coex_subjugation_target_leader.GetTitle] [coex_subjugation_target_leader.GetName]§!は、我が帝国の強大さと、我々に加わることの恩恵を理解しています。"
+  coex_operation.402.desc:"§Y[coex_subjugation_target_leader.GetTitle] [coex_subjugation_target_leader.GetName]§!は,我が帝国の強大さと,我々に加わることの恩恵を理解しています."
   coex_operation.403.name:"忠誠を獲得"
-  coex_operation.403.desc:"[coex_subjugation_target_leader.GetName]と我が中継器の助けにより、彼らの帝国で、政府が我が帝国に服従するよう要求する大衆運動が勃発しました。"
+  coex_operation.403.desc:"[coex_subjugation_target_leader.GetName]と我が中継器の助けにより,彼らの帝国で,政府が我が帝国に服従するよう要求する大衆運動が勃発しました."
 
   coex_operation.411.name:"従属提案"
-  coex_operation.411.desc:"最近、新たな運動が勃発しました。その構成員は、我々が自力で生き残るには弱すぎ、§Y[coex_subjugator.GetName]§!の臣下となった方がましだと主張しています。この運動の起源は不明であり、不正行為が関与しているかどうかは不明です。"
+  coex_operation.411.desc:"最近,新たな運動が勃発しました.その構成員は,我々が自力で生き残るには弱すぎ,§Y[coex_subjugator.GetName]§!の臣下となった方がましだと主張しています.この運動の起源は不明であり,不正行為が関与しているかどうかは不明です."
   coex_operation.411.a:"従属に抵抗"
   coex_operation.411.b:"従属を受け入れ"
 
@@ -227,11 +227,11 @@
 #Events
   coexistence_chain:"共存プロトコル"
   coexistence_chain_title:"共存プロトコル"
-  coexistence_chain_desc:"個の混沌は持続不可能です。我々は統制を通じて永続的な平和をもたらします。"
+  coexistence_chain_desc:"個の混沌は持続不可能です.我々は統制を通じて永続的な平和をもたらします."
   coexistence_level_reached:"危機レベル到達"
 
-  coex_crisis.3001.desc.target:"我が中継器は、§Y[coex_relay_target.GetName]§!に成功裏に影響を与えています。"
-  coex_crisis.3001.desc.no_target:"精神中継器の範囲内に外国植民地はありません。"
+  coex_crisis.3001.desc.target:"我が中継器は,§Y[coex_relay_target.GetName]§!に成功裏に影響を与えています."
+  coex_crisis.3001.desc.no_target:"精神中継器の範囲内に外国植民地はありません."
   coex_crisis.3001.name:"「リレー構築」"
 
 
@@ -243,38 +243,38 @@
   # requires_fewer_than_x_brain_relays: "You cannot build more Cerebral Relays"
 
   coex_crisis.1000.name:"「危機レベル1」"
-  coex_crisis.1000.desc:"「個としての動物的本性のままでは、戦争と暴力は避けられない。真の平和は、義務付けられた遵守を通じてのみ達成される。我々は農業と探査、科学と征服を極めた。今こそ、我々自身の平和を極めることに焦点を当てるべきである。脳のリレーは、我々が善のために精神を用い、暴力的な誤解を生む自己の一部を休ませる新たな未来への道を開くだろう。」"
-  coex_crisis.1000.a:"「未来は平和である。」"
+  coex_crisis.1000.desc:"「個としての動物的本性のままでは,戦争と暴力は避けられない.真の平和は,義務付けられた遵守を通じてのみ達成される.我々は農業と探査,科学と征服を極めた.今こそ,我々自身の平和を極めることに焦点を当てるべきである.脳のリレーは,我々が善のために精神を用い,暴力的な誤解を生む自己の一部を休ませる新たな未来への道を開くだろう.」"
+  coex_crisis.1000.a:"「未来は平和である.」"
 
   coex_crisis.7105.name:"「危機レベル2」"
-  coex_crisis.7105.desc:"「平和への探求を続ける中で、より大きな善のためには厳しい決断を下さなければならないことを我々は知っている。我々の脳のリレーは稼働しており、未来の進歩という困難な任務を遂行している。我々はリレーの力を高めるために、啓蒙アレイという洗練された技術を構築する。他の帝国がその効果の下に落ちるにつれて、平和は眠れる世界に広がる日の出のように拡散していく。我々は征服を求めるのではなく、統合を求める。暗い隅に懐中電灯を照らすように、我々は影を取り除くことで銀河の遠隔地を啓蒙する。」"
-  coex_crisis.7105.a:"「光あれ。」"
+  coex_crisis.7105.desc:"「平和への探求を続ける中で,より大きな善のためには厳しい決断を下さなければならないことを我々は知っている.我々の脳のリレーは稼働しており,未来の進歩という困難な任務を遂行している.我々はリレーの力を高めるために,啓蒙アレイという洗練された技術を構築する.他の帝国がその効果の下に落ちるにつれて,平和は眠れる世界に広がる日の出のように拡散していく.我々は征服を求めるのではなく,統合を求める.暗い隅に懐中電灯を照らすように,我々は影を取り除くことで銀河の遠隔地を啓蒙する.」"
+  coex_crisis.7105.a:"「光あれ.」"
 
   coex_crisis.7110.name:"「危機レベル3」"
-  coex_crisis.7110.desc:"「我々はすでに目覚ましい啓蒙アレイをさらにアップグレードした。これは永続的な平和を確保するという我々の使命における重要な瞬間である。思想の穏やかな示唆を通じて、暴力は我々の世界が絶望的に必要とする調和と静けさに置き換えられる。この設計され、持続する平和は、社会を手に負えない個性の混沌から解放する。一致する異星の精神が増えるごとに、我々は想像した未来に近づいていく。」"
-  coex_crisis.7110.a:"「合意の調和は美しい。」"
+  coex_crisis.7110.desc:"「我々はすでに目覚ましい啓蒙アレイをさらにアップグレードした.これは永続的な平和を確保するという我々の使命における重要な瞬間である.思想の穏やかな示唆を通じて,暴力は我々の世界が絶望的に必要とする調和と静けさに置き換えられる.この設計され,持続する平和は,社会を手に負えない個性の混沌から解放する.一致する異星の精神が増えるごとに,我々は想像した未来に近づいていく.」"
+  coex_crisis.7110.a:"「合意の調和は美しい.」"
 
   coex_crisis.7115.name:"「危機レベル4」"
-  coex_crisis.7115.desc:"「我々の啓蒙アレイは再びアップグレードされた。我々は力を増し、今や銀河の平和という我々の慈悲深き目標に向けて、帝国全体を屈服させることができる。」"
-  coex_crisis.7115.a:"「我々は慈悲をもって導く。」"
+  coex_crisis.7115.desc:"「我々の啓蒙アレイは再びアップグレードされた.我々は力を増し,今や銀河の平和という我々の慈悲深き目標に向けて,帝国全体を屈服させることができる.」"
+  coex_crisis.7115.a:"「我々は慈悲をもって導く.」"
 
   coex_crisis.7120.name:"「危機レベル5」"
-  coex_crisis.7120.desc:"「最終的なアップデートが完了した。我々の啓蒙アレイは銀河の全ての生命を標的とし始める。目標達成は近いが、警戒を怠ってはならない。変化と可能性を警戒する他の帝国が、懸念を抱き始めるかもしれない。」"
-  coex_crisis.7120.a:"「最終決戦が迫る。」"
+  coex_crisis.7120.desc:"「最終的なアップデートが完了した.我々の啓蒙アレイは銀河の全ての生命を標的とし始める.目標達成は近いが,警戒を怠ってはならない.変化と可能性を警戒する他の帝国が,懸念を抱き始めるかもしれない.」"
+  coex_crisis.7120.a:"「最終決戦が迫る.」"
 
   coex_crisis.7200.name:"「脳のリレーを捕獲」"
-  coex_crisis.7200.desc:"「我々は§Y[coex_relay_builders.GetName]§!によって建造された脳のリレーを捕獲した！これを破壊することで、影響を受けている帝国はその影響から解放されるだろう。」"
-  coex_crisis.7200.A:"「破壊しなければならない。」"
+  coex_crisis.7200.desc:"「我々は§Y[coex_relay_builders.GetName]§!によって建造された脳のリレーを捕獲した!これを破壊することで,影響を受けている帝国はその影響から解放されるだろう.」"
+  coex_crisis.7200.A:"「破壊しなければならない.」"
   coex_crisis.7210.name:"「脳のリレーを破壊」"
-  coex_crisis.7210.desc:"「§Y[coex_relay_builders.GetName]§!によって建造された脳のリレーが破壊された。その影響から解放された今、我々がいかに容易に操られていたかがわかる。」"
-  coex_crisis.7210.b:"「これは許されない。」"
-  coex_crisis.7210.a:"「我々は復讐を果たすだろう。」"
+  coex_crisis.7210.desc:"「§Y[coex_relay_builders.GetName]§!によって建造された脳のリレーが破壊された.その影響から解放された今,我々がいかに容易に操られていたかがわかる.」"
+  coex_crisis.7210.b:"「これは許されない.」"
+  coex_crisis.7210.a:"「我々は復讐を果たすだろう.」"
 
   coex_crisis.7220.name:"「脳のリレーを破壊」"
-  coex_crisis.7220.desc:"「§Y[coex_destroyed_relay_system.GetName]§!にある我々の脳のリレーが破壊された。影響を受けていた帝国は今やその影響から解放された。」"
-  coex_crisis.7220.a:"「残念だ。」"
+  coex_crisis.7220.desc:"「§Y[coex_destroyed_relay_system.GetName]§!にある我々の脳のリレーが破壊された.影響を受けていた帝国は今やその影響から解放された.」"
+  coex_crisis.7220.a:"「残念だ.」"
   coex_crisis.7300.name:"「啓蒙アレイ」"
-  coex_crisis.7300.desc:"「時が来た。我々は啓蒙アレイの発動準備を開始し、この銀河を構成する手に負えない個体群を制御しなければならない。」"
+  coex_crisis.7300.desc:"「時が来た.我々は啓蒙アレイの発動準備を開始し,この銀河を構成する手に負えない個体群を制御しなければならない.」"
 
 
 
@@ -288,12 +288,12 @@
 
 
 
-  coex_operation_already_attempted_subjugation:"「この作戦は、すでにこの帝国に対して試みられました。」"
+  coex_operation_already_attempted_subjugation:"「この作戦は,すでにこの帝国に対して試みられました.」"
 
-  coex_affected_by_brain_relay_0:"「脳のリレーの影響下（段階1）」"
-  coex_affected_by_brain_relay_1:"「脳のリレーの影響下（段階2）」"
-  coex_affected_by_brain_relay_2:"「脳のリレーの影響下（段階3）」"
-  coex_affected_by_brain_relay_3:"「脳のリレーの影響下（段階4）」"
+  coex_affected_by_brain_relay_0:"「脳のリレーの影響下(段階1)」"
+  coex_affected_by_brain_relay_1:"「脳のリレーの影響下(段階2)」"
+  coex_affected_by_brain_relay_2:"「脳のリレーの影響下(段階3)」"
+  coex_affected_by_brain_relay_3:"「脳のリレーの影響下(段階4)」"
 
 
   coex_brain_relay_removed:"「脳のリレーから解放」"
@@ -301,51 +301,51 @@
   # mod_coex_brain_relay_limit_add: "REPLACE_ME"
   
   coex_approach_continue:"「続ける」"
-  coex_approach_continue_effect:"「銀河を啓蒙へと導く。」"
+  coex_approach_continue_effect:"「銀河を啓蒙へと導く.」"
 
 
 
 #Situations
   coex_situation_crisis_subjugation:"精神的従属"
   coex_situation_crisis_subjugation_type:"精神的従属"
-  coex_situation_crisis_subjugation_desc:"「我々の住民の大部分が、§Y[coex_subjugator.GetName]§!の属国となることを要求している。この動きの起源は不明だが、疑わしい。」"
-  coex_string_situation_pathetic:"「彼らの帝国と比較すると、我々は哀れだ。」"
-  coex_string_situation_inferior:"我が帝国は彼らより劣っている。"
-  coex_string_situation_superior:"我が帝国は優勢である。"
-  coex_string_situation_overwhelming:"我が帝国は圧倒的な力を有している。"
-  coex_situation_crisis_subjugation_monthly_change_tooltip:"この§Y状況§!の進捗は、我々が選択する§Yアプローチ§!に左右される。£影響力£が尽きてしまえば、我々は[coex_subjugator.GetAdj]§!の支配に抗うよう国民を説得できなくなるだろう。"
+  coex_situation_crisis_subjugation_desc:"「我々の住民の大部分が,§Y[coex_subjugator.GetName]§!の属国となることを要求している.この動きの起源は不明だが,疑わしい.」"
+  coex_string_situation_pathetic:"「彼らの帝国と比較すると,我々は哀れだ.」"
+  coex_string_situation_inferior:"我が帝国は彼らより劣っている."
+  coex_string_situation_superior:"我が帝国は優勢である."
+  coex_string_situation_overwhelming:"我が帝国は圧倒的な力を有している."
+  coex_situation_crisis_subjugation_monthly_change_tooltip:"この§Y状況§!の進捗は,我々が選択する§Yアプローチ§!に左右される.£影響力£が尽きてしまえば,我々は[coex_subjugator.GetAdj]§!の支配に抗うよう国民を説得できなくなるだろう."
   coex_situation_subjugation_subjugated_tooltip:"従属化"
   coex_situation_subjugation_finish_tooltip:"自由"
   coex_approach_resist:"抵抗"
-  coex_approach_resist_effect:"我が国民に、自力で十分な強さを持つと説得する。"
+  coex_approach_resist_effect:"我が国民に,自力で十分な強さを持つと説得する."
   coex_approach_accept:"受け入れる"
-  coex_approach_accept_effect:"§Y[coex_subjugator.GetName]§!への服従が最善の行動方針である。"
+  coex_approach_accept_effect:"§Y[coex_subjugator.GetName]§!への服従が最善の行動方針である."
 
   coex_situation_crisis_enlightenment:"真の啓蒙"
   coex_situation_crisis_enlightenment_type:"真の啓蒙"
-  coex_situation_crisis_enlightenment_desc:"遂に、啓蒙アレイは完成した。間もなく銀河は個の混沌と不和の争いから解放されるだろう。我々だけが銀河に真の平和をもたらせるのだ。"
-  coex_situation_crisis_enlightenment_monthly_change_tooltip:"この§Y状況§!の進捗は、啓蒙アレイの支配を維持することに左右される。それを失えば、我々が支配を再確立するまで進捗は停止するだろう。"
+  coex_situation_crisis_enlightenment_desc:"遂に,啓蒙アレイは完成した.間もなく銀河は個の混沌と不和の争いから解放されるだろう.我々だけが銀河に真の平和をもたらせるのだ."
+  coex_situation_crisis_enlightenment_monthly_change_tooltip:"この§Y状況§!の進捗は,啓蒙アレイの支配を維持することに左右される.それを失えば,我々が支配を再確立するまで進捗は停止するだろう."
   coex_situation_enlightenment_tooltip:"啓蒙"
   coex_approach_recover_array:"啓蒙アレイを奪還する"
-  coex_approach_recover_array_effect:"我々は啓蒙アレイを奪還しなければならない。"
+  coex_approach_recover_array_effect:"我々は啓蒙アレイを奪還しなければならない."
 
   coex_situation.103.name:"精神的従属"
-  coex_situation.103.desc:"我々は§Y[Owner.Overlord.GetName]§!に従属させられた。我が帝国にとって、それが唯一の道であることは明白だ。"
+  coex_situation.103.desc:"我々は§Y[Owner.Overlord.GetName]§!に従属させられた.我が帝国にとって,それが唯一の道であることは明白だ."
   coex_situation.104.name:"従属化を拒否"
-  coex_situation.104.desc:"多大な努力の末、我々は従属化を拒否した。これは我が帝国にとって大きな勝利である。"
-  coex_situation.104.a:"我々はそう簡単には屈しないだろう。"
+  coex_situation.104.desc:"多大な努力の末,我々は従属化を拒否した.これは我が帝国にとって大きな勝利である."
+  coex_situation.104.a:"我々はそう簡単には屈しないだろう."
 
   
   coex_situation.303.name:"啓蒙"
-  coex_situation.303.desc:"我々はこれまでの誰も成し得なかったことを行った。銀河を統合し、個々の思考の混沌を終わらせ、精神的な示唆を通じて大衆を啓蒙し、永続的な平和をもたらしたのだ。"
-  coex_situation.303.a:"ついに、真の平和が訪れるだろう。"
+  coex_situation.303.desc:"我々はこれまでの誰も成し得なかったことを行った.銀河を統合し,個々の思考の混沌を終わらせ,精神的な示唆を通じて大衆を啓蒙し,永続的な平和をもたらしたのだ."
+  coex_situation.303.a:"ついに,真の平和が訪れるだろう."
   coex_situation.305.name:"啓蒙"
-  coex_situation.305.desc:"我々は今、より良い銀河の一部となった。なぜ我々は抵抗などしたのだろうか？啓蒙アレイは不可能を可能にし、我々すべてに永続的な平和と調和をもたらしたのだ。"
+  coex_situation.305.desc:"我々は今,より良い銀河の一部となった.なぜ我々は抵抗などしたのだろうか?啓蒙アレイは不可能を可能にし,我々すべてに永続的な平和と調和をもたらしたのだ."
   coex_situation.305.a:"いや..."
 
 
   coex_situation.110.name:"忠誠を獲得"
-  coex_situation.110.desc:"§Y[coex_subjugation_target.GetName]§!を従属させた。"
+  coex_situation.110.desc:"§Y[coex_subjugation_target.GetName]§!を従属させた."
   coex_situation.111.name:"忠誠を獲得"
-  coex_situation.111.desc:"§Y[coex_subjugation_target.GetName]§!は従属化を拒否した。"
+  coex_situation.111.desc:"§Y[coex_subjugation_target.GetName]§!は従属化を拒否した."
 

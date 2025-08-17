@@ -1,25 +1,25 @@
-﻿l_simp_chinese:
+l_simp_chinese:
  concept_cnm_battle_width:"战线宽度"
- concept_cnm_battle_width_desc:"一场战斗的[concept_cnm_battle_width]由公式 (5 + [concept_state][concept_infrastructure]/2) * [concept_combat_width] 决定。这是双方可以部署的基线最大[Concept('concept_battalion', '$concept_battalions$')]数量。获得营加成后，拥有兵营数量优势（2.333倍）的一方，可以投入最多3倍的[concept_cnm_battle_width]。"
- BATTLE_TERRAIN_CNM_BATTLEINFO:"[concept_terrain]：[Battle.GetTerrain]，#tooltippable #tooltip:[Battle.GetProvince.GetState.GetTooltipTag],STATE_INFRASTRUCTURE_TOOLTIP [Battle.GetProvince.GetState.GetInfrastructure|0]#!#! [concept_infrastructure]"
+ concept_cnm_battle_width_desc:"一场战斗的[concept_cnm_battle_width]由公式 (5 + [concept_state][concept_infrastructure]/2) * [concept_combat_width] 决定.这是双方可以部署的基线最大[Concept('concept_battalion', '$concept_battalions$')]数量.获得营加成后,拥有兵营数量优势(2.333倍)的一方,可以投入最多3倍的[concept_cnm_battle_width]."
+ BATTLE_TERRAIN_CNM_BATTLEINFO:"[concept_terrain]:[Battle.GetTerrain],#tooltippable #tooltip:[Battle.GetProvince.GetState.GetTooltipTag],STATE_INFRASTRUCTURE_TOOLTIP [Battle.GetProvince.GetState.GetInfrastructure|0]#!#! [concept_infrastructure]"
 
- BATTLE_TERRAIN_CNM_BATTLEINFO_ALL_TERRAIN:"[concept_cnm_battle_width]：#tooltippable #tooltip:[Battle.GetTooltipTag],CNM_BATTLEINFO_TERRAIN_WIDTH_TOOLTIP $CNM_BATTLEINFO_TERRAIN_MAX$#!#!；最大 $CNM_BATTLEINFO_BATTLE_MAX$"
+ BATTLE_TERRAIN_CNM_BATTLEINFO_ALL_TERRAIN:"[concept_cnm_battle_width]:#tooltippable #tooltip:[Battle.GetTooltipTag],CNM_BATTLEINFO_TERRAIN_WIDTH_TOOLTIP $CNM_BATTLEINFO_TERRAIN_MAX$#!#!;最大 $CNM_BATTLEINFO_BATTLE_MAX$"
 
 CNM_BATTLEINFO_TERRAIN_MAX:"[Battle.GetProvince.MakeScope.ScriptValue('cnm_battleinfo_province_terrain_infrastructure_force_limit')|0v]"
-CNM_BATTLEINFO_TERRAIN_WIDTH_TOOLTIP:"此地块战斗的基础[concept_cnm_battle_width]为 (5 + ([Battle.GetProvince.GetState.GetInfrastructure] [concept_infrastructure] * 0.5 )) * [Battle.GetTerrain] $vanilla_GetTerrainCombatWidth$ [concept_combat_width] ) = $CNM_BATTLEINFO_TERRAIN_MAX$ [Concept('concept_battalion', '$concept_battalions$')]。\n$BATTLE_TERRAIN_CNM_BATTLEINFO_BATTALION_AVAILABLE_TOOTIP$\n$BATTLE_CNM_BATTLEINFO_BATTALION_AMOUNT_BOUNS_TOOLTIP$\n如果你拥有2.333倍的营，那么你可以投入最多3 * [concept_cnm_battle_width]$CNM_BATTLEINFO_TERRAIN_MAX$ = $CNM_BATTLEINFO_BATTLE_MAX$ [Concept('concept_battalion', '$concept_battalions$')]\n$CNM_BATTLEINFO_BATTALION_NOT_AVALIABLE_TOOLTIP$"
+CNM_BATTLEINFO_TERRAIN_WIDTH_TOOLTIP:"此地块战斗的基础[concept_cnm_battle_width]为 (5 + ([Battle.GetProvince.GetState.GetInfrastructure] [concept_infrastructure] * 0.5 )) * [Battle.GetTerrain] $vanilla_GetTerrainCombatWidth$ [concept_combat_width] ) = $CNM_BATTLEINFO_TERRAIN_MAX$ [Concept('concept_battalion', '$concept_battalions$')].\n$BATTLE_TERRAIN_CNM_BATTLEINFO_BATTALION_AVAILABLE_TOOTIP$\n$BATTLE_CNM_BATTLEINFO_BATTALION_AMOUNT_BOUNS_TOOLTIP$\n如果你拥有2.333倍的营,那么你可以投入最多3 * [concept_cnm_battle_width]$CNM_BATTLEINFO_TERRAIN_MAX$ = $CNM_BATTLEINFO_BATTLE_MAX$ [Concept('concept_battalion', '$concept_battalions$')]\n$CNM_BATTLEINFO_BATTALION_NOT_AVALIABLE_TOOLTIP$"
 CNM_BATTLEINFO_BATTLE_MAX:"[Multiply_CFixedPoint(Battle.GetProvince.MakeScope.ScriptValue('cnm_battleinfo_province_terrain_infrastructure_force_limit'),'(CFixedPoint)3')|0v]"
 
 vanilla_GetTerrainCombatWidth:"[Battle.GetProvince.GetTerrainCombatWidth|v1]"
 
-BATTLE_TERRAIN_CNM_BATTLEINFO_BATTALION_AVAILABLE_TOOTIP:"每一方都试图投入最大：战线上的营 ~ 最小：（战线上的营 - (战线上的营 - (战线上的营 / 战线长度 $BATTLE_FRONT_LENGTH_CNM_BATTLEINFO$)) / 2）[Concept('concept_battalion', '$concept_battalions$')]到战斗中，但不能超过[concept_cnm_battle_width]$CNM_BATTLEINFO_TERRAIN_MAX$。此值记为X。"
+BATTLE_TERRAIN_CNM_BATTLEINFO_BATTALION_AVAILABLE_TOOTIP:"每一方都试图投入最大:战线上的营 ~ 最小:(战线上的营 - (战线上的营 - (战线上的营 / 战线长度 $BATTLE_FRONT_LENGTH_CNM_BATTLEINFO$)) / 2)[Concept('concept_battalion', '$concept_battalions$')]到战斗中,但不能超过[concept_cnm_battle_width]$CNM_BATTLEINFO_TERRAIN_MAX$.此值记为X."
 
 BATTLE_FRONT_LENGTH_CNM_BATTLEINFO:"[Battle.GetFront.MakeScope.ScriptValue('cnm_battleinfo_get_front_length')|0v]"
 
 
 
-BATTLE_CNM_BATTLEINFO_BATTALION_AMOUNT_BOUNS_TOOLTIP:"超过X后，拥有更多兵营的一方可以投入额外的营 $BATTLE_CNM_BATTLEINFO_BATTALION_AMOUNT_BOUNS_VALUE$ [Concept('concept_battalion', '$concept_battalions$')]"
-BATTLE_CNM_BATTLEINFO_BATTALION_AMOUNT_BOUNS_VALUE:"0 ~~ X * ((优势方总营数/劣势方总营数 - 1)*1.5)，最大2X"
+BATTLE_CNM_BATTLEINFO_BATTALION_AMOUNT_BOUNS_TOOLTIP:"超过X后,拥有更多兵营的一方可以投入额外的营 $BATTLE_CNM_BATTLEINFO_BATTALION_AMOUNT_BOUNS_VALUE$ [Concept('concept_battalion', '$concept_battalions$')]"
+BATTLE_CNM_BATTLEINFO_BATTALION_AMOUNT_BOUNS_VALUE:"0 ~~ X * ((优势方总营数/劣势方总营数 - 1)*1.5),最大2X"
 
 
-CNM_BATTLEINFO_BATTALION_NOT_AVALIABLE_TOOLTIP:"请注意，士气 < 20、人手 < 100、动员度为0的营无法进入战斗。营的选择权重是：人力*士气*动员度*基础攻击/防御（攻击方为攻击力，防御方为防御力）*领袖拥有(2X)"
+CNM_BATTLEINFO_BATTALION_NOT_AVALIABLE_TOOLTIP:"请注意,士气 < 20,人手 < 100,动员度为0的营无法进入战斗.营的选择权重是:人力*士气*动员度*基础攻击/防御(攻击方为攻击力,防御方为防御力)*领袖拥有(2X)"
 

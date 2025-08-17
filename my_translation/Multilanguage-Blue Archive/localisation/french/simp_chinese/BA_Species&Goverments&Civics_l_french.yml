@@ -1,4 +1,4 @@
-﻿l_french:
+l_french:
 ###############################
  FLAG_CATEGORY_ba:0 "Drapeau de Blue Archive"
  name_list_Schale:0 "Blue Archive"
@@ -60,7 +60,7 @@
 
  NPASS:0 "NPASS"
  EMPIRE_DESIGN_BA_NPA:0 "Nouvelle Fédération des Préceptes"
- EMPIRE_DESIGN_BA_NPA_desc:0 "Pendant longtemps, nous avons été opprimés par ceux qui se disaient au « centre du monde ».\nTout est vain.\nNous avons saisi l'occasion éphémère de briser la splendeur de nos oppresseurs, ainsi que les chaînes qui nous liaient. Nous avons tout donné en échange de notre liberté.\nMaintenant, nous pouvons enfin porter notre regard au-delà de notre planète dévastée, pour sauver Kivotos, chancelante après ces troubles…"
+ EMPIRE_DESIGN_BA_NPA_desc:0 "Pendant longtemps, nous avons été opprimés par ceux qui se disaient au « centre du monde ».\nTout est vain.\nNous avons saisi l'occasion éphémère de briser la splendeur de nos oppresseurs, ainsi que les chaînes qui nous liaient. Nous avons tout donné en échange de notre liberté.\nMaintenant, nous pouvons enfin porter notre regard au-delà de notre planète dévastée, pour sauver Kivotos, chancelante après ces troubles..."
  START_SCREEN_KYRIE:0 "Nous avons jadis possédé une terre sacrée, où nous nous sommes rencontrées, où nous avons versé des larmes et ri ensemble. Pourtant, emplies de haine, nous avons de nos propres mains piétiné cette terre d'antan, la transformant en un brasier infernal. Sans refuge ni soutien, nous avons erré silencieusement parmi les ruines. Personne n'aurait imaginé que la voûte céleste, que nous ne regardions qu'en pleine tristesse, deviendrait notre nouveau foyer."
  START_SCREEN_BA_NPA:0 "$EMPIRE_DESIGN_BA_NPA_desc$"
 
@@ -262,7 +262,7 @@
  BA_Shittem.3002.desc:0 "(Peu après la soumission de la requête, deux étranges jeunes filles vêtues de l'uniforme de l'§BAcadémie Technologique de Millennium§! firent irruption dans le bureau.)"
  BA_Shittem.3002.a:0 "Qui êtes-vous ?"
  BA_Shittem.3002.a.re:0 "§W« Shioyama Noah du Séminaire, veuillez pardonner cette intrusion soudaine... Ou plutôt, cela fait un moment que nous ne nous sommes pas rencontrés, Sensei. Voici Tendou Aris du Club de Développement de Jeux. Nous avons été très occupées à cause de cette requête, et je pense qu'il est juste de vous faire un rapport. »§!\n\n§B« Sensei, merci de votre soutien aux travaux de l'Académie Technologique de Millennium ! Tendou Aris, la courageuse chargée d'une mission de sauvetage...\n...est aussi le prototype de cette expérience robotique ! »§!"
- BA_Shittem.3002.b:0 "…Bonjour, Alice, Noah."
+ BA_Shittem.3002.b:0 "...Bonjour, Alice, Noah."
  BA_Shittem.3002.b.re:0 "§W« Auparavant, notre Académie des Sciences de Millennium s'est intéressée aux technologies qui ont permis de créer Aris. Nous avons tenté des scans et analyses, et avons réussi à rétro-ingénieriser certaines technologies clés actuellement insolubles. Grâce à votre aide, nous avons pu fabriquer de nombreux prototypes et modèles cette fois-ci, mais leur intelligence est loin d'être comparable à celle d'Aris... \nMaintenant, nous devons collecter énormément de données pour optimiser l'intelligence des modèles de production de masse, en faisant qu'Aris accomplisse diverses tâches... Professeur, qu'en pensez-vous ? »§!"
  BA_Shittem.3002.c:0 "Et si tu allais au Conseil Général des Étudiants ? Le Bureau Général serait ravi de t'accueillir."
  BA_Shittem.3002.c.re:0 "§B« Bip-bip-boum ! Aris a accepté une nouvelle mission, Aris fera de son mieux pour aider ! »§!\n\n\n(Vous pouvez assigner Aris à d'autres fonctions sur la page « Réserve de Dirigeants - Robots-Princesse »)"

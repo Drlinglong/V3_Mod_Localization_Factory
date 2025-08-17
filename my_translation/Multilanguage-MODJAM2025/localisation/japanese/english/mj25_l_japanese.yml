@@ -1,20 +1,20 @@
-﻿l_japanese:
+l_japanese:
  year_2200_start:0 "「通常スタート」"
  year_2225_start:0 "「序盤スタート」"
  year_2250_start:0 "「中盤スタート」"
  year_2275_start:0 "「終盤手前スタート」"
  year_2300_start:0 "「終盤スタート」"
  year_2200_start.tt:0 "「変更なしの通常スタート」"
- year_2225_start.tt:0 "「§T序盤スタート§!\n\n§Hすべての帝国§!は以下から開始:\n§G高度な首都§! & §G3つの開発済み惑星§!\nすべての§GTier 1§!テクノロジーがアンロック済み\n§G伝統ツリー§!を§G1つ§!選択可能\n§Gアセンションパーク§!を§G1つ§!選択可能\n艦隊に§G艦隊上限の80%§!の艦船\n§G最寄りの帝国§!と接触済み\n\n\n§Y上級スタートを使用する場合、中盤と終盤の開始年を早めることを推奨します。\n§R警告: 低速なCPUでは上級スタートの生成に時間がかかる場合があります。§!」"
- year_2250_start.tt:0 "「§T中盤スタート§!\n\n§Hすべての帝国§!は以下から開始:\n§G高度な首都§! & §G5つの開発済み惑星§!\nすべての§GTier 2§!テクノロジーがアンロック済み\n§G伝統ツリー§!を§G2つ§!選択可能\n§Gアセンションパーク§!を§G2つ§!選択可能\n艦隊に§G艦隊上限の80%§!の艦船\n§G銀河共同体§!がゲーム開始時に形成済み\n\n\n§Y上級スタートを使用する場合、中盤と終盤の開始年を早めることを推奨します。\n§R警告: 低速なCPUでは上級スタートの生成に時間がかかる場合があります。§!」"
- year_2275_start.tt:0 "「§T終盤手前スタート§!\n\n§Hすべての帝国§!は以下から開始:\n§G高度な首都§! & §G7つの開発済み惑星§!\nすべての§GTier 3§!テクノロジーがアンロック済み\n§G伝統ツリー§!を§G3つ§!選択可能\n§Gアセンションパーク§!を§G3つ§!選択可能\n艦隊に§G艦隊上限の80%§!の艦船\n§G銀河共同体§!形成済み\n銀河共同体で§GTier 1§!の決議がすべて可決済み\n\n\n§Y上級スタートを使用する場合、中盤と終盤の開始年を早めることを推奨します。§!\n§R警告: 低速なCPUでは上級スタートの生成に時間がかかる場合があります。§!」"
- year_2300_start.tt:0 "「§T終盤スタート§!\n\n§Hすべての帝国§!は以下から開始:\n§G高度な首都§! & §G9つの開発済み惑星§!\nすべての§GTier 4§!テクノロジーがアンロック済み\n§G伝統ツリー§!を§G4つ§!選択可能\n§Gアセンションパーク§!を§G4つ§!選択可能\n艦隊に§G艦隊上限の80%§!の艦船\n§G銀河共同体§!形成済み\n§G銀河評議会§!形成済み\n§G銀河市場§!形成済み\n銀河共同体で§GTier 2§!の決議がすべて可決済み\n\n\n§Y上級スタートを使用する場合、中盤と終盤の開始年を早めることを推奨します。§!\n§R警告: 低速なCPUでは上級スタートの生成に時間がかかる場合があります。§!」"
+ year_2225_start.tt:0 "「§T序盤スタート§!\n\n§Hすべての帝国§!は以下から開始:\n§G高度な首都§! & §G3つの開発済み惑星§!\nすべての§GTier 1§!テクノロジーがアンロック済み\n§G伝統ツリー§!を§G1つ§!選択可能\n§Gアセンションパーク§!を§G1つ§!選択可能\n艦隊に§G艦隊上限の80%§!の艦船\n§G最寄りの帝国§!と接触済み\n\n\n§Y上級スタートを使用する場合,中盤と終盤の開始年を早めることを推奨します.\n§R警告: 低速なCPUでは上級スタートの生成に時間がかかる場合があります.§!」"
+ year_2250_start.tt:0 "「§T中盤スタート§!\n\n§Hすべての帝国§!は以下から開始:\n§G高度な首都§! & §G5つの開発済み惑星§!\nすべての§GTier 2§!テクノロジーがアンロック済み\n§G伝統ツリー§!を§G2つ§!選択可能\n§Gアセンションパーク§!を§G2つ§!選択可能\n艦隊に§G艦隊上限の80%§!の艦船\n§G銀河共同体§!がゲーム開始時に形成済み\n\n\n§Y上級スタートを使用する場合,中盤と終盤の開始年を早めることを推奨します.\n§R警告: 低速なCPUでは上級スタートの生成に時間がかかる場合があります.§!」"
+ year_2275_start.tt:0 "「§T終盤手前スタート§!\n\n§Hすべての帝国§!は以下から開始:\n§G高度な首都§! & §G7つの開発済み惑星§!\nすべての§GTier 3§!テクノロジーがアンロック済み\n§G伝統ツリー§!を§G3つ§!選択可能\n§Gアセンションパーク§!を§G3つ§!選択可能\n艦隊に§G艦隊上限の80%§!の艦船\n§G銀河共同体§!形成済み\n銀河共同体で§GTier 1§!の決議がすべて可決済み\n\n\n§Y上級スタートを使用する場合,中盤と終盤の開始年を早めることを推奨します.§!\n§R警告: 低速なCPUでは上級スタートの生成に時間がかかる場合があります.§!」"
+ year_2300_start.tt:0 "「§T終盤スタート§!\n\n§Hすべての帝国§!は以下から開始:\n§G高度な首都§! & §G9つの開発済み惑星§!\nすべての§GTier 4§!テクノロジーがアンロック済み\n§G伝統ツリー§!を§G4つ§!選択可能\n§Gアセンションパーク§!を§G4つ§!選択可能\n艦隊に§G艦隊上限の80%§!の艦船\n§G銀河共同体§!形成済み\n§G銀河評議会§!形成済み\n§G銀河市場§!形成済み\n銀河共同体で§GTier 2§!の決議がすべて可決済み\n\n\n§Y上級スタートを使用する場合,中盤と終盤の開始年を早めることを推奨します.§!\n§R警告: 低速なCPUでは上級スタートの生成に時間がかかる場合があります.§!」"
  
  tradition_effects:0 "「\n伝統効果:\n」"
  tradition_picks:0 "「\n残りの伝統選択」"
  tradition_picks_remaining:0 "「$tradition_picks$: [This.tradition_picks]」"
  mj_25_game_start_5_title:0 "「伝統を選択」"
- mj_25_game_start_5_desc:0 "「我らが偉大なる[This.GetName]は、宇宙への進出と共に飛躍的な進歩を遂げた。新世界を植民し、版図を拡大したのだ。社会が発展するにつれて、帝国内の慣習も変化し、新たな伝統が生まれた。\n\n$tradition_picks_remaining$」"
+ mj_25_game_start_5_desc:0 "「我らが偉大なる[This.GetName]は,宇宙への進出と共に飛躍的な進歩を遂げた.新世界を植民し,版図を拡大したのだ.社会が発展するにつれて,帝国内の慣習も変化し,新たな伝統が生まれた.\n\n$tradition_picks_remaining$」"
 
  tradition_adaptability_recycling_survival_fittest_environmental_diversification_adaptive_ecology_appropriation:0 "「['tradition_category:tradition_adaptability']伝統をアンロックする$NEW_LINE$['tradition:tr_adaptability_recycling']$NEW_LINE$['tradition:tr_adaptability_survival_fittest']$NEW_LINE$['tradition:tr_adaptability_environmental_diversification']$NEW_LINE$['tradition:tr_adaptability_adaptive_ecology']$NEW_LINE$['tradition:tr_adaptability_appropriation']」"
  tradition_aptitude_the_empire_needs_you_specialist_training_psychological_profiling_healthcare_program_champions_of_the_empire:0 "「['tradition_category:tradition_aptitude']伝統をアンロックする$NEW_LINE$['tradition:tr_aptitude_the_empire_needs_you']$NEW_LINE$['tradition:tr_aptitude_specialist_training']$NEW_LINE$['tradition:tr_aptitude_psychological_profiling']$NEW_LINE$['tradition:tr_aptitude_healthcare_program']$NEW_LINE$['tradition:tr_aptitude_champions_of_the_empire']」"
@@ -39,5 +39,5 @@
 
 
  mj25_game_start_title:0 "「上級スタートオプションを選択」"
- mj25_game_start_desc:0 "「#MODJAM2025に関心をお寄せいただき、ありがとうございます！\n\nこのイベントでは、ゲームを先行させてすべての危機を体験することができます。すべての起源が完璧に機能するわけではありませんし、上級スタートを選ぶよりも、ご自身でゲームをプレイする方が、勢力的に有利になる可能性が非常に高いです。\n\n#MODJAM2025をプレイしていただき、ありがとうございます。ぜひ以下から投票をお願いします！\n\nhttp://pdxint.at/mj25vote」"
+ mj25_game_start_desc:0 "「#MODJAM2025に関心をお寄せいただき,ありがとうございます!\n\nこのイベントでは,ゲームを先行させてすべての危機を体験することができます.すべての起源が完璧に機能するわけではありませんし,上級スタートを選ぶよりも,ご自身でゲームをプレイする方が,勢力的に有利になる可能性が非常に高いです.\n\n#MODJAM2025をプレイしていただき,ありがとうございます.ぜひ以下から投票をお願いします!\n\nhttp://pdxint.at/mj25vote」"
 

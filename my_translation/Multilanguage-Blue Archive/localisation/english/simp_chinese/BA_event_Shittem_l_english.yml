@@ -1,4 +1,4 @@
-﻿l_english:
+l_english:
  BA_Shittem.0001.name:0 "Axium's Message (In Testing)"
  BA_Shittem.0001.desc:0 "This event is the trigger to start the Shittim Chest event chain, and the window will hide afterward.\nSince the mod is in testing, clicking this will instantly grant a powerful mad buff.\nHope there are no bugs..."
  BA_Shittem.0001.a:0 "One click, a year of fun, Arona won't cost you a dime!"
@@ -17,43 +17,43 @@
 #匣子重开
  BA_Shittem.0101.name:0 "Activate the Shittim Chest"
  BA_Shittem.0101.desc:0 "Schale Underground. The Shittim Chest has been fully repaired. Although it's not the first time activating it, it's still exciting.\n“Confirming power, initiating. Connecting to Shittim Chest operating system... Complete. Requesting connection password.”"
- BA_Shittem.0101.a:0 "…Our hope is the Seven Laments…"
- BA_Shittem.0101.b:0 "…What we recall is the ancient way of Jericho…"
+ BA_Shittem.0101.a:0 "...Our hope is the Seven Laments..."
+ BA_Shittem.0101.b:0 "...What we recall is the ancient way of Jericho..."
  BA_Shittem.0101.tip:0 "Open the Shittim Chest."
 
  BA_Shittem.0102.name:0 "$BA_Shittem.0101.name$"
  BA_Shittem.0102.desc:0 "Connection password confirmed, user identified.\nWelcome to the Shittim Chest. To complete authentication, switching to main system A.R.O.N.A."
- BA_Shittem.0102.a:0 "…Finally…!"
+ BA_Shittem.0102.a:0 "...Finally...!"
  BA_Shittem.0102.b:0 "(Skip this scene)"
 
  BA_Shittem.0103.name:0 "$BA_Shittem.0101.name$"
- BA_Shittem.0103.desc:0 "(In a familiar, damaged classroom, a familiar girl is dozing off on a desk)\n\n“Guhuu…zzZ\n\nGuhuu…zzZ\n\nNyan…cake…strawberry milk…uhehehe! zzZ”"
+ BA_Shittem.0103.desc:0 "(In a familiar, damaged classroom, a familiar girl is dozing off on a desk)\n\n“Guhuu...zzZ\n\nGuhuu...zzZ\n\nNyan...cake...strawberry milk...uhehehe! zzZ”"
  BA_Shittem.0103.a:0 "Poke her face."
- BA_Shittem.0103.a.re:0 "“Unyah…there’s still so much…can’t eat any more…zzZ\n\nHmm…ah, but…uhm zzZ”"
+ BA_Shittem.0103.a.re:0 "“Unyah...there’s still so much...can’t eat any more...zzZ\n\nHmm...ah, but...uhm zzZ”"
  BA_Shittem.0103.b:0 "Shake her awake."
 
  BA_Shittem.0104.name:0 "$BA_Shittem.0101.name$"
- BA_Shittem.0104.desc:0 "(Drowsy…)\n“Unyah…cake…already…huh?\nHuh? Huh-huh? Eh?”"
+ BA_Shittem.0104.desc:0 "(Drowsy...)\n“Unyah...cake...already...huh?\nHuh? Huh-huh? Eh?”"
  BA_Shittem.0104.a:0 "It's me, Arona. Do you still remember me?"
- BA_Shittem.0104.a.re:0 "“You’re in this space… Eh, why? C-could it be…could it be? Eh, uwaah… Calm down, calm down… W-what time is it now?\nDon’t tell me…you found the Shittim Chest? Un…unbelievable…”"
+ BA_Shittem.0104.a.re:0 "“You’re in this space... Eh, why? C-could it be...could it be? Eh, uwaah... Calm down, calm down... W-what time is it now?\nDon’t tell me...you found the Shittim Chest? Un...unbelievable...”"
  BA_Shittem.0104.b:0 "It's already [GetYear]. Did you sleep well?"
- BA_Shittem.0104.b.re:0 "“Eh… well…\n(Briefly explained the situation of recent years)\nEh… it’s [GetYear] now, and Kivotos already has FTL technology?! Th-that’s so amazing, Arona can’t quite keep up…”"
+ BA_Shittem.0104.b.re:0 "“Eh... well...\n(Briefly explained the situation of recent years)\nEh... it’s [GetYear] now, and Kivotos already has FTL technology?! Th-that’s so amazing, Arona can’t quite keep up...”"
  BA_Shittem.0104.c:0 "Don't worry. My secretary will always be just Arona."
- BA_Shittem.0104.c.re:0 "“Mhm… mhm! Even though Arona’s model is definitely too outdated for this era, Arona will still support you in all aspects, just like before! So, once again, please take care of me, Sensei!”"
- BA_Shittem.0104.d:0 "And then, the next step is…"
+ BA_Shittem.0104.c.re:0 "“Mhm... mhm! Even though Arona’s model is definitely too outdated for this era, Arona will still support you in all aspects, just like before! So, once again, please take care of me, Sensei!”"
+ BA_Shittem.0104.d:0 "And then, the next step is..."
 
  BA_Shittem.0105.name:0 "$BA_Shittem.0101.name$"
- BA_Shittem.0105.desc:0 "“Mhm! Even though it's still just a formality, let's proceed with the bio-authentication registration! Ugh… even though it’s not the first time, it’s still so embarrassing… Please come over here. Hehehe, Sensei, don’t be shy either, come a little closer.”"
- BA_Shittem.0105.a:0 "…"
+ BA_Shittem.0105.desc:0 "“Mhm! Even though it's still just a formality, let's proceed with the bio-authentication registration! Ugh... even though it’s not the first time, it’s still so embarrassing... Please come over here. Hehehe, Sensei, don’t be shy either, come a little closer.”"
+ BA_Shittem.0105.a:0 "..."
 
  BA_Arona_display_tooltip:0 "Click Arona's finger to complete the authentication."
- BA_Shittem.0106.desc:0 "“Meeting again after so long truly fills me with emotion… Sensei, please touch my finger again, just like you did long, long ago.”"
- BA_Shittem.0107.desc:0 "“Hehehe, it looks just like making a pinky promise. You’ve really kept our promise so well… Thank you, thank you so much.\n…Sorry, Arona’s vision is a bit blurry now, I can’t see very clearly. Can we do it one more time…?”"
- BA_Shittem.0108.desc:0 "“What does Kivotos look like now…? If it’s okay, Sensei, will you take me around the streets of Kivotos to see everything, not just inside the tower?… Ehehehe, I’m really looking forward to it. Let’s confirm one more time, and this process will be complete.”"
+ BA_Shittem.0106.desc:0 "“Meeting again after so long truly fills me with emotion... Sensei, please touch my finger again, just like you did long, long ago.”"
+ BA_Shittem.0107.desc:0 "“Hehehe, it looks just like making a pinky promise. You’ve really kept our promise so well... Thank you, thank you so much.\n...Sorry, Arona’s vision is a bit blurry now, I can’t see very clearly. Can we do it one more time...?”"
+ BA_Shittem.0108.desc:0 "“What does Kivotos look like now...? If it’s okay, Sensei, will you take me around the streets of Kivotos to see everything, not just inside the tower?... Ehehehe, I’m really looking forward to it. Let’s confirm one more time, and this process will be complete.”"
 
  BA_Shittem.0998.name:0 "Shittim Chest Activated"
- BA_Shittem.0998.desc:0 "“Alright, with this, Arona has officially returned to Schale!\nEhehehe… If you want to find Arona, you can find her in the Diplomacy interface! (§YCommunications (F10)§! -> §Y$Shittem.name$§!)”"
- BA_Shittem.0998.a:0 "(Arona…)"
+ BA_Shittem.0998.desc:0 "“Alright, with this, Arona has officially returned to Schale!\nEhehehe... If you want to find Arona, you can find her in the Diplomacy interface! (§YCommunications (F10)§! -> §Y$Shittem.name$§!)”"
+ BA_Shittem.0998.a:0 "(Arona...)"
  BA_Shittem.0998.tip:0 "End Shittim Chest Event Chain"
 
 #界面
@@ -182,7 +182,7 @@
 
  BA_Shittem.1005.title:0 "Angel 24"
  BA_Shittem.1005.common.01:0 "W-welcome, Sensei!"
- BA_Shittem.1005.common.02:0 "Ugh, so bored... Wha— W-when did you get here?!"
+ BA_Shittem.1005.common.02:0 "Ugh, so bored... Wha- W-when did you get here?!"
  BA_Shittem.1005.common.03:0 "24 hours a day, you can place an order anytime! Because this place is kinda like a convenience store, you know!"
  BA_Shittem.1005.exit:0 "Return"
 
@@ -292,28 +292,28 @@
  BA_Normal_commission_07_B:0 "“Will this kind of thing really have any use later, Arona doesn't get it..."
 
  commmission.Normal_08_A:0 "Robot Research"
- BA_Normal_commission_08_A:0 "“Sensei, this time it’s a request submitted by a group of students from Millennium Science School. It seems they’ve just researched a batch of robots… Ah, not the Aris-level kind, but a more basic type…\nAhem, anyway, they don't have enough resources or staff right now, so they've asked us for help, hoping to get resources and technical assistance… But, isn't this request a bit too much? Just how many robots do they plan to build?\n\n(Submit 1000£alloys£ alloy and complete £engineering_research£§Y$tech_droid_workers$§! Tech.) (Upon completion, we will receive 60£sr_eligma£ Eligma.)”"
+ BA_Normal_commission_08_A:0 "“Sensei, this time it’s a request submitted by a group of students from Millennium Science School. It seems they’ve just researched a batch of robots... Ah, not the Aris-level kind, but a more basic type...\nAhem, anyway, they don't have enough resources or staff right now, so they've asked us for help, hoping to get resources and technical assistance... But, isn't this request a bit too much? Just how many robots do they plan to build?\n\n(Submit 1000£alloys£ alloy and complete £engineering_research£§Y$tech_droid_workers$§! Tech.) (Upon completion, we will receive 60£sr_eligma£ Eligma.)”"
  commmission.Normal_08_B:0 "$commmission.Normal_08_A$"
  BA_Normal_commission_08_tip:0 "Submit 1000£alloys£ alloy and complete £engineering_research£§Y$tech_droid_workers$§! Tech."
- BA_Normal_commission_08_B:0 "“Ahaha, as expected of Millennium's students… Sensei, thank you for your hard work.”"
+ BA_Normal_commission_08_B:0 "“Ahaha, as expected of Millennium's students... Sensei, thank you for your hard work.”"
 
  commmission.Normal_09_A:0 "Robot Research - Continued"
- BA_Normal_commission_09_A:0 "“Sensei, do you remember those students from Millennium Science School who submitted the robot research request last time? Yes, that's right, the ones who took 1000£alloys£ alloy and kept the General Affairs Office busy for months researching chips and architectures…\n…How perceptive of you, ugh… They’ve made another outrageous request this time, asking for 1000£alloys£ alloy and 1000£consumer_goods£ Consumer Goods, and they also want the Culture Office to continue participating, to make the prototypes even cuter and smarter…\nHuh, we absolutely must support them… really, Sensei? I just have a feeling your intentions aren't entirely pure…”\n\n(Submit 1000£consumer_goods£ Consumer Goods, 1000£alloys£ alloy, and complete £engineering_research£§Y$tech_synthetic_workers$§! Tech.) (Upon completion, we will receive 40£sr_eligma£ Eligma and 3£pops£ Prototype Robot Pops.)”"
+ BA_Normal_commission_09_A:0 "“Sensei, do you remember those students from Millennium Science School who submitted the robot research request last time? Yes, that's right, the ones who took 1000£alloys£ alloy and kept the General Affairs Office busy for months researching chips and architectures...\n...How perceptive of you, ugh... They’ve made another outrageous request this time, asking for 1000£alloys£ alloy and 1000£consumer_goods£ Consumer Goods, and they also want the Culture Office to continue participating, to make the prototypes even cuter and smarter...\nHuh, we absolutely must support them... really, Sensei? I just have a feeling your intentions aren't entirely pure...”\n\n(Submit 1000£consumer_goods£ Consumer Goods, 1000£alloys£ alloy, and complete £engineering_research£§Y$tech_synthetic_workers$§! Tech.) (Upon completion, we will receive 40£sr_eligma£ Eligma and 3£pops£ Prototype Robot Pops.)”"
  commmission.Normal_09_B:0 "$commmission.Normal_09_A$"
  BA_Normal_commission_09_tip:0 "Submit 1000£consumer_goods£ Consumer Goods, 1000£alloys£ alloy, and complete £engineering_research£§Y$tech_synthetic_workers$§! Tech."
- BA_Normal_commission_09_B:0 "“Wow, Sensei, look! Such cute robots! Uhm, our invested resources weren't wasted… right?”"
+ BA_Normal_commission_09_B:0 "“Wow, Sensei, look! Such cute robots! Uhm, our invested resources weren't wasted... right?”"
 
  commmission.Normal_10_A:0 "Robot Research - Continued II"
- BA_Normal_commission_10_A:0 "“Sensei, those students from Millennium Science School are back again… Yes, the same ones who commissioned the Girlybots… Now, the students are getting along really well with the Girlybots, but it seems there are still some odd feelings when students interact with them… So, this time they’ve brought a lot of data and want to ask the General Affairs Office to allocate resources and help research the Girlybots' personality matrices… Huh, do we have to support them even if it means selling everything we own? Sigh…”\n\n(Submit 2000£consumer_goods£ Consumer Goods, 2000£alloys£ alloy, and complete £engineering_research£§Y$tech_synthetic_leaders$§! Tech.) (Upon completion, we will receive 40£sr_eligma£ Eligma, and we can transform Girlybots into advanced individuals with personality matrices.)”"
+ BA_Normal_commission_10_A:0 "“Sensei, those students from Millennium Science School are back again... Yes, the same ones who commissioned the Girlybots... Now, the students are getting along really well with the Girlybots, but it seems there are still some odd feelings when students interact with them... So, this time they’ve brought a lot of data and want to ask the General Affairs Office to allocate resources and help research the Girlybots' personality matrices... Huh, do we have to support them even if it means selling everything we own? Sigh...”\n\n(Submit 2000£consumer_goods£ Consumer Goods, 2000£alloys£ alloy, and complete £engineering_research£§Y$tech_synthetic_leaders$§! Tech.) (Upon completion, we will receive 40£sr_eligma£ Eligma, and we can transform Girlybots into advanced individuals with personality matrices.)”"
  commmission.Normal_10_B:0 "$commmission.Normal_10_A$"
  BA_Normal_commission_10_tip:0 "Submit 2000£consumer_goods£ Consumer Goods, 2000£alloys£ alloy, and complete £engineering_research£§Y$tech_synthetic_leaders$§! and 5 levels of £society_research£§Y$tech_BA_Aris_uplifting$§! Tech."
- BA_Normal_commission_10_B:0 "…You ask why I'm unhappy? It's nothing! If the Girlybots are cuter, then just go play with them, hmph!"
+ BA_Normal_commission_10_B:0 "...You ask why I'm unhappy? It's nothing! If the Girlybots are cuter, then just go play with them, hmph!"
 
  commmission.Normal_11_A:0 "Summer Hyakuyadou Reopens!"
- BA_Normal_commission_11_A:0 "“Sensei, this time it’s a request from the students of Allied Hyakkiyako Academy… Please listen to this voicemail, Sensei:\n\n‘Hello, this is §GKawawa Shizuko§!. Summer is almost here again, Sensei, and Hyakuyadou is about to start its new round of summer expansion plans. This time, I found a beach where development was halted to use as a construction site. The scenery there is absolutely stunning, Sensei, why don't you come take a look?’\n\n(Clear the £blocker£ Shoal on the capital.) (Upon completion, we will receive 40£sr_eligma£ Eligma.)”"
+ BA_Normal_commission_11_A:0 "“Sensei, this time it’s a request from the students of Allied Hyakkiyako Academy... Please listen to this voicemail, Sensei:\n\n‘Hello, this is §GKawawa Shizuko§!. Summer is almost here again, Sensei, and Hyakuyadou is about to start its new round of summer expansion plans. This time, I found a beach where development was halted to use as a construction site. The scenery there is absolutely stunning, Sensei, why don't you come take a look?’\n\n(Clear the £blocker£ Shoal on the capital.) (Upon completion, we will receive 40£sr_eligma£ Eligma.)”"
  commmission.Normal_11_B:0 "$commmission.Normal_11_A$"
  BA_Normal_commission_11_tip:0 "Clear the £blocker£ Shoal Ruins on the capital."
- BA_Normal_commission_11_B:0 "“Hyakuyadou, Hyakuyadou! Eheheh…”"
+ BA_Normal_commission_11_B:0 "“Hyakuyadou, Hyakuyadou! Eheheh...”"
  d_BA_beach:0 "£blocker£Shoal Ruins"
  d_BA_beach_desc:0 "A shoal that was partially developed but unexpectedly halted, it is the target for Hyakuyadou's next expansion."
 
@@ -322,32 +322,32 @@
  BA_Kyrie_commmission_01_A:0 "“Sensei, the Mining Association has submitted a plan regarding the research of unique ruins on our World. It outlines standard clearance procedures for the ruins, aiming to further collect various information so the ruins can better serve Arius in the interstellar era. This plan requires the establishment of an Integrated Data Lab, so they have submitted a request for our assistance.”\n\n§R(Note: This request is a crucial part of this origin's main event chain; please complete it as soon as possible!)§! (After researching $tech_BA_ruins_research$ Tech, establish the §YIntegrated Data Lab§! building on the homeworld. This building allows Food Service Staff and Prefects to start producing £engineering_research£ Engineering Research Points.) (Upon completion, we will receive 125£sr_keystone£ Keystone.)”"
  commmission.Kyrie_01_B:0 "$commmission.Kyrie_01_A$"
  BA_Kyrie_commmission_01_tip:0 "Construct the §YIntegrated Data Lab§! building to enable Food Service Staff, Scavengers, and Supply Clerks to begin producing £engineering£ Engineering Research Points."
- BA_Kyrie_commmission_01_B:0 "“The lab has been established. I hope they can produce some results… Sensei, thank you for your hard work.”"
+ BA_Kyrie_commmission_01_B:0 "“The lab has been established. I hope they can produce some results... Sensei, thank you for your hard work.”"
 
  commmission.Kyrie_02_A:0 "Autonomous Navy Plan: Preliminary"
- BA_Kyrie_commmission_02_A:0 "“Sensei, the Military Industry Department really loves the technology we recovered from the Millennium Science School ruins. The concepts for new ship types were proposed by them. Recently, Arona has received so many emails from them, all asking when the prototype ship project will launch…”\n\n(Launch one §Y$BA_missile_ship$§!.) (Upon completion, we will receive 10£sr_eligma£ Eligma and 2000£society£ Society Research.)”"
+ BA_Kyrie_commmission_02_A:0 "“Sensei, the Military Industry Department really loves the technology we recovered from the Millennium Science School ruins. The concepts for new ship types were proposed by them. Recently, Arona has received so many emails from them, all asking when the prototype ship project will launch...”\n\n(Launch one §Y$BA_missile_ship$§!.) (Upon completion, we will receive 10£sr_eligma£ Eligma and 2000£society£ Society Research.)”"
  commmission.Kyrie_02_B:0 "$commmission.Kyrie_02_A$"
  BA_Kyrie_commmission_02_tip:0 "Launch one §Y$BA_missile_ship$§!."
- BA_Kyrie_commmission_02_B:0 "Hooah… The kids in the Military Industry Department are so enthusiastic, Sensei. Thank you for your hard work…"
+ BA_Kyrie_commmission_02_B:0 "Hooah... The kids in the Military Industry Department are so enthusiastic, Sensei. Thank you for your hard work..."
 
  commmission.Kyrie_03_A:0 "Shelter 24/7 Hot Water Project"
- BA_Kyrie_commmission_03_A:0 "“Sensei, the students living in the Gehenna-renovated shelter have sent a request… When the Gehenna shelter renovation was underway, it was discovered that the water pipes and power lines there were severely damaged, but for some reason, the Engineering Department didn't receive enough funding, resulting in only basic water and electricity supply. Now the students living there are quite unhappy about the lack of hot water, but multiple complaints haven't resolved anything. But why would they come to Arona… Huh? You mean Gehenna's original Engineering Department was responsible for that shelter's renovation? Ah, well, in that case, there’s no choice then, it seems only we can help them… By the way, why don't they just use boilers?”\n\n(Submit 200£alloys£ alloy.) (Upon completion, we will receive 100£sr_pyroxenes£ Pyroxene and 20£sr_eligma£ Eligma.)”"
+ BA_Kyrie_commmission_03_A:0 "“Sensei, the students living in the Gehenna-renovated shelter have sent a request... When the Gehenna shelter renovation was underway, it was discovered that the water pipes and power lines there were severely damaged, but for some reason, the Engineering Department didn't receive enough funding, resulting in only basic water and electricity supply. Now the students living there are quite unhappy about the lack of hot water, but multiple complaints haven't resolved anything. But why would they come to Arona... Huh? You mean Gehenna's original Engineering Department was responsible for that shelter's renovation? Ah, well, in that case, there’s no choice then, it seems only we can help them... By the way, why don't they just use boilers?”\n\n(Submit 200£alloys£ alloy.) (Upon completion, we will receive 100£sr_pyroxenes£ Pyroxene and 20£sr_eligma£ Eligma.)”"
  commmission.Kyrie_03_B:0 "$commmission.Kyrie_03_A$"
  BA_Kyrie_commmission_03_tip:0 "Submit 200£alloys£ alloy."
- BA_Kyrie_commmission_03_B:0 "“I hope this problem can be resolved before reconstruction is complete… Anyway, Sensei, thank you for your hard work.”"
+ BA_Kyrie_commmission_03_B:0 "“I hope this problem can be resolved before reconstruction is complete... Anyway, Sensei, thank you for your hard work.”"
 
  commmission.Kyrie_04_A:0 "Fireworks Festival"
- BA_Kyrie_commmission_04_A:0 "“Sensei, last night there was an accident at a Volatile Mote warehouse, but there wasn't any major damage. However, the sparks covering the sky when the Volatile Motes explode were really beautiful… Huh, fireworks, and a festival specifically for putting on fireworks for everyone, where everyone can shop and play together? Kivotos actually used to have such a unique festival in the past… By the way, Sensei, why don't we find some expiring Volatile Motes and have a festival like in the old days!”\n\n(Submit 40£volatile_motes£ Volatile Motes, 400£food£ Food.) (Upon completion, we will receive 100£sr_pyroxenes£ Pyroxene, 30£sr_eligma£ Eligma, and 12 months of £unity£ Unity income.)”"
+ BA_Kyrie_commmission_04_A:0 "“Sensei, last night there was an accident at a Volatile Mote warehouse, but there wasn't any major damage. However, the sparks covering the sky when the Volatile Motes explode were really beautiful... Huh, fireworks, and a festival specifically for putting on fireworks for everyone, where everyone can shop and play together? Kivotos actually used to have such a unique festival in the past... By the way, Sensei, why don't we find some expiring Volatile Motes and have a festival like in the old days!”\n\n(Submit 40£volatile_motes£ Volatile Motes, 400£food£ Food.) (Upon completion, we will receive 100£sr_pyroxenes£ Pyroxene, 30£sr_eligma£ Eligma, and 12 months of £unity£ Unity income.)”"
  commmission.Kyrie_04_B:0 "$commmission.Kyrie_04_A$"
  BA_Kyrie_commmission_04_tip:0 "Submit 40£volatile_motes£ Volatile Motes, 400£food£ Food."
  BA_Kyrie_commmission_04_B:0 "“Sensei, it seems everyone is really enthusiastic about the Fireworks Festival! Let's set a date, Arona will go arrange it right away!”"
 
  #伊甸条约
  commmission.EdenTreaty_01_A:0 "General Student Council Reorganization"
- BA_EdenTreaty_commmission_01_A:0 "“Sensei, this is a request submitted jointly by many small and medium-sized academies. Ah, perhaps it would be more accurate to call it a protest…\nEver since the new General Student Council President [Root.GetRulerName] took office, the General Student Council and the Eden Treaty organization have started to exhibit a centralization phenomenon, and some administrative orders have effectively infringed upon the interests of these academies… Sensei, do you have any solutions?\nHmm… Arona believes what you said is indeed a good method, but it will surely require overcoming resistance from all sides…\n\n(Submit 500£influence£ Influence and complete £society_research£§Y$tech_BA_culture_Federal$§! Tech.) (Upon completion, we will receive 80£sr_eligma£ Eligma.)”"
+ BA_EdenTreaty_commmission_01_A:0 "“Sensei, this is a request submitted jointly by many small and medium-sized academies. Ah, perhaps it would be more accurate to call it a protest...\nEver since the new General Student Council President [Root.GetRulerName] took office, the General Student Council and the Eden Treaty organization have started to exhibit a centralization phenomenon, and some administrative orders have effectively infringed upon the interests of these academies... Sensei, do you have any solutions?\nHmm... Arona believes what you said is indeed a good method, but it will surely require overcoming resistance from all sides...\n\n(Submit 500£influence£ Influence and complete £society_research£§Y$tech_BA_culture_Federal$§! Tech.) (Upon completion, we will receive 80£sr_eligma£ Eligma.)”"
  commmission.EdenTreaty_01_B:0 "$commmission.EdenTreaty_01_A$"
  BA_EdenTreaty_commmission_01_tip:0 "Submit 500£influence£ Influence and and complete £society_research£§Y$tech_BA_culture_Federal$§! Tech."
- BA_EdenTreaty_commmission_01_B:0 "“…Grown-up work really isn't easy, you really worked hard this time, Sensei!”"
+ BA_EdenTreaty_commmission_01_B:0 "“...Grown-up work really isn't easy, you really worked hard this time, Sensei!”"
 
 #天使24
  buy_resource_eligma:0 "Use £sr_eligma£ to Purchase Resources"

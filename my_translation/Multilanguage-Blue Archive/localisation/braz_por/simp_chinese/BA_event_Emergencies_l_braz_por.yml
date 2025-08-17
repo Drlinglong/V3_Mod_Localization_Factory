@@ -1,4 +1,4 @@
-﻿l_braz_por:
+l_braz_por:
 ####################
 ##Rabbit突袭
 ####################
@@ -107,13 +107,13 @@
  BA_Emergencies.0015.c.re:0 "§E“... Saki Sorai, da Academia Especial SRT, membro do Esquadrão Coelho... ou era. Antes de vocês me trazerem para cá sem motivo algum.”§!"
  BA_Emergencies.0015.d:0 "Boa atitude. Você já entendeu a situação atual?"
  BA_Emergencies.0015.d.re:0 "§E“As coisas chegaram a este ponto, você não acha que ameaças ainda funcionam conosco, não é? O treinamento da SRT também inclui como reagir após a captura.\n§HNão sonhe em ouvir nada de mim.§!”§!"
- BA_Emergencies.0015.e:0 "… Pelas suas notas, você foi uma aluna excelente na SRT."
+ BA_Emergencies.0015.e:0 "... Pelas suas notas, você foi uma aluna excelente na SRT."
  BA_Emergencies.0015.e.re:0 "§E“...”§!"
  BA_Emergencies.0015.f:0 "Você tirou quase nota máxima nas provas escritas e não cometeu quase nenhum erro nas simulações práticas. Por que você fez isso?"
  BA_Emergencies.0015.f.re:0 "§E“... Valkyrie e SRT são diferentes.\nNa SRT, temos que seguir regras estritas mesmo depois das aulas. Acordar na hora, arrumar a cama, depois mergulhar em um dia de treinamento e estudo, e mesmo depois das aulas no dormitório, não podemos relaxar a guarda para situações de emergência. Essa mentalidade de estar sempre pronta para a batalha é o motivo pelo qual a SRT é conhecida.§H\n... Diferente da Academia Valkyrie.§!\nAqueles que são chamados de mais rigorosos com as regras, a Segurança Pública, também usam roupas casuais e fazem o que querem depois das aulas, não é? Em vez de ser um cachorro vivendo livre, mas relaxado, eu preferiria ser um lobo que sobrevive com orgulho mesmo em um ambiente rigoroso.”§!"
  BA_Emergencies.0015.g:0 "Entendi. Então por que você usou toda a sua munição para destruir o drone?"
  BA_Emergencies.0015.g.re:0 "§E“...\n\n... Uh, eu nunca desperdicei munição no treinamento, então eu queria tentar uma vez e...”§!"
- BA_Emergencies.0015.return:0 "……"
+ BA_Emergencies.0015.return:0 "......"
 
  BA_Emergencies.0016.name:0 "Registro de Interrogatório 977-R-2"
  BA_Emergencies.0016.desc:0 "§B“Ah, já era hora de me perguntar, mas por quantas horas eu ainda vou ficar aqui? Não dá pra me deixar ir logo? Não sobrou muito do meu doce de emergência.”§!"
@@ -127,7 +127,7 @@
  BA_Emergencies.0016.d.re:0 "§B“Ah, é?”§!"
  BA_Emergencies.0016.e:0 "A SRT não é essencialmente uma organização para proteger a segurança dos cidadãos?"
  BA_Emergencies.0016.e.re:0 "§H“Eh, tinha isso?”§!"
- BA_Emergencies.0016.return:0 "……"
+ BA_Emergencies.0016.return:0 "......"
 
  BA_Emergencies.0017.name:0 "Registro de Interrogatório 977-R-3"
  BA_Emergencies.0017.desc:0 "§L“Uhm...”§!"
@@ -141,7 +141,7 @@
  BA_Emergencies.0017.d.re:0 "§L“Mais do que conhecer estranhos... eu tenho medo de ser esquecida por alguém... Todos vão me tratar como se eu não existisse, e quando eu penso nisso, eu... \nEu entrei na SRT para mudar minha personalidade, mas não esperava que... O que, o que eu vou fazer agora...”§!"
  BA_Emergencies.0017.e:0 "Pensando bem, a Agência de Segurança da Vida da Valkyrie talvez seja uma boa opção?"
  BA_Emergencies.0017.e.re:0 "§L“Pouca gente, poucos problemas? Uma vida escolar tranquila, quase sem precisar encontrar ninguém...? \nMuitos cidadãos... ah... então, esquece...”§!"
- BA_Emergencies.0017.return:0 "……"
+ BA_Emergencies.0017.return:0 "......"
 
  BA_Emergencies.0018.name:0 "Interrogatório"
  BA_Emergencies.0018.desc:0 "Já entendi a situação geral, essas alunas são boas garotas. A líder ainda não foi interrogada, vamos aproveitar para colher informações delas."
@@ -159,7 +159,7 @@
  BA_Emergencies.0019.d.re:0 "§W“Não tenho intenção de fofocar, e também não tenho nenhuma queixa. Se for para pedir algo, poderiam revogar a ordem de fechamento da SRT?\n...É um pouco difícil, não é?... Então continuaremos a lutar. Para que a SRT seja reaberta.”§!"
  BA_Emergencies.0019.e:0 "Mesmo que... quase não haja chance de vitória?"
  BA_Emergencies.0019.e.re:0 "§W“Sim.\n\n§REnquanto não desistirmos, o nome da SRT não desaparecerá.§!\n\nÉ isso.”§!"
- BA_Emergencies.0019.return:0 "……"
+ BA_Emergencies.0019.return:0 "......"
 
  BA_Emergencies.0020.name:0 "Interrogatório Encerrado"
  BA_Emergencies.0020.desc:0 "Interrogatório encerrado. Após a apresentação do relatório de interrogatório, os membros do Comitê Executivo do Conselho Estudantil Federal decidiram transferir o poder de decisão sobre elas para o interrogador (ou seja, eu). Em suma, elas estão livres."
@@ -167,7 +167,7 @@
 
  BA_Emergencies.0021.name:0 "Esquadrão Rabbit"
  BA_Emergencies.0021.desc:0 "Antes mesmo de virar a esquina, já pude ouvi-las conversando sobre algo lá..."
- BA_Emergencies.0021.a:0 "……"
+ BA_Emergencies.0021.a:0 "......"
  BA_Emergencies.0021.a.re:0 "§B“Finalmente acabou... né? Meus doces estão acabando, quero ir para casa...”§!\n\n§E“Quem tem tempo para dizer algo assim! Nossa punição deve ser anunciada a qualquer momento! Pelo clima, no mínimo... devemos nos preparar para sermos expulsas...”§!\n\n§B“Mesmo que diga isso, a SRT já foi fechada e selada, não é? Mesmo que seja expulsão, para nós não é grande coisa.\nBem, uma punição mais severa que expulsão também é possível. Ser levada para uma instalação subterrânea estranha e forçada a fazer todo tipo de coisa, ou ser enviada para ser animal de laboratório...”§!\n\n§L“...Aaargh! T-Tudo está acabado...”§!"
  BA_Emergencies.0021.b:0 "(Continuar ouvindo)"
  BA_Emergencies.0021.b.re:0 "§W“Desculpe. Se eu tivesse feito um pouco melhor... vocês não teriam que passar por isso...”§!\n\n§E“Por que você está se desculpando?”§!\n§B“O quê? De repente sentiu um senso de responsabilidade?”§!\n\n§E“Miyako, não se engane. Desde que a escola foi decidida a ser fechada e selada, você não é mais nossa líder de esquadrão. Então, mesmo que de repente você comece a se culpar, não sei o que dizer, e eu também não esperava que você assumisse qualquer responsabilidade.”§!\n\n§W“Mesmo dizendo isso, eu...”§!"
@@ -186,9 +186,9 @@
  BA_Emergencies.0022.next:0 "Na verdade..."
 
  BA_Emergencies.0023.name:0 "A suspeita ainda não desapareceu"
- BA_Emergencies.0023.desc:0 "§W“A operação no parque foi um sucesso… e com essa conquista, vocês ganharam o direito de dispor de nós, é isso?… Apesar de difícil de entender, a situação está clara. Então, o que desejam que façamos?”§!\n§E“Uhm… mesmo que nos devolva a pergunta…”§!§T“Já que não podemos voltar para a SRT, tanto faz para onde vamos…”§!\n§B“No fim das contas, só quero um lugar para descansar, estou exausta…”§!"
+ BA_Emergencies.0023.desc:0 "§W“A operação no parque foi um sucesso... e com essa conquista, vocês ganharam o direito de dispor de nós, é isso?... Apesar de difícil de entender, a situação está clara. Então, o que desejam que façamos?”§!\n§E“Uhm... mesmo que nos devolva a pergunta...”§!§T“Já que não podemos voltar para a SRT, tanto faz para onde vamos...”§!\n§B“No fim das contas, só quero um lugar para descansar, estou exausta...”§!"
  BA_Emergencies.0023.a:0 "Podem vir descansar um pouco em Schale, ou, se preferirem, podem até morar aqui!"
- BA_Emergencies.0023.a.re:0 "§E“...Hã?”\n§B“Chamar várias estudantes para morar na sua casa, o que você pretende fazer?”\n§W“...Inacreditável.”\n§!§T“É-é mesmo... ainda se lembra daquele rancor antigo...”\n§B“Ahhh— Vão nos fazer um monte de coisas safadinhas, né?~”\n§E“Ah, e ouvi dizer que a Schale, por alguma razão, tem escutas espalhadas por aí em vários lugares.”\n§T“Escutar nossa vida diária, o que eles pretendem fazer com isso?!”\n§B“Vão nos forçar a fazer um monte de coisas que não dão pra exibir, é isso?”§!"
+ BA_Emergencies.0023.a.re:0 "§E“...Hã?”\n§B“Chamar várias estudantes para morar na sua casa, o que você pretende fazer?”\n§W“...Inacreditável.”\n§!§T“É-é mesmo... ainda se lembra daquele rancor antigo...”\n§B“Ahhh- Vão nos fazer um monte de coisas safadinhas, né?~”\n§E“Ah, e ouvi dizer que a Schale, por alguma razão, tem escutas espalhadas por aí em vários lugares.”\n§T“Escutar nossa vida diária, o que eles pretendem fazer com isso?!”\n§B“Vão nos forçar a fazer um monte de coisas que não dão pra exibir, é isso?”§!"
  BA_Emergencies.0023.b:0 "Quem faria isso?! Não desviem a conversa para um rumo esquisito!"
  BA_Emergencies.0023.b.re:0 "§W“Agradeço sua gentileza, mas não posso aceitar esta proposta. Viver uma vida despreocupada e boa entra em conflito com nosso objetivo original de ‘protestar contra o Conselho Estudantil Federal’.”\n§E“Lá não tem regras rígidas nem treinamento, né? Um ou dois dias, tudo bem, mas não consigo aguentar ficar lá o tempo todo.”\n§B“E também não dá pra usar um monte de coisas perigosas...”\n§T“De-de repente nos pedir para confiar em você, é um pouco...”"
  BA_Emergencies.0023.c:0 "Então, que tal montarmos um acampamento no parque?"
@@ -221,23 +221,23 @@
 ##给食部与美食研
 ####################
  BA_Emergencies.0401.name:0 "Notícias: Exposição Atacada"
- BA_Emergencies.0401.desc:0 "…Segundo informações do jornal de nossa escola, ontem, um grupo de quatro estudantes que se autodenominam “Clube de Pesquisa Culinária Gourmet” lançou um ataque contra uma exposição.\nO incidente ocorreu em um aquário que estava exibindo um salmão dourado recém-descoberto. O Clube de Pesquisa Culinária Gourmet rompeu as defesas pela frente, roubou o salmão e, em seguida, roubou um carro nas proximidades, fugindo em alta velocidade. A equipe da exposição declarou que o salmão dourado roubado provavelmente não terá um bom fim (mas que o sabor não era muito diferente do salmão comum)...\nO carro roubado era um veículo recém-comprado usado para transportar ingredientes para o refeitório, e acabou caindo no rio, infelizmente, resultando em perda total, após ser interceptado pela força conjunta da segurança e pela habilidade de condução da motorista. A vítima do roubo, Aisei Fuuka, chefe do Departamento de Alimentação, está atualmente com a emoção estável..."
+ BA_Emergencies.0401.desc:0 "...Segundo informações do jornal de nossa escola, ontem, um grupo de quatro estudantes que se autodenominam “Clube de Pesquisa Culinária Gourmet” lançou um ataque contra uma exposição.\nO incidente ocorreu em um aquário que estava exibindo um salmão dourado recém-descoberto. O Clube de Pesquisa Culinária Gourmet rompeu as defesas pela frente, roubou o salmão e, em seguida, roubou um carro nas proximidades, fugindo em alta velocidade. A equipe da exposição declarou que o salmão dourado roubado provavelmente não terá um bom fim (mas que o sabor não era muito diferente do salmão comum)...\nO carro roubado era um veículo recém-comprado usado para transportar ingredientes para o refeitório, e acabou caindo no rio, infelizmente, resultando em perda total, após ser interceptado pela força conjunta da segurança e pela habilidade de condução da motorista. A vítima do roubo, Aisei Fuuka, chefe do Departamento de Alimentação, está atualmente com a emoção estável..."
  BA_Emergencies.0401.a:0 "Que a Valquíria resolva isso. Elas precisam ser devidamente responsabilizadas."
  BA_Emergencies.0401.b:0 "Alocar verbas de auxílio às vítimas"
  BA_Emergencies.0401.b.tip:0 "Gastar alguns créditos de energia para auxiliar as vítimas."
 
  BA_Emergencies.0402.name:0 "Notícias: Confronto de Gangues"
- BA_Emergencies.0402.desc:0 "…Segundo informantes, duas gangues na região autônoma de Gehenna negociaram sobre uma disputa territorial. Infelizmente, a negociação não chegou a um consenso, e ambas as partes retornaram aos seus respectivos acampamentos para se preparar para uma guerra total.\nÉ importante mencionar que os repórteres de nossa escola parecem ter descoberto que o Clube de Pesquisa Culinária Gourmet, que atacou a exposição anteriormente, está estocando milho nas proximidades e aparentemente montando uma barraca de vendas. O motivo dessa ação é um mistério, e a conexão delas com as partes em conflito ainda precisa ser observada mais de perto..."
+ BA_Emergencies.0402.desc:0 "...Segundo informantes, duas gangues na região autônoma de Gehenna negociaram sobre uma disputa territorial. Infelizmente, a negociação não chegou a um consenso, e ambas as partes retornaram aos seus respectivos acampamentos para se preparar para uma guerra total.\nÉ importante mencionar que os repórteres de nossa escola parecem ter descoberto que o Clube de Pesquisa Culinária Gourmet, que atacou a exposição anteriormente, está estocando milho nas proximidades e aparentemente montando uma barraca de vendas. O motivo dessa ação é um mistério, e a conexão delas com as partes em conflito ainda precisa ser observada mais de perto..."
  BA_Emergencies.0402.a:0 "Interessante."
  BA_Emergencies.0402.b:0 "Contatem os membros do Comitê Disciplinar mais próximos. Esta é uma chance de pegá-las todas de uma vez!"
  BA_Emergencies.0402.b.tip:0 "Oferecer algum apoio material para a operação do Comitê Disciplinar"
 
  BA_Emergencies.0403.name:0 "Notícias: Conflito Encerrado"
- BA_Emergencies.0403.desc:0 "…Agora, um boletim de última hora: as duas gangues na região autônoma de Gehenna iniciaram o conflito como esperado, mas a batalha alarmou a Chefe do Comitê Disciplinar, que estava de férias nas proximidades. As gangues, ao perceberem isso, se uniram às pressas, mas foram todas eliminadas pela Chefe do Comitê Disciplinar, incluindo o grupo de quatro que se autodenominava “Clube de Pesquisa Culinária Gourmet” e estava vendendo milho assado por perto. Após esta batalha, será difícil para as gangues organizarem outra guerra em pouco tempo, e a área obteve paz temporária..."
+ BA_Emergencies.0403.desc:0 "...Agora, um boletim de última hora: as duas gangues na região autônoma de Gehenna iniciaram o conflito como esperado, mas a batalha alarmou a Chefe do Comitê Disciplinar, que estava de férias nas proximidades. As gangues, ao perceberem isso, se uniram às pressas, mas foram todas eliminadas pela Chefe do Comitê Disciplinar, incluindo o grupo de quatro que se autodenominava “Clube de Pesquisa Culinária Gourmet” e estava vendendo milho assado por perto. Após esta batalha, será difícil para as gangues organizarem outra guerra em pouco tempo, e a área obteve paz temporária..."
  BA_Emergencies.0403.a:0 "Ótimo, mas para onde o Clube de Pesquisa Culinária Gourmet fugiu?"
 
  BA_Emergencies.0404.name:0 "Notícias: Tumulto no Refeitório"
- BA_Emergencies.0404.desc:0 "…Foi relatado que, ontem, um tumulto ocorreu no refeitório do Departamento de Alimentação, quando um grupo de estudantes atraídos pelo aroma de uma iguaria e exigindo porções extras e outro grupo de estudantes assustados por um objeto não identificado se encontraram, resultando em uma correria entre a excitação e o medo. Além de uma estudante que desmaiou de raiva e fome por não ter comido por muito tempo e ter sua refeição recém-servida derrubada pela multidão, dezenas de outros estudantes sofreram ferimentos leves, por sorte ninguém sofreu ferimentos graves. Atualmente, o refeitório foi ordenado a passar por uma readequação pelo Comitê Disciplinar."
+ BA_Emergencies.0404.desc:0 "...Foi relatado que, ontem, um tumulto ocorreu no refeitório do Departamento de Alimentação, quando um grupo de estudantes atraídos pelo aroma de uma iguaria e exigindo porções extras e outro grupo de estudantes assustados por um objeto não identificado se encontraram, resultando em uma correria entre a excitação e o medo. Além de uma estudante que desmaiou de raiva e fome por não ter comido por muito tempo e ter sua refeição recém-servida derrubada pela multidão, dezenas de outros estudantes sofreram ferimentos leves, por sorte ninguém sofreu ferimentos graves. Atualmente, o refeitório foi ordenado a passar por uma readequação pelo Comitê Disciplinar."
  BA_Emergencies.0404.a:0 "Acontece."
  BA_Emergencies.0404.b:0 "Oferecer algumas sugestões de melhoria."
  BA_Emergencies.0404.b.tip:0 "Usar meus contatos para dar sugestões práticas e úteis para o refeitório."
@@ -254,34 +254,34 @@
  BA_Emergencies.0407.name:0 "Departamento de Alimentação"
  BA_Emergencies.0407.desc:0 "§B“Bem-vindo(a), bem-vindo(a)! Que bom que você aceitou o convite, a alocação de fundos para reparar este lugar ajudou muito mesmo!”§!"
  BA_Emergencies.0407.a:0 "Foi só um detalhe, Fuuka. Não precisa se preocupar tanto."
- BA_Emergencies.0407.a.response:0 "§B“Que nada, agradecer é o mínimo! Ultimamente, sempre que te vejo, sinto que sua saúde não está muito boa, você tem se alimentado bem?… Ahaha, imaginei. Preparei vários pratos nutritivos, vou trazê-los para você agora.”§!"
- BA_Emergencies.0407.b:0 "…Sem querer ofender, mas ouvi dizer que a comida daqui é bem ruim…"
- BA_Emergencies.0407.b.response:0 "§B“Isso nos dói muito também… mas foi força maior! Na verdade, o refeitório ainda nem começou a operar, a comida de hoje fui eu mesma quem cozinhou.”§!"
+ BA_Emergencies.0407.a.response:0 "§B“Que nada, agradecer é o mínimo! Ultimamente, sempre que te vejo, sinto que sua saúde não está muito boa, você tem se alimentado bem?... Ahaha, imaginei. Preparei vários pratos nutritivos, vou trazê-los para você agora.”§!"
+ BA_Emergencies.0407.b:0 "...Sem querer ofender, mas ouvi dizer que a comida daqui é bem ruim..."
+ BA_Emergencies.0407.b.response:0 "§B“Isso nos dói muito também... mas foi força maior! Na verdade, o refeitório ainda nem começou a operar, a comida de hoje fui eu mesma quem cozinhou.”§!"
  BA_Emergencies.0407.c:0 "Por falar nisso, onde está a Juri?"
  BA_Emergencies.0407.c.response:0 "§B“A Juri-chan queria fazer uns muffins assados, vai levar um tempão até ela terminar, então vamos comer primeiro. Ah, a propósito, quer um copo de cacau? Este foi processado a partir de grãos de cacau que cultivamos em nossa própria fazenda do Departamento de Alimentação, é delicioso, garanto!”§!"
  BA_Emergencies.0407.next:0 "Certo. Então, vou comer!"
- BA_Emergencies.0407.next.tip:0 "Saboreou a deliciosa comida feita pessoalmente pela Fuuka…"
+ BA_Emergencies.0407.next.tip:0 "Saboreou a deliciosa comida feita pessoalmente pela Fuuka..."
 
  BA_Emergencies.0408.name:0 "Ataque Surpresa!"
  BA_Emergencies.0408.desc:0 "Enquanto desfrutava da refeição com a Fuuka e conversava alegremente. De repente, as quatro integrantes da Sociedade de Pesquisa Culinária invadiram o local."
- BA_Emergencies.0408.a:0 "Nani…!"
+ BA_Emergencies.0408.a:0 "Nani...!"
 
  BA_Emergencies.0409.name:0 "Pesquisa Culinária"
  BA_Emergencies.0409.desc:0 "§E“Aloha! Nossos amigos nos contaram que reformaram um refeitório novo e chique aqui, então viemos provar as novidades!”§!"
  BA_Emergencies.0409.a:0 "Não, não, não! Vocês que explodiram isso antes, não foi?!"
- BA_Emergencies.0409.a.response:0 "§E“Elas mereceram! Já provamos toda a comida que pode ser chamada de deliciosa em Kivotos, que sentido faz servir uma coisa daquelas para gourmets?! Por exemplo, se você vê uma torneira aberta em uma pia não utilizada, não é um impulso razoável fechá-la?§!§R'Eu estava com o mesmo sentimento quando detonei as bombas, sabe.”§!\n§L“Acho que a comida da última vez até que não estava ruim, sabe? Mas é mais divertido causar uma confusão!”§!\n§S“…Hum, não precisa me explicar, eu não entendo mesmo… Hm? Parece ter um cheiro muito bom?”§!\n§E“Deixando isso de lado, já que estamos aqui, devemos receber pratos que correspondam ao nosso status, assim como você. Onde está o cardápio?”§!"
+ BA_Emergencies.0409.a.response:0 "§E“Elas mereceram! Já provamos toda a comida que pode ser chamada de deliciosa em Kivotos, que sentido faz servir uma coisa daquelas para gourmets?! Por exemplo, se você vê uma torneira aberta em uma pia não utilizada, não é um impulso razoável fechá-la?§!§R'Eu estava com o mesmo sentimento quando detonei as bombas, sabe.”§!\n§L“Acho que a comida da última vez até que não estava ruim, sabe? Mas é mais divertido causar uma confusão!”§!\n§S“...Hum, não precisa me explicar, eu não entendo mesmo... Hm? Parece ter um cheiro muito bom?”§!\n§E“Deixando isso de lado, já que estamos aqui, devemos receber pratos que correspondam ao nosso status, assim como você. Onde está o cardápio?”§!"
  BA_Emergencies.0409.b:0 "Vocês deveriam pedir desculpas ao Departamento de Alimentação, que trabalha de sol a sol, agora mesmo!"
- BA_Emergencies.0409.b.response:0 "§E“…Oh? Tem bebidas de boas-vindas especiais e self-service aqui, vamos experimentar primeiro.”§!\n§L“Oh? Parece bem convidativo para beber, talvez valha a pena experimentar…”\n\n“Oh… suco espremido na hora! Muito fresco, muito delicioso!”§!\n§S“Ugh! Cof, cof, cof! Que coisa é essa?! Por que nos deram xampu?!”§!\n§Y“Embora se diga que devemos ter respeito pela comida… mas… como esperado do Departamento de Alimentação, como esperado da Izumi…”§!\n§B“Aquilo deve ter sido coisa da Juri! Além do mais, a comida que faço não é exatamente uma iguaria suprema…”§!\n§S“Chato! Estou com fome, não aguento mais esperar, traga logo!”§!"
+ BA_Emergencies.0409.b.response:0 "§E“...Oh? Tem bebidas de boas-vindas especiais e self-service aqui, vamos experimentar primeiro.”§!\n§L“Oh? Parece bem convidativo para beber, talvez valha a pena experimentar...”\n\n“Oh... suco espremido na hora! Muito fresco, muito delicioso!”§!\n§S“Ugh! Cof, cof, cof! Que coisa é essa?! Por que nos deram xampu?!”§!\n§Y“Embora se diga que devemos ter respeito pela comida... mas... como esperado do Departamento de Alimentação, como esperado da Izumi...”§!\n§B“Aquilo deve ter sido coisa da Juri! Além do mais, a comida que faço não é exatamente uma iguaria suprema...”§!\n§S“Chato! Estou com fome, não aguento mais esperar, traga logo!”§!"
  BA_Emergencies.0409.next:0 "Por falar nisso, os muffins assados estão quase prontos, querem comer juntos?"
 
  BA_Emergencies.0410.name:0 "Muffins Assados"
- BA_Emergencies.0410.desc:0 "§P“É, é… Professor(a)…”§!"
+ BA_Emergencies.0410.desc:0 "§P“É, é... Professor(a)...”§!"
  BA_Emergencies.0410.a:0 "Hm? Juri, o que houve?"
- BA_Emergencies.0410.a.response:0 "§P“É… Tem mais alguma coisa que você queira comer? Os muffins assados, hoje talvez…”§!"
+ BA_Emergencies.0410.a.response:0 "§P“É... Tem mais alguma coisa que você queira comer? Os muffins assados, hoje talvez...”§!"
  BA_Emergencies.0410.b:0 "O quê? O que aconteceu com os muffins assados?"
- BA_Emergencies.0410.b.response:0 "§P“Eles… fugiram… Acabei de brincar com o Bolinho-chan, e de repente o Bolinho-chan… fugiu como se estivesse assustado…”§!"
+ BA_Emergencies.0410.b.response:0 "§P“Eles... fugiram... Acabei de brincar com o Bolinho-chan, e de repente o Bolinho-chan... fugiu como se estivesse assustado...”§!"
  BA_Emergencies.0410.next:0 "Que Bolinho-chan?! WTF!?"
- BA_Emergencies.0410.next.tip:0 "§RPressentimento sinistro…§!"
+ BA_Emergencies.0410.next.tip:0 "§RPressentimento sinistro...§!"
 
  BA_Emergencies.0411.name:0 "Ataque de Bolo!"
  BA_Emergencies.0411.desc:0 "A culinária sombria da Juri tem um poder extraordinário. Infelizmente, os muffins assados recém-saídos do forno, os Bolinhos-chan, parecem ter sentido a aura assassina das Garotas da Pesquisa Culinária e começaram a atacar em massa!"

@@ -1,4 +1,4 @@
-﻿l_spanish:
+l_spanish:
 
  ##################################
  ### pdivinity_events_l_english ###
@@ -161,12 +161,12 @@
  # fires for the one who destroys the mega
 
  pdivinity_needle.12.name:0 "Aguja del Destino destruida"
- pdivinity_needle.12.desc:0 "Lo imposible ha sido logrado. La imponente megaestructura en el sistema [From.GetName] —la llamada 'Aguja del Destino'— ha sido obliterada. La turbulencia psiónica azota los sistemas cercanos como un grito moribundo.\n\nCualquiera que fuera la fuerza que intentaba penetrar en nuestra realidad, se le ha negado su vasija. Por ahora."
+ pdivinity_needle.12.desc:0 "Lo imposible ha sido logrado. La imponente megaestructura en el sistema [From.GetName] -la llamada 'Aguja del Destino'- ha sido obliterada. La turbulencia psiónica azota los sistemas cercanos como un grito moribundo.\n\nCualquiera que fuera la fuerza que intentaba penetrar en nuestra realidad, se le ha negado su vasija. Por ahora."
  pdivinity_needle.12.a:0 "Mantuvimos la línea."
 
  # fires for the victim
  pdivinity_needle.13.name:0 "Aguja del Destino Destruida"
- pdivinity_needle.13.desc:0 "Lo impensable ha ocurrido. ¡La §HAguja del Destino§!, nuestra puerta de entrada al Arquitecto y la culminación de toda profecía, ha sido destruida.\n\nEl contragolpe psíquico ha desgarrado nuestras filas como una herida en el alma. El Velo se retira. Nuestra ascensión ha sido detenida… por ahora."
+ pdivinity_needle.13.desc:0 "Lo impensable ha ocurrido. ¡La §HAguja del Destino§!, nuestra puerta de entrada al Arquitecto y la culminación de toda profecía, ha sido destruida.\n\nEl contragolpe psíquico ha desgarrado nuestras filas como una herida en el alma. El Velo se retira. Nuestra ascensión ha sido detenida... por ahora."
  pdivinity_needle.13.a:0 "¿Cómo pudo pasar esto?"
  pdivinity_needle.13.a.tt:0 "MARCADOR DE POSICIÓN, lo escribiré, no te preocupes."
 

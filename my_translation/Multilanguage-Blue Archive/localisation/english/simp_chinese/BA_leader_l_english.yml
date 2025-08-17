@@ -1,4 +1,4 @@
-﻿l_english:
+l_english:
 ########   用户界面   ########
  MESSAGE_BA_NEW_SP_LEADER_TITLE:"Leader Reserve"
  MESSAGE_BA_NEW_SP_LEADER_DESC:"$SP_NAME|B$ has joined the Leader Reserve, and can be recruited as a special leader from the Shittim Chest."
@@ -80,7 +80,7 @@
  BA_communication.Yuuka.c:"If that's the case, then I won't hold back, okay? Kivotos currently needs some administrators to serve as governors. Can I leave that to you, Yuuka?"
  BA_communication.Yuuka.c.response:"Hmph~ Hmph~ Hmph~ Well, you've come to the right person! When it comes to administrative management, I'm confident I'm second to none! Whether it's financial summaries, fund allocation, or Decision reviews, these are all things I excel at in Seminar. Even though I'll be responsible for a World much larger than a single academy now... I'll still give it my all! You can even leave the financial expenditures for all of Kivotos, and even for yourself, to me; I'm perfectly fine with it!"
  BA_communication.Yuuka.d:"In that case, I'll trust in your abilities, Yuuka. You always tell me not to overexert myself, but it's the same for my little Yuuka; make sure to get some rest."
- BA_communication.Yuuka.d.response:"Hmph, even though Sensei, you're clearly the one who cares least about your own health... But if you insist on doing this, then let's make this an agreement between the two of us—work hard when it's time to work, and rest well when it's time to rest! Together, let's factorize away all the sadness and anger!"
+ BA_communication.Yuuka.d.response:"Hmph, even though Sensei, you're clearly the one who cares least about your own health... But if you insist on doing this, then let's make this an agreement between the two of us-work hard when it's time to work, and rest well when it's time to rest! Together, let's factorize away all the sadness and anger!"
  BA_communication.Yuuka.join:"§B$NAME_Yuuka$§! joins as a §Hleader§!."
 
  NAME_Hina:"Sorasaki Hina"
@@ -186,7 +186,7 @@
  leader_trait_ui_SP2:"Severe Social Anxiety"
  leader_trait_ui_SP2_desc:"Clearly, sending Ui off on a Science Ship to explore galaxies was a terrible choice; she's only suited to secluding herself behind the thick doors of the old library.\nPerhaps there's always a way to change things, right?"
  leader_trait_ui_SP3:"Excavator of Ancient History"
- leader_trait_ui_SP3_desc:"She finally chose to step out of the old library's doors, to behold the vibrant world beneath the starry sky, and to unearth the rise and fall of civilizations.\nIt was witnessing Ui's transformation that made me truly believe that Thaumaturgic exists in Kivotos—that Thaumaturgic called 'Miracle'."
+ leader_trait_ui_SP3_desc:"She finally chose to step out of the old library's doors, to behold the vibrant world beneath the starry sky, and to unearth the rise and fall of civilizations.\nIt was witnessing Ui's transformation that made me truly believe that Thaumaturgic exists in Kivotos-that Thaumaturgic called 'Miracle'."
 
  leader_trait_aris_SP:"AL-1S"
  leader_trait_aris_SP_desc:"[Root.GetArisSPDesc]"
@@ -1120,7 +1120,7 @@
  tech_BA_SPW_MOMIJI_WEAPON:"Starship Weapon: $MOMIJI_WEAPON$"
  tech_BA_SPW_MOMIJI_WEAPON_desc: "$tech_BA_SPW_WEAPON_desc$"
 
- KASUMI_WEAPON:"Red·Rector"
+ KASUMI_WEAPON:"Red.Rector"
  KASUMI_WEAPON_DESC:"$KASUMI_WEAPON_DESC1$$KASUMI_WEAPON_DESC2$"
  KASUMI_WEAPON_DESC1:"Kasumi's trusty sidearm."
  KASUMI_WEAPON_DESC2:"Usually, she just fires it into the sky to liven things up. But behind its cute and compact appearance, it actually hides formidable firepower."
@@ -1532,7 +1532,7 @@
  leader_special_102_UNF_desc:0 "A great hermit hides in the city; after providing aid, one vanishes without a trace."
  leader_special_103:0 "Wild Intuition"
  leader_special_103_desc:0 "Asuna's intuition is often the key to successfully completing missions."
- leader_special_103_BN:0 "7·7·7"
+ leader_special_103_BN:0 "7.7.7"
  leader_special_103_BN_desc:0 "Remaining calm in the face of danger is an agent's fundamental quality. Add a little luck, and..."
  leader_special_103_UNF:0 "Rhythm"
  leader_special_103_UNF_desc:0 "Disguised among the crowd, acting by rhythm."
@@ -1697,7 +1697,7 @@
 
 
 
-### 招募问候   ！！！涉及原版修改
+### 招募问候   !!!涉及原版修改
  LEADER_RECRUITMENT_SCRIPTED_GREETING:"§L[From.GetScriptedLeaderRecruitedGreeting_BA]§!"
 
 
@@ -1721,7 +1721,7 @@
  leader_greeting_BA_018:0 ""
  leader_greeting_BA_019:0 ""
  leader_greeting_BA_020:0 ""
- leader_greeting_BA_021:0 "Greetings—ah, perhaps that's a more Physma way of expressing it. Nice to meet you!"
+ leader_greeting_BA_021:0 "Greetings-ah, perhaps that's a more Physma way of expressing it. Nice to meet you!"
  leader_greeting_BA_022:0 "Hello, Sensei. I'm Uihama Kai from the Festival Operations Department, Allied Hyakkiyako Academy! Do you like festivals?"
  leader_greeting_BA_023:0 "Ehehe, I'm Shizuko from the Festival Operations Committee~. Please keep taking care of me from now on, Sensei? Eh? ...Ah, right, right, yes, that was just a formality!"
  leader_greeting_BA_024:0 "Hehe... I finally found you. I won't let you escape again, dear? Please don't leave my side anymore...?"

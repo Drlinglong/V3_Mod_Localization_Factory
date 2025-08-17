@@ -1,4 +1,4 @@
-﻿l_japanese:
+l_japanese:
 
  ################################
  ### pdivinity_tech_l_english ###
@@ -10,74 +10,74 @@
  ##################
 
  tech_pdivinity_psionic_jump_drive:0 "幽霊駆動装置"
- tech_pdivinity_psionic_jump_drive_desc:0 "幽霊そのものに同調した先進的なジャンプドライブ。このシステムを装備した艦船は一時的に現実間のベールに入り、従来のセンサーがその経路を追跡する前に目的地に再出現する。"
+ tech_pdivinity_psionic_jump_drive_desc:0 "幽霊そのものに同調した先進的なジャンプドライブ.このシステムを装備した艦船は一時的に現実間のベールに入り,従来のセンサーがその経路を追跡する前に目的地に再出現する."
  TECH_UNLOCK_PDIVINITY_JUMP_DRIVE_TITLE:0 "§Hコンポーネントをアンロック:§! $PDIVINITY_SHROUD_JUMP_DRIVE$"
  TECH_UNLOCK_PDIVINITY_JUMP_DRIVE_DESC:0 "§H$PDIVINITY_SHROUD_JUMP_DRIVE$§!\n$PDIVINITY_SHROUD_JUMP_DRIVE_DESC$"
 
  tech_pdivinity_psionic_reactor:0 "建築家の意志"
- tech_pdivinity_psionic_reactor_desc:0 "このエネルギー炉は、潜在的なサイオニック周波数と同期し、幽霊から直接エネルギーを引き出す。その存在は局所空間を歪め、既知のエネルギー保存の法則に逆らう。"
+ tech_pdivinity_psionic_reactor_desc:0 "このエネルギー炉は,潜在的なサイオニック周波数と同期し,幽霊から直接エネルギーを引き出す.その存在は局所空間を歪め,既知のエネルギー保存の法則に逆らう."
  TECH_UNLOCK_PDDIVINITY_PSIONIC_POWER_TITLE:0 "§Hコンポーネントをアンロック:§! $pdivinity_psionic_reactor$"
  TECH_UNLOCK_PDDIVINITY_PSIONIC_POWER_DESC:0 "§H$pdivinity_psionic_reactor$§!\n$pdivinity_psionic_reactor_desc$"
 
  tech_pdivinity_psionic_thrusters:0 "思念推進器"
- tech_pdivinity_psionic_thrusters_desc:0 "幽霊へと部分的に位相を合わせることで、これらのスラスターは慣性や摩擦を回避し、実空間の基準では不可能な機動を可能にする。"
+ tech_pdivinity_psionic_thrusters_desc:0 "幽霊へと部分的に位相を合わせることで,これらのスラスターは慣性や摩擦を回避し,実空間の基準では不可能な機動を可能にする."
  TECH_UNLOCK_PDIVINITY_PSIONIC_THRUSTER_TITLE:0 "§Hコンポーネントをアンロック:§! $Pdivinity_psionic_thruster$"
  TECH_UNLOCK_PDIVINITY_PSIONIC_THRUSTER_DESC:0 "§H$Pdivinity_psionic_thruster$§!\n$Pdivinity_psionic_thruster_desc$"
 
  tech_pdivinity_psionic_sensors:0 "幽霊残響センサー"
- tech_pdivinity_psionic_sensors_desc:0 "これらのセンサーは行動の裏にある意図を検知するよう同調されている。幽霊の中の潜在性を読み取ることで、これらを装備した艦船は脅威が顕現する前に反応できる。"
+ tech_pdivinity_psionic_sensors_desc:0 "これらのセンサーは行動の裏にある意図を検知するよう同調されている.幽霊の中の潜在性を読み取ることで,これらを装備した艦船は脅威が顕現する前に反応できる."
  TECH_UNLOCK_PDIVINITY_PSIONIC_SENSORS_TITLE:0 "§Hコンポーネントをアンロック:§! $PDIVINITY_PSIONIC_SENSOR$"
  TECH_UNLOCK_PDIVINITY_PSIONIC_SENSORS_DESC:0 "§H$PDIVINITY_PSIONIC_SENSOR$§!\n$PDIVINITY_PSIONIC_SENSOR_DESC$"
 
  tech_pdivinity_psionic_precog:0 "幽霊統合コンピュータ"
- tech_pdivinity_psionic_precog_desc:0 "サイオニック予知アルゴリズムを搭載した戦闘制御システム。不気味なほどの精度で敵の行動を予測し、戦術を最適化することを可能にする。"
+ tech_pdivinity_psionic_precog_desc:0 "サイオニック予知アルゴリズムを搭載した戦闘制御システム.不気味なほどの精度で敵の行動を予測し,戦術を最適化することを可能にする."
  TECH_UNLOCK_PDIVINITY_PSIONIC_PRECOG_TITLE:0 "§Hコンポーネントをアンロック:§! $PDIVINITY_PSIONIC_PRECOG$"
  TECH_UNLOCK_PDIVINITY_PSIONIC_PRECOG_DESC:0 "§H$PDIVINITY_PSIONIC_PRECOG$§!\n$PDIVINITY_PSIONIC_PRECOG_DESC$"
 
  tech_pdivinity_psionic_laser:0 "サイオニックランスアレイ"
- tech_pdivinity_psionic_laser_desc:0 "これらのランス放射器には、原子構造を不安定化させるサイオニック高調波が織り込まれている。装甲や船体は、その解体効果に対してほとんど保護を提供しない。"
+ tech_pdivinity_psionic_laser_desc:0 "これらのランス放射器には,原子構造を不安定化させるサイオニック高調波が織り込まれている.装甲や船体は,その解体効果に対してほとんど保護を提供しない."
 
  tech_pdivinity_psionic_lance:0 "幽霊穿孔器"
- tech_pdivinity_psionic_lance_desc:0 "物理物質を貫き、着弾点周囲のベールを弱める集中したサイオニックエネルギーのビーム。その攻撃は、死者の残響が絡みついた深い傷跡を残す。"
+ tech_pdivinity_psionic_lance_desc:0 "物理物質を貫き,着弾点周囲のベールを弱める集中したサイオニックエネルギーのビーム.その攻撃は,死者の残響が絡みついた深い傷跡を残す."
 
  tech_pdivinity_psionic_lightning:0 "幽霊の怒り"
- tech_pdivinity_psionic_lightning_desc:0 "この兵器からは、センサーよりも意志に導かれ、予測不能なサイオニック雷の混沌とした弧がほとばしる。幽霊は飢えており、これがその声である。"
+ tech_pdivinity_psionic_lightning_desc:0 "この兵器からは,センサーよりも意志に導かれ,予測不能なサイオニック雷の混沌とした弧がほとばしる.幽霊は飢えており,これがその声である."
 
  tech_pdivinity_psionic_titan_lance:0 "建築家のランス"
- tech_pdivinity_psionic_titan_lance_desc:0 "空間を切り裂き、標的を幽霊へと部分的に位相移行させるよう設計された巨大なランス級兵器。物理的であれ次元的であれ、その猛威に耐えられる構造物はほとんどない。"
+ tech_pdivinity_psionic_titan_lance_desc:0 "空間を切り裂き,標的を幽霊へと部分的に位相移行させるよう設計された巨大なランス級兵器.物理的であれ次元的であれ,その猛威に耐えられる構造物はほとんどない."
 
  tech_pdivinity_psionic_strikecraft:0 "サイオニック迎撃機"
- tech_pdivinity_psionic_strikecraft_desc:0 "幽霊内の意識の残響によって命を吹き込まれ、意志によって形作られた生きた思考体で構成される攻撃艇。彼らは本能のみによって現実を航行し、目的と意志のみに導かれる。"
+ tech_pdivinity_psionic_strikecraft_desc:0 "幽霊内の意識の残響によって命を吹き込まれ,意志によって形作られた生きた思考体で構成される攻撃艇.彼らは本能のみによって現実を航行し,目的と意志のみに導かれる."
 
  tech_pdivinity_psionic_artillery:0 "幽霊波動砲"
- tech_pdivinity_psionic_artillery_desc:0 "広大な距離に破壊的な共鳴場を投射する長距離サイオニック砲撃プラットフォーム。思考、物質、そして結合力を等しく破壊する。"
+ tech_pdivinity_psionic_artillery_desc:0 "広大な距離に破壊的な共鳴場を投射する長距離サイオニック砲撃プラットフォーム.思考,物質,そして結合力を等しく破壊する."
 
  tech_pdivinity_psionic_torpedo:0 "サイバーストプロジェクター"
- tech_pdivinity_psionic_torpedo_desc:0 "物質を透過してから幽霊をまとったエネルギーの噴出として爆発する、不安定なサイオニック投射物を発射する。"
+ tech_pdivinity_psionic_torpedo_desc:0 "物質を透過してから幽霊をまとったエネルギーの噴出として爆発する,不安定なサイオニック投射物を発射する."
 
  tech_pdivinity_psionic_shields:0 "幽霊シールド"
- tech_pdivinity_psionic_shields_desc:0 "信仰者の精神によって投射される防御障壁。知覚と確率を曲げ、艦船が本来なら完全に破壊されるはずの攻撃を生き残ることを可能にする。"
+ tech_pdivinity_psionic_shields_desc:0 "信仰者の精神によって投射される防御障壁.知覚と確率を曲げ,艦船が本来なら完全に破壊されるはずの攻撃を生き残ることを可能にする."
 
  tech_pdivinity_psionic_cloud:0 "幽霊の残響"
- tech_pdivinity_psionic_cloud_desc:0 "幽霊の意志が具現化した、サイオニックエネルギーの渦巻く雲として現れる幽玄な存在。それは現実を覆い、歪め、星々の間の虚空を運命の囁きで憑りつかせる。"
+ tech_pdivinity_psionic_cloud_desc:0 "幽霊の意志が具現化した,サイオニックエネルギーの渦巻く雲として現れる幽玄な存在.それは現実を覆い,歪め,星々の間の虚空を運命の囁きで憑りつかせる."
  TECH_UNLOCK_PDIVINITY_PSIONIC_CLOUD_CONSTRUCTION_TITLE:0 "§H艦種をアンロック:§! Shroud Echo"
- TECH_UNLOCK_PDIVINITY_PSIONIC_CLOUD_CONSTRUCTION_DESC:0 "§HShroud Echo§!\n運命の子らの哨戒艇として機能する、素早く軽快な実体。"
+ TECH_UNLOCK_PDIVINITY_PSIONIC_CLOUD_CONSTRUCTION_DESC:0 "§HShroud Echo§!\n運命の子らの哨戒艇として機能する,素早く軽快な実体."
 
  tech_pdivinity_psionic_avatar:0 "サイキック・アバター"
- tech_pdivinity_psionic_avatar_desc:0 "シュラウドの意思の生ける化身であるこのアバターは、純粋なサイキックエネルギーを纏い、現実をその意のままに歪める獰猛で謎めいた存在である。"
+ tech_pdivinity_psionic_avatar_desc:0 "シュラウドの意思の生ける化身であるこのアバターは,純粋なサイキックエネルギーを纏い,現実をその意のままに歪める獰猛で謎めいた存在である."
  TECH_UNLOCK_PDIVINITY_PSIONIC_AVATAR_CONSTRUCTION_TITLE:0 "§H艦船種別をアンロック:§! サイキック・アバター"
- TECH_UNLOCK_PDIVINITY_PSIONIC_AVATAR_CONSTRUCTION_DESC:0 "§Hサイキック・アバター§!\n運命の建築家によって最前線艦として創造された。サイキック・アバターはそのサイズに見合わぬ絶大な火力を有する。"
+ TECH_UNLOCK_PDIVINITY_PSIONIC_AVATAR_CONSTRUCTION_DESC:0 "§Hサイキック・アバター§!\n運命の建築家によって最前線艦として創造された.サイキック・アバターはそのサイズに見合わぬ絶大な火力を有する."
 
  tech_pdivinity_dimensional_tearer:0 "次元引き裂き機"
- tech_pdivinity_dimensional_tearer_desc:0 "現実そのものに穴をこじ開け、時空の構造を引き裂き、解きほぐすサイキックゲートウェイを生成する兵器。"
+ tech_pdivinity_dimensional_tearer_desc:0 "現実そのものに穴をこじ開け,時空の構造を引き裂き,解きほぐすサイキックゲートウェイを生成する兵器."
  TECH_UNLOCK_PDIVINITY_DIMENSIONAL_TEARER_CONSTRUCTION_TITLE:0 "§H艦船種別をアンロック:§! 次元引き裂き機"
- TECH_UNLOCK_PDIVINITY_DIMENSIONAL_TEARER_CONSTRUCTION_DESC:0 "§Hサイキック・アバター§!\n運命の建築家が生み出した、より高次の存在。次元引き裂き機は旗艦として機能する。ヴェールを破ることが可能であり、この艦は銀河の非信者にとって非常に危険な敵となる。"
+ TECH_UNLOCK_PDIVINITY_DIMENSIONAL_TEARER_CONSTRUCTION_DESC:0 "§Hサイキック・アバター§!\n運命の建築家が生み出した,より高次の存在.次元引き裂き機は旗艦として機能する.ヴェールを破ることが可能であり,この艦は銀河の非信者にとって非常に危険な敵となる."
  ##############
  ### others ###
  ##############
 
  tech_pdivinity_shroud_harvester:0 "シュラウド抽出ドクトリン"
- tech_pdivinity_shroud_harvester_desc:0 "聖なる建築と瞑想的な儀式を通して、我々はシュラウドの奥底からZroを抽出する。抽出された本質は、見えざる記憶のように流れ、不安定で、形作られることを渇望している。"
+ tech_pdivinity_shroud_harvester_desc:0 "聖なる建築と瞑想的な儀式を通して,我々はシュラウドの奥底からZroを抽出する.抽出された本質は,見えざる記憶のように流れ,不安定で,形作られることを渇望している."
 
 
 

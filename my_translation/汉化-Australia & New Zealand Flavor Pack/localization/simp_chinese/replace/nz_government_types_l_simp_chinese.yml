@@ -1,59 +1,59 @@
-﻿l_simp_chinese:
+l_simp_chinese:
  gov_rangatiratanga:  "酋邦"
- gov_rangatiratanga_desc:  "这是一个权力归属于传统部落酋长（被称为[Concept('concept_ruler','$RULER_TITLE_RANGATIRA$')]）的[concept_government_type]政体。\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+ gov_rangatiratanga_desc:  "这是一个权力归属于传统部落酋长(被称为[Concept('concept_ruler','$RULER_TITLE_RANGATIRA$')])的[concept_government_type]政体.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
  
  gov_unincorporated_iwi:  "未合并部落"
- gov_unincorporated_iwi_desc:  "这是一个权力归属于传统部落酋长（被称为[Concept('concept_ruler','$RULER_TITLE_RANGATIRA$')]）的[concept_government_type]政体。一个国家已对该部落宣称主权。\n\n$TRANSFER_OF_POWER_NAME_DESC$\n\n"
+ gov_unincorporated_iwi_desc:  "这是一个权力归属于传统部落酋长(被称为[Concept('concept_ruler','$RULER_TITLE_RANGATIRA$')])的[concept_government_type]政体.一个国家已对该部落宣称主权.\n\n$TRANSFER_OF_POWER_NAME_DESC$\n\n"
  
  gov_waka_confederation:  "瓦卡部落联盟"
- gov_waka_confederation_desc:  "这是一个由毛利部落联盟组成的[concept_government]政体，这些部落的祖先可以追溯到乘坐同一艘从哈瓦基航行的古老瓦卡独木舟的航海者。联盟的最高酋长是[Concept('concept_ruler','$RULER_TITLE_ARIKI$')]。\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+ gov_waka_confederation_desc:  "这是一个由毛利部落联盟组成的[concept_government]政体,这些部落的祖先可以追溯到乘坐同一艘从哈瓦基航行的古老瓦卡独木舟的航海者.联盟的最高酋长是[Concept('concept_ruler','$RULER_TITLE_ARIKI$')].\n\n$TRANSFER_OF_POWER_NAME_DESC$"
 
  gov_kingitanga:  "毛利王运动"
- gov_kingitanga_desc:  "这是一个[concept_government_type]政体，国家元首拥有[Concept('concept_ruler','$RULER_TITLE_MAORI_KING$')]头衔，该职位经部落领袖投票合法确认，实为世袭。\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+ gov_kingitanga_desc:  "这是一个[concept_government_type]政体,国家元首拥有[Concept('concept_ruler','$RULER_TITLE_MAORI_KING$')]头衔,该职位经部落领袖投票合法确认,实为世袭.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
 
  gov_whakaminenga:  "怀卡米宁加"
- gov_whakaminenga_desc:  "新西兰部落联合会议（Te Whakaminenga o ngā Hapū o Niu Tireni）是一个由哈普部落联盟组成的[concept_government_type]政体，其酋长们在正式集会上开会，以处理单个次级部落无法有效独立解决的事务。\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+ gov_whakaminenga_desc:  "新西兰部落联合会议(Te Whakaminenga o ngā Hapū o Niu Tireni)是一个由哈普部落联盟组成的[concept_government_type]政体,其酋长们在正式集会上开会,以处理单个次级部落无法有效独立解决的事务.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
 
  place_event_government_house:0  "总督府"
  flotilla_prefix_hmas:  "澳大利亚皇家海军舰艇“"
  flotilla_prefix_hmnzs:  "新西兰皇家海军舰艇“"
  
  gov_chartered_company_nzc:  "特许公司"
- gov_chartered_company_nzc_desc:  "这是一个由垄断公司统治的[concept_government_type]政体，该公司由其殖民宗主国特许经营。\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+ gov_chartered_company_nzc_desc:  "这是一个由垄断公司统治的[concept_government_type]政体,该公司由其殖民宗主国特许经营.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
 
  anz_gov_rapa_nui_monarchy:  "卡因加"
- anz_gov_rapa_nui_monarchy_desc:  "这是一个[concept_government_type]政体，其中最高等级的部落酋长担任阿里基毛（Ariki Mau），即最高酋长的角色。\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+ anz_gov_rapa_nui_monarchy_desc:  "这是一个[concept_government_type]政体,其中最高等级的部落酋长担任阿里基毛(Ariki Mau),即最高酋长的角色.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
 
  anz_gov_tui_tonga_monarchy:  "酋邦"
- anz_gov_tui_tonga_monarchy_desc:  "这种[concept_government_type]政体是汤加图伊帝国时代的一种遗留物。虽然汤加图伊仍是汤加部落的象征性领袖，但实权掌握在[Concept('concept_ruler','$RULER_TITLE_TUI_KANOKUPOLU_CONCEPT$')]手中。\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+ anz_gov_tui_tonga_monarchy_desc:  "这种[concept_government_type]政体是汤加图伊帝国时代的一种遗留物.虽然汤加图伊仍是汤加部落的象征性领袖,但实权掌握在[Concept('concept_ruler','$RULER_TITLE_TUI_KANOKUPOLU_CONCEPT$')]手中.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
 
  anz_gov_tonga_monarchy:  "汤加王国"
- anz_gov_tonga_monarchy_desc:  "这是一个权力归属于[Concept('concept_ruler','$RULER_TITLE_KING$')]或[Concept('concept_ruler','$RULER_TITLE_QUEEN$')]的[concept_government_type]政体。\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+ anz_gov_tonga_monarchy_desc:  "这是一个权力归属于[Concept('concept_ruler','$RULER_TITLE_KING$')]或[Concept('concept_ruler','$RULER_TITLE_QUEEN$')]的[concept_government_type]政体.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
 
  anz_gov_cook_islands_chiefdom:  "酋邦"
- anz_gov_cook_islands_chiefdom_desc:  "这是一个权力归属于传统部落酋长的[concept_government_type]政体，其中最高等级的酋长被称为[Concept('concept_ruler','$RULER_TITLE_ARIKI$')]。\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+ anz_gov_cook_islands_chiefdom_desc:  "这是一个权力归属于传统部落酋长的[concept_government_type]政体,其中最高等级的酋长被称为[Concept('concept_ruler','$RULER_TITLE_ARIKI$')].\n\n$TRANSFER_OF_POWER_NAME_DESC$"
 
  anz_gov_tahiti_kingdom:  "王国"
- anz_gov_tahiti_kingdom_desc:  "这是一个权力归属于[Concept('concept_ruler','$RULER_TITLE_KING$')]或[Concept('concept_ruler','$RULER_TITLE_QUEEN$')]的[concept_government_type]政体。\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+ anz_gov_tahiti_kingdom_desc:  "这是一个权力归属于[Concept('concept_ruler','$RULER_TITLE_KING$')]或[Concept('concept_ruler','$RULER_TITLE_QUEEN$')]的[concept_government_type]政体.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
 
  anz_gov_magistracy:0  "治安官政体"
- anz_gov_magistracy_desc:0  "这是一个[concept_country]由[Concept('concept_election','$concept_elected$')]的[Concept('concept_ruler','$RULER_TITLE_MAGISTRATE$')]统治的[concept_government_type]政体。\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+ anz_gov_magistracy_desc:0  "这是一个[concept_country]由[Concept('concept_election','$concept_elected$')]的[Concept('concept_ruler','$RULER_TITLE_MAGISTRATE$')]统治的[concept_government_type]政体.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
 
  anz_gov_cocos_kingdom:  "私人领地"
- anz_gov_cocos_kingdom_desc:  "这是一个[concept_government_type]政体，克鲁尼斯-罗斯家族的首领作为其私人领地的实际[Concept('concept_ruler','$RULER_TITLE_KING$')]进行统治。\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+ anz_gov_cocos_kingdom_desc:  "这是一个[concept_government_type]政体,克鲁尼斯-罗斯家族的首领作为其私人领地的实际[Concept('concept_ruler','$RULER_TITLE_KING$')]进行统治.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
 
  anz_gov_larantuka_kingdom:  "罗阇国"
- anz_gov_larantuka_kingdom_desc:  "这是一个权力归属于[Concept('concept_ruler','$RULER_TITLE_RAJA$')]的[concept_government_type]政体。\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+ anz_gov_larantuka_kingdom_desc:  "这是一个权力归属于[Concept('concept_ruler','$RULER_TITLE_RAJA$')]的[concept_government_type]政体.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
 
  anz_gov_samoa_monarchy:  "法阿马泰"
- anz_gov_samoa_monarchy_desc:  "这是萨摩亚的酋长制度，其中群岛的最高酋长被称为[Concept('concept_ruler','$RULER_TITLE_TUPU$')]或“国王”。"
+ anz_gov_samoa_monarchy_desc:  "这是萨摩亚的酋长制度,其中群岛的最高酋长被称为[Concept('concept_ruler','$RULER_TITLE_TUPU$')]或“国王”."
 
  gov_french_colonial_company_nz:  "授权公司"
- gov_french_colonial_company_nz_desc:  "这是一个由垄断公司统治的[concept_government_type]政体，该公司由其殖民宗主国授权成立。\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+ gov_french_colonial_company_nz_desc:  "这是一个由垄断公司统治的[concept_government_type]政体,该公司由其殖民宗主国授权成立.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
 
  RULER_TITLE_RANGATIRA:  "朗加蒂拉"
  RULER_TITLE_ARIKI:  "阿里基"
- RULER_TITLE_ARIKI_TAPAIRU:  "阿里基·塔帕鲁"
+ RULER_TITLE_ARIKI_TAPAIRU:  "阿里基.塔帕鲁"
  RULER_TITLE_MAORI_KING:  "毛利国王"
  RULER_TITLE_MAORI_QUEEN:  "毛利女王"
  RULER_TITLE_ARIKI_MAU:  "阿里基毛"
@@ -66,29 +66,29 @@
 
  # RRK versions of above monarchies
  anz_gov_rapa_nui_monarchy:  "卡因加"
- anz_gov_rapa_nui_monarchy_desc:  "这是一个[concept_government_type]政体，其中最高等级的部落酋长担任[Concept('concept_ruler','$RULER_TITLE_ARIKI_MAU$')]，即最高酋长的角色。\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+ anz_gov_rapa_nui_monarchy_desc:  "这是一个[concept_government_type]政体,其中最高等级的部落酋长担任[Concept('concept_ruler','$RULER_TITLE_ARIKI_MAU$')],即最高酋长的角色.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
 RULER_TITLE_ARIKI_MAU:0  "阿里基毛"
 
  anz_RRK_gov_tui_tonga_monarchy:  "酋邦"
- anz_RRK_gov_tui_tonga_monarchy_desc:  "这种[concept_government_type]政体是汤加图伊帝国时代的一种遗留物。虽然汤加图伊仍是汤加部落的象征性领袖，但实权掌握在[Concept('concept_ruler','$RULER_TITLE_TUI_KANOKUPOLU$')]手中。\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+ anz_RRK_gov_tui_tonga_monarchy_desc:  "这种[concept_government_type]政体是汤加图伊帝国时代的一种遗留物.虽然汤加图伊仍是汤加部落的象征性领袖,但实权掌握在[Concept('concept_ruler','$RULER_TITLE_TUI_KANOKUPOLU$')]手中.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
 RULER_TITLE_TUI_KANOKUPOLU:0  "卡诺库波卢图伊"
 
  anz_RRK_gov_tonga_monarchy:  "汤加王国"
- anz_RRK_gov_tonga_monarchy_desc:  "这是一个权力归属于[Concept('concept_ruler','$RULER_TITLE_KING$')]或[Concept('concept_ruler','$RULER_TITLE_QUEEN$')]的[concept_government_type]政体。\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+ anz_RRK_gov_tonga_monarchy_desc:  "这是一个权力归属于[Concept('concept_ruler','$RULER_TITLE_KING$')]或[Concept('concept_ruler','$RULER_TITLE_QUEEN$')]的[concept_government_type]政体.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
 
  anz_RRK_gov_samoa_monarchy:  "法阿马泰"
- anz_RRK_gov_samoa_monarchy_desc:  "这是萨摩亚的酋长制度，其中群岛的最高酋长被称为[Concept('concept_ruler','$RULER_TITLE_TUPU$')]或“国王”。"
+ anz_RRK_gov_samoa_monarchy_desc:  "这是萨摩亚的酋长制度,其中群岛的最高酋长被称为[Concept('concept_ruler','$RULER_TITLE_TUPU$')]或“国王”."
 
  anz_RRK_gov_cook_islands_chiefdom:  "酋邦"
- anz_RRK_gov_cook_islands_chiefdom_desc:  "这是一个权力归属于传统部落酋长的[concept_government_type]政体，其中最高等级的酋长被称为[Concept('concept_ruler','$RULER_TITLE_ARIKI$')]。\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+ anz_RRK_gov_cook_islands_chiefdom_desc:  "这是一个权力归属于传统部落酋长的[concept_government_type]政体,其中最高等级的酋长被称为[Concept('concept_ruler','$RULER_TITLE_ARIKI$')].\n\n$TRANSFER_OF_POWER_NAME_DESC$"
 
  anz_RRK_gov_tahiti_kingdom:  "王国"
- anz_RRK_gov_tahiti_kingdom_desc:  "这是一个权力归属于[Concept('concept_ruler','$RULER_TITLE_KING$')]或[Concept('concept_ruler','$RULER_TITLE_QUEEN$')]的[concept_government_type]政体。\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+ anz_RRK_gov_tahiti_kingdom_desc:  "这是一个权力归属于[Concept('concept_ruler','$RULER_TITLE_KING$')]或[Concept('concept_ruler','$RULER_TITLE_QUEEN$')]的[concept_government_type]政体.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
 
  anz_RRK_gov_cocos_kingdom:  "私人领地"
- anz_RRK_gov_cocos_kingdom_desc:  "这是一个[concept_government_type]政体，克鲁尼斯-罗斯家族的首领作为其私人领地的实际[Concept('concept_ruler','$RULER_TITLE_KING$')]进行统治。\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+ anz_RRK_gov_cocos_kingdom_desc:  "这是一个[concept_government_type]政体,克鲁尼斯-罗斯家族的首领作为其私人领地的实际[Concept('concept_ruler','$RULER_TITLE_KING$')]进行统治.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
 
  anz_RRK_gov_larantuka_kingdom:  "罗阇国"
- anz_RRK_gov_larantuka_kingdom_desc:  "这是一个权力归属于[Concept('concept_ruler','$RULER_TITLE_RAJA$')]的[concept_government_type]政体。\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+ anz_RRK_gov_larantuka_kingdom_desc:  "这是一个权力归属于[Concept('concept_ruler','$RULER_TITLE_RAJA$')]的[concept_government_type]政体.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
  
 

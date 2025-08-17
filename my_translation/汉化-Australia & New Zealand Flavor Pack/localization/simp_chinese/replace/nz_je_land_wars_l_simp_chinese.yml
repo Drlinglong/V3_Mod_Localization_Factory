@@ -1,19 +1,19 @@
-﻿l_simp_chinese:
+l_simp_chinese:
  je_nz_flagstaff_war:0  "北方战争"
- je_nz_flagstaff_war_reason:0  "新西兰北部的毛利人恩阿普伊部落对我们在《怀唐伊条约》下的承诺感到失望，已经开始反抗我们的统治。\n\n#BOLD 提示:#! \n此日志条目将触发代表历史战役的事件。你的选择将决定战争的走向。"
+ je_nz_flagstaff_war_reason:0  "新西兰北部的毛利人恩阿普伊部落对我们在<怀唐伊条约>下的承诺感到失望,已经开始反抗我们的统治.\n\n#BOLD 提示:#! \n此日志条目将触发代表历史战役的事件.你的选择将决定战争的走向."
  je_nz_northernwar_win_tt:0  "战争已结束"
- je_nz_flagstaff_war_goal:  "对恩阿普伊的战争已经胜利，进度条已达到#variable 100%#！"
+ je_nz_flagstaff_war_goal:  "对恩阿普伊的战争已经胜利,进度条已达到#variable 100%#!"
  
  je_nz_hutt_valley_campaign:0  "维护我们的土地购买权"
- je_nz_hutt_valley_campaign_reason:0  "委员会确认，我们的殖民者对哈特谷（惠灵顿殖民地以北的地区）的土地拥有合法权益。然而，他们购买的许多土地仍被原住民毛利人占据，这让我们的殖民者感到焦虑。\n \n我们的殖民者需要我们的支持才能获得对其土地的控制权。"
+ je_nz_hutt_valley_campaign_reason:0  "委员会确认,我们的殖民者对哈特谷(惠灵顿殖民地以北的地区)的土地拥有合法权益.然而,他们购买的许多土地仍被原住民毛利人占据,这让我们的殖民者感到焦虑.\n \n我们的殖民者需要我们的支持才能获得对其土地的控制权."
  
  je_nz_hutt_valley_campaign_button:0  "维护我们在哈特的地位"
  je_nz_hutt_valley_campaign_button_ongoing:0  "我们正在维护我们在哈特的地位"
- je_nz_hutt_valley_campaign_button_desc:0  "我们的殖民者已经购买了哈特谷的土地，现在是时候维护他们的权益了。"
- je_nz_hutt_valley_campaign_button_tt:0  "此按钮将启动维护我们在哈特谷的殖民者土地购买权益的流程。第一个事件将允许你如果改变主意，可以选择推迟该流程。"
+ je_nz_hutt_valley_campaign_button_desc:0  "我们的殖民者已经购买了哈特谷的土地,现在是时候维护他们的权益了."
+ je_nz_hutt_valley_campaign_button_tt:0  "此按钮将启动维护我们在哈特谷的殖民者土地购买权益的流程.第一个事件将允许你如果改变主意,可以选择推迟该流程."
  
- je_nz_hutt_valley_campaign_complete_tt:0  "我们在哈特谷的地位已得到维护。\n\n提示：此日志将周期性地触发事件，引导我们维护我们的权益。"
+ je_nz_hutt_valley_campaign_complete_tt:0  "我们在哈特谷的地位已得到维护.\n\n提示:此日志将周期性地触发事件,引导我们维护我们的权益."
  
  #temporary decision:
  nz_hutt_valley_campaign:0  "维护殖民者在哈特谷的土地购买权"
- nz_hutt_valley_campaign_desc:0  "委员会确认，我们的殖民者对哈特谷的土地拥有合法权益。"
+ nz_hutt_valley_campaign_desc:0  "委员会确认,我们的殖民者对哈特谷的土地拥有合法权益."

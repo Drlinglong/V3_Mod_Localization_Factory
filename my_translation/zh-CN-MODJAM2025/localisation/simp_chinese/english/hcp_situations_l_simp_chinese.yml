@@ -1,4 +1,4 @@
-﻿l_simp_chinese:
+l_simp_chinese:
 ##################
 # hcp_situations_l_english.yml
 # By jam1066
@@ -11,36 +11,36 @@
  ##############################
  ### Planet Modifier
  hcp_being_harvested_modifier:"正在被采掘"
- hcp_being_harvested_modifier_desc:"这颗行星正被一个$hcp_orbital_quarrier$系统性地拆解。它的时日无多了。"
+ hcp_being_harvested_modifier_desc:"这颗行星正被一个$hcp_orbital_quarrier$系统性地拆解.它的时日无多了."
 
  ### Messages
  hcp_MESSAGE_HARVEST_WORLD_TITLE:"采掘世界"
- hcp_MESSAGE_HARVEST_WORLD_MINERALS_TEXT:"对$PLANET|Y$的采掘获得了宝贵的矿物。\n£minerals£$RESOURCE|Y$"
- hcp_MESSAGE_HARVEST_WORLD_ALLOYS_TEXT:"对$PLANET|Y$的采掘获得了宝贵的合金。\n£alloys£$RESOURCE|Y$"
+ hcp_MESSAGE_HARVEST_WORLD_MINERALS_TEXT:"对$PLANET|Y$的采掘获得了宝贵的矿物.\n£minerals£$RESOURCE|Y$"
+ hcp_MESSAGE_HARVEST_WORLD_ALLOYS_TEXT:"对$PLANET|Y$的采掘获得了宝贵的合金.\n£alloys£$RESOURCE|Y$"
 
  ### Situation
  hcp_situation_harvest_planet:"采掘[Target.GetName]"
  hcp_situation_harvest_planet_type:"采掘世界"
  hcp_situation_harvest_planet_monthly_change_tooltip: "$situation_monthly_change_tooltip_approaches_dependent$"
- hcp_situation_harvest_planet_desc:"从地壳开始，我们将把这颗行星剥得一干二净。我们不能留下任何东西，以免浪费。"
+ hcp_situation_harvest_planet_desc:"从地壳开始,我们将把这颗行星剥得一干二净.我们不能留下任何东西,以免浪费."
 
  hcp_stage_harvesting:"拆解行星"
 
  hcp_string_harvesting_progress:"行星采掘"
- hcp_harvest_finish_tooltip:"采掘[Target.GetName]，让它只剩下一个空壳。"
+ hcp_harvest_finish_tooltip:"采掘[Target.GetName],让它只剩下一个空壳."
 
  ## Approaches
  hcp_approach_harvest:"采掘"
- hcp_planet_harvest_effect:"采掘世界，每§Y6§!个月获得£hcp_mining_efficiency£ §H$hcp_mining_efficiency$§!，以及£minerals£ §H$minerals$§!或£alloys£ §H$alloys$§!。"
+ hcp_planet_harvest_effect:"采掘世界,每§Y6§!个月获得£hcp_mining_efficiency£ §H$hcp_mining_efficiency$§!,以及£minerals£ §H$minerals$§!或£alloys£ §H$alloys$§!."
 
  hcp_approach_dismantle:"拆解$hcp_orbital_quarrier$"
- hcp_harvester_dismantle_effect:"拆解§Y$hcp_orbital_quarrier$§!，停止采掘这个世界，尽管这可能会带来效率低下。"
+ hcp_harvester_dismantle_effect:"拆解§Y$hcp_orbital_quarrier$§!,停止采掘这个世界,尽管这可能会带来效率低下."
 
  ## Finisher Event
  hcp_harvesters_situations.2.name:"世界已被采掘"
- hcp_harvesters_situations.2.desc:"我们对§Y[Target.GetName]§!的采掘已达足够程度，继续进行密集采掘作业将不再高效。\n\n剩余人口已被疏散至§Y[Owner.Capital.GetName]§!，所有剩余资源可通过标准轨道采矿站收集。"
- hcp_harvesters_situations.2.a:"任务完成得很好。"
- hcp_harvesters_situations.2.a.tooltip:"§Y[Target.GetName]§!已沦为一颗小行星。"
+ hcp_harvesters_situations.2.desc:"我们对§Y[Target.GetName]§!的采掘已达足够程度,继续进行密集采掘作业将不再高效.\n\n剩余人口已被疏散至§Y[Owner.Capital.GetName]§!,所有剩余资源可通过标准轨道采矿站收集."
+ hcp_harvesters_situations.2.a:"任务完成得很好."
+ hcp_harvesters_situations.2.a.tooltip:"§Y[Target.GetName]§!已沦为一颗小行星."
 
  ###########################
  # Outward Bound Situation #
@@ -48,84 +48,84 @@
  #### Master Situation
  ### Policies
  policy_hcp_evacuation_policy:"疏散政策"
- policy_hcp_evacuation_policy_desc:"这项政策规定了我们的恒星采掘者如何处理其他帝国行星上的居民。"
+ policy_hcp_evacuation_policy_desc:"这项政策规定了我们的恒星采掘者如何处理其他帝国行星上的居民."
 
  hcp_evacuate_everyone:"疏散人口"
  hcp_evacuate_everyone_name: "$hcp_evacuate_everyone$"
- hcp_evacuate_everyone_desc:"我们将把其他帝国殖民地的人口疏散到我们的奇点筒仓周围的庇护所。"
+ hcp_evacuate_everyone_desc:"我们将把其他帝国殖民地的人口疏散到我们的奇点筒仓周围的庇护所."
 
  hcp_evacuate_only_ours:"采掘人口"
  hcp_evacuate_only_ours_name: "$hcp_evacuate_only_ours$"
- hcp_evacuate_only_ours_desc:"我们将采掘其他帝国的人口，连同他们居住的行星。"
+ hcp_evacuate_only_ours_desc:"我们将采掘其他帝国的人口,连同他们居住的行星."
 
  ### Messages
  hcp_MESSAGE_STELLAR_HARVESTER_DEPARTED_TITLE:"恒星采掘者已启程"
- hcp_MESSAGE_STELLAR_HARVESTER_DEPARTED_TEXT:"我们的一艘§Y恒星采掘者§!已离开星系。"
+ hcp_MESSAGE_STELLAR_HARVESTER_DEPARTED_TEXT:"我们的一艘§Y恒星采掘者§!已离开星系."
 
  ### Special Projects
  hcp_DEPARTURE_POINT:"启程点"
- hcp_DEPARTURE_POINT_DESC:"我们已将§H[this.GetName]星系§!确定为我们§Y恒星采掘者§!的理想启程点。"
+ hcp_DEPARTURE_POINT_DESC:"我们已将§H[this.GetName]星系§!确定为我们§Y恒星采掘者§!的理想启程点."
 
  ### Situation
  hcp_situation_outward_bound_master:"驶向远方"
  hcp_situation_outward_bound_master_type: "$hcp_situation_outward_bound_master$"
- hcp_situation_outward_bound_master_monthly_change_tooltip:"随着我们向银河系外派出§Y$hcp_stellar_harvester$s§!，这项§YSituation§!将继续推进。"
- hcp_situation_outward_bound_master_desc:"为我们长期生存收集足够资源，我们必须将§Y恒星采掘者§!送出银河系。每一艘都承载着我们整个文明的希望。\n\n恒星采掘者：§G[owner.hcp_num_stellar_harvesters]§!"
- hcp_outward_bound_master_finish_tooltip:"我们将派出足够多的恒星采掘者，以确保我们的目标得以实现。"
+ hcp_situation_outward_bound_master_monthly_change_tooltip:"随着我们向银河系外派出§Y$hcp_stellar_harvester$s§!,这项§YSituation§!将继续推进."
+ hcp_situation_outward_bound_master_desc:"为我们长期生存收集足够资源,我们必须将§Y恒星采掘者§!送出银河系.每一艘都承载着我们整个文明的希望.\n\n恒星采掘者:§G[owner.hcp_num_stellar_harvesters]§!"
+ hcp_outward_bound_master_finish_tooltip:"我们将派出足够多的恒星采掘者,以确保我们的目标得以实现."
  hcp_build_another_stellar_harvester:"£trigger_no£ 无恒星采掘者"
 
  ### Situation Events
  ##On Start
  hcp_harvesters_situations.1000.name: "$hcp_situation_outward_bound_master$"
- hcp_harvesters_situations.1000.desc:"长期以来，我们一直清楚我们的银河系所蕴含的资源不足以让我们维持文明的合理期限。我们将需要开始向其他星系寻求出路。为此，我们为恒星采掘者配备了一种实验性的超光速驱动器，使它们能够在星系间以超光速航行。\n\n将恒星采掘者送出银河系是一项冒险的尝试。我们无法得知外部存在何种危险，因此我们需要派出足够数量的采掘者以增加其整体成功几率。\n\n此外，我们还需要准备好奇点筒仓周围的庇护所，以容纳我们整个文明。我们已准备好开始扩建每个庇护所的宜居区域，但这将需要大量的资源。"
- hcp_harvesters_situations.1000.a:"优先发展我们的庇护所。"
- hcp_harvesters_situations.1000.b:"优先发展我们的恒星采掘者。"
+ hcp_harvesters_situations.1000.desc:"长期以来,我们一直清楚我们的银河系所蕴含的资源不足以让我们维持文明的合理期限.我们将需要开始向其他星系寻求出路.为此,我们为恒星采掘者配备了一种实验性的超光速驱动器,使它们能够在星系间以超光速航行.\n\n将恒星采掘者送出银河系是一项冒险的尝试.我们无法得知外部存在何种危险,因此我们需要派出足够数量的采掘者以增加其整体成功几率.\n\n此外,我们还需要准备好奇点筒仓周围的庇护所,以容纳我们整个文明.我们已准备好开始扩建每个庇护所的宜居区域,但这将需要大量的资源."
+ hcp_harvesters_situations.1000.a:"优先发展我们的庇护所."
+ hcp_harvesters_situations.1000.b:"优先发展我们的恒星采掘者."
 
  ##On Finish
  hcp_harvesters_situations.1005.name:"巅峰效率"
- hcp_harvesters_situations.1005.desc.a:"我们现在已向银河系外派出了足够数量的恒星采掘者，以确保宇宙的资源最终归我们所有。我们现在必须将注意力转向别处。\n\n其他帝国显然对我们的活动非常不满。为此，我们一直在设计一种护盾，以将我们的奇点筒仓与宇宙其他部分隔离开来。这种护盾旨在接触时分解物质，并将其吸入我们避难所核心的黑洞。"
- hcp_harvesters_situations.1005.desc.b:"$hcp_harvesters_situations.1005.desc.a$\n\n我们需要在激活它之前完成将我们的人口迁入庇护所。"
- hcp_harvesters_situations.1005.a:"准备护盾。"
- hcp_harvesters_situations.1005.b:"我们将转移剩余的人口。"
+ hcp_harvesters_situations.1005.desc.a:"我们现在已向银河系外派出了足够数量的恒星采掘者,以确保宇宙的资源最终归我们所有.我们现在必须将注意力转向别处.\n\n其他帝国显然对我们的活动非常不满.为此,我们一直在设计一种护盾,以将我们的奇点筒仓与宇宙其他部分隔离开来.这种护盾旨在接触时分解物质,并将其吸入我们避难所核心的黑洞."
+ hcp_harvesters_situations.1005.desc.b:"$hcp_harvesters_situations.1005.desc.a$\n\n我们需要在激活它之前完成将我们的人口迁入庇护所."
+ hcp_harvesters_situations.1005.a:"准备护盾."
+ hcp_harvesters_situations.1005.b:"我们将转移剩余的人口."
 
  ## Approaches
  hcp_approach_sanctuaries:"优先发展庇护所"
- hcp_planet_sanctuaries_effect:"我们应优先发展我们的庇护所，以确保它们能满足我们的需求。"
+ hcp_planet_sanctuaries_effect:"我们应优先发展我们的庇护所,以确保它们能满足我们的需求."
 
  hcp_approach_harvesters:"优先发展采掘者"
- hcp_harvesters_effect:"我们应优先发展我们的恒星采掘者，如果它们无法获得我们所需的资源，我们的生存可能会受到威胁。"
+ hcp_harvesters_effect:"我们应优先发展我们的恒星采掘者,如果它们无法获得我们所需的资源,我们的生存可能会受到威胁."
  mod_shipsize_hcp_stellar_harvester_weapon_damage: "$hcp_stellar_harvester$ $MOD_SHIP_WEAPON_DAMAGE$"
 
  #### Dummy Situation
  ### Messages
  hcp_MESSAGE_HOSTILE_STELLAR_HARVESTER_DEPARTED_TITLE:"恒星采掘者已启程"
- hcp_MESSAGE_HOSTILE_STELLAR_HARVESTER_DEPARTED_TEXT:"属于$TARGET|Y$的一艘§Y恒星采掘者§!已离开银河系。"
+ hcp_MESSAGE_HOSTILE_STELLAR_HARVESTER_DEPARTED_TEXT:"属于$TARGET|Y$的一艘§Y恒星采掘者§!已离开银河系."
 
  ### Situation
- hcp_situation_outward_bound_dummy:"驶向远方：[Target.GetName]"
+ hcp_situation_outward_bound_dummy:"驶向远方:[Target.GetName]"
  hcp_situation_outward_bound_dummy_type: "$hcp_situation_outward_bound_master$"
- hcp_situation_outward_bound_dummy_monthly_change_tooltip:"随着[Target.GetName]向银河系外派出§Y$hcp_stellar_harvester$s§!，这项§YSituation§!将继续推进。"
- hcp_situation_outward_bound_dummy_desc:"§H[Target.GetName]§!已开始将其§Y恒星采掘者§!送往其他星系。每一艘都对整个宇宙构成§R存在性威胁§!。\n\n恒星采掘者：§R[target.hcp_num_stellar_harvesters]§!"
- hcp_outward_bound_dummy_finish_tooltip:"太多的恒星采掘者将会逃脱。"
+ hcp_situation_outward_bound_dummy_monthly_change_tooltip:"随着[Target.GetName]向银河系外派出§Y$hcp_stellar_harvester$s§!,这项§YSituation§!将继续推进."
+ hcp_situation_outward_bound_dummy_desc:"§H[Target.GetName]§!已开始将其§Y恒星采掘者§!送往其他星系.每一艘都对整个宇宙构成§R存在性威胁§!.\n\n恒星采掘者:§R[target.hcp_num_stellar_harvesters]§!"
+ hcp_outward_bound_dummy_finish_tooltip:"太多的恒星采掘者将会逃脱."
 
  ### Situation Events
  ##On Start
  #First Stellar-Harvester Left Galaxy
  hcp_harvesters_situations.2000.name: "$hcp_situation_outward_bound_dummy$"
- hcp_harvesters_situations.2000.desc:"属于[Target.GetName]的一艘恒星采掘者刚刚离开了银河系。我们探测到该飞船离开前，周围积聚了奇异的亚空间扰动，似乎是使用了新型的超光速旅行技术。\n\n起初，我们松了一口气，因为少了一个需要应对的麻烦，但其全部影响很快变得显而易见。恒星采掘者被设计为利用它们收集的物质进行自我复制。任何逃脱的采掘者很可能会在某天以大幅增长的数量返回！\n\n乐观地说，总有可能其他星系的文明能够识别它们构成的威胁，并在它们失控前将其摧毁，但每有一艘离开，它们成功的几率就会增加。我们不能再让更多的采掘者逃脱了。"
- hcp_harvesters_situations.2000.a:"必须阻止它们。"
+ hcp_harvesters_situations.2000.desc:"属于[Target.GetName]的一艘恒星采掘者刚刚离开了银河系.我们探测到该飞船离开前,周围积聚了奇异的亚空间扰动,似乎是使用了新型的超光速旅行技术.\n\n起初,我们松了一口气,因为少了一个需要应对的麻烦,但其全部影响很快变得显而易见.恒星采掘者被设计为利用它们收集的物质进行自我复制.任何逃脱的采掘者很可能会在某天以大幅增长的数量返回!\n\n乐观地说,总有可能其他星系的文明能够识别它们构成的威胁,并在它们失控前将其摧毁,但每有一艘离开,它们成功的几率就会增加.我们不能再让更多的采掘者逃脱了."
+ hcp_harvesters_situations.2000.a:"必须阻止它们."
  #Built Half Stellar-Harvesters Required to Win
  hcp_harvesters_situations.2001.name: "$hcp_situation_outward_bound_dummy$"
- hcp_harvesters_situations.2001.desc:"我们在[Target.GetName]内部的特工带来了一些令人不安的消息。显然，他们为恒星采掘者配备了一种新型的超光速驱动器，能够进行星系间旅行。\n\n最初我们对这些发现感到困惑，但其全部影响很快变得显而易见。恒星采掘者被设计为利用它们收集的物质进行自我复制。任何逃脱的采掘者很可能会在某天以大幅增长的数量返回！\n\n如果任何采掘者逃脱，我们将不得不依赖其他星系的文明能够识别它们构成的威胁，并在它们失控前将其摧毁，但这前提是它们与我们处于同等技术水平，如果它们甚至存在的话。我们必须在它们逃脱前尽可能多地摧毁它们。"
- hcp_harvesters_situations.2001.a:"必须阻止它们。"
+ hcp_harvesters_situations.2001.desc:"我们在[Target.GetName]内部的特工带来了一些令人不安的消息.显然,他们为恒星采掘者配备了一种新型的超光速驱动器,能够进行星系间旅行.\n\n最初我们对这些发现感到困惑,但其全部影响很快变得显而易见.恒星采掘者被设计为利用它们收集的物质进行自我复制.任何逃脱的采掘者很可能会在某天以大幅增长的数量返回!\n\n如果任何采掘者逃脱,我们将不得不依赖其他星系的文明能够识别它们构成的威胁,并在它们失控前将其摧毁,但这前提是它们与我们处于同等技术水平,如果它们甚至存在的话.我们必须在它们逃脱前尽可能多地摧毁它们."
+ hcp_harvesters_situations.2001.a:"必须阻止它们."
 
  ##On Finish
  hcp_harvesters_situations.2005.name:"黯淡的必然"
- hcp_harvesters_situations.2005.desc:"[Target.GetName]现在已向银河系外派出了足够数量的恒星采掘者，以确保至少有一艘能成功复制。尽管我们愿意相信在外面存在着既有意愿又有能力在为时已晚之前处理它们的文明，但实际上，我们唯一的真正希望是，我们活不到它们回归的那一天。"
- hcp_harvesters_situations.2005.a:"阴影笼罩着我们的未来。"
+ hcp_harvesters_situations.2005.desc:"[Target.GetName]现在已向银河系外派出了足够数量的恒星采掘者,以确保至少有一艘能成功复制.尽管我们愿意相信在外面存在着既有意愿又有能力在为时已晚之前处理它们的文明,但实际上,我们唯一的真正希望是,我们活不到它们回归的那一天."
+ hcp_harvesters_situations.2005.a:"阴影笼罩着我们的未来."
 
  ## Approaches
  hcp_approach_track_harvesters:"追踪恒星采掘者"
- hcp_track_harvesters_effect:"我方观测站将追踪任何隶属于[Target.GetName]的恒星收割者的动向。"
+ hcp_track_harvesters_effect:"我方观测站将追踪任何隶属于[Target.GetName]的恒星收割者的动向."
 
  #end

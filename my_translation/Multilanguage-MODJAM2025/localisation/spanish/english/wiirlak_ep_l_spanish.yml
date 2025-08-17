@@ -1,4 +1,4 @@
-﻿l_spanish:
+l_spanish:
 
 # Author / Name of the mod
  wiirlak_ep:0 "Crisis del Protocolo de Crecimiento Perpetuo de Wiirlak"
@@ -346,7 +346,7 @@
  wiirlak_ep_operation_event_push_back_desc:0 "Contra todo pronóstico, nuestro mundo ha resistido el cambio. Los crecimientos alienígenas han sido esterilizados, sus filamentos subterráneos abrasados de la biosfera. Los filtros atmosféricos han restaurado el equilibrio. Los ecosistemas indígenas, aunque cicatrizados, ya muestran signos de recuperación. \n\nQuienquiera que haya intentado reformar nuestro planeta a su imagen subestimó nuestra resolución. El $wiirlak_ep_ap_evergrowth$ puede ser vasto, pero sus zarcillos pueden ser cortados."
 
  wiirlak_ep_operation_event_overgrown:0 "$wiirlak_ep_ap_evergrowth$ Floreciente"
- wiirlak_ep_operation_event_overgrown_desc:0 "Intentamos contenerlo —entenderlo— pero al final, ¡§Y[event_target:wiirlak_ep_spy_op_target.GetName]§! fue transformado. \n\nLa transformación está completa. El cielo ahora brilla con extrañas auroras, vastos doseles bloquean los escaneos satelitales, y el propio suelo pulsa con vida irreconocible. Nuestra tecnología aún funciona, nuestras ciudades aún se mantienen en pie, pero ya no comprendemos las reglas del mundo bajo nuestros pies. \n\nEl $wiirlak_ep_ap_evergrowth$ ha reclamado este lugar. Y ahora debemos aprender a vivir sobre sus raíces... o huir."
+ wiirlak_ep_operation_event_overgrown_desc:0 "Intentamos contenerlo -entenderlo- pero al final, ¡§Y[event_target:wiirlak_ep_spy_op_target.GetName]§! fue transformado. \n\nLa transformación está completa. El cielo ahora brilla con extrañas auroras, vastos doseles bloquean los escaneos satelitales, y el propio suelo pulsa con vida irreconocible. Nuestra tecnología aún funciona, nuestras ciudades aún se mantienen en pie, pero ya no comprendemos las reglas del mundo bajo nuestros pies. \n\nEl $wiirlak_ep_ap_evergrowth$ ha reclamado este lugar. Y ahora debemos aprender a vivir sobre sus raíces... o huir."
 
 # Situation
  wiirlak_ep_situation:0 "Cambios Antinaturales"
@@ -511,7 +511,7 @@
 
 
  wiirlak_ep_project_3_done:0 "$wiirlak_ep_modifier_blooming_warning$"
- wiirlak_ep_project_3_done_desc:0 "Cada $wiirlak_ep_pc_bloom$ vibra con resonancia, un latido planetario que se acelera hacia su crescendo final. La red micelial que tejimos —a través de la corteza, la raíz y el espíritu— ha despertado. Ya no es una red. Un sistema nervioso. \n\nEl cielo se silencia, el suelo tiembla. Luego, erupción. \n\nMares tóxicos se convierten en úteros de nutrientes. Desiertos estallan en avalanchas florales. Glaciares florecen con hongos radiantes. Lo que una vez fue estéril ahora rebosa de vida abrumadora. No queda guerra que librar. No hay resistencia lo suficientemente fuerte. \n\nLa galaxia es nuestra, porque ya no es una galaxia. \nEs un jardín. Es el $wiirlak_ep_ap_evergrowth$."
+ wiirlak_ep_project_3_done_desc:0 "Cada $wiirlak_ep_pc_bloom$ vibra con resonancia, un latido planetario que se acelera hacia su crescendo final. La red micelial que tejimos -a través de la corteza, la raíz y el espíritu- ha despertado. Ya no es una red. Un sistema nervioso. \n\nEl cielo se silencia, el suelo tiembla. Luego, erupción. \n\nMares tóxicos se convierten en úteros de nutrientes. Desiertos estallan en avalanchas florales. Glaciares florecen con hongos radiantes. Lo que una vez fue estéril ahora rebosa de vida abrumadora. No queda guerra que librar. No hay resistencia lo suficientemente fuerte. \n\nLa galaxia es nuestra, porque ya no es una galaxia. \nEs un jardín. Es el $wiirlak_ep_ap_evergrowth$."
  wiirlak_ep_project_3_done_answer:0 "No fuimos conquistadores. Fuimos el crecimiento mismo."
 
  wiirlak_ep_project_3_warning:0 "Última Floración"

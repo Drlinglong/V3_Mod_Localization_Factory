@@ -1,4 +1,4 @@
-﻿l_simp_chinese:
+l_simp_chinese:
 
 #events
 
@@ -19,75 +19,75 @@ anz_squatter_rise:0  "“土地私占者”"
 
 #Start; squatters entrenched
 anz_squat.1.t:0  "“一个拓荒贵族阶层”"
-anz_squat.1.d:0  "“农业经营者在未经许可的王室土地上建立了广阔的地产。尽管未经授权，这些‘私占者’却成为了殖民地发展的福音。我们对他们的经济依赖所产生的财富，已将这些私占者巩固为@贵族! [concept_squattocracy]。”"
-anz_squat.1.f:0  "“自古以来，澳大利亚原住民一直是这片土地的守护者；作为文化遗产的一部分，土地并非个人所有。随着英国人建立定居点，土地现由总督分配。"
-anz_squat.1.a:0  "“支持他们的扩张。”"
-anz_squat.1.b:0  "“他们的影响力必须受到遏制。”"
+anz_squat.1.d:0  "“农业经营者在未经许可的王室土地上建立了广阔的地产.尽管未经授权,这些‘私占者’却成为了殖民地发展的福音.我们对他们的经济依赖所产生的财富,已将这些私占者巩固为@贵族! [concept_squattocracy].”"
+anz_squat.1.f:0  "“自古以来,澳大利亚原住民一直是这片土地的守护者;作为文化遗产的一部分,土地并非个人所有.随着英国人建立定居点,土地现由总督分配."
+anz_squat.1.a:0  "“支持他们的扩张.”"
+anz_squat.1.b:0  "“他们的影响力必须受到遏制.”"
 anz_squat_tenantfarm_tt:0  "“#v [GetInterestGroupVariant('ig_landowners',GetPlayer).GetNameWithCountryVariant] 的根深蒂固导致了[GetLawType('law_tenant_farmers').GetName]#!\n”"
 anz_support_squatting_expansion3:0  "“支持拓荒贵族阶层”"
 anz_squattocrats:0  "“拓荒贵族阶层”"
 
 #if you regulate
 anz_squat.101.t:0  "“[ROOT.GetCountry.GetName]牧民协会”"
-anz_squat.101.d:0  "“对最近针对私占行为的法规感到愤怒，[SCOPE.sCharacter('afp_landowners_leader').GetFullName]召集了[GetInterestGroupVariant('ig_landowners',GetPlayer).GetNameWithCountryVariant]，成立了牧民协会以追求[concept_squattocrat]的利益。"
-anz_squat.101.f:0  "““这些法规的本质，就是从#ITALIC 贫困#!的@贵族!私占者身上榨取他们所能支付的最高收入！”"
-anz_squat.101.a:0  "“他不会是认真的吧？”"
-anz_squat.101.b:0  "“让土地租约对[concept_squattocrats]有利。”"
+anz_squat.101.d:0  "“对最近针对私占行为的法规感到愤怒,[SCOPE.sCharacter('afp_landowners_leader').GetFullName]召集了[GetInterestGroupVariant('ig_landowners',GetPlayer).GetNameWithCountryVariant],成立了牧民协会以追求[concept_squattocrat]的利益."
+anz_squat.101.f:0  "““这些法规的本质,就是从#ITALIC 贫困#!的@贵族!私占者身上榨取他们所能支付的最高收入!”"
+anz_squat.101.a:0  "“他不会是认真的吧?”"
+anz_squat.101.b:0  "“让土地租约对[concept_squattocrats]有利.”"
 anz_monarch_petitioned_tt:0  "“#b #white [SCOPE.sCharacter('aust_overlord_ruler').GetFullNameWithTitle]将决定如何解决这场争议#!#!\n”"
 
 #55% chance if you don't make concessions in 101a
 anz_squat.102.t:0  "“[ROOT.GetCountry.GetOverlord.GetRuler.GetFirstName]支持[concept_squattocrats]”"
-anz_squat.102.d:0  "“[concept_squattocrat]就近期私占法规向[ROOT.GetCountry.GetOverlord.GetRuler.GetFullName]提交的请愿，终于回到了我们的海岸。"
-anz_squat.102.f:0  "““……奉上帝之恩典，大不列颠及爱尔兰联合王国国王，信仰的捍卫者……””"
-anz_squat.102.a:0  "“[ROOT.GetCountry.GetOverlord.GetRuler.GetFullNameWithTitle]万岁！”"
-anz_squat.102.b:0  "“[ROOT.GetCountry.GetOverlord.GetRuler.GetFirstName]真是个该死的笨蛋！”"
+anz_squat.102.d:0  "“[concept_squattocrat]就近期私占法规向[ROOT.GetCountry.GetOverlord.GetRuler.GetFullName]提交的请愿,终于回到了我们的海岸."
+anz_squat.102.f:0  "““......奉上帝之恩典,大不列颠及爱尔兰联合王国国王,信仰的捍卫者......””"
+anz_squat.102.a:0  "“[ROOT.GetCountry.GetOverlord.GetRuler.GetFullNameWithTitle]万岁!”"
+anz_squat.102.b:0  "“[ROOT.GetCountry.GetOverlord.GetRuler.GetFirstName]真是个该死的笨蛋!”"
 
 #45% chance if you don't make concessions in 101a
 anz_squat.103.t:0  "“[ROOT.GetCountry.GetOverlord.GetRuler.GetFirstName]唾弃[concept_squattocrats]”"
-anz_squat.103.d:0  "“[concept_squattocrat]就近期私占法规向[ROOT.GetCountry.GetOverlord.GetRuler.GetFullName]提交的请愿，终于回到了我们的海岸。"
-anz_squat.103.f:0  "““……奉上帝之恩典，大不列颠及爱尔兰联合王国国王，信仰的捍卫者……””"
-anz_squat.103.a:0  "“[ROOT.GetCountry.GetOverlord.GetRuler.GetFullNameWithTitle]万岁！”"
+anz_squat.103.d:0  "“[concept_squattocrat]就近期私占法规向[ROOT.GetCountry.GetOverlord.GetRuler.GetFullName]提交的请愿,终于回到了我们的海岸."
+anz_squat.103.f:0  "““......奉上帝之恩典,大不列颠及爱尔兰联合王国国王,信仰的捍卫者......””"
+anz_squat.103.a:0  "“[ROOT.GetCountry.GetOverlord.GetRuler.GetFullNameWithTitle]万岁!”"
 
 #Mo people Mo problems
 anz_squat.2.t:0  "“土地改革的呼声”"
-anz_squat.2.d:0  "“[ROOT.GetCountry.GetName]显著发展，但大片土地却被@贵族! [concept_squattocrats]把持。渴望一个更公平的制度，让工人阶级能够购买自己的土地，[SCOPE.sCharacter('robertson_char').GetFullName]正在鼓动推行[GetLawType('law_homesteading').GetName]。"
-anz_squat.2.f:0  "““这些改革承载着一代人的抱负。它们承诺让小人物、‘穷人’获得土地。它们承诺打破大型私占牧场，将土地划分为小块的永久产权农场。健全农业的圣杯触手可及。””"
-anz_squat.2.a:0  "“需要公平的改革。”"
-anz_squat.2.b:0  "“保护@贵族! [concept_squattocrats]免受[SCOPE.sPoliticalMovement('anz_selector_movement').GetName]的侵害！”"
-anz_squat.2.c:0  "“[ROOT.GetCountry.GetOverlord.GetRuler.GetPrimaryRoleTitle]要求保护@贵族! [concept_squattocrats]！”"
-monarch_backs_squatters2_tt:0  "“#r 由于王室已经下令支持[concept_squattocrats]，不服从这项命令#UNDERLINE 可能会#!导致总督承担后果。#!”"
+anz_squat.2.d:0  "“[ROOT.GetCountry.GetName]显著发展,但大片土地却被@贵族! [concept_squattocrats]把持.渴望一个更公平的制度,让工人阶级能够购买自己的土地,[SCOPE.sCharacter('robertson_char').GetFullName]正在鼓动推行[GetLawType('law_homesteading').GetName]."
+anz_squat.2.f:0  "““这些改革承载着一代人的抱负.它们承诺让小人物,‘穷人’获得土地.它们承诺打破大型私占牧场,将土地划分为小块的永久产权农场.健全农业的圣杯触手可及.””"
+anz_squat.2.a:0  "“需要公平的改革.”"
+anz_squat.2.b:0  "“保护@贵族! [concept_squattocrats]免受[SCOPE.sPoliticalMovement('anz_selector_movement').GetName]的侵害!”"
+anz_squat.2.c:0  "“[ROOT.GetCountry.GetOverlord.GetRuler.GetPrimaryRoleTitle]要求保护@贵族! [concept_squattocrats]!”"
+monarch_backs_squatters2_tt:0  "“#r 由于王室已经下令支持[concept_squattocrats],不服从这项命令#UNDERLINE 可能会#!导致总督承担后果.#!”"
 Robertson:0  "“罗伯逊”"
-suppressing_robertson_tt:0  "“将出现一位[GetLawType('law_homesteading').GetName]的鼓动者。他的声望将#r 受到压制。#!”"
-bolster_robertson_tt:0  "“将出现一位[GetLawType('law_homesteading').GetName]的鼓动者。他的声望将#g 得到提升。#!”"
+suppressing_robertson_tt:0  "“将出现一位[GetLawType('law_homesteading').GetName]的鼓动者.他的声望将#r 受到压制.#!”"
+bolster_robertson_tt:0  "“将出现一位[GetLawType('law_homesteading').GetName]的鼓动者.他的声望将#g 得到提升.#!”"
 
 #65% if monarch already supports squatters and you try to reform 2a
 anz_squat.201.t:0  "“[ROOT.GetCountry.GetOverlord.GetRuler.GetPrimaryRoleTitle]介入”"
-anz_squat.201.d1:0  "“由于不服从[ROOT.GetCountry.GetOverlord.GetAdjective]王室关于[concept_squattocrats]事务的直接命令，[ROOT.GetCountry.GetOverlord.GetRuler.GetFullNameWithTitle]认为有必要让[ROOT.GetCountry.GetRuler.GetFullName]今后辞去总督职务，由[GetInterestGroupVariant('ig_landowners',GetPlayer).GetNameWithCountryVariant]的[SCOPE.sCharacter('afp_landowners_leader').GetFullName]接替。”"
-anz_squat.201.d2:0  "“由于不服从[ROOT.GetCountry.GetOverlord.GetAdjective]王室关于[concept_squattocrats]事务的直接命令，[ROOT.GetCountry.GetOverlord.GetRuler.GetFullNameWithTitle]认为有必要让[SCOPE.sCharacter('afp_landowners_leader').GetFullName]担任总督职务。"
-anz_squat.201.f:0  "“信件抵达时，伴随着一队红杉军，以确保其意义不容置疑。”"
-anz_squat.201.a:0  "“那好吧。”"
+anz_squat.201.d1:0  "“由于不服从[ROOT.GetCountry.GetOverlord.GetAdjective]王室关于[concept_squattocrats]事务的直接命令,[ROOT.GetCountry.GetOverlord.GetRuler.GetFullNameWithTitle]认为有必要让[ROOT.GetCountry.GetRuler.GetFullName]今后辞去总督职务,由[GetInterestGroupVariant('ig_landowners',GetPlayer).GetNameWithCountryVariant]的[SCOPE.sCharacter('afp_landowners_leader').GetFullName]接替.”"
+anz_squat.201.d2:0  "“由于不服从[ROOT.GetCountry.GetOverlord.GetAdjective]王室关于[concept_squattocrats]事务的直接命令,[ROOT.GetCountry.GetOverlord.GetRuler.GetFullNameWithTitle]认为有必要让[SCOPE.sCharacter('afp_landowners_leader').GetFullName]担任总督职务."
+anz_squat.201.f:0  "“信件抵达时,伴随着一队红杉军,以确保其意义不容置疑.”"
+anz_squat.201.a:0  "“那好吧.”"
 
 
 #boost to intensive agriculture research
 anz_squat.3.t:0  "“农业创新”"
-anz_squat.3.d1:0  "“如今，运囚船不再向我们海岸运送廉价而充足的劳动力，定居者被迫创新耕作方式。许多专为澳大利亚环境量身定制的新发明极大地改进了苗床准备过程。”"
-anz_squat.3.d2:0  "“由于劳动力短缺和英国支持不足，定居者被迫创新耕作方式。许多专为澳大利亚环境量身定制的新发明极大地改进了苗床准备过程。”"
-anz_squat.3.f:0  "“殖民地的耕作大部分都是手工完成的。由于英国政府援助稀少，且需要适应新环境，需求催生了创新。"
-anz_squat.3.a:0  "“奋斗播撒创新，我们收割我们所播种的！”"
+anz_squat.3.d1:0  "“如今,运囚船不再向我们海岸运送廉价而充足的劳动力,定居者被迫创新耕作方式.许多专为澳大利亚环境量身定制的新发明极大地改进了苗床准备过程.”"
+anz_squat.3.d2:0  "“由于劳动力短缺和英国支持不足,定居者被迫创新耕作方式.许多专为澳大利亚环境量身定制的新发明极大地改进了苗床准备过程.”"
+anz_squat.3.f:0  "“殖民地的耕作大部分都是手工完成的.由于英国政府援助稀少,且需要适应新环境,需求催生了创新."
+anz_squat.3.a:0  "“奋斗播撒创新,我们收割我们所播种的!”"
 anz_agro_innovation:0  "“收获创新”"
 
 #accelerated dispossesion
 anz_squat.4.t:0  "“加速剥夺”"
-anz_squat.4.d:0  "“随着我们的土地改革，殖民地领土扩张的参与度增加了。然而，这也不可避免地意味着[SCOPE.sCulture('aboriginal_culture').GetName]人民被更多地剥夺，以及边疆地区的暴力增多。”"
-anz_squat.4.f:0  "“不受约束的私占行为需要改革，部分原因是由于执法部门需要扩展到这些偏远地区。鉴于英国政府目前倾向于减少对原住民的灭绝，边境警察被派往这些不断扩张的边疆地区。"
-anz_squat.4.a:0  "“的确是残酷的提醒。”"
+anz_squat.4.d:0  "“随着我们的土地改革,殖民地领土扩张的参与度增加了.然而,这也不可避免地意味着[SCOPE.sCulture('aboriginal_culture').GetName]人民被更多地剥夺,以及边疆地区的暴力增多.”"
+anz_squat.4.f:0  "“不受约束的私占行为需要改革,部分原因是由于执法部门需要扩展到这些偏远地区.鉴于英国政府目前倾向于减少对原住民的灭绝,边境警察被派往这些不断扩张的边疆地区."
+anz_squat.4.a:0  "“的确是残酷的提醒.”"
 
 #dummies, aristocrats abuse system
 anz_squat.5.t:0  "“[concept_squattocrats]钻系统空子”"
-anz_squat.5.d:0  "“我们的[GetLawType('law_homesteading').GetName]改革允许将租赁给私占者的王室土地进行选择和细分，然后进行拍卖。然而，[concept_squattocrats]已经找到了钻系统空子的方法。我们可以打击这些非法行为，或者听之任之。”"
-anz_squat.5.f:0  "“一个为审查我们土地改革影响而成立的委员会发现，宅地仅占土地选择申请的一小部分，而绝大多数申请来自拓荒贵族或他们的代理人。此外，由于没有进一步的政府支持，许多“土地选择者”无法在这些土地上建立定居点。这导致土地被转售，最终又回到了私占者手中。"
-anz_squat.5.a:0  "“打击漏洞并支持小农。”"
-anz_squat.5.b:0  "“[concept_squattocrats]已被证明是唯一有能力的土地持有者。”"
+anz_squat.5.d:0  "“我们的[GetLawType('law_homesteading').GetName]改革允许将租赁给私占者的王室土地进行选择和细分,然后进行拍卖.然而,[concept_squattocrats]已经找到了钻系统空子的方法.我们可以打击这些非法行为,或者听之任之.”"
+anz_squat.5.f:0  "“一个为审查我们土地改革影响而成立的委员会发现,宅地仅占土地选择申请的一小部分,而绝大多数申请来自拓荒贵族或他们的代理人.此外,由于没有进一步的政府支持,许多“土地选择者”无法在这些土地上建立定居点.这导致土地被转售,最终又回到了私占者手中."
+anz_squat.5.a:0  "“打击漏洞并支持小农.”"
+anz_squat.5.b:0  "“[concept_squattocrats]已被证明是唯一有能力的土地持有者.”"
 anz_smallholder_supportopinion:0  "“保护小农”"
 anz_squatter_supportopinion:0  "“认可选择漏洞”"
 anz_squatter_crackdown:0  "“打击选择漏洞”"
@@ -98,8 +98,8 @@ anz_squat5_tt:0  "“"
 concept_squattocrat:0  "“拓荒贵族”"
 concept_squattocrats:0  "“拓荒贵族”"
 concept_squattocracy:0  "“拓荒贵族阶层”"
-concept_squattocrat_desc:0  "“指的是一个通过占据最初未经总督（负责通过授予土地来分配土地）许可的土地而形成的贵族阶层。未经许可占据土地的行为被贬义地称为#b “私占”#!。"
+concept_squattocrat_desc:0  "“指的是一个通过占据最初未经总督(负责通过授予土地来分配土地)许可的土地而形成的贵族阶层.未经许可占据土地的行为被贬义地称为#b “私占”#!."
 
-concept_squattocrats_desc:0  "“指的是一个通过占据最初未经总督（负责通过授予土地来分配土地）许可的土地而形成的贵族阶层。未经许可占据土地的行为被贬义地称为#b “私占”#!。"
+concept_squattocrats_desc:0  "“指的是一个通过占据最初未经总督(负责通过授予土地来分配土地)许可的土地而形成的贵族阶层.未经许可占据土地的行为被贬义地称为#b “私占”#!."
 
-concept_squattocracy_desc:0  "“指的是一个通过占据最初未经总督（负责通过授予土地来分配土地）许可的土地而形成的贵族阶层。未经许可占据土地的行为被贬义地称为#b “私占”#!。"
+concept_squattocracy_desc:0  "“指的是一个通过占据最初未经总督(负责通过授予土地来分配土地)许可的土地而形成的贵族阶层.未经许可占据土地的行为被贬义地称为#b “私占”#!."

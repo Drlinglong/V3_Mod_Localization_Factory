@@ -1,4 +1,4 @@
-﻿l_russian:
+l_russian:
 ##########################
 #
  Sweepers_ACTION:0 "Зачистка"
@@ -8,7 +8,7 @@
  FLEETORDER_DESTROY_PLANET_WITH_Sweepers:0 "Готовимся к зачистке $PLANET|Y$"
  MESSAGE_DESC_FOR_Sweepers:0 "Сравнено с землёй"
  What_are_you_doing:0 "$TRIGGER_FAIL$ За такое тебя отправят в 227-ю копать картошку!"
- is_valid_target_for_sweeper:0 "$TRIGGER_FAIL$ — это колония, контролируемая нами или одной из воюющих сторон."
+ is_valid_target_for_sweeper:0 "$TRIGGER_FAIL$ - это колония, контролируемая нами или одной из воюющих сторон."
 
 
 
@@ -132,4 +132,4 @@
  BA_Drone_Vulcan:0 "Автопушечный дрон"
  BA_Drone_Vulcan_DESC:0 "Дрон, оснащенный автопушкой"
  BA_POWER_CHAIR:0 "Стул из уличного кафе"
- BA_POWER_CHAIR_DESC:0 "Я БУРЯ, КОТОРАЯ ПРИБЛИЖАЕТСЯ！！！！！！！！！！！！！！"
+ BA_POWER_CHAIR_DESC:0 "Я БУРЯ, КОТОРАЯ ПРИБЛИЖАЕТСЯ!!!!!!!!!!!!!!"

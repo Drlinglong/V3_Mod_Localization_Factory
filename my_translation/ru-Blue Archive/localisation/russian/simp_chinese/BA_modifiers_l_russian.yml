@@ -1,8 +1,8 @@
-﻿l_russian:
+l_russian:
  ###     static    ###
  modifier_BA_Project_Cradle_engaging:0 "Занятость персонала: Проект «Колыбель»"
  modifier_BA_Agnus_Dei:0 "Agnus Dei"
- modifier_BA_Agnus_Dei_desc:0 "Наши былые битвы — теперь лишь дымка воспоминаний, и после долгих лет борьбы для нас забрезжил рассвет. На родной планете полным ходом идёт безрассудное производство энергии, минералов и продовольствия — всё для того, чтобы мы смогли захватить инициативу в этом бескрайнем космосе."
+ modifier_BA_Agnus_Dei_desc:0 "Наши былые битвы - теперь лишь дымка воспоминаний, и после долгих лет борьбы для нас забрезжил рассвет. На родной планете полным ходом идёт безрассудное производство энергии, минералов и продовольствия - всё для того, чтобы мы смогли захватить инициативу в этом бескрайнем космосе."
  modifier_BA_Kyrie_defence_1:0 "Башня подавления"
  modifier_BA_Kyrie_defence_2:0 "Башня подавления"
  modifier_BA_Kyrie_defence_3:0 "Башня подавления"
@@ -115,9 +115,9 @@
  ###  school idea  ###
  modifier_BA_SI_Abydos_A06:"§CЛазурная Рябь§!"
  modifier_BA_SI_Abydos_A06_desc: ""
- modifier_BA_SI_Abydos_A06_permanent:"$modifier_BA_SI_Abydos_A06$— Монумент"
+ modifier_BA_SI_Abydos_A06_permanent:"$modifier_BA_SI_Abydos_A06$- Монумент"
  modifier_BA_SI_Abydos_A06_permanent_desc: "$mmodifier_BA_SI_Abydos_A06_desc$"
- modifier_BA_SI_Abydos_A06_temp:"$modifier_BA_SI_Abydos_A06$— Вдохновение"
+ modifier_BA_SI_Abydos_A06_temp:"$modifier_BA_SI_Abydos_A06$- Вдохновение"
  mmodifier_BA_SI_Abydos_A06_temp_desc: "$mmodifier_BA_SI_Abydos_A06_desc$"
  modifier_BA_SI_Abydos_B01:"§CОсвоение Пустыни§!"
  modifier_BA_SI_Abydos_B01_desc: ""

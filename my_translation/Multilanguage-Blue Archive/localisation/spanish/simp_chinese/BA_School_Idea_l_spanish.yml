@@ -1,4 +1,4 @@
-﻿l_spanish:
+l_spanish:
  BA_SI:"Concepto de la Academia"
 
  MESSAGE_BA_SI_READY:"Concepto de la Academia listo"
@@ -145,7 +145,7 @@
  ### 下左线
  SI_Gehenna_C01:"Decisión Final: Pandemonium"
  SI_Gehenna_C01_desc:"El liderazgo de la Sociedad Pandemonium fue superando gradualmente la voz del Comité Disciplinario, obteniendo la autoridad de decisión sobre los asuntos internos de Gehenna. Sin embargo, al elegir al árbitro final, la Sociedad Pandemonium tomó una decisión inesperada."
- SI_Gehenna_C01_effect:"Efecto:" #§H统治者更换为§!：丹花伊吹\n
+ SI_Gehenna_C01_effect:"Efecto:" #§H统治者更换为§!:丹花伊吹\n
  SI_Gehenna_C01_tip:"§C$SI_Gehenna_C01$§!"
 
  SI_Gehenna_C02:"Principios Tras Bambalinas"
@@ -182,7 +182,7 @@
 
  SI_Gehenna_E02:"Mano de Hierro de la Administradora"
  SI_Gehenna_E02_desc:"La Administradora del Comité Disciplinario es quien maneja la información más completa, conociendo a fondo el despliegue de fuerzas militares en cada región. Para maximizar la ventaja en combate en nuestro territorio y, al mismo tiempo, prevenir otros problemas internos, el mando debe ser entregado directamente a la Administradora."
- SI_Gehenna_E02_effect:"\nEfecto:\n$MOD_SHIP_HOME_TERRITORY_FIRE_RATE_MULT$: §G+75%§!\n$MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+100%§!\n$MOD_STARBASE_SHIPYARD_BUILD_COST_MULT$: §R+10%§!\n" #\n处于防御战争下，本土舰队射速: §G+75%§!
+ SI_Gehenna_E02_effect:"\nEfecto:\n$MOD_SHIP_HOME_TERRITORY_FIRE_RATE_MULT$: §G+75%§!\n$MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+100%§!\n$MOD_STARBASE_SHIPYARD_BUILD_COST_MULT$: §R+10%§!\n" #\n处于防御战争下,本土舰队射速: §G+75%§!
  SI_Gehenna_E02_tip:"§C$SI_Gehenna_E02$§!\n$SI_Gehenna_E02_desc$\n$SI_Gehenna_E02_effect$"
 
  SI_Gehenna_E03:"Paso a Paso"
@@ -200,7 +200,7 @@
 
  SI_Millennium_G02:"Subsidio de Rendimiento Global"
  SI_Millennium_G02_desc:"¡Nuestra investigación demuestra que pagar bien a los investigadores crea un valor ¡muchas veces mayor! Puede que suene a que nos estamos echando flores, ¡pero tiene todo el sentido del mundo!"
- SI_Millennium_G02_effect:"\nEfecto:\n$mod_planet_researchers_produces_mult$: §G+10%§!\n$mod_planet_researchers_upkeep_mult$: §R+5%§!\n$MOD_COUNTRY_NUM_TECH_ALTERNATIVES_ADD$: §G+1§!\n$MOD_LEADER_SKILL_LEVELS$: §G+1§!\n$MOD_PLANET_POP_ASSEMBLY_MULT$: §G+20%§!\n" #\n现在每十五个人口提供一个£pops£研究人员岗位。
+ SI_Millennium_G02_effect:"\nEfecto:\n$mod_planet_researchers_produces_mult$: §G+10%§!\n$mod_planet_researchers_upkeep_mult$: §R+5%§!\n$MOD_COUNTRY_NUM_TECH_ALTERNATIVES_ADD$: §G+1§!\n$MOD_LEADER_SKILL_LEVELS$: §G+1§!\n$MOD_PLANET_POP_ASSEMBLY_MULT$: §G+20%§!\n" #\n现在每十五个人口提供一个£pops£研究人员岗位.
  SI_Millennium_G02_tip:"§C$SI_Millennium_G02$§!\n$SI_Millennium_G02_desc$\n$SI_Millennium_G02_effect$"
 
  SI_Millennium_G03:"Sistema de Patrocinio Privado para la Investigación de Clubes"
@@ -300,7 +300,7 @@
  ### 左线
  SI_Trinity_A01:"Presidencia de Philius"
  SI_Trinity_A01_desc:"La facción Philius lideró en su momento la firma del Tratado del Edén. Aunque el resultado no fue del todo satisfactorio, ¡su talento diplomático demostrado fue impecable!"
- SI_Trinity_A01_effect:"\n§RExcluye a§!$SI_Trinity_B01$、$SI_Trinity_C01$§R§!\nEfecto:\n$mod_planet_jobs_unity_produces_mult$: §G+20%§!\n$MOD_EMPIRE_SIZE_SYSTEMS_MULT$: §G-10%§!\n$MOD_COUNCIL_AGENDA_PROGRESS_SPEED$: §G+15%§!\n"
+ SI_Trinity_A01_effect:"\n§RExcluye a§!$SI_Trinity_B01$,$SI_Trinity_C01$§R§!\nEfecto:\n$mod_planet_jobs_unity_produces_mult$: §G+20%§!\n$MOD_EMPIRE_SIZE_SYSTEMS_MULT$: §G-10%§!\n$MOD_COUNCIL_AGENDA_PROGRESS_SPEED$: §G+15%§!\n"
  SI_Trinity_A01_tip:"§C$SI_Trinity_A01$§!\n$SI_Trinity_A01_desc$\n$SI_Trinity_A01_effect$"
 
  SI_Trinity_A02:"Burocracia Descentralizada"

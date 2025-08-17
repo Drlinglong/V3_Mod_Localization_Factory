@@ -9,6 +9,7 @@ import logging
 from scripts.utils import i18n
 from scripts.config import CHUNK_SIZE, MAX_RETRIES, API_PROVIDERS
 from scripts.utils.text_clean import strip_pl_diacritics, strip_outer_quotes
+from scripts.utils.punctuation_handler import generate_punctuation_prompt
 from .glossary_manager import glossary_manager
 
 # Alias required by the audit.py script for compatibility
@@ -75,6 +76,12 @@ def translate_single_text(
             ) + "\n\n"
             logging.info(i18n.t("single_translation_glossary_injected", count=len(relevant_terms)))
     
+    # 智能生成标点符号转换提示词
+    punctuation_prompt = generate_punctuation_prompt(
+        source_lang["code"], 
+        target_lang["code"]
+    )
+    
     prompt = (
         base_prompt
         + f"CRITICAL CONTEXT: The mod's theme is '{mod_context}'. Use this to ensure accuracy.\n"
@@ -82,7 +89,8 @@ def translate_single_text(
         + "CRITICAL FORMATTING: Your response MUST ONLY contain the translated text. "
         "DO NOT include explanations, pinyin, or any other text.\n"
         'For example, if the input is "Flavor Pack", your output must be "风味包" and nothing else.\n\n'
-        f'Translate this: "{text}"'
+        + (f"PUNCTUATION CONVERSION:\n{punctuation_prompt}\n\n" if punctuation_prompt else "")
+        + f'Translate this: "{text}"'
     )
 
     try:
@@ -146,6 +154,12 @@ def _translate_chunk(client, chunk, source_lang, target_lang, game_profile, mod_
                     ) + "\n\n"
                     logging.info(i18n.t("batch_translation_glossary_injected", batch_num=batch_num, count=len(relevant_terms)))
             
+            # 智能生成标点符号转换提示词
+            punctuation_prompt = generate_punctuation_prompt(
+                source_lang["code"], 
+                target_lang["code"]
+            )
+            
             format_prompt_part = (
                 "CRITICAL FORMATTING: Your response MUST be a numbered list with the EXACT same number of items, from 1 to "
                 f"{len(chunk)}. "
@@ -157,7 +171,8 @@ def _translate_chunk(client, chunk, source_lang, target_lang, game_profile, mod_
                 "3.  **Icon Tags** like `@prestige!`, `£minerals£`. These are variables. You MUST preserve them completely. DO NOT translate any text inside them.\n\n"
                 "4.  **Internal Keys** like `mm_strategic_region` or `com_topbar_interests`. These are strings that often contain underscores and no spaces. They are code references and MUST NOT be translated. Preserve them completely.\n\n"
                 "Preserve all internal newlines (\\n).\n\n"
-                "--- INPUT LIST ---\n"
+                + (f"PUNCTUATION CONVERSION:\n{punctuation_prompt}\n\n" if punctuation_prompt else "")
+                + "--- INPUT LIST ---\n"
                 f"{numbered_list}\n"
                 "--- END OF INPUT LIST ---"
             )

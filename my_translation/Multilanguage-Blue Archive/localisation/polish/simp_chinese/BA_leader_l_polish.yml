@@ -1,4 +1,4 @@
-﻿l_polish:
+l_polish:
 ########   用户界面   ########
  MESSAGE_BA_NEW_SP_LEADER_TITLE:"Rezerwa Liderów"
  MESSAGE_BA_NEW_SP_LEADER_DESC:"$SP_NAME|B$ dołączył(a) do rezerwy liderów i może zostać zrekrutowany(a) jako specjalny lider(ka) w Schale."
@@ -40,17 +40,17 @@
 ########   特殊领袖   ########
  ###姬器人
  NAME_Aris:"Aris"
- PHASE_Aris:"Bum, bum, ka-bum! Arisu zdobyła ważny przedmiot – hasło do bazy danych! Nie ma co czekać, szybko się podłączę do bazy… Mmm, więc tak to działa, co nie…?"
+ PHASE_Aris:"Bum, bum, ka-bum! Arisu zdobyła ważny przedmiot – hasło do bazy danych! Nie ma co czekać, szybko się podłączę do bazy... Mmm, więc tak to działa, co nie...?"
  DESC_Aris:"Pochodzi z Akademii Nauki Tysiąclecia, prototyp Gikishinów, programistka z Działu Rozwoju Gier."
  TRIGGER_Aris:"Arisu już objęła stanowisko."
  BA_communication.Aris.title:"Rezerwa rekrutacyjna: §B$NAME_Aris$§!"
- BA_communication.Aris.desc:"Chociaż Arisu przybyła do Biura Generalnego, jest tu mnóstwo dziwnych i dziwacznych przedmiotów… Arisu nie wie, co ma dalej robić…"
+ BA_communication.Aris.desc:"Chociaż Arisu przybyła do Biura Generalnego, jest tu mnóstwo dziwnych i dziwacznych przedmiotów... Arisu nie wie, co ma dalej robić..."
  BA_communication.Aris.a:"Biuro Generalne odpowiada za mnóstwo, mnóstwo rzeczy, trzeba znaleźć kogoś, kto ci to wytłumaczy."
- BA_communication.Aris.a.response:"Właściwie, to Noa tłumaczyła, gdy tu przyprowadzała Arisu… Wszystko tutaj brzmi tak niebezpiecznie…"
+ BA_communication.Aris.a.response:"Właściwie, to Noa tłumaczyła, gdy tu przyprowadzała Arisu... Wszystko tutaj brzmi tak niebezpiecznie..."
  BA_communication.Aris.b:"Najpierw pójdź znaleźć administratorkę i zobacz, jaka praca byłaby odpowiednia dla Arisu."
- BA_communication.Aris.b.response:"Mhm, Arisu dostała od administratorki mnóstwo, mnóstwo obowiązków… Ale Arisu przyszła tu w celu zebrania danych, a teraz nie wie, co ma robić…"
+ BA_communication.Aris.b.response:"Mhm, Arisu dostała od administratorki mnóstwo, mnóstwo obowiązków... Ale Arisu przyszła tu w celu zebrania danych, a teraz nie wie, co ma robić..."
  BA_communication.Aris.c:"Nie martw się tak bardzo. To niepowtarzalna okazja, może zaczniesz od tej pracy eksploracyjnej?"
- BA_communication.Aris.c.response:"Eksploracja to częsty element gier, Arisu na pewno będzie w tym świetna! Następnie… iść do Biura Obrony, żeby przydzielili statek badawczy? Arisu rozumie, ruszamy!"
+ BA_communication.Aris.c.response:"Eksploracja to częsty element gier, Arisu na pewno będzie w tym świetna! Następnie... iść do Biura Obrony, żeby przydzielili statek badawczy? Arisu rozumie, ruszamy!"
  BA_communication.Aris.join:"§B$NAME_Aris$ została liderką.§!"
 ### 起源
  NAME_Hoshino:"Takanashi Hoshino"
@@ -80,7 +80,7 @@
  BA_communication.Yuuka.c:"Skoro tak, to nie będę się krępował, dobrze? Kivotos potrzebuje teraz administratorów na stanowiska gubernatorów, czy mogę to powierzyć Yuuce?"
  BA_communication.Yuuka.c.response:"Hm~hm~hm~ Więc trafiłeś pod właściwy adres. Jeśli chodzi o zarządzanie administracyjne, to jestem pewna, że nikomu nie ustępuję! Niezależnie od tego, czy chodzi o podsumowania finansowe, alokacje funduszy, czy weryfikację decyzji, to wszystko są moje specjalności z Seminarium. Chociaż teraz będę odpowiadać za planety znacznie większe niż jedna akademia... i tak dam z siebie wszystko! Całe wydatki finansowe Kivotos, a nawet twoje osobiste finanse, też możesz mi powierzyć, nie ma problemu!"
  BA_communication.Yuuka.d:"Skoro tak, to zaufam zdolnościom Yuuki. Zawsze mi mówisz, żebym się nie przemęczał, mała Yuuka, ty też musisz uważać na odpoczynek."
- BA_communication.Yuuka.d.response:"Hmph, przecież to Sensei sam najmniej dba o swoje zdrowie... Ale jeśli tak nalegasz, to niech to będzie nasza wspólna obietnica— Pracować pilnie, kiedy się pracuje, i porządnie odpoczywać, kiedy się odpoczywa! Razem rozłóżmy na czynniki pierwsze cały smutek i złość!"
+ BA_communication.Yuuka.d.response:"Hmph, przecież to Sensei sam najmniej dba o swoje zdrowie... Ale jeśli tak nalegasz, to niech to będzie nasza wspólna obietnica- Pracować pilnie, kiedy się pracuje, i porządnie odpoczywać, kiedy się odpoczywa! Razem rozłóżmy na czynniki pierwsze cały smutek i złość!"
  BA_communication.Yuuka.join:"§B$NAME_Yuuka$§! dołączyła jako §Hlider§!."
 
  NAME_Hina:"Sorasaki Hina"
@@ -167,7 +167,7 @@
  leader_trait_yuuka_SP2_desc:"§PWaga wszystkich technologii związanych z „Plecakiem Taktycznym” *0.5.§!"
 
  leader_trait_hoshino_SP5:"To, co utracono, to, czego nie zdołano puścić"
- leader_trait_hoshino_SP5_desc:"Odkąd Hoshino przejęła Abydos od Yumemi-senpai, z determinacją postanowiła chronić tę szkołę — niezależnie od tego, czy to przeszłość, teraźniejszość, czy przyszłość."
+ leader_trait_hoshino_SP5_desc:"Odkąd Hoshino przejęła Abydos od Yumemi-senpai, z determinacją postanowiła chronić tę szkołę - niezależnie od tego, czy to przeszłość, teraźniejszość, czy przyszłość."
  leader_trait_hina_SP2:"Isziboszi"
  leader_trait_hina_SP2_desc:"Będąc jedną ze szczytowych potęg Kivotosu, żaden uczeń nie odważyłby się zmierzyć z tą członkinią Komitetu Dyscyplinarnego."
  leader_trait_mika_SP3:"Rolada Szwajcarska"
@@ -1004,7 +1004,7 @@
  HIMARI_WEAPON:"Kwiat ze Szczytu"
  HIMARI_WEAPON_DESC:"$HIMARI_WEAPON_DESC1$$HIMARI_WEAPON_DESC2$"
  HIMARI_WEAPON_DESC1:"Pistolet posiadany przez Himari."
- HIMARI_WEAPON_DESC2:"Prosty i piękny pistolet. Zwykle rzadko widuje się Himari używającą go. „W gruncie rzeczy, tak zwany kwiat ze szczytu nie jest czymś, co łatwo rzuca się w oczy… Prawda, tak jak ja?” – powiedziała Himari."
+ HIMARI_WEAPON_DESC2:"Prosty i piękny pistolet. Zwykle rzadko widuje się Himari używającą go. „W gruncie rzeczy, tak zwany kwiat ze szczytu nie jest czymś, co łatwo rzuca się w oczy... Prawda, tak jak ja?” – powiedziała Himari."
  tech_BA_SPW_HIMARI_WEAPON:"Uzbrojenie Okrętowe: $HIMARI_WEAPON$"
  tech_BA_SPW_HIMARI_WEAPON_desc: "$tech_BA_SPW_WEAPON_desc$"
 
@@ -1018,7 +1018,7 @@
  MINE_WEAPON:"Dowód Pomocy"
  MINE_WEAPON_DESC:"$MINE_WEAPON_DESC1$$MINE_WEAPON_DESC2$"
  MINE_WEAPON_DESC1:"Strzelba Mine."
- MINE_WEAPON_DESC2:"Twierdzi, że »pomoc czasami ma dwie strony medalu«. Być może ta broń jest właśnie podstawą jej stanowiska…"
+ MINE_WEAPON_DESC2:"Twierdzi, że »pomoc czasami ma dwie strony medalu«. Być może ta broń jest właśnie podstawą jej stanowiska..."
  tech_BA_SPW_MINE_WEAPON:"Uzbrojenie Okrętowe: $MINE_WEAPON$"
  tech_BA_SPW_MINE_WEAPON_desc: "$tech_BA_SPW_WEAPON_desc$"
 
@@ -1095,7 +1095,7 @@
  MINA_WEAPON:"Czarny Smok & Biały Tygrys"
  MINA_WEAPON_DESC:"$MINA_WEAPON_DESC1$$MINA_WEAPON_DESC2$"
  MINA_WEAPON_DESC1:"Ulubione podwójne pistolety Miny."
- MINA_WEAPON_DESC2:"Lewy Czarny Smok, Prawy Biały Tygrys. „To są moi najsilniejsi towarzysze broni…”, powiedziała. Może czasem rozsądek jest ważniejszy niż emocje."
+ MINA_WEAPON_DESC2:"Lewy Czarny Smok, Prawy Biały Tygrys. „To są moi najsilniejsi towarzysze broni...”, powiedziała. Może czasem rozsądek jest ważniejszy niż emocje."
  tech_BA_SPW_MINA_WEAPON:"Broń Okrętowa: $MINA_WEAPON$"
  tech_BA_SPW_MINA_WEAPON_desc: "$tech_BA_SPW_WEAPON_desc$"
 
@@ -1120,7 +1120,7 @@
  tech_BA_SPW_MOMIJI_WEAPON:"Uzbrojenie okrętowe: $MOMIJI_WEAPON$"
  tech_BA_SPW_MOMIJI_WEAPON_desc: "$tech_BA_SPW_WEAPON_desc$"
 
- KASUMI_WEAPON:"Red·Rector"
+ KASUMI_WEAPON:"Red.Rector"
  KASUMI_WEAPON_DESC:"$KASUMI_WEAPON_DESC1$$KASUMI_WEAPON_DESC2$"
  KASUMI_WEAPON_DESC1:"Pistolet, który Kasumi zawsze nosi przy sobie."
  KASUMI_WEAPON_DESC2:"Zazwyczaj używany do strzelania w powietrze, by rozkręcić imprezę. Za jego małym i uroczym wyglądem kryje się potężna siła ognia."
@@ -1443,7 +1443,7 @@
  leader_special_069:0 "Miłośnik Mangi"
  leader_special_069_desc:0 "Czy ta twoja manga jest w ogóle poważna?"
  leader_special_070:0 "Badania w Poszukiwaniu Inspiracji Gwiezdnych"
- leader_special_070_desc:0 "Gwiezdne mangi to też mangi. A co to są gwiezdne mangi…?"
+ leader_special_070_desc:0 "Gwiezdne mangi to też mangi. A co to są gwiezdne mangi...?"
  leader_special_071:0 ""
  leader_special_071_desc:0 ""
  leader_special_072:0 ""
@@ -1532,7 +1532,7 @@
  leader_special_102_UNF_desc:0 "Wielcy pustelnicy ukrywają się w mieście, a my zacieramy ślady po udzieleniu wsparcia."
  leader_special_103:0 "Dziki Instynkt"
  leader_special_103_desc:0 "Intuicja Asuny jest często kluczem do ukończenia misji."
- leader_special_103_BN:0 "7·7·7"
+ leader_special_103_BN:0 "7.7.7"
  leader_special_103_BN_desc:0 "Zachowanie spokoju w obliczu niebezpieczeństwa to podstawowa cecha agenta, a jeśli dodać do tego odrobinę szczęścia..."
  leader_special_103_UNF:0 "Rytm"
  leader_special_103_UNF_desc:0 "Przebrani wśród tłumu, działający zgodnie z rytmem."
@@ -1697,7 +1697,7 @@
 
 
 
-### 招募问候   ！！！涉及原版修改
+### 招募问候   !!!涉及原版修改
  LEADER_RECRUITMENT_SCRIPTED_GREETING:"§L[From.GetScriptedLeaderRecruitedGreeting_BA]§!"
 
 
@@ -1709,31 +1709,31 @@
  leader_greeting_BA_006:0 "Uch, chociaż obijanie się też jest ważne~... to tym razem może podejdę do tego choć trochę poważnie, co?"
  leader_greeting_BA_007:0 "Mhm, wreszcie dotarłam! Proszę o dobrą opiekę, Nauczycielu!"
  leader_greeting_BA_008:0 ""
- leader_greeting_BA_009:0 "…Misaki z Oddziału Ariusa. Teraz jestem niczym bezpański pies… Przekazuję ci dowództwo. Rozkazuj, jak zechcesz."
- leader_greeting_BA_010:0 "Ehehe… tak jakoś się tu znalazłam… Pewnie będzie ciężko, prawda? Będzie bolało, prawda? Ale… takie jest życie… Nic nie poradzisz. Tu Hiyori, proszę o wyrozumiałość… ehehe."
- leader_greeting_BA_011:0 "Saori z Oddziału Ariusa… Zostałam wiele zawdzięczam Nauczycielowi. Pozwól mi przynajmniej wziąć na siebie część obowiązków. Proszę."
- leader_greeting_BA_012:0 "…Mam na imię Atsuko Susa. Czy jest coś, co Nauczyciel chciałby, żebym zrobiła? Oby tylko było to w mojej mocy."
+ leader_greeting_BA_009:0 "...Misaki z Oddziału Ariusa. Teraz jestem niczym bezpański pies... Przekazuję ci dowództwo. Rozkazuj, jak zechcesz."
+ leader_greeting_BA_010:0 "Ehehe... tak jakoś się tu znalazłam... Pewnie będzie ciężko, prawda? Będzie bolało, prawda? Ale... takie jest życie... Nic nie poradzisz. Tu Hiyori, proszę o wyrozumiałość... ehehe."
+ leader_greeting_BA_011:0 "Saori z Oddziału Ariusa... Zostałam wiele zawdzięczam Nauczycielowi. Pozwól mi przynajmniej wziąć na siebie część obowiązków. Proszę."
+ leader_greeting_BA_012:0 "...Mam na imię Atsuko Susa. Czy jest coś, co Nauczyciel chciałby, żebym zrobiła? Oby tylko było to w mojej mocy."
  leader_greeting_BA_013:0 "Nasze spotkanie było nieuniknione, Nauczycielu."
  leader_greeting_BA_014:0 "Jestem Kikyou Kiryuu, strateg Hyakkaryoran, należąca do Zjednoczonej Akademii Hyakkiyako. Aby utrzymać dobre stosunki w przyszłości, pomogę w pracach Schale. W zamian, ty również musisz pomóc nam w naszych działaniach. Tak to wygląda, proszę o wskazówki, Nauczycielu."
- leader_greeting_BA_015:0 "Fuwa Renka, Dowódczyni Szturmu Hyakkaryoran, zjednoczonej Akademii Hyakkiyako, melduję się! Nauczycielu… nie, Mistrzu! Niezależnie od tego, czy to wspieranie ciebie, czy działalność młodzieżowa – dam z siebie wszystko! Proszę o dobrą opiekę!"
+ leader_greeting_BA_015:0 "Fuwa Renka, Dowódczyni Szturmu Hyakkaryoran, zjednoczonej Akademii Hyakkiyako, melduję się! Nauczycielu... nie, Mistrzu! Niezależnie od tego, czy to wspieranie ciebie, czy działalność młodzieżowa – dam z siebie wszystko! Proszę o dobrą opiekę!"
  leader_greeting_BA_016:0 ""
  leader_greeting_BA_017:0 "Jestem Konro Kajiya. Jako dumna członkini Hyakkaryoran, z całego serca będę wspierać Nauczyciela."
  leader_greeting_BA_018:0 ""
  leader_greeting_BA_019:0 ""
  leader_greeting_BA_020:0 ""
- leader_greeting_BA_021:0 "Dzień dobry—— Ach, może to bardziej naturalny sposób wyrażania się. Miło mi poznać!"
+ leader_greeting_BA_021:0 "Dzień dobry-- Ach, może to bardziej naturalny sposób wyrażania się. Miło mi poznać!"
  leader_greeting_BA_022:0 "Witaj, Nauczycielu. Jestem Umi Oyama z Komitetu ds. Operacji Festiwalowych, należącego do Hyakkiyako! Lubisz festiwale?"
- leader_greeting_BA_023:0 "Ehehe, jestem Shizuko z Komitetu ds. Operacji Festiwalowych~. Proszę o dalszą dobrą opiekę, Nauczycielu? Hej?… Ach, tak, tak, to tylko formalność!"
- leader_greeting_BA_024:0 "Hehe… W końcu cię znalazłam. Już cię nie puszczę, kochanie? Proszę, nie odchodź ode mnie więcej, dobrze…?"
- leader_greeting_BA_025:0 "Izuna, melduję się! Przybyłam na wezwanie Nauczyciela… nie, na wezwanie Pana! Nin-nin!"
- leader_greeting_BA_026:0 "Witaj… tu Tsukuyo Oono… Jestem… no, członkinią Klubu Ninjutsu… Proszę o… dobrą opiekę…."
+ leader_greeting_BA_023:0 "Ehehe, jestem Shizuko z Komitetu ds. Operacji Festiwalowych~. Proszę o dalszą dobrą opiekę, Nauczycielu? Hej?... Ach, tak, tak, to tylko formalność!"
+ leader_greeting_BA_024:0 "Hehe... W końcu cię znalazłam. Już cię nie puszczę, kochanie? Proszę, nie odchodź ode mnie więcej, dobrze...?"
+ leader_greeting_BA_025:0 "Izuna, melduję się! Przybyłam na wezwanie Nauczyciela... nie, na wezwanie Pana! Nin-nin!"
+ leader_greeting_BA_026:0 "Witaj... tu Tsukuyo Oono... Jestem... no, członkinią Klubu Ninjutsu... Proszę o... dobrą opiekę...."
  leader_greeting_BA_027:0 "Panie Nauczycielu! Hehehe, długo kazałam na siebie czekać! Michiru Chidori, przewodnicząca Klubu Badań nad Ninjutsu, melduję się! Obyś od dziś dobrze mnie pouczał, Panie Nauczycielu!"
- leader_greeting_BA_028:0 "Ta chwila… jest jak sen… Witaj. Nauczycielu. Od teraz proszę o dobrą opiekę~."
+ leader_greeting_BA_028:0 "Ta chwila... jest jak sen... Witaj. Nauczycielu. Od teraz proszę o dobrą opiekę~."
  leader_greeting_BA_029:0 "Maskotka Klubu Treningowego wita w wielkim stylu! Długo czekałeś, Nauczycielu! Więc, co dziś robimy?"
  leader_greeting_BA_030:0 "Hehe. Dzień dobry, Nauczycielu. Tu Mimori z Klubu Treningowego. Od teraz proszę o dobrą opiekę."
  leader_greeting_BA_031:0 "Kaho Kuwagami, wiceprzewodnicząca Klubu Onmyōdō, ze Zjednoczonej Akademii Hyakkiyako. Proszę o dalszą dobrą opiekę."
  leader_greeting_BA_032:0 "Jestem Nia, przewodnicząca Klubu Onmyōdō, desu. Czym Nauczyciel może mi służyć, hmmm?"
- leader_greeting_BA_033:0 "Eee… Więc co teraz powinnam zrobić?"
+ leader_greeting_BA_033:0 "Eee... Więc co teraz powinnam zrobić?"
  leader_greeting_BA_034:0 "Hehe, mówisz, że chcesz, żebym ci pomogła? Cóż, nie odmówię, ale wynajęcie mnie jest bardzo drogie, Nauczycielu~."
  leader_greeting_BA_035:0 "Nie jestem zła, proszę nie zrozumieć mnie źle. Nauczycielu. Po prostu ludzie często mówią, że mam przerażający wyraz twarzy."
  leader_greeting_BA_036:0 "Cyk! Nareszcie nadeszła moja kolej! Więc pobawmy się dobrze, Nauczycielu!"
@@ -1796,7 +1796,7 @@
  leader_greeting_BA_093:0 "O, Dzielny! Niech światłość będzie z tobą."
  leader_greeting_BA_094:0 "Z najlepszą grą, aby pomóc Profesorowi."
  leader_greeting_BA_095:0 "Bardzo ciekawa historia właśnie się zaczyna!"
- leader_greeting_BA_096:0 "Departament Rozwoju Gier, Przewodnicząca... Yuzu. Na… naprawdę… chcesz mnie zabrać ze sobą?"
+ leader_greeting_BA_096:0 "Departament Rozwoju Gier, Przewodnicząca... Yuzu. Na... naprawdę... chcesz mnie zabrać ze sobą?"
  leader_greeting_BA_097:0 ""
  leader_greeting_BA_098:0 "Chihiro Kakudate, Wiceprzewodnicząca Veritas. Jeśli dzieciaki tutaj sprawią kłopoty, proszę mnie natychmiast powiadomić."
  leader_greeting_BA_099:0 "Bardzo miło Pana poznać, Profesorze. Niech Profesor ujrzy potęgę Millennium."

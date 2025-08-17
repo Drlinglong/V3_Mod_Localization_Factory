@@ -1,4 +1,4 @@
-﻿l_spanish:
+l_spanish:
 ########   用户界面   ########
  MESSAGE_BA_NEW_SP_LEADER_TITLE:"Reserva de Líderes"
  MESSAGE_BA_NEW_SP_LEADER_DESC:"$SP_NAME|B$ se ha unido a la reserva de líderes y puede ser reclutado como líder especial en la Caja de Shittim."
@@ -80,7 +80,7 @@
  BA_communication.Yuuka.c:"Siendo así, ¿entonces no me andaré con rodeos? Kivotos necesita ahora personal administrativo para ser gobernadores, ¿podría Yuuka encargarse?"
  BA_communication.Yuuka.c.response:"¡Jum-jum-jum~ Pues ha encontrado a la persona correcta! En cuanto a la gestión administrativa, ¡tengo la confianza de no perder ante nadie! Ya sea la contabilidad, la asignación de fondos o la revisión de resoluciones, ¡todo eso son mis puntos fuertes en el Seminario! Aunque ahora tendré que encargarme de un planeta mucho más grande que una academia... ¡También me esforzaré al máximo! ¡Incluso los gastos fiscales de todo Kivotos y los suyos propios puede dejármelos a mí, no tengo ningún problema!"
  BA_communication.Yuuka.d:"Siendo así, confío en las habilidades de Yuuka. Siempre me dices que no me esfuerce demasiado, pero tú, pequeña Yuuka, también debes cuidar de tu descanso."
- BA_communication.Yuuka.d.response:"Hmph, ¡si usted, Sensei, es la persona que menos se preocupa por su propia salud... Pero si insiste en hacerlo, entonces, esto puede ser una promesa entre nosotros dos! — ¡Trabajar con seriedad cuando toca y descansar bien cuando también toca! ¡Juntos, descompongamos en factores toda la tristeza y la ira!"
+ BA_communication.Yuuka.d.response:"Hmph, ¡si usted, Sensei, es la persona que menos se preocupa por su propia salud... Pero si insiste en hacerlo, entonces, esto puede ser una promesa entre nosotros dos! - ¡Trabajar con seriedad cuando toca y descansar bien cuando también toca! ¡Juntos, descompongamos en factores toda la tristeza y la ira!"
  BA_communication.Yuuka.join:"¡§B$NAME_Yuuka$§! se une como §Hlíder§!"
 
  NAME_Hina:"Hina"
@@ -1120,7 +1120,7 @@
  tech_BA_SPW_MOMIJI_WEAPON:"Armamento Estelar: $MOMIJI_WEAPON$"
  tech_BA_SPW_MOMIJI_WEAPON_desc: "$tech_BA_SPW_WEAPON_desc$"
 
- KASUMI_WEAPON:"Red·Rector"
+ KASUMI_WEAPON:"Red.Rector"
  KASUMI_WEAPON_DESC:"$KASUMI_WEAPON_DESC1$$KASUMI_WEAPON_DESC2$"
  KASUMI_WEAPON_DESC1:"La pistola que Kasumi siempre lleva consigo."
  KASUMI_WEAPON_DESC2:"Normalmente la usa para disparar al cielo cuando quiere animar el ambiente. Detrás de su apariencia pequeña y adorable, esconde una potencia de fuego inmensa."
@@ -1437,7 +1437,7 @@
  leader_special_067:0 "La Autoridad de la Barba"
  leader_special_067_desc:0 "Primero, la barba sí tiene autoridad. Segundo, la barba es falsa. Entonces... ¿eh?"
  leader_special_067_HS:0 "¡Limpiadora-chan en marcha!"
- leader_special_067_HS_desc:0 "—Elige entre fusilar al comisario o fusilar al desertor. —Fusilar al comisario. —¿Eh?"
+ leader_special_067_HS_desc:0 "-Elige entre fusilar al comisario o fusilar al desertor. -Fusilar al comisario. -¿Eh?"
  leader_special_068:0 "Destitución de Productos Defectuosos"
  leader_special_068_desc:0 "¡No al pudín de mala calidad!"
  leader_special_069:0 "Amante del Manga"
@@ -1532,7 +1532,7 @@
  leader_special_102_UNF_desc:0 "El gran ermitaño se esconde en la ciudad, el apoyo se oculta tras la ayuda."
  leader_special_103:0 "Intuición Salvaje"
  leader_special_103_desc:0 "La intuición de Asuna es, a menudo, la clave importante para completar las misiones."
- leader_special_103_BN:0 "7·7·7"
+ leader_special_103_BN:0 "7.7.7"
  leader_special_103_BN_desc:0 "Mantener la calma en una crisis es una cualidad básica de un agente; si le añades un poco de suerte..."
  leader_special_103_UNF:0 "Ritmo"
  leader_special_103_UNF_desc:0 "Disimulado entre la multitud, actuando al ritmo."
@@ -1697,7 +1697,7 @@
 
 
 
-### 招募问候   ！！！涉及原版修改
+### 招募问候   !!!涉及原版修改
  LEADER_RECRUITMENT_SCRIPTED_GREETING:"§L[From.GetScriptedLeaderRecruitedGreeting_BA]§!"
 
 
@@ -1833,7 +1833,7 @@
  leader_greeting_BA_130:0 "¡Guau...! Ah, es Sensei... Pensé que era otra persona, me asusté un montón..."
  leader_greeting_BA_131:0 "¡Así como en las historias de los libros, nuestra propia historia ha comenzado también!"
  leader_greeting_BA_132:0 "Todos los encuentros están destinados... Por favor, cuide bien de mí de ahora en adelante, Sensei."
- leader_greeting_BA_133:0 "Y-yo soy Hinata Wakaba… E-encantada de conocerte…"
+ leader_greeting_BA_133:0 "Y-yo soy Hinata Wakaba... E-encantada de conocerte..."
  leader_greeting_BA_134:0 "Soy Sakurako Kazamatsuri, de la Fraternidad de Monjas de la Academia General de Trinidad. Que la paz te acompañe siempre."
  leader_greeting_BA_135:0 "¡Jejejejejeje, jajajajajaja, jajajajajaja!"
  leader_greeting_BA_136:0 "Hasumi Hanekawa, del Comité de Realización de la Justicia. Espero las instrucciones del Profesor."
@@ -1849,7 +1849,7 @@
  leader_greeting_BA_146:0 ""
  leader_greeting_BA_147:0 ""
  leader_greeting_BA_148:0 "Soy Miyako Tsukinogi, del Escuadrón RABBIT de la Academia SRT. Profesor, por favor, dame tus instrucciones."
- leader_greeting_BA_149:0 "Soy Miyu Kasumizawa, del Escuadrón RABBIT de la Academia Especial SRT… Uhm, creo que me gustaría volverme… Pero supongo que no puedo, ¿verdad…?"
- leader_greeting_BA_150:0 "Moe Fuukura, del Escuadrón RABBIT de la Academia Especial SRT. Jeje… Si es apoyo, déjamelo a mí."
+ leader_greeting_BA_149:0 "Soy Miyu Kasumizawa, del Escuadrón RABBIT de la Academia Especial SRT... Uhm, creo que me gustaría volverme... Pero supongo que no puedo, ¿verdad...?"
+ leader_greeting_BA_150:0 "Moe Fuukura, del Escuadrón RABBIT de la Academia Especial SRT. Jeje... Si es apoyo, déjamelo a mí."
  leader_greeting_BA_151:0 "Saki Sorai, del Escuadrón RABBIT de la Academia Especial SRT. Así que, ¿dónde están los libros de texto militares de Schale?"
 

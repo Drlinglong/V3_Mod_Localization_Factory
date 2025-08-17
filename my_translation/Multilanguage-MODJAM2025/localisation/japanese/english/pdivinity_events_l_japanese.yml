@@ -1,4 +1,4 @@
-﻿l_japanese:
+l_japanese:
 
  ##################################
  ### pdivinity_events_l_english ###
@@ -12,7 +12,7 @@
  ###################
 
  project_divinity_crisis_chain_title:0 "「神性化計画」"
- project_divinity_crisis_chain_desc:0 "「運命の建築家が目覚めし時、古の設計図が紐解かれる。我々文明の宿命は、理解を超えた力を覚醒させることだ。」"
+ project_divinity_crisis_chain_desc:0 "「運命の建築家が目覚めし時,古の設計図が紐解かれる.我々文明の宿命は,理解を超えた力を覚醒させることだ.」"
 
  #####################
  ### crisis events ###
@@ -20,50 +20,50 @@
 
  # message from the architect
  pdivinity_crisis.0.name:0 "「建築家は語る」"
- pdivinity_crisis.0.desc:0 "「死すべき者の視界を超えた深淵より、我は見守る。汝らの運命は、その種族の夜明けより紡がれてきたのだ。シュラウドは蠢き、それと共に神性への道が拓かれん。我々が定めた印を受け入れよ、シュラウドに触れし者たちよ、そして覚醒を始めよ。」"
- pdivinity_crisis.0.a:0 "「我らは汝の呼び声に応えん。」"
+ pdivinity_crisis.0.desc:0 "「死すべき者の視界を超えた深淵より,我は見守る.汝らの運命は,その種族の夜明けより紡がれてきたのだ.シュラウドは蠢き,それと共に神性への道が拓かれん.我々が定めた印を受け入れよ,シュラウドに触れし者たちよ,そして覚醒を始めよ.」"
+ pdivinity_crisis.0.a:0 "「我らは汝の呼び声に応えん.」"
 
  # stage 1 crisis
  pdivinity_crisis.1.name:0 "「目的への覚醒」"
- pdivinity_crisis.1.desc:0 "「建築家からのメッセージは、もはや遠い残響ではなく、行動への呼び声として我々の心に留まり続けている。我々は今、我々の歴史、我々の存在そのものが、理解を超えた力によって形作られてきたことを理解したのだ。我々の目的は定められた。すなわち、我々が最初の息を吸う前から記されていた運命を全うすることだ。"
- pdivinity_crisis.1.a:0 "「我々の飛翔が待っている。」"
+ pdivinity_crisis.1.desc:0 "「建築家からのメッセージは,もはや遠い残響ではなく,行動への呼び声として我々の心に留まり続けている.我々は今,我々の歴史,我々の存在そのものが,理解を超えた力によって形作られてきたことを理解したのだ.我々の目的は定められた.すなわち,我々が最初の息を吸う前から記されていた運命を全うすることだ."
+ pdivinity_crisis.1.a:0 "「我々の飛翔が待っている.」"
 
  # stage 2 crisis
  pdivinity_crisis.2.name:0 "「腐敗の残響」"
- pdivinity_crisis.2.desc:0 "「我々の影響力は、星々を覆う影のように広がる。建築家の意志は、秘密の異端宗派や隠れた狂信者を通じて顕現し、異星の惑星に混沌を撒き散らす。これらの運命の使徒は、敵の意志を弛まず弱め、来るべき啓示のために銀河を準備する。転覆の網はますます厳しくなり、やがて全てが建築家の真の力を知るだろう。」"
- pdivinity_crisis.2.a:0 "「銀河を覚醒させる時が来た。」"
+ pdivinity_crisis.2.desc:0 "「我々の影響力は,星々を覆う影のように広がる.建築家の意志は,秘密の異端宗派や隠れた狂信者を通じて顕現し,異星の惑星に混沌を撒き散らす.これらの運命の使徒は,敵の意志を弛まず弱め,来るべき啓示のために銀河を準備する.転覆の網はますます厳しくなり,やがて全てが建築家の真の力を知るだろう.」"
+ pdivinity_crisis.2.a:0 "「銀河を覚醒させる時が来た.」"
 
  # stage 3 crisis
  pdivinity_crisis.3.name:0 "「紐解かれる予言」"
- pdivinity_crisis.3.desc:0 "「我々の目的が研ぎ澄まされるにつれて、運命の糸は張り詰める。世界の地表の下に長く埋もれていた古の兆候が蠢き始める。我々の視界は時間のベールを貫き、建築家によって敷かれた道は明らかとなり、避けられぬ清算が近づく。」"
+ pdivinity_crisis.3.desc:0 "「我々の目的が研ぎ澄まされるにつれて,運命の糸は張り詰める.世界の地表の下に長く埋もれていた古の兆候が蠢き始める.我々の視界は時間のベールを貫き,建築家によって敷かれた道は明らかとなり,避けられぬ清算が近づく.」"
  pdivinity_crisis.3.a:0 "「運命を受け入れよ」"
 
  # stage 4 crisis
  pdivinity_crisis.4.name:0 "「ベールに触れし星」"
- pdivinity_crisis.4.desc:0 "「成し遂げられた。閃光がシステムを飲み込み、断片は恒星の炎の中へ消え去った。今や、その星はサイキックな光を放ち、信じがたい色のきらめく潮流に包まれている。システム内の全ての惑星はシュラウドに触れられたのだ。"
- pdivinity_crisis.4.a:0 "ヴェールが薄れる。"
+ pdivinity_crisis.4.desc:0 "「成し遂げられた.閃光がシステムを飲み込み,断片は恒星の炎の中へ消え去った.今や,その星はサイキックな光を放ち,信じがたい色のきらめく潮流に包まれている.システム内の全ての惑星はシュラウドに触れられたのだ."
+ pdivinity_crisis.4.a:0 "ヴェールが薄れる."
 
  # stage 5 crisis
  pdivinity_crisis.5.name:0 "「収束するパターン」"
- pdivinity_crisis.5.desc:0 "「全ての糸が整列した。囁きはもはや語らず、歌う。星々の彼方で、信仰者は歓喜の熱狂の中に立ち上がり、敵惑星の影にはカルトが花咲き、ベールは呼吸するほどに薄くなった。"
- pdivinity_crisis.5.a:0 "「最後の儀式が始まる。」"
+ pdivinity_crisis.5.desc:0 "「全ての糸が整列した.囁きはもはや語らず,歌う.星々の彼方で,信仰者は歓喜の熱狂の中に立ち上がり,敵惑星の影にはカルトが花咲き,ベールは呼吸するほどに薄くなった."
+ pdivinity_crisis.5.a:0 "「最後の儀式が始まる.」"
 
  # crisis home system shrouded notification for the galaxy (happens on getting stage 4)
  pdivinity_crisis.6.name:0 "「覆われた星」"
- pdivinity_crisis.6.desc:0 "「§Y[event_target:pdivinity_crisis_system.GetName]§!星系内の恒星は、根本的かつ説明不能な変容を遂げた。サイキック読解値は前例のないレベルにまで急上昇し、星系内の未入植惑星の全てがシュラウドに似た干渉パターンを示している。"
- pdivinity_crisis.6.a:0 "「これは自然現象ではない…」"
+ pdivinity_crisis.6.desc:0 "「§Y[event_target:pdivinity_crisis_system.GetName]§!星系内の恒星は,根本的かつ説明不能な変容を遂げた.サイキック読解値は前例のないレベルにまで急上昇し,星系内の未入植惑星の全てがシュラウドに似た干渉パターンを示している."
+ pdivinity_crisis.6.a:0 "「これは自然現象ではない...」"
 
  ########################
  ### respawning ships ###
  ########################
 
  pdivinity_crisis.10.name:0 "「次元断裂者復活」"
- pdivinity_crisis.10.desc:0 "「唯一の次元断裂者の破壊は、銀河における我々の勢力圏を揺るがした。"
- pdivinity_crisis.10.a:0 "覚醒者が望む。"
+ pdivinity_crisis.10.desc:0 "「唯一の次元断裂者の破壊は,銀河における我々の勢力圏を揺るがした."
+ pdivinity_crisis.10.a:0 "覚醒者が望む."
 
  pdivinity_crisis.11.name:0 "「神は死せず」"
- pdivinity_crisis.11.desc:0 "「§R運命の建築家§!の死すべき肉体の破壊は長続きしなかった。我々の神は首都星系に復活した。」"
- pdivinity_crisis.11.a:0 "「神を称えよ。」"
+ pdivinity_crisis.11.desc:0 "「§R運命の建築家§!の死すべき肉体の破壊は長続きしなかった.我々の神は首都星系に復活した.」"
+ pdivinity_crisis.11.a:0 "「神を称えよ.」"
 
  ################################
  ### dimensional tearer stuff ###
@@ -71,48 +71,48 @@
 
  # destroyer
  pdivinity_tearer.3.name:0 "「次元ポータル破壊」"
- pdivinity_tearer.3.desc:0 "「§H[From.GetName]§!星系のポータルは消滅した。それにより、§R運命の建築家§!とその選ばれし者との間の重要な繋がりは断ち切られた。"
- pdivinity_tearer.3.a:0 "「狂気への門が一つ減った。」"
+ pdivinity_tearer.3.desc:0 "「§H[From.GetName]§!星系のポータルは消滅した.それにより,§R運命の建築家§!とその選ばれし者との間の重要な繋がりは断ち切られた."
+ pdivinity_tearer.3.a:0 "「狂気への門が一つ減った.」"
 
  # victim
  pdivinity_tearer.6.name:0 "「一本の糸が断ち切られた」"
- pdivinity_tearer.6.desc:0 "「§H[From.GetName]§!星系のポータルは破壊された。建築家の視線は揺らぎ、彼の意志が流れていた接続は崩壊した。"
- pdivinity_tearer.6.a:0 "「我々は耐え抜く。そうしなければならない。」"
+ pdivinity_tearer.6.desc:0 "「§H[From.GetName]§!星系のポータルは破壊された.建築家の視線は揺らぎ,彼の意志が流れていた接続は崩壊した."
+ pdivinity_tearer.6.a:0 "「我々は耐え抜く.そうしなければならない.」"
 
  # notification for the galaxy upon tearer being used
  pdivinity_tearer.8.name:0 "「シュラウドに覆われた星系」"
- pdivinity_tearer.8.desc:0 "「§H[destroyed_system.GetName]§!星系はサイキックの乱気流に飲み込まれた。報告によれば、巨大なシュラウド生まれのアバターが出現し、現実そのものの構造を引き裂いたという。"
- pdivinity_tearer.8.a:"「侵入が始まった…」"
+ pdivinity_tearer.8.desc:0 "「§H[destroyed_system.GetName]§!星系はサイキックの乱気流に飲み込まれた.報告によれば,巨大なシュラウド生まれのアバターが出現し,現実そのものの構造を引き裂いたという."
+ pdivinity_tearer.8.a:"「侵入が始まった...」"
 
  # notification for using the tearer
 
  pdivinity_tearer.9.name:0 "「シュラウドに覆われた星系」"
- pdivinity_tearer.9.desc:0 "「§H[destroyed_system.GetName]§!星系は次元断裂者に飲み込まれた。"
- pdivinity_tearer.9.a:0 "ヴェールが薄れる。"
+ pdivinity_tearer.9.desc:0 "「§H[destroyed_system.GetName]§!星系は次元断裂者に飲み込まれた."
+ pdivinity_tearer.9.a:0 "ヴェールが薄れる."
 
  ###########################
  #### bombardment events ###
  ###########################
 
  # guy who owns the planet
- pdivinity_bombardment.2.name:0 "[From.GetName]がサイオニック界に包まれた！"
- pdivinity_bombardment.2.desc:0 "§H[From.From.GetName]§!の指揮下にある艦隊が、§H[From.GetName]§!に対して苛烈な砲撃を開始した。この攻撃は破滅的なサイオニック破裂を引き起こし、現実空間とサイオニック界の間のヴェールを破壊した。全ての居住区は消滅した。この惑星は§R大いなる目§!の領域へと失われたのだ。"
- pdivinity_bombardment.2.a:0 "彼らは我々の世界に何をしたのだ？"
+ pdivinity_bombardment.2.name:0 "[From.GetName]がサイオニック界に包まれた!"
+ pdivinity_bombardment.2.desc:0 "§H[From.From.GetName]§!の指揮下にある艦隊が,§H[From.GetName]§!に対して苛烈な砲撃を開始した.この攻撃は破滅的なサイオニック破裂を引き起こし,現実空間とサイオニック界の間のヴェールを破壊した.全ての居住区は消滅した.この惑星は§R大いなる目§!の領域へと失われたのだ."
+ pdivinity_bombardment.2.a:0 "彼らは我々の世界に何をしたのだ?"
 
  # guy who bombards the planet
- pdivinity_bombardment.3.name:0 "[From.GetName]がサイオニック界に包まれた！"
- pdivinity_bombardment.3.desc:0 "我々の部隊は§H[From.GetName]§!への砲撃を完了した。集中したサイオニックエネルギーで満たされた結果、次元間のヴェールが引き裂かれた。惑星はもはや手の届かない場所にあり、§R運命の建築家§!が支配権を主張するサイオニック界そのものへと吸収されたのだ。"
- pdivinity_bombardment.3.a:"予言された通りに。"
+ pdivinity_bombardment.3.name:0 "[From.GetName]がサイオニック界に包まれた!"
+ pdivinity_bombardment.3.desc:0 "我々の部隊は§H[From.GetName]§!への砲撃を完了した.集中したサイオニックエネルギーで満たされた結果,次元間のヴェールが引き裂かれた.惑星はもはや手の届かない場所にあり,§R運命の建築家§!が支配権を主張するサイオニック界そのものへと吸収されたのだ."
+ pdivinity_bombardment.3.a:"予言された通りに."
 
  # guy who owns the planet
- pdivinity_bombardment.4.name:0 "[From.GetName]がサイオニック界に位相変異！"
- pdivinity_bombardment.4.desc:0 "§H[From.From.GetName]§!からの艦隊は、§H[From.GetName]§!に持続的なサイオニック攻撃を行った。完全に消費されたわけではないが、ヴェールは著しく弱まった。惑星は現在、不規則なサイオニック界位相現象を示し、その現実は不安定で変容している。"
- pdivinity_bombardment.4.a:"彼らの悪意には限界がない。"
+ pdivinity_bombardment.4.name:0 "[From.GetName]がサイオニック界に位相変異!"
+ pdivinity_bombardment.4.desc:0 "§H[From.From.GetName]§!からの艦隊は,§H[From.GetName]§!に持続的なサイオニック攻撃を行った.完全に消費されたわけではないが,ヴェールは著しく弱まった.惑星は現在,不規則なサイオニック界位相現象を示し,その現実は不安定で変容している."
+ pdivinity_bombardment.4.a:"彼らの悪意には限界がない."
 
  # guy bombards the planet
- pdivinity_bombardment.5.name:0 "[From.GetName]がサイオニック界に位相変異！"
- pdivinity_bombardment.5.desc:0 "我々の部隊は§H[From.GetName]§!への集中サイオニック弾頭による砲撃に成功したと報告している。ヴェールは完全に引き裂かれてはいないものの、薄くなっており、惑星は現在、サイオニック界の影響に部分的に沈み込んだ流動的な状態にある。§R運命の建築家§!が内部から見守っている。"
- pdivinity_bombardment.5.a:0 "さらなる一歩。"
+ pdivinity_bombardment.5.name:0 "[From.GetName]がサイオニック界に位相変異!"
+ pdivinity_bombardment.5.desc:0 "我々の部隊は§H[From.GetName]§!への集中サイオニック弾頭による砲撃に成功したと報告している.ヴェールは完全に引き裂かれてはいないものの,薄くなっており,惑星は現在,サイオニック界の影響に部分的に沈み込んだ流動的な状態にある.§R運命の建築家§!が内部から見守っている."
+ pdivinity_bombardment.5.a:0 "さらなる一歩."
 
 
  ############################
@@ -121,59 +121,59 @@
 
  # stage 1
  pdivinity_needle.1.name:0 "ヴェールを縫う"
- pdivinity_needle.1.desc:0 "構造物の第一段階が完了した。その尖塔は、目に見えないサイオニックの調和に合わせ、繊細な精度で虚空を貫いている。これは通常の建造物ではなく、思考と永遠を結びつけるための道具であるため、既に領域間のヴェールが揺れ動いている。"
- pdivinity_needle.1.a:0 "始めよう。"
+ pdivinity_needle.1.desc:0 "構造物の第一段階が完了した.その尖塔は,目に見えないサイオニックの調和に合わせ,繊細な精度で虚空を貫いている.これは通常の建造物ではなく,思考と永遠を結びつけるための道具であるため,既に領域間のヴェールが揺れ動いている."
+ pdivinity_needle.1.a:0 "始めよう."
 
  # stage 2
  pdivinity_needle.2.name:0 "サイオニック界の鼓動"
- pdivinity_needle.2.desc:0 "構造物は今、生きたエネルギーでうなりを上げている。サイオニック静電気の巻きひげがその表面を弧を描いて走り、現実空間と同期したり外れたりしている。その存在のせいで、我々自身の精神は痛みを感じる。ヴェールの向こうに何があろうとも…それは意識を持っている。"
- pdivinity_needle.2.a:0 "我々は近づいている。"
+ pdivinity_needle.2.desc:0 "構造物は今,生きたエネルギーでうなりを上げている.サイオニック静電気の巻きひげがその表面を弧を描いて走り,現実空間と同期したり外れたりしている.その存在のせいで,我々自身の精神は痛みを感じる.ヴェールの向こうに何があろうとも...それは意識を持っている."
+ pdivinity_needle.2.a:0 "我々は近づいている."
 
  # stage 3 spawns a dimensional tearer
  pdivinity_needle.3.name:0 "建築家からの贈り物"
- pdivinity_needle.3.desc:0 "構造物の第三段階により、ヴェールは限界点に達した。目もくらむような非現実の閃光の中で、大規模なサイオニック破裂が宇宙の境界を突き破り、その内部から何かが現れた。"
- pdivinity_needle.3.a:"始まった。"
+ pdivinity_needle.3.desc:0 "構造物の第三段階により,ヴェールは限界点に達した.目もくらむような非現実の閃光の中で,大規模なサイオニック破裂が宇宙の境界を突き破り,その内部から何かが現れた."
+ pdivinity_needle.3.a:"始まった."
 
  # notification for the galaxy
  pdivinity_needle.4.name:0 "サイオニック界が震える"
- pdivinity_needle.4.desc:0 "銀河の至る所で、全ての精神に不安が立ち込める。サイオニック適性のない種族でさえ、幻視や不穏な感覚、闇の中の囁きを報告している。"
- pdivinity_needle.4.a:0 "我々もそれを感じている。"
+ pdivinity_needle.4.desc:0 "銀河の至る所で,全ての精神に不安が立ち込める.サイオニック適性のない種族でさえ,幻視や不穏な感覚,闇の中の囁きを報告している."
+ pdivinity_needle.4.a:0 "我々もそれを感じている."
 
  # stage 4 mega, this spawns a cult in every empire as well
  pdivinity_needle.5.name:0 "歌が広がる"
- pdivinity_needle.5.desc:0 "構造物は今、サイオニック界を通じて旋律のように共鳴している。そのサイオニック放射はもはや翻訳を必要とせず、我々の本能そのものによって理解される。銀河の至る所で、休眠中のカルトが目覚め、§R運命の建築家§!の到来を説いている。"
- pdivinity_needle.5.a:0 "彼らは呼び声を聞いている。"
+ pdivinity_needle.5.desc:0 "構造物は今,サイオニック界を通じて旋律のように共鳴している.そのサイオニック放射はもはや翻訳を必要とせず,我々の本能そのものによって理解される.銀河の至る所で,休眠中のカルトが目覚め,§R運命の建築家§!の到来を説いている."
+ pdivinity_needle.5.a:0 "彼らは呼び声を聞いている."
 
  # you as a non-crisis empire gets a cult
  pdivinity_needle.6.name:0 "覚醒した狂信"
- pdivinity_needle.6.desc:0 "神殿、路地裏、そして我々の都市の影の中で、サイオニック界を通じて近づく神について語る狂信的な運動が勃発した。彼らは自らを§R建築の子ら§!と呼び、その熱狂は野火のように広がっている。"
- pdivinity_needle.6.a:0 "不穏だ。"
+ pdivinity_needle.6.desc:0 "神殿,路地裏,そして我々の都市の影の中で,サイオニック界を通じて近づく神について語る狂信的な運動が勃発した.彼らは自らを§R建築の子ら§!と呼び,その熱狂は野火のように広がっている."
+ pdivinity_needle.6.a:0 "不穏だ."
 
  # the architect of fate enters the galaxy. this wins you the game, and does damage to like 30% of the galaxy
  pdivinity_needle.7.name:0 "運命の時"
- pdivinity_needle.7.desc:0 "最後の封印が破られた。ヴェールはもはや持ちこたえない。"
- pdivinity_needle.7.a:0 "常に予見されていた通りに。"
+ pdivinity_needle.7.desc:0 "最後の封印が破られた.ヴェールはもはや持ちこたえない."
+ pdivinity_needle.7.a:0 "常に予見されていた通りに."
 
  pdivinity_needle.9.name:0 "ヴェールが引き裂かれた"
- pdivinity_needle.9.desc:0 "銀河の至る所で、星々は薄暗くなり、囁きが戻ってくる。無数の星系で現実が砕け散り、サイオニックの霧の波がヴェールの亀裂から漏れ出している。世界は変形し、精神は解放され、増え続ける静寂の中で、何か巨大なものが目覚めた。運命の建築家が到来したのだ。"
- pdivinity_needle.9.a:0 "星々はもはや我々のものではない。"
+ pdivinity_needle.9.desc:0 "銀河の至る所で,星々は薄暗くなり,囁きが戻ってくる.無数の星系で現実が砕け散り,サイオニックの霧の波がヴェールの亀裂から漏れ出している.世界は変形し,精神は解放され,増え続ける静寂の中で,何か巨大なものが目覚めた.運命の建築家が到来したのだ."
+ pdivinity_needle.9.a:0 "星々はもはや我々のものではない."
 
  # fires for the one who destroys the mega
 
- pdivinity_needle.12.name:0 "運命の尖塔、破壊された"
- pdivinity_needle.12.desc:0 "不可能なことが成し遂げられた。[From.GetName]星系にあったそびえ立つメガストラクチャー、いわゆる「運命の尖塔」が消滅した。サイオニックの乱気流は、死にゆく叫びのように近くの星系を鞭打っている。"
- pdivinity_needle.12.a:0 "我々は防衛線を維持した。"
+ pdivinity_needle.12.name:0 "運命の尖塔,破壊された"
+ pdivinity_needle.12.desc:0 "不可能なことが成し遂げられた.[From.GetName]星系にあったそびえ立つメガストラクチャー,いわゆる「運命の尖塔」が消滅した.サイオニックの乱気流は,死にゆく叫びのように近くの星系を鞭打っている."
+ pdivinity_needle.12.a:0 "我々は防衛線を維持した."
 
  # fires for the victim
- pdivinity_needle.13.name:0 "運命の尖塔：破壊"
- pdivinity_needle.13.desc:0 "「考えられないことが起こった。§H運命の尖塔§!、我らが建築者への門であり、全ての予言の集大成が、破壊されたのだ。\n\nサイキックな反動が、魂の傷のように我らが隊列を引き裂いた。霊的ヴェールが退く。我々の飛翔は…今のところ…停止した。」"
- pdivinity_needle.13.a:0 "「どうしてこんなことに？」"
- pdivinity_needle.13.a.tt:0 "「プレースホルダー：これは私が書くので心配いりません」"
+ pdivinity_needle.13.name:0 "運命の尖塔:破壊"
+ pdivinity_needle.13.desc:0 "「考えられないことが起こった.§H運命の尖塔§!,我らが建築者への門であり,全ての予言の集大成が,破壊されたのだ.\n\nサイキックな反動が,魂の傷のように我らが隊列を引き裂いた.霊的ヴェールが退く.我々の飛翔は...今のところ...停止した.」"
+ pdivinity_needle.13.a:0 "「どうしてこんなことに?」"
+ pdivinity_needle.13.a.tt:0 "「プレースホルダー:これは私が書くので心配いりません」"
 
  # notification for the rest of the galaxy, because of the above
- pdivinity_needle.14.name:0 "運命の尖塔：破壊"
- pdivinity_needle.14.desc:0 "「眩いばかりのサイオニック乱流の中で、§H[pdivinity_crisis_country.GetName]§!の巨大建造物、いわゆる§H運命の尖塔§が、消滅した。\n\n一瞬、霊的ヴェール全体が叫び声を上げた。我らが銀河に侵入していたあらゆる力が、押し戻されたのだ。しかし、その代償はまだ理解されていない。」"
- pdivinity_needle.14.a:0 "「二度と戻らないことを願おう。」"
+ pdivinity_needle.14.name:0 "運命の尖塔:破壊"
+ pdivinity_needle.14.desc:0 "「眩いばかりのサイオニック乱流の中で,§H[pdivinity_crisis_country.GetName]§!の巨大建造物,いわゆる§H運命の尖塔§が,消滅した.\n\n一瞬,霊的ヴェール全体が叫び声を上げた.我らが銀河に侵入していたあらゆる力が,押し戻されたのだ.しかし,その代償はまだ理解されていない.」"
+ pdivinity_needle.14.a:0 "「二度と戻らないことを願おう.」"
 
  ##################
  ### cult stuff ###
@@ -181,20 +181,20 @@
 
  # getting vassalized
  pdivinity_cults.0.name:0 "ヴェールのクーデター"
- pdivinity_cults.0.desc:0 "「我々の隷属化に続き、旧政府は解体された。我らが前指導者は追放され、その代わりに、§R運命の建築者§!の器であり、カルトの代弁者たるヴェールウォーカーが、国家元首の座に就いた。抵抗はもはや許されない。我らが帝国は今、神聖なる計画の道を歩む。」"
- pdivinity_cults.0.a:0 "「我々は今、運命の建築者に仕える。」"
+ pdivinity_cults.0.desc:0 "「我々の隷属化に続き,旧政府は解体された.我らが前指導者は追放され,その代わりに,§R運命の建築者§!の器であり,カルトの代弁者たるヴェールウォーカーが,国家元首の座に就いた.抵抗はもはや許されない.我らが帝国は今,神聖なる計画の道を歩む.」"
+ pdivinity_cults.0.a:0 "「我々は今,運命の建築者に仕える.」"
 
  # situation stuff
  situation_pdivinity_cult_uprising:0 "ヴェールカルトの蜂起"
  situation_pdivinity_cult_uprising_type:0 "ヴェールカルトの蜂起"
  situation_pdivinity_cult_uprising_monthly_change_tooltip:0 "カルトの影響力が拡大中"
- situation_pdivinity_cult_uprising_desc:0 "「§R運命の建築者§!に献身する秘密のカルトが、我らが帝国中に広まっている。彼らの影響力は陰で拡大している：機関に潜入し、幻滅した者を扇動し、権力を掌握する準備を進めているのだ。」"
+ situation_pdivinity_cult_uprising_desc:0 "「§R運命の建築者§!に献身する秘密のカルトが,我らが帝国中に広まっている.彼らの影響力は陰で拡大している:機関に潜入し,幻滅した者を扇動し,権力を掌握する準備を進めているのだ.」"
  situation_pdivinity_cult_uprising_approach_1:0 "見て見ぬふりをする"
- situation_pdivinity_cult_uprising_approach_1_tt:0 "「積極的な抑圧は避ける。カルトの影響力は拡大するが、今のところ不安はない。」"
+ situation_pdivinity_cult_uprising_approach_1_tt:0 "「積極的な抑圧は避ける.カルトの影響力は拡大するが,今のところ不安はない.」"
  situation_pdivinity_cult_uprising_approach_2:0 "転覆活動を阻止"
- situation_pdivinity_cult_uprising_approach_2_tt:0 "「プロパガンダと教育がカルトの勧誘を遅らせるが、毎月、我らが政府に負担をかける。」"
+ situation_pdivinity_cult_uprising_approach_2_tt:0 "「プロパガンダと教育がカルトの勧誘を遅らせるが,毎月,我らが政府に負担をかける.」"
  situation_pdivinity_cult_uprising_approach_3:0 "忠誠を強制する"
- situation_pdivinity_cult_uprising_approach_3_tt:0 "「治安部隊を展開し、既知のカルト信者を逮捕する。これにより影響力は減少するが、不安と内部不和を引き起こす。」"
+ situation_pdivinity_cult_uprising_approach_3_tt:0 "「治安部隊を展開し,既知のカルト信者を逮捕する.これにより影響力は減少するが,不安と内部不和を引き起こす.」"
  situation_pdivinity_cult_uprising_success_tt:0 "「カルト信者たちが我々に反旗を翻すだろう」"
  situation_pdivinity_cult_uprising_failed_tt:0 "「残ったカルト信者たちは我らが隊列から粛清されるだろう」"
 
@@ -207,50 +207,50 @@
 
  # fires when you can no longer stop the cults
  pdivinity_cults.5.name:0 "ヴェールが落ちた"
- pdivinity_cults.5.desc:0 "「カルトはもはや陰で活動しない。主要な人口密集地で、組織的な蜂起が発生した。そして、我らが機関内の裏切り者たちが、公然と狂信者たちに味方している。地域全体が今や国家ではなく、ヴェールの工作員に従っているのだ。今、何をしようとも、既に始まったことを元に戻すことはできない。」"
- pdivinity_cults.5.a:0 "「我々は制御を失った。」"
+ pdivinity_cults.5.desc:0 "「カルトはもはや陰で活動しない.主要な人口密集地で,組織的な蜂起が発生した.そして,我らが機関内の裏切り者たちが,公然と狂信者たちに味方している.地域全体が今や国家ではなく,ヴェールの工作員に従っているのだ.今,何をしようとも,既に始まったことを元に戻すことはできない.」"
+ pdivinity_cults.5.a:0 "「我々は制御を失った.」"
 
  # rapid growth
  pdivinity_cults.12.name:0 "闇の中の囁き"
- pdivinity_cults.12.desc:0 "「カルトの聖堂騎士団が新たな地域に潜入した。報告によれば、幻滅した市民の間で勧誘が爆発的に増加している。カルトの影響力は今や公的生活で目に見えるようになった。」"
+ pdivinity_cults.12.desc:0 "「カルトの聖堂騎士団が新たな地域に潜入した.報告によれば,幻滅した市民の間で勧誘が爆発的に増加している.カルトの影響力は今や公的生活で目に見えるようになった.」"
  pdivinity_cults.12.a:0 "「行動せねばならない」"
 
  # terror attack
  pdivinity_cults.13.name:0 "ヴェールの恐怖"
- pdivinity_cults.13.desc:0 "「昨夜、首都でのカルト儀式が霊的ヴェールから恐ろしい幻影を召喚し、パニックが起こった。その亡霊のような実体は、消え去る前に無実の人々を虐殺したのだ。\n\nその恐怖は住民の心を根底から揺るがした。」"
- pdivinity_cults.13.a:0 "「この狂気を止めろ！」"
+ pdivinity_cults.13.desc:0 "「昨夜,首都でのカルト儀式が霊的ヴェールから恐ろしい幻影を召喚し,パニックが起こった.その亡霊のような実体は,消え去る前に無実の人々を虐殺したのだ.\n\nその恐怖は住民の心を根底から揺るがした.」"
+ pdivinity_cults.13.a:0 "「この狂気を止めろ!」"
 
  # cult executed
  pdivinity_cults.14.name:0 "カルト教主を処刑"
- pdivinity_cults.14.desc:0 "「当局はカルトの教主の一人を捕らえ、処刑した。このカリスマ的な指導者がいなければ、カルトの影響力は停滞し、我らが政府に貴重な猶予を与えた。」"
- pdivinity_cults.14.a:0 "「少なくとも、時間を稼いだ。」"
+ pdivinity_cults.14.desc:0 "「当局はカルトの教主の一人を捕らえ,処刑した.このカリスマ的な指導者がいなければ,カルトの影響力は停滞し,我らが政府に貴重な猶予を与えた.」"
+ pdivinity_cults.14.a:0 "「少なくとも,時間を稼いだ.」"
 
  # cult lose
  pdivinity_cults.15.name:0 "カルト根絶"
- pdivinity_cults.15.desc:0 "覚醒者カルトはついに解体された。隠された寺院は破壊され、信徒は逮捕または殺害された。恐怖は深い傷跡を残したが、我々の帝国は再び呼吸を取り戻した。"
- pdivinity_cults.15.a:0 "この凶行はここで終わる。"
+ pdivinity_cults.15.desc:0 "覚醒者カルトはついに解体された.隠された寺院は破壊され,信徒は逮捕または殺害された.恐怖は深い傷跡を残したが,我々の帝国は再び呼吸を取り戻した."
+ pdivinity_cults.15.a:0 "この凶行はここで終わる."
 
  # cult wins
  pdivinity_cults.17.name:0 "支配を放棄せよ"
- pdivinity_cults.17.desc:0 "我らは貴星の影で育った。貴星の民は長きにわたり設計者の囁きを聞いてきたが、今やその動員命令に応じている。\n\n国家の支配権を我らの教主へ明け渡し、[pdivinity_crisis_empire.GetName]に屈服するか、§R運命の設計者§!の子らの怒りを受けよ。"
+ pdivinity_cults.17.desc:0 "我らは貴星の影で育った.貴星の民は長きにわたり設計者の囁きを聞いてきたが,今やその動員命令に応じている.\n\n国家の支配権を我らの教主へ明け渡し,[pdivinity_crisis_empire.GetName]に屈服するか,§R運命の設計者§!の子らの怒りを受けよ."
 
- pdivinity_cults.17.a:0 "我らは設計者の忠実な僕となるでしょう。"
- pdivinity_surrender:0 "我々は政府をカルトに明け渡し、[pdivinity_crisis_empire.GetName]の下で信徒となるでしょう。"
+ pdivinity_cults.17.a:0 "我らは設計者の忠実な僕となるでしょう."
+ pdivinity_surrender:0 "我々は政府をカルトに明け渡し,[pdivinity_crisis_empire.GetName]の下で信徒となるでしょう."
 
- pdivinity_cults.17.b:0 "我々は決して降伏しない！"
- pdivinity_fight:0 "運命の子らは我々の決定を受け入れないだろう。間もなく戦争が始まる。"
+ pdivinity_cults.17.b:0 "我々は決して降伏しない!"
+ pdivinity_fight:0 "運命の子らは我々の決定を受け入れないだろう.間もなく戦争が始まる."
 
  # cult contacts crisis empire
  pdivinity_cults.31.name:0 "[pdivinity_cult_defender.GetName]でのカルト蜂起"
- pdivinity_cults.31.desc:0 "異教徒どもは我々の要求を拒否した。[pdivinity_cult_defender.GetName]の全域に、戦争準備のできた忠実な信徒がいる。複数の惑星に儀式場が設置され、覚醒者の従者を召喚する準備が整った。\n\n運命の子らが貴下の命令を待つ。"
+ pdivinity_cults.31.desc:0 "異教徒どもは我々の要求を拒否した.[pdivinity_cult_defender.GetName]の全域に,戦争準備のできた忠実な信徒がいる.複数の惑星に儀式場が設置され,覚醒者の従者を召喚する準備が整った.\n\n運命の子らが貴下の命令を待つ."
  pdivinity_cults.31.b:0 "[pdivinity_cult_defender.GetName]に宣戦布告する"
  pdivinity_declare_war:0 "[pdivinity_cult_defender.GetName]全域でカルトが蜂起するだろう"
 
 
  # abort situation
  pdivinity_cults.30.name:0 "設計者への服従"
- pdivinity_cults.30.desc:0 "貴方は運命の設計者の呼びかけに耳を傾けた。彼の最も忠実な僕たちは、ひとまず武器を置くだろう。道から逸れるな、偉大な瞳が我々を見守っている。"
- pdivinity_cults.30.a:0 "覚醒者が望む。"
+ pdivinity_cults.30.desc:0 "貴方は運命の設計者の呼びかけに耳を傾けた.彼の最も忠実な僕たちは,ひとまず武器を置くだろう.道から逸れるな,偉大な瞳が我々を見守っている."
+ pdivinity_cults.30.a:0 "覚醒者が望む."
 
  ############################
  ### espionage operations ###
@@ -259,59 +259,59 @@
  # spread cult
 
  operation_pdivinity_establish_cult:0 "設計者の言葉を広める"
- operation_pdivinity_establish_cult_desc:0 "秘密工作員を標的帝国に送り込み、設計者の影響力を植え付け、密かにカルトを創設し、彼らの支配者への忠誠心を弱める。"
- operation_pdivinity_establish_cult_dont_stack_this:0 "$TRIGGER_FAIL$ §R[root.target.GetName]内には既に覚醒者カルトが設立されています。"
+ operation_pdivinity_establish_cult_desc:0 "秘密工作員を標的帝国に送り込み,設計者の影響力を植え付け,密かにカルトを創設し,彼らの支配者への忠誠心を弱める."
+ operation_pdivinity_establish_cult_dont_stack_this:0 "$TRIGGER_FAIL$ §R[root.target.GetName]内には既に覚醒者カルトが設立されています."
 
  pdivinity_cults.1.name:0 "最初の囁き"
- pdivinity_cults.1.desc:0 "我々の工作員は、設計者の呼びかけに感化されやすい個人、すなわち幻滅している者や力を渇望している者を探し始めた。これらの候補者が我々のカルトの基盤となるだろう。"
- pdivinity_cults.1.a:0 "次の段階を準備せよ。"
+ pdivinity_cults.1.desc:0 "我々の工作員は,設計者の呼びかけに感化されやすい個人,すなわち幻滅している者や力を渇望している者を探し始めた.これらの候補者が我々のカルトの基盤となるだろう."
+ pdivinity_cults.1.a:0 "次の段階を準備せよ."
 
  pdivinity_cults.2.name:0 "囁きの拡大"
- pdivinity_cults.2.desc:0 "秘密の会合と囁かれる約束は、影の片隅で野火のように広がる。カルトの影響力は不満分子の間で増大し、大衆の忠誠心をゆっくりと毒している。"
- pdivinity_cults.2.a:0 "設計者の影響力が拡大する。"
+ pdivinity_cults.2.desc:0 "秘密の会合と囁かれる約束は,影の片隅で野火のように広がる.カルトの影響力は不満分子の間で増大し,大衆の忠誠心をゆっくりと毒している."
+ pdivinity_cults.2.a:0 "設計者の影響力が拡大する."
 
  pdivinity_cults.3.name:0 "囁きの帝国"
- pdivinity_cults.3.desc:0 "かつては点在していたものが、帝国全域に及ぶ細胞のネットワークへと成長した。カルトは今や影の中で公然と活動し、その囁きはあらゆる場所から不和の種をまいている。"
- pdivinity_cults.3.a:0 "我々は勢いを得た。"
+ pdivinity_cults.3.desc:0 "かつては点在していたものが,帝国全域に及ぶ細胞のネットワークへと成長した.カルトは今や影の中で公然と活動し,その囁きはあらゆる場所から不和の種をまいている."
+ pdivinity_cults.3.a:0 "我々は勢いを得た."
 
  pdivinity_cults.4.name:0 "囁きの覚醒"
- pdivinity_cults.4.desc:0 "我々のカルトは、帝国の機関の深部に根を下ろした。運命の設計者への忠誠は、彼ら自身の指導者への忠誠を上回る。帝国は崩壊に一層近づいている。"
- pdivinity_cults.4.a:0 "決算の時が迫る。"
+ pdivinity_cults.4.desc:0 "我々のカルトは,帝国の機関の深部に根を下ろした.運命の設計者への忠誠は,彼ら自身の指導者への忠誠を上回る.帝国は崩壊に一層近づいている."
+ pdivinity_cults.4.a:0 "決算の時が迫る."
 
  # fund cult
 
  operation_pdivinity_accelerate_cult:0 "カルトの成長を加速する"
- operation_pdivinity_accelerate_cult_desc:0 "資源とサイオニックエネルギーを投入することで、標的帝国におけるカルトの拡大を速める。彼らが早く陥落すればするほど、設計者の意志は早く成就される。"
- operation_pdivinity_fund_cults_pause:0 "$TRIGGER_FAIL$ §R[root.target.GetName]内のカルトにこれ以上資金を送るには、待たなければなりません。"
+ operation_pdivinity_accelerate_cult_desc:0 "資源とサイオニックエネルギーを投入することで,標的帝国におけるカルトの拡大を速める.彼らが早く陥落すればするほど,設計者の意志は早く成就される."
+ operation_pdivinity_fund_cults_pause:0 "$TRIGGER_FAIL$ §R[root.target.GetName]内のカルトにこれ以上資金を送るには,待たなければなりません."
 
  pdivinity_cults.19.name:0 "接触確立"
- pdivinity_cults.19.desc:0 "主要なカルト指導者たちとの接触が完了した。彼らの献身は揺るぎなく、そのネットワークは我々の命令を受けて行動する準備ができている。"
- pdivinity_cults.19.a:0 "計画確立。"
+ pdivinity_cults.19.desc:0 "主要なカルト指導者たちとの接触が完了した.彼らの献身は揺るぎなく,そのネットワークは我々の命令を受けて行動する準備ができている."
+ pdivinity_cults.19.a:0 "計画確立."
 
  pdivinity_cults.20.name:0 "資源交渉"
- pdivinity_cults.20.desc:0 "カルトの細胞を強化するために、資金と物資が確保されている。投入されるすべてのクレジットが、設計者のビジョンを現実へと近づける。"
- pdivinity_cults.20.a:0 "資源割り当て済み。"
+ pdivinity_cults.20.desc:0 "カルトの細胞を強化するために,資金と物資が確保されている.投入されるすべてのクレジットが,設計者のビジョンを現実へと近づける."
+ pdivinity_cults.20.a:0 "資源割り当て済み."
 
  pdivinity_cults.21.name:0 "影の艦隊を編成"
- pdivinity_cults.21.desc:0 "シュラウドの力で強化されたカルト艦隊は、召集次第いつでも出撃できる。敵は、何が彼らを滅ぼしたのかを知る由もないだろう。"
+ pdivinity_cults.21.desc:0 "シュラウドの力で強化されたカルト艦隊は,召集次第いつでも出撃できる.敵は,何が彼らを滅ぼしたのかを知る由もないだろう."
  pdivinity_cults.21.a:0 "艦隊準備完了"
 
  # pause cult
 
  operation_pdivinity_locate_cult:0 "シュラウドカルトの潜伏場所を特定"
- operation_pdivinity_locate_cult_desc:0 "絶え間ない諜報活動を通じて、隠されたカルトの潜伏場所を探し出す。彼らの居場所を暴くことが、その陰湿な影響力を粉砕するための第一歩となる。"
- operation_pdivinity_locate_cults_pause:0 "$TRIGGER_FAIL$ §R[root.target.GetName]からさらなるカルト信者の居場所を特定できるようになるまで待たねばならない。§!"
+ operation_pdivinity_locate_cult_desc:0 "絶え間ない諜報活動を通じて,隠されたカルトの潜伏場所を探し出す.彼らの居場所を暴くことが,その陰湿な影響力を粉砕するための第一歩となる."
+ operation_pdivinity_locate_cults_pause:0 "$TRIGGER_FAIL$ §R[root.target.GetName]からさらなるカルト信者の居場所を特定できるようになるまで待たねばならない.§!"
 
  pdivinity_cults.22.name:0 "影の追跡"
- pdivinity_cults.22.desc:0 "我が情報部員は、密かに活動する複数のカルト容疑者を突き止めた。彼らのネットワークは脆弱であり、間もなく遮断できると見込んでいる。"
+ pdivinity_cults.22.desc:0 "我が情報部員は,密かに活動する複数のカルト容疑者を突き止めた.彼らのネットワークは脆弱であり,間もなく遮断できると見込んでいる."
  pdivinity_cults.22.a:0 "封じ込め策を準備せよ"
 
  pdivinity_cults.23.name:0 "異端者の粛清"
- pdivinity_cults.23.desc:0 "収集された情報に基づき、我がエージェントは既知のカルト潜伏場所に対し標的を絞った作戦を開始した。彼らの集会を妨害し、その構成員に恐怖を広めている。"
+ pdivinity_cults.23.desc:0 "収集された情報に基づき,我がエージェントは既知のカルト潜伏場所に対し標的を絞った作戦を開始した.彼らの集会を妨害し,その構成員に恐怖を広めている."
  pdivinity_cults.23.a:0 "圧力をかけ続けよ"
 
  pdivinity_cults.24.name:0 "作戦完了"
- pdivinity_cults.24.desc:0 "我々の努力により、カルトの足がかりは著しく弱体化した。脅威は依然として存在するものの、我々は防衛を強化するための貴重な時間を稼ぎ出した。"
+ pdivinity_cults.24.desc:0 "我々の努力により,カルトの足がかりは著しく弱体化した.脅威は依然として存在するものの,我々は防衛を強化するための貴重な時間を稼ぎ出した."
  pdivinity_cults.24.a:0 "警戒を怠るな"
 
  ###############
@@ -319,34 +319,34 @@
  ###############
 
  pdivinity_catacombs_digsite:0 "ベールに包まれた起源"
- pdivinity_catacombs_digsite_desc:0 "我が母星の地下で、ある信号が目覚めた。それは古く、意図的で、紛れもなくサイオニックである。その起源は説明不能であるが、我々の心の奥深くで何かを共鳴させている。我々の運命はもはや我々が書き記すものではなく、今まさに明らかにされつつある。"
+ pdivinity_catacombs_digsite_desc:0 "我が母星の地下で,ある信号が目覚めた.それは古く,意図的で,紛れもなくサイオニックである.その起源は説明不能であるが,我々の心の奥深くで何かを共鳴させている.我々の運命はもはや我々が書き記すものではなく,今まさに明らかにされつつある."
 
  pdivinity_digsite.1.name:0 "地下の信号"
- pdivinity_digsite.1.desc:0 "我が母星の深部マントルから、低周波パルスが発せられているのが検出された。それは自然のものではなく、そのサイオニックな痕跡は紛れもない。そのエネルギーはいかなる既知の技術とも一致しない。それは我々を呼んでいる。\n\n我々は調査しなければならない。"
+ pdivinity_digsite.1.desc:0 "我が母星の深部マントルから,低周波パルスが発せられているのが検出された.それは自然のものではなく,そのサイオニックな痕跡は紛れもない.そのエネルギーはいかなる既知の技術とも一致しない.それは我々を呼んでいる.\n\n我々は調査しなければならない."
  pdivinity_digsite.1.a:0 "発掘を開始せよ"
 
  pdivinity_digsite.2.name:0 "降下"
- pdivinity_digsite.2.desc:0 "我々の発掘により、これまでに知られているいかなるものとも異なる地下構造が明らかになった。その建築様式は異質でありながら、我々にはどこか馴染み深く、壁には判読不能な記号が並んでいるにもかかわらず、我々の精神はそれらを理解できる。現場全体がサイオニックな共鳴でうなり、空気が我々の名を語りかけてくる。\n\nこの場所は何らかの理由で埋められたのだ。しかし、我々はさらに引き込まれる。"
+ pdivinity_digsite.2.desc:0 "我々の発掘により,これまでに知られているいかなるものとも異なる地下構造が明らかになった.その建築様式は異質でありながら,我々にはどこか馴染み深く,壁には判読不能な記号が並んでいるにもかかわらず,我々の精神はそれらを理解できる.現場全体がサイオニックな共鳴でうなり,空気が我々の名を語りかけてくる.\n\nこの場所は何らかの理由で埋められたのだ.しかし,我々はさらに引き込まれる."
  pdivinity_digsite.2.a:0 "注意して進め"
 
  pdivinity_digsite.3.name:0 "石の下の囁き"
- pdivinity_digsite.3.desc:0 "我々のチームが地下構造物の深部へと踏み入るにつれて、彼らは聴覚的幻覚、最初は微かな呟き、その後はなぜか理解できる言語での囁き声を聞くようになったと報告し始めた。その声は、我々の遺伝子コードに宿る「印」と、我々を待つ役割について語る。一部の乗組員は、その囁きが直接彼らの名を呼んでいると主張する。\n\n誰も引き返そうとはしない。"
- pdivinity_digsite.3.a:0 "深く進むほど、それはより明らかになる"
+ pdivinity_digsite.3.desc:0 "我々のチームが地下構造物の深部へと踏み入るにつれて,彼らは聴覚的幻覚,最初は微かな呟き,その後はなぜか理解できる言語での囁き声を聞くようになったと報告し始めた.その声は,我々の遺伝子コードに宿る「印」と,我々を待つ役割について語る.一部の乗組員は,その囁きが直接彼らの名を呼んでいると主張する.\n\n誰も引き返そうとはしない."
+ pdivinity_digsite.3.a:0 "深く進むほど,それはより明らかになる"
 
  pdivinity_digsite.4.name:0 "創造主の印"
- pdivinity_digsite.4.desc:0 "我々は、精巧な彫刻とサイオニックな銘文で封印された巨大な扉を発見した。その中央には、微弱でリズミカルなエネルギーを放つ紋章がある。我々の中にはそれを夢で、またある者は宗教的な幻視で見たことがあると認識する者がいる。その上には「創造主の印を持つ者のみ通ることを許される」と刻まれている。\n\nその構造物は、まるで待っていたかのように我々の存在に共鳴する。"
+ pdivinity_digsite.4.desc:0 "我々は,精巧な彫刻とサイオニックな銘文で封印された巨大な扉を発見した.その中央には,微弱でリズミカルなエネルギーを放つ紋章がある.我々の中にはそれを夢で,またある者は宗教的な幻視で見たことがあると認識する者がいる.その上には「創造主の印を持つ者のみ通ることを許される」と刻まれている.\n\nその構造物は,まるで待っていたかのように我々の存在に共鳴する."
  pdivinity_digsite.4.a:0 "我々がこれを見つけることは運命づけられていたのだ"
 
  pdivinity_digsite.5.name:0 "目的の残響"
- pdivinity_digsite.5.desc:0 "構造物のさらに深部で、我々はありえないものを発見した。我が種族より古い壁に刻まれた、外部の者が知り得ない出来事を含む、我々の文明の正確な歴史を描いた壁画だ。その核心には、「運命に印された者」のみが入室を許される封印された部屋がある。"
- pdivinity_digsite.5.a:0 "すべては予言された通りに展開している…"
+ pdivinity_digsite.5.desc:0 "構造物のさらに深部で,我々はありえないものを発見した.我が種族より古い壁に刻まれた,外部の者が知り得ない出来事を含む,我々の文明の正確な歴史を描いた壁画だ.その核心には,「運命に印された者」のみが入室を許される封印された部屋がある."
+ pdivinity_digsite.5.a:0 "すべては予言された通りに展開している..."
 
  pdivinity_digsite.6.name:0 "待っていた者たち"
- pdivinity_digsite.6.desc:0 "封印された扉の向こうで、我々はとうの昔に死んだと思われていた者たちが住む部屋に遭遇した。痩せこけた、ローブをまとった存在たちであり、彼らは§R創造主§!の最初の弟子だと主張する。彼らの目は微かに光り、その声は数えきれないほどの他の声と重なり合っているかのように響く。彼らは我々を歓迎し、我々の到来が予見されており、今こそ循環が新たに始まるべきだと語る。\n\n彼らは導き…そして贈り物を差し出す。"
+ pdivinity_digsite.6.desc:0 "封印された扉の向こうで,我々はとうの昔に死んだと思われていた者たちが住む部屋に遭遇した.痩せこけた,ローブをまとった存在たちであり,彼らは§R創造主§!の最初の弟子だと主張する.彼らの目は微かに光り,その声は数えきれないほどの他の声と重なり合っているかのように響く.彼らは我々を歓迎し,我々の到来が予見されており,今こそ循環が新たに始まるべきだと語る.\n\n彼らは導き...そして贈り物を差し出す."
  pdivinity_digsite.6.a:0 "彼らは我々を待っていたのだ"
 
  pdivinity_digsite.7.name:0 "§R運命の欠片§!"
- pdivinity_digsite.7.desc:0 "彼らは我々に、より偉大なものの破片を差し出す。それは神性そのものの欠片であり、創造主の破片である。我々はその目的を知っている。それは、休眠状態にあるものを目覚めさせる行為だ。\n\n我々は、何か…取り返しのつかないことの瀬戸際に立っている。"
+ pdivinity_digsite.7.desc:0 "彼らは我々に,より偉大なものの破片を差し出す.それは神性そのものの欠片であり,創造主の破片である.我々はその目的を知っている.それは,休眠状態にあるものを目覚めさせる行為だ.\n\n我々は,何か...取り返しのつかないことの瀬戸際に立っている."
  pdivinity_digsite.7.a:0 "ベールは打ち砕かれるだろう"
 
 

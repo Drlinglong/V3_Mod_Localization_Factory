@@ -1,4 +1,4 @@
-﻿# dream_l_english.yml
+# dream_l_english.yml
 # Contributors: Lord Roscoford, DarkMatterMango
 
 l_russian:
@@ -44,7 +44,7 @@ l_russian:
 
  dream.006.name:"§2ПОБЕДА!§!"
  dream.006.desc:"Галактика наконец-то мирно покоится."
- dream.006.a:"§BВечносон§! — это все, что есть."
+ dream.006.a:"§BВечносон§! - это все, что есть."
 
  dream.010.name:"Великий Сон"
  dream.010.desc:"Мы быстро продвинулись от начинающих сновидцев до опытных осознанных сновидцев. Но до сих пор полноценные связи между индивидуально плотными снами каждой планеты трудно создать. Однако понимание природы снов со временем даст нам ответы, так что нам не стоит беспокоиться."
@@ -66,9 +66,9 @@ l_russian:
  crisis_dreaming_level_3:"Грёзы в Глубинах"
  crisis_dreaming_level_3_desc:"Галактика начала замечать нас в своих снах"
  crisis_dreaming_level_4:"Прилив меняется"
- crisis_dreaming_level_4_desc:"Бодрствующие — это аномалия; те, кто не может быть Грезящими, должны выполнять работу тысяч."
+ crisis_dreaming_level_4_desc:"Бодрствующие - это аномалия; те, кто не может быть Грезящими, должны выполнять работу тысяч."
  crisis_dreaming_level_5:"Кто грезит Сон?"
- crisis_dreaming_level_5_desc:"Все их сны — наши сны, их судьба и будущее — в наших руках."
+ crisis_dreaming_level_5_desc:"Все их сны - наши сны, их судьба и будущее - в наших руках."
 
  dream_motes:"Искры Грёз"
  dream_motes_name:"$dream_motes$:"
@@ -86,7 +86,7 @@ l_russian:
  dream_motes_crisis_level_unlock:"Имеется £dream_motes£ §Y$CURRENCY$§! Искр Грёз"
  dream_motes_current_value:"Текущее значение: §Y$VALUE|0$§!"
  dream_motes_crisis_description_title:"Глубокое сновидение"
- dream_motes_crisis_description:"$menace_crisis_description_intro$\n\nСны — это врата в вечность. Мы знаем, что они обладают силой, но скоро галактика узнает, насколько велика эта сила."
+ dream_motes_crisis_description:"$menace_crisis_description_intro$\n\nСны - это врата в вечность. Мы знаем, что они обладают силой, но скоро галактика узнает, насколько велика эта сила."
  dream_motes_crisis_howto_title:"Грёзы и Запределье"
  dream_motes_crisis_howto:"Выполнение §HЗадач кризиса§! генерирует $dream_motes$ §HИскр Грёз§!, открывая возможность использовать сны для обеспечения нашего господства над галактикой. Те, кто не обладает Силой, попытаются остановить нас, но им нужен отдых, так что мы можем использовать это против них."
 
@@ -159,9 +159,9 @@ l_russian:
  crisobj_espionage_desc:"Любой шпионаж поможет нам постичь разумы других империй."
 
  ap_dreaming_deep:"Глубокое сновидение"
- ap_dreaming_deep_desc:"Галактика — ваш домен, пробуждённые расы погружаются в вечный сон, и в этом ваша окончательная власть."
+ ap_dreaming_deep_desc:"Галактика - ваш домен, пробуждённые расы погружаются в вечный сон, и в этом ваша окончательная власть."
 
- operation_already_lethargic:"$TRIGGER_FAIL$ §RЦель уже находится под воздействием Волны Летаргии — любые дальнейшие усилия будут напрасны."
+ operation_already_lethargic:"$TRIGGER_FAIL$ §RЦель уже находится под воздействием Волны Летаргии - любые дальнейшие усилия будут напрасны."
 
  operation_dreamwalking:"Странствие по грёзам"
  operation_dreamwalking_desc:"Наши оперативники найдут цели, восприимчивые к вторжению в их сны, и создадут связь между ними и нашей Вечной Грёзой."
@@ -202,7 +202,7 @@ l_russian:
  job_dreamer:"Сновидец"
  job_dreamer_plural:"Сновидцы"
  job_dreamer_plural_with_icon:"[dreamer.GetIcon] [dreamer.GetNamePlural]"
- job_dreamer_desc:"Высшая честь в нашем обществе — быть избранным Сновидцем. Прожить свою жизнь в Вечном Сне, формируя будущее нашего народа."
+ job_dreamer_desc:"Высшая честь в нашем обществе - быть избранным Сновидцем. Прожить свою жизнь в Вечном Сне, формируя будущее нашего народа."
  job_dreamer_effect_desc:"[dreamer.GetIcon] [dreamer.GetNamePlural] производят $r_unity$ и $r_dream_motes$"
  mod_job_dreamer_add:"Должности Сновидцев"
  mod_job_dreamer_per_pop:"§G+1§! $job_dreamer_plural_with_icon$ на каждые $VALUE$ ед. населения."

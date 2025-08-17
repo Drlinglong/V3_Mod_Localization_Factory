@@ -1,4 +1,4 @@
-﻿l_simp_chinese:
+l_simp_chinese:
  HTAB:"$TAB$#b -#!$TAB$"
  TOOLTIP_DELIMITER_LONG:"@divider_start!@divider_mid!@divider_mid!@divider_mid!@divider_mid!@divider_mid!@divider_mid!@divider_mid!@divider_end!"
 
@@ -6,9 +6,9 @@
  COUNTRY_GDP_OWNERSHIP_ONE_LINE:"#title [Concept('concept_building_owners', 'GDP所有权')]#!"
  GDP_OWNERSHIP_RATIO_TT:"#header [Concept('concept_building_owners', 'GDP所有权')]#!\n[Country.GetAdjective] $GDP_SHORT$ 所有权: @money![Country.GetGDP|Dv] / [Country.MakeScope.ScriptValue('gdp_ownership_by_self')|%v] + [Country.MakeScope.ScriptValue('gdp_ownership_of_other')|%v] ([Country.GetGDPRanking])\n[SelectLocalization(IsZero_CFixedPoint(Country.MakeScope.ScriptValue('gdp_ownership_by_other_count')), 'DA_OVERSEA_INVESTMENT_NONE_TT', 'DA_OVERSEA_INVESTMENT_TT')]\n[SelectLocalization(IsZero_CFixedPoint(Country.MakeScope.ScriptValue('gdp_ownership_of_other_count')), 'DA_FOREIGN_INVESTMENT_NONE_TT', 'DA_FOREIGN_INVESTMENT_TT')][AddLocalizationIf(Not(ObjectsEqual(GetPlayer, Country.Self)), 'DA_GDP_OTHER_TT')]"
 
- DA_OVERSEA_INVESTMENT_TT:"#b 海外投资:#! 在[Country.MakeScope.ScriptValue('gdp_ownership_by_other_count')|v0]个国家中，相当于[Country.GetAdjective] $GDP_SHORT$的#tooltippable;tooltip:[Country.GetTooltipTag],da_gui_gdp_ownership_other [Country.MakeScope.ScriptValue('gdp_ownership_of_other')|%v+2]#!"
+ DA_OVERSEA_INVESTMENT_TT:"#b 海外投资:#! 在[Country.MakeScope.ScriptValue('gdp_ownership_by_other_count')|v0]个国家中,相当于[Country.GetAdjective] $GDP_SHORT$的#tooltippable;tooltip:[Country.GetTooltipTag],da_gui_gdp_ownership_other [Country.MakeScope.ScriptValue('gdp_ownership_of_other')|%v+2]#!"
  DA_OVERSEA_INVESTMENT_NONE_TT:"[Country.GetName] 没有#b 任何#! 海外投资"
- DA_FOREIGN_INVESTMENT_TT:"#b 外国投资:#! 来自[Country.MakeScope.ScriptValue('gdp_ownership_of_other_count')|v0]个国家，相当于[Country.GetAdjective] $GDP_SHORT$的#tooltippable;tooltip:[Country.GetTooltipTag],da_gui_gdp_ownership_self [Country.MakeScope.ScriptValue('gdp_ownership_by_other')|%v-2]#!"
+ DA_FOREIGN_INVESTMENT_TT:"#b 外国投资:#! 来自[Country.MakeScope.ScriptValue('gdp_ownership_of_other_count')|v0]个国家,相当于[Country.GetAdjective] $GDP_SHORT$的#tooltippable;tooltip:[Country.GetTooltipTag],da_gui_gdp_ownership_self [Country.MakeScope.ScriptValue('gdp_ownership_by_other')|%v-2]#!"
  DA_FOREIGN_INVESTMENT_NONE_TT:"[Country.GetName] 没有#b 任何#! 外国投资"
 
  da_gui_gdp_ownership_title:"#title     $GDP_SHORT$   $HTAB$  份额 $TAB$#b -#! [Concept('concept_building_level', '等级')]  #b - #!$TAB$[concept_country]#!"
@@ -19,9 +19,9 @@
 
  DA_GDP_OTHER_TT:"\n$TOOLTIP_DELIMITER_LONG$\n[SelectLocalization(IsZero(Country.GetInvestmentLevelsInCountry(GetPlayer)), 'DA_GDP_OTHER_00', 'DA_GDP_OTHER_01')]\n[SelectLocalization(IsZero(GetPlayer.GetInvestmentLevelsInCountry(Country.Self)), 'DA_GDP_OTHER_10', 'DA_GDP_OTHER_11')]"
  DA_GDP_OTHER_00:"[GetPlayer.GetName] 在[Country.GetName]没有#b 任何#! [concept_building_level]"
- DA_GDP_OTHER_01:"[GetPlayer.GetName] 在[Country.GetName]中拥有[Country.GetInvestmentLevelsInCountry(GetPlayer)|v] [Concept('concept_building_level', '$concept_building_levels$')]，相当于[Country.GetAdjective] $GDP_SHORT$的[Country.GetInvestmentGdpFractionInCountry(GetPlayer)|%2v]"
+ DA_GDP_OTHER_01:"[GetPlayer.GetName] 在[Country.GetName]中拥有[Country.GetInvestmentLevelsInCountry(GetPlayer)|v] [Concept('concept_building_level', '$concept_building_levels$')],相当于[Country.GetAdjective] $GDP_SHORT$的[Country.GetInvestmentGdpFractionInCountry(GetPlayer)|%2v]"
  DA_GDP_OTHER_10:"[Country.GetName] 在[GetPlayer.GetName]没有#b 任何#! [concept_building_level]"
- DA_GDP_OTHER_11:"[Country.GetName] 在[GetPlayer.GetName]中拥有[GetPlayer.GetInvestmentLevelsInCountry(Country.Self)|v] [Concept('concept_building_level', '$concept_building_levels$')]，相当于[GetPlayer.GetAdjective] $GDP_SHORT$的[GetPlayer.GetInvestmentGdpFractionInCountry(Country.Self)|%2v]"
+ DA_GDP_OTHER_11:"[Country.GetName] 在[GetPlayer.GetName]中拥有[GetPlayer.GetInvestmentLevelsInCountry(Country.Self)|v] [Concept('concept_building_level', '$concept_building_levels$')],相当于[GetPlayer.GetAdjective] $GDP_SHORT$的[GetPlayer.GetInvestmentGdpFractionInCountry(Country.Self)|%2v]"
 
- ATTITUDE_DETAILS:"[COUNTRY.GetAttitudeTowards(TARGET_COUNTRY.Self).GetReasonsDesc]\n$TOOLTIP_DELIMITER$\n[TARGET_COUNTRY.GetName] 在[COUNTRY.GetName]中拥有[COUNTRY.GetInvestmentLevelsInCountry(TARGET_COUNTRY.Self)|v] [Concept('concept_building_level', '$concept_building_levels$')]，相当于[COUNTRY.GetAdjective] $GDP_SHORT$的[COUNTRY.GetInvestmentGdpFractionInCountry(TARGET_COUNTRY.Self)|%2v]\n[COUNTRY.GetName] 在[TARGET_COUNTRY.GetName]中拥有[TARGET_COUNTRY.GetInvestmentLevelsInCountry(COUNTRY.Self)|v] [Concept('concept_building_level', '$concept_building_levels$')]，相当于[TARGET_COUNTRY.GetAdjective] $GDP_SHORT$的[TARGET_COUNTRY.GetInvestmentGdpFractionInCountry(COUNTRY.Self)|%2v]"
+ ATTITUDE_DETAILS:"[COUNTRY.GetAttitudeTowards(TARGET_COUNTRY.Self).GetReasonsDesc]\n$TOOLTIP_DELIMITER$\n[TARGET_COUNTRY.GetName] 在[COUNTRY.GetName]中拥有[COUNTRY.GetInvestmentLevelsInCountry(TARGET_COUNTRY.Self)|v] [Concept('concept_building_level', '$concept_building_levels$')],相当于[COUNTRY.GetAdjective] $GDP_SHORT$的[COUNTRY.GetInvestmentGdpFractionInCountry(TARGET_COUNTRY.Self)|%2v]\n[COUNTRY.GetName] 在[TARGET_COUNTRY.GetName]中拥有[TARGET_COUNTRY.GetInvestmentLevelsInCountry(COUNTRY.Self)|v] [Concept('concept_building_level', '$concept_building_levels$')],相当于[TARGET_COUNTRY.GetAdjective] $GDP_SHORT$的[TARGET_COUNTRY.GetInvestmentGdpFractionInCountry(COUNTRY.Self)|%2v]"
  ai_attitude_human_tooltip:"#header $ai_attitude_human$#!\n$ai_attitude_human_desc$\n$TOOLTIP_DELIMITER$\n$ATTITUDE_DETAILS$"

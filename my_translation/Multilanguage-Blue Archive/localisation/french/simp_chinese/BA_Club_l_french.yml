@@ -1,7 +1,7 @@
-﻿l_french:
+l_french:
  #
  Club_confirm:0 "Approuver la demande de construction soumise par le club sélectionné. Si aucun club n'est sélectionné, en approuver une au hasard."
- Club_tbc:0 "§LPlus de clubs à venir…§!"
+ Club_tbc:0 "§LPlus de clubs à venir...§!"
  Club_founded:0 "£trigger_no£Ce club a déjà §Cétabli§! une salle de club spatiale."
  Club_not_found:0 "£trigger_no£Ce club n'a §Rpas encore établi§! de salle de club spatiale."
 
@@ -112,11 +112,11 @@
 
 #
  BA_club.0001.title:0 "Explication du Mécanisme de Club"
- BA_club.0001.desc:0 "Professeur, nous venons juste de terminer la recherche nécessaire pour construire des Vaisseaux de Club et des Locaux de Club Spatiaux…\nHem, hm, nous sommes à l'ère spatiale maintenant… Vous ne trouvez pas qu'un local de club dans l'espace serait hyper stylé ? Maintenant, nous pouvons construire de tels locaux. Pour établir un club spatial, vous devez d'abord envoyer un vaisseau de construction pour édifier une Base de Local de Club, puis construire un Vaisseau de Club, et ordonner à ce Vaisseau de Club d'entrer en orbite autour de la base. L'établissement du club commencera alors.\nOu bien, vous pouvez également assigner les membres du club à bord du Vaisseau de Club pour coloniser une nouvelle planète. L'efficacité au travail des membres du club est inférieure à celle des colons ordinaires, mais leurs idées créatives contribuent au développement futur de la planète."
+ BA_club.0001.desc:0 "Professeur, nous venons juste de terminer la recherche nécessaire pour construire des Vaisseaux de Club et des Locaux de Club Spatiaux...\nHem, hm, nous sommes à l'ère spatiale maintenant... Vous ne trouvez pas qu'un local de club dans l'espace serait hyper stylé ? Maintenant, nous pouvons construire de tels locaux. Pour établir un club spatial, vous devez d'abord envoyer un vaisseau de construction pour édifier une Base de Local de Club, puis construire un Vaisseau de Club, et ordonner à ce Vaisseau de Club d'entrer en orbite autour de la base. L'établissement du club commencera alors.\nOu bien, vous pouvez également assigner les membres du club à bord du Vaisseau de Club pour coloniser une nouvelle planète. L'efficacité au travail des membres du club est inférieure à celle des colons ordinaires, mais leurs idées créatives contribuent au développement futur de la planète."
  BA_club.0001.comfirmed:0 "Compris."
 
  BA_club.0002.title:0 "Explication du Mécanisme de Club"
- BA_club.0002.desc:0 "Professeur, notre premier Vaisseau de Club a été mis à l'eau !\nVous souvenez-vous de la procédure pour établir un club ? Hem, hem, pour construire un club spatial, vous devez d'abord envoyer un vaisseau de construction pour édifier une Base de Local de Club, puis construire un Vaisseau de Club, et §Bordonner à ce Vaisseau de Club d'entrer en orbite autour de la base§!, l'établissement du club commencera alors.\nIl est important de noter que nous devons contrôler le nombre de locaux de club pour ne pas dépasser la limite de clubs, sinon cela exercera une certaine pression sur la gestion du Conseil des Élèves Fédéral… Bien sûr, tant que les ressources sont suffisantes, ce sont des problèmes qui peuvent être facilement résolus.\nAllez, Professeur, faisons de notre mieux ensemble !"
+ BA_club.0002.desc:0 "Professeur, notre premier Vaisseau de Club a été mis à l'eau !\nVous souvenez-vous de la procédure pour établir un club ? Hem, hem, pour construire un club spatial, vous devez d'abord envoyer un vaisseau de construction pour édifier une Base de Local de Club, puis construire un Vaisseau de Club, et §Bordonner à ce Vaisseau de Club d'entrer en orbite autour de la base§!, l'établissement du club commencera alors.\nIl est important de noter que nous devons contrôler le nombre de locaux de club pour ne pas dépasser la limite de clubs, sinon cela exercera une certaine pression sur la gestion du Conseil des Élèves Fédéral... Bien sûr, tant que les ressources sont suffisantes, ce sont des problèmes qui peuvent être facilement résolus.\nAllez, Professeur, faisons de notre mieux ensemble !"
  BA_club.0002.comfirmed:0 "Compris."
 
  BA_club.0005.title:0 "Début de la Construction du Local de Club"
@@ -195,38 +195,38 @@
 
 #建立通讯
  BA_club.1001.title:0 "Rapport de Création de Département : $Game_development_department$"
- BA_club.1001.desc:0 "Le… le chef du Club de Développement de Jeux, Hanaoka Yuzu, rapporte l'établissement de notre section à §Y[from.solar_system.GetName]§! achevé… snif…"
+ BA_club.1001.desc:0 "Le... le chef du Club de Développement de Jeux, Hanaoka Yuzu, rapporte l'établissement de notre section à §Y[from.solar_system.GetName]§! achevé... snif..."
  BA_club.1001.next:0 "Puisse-t-on rapidement créer des chefs-d'œuvre divins !"
  BA_club.1002.title:0 "$BA_club.1001.title$"
  BA_club.1002.desc:0 "Un autre pays a déjà établi le $Game_development_department$."
 
  BA_club.1101.title:0 "Rapport d'établissement de section : $Engineering_club$"
- BA_club.1101.desc:0 "Rapport au Conseil Étudiant Fédéral. La section spatiale du Club d'Ingénierie a terminé son établissement à §Y[from.solar_system.GetName]§!. Les requêtes que nous avons reçues incluent pas mal de §Grecherches sur les armes de vaisseaux§!, donc la facture… pourrait être un peu surprenante, veuillez nous excuser…"
+ BA_club.1101.desc:0 "Rapport au Conseil Étudiant Fédéral. La section spatiale du Club d'Ingénierie a terminé son établissement à §Y[from.solar_system.GetName]§!. Les requêtes que nous avons reçues incluent pas mal de §Grecherches sur les armes de vaisseaux§!, donc la facture... pourrait être un peu surprenante, veuillez nous excuser..."
  BA_club.1101.next:0 "Pas besoin de trop vous inquiéter, bon courage."
  BA_club.1102.title:0 "$BA_club.1101.title$"
  BA_club.1102.desc:0 "Un autre pays a déjà établi le $Engineering_club$."
 
  BA_club.1201.title:0 "Rapport d'établissement de section : $Veritas$"
- BA_club.1201.desc:0 "Ici Kaku Chihiro. La section spatiale de Veritas est localisée à §Y[from.solar_system.GetName]§!. Maintenant que nous avons obtenu les droits d'utilisation de cette mégastructure, nous devrons bien sûr y apporter quelques modifications pour §Gobtenir plus d'informations§! depuis l'espace…"
+ BA_club.1201.desc:0 "Ici Kaku Chihiro. La section spatiale de Veritas est localisée à §Y[from.solar_system.GetName]§!. Maintenant que nous avons obtenu les droits d'utilisation de cette mégastructure, nous devrons bien sûr y apporter quelques modifications pour §Gobtenir plus d'informations§! depuis l'espace..."
  BA_club.1201.next:0 "Dites-moi ce dont vous avez besoin, je vous soutiendrai."
  BA_club.1202.title:0 "$BA_club.1201.title$"
  BA_club.1202.desc:0 "Un autre pays a déjà établi le $Veritas$."
 
  BA_club.1301.title:0 "Rapport d'établissement de section : $Foreclosure_task_force$"
- BA_club.1301.desc:0 "Ici Okusora Ayane, rapportant au Conseil Étudiant Fédéral via la ligne Kivotos 4 : la section spatiale du Comité de Contre-mesures à §Y[from.solar_system.GetName]§! a terminé son établissement. Nous utiliserons pleinement notre expérience de travail à Abydos pour nous efforcer de proposer des idées et des conseils pour l'§Gamélioration de la production de base§!… Euh, c'est tout."
+ BA_club.1301.desc:0 "Ici Okusora Ayane, rapportant au Conseil Étudiant Fédéral via la ligne Kivotos 4 : la section spatiale du Comité de Contre-mesures à §Y[from.solar_system.GetName]§! a terminé son établissement. Nous utiliserons pleinement notre expérience de travail à Abydos pour nous efforcer de proposer des idées et des conseils pour l'§Gamélioration de la production de base§!... Euh, c'est tout."
  BA_club.1301.next:0 "Compris. N'hésitez pas à demander ce dont vous avez besoin."
  BA_club.1302.title:0 "$BA_club.1301.title$"
  BA_club.1302.desc:0 "Un autre pays a déjà établi le $Foreclosure_task_force$."
 
  BA_club.1401.title:0 "Rapport d'établissement de section : $Teaparty$"
- BA_club.1401.desc:0 "Bonjour, ici Nagisa Kirifuji, organisatrice de la Fête du Thé, rapportant au Conseil Étudiant Fédéral non pas au nom de la Trinité, mais en tant que club : la section spatiale de la Fête du Thé a terminé son établissement à §Y[from.solar_system.GetName]§!. Hmm, hmm… La Fête du Thé possède une vaste expérience dans la gestion de grandes académies, et nos activités sur les colonies peuvent effectivement §Gaméliorer les capacités administratives§!, apportant une contribution unique à Kivotos. C'est tout, je vous souhaite une bonne journée."
+ BA_club.1401.desc:0 "Bonjour, ici Nagisa Kirifuji, organisatrice de la Fête du Thé, rapportant au Conseil Étudiant Fédéral non pas au nom de la Trinité, mais en tant que club : la section spatiale de la Fête du Thé a terminé son établissement à §Y[from.solar_system.GetName]§!. Hmm, hmm... La Fête du Thé possède une vaste expérience dans la gestion de grandes académies, et nos activités sur les colonies peuvent effectivement §Gaméliorer les capacités administratives§!, apportant une contribution unique à Kivotos. C'est tout, je vous souhaite une bonne journée."
  BA_club.1401.next:0 "Avec votre aide, le Conseil Étudiant Fédéral verra assurément ses forces décuplées."
  BA_club.1402.title:0 "$BA_club.1401.title$"
  BA_club.1402.desc:0 "Un autre pays a déjà établi le $Teaparty$."
 
  BA_club.1501.title:0 "Rapport d'établissement de section : $Hotspring_development_department$"
  BA_club.1501.desc:0 "Selon la procédure émise par le Quartier Général du Club, tous les actifs lourds du Département de Développement des Sources Chaudes sont arrivés à §Y[from.solar_system.GetName]§!. Donc, je répète, conformément au contrat, bien que nous obtenions les droits d'exploration, la propriété de tous les minerais revient entièrement au Conseil Étudiant Fédéral."
- BA_club.1501.next:0 "…Veuillez faire attention à la sécurité lors de l'utilisation des explosifs…"
+ BA_club.1501.next:0 "...Veuillez faire attention à la sécurité lors de l'utilisation des explosifs..."
  BA_club.1502.title:0 "$BA_club.1501.title$"
  BA_club.1502.desc:0 "Un autre pays a déjà établi le $Hotspring_development_department$."
 
@@ -257,7 +257,7 @@
 #游戏部
  Game_development_department_opinion:0 "(Avancement actuel : [Root.Game_development_department] )"
 
- Yuzu_desc1:0 "$Game_development_department_opinion$… B-bienvenue… snif…"
+ Yuzu_desc1:0 "$Game_development_department_opinion$... B-bienvenue... snif..."
  Yuzu_desc2:0 "$Game_development_department_opinion$Nous sommes le Club de Développement de Jeux, et développer des jeux est notre activité principale... euh, enfin, pas seulement en développer."
  Yuzu_desc3:0 "$Game_development_department_opinion$... Hein ?! Pro-Professeur... Ne surgissez pas comme ça derrière nous..."
  Aris_desc1:0 "$Game_development_department_opinion$Le Héros a trouvé le Professeur ! Lancement du protocole de salutations !"
@@ -292,7 +292,7 @@
 
 
 #工程师部
- Engineering_club_opinion:0 "（§GNiveau de développement actuel : [Root.Engineering_club] §!）"
+ Engineering_club_opinion:0 "(§GNiveau de développement actuel : [Root.Engineering_club] §!)"
 
  Utaha_desc1:0 "$Engineering_club_opinion$Professeur, vous demandez ce que c'est ?... Ce n'est pas du chocolat, c'est un chargeur de munitions, nos chargeurs sont petits et faciles à transporter,..."
  Utaha_desc2:0 "$Engineering_club_opinion$Professeur, venez vite voir, mon petit Rai peut faire des saltos arrière maintenant !... Euh, non, rien, vous aviez quelque chose à dire ?"
@@ -355,53 +355,53 @@
 
 
 #真理部
- Veritas_opinion:0 "（§GNiveau de construction actuel : [Root.Veritas] §!）\n\n"
+ Veritas_opinion:0 "(§GNiveau de construction actuel : [Root.Veritas] §!)\n\n"
 
  Chihiro_desc1:0 "$Veritas_opinion$Oh, bienvenue..."
- Chihiro_desc2:0 "$Veritas_opinion$…J'ai l'air fatiguée ?… C'est juste que j'ai passé la journée à être tourmentée par une méthode d'intrusion rudimentaire mais étonnante."
- Chihiro_desc3:0 "$Veritas_opinion$Un distributeur automatique qu'on ne peut plus pirater une fois son câble réseau débranché, c'est vraiment une conception ingénieuse. …Non, rien."
- Hare_desc1:0 "$Veritas_opinion$Hmm, l'environnement en apesanteur est étonnamment mauvais pour le dos…"
- Hare_desc2:0 "$Veritas_opinion$Ici, la consommation électrique des Édina-3 peut être considérablement réduite, ce qui leur permet de faire beaucoup plus. …Même si elles ne m'écoutent toujours pas vraiment."
- Hare_desc3:0 "$Veritas_opinion$Oh, bienvenue… Si vous cherchez Koyuki et les autres, elles sont occupées à l'intérieur."
+ Chihiro_desc2:0 "$Veritas_opinion$...J'ai l'air fatiguée ?... C'est juste que j'ai passé la journée à être tourmentée par une méthode d'intrusion rudimentaire mais étonnante."
+ Chihiro_desc3:0 "$Veritas_opinion$Un distributeur automatique qu'on ne peut plus pirater une fois son câble réseau débranché, c'est vraiment une conception ingénieuse. ...Non, rien."
+ Hare_desc1:0 "$Veritas_opinion$Hmm, l'environnement en apesanteur est étonnamment mauvais pour le dos..."
+ Hare_desc2:0 "$Veritas_opinion$Ici, la consommation électrique des Édina-3 peut être considérablement réduite, ce qui leur permet de faire beaucoup plus. ...Même si elles ne m'écoutent toujours pas vraiment."
+ Hare_desc3:0 "$Veritas_opinion$Oh, bienvenue... Si vous cherchez Koyuki et les autres, elles sont occupées à l'intérieur."
 
- Veritas_sponsor:0 "Bien que ce soit peut-être une question superflue… avez-vous besoin de plus de fonds pour le club ?"
- Veritas_sponsor_ChihiroRE:0 "…Merci. Mais pas besoin d'une subvention, nous l'avons déjà reçue à l'avance… Désolée."
- Veritas_sponsor_HareRE:0 "Vous l'avez découvert ?… Je suis vraiment désolée, ça n'arrivera plus la prochaine fois…"
+ Veritas_sponsor:0 "Bien que ce soit peut-être une question superflue... avez-vous besoin de plus de fonds pour le club ?"
+ Veritas_sponsor_ChihiroRE:0 "...Merci. Mais pas besoin d'une subvention, nous l'avons déjà reçue à l'avance... Désolée."
+ Veritas_sponsor_HareRE:0 "Vous l'avez découvert ?... Je suis vraiment désolée, ça n'arrivera plus la prochaine fois..."
 
  Veritas_sensor_crafting:0 "Comment avance votre plan de modification ?"
  Veritas_crafting_sensor:0 "Les membres du Club Véritas travaillent activement sur ce projet."
  Veritas_complete_sensor:0 "Les membres du Club Véritas ont terminé la construction des capteurs."
- Veritas_sensor1:0 "Tout d'abord, merci Professeur d'avoir approuvé notre permis d'extension. Cette fois, nous prévoyons de construire un dispositif de contrôle de la communication par ondes cosmiques. Actuellement, nous avons besoin de données d'enquête et d'une grande quantité d'alliages… C'est pourquoi un budget aussi exorbitant est nécessaire, nous sommes désolés. Oh, au fait, Haruna et Koyuki n'ont pas dormi depuis plusieurs jours pour étudier ce projet. Pourriez-vous leur apporter quelques Raspberry Pi ?"
+ Veritas_sensor1:0 "Tout d'abord, merci Professeur d'avoir approuvé notre permis d'extension. Cette fois, nous prévoyons de construire un dispositif de contrôle de la communication par ondes cosmiques. Actuellement, nous avons besoin de données d'enquête et d'une grande quantité d'alliages... C'est pourquoi un budget aussi exorbitant est nécessaire, nous sommes désolés. Oh, au fait, Haruna et Koyuki n'ont pas dormi depuis plusieurs jours pour étudier ce projet. Pourriez-vous leur apporter quelques Raspberry Pi ?"
  Veritas_sensor1.next:0 "D'accord, et j'approuverai également vos protocoles de détection."
- Veritas_sensor2:0 "Hm, Professeur, la nouvelle zone de la mégastructure du club est prête. Nous devons encore faire des percées au niveau des programmes, mais je suis sûre que nous aurons des résultats très bientôt. Si le Professeur souhaite connaître l'avancement, vous pouvez nous contacter à tout moment. Ah, au fait, merci Professeur pour les Raspberry Pi…"
+ Veritas_sensor2:0 "Hm, Professeur, la nouvelle zone de la mégastructure du club est prête. Nous devons encore faire des percées au niveau des programmes, mais je suis sûre que nous aurons des résultats très bientôt. Si le Professeur souhaite connaître l'avancement, vous pouvez nous contacter à tout moment. Ah, au fait, merci Professeur pour les Raspberry Pi..."
  Veritas_sensor2.next:0 "Compris, veillez aussi à votre santé."
- Veritas_sensor3:0 "À ce stade, les programmes et les protocoles sont globalement corrects, mais la précision de la capture des informations est encore insuffisante, nous avons donc ajouté des instruments de précision. Himari-senpai nous a aidées à résoudre la plupart des problèmes de programme, mais elle ne pouvait rien faire pour le travail de débogage… Une fois tout cela terminé, le dispositif de communication pourra commencer à fonctionner."
+ Veritas_sensor3:0 "À ce stade, les programmes et les protocoles sont globalement corrects, mais la précision de la capture des informations est encore insuffisante, nous avons donc ajouté des instruments de précision. Himari-senpai nous a aidées à résoudre la plupart des problèmes de programme, mais elle ne pouvait rien faire pour le travail de débogage... Une fois tout cela terminé, le dispositif de communication pourra commencer à fonctionner."
  Veritas_sensor3.next:0 "Vous avez fait du bon travail, je vous aiderai à vous préparer."
- Veritas_sensor4:0 "Professeur, tous les équipements et programmes sont maintenant prêts… Nous aurions besoin de votre aide pour allouer la dernière cargaison d'alliages, nous allons bientôt commencer à assembler le plus gigantesque dispositif de surveillance de l'univers !"
+ Veritas_sensor4:0 "Professeur, tous les équipements et programmes sont maintenant prêts... Nous aurions besoin de votre aide pour allouer la dernière cargaison d'alliages, nous allons bientôt commencer à assembler le plus gigantesque dispositif de surveillance de l'univers !"
  Veritas_sensor4.next:0 "Au travail !"
 
  Veritas_building:0 "Avez-vous besoin de déployer des nœuds sur les planètes ?"
- Veritas_building.ChihiroRE:0 "Si vous êtes disposé à nous aider… ce serait bien aussi, c'est vraiment génial ! Merci beaucoup."
- Veritas_building.HareRE:0 "Vraiment ? Si vous parlez des interfaces du réseau planétaire… euh, bien sûr. Merci beaucoup."
+ Veritas_building.ChihiroRE:0 "Si vous êtes disposé à nous aider... ce serait bien aussi, c'est vraiment génial ! Merci beaucoup."
+ Veritas_building.HareRE:0 "Vraiment ? Si vous parlez des interfaces du réseau planétaire... euh, bien sûr. Merci beaucoup."
 
  Veritas_building_add:0 "Nous pouvons vous fournir plus de nœuds."
- Veritas_building_add.ChihiroRE:0 "Si vous êtes disposé à nous aider… ce serait bien aussi, c'est vraiment génial ! Merci beaucoup."
- Veritas_building_add.HareRE:0 "Si vous parlez des interfaces du réseau planétaire… euh, bien sûr. Merci beaucoup."
+ Veritas_building_add.ChihiroRE:0 "Si vous êtes disposé à nous aider... ce serait bien aussi, c'est vraiment génial ! Merci beaucoup."
+ Veritas_building_add.HareRE:0 "Si vous parlez des interfaces du réseau planétaire... euh, bien sûr. Merci beaucoup."
 
 
 #对策委员会
- Foreclosure_task_force_opinion:0 "（§GNiveau de construction actuel : [Root.Foreclosure_task_force]     Niveau d'enquête actuel : [root.Foreclosure_task_force_func_lv]§!）\n\n"
+ Foreclosure_task_force_opinion:0 "(§GNiveau de construction actuel : [Root.Foreclosure_task_force]     Niveau d'enquête actuel : [root.Foreclosure_task_force_func_lv]§!)\n\n"
 
  Nonomi_desc1:0 "$Foreclosure_task_force_opinion$Oh là là, Professeur~ Y a-t-il quelque chose ?"
  Nonomi_desc2:0 "$Foreclosure_task_force_opinion$Notre Conseil des Mesures Correctives ne développe pas d'équipement, nous comptons sur notre regard aiguisé~"
- Nonomi_desc3:0 "$Foreclosure_task_force_opinion$Si nous pensions toujours pouvoir tout résoudre avec de l'argent, Abydos n'aurait pas connu son renouveau actuel… Vous pouvez absolument faire confiance à nos capacités."
- Shiroko_desc1:0 "$Foreclosure_task_force_opinion$Professeur, êtes-vous là pour nous rendre visite ? …Hmm, je suis très contente."
- Shiroko_desc2:0 "$Foreclosure_task_force_opinion$Professeur, regardez, voici les routes et les zones aveugles des vaisseaux de ces rats de marchands ambulants que j'ai enregistrées lors de mes missions sur le terrain. Si le Conseil des Étudiants Fédéral manque d'argent, la prochaine fois qu'ils viendront… non, ce n'est pas possible ? …Compris…"
- Shiroko_desc3:0 "$Foreclosure_task_force_opinion$Ce sont moi qui fais toutes les tâches sur le terrain maintenant… C'est l'occasion de mettre à profit cette bicyclette à axe de tachyon."
+ Nonomi_desc3:0 "$Foreclosure_task_force_opinion$Si nous pensions toujours pouvoir tout résoudre avec de l'argent, Abydos n'aurait pas connu son renouveau actuel... Vous pouvez absolument faire confiance à nos capacités."
+ Shiroko_desc1:0 "$Foreclosure_task_force_opinion$Professeur, êtes-vous là pour nous rendre visite ? ...Hmm, je suis très contente."
+ Shiroko_desc2:0 "$Foreclosure_task_force_opinion$Professeur, regardez, voici les routes et les zones aveugles des vaisseaux de ces rats de marchands ambulants que j'ai enregistrées lors de mes missions sur le terrain. Si le Conseil des Étudiants Fédéral manque d'argent, la prochaine fois qu'ils viendront... non, ce n'est pas possible ? ...Compris..."
+ Shiroko_desc3:0 "$Foreclosure_task_force_opinion$Ce sont moi qui fais toutes les tâches sur le terrain maintenant... C'est l'occasion de mettre à profit cette bicyclette à axe de tachyon."
 
  Foreclosure_task_force_sponsor:0 "Nous pouvons vous fournir une subvention."
  Foreclosure_task_force_sponsor_NonomiRE:0 "En fait, il n'était pas nécessaire de déranger le Professeur, mais nous sommes quand même très reconnaissantes."
- Foreclosure_task_force_sponsor_ShirokoRE:0 "Merci, même si je pourrais régler cette petite affaire toute seule… Hmm, dans ce cas…"
+ Foreclosure_task_force_sponsor_ShirokoRE:0 "Merci, même si je pourrais régler cette petite affaire toute seule... Hmm, dans ce cas..."
 
  Foreclosure_task_force_decisions:0 "Le Quartier Général du Club vous a donné l'ordre pour la prochaine série d'enquêtes coloniales. Voici les fonds."
  Foreclosure_task_force_decisions.tip:0 "Après une enquête sur le terrain, les membres du Conseil des Mesures Correctives peuvent procéder à une meilleure allocation des ressources et une optimisation de la répartition du personnel pour cette colonie.\nChaque tour d'enquête nécessite une préparation de §G1800§!£time£ jours."
@@ -436,7 +436,7 @@
  Seia_desc3:0 "$Teaparty_opinion$Il s'appelle Mésange à longue queue... Hmm, je sais ce que vous voulez demander."
  Mika_desc1:0 "$Teaparty_opinion$Sensei ! Qu'est-ce qui vous amène au Tea Party ? Vous venez discuter avec moi ?"
  Mika_desc2:0 "$Teaparty_opinion$Dans l'espace, les roulés suisses ont une saveur différente de celle sur Terre, Seia-chan me l'a dit, c'est parce que dans l'espace... euh, c'est à cause de quoi déjà ?"
- Mika_desc3:0 "$Teaparty_opinion$J'adore cette salle de club spatiale, regarde, je me tiens là, comme ça... Regarde, on dirait la princesse de la dernière scène des 《Chroniques Légendaires 4》! ...Hein ? L'équipe des héros du cinquième opus est composée des enfants de la princesse et du héros... Ah, euh, ça... (rougit)"
+ Mika_desc3:0 "$Teaparty_opinion$J'adore cette salle de club spatiale, regarde, je me tiens là, comme ça... Regarde, on dirait la princesse de la dernière scène des <Chroniques Légendaires 4>! ...Hein ? L'équipe des héros du cinquième opus est composée des enfants de la princesse et du héros... Ah, euh, ça... (rougit)"
 
  Teaparty_sponsor:0 "Le QG du club peut vous fournir un soutien financier."
  Teaparty_sponsor.NagisaRE:0 "Merci beaucoup. Bien que l'aide financière n'ait pas une grande importance pour nous, votre sincérité nous émeut profondément."
@@ -457,15 +457,15 @@
 
  Teaparty_building_add:0 "Le nombre de bâtiments annexes est-il insuffisant ? Un complément peut être fourni dès maintenant."
  Teaparty_building_add.NagisaRE:0 "Les filiales du Tea Party peuvent désormais assumer davantage de fonctions, merci."
- Teaparty_building_add.SeiaRE:0 "…En échange, j'aurais besoin d'un lit plus grand…"
+ Teaparty_building_add.SeiaRE:0 "...En échange, j'aurais besoin d'un lit plus grand..."
  Teaparty_building_add.MikaRE:0 "Comme ça, on pourra s'occuper plus vite de ces garnements qui n'écoutent rien."
 
 
 #温泉开发部
  Hotspring_development_department_opinion:0 "(§GNiveau de construction actuel : [Root.Hotspring_development_department] §!)\n\n"
 
- Megu_desc1:0 "$Hotspring_development_department_opinion$Allez, allez… y a-t-il quelque chose qu'on doive aplanir ?"
- Megu_desc2:0 "$Hotspring_development_department_opinion$Hé hé… Les sources chaudes qu'on a créées sont devenues très populaires, pas vrai ? Professeur, vous y êtes allé récemment ?"
+ Megu_desc1:0 "$Hotspring_development_department_opinion$Allez, allez... y a-t-il quelque chose qu'on doive aplanir ?"
+ Megu_desc2:0 "$Hotspring_development_department_opinion$Hé hé... Les sources chaudes qu'on a créées sont devenues très populaires, pas vrai ? Professeur, vous y êtes allé récemment ?"
  Megu_desc3:0 "$Hotspring_development_department_opinion$Avant, la plupart des sources chaudes qu'on creusait se tarissaient après quelques jours. Maintenant qu'on a l'équipement d'exploration, on n'aura plus besoin de tenter notre chance à chaque fois !"
 
  Hotspring_development_department_research:0 "Nous pourrions lancer des recherches pour améliorer l'efficacité de l'exploration."
@@ -474,7 +474,7 @@
  Hotspring_development_department_research.MeguRE:0 "Il faut que je remette ça au Conseil Général des Étudiants, c'est ça ? J'ai compris !"
 
  Hotspring_development_department_building:0 "Vous avez besoin d'un Département Commercial ?"
- Hotspring_development_department_building.MeguRE:0 "…Hmm, le développement seul ne suffit pas, les stratégies commerciales sont aussi nécessaires ? C'est compliqué…"
+ Hotspring_development_department_building.MeguRE:0 "...Hmm, le développement seul ne suffit pas, les stratégies commerciales sont aussi nécessaires ? C'est compliqué..."
 
  Hotspring_development_department_building_add:0 "Il est temps d'exploiter davantage de sources chaudes."
  Hotspring_development_department_building_add.MeguRE:0 "Même si je ne comprends rien au commerce, l'important, c'est que de plus en plus de gens profitent des sources chaudes !"
@@ -497,7 +497,7 @@
  Festival_operations_department_prolong.tip:0 "Payez des ressources pour prolonger la durée du bonus du festival. Cela mettra également le festival en période de rechargement et nécessitera le paiement de $consumer_goods_with_icon$ en frais d'entretien."
  Festival_operations_department_prolong.cooldown:0 "Le département des clubs a besoin de plus de préparatifs pour se préparer à la prochaine extension."
  Festival_operations_department_prolong.max:0 "L'échelle prévue pour le festival a atteint son maximum."
- Festival_operations_department_prolong.ShizukoRE:0 "Si le Conseil Fédéral des Étudiants prend en charge les dépenses… pas de problème !\n\n(Lors de la prochaine organisation du festival, la durée du bonus obtenu sera prolongée de 360£time£ jours.)"
+ Festival_operations_department_prolong.ShizukoRE:0 "Si le Conseil Fédéral des Étudiants prend en charge les dépenses... pas de problème !\n\n(Lors de la prochaine organisation du festival, la durée du bonus obtenu sera prolongée de 360£time£ jours.)"
 
  Festival_operations_department_building:0 "Faut-il ouvrir d'autres centres d'opérations ?"
  Festival_operations_department_building.ShizukoRE:0 "Comme ça, le chiffre d'affaires augmentera plus vite."
@@ -518,11 +518,11 @@
  Xuanwu_promenade_trade.cooldown:0 "La Compagnie Commerciale Genbu s'occupe actuellement des questions liées aux canaux de distribution, veuillez passer commande à nouveau dans §Y[root.Xuanwu_promenade_trade_cooldown]§!."
  Xuanwu_promenade_trade.noflow:0 "Nous n'avons pas de trace de flux pour cette ressource, nous ne pouvons pas prouver la légalité de cette transaction."
 
- Xuanwu_promenade_trade.RumiRE.1:0 "Génial !… Euh non, comment ça ? Ah ah ah, la Compagnie Commerciale Genbu fait des affaires sérieuses, hé hé."
+ Xuanwu_promenade_trade.RumiRE.1:0 "Génial !... Euh non, comment ça ? Ah ah ah, la Compagnie Commerciale Genbu fait des affaires sérieuses, hé hé."
  Xuanwu_promenade_trade.RumiRE.2:0 "On a eu beaucoup de mal à obtenir cette marchandise, alors ne vous plaignez pas trop de sa qualité, d'accord ?"
 
  Xuanwu_promenade_trade.title:0 "Compagnie Commerciale Genbu : Commandes Spéciales"
- Xuanwu_promenade_trade.desc1:0 "$Xuanwu_promenade_opinion$Si vous avez besoin de quelque chose, n'hésitez pas à commander… Livraison immédiate, la Compagnie Commerciale Genbu s'occupe du reste."
+ Xuanwu_promenade_trade.desc1:0 "$Xuanwu_promenade_opinion$Si vous avez besoin de quelque chose, n'hésitez pas à commander... Livraison immédiate, la Compagnie Commerciale Genbu s'occupe du reste."
  Xuanwu_promenade_trade.desc2:0 "$Xuanwu_promenade_opinion$Ne laissez pas une rupture de stock vous empêcher de faire ce qui est important, Professeur. Vous pouvez toujours faire confiance à la Compagnie Commerciale Genbu."
  Xuanwu_promenade_trade.exit:0 "Retour"
  Xuanwu_promenade_trade.consumer_goods:0 "Acheter $consumer_goods_with_icon$"
@@ -620,7 +620,7 @@
  coffee_cooldown:0 "Ticket d'invitation du Café en recharge."
  Hoshino_CoffeeRE:0 ""
  hoshino_event_fail1:0 "L'affection de Hoshino-chan est insuffisante, essayez d'augmenter son affection avant de revenir."
- hoshino_event_fail2:0 "Pourtant, la Baleine Bleue n'est pas encore revenue. (Terminer l'histoire personnelle de Hoshino — Le Rêve de la Baleine Bleue)"
+ hoshino_event_fail2:0 "Pourtant, la Baleine Bleue n'est pas encore revenue. (Terminer l'histoire personnelle de Hoshino - Le Rêve de la Baleine Bleue)"
  BA_Hoshino_exit:0 "Rien de spécial, juste venu te voir."
 
  Hina:0 "Hina Sorasaki"
@@ -672,7 +672,7 @@
  Yuuka_desc1:0 "Laissez-moi voir... Le budget de Kivotos pour ce mois est de... Les dépenses militaires sont de... Les dépenses diplomatiques sont également considérables... Et il y a aussi les subventions économiques pour chaque académie... Ah, Sensei ! Bienvenue ! Désolée, j'étais tellement absorbée à l'instant que je n'arrivais pas à me libérer. Cependant, je peux résoudre votre problème tout en travaillant, veuillez parler."
  Yuuka_about_now:0 "Demander l'avis de Yuuka sur la situation actuelle."
  Yuuka_about_now.tip:0 "Obtenir quelques astuces pour bien progresser !"
- Yuuka_about_now.1:0 "Pour devenir un adulte modèle, Sensei doit toujours garder un œil sur nos finances — et pas seulement sur l'Énergie, bien sûr, mais aussi sur toutes les autres ressources que nous collectons ! Vous pouvez gérer les profits et les pertes via le Marché et le commerce diplomatique, et aussi en assignant efficacement les postes de chacun pour extraire les ressources nécessaires. Bien sûr, je vous conseille de bien gérer les ressources que nos entrepôts ne peuvent plus stocker. Le gaspillage est tout aussi irresponsable qu'une dépense sans limite ! Mais puisque je suis la Présidente du Conseil des Étudiants, et que je suis là, je suis sûre que tout ira bien pour vous !"
+ Yuuka_about_now.1:0 "Pour devenir un adulte modèle, Sensei doit toujours garder un œil sur nos finances - et pas seulement sur l'Énergie, bien sûr, mais aussi sur toutes les autres ressources que nous collectons ! Vous pouvez gérer les profits et les pertes via le Marché et le commerce diplomatique, et aussi en assignant efficacement les postes de chacun pour extraire les ressources nécessaires. Bien sûr, je vous conseille de bien gérer les ressources que nos entrepôts ne peuvent plus stocker. Le gaspillage est tout aussi irresponsable qu'une dépense sans limite ! Mais puisque je suis la Présidente du Conseil des Étudiants, et que je suis là, je suis sûre que tout ira bien pour vous !"
  Yuuka_about_now.2:0 "Quand Sensei a un peu de temps libre, il pourrait aussi s'intéresser aux activités quotidiennes de tout le monde. Beaucoup d'élèves ont déjà envoyé des demandes au Conseil des Étudiants pour construire des sections de clubs. Bien que le Conseil des Étudiants ait approuvé ces propositions, les détails concrets devront être décidés par vous, Sensei !"
  Yuuka_chat:0 "Parler à Yuuka"
  Yuuka_chat.tip:0 "Même si Yuuka est une vraie bourreau de travail, discuter un peu avec Sensei de temps en temps n'est pas une mauvaise chose."

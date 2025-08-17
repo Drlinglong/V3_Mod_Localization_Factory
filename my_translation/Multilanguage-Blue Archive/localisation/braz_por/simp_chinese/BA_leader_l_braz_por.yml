@@ -1,4 +1,4 @@
-﻿l_braz_por:
+l_braz_por:
 ########   用户界面   ########
  MESSAGE_BA_NEW_SP_LEADER_TITLE:"Reserva de Líderes"
  MESSAGE_BA_NEW_SP_LEADER_DESC:"$SP_NAME|B$ se juntou à Reserva de Líderes e pode ser recrutado como um líder especial na Arca de Shittim."
@@ -80,7 +80,7 @@
  BA_communication.Yuuka.c:"Sendo assim, não vou ter vergonha, viu? Kivotos precisa de alguns administradores para atuarem como Governadores agora. Posso contar com a Yuuka?"
  BA_communication.Yuuka.c.response:"Hmph~ Hmph~ Hmph~ Então você encontrou a pessoa certa! Quando se trata de administração, tenho confiança de que não perco pra ninguém! Seja resumo financeiro, alocação de verbas, ou revisão de decisões, são todos trabalhos que eu fazia muito bem no Seminário. Embora agora eu tenha que ser responsável por um planeta muito maior do que uma academia inteira... eu também darei o meu melhor! As finanças de todo o Kivotos e até mesmo as suas despesas pessoais podem ser entregues a mim, não tenho problema nenhum, viu!"
  BA_communication.Yuuka.d:"Sendo assim, vou confiar na sua capacidade, Yuuka. Você vive me dizendo pra não me esforçar demais, mas a pequena Yuuka também precisa ter cuidado e descansar, viu."
- BA_communication.Yuuka.d.response:"Hmph, mesmo o Sensei, você é quem menos se importa com a própria saúde, né...... Mas se você insiste em fazer isso, então podemos considerar isso um acordo entre nós dois, viu—trabalhe com seriedade e descanse bem quando for a hora de descansar! Vamos fatorar toda a tristeza e a raiva juntos!"
+ BA_communication.Yuuka.d.response:"Hmph, mesmo o Sensei, você é quem menos se importa com a própria saúde, né...... Mas se você insiste em fazer isso, então podemos considerar isso um acordo entre nós dois, viu-trabalhe com seriedade e descanse bem quando for a hora de descansar! Vamos fatorar toda a tristeza e a raiva juntos!"
  BA_communication.Yuuka.join:"§B$NAME_Yuuka$§! juntou-se como uma §Hlíder§!."
 
  NAME_Hina:"Hina"
@@ -1120,7 +1120,7 @@
  tech_BA_SPW_MOMIJI_WEAPON:"Arma de Nave Estelar: $MOMIJI_WEAPON$"
  tech_BA_SPW_MOMIJI_WEAPON_desc: "$tech_BA_SPW_WEAPON_desc$"
 
- KASUMI_WEAPON:"Red·Rector"
+ KASUMI_WEAPON:"Red.Rector"
  KASUMI_WEAPON_DESC:"$KASUMI_WEAPON_DESC1$$KASUMI_WEAPON_DESC2$"
  KASUMI_WEAPON_DESC1:"A pistola pessoal de Kasumi."
  KASUMI_WEAPON_DESC2:"Geralmente usada para dar tiros para o alto e animar o ambiente. Por trás de sua aparência pequena e adorável, na verdade, esconde um poder de fogo tremendo."
@@ -1532,7 +1532,7 @@
  leader_special_102_UNF_desc:0 "O maior dos ocultos esconde-se na multidão, e o apoio permanece indetectável."
  leader_special_103:0 "Intuição Selvagem"
  leader_special_103_desc:0 "A intuição da Asuna é, muitas vezes, a chave vital para completar as missões."
- leader_special_103_BN:0 "7·7·7"
+ leader_special_103_BN:0 "7.7.7"
  leader_special_103_BN_desc:0 "Manter a calma em perigo é a qualidade básica de um agente, e se você tiver um pouco de sorte..."
  leader_special_103_UNF:0 "Ritmo"
  leader_special_103_UNF_desc:0 "Discreto na multidão, agindo com o ritmo."
@@ -1697,7 +1697,7 @@
 
 
 
-### 招募问候   ！！！涉及原版修改
+### 招募问候   !!!涉及原版修改
  LEADER_RECRUITMENT_SCRIPTED_GREETING:"§L[From.GetScriptedLeaderRecruitedGreeting_BA]§!"
 
 
@@ -1721,7 +1721,7 @@
  leader_greeting_BA_018:0 ""
  leader_greeting_BA_019:0 ""
  leader_greeting_BA_020:0 ""
- leader_greeting_BA_021:0 "Saudações! — Ah, talvez essa seja uma forma mais natural de se expressar. Prazer em conhecê-lo!"
+ leader_greeting_BA_021:0 "Saudações! - Ah, talvez essa seja uma forma mais natural de se expressar. Prazer em conhecê-lo!"
  leader_greeting_BA_022:0 "Olá, Professor. Eu sou Uraha Kaoru, do Comitê de Operações de Festivais, afiliada a Hyakkiyako! Você gosta de festivais?"
  leader_greeting_BA_023:0 "Ehehe, eu sou Shizuko, do Comitê de Operações de Festivais~. Por favor, cuide bem de mim de agora em diante, Professor? Eh? ...Ah, sim, sim, isso, é só uma formalidade!"
  leader_greeting_BA_024:0 "Hehe... Finalmente te encontrei. Não vou mais deixar você fugir, querido(a)? Por favor, não me deixe de novo...?"

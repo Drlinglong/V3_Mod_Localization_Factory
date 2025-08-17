@@ -1,20 +1,20 @@
-﻿l_simp_chinese:
+l_simp_chinese:
  year_2200_start:0 "普通开局"
  year_2225_start:0 "游戏前期开局"
  year_2250_start:0 "游戏中期开局"
  year_2275_start:0 "游戏末期前开局"
  year_2300_start:0 "游戏末期开局"
  year_2200_start.tt:0 "无修改普通开局"
- year_2225_start.tt:0 "§T游戏前期开局§!\n\n§H所有帝国§!开局拥有：\n§G高级首都§!与§G3颗已发展行星§!\n所有§G1阶§!科技已解锁\n§G1个传统树§!选择\n§G1个飞升天赋§!选择\n舰队规模达到§G80%海军容量§!\n与§G最近的帝国§!已接触\n\n\n§Y推荐在使用高级开局时，调低游戏中期和游戏末期起始年份。\n§R警告：在较慢的CPU上生成高级开局可能需要一些时间。§!"
- year_2250_start.tt:0 "§T游戏中期开局§!\n\n§H所有帝国§!开局拥有：\n§G高级首都§!与§G5颗已发展行星§!\n所有§G2阶§!科技已解锁\n§G2个传统树§!选择\n§G2个飞升天赋§!选择\n舰队规模达到§G80%海军容量§!\n游戏开始时§G银河共同体§!成立\n\n\n§Y推荐在使用高级开局时，调低游戏中期和游戏末期起始年份。\n§R警告：在较慢的CPU上生成高级开局可能需要一些时间。§!"
- year_2275_start.tt:0 "§T游戏末期前开局§!\n\n§H所有帝国§!开局拥有：\n§G高级首都§!与§G7颗已发展行星§!\n所有§G3阶§!科技已解锁\n§G3个传统树§!选择\n§G3个飞升天赋§!选择\n舰队规模达到§G80%海军容量§!\n§G银河共同体§!已成立\n银河共同体中所有§G1级决议§!已通过\n\n\n§Y推荐在使用高级开局时，调低游戏中期和游戏末期起始年份。§!\n§R警告：在较慢的CPU上生成高级开局可能需要一些时间。§!"
- year_2300_start.tt:0 "§T游戏末期开局§!\n\n§H所有帝国§!开局拥有：\n§G高级首都§!与§G9颗已发展行星§!\n所有§G4阶§!科技已解锁\n§G4个传统树§!选择\n§G4个飞升天赋§!选择\n舰队规模达到§G80%海军容量§!\n§G银河共同体§!已成立\n§G银河理事会§!已成立\n§G银河市场§!已成立\n银河共同体中所有§G2级决议§!已通过\n\n\n§Y推荐在使用高级开局时，调低游戏中期和游戏末期起始年份。§!\n§R警告：在较慢的CPU上生成高级开局可能需要一些时间。§!"
+ year_2225_start.tt:0 "§T游戏前期开局§!\n\n§H所有帝国§!开局拥有:\n§G高级首都§!与§G3颗已发展行星§!\n所有§G1阶§!科技已解锁\n§G1个传统树§!选择\n§G1个飞升天赋§!选择\n舰队规模达到§G80%海军容量§!\n与§G最近的帝国§!已接触\n\n\n§Y推荐在使用高级开局时,调低游戏中期和游戏末期起始年份.\n§R警告:在较慢的CPU上生成高级开局可能需要一些时间.§!"
+ year_2250_start.tt:0 "§T游戏中期开局§!\n\n§H所有帝国§!开局拥有:\n§G高级首都§!与§G5颗已发展行星§!\n所有§G2阶§!科技已解锁\n§G2个传统树§!选择\n§G2个飞升天赋§!选择\n舰队规模达到§G80%海军容量§!\n游戏开始时§G银河共同体§!成立\n\n\n§Y推荐在使用高级开局时,调低游戏中期和游戏末期起始年份.\n§R警告:在较慢的CPU上生成高级开局可能需要一些时间.§!"
+ year_2275_start.tt:0 "§T游戏末期前开局§!\n\n§H所有帝国§!开局拥有:\n§G高级首都§!与§G7颗已发展行星§!\n所有§G3阶§!科技已解锁\n§G3个传统树§!选择\n§G3个飞升天赋§!选择\n舰队规模达到§G80%海军容量§!\n§G银河共同体§!已成立\n银河共同体中所有§G1级决议§!已通过\n\n\n§Y推荐在使用高级开局时,调低游戏中期和游戏末期起始年份.§!\n§R警告:在较慢的CPU上生成高级开局可能需要一些时间.§!"
+ year_2300_start.tt:0 "§T游戏末期开局§!\n\n§H所有帝国§!开局拥有:\n§G高级首都§!与§G9颗已发展行星§!\n所有§G4阶§!科技已解锁\n§G4个传统树§!选择\n§G4个飞升天赋§!选择\n舰队规模达到§G80%海军容量§!\n§G银河共同体§!已成立\n§G银河理事会§!已成立\n§G银河市场§!已成立\n银河共同体中所有§G2级决议§!已通过\n\n\n§Y推荐在使用高级开局时,调低游戏中期和游戏末期起始年份.§!\n§R警告:在较慢的CPU上生成高级开局可能需要一些时间.§!"
  
- tradition_effects:0 "\n传统效果：\n"
+ tradition_effects:0 "\n传统效果:\n"
  tradition_picks:0 "\n剩余传统选择"
  tradition_picks_remaining:0 "$tradition_picks$: [This.tradition_picks]"
  mj_25_game_start_5_title:0 "选择传统"
- mj_25_game_start_5_desc:0 "伟大的[This.GetName]在我们进军太空时取得了突飞猛进的进展。我们殖民了新世界，并拓展了领土。随着我们社会的发展，帝国境内的习俗也发生了变化，新的传统随之出现。\n\n$tradition_picks_remaining$"
+ mj_25_game_start_5_desc:0 "伟大的[This.GetName]在我们进军太空时取得了突飞猛进的进展.我们殖民了新世界,并拓展了领土.随着我们社会的发展,帝国境内的习俗也发生了变化,新的传统随之出现.\n\n$tradition_picks_remaining$"
 
  tradition_adaptability_recycling_survival_fittest_environmental_diversification_adaptive_ecology_appropriation:0 "解锁 ['tradition_category:tradition_adaptability'] 传统$NEW_LINE$['tradition:tr_adaptability_recycling']$NEW_LINE$['tradition:tr_adaptability_survival_fittest']$NEW_LINE$['tradition:tr_adaptability_environmental_diversification']$NEW_LINE$['tradition:tr_adaptability_adaptive_ecology']$NEW_LINE$['tradition:tr_adaptability_appropriation']"
  tradition_aptitude_the_empire_needs_you_specialist_training_psychological_profiling_healthcare_program_champions_of_the_empire:0 "解锁 ['tradition_category:tradition_aptitude'] 传统$NEW_LINE$['tradition:tr_aptitude_the_empire_needs_you']$NEW_LINE$['tradition:tr_aptitude_specialist_training']$NEW_LINE$['tradition:tr_aptitude_psychological_profiling']$NEW_LINE$['tradition:tr_aptitude_healthcare_program']$NEW_LINE$['tradition:tr_aptitude_champions_of_the_empire']"
@@ -39,5 +39,5 @@
 
 
  mj25_game_start_title:0 "选择高级开局选项"
- mj25_game_start_desc:0 "感谢您对#MODJAM2025的关注！\n\n本次活动将允许您直接跳过早期阶段，从而体验所有危机。并非所有起源都能完美运行，而且与高级开局相比，亲自游玩游戏很可能带来更好的实力增益。\n\n感谢您游玩#MODJAM2025，请务必在下方投票！\n\nhttp://pdxint.at/mj25vote"
+ mj25_game_start_desc:0 "感谢您对#MODJAM2025的关注!\n\n本次活动将允许您直接跳过早期阶段,从而体验所有危机.并非所有起源都能完美运行,而且与高级开局相比,亲自游玩游戏很可能带来更好的实力增益.\n\n感谢您游玩#MODJAM2025,请务必在下方投票!\n\nhttp://pdxint.at/mj25vote"
 

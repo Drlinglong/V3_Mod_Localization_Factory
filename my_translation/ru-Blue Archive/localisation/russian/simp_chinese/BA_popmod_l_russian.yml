@@ -1,4 +1,4 @@
-﻿l_russian:
+l_russian:
 #living stadard
  mod_pop_category_workers_consumer_goods_upkeep_add:"Содержание $consumer_goods_with_icon$ на 100 $WORKERS$"
  mod_pop_category_specialists_unity_upkeep_add:"Содержание $unity_with_icon$ на 100 $SPECIALISTS$"
@@ -201,17 +201,17 @@
 
 ##job@concept
  BA_crew_pop:0 "£job_BA_Vigilant_crew£§BКивотос§!§PСамооборона§! должность"
- BA_crew_pop_desc:0 "$BA_crew_pop$ производит $unity_with_icon$, а также предоставляет $r_stability$ и §Y£mod_country_naval_cap_add£Вместимость флота§!.$TABBED_NEW_LINE$—[BA_Vigilant_crew.GetNamePlural]$TABBED_NEW_LINE$—[BA_Valkyrie_police.GetNamePlural]"
+ BA_crew_pop_desc:0 "$BA_crew_pop$ производит $unity_with_icon$, а также предоставляет $r_stability$ и §Y£mod_country_naval_cap_add£Вместимость флота§!.$TABBED_NEW_LINE$-[BA_Vigilant_crew.GetNamePlural]$TABBED_NEW_LINE$-[BA_Valkyrie_police.GetNamePlural]"
  BA_staff_pop:0 "£job_BA_Kivotos_staff£§BКивотос§!§KПерсонал§! должность"
- BA_staff_pop_desc:0 "$BA_staff_pop$ производит $unity_with_icon$ и $trade_with_icon$.$TABBED_NEW_LINE$—[BA_Kivotos_staff.GetNamePlural]$TABBED_NEW_LINE$—[BA_Kivotos_trader.GetNamePlural]"
+ BA_staff_pop_desc:0 "$BA_staff_pop$ производит $unity_with_icon$ и $trade_with_icon$.$TABBED_NEW_LINE$-[BA_Kivotos_staff.GetNamePlural]$TABBED_NEW_LINE$-[BA_Kivotos_trader.GetNamePlural]"
  BA_club_pop:0 "£job_BA_club_members£§BКивотос§!§GЧлен клуба§! должность"
- BA_club_pop_desc:0 "$BA_club_pop$ производит $physics_research_with_icon$, $society_research_with_icon$ и $engineering_research_with_icon$.$TABBED_NEW_LINE$—[BA_club_members.GetNamePlural]$TABBED_NEW_LINE$—[BA_student_delegate.GetNamePlural]"
+ BA_club_pop_desc:0 "$BA_club_pop$ производит $physics_research_with_icon$, $society_research_with_icon$ и $engineering_research_with_icon$.$TABBED_NEW_LINE$-[BA_club_members.GetNamePlural]$TABBED_NEW_LINE$-[BA_student_delegate.GetNamePlural]"
  BA_worker_pop:0 "£job_BA_Kivotos_miner£§BКивотос§!§vПригородный рабочий§! должность"
- BA_worker_pop_desc:0 "$BA_worker_pop$ производит $energy_with_icon$, $minerals_with_icon$ и $food_with_icon$.$TABBED_NEW_LINE$—[BA_dont_be_crazy_here.GetNamePlural]$TABBED_NEW_LINE$—[BA_Kivotos_miner.GetNamePlural]$TABBED_NEW_LINE$—[BA_caterer.GetNamePlural]"
+ BA_worker_pop_desc:0 "$BA_worker_pop$ производит $energy_with_icon$, $minerals_with_icon$ и $food_with_icon$.$TABBED_NEW_LINE$-[BA_dont_be_crazy_here.GetNamePlural]$TABBED_NEW_LINE$-[BA_Kivotos_miner.GetNamePlural]$TABBED_NEW_LINE$-[BA_caterer.GetNamePlural]"
  BA_industry_pop:0 "£BA_industry_pop£§BКивотос§!§MПромышленный техник§! должность"
- BA_industry_pop_desc:"$BA_industry_pop$ производит $alloys_with_icon$ или $consumer_goods_with_icon$.$TABBED_NEW_LINE$—[BA_pyroxenes_artisan.GetNamePlural]$TABBED_NEW_LINE$—[BA_keystone_foundry.GetNamePlural]"
+ BA_industry_pop_desc:"$BA_industry_pop$ производит $alloys_with_icon$ или $consumer_goods_with_icon$.$TABBED_NEW_LINE$-[BA_pyroxenes_artisan.GetNamePlural]$TABBED_NEW_LINE$-[BA_keystone_foundry.GetNamePlural]"
  BA_flex_pop:0 "£job_BA_flexible_workers£§BКивотос§!§EФрилансер§! должность"
- BA_flex_pop_desc:"Производство и содержание $BA_flex_pop$ зависят от категории планеты.$TABBED_NEW_LINE$—[BA_flexible_workers.GetNamePlural]$TABBED_NEW_LINE$—[BA_scavenger.GetNamePlural]"
+ BA_flex_pop_desc:"Производство и содержание $BA_flex_pop$ зависят от категории планеты.$TABBED_NEW_LINE$-[BA_flexible_workers.GetNamePlural]$TABBED_NEW_LINE$-[BA_scavenger.GetNamePlural]"
  BA_auto_pop:0 "£job_BA_ringworld_worker£§B基沃托斯§!§YДежурный по автоматическим сооружениям§! должность"
- BA_auto_pop_desc:0 "Производство и содержание $BA_auto_pop$ зависят от §H£district£районов§! и £zone£['concept_district_specialization'], доступных в этом сегменте.$TABBED_NEW_LINE$—[BA_ringworld_worker.GetNamePlural]$TABBED_NEW_LINE$—[BA_student_on_duty.GetNamePlural]"
+ BA_auto_pop_desc:0 "Производство и содержание $BA_auto_pop$ зависят от §H£district£районов§! и £zone£['concept_district_specialization'], доступных в этом сегменте.$TABBED_NEW_LINE$-[BA_ringworld_worker.GetNamePlural]$TABBED_NEW_LINE$-[BA_student_on_duty.GetNamePlural]"
 

@@ -1,4 +1,4 @@
-﻿l_japanese:
+l_japanese:
 #living stadard
  mod_pop_category_workers_consumer_goods_upkeep_add:"100$WORKERS$ごとの$consumer_goods_with_icon$維持費"
  mod_pop_category_specialists_unity_upkeep_add:"100$SPECIALISTS$ごとの$unity_with_icon$維持費"
@@ -136,10 +136,10 @@
  BA_flexpop_bonus_workforce_mult_tt:0 "`['BA_flex_pop']$BONUS_WORKFORCE_FOR$: $VARIABLE|0%=+$`"
 
  BA_worker_bonus_workforce_mult:0 "`$BA_worker_pop$`のための募集ボーナス"
- BA_worker_bonus_workforce_mult_tt:0 "`['BA_worker_pop']`のための募集ボーナス：$VARIABLE|0%=+$"
+ BA_worker_bonus_workforce_mult_tt:0 "`['BA_worker_pop']`のための募集ボーナス:$VARIABLE|0%=+$"
 
  BA_industry_pop_bonus_workforce_mult:0 "`$BA_industry_pop$`のための募集ボーナス"
- BA_industry_pop_bonus_workforce_mult_tt:0 "`['BA_industry_pop']`のための募集ボーナス：$VARIABLE|0%=+$"
+ BA_industry_pop_bonus_workforce_mult_tt:0 "`['BA_industry_pop']`のための募集ボーナス:$VARIABLE|0%=+$"
 
 ##singlejob
  #crew
@@ -201,17 +201,17 @@
 
 ##job@concept
  BA_crew_pop:0 "£job_BA_Vigilant_crew£§Bキヴォトス§!§P自警団§!ジョブ"
- BA_crew_pop_desc:0 "$BA_crew_pop$は$unity_with_icon$を産出し、$r_stability$と§Y£mod_country_naval_cap_add£海軍許容量§!を提供します。$TABBED_NEW_LINE$—[BA_Vigilant_crew.GetNamePlural]$TABBED_NEW_LINE$—[BA_Valkyrie_police.GetNamePlural]"
+ BA_crew_pop_desc:0 "$BA_crew_pop$は$unity_with_icon$を産出し,$r_stability$と§Y£mod_country_naval_cap_add£海軍許容量§!を提供します.$TABBED_NEW_LINE$-[BA_Vigilant_crew.GetNamePlural]$TABBED_NEW_LINE$-[BA_Valkyrie_police.GetNamePlural]"
  BA_staff_pop:0 "£job_BA_Kivotos_staff£§Bキヴォトス§!§K職員§!ジョブ"
- BA_staff_pop_desc:0 "$BA_staff_pop$は$unity_with_icon$、$trade_with_icon$を産出します。$TABBED_NEW_LINE$—[BA_Kivotos_staff.GetNamePlural]$TABBED_NEW_LINE$—[BA_Kivotos_trader.GetNamePlural]"
+ BA_staff_pop_desc:0 "$BA_staff_pop$は$unity_with_icon$,$trade_with_icon$を産出します.$TABBED_NEW_LINE$-[BA_Kivotos_staff.GetNamePlural]$TABBED_NEW_LINE$-[BA_Kivotos_trader.GetNamePlural]"
  BA_club_pop:0 "£job_BA_club_members£§Bキヴォトス§!§G部活動部員§!ジョブ"
- BA_club_pop_desc:0 "$BA_club_pop$は$physics_research_with_icon$、$society_research_with_icon$、$engineering_research_with_icon$を産出します。$TABBED_NEW_LINE$—[BA_club_members.GetNamePlural]$TABBED_NEW_LINE$—[BA_student_delegate.GetNamePlural]"
+ BA_club_pop_desc:0 "$BA_club_pop$は$physics_research_with_icon$,$society_research_with_icon$,$engineering_research_with_icon$を産出します.$TABBED_NEW_LINE$-[BA_club_members.GetNamePlural]$TABBED_NEW_LINE$-[BA_student_delegate.GetNamePlural]"
  BA_worker_pop:0 "£job_BA_Kivotos_miner£§Bキヴォトス§!§v郊外労働者§!ジョブ"
- BA_worker_pop_desc:0 "$BA_worker_pop$は$energy_with_icon$、$minerals_with_icon$、$food_with_icon$を産出します。$TABBED_NEW_LINE$—[BA_dont_be_crazy_here.GetNamePlural]$TABBED_NEW_LINE$—[BA_Kivotos_miner.GetNamePlural]$TABBED_NEW_LINE$—[BA_caterer.GetNamePlural]"
+ BA_worker_pop_desc:0 "$BA_worker_pop$は$energy_with_icon$,$minerals_with_icon$,$food_with_icon$を産出します.$TABBED_NEW_LINE$-[BA_dont_be_crazy_here.GetNamePlural]$TABBED_NEW_LINE$-[BA_Kivotos_miner.GetNamePlural]$TABBED_NEW_LINE$-[BA_caterer.GetNamePlural]"
  BA_industry_pop:0 "£BA_industry_pop£§Bキヴォトス§!§M工業技師§!ジョブ"
- BA_industry_pop_desc:"$BA_industry_pop$は$alloys_with_icon$または$consumer_goods_with_icon$を産出します。$TABBED_NEW_LINE$—[BA_pyroxenes_artisan.GetNamePlural]$TABBED_NEW_LINE$—[BA_keystone_foundry.GetNamePlural]"
+ BA_industry_pop_desc:"$BA_industry_pop$は$alloys_with_icon$または$consumer_goods_with_icon$を産出します.$TABBED_NEW_LINE$-[BA_pyroxenes_artisan.GetNamePlural]$TABBED_NEW_LINE$-[BA_keystone_foundry.GetNamePlural]"
  BA_flex_pop:0 "£job_BA_flexible_workers£§Bキヴォトス§!§Eフレキシブルワーカー§!ジョブ"
- BA_flex_pop_desc:"$BA_flex_pop$の産出と維持費は惑星のカテゴリーによって決定されます。$TABBED_NEW_LINE$—[BA_flexible_workers.GetNamePlural]$TABBED_NEW_LINE$—[BA_scavenger.GetNamePlural]"
+ BA_flex_pop_desc:"$BA_flex_pop$の産出と維持費は惑星のカテゴリーによって決定されます.$TABBED_NEW_LINE$-[BA_flexible_workers.GetNamePlural]$TABBED_NEW_LINE$-[BA_scavenger.GetNamePlural]"
  BA_auto_pop:0 "£job_BA_ringworld_worker£§Bキヴォトス§!§Y自動施設当番§!ジョブ"
- BA_auto_pop_desc:0 "$BA_auto_pop$の産出と維持費はこのセクターの§H£district£区域§!と£zone£['concept_district_specialization']によって決定されます。$TABBED_NEW_LINE$—[BA_ringworld_worker.GetNamePlural]$TABBED_NEW_LINE$—[BA_student_on_duty.GetNamePlural]"
+ BA_auto_pop_desc:0 "$BA_auto_pop$の産出と維持費はこのセクターの§H£district£区域§!と£zone£['concept_district_specialization']によって決定されます.$TABBED_NEW_LINE$-[BA_ringworld_worker.GetNamePlural]$TABBED_NEW_LINE$-[BA_student_on_duty.GetNamePlural]"
 

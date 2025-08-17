@@ -1,4 +1,4 @@
-﻿l_french:
+l_french:
 ########   用户界面   ########
  MESSAGE_BA_NEW_SP_LEADER_TITLE:"Réserve de dirigeants"
  MESSAGE_BA_NEW_SP_LEADER_DESC:"$SP_NAME|B$ a rejoint la réserve de dirigeants et peut être recruté(e) comme dirigeant(e) spécial(e) depuis le Coffre de Shittim."
@@ -80,7 +80,7 @@
  BA_communication.Yuuka.c:"Puisque c'est comme ça, je ne vais pas me faire prier, d'accord ? Kivotos a maintenant besoin de personnel administratif pour servir de gouverneur, puis-je confier cela à Yuuka ?"
  BA_communication.Yuuka.c.response:"Hmph~ Hmph~ Hmph~ Alors vous avez frappé à la bonne porte ! En matière de gestion administrative, j'ai la certitude de ne céder la place à personne ! Qu'il s'agisse de bilans financiers, d'allocations de fonds ou d'examen de résolutions, ce sont toutes des tâches dans lesquelles j'excelle au Séminaire. Bien que je doive maintenant gérer une planète bien plus grande qu'une académie... je ferai tout de même de mon mieux ! Vous pouvez même me confier les dépenses financières de tout Kivotos et les vôtres, je n'ai aucun problème !"
  BA_communication.Yuuka.d:"Puisque c'est ainsi, je vais faire confiance aux capacités de Yuuka. Tu me dis toujours de ne pas me surmener, ma petite Yuuka, mais c'est la même chose pour toi, fais attention à te reposer."
- BA_communication.Yuuka.d.response:"Hmph, alors que vous êtes clairement la personne qui se soucie le moins de sa propre santé, Sensei... Mais si vous insistez, alors cette chose, nous pouvons en faire une promesse entre nous deux — travailler sérieusement quand on travaille, et bien se reposer quand on se repose ! Factorisons ensemble toute la tristesse et la colère !"
+ BA_communication.Yuuka.d.response:"Hmph, alors que vous êtes clairement la personne qui se soucie le moins de sa propre santé, Sensei... Mais si vous insistez, alors cette chose, nous pouvons en faire une promesse entre nous deux - travailler sérieusement quand on travaille, et bien se reposer quand on se repose ! Factorisons ensemble toute la tristesse et la colère !"
  BA_communication.Yuuka.join:"§B$NAME_Yuuka$§! a rejoint en tant que §Hdirigeante§!."
 
  NAME_Hina:"Hina Sorasaki"
@@ -1095,7 +1095,7 @@
  MINA_WEAPON:"Dragon Azur & Tigre Blanc"
  MINA_WEAPON_DESC:"$MINA_WEAPON_DESC1$$MINA_WEAPON_DESC2$"
  MINA_WEAPON_DESC1:"Les deux pistolets préférés de Mina."
- MINA_WEAPON_DESC2:"À gauche, le Dragon Azur, à droite, le Tigre Blanc. « Ce sont mes plus fidèles compagnons d'armes… », dit-elle. Peut-être que parfois, la raison est plus importante que l'émotion."
+ MINA_WEAPON_DESC2:"À gauche, le Dragon Azur, à droite, le Tigre Blanc. « Ce sont mes plus fidèles compagnons d'armes... », dit-elle. Peut-être que parfois, la raison est plus importante que l'émotion."
  tech_BA_SPW_MINA_WEAPON:"Armement de Vaisseau : $MINA_WEAPON$"
  tech_BA_SPW_MINA_WEAPON_desc: "$tech_BA_SPW_WEAPON_desc$"
 
@@ -1106,7 +1106,7 @@
  tech_BA_SPW_MINORI_WEAPON:"Armement de Vaisseau : $MINORI_WEAPON$"
  tech_BA_SPW_MINORI_WEAPON_desc: "$tech_BA_SPW_WEAPON_desc$"
 
- MERU_WEAPON:"Création… Amère !"
+ MERU_WEAPON:"Création... Amère !"
  MERU_WEAPON_DESC:"$MERU_WEAPON_DESC1$$MERU_WEAPON_DESC2$"
  MERU_WEAPON_DESC1:"Le pistolet spécialement conçu pour Meru."
  MERU_WEAPON_DESC2:"Une arme qui incarne les soucis de son propriétaire. Faute d'avoir trouvé un meilleur nom, elle l'a nommé ainsi."
@@ -1120,7 +1120,7 @@
  tech_BA_SPW_MOMIJI_WEAPON:"Arme de vaisseau : $MOMIJI_WEAPON$"
  tech_BA_SPW_MOMIJI_WEAPON_desc: "$tech_BA_SPW_WEAPON_desc$"
 
- KASUMI_WEAPON:"Red·Rector"
+ KASUMI_WEAPON:"Red.Rector"
  KASUMI_WEAPON_DESC:"$KASUMI_WEAPON_DESC1$$KASUMI_WEAPON_DESC2$"
  KASUMI_WEAPON_DESC1:"Le pistolet que Kasumi garde toujours sur elle."
  KASUMI_WEAPON_DESC2:"Elle l'utilise généralement pour tirer en l'air et mettre l'ambiance. Malgré son apparence mignonne et compacte, elle recèle en réalité une puissance de feu impressionnante."
@@ -1359,9 +1359,9 @@
  leader_special_036_KMN:0 "La Lune du Nouvel An"
  leader_special_036_KMN_desc:0 "Pfiou~ Offrons quelques feux d'artifice à l'ennemi~"
  leader_special_037:0 "Assaut Mortel"
- leader_special_037_desc:0 "Il suffit d'attaquer sans arrêt, n'est-ce pas… ?"
+ leader_special_037_desc:0 "Il suffit d'attaquer sans arrêt, n'est-ce pas... ?"
  leader_special_037_KMN:0 "Le Printemps du Nouvel An"
- leader_special_037_KMN_desc:0 "Encore un Nouvel An, hehe… Je voudrais vraiment remercier tout le monde…"
+ leader_special_037_KMN_desc:0 "Encore un Nouvel An, hehe... Je voudrais vraiment remercier tout le monde..."
  leader_special_038:0 "Soins de Campagne"
  leader_special_038_desc:0 "Les secours sur le champ de bataille sont un indicateur du maintien de la ligne de front."
  leader_special_038_HS:0 "Dose d'Énergie Supplémentaire"
@@ -1697,7 +1697,7 @@
 
 
 
-### 招募问候   ！！！涉及原版修改
+### 招募问候   !!!涉及原版修改
  LEADER_RECRUITMENT_SCRIPTED_GREETING:"§L[From.GetScriptedLeaderRecruitedGreeting_BA]§!"
 
 
