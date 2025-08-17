@@ -187,5 +187,22 @@
   "qwen_batch_thinking_enabled": "批次 {batch_num}: 启用思考功能",
   "qwen_batch_thinking_disabled": "批次 {batch_num}: 禁用思考功能 (添加 /no_think)",
   "qwen_single_translation_thinking_enabled": "单条翻译: 启用思考功能",
-  "qwen_single_translation_thinking_disabled": "单条翻译: 禁用思考功能 (添加 /no_think)"
+  "qwen_single_translation_thinking_disabled": "单条翻译: 禁用思考功能 (添加 /no_think)",
+  
+  "error_source_dir_not_exists": "源目录不存在: {dir}",
+  "error_source_dir_instructions": "请确保以下任一条件满足：",
+  "error_source_dir_condition1": "1. 在项目根目录下运行程序",
+  "error_source_dir_condition2": "2. source_mod 文件夹存在且包含mod文件",
+  "error_source_dir_condition3": "3. 检查文件夹名称是否正确（应为 'source_mod'）",
+  "error_permission_denied": "权限不足，无法访问目录: {dir}",
+  "error_scan_directory_unknown": "扫描目录时发生未知错误: {error}",
+  "error_scan_directory": "扫描目录时发生错误: {error}",
+  "user_cancelled_selection": "用户取消选择",
+  "error_add_mods_to_source_folder": "请在 source_mod 文件夹中添加要翻译的mod文件夹",
+  "cleanup_deleting": "正在删除文件...",
+  "cleanup_deleted_folder": "已删除文件夹: {item}",
+  "cleanup_deleted_file": "已删除文件: {item}",
+  "cleanup_delete_error": "删除失败: {path}, 错误: {error}",
+  "cleanup_success": "清理完成！",
+  "cleanup_error": "清理过程中发生错误: {error}"
 }

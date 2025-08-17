@@ -20,11 +20,11 @@ def select_mod_directory():
     """扫描source_mod目录，让用户选择一个mod文件夹。"""
     # 检查源目录是否存在
     if not os.path.exists(SOURCE_DIR):
-        logging.error(f"源目录不存在: {SOURCE_DIR}")
-        logging.error("请确保以下任一条件满足：")
-        logging.error("1. 在项目根目录下运行程序")
-        logging.error("2. source_mod 文件夹存在且包含mod文件")
-        logging.error("3. 检查文件夹名称是否正确（应为 'source_mod'）")
+        logging.error(i18n.t("error_source_dir_not_exists", dir=SOURCE_DIR))
+        logging.error(i18n.t("error_source_dir_instructions"))
+        logging.error(i18n.t("error_source_dir_condition1"))
+        logging.error(i18n.t("error_source_dir_condition2"))
+        logging.error(i18n.t("error_source_dir_condition3"))
         return None
     
     logging.info(i18n.t("scan_source_folder", dir=SOURCE_DIR))
@@ -32,7 +32,7 @@ def select_mod_directory():
         mod_folders = [d for d in os.listdir(SOURCE_DIR) if os.path.isdir(os.path.join(SOURCE_DIR, d))]
         if not mod_folders:
             logging.error(i18n.t("error_no_mods_found", dir=SOURCE_DIR))
-            logging.error("请在 source_mod 文件夹中添加要翻译的mod文件夹")
+            logging.error(i18n.t("error_add_mods_to_source_folder"))
             return None
 
         logging.info(i18n.t("select_mod_prompt"))
@@ -54,10 +54,10 @@ def select_mod_directory():
         logging.error(i18n.t("error_source_folder_not_found", dir=SOURCE_DIR))
         return None
     except PermissionError:
-        logging.error(f"权限不足，无法访问目录: {SOURCE_DIR}")
+        logging.error(i18n.t("error_permission_denied", dir=SOURCE_DIR))
         return None
     except Exception as e:
-        logging.error(f"扫描目录时发生未知错误: {e}")
+        logging.error(i18n.t("error_scan_directory_unknown", error=e))
         return None
 
 
@@ -72,14 +72,14 @@ def scan_source_directory(source_dir):
         list: mod文件夹名称列表
     """
     if not os.path.exists(source_dir):
-        logging.error(f"源目录不存在: {source_dir}")
+        logging.error(i18n.t("error_source_dir_not_exists", dir=source_dir))
         return []
     
     try:
         mod_folders = [d for d in os.listdir(source_dir) if os.path.isdir(os.path.join(source_dir, d))]
         return mod_folders
     except Exception as e:
-        logging.error(f"扫描目录时发生错误: {e}")
+        logging.error(i18n.t("error_scan_directory", error=e))
         return []
 
 
@@ -113,7 +113,7 @@ def select_mod(mods):
         except ValueError:
             logging.warning(i18n.t("invalid_input_not_number"))
         except (EOFError, KeyboardInterrupt):
-            logging.info("用户取消选择")
+            logging.info(i18n.t("user_cancelled_selection"))
             return None
 
 

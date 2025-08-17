@@ -163,7 +163,7 @@ def _translate_chunk(client, chunk, source_lang, target_lang, game_profile, mod_
             model_name = API_PROVIDERS["gemini"]["default_model"]
             
             # 根据配置决定是否启用思考功能
-            
+                
             if API_PROVIDERS["gemini"]["enable_thinking"]:
                 # 启用思考功能（可能增加成本）
                 from google.genai import types
