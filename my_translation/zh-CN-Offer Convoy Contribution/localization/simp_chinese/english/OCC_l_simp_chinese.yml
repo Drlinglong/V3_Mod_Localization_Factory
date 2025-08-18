@@ -7,5 +7,5 @@
  occ_offer_convoys_action_propose_name: "$occ_offer_convoys$"
  occ_offer_convoys_action_break_name:"取消增加船队贡献"
  occ_offer_convoys_pact_desc:"[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName]提议增加对[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]的船队贡献。"
- occ_offer_convoys_action_notification_break_name:"[INITIATOR_COUNTRY.GetName]取消了增加船队贡献"
- occ_offer_convoys_action_notification_break_desc:"[INITIATOR_COUNTRY.GetName]已将船队贡献恢复到常规水平。"
+ occ_offer_convoys_action_notification_break_name:"[INITIATOR_COUNTRY.GetName]取消了增加的船队贡献"
+ occ_offer_convoys_action_notification_break_desc:"[INITIATOR_COUNTRY.GetName]已将船队贡献恢复到正常水平。"

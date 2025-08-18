@@ -1,0 +1,19 @@
+﻿l_simp_chinese:
+# 正常文本
+test_normal: "这是一个正常的翻译文本"
+test_concept: "这是一个概念链接 [concept_legitimacy] 的文本"
+
+# 错误级别问题 (ERROR) - 会导致游戏崩溃或无法识别
+test_chinese_in_brackets: "方括号内包含中文 [中文函数] 这是错误的"
+test_chinese_in_concept: "[Concept('中文key', '显示文本')] 概念键包含中文"
+test_chinese_in_scope: "[SCOPE.sCountry('中文scope')] 作用域键包含中文"
+test_chinese_in_icon: "图标标签包含中文 @中文图标!"
+
+# 警告级别问题 (WARNING) - 可能导致显示异常但不会崩溃
+test_missing_space: "格式化命令缺少空格 #b粗体文本#! 应该 #b 粗体文本#!"
+test_unknown_formatting: "使用未知的格式化命令 #bold 粗体文本#! 应该是 #b"
+test_unpaired_tags: "颜色标签不成对 #R 红色文本 没有结束符"
+
+# 信息级别问题 (INFO) - 建议检查但影响较小
+test_tooltip_complex: "复杂的提示框 #tooltippable;tooltip:<中文tooltip_key> 文本"
+test_scope_complex: "复杂的作用域 [This.GetName|中文格式化] 包含中文"
