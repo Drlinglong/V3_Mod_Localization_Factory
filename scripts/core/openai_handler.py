@@ -138,23 +138,24 @@ def _translate_chunk(client, chunk, source_lang, target_lang, game_profile, mod_
                 target_lang["code"]
             )
             
-            format_prompt_part = (
-                "CRITICAL FORMATTING: Your response MUST be a numbered list with the EXACT same number of items, from 1 to "
-                f"{len(chunk)}. "
-                "Each item in your list MUST be the translation of the corresponding item in the input list.\n"
-                "DO NOT merge, add, or omit lines. DO NOT add any explanations. "
-                "There are two types of special syntax:\n"
-                "1.  **Variables** like `$variable$`, `[Concept('key', '$concept_name$')]`, `[SCOPE.some.Function]`. You MUST preserve these variables completely. DO NOT translate any text inside them.\n"
-                "2.  **Formatting Tags** like `#R ... #!`, `§Y...§!`. You MUST preserve the tags themselves (e.g., `#R`, `#!`), but you SHOULD translate the plain text that is inside them.\n\n"
-                "3.  **Icon Tags** like `@prestige!`, `£minerals£`. These are variables. You MUST preserve them completely. DO NOT translate any text inside them.\n\n"
-                "4.  **Internal Keys** like `mm_strategic_region` or `com_topbar_interests`. These are strings that often contain underscores and no spaces. They are code references and MUST NOT be translated. Preserve them completely.\n\n"
-                "Preserve all internal newlines (\\n).\n\n"
-                + (f"PUNCTUATION CONVERSION:\n{punctuation_prompt}\n\n" if punctuation_prompt else "")
-                + "--- INPUT LIST ---\n"
-                f"{numbered_list}\n"
-                "--- END OF INPUT LIST ---"
-            )
-            prompt = base_prompt + context_prompt_part + glossary_prompt_part + format_prompt_part
+            # 优先使用游戏特定的format_prompt，如果没有则使用保底选项
+            if "format_prompt" in game_profile:
+                format_prompt_part = game_profile["format_prompt"].format(
+                    chunk_size=len(chunk),
+                    numbered_list=numbered_list
+                )
+            else:
+                # 导入保底选项
+                from scripts.config import FALLBACK_FORMAT_PROMPT
+                format_prompt_part = FALLBACK_FORMAT_PROMPT.format(
+                    chunk_size=len(chunk),
+                    numbered_list=numbered_list
+                )
+            
+            # 构建punctuation_prompt_part
+            punctuation_prompt_part = f"\nPUNCTUATION CONVERSION:\n{punctuation_prompt}\n" if punctuation_prompt else ""
+            
+            prompt = base_prompt + context_prompt_part + glossary_prompt_part + format_prompt_part + punctuation_prompt_part
 
             model_name = API_PROVIDERS["openai"]["default_model"]
             response = client.chat.completions.create(
