@@ -29,6 +29,9 @@ def clean_punctuation_core(text: str, source_lang: str, target_lang: str = None)
     
     这个函数负责执行实际的标点符号替换操作，是唯一真正做清理工作的函数
     
+    重要：只替换源语言的标点符号，英文标点符号绝对不能替换
+    这样可以保护游戏格式语法，如 [Root.GetName], $variable$, §Ytext§! 等
+    
     Args:
         text: 要清理的文本
         source_lang: 源语言代码
@@ -56,9 +59,13 @@ def clean_punctuation_core(text: str, source_lang: str, target_lang: str = None)
         # 使用默认的英文标点映射
         mapping = source_punctuation
     
-    # 执行替换
+    # 执行替换 - 只替换源语言标点，绝对不替换英文标点
+    # 这样可以保护游戏格式语法，如 [Root.GetName], $variable$, §Ytext§! 等
     cleaned_text = text
     for source_punct, target_punct in mapping.items():
+        # 重要：只替换源语言标点，不替换英文标点
+        # 例如：中文的"，。！？：；（）【】《》" 变成英文的 ",.!?:;()[]<>"
+        # 但是英文的 "[Root.GetName]", "$variable$", "§Ytext§!" 保持不变
         cleaned_text = cleaned_text.replace(source_punct, target_punct)
     
     return cleaned_text
@@ -276,6 +283,43 @@ if __name__ == "__main__":
     print(f"统计信息: {stats}")
     print()
     
+    # 4. 测试英文格式语法保护
+    print("=== 测试英文格式语法保护 ===")
+    test_text_with_formats = "这是一个测试：[Root.GetName] 和 $variable$ 还有 §Ytext§! 以及 (important)"
+    print("包含游戏格式语法的测试文本:")
+    print(test_text_with_formats)
+    
+    # 清理中文标点，但保护英文格式
+    cleaned_formats, format_stats = clean_text_with_analysis(test_text_with_formats, source_lang, target_lang)
+    print("清理后（英文格式应该被保护）:")
+    print(cleaned_formats)
+    print(f"格式保护统计: {format_stats}")
+    print()
+    
+    # 5. 测试英文标点完全不被处理
+    print("=== 测试英文标点完全不被处理 ===")
+    test_english_punctuation = "Hello, world! This is a test: [Root.GetName] and $variable$ with §Ytext§!"
+    print("包含英文标点的测试文本:")
+    print(test_english_punctuation)
+    
+    # 尝试清理英文标点（应该完全跳过）
+    cleaned_english, english_stats = clean_text_with_analysis(test_english_punctuation, source_lang, target_lang)
+    print("清理后（英文标点应该完全不被处理）:")
+    print(cleaned_english)
+    print(f"英文标点处理统计: {english_stats}")
+    print()
+    
+    # 6. 验证源语言标点映射
+    print("=== 验证源语言标点映射 ===")
+    source_punct = get_source_language_punctuation(source_lang)
+    print(f"源语言 {source_lang} 的标点符号映射:")
+    for zh_punct, en_punct in list(source_punct.items())[:5]:  # 只显示前5个
+        print(f"  {zh_punct} → {en_punct}")
+    print(f"  总共 {len(source_punct)} 个源语言标点符号")
+    print()
+    print("注意：英文标点符号（如 [, ], $, §, ! 等）根本不在这个映射中，所以不会被处理！")
+    print()
+    
     print("=== 函数职责说明 ===")
     print("1. clean_punctuation_core: 核心清理函数，唯一的'工人'，负责执行替换")
     print("2. analyze_punctuation: 分析函数，纯粹的'分析师'，只分析不修改")
@@ -291,3 +335,4 @@ if __name__ == "__main__":
     print("✓ 每个函数职责单一，遵循单一职责原则")
     print("✓ 清晰的调用层次，易于理解和维护")
     print("✓ 向后兼容，不破坏现有代码")
+    print("✓ 保护英文格式语法，不会破坏游戏格式")

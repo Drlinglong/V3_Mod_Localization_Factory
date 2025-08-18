@@ -112,6 +112,7 @@
 #### **国际化与工作流管理**
 * **双语用户界面 (i18n)**: 脚本自身的命令行交互界面，支持中英双语切换。
 * **智能校对进度追踪**: 自动生成CSV格式的校对进度表，支持中英文界面，帮助汉化者追踪和管理校对工作。
+* **后处理格式验证**: 翻译完成后自动运行格式验证，检测语法错误、格式问题和标签配对，生成详细的验证报告。
 * **安全回退机制**: 当API调用失败时，会自动创建一份保留原文的备用文件，以保证Mod在游戏中的完整性。
 * **可选的源目录清理**: 在所有操作成功后，提供可选的清理功能，并根据游戏档案精确地保留必要文件。
 
@@ -123,25 +124,44 @@
 
 ```
 scripts/
-├── main.py                 # 【总启动器】唯一的程序入口
-├── config.py               # 【全局配置】存放语言数据库、API设置等
+├── main.py                           # 【总启动器】唯一的程序入口
+├── config.py                         # 【全局配置】存放语言数据库、API设置等
+├── emergency_fix_chinese_punctuation.py # 【紧急修复】中文标点符号修复脚本
 │
-├── core/                   # 【核心引擎】可复用的底层功能模块
-│   ├── glossary_manager.py # 【词典管理器】游戏专用术语词典加载与管理
-│   ├── openai_handler.py   # 【OpenAI处理器】OpenAI API翻译接口
-│   ├── gemini_handler.py   # 【Gemini处理器】Google Gemini API翻译接口
-│   ├── qwen_handler.py     # 【Qwen处理器】阿里云通义千问API翻译接口
-│   ├── file_parser.py      # 【文件解析器】解析P社特有的.yml格式
-│   ├── file_builder.py     # 【文件构建器】重建本地化文件
-│   ├── directory_handler.py # 【目录处理器】处理文件夹结构
-│   ├── asset_handler.py    # 【资源处理器】处理元数据和资源文件
-│   └── proofreading_tracker.py # 【校对追踪器】生成校对进度表
+├── core/                             # 【核心引擎】可复用的底层功能模块
+│   ├── api_handler.py                # 【API处理器工厂】统一管理不同AI服务接口
+│   ├── openai_handler.py             # 【OpenAI处理器】OpenAI API翻译接口
+│   ├── gemini_handler.py             # 【Gemini处理器】Google Gemini API翻译接口
+│   ├── qwen_handler.py               # 【Qwen处理器】阿里云通义千问API翻译接口
+│   ├── glossary_manager.py           # 【词典管理器】游戏专用术语词典加载与管理
+│   ├── file_parser.py                # 【文件解析器】解析P社特有的.yml格式
+│   ├── file_builder.py               # 【文件构建器】重建本地化文件
+│   ├── directory_handler.py          # 【目录处理器】处理文件夹结构
+│   ├── asset_handler.py              # 【资源处理器】处理元数据和资源文件
+│   ├── proofreading_tracker.py       # 【校对追踪器】生成校对进度表
+│   ├── post_processing_manager.py    # 【后处理管理器】格式验证与报告生成 ✨
+│   ├── parallel_processor.py         # 【并行处理器】多文件并发处理
+│   ├── scripted_loc_parser.py        # 【脚本化解析器】脚本驱动的本地化解析
+│   ├── loc_parser.py                 # 【本地化解析器】基础本地化文件解析
+│   └── llm/                          # 【LLM模块】大语言模型相关功能
 │
-├── workflows/              # 【工作流】具体的业务流程
-│   └── initial_translate.py
+├── workflows/                        # 【工作流】具体的业务流程
+│   ├── initial_translate.py          # 【初始翻译】主要的翻译工作流程
+│   ├── generate_workshop_desc.py     # 【工坊描述】生成创意工坊描述（待实现）
+│   ├── publish_mod.py                # 【Mod发布】发布Mod到工坊（待实现）
+│   ├── scrape_paratranz.py           # 【Paratranz爬取】从Paratranz获取数据（待实现）
+│   └── update_translate.py           # 【更新翻译】更新现有翻译（待实现）
 │
-└── utils/                  # 【辅助工具】
-    └── i18n.py            # 【国际化】多语言界面支持
+├── hooks/                            # 【钩子系统】扩展解析器功能
+│   └── file_parser_hook.py          # 【文件解析钩子】自定义文件解析逻辑
+│
+└── utils/                            # 【辅助工具】通用功能模块
+    ├── post_process_validator.py     # 【后处理验证器】游戏特定语法规则验证 ✨
+    ├── punctuation_handler.py        # 【标点符号处理器】多语言标点符号转换
+    ├── logger.py                     # 【日志工具】统一的日志记录系统
+    ├── i18n.py                      # 【国际化】多语言界面支持
+    ├── text_clean.py                # 【文本清理】文本预处理和清理
+    └── report_generator.py          # 【报告生成器】生成各种报告（待实现）
 ```
 
 ***

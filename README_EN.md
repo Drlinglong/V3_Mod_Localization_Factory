@@ -111,6 +111,7 @@ In the age of Artificial Intelligence and Large Language Models, language should
 #### **Internationalization & Workflow Management**
 * **Bilingual UI (i18n)**: The script's own command-line interface supports both English and Chinese.
 * **Intelligent Proofreading Progress Tracker**: Automatically generates a `proofreading_progress.csv` file, helping localizers track and manage their proofreading work.
+* **Post-Processing Format Validation**: Automatically runs format validation after translation, detecting syntax errors, format issues, and tag pairing, generating detailed validation reports.
 * **Safety Fallback Mechanism**: If an API call fails, a fallback file with the original text is automatically created to ensure the mod's integrity in-game.
 * **Optional Source Directory Cleanup**: After all operations are successful, provides an optional cleanup function, precisely preserving only the necessary files as defined in the game profile.
 
@@ -122,25 +123,44 @@ To ensure maintainability and scalability, the project adopts a clean, modular a
 
 ```
 scripts/
-├── main.py                 # Main entry point / launcher
-├── config.py               # Global configuration (language db, API settings, etc.)
+├── main.py                           # Main entry point / launcher
+├── config.py                         # Global configuration (language db, API settings, etc.)
+├── emergency_fix_chinese_punctuation.py # Emergency fix script for Chinese punctuation
 │
-├── core/                   # Core engine: reusable, low-level components
-│   ├── glossary_manager.py # Glossary Manager: Loads and manages game-specific glossaries
-│   ├── openai_handler.py   # OpenAI Handler: OpenAI API interface
-│   ├── gemini_handler.py   # Gemini Handler: Google Gemini API interface
-│   ├── qwen_handler.py     # Qwen Handler: Alibaba Qwen API interface
-│   ├── file_parser.py      # File Parser: Parses PDS-specific .yml format
-│   ├── file_builder.py     # File Builder: Reconstructs localization files
-│   ├── directory_handler.py # Directory Handler: Manages folder structures
-│   ├── asset_handler.py    # Asset Handler: Processes metadata and other assets
-│   └── proofreading_tracker.py # Proofreading Tracker: Generates the progress CSV
+├── core/                             # Core engine: reusable, low-level components
+│   ├── api_handler.py                # API Handler Factory: Unified management of AI service interfaces
+│   ├── openai_handler.py             # OpenAI Handler: OpenAI API interface
+│   ├── gemini_handler.py             # Gemini Handler: Google Gemini API interface
+│   ├── qwen_handler.py               # Qwen Handler: Alibaba Qwen API interface
+│   ├── glossary_manager.py           # Glossary Manager: Loads and manages game-specific glossaries
+│   ├── file_parser.py                # File Parser: Parses PDS-specific .yml format
+│   ├── file_builder.py               # File Builder: Reconstructs localization files
+│   ├── directory_handler.py          # Directory Handler: Manages folder structures
+│   ├── asset_handler.py              # Asset Handler: Processes metadata and other assets
+│   ├── proofreading_tracker.py       # Proofreading Tracker: Generates the progress CSV
+│   ├── post_processing_manager.py    # Post-Processing Manager: Format validation & report generation ✨
+│   ├── parallel_processor.py         # Parallel Processor: Multi-file concurrent processing
+│   ├── scripted_loc_parser.py        # Scripted Parser: Script-driven localization parsing
+│   ├── loc_parser.py                 # Localization Parser: Basic localization file parsing
+│   └── llm/                          # LLM Module: Large Language Model related functionality
 │
-├── workflows/              # Workflows: specific, high-level business logic
-│   └── initial_translate.py
+├── workflows/                        # Workflows: specific, high-level business logic
+│   ├── initial_translate.py          # Initial Translation: Main translation workflow
+│   ├── generate_workshop_desc.py     # Workshop Description: Generate Steam Workshop descriptions (TODO)
+│   ├── publish_mod.py                # Mod Publishing: Publish mods to workshop (TODO)
+│   ├── scrape_paratranz.py           # Paratranz Scraping: Fetch data from Paratranz (TODO)
+│   └── update_translate.py           # Update Translation: Update existing translations (TODO)
 │
-└── utils/                  # Utilities: helper modules
-    └── i18n.py            # Internationalization: Multi-language UI support
+├── hooks/                            # Hook System: Extend parser functionality
+│   └── file_parser_hook.py          # File Parser Hook: Custom file parsing logic
+│
+└── utils/                            # Utilities: helper modules
+    ├── post_process_validator.py     # Post-Processing Validator: Game-specific syntax rule validation ✨
+    ├── punctuation_handler.py        # Punctuation Handler: Multi-language punctuation conversion
+    ├── logger.py                     # Logger: Unified logging system
+    ├── i18n.py                      # Internationalization: Multi-language UI support
+    ├── text_clean.py                # Text Cleaner: Text preprocessing and cleaning
+    └── report_generator.py          # Report Generator: Generate various reports (TODO)
 ```
 
 ***

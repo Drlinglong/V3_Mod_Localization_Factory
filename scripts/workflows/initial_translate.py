@@ -241,6 +241,41 @@ def run(mod_name: str,
             logging.info(i18n.t("proofreading_board_generated_success"))
         else:
             logging.warning(i18n.t("proofreading_board_generation_failed"))
+        
+        # ───────────── 6.5. 运行后处理格式验证 ─────────────
+        try:
+            from scripts.core.post_processing_manager import PostProcessingManager
+            
+            # 构建输出文件夹路径
+            output_folder_path = os.path.join(DEST_DIR, output_folder_name)
+            
+            # 创建后处理验证管理器
+            post_processor = PostProcessingManager(game_profile, output_folder_path)
+            
+            # 运行验证
+            validation_success = post_processor.run_validation(target_lang)
+            
+            if validation_success:
+                # 获取验证统计信息
+                stats = post_processor.get_validation_stats()
+                logging.info(i18n.t("post_processing_completion_summary", 
+                                   total_files=stats['total_files'],
+                                   valid_files=stats['valid_files'],
+                                   files_with_issues=stats['files_with_issues'],
+                                   total_errors=stats['total_errors'],
+                                   total_warnings=stats['total_warnings']))
+
+                # 合并结果进校对进度表
+                post_processor.attach_results_to_proofreading_tracker(proofreading_tracker)
+                # 重新保存一次进度表，将验证结果写入 CSV 的“校对进度/备注”两列
+                proofreading_tracker.save_proofreading_progress()
+            else:
+                logging.warning("后处理验证过程中发生错误")
+                
+        except ImportError:
+            logging.warning("后处理验证模块未找到，跳过格式验证")
+        except Exception as e:
+            logging.error(f"后处理验证失败: {e}")
 
     # ───────────── 7. 处理元数据 ─────────────
     if is_batch_mode:

@@ -1,0 +1,137 @@
+2025-08-18 16:56:29,628 - INFO - Logger initialized and ready
+2025-08-18 16:56:29,629 - INFO - 
+Please select a game:
+2025-08-18 16:56:29,629 - INFO -   [1] Victoria 3 (维多利亚3)
+2025-08-18 16:56:29,629 - INFO -   [2] Stellaris (群星)
+2025-08-18 16:56:29,629 - INFO -   [3] Europa Universalis IV (欧陆风云4)
+2025-08-18 16:56:29,629 - INFO -   [4] Hearts of Iron IV (钢铁雄心4)
+2025-08-18 16:56:29,629 - INFO -   [5] Crusader Kings III (十字军之王3)
+2025-08-18 16:56:30,780 - INFO - Please select an API provider:
+2025-08-18 16:56:30,780 - INFO -   [1] Gemini
+2025-08-18 16:56:30,780 - INFO -   [2] Openai
+2025-08-18 16:56:30,780 - INFO -   [3] Qwen - (Recommended for users in Mainland China)
+2025-08-18 16:56:31,704 - INFO - Please select the Mod to localize:
+2025-08-18 16:56:31,704 - INFO -   [1] Australia & New Zealand Flavor Pack
+2025-08-18 16:56:31,704 - INFO -   [2] Blue Archive
+2025-08-18 16:56:31,704 - INFO -   [3] Blue Archive - test
+2025-08-18 16:56:31,704 - INFO -   [4] Forts & Engineers
+2025-08-18 16:56:31,704 - INFO -   [5] GORA UI
+2025-08-18 16:56:31,704 - INFO -   [6] Hydra's More Agenda's
+2025-08-18 16:56:31,704 - INFO -   [7] KuatAncientEmpire
+2025-08-18 16:56:31,704 - INFO -   [8] MODJAM2025
+2025-08-18 16:56:31,704 - INFO -   [9] Offer Convoy Contribution
+2025-08-18 16:56:31,704 - INFO -   [10] parallelprocessor-test
+2025-08-18 16:56:31,704 - INFO -   [11] Project Utopia - Extended Timeline - Technical Preview
+2025-08-18 16:56:31,704 - INFO -   [12] Tech & Res
+2025-08-18 16:56:31,704 - INFO -   [13] TEST-ANZAC
+2025-08-18 16:56:31,704 - INFO -   [14] UKrework
+2025-08-18 16:56:33,163 - INFO - 
+You have selected: Offer Convoy Contribution
+2025-08-18 16:56:33,163 - INFO - Do you want to clean up the source MOD folder 'Offer Convoy Contribution' to save disk space?
+This will delete all files except '.metadata', 'localization', and 'thumbnail.png'.
+Please enter Y or N: 
+2025-08-18 16:56:35,441 - INFO - Source file cleanup confirmed
+2025-08-18 16:56:35,441 - INFO - 
+--- Getting Mod thematic context ---
+2025-08-18 16:56:35,441 - INFO - Identified Mod Name: 'Offer Convoy Contribution'
+2025-08-18 16:56:39,578 - INFO - Final thematic context used: 'Offer Convoy Contribution'
+2025-08-18 16:56:39,578 - INFO - 
+Please select the source language:
+2025-08-18 16:56:39,578 - INFO -   [1] English
+2025-08-18 16:56:39,578 - INFO -   [2] 简体中文
+2025-08-18 16:56:39,578 - INFO -   [3] Français
+2025-08-18 16:56:39,579 - INFO -   [4] Deutsch
+2025-08-18 16:56:39,579 - INFO -   [5] Español
+2025-08-18 16:56:39,579 - INFO -   [6] 日本語
+2025-08-18 16:56:39,579 - INFO -   [7] 한국어
+2025-08-18 16:56:39,579 - INFO -   [8] Polski
+2025-08-18 16:56:39,579 - INFO -   [9] Português do Brasil
+2025-08-18 16:56:39,579 - INFO -   [10] Русский
+2025-08-18 16:56:39,579 - INFO -   [11] Türkçe
+2025-08-18 16:56:41,173 - INFO - 
+Please select the target language(s):
+2025-08-18 16:56:41,173 - INFO -   [0] Translate to all other 10 languages
+2025-08-18 16:56:41,173 - INFO -   [c] Custom / Disguise Other Language...
+2025-08-18 16:56:41,173 - INFO -   [1] 简体中文
+2025-08-18 16:56:41,173 - INFO -   [2] Français
+2025-08-18 16:56:41,173 - INFO -   [3] Deutsch
+2025-08-18 16:56:41,173 - INFO -   [4] Español
+2025-08-18 16:56:41,174 - INFO -   [5] 日本語
+2025-08-18 16:56:41,174 - INFO -   [6] 한국어
+2025-08-18 16:56:41,174 - INFO -   [7] Polski
+2025-08-18 16:56:41,174 - INFO -   [8] Português do Brasil
+2025-08-18 16:56:41,174 - INFO -   [9] Русский
+2025-08-18 16:56:41,174 - INFO -   [10] Türkçe
+2025-08-18 16:56:42,194 - INFO - Glossary loaded successfully: 743 entries
+2025-08-18 16:56:42,194 - INFO - No auxiliary glossaries found
+2025-08-18 16:56:42,194 - INFO - Please select fuzzy matching mode:
+2025-08-18 16:56:42,194 - INFO - [1] Strict Mode - No fuzzy matching 
+2025-08-18 16:56:42,194 - INFO - [2] Loose Mode - Enable fuzzy matching (tolerates spelling errors)
+2025-08-18 16:56:42,194 - INFO - If you don't know what this is, we recommend enabling fuzzy matching
+2025-08-18 16:56:45,240 - INFO - === Project Overview ===
+2025-08-18 16:56:45,240 - INFO - Target MOD: Offer Convoy Contribution
+2025-08-18 16:56:45,240 - INFO - API Provider: Gemini
+2025-08-18 16:56:45,240 - INFO - Game Type: Victoria 3 (维多利亚3)
+2025-08-18 16:56:45,240 - INFO - Source Language: English
+2025-08-18 16:56:45,240 - INFO - Target Language: 简体中文
+2025-08-18 16:56:45,240 - INFO - Glossary Configuration: Main glossary only (743 entries)
+2025-08-18 16:56:45,240 - INFO - Fuzzy matching: Fuzzy matching enabled
+2025-08-18 16:56:45,240 - INFO - Clean up extra files: Will clean up source files
+2025-08-18 16:56:47,241 - WARNING - Please enter Y or N
+2025-08-18 16:56:49,315 - INFO - Translation confirmed, starting execution...
+2025-08-18 16:56:49,315 - INFO - Executing source file cleanup...
+2025-08-18 16:56:49,315 - INFO - 
+--- Starting cleanup of source Mod folder: Offer Convoy Contribution ---
+2025-08-18 16:56:49,315 - INFO - Deleting files...
+2025-08-18 16:56:49,315 - INFO - Cleanup completed!
+2025-08-18 16:56:49,315 - INFO - Source file cleanup completed
+2025-08-18 16:56:49,315 - INFO - Fuzzy matching mode set to: Loose Mode
+2025-08-18 16:56:49,315 - INFO - Glossary status: Main glossary only (743 entries)
+2025-08-18 16:56:49,315 - INFO - 
+--- Starting 'Initial Translation' workflow for: Offer Convoy Contribution ---
+2025-08-18 16:56:50,733 - INFO - Gemini client initialized successfully, using model: gemini-2.5-flash
+2025-08-18 16:56:50,733 - INFO - Glossary loaded successfully: 743 entries
+2025-08-18 16:56:50,734 - INFO - Output directory structure created successfully: J:\V3_Mod_Localization_Factory\my_translation\zh-CN-Offer Convoy Contribution
+2025-08-18 16:56:50,734 - INFO - 
+--- Processing assets (thumbnail, descriptor, etc.) ---
+2025-08-18 16:56:50,735 - INFO - Asset 'thumbnail.png' copied successfully.
+2025-08-18 16:56:50,735 - INFO - 
+--- Parsing file: source_mod\Offer Convoy Contribution\localization\english\OCC_l_english.yml ---
+2025-08-18 16:56:50,736 - INFO - Extracted 8 translatable texts.
+2025-08-18 16:56:50,736 - INFO - 
+--- Translating to: 简体中文 ---
+2025-08-18 16:56:50,736 - INFO - --- Detected 1 translation batches, starting parallel processing mode ---
+2025-08-18 16:56:51,599 - INFO - Extracted 5 relevant terms from 8 texts
+2025-08-18 16:56:51,599 - INFO - Batch 1: injected 5 glossary terms
+2025-08-18 16:56:51,600 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-18 16:56:53,028 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-18 16:56:53,029 - INFO - AFC remote call 1 is done.
+2025-08-18 16:56:53,029 - INFO - Batch 1: Thinking disabled (thinking_budget=0)
+2025-08-18 16:56:53,029 - INFO - File translation completed: OCC_l_english.yml
+2025-08-18 16:56:53,029 - INFO - All files processing completed, processed 1 files total
+2025-08-18 16:56:53,030 - INFO - File 'zh-CN-Offer Convoy Contribution\localization\simp_chinese\english\OCC_l_simp_chinese.yml' has been localized successfully.
+2025-08-18 16:56:53,030 - INFO - File build completed: OCC_l_english.yml
+2025-08-18 16:56:53,030 - INFO - Generating proofreading progress board...
+2025-08-18 16:56:53,031 - INFO - Proofreading progress table generated: J:\V3_Mod_Localization_Factory\my_translation\zh-CN-Offer Convoy Contribution\proofreading_progress.csv
+2025-08-18 16:56:53,031 - INFO - Proofreading progress board generated successfully
+2025-08-18 16:56:53,034 - INFO - 
+--- Starting Post-Processing Format Validation ---
+2025-08-18 16:56:53,034 - INFO - Validating localization syntax format for Victoria 3 (维多利亚3)...
+2025-08-18 16:56:53,034 - INFO - Scanning 1 translated files...
+2025-08-18 16:56:53,035 - INFO - ✅ All files passed format validation, no syntax issues found
+2025-08-18 16:56:53,035 - INFO - Format validation completed!
+2025-08-18 16:56:53,035 - INFO - 后处理验证完成 - 总计: 1 文件, 正常: 1, 问题: 0, 错误: 0, 警告: 0
+2025-08-18 16:56:53,036 - INFO - Proofreading progress table generated: J:\V3_Mod_Localization_Factory\my_translation\zh-CN-Offer Convoy Contribution\proofreading_progress.csv
+2025-08-18 16:56:53,036 - INFO - 
+--- Processing metadata.json ---
+2025-08-18 16:56:53,036 - INFO - Translating mod name: "Offer Convoy Contribution..."
+2025-08-18 16:56:53,073 - INFO - Extracted 1 relevant terms from 1 texts
+2025-08-18 16:56:53,073 - INFO - Single translation: injected 1 glossary terms
+2025-08-18 16:56:53,073 - INFO - AFC is enabled with max remote calls: 10.
+2025-08-18 16:56:53,622 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-18 16:56:53,623 - INFO - AFC remote call 1 is done.
+2025-08-18 16:56:53,623 - INFO - Single translation: Thinking disabled (thinking_budget=0)
+2025-08-18 16:56:53,623 - INFO - metadata.json localized successfully.
+2025-08-18 16:56:53,623 - INFO - Translation workflow completed!
+2025-08-18 16:56:53,624 - INFO - Output folder: zh-CN-Offer Convoy Contribution
+2025-08-18 16:56:53,625 - INFO - Workflow completed!
