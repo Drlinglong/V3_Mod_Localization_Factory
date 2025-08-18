@@ -64,6 +64,9 @@ class PostProcessingManager:
             self.logger.info(i18n.t("post_processing_start"))
             self.logger.info(i18n.t("post_processing_game", game_name=self.game_name))
             
+            # 输出验证级别说明
+            self._log_validation_levels_explanation()
+            
             # 扫描翻译后的文件
             translated_files = self._scan_translated_files(target_lang)
             self.total_files = len(translated_files)
@@ -143,6 +146,30 @@ class PostProcessingManager:
         
         return translated_files
     
+    def _log_validation_levels_explanation(self):
+        """输出验证级别说明，帮助用户理解不同级别的含义"""
+        self.logger.info("\n" + "="*60)
+        self.logger.info(i18n.t("validation_levels_explanation_title"))
+        self.logger.info("="*60)
+        
+        self.logger.info("\n" + i18n.t("validation_levels_error_title"))
+        self.logger.info(i18n.t("validation_levels_error_brackets"))
+        self.logger.info(i18n.t("validation_levels_error_concept"))
+        self.logger.info(i18n.t("validation_levels_error_variable"))
+        self.logger.info(i18n.t("validation_levels_error_icon"))
+        
+        self.logger.info("\n" + i18n.t("validation_levels_warning_title"))
+        self.logger.info(i18n.t("validation_levels_warning_space"))
+        self.logger.info(i18n.t("validation_levels_warning_unknown"))
+        self.logger.info(i18n.t("validation_levels_warning_unpaired"))
+        self.logger.info(i18n.t("validation_levels_warning_color"))
+        
+        self.logger.info("\n" + i18n.t("validation_levels_info_title"))
+        self.logger.info(i18n.t("validation_levels_info_tooltip"))
+        self.logger.info(i18n.t("validation_levels_info_scope"))
+        
+        self.logger.info("\n" + "="*60)
+    
     def _validate_single_file(self, file_path: str, target_lang: dict):
         """
         验证单个文件
@@ -214,10 +241,21 @@ class PostProcessingManager:
             errors = sum(1 for r in results if r.level == ValidationLevel.ERROR)
             warnings = sum(1 for r in results if r.level == ValidationLevel.WARNING)
             info = sum(1 for r in results if r.level == ValidationLevel.INFO)
-            summary_text = f"Errors: {errors}, Warnings: {warnings}, Info: {info}"
+            
+            # 添加验证级别说明到摘要中
+            level_explanation = i18n.t("validation_csv_level_explanation")
+            summary_text = f"Errors: {errors}, Warnings: {warnings}, Info: {info} | {level_explanation}"
 
             # 组装详情（多行）
             details_lines: List[str] = []
+            
+            # 在详情开头添加验证级别说明
+            details_lines.append(i18n.t("validation_csv_details_header"))
+            details_lines.append(i18n.t("validation_csv_details_error"))
+            details_lines.append(i18n.t("validation_csv_details_warning"))
+            details_lines.append(i18n.t("validation_csv_details_info"))
+            details_lines.append("-" * 40)
+            
             for r in results:
                 level_text = r.level.value.upper()
                 line_num = r.line_number if r.line_number is not None else "-"
