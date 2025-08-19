@@ -10,28 +10,31 @@
 
 ## 📚 Documentation Navigation
 
+### 🌍 Choose Language
+- [📚 中文文档](docs/zh/README.md) - View all Chinese documentation
+- [📚 English Documentation](docs/en/README.md) - View all English documentation
+
 ### 🚀 Quick Start
-- [Quick Start Guide](docs/user-guides/quick-start-en.md) - Get started in 5 minutes
-- [Detailed Installation](docs/setup/installation-en.md) - Complete installation process
+- [Quick Start Guide](docs/en/user-guides/quick-start-en.md) - Get started in 5 minutes
+- [Detailed Installation](docs/en/setup/installation-en.md) - Complete installation process
 
 ### 📖 User Guides
-- [Beginner's Guide (Chinese)](docs/user-guides/beginner-guide-zh.md) - For Chinese users
-- [Beginner's Guide (English)](docs/user-guides/beginner-guide-en.md) - For English users
+- [Beginner's Guide (Chinese)](docs/zh/user-guides/beginner-guide-zh.md) - For Chinese users
+- [Beginner's Guide (English)](docs/en/user-guides/beginner-guide-en.md) - For English users
 
 ### 🔧 Glossary System
-- [Glossary System Overview](docs/glossary/overview.md) - Complete introduction to the glossary system
-- [Glossary Tools Guide](docs/glossary/tools-guide.md) - How to use parser.py and validator.py
-- [System Mechanism](docs/glossary/system-mechanism.md) - Technical implementation details
-- [Blue Archive Glossary](docs/glossary/blue-archive-guide.md) - Specific topic glossary usage
+- [Glossary System Overview](docs/zh/glossary/overview.md) - Complete introduction to the glossary system
+- [Glossary Tools Guide](docs/zh/glossary/tools-guide.md) - How to use parser.py and validator.py
+- [System Mechanism](docs/zh/glossary/system-mechanism.md) - Technical implementation details
+- [Blue Archive Glossary](docs/zh/glossary/blue-archive-guide.md) - Specific topic glossary usage
 
 ### 👨‍💻 Developer Documentation
-- [Project Architecture](docs/developer/architecture-en.md) - System design explanation
-- [Parallel Processing Technology](docs/developer/parallel-processing.md) - Performance optimization details
-- [Implementation Notes](docs/developer/implementation-notes.md) - Development process records
+- [Project Architecture](docs/en/developer/architecture-en.md) - System design explanation
+- [Development Notes](docs/zh/notes/) - Technical implementation records and architecture notes
 
 ### ⚙️ Configuration & Troubleshooting
-- [Configuration Guide](docs/setup/configuration.md) - Detailed configuration options
-- [Common Issues](docs/examples/troubleshooting.md) - Problem solutions
+- [Configuration Guide](docs/zh/setup/configuration.md) - Detailed configuration options
+- [Common Issues](docs/zh/examples/troubleshooting.md) - Problem solutions
 
 ---
 
