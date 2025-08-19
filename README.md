@@ -10,28 +10,31 @@
 
 ## 📚 文档导航
 
+### 🌍 选择语言 / Choose Language
+- [📚 中文文档](docs/zh/README.md) - 查看所有中文文档
+- [📚 English Documentation](docs/en/README.md) - View all English documentation
+
 ### 🚀 快速开始
-- [快速开始指南](docs/user-guides/quick-start-zh.md) - 5分钟上手
-- [详细安装步骤](docs/setup/installation-zh.md) - 完整安装流程
+- [快速开始指南](docs/zh/user-guides/quick-start-zh.md) - 5分钟上手
+- [详细安装步骤](docs/zh/setup/installation-zh.md) - 完整安装流程
 
 ### 📖 用户指南
-- [小白专用指南](docs/user-guides/beginner-guide-zh.md) - 零基础用户必读
-- [英文入门指南](docs/user-guides/beginner-guide-en.md) - English Beginner's Guide
+- [小白专用指南](docs/zh/user-guides/beginner-guide-zh.md) - 零基础用户必读
+- [英文入门指南](docs/en/user-guides/beginner-guide-en.md) - English Beginner's Guide
 
 ### 🔧 词典系统
-- [词典系统概览](docs/glossary/overview.md) - 词典系统完整介绍
-- [词典工具使用](docs/glossary/tools-guide.md) - 如何使用parser.py和validator.py
-- [系统机制说明](docs/glossary/system-mechanism.md) - 技术实现详解
-- [碧蓝档案词典](docs/glossary/blue-archive-guide.md) - 特定主题词典使用
+- [词典系统概览](docs/zh/glossary/overview.md) - 词典系统完整介绍
+- [词典工具使用](docs/zh/glossary/tools-guide.md) - 如何使用parser.py和validator.py
+- [系统机制说明](docs/zh/glossary/system-mechanism.md) - 技术实现详解
+- [碧蓝档案词典](docs/zh/glossary/blue-archive-guide.md) - 特定主题词典使用
 
 ### 👨‍💻 开发者文档
-- [项目架构](docs/developer/architecture.md) - 系统设计说明
-- [并行处理技术](docs/developer/parallel-processing.md) - 性能优化详解
-- [实现记录](docs/developer/implementation-notes.md) - 开发过程记录
+- [项目架构](docs/zh/developer/architecture.md) - 系统设计说明
+- [开发笔记](docs/zh/notes/) - 技术实现记录和架构说明
 
 ### ⚙️ 配置和故障排除
-- [配置说明](docs/setup/configuration.md) - 详细配置选项
-- [常见问题](docs/examples/troubleshooting.md) - 问题解决方案
+- [配置说明](docs/zh/setup/configuration.md) - 详细配置选项
+- [常见问题](docs/zh/examples/troubleshooting.md) - 问题解决方案
 
 ---
 
@@ -141,7 +144,7 @@ scripts/
 │   ├── proofreading_tracker.py       # 【校对追踪器】生成校对进度表
 │   ├── post_processing_manager.py    # 【后处理管理器】格式验证与报告生成 ✨
 │   ├── parallel_processor.py         # 【并行处理器】多文件并发处理
-│   ├── scripted_loc_parser.py        # 【脚本化解析器】脚本驱动的本地化解析
+│   ├── scripted_loc_parser.py        # 【脚本化解析器】脚本驱动的本地化解析（EU4）
 │   ├── loc_parser.py                 # 【本地化解析器】基础本地化文件解析
 │   └── llm/                          # 【LLM模块】大语言模型相关功能
 │
