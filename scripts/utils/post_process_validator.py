@@ -175,26 +175,26 @@ class BaseGameValidator:
         """子类可以重写这个方法来添加自定义检查逻辑"""
         return []
 
-    def _get_i18n_message(self, key: str, **kwargs) -> str:
+    def _get_i18n_message(self, message_key: str, **kwargs) -> str:
         """获取国际化消息，如果失败则返回英文"""
         try:
             if i18n and i18n._language_loaded:
-                return i18n.t(key, **kwargs)
+                return i18n.t(message_key, **kwargs)
             else:
                 # 回退到英文
-                return self._get_fallback_message(key, **kwargs)
+                return self._get_fallback_message(message_key, **kwargs)
         except:
-            return self._get_fallback_message(key, **kwargs)
+            return self._get_fallback_message(message_key, **kwargs)
     
-    def _get_fallback_message(self, key: str, **kwargs) -> str:
+    def _get_fallback_message(self, message_key: str, **kwargs) -> str:
         """获取回退消息（英文）"""
         fallback_messages = {
             "validation_vic3_simple_concept_chinese": "Non-ASCII characters found in simple `[concept]` links.",
             "validation_vic3_concept_key_chinese": "Non-ASCII characters found in the 'key' part of `[Concept('key', ...)]` function. The 'key' must be in English.",
             "validation_vic3_scope_key_chinese": "Non-ASCII characters found in the 'key' part of `[SCOPE.sType('key')]` function. The 'key' must be in English.",
             "validation_vic3_icon_key_chinese": "Non-ASCII characters found in the 'key' part of icon tag `@key!`.",
-            "validation_vic3_formatting_missing_space": "Formatting command `#{formatting_key}` is missing a required space after it.",
-            "validation_vic3_unknown_formatting": "Unknown formatting command `#{formatting_key}`.",
+            "validation_vic3_formatting_missing_space": "Formatting command `#{key}` is missing a required space after it.",
+            "validation_vic3_unknown_formatting": "Unknown formatting command `#{key}`.",
             "validation_vic3_tooltippable_chinese": "Non-ASCII characters found in the 'key' part of `#tooltippable`. The key must be in English.",
             "validation_vic3_formatting_found_at": "Found at: '{found_text}', should be followed by a space.",
             "validation_vic3_unsupported_formatting": "Victoria 3 does not support the formatting command: '{found_text}'.",
@@ -224,8 +224,8 @@ class BaseGameValidator:
             "validation_ck3_dollar_vars_chinese": "Non-ASCII characters found in dollar sign `$key$` variables.",
             "validation_ck3_icon_key_chinese": "Non-ASCII characters found in the 'key' part of icon tags `@key!`.",
             "validation_ck3_formatting_tags_mismatch": "Formatting command start tag `#key` and end marker `#!` count mismatch.",
-            "validation_ck3_formatting_missing_space": "Formatting command `#{formatting_key}` may be missing a required space after it.",
-            "validation_ck3_unknown_formatting": "Unknown formatting command `#{formatting_key}`.",
+            "validation_ck3_formatting_missing_space": "Formatting command `#{key}` may be missing a required space after it.",
+            "validation_ck3_unknown_formatting": "Unknown formatting command `#{key}`.",
             "validation_ck3_formatting_found_at": "Found at: '{found_text}'",
             "validation_ck3_unsupported_formatting": "CK3 does not support the formatting command: '{found_text}'.",
             "validation_generic_banned_chars_found": "Found banned characters '{banned_chars}' in '{match_text}'",
@@ -233,7 +233,7 @@ class BaseGameValidator:
             "validation_generic_color_tags_count": "Found {start_count} start tags, but {end_count} end markers."
         }
         
-        message = fallback_messages.get(key, f"Unknown validation message: {key}")
+        message = fallback_messages.get(message_key, f"Unknown validation message: {message_key}")
         if kwargs:
             try:
                 return message.format(**kwargs)
@@ -363,10 +363,14 @@ class Victoria3Validator(BaseGameValidator):
             'todo', 'todo_in_tooltip', 'broken',
             # 兼容此前文档中提到的其它常见键（若引擎支持）
             'r', 'white', 'default_text', 'gray',
-            'italic', 'l', 'L'
+            'italic', 'l', 'L',
+            # 实际生效但未文档化的命令（来自modder实践）
+            'bold',    # 粗体文本，实际生效
+            'v',       # 变量显示，实际生效
+            'tooltip'  # 工具提示，实际生效
         }
         # 不需要空格的命令（紧随分号等结构）
-        NO_SPACE_REQUIRED_KEYS = {'tooltippable'}
+        NO_SPACE_REQUIRED_KEYS = {'tooltippable', 'tooltip'}
         
         # 查找所有 #key 格式的起始标签
         formatting_pattern = r'#([a-zA-Z_][a-zA-Z0-9_]*)'
@@ -374,10 +378,11 @@ class Victoria3Validator(BaseGameValidator):
         
         for match in matches:
             key = match.group(1)
+            key_lower = key.lower()  # 转换为小写进行匹配
             
             # 合法命令：检查缺少空格
-            if key in VALID_FORMATTING_KEYS:
-                if key in NO_SPACE_REQUIRED_KEYS:
+            if key_lower in VALID_FORMATTING_KEYS:
+                if key_lower in NO_SPACE_REQUIRED_KEYS:
                     continue
                 next_char_pos = match.end()
                 if (
@@ -388,7 +393,7 @@ class Victoria3Validator(BaseGameValidator):
                     results.append(ValidationResult(
                         is_valid=False,
                         level=ValidationLevel.WARNING,
-                        message=self._get_i18n_message("validation_vic3_formatting_missing_space", formatting_key=key),
+                        message=self._get_i18n_message("validation_vic3_formatting_missing_space", key=key),
                         details=self._get_i18n_message("validation_vic3_formatting_found_at", found_text=match.group(0)),
                         line_number=line_number,
                         text_sample=text[:100] + "..." if len(text) > 100 else text
@@ -398,7 +403,7 @@ class Victoria3Validator(BaseGameValidator):
                 results.append(ValidationResult(
                     is_valid=False,
                     level=ValidationLevel.ERROR,
-                    message=self._get_i18n_message("validation_vic3_unknown_formatting", formatting_key=key),
+                    message=self._get_i18n_message("validation_vic3_unknown_formatting", key=key),
                     details=self._get_i18n_message("validation_vic3_unsupported_formatting", found_text=match.group(0)),
                     line_number=line_number,
                     text_sample=text[:100] + "..." if len(text) > 100 else text
@@ -797,7 +802,7 @@ class CK3Validator(BaseGameValidator):
                 results.append(ValidationResult(
                     is_valid=False,
                     level=ValidationLevel.WARNING,
-                    message=self._get_i18n_message("validation_ck3_formatting_missing_space", formatting_key=key),
+                    message=self._get_i18n_message("validation_ck3_formatting_missing_space", key=key),
                     details=self._get_i18n_message("validation_ck3_formatting_found_at", found_text=match.group(0)),
                     line_number=line_number,
                     text_sample=text[:100] + "..." if len(text) > 100 else text
@@ -807,7 +812,7 @@ class CK3Validator(BaseGameValidator):
                 results.append(ValidationResult(
                     is_valid=False,
                     level=ValidationLevel.ERROR,
-                    message=self._get_i18n_message("validation_ck3_unknown_formatting", formatting_key=key),
+                    message=self._get_i18n_message("validation_ck3_unknown_formatting", key=key),
                     details=self._get_i18n_message("validation_ck3_unsupported_formatting", found_text=match.group(0)),
                     line_number=line_number,
                     text_sample=text[:100] + "..." if len(text) > 100 else text
