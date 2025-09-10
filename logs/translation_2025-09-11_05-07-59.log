@@ -1,0 +1,2060 @@
+2025-09-11 05:07:59,214 - INFO - 日志系统初始化完成
+2025-09-11 05:07:59,215 - INFO - 
+请选择游戏:
+2025-09-11 05:07:59,215 - INFO -   [1] Victoria 3 (维多利亚3)
+2025-09-11 05:07:59,215 - INFO -   [2] Stellaris (群星)
+2025-09-11 05:07:59,215 - INFO -   [3] Europa Universalis IV (欧陆风云4)
+2025-09-11 05:07:59,215 - INFO -   [4] Hearts of Iron IV (钢铁雄心4)
+2025-09-11 05:07:59,215 - INFO -   [5] Crusader Kings III (十字军之王3)
+2025-09-11 05:08:00,678 - INFO - 请选择API供应商:
+2025-09-11 05:08:00,678 - INFO -   [1] Gemini
+2025-09-11 05:08:00,678 - INFO -   [2] Openai
+2025-09-11 05:08:00,678 - INFO -   [3] Qwen - （中国大陆地区用户请用这个）
+2025-09-11 05:08:01,877 - INFO - 请选择要汉化的Mod：
+2025-09-11 05:08:01,878 - INFO -   [1] Australia & New Zealand Flavor Pack
+2025-09-11 05:08:01,878 - INFO -   [2] Blue Archive
+2025-09-11 05:08:01,878 - INFO -   [3] Blue Archive - test
+2025-09-11 05:08:01,878 - INFO -   [4] Forts & Engineers
+2025-09-11 05:08:01,878 - INFO -   [5] GORA UI
+2025-09-11 05:08:01,878 - INFO -   [6] Hydra's More Agenda's
+2025-09-11 05:08:01,878 - INFO -   [7] KuatAncientEmpire
+2025-09-11 05:08:01,878 - INFO -   [8] MODJAM2025
+2025-09-11 05:08:01,878 - INFO -   [9] Offer Convoy Contribution
+2025-09-11 05:08:01,878 - INFO -   [10] parallelprocessor-test
+2025-09-11 05:08:01,878 - INFO -   [11] Project Utopia - Extended Timeline - Technical Preview
+2025-09-11 05:08:01,878 - INFO -   [12] Tech & Res
+2025-09-11 05:08:01,878 - INFO -   [13] TEST-ANZAC
+2025-09-11 05:08:01,878 - INFO -   [14] UKrework
+2025-09-11 05:08:03,619 - INFO - 
+你选择了: Project Utopia - Extended Timeline - Technical Preview
+2025-09-11 05:08:03,619 - INFO - 是否要清理源MOD文件夹 'Project Utopia - Extended Timeline - Technical Preview' 以节省磁盘空间？
+这将删除除 '.metadata', 'localization', 和 'thumbnail.png' 之外的所有文件。
+请输入 Y 或 N: 
+2025-09-11 05:08:06,157 - INFO - 已确认清理源文件
+2025-09-11 05:08:06,157 - INFO - 
+--- 正在获取Mod主题上下文 ---
+2025-09-11 05:08:06,158 - INFO - 已识别Mod名称为: 'Project Utopia - Extended Timeline - Technical Preview'
+2025-09-11 05:08:07,481 - INFO - 最终使用的主题上下文为: 'Project Utopia - Extended Timeline - Technical Preview'
+2025-09-11 05:08:07,481 - INFO - 
+请选择源语言:
+2025-09-11 05:08:07,481 - INFO -   [1] English
+2025-09-11 05:08:07,481 - INFO -   [2] 简体中文
+2025-09-11 05:08:07,482 - INFO -   [3] Français
+2025-09-11 05:08:07,482 - INFO -   [4] Deutsch
+2025-09-11 05:08:07,482 - INFO -   [5] Español
+2025-09-11 05:08:07,482 - INFO -   [6] 日本語
+2025-09-11 05:08:07,482 - INFO -   [7] 한국어
+2025-09-11 05:08:07,482 - INFO -   [8] Polski
+2025-09-11 05:08:07,482 - INFO -   [9] Português do Brasil
+2025-09-11 05:08:07,482 - INFO -   [10] Русский
+2025-09-11 05:08:07,482 - INFO -   [11] Türkçe
+2025-09-11 05:08:12,695 - INFO - 
+请选择目标语言:
+2025-09-11 05:08:12,695 - INFO -   [0] 翻译为其余所有10种语言
+2025-09-11 05:08:12,695 - INFO -   [c] 自定义/套壳其他语言...
+2025-09-11 05:08:12,695 - INFO -   [1] 简体中文
+2025-09-11 05:08:12,695 - INFO -   [2] Français
+2025-09-11 05:08:12,695 - INFO -   [3] Deutsch
+2025-09-11 05:08:12,695 - INFO -   [4] Español
+2025-09-11 05:08:12,695 - INFO -   [5] 日本語
+2025-09-11 05:08:12,695 - INFO -   [6] 한국어
+2025-09-11 05:08:12,695 - INFO -   [7] Polski
+2025-09-11 05:08:12,695 - INFO -   [8] Português do Brasil
+2025-09-11 05:08:12,696 - INFO -   [9] Русский
+2025-09-11 05:08:12,696 - INFO -   [10] Türkçe
+2025-09-11 05:08:14,756 - INFO - 词典加载成功: 743 条术语
+2025-09-11 05:08:14,757 - INFO - 未找到外挂词典
+2025-09-11 05:08:14,757 - INFO - 请选择术语模糊匹配模式:
+2025-09-11 05:08:14,757 - INFO - [1] 严格模式 - 禁用模糊匹配 
+2025-09-11 05:08:14,757 - INFO - [2] 宽松模式 - 启用模糊匹配 (容忍拼写错误)
+2025-09-11 05:08:14,757 - INFO - 如果你不知道这是什么，建议你打开术语模糊匹配
+2025-09-11 05:08:16,847 - INFO - === 工程总览 ===
+2025-09-11 05:08:16,847 - INFO - 目标MOD: Project Utopia - Extended Timeline - Technical Preview
+2025-09-11 05:08:16,848 - INFO - API供应商: Gemini
+2025-09-11 05:08:16,848 - INFO - 游戏类型: Victoria 3 (维多利亚3)
+2025-09-11 05:08:16,848 - INFO - 源语言: English
+2025-09-11 05:08:16,848 - INFO - 目标语言: 多语言 (10 种)
+2025-09-11 05:08:16,848 - INFO - 词典配置: 仅主词典(743条)
+2025-09-11 05:08:16,848 - INFO - 启用模糊匹配: 启用模糊匹配
+2025-09-11 05:08:16,848 - INFO - 是否清理多余文件: 将清理源文件
+2025-09-11 05:08:23,262 - INFO - 翻译已确认，开始执行...
+2025-09-11 05:08:23,262 - INFO - 正在执行源文件清理...
+2025-09-11 05:08:23,262 - INFO - 
+--- 开始精简源Mod文件夹: Project Utopia - Extended Timeline - Technical Preview ---
+2025-09-11 05:08:23,263 - INFO - 正在删除文件...
+2025-09-11 05:08:23,263 - INFO - 清理完成！
+2025-09-11 05:08:23,263 - INFO - 源文件清理完成
+2025-09-11 05:08:23,263 - INFO - 术语模糊匹配模式已设置为: 宽松模式
+2025-09-11 05:08:23,263 - INFO - 词典状态: 仅主词典(743条)
+2025-09-11 05:08:23,263 - INFO - 
+--- 启动 '首次翻译' 工作流，目标: Project Utopia - Extended Timeline - Technical Preview ---
+2025-09-11 05:08:23,756 - INFO - Gemini client initialized successfully, using model: gemini-2.5-flash
+2025-09-11 05:08:23,756 - INFO - 词典加载成功: 743 条术语
+2025-09-11 05:08:23,757 - INFO - 输出目录结构创建成功: J:\V3_Mod_Localization_Factory\my_translation\Multilanguage-Project Utopia - Extended Timeline - Technical Preview
+2025-09-11 05:08:23,757 - INFO - 
+--- 正在处理资产文件 (封面图、描述文件等) ---
+2025-09-11 05:08:23,758 - INFO - 资产文件 'thumbnail.png' 复制完成。
+2025-09-11 05:08:23,758 - INFO - 
+--- 正在解析文件: source_mod\Project Utopia - Extended Timeline - Technical Preview\localization\english\ut_l_english.yml ---
+2025-09-11 05:08:23,760 - INFO - 提取到 1045 条可翻译文本。
+2025-09-11 05:08:23,762 - INFO - 
+--- 正在翻译为: 简体中文 ---
+2025-09-11 05:08:23,762 - INFO - --- 检测到 1 个翻译批次，启动并行处理模式 ---
+2025-09-11 05:08:23,763 - INFO - --- 检测到 27 个翻译批次，启动并行处理模式 ---
+2025-09-11 05:08:29,071 - INFO - 从 40 个文本中提取到 29 个相关术语
+2025-09-11 05:08:29,071 - INFO - 批次 1: 注入 29 个词典术语
+2025-09-11 05:08:29,071 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:08:37,356 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:08:37,357 - INFO - AFC remote call 1 is done.
+2025-09-11 05:08:37,357 - INFO - 批次 1: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:08:42,579 - INFO - 从 40 个文本中提取到 37 个相关术语
+2025-09-11 05:08:42,580 - INFO - 批次 2: 注入 37 个词典术语
+2025-09-11 05:08:42,580 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:08:49,308 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:08:49,315 - INFO - AFC remote call 1 is done.
+2025-09-11 05:08:49,315 - INFO - 批次 2: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:08:52,874 - INFO - 从 40 个文本中提取到 22 个相关术语
+2025-09-11 05:08:52,874 - INFO - 批次 3: 注入 22 个词典术语
+2025-09-11 05:08:52,874 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:08:56,999 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:08:57,001 - INFO - AFC remote call 1 is done.
+2025-09-11 05:08:57,001 - INFO - 批次 3: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:09:00,414 - INFO - 从 40 个文本中提取到 19 个相关术语
+2025-09-11 05:09:00,414 - INFO - 批次 4: 注入 19 个词典术语
+2025-09-11 05:09:00,414 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:09:06,599 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:09:06,600 - INFO - AFC remote call 1 is done.
+2025-09-11 05:09:06,600 - INFO - 批次 4: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:09:08,906 - INFO - 从 40 个文本中提取到 16 个相关术语
+2025-09-11 05:09:08,906 - INFO - 批次 5: 注入 16 个词典术语
+2025-09-11 05:09:08,906 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:09:13,444 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:09:13,445 - INFO - AFC remote call 1 is done.
+2025-09-11 05:09:13,445 - INFO - 批次 5: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:09:16,481 - INFO - 从 40 个文本中提取到 13 个相关术语
+2025-09-11 05:09:16,481 - INFO - 批次 6: 注入 13 个词典术语
+2025-09-11 05:09:16,481 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:09:22,274 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:09:22,276 - INFO - AFC remote call 1 is done.
+2025-09-11 05:09:22,276 - INFO - 批次 6: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:09:26,869 - INFO - 从 40 个文本中提取到 31 个相关术语
+2025-09-11 05:09:26,870 - INFO - 批次 7: 注入 31 个词典术语
+2025-09-11 05:09:26,870 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:09:34,378 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:09:34,380 - INFO - AFC remote call 1 is done.
+2025-09-11 05:09:34,380 - INFO - 批次 7: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:09:39,147 - INFO - 从 40 个文本中提取到 20 个相关术语
+2025-09-11 05:09:39,147 - INFO - 批次 8: 注入 20 个词典术语
+2025-09-11 05:09:39,148 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:09:47,974 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:09:47,975 - INFO - AFC remote call 1 is done.
+2025-09-11 05:09:47,975 - INFO - 批次 8: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:09:51,038 - INFO - 从 40 个文本中提取到 13 个相关术语
+2025-09-11 05:09:51,038 - INFO - 批次 9: 注入 13 个词典术语
+2025-09-11 05:09:51,038 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:09:57,369 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:09:57,370 - INFO - AFC remote call 1 is done.
+2025-09-11 05:09:57,370 - INFO - 批次 9: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:10:00,246 - INFO - 从 40 个文本中提取到 17 个相关术语
+2025-09-11 05:10:00,246 - INFO - 批次 10: 注入 17 个词典术语
+2025-09-11 05:10:00,246 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:10:04,454 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:10:04,455 - INFO - AFC remote call 1 is done.
+2025-09-11 05:10:04,455 - INFO - 批次 10: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:10:07,110 - INFO - 从 40 个文本中提取到 20 个相关术语
+2025-09-11 05:10:07,110 - INFO - 批次 11: 注入 20 个词典术语
+2025-09-11 05:10:07,110 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:10:11,413 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:10:11,414 - INFO - AFC remote call 1 is done.
+2025-09-11 05:10:11,414 - INFO - 批次 11: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:10:13,850 - INFO - 从 40 个文本中提取到 15 个相关术语
+2025-09-11 05:10:13,850 - INFO - 批次 12: 注入 15 个词典术语
+2025-09-11 05:10:13,850 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:10:17,385 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:10:17,386 - INFO - AFC remote call 1 is done.
+2025-09-11 05:10:17,386 - INFO - 批次 12: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:10:19,567 - INFO - 从 40 个文本中提取到 15 个相关术语
+2025-09-11 05:10:19,567 - INFO - 批次 13: 注入 15 个词典术语
+2025-09-11 05:10:19,567 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:10:23,449 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:10:23,450 - INFO - AFC remote call 1 is done.
+2025-09-11 05:10:23,450 - INFO - 批次 13: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:10:25,999 - INFO - 从 40 个文本中提取到 11 个相关术语
+2025-09-11 05:10:25,999 - INFO - 批次 14: 注入 11 个词典术语
+2025-09-11 05:10:25,999 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:10:30,306 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:10:30,308 - INFO - AFC remote call 1 is done.
+2025-09-11 05:10:30,308 - INFO - 批次 14: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:10:33,588 - INFO - 从 40 个文本中提取到 29 个相关术语
+2025-09-11 05:10:33,588 - INFO - 批次 15: 注入 29 个词典术语
+2025-09-11 05:10:33,588 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:10:39,865 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:10:39,869 - INFO - AFC remote call 1 is done.
+2025-09-11 05:10:39,870 - INFO - 批次 15: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:10:42,896 - INFO - 从 40 个文本中提取到 32 个相关术语
+2025-09-11 05:10:42,896 - INFO - 批次 16: 注入 32 个词典术语
+2025-09-11 05:10:42,896 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:10:48,247 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:10:48,249 - INFO - AFC remote call 1 is done.
+2025-09-11 05:10:48,249 - INFO - 批次 16: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:10:51,264 - INFO - 从 40 个文本中提取到 16 个相关术语
+2025-09-11 05:10:51,265 - INFO - 批次 17: 注入 16 个词典术语
+2025-09-11 05:10:51,265 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:10:56,031 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:10:56,033 - INFO - AFC remote call 1 is done.
+2025-09-11 05:10:56,033 - INFO - 批次 17: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:10:59,352 - INFO - 从 40 个文本中提取到 21 个相关术语
+2025-09-11 05:10:59,352 - INFO - 批次 18: 注入 21 个词典术语
+2025-09-11 05:10:59,352 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:11:04,110 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:11:04,111 - INFO - AFC remote call 1 is done.
+2025-09-11 05:11:04,111 - INFO - 批次 18: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:11:07,794 - INFO - 从 40 个文本中提取到 26 个相关术语
+2025-09-11 05:11:07,795 - INFO - 批次 19: 注入 26 个词典术语
+2025-09-11 05:11:07,795 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:11:12,870 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:11:12,870 - INFO - AFC remote call 1 is done.
+2025-09-11 05:11:12,871 - INFO - 批次 19: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:11:16,133 - INFO - 从 40 个文本中提取到 27 个相关术语
+2025-09-11 05:11:16,133 - INFO - 批次 20: 注入 27 个词典术语
+2025-09-11 05:11:16,133 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:11:20,373 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:11:20,375 - INFO - AFC remote call 1 is done.
+2025-09-11 05:11:20,375 - INFO - 批次 20: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:11:21,031 - INFO - 从 40 个文本中提取到 3 个相关术语
+2025-09-11 05:11:21,031 - INFO - 批次 21: 注入 3 个词典术语
+2025-09-11 05:11:21,031 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:11:22,954 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:11:22,955 - INFO - AFC remote call 1 is done.
+2025-09-11 05:11:22,955 - INFO - 批次 21: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:11:23,813 - INFO - 从 40 个文本中提取到 2 个相关术语
+2025-09-11 05:11:23,813 - INFO - 批次 22: 注入 2 个词典术语
+2025-09-11 05:11:23,813 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:11:26,033 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:11:26,034 - INFO - AFC remote call 1 is done.
+2025-09-11 05:11:26,034 - INFO - 批次 22: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:11:26,752 - INFO - 从 40 个文本中提取到 4 个相关术语
+2025-09-11 05:11:26,753 - INFO - 批次 23: 注入 4 个词典术语
+2025-09-11 05:11:26,753 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:11:28,928 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:11:28,929 - INFO - AFC remote call 1 is done.
+2025-09-11 05:11:28,929 - INFO - 批次 23: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:11:29,803 - INFO - 从 40 个文本中提取到 7 个相关术语
+2025-09-11 05:11:29,803 - INFO - 批次 24: 注入 7 个词典术语
+2025-09-11 05:11:29,803 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:11:31,899 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:11:31,901 - INFO - AFC remote call 1 is done.
+2025-09-11 05:11:31,901 - INFO - 批次 24: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:11:33,441 - INFO - 从 40 个文本中提取到 8 个相关术语
+2025-09-11 05:11:33,441 - INFO - 批次 25: 注入 8 个词典术语
+2025-09-11 05:11:33,441 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:11:36,570 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:11:36,571 - INFO - AFC remote call 1 is done.
+2025-09-11 05:11:36,571 - INFO - 批次 25: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:11:39,061 - INFO - 从 40 个文本中提取到 15 个相关术语
+2025-09-11 05:11:39,061 - INFO - 批次 26: 注入 15 个词典术语
+2025-09-11 05:11:39,061 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:11:43,275 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:11:43,276 - INFO - AFC remote call 1 is done.
+2025-09-11 05:11:43,276 - INFO - 批次 26: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:11:43,435 - INFO - 从 5 个文本中提取到 2 个相关术语
+2025-09-11 05:11:43,435 - INFO - 批次 27: 注入 2 个词典术语
+2025-09-11 05:11:43,435 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:11:44,225 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:11:44,227 - INFO - AFC remote call 1 is done.
+2025-09-11 05:11:44,227 - INFO - 批次 27: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:11:44,227 - INFO - --- 所有批次并行处理完毕 ---
+2025-09-11 05:11:44,227 - INFO - 文件翻译完成: ut_l_english.yml
+2025-09-11 05:11:44,227 - INFO - 所有文件处理完成，共处理 1 个文件
+2025-09-11 05:11:44,230 - INFO - 文件 'Multilanguage-Project Utopia - Extended Timeline - Technical Preview\localization\simp_chinese\english\ut_l_simp_chinese.yml' 汉化完成。
+2025-09-11 05:11:44,230 - INFO - 文件构建完成: ut_l_english.yml
+2025-09-11 05:11:44,230 - INFO - 正在生成校对进度看板...
+2025-09-11 05:11:44,230 - INFO - 校对进度表格已生成: J:\V3_Mod_Localization_Factory\my_translation\Multilanguage-Project Utopia - Extended Timeline - Technical Preview\校对进度表.csv
+2025-09-11 05:11:44,231 - INFO - 校对进度看板生成成功
+2025-09-11 05:11:44,234 - INFO - 
+--- 启动后处理格式验证 ---
+2025-09-11 05:11:44,234 - INFO - 正在按照 Victoria 3 (维多利亚3) 的本地化语法格式进行检查...
+2025-09-11 05:11:44,234 - INFO - 
+============================================================
+2025-09-11 05:11:44,234 - INFO - 📊 验证级别说明
+2025-09-11 05:11:44,234 - INFO - ============================================================
+2025-09-11 05:11:44,234 - INFO - 
+🔴 ERROR (错误) - 最高级别，必须修复：
+2025-09-11 05:11:44,234 - INFO -    • 方括号内包含中文: [中文函数] → 游戏崩溃
+2025-09-11 05:11:44,234 - INFO -    • 概念键包含中文: [Concept('中文key', ...)] → 无法识别
+2025-09-11 05:11:44,234 - INFO -    • 变量名包含中文: $中文变量$ → 显示异常
+2025-09-11 05:11:44,234 - INFO -    • 图标标签包含中文: @中文图标! → 无法加载
+2025-09-11 05:11:44,234 - INFO - 
+🟡 WARNING (警告) - 中等级别，建议修复：
+2025-09-11 05:11:44,234 - INFO -    • 格式化命令缺少空格: #b粗体文本#! → 应该 #b 粗体文本#!
+2025-09-11 05:11:44,234 - INFO -    • 未知格式化命令: #bold → 应该是 #b
+2025-09-11 05:11:44,234 - INFO -    • 标签不成对: #R 红色文本 → 缺少 #!
+2025-09-11 05:11:44,234 - INFO -    • 颜色标签不匹配: §R 红色 §Y 黄色 → 没有 §!
+2025-09-11 05:11:44,234 - INFO - 
+🔵 INFO (信息) - 最低级别，建议检查：
+2025-09-11 05:11:44,235 - INFO -    • 复杂提示框结构中的中文
+2025-09-11 05:11:44,235 - INFO -    • 作用域格式化中的中文
+2025-09-11 05:11:44,235 - INFO - 
+============================================================
+2025-09-11 05:11:44,235 - INFO - 正在扫描 1 个翻译文件...
+2025-09-11 05:11:44,248 - ERROR - [Victoria 3] Unknown formatting command `#Y`.
+2025-09-11 05:11:44,248 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#Y'。
+2025-09-11 05:11:44,248 - WARNING - [Victoria 3] Formatting command `#L` is missing a required space after it.
+2025-09-11 05:11:44,248 - WARNING - 详细信息: 发现于: '#L'，后面应该跟一个空格。
+2025-09-11 05:11:44,249 - WARNING - [Victoria 3] Formatting command `#BOLD` is missing a required space after it.
+2025-09-11 05:11:44,249 - WARNING - 详细信息: 发现于: '#BOLD'，后面应该跟一个空格。
+2025-09-11 05:11:44,249 - WARNING - [Victoria 3] Formatting command `#L` is missing a required space after it.
+2025-09-11 05:11:44,249 - WARNING - 详细信息: 发现于: '#L'，后面应该跟一个空格。
+2025-09-11 05:11:44,249 - WARNING - [Victoria 3] Formatting command `#L` is missing a required space after it.
+2025-09-11 05:11:44,249 - WARNING - 详细信息: 发现于: '#L'，后面应该跟一个空格。
+2025-09-11 05:11:44,249 - WARNING - [Victoria 3] Formatting command `#L` is missing a required space after it.
+2025-09-11 05:11:44,249 - WARNING - 详细信息: 发现于: '#L'，后面应该跟一个空格。
+2025-09-11 05:11:44,249 - WARNING - [Victoria 3] Formatting command `#L` is missing a required space after it.
+2025-09-11 05:11:44,249 - WARNING - 详细信息: 发现于: '#L'，后面应该跟一个空格。
+2025-09-11 05:11:44,249 - WARNING - [Victoria 3] Formatting command `#L` is missing a required space after it.
+2025-09-11 05:11:44,249 - WARNING - 详细信息: 发现于: '#L'，后面应该跟一个空格。
+2025-09-11 05:11:44,250 - WARNING - [Victoria 3] Formatting command `#italic` is missing a required space after it.
+2025-09-11 05:11:44,250 - WARNING - 详细信息: 发现于: '#italic'，后面应该跟一个空格。
+2025-09-11 05:11:44,251 - WARNING - [Victoria 3] Formatting command `#italic` is missing a required space after it.
+2025-09-11 05:11:44,251 - WARNING - 详细信息: 发现于: '#italic'，后面应该跟一个空格。
+2025-09-11 05:11:44,251 - WARNING - [Victoria 3] Formatting command `#italic` is missing a required space after it.
+2025-09-11 05:11:44,251 - WARNING - 详细信息: 发现于: '#italic'，后面应该跟一个空格。
+2025-09-11 05:11:44,251 - WARNING - [Victoria 3] Formatting command `#italic` is missing a required space after it.
+2025-09-11 05:11:44,251 - WARNING - 详细信息: 发现于: '#italic'，后面应该跟一个空格。
+2025-09-11 05:11:44,251 - WARNING - [Victoria 3] Formatting command `#italic` is missing a required space after it.
+2025-09-11 05:11:44,251 - WARNING - 详细信息: 发现于: '#italic'，后面应该跟一个空格。
+2025-09-11 05:11:44,251 - WARNING - [Victoria 3] Formatting command `#italic` is missing a required space after it.
+2025-09-11 05:11:44,251 - WARNING - 详细信息: 发现于: '#italic'，后面应该跟一个空格。
+2025-09-11 05:11:44,254 - ERROR - [Victoria 3] Unknown formatting command `#tooltip`.
+2025-09-11 05:11:44,254 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#tooltip'。
+2025-09-11 05:11:44,254 - ERROR - [Victoria 3] Unknown formatting command `#tooltip`.
+2025-09-11 05:11:44,254 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#tooltip'。
+2025-09-11 05:11:44,259 - INFO - 初步筛查验证结果：0 个文件结构完好，1 个文件结构异常
+2025-09-11 05:11:44,259 - INFO - ⚠️ 发现格式问题，建议手动检查：
+2025-09-11 05:11:44,259 - INFO - 文件 1: ut_l_simp_chinese.yml (第 148 行)
+2025-09-11 05:11:44,259 - INFO -   - ERROR: Unknown formatting command `#Y`. - Victoria 3 不支持的格式化命令: '#Y'。
+2025-09-11 05:11:44,259 - INFO - 文件 1: ut_l_simp_chinese.yml (第 180 行)
+2025-09-11 05:11:44,259 - INFO -   - WARNING: Formatting command `#L` is missing a required space after it. - 发现于: '#L'，后面应该跟一个空格。
+2025-09-11 05:11:44,259 - INFO - 文件 1: ut_l_simp_chinese.yml (第 187 行)
+2025-09-11 05:11:44,259 - INFO -   - WARNING: Formatting command `#BOLD` is missing a required space after it. - 发现于: '#BOLD'，后面应该跟一个空格。
+2025-09-11 05:11:44,259 - INFO -   - WARNING: Formatting command `#L` is missing a required space after it. - 发现于: '#L'，后面应该跟一个空格。
+2025-09-11 05:11:44,259 - INFO - 文件 1: ut_l_simp_chinese.yml (第 188 行)
+2025-09-11 05:11:44,259 - INFO -   - WARNING: Formatting command `#L` is missing a required space after it. - 发现于: '#L'，后面应该跟一个空格。
+2025-09-11 05:11:44,259 - INFO - 文件 1: ut_l_simp_chinese.yml (第 191 行)
+2025-09-11 05:11:44,260 - INFO -   - WARNING: Formatting command `#L` is missing a required space after it. - 发现于: '#L'，后面应该跟一个空格。
+2025-09-11 05:11:44,260 - INFO - 文件 1: ut_l_simp_chinese.yml (第 192 行)
+2025-09-11 05:11:44,260 - INFO -   - WARNING: Formatting command `#L` is missing a required space after it. - 发现于: '#L'，后面应该跟一个空格。
+2025-09-11 05:11:44,260 - INFO - 文件 1: ut_l_simp_chinese.yml (第 194 行)
+2025-09-11 05:11:44,260 - INFO -   - WARNING: Formatting command `#L` is missing a required space after it. - 发现于: '#L'，后面应该跟一个空格。
+2025-09-11 05:11:44,260 - INFO - 文件 1: ut_l_simp_chinese.yml (第 331 行)
+2025-09-11 05:11:44,260 - INFO -   - WARNING: Formatting command `#italic` is missing a required space after it. - 发现于: '#italic'，后面应该跟一个空格。
+2025-09-11 05:11:44,260 - INFO - 文件 1: ut_l_simp_chinese.yml (第 333 行)
+2025-09-11 05:11:44,260 - INFO -   - WARNING: Formatting command `#italic` is missing a required space after it. - 发现于: '#italic'，后面应该跟一个空格。
+2025-09-11 05:11:44,260 - INFO - 文件 1: ut_l_simp_chinese.yml (第 335 行)
+2025-09-11 05:11:44,260 - INFO -   - WARNING: Formatting command `#italic` is missing a required space after it. - 发现于: '#italic'，后面应该跟一个空格。
+2025-09-11 05:11:44,260 - INFO - 文件 1: ut_l_simp_chinese.yml (第 337 行)
+2025-09-11 05:11:44,260 - INFO -   - WARNING: Formatting command `#italic` is missing a required space after it. - 发现于: '#italic'，后面应该跟一个空格。
+2025-09-11 05:11:44,260 - INFO - 文件 1: ut_l_simp_chinese.yml (第 339 行)
+2025-09-11 05:11:44,260 - INFO -   - WARNING: Formatting command `#italic` is missing a required space after it. - 发现于: '#italic'，后面应该跟一个空格。
+2025-09-11 05:11:44,260 - INFO - 文件 1: ut_l_simp_chinese.yml (第 341 行)
+2025-09-11 05:11:44,260 - INFO -   - WARNING: Formatting command `#italic` is missing a required space after it. - 发现于: '#italic'，后面应该跟一个空格。
+2025-09-11 05:11:44,260 - INFO - 文件 1: ut_l_simp_chinese.yml (第 531 行)
+2025-09-11 05:11:44,260 - INFO -   - ERROR: Unknown formatting command `#tooltip`. - Victoria 3 不支持的格式化命令: '#tooltip'。
+2025-09-11 05:11:44,260 - INFO - 文件 1: ut_l_simp_chinese.yml (第 534 行)
+2025-09-11 05:11:44,260 - INFO -   - ERROR: Unknown formatting command `#tooltip`. - Victoria 3 不支持的格式化命令: '#tooltip'。
+2025-09-11 05:11:44,260 - INFO - 格式验证完成！
+2025-09-11 05:11:44,260 - INFO - 后处理验证完成 - 总计: 1 文件, 正常: 0, 问题: 1, 错误: 3, 警告: 13
+2025-09-11 05:11:44,261 - INFO - 校对进度表格已生成: J:\V3_Mod_Localization_Factory\my_translation\Multilanguage-Project Utopia - Extended Timeline - Technical Preview\校对进度表.csv
+2025-09-11 05:11:44,261 - INFO - 
+--- 正在翻译为: Français ---
+2025-09-11 05:11:44,261 - INFO - --- 检测到 1 个翻译批次，启动并行处理模式 ---
+2025-09-11 05:11:44,261 - INFO - --- 检测到 27 个翻译批次，启动并行处理模式 ---
+2025-09-11 05:11:44,261 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:11:44,262 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:11:51,933 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:11:51,934 - INFO - AFC remote call 1 is done.
+2025-09-11 05:11:51,934 - INFO - 批次 1: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:11:51,935 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:11:51,935 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:12:00,808 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:12:00,810 - INFO - AFC remote call 1 is done.
+2025-09-11 05:12:00,810 - INFO - 批次 2: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:12:00,811 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:12:00,811 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:12:06,077 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:12:06,079 - INFO - AFC remote call 1 is done.
+2025-09-11 05:12:06,079 - INFO - 批次 3: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:12:06,079 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:12:06,079 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:12:11,733 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:12:11,735 - INFO - AFC remote call 1 is done.
+2025-09-11 05:12:11,735 - INFO - 批次 4: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:12:11,736 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:12:11,736 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:12:16,176 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:12:16,177 - INFO - AFC remote call 1 is done.
+2025-09-11 05:12:16,177 - INFO - 批次 5: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:12:16,178 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:12:16,178 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:12:21,451 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:12:21,454 - INFO - AFC remote call 1 is done.
+2025-09-11 05:12:21,454 - INFO - 批次 6: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:12:21,454 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:12:21,454 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:12:29,090 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:12:29,091 - INFO - AFC remote call 1 is done.
+2025-09-11 05:12:29,091 - INFO - 批次 7: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:12:29,091 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:12:29,091 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:12:36,934 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:12:36,938 - INFO - AFC remote call 1 is done.
+2025-09-11 05:12:36,938 - INFO - 批次 8: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:12:36,938 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:12:36,938 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:12:42,437 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:12:42,438 - INFO - AFC remote call 1 is done.
+2025-09-11 05:12:42,438 - INFO - 批次 9: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:12:42,438 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:12:42,438 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:12:47,350 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:12:47,351 - INFO - AFC remote call 1 is done.
+2025-09-11 05:12:47,351 - INFO - 批次 10: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:12:47,351 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:12:47,351 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:12:51,760 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:12:51,762 - INFO - AFC remote call 1 is done.
+2025-09-11 05:12:51,762 - INFO - 批次 11: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:12:51,762 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:12:51,763 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:12:55,874 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:12:55,875 - INFO - AFC remote call 1 is done.
+2025-09-11 05:12:55,875 - INFO - 批次 12: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:12:55,876 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:12:55,876 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:12:59,773 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:12:59,775 - INFO - AFC remote call 1 is done.
+2025-09-11 05:12:59,776 - INFO - 批次 13: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:12:59,776 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:12:59,776 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:13:04,801 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:13:04,802 - INFO - AFC remote call 1 is done.
+2025-09-11 05:13:04,802 - INFO - 批次 14: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:13:04,802 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:13:04,802 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:13:11,345 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:13:11,346 - INFO - AFC remote call 1 is done.
+2025-09-11 05:13:11,346 - INFO - 批次 15: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:13:11,347 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:13:11,347 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:13:18,157 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:13:18,159 - INFO - AFC remote call 1 is done.
+2025-09-11 05:13:18,159 - INFO - 批次 16: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:13:18,159 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:13:18,159 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:13:24,477 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:13:24,479 - INFO - AFC remote call 1 is done.
+2025-09-11 05:13:24,479 - INFO - 批次 17: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:13:24,479 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:13:24,479 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:13:29,956 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:13:29,956 - INFO - AFC remote call 1 is done.
+2025-09-11 05:13:29,956 - INFO - 批次 18: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:13:29,957 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:13:29,957 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:13:35,664 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:13:35,666 - INFO - AFC remote call 1 is done.
+2025-09-11 05:13:35,667 - INFO - 批次 19: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:13:35,667 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:13:35,667 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:13:40,797 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:13:40,799 - INFO - AFC remote call 1 is done.
+2025-09-11 05:13:40,799 - INFO - 批次 20: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:13:40,799 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:13:40,799 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:13:42,711 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:13:42,713 - INFO - AFC remote call 1 is done.
+2025-09-11 05:13:42,713 - INFO - 批次 21: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:13:42,713 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:13:42,713 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:13:45,181 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:13:45,181 - INFO - AFC remote call 1 is done.
+2025-09-11 05:13:45,181 - INFO - 批次 22: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:13:45,182 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:13:45,182 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:13:47,201 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:13:47,202 - INFO - AFC remote call 1 is done.
+2025-09-11 05:13:47,202 - INFO - 批次 23: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:13:47,202 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:13:47,202 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:13:49,359 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:13:49,360 - INFO - AFC remote call 1 is done.
+2025-09-11 05:13:49,360 - INFO - 批次 24: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:13:49,360 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:13:49,360 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:13:52,647 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:13:52,647 - INFO - AFC remote call 1 is done.
+2025-09-11 05:13:52,647 - INFO - 批次 25: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:13:52,648 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:13:52,648 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:13:56,951 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:13:56,952 - INFO - AFC remote call 1 is done.
+2025-09-11 05:13:56,952 - INFO - 批次 26: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:13:56,952 - INFO - 从 5 个文本中提取到 0 个相关术语
+2025-09-11 05:13:56,954 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:13:57,814 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:13:57,814 - INFO - AFC remote call 1 is done.
+2025-09-11 05:13:57,815 - INFO - 批次 27: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:13:57,815 - INFO - --- 所有批次并行处理完毕 ---
+2025-09-11 05:13:57,815 - INFO - 文件翻译完成: ut_l_english.yml
+2025-09-11 05:13:57,815 - INFO - 所有文件处理完成，共处理 1 个文件
+2025-09-11 05:13:57,817 - INFO - 文件 'Multilanguage-Project Utopia - Extended Timeline - Technical Preview\localization\french\english\ut_l_french.yml' 汉化完成。
+2025-09-11 05:13:57,817 - INFO - 文件构建完成: ut_l_english.yml
+2025-09-11 05:13:57,818 - INFO - 正在生成校对进度看板...
+2025-09-11 05:13:57,818 - INFO - 校对进度表格已生成: J:\V3_Mod_Localization_Factory\my_translation\Multilanguage-Project Utopia - Extended Timeline - Technical Preview\校对进度表.csv
+2025-09-11 05:13:57,818 - INFO - 校对进度看板生成成功
+2025-09-11 05:13:57,818 - INFO - 
+--- 启动后处理格式验证 ---
+2025-09-11 05:13:57,819 - INFO - 正在按照 Victoria 3 (维多利亚3) 的本地化语法格式进行检查...
+2025-09-11 05:13:57,819 - INFO - 
+============================================================
+2025-09-11 05:13:57,819 - INFO - 📊 验证级别说明
+2025-09-11 05:13:57,819 - INFO - ============================================================
+2025-09-11 05:13:57,819 - INFO - 
+🔴 ERROR (错误) - 最高级别，必须修复：
+2025-09-11 05:13:57,819 - INFO -    • 方括号内包含中文: [中文函数] → 游戏崩溃
+2025-09-11 05:13:57,819 - INFO -    • 概念键包含中文: [Concept('中文key', ...)] → 无法识别
+2025-09-11 05:13:57,819 - INFO -    • 变量名包含中文: $中文变量$ → 显示异常
+2025-09-11 05:13:57,819 - INFO -    • 图标标签包含中文: @中文图标! → 无法加载
+2025-09-11 05:13:57,819 - INFO - 
+🟡 WARNING (警告) - 中等级别，建议修复：
+2025-09-11 05:13:57,819 - INFO -    • 格式化命令缺少空格: #b粗体文本#! → 应该 #b 粗体文本#!
+2025-09-11 05:13:57,819 - INFO -    • 未知格式化命令: #bold → 应该是 #b
+2025-09-11 05:13:57,819 - INFO -    • 标签不成对: #R 红色文本 → 缺少 #!
+2025-09-11 05:13:57,820 - INFO -    • 颜色标签不匹配: §R 红色 §Y 黄色 → 没有 §!
+2025-09-11 05:13:57,820 - INFO - 
+🔵 INFO (信息) - 最低级别，建议检查：
+2025-09-11 05:13:57,820 - INFO -    • 复杂提示框结构中的中文
+2025-09-11 05:13:57,820 - INFO -    • 作用域格式化中的中文
+2025-09-11 05:13:57,820 - INFO - 
+============================================================
+2025-09-11 05:13:57,820 - INFO - 正在扫描 1 个翻译文件...
+2025-09-11 05:13:57,840 - ERROR - [Victoria 3] Unknown formatting command `#tooltip`.
+2025-09-11 05:13:57,840 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#tooltip'。
+2025-09-11 05:13:57,840 - ERROR - [Victoria 3] Unknown formatting command `#tooltip`.
+2025-09-11 05:13:57,840 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#tooltip'。
+2025-09-11 05:13:57,848 - INFO - 初步筛查验证结果：0 个文件结构完好，1 个文件结构异常
+2025-09-11 05:13:57,848 - INFO - ⚠️ 发现格式问题，建议手动检查：
+2025-09-11 05:13:57,849 - INFO - 文件 1: ut_l_french.yml (第 531 行)
+2025-09-11 05:13:57,849 - INFO -   - ERROR: Unknown formatting command `#tooltip`. - Victoria 3 不支持的格式化命令: '#tooltip'。
+2025-09-11 05:13:57,849 - INFO - 文件 1: ut_l_french.yml (第 534 行)
+2025-09-11 05:13:57,849 - INFO -   - ERROR: Unknown formatting command `#tooltip`. - Victoria 3 不支持的格式化命令: '#tooltip'。
+2025-09-11 05:13:57,849 - INFO - 格式验证完成！
+2025-09-11 05:13:57,849 - INFO - 后处理验证完成 - 总计: 1 文件, 正常: 0, 问题: 1, 错误: 2, 警告: 0
+2025-09-11 05:13:57,850 - INFO - 校对进度表格已生成: J:\V3_Mod_Localization_Factory\my_translation\Multilanguage-Project Utopia - Extended Timeline - Technical Preview\校对进度表.csv
+2025-09-11 05:13:57,850 - INFO - 
+--- 正在翻译为: Deutsch ---
+2025-09-11 05:13:57,850 - INFO - --- 检测到 1 个翻译批次，启动并行处理模式 ---
+2025-09-11 05:13:57,851 - INFO - --- 检测到 27 个翻译批次，启动并行处理模式 ---
+2025-09-11 05:13:57,851 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:13:57,851 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:14:05,071 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:14:05,073 - INFO - AFC remote call 1 is done.
+2025-09-11 05:14:05,073 - INFO - 批次 1: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:14:05,073 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:14:05,074 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:14:12,304 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:14:12,310 - INFO - AFC remote call 1 is done.
+2025-09-11 05:14:12,310 - INFO - 批次 2: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:14:12,311 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:14:12,311 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:14:17,469 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:14:17,470 - INFO - AFC remote call 1 is done.
+2025-09-11 05:14:17,470 - INFO - 批次 3: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:14:17,471 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:14:17,471 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:14:23,341 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:14:23,343 - INFO - AFC remote call 1 is done.
+2025-09-11 05:14:23,343 - INFO - 批次 4: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:14:23,344 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:14:23,344 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:14:28,352 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:14:28,354 - INFO - AFC remote call 1 is done.
+2025-09-11 05:14:28,354 - INFO - 批次 5: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:14:28,354 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:14:28,354 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:14:33,213 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:14:33,215 - INFO - AFC remote call 1 is done.
+2025-09-11 05:14:33,215 - INFO - 批次 6: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:14:33,215 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:14:33,216 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:14:40,848 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:14:40,849 - INFO - AFC remote call 1 is done.
+2025-09-11 05:14:40,849 - INFO - 批次 7: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:14:40,850 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:14:40,850 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:14:48,974 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:14:48,975 - INFO - AFC remote call 1 is done.
+2025-09-11 05:14:48,975 - INFO - 批次 8: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:14:48,976 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:14:48,976 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:14:53,882 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:14:53,883 - INFO - AFC remote call 1 is done.
+2025-09-11 05:14:53,883 - INFO - 批次 9: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:14:53,883 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:14:53,883 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:14:59,861 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:14:59,862 - INFO - AFC remote call 1 is done.
+2025-09-11 05:14:59,862 - INFO - 批次 10: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:14:59,862 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:14:59,862 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:15:04,320 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:15:04,321 - INFO - AFC remote call 1 is done.
+2025-09-11 05:15:04,321 - INFO - 批次 11: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:15:04,321 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:15:04,321 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:15:08,748 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:15:08,750 - INFO - AFC remote call 1 is done.
+2025-09-11 05:15:08,750 - INFO - 批次 12: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:15:08,750 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:15:08,750 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:15:13,146 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:15:13,148 - INFO - AFC remote call 1 is done.
+2025-09-11 05:15:13,149 - INFO - 批次 13: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:15:13,149 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:15:13,149 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:15:18,003 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:15:18,005 - INFO - AFC remote call 1 is done.
+2025-09-11 05:15:18,005 - INFO - 批次 14: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:15:18,006 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:15:18,006 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:15:24,576 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:15:24,577 - INFO - AFC remote call 1 is done.
+2025-09-11 05:15:24,578 - INFO - 批次 15: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:15:24,578 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:15:24,578 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:15:30,956 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:15:30,958 - INFO - AFC remote call 1 is done.
+2025-09-11 05:15:30,958 - INFO - 批次 16: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:15:30,958 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:15:30,958 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:15:37,334 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:15:37,335 - INFO - AFC remote call 1 is done.
+2025-09-11 05:15:37,335 - INFO - 批次 17: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:15:37,336 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:15:37,336 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:15:43,628 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:15:43,629 - INFO - AFC remote call 1 is done.
+2025-09-11 05:15:43,629 - INFO - 批次 18: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:15:43,629 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:15:43,629 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:15:49,062 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:15:49,063 - INFO - AFC remote call 1 is done.
+2025-09-11 05:15:49,063 - INFO - 批次 19: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:15:49,065 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:15:49,065 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:15:53,750 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:15:53,751 - INFO - AFC remote call 1 is done.
+2025-09-11 05:15:53,751 - INFO - 批次 20: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:15:53,752 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:15:53,752 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:15:55,836 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:15:55,837 - INFO - AFC remote call 1 is done.
+2025-09-11 05:15:55,837 - INFO - 批次 21: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:15:55,838 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:15:55,838 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:15:58,694 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:15:58,694 - INFO - AFC remote call 1 is done.
+2025-09-11 05:15:58,695 - INFO - 批次 22: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:15:58,695 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:15:58,695 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:16:01,016 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:16:01,017 - INFO - AFC remote call 1 is done.
+2025-09-11 05:16:01,017 - INFO - 批次 23: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:16:01,017 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:16:01,017 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:16:03,500 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:16:03,501 - INFO - AFC remote call 1 is done.
+2025-09-11 05:16:03,501 - INFO - 批次 24: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:16:03,501 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:16:03,501 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:16:06,447 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:16:06,449 - INFO - AFC remote call 1 is done.
+2025-09-11 05:16:06,449 - INFO - 批次 25: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:16:06,450 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:16:06,450 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:16:11,695 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:16:11,697 - INFO - AFC remote call 1 is done.
+2025-09-11 05:16:11,697 - INFO - 批次 26: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:16:11,698 - INFO - 从 5 个文本中提取到 0 个相关术语
+2025-09-11 05:16:11,698 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:16:12,401 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:16:12,402 - INFO - AFC remote call 1 is done.
+2025-09-11 05:16:12,402 - INFO - 批次 27: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:16:12,402 - INFO - --- 所有批次并行处理完毕 ---
+2025-09-11 05:16:12,402 - INFO - 文件翻译完成: ut_l_english.yml
+2025-09-11 05:16:12,403 - INFO - 所有文件处理完成，共处理 1 个文件
+2025-09-11 05:16:12,404 - INFO - 文件 'Multilanguage-Project Utopia - Extended Timeline - Technical Preview\localization\german\english\ut_l_german.yml' 汉化完成。
+2025-09-11 05:16:12,404 - INFO - 文件构建完成: ut_l_english.yml
+2025-09-11 05:16:12,404 - INFO - 正在生成校对进度看板...
+2025-09-11 05:16:12,405 - INFO - 校对进度表格已生成: J:\V3_Mod_Localization_Factory\my_translation\Multilanguage-Project Utopia - Extended Timeline - Technical Preview\校对进度表.csv
+2025-09-11 05:16:12,405 - INFO - 校对进度看板生成成功
+2025-09-11 05:16:12,405 - INFO - 
+--- 启动后处理格式验证 ---
+2025-09-11 05:16:12,405 - INFO - 正在按照 Victoria 3 (维多利亚3) 的本地化语法格式进行检查...
+2025-09-11 05:16:12,405 - INFO - 
+============================================================
+2025-09-11 05:16:12,405 - INFO - 📊 验证级别说明
+2025-09-11 05:16:12,405 - INFO - ============================================================
+2025-09-11 05:16:12,405 - INFO - 
+🔴 ERROR (错误) - 最高级别，必须修复：
+2025-09-11 05:16:12,405 - INFO -    • 方括号内包含中文: [中文函数] → 游戏崩溃
+2025-09-11 05:16:12,406 - INFO -    • 概念键包含中文: [Concept('中文key', ...)] → 无法识别
+2025-09-11 05:16:12,406 - INFO -    • 变量名包含中文: $中文变量$ → 显示异常
+2025-09-11 05:16:12,406 - INFO -    • 图标标签包含中文: @中文图标! → 无法加载
+2025-09-11 05:16:12,406 - INFO - 
+🟡 WARNING (警告) - 中等级别，建议修复：
+2025-09-11 05:16:12,406 - INFO -    • 格式化命令缺少空格: #b粗体文本#! → 应该 #b 粗体文本#!
+2025-09-11 05:16:12,406 - INFO -    • 未知格式化命令: #bold → 应该是 #b
+2025-09-11 05:16:12,406 - INFO -    • 标签不成对: #R 红色文本 → 缺少 #!
+2025-09-11 05:16:12,406 - INFO -    • 颜色标签不匹配: §R 红色 §Y 黄色 → 没有 §!
+2025-09-11 05:16:12,406 - INFO - 
+🔵 INFO (信息) - 最低级别，建议检查：
+2025-09-11 05:16:12,406 - INFO -    • 复杂提示框结构中的中文
+2025-09-11 05:16:12,406 - INFO -    • 作用域格式化中的中文
+2025-09-11 05:16:12,406 - INFO - 
+============================================================
+2025-09-11 05:16:12,406 - INFO - 正在扫描 1 个翻译文件...
+2025-09-11 05:16:12,425 - ERROR - [Victoria 3] Unknown formatting command `#tooltip`.
+2025-09-11 05:16:12,425 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#tooltip'。
+2025-09-11 05:16:12,425 - ERROR - [Victoria 3] Unknown formatting command `#tooltip`.
+2025-09-11 05:16:12,425 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#tooltip'。
+2025-09-11 05:16:12,432 - INFO - 初步筛查验证结果：0 个文件结构完好，1 个文件结构异常
+2025-09-11 05:16:12,432 - INFO - ⚠️ 发现格式问题，建议手动检查：
+2025-09-11 05:16:12,433 - INFO - 文件 1: ut_l_german.yml (第 531 行)
+2025-09-11 05:16:12,433 - INFO -   - ERROR: Unknown formatting command `#tooltip`. - Victoria 3 不支持的格式化命令: '#tooltip'。
+2025-09-11 05:16:12,433 - INFO - 文件 1: ut_l_german.yml (第 534 行)
+2025-09-11 05:16:12,433 - INFO -   - ERROR: Unknown formatting command `#tooltip`. - Victoria 3 不支持的格式化命令: '#tooltip'。
+2025-09-11 05:16:12,433 - INFO - 格式验证完成！
+2025-09-11 05:16:12,433 - INFO - 后处理验证完成 - 总计: 1 文件, 正常: 0, 问题: 1, 错误: 2, 警告: 0
+2025-09-11 05:16:12,434 - INFO - 校对进度表格已生成: J:\V3_Mod_Localization_Factory\my_translation\Multilanguage-Project Utopia - Extended Timeline - Technical Preview\校对进度表.csv
+2025-09-11 05:16:12,434 - INFO - 
+--- 正在翻译为: Español ---
+2025-09-11 05:16:12,434 - INFO - --- 检测到 1 个翻译批次，启动并行处理模式 ---
+2025-09-11 05:16:12,434 - INFO - --- 检测到 27 个翻译批次，启动并行处理模式 ---
+2025-09-11 05:16:12,435 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:16:12,435 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:16:20,235 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:16:20,236 - INFO - AFC remote call 1 is done.
+2025-09-11 05:16:20,236 - INFO - 批次 1: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:16:20,237 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:16:20,237 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:16:27,968 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:16:27,970 - INFO - AFC remote call 1 is done.
+2025-09-11 05:16:27,970 - INFO - 批次 2: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:16:27,971 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:16:27,971 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:16:33,524 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:16:33,525 - INFO - AFC remote call 1 is done.
+2025-09-11 05:16:33,525 - INFO - 批次 3: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:16:33,525 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:16:33,526 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:16:38,979 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:16:38,981 - INFO - AFC remote call 1 is done.
+2025-09-11 05:16:38,982 - INFO - 批次 4: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:16:38,982 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:16:38,982 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:16:43,439 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:16:43,440 - INFO - AFC remote call 1 is done.
+2025-09-11 05:16:43,440 - INFO - 批次 5: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:16:43,440 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:16:43,440 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:16:48,443 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:16:48,444 - INFO - AFC remote call 1 is done.
+2025-09-11 05:16:48,444 - INFO - 批次 6: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:16:48,445 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:16:48,445 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:16:55,447 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:16:55,448 - INFO - AFC remote call 1 is done.
+2025-09-11 05:16:55,448 - INFO - 批次 7: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:16:55,449 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:16:55,449 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:17:02,925 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:17:02,927 - INFO - AFC remote call 1 is done.
+2025-09-11 05:17:02,927 - INFO - 批次 8: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:17:02,928 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:17:02,928 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:17:07,547 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:17:07,548 - INFO - AFC remote call 1 is done.
+2025-09-11 05:17:07,548 - INFO - 批次 9: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:17:07,548 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:17:07,548 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:17:12,293 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:17:12,294 - INFO - AFC remote call 1 is done.
+2025-09-11 05:17:12,294 - INFO - 批次 10: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:17:12,294 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:17:12,294 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:17:16,371 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:17:16,371 - INFO - AFC remote call 1 is done.
+2025-09-11 05:17:16,372 - INFO - 批次 11: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:17:16,372 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:17:16,372 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:17:20,201 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:17:20,202 - INFO - AFC remote call 1 is done.
+2025-09-11 05:17:20,202 - INFO - 批次 12: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:17:20,203 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:17:20,203 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:17:24,180 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:17:24,182 - INFO - AFC remote call 1 is done.
+2025-09-11 05:17:24,182 - INFO - 批次 13: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:17:24,182 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:17:24,183 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:17:28,597 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:17:28,599 - INFO - AFC remote call 1 is done.
+2025-09-11 05:17:28,599 - INFO - 批次 14: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:17:28,600 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:17:28,600 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:17:34,593 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:17:34,594 - INFO - AFC remote call 1 is done.
+2025-09-11 05:17:34,594 - INFO - 批次 15: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:17:34,594 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:17:34,595 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:17:40,881 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:17:40,883 - INFO - AFC remote call 1 is done.
+2025-09-11 05:17:40,883 - INFO - 批次 16: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:17:40,884 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:17:40,884 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:17:46,686 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:17:46,687 - INFO - AFC remote call 1 is done.
+2025-09-11 05:17:46,688 - INFO - 批次 17: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:17:46,688 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:17:46,688 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:17:51,642 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:17:51,644 - INFO - AFC remote call 1 is done.
+2025-09-11 05:17:51,644 - INFO - 批次 18: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:17:51,644 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:17:51,644 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:17:58,202 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:17:58,204 - INFO - AFC remote call 1 is done.
+2025-09-11 05:17:58,204 - INFO - 批次 19: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:17:58,204 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:17:58,204 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:18:02,905 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:18:02,907 - INFO - AFC remote call 1 is done.
+2025-09-11 05:18:02,907 - INFO - 批次 20: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:18:02,907 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:18:02,907 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:18:05,035 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:18:05,038 - INFO - AFC remote call 1 is done.
+2025-09-11 05:18:05,038 - INFO - 批次 21: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:18:05,039 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:18:05,039 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:18:07,978 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:18:07,982 - INFO - AFC remote call 1 is done.
+2025-09-11 05:18:07,982 - INFO - 批次 22: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:18:07,982 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:18:07,982 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:18:10,134 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:18:10,138 - INFO - AFC remote call 1 is done.
+2025-09-11 05:18:10,138 - INFO - 批次 23: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:18:10,139 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:18:10,139 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:18:12,394 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:18:12,401 - INFO - AFC remote call 1 is done.
+2025-09-11 05:18:12,401 - INFO - 批次 24: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:18:12,401 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:18:12,402 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:18:15,326 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:18:15,333 - INFO - AFC remote call 1 is done.
+2025-09-11 05:18:15,333 - INFO - 批次 25: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:18:15,333 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:18:15,333 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:18:19,151 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:18:19,157 - INFO - AFC remote call 1 is done.
+2025-09-11 05:18:19,157 - INFO - 批次 26: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:18:19,157 - INFO - 从 5 个文本中提取到 0 个相关术语
+2025-09-11 05:18:19,157 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:18:19,870 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:18:19,874 - INFO - AFC remote call 1 is done.
+2025-09-11 05:18:19,874 - INFO - 批次 27: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:18:19,874 - INFO - --- 所有批次并行处理完毕 ---
+2025-09-11 05:18:19,874 - INFO - 文件翻译完成: ut_l_english.yml
+2025-09-11 05:18:19,874 - INFO - 所有文件处理完成，共处理 1 个文件
+2025-09-11 05:18:19,876 - INFO - 文件 'Multilanguage-Project Utopia - Extended Timeline - Technical Preview\localization\spanish\english\ut_l_spanish.yml' 汉化完成。
+2025-09-11 05:18:19,876 - INFO - 文件构建完成: ut_l_english.yml
+2025-09-11 05:18:19,876 - INFO - 正在生成校对进度看板...
+2025-09-11 05:18:19,877 - INFO - 校对进度表格已生成: J:\V3_Mod_Localization_Factory\my_translation\Multilanguage-Project Utopia - Extended Timeline - Technical Preview\校对进度表.csv
+2025-09-11 05:18:19,877 - INFO - 校对进度看板生成成功
+2025-09-11 05:18:19,877 - INFO - 
+--- 启动后处理格式验证 ---
+2025-09-11 05:18:19,877 - INFO - 正在按照 Victoria 3 (维多利亚3) 的本地化语法格式进行检查...
+2025-09-11 05:18:19,877 - INFO - 
+============================================================
+2025-09-11 05:18:19,877 - INFO - 📊 验证级别说明
+2025-09-11 05:18:19,877 - INFO - ============================================================
+2025-09-11 05:18:19,877 - INFO - 
+🔴 ERROR (错误) - 最高级别，必须修复：
+2025-09-11 05:18:19,877 - INFO -    • 方括号内包含中文: [中文函数] → 游戏崩溃
+2025-09-11 05:18:19,877 - INFO -    • 概念键包含中文: [Concept('中文key', ...)] → 无法识别
+2025-09-11 05:18:19,877 - INFO -    • 变量名包含中文: $中文变量$ → 显示异常
+2025-09-11 05:18:19,877 - INFO -    • 图标标签包含中文: @中文图标! → 无法加载
+2025-09-11 05:18:19,878 - INFO - 
+🟡 WARNING (警告) - 中等级别，建议修复：
+2025-09-11 05:18:19,878 - INFO -    • 格式化命令缺少空格: #b粗体文本#! → 应该 #b 粗体文本#!
+2025-09-11 05:18:19,878 - INFO -    • 未知格式化命令: #bold → 应该是 #b
+2025-09-11 05:18:19,878 - INFO -    • 标签不成对: #R 红色文本 → 缺少 #!
+2025-09-11 05:18:19,878 - INFO -    • 颜色标签不匹配: §R 红色 §Y 黄色 → 没有 §!
+2025-09-11 05:18:19,878 - INFO - 
+🔵 INFO (信息) - 最低级别，建议检查：
+2025-09-11 05:18:19,878 - INFO -    • 复杂提示框结构中的中文
+2025-09-11 05:18:19,878 - INFO -    • 作用域格式化中的中文
+2025-09-11 05:18:19,878 - INFO - 
+============================================================
+2025-09-11 05:18:19,878 - INFO - 正在扫描 1 个翻译文件...
+2025-09-11 05:18:19,898 - ERROR - [Victoria 3] Unknown formatting command `#tooltip`.
+2025-09-11 05:18:19,898 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#tooltip'。
+2025-09-11 05:18:19,898 - ERROR - [Victoria 3] Unknown formatting command `#tooltip`.
+2025-09-11 05:18:19,898 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#tooltip'。
+2025-09-11 05:18:19,905 - INFO - 初步筛查验证结果：0 个文件结构完好，1 个文件结构异常
+2025-09-11 05:18:19,905 - INFO - ⚠️ 发现格式问题，建议手动检查：
+2025-09-11 05:18:19,905 - INFO - 文件 1: ut_l_spanish.yml (第 531 行)
+2025-09-11 05:18:19,905 - INFO -   - ERROR: Unknown formatting command `#tooltip`. - Victoria 3 不支持的格式化命令: '#tooltip'。
+2025-09-11 05:18:19,905 - INFO - 文件 1: ut_l_spanish.yml (第 534 行)
+2025-09-11 05:18:19,906 - INFO -   - ERROR: Unknown formatting command `#tooltip`. - Victoria 3 不支持的格式化命令: '#tooltip'。
+2025-09-11 05:18:19,906 - INFO - 格式验证完成！
+2025-09-11 05:18:19,906 - INFO - 后处理验证完成 - 总计: 1 文件, 正常: 0, 问题: 1, 错误: 2, 警告: 0
+2025-09-11 05:18:19,907 - INFO - 校对进度表格已生成: J:\V3_Mod_Localization_Factory\my_translation\Multilanguage-Project Utopia - Extended Timeline - Technical Preview\校对进度表.csv
+2025-09-11 05:18:19,907 - INFO - 
+--- 正在翻译为: 日本語 ---
+2025-09-11 05:18:19,907 - INFO - --- 检测到 1 个翻译批次，启动并行处理模式 ---
+2025-09-11 05:18:19,907 - INFO - --- 检测到 27 个翻译批次，启动并行处理模式 ---
+2025-09-11 05:18:19,907 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:18:19,908 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:18:27,078 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:18:27,084 - INFO - AFC remote call 1 is done.
+2025-09-11 05:18:27,085 - INFO - 批次 1: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:18:27,085 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:18:27,085 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:18:34,620 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:18:34,627 - INFO - AFC remote call 1 is done.
+2025-09-11 05:18:34,627 - INFO - 批次 2: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:18:34,627 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:18:34,627 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:18:39,489 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:18:39,491 - INFO - AFC remote call 1 is done.
+2025-09-11 05:18:39,491 - INFO - 批次 3: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:18:39,492 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:18:39,492 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:18:46,223 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:18:46,224 - INFO - AFC remote call 1 is done.
+2025-09-11 05:18:46,224 - INFO - 批次 4: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:18:46,225 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:18:46,225 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:18:50,325 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:18:50,331 - INFO - AFC remote call 1 is done.
+2025-09-11 05:18:50,331 - INFO - 批次 5: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:18:50,332 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:18:50,332 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:18:55,801 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:18:55,803 - INFO - AFC remote call 1 is done.
+2025-09-11 05:18:55,803 - INFO - 批次 6: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:18:55,804 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:18:55,804 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:19:04,528 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:19:04,536 - INFO - AFC remote call 1 is done.
+2025-09-11 05:19:04,536 - INFO - 批次 7: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:19:04,536 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:19:04,536 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:19:12,686 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:19:12,690 - INFO - AFC remote call 1 is done.
+2025-09-11 05:19:12,690 - INFO - 批次 8: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:19:12,691 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:19:12,691 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:19:17,504 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:19:17,507 - INFO - AFC remote call 1 is done.
+2025-09-11 05:19:17,507 - INFO - 批次 9: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:19:17,507 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:19:17,507 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:19:23,267 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:19:23,267 - INFO - AFC remote call 1 is done.
+2025-09-11 05:19:23,268 - INFO - 批次 10: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:19:23,268 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:19:23,268 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:19:27,789 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:19:27,789 - INFO - AFC remote call 1 is done.
+2025-09-11 05:19:27,789 - INFO - 批次 11: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:19:27,790 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:19:27,790 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:19:32,131 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:19:32,132 - INFO - AFC remote call 1 is done.
+2025-09-11 05:19:32,132 - INFO - 批次 12: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:19:32,132 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:19:32,132 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:19:35,975 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:19:35,981 - INFO - AFC remote call 1 is done.
+2025-09-11 05:19:35,981 - INFO - 批次 13: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:19:35,982 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:19:35,982 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:19:41,957 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:19:41,959 - INFO - AFC remote call 1 is done.
+2025-09-11 05:19:41,959 - INFO - 批次 14: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:19:41,959 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:19:41,959 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:19:49,041 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:19:49,048 - INFO - AFC remote call 1 is done.
+2025-09-11 05:19:49,048 - INFO - 批次 15: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:19:49,048 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:19:49,048 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:19:55,765 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:19:55,770 - INFO - AFC remote call 1 is done.
+2025-09-11 05:19:55,770 - INFO - 批次 16: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:19:55,771 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:19:55,771 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:20:01,977 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:20:01,981 - INFO - AFC remote call 1 is done.
+2025-09-11 05:20:01,981 - INFO - 批次 17: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:20:01,981 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:20:01,981 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:20:07,104 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:20:07,108 - INFO - AFC remote call 1 is done.
+2025-09-11 05:20:07,108 - INFO - 批次 18: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:20:07,108 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:20:07,108 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:20:12,689 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:20:12,695 - INFO - AFC remote call 1 is done.
+2025-09-11 05:20:12,695 - INFO - 批次 19: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:20:12,696 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:20:12,696 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:20:17,726 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:20:17,730 - INFO - AFC remote call 1 is done.
+2025-09-11 05:20:17,730 - INFO - 批次 20: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:20:17,731 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:20:17,731 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:20:19,778 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:20:19,782 - INFO - AFC remote call 1 is done.
+2025-09-11 05:20:19,782 - INFO - 批次 21: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:20:19,783 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:20:19,783 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:20:21,798 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:20:21,805 - INFO - AFC remote call 1 is done.
+2025-09-11 05:20:21,805 - INFO - 批次 22: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:20:21,805 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:20:21,805 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:20:23,754 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:20:23,763 - INFO - AFC remote call 1 is done.
+2025-09-11 05:20:23,763 - INFO - 批次 23: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:20:23,763 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:20:23,763 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:20:25,698 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:20:25,700 - INFO - AFC remote call 1 is done.
+2025-09-11 05:20:25,700 - INFO - 批次 24: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:20:25,701 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:20:25,701 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:20:28,690 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:20:28,695 - INFO - AFC remote call 1 is done.
+2025-09-11 05:20:28,695 - INFO - 批次 25: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:20:28,696 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:20:28,696 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:20:32,785 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:20:32,791 - INFO - AFC remote call 1 is done.
+2025-09-11 05:20:32,791 - INFO - 批次 26: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:20:32,791 - INFO - 从 5 个文本中提取到 0 个相关术语
+2025-09-11 05:20:32,792 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:20:33,702 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:20:33,704 - INFO - AFC remote call 1 is done.
+2025-09-11 05:20:33,704 - INFO - 批次 27: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:20:33,704 - INFO - --- 所有批次并行处理完毕 ---
+2025-09-11 05:20:33,704 - INFO - 文件翻译完成: ut_l_english.yml
+2025-09-11 05:20:33,704 - INFO - 所有文件处理完成，共处理 1 个文件
+2025-09-11 05:20:33,707 - INFO - 文件 'Multilanguage-Project Utopia - Extended Timeline - Technical Preview\localization\japanese\english\ut_l_japanese.yml' 汉化完成。
+2025-09-11 05:20:33,707 - INFO - 文件构建完成: ut_l_english.yml
+2025-09-11 05:20:33,707 - INFO - 正在生成校对进度看板...
+2025-09-11 05:20:33,708 - INFO - 校对进度表格已生成: J:\V3_Mod_Localization_Factory\my_translation\Multilanguage-Project Utopia - Extended Timeline - Technical Preview\校对进度表.csv
+2025-09-11 05:20:33,708 - INFO - 校对进度看板生成成功
+2025-09-11 05:20:33,708 - INFO - 
+--- 启动后处理格式验证 ---
+2025-09-11 05:20:33,708 - INFO - 正在按照 Victoria 3 (维多利亚3) 的本地化语法格式进行检查...
+2025-09-11 05:20:33,708 - INFO - 
+============================================================
+2025-09-11 05:20:33,708 - INFO - 📊 验证级别说明
+2025-09-11 05:20:33,708 - INFO - ============================================================
+2025-09-11 05:20:33,709 - INFO - 
+🔴 ERROR (错误) - 最高级别，必须修复：
+2025-09-11 05:20:33,709 - INFO -    • 方括号内包含中文: [中文函数] → 游戏崩溃
+2025-09-11 05:20:33,709 - INFO -    • 概念键包含中文: [Concept('中文key', ...)] → 无法识别
+2025-09-11 05:20:33,709 - INFO -    • 变量名包含中文: $中文变量$ → 显示异常
+2025-09-11 05:20:33,709 - INFO -    • 图标标签包含中文: @中文图标! → 无法加载
+2025-09-11 05:20:33,709 - INFO - 
+🟡 WARNING (警告) - 中等级别，建议修复：
+2025-09-11 05:20:33,709 - INFO -    • 格式化命令缺少空格: #b粗体文本#! → 应该 #b 粗体文本#!
+2025-09-11 05:20:33,709 - INFO -    • 未知格式化命令: #bold → 应该是 #b
+2025-09-11 05:20:33,709 - INFO -    • 标签不成对: #R 红色文本 → 缺少 #!
+2025-09-11 05:20:33,709 - INFO -    • 颜色标签不匹配: §R 红色 §Y 黄色 → 没有 §!
+2025-09-11 05:20:33,709 - INFO - 
+🔵 INFO (信息) - 最低级别，建议检查：
+2025-09-11 05:20:33,709 - INFO -    • 复杂提示框结构中的中文
+2025-09-11 05:20:33,709 - INFO -    • 作用域格式化中的中文
+2025-09-11 05:20:33,709 - INFO - 
+============================================================
+2025-09-11 05:20:33,709 - INFO - 正在扫描 1 个翻译文件...
+2025-09-11 05:20:33,727 - ERROR - [Victoria 3] Unknown formatting command `#tooltip`.
+2025-09-11 05:20:33,727 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#tooltip'。
+2025-09-11 05:20:33,727 - ERROR - [Victoria 3] Unknown formatting command `#tooltip`.
+2025-09-11 05:20:33,727 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#tooltip'。
+2025-09-11 05:20:33,733 - INFO - 初步筛查验证结果：0 个文件结构完好，1 个文件结构异常
+2025-09-11 05:20:33,733 - INFO - ⚠️ 发现格式问题，建议手动检查：
+2025-09-11 05:20:33,733 - INFO - 文件 1: ut_l_japanese.yml (第 531 行)
+2025-09-11 05:20:33,733 - INFO -   - ERROR: Unknown formatting command `#tooltip`. - Victoria 3 不支持的格式化命令: '#tooltip'。
+2025-09-11 05:20:33,733 - INFO - 文件 1: ut_l_japanese.yml (第 534 行)
+2025-09-11 05:20:33,733 - INFO -   - ERROR: Unknown formatting command `#tooltip`. - Victoria 3 不支持的格式化命令: '#tooltip'。
+2025-09-11 05:20:33,733 - INFO - 格式验证完成！
+2025-09-11 05:20:33,733 - INFO - 后处理验证完成 - 总计: 1 文件, 正常: 0, 问题: 1, 错误: 2, 警告: 0
+2025-09-11 05:20:33,734 - INFO - 校对进度表格已生成: J:\V3_Mod_Localization_Factory\my_translation\Multilanguage-Project Utopia - Extended Timeline - Technical Preview\校对进度表.csv
+2025-09-11 05:20:33,734 - INFO - 
+--- 正在翻译为: 한국어 ---
+2025-09-11 05:20:33,734 - INFO - --- 检测到 1 个翻译批次，启动并行处理模式 ---
+2025-09-11 05:20:33,734 - INFO - --- 检测到 27 个翻译批次，启动并行处理模式 ---
+2025-09-11 05:20:33,735 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:20:33,735 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:20:42,254 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:20:42,261 - INFO - AFC remote call 1 is done.
+2025-09-11 05:20:42,261 - INFO - 批次 1: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:20:42,261 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:20:42,261 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:20:51,068 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:20:51,073 - INFO - AFC remote call 1 is done.
+2025-09-11 05:20:51,073 - INFO - 批次 2: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:20:51,074 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:20:51,074 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:20:57,064 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:20:57,065 - INFO - AFC remote call 1 is done.
+2025-09-11 05:20:57,065 - INFO - 批次 3: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:20:57,066 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:20:57,066 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:21:04,254 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:21:04,261 - INFO - AFC remote call 1 is done.
+2025-09-11 05:21:04,261 - INFO - 批次 4: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:21:04,262 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:21:04,262 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:21:08,769 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:21:08,775 - INFO - AFC remote call 1 is done.
+2025-09-11 05:21:08,775 - INFO - 批次 5: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:21:08,775 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:21:08,775 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:21:14,701 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:21:14,703 - INFO - AFC remote call 1 is done.
+2025-09-11 05:21:14,703 - INFO - 批次 6: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:21:14,704 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:21:14,704 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:21:23,612 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:21:23,617 - INFO - AFC remote call 1 is done.
+2025-09-11 05:21:23,618 - INFO - 批次 7: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:21:23,618 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:21:23,618 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:21:32,218 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:21:32,222 - INFO - AFC remote call 1 is done.
+2025-09-11 05:21:32,222 - INFO - 批次 8: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:21:32,223 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:21:32,223 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:21:37,307 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:21:37,313 - INFO - AFC remote call 1 is done.
+2025-09-11 05:21:37,313 - INFO - 批次 9: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:21:37,313 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:21:37,313 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:21:42,447 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:21:42,453 - INFO - AFC remote call 1 is done.
+2025-09-11 05:21:42,453 - INFO - 批次 10: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:21:42,453 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:21:42,453 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:21:47,293 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:21:47,299 - INFO - AFC remote call 1 is done.
+2025-09-11 05:21:47,300 - INFO - 批次 11: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:21:47,300 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:21:47,300 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:21:51,949 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:21:51,951 - INFO - AFC remote call 1 is done.
+2025-09-11 05:21:51,951 - INFO - 批次 12: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:21:51,951 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:21:51,951 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:21:56,924 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:21:56,933 - INFO - AFC remote call 1 is done.
+2025-09-11 05:21:56,933 - INFO - 批次 13: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:21:56,933 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:21:56,934 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:22:04,336 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:22:04,339 - INFO - AFC remote call 1 is done.
+2025-09-11 05:22:04,339 - INFO - 批次 14: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:22:04,339 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:22:04,339 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:22:11,711 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:22:11,715 - INFO - AFC remote call 1 is done.
+2025-09-11 05:22:11,715 - INFO - 批次 15: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:22:11,715 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:22:11,715 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:22:18,890 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:22:18,894 - INFO - AFC remote call 1 is done.
+2025-09-11 05:22:18,895 - INFO - 批次 16: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:22:18,895 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:22:18,895 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:22:25,823 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:22:25,825 - INFO - AFC remote call 1 is done.
+2025-09-11 05:22:25,825 - INFO - 批次 17: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:22:25,825 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:22:25,825 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:22:31,259 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:22:31,262 - INFO - AFC remote call 1 is done.
+2025-09-11 05:22:31,262 - INFO - 批次 18: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:22:31,262 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:22:31,263 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:22:39,017 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:22:39,018 - INFO - AFC remote call 1 is done.
+2025-09-11 05:22:39,018 - INFO - 批次 19: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:22:39,019 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:22:39,019 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:22:44,147 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:22:44,149 - INFO - AFC remote call 1 is done.
+2025-09-11 05:22:44,149 - INFO - 批次 20: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:22:44,150 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:22:44,150 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:22:46,698 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:22:46,702 - INFO - AFC remote call 1 is done.
+2025-09-11 05:22:46,703 - INFO - 批次 21: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:22:46,703 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:22:46,703 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:22:48,812 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:22:48,818 - INFO - AFC remote call 1 is done.
+2025-09-11 05:22:48,818 - INFO - 批次 22: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:22:48,818 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:22:48,819 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:22:51,006 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:22:51,011 - INFO - AFC remote call 1 is done.
+2025-09-11 05:22:51,011 - INFO - 批次 23: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:22:51,011 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:22:51,011 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:22:53,126 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:22:53,130 - INFO - AFC remote call 1 is done.
+2025-09-11 05:22:53,130 - INFO - 批次 24: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:22:53,131 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:22:53,131 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:22:56,564 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:22:56,568 - INFO - AFC remote call 1 is done.
+2025-09-11 05:22:56,568 - INFO - 批次 25: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:22:56,568 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:22:56,568 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:23:01,036 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:23:01,042 - INFO - AFC remote call 1 is done.
+2025-09-11 05:23:01,042 - INFO - 批次 26: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:23:01,042 - INFO - 从 5 个文本中提取到 0 个相关术语
+2025-09-11 05:23:01,042 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:23:01,895 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:23:01,899 - INFO - AFC remote call 1 is done.
+2025-09-11 05:23:01,899 - INFO - 批次 27: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:23:01,900 - INFO - --- 所有批次并行处理完毕 ---
+2025-09-11 05:23:01,900 - INFO - 文件翻译完成: ut_l_english.yml
+2025-09-11 05:23:01,900 - INFO - 所有文件处理完成，共处理 1 个文件
+2025-09-11 05:23:01,903 - INFO - 文件 'Multilanguage-Project Utopia - Extended Timeline - Technical Preview\localization\korean\english\ut_l_korean.yml' 汉化完成。
+2025-09-11 05:23:01,903 - INFO - 文件构建完成: ut_l_english.yml
+2025-09-11 05:23:01,903 - INFO - 正在生成校对进度看板...
+2025-09-11 05:23:01,904 - INFO - 校对进度表格已生成: J:\V3_Mod_Localization_Factory\my_translation\Multilanguage-Project Utopia - Extended Timeline - Technical Preview\校对进度表.csv
+2025-09-11 05:23:01,904 - INFO - 校对进度看板生成成功
+2025-09-11 05:23:01,904 - INFO - 
+--- 启动后处理格式验证 ---
+2025-09-11 05:23:01,904 - INFO - 正在按照 Victoria 3 (维多利亚3) 的本地化语法格式进行检查...
+2025-09-11 05:23:01,904 - INFO - 
+============================================================
+2025-09-11 05:23:01,904 - INFO - 📊 验证级别说明
+2025-09-11 05:23:01,904 - INFO - ============================================================
+2025-09-11 05:23:01,904 - INFO - 
+🔴 ERROR (错误) - 最高级别，必须修复：
+2025-09-11 05:23:01,904 - INFO -    • 方括号内包含中文: [中文函数] → 游戏崩溃
+2025-09-11 05:23:01,904 - INFO -    • 概念键包含中文: [Concept('中文key', ...)] → 无法识别
+2025-09-11 05:23:01,904 - INFO -    • 变量名包含中文: $中文变量$ → 显示异常
+2025-09-11 05:23:01,904 - INFO -    • 图标标签包含中文: @中文图标! → 无法加载
+2025-09-11 05:23:01,904 - INFO - 
+🟡 WARNING (警告) - 中等级别，建议修复：
+2025-09-11 05:23:01,905 - INFO -    • 格式化命令缺少空格: #b粗体文本#! → 应该 #b 粗体文本#!
+2025-09-11 05:23:01,905 - INFO -    • 未知格式化命令: #bold → 应该是 #b
+2025-09-11 05:23:01,905 - INFO -    • 标签不成对: #R 红色文本 → 缺少 #!
+2025-09-11 05:23:01,905 - INFO -    • 颜色标签不匹配: §R 红色 §Y 黄色 → 没有 §!
+2025-09-11 05:23:01,905 - INFO - 
+🔵 INFO (信息) - 最低级别，建议检查：
+2025-09-11 05:23:01,905 - INFO -    • 复杂提示框结构中的中文
+2025-09-11 05:23:01,905 - INFO -    • 作用域格式化中的中文
+2025-09-11 05:23:01,905 - INFO - 
+============================================================
+2025-09-11 05:23:01,905 - INFO - 正在扫描 1 个翻译文件...
+2025-09-11 05:23:01,921 - ERROR - [Victoria 3] Unknown formatting command `#tooltip`.
+2025-09-11 05:23:01,921 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#tooltip'。
+2025-09-11 05:23:01,921 - ERROR - [Victoria 3] Unknown formatting command `#tooltip`.
+2025-09-11 05:23:01,922 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#tooltip'。
+2025-09-11 05:23:01,927 - INFO - 初步筛查验证结果：0 个文件结构完好，1 个文件结构异常
+2025-09-11 05:23:01,927 - INFO - ⚠️ 发现格式问题，建议手动检查：
+2025-09-11 05:23:01,927 - INFO - 文件 1: ut_l_korean.yml (第 531 行)
+2025-09-11 05:23:01,927 - INFO -   - ERROR: Unknown formatting command `#tooltip`. - Victoria 3 不支持的格式化命令: '#tooltip'。
+2025-09-11 05:23:01,927 - INFO - 文件 1: ut_l_korean.yml (第 534 行)
+2025-09-11 05:23:01,927 - INFO -   - ERROR: Unknown formatting command `#tooltip`. - Victoria 3 不支持的格式化命令: '#tooltip'。
+2025-09-11 05:23:01,927 - INFO - 格式验证完成！
+2025-09-11 05:23:01,927 - INFO - 后处理验证完成 - 总计: 1 文件, 正常: 0, 问题: 1, 错误: 2, 警告: 0
+2025-09-11 05:23:01,928 - INFO - 校对进度表格已生成: J:\V3_Mod_Localization_Factory\my_translation\Multilanguage-Project Utopia - Extended Timeline - Technical Preview\校对进度表.csv
+2025-09-11 05:23:01,928 - INFO - 
+--- 正在翻译为: Polski ---
+2025-09-11 05:23:01,928 - INFO - --- 检测到 1 个翻译批次，启动并行处理模式 ---
+2025-09-11 05:23:01,928 - INFO - --- 检测到 27 个翻译批次，启动并行处理模式 ---
+2025-09-11 05:23:01,929 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:23:01,929 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:23:11,064 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:23:11,070 - INFO - AFC remote call 1 is done.
+2025-09-11 05:23:11,070 - INFO - 批次 1: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:23:11,071 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:23:11,071 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:23:21,488 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:23:21,496 - INFO - AFC remote call 1 is done.
+2025-09-11 05:23:21,496 - INFO - 批次 2: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:23:21,497 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:23:21,497 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:23:29,552 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:23:29,554 - INFO - AFC remote call 1 is done.
+2025-09-11 05:23:29,554 - INFO - 批次 3: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:23:29,554 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:23:29,555 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:23:37,653 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:23:37,656 - INFO - AFC remote call 1 is done.
+2025-09-11 05:23:37,656 - INFO - 批次 4: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:23:37,657 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:23:37,657 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:23:43,062 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:23:43,070 - INFO - AFC remote call 1 is done.
+2025-09-11 05:23:43,070 - INFO - 批次 5: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:23:43,070 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:23:43,070 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:23:49,911 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:23:49,916 - INFO - AFC remote call 1 is done.
+2025-09-11 05:23:49,916 - INFO - 批次 6: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:23:49,918 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:23:49,918 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:24:00,431 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:24:00,439 - INFO - AFC remote call 1 is done.
+2025-09-11 05:24:00,439 - INFO - 批次 7: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:24:00,439 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:24:00,439 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:24:11,099 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:24:11,100 - INFO - AFC remote call 1 is done.
+2025-09-11 05:24:11,100 - INFO - 批次 8: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:24:11,101 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:24:11,101 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:24:18,324 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:24:18,331 - INFO - AFC remote call 1 is done.
+2025-09-11 05:24:18,331 - INFO - 批次 9: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:24:18,331 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:24:18,331 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:24:25,026 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:24:25,032 - INFO - AFC remote call 1 is done.
+2025-09-11 05:24:25,032 - INFO - 批次 10: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:24:25,033 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:24:25,033 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:24:31,223 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:24:31,225 - INFO - AFC remote call 1 is done.
+2025-09-11 05:24:31,225 - INFO - 批次 11: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:24:31,225 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:24:31,226 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:24:36,275 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:24:36,277 - INFO - AFC remote call 1 is done.
+2025-09-11 05:24:36,277 - INFO - 批次 12: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:24:36,278 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:24:36,278 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:24:40,835 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:24:40,839 - INFO - AFC remote call 1 is done.
+2025-09-11 05:24:40,840 - INFO - 批次 13: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:24:40,840 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:24:40,840 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:24:46,997 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:24:46,999 - INFO - AFC remote call 1 is done.
+2025-09-11 05:24:46,999 - INFO - 批次 14: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:24:46,999 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:24:47,000 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:24:54,589 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:24:54,593 - INFO - AFC remote call 1 is done.
+2025-09-11 05:24:54,593 - INFO - 批次 15: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:24:54,593 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:24:54,593 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:25:01,898 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:25:01,902 - INFO - AFC remote call 1 is done.
+2025-09-11 05:25:01,902 - INFO - 批次 16: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:25:01,902 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:25:01,902 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:25:08,592 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:25:08,596 - INFO - AFC remote call 1 is done.
+2025-09-11 05:25:08,597 - INFO - 批次 17: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:25:08,597 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:25:08,597 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:25:15,097 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:25:15,099 - INFO - AFC remote call 1 is done.
+2025-09-11 05:25:15,099 - INFO - 批次 18: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:25:15,099 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:25:15,100 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:25:21,866 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:25:21,868 - INFO - AFC remote call 1 is done.
+2025-09-11 05:25:21,868 - INFO - 批次 19: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:25:21,869 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:25:21,869 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:25:27,622 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:25:27,624 - INFO - AFC remote call 1 is done.
+2025-09-11 05:25:27,624 - INFO - 批次 20: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:25:27,624 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:25:27,624 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:25:30,086 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:25:30,090 - INFO - AFC remote call 1 is done.
+2025-09-11 05:25:30,090 - INFO - 批次 21: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:25:30,091 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:25:30,091 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:25:33,417 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:25:33,422 - INFO - AFC remote call 1 is done.
+2025-09-11 05:25:33,422 - INFO - 批次 22: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:25:33,422 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:25:33,422 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:25:36,048 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:25:36,052 - INFO - AFC remote call 1 is done.
+2025-09-11 05:25:36,053 - INFO - 批次 23: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:25:36,053 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:25:36,053 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:25:39,046 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:25:39,049 - INFO - AFC remote call 1 is done.
+2025-09-11 05:25:39,049 - INFO - 批次 24: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:25:39,049 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:25:39,049 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:25:42,435 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:25:42,438 - INFO - AFC remote call 1 is done.
+2025-09-11 05:25:42,438 - INFO - 批次 25: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:25:42,439 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:25:42,439 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:25:47,149 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:25:47,155 - INFO - AFC remote call 1 is done.
+2025-09-11 05:25:47,155 - INFO - 批次 26: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:25:47,155 - INFO - 从 5 个文本中提取到 0 个相关术语
+2025-09-11 05:25:47,156 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:25:47,950 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:25:47,954 - INFO - AFC remote call 1 is done.
+2025-09-11 05:25:47,954 - INFO - 批次 27: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:25:47,954 - INFO - --- 所有批次并行处理完毕 ---
+2025-09-11 05:25:47,954 - INFO - 文件翻译完成: ut_l_english.yml
+2025-09-11 05:25:47,954 - INFO - 所有文件处理完成，共处理 1 个文件
+2025-09-11 05:25:47,958 - INFO - 文件 'Multilanguage-Project Utopia - Extended Timeline - Technical Preview\localization\polish\english\ut_l_polish.yml' 汉化完成。
+2025-09-11 05:25:47,958 - INFO - 文件构建完成: ut_l_english.yml
+2025-09-11 05:25:47,958 - INFO - 正在生成校对进度看板...
+2025-09-11 05:25:47,959 - INFO - 校对进度表格已生成: J:\V3_Mod_Localization_Factory\my_translation\Multilanguage-Project Utopia - Extended Timeline - Technical Preview\校对进度表.csv
+2025-09-11 05:25:47,959 - INFO - 校对进度看板生成成功
+2025-09-11 05:25:47,959 - INFO - 
+--- 启动后处理格式验证 ---
+2025-09-11 05:25:47,959 - INFO - 正在按照 Victoria 3 (维多利亚3) 的本地化语法格式进行检查...
+2025-09-11 05:25:47,959 - INFO - 
+============================================================
+2025-09-11 05:25:47,959 - INFO - 📊 验证级别说明
+2025-09-11 05:25:47,959 - INFO - ============================================================
+2025-09-11 05:25:47,959 - INFO - 
+🔴 ERROR (错误) - 最高级别，必须修复：
+2025-09-11 05:25:47,959 - INFO -    • 方括号内包含中文: [中文函数] → 游戏崩溃
+2025-09-11 05:25:47,960 - INFO -    • 概念键包含中文: [Concept('中文key', ...)] → 无法识别
+2025-09-11 05:25:47,960 - INFO -    • 变量名包含中文: $中文变量$ → 显示异常
+2025-09-11 05:25:47,960 - INFO -    • 图标标签包含中文: @中文图标! → 无法加载
+2025-09-11 05:25:47,960 - INFO - 
+🟡 WARNING (警告) - 中等级别，建议修复：
+2025-09-11 05:25:47,960 - INFO -    • 格式化命令缺少空格: #b粗体文本#! → 应该 #b 粗体文本#!
+2025-09-11 05:25:47,960 - INFO -    • 未知格式化命令: #bold → 应该是 #b
+2025-09-11 05:25:47,960 - INFO -    • 标签不成对: #R 红色文本 → 缺少 #!
+2025-09-11 05:25:47,960 - INFO -    • 颜色标签不匹配: §R 红色 §Y 黄色 → 没有 §!
+2025-09-11 05:25:47,960 - INFO - 
+🔵 INFO (信息) - 最低级别，建议检查：
+2025-09-11 05:25:47,960 - INFO -    • 复杂提示框结构中的中文
+2025-09-11 05:25:47,960 - INFO -    • 作用域格式化中的中文
+2025-09-11 05:25:47,960 - INFO - 
+============================================================
+2025-09-11 05:25:47,961 - INFO - 正在扫描 1 个翻译文件...
+2025-09-11 05:25:47,979 - ERROR - [Victoria 3] Unknown formatting command `#tooltip`.
+2025-09-11 05:25:47,979 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#tooltip'。
+2025-09-11 05:25:47,980 - ERROR - [Victoria 3] Unknown formatting command `#tooltip`.
+2025-09-11 05:25:47,980 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#tooltip'。
+2025-09-11 05:25:47,989 - INFO - 初步筛查验证结果：0 个文件结构完好，1 个文件结构异常
+2025-09-11 05:25:47,990 - INFO - ⚠️ 发现格式问题，建议手动检查：
+2025-09-11 05:25:47,990 - INFO - 文件 1: ut_l_polish.yml (第 531 行)
+2025-09-11 05:25:47,990 - INFO -   - ERROR: Unknown formatting command `#tooltip`. - Victoria 3 不支持的格式化命令: '#tooltip'。
+2025-09-11 05:25:47,990 - INFO - 文件 1: ut_l_polish.yml (第 534 行)
+2025-09-11 05:25:47,990 - INFO -   - ERROR: Unknown formatting command `#tooltip`. - Victoria 3 不支持的格式化命令: '#tooltip'。
+2025-09-11 05:25:47,990 - INFO - 格式验证完成！
+2025-09-11 05:25:47,990 - INFO - 后处理验证完成 - 总计: 1 文件, 正常: 0, 问题: 1, 错误: 2, 警告: 0
+2025-09-11 05:25:47,991 - INFO - 校对进度表格已生成: J:\V3_Mod_Localization_Factory\my_translation\Multilanguage-Project Utopia - Extended Timeline - Technical Preview\校对进度表.csv
+2025-09-11 05:25:47,991 - INFO - 
+--- 正在翻译为: Português do Brasil ---
+2025-09-11 05:25:47,991 - INFO - --- 检测到 1 个翻译批次，启动并行处理模式 ---
+2025-09-11 05:25:47,992 - INFO - --- 检测到 27 个翻译批次，启动并行处理模式 ---
+2025-09-11 05:25:47,992 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:25:47,992 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:25:54,935 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:25:54,939 - INFO - AFC remote call 1 is done.
+2025-09-11 05:25:54,939 - INFO - 批次 1: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:25:54,940 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:25:54,940 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:26:02,786 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:26:02,792 - INFO - AFC remote call 1 is done.
+2025-09-11 05:26:02,792 - INFO - 批次 2: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:26:02,793 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:26:02,793 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:26:08,296 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:26:08,297 - INFO - AFC remote call 1 is done.
+2025-09-11 05:26:08,297 - INFO - 批次 3: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:26:08,297 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:26:08,297 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:26:14,612 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:26:14,616 - INFO - AFC remote call 1 is done.
+2025-09-11 05:26:14,616 - INFO - 批次 4: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:26:14,616 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:26:14,616 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:26:19,777 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:26:19,784 - INFO - AFC remote call 1 is done.
+2025-09-11 05:26:19,784 - INFO - 批次 5: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:26:19,784 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:26:19,784 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:26:24,628 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:26:24,634 - INFO - AFC remote call 1 is done.
+2025-09-11 05:26:24,634 - INFO - 批次 6: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:26:24,634 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:26:24,634 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:26:31,740 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:26:31,745 - INFO - AFC remote call 1 is done.
+2025-09-11 05:26:31,745 - INFO - 批次 7: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:26:31,746 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:26:31,746 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:26:39,769 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:26:39,771 - INFO - AFC remote call 1 is done.
+2025-09-11 05:26:39,771 - INFO - 批次 8: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:26:39,772 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:26:39,772 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:26:45,617 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:26:45,618 - INFO - AFC remote call 1 is done.
+2025-09-11 05:26:45,618 - INFO - 批次 9: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:26:45,618 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:26:45,618 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:26:50,029 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:26:50,035 - INFO - AFC remote call 1 is done.
+2025-09-11 05:26:50,035 - INFO - 批次 10: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:26:50,035 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:26:50,036 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:26:54,954 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:26:54,955 - INFO - AFC remote call 1 is done.
+2025-09-11 05:26:54,955 - INFO - 批次 11: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:26:54,955 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:26:54,955 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:26:59,459 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:26:59,469 - INFO - AFC remote call 1 is done.
+2025-09-11 05:26:59,469 - INFO - 批次 12: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:26:59,470 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:26:59,470 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:27:03,237 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:27:03,240 - INFO - AFC remote call 1 is done.
+2025-09-11 05:27:03,240 - INFO - 批次 13: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:27:03,240 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:27:03,241 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:27:07,927 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:27:07,929 - INFO - AFC remote call 1 is done.
+2025-09-11 05:27:07,929 - INFO - 批次 14: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:27:07,929 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:27:07,930 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:27:14,453 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:27:14,455 - INFO - AFC remote call 1 is done.
+2025-09-11 05:27:14,456 - INFO - 批次 15: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:27:14,456 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:27:14,456 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:27:19,979 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:27:19,981 - INFO - AFC remote call 1 is done.
+2025-09-11 05:27:19,981 - INFO - 批次 16: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:27:19,981 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:27:19,981 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:27:25,427 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:27:25,430 - INFO - AFC remote call 1 is done.
+2025-09-11 05:27:25,431 - INFO - 批次 17: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:27:25,431 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:27:25,431 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:27:30,509 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:27:30,512 - INFO - AFC remote call 1 is done.
+2025-09-11 05:27:30,512 - INFO - 批次 18: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:27:30,512 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:27:30,512 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:27:35,827 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:27:35,828 - INFO - AFC remote call 1 is done.
+2025-09-11 05:27:35,828 - INFO - 批次 19: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:27:35,829 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:27:35,829 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:27:40,615 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:27:40,618 - INFO - AFC remote call 1 is done.
+2025-09-11 05:27:40,618 - INFO - 批次 20: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:27:40,619 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:27:40,619 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:27:43,130 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:27:43,134 - INFO - AFC remote call 1 is done.
+2025-09-11 05:27:43,134 - INFO - 批次 21: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:27:43,135 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:27:43,135 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:27:45,220 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:27:45,224 - INFO - AFC remote call 1 is done.
+2025-09-11 05:27:45,224 - INFO - 批次 22: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:27:45,224 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:27:45,224 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:27:48,319 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:27:48,322 - INFO - AFC remote call 1 is done.
+2025-09-11 05:27:48,322 - INFO - 批次 23: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:27:48,323 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:27:48,323 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:27:50,841 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:27:50,845 - INFO - AFC remote call 1 is done.
+2025-09-11 05:27:50,845 - INFO - 批次 24: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:27:50,846 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:27:50,846 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:27:53,825 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:27:53,827 - INFO - AFC remote call 1 is done.
+2025-09-11 05:27:53,827 - INFO - 批次 25: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:27:53,827 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:27:53,827 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:27:59,212 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:27:59,216 - INFO - AFC remote call 1 is done.
+2025-09-11 05:27:59,216 - INFO - 批次 26: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:27:59,216 - INFO - 从 5 个文本中提取到 0 个相关术语
+2025-09-11 05:27:59,216 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:28:00,073 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:28:00,077 - INFO - AFC remote call 1 is done.
+2025-09-11 05:28:00,077 - INFO - 批次 27: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:28:00,077 - INFO - --- 所有批次并行处理完毕 ---
+2025-09-11 05:28:00,077 - INFO - 文件翻译完成: ut_l_english.yml
+2025-09-11 05:28:00,077 - INFO - 所有文件处理完成，共处理 1 个文件
+2025-09-11 05:28:00,079 - INFO - 文件 'Multilanguage-Project Utopia - Extended Timeline - Technical Preview\localization\braz_por\english\ut_l_braz_por.yml' 汉化完成。
+2025-09-11 05:28:00,079 - INFO - 文件构建完成: ut_l_english.yml
+2025-09-11 05:28:00,079 - INFO - 正在生成校对进度看板...
+2025-09-11 05:28:00,080 - INFO - 校对进度表格已生成: J:\V3_Mod_Localization_Factory\my_translation\Multilanguage-Project Utopia - Extended Timeline - Technical Preview\校对进度表.csv
+2025-09-11 05:28:00,080 - INFO - 校对进度看板生成成功
+2025-09-11 05:28:00,080 - INFO - 
+--- 启动后处理格式验证 ---
+2025-09-11 05:28:00,080 - INFO - 正在按照 Victoria 3 (维多利亚3) 的本地化语法格式进行检查...
+2025-09-11 05:28:00,080 - INFO - 
+============================================================
+2025-09-11 05:28:00,080 - INFO - 📊 验证级别说明
+2025-09-11 05:28:00,080 - INFO - ============================================================
+2025-09-11 05:28:00,080 - INFO - 
+🔴 ERROR (错误) - 最高级别，必须修复：
+2025-09-11 05:28:00,081 - INFO -    • 方括号内包含中文: [中文函数] → 游戏崩溃
+2025-09-11 05:28:00,081 - INFO -    • 概念键包含中文: [Concept('中文key', ...)] → 无法识别
+2025-09-11 05:28:00,081 - INFO -    • 变量名包含中文: $中文变量$ → 显示异常
+2025-09-11 05:28:00,081 - INFO -    • 图标标签包含中文: @中文图标! → 无法加载
+2025-09-11 05:28:00,081 - INFO - 
+🟡 WARNING (警告) - 中等级别，建议修复：
+2025-09-11 05:28:00,081 - INFO -    • 格式化命令缺少空格: #b粗体文本#! → 应该 #b 粗体文本#!
+2025-09-11 05:28:00,081 - INFO -    • 未知格式化命令: #bold → 应该是 #b
+2025-09-11 05:28:00,081 - INFO -    • 标签不成对: #R 红色文本 → 缺少 #!
+2025-09-11 05:28:00,081 - INFO -    • 颜色标签不匹配: §R 红色 §Y 黄色 → 没有 §!
+2025-09-11 05:28:00,081 - INFO - 
+🔵 INFO (信息) - 最低级别，建议检查：
+2025-09-11 05:28:00,081 - INFO -    • 复杂提示框结构中的中文
+2025-09-11 05:28:00,082 - INFO -    • 作用域格式化中的中文
+2025-09-11 05:28:00,082 - INFO - 
+============================================================
+2025-09-11 05:28:00,082 - INFO - 正在扫描 1 个翻译文件...
+2025-09-11 05:28:00,100 - ERROR - [Victoria 3] Unknown formatting command `#tooltip`.
+2025-09-11 05:28:00,100 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#tooltip'。
+2025-09-11 05:28:00,100 - ERROR - [Victoria 3] Unknown formatting command `#tooltip`.
+2025-09-11 05:28:00,100 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#tooltip'。
+2025-09-11 05:28:00,108 - INFO - 初步筛查验证结果：0 个文件结构完好，1 个文件结构异常
+2025-09-11 05:28:00,108 - INFO - ⚠️ 发现格式问题，建议手动检查：
+2025-09-11 05:28:00,108 - INFO - 文件 1: ut_l_braz_por.yml (第 531 行)
+2025-09-11 05:28:00,108 - INFO -   - ERROR: Unknown formatting command `#tooltip`. - Victoria 3 不支持的格式化命令: '#tooltip'。
+2025-09-11 05:28:00,108 - INFO - 文件 1: ut_l_braz_por.yml (第 534 行)
+2025-09-11 05:28:00,108 - INFO -   - ERROR: Unknown formatting command `#tooltip`. - Victoria 3 不支持的格式化命令: '#tooltip'。
+2025-09-11 05:28:00,108 - INFO - 格式验证完成！
+2025-09-11 05:28:00,108 - INFO - 后处理验证完成 - 总计: 1 文件, 正常: 0, 问题: 1, 错误: 2, 警告: 0
+2025-09-11 05:28:00,109 - INFO - 校对进度表格已生成: J:\V3_Mod_Localization_Factory\my_translation\Multilanguage-Project Utopia - Extended Timeline - Technical Preview\校对进度表.csv
+2025-09-11 05:28:00,109 - INFO - 
+--- 正在翻译为: Русский ---
+2025-09-11 05:28:00,109 - INFO - --- 检测到 1 个翻译批次，启动并行处理模式 ---
+2025-09-11 05:28:00,109 - INFO - --- 检测到 27 个翻译批次，启动并行处理模式 ---
+2025-09-11 05:28:00,109 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:28:00,109 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:28:07,400 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:28:07,408 - INFO - AFC remote call 1 is done.
+2025-09-11 05:28:07,408 - INFO - 批次 1: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:28:07,408 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:28:07,408 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:28:16,339 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:28:16,346 - INFO - AFC remote call 1 is done.
+2025-09-11 05:28:16,346 - INFO - 批次 2: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:28:16,347 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:28:16,347 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:28:21,570 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:28:21,572 - INFO - AFC remote call 1 is done.
+2025-09-11 05:28:21,572 - INFO - 批次 3: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:28:21,572 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:28:21,573 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:28:27,538 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:28:27,541 - INFO - AFC remote call 1 is done.
+2025-09-11 05:28:27,541 - INFO - 批次 4: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:28:27,542 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:28:27,542 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:28:32,037 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:28:32,038 - INFO - AFC remote call 1 is done.
+2025-09-11 05:28:32,038 - INFO - 批次 5: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:28:32,038 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:28:32,039 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:28:37,100 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:28:37,101 - INFO - AFC remote call 1 is done.
+2025-09-11 05:28:37,101 - INFO - 批次 6: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:28:37,101 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:28:37,101 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:28:44,775 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:28:44,785 - INFO - AFC remote call 1 is done.
+2025-09-11 05:28:44,785 - INFO - 批次 7: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:28:44,786 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:28:44,786 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:28:52,481 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:28:52,484 - INFO - AFC remote call 1 is done.
+2025-09-11 05:28:52,485 - INFO - 批次 8: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:28:52,485 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:28:52,485 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:28:57,368 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:28:57,368 - INFO - AFC remote call 1 is done.
+2025-09-11 05:28:57,368 - INFO - 批次 9: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:28:57,368 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:28:57,368 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:29:01,860 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:29:01,861 - INFO - AFC remote call 1 is done.
+2025-09-11 05:29:01,861 - INFO - 批次 10: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:29:01,861 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:29:01,861 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:29:06,482 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:29:06,486 - INFO - AFC remote call 1 is done.
+2025-09-11 05:29:06,486 - INFO - 批次 11: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:29:06,487 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:29:06,487 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:29:11,238 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:29:11,242 - INFO - AFC remote call 1 is done.
+2025-09-11 05:29:11,242 - INFO - 批次 12: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:29:11,242 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:29:11,242 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:29:15,215 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:29:15,221 - INFO - AFC remote call 1 is done.
+2025-09-11 05:29:15,221 - INFO - 批次 13: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:29:15,222 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:29:15,222 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:29:20,416 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:29:20,419 - INFO - AFC remote call 1 is done.
+2025-09-11 05:29:20,419 - INFO - 批次 14: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:29:20,419 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:29:20,419 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:29:27,466 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:29:27,472 - INFO - AFC remote call 1 is done.
+2025-09-11 05:29:27,472 - INFO - 批次 15: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:29:27,472 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:29:27,473 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:29:33,735 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:29:33,742 - INFO - AFC remote call 1 is done.
+2025-09-11 05:29:33,742 - INFO - 批次 16: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:29:33,742 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:29:33,742 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:29:39,830 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:29:39,834 - INFO - AFC remote call 1 is done.
+2025-09-11 05:29:39,834 - INFO - 批次 17: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:29:39,835 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:29:39,835 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:29:45,083 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:29:45,087 - INFO - AFC remote call 1 is done.
+2025-09-11 05:29:45,087 - INFO - 批次 18: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:29:45,087 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:29:45,087 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:29:50,792 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:29:50,798 - INFO - AFC remote call 1 is done.
+2025-09-11 05:29:50,798 - INFO - 批次 19: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:29:50,798 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:29:50,798 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:29:55,715 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:29:55,718 - INFO - AFC remote call 1 is done.
+2025-09-11 05:29:55,718 - INFO - 批次 20: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:29:55,720 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:29:55,720 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:29:58,132 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:29:58,136 - INFO - AFC remote call 1 is done.
+2025-09-11 05:29:58,136 - INFO - 批次 21: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:29:58,137 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:29:58,137 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:30:00,501 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:30:00,504 - INFO - AFC remote call 1 is done.
+2025-09-11 05:30:00,504 - INFO - 批次 22: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:30:00,505 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:30:00,505 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:30:02,810 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:30:02,816 - INFO - AFC remote call 1 is done.
+2025-09-11 05:30:02,816 - INFO - 批次 23: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:30:02,817 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:30:02,817 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:30:05,607 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:30:05,613 - INFO - AFC remote call 1 is done.
+2025-09-11 05:30:05,613 - INFO - 批次 24: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:30:05,614 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:30:05,614 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:30:09,247 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:30:09,255 - INFO - AFC remote call 1 is done.
+2025-09-11 05:30:09,255 - INFO - 批次 25: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:30:09,255 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:30:09,256 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:30:13,529 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:30:13,535 - INFO - AFC remote call 1 is done.
+2025-09-11 05:30:13,535 - INFO - 批次 26: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:30:13,535 - INFO - 从 5 个文本中提取到 0 个相关术语
+2025-09-11 05:30:13,535 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:30:14,398 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:30:14,404 - INFO - AFC remote call 1 is done.
+2025-09-11 05:30:14,404 - INFO - 批次 27: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:30:14,404 - INFO - --- 所有批次并行处理完毕 ---
+2025-09-11 05:30:14,405 - INFO - 文件翻译完成: ut_l_english.yml
+2025-09-11 05:30:14,405 - INFO - 所有文件处理完成，共处理 1 个文件
+2025-09-11 05:30:14,408 - INFO - 文件 'Multilanguage-Project Utopia - Extended Timeline - Technical Preview\localization\russian\english\ut_l_russian.yml' 汉化完成。
+2025-09-11 05:30:14,408 - INFO - 文件构建完成: ut_l_english.yml
+2025-09-11 05:30:14,408 - INFO - 正在生成校对进度看板...
+2025-09-11 05:30:14,408 - INFO - 校对进度表格已生成: J:\V3_Mod_Localization_Factory\my_translation\Multilanguage-Project Utopia - Extended Timeline - Technical Preview\校对进度表.csv
+2025-09-11 05:30:14,408 - INFO - 校对进度看板生成成功
+2025-09-11 05:30:14,409 - INFO - 
+--- 启动后处理格式验证 ---
+2025-09-11 05:30:14,409 - INFO - 正在按照 Victoria 3 (维多利亚3) 的本地化语法格式进行检查...
+2025-09-11 05:30:14,409 - INFO - 
+============================================================
+2025-09-11 05:30:14,409 - INFO - 📊 验证级别说明
+2025-09-11 05:30:14,409 - INFO - ============================================================
+2025-09-11 05:30:14,409 - INFO - 
+🔴 ERROR (错误) - 最高级别，必须修复：
+2025-09-11 05:30:14,409 - INFO -    • 方括号内包含中文: [中文函数] → 游戏崩溃
+2025-09-11 05:30:14,409 - INFO -    • 概念键包含中文: [Concept('中文key', ...)] → 无法识别
+2025-09-11 05:30:14,409 - INFO -    • 变量名包含中文: $中文变量$ → 显示异常
+2025-09-11 05:30:14,409 - INFO -    • 图标标签包含中文: @中文图标! → 无法加载
+2025-09-11 05:30:14,409 - INFO - 
+🟡 WARNING (警告) - 中等级别，建议修复：
+2025-09-11 05:30:14,409 - INFO -    • 格式化命令缺少空格: #b粗体文本#! → 应该 #b 粗体文本#!
+2025-09-11 05:30:14,409 - INFO -    • 未知格式化命令: #bold → 应该是 #b
+2025-09-11 05:30:14,409 - INFO -    • 标签不成对: #R 红色文本 → 缺少 #!
+2025-09-11 05:30:14,409 - INFO -    • 颜色标签不匹配: §R 红色 §Y 黄色 → 没有 §!
+2025-09-11 05:30:14,409 - INFO - 
+🔵 INFO (信息) - 最低级别，建议检查：
+2025-09-11 05:30:14,409 - INFO -    • 复杂提示框结构中的中文
+2025-09-11 05:30:14,409 - INFO -    • 作用域格式化中的中文
+2025-09-11 05:30:14,409 - INFO - 
+============================================================
+2025-09-11 05:30:14,409 - INFO - 正在扫描 1 个翻译文件...
+2025-09-11 05:30:14,429 - ERROR - [Victoria 3] Unknown formatting command `#tooltip`.
+2025-09-11 05:30:14,429 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#tooltip'。
+2025-09-11 05:30:14,430 - ERROR - [Victoria 3] Unknown formatting command `#tooltip`.
+2025-09-11 05:30:14,430 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#tooltip'。
+2025-09-11 05:30:14,438 - INFO - 初步筛查验证结果：0 个文件结构完好，1 个文件结构异常
+2025-09-11 05:30:14,438 - INFO - ⚠️ 发现格式问题，建议手动检查：
+2025-09-11 05:30:14,439 - INFO - 文件 1: ut_l_russian.yml (第 531 行)
+2025-09-11 05:30:14,439 - INFO -   - ERROR: Unknown formatting command `#tooltip`. - Victoria 3 不支持的格式化命令: '#tooltip'。
+2025-09-11 05:30:14,439 - INFO - 文件 1: ut_l_russian.yml (第 534 行)
+2025-09-11 05:30:14,439 - INFO -   - ERROR: Unknown formatting command `#tooltip`. - Victoria 3 不支持的格式化命令: '#tooltip'。
+2025-09-11 05:30:14,439 - INFO - 格式验证完成！
+2025-09-11 05:30:14,439 - INFO - 后处理验证完成 - 总计: 1 文件, 正常: 0, 问题: 1, 错误: 2, 警告: 0
+2025-09-11 05:30:14,439 - INFO - 校对进度表格已生成: J:\V3_Mod_Localization_Factory\my_translation\Multilanguage-Project Utopia - Extended Timeline - Technical Preview\校对进度表.csv
+2025-09-11 05:30:14,439 - INFO - 
+--- 正在翻译为: Türkçe ---
+2025-09-11 05:30:14,439 - INFO - --- 检测到 1 个翻译批次，启动并行处理模式 ---
+2025-09-11 05:30:14,440 - INFO - --- 检测到 27 个翻译批次，启动并行处理模式 ---
+2025-09-11 05:30:14,440 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:30:14,440 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:30:22,690 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:30:22,696 - INFO - AFC remote call 1 is done.
+2025-09-11 05:30:22,696 - INFO - 批次 1: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:30:22,697 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:30:22,697 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:30:33,972 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:30:33,979 - INFO - AFC remote call 1 is done.
+2025-09-11 05:30:33,979 - INFO - 批次 2: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:30:33,979 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:30:33,980 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:30:42,028 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:30:42,031 - INFO - AFC remote call 1 is done.
+2025-09-11 05:30:42,031 - INFO - 批次 3: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:30:42,032 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:30:42,032 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:30:51,879 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:30:51,881 - INFO - AFC remote call 1 is done.
+2025-09-11 05:30:51,881 - INFO - 批次 4: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:30:51,881 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:30:51,881 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:30:59,943 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:30:59,951 - INFO - AFC remote call 1 is done.
+2025-09-11 05:30:59,951 - INFO - 批次 5: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:30:59,952 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:30:59,952 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:31:05,502 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:31:05,504 - INFO - AFC remote call 1 is done.
+2025-09-11 05:31:05,505 - INFO - 批次 6: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:31:05,505 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:31:05,505 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:31:14,431 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:31:14,437 - INFO - AFC remote call 1 is done.
+2025-09-11 05:31:14,437 - INFO - 批次 7: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:31:14,438 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:31:14,438 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:31:23,339 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:31:23,344 - INFO - AFC remote call 1 is done.
+2025-09-11 05:31:23,344 - INFO - 批次 8: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:31:23,345 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:31:23,345 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:31:29,166 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:31:29,174 - INFO - AFC remote call 1 is done.
+2025-09-11 05:31:29,174 - INFO - 批次 9: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:31:29,175 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:31:29,175 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:31:37,062 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:31:37,066 - INFO - AFC remote call 1 is done.
+2025-09-11 05:31:37,066 - INFO - 批次 10: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:31:37,066 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:31:37,067 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:31:42,694 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:31:42,696 - INFO - AFC remote call 1 is done.
+2025-09-11 05:31:42,696 - INFO - 批次 11: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:31:42,696 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:31:42,696 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:31:54,219 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:31:54,225 - INFO - AFC remote call 1 is done.
+2025-09-11 05:31:54,225 - INFO - 批次 12: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:31:54,226 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:31:54,226 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:31:58,968 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:31:58,974 - INFO - AFC remote call 1 is done.
+2025-09-11 05:31:58,974 - INFO - 批次 13: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:31:58,974 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:31:58,974 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:32:04,782 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:32:04,782 - INFO - AFC remote call 1 is done.
+2025-09-11 05:32:04,783 - INFO - 批次 14: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:32:04,783 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:32:04,783 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:32:12,505 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:32:12,509 - INFO - AFC remote call 1 is done.
+2025-09-11 05:32:12,509 - INFO - 批次 15: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:32:12,510 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:32:12,510 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:32:20,311 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:32:20,313 - INFO - AFC remote call 1 is done.
+2025-09-11 05:32:20,313 - INFO - 批次 16: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:32:20,314 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:32:20,314 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:32:27,229 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:32:27,234 - INFO - AFC remote call 1 is done.
+2025-09-11 05:32:27,234 - INFO - 批次 17: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:32:27,235 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:32:27,235 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:32:33,964 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:32:33,966 - INFO - AFC remote call 1 is done.
+2025-09-11 05:32:33,966 - INFO - 批次 18: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:32:33,966 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:32:33,966 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:32:40,461 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:32:40,462 - INFO - AFC remote call 1 is done.
+2025-09-11 05:32:40,463 - INFO - 批次 19: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:32:40,463 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:32:40,463 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:32:46,732 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:32:46,734 - INFO - AFC remote call 1 is done.
+2025-09-11 05:32:46,734 - INFO - 批次 20: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:32:46,735 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:32:46,735 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:32:49,093 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:32:49,097 - INFO - AFC remote call 1 is done.
+2025-09-11 05:32:49,097 - INFO - 批次 21: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:32:49,097 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:32:49,098 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:32:53,619 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:32:53,621 - INFO - AFC remote call 1 is done.
+2025-09-11 05:32:53,621 - INFO - 批次 22: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:32:53,622 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:32:53,622 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:32:58,735 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:32:58,738 - INFO - AFC remote call 1 is done.
+2025-09-11 05:32:58,738 - INFO - 批次 23: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:32:58,739 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:32:58,739 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:33:01,406 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:33:01,411 - INFO - AFC remote call 1 is done.
+2025-09-11 05:33:01,411 - INFO - 批次 24: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:33:01,412 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:33:01,412 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:33:04,893 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:33:04,899 - INFO - AFC remote call 1 is done.
+2025-09-11 05:33:04,899 - INFO - 批次 25: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:33:04,900 - INFO - 从 40 个文本中提取到 0 个相关术语
+2025-09-11 05:33:04,900 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:33:09,309 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:33:09,322 - INFO - AFC remote call 1 is done.
+2025-09-11 05:33:09,322 - INFO - 批次 26: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:33:09,323 - INFO - 从 5 个文本中提取到 0 个相关术语
+2025-09-11 05:33:09,323 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:33:10,341 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:33:10,342 - INFO - AFC remote call 1 is done.
+2025-09-11 05:33:10,342 - INFO - 批次 27: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:33:10,342 - INFO - --- 所有批次并行处理完毕 ---
+2025-09-11 05:33:10,343 - INFO - 文件翻译完成: ut_l_english.yml
+2025-09-11 05:33:10,343 - INFO - 所有文件处理完成，共处理 1 个文件
+2025-09-11 05:33:10,346 - INFO - 文件 'Multilanguage-Project Utopia - Extended Timeline - Technical Preview\localization\turkish\english\ut_l_turkish.yml' 汉化完成。
+2025-09-11 05:33:10,346 - INFO - 文件构建完成: ut_l_english.yml
+2025-09-11 05:33:10,346 - INFO - 正在生成校对进度看板...
+2025-09-11 05:33:10,347 - INFO - 校对进度表格已生成: J:\V3_Mod_Localization_Factory\my_translation\Multilanguage-Project Utopia - Extended Timeline - Technical Preview\校对进度表.csv
+2025-09-11 05:33:10,347 - INFO - 校对进度看板生成成功
+2025-09-11 05:33:10,347 - INFO - 
+--- 启动后处理格式验证 ---
+2025-09-11 05:33:10,347 - INFO - 正在按照 Victoria 3 (维多利亚3) 的本地化语法格式进行检查...
+2025-09-11 05:33:10,347 - INFO - 
+============================================================
+2025-09-11 05:33:10,347 - INFO - 📊 验证级别说明
+2025-09-11 05:33:10,347 - INFO - ============================================================
+2025-09-11 05:33:10,348 - INFO - 
+🔴 ERROR (错误) - 最高级别，必须修复：
+2025-09-11 05:33:10,348 - INFO -    • 方括号内包含中文: [中文函数] → 游戏崩溃
+2025-09-11 05:33:10,348 - INFO -    • 概念键包含中文: [Concept('中文key', ...)] → 无法识别
+2025-09-11 05:33:10,348 - INFO -    • 变量名包含中文: $中文变量$ → 显示异常
+2025-09-11 05:33:10,348 - INFO -    • 图标标签包含中文: @中文图标! → 无法加载
+2025-09-11 05:33:10,348 - INFO - 
+🟡 WARNING (警告) - 中等级别，建议修复：
+2025-09-11 05:33:10,348 - INFO -    • 格式化命令缺少空格: #b粗体文本#! → 应该 #b 粗体文本#!
+2025-09-11 05:33:10,348 - INFO -    • 未知格式化命令: #bold → 应该是 #b
+2025-09-11 05:33:10,348 - INFO -    • 标签不成对: #R 红色文本 → 缺少 #!
+2025-09-11 05:33:10,348 - INFO -    • 颜色标签不匹配: §R 红色 §Y 黄色 → 没有 §!
+2025-09-11 05:33:10,348 - INFO - 
+🔵 INFO (信息) - 最低级别，建议检查：
+2025-09-11 05:33:10,348 - INFO -    • 复杂提示框结构中的中文
+2025-09-11 05:33:10,348 - INFO -    • 作用域格式化中的中文
+2025-09-11 05:33:10,348 - INFO - 
+============================================================
+2025-09-11 05:33:10,348 - INFO - 正在扫描 1 个翻译文件...
+2025-09-11 05:33:10,369 - ERROR - [Victoria 3] Unknown formatting command `#tooltip`.
+2025-09-11 05:33:10,369 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#tooltip'。
+2025-09-11 05:33:10,369 - ERROR - [Victoria 3] Unknown formatting command `#tooltip`.
+2025-09-11 05:33:10,370 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#tooltip'。
+2025-09-11 05:33:10,377 - INFO - 初步筛查验证结果：0 个文件结构完好，1 个文件结构异常
+2025-09-11 05:33:10,377 - INFO - ⚠️ 发现格式问题，建议手动检查：
+2025-09-11 05:33:10,377 - INFO - 文件 1: ut_l_turkish.yml (第 531 行)
+2025-09-11 05:33:10,378 - INFO -   - ERROR: Unknown formatting command `#tooltip`. - Victoria 3 不支持的格式化命令: '#tooltip'。
+2025-09-11 05:33:10,378 - INFO - 文件 1: ut_l_turkish.yml (第 534 行)
+2025-09-11 05:33:10,378 - INFO -   - ERROR: Unknown formatting command `#tooltip`. - Victoria 3 不支持的格式化命令: '#tooltip'。
+2025-09-11 05:33:10,378 - INFO - 格式验证完成！
+2025-09-11 05:33:10,378 - INFO - 后处理验证完成 - 总计: 1 文件, 正常: 0, 问题: 1, 错误: 2, 警告: 0
+2025-09-11 05:33:10,378 - INFO - 校对进度表格已生成: J:\V3_Mod_Localization_Factory\my_translation\Multilanguage-Project Utopia - Extended Timeline - Technical Preview\校对进度表.csv
+2025-09-11 05:33:10,378 - INFO - 
+--- 正在处理 metadata.json ---
+2025-09-11 05:33:10,379 - INFO - 正在翻译 mod name: "Project Utopia - Extended Time..."
+2025-09-11 05:33:10,443 - INFO - 从 1 个文本中提取到 0 个相关术语
+2025-09-11 05:33:10,444 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:33:11,011 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:33:11,015 - INFO - AFC remote call 1 is done.
+2025-09-11 05:33:11,015 - INFO - 单条翻译: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:33:11,015 - INFO - 正在翻译 mod short description: "Project Utopia extends the bas..."
+2025-09-11 05:33:11,134 - INFO - 从 1 个文本中提取到 1 个相关术语
+2025-09-11 05:33:11,134 - INFO - 单条翻译: 注入 1 个词典术语
+2025-09-11 05:33:11,134 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 05:33:13,899 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 05:33:13,904 - INFO - AFC remote call 1 is done.
+2025-09-11 05:33:13,904 - INFO - 单条翻译: 禁用思考功能 (thinking_budget=0)
+2025-09-11 05:33:13,905 - INFO - metadata.json 汉化完成。
+2025-09-11 05:33:13,905 - INFO - 翻译工作流完成！
+2025-09-11 05:33:13,905 - INFO - 输出文件夹: Multilanguage-Project Utopia - Extended Timeline - Technical Preview
+2025-09-11 05:33:13,906 - INFO - 工作流完成！

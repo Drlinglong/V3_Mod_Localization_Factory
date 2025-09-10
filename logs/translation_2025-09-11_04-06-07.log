@@ -1,0 +1,477 @@
+2025-09-11 04:06:07,724 - INFO - 日志系统初始化完成
+2025-09-11 04:06:07,724 - INFO - 
+请选择游戏:
+2025-09-11 04:06:07,724 - INFO -   [1] Victoria 3 (维多利亚3)
+2025-09-11 04:06:07,724 - INFO -   [2] Stellaris (群星)
+2025-09-11 04:06:07,724 - INFO -   [3] Europa Universalis IV (欧陆风云4)
+2025-09-11 04:06:07,725 - INFO -   [4] Hearts of Iron IV (钢铁雄心4)
+2025-09-11 04:06:07,725 - INFO -   [5] Crusader Kings III (十字军之王3)
+2025-09-11 04:06:09,066 - INFO - 请选择API供应商:
+2025-09-11 04:06:09,066 - INFO -   [1] Gemini
+2025-09-11 04:06:09,066 - INFO -   [2] Openai
+2025-09-11 04:06:09,067 - INFO -   [3] Qwen - （中国大陆地区用户请用这个）
+2025-09-11 04:06:10,207 - INFO - 请选择要汉化的Mod：
+2025-09-11 04:06:10,207 - INFO -   [1] Australia & New Zealand Flavor Pack
+2025-09-11 04:06:10,207 - INFO -   [2] Blue Archive
+2025-09-11 04:06:10,207 - INFO -   [3] Blue Archive - test
+2025-09-11 04:06:10,207 - INFO -   [4] Forts & Engineers
+2025-09-11 04:06:10,207 - INFO -   [5] GORA UI
+2025-09-11 04:06:10,207 - INFO -   [6] Hydra's More Agenda's
+2025-09-11 04:06:10,207 - INFO -   [7] KuatAncientEmpire
+2025-09-11 04:06:10,207 - INFO -   [8] MODJAM2025
+2025-09-11 04:06:10,207 - INFO -   [9] Offer Convoy Contribution
+2025-09-11 04:06:10,208 - INFO -   [10] parallelprocessor-test
+2025-09-11 04:06:10,208 - INFO -   [11] Project Utopia - Extended Timeline - Technical Preview
+2025-09-11 04:06:10,208 - INFO -   [12] Tech & Res
+2025-09-11 04:06:10,208 - INFO -   [13] TEST-ANZAC
+2025-09-11 04:06:10,208 - INFO -   [14] UKrework
+2025-09-11 04:06:11,679 - INFO - 
+你选择了: Project Utopia - Extended Timeline - Technical Preview
+2025-09-11 04:06:11,679 - INFO - 是否要清理源MOD文件夹 'Project Utopia - Extended Timeline - Technical Preview' 以节省磁盘空间？
+这将删除除 '.metadata', 'localization', 和 'thumbnail.png' 之外的所有文件。
+请输入 Y 或 N: 
+2025-09-11 04:06:39,197 - INFO - 已确认清理源文件
+2025-09-11 04:06:39,197 - INFO - 
+--- 正在获取Mod主题上下文 ---
+2025-09-11 04:06:39,197 - INFO - 已识别Mod名称为: 'Project Utopia - Extended Timeline - Technical Preview'
+2025-09-11 04:06:40,585 - INFO - 最终使用的主题上下文为: 'Project Utopia - Extended Timeline - Technical Preview'
+2025-09-11 04:06:40,585 - INFO - 
+请选择源语言:
+2025-09-11 04:06:40,585 - INFO -   [1] English
+2025-09-11 04:06:40,585 - INFO -   [2] 简体中文
+2025-09-11 04:06:40,585 - INFO -   [3] Français
+2025-09-11 04:06:40,585 - INFO -   [4] Deutsch
+2025-09-11 04:06:40,585 - INFO -   [5] Español
+2025-09-11 04:06:40,585 - INFO -   [6] 日本語
+2025-09-11 04:06:40,586 - INFO -   [7] 한국어
+2025-09-11 04:06:40,586 - INFO -   [8] Polski
+2025-09-11 04:06:40,586 - INFO -   [9] Português do Brasil
+2025-09-11 04:06:40,586 - INFO -   [10] Русский
+2025-09-11 04:06:40,586 - INFO -   [11] Türkçe
+2025-09-11 04:06:44,425 - INFO - 
+请选择目标语言:
+2025-09-11 04:06:44,425 - INFO -   [0] 翻译为其余所有10种语言
+2025-09-11 04:06:44,425 - INFO -   [c] 自定义/套壳其他语言...
+2025-09-11 04:06:44,425 - INFO -   [1] 简体中文
+2025-09-11 04:06:44,425 - INFO -   [2] Français
+2025-09-11 04:06:44,425 - INFO -   [3] Deutsch
+2025-09-11 04:06:44,425 - INFO -   [4] Español
+2025-09-11 04:06:44,425 - INFO -   [5] 日本語
+2025-09-11 04:06:44,425 - INFO -   [6] 한국어
+2025-09-11 04:06:44,426 - INFO -   [7] Polski
+2025-09-11 04:06:44,426 - INFO -   [8] Português do Brasil
+2025-09-11 04:06:44,426 - INFO -   [9] Русский
+2025-09-11 04:06:44,426 - INFO -   [10] Türkçe
+2025-09-11 04:06:45,972 - INFO - 词典加载成功: 743 条术语
+2025-09-11 04:06:45,972 - INFO - 未找到外挂词典
+2025-09-11 04:06:45,973 - INFO - 请选择术语模糊匹配模式:
+2025-09-11 04:06:45,973 - INFO - [1] 严格模式 - 禁用模糊匹配 
+2025-09-11 04:06:45,973 - INFO - [2] 宽松模式 - 启用模糊匹配 (容忍拼写错误)
+2025-09-11 04:06:45,973 - INFO - 如果你不知道这是什么，建议你打开术语模糊匹配
+2025-09-11 04:06:47,070 - INFO - === 工程总览 ===
+2025-09-11 04:06:47,070 - INFO - 目标MOD: Project Utopia - Extended Timeline - Technical Preview
+2025-09-11 04:06:47,071 - INFO - API供应商: Gemini
+2025-09-11 04:06:47,071 - INFO - 游戏类型: Victoria 3 (维多利亚3)
+2025-09-11 04:06:47,071 - INFO - 源语言: English
+2025-09-11 04:06:47,071 - INFO - 目标语言: 简体中文
+2025-09-11 04:06:47,071 - INFO - 词典配置: 仅主词典(743条)
+2025-09-11 04:06:47,071 - INFO - 启用模糊匹配: 启用模糊匹配
+2025-09-11 04:06:47,071 - INFO - 是否清理多余文件: 将清理源文件
+2025-09-11 04:06:49,227 - INFO - 翻译已确认，开始执行...
+2025-09-11 04:06:49,227 - INFO - 正在执行源文件清理...
+2025-09-11 04:06:49,227 - INFO - 
+--- 开始精简源Mod文件夹: Project Utopia - Extended Timeline - Technical Preview ---
+2025-09-11 04:06:49,227 - INFO - 正在删除文件...
+2025-09-11 04:06:49,228 - INFO - 清理完成！
+2025-09-11 04:06:49,228 - INFO - 源文件清理完成
+2025-09-11 04:06:49,228 - INFO - 术语模糊匹配模式已设置为: 宽松模式
+2025-09-11 04:06:49,228 - INFO - 词典状态: 仅主词典(743条)
+2025-09-11 04:06:49,228 - INFO - 
+--- 启动 '首次翻译' 工作流，目标: Project Utopia - Extended Timeline - Technical Preview ---
+2025-09-11 04:06:49,722 - INFO - Gemini client initialized successfully, using model: gemini-2.5-flash
+2025-09-11 04:06:49,722 - INFO - 词典加载成功: 743 条术语
+2025-09-11 04:06:49,723 - INFO - 输出目录结构创建成功: J:\V3_Mod_Localization_Factory\my_translation\zh-CN-Project Utopia - Extended Timeline - Technical Preview
+2025-09-11 04:06:49,723 - INFO - 
+--- 正在处理资产文件 (封面图、描述文件等) ---
+2025-09-11 04:06:49,724 - INFO - 资产文件 'thumbnail.png' 复制完成。
+2025-09-11 04:06:49,725 - INFO - 
+--- 正在解析文件: source_mod\Project Utopia - Extended Timeline - Technical Preview\localization\english\ut_l_english.yml ---
+2025-09-11 04:06:49,728 - INFO - 提取到 1045 条可翻译文本。
+2025-09-11 04:06:49,729 - INFO - 
+--- 正在翻译为: 简体中文 ---
+2025-09-11 04:06:49,729 - INFO - --- 检测到 1 个翻译批次，启动并行处理模式 ---
+2025-09-11 04:06:49,729 - INFO - --- 检测到 27 个翻译批次，启动并行处理模式 ---
+2025-09-11 04:06:54,459 - INFO - 从 40 个文本中提取到 29 个相关术语
+2025-09-11 04:06:54,459 - INFO - 批次 1: 注入 29 个词典术语
+2025-09-11 04:06:54,459 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 04:07:02,605 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 04:07:02,606 - INFO - AFC remote call 1 is done.
+2025-09-11 04:07:02,606 - INFO - 批次 1: 禁用思考功能 (thinking_budget=0)
+2025-09-11 04:07:07,410 - INFO - 从 40 个文本中提取到 37 个相关术语
+2025-09-11 04:07:07,411 - INFO - 批次 2: 注入 37 个词典术语
+2025-09-11 04:07:07,411 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 04:07:14,739 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 04:07:14,745 - INFO - AFC remote call 1 is done.
+2025-09-11 04:07:14,745 - INFO - 批次 2: 禁用思考功能 (thinking_budget=0)
+2025-09-11 04:07:18,168 - INFO - 从 40 个文本中提取到 22 个相关术语
+2025-09-11 04:07:18,168 - INFO - 批次 3: 注入 22 个词典术语
+2025-09-11 04:07:18,168 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 04:07:22,578 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 04:07:22,579 - INFO - AFC remote call 1 is done.
+2025-09-11 04:07:22,579 - INFO - 批次 3: 禁用思考功能 (thinking_budget=0)
+2025-09-11 04:07:25,982 - INFO - 从 40 个文本中提取到 19 个相关术语
+2025-09-11 04:07:25,982 - INFO - 批次 4: 注入 19 个词典术语
+2025-09-11 04:07:25,982 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 04:07:31,335 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 04:07:31,336 - INFO - AFC remote call 1 is done.
+2025-09-11 04:07:31,336 - INFO - 批次 4: 禁用思考功能 (thinking_budget=0)
+2025-09-11 04:07:33,648 - INFO - 从 40 个文本中提取到 16 个相关术语
+2025-09-11 04:07:33,648 - INFO - 批次 5: 注入 16 个词典术语
+2025-09-11 04:07:33,648 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 04:07:37,990 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 04:07:37,991 - INFO - AFC remote call 1 is done.
+2025-09-11 04:07:37,991 - INFO - 批次 5: 禁用思考功能 (thinking_budget=0)
+2025-09-11 04:07:41,054 - INFO - 从 40 个文本中提取到 13 个相关术语
+2025-09-11 04:07:41,054 - INFO - 批次 6: 注入 13 个词典术语
+2025-09-11 04:07:41,054 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 04:07:46,378 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 04:07:46,379 - INFO - AFC remote call 1 is done.
+2025-09-11 04:07:46,379 - INFO - 批次 6: 禁用思考功能 (thinking_budget=0)
+2025-09-11 04:07:51,382 - INFO - 从 40 个文本中提取到 31 个相关术语
+2025-09-11 04:07:51,382 - INFO - 批次 7: 注入 31 个词典术语
+2025-09-11 04:07:51,383 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 04:07:59,401 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 04:07:59,403 - INFO - AFC remote call 1 is done.
+2025-09-11 04:07:59,404 - INFO - 批次 7: 禁用思考功能 (thinking_budget=0)
+2025-09-11 04:08:04,219 - INFO - 从 40 个文本中提取到 20 个相关术语
+2025-09-11 04:08:04,219 - INFO - 批次 8: 注入 20 个词典术语
+2025-09-11 04:08:04,219 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 04:08:13,799 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 04:08:13,801 - INFO - AFC remote call 1 is done.
+2025-09-11 04:08:13,801 - INFO - 批次 8: 禁用思考功能 (thinking_budget=0)
+2025-09-11 04:08:16,854 - INFO - 从 40 个文本中提取到 13 个相关术语
+2025-09-11 04:08:16,854 - INFO - 批次 9: 注入 13 个词典术语
+2025-09-11 04:08:16,854 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 04:08:21,870 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 04:08:21,871 - INFO - AFC remote call 1 is done.
+2025-09-11 04:08:21,871 - INFO - 批次 9: 禁用思考功能 (thinking_budget=0)
+2025-09-11 04:08:24,974 - INFO - 从 40 个文本中提取到 17 个相关术语
+2025-09-11 04:08:24,974 - INFO - 批次 10: 注入 17 个词典术语
+2025-09-11 04:08:24,974 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 04:08:29,403 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 04:08:29,404 - INFO - AFC remote call 1 is done.
+2025-09-11 04:08:29,404 - INFO - 批次 10: 禁用思考功能 (thinking_budget=0)
+2025-09-11 04:08:32,296 - INFO - 从 40 个文本中提取到 20 个相关术语
+2025-09-11 04:08:32,296 - INFO - 批次 11: 注入 20 个词典术语
+2025-09-11 04:08:32,297 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 04:08:37,133 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 04:08:37,133 - INFO - AFC remote call 1 is done.
+2025-09-11 04:08:37,134 - INFO - 批次 11: 禁用思考功能 (thinking_budget=0)
+2025-09-11 04:08:39,547 - INFO - 从 40 个文本中提取到 15 个相关术语
+2025-09-11 04:08:39,547 - INFO - 批次 12: 注入 15 个词典术语
+2025-09-11 04:08:39,548 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 04:08:43,620 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 04:08:43,622 - INFO - AFC remote call 1 is done.
+2025-09-11 04:08:43,622 - INFO - 批次 12: 禁用思考功能 (thinking_budget=0)
+2025-09-11 04:08:45,760 - INFO - 从 40 个文本中提取到 15 个相关术语
+2025-09-11 04:08:45,760 - INFO - 批次 13: 注入 15 个词典术语
+2025-09-11 04:08:45,760 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 04:08:49,897 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 04:08:49,898 - INFO - AFC remote call 1 is done.
+2025-09-11 04:08:49,899 - INFO - 批次 13: 禁用思考功能 (thinking_budget=0)
+2025-09-11 04:08:52,789 - INFO - 从 40 个文本中提取到 11 个相关术语
+2025-09-11 04:08:52,790 - INFO - 批次 14: 注入 11 个词典术语
+2025-09-11 04:08:52,790 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 04:08:57,401 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 04:08:57,402 - INFO - AFC remote call 1 is done.
+2025-09-11 04:08:57,402 - INFO - 批次 14: 禁用思考功能 (thinking_budget=0)
+2025-09-11 04:09:01,329 - INFO - 从 40 个文本中提取到 29 个相关术语
+2025-09-11 04:09:01,330 - INFO - 批次 15: 注入 29 个词典术语
+2025-09-11 04:09:01,330 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 04:09:08,211 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 04:09:08,214 - INFO - AFC remote call 1 is done.
+2025-09-11 04:09:08,214 - INFO - 批次 15: 禁用思考功能 (thinking_budget=0)
+2025-09-11 04:09:11,418 - INFO - 从 40 个文本中提取到 32 个相关术语
+2025-09-11 04:09:11,419 - INFO - 批次 16: 注入 32 个词典术语
+2025-09-11 04:09:11,419 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 04:09:16,552 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 04:09:16,553 - INFO - AFC remote call 1 is done.
+2025-09-11 04:09:16,553 - INFO - 批次 16: 禁用思考功能 (thinking_budget=0)
+2025-09-11 04:09:19,708 - INFO - 从 40 个文本中提取到 16 个相关术语
+2025-09-11 04:09:19,709 - INFO - 批次 17: 注入 16 个词典术语
+2025-09-11 04:09:19,709 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 04:09:24,974 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 04:09:24,975 - INFO - AFC remote call 1 is done.
+2025-09-11 04:09:24,975 - INFO - 批次 17: 禁用思考功能 (thinking_budget=0)
+2025-09-11 04:09:28,216 - INFO - 从 40 个文本中提取到 21 个相关术语
+2025-09-11 04:09:28,216 - INFO - 批次 18: 注入 21 个词典术语
+2025-09-11 04:09:28,217 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 04:09:34,400 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 04:09:34,402 - INFO - AFC remote call 1 is done.
+2025-09-11 04:09:34,402 - INFO - 批次 18: 禁用思考功能 (thinking_budget=0)
+2025-09-11 04:09:37,754 - INFO - 从 40 个文本中提取到 26 个相关术语
+2025-09-11 04:09:37,754 - INFO - 批次 19: 注入 26 个词典术语
+2025-09-11 04:09:37,754 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 04:09:42,669 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 04:09:42,670 - INFO - AFC remote call 1 is done.
+2025-09-11 04:09:42,670 - INFO - 批次 19: 禁用思考功能 (thinking_budget=0)
+2025-09-11 04:09:45,667 - INFO - 从 40 个文本中提取到 27 个相关术语
+2025-09-11 04:09:45,667 - INFO - 批次 20: 注入 27 个词典术语
+2025-09-11 04:09:45,667 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 04:09:50,015 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 04:09:50,017 - INFO - AFC remote call 1 is done.
+2025-09-11 04:09:50,017 - INFO - 批次 20: 禁用思考功能 (thinking_budget=0)
+2025-09-11 04:09:50,739 - INFO - 从 40 个文本中提取到 3 个相关术语
+2025-09-11 04:09:50,739 - INFO - 批次 21: 注入 3 个词典术语
+2025-09-11 04:09:50,739 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 04:09:52,893 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 04:09:52,895 - INFO - AFC remote call 1 is done.
+2025-09-11 04:09:52,895 - INFO - 批次 21: 禁用思考功能 (thinking_budget=0)
+2025-09-11 04:09:53,741 - INFO - 从 40 个文本中提取到 2 个相关术语
+2025-09-11 04:09:53,741 - INFO - 批次 22: 注入 2 个词典术语
+2025-09-11 04:09:53,741 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 04:09:56,082 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 04:09:56,083 - INFO - AFC remote call 1 is done.
+2025-09-11 04:09:56,083 - INFO - 批次 22: 禁用思考功能 (thinking_budget=0)
+2025-09-11 04:09:56,795 - INFO - 从 40 个文本中提取到 4 个相关术语
+2025-09-11 04:09:56,795 - INFO - 批次 23: 注入 4 个词典术语
+2025-09-11 04:09:56,795 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 04:09:58,981 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 04:09:58,981 - INFO - AFC remote call 1 is done.
+2025-09-11 04:09:58,981 - INFO - 批次 23: 禁用思考功能 (thinking_budget=0)
+2025-09-11 04:09:59,834 - INFO - 从 40 个文本中提取到 7 个相关术语
+2025-09-11 04:09:59,834 - INFO - 批次 24: 注入 7 个词典术语
+2025-09-11 04:09:59,834 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 04:10:02,246 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 04:10:02,247 - INFO - AFC remote call 1 is done.
+2025-09-11 04:10:02,247 - INFO - 批次 24: 禁用思考功能 (thinking_budget=0)
+2025-09-11 04:10:03,710 - INFO - 从 40 个文本中提取到 8 个相关术语
+2025-09-11 04:10:03,710 - INFO - 批次 25: 注入 8 个词典术语
+2025-09-11 04:10:03,711 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 04:10:06,528 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 04:10:06,529 - INFO - AFC remote call 1 is done.
+2025-09-11 04:10:06,529 - INFO - 批次 25: 禁用思考功能 (thinking_budget=0)
+2025-09-11 04:10:08,940 - INFO - 从 40 个文本中提取到 15 个相关术语
+2025-09-11 04:10:08,940 - INFO - 批次 26: 注入 15 个词典术语
+2025-09-11 04:10:08,940 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 04:10:13,061 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 04:10:13,062 - INFO - AFC remote call 1 is done.
+2025-09-11 04:10:13,062 - INFO - 批次 26: 禁用思考功能 (thinking_budget=0)
+2025-09-11 04:10:13,203 - INFO - 从 5 个文本中提取到 2 个相关术语
+2025-09-11 04:10:13,203 - INFO - 批次 27: 注入 2 个词典术语
+2025-09-11 04:10:13,203 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 04:10:13,922 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 04:10:13,923 - INFO - AFC remote call 1 is done.
+2025-09-11 04:10:13,923 - INFO - 批次 27: 禁用思考功能 (thinking_budget=0)
+2025-09-11 04:10:13,923 - INFO - --- 所有批次并行处理完毕 ---
+2025-09-11 04:10:13,923 - INFO - 文件翻译完成: ut_l_english.yml
+2025-09-11 04:10:13,923 - INFO - 所有文件处理完成，共处理 1 个文件
+2025-09-11 04:10:13,927 - INFO - 文件 'zh-CN-Project Utopia - Extended Timeline - Technical Preview\localization\simp_chinese\english\ut_l_simp_chinese.yml' 汉化完成。
+2025-09-11 04:10:13,927 - INFO - 文件构建完成: ut_l_english.yml
+2025-09-11 04:10:13,927 - INFO - 正在生成校对进度看板...
+2025-09-11 04:10:13,928 - INFO - 校对进度表格已生成: J:\V3_Mod_Localization_Factory\my_translation\zh-CN-Project Utopia - Extended Timeline - Technical Preview\校对进度表.csv
+2025-09-11 04:10:13,928 - INFO - 校对进度看板生成成功
+2025-09-11 04:10:13,934 - INFO - 
+--- 启动后处理格式验证 ---
+2025-09-11 04:10:13,934 - INFO - 正在按照 Victoria 3 (维多利亚3) 的本地化语法格式进行检查...
+2025-09-11 04:10:13,934 - INFO - 
+============================================================
+2025-09-11 04:10:13,934 - INFO - 📊 验证级别说明
+2025-09-11 04:10:13,934 - INFO - ============================================================
+2025-09-11 04:10:13,934 - INFO - 
+🔴 ERROR (错误) - 最高级别，必须修复：
+2025-09-11 04:10:13,934 - INFO -    • 方括号内包含中文: [中文函数] → 游戏崩溃
+2025-09-11 04:10:13,934 - INFO -    • 概念键包含中文: [Concept('中文key', ...)] → 无法识别
+2025-09-11 04:10:13,934 - INFO -    • 变量名包含中文: $中文变量$ → 显示异常
+2025-09-11 04:10:13,934 - INFO -    • 图标标签包含中文: @中文图标! → 无法加载
+2025-09-11 04:10:13,934 - INFO - 
+🟡 WARNING (警告) - 中等级别，建议修复：
+2025-09-11 04:10:13,934 - INFO -    • 格式化命令缺少空格: #b粗体文本#! → 应该 #b 粗体文本#!
+2025-09-11 04:10:13,934 - INFO -    • 未知格式化命令: #bold → 应该是 #b
+2025-09-11 04:10:13,934 - INFO -    • 标签不成对: #R 红色文本 → 缺少 #!
+2025-09-11 04:10:13,934 - INFO -    • 颜色标签不匹配: §R 红色 §Y 黄色 → 没有 §!
+2025-09-11 04:10:13,934 - INFO - 
+🔵 INFO (信息) - 最低级别，建议检查：
+2025-09-11 04:10:13,934 - INFO -    • 复杂提示框结构中的中文
+2025-09-11 04:10:13,935 - INFO -    • 作用域格式化中的中文
+2025-09-11 04:10:13,935 - INFO - 
+============================================================
+2025-09-11 04:10:13,935 - INFO - 正在扫描 1 个翻译文件...
+2025-09-11 04:10:13,951 - ERROR - [Victoria 3] Unknown formatting command `#BOLD`.
+2025-09-11 04:10:13,951 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#BOLD'。
+2025-09-11 04:10:13,951 - ERROR - [Victoria 3] Unknown formatting command `#BOLD`.
+2025-09-11 04:10:13,951 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#BOLD'。
+2025-09-11 04:10:13,952 - ERROR - [Victoria 3] Unknown formatting command `#BOLD`.
+2025-09-11 04:10:13,952 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#BOLD'。
+2025-09-11 04:10:13,952 - ERROR - [Victoria 3] Unknown formatting command `#v`.
+2025-09-11 04:10:13,952 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#v'。
+2025-09-11 04:10:13,952 - ERROR - [Victoria 3] Unknown formatting command `#v`.
+2025-09-11 04:10:13,953 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#v'。
+2025-09-11 04:10:13,953 - ERROR - [Victoria 3] Unknown formatting command `#v`.
+2025-09-11 04:10:13,953 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#v'。
+2025-09-11 04:10:13,953 - ERROR - [Victoria 3] Unknown formatting command `#v`.
+2025-09-11 04:10:13,953 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#v'。
+2025-09-11 04:10:13,953 - ERROR - [Victoria 3] Unknown formatting command `#v`.
+2025-09-11 04:10:13,953 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#v'。
+2025-09-11 04:10:13,953 - ERROR - [Victoria 3] Unknown formatting command `#v`.
+2025-09-11 04:10:13,953 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#v'。
+2025-09-11 04:10:13,953 - ERROR - [Victoria 3] Unknown formatting command `#v`.
+2025-09-11 04:10:13,953 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#v'。
+2025-09-11 04:10:13,954 - ERROR - [Victoria 3] Unknown formatting command `#v`.
+2025-09-11 04:10:13,954 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#v'。
+2025-09-11 04:10:13,954 - ERROR - [Victoria 3] Unknown formatting command `#v`.
+2025-09-11 04:10:13,954 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#v'。
+2025-09-11 04:10:13,954 - ERROR - [Victoria 3] Unknown formatting command `#bold`.
+2025-09-11 04:10:13,954 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#bold'。
+2025-09-11 04:10:13,954 - ERROR - [Victoria 3] Unknown formatting command `#bold`.
+2025-09-11 04:10:13,954 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#bold'。
+2025-09-11 04:10:13,954 - ERROR - [Victoria 3] Unknown formatting command `#bold`.
+2025-09-11 04:10:13,954 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#bold'。
+2025-09-11 04:10:13,955 - ERROR - [Victoria 3] Unknown formatting command `#bold`.
+2025-09-11 04:10:13,955 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#bold'。
+2025-09-11 04:10:13,955 - ERROR - [Victoria 3] Unknown formatting command `#bold`.
+2025-09-11 04:10:13,955 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#bold'。
+2025-09-11 04:10:13,955 - ERROR - [Victoria 3] Unknown formatting command `#bold`.
+2025-09-11 04:10:13,955 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#bold'。
+2025-09-11 04:10:13,955 - ERROR - [Victoria 3] Unknown formatting command `#bold`.
+2025-09-11 04:10:13,955 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#bold'。
+2025-09-11 04:10:13,955 - ERROR - [Victoria 3] Unknown formatting command `#bold`.
+2025-09-11 04:10:13,955 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#bold'。
+2025-09-11 04:10:13,955 - ERROR - [Victoria 3] Unknown formatting command `#bold`.
+2025-09-11 04:10:13,955 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#bold'。
+2025-09-11 04:10:13,955 - ERROR - [Victoria 3] Unknown formatting command `#bold`.
+2025-09-11 04:10:13,956 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#bold'。
+2025-09-11 04:10:13,956 - ERROR - [Victoria 3] Unknown formatting command `#bold`.
+2025-09-11 04:10:13,956 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#bold'。
+2025-09-11 04:10:13,956 - ERROR - [Victoria 3] Unknown formatting command `#bold`.
+2025-09-11 04:10:13,956 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#bold'。
+2025-09-11 04:10:13,956 - ERROR - [Victoria 3] Unknown formatting command `#v`.
+2025-09-11 04:10:13,956 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#v'。
+2025-09-11 04:10:13,956 - ERROR - [Victoria 3] Unknown formatting command `#v`.
+2025-09-11 04:10:13,956 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#v'。
+2025-09-11 04:10:13,957 - ERROR - [Victoria 3] Unknown formatting command `#v`.
+2025-09-11 04:10:13,957 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#v'。
+2025-09-11 04:10:13,957 - ERROR - [Victoria 3] Unknown formatting command `#v`.
+2025-09-11 04:10:13,957 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#v'。
+2025-09-11 04:10:13,957 - ERROR - [Victoria 3] Unknown formatting command `#v`.
+2025-09-11 04:10:13,957 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#v'。
+2025-09-11 04:10:13,957 - ERROR - [Victoria 3] Unknown formatting command `#BOLD`.
+2025-09-11 04:10:13,957 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#BOLD'。
+2025-09-11 04:10:13,957 - ERROR - [Victoria 3] Unknown formatting command `#BOLD`.
+2025-09-11 04:10:13,957 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#BOLD'。
+2025-09-11 04:10:13,958 - ERROR - [Victoria 3] Unknown formatting command `#BOLD`.
+2025-09-11 04:10:13,958 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#BOLD'。
+2025-09-11 04:10:13,958 - ERROR - [Victoria 3] Unknown formatting command `#tooltip`.
+2025-09-11 04:10:13,958 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#tooltip'。
+2025-09-11 04:10:13,958 - ERROR - [Victoria 3] Unknown formatting command `#tooltip`.
+2025-09-11 04:10:13,958 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#tooltip'。
+2025-09-11 04:10:13,958 - ERROR - [Victoria 3] Unknown formatting command `#articles`.
+2025-09-11 04:10:13,958 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#articles'。
+2025-09-11 04:10:13,958 - ERROR - [Victoria 3] Unknown formatting command `#v`.
+2025-09-11 04:10:13,958 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#v'。
+2025-09-11 04:10:13,958 - ERROR - [Victoria 3] Unknown formatting command `#v`.
+2025-09-11 04:10:13,958 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#v'。
+2025-09-11 04:10:13,958 - ERROR - [Victoria 3] Unknown formatting command `#v`.
+2025-09-11 04:10:13,958 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#v'。
+2025-09-11 04:10:13,961 - ERROR - [Victoria 3] Unknown formatting command `#goods`.
+2025-09-11 04:10:13,961 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#goods'。
+2025-09-11 04:10:13,961 - ERROR - [Victoria 3] Unknown formatting command `#prestige`.
+2025-09-11 04:10:13,961 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#prestige'。
+2025-09-11 04:10:13,961 - ERROR - [Victoria 3] Unknown formatting command `#Companies`.
+2025-09-11 04:10:13,961 - ERROR - 详细信息: Victoria 3 不支持的格式化命令: '#Companies'。
+2025-09-11 04:10:13,962 - INFO - 初步筛查验证结果：0 个文件结构完好，1 个文件结构异常
+2025-09-11 04:10:13,962 - INFO - ⚠️ 发现格式问题，建议手动检查：
+2025-09-11 04:10:13,962 - INFO - 文件 1: ut_l_simp_chinese.yml (第 102 行)
+2025-09-11 04:10:13,962 - INFO -   - ERROR: Unknown formatting command `#BOLD`. - Victoria 3 不支持的格式化命令: '#BOLD'。
+2025-09-11 04:10:13,962 - INFO - 文件 1: ut_l_simp_chinese.yml (第 114 行)
+2025-09-11 04:10:13,962 - INFO -   - ERROR: Unknown formatting command `#BOLD`. - Victoria 3 不支持的格式化命令: '#BOLD'。
+2025-09-11 04:10:13,962 - INFO - 文件 1: ut_l_simp_chinese.yml (第 145 行)
+2025-09-11 04:10:13,962 - INFO -   - ERROR: Unknown formatting command `#BOLD`. - Victoria 3 不支持的格式化命令: '#BOLD'。
+2025-09-11 04:10:13,962 - INFO - 文件 1: ut_l_simp_chinese.yml (第 229 行)
+2025-09-11 04:10:13,962 - INFO -   - ERROR: Unknown formatting command `#v`. - Victoria 3 不支持的格式化命令: '#v'。
+2025-09-11 04:10:13,962 - INFO - 文件 1: ut_l_simp_chinese.yml (第 234 行)
+2025-09-11 04:10:13,962 - INFO -   - ERROR: Unknown formatting command `#v`. - Victoria 3 不支持的格式化命令: '#v'。
+2025-09-11 04:10:13,963 - INFO - 文件 1: ut_l_simp_chinese.yml (第 267 行)
+2025-09-11 04:10:13,963 - INFO -   - ERROR: Unknown formatting command `#v`. - Victoria 3 不支持的格式化命令: '#v'。
+2025-09-11 04:10:13,963 - INFO - 文件 1: ut_l_simp_chinese.yml (第 284 行)
+2025-09-11 04:10:13,963 - INFO -   - ERROR: Unknown formatting command `#v`. - Victoria 3 不支持的格式化命令: '#v'。
+2025-09-11 04:10:13,963 - INFO - 文件 1: ut_l_simp_chinese.yml (第 292 行)
+2025-09-11 04:10:13,963 - INFO -   - ERROR: Unknown formatting command `#v`. - Victoria 3 不支持的格式化命令: '#v'。
+2025-09-11 04:10:13,963 - INFO - 文件 1: ut_l_simp_chinese.yml (第 293 行)
+2025-09-11 04:10:13,963 - INFO -   - ERROR: Unknown formatting command `#v`. - Victoria 3 不支持的格式化命令: '#v'。
+2025-09-11 04:10:13,963 - INFO - 文件 1: ut_l_simp_chinese.yml (第 294 行)
+2025-09-11 04:10:13,963 - INFO -   - ERROR: Unknown formatting command `#v`. - Victoria 3 不支持的格式化命令: '#v'。
+2025-09-11 04:10:13,963 - INFO - 文件 1: ut_l_simp_chinese.yml (第 295 行)
+2025-09-11 04:10:13,963 - INFO -   - ERROR: Unknown formatting command `#v`. - Victoria 3 不支持的格式化命令: '#v'。
+2025-09-11 04:10:13,963 - INFO - 文件 1: ut_l_simp_chinese.yml (第 369 行)
+2025-09-11 04:10:13,963 - INFO -   - ERROR: Unknown formatting command `#v`. - Victoria 3 不支持的格式化命令: '#v'。
+2025-09-11 04:10:13,963 - INFO - 文件 1: ut_l_simp_chinese.yml (第 374 行)
+2025-09-11 04:10:13,963 - INFO -   - ERROR: Unknown formatting command `#bold`. - Victoria 3 不支持的格式化命令: '#bold'。
+2025-09-11 04:10:13,963 - INFO - 文件 1: ut_l_simp_chinese.yml (第 382 行)
+2025-09-11 04:10:13,963 - INFO -   - ERROR: Unknown formatting command `#bold`. - Victoria 3 不支持的格式化命令: '#bold'。
+2025-09-11 04:10:13,963 - INFO -   - ERROR: Unknown formatting command `#bold`. - Victoria 3 不支持的格式化命令: '#bold'。
+2025-09-11 04:10:13,963 - INFO -   - ERROR: Unknown formatting command `#bold`. - Victoria 3 不支持的格式化命令: '#bold'。
+2025-09-11 04:10:13,963 - INFO - 文件 1: ut_l_simp_chinese.yml (第 384 行)
+2025-09-11 04:10:13,963 - INFO -   - ERROR: Unknown formatting command `#bold`. - Victoria 3 不支持的格式化命令: '#bold'。
+2025-09-11 04:10:13,963 - INFO -   - ERROR: Unknown formatting command `#bold`. - Victoria 3 不支持的格式化命令: '#bold'。
+2025-09-11 04:10:13,963 - INFO - 文件 1: ut_l_simp_chinese.yml (第 386 行)
+2025-09-11 04:10:13,964 - INFO -   - ERROR: Unknown formatting command `#bold`. - Victoria 3 不支持的格式化命令: '#bold'。
+2025-09-11 04:10:13,964 - INFO -   - ERROR: Unknown formatting command `#bold`. - Victoria 3 不支持的格式化命令: '#bold'。
+2025-09-11 04:10:13,964 - INFO -   - ERROR: Unknown formatting command `#bold`. - Victoria 3 不支持的格式化命令: '#bold'。
+2025-09-11 04:10:13,964 - INFO - 文件 1: ut_l_simp_chinese.yml (第 388 行)
+2025-09-11 04:10:13,964 - INFO -   - ERROR: Unknown formatting command `#bold`. - Victoria 3 不支持的格式化命令: '#bold'。
+2025-09-11 04:10:13,964 - INFO -   - ERROR: Unknown formatting command `#bold`. - Victoria 3 不支持的格式化命令: '#bold'。
+2025-09-11 04:10:13,964 - INFO -   - ERROR: Unknown formatting command `#bold`. - Victoria 3 不支持的格式化命令: '#bold'。
+2025-09-11 04:10:13,964 - INFO - 文件 1: ut_l_simp_chinese.yml (第 395 行)
+2025-09-11 04:10:13,964 - INFO -   - ERROR: Unknown formatting command `#v`. - Victoria 3 不支持的格式化命令: '#v'。
+2025-09-11 04:10:13,964 - INFO - 文件 1: ut_l_simp_chinese.yml (第 424 行)
+2025-09-11 04:10:13,964 - INFO -   - ERROR: Unknown formatting command `#v`. - Victoria 3 不支持的格式化命令: '#v'。
+2025-09-11 04:10:13,964 - INFO -   - ERROR: Unknown formatting command `#v`. - Victoria 3 不支持的格式化命令: '#v'。
+2025-09-11 04:10:13,964 - INFO -   - ERROR: Unknown formatting command `#v`. - Victoria 3 不支持的格式化命令: '#v'。
+2025-09-11 04:10:13,964 - INFO -   - ERROR: Unknown formatting command `#v`. - Victoria 3 不支持的格式化命令: '#v'。
+2025-09-11 04:10:13,964 - INFO - 文件 1: ut_l_simp_chinese.yml (第 489 行)
+2025-09-11 04:10:13,964 - INFO -   - ERROR: Unknown formatting command `#BOLD`. - Victoria 3 不支持的格式化命令: '#BOLD'。
+2025-09-11 04:10:13,964 - INFO - 文件 1: ut_l_simp_chinese.yml (第 490 行)
+2025-09-11 04:10:13,964 - INFO -   - ERROR: Unknown formatting command `#BOLD`. - Victoria 3 不支持的格式化命令: '#BOLD'。
+2025-09-11 04:10:13,964 - INFO - 文件 1: ut_l_simp_chinese.yml (第 491 行)
+2025-09-11 04:10:13,964 - INFO -   - ERROR: Unknown formatting command `#BOLD`. - Victoria 3 不支持的格式化命令: '#BOLD'。
+2025-09-11 04:10:13,964 - INFO - 文件 1: ut_l_simp_chinese.yml (第 531 行)
+2025-09-11 04:10:13,964 - INFO -   - ERROR: Unknown formatting command `#tooltip`. - Victoria 3 不支持的格式化命令: '#tooltip'。
+2025-09-11 04:10:13,964 - INFO - 文件 1: ut_l_simp_chinese.yml (第 534 行)
+2025-09-11 04:10:13,964 - INFO -   - ERROR: Unknown formatting command `#tooltip`. - Victoria 3 不支持的格式化命令: '#tooltip'。
+2025-09-11 04:10:13,964 - INFO - 文件 1: ut_l_simp_chinese.yml (第 586 行)
+2025-09-11 04:10:13,964 - INFO -   - ERROR: Unknown formatting command `#articles`. - Victoria 3 不支持的格式化命令: '#articles'。
+2025-09-11 04:10:13,964 - INFO - 文件 1: ut_l_simp_chinese.yml (第 590 行)
+2025-09-11 04:10:13,964 - INFO -   - ERROR: Unknown formatting command `#v`. - Victoria 3 不支持的格式化命令: '#v'。
+2025-09-11 04:10:13,964 - INFO - 文件 1: ut_l_simp_chinese.yml (第 591 行)
+2025-09-11 04:10:13,965 - INFO -   - ERROR: Unknown formatting command `#v`. - Victoria 3 不支持的格式化命令: '#v'。
+2025-09-11 04:10:13,965 - INFO - 文件 1: ut_l_simp_chinese.yml (第 605 行)
+2025-09-11 04:10:13,965 - INFO -   - ERROR: Unknown formatting command `#v`. - Victoria 3 不支持的格式化命令: '#v'。
+2025-09-11 04:10:13,965 - INFO - 文件 1: ut_l_simp_chinese.yml (第 1102 行)
+2025-09-11 04:10:13,965 - INFO -   - ERROR: Unknown formatting command `#goods`. - Victoria 3 不支持的格式化命令: '#goods'。
+2025-09-11 04:10:13,965 - INFO - 文件 1: ut_l_simp_chinese.yml (第 1112 行)
+2025-09-11 04:10:13,965 - INFO -   - ERROR: Unknown formatting command `#prestige`. - Victoria 3 不支持的格式化命令: '#prestige'。
+2025-09-11 04:10:13,965 - INFO - 文件 1: ut_l_simp_chinese.yml (第 1164 行)
+2025-09-11 04:10:13,965 - INFO -   - ERROR: Unknown formatting command `#Companies`. - Victoria 3 不支持的格式化命令: '#Companies'。
+2025-09-11 04:10:13,965 - INFO - 格式验证完成！
+2025-09-11 04:10:13,965 - INFO - 后处理验证完成 - 总计: 1 文件, 正常: 0, 问题: 1, 错误: 41, 警告: 0
+2025-09-11 04:10:13,965 - INFO - 校对进度表格已生成: J:\V3_Mod_Localization_Factory\my_translation\zh-CN-Project Utopia - Extended Timeline - Technical Preview\校对进度表.csv
+2025-09-11 04:10:13,965 - INFO - 
+--- 正在处理 metadata.json ---
+2025-09-11 04:10:13,966 - INFO - 正在翻译 mod name: "Project Utopia - Extended Time..."
+2025-09-11 04:10:14,024 - INFO - 从 1 个文本中提取到 0 个相关术语
+2025-09-11 04:10:14,024 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 04:10:14,695 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 04:10:14,697 - INFO - AFC remote call 1 is done.
+2025-09-11 04:10:14,697 - INFO - 单条翻译: 禁用思考功能 (thinking_budget=0)
+2025-09-11 04:10:14,697 - INFO - 正在翻译 mod short description: "Project Utopia extends the bas..."
+2025-09-11 04:10:14,827 - INFO - 从 1 个文本中提取到 1 个相关术语
+2025-09-11 04:10:14,827 - INFO - 单条翻译: 注入 1 个词典术语
+2025-09-11 04:10:14,827 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-11 04:10:15,680 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-11 04:10:15,680 - INFO - AFC remote call 1 is done.
+2025-09-11 04:10:15,681 - INFO - 单条翻译: 禁用思考功能 (thinking_budget=0)
+2025-09-11 04:10:15,681 - INFO - metadata.json 汉化完成。
+2025-09-11 04:10:15,681 - INFO - 翻译工作流完成！
+2025-09-11 04:10:15,682 - INFO - 输出文件夹: zh-CN-Project Utopia - Extended Timeline - Technical Preview
+2025-09-11 04:10:15,683 - INFO - 工作流完成！
