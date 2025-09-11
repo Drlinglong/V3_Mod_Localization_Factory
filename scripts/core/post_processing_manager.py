@@ -14,6 +14,7 @@ from datetime import datetime
 from scripts.utils.post_process_validator import PostProcessValidator, ValidationResult, ValidationLevel
 from scripts.config import GAME_PROFILES
 from scripts.utils import i18n
+from scripts.utils.quote_extractor import QuoteExtractor
 
 
 class PostProcessingManager:
@@ -146,100 +147,6 @@ class PostProcessingManager:
         
         return translated_files
     
-    def _extract_translatable_content(self, line: str) -> str:
-        """
-        从YAML行中提取需要翻译的内容（引号内的内容）
-        
-        处理各种情况：
-        1. key: "value" #注释
-        2. key: "He said \"Hello World\" to me" #注释
-        3. key: "value"
-        4. key: "value" #注释
-        5. 无效格式（没有引号）
-        
-        Args:
-            line: YAML行内容
-            
-        Returns:
-            str: 引号内的内容，如果没有找到则返回None
-        """
-        import re
-        
-        # 先移除行内注释（#后面的内容）
-        # 但要小心不要移除引号内的#符号
-        comment_pos = -1
-        in_quotes = False
-        escape_next = False
-        
-        for i, char in enumerate(line):
-            if escape_next:
-                escape_next = False
-                continue
-                
-            if char == '\\':
-                escape_next = True
-                continue
-                
-            if char == '"' and not escape_next:
-                in_quotes = not in_quotes
-            elif char == '#' and not in_quotes:
-                comment_pos = i
-                break
-        
-        # 如果有注释，移除注释部分
-        if comment_pos != -1:
-            line = line[:comment_pos].strip()
-        
-        # 查找 key:0 "value" 或 key: "value" 格式
-        # 先找到冒号后的第一个引号
-        colon_pos = line.find(':')
-        if colon_pos == -1:
-            return None
-        
-        # 从冒号后开始查找引号
-        after_colon = line[colon_pos + 1:].strip()
-        
-        # 查找引号位置（可能在数字后面）
-        quote_pos = after_colon.find('"')
-        if quote_pos == -1:
-            return None
-        
-        # 从引号位置开始处理
-        after_colon = after_colon[quote_pos:]
-        
-        # 找到第一个引号的位置
-        first_quote_pos = after_colon.find('"')
-        if first_quote_pos == -1:
-            return None
-        
-        # 从第一个引号后开始查找匹配的结束引号
-        content_start = first_quote_pos + 1
-        content = ""
-        i = content_start
-        escape_next = False
-        
-        while i < len(after_colon):
-            char = after_colon[i]
-            
-            if escape_next:
-                # 转义字符，直接添加到内容中
-                content += char
-                escape_next = False
-            elif char == '\\':
-                # 反斜杠，标记下一个字符为转义
-                content += char
-                escape_next = True
-            elif char == '"':
-                # 找到结束引号
-                return content
-            else:
-                # 普通字符
-                content += char
-            
-            i += 1
-        
-        # 如果没有找到结束引号，返回None
-        return None
     
     def _log_validation_levels_explanation(self):
         """输出验证级别说明，帮助用户理解不同级别的含义"""
@@ -290,8 +197,8 @@ class PostProcessingManager:
                 if not stripped or stripped.startswith("#"):
                     continue
                 
-                # 提取引号内的内容进行检查
-                translatable_content = self._extract_translatable_content(line)
+                # 使用统一的引号提取工具
+                translatable_content = QuoteExtractor.extract_from_line(line)
                 if translatable_content:
                     # 只检查引号内的内容
                     results = self.validator.validate_game_text(self.normalized_game_key, translatable_content, line_num)
