@@ -4,10 +4,10 @@ import os  # 导入os模块以备后用
 import multiprocessing
 
 # --- 项目信息 ----------------------------------------------------
-PROJECT_NAME = "Paradox Mod Localization Factory"
-PROJECT_DISPLAY_NAME = "Project Remis (蕾姆丝计划)"
-VERSION = "1.0.2"
-LAST_UPDATE_DATE = "2025-08-17"
+PROJECT_NAME = "Paradox Mod 本地化工厂 - Paradox Mod Localization Factory"
+PROJECT_DISPLAY_NAME = "蕾姆丝计划 - Project Remis "
+VERSION = "1.0.5"
+LAST_UPDATE_DATE = "2025-09-12"
 COPYRIGHT = "© 2025 Project Remis Team"
 
 # --- 项目信息显示配置 --------------------------------------------
