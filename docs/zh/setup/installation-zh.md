@@ -33,6 +33,12 @@ git clone https://github.com/your-repo/V3_Mod_Localization_Factory.git
 5. 等待自动安装完成
 
 ### 3. 验证安装
+**推荐方式**：双击运行 `run.bat`
+- 自动检测环境配置
+- 显示简洁的状态信息
+- 自动激活虚拟环境（如果存在）
+
+**手动方式**：
 ```bash
 python scripts/main.py
 ```

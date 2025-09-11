@@ -34,7 +34,13 @@ V3_Mod_Localization_Factory/
 ```
 
 ### 4️⃣ 开始翻译
-运行主程序：
+**推荐方式**：双击运行 `run.bat` 文件
+- 自动检测并激活 conda 虚拟环境（如果存在）
+- 自动检查 Python、API 库和密钥配置
+- 提供简洁的环境状态反馈
+- 无虚拟环境时自动回退到系统默认环境
+
+**手动方式**：直接运行主程序
 ```bash
 python scripts/main.py
 ```
