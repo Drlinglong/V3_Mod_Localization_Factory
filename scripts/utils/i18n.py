@@ -9,7 +9,7 @@ _language_loaded = False  # 添加标志，避免重复加载
 _current_lang = 'zh_CN'  # 当前语言代码
 
 def load_language(lang_code=None):
-    """加载语言文件，如果未指定则显示语言选择菜单。"""
+    """加载语言文件，如果未指定则使用默认语言。"""
     global _strings, _language_loaded, _current_lang
     
     # 如果已经加载过语言，直接返回
@@ -17,34 +17,8 @@ def load_language(lang_code=None):
         return True
     
     if lang_code is None:
-        # 显示语言选择菜单
-        try:
-            print("=" * 50)
-            print("🌍 请选择界面语言 / Please select interface language")
-            print("=" * 50)
-            print("1. English")
-            print("2. 中文 (简体)")
-            print("=" * 50)
-            
-            while True:
-                try:
-                    lang_choice = input("请输入选择 (1 或 2) / Enter choice (1 or 2): ").strip()
-                    if lang_choice == '1':
-                        lang_code = 'en_US'
-                        break
-                    elif lang_choice == '2':
-                        lang_code = 'zh_CN'
-                        break
-                    else:
-                        print("❌ 无效选择，请输入 1 或 2 / Invalid choice, please enter 1 or 2")
-                except (EOFError, KeyboardInterrupt):
-                    # 如果用户按Ctrl+C或遇到输入问题，使用默认语言
-                    print("\n⚠️  使用默认语言 / Using default language")
-                    lang_code = _default_lang
-                    break
-        except Exception as e:
-            logging.warning(f"Language selection failed, using default: {e}")
-            lang_code = _default_lang
+        # 使用默认语言
+        lang_code = _default_lang
     
     # 获取项目根目录的路径
     project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
