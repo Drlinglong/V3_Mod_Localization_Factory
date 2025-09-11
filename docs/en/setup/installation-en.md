@@ -33,6 +33,12 @@ git clone https://github.com/your-repo/V3_Mod_Localization_Factory.git
 5. Wait for automatic installation to complete
 
 ### 3. Verify Installation
+**Recommended way**: Double-click `run.bat`
+- Automatically detects environment configuration
+- Shows concise status information
+- Automatically activates virtual environment (if available)
+
+**Manual way**:
 ```bash
 python scripts/main.py
 ```

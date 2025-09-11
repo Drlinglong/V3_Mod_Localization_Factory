@@ -1,19 +1,12 @@
 @echo off
-rem ---------------------------------------------------------------
-rem Project Remis - Paradox Mod Localization Factory
-rem Copyright (C) 2025 Drlinglong
-rem ---------------------------------------------------------------
-
-rem 设置UTF-8代码页 / Set codepage to UTF-8
+rem 完全简化版本的 run.bat
 chcp 65001 >nul
-rem 清空屏幕 / Clear the screen
 cls
 
-rem 显示字符画头图 / Display banner from banner.txt
+rem 显示 banner
 if exist "banner.txt" (
 type "banner.txt"
 ) else (
-rem 备用文本头图 / Fallback text banner
 echo.
 echo      =======================================
 echo         Project Remis -蕾姆丝计划
@@ -21,72 +14,100 @@ echo      =======================================
 )
 
 echo.
-echo.
 echo     P社Mod本地化工厂 (Paradox Mod Localization Factory)
-echo     版本: v1.0.4 / Version: v1.0.4
+echo     版本: v1.0.8 / Version: v1.0.8
 echo     ---------------------------------------------------
 echo.
 
-rem --- 依赖项检查 / Dependency Checks ---
-set "error_occurred=0"
-set "warning_message="
+set ENV_TYPE=System Default
+set CONDA_ACTIVATION_SCRIPT_FOUND=
 
-rem 检查Python / Check for Python
+rem 检查 conda 环境
+if exist "J:\miniconda\condabin\conda.bat" (
+    call "J:\miniconda\condabin\conda.bat" info --envs | findstr "local_factory" >nul
+    if not errorlevel 1 (
+        set ENV_TYPE=Conda (local_factory)
+        set CONDA_ACTIVATION_SCRIPT_FOUND=1
+    )
+)
+
+rem 检查 Python
 python --version >nul 2>&1
 if errorlevel 1 (
-echo 🔴 错误: 未找到Python。请先安装Python 3.8或更高版本。
-echo    ERROR: Python not found. Please install Python 3.8 or higher.
-echo.
-echo    下载地址 / Download from: https://www.python.org/downloads/
-echo.
-set "error_occurred=1"
+    echo 错误: 未找到Python
+    pause
+    exit /b 1
 )
 
-rem 检查项目结构 / Check for source_mod directory
-if %error_occurred% equ 0 (
+rem 检查 source_mod 目录
 if not exist "source_mod" (
-echo 🔴 错误: 'source_mod' 目录不存在。请在正确的项目根目录下运行。
-echo    ERROR: 'source_mod' directory not found. Please run this script from the project root.
+    echo 错误: source_mod 目录不存在
+    pause
+    exit /b 1
+)
+
+rem 检查 API 库
+set API_LIBRARIES_FOUND=
+python -c "import openai" >nul 2>&1
+if not errorlevel 1 (
+    set API_LIBRARIES_FOUND=%API_LIBRARIES_FOUND%OpenAI 
+)
+
+python -c "import google.genai" >nul 2>&1
+if not errorlevel 1 (
+    set API_LIBRARIES_FOUND=%API_LIBRARIES_FOUND%Google 
+)
+
+python -c "import dashscope" >nul 2>&1
+if not errorlevel 1 (
+    set API_LIBRARIES_FOUND=%API_LIBRARIES_FOUND%Qwen 
+)
+
+if "%API_LIBRARIES_FOUND%"=="" (
+    echo 错误: 未找到任何API库
+    echo 请安装: pip install openai google-genai dashscope
+    pause
+    exit /b 1
+)
+
+rem 检查 API 密钥
+set API_KEYS_FOUND=
+if defined OPENAI_API_KEY (
+    set API_KEYS_FOUND=%API_KEYS_FOUND%OpenAI 
+)
+if defined GEMINI_API_KEY (
+    set API_KEYS_FOUND=%API_KEYS_FOUND%Google 
+)
+if defined DASHSCOPE_API_KEY (
+    set API_KEYS_FOUND=%API_KEYS_FOUND%Qwen 
+)
+
+if "%API_KEYS_FOUND%"=="" (
+    echo 错误: 未找到API密钥
+    echo 请设置环境变量: OPENAI_API_KEY, GEMINI_API_KEY, DASHSCOPE_API_KEY
+    pause
+    exit /b 1
+)
+
+echo ✅ Python已安装，已检测到%API_LIBRARIES_FOUND%库，%ENV_TYPE%
+echo    Python installed, %API_LIBRARIES_FOUND%libraries detected, %ENV_TYPE%
 echo.
-echo    当前目录 / Current Directory: %CD%
+
+echo ===================================================
+echo 正在启动本地化工厂主程序...
+echo ===================================================
 echo.
-set "error_occurred=1"
-)
-)
 
-rem 检查是否有mod文件 (警告，非致命错误) / Check if source_mod is empty (Warning, non-fatal)
-if %error_occurred% equ 0 (
-dir /b /ad "source_mod" | findstr /r ".*" >nul
-if errorlevel 1 (
-set "warning_message=🟡 警告: 'source_mod'目录为空，请添加要翻译的Mod文件夹。 / WARNING: 'source_mod' is empty, please add mod folders to translate."
-)
-)
-
-rem --- 检查结果汇总 / Check Summary ---
-if %error_occurred% equ 1 (
-pause
-exit /b 1
-)
-
-if defined warning_message (
-echo %warning_message%
+rem 运行 Python 程序
+if defined CONDA_ACTIVATION_SCRIPT_FOUND (
+    call "J:\miniconda\condabin\conda.bat" activate local_factory
+    call python scripts\main.py
 ) else (
-echo ✅ 所有依赖项正常 / All checks passed.
+    python scripts\main.py
 )
-echo.
-
-echo ===================================================
-echo 🚀 正在启动本地化工厂主程序...
-echo    Launching the Localization Factory...
-echo ===================================================
-echo.
-
-rem 运行Python主程序 / Run the main Python program
-python scripts\main.py
 
 echo.
 echo ===================================================
-echo ✅ 程序执行完毕。您可以关闭此窗口。
-echo    Execution finished. You can close this window now.
+echo 程序执行完毕。您可以关闭此窗口。
 echo ===================================================
 pause

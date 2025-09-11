@@ -34,7 +34,13 @@ V3_Mod_Localization_Factory/
 ```
 
 ### 4️⃣ Start Translation
-Run the main program:
+**Recommended way**: Double-click the `run.bat` file
+- Automatically detects and activates conda virtual environment (if available)
+- Automatically checks Python, API libraries, and key configurations
+- Provides concise environment status feedback
+- Falls back to system default environment when no virtual environment is found
+
+**Manual way**: Run the main program directly
 ```bash
 python scripts/main.py
 ```
