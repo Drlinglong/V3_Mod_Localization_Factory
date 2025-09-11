@@ -5,6 +5,8 @@ import json
 import argparse
 import logging
 import re
+import subprocess
+import importlib.util
 
 project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 if project_root not in sys.path:
@@ -14,41 +16,116 @@ if project_root not in sys.path:
 from scripts.utils import i18n, logger
 from scripts.workflows import initial_translate
 from scripts.core import directory_handler
-from scripts.config import LANGUAGES, GAME_PROFILES, SOURCE_DIR, API_PROVIDERS, PROJECT_NAME, PROJECT_DISPLAY_NAME, VERSION, LAST_UPDATE_DATE, COPYRIGHT
+from scripts.config import LANGUAGES, GAME_PROFILES, SOURCE_DIR, API_PROVIDERS, PROJECT_INFO
 
 def display_version_info():
     """显示项目版本信息"""
+    print("=" * 60)
+    print(f"🎯 {PROJECT_INFO['display_name']}")
+    print(f"🔧 {PROJECT_INFO['engineering_name']}")
+    print(f"📦 版本version: {PROJECT_INFO['version']}")
+    print(f"📅 最后更新last update: {PROJECT_INFO['last_update']}")
+    print(f"{PROJECT_INFO['copyright']}")
+    print("=" * 60)
+
+def display_banner():
+    """显示项目横幅"""
     try:
-        from scripts.utils.i18n import i18n
-        # 使用国际化显示版本信息
+        if os.path.exists("banner.txt"):
+            with open("banner.txt", "r", encoding="utf-8") as f:
+                banner_content = f.read()
+                print(banner_content)
+        else:
+            # 默认横幅
+            print("=" * 60)
+            print("         Project Remis - 蕾姆丝计划")
+            print("=" * 60)
+    except Exception as e:
+        logging.warning(f"显示横幅时出错: {e}")
         print("=" * 60)
-        print(i18n.t("version_info_display_name", display_name=PROJECT_DISPLAY_NAME))
-        print(i18n.t("version_info_engineering_name", name=PROJECT_NAME))
-        print(i18n.t("version_info_version", version=VERSION))
-        print(i18n.t("version_info_last_update", date=LAST_UPDATE_DATE))
-        print(i18n.t("version_info_copyright", copyright=COPYRIGHT))
+        print("         Project Remis - 蕾姆丝计划")
         print("=" * 60)
-    except Exception:
-        # 如果国际化不可用，使用默认显示
-        print("=" * 60)
-        print(f"🎯 {PROJECT_DISPLAY_NAME}")
-        print(f"🔧 {PROJECT_NAME}")
-        print(f"📦 版本: {VERSION}")
-        print(f"📅 最后更新: {LAST_UPDATE_DATE}")
-        print(f"© {COPYRIGHT}")
-        print("=" * 60)
+
+def preflight_checks():
+    """
+    执行开机自检，验证系统环境和项目结构
     
-    # 同时记录到日志（使用国际化）
-    try:
-        from scripts.utils.i18n import i18n
-        logging.info(i18n.t("project_startup", display_name=PROJECT_DISPLAY_NAME, version=VERSION))
-        logging.info(i18n.t("project_engineering_name", name=PROJECT_NAME))
-        logging.info(i18n.t("project_last_update", date=LAST_UPDATE_DATE))
-    except Exception:
-        # 如果国际化不可用，使用默认日志
-        logging.info(f"项目启动: {PROJECT_DISPLAY_NAME} v{VERSION}")
-        logging.info(f"工程名称: {PROJECT_NAME}")
-        logging.info(f"最后更新: {LAST_UPDATE_DATE}")
+    Returns:
+        bool: 检查是否通过
+    """
+    checks_passed = True
+    error_messages = []
+    
+    # 1. 检查项目结构
+    required_dirs = ["scripts", "data", "source_mod"]
+    required_files = ["scripts/main.py", "scripts/config.py", "data/lang/zh_CN.json", "data/lang/en_US.json"]
+    
+    for dir_path in required_dirs:
+        if not os.path.exists(dir_path):
+            error_messages.append(f"缺少必要目录: {dir_path}")
+            checks_passed = False
+    
+    for file_path in required_files:
+        if not os.path.exists(file_path):
+            error_messages.append(f"缺少必要文件: {file_path}")
+            checks_passed = False
+    
+    # 2. 检查依赖库
+    required_libraries = {
+        "openai": "api_lib_openai",
+        "google.genai": "api_lib_gemini", 
+        "dashscope": "api_lib_qwen"
+    }
+    
+    available_libraries = []
+    for lib_name, lib_key in required_libraries.items():
+        try:
+            if lib_name == "google.genai":
+                import google.genai
+            else:
+                importlib.import_module(lib_name)
+            available_libraries.append(i18n.t(lib_key))
+        except ImportError:
+            pass
+    
+    if not available_libraries:
+        error_messages.append("未找到任何API库")
+        checks_passed = False
+    
+    # 3. 检查API密钥
+    api_keys = ["OPENAI_API_KEY", "GEMINI_API_KEY", "DASHSCOPE_API_KEY"]
+    available_keys = [key for key in api_keys if os.getenv(key)]
+    
+    if not available_keys:
+        error_messages.append("未找到任何API密钥")
+        checks_passed = False
+    
+    # 4. 检查source_mod目录内容
+    mod_count = 0
+    if os.path.exists("source_mod"):
+        mod_dirs = [d for d in os.listdir("source_mod") if os.path.isdir(os.path.join("source_mod", d))]
+        mod_count = len(mod_dirs)
+        if mod_count == 0:
+            error_messages.append("source_mod目录为空")
+            checks_passed = False
+    else:
+        error_messages.append("source_mod目录不存在")
+        checks_passed = False
+    
+    # 显示检查结果
+    if checks_passed:
+        # 简洁的成功信息
+        lib_names = ", ".join(available_libraries)
+        key_count = len(available_keys)
+        print(f"✅ {i18n.t('preflight_success', libs=lib_names, keys=key_count, mods=mod_count)}")
+    else:
+        # 详细的错误信息
+        print(f"❌ {i18n.t('preflight_failed')}:")
+        for msg in error_messages:
+            print(f"   - {msg}")
+        print(f"\n{i18n.t('preflight_retry_prompt')}")
+    
+    return checks_passed
 
 def select_api_provider():
     """【新】显示API供应商列表并让用户选择。"""
@@ -111,6 +188,23 @@ def gather_mod_context(mod_name):
     except Exception as e:
         logging.exception(i18n.t("error_getting_context", error=e))
         return mod_name # Fallback to folder name on error
+
+def select_interface_language():
+    """选择界面语言"""
+    print("🌍 请选择界面语言 / Please select interface language")
+    print("=" * 60)
+    print("1. English")
+    print("2. 中文 (简体)")
+    print("=" * 60)
+    
+    while True:
+        choice = input("请输入选择 (1 或 2) / Enter choice (1 or 2): ").strip()
+        if choice == "1":
+            return "en_US"
+        elif choice == "2":
+            return "zh_CN"
+        else:
+            print("❌ 无效选择，请重新输入 / Invalid choice, please try again")
 
 def select_game_profile():
     """Displays a menu for the user to select a game profile."""
@@ -357,12 +451,23 @@ def main():
     # 初始化日志系统
     logger.setup_logger()
     
-    # 加载语言文件
-    i18n.load_language()
+    # 显示横幅
+    display_banner()
     
-    # 检查源目录是否存在
-    if not os.path.exists(SOURCE_DIR):
-        logging.error(i18n.t("error_source_folder_not_found", dir=SOURCE_DIR))
+    # 显示版本信息
+    display_version_info()
+    
+    # 选择界面语言
+    interface_lang = select_interface_language()
+    if not interface_lang:
+        return
+    
+    # 加载语言文件
+    i18n.load_language(interface_lang)
+    
+    # 执行开机自检
+    if not preflight_checks():
+        print("\n程序无法继续运行，请解决上述问题后重试。")
         return
     
     # 选择游戏配置
@@ -519,15 +624,6 @@ def main():
 if __name__ == '__main__':
     # 确保日志系统和国际化系统正确初始化
     try:
-        # 设置日志系统
-        logger.setup_logger()
-        
-        # 加载语言文件
-        i18n.load_language()
-        
-        # 显示版本信息（在国际化系统初始化之后）
-        display_version_info()
-        
         # 运行主菜单
         main()
         

@@ -10,6 +10,15 @@ VERSION = "1.0.2"
 LAST_UPDATE_DATE = "2025-08-17"
 COPYRIGHT = "© 2025 Project Remis Team"
 
+# --- 项目信息显示配置 --------------------------------------------
+PROJECT_INFO = {
+    "display_name": PROJECT_DISPLAY_NAME,
+    "engineering_name": PROJECT_NAME,
+    "version": VERSION,
+    "last_update": LAST_UPDATE_DATE,
+    "copyright": COPYRIGHT
+}
+
 # --- 核心配置 ----------------------------------------------------
 CHUNK_SIZE = 40
 MAX_RETRIES = 3
