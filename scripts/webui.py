@@ -16,12 +16,16 @@ from scripts.config import (
     GAME_PROFILES,
     API_PROVIDERS,
     DEFAULT_API_PROVIDER,
+    SOURCE_DIR,
 )
+from scripts.core.directory_handler import scan_source_directory
 
 # 准备下拉菜单的数据
 LANG_CHOICES = [(v["name"], k) for k, v in LANGUAGES.items()]
 PROVIDER_CHOICES = list(API_PROVIDERS.keys())
 GAME_CHOICES = [(v["name"], k) for k, v in GAME_PROFILES.items()]
+# 扫描source_mod目录并生成模组下拉列表
+MOD_CHOICES = scan_source_directory(SOURCE_DIR)
 
 
 def find_available_port(start: int = 1453) -> int:
@@ -62,7 +66,9 @@ with gr.Blocks(theme=gr.themes.Soft()) as demo:
     gr.Markdown("## 🔤 本地化工作台 - 初次翻译")
 
     with gr.Row():
-        mod_name = gr.Textbox(label="模组文件夹名")
+        # 自动扫描并下拉选择模组
+        mod_name = gr.Dropdown(MOD_CHOICES, label="模组文件夹名",
+                               value=MOD_CHOICES[0] if MOD_CHOICES else None)
         game_profile = gr.Dropdown(GAME_CHOICES, label="游戏档案", value="1")
 
     with gr.Row():
