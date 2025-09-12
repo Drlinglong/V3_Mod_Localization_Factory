@@ -16,9 +16,11 @@ from scripts.utils.text_clean import strip_pl_diacritics
 import logging
 
 
-def select_mod_directory():
-    """扫描source_mod目录，让用户选择一个mod文件夹。"""
-    # 检查源目录是否存在
+def select_mod_directory(choice_index: int):
+    """扫描source_mod目录并根据传入的索引返回mod文件夹。
+
+    此函数不进行任何用户交互，调用者需要提供索引。
+    """
     if not os.path.exists(SOURCE_DIR):
         logging.error(i18n.t("error_source_dir_not_exists", dir=SOURCE_DIR))
         logging.error(i18n.t("error_source_dir_instructions"))
@@ -26,7 +28,7 @@ def select_mod_directory():
         logging.error(i18n.t("error_source_dir_condition2"))
         logging.error(i18n.t("error_source_dir_condition3"))
         return None
-    
+
     logging.info(i18n.t("scan_source_folder", dir=SOURCE_DIR))
     try:
         mod_folders = [d for d in os.listdir(SOURCE_DIR) if os.path.isdir(os.path.join(SOURCE_DIR, d))]
@@ -35,21 +37,13 @@ def select_mod_directory():
             logging.error(i18n.t("error_add_mods_to_source_folder"))
             return None
 
-        logging.info(i18n.t("select_mod_prompt"))
-        for i, folder_name in enumerate(mod_folders):
-            logging.info(f"  [{i + 1}] {folder_name}")
-
-        while True:
-            try:
-                choice = int(input(i18n.t("enter_choice_prompt"))) - 1
-                if 0 <= choice < len(mod_folders):
-                    selected_mod = mod_folders[choice]
-                    logging.info(i18n.t("you_selected", mod_name=selected_mod))
-                    return selected_mod
-                else:
-                    logging.warning(i18n.t("invalid_input_number"))
-            except ValueError:
-                logging.warning(i18n.t("invalid_input_not_number"))
+        if 0 <= choice_index < len(mod_folders):
+            selected_mod = mod_folders[choice_index]
+            logging.info(i18n.t("you_selected", mod_name=selected_mod))
+            return selected_mod
+        else:
+            logging.warning(i18n.t("invalid_input_number"))
+            return None
     except FileNotFoundError:
         logging.error(i18n.t("error_source_folder_not_found", dir=SOURCE_DIR))
         return None
@@ -83,38 +77,19 @@ def scan_source_directory(source_dir):
         return []
 
 
-def select_mod(mods):
-    """
-    从mod列表中选择一个mod
-    
-    Args:
-        mods: mod文件夹名称列表
-        
-    Returns:
-        str or None: 选中的mod名称，如果用户取消则返回None
-    """
+def select_mod(mods, choice_index: int):
+    """从给定的mod列表中按索引返回mod名称，避免交互。"""
     if not mods:
         logging.error(i18n.t("error_no_mods_found", dir=SOURCE_DIR))
         return None
-    
-    logging.info(i18n.t("select_mod_prompt"))
-    for i, folder_name in enumerate(mods):
-        logging.info(f"  [{i + 1}] {folder_name}")
 
-    while True:
-        try:
-            choice = int(input(i18n.t("enter_choice_prompt"))) - 1
-            if 0 <= choice < len(mods):
-                selected_mod = mods[choice]
-                logging.info(i18n.t("you_selected", mod_name=selected_mod))
-                return selected_mod
-            else:
-                logging.warning(i18n.t("invalid_input_number"))
-        except ValueError:
-            logging.warning(i18n.t("invalid_input_not_number"))
-        except (EOFError, KeyboardInterrupt):
-            logging.info(i18n.t("user_cancelled_selection"))
-            return None
+    if 0 <= choice_index < len(mods):
+        selected_mod = mods[choice_index]
+        logging.info(i18n.t("you_selected", mod_name=selected_mod))
+        return selected_mod
+    else:
+        logging.warning(i18n.t("invalid_input_number"))
+        return None
 
 
 def cleanup_source_directory(mod_name, game_profile):
