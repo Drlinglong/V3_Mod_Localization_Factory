@@ -1,12 +1,32 @@
 """基于Gradio的最小化Web界面，用于启动翻译流程。"""
+import socket
+
 import gradio as gr
+
 from scripts.workflows import initial_translate
-from scripts.config import LANGUAGES, GAME_PROFILES, API_PROVIDERS, DEFAULT_API_PROVIDER
+from scripts.config import (
+    LANGUAGES,
+    GAME_PROFILES,
+    API_PROVIDERS,
+    DEFAULT_API_PROVIDER,
+)
 
 # 准备下拉菜单的数据
 LANG_CHOICES = [(v["name"], k) for k, v in LANGUAGES.items()]
 PROVIDER_CHOICES = list(API_PROVIDERS.keys())
 GAME_CHOICES = [(v["name"], k) for k, v in GAME_PROFILES.items()]
+
+
+def find_available_port(start: int = 1453) -> int:
+    """从指定端口开始寻找可用端口。"""
+    port = start
+    while True:
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+            try:
+                s.bind(("0.0.0.0", port))
+                return port
+            except OSError:
+                port += 1
 
 
 def start_translation(mod_name: str,
@@ -49,9 +69,15 @@ with gr.Blocks(theme=gr.themes.Soft()) as demo:
     start_btn = gr.Button("开始翻译")
     log_output = gr.Textbox(label="日志输出", lines=15)
 
-    start_btn.click(start_translation,
-                    inputs=[mod_name, game_profile, source_lang, target_langs, provider, context],
-                    outputs=log_output)
+    start_btn.click(
+        start_translation,
+        inputs=[mod_name, game_profile, source_lang, target_langs, provider, context],
+        outputs=log_output,
+    )
+
 
 if __name__ == "__main__":
-    demo.queue().launch()
+    port = find_available_port()
+    print(f"🌐 WebUI将在端口 {port} 启动")
+    demo.queue().launch(server_port=port, inbrowser=True)
+
