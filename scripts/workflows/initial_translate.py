@@ -235,14 +235,7 @@ def run(mod_name: str,
                     
                     logging.info(i18n.t("file_build_completed", filename=filename))
         
-        # ───────────── 6. 生成校对进度看板 ─────────────
-        logging.info(i18n.t("generating_proofreading_board"))
-        if proofreading_tracker.save_proofreading_progress():
-            logging.info(i18n.t("proofreading_board_generated_success"))
-        else:
-            logging.warning(i18n.t("proofreading_board_generation_failed"))
-        
-        # ───────────── 6.5. 运行后处理格式验证 ─────────────
+        # ───────────── 6. 运行后处理格式验证 ─────────────
         try:
             from scripts.core.post_processing_manager import PostProcessingManager
             
@@ -267,8 +260,6 @@ def run(mod_name: str,
 
                 # 合并结果进校对进度表
                 post_processor.attach_results_to_proofreading_tracker(proofreading_tracker)
-                # 重新保存一次进度表，将验证结果写入 CSV 的“校对进度/备注”两列
-                proofreading_tracker.save_proofreading_progress()
             else:
                 logging.warning("后处理验证过程中发生错误")
                 
@@ -276,6 +267,14 @@ def run(mod_name: str,
             logging.warning("后处理验证模块未找到，跳过格式验证")
         except Exception as e:
             logging.error(f"后处理验证失败: {e}")
+
+        # ───────────── 6.5. 生成校对进度看板 ─────────────
+        # 仅在此处保存一次，避免重复写入导致“复读”
+        logging.info(i18n.t("generating_proofreading_board"))
+        if proofreading_tracker.save_proofreading_progress():
+            logging.info(i18n.t("proofreading_board_generated_success"))
+        else:
+            logging.warning(i18n.t("proofreading_board_generation_failed"))
 
     # ───────────── 7. 处理元数据 ─────────────
     if is_batch_mode:
