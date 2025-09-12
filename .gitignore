@@ -1,0 +1,23 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+.venv/
+venv/
+ENV/
+
+# Databases
+*.db
+*.sqlite3
+
+# Output files from the app
+output/
+*.log
+*.gif
+*.png
+
+# IDE / Editor specific
+.vscode/
+.idea/
