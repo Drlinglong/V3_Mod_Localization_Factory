@@ -9,6 +9,10 @@ if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
 import gradio as gr
+from scripts.utils import i18n
+
+# 预先加载默认语言，避免日志出现大量缺失键警告
+i18n.load_language()
 
 from scripts.workflows import initial_translate
 from scripts.config import (
