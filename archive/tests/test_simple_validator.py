@@ -8,8 +8,10 @@ import sys
 import os
 import logging
 
-# 添加项目根目录到Python路径
-sys.path.insert(0, os.path.abspath('.'))
+# 根据当前文件位置计算项目根目录并加入 Python 路径
+project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+if project_root not in sys.path:
+    sys.path.insert(0, project_root)
 
 # 设置日志
 logging.basicConfig(

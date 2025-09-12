@@ -10,8 +10,10 @@ import os
 def test_config_syntax():
     """测试配置文件语法"""
     try:
-        # 尝试导入配置文件
-        sys.path.insert(0, os.path.abspath('.'))
+        # 根据当前文件位置计算项目根目录并加入 Python 路径
+        project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+        if project_root not in sys.path:
+            sys.path.insert(0, project_root)
         import scripts.config
         
         print("✅ 配置文件语法正确！")
