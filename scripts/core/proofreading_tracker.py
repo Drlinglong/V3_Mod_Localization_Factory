@@ -34,12 +34,9 @@ class ProofreadingTracker:
         from scripts.config import DEST_DIR
         self.output_root = os.path.join(DEST_DIR, output_folder_name)
         
-        # 根据程序启动语言设置CSV文件名
-        script_language = i18n.get_current_language()
-        if script_language == "en_US":
-            self.csv_filename = "proofreading_progress.csv"
-        else:
-            self.csv_filename = "校对进度表.csv"
+        # CSV 文件名：中英混合，方便不同语言的用户识别
+        # 中文+英文: 校对进度表 Proofreading Progress
+        self.csv_filename = "校对进度表 Proofreading Progress.csv"
         
     def add_file_info(self, file_info: Dict[str, Any]):
         """
@@ -50,10 +47,13 @@ class ProofreadingTracker:
         """
         self.files_data.append(file_info)
         
-    def generate_csv_content(self) -> str:
+    def generate_csv_content(self, include_header: bool = True) -> str:
         """
         生成CSV格式的校对进度表格内容
-        
+
+        Args:
+            include_header: 是否写入表头。若用于向已有 CSV 追加数据时，可设置为 False。
+
         Returns:
             str: CSV格式的校对进度表格内容
         """
@@ -71,18 +71,19 @@ class ProofreadingTracker:
         output = StringIO()
         writer = csv.writer(output, quoting=csv.QUOTE_ALL)
         
-        # 使用i18n系统获取列标题
+        # CSV 表头采用“中文 + English”形式，便于跨语言团队协作
         headers = [
-            i18n.t("proofreading_status"),
-            i18n.t("proofreading_source_file"),
-            i18n.t("proofreading_localized_file"),
-            i18n.t("proofreading_translated_lines"),
-            i18n.t("proofreading_progress"),  # 校对进度记录列
-            i18n.t("proofreading_notes")
+            "状态 Status",
+            "源文件 Source File",
+            "本地化文件 Localized File",
+            "已译行 Translated Lines",
+            "校对进度 Proofreading Progress",  # 校对进度记录列
+            "备注 Notes"
         ]
-        
-        # 添加标题行
-        writer.writerow(headers)
+
+        # 若需要，写入标题行
+        if include_header:
+            writer.writerow(headers)
         
         # 添加数据行
         for file_info in sorted_files:
@@ -123,19 +124,21 @@ class ProofreadingTracker:
         try:
             # 确保输出目录存在
             os.makedirs(self.output_root, exist_ok=True)
-            
-            # 生成CSV内容
-            csv_content = self.generate_csv_content()
+
+            # 校验输出文件是否已存在，存在则改为追加模式
+            output_file_path = os.path.join(self.output_root, self.csv_filename)
+            file_exists = os.path.exists(output_file_path)
+
+            # 生成CSV内容，若文件已存在则不再写入表头
+            csv_content = self.generate_csv_content(include_header=not file_exists)
             if not csv_content:
                 return False
-                
-            # 保存到CSV文件，使用UTF-8 BOM编码确保Excel等软件正确识别中文
-            output_file_path = os.path.join(self.output_root, self.csv_filename)
-            
-            # 使用UTF-8 BOM编码，确保Excel等软件能正确显示中文
-            with open(output_file_path, "w", encoding="utf-8-sig", newline='') as f:
+
+            # 使用UTF-8 BOM编码保存，Excel 等软件能正确显示中文
+            mode = "a" if file_exists else "w"
+            with open(output_file_path, mode, encoding="utf-8-sig", newline='') as f:
                 f.write(csv_content)
-                
+
             logging.info(i18n.t("proofreading_table_generated", path=output_file_path))
             return True
             
