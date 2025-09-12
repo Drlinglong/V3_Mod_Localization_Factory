@@ -34,12 +34,9 @@ class ProofreadingTracker:
         from scripts.config import DEST_DIR
         self.output_root = os.path.join(DEST_DIR, output_folder_name)
         
-        # 根据程序启动语言设置CSV文件名
-        script_language = i18n.get_current_language()
-        if script_language == "en_US":
-            self.csv_filename = "proofreading_progress.csv"
-        else:
-            self.csv_filename = "校对进度表.csv"
+        # CSV 文件名：中英混合，方便不同语言的用户识别
+        # 中文+英文: 校对进度表 Proofreading Progress
+        self.csv_filename = "校对进度表 Proofreading Progress.csv"
         
     def add_file_info(self, file_info: Dict[str, Any]):
         """
@@ -74,14 +71,14 @@ class ProofreadingTracker:
         output = StringIO()
         writer = csv.writer(output, quoting=csv.QUOTE_ALL)
         
-        # 使用i18n系统获取列标题
+        # CSV 表头采用“中文 + English”形式，便于跨语言团队协作
         headers = [
-            i18n.t("proofreading_status"),
-            i18n.t("proofreading_source_file"),
-            i18n.t("proofreading_localized_file"),
-            i18n.t("proofreading_translated_lines"),
-            i18n.t("proofreading_progress"),  # 校对进度记录列
-            i18n.t("proofreading_notes")
+            "状态 Status",
+            "源文件 Source File",
+            "本地化文件 Localized File",
+            "已译行 Translated Lines",
+            "校对进度 Proofreading Progress",  # 校对进度记录列
+            "备注 Notes"
         ]
 
         # 若需要，写入标题行
