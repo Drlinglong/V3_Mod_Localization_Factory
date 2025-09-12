@@ -1,5 +1,12 @@
 """基于Gradio的最小化Web界面，用于启动翻译流程。"""
+import os
+import sys
 import socket
+
+# 确保当前脚本能找到项目根目录，避免模块导入失败
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+if PROJECT_ROOT not in sys.path:
+    sys.path.insert(0, PROJECT_ROOT)
 
 import gradio as gr
 
