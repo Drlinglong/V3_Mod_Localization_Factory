@@ -66,29 +66,99 @@ def start_translation(mod_name: str,
 
 
 with gr.Blocks(theme=gr.themes.Soft()) as demo:
-    gr.Markdown("## 🔤 本地化工作台 - 初次翻译")
+    """构建主界面，包含多个占位标签页"""
 
-    with gr.Row():
-        # 自动扫描并下拉选择模组
-        mod_name = gr.Dropdown(MOD_CHOICES, label="模组文件夹名",
-                               value=MOD_CHOICES[0] if MOD_CHOICES else None)
-        game_profile = gr.Dropdown(GAME_CHOICES, label="游戏档案", value="1")
+    with gr.Tabs() as tabs:
+        # ---------------------- 主页 ----------------------
+        with gr.Tab("主页"):
+            gr.Markdown("## 🔤 本地化工作台")
+            home_btn = gr.Button("🚀 初次汉化")
 
-    with gr.Row():
-        source_lang = gr.Dropdown(LANG_CHOICES, label="源语言", value="1")
-        target_langs = gr.CheckboxGroup(LANG_CHOICES, label="目标语言", value=["2"])
+        # ---------------------- 文档页 ----------------------
+        with gr.Tab("文档"):
+            gr.Markdown(
+                """
+                ### 快速上手
+                1. 选择待翻译的模组
+                2. 配置语言与API
+                3. 点击开始翻译
 
-    with gr.Row():
-        provider = gr.Dropdown(PROVIDER_CHOICES, label="API供应商", value=DEFAULT_API_PROVIDER)
-        context = gr.Textbox(label="模组上下文", lines=1)
+                ### FAQ
+                - **Q:** 需要联网吗？\n  **A:** 是，翻译功能依赖网络接口。
+                - **Q:** 翻译结果在哪？\n  **A:** 程序会在日志中提示输出路径。
+                """
+            )
 
-    start_btn = gr.Button("开始翻译")
-    log_output = gr.Textbox(label="日志输出", lines=15)
+        # ------------------- 初次汉化页 -------------------
+        with gr.Tab("初次汉化"):
+            gr.Markdown("## 🔤 本地化工作台 - 初次翻译")
 
-    start_btn.click(
-        start_translation,
-        inputs=[mod_name, game_profile, source_lang, target_langs, provider, context],
-        outputs=log_output,
+            with gr.Row():
+                # 自动扫描并下拉选择模组
+                mod_name = gr.Dropdown(
+                    MOD_CHOICES,
+                    label="模组文件夹名",
+                    value=MOD_CHOICES[0] if MOD_CHOICES else None,
+                )
+                game_profile = gr.Dropdown(
+                    GAME_CHOICES, label="游戏档案", value="1"
+                )
+
+            with gr.Row():
+                source_lang = gr.Dropdown(
+                    LANG_CHOICES, label="源语言", value="1"
+                )
+                target_langs = gr.CheckboxGroup(
+                    LANG_CHOICES, label="目标语言", value=["2"]
+                )
+
+            with gr.Row():
+                provider = gr.Dropdown(
+                    PROVIDER_CHOICES, label="API供应商", value=DEFAULT_API_PROVIDER
+                )
+                context = gr.Textbox(label="模组上下文", lines=1)
+
+            start_btn = gr.Button("开始翻译")
+            log_output = gr.Textbox(label="日志输出", lines=15)
+
+            start_btn.click(
+                start_translation,
+                inputs=[
+                    mod_name,
+                    game_profile,
+                    source_lang,
+                    target_langs,
+                    provider,
+                    context,
+                ],
+                outputs=log_output,
+            )
+
+        # ------------------- 词典管理 -------------------
+        with gr.Tab("词典管理"):
+            gr.Markdown("功能开发中，敬请期待……")
+
+        # ------------------- 文件校对 -------------------
+        with gr.Tab("文件校对"):
+            gr.Markdown("功能开发中，敬请期待……")
+
+        # ------------------- 项目管理 -------------------
+        with gr.Tab("项目管理"):
+            gr.Markdown("功能开发中，敬请期待……")
+
+        # ------------------- 其他工具 -------------------
+        with gr.Tab("其他工具"):
+            gr.Markdown("功能开发中，敬请期待……")
+
+        # ------------------- 控制面板 -------------------
+        with gr.Tab("控制面板"):
+            gr.Markdown("功能开发中，敬请期待……")
+
+    # 主页按钮点击后切换到“初次汉化”标签
+    home_btn.click(
+        lambda: gr.Tabs.update(selected="初次汉化"),
+        None,
+        tabs,
     )
 
 
