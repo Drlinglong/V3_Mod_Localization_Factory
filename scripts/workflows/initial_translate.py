@@ -11,13 +11,22 @@ from scripts.config import SOURCE_DIR, DEST_DIR, LANGUAGES, RECOMMENDED_MAX_WORK
 from scripts.utils import i18n
 
 
+def _log_and_yield(message: str, level: int = logging.INFO):
+    """记录日志并将消息作为生成器输出。"""
+    logging.log(level, message)
+    yield message
+
+
 def run(mod_name: str,
         source_lang: dict,
         target_languages: list[dict],
         game_profile: dict,
         mod_context: str,
         selected_provider: str = "gemini"):
-    """【最终版】初次翻译工作流（多语言 & 多游戏兼容）"""
+    """【最终版】初次翻译工作流（多语言 & 多游戏兼容）
+
+    此函数现在通过yield逐步返回进度消息，以便UI实时显示。
+    """
 
     # ───────────── 1. ścieżki i tryb ─────────────
     is_batch_mode = len(target_languages) > 1
@@ -30,14 +39,14 @@ def run(mod_name: str,
         output_folder_name = f"{prefix}{mod_name}"
         primary_target_lang = target_lang
 
-    logging.info(i18n.t("start_workflow",
-                 workflow_name=i18n.t("workflow_initial_translate_name"),
-                 mod_name=mod_name))
+    yield from _log_and_yield(i18n.t("start_workflow",
+                                  workflow_name=i18n.t("workflow_initial_translate_name"),
+                                  mod_name=mod_name))
 
     # ───────────── 2. init klienta ─────────────
     client, provider_name = api_handler.initialize_client(selected_provider)
     if not client:
-        logging.warning(i18n.t("api_client_init_fail"))
+        yield from _log_and_yield(i18n.t("api_client_init_fail"), logging.WARNING)
         return
 
     # ───────────── 2.5. 加载游戏专用词典 ─────────────
@@ -46,9 +55,9 @@ def run(mod_name: str,
         glossary_loaded = glossary_manager.load_game_glossary(game_id)
         if glossary_loaded:
             stats = glossary_manager.get_glossary_stats()
-            logging.info(i18n.t("glossary_loaded_success", count=stats['total_entries']))
+            yield from _log_and_yield(i18n.t("glossary_loaded_success", count=stats['total_entries']))
         else:
-            logging.warning(i18n.t("glossary_load_failed"))
+            yield from _log_and_yield(i18n.t("glossary_load_failed"), logging.WARNING)
 
     # ───────────── 3. 创建输出目录 + 复制资源 ─────────────
     directory_handler.create_output_structure(
@@ -100,7 +109,7 @@ def run(mod_name: str,
 
     # ───────────── 5. 多语言并行翻译 ─────────────
     for target_lang in target_languages:
-        logging.info(i18n.t("translating_to_language", lang_name=target_lang["name"]))
+        yield from _log_and_yield(i18n.t("translating_to_language", lang_name=target_lang["name"]))
         
         # 创建校对进度追踪器
         proofreading_tracker = create_proofreading_tracker(
@@ -155,6 +164,7 @@ def run(mod_name: str,
                         'filename': fd["filename"],
                         'is_custom_loc': fd["is_custom_loc"]
                     })
+                    yield from _log_and_yield(i18n.t("file_build_completed", filename=fd["filename"]))
                 continue
             
             # 创建文件任务
@@ -233,7 +243,7 @@ def run(mod_name: str,
                         'is_custom_loc': file_task.is_custom_loc
                     })
                     
-                    logging.info(i18n.t("file_build_completed", filename=filename))
+                    yield from _log_and_yield(i18n.t("file_build_completed", filename=filename))
         
         # ───────────── 6. 运行后处理格式验证 ─────────────
         try:
@@ -251,12 +261,12 @@ def run(mod_name: str,
             if validation_success:
                 # 获取验证统计信息
                 stats = post_processor.get_validation_stats()
-                logging.info(i18n.t("post_processing_completion_summary", 
-                                   total_files=stats['total_files'],
-                                   valid_files=stats['valid_files'],
-                                   files_with_issues=stats['files_with_issues'],
-                                   total_errors=stats['total_errors'],
-                                   total_warnings=stats['total_warnings']))
+                yield from _log_and_yield(i18n.t("post_processing_completion_summary",
+                                                total_files=stats['total_files'],
+                                                valid_files=stats['valid_files'],
+                                                files_with_issues=stats['files_with_issues'],
+                                                total_errors=stats['total_errors'],
+                                                total_warnings=stats['total_warnings']))
 
                 # 合并结果进校对进度表
                 post_processor.attach_results_to_proofreading_tracker(proofreading_tracker)
@@ -264,17 +274,17 @@ def run(mod_name: str,
                 logging.warning("后处理验证过程中发生错误")
                 
         except ImportError:
-            logging.warning("后处理验证模块未找到，跳过格式验证")
+            yield from _log_and_yield("后处理验证模块未找到，跳过格式验证", logging.WARNING)
         except Exception as e:
-            logging.error(f"后处理验证失败: {e}")
+            yield from _log_and_yield(f"后处理验证失败: {e}", logging.ERROR)
 
         # ───────────── 6.5. 生成校对进度看板 ─────────────
         # 仅在此处保存一次，避免重复写入导致“复读”
-        logging.info(i18n.t("generating_proofreading_board"))
+        yield from _log_and_yield(i18n.t("generating_proofreading_board"))
         if proofreading_tracker.save_proofreading_progress():
-            logging.info(i18n.t("proofreading_board_generated_success"))
+            yield from _log_and_yield(i18n.t("proofreading_board_generated_success"))
         else:
-            logging.warning(i18n.t("proofreading_board_generation_failed"))
+            yield from _log_and_yield(i18n.t("proofreading_board_generation_failed"), logging.WARNING)
 
     # ───────────── 7. 处理元数据 ─────────────
     if is_batch_mode:
@@ -291,8 +301,8 @@ def run(mod_name: str,
         )
 
     # ───────────── 8. 完成提示 ─────────────
-    logging.info(i18n.t("translation_workflow_completed"))
-    logging.info(i18n.t("output_folder_created", folder=output_folder_name))
+    yield from _log_and_yield(i18n.t("translation_workflow_completed"))
+    yield from _log_and_yield(i18n.t("output_folder_created", folder=output_folder_name))
 
 
 def _build_dest_dir(file_task: FileTask, target_lang: dict, output_folder_name: str, game_profile: dict) -> str:
