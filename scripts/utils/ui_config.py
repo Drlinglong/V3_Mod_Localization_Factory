@@ -10,7 +10,8 @@ def load_ui_config():
     if os.path.exists(CONFIG_FILE):
         with open(CONFIG_FILE, 'r', encoding='utf-8') as f:
             return json.load(f)
-    return {"language": "zh_CN"}
+    # 默认返回简体中文与 Soft 主题
+    return {"language": "zh_CN", "theme": "Soft"}
 
 def save_ui_config(cfg: dict):
     """保存UI配置"""

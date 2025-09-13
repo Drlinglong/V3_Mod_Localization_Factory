@@ -390,9 +390,14 @@
   "feature_in_development": "功能开发中，敬请期待……",
   "reload_ui_button": "🔄 重载界面",
   "language_dropdown_label": "界面语言",
+  "theme_dropdown_label": "界面主题",
   "apply_settings_button": "应用设置",
   "control_tab_header": "界面与语言设置",
   "language_option_zh": "简体中文",
   "language_option_en": "English",
+  "theme_option_soft": "柔和主题",
+  "theme_option_monochrome": "单色主题",
+  "theme_option_glass": "玻璃主题",
+  "ui_reload_success": "✅ 界面重载成功",
   "error_mod_not_provided": "❌ 未提供模组名称"
 }

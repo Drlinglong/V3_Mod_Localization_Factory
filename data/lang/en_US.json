@@ -375,9 +375,14 @@
   "feature_in_development": "Feature under development, stay tuned...",
   "reload_ui_button": "🔄 Reload UI",
   "language_dropdown_label": "Interface Language",
+  "theme_dropdown_label": "Interface Theme",
   "apply_settings_button": "Apply Settings",
   "control_tab_header": "Interface & Language Settings",
   "language_option_zh": "简体中文",
   "language_option_en": "English",
+  "theme_option_soft": "Soft",
+  "theme_option_monochrome": "Monochrome",
+  "theme_option_glass": "Glass",
+  "ui_reload_success": "✅ UI reloaded successfully",
   "error_mod_not_provided": "❌ Mod name is required"
 }

@@ -5,15 +5,14 @@ import logging
 
 _strings = {}
 _default_lang = 'zh_CN'  # 设置默认语言为中文
-_language_loaded = False  # 添加标志，避免重复加载
 _current_lang = 'zh_CN'  # 当前语言代码
 
 def load_language(lang_code=None):
     """加载语言文件，如果未指定则使用默认语言。"""
-    global _strings, _language_loaded, _current_lang
-    
-    # 如果已经加载过语言，直接返回
-    if _language_loaded and _strings:
+    global _strings, _current_lang
+
+    # 如果已经加载过且语言未变，直接返回
+    if _strings and _current_lang == (lang_code or _default_lang):
         return True
     
     if lang_code is None:
@@ -27,12 +26,8 @@ def load_language(lang_code=None):
     try:
         with open(lang_file_path, 'r', encoding='utf-8') as f:
             _strings = json.load(f)
-        _language_loaded = True  # 设置标志
         _current_lang = lang_code  # 设置当前语言
-        try:
-            logging.info(i18n.t("language_loaded", lang_code=lang_code))
-        except:
-            logging.info(f"Language loaded: {lang_code}")
+        logging.info(f"Language loaded: {lang_code}")
         return True
     except Exception as e:
         logging.error(f"Error loading language file {lang_file_path}: {e}")
@@ -59,7 +54,6 @@ def load_language(lang_code=None):
                 "select_api_provider_prompt": "Please select API provider:",
                 "workflow_completed": "Workflow completed!"
             }
-            _language_loaded = True  # 设置标志
             _current_lang = lang_code  # 设置当前语言
             return False
 

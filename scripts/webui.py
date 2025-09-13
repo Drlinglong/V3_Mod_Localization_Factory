@@ -86,8 +86,11 @@ def build_demo():
 
     cfg = load_ui_config()
     i18n.load_language(cfg.get("language"))
+    theme_name = cfg.get("theme", "Soft")
+    # 根据配置动态选择主题类
+    theme_cls = getattr(gr.themes, theme_name, gr.themes.Soft)
 
-    with gr.Blocks(theme=gr.themes.Soft()) as demo:
+    with gr.Blocks(theme=theme_cls()) as demo:
         with gr.Tabs() as tabs:
             home_btn = home_tab.create_home_tab()
             docs_tab.create_docs_tab()
@@ -96,7 +99,9 @@ def build_demo():
             proofreading_tab.create_proofreading_tab()
             project_tab.create_project_tab()
             tools_tab.create_tools_tab()
-            lang_dd, apply_btn, reload_btn = control_tab.create_control_tab(cfg.get("language"))
+            lang_dd, theme_dd, apply_btn, reload_btn = control_tab.create_control_tab(
+                cfg.get("language"), theme_name
+            )
 
         # 主页按钮跳转到初次汉化标签
         home_btn.click(
@@ -112,9 +117,9 @@ def build_demo():
             outputs=trans_outputs,
         )
 
-        def _apply(lang):
-            """保存语言并请求重载"""
-            save_ui_config({"language": lang})
+        def _apply(lang, theme):
+            """保存语言与主题并请求重载"""
+            save_ui_config({"language": lang, "theme": theme})
             state.set_command("restart")
             demo.close()
 
@@ -123,16 +128,21 @@ def build_demo():
             state.set_command("restart")
             demo.close()
 
-        apply_btn.click(_apply, inputs=lang_dd, outputs=None, js="window.location.reload()")
+        apply_btn.click(_apply, inputs=[lang_dd, theme_dd], outputs=None, js="window.location.reload()")
         reload_btn.click(_reload, inputs=None, outputs=None, js="window.location.reload()")
 
     return demo
 
 if __name__ == "__main__":
     port = 1453
+    reloaded = False  # 标记是否刚完成重载
     while True:
         demo = build_demo()
         port = find_available_port(port)
+        if reloaded:
+            # 重载完成后在CLI中提示
+            print(i18n.t("ui_reload_success"))
+            reloaded = False
         try:
             print(f"🌐 WebUI将在端口 {port} 启动")
             demo.queue().launch(server_port=port, inbrowser=True)
@@ -141,6 +151,7 @@ if __name__ == "__main__":
             port += 1
             continue
         if state.get_command() == "restart":
+            reloaded = True
             state.clear()
             continue
         break
