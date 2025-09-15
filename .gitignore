@@ -34,3 +34,6 @@ output/
 # Mod file and translate file
 /source_mod/
 /my_translation/
+/scripts/core/__pycache__
+/scripts/utils/__pycache__
+/scripts/workflows/__pycache__
