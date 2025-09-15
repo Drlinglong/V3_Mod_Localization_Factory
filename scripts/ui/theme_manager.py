@@ -94,15 +94,15 @@ def create_remis_theme():
 
         # --- 按钮：核心配色方案 ---
         # 主要按钮: 拜占庭紫底 + 象牙白文字 + 金色悬停效果
-        button_primary_background_fill="#66023C",        # 标志性的拜占庭紫
-        button_primary_background_fill_dark="#66023C",
+        button_primary_background_fill="#B8860B",        # 标志性的拜占庭紫
+        button_primary_background_fill_dark="#B8860B",
         button_primary_text_color="#FFFFFF",             # 纯白/象牙白文字以保证清晰度
         button_primary_background_fill_hover="*primary_500", # 悬停时变为色板里更亮的紫色
         button_primary_background_fill_hover_dark="*primary_500",
         button_primary_border_color_dark="*primary_500",
 
         # 次要按钮: 柔和的金色底 + 深棕色文字
-        button_secondary_background_fill="#C49102", # 色板里柔和的淡金色
+        button_secondary_background_fill="#C49102", # 一个更偏向青铜质感的暗金色
         button_secondary_background_fill_dark="#C49102",
         button_secondary_text_color="#FFFFFF",           # 使用与正文一致的深棕色文字
         button_secondary_background_fill_hover="#D1A42C", # 悬停时金色加深
