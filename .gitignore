@@ -21,3 +21,8 @@ output/
 # IDE / Editor specific
 .vscode/
 .idea/
+/scripts/__pycache__
+/scripts/utils/__pycache__
+/scripts/workflows/__pycache__
+/venv/Lib/site-packages/_distutils_hack/__pycache__
+/scripts/core/__pycache__
