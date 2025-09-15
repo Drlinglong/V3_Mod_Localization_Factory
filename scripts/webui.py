@@ -128,8 +128,19 @@ def build_demo():
             state.set_command("restart")
             demo.close()
 
-        apply_btn.click(_apply, inputs=[lang_dd, theme_dd], outputs=None, js="window.location.reload()")
-        reload_btn.click(_reload, inputs=None, outputs=None, js="window.location.reload()")
+        # 先在后端保存设置，再在前端刷新页面，避免刷新过早导致配置未写入
+        apply_btn.click(
+            _apply,
+            inputs=[lang_dd, theme_dd],
+            outputs=None,
+        ).then(None, None, None, js="window.location.reload()")
+
+        # 单纯重载同样在回调完成后再刷新
+        reload_btn.click(
+            _reload,
+            inputs=None,
+            outputs=None,
+        ).then(None, None, None, js="window.location.reload()")
 
     return demo
 

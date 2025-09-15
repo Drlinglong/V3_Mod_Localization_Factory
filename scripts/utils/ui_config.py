@@ -16,5 +16,8 @@ def load_ui_config():
 def save_ui_config(cfg: dict):
     """保存UI配置"""
     os.makedirs(os.path.dirname(CONFIG_FILE), exist_ok=True)
+    # 读取已有配置并合并，避免未指定的键被覆盖
+    data = load_ui_config()
+    data.update(cfg)
     with open(CONFIG_FILE, 'w', encoding='utf-8') as f:
-        json.dump(cfg, f, ensure_ascii=False, indent=2)
+        json.dump(data, f, ensure_ascii=False, indent=2)
