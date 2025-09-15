@@ -15,6 +15,10 @@ from scripts.utils import i18n
 from scripts.utils.ui_config import load_ui_config, save_ui_config
 from scripts.utils.state_manager import StateManager
 
+# 在导入UI模块前加载语言配置，确保首次导入的文本使用正确语言
+_config = load_ui_config()
+i18n.load_language(_config.get("language"))
+
 from scripts.workflows import initial_translate
 from scripts.config import (
     LANGUAGES,
@@ -45,10 +49,6 @@ RELOADABLE_MODULES = [
 ]
 
 state = StateManager()
-
-# 预先加载配置中的语言
-_config = load_ui_config()
-i18n.load_language(_config.get("language"))
 
 def find_available_port(start: int = 1453) -> int:
     """从指定端口开始寻找可用端口。"""
@@ -100,11 +100,11 @@ def start_translation(mod_name: str,
 
 def build_demo():
     """构建并返回Gradio界面"""
-    for m in RELOADABLE_MODULES:
-        importlib.reload(m)
-
     cfg = load_ui_config()
-    i18n.load_language(cfg.get("language"))
+    i18n.load_language(cfg.get("language"))  # 先加载语言，避免模块重载后文本错乱
+    for m in RELOADABLE_MODULES:
+        importlib.reload(m)  # 重载模块以应用最新语言
+
     theme_name = cfg.get("theme", "Soft")
     # 根据配置动态选择主题类
     theme_cls = getattr(gr.themes, theme_name, gr.themes.Soft)
