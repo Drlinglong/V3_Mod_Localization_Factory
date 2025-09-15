@@ -137,18 +137,18 @@ def build_demo():
             outputs=trans_outputs,
         )
 
-        def _apply(lang, theme):
-            """保存语言与主题并请求重载"""
-            save_ui_config({"language": lang, "theme": theme})
-            print("🔄 正在重载界面…")
-            # 仅发送重启请求，实际关闭由主循环处理
-            state.set_command("restart")
+def _apply(lang, theme):
+    """保存语言与主题并请求重载"""
+    save_ui_config({"language": lang, "theme": theme})
+    print("🔄 Reloading interface...")  # 在CLI中显示英文提示
+    # 仅发送重启请求，实际关闭由主循环处理
+    state.set_command("restart")
 
-        def _reload():
-            """单纯重载UI"""
-            print("🔄 正在重载界面…")
-            # 仅发送重启请求，实际关闭由主循环处理
-            state.set_command("restart")
+def _reload():
+    """单纯重载UI"""
+    print("🔄 Reloading interface...")  # 在CLI中显示英文提示
+    # 仅发送重启请求，实际关闭由主循环处理
+    state.set_command("restart")
 
         # 先在后端保存设置，再在前端刷新页面，避免刷新过早导致配置未写入
         apply_btn.click(
@@ -196,18 +196,18 @@ if __name__ == "__main__":
         port = wait_for_port_release(port)
         if reloaded:
             # 重载完成后在CLI中提示
-            print(i18n.t("ui_reload_success"))
+            print("✅ Interface reloaded successfully.")  # 在CLI中显示英文提示
             reloaded = False
         try:
-            print(f"🌐 WebUI将在端口 {port} 启动")
+            print(f"🌐 WebUI will launch on port {port}")  # 在CLI中显示英文启动提示
             # prevent_thread_lock=True 使启动非阻塞，便于后续重载
             demo.queue().launch(server_port=port, inbrowser=True, prevent_thread_lock=True)
         except OSError:
-            print(f"⚠️ 端口 {port} 已被占用，尝试下一个端口...")
+            print(f"⚠️ Port {port} is in use, trying the next port...")  # 在CLI中显示端口占用提示
             port += 1
             continue
 
-        print("🔄 进入命令监听模式...")
+        print("🔄 Entering command listening mode...")  # 在CLI中显示监听模式提示
         server_command = None
         while True:
             server_command = state.wait_for_command(timeout=5)
@@ -216,14 +216,14 @@ if __name__ == "__main__":
 
         # 主循环充当“餐厅经理”，统一处理重启与退出命令
         if server_command == "restart":
-            print("🔄 收到重启命令，正在重启界面…")
+            print("🔄 Restart command received, restarting interface...")  # 在CLI中显示重启提示
             demo.close()
             state.clear()
             time.sleep(0.5)  # 等待端口释放以便复用
             reloaded = True
             continue
         else:
-            print("🛑 收到退出命令，正在关闭服务…")
+            print("🛑 Exit command received, shutting down service...")  # 在CLI中显示退出提示
             demo.close()
             state.clear()
             break
