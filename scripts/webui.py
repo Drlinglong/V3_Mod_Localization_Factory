@@ -3,6 +3,7 @@ import os
 import sys
 import socket
 import importlib
+import time
 
 # 保证项目根目录在路径中，避免导入失败
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
@@ -122,6 +123,7 @@ def build_demo():
             save_ui_config({"language": lang, "theme": theme})
             state.set_command("restart")
             demo.close()
+            time.sleep(0.5)  # 等待端口彻底释放
 
         def _reload():
             """单纯重载UI"""
@@ -156,7 +158,9 @@ if __name__ == "__main__":
             reloaded = False
         try:
             print(f"🌐 WebUI将在端口 {port} 启动")
-            demo.queue().launch(server_port=port, inbrowser=True)
+            # prevent_thread_lock=True 使启动非阻塞，便于后续重载
+            demo.queue().launch(server_port=port, inbrowser=True, prevent_thread_lock=True)
+            demo.block_thread()  # 阻塞主线程，等待 demo.close()
         except OSError:
             print(f"⚠️ 端口 {port} 已被占用，尝试下一个端口...")
             port += 1
