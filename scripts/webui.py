@@ -1,47 +1,62 @@
-"""基于Gradio的最小化Web界面，用于启动翻译流程。"""
+"""基于Gradio的模块化Web界面，用于启动翻译流程。"""
 import os
 import sys
 import socket
+import importlib
 
-# 确保当前脚本能找到项目根目录，避免模块导入失败
+# 保证项目根目录在路径中，避免导入失败
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
 import gradio as gr
 from scripts.utils import i18n
-
-# 预先加载默认语言，避免日志出现大量缺失键警告
-i18n.load_language()
+from scripts.utils.ui_config import load_ui_config, save_ui_config
+from scripts.utils.state_manager import StateManager
 
 from scripts.workflows import initial_translate
 from scripts.config import (
     LANGUAGES,
     GAME_PROFILES,
-    API_PROVIDERS,
-    DEFAULT_API_PROVIDER,
-    SOURCE_DIR,
 )
-from scripts.core.directory_handler import scan_source_directory
 
-# 准备下拉菜单的数据
-LANG_CHOICES = [(v["name"], k) for k, v in LANGUAGES.items()]
-PROVIDER_CHOICES = list(API_PROVIDERS.keys())
-GAME_CHOICES = [(v["name"], k) for k, v in GAME_PROFILES.items()]
-# 扫描source_mod目录并生成模组下拉列表
-MOD_CHOICES = scan_source_directory(SOURCE_DIR)
+# 导入各个UI模块
+from scripts.ui import (
+    home_tab,
+    docs_tab,
+    translation_tab,
+    glossary_tab,
+    proofreading_tab,
+    project_tab,
+    tools_tab,
+    control_tab,
+)
 
+RELOADABLE_MODULES = [
+    home_tab,
+    docs_tab,
+    translation_tab,
+    glossary_tab,
+    proofreading_tab,
+    project_tab,
+    tools_tab,
+    control_tab,
+]
+
+state = StateManager()
+
+# 预先加载配置中的语言
+_config = load_ui_config()
+i18n.load_language(_config.get("language"))
 
 def find_available_port(start: int = 1453) -> int:
     """从指定端口开始寻找可用端口。"""
     port = start
     while True:
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-            # 尝试连接本地端口，若返回非0表示该端口未被占用
             if s.connect_ex(("127.0.0.1", port)) != 0:
                 return port
         port += 1
-
 
 def start_translation(mod_name: str,
                       game_key: str,
@@ -51,7 +66,7 @@ def start_translation(mod_name: str,
                       context: str):
     """启动翻译流程并实时返回日志。"""
     if not mod_name:
-        yield "❌ 未提供模组名称"
+        yield i18n.t("error_mod_not_provided")
         return
 
     source_lang = LANGUAGES.get(source_key)
@@ -64,115 +79,79 @@ def start_translation(mod_name: str,
         log_text += f"{msg}\n"
         yield log_text
 
+def build_demo():
+    """构建并返回Gradio界面"""
+    for m in RELOADABLE_MODULES:
+        importlib.reload(m)
 
-with gr.Blocks(theme=gr.themes.Soft()) as demo:
-    """构建主界面，包含多个占位标签页"""
+    cfg = load_ui_config()
+    i18n.load_language(cfg.get("language"))
+    theme_name = cfg.get("theme", "Soft")
+    # 根据配置动态选择主题类
+    theme_cls = getattr(gr.themes, theme_name, gr.themes.Soft)
 
-    with gr.Tabs() as tabs:
-        # ---------------------- 主页 ----------------------
-        with gr.Tab("主页"):
-            gr.Markdown("## 🔤 本地化工作台")
-            home_btn = gr.Button("🚀 初次汉化")
-
-        # ---------------------- 文档页 ----------------------
-        with gr.Tab("文档"):
-            gr.Markdown(
-                """
-                ### 快速上手
-                1. 选择待翻译的模组
-                2. 配置语言与API
-                3. 点击开始翻译
-
-                ### FAQ
-                - **Q:** 需要联网吗？\n  **A:** 是，翻译功能依赖网络接口。
-                - **Q:** 翻译结果在哪？\n  **A:** 程序会在日志中提示输出路径。
-                """
+    with gr.Blocks(theme=theme_cls()) as demo:
+        with gr.Tabs() as tabs:
+            home_btn = home_tab.create_home_tab()
+            docs_tab.create_docs_tab()
+            trans_inputs, trans_outputs, trans_btn = translation_tab.create_translation_tab()
+            glossary_tab.create_glossary_tab()
+            proofreading_tab.create_proofreading_tab()
+            project_tab.create_project_tab()
+            tools_tab.create_tools_tab()
+            lang_dd, theme_dd, apply_btn, reload_btn = control_tab.create_control_tab(
+                cfg.get("language"), theme_name
             )
 
-        # ------------------- 初次汉化页 -------------------
-        with gr.Tab("初次汉化"):
-            gr.Markdown("## 🔤 本地化工作台 - 初次翻译")
+        # 主页按钮跳转到初次汉化标签
+        home_btn.click(
+            lambda: gr.Tabs.update(selected=i18n.t("translation_tab_title_internal_id")),
+            None,
+            tabs,
+        )
 
-            with gr.Row():
-                # 自动扫描并下拉选择模组
-                mod_name = gr.Dropdown(
-                    MOD_CHOICES,
-                    label="模组文件夹名",
-                    value=MOD_CHOICES[0] if MOD_CHOICES else None,
-                )
-                game_profile = gr.Dropdown(
-                    GAME_CHOICES, label="游戏档案", value="1"
-                )
+        # 绑定初次汉化按钮的核心逻辑
+        trans_btn.click(
+            start_translation,
+            inputs=trans_inputs,
+            outputs=trans_outputs,
+        )
 
-            with gr.Row():
-                source_lang = gr.Dropdown(
-                    LANG_CHOICES, label="源语言", value="1"
-                )
-                target_langs = gr.CheckboxGroup(
-                    LANG_CHOICES, label="目标语言", value=["2"]
-                )
+        def _apply(lang, theme):
+            """保存语言与主题并请求重载"""
+            save_ui_config({"language": lang, "theme": theme})
+            state.set_command("restart")
+            demo.close()
 
-            with gr.Row():
-                provider = gr.Dropdown(
-                    PROVIDER_CHOICES, label="API供应商", value=DEFAULT_API_PROVIDER
-                )
-                context = gr.Textbox(label="模组上下文", lines=1)
+        def _reload():
+            """单纯重载UI"""
+            state.set_command("restart")
+            demo.close()
 
-            start_btn = gr.Button("开始翻译")
-            log_output = gr.Textbox(label="日志输出", lines=15)
+        apply_btn.click(_apply, inputs=[lang_dd, theme_dd], outputs=None, js="window.location.reload()")
+        reload_btn.click(_reload, inputs=None, outputs=None, js="window.location.reload()")
 
-            start_btn.click(
-                start_translation,
-                inputs=[
-                    mod_name,
-                    game_profile,
-                    source_lang,
-                    target_langs,
-                    provider,
-                    context,
-                ],
-                outputs=log_output,
-            )
-
-        # ------------------- 词典管理 -------------------
-        with gr.Tab("词典管理"):
-            gr.Markdown("功能开发中，敬请期待……")
-
-        # ------------------- 文件校对 -------------------
-        with gr.Tab("文件校对"):
-            gr.Markdown("功能开发中，敬请期待……")
-
-        # ------------------- 项目管理 -------------------
-        with gr.Tab("项目管理"):
-            gr.Markdown("功能开发中，敬请期待……")
-
-        # ------------------- 其他工具 -------------------
-        with gr.Tab("其他工具"):
-            gr.Markdown("功能开发中，敬请期待……")
-
-        # ------------------- 控制面板 -------------------
-        with gr.Tab("控制面板"):
-            gr.Markdown("功能开发中，敬请期待……")
-
-    # 主页按钮点击后切换到“初次汉化”标签
-    home_btn.click(
-        lambda: gr.Tabs.update(selected="初次汉化"),
-        None,
-        tabs,
-    )
-
+    return demo
 
 if __name__ == "__main__":
-    # 循环尝试端口，确保WebUI总能启动
     port = 1453
+    reloaded = False  # 标记是否刚完成重载
     while True:
+        demo = build_demo()
         port = find_available_port(port)
+        if reloaded:
+            # 重载完成后在CLI中提示
+            print(i18n.t("ui_reload_success"))
+            reloaded = False
         try:
             print(f"🌐 WebUI将在端口 {port} 启动")
             demo.queue().launch(server_port=port, inbrowser=True)
-            break
         except OSError:
-            # 当前端口不可用，提示并尝试下一个端口
             print(f"⚠️ 端口 {port} 已被占用，尝试下一个端口...")
             port += 1
-
+            continue
+        if state.get_command() == "restart":
+            reloaded = True
+            state.clear()
+            continue
+        break
