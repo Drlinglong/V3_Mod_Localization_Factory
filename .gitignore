@@ -17,23 +17,11 @@ output/
 *.log
 *.gif
 
-
 # IDE / Editor specific
 .vscode/
 .idea/
-/scripts/__pycache__
-/scripts/utils/__pycache__
-/scripts/workflows/__pycache__
-/venv/Lib/site-packages/_distutils_hack/__pycache__
-/scripts/core/__pycache__
-/scripts/utils
-/scripts/core/__pycache__
-/scripts/utils/__pycache__
-/scripts/workflows/__pycache__
 
 # Mod file and translate file
 /source_mod/
 /my_translation/
-/scripts/core/__pycache__
-/scripts/utils/__pycache__
-/scripts/workflows/__pycache__
+
