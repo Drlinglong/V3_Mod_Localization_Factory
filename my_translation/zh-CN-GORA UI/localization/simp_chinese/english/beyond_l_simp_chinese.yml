@@ -1,3 +1,0 @@
-﻿l_simp_chinese:
- MARKET_BALANCE_MMP:0 "#title 余额:#variable @money![Market.GetBalance|D+=]#!#!"
- MARKET_GDP:0 "#title GDP:#[GetPlayer.GetMarket.GetMarketGDPValue|*v2]"

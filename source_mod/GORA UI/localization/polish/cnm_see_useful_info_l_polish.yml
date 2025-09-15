@@ -1,9 +1,0 @@
-﻿l_polish:
-
-STATE_building_government_administration_profit_DESC: "Each $building_government_administration$ cost:@money![State.MakeScope.ScriptValue('cnm_state_building_government_administration_profit')|D+]\nEach $building_government_administration$ collect:@money![Multiply_CFixedPoint(State.MakeScope.ScriptValue('cnm_state_building_government_administration_tax_capacity_rate'), State.GetTaxationRevenue )|D+]\nAll $building_government_administration$ $state_tax_capacity_add$：[State.MakeScope.ScriptValue('cnm_state_building_government_administration_tax_capacity')]"
-#\n全部$building_government_administration$$state_tax_capacity_add$占比：[State.MakeScope.ScriptValue('cnm_state_building_government_administration_tax_capacity_rate')|%]
-
-commander_offense_DESC: "$concept_offense$ of $concept_commander$, without influence of $concept_order$.\nOnly count vanilla, if you have $concept_order$ from other mods, the calculation will incorrect."
-commander_defense_DESC: "$concept_defense$ of $concept_commander$, without influence of $concept_order$.\nOnly count vanilla, if you have $concept_order$ from other mods, the calculation will incorrect."
-
-TOOLTIP_state_available_workers: "$peasants_no_icon$：[State.MakeScope.ScriptValue('cnm_state_subsistence_workers')|1Dv]\n$concept_unemployed$：[State.MakeScope.ScriptValue('cnm_state_unemployed')|1Dv]"
