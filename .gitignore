@@ -30,3 +30,7 @@ output/
 /scripts/core/__pycache__
 /scripts/utils/__pycache__
 /scripts/workflows/__pycache__
+
+# Mod file and translate file
+/source_mod/
+/my_translation/
