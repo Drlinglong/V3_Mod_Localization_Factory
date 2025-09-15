@@ -16,8 +16,12 @@ ENV/
 output/
 *.log
 *.gif
-*.png
 
 # IDE / Editor specific
 .vscode/
 .idea/
+
+# Mod file and translate file
+/source_mod/
+/my_translation/
+
