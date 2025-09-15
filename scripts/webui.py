@@ -59,6 +59,24 @@ def find_available_port(start: int = 1453) -> int:
                 return port
         port += 1
 
+def wait_for_port_release(port: int, retries: int = 10, interval: float = 0.5) -> int:
+    """等待指定端口释放以便复用，超过重试次数则寻找新的可用端口。
+
+    参数:
+        port: 想要复用的端口号
+        retries: 重试次数
+        interval: 每次重试的间隔秒数
+    返回:
+        可用的端口号（优先返回原端口）
+    """
+    for _ in range(retries):
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+            if s.connect_ex(("127.0.0.1", port)) != 0:
+                return port
+        time.sleep(interval)
+    # 若原端口始终未释放，则寻找新的可用端口
+    return find_available_port(port + 1)
+
 def start_translation(mod_name: str,
                       game_key: str,
                       source_key: str,
@@ -121,14 +139,17 @@ def build_demo():
         def _apply(lang, theme):
             """保存语言与主题并请求重载"""
             save_ui_config({"language": lang, "theme": theme})
+            print("🔄 正在重载界面…")
             state.set_command("restart")
             demo.close()
             time.sleep(0.5)  # 等待端口彻底释放
 
         def _reload():
             """单纯重载UI"""
+            print("🔄 正在重载界面…")
             state.set_command("restart")
             demo.close()
+            time.sleep(0.5)  # 等待端口彻底释放
 
         # 先在后端保存设置，再在前端刷新页面，避免刷新过早导致配置未写入
         apply_btn.click(
@@ -151,7 +172,7 @@ if __name__ == "__main__":
     reloaded = False  # 标记是否刚完成重载
     while True:
         demo = build_demo()
-        port = find_available_port(port)
+        port = wait_for_port_release(port)
         if reloaded:
             # 重载完成后在CLI中提示
             print(i18n.t("ui_reload_success"))
@@ -168,5 +189,6 @@ if __name__ == "__main__":
         if state.get_command() == "restart":
             reloaded = True
             state.clear()
+            time.sleep(0.5)  # 再次等待端口释放，确保下次能复用
             continue
         break
