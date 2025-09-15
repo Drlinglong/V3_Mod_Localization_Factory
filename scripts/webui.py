@@ -141,30 +141,26 @@ def build_demo():
             """保存语言与主题并请求重载"""
             save_ui_config({"language": lang, "theme": theme})
             print("🔄 正在重载界面…")
-            state.set_command("restart")
-            demo.close()
-            time.sleep(0.5)  # 等待端口彻底释放
+            state.set_command("restart")  # 仅发送重启请求，实际关闭由主循环处理
 
         def _reload():
             """单纯重载UI"""
             print("🔄 正在重载界面…")
-            state.set_command("restart")
-            demo.close()
-            time.sleep(0.5)  # 等待端口彻底释放
+            state.set_command("restart")  # 仅发送重启请求，实际关闭由主循环处理
 
         # 先在后端保存设置，再在前端刷新页面，避免刷新过早导致配置未写入
         apply_btn.click(
             _apply,
             inputs=[lang_dd, theme_dd],
             outputs=None,
-        ).then(None, None, None, js="window.location.reload()")
+        ).then(None, None, None, js="setTimeout(() => { window.location.reload(); }, 1000)")
 
         # 单纯重载同样在回调完成后再刷新
         reload_btn.click(
             _reload,
             inputs=None,
             outputs=None,
-        ).then(None, None, None, js="window.location.reload()")
+        ).then(None, None, None, js="setTimeout(() => { window.location.reload(); }, 1000)")
 
     return demo
 
@@ -182,14 +178,27 @@ if __name__ == "__main__":
             print(f"🌐 WebUI将在端口 {port} 启动")
             # prevent_thread_lock=True 使启动非阻塞，便于后续重载
             demo.queue().launch(server_port=port, inbrowser=True, prevent_thread_lock=True)
-            demo.block_thread()  # 阻塞主线程，等待 demo.close()
         except OSError:
             print(f"⚠️ 端口 {port} 已被占用，尝试下一个端口...")
             port += 1
             continue
-        if state.get_command() == "restart":
-            reloaded = True
+
+        # 主循环充当“餐厅经理”，统一监听并处理命令
+        print("🔄 进入命令监听模式...")
+        server_command = None
+        while True:
+            server_command = state.wait_for_command(timeout=5)
+            if server_command:
+                break
+
+        if server_command == "restart":
+            print("🔄 收到重启命令，正在重载UI...")
             state.clear()
-            time.sleep(0.5)  # 再次等待端口释放，确保下次能复用
-            continue
-        break
+            demo.close()
+            time.sleep(0.5)  # 等待端口释放
+            reloaded = True
+            continue  # 回到顶部重新构建UI
+        else:
+            print("🛑 收到停止命令，正在退出...")
+            demo.close()
+            break
