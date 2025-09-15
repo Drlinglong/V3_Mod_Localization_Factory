@@ -137,18 +137,19 @@ def build_demo():
             outputs=trans_outputs,
         )
 
-def _apply(lang, theme):
-    """保存语言与主题并请求重载"""
-    save_ui_config({"language": lang, "theme": theme})
-    print("🔄 Reloading interface...")  # 在CLI中显示英文提示
-    # 仅发送重启请求，实际关闭由主循环处理
-    state.set_command("restart")
+        # 定义重载与应用配置的回调函数
+        def _apply(lang, theme):
+            """保存语言与主题并请求重载"""
+            save_ui_config({"language": lang, "theme": theme})
+            print("\U0001F504 Reloading interface...")  # 在CLI中显示英文提示
+            # 仅发送重启请求，实际关闭由主循环处理
+            state.set_command("restart")
 
-def _reload():
-    """单纯重载UI"""
-    print("🔄 Reloading interface...")  # 在CLI中显示英文提示
-    # 仅发送重启请求，实际关闭由主循环处理
-    state.set_command("restart")
+        def _reload():
+            """单纯重载UI"""
+            print("\U0001F504 Reloading interface...")  # 在CLI中显示英文提示
+            # 仅发送重启请求，实际关闭由主循环处理
+            state.set_command("restart")
 
         # 先在后端保存设置，再在前端刷新页面，避免刷新过早导致配置未写入
         apply_btn.click(
