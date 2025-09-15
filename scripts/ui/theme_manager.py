@@ -63,67 +63,69 @@ def create_victoria_theme():
 
 def create_remis_theme():
     """
-    创建一个拜占庭风格的 Gradio 主题（纯 Theme 系统实现）。
+    创建一个专门为暗色模式优化的拜占庭风格主题。
     
     核心元素:
-    - 主色调: 拜占庭紫 (Tyrian Purple)
-    - 强调色: 金色/琥珀色 (Gold/Amber)
-    - 背景/中性色: 象牙白/石头色 (Ivory/Stone)
+    - 背景: 深邃、低饱和度的紫色，而非纯黑。
+    - 文字: 温暖的象牙白，而非刺眼的纯白。
+    - 交互: 标志性的拜占庭紫与赭石金按钮。
     """
     
-    # 使用 Soft 主题作为基础，它有柔和的圆角和间距
+    # 我们可以直接在 Soft 主题上构建，然后用 .set() 全盘覆盖
     theme = gr.themes.Soft(
-        primary_hue=gr.themes.colors.purple,  # 将紫色系作为主色调的基础
-        secondary_hue=gr.themes.colors.amber, # 将琥珀/金色系作为次色调
-        neutral_hue=gr.themes.colors.stone,   # 石头色系作为中性色，比纯灰更暖
-        font=(gr.themes.GoogleFont("Cinzel"), "serif") # 保持古典华丽的字体
+        primary_hue=gr.themes.colors.purple,
+        secondary_hue=gr.themes.colors.amber,
+        neutral_hue=gr.themes.colors.stone,
+        font=(gr.themes.GoogleFont("Cinzel"), "serif")
     ).set(
-        # --- 全局：温暖的象牙白背景与深棕色文字 ---
-        body_background_fill="#F5F1E9",  # 一个温暖、偏灰的象牙白，有石头/壁画质感
-        body_background_fill_dark="#2A2430", # 暗模式下的深紫色背景
-        body_text_color="#4A403A",        # 深棕色文字，比纯黑更柔和、复古
-        body_text_color_dark="#F5F1E9",   # 暗模式下使用象牙白文字
+        # --- 为了确保主题在任何情况下都显示为暗色，我们同时设置亮色和暗色参数 ---
 
-        # --- 块与容器： subtle a separation ---
-        block_background_fill="#FFFFFF",     # 容器用纯白背景，与象牙白背景形成微妙的层次
+        # --- 全局：深紫背景与象牙白文字 ---
+        body_background_fill="#2A2430",             # 深邃、略带温暖的紫色作为基底
+        body_background_fill_dark="#2A2430",
+        body_text_color="#F5F1E9",                  # 温暖的象牙白文字，护眼且有质感
+        body_text_color_dark="#F5F1E9",
+
+        # --- 块与容器：创造层次感 ---
+        block_background_fill="#3C3547",            # 比背景稍亮一些的紫色，用于容器
         block_background_fill_dark="#3C3547",
         block_border_width="1px",
-        block_border_color="*neutral_200",   # 用非常浅的灰色作为边框
-        block_border_color_dark="*neutral_700",
+        block_border_color="*primary_800",           # 用非常深的紫色作为边框， subtle
+        block_border_color_dark="*primary_800",
         block_radius="*radius_md",
 
-        # --- 按钮：核心配色方案 ---
-        # 主要按钮: 拜占庭紫底 + 象牙白文字 + 金色悬停效果
-        button_primary_background_fill="#B8860B",        # 标志性的拜占庭紫
-        button_primary_background_fill_dark="#B8860B",
-        button_primary_text_color="#FFFFFF",             # 纯白/象牙白文字以保证清晰度
-        button_primary_background_fill_hover="*primary_500", # 悬停时变为色板里更亮的紫色
+        # --- 按钮：在暗色中成为焦点 ---
+        # 主要按钮: 使用标志性的、更亮的拜占庭紫
+        button_primary_background_fill="#66023C",
+        button_primary_background_fill_dark="#66023C",
+        button_primary_text_color="#FFFFFF",
+        button_primary_background_fill_hover="*primary_500",
         button_primary_background_fill_hover_dark="*primary_500",
-        button_primary_border_color_dark="*primary_500",
 
-        # 次要按钮: 柔和的金色底 + 深棕色文字
-        button_secondary_background_fill="#C49102", # 一个更偏向青铜质感的暗金色
+        # 次要按钮: 使用我们之前选定的赭石金
+        button_secondary_background_fill="#C49102",
         button_secondary_background_fill_dark="#C49102",
-        button_secondary_text_color="#FFFFFF",           # 使用与正文一致的深棕色文字
-        button_secondary_background_fill_hover="#D1A42C", # 悬停时金色加深
+        button_secondary_text_color="#2A2430",       # 文字使用背景的深紫色，对比鲜明
+        button_secondary_background_fill_hover="#D1A42C",
         button_secondary_background_fill_hover_dark="#D1A42C",
 
-        # --- 输入框与交互元素 ---
-        input_background_fill="#FFFFFF",
-        input_background_fill_dark="#5C5566",
-        input_border_color="*neutral_300",
-        input_shadow_focus="*primary_300", # 输入框聚焦时显示柔和的紫色光晕
-        slider_color="*primary_500",      # 滑块等元素的颜色也使用紫色系
-        slider_color_dark="*primary_500",
-        # ... 在 .set() 方法内部，可以放在按钮设置的后面 ...
-
-        # 统一其他交互元素的选中颜色
-        #checkbox_background_color_selected="#C49102",
-        #checkbox_background_color_selected_dark="#C49102",
-        #checkbox_label_background_fill_selected="#C49102",
-        #checkbox_label_background_fill_selected_dark="#C49102",
+        # --- 输入框与其他交互元素 ---
+        input_background_fill="#332D40",            # 比容器背景更深一些，以示区分
+        input_background_fill_dark="#332D40",
+        input_border_color="*neutral_700",
+        input_border_color_dark="*neutral_700",
+        input_shadow_focus="*primary_500",           # 聚焦时光晕效果不变
+        
+        # 修正单选框和复选框的颜色
+        checkbox_background_color_selected="#C49102",
+        checkbox_background_color_selected_dark="#C49102",
+        checkbox_label_background_fill_selected="#C49102",
+        checkbox_label_background_fill_selected_dark="#C49102",
+        checkbox_label_text_color_selected="#2A2430",
+        checkbox_label_text_color_selected_dark="#2A2430",
     )
     return theme
+
 
 # --- 主题注册表 ---
 
