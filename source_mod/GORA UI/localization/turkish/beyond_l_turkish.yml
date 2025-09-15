@@ -1,5 +1,0 @@
-﻿l_turkish:
- MARKET_BALANCE_MMP:0 "#title Bilanço:#variable @money![Market.GetBalance|D+=]#!#!"
- MARKET_GDP:0 "#title GDP:#[GetPlayer.GetMarket.GetMarketGDPValue|*v2]"
- 
- MARKET_BALANCE_TOOLTIP: "#header Pazar Bilançosu#!\nMiktar: #variable @money!$VAL|D+=$#!\n$TOOLTIP_DELIMITER$\nToplam Satış: #variable @money!$SALESVAL|D+=$#!\n$SALESBREAKDOWN$\n\nToplam Satın Alım: #variable @money!$PURCHASEVAL|D+=$#!\n$PURCHASEBREAKDOWN$"
