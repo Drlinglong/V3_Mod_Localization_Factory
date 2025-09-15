@@ -50,14 +50,21 @@ state = StateManager()
 _config = load_ui_config()
 i18n.load_language(_config.get("language"))
 
-def find_available_port(start: int = 1453) -> int:
-    """从指定端口开始寻找可用端口。"""
+def find_available_port(start: int = 1453, retries: int = 10, delay: float = 0.5) -> int:
+    """从指定端口开始寻找可用端口，优先复用原端口。"""
+    # 增加重试逻辑，避免重载后端口跳变
     port = start
-    while True:
+    for _ in range(retries):
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
             if s.connect_ex(("127.0.0.1", port)) != 0:
                 return port
+        time.sleep(delay)
+    # 如果多次重试后仍未释放，继续向后寻找端口
+    while True:
         port += 1
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+            if s.connect_ex(("127.0.0.1", port)) != 0:
+                return port
 
 def start_translation(mod_name: str,
                       game_key: str,
@@ -130,19 +137,29 @@ def build_demo():
             state.set_command("restart")
             demo.close()
 
-        # 先在后端保存设置，再在前端刷新页面，避免刷新过早导致配置未写入
+        # 先在后端保存设置，再在前端刷新页面，使用延迟确保后端重启完成
         apply_btn.click(
             _apply,
             inputs=[lang_dd, theme_dd],
             outputs=None,
-        ).then(None, None, None, js="window.location.reload()")
+        ).then(
+            None,
+            None,
+            None,
+            js="setTimeout(() => { window.location.reload(); }, 1000)"
+        )
 
-        # 单纯重载同样在回调完成后再刷新
+        # 单纯重载同样在回调完成后再刷新，并等待后端启动
         reload_btn.click(
             _reload,
             inputs=None,
             outputs=None,
-        ).then(None, None, None, js="window.location.reload()")
+        ).then(
+            None,
+            None,
+            None,
+            js="setTimeout(() => { window.location.reload(); }, 1000)"
+        )
 
     return demo
 
