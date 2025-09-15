@@ -15,6 +15,7 @@ import gradio as gr
 from scripts.utils import i18n
 from scripts.utils.ui_config import load_ui_config, save_ui_config
 from scripts.utils.state_manager import StateManager
+from scripts.ui.theme_manager import AVAILABLE_THEMES  # 导入主题注册表
 
 from scripts.workflows import initial_translate
 from scripts.config import (
@@ -107,22 +108,41 @@ def build_demo():
 
     for m in RELOADABLE_MODULES:
         importlib.reload(m)
-    theme_name = cfg.get("theme", "Soft")
-    # 根据配置动态选择主题类
-    theme_cls = getattr(gr.themes, theme_name, gr.themes.Soft)
+    
+    # --- 核心改動：從主題管理器動態加載主題 ---
+    theme_name = cfg.get("theme", "Project Remis")  # 默認主題改為我們的新主題
+    # 從註冊表獲取主題創建函數，然後調用它
+    theme_builder = AVAILABLE_THEMES.get(theme_name, AVAILABLE_THEMES["Project Remis"])
+    active_theme = theme_builder()
 
-    with gr.Blocks(theme=theme_cls()) as demo:
-        with gr.Tabs() as tabs:
-            home_btn = home_tab.create_home_tab()
-            docs_tab.create_docs_tab()
-            trans_inputs, trans_outputs, trans_btn = translation_tab.create_translation_tab()
-            glossary_tab.create_glossary_tab()
-            proofreading_tab.create_proofreading_tab()
-            project_tab.create_project_tab()
-            tools_tab.create_tools_tab()
-            lang_dd, theme_dd, apply_btn, reload_btn = control_tab.create_control_tab(
-                cfg.get("language"), theme_name
-            )
+    with gr.Blocks(theme=active_theme, title="Project Remis - 本地化工厂") as demo:
+        # 页眉 (Header)
+        with gr.Row(elem_id="header"):
+            gr.Image("data/gfx/Project Remis.png", width=80, scale=0, container=False, show_label=False)
+            with gr.Column(scale=10):
+                gr.Markdown("# Project Remis - P社Mod本地化工厂")
+                gr.Markdown(i18n.t("app_slogan"))  # 使用i18n來顯示Slogan
+        
+        # 主内容区
+        with gr.Tabs(elem_id="tabs") as tabs:
+            with gr.Tab(i18n.t("home_tab_title")):
+                home_btn = home_tab.create_home_tab()
+            with gr.Tab(i18n.t("docs_tab_title")):
+                docs_tab.create_docs_tab()
+            with gr.Tab(i18n.t("translation_tab_title")):
+                trans_inputs, trans_outputs, trans_btn = translation_tab.create_translation_tab()
+            with gr.Tab(i18n.t("glossary_tab_title")):
+                glossary_tab.create_glossary_tab()
+            with gr.Tab(i18n.t("proofreading_tab_title")):
+                proofreading_tab.create_proofreading_tab()
+            with gr.Tab(i18n.t("project_tab_title")):
+                project_tab.create_project_tab()
+            with gr.Tab(i18n.t("tools_tab_title")):
+                tools_tab.create_tools_tab()
+            with gr.Tab(i18n.t("control_tab_title")):
+                lang_dd, theme_dd, apply_btn, reload_btn = control_tab.create_control_tab(
+                    cfg.get("language"), theme_name
+                )
 
         # 主页按钮跳转到初次汉化标签
         home_btn.click(

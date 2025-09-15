@@ -384,5 +384,21 @@
   "theme_option_monochrome": "Monochrome",
   "theme_option_glass": "Glass",
   "ui_reload_success": "✅ UI reloaded successfully",
-  "error_mod_not_provided": "❌ Mod name is required"
+  "error_mod_not_provided": "❌ Mod name is required",
+  "app_slogan": "AI-powered, one-stop localization solution",
+  "validation_error_bracket_chinese": "Non-ASCII characters found in square brackets, which may cause game crashes",
+  "validation_error_variable_chinese": "Non-ASCII characters found in variables",
+  "validation_error_icon_chinese": "Non-ASCII characters found in icon tags",
+  "validation_error_nested_string_chinese": "Non-ASCII characters found in nested strings",
+  "validation_warning_suspicious_chars": "Suspicious non-ASCII characters found in square brackets",
+  "validation_warning_format_command": "Incorrect formatting command format",
+  "validation_warning_tooltip_key": "Incorrect tooltip key format",
+  "validation_warning_country_tag": "Incorrect country tag format",
+  "validation_warning_text_format": "Incorrect text formatting command format",
+  "validation_summary_errors": "Format validation completed - {game_name}: Found {errors} errors, {warnings} warnings",
+  "validation_summary_warnings": "Format validation completed - {game_name}: Found {warnings} warnings",
+  "validation_summary_success": "Format validation completed - {game_name}: All text formats are correct",
+  "validation_unknown_game": "Unknown game ID: {game_id}",
+  "post_process_validation_start": "--- Starting post-processing format validation ---",
+  "post_process_validation_complete": "--- Post-processing format validation completed ---"
 }
