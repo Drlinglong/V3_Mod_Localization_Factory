@@ -100,11 +100,12 @@ def start_translation(mod_name: str,
 
 def build_demo():
     """构建并返回Gradio界面"""
-    for m in RELOADABLE_MODULES:
-        importlib.reload(m)
-
+    # 先读取配置并切换语言，再重载各模块，确保模块级别的翻译字符串按最新语言计算
     cfg = load_ui_config()
     i18n.load_language(cfg.get("language"))
+
+    for m in RELOADABLE_MODULES:
+        importlib.reload(m)
     theme_name = cfg.get("theme", "Soft")
     # 根据配置动态选择主题类
     theme_cls = getattr(gr.themes, theme_name, gr.themes.Soft)
