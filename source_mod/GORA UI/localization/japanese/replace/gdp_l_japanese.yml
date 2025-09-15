@@ -1,2 +1,0 @@
-﻿l_japanese:
- GDP_TOOLTIP:1 "#header [concept_gdp]#!\n[Country.GetAdjective] $GDP_SHORT$: #N @money![Country.GetGDP|Dv]#! ($GDPGR_growth_text$) ([Country.GetGDPRanking])\n$TOOLTIP_DELIMITER$\nGDP/一人当たり: #variable @money![Country.GetGDPPerCapita|2*]#! ([Country.GetGDPPerCapitaRanking])\n$TOOLTIP_DELIMITER$\n[Country.GetAdjective]$GDP_SHORT$はグローバル GDP の[Country.MakeScope.ScriptValue('larp_global_gdp_percent')|%v2]です\nグローバルGDP: @money![Country.MakeScope.ScriptValue('larp_global_gdp')|Dv]\n"
