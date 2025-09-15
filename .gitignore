@@ -25,3 +25,6 @@ output/
 /source_mod/
 /my_translation/
 
+# DO NOT delete the folder
+!/source_mod/.gitkeep
+!/my_translation/.gitkeep
