@@ -4,6 +4,7 @@ import sys
 import socket
 import importlib
 import time
+from typing import List
 
 # 保证项目根目录在路径中，避免导入失败
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
@@ -80,7 +81,7 @@ def wait_for_port_release(port: int, retries: int = 10, interval: float = 0.5) -
 def start_translation(mod_name: str,
                       game_key: str,
                       source_key: str,
-                      target_keys: list[str],
+                      target_keys: List[str],
                       provider: str,
                       context: str):
     """启动翻译流程并实时返回日志。"""
