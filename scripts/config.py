@@ -86,18 +86,22 @@ API_PROVIDERS = {
 }
 
 # --- 语言数据库 --------------------------------------------------
+# 注意：每个语言条目包含两个名称字段：
+# - "name": 原生语言名称（用于UI显示）
+# - "name_en": 英文名称（用于CLI调用，避免非ASCII字符编码问题）
+# 这是为了解决韩语、中文、日语等语言名称在subprocess调用链中的编码损坏问题
 LANGUAGES = {
-    "1":  {"code": "en",     "key": "l_english",      "name": "English",             "folder_prefix": "en-"},
-    "2":  {"code": "zh-CN",  "key": "l_simp_chinese", "name": "简体中文",             "folder_prefix": "zh-CN-"},
-    "3":  {"code": "fr",     "key": "l_french",       "name": "Français",            "folder_prefix": "fr-"},
-    "4":  {"code": "de",     "key": "l_german",       "name": "Deutsch",             "folder_prefix": "de-"},
-    "5":  {"code": "es",     "key": "l_spanish",      "name": "Español",             "folder_prefix": "es-"},
-    "6":  {"code": "ja",     "key": "l_japanese",     "name": "日本語",               "folder_prefix": "ja-"},
-    "7":  {"code": "ko",     "key": "l_korean",       "name": "한국어",               "folder_prefix": "ko-"},
-    "8":  {"code": "pl",     "key": "l_polish",       "name": "Polski",              "folder_prefix": "pl-"},
-    "9":  {"code": "pt-BR",  "key": "l_braz_por",     "name": "Português do Brasil", "folder_prefix": "pt-BR-"},
-    "10": {"code": "ru",     "key": "l_russian",      "name": "Русский",             "folder_prefix": "ru-"},
-    "11": {"code": "tr",     "key": "l_turkish",      "name": "Türkçe",              "folder_prefix": "tr-"}
+    "1":  {"code": "en",     "key": "l_english",      "name": "English",             "name_en": "English",             "folder_prefix": "en-"},
+    "2":  {"code": "zh-CN",  "key": "l_simp_chinese", "name": "简体中文",             "name_en": "Simplified Chinese",  "folder_prefix": "zh-CN-"},
+    "3":  {"code": "fr",     "key": "l_french",       "name": "Français",            "name_en": "French",              "folder_prefix": "fr-"},
+    "4":  {"code": "de",     "key": "l_german",       "name": "Deutsch",             "name_en": "German",              "folder_prefix": "de-"},
+    "5":  {"code": "es",     "key": "l_spanish",      "name": "Español",             "name_en": "Spanish",             "folder_prefix": "es-"},
+    "6":  {"code": "ja",     "key": "l_japanese",     "name": "日本語",               "name_en": "Japanese",            "folder_prefix": "ja-"},
+    "7":  {"code": "ko",     "key": "l_korean",       "name": "한국어",               "name_en": "Korean",              "folder_prefix": "ko-"},
+    "8":  {"code": "pl",     "key": "l_polish",       "name": "Polski",              "name_en": "Polish",              "folder_prefix": "pl-"},
+    "9":  {"code": "pt-BR",  "key": "l_braz_por",     "name": "Português do Brasil", "name_en": "Brazilian Portuguese", "folder_prefix": "pt-BR-"},
+    "10": {"code": "ru",     "key": "l_russian",      "name": "Русский",             "name_en": "Russian",             "folder_prefix": "ru-"},
+    "11": {"code": "tr",     "key": "l_turkish",      "name": "Türkçe",              "name_en": "Turkish",             "folder_prefix": "tr-"}
 }
 
 # --- 语言标点符号配置 --------------------------------------------------

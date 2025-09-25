@@ -55,7 +55,7 @@ class GeminiCLIHandler:
     def _execute_prompt(self, prompt: str) -> str:
         """执行单个prompt并返回结果"""
         try:
-            logger.info(f"开始CLI翻译调用 (第{self.daily_calls + 1}次)")
+            # logger.info(f"开始CLI翻译调用 (第{self.daily_calls + 1}次)")  # 已注释，减少日志噪音
             start_time = time.time()
             
             # 使用临时文件避免命令行参数过长的问题
@@ -88,23 +88,24 @@ class GeminiCLIHandler:
             elapsed_time = time.time() - start_time
             
             if result.returncode == 0:
-                # 保存原始输出
-                debug_file = f"cli_single_output_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
-                with open(debug_file, 'w', encoding='utf-8') as f:
-                    f.write("=== CLI单个翻译原始输出 ===\n")
-                    f.write(f"返回码: {result.returncode}\n")
-                    f.write(f"输出长度: {len(result.stdout)} 字符\n")
-                    f.write(f"错误输出: {result.stderr}\n")
-                    f.write("=" * 50 + "\n")
-                    f.write(result.stdout)
-                    f.write("\n" + "=" * 50 + "\n")
-                
-                logger.info(f"CLI单个翻译原始输出已保存到: {debug_file}")
-                logger.info(f"CLI原始输出长度: {len(result.stdout)} 字符")
-                logger.info(f"CLI原始输出:")
-                logger.info("-" * 30)
-                logger.info(result.stdout)
-                logger.info("-" * 30)
+                # 调试信息生成模块 - 已注释，避免对用户造成视觉轰炸
+                # 如需调试，可取消注释以下代码块
+                # debug_file = f"cli_single_output_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
+                # with open(debug_file, 'w', encoding='utf-8') as f:
+                #     f.write("=== CLI单个翻译原始输出 ===\n")
+                #     f.write(f"返回码: {result.returncode}\n")
+                #     f.write(f"输出长度: {len(result.stdout)} 字符\n")
+                #     f.write(f"错误输出: {result.stderr}\n")
+                #     f.write("=" * 50 + "\n")
+                #     f.write(result.stdout)
+                #     f.write("\n" + "=" * 50 + "\n")
+                # 
+                # logger.info(f"CLI单个翻译原始输出已保存到: {debug_file}")
+                # logger.info(f"CLI原始输出长度: {len(result.stdout)} 字符")
+                # logger.info(f"CLI原始输出:")
+                # logger.info("-" * 30)
+                # logger.info(result.stdout)
+                # logger.info("-" * 30)
                 
                 translated_text = self._parse_response(result.stdout)
                 
@@ -133,7 +134,7 @@ class GeminiCLIHandler:
     def _execute_batch_prompt(self, prompt: str, expected_count: int) -> List[str]:
         """执行批量prompt并返回结果列表"""
         try:
-            logger.info(f"开始CLI批量翻译调用，文本数量: {expected_count}")
+            # logger.info(f"开始CLI批量翻译调用，文本数量: {expected_count}")  # 已注释，减少日志噪音
             start_time = time.time()
             
             # 使用临时文件避免命令行参数过长的问题
@@ -166,19 +167,20 @@ class GeminiCLIHandler:
             elapsed_time = time.time() - start_time
             
             if result.returncode == 0:
-                # 保存原始输出
-                debug_file = f"cli_batch_output_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
-                with open(debug_file, 'w', encoding='utf-8') as f:
-                    f.write("=== CLI批量翻译原始输出 ===\n")
-                    f.write(f"返回码: {result.returncode}\n")
-                    f.write(f"输出长度: {len(result.stdout)} 字符\n")
-                    f.write(f"错误输出: {result.stderr}\n")
-                    f.write("=" * 50 + "\n")
-                    f.write(result.stdout)
-                    f.write("\n" + "=" * 50 + "\n")
-                
-                logger.info(f"CLI批量翻译原始输出已保存到: {debug_file}")
-                logger.info(f"CLI原始输出长度: {len(result.stdout)} 字符")
+                # 调试信息生成模块 - 已注释，避免对用户造成视觉轰炸
+                # 如需调试，可取消注释以下代码块
+                # debug_file = f"cli_batch_output_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
+                # with open(debug_file, 'w', encoding='utf-8') as f:
+                #     f.write("=== CLI批量翻译原始输出 ===\n")
+                #     f.write(f"返回码: {result.returncode}\n")
+                #     f.write(f"输出长度: {len(result.stdout)} 字符\n")
+                #     f.write(f"错误输出: {result.stderr}\n")
+                #     f.write("=" * 50 + "\n")
+                #     f.write(result.stdout)
+                #     f.write("\n" + "=" * 50 + "\n")
+                # 
+                # logger.info(f"CLI批量翻译原始输出已保存到: {debug_file}")
+                # logger.info(f"CLI原始输出长度: {len(result.stdout)} 字符")
                 
                 translated_texts = self._parse_batch_response(result.stdout, expected_count)
                 
@@ -248,13 +250,13 @@ class GeminiCLIHandler:
 
     def _parse_batch_response(self, response: str, expected_count: int) -> List[str]:
         """解析批量翻译JSON响应"""
-        logger.info(f"开始解析批量响应，期望数量: {expected_count}")
+        # logger.info(f"开始解析批量响应，期望数量: {expected_count}")  # 已注释，减少日志噪音
         
         try:
             # 尝试解析JSON响应
-            logger.info("尝试解析JSON响应...")
+            # logger.info("尝试解析JSON响应...")  # 已注释，减少日志噪音
             response_data = json.loads(response)
-            logger.info("JSON解析成功")
+            # logger.info("JSON解析成功")  # 已注释，减少日志噪音
             
             # 检查是否有错误
             if 'error' in response_data:
@@ -273,17 +275,18 @@ class GeminiCLIHandler:
             # 提取响应内容
             if 'response' in response_data:
                 response_text = response_data['response'].strip()
-                logger.info(f"响应文本长度: {len(response_text)} 字符")
-                logger.info(f"响应文本前200字符: {response_text[:200]}")
+                # 调试信息 - 已注释，避免对用户造成视觉轰炸
+                # logger.info(f"响应文本长度: {len(response_text)} 字符")
+                # logger.info(f"响应文本前200字符: {response_text[:200]}")
                 
                 # 解析批量翻译结果 - 按照编号列表格式
                 translations = []
                 lines = response_text.split('\n')
-                logger.info(f"响应文本行数: {len(lines)}")
+                # logger.info(f"响应文本行数: {len(lines)}")
                 
                 for i, line in enumerate(lines):
                     line = line.strip()
-                    logger.debug(f"处理第{i+1}行: {line[:50]}...")
+                    # logger.debug(f"处理第{i+1}行: {line[:50]}...")
                     
                     # 查找编号开头的行
                     if re.match(r'^\d+\.\s*', line):
@@ -293,12 +296,12 @@ class GeminiCLIHandler:
                         translation = translation.strip('"\'')
                         if translation:
                             translations.append(translation)
-                            logger.debug(f"找到翻译 {len(translations)}: {translation[:30]}...")
+                            # logger.debug(f"找到翻译 {len(translations)}: {translation[:30]}...")
                 
-                logger.info(f"解析完成，找到 {len(translations)} 个翻译")
+                # logger.info(f"解析完成，找到 {len(translations)} 个翻译")
                 
                 if len(translations) == expected_count:
-                    logger.info("批量翻译解析完整")
+                    # logger.info("批量翻译解析完整")  # 已注释，减少日志噪音
                     return translations
                 elif len(translations) > 0:
                     logger.warning(f"批量翻译解析不完整，期望{expected_count}个，实际得到{len(translations)}个")
@@ -329,7 +332,7 @@ class GeminiCLIHandler:
                             translations.append(translation)
             
             if translations:
-                logger.info(f"备用解析方法找到 {len(translations)} 个可能的翻译")
+                # logger.info(f"备用解析方法找到 {len(translations)} 个可能的翻译")  # 已注释，减少日志噪音
                 return translations[:expected_count]
             else:
                 raise Exception("无法解析CLI响应")
@@ -373,11 +376,16 @@ def translate_single_text(
     print_key = "translating_mod_name" if task_description == "mod name" else "translating_mod_desc"
     logging.info(i18n.t(print_key, text=text[:30]))
 
+    # 使用name_en字段避免非ASCII字符在subprocess调用中的编码问题
+    # 这是为了解决韩语、中文、日语等语言名称在CLI调用链中的编码损坏问题
+    source_lang_name = source_lang.get("name_en", source_lang["name"])
+    target_lang_name = target_lang.get("name_en", target_lang["name"])
+    
     base_prompt = game_profile["single_prompt_template"].format(
         mod_name=mod_name,
         task_description=task_description,
-        source_lang_name=source_lang["name"],
-        target_lang_name=target_lang["name"],
+        source_lang_name=source_lang_name,
+        target_lang_name=target_lang_name,
     )
     
     # ───────────── 词典提示注入 ─────────────
@@ -481,9 +489,13 @@ def _translate_cli_chunk(client: GeminiCLIHandler, chunk: list[str], source_lang
     for attempt in range(GEMINI_CLI_MAX_RETRIES):
         try:
             numbered_list = "\n".join(f'{j + 1}. "{txt}"' for j, txt in enumerate(chunk))
+            # 使用name_en字段避免非ASCII字符在subprocess调用中的编码问题
+            source_lang_name = source_lang.get("name_en", source_lang["name"])
+            target_lang_name = target_lang.get("name_en", target_lang["name"])
+            
             base_prompt = game_profile["prompt_template"].format(
-                source_lang_name=source_lang["name"],
-                target_lang_name=target_lang["name"],
+                source_lang_name=source_lang_name,
+                target_lang_name=target_lang_name,
             )
             context_prompt_part = (
                 f"CRITICAL CONTEXT: The mod you are translating is '{mod_context}'. "

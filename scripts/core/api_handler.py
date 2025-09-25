@@ -77,3 +77,11 @@ def translate_single_text(client, provider_name, text, task_description, mod_nam
         logging.error(f"Handler for {provider_name} is not available")
         return None
     return handler.translate_single_text(client, provider_name, text, task_description, mod_name, source_lang, target_lang, mod_context, game_profile)
+
+def translate_single_batch(client, provider_name, texts, source_lang, target_lang, game_profile, mod_context):
+    """调用当前选定API供应商的单批次翻译函数。"""
+    handler = get_handler(provider_name)
+    if not handler:
+        logging.error(f"Handler for {provider_name} is not available")
+        return None
+    return handler.translate_texts_in_batches(client, provider_name, texts, source_lang, target_lang, game_profile, mod_context)
