@@ -20,8 +20,12 @@ PROJECT_INFO = {
 }
 
 # --- 核心配置 ----------------------------------------------------
-CHUNK_SIZE = 40
+CHUNK_SIZE = 40  # 默认chunk大小
 MAX_RETRIES = 3
+
+# --- Gemini CLI 特定配置 -----------------------------------------
+GEMINI_CLI_CHUNK_SIZE = 150  # CLI模式使用更大的chunk，发挥2.5 Pro长上下文优势
+GEMINI_CLI_MAX_RETRIES = 2  # CLI调用重试次数较少，因为启动成本高
 
 # --- 智能线程池配置 ----------------------------------------------------
 def get_smart_max_workers():
@@ -57,6 +61,16 @@ API_PROVIDERS = {
         "enable_thinking": False,      # 禁用思考功能，节约成本
         "thinking_budget": 0,          # 0=完全禁用, -1=动态启用, >0=限制token数
     },
+        "gemini_cli": {
+            "cli_path": "gemini",          # Gemini CLI命令路径
+            "default_model": "gemini-2.5-pro",  # CLI使用Pro模型
+            "enable_thinking": True,       # CLI模式启用思考功能，发挥Pro模型优势
+            "thinking_budget": -1,         # 动态启用思考功能
+            "chunk_size": GEMINI_CLI_CHUNK_SIZE,  # 使用更大的chunk
+            "max_retries": GEMINI_CLI_MAX_RETRIES,
+            "max_daily_calls": 1000,      # 每天1000次免费调用
+            "description": "通过Google Gemini CLI调用，每天1000次免费，使用2.5 Pro模型，支持并行处理"
+        },
     "openai": {
         "api_key_env": "OPENAI_API_KEY",
         "default_model": "gpt-5-mini" # or gpt-5 

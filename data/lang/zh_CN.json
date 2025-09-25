@@ -7,6 +7,7 @@
   "preflight_retry_prompt": "请解决上述问题后重试。",
   "api_lib_openai": "OpenAI",
   "api_lib_gemini": "Google Gemini",
+  "api_lib_gemini_cli": "Gemini CLI",
   "api_lib_qwen": "阿里云通义千问",
   "setup_welcome_message": "欢迎使用P社Mod本地化工厂！",
   "setup_one_time_config": "这是首次使用项目时的配置向导。",
