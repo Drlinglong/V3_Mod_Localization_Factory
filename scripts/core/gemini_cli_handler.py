@@ -68,7 +68,7 @@ class GeminiCLIHandler:
                 # 使用位置参数传递prompt，确保每次调用都是无状态的
                 cmd = [
                     "powershell", "-Command", 
-                    f"Set-ExecutionPolicy RemoteSigned -Scope Process -Force; {self.cli_path} (Get-Content '{temp_file}' -Raw) --model gemini-2.5-pro --output-format json"
+                    f"Set-ExecutionPolicy RemoteSigned -Scope Process -Force; {self.cli_path} (Get-Content '{temp_file}' -Raw) --model gemini-2.5-flash --output-format json"
                 ]
                 
                 result = subprocess.run(
