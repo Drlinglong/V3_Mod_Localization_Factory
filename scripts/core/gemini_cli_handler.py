@@ -75,7 +75,7 @@ class GeminiCLIHandler:
                     cmd,
                     capture_output=True,
                     text=True,
-                    timeout=120,  # 2分钟超时
+                    timeout=300,  # 5分钟超时，适应Gemini 2.5 Pro的慢速处理
                     encoding='utf-8'
                 )
             finally:
@@ -153,7 +153,7 @@ class GeminiCLIHandler:
                     cmd,
                     capture_output=True,
                     text=True,
-                    timeout=120,  # 2分钟超时
+                    timeout=300,  # 5分钟超时，适应Gemini 2.5 Pro的慢速处理
                     encoding='utf-8'
                 )
             finally:
