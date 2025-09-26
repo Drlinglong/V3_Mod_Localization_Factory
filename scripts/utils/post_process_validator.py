@@ -368,6 +368,7 @@ class Victoria3Validator(BaseGameValidator):
             'bold',    # 粗体文本，实际生效
             'v',       # 变量显示，实际生效
             'tooltip'  # 工具提示，实际生效
+            'g'        # 按照岛岛说的，来自原版，实际生效    
         }
         # 不需要空格的命令（紧随分号等结构）
         NO_SPACE_REQUIRED_KEYS = {'tooltippable', 'tooltip'}
