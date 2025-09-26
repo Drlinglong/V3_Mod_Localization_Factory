@@ -74,7 +74,8 @@ cd V3_Mod_Localization_Factory
 pip install --upgrade pip
 
 # AI服务商依赖（选择你需要的）
-pip install --upgrade google-genai    # Gemini
+pip install --upgrade google-genai    # Gemini API
+npm install -g @google/gemini-cli     # Gemini CLI（需要先安装Node.js）
 pip install -U openai                 # OpenAI
 pip install -U dashscope             # Qwen
 
@@ -85,16 +86,35 @@ pip install -r requirements.txt       # 如果有requirements.txt文件
 ### 3. API配置
 
 #### 获取API密钥
-- **Gemini**: [Google AI Studio](https://makersuite.google.com/app/apikey)
+- **Gemini API**: [Google AI Studio](https://makersuite.google.com/app/apikey)
+- **Gemini CLI**: 无需API密钥，使用Google账户OAuth认证
 - **OpenAI**: [OpenAI Platform](https://platform.openai.com/api-keys)
 - **Qwen**: [阿里云通义千问](https://dashscope.console.aliyun.com/)
+
+#### Gemini CLI配置（推荐）
+1. **安装Node.js**（如果未安装）
+   - 下载 [Node.js](https://nodejs.org/)
+   - 安装时选择默认选项
+
+2. **安装Gemini CLI**
+   ```bash
+   npm install -g @google/gemini-cli
+   ```
+
+3. **首次认证**
+   ```bash
+   gemini
+   ```
+   - 会自动打开浏览器进行Google账户OAuth认证
+   - 完成认证后即可使用，每天1000次免费调用
 
 #### 设置环境变量
 ```bash
 # Windows (PowerShell)
-$env:GEMINI_API_KEY="your_api_key_here"
-$env:OPENAI_API_KEY="your_api_key_here"
-$env:DASHSCOPE_API_KEY="your_api_key_here"
+$env:GEMINI_API_KEY="your_api_key_here"    # Gemini API密钥
+$env:OPENAI_API_KEY="your_api_key_here"     # OpenAI API密钥
+$env:DASHSCOPE_API_KEY="your_api_key_here"  # Qwen API密钥
+# 注意：Gemini CLI无需设置环境变量
 
 # Windows (CMD)
 set GEMINI_API_KEY=your_api_key_here
@@ -138,7 +158,13 @@ pip install 缺失的模块名
 - 验证API密钥是否正确
 - 检查网络连接
 
-#### 问题4: "权限不足"
+#### 问题4: "Gemini CLI未找到"
+**解决方案**:
+- 确保已安装Node.js：`node --version`
+- 重新安装Gemini CLI：`npm install -g @google/gemini-cli`
+- 检查PATH环境变量是否包含npm全局安装路径
+
+#### 问题5: "权限不足"
 **解决方案**:
 - 以管理员身份运行命令行
 - 检查文件夹权限设置

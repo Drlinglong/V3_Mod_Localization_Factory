@@ -74,7 +74,8 @@ cd V3_Mod_Localization_Factory
 pip install --upgrade pip
 
 # AI service provider dependencies (choose what you need)
-pip install --upgrade google-genai    # Gemini
+pip install --upgrade google-genai    # Gemini API
+npm install -g @google/gemini-cli     # Gemini CLI (requires Node.js to be installed first)
 pip install -U openai                 # OpenAI
 pip install -U dashscope             # Qwen
 
@@ -85,16 +86,35 @@ pip install -r requirements.txt       # If requirements.txt exists
 ### 3. API Configuration
 
 #### Get API Keys
-- **Gemini**: [Google AI Studio](https://makersuite.google.com/app/apikey)
+- **Gemini API**: [Google AI Studio](https://makersuite.google.com/app/apikey)
+- **Gemini CLI**: No API key required, uses Google account OAuth authentication
 - **OpenAI**: [OpenAI Platform](https://platform.openai.com/api-keys)
 - **Qwen**: [Alibaba Cloud Tongyi Qianwen](https://dashscope.console.aliyun.com/)
+
+#### Gemini CLI Configuration (Recommended)
+1. **Install Node.js** (if not already installed)
+   - Download [Node.js](https://nodejs.org/)
+   - Choose default options during installation
+
+2. **Install Gemini CLI**
+   ```bash
+   npm install -g @google/gemini-cli
+   ```
+
+3. **Initial Authentication**
+   ```bash
+   gemini
+   ```
+   - Will automatically open browser for Google account OAuth authentication
+   - After authentication, you can use it with 1000 free calls daily
 
 #### Set Environment Variables
 ```bash
 # Windows (PowerShell)
-$env:GEMINI_API_KEY="your_api_key_here"
-$env:OPENAI_API_KEY="your_api_key_here"
-$env:DASHSCOPE_API_KEY="your_api_key_here"
+$env:GEMINI_API_KEY="your_api_key_here"    # Gemini API key
+$env:OPENAI_API_KEY="your_api_key_here"     # OpenAI API key
+$env:DASHSCOPE_API_KEY="your_api_key_here"  # Qwen API key
+# Note: Gemini CLI does not require environment variables
 
 # Windows (CMD)
 set GEMINI_API_KEY=your_api_key_here
@@ -138,7 +158,13 @@ pip install missing_module_name
 - Verify API key is correct
 - Check network connection
 
-#### Issue 4: "Insufficient permissions"
+#### Issue 4: "Gemini CLI not found"
+**Solution**:
+- Ensure Node.js is installed: `node --version`
+- Reinstall Gemini CLI: `npm install -g @google/gemini-cli`
+- Check if PATH environment variable includes npm global installation path
+
+#### Issue 5: "Insufficient permissions"
 **Solution**:
 - Run command line as administrator
 - Check folder permission settings

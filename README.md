@@ -83,6 +83,7 @@
 
 #### **自动化翻译核心**
 * **多API支持**: 支持Gemini、OpenAI、Qwen等多种AI翻译服务，用户可根据需要选择。
+* **Gemini CLI支持**: 新增支持Gemini CLI，每天提供1000次免费的Gemini 2.5 Pro调用，无需API密钥，使用Google账户OAuth认证即可享受高质量的AI翻译服务。
 * **智能词典系统**: 内置游戏专用词典管理器，自动识别并注入相关术语，确保游戏术语翻译的一致性和准确性。
 * **稳健的解析器**: 内置专为应对P社“花式”`.yml`格式（如 `key:0 "value"`）而设计的解析器，确保所有有效文本都能被准确提取。
 * **智能分批处理 (Chunking)**: 面对包含数百上千条文本的大型文件，脚本会自动将其分批次处理，以保证API调用的稳定性和成功率。
@@ -184,11 +185,13 @@ scripts/
 1. **安装 Git**: 确保你的系统已安装 [Git](https://git-scm.com/downloads)。
 2. **安装 Python**: 确保你的系统已安装 Python 3.8 或更高版本。
 3. **安装依赖库**: 
-    - 如果使用Gemini：`pip install --upgrade google-genai`
+    - 如果使用Gemini API：`pip install --upgrade google-genai`
+    - 如果使用Gemini CLI：`npm install -g @google/gemini-cli`（需要先安装Node.js）
     - 如果使用OpenAI：`pip install -U openai`
     - 如果使用Qwen：`pip install -U dashscope`
 4. **设置API密钥**: 根据你使用的API服务商设置对应的环境变量：
-    - Gemini: `GEMINI_API_KEY`
+    - Gemini API: `GEMINI_API_KEY`
+    - Gemini CLI: 无需API密钥，使用Google账户OAuth认证
     - OpenAI: `OPENAI_API_KEY`
     - Qwen: `DASHSCOPE_API_KEY`
 
@@ -237,9 +240,11 @@ scripts/
 - **权限错误**：确保对项目目录有读写权限
 - **Python版本**：需要 Python 3.8 或更高版本
 - **依赖缺失**：根据你使用的API服务商运行对应的安装命令：
-  - Gemini: `pip install --upgrade google-genai`
+  - Gemini API: `pip install --upgrade google-genai`
+  - Gemini CLI: `npm install -g @google/gemini-cli`（需要先安装Node.js）
   - OpenAI: `pip install -U openai`
   - Qwen: `pip install -U dashscope`
+- **Gemini CLI配置**：首次使用Gemini CLI时，需要运行 `gemini` 命令进行Google账户OAuth认证
 
 ### 4.5. 启用Mod（维多利亚3）
 1.  在完成汉化后，你能在`my_translation`文件夹下找到输出。文件夹的名称会根据你选择的本地化方式有所变化。例如 `zh-CN-ABCDEFG`。

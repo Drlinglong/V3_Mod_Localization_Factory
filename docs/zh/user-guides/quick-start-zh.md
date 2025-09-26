@@ -18,9 +18,14 @@ cd V3_Mod_Localization_Factory
 
 ### 2️⃣ 一键配置
 双击运行项目根目录的 `首次安装配置.bat` 文件，按照提示：
-- 选择AI服务商（推荐Gemini）
-- 输入API密钥
+- 选择AI服务商（推荐Gemini CLI，每天1000次免费调用）
+- 输入API密钥（Gemini CLI无需API密钥）
 - 等待自动安装依赖
+
+**Gemini CLI用户额外步骤**：
+1. 安装Node.js（如果未安装）
+2. 运行 `npm install -g @google/gemini-cli` 安装CLI工具
+3. 首次使用运行 `gemini` 进行Google账户OAuth认证
 
 ### 3️⃣ 准备Mod文件
 将你要本地化的Mod文件夹放入 `source_mod` 目录：
@@ -67,11 +72,14 @@ python scripts/main.py
 **Q: 提示"API密钥无效"怎么办？**
 A: 检查环境变量设置，或重新运行配置脚本
 
+**Q: Gemini CLI提示"未找到"怎么办？**
+A: 确保已安装Node.js并运行 `npm install -g @google/gemini-cli`，然后运行 `gemini` 进行认证
+
 **Q: 翻译速度慢怎么办？**
 A: 系统会自动分批处理，耐心等待即可
 
 **Q: 如何提高翻译质量？**
-A: 使用更高质量的AI服务，或添加游戏专用词典
+A: 使用更高质量的AI服务（如Gemini CLI的2.5 Pro模型），或添加游戏专用词典
 
 ## 📚 下一步
 
