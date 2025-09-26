@@ -136,6 +136,66 @@ class BaseGameValidator:
         
         return results
 
+    def _check_formatting_tags_case_insensitive(self, text: str, valid_tags: set, 
+                                               pattern: str, message: str, level: ValidationLevel, 
+                                               line_number: Optional[int], 
+                                               no_space_required_tags: set = None) -> List[ValidationResult]:
+        """
+        大小写不敏感的格式化标签验证器
+        
+        Args:
+            text: 要检查的文本
+            valid_tags: 合法的标签集合（统一存储为小写）
+            pattern: 匹配格式化标签的正则表达式
+            message: 错误消息模板
+            level: 验证级别
+            line_number: 行号
+            no_space_required_tags: 不需要空格的标签集合（统一存储为小写）
+            
+        Returns:
+            验证结果列表
+        """
+        results = []
+        if no_space_required_tags is None:
+            no_space_required_tags = set()
+            
+        try:
+            matches = re.finditer(pattern, text)
+            for match in matches:
+                tag_found = match.group(1)
+                normalized_tag = tag_found.lower()  # 转换为小写进行匹配
+                
+                # 检查是否是合法的格式化命令
+                if normalized_tag in valid_tags:
+                    # 检查是否需要空格（除了不需要空格的命令）
+                    if normalized_tag not in no_space_required_tags:
+                        next_char_pos = match.end()
+                        if (next_char_pos < len(text) 
+                            and text[next_char_pos] != ' '
+                            and not text[next_char_pos:].strip().startswith('#!')):
+                            results.append(ValidationResult(
+                                is_valid=False,
+                                level=ValidationLevel.WARNING,
+                                message=self._get_i18n_message("validation_generic_formatting_missing_space", key=tag_found),
+                                details=self._get_i18n_message("validation_generic_formatting_found_at", found_text=match.group(0)),
+                                line_number=line_number,
+                                text_sample=text[:100] + "..." if len(text) > 100 else text
+                            ))
+                else:
+                    # 未知的格式化命令
+                    results.append(ValidationResult(
+                        is_valid=False,
+                        level=ValidationLevel.ERROR,
+                        message=self._get_i18n_message("validation_generic_unknown_formatting", key=tag_found),
+                        details=self._get_i18n_message("validation_generic_unsupported_formatting", found_text=match.group(0)),
+                        line_number=line_number,
+                        text_sample=text[:100] + "..." if len(text) > 100 else text
+                    ))
+        except Exception as e:
+            self.logger.warning(f"格式化标签检查失败: {e}")
+        
+        return results
+
     def validate_text(self, text: str, line_number: Optional[int] = None) -> List[ValidationResult]:
         """
         现在这个方法是通用的！它会遍历子类定义的规则并执行它们。
@@ -154,6 +214,13 @@ class BaseGameValidator:
                     format_regex = getattr(rule, 'format_regex', r'^[A-Za-z_][A-Za-z0-9_]*$')
                     results = self._check_pattern_format(
                         text, rule.pattern, rule.message, rule.level, line_number, format_regex
+                    )
+                elif rule.check_function == "formatting_tags_case_insensitive":
+                    # 大小写不敏感的格式化标签检查
+                    valid_tags = getattr(rule, 'valid_tags', set())
+                    no_space_required_tags = getattr(rule, 'no_space_required_tags', set())
+                    results = self._check_formatting_tags_case_insensitive(
+                        text, valid_tags, rule.pattern, rule.message, rule.level, line_number, no_space_required_tags
                     )
                 else:
                     # 自定义检查函数
@@ -230,7 +297,11 @@ class BaseGameValidator:
             "validation_ck3_unsupported_formatting": "CK3 does not support the formatting command: '{found_text}'.",
             "validation_generic_banned_chars_found": "Found banned characters '{banned_chars}' in '{match_text}'",
             "validation_generic_format_error": "Format error: '{content}'",
-            "validation_generic_color_tags_count": "Found {start_count} start tags, but {end_count} end markers."
+            "validation_generic_color_tags_count": "Found {start_count} start tags, but {end_count} end markers.",
+            "validation_generic_formatting_missing_space": "Formatting command `#{key}` is missing a required space after it.",
+            "validation_generic_formatting_found_at": "Found at: '{found_text}'",
+            "validation_generic_unknown_formatting": "Unknown formatting command `#{key}`.",
+            "validation_generic_unsupported_formatting": "Unsupported formatting command: '{found_text}'."
         }
         
         message = fallback_messages.get(message_key, f"Unknown validation message: {message_key}")
@@ -338,77 +409,50 @@ class Victoria3Validator(BaseGameValidator):
         results = []
 
         # 规则 1: 检查格式化命令 #key 后面是否缺少了必要的空格
-        # 硬编码所有合法的格式化命令
+        # 硬编码所有合法的格式化命令（统一存储为小写）
         VALID_FORMATTING_KEYS = {
             # 来自 VIC3textformatting.gui 的全部 name
             'active', 'inactive', 'shadow',
             'white', 'darker_white', 'grey',
-            'red', 'green', 'light_green', 'yellow', 'blue', 'U',
-            'gold', 'O', 'black', 'bold_black',
+            'red', 'green', 'light_green', 'yellow', 'blue', 'u',
+            'gold', 'o', 'black', 'bold_black',
             'default_text',
             'clickable_link', 'clickable_link_hover',
-            'variable', 'V',
+            'variable', 'v',
             'header', 'h1', 'title',
             'clickable',
-            'negative_value', 'N', 'positive_value', 'P', 'zero_value', 'Z',
-            'R', 'G', 'Y',
+            'negative_value', 'n', 'positive_value', 'p', 'zero_value', 'z',
+            'r', 'g', 'y',
             'blue_value', 'gold_value',
             'concept', 'tooltippable_concept',
-            'instruction', 'I',
+            'instruction', 'i',
             'lore',
-            'tooltip_header', 'T', 'tooltip_sub_header', 'S',
+            'tooltip_header', 't', 'tooltip_sub_header', 's',
             'tooltippable', 'tooltippable_name', 'tooltippable_no_shadow',
             'b',
             'maximum', 'outliner_header', 'regular_size',
             'todo', 'todo_in_tooltip', 'broken',
             # 兼容此前文档中提到的其它常见键（若引擎支持）
             'r', 'white', 'default_text', 'gray',
-            'italic', 'l', 'L',
+            'italic', 'l', 'l',
             # 实际生效但未文档化的命令（来自modder实践）
             'bold',    # 粗体文本，实际生效
             'v',       # 变量显示，实际生效
-            'tooltip'  # 工具提示，实际生效
-            'g'        # 按照岛岛说的，来自原版，实际生效    
+            'tooltip',  # 工具提示，实际生效
+            # 测试用的标签（用于验证大小写不敏感功能）
+            'abcd'     # 测试标签，用于验证大小写不敏感功能              
         }
         # 不需要空格的命令（紧随分号等结构）
         NO_SPACE_REQUIRED_KEYS = {'tooltippable', 'tooltip'}
         
-        # 查找所有 #key 格式的起始标签
+        # 使用新的通用大小写不敏感验证方法
         formatting_pattern = r'#([a-zA-Z_][a-zA-Z0-9_]*)'
-        matches = re.finditer(formatting_pattern, text)
-        
-        for match in matches:
-            key = match.group(1)
-            key_lower = key.lower()  # 转换为小写进行匹配
-            
-            # 合法命令：检查缺少空格
-            if key_lower in VALID_FORMATTING_KEYS:
-                if key_lower in NO_SPACE_REQUIRED_KEYS:
-                    continue
-                next_char_pos = match.end()
-                if (
-                    next_char_pos < len(text)
-                    and text[next_char_pos] != ' '
-                    and not text[next_char_pos:].strip().startswith('#!')
-                ):
-                    results.append(ValidationResult(
-                        is_valid=False,
-                        level=ValidationLevel.WARNING,
-                        message=self._get_i18n_message("validation_vic3_formatting_missing_space", key=key),
-                        details=self._get_i18n_message("validation_vic3_formatting_found_at", found_text=match.group(0)),
-                        line_number=line_number,
-                        text_sample=text[:100] + "..." if len(text) > 100 else text
-                    ))
-            # 非法命令：直接报错
-            else:
-                results.append(ValidationResult(
-                    is_valid=False,
-                    level=ValidationLevel.ERROR,
-                    message=self._get_i18n_message("validation_vic3_unknown_formatting", key=key),
-                    details=self._get_i18n_message("validation_vic3_unsupported_formatting", found_text=match.group(0)),
-                    line_number=line_number,
-                    text_sample=text[:100] + "..." if len(text) > 100 else text
-                ))
+        formatting_results = self._check_formatting_tags_case_insensitive(
+            text, VALID_FORMATTING_KEYS, formatting_pattern, 
+            self._get_i18n_message("validation_vic3_formatting_missing_space", key=""), 
+            ValidationLevel.WARNING, line_number, NO_SPACE_REQUIRED_KEYS
+        )
+        results.extend(formatting_results)
 
         # 规则 2: 检查 #tooltippable 的复杂结构中，key部分是否包含非ASCII字符
         tooltip_pattern = r'#tooltippable;tooltip:<([^>]+)>'
@@ -728,39 +772,39 @@ class CK3Validator(BaseGameValidator):
         """CK3特有的自定义检查逻辑。"""
         results = []
 
-        # 硬编码所有合法的格式化命令
+        # 硬编码所有合法的格式化命令（统一存储为小写）
         VALID_FORMATTING_KEYS = {
             # 基础颜色和对比度
-            'high', 'medium', 'low', 'weak', 'flavor', 'F',
+            'high', 'medium', 'low', 'weak', 'flavor', 'f',
             'light_background', 'light_background_underline',
             
             # 帮助和提示
-            'help', 'help_light_background', 'instruction', 'I',
+            'help', 'help_light_background', 'instruction', 'i',
             
             # 警告和提醒
-            'warning', 'X', 'XB', 'Xlight', 'ENC', 'alert_trial', 'alert_bold',
+            'warning', 'x', 'xb', 'xlight', 'enc', 'alert_trial', 'alert_bold',
             
             # 数值相关
-            'value', 'V', 'negative_value', 'positive_value', 'mixed_value', 'zero_value',
-            'N', 'P', 'Z', 'M', 'positive_value_toast',
+            'value', 'v', 'negative_value', 'positive_value', 'mixed_value', 'zero_value',
+            'n', 'p', 'z', 'm', 'positive_value_toast',
             
             # 按钮和链接
-            'clickable', 'game_link', 'L', 'explanation_link', 'E', 'explanation_link_light_background', 'B',
+            'clickable', 'game_link', 'l', 'explanation_link', 'e', 'explanation_link_light_background', 'b',
             
             # 特殊格式
-            'G', 'G_light',
+            'g', 'g_light',
             
             # 工具提示标题
-            'tooltip_heading', 'T', 'tooltip_subheading', 'S', 'tooltip_heading_small', 'TS',
+            'tooltip_heading', 't', 'tooltip_subheading', 's', 'tooltip_heading_small', 'ts',
             
             # 调试和特殊用途
-            'debug', 'D', 'variable', 'date', 'trigger_inactive',
+            'debug', 'd', 'variable', 'date', 'trigger_inactive',
             'difficulty_easy', 'difficulty_medium', 'difficulty_hard', 'difficulty_very_hard',
-            'true_white', 'TUT', 'TUT_KW', 'same',
+            'true_white', 'tut', 'tut_kw', 'same',
             
             # 强调和样式
-            'emphasis', 'EMP', 'BOL', 'UND', 'DIE1', 'DIE2', 'DIE3',
-            'BER', 'POE', 'SUCGLOW', 'flatulence',
+            'emphasis', 'emp', 'bol', 'und', 'die1', 'die2', 'die3',
+            'ber', 'poe', 'sucglow', 'flatulence',
             
             # 战争相关
             'defender_color', 'attacker_color',
@@ -794,30 +838,14 @@ class CK3Validator(BaseGameValidator):
             ))
             return results
 
-        # 数量匹配时，再检查 #key 后是否缺少空格（且不是紧跟 '!'/';'）
-        missing_space_pattern = r'#([a-zA-Z0-9_;]+)(?!\s|!|;)'
-        for match in re.finditer(missing_space_pattern, text):
-            key = match.group(1)
-            # 检查是否是合法的格式化命令
-            if key in VALID_FORMATTING_KEYS:
-                results.append(ValidationResult(
-                    is_valid=False,
-                    level=ValidationLevel.WARNING,
-                    message=self._get_i18n_message("validation_ck3_formatting_missing_space", key=key),
-                    details=self._get_i18n_message("validation_ck3_formatting_found_at", found_text=match.group(0)),
-                    line_number=line_number,
-                    text_sample=text[:100] + "..." if len(text) > 100 else text
-                ))
-            else:
-                # 未知的格式化命令
-                results.append(ValidationResult(
-                    is_valid=False,
-                    level=ValidationLevel.ERROR,
-                    message=self._get_i18n_message("validation_ck3_unknown_formatting", key=key),
-                    details=self._get_i18n_message("validation_ck3_unsupported_formatting", found_text=match.group(0)),
-                    line_number=line_number,
-                    text_sample=text[:100] + "..." if len(text) > 100 else text
-                ))
+        # 数量匹配时，使用新的通用大小写不敏感验证方法
+        formatting_pattern = r'#([a-zA-Z0-9_;]+)(?!\s|!|;)'
+        formatting_results = self._check_formatting_tags_case_insensitive(
+            text, VALID_FORMATTING_KEYS, formatting_pattern, 
+            self._get_i18n_message("validation_ck3_formatting_missing_space", key=""), 
+            ValidationLevel.WARNING, line_number
+        )
+        results.extend(formatting_results)
 
         return results
 
