@@ -198,31 +198,29 @@ def translate_texts_in_batches(
     mod_context: str,
 ) -> "list[str] | None":
     """
-    [Foreman Function] Translates a list of texts in batches using a thread pool.
-    It preserves results from successful chunks even if other chunks fail.
+    [Foreman Function] Translates a list of texts in batches.
+    IMPORTANT: This function does NOT create its own thread pool to avoid thread explosion.
+    It either processes sequentially or relies on the caller's thread pool.
     """
     if len(texts_to_translate) <= CHUNK_SIZE:
         return _translate_chunk(client, texts_to_translate, source_lang, target_lang, game_profile, mod_context, 1)
 
-    with concurrent.futures.ThreadPoolExecutor() as executor:
-        chunks = [texts_to_translate[i : i + CHUNK_SIZE] for i in range(0, len(texts_to_translate), CHUNK_SIZE)]
-        logging.info(i18n.t("parallel_processing_start", count=len(chunks)))
+    # 将文本分成批次
+    chunks = [texts_to_translate[i : i + CHUNK_SIZE] for i in range(0, len(texts_to_translate), CHUNK_SIZE)]
+    logging.info(i18n.t("parallel_processing_start", count=len(chunks)))
 
-        future_to_index = {
-            executor.submit(_translate_chunk, client, chunk, source_lang, target_lang, game_profile, mod_context, i + 1): i
-            for i, chunk in enumerate(chunks)
-        }
-        
-        results = [None] * len(chunks)
-        
-        for future in concurrent.futures.as_completed(future_to_index):
-            index = future_to_index[future]
-            try:
-                results[index] = future.result()
-            except Exception as e:
-                logging.exception(f"A translation thread failed with a critical error: {e}")
-                results[index] = None
+    # 串行处理所有批次，避免嵌套线程池
+    # 注意：真正的并行处理由调用者（ParallelProcessor）负责
+    results = []
+    for i, chunk in enumerate(chunks):
+        try:
+            result = _translate_chunk(client, chunk, source_lang, target_lang, game_profile, mod_context, i + 1)
+            results.append(result)
+        except Exception as e:
+            logging.exception(f"Batch {i + 1} failed with error: {e}")
+            results.append(None)
 
+    # 合并结果
     all_translated_texts: list[str] = []
     has_failures = False
     for i, translated_chunk in enumerate(results):

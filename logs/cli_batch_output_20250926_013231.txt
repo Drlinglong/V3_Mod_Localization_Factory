@@ -1,0 +1,48 @@
+=== CLI批量翻译原始输出 ===
+返回码: 0
+输出长度: 8527 字符
+错误输出: Loaded cached credentials.
+Loaded cached credentials.
+File C:\Users\Drlin\.cache/vscode-ripgrep/ripgrep-v13.0.0-10-x86_64-pc-windows-msvc.zip has been cached
+
+==================================================
+{
+  "response": "1. \" @headlines_techicon! #yellow 头条新闻#! | 技术\"\n2. \" @headlines_techicon! #yellow 头条新闻#! | 重要技术\"\n3. \"[GetGlobalVariable('headlines_tech_acquired').GetTechnology.GetName]\"\n4. \"#header $notification_headlines_tech_bessemer_process_name$#!\\n$TOOLTIP_DELIMITER$\\n$notification_headlines_tech_bessemer_process_desc$\"\n5. \"#b “贝塞麦”炼钢法问世 #!\"\n6. \"[SCOPE.sCountry('headlines_bessemer_process_researcher').GetAdjective]的一位钢铁制造商发明了$HEADLINES_TECH_NAME$。#lore 该工艺的专利受到了其他几个国家的人的挑战，他们声称已经开发出了该工艺的基础…… #!\"\n7. \"#header $notification_headlines_tech_crystal_glass_name$#!\\n$TOOLTIP_DELIMITER$\\n$notification_headlines_tech_crystal_glass_desc$\"\n8. \"#b 晶莹剔透的玻璃 #!\"\n9. \"[SCOPE.sCountry('headlines_crystal_glass_researcher').GetName]的玻璃制造商已经能够工业化生产$HEADLINES_TECH_NAME$。#lore 在该工艺中使用铅已被证明是扩大生产的一大挑战，因为…… #!\"\n10. \"#header $notification_headlines_tech_baking_powder_name$#!\\n$TOOLTIP_DELIMITER$\\n$notification_headlines_tech_baking_powder_desc$\"\n11. \"#b 自发面粉 #!\"\n12. \"[SCOPE.sCountry('headlines_baking_powder_researcher').GetName]的化学家发明了$HEADLINES_TECH_NAME$。#lore 这种耐储存的化学品组合将使得工业面包制作的规模不断扩大，并有其他几种立竿见影的用途…… #!\"\n13. \"#header $notification_headlines_tech_nitroglycerin_name$#!\\n$TOOLTIP_DELIMITER$\\n$notification_headlines_tech_nitroglycerin_desc$\"\n14. \"#b 新型爆破油威力惊人 #!\"\n15. \"[SCOPE.sCountry('headlines_nitroglycerin_researcher').GetAdjective]的化学家发明了$HEADLINES_TECH_NAME$。#lore 这种新物质被证明是一种特别不稳定且强效的炸药。该项目的负责人警告不要使用它，称这种液体极不稳定，容易…… #!\"\n16. \"#header $notification_headlines_tech_improved_fertilizer_name$#!\\n$TOOLTIP_DELIMITER$\\n$notification_headlines_tech_improved_fertilizer_desc$\"\n17. \"#b 化肥前景广阔 #!\"\n18. \"[SCOPE.sCountry('headlines_improved_fertilizer_researcher').GetName]的农学家发明了通过专门工艺生产$HEADLINES_TECH_NAME$的方法。#lore 最初的试验作物显示，与传统作物相比，收成翻了一番…… #!\"\n19. \"#header $notification_headlines_tech_steam_donkey_name$#!\\n$TOOLTIP_DELIMITER$\\n$notification_headlines_tech_steam_donkey_desc$\"\n20. \"#b “蒸汽驴”将取代骡子？ #!\"\n21. \"[SCOPE.sCountry('headlines_steam_donkey_researcher').GetAdjective]的一位发明家展示了一台他们称之为[GetGlobalVariable('headlines_tech_acquired').GetTechnology.GetName]的机器。#lore 这种蒸汽驱动的机械能够拖运原木和矿石，其能力超出了任何人或动物的能力，额定……#!\"\n22. \"#header $notification_headlines_tech_dynamite_name$#!\\n$TOOLTIP_DELIMITER$\\n$notification_headlines_tech_dynamite_desc$\"\n23. \"#b “炸药”——一种安全的炸药？ #!\"\n24. \"[SCOPE.sCountry('headlines_dynamite_researcher').GetAdjective]的一位发明家创造了$HEADLINES_TECH_NAME$的配方。#lore 通过将硝化甘油与其他粘合剂结合，新物质在保留所有威力的同时，变得更加稳定，不易…… #!\"\n25. \"#header $notification_headlines_tech_steel_railway_cars_name$#!\\n$TOOLTIP_DELIMITER$\\n$notification_headlines_tech_steel_railway_cars_desc$\"\n26. \"#b 新型轨道车提高效率 #!\"\n27. \"[SCOPE.sCountry('headlines_steel_railway_cars_researcher').GetName]的铁路已经开始用$HEADLINES_TECH_NAME$取代木制车厢。#lore 新设计被证明比现有的轨道车坚固得多，可以…… #!\"\n28. \"#header $notification_headlines_tech_rubber_mastication_name$#!\\n$TOOLTIP_DELIMITER$\\n$notification_headlines_tech_rubber_mastication_desc$\"\n29. \"#b 新工艺使橡胶变得可行 #!\"\n30. \"[SCOPE.sCountry('headlines_rubber_mastication_researcher').GetName]展示了$HEADLINES_TECH_NAME$的原理，使其能够大规模收获和加工。#lore 如果没有这个过程，天然橡胶极难加工，限制了其…… #!\"\n31. \"#header $notification_headlines_tech_pumpjacks_name$#!\\n$TOOLTIP_DELIMITER$\\n$notification_headlines_tech_pumpjacks_desc$\"\n32. \"#b 石油——未来的燃料 #!\"\n33. \"[SCOPE.sCountry('headlines_pumpjacks_researcher').GetName]的工程师发明了$HEADLINES_TECH_NAME$，使得石油能够可靠地从地下开采。#lore 这种泵看似简单的机械结构使其设计可以轻松运输到任何地方…… #!\"\n34. \"#header $notification_headlines_tech_electrical_generation_name$#!\\n$TOOLTIP_DELIMITER$\\n$notification_headlines_tech_electrical_generation_desc$\"\n35. \"#b 闪电的精华 #!\"\n36. \"[SCOPE.sCountry('headlines_electrical_generation_researcher').GetAdjective]的发明家已经实现了可靠的$HEADLINES_TECH_NAME$。#lore 参与其中的科学家表示，这种新电力的潜力是无限的，可应用于家庭、工业、公共工程甚至…… #!\"\n37. \"#header $notification_headlines_tech_aniline_name$#!\\n$TOOLTIP_DELIMITER$\\n$notification_headlines_tech_aniline_desc$\"\n38. \"#b 合成染料令人眼花缭乱 #!\"\n39. \"[SCOPE.sCountry('headlines_aniline_researcher').GetName]的化学家发明了$HEADLINES_TECH_NAME$。#lore 这种化学物质可以生产出鲜艳的染料，而以前需要…… #!\"\n40. \"#header $notification_headlines_tech_vulcanization_name$#!\\n$TOOLTIP_DELIMITER$\\n$notification_headlines_tech_vulcanization_desc$\"\n41. \"#b 橡胶变得有弹性 #!\"\n42. \"[SCOPE.sCountry('headlines_vulcanization_researcher').GetAdjective]的化学家发明了$HEADLINES_TECH_NAME$，扩大了橡胶的用途。#lore 这种高温工艺生产的橡胶既更柔韧又更耐用，可以…… #!\"\n43. \"#header $notification_headlines_tech_nitrogen_fixation_name$#!\\n$TOOLTIP_DELIMITER$\\n$notification_headlines_tech_nitrogen_fixation_desc$\"\n44. \"#b 氮肥有望增产 #!\"\n45. \"[SCOPE.sCountry('headlines_nitrogen_fixation_researcher').GetName]的农学家开发了一种人工$HEADLINES_TECH_NAME$工艺。#lore 这种新型化肥可以使现有农田获得惊人的产量，有望在……的基础上再翻一番。 #!\"\n46. \"#header $notification_headlines_tech_mechanized_farming_name$#!\\n$TOOLTIP_DELIMITER$\\n$notification_headlines_tech_mechanized_farming_desc$\"\n47. \"#b 田间机械化 #!\"\n48. \"[SCOPE.sCountry('headlines_mechanized_farming_researcher').GetAdjective]的工程师已经实施了$HEADLINES_TECH_NAME$技术。#lore 新设计的拖拉机能够耕种整片田地，大大减少了耕种所需的人力…… #!\"\n49. \"#header $notification_headlines_tech_plastics_name$#!\\n$TOOLTIP_DELIMITER$\\n$notification_headlines_tech_plastics_desc$\"\n50. \"#b 塑料——神奇材料 #!\"\n51. \"[SCOPE.sCountry('headlines_plastics_researcher').GetAdjective]的化学家发明了$HEADLINES_TECH_NAME$。#lore 这种新材料可以制成各种形式，用于家庭和工业，为……提供了无限的机会。 #!\"\n52. \"#header $notification_headlines_tech_steam_turbine_name$#!\\n$TOOLTIP_DELIMITER$\\n$notification_headlines_tech_steam_turbine_desc$\"\n53. \"#b 蒸汽发电 #!\"\n54. \"[SCOPE.sCountry('headlines_steam_turbine_researcher').GetName]的工程师发明了$HEADLINES_TECH_NAME$。#lore 新型涡轮机在陆地和海上都已证明非常有用，并计划将该技术扩大十倍，因为…… #!\"\n55. \"#header $notification_headlines_tech_combustion_engine_name$#!\\n$TOOLTIP_DELIMITER$\\n$notification_headlines_tech_combustion_engine_desc$\"\n56. \"#b 蒸汽动力过时了？ #!\"\n57. \"[SCOPE.sCountry('headlines_combustion_engine_researcher').GetName]的发明家创造了$HEADLINES_TECH_NAME$。#lore 新型发动机将燃料直接燃烧为机械动力的能力显示出巨大的小型化潜力，已经有几项提议…… #!\"\n58. \"#header $notification_headlines_tech_telephone_name$#!\\n$TOOLTIP_DELIMITER$\\n$notification_headlines_tech_telephone_desc$\"\n59. \"#b “电话”通过电线传输语音 #!\"\n60. \"[SCOPE.sCountry('headlines_telephone_researcher').GetAdjective]的一位发明家开发了$HEADLINES_TECH_NAME$。#lore 电话的专利引起了争议，因为其他几位发明家声称已经…… #!\"\n61. \"#header $notification_headlines_tech_art_silk_name$#!\\n$TOOLTIP_DELIMITER$\\n$notification_headlines_tech_art_silk_desc$\"\n62. \"#b 人造丝绸真假难辨 #!\"\n63. \"[SCOPE.sCountry('headlines_art_silk_researcher').GetName]的科学家发明了$HEADLINES_TECH_NAME$。#lore 据说用这种植物基材料生产的衣服完全可以以假乱真，已经有几家大型生产厂…… #!\"\n64. \"#header $notification_headlines_tech_electric_railway_name$#!\\n$TOOLTIP_DELIMITER$\\n$notification_headlines_tech_electric_railway_desc$\"\n65. \"#b 闪电铁路 #!\"\n66. \"[SCOPE.sCountry('headlines_electric_railway_researcher').GetName]的工程师发明了$HEADLINES_TECH_NAME$。#lore 新型机车由电缆而非发动机提供动力，飞速行驶，已经证明自己…… #!\"\n67. \"#header $notification_headlines_tech_radio_name$#!\\n$TOOLTIP_DELIMITER$\\n$notification_headlines_tech_radio_desc$\"\n68. \"#b 无线电——无线电报 #!\"\n69. \"[SCOPE.sCountry('headlines_radio_researcher').GetAdjective]的一位发明家创造了第一台$HEADLINES_TECH_NAME$。#lore 利用电磁波的新科学，无线电能够远距离高速传输编码电报信息，而无需…… #!\"\n70. \"#header $notification_headlines_tech_pasteurization_name$#!\\n$TOOLTIP_DELIMITER$\\n$notification_headlines_tech_pasteurization_desc$\"\n71. \"#b “巴氏杀菌法”防止腐败 #!\"\n72. \"[SCOPE.sCountry('headlines_pasteurization_researcher').GetName]的一位化学家发明了$HEADLINES_TECH_NAME$。#lore 该过程通过将牛奶和葡萄酒加热到指定温度然后密封产品来演示，从而防止……的生长。 #!\"\n73. \"#header $notification_headlines_tech_arc_welding_name$#!\\n$TOOLTIP_DELIMITER$\\n$notification_headlines_tech_arc_welding_desc$\"\n74. \"#b 金属瞬间熔化 #!\"\n75. \"[SCOPE.sCountry('headlines_arc_welding_researcher').GetName]的建筑业开发了$HEADLINES_TECH_NAME$。#lore 该工艺允许在原地连接金属梁，但代价是需要巨大的能量供应…… #!\"",
+  "stats": {
+    "models": {
+      "gemini-2.5-pro": {
+        "api": {
+          "totalRequests": 1,
+          "totalErrors": 0,
+          "totalLatencyMs": 86110
+        },
+        "tokens": {
+          "prompt": 14774,
+          "candidates": 2967,
+          "total": 25261,
+          "cached": 0,
+          "thoughts": 7520,
+          "tool": 0
+        }
+      }
+    },
+    "tools": {
+      "totalCalls": 0,
+      "totalSuccess": 0,
+      "totalFail": 0,
+      "totalDurationMs": 0,
+      "totalDecisions": {
+        "accept": 0,
+        "reject": 0,
+        "modify": 0,
+        "auto_accept": 0
+      },
+      "byName": {}
+    },
+    "files": {
+      "totalLinesAdded": 0,
+      "totalLinesRemoved": 0
+    }
+  }
+}
+==================================================

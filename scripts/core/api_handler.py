@@ -23,10 +23,13 @@ def get_handler(provider_name):
         elif provider_name == "gemini":
             from . import gemini_handler
             return gemini_handler
-        
-        # 默认返回Gemini
-        from . import gemini_handler
-        return gemini_handler
+        elif provider_name == "gemini_cli":
+            from . import gemini_cli_handler
+            return gemini_cli_handler
+        else:
+            # 默认返回Gemini
+            from . import gemini_handler
+            return gemini_handler
     except ImportError as e:
         logging.error(f"Failed to import {provider_name} handler: {e}")
         logging.error(f"Please install required dependencies for {provider_name}")
@@ -40,6 +43,13 @@ def initialize_client(provider_name):
     if not handler:
         logging.error(f"Handler for {provider_name} is not available")
         return None, None
+    
+    # CLI处理器不需要API密钥
+    if provider_name == "gemini_cli":
+        provider_config = API_PROVIDERS.get(provider_name, {})
+        cli_path = provider_config.get("cli_path", "gemini")
+        client = handler.GeminiCLIHandler(cli_path=cli_path)
+        return client, provider_name
         
     provider_config = API_PROVIDERS.get(provider_name, {})
     api_key_env = provider_config.get("api_key_env")
@@ -67,3 +77,11 @@ def translate_single_text(client, provider_name, text, task_description, mod_nam
         logging.error(f"Handler for {provider_name} is not available")
         return None
     return handler.translate_single_text(client, provider_name, text, task_description, mod_name, source_lang, target_lang, mod_context, game_profile)
+
+def translate_single_batch(client, provider_name, texts, source_lang, target_lang, game_profile, mod_context):
+    """调用当前选定API供应商的单批次翻译函数。"""
+    handler = get_handler(provider_name)
+    if not handler:
+        logging.error(f"Handler for {provider_name} is not available")
+        return None
+    return handler.translate_texts_in_batches(client, provider_name, texts, source_lang, target_lang, game_profile, mod_context)

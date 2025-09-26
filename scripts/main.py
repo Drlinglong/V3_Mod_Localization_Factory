@@ -88,6 +88,20 @@ def preflight_checks():
         except ImportError:
             pass
     
+    # 检查Gemini CLI
+    try:
+        import subprocess
+        result = subprocess.run(
+            ["powershell", "-Command", "Set-ExecutionPolicy RemoteSigned -Scope Process -Force; gemini --version"],
+            capture_output=True,
+            text=True,
+            timeout=10
+        )
+        if result.returncode == 0:
+            available_libraries.append(i18n.t("api_lib_gemini_cli"))
+    except (subprocess.TimeoutExpired, FileNotFoundError, Exception):
+        pass
+    
     if not available_libraries:
         error_messages.append("未找到任何API库")
         checks_passed = False

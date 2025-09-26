@@ -1,0 +1,48 @@
+=== CLI批量翻译原始输出 ===
+返回码: 0
+输出长度: 862 字符
+错误输出: Loaded cached credentials.
+Loaded cached credentials.
+File C:\Users\Drlin\.cache/vscode-ripgrep/ripgrep-v13.0.0-10-x86_64-pc-windows-msvc.zip has been cached
+
+==================================================
+{
+  "response": "1. 提升船队贡献\n2. 提升 [concept_subject] 对其 [concept_market_owner] [concept_overlord] 的船队贡献。\n3. [INITIATOR_COUNTRY.GetName] 提升船队贡献",
+  "stats": {
+    "models": {
+      "gemini-2.5-pro": {
+        "api": {
+          "totalRequests": 1,
+          "totalErrors": 0,
+          "totalLatencyMs": 16554
+        },
+        "tokens": {
+          "prompt": 11205,
+          "candidates": 48,
+          "total": 12698,
+          "cached": 0,
+          "thoughts": 1445,
+          "tool": 0
+        }
+      }
+    },
+    "tools": {
+      "totalCalls": 0,
+      "totalSuccess": 0,
+      "totalFail": 0,
+      "totalDurationMs": 0,
+      "totalDecisions": {
+        "accept": 0,
+        "reject": 0,
+        "modify": 0,
+        "auto_accept": 0
+      },
+      "byName": {}
+    },
+    "files": {
+      "totalLinesAdded": 0,
+      "totalLinesRemoved": 0
+    }
+  }
+}
+==================================================
