@@ -18,9 +18,14 @@ cd V3_Mod_Localization_Factory
 
 ### 2️⃣ One-Click Configuration
 Double-click the `Initial Setup.bat` file in the project root directory, then follow the prompts:
-- Select AI service provider (Gemini recommended)
-- Enter API key
+- Select AI service provider (Gemini CLI recommended, 1000 free calls daily)
+- Enter API key (Gemini CLI requires no API key)
 - Wait for automatic dependency installation
+
+**Additional steps for Gemini CLI users**:
+1. Install Node.js (if not already installed)
+2. Run `npm install -g @google/gemini-cli` to install CLI tool
+3. Run `gemini` for initial Google account OAuth authentication
 
 ### 3️⃣ Prepare Mod Files
 Place the mod folder you want to localize into the `source_mod` directory:
@@ -67,11 +72,14 @@ After translation is complete, find your localization package in the `my_transla
 **Q: "Invalid API key" error?**
 A: Check environment variable settings or re-run the configuration script
 
+**Q: Gemini CLI shows "not found" error?**
+A: Ensure Node.js is installed and run `npm install -g @google/gemini-cli`, then run `gemini` for authentication
+
 **Q: Translation is slow?**
 A: The system automatically processes in batches, please be patient
 
 **Q: How to improve translation quality?**
-A: Use higher quality AI services or add game-specific glossaries
+A: Use higher quality AI services (like Gemini CLI's 2.5 Pro model) or add game-specific glossaries
 
 ## 📚 Next Steps
 

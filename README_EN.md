@@ -83,6 +83,7 @@ In the age of Artificial Intelligence and Large Language Models, language should
 
 #### **Automated Translation Core**
 * **Multi-API Support**: Supports various AI translation services like Gemini, OpenAI, and Qwen, allowing users to choose based on their needs.
+* **Gemini CLI Support**: New support for Gemini CLI, providing 1000 free Gemini 2.5 Pro calls daily without requiring API keys. Simply use Google account OAuth authentication to enjoy high-quality AI translation services.
 * **Intelligent Glossary System**: Features a built-in, game-specific glossary manager that automatically identifies and injects relevant terms into API prompts, ensuring consistency and accuracy for game-specific terminology.
 * **Robust Parser**: Includes a resilient parser specifically designed to handle various PDS `.yml` formats (e.g., `key:0 "value"`) to ensure all valid text is accurately extracted.
 * **Intelligent Batch Processing (Chunking)**: When encountering large files, the script automatically splits the task into smaller batches to ensure the stability and success rate of API calls.
@@ -183,11 +184,13 @@ scripts/
 1. **Install Git**: Ensure [Git](https://git-scm.com/downloads) is installed.
 2. **Install Python**: Ensure Python 3.8 or higher is installed.
 3. **Install Dependencies**: 
-    - For Gemini: `pip install --upgrade google-generativeai`
+    - For Gemini API: `pip install --upgrade google-generativeai`
+    - For Gemini CLI: `npm install -g @google/gemini-cli` (requires Node.js to be installed first)
     - For OpenAI: `pip install -U openai`
     - For Qwen: `pip install -U dashscope`
 4. **Set API Key**: Set the appropriate environment variable for your chosen API provider:
-    - Gemini: `GEMINI_API_KEY`
+    - Gemini API: `GEMINI_API_KEY`
+    - Gemini CLI: No API key required, uses Google account OAuth authentication
     - OpenAI: `OPENAI_API_KEY`
     - Qwen: `DASHSCOPE_API_KEY`
 
