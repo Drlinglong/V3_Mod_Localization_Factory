@@ -1,0 +1,57 @@
+=== CLI批次原始输出 ===
+返回码: 0
+输出长度: 1052 字符
+错误输出: Loaded cached credentials.
+Loaded cached credentials.
+File C:\Users\Drlin\.cache/vscode-ripgrep/ripgrep-v13.0.0-10-x86_64-pc-windows-msvc.zip has been cached
+
+==================================================
+{
+  "response": "Please specify the target language you would like me to translate to. The placeholder \"???????\" needs to be replaced with a valid language (e.g., Chinese, German, Russian).\n\nOnce you provide the language, I will proceed with the translation, following all the critical formatting and syntax rules you've outlined.",
+  "stats": {
+    "models": {
+      "gemini-2.5-pro": {
+        "api": {
+          "totalRequests": 1,
+          "totalErrors": 0,
+          "totalLatencyMs": 9221
+        },
+        "tokens": {
+          "prompt": 13265,
+          "candidates": 61,
+          "total": 13851,
+          "cached": 0,
+          "thoughts": 525,
+          "tool": 0
+        }
+      }
+    },
+    "tools": {
+      "totalCalls": 0,
+      "totalSuccess": 0,
+      "totalFail": 0,
+      "totalDurationMs": 0,
+      "totalDecisions": {
+        "accept": 0,
+        "reject": 0,
+        "modify": 0,
+        "auto_accept": 0
+      },
+      "byName": {}
+    },
+    "files": {
+      "totalLinesAdded": 0,
+      "totalLinesRemoved": 0
+    }
+  }
+}
+==================================================
+
+=== 解析结果 ===
+解析方法: JSON/文本混合解析
+期望数量: 150
+实际数量: 2
+
+解析的翻译结果:
+翻译1: Please specify the target language you would like me to translate to. The placeholder "???????" needs to be replaced with a valid language (e.g., Chinese, German, Russian).
+翻译2: Once you provide the language, I will proceed with the translation, following all the critical formatting and syntax rules you've outlined.

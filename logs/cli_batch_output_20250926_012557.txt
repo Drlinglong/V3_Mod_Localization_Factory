@@ -1,0 +1,98 @@
+=== CLI批次原始输出 ===
+返回码: 0
+输出长度: 4170 字符
+错误输出: Loaded cached credentials.
+Loaded cached credentials.
+File C:\Users\Drlin\.cache/vscode-ripgrep/ripgrep-v13.0.0-10-x86_64-pc-windows-msvc.zip has been cached
+
+==================================================
+{
+  "response": "1.  @headlines_newsicon! #yellow 头条#! | 次要事件\n2.  所有次要头条\n3.  将显示所有头条。\n4.  仅显示相关次要头条\n5.  只有当您在相关地区拥有[concept_interest]时，才会显示一些不太重要的头条。#lore 这包括中美洲崩溃或法兰西重新征服阿尔及利亚等事件。#!\n6.  无次要头条\n7.  一些不太重要的头条将不会显示。#lore 这包括中美洲崩溃或法兰西重新征服阿尔及利亚等事件。#!\n8.  @headlines_newsicon! #yellow 头条#! | 主要事件\n9.  @headlines_newsicon! #yellow 头条#! | 次要事件\n10.  @headlines_newsicon! #yellow 头条#! | 建筑\n11. #header $notification_headlines_acw_begin_csa_name$#!\\n$TOOLTIP_DELIMITER$\\n$notification_headlines_acw_begin_csa_desc$\n12. #b 南部诸州颁布分裂法令#!\n13. 面对日益高涨的废奴支持，[SCOPE.sCountry('csa_scope').GetName]爆发了公开叛乱。#lore 分裂主义诸州宣布单方面退出联邦，夺取了联邦军火库，并召集当地民兵参战。据部长称，联邦政府的谈判遭到了断然拒绝……#!\n14. #header $notification_headlines_acw_begin_fsa_name$#!\\n$TOOLTIP_DELIMITER$\\n$notification_headlines_acw_begin_fsa_desc$\n15. #b 北部诸州颁布分裂法令#!\n16. 面对坚定的亲奴隶制立场，[SCOPE.sCountry('fsa_scope').GetName]爆发了公开叛乱。#lore 自由邦宣布联邦政府为非法，并宣布解放其领土内的任何奴隶，包括从蓄奴州逃来的奴隶。联邦政府谴责叛乱分子是宪法的叛徒，并呼吁……#!\n17. #header $notification_headlines_acw_end_slaver_name$#!\\n$TOOLTIP_DELIMITER$\\n$notification_headlines_acw_end_slaver_desc$\n18. #b 奴隶制在美国盛行#!\n19. 美国内战以奴隶制的胜利告终。#lore 总统敦促和解并迅速重新整合交战诸州。即使在……之后，仍有零星的废奴主义势力在坚持抵抗。#!\n20. #header $notification_headlines_acw_end_emancipation_name$#!\\n$TOOLTIP_DELIMITER$\\n$notification_headlines_acw_end_emancipation_desc$\n21. #b 美国内战结束#!\n22. 美国内战以废奴主义者的胜利告终。#lore 总统敦促和解并迅速重新整合交战诸州。亲奴隶制的准军事部队发动了一系列……#!\n23. #header $notification_headlines_acw_end_stalemate_name$#!\\n$TOOLTIP_DELIMITER$\\n$notification_headlines_acw_end_stalemate_desc$\n24. #b 分裂的美利坚#!\n25. 美国内战以僵局告终，[SCOPE.sCountry('usa_scope').GetName]和[SCOPE.sCountry('acw_other_one_scope').GetName]不情愿地接受了休战。#lore 大多数观察家认为，两个美利坚之间的和平不会持久。动荡震撼了边境诸州，因为双方都试图……#!\n26. #header $notification_headlines_taiping_appears_name$#!\\n$TOOLTIP_DELIMITER$\\n$notification_headlines_taiping_appears_desc$\n27. #b “天国”在中国宣告成立#!\n28. 一场中国的基督教运动组建了[SCOPE.sCountry('taiping_scope').GetName]，并向[SCOPE.sCountry('china_scope').GetName]宣战。#lore 据说这个被称为“拜上帝会”的教派由耶稣基督的兄弟领导，成千上万的人蜂拥而至……#!\n29. #header $notification_headlines_taiping_victory_name$#!\\n$TOOLTIP_DELIMITER$\\n$notification_headlines_taiping_victory_desc$\n30. #b 神圣中华帝国？#!\n31. [SCOPE.sCountry('taiping_scope').GetName]取得了胜利，并在全中国建立了拜上帝会的统治。#lore 这场残酷的冲突留下了惊人的死亡人数。[SCOPE.sCountry('taiping_scope').GetRuler.GetPrimaryRoleTitle][SCOPE.sCountry('taiping_scope').GetRuler.GetFirstName]已经颁布了广泛的社会改革法令，包括……#!\n32. #header $notification_headlines_taiping_defeat_name$#!\\n$TOOLTIP_DELIMITER$\\n$notification_headlines_taiping_defeat_desc$\n33. #b 基督徒在中国惨遭屠杀#!\n34. [SCOPE.sCountry('china_scope').GetName]粉碎了拜上帝会的叛乱。#lore 关于平民屠杀的惊人报道从被收复的省份传出，一位目击者声称，一天之内就有超过3万人被……杀害。#!\n35. #header $notification_headlines_sepoy_mutiny_name$#!\\n$TOOLTIP_DELIMITER$\\n$notification_headlines_sepoy_mutiny_desc$\n36. #b 印度兵兵变——英军动员#!\n37. [SCOPE.sCountry('bic_scope').GetName]的印度臣民在次大陆各地揭竿而起。#lore 整团的当地印度教和穆斯林士兵反抗他们的英国主人，为结束……的外国统治而战。#!\n38. #header $notification_headlines_sepoy_mutiny_success_name$#!\\n$TOOLTIP_DELIMITER$\\n$notification_headlines_sepoy_mutiny_success_desc$\n39. #b 英属印度的终结？#!\n40. 印度兵兵变成功地将印度大片地区从[SCOPE.sCountry('bic_scope').GetAdjective]的统治下解放出来。#lore 这场灾难性的失败使伦敦市场陷入混乱，而英国政府的残余势力则在……加固其剩余的领地。#!\n41. #header $notification_headlines_sepoy_mutiny_crushed_name$#!\\n$TOOLTIP_DELIMITER$\\n$notification_headlines_sepoy_mutiny_crushed_desc$\n42. #b 复仇大军#!\n43. [SCOPE.sCountry('bic_scope').GetName]以压倒性的力量粉碎了印度兵兵变。#lore 从被收复的城市传来的恐怖报道描述了英国正规军射杀一切移动的东西，用刺刀刺杀妇女和儿童，甚至……#",
+  "stats": {
+    "models": {
+      "gemini-2.5-pro": {
+        "api": {
+          "totalRequests": 1,
+          "totalErrors": 0,
+          "totalLatencyMs": 81820
+        },
+        "tokens": {
+          "prompt": 75238,
+          "candidates": 1592,
+          "total": 83365,
+          "cached": 0,
+          "thoughts": 6535,
+          "tool": 0
+        }
+      }
+    },
+    "tools": {
+      "totalCalls": 0,
+      "totalSuccess": 0,
+      "totalFail": 0,
+      "totalDurationMs": 0,
+      "totalDecisions": {
+        "accept": 0,
+        "reject": 0,
+        "modify": 0,
+        "auto_accept": 0
+      },
+      "byName": {}
+    },
+    "files": {
+      "totalLinesAdded": 0,
+      "totalLinesRemoved": 0
+    }
+  }
+}
+==================================================
+
+=== 解析结果 ===
+解析方法: JSON/文本混合解析
+期望数量: 43
+实际数量: 43
+
+解析的翻译结果:
+翻译1: @headlines_newsicon! #yellow 头条#! | 次要事件
+翻译2: 所有次要头条
+翻译3: 将显示所有头条。
+翻译4: 仅显示相关次要头条
+翻译5: 只有当您在相关地区拥有[concept_interest]时，才会显示一些不太重要的头条。#lore 这包括中美洲崩溃或法兰西重新征服阿尔及利亚等事件。#!
+翻译6: 无次要头条
+翻译7: 一些不太重要的头条将不会显示。#lore 这包括中美洲崩溃或法兰西重新征服阿尔及利亚等事件。#!
+翻译8: @headlines_newsicon! #yellow 头条#! | 主要事件
+翻译9: @headlines_newsicon! #yellow 头条#! | 次要事件
+翻译10: @headlines_newsicon! #yellow 头条#! | 建筑
+翻译11: #header $notification_headlines_acw_begin_csa_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_acw_begin_csa_desc$
+翻译12: #b 南部诸州颁布分裂法令#!
+翻译13: 面对日益高涨的废奴支持，[SCOPE.sCountry('csa_scope').GetName]爆发了公开叛乱。#lore 分裂主义诸州宣布单方面退出联邦，夺取了联邦军火库，并召集当地民兵参战。据部长称，联邦政府的谈判遭到了断然拒绝……#!
+翻译14: #header $notification_headlines_acw_begin_fsa_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_acw_begin_fsa_desc$
+翻译15: #b 北部诸州颁布分裂法令#!
+翻译16: 面对坚定的亲奴隶制立场，[SCOPE.sCountry('fsa_scope').GetName]爆发了公开叛乱。#lore 自由邦宣布联邦政府为非法，并宣布解放其领土内的任何奴隶，包括从蓄奴州逃来的奴隶。联邦政府谴责叛乱分子是宪法的叛徒，并呼吁……#!
+翻译17: #header $notification_headlines_acw_end_slaver_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_acw_end_slaver_desc$
+翻译18: #b 奴隶制在美国盛行#!
+翻译19: 美国内战以奴隶制的胜利告终。#lore 总统敦促和解并迅速重新整合交战诸州。即使在……之后，仍有零星的废奴主义势力在坚持抵抗。#!
+翻译20: #header $notification_headlines_acw_end_emancipation_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_acw_end_emancipation_desc$
+翻译21: #b 美国内战结束#!
+翻译22: 美国内战以废奴主义者的胜利告终。#lore 总统敦促和解并迅速重新整合交战诸州。亲奴隶制的准军事部队发动了一系列……#!
+翻译23: #header $notification_headlines_acw_end_stalemate_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_acw_end_stalemate_desc$
+翻译24: #b 分裂的美利坚#!
+翻译25: 美国内战以僵局告终，[SCOPE.sCountry('usa_scope').GetName]和[SCOPE.sCountry('acw_other_one_scope').GetName]不情愿地接受了休战。#lore 大多数观察家认为，两个美利坚之间的和平不会持久。动荡震撼了边境诸州，因为双方都试图……#!
+翻译26: #header $notification_headlines_taiping_appears_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_taiping_appears_desc$
+翻译27: #b “天国”在中国宣告成立#!
+翻译28: 一场中国的基督教运动组建了[SCOPE.sCountry('taiping_scope').GetName]，并向[SCOPE.sCountry('china_scope').GetName]宣战。#lore 据说这个被称为“拜上帝会”的教派由耶稣基督的兄弟领导，成千上万的人蜂拥而至……#!
+翻译29: #header $notification_headlines_taiping_victory_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_taiping_victory_desc$
+翻译30: #b 神圣中华帝国？#!
+翻译31: [SCOPE.sCountry('taiping_scope').GetName]取得了胜利，并在全中国建立了拜上帝会的统治。#lore 这场残酷的冲突留下了惊人的死亡人数。[SCOPE.sCountry('taiping_scope').GetRuler.GetPrimaryRoleTitle][SCOPE.sCountry('taiping_scope').GetRuler.GetFirstName]已经颁布了广泛的社会改革法令，包括……#!
+翻译32: #header $notification_headlines_taiping_defeat_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_taiping_defeat_desc$
+翻译33: #b 基督徒在中国惨遭屠杀#!
+翻译34: [SCOPE.sCountry('china_scope').GetName]粉碎了拜上帝会的叛乱。#lore 关于平民屠杀的惊人报道从被收复的省份传出，一位目击者声称，一天之内就有超过3万人被……杀害。#!
+翻译35: #header $notification_headlines_sepoy_mutiny_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_sepoy_mutiny_desc$
+翻译36: #b 印度兵兵变——英军动员#!
+翻译37: [SCOPE.sCountry('bic_scope').GetName]的印度臣民在次大陆各地揭竿而起。#lore 整团的当地印度教和穆斯林士兵反抗他们的英国主人，为结束……的外国统治而战。#!
+翻译38: #header $notification_headlines_sepoy_mutiny_success_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_sepoy_mutiny_success_desc$
+翻译39: #b 英属印度的终结？#!
+翻译40: 印度兵兵变成功地将印度大片地区从[SCOPE.sCountry('bic_scope').GetAdjective]的统治下解放出来。#lore 这场灾难性的失败使伦敦市场陷入混乱，而英国政府的残余势力则在……加固其剩余的领地。#!
+翻译41: #header $notification_headlines_sepoy_mutiny_crushed_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_sepoy_mutiny_crushed_desc$
+翻译42: #b 复仇大军#!
+翻译43: [SCOPE.sCountry('bic_scope').GetName]以压倒性的力量粉碎了印度兵兵变。#lore 从被收复的城市传来的恐怖报道描述了英国正规军射杀一切移动的东西，用刺刀刺杀妇女和儿童，甚至……#

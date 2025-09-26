@@ -1,0 +1,48 @@
+=== CLI批量翻译原始输出 ===
+返回码: 0
+输出长度: 9179 字符
+错误输出: Loaded cached credentials.
+Loaded cached credentials.
+File C:\Users\Drlin\.cache/vscode-ripgrep/ripgrep-v13.0.0-10-x86_64-pc-windows-msvc.zip has been cached
+
+==================================================
+{
+  "response": "1. 能力\n2. 游戏后期独特能力\n3. 命令经济\n4. 合作经济\n5. 委员会共和国\n6. 工人团结\n7. 无阶级社会\n8. 法西斯主义\n9. 共产主义\n10. 人民要求平等、正义和结束阶级压迫。全国各地，工人委员会正在形成，工会影响力日益增强，争取社会权利的抗议活动遍布街头。\\n 无论这次觉醒将导向何方\n11. 独裁重心 (正在制作中)\n12. 正在制作中\n13. 独裁\n14. 独裁进度: #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%]#! ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|1]/[GetPlayer.MakeScope.ScriptValue('new_dawn_core_upper_bound')])\n15. [concept_ut_nd_autocrat_characters] 的总 [concept_popularity]\n16. 拥有 [concept_ut_nd_autocrat_characters] [concept_leader] 的 [Concept('concept_interest_group', '$concept_interest_groups$')] 的 [concept_clout]\n17. 已颁布的 [Concept('concept_law', '$concept_laws$')]：[GetLawType('law_monarchy').GetName] 和 [GetLawType('law_autocracy').GetName]\n18. [concept_ut_nd_autocrat_characters] [concept_ruler] 的 [concept_legitimacy]\n19. #bold 独裁#! [Concept('concept_political_movement','$concept_political_movements$')] 的 [concept_political_movement_support]\n20. 独裁重心\n21. 事件及其他效果\n22. 独裁角色\n23. 独裁角色意识形态包括：[GetIdeology('ideology_authoritarian').GetName]、[GetIdeology('ideology_humanitarian_royalist').GetName]、[GetIdeology('ideology_integralist').GetName]、[GetIdeology('ideology_royalist').GetName]、[GetIdeology('ideology_traditionalist').GetName] 和 [GetIdeology('ideology_traditionalist_minoritarian').GetName]。\\n如果独裁重心已激活，还包括：[GetIdeology('ideology_moderate').GetName]、[GetIdeology('ideology_jingoist_leader').GetName]、[GetIdeology('ideology_protectionist').GetName]、[GetIdeology('ideology_positivist').GetName]、[GetIdeology('ideology_corporatist_leader').GetName]、[GetIdeology('ideology_land_reformer').GetName] 和 [GetIdeology('ideology_luddite').GetName]。\n24. 独裁思想塑造话语权\n25. 法西斯主义\n26. #bold 意识形态：[concept_ut_nd_fascist_characters]#!\\n\\n#bold 解锁 [concept_ut_nd_milestones]#!\\n\\n#bold 解锁 (待定)：#!\\n 征服国家\\n\\n重心修正：\\n[GetStaticModifier('je_ut_new_dawn_fascist_focus').GetDesc]\\n\\n解锁修正：\\n[GetStaticModifier('ut_new_dawn_core_autocratic_mod').GetDesc]\\n\\n[concept_ut_nd_path_to_utopia]：通过盲从、军国主义和对所有被视为“异类”的无情征服，将你的人民转变为……乌托邦。征服世界。为少数人创造繁荣与统一，代价是牺牲所有其他人的自由与尊严。\n27. 独裁\n28. #bold 意识形态：[concept_ut_nd_autocrat_characters]#!\\n\\n#bold 解锁 [concept_ut_nd_actions]#!\\n\\n重心修正：\\n[GetStaticModifier('je_ut_new_dawn_autocrat_focus').GetDesc]\\n\\n解锁修正：\\n[GetStaticModifier('ut_new_dawn_core_fascist_mod').GetDesc]\\n\\n[concept_ut_nd_path_to_utopia]：无。\n29. 民主\n30. #bold 意识形态：[concept_ut_nd_democrat_characters]#!\\n\\n#bold 解锁 [concept_ut_nd_milestones]#!\\n\\n#bold 解锁 [concept_ut_nd_abilities]：#!\\n [GetDiplomaticActionType('ut_international_diplomatic_power_bloc_merge').GetName]\\n [GetDiplomaticActionType('ut_influence_new_dawn_major_power').GetName]\\n\\n重心修正：\\n[GetStaticModifier('je_ut_new_dawn_democrat_focus').GetDesc]\\n\\n解锁修正：\\n[GetStaticModifier('ut_new_dawn_core_democratic_mod').GetDesc]\\n\\n[concept_ut_nd_path_to_utopia]：加强民主制度，创建一个公正、自由的社会，让所有公民都能体验到参与、尊严和机会。带领你的人民走向一个基于平等、开放和人民意愿的乌托邦。\n31. 共产主义\n32. #bold 意识形态：[concept_ut_nd_communist_characters]#!\\n\\n#bold 解锁 [concept_ut_nd_milestones]#!\\n\\n#bold 解锁 [concept_ut_nd_abilities]：#!\\n [GetDiplomaticActionType('ut_influence_new_dawn_major_power').GetName]\\n\\n重心修正：\\n[GetStaticModifier('ut_new_dawn_core_communist_mod').GetDesc]\\n\\n解锁修正：\\n[GetStaticModifier('je_ut_new_dawn_communist_mod').GetDesc]\\n\\n[concept_ut_nd_path_to_utopia]：建立一个所有生产资料归集体所有的无阶级社会。带领你的人民走向一个以平等和团结为共存基础的乌托邦。\n33. 通往乌托邦之路\n34. 每种意识形态都有其独特的游戏后期机制。基础机制：民主。正在制作中：独裁。（正在制作中）\n35. 法西斯重心 (待定)\n36. 正在制作中\n37. 法西斯\n38. 法西斯进度: #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%]#! ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|1]/[GetPlayer.MakeScope.ScriptValue('new_dawn_core_upper_bound')])\n39. [concept_ut_nd_fascist_characters] 的总 [concept_popularity]\n40. 拥有 [concept_ut_nd_fascist_characters] [concept_leader] 的 [Concept('concept_interest_group', '$concept_interest_groups$')] 的 [concept_clout]\n41. 已颁布的 [Concept('concept_law', '$concept_laws$')]：[GetLawType('law_ethnostate').GetName]、[GetLawType('law_neo_ethno_state').GetName]\n42. [concept_ut_nd_fascist_characters] [concept_ruler] 的 [concept_legitimacy]\n43. 法西斯重心\n44. 事件及其他效果\n45. 法西斯角色\n46. 法西斯角色意识形态包括：[GetIdeology('ideology_ethno_nationalist').GetName] 和 [GetIdeology('ideology_fascist').GetName]。\\n如果法西斯重心已激活，还包括：[GetIdeology('ideology_moderate').GetName]、[GetIdeology('ideology_corporatist_leader').GetName]、[GetIdeology('ideology_land_reformer').GetName] 和 [GetIdeology('ideology_modernizer_leader').GetName]。\n47. 法西斯思想塑造话语权\n48. 已研究无线电\n49. 待替换\n50. 已研究消费品\n51. 待替换\n52. 待替换\n53. 伪装的人类\n54. 待替换\n55. @service_workers! $service_workers_no_icon$\n56. 城市服务业的工人，如酒店、零售和运输业。他们是服务经济的重要组成部分，代表着多样化的劳动力。大多数人支持城市主义者，少数人支持小资产阶级或工会。\n57. @service_workers!\n58. 服务业工人\n59. $service_workers$ [concept_profession]\n60. 只有具备足够 [concept_literacy] 和 [concept_wealth] 的人群才能成为 #v $service_workers$#!。随着 [concept_literacy] 和 [concept_wealth] 的提高，这种可能性也会增加。#v $laborers$#! 和 #v $clerks$#! 尤其容易成为 #v $service_workers$#!。\n61. $service_workers$ 的 [concept_political_strength]\n62. $service_workers$ 的 [concept_political_strength] 增加或减少\n63. $service_workers$ [concept_investment_pool] 贡献\n64. $service_workers$ [concept_investment_pool] 贡献效率\n65. $service_workers$ 将投资其利润的多大比例。\n66. $service_workers$ 向 [concept_investment_pool] 贡献的投资利润增加或减少。\n67. 每级 $service_workers$\n68. 修改建筑每级可雇佣的 $service_workers$ 数量。\n69. $service_workers$ [concept_voting_power]\n70. $service_workers$ 的 [concept_voting_power] 增加或减少\n71. $service_workers$ 死亡率乘数\n72. $service_workers$ 死亡率的增加或减少。\n73. 城市主义者\n74. 现代城市环境中的服务业工人，代表酒店、零售、运输及其他当代经济部门的专业人士。\n75. @urbanists!\n76. [GetInterestGroupVariant('ig_urbanists',GetPlayer).GetNameWithCountryVariant]\n77. $ig_variant_urbanists$ [concept_political_strength]\n78. [concept_interest_group] “[GetInterestGroupVariant('ig_urbanists',GetPlayer).GetNameWithCountryVariant]” 的 [concept_political_strength] 增加或减少。\n79. [concept_approval] ($ig_variant_urbanists$)\n80. [concept_interest_group] “[GetInterestGroupVariant('ig_urbanists',GetPlayer).GetNameWithCountryVariant]” 的 [concept_approval] 增加或减少。\n81. $ig_variant_urbanists$ 人口吸引力乘数\n82. 人口被 [concept_interest_group] “[GetInterestGroupVariant('ig_urbanists',GetPlayer).GetNameWithCountryVariant]” 吸引的加成或减成。\n83. 城市自由主义意识形态\n84. 世界主义\n85. 世界主义意识形态强调全球互联、包容性和促进人权。他们支持开放边界、多元文化主义和不受宗教影响的世俗治理。\n86. 理性主义者\n87. 理性主义意识形态倾向于由专家治理以及对国家和社会的有效管理。他们依赖基于科学的决策，并支持教育、技术和公共服务。\n88. 人文主义者\n89. 人文主义意识形态关注平等、社会正义和保护个人权利。他们反对奴隶制和剥削，并倡导建立强大的社会保障网络。\n90. 生态主义者\n91. #lore 环境保护主义者。#!\n92. 解锁 [GetIdeology('ut_ideology_environmentalist_leader').GetName] [concept_ideology]\n93. 世界主义\n94. 世界主义意识形态强调全球合作、文化多样性和促进人权。他们倡导开放边界、多元文化主义和不受宗教影响的世俗政府。\n95. 世界主义\n96. 世界主义意识形态强调全球合作、文化多样性和促进人权。他们倡导开放边界、多元文化主义和不受宗教影响的世俗政府。\n97. 解锁 [GetIdeology('ut_ideology_cosmopolitan_leader').GetName] [concept_ideology]\n98. 独裁\n99. 独裁意识形态优先考虑强大、集中的权威和秩序。他们通常强调传统、等级制度和国家统一，主张限制政治自由以换取稳定和控制。\n100. 解锁 [GetIdeology('ut_ideology_autocratic_leader').GetName] [concept_ideology]\n101. 国家社会主义\n102. 解锁 [GetIdeology('ut_ideology_national_socialist_leader').GetName] [concept_ideology]\n103. 经济法团主义\n104. 经济法团主义意识形态强调国家在管理经济中的作用，同时保持强大的企业部门。他们倡导政府与企业合作，以实现经济增长和社会稳定。\n105. 解锁 [GetIdeology('ut_ideology_economical_corporatist_leader').GetName] [concept_ideology]\n106. 自由民主\n107. 道德民主\n108. 精英主义\n109. 保守主义\n110. 安全导向\n111. 社会民主\n112. 名望社会\n113. 该团体主张人员自由跨境流动，认为这能促进文化交流和经济机会。他们反对限制性移民政策，并强调国际合作。\n114. 教育机会\n115. 该团体倡导一个由研究、创新和可衡量绩效驱动的社会。他们相信持续改进和科学进步是国家成功的关键。\n116. 歧视\n117. 世界主义运动\n118. 人文主义运动\n119. 理性主义运动\n120. 解锁 #BOLD 世界主义#! [concept_political_movement]\n121. 解锁 #BOLD 人文主义#! [concept_political_movement]\n122. 解锁 #BOLD 理性主义#! [concept_political_movement]\n123. 自由主义女权\n124. 解锁 [GetIdeology('ut_liberal_feminism_leader').GetName] [concept_ideology]\n125. 激进女权\n126. 解锁 [GetIdeology('ut_radical_feminism_leader').GetName] [concept_ideology]\n127. 社会主义女权\n128. 解锁 [GetIdeology('ut_social_feminism_leader').GetName] [concept_ideology]\n129. 环境保护\n130. 保护环境、促进可持续性并确保生态平衡的法律和制度。\n131. 食品安全\n132. 确保食品生产和分销中的食品安全、卫生和质量标准的法律和制度。\n133. 社会市场经济\n134. 一种受规制的市场经济，将自由竞争与社会保障相结合，以促进繁荣和社会平衡。\n135. 自由市场经济\n136. 一种不受约束的资本主义，价格和生产完全由供求决定，政府干预极少。\n137. 国家资本主义\n138. 一种国家控制关键产业和资源以促进国家利益和确保经济稳定的制度。\n139. 法团经济\n140. 一种公司与国家紧密合作以促进经济利益和确保社会稳定的制度。\n141. 税法\n142. 允许颁布额外税收法令的综合税收体系。\n143. 自由贸易网络\n144. 一个消除内部贸易壁垒并推行共同关税政策以促进经济利益的国家联盟。\n145. 保护主义集团\n146. 通过集体关税和贸易限制来保护国内产业免受外国竞争的国家联盟。\n147. 义务中等教育\n148. 所有青少年都必须完成中等教育。\n149. 义务高等教育\n150. 所有公民必须在中学毕业后完成职业或学术培训，以确保拥有一支技术娴熟、能力出众的劳动力队伍。",
+  "stats": {
+    "models": {
+      "gemini-2.5-pro": {
+        "api": {
+          "totalRequests": 1,
+          "totalErrors": 0,
+          "totalLatencyMs": 102318
+        },
+        "tokens": {
+          "prompt": 17376,
+          "candidates": 3686,
+          "total": 30194,
+          "cached": 4150,
+          "thoughts": 9132,
+          "tool": 0
+        }
+      }
+    },
+    "tools": {
+      "totalCalls": 0,
+      "totalSuccess": 0,
+      "totalFail": 0,
+      "totalDurationMs": 0,
+      "totalDecisions": {
+        "accept": 0,
+        "reject": 0,
+        "modify": 0,
+        "auto_accept": 0
+      },
+      "byName": {}
+    },
+    "files": {
+      "totalLinesAdded": 0,
+      "totalLinesRemoved": 0
+    }
+  }
+}
+==================================================

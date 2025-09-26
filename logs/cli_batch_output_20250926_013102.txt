@@ -1,0 +1,61 @@
+=== CLI批量翻译原始输出 ===
+返回码: 0
+输出长度: 768 字符
+错误输出: Loaded cached credentials.
+Loaded cached credentials.
+File C:\Users\Drlin\.cache/vscode-ripgrep/ripgrep-v13.0.0-10-x86_64-pc-windows-msvc.zip has been cached
+Attempt 1 failed with status 503. Retrying with backoff... ApiError: {"error":{"message":"{\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"The model is overloaded. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n","code":503,"status":"Service Unavailable"}}
+    at throwErrorIfNotOK (file:///C:/Users/Drlin/AppData/Roaming/npm/node_modules/@google/gemini-cli/node_modules/@google/genai/dist/node/index.mjs:14072:30)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async file:///C:/Users/Drlin/AppData/Roaming/npm/node_modules/@google/gemini-cli/node_modules/@google/genai/dist/node/index.mjs:13863:13
+    at async Models.generateContentStream (file:///C:/Users/Drlin/AppData/Roaming/npm/node_modules/@google/gemini-cli/node_modules/@google/genai/dist/node/index.mjs:15204:24)
+    at async LoggingContentGenerator.generateContentStream (file:///C:/Users/Drlin/AppData/Roaming/npm/node_modules/@google/gemini-cli/node_modules/@google/gemini-cli-core/dist/src/core/loggingContentGenerator.js:57:22)
+    at async retryWithBackoff (file:///C:/Users/Drlin/AppData/Roaming/npm/node_modules/@google/gemini-cli/node_modules/@google/gemini-cli-core/dist/src/utils/retry.js:62:20)
+    at async GeminiChat.makeApiCallAndProcessStream (file:///C:/Users/Drlin/AppData/Roaming/npm/node_modules/@google/gemini-cli/node_modules/@google/gemini-cli-core/dist/src/core/geminiChat.js:263:32)
+    at async file:///C:/Users/Drlin/AppData/Roaming/npm/node_modules/@google/gemini-cli/node_modules/@google/gemini-cli-core/dist/src/core/geminiChat.js:211:40
+    at async Turn.run (file:///C:/Users/Drlin/AppData/Roaming/npm/node_modules/@google/gemini-cli/node_modules/@google/gemini-cli-core/dist/src/core/turn.js:59:30)
+    at async GeminiClient.sendMessageStream (file:///C:/Users/Drlin/AppData/Roaming/npm/node_modules/@google/gemini-cli/node_modules/@google/gemini-cli-core/dist/src/core/client.js:390:26) {
+  status: 503
+}
+
+==================================================
+{
+  "response": "1. 要塞已攻破\n2. 这位指挥官已成功攻破部分敌方防御工事。",
+  "stats": {
+    "models": {
+      "gemini-2.5-pro": {
+        "api": {
+          "totalRequests": 2,
+          "totalErrors": 1,
+          "totalLatencyMs": 17218
+        },
+        "tokens": {
+          "prompt": 10931,
+          "candidates": 20,
+          "total": 11647,
+          "cached": 0,
+          "thoughts": 696,
+          "tool": 0
+        }
+      }
+    },
+    "tools": {
+      "totalCalls": 0,
+      "totalSuccess": 0,
+      "totalFail": 0,
+      "totalDurationMs": 0,
+      "totalDecisions": {
+        "accept": 0,
+        "reject": 0,
+        "modify": 0,
+        "auto_accept": 0
+      },
+      "byName": {}
+    },
+    "files": {
+      "totalLinesAdded": 0,
+      "totalLinesRemoved": 0
+    }
+  }
+}
+==================================================

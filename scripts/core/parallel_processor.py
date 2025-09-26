@@ -1,17 +1,17 @@
 # scripts/core/parallel_processor.py
 """
 多文件并行处理器
-实现真正的多文件并行处理，确保所有文件能同时运行
-职责：纯并行调度，不包含文件操作逻辑
+实现真正的批次级全局并行调度，确保所有批次能同时运行
+职责：批次级并行调度，不包含文件操作逻辑
 """
 
 import os
 import logging
 import concurrent.futures
-from typing import List, Dict, Any, Callable, Optional
+from typing import List, Dict, Any, Callable, Optional, Tuple
 from dataclasses import dataclass
 from scripts.utils import i18n
-from scripts.config import CHUNK_SIZE
+from scripts.config import CHUNK_SIZE, GEMINI_CLI_CHUNK_SIZE
 
 
 @dataclass
@@ -35,8 +35,18 @@ class FileTask:
     mod_name: str  # 添加mod_name字段
 
 
+@dataclass
+class BatchTask:
+    """批次任务数据结构"""
+    file_task: FileTask
+    batch_index: int
+    start_index: int
+    end_index: int
+    texts: List[str]
+
+
 class ParallelProcessor:
-    """多文件并行处理器 - 纯并行调度，不包含文件操作逻辑"""
+    """批次级全局并行处理器 - 实现真正的批次级并行调度"""
     
     def __init__(self, max_workers: int = 24):
         """
@@ -54,7 +64,7 @@ class ParallelProcessor:
         translation_function: Callable
     ) -> Dict[str, List[str]]:
         """
-        并行处理多个文件，每个文件内部由API Handler处理
+        批次级全局并行处理多个文件
         
         Args:
             file_tasks: 文件任务列表
@@ -67,86 +77,160 @@ class ParallelProcessor:
             self.logger.info(i18n.t("no_files_to_process"))
             return {}
         
-        self.logger.info(i18n.t("parallel_processing_start", count=len(file_tasks)))
+        # 1. 将所有文件分解为批次任务
+        batch_tasks = self._create_batch_tasks(file_tasks)
+        self.logger.info(i18n.t("parallel_processing_start", count=len(batch_tasks)))
         
-        # 使用线程池并行处理所有文件
-        with concurrent.futures.ThreadPoolExecutor(max_workers=self.max_workers) as executor:
-            # 提交所有文件任务
-            future_to_file = {
-                executor.submit(
-                    self._process_single_file,
-                    file_task,
-                    translation_function
-                ): file_task
-                for file_task in file_tasks
-            }
-            
-            # 收集结果
-            file_results = {}
-            
-            for future in concurrent.futures.as_completed(future_to_file):
-                file_task = future_to_file[future]
-                filename = file_task.filename
-                
-                try:
-                    result = future.result()
-                    if result is not None:
-                        file_results[filename] = result
-                        self.logger.info(i18n.t("file_translation_completed", filename=filename))
-                    else:
-                        self.logger.error(i18n.t("file_translation_failed", filename=filename))
-                        # 翻译失败时，使用原文作为fallback
-                        file_results[filename] = file_task.texts_to_translate
-                
-                except Exception as e:
-                    self.logger.exception(i18n.t("file_processing_failed", filename=filename, error=e))
-                    # 异常时，使用原文作为fallback
-                    file_results[filename] = file_task.texts_to_translate
+        # 2. 全局批次并行处理
+        batch_results = self._process_batches_parallel(batch_tasks, translation_function)
+        
+        # 3. 按文件收集结果
+        file_results = self._collect_file_results(file_tasks, batch_results)
         
         self.logger.info(i18n.t("all_files_processing_completed", count=len(file_results)))
         return file_results
     
-    def _process_single_file(
+    def _create_batch_tasks(self, file_tasks: List[FileTask]) -> List[BatchTask]:
+        """将所有文件分解为批次任务"""
+        batch_tasks = []
+        
+        for file_task in file_tasks:
+            if not file_task.texts_to_translate:
+                continue
+                
+            # 根据provider选择chunk大小
+            chunk_size = GEMINI_CLI_CHUNK_SIZE if file_task.provider_name == "gemini_cli" else CHUNK_SIZE
+            
+            # 将文件文本分成批次
+            texts = file_task.texts_to_translate
+            for i in range(0, len(texts), chunk_size):
+                start_index = i
+                end_index = min(i + chunk_size, len(texts))
+                batch_texts = texts[start_index:end_index]
+                batch_index = i // chunk_size
+                
+                batch_task = BatchTask(
+                    file_task=file_task,
+                    batch_index=batch_index,
+                    start_index=start_index,
+                    end_index=end_index,
+                    texts=batch_texts
+                )
+                batch_tasks.append(batch_task)
+        
+        return batch_tasks
+    
+    def _process_batches_parallel(
         self,
-        file_task: FileTask,
+        batch_tasks: List[BatchTask],
+        translation_function: Callable
+    ) -> Dict[Tuple[str, int], List[str]]:
+        """全局批次并行处理"""
+        if not batch_tasks:
+            return {}
+        
+        # 使用线程池并行处理所有批次
+        with concurrent.futures.ThreadPoolExecutor(max_workers=self.max_workers) as executor:
+            # 提交所有批次任务
+            future_to_batch = {
+                executor.submit(
+                    self._process_single_batch,
+                    batch_task,
+                    translation_function
+                ): batch_task
+                for batch_task in batch_tasks
+            }
+            
+            # 收集结果
+            batch_results = {}
+            
+            for future in concurrent.futures.as_completed(future_to_batch):
+                batch_task = future_to_batch[future]
+                batch_key = (batch_task.file_task.filename, batch_task.batch_index)
+                
+                try:
+                    result = future.result()
+                    if result is not None:
+                        batch_results[batch_key] = result
+                        self.logger.debug(f"Batch completed: {batch_task.file_task.filename} batch {batch_task.batch_index}")
+                    else:
+                        self.logger.error(f"Batch failed: {batch_task.file_task.filename} batch {batch_task.batch_index}")
+                        # 翻译失败时，使用原文作为fallback
+                        batch_results[batch_key] = batch_task.texts
+                
+                except Exception as e:
+                    self.logger.exception(f"Batch processing failed: {batch_task.file_task.filename} batch {batch_task.batch_index}, error: {e}")
+                    # 异常时，使用原文作为fallback
+                    batch_results[batch_key] = batch_task.texts
+        
+        return batch_results
+    
+    def _process_single_batch(
+        self,
+        batch_task: BatchTask,
         translation_function: Callable
     ) -> Optional[List[str]]:
-        """
-        处理单个文件的所有文本，返回完整的翻译结果
-        
-        Args:
-            file_task: 文件任务
-            translation_function: 翻译函数
-            
-        Returns:
-            List[str] 或 None: 完整的翻译结果，失败时返回None
-        """
+        """处理单个批次"""
         try:
-            if not file_task.texts_to_translate:
-                # 空文件，返回空列表
-                return []
+            # 导入API handler以使用单批次翻译函数
+            from scripts.core import api_handler
             
-            # 调用翻译函数处理整个文件
-            # 注意：API Handler负责文件内部的批次分割和处理
-            translated_texts = translation_function(
-                file_task.client,
-                file_task.provider_name,
-                file_task.texts_to_translate,
-                file_task.source_lang,
-                file_task.target_lang,
-                file_task.game_profile,
-                file_task.mod_context,
+            # 调用单批次翻译函数
+            translated_texts = api_handler.translate_single_batch(
+                batch_task.file_task.client,
+                batch_task.file_task.provider_name,
+                batch_task.texts,
+                batch_task.file_task.source_lang,
+                batch_task.file_task.target_lang,
+                batch_task.file_task.game_profile,
+                batch_task.file_task.mod_context,
             )
             
-            if translated_texts and len(translated_texts) == len(file_task.texts_to_translate):
+            if translated_texts and len(translated_texts) == len(batch_task.texts):
                 return translated_texts
             else:
-                self.logger.error(i18n.t("translation_result_mismatch", 
-                                       filename=file_task.filename,
-                                       original_count=len(file_task.texts_to_translate),
-                                       translated_count=len(translated_texts) if translated_texts else 0))
+                self.logger.error(f"Translation result mismatch for {batch_task.file_task.filename} batch {batch_task.batch_index}: "
+                                f"expected {len(batch_task.texts)}, got {len(translated_texts) if translated_texts else 0}")
                 return None
                 
         except Exception as e:
-            self.logger.exception(i18n.t("file_translation_error", filename=file_task.filename, error=e))
+            self.logger.exception(f"Batch translation error for {batch_task.file_task.filename} batch {batch_task.batch_index}: {e}")
             return None
+    
+    def _collect_file_results(
+        self,
+        file_tasks: List[FileTask],
+        batch_results: Dict[Tuple[str, int], List[str]]
+    ) -> Dict[str, List[str]]:
+        """按文件收集批次结果"""
+        file_results = {}
+        
+        for file_task in file_tasks:
+            if not file_task.texts_to_translate:
+                file_results[file_task.filename] = []
+                continue
+            
+            # 收集该文件的所有批次结果
+            file_translated_texts = []
+            batch_index = 0
+            
+            while True:
+                batch_key = (file_task.filename, batch_index)
+                if batch_key not in batch_results:
+                    break
+                
+                batch_result = batch_results[batch_key]
+                file_translated_texts.extend(batch_result)
+                batch_index += 1
+            
+            # 检查结果完整性
+            if len(file_translated_texts) == len(file_task.texts_to_translate):
+                file_results[file_task.filename] = file_translated_texts
+                self.logger.info(i18n.t("file_translation_completed", filename=file_task.filename))
+            else:
+                self.logger.error(f"File translation incomplete for {file_task.filename}: "
+                                f"expected {len(file_task.texts_to_translate)}, got {len(file_translated_texts)}")
+                # 使用原文作为fallback
+                file_results[file_task.filename] = file_task.texts_to_translate
+        
+        return file_results
