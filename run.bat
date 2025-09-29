@@ -1,46 +1,43 @@
 @echo off
-rem Simple launcher - Universal igniter
+rem Conda Strict Mode V5.0: Uses 'start /b' to isolate environment activation and prevent flash-backs.
 chcp 65001 >nul
-cls
 
-rem Try to find and activate the correct Python environment (Conda first, then system default)
-set ENV_TYPE=System Default
-set CONDA_ACTIVATION_SCRIPT_FOUND=
+rem 1. Configuration
+set CONDA_ROOT=K:\MiniConda
+set ENV_NAME=local_factory
+set PYTHON_SCRIPT=scripts\main.py
 
-rem Check conda environment
-if exist "J:\miniconda\condabin\conda.bat" (
-    call "J:\miniconda\condabin\conda.bat" info --envs | findstr "local_factory" >nul
-    if not errorlevel 1 (
-        set ENV_TYPE=Conda (local_factory)
-        set CONDA_ACTIVATION_SCRIPT_FOUND=1
-    )
+echo ========================================
+echo Starting Universal Launcher (V5.0 - Isolated Start)...
+echo ----------------------------------------
+
+rem 2. Check Conda Root Path
+if not exist "%CONDA_ROOT%\condabin\conda.bat" (
+    echo CRITICAL ERROR: Conda installation not found at "%CONDA_ROOT%".
+    echo Please check CONDA_ROOT path or install Miniconda.
+    goto :final_error
 )
 
-rem Check if Python is available
-python --version >nul 2>&1
-if errorlevel 1 (
-    echo.
-    echo ========================================
-    echo Error: Python not found
-    echo ========================================
-    echo.
-    echo Please ensure Python is installed and added to system PATH
-    echo.
-    echo Download: https://www.python.org/downloads/
-    echo.
-    pause
-    exit /b 1
-)
+rem === 3. Isolated Activation and Execution ===
+echo Status: Conda found. Launching isolated session for environment (%ENV_NAME%)...
 
-rem Display startup environment info
-if defined CONDA_ACTIVATION_SCRIPT_FOUND (
-    echo Starting in virtual environment...
-    call "J:\miniconda\condabin\conda.bat" activate local_factory && python scripts\main.py
-) else (
-    echo Starting in system default environment...
-    python scripts\main.py
-)
+rem CRITICAL FIX: We use 'start' to launch a new, isolated CMD session that initializes Conda and runs the command.
+rem This prevents PATH conflicts and the 'not was unexpected' errors from the main script.
+start "Running Project" /B cmd /K ( call "%CONDA_ROOT%\condabin\conda.bat" activate %ENV_NAME% ^&^& python %PYTHON_SCRIPT% )
 
+rem We assume the isolated session has successfully launched the python script.
+echo SUCCESS: Isolated Conda session launched.
+echo Note: The Python script is running in a background process.
+goto :end
+
+rem === 4. Error Handling & Exit ===
+:final_error
+echo.
+echo ========================================
+echo PROGRAM FAILED TO START.
+echo ========================================
+
+:end
 echo.
 echo ===================================================
 echo Program execution completed. You can close this window.

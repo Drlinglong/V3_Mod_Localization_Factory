@@ -24,7 +24,7 @@ CHUNK_SIZE = 40  # 默认chunk大小
 MAX_RETRIES = 3
 
 # --- Gemini CLI 特定配置 -----------------------------------------
-GEMINI_CLI_CHUNK_SIZE = 150  # CLI模式使用更大的chunk，发挥2.5 Pro长上下文优势
+GEMINI_CLI_CHUNK_SIZE = 100  # CLI模式使用更大的chunk，发挥2.5 Pro长上下文优势
 GEMINI_CLI_MAX_RETRIES = 2  # CLI调用重试次数较少，因为启动成本高
 
 # --- 智能线程池配置 ----------------------------------------------------
@@ -235,6 +235,7 @@ GAME_PROFILES = {
             "{chunk_size}. "
             "Each item in your list MUST be the translation of the corresponding item in the input list.\n"
             "DO NOT merge, add, or omit lines. DO NOT add any explanations or notes.\n\n"
+            "CRITICAL DATA HYGIENE RULE: Your task is to translate meaningful text. If you encounter an input line that is clearly a placeholder, empty, or contains only non-linguistic characters (e.g., only spaces, \"...\", \"???\", \"tbd\", \"todo\", \"wip\"), you MUST NOT attempt to translate it or return it as is. Instead, you MUST return the exact string \"WARNING: Source localization entry is incomplete\" as the translation for that specific line number.\n\n"
             "🚨 CRITICAL QUOTE RULE: DO NOT add extra quotes around your translations!\n"
             "The game engine will handle quote formatting automatically. Adding quotes will break the display!\n"
             "EXAMPLE: If input is 'software', output should be '软件', NOT '\"软件\"'!\n\n"
@@ -307,6 +308,7 @@ GAME_PROFILES = {
             "{chunk_size}. "
             "Each item in your list MUST be the translation of the corresponding item in the input list.\n"
             "DO NOT merge, add, or omit lines. DO NOT add any explanations or notes.\n\n"
+            "CRITICAL DATA HYGIENE RULE: Your task is to translate meaningful text. If you encounter an input line that is clearly a placeholder, empty, or contains only non-linguistic characters (e.g., only spaces, \"...\", \"???\", \"tbd\", \"todo\", \"wip\"), you MUST NOT attempt to translate it or return it as is. Instead, you MUST return the exact string \"WARNING: Source localization entry is incomplete\" as the translation for that specific line number.\n\n"
             "🚨 CRITICAL QUOTE RULE: DO NOT add extra quotes around your translations!\n"
             "The game engine will handle quote formatting automatically. Adding quotes will break the display!\n"
             "EXAMPLE: If input is 'software', output should be '软件', NOT '\"软件\"'!\n\n"
@@ -372,6 +374,7 @@ GAME_PROFILES = {
             "{chunk_size}. "
             "Each item in your list MUST be the translation of the corresponding item in the input list.\n"
             "DO NOT merge, add, or omit lines. DO NOT add any explanations or notes.\n\n"
+            "CRITICAL DATA HYGIENE RULE: Your task is to translate meaningful text. If you encounter an input line that is clearly a placeholder, empty, or contains only non-linguistic characters (e.g., only spaces, \"...\", \"???\", \"tbd\", \"todo\", \"wip\"), you MUST NOT attempt to translate it or return it as is. Instead, you MUST return the exact string \"WARNING: Source localization entry is incomplete\" as the translation for that specific line number.\n\n"
             "🚨 CRITICAL QUOTE RULE: DO NOT add extra quotes around your translations!\n"
             "The game engine will handle quote formatting automatically. Adding quotes will break the display!\n"
             "EXAMPLE: If input is 'software', output should be '软件', NOT '\"软件\"'!\n\n"
@@ -438,6 +441,7 @@ GAME_PROFILES = {
             "{chunk_size}. "
             "Each item in your list MUST be the translation of the corresponding item in the input list.\n"
             "DO NOT merge, add, or omit lines. DO NOT add any explanations or notes.\n\n"
+            "CRITICAL DATA HYGIENE RULE: Your task is to translate meaningful text. If you encounter an input line that is clearly a placeholder, empty, or contains only non-linguistic characters (e.g., only spaces, \"...\", \"???\", \"tbd\", \"todo\", \"wip\"), you MUST NOT attempt to translate it or return it as is. Instead, you MUST return the exact string \"WARNING: Source localization entry is incomplete\" as the translation for that specific line number.\n\n"
             "🚨 CRITICAL QUOTE RULE: DO NOT add extra quotes around your translations!\n"
             "The game engine will handle quote formatting automatically. Adding quotes will break the display!\n"
             "EXAMPLE: If input is 'software', output should be '软件', NOT '\"软件\"'!\n\n"
@@ -503,6 +507,7 @@ GAME_PROFILES = {
             "{chunk_size}. "
             "Each item in your list MUST be the translation of the corresponding item in the input list.\n"
             "DO NOT merge, add, or omit lines. DO NOT add any explanations or notes.\n\n"
+            "CRITICAL DATA HYGIENE RULE: Your task is to translate meaningful text. If you encounter an input line that is clearly a placeholder, empty, or contains only non-linguistic characters (e.g., only spaces, \"...\", \"???\", \"tbd\", \"todo\", \"wip\"), you MUST NOT attempt to translate it or return it as is. Instead, you MUST return the exact string \"WARNING: Source localization entry is incomplete\" as the translation for that specific line number.\n\n"
             "🚨 CRITICAL QUOTE RULE: DO NOT add extra quotes around your translations!\n"
             "The game engine will handle quote formatting automatically. Adding quotes will break the display!\n"
             "EXAMPLE: If input is 'software', output should be '软件', NOT '\"软件\"'!\n\n"
@@ -554,6 +559,7 @@ FALLBACK_FORMAT_PROMPT = (
     "{chunk_size}. "
     "Each item in your list MUST be the translation of the corresponding item in the input list.\n"
     "DO NOT merge, add, or omit lines. DO NOT add any explanations.\n\n"
+    "CRITICAL DATA HYGIENE RULE: Your task is to translate meaningful text. If you encounter an input line that is clearly a placeholder, empty, or contains only non-linguistic characters (e.g., only spaces, \"...\", \"???\", \"tbd\", \"todo\", \"wip\"), you MUST NOT attempt to translate it or return it as is. Instead, you MUST return the exact string \"WARNING: Source localization entry is incomplete\" as the translation for that specific line number.\n\n"
     "🚨 CRITICAL QUOTE RULE: DO NOT add extra quotes around your translations!\n"
     "The game engine will handle quote formatting automatically. Adding quotes will break the display!\n"
     "EXAMPLE: If input is 'software', output should be '软件', NOT '\"软件\"'!\n\n"
