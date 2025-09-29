@@ -71,12 +71,30 @@ class GeminiCLIHandler:
                     f"Set-ExecutionPolicy RemoteSigned -Scope Process -Force; {self.cli_path} (Get-Content '{temp_file}' -Raw) --model gemini-2.5-flash --output-format json"
                 ]
                 
+                # 【核心修复】强制清空环境变量，只保留必要的系统变量
+                clean_env = {
+                    'PATH': os.environ.get('PATH', ''),
+                    'SYSTEMROOT': os.environ.get('SYSTEMROOT', ''),
+                    'TEMP': os.environ.get('TEMP', ''),
+                    'TMP': os.environ.get('TMP', ''),
+                    'USERPROFILE': os.environ.get('USERPROFILE', ''),
+                    'APPDATA': os.environ.get('APPDATA', ''),
+                    'LOCALAPPDATA': os.environ.get('LOCALAPPDATA', ''),
+                    'PROGRAMDATA': os.environ.get('PROGRAMDATA', ''),
+                    'WINDIR': os.environ.get('WINDIR', ''),
+                    'COMSPEC': os.environ.get('COMSPEC', ''),
+                    'PATHEXT': os.environ.get('PATHEXT', ''),
+                    'PSModulePath': os.environ.get('PSModulePath', ''),
+                    'GEMINI_API_KEY': os.environ.get('GEMINI_API_KEY', ''),  # 保留API密钥
+                }
+                
                 result = subprocess.run(
                     cmd,
                     capture_output=True,
                     text=True,
                     timeout=300,  # 5分钟超时，适应Gemini 2.5 Pro的慢速处理
-                    encoding='utf-8'
+                    encoding='utf-8',
+                    env=clean_env  # 【关键修复】使用清理后的环境变量
                 )
             finally:
                 # 清理临时文件
@@ -150,12 +168,30 @@ class GeminiCLIHandler:
                     f"Set-ExecutionPolicy RemoteSigned -Scope Process -Force; {self.cli_path} (Get-Content '{temp_file}' -Raw) --model gemini-2.5-pro --output-format json"
                 ]
                 
+                # 【核心修复】强制清空环境变量，只保留必要的系统变量
+                clean_env = {
+                    'PATH': os.environ.get('PATH', ''),
+                    'SYSTEMROOT': os.environ.get('SYSTEMROOT', ''),
+                    'TEMP': os.environ.get('TEMP', ''),
+                    'TMP': os.environ.get('TMP', ''),
+                    'USERPROFILE': os.environ.get('USERPROFILE', ''),
+                    'APPDATA': os.environ.get('APPDATA', ''),
+                    'LOCALAPPDATA': os.environ.get('LOCALAPPDATA', ''),
+                    'PROGRAMDATA': os.environ.get('PROGRAMDATA', ''),
+                    'WINDIR': os.environ.get('WINDIR', ''),
+                    'COMSPEC': os.environ.get('COMSPEC', ''),
+                    'PATHEXT': os.environ.get('PATHEXT', ''),
+                    'PSModulePath': os.environ.get('PSModulePath', ''),
+                    'GEMINI_API_KEY': os.environ.get('GEMINI_API_KEY', ''),  # 保留API密钥
+                }
+                
                 result = subprocess.run(
                     cmd,
                     capture_output=True,
                     text=True,
                     timeout=300,  # 5分钟超时，适应Gemini 2.5 Pro的慢速处理
-                    encoding='utf-8'
+                    encoding='utf-8',
+                    env=clean_env  # 【关键修复】使用清理后的环境变量
                 )
             finally:
                 # 清理临时文件
@@ -181,6 +217,74 @@ class GeminiCLIHandler:
                 # 
                 # logger.info(f"CLI批量翻译原始输出已保存到: {debug_file}")
                 # logger.info(f"CLI原始输出长度: {len(result.stdout)} 字符")
+                
+                # 【智能调试】如果解析失败，自动保存调试文件
+                if len(result.stdout) > 0:
+                    # 先尝试解析，如果失败则保存调试文件
+                    try:
+                        response_data = json.loads(result.stdout)
+                        if 'response' in response_data:
+                            response_text = response_data['response'].strip()
+                            lines = response_text.split('\n')
+                            numbered_lines = [line for line in lines if re.match(r'^\d+\.\s*', line.strip())]
+                            if len(numbered_lines) != expected_count:
+                                # 解析不完整，自动保存调试文件
+                                debug_file = f"debug_batch_parse_failure_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
+                                with open(debug_file, 'w', encoding='utf-8') as f:
+                                    f.write("=== 批量翻译解析失败调试信息 ===\n")
+                                    f.write(f"期望数量: {expected_count}\n")
+                                    f.write(f"实际编号行数: {len(numbered_lines)}\n")
+                                    f.write(f"原始响应长度: {len(result.stdout)} 字符\n")
+                                    f.write(f"时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+                                    f.write("=" * 80 + "\n")
+                                    
+                                    # 添加原始输入内容（如果可用）
+                                    f.write("原始输入内容:\n")
+                                    f.write("-" * 40 + "\n")
+                                    # 这里我们需要从调用上下文获取原始输入
+                                    # 暂时先记录响应，后续可以改进
+                                    
+                                    f.write("原始JSON响应:\n")
+                                    f.write("-" * 40 + "\n")
+                                    f.write(result.stdout)
+                                    f.write("\n" + "=" * 80 + "\n")
+                                    
+                                    f.write("解析后的响应文本:\n")
+                                    f.write("-" * 40 + "\n")
+                                    f.write(response_text)
+                                    f.write("\n" + "=" * 80 + "\n")
+                                    
+                                    f.write("所有编号行分析:\n")
+                                    f.write("-" * 40 + "\n")
+                                    for i, line in enumerate(numbered_lines, 1):
+                                        f.write(f"{i:3d}. {line}\n")
+                                    
+                                    f.write("\n" + "=" * 80 + "\n")
+                                    f.write("问题行对比分析:\n")
+                                    f.write("-" * 40 + "\n")
+                                    f.write("格式: [行号] 响应内容 -> 问题类型\n")
+                                    
+                                    # 分析每个编号行的问题
+                                    for line in numbered_lines:
+                                        line = line.strip()
+                                        if re.match(r'^\d+\.\s*', line):
+                                            number = int(re.match(r'^(\d+)\.\s*', line).group(1))
+                                            content = re.sub(r'^\d+\.\s*', '', line).strip()
+                                            content = content.strip('"\'')
+                                            
+                                            if not content:
+                                                f.write(f"[{number:3d}] '{line}' -> 空内容\n")
+                                            elif len(content) < 2:
+                                                f.write(f"[{number:3d}] '{line}' -> 内容过短\n")
+                                            elif content in ['?????', '???', '...', 'N/A', 'null', 'NULL', 'None', 'WARNING: Source localization entry is incomplete']:
+                                                f.write(f"[{number:3d}] '{line}' -> 无效占位符\n")
+                                            else:
+                                                f.write(f"[{number:3d}] '{line}' -> 正常内容\n")
+                                
+                                logger.info(f"🔍 解析失败调试文件已保存: {debug_file}")
+                                logger.info(f"📁 请查看调试文件以对比原始输入和Gemini响应")
+                    except:
+                        pass  # 如果解析失败，忽略调试文件生成
                 
                 translated_texts = self._parse_batch_response(result.stdout, expected_count)
                 
@@ -304,7 +408,68 @@ class GeminiCLIHandler:
                     # logger.info("批量翻译解析完整")  # 已注释，减少日志噪音
                     return translations
                 elif len(translations) > 0:
+                    # 【升级报错信息】显示具体哪一行出现问题
+                    missing_count = expected_count - len(translations)
                     logger.warning(f"批量翻译解析不完整，期望{expected_count}个，实际得到{len(translations)}个")
+                    
+                    # 分析缺失的行号
+                    found_numbers = []
+                    for i, line in enumerate(lines):
+                        line = line.strip()
+                        if re.match(r'^\d+\.\s*', line):
+                            number = int(re.match(r'^(\d+)\.\s*', line).group(1))
+                            found_numbers.append(number)
+                    
+                    if found_numbers:
+                        found_numbers.sort()
+                        expected_numbers = list(range(1, expected_count + 1))
+                        missing_numbers = [num for num in expected_numbers if num not in found_numbers]
+                        
+                        if missing_numbers:
+                            logger.warning(f"缺失的翻译行号: {missing_numbers}")
+                            logger.warning(f"找到的翻译行号: {found_numbers}")
+                        else:
+                            logger.warning("🚨 批量翻译解析问题：行号完整但内容解析失败")
+                            
+                            # 【重新设计】更直观的问题诊断
+                            empty_lines = []
+                            invalid_lines = []
+                            short_lines = []
+                            
+                            for i, line in enumerate(lines):
+                                line = line.strip()
+                                if re.match(r'^\d+\.\s*', line):
+                                    number = int(re.match(r'^(\d+)\.\s*', line).group(1))
+                                    translation = re.sub(r'^\d+\.\s*', '', line).strip()
+                                    translation = translation.strip('"\'')
+                                    
+                                    if not translation:
+                                        empty_lines.append(number)
+                                    elif len(translation) < 2:
+                                        short_lines.append((number, translation))
+                                    elif translation in ['?????', '???', '...', 'N/A', 'null', 'NULL', 'None', 'WARNING: Source localization entry is incomplete']:
+                                        invalid_lines.append((number, translation))
+                            
+                            # 输出分类的问题报告
+                            if empty_lines:
+                                logger.warning(f"❌ 空内容行: {empty_lines} (Gemini返回了编号但没有翻译内容)")
+                            
+                            if invalid_lines:
+                                logger.warning(f"⚠️  无效内容行: {invalid_lines} (Gemini返回了占位符而非真实翻译)")
+                            
+                            if short_lines:
+                                logger.warning(f"📝 内容过短行: {short_lines} (翻译内容少于2个字符)")
+                            
+                            # 提供解决建议
+                            total_problems = len(empty_lines) + len(invalid_lines) + len(short_lines)
+                            if total_problems > 0:
+                                logger.warning(f"💡 建议: 这{total_problems}个问题行将被填充为空字符串，翻译将继续进行")
+                                logger.warning(f"💡 如需查看原始响应，可临时启用调试日志")
+                                
+                                # 【问题定位】尝试找出导致问题的具体行
+                                logger.warning("🔍 开始问题定位分析...")
+                                self._analyze_problematic_content(lines, empty_lines, invalid_lines, short_lines)
+                    
                     # 用原文填充缺失的翻译
                     while len(translations) < expected_count:
                         translations.append("")  # 或者使用原文
@@ -336,6 +501,79 @@ class GeminiCLIHandler:
                 return translations[:expected_count]
             else:
                 raise Exception("无法解析CLI响应")
+
+    def _analyze_problematic_content(self, lines, empty_lines, invalid_lines, short_lines):
+        """分析问题内容，尝试找出导致翻译失败的具体原因"""
+        try:
+            # 收集所有问题行号
+            all_problem_lines = set(empty_lines)
+            all_problem_lines.update([line_num for line_num, _ in invalid_lines])
+            all_problem_lines.update([line_num for line_num, _ in short_lines])
+            
+            if not all_problem_lines:
+                return
+            
+            logger.warning(f"🎯 分析 {len(all_problem_lines)} 个问题行...")
+            
+            # 分析问题行的特征
+            suspicious_patterns = []
+            for line_num in sorted(all_problem_lines):
+                # 找到对应的原始输入行（需要从调用上下文获取）
+                # 这里我们只能分析响应中的问题
+                for i, line in enumerate(lines):
+                    line = line.strip()
+                    if re.match(r'^\d+\.\s*', line):
+                        number = int(re.match(r'^(\d+)\.\s*', line).group(1))
+                        if number == line_num:
+                            content = re.sub(r'^\d+\.\s*', '', line).strip()
+                            content = content.strip('"\'')
+                            
+                            # 分析问题特征
+                            if line_num in empty_lines:
+                                suspicious_patterns.append(f"行{line_num}: 完全空内容")
+                            elif line_num in [ln for ln, _ in invalid_lines]:
+                                invalid_content = next(content for ln, content in invalid_lines if ln == line_num)
+                                if invalid_content == 'WARNING: Source localization entry is incomplete':
+                                    suspicious_patterns.append(f"行{line_num}: 源文件不完整 (作者未完成该行翻译)")
+                                else:
+                                    suspicious_patterns.append(f"行{line_num}: 无效占位符 '{invalid_content}'")
+                            elif line_num in [ln for ln, _ in short_lines]:
+                                short_content = next(content for ln, content in short_lines if ln == line_num)
+                                suspicious_patterns.append(f"行{line_num}: 内容过短 '{short_content}'")
+                            break
+            
+            # 输出分析结果
+            if suspicious_patterns:
+                logger.warning("📋 问题行详细分析:")
+                for pattern in suspicious_patterns[:10]:  # 只显示前10个
+                    logger.warning(f"   {pattern}")
+                if len(suspicious_patterns) > 10:
+                    logger.warning(f"   ... 还有 {len(suspicious_patterns) - 10} 个问题行")
+            
+            # 提供针对性建议
+            logger.warning("💡 针对性建议:")
+            if empty_lines:
+                logger.warning(f"   - {len(empty_lines)}个空内容行: 可能是Gemini遇到无法翻译的特殊内容")
+            
+            # 分别统计不同类型的无效内容
+            warning_lines = [ln for ln, content in invalid_lines if content == 'WARNING: Source localization entry is incomplete']
+            other_invalid_lines = [ln for ln, content in invalid_lines if content != 'WARNING: Source localization entry is incomplete']
+            
+            if warning_lines:
+                logger.warning(f"   - {len(warning_lines)}个源文件不完整行: 作者未完成这些行的翻译，Gemini正确识别并标记")
+            if other_invalid_lines:
+                logger.warning(f"   - {len(other_invalid_lines)}个无效内容行: Gemini返回了占位符，建议检查原始内容")
+            if short_lines:
+                logger.warning(f"   - {len(short_lines)}个过短内容行: 可能是单字符或特殊符号")
+            
+            logger.warning("🔧 建议解决方案:")
+            logger.warning("   1. 查看自动生成的调试文件，对比原始输入和Gemini响应")
+            logger.warning("   2. 检查问题行对应的原始文本内容")
+            logger.warning("   3. 考虑调整prompt或分批处理策略")
+            logger.warning("   4. 如果问题持续，可以尝试单独翻译问题行")
+            
+        except Exception as e:
+            logger.warning(f"问题分析失败: {e}")
 
     def get_usage_stats(self):
         """获取使用统计"""
