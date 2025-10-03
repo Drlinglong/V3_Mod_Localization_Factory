@@ -1,4 +1,3 @@
-# scripts/core/gemini_handler.py
 import os
 import logging
 from typing import Any

@@ -14,3 +14,9 @@ google-genai>=1.41.0
 # These are used for testing and development
 pytest
 pytest-mock
+python-dotenv
+requests
+colorama
+fastapi
+uvicorn[standard]
+python-multipart

@@ -190,7 +190,10 @@ def create_output_structure(mod_name: str, output_folder_name: str, game_profile
         
         # 创建主输出目录
         main_output_dir = os.path.join(DEST_DIR, output_folder_name)
+        logging.info(f"DEBUG: Attempting to create directory: {main_output_dir}")
+        logging.info(f"DEBUG: DEST_DIR is: {DEST_DIR}")
         os.makedirs(main_output_dir, exist_ok=True)
+        logging.info(f"DEBUG: Directory exists after creation? {os.path.exists(main_output_dir)}")
         
         # 根据游戏配置创建必要的子目录
         source_loc_folder = game_profile.get("source_localization_folder", "localization")
@@ -202,4 +205,4 @@ def create_output_structure(mod_name: str, output_folder_name: str, game_profile
         
     except Exception as e:
         logging.error(i18n.t("output_structure_creation_failed", error=e))
-        return False
+        raise
