@@ -15,3 +15,9 @@ pytest-mock
 # Refactoring Dependencies
 pydantic
 json-repair
+python-dotenv
+requests
+colorama
+fastapi
+uvicorn[standard]
+python-multipart
