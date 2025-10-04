@@ -72,6 +72,7 @@ class GeminiCLIHandler:
                 ]
                 
                 # 【核心修复】强制清空环境变量，只保留必要的系统变量
+                # 明确设置GEMINI_API_KEY为空，强制gemini CLI使用OAuth认证而不是API key
                 clean_env = {
                     'PATH': os.environ.get('PATH', ''),
                     'SYSTEMROOT': os.environ.get('SYSTEMROOT', ''),
@@ -85,7 +86,7 @@ class GeminiCLIHandler:
                     'COMSPEC': os.environ.get('COMSPEC', ''),
                     'PATHEXT': os.environ.get('PATHEXT', ''),
                     'PSModulePath': os.environ.get('PSModulePath', ''),
-                    'GEMINI_API_KEY': os.environ.get('GEMINI_API_KEY', ''),  # 保留API密钥
+                    'GEMINI_API_KEY': '',  # 明确设置为空，强制使用OAuth认证
                 }
                 
                 result = subprocess.run(
@@ -161,7 +162,7 @@ class GeminiCLIHandler:
                 temp_file = f.name
             
             try:
-                # 调用Gemini CLI - 使用headless模式和PowerShell执行策略
+                # 调用Gemini CLI - 使用快速模式和PowerShell执行策略
                 # 使用位置参数传递prompt，确保每次调用都是无状态的
                 cmd = [
                     "powershell", "-Command", 
@@ -169,6 +170,7 @@ class GeminiCLIHandler:
                 ]
                 
                 # 【核心修复】强制清空环境变量，只保留必要的系统变量
+                # 明确设置GEMINI_API_KEY为空，强制gemini CLI使用OAuth认证而不是API key
                 clean_env = {
                     'PATH': os.environ.get('PATH', ''),
                     'SYSTEMROOT': os.environ.get('SYSTEMROOT', ''),
@@ -182,7 +184,7 @@ class GeminiCLIHandler:
                     'COMSPEC': os.environ.get('COMSPEC', ''),
                     'PATHEXT': os.environ.get('PATHEXT', ''),
                     'PSModulePath': os.environ.get('PSModulePath', ''),
-                    'GEMINI_API_KEY': os.environ.get('GEMINI_API_KEY', ''),  # 保留API密钥
+                    'GEMINI_API_KEY': '',  # 明确设置为空，强制使用OAuth认证
                 }
                 
                 result = subprocess.run(

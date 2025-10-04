@@ -39,7 +39,4 @@ echo ========================================
 
 :end
 echo.
-echo ===================================================
-echo Program execution completed. You can close this window.
-echo ===================================================
 pause
