@@ -28,3 +28,12 @@ output/
 # Do NOT ignore the folder
 !/source_mod/.gitkeep
 !/my_translation/.gitkeep
+
+# Node / React Frontend Dependencies
+/ui/frontend/node_modules/
+/ui/frontend/build/
+/ui/frontend/dist/
+.env
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
