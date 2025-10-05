@@ -53,6 +53,8 @@ def preflight_checks():
     Returns:
         bool: 检查是否通过
     """
+    print(i18n.t("preflight_checking_environment"))
+    
     checks_passed = True
     error_messages = []
     
@@ -151,6 +153,9 @@ def select_api_provider():
         if key == "qwen":
             # 为Qwen添加特殊提示
             logging.info(f"  [{i + 1}] {key.capitalize()} - {i18n.t('qwen_china_hint')}")
+        elif key == "deepseek":
+            # 为Deepseek添加特殊提示
+            logging.info(f"  [{i + 1}] {key.capitalize()} - {i18n.t('deepseek_china_hint')}")
         else:
             logging.info(f"  [{i + 1}] {key.capitalize()}")
     
@@ -480,9 +485,8 @@ def main():
     i18n.load_language(interface_lang)
     
     # 执行开机自检
-    if not preflight_checks():
-        print("\n程序无法继续运行，请解决上述问题后重试。")
-        return
+    preflight_checks()
+    # 注意：自检失败不再阻止程序继续运行，让用户自行决定
     
     # 选择游戏配置
     game_profile = select_game_profile()
