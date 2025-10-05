@@ -65,10 +65,10 @@ class GeminiCLIHandler:
             
             try:
                 # 调用Gemini CLI - 使用headless模式和PowerShell执行策略
-                # 使用位置参数传递prompt，确保每次调用都是无状态的
+                # 使用管道将prompt内容传递给stdin，避免参数注入
                 cmd = [
                     "powershell", "-Command", 
-                    f"Set-ExecutionPolicy RemoteSigned -Scope Process -Force; {self.cli_path} (Get-Content '{temp_file}' -Raw) --model gemini-2.5-flash --output-format json"
+                    f"Set-ExecutionPolicy RemoteSigned -Scope Process -Force; Get-Content '{temp_file}' -Raw | {self.cli_path} --model gemini-2.5-pro --output-format json"
                 ]
                 
                 # 【核心修复】强制清空环境变量，只保留必要的系统变量
@@ -163,10 +163,10 @@ class GeminiCLIHandler:
             
             try:
                 # 调用Gemini CLI - 使用快速模式和PowerShell执行策略
-                # 使用位置参数传递prompt，确保每次调用都是无状态的
+                # 使用管道将prompt内容传递给stdin，避免参数注入
                 cmd = [
                     "powershell", "-Command", 
-                    f"Set-ExecutionPolicy RemoteSigned -Scope Process -Force; {self.cli_path} (Get-Content '{temp_file}' -Raw) --model gemini-2.5-pro --output-format json"
+                    f"Set-ExecutionPolicy RemoteSigned -Scope Process -Force; Get-Content '{temp_file}' -Raw | {self.cli_path} --model gemini-2.5-pro --output-format json"
                 ]
                 
                 # 【核心修复】强制清空环境变量，只保留必要的系统变量
@@ -329,7 +329,20 @@ class GeminiCLIHandler:
                 models_stats = response_data['stats']['models']
                 for model_name, model_stats in models_stats.items():
                     if 'tokens' in model_stats and model_stats['tokens'].get('candidates', 0) == 0:
-                        raise Exception(f"Gemini模型 {model_name} 没有生成任何候选响应 (candidates: 0)，可能是prompt过长或内容不当")
+                        # 【增强调试】如果因为安全设置等原因被阻止，提供更详细的错误
+                        finish_reason = response_data.get('finishReason', '未知')
+                        error_message = f"Gemini模型 {model_name} 没有生成任何候选响应 (candidates: 0)。"
+                        error_message += f" 终止原因: {finish_reason}。"
+                        
+                        if finish_reason == 'SAFETY':
+                            safety_ratings = response_data.get('safetyRatings', [])
+                            error_message += f" 安全评级: {safety_ratings}。"
+                            logger.error("🚨 Gemini API因安全设置拒绝响应。请检查输入文本中是否包含敏感词汇。")
+                        
+                        error_message += " 这可能是因为prompt过长或内容触发了安全限制。"
+                        
+                        logger.error(error_message)
+                        raise Exception(error_message)
             
             # 提取响应内容
             if 'response' in response_data:
@@ -375,8 +388,20 @@ class GeminiCLIHandler:
                 models_stats = response_data['stats']['models']
                 for model_name, model_stats in models_stats.items():
                     if 'tokens' in model_stats and model_stats['tokens'].get('candidates', 0) == 0:
-                        logger.error(f"Gemini模型 {model_name} 没有生成任何候选响应 (candidates: 0)")
-                        raise Exception(f"Gemini模型 {model_name} 没有生成任何候选响应 (candidates: 0)，可能是prompt过长或内容不当")
+                        # 【增强调试】如果因为安全设置等原因被阻止，提供更详细的错误
+                        finish_reason = response_data.get('finishReason', '未知')
+                        error_message = f"Gemini模型 {model_name} 没有生成任何候选响应 (candidates: 0)。"
+                        error_message += f" 终止原因: {finish_reason}。"
+                        
+                        if finish_reason == 'SAFETY':
+                            safety_ratings = response_data.get('safetyRatings', [])
+                            error_message += f" 安全评级: {safety_ratings}。"
+                            logger.error("🚨 Gemini API因安全设置拒绝响应。请检查输入文本中是否包含敏感词汇。")
+                        
+                        error_message += " 这可能是因为prompt过长或内容触发了安全限制。"
+                        
+                        logger.error(error_message)
+                        raise Exception(error_message)
             
             # 提取响应内容
             if 'response' in response_data:
