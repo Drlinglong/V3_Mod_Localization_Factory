@@ -82,7 +82,24 @@ API_PROVIDERS = {
         "region": "beijing",  # 华北2（北京）地域
         "enable_thinking": False,      # 禁用思考功能，节约成本
     },
-    # 未来可以在这里增加 deepseek 等
+    "grok": {
+        "api_key_env": "XAI_API_KEY",
+        "base_url": "https://api.x.ai/v1",
+        "default_model": "grok-4",
+        "description": "通过xAI官方API访问Grok-4模型"
+    },
+    "deepseek": {
+        "api_key_env": "DEEPSEEK_API_KEY",
+        "base_url": "https://api.deepseek.com",
+        "default_model": "deepseek-chat",  # Non-thinking Mode
+        "description": "DeepSeek-V3.2-Exp (Non-thinking Mode) - 与OpenAI API兼容"
+    },
+    "ollama": {
+        "base_url_env": "OLLAMA_BASE_URL",
+        "default_model": "llama3.2",
+        "description": "本地Ollama模型，无需API密钥"
+    },
+    # 未来可以在这里增加更多提供商
 }
 
 # --- 语言数据库 --------------------------------------------------
