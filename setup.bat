@@ -1,52 +1,47 @@
-@echo off
-rem Smart Setup Installer - Universal Configuration Guide
+﻿@echo off
+rem This batch file starts the smart setup installer for Project Remis.
+rem It checks for a valid Python installation before executing the script.
+
 chcp 65001 >nul
-title Paradox Mod Localization Factory - Setup Installer
+title Project Remis - Setup
 
+echo =================================================================
 echo.
-echo ========================================
-echo    🚀 Paradox Mod Localization Factory
-echo    🚀 蕾姆丝计划 - 安装配置引导器
-echo ========================================
+echo                  Project Remis - 安装配置引导器
+echo.
+echo =================================================================
 echo.
 
-rem Check if Python is available
+rem 检查Python环境是否存在
 python --version >nul 2>&1
 if errorlevel 1 (
-    echo ❌ Error: Python not found
-    echo ❌ 错误: 未找到Python
+    cls
+    echo ❌ 错误: 未在您的系统中找到Python。
     echo.
-    echo Please install Python 3.8 or higher first:
-    echo 请先安装Python 3.8或更高版本：
-    echo 1. Visit https://www.python.org/downloads/
-    echo 2. Download the latest Python version
-    echo 3. During installation, make sure to check "Add Python to PATH"
-    echo 4. After installation, run this file again
-    echo.
+    echo 请先安装Python 3.8或更高版本:
     echo 1. 访问 https://www.python.org/downloads/
-    echo 2. 下载最新版本Python
-    echo 3. 安装时请勾选"Add Python to PATH"
-    echo 4. 安装完成后重新运行此文件
+    echo 2. 下载并安装最新版本的Python
+    echo 3. [重要] 安装时，请务必勾选 "Add Python to PATH" 选项！
+    echo 4. 安装完成后，请重新运行本文件 (setup.bat)。
     echo.
     pause
     exit /b 1
 )
 
-echo ✅ Python environment detected successfully!
-echo ✅ Python环境检测成功！
+echo [✓] 已成功检测到Python环境！
 python --version
 echo.
 
-echo Starting smart setup installer...
-echo 启动智能安装配置引导器...
+echo 正在启动Python安装脚本 (scripts/utils/setup_installer.py)...
 echo.
 
-rem Run the Python setup installer
-python scripts\utils\setup_installer.py
+rem 运行Python安装脚本 (作为模块)
+python -m scripts.utils.setup_installer
 
 echo.
-echo ========================================
-echo Setup installer completed.
-echo 安装配置引导器运行完成。
-echo ========================================
+echo =================================================================
+echo 安装配置流程已结束。
+echo 如果您设置了新的环境变量，建议重启您的终端或电脑以确保生效。
+echo =================================================================
+echo.
 pause

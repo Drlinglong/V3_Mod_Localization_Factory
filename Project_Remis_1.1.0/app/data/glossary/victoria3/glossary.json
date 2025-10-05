@@ -1,0 +1,7865 @@
+{
+  "metadata": {
+    "description": "Vic3 游戏及Mod社区汉化词典",
+    "sources": [
+      "数据源自多个社区汉化项目，如Paratranz等"
+    ],
+    "last_updated": "2025-08-14T13:04:50.387300+10:00"
+  },
+  "entries": [
+    {
+      "translations": {
+        "en": "America",
+        "zh-CN": "美利坚"
+      },
+      "id": "victoria3_america",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "根据游戏原译文，统一为美利坚，请不要再出现美国"
+      }
+    },
+    {
+      "translations": {
+        "en": "Armed Forces",
+        "zh-CN": "军队"
+      },
+      "id": "victoria3_armed_forces",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "利益集团"
+      }
+    },
+    {
+      "translations": {
+        "en": "business owner",
+        "zh-CN": "企业家"
+      },
+      "id": "victoria3_business_owner",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "可以翻译成商人或者业主，但是考虑到本游戏处于资本主义兴起的年代，企业家这个翻译更具资本气息"
+      }
+    },
+    {
+      "translations": {
+        "en": "Charles",
+        "zh-CN": "查理"
+      },
+      "id": "victoria3_charles",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "不要翻译成查尔斯"
+      }
+    },
+    {
+      "translations": {
+        "en": "Dinásticos",
+        "zh-CN": "王朝的"
+      },
+      "id": "victoria3_dinásticos",
+      "metadata": {
+        "part_of_speech": "Adjective",
+        "remarks": "西班牙语"
+      }
+    },
+    {
+      "translations": {
+        "en": "Fine Art",
+        "zh-CN": "艺术品"
+      },
+      "id": "victoria3_fine_art",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Firm Hand",
+        "zh-CN": "强硬手段"
+      },
+      "id": "victoria3_firm_hand",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "France",
+        "zh-CN": "法兰西"
+      },
+      "id": "victoria3_france",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "根据原版译文统一规定，不要再法国了"
+      }
+    },
+    {
+      "translations": {
+        "en": "Free State",
+        "zh-CN": "自由州"
+      },
+      "id": "victoria3_free_state",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "自由州，即在林肯统治下的黑奴自由解放的州，存在时间 19世纪中叶。"
+      }
+    },
+    {
+      "translations": {
+        "en": "GDP",
+        "zh-CN": "GDP"
+      },
+      "id": "victoria3_gdp",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "不要翻译成国家生产总值，地区产值也会用到该词"
+      }
+    },
+    {
+      "translations": {
+        "en": "Intelligentsia",
+        "zh-CN": "知识分子"
+      },
+      "id": "victoria3_intelligentsia",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "利益集团"
+      }
+    },
+    {
+      "translations": {
+        "en": "leader",
+        "zh-CN": "领袖"
+      },
+      "id": "victoria3_leader",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "利益团体"
+      }
+    },
+    {
+      "translations": {
+        "en": "Maka'āinana",
+        "zh-CN": "玛卡艾纳纳"
+      },
+      "id": "victoria3_maka_āinana",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "玛卡艾纳纳，夏威夷语“公民”，表意为下等阶层，是一种蔑称"
+      }
+    },
+    {
+      "translations": {
+        "en": "NO",
+        "zh-CN": "不存在"
+      },
+      "id": "victoria3_no",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "仅限Triggers"
+      }
+    },
+    {
+      "translations": {
+        "en": "Obligation",
+        "zh-CN": "义务"
+      },
+      "id": "victoria3_obligation",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Overlord",
+        "zh-CN": "宗主国"
+      },
+      "id": "victoria3_overlord",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "positive relations",
+        "zh-CN": "友邦"
+      },
+      "id": "victoria3_positive_relations",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "pre level",
+        "zh-CN": "每集"
+      },
+      "id": "victoria3_pre_level",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "先按这样统一翻译，如果后续要修改也方便"
+      }
+    },
+    {
+      "translations": {
+        "en": "Ragged school",
+        "zh-CN": "平民学校"
+      },
+      "id": "victoria3_ragged_school",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "诞生于19世纪英国，主要在工薪阶层居住地区"
+      }
+    },
+    {
+      "translations": {
+        "en": "Rural Folk",
+        "zh-CN": "乡村民众"
+      },
+      "id": "victoria3_rural_folk",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "采用 P 社原版翻译"
+      }
+    },
+    {
+      "translations": {
+        "en": "Shi-gakkō",
+        "zh-CN": "私学校"
+      },
+      "id": "victoria3_shi_gakkō",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "西南战争前西乡隆盛在鹿儿岛开设的私人军校"
+      }
+    },
+    {
+      "translations": {
+        "en": "Texas",
+        "zh-CN": "得克萨斯"
+      },
+      "id": "victoria3_texas",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "统一译为得克萨斯"
+      }
+    },
+    {
+      "translations": {
+        "en": "TODO",
+        "zh-CN": "待完成"
+      },
+      "id": "victoria3_todo",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "待办，TODO均可\n---\n[来源合并备注]:\n作者还没写"
+      }
+    },
+    {
+      "translations": {
+        "en": "Trade Union",
+        "zh-CN": "工会"
+      },
+      "id": "victoria3_trade_union",
+      "metadata": {
+        "part_of_speech": "Noun"
+      },
+      "variants": {
+        "en": [
+          "Trade Unions"
+        ]
+      }
+    },
+    {
+      "translations": {
+        "en": "Academic Progress",
+        "zh-CN": "学术发展点"
+      },
+      "id": "victoria3_academic_progress",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Aconcagua",
+        "zh-CN": "阿空加瓜山"
+      },
+      "id": "victoria3_aconcagua",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "advanced rifles",
+        "zh-CN": "新式火枪"
+      },
+      "id": "victoria3_advanced_rifles",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Aegean",
+        "zh-CN": "爱琴海"
+      },
+      "id": "victoria3_aegean",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Aeronautical Engineer",
+        "zh-CN": "航空工程师"
+      },
+      "id": "victoria3_aeronautical_engineer",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Aeronautical Engineering",
+        "zh-CN": "航空工程"
+      },
+      "id": "victoria3_aeronautical_engineering",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Aeronautics",
+        "zh-CN": "航空学"
+      },
+      "id": "victoria3_aeronautics",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Africa Safari",
+        "zh-CN": "非洲狩猎探险"
+      },
+      "id": "victoria3_africa_safari",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "African",
+        "zh-CN": "非洲"
+      },
+      "id": "victoria3_african",
+      "metadata": {
+        "part_of_speech": "Noun"
+      },
+      "variants": {
+        "en": [
+          "Africa"
+        ]
+      }
+    },
+    {
+      "translations": {
+        "en": "African Penguin",
+        "zh-CN": "黑脚企鹅"
+      },
+      "id": "victoria3_african_penguin",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Afrikaner",
+        "zh-CN": "阿非利卡"
+      },
+      "id": "victoria3_afrikaner",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "AIACR",
+        "zh-CN": "国际公认汽车俱乐部协会"
+      },
+      "id": "victoria3_aiacr",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Aiguille Verte",
+        "zh-CN": "艾吉耶维尔特山"
+      },
+      "id": "victoria3_aiguille_verte",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Aircraft Parade",
+        "zh-CN": "飞行表演"
+      },
+      "id": "victoria3_aircraft_parade",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Alcoholic",
+        "zh-CN": "酗酒"
+      },
+      "id": "victoria3_alcoholic",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "特质"
+      }
+    },
+    {
+      "translations": {
+        "en": "Alligator",
+        "zh-CN": "短吻鳄"
+      },
+      "id": "victoria3_alligator",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Alpine Club",
+        "zh-CN": "高山俱乐部"
+      },
+      "id": "victoria3_alpine_club",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Alpine ibex",
+        "zh-CN": "阿尔卑斯羱羊"
+      },
+      "id": "victoria3_alpine_ibex",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "一种野生山羊，生活在阿尔卑斯山雪顶上的岩石间"
+      }
+    },
+    {
+      "translations": {
+        "en": "Alta California",
+        "zh-CN": "上加利福尼亚"
+      },
+      "id": "victoria3_alta_california",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "https://en.wikipedia.org/wiki/Alta_California"
+      }
+    },
+    {
+      "translations": {
+        "en": "Amalthea",
+        "zh-CN": "木卫五"
+      },
+      "id": "victoria3_amalthea",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Bison",
+        "zh-CN": "美洲野牛"
+      },
+      "id": "victoria3_bison",
+      "metadata": {
+        "part_of_speech": "Noun"
+      },
+      "variants": {
+        "en": [
+          "American Bison"
+        ]
+      }
+    },
+    {
+      "translations": {
+        "en": "Ammonite",
+        "zh-CN": "菊石"
+      },
+      "id": "victoria3_ammonite",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Andean condor",
+        "zh-CN": "安第斯神鹫"
+      },
+      "id": "victoria3_andean_condor",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Animal Tracking",
+        "zh-CN": "追踪进度"
+      },
+      "id": "victoria3_animal_tracking",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Animal Trapping",
+        "zh-CN": "诱捕进度"
+      },
+      "id": "victoria3_animal_trapping",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Ankylosaurus",
+        "zh-CN": "甲龙"
+      },
+      "id": "victoria3_ankylosaurus",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Antarctosaurus",
+        "zh-CN": "南极龙"
+      },
+      "id": "victoria3_antarctosaurus",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Anthrax",
+        "zh-CN": "炭疽"
+      },
+      "id": "victoria3_anthrax",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Anthropologist",
+        "zh-CN": "人类学家"
+      },
+      "id": "victoria3_anthropologist",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Anthropology",
+        "zh-CN": "人类学"
+      },
+      "id": "victoria3_anthropology",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Antibiotics",
+        "zh-CN": "抗生素"
+      },
+      "id": "victoria3_antibiotics",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Antiquarianism",
+        "zh-CN": "古董主义"
+      },
+      "id": "victoria3_antiquarianism",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Aranzueque",
+        "zh-CN": "阿兰胡埃斯"
+      },
+      "id": "victoria3_aranzueque",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "马德里南部小镇，参考：https://zh.wikipedia.org/wiki/%E9%98%BF%E5%85%B0%E8%83%A1%E5%9F%83%E6%96%AF"
+      }
+    },
+    {
+      "translations": {
+        "en": "Archaeological Museum",
+        "zh-CN": "考古博物馆"
+      },
+      "id": "victoria3_archaeological_museum",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Archaeological Service",
+        "zh-CN": "考古局"
+      },
+      "id": "victoria3_archaeological_service",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Archaeologist",
+        "zh-CN": "考古学家"
+      },
+      "id": "victoria3_archaeologist",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Archaeopteryx",
+        "zh-CN": "始祖鸟"
+      },
+      "id": "victoria3_archaeopteryx",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Architect",
+        "zh-CN": "建筑师"
+      },
+      "id": "victoria3_architect",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Architectural Blueprint",
+        "zh-CN": "建筑蓝图"
+      },
+      "id": "victoria3_architectural_blueprint",
+      "metadata": {
+        "part_of_speech": "Noun"
+      },
+      "variants": {
+        "en": [
+          "Architectural Blueprints"
+        ]
+      }
+    },
+    {
+      "translations": {
+        "en": "Architectural Splendour",
+        "zh-CN": "建筑进步"
+      },
+      "id": "victoria3_architectural_splendour",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Arctic Terrain",
+        "zh-CN": "冻土地貌"
+      },
+      "id": "victoria3_arctic_terrain",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Arctosaurus",
+        "zh-CN": "北极龙"
+      },
+      "id": "victoria3_arctosaurus",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Argolis",
+        "zh-CN": "阿尔戈利斯"
+      },
+      "id": "victoria3_argolis",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Argyrosaurus",
+        "zh-CN": "银龙"
+      },
+      "id": "victoria3_argyrosaurus",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Ariel",
+        "zh-CN": "天卫一"
+      },
+      "id": "victoria3_ariel",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Armansperg",
+        "zh-CN": "阿尔芒斯佩格"
+      },
+      "id": "victoria3_armansperg",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Art Deco",
+        "zh-CN": "装饰艺术"
+      },
+      "id": "victoria3_art_deco",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Art Nouveau",
+        "zh-CN": "新艺术"
+      },
+      "id": "victoria3_art_nouveau",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Artistic Progress",
+        "zh-CN": "艺术发展点"
+      },
+      "id": "victoria3_artistic_progress",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Asian",
+        "zh-CN": "亚洲"
+      },
+      "id": "victoria3_asian",
+      "metadata": {
+        "part_of_speech": "Noun"
+      },
+      "variants": {
+        "en": [
+          "Asia"
+        ]
+      }
+    },
+    {
+      "translations": {
+        "en": "Asiatic Cheetah",
+        "zh-CN": "亚洲猎豹"
+      },
+      "id": "victoria3_asiatic_cheetah",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "aspe",
+        "zh-CN": "半圆形后殿"
+      },
+      "id": "victoria3_aspe",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Astronomer",
+        "zh-CN": "天文学家"
+      },
+      "id": "victoria3_astronomer",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Astronomical Object",
+        "zh-CN": "天体"
+      },
+      "id": "victoria3_astronomical_object",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Astronomical Prestige",
+        "zh-CN": "天文学威望"
+      },
+      "id": "victoria3_astronomical_prestige",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Athletes",
+        "zh-CN": "运动员"
+      },
+      "id": "victoria3_athletes",
+      "metadata": {
+        "part_of_speech": "Noun"
+      },
+      "variants": {
+        "en": [
+          "Athlete"
+        ]
+      }
+    },
+    {
+      "translations": {
+        "en": "Atlantis",
+        "zh-CN": "亚特兰蒂斯"
+      },
+      "id": "victoria3_atlantis",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Australia & New Zealand Flavour Pack mod",
+        "zh-CN": "澳大利亚&新西兰风味包"
+      },
+      "id": "victoria3_australia_new_zealand_flavour_pack_mod",
+      "metadata": {
+        "part_of_speech": "Noun"
+      },
+      "variants": {
+        "en": [
+          "Australia & New Zealand Flavour Pack",
+          "Australia & New Zealand Flavour mod"
+        ]
+      }
+    },
+    {
+      "translations": {
+        "en": "Australian",
+        "zh-CN": "澳大利亚"
+      },
+      "id": "victoria3_australian",
+      "metadata": {
+        "part_of_speech": "Noun"
+      },
+      "variants": {
+        "en": [
+          "Australia"
+        ]
+      }
+    },
+    {
+      "translations": {
+        "en": "Australian Agricultural Company",
+        "zh-CN": "澳大利亚农业公司"
+      },
+      "id": "victoria3_australian_agricultural_company",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "一家澳大利亚上市公司，在昆士兰和北领地经营的饲养场和农场，于1824年11月1日根据皇家宪章成立"
+      }
+    },
+    {
+      "translations": {
+        "en": "Australopithecus",
+        "zh-CN": "南方古猿"
+      },
+      "id": "victoria3_australopithecus",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Automobile Club",
+        "zh-CN": "汽车俱乐部"
+      },
+      "id": "victoria3_automobile_club",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Avantgarde Intelligentsia",
+        "zh-CN": "前沿知识"
+      },
+      "id": "victoria3_avantgarde_intelligentsia",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Axolotl",
+        "zh-CN": "墨西哥钝口螈"
+      },
+      "id": "victoria3_axolotl",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Bald Eagle",
+        "zh-CN": "白头海雕"
+      },
+      "id": "victoria3_bald_eagle",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Balloonist",
+        "zh-CN": "气球飞行家"
+      },
+      "id": "victoria3_balloonist",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Baltoscandia",
+        "zh-CN": "波托斯坎迪亚"
+      },
+      "id": "victoria3_baltoscandia",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "一种北欧联盟的提议"
+      }
+    },
+    {
+      "translations": {
+        "en": "bande desinée",
+        "zh-CN": "连环画"
+      },
+      "id": "victoria3_bande_desinée",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "<法> 连环画、漫画"
+      }
+    },
+    {
+      "translations": {
+        "en": "Baseball League",
+        "zh-CN": "棒球联赛"
+      },
+      "id": "victoria3_baseball_league",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Basra",
+        "zh-CN": "巴士拉"
+      },
+      "id": "victoria3_basra",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Bastion Forts",
+        "zh-CN": "星形要塞"
+      },
+      "id": "victoria3_bastion_forts",
+      "metadata": {
+        "part_of_speech": "Noun"
+      },
+      "variants": {
+        "en": [
+          "Bastion Fort"
+        ]
+      }
+    },
+    {
+      "translations": {
+        "en": "Bath",
+        "zh-CN": "泰铢"
+      },
+      "id": "victoria3_bath",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Batian",
+        "zh-CN": "巴蒂安峰"
+      },
+      "id": "victoria3_batian",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Behistun",
+        "zh-CN": "贝希斯敦铭文"
+      },
+      "id": "victoria3_behistun",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "贝希斯敦铭文是一个位于伊朗克尔曼沙汗省贝希斯敦山上的多语言铭文。由阿契美尼德帝国（又称波斯第一帝国）国王大流士一世在位时所立，铭记他镇压高墨达政变和各地人民起义以及他取得王位的经过。"
+      }
+    },
+    {
+      "translations": {
+        "en": "Béla Bartók",
+        "zh-CN": "巴托克·贝拉"
+      },
+      "id": "victoria3_béla_bartók",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "匈牙利人，因而姓在名前"
+      }
+    },
+    {
+      "translations": {
+        "en": "Bengal Tiger",
+        "zh-CN": "孟加拉虎"
+      },
+      "id": "victoria3_bengal_tiger",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Bestseller",
+        "zh-CN": "畅销书"
+      },
+      "id": "victoria3_bestseller",
+      "metadata": {
+        "part_of_speech": "Noun"
+      },
+      "variants": {
+        "en": [
+          "Bestsellers"
+        ]
+      }
+    },
+    {
+      "translations": {
+        "en": "Bildungsroman",
+        "zh-CN": "成长小说"
+      },
+      "id": "victoria3_bildungsroman",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "<德> 一种文学体裁，会详细描写主人公成长过程"
+      }
+    },
+    {
+      "translations": {
+        "en": "Biologist",
+        "zh-CN": "生物学家"
+      },
+      "id": "victoria3_biologist",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+
+    {
+      "translations": {
+        "en": "Botanical Expedition",
+        "zh-CN": "植物学考察"
+      },
+      "id": "victoria3_botanical_expedition",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Brown-throated Sloth",
+        "zh-CN": "褐喉树懒"
+      },
+      "id": "victoria3_brown_throated_sloth",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Buddhas of Bamiyan",
+        "zh-CN": "巴米扬大佛"
+      },
+      "id": "victoria3_buddhas_of_bamiyan",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Bundespräsident",
+        "zh-CN": "联邦总统"
+      },
+      "id": "victoria3_bundespräsident",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "瑞士"
+      }
+    },
+    {
+      "translations": {
+        "en": "Bürgerlicher Realismus",
+        "zh-CN": "市民现实主义"
+      },
+      "id": "victoria3_bürgerlicher_realismus",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "<德> 译为“市民现实主义”（Bürgelicher Realismus）或“诗意现实主义”（Poetischer Realismus），前者侧重文学创作的主体、受众和内容，后者则突出了它的美学追求。"
+      }
+    },
+    {
+      "translations": {
+        "en": "Business Schools & Tycoon Capitalism",
+        "zh-CN": "商学与资本主义"
+      },
+      "id": "victoria3_business_schools_tycoon_capitalism",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Bust of Nefertiti",
+        "zh-CN": "娜芙蒂蒂半身像"
+      },
+      "id": "victoria3_bust_of_nefertiti",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "C.F. Ramuz",
+        "zh-CN": "夏尔-费迪南德·拉穆兹"
+      },
+      "id": "victoria3_c_f_ramuz",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "[人名] 全名Charles Ferdinand Ramuz，瑞士著名诗人、法语文学作家。"
+      }
+    },
+    {
+      "translations": {
+        "en": "Campanile",
+        "zh-CN": "圣马可钟楼"
+      },
+      "id": "victoria3_campanile",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Cancel Excavation",
+        "zh-CN": "召回发掘队"
+      },
+      "id": "victoria3_cancel_excavation",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "canton",
+        "zh-CN": "方块"
+      },
+      "id": "victoria3_canton",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "国旗中的特殊术语，通常位于旗帜左上角，占据整面旗帜的四分之一。方块本身也可以是一面旗帜，如部分前英国殖民地国家（澳大利亚、新西兰）的国旗的方块部分是英国国旗。"
+      }
+    },
+    {
+      "translations": {
+        "en": "Capybara",
+        "zh-CN": "水豚"
+      },
+      "id": "victoria3_capybara",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Car Racer",
+        "zh-CN": "赛车手"
+      },
+      "id": "victoria3_car_racer",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Car Racing",
+        "zh-CN": "赛车比赛"
+      },
+      "id": "victoria3_car_racing",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Carlos VII",
+        "zh-CN": "卡洛斯七世"
+      },
+      "id": "victoria3_carlos_vii",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "只有卡洛斯派承认的君主，出生于神罗，第三次卡洛斯战争时期觊觎西班牙王位，故此处采取直译：越过边境。参考：https://en.wikipedia.org/wiki/Carlos_de_Borb%C3%B3n_y_Austria-Este"
+      }
+    },
+    {
+      "translations": {
+        "en": "Carme",
+        "zh-CN": "木卫十一"
+      },
+      "id": "victoria3_carme",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Cassowary",
+        "zh-CN": "鹤鸵"
+      },
+      "id": "victoria3_cassowary",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "cat-o'-nine-tails",
+        "zh-CN": "九尾鞭"
+      },
+      "id": "victoria3_cat_o_nine_tails",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "体罚用的鞭子"
+      }
+    },
+    {
+      "translations": {
+        "en": "Cave",
+        "zh-CN": "洞穴"
+      },
+      "id": "victoria3_cave",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Chamois",
+        "zh-CN": "臆羚"
+      },
+      "id": "victoria3_chamois",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "又称欧洲山羚，是一种粗壮像山羊的动物，生活于欧洲的阿尔卑斯山脉和喀尔巴阡山脉。"
+      }
+    },
+    {
+      "translations": {
+        "en": "Champ de Mars",
+        "zh-CN": "巴黎战神广场"
+      },
+      "id": "victoria3_champ_de_mars",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Character",
+        "zh-CN": "角色"
+      },
+      "id": "victoria3_character",
+      "metadata": {
+        "part_of_speech": "Noun"
+      },
+      "variants": {
+        "en": [
+          "Characters"
+        ]
+      }
+    },
+    {
+      "translations": {
+        "en": "Chelmos",
+        "zh-CN": "赫尔莫斯"
+      },
+      "id": "victoria3_chelmos",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "赫尔莫斯山，位于希腊北部伯罗奔尼撒"
+      }
+    },
+    {
+      "translations": {
+        "en": "Chemical Warfare",
+        "zh-CN": "化学战"
+      },
+      "id": "victoria3_chemical_warfare",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "chemist",
+        "zh-CN": "化学家"
+      },
+      "id": "victoria3_chemist",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Chemist Progress",
+        "zh-CN": "化学家进展"
+      },
+      "id": "victoria3_chemist_progress",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Chemistry",
+        "zh-CN": "化学"
+      },
+      "id": "victoria3_chemistry",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Chemotherapie",
+        "zh-CN": "化疗"
+      },
+      "id": "victoria3_chemotherapie",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Chimborazo",
+        "zh-CN": "钦博拉索山"
+      },
+      "id": "victoria3_chimborazo",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Chogolisa",
+        "zh-CN": "乔戈里萨峰"
+      },
+      "id": "victoria3_chogolisa",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Cholera",
+        "zh-CN": "霍乱"
+      },
+      "id": "victoria3_cholera",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Citlaltépetl",
+        "zh-CN": "奥里萨巴山"
+      },
+      "id": "victoria3_citlaltépetl",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "City-to-City Race",
+        "zh-CN": "城市间竞速赛"
+      },
+      "id": "victoria3_city_to_city_race",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Civil Engineer",
+        "zh-CN": "土木工程师"
+      },
+      "id": "victoria3_civil_engineer",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Civil Engineering",
+        "zh-CN": "土木工程"
+      },
+      "id": "victoria3_civil_engineering",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Classicism",
+        "zh-CN": "古典主义"
+      },
+      "id": "victoria3_classicism",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Coach",
+        "zh-CN": "总教练"
+      },
+      "id": "victoria3_coach",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "赤色晨曦用"
+      }
+    },
+    {
+      "translations": {
+        "en": "Cocaine Addict",
+        "zh-CN": "可卡因成瘾"
+      },
+      "id": "victoria3_cocaine_addict",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Composer",
+        "zh-CN": "作曲家"
+      },
+      "id": "victoria3_composer",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "赤色晨曦特殊角色"
+      }
+    },
+    {
+      "translations": {
+        "en": "Composer Progress",
+        "zh-CN": "谱曲进度"
+      },
+      "id": "victoria3_composer_progress",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Composita",
+        "zh-CN": "接合贝"
+      },
+      "id": "victoria3_composita",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Conductor",
+        "zh-CN": "指挥家"
+      },
+      "id": "victoria3_conductor",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "赤色晨曦作曲家特质"
+      }
+    },
+    {
+      "translations": {
+        "en": "Coromandel",
+        "zh-CN": "科罗曼德"
+      },
+      "id": "victoria3_coromandel",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "https://www.newzealand.com/cn/coromandel/ 官方音译"
+      }
+    },
+    {
+      "translations": {
+        "en": "Country Tie",
+        "zh-CN": "国家位阶"
+      },
+      "id": "victoria3_country_tie",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "crater Linne",
+        "zh-CN": "林奈环形山"
+      },
+      "id": "victoria3_crater_linne",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "月球上的一座环形山，因为被观测到形态逐渐变化而出名"
+      }
+    },
+    {
+      "translations": {
+        "en": "Cretaceous",
+        "zh-CN": "白垩纪"
+      },
+      "id": "victoria3_cretaceous",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Cristino",
+        "zh-CN": "克里斯蒂娜派"
+      },
+      "id": "victoria3_cristino",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "结合时间和国家背景，这里提到的战争应是第一次卡洛斯战争。支持卡洛斯五世的保守派被称做卡洛斯派（carlistas）；故将支持摄政克里斯蒂娜的进步派译为克里斯蒂娜派（Cristino）"
+      }
+    },
+    {
+      "translations": {
+        "en": "Cro-Magnon",
+        "zh-CN": "克罗马侬人"
+      },
+      "id": "victoria3_cro_magnon",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Crystal Skull",
+        "zh-CN": "水晶头骨"
+      },
+      "id": "victoria3_crystal_skull",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Cultural Merge",
+        "zh-CN": "文化融合"
+      },
+      "id": "victoria3_cultural_merge",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Dacians",
+        "zh-CN": "达契亚派"
+      },
+      "id": "victoria3_dacians",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "巴尔干希腊风味包使用"
+      }
+    },
+    {
+      "translations": {
+        "en": "Defenses",
+        "zh-CN": "防御工事"
+      },
+      "id": "victoria3_defenses",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Deimos",
+        "zh-CN": "火卫二"
+      },
+      "id": "victoria3_deimos",
+      "metadata": {
+        "part_of_speech": "Noun"
+      },
+      "variants": {
+        "en": [
+          "Deimo"
+        ]
+      }
+    },
+
+    {
+      "translations": {
+        "en": "Der Grüne Heinrich",
+        "zh-CN": "《绿衣亨利》"
+      },
+      "id": "victoria3_der_grüne_heinrich",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "<德> 作者戈特弗里德·凯勒，欧洲教育成长小说的代表作"
+      }
+    },
+    {
+      "translations": {
+        "en": "Der Steppenwolf",
+        "zh-CN": "《荒原狼》"
+      },
+      "id": "victoria3_der_steppenwolf",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Det store hamskiftet",
+        "zh-CN": "大变革"
+      },
+      "id": "victoria3_det_store_hamskiftet",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Dhaulagiri",
+        "zh-CN": "道拉吉里峰"
+      },
+      "id": "victoria3_dhaulagiri",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Diary of Arne Saknussemm",
+        "zh-CN": "阿恩·萨克努塞姆的日记"
+      },
+      "id": "victoria3_diary_of_arne_saknussemm",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Die Leute von Seldwyla",
+        "zh-CN": "《塞尔德维拉的人们》"
+      },
+      "id": "victoria3_die_leute_von_seldwyla",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "<德> 作者戈特弗里德·凯勒"
+      }
+    },
+    {
+      "translations": {
+        "en": "Dimotikí",
+        "zh-CN": "通俗希腊语"
+      },
+      "id": "victoria3_dimotikí",
+      "metadata": {
+        "part_of_speech": "Noun"
+      },
+      "variants": {
+        "en": [
+          "Demotic"
+        ]
+      }
+    },
+    {
+      "translations": {
+        "en": "Dinar",
+        "zh-CN": "第纳尔"
+      },
+      "id": "victoria3_dinar",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Dinosaur Bone",
+        "zh-CN": "恐龙骨骼"
+      },
+      "id": "victoria3_dinosaur_bone",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Dinosaur Skeleton",
+        "zh-CN": "恐龙骨架"
+      },
+      "id": "victoria3_dinosaur_skeleton",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "单位为“具”"
+      }
+    },
+    {
+      "translations": {
+        "en": "Diphteria",
+        "zh-CN": "白喉"
+      },
+      "id": "victoria3_diphteria",
+      "metadata": {
+        "part_of_speech": "Noun"
+      },
+      "variants": {
+        "en": [
+          "diphtheria"
+        ]
+      }
+    },
+    {
+      "translations": {
+        "en": "Diplodocus",
+        "zh-CN": "梁龙"
+      },
+      "id": "victoria3_diplodocus",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Discoverer",
+        "zh-CN": "发现者："
+      },
+      "id": "victoria3_discoverer",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Diskos of Phaistos",
+        "zh-CN": "斐斯托斯圆盘"
+      },
+      "id": "victoria3_diskos_of_phaistos",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "divine right of the king",
+        "zh-CN": "君权神授"
+      },
+      "id": "victoria3_divine_right_of_the_king",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Drachma",
+        "zh-CN": "德拉克马"
+      },
+      "id": "victoria3_drachma",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Dufourspitze",
+        "zh-CN": "杜富尔峰"
+      },
+      "id": "victoria3_dufourspitze",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "East Micronesia",
+        "zh-CN": "东密克罗尼西亚"
+      },
+      "id": "victoria3_east_micronesia",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "East-Aryan",
+        "zh-CN": "东雅利安"
+      },
+      "id": "victoria3_east_aryan",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Eastern African",
+        "zh-CN": "东非"
+      },
+      "id": "victoria3_eastern_african",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Schwingen",
+        "zh-CN": "瑞士摔跤"
+      },
+      "id": "victoria3_schwingen",
+      "metadata": {
+        "part_of_speech": "Noun"
+      },
+      "variants": {
+        "en": [
+          "Eidgenössisches"
+        ]
+      }
+    },
+    {
+      "translations": {
+        "en": "Eiffel Tower",
+        "zh-CN": "埃菲尔铁塔"
+      },
+      "id": "victoria3_eiffel_tower",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "El Dorado",
+        "zh-CN": "黄金国"
+      },
+      "id": "victoria3_el_dorado",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Elara",
+        "zh-CN": "木卫七"
+      },
+      "id": "victoria3_elara",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Electrical Engineer",
+        "zh-CN": "电气工程师"
+      },
+      "id": "victoria3_electrical_engineer",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Electrical Engineering",
+        "zh-CN": "电气工程"
+      },
+      "id": "victoria3_electrical_engineering",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Electrocardiogram",
+        "zh-CN": "心电图"
+      },
+      "id": "victoria3_electrocardiogram",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Electromagnetism",
+        "zh-CN": "电磁学"
+      },
+      "id": "victoria3_electromagnetism",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Element Number",
+        "zh-CN": "号元素"
+      },
+      "id": "victoria3_element_number",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Elephant",
+        "zh-CN": "大象"
+      },
+      "id": "victoria3_elephant",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Elk",
+        "zh-CN": "马鹿"
+      },
+      "id": "victoria3_elk",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Enceladus",
+        "zh-CN": "土卫二"
+      },
+      "id": "victoria3_enceladus",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Endurance Race",
+        "zh-CN": "耐力赛"
+      },
+      "id": "victoria3_endurance_race",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Endurance Race Progress",
+        "zh-CN": "耐力赛进度"
+      },
+      "id": "victoria3_endurance_race_progress",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "暂译，有更好的会换掉"
+      }
+    },
+    {
+      "translations": {
+        "en": "Engineer",
+        "zh-CN": "工程师"
+      },
+      "id": "victoria3_engineer",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Engineering Project",
+        "zh-CN": "工程项目"
+      },
+      "id": "victoria3_engineering_project",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Estella",
+        "zh-CN": "埃斯特拉"
+      },
+      "id": "victoria3_estella",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "纳瓦拉自治区北部城镇，参考：https://www.spain.info/en/destination/estella/"
+      }
+    },
+    {
+      "translations": {
+        "en": "Ethiopian",
+        "zh-CN": "埃塞尔比亚"
+      },
+      "id": "victoria3_ethiopian",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Ethniko Asterosokopio Athinon",
+        "zh-CN": "雅典国家天文台"
+      },
+      "id": "victoria3_ethniko_asterosokopio_athinon",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "<希> Εθνικό Αστεροσκοπείο Αθηνών"
+      }
+    },
+    {
+      "translations": {
+        "en": "Ethnologist",
+        "zh-CN": "民族学家"
+      },
+      "id": "victoria3_ethnologist",
+      "metadata": {
+        "part_of_speech": "Noun"
+      },
+      "variants": {
+        "en": [
+          "Ethnologists"
+        ]
+      }
+    },
+    {
+      "translations": {
+        "en": "Eurasian Badger",
+        "zh-CN": "狗獾"
+      },
+      "id": "victoria3_eurasian_badger",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Eurasian Otter",
+        "zh-CN": "欧亚水獭"
+      },
+      "id": "victoria3_eurasian_otter",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Eurasian Wolf",
+        "zh-CN": "欧亚狼"
+      },
+      "id": "victoria3_eurasian_wolf",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "European",
+        "zh-CN": "欧洲"
+      },
+      "id": "victoria3_european",
+      "metadata": {
+        "part_of_speech": "Noun"
+      },
+      "variants": {
+        "en": [
+          "Europe"
+        ]
+      }
+    },
+    {
+      "translations": {
+        "en": "Eusthenopteron",
+        "zh-CN": "真掌鳍鱼"
+      },
+      "id": "victoria3_eusthenopteron",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Evidenzbureau",
+        "zh-CN": "证据档案局"
+      },
+      "id": "victoria3_evidenzbureau",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "奥匈帝国的军事情报机构"
+      }
+    },
+    {
+      "translations": {
+        "en": "Exarchate",
+        "zh-CN": "督主教区"
+      },
+      "id": "victoria3_exarchate",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Exotic Animal",
+        "zh-CN": "珍稀动物"
+      },
+      "id": "victoria3_exotic_animal",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Experienced",
+        "zh-CN": "经验丰富的"
+      },
+      "id": "victoria3_experienced",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "赤色晨曦学者特质"
+      }
+    },
+    {
+      "translations": {
+        "en": "Expressionism",
+        "zh-CN": "表现主义"
+      },
+      "id": "victoria3_expressionism",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Famous",
+        "zh-CN": "著名"
+      },
+      "id": "victoria3_famous",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "赤色晨曦学者特质"
+      }
+    },
+    {
+      "translations": {
+        "en": "Far Eastern",
+        "zh-CN": "远东"
+      },
+      "id": "victoria3_far_eastern",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Fever sheds",
+        "zh-CN": "发热棚"
+      },
+      "id": "victoria3_fever_sheds",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Fieldworks",
+        "zh-CN": "野战工事"
+      },
+      "id": "victoria3_fieldworks",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Fiji",
+        "zh-CN": "斐济"
+      },
+      "id": "victoria3_fiji",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Finnic",
+        "zh-CN": "芬兰"
+      },
+      "id": "victoria3_finnic",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Flinders Island",
+        "zh-CN": "弗林德斯岛"
+      },
+      "id": "victoria3_flinders_island",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Florida Panther",
+        "zh-CN": "佛罗里达山狮"
+      },
+      "id": "victoria3_florida_panther",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Florin",
+        "zh-CN": "弗罗林"
+      },
+      "id": "victoria3_florin",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Folk Anthem",
+        "zh-CN": "民间赞歌"
+      },
+      "id": "victoria3_folk_anthem",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "赤色晨曦国歌专用"
+      }
+    },
+    {
+      "translations": {
+        "en": "Football Association",
+        "zh-CN": "足球协会"
+      },
+      "id": "victoria3_football_association",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Football League",
+        "zh-CN": "足球联赛"
+      },
+      "id": "victoria3_football_league",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Formannskapsdistrikt",
+        "zh-CN": "地方自治区"
+      },
+      "id": "victoria3_formannskapsdistrikt",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Fossil",
+        "zh-CN": "化石"
+      },
+      "id": "victoria3_fossil",
+      "metadata": {
+        "part_of_speech": "Noun"
+      },
+      "variants": {
+        "en": [
+          "Fossils"
+        ]
+      }
+    },
+    {
+      "translations": {
+        "en": "Found Botanical Garden",
+        "zh-CN": "建立植物园"
+      },
+      "id": "victoria3_found_botanical_garden",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Franz Liszt",
+        "zh-CN": "李斯特·弗朗茨"
+      },
+      "id": "victoria3_franz_liszt",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "匈牙利人，因此姓在前名在后"
+      }
+    },
+    {
+      "translations": {
+        "en": "from sea to shinging sea",
+        "zh-CN": "自此海至光辉彼海！"
+      },
+      "id": "victoria3_from_sea_to_shinging_sea",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "起源于北美一些英属殖民地的宪章"
+      }
+    },
+    {
+      "translations": {
+        "en": "Functionalism",
+        "zh-CN": "功能主义"
+      },
+      "id": "victoria3_functionalism",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Gem of Kukulkan",
+        "zh-CN": "库库尔坎的宝石"
+      },
+      "id": "victoria3_gem_of_kukulkan",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Geological Research",
+        "zh-CN": "地质研究"
+      },
+      "id": "victoria3_geological_research",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Geological Score",
+        "zh-CN": "地质学评分"
+      },
+      "id": "victoria3_geological_score",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Geological Team",
+        "zh-CN": "地质勘探队"
+      },
+      "id": "victoria3_geological_team",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Geologist",
+        "zh-CN": "地质学家"
+      },
+      "id": "victoria3_geologist",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Geology",
+        "zh-CN": "地质学"
+      },
+      "id": "victoria3_geology",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Geomagnetic Data",
+        "zh-CN": "地磁数据"
+      },
+      "id": "victoria3_geomagnetic_data",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Geomagnetic Observatory",
+        "zh-CN": "地磁台"
+      },
+      "id": "victoria3_geomagnetic_observatory",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Georgios Konstantinos Vouris",
+        "zh-CN": "乔治斯·康斯坦丁诺斯·武里斯"
+      },
+      "id": "victoria3_georgios_konstantinos_vouris",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "[人名]"
+      }
+    },
+    {
+      "translations": {
+        "en": "Georgios Sinas",
+        "zh-CN": "乔治斯·辛纳斯"
+      },
+      "id": "victoria3_georgios_sinas",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "[人名]"
+      }
+    },
+    {
+      "translations": {
+        "en": "German",
+        "zh-CN": "德意志"
+      },
+      "id": "victoria3_german",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Germanic",
+        "zh-CN": "日耳曼"
+      },
+      "id": "victoria3_germanic",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Geyser",
+        "zh-CN": "间歇泉"
+      },
+      "id": "victoria3_geyser",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Giant Anteater",
+        "zh-CN": "大食蚁兽"
+      },
+      "id": "victoria3_giant_anteater",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Giant Panda",
+        "zh-CN": "大熊猫"
+      },
+      "id": "victoria3_giant_panda",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Gila Monster",
+        "zh-CN": "美国毒蜥"
+      },
+      "id": "victoria3_gila_monster",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Giraffatitan",
+        "zh-CN": "长颈巨龙"
+      },
+      "id": "victoria3_giraffatitan",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Giraffe",
+        "zh-CN": "长颈鹿"
+      },
+      "id": "victoria3_giraffe",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Goitre",
+        "zh-CN": "甲状腺肿"
+      },
+      "id": "victoria3_goitre",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Gordon Bennett Cup",
+        "zh-CN": "戈登•贝内特杯"
+      },
+      "id": "victoria3_gordon_bennett_cup",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Gorilla",
+        "zh-CN": "大猩猩"
+      },
+      "id": "victoria3_gorilla",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Gottfried Keller",
+        "zh-CN": "戈特弗里德·凯勒"
+      },
+      "id": "victoria3_gottfried_keller",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "[人名] 瑞士作家，代表作长篇小说《绿衣亨利》"
+      }
+    },
+    {
+      "translations": {
+        "en": "Gran-Colombia",
+        "zh-CN": "大哥伦比亚"
+      },
+      "id": "victoria3_gran_colombia",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Grand Prix de l'ACF",
+        "zh-CN": "法国汽车俱乐部大奖赛"
+      },
+      "id": "victoria3_grand_prix_de_l_acf",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Grand Prix Race",
+        "zh-CN": "大奖赛"
+      },
+      "id": "victoria3_grand_prix_race",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Great Comet",
+        "zh-CN": "大彗星"
+      },
+      "id": "victoria3_great_comet",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Great Geological Formation",
+        "zh-CN": "大地层"
+      },
+      "id": "victoria3_great_geological_formation",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Green Sea Turtle",
+        "zh-CN": "绿蠵龟"
+      },
+      "id": "victoria3_green_sea_turtle",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Grizzly Bear",
+        "zh-CN": "灰熊"
+      },
+      "id": "victoria3_grizzly_bear",
+      "metadata": {
+        "part_of_speech": "Noun"
+      },
+      "variants": {
+        "en": [
+          "Grizzly Baer"
+        ]
+      }
+    },
+
+    {
+      "translations": {
+        "en": "Gyeongbokgung",
+        "zh-CN": "景福宫"
+      },
+      "id": "victoria3_gyeongbokgung",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Haast Eagle",
+        "zh-CN": "哈斯特鹰"
+      },
+      "id": "victoria3_haast_eagle",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Habitat:",
+        "zh-CN": "栖息地："
+      },
+      "id": "victoria3_habitat",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Harder Game Park",
+        "zh-CN": "哈德山野生动物保护区"
+      },
+      "id": "victoria3_harder_game_park",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "位于因特拉肯附近的一座山"
+      }
+    },
+    {
+      "translations": {
+        "en": "Harry Haller",
+        "zh-CN": "哈里·哈勒尔"
+      },
+      "id": "victoria3_harry_haller",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "小说《荒原狼》中的主角"
+      }
+    },
+    {
+      "translations": {
+        "en": "Heidelbergensis",
+        "zh-CN": "海德堡人"
+      },
+      "id": "victoria3_heidelbergensis",
+      "metadata": {
+        "part_of_speech": "Noun"
+      },
+      "variants": {
+        "en": [
+          "Heidelberg Man"
+        ]
+      }
+    },
+    {
+      "translations": {
+        "en": "Helmet of Meskalamdug",
+        "zh-CN": "麦斯卡拉姆杜格的头盔"
+      },
+      "id": "victoria3_helmet_of_meskalamdug",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Helvetic Republic",
+        "zh-CN": "海尔维第共和国"
+      },
+      "id": "victoria3_helvetic_republic",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Heureka",
+        "zh-CN": "我找到了"
+      },
+      "id": "victoria3_heureka",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "古希腊的阿基米德，洗澡时顿悟浮力原理，裸奔大街高喊：“Heureka！我找到了！”"
+      }
+    },
+    {
+      "translations": {
+        "en": "hill of the Nymphs",
+        "zh-CN": "宁芙山"
+      },
+      "id": "victoria3_hill_of_the_nymphs",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Himalia",
+        "zh-CN": "木卫六"
+      },
+      "id": "victoria3_himalia",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Himmel",
+        "zh-CN": "天空"
+      },
+      "id": "victoria3_himmel",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "德语"
+      }
+    },
+    {
+      "translations": {
+        "en": "Hippopotamus",
+        "zh-CN": "河马"
+      },
+      "id": "victoria3_hippopotamus",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Histoire de monsieur Crépin",
+        "zh-CN": "《克雷潘先生小传》"
+      },
+      "id": "victoria3_histoire_de_monsieur_crépin",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Histoire du soldat",
+        "zh-CN": "《士兵的故事》"
+      },
+      "id": "victoria3_histoire_du_soldat",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "由拉穆兹操刀脚本，后改编为音乐剧"
+      }
+    },
+    {
+      "translations": {
+        "en": "Historically",
+        "zh-CN": "#b 历史背景：#!"
+      },
+      "id": "victoria3_historically",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Holy Republic",
+        "zh-CN": "神圣共和国"
+      },
+      "id": "victoria3_holy_republic",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "homelands",
+        "zh-CN": "本土"
+      },
+      "id": "victoria3_homelands",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "官中词汇"
+      }
+    },
+    {
+      "translations": {
+        "en": "Homo Erectus",
+        "zh-CN": "直立人"
+      },
+      "id": "victoria3_homo_erectus",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "house of Bourbon",
+        "zh-CN": "波旁王朝"
+      },
+      "id": "victoria3_house_of_bourbon",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "House of Orleans",
+        "zh-CN": "奥尔良王朝"
+      },
+      "id": "victoria3_house_of_orleans",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Huascarán",
+        "zh-CN": "瓦斯卡兰山"
+      },
+      "id": "victoria3_huascarán",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Human Fossils",
+        "zh-CN": "人类化石"
+      },
+      "id": "victoria3_human_fossils",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Human Rights",
+        "zh-CN": "人权"
+      },
+      "id": "victoria3_human_rights",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Hyperion",
+        "zh-CN": "土卫七"
+      },
+      "id": "victoria3_hyperion",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Iberian Lynx",
+        "zh-CN": "伊比利亚猞猁"
+      },
+      "id": "victoria3_iberian_lynx",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "ibexes",
+        "zh-CN": "羱羊"
+      },
+      "id": "victoria3_ibexes",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "羱羊或阿尔卑斯羱羊，居于欧洲的阿尔卑斯山上的一种山羊属的野生山羊。指正：ibex是一种对羱羊的统称"
+      },
+      "variants": {
+        "en": [
+          "Ibex",
+          "ibex",
+          "Ibexes"
+        ]
+      }
+    },
+    {
+      "translations": {
+        "en": "Ichthyosaurus",
+        "zh-CN": "鱼龙"
+      },
+      "id": "victoria3_ichthyosaurus",
+      "metadata": {
+        "part_of_speech": "Noun"
+      },
+      "variants": {
+        "en": [
+          "Ichthyosaura"
+        ]
+      }
+    },
+    {
+      "translations": {
+        "en": "Ichthyostega",
+        "zh-CN": "鱼石螈"
+      },
+      "id": "victoria3_ichthyostega",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Igor Strawinsky",
+        "zh-CN": "伊戈尔·斯特拉文斯基"
+      },
+      "id": "victoria3_igor_strawinsky",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "全名伊戈尔·菲德洛维奇·斯特拉文斯基（Igor Fedorovitch Stravinsky），美籍俄国作曲家、指挥家和钢琴家，西方现代派音乐的重要人物。"
+      }
+    },
+    {
+      "translations": {
+        "en": "Iguanodon",
+        "zh-CN": "禽龙"
+      },
+      "id": "victoria3_iguanodon",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Illimani",
+        "zh-CN": "伊宜马尼峰"
+      },
+      "id": "victoria3_illimani",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Impressionism",
+        "zh-CN": "印象派"
+      },
+      "id": "victoria3_impressionism",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Indigenous Australians",
+        "zh-CN": "澳大利亚原住民"
+      },
+      "id": "victoria3_indigenous_australians",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Indo-Arya",
+        "zh-CN": "印度-雅利安"
+      },
+      "id": "victoria3_indo_arya",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Innovative",
+        "zh-CN": "创新精神"
+      },
+      "id": "victoria3_innovative",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "特质"
+      }
+    },
+    {
+      "translations": {
+        "en": "input",
+        "zh-CN": "投入"
+      },
+      "id": "victoria3_input",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Inspect Excavation",
+        "zh-CN": "检查发掘现场"
+      },
+      "id": "victoria3_inspect_excavation",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "International Automobile Association",
+        "zh-CN": "国际汽车联合会"
+      },
+      "id": "victoria3_international_automobile_association",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "International Olympic Committee",
+        "zh-CN": "国际奥林匹克委员会"
+      },
+      "id": "victoria3_international_olympic_committee",
+      "metadata": {
+        "part_of_speech": "Noun"
+      },
+      "variants": {
+        "en": [
+          "International Olympic Comittee"
+        ]
+      }
+    },
+
+    {
+      "translations": {
+        "en": "Invention value going to",
+        "zh-CN": "新产品发明重心倾向于"
+      },
+      "id": "victoria3_invention_value_going_to",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "University Inventions模组用"
+      }
+    },
+    {
+      "translations": {
+        "en": "IOC",
+        "zh-CN": "国际奥委会"
+      },
+      "id": "victoria3_ioc",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Irrationalism",
+        "zh-CN": "非理性主义"
+      },
+      "id": "victoria3_irrationalism",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "赤色晨曦科技"
+      }
+    },
+    {
+      "translations": {
+        "en": "Isfahan",
+        "zh-CN": "伊斯法罕"
+      },
+      "id": "victoria3_isfahan",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Jaguar",
+        "zh-CN": "美洲豹"
+      },
+      "id": "victoria3_jaguar",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Java Man",
+        "zh-CN": "爪哇猿人"
+      },
+      "id": "victoria3_java_man",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Jeremias Gotthelf",
+        "zh-CN": "耶雷米亚斯·戈特赫尔夫"
+      },
+      "id": "victoria3_jeremias_gotthelf",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "[人名] 瑞士小说家"
+      }
+    },
+    {
+      "translations": {
+        "en": "Johanna Spyri",
+        "zh-CN": "约翰娜·斯比丽"
+      },
+      "id": "victoria3_johanna_spyri",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "[人名] 瑞士儿童文学作家，代表作《海蒂》"
+      }
+    },
+    {
+      "translations": {
+        "en": "José María Queipo de Llano",
+        "zh-CN": "托雷诺伯爵奎普"
+      },
+      "id": "victoria3_josé_maría_queipo_de_llano",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Joseph Johann von Littrow",
+        "zh-CN": "约瑟夫·约翰·冯·利特罗"
+      },
+      "id": "victoria3_joseph_johann_von_littrow",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "[人名] 奥地利数学家、天文学家"
+      }
+    },
+    {
+      "translations": {
+        "en": "Juliana Republic",
+        "zh-CN": "七月共和国"
+      },
+      "id": "victoria3_juliana_republic",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "巴西【英雄的十年】中于今圣卡塔琳娜州创建的共和国，正式名称为【自由和独立的卡塔琳娜共和国】，简称中的“Juliana\"是七月的变体，指共和国仅在道光十九年七月到十一月存在。 不是《朱丽安娜共和国》。"
+      }
+    },
+    {
+      "translations": {
+        "en": "Junimists",
+        "zh-CN": "朱尼姆派"
+      },
+      "id": "victoria3_junimists",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "巴尔干希腊风味包使用"
+      }
+    },
+    {
+      "translations": {
+        "en": "Jupiter",
+        "zh-CN": "木星"
+      },
+      "id": "victoria3_jupiter",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Jurassic",
+        "zh-CN": "侏罗纪"
+      },
+      "id": "victoria3_jurassic",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Kabru",
+        "zh-CN": "卡布鲁峰"
+      },
+      "id": "victoria3_kabru",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Mount Cameroon",
+        "zh-CN": "喀麦隆火山"
+      },
+      "id": "victoria3_mount_cameroon",
+      "metadata": {
+        "part_of_speech": "Noun"
+      },
+      "variants": {
+        "en": [
+          "Kamerunberg"
+        ]
+      }
+    },
+    {
+      "translations": {
+        "en": "Kamet",
+        "zh-CN": "卡美特山"
+      },
+      "id": "victoria3_kamet",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Kangchenjunga",
+        "zh-CN": "干城章嘉峰"
+      },
+      "id": "victoria3_kangchenjunga",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Katharevousa",
+        "zh-CN": "纯正希腊语"
+      },
+      "id": "victoria3_katharevousa",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Kaufmann Peak",
+        "zh-CN": "考夫曼山"
+      },
+      "id": "victoria3_kaufmann_peak",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Khiva",
+        "zh-CN": "希瓦"
+      },
+      "id": "victoria3_khiva",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Khorasan",
+        "zh-CN": "呼罗珊"
+      },
+      "id": "victoria3_khorasan",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Kibo",
+        "zh-CN": "基博峰"
+      },
+      "id": "victoria3_kibo",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Kleider machen Leute",
+        "zh-CN": "《人靠衣装》"
+      },
+      "id": "victoria3_kleider_machen_leute",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "<德> 作者戈特弗里德·凯勒"
+      }
+    },
+    {
+      "translations": {
+        "en": "Koala",
+        "zh-CN": "考拉"
+      },
+      "id": "victoria3_koala",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Komodo Dragon",
+        "zh-CN": "科莫多巨蜥"
+      },
+      "id": "victoria3_komodo_dragon",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Kreisleriana",
+        "zh-CN": "《克莱斯勒偶记》"
+      },
+      "id": "victoria3_kreisleriana",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "舒曼的钢琴作品"
+      }
+    },
+    {
+      "translations": {
+        "en": "Krone",
+        "zh-CN": "克朗"
+      },
+      "id": "victoria3_krone",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Kryoneri",
+        "zh-CN": "克里奥奈里"
+      },
+      "id": "victoria3_kryoneri",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "[地名] 希腊首都雅典东北部地区"
+      }
+    },
+    {
+      "translations": {
+        "en": "L'Angelus",
+        "zh-CN": "三钟经"
+      },
+      "id": "victoria3_l_angelus",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "La Rioja",
+        "zh-CN": "拉里奥哈"
+      },
+      "id": "victoria3_la_rioja",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "西班牙北部单省自治区，参考：https://zh.wikipedia.org/wiki/%E6%8B%89%E9%87%8C%E5%A5%A5%E5%93%88_(%E8%A5%BF%E7%8F%AD%E7%89%99)"
+      }
+    },
+    {
+      "translations": {
+        "en": "Laced",
+        "zh-CN": "下了药的"
+      },
+      "id": "victoria3_laced",
+      "metadata": {
+        "part_of_speech": "Adjective",
+        "remarks": "俚语，被下了药"
+      }
+    },
+    {
+      "translations": {
+        "en": "Lamassu",
+        "zh-CN": "拉玛苏雕像"
+      },
+      "id": "victoria3_lamassu",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "laoch",
+        "zh-CN": "英雄"
+      },
+      "id": "victoria3_laoch",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "爱尔兰语"
+      }
+    },
+    {
+      "translations": {
+        "en": "Leu",
+        "zh-CN": "列伊"
+      },
+      "id": "victoria3_leu",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "罗马尼亚和摩尔多瓦货币单位"
+      }
+    },
+    {
+      "translations": {
+        "en": "Lev",
+        "zh-CN": "列弗"
+      },
+      "id": "victoria3_lev",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "保加利亚的货币单位"
+      }
+    },
+    {
+      "translations": {
+        "en": "Lion",
+        "zh-CN": "狮子"
+      },
+      "id": "victoria3_lion",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Literary Tradition",
+        "zh-CN": "文学传统"
+      },
+      "id": "victoria3_literary_tradition",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Lobotomy",
+        "zh-CN": "脑叶切断术"
+      },
+      "id": "victoria3_lobotomy",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Local Doctor's Office",
+        "zh-CN": "社区诊所"
+      },
+      "id": "victoria3_local_doctor_s_office",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Lynx",
+        "zh-CN": "猞猁"
+      },
+      "id": "victoria3_lynx",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "猞猁属（学名：Lynx），短尾胸腹白毛耳带黑长毛，又称猞猁狲、林㹭、㹭、狼猫、大山猫，是哺乳纲食肉目猫科猫亚科猞猁属的物种"
+      },
+      "variants": {
+        "en": [
+          "Lynxes"
+        ]
+      }
+    },
+    {
+      "translations": {
+        "en": "Lysithea",
+        "zh-CN": "木卫十"
+      },
+      "id": "victoria3_lysithea",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Magnetic Data",
+        "zh-CN": "磁测数据"
+      },
+      "id": "victoria3_magnetic_data",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Major",
+        "zh-CN": "重要"
+      },
+      "id": "victoria3_major",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "文物等级"
+      }
+    },
+    {
+      "translations": {
+        "en": "Malaria Prevention",
+        "zh-CN": "疟疾预防"
+      },
+      "id": "victoria3_malaria_prevention",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Malayan Tapir",
+        "zh-CN": "马来貘"
+      },
+      "id": "victoria3_malayan_tapir",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Mana Crystal",
+        "zh-CN": "魔力水晶"
+      },
+      "id": "victoria3_mana_crystal",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "用于翻译AOW"
+      }
+    },
+    {
+      "translations": {
+        "en": "Manta Ray",
+        "zh-CN": "蝠鲼"
+      },
+      "id": "victoria3_manta_ray",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Māori",
+        "zh-CN": "毛利"
+      },
+      "id": "victoria3_māori",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "MAPI",
+        "zh-CN": "市场接入度对本地价格影响"
+      },
+      "id": "victoria3_mapi",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "即Market Access Price Impact"
+      },
+      "variants": {
+        "en": [
+          "Market Access Price Impact"
+        ]
+      }
+    },
+    {
+      "translations": {
+        "en": "Mars",
+        "zh-CN": "火星"
+      },
+      "id": "victoria3_mars",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Mascapaicha",
+        "zh-CN": "马斯卡派查"
+      },
+      "id": "victoria3_mascapaicha",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "萨帕·印卡的皇冠"
+      }
+    },
+    {
+      "translations": {
+        "en": "Mask of Agamemnon",
+        "zh-CN": "阿伽门农黄金面具"
+      },
+      "id": "victoria3_mask_of_agamemnon",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Mask of Pakal",
+        "zh-CN": "伟大的巴加尔的死亡面具"
+      },
+      "id": "victoria3_mask_of_pakal",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Mask of Sargon",
+        "zh-CN": "萨尔贡面具"
+      },
+      "id": "victoria3_mask_of_sargon",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Mask of Tutankhamun",
+        "zh-CN": "图坦卡蒙面具"
+      },
+      "id": "victoria3_mask_of_tutankhamun",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "mathematician",
+        "zh-CN": "数学家"
+      },
+      "id": "victoria3_mathematician",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Matterhorn",
+        "zh-CN": "马特洪峰"
+      },
+      "id": "victoria3_matterhorn",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Measles",
+        "zh-CN": "麻疹"
+      },
+      "id": "victoria3_measles",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Mechanic",
+        "zh-CN": "机械师"
+      },
+      "id": "victoria3_mechanic",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Mechanical Engineer",
+        "zh-CN": "机械工程师"
+      },
+      "id": "victoria3_mechanical_engineer",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Mechanical Engineering",
+        "zh-CN": "机械工程"
+      },
+      "id": "victoria3_mechanical_engineering",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Mechanical Innovation",
+        "zh-CN": "机械革新"
+      },
+      "id": "victoria3_mechanical_innovation",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Medical Prestige",
+        "zh-CN": "医学威望"
+      },
+      "id": "victoria3_medical_prestige",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Medical Research",
+        "zh-CN": "医学研究"
+      },
+      "id": "victoria3_medical_research",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Medical System",
+        "zh-CN": "医疗系统"
+      },
+      "id": "victoria3_medical_system",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Medical Technique",
+        "zh-CN": "医疗技术"
+      },
+      "id": "victoria3_medical_technique",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Meerkat",
+        "zh-CN": "狐獴"
+      },
+      "id": "victoria3_meerkat",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Megatherium",
+        "zh-CN": "大地懒"
+      },
+      "id": "victoria3_megatherium",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Mesopotamia",
+        "zh-CN": "美索不达米亚"
+      },
+      "id": "victoria3_mesopotamia",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+
+    {
+      "translations": {
+        "en": "Meticulous",
+        "zh-CN": "谨小慎微"
+      },
+      "id": "victoria3_meticulous",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "特质"
+      }
+    },
+    {
+      "translations": {
+        "en": "Microbiologist",
+        "zh-CN": "微生物学家"
+      },
+      "id": "victoria3_microbiologist",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Microbiology",
+        "zh-CN": "微生物学"
+      },
+      "id": "victoria3_microbiology",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Military Anthem",
+        "zh-CN": "军事赞歌"
+      },
+      "id": "victoria3_military_anthem",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "赤色晨曦国歌专用"
+      }
+    },
+    {
+      "translations": {
+        "en": "military attaché",
+        "zh-CN": "驻外武官"
+      },
+      "id": "victoria3_military_attaché",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "attaché指“专员”，一些情况也可以译为“军事专员”"
+      }
+    },
+    {
+      "translations": {
+        "en": "Military Engineer",
+        "zh-CN": "军事工程师"
+      },
+      "id": "victoria3_military_engineer",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Military Engineering",
+        "zh-CN": "军事工程"
+      },
+      "id": "victoria3_military_engineering",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Military Physician",
+        "zh-CN": "军医"
+      },
+      "id": "victoria3_military_physician",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Military-Industrial Complex",
+        "zh-CN": "军工复合"
+      },
+      "id": "victoria3_military_industrial_complex",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Mille Miglia",
+        "zh-CN": "一千英里耐力赛"
+      },
+      "id": "victoria3_mille_miglia",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "可简称千里赛"
+      }
+    },
+    {
+      "translations": {
+        "en": "Millet",
+        "zh-CN": "米勒特"
+      },
+      "id": "victoria3_millet",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Mimas",
+        "zh-CN": "土卫一"
+      },
+      "id": "victoria3_mimas",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "mineral cabinet",
+        "zh-CN": "矿石陈列柜"
+      },
+      "id": "victoria3_mineral_cabinet",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Mineralogist",
+        "zh-CN": "矿物学家"
+      },
+      "id": "victoria3_mineralogist",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Minor",
+        "zh-CN": "普通"
+      },
+      "id": "victoria3_minor",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "文物等级"
+      }
+    },
+    {
+      "translations": {
+        "en": "Miranda",
+        "zh-CN": "天卫五"
+      },
+      "id": "victoria3_miranda",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Moais",
+        "zh-CN": "摩艾石像"
+      },
+      "id": "victoria3_moais",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Modern Astronomy",
+        "zh-CN": "现代天文学"
+      },
+      "id": "victoria3_modern_astronomy",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Modern Aviation",
+        "zh-CN": "现代航空"
+      },
+      "id": "victoria3_modern_aviation",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Modern Nursing",
+        "zh-CN": "现代护理"
+      },
+      "id": "victoria3_modern_nursing",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Modern Physics",
+        "zh-CN": "现代物理学"
+      },
+      "id": "victoria3_modern_physics",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "赤色晨曦科技"
+      }
+    },
+    {
+      "translations": {
+        "en": "Monarch Anthem",
+        "zh-CN": "君王颂歌"
+      },
+      "id": "victoria3_monarch_anthem",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "moon observer",
+        "zh-CN": "卫星观测者"
+      },
+      "id": "victoria3_moon_observer",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Morgenröte",
+        "zh-CN": "赤色晨曦"
+      },
+      "id": "victoria3_morgenröte",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Morgenröte Window",
+        "zh-CN": "赤色晨曦界面"
+      },
+      "id": "victoria3_morgenröte_window",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Mosasaurus",
+        "zh-CN": "沧龙"
+      },
+      "id": "victoria3_mosasaurus",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Moserdamm",
+        "zh-CN": "莫泽水坝"
+      },
+      "id": "victoria3_moserdamm",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "1866年由海因里希·莫泽规划并在莱茵河上完工。当时这是瑞士最大的水力发电站。"
+      }
+    },
+    {
+      "translations": {
+        "en": "Mount Cook",
+        "zh-CN": "库克山"
+      },
+      "id": "victoria3_mount_cook",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Mount Everest",
+        "zh-CN": "珠穆朗玛峰"
+      },
+      "id": "victoria3_mount_everest",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Mount Kenya",
+        "zh-CN": "肯尼亚山"
+      },
+      "id": "victoria3_mount_kenya",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Mount Logan",
+        "zh-CN": "洛根山"
+      },
+      "id": "victoria3_mount_logan",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Mount McKinley",
+        "zh-CN": "麦金利山"
+      },
+      "id": "victoria3_mount_mckinley",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Mount Stanley",
+        "zh-CN": "斯坦利山"
+      },
+      "id": "victoria3_mount_stanley",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Mount Whitney",
+        "zh-CN": "惠特尼峰"
+      },
+      "id": "victoria3_mount_whitney",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Mount Wilhelm",
+        "zh-CN": "威廉山"
+      },
+      "id": "victoria3_mount_wilhelm",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Mountain Expedition",
+        "zh-CN": "登山探险"
+      },
+      "id": "victoria3_mountain_expedition",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Mountaineer",
+        "zh-CN": "登山家"
+      },
+      "id": "victoria3_mountaineer",
+      "metadata": {
+        "part_of_speech": "Noun"
+      },
+      "variants": {
+        "en": [
+          "Mountaineers"
+        ]
+      }
+    },
+    {
+      "translations": {
+        "en": "mountaineering club",
+        "zh-CN": "登山协会"
+      },
+      "id": "victoria3_mountaineering_club",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Mountaineering License",
+        "zh-CN": "登山许可"
+      },
+      "id": "victoria3_mountaineering_license",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Mountains",
+        "zh-CN": "山脉"
+      },
+      "id": "victoria3_mountains",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Multilateral Alliances",
+        "zh-CN": "多边联盟"
+      },
+      "id": "victoria3_multilateral_alliances",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "multilingual inscription",
+        "zh-CN": "多语言铭文"
+      },
+      "id": "victoria3_multilingual_inscription",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "包含多种语言的铭文"
+      }
+    },
+    {
+      "translations": {
+        "en": "Musical Tradition",
+        "zh-CN": "音乐传统"
+      },
+      "id": "victoria3_musical_tradition",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Muttaburrasaurus",
+        "zh-CN": "木他龙"
+      },
+      "id": "victoria3_muttaburrasaurus",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Naked Mole-Rat",
+        "zh-CN": "裸鼹鼠"
+      },
+      "id": "victoria3_naked_mole_rat",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "National Composer",
+        "zh-CN": "民族作曲家"
+      },
+      "id": "victoria3_national_composer",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "暂定译名"
+      }
+    },
+    {
+      "translations": {
+        "en": "National Gallery",
+        "zh-CN": "国立美术馆"
+      },
+      "id": "victoria3_national_gallery",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "National Library",
+        "zh-CN": "国立图书馆"
+      },
+      "id": "victoria3_national_library",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Naturalist",
+        "zh-CN": "博物学家"
+      },
+      "id": "victoria3_naturalist",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Nature Reserve",
+        "zh-CN": "自然保护区"
+      },
+      "id": "victoria3_nature_reserve",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Nauru",
+        "zh-CN": "瑙鲁"
+      },
+      "id": "victoria3_nauru",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Navarre",
+        "zh-CN": "纳瓦拉"
+      },
+      "id": "victoria3_navarre",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "西班牙北部自治区，参考：https://zh.wikipedia.org/wiki/%E7%B4%8D%E7%93%A6%E6%8B%89"
+      }
+    },
+
+    {
+      "translations": {
+        "en": "Neanderthal",
+        "zh-CN": "尼安德特人"
+      },
+      "id": "victoria3_neanderthal",
+      "metadata": {
+        "part_of_speech": "Noun"
+      },
+      "variants": {
+        "en": [
+          "Neanderthaler"
+        ]
+      }
+    },
+    {
+      "translations": {
+        "en": "Neoclassical",
+        "zh-CN": "新古典主义"
+      },
+      "id": "victoria3_neoclassical",
+      "metadata": {
+        "part_of_speech": "Noun"
+      },
+      "variants": {
+        "en": [
+          "Neoclassicism"
+        ]
+      }
+    },
+    {
+      "translations": {
+        "en": "Nephrolithiasis",
+        "zh-CN": "肾结石"
+      },
+      "id": "victoria3_nephrolithiasis",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Neptune",
+        "zh-CN": "海王星"
+      },
+      "id": "victoria3_neptune",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Nereid",
+        "zh-CN": "海卫二"
+      },
+      "id": "victoria3_nereid",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Netherlandic",
+        "zh-CN": "尼德兰"
+      },
+      "id": "victoria3_netherlandic",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Neuschwanstein",
+        "zh-CN": "新天鹅堡"
+      },
+      "id": "victoria3_neuschwanstein",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "New Objectivity",
+        "zh-CN": "新即物主义"
+      },
+      "id": "victoria3_new_objectivity",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "New South Wales",
+        "zh-CN": "新南威尔士"
+      },
+      "id": "victoria3_new_south_wales",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+
+    {
+      "translations": {
+        "en": "New Zealand Sea Lion",
+        "zh-CN": "新西兰海狮"
+      },
+      "id": "victoria3_new_zealand_sea_lion",
+      "metadata": {
+        "part_of_speech": "Noun"
+      },
+      "variants": {
+        "en": [
+          "New Zealand Sealion"
+        ]
+      }
+    },
+    {
+      "translations": {
+        "en": "Ngāti",
+        "zh-CN": "雅提"
+      },
+      "id": "victoria3_ngāti",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "毛利语"
+      }
+    },
+    {
+      "translations": {
+        "en": "Nine-banded Armadillo",
+        "zh-CN": "九带犰狳"
+      },
+      "id": "victoria3_nine_banded_armadillo",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "non-Indigenous settlers",
+        "zh-CN": "非原住民"
+      },
+      "id": "victoria3_non_indigenous_settlers",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "North American",
+        "zh-CN": "北美洲"
+      },
+      "id": "victoria3_north_american",
+      "metadata": {
+        "part_of_speech": "Noun"
+      },
+      "variants": {
+        "en": [
+          "North America"
+        ]
+      }
+    },
+    {
+      "translations": {
+        "en": "Northern Territory",
+        "zh-CN": "北领地"
+      },
+      "id": "victoria3_northern_territory",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Nuèch",
+        "zh-CN": "源自古奧克語 noch ← 拉丁語 noctem，nox的賓格，源自原始印歐語 *nókʷts。"
+      },
+      "id": "victoria3_nuèch",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "！非法语词"
+      }
+    },
+    {
+      "translations": {
+        "en": "Oberon",
+        "zh-CN": "天卫四"
+      },
+      "id": "victoria3_oberon",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Observatory",
+        "zh-CN": "天文台"
+      },
+      "id": "victoria3_observatory",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Oceanographic Knowledge",
+        "zh-CN": "海洋学知识"
+      },
+      "id": "victoria3_oceanographic_knowledge",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Olympic Games",
+        "zh-CN": "奥林匹克运动会"
+      },
+      "id": "victoria3_olympic_games",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "视情况选取奥林匹克运动会和简称奥运会进行翻译"
+      }
+    },
+    {
+      "translations": {
+        "en": "Opium Addict",
+        "zh-CN": "鸦片成瘾"
+      },
+      "id": "victoria3_opium_addict",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Orangutan",
+        "zh-CN": "猩猩"
+      },
+      "id": "victoria3_orangutan",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Othóneion Panepistímion",
+        "zh-CN": "奥森大学"
+      },
+      "id": "victoria3_othóneion_panepistímion",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "希腊的第一所大学，以奥托一世命名"
+      }
+    },
+    {
+      "translations": {
+        "en": "output",
+        "zh-CN": "产出"
+      },
+      "id": "victoria3_output",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Pacific Expedition",
+        "zh-CN": "太平洋探险"
+      },
+      "id": "victoria3_pacific_expedition",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Padded Cell",
+        "zh-CN": "软垫病室"
+      },
+      "id": "victoria3_padded_cell",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Paddock",
+        "zh-CN": "维修区"
+      },
+      "id": "victoria3_paddock",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Painter",
+        "zh-CN": "画家"
+      },
+      "id": "victoria3_painter",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Painter Progress",
+        "zh-CN": "绘画进度"
+      },
+      "id": "victoria3_painter_progress",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Painting Tradition",
+        "zh-CN": "绘画传统"
+      },
+      "id": "victoria3_painting_tradition",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Palace of Westminster",
+        "zh-CN": "威斯敏斯特宫"
+      },
+      "id": "victoria3_palace_of_westminster",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Palacio de Bellas Arte",
+        "zh-CN": "艺术宫"
+      },
+      "id": "victoria3_palacio_de_bellas_arte",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "赤色晨曦墨西哥奇观"
+      }
+    },
+    {
+      "translations": {
+        "en": "Palacio de Bellas Artes",
+        "zh-CN": "美术宫"
+      },
+      "id": "victoria3_palacio_de_bellas_artes",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Paleontological Collection",
+        "zh-CN": "古生物收藏馆"
+      },
+      "id": "victoria3_paleontological_collection",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Paleontological Excavation",
+        "zh-CN": "古生物发掘"
+      },
+      "id": "victoria3_paleontological_excavation",
+      "metadata": {
+        "part_of_speech": "Noun"
+      },
+      "variants": {
+        "en": [
+          "Paleontological Excavations"
+        ]
+      }
+    },
+    {
+      "translations": {
+        "en": "Paleontological Expedition",
+        "zh-CN": "古生物学考察"
+      },
+      "id": "victoria3_paleontological_expedition",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Paleontological Success",
+        "zh-CN": "古生物成功率"
+      },
+      "id": "victoria3_paleontological_success",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Paleontological Team",
+        "zh-CN": "古生物考察队"
+      },
+      "id": "victoria3_paleontological_team",
+      "metadata": {
+        "part_of_speech": "Noun"
+      },
+      "variants": {
+        "en": [
+          "Paleontological Teams"
+        ]
+      }
+    },
+    {
+      "translations": {
+        "en": "Paleontologist",
+        "zh-CN": "古生物学家"
+      },
+      "id": "victoria3_paleontologist",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Paleontology",
+        "zh-CN": "古生物学"
+      },
+      "id": "victoria3_paleontology",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Palette of Narmer",
+        "zh-CN": "那尔迈调色板"
+      },
+      "id": "victoria3_palette_of_narmer",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Pallas's Cat",
+        "zh-CN": "兔狲"
+      },
+      "id": "victoria3_pallas_s_cat",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "pandemic",
+        "zh-CN": "疫情"
+      },
+      "id": "victoria3_pandemic",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Paranthropus",
+        "zh-CN": "傍人"
+      },
+      "id": "victoria3_paranthropus",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Pasiphae",
+        "zh-CN": "木卫八"
+      },
+      "id": "victoria3_pasiphae",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Pasteurization",
+        "zh-CN": "巴氏灭菌法"
+      },
+      "id": "victoria3_pasteurization",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Pathogen",
+        "zh-CN": "病原体"
+      },
+      "id": "victoria3_pathogen",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Péarla",
+        "zh-CN": "珍珠"
+      },
+      "id": "victoria3_péarla",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "爱尔兰语"
+      }
+    },
+    {
+      "translations": {
+        "en": "Peking Man",
+        "zh-CN": "北京猿人"
+      },
+      "id": "victoria3_peking_man",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Pellagra",
+        "zh-CN": "糙皮病"
+      },
+      "id": "victoria3_pellagra",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Penteli",
+        "zh-CN": "彭特利"
+      },
+      "id": "victoria3_penteli",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "[地名] 希腊首都雅典北部彭特利地区"
+      }
+    },
+    {
+      "translations": {
+        "en": "People's Palace",
+        "zh-CN": "人民宫"
+      },
+      "id": "victoria3_people_s_palace",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Peppered Moth",
+        "zh-CN": "桦尺蛾"
+      },
+      "id": "victoria3_peppered_moth",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Persistent",
+        "zh-CN": "执着"
+      },
+      "id": "victoria3_persistent",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "特质"
+      }
+    },
+    {
+      "translations": {
+        "en": "Phobos",
+        "zh-CN": "火卫一"
+      },
+      "id": "victoria3_phobos",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Phoebe",
+        "zh-CN": "土卫九"
+      },
+      "id": "victoria3_phoebe",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "physician",
+        "zh-CN": "医生"
+      },
+      "id": "victoria3_physician",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Pico Aneto",
+        "zh-CN": "阿内托峰"
+      },
+      "id": "victoria3_pico_aneto",
+      "metadata": {
+        "part_of_speech": "Noun"
+      },
+      "variants": {
+        "en": [
+          "Pico de Aneto"
+        ]
+      }
+    },
+    {
+      "translations": {
+        "en": "Piltdown Man",
+        "zh-CN": "皮尔当人"
+      },
+      "id": "victoria3_piltdown_man",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Plague",
+        "zh-CN": "鼠疫"
+      },
+      "id": "victoria3_plague",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Planet X",
+        "zh-CN": "X行星"
+      },
+      "id": "victoria3_planet_x",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "赤色晨曦用"
+      }
+    },
+    {
+      "translations": {
+        "en": "Plate Tectonics",
+        "zh-CN": "板块构造理论"
+      },
+      "id": "victoria3_plate_tectonics",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Plateosaurus",
+        "zh-CN": "板龙"
+      },
+      "id": "victoria3_plateosaurus",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Platypus",
+        "zh-CN": "鸭嘴兽"
+      },
+      "id": "victoria3_platypus",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Polar Bear",
+        "zh-CN": "北极熊"
+      },
+      "id": "victoria3_polar_bear",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Polio",
+        "zh-CN": "脊髓灰质炎"
+      },
+      "id": "victoria3_polio",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Polish-Lithuanian",
+        "zh-CN": "波兰‑立陶宛"
+      },
+      "id": "victoria3_polish_lithuanian",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Polynesian",
+        "zh-CN": "波利尼西亚"
+      },
+      "id": "victoria3_polynesian",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Polytechnikum",
+        "zh-CN": "苏黎世联邦理工学院"
+      },
+      "id": "victoria3_polytechnikum",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "在德语中，Polytechnikum是苏黎世联邦理工学院的俗称"
+      }
+    },
+    {
+      "translations": {
+        "en": "Pop Art",
+        "zh-CN": "波普艺术"
+      },
+      "id": "victoria3_pop_art",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "二十世纪中期（50s-60s）的一种西方艺术运动。（别问我为什么会出现在维多利亚时代x）介于mod作者放到了这个时代，所以翻译成“流行艺术”应该更好"
+      }
+    },
+    {
+      "translations": {
+        "en": "Pope",
+        "zh-CN": "教宗"
+      },
+      "id": "victoria3_pope",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "用教宗吧，别老用教皇了"
+      }
+    },
+    {
+      "translations": {
+        "en": "popular sovereignty",
+        "zh-CN": "人民主权"
+      },
+      "id": "victoria3_popular_sovereignty",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Porte",
+        "zh-CN": "高门"
+      },
+      "id": "victoria3_porte",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Porto-Brazilian",
+        "zh-CN": "葡萄牙-巴西"
+      },
+      "id": "victoria3_porto_brazilian",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Potala Palace",
+        "zh-CN": "布达拉宫"
+      },
+      "id": "victoria3_potala_palace",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Power Bloc",
+        "zh-CN": "国家集团"
+      },
+      "id": "victoria3_power_bloc",
+      "metadata": {
+        "part_of_speech": "Noun"
+      },
+      "variants": {
+        "en": [
+          "Power Blocs"
+        ]
+      }
+    },
+    {
+      "translations": {
+        "en": "Practical Academia",
+        "zh-CN": "实践学"
+      },
+      "id": "victoria3_practical_academia",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Prehistoric Scenery",
+        "zh-CN": "史前景观"
+      },
+      "id": "victoria3_prehistoric_scenery",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "primary source",
+        "zh-CN": "原始资料"
+      },
+      "id": "victoria3_primary_source",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Progress",
+        "zh-CN": "进度"
+      },
+      "id": "victoria3_progress",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Psittacosaurus",
+        "zh-CN": "鹦鹉嘴龙"
+      },
+      "id": "victoria3_psittacosaurus",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Psychiatrist",
+        "zh-CN": "精神科医生"
+      },
+      "id": "victoria3_psychiatrist",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Psychoanalysis",
+        "zh-CN": "精神分析"
+      },
+      "id": "victoria3_psychoanalysis",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Psychological Affliction",
+        "zh-CN": "精神痛苦"
+      },
+      "id": "victoria3_psychological_affliction",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "特质"
+      }
+    },
+    {
+      "translations": {
+        "en": "Psychological School",
+        "zh-CN": "心理学派"
+      },
+      "id": "victoria3_psychological_school",
+      "metadata": {
+        "part_of_speech": "Noun"
+      },
+      "variants": {
+        "en": [
+          "Psychological Schools"
+        ]
+      }
+    },
+    {
+      "translations": {
+        "en": "Psychotherapeutic Point",
+        "zh-CN": "心理治疗点数"
+      },
+      "id": "victoria3_psychotherapeutic_point",
+      "metadata": {
+        "part_of_speech": "Noun"
+      },
+      "variants": {
+        "en": [
+          "Psychotherapeutic Points"
+        ]
+      }
+    },
+    {
+      "translations": {
+        "en": "Pterodactylus",
+        "zh-CN": "翼手龙"
+      },
+      "id": "victoria3_pterodactylus",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Publication",
+        "zh-CN": "出版物"
+      },
+      "id": "victoria3_publication",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Qiran",
+        "zh-CN": "基兰"
+      },
+      "id": "victoria3_qiran",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "伊朗货币"
+      }
+    },
+    {
+      "translations": {
+        "en": "Queensland",
+        "zh-CN": "昆士兰"
+      },
+      "id": "victoria3_queensland",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Race for the Stars",
+        "zh-CN": "寻星竞赛"
+      },
+      "id": "victoria3_race_for_the_stars",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Realism",
+        "zh-CN": "现实主义"
+      },
+      "id": "victoria3_realism",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Reckless",
+        "zh-CN": "鲁莽"
+      },
+      "id": "victoria3_reckless",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "特质"
+      }
+    },
+    {
+      "translations": {
+        "en": "Red Cross Medic",
+        "zh-CN": "红十字会医务人员"
+      },
+      "id": "victoria3_red_cross_medic",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Red Kangaroo",
+        "zh-CN": "红大袋鼠"
+      },
+      "id": "victoria3_red_kangaroo",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Red Panda",
+        "zh-CN": "小熊猫"
+      },
+      "id": "victoria3_red_panda",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Reich",
+        "zh-CN": "国"
+      },
+      "id": "victoria3_reich",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "除了Third Reich（第三帝国）等NSDAP语境以外的Reich没有帝国的含义，德语的帝国是Kaiserreich"
+      }
+    },
+    {
+      "translations": {
+        "en": "Republican Unanism",
+        "zh-CN": "共和统一战线"
+      },
+      "id": "victoria3_republican_unanism",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "是不是原作者拼写错了"
+      }
+    },
+    {
+      "translations": {
+        "en": "Reputation",
+        "zh-CN": "声望"
+      },
+      "id": "victoria3_reputation",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "赤色晨曦中的艺术家经验"
+      }
+    },
+    {
+      "translations": {
+        "en": "Reserved",
+        "zh-CN": "内敛"
+      },
+      "id": "victoria3_reserved",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "特质"
+      }
+    },
+    {
+      "translations": {
+        "en": "Rhoetosaurus",
+        "zh-CN": "瑞拖斯龙"
+      },
+      "id": "victoria3_rhoetosaurus",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Rickets",
+        "zh-CN": "佝偻病"
+      },
+      "id": "victoria3_rickets",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Ring of Fire",
+        "zh-CN": "火环带"
+      },
+      "id": "victoria3_ring_of_fire",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Rodolphe Töpffer",
+        "zh-CN": "鲁道夫·托弗"
+      },
+      "id": "victoria3_rodolphe_töpffer",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "瑞士画家，现代漫画创始人之一"
+      }
+    },
+    {
+      "translations": {
+        "en": "Romanticism",
+        "zh-CN": "浪漫主义"
+      },
+      "id": "victoria3_romanticism",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Rumantsch",
+        "zh-CN": "罗曼什"
+      },
+      "id": "victoria3_rumantsch",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Rumantschia",
+        "zh-CN": "罗曼什人"
+      },
+      "id": "victoria3_rumantschia",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "分布于瑞士东部格劳宾登州的一个民族，其母语为罗曼什语。"
+      }
+    },
+    {
+      "translations": {
+        "en": "run",
+        "zh-CN": "放羊场"
+      },
+      "id": "victoria3_run",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "这里的Run是指澳大利亚和新西兰的sheep station，即放羊的地方"
+      }
+    },
+    {
+      "translations": {
+        "en": "Rupee",
+        "zh-CN": "卢比"
+      },
+      "id": "victoria3_rupee",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Salvarsan",
+        "zh-CN": "洒尔佛散"
+      },
+      "id": "victoria3_salvarsan",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "sandgroper",
+        "zh-CN": "西澳大利亚人"
+      },
+      "id": "victoria3_sandgroper",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Sarcophagus of the unknown Pharaoh",
+        "zh-CN": "无名法老的石棺"
+      },
+      "id": "victoria3_sarcophagus_of_the_unknown_pharaoh",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Saturn",
+        "zh-CN": "土星"
+      },
+      "id": "victoria3_saturn",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Savio Circuit",
+        "zh-CN": "萨维奥赛道"
+      },
+      "id": "victoria3_savio_circuit",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Saxon Palace",
+        "zh-CN": "萨克森宫"
+      },
+      "id": "victoria3_saxon_palace",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Scarlet Fever",
+        "zh-CN": "猩红热"
+      },
+      "id": "victoria3_scarlet_fever",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Schaffhausen",
+        "zh-CN": "沙夫豪森"
+      },
+      "id": "victoria3_schaffhausen",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "[地名] 瑞士联邦北部沙夫豪森州的首府"
+      }
+    },
+    {
+      "translations": {
+        "en": "Schneider Trophy",
+        "zh-CN": "施耐德杯"
+      },
+      "id": "victoria3_schneider_trophy",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Schwing- und Älplerfest",
+        "zh-CN": "高山牧人节"
+      },
+      "id": "victoria3_schwing_und_älplerfest",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+
+    {
+      "translations": {
+        "en": "Scientific Society",
+        "zh-CN": "科学学会"
+      },
+      "id": "victoria3_scientific_society",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Sea Power & Merchant Marine",
+        "zh-CN": "海权与商业"
+      },
+      "id": "victoria3_sea_power_merchant_marine",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "secondary source",
+        "zh-CN": "二手史料"
+      },
+      "id": "victoria3_secondary_source",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Seismograph",
+        "zh-CN": "地震记录仪"
+      },
+      "id": "victoria3_seismograph",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Seismology",
+        "zh-CN": "地震学"
+      },
+      "id": "victoria3_seismology",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Seismometer",
+        "zh-CN": "测震仪"
+      },
+      "id": "victoria3_seismometer",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "seismoscope",
+        "zh-CN": "地动仪"
+      },
+      "id": "victoria3_seismoscope",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Senile",
+        "zh-CN": "衰老"
+      },
+      "id": "victoria3_senile",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "特质"
+      }
+    },
+    {
+      "translations": {
+        "en": "Sephardic",
+        "zh-CN": "塞法迪犹太人"
+      },
+      "id": "victoria3_sephardic",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Serfdom",
+        "zh-CN": "农奴制"
+      },
+      "id": "victoria3_serfdom",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "法律用"
+      }
+    },
+    {
+      "translations": {
+        "en": "Shkara",
+        "zh-CN": "希卡拉陶山"
+      },
+      "id": "victoria3_shkara",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Sick Man:",
+        "zh-CN": "西亚病夫："
+      },
+      "id": "victoria3_sick_man",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Siddharta",
+        "zh-CN": "《悉达多》"
+      },
+      "id": "victoria3_siddharta",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "作者 赫尔曼·黑塞"
+      }
+    },
+    {
+      "translations": {
+        "en": "Sinope",
+        "zh-CN": "木卫九"
+      },
+      "id": "victoria3_sinope",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Síocháin",
+        "zh-CN": "和平"
+      },
+      "id": "victoria3_síocháin",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "爱尔兰语"
+      }
+    },
+    {
+      "translations": {
+        "en": "Sion",
+        "zh-CN": "锡永"
+      },
+      "id": "victoria3_sion",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "[地名] 瑞士西南部城市，瓦莱州(Valais)首府"
+      }
+    },
+    {
+      "translations": {
+        "en": "Slavic",
+        "zh-CN": "斯拉夫"
+      },
+      "id": "victoria3_slavic",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Smallpox",
+        "zh-CN": "天花"
+      },
+      "id": "victoria3_smallpox",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Smilodon",
+        "zh-CN": "剑齿虎"
+      },
+      "id": "victoria3_smilodon",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Snake Godess",
+        "zh-CN": "米诺斯的持蛇女神像"
+      },
+      "id": "victoria3_snake_godess",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Snow Leopard",
+        "zh-CN": "雪豹"
+      },
+      "id": "victoria3_snow_leopard",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Sonderbundskrieg",
+        "zh-CN": "分离同盟战争"
+      },
+      "id": "victoria3_sonderbundskrieg",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "又译“分离主义联盟战争”，瑞士于1839年爆发苏黎世保守派叛乱（Züriputsch），部分保守天主教州于1845年结盟为“分离同盟”，于1847年与联邦军爆发分离同盟战争。"
+      }
+    },
+    {
+      "translations": {
+        "en": "South American",
+        "zh-CN": "南美洲"
+      },
+      "id": "victoria3_south_american",
+      "metadata": {
+        "part_of_speech": "Noun"
+      },
+      "variants": {
+        "en": [
+          "South America"
+        ]
+      }
+    },
+    {
+      "translations": {
+        "en": "South Australia",
+        "zh-CN": "南澳大利亚"
+      },
+      "id": "victoria3_south_australia",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Spanisch Brötli",
+        "zh-CN": "巴登糕"
+      },
+      "id": "victoria3_spanisch_brötli",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "来自瑞士巴登的特色糕点。它是一种轻薄的片状糕点，里面装有烤碎的榛子和杏酱。其结构的下部为方形面团，中部为杏和榛子馅，上部为方形面团。它在顶部切有一个“ X”形，以使食物在烘烤过程中排出热空气。"
+      }
+    },
+    {
+      "translations": {
+        "en": "Spanish Flu",
+        "zh-CN": "西班牙大流感"
+      },
+      "id": "victoria3_spanish_flu",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Special Deposit",
+        "zh-CN": "特殊矿床"
+      },
+      "id": "victoria3_special_deposit",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Specialist Clinic",
+        "zh-CN": "专科诊所"
+      },
+      "id": "victoria3_specialist_clinic",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Specimen",
+        "zh-CN": "标本"
+      },
+      "id": "victoria3_specimen",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Spinosaurus",
+        "zh-CN": "棘龙"
+      },
+      "id": "victoria3_spinosaurus",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Sports Overview",
+        "zh-CN": "体育概览"
+      },
+      "id": "victoria3_sports_overview",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "squirrel monkey",
+        "zh-CN": "松鼠猴"
+      },
+      "id": "victoria3_squirrel_monkey",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "St. Gallen",
+        "zh-CN": "圣加伦"
+      },
+      "id": "victoria3_st_gallen",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "瑞士东北部城市，圣加仑州首府"
+      }
+    },
+    {
+      "translations": {
+        "en": "Statue of Liberty",
+        "zh-CN": "自由女神像"
+      },
+      "id": "victoria3_statue_of_liberty",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Stegosaurus",
+        "zh-CN": "剑龙"
+      },
+      "id": "victoria3_stegosaurus",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Stoat",
+        "zh-CN": "白鼬"
+      },
+      "id": "victoria3_stoat",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Straitjacket",
+        "zh-CN": "约束衣"
+      },
+      "id": "victoria3_straitjacket",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Studied",
+        "zh-CN": "习得"
+      },
+      "id": "victoria3_studied",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "赤色晨曦画家特质前缀"
+      }
+    },
+    {
+      "translations": {
+        "en": "Studied Realism",
+        "zh-CN": "习得现实主义"
+      },
+      "id": "victoria3_studied_realism",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "赤色晨曦画家特质"
+      }
+    },
+    {
+      "translations": {
+        "en": "subject",
+        "zh-CN": "附属国"
+      },
+      "id": "victoria3_subject",
+      "metadata": {
+        "part_of_speech": "Noun"
+      },
+      "variants": {
+        "en": [
+          "subjects",
+          "subject"
+        ]
+      }
+    },
+    {
+      "translations": {
+        "en": "Sublime Porte",
+        "zh-CN": "高门（又称奥斯曼朴特）"
+      },
+      "id": "victoria3_sublime_porte",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Submarine",
+        "zh-CN": "潜艇"
+      },
+      "id": "victoria3_submarine",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Success Chance",
+        "zh-CN": "成功率"
+      },
+      "id": "victoria3_success_chance",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Summer Palace",
+        "zh-CN": "圆明园"
+      },
+      "id": "victoria3_summer_palace",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "syphilis",
+        "zh-CN": "梅毒"
+      },
+      "id": "victoria3_syphilis",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Tahiti",
+        "zh-CN": "塔希提"
+      },
+      "id": "victoria3_tahiti",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Tanzimât",
+        "zh-CN": "坦齐马特改革："
+      },
+      "id": "victoria3_tanzimât",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Targa Florio",
+        "zh-CN": "弗洛里奥盾"
+      },
+      "id": "victoria3_targa_florio",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Tasmania",
+        "zh-CN": "塔斯马尼亚"
+      },
+      "id": "victoria3_tasmania",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Taung Child",
+        "zh-CN": "汤恩幼儿"
+      },
+      "id": "victoria3_taung_child",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Tetanus",
+        "zh-CN": "破伤风"
+      },
+      "id": "victoria3_tetanus",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "the Ark of the Covenant",
+        "zh-CN": "约柜"
+      },
+      "id": "victoria3_the_ark_of_the_covenant",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "The Australian Frontier Wars",
+        "zh-CN": "澳大利亚边境战争"
+      },
+      "id": "victoria3_the_australian_frontier_wars",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "the First Fleet",
+        "zh-CN": "最初的殖民船队"
+      },
+      "id": "victoria3_the_first_fleet",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "convoy",
+        "zh-CN": "船队"
+      },
+      "id": "victoria3_convoy",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "由港口生产，维持国家船运线路的运转"
+      }
+    },
+    {
+      "translations": {
+        "en": "the great powers",
+        "zh-CN": "列强"
+      },
+      "id": "victoria3_the_great_powers",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "The National and Kapodistrian University of Athens",
+        "zh-CN": "雅典国立卡波季斯特里安大学"
+      },
+      "id": "victoria3_the_national_and_kapodistrian_university_of_athens",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "The National Park of Gran Paradiso",
+        "zh-CN": "大帕拉迪索国家公园"
+      },
+      "id": "victoria3_the_national_park_of_gran_paradiso",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "The United Tribes of New Zealand",
+        "zh-CN": "新西兰联合部落"
+      },
+      "id": "victoria3_the_united_tribes_of_new_zealand",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Theorizer:",
+        "zh-CN": "推定者："
+      },
+      "id": "victoria3_theorizer",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Thylacine",
+        "zh-CN": "袋狼"
+      },
+      "id": "victoria3_thylacine",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Tical",
+        "zh-CN": "提卡"
+      },
+      "id": "victoria3_tical",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "泰国旧货币"
+      }
+    },
+    {
+      "translations": {
+        "en": "Titania",
+        "zh-CN": "天卫三"
+      },
+      "id": "victoria3_titania",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Tomb of Alexander the Great",
+        "zh-CN": "亚历山大大帝陵墓"
+      },
+      "id": "victoria3_tomb_of_alexander_the_great",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Tonga",
+        "zh-CN": "汤加"
+      },
+      "id": "victoria3_tonga",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "tonn",
+        "zh-CN": "浪"
+      },
+      "id": "victoria3_tonn",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "爱尔兰语"
+      }
+    },
+    {
+      "translations": {
+        "en": "Topographic Map",
+        "zh-CN": "地形图"
+      },
+      "id": "victoria3_topographic_map",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Travelling Composer",
+        "zh-CN": "旅行的作曲家"
+      },
+      "id": "victoria3_travelling_composer",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "暂定译名"
+      }
+    },
+    {
+      "translations": {
+        "en": "Treasure of Priam",
+        "zh-CN": "普里阿摩斯的宝藏"
+      },
+      "id": "victoria3_treasure_of_priam",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Triassic",
+        "zh-CN": "三叠纪"
+      },
+      "id": "victoria3_triassic",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Triceratops",
+        "zh-CN": "三角龙"
+      },
+      "id": "victoria3_triceratops",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Trilobite",
+        "zh-CN": "三叶虫"
+      },
+      "id": "victoria3_trilobite",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Triton",
+        "zh-CN": "海卫一"
+      },
+      "id": "victoria3_triton",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Troy",
+        "zh-CN": "特洛伊"
+      },
+      "id": "victoria3_troy",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Tuberculosis",
+        "zh-CN": "结核病"
+      },
+      "id": "victoria3_tuberculosis",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Typhus",
+        "zh-CN": "斑疹伤寒"
+      },
+      "id": "victoria3_typhus",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Tyrannosaurus Rex",
+        "zh-CN": "暴龙"
+      },
+      "id": "victoria3_tyrannosaurus_rex",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Uli der Knecht",
+        "zh-CN": "《佃户乌利》"
+      },
+      "id": "victoria3_uli_der_knecht",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Umbriel",
+        "zh-CN": "天卫二"
+      },
+      "id": "victoria3_umbriel",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "United Statian",
+        "zh-CN": "美邦联"
+      },
+      "id": "victoria3_united_statian",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "United Tribes",
+        "zh-CN": "联合部落"
+      },
+      "id": "victoria3_united_tribes",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "University of Otago",
+        "zh-CN": "奥塔哥大学"
+      },
+      "id": "victoria3_university_of_otago",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Uranium Team",
+        "zh-CN": "铀矿勘探队"
+      },
+      "id": "victoria3_uranium_team",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Uranus",
+        "zh-CN": "天王星"
+      },
+      "id": "victoria3_uranus",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Useful Ivory Tower",
+        "zh-CN": "实用学"
+      },
+      "id": "victoria3_useful_ivory_tower",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Vaccination",
+        "zh-CN": "预防接种"
+      },
+      "id": "victoria3_vaccination",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "vaccine",
+        "zh-CN": "疫苗"
+      },
+      "id": "victoria3_vaccine",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Value Anthem",
+        "zh-CN": "价值观颂歌"
+      },
+      "id": "victoria3_value_anthem",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "赤色晨曦国歌专用"
+      }
+    },
+    {
+      "translations": {
+        "en": "Velociraptor",
+        "zh-CN": "伶盗龙"
+      },
+      "id": "victoria3_velociraptor",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Venus Transit",
+        "zh-CN": "金星凌日"
+      },
+      "id": "victoria3_venus_transit",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Vevey",
+        "zh-CN": "沃韦"
+      },
+      "id": "victoria3_vevey",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "[地名] 瑞士西部城镇"
+      }
+    },
+    {
+      "translations": {
+        "en": "Victoria",
+        "zh-CN": "维多利亚"
+      },
+      "id": "victoria3_victoria",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Virtuoso",
+        "zh-CN": "演奏家"
+      },
+      "id": "victoria3_virtuoso",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "赤色晨曦作曲家特质"
+      }
+    },
+    {
+      "translations": {
+        "en": "Vittorio Emanuele II",
+        "zh-CN": "维托里奥·埃马努埃莱二世"
+      },
+      "id": "victoria3_vittorio_emanuele_ii",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "意大利国王"
+      }
+    },
+    {
+      "translations": {
+        "en": "Vittorio Emanuele III",
+        "zh-CN": "维托里奥·埃马努埃莱三世"
+      },
+      "id": "victoria3_vittorio_emanuele_iii",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "意大利国王"
+      }
+    },
+    {
+      "translations": {
+        "en": "Volcano",
+        "zh-CN": "火山"
+      },
+      "id": "victoria3_volcano",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Volcano Danger",
+        "zh-CN": "火山考察风险"
+      },
+      "id": "victoria3_volcano_danger",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Volcano Expedition",
+        "zh-CN": "火山考察"
+      },
+      "id": "victoria3_volcano_expedition",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Volcano Observatory",
+        "zh-CN": "火山观测站"
+      },
+      "id": "victoria3_volcano_observatory",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "War of the Romantics",
+        "zh-CN": "浪漫主义音乐之争"
+      },
+      "id": "victoria3_war_of_the_romantics",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "West Indian Manatee",
+        "zh-CN": "西印度海牛"
+      },
+      "id": "victoria3_west_indian_manatee",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "West Micronesia",
+        "zh-CN": "西密克罗尼西亚"
+      },
+      "id": "victoria3_west_micronesia",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Western Australia",
+        "zh-CN": "西澳大利亚"
+      },
+      "id": "victoria3_western_australia",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Winterthur",
+        "zh-CN": "温特图尔"
+      },
+      "id": "victoria3_winterthur",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "[地名] 瑞士东北部城市"
+      }
+    },
+    {
+      "translations": {
+        "en": "WIP",
+        "zh-CN": "正在制作中"
+      },
+      "id": "victoria3_wip",
+      "metadata": {
+        "part_of_speech": "Verb",
+        "remarks": "WIP(Working In Progress)"
+      }
+    },
+    {
+      "translations": {
+        "en": "Wisent",
+        "zh-CN": "欧洲野牛"
+      },
+      "id": "victoria3_wisent",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Worker Anthem",
+        "zh-CN": "工人之歌"
+      },
+      "id": "victoria3_worker_anthem",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "赤色晨曦国歌专用"
+      }
+    },
+    {
+      "translations": {
+        "en": "Yellow Fever",
+        "zh-CN": "黄热病"
+      },
+      "id": "victoria3_yellow_fever",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Zebra",
+        "zh-CN": "斑马"
+      },
+      "id": "victoria3_zebra",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Zeppelin Expedition",
+        "zh-CN": "齐柏林飞艇探险"
+      },
+      "id": "victoria3_zeppelin_expedition",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Zoologist",
+        "zh-CN": "动物学家"
+      },
+      "id": "victoria3_zoologist",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "•",
+        "zh-CN": "※"
+      },
+      "id": "victoria3_",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Bakumatsu",
+        "zh-CN": "幕末"
+      },
+      "id": "victoria3_bakumatsu",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "指日本江户时代末期，大约从1853年美国海军准将马修·佩里的黑船来航，到1867年德川幕府末代将军德川庆喜大政奉还期间的历史时期。这段时期标志着日本从封建制度向现代化国家的过渡，伴随着内外部的巨大变革和动荡。"
+      }
+    },
+    {
+      "translations": {
+        "en": "Obschina",
+        "zh-CN": "村社"
+      },
+      "id": "victoria3_obschina",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "是俄国的传统农村自治单位，起源可以追溯到中世纪。这种制度是由村民共同拥有和管理土地的形式，村民们共同负责土地的分配、税收和社会事务的管理。Obschina在19世纪俄国社会中起到了重要作用，尤其是在农奴制时代，村社还承担了许多行政和社会功能。 在农业改革中，特别是1861年农奴"
+      }
+    },
+    {
+      "translations": {
+        "en": "Political Rigidity",
+        "zh-CN": "政治稳定度"
+      },
+      "id": "victoria3_political_rigidity",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "The Gag Rule",
+        "zh-CN": "封口令"
+      },
+      "id": "victoria3_the_gag_rule",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "在美国历史上，“Gag Rule” 特指1836年至1844年间美国国会通过的一系列决议，这些决议禁止讨论和审议有关废奴请愿的所有议题。这些封口令是由支持奴隶制的议员推动的，目的是阻止反奴隶制的请愿在国会中被讨论。最终，这些规则在1844年被废除。"
+      },
+      "variants": {
+        "en": [
+          "Gag Rule"
+        ]
+      }
+    },
+    {
+      "translations": {
+        "en": "Zemstvo",
+        "zh-CN": "地方自治机构"
+      },
+      "id": "victoria3_zemstvo",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "是19世纪俄国进行地方行政改革时创建的一种地方政府机构。它们负责地方的管理、公共事务和地方税收。 Zemstvos通常由地方选举产生的代表组成，负责处理地方教育、公共卫生、交通和其他地方性事务。这些机构是在1864年的俄国改革中设立的，目的是分担中央政府的管理负担，并增强地方自治"
+      },
+      "variants": {
+        "en": [
+          "Zemstvos"
+        ]
+      }
+    },
+    {
+      "translations": {
+        "en": "Argentina",
+        "zh-CN": "阿根廷"
+      },
+      "id": "victoria3_argentina",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "ariki",
+        "zh-CN": "大酋长"
+      },
+      "id": "victoria3_ariki",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "毛利语"
+      }
+    },
+    {
+      "translations": {
+        "en": "Australasia",
+        "zh-CN": "澳大拉西亚"
+      },
+      "id": "victoria3_australasia",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Australian Ballot",
+        "zh-CN": "澳大利亚式选举"
+      },
+      "id": "victoria3_australian_ballot",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Austronesia",
+        "zh-CN": "南岛人"
+      },
+      "id": "victoria3_austronesia",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Basilosaurus",
+        "zh-CN": "龙王鲸"
+      },
+      "id": "victoria3_basilosaurus",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Bauhaus",
+        "zh-CN": "包豪斯"
+      },
+      "id": "victoria3_bauhaus",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Bavaria",
+        "zh-CN": "巴伐利亚"
+      },
+      "id": "victoria3_bavaria",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Bikaneri",
+        "zh-CN": "比内卡尔"
+      },
+      "id": "victoria3_bikaneri",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Biyaligee",
+        "zh-CN": "比亚利吉"
+      },
+      "id": "victoria3_biyaligee",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "澳大利亚原住民"
+      }
+    },
+    {
+      "translations": {
+        "en": "Blueprints",
+        "zh-CN": "蓝图"
+      },
+      "id": "victoria3_blueprints",
+      "metadata": {
+        "part_of_speech": "Noun"
+      },
+      "variants": {
+        "en": [
+          "Blueprint"
+        ]
+      }
+    },
+    {
+      "translations": {
+        "en": "Bolivia",
+        "zh-CN": "玻利维亚"
+      },
+      "id": "victoria3_bolivia",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Bunganditj",
+        "zh-CN": "邦甘迪吉"
+      },
+      "id": "victoria3_bunganditj",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "澳大利亚原住民"
+      }
+    },
+    {
+      "translations": {
+        "en": "Chigolisa",
+        "zh-CN": "乔戈里峰"
+      },
+      "id": "victoria3_chigolisa",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Chile",
+        "zh-CN": "智利"
+      },
+      "id": "victoria3_chile",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Colonial Office",
+        "zh-CN": "殖民部"
+      },
+      "id": "victoria3_colonial_office",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Columbia",
+        "zh-CN": "哥伦比亚"
+      },
+      "id": "victoria3_columbia",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Council of Chalcedon",
+        "zh-CN": "迦克墩公会议"
+      },
+      "id": "victoria3_council_of_chalcedon",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Ecuador",
+        "zh-CN": "厄瓜多尔"
+      },
+      "id": "victoria3_ecuador",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "El Norte",
+        "zh-CN": "北方领"
+      },
+      "id": "victoria3_el_norte",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Falkland Islands",
+        "zh-CN": "福克兰群岛"
+      },
+      "id": "victoria3_falkland_islands",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Frontier Wars",
+        "zh-CN": "边疆战争"
+      },
+      "id": "victoria3_frontier_wars",
+      "metadata": {
+        "part_of_speech": "Noun"
+      },
+      "variants": {
+        "en": [
+          "frontier war"
+        ]
+      }
+    },
+    {
+      "translations": {
+        "en": "Glasriket",
+        "zh-CN": "水晶王国"
+      },
+      "id": "victoria3_glasriket",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Goods input",
+        "zh-CN": "商品投入"
+      },
+      "id": "victoria3_goods_input",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Great Architect",
+        "zh-CN": "建筑大师"
+      },
+      "id": "victoria3_great_architect",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Großvenediger",
+        "zh-CN": "大韦内迪格山"
+      },
+      "id": "victoria3_großvenediger",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "hapū",
+        "zh-CN": "氏族"
+      },
+      "id": "victoria3_hapū",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "毛利语"
+      }
+    },
+    {
+      "translations": {
+        "en": "He Whakaputanga",
+        "zh-CN": "独立宣言（新西兰）"
+      },
+      "id": "victoria3_he_whakaputanga",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "毛利土著签署并建立联合部落"
+      }
+    },
+    {
+      "translations": {
+        "en": "Head-taking",
+        "zh-CN": "猎头习俗"
+      },
+      "id": "victoria3_head_taking",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "黑山习俗"
+      }
+    },
+    {
+      "translations": {
+        "en": "Hospodar",
+        "zh-CN": "大公"
+      },
+      "id": "victoria3_hospodar",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Iquicha",
+        "zh-CN": "伊基查"
+      },
+      "id": "victoria3_iquicha",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Ismaili",
+        "zh-CN": "伊斯玛仪派"
+      },
+      "id": "victoria3_ismaili",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "iwi",
+        "zh-CN": "部落"
+      },
+      "id": "victoria3_iwi",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "毛利语"
+      }
+    },
+    {
+      "translations": {
+        "en": "Kamchatka",
+        "zh-CN": "堪察加"
+      },
+      "id": "victoria3_kamchatka",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Kanberri",
+        "zh-CN": "坎贝里"
+      },
+      "id": "victoria3_kanberri",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "澳大利亚原住民，亦是堪培拉的词源"
+      }
+    },
+    {
+      "translations": {
+        "en": "Kaskowiski",
+        "zh-CN": "卡斯科维斯基号（虚构的俄国军舰）"
+      },
+      "id": "victoria3_kaskowiski",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "https://www.rookebooks.com/1894-raid-of-the-russian-cruiser-kaskowiski-auckland-luckie-very-scarce-signed"
+      }
+    },
+    {
+      "translations": {
+        "en": "Kokandi",
+        "zh-CN": "浩罕"
+      },
+      "id": "victoria3_kokandi",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "La Plata",
+        "zh-CN": "拉普拉塔"
+      },
+      "id": "victoria3_la_plata",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Luxury Furniture",
+        "zh-CN": "高档家具"
+      },
+      "id": "victoria3_luxury_furniture",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Maloongoola",
+        "zh-CN": "马龙古拉"
+      },
+      "id": "victoria3_maloongoola",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "澳大利亚原住民"
+      }
+    },
+    {
+      "translations": {
+        "en": "mana",
+        "zh-CN": "权威"
+      },
+      "id": "victoria3_mana",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "毛利语"
+      }
+    },
+    {
+      "translations": {
+        "en": "Megalodon",
+        "zh-CN": "巨齿鲨"
+      },
+      "id": "victoria3_megalodon",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Mont Blanc",
+        "zh-CN": "勃朗峰"
+      },
+      "id": "victoria3_mont_blanc",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Monte Pissis",
+        "zh-CN": "皮西斯峰"
+      },
+      "id": "victoria3_monte_pissis",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+
+
+    {
+      "translations": {
+        "en": "Mount Giluwe",
+        "zh-CN": "吉卢韦山"
+      },
+      "id": "victoria3_mount_giluwe",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Mount Gongga",
+        "zh-CN": "贡嘎山"
+      },
+      "id": "victoria3_mount_gongga",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Mount Elias",
+        "zh-CN": "圣埃利亚斯山"
+      },
+      "id": "victoria3_mount_elias",
+      "metadata": {
+        "part_of_speech": "Noun"
+      },
+      "variants": {
+        "en": [
+          "Mount Saint Elias"
+        ]
+      }
+    },
+    {
+      "translations": {
+        "en": "Mountain Summit",
+        "zh-CN": "山峰"
+      },
+      "id": "victoria3_mountain_summit",
+      "metadata": {
+        "part_of_speech": "Noun"
+      },
+      "variants": {
+        "en": [
+          "Mountain Summits"
+        ]
+      }
+    },
+    {
+      "translations": {
+        "en": "Murray",
+        "zh-CN": "墨累"
+      },
+      "id": "victoria3_murray",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "澳大利亚河流"
+      }
+    },
+    {
+      "translations": {
+        "en": "Namitch",
+        "zh-CN": "纳米奇"
+      },
+      "id": "victoria3_namitch",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "澳大利亚原住民"
+      }
+    },
+    {
+      "translations": {
+        "en": "Nanto-Bordelaise Company",
+        "zh-CN": "南特‑波尔多公司"
+      },
+      "id": "victoria3_nanto_bordelaise_company",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "法属新西兰殖民公司"
+      }
+    },
+
+    {
+      "translations": {
+        "en": "Ngāi Tahu",
+        "zh-CN": "纳塔胡"
+      },
+      "id": "victoria3_ngāi_tahu",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "毛利部落"
+      }
+    },
+    {
+      "translations": {
+        "en": "Ngāti Toa",
+        "zh-CN": "纳提托阿"
+      },
+      "id": "victoria3_ngāti_toa",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "毛利部落"
+      }
+    },
+    {
+      "translations": {
+        "en": "North Peru",
+        "zh-CN": "北秘鲁"
+      },
+      "id": "victoria3_north_peru",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Nyangumarta",
+        "zh-CN": "尼扬古玛塔"
+      },
+      "id": "victoria3_nyangumarta",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "澳大利亚原住民"
+      }
+    },
+    {
+      "translations": {
+        "en": "pākehā",
+        "zh-CN": "新西兰白人"
+      },
+      "id": "victoria3_pākehā",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "毛利语"
+      }
+    },
+    {
+      "translations": {
+        "en": "Pampeana",
+        "zh-CN": "潘帕斯"
+      },
+      "id": "victoria3_pampeana",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Patagonia",
+        "zh-CN": "巴塔哥尼亚"
+      },
+      "id": "victoria3_patagonia",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Peru",
+        "zh-CN": "秘鲁"
+      },
+      "id": "victoria3_peru",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Petite Bourgeoisie",
+        "zh-CN": "小市民"
+      },
+      "id": "victoria3_petite_bourgeoisie",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+
+    {
+      "translations": {
+        "en": "Pito-one",
+        "zh-CN": "皮托-奥内，惠灵顿地区最古老的欧洲人定居点"
+      },
+      "id": "victoria3_pito_one",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "毛利语"
+      }
+    },
+    {
+      "translations": {
+        "en": "Plesiosaurus",
+        "zh-CN": "蛇颈龙"
+      },
+      "id": "victoria3_plesiosaurus",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Popocatépetl",
+        "zh-CN": "波波卡特佩特火山"
+      },
+      "id": "victoria3_popocatépetl",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "production method",
+        "zh-CN": "生产方式"
+      },
+      "id": "victoria3_production_method",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "rangatira",
+        "zh-CN": "酋长，贵族"
+      },
+      "id": "victoria3_rangatira",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "毛利语"
+      }
+    },
+    {
+      "translations": {
+        "en": "Ras Dashen",
+        "zh-CN": "拉斯·达善峰"
+      },
+      "id": "victoria3_ras_dashen",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "scientist",
+        "zh-CN": "学者"
+      },
+      "id": "victoria3_scientist",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Shkhara",
+        "zh-CN": "什卡拉山"
+      },
+      "id": "victoria3_shkhara",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Siberia",
+        "zh-CN": "西伯利亚"
+      },
+      "id": "victoria3_siberia",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "South Peru",
+        "zh-CN": "南秘鲁"
+      },
+      "id": "victoria3_south_peru",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "squatting",
+        "zh-CN": "占地，强占"
+      },
+      "id": "victoria3_squatting",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "Act of occupying a building or land without the owner's permission"
+      },
+      "variants": {
+        "en": [
+          "squatters"
+        ]
+      }
+    },
+    {
+      "translations": {
+        "en": "Tainui",
+        "zh-CN": "泰努伊"
+      },
+      "id": "victoria3_tainui",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "毛利部落联盟"
+      }
+    },
+    {
+      "translations": {
+        "en": "Tāmati Wāka Nene",
+        "zh-CN": "塔玛提·瓦卡·内内"
+      },
+      "id": "victoria3_tāmati_wāka_nene",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "毛利酋长"
+      }
+    },
+    {
+      "translations": {
+        "en": "taŋata",
+        "zh-CN": "人"
+      },
+      "id": "victoria3_taŋata",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "波利尼西亚语"
+      }
+    },
+    {
+      "translations": {
+        "en": "Te Moana-o-Raukawa",
+        "zh-CN": "劳卡瓦之海"
+      },
+      "id": "victoria3_te_moana_o_raukawa",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "毛利语，即库克海峡"
+      }
+    },
+    {
+      "translations": {
+        "en": "Te Rauparaha",
+        "zh-CN": "蒂·劳帕拉哈"
+      },
+      "id": "victoria3_te_rauparaha",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "毛利酋长"
+      }
+    },
+    {
+      "translations": {
+        "en": "The era of Sedo Politics",
+        "zh-CN": "势道政治"
+      },
+      "id": "victoria3_the_era_of_sedo_politics",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "The Great Loot",
+        "zh-CN": "大瓜分"
+      },
+      "id": "victoria3_the_great_loot",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Toogoranoongh",
+        "zh-CN": "图戈拉诺恩"
+      },
+      "id": "victoria3_toogoranoongh",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "澳大利亚原住民"
+      }
+    },
+    {
+      "translations": {
+        "en": "Trade Quantity",
+        "zh-CN": "交易规模"
+      },
+      "id": "victoria3_trade_quantity",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Treaty of Waitangi",
+        "zh-CN": "怀唐依条约"
+      },
+      "id": "victoria3_treaty_of_waitangi",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Trucial",
+        "zh-CN": "特鲁西尔诸国"
+      },
+      "id": "victoria3_trucial",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Tungus",
+        "zh-CN": "通古斯"
+      },
+      "id": "victoria3_tungus",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Ulema",
+        "zh-CN": "乌理玛"
+      },
+      "id": "victoria3_ulema",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "unincorporated",
+        "zh-CN": "未整合部落"
+      },
+      "id": "victoria3_unincorporated",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Venezuela",
+        "zh-CN": "委内瑞拉"
+      },
+      "id": "victoria3_venezuela",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Waikato Tainui",
+        "zh-CN": "怀卡托泰努伊"
+      },
+      "id": "victoria3_waikato_tainui",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "毛利部落"
+      }
+    },
+    {
+      "translations": {
+        "en": "whakapapa",
+        "zh-CN": "族谱"
+      },
+      "id": "victoria3_whakapapa",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "毛利语"
+      }
+    },
+    {
+      "translations": {
+        "en": "Wirrayaraay",
+        "zh-CN": "维拉埃莱"
+      },
+      "id": "victoria3_wirrayaraay",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "澳大利亚原住民"
+      }
+    },
+    {
+      "translations": {
+        "en": "Zaidi",
+        "zh-CN": "宰德派"
+      },
+      "id": "victoria3_zaidi",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Prestige goods",
+        "zh-CN": "名贵商品"
+      },
+      "id": "victoria3_prestige_goods",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "不应该翻译为'威望良好'"
+      }
+    },
+    {
+      "translations": {
+        "en": "Batmania",
+        "zh-CN": "巴特曼尼亚"
+      },
+      "id": "victoria3_batmania",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "墨尔本旧称。不应被翻译为'蝙蝠尼亚'"
+      }
+    }
+  ]
+}

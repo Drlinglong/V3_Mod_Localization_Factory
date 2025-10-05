@@ -1,0 +1,123 @@
+{
+  "metadata": {
+    "description": "欧陆风云4 (Europa Universalis IV) 游戏及Mod社区汉化词典",
+    "sources": [
+      "EU4 官方汉化",
+      "EU4 社区汉化",
+      "EU4 Mod汉化"
+    ],
+    "last_updated": "2025-01-27T10:00:00+00:00"
+  },
+  "entries": [
+    {
+      "translations": {
+        "en": "Advisor",
+        "zh-CN": "顾问"
+      },
+      "id": "eu4_advisor",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "政府顾问，提供各种加成"
+      }
+    },
+    {
+      "translations": {
+        "en": "Aggressive Expansion",
+        "zh-CN": "侵略扩张"
+      },
+      "id": "eu4_aggressive_expansion",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "通过战争扩张领土时产生的负面外交影响"
+      }
+    },
+    {
+      "translations": {
+        "en": "Alliance",
+        "zh-CN": "同盟"
+      },
+      "id": "eu4_alliance",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "国家间的军事同盟关系"
+      }
+    },
+    {
+      "translations": {
+        "en": "Army",
+        "zh-CN": "陆军"
+      },
+      "id": "eu4_army",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "地面军事单位"
+      }
+    },
+    {
+      "translations": {
+        "en": "Artillery",
+        "zh-CN": "炮兵"
+      },
+      "id": "eu4_artillery",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "远程攻击单位，后期战争主力"
+      }
+    },
+    {
+      "translations": {
+        "en": "Autonomy",
+        "zh-CN": "自治度"
+      },
+      "id": "eu4_autonomy",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "省份的自治程度，影响税收和人力"
+      }
+    },
+    {
+      "translations": {
+        "en": "Base Tax",
+        "zh-CN": "基础税收"
+      },
+      "id": "eu4_base_tax",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "省份的基础税收值"
+      }
+    },
+    {
+      "translations": {
+        "en": "Casus Belli",
+        "zh-CN": "宣战理由"
+      },
+      "id": "eu4_casus_belli",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "拉丁语，发动战争的合法理由"
+      }
+    },
+    {
+      "translations": {
+        "en": "Colony",
+        "zh-CN": "殖民地"
+      },
+      "id": "eu4_colony",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "海外殖民建立的定居点"
+      }
+    },
+    {
+      "translations": {
+        "en": "Core",
+        "zh-CN": "核心"
+      },
+      "id": "eu4_core",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "国家对该省份拥有主权的证明"
+      }
+    }
+  ]
+}

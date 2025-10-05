@@ -1,0 +1,2854 @@
+{
+  "metadata": {
+    "name": "Blue Archive Stellaris Mod - Fixed Dictionary",
+    "description": "A comprehensive glossary of all extracted terms (characters, schools, clubs, concepts, etc.) from the mod's localization files. Fixed and cleaned version.",
+    "version": "1.2-fixed",
+    "last_updated": "2025-01-27",
+    "sources": [
+      "BA_Club_l_simp_chinese.yml",
+      "BA_common_l_simp_chinese.yml",
+      "BA_concepts_l_simp_chinese.yml",
+      "BA_event_crisis_l_simp_chinese.yml",
+      "BA_event_origins_l_simp_chinese.yml",
+      "BA_event_Shittem_l_simp_chinese.yml",
+      "BA_event_tr&ape_l_simp_chinese.yml",
+      "BA_leader_l_simp_chinese.yml",
+      "BA_modifiers_l_simp_chinese.yml",
+      "BA_popmod_l_simp_chinese.yml",
+      "BA_School_Idea_l_simp_chinese.yml",
+      "BA_speciel_story_l_simp_chinese.yml",
+      "BA_component_l_simp_chinese.yml",
+      "BA_event_Emergencies_l_simp_chinese.yml",
+      "BA_Project_l_simp_chinese.yml",
+      "BA_Species&Goverments&Civics_l_simp_chinese.yml",
+      "BA_Anomaly&Arc_site_l_simp_chinese.yml"
+    ],
+    "game_id": "stellaris",
+    "type": "auxiliary"
+  },
+  "entries": [
+    {
+      "id": "ba_school_trinity",
+      "translations": {
+        "en": "Trinity General School",
+        "zh-CN": "三一综合学园",
+        "ja": "トリニティ総合学園",
+        "ko": "트리니티 종합학원"
+      },
+      "metadata": {
+        "category": "school",
+        "part_of_speech": "Proper Noun",
+        "remarks": "One of the three largest academies in Kivotos."
+      },
+      "abbreviations": {
+        "zh-CN": "三一",
+        "en": "Trinity",
+        "ja": "トリニティ",
+        "ko": "트리니티"
+      },
+      "variants": {
+        "zh-CN": [
+          "圣三一"
+        ]
+      }
+    },
+    {
+      "id": "ba_school_gehenna",
+      "translations": {
+        "en": "Gehenna Academy",
+        "zh-CN": "格黑娜学园",
+        "ja": "ゲヘナ学園",
+        "ko": "게헨나 학원"
+      },
+      "metadata": {
+        "category": "school",
+        "part_of_speech": "Proper Noun",
+        "remarks": "One of the three largest academies in Kivotos, rival to Trinity."
+      },
+      "abbreviations": {
+        "zh-CN": "格黑娜",
+        "en": "Gehenna",
+        "ja": "ゲヘナ",
+        "ko": "게헨나"
+      },
+      "variants": {"zh-CN": [
+          "格黑那"
+        ]}
+    },
+    {
+      "id": "ba_school_millennium",
+      "translations": {
+        "en": "Millennium Science School",
+        "zh-CN": "千年科技学园",
+        "ja": "ミレニアムサイエンススクール",
+        "ko": "밀레니엄 사이언스 스쿨"
+      },
+      "metadata": {
+        "category": "school",
+        "part_of_speech": "Proper Noun",
+        "remarks": "One of the three largest academies in Kivotos, focused on science and technology."
+      },
+      "abbreviations": {
+        "zh-CN": "千年",
+        "en": "Millennium",
+        "ja": "ミレニアム",
+        "ko": "밀레니엄"
+      },
+      "variants": {
+        "zh-CN": [
+          "千禧年"
+        ]
+      }
+    },
+    {
+      "id": "ba_club_prefect_team",
+      "translations": {
+        "en": "Prefect Team",
+        "zh-CN": "风纪委员会",
+        "ja": "風紀委員会",
+        "ko": "선도부"
+      },
+      "metadata": {
+        "category": "club",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Gehenna Academy's disciplinary committee, led by Sorasaki Hina."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_club_problem_solver_68",
+      "translations": {
+        "en": "Problem Solver 68",
+        "zh-CN": "便利屋68",
+        "ja": "便利屋68",
+        "ko": "흥신소 68"
+      },
+      "metadata": {
+        "category": "club",
+        "part_of_speech": "Proper Noun",
+        "remarks": "A club in Gehenna that undertakes any job for money, led by Rikuhachima Aru."
+      },
+      "abbreviations": {
+        "zh-CN": "便利屋",
+        "en": "PS68",
+        "ja": "便利屋68",
+        "ko": "흥신소68"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_hoshino_takanashi",
+      "translations": {
+        "en": "Takanashi Hoshino",
+        "zh-CN": "小鸟游星野",
+        "ja": "小鳥遊ホシノ",
+        "ko": "타카나시 호시노"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "President of the Abydos Foreclosure Task Force. Former Vice President of the Abydos Student Council."
+      },
+      "abbreviations": {
+        "zh-CN": "星野",
+        "en": "Hoshino",
+        "ja": "ホシノ",
+        "ko": "호시노"
+      },
+      "variants": {
+        "zh-CN": [
+          "星野（泳装）",
+          "星野（一年级）",
+          "星野（二年级）"
+        ]
+      }
+    },
+    {
+      "id": "ba_char_hina_sorasaki",
+      "translations": {
+        "en": "Sorasaki Hina",
+        "zh-CN": "空崎日奈",
+        "ja": "空崎ヒナ",
+        "ko": "소라사키 히나"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Head of the Gehenna Prefect Team."
+      },
+      "abbreviations": {
+        "zh-CN": "日奈",
+        "en": "Hina",
+        "ja": "ヒナ",
+        "ko": "히나"
+      },
+      "variants": {
+        "zh-CN": [
+          "日奈（泳装）",
+          "日奈（礼服）"
+        ]
+      }
+    },
+    {
+      "id": "ba_trait_desert_revival_theory",
+      "translations": {
+        "en": "Desert Revival Theory",
+        "zh-CN": "沙漠复兴理论",
+        "ja": "砂漠復興理論",
+        "ko": "사막 부흥 이론"
+      },
+      "metadata": {
+        "category": "trait",
+        "part_of_speech": "Noun Phrase",
+        "remarks": "Personal trait of Okusora Ayane."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_trait_star_sea_garrison",
+      "translations": {
+        "en": "Star Sea Garrison",
+        "zh-CN": "星海卫戍",
+        "ja": "星海警備",
+        "ko": "성해 경계"
+      },
+      "metadata": {
+        "category": "trait",
+        "part_of_speech": "Noun Phrase",
+        "remarks": "Personal trait of Takanashi Hoshino. Note: This is a mod-specific concept, translations are based on context."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_club_gourmet_research_society",
+      "translations": {
+        "en": "Gourmet Research Society",
+        "zh-CN": "美食研究会",
+        "ja": "美食研究会",
+        "ko": "미식연구회"
+      },
+      "metadata": {
+        "category": "club",
+        "part_of_speech": "Proper Noun",
+        "remarks": "A club in Gehenna Academy dedicated to the study and pursuit of all kinds of food."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_club_hot_springs_department",
+      "translations": {
+        "en": "Hot Springs Development Department",
+        "zh-CN": "温泉开发部",
+        "ja": "温泉開発部",
+        "ko": "온천개발부"
+      },
+      "metadata": {
+        "category": "club",
+        "part_of_speech": "Proper Noun",
+        "remarks": "A club in Gehenna Academy focused on finding and developing hot springs, often with explosive methods."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_club_after_school_sweets",
+      "translations": {
+        "en": "After-School Sweets Club",
+        "zh-CN": "放学后甜点部",
+        "ja": "放課後スイーツ部",
+        "ko": "방과후 디저트부"
+      },
+      "metadata": {
+        "category": "club",
+        "part_of_speech": "Proper Noun",
+        "remarks": "A club in Trinity General School that enjoys eating and discussing sweets."
+      },
+      "abbreviations": {
+        "zh-CN": "甜点部",
+        "en": "Sweets",
+        "ja": "スイーツ部",
+        "ko": "디저트부"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_club_justice_task_force",
+      "translations": {
+        "en": "Justice Task Force",
+        "zh-CN": "正义实现委员会",
+        "ja": "正義実現委員会",
+        "ko": "정의실현부"
+      },
+      "metadata": {
+        "category": "club",
+        "part_of_speech": "Proper Noun",
+        "remarks": "The primary student policing body of Trinity General School."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_concept_kivotos",
+      "translations": {
+        "en": "Kivotos",
+        "zh-CN": "基沃托斯",
+        "ja": "キヴォトス",
+        "ko": "키보토스"
+      },
+      "metadata": {
+        "category": "concept",
+        "part_of_speech": "Proper Noun",
+        "remarks": "The main setting of Blue Archive, a massive academy city."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_char_mika_misono",
+      "translations": {
+        "en": "Misono Mika",
+        "zh-CN": "圣园未花",
+        "ja": "聖園ミカ",
+        "ko": "미소노 미카"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "One of the three hosts of the Tea Party in Trinity. Mentioned in dialogue."
+      },
+      "abbreviations": {
+        "zh-CN": "未花",
+        "en": "Mika",
+        "ja": "ミカ",
+        "ko": "미카"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_yuuka_hayase",
+      "translations": {
+        "en": "Hayase Yuuka",
+        "zh-CN": "早濑优香",
+        "ja": "早瀬ユウカ",
+        "ko": "하야세 유우카"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "The treasurer of Millennium's student council, Seminar. Mentioned in dialogue."
+      },
+      "abbreviations": {
+        "zh-CN": "优香",
+        "en": "Yuuka",
+        "ja": "ユウカ",
+        "ko": "유우카"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_club_makeup_work_club",
+      "translations": {
+        "en": "Make-Up Work Club",
+        "zh-CN": "补习授业部",
+        "ja": "補習授業部",
+        "ko": "보충수업부"
+      },
+      "metadata": {
+        "category": "club",
+        "part_of_speech": "Proper Noun",
+        "remarks": "A club in Trinity for students who need remedial lessons."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_org_general_student_council",
+      "translations": {
+        "en": "General Student Council",
+        "zh-CN": "总学生会",
+        "ja": "連邦生徒会",
+        "ko": "연방학생회"
+      },
+      "metadata": {
+        "category": "organization",
+        "part_of_speech": "Proper Noun",
+        "remarks": "The highest governing body in Kivotos, currently missing its president."
+      },
+      "abbreviations": {},
+      "variants": {
+        "zh-CN": [
+          "联邦学生会"
+        ]
+      }
+    },
+    {
+      "id": "ba_char_nagisa_kirifuji",
+      "translations": {
+        "en": "Kirifuji Nagisa",
+        "zh-CN": "桐藤渚",
+        "ja": "桐藤ナギサ",
+        "ko": "키리후지 나기사"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "One of the three hosts of the Tea Party in Trinity. Mentioned in dialogue."
+      },
+      "abbreviations": {
+        "zh-CN": "渚",
+        "en": "Nagisa",
+        "ja": "ナギサ",
+        "ko": "나기사"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_seia_yurizono",
+      "translations": {
+        "en": "Yurizono Seia",
+        "zh-CN": "百合园圣娅",
+        "ja": "百合園セイア",
+        "ko": "유리조노 세이아"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "One of the three hosts of the Tea Party in Trinity. Mentioned in dialogue."
+      },
+      "abbreviations": {
+        "zh-CN": "圣娅",
+        "en": "Seia",
+        "ja": "セイア",
+        "ko": "세이아"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_faction_arius_student",
+      "translations": {
+        "en": "Arius Student",
+        "zh-CN": "阿里乌斯学生",
+        "ja": "アリウスの生徒",
+        "ko": "아리우스 학생"
+      },
+      "metadata": {
+        "category": "faction",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Refers to a student belonging to the Arius Branch School."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_faction_valkyrie_police",
+      "translations": {
+        "en": "Valkyrie Police",
+        "zh-CN": "女武神警察",
+        "ja": "ヴァルキューレ警察",
+        "ko": "발키리 경찰"
+      },
+      "metadata": {
+        "category": "faction",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Refers to a student belonging to the Valkyrie Police School."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_mod_concept_club_sponsorship",
+      "translations": {
+        "en": "Club Sponsorship Amount Setting",
+        "zh-CN": "社团赞助额设定",
+        "ja": "部活のスポンサー額設定",
+        "ko": "동아리 후원액 설정"
+      },
+      "metadata": {
+        "category": "concept",
+        "part_of_speech": "Noun Phrase",
+        "remarks": "Mod-specific policy name. JA/KO translations are contextual."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_concept_teacher",
+      "translations": {
+        "en": "Sensei",
+        "zh-CN": "老师",
+        "ja": "先生",
+        "ko": "선생님"
+      },
+      "metadata": {
+        "category": "concept",
+        "part_of_speech": "Proper Noun",
+        "remarks": "The player's role in Blue Archive."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_concept_halo",
+      "translations": {
+        "en": "Halo",
+        "zh-CN": "光环",
+        "ja": "ヘイロー",
+        "ko": "헤일로"
+      },
+      "metadata": {
+        "category": "concept",
+        "part_of_speech": "Noun",
+        "remarks": "The glowing ring above a student's head, signifying their special status."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_item_eleph",
+      "translations": {
+        "en": "Eleph",
+        "zh-CN": "神名碎片",
+        "ja": "神名文字",
+        "ko": "엘레프"
+      },
+      "metadata": {
+        "category": "item",
+        "part_of_speech": "Noun",
+        "remarks": "Character-specific fragments used for recruitment and unlocking Mystic Rarity."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_item_credit_points",
+      "translations": {
+        "en": "Credit Points",
+        "zh-CN": "信用点",
+        "ja": "クレジットポイント",
+        "ko": "크레딧 포인트"
+      },
+      "metadata": {
+        "category": "item",
+        "part_of_speech": "Noun",
+        "remarks": "The main currency in Blue Archive."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_item_oparts",
+      "translations": {
+        "en": "O-Parts",
+        "zh-CN": "欧帕兹",
+        "ja": "オーパーツ",
+        "ko": "오파츠"
+      },
+      "metadata": {
+        "category": "item",
+        "part_of_speech": "Noun",
+        "remarks": "Out-of-Place Artifacts. Materials used for skill upgrades."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_faction_phrenapates",
+      "translations": {
+        "en": "Phrenapates",
+        "zh-CN": "菲利乌斯",
+        "ja": "プレナパテス",
+        "ko": "프레나파테스"
+      },
+      "metadata": {
+        "category": "faction",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Refers to the Sensei from an alternate, failed timeline. Used here as a concept for a council agenda."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_mascot_peroro",
+      "translations": {
+        "en": "Peroro",
+        "zh-CN": "佩洛洛",
+        "ja": "ペロロ",
+        "ko": "페로로"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "A popular bird-like character mascot in Kivotos, adored by Hifumi."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_location_du",
+      "translations": {
+        "en": "D.U.",
+        "zh-CN": "D.U.",
+        "ja": "D.U.",
+        "ko": "D.U."
+      },
+      "metadata": {
+        "category": "location",
+        "part_of_speech": "Abbreviation",
+        "remarks": "Stands for District of Union. A central district in Kivotos."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_mod_unit_auto_turret",
+      "translations": {
+        "en": "Auto-Turret Squad",
+        "zh-CN": "自走炮塔部队",
+        "ja": "自走砲塔部隊",
+        "ko": "자주포탑부대"
+      },
+      "metadata": {
+        "category": "unit",
+        "part_of_speech": "Noun Phrase",
+        "remarks": "Mod-specific unit name. JA/KO translations are contextual."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_item_pyroxene",
+      "translations": {
+        "en": "Pyroxene",
+        "zh-CN": "青辉石",
+        "ja": "青輝石",
+        "ko": "청휘석"
+      },
+      "metadata": {
+        "category": "item",
+        "part_of_speech": "Noun",
+        "remarks": "The premium currency in Blue Archive, described here as a unique material for construction."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_mod_concept_auto_habitat",
+      "translations": {
+        "en": "Automated Habitat",
+        "zh-CN": "自动化居住站",
+        "ja": "自動居住ステーション",
+        "ko": "자동화 거주지"
+      },
+      "metadata": {
+        "category": "concept",
+        "part_of_speech": "Noun Phrase",
+        "remarks": "Mod-specific concept. Describes automated facilities built using Pyroxenes. JA/KO translations are contextual."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_mod_concept_kivotos_chronicle",
+      "translations": {
+        "en": "Kivotos Chronicle",
+        "zh-CN": "基沃托斯编年史",
+        "ja": "キヴォトス年代記",
+        "ko": "키보토스 연대기"
+      },
+      "metadata": {
+        "category": "concept",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Mod-specific name for an Ascension Perk tree. JA/KO translations are contextual."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_character_aris",
+      "translations": {
+        "en": "Aris",
+        "zh-CN": "爱丽丝",
+        "ja": "アリス",
+        "ko": "아리스"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "A student from the Game Development Department, found dormant in the ruins. Her true nature is a central plot point."
+      },
+      "abbreviations": {},
+      "variants": {
+        "en": [
+          "Alice"
+        ]
+      }
+    },
+    {
+      "id": "ba_character_key",
+      "translations": {
+        "en": "Key",
+        "zh-CN": "KEY",
+        "ja": "Key",
+        "ko": "Key"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "The administrator AI of the Nameless Priests' ark, connected to Aris."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_faction_gematria",
+      "translations": {
+        "en": "Gematria",
+        "zh-CN": "数秘术",
+        "ja": "ゲマトリア",
+        "ko": "게마트리아"
+      },
+      "metadata": {
+        "category": "faction",
+        "part_of_speech": "Proper Noun",
+        "remarks": "A mysterious organization of occultists who are primary antagonists in the story."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_unit_al_1s",
+      "translations": {
+        "en": "AL-1S",
+        "zh-CN": "AL-1S",
+        "ja": "AL-1S",
+        "ko": "AL-1S"
+      },
+      "metadata": {
+        "category": "unit",
+        "part_of_speech": "Proper Noun",
+        "remarks": "The flagship controlled by Aris during the mid-game crisis event."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_unit_kaiten_fx_mk0",
+      "translations": {
+        "en": "KAITEN FX Mk.0",
+        "zh-CN": "KAITEN FX MK.0",
+        "ja": "KAITEN FX Mk.0",
+        "ko": "KAITEN FX Mk.0"
+      },
+      "metadata": {
+        "category": "unit",
+        "part_of_speech": "Proper Noun",
+        "remarks": "The giant mech created by the Kaitenrangers. The fleet in the event is named after it."
+      },
+      "abbreviations": {
+        "zh-CN": "回转寿司机器人"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_mod_fleet_sword_of_light",
+      "translations": {
+        "en": "Sword of Light Fleet",
+        "zh-CN": "光之剑舰队",
+        "ja": "光の剣艦隊",
+        "ko": "빛의 검 함대"
+      },
+      "metadata": {
+        "category": "unit",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Mod-specific fleet name, associated with Aris. JA/KO translations are contextual."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_concept_color",
+      "translations": {
+        "en": "Color",
+        "zh-CN": "色彩",
+        "ja": "色彩",
+        "ko": "색채"
+      },
+      "metadata": {
+        "category": "concept",
+        "part_of_speech": "Proper Noun",
+        "remarks": "A supernatural, corrupting force that threatens Kivotos by inverting the sacred into the profane."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_concept_nameless_gods",
+      "translations": {
+        "en": "Nameless Gods",
+        "zh-CN": "无名之神",
+        "ja": "名もなき神々",
+        "ko": "이름 없는 신들"
+      },
+      "metadata": {
+        "category": "faction",
+        "part_of_speech": "Proper Noun",
+        "remarks": "A pantheon of false gods worshiped by Gematria."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_treaty_eden",
+      "translations": {
+        "en": "Eden Treaty",
+        "zh-CN": "伊甸条约",
+        "ja": "エデン条約",
+        "ko": "에덴조약"
+      },
+      "metadata": {
+        "category": "concept",
+        "part_of_speech": "Proper Noun",
+        "remarks": "A peace treaty between Trinity General School and Gehenna Academy, a central plot arc in the main story."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_location_sanctum_tower",
+      "translations": {
+        "en": "Sanctum Tower",
+        "zh-CN": "圣所之塔",
+        "ja": "サンクトゥムタワー",
+        "ko": "생텀 타워"
+      },
+      "metadata": {
+        "category": "location",
+        "part_of_speech": "Proper Noun",
+        "remarks": "A central administrative tower in Kivotos that controls access to the city's infrastructure."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_character_gsc_president",
+      "translations": {
+        "en": "General Student Council President",
+        "zh-CN": "总学生会长",
+        "ja": "連邦生徒会長",
+        "ko": "연방학생회장"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "The missing leader of Kivotos who summoned Sensei."
+      },
+      "abbreviations": {},
+      "variants": {
+        "zh-CN": [
+          "联邦学生会长"
+        ]
+      }
+    },
+    {
+      "id": "ba_character_rin",
+      "translations": {
+        "en": "Rin",
+        "zh-CN": "琳",
+        "ja": "リン",
+        "ko": "린"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Chief administrator of the General Student Council, currently acting as its head."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_mod_location_false_sanctum_tower",
+      "translations": {
+        "en": "Tower of False Sanctum",
+        "zh-CN": "虚妄圣塔",
+        "ja": "虚妄の聖塔",
+        "ko": "허망의 성탑"
+      },
+      "metadata": {
+        "category": "location",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Mod-specific concept, likely a corrupted version of the Sanctum Tower. JA/KO translations are contextual."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_mod_unit_saint_guardian",
+      "translations": {
+        "en": "Sanctum Guardian",
+        "zh-CN": "圣塔守护者",
+        "ja": "聖塔の守護者",
+        "ko": "성탑 수호자"
+      },
+      "metadata": {
+        "category": "unit",
+        "part_of_speech": "Noun Phrase",
+        "remarks": "Mod-specific enemy unit. JA/KO translations are contextual."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_item_shittim_chest",
+      "translations": {
+        "en": "Shittim Chest",
+        "zh-CN": "什亭之匣",
+        "ja": "シッテムの箱",
+        "ko": "싯팀의 상자"
+      },
+      "metadata": {
+        "category": "item",
+        "part_of_speech": "Proper Noun",
+        "remarks": "The mysterious tablet given to Sensei by the GSC President, containing the main OS Arona."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_character_arona",
+      "translations": {
+        "en": "Arona",
+        "zh-CN": "阿罗娜",
+        "ja": "アロナ",
+        "ko": "아로나"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "The main OS and AI assistant residing in the Shittim Chest."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_character_plana",
+      "translations": {
+        "en": "Plana",
+        "zh-CN": "普拉娜",
+        "ja": "プラナ",
+        "ko": "프라나"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "The OS from the alternate timeline Sensei's (Phrenapates) Shittim Chest, who later cohabits with Arona."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_item_adult_card",
+      "translations": {
+        "en": "Adult Card",
+        "zh-CN": "大人的卡片",
+        "ja": "大人のカード",
+        "ko": "어른의 카드"
+      },
+      "metadata": {
+        "category": "item",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Sensei's credit card, capable of performing miraculous feats at a cost."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_faction_bank_robbers",
+      "translations": {
+        "en": "Bank Robbers",
+        "zh-CN": "银行劫匪",
+        "ja": "銀行強盗",
+        "ko": "은행 강도"
+      },
+      "metadata": {
+        "category": "faction",
+        "part_of_speech": "Noun",
+        "remarks": "A recurring enemy type in Kivotos, often depicted with numbered masks. Famously associated with Abydos students."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_mod_concept_axium",
+      "translations": {
+        "en": "Axium",
+        "zh-CN": "Axium",
+        "ja": "アクシウム",
+        "ko": "액시엄"
+      },
+      "metadata": {
+        "category": "concept",
+        "part_of_speech": "Proper Noun",
+        "remarks": "A placeholder name or mod-specific concept found in the event file ('Axium的留言'). JA/KO translations are contextual."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_character_ui_kozeki",
+      "translations": {
+        "en": "Kozeki Ui",
+        "zh-CN": "古关忧",
+        "ja": "古関ウイ",
+        "ko": "코제키 우이"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "The librarian of Trinity's Library Committee. Initiator of the Halo research project in this event."
+      },
+      "abbreviations": {
+        "zh-CN": "忧"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_mod_concept_divinity_liberation_route",
+      "translations": {
+        "en": "Divinity Liberation Route",
+        "zh-CN": "神性解放路线",
+        "ja": "神性解放ルート",
+        "ko": "신성 해방 루트"
+      },
+      "metadata": {
+        "category": "concept",
+        "part_of_speech": "Noun Phrase",
+        "remarks": "Mod-specific technology and event path related to Halo research. JA/KO translations are contextual."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_mod_concept_our_story",
+      "translations": {
+        "en": "Our Story",
+        "zh-CN": "我们的故事",
+        "ja": "私たちの物語",
+        "ko": "우리의 이야기"
+      },
+      "metadata": {
+        "category": "concept",
+        "part_of_speech": "Noun Phrase",
+        "remarks": "The final stage or name of the Ascension Perk related to the Kivotos Chronicle."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_location_trinity_library",
+      "translations": {
+        "en": "Trinity Library",
+        "zh-CN": "圣三一古书馆",
+        "ja": "トリニティ古書館",
+        "ko": "트리니티 고서관"
+      },
+      "metadata": {
+        "category": "location",
+        "part_of_speech": "Proper Noun",
+        "remarks": "The library in Trinity, managed by the Library Committee."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_char_shiroko_sunaookami",
+      "translations": {
+        "en": "Sunaookami Shiroko",
+        "zh-CN": "砂狼白子",
+        "ja": "砂狼シロコ",
+        "ko": "스나오오카미 시로코"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Abydos High School, Foreclosure Task Force."
+      },
+      "abbreviations": {
+        "zh-CN": "白子",
+        "en": "Shiroko",
+        "ja": "シロコ",
+        "ko": "시로코"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_ayane_okusora",
+      "translations": {
+        "en": "Okusora Ayane",
+        "zh-CN": "奥空绫音",
+        "ja": "奥空アヤネ",
+        "ko": "오쿠소라 아야네"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Abydos High School, Foreclosure Task Force."
+      },
+      "abbreviations": {
+        "zh-CN": "绫音",
+        "en": "Ayane",
+        "ja": "アヤネ",
+        "ko": "아야네"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_serika_kuromi",
+      "translations": {
+        "en": "Kuromi Serika",
+        "zh-CN": "黑见芹香",
+        "ja": "黒見セリカ",
+        "ko": "쿠로미 세리카"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Abydos High School, Foreclosure Task Force."
+      },
+      "abbreviations": {
+        "zh-CN": "芹香",
+        "en": "Serika",
+        "ja": "セリカ",
+        "ko": "세리카"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_nonomi_izayoi",
+      "translations": {
+        "en": "Izayoi Nonomi",
+        "zh-CN": "十六夜野宫",
+        "ja": "十六夜ノノミ",
+        "ko": "이자요이 노노미"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Abydos High School, Foreclosure Task Force."
+      },
+      "abbreviations": {
+        "zh-CN": "野宫",
+        "en": "Nonomi",
+        "ja": "ノノミ",
+        "ko": "노노미"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_misaki_ikashino",
+      "translations": {
+        "en": "Ikashino Misaki",
+        "zh-CN": "戒野美咲",
+        "ja": "戒野ミサキ",
+        "ko": "이카시노 미사키"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Arius Branch School, Arius Squad."
+      },
+      "abbreviations": {
+        "zh-CN": "美咲",
+        "en": "Misaki",
+        "ja": "ミサキ",
+        "ko": "미사키"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_saori_joumae",
+      "translations": {
+        "en": "Joumae Saori",
+        "zh-CN": "锭前纱织",
+        "ja": "錠前サオリ",
+        "ko": "죠마에 사오리"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Arius Branch School, Arius Squad."
+      },
+      "abbreviations": {
+        "zh-CN": "纱织",
+        "en": "Saori",
+        "ja": "サオリ",
+        "ko": "사오리"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_atsuko_hakari",
+      "translations": {
+        "en": "Hakari Atsuko",
+        "zh-CN": "秤亚津子",
+        "ja": "秤アツコ",
+        "ko": "하카리 아츠코"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Arius Branch School, Arius Squad."
+      },
+      "abbreviations": {
+        "zh-CN": "亚津子",
+        "en": "Atsuko",
+        "ja": "アツコ",
+        "ko": "아츠코"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_mutsuki_asagi",
+      "translations": {
+        "en": "Asagi Mutsuki",
+        "zh-CN": "浅黄无月",
+        "ja": "浅黄ムツキ",
+        "ko": "아사기 무츠키"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Gehenna Academy, Problem Solver 68."
+      },
+      "abbreviations": {
+        "zh-CN": "无月",
+        "en": "Mutsuki",
+        "ja": "ムツキ",
+        "ko": "무츠키"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_kayoko_onikata",
+      "translations": {
+        "en": "Onikata Kayoko",
+        "zh-CN": "鬼方佳代子",
+        "ja": "鬼方カヨコ",
+        "ko": "오니카타 카요코"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Gehenna Academy, Problem Solver 68."
+      },
+      "abbreviations": {
+        "zh-CN": "佳代子",
+        "en": "Kayoko",
+        "ja": "カヨコ",
+        "ko": "카요코"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_aru_rikuhachima",
+      "translations": {
+        "en": "Rikuhachima Aru",
+        "zh-CN": "陆八魔亚瑠",
+        "ja": "陸八魔アル",
+        "ko": "리쿠하치마 아루"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Gehenna Academy, Problem Solver 68."
+      },
+      "abbreviations": {
+        "zh-CN": "亚瑠",
+        "en": "Aru",
+        "ja": "アル",
+        "ko": "아루"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_haruka_igusa",
+      "translations": {
+        "en": "Igusa Haruka",
+        "zh-CN": "伊草遥香",
+        "ja": "伊草ハルカ",
+        "ko": "이구사 하루카"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Gehenna Academy, Problem Solver 68."
+      },
+      "abbreviations": {
+        "zh-CN": "遥香",
+        "en": "Haruka",
+        "ja": "ハルカ",
+        "ko": "하루카"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_ako_amau",
+      "translations": {
+        "en": "Amau Ako",
+        "zh-CN": "天雨亚子",
+        "ja": "天雨アコ",
+        "ko": "아마우 아코"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Gehenna Academy, Prefect Team."
+      },
+      "abbreviations": {
+        "zh-CN": "亚子",
+        "en": "Ako",
+        "ja": "アコ",
+        "ko": "아코"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_iori_shiromi",
+      "translations": {
+        "en": "Shiromi Iori",
+        "zh-CN": "银镜伊织",
+        "ja": "銀鏡イオリ",
+        "ko": "시로미 이오리"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Gehenna Academy, Prefect Team."
+      },
+      "abbreviations": {
+        "zh-CN": "伊织",
+        "en": "Iori",
+        "ja": "イオリ",
+        "ko": "이오리"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_chinatsu_hinomiya",
+      "translations": {
+        "en": "Hinomiya Chinatsu",
+        "zh-CN": "火宫千夏",
+        "ja": "火宮チナツ",
+        "ko": "히노미야 치나츠"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Gehenna Academy, Prefect Team."
+      },
+      "abbreviations": {
+        "zh-CN": "千夏",
+        "en": "Chinatsu",
+        "ja": "チナツ",
+        "ko": "치나츠"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_haruna_kurodate",
+      "translations": {
+        "en": "Kurodate Haruna",
+        "zh-CN": "黑馆羽留奈",
+        "ja": "黒舘ハルナ",
+        "ko": "쿠로다테 하루나"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Gehenna Academy, Gourmet Research Society."
+      },
+      "abbreviations": {
+        "zh-CN": "羽留奈",
+        "en": "Haruna",
+        "ja": "ハルナ",
+        "ko": "하루나"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_izumi_shishidou",
+      "translations": {
+        "en": "Shishidou Izumi",
+        "zh-CN": "狮子堂泉",
+        "ja": "獅子堂イズミ",
+        "ko": "시시도우 이즈미"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Gehenna Academy, Gourmet Research Society."
+      },
+      "abbreviations": {
+        "zh-CN": "泉",
+        "en": "Izumi",
+        "ja": "イズミ",
+        "ko": "이즈미"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_junko_akeshi",
+      "translations": {
+        "en": "Akeshi Junko",
+        "zh-CN": "赤司淳子",
+        "ja": "赤司ジュンコ",
+        "ko": "아카시 준코"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Gehenna Academy, Gourmet Research Society."
+      },
+      "abbreviations": {
+        "zh-CN": "淳子",
+        "en": "Junko",
+        "ja": "ジュンコ",
+        "ko": "준코"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_fuuka_aikiyo",
+      "translations": {
+        "en": "Aikiyo Fuuka",
+        "zh-CN": "爱清风华",
+        "ja": "愛清フウカ",
+        "ko": "아이키요 후우카"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Gehenna Academy, School Lunch Club."
+      },
+      "abbreviations": {
+        "zh-CN": "风华",
+        "en": "Fuuka",
+        "ja": "フウカ",
+        "ko": "후우카"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_juri_ushiaki",
+      "translations": {
+        "en": "Ushiaki Juri",
+        "zh-CN": "牛牧茱莉",
+        "ja": "牛牧ジュリ",
+        "ko": "우시마키 주리"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Gehenna Academy, School Lunch Club."
+      },
+      "abbreviations": {
+        "zh-CN": "茱莉",
+        "en": "Juri",
+        "ja": "ジュリ",
+        "ko": "주리"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_hifumi_ajitani",
+      "translations": {
+        "en": "Ajitani Hifumi",
+        "zh-CN": "阿慈谷日富美",
+        "ja": "阿慈谷ヒフミ",
+        "ko": "아지타니 히후미"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Trinity General School, Make-Up Work Club."
+      },
+      "abbreviations": {
+        "zh-CN": "日富美",
+        "en": "Hifumi",
+        "ja": "ヒフミ",
+        "ko": "히후미"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_noa_ushio",
+      "translations": {
+        "en": "Ushio Noa",
+        "zh-CN": "生盐诺亚",
+        "ja": "生塩ノア",
+        "ko": "우시오 노아"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Millennium Science School, Seminar."
+      },
+      "abbreviations": {
+        "zh-CN": "诺亚",
+        "en": "Noa",
+        "ja": "ノア",
+        "ko": "노아"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_koyuki_kurosaki",
+      "translations": {
+        "en": "Kurosaki Koyuki",
+        "zh-CN": "黑崎小雪",
+        "ja": "黒崎コユキ",
+        "ko": "쿠로사키 코유키"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Millennium Science School, Seminar."
+      },
+      "abbreviations": {
+        "zh-CN": "小雪",
+        "en": "Koyuki",
+        "ja": "コユキ",
+        "ko": "코유키"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_himari_akaboshi",
+      "translations": {
+        "en": "Akaboshi Himari",
+        "zh-CN": "赤星日鞠",
+        "ja": "赤星ヒマリ",
+        "ko": "아카보시 히마리"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Millennium Science School, Veritas."
+      },
+      "abbreviations": {
+        "zh-CN": "日鞠",
+        "en": "Himari",
+        "ja": "ヒマリ",
+        "ko": "히마리"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_chihiro_ioura",
+      "translations": {
+        "en": "Ioura Chihiro",
+        "zh-CN": "伊原木千寻",
+        "ja": "伊原木チヒロ",
+        "ko": "이오우라 치히로"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Millennium Science School, Veritas."
+      },
+      "abbreviations": {
+        "zh-CN": "千寻",
+        "en": "Chihiro",
+        "ja": "チヒロ",
+        "ko": "치히로"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_kotama_otose",
+      "translations": {
+        "en": "Otose Kotama",
+        "zh-CN": "音濑小玉",
+        "ja": "音瀬コタマ",
+        "ko": "오토세 코타마"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Millennium Science School, Veritas."
+      },
+      "abbreviations": {
+        "zh-CN": "小玉",
+        "en": "Kotama",
+        "ja": "コタマ",
+        "ko": "코타마"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_maki_konuri",
+      "translations": {
+        "en": "Konuri Maki",
+        "zh-CN": "小涂真纪",
+        "ja": "小塗マキ",
+        "ko": "코누리 마키"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Millennium Science School, Veritas."
+      },
+      "abbreviations": {
+        "zh-CN": "真纪",
+        "en": "Maki",
+        "ja": "マキ",
+        "ko": "마키"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_sumire_otozuchi",
+      "translations": {
+        "en": "Otozuchi Sumire",
+        "zh-CN": "乙花堇",
+        "ja": "乙花スミレ",
+        "ko": "오토하나 스미레"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Millennium Science School, Training Club."
+      },
+      "abbreviations": {
+        "zh-CN": "堇",
+        "en": "Sumire",
+        "ja": "スミレ",
+        "ko": "스미레"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_cherino_norokami",
+      "translations": {
+        "en": "Norokami Cherino",
+        "zh-CN": "龙泉宫切里诺",
+        "ja": "竜華キリノ",
+        "ko": "노로카미 체리노"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Red Winter Federal Academy, Student Council."
+      },
+      "abbreviations": {
+        "zh-CN": "切里诺",
+        "en": "Cherino",
+        "ja": "キリノ",
+        "ko": "체리노"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_marina_ikegura",
+      "translations": {
+        "en": "Ikegura Marina",
+        "zh-CN": "池仓玛丽娜",
+        "ja": "池倉マリナ",
+        "ko": "이케쿠라 마리나"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Red Winter Federal Academy, Security Committee."
+      },
+      "abbreviations": {
+        "zh-CN": "玛丽娜",
+        "en": "Marina",
+        "ja": "マリナ",
+        "ko": "마리나"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_tomoe_itohana",
+      "translations": {
+        "en": "Itohana Tomoe",
+        "zh-CN": "糸鼻知惠",
+        "ja": "糸鼻トモエ",
+        "ko": "이토하나 토모에"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Red Winter Federal Academy, Spec Ops No. 227."
+      },
+      "abbreviations": {
+        "zh-CN": "知惠",
+        "en": "Tomoe",
+        "ja": "トモエ",
+        "ko": "토모에"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_nodoka_amakuni",
+      "translations": {
+        "en": "Amakuni Nodoka",
+        "zh-CN": "天见和香",
+        "ja": "天見ノドカ",
+        "ko": "아마쿠니 노도카"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Red Winter Federal Academy, Spec Ops No. 227."
+      },
+      "abbreviations": {
+        "zh-CN": "和香",
+        "en": "Nodoka",
+        "ja": "ノドカ",
+        "ko": "노도카"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_shigure_mayoi",
+      "translations": {
+        "en": "Mayoi Shigure",
+        "zh-CN": "间宵时雨",
+        "ja": "間宵シグレ",
+        "ko": "마요이 시구레"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Red Winter Federal Academy, Spec Ops No. 227."
+      },
+      "abbreviations": {
+        "zh-CN": "时雨",
+        "en": "Shigure",
+        "ja": "シグレ",
+        "ko": "시구레"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_tsubaki_kasuga",
+      "translations": {
+        "en": "Kasuga Tsubaki",
+        "zh-CN": "春日椿",
+        "ja": "春日ツバキ",
+        "ko": "카스가 츠바키"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Allied Hyakkiyako Academy, Inner Discipline Club."
+      },
+      "abbreviations": {
+        "zh-CN": "椿",
+        "en": "Tsubaki",
+        "ja": "ツバキ",
+        "ko": "츠바키"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_kaede_isami",
+      "translations": {
+        "en": "Isami Kaede",
+        "zh-CN": "勇美枫",
+        "ja": "勇美カエデ",
+        "ko": "이오치 마리"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Allied Hyakkiyako Academy, Inner Discipline Club."
+      },
+      "abbreviations": {
+        "zh-CN": "枫",
+        "en": "Kaede",
+        "ja": "カエデ",
+        "ko": "카에데"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_mimori_mizuha",
+      "translations": {
+        "en": "Mizuha Mimori",
+        "zh-CN": "水羽三森",
+        "ja": "水羽ミモリ",
+        "ko": "미즈하 미모리"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Allied Hyakkiyako Academy, Inner Discipline Club."
+      },
+      "abbreviations": {
+        "zh-CN": "三森",
+        "en": "Mimori",
+        "ja": "ミモリ",
+        "ko": "미모리"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_shizuko_kawawa",
+      "translations": {
+        "en": "Kawawa Shizuko",
+        "zh-CN": "河和静子",
+        "ja": "河和シズコ",
+        "ko": "카와와 시즈코"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Allied Hyakkiyako Academy, Festival Operations Department."
+      },
+      "abbreviations": {
+        "zh-CN": "静子",
+        "en": "Shizuko",
+        "ja": "シズコ",
+        "ko": "시즈코"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_izuna_kuda",
+      "translations": {
+        "en": "Kuda Izuna",
+        "zh-CN": "久田伊树菜",
+        "ja": "久田イズナ",
+        "ko": "쿠다 이즈나"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Allied Hyakkiyako Academy, Ninjutsu Research Club."
+      },
+      "abbreviations": {
+        "zh-CN": "伊树菜",
+        "en": "Izuna",
+        "ja": "イズナ",
+        "ko": "이즈나"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_michiru_chidori",
+      "translations": {
+        "en": "Chidori Michiru",
+        "zh-CN": "千鸟三千留",
+        "ja": "千鳥ミチル",
+        "ko": "치도리 미치루"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Allied Hyakkiyako Academy, Ninjutsu Research Club."
+      },
+      "abbreviations": {
+        "zh-CN": "三千留",
+        "en": "Michiru",
+        "ja": "ミチル",
+        "ko": "미치루"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_tsukuyo_ono",
+      "translations": {
+        "en": "Ono Tsukuyo",
+        "zh-CN": "大野月夜",
+        "ja": "大野ツクヨ",
+        "ko": "오오노 츠쿠요"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Allied Hyakkiyako Academy, Ninjutsu Research Club."
+      },
+      "abbreviations": {
+        "zh-CN": "月夜",
+        "en": "Tsukuyo",
+        "ja": "ツクヨ",
+        "ko": "츠쿠요"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_shun_sunohara",
+      "translations": {
+        "en": "Sunohara Shun",
+        "zh-CN": "春原旬",
+        "ja": "春原シュン",
+        "ko": "스노하라 슌"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Shanhaijing Senior High School, Plum Blossom Garden."
+      },
+      "abbreviations": {
+        "zh-CN": "旬",
+        "en": "Shun",
+        "ja": "シュン",
+        "ko": "슌"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_kokona_sunohara",
+      "translations": {
+        "en": "Sunohara Kokona",
+        "zh-CN": "春原心奈",
+        "ja": "春原ココナ",
+        "ko": "스노하라 코코나"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Shanhaijing Senior High School, Plum Blossom Garden."
+      },
+      "abbreviations": {
+        "zh-CN": "心奈",
+        "en": "Kokona",
+        "ja": "ココナ",
+        "ko": "코코나"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_saya_yakushi",
+      "translations": {
+        "en": "Yakushi Saya",
+        "zh-CN": "药子沙耶",
+        "ja": "薬子サヤ",
+        "ko": "야쿠시 사야"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Shanhaijing Senior High School, Eastern Alchemy Society."
+      },
+      "abbreviations": {
+        "zh-CN": "沙耶",
+        "en": "Saya",
+        "ja": "サヤ",
+        "ko": "사야"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_rumi_akeshiro",
+      "translations": {
+        "en": "Akeshiro Rumi",
+        "zh-CN": "朱城瑠美",
+        "ja": "朱城ルミ",
+        "ko": "아케시로 루미"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Shanhaijing Senior High School, Black Tortoise Promenade."
+      },
+      "abbreviations": {
+        "zh-CN": "瑠美",
+        "en": "Rumi",
+        "ja": "ルミ",
+        "ko": "루미"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_mina_konoe",
+      "translations": {
+        "en": "Konoe Mina",
+        "zh-CN": "近卫美奈",
+        "ja": "近衛ミナ",
+        "ko": "코노에 미나"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Shanhaijing Senior High School, Genryumon."
+      },
+      "abbreviations": {
+        "zh-CN": "美奈",
+        "en": "Mina",
+        "ja": "ミナ",
+        "ko": "미나"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_kirino_nakatsukasa",
+      "translations": {
+        "en": "Nakatsukasa Kirino",
+        "zh-CN": "中务桐乃",
+        "ja": "中務キリノ",
+        "ko": "나카츠카사 키리노"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Valkyrie Police School, Public Safety Bureau."
+      },
+      "abbreviations": {
+        "zh-CN": "桐乃",
+        "en": "Kirino",
+        "ja": "キリノ",
+        "ko": "키리노"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_kanna_ogata",
+      "translations": {
+        "en": "Ogata Kanna",
+        "zh-CN": "尾刃官奈",
+        "ja": "尾刃カンナ",
+        "ko": "오가타 칸나"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Valkyrie Police School, Public Safety Bureau."
+      },
+      "abbreviations": {
+        "zh-CN": "官奈",
+        "en": "Kanna",
+        "ja": "カンナ",
+        "ko": "칸나"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_miyako_tsukiyuki",
+      "translations": {
+        "en": "Tsukiyuki Miyako",
+        "zh-CN": "月雪宫子",
+        "ja": "月雪ミヤコ",
+        "ko": "츠키유키 미야코"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "SRT Special Academy, RABBIT Squad."
+      },
+      "abbreviations": {
+        "zh-CN": "宫子",
+        "en": "Miyako",
+        "ja": "ミヤコ",
+        "ko": "미야코"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_saki_sorai",
+      "translations": {
+        "en": "Sorai Saki",
+        "zh-CN": "空井咲",
+        "ja": "空井サキ",
+        "ko": "소라이 사키"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "SRT Special Academy, RABBIT Squad."
+      },
+      "abbreviations": {
+        "zh-CN": "咲",
+        "en": "Saki",
+        "ja": "サキ",
+        "ko": "사키"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_moe_kazekura",
+      "translations": {
+        "en": "Kazekura Moe",
+        "zh-CN": "风仓萌绘",
+        "ja": "風倉モエ",
+        "ko": "카제쿠라 모에"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "SRT Special Academy, RABBIT Squad."
+      },
+      "abbreviations": {
+        "zh-CN": "萌绘",
+        "en": "Moe",
+        "ja": "モエ",
+        "ko": "모에"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_miyu_kasumizawa",
+      "translations": {
+        "en": "Kasumizawa Miyu",
+        "zh-CN": "霞泽美游",
+        "ja": "霞沢ミユ",
+        "ko": "카스미자와 미유"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "SRT Special Academy, RABBIT Squad."
+      },
+      "abbreviations": {
+        "zh-CN": "美游",
+        "en": "Miyu",
+        "ja": "ミユ",
+        "ko": "미유"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_neru_mikamo",
+      "translations": {
+        "en": "Mikamo Neru",
+        "zh-CN": "美甘宁瑠",
+        "ja": "美甘ネル",
+        "ko": "미카모 네루"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Millennium Science School, C&C."
+      },
+      "abbreviations": {
+        "zh-CN": "宁瑠",
+        "en": "Neru",
+        "ja": "ネル",
+        "ko": "네루"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_karin_kakudate",
+      "translations": {
+        "en": "Kakudate Karin",
+        "zh-CN": "角楯花梨",
+        "ja": "角楯カリン",
+        "ko": "카쿠다테 카린"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Millennium Science School, C&C."
+      },
+      "abbreviations": {
+        "zh-CN": "花梨",
+        "en": "Karin",
+        "ja": "カリン",
+        "ko": "카린"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_asuna_ichinose",
+      "translations": {
+        "en": "Ichinose Asuna",
+        "zh-CN": "一之濑明日奈",
+        "ja": "一ノ瀬アスナ",
+        "ko": "이치노세 아스나"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Millennium Science School, C&C."
+      },
+      "abbreviations": {
+        "zh-CN": "明日奈",
+        "en": "Asuna",
+        "ja": "アスナ",
+        "ko": "아스나"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_akane_murokasa",
+      "translations": {
+        "en": "Murokasa Akane",
+        "zh-CN": "室笠朱音",
+        "ja": "室笠アカネ",
+        "ko": "무로카사 아카네"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Millennium Science School, C&C."
+      },
+      "abbreviations": {
+        "zh-CN": "朱音",
+        "en": "Akane",
+        "ja": "アカネ",
+        "ko": "아카네"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_hiori_totsuka",
+      "translations": {
+        "en": "Totsuka Hiori",
+        "zh-CN": "户坂日和",
+        "ja": "戸坂ヒオリ",
+        "ko": "토츠카 히오리"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Arius Branch School, Arius Squad."
+      },
+      "abbreviations": {
+        "zh-CN": "日和",
+        "en": "Hiori",
+        "ja": "ヒオリ",
+        "ko": "히오리"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_wakamo_kosaka",
+      "translations": {
+        "en": "Kosaka Wakamo",
+        "zh-CN": "狐坂若藻",
+        "ja": "狐坂ワカモ",
+        "ko": "코사카 와카모"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Hyakkiyako Alliance Academy, one of the Seven Prisoners."
+      },
+      "abbreviations": {
+        "zh-CN": "若藻",
+        "en": "Wakamo",
+        "ja": "ワカモ",
+        "ko": "와카모"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_serina_sumi",
+      "translations": {
+        "en": "Sumi Serina",
+        "zh-CN": "鹫见芹奈",
+        "ja": "鷲見セリナ",
+        "ko": "스미 세리나"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Trinity General School, The Remedial Knights."
+      },
+      "abbreviations": {
+        "zh-CN": "芹奈",
+        "en": "Serina",
+        "ja": "セリナ",
+        "ko": "세리나"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_hanae_asagao",
+      "translations": {
+        "en": "Asagao Hanae",
+        "zh-CN": "朝颜花绘",
+        "ja": "朝顔ハナエ",
+        "ko": "아사가오 하나에"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Trinity General School, The Remedial Knights."
+      },
+      "abbreviations": {
+        "zh-CN": "花绘",
+        "en": "Hanae",
+        "ja": "ハナエ",
+        "ko": "하나에"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_char_kisaki_ryuuge",
+      "translations": {
+        "en": "Ryuuge Kisaki",
+        "zh-CN": "龙华妃姬",
+        "ja": "竜華キサキ",
+        "ko": "류우게 키사키"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Shanhaijing Senior High School, Genryumon's President."
+      },
+      "abbreviations": {
+        "zh-CN": "妃姬",
+        "en": "Kisaki",
+        "ja": "キサキ",
+        "ko": "키사키"
+      },
+      "variants": {}
+    },
+    {
+      "id": "ba_mod_concept_ark_of_atrahasis",
+      "translations": {
+        "en": "Ark of Atrahasis",
+        "zh-CN": "阿特拉哈西斯的方舟",
+        "ja": "アトラ・ハシースの箱舟",
+        "ko": "아트라하시스의 방주"
+      },
+      "metadata": {
+        "category": "concept",
+        "part_of_speech": "Proper Noun",
+        "remarks": "A key location or superweapon in the story, referenced in a modifier. The name refers to the hero of the Akkadian flood myth."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_mod_concept_project_cradle",
+      "translations": {
+        "en": "Project Cradle",
+        "zh-CN": "摇篮计划",
+        "ja": "プロジェクト・クレードル",
+        "ko": "프로젝트 크레이들"
+      },
+      "metadata": {
+        "category": "concept",
+        "part_of_speech": "Proper Noun",
+        "remarks": "A mod-specific project name mentioned in a modifier. JA/KO translations are contextual."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_mod_concept_agnus_dei",
+      "translations": {
+        "en": "Agnus Dei",
+        "zh-CN": "Agnus Dei",
+        "ja": "アグヌス・デイ",
+        "ko": "아뉴스 데이"
+      },
+      "metadata": {
+        "category": "concept",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Latin for 'Lamb of God'. A mod-specific modifier name."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_mod_concept_gloria_parti",
+      "translations": {
+        "en": "Gloria Parti",
+        "zh-CN": "Gloria Parti",
+        "ja": "グロリア・パルティ",
+        "ko": "글로리아 파르티"
+      },
+      "metadata": {
+        "category": "concept",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Latin for 'Glory to the Father'. A mod-specific modifier name."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_mod_pop_club_members",
+      "translations": {
+        "en": "Kivotos Club Members",
+        "zh-CN": "基沃托斯社团部员",
+        "ja": "キヴォトス部員",
+        "ko": "키보토스 동아리 부원"
+      },
+      "metadata": {
+        "category": "unit",
+        "part_of_speech": "Noun Phrase",
+        "remarks": "Mod-specific pop job that produces research. JA/KO translations are contextual."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_mod_pop_suburban_laborers",
+      "translations": {
+        "en": "Kivotos Suburban Laborers",
+        "zh-CN": "基沃托斯城郊劳工",
+        "ja": "キヴォトス郊外労働者",
+        "ko": "키보토스 교외 노동자"
+      },
+      "metadata": {
+        "category": "unit",
+        "part_of_speech": "Noun Phrase",
+        "remarks": "Mod-specific pop job that produces basic resources (Energy, Minerals, Food). JA/KO translations are contextual."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_mod_pop_industrial_technician",
+      "translations": {
+        "en": "Kivotos Industrial Technician",
+        "zh-CN": "基沃托斯工业技师",
+        "ja": "キヴォトス工業技術者",
+        "ko": "키보토스 공업 기술자"
+      },
+      "metadata": {
+        "category": "unit",
+        "part_of_speech": "Noun Phrase",
+        "remarks": "Mod-specific pop job related to industrial output. JA/KO translations are contextual."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_mod_concept_school_idea",
+      "translations": {
+        "en": "School Idea",
+        "zh-CN": "学园理念",
+        "ja": "学園理念",
+        "ko": "학원 이념"
+      },
+      "metadata": {
+        "category": "concept",
+        "part_of_speech": "Noun Phrase",
+        "remarks": "A core mod-specific mechanic representing a school's unique philosophy or policy. JA/KO translations are contextual."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_club_genryumon",
+      "translations": {
+        "en": "Genryumon",
+        "zh-CN": "玄龙门",
+        "ja": "玄龍門",
+        "ko": "현룡문"
+      },
+      "metadata": {
+        "category": "club",
+        "part_of_speech": "Proper Noun",
+        "remarks": "Shanhaijing's student council, led by Ryuuge Kisaki."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_club_plum_blossom_garden",
+      "translations": {
+        "en": "Plum Blossom Garden",
+        "zh-CN": "梅花园",
+        "ja": "梅花園",
+        "ko": "매화원"
+      },
+      "metadata": {
+        "category": "club",
+        "part_of_speech": "Proper Noun",
+        "remarks": "An organization in Shanhaijing that provides child care and education, led by Sunohara Shun."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_club_black_tortoise_promenade",
+      "translations": {
+        "en": "Black Tortoise Promenade",
+        "zh-CN": "玄武商会",
+        "ja": "玄武商会",
+        "ko": "현무상회"
+      },
+      "metadata": {
+        "category": "club",
+        "part_of_speech": "Proper Noun",
+        "remarks": "A merchant federation in Shanhaijing, led by Akeshiro Rumi."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_mod_concept_dream_of_the_whale",
+      "translations": {
+        "en": "Dream of the Whale",
+        "zh-CN": "蓝鲸之梦",
+        "ja": "クジラの夢",
+        "ko": "고래의 꿈"
+      },
+      "metadata": {
+        "category": "concept",
+        "part_of_speech": "Proper Noun",
+        "remarks": "A mod-specific event chain and trait related to Takanashi Hoshino. JA/KO translations are contextual."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_character_touru_shiroishi",
+      "translations": {
+        "en": "Touru Shiroishi",
+        "zh-CN": "白石透",
+        "ja": "白石トオル",
+        "ko": "시라이시 토오루"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "A mod-specific original character, the antagonist of the 'Mining Incident' event chain."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_easter_egg_kangel",
+      "translations": {
+        "en": "KAngel",
+        "zh-CN": "超天酱",
+        "ja": "超てんちゃん",
+        "ko": "초텐쨩"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "An easter egg character referencing the protagonist from the game 'Needy Streamer Overload'."
+      },
+      "abbreviations": {},
+      "variants": {
+        "en": [
+          "Super Cute Angel Chan"
+        ]
+      }
+    },
+    {
+      "id": "ba_combat_type_explosion",
+      "translations": {
+        "en": "Explosive",
+        "zh-CN": "爆发",
+        "ja": "爆発",
+        "ko": "폭발"
+      },
+      "metadata": {
+        "category": "combat_type",
+        "part_of_speech": "Adjective",
+        "remarks": "Attack type effective against Light Armour."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_combat_type_piercing",
+      "translations": {
+        "en": "Piercing",
+        "zh-CN": "贯通",
+        "ja": "貫通",
+        "ko": "관통"
+      },
+      "metadata": {
+        "category": "combat_type",
+        "part_of_speech": "Adjective",
+        "remarks": "Attack type effective against Heavy Armour."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_combat_type_mystic",
+      "translations": {
+        "en": "Mystic",
+        "zh-CN": "神秘",
+        "ja": "神秘",
+        "ko": "신비"
+      },
+      "metadata": {
+        "category": "combat_type",
+        "part_of_speech": "Adjective",
+        "remarks": "Attack type effective against Special Armour."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_armor_type_light",
+      "translations": {
+        "en": "Light Armour",
+        "zh-CN": "轻甲",
+        "ja": "軽装備",
+        "ko": "경장갑"
+      },
+      "metadata": {
+        "category": "combat_type",
+        "part_of_speech": "Noun Phrase",
+        "remarks": "Armour type weak against Explosive attacks."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_armor_type_heavy",
+      "translations": {
+        "en": "Heavy Armour",
+        "zh-CN": "重甲",
+        "ja": "重装甲",
+        "ko": "중장갑"
+      },
+      "metadata": {
+        "category": "combat_type",
+        "part_of_speech": "Noun Phrase",
+        "remarks": "Armour type weak against Piercing attacks."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_armor_type_special",
+      "translations": {
+        "en": "Special Armour",
+        "zh-CN": "特殊装甲",
+        "ja": "特殊装甲",
+        "ko": "특수장갑"
+      },
+      "metadata": {
+        "category": "combat_type",
+        "part_of_speech": "Noun Phrase",
+        "remarks": "Armour type weak against Mystic attacks."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_boss_binah",
+      "translations": {
+        "en": "Binah",
+        "zh-CN": "比纳",
+        "ja": "ビナー",
+        "ko": "비나"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "A Total Assault Boss."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_boss_chesed",
+      "translations": {
+        "en": "Chesed",
+        "zh-CN": "切赛德",
+        "ja": "ケセド",
+        "ko": "케세드"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "A Total Assault Boss."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_boss_hieronymus",
+      "translations": {
+        "en": "Hieronymus",
+        "zh-CN": "耶罗尼米斯",
+        "ja": "ヒエロニムス",
+        "ko": "헤로니무스"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "A Total Assault Boss."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_boss_perorozilla",
+      "translations": {
+        "en": "Perorozilla",
+        "zh-CN": "佩罗罗斯拉",
+        "ja": "ペロロジラ",
+        "ko": "페로로질라"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "A Total Assault Boss, a giant version of Peroro."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_club_rabbit_squad",
+      "translations": {
+        "en": "RABBIT Squad",
+        "zh-CN": "Rabbit小队",
+        "ja": "RABBIT小隊",
+        "ko": "RABBIT 소대"
+      },
+      "metadata": {
+        "category": "club",
+        "part_of_speech": "Proper Noun",
+        "remarks": "A squad of four students from the now-defunct SRT Special Academy."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_mod_event_caerbannog_rabbit",
+      "translations": {
+        "en": "Rabbit of Caerbannog",
+        "zh-CN": "Caerbannog之兔",
+        "ja": "カーバノグの兎",
+        "ko": "카르바노그의 토끼"
+      },
+      "metadata": {
+        "category": "concept",
+        "part_of_speech": "Proper Noun",
+        "remarks": "The name of the event chain for the RABBIT Squad raid. This is a reference to a creature from the film 'Monty Python and the Holy Grail'."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_org_gsc_defense_bureau",
+      "translations": {
+        "en": "GSC Defense Bureau",
+        "zh-CN": "联邦学生会保卫科",
+        "ja": "連邦生徒会防衛室",
+        "ko": "연방학생회 방위실"
+      },
+      "metadata": {
+        "category": "organization",
+        "part_of_speech": "Proper Noun",
+        "remarks": "The department within the General Student Council responsible for issuing the SRT school closure order."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_character_bing_chan",
+      "translations": {
+        "en": "Bing-chan",
+        "zh-CN": "饼酱",
+        "ja": "パンケーキちゃん",
+        "ko": "팬케이크짱"
+      },
+      "metadata": {
+        "category": "character",
+        "part_of_speech": "Proper Noun",
+        "remarks": "A sentient pancake monster created by Juri's cooking during a crisis event. JA/KO translations are contextual ('Pancake-chan')."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_species_kivotos_student",
+      "translations": {
+        "en": "Kivotos Student",
+        "zh-CN": "基沃托斯学生",
+        "ja": "キヴォトスの生徒",
+        "ko": "키보토스 학생"
+      },
+      "metadata": {
+        "category": "species",
+        "part_of_speech": "Proper Noun",
+        "remarks": "The primary species name for the player's empire in the mod."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_species_girlybot",
+      "translations": {
+        "en": "Girlybot",
+        "zh-CN": "姬器人",
+        "ja": "ヒメボット",
+        "ko": "히메로봇"
+      },
+      "metadata": {
+        "category": "species",
+        "part_of_speech": "Noun",
+        "remarks": "A robotic species type within the mod, a pun on 'Hime' (Princess) and robot. JA/KO translations are contextual."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_mod_gov_collective_will",
+      "translations": {
+        "en": "Collective Will Federation",
+        "zh-CN": "团体意志联合体",
+        "ja": "団体意志連合体",
+        "ko": "단체 의지 연합체"
+      },
+      "metadata": {
+        "category": "government",
+        "part_of_speech": "Proper Noun",
+        "remarks": "A unique government type for the Kivotos civilization in the mod. JA/KO translations are contextual."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_mod_personality_vanguard_resistors",
+      "translations": {
+        "en": "Vanguard Resistors",
+        "zh-CN": "先驱反抗者",
+        "ja": "先駆の抵抗者",
+        "ko": "선구적인 저항자"
+      },
+      "metadata": {
+        "category": "faction",
+        "part_of_speech": "Proper Noun",
+        "remarks": "A personality for a Fallen Empire in the mod. JA/KO translations are contextual."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_mod_anomaly_danger_signal",
+      "translations": {
+        "en": "Dangerous Signal",
+        "zh-CN": "危险信号",
+        "ja": "危険信号",
+        "ko": "위험 신호"
+      },
+      "metadata": {
+        "category": "concept",
+        "part_of_speech": "Noun Phrase",
+        "remarks": "A mod-specific anomaly type. JA/KO translations are contextual."
+      },
+      "abbreviations": {},
+      "variants": {}
+    },
+    {
+      "id": "ba_mod_arcsite_pioneer_battlefield",
+      "translations": {
+        "en": "Pioneer Battlefield",
+        "zh-CN": "先驱战场",
+        "ja": "先駆の戦場",
+        "ko": "선구자 전쟁터"
+      },
+      "metadata": {
+        "category": "location",
+        "part_of_speech": "Proper Noun",
+        "remarks": "A mod-specific archaeological site. JA/KO translations are contextual."
+      },
+      "abbreviations": {},
+      "variants": {}
+    }
+  ]
+}
