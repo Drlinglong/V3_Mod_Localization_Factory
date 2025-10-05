@@ -44,13 +44,13 @@ class GeminiCLIHandler:
                 timeout=10
             )
             if result.returncode == 0:
-                logger.info(f"Gemini CLI 可用: {result.stdout.strip()}")
+                logger.info(i18n.t("gemini_cli_available", version=result.stdout.strip()))
             else:
-                logger.warning(f"Gemini CLI 版本检查失败: {result.stderr}")
+                logger.warning(i18n.t("gemini_cli_version_check_failed", error=result.stderr))
         except FileNotFoundError:
-            raise Exception(f"Gemini CLI 未找到，请确保已安装: {self.cli_path}")
+            raise Exception(i18n.t("gemini_cli_not_found", cli_path=self.cli_path))
         except subprocess.TimeoutExpired:
-            raise Exception("Gemini CLI 响应超时，请检查安装状态")
+            raise Exception(i18n.t("gemini_cli_timeout"))
     
     def _execute_prompt(self, prompt: str) -> str:
         """执行单个prompt并返回结果"""
@@ -136,18 +136,18 @@ class GeminiCLIHandler:
                     'success': True
                 })
                 
-                logger.info(f"CLI翻译成功，耗时 {elapsed_time:.2f}秒")
+                logger.info(i18n.t("gemini_cli_translation_success", elapsed_time=elapsed_time))
                 return translated_text
             else:
-                error_msg = f"CLI调用失败: {result.stderr}"
+                error_msg = i18n.t("gemini_cli_call_failed", error=result.stderr)
                 logger.error(error_msg)
                 raise Exception(error_msg)
                 
         except subprocess.TimeoutExpired:
-            logger.error("CLI调用超时")
-            raise Exception("CLI调用超时")
+            logger.error(i18n.t("gemini_cli_call_timeout"))
+            raise Exception(i18n.t("gemini_cli_call_timeout"))
         except Exception as e:
-            logger.error(f"CLI翻译异常: {str(e)}")
+            logger.error(i18n.t("gemini_cli_translation_exception", error=str(e)))
             raise
 
     def _execute_batch_prompt(self, prompt: str, expected_count: int) -> List[str]:
@@ -299,18 +299,18 @@ class GeminiCLIHandler:
                     'count': len(translated_texts)
                 })
                 
-                logger.info(f"CLI批量翻译成功，耗时 {elapsed_time:.2f}秒")
+                logger.info(i18n.t("gemini_cli_batch_success", elapsed_time=elapsed_time))
                 return translated_texts
             else:
-                error_msg = f"CLI调用失败: {result.stderr}"
+                error_msg = i18n.t("gemini_cli_call_failed", error=result.stderr)
                 logger.error(error_msg)
                 raise Exception(error_msg)
                 
         except subprocess.TimeoutExpired:
-            logger.error("CLI调用超时")
-            raise Exception("CLI调用超时")
+            logger.error(i18n.t("gemini_cli_call_timeout"))
+            raise Exception(i18n.t("gemini_cli_call_timeout"))
         except Exception as e:
-            logger.error(f"CLI批量翻译异常: {str(e)}")
+            logger.error(i18n.t("gemini_cli_batch_exception", error=str(e)))
             raise
 
     def _parse_response(self, response: str) -> str:
@@ -322,7 +322,7 @@ class GeminiCLIHandler:
             # 检查是否有错误
             if 'error' in response_data:
                 error_msg = response_data['error'].get('message', 'Unknown error')
-                raise Exception(f"CLI返回错误: {error_msg}")
+                raise Exception(i18n.t("gemini_cli_return_error", error=error_msg))
             
             # 检查是否有候选响应
             if 'stats' in response_data and 'models' in response_data['stats']:
@@ -331,15 +331,15 @@ class GeminiCLIHandler:
                     if 'tokens' in model_stats and model_stats['tokens'].get('candidates', 0) == 0:
                         # 【增强调试】如果因为安全设置等原因被阻止，提供更详细的错误
                         finish_reason = response_data.get('finishReason', '未知')
-                        error_message = f"Gemini模型 {model_name} 没有生成任何候选响应 (candidates: 0)。"
-                        error_message += f" 终止原因: {finish_reason}。"
+                        error_message = i18n.t("gemini_cli_no_candidates", model_name=model_name)
+                        error_message += i18n.t("gemini_cli_finish_reason", finish_reason=finish_reason)
                         
                         if finish_reason == 'SAFETY':
                             safety_ratings = response_data.get('safetyRatings', [])
-                            error_message += f" 安全评级: {safety_ratings}。"
-                            logger.error("🚨 Gemini API因安全设置拒绝响应。请检查输入文本中是否包含敏感词汇。")
+                            error_message += i18n.t("gemini_cli_safety_ratings", safety_ratings=safety_ratings)
+                            logger.error(i18n.t("gemini_cli_safety_warning"))
                         
-                        error_message += " 这可能是因为prompt过长或内容触发了安全限制。"
+                        error_message += i18n.t("gemini_cli_prompt_too_long")
                         
                         logger.error(error_message)
                         raise Exception(error_message)
@@ -348,14 +348,14 @@ class GeminiCLIHandler:
             if 'response' in response_data:
                 response_text = response_data['response'].strip()
                 if response_text == "?????" or len(response_text) < 2:
-                    raise Exception("CLI返回了无效的响应内容")
+                    raise Exception(i18n.t("gemini_cli_invalid_response"))
                 return response_text
             else:
-                raise Exception("CLI响应格式异常：缺少response字段")
+                raise Exception(i18n.t("gemini_cli_response_format_error"))
                 
         except json.JSONDecodeError:
             # 如果不是JSON格式，回退到文本解析
-            logger.warning("CLI响应不是JSON格式，尝试文本解析")
+            logger.warning(i18n.t("gemini_cli_not_json"))
             lines = response.strip().split('\n')
             
             # 查找翻译结果（通常在最后几行）
@@ -381,7 +381,7 @@ class GeminiCLIHandler:
             if 'error' in response_data:
                 error_msg = response_data['error'].get('message', 'Unknown error')
                 logger.error(f"CLI返回错误: {error_msg}")
-                raise Exception(f"CLI返回错误: {error_msg}")
+                raise Exception(i18n.t("gemini_cli_return_error", error=error_msg))
             
             # 检查是否有候选响应
             if 'stats' in response_data and 'models' in response_data['stats']:
@@ -390,15 +390,15 @@ class GeminiCLIHandler:
                     if 'tokens' in model_stats and model_stats['tokens'].get('candidates', 0) == 0:
                         # 【增强调试】如果因为安全设置等原因被阻止，提供更详细的错误
                         finish_reason = response_data.get('finishReason', '未知')
-                        error_message = f"Gemini模型 {model_name} 没有生成任何候选响应 (candidates: 0)。"
-                        error_message += f" 终止原因: {finish_reason}。"
+                        error_message = i18n.t("gemini_cli_no_candidates", model_name=model_name)
+                        error_message += i18n.t("gemini_cli_finish_reason", finish_reason=finish_reason)
                         
                         if finish_reason == 'SAFETY':
                             safety_ratings = response_data.get('safetyRatings', [])
-                            error_message += f" 安全评级: {safety_ratings}。"
-                            logger.error("🚨 Gemini API因安全设置拒绝响应。请检查输入文本中是否包含敏感词汇。")
+                            error_message += i18n.t("gemini_cli_safety_ratings", safety_ratings=safety_ratings)
+                            logger.error(i18n.t("gemini_cli_safety_warning"))
                         
-                        error_message += " 这可能是因为prompt过长或内容触发了安全限制。"
+                        error_message += i18n.t("gemini_cli_prompt_too_long")
                         
                         logger.error(error_message)
                         raise Exception(error_message)
@@ -437,7 +437,7 @@ class GeminiCLIHandler:
                 elif len(translations) > 0:
                     # 【升级报错信息】显示具体哪一行出现问题
                     missing_count = expected_count - len(translations)
-                    logger.warning(f"批量翻译解析不完整，期望{expected_count}个，实际得到{len(translations)}个")
+                    logger.warning(i18n.t("gemini_cli_batch_incomplete", expected_count=expected_count, actual_count=len(translations)))
                     
                     # 分析缺失的行号
                     found_numbers = []
@@ -453,10 +453,10 @@ class GeminiCLIHandler:
                         missing_numbers = [num for num in expected_numbers if num not in found_numbers]
                         
                         if missing_numbers:
-                            logger.warning(f"缺失的翻译行号: {missing_numbers}")
-                            logger.warning(f"找到的翻译行号: {found_numbers}")
+                            logger.warning(i18n.t("gemini_cli_missing_lines", missing_numbers=missing_numbers))
+                            logger.warning(i18n.t("gemini_cli_found_lines", found_numbers=found_numbers))
                         else:
-                            logger.warning("🚨 批量翻译解析问题：行号完整但内容解析失败")
+                            logger.warning(i18n.t("gemini_cli_parse_problem"))
                             
                             # 【重新设计】更直观的问题诊断
                             empty_lines = []
@@ -479,22 +479,22 @@ class GeminiCLIHandler:
                             
                             # 输出分类的问题报告
                             if empty_lines:
-                                logger.warning(f"❌ 空内容行: {empty_lines} (Gemini返回了编号但没有翻译内容)")
+                                logger.warning(i18n.t("gemini_cli_empty_content", empty_lines=empty_lines))
                             
                             if invalid_lines:
-                                logger.warning(f"⚠️  无效内容行: {invalid_lines} (Gemini返回了占位符而非真实翻译)")
+                                logger.warning(i18n.t("gemini_cli_invalid_content", invalid_lines=invalid_lines))
                             
                             if short_lines:
-                                logger.warning(f"📝 内容过短行: {short_lines} (翻译内容少于2个字符)")
+                                logger.warning(i18n.t("gemini_cli_short_content", short_lines=short_lines))
                             
                             # 提供解决建议
                             total_problems = len(empty_lines) + len(invalid_lines) + len(short_lines)
                             if total_problems > 0:
-                                logger.warning(f"💡 建议: 这{total_problems}个问题行将被填充为空字符串，翻译将继续进行")
-                                logger.warning(f"💡 如需查看原始响应，可临时启用调试日志")
+                                logger.warning(i18n.t("gemini_cli_suggestion", total_problems=total_problems))
+                                logger.warning(i18n.t("gemini_cli_debug_suggestion"))
                                 
                                 # 【问题定位】尝试找出导致问题的具体行
-                                logger.warning("🔍 开始问题定位分析...")
+                                logger.warning(i18n.t("gemini_cli_problem_analysis"))
                                 self._analyze_problematic_content(lines, empty_lines, invalid_lines, short_lines)
                     
                     # 用原文填充缺失的翻译
@@ -502,13 +502,13 @@ class GeminiCLIHandler:
                         translations.append("")  # 或者使用原文
                     return translations[:expected_count]
                 else:
-                    logger.warning("批量翻译解析失败，尝试备用解析方法")
-                    raise Exception("批量翻译解析失败")
+                    logger.warning(i18n.t("gemini_cli_parse_failed"))
+                    raise Exception(i18n.t("gemini_cli_parse_failed_exception"))
             else:
-                raise Exception("CLI响应格式异常：缺少response字段")
+                raise Exception(i18n.t("gemini_cli_response_format_error"))
                 
         except json.JSONDecodeError:
-            logger.warning("CLI响应不是JSON格式，尝试文本解析")
+            logger.warning(i18n.t("gemini_cli_not_json"))
             lines = response.strip().split('\n')
             
             # 查找翻译结果（通常在最后几行）
@@ -527,7 +527,7 @@ class GeminiCLIHandler:
                 # logger.info(f"备用解析方法找到 {len(translations)} 个可能的翻译")  # 已注释，减少日志噪音
                 return translations[:expected_count]
             else:
-                raise Exception("无法解析CLI响应")
+                raise Exception(i18n.t("gemini_cli_cannot_parse"))
 
     def _analyze_problematic_content(self, lines, empty_lines, invalid_lines, short_lines):
         """分析问题内容，尝试找出导致翻译失败的具体原因"""
@@ -540,7 +540,7 @@ class GeminiCLIHandler:
             if not all_problem_lines:
                 return
             
-            logger.warning(f"🎯 分析 {len(all_problem_lines)} 个问题行...")
+            logger.warning(i18n.t("gemini_cli_analyze_lines", count=len(all_problem_lines)))
             
             # 分析问题行的特征
             suspicious_patterns = []
@@ -557,50 +557,50 @@ class GeminiCLIHandler:
                             
                             # 分析问题特征
                             if line_num in empty_lines:
-                                suspicious_patterns.append(f"行{line_num}: 完全空内容")
+                                suspicious_patterns.append(i18n.t("gemini_cli_empty_line", line_num=line_num))
                             elif line_num in [ln for ln, _ in invalid_lines]:
                                 invalid_content = next(content for ln, content in invalid_lines if ln == line_num)
                                 if invalid_content == 'WARNING: Source localization entry is incomplete':
-                                    suspicious_patterns.append(f"行{line_num}: 源文件不完整 (作者未完成该行翻译)")
+                                    suspicious_patterns.append(i18n.t("gemini_cli_incomplete_line", line_num=line_num))
                                 else:
-                                    suspicious_patterns.append(f"行{line_num}: 无效占位符 '{invalid_content}'")
+                                    suspicious_patterns.append(i18n.t("gemini_cli_invalid_placeholder", line_num=line_num, invalid_content=invalid_content))
                             elif line_num in [ln for ln, _ in short_lines]:
                                 short_content = next(content for ln, content in short_lines if ln == line_num)
-                                suspicious_patterns.append(f"行{line_num}: 内容过短 '{short_content}'")
+                                suspicious_patterns.append(i18n.t("gemini_cli_short_line", line_num=line_num, short_content=short_content))
                             break
             
             # 输出分析结果
             if suspicious_patterns:
-                logger.warning("📋 问题行详细分析:")
+                logger.warning(i18n.t("gemini_cli_problem_details"))
                 for pattern in suspicious_patterns[:10]:  # 只显示前10个
                     logger.warning(f"   {pattern}")
                 if len(suspicious_patterns) > 10:
-                    logger.warning(f"   ... 还有 {len(suspicious_patterns) - 10} 个问题行")
+                    logger.warning(i18n.t("gemini_cli_more_problems", count=len(suspicious_patterns) - 10))
             
             # 提供针对性建议
-            logger.warning("💡 针对性建议:")
+            logger.warning(i18n.t("gemini_cli_suggestions"))
             if empty_lines:
-                logger.warning(f"   - {len(empty_lines)}个空内容行: 可能是Gemini遇到无法翻译的特殊内容")
+                logger.warning(i18n.t("gemini_cli_empty_suggestion", count=len(empty_lines)))
             
             # 分别统计不同类型的无效内容
             warning_lines = [ln for ln, content in invalid_lines if content == 'WARNING: Source localization entry is incomplete']
             other_invalid_lines = [ln for ln, content in invalid_lines if content != 'WARNING: Source localization entry is incomplete']
             
             if warning_lines:
-                logger.warning(f"   - {len(warning_lines)}个源文件不完整行: 作者未完成这些行的翻译，Gemini正确识别并标记")
+                logger.warning(i18n.t("gemini_cli_incomplete_suggestion", count=len(warning_lines)))
             if other_invalid_lines:
-                logger.warning(f"   - {len(other_invalid_lines)}个无效内容行: Gemini返回了占位符，建议检查原始内容")
+                logger.warning(i18n.t("gemini_cli_invalid_suggestion", count=len(other_invalid_lines)))
             if short_lines:
-                logger.warning(f"   - {len(short_lines)}个过短内容行: 可能是单字符或特殊符号")
+                logger.warning(i18n.t("gemini_cli_short_suggestion", count=len(short_lines)))
             
-            logger.warning("🔧 建议解决方案:")
-            logger.warning("   1. 查看自动生成的调试文件，对比原始输入和Gemini响应")
-            logger.warning("   2. 检查问题行对应的原始文本内容")
-            logger.warning("   3. 考虑调整prompt或分批处理策略")
-            logger.warning("   4. 如果问题持续，可以尝试单独翻译问题行")
+            logger.warning(i18n.t("gemini_cli_solutions"))
+            logger.warning(i18n.t("gemini_cli_solution_1"))
+            logger.warning(i18n.t("gemini_cli_solution_2"))
+            logger.warning(i18n.t("gemini_cli_solution_3"))
+            logger.warning(i18n.t("gemini_cli_solution_4"))
             
         except Exception as e:
-            logger.warning(f"问题分析失败: {e}")
+            logger.warning(i18n.t("gemini_cli_analysis_failed", error=e))
 
     def get_usage_stats(self):
         """获取使用统计"""
@@ -689,11 +689,11 @@ def translate_single_text(
         # 清理翻译结果
         cleaned_text = strip_outer_quotes(translated_text)
         
-        logging.info(f"CLI翻译完成: {cleaned_text[:30]}")
+        logging.info(i18n.t("gemini_cli_translation_complete", text=cleaned_text[:30]))
         return cleaned_text
         
     except Exception as e:
-        logging.error(f"CLI翻译失败: {str(e)}")
+        logging.error(i18n.t("gemini_cli_translation_failed", error=str(e)))
         return text  # 返回原文
 
 
@@ -747,6 +747,11 @@ def translate_texts_in_batches(
     logging.info(i18n.t("parallel_processing_end"))
     return all_translated_texts
 
+
+def _translate_chunk(client: GeminiCLIHandler, chunk: list[str], source_lang: dict, target_lang: dict, 
+                    game_profile: dict, mod_context: str, batch_num: int) -> "list[str] | None":
+    """[Worker Function] Translates a single chunk of text using CLI, with retry logic."""
+    return _translate_cli_chunk(client, chunk, source_lang, target_lang, game_profile, mod_context, batch_num)
 
 def _translate_cli_chunk(client: GeminiCLIHandler, chunk: list[str], source_lang: dict, target_lang: dict, 
                         game_profile: dict, mod_context: str, batch_num: int) -> "list[str] | None":

@@ -12,8 +12,8 @@ def load_language(lang_code=None):
     """加载语言文件，如果未指定则使用默认语言。"""
     global _strings, _language_loaded, _current_lang
     
-    # 如果已经加载过语言，直接返回
-    if _language_loaded and _strings:
+    # 如果已经加载过相同的语言，直接返回
+    if _language_loaded and _strings and _current_lang == lang_code:
         return True
     
     if lang_code is None:
@@ -30,9 +30,10 @@ def load_language(lang_code=None):
         _language_loaded = True  # 设置标志
         _current_lang = lang_code  # 设置当前语言
         try:
-            logging.info(i18n.t("language_loaded", lang_code=lang_code))
+            logging.info(t("language_loaded", lang_code=lang_code))
         except:
             logging.info(f"Language loaded: {lang_code}")
+        print(f"Language loaded: {lang_code}")
         return True
     except Exception as e:
         logging.error(f"Error loading language file {lang_file_path}: {e}")

@@ -84,4 +84,24 @@ def translate_single_batch(client, provider_name, texts, source_lang, target_lan
     if not handler:
         logging.error(f"Handler for {provider_name} is not available")
         return None
-    return handler.translate_texts_in_batches(client, provider_name, texts, source_lang, target_lang, game_profile, mod_context)
+    
+    # 直接调用单批次翻译函数，而不是批量翻译函数
+    if hasattr(handler, '_translate_chunk'):
+        return handler._translate_chunk(client, texts, source_lang, target_lang, game_profile, mod_context, 1)
+    else:
+        # 如果没有单批次函数，回退到批量翻译
+        return handler.translate_texts_in_batches(client, provider_name, texts, source_lang, target_lang, game_profile, mod_context)
+
+def translate_single_batch_with_batch_num(client, provider_name, texts, source_lang, target_lang, game_profile, mod_context, batch_num):
+    """调用当前选定API供应商的单批次翻译函数，并传递批次编号。"""
+    handler = get_handler(provider_name)
+    if not handler:
+        logging.error(f"Handler for {provider_name} is not available")
+        return None
+    
+    # 直接调用单批次翻译函数，传递正确的批次编号
+    if hasattr(handler, '_translate_chunk'):
+        return handler._translate_chunk(client, texts, source_lang, target_lang, game_profile, mod_context, batch_num)
+    else:
+        # 如果没有单批次函数，回退到批量翻译
+        return handler.translate_texts_in_batches(client, provider_name, texts, source_lang, target_lang, game_profile, mod_context)

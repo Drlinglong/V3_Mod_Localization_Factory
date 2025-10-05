@@ -185,8 +185,8 @@ def run(mod_name: str,
             processor = ParallelProcessor(max_workers=max_workers)
             
             # 获取翻译函数（使用统一的API Handler接口）
-            # 移除硬编码导入，改为统一接口调用
-            translation_function = api_handler.translate_texts_in_batches
+            # 使用单批次翻译函数，支持批次编号
+            translation_function = api_handler.translate_single_batch_with_batch_num
             
             # 并行处理所有文件，获取翻译结果
             file_results = processor.process_files_parallel(

@@ -93,6 +93,7 @@ class ParallelProcessor:
     def _create_batch_tasks(self, file_tasks: List[FileTask]) -> List[BatchTask]:
         """将所有文件分解为批次任务"""
         batch_tasks = []
+        global_batch_index = 0  # 全局批次索引，确保所有批次编号唯一
         
         for file_task in file_tasks:
             if not file_task.texts_to_translate:
@@ -107,16 +108,18 @@ class ParallelProcessor:
                 start_index = i
                 end_index = min(i + chunk_size, len(texts))
                 batch_texts = texts[start_index:end_index]
-                batch_index = i // chunk_size
+                local_batch_index = i // chunk_size  # 文件内批次索引
                 
                 batch_task = BatchTask(
                     file_task=file_task,
-                    batch_index=batch_index,
+                    batch_index=global_batch_index,  # 使用全局批次索引
                     start_index=start_index,
                     end_index=end_index,
                     texts=batch_texts
                 )
                 batch_tasks.append(batch_task)
+                self.logger.debug(f"Created batch {global_batch_index + 1} for file {file_task.filename} with {len(batch_texts)} texts")
+                global_batch_index += 1  # 递增全局批次索引
         
         return batch_tasks
     
@@ -172,11 +175,12 @@ class ParallelProcessor:
     ) -> Optional[List[str]]:
         """处理单个批次"""
         try:
-            # 导入API handler以使用单批次翻译函数
-            from scripts.core import api_handler
+            # 调试信息：显示批次编号
+            actual_batch_num = batch_task.batch_index + 1
+            self.logger.debug(f"Processing batch {actual_batch_num} for file {batch_task.file_task.filename}")
             
-            # 调用单批次翻译函数
-            translated_texts = api_handler.translate_single_batch(
+            # 使用传入的翻译函数，传递正确的批次编号
+            translated_texts = translation_function(
                 batch_task.file_task.client,
                 batch_task.file_task.provider_name,
                 batch_task.texts,
@@ -184,6 +188,7 @@ class ParallelProcessor:
                 batch_task.file_task.target_lang,
                 batch_task.file_task.game_profile,
                 batch_task.file_task.mod_context,
+                actual_batch_num  # 批次编号从1开始
             )
             
             if translated_texts and len(translated_texts) == len(batch_task.texts):
