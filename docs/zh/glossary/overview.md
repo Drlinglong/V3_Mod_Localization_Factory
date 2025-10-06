@@ -44,6 +44,38 @@ data/glossary/
     └── custom_theme.json      # 自定义主题词典
 ```
 
+### 词典功能概述
+词典系统是项目的核心功能之一，它能够：
+- **自动识别术语**: 在翻译过程中自动扫描文本，识别出游戏相关的专业术语
+- **智能提示注入**: 将相关术语作为高优先级指令注入到AI翻译请求中
+- **确保一致性**: 保证同一术语在不同文件中的翻译完全一致
+- **支持双向翻译**: 无论从哪种语言翻译到哪种语言，都能正确识别和应用术语
+
+### 词典文件结构
+词典文件采用JSON格式，结构如下：
+```json
+{
+  "metadata": {
+    "description": "Victoria 3 游戏及Mod社区汉化词典",
+    "last_updated": "2024-01-01",
+    "sources": ["官方汉化", "社区汉化", "Mod汉化"]
+  },
+  "entries": [
+    {
+      "id": "victoria3_convoy",
+      "translations": {
+        "en": "convoy",
+        "zh-CN": "船队"
+      },
+      "metadata": {
+        "pos": "noun",
+        "remarks": "由港口生产，维持国家船运线路的运转"
+      },
+    }
+  ]
+}
+```
+
 ## 🚀 快速开始
 
 ### 1. 准备术语文件
@@ -71,7 +103,10 @@ python validator.py
 
 ### 4. 部署词典
 将生成的`glossary.json`文件放入对应游戏目录。
-
+- **Victoria 3**: `data/glossary/victoria3/glossary.json`
+- **Stellaris**: `data/glossary/stellaris/glossary.json`
+- **其他游戏**: 可在 `data/glossary/` 下创建对应的游戏文件夹
+- 
 ## 🔍 核心功能特性
 
 ### 智能术语匹配
