@@ -5,7 +5,7 @@
     {
       "name": "non_ascii_in_brackets",
       "check_function": "banned_chars",
-      "pattern": "\[([^]]+)\]",
+      "pattern": "\\[([^\\]]+)\\]",
       "level": "error",
       "message_key": "validation_eu4_brackets_chinese",
       "params": {
@@ -15,7 +15,7 @@
     {
       "name": "non_ascii_in_legacy_vars",
       "check_function": "banned_chars",
-      "pattern": "\\$([^$\\n]+)\\"",
+      "pattern": "\\$([^$\\n]+)\\$",
       "level": "error",
       "message_key": "validation_eu4_legacy_vars_chinese",
       "params": {
@@ -35,7 +35,7 @@
     {
       "name": "non_ascii_in_country_flags",
       "check_function": "banned_chars",
-      "pattern": "@([^\\s]+)",
+      "pattern": "@([^\\\\s]+)",
       "level": "error",
       "message_key": "validation_eu4_country_flags_chinese",
       "params": {

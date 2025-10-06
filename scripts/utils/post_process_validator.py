@@ -1,13 +1,20 @@
 # scripts/utils/post_process_validator.py
 # ---------------------------------------------------------------
 """
-后处理验证器 - 检查AI翻译后的文本格式是否符合游戏要求
+后处理验证器 - 检查AI翻译后的文本格式是否符合游戏要求 (已重构)
 
 这个模块负责在AI翻译完成后，对翻译结果进行格式验证，
 确保所有游戏特定的语法结构都被正确保留。
+
+核心设计：
+- 纯粹的规则引擎，由外部JSON文件驱动。
+- BaseGameValidator 是通用引擎，不包含任何游戏专属逻辑。
+- 子类 (e.g., Victoria3Validator) 仅负责提供其对应的JSON规则文件路径。
+- 所有检查逻辑都由通用的“工人”方法实现。
 """
 
 import re
+import json
 import logging
 from typing import Dict, List, Tuple, Optional, Any, Callable
 from dataclasses import dataclass
@@ -22,9 +29,9 @@ except ImportError:
 
 class ValidationLevel(Enum):
     """验证级别枚举"""
-    INFO = "info"      # 信息性提示
-    WARNING = "warning"  # 警告
-    ERROR = "error"    # 错误
+    INFO = "info"
+    WARNING = "warning"
+    ERROR = "error"
 
 
 @dataclass
@@ -38,985 +45,315 @@ class ValidationResult:
     text_sample: Optional[str] = None
 
 
-@dataclass
-class ValidationRule:
-    """验证规则数据类"""
-    name: str                    # 规则名称
-    pattern: str                 # 正则表达式模式
-    level: ValidationLevel       # 验证级别
-    message: str                 # 错误消息
-    check_function: str          # 检查函数类型 ("banned_chars", "format", 或自定义函数)
-    capture_group: int = 1       # 捕获组索引（默认为1）
-
-
 class BaseGameValidator:
-    """游戏验证器基类 (重构后)"""
+    """
+    游戏验证器基类 (重构为纯粹的规则引擎)。
+    它从一个JSON文件中加载所有验证规则，并根据这些规则动态地执行检查。
+    """
     
-    def __init__(self, game_id: str, game_name: str):
-        self.game_id = game_id
-        self.game_name = game_name
-        self.logger = logging.getLogger(__name__)
-        # 子类需要定义这个rules列表
-        self.rules = self._get_rules()
-
-    def _get_rules(self) -> List[ValidationRule]:
-        """子类应该重写这个方法来提供自己的规则列表"""
-        return []
-
-    def _check_pattern_for_banned_chars(self, text: str, pattern: str, message: str, 
-                                       level: ValidationLevel, line_number: Optional[int], 
-                                       capture_group: int = 1) -> List[ValidationResult]:
+    def __init__(self, rules_path: str):
         """
-        一个可复用的检查器：查找一个模式，并检查其捕获组内是否包含不允许的非ASCII字符。
-        这是一个可以被所有子类共享的"工人"方法。
+        构造函数。
+
+        Args:
+            rules_path (str): 指向该游戏验证规则的JSON文件的路径。
+        """
+        self.logger = logging.getLogger(__name__)
+        self.rules = self._load_rules(rules_path)
+        self.game_name = self.config.get("game_name", "Unknown Game")
+
+        # 将字符串函数名映射到实际的“工人”检查方法
+        self.check_map = {
+            "banned_chars": self._check_banned_chars,
+            "formatting_tags": self._check_formatting_tags,
+            "mismatched_tags": self._check_mismatched_tags,
+            "informational_pattern": self._check_informational_pattern,
+        }
+
+    def _load_rules(self, rules_path: str) -> List[Dict]:
+        """从JSON文件加载和解析规则。"""
+        try:
+            with open(rules_path, 'r', encoding='utf-8') as f:
+                self.config = json.load(f)
+                return self.config.get("rules", [])
+        except FileNotFoundError:
+            self.logger.error(f"规则文件未找到: {rules_path}")
+            return []
+        except json.JSONDecodeError as e:
+            self.logger.error(f"无法解析JSON规则文件: {rules_path}, 错误: {e}")
+            return []
+
+    def _get_i18n_message(self, message_key: str, **kwargs) -> str:
+        """
+        获取国际化消息。如果失败，则直接返回消息键本身。
+        这样可以消除对 fallback_messages 的依赖。
+        """
+        if not message_key:
+            return ""
+        try:
+            if i18n and getattr(i18n, '_language_loaded', False):
+                return i18n.t(message_key, **kwargs)
+        except Exception:
+            pass
+        return message_key
+
+    # --- "工人"检查方法 ---
+
+    def _check_banned_chars(self, text: str, rule: Dict, line_number: Optional[int]) -> List[ValidationResult]:
+        """
+        工人方法：根据'pattern'查找，并检查其捕获组内是否包含不允许的非ASCII字符。
         """
         results = []
+        pattern = rule.get("pattern")
+        params = rule.get("params", {})
+        capture_group = params.get("capture_group", 1)
+
+        if not pattern:
+            return results
+
         try:
-            # 使用re.finditer以获取更详细的匹配对象信息
             matches = re.finditer(pattern, text)
             for match in matches:
                 if len(match.groups()) >= capture_group:
-                    content = match.group(capture_group)
-                    
-                    # 查找所有非ASCII字符
-                    banned_chars = re.findall(r'[^\x00-\x7F]', content)
-                    
+                    content_to_check = match.group(capture_group)
+                    banned_chars = re.findall(r'[^\x00-\x7F]', content_to_check)
                     if banned_chars:
-                        # 将找到的违规字符列表转换为去重的字符串，便于展示
                         details_str = "".join(sorted(list(set(banned_chars))))
-                        
-                        # 尝试使用国际化消息
-                        try:
-                            if i18n and i18n._language_loaded:
-                                details_message = i18n.t("validation_generic_banned_chars_found", 
-                                                       match_text=match.group(0), 
-                                                       banned_chars=details_str)
-                            else:
-                                details_message = f"在 '{match.group(0)}' 中发现违规字符: '{details_str}'"
-                        except:
-                            details_message = f"在 '{match.group(0)}' 中发现违规字符: '{details_str}'"
-                        
+                        message = self._get_i18n_message(rule["message_key"])
+                        details_key = params.get("details_key", "validation_generic_banned_chars_found")
+                        details = self._get_i18n_message(details_key, match_text=match.group(0), banned_chars=details_str, key_content=content_to_check)
                         results.append(ValidationResult(
                             is_valid=False,
-                            level=level,
+                            level=ValidationLevel(rule["level"]),
                             message=message,
-                            details=details_message,
+                            details=details,
                             line_number=line_number,
-                            text_sample=text[:100] + "..." if len(text) > 100 else text
+                            text_sample=text[:100]
                         ))
-        except Exception as e:
-            self.logger.warning(f"规则检查失败: {e}，模式: {pattern}")
-        
+        except re.error as e:
+            self.logger.warning(f"规则 '{rule['name']}' 的正则表达式错误: {e}, 模式: {pattern}")
         return results
 
-    def _check_pattern_format(self, text: str, pattern: str, message: str,
-                             level: ValidationLevel, line_number: Optional[int],
-                             format_regex: str) -> List[ValidationResult]:
+    def _check_formatting_tags(self, text: str, rule: Dict, line_number: Optional[int]) -> List[ValidationResult]:
         """
-        检查模式格式是否符合预期格式
+        工人方法：检查格式化标签，如V3的 #tag。
+        它从 rule['params'] 中动态读取所有配置。
         """
         results = []
-        try:
-            matches = re.findall(pattern, text)
-            for content in matches:
-                if isinstance(content, tuple):
-                    content = content[0] if content else ""
-                
-                if not re.match(format_regex, content):
-                    results.append(ValidationResult(
-                        is_valid=False,
-                        level=level,
-                        message=message,
-                        details=self._get_i18n_message("validation_generic_format_error", content=content),
-                        line_number=line_number,
-                        text_sample=text[:100] + "..." if len(text) > 100 else text
-                    ))
-        except Exception as e:
-            self.logger.warning(f"格式检查失败: {e}")
-        
-        return results
+        pattern = rule.get("pattern")
+        params = rule.get("params", {})
+        valid_tags = set(tag.lower() for tag in params.get("valid_tags", []))
+        no_space_required_tags = set(tag.lower() for tag in params.get("no_space_required_tags", []))
 
-    def _check_formatting_tags_case_insensitive(self, text: str, valid_tags: set, 
-                                               pattern: str, message: str, level: ValidationLevel, 
-                                               line_number: Optional[int], 
-                                               no_space_required_tags: set = None) -> List[ValidationResult]:
-        """
-        大小写不敏感的格式化标签验证器
-        
-        Args:
-            text: 要检查的文本
-            valid_tags: 合法的标签集合（统一存储为小写）
-            pattern: 匹配格式化标签的正则表达式
-            message: 错误消息模板
-            level: 验证级别
-            line_number: 行号
-            no_space_required_tags: 不需要空格的标签集合（统一存储为小写）
-            
-        Returns:
-            验证结果列表
-        """
-        results = []
-        if no_space_required_tags is None:
-            no_space_required_tags = set()
-            
+        if not pattern or not valid_tags:
+            return results
+
         try:
             matches = re.finditer(pattern, text)
             for match in matches:
                 tag_found = match.group(1)
-                normalized_tag = tag_found.lower()  # 转换为小写进行匹配
-                
-                # 检查是否是合法的格式化命令
-                if normalized_tag in valid_tags:
-                    # 检查是否需要空格（除了不需要空格的命令）
-                    if normalized_tag not in no_space_required_tags:
-                        next_char_pos = match.end()
-                        if (next_char_pos < len(text) 
-                            and text[next_char_pos] != ' '
-                            and not text[next_char_pos:].strip().startswith('#!')):
-                            # [FIX] Use the 'message' parameter which already contains the correct, game-specific i18n string template.
-                            # Do not call _get_i18n_message with a hardcoded generic key.
-                            try:
-                                # The message passed in is a template like "Formatting command `{key}` is missing..."
-                                formatted_message = message.format(key=tag_found)
-                            except KeyError:
-                                # Fallback if the message doesn't have a {key} placeholder
-                                formatted_message = message
+                normalized_tag = tag_found.lower()
+                if normalized_tag not in valid_tags:
+                    message = self._get_i18n_message(params["unknown_tag_error_key"], key=tag_found)
+                    details = self._get_i18n_message(params["unsupported_formatting_details_key"], found_text=match.group(0))
+                    results.append(ValidationResult(is_valid=False, level=ValidationLevel.ERROR, message=message, details=details, line_number=line_number, text_sample=text[:100]))
+                elif normalized_tag not in no_space_required_tags:
+                    next_char_pos = match.end()
+                    if next_char_pos < len(text) and text[next_char_pos] not in (' ', '#', '!', ';'):
+                        message = self._get_i18n_message(rule["message_key"], key=tag_found)
+                        details = self._get_i18n_message(params["missing_space_details_key"], found_text=match.group(0))
+                        results.append(ValidationResult(is_valid=False, level=ValidationLevel(rule["level"]), message=message, details=details, line_number=line_number, text_sample=text[:100]))
+        except re.error as e:
+            self.logger.warning(f"规则 '{rule['name']}' 的正则表达式错误: {e}, 模式: {pattern}")
+        return results
 
-                            results.append(ValidationResult(
-                                is_valid=False,
-                                level=ValidationLevel.WARNING,
-                                message=formatted_message,
-                                details=self._get_i18n_message("validation_generic_formatting_found_at", found_text=match.group(0)),
-                                line_number=line_number,
-                                text_sample=text[:100] + "..." if len(text) > 100 else text
-                            ))
-                else:
-                    # 未知的格式化命令
-                    results.append(ValidationResult(
-                        is_valid=False,
-                        level=ValidationLevel.ERROR,
-                        message=self._get_i18n_message("validation_generic_unknown_formatting", key=tag_found),
-                        details=self._get_i18n_message("validation_generic_unsupported_formatting", found_text=match.group(0)),
-                        line_number=line_number,
-                        text_sample=text[:100] + "..." if len(text) > 100 else text
-                    ))
-        except Exception as e:
-            self.logger.warning(f"格式化标签检查失败: {e}")
+    def _check_mismatched_tags(self, text: str, rule: Dict, line_number: Optional[int]) -> List[ValidationResult]:
+        """
+        工人方法：一个强大的通用方法，用于检查所有游戏中不成对的标签。
+        它从 rule['params'] 中读取 start_tag_pattern 和 end_tag_string。
+        """
+        results = []
+        params = rule.get("params", {})
+        start_tag_pattern = params.get("start_tag_pattern")
+        end_tag_string = params.get("end_tag_string")
+
+        if not start_tag_pattern or not end_tag_string:
+            return results
+
+        try:
+            start_tags_count = len(re.findall(start_tag_pattern, text))
+            end_tags_count = text.count(end_tag_string)
+            if start_tags_count != end_tags_count:
+                message = self._get_i18n_message(rule["message_key"])
+                details_key = params.get("details_key", "validation_generic_tags_count")
+                details = self._get_i18n_message(details_key, start_count=start_tags_count, end_count=end_tags_count)
+                results.append(ValidationResult(is_valid=False, level=ValidationLevel(rule["level"]), message=message, details=details, line_number=line_number, text_sample=text[:100]))
+        except re.error as e:
+            self.logger.warning(f"规则 '{rule['name']}' 的正则表达式错误: {e}, 模式: {start_tag_pattern}")
+        return results
         
+    def _check_informational_pattern(self, text: str, rule: Dict, line_number: Optional[int]) -> List[ValidationResult]:
+        """
+        工人方法：检查一个模式是否存在，并发出一个信息性（非错误）的提示。
+        """
+        results = []
+        pattern = rule.get("pattern")
+        if not pattern: return results
+        if re.search(pattern, text):
+            message = self._get_i18n_message(rule["message_key"])
+            details = self._get_i18n_message(rule.get("params", {}).get("details_key", ""))
+            results.append(ValidationResult(is_valid=True, level=ValidationLevel(rule["level"]), message=message, details=details, line_number=line_number, text_sample=text[:100]))
         return results
 
     def validate_text(self, text: str, line_number: Optional[int] = None) -> List[ValidationResult]:
         """
-        现在这个方法是通用的！它会遍历子类定义的规则并执行它们。
+        纯粹的规则执行引擎。
+        它遍历加载自JSON的规则，并根据 rule['check_function'] 的值，
+        从 self.check_map 中动态调用相应的“工人”检查方法。
         """
         all_results = []
-        
         for rule in self.rules:
-            try:
-                # 根据规则类型调用相应的检查方法
-                if rule.check_function == "banned_chars":
-                    results = self._check_pattern_for_banned_chars(
-                        text, rule.pattern, rule.message, rule.level, line_number, rule.capture_group
-                    )
-                elif rule.check_function == "format":
-                    # 对于格式检查，需要额外的格式正则表达式
-                    format_regex = getattr(rule, 'format_regex', r'^[A-Za-z_][A-Za-z0-9_]*$')
-                    results = self._check_pattern_format(
-                        text, rule.pattern, rule.message, rule.level, line_number, format_regex
-                    )
-                elif rule.check_function == "formatting_tags_case_insensitive":
-                    # 大小写不敏感的格式化标签检查
-                    valid_tags = getattr(rule, 'valid_tags', set())
-                    no_space_required_tags = getattr(rule, 'no_space_required_tags', set())
-                    results = self._check_formatting_tags_case_insensitive(
-                        text, valid_tags, rule.pattern, rule.message, rule.level, line_number, no_space_required_tags
-                    )
-                else:
-                    # 自定义检查函数
-                    results = rule.check_function(self, text, line_number)
-                
-                all_results.extend(results)
-                
-            except Exception as e:
-                self.logger.error(f"执行规则 '{rule.name}' 时发生错误: {e}")
-                continue
-        
-        # 子类可以添加一些无法用通用方法处理的、独特的检查逻辑
-        custom_results = self._run_custom_checks(text, line_number)
-        all_results.extend(custom_results)
-        
+            check_function_name = rule.get("check_function")
+            checker = self.check_map.get(check_function_name)
+            if checker:
+                try:
+                    results = checker(text, rule, line_number)
+                    all_results.extend(results)
+                except Exception as e:
+                    self.logger.error(f"执行规则 '{rule.get('name', 'N/A')}' 时发生错误: {e}")
+            else:
+                self.logger.warning(f"规则 '{rule.get('name', 'N/A')}' 指定了未知的检查函数: '{check_function_name}'")
         return all_results
 
-    def _run_custom_checks(self, text: str, line_number: Optional[int]) -> List[ValidationResult]:
-        """子类可以重写这个方法来添加自定义检查逻辑"""
-        return []
-
-    def _get_i18n_message(self, message_key: str, **kwargs) -> str:
-        """获取国际化消息，如果失败则返回英文"""
-        try:
-            if i18n and i18n._language_loaded:
-                return i18n.t(message_key, **kwargs)
-            else:
-                # 回退到英文
-                return self._get_fallback_message(message_key, **kwargs)
-        except:
-            return self._get_fallback_message(message_key, **kwargs)
-    
-    def _get_fallback_message(self, message_key: str, **kwargs) -> str:
-        """获取回退消息（英文）"""
-        fallback_messages = {
-            "validation_vic3_simple_concept_chinese": "Non-ASCII characters found in simple `[concept]` links.",
-            "validation_vic3_concept_key_chinese": "Non-ASCII characters found in the 'key' part of `[Concept('key', ...)]` function. The 'key' must be in English.",
-            "validation_vic3_scope_key_chinese": "Non-ASCII characters found in the 'key' part of `[SCOPE.sType('key')]` function. The 'key' must be in English.",
-            "validation_vic3_icon_key_chinese": "Non-ASCII characters found in the 'key' part of icon tag `@key!`.",
-            "validation_vic3_formatting_missing_space": "Formatting command `#{key}` is missing a required space after it.",
-            "validation_vic3_unknown_formatting": "Unknown formatting command `#{key}`.",
-            "validation_vic3_tooltippable_chinese": "Non-ASCII characters found in the 'key' part of `#tooltippable`. The key must be in English.",
-            "validation_vic3_formatting_found_at": "Found at: '{found_text}', should be followed by a space.",
-            "validation_vic3_unsupported_formatting": "Victoria 3 does not support the formatting command: '{found_text}'.",
-            "validation_vic3_tooltippable_found_in": "Found banned characters '{banned_chars}' in '<{key_content}>'",
-            "validation_stellaris_brackets_chinese": "Non-ASCII characters found in square brackets `[...]`. This is usually a translation error and may cause the game to fail to recognize commands.",
-            "validation_stellaris_dollar_vars_chinese": "Non-ASCII characters found in dollar sign `$...$` variables. Variable names must retain their original text.",
-            "validation_stellaris_pound_icons_chinese": "Non-ASCII characters found in pound sign `£...£` icon tags. Icon names must retain their original text.",
-            "validation_stellaris_color_tags_mismatch": "Color tag `§...` and end marker `§!` count mismatch, which may cause text display anomalies.",
-            "validation_stellaris_color_tags_count": "Found {start_count} start tags, but {end_count} end markers.",
-            "validation_eu4_brackets_chinese": "Non-ASCII characters found in square bracket `[...]` commands.",
-            "validation_eu4_legacy_vars_chinese": "Non-ASCII characters found in traditional `$KEY$` variables.",
-            "validation_eu4_pound_icons_chinese": "Non-ASCII characters found in icon tags `£key£`.",
-            "validation_eu4_country_flags_chinese": "Non-ASCII characters found in country flag tags `@TAG`.",
-            "validation_eu4_color_tags_mismatch": "Color tag `§...` and end marker `§!` count mismatch, which may cause text display anomalies.",
-            "validation_eu4_currency_symbol_detected": "Special currency symbol `¤` detected.",
-            "validation_eu4_currency_symbol_note": "Ensure this symbol is properly preserved.",
-            "validation_hoi4_namespaces_chinese": "Non-ASCII characters found in namespace `[Scope.Function]`, which may cause game crashes.",
-            "validation_hoi4_formatting_vars_chinese": "Non-ASCII characters found in the variable part of formatting variables `[?variable|...]`.",
-            "validation_hoi4_nested_strings_chinese": "Non-ASCII characters found in nested strings or variables `$key$`.",
-            "validation_hoi4_icon_tags_chinese": "Non-ASCII characters found in icon tags `£icon_name`.",
-            "validation_hoi4_country_flags_chinese": "Non-ASCII characters found in country flag tags `@TAG`.",
-            "validation_hoi4_localization_formatters_chinese": "Non-ASCII characters found in standalone `formatter|token` formatters.",
-            "validation_hoi4_color_tags_mismatch": "Color tag `§...` and end marker `§!` count mismatch, which may cause text display anomalies.",
-            "validation_ck3_scopes_functions_chinese": "Non-ASCII characters found in square bracket `[...]` commands.",
-            "validation_ck3_concept_key_chinese": "Non-ASCII characters found in the 'key' part of `[Concept('key', ...)]` function. The 'key' must be in English.",
-            "validation_ck3_trait_title_key_chinese": "Non-ASCII characters found in the 'key' part of `GetTrait` or `GetTitleByKey` functions.",
-            "validation_ck3_dollar_vars_chinese": "Non-ASCII characters found in dollar sign `$key$` variables.",
-            "validation_ck3_icon_key_chinese": "Non-ASCII characters found in the 'key' part of icon tags `@key!`.",
-            "validation_ck3_formatting_tags_mismatch": "Formatting command start tag `#key` and end marker `#!` count mismatch.",
-            "validation_ck3_formatting_missing_space": "Formatting command `#{key}` may be missing a required space after it.",
-            "validation_ck3_unknown_formatting": "Unknown formatting command `#{key}`.",
-            "validation_ck3_formatting_found_at": "Found at: '{found_text}'",
-            "validation_ck3_unsupported_formatting": "CK3 does not support the formatting command: '{found_text}'.",
-            "validation_generic_banned_chars_found": "Found banned characters '{banned_chars}' in '{match_text}'",
-            "validation_generic_format_error": "Format error: '{content}'",
-            "validation_generic_color_tags_count": "Found {start_count} start tags, but {end_count} end markers.",
-            "validation_generic_formatting_missing_space": "Formatting command `#{key}` is missing a required space after it.",
-            "validation_generic_formatting_found_at": "Found at: '{found_text}'",
-            "validation_generic_unknown_formatting": "Unknown formatting command `#{key}`.",
-            "validation_generic_unsupported_formatting": "Unsupported formatting command: '{found_text}'."
-        }
-        
-        message = fallback_messages.get(message_key, f"Unknown validation message: {message_key}")
-        if kwargs:
-            try:
-                return message.format(**kwargs)
-            except:
-                return message
-        return message
-
-    def _log_validation_result(self, result: ValidationResult, text: str):
+    def _log_validation_result(self, result: ValidationResult):
         """记录验证结果到日志"""
-        # 尝试使用国际化消息
-        try:
-            if i18n and i18n._language_loaded:
-                if result.level == ValidationLevel.ERROR:
-                    self.logger.error(f"[{self.game_name}] {result.message}")
-                    if result.details:
-                        self.logger.error(f"{i18n.t('validation_details')}: {result.details}")
-                elif result.level == ValidationLevel.WARNING:
-                    self.logger.warning(f"[{self.game_name}] {result.message}")
-                    if result.details:
-                        self.logger.warning(f"{i18n.t('validation_details')}: {result.details}")
-                else:
-                    self.logger.info(f"[{self.game_name}] {result.message}")
-            else:
-                # 回退到英文
-                if result.level == ValidationLevel.ERROR:
-                    self.logger.error(f"[{self.game_name}] {result.message}")
-                    if result.details:
-                        self.logger.error(f"Details: {result.details}")
-                elif result.level == ValidationLevel.WARNING:
-                    self.logger.warning(f"[{self.game_name}] {result.message}")
-                    if result.details:
-                        self.logger.warning(f"Details: {result.details}")
-                else:
-                    self.logger.info(f"[{self.game_name}] {result.message}")
-        except Exception as e:
-            # 如果国际化失败，使用原始消息
-            if result.level == ValidationLevel.ERROR:
-                self.logger.error(f"[{self.game_name}] {result.message}")
-                if result.details:
-                    self.logger.error(f"Details: {result.details}")
-            elif result.level == ValidationLevel.WARNING:
-                self.logger.warning(f"[{self.game_name}] {result.message}")
-                if result.details:
-                    self.logger.warning(f"Details: {result.details}")
-            else:
-                self.logger.info(f"[{self.game_name}] {result.message}")
+        log_level = getattr(self.logger, result.level.value, self.logger.info)
+        message = f"[{self.game_name}] {result.message}"
+        if result.details:
+            message += f" - {self._get_i18n_message('validation_details')}: {result.details}"
+        log_level(message)
 
-
+# --- 子类定义 ---
 class Victoria3Validator(BaseGameValidator):
-    """维多利亚3格式验证器 (重构后)"""
-    
     def __init__(self):
-        super().__init__("1", "Victoria 3")
-        
-    def _get_rules(self) -> List[ValidationRule]:
-        """
-        只在这里定义Victoria 3的规则列表。
-        """
-        return [
-            ValidationRule(
-                name="non_ascii_in_simple_concept",
-                # 匹配简单的概念链接，如 [concept_legitimacy]
-                # 避免与 [Concept('...')] 和 [SCOPE.sType('...')] 重叠
-                pattern=r'\[(?!Concept\()(?!SCOPE\.[a-zA-Z]+\()([^\]]+)\]'
-                ,
-                level=ValidationLevel.ERROR,
-                message=self._get_i18n_message("validation_vic3_simple_concept_chinese"),
-                check_function="banned_chars",
-                capture_group=1
-            ),
-            ValidationRule(
-                name="non_ascii_in_concept_key",
-                # 匹配 [Concept('key', 'text')] 中的 'key' 部分
-                pattern=r"\[Concept\('([^']+)',",
-                level=ValidationLevel.ERROR,
-                message=self._get_i18n_message("validation_vic3_concept_key_chinese"),
-                check_function="banned_chars",
-                capture_group=1
-            ),
-            ValidationRule(
-                name="non_ascii_in_scope_key",
-                # 匹配 [SCOPE.sCountry('scope_name')...] 中的 'scope_name' 部分
-                pattern=r"\[SCOPE\.[a-zA-Z]+\('([^']+)'\)",
-                level=ValidationLevel.ERROR,
-                message=self._get_i18n_message("validation_vic3_scope_key_chinese"),
-                check_function="banned_chars",
-                capture_group=1
-            ),
-            ValidationRule(
-                name="non_ascii_in_icon_key",
-                # 匹配 @icon_name! 中的 icon_name 部分
-                pattern=r'@([^!]+)!',
-                level=ValidationLevel.ERROR,
-                message=self._get_i18n_message("validation_vic3_icon_key_chinese"),
-                check_function="banned_chars",
-                capture_group=1
-            )
-        ]
-
-    def _run_custom_checks(self, text: str, line_number: Optional[int]) -> List[ValidationResult]:
-        """Victoria 3特有的自定义检查逻辑。"""
-        results = []
-
-        # 规则 1: 检查格式化命令 #key 后面是否缺少了必要的空格
-        # 硬编码所有合法的格式化命令（统一存储为小写）
-        VALID_FORMATTING_KEYS = {
-            # 来自 VIC3textformatting.gui 的全部 name
-            'active', 'inactive', 'shadow',
-            'white', 'darker_white', 'grey',
-            'red', 'green', 'light_green', 'yellow', 'blue', 'u',
-            'gold', 'o', 'black', 'bold_black',
-            'default_text',
-            'clickable_link', 'clickable_link_hover',
-            'variable', 'v',
-            'header', 'h1', 'title',
-            'clickable',
-            'negative_value', 'n', 'positive_value', 'p', 'zero_value', 'z',
-            'r', 'g', 'y',
-            'blue_value', 'gold_value',
-            'concept', 'tooltippable_concept',
-            'instruction', 'i',
-            'lore',
-            'tooltip_header', 't', 'tooltip_sub_header', 's',
-            'tooltippable', 'tooltippable_name', 'tooltippable_no_shadow',
-            'b',
-            'maximum', 'outliner_header', 'regular_size',
-            'todo', 'todo_in_tooltip', 'broken',
-            # 兼容此前文档中提到的其它常见键（若引擎支持）
-            'r', 'white', 'default_text', 'gray',
-            'italic', 'l', 'l',
-            # 实际生效但未文档化的命令（来自modder实践）
-            'bold',    # 粗体文本，实际生效
-            'v',       # 变量显示，实际生效
-            'tooltip',  # 工具提示，实际生效
-            # 来自Anbennar的命令
-            'debug',
-            '#indent_newline',
-            
-            # 测试用的标签（用于验证大小写不敏感功能）
-            'abcd'     # 测试标签，用于验证大小写不敏感功能              
-        }
-        # 不需要空格的命令（紧随分号等结构）
-        NO_SPACE_REQUIRED_KEYS = {'tooltippable', 'tooltip'}
-        
-        # 使用新的通用大小写不敏感验证方法
-        formatting_pattern = r'#([a-zA-Z_][a-zA-Z0-9_]*)'
-        formatting_results = self._check_formatting_tags_case_insensitive(
-            text, VALID_FORMATTING_KEYS, formatting_pattern, 
-            self._get_i18n_message("validation_vic3_formatting_missing_space", key=""), 
-            ValidationLevel.WARNING, line_number, NO_SPACE_REQUIRED_KEYS
-        )
-        results.extend(formatting_results)
-
-        # 规则 2: 检查 #tooltippable 的复杂结构中，key部分是否包含非ASCII字符
-        tooltip_pattern = r'#tooltippable;tooltip:<([^>]+)>'
-        tooltip_matches = re.finditer(tooltip_pattern, text)
-        for match in tooltip_matches:
-            key_content = match.group(1)
-            banned_chars = re.findall(r'[^\x00-\x7F]', key_content)
-            if banned_chars:
-                details_str = "".join(sorted(list(set(banned_chars))))
-                results.append(ValidationResult(
-                    is_valid=False,
-                    level=ValidationLevel.ERROR,
-                    message=self._get_i18n_message("validation_vic3_tooltippable_chinese"),
-                    details=self._get_i18n_message("validation_vic3_tooltippable_found_in", key_content=key_content, banned_chars=details_str),
-                    line_number=line_number,
-                    text_sample=text[:100] + "..." if len(text) > 100 else text
-                ))
-            
-        return results
-
+        super().__init__("scripts/config/validators/vic3_rules.json")
 
 class StellarisValidator(BaseGameValidator):
-    """群星格式验证器 (重构后)"""
-    
     def __init__(self):
-        super().__init__("2", "Stellaris")
-        
-    def _get_rules(self) -> List[ValidationRule]:
-        """
-        只在这里定义Stellaris的规则列表。
-        """
-        return [
-            ValidationRule(
-                name="non_ascii_in_brackets",
-                # 匹配并捕获 [...] 中的内容
-                pattern=r'\[([^\]]+)\]',
-                level=ValidationLevel.ERROR,
-                message=self._get_i18n_message("validation_stellaris_brackets_chinese"),
-                check_function="banned_chars",
-                capture_group=1
-            ),
-            ValidationRule(
-                name="non_ascii_in_dollar_vars",
-                # 匹配并捕获 $...$ 中的内容，排除空格
-                pattern=r'\$([^$\s]+)\$',
-                level=ValidationLevel.ERROR,
-                message=self._get_i18n_message("validation_stellaris_dollar_vars_chinese"),
-                check_function="banned_chars",
-                capture_group=1
-            ),
-            ValidationRule(
-                name="non_ascii_in_pound_icons",
-                # 匹配并捕获 £...£ 中的内容，排除空格
-                pattern=r'£([^£\s]+)£',
-                level=ValidationLevel.ERROR,
-                message=self._get_i18n_message("validation_stellaris_pound_icons_chinese"),
-                check_function="banned_chars",
-                capture_group=1
-            )
-        ]
-
-    def _run_custom_checks(self, text: str, line_number: Optional[int]) -> List[ValidationResult]:
-        """Stellaris特有的自定义检查逻辑，用于检查不成对的颜色标签。"""
-        results = []
-        
-        # 查找所有 § 后面跟着一个字母或数字的起始标签
-        start_tags = re.findall(r'§[a-zA-Z0-9]', text)
-        # 查找所有 §! 结束标签
-        end_tags_count = text.count('§!')
-        
-        if len(start_tags) != end_tags_count:
-            results.append(ValidationResult(
-                is_valid=False,
-                level=ValidationLevel.WARNING,
-                message=self._get_i18n_message("validation_stellaris_color_tags_mismatch"),
-                details=self._get_i18n_message("validation_stellaris_color_tags_count", start_count=len(start_tags), end_count=end_tags_count),
-                line_number=line_number,
-                text_sample=text[:100] + "..." if len(text) > 100 else text
-            ))
-            
-        return results
+        super().__init__("scripts/config/validators/stellaris_rules.json")
 
 class EU4Validator(BaseGameValidator):
-    """欧陆风云4格式验证器 (重构后)"""
-    
     def __init__(self):
-        super().__init__("3", "Europa Universalis IV")
-        
-    def _get_rules(self) -> List[ValidationRule]:
-        """
-        只在这里定义EU4的规则列表。
-        """
-        return [
-            ValidationRule(
-                name="non_ascii_in_brackets",
-                # 匹配 [Scope.Function]
-                pattern=r'\[([^\]]+)\]',
-                level=ValidationLevel.ERROR,
-                message=self._get_i18n_message("validation_eu4_brackets_chinese"),
-                check_function="banned_chars",
-                capture_group=1
-            ),
-            ValidationRule(
-                name="non_ascii_in_legacy_vars",
-                # 匹配 $KEY$ - 放宽限制以包含更多变量格式
-                pattern=r'\$([^$\n]+)\$',
-                level=ValidationLevel.ERROR,
-                message=self._get_i18n_message("validation_eu4_legacy_vars_chinese"),
-                check_function="banned_chars",
-                capture_group=1
-            ),
-            ValidationRule(
-                name="non_ascii_in_pound_icons",
-                # 匹配 £key£
-                pattern=r'£([^£\n]+)£',
-                level=ValidationLevel.ERROR,
-                message=self._get_i18n_message("validation_eu4_pound_icons_chinese"),
-                check_function="banned_chars",
-                capture_group=1
-            ),
-            ValidationRule(
-                name="non_ascii_in_country_flags",
-                # 匹配 @TAG - 放宽限制以包含更多格式
-                pattern=r'@([^\s]+)',
-                level=ValidationLevel.ERROR,
-                message=self._get_i18n_message("validation_eu4_country_flags_chinese"),
-                check_function="banned_chars",
-                capture_group=1
-            )
-        ]
-
-    def _run_custom_checks(self, text: str, line_number: Optional[int]) -> List[ValidationResult]:
-        """EU4特有的自定义检查逻辑。"""
-        results = []
-
-        # 规则 1: 检查不成对的颜色标签 §...§!
-        # 查找所有 § 后面跟着一个字母或数字的起始标签
-        # 修复：使用更宽松的模式来匹配颜色标签
-        start_tags = re.findall(r'§[a-zA-Z0-9]', text)
-        # 查找所有 §! 结束标签
-        end_tags_count = text.count('§!')
-        
-        if len(start_tags) != end_tags_count:
-            results.append(ValidationResult(
-                is_valid=False,
-                level=ValidationLevel.WARNING,
-                message=self._get_i18n_message("validation_eu4_color_tags_mismatch"),
-                details=self._get_i18n_message("validation_generic_color_tags_count", start_count=len(start_tags), end_count=end_tags_count),
-                line_number=line_number,
-                text_sample=text[:100] + "..." if len(text) > 100 else text
-            ))
-
-        # 规则 2: 检查特殊金币符号 ¤ 是否存在（信息性）
-        if '¤' in text:
-            results.append(ValidationResult(
-                is_valid=True,  # 这不是一个错误，只是一个提示
-                level=ValidationLevel.INFO,
-                message=self._get_i18n_message("validation_eu4_currency_symbol_detected"),
-                details=self._get_i18n_message("validation_eu4_currency_symbol_note"),
-                line_number=line_number,
-                text_sample=text[:100] + "..." if len(text) > 100 else text
-            ))
-            
-        return results
-
+        super().__init__("scripts/config/validators/eu4_rules.json")
 
 class HOI4Validator(BaseGameValidator):
-    """钢铁雄心4格式验证器 (重构后)"""
-
     def __init__(self):
-        super().__init__("4", "Hearts of Iron IV")
-
-    def _get_rules(self) -> List[ValidationRule]:
-        """
-        只在这里定义HOI4的规则列表。
-        """
-        return [
-            ValidationRule(
-                name="non_ascii_in_namespaces",
-                # 匹配 [Scope.Function] 这种用法，但不包括 [?variable|...] 格式
-                pattern=r'\[(?!\?)([^\]]+)\]',
-                level=ValidationLevel.ERROR,
-                message=self._get_i18n_message("validation_hoi4_namespaces_chinese"),
-                check_function="banned_chars",
-                capture_group=1
-            ),
-            ValidationRule(
-                name="non_ascii_in_formatting_vars",
-                # 匹配 [?variable|...] 中的 variable 部分
-                pattern=r'\[\?([^|\]]+)',
-                level=ValidationLevel.ERROR,
-                message=self._get_i18n_message("validation_hoi4_formatting_vars_chinese"),
-                check_function="banned_chars",
-                capture_group=1
-            ),
-            ValidationRule(
-                name="non_ascii_in_nested_strings",
-                # 匹配 $key$ 或 $VARIABLE$
-                pattern=r'\$([^$\n]+)\$',
-                level=ValidationLevel.ERROR,
-                message=self._get_i18n_message("validation_hoi4_nested_strings_chinese"),
-                check_function="banned_chars",
-                capture_group=1
-            ),
-            ValidationRule(
-                name="non_ascii_in_icon_tags",
-                # 匹配 £icon_name，包括可能包含中文的情况
-                pattern=r'£([^$\s]+)',
-                level=ValidationLevel.ERROR,
-                message=self._get_i18n_message("validation_hoi4_icon_tags_chinese"),
-                check_function="banned_chars",
-                capture_group=1
-            ),
-            ValidationRule(
-                name="non_ascii_in_country_flags",
-                # 匹配 @TAG，包括可能包含中文的情况
-                pattern=r'@([^\s]+)',
-                level=ValidationLevel.ERROR,
-                message=self._get_i18n_message("validation_hoi4_country_flags_chinese"),
-                check_function="banned_chars",
-                capture_group=1
-            ),
-            ValidationRule(
-                name="non_ascii_in_localization_formatters",
-                # 匹配独立的 formatter|token，不包括在方括号内的内容
-                pattern=r'(?<!\[)([^|\s]+\|[^|\s]+)(?!\])',
-                level=ValidationLevel.ERROR,
-                message=self._get_i18n_message("validation_hoi4_localization_formatters_chinese"),
-                check_function="banned_chars",
-                capture_group=1
-            )
-        ]
-
-    def _run_custom_checks(self, text: str, line_number: Optional[int]) -> List[ValidationResult]:
-        """HOI4特有的自定义检查逻辑。"""
-        results = []
-
-        # 规则 1: 检查不成对的颜色标签 §...§!
-        # 查找所有 § 后面跟着一个字母或数字的起始标签
-        start_tags = re.findall(r'§[a-zA-Z0-9]', text)
-        # 查找所有 §! 结束标签
-        end_tags_count = text.count('§!')
-        
-        if len(start_tags) != end_tags_count:
-            results.append(ValidationResult(
-                is_valid=False,
-                level=ValidationLevel.WARNING,
-                message=self._get_i18n_message("validation_hoi4_color_tags_mismatch"),
-                details=self._get_i18n_message("validation_generic_color_tags_count", start_count=len(start_tags), end_count=end_tags_count),
-                line_number=line_number,
-                text_sample=text[:100] + "..." if len(text) > 100 else text
-            ))
-            
-        return results
-
+        super().__init__("scripts/config/validators/hoi4_rules.json")
 
 class CK3Validator(BaseGameValidator):
-    """十字军之王3格式验证器 (重构后)"""
-    
     def __init__(self):
-        super().__init__("5", "Crusader Kings III")
-        
-    def _get_rules(self) -> List[ValidationRule]:
-        """
-        只在这里定义CK3的规则列表。
-        """
-        return [
-            ValidationRule(
-                name="non_ascii_in_scopes_and_functions",
-                # 匹配 [...] 内部的作用域和函数名，但不包括带参数的复杂函数
-                # 排除已经被其他规则处理的复杂函数，避免重叠
-                pattern=r'\[(?!Concept\()(?!GetTrait\()(?!GetTitleByKey\()(?!GetFullName\|)([^\]]+)\]',
-                level=ValidationLevel.ERROR,
-                message=self._get_i18n_message("validation_ck3_scopes_functions_chinese"),
-                check_function="banned_chars",
-                capture_group=1
-            ),
-            ValidationRule(
-                name="non_ascii_in_concept_key",
-                # 匹配 [Concept('key', 'text')] 中的 'key' 部分
-                pattern=r"\[Concept\('([^']+)',",
-                level=ValidationLevel.ERROR,
-                message=self._get_i18n_message("validation_ck3_concept_key_chinese"),
-                check_function="banned_chars",
-                capture_group=1
-            ),
-            ValidationRule(
-                name="non_ascii_in_trait_or_title_key",
-                # 匹配 GetTrait('key') 或 GetTitleByKey('key') 中的 'key'
-                pattern=r"\[(?:GetTrait|GetTitleByKey)\('([^']+)'\)",
-                level=ValidationLevel.ERROR,
-                message=self._get_i18n_message("validation_ck3_trait_title_key_chinese"),
-                check_function="banned_chars",
-                capture_group=1
-            ),
-            ValidationRule(
-                name="non_ascii_in_dollar_vars",
-                # 匹配 $key$
-                pattern=r'\$([^$|\s]+)\$',
-                level=ValidationLevel.ERROR,
-                message=self._get_i18n_message("validation_ck3_dollar_vars_chinese"),
-                check_function="banned_chars",
-                capture_group=1
-            ),
-            ValidationRule(
-                name="non_ascii_in_icon_key",
-                # 匹配 @icon_name! 中的 icon_name 部分
-                pattern=r'@([^!]+)!',
-                level=ValidationLevel.ERROR,
-                message=self._get_i18n_message("validation_ck3_icon_key_chinese"),
-                check_function="banned_chars",
-                capture_group=1
-            )
-        ]
-
-    def _run_custom_checks(self, text: str, line_number: Optional[int]) -> List[ValidationResult]:
-        """CK3特有的自定义检查逻辑。"""
-        results = []
-
-        # 硬编码所有合法的格式化命令（统一存储为小写）
-        VALID_FORMATTING_KEYS = {
-            # 基础颜色和对比度
-            'high', 'medium', 'low', 'weak', 'flavor', 'f',
-            'light_background', 'light_background_underline',
-            
-            # 帮助和提示
-            'help', 'help_light_background', 'instruction', 'i',
-            
-            # 警告和提醒
-            'warning', 'x', 'xb', 'xlight', 'enc', 'alert_trial', 'alert_bold',
-            
-            # 数值相关
-            'value', 'v', 'negative_value', 'positive_value', 'mixed_value', 'zero_value',
-            'n', 'p', 'z', 'm', 'positive_value_toast',
-            
-            # 按钮和链接
-            'clickable', 'game_link', 'l', 'explanation_link', 'e', 'explanation_link_light_background', 'b',
-            
-            # 特殊格式
-            'g', 'g_light',
-            
-            # 工具提示标题
-            'tooltip_heading', 't', 'tooltip_subheading', 's', 'tooltip_heading_small', 'ts',
-            
-            # 调试和特殊用途
-            'debug', 'd', 'variable', 'date', 'trigger_inactive',
-            'difficulty_easy', 'difficulty_medium', 'difficulty_hard', 'difficulty_very_hard',
-            'true_white', 'tut', 'tut_kw', 'same',
-            
-            # 强调和样式
-            'emphasis', 'emp', 'bol', 'und', 'die1', 'die2', 'die3',
-            'ber', 'poe', 'sucglow', 'flatulence',
-            
-            # 战争相关
-            'defender_color', 'attacker_color',
-            
-            # 信用相关
-            'credits_title', 'credits_header', 'credits_subheader', 'credits_entries',
-            
-            # 能力相关
-            'aptitude_terrible', 'aptitude_poor', 'aptitude_average', 'aptitude_good', 'aptitude_excellent',
-            
-            # 阴谋相关
-            'scheme_odds_abysmal', 'scheme_odds_low', 'scheme_odds_medium', 'scheme_odds_high', 'scheme_odds_excellent',
-            
-            # 基础格式化命令
-            'bold', 'italic', 'underline', 'indent_newline'
-        }
-        
-        # 先统计起止标签数量
-        start_tags = re.findall(r'#([a-zA-Z0-9_;]+)', text)
-        end_tags_count = text.count('#!')
-
-        # 如果数量不匹配，则只给出配对不匹配的警告，避免与缺空格的警告重复
-        if len(start_tags) != end_tags_count:
-            results.append(ValidationResult(
-                is_valid=False,
-                level=ValidationLevel.WARNING,
-                message=self._get_i18n_message("validation_ck3_formatting_tags_mismatch"),
-                details=self._get_i18n_message("validation_generic_color_tags_count", start_count=len(start_tags), end_count=end_tags_count),
-                line_number=line_number,
-                text_sample=text[:100] + "..." if len(text) > 100 else text
-            ))
-            return results
-
-        # 数量匹配时，使用新的通用大小写不敏感验证方法
-        formatting_pattern = r'#([a-zA-Z0-9_;]+)(?!\s|!|;)'
-        formatting_results = self._check_formatting_tags_case_insensitive(
-            text, VALID_FORMATTING_KEYS, formatting_pattern, 
-            self._get_i18n_message("validation_ck3_formatting_missing_space", key=""), 
-            ValidationLevel.WARNING, line_number
-        )
-        results.extend(formatting_results)
-
-        return results
+        super().__init__("scripts/config/validators/ck3_rules.json")
 
 
 class PostProcessValidator:
     """后处理验证器主类"""
-    
     def __init__(self):
         self.validators = {
-            "1": Victoria3Validator(),
-            "2": StellarisValidator(),
-            "3": EU4Validator(),
-            "4": HOI4Validator(),
-            "5": CK3Validator()
+            "victoria3": Victoria3Validator(),
+            "stellaris": StellarisValidator(),
+            "eu4": EU4Validator(),
+            "hoi4": HOI4Validator(),
+            "ck3": CK3Validator()
         }
         self.logger = logging.getLogger(__name__)
-        
-        # 加载国际化
-        if i18n and not i18n._language_loaded:
+        if i18n and not getattr(i18n, '_language_loaded', False):
             try:
                 i18n.load_language()
             except Exception as e:
-                self.logger.warning(f"Failed to load internationalization: {e}")
+                self.logger.warning(f"无法加载国际化: {e}")
     
+    def get_validator_by_game_id(self, game_id: str) -> Optional[BaseGameValidator]:
+        """根据game_id查找验证器实例"""
+        for validator in self.validators.values():
+            if validator.config.get("game_id") == game_id:
+                return validator
+        return None
+
     def validate_game_text(self, game_id: str, text: str, line_number: Optional[int] = None) -> List[ValidationResult]:
-        """
-        验证指定游戏的文本格式
-        
-        Args:
-            game_id: 游戏ID (1-5)
-            text: 要验证的文本
-            line_number: 行号
-            
-        Returns:
-            验证结果列表
-        """
-        if game_id not in self.validators:
-            try:
-                if i18n and i18n._language_loaded:
-                    self.logger.error(i18n.t("validation_unknown_game", game_id=game_id))
-                else:
-                    self.logger.error(f"Unknown game ID: {game_id}")
-            except:
-                self.logger.error(f"Unknown game ID: {game_id}")
+        """验证指定游戏的文本格式"""
+        validator = self.get_validator_by_game_id(game_id)
+        if not validator:
+            self.logger.error(self._get_i18n_message("validation_unknown_game", game_id=game_id))
             return []
-        
-        validator = self.validators[game_id]
         results = validator.validate_text(text, line_number)
-        
-        # 记录所有验证结果
         for result in results:
-            validator._log_validation_result(result, text)
-        
+            validator._log_validation_result(result)
         return results
     
     def validate_batch(self, game_id: str, texts: List[str], start_line: int = 1) -> Dict[int, List[ValidationResult]]:
-        """
-        批量验证文本
-        
-        Args:
-            game_id: 游戏ID
-            texts: 文本列表
-            start_line: 起始行号
-            
-        Returns:
-            行号到验证结果的映射
-        """
+        """批量验证文本"""
         batch_results = {}
-        
+        validator = self.get_validator_by_game_id(game_id)
+        if not validator:
+            self.logger.error(self._get_i18n_message("validation_unknown_game", game_id=game_id))
+            return {}
         for i, text in enumerate(texts):
             line_number = start_line + i
-            results = self.validate_game_text(game_id, text, line_number)
+            results = validator.validate_text(text, line_number)
             if results:
                 batch_results[line_number] = results
-        
+        self.log_validation_summary(batch_results, validator.game_name)
         return batch_results
-    
+
     def get_validation_summary(self, batch_results: Dict[int, List[ValidationResult]]) -> Dict[str, int]:
-        """
-        获取验证结果摘要
-        
-        Args:
-            batch_results: 批量验证结果
-            
-        Returns:
-            各级别验证结果的统计
-        """
-        summary = {
-            "total_lines": len(batch_results),
-            "errors": 0,
-            "warnings": 0,
-            "info": 0
-        }
-        
+        """获取验证结果摘要"""
+        summary = {"errors": 0, "warnings": 0, "info": 0}
         for line_results in batch_results.values():
             for result in line_results:
-                if result.level == ValidationLevel.ERROR:
-                    summary["errors"] += 1
-                elif result.level == ValidationLevel.WARNING:
-                    summary["warnings"] += 1
-                else:
-                    summary["info"] += 1
-        
+                level_str = result.level.value + "s"
+                if level_str in summary:
+                    summary[level_str] += 1
         return summary
     
     def log_validation_summary(self, batch_results: Dict[int, List[ValidationResult]], game_name: str = ""):
         """记录验证结果摘要到日志"""
         summary = self.get_validation_summary(batch_results)
-        
+        errors, warnings = summary.get("errors", 0), summary.get("warnings", 0)
+        if errors > 0:
+            self.logger.error(self._get_i18n_message("validation_summary_errors", game_name=game_name, errors=errors, warnings=warnings))
+        elif warnings > 0:
+            self.logger.warning(self._get_i18n_message("validation_summary_warnings", game_name=game_name, warnings=warnings))
+        else:
+            self.logger.info(self._get_i18n_message("validation_summary_success", game_name=game_name))
+
+    def _get_i18n_message(self, message_key: str, **kwargs) -> str:
+        """PostProcessValidator也需要一个i18n消息获取器"""
+        if not message_key: return ""
         try:
-            if i18n and i18n._language_loaded:
-                if summary["errors"] > 0:
-                    self.logger.error(i18n.t("validation_summary_errors", game_name=game_name, errors=summary["errors"], warnings=summary["warnings"]))
-                elif summary["warnings"] > 0:
-                    self.logger.warning(i18n.t("validation_summary_warnings", game_name=game_name, warnings=summary["warnings"]))
-                else:
-                    self.logger.info(i18n.t("validation_summary_success", game_name=game_name))
-            else:
-                # 回退到英文
-                if summary["errors"] > 0:
-                    self.logger.error(f"Format validation completed - {game_name}: Found {summary['errors']} errors, {summary['warnings']} warnings")
-                elif summary["warnings"] > 0:
-                    self.logger.warning(f"Format validation completed - {game_name}: Found {summary['warnings']} warnings")
-                else:
-                    self.logger.info(f"Format validation completed - {game_name}: All text formats are correct")
-        except Exception as e:
-            # 如果国际化失败，使用英文
-            if summary["errors"] > 0:
-                self.logger.error(f"Format validation completed - {game_name}: Found {summary['errors']} errors, {summary['warnings']} warnings")
-            elif summary["warnings"] > 0:
-                self.logger.warning(f"Format validation completed - {game_name}: Found {summary['warnings']} warnings")
-            else:
-                self.logger.info(f"Format validation completed - {game_name}: All text formats are correct")
+            if i18n and getattr(i18n, '_language_loaded', False):
+                return i18n.t(message_key, **kwargs)
+        except Exception:
+            pass
+        return message_key
 
-
-# 便捷函数
 def validate_text(game_id: str, text: str, line_number: Optional[int] = None) -> List[ValidationResult]:
-    """便捷函数：验证单个文本"""
     validator = PostProcessValidator()
     return validator.validate_game_text(game_id, text, line_number)
 
-
 def validate_batch(game_id: str, texts: List[str], start_line: int = 1) -> Dict[int, List[ValidationResult]]:
-    """便捷函数：批量验证文本"""
     validator = PostProcessValidator()
     return validator.validate_batch(game_id, texts, start_line)
 
-
 if __name__ == "__main__":
-    # 测试代码
-    logging.basicConfig(level=logging.INFO)
-    
-    # 测试V3验证器
-    v3_validator = Victoria3Validator()
-    test_text = "这是一个测试文本，包含[GetName]和#bold 粗体文本#!"
-    results = v3_validator.validate_text(test_text, 1)
-    
-    print(f"测试文本: {test_text}")
-    print(f"验证结果数量: {len(results)}")
-    for result in results:
-        print(f"- {result.level.value}: {result.message}")
+    logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+    try:
+        main_validator = PostProcessValidator()
+        print("\n--- Testing Stellaris Validator ---")
+        main_validator.validate_game_text("2", "This has mismatched §Ycolor§!", 2)
+        main_validator.validate_game_text("2", "This has a bad variable $中文变量$ inside.", 3)
+        print("\n--- Testing Victoria 3 Validator ---")
+        main_validator.validate_game_text("1", "This has #bolda bad format command.", 4)
+        main_validator.validate_game_text("1", "This has a [中文概念].", 5)
+    except Exception as e:
+        print(f"An error occurred during testing: {e}")
+        print("Please ensure all JSON rule files are present and correctly formatted.")

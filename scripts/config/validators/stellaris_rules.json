@@ -5,7 +5,7 @@
     {
       "name": "non_ascii_in_brackets",
       "check_function": "banned_chars",
-      "pattern": "\[([^\]]+)\]",
+      "pattern": "\\[([^\\]]+)\\]",
       "level": "error",
       "message_key": "validation_stellaris_brackets_chinese",
       "params": {
@@ -15,7 +15,7 @@
     {
       "name": "non_ascii_in_dollar_vars",
       "check_function": "banned_chars",
-      "pattern": "\$([^$\s]+)\",
+      "pattern": "\\$([^$\\s]+)\\$",
       "level": "error",
       "message_key": "validation_stellaris_dollar_vars_chinese",
       "params": {
@@ -25,7 +25,7 @@
     {
       "name": "non_ascii_in_pound_icons",
       "check_function": "banned_chars",
-      "pattern": "£([^£\s]+)£",
+      "pattern": "£([^£\\s]+)£",
       "level": "error",
       "message_key": "validation_stellaris_pound_icons_chinese",
       "params": {

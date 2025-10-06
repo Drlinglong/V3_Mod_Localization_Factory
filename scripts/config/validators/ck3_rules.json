@@ -5,7 +5,7 @@
     {
       "name": "non_ascii_in_scopes_and_functions",
       "check_function": "banned_chars",
-      "pattern": "\\[(?!Concept\\(\\'|\")(?!GetTrait\\(\\'|\")(?!GetTitleByKey\\(\\'|\")(?!GetFullName\\|)([^\]]+)\\]",
+      "pattern": "\\[(?!Concept\\\\(\\\\'|\\"))(?!GetTrait\\\\(\\\\'|\\"))(?!GetTitleByKey\\\\(\\\\'|\\"))(?!GetFullName\\\\|)([^\\]]+)\\]",
       "level": "error",
       "message_key": "validation_ck3_scopes_functions_chinese",
       "params": {
@@ -15,7 +15,7 @@
     {
       "name": "non_ascii_in_concept_key",
       "check_function": "banned_chars",
-      "pattern": "\\[Concept\\(\\'([^']+)\',",
+      "pattern": "\\[Concept\\\\(\\\\'([^\']+)\\\',",
       "level": "error",
       "message_key": "validation_ck3_concept_key_chinese",
       "params": {
@@ -25,7 +25,7 @@
     {
       "name": "non_ascii_in_trait_or_title_key",
       "check_function": "banned_chars",
-      "pattern": "\\[(?:GetTrait|GetTitleByKey)\\'([^']+)\\'\\]",
+      "pattern": "\\[(?:GetTrait|GetTitleByKey)\\\\'([^\']+)\\\\'\\]",
       "level": "error",
       "message_key": "validation_ck3_trait_title_key_chinese",
       "params": {
@@ -35,7 +35,7 @@
     {
       "name": "non_ascii_in_dollar_vars",
       "check_function": "banned_chars",
-      "pattern": "\\$([^$|\\s]+)\\$",
+      "pattern": "\\$([^$|\\\\s]+)\\$",
       "level": "error",
       "message_key": "validation_ck3_dollar_vars_chinese",
       "params": {
@@ -66,7 +66,7 @@
     {
         "name": "formatting_tags",
         "check_function": "formatting_tags",
-        "pattern": "#([a-zA-Z0-9_;]+)(?!\\s|!|;)",
+        "pattern": "#([a-zA-Z0-9_;]+)(?!\\\\s|!|;)",
         "level": "warning",
         "message_key": "validation_ck3_formatting_missing_space",
         "params": {
