@@ -13,6 +13,9 @@ from scripts.utils.text_clean import strip_pl_diacritics, strip_outer_quotes
 
 def get_handler(provider_name):
     """这是一个"工厂函数"，根据名称返回对应的API处理器模块。"""
+    # 检测并设置便携式环境
+    _setup_portable_environment()
+    
     try:
         if provider_name == "openai":
             from . import openai_handler
@@ -34,6 +37,28 @@ def get_handler(provider_name):
         logging.error(f"Failed to import {provider_name} handler: {e}")
         logging.error(f"Please install required dependencies for {provider_name}")
         return None
+
+def _setup_portable_environment():
+    """
+    检测并设置便携式环境
+    如果检测到便携式环境，将packages目录添加到Python路径中
+    """
+    import sys
+    import os
+    
+    # 检测便携式环境：检查是否存在packages目录
+    packages_dir = None
+    
+    # 检查当前目录
+    if os.path.exists('packages'):
+        packages_dir = os.path.abspath('packages')
+    # 检查上级目录（当在app目录下运行时）
+    elif os.path.exists('../packages'):
+        packages_dir = os.path.abspath('../packages')
+    
+    if packages_dir and packages_dir not in sys.path:
+        sys.path.insert(0, packages_dir)
+        logging.info(f"便携式环境检测到，已添加依赖包路径: {packages_dir}")
 
 def initialize_client(provider_name):
     """

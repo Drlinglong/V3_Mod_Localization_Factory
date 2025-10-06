@@ -1,4 +1,4 @@
-# scripts/main.py
+# scripts/main.py# scripts/main.py
 import os
 import sys
 import json
@@ -8,43 +8,70 @@ import re
 import subprocess
 import importlib.util
 
-project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-if project_root not in sys.path:
-    sys.path.insert(0, project_root)
+# --- BEGIN ROBUST PATH FIX ---
+# In the portable environment, sys.path is not being set correctly.
+# We will manually and robustly construct the necessary paths here.
 
-# 现在，我们使用全新的、从 "scripts." 开始的“绝对路径”来导入
+# The path to this file (main.py) is .../app/scripts/main.py
+# The directory containing this file is .../app/scripts/
+scripts_dir = os.path.dirname(os.path.abspath(__file__))
+
+# The parent of the scripts directory is the 'app' directory
+app_dir = os.path.dirname(scripts_dir)
+
+# The parent of the 'app' directory is the release root
+release_root = os.path.dirname(app_dir)
+
+# The packages directory is at the release root level
+packages_dir = os.path.join(release_root, 'packages')
+
+# Add the required paths to sys.path if they are not already there.
+# We add 'app' to allow `from scripts...` imports.
+# We add 'scripts' to allow direct `import hooks` etc.
+# We add 'packages' for all the installed dependencies.
+if app_dir not in sys.path:
+    sys.path.insert(0, app_dir)
+if scripts_dir not in sys.path:
+    sys.path.insert(0, scripts_dir)
+if packages_dir not in sys.path:
+    sys.path.insert(0, packages_dir)
+# --- END ROBUST PATH FIX ---
+
+# 现在，我们使用全新的、从 "scripts." 开始的"绝对路径"来导入
 from scripts.utils import i18n, logger
+from scripts.utils.banner import print_banner
 from scripts.workflows import initial_translate
 from scripts.core import directory_handler
 from scripts.config import LANGUAGES, GAME_PROFILES, SOURCE_DIR, API_PROVIDERS, PROJECT_INFO
 
+def _setup_portable_environment():
+    """
+    检测并设置便携式环境
+    如果检测到便携式环境，将packages目录添加到Python路径中
+    """
+    # 检测便携式环境：检查是否存在packages目录
+    packages_dir = None
+    
+    # 检查当前目录
+    if os.path.exists('packages'):
+        packages_dir = os.path.abspath('packages')
+    # 检查上级目录（当在app目录下运行时）
+    elif os.path.exists('../packages'):
+        packages_dir = os.path.abspath('../packages')
+    
+    if packages_dir and packages_dir not in sys.path:
+        sys.path.insert(0, packages_dir)
+        print(f"[INFO] 便携式环境检测到，已添加依赖包路径: {packages_dir}")
+
 def display_version_info():
     """显示项目版本信息"""
-    print("=" * 60)
-    print(f"🎯 {PROJECT_INFO['display_name']}")
-    print(f"🔧 {PROJECT_INFO['engineering_name']}")
+    #print("=" * 60)
+    #print(f"🎯 {PROJECT_INFO['display_name']}")
+    #print(f"🔧 {PROJECT_INFO['engineering_name']}")
     print(f"📦 版本version: {PROJECT_INFO['version']}")
     print(f"📅 最后更新last update: {PROJECT_INFO['last_update']}")
     print(f"{PROJECT_INFO['copyright']}")
     print("=" * 60)
-
-def display_banner():
-    """显示项目横幅"""
-    try:
-        if os.path.exists("banner.txt"):
-            with open("banner.txt", "r", encoding="utf-8") as f:
-                banner_content = f.read()
-                print(banner_content)
-        else:
-            # 默认横幅
-            print("=" * 60)
-            print("         Project Remis - 蕾姆丝计划")
-            print("=" * 60)
-    except Exception as e:
-        logging.warning(f"显示横幅时出错: {e}")
-        print("=" * 60)
-        print("         Project Remis - 蕾姆丝计划")
-        print("=" * 60)
 
 def preflight_checks():
     """
@@ -54,6 +81,9 @@ def preflight_checks():
         bool: 检查是否通过
     """
     print(i18n.t("preflight_checking_environment"))
+    
+    # 检测便携式环境并设置Python路径
+    _setup_portable_environment()
     
     checks_passed = True
     error_messages = []
@@ -467,11 +497,14 @@ def ask_cleanup_choice(mod_name):
 
 def main():
     """Main function."""
+    # 在所有逻辑开始之前，首先进行便携式环境检测
+    _setup_portable_environment()
+    
+    # 在所有逻辑开始之前，首先打印华丽的Banner
+    print_banner()
+    
     # 初始化日志系统
     logger.setup_logger()
-    
-    # 显示横幅
-    display_banner()
     
     # 显示版本信息
     display_version_info()
@@ -523,7 +556,7 @@ def main():
     # 选择目标语言
     target_languages = []
     while True:
-        logging.info(i18n.t("select_target_language_prompt"))
+        logging.info(i18n.t("select_target_language_prompt")),
         
         # 显示选项
         if len(game_profile['supported_language_keys']) > 1:
