@@ -22,8 +22,9 @@ logger = logging.getLogger(__name__)
 class GeminiCLIHandler:
     """Gemini CLI处理器"""
     
-    def __init__(self, cli_path: str = "gemini"):
+    def __init__(self, cli_path: str = "gemini", model: str = "gemini-2.5-pro"):
         self.cli_path = cli_path
+        self.model = model
         self.daily_calls = 0
         self.call_history = []
         self._verify_cli_availability()
@@ -68,7 +69,7 @@ class GeminiCLIHandler:
                 # 使用管道将prompt内容传递给stdin，避免参数注入
                 cmd = [
                     "powershell", "-Command", 
-                    f"Set-ExecutionPolicy RemoteSigned -Scope Process -Force; Get-Content '{temp_file}' -Raw | {self.cli_path} --model gemini-2.5-pro --output-format json"
+                    f"Set-ExecutionPolicy RemoteSigned -Scope Process -Force; Get-Content '{temp_file}' -Raw | {self.cli_path} --model {self.model} --output-format json"
                 ]
                 
                 # 【核心修复】强制清空环境变量，只保留必要的系统变量
@@ -166,7 +167,7 @@ class GeminiCLIHandler:
                 # 使用管道将prompt内容传递给stdin，避免参数注入
                 cmd = [
                     "powershell", "-Command", 
-                    f"Set-ExecutionPolicy RemoteSigned -Scope Process -Force; Get-Content '{temp_file}' -Raw | {self.cli_path} --model gemini-2.5-pro --output-format json"
+                    f"Set-ExecutionPolicy RemoteSigned -Scope Process -Force; Get-Content '{temp_file}' -Raw | {self.cli_path} --model {self.model} --output-format json"
                 ]
                 
                 # 【核心修复】强制清空环境变量，只保留必要的系统变量
@@ -610,12 +611,16 @@ class GeminiCLIHandler:
         }
 
 
-def initialize_client(api_key: str = None) -> "GeminiCLIHandler | None":
+def initialize_client(api_key: str = None, model_name: str = None) -> "GeminiCLIHandler | None":
     """Initializes the Gemini CLI client."""
     try:
         provider_config = API_PROVIDERS.get("gemini_cli", {})
         cli_path = provider_config.get("cli_path", "gemini")
-        client = GeminiCLIHandler(cli_path=cli_path)
+        
+        if model_name is None:
+            model_name = provider_config.get("default_model", "gemini-2.5-pro")
+            
+        client = GeminiCLIHandler(cli_path=cli_path, model=model_name)
         logging.info(f"Gemini CLI client initialized successfully")
         return client
     except Exception as e:

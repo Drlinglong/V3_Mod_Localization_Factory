@@ -22,8 +22,8 @@ output/
 .idea/
 
 # Mod file and translate file
-/source_mod/
-/my_translation/
+/source_mod/*
+/my_translation/*
 
 # Do NOT ignore the folder
 !/source_mod/.gitkeep

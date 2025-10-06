@@ -60,7 +60,7 @@ def _setup_portable_environment():
         sys.path.insert(0, packages_dir)
         logging.info(f"便携式环境检测到，已添加依赖包路径: {packages_dir}")
 
-def initialize_client(provider_name):
+def initialize_client(provider_name, model_name: str = None):
     """
     为选定的API供应商初始化客户端。
     """
@@ -71,9 +71,7 @@ def initialize_client(provider_name):
     
     # CLI处理器不需要API密钥
     if provider_name == "gemini_cli":
-        provider_config = API_PROVIDERS.get(provider_name, {})
-        cli_path = provider_config.get("cli_path", "gemini")
-        client = handler.GeminiCLIHandler(cli_path=cli_path)
+        client = handler.initialize_client(model_name=model_name)
         return client, provider_name
         
     provider_config = API_PROVIDERS.get(provider_name, {})

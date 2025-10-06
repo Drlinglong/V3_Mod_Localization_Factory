@@ -448,7 +448,9 @@
   "setup_desc_qwen": "使用qwen-plus模型。中国用户友好。",
   "setup_desc_grok": "使用grok-4-fast-reasoning模型。性价比极高。",
   "setup_desc_ollama": "在您自己的电脑上运行模型，完全免费，但需要较好的硬件",
+  "ollama_single_thread_warning": "警告：Ollama 以单线程模式运行，以防止系统过载。翻译速度可能会较慢。",
   "setup_desc_gemini_cli": "通过Google账户认证，无需API Key，适合开发者",
+  "gemini_cli_model_selection_prompt": "请选择要使用的Gemini CLI模型：",
   "setup_press_enter_to_return": "按回车键返回主菜单...",
   "setup_configuration_complete_provider": "🎉 {provider} 配置完成！",
   "setup_configure_another_provider": "是否要配置其他服务？"
