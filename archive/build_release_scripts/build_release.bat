@@ -76,7 +76,6 @@ copy "%PROJECT_ROOT%\requirements.txt" "%RELEASE_DIR%\app\requirements.txt" /y
 copy "%PROJECT_ROOT%\README.md" "%RELEASE_DIR%\app\README.md" /y
 copy "%PROJECT_ROOT%\README_EN.md" "%RELEASE_DIR%\app\README_EN.md" /y
 copy "%PROJECT_ROOT%\LICENSE" "%RELEASE_DIR%\app\LICENSE" /y
-copy "%PROJECT_ROOT%\banner.txt" "%RELEASE_DIR%\app\banner.txt" /y
 echo [INFO] Source code copied.
 echo.
 
