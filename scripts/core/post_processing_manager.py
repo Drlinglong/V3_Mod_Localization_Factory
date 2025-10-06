@@ -12,7 +12,7 @@ from typing import Dict, List, Optional
 from datetime import datetime
 
 from scripts.utils.post_process_validator import PostProcessValidator, ValidationResult, ValidationLevel
-from scripts.config import GAME_PROFILES
+from scripts.app_settings import GAME_PROFILES
 from scripts.utils import i18n
 from scripts.utils.quote_extractor import QuoteExtractor
 

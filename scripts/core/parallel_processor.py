@@ -11,7 +11,7 @@ import concurrent.futures
 from typing import List, Dict, Any, Callable, Optional, Tuple
 from dataclasses import dataclass
 from scripts.utils import i18n
-from scripts.config import CHUNK_SIZE, GEMINI_CLI_CHUNK_SIZE
+from scripts.app_settings import CHUNK_SIZE, GEMINI_CLI_CHUNK_SIZE
 
 
 @dataclass

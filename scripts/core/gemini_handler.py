@@ -9,7 +9,7 @@ from google import genai
 
 # 【核心修正】统一使用绝对导入
 from scripts.utils import i18n
-from scripts.config import CHUNK_SIZE, MAX_RETRIES, API_PROVIDERS
+from scripts.app_settings import CHUNK_SIZE, MAX_RETRIES, API_PROVIDERS
 from scripts.utils.text_clean import strip_outer_quotes, strip_pl_diacritics
 from scripts.utils.punctuation_handler import generate_punctuation_prompt
 from .glossary_manager import glossary_manager
@@ -166,7 +166,7 @@ def _translate_chunk(client, chunk, source_lang, target_lang, game_profile, mod_
                 )
             else:
                 # 导入保底选项
-                from scripts.config import FALLBACK_FORMAT_PROMPT
+                from scripts.app_settings import FALLBACK_FORMAT_PROMPT
                 format_prompt_part = FALLBACK_FORMAT_PROMPT.format(
                     chunk_size=len(chunk),
                     numbered_list=numbered_list

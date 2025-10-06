@@ -5,7 +5,7 @@
     {
       "name": "non_ascii_in_simple_concept",
       "check_function": "banned_chars",
-      "pattern": "\[(?!Concept\()(?!SCOPE\\.[a-zA-Z]+\\()([^\\]+)\]",
+      "pattern": "\\\\[([^\\]]+)\\]",
       "level": "error",
       "message_key": "validation_vic3_simple_concept_chinese",
       "params": {
@@ -15,7 +15,7 @@
     {
       "name": "non_ascii_in_concept_key",
       "check_function": "banned_chars",
-      "pattern": "\\[Concept\\('([^']+)',",
+      "pattern": "\\\\[Concept\\\\('([^']*)',.*\\\\)]",
       "level": "error",
       "message_key": "validation_vic3_concept_key_chinese",
       "params": {
@@ -25,7 +25,7 @@
     {
       "name": "non_ascii_in_scope_key",
       "check_function": "banned_chars",
-      "pattern": "\\[SCOPE\\.[a-zA-Z]+\\'([^\\]+)\\'\\)",
+      "pattern": "\\\\[SCOPE\\\\.[a-zA-Z]+\\\\('([^']*)'\\\\)\\\\]",
       "level": "error",
       "message_key": "validation_vic3_scope_key_chinese",
       "params": {

@@ -9,7 +9,7 @@ if project_root not in sys.path:
     sys.path.insert(0, project_root)
 
 from scripts.utils import i18n
-from scripts.config import SOURCE_DIR
+from scripts.app_settings import SOURCE_DIR
 # ↓↓↓ nowo dodane importy ↓↓↓
 from scripts.utils.text_clean import strip_pl_diacritics
 # ↑↑↑------------------------↑↑↑
@@ -186,7 +186,7 @@ def create_output_structure(mod_name: str, output_folder_name: str, game_profile
         bool: 是否成功创建
     """
     try:
-        from scripts.config import DEST_DIR
+        from scripts.app_settings import DEST_DIR
         
         # 创建主输出目录
         main_output_dir = os.path.join(DEST_DIR, output_folder_name)

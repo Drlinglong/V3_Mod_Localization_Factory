@@ -5,7 +5,7 @@ import time
 import logging
 import concurrent.futures
 from scripts.utils import i18n
-from scripts.config import CHUNK_SIZE, MAX_RETRIES, API_PROVIDERS
+from scripts.app_settings import CHUNK_SIZE, MAX_RETRIES, API_PROVIDERS
 from scripts.utils.text_clean import strip_pl_diacritics, strip_outer_quotes
 
 # 【核心修正】动态导入，避免不必要的依赖要求

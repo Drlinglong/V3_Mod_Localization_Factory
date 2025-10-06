@@ -5,7 +5,7 @@
     {
       "name": "non_ascii_in_namespaces",
       "check_function": "banned_chars",
-      "pattern": "\\[(?!\\\\?)([^\\]]+)\\]",
+      "pattern": "\\\\[(?!\\?)([^\\]]+)\\]",
       "level": "error",
       "message_key": "validation_hoi4_namespaces_chinese",
       "params": {
@@ -15,7 +15,7 @@
     {
       "name": "non_ascii_in_formatting_vars",
       "check_function": "banned_chars",
-      "pattern": "\\[\\\\?([^|\\\\]+)",
+      "pattern": "\\\\[\\?([^|\\]]+)\\|[^\\]]*\\\\]",
       "level": "error",
       "message_key": "validation_hoi4_formatting_vars_chinese",
       "params": {
@@ -25,7 +25,7 @@
     {
       "name": "non_ascii_in_nested_strings",
       "check_function": "banned_chars",
-      "pattern": "\\$([^$\\n]+)\\$",
+      "pattern": "\\$([^$\\s]+)\\$",
       "level": "error",
       "message_key": "validation_hoi4_nested_strings_chinese",
       "params": {
@@ -35,7 +35,7 @@
     {
       "name": "non_ascii_in_icon_tags",
       "check_function": "banned_chars",
-      "pattern": "£([^$\\s]+)",
+      "pattern": "£([^£\\s|]+)",
       "level": "error",
       "message_key": "validation_hoi4_icon_tags_chinese",
       "params": {
@@ -45,7 +45,7 @@
     {
       "name": "non_ascii_in_country_flags",
       "check_function": "banned_chars",
-      "pattern": "@([^\\\\s]+)",
+      "pattern": "@([A-Z0-9]{3})",
       "level": "error",
       "message_key": "validation_hoi4_country_flags_chinese",
       "params": {
@@ -55,7 +55,7 @@
     {
       "name": "non_ascii_in_localization_formatters",
       "check_function": "banned_chars",
-      "pattern": "(?<!\\[)([^|\\\\s]+\\|[^|\\\\s]+)(?!\\])",
+      "pattern": "([^\\s|]+\\|[^\\s|]+)",
       "level": "error",
       "message_key": "validation_hoi4_localization_formatters_chinese",
       "params": {
