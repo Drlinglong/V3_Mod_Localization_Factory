@@ -11,6 +11,7 @@ from scripts.config import CHUNK_SIZE, MAX_RETRIES, API_PROVIDERS
 from scripts.utils.text_clean import strip_pl_diacritics, strip_outer_quotes
 from scripts.utils.punctuation_handler import generate_punctuation_prompt
 from .glossary_manager import glossary_manager
+from scripts.utils.response_parser import parse_json_response
 
 # Alias required by the audit.py script for compatibility
 _strip_pl_diacritics = strip_pl_diacritics  # noqa: N816
@@ -170,12 +171,10 @@ def _translate_chunk(client, chunk, source_lang, target_lang, game_profile, mod_
                 ],
                 max_completion_tokens=4000
             )
-            translated_chunk = re.findall(
-                r'^\s*\d+\.\s*"?(.+?)"?$', response.choices[0].message.content, re.MULTILINE | re.DOTALL
-            )
+            translated_chunk = parse_json_response(response.choices[0].message.content, len(chunk))
 
             if len(translated_chunk) == len(chunk):
-                translated_chunk = [strip_outer_quotes(t) for t in translated_chunk]
+                # strip_outer_quotes is no longer needed as the JSON parser handles it.
                 if game_profile.get("strip_pl_diacritics") and target_lang["code"] == "pl":
                     translated_chunk = [_strip_pl_diacritics(t) for t in translated_chunk]
                 return translated_chunk

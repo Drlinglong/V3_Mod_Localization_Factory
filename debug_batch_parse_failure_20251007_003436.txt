@@ -1,0 +1,61 @@
+=== 批量翻译解析失败调试信息 ===
+期望数量: 100
+实际编号行数: 0
+原始响应长度: 1537 字符
+时间: 2025-10-07 00:34:37
+================================================================================
+原始输入内容:
+----------------------------------------
+原始JSON响应:
+----------------------------------------
+{
+  "response": "\"The sun dips below the horizon, painting the sky in hues of orange and purple. A gentle breeze rustles through the palm trees, carrying the scent of salt and distant cooking fires. The waves, a constant rhythm, lap softly against the shore, their white foam glowing faintly in the fading light. As darkness deepens, the first stars begin to twinkle, mirroring the scattered lights of fishing boats out at sea. The air cools, inviting a sense of peace and quiet reflection. The day's heat gives way to a comfortable warmth, and the sounds of the evening – crickets chirping, a distant dog barking – slowly fill the air, creating a symphony of nature's lullaby. It's a perfect end to a perfect day, a moment of serene beauty that lingers long after the last sliver of sunlight has vanished.\"",
+  "stats": {
+    "models": {
+      "gemini-2.5-flash": {
+        "api": {
+          "totalRequests": 1,
+          "totalErrors": 0,
+          "totalLatencyMs": 213749
+        },
+        "tokens": {
+          "prompt": 11520,
+          "candidates": 168,
+          "total": 74602,
+          "cached": 8894,
+          "thoughts": 62914,
+          "tool": 0
+        }
+      }
+    },
+    "tools": {
+      "totalCalls": 0,
+      "totalSuccess": 0,
+      "totalFail": 0,
+      "totalDurationMs": 0,
+      "totalDecisions": {
+        "accept": 0,
+        "reject": 0,
+        "modify": 0,
+        "auto_accept": 0
+      },
+      "byName": {}
+    },
+    "files": {
+      "totalLinesAdded": 0,
+      "totalLinesRemoved": 0
+    }
+  }
+}
+================================================================================
+解析后的响应文本:
+----------------------------------------
+"The sun dips below the horizon, painting the sky in hues of orange and purple. A gentle breeze rustles through the palm trees, carrying the scent of salt and distant cooking fires. The waves, a constant rhythm, lap softly against the shore, their white foam glowing faintly in the fading light. As darkness deepens, the first stars begin to twinkle, mirroring the scattered lights of fishing boats out at sea. The air cools, inviting a sense of peace and quiet reflection. The day's heat gives way to a comfortable warmth, and the sounds of the evening – crickets chirping, a distant dog barking – slowly fill the air, creating a symphony of nature's lullaby. It's a perfect end to a perfect day, a moment of serene beauty that lingers long after the last sliver of sunlight has vanished."
+================================================================================
+所有编号行分析:
+----------------------------------------
+
+================================================================================
+问题行对比分析:
+----------------------------------------
+格式: [行号] 响应内容 -> 问题类型

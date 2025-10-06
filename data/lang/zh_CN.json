@@ -363,6 +363,7 @@
   "validation_generic_banned_chars_found": "在 '{match_text}' 中发现违规字符: '{banned_chars}'",
   "validation_generic_format_error": "格式错误: '{content}'",
   "validation_generic_color_tags_count": "发现 {start_count} 个起始标签，但有 {end_count} 个结束符。",
+  "validation_generic_unsupported_formatting": "不支持的格式化命令: '{found_text}'。",,
   
   "post_processing_start": "\n--- 启动后处理格式验证 ---",
   "post_processing_game": "正在按照 {game_name} 的本地化语法格式进行检查...",

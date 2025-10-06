@@ -201,7 +201,6 @@ class ParallelProcessor:
         except Exception as e:
             self.logger.exception(f"Batch translation error for {batch_task.file_task.filename} batch {batch_task.batch_index}: {e}")
             return None
-    
     def _collect_file_results(
         self,
         file_tasks: List[FileTask],
@@ -210,23 +209,26 @@ class ParallelProcessor:
         """按文件收集批次结果"""
         file_results = {}
         
+        # Group batch results by filename
+        grouped_batch_results: Dict[str, Dict[int, List[str]]] = {}
+        for (filename, batch_idx), result_list in batch_results.items():
+            if filename not in grouped_batch_results:
+                grouped_batch_results[filename] = {}
+            grouped_batch_results[filename][batch_idx] = result_list
+
         for file_task in file_tasks:
             if not file_task.texts_to_translate:
                 file_results[file_task.filename] = []
                 continue
-            
-            # 收集该文件的所有批次结果
+
             file_translated_texts = []
-            batch_index = 0
             
-            while True:
-                batch_key = (file_task.filename, batch_index)
-                if batch_key not in batch_results:
-                    break
-                
-                batch_result = batch_results[batch_key]
-                file_translated_texts.extend(batch_result)
-                batch_index += 1
+            # Get all batches for this file, sorted by their global batch index
+            file_batches = grouped_batch_results.get(file_task.filename, {})
+            sorted_batch_indices = sorted(file_batches.keys())
+
+            for batch_idx in sorted_batch_indices:
+                file_translated_texts.extend(file_batches[batch_idx])
             
             # 检查结果完整性
             if len(file_translated_texts) == len(file_task.texts_to_translate):
@@ -237,5 +239,5 @@ class ParallelProcessor:
                                 f"expected {len(file_task.texts_to_translate)}, got {len(file_translated_texts)}")
                 # 使用原文作为fallback
                 file_results[file_task.filename] = file_task.texts_to_translate
-        
+
         return file_results

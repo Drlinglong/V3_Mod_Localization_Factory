@@ -347,6 +347,7 @@
   "validation_generic_banned_chars_found": "Found banned characters '{banned_chars}' in '{match_text}'",
   "validation_generic_format_error": "Format error: '{content}'",
   "validation_generic_color_tags_count": "Found {start_count} start tags, but {end_count} end markers.",
+  "validation_generic_unsupported_formatting": "Unsupported formatting command: '{found_text}'.",
   
   "post_processing_start": "\n--- Starting Post-Processing Format Validation ---",
   "post_processing_game": "Validating localization syntax format for {game_name}...",

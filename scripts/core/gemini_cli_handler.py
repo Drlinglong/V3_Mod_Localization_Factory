@@ -10,6 +10,8 @@ import concurrent.futures
 from datetime import datetime
 from typing import List, Optional, Dict
 
+from scripts.utils.response_parser import parse_json_response
+
 # 【核心修正】统一使用绝对导入
 from scripts.utils import i18n
 from scripts.config import CHUNK_SIZE, MAX_RETRIES, API_PROVIDERS, GEMINI_CLI_CHUNK_SIZE, GEMINI_CLI_MAX_RETRIES
@@ -368,167 +370,13 @@ class GeminiCLIHandler:
             # 如果没有找到合适的行，返回整个响应
             return response.strip()
 
-    def _parse_batch_response(self, response: str, expected_count: int) -> List[str]:
-        """解析批量翻译JSON响应"""
-        # logger.info(f"开始解析批量响应，期望数量: {expected_count}")  # 已注释，减少日志噪音
-        
-        try:
-            # 尝试解析JSON响应
-            # logger.info("尝试解析JSON响应...")  # 已注释，减少日志噪音
-            response_data = json.loads(response)
-            # logger.info("JSON解析成功")  # 已注释，减少日志噪音
-            
-            # 检查是否有错误
-            if 'error' in response_data:
-                error_msg = response_data['error'].get('message', 'Unknown error')
-                logger.error(f"CLI返回错误: {error_msg}")
-                raise Exception(i18n.t("gemini_cli_return_error", error=error_msg))
-            
-            # 检查是否有候选响应
-            if 'stats' in response_data and 'models' in response_data['stats']:
-                models_stats = response_data['stats']['models']
-                for model_name, model_stats in models_stats.items():
-                    if 'tokens' in model_stats and model_stats['tokens'].get('candidates', 0) == 0:
-                        # 【增强调试】如果因为安全设置等原因被阻止，提供更详细的错误
-                        finish_reason = response_data.get('finishReason', '未知')
-                        error_message = i18n.t("gemini_cli_no_candidates", model_name=model_name)
-                        error_message += i18n.t("gemini_cli_finish_reason", finish_reason=finish_reason)
-                        
-                        if finish_reason == 'SAFETY':
-                            safety_ratings = response_data.get('safetyRatings', [])
-                            error_message += i18n.t("gemini_cli_safety_ratings", safety_ratings=safety_ratings)
-                            logger.error(i18n.t("gemini_cli_safety_warning"))
-                        
-                        error_message += i18n.t("gemini_cli_prompt_too_long")
-                        
-                        logger.error(error_message)
-                        raise Exception(error_message)
-            
-            # 提取响应内容
-            if 'response' in response_data:
-                response_text = response_data['response'].strip()
-                # 调试信息 - 已注释，避免对用户造成视觉轰炸
-                # logger.info(f"响应文本长度: {len(response_text)} 字符")
-                # logger.info(f"响应文本前200字符: {response_text[:200]}")
-                
-                # 解析批量翻译结果 - 按照编号列表格式
-                translations = []
-                lines = response_text.split('\n')
-                # logger.info(f"响应文本行数: {len(lines)}")
-                
-                for i, line in enumerate(lines):
-                    line = line.strip()
-                    # logger.debug(f"处理第{i+1}行: {line[:50]}...")
-                    
-                    # 查找编号开头的行
-                    if re.match(r'^\d+\.\s*', line):
-                        # 提取翻译内容（去掉编号）
-                        translation = re.sub(r'^\d+\.\s*', '', line).strip()
-                        # 去掉可能的引号
-                        translation = translation.strip('"\'')
-                        if translation:
-                            translations.append(translation)
-                            # logger.debug(f"找到翻译 {len(translations)}: {translation[:30]}...")
-                
-                # logger.info(f"解析完成，找到 {len(translations)} 个翻译")
-                
-                if len(translations) == expected_count:
-                    # logger.info("批量翻译解析完整")  # 已注释，减少日志噪音
-                    return translations
-                elif len(translations) > 0:
-                    # 【升级报错信息】显示具体哪一行出现问题
-                    missing_count = expected_count - len(translations)
-                    logger.warning(i18n.t("gemini_cli_batch_incomplete", expected_count=expected_count, actual_count=len(translations)))
-                    
-                    # 分析缺失的行号
-                    found_numbers = []
-                    for i, line in enumerate(lines):
-                        line = line.strip()
-                        if re.match(r'^\d+\.\s*', line):
-                            number = int(re.match(r'^(\d+)\.\s*', line).group(1))
-                            found_numbers.append(number)
-                    
-                    if found_numbers:
-                        found_numbers.sort()
-                        expected_numbers = list(range(1, expected_count + 1))
-                        missing_numbers = [num for num in expected_numbers if num not in found_numbers]
-                        
-                        if missing_numbers:
-                            logger.warning(i18n.t("gemini_cli_missing_lines", missing_numbers=missing_numbers))
-                            logger.warning(i18n.t("gemini_cli_found_lines", found_numbers=found_numbers))
-                        else:
-                            logger.warning(i18n.t("gemini_cli_parse_problem"))
-                            
-                            # 【重新设计】更直观的问题诊断
-                            empty_lines = []
-                            invalid_lines = []
-                            short_lines = []
-                            
-                            for i, line in enumerate(lines):
-                                line = line.strip()
-                                if re.match(r'^\d+\.\s*', line):
-                                    number = int(re.match(r'^(\d+)\.\s*', line).group(1))
-                                    translation = re.sub(r'^\d+\.\s*', '', line).strip()
-                                    translation = translation.strip('"\'')
-                                    
-                                    if not translation:
-                                        empty_lines.append(number)
-                                    elif len(translation) < 2:
-                                        short_lines.append((number, translation))
-                                    elif translation in ['?????', '???', '...', 'N/A', 'null', 'NULL', 'None', 'WARNING: Source localization entry is incomplete']:
-                                        invalid_lines.append((number, translation))
-                            
-                            # 输出分类的问题报告
-                            if empty_lines:
-                                logger.warning(i18n.t("gemini_cli_empty_content", empty_lines=empty_lines))
-                            
-                            if invalid_lines:
-                                logger.warning(i18n.t("gemini_cli_invalid_content", invalid_lines=invalid_lines))
-                            
-                            if short_lines:
-                                logger.warning(i18n.t("gemini_cli_short_content", short_lines=short_lines))
-                            
-                            # 提供解决建议
-                            total_problems = len(empty_lines) + len(invalid_lines) + len(short_lines)
-                            if total_problems > 0:
-                                logger.warning(i18n.t("gemini_cli_suggestion", total_problems=total_problems))
-                                logger.warning(i18n.t("gemini_cli_debug_suggestion"))
-                                
-                                # 【问题定位】尝试找出导致问题的具体行
-                                logger.warning(i18n.t("gemini_cli_problem_analysis"))
-                                self._analyze_problematic_content(lines, empty_lines, invalid_lines, short_lines)
-                    
-                    # 用原文填充缺失的翻译
-                    while len(translations) < expected_count:
-                        translations.append("")  # 或者使用原文
-                    return translations[:expected_count]
-                else:
-                    logger.warning(i18n.t("gemini_cli_parse_failed"))
-                    raise Exception(i18n.t("gemini_cli_parse_failed_exception"))
-            else:
-                raise Exception(i18n.t("gemini_cli_response_format_error"))
-                
-        except json.JSONDecodeError:
-            logger.warning(i18n.t("gemini_cli_not_json"))
-            lines = response.strip().split('\n')
-            
-            # 查找翻译结果（通常在最后几行）
-            translations = []
-            for line in lines:
-                line = line.strip()
-                if line and not line.startswith('>') and not line.startswith('Gemini'):
-                    # 尝试提取编号列表
-                    if re.match(r'^\d+\.\s*', line):
-                        translation = re.sub(r'^\d+\.\s*', '', line).strip()
-                        translation = translation.strip('"\'')
-                        if translation:
-                            translations.append(translation)
-            
-            if translations:
-                # logger.info(f"备用解析方法找到 {len(translations)} 个可能的翻译")  # 已注释，减少日志噪音
-                return translations[:expected_count]
-            else:
-                raise Exception(i18n.t("gemini_cli_cannot_parse"))
+        def _parse_batch_response(self, response: str, expected_count: int) -> List[str]:
+
+            """[REFACTORED] Delegates parsing to the centralized JSON response parser."""
+
+            # The raw response from the CLI's stdout is passed directly.
+
+            return parse_json_response(response, expected_count)
 
     def _analyze_problematic_content(self, lines, empty_lines, invalid_lines, short_lines):
         """分析问题内容，尝试找出导致翻译失败的具体原因"""
@@ -809,6 +657,8 @@ def _translate_cli_chunk(client: GeminiCLIHandler, chunk: list[str], source_lang
                     chunk_size=len(chunk),
                     numbered_list=numbered_list
                 )
+
+
             
             # 构建punctuation_prompt_part
             punctuation_prompt_part = f"\nPUNCTUATION CONVERSION:\n{punctuation_prompt}\n" if punctuation_prompt else ""

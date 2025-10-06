@@ -173,10 +173,19 @@ class BaseGameValidator:
                         if (next_char_pos < len(text) 
                             and text[next_char_pos] != ' '
                             and not text[next_char_pos:].strip().startswith('#!')):
+                            # [FIX] Use the 'message' parameter which already contains the correct, game-specific i18n string template.
+                            # Do not call _get_i18n_message with a hardcoded generic key.
+                            try:
+                                # The message passed in is a template like "Formatting command `{key}` is missing..."
+                                formatted_message = message.format(key=tag_found)
+                            except KeyError:
+                                # Fallback if the message doesn't have a {key} placeholder
+                                formatted_message = message
+
                             results.append(ValidationResult(
                                 is_valid=False,
                                 level=ValidationLevel.WARNING,
-                                message=self._get_i18n_message("validation_generic_formatting_missing_space", key=tag_found),
+                                message=formatted_message,
                                 details=self._get_i18n_message("validation_generic_formatting_found_at", found_text=match.group(0)),
                                 line_number=line_number,
                                 text_sample=text[:100] + "..." if len(text) > 100 else text
@@ -439,6 +448,10 @@ class Victoria3Validator(BaseGameValidator):
             'bold',    # 粗体文本，实际生效
             'v',       # 变量显示，实际生效
             'tooltip',  # 工具提示，实际生效
+            # 来自Anbennar的命令
+            'debug',
+            '#indent_newline',
+            
             # 测试用的标签（用于验证大小写不敏感功能）
             'abcd'     # 测试标签，用于验证大小写不敏感功能              
         }

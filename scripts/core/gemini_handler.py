@@ -13,6 +13,7 @@ from scripts.config import CHUNK_SIZE, MAX_RETRIES, API_PROVIDERS
 from scripts.utils.text_clean import strip_outer_quotes, strip_pl_diacritics
 from scripts.utils.punctuation_handler import generate_punctuation_prompt
 from .glossary_manager import glossary_manager
+from scripts.utils.response_parser import parse_json_response
 
 def initialize_client(api_key: str = None) -> "genai.Client | None":
     """Initializes the Gemini client."""
@@ -205,12 +206,10 @@ def _translate_chunk(client, chunk, source_lang, target_lang, game_profile, mod_
                 )
                 logging.info(i18n.t("batch_thinking_disabled", batch_num=batch_num))
             
-            translated_chunk = re.findall(
-                r'^\s*\d+\.\s*"?(.+?)"?$', response.text, re.MULTILINE | re.DOTALL
-            )
+            translated_chunk = parse_json_response(response.text, len(chunk))
 
             if len(translated_chunk) == len(chunk):
-                translated_chunk = [strip_outer_quotes(t) for t in translated_chunk]
+                # strip_outer_quotes is no longer needed as the JSON parser handles it.
                 if game_profile.get("strip_pl_diacritics") and target_lang["code"] == "pl":
                     translated_chunk = [strip_pl_diacritics(t) for t in translated_chunk]
                 return translated_chunk
