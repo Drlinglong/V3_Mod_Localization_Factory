@@ -162,7 +162,17 @@ Gemini CLI 是谷歌官方的命令行工具，它通过Google账户认证，无
     def is_portable_environment(self):
         """检测是否为便携式环境"""
         # 检查是否存在便携式安装包的特征目录
-        return os.path.exists('python-embed') and os.path.exists('packages')
+        # 便携式环境应该包含 python-embed 和 packages 目录
+        python_embed_exists = os.path.exists('python-embed')
+        packages_exists = os.path.exists('packages')
+        
+        # 如果当前在app目录下，需要检查上级目录
+        if not python_embed_exists and not packages_exists:
+            parent_dir = os.path.dirname(os.getcwd())
+            python_embed_exists = os.path.exists(os.path.join(parent_dir, 'python-embed'))
+            packages_exists = os.path.exists(os.path.join(parent_dir, 'packages'))
+        
+        return python_embed_exists and packages_exists
     
     def show_info_and_pause(self, provider):
         """显示信息并暂停"""
@@ -184,9 +194,9 @@ Gemini CLI 是谷歌官方的命令行工具，它通过Google账户认证，无
         
         # 检测并显示环境信息
         if self.is_portable_environment():
-            print(f"\n[便携式环境] 检测到便携式环境 - 所有依赖包已预装，无需额外安装")
+            print(f"\n{i18n.t('setup_portable_env_detected')}")
         else:
-            print(f"\n[开发环境] 检测到开发环境 - 请确保已安装相应的Python包")
+            print(f"\n{i18n.t('setup_dev_env_detected')}")
         print()
         
         while True:

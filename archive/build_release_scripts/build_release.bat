@@ -1,6 +1,10 @@
 @echo off
 setlocal enabledelayedexpansion
 
+
+set CONDA_ROOT=K:\MiniConda
+set ENV_NAME=local_factory
+
 REM =================================================================
 REM Project Remis - Portable Release Build Script (Final Architect's Edition)
 REM Version: 1.1.0
@@ -52,26 +56,20 @@ if %errorlevel% neq 0 (
 echo [INFO] Directory structure created.
 echo.
 
-REM --- Step 4: User Action: Python ---
-echo [ACTION REQUIRED] Please prepare the embedded Python environment.
-echo =================================================================
-echo 1. Go to https://www.python.org/downloads/windows/
-echo 2. Download the "Windows embeddable package (64-bit)" for Python 3.12+.
-echo 3. Unzip ALL contents into the following folder:
-echo    %RELEASE_DIR%\python-embed\
-echo =================================================================
-pause
+REM --- Step 4: Automated Python Extraction ---
+echo [INFO] Extracting Python 3.10.11 embeddable package...
+tar -xf "%SCRIPT_DIR%python-3.10.11-embed-amd64.zip" -C "%RELEASE_DIR%\python-embed"
 if not exist "%RELEASE_DIR%\python-embed\python.exe" (
-    echo [ERROR] python.exe not found! Please ensure you have correctly extracted the files. Aborting.
+    echo [ERROR] python.exe not found after extraction! Check if tar command is available and the zip file is correct. Aborting.
     pause
     exit /b 1
 )
-echo [INFO] Embedded Python detected.
+echo [INFO] Embedded Python extracted successfully.
 echo.
 
 REM --- Step 5: Copy Source Code ---
 echo [INFO] Copying application source code...
-xcopy "%PROJECT_ROOT%\scripts" "%RELEASE_DIR%\app\scripts\" /s /i /y /q
+xcopy "%PROJECT_ROOT%\scripts" "%RELEASE_DIR%\app\scripts\" /e /i /y /q
 xcopy "%PROJECT_ROOT%\data" "%RELEASE_DIR%\app\data\" /s /i /y /q
 xcopy "%PROJECT_ROOT%\docs" "%RELEASE_DIR%\app\docs\" /s /i /y /q
 copy "%PROJECT_ROOT%\requirements.txt" "%RELEASE_DIR%\app\requirements.txt" /y
@@ -93,6 +91,7 @@ echo.
 REM --- Step 5.6: Copy Pre-written Setup Script ---
 echo [INFO] Copying portable setup.bat...
 copy "%SCRIPT_DIR%setup.bat" "%RELEASE_DIR%\setup.bat" /y
+copy "%SCRIPT_DIR%get-pip.py" "%RELEASE_DIR%\python-embed\get-pip.py" /y
 if %errorlevel% neq 0 (
     echo [ERROR] Failed to copy setup.bat
     pause
@@ -101,17 +100,29 @@ if %errorlevel% neq 0 (
 echo [INFO] Portable setup.bat copied successfully.
 echo.
 
+REM --- Step 5.7: Activate Conda Environment ---
+echo [INFO] Activating Conda environment: %ENV_NAME%
+call "%CONDA_ROOT%\condabin\conda.bat" activate %ENV_NAME%
+if %errorlevel% neq 0 (
+    echo [ERROR] Failed to activate Conda environment. Please check CONDA_ROOT and ENV_NAME.
+    pause
+    exit /b 1
+)
+echo [INFO] Conda environment activated.
+echo.
+
 REM --- Step 6: Vendor Dependencies ---
 echo [INFO] Downloading all dependencies to 'packages' folder...
-REM ** CRITICAL FIX: This now uses the Python from your activated Conda env **
-python -m pip download -r "%PROJECT_ROOT%\requirements.txt" -d "%RELEASE_DIR%\packages"
-if %errorlevel% neq 0 (
-    echo [ERROR] 'pip download' failed. Please ensure your Conda environment is activated and can access the internet. Aborting.
+pushd "%RELEASE_DIR%"
+python -m pip download -v -r "%PROJECT_ROOT%\requirements.txt" -d "packages" > "pip_log.txt" 2>&1
+set "PIP_DOWNLOAD_RESULT=%errorlevel%"
+popd
+if %PIP_DOWNLOAD_RESULT% neq 0 (
+    echo [ERROR] 'pip download' failed. Please check 'pip_log.txt' in the release directory for details. Aborting.
     pause
     exit /b 1
 )
 echo [INFO] All dependencies downloaded successfully.
-echo.
 
 REM --- Step 7: Copy Pre-written run.bat ---
 echo [INFO] Copying portable run.bat...
@@ -125,7 +136,6 @@ echo [INFO] Portable run.bat copied successfully.
 echo.
 
 REM --- Step 8: Final Packaging ---
-REM (This section remains the same, it checks for 7-Zip and packages the folder)
 echo [INFO] Attempting to create ZIP archive...
 set "SEVENZIP_PATH="
 if exist "%ProgramFiles%\7-Zip\7z.exe" set "SEVENZIP_PATH=%ProgramFiles%\7-Zip\7z.exe"

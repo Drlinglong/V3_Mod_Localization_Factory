@@ -48,6 +48,8 @@
   "setup_env_var_restart_required": "Environment variable will take effect after next restart",
   "setup_env_var_set_failed": "Environment variable setting failed!",
   "setup_manual_env_var_instruction": "Please manually set environment variable {env_key}",
+  "setup_portable_env_detected": "[Portable Environment] Portable environment detected - all dependencies are pre-installed, no additional installation needed",
+  "setup_dev_env_detected": "[Development Environment] Development environment detected - please ensure the corresponding Python packages are installed",
   "setup_env_var_set_error": "Environment variable setting error: {error}",
   "setup_configuration_complete": "Configuration Complete!",
   "setup_dependencies_installed": "Dependencies installed",

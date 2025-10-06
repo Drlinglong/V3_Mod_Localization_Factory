@@ -5,6 +5,3 @@
 # 用户可以选择使用OpenAI或Google Gemini API
 openai>=1.0.0
 google-genai>=0.3.0
-
-# Additional dependencies that may be needed
-# (Add other dependencies as needed)

@@ -1,4 +1,5 @@
 @echo off
+pushd "%~dp0"
 setlocal enabledelayedexpansion
 title Project Remis
 
@@ -16,11 +17,12 @@ set "ORIGINAL_PYTHONHOME=%PYTHONHOME%"
 
 REM Set portable Python as priority
 set "PATH=%CD%\python-embed;%PATH%"
-set "PYTHONPATH=%CD%\python-embed"
-set "PYTHONHOME=%CD%\python-embed"
+set "PYTHONPATH=%CD%\packages;%CD%\python-embed"
+REM PYTHONHOME is not needed and can cause path issues in embedded environments.
 
 echo [INFO] Portable Python environment activated
 echo [INFO] Python path: %CD%\python-embed
+echo [INFO] Packages path: %CD%\packages
 echo.
 
 REM --- Change to portable package directory ---
@@ -45,3 +47,4 @@ set "PYTHONHOME=!ORIGINAL_PYTHONHOME!"
 
 echo [INFO] Project Remis has closed. Environment restored.
 pause >nul
+popd
