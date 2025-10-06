@@ -10,7 +10,7 @@ def setup_logger():
     # 检测是否为便携式环境
     if os.path.exists('python-embed') and os.path.exists('packages'):
         # 便携式环境：日志文件放在app目录中
-        logs_dir = 'logs'
+        logs_dir = os.path.join('app', 'logs')
     else:
         # 开发环境：日志文件放在项目根目录
         logs_dir = 'logs'

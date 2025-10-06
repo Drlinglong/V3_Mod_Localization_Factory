@@ -12,39 +12,22 @@ project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 if project_root not in sys.path:
     sys.path.insert(0, project_root)
 
-# 现在，我们使用全新的、从 "scripts." 开始的“绝对路径”来导入
+# 现在，我们使用全新的、从 "scripts." 开始的"绝对路径"来导入
 from scripts.utils import i18n, logger
+from scripts.utils.banner import print_banner
 from scripts.workflows import initial_translate
 from scripts.core import directory_handler
 from scripts.config import LANGUAGES, GAME_PROFILES, SOURCE_DIR, API_PROVIDERS, PROJECT_INFO
 
 def display_version_info():
     """显示项目版本信息"""
-    print("=" * 60)
-    print(f"🎯 {PROJECT_INFO['display_name']}")
-    print(f"🔧 {PROJECT_INFO['engineering_name']}")
+    #print("=" * 60)
+    #print(f"🎯 {PROJECT_INFO['display_name']}")
+    #print(f"🔧 {PROJECT_INFO['engineering_name']}")
     print(f"📦 版本version: {PROJECT_INFO['version']}")
     print(f"📅 最后更新last update: {PROJECT_INFO['last_update']}")
     print(f"{PROJECT_INFO['copyright']}")
     print("=" * 60)
-
-def display_banner():
-    """显示项目横幅"""
-    try:
-        if os.path.exists("banner.txt"):
-            with open("banner.txt", "r", encoding="utf-8") as f:
-                banner_content = f.read()
-                print(banner_content)
-        else:
-            # 默认横幅
-            print("=" * 60)
-            print("         Project Remis - 蕾姆丝计划")
-            print("=" * 60)
-    except Exception as e:
-        logging.warning(f"显示横幅时出错: {e}")
-        print("=" * 60)
-        print("         Project Remis - 蕾姆丝计划")
-        print("=" * 60)
 
 def preflight_checks():
     """
@@ -467,11 +450,11 @@ def ask_cleanup_choice(mod_name):
 
 def main():
     """Main function."""
+    # 在所有逻辑开始之前，首先打印华丽的Banner
+    print_banner()
+    
     # 初始化日志系统
     logger.setup_logger()
-    
-    # 显示横幅
-    display_banner()
     
     # 显示版本信息
     display_version_info()

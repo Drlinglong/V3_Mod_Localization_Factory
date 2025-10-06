@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-智能安装配置引导器
-支持多语言界面，引导用户完成项目依赖安装和配置
+API密钥配置引导器
+支持多语言界面，引导用户完成API密钥环境变量设置
 """
 
 import os
@@ -12,6 +12,15 @@ import json
 import platform
 from pathlib import Path
 
+# 设置控制台编码为UTF-8
+if platform.system() == "Windows":
+    try:
+        import codecs
+        sys.stdout = codecs.getwriter('utf-8')(sys.stdout.detach())
+        sys.stderr = codecs.getwriter('utf-8')(sys.stderr.detach())
+    except:
+        pass
+
 # 添加项目根目录到路径
 project_root = Path(__file__).parent.parent.parent
 sys.path.insert(0, str(project_root))
@@ -19,11 +28,10 @@ sys.path.insert(0, str(project_root))
 from scripts.utils import i18n
 
 class SetupInstaller:
-    """智能安装配置引导器"""
+    """API密钥配置引导器"""
     
     def __init__(self):
         self.project_root = project_root
-        self.requirements_file = self.project_root / "requirements.txt"
         self.api_providers = {
             "1": {
                 "name": "Google Gemini",
@@ -102,16 +110,16 @@ Gemini CLI 是谷歌官方的命令行工具，它通过Google账户认证，无
         }
     
     def display_banner(self):
-        """显示安装配置横幅"""
+        """显示API配置横幅"""
         print("=" * 60)
-        print("🚀 Paradox Mod Localization Factory - Setup Installer")
-        print("🚀 Project Remis - 安装配置引导器")
+        print("Paradox Mod Localization Factory - API配置向导")
+        print("Project Remis - API密钥配置引导器")
         print("=" * 60)
         print()
     
     def select_language(self):
         """选择界面语言"""
-        print("🌍 请选择界面语言 / Please select interface language")
+        print("请选择界面语言 / Please select interface language")
         print("=" * 60)
         print("1. English")
         print("2. 中文 (简体)")
@@ -124,7 +132,7 @@ Gemini CLI 是谷歌官方的命令行工具，它通过Google账户认证，无
             elif choice == "2":
                 return "zh_CN"
             else:
-                print("❌ 无效选择，请重新输入 / Invalid choice, please try again")
+                print("无效选择，请重新输入 / Invalid choice, please try again")
 
     def select_api_provider(self):
         """选择API提供商"""
@@ -141,7 +149,7 @@ Gemini CLI 是谷歌官方的命令行工具，它通过Google账户认证，无
                 print(f"     - {i18n.t('setup_api_url')}: {provider['url']}")
             print()
         
-        print(f"⚠️  {i18n.t('setup_api_warning')}")
+        print(f"警告: {i18n.t('setup_api_warning')}")
         print()
         
         while True:
@@ -149,8 +157,13 @@ Gemini CLI 是谷歌官方的命令行工具，它通过Google账户认证，无
             if choice in self.api_providers:
                 return self.api_providers[choice]
             else:
-                print(f"❌ {i18n.t('setup_invalid_choice')}")
+                print(f"无效选择: {i18n.t('setup_invalid_choice')}")
 
+    def is_portable_environment(self):
+        """检测是否为便携式环境"""
+        # 检查是否存在便携式安装包的特征目录
+        return os.path.exists('python-embed') and os.path.exists('packages')
+    
     def show_info_and_pause(self, provider):
         """显示信息并暂停"""
         print("\n" + "=" * 60)
@@ -160,47 +173,6 @@ Gemini CLI 是谷歌官方的命令行工具，它通过Google账户认证，无
         print("=" * 60)
         input(f"\n{i18n.t('setup_press_enter_to_return')}")
 
-    def is_portable_environment(self):
-        """检测是否为便携式环境"""
-        try:
-            # 尝试导入pip，如果失败说明是便携式环境
-            import pip
-            return False
-        except ImportError:
-            return True
-    
-    def install_api_package(self, provider):
-        """安装API包"""
-        package_name = provider.get("package")
-        if not package_name:
-            print(f"ℹ️ {i18n.t('setup_no_package_to_install', provider=provider['name'])}")
-            return True
-
-        # 检测便携式环境
-        if self.is_portable_environment():
-            print(f"\n📦 {i18n.t('setup_installing_api_package', provider=provider['name'])}")
-            print(f"{i18n.t('setup_portable_environment_detected')}")
-            print(f"{i18n.t('setup_api_package_preinstalled', provider=provider['name'])}")
-            return True
-
-        print(f"\n{i18n.t('setup_installing_api_package', provider=provider['name'])}")
-        
-        try:
-            result = subprocess.run(
-                [sys.executable, "-m", "pip", "install", "--upgrade", package_name],
-                capture_output=True, text=True, check=True, encoding='utf-8'
-            )
-            
-            print(f"✅ {i18n.t('setup_api_package_installed', provider=provider['name'])}")
-            return True
-            
-        except subprocess.CalledProcessError as e:
-            print(f"❌ {i18n.t('setup_api_package_install_failed', provider=provider['name'])}")
-            print(f"   {e.stderr}")
-            return False
-        except Exception as e:
-            print(f"❌ {i18n.t('setup_api_package_install_error', provider=provider['name'], error=str(e))}")
-            return False
     
     def setup_api_key(self, provider):
         """设置API密钥"""
@@ -209,6 +181,12 @@ Gemini CLI 是谷歌官方的命令行工具，它通过Google账户认证，无
         print(f"2. {i18n.t('setup_login_account')}")
         print(f"3. {i18n.t('setup_create_api_key')}")
         print(f"4. {i18n.t('setup_copy_api_key')}")
+        
+        # 检测并显示环境信息
+        if self.is_portable_environment():
+            print(f"\n[便携式环境] 检测到便携式环境 - 所有依赖包已预装，无需额外安装")
+        else:
+            print(f"\n[开发环境] 检测到开发环境 - 请确保已安装相应的Python包")
         print()
         
         while True:
@@ -216,7 +194,7 @@ Gemini CLI 是谷歌官方的命令行工具，它通过Google账户认证，无
             if api_key:
                 break
             else:
-                print(f"❌ {i18n.t('setup_api_key_cannot_be_empty')}")
+                print(f"错误: {i18n.t('setup_api_key_cannot_be_empty')}")
         
         print(f"\n{i18n.t('setup_setting_env_var')}")
         
@@ -239,18 +217,18 @@ Gemini CLI 是谷歌官方的命令行工具，它通过Google账户认证，无
                 
                 print(f"   {i18n.t('setup_env_var_source_required', shell_config=shell_config_path)}")
 
-            print(f"✅ {i18n.t('setup_env_var_set_success')}")
+            print(f"成功: {i18n.t('setup_env_var_set_success')}")
             print(f"   {i18n.t('setup_env_var_restart_required')}")
             return True
             
         except Exception as e:
-            print(f"❌ {i18n.t('setup_env_var_set_failed')}")
+            print(f"错误: {i18n.t('setup_env_var_set_failed')}")
             print(f"   Error: {e}")
             print(f"   {i18n.t('setup_manual_env_var_instruction', env_key=provider['env_key'])}")
             return False
     
     def run_setup(self):
-        """运行完整的安装配置流程"""
+        """运行API密钥配置流程"""
         self.display_banner()
         
         lang_code = self.select_language()
@@ -263,29 +241,25 @@ Gemini CLI 是谷歌官方的命令行工具，它通过Google账户认证，无
                 self.show_info_and_pause(provider)
                 continue # 返回主菜单
 
-            if not self.install_api_package(provider):
-                input(f"\n{i18n.t('setup_press_enter_to_exit')}")
-                break
-
             if not self.setup_api_key(provider):
                 input(f"\n{i18n.t('setup_press_enter_to_exit')}")
                 break
             
             print("\n" + "=" * 60)
-            print(f"🎉 {i18n.t('setup_configuration_complete_provider', provider=provider['name'])}")
+            print(f"完成: {i18n.t('setup_configuration_complete_provider', provider=provider['name'])}")
             print("=" * 60)
             
             while True:
                 another = input(f"\n{i18n.t('setup_configure_another_provider')} (y/n): ").strip().lower()
                 if another in ['y', 'n']:
                     break
-                print(f"❌ {i18n.t('setup_invalid_choice')}")
+                print(f"无效选择: {i18n.t('setup_invalid_choice')}")
             
             if another == 'n':
                 break
         
         print("\n" + "=" * 60)
-        print(f"🚀 {i18n.t('setup_ready_to_use')}")
+        print(f"准备就绪: {i18n.t('setup_ready_to_use')}")
         print("=" * 60)
         print(f"   {i18n.t('setup_double_click_run_bat')}")
         print(f"   {i18n.t('setup_env_var_restart_note')}")
