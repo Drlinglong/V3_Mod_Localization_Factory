@@ -33,9 +33,26 @@ def run(mod_name: str,
     logging.info(i18n.t("start_workflow",
                  workflow_name=i18n.t("workflow_initial_translate_name"),
                  mod_name=mod_name))
+    logging.info(f"Selected provider in initial_translate.run: {selected_provider}")
 
     # ───────────── 2. init klienta ─────────────
-    client, provider_name = api_handler.initialize_client(selected_provider)
+    gemini_cli_model = None
+    if selected_provider == "gemini_cli":
+        while True:
+            print(i18n.t("gemini_cli_model_selection_prompt"))
+            print("1. gemini-2.5-pro ")
+            print("2. gemini-2.5-flash ")
+            choice = input(i18n.t("setup_enter_choice")).strip()
+            if choice == "1":
+                gemini_cli_model = "gemini-2.5-pro"
+                break
+            elif choice == "2":
+                gemini_cli_model = "gemini-2.5-flash"
+                break
+            else:
+                print(i18n.t("setup_invalid_choice"))
+
+    client, provider_name = api_handler.initialize_client(selected_provider, model_name=gemini_cli_model)
     if not client:
         logging.warning(i18n.t("api_client_init_fail"))
         return
@@ -182,6 +199,9 @@ def run(mod_name: str,
         if file_tasks:
             # 计算最优并行数（建议24个批次同时运行）
             max_workers = RECOMMENDED_MAX_WORKERS
+            if selected_provider == "ollama":
+                max_workers = 1
+                logging.info(i18n.t("ollama_single_thread_warning"))
             processor = ParallelProcessor(max_workers=max_workers)
             
             # 获取翻译函数（使用统一的API Handler接口）

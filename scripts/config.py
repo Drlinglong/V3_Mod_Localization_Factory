@@ -63,7 +63,7 @@ API_PROVIDERS = {
     },
         "gemini_cli": {
             "cli_path": "gemini",          # Gemini CLI命令路径
-            "default_model": "gemini-2.5-pro",  # CLI使用Pro模型
+            "default_model": "gemini-2.5-flash",  # CLI使用Flash模型作为默认，速度更快
             "enable_thinking": True,       # CLI模式启用思考功能，发挥Pro模型优势
             "thinking_budget": -1,         # 动态启用思考功能
             "chunk_size": GEMINI_CLI_CHUNK_SIZE,  # 使用更大的chunk

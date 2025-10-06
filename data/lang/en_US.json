@@ -432,7 +432,9 @@
   "setup_desc_qwen": "Uses the qwen-plus model. Friendly for users in China.",
   "setup_desc_grok": "Uses the grok-4-fast-reasoning model. Extremely cost-effective.",
   "setup_desc_ollama": "Run models on your own computer, completely free, but requires good hardware.",
+  "ollama_single_thread_warning": "Warning: Ollama is running in single-thread mode to prevent system overload. Translation may be slower.",
   "setup_desc_gemini_cli": "Authenticates via Google account, no API Key required, suitable for developers.",
+  "gemini_cli_model_selection_prompt": "Please select the Gemini CLI model to use:",
   "setup_press_enter_to_return": "Press Enter to return to the main menu...",
   "setup_configuration_complete_provider": "🎉 {provider} configuration complete!",
   "setup_configure_another_provider": "Configure another provider?"
