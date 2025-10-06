@@ -3,7 +3,7 @@
   <img src="gfx/Project Remis.png" width="150" alt="Project Remis Logo">
 
   <h1>Project Remis</h1>
-  <strong>P社Mod本地化工厂 (Paradox Mod Localization Factory)</strong>
+  <strong>Paradox Mod Localization Factory</strong>
 
   <p>
     <a href="https://github.com/Drlinglong/V3_Mod_Localization_Factory/releases/latest"><img src="https://img.shields.io/github/v/release/Drlinglong/V3_Mod_Localization_Factory?style=for-the-badge&logo=github&label=Release&labelColor=1a1a2e&color=4ecdc4" alt="Release Version"></a>
@@ -19,207 +19,214 @@
 
 </div>
 
-> 告别复制粘贴，拥抱自动化。本项目旨在为P社游戏（如维多利亚3、群星等）的Mod提供一套“一键启动”的高效本地化解决方案。
+> Say goodbye to copy-pasting, embrace automation. This project aims to provide a "one-click" efficient localization solution for Paradox games' Mods (such as Victoria 3, Stellaris, etc.).
 
-## 1. 项目愿景：翻译，不该成为门槛
-并不是每个人都精通八国语言。
+## 1. Project Vision: Translation Should Not Be a Barrier
+Not everyone is fluent in eight languages.
 
-即使你真的精通，也未必愿意在下班后打开游戏时还要开动脑筋逐句翻译Mod。
+Even if you are, you might not want to rack your brain translating every sentence of a Mod after a long day at work.
 
-这个项目的初衷，是简化这个过程——让你：
+The original intention of this project is to simplify this process – allowing you to:
 
-**看到一个喜欢的Mod，只需动动鼠标，就能玩到母语版本。**
+**See a Mod you like, click a few times, and play it in your native language.**
 
-它不是为“完美翻译”而生，而是为了让翻译，不再成为阻碍创意传播的门槛。
+It's not born for "perfect translation," but to ensure that translation no longer hinders the spread of creativity.
 
-我们希望：
-* 玩家可以一键本地化工坊的优秀Mod，哪怕只是粗翻，也能顺利游玩；
-* 多语言创作者可以快速构建初稿，再精修润色，不再困在重复劳动中；
-* 本地社区可以更低门槛地参与全球Mod生态建设。
+We hope that:
+* Players can localize excellent Mods from the workshop with one click, even if it's a rough translation, to enjoy the game smoothly;
+* Multilingual creators can quickly build a first draft and then refine it, no longer trapped in repetitive work;
+* Local communities can participate in the global Mod ecosystem with a lower barrier to entry.
 
-这是一个让创作自由流动的工具，一个服务于“表达、理解、再创造”的工程。
+This is a tool that allows creativity to flow freely, an engineering project serving "expression, understanding, and re-creation."
 
-在人工智能和大语言模型的时代，语言不该也不会成为玩家社区之间的沟通障碍。
-
-***
-
-## 2. 它为什么好用？——核心功能一览
-
-我们把复杂的技术藏在了背后，让你能享受到最纯粹、最简单的汉化体验。
-
-#### **强大的AI翻译核心**
-*   **多种AI引擎任你选**: 内置支持Gemini、OpenAI、DeepSeek、Grok、Ollama等多种业界领先的AI翻译服务，你可以选择最顺手的一个。
-*   **游戏术语，精准翻译**: 内置了智能词典系统。它就像一个了解游戏的老玩家，会自动识别出“船队”、“思潮”这类专门术语，并确保它们在整个Mod里翻译统一，告别机翻的生硬感。
-*   **不怕奇怪文件**: P社游戏的文件格式有时很“调皮”，但我们的工具能轻松应对，保证所有文本都能被找到并翻译。
-*   **大文件也不怕**: 遇到几万行的超大文本？工具会自动把它切成小块处理，稳定又可靠。
-*   **完美保留原始格式**: 翻译后的文件会保持和原来一模一样的排版和注释，对Mod本身零影响。
-*   **CLI工具支持**: 支持通过谷歌官方的Gemini CLI工具，每天享受千次免费的高质量AI翻译，无需额外付费。
-
-#### **为P社游戏量身打造**
-*   **支持多款游戏**: 为维多利亚3、群星、钢4等主流P社游戏都预设了专门的配置，开箱即用。
-*   **“一键多语”模式**: 想把一个英文Mod同时翻译成中文、日文、德文？没问题，一键操作，工具会自动生成所有语言的本地化文件。
-*   **智能处理Mod信息**: 不仅仅是游戏文本，工具还会自动翻译Mod的标题、简介，处理元数据和封面图，生成一个完整的汉化包。
-*   **上下文精准翻译**: 在翻译前，你可以输入Mod的主题（比如“这是一个关于魔法的Mod”），AI就能更好地理解背景，提供更贴切的翻译。
-
-#### **省心省力的辅助功能**
-*   **自动生成校对清单**: 翻译完成后，会自动生成一份`校对进度表.csv`文件。你可以用Excel打开它，清晰地看到原文和译文的对比，方便你精修润色。
-*   **翻译后自动“体检”**: 工具会检查翻译好的文件有没有格式错误，并生成一份报告，帮你提前发现问题。
-*   **安全第一**: 万一翻译过程中网络中断或AI出错，工具会为你保留一份原文文件作为备份，保证你的Mod不会因此损坏。
+In the era of artificial intelligence and large language models, language should not and will not be a barrier to communication between player communities.
 
 ***
 
-## 3. 使用方法
+## 2. Why Is It So Easy to Use? – Core Features at a Glance
 
-得益于全新的打包技术，使用本项目变得前所未有的简单。**无需安装Python，无需配置环境，真正开箱即用。**
+We've hidden complex technology behind the scenes, so you can enjoy the purest and simplest localization experience.
 
-### 第1步：下载与解压
-1.  从发布页面下载最新的 **便携版 (Portable)** 压缩包（例如 `Project_Remis_v1.0.0.zip`）。
-2.  将它解压到你电脑的任意位置。
-3.  运行setup.bat,它将引导你输入API密钥，将其设置为环境变量，以便后续本地化流程。
+#### **Powerful AI Translation Core**
+*   **Multiple AI Engines to Choose From**: Built-in support for industry-leading AI translation services such as Gemini, OpenAI, DeepSeek, Grok, Ollama, allowing you to choose the one that suits you best.
+*   **Game Terminology, Accurate Translation**: Features an intelligent glossary system. It acts like an experienced player who understands the game, automatically recognizing specialized terms like "convoy" or "ideology" and ensuring consistent translation throughout the Mod, avoiding the stiffness of machine translation.
+*   **No Fear of Strange Files**: Paradox game file formats can sometimes be "tricky," but our tool handles them with ease, ensuring all text can be found and translated.
+*   **No Fear of Large Files**: Encountering a huge text file with tens of thousands of lines? The tool automatically breaks it into smaller chunks for stable and reliable processing.
+*   **Perfect Preservation of Original Format**: Translated files maintain the exact same layout and comments as the original, with zero impact on the Mod itself.
+*   **CLI Tool Support**: Supports Google's official Gemini CLI tool, allowing you to enjoy thousands of free, high-quality AI translations daily without additional cost.
 
-> **重要提示：准备你的API Key！**
-> 本工具是AI翻译的“搬运工”，它本身不提供翻译能力。你需要使用自己的AI服务API Key才能进行翻译。
-> 在运行过程中，程序会提示您选择AI服务并输入对应的API Key。请确保您已准备好所选AI服务（如Gemini、OpenAI等）的有效API Key。
-### 第2步：放入Mod源文件
-1.  打开刚刚解压的文件夹，你会看到一个名为 `source_mod` 的文件夹。
-2.  将你想要汉化的整个Mod文件夹，完整地复制并粘贴到 `source_mod` 里面。
+#### **Tailored for Paradox Games**
+*   **Supports Multiple Games**: Pre-configured for mainstream Paradox games like Victoria 3, Stellaris, Hearts of Iron 4, ready to use out of the box.
+*   **"One-Click Multi-Language" Mode**: Want to translate an English Mod into Chinese, Japanese, and German simultaneously? No problem, with one click, the tool automatically generates localization files for all languages.
+*   **Intelligent Mod Information Handling**: Beyond just game text, the tool automatically translates Mod titles, descriptions, processes metadata and cover images, generating a complete localized package.
+*   **Contextually Accurate Translation**: Before translating, you can input the Mod's theme (e.g., "This is a Mod about magic"), allowing the AI to better understand the background and provide more appropriate translations.
 
-    > **强烈建议**：为了方便识别，最好把从创意工坊下载的、名字为一串数字的Mod文件夹，重命名为Mod的实际名称。
+#### **Effortless Auxiliary Functions**
+*   **Automatic Proofreading List Generation**: After translation, a `Proofreading Progress.csv` file is automatically generated. You can open it with Excel to clearly see the comparison between the original and translated text, facilitating refinement.
+*   **Automatic "Health Check" After Translation**: The tool checks translated files for format errors and generates a report, helping you identify issues in advance.
+*   **Safety First**: In case of network interruption or AI error during translation, the tool retains a copy of the original file as a backup, ensuring your Mod is not damaged.
 
-    正确的目录结构应该像这样：
+***
+
+## 3. How to Use
+
+Thanks to new packaging technology, using this project has become easier than ever. **No Python installation, no environment configuration required, truly plug-and-play.**
+
+### Step 1: Download and Unzip
+1.  Download the latest **Portable** compressed package (e.g., `Project_Remis_v1.1.0.zip`) from the release page.
+2.  Unzip it to any location on your computer.
+3.  Run `setup.bat`, which will automatically install dependencies and guide you to enter your API key, setting it as an environment variable for subsequent localization processes.
+
+> **Important Note: Prepare Your API Key!**
+> This tool is an "AI translation porter"; it does not provide translation capabilities itself. You need to use your own AI service API Key for translation.
+> During operation, the program will prompt you to select an AI service and enter the corresponding API Key. Please ensure you have a valid API Key for your chosen AI service (e.g., Gemini, OpenAI, etc.).
+>  **Important Reminder**:
+>  Applying for an API key requires account registration and binding a bank card.
+>  Using the API may incur costs, subject to the service provider's billing terms.
+>  Please **keep your API key safe**, otherwise your bank card may be overcharged!
+### Step 2: Place Mod Source Files
+1.  Open the unzipped folder, and you will see a folder named `source_mod`.
+2.  Copy and paste the entire Mod folder you want to localize into `source_mod`.
+
+    > **Strong Recommendation**: For easier identification, it's best to rename Mod folders downloaded from the workshop (which often have a string of numbers) to the Mod's actual name.
+
+    The correct directory structure should look like this:
     ```
-    V3_Mod_Localization_Factory/
-    ├── source_mod/                    # <-- 把你的Mod放在这里
-    │   └── 你的Mod叫这个名字/         # <-- 这是你要本地化的Mod
-    │       ├── descriptor.mod
-    │       ├── localization/
-    │       └── ... (其他Mod文件)
-    ├── scripts/
-    ├── run.bat                        # <-- 我们稍后会用到它
-    └── ... (其他项目文件)
+    Project_Remis_v1.1.0/              # <-- Root directory after unzipping
+    ├── app/                           # <-- Core program files (do not modify)
+    │   ├── source_mod/                # <-- 1. Place your Mod folders here
+    │   │   └── Your Mod Name/
+    │   │       └── ...
+    │   └── my_translation/            # <-- 3. Localized Mods will appear here
+    ├── packages/
+    ├── python-embed/
+    ├── setup.bat                      # <-- (First run) Automatic installation and configuration
+    └── run.bat                        # <-- 2. Double-click me to start localization!
     ```
 
+### Step 3: Run Localization!
+1.  **First Use**: Please double-click `setup.bat` first. It will automatically install dependencies and guide you to set up your API key.
+2.  **Start Localization**: Double-click `run.bat`.
+3.  Then, you just need to follow the Chinese prompts step-by-step:
+    *   Select the interface language and the AI service to use.
+    *   Select the game you want to play.
+    *   Select which Mod you want to localize.
+    *   Select the original language of the Mod and the language you want to translate it into.
+    *   Choose to enable or disable fuzzy matching for the glossary.
+    *   Confirm all your selections in the project overview, then start the translation!
+3.  Wait for the program to finish running. Upon success, the localized Mod package will automatically appear in the `my_translation` folder.
 
+### Step 4: Enable the Mod in Game
+1.  Go to the `my_translation` folder and find the newly generated localized Mod package (e.g., `zh-CN-Your Mod Name`).
+2.  Copy this entire folder to the corresponding `mod` directory of the game.
+    *   **Victoria 3**: `C:\Users\YourUsername\Documents\Paradox Interactive\Victoria 3\mod`
+    *   **Stellaris**: `C:\Users\YourUsername\Documents\Paradox Interactive\Stellaris\mod`
+    *   **Hearts of Iron IV**: `C:\Users\YourUsername\Documents\Paradox Interactive\Hearts of Iron IV\mod`
+    *   **Crusader Kings III**: `C:\Users\YourUsername\Documents\Paradox Interactive\Crusader Kings III\mod`
+3.  Launch the game launcher, and in the "Playsets," enable both the **Original Mod** and the **Localized Mod**.
+4.  **Crucial Step**: Ensure the **Localized Mod** is sorted **below** the Original Mod in the list.
+5.  Start the game and enjoy your native language experience!
 
-### 第3步：运行汉化！
-1.  双击文件夹根目录的 `run.bat` 文件。
-2.  之后，你只需要根据弹出的中文提示，一步步选择即可：
-    *   选择界面语言与使用的AI服务。
-    *   选择你要玩的游戏。
-    *   选择你要汉化哪个Mod。
-    *   选择Mod的原文是什么语言，以及你想把它翻译成什么语言。
-    *   选择启用或禁用词典的模糊匹配。
-    *   在工程总览中确认你的上述所有选择， 然后启动翻译！
-3.  等待程序运行完成。成功后，汉化好的Mod包会自动出现在 `my_translation` 文件夹里。
+### Troubleshooting
+- **Program crashes or errors?**
+  - **API Key Issue**: Please check if your API Key is correct, valid, and if your account balance is sufficient.
+  - **Incomplete Mod Files**: Please ensure you copied the entire Mod folder, not just the `localization` folder within it.
+- **Translation not taking effect?**
+  - Check if the loading order of the localized Mod in the game launcher is **below** the original Mod.
+  - Try deleting fake localization files in the original mod. Some mods come with **fake localization files**, which can prevent localization patches from taking effect. You need to manually delete these files.
+  - Go to `SteamLibrary\\steamapps\\workshop\\content\\529340\\3535929411 (replace this string of numbers with the workshop ID of the MOD you are localizing)\\localization`, and **delete all folders except the original language folder of the MOD**.
+  - For example, if the original mod is in English, you need to delete all folders under `localization` except the `english` folder.
+  - You can also choose to **overwrite** the content of this localization patch into the original MOD folder. This can reduce annoying verification processes, and Steam will no longer try to re-download missing fake localization files from the workshop.
+- **Poor translation quality?**
+  - You can try adding or modifying glossary files for the corresponding game in the `data/glossary` folder, which can significantly improve the accuracy of terminology.
+  - When starting the translation, entering the Mod's theme or keywords as prompted can also help the AI better understand the context.
 
-### 第4步：在游戏中启用Mod
-1.  进入 `my_translation` 文件夹，找到刚刚生成的汉化Mod包（例如 `zh-CN-你的Mod叫这个名字`）。
-2.  将这个文件夹完整地复制到游戏对应的 `mod` 目录中。
-    *   **维多利亚3**: `C:\Users\你的用户名\Documents\Paradox Interactive\Victoria 3\mod`
-    *   **群星 (Stellaris)**: `C:\Users\你的用户名\Documents\Paradox Interactive\Stellaris\mod`
-    *   **钢铁雄心4 (HOI4)**: `C:\Users\你的用户名\Documents\Paradox Interactive\Hearts of Iron IV\mod`
-    *   **十字军之王3 (CK3)**: `C:\Users\你的用户名\Documents\Paradox Interactive\Crusader Kings III\mod`
-3.  启动游戏启动器，在“播放集”中，同时启用**原Mod**和**汉化Mod**。
-4.  **关键一步**：确保**汉化Mod**在列表中的排序**低于**原Mod。
-5.  开始游戏，享受你的母语体验吧！
-
-### 故障排除
-- **程序闪退或报错？**
-  - **API Key问题**：请检查你的API Key是否正确、有效，以及账户余额是否充足。
-  - **Mod文件不完整**：请确保你复制了整个Mod文件夹，而不是只有里面的 `localization` 文件夹。
-- **翻译不生效？**
-  - 检查在游戏启动器里，汉化Mod的加载顺序是否在原Mod**之下**。
-  - 请尝试删除原始mod中的假汉化文件。某些模组自带了**假本地化文件**，这会导致本地化补丁无法生效。您需要手动删除这些文件。
-  - 请前往`SteamLibrary\steamapps\workshop\content\529340\3535929411（将这串数字替换为你正在汉化的MOD的创意工坊ID）\localization`下，**删除MOD原始语言文件夹之外的所有文件夹**。
-  - 例如，如原始mod为英文，则你需要删除localization下除了english文件夹之外的所有文件夹。
-  - 你也可以选择将该本地化补丁的内容**覆盖**到原MOD文件夹中。这样能减少恼人的校验文件过程，steam也不会再尝试重新从工坊下载缺失的假本地化文件。
-- **翻译质量不佳？**
-  - 你可以尝试在 `data/glossary` 文件夹中为对应游戏添加或修改词典文件，这能显著提升术语的准确性。
-  - 在开始翻译时，根据提示输入Mod的主题或关键词，也能帮助AI更好地理解上下文。
+If you encounter further issues, please refer to the [Frequently Asked Questions (FAQ)](docs/en/user-guides/faq.md) for more detailed solutions.
 
 ***
 
-## 4. 词典系统：让AI说“人话”的秘密武器
+## 4. Glossary System: The Secret Weapon to Make AI Speak "Human Language"
 
-### 4.1. 它是如何工作的？
-简单来说，词典就是一份“游戏术语小抄”。
+### 4.1. How Does It Work?
+Simply put, a glossary is a "game terminology cheat sheet."
 
-在翻译开始前，我们会把这份小抄交给AI，并告诉它：“遇到这些词，必须严格按照小抄上的来翻译，不许自己发挥。”
+Before translation begins, we hand this cheat sheet to the AI and tell it: "When you encounter these words, you must translate them strictly according to the cheat sheet; no improvisation allowed."
 
-**举个例子：**
-*   **没有词典时**: AI可能会把 '''convoy''' 随意翻译成“护航”、“车队”或“护卫队”。
-*   **有了词典后**: AI会严格按照我们的要求，在任何地方都把它准确地翻译为“船队”。
+**For example:**
+*   **Without a glossary**: AI might randomly translate '''convoy''' into "escort," "motorcade," or "guard."
+*   **With a glossary**: AI will strictly follow our requirements and accurately translate it as "fleet" everywhere.
 
-正是这个机制，保证了汉化Mod的专业性和一致性。
+This mechanism ensures the professionalism and consistency of the localized Mod.
 
-### 4.2. 词典文件在哪里？
-你可以在 `data/glossary/` 目录下找到并编辑各个游戏的词典文件：
+### 4.2. Where Are the Glossary Files?
+You can find and edit the glossary files for each game in the `data/glossary/` directory:
 *   **Victoria 3**: `data/glossary/victoria3/glossary.json`
 *   **Stellaris**: `data/glossary/stellaris/glossary.json`
 
-### 4.3. 词典来源说明与致谢
-本项目的游戏专用词典，其数据来源于以下优秀的官方及社区汉化项目，我们在此向所有原贡献者致以最诚挚的感谢！
+### 4.3. Glossary Source and Acknowledgments
+The game-specific glossaries for this project are derived from the following excellent official and community localization projects. We extend our sincerest gratitude to all original contributors!
 
-*   **Victoria 3 词典来源**: 维多利亚3 汉化 更新V1.2、Morgenröte | 汉语、Better Politics Mod 简体中文汉化、牛奶汉化
-*   **Stellaris 词典来源**: 鸽组汉化词典、Shrouded Regions汉化词典、L网群星mod汉化集词典
+*   **Victoria 3 Glossary Sources**: Victoria 3 Localization Update V1.2, Morgenröte | Chinese, Better Politics Mod Simplified Chinese Localization, Milk Localization
+*   **Stellaris Glossary Sources**: Pigeon Group Localization Glossary, Shrouded Regions Localization Glossary, L-Network Stellaris Mod Localization Collection Glossary
 
 ***
 
-## 5. 项目架构
-下图展示了本项目的内部结构，它保证了工具的稳定和未来的扩展能力。
+## 5. Project Architecture
+If you are interested in developing and debugging this project, please refer to the [project documentation](docs/documentation-center.md).
+The diagram below illustrates the internal structure of this project, which ensures the tool's stability and future extensibility.
 ```
 scripts/
-├── main.py                           # 【总启动器】唯一的程序入口
-├── config.py                         # 【全局配置】存放语言数据库、API设置等
+├── main.py                           # [Main Launcher] The sole program entry point
+├── config.py                         # [Global Configuration] Stores language database, API settings, etc.
 │
-├── core/                             # 【核心引擎】可复用的底层功能模块
-│   ├── api_handler.py                # 【API处理器工厂】统一管理不同AI服务接口
-│   ├── gemini_handler.py             # 【Gemini处理器】Google Gemini API接口
-│   ├── gemini_cli_handler.py         # 【Gemini CLI处理器】调用谷歌官方CLI
-│   ├── openai_handler.py             # 【OpenAI处理器】OpenAI API接口
-│   ├── qwen_handler.py               # 【Qwen处理器】阿里云通义千问API接口
-│   ├── deepseek_handler.py           # 【DeepSeek处理器】DeepSeek API接口
-│   ├── grok_handler.py               # 【Grok处理器】Grok API接口
-│   ├── ollama_handler.py             # 【Ollama处理器】Ollama 本地化部署接口
-│   ├── glossary_manager.py           # 【词典管理器】游戏专用术语词典加载与管理
-│   ├── file_parser.py                # 【文件解析器】解析P社特有的.yml格式
-│   ├── file_builder.py               # 【文件构建器】重建本地化文件
-│   ├── directory_handler.py          # 【目录处理器】处理文件夹结构
-│   ├── asset_handler.py              # 【资源处理器】处理元数据和资源文件
-│   ├── proofreading_tracker.py       # 【校对追踪器】生成校对进度表
-│   ├── post_processing_manager.py    # 【后处理管理器】格式验证与报告生成 ✨
-│   ├── parallel_processor.py         # 【并行处理器】多文件并发处理
-│   └── ... (其他核心模块)
+├── core/                             # [Core Engine] Reusable underlying functional modules
+│   ├── api_handler.py                # [API Handler Factory] Unified management of different AI service interfaces
+│   ├── gemini_handler.py             # [Gemini Handler] Google Gemini API interface
+│   ├── gemini_cli_handler.py         # [Gemini CLI Handler] Calls Google's official CLI
+│   ├── openai_handler.py             # [OpenAI Handler] OpenAI API interface
+│   ├── qwen_handler.py               # [Qwen Handler] Alibaba Cloud Tongyi Qianwen API interface
+│   ├── deepseek_handler.py           # [DeepSeek Handler] DeepSeek API interface
+│   ├── grok_handler.py               # [Grok Handler] Grok API interface
+│   ├── ollama_handler.py             # [Ollama Handler] Ollama local deployment interface
+│   ├── glossary_manager.py           # [Glossary Manager] Game-specific terminology glossary loading and management
+│   ├── file_parser.py                # [File Parser] Parses Paradox's unique .yml format
+│   ├── file_builder.py               # [File Builder] Reconstructs localization files
+│   ├── directory_handler.py          # [Directory Handler] Handles folder structures
+│   ├── asset_handler.py              # [Asset Handler] Processes metadata and asset files
+│   ├── proofreading_tracker.py       # [Proofreading Tracker] Generates proofreading progress table
+│   ├── post_processing_manager.py    # [Post-processing Manager] Format validation and report generation ✨
+│   ├── parallel_processor.py         # [Parallel Processor] Concurrent processing of multiple files
+│   └── ... (Other core modules)
 │
-├── workflows/                        # 【工作流】具体的业务流程
-│   └── initial_translate.py          # 【初始翻译】主要的翻译工作流程
+├── workflows/                        # [Workflows] Specific business processes
+│   └── initial_translate.py          # [Initial Translation] The main translation workflow
 │
-├── hooks/                            # 【钩子系统】扩展解析器功能
-│   └── file_parser_hook.py          # 【文件解析钩子】自定义文件解析逻辑
+├── hooks/                            # [Hook System] Extends parser functionality
+│   └── file_parser_hook.py          # [File Parsing Hook] Custom file parsing logic
 │
-└── utils/                            # 【辅助工具】通用功能模块
-    ├── post_process_validator.py     # 【后处理验证器】游戏特定语法规则验证 ✨
-    ├── punctuation_handler.py        # 【标点符号处理器】多语言标点符号转换
-    └── ... (其他辅助工具)
+└── utils/                            # [Utility Tools] General functional modules
+    ├── post_process_validator.py     # [Post-processing Validator] Game-specific syntax rule validation ✨
+    ├── punctuation_handler.py        # [Punctuation Handler] Multi-language punctuation conversion
+    └── ... (Other utility tools)
 ```
 
 ***
 
-## 6. 合作与未来计划
-本项目是一个在你的反馈和我的协助下共同成长的开源项目。我们已经为未来规划了许多激动人心的功能，并已在GitHub的Issues中立项。
+## 6. Collaboration and Future Plans
+This project is an open-source project that grows with your feedback and my assistance. We have many exciting features planned for the future and have already initiated them in GitHub Issues.
 
-我们欢迎任何形式的反馈、建议和代码贡献！
+We welcome any form of feedback, suggestions, and code contributions!
 
 ***
 
-### 许可协议 (License)
+### License
 
-本项目采用**双许可证模式**：
+This project adopts a **dual-license model**:
 
-1.  **代码部分**（所有 `.py` 源代码文件）  
-    采用 **[GNU Affero General Public License v3.0 (AGPL-3.0)](https://www.gnu.org/licenses/agpl-3.0.html)**  
-    简单来说，你可以自由使用、修改和分发代码，但任何修改后的版本也必须开源，并且如果你将其用于在线服务，也必须提供源代码。
+1.  **Code Section** (all `.py` source code files)
+    Uses **[GNU Affero General Public License v3.0 (AGPL-3.0)](https://www.gnu.org/licenses/agpl-3.0.html)**
+    Simply put, you are free to use, modify, and distribute the code, but any modified version must also be open source, and if you use it in an online service, you must also provide the source code.
 
-2.  **数据与文档部分**（词典、`.md` 文档等）  
-    采用 **[知识共享 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans)**  
-    简单来说，你可以自由分享和修改，但必须署名、不能用于商业目的，并且衍生作品必须采用相同的许可。
+2.  **Data and Documentation Section** (glossaries, `.md` documents, etc.)
+    Uses **[Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans)**
+    Simply put, you are free to share and modify, but you must provide attribution, cannot use it for commercial purposes, and derivative works must adopt the same license.
