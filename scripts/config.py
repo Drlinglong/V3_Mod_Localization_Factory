@@ -6,8 +6,8 @@ import multiprocessing
 # --- 项目信息 ----------------------------------------------------
 PROJECT_NAME = "Paradox Mod 本地化工厂 - Paradox Mod Localization Factory"
 PROJECT_DISPLAY_NAME = "蕾姆丝计划 - Project Remis "
-VERSION = "1.0.5"
-LAST_UPDATE_DATE = "2025-09-12"
+VERSION = "1.1.0"
+LAST_UPDATE_DATE = "2025-10-06"
 COPYRIGHT = "© 2025 Project Remis Team"
 
 # --- 项目信息显示配置 --------------------------------------------
@@ -85,8 +85,8 @@ API_PROVIDERS = {
     "grok": {
         "api_key_env": "XAI_API_KEY",
         "base_url": "https://api.x.ai/v1",
-        "default_model": "grok-4",
-        "description": "通过xAI官方API访问Grok-4模型"
+        "default_model": "grok-4-fast-reasoning",
+        "description": "通过xAI官方API访问grok-4-fast-reasoning模型"
     },
     "deepseek": {
         "api_key_env": "DEEPSEEK_API_KEY",
