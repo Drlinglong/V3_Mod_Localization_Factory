@@ -34,5 +34,3 @@ This directory contains all English documentation for the V3 Mod Localization Fa
 - [Chinese Documentation](../zh/index.md) - Chinese documentation index
 - [Back to Documentation Center](../../documentation-center.md) - Back to documentation center
 
-## Note
-Currently, there is relatively little Chinese documentation, and most technical documentation is written in English. If you need a Chinese version of specific documentation, please contact the project maintainer.

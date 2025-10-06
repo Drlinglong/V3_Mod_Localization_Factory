@@ -32,6 +32,3 @@
 ## 导航
 - [English Documentation](../en/index.md) - English documentation index
 - [返回文档中心](../../documentation-center.md) - 返回文档中心
-
-## 说明
-目前中文文档相对较少，大部分技术文档使用英文编写。如果您需要中文版本的特定文档，请联系项目维护者。
