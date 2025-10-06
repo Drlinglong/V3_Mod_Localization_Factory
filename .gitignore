@@ -1,0 +1,43 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+.venv/
+venv/
+ENV/
+
+# Databases
+*.db
+*.sqlite3
+
+# Output files from the app
+output/
+*.log
+*.gif
+
+# IDE / Editor specific
+.vscode/
+.idea/
+
+# Mod file and translate file
+/source_mod/*
+/my_translation/*
+
+# Do NOT ignore the folder
+!/source_mod/.gitkeep
+!/my_translation/.gitkeep
+
+# Node / React Frontend Dependencies
+/ui/frontend/node_modules/
+/ui/frontend/build/
+/ui/frontend/dist/
+.env
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build script dependencies
+/archive/build_release_scripts/get-pip.py
+/archive/build_release_scripts/python-3.10.11-embed-amd64.zip
