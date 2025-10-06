@@ -363,7 +363,7 @@
   "validation_generic_banned_chars_found": "在 '{match_text}' 中发现违规字符: '{banned_chars}'",
   "validation_generic_format_error": "格式错误: '{content}'",
   "validation_generic_color_tags_count": "发现 {start_count} 个起始标签，但有 {end_count} 个结束符。",
-  "validation_generic_unsupported_formatting": "不支持的格式化命令: '{found_text}'。",,
+  "validation_generic_unsupported_formatting": "不支持的格式化命令: '{found_text}'。",
   
   "post_processing_start": "\n--- 启动后处理格式验证 ---",
   "post_processing_game": "正在按照 {game_name} 的本地化语法格式进行检查...",
@@ -454,5 +454,8 @@
   "gemini_cli_model_selection_prompt": "请选择要使用的Gemini CLI模型：",
   "setup_press_enter_to_return": "按回车键返回主菜单...",
   "setup_configuration_complete_provider": "🎉 {provider} 配置完成！",
-  "setup_configure_another_provider": "是否要配置其他服务？"
+  "setup_configure_another_provider": "是否要配置其他服务？",
+  "unexpected_error_see_logs": "发生意外错误，请查看日志。",
+  "workflow_completed_ask_next": "工作流已完成。是否继续翻译其他Mod？ (Y/N)",
+  "enter_workflow_completed_choice": "请输入选择 (Y 或 N): "
 }

@@ -439,4 +439,8 @@
   "setup_press_enter_to_return": "Press Enter to return to the main menu...",
   "setup_configuration_complete_provider": "🎉 {provider} configuration complete!",
   "setup_configure_another_provider": "Configure another provider?"
+  ,"unexpected_error_see_logs": "An unexpected error occurred, please check the logs.",
+  "workflow_completed_ask_next": "Workflow completed. Continue translating other Mods? (Y/N)",
+  "enter_workflow_completed_choice": "Enter choice (Y or N): ",
+  "program_exit_thank_you": "Program exited, thank you for using!"
 }

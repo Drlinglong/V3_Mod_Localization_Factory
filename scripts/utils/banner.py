@@ -1,9 +1,13 @@
 # scripts/utils/banner.py
 
+import sys
+
 def print_banner():
     """
     Prints the new, large, truecolor "Remis" banner with precise brand colors.
     """
+    if sys.stdout.encoding != 'utf-8':
+        sys.stdout.reconfigure(encoding='utf-8')
     # Hex: #702963 -> RGB: (112, 41, 99)
     PURPLE = '\033[38;2;112;41;99m'
     # Hex: #FFCC00 -> RGB: (255, 204, 0)

@@ -370,13 +370,13 @@ class GeminiCLIHandler:
             # 如果没有找到合适的行，返回整个响应
             return response.strip()
 
-        def _parse_batch_response(self, response: str, expected_count: int) -> List[str]:
+    def _parse_batch_response(self, response: str, expected_count: int) -> List[str]:
 
-            """[REFACTORED] Delegates parsing to the centralized JSON response parser."""
+        """[REFACTORED] Delegates parsing to the centralized JSON response parser."""
 
-            # The raw response from the CLI's stdout is passed directly.
+        # The raw response from the CLI's stdout is passed directly.
 
-            return parse_json_response(response, expected_count)
+        return parse_json_response(response, expected_count)
 
     def _analyze_problematic_content(self, lines, empty_lines, invalid_lines, short_lines):
         """分析问题内容，尝试找出导致翻译失败的具体原因"""
