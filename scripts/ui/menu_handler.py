@@ -219,26 +219,98 @@ def select_game_profile():
         except ValueError:
             logging.warning(i18n.t("invalid_input_not_number"))
 
-def select_language(prompt_key, game_profile, source_lang_key=None):
+def select_language(prompt_key, game_profile, source_lang=None):
     """
-    Displays a language selection menu based on the chosen game profile.
+    显示基于所选游戏配置文件的语言选择菜单。
+    现在支持多选和“套壳”模式。
     """
     logging.info(i18n.t(prompt_key))
 
     supported_langs = [LANGUAGES[key] for key in game_profile['supported_language_keys']]
 
+    # 如果提供了源语言，则在目标语言选择中将其过滤掉
+    if source_lang:
+        display_options = [lang for lang in supported_langs if lang['key'] != source_lang['key']]
+    else:
+        display_options = supported_langs
+
+    # --- 显示菜单 ---
+    is_target_selection = bool(source_lang)
+
+    if is_target_selection:
+        logging.info(f"  [0] 一键翻译为其余 {len(display_options)} 种语言")
+
+    for i, lang in enumerate(display_options, 1):
+        logging.info(f"  [{i}] {lang['name']}")
+
+    if is_target_selection:
+        logging.info(f"  [99] 套壳模式 (自定义语言)")
+
+
+    while True:
+        try:
+            choice_str = input(i18n.t("enter_choice_prompt")).strip()
+            choice = int(choice_str)
+
+            if is_target_selection:
+                if choice == 0:
+                    logging.info(f"已选择翻译为所有其他 {len(display_options)} 种语言。")
+                    return display_options
+                elif 1 <= choice <= len(display_options):
+                    selected = display_options[choice - 1]
+                    logging.info(f"已选择: {selected['name']}")
+                    return [selected]
+                elif choice == 99:
+                    shell_config = handle_shell_language_selection(game_profile)
+                    return [shell_config] if shell_config else None
+                else:
+                    logging.warning(i18n.t("invalid_input_number"))
+            else:  # 源语言选择
+                if 1 <= choice <= len(display_options):
+                    selected = display_options[choice - 1]
+                    logging.info(f"已选择: {selected['name']}")
+                    return selected
+                else:
+                    logging.warning(i18n.t("invalid_input_number"))
+        except ValueError:
+            logging.warning(i18n.t("invalid_input_not_number"))
+
+def handle_shell_language_selection(game_profile):
+    """
+    处理“套壳”语言选择
+    """
+    logging.info("进入套壳模式...")
+    custom_name = input("请输入自定义语言的名称 (例如 'Italiano'): ").strip()
+    if not custom_name:
+        logging.warning("自定义语言名称不能为空。")
+        return None
+
+    logging.info("请选择一个“套壳”语言 (例如 English)，生成的文件将使用此语言的格式:")
+
+    supported_langs = [LANGUAGES[key] for key in game_profile['supported_language_keys']]
     for i, lang in enumerate(supported_langs, 1):
         logging.info(f"  [{i}] {lang['name']}")
 
     while True:
         try:
-            choice = int(input(i18n.t("enter_choice_prompt"))) - 1
+            choice = int(input("请输入选择: ")) - 1
             if 0 <= choice < len(supported_langs):
-                return supported_langs[choice]
+                shell_lang = supported_langs[choice]
+
+                shell_lang_config = {
+                    "is_shell": True,
+                    "name": f"{custom_name} (套壳: {shell_lang['name']})",
+                    "custom_name": custom_name,
+                    "key": shell_lang['key'],
+                    "folder_prefix": shell_lang['folder_prefix'],
+                    "code": shell_lang['code']
+                }
+                logging.info(f"已选择套壳模式: {custom_name} 将伪装为 {shell_lang['name']}")
+                return shell_lang_config
             else:
-                logging.warning(i18n.t("invalid_input_number"))
+                logging.warning("无效选择，请输入列表中的数字。")
         except ValueError:
-            logging.warning(i18n.t("invalid_input_not_number"))
+            logging.warning("无效输入，请输入一个数字。")
 
 def select_auxiliary_glossaries(game_profile):
     """

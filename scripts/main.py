@@ -81,9 +81,7 @@ def main_menu_workflow():
         source_lang = menu_handler.select_language("select_source_language_prompt", game_profile)
         if not source_lang: return
 
-        selected_target_lang = menu_handler.select_language("select_target_language_prompt", game_profile, source_lang)
-        if not selected_target_lang: return
-        target_languages = [selected_target_lang]
+        target_languages = menu_handler.select_language("select_target_language_prompt", game_profile, source_lang)
         if not target_languages: return
 
         auxiliary_glossaries_indices = menu_handler.select_auxiliary_glossaries(game_profile)

@@ -27,12 +27,33 @@ def parse_json_response(response_text: str, expected_count: int) -> List[str]:
         if clean_text.endswith("```"):
             clean_text = clean_text.removesuffix("```").strip()
 
-        translations = json.loads(clean_text)
+        parsed_data = json.loads(clean_text)
 
-        if not isinstance(translations, list):
-            # 记录一个警告或错误，说明返回的不是列表
-            logger.warning(f"警告：模型返回的JSON不是一个列表。内容: {translations}")
+        if isinstance(parsed_data, list):
+            translations = parsed_data
+        elif isinstance(parsed_data, dict) and 'response' in parsed_data:
+            logger.info("检测到被包裹的响应，正在尝试拆包...")
+            nested_text = parsed_data['response']
+
+            nested_clean_text = nested_text.strip()
+            if nested_clean_text.startswith("```json"):
+                nested_clean_text = nested_clean_text.removeprefix("```json").strip()
+            if nested_clean_text.startswith("```"):
+                nested_clean_text = nested_clean_text.removeprefix("```").strip()
+            if nested_clean_text.endswith("```"):
+                nested_clean_text = nested_clean_text.removesuffix("```").strip()
+
+            nested_data = json.loads(nested_clean_text)
+
+            if isinstance(nested_data, list):
+                translations = nested_data
+            else:
+                logger.warning(f"警告：拆包后，模型返回的JSON不是一个列表。内容: {nested_data}")
+                return [""] * expected_count
+        else:
+            logger.warning(f"警告：模型返回的JSON不是一个列表。内容: {parsed_data}")
             return [""] * expected_count
+
 
         if len(translations) != expected_count:
             # 记录数量不匹配的警告

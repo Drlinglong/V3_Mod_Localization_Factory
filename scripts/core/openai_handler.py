@@ -48,11 +48,14 @@ def translate_single_text(
     print_key = "translating_mod_name" if task_description == "mod name" else "translating_mod_desc"
     logging.info(i18n.t(print_key, text=text[:30]))
 
+    # Handle shell mode by using the custom name for the prompt
+    effective_target_lang_name = target_lang.get("custom_name", target_lang["name"]) if target_lang.get("is_shell") else target_lang["name"]
+
     base_prompt = game_profile["single_prompt_template"].format(
         mod_name=mod_name,
         task_description=task_description,
         source_lang_name=source_lang["name"],
-        target_lang_name=target_lang["name"],
+        target_lang_name=effective_target_lang_name,
     )
     
     # ───────────── 词典提示注入 ─────────────
@@ -111,9 +114,13 @@ def _translate_chunk(client, chunk, source_lang, target_lang, game_profile, mod_
     for attempt in range(MAX_RETRIES):
         try:
             numbered_list = "\n".join(f'{j + 1}. "{txt}"' for j, txt in enumerate(chunk))
+
+            # Handle shell mode by using the custom name for the prompt
+            effective_target_lang_name = target_lang.get("custom_name", target_lang["name"]) if target_lang.get("is_shell") else target_lang["name"]
+
             base_prompt = game_profile["prompt_template"].format(
                 source_lang_name=source_lang["name"],
-                target_lang_name=target_lang["name"],
+                target_lang_name=effective_target_lang_name,
             )
             context_prompt_part = (
                 f"CRITICAL CONTEXT: The mod you are translating is '{mod_context}'. "
