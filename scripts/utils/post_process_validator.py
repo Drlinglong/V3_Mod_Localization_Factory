@@ -79,7 +79,7 @@ class BaseGameValidator:
             module_name = Path(rules_path).stem
             spec = importlib.util.spec_from_file_location(module_name, rules_path)
             if spec is None or spec.loader is None:
-                self.logger.error(f"无法为路径创建模块规范: {rules_path}")
+                self.logger.error(self._get_i18n_message("validator_error_cannot_create_spec", rules_path=rules_path))
                 return []
 
             rule_module = importlib.util.module_from_spec(spec)
@@ -90,10 +90,10 @@ class BaseGameValidator:
             return self.config.get("rules", [])
 
         except FileNotFoundError:
-            self.logger.error(f"规则文件未找到: {rules_path}")
+            self.logger.error(self._get_i18n_message("validator_error_rules_not_found", rules_path=rules_path))
             return []
         except (AttributeError, ImportError) as e:
-            self.logger.error(f"无法从Python模块加载规则: {rules_path}, 错误: {e}")
+            self.logger.error(self._get_i18n_message("validator_error_cannot_load_rules", rules_path=rules_path, e=e))
             return []
 
     def _get_i18n_message(self, message_key: str, **kwargs) -> str:
@@ -144,7 +144,7 @@ class BaseGameValidator:
                             text_sample=text[:100]
                         ))
         except re.error as e:
-            self.logger.warning(f"规则 '{rule['name']}' 的正则表达式错误: {e}, 模式: {pattern}")
+            self.logger.warning(self._get_i18n_message("validator_error_regex_error", rule_name=rule['name'], e=e, pattern=pattern))
         return results
 
     def _check_formatting_tags(self, text: str, rule: Dict, line_number: Optional[int]) -> List[ValidationResult]:
@@ -169,7 +169,7 @@ class BaseGameValidator:
                 if normalized_tag not in valid_tags:
                     message = self._get_i18n_message(params["unknown_tag_error_key"], key=tag_found)
                     details = self._get_i18n_message(params["unsupported_formatting_details_key"], found_text=match.group(0))
-                    results.append(ValidationResult(is_valid=False, level=ValidationLevel.ERROR, message=message, details=details, line_number=line_number, text_sample=text[:100]))
+                    results.append(ValidationResult(is_valid=False, level=ValidationLevel(rule["level"]), message=message, details=details, line_number=line_number, text_sample=text[:100]))
                 elif normalized_tag not in no_space_required_tags:
                     next_char_pos = match.end()
                     if next_char_pos < len(text) and text[next_char_pos] not in (' ', '#', '!', ';'):
@@ -177,7 +177,7 @@ class BaseGameValidator:
                         details = self._get_i18n_message(params["missing_space_details_key"], found_text=match.group(0))
                         results.append(ValidationResult(is_valid=False, level=ValidationLevel(rule["level"]), message=message, details=details, line_number=line_number, text_sample=text[:100]))
         except re.error as e:
-            self.logger.warning(f"规则 '{rule['name']}' 的正则表达式错误: {e}, 模式: {pattern}")
+            self.logger.warning(self._get_i18n_message("validator_error_regex_error", rule_name=rule['name'], e=e, pattern=pattern))
         return results
 
     def _check_mismatched_tags(self, text: str, rule: Dict, line_number: Optional[int]) -> List[ValidationResult]:
@@ -202,7 +202,7 @@ class BaseGameValidator:
                 details = self._get_i18n_message(details_key, start_count=start_tags_count, end_count=end_tags_count)
                 results.append(ValidationResult(is_valid=False, level=ValidationLevel(rule["level"]), message=message, details=details, line_number=line_number, text_sample=text[:100]))
         except re.error as e:
-            self.logger.warning(f"规则 '{rule['name']}' 的正则表达式错误: {e}, 模式: {start_tag_pattern}")
+            self.logger.warning(self._get_i18n_message("validator_error_regex_error", rule_name=rule['name'], e=e, pattern=start_tag_pattern))
         return results
         
     def _check_informational_pattern(self, text: str, rule: Dict, line_number: Optional[int]) -> List[ValidationResult]:
@@ -236,9 +236,9 @@ class BaseGameValidator:
                     results = checker(text, rule, line_number)
                     all_results.extend(results)
                 except Exception as e:
-                    self.logger.error(f"执行规则 '{rule.get('name', 'N/A')}' 时发生错误: {e}")
+                    self.logger.error(self._get_i18n_message("validator_error_executing_rule", rule_name=rule.get('name', 'N/A'), e=e))
             else:
-                self.logger.warning(f"规则 '{rule.get('name', 'N/A')}' 指定了未知的检查函数: '{check_function_name}'")
+                self.logger.warning(self._get_i18n_message("validator_warning_unknown_check_function", rule_name=rule.get('name', 'N/A'), check_function_name=check_function_name))
         return all_results
 
     def _log_validation_result(self, result: ValidationResult):
@@ -286,7 +286,7 @@ class PostProcessValidator:
             try:
                 i18n.load_language()
             except Exception as e:
-                self.logger.warning(f"无法加载国际化: {e}")
+                self.logger.warning(self._get_i18n_message("validator_warning_cannot_load_i18n", e=e))
     
     def get_validator_by_game_id(self, game_id: str) -> Optional[BaseGameValidator]:
         """根据game_id查找验证器实例"""
