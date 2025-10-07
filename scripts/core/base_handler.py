@@ -106,7 +106,7 @@ class BaseApiHandler(ABC):
 
                 if translated_texts and len(translated_texts) == len(task.texts):
                     task.translated_texts = translated_texts
-                    self.logger.debug(f"Batch {batch_num} translated successfully on attempt {attempt + 1}.")
+                    self.logger.debug(i18n.t("batch_success", batch_num=batch_num, attempt=attempt + 1))
                     return task
                 else:
                     self.logger.warning(
