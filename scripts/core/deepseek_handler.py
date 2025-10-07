@@ -45,7 +45,7 @@ class DeepSeekHandler(BaseApiHandler):
                     {"role": "system", "content": "You are a professional translator for game mods."},
                     {"role": "user", "content": prompt}
                 ],
-                max_tokens=4000
+                max_completion_tokens=4000
             )
             return response.choices[0].message.content.strip()
         except Exception as e:

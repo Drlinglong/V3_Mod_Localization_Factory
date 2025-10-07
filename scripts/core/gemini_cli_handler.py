@@ -33,7 +33,19 @@ class GeminiCLIHandler(BaseApiHandler):
         """验证Gemini CLI是否可用。"""
         try:
             cmd = ["powershell", "-Command", f"Set-ExecutionPolicy RemoteSigned -Scope Process -Force; {self.cli_path} --version"]
-            result = subprocess.run(cmd, capture_output=True, text=True, timeout=10)
+
+            # --- Windows-specific fix to hide console window ---
+            kwargs = {
+                "capture_output": True,
+                "text": True,
+                "timeout": 10
+            }
+            if os.name == 'nt':
+                kwargs['creationflags'] = subprocess.CREATE_NO_WINDOW
+            # ----------------------------------------------------
+
+            result = subprocess.run(cmd, **kwargs)
+
             if result.returncode == 0:
                 self.logger.info(i18n.t("gemini_cli_available", version=result.stdout.strip()))
             else:
@@ -74,14 +86,19 @@ class GeminiCLIHandler(BaseApiHandler):
                 'GEMINI_API_KEY': '',
             }
             
-            result = subprocess.run(
-                cmd,
-                capture_output=True,
-                text=True,
-                timeout=300, # 5分钟超时
-                encoding='utf-8',
-                env=clean_env
-            )
+            # --- Windows-specific fix to hide console window ---
+            kwargs = {
+                "capture_output": True,
+                "text": True,
+                "timeout": 300, # 5分钟超时
+                "encoding": 'utf-8',
+                "env": clean_env
+            }
+            if os.name == 'nt':
+                kwargs['creationflags'] = subprocess.CREATE_NO_WINDOW
+            # ----------------------------------------------------
+
+            result = subprocess.run(cmd, **kwargs)
             
             if result.returncode == 0:
                 return result.stdout
