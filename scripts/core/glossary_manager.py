@@ -4,7 +4,7 @@ import json
 import logging
 import re
 from typing import Dict, List, Set, Optional, Tuple
-from scripts.config import PROJECT_ROOT
+from scripts.app_settings import PROJECT_ROOT
 
 
 class GlossaryManager:

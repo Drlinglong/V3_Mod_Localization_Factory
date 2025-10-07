@@ -3,7 +3,7 @@ import os
 import re
 import logging
 from scripts.utils import i18n
-from scripts.config import DEST_DIR
+from scripts.app_settings import DEST_DIR
 from scripts.utils.punctuation_handler import clean_language_specific_punctuation
 
 def create_fallback_file(

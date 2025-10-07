@@ -3,7 +3,7 @@ import os
 import logging
 import csv
 from typing import List, Dict, Any
-from scripts.config import DEST_DIR, LANGUAGES
+from scripts.app_settings import DEST_DIR, LANGUAGES
 from scripts.utils import i18n
 
 
@@ -31,7 +31,7 @@ class ProofreadingTracker:
         self.files_data = []
         
         # 设置输出路径
-        from scripts.config import DEST_DIR
+        from scripts.app_settings import DEST_DIR
         self.output_root = os.path.join(DEST_DIR, output_folder_name)
         
         # CSV 文件名：中英混合，方便不同语言的用户识别

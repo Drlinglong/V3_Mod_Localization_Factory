@@ -38,18 +38,26 @@ def strip_pl_diacritics(txt: str) -> str:
         return txt
     return txt.translate(DIACRITIC_MAP)
 
-# --- Cudzysłowy do wycięcia ------------------------------------
-QUOTES = ('"', '„', '”', '«', '»')
-
+# --- Pary cudzysłowów do wycięcia -----------------------------
+QUOTE_PAIRS = [
+    ('"', '"'),
+    ('„', '”'),
+    ('«', '»'),
+]
 def strip_outer_quotes(txt: str) -> str:
     """
-    Usuwa **jedną** zewnętrzną parę znaków cudzysłowu/«»/„”,
-    jeśli całość zaczyna się i kończy takim samym znakiem.
+    Usuwa **jedną** zewnętrzną parę cudzysłowów, jeśli tekst
+    zaczyna się i kończy pasującymi znakami cudzysłowu.
     Pozostawia cytaty wewnętrzne (np. That's, O'Neil) nietknięte.
     """
     if not txt:
         return txt
     txt = txt.strip()
-    if len(txt) >= 2 and txt[0] in QUOTES and txt[-1] in QUOTES:
-        return txt[1:-1].strip()
+    if len(txt) < 2:
+        return txt
+
+    for open_quote, close_quote in QUOTE_PAIRS:
+        if txt.startswith(open_quote) and txt.endswith(close_quote):
+            return txt[1:-1].strip()
+
     return txt

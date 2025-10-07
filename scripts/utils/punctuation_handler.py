@@ -7,7 +7,7 @@
 重构版本：消除重复代码，明确函数职责，遵循单一职责原则
 """
 
-from ..config import LANGUAGE_PUNCTUATION_CONFIG, TARGET_LANGUAGE_PUNCTUATION
+from ..app_settings import LANGUAGE_PUNCTUATION_CONFIG, TARGET_LANGUAGE_PUNCTUATION
 
 def get_source_language_punctuation(source_lang: str) -> dict:
     """
