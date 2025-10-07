@@ -7,8 +7,8 @@ from scripts.config import prompts
 # --- 项目信息 ----------------------------------------------------
 PROJECT_NAME = "Paradox Mod 本地化工厂 - Paradox Mod Localization Factory"
 PROJECT_DISPLAY_NAME = "蕾姆丝计划 - Project Remis "
-VERSION = "1.1.0"
-LAST_UPDATE_DATE = "2025-10-06"
+VERSION = "1.1.3"
+LAST_UPDATE_DATE = "2025-10-07"
 COPYRIGHT = "© 2025 Project Remis Team"
 
 # --- 项目信息显示配置 --------------------------------------------
