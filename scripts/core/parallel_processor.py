@@ -190,11 +190,25 @@ class ParallelProcessor:
             if processed_task and processed_task.translated_texts:
                 glossary = glossary_manager.get_glossary_for_translation()
                 if glossary:
-                    from scripts.utils.glossary_validator import GlossaryValidator
-                    validator = GlossaryValidator()
-                    validation_warnings = validator.validate_batch(processed_task, glossary)
-                    if validation_warnings:
-                        warnings.extend(validation_warnings)
+                    # Transform the glossary into the simple Dict[str, str] format expected by the validator
+                    simple_glossary = {}
+                    source_lang_code = batch_task.file_task.source_lang.get("code")
+                    target_lang_code = batch_task.file_task.target_lang.get("code")
+
+                    if source_lang_code and target_lang_code and 'entries' in glossary:
+                        for entry in glossary.get('entries', []):
+                            translations = entry.get('translations', {})
+                            source_term = translations.get(source_lang_code)
+                            target_term = translations.get(target_lang_code)
+                            if source_term and target_term and isinstance(source_term, str) and isinstance(target_term, str):
+                                simple_glossary[source_term] = target_term
+
+                    if simple_glossary:
+                        from scripts.utils.glossary_validator import GlossaryValidator
+                        validator = GlossaryValidator()
+                        validation_warnings = validator.validate_batch(processed_task, simple_glossary)
+                        if validation_warnings:
+                            warnings.extend(validation_warnings)
                 return processed_task, warnings
             else:
                 self.logger.error(f"Translation failed for {batch_task.file_task.filename} batch {batch_task.batch_index}")
