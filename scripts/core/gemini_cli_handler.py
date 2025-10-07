@@ -14,6 +14,31 @@ from scripts.utils.response_parser import parse_json_response
 from scripts.core.glossary_manager import glossary_manager
 from scripts.app_settings import FALLBACK_FORMAT_PROMPT
 from scripts.utils.punctuation_handler import generate_punctuation_prompt
+import locale
+
+
+def robust_decode(byte_string: bytes) -> str:
+    """
+    一个健壮的、三层防御的解码函数，用于处理来自子进程的未知编码输出。
+    """
+    # 策略一：乐观尝试UTF-8。使用'utf-8-sig'可以自动处理带BOM的UTF-8文件。
+    try:
+        return byte_string.decode('utf-8-sig')
+    except UnicodeDecodeError:
+        pass # 如果失败，则继续尝试下一个策略
+
+    # 策略二：谨慎回退到操作系统的首选本地编码。这是最通用的国际化方案。
+    try:
+        # locale.getpreferredencoding(False) 会动态获取系统的默认编码
+        # 例如，中文系统是 'cp936'，日文系统是 'cp932'
+        fallback_encoding = locale.getpreferredencoding(False)
+        if fallback_encoding:
+            return byte_string.decode(fallback_encoding)
+    except (UnicodeDecodeError, TypeError): # TypeError防止fallback_encoding为None
+        pass # 如果再次失败，则使用最终方案
+
+    # 策略三：绝不崩溃。使用'replace'错误处理程序来标出错误位置。
+    return byte_string.decode('utf-8', errors='replace')
 
 
 class GeminiCLIHandler(BaseApiHandler):
@@ -142,8 +167,7 @@ class GeminiCLIHandler(BaseApiHandler):
                     }
 
                     kwargs = {
-                        "capture_output": True, "text": True, "timeout": 300,
-                        "encoding": 'utf-8', "env": clean_env
+                        "capture_output": True, "timeout": 300, "env": clean_env
                     }
                     if os.name == 'nt':
                         kwargs['creationflags'] = subprocess.CREATE_NO_WINDOW
@@ -152,8 +176,12 @@ class GeminiCLIHandler(BaseApiHandler):
                 finally:
                     os.unlink(temp_file)
 
+                # 使用我们新的、健壮的解码函数
+                stdout_str = robust_decode(result.stdout)
+                stderr_str = robust_decode(result.stderr)
+
                 if result.returncode == 0:
-                    translated_texts = parse_json_response(result.stdout, len(task.texts))
+                    translated_texts = parse_json_response(stdout_str, len(task.texts))
                     if translated_texts and len(translated_texts) == len(task.texts):
                         task.translated_texts = translated_texts
                         self.logger.info(i18n.t("gemini_cli_batch_success", batch_num=batch_num, attempt=attempt + 1))
@@ -161,7 +189,7 @@ class GeminiCLIHandler(BaseApiHandler):
                     else:
                         self.logger.warning(f"Gemini CLI response parsing failed for batch {batch_num}, attempt {attempt + 1}. Expected {len(task.texts)}, got {len(translated_texts) if translated_texts else 0}.")
                 else:
-                    self.logger.error(f"Gemini CLI call failed for batch {batch_num}, attempt {attempt+1}. Stderr: {result.stderr}")
+                    self.logger.error(f"Gemini CLI call failed for batch {batch_num}, attempt {attempt+1}. Stderr: {stderr_str}")
 
             except Exception as e:
                 self.logger.exception(f"Exception in Gemini CLI batch {batch_num} on attempt {attempt + 1}: {e}")
@@ -206,8 +234,7 @@ class GeminiCLIHandler(BaseApiHandler):
                 }
 
                 kwargs = {
-                    "capture_output": True, "text": True, "timeout": 300,
-                    "encoding": 'utf-8', "env": clean_env
+                    "capture_output": True, "timeout": 300, "env": clean_env
                 }
                 if os.name == 'nt':
                     kwargs['creationflags'] = subprocess.CREATE_NO_WINDOW
@@ -216,11 +243,15 @@ class GeminiCLIHandler(BaseApiHandler):
             finally:
                 os.unlink(temp_file)
 
+            # 使用我们新的、健壮的解码函数
+            stdout_str = robust_decode(result.stdout)
+            stderr_str = robust_decode(result.stderr)
+
             if result.returncode == 0:
                 # The output is raw text, just strip it.
-                return result.stdout.strip()
+                return stdout_str.strip()
             else:
-                self.logger.error(f"Gemini CLI single text translation failed. Stderr: {result.stderr}")
+                self.logger.error(f"Gemini CLI single text translation failed. Stderr: {stderr_str}")
                 return text # Fallback to original text
 
         except Exception as e:
