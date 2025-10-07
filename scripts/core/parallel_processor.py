@@ -188,7 +188,7 @@ class ParallelProcessor:
             
             # Post-translation validation
             if processed_task and processed_task.translated_texts:
-                glossary = glossary_manager.get_glossary()
+                glossary = glossary_manager.get_glossary_for_translation()
                 if glossary:
                     from scripts.utils.glossary_validator import GlossaryValidator
                     validator = GlossaryValidator()
