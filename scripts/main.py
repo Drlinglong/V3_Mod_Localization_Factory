@@ -112,7 +112,9 @@ def main_menu_workflow():
         
         # 显示最终的词典状态
         final_glossary_status = glossary_manager.get_glossary_status_summary()
-        logging.info(i18n.t("glossary_status_display", status=final_glossary_status))
+        status_key = final_glossary_status.pop('key')
+        status_text = i18n.t(status_key, **final_glossary_status)
+        logging.info(i18n.t("glossary_status_display", status=status_text))
         
         # 3.3 执行翻译工作流
         initial_translate.run(
