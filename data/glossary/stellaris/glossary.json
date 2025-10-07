@@ -162,28 +162,6 @@
     },
     {
       "translations": {
-        "en": "advanced",
-        "zh-CN": "高级；高等"
-      },
-      "id": "stellaris_advanced",
-      "metadata": {
-        "part_of_speech": "Adjective",
-        "remarks": "新acot里面建筑前缀统一处理为高级；ESC里面的名称前缀一律处理为高等"
-      }
-    },
-    {
-      "translations": {
-        "en": "Advisor",
-        "zh-CN": "国务顾问"
-      },
-      "id": "stellaris_advisor",
-      "metadata": {
-        "part_of_speech": "Noun",
-        "remarks": "原版术语，领袖老练类型"
-      }
-    },
-    {
-      "translations": {
         "en": "AE",
         "zh-CN": "堕落帝国"
       },
@@ -396,23 +374,6 @@
       "metadata": {
         "part_of_speech": "Noun",
         "remarks": "MEM/制造测量者探测器的古代帝国"
-      }
-    },
-    {
-      "translations": {
-        "en": "alloy",
-        "zh-CN": "合金"
-      },
-      "id": "stellaris_alloy",
-      "metadata": {
-        "part_of_speech": "Noun",
-        "remarks": "原版术语"
-      },
-      "variants": {
-        "en": [
-          "alloys",
-          "Alloys"
-        ]
       }
     },
     {
@@ -750,21 +711,6 @@
       "metadata": {
         "part_of_speech": "Noun",
         "remarks": "钢4mod马国戡乱史中的势力"
-      }
-    },
-    {
-      "translations": {
-        "en": "Armor",
-        "zh-CN": "装甲"
-      },
-      "id": "stellaris_armor",
-      "metadata": {
-        "part_of_speech": "Noun"
-      },
-      "variants": {
-        "en": [
-          "armor"
-        ]
       }
     },
     {
@@ -1304,16 +1250,6 @@
     },
     {
       "translations": {
-        "en": "Big Brother",
-        "zh-CN": "老大哥"
-      },
-      "id": "stellaris_big_brother",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
         "en": "Binary Star System",
         "zh-CN": "双星系统"
       },
@@ -1449,22 +1385,6 @@
         "en": [
           "B.I.G. Vat",
           "The Vats"
-        ]
-      }
-    },
-    {
-      "translations": {
-        "en": "biological pop",
-        "zh-CN": "生物人口"
-      },
-      "id": "stellaris_biological_pop",
-      "metadata": {
-        "part_of_speech": "Noun",
-        "remarks": "原版术语。这种情况下 biological 一般是指碳基有机物种的人口。此时 biological 是和 lithoid 并列的有机体细分。因为石质类是硅基物种，不包含在此列。"
-      },
-      "variants": {
-        "en": [
-          "biological pops"
         ]
       }
     },
@@ -2016,16 +1936,6 @@
     },
     {
       "translations": {
-        "en": "capacity",
-        "zh-CN": "容量"
-      },
-      "id": "stellaris_capacity",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
         "en": "Carbon World",
         "zh-CN": "碳化世界"
       },
@@ -2572,17 +2482,6 @@
     },
     {
       "translations": {
-        "en": "Construction Ship",
-        "zh-CN": "工程船"
-      },
-      "id": "stellaris_construction_ship",
-      "metadata": {
-        "part_of_speech": "Noun",
-        "remarks": "原版词汇，民用船只"
-      }
-    },
-    {
-      "translations": {
         "en": "construction site",
         "zh-CN": "基址"
       },
@@ -2790,21 +2689,6 @@
       "variants": {
         "en": [
           "Cybernetical"
-        ]
-      }
-    },
-    {
-      "translations": {
-        "en": "cyborg",
-        "zh-CN": "义体人"
-      },
-      "id": "stellaris_cyborg",
-      "metadata": {
-        "part_of_speech": "Noun"
-      },
-      "variants": {
-        "en": [
-          "cyborgs"
         ]
       }
     },
@@ -3097,22 +2981,6 @@
     },
     {
       "translations": {
-        "en": "Destroyer",
-        "zh-CN": "驱逐舰"
-      },
-      "id": "stellaris_destroyer",
-      "metadata": {
-        "part_of_speech": "Noun",
-        "remarks": "原版词汇，军用船只"
-      },
-      "variants": {
-        "en": [
-          "Destroyers"
-        ]
-      }
-    },
-    {
-      "translations": {
         "en": "Determinism",
         "zh-CN": "决定论"
       },
@@ -3141,22 +3009,6 @@
       "metadata": {
         "part_of_speech": "Noun",
         "remarks": "格式塔犯罪度"
-      }
-    },
-    {
-      "translations": {
-        "en": "dig site",
-        "zh-CN": "挖掘场地、挖掘点、挖掘现场、挖掘地点、发掘遗址，等等"
-      },
-      "id": "stellaris_dig_site",
-      "metadata": {
-        "part_of_speech": "Noun",
-        "remarks": "可酌情发挥，但是注意不要翻译成“挖掘站点”"
-      },
-      "variants": {
-        "en": [
-          "dig sites"
-        ]
       }
     },
     {
@@ -3200,17 +3052,6 @@
       "id": "stellaris_dismantle",
       "metadata": {
         "part_of_speech": "Verb"
-      }
-    },
-    {
-      "translations": {
-        "en": "Displeased",
-        "zh-CN": "不悦"
-      },
-      "id": "stellaris_displeased",
-      "metadata": {
-        "part_of_speech": "Noun",
-        "remarks": "用于GIGA当中大帝的评价（Kaiser's Opinion）以及猫块的态度（Blokkat‘s Behavior）"
       }
     },
     {
@@ -3713,11 +3554,12 @@
     {
       "translations": {
         "en": "enraged",
-        "zh-CN": "用于GIGA当中大帝的评价（Kaiser's Opinion）的场合，翻译为【盛怒】"
+        "zh-CN": "盛怒"
       },
       "id": "stellaris_enraged",
       "metadata": {
-        "part_of_speech": "Noun"
+        "part_of_speech": "Noun",
+        "remarks": "用于GIGA当中大帝的评价（Kaiser's Opinion）的场合，"
       }
     },
     {
@@ -4214,22 +4056,6 @@
     },
     {
       "translations": {
-        "en": "Federation",
-        "zh-CN": "联邦"
-      },
-      "id": "stellaris_federation",
-      "metadata": {
-        "part_of_speech": "Noun",
-        "remarks": "原版词汇"
-      },
-      "variants": {
-        "en": [
-          "Federations"
-        ]
-      }
-    },
-    {
-      "translations": {
         "en": "Federation Cohesion",
         "zh-CN": "联邦团结度"
       },
@@ -4285,16 +4111,6 @@
       "metadata": {
         "part_of_speech": "Noun",
         "remarks": "原版词汇，科学家专长。此外，科学家的该特质叫“专长：力场操控”"
-      }
-    },
-    {
-      "translations": {
-        "en": "Fire Rate",
-        "zh-CN": "射速"
-      },
-      "id": "stellaris_fire_rate",
-      "metadata": {
-        "part_of_speech": "Noun"
       }
     },
     {
@@ -4377,16 +4193,6 @@
         "en": [
           "Foci Directions"
         ]
-      }
-    },
-    {
-      "translations": {
-        "en": "Food",
-        "zh-CN": "食物"
-      },
-      "id": "stellaris_food",
-      "metadata": {
-        "part_of_speech": "Noun"
       }
     },
     {
@@ -4513,12 +4319,12 @@
     {
       "translations": {
         "en": "Galactic",
-        "zh-CN": "星海；星河；泛星系"
+        "zh-CN": "星海"
       },
       "id": "stellaris_galactic",
       "metadata": {
         "part_of_speech": "Noun",
-        "remarks": "原版文本中根据语境及前后文酌情更改，在以上三项中选择。模组中不严格要求。"
+        "remarks": "也可翻译为星河或泛星系。原版文本中根据语境及前后文酌情更改，在以上三项中选择。模组中不严格要求。"
       },
       "variants": {
         "en": [
@@ -5199,21 +5005,6 @@
     },
     {
       "translations": {
-        "en": "Gundam",
-        "zh-CN": "高达"
-      },
-      "id": "stellaris_gundam",
-      "metadata": {
-        "part_of_speech": "Noun"
-      },
-      "variants": {
-        "en": [
-          "Gundams"
-        ]
-      }
-    },
-    {
-      "translations": {
         "en": "Habitability",
         "zh-CN": "宜居性"
       },
@@ -5250,16 +5041,6 @@
       "metadata": {
         "part_of_speech": "Noun",
         "remarks": "MEM虚构词"
-      }
-    },
-    {
-      "translations": {
-        "en": "Happiness",
-        "zh-CN": "幸福度"
-      },
-      "id": "stellaris_happiness",
-      "metadata": {
-        "part_of_speech": "Noun"
       }
     },
     {
@@ -5309,17 +5090,6 @@
       "metadata": {
         "part_of_speech": "Noun",
         "remarks": "霍金辐射（英语：Hawking radiation）是以量子效应理论推测出的一种由黑洞散发出来的热辐射。此理论在1974年由物理学家史蒂芬·霍金提出。有了霍金辐射的理论就能说明如何降低黑洞的质量而导致黑洞蒸散的现象。"
-      }
-    },
-    {
-      "translations": {
-        "en": "Hazard Matter",
-        "zh-CN": "危险物质"
-      },
-      "id": "stellaris_hazard_matter",
-      "metadata": {
-        "part_of_speech": "Noun",
-        "remarks": "出自EHOF/更多巨构"
       }
     },
     {
@@ -5405,17 +5175,6 @@
     },
     {
       "translations": {
-        "en": "High Gravity",
-        "zh-CN": "高重力"
-      },
-      "id": "stellaris_high_gravity",
-      "metadata": {
-        "part_of_speech": "Noun",
-        "remarks": "原版词汇，星球修正"
-      }
-    },
-    {
-      "translations": {
         "en": "High Mechanicus",
         "zh-CN": "至高机械"
       },
@@ -5423,17 +5182,6 @@
       "metadata": {
         "part_of_speech": "Noun",
         "remarks": "机械通神教头头"
-      }
-    },
-    {
-      "translations": {
-        "en": "High Quality Minerals",
-        "zh-CN": "高品质矿物"
-      },
-      "id": "stellaris_high_quality_minerals",
-      "metadata": {
-        "part_of_speech": "Noun",
-        "remarks": "原版词汇，星球修正"
       }
     },
     {
@@ -5562,17 +5310,6 @@
       "metadata": {
         "part_of_speech": "Noun",
         "remarks": "原版词汇，星球修正"
-      }
-    },
-    {
-      "translations": {
-        "en": "HRAE-MC",
-        "zh-CN": "可不译"
-      },
-      "id": "stellaris_hrae_mc",
-      "metadata": {
-        "part_of_speech": "Noun",
-        "remarks": "千兆结构词汇，霍金辐射与吸积射流宏观收集器"
       }
     },
     {
@@ -6096,23 +5833,6 @@
       "id": "stellaris_jean_luc",
       "metadata": {
         "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Job",
-        "zh-CN": "岗位"
-      },
-      "id": "stellaris_job",
-      "metadata": {
-        "part_of_speech": "Noun"
-      },
-      "variants": {
-        "en": [
-          "Jobs",
-          "job",
-          "jobs"
-        ]
       }
     },
     {
@@ -7805,22 +7525,6 @@
       "metadata": {
         "part_of_speech": "Noun",
         "remarks": "终结者"
-      }
-    },
-    {
-      "translations": {
-        "en": "Minerals",
-        "zh-CN": "矿物"
-      },
-      "id": "stellaris_minerals",
-      "metadata": {
-        "part_of_speech": "Noun"
-      },
-      "variants": {
-        "en": [
-          "Mineral",
-          "Orykta"
-        ]
       }
     },
     {
@@ -9744,16 +9448,6 @@
     },
     {
       "translations": {
-        "en": "Research",
-        "zh-CN": "研究"
-      },
-      "id": "stellaris_research",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
         "en": "Research Agreement",
         "zh-CN": "科研协议"
       },
@@ -10274,7 +9968,7 @@
     {
       "translations": {
         "en": "scientist",
-        "zh-CN": "科学家；科学官"
+        "zh-CN": "科学家"
       },
       "id": "stellaris_scientist",
       "metadata": {
@@ -10290,7 +9984,7 @@
     {
       "translations": {
         "en": "scion",
-        "zh-CN": "先辈子弟、子弟"
+        "zh-CN": "先辈子弟"
       },
       "id": "stellaris_scion",
       "metadata": {
@@ -10371,23 +10065,6 @@
       "metadata": {
         "part_of_speech": "Noun",
         "remarks": "SBtG/SBTG"
-      }
-    },
-    {
-      "translations": {
-        "en": "Section",
-        "zh-CN": "区段"
-      },
-      "id": "stellaris_section",
-      "metadata": {
-        "part_of_speech": "Noun",
-        "remarks": "用于船只、建筑时"
-      },
-      "variants": {
-        "en": [
-          "Sections",
-          "Segment"
-        ]
       }
     },
     {
@@ -10510,16 +10187,6 @@
     },
     {
       "translations": {
-        "en": "Shields",
-        "zh-CN": "护盾"
-      },
-      "id": "stellaris_shields",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
         "en": "Shroud",
         "zh-CN": "虚境"
       },
@@ -10591,17 +10258,6 @@
     },
     {
       "translations": {
-        "en": "simple",
-        "zh-CN": "简式"
-      },
-      "id": "stellaris_simple",
-      "metadata": {
-        "part_of_speech": "Noun",
-        "remarks": "ESC修饰部件名全部处理为简式"
-      }
-    },
-    {
-      "translations": {
         "en": "Sirenalia",
         "zh-CN": "塞壬利亚"
       },
@@ -10609,22 +10265,6 @@
       "metadata": {
         "part_of_speech": "Noun",
         "remarks": "钢4mod马国戡乱史中的国家"
-      }
-    },
-    {
-      "translations": {
-        "en": "Situation",
-        "zh-CN": "局势"
-      },
-      "id": "stellaris_situation",
-      "metadata": {
-        "part_of_speech": "Noun",
-        "remarks": "原版词汇"
-      },
-      "variants": {
-        "en": [
-          "Situations"
-        ]
       }
     },
     {
@@ -10779,22 +10419,6 @@
       "id": "stellaris_solaktropa",
       "metadata": {
         "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "solar system",
-        "zh-CN": "恒星系"
-      },
-      "id": "stellaris_solar_system",
-      "metadata": {
-        "part_of_speech": "Noun",
-        "remarks": "原版术语"
-      },
-      "variants": {
-        "en": [
-          "solar systems"
-        ]
       }
     },
     {
@@ -12484,17 +12108,6 @@
     },
     {
       "translations": {
-        "en": "Upkeep",
-        "zh-CN": "维护费"
-      },
-      "id": "stellaris_upkeep",
-      "metadata": {
-        "part_of_speech": "Noun",
-        "remarks": "原版词汇"
-      }
-    },
-    {
-      "translations": {
         "en": "Uralla",
         "zh-CN": "乌瑞拉"
       },
@@ -13502,16 +13115,6 @@
     },
     {
       "translations": {
-        "en": "Army",
-        "zh-CN": "陆军"
-      },
-      "id": "stellaris_army",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
         "en": "Attraction",
         "zh-CN": "吸引力"
       },
@@ -13623,36 +13226,6 @@
     },
     {
       "translations": {
-        "en": "Cost",
-        "zh-CN": "花费"
-      },
-      "id": "stellaris_cost",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Dairy Jobs",
-        "zh-CN": "奶牛岗位"
-      },
-      "id": "stellaris_dairy_jobs",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "damage",
-        "zh-CN": "伤害"
-      },
-      "id": "stellaris_damage",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
         "en": "Defense Army",
         "zh-CN": "防御部队"
       },
@@ -13689,17 +13262,6 @@
       "id": "stellaris_drooling_vagina",
       "metadata": {
         "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Efficiency",
-        "zh-CN": "效率"
-      },
-      "id": "stellaris_efficiency",
-      "metadata": {
-        "part_of_speech": "Noun",
-        "remarks": "在群星4.0更新后，所有人口特征的修正改成了 xx岗位效率"
       }
     },
     {
@@ -13818,26 +13380,6 @@
         "zh-CN": "增长速度"
       },
       "id": "stellaris_growth_speed",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "health",
-        "zh-CN": "生命"
-      },
-      "id": "stellaris_health",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Housing",
-        "zh-CN": "住房"
-      },
-      "id": "stellaris_housing",
       "metadata": {
         "part_of_speech": "Noun"
       }
