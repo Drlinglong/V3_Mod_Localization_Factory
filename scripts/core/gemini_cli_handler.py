@@ -48,7 +48,7 @@ class GeminiCLIHandler(BaseApiHandler):
             raise
 
     def _call_api(self, client: Any, prompt: str) -> str:
-        """【最终修复】通过subprocess、PowerShell管道和 -p - 参数调用Gemini CLI。"""
+        """【最终修复】遵从用户提供的旧版代码逻辑，通过subprocess和PowerShell管道调用Gemini CLI。"""
         handler_instance = client
         
         with tempfile.NamedTemporaryFile(mode='w', suffix='.txt', delete=False, encoding='utf-8') as f:
@@ -56,8 +56,8 @@ class GeminiCLIHandler(BaseApiHandler):
             temp_file = f.name
         
         try:
-            # 构建PowerShell命令，使用Get-Content将文件内容通过管道传给gemini cli，并使用 -p - 告知其从标准输入读取
-            gemini_command = f"{handler_instance.cli_path} -m {handler_instance.model} -p - --output-format json"
+            # 遵从用户提供的、可以完美执行的旧版命令逻辑，不包含 -p - 参数
+            gemini_command = f"{handler_instance.cli_path} --model {handler_instance.model} --output-format json"
             full_command = f"Set-ExecutionPolicy RemoteSigned -Scope Process -Force; Get-Content '{temp_file}' -Raw | {gemini_command}"
             cmd = ["powershell", "-Command", full_command]
             
