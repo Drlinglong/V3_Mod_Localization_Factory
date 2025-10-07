@@ -98,9 +98,13 @@ const App = () => {
     newFileList = newFileList.slice(-1); // Only allow one file
     setFileList(newFileList);
 
-    if (info.file.status === 'done' || info.file.status === 'error') {
+    // The beforeUpload prop prevents the status from ever becoming 'done'.
+    // Instead, we'll advance to the next step as soon as a file is selected.
+    if (newFileList.length > 0 && info.file.status !== 'removed') {
         message.info(`File ${info.file.name} is ready for processing.`);
         setCurrent(1);
+    } else if (info.file.status === 'removed') {
+        setCurrent(0); // Go back to upload step if file is removed
     }
   };
 
