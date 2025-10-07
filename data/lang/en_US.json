@@ -442,5 +442,6 @@
   ,"unexpected_error_see_logs": "An unexpected error occurred, please check the logs.",
   "workflow_completed_ask_next": "Workflow completed. Continue translating other Mods? (Y/N)",
   "enter_workflow_completed_choice": "Enter choice (Y or N): ",
-  "program_exit_thank_you": "Program exited, thank you for using!"
+  "program_exit_thank_you": "Program exited, thank you for using!",
+  "glossary_validator_warning": "File '{file_path}' (Batch #{batch_id}): Source term '{source_term}' (found {source_count} times) may not be correctly translated to '{target_term}' (found {translated_count} times)."
 }

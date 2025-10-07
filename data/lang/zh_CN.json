@@ -457,5 +457,6 @@
   "setup_configure_another_provider": "是否要配置其他服务？",
   "unexpected_error_see_logs": "发生意外错误，请查看日志。",
   "workflow_completed_ask_next": "工作流已完成。是否继续翻译其他Mod？ (Y/N)",
-  "enter_workflow_completed_choice": "请输入选择 (Y 或 N): "
+  "enter_workflow_completed_choice": "请输入选择 (Y 或 N): ",
+  "glossary_validator_warning": "文件 '{file_path}' (批次 #{batch_id})：原文术语 '{source_term}' (出现 {source_count} 次) 可能未正确翻译为 '{target_term}' (出现 {translated_count} 次)。"
 }

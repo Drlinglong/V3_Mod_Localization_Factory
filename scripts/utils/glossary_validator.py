@@ -3,6 +3,7 @@ import logging
 import re
 from typing import List, Dict, Any
 
+from scripts.utils import i18n
 # Assuming BatchTask is available from scripts.core.parallel_processor
 # We will handle the exact import path later if needed.
 from scripts.core.parallel_processor import BatchTask
@@ -11,6 +12,14 @@ class GlossaryValidator:
     """
     Validates translation consistency against a glossary.
     """
+
+    def _get_pattern_for_lang(self, term: str, lang_code: str) -> str:
+        """根据语言代码，为术语生成合适的正则表达式模式。"""
+        is_cjk = any(lang in lang_code for lang in ['zh', 'ja', 'ko'])
+        if is_cjk:
+            return re.escape(term)
+        else:
+            return r'\b' + re.escape(term) + r'\b'
 
     def validate_batch(self, task: BatchTask, glossary: Dict[str, str]) -> List[Dict[str, Any]]:
         """
@@ -36,22 +45,10 @@ class GlossaryValidator:
         target_lang_code = task.file_task.target_lang.get("code", "").lower()
         source_lang_code = task.file_task.source_lang.get("code", "").lower()
 
-        # CJK languages often don't use spaces, so word boundaries are not effective.
-        is_target_cjk = any(lang in target_lang_code for lang in ['zh', 'ja', 'ko'])
-        is_source_cjk = any(lang in source_lang_code for lang in ['zh', 'ja', 'ko'])
-
         for source_term, target_term in glossary.items():
             try:
-                # Adapt regex based on language type
-                if is_source_cjk:
-                    source_pattern = re.escape(source_term)
-                else:
-                    source_pattern = r'\b' + re.escape(source_term) + r'\b'
-
-                if is_target_cjk:
-                    target_pattern = re.escape(target_term)
-                else:
-                    target_pattern = r'\b' + re.escape(target_term) + r'\b'
+                source_pattern = self._get_pattern_for_lang(source_term, source_lang_code)
+                target_pattern = self._get_pattern_for_lang(target_term, target_lang_code)
 
                 source_count = len(re.findall(source_pattern, original_chunk, re.IGNORECASE))
                 translated_count = len(re.findall(target_pattern, translated_chunk, re.IGNORECASE))
@@ -68,10 +65,14 @@ class GlossaryValidator:
                     "target_term": target_term,
                     "source_count": source_count,
                     "translated_count": translated_count,
-                    "message": (
-                        f"文件 '{file_path}' (批次 #{batch_id + 1})：原文术语 '{source_term}' "
-                        f"(出现 {source_count} 次) 可能未正确翻译为 '{target_term}' "
-                        f"(出现 {translated_count} 次)。"
+                    "message": i18n.t(
+                        "glossary_validator_warning",
+                        file_path=file_path,
+                        batch_id=batch_id + 1,
+                        source_term=source_term,
+                        source_count=source_count,
+                        target_term=target_term,
+                        translated_count=translated_count
                     )
                 })
 
@@ -80,6 +81,7 @@ class GlossaryValidator:
 # Example usage (for testing purposes)
 if __name__ == '__main__':
     # This is a mock setup for testing the validator logic.
+    i18n.load_language('zh_CN')  # Load translations for testing
     print("--- Running Validator Self-Tests ---")
 
     # Mock FileTask
