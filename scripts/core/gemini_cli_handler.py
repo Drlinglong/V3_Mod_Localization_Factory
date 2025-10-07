@@ -10,6 +10,7 @@ import concurrent.futures
 from datetime import datetime
 from typing import List, Optional, Dict
 
+from scripts.core.parallel_processor import BatchTask
 from scripts.utils.response_parser import parse_json_response
 
 # 【核心修正】统一使用绝对导入
@@ -601,18 +602,23 @@ def translate_texts_in_batches(
     return all_translated_texts
 
 
-def _translate_chunk(client: GeminiCLIHandler, chunk: list[str], source_lang: dict, target_lang: dict, 
-                    game_profile: dict, mod_context: str, batch_num: int) -> "list[str] | None":
+def _translate_chunk(client: GeminiCLIHandler, task: BatchTask) -> BatchTask:
     """[Worker Function] Translates a single chunk of text using CLI, with retry logic."""
-    return _translate_cli_chunk(client, chunk, source_lang, target_lang, game_profile, mod_context, batch_num)
+    return _translate_cli_chunk(client, task)
 
-def _translate_cli_chunk(client: GeminiCLIHandler, chunk: list[str], source_lang: dict, target_lang: dict, 
-                        game_profile: dict, mod_context: str, batch_num: int) -> "list[str] | None":
+def _translate_cli_chunk(client: GeminiCLIHandler, task: BatchTask) -> BatchTask:
     """[Worker Function] Translates a single chunk of text using CLI, with retry logic."""
+    # Extract data from BatchTask
+    chunk = task.texts
+    source_lang = task.file_task.source_lang
+    target_lang = task.file_task.target_lang
+    game_profile = task.file_task.game_profile
+    mod_context = task.file_task.mod_context
+    batch_num = task.batch_index + 1  # batch_index is 0-based
+
     for attempt in range(GEMINI_CLI_MAX_RETRIES):
         try:
             numbered_list = "\n".join(f'{j + 1}. "{txt}"' for j, txt in enumerate(chunk))
-            # 使用name_en字段避免非ASCII字符在subprocess调用中的编码问题
             source_lang_name = source_lang.get("name_en", source_lang["name"])
             target_lang_name = target_lang.get("name_en", target_lang["name"])
             
@@ -625,10 +631,8 @@ def _translate_cli_chunk(client: GeminiCLIHandler, chunk: list[str], source_lang
                 "Use this information to ensure all translations are thematically appropriate.\n"
             )
             
-            # ───────────── 词典提示注入 ─────────────
             glossary_prompt_part = ""
             if glossary_manager.current_game_glossary:
-                # 提取相关术语
                 relevant_terms = glossary_manager.extract_relevant_terms(
                     chunk, source_lang["code"], target_lang["code"]
                 )
@@ -638,29 +642,23 @@ def _translate_cli_chunk(client: GeminiCLIHandler, chunk: list[str], source_lang
                     ) + "\n\n"
                     logging.info(i18n.t("batch_translation_glossary_injected", batch_num=batch_num, count=len(relevant_terms)))
             
-            # 智能生成标点符号转换提示词
             punctuation_prompt = generate_punctuation_prompt(
                 source_lang["code"], 
                 target_lang["code"]
             )
             
-            # 优先使用游戏特定的format_prompt，如果没有则使用保底选项
             if "format_prompt" in game_profile:
                 format_prompt_part = game_profile["format_prompt"].format(
                     chunk_size=len(chunk),
                     numbered_list=numbered_list
                 )
             else:
-                # 导入保底选项
                 from scripts.app_settings import FALLBACK_FORMAT_PROMPT
                 format_prompt_part = FALLBACK_FORMAT_PROMPT.format(
                     chunk_size=len(chunk),
                     numbered_list=numbered_list
                 )
-
-
             
-            # 构建punctuation_prompt_part
             punctuation_prompt_part = f"\nPUNCTUATION CONVERSION:\n{punctuation_prompt}\n" if punctuation_prompt else ""
             
             prompt = base_prompt + context_prompt_part + glossary_prompt_part + format_prompt_part + punctuation_prompt_part
@@ -669,17 +667,22 @@ def _translate_cli_chunk(client: GeminiCLIHandler, chunk: list[str], source_lang
             
             if translated_texts and len(translated_texts) == len(chunk):
                 cleaned_texts = [strip_outer_quotes(text) for text in translated_texts]
-                return cleaned_texts
+                task.translated_texts = cleaned_texts
+                return task
             else:
                 logging.warning(f"CLI batch {batch_num} returned {len(translated_texts) if translated_texts else 0} results, expected {len(chunk)}")
                 if attempt < GEMINI_CLI_MAX_RETRIES - 1:
                     continue
                 else:
-                    return None
+                    task.translated_texts = None # Indicate failure
+                    return task
         except Exception as e:
             logging.exception(f"CLI batch {batch_num} attempt {attempt + 1} failed: {e}")
             if attempt < GEMINI_CLI_MAX_RETRIES - 1:
                 continue
             else:
-                return None
-    return None
+                task.translated_texts = None # Indicate failure
+                return task
+
+    task.translated_texts = None # Indicate failure
+    return task

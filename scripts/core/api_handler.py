@@ -4,6 +4,12 @@ import re
 import time
 import logging
 import concurrent.futures
+from typing import Any
+
+from scripts.core.parallel_processor import BatchTask
+from typing import Any
+
+from scripts.core.parallel_processor import BatchTask
 from scripts.utils import i18n
 from scripts.app_settings import CHUNK_SIZE, MAX_RETRIES, API_PROVIDERS
 from scripts.utils.text_clean import strip_pl_diacritics, strip_outer_quotes
@@ -101,30 +107,40 @@ def translate_single_text(client, provider_name, text, task_description, mod_nam
         return None
     return handler.translate_single_text(client, provider_name, text, task_description, mod_name, source_lang, target_lang, mod_context, game_profile)
 
-def translate_single_batch(client, provider_name, texts, source_lang, target_lang, game_profile, mod_context):
-    """调用当前选定API供应商的单批次翻译函数。"""
+def translate_single_batch(task: BatchTask) -> BatchTask:
+    """(Modernized) Calls the single-batch translation function of the current API provider."""
+    provider_name = task.file_task.provider_name
+    client = task.file_task.client
     handler = get_handler(provider_name)
     if not handler:
         logging.error(f"Handler for {provider_name} is not available")
-        return None
-    
-    # 直接调用单批次翻译函数，而不是批量翻译函数
-    if hasattr(handler, '_translate_chunk'):
-        return handler._translate_chunk(client, texts, source_lang, target_lang, game_profile, mod_context, 1)
-    else:
-        # 如果没有单批次函数，回退到批量翻译
-        return handler.translate_texts_in_batches(client, provider_name, texts, source_lang, target_lang, game_profile, mod_context)
+        task.translated_texts = None
+        return task
 
-def translate_single_batch_with_batch_num(client, provider_name, texts, source_lang, target_lang, game_profile, mod_context, batch_num):
-    """调用当前选定API供应商的单批次翻译函数，并传递批次编号。"""
-    handler = get_handler(provider_name)
-    if not handler:
-        logging.error(f"Handler for {provider_name} is not available")
-        return None
-    
-    # 直接调用单批次翻译函数，传递正确的批次编号
     if hasattr(handler, '_translate_chunk'):
-        return handler._translate_chunk(client, texts, source_lang, target_lang, game_profile, mod_context, batch_num)
+        # Modern handlers expect the full BatchTask object
+        return handler._translate_chunk(client, task)
     else:
-        # 如果没有单批次函数，回退到批量翻译
-        return handler.translate_texts_in_batches(client, provider_name, texts, source_lang, target_lang, game_profile, mod_context)
+        # Fallback for legacy handlers that don't accept BatchTask
+        logging.warning(f"Handler for {provider_name} does not have a modern `_translate_chunk` that accepts BatchTask. Falling back to legacy text-based translation.")
+        translated_texts = handler.translate_texts_in_batches(
+            client,
+            provider_name,
+            task.texts,
+            task.file_task.source_lang,
+            task.file_task.target_lang,
+            task.file_task.game_profile,
+            task.file_task.mod_context
+        )
+        task.translated_texts = translated_texts
+        return task
+
+def translate_single_batch_with_batch_num(task: BatchTask) -> BatchTask:
+    """
+    (Modernized) Calls the single-batch translation function of the current API provider.
+    This function is the primary entry point for the ParallelProcessor.
+    """
+    # The batch number is now implicitly part of the task object (task.batch_index).
+    # The modernized _translate_chunk function in handlers will use this index.
+    # Therefore, this function is now an alias for translate_single_batch.
+    return translate_single_batch(task)
