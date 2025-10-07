@@ -1,11 +1,13 @@
-{
+# scripts/config/validators/vic3_rules.py
+
+RULES = {
   "game_id": "1",
   "game_name": "Victoria 3",
   "rules": [
     {
       "name": "non_ascii_in_simple_concept",
       "check_function": "banned_chars",
-      "pattern": "\\\\[([a-zA-Z0-9_]+)\\\\]",
+      "pattern": r"\[([a-zA-Z0-9_]+)\]",
       "level": "error",
       "message_key": "validation_vic3_simple_concept_chinese",
       "params": {
@@ -15,7 +17,7 @@
     {
       "name": "non_ascii_in_concept_key",
       "check_function": "banned_chars",
-      "pattern": "\\\\[Concept\\\\('([^']*)',.*\\\\)\\\\]",
+      "pattern": r"\[Concept\('([^']*)',.*\)\]",
       "level": "error",
       "message_key": "validation_vic3_concept_key_chinese",
       "params": {
@@ -25,7 +27,7 @@
     {
       "name": "non_ascii_in_scope_key",
       "check_function": "banned_chars",
-      "pattern": "\\\\[SCOPE\\\\.[a-zA-Z]+\\\\('([^']*)'\\\\)\\\\]",
+      "pattern": r"\[SCOPE\.[a-zA-Z]+\('([^']*)'\)\]",
       "level": "error",
       "message_key": "validation_vic3_scope_key_chinese",
       "params": {
@@ -35,7 +37,7 @@
     {
       "name": "non_ascii_in_icon_key",
       "check_function": "banned_chars",
-      "pattern": "@([^!]+)!",
+      "pattern": r"@([^!]+)!",
       "level": "error",
       "message_key": "validation_vic3_icon_key_chinese",
       "params": {
@@ -45,7 +47,7 @@
     {
       "name": "formatting_tags",
       "check_function": "formatting_tags",
-      "pattern": "#([a-zA-Z_][a-zA-Z0-9_]*)",
+      "pattern": r"#([a-zA-Z_][a-zA-Z0-9_]*)",
       "level": "warning",
       "message_key": "validation_vic3_formatting_missing_space",
       "params": {
@@ -87,7 +89,7 @@
     {
       "name": "non_ascii_in_tooltippable_key",
       "check_function": "banned_chars",
-      "pattern": "#tooltippable;tooltip:<([^>]+)>",
+      "pattern": r"#tooltippable;tooltip:<([^>]+)>",
       "level": "error",
       "message_key": "validation_vic3_tooltippable_chinese",
       "params": {

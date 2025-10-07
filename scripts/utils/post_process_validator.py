@@ -7,15 +7,16 @@
 确保所有游戏特定的语法结构都被正确保留。
 
 核心设计：
-- 纯粹的规则引擎，由外部JSON文件驱动。
+- 纯粹的规则引擎，由外部Python模块驱动。
 - BaseGameValidator 是通用引擎，不包含任何游戏专属逻辑。
-- 子类 (e.g., Victoria3Validator) 仅负责提供其对应的JSON规则文件路径。
+- 子类 (e.g., Victoria3Validator) 仅负责提供其对应的Python规则文件路径。
 - 所有检查逻辑都由通用的“工人”方法实现。
 """
 
 import re
-import json
 import logging
+import importlib
+from pathlib import Path
 from typing import Dict, List, Tuple, Optional, Any, Callable
 from dataclasses import dataclass
 from enum import Enum
@@ -48,7 +49,7 @@ class ValidationResult:
 class BaseGameValidator:
     """
     游戏验证器基类 (重构为纯粹的规则引擎)。
-    它从一个JSON文件中加载所有验证规则，并根据这些规则动态地执行检查。
+    它从一个Python模块文件中加载所有验证规则，并根据这些规则动态地执行检查。
     """
     
     def __init__(self, rules_path: str):
@@ -56,7 +57,7 @@ class BaseGameValidator:
         构造函数。
 
         Args:
-            rules_path (str): 指向该游戏验证规则的JSON文件的路径。
+            rules_path (str): 指向该游戏验证规则的 .py 文件的路径。
         """
         self.logger = logging.getLogger(__name__)
         self.rules = self._load_rules(rules_path)
@@ -71,16 +72,24 @@ class BaseGameValidator:
         }
 
     def _load_rules(self, rules_path: str) -> List[Dict]:
-        """从JSON文件加载和解析规则。"""
+        """从Python模块文件加载和解析规则。"""
         try:
-            with open(rules_path, 'r', encoding='utf-8') as f:
-                self.config = json.load(f)
-                return self.config.get("rules", [])
+            # 将文件路径 (e.g., "scripts/config/validators/vic3_rules.py")
+            # 转换为模块名 (e.g., "scripts.config.validators.vic3_rules")
+            module_name = str(Path(rules_path).with_suffix('')).replace('/', '.')
+
+            # 动态导入模块
+            rule_module = importlib.import_module(module_name)
+
+            # 从模块中获取RULES字典
+            self.config = getattr(rule_module, 'RULES')
+            return self.config.get("rules", [])
+
         except FileNotFoundError:
             self.logger.error(f"规则文件未找到: {rules_path}")
             return []
-        except json.JSONDecodeError as e:
-            self.logger.error(f"无法解析JSON规则文件: {rules_path}, 错误: {e}")
+        except (ModuleNotFoundError, AttributeError) as e:
+            self.logger.error(f"无法从Python模块加载规则: {rules_path}, 错误: {e}")
             return []
 
     def _get_i18n_message(self, message_key: str, **kwargs) -> str:
@@ -208,7 +217,7 @@ class BaseGameValidator:
     def validate_text(self, text: str, line_number: Optional[int] = None) -> List[ValidationResult]:
         """
         纯粹的规则执行引擎。
-        它遍历加载自JSON的规则，并根据 rule['check_function'] 的值，
+        它遍历加载自Python模块的规则，并根据 rule['check_function'] 的值，
         从 self.check_map 中动态调用相应的“工人”检查方法。
         """
         all_results = []
@@ -236,23 +245,23 @@ class BaseGameValidator:
 # --- 子类定义 ---
 class Victoria3Validator(BaseGameValidator):
     def __init__(self):
-        super().__init__("scripts/config/validators/vic3_rules.json")
+        super().__init__("scripts/config/validators/vic3_rules.py")
 
 class StellarisValidator(BaseGameValidator):
     def __init__(self):
-        super().__init__("scripts/config/validators/stellaris_rules.json")
+        super().__init__("scripts/config/validators/stellaris_rules.py")
 
 class EU4Validator(BaseGameValidator):
     def __init__(self):
-        super().__init__("scripts/config/validators/eu4_rules.json")
+        super().__init__("scripts/config/validators/eu4_rules.py")
 
 class HOI4Validator(BaseGameValidator):
     def __init__(self):
-        super().__init__("scripts/config/validators/hoi4_rules.json")
+        super().__init__("scripts/config/validators/hoi4_rules.py")
 
 class CK3Validator(BaseGameValidator):
     def __init__(self):
-        super().__init__("scripts/config/validators/ck3_rules.json")
+        super().__init__("scripts/config/validators/ck3_rules.py")
 
 
 class PostProcessValidator:
@@ -356,4 +365,4 @@ if __name__ == "__main__":
         main_validator.validate_game_text("1", "This has a [中文概念].", 5)
     except Exception as e:
         print(f"An error occurred during testing: {e}")
-        print("Please ensure all JSON rule files are present and correctly formatted.")
+        print("Please ensure all Python rule files are present and correctly formatted.")
