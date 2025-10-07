@@ -27,7 +27,7 @@ RULES = {
     {
       "name": "non_ascii_in_trait_or_title_key",
       "check_function": "banned_chars",
-      "pattern": r"\[(?:GetTrait|GetTitleByKey)\\'([^\']*)'\]",
+      "pattern": r"\[(?:GetTrait|GetTitleByKey)'([^']*)'\]",
       "level": "error",
       "message_key": "validation_ck3_trait_title_key_chinese",
       "params": {

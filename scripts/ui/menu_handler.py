@@ -47,12 +47,12 @@ def preflight_checks():
 
     for dir_path in required_dirs:
         if not os.path.exists(dir_path):
-            error_messages.append(f"缺少必要目录: {dir_path}")
+            error_messages.append(i18n.t("preflight_error_missing_dir", dir_path=dir_path))
             checks_passed = False
 
     for file_path in required_files:
         if not os.path.exists(file_path):
-            error_messages.append(f"缺少必要文件: {file_path}")
+            error_messages.append(i18n.t("preflight_error_missing_file", file_path=file_path))
             checks_passed = False
 
     # 2. 检查依赖库
@@ -87,7 +87,7 @@ def preflight_checks():
         pass
 
     if not available_libraries:
-        error_messages.append("未找到任何API库")
+        error_messages.append(i18n.t("preflight_error_no_api_libs"))
         checks_passed = False
 
     # 3. 检查API密钥
@@ -95,7 +95,7 @@ def preflight_checks():
     available_keys = [key for key in api_keys if os.getenv(key)]
 
     if not available_keys:
-        error_messages.append("未找到任何API密钥")
+        error_messages.append(i18n.t("preflight_error_no_api_keys"))
         checks_passed = False
 
     # 4. 检查source_mod目录内容
@@ -104,19 +104,19 @@ def preflight_checks():
         mod_dirs = [d for d in os.listdir("source_mod") if os.path.isdir(os.path.join("source_mod", d))]
         mod_count = len(mod_dirs)
         if mod_count == 0:
-            error_messages.append("source_mod目录为空")
+            error_messages.append(i18n.t("preflight_error_source_mod_empty"))
             checks_passed = False
     else:
-        error_messages.append("source_mod目录不存在")
+        error_messages.append(i18n.t("preflight_error_source_mod_missing"))
         checks_passed = False
 
     # 显示检查结果
     if checks_passed:
         lib_names = ", ".join(available_libraries)
         key_count = len(available_keys)
-        print(f"✅ {i18n.t('preflight_success', libs=lib_names, keys=key_count, mods=mod_count)}")
+        print(i18n.t("preflight_success_header") + " " + i18n.t('preflight_success', libs=lib_names, keys=key_count, mods=mod_count))
     else:
-        print(f"❌ {i18n.t('preflight_failed')}:")
+        print(i18n.t("preflight_failed_header"))
         for msg in error_messages:
             print(f"   - {msg}")
         print(f"\n{i18n.t('preflight_retry_prompt')}")
@@ -238,13 +238,13 @@ def select_language(prompt_key, game_profile, source_lang=None):
     is_target_selection = bool(source_lang)
 
     if is_target_selection:
-        logging.info(f"  [0] 一键翻译为其余 {len(display_options)} 种语言")
+        logging.info(f"  [0] {i18n.t('target_option_all_dynamic', count=len(display_options))}")
 
     for i, lang in enumerate(display_options, 1):
         logging.info(f"  [{i}] {lang['name']}")
 
     if is_target_selection:
-        logging.info(f"  [99] 套壳模式 (自定义语言)")
+        logging.info(f"  [99] {i18n.t('target_option_custom')}")
 
 
     while True:
@@ -254,38 +254,38 @@ def select_language(prompt_key, game_profile, source_lang=None):
 
             if is_target_selection:
                 if choice == 0:
-                    logging.info(f"已选择翻译为所有其他 {len(display_options)} 种语言。")
+                    logging.info(i18n.t("select_language_all_selected", count=len(display_options)))
                     return display_options
                 elif 1 <= choice <= len(display_options):
                     selected = display_options[choice - 1]
-                    logging.info(f"已选择: {selected['name']}")
+                    logging.info(i18n.t("select_language_single_selected", name=selected['name']))
                     return [selected]
                 elif choice == 99:
                     shell_config = handle_shell_language_selection(game_profile)
                     return [shell_config] if shell_config else None
                 else:
-                    logging.warning(i18n.t("invalid_input_number"))
+                    logging.warning(i18n.t("error_invalid_list_number"))
             else:  # 源语言选择
                 if 1 <= choice <= len(display_options):
                     selected = display_options[choice - 1]
-                    logging.info(f"已选择: {selected['name']}")
+                    logging.info(i18n.t("select_language_single_selected", name=selected['name']))
                     return selected
                 else:
-                    logging.warning(i18n.t("invalid_input_number"))
+                    logging.warning(i18n.t("error_invalid_list_number"))
         except ValueError:
-            logging.warning(i18n.t("invalid_input_not_number"))
+            logging.warning(i18n.t("error_invalid_not_number"))
 
 def handle_shell_language_selection(game_profile):
     """
     处理“套壳”语言选择
     """
-    logging.info("进入套壳模式...")
-    custom_name = input("请输入自定义语言的名称 (例如 'Italiano'): ").strip()
+    logging.info(i18n.t("shell_mode_entering"))
+    custom_name = input(i18n.t("shell_mode_prompt_name")).strip()
     if not custom_name:
-        logging.warning("自定义语言名称不能为空。")
+        logging.warning(i18n.t("shell_mode_error_name_empty"))
         return None
 
-    logging.info("请选择一个“套壳”语言 (例如 English)，生成的文件将使用此语言的格式:")
+    logging.info(i18n.t("shell_mode_prompt_shell_lang"))
 
     supported_langs = [LANGUAGES[key] for key in game_profile['supported_language_keys']]
     for i, lang in enumerate(supported_langs, 1):
@@ -293,24 +293,24 @@ def handle_shell_language_selection(game_profile):
 
     while True:
         try:
-            choice = int(input("请输入选择: ")) - 1
+            choice = int(input(i18n.t("shell_mode_prompt_choice"))) - 1
             if 0 <= choice < len(supported_langs):
                 shell_lang = supported_langs[choice]
 
                 shell_lang_config = {
                     "is_shell": True,
-                    "name": f"{custom_name} (套壳: {shell_lang['name']})",
+                    "name": i18n.t("shell_mode_display_name", custom_name=custom_name, shell_name=shell_lang['name']),
                     "custom_name": custom_name,
                     "key": shell_lang['key'],
                     "folder_prefix": shell_lang['folder_prefix'],
                     "code": shell_lang['code']
                 }
-                logging.info(f"已选择套壳模式: {custom_name} 将伪装为 {shell_lang['name']}")
+                logging.info(i18n.t("shell_mode_confirm_selection", custom_name=custom_name, shell_name=shell_lang['name']))
                 return shell_lang_config
             else:
-                logging.warning("无效选择，请输入列表中的数字。")
+                logging.warning(i18n.t("error_invalid_list_number"))
         except ValueError:
-            logging.warning("无效输入，请输入一个数字。")
+            logging.warning(i18n.t("error_invalid_not_number"))
 
 def select_auxiliary_glossaries(game_profile):
     """
@@ -321,26 +321,20 @@ def select_auxiliary_glossaries(game_profile):
     main_glossary_loaded = glossary_manager.load_game_glossary(game_profile['id'])
 
     if not main_glossary_loaded:
-        logging.warning(i18n.t("main_glossary_not_found"))
+        logging.warning(i18n.t("main_glossary_not_loaded"))
         return []
 
     auxiliary_glossaries = glossary_manager.get_auxiliary_glossaries_info()
 
     if not auxiliary_glossaries:
-        if i18n.get_current_language() == "en_US":
-            logging.info("No auxiliary glossaries found")
-        else:
-            logging.info("未找到外挂词典")
+        logging.info(i18n.t("aux_glossary_not_found"))
         return []
 
     main_stats = glossary_manager.get_glossary_stats()
     if main_stats['loaded']:
         logging.info(i18n.t("main_glossary_enabled", count=main_stats['total_entries']))
     else:
-        if i18n.get_current_language() == "en_US":
-            logging.warning("Main glossary not loaded")
-        else:
-            logging.warning("主词典未加载")
+        logging.warning(i18n.t("main_glossary_not_loaded"))
 
     logging.info(i18n.t("auxiliary_glossaries_detected"))
     for i, glossary in enumerate(auxiliary_glossaries, 1):

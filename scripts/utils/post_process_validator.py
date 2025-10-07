@@ -15,7 +15,7 @@
 
 import re
 import logging
-import importlib
+import importlib.util
 from pathlib import Path
 from typing import Dict, List, Tuple, Optional, Any, Callable
 from dataclasses import dataclass
@@ -60,6 +60,7 @@ class BaseGameValidator:
             rules_path (str): 指向该游戏验证规则的 .py 文件的路径。
         """
         self.logger = logging.getLogger(__name__)
+        self.config = {}  # 提前初始化，防止加载失败时崩溃
         self.rules = self._load_rules(rules_path)
         self.game_name = self.config.get("game_name", "Unknown Game")
 
@@ -74,12 +75,15 @@ class BaseGameValidator:
     def _load_rules(self, rules_path: str) -> List[Dict]:
         """从Python模块文件加载和解析规则。"""
         try:
-            # 将文件路径 (e.g., "scripts/config/validators/vic3_rules.py")
-            # 转换为模块名 (e.g., "scripts.config.validators.vic3_rules")
-            module_name = str(Path(rules_path).with_suffix('')).replace('/', '.')
+            # 使用spec_from_file_location，因为它更健壮，不依赖于包的上下文
+            module_name = Path(rules_path).stem
+            spec = importlib.util.spec_from_file_location(module_name, rules_path)
+            if spec is None or spec.loader is None:
+                self.logger.error(f"无法为路径创建模块规范: {rules_path}")
+                return []
 
-            # 动态导入模块
-            rule_module = importlib.import_module(module_name)
+            rule_module = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(rule_module)
 
             # 从模块中获取RULES字典
             self.config = getattr(rule_module, 'RULES')
@@ -88,7 +92,7 @@ class BaseGameValidator:
         except FileNotFoundError:
             self.logger.error(f"规则文件未找到: {rules_path}")
             return []
-        except (ModuleNotFoundError, AttributeError) as e:
+        except (AttributeError, ImportError) as e:
             self.logger.error(f"无法从Python模块加载规则: {rules_path}, 错误: {e}")
             return []
 
@@ -221,6 +225,9 @@ class BaseGameValidator:
         从 self.check_map 中动态调用相应的“工人”检查方法。
         """
         all_results = []
+        if not self.rules: # 如果规则加载失败，则直接返回
+            return all_results
+
         for rule in self.rules:
             check_function_name = rule.get("check_function")
             checker = self.check_map.get(check_function_name)
