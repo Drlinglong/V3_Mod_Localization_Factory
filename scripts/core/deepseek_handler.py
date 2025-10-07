@@ -12,6 +12,7 @@ from scripts.utils.text_clean import strip_pl_diacritics, strip_outer_quotes
 from scripts.utils.punctuation_handler import generate_punctuation_prompt
 from .glossary_manager import glossary_manager
 from scripts.utils.response_parser import parse_json_response
+from scripts.core.parallel_processor import BatchTask
 
 # Alias required by the audit.py script for compatibility
 _strip_pl_diacritics = strip_pl_diacritics  # noqa: N816
@@ -110,9 +111,7 @@ def translate_single_text(
         logging.exception(i18n.t("api_call_error", error=e))
         return text
 
-from scripts.core.parallel_processor import BatchTask
-
-def _translate_chunk(client: "OpenAI", task: BatchTask) -> "list[str] | None":
+def _translate_chunk(client: "OpenAI", task: BatchTask) -> BatchTask:
     """[Worker Function] Translates a single chunk of text, with retry logic."""
     # 从 task 对象中解包所需变量
     chunk = task.texts
@@ -187,7 +186,8 @@ def _translate_chunk(client: "OpenAI", task: BatchTask) -> "list[str] | None":
                 # strip_outer_quotes is no longer needed as the JSON parser handles it.
                 if game_profile.get("strip_pl_diacritics") and target_lang["code"] == "pl":
                     translated_chunk = [_strip_pl_diacritics(t) for t in translated_chunk]
-                return translated_chunk
+                task.translated_texts = translated_chunk
+                return task
 
             logging.error(i18n.t("mismatch_error", original_count=len(chunk), translated_count=len(translated_chunk)))
 
@@ -199,54 +199,57 @@ def _translate_chunk(client: "OpenAI", task: BatchTask) -> "list[str] | None":
             logging.warning(i18n.t("retrying_batch", batch_num=batch_num, attempt=attempt + 1, max_retries=MAX_RETRIES, delay=delay))
             time.sleep(delay)
 
-    return None
+    task.translated_texts = None
+    return task
 
-def translate_texts_in_batches(
-    client: "OpenAI",
-    provider_name: str,
-    texts_to_translate: list[str],
-    source_lang: dict,
-    target_lang: dict,
-    game_profile: dict,
-    mod_context: str,
-) -> "list[str] | None":
-    """
-    [Foreman Function] Translates a list of texts in batches.
-    IMPORTANT: This function does NOT create its own thread pool to avoid thread explosion.
-    It either processes sequentially or relies on the caller's thread pool.
-    """
-    if len(texts_to_translate) <= CHUNK_SIZE:
-        return _translate_chunk(client, texts_to_translate, source_lang, target_lang, game_profile, mod_context, 1)
+# def translate_texts_in_batches(
+#     client: "OpenAI",
+#     provider_name: str,
+#     texts_to_translate: list[str],
+#     source_lang: dict,
+#     target_lang: dict,
+#     game_profile: dict,
+#     mod_context: str,
+# ) -> "list[str] | None":
+#     """
+#     [Foreman Function] Translates a list of texts in batches.
+#     IMPORTANT: This function does NOT create its own thread pool to avoid thread explosion.
+#     It either processes sequentially or relies on the caller's thread pool.
+#     """
+#     if len(texts_to_translate) <= CHUNK_SIZE:
+#         # return _translate_chunk(client, texts_to_translate, source_lang, target_lang, game_profile, mod_context, 1)
+#         pass
 
-    # 将文本分成批次
-    chunks = [texts_to_translate[i : i + CHUNK_SIZE] for i in range(0, len(texts_to_translate), CHUNK_SIZE)]
-    logging.info(i18n.t("parallel_processing_start", count=len(chunks)))
+#     # 将文本分成批次
+#     chunks = [texts_to_translate[i : i + CHUNK_SIZE] for i in range(0, len(texts_to_translate), CHUNK_SIZE)]
+#     logging.info(i18n.t("parallel_processing_start", count=len(chunks)))
 
-    # 串行处理所有批次，避免嵌套线程池
-    # 注意：真正的并行处理由调用者（ParallelProcessor）负责
-    results = []
-    for i, chunk in enumerate(chunks):
-        try:
-            result = _translate_chunk(client, chunk, source_lang, target_lang, game_profile, mod_context, i + 1)
-            results.append(result)
-        except Exception as e:
-            logging.exception(f"Batch {i + 1} failed with error: {e}")
-            results.append(None)
+#     # 串行处理所有批次，避免嵌套线程池
+#     # 注意：真正的并行处理由调用者（ParallelProcessor）负责
+#     results = []
+#     for i, chunk in enumerate(chunks):
+#         try:
+#             # result = _translate_chunk(client, chunk, source_lang, target_lang, game_profile, mod_context, i + 1)
+#             result = None
+#             results.append(result)
+#         except Exception as e:
+#             logging.exception(f"Batch {i + 1} failed with error: {e}")
+#             results.append(None)
 
-    # 合并结果
-    all_translated_texts: list[str] = []
-    has_failures = False
-    for i, translated_chunk in enumerate(results):
-        if translated_chunk is None:
-            has_failures = True
-            logging.warning(i18n.t("warning_batch_failed", batch_num=i + 1))
-            original_chunk = chunks[i]
-            all_translated_texts.extend(original_chunk)
-        else:
-            all_translated_texts.extend(translated_chunk)
+#     # 合并结果
+#     all_translated_texts: list[str] = []
+#     has_failures = False
+#     for i, translated_chunk in enumerate(results):
+#         if translated_chunk is None:
+#             has_failures = True
+#             logging.warning(i18n.t("warning_batch_failed", batch_num=i + 1))
+#             original_chunk = chunks[i]
+#             all_translated_texts.extend(original_chunk)
+#         else:
+#             all_translated_texts.extend(translated_chunk)
     
-    if has_failures:
-        logging.error(i18n.t("warning_partial_failure"))
+#     if has_failures:
+#         logging.error(i18n.t("warning_partial_failure"))
 
-    logging.info(i18n.t("parallel_processing_end"))
-    return all_translated_texts
+#     logging.info(i18n.t("parallel_processing_end"))
+#     return all_translated_texts

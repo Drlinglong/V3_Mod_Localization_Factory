@@ -12,6 +12,7 @@ from scripts.utils.text_clean import strip_pl_diacritics, strip_outer_quotes
 from scripts.utils.punctuation_handler import generate_punctuation_prompt
 from .glossary_manager import glossary_manager
 from scripts.utils.response_parser import parse_json_response
+from scripts.core.parallel_processor import BatchTask
 
 # Alias required by the audit.py script for compatibility
 _strip_pl_diacritics = strip_pl_diacritics  # noqa: N816
@@ -110,9 +111,7 @@ def translate_single_text(
         logging.exception(i18n.t("api_call_error", error=e))
         return text
 
-from scripts.core.parallel_processor import BatchTask
-
-def _translate_chunk(client: "OpenAI", task: BatchTask) -> "list[str] | None":
+def _translate_chunk(client: "OpenAI", task: BatchTask) -> BatchTask:
     """[Worker Function] Translates a single chunk of text, with retry logic."""
     # 从 task 对象中解包所需变量
     chunk = task.texts
@@ -187,7 +186,8 @@ def _translate_chunk(client: "OpenAI", task: BatchTask) -> "list[str] | None":
                 # strip_outer_quotes is no longer needed as the JSON parser handles it.
                 if game_profile.get("strip_pl_diacritics") and target_lang["code"] == "pl":
                     translated_chunk = [_strip_pl_diacritics(t) for t in translated_chunk]
-                return translated_chunk
+                task.translated_texts = translated_chunk
+                return task
 
             logging.error(i18n.t("mismatch_error", original_count=len(chunk), translated_count=len(translated_chunk)))
 
@@ -199,7 +199,8 @@ def _translate_chunk(client: "OpenAI", task: BatchTask) -> "list[str] | None":
             logging.warning(i18n.t("retrying_batch", batch_num=batch_num, attempt=attempt + 1, max_retries=MAX_RETRIES, delay=delay))
             time.sleep(delay)
 
-    return None
+    task.translated_texts = None
+    return task
 
 # def translate_texts_in_batches(
 #     client: "OpenAI",
@@ -216,7 +217,6 @@ def _translate_chunk(client: "OpenAI", task: BatchTask) -> "list[str] | None":
 #     It either processes sequentially or relies on the caller's thread pool.
 #     """
 #     if len(texts_to_translate) <= CHUNK_SIZE:
-#         # This call is now incorrect as _translate_chunk expects a BatchTask object.
 #         # return _translate_chunk(client, texts_to_translate, source_lang, target_lang, game_profile, mod_context, 1)
 #         pass
 
@@ -229,7 +229,6 @@ def _translate_chunk(client: "OpenAI", task: BatchTask) -> "list[str] | None":
 #     results = []
 #     for i, chunk in enumerate(chunks):
 #         try:
-#             # This call is now incorrect.
 #             # result = _translate_chunk(client, chunk, source_lang, target_lang, game_profile, mod_context, i + 1)
 #             result = None # Placeholder
 #             results.append(result)

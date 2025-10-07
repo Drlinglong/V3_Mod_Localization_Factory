@@ -111,7 +111,7 @@ def translate_single_text(
 
 from scripts.core.parallel_processor import BatchTask
 
-def _translate_chunk(client: "OpenAI", task: BatchTask) -> "list[str] | None":
+def _translate_chunk(client: "OpenAI", task: BatchTask) -> BatchTask:
     """[Worker Function] Translates a single chunk of text, with retry logic."""
     # 从 task 对象中解包所需变量
     chunk = task.texts
@@ -190,7 +190,8 @@ def _translate_chunk(client: "OpenAI", task: BatchTask) -> "list[str] | None":
                 # strip_outer_quotes is no longer needed as the JSON parser handles it.
                 if game_profile.get("strip_pl_diacritics") and target_lang["code"] == "pl":
                     translated_chunk = [_strip_pl_diacritics(t) for t in translated_chunk]
-                return translated_chunk
+                task.translated_texts = translated_chunk
+                return task
 
             logging.error(i18n.t("mismatch_error", original_count=len(chunk), translated_count=len(translated_chunk)))
 
@@ -202,7 +203,8 @@ def _translate_chunk(client: "OpenAI", task: BatchTask) -> "list[str] | None":
             logging.warning(i18n.t("retrying_batch", batch_num=batch_num, attempt=attempt + 1, max_retries=MAX_RETRIES, delay=delay))
             time.sleep(delay)
 
-    return None
+    task.translated_texts = None
+    return task
 
 # def translate_texts_in_batches(
 #     client: "OpenAI",
