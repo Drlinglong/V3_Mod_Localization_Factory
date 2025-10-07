@@ -52,8 +52,8 @@ def run(mod_name: str,
             else:
                 print(i18n.t("setup_invalid_choice"))
 
-    client, provider_name = api_handler.initialize_client(selected_provider, model_name=gemini_cli_model)
-    if not client:
+    handler = api_handler.get_handler(selected_provider, model_name=gemini_cli_model)
+    if not handler or not handler.client:
         logging.warning(i18n.t("api_client_init_fail"))
         return
 
@@ -142,11 +142,11 @@ def run(mod_name: str,
                     source_lang=source_lang,
                     game_profile=game_profile,
                     mod_context=mod_context,
-                    provider_name=provider_name,
+                    provider_name=handler.provider_name,
                     output_folder_name=output_folder_name,
                     source_dir=SOURCE_DIR,
                     dest_dir=DEST_DIR,
-                    client=client,
+                    client=handler.client,
                     mod_name=mod_name
                 )
                 
@@ -186,11 +186,11 @@ def run(mod_name: str,
                 source_lang=source_lang,
                 game_profile=game_profile,
                 mod_context=mod_context,
-                provider_name=provider_name,
+                provider_name=handler.provider_name,
                 output_folder_name=output_folder_name,
                 source_dir=SOURCE_DIR,
                 dest_dir=DEST_DIR,
-                client=client,
+                client=handler.client,
                 mod_name=mod_name
             )
             file_tasks.append(file_task)
@@ -205,8 +205,7 @@ def run(mod_name: str,
             processor = ParallelProcessor(max_workers=max_workers)
             
             # 获取翻译函数（使用统一的API Handler接口）
-            # 使用单批次翻译函数，支持批次编号
-            translation_function = api_handler.translate_single_batch_with_batch_num
+            translation_function = handler.translate_batch
             
             # 并行处理所有文件，获取翻译结果
             file_results, all_warnings = processor.process_files_parallel(
@@ -308,14 +307,14 @@ def run(mod_name: str,
     if is_batch_mode:
         # 多语言模式：使用英语作为主要语言处理元数据
         process_metadata_for_language(
-            mod_name, client, source_lang, primary_target_lang,
-            output_folder_name, mod_context, game_profile, provider_name
+            mod_name, handler, source_lang, primary_target_lang,
+            output_folder_name, mod_context, game_profile
         )
     else:
         # 单语言模式：处理目标语言的元数据
         process_metadata_for_language(
-            mod_name, client, source_lang, target_lang,
-            output_folder_name, mod_context, game_profile, provider_name
+            mod_name, handler, source_lang, target_lang,
+            output_folder_name, mod_context, game_profile
         )
 
     # ───────────── 8. 完成提示 ─────────────
@@ -351,19 +350,18 @@ def _build_dest_dir(file_task: FileTask, target_lang: dict, output_folder_name: 
 
 def process_metadata_for_language(
     mod_name: str,
-    client: Any,
+    handler: Any,
     source_lang: dict,
     target_lang: dict,
     output_folder_name: str,
     mod_context: str,
-    game_profile: dict,
-    provider_name: str
+    game_profile: dict
 ) -> None:
     """为指定语言处理元数据"""
     try:
         asset_handler.process_metadata(
-            mod_name, client, source_lang, target_lang,
-            output_folder_name, mod_context, game_profile, provider_name
+            mod_name, handler, source_lang, target_lang,
+            output_folder_name, mod_context, game_profile
         )
     except Exception as e:
         logging.exception(i18n.t("metadata_processing_failed", error=e))

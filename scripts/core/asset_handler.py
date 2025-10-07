@@ -4,17 +4,22 @@ import re
 import json
 import shutil
 import logging
-# 【核心修正】统一使用绝对导入
+from pathlib import Path
+from typing import Any
+
 from scripts.utils import i18n
 from scripts.app_settings import SOURCE_DIR, DEST_DIR
-from scripts.core.api_handler import translate_single_text
+# REMOVED: from scripts.core.api_handler import translate_single_text
+# NOTE: The functions 'read_text_bom' and 'write_text_bom' are used but not defined/imported in the original file.
+# Assuming they are available from another utility module. If not, this will need to be fixed.
+# from scripts.utils.file_io import read_text_bom, write_text_bom # Hypothetical import
 
 
 # ──────────────────────────────────────────────────────────────────
 # VICTORIA 3
 # ──────────────────────────────────────────────────────────────────
-def _process_victoria3_metadata(mod_name, client, source_lang, target_lang,
-                                output_folder_name, mod_context, game_profile, provider_name="gemini"):
+def _process_victoria3_metadata(mod_name: str, handler: Any, source_lang: dict, target_lang: dict,
+                                output_folder_name: str, mod_context: str, game_profile: dict):
     """【V3专用】处理 Victoria 3 的 .metadata/metadata.json 文件。"""
     source_meta_file = os.path.join(SOURCE_DIR, mod_name, game_profile['metadata_file'])
     dest_meta_dir = os.path.join(DEST_DIR, output_folder_name, '.metadata')
@@ -27,8 +32,8 @@ def _process_victoria3_metadata(mod_name, client, source_lang, target_lang,
         data = json.load(f)
 
     original_name = data.get('name', '')
-    translated_name = translate_single_text(
-        client, provider_name, original_name, "mod name", mod_name,
+    translated_name = handler.translate_single_text(
+        original_name, "mod name", mod_name,
         source_lang, target_lang, mod_context, game_profile
     )
 
@@ -42,8 +47,8 @@ def _process_victoria3_metadata(mod_name, client, source_lang, target_lang,
     data['name'] = f"{translated_name}{suffix}"
 
     original_desc = data.get('short_description', '')
-    data['short_description'] = translate_single_text(
-        client, provider_name, original_desc, "mod short description", mod_name,
+    data['short_description'] = handler.translate_single_text(
+        original_desc, "mod short description", mod_name,
         source_lang, target_lang, mod_context, game_profile
     )
 
@@ -58,8 +63,8 @@ def _process_victoria3_metadata(mod_name, client, source_lang, target_lang,
 # ──────────────────────────────────────────────────────────────────
 # STELLARIS
 # ──────────────────────────────────────────────────────────────────
-def _process_stellaris_metadata(mod_name, client, source_lang, target_lang,
-                                output_folder_name, mod_context, game_profile, provider_name="gemini"):
+def _process_stellaris_metadata(mod_name: str, handler: Any, source_lang: dict, target_lang: dict,
+                                output_folder_name: str, mod_context: str, game_profile: dict):
     """【群星专用】生成两份 .mod 文件。"""
     source_mod_file = os.path.join(SOURCE_DIR, mod_name, game_profile['metadata_file'])
     if not os.path.exists(source_mod_file):
@@ -78,8 +83,8 @@ def _process_stellaris_metadata(mod_name, client, source_lang, target_lang,
                 original_name = match.group(1)
             break
 
-    translated_name = translate_single_text(
-        client, provider_name, original_name, "mod name", mod_name,
+    translated_name = handler.translate_single_text(
+        original_name, "mod name", mod_name,
         source_lang, target_lang, mod_context, game_profile
     )
 
@@ -92,43 +97,27 @@ def _process_stellaris_metadata(mod_name, client, source_lang, target_lang,
         suffix = f" ({target_lang['name']} Translation)"
     final_name = f"{translated_name}{suffix}"
 
-# --- Rebuild the new file content line by line ---
-    # We create a new list for the output and use a state machine to handle multi-line blocks.
     new_content_lines = []
-    in_tags_block = False  # State flag: True if we are inside a tags={...} block that needs to be skipped.
-    tags_block_written = False # Flag to check if we have already written our new "Translation" tag.
+    in_tags_block = False
+    tags_block_written = False
 
     for line in lines:
         stripped_line = line.strip()
-
-        # If the 'in_tags_block' flag is on, we are inside a multi-line tags block.
-        # We will skip all lines until we find the closing brace '}'.
         if in_tags_block:
             if '}' in stripped_line:
-                in_tags_block = False # End of the block, turn the flag off.
-            continue # Skip the current line (part of the old tags block).
-
-        # If the line defines the mod name, replace it with our translated version.
+                in_tags_block = False
+            continue
         if stripped_line.startswith('name='):
             new_content_lines.append(f'name="{final_name}"\n')
-        
-        # If we find the start of a tags block...
         elif stripped_line.startswith('tags={'):
-            # ...append our new, standardized "Translation" tag block.
             new_content_lines.append('tags={\n\t"Translation"\n}\n')
             tags_block_written = True
-            # If the block is multi-line (no '}' on the same line), turn on the skipping flag.
             if '}' not in stripped_line:
                 in_tags_block = True
-        
-        # If the line is the remote_file_id, skip it to effectively delete it.
         elif stripped_line.startswith('remote_file_id='):
             continue
-        # If the line is the replace_path, skip it to effectively delete it.
         elif stripped_line.startswith('replace_path='):
             continue
-
-        # For any other line (like version, supported_version, etc.), keep it as is.
         else:
             new_content_lines.append(line)
 
@@ -152,20 +141,19 @@ def _process_stellaris_metadata(mod_name, client, source_lang, target_lang,
 
 
 # ──────────────────────────────────────────────────────────────────
-# EU4  (nowo dodane)
+# EU4
 # ──────────────────────────────────────────────────────────────────
-def _process_eu4_metadata(mod_name, client, source_lang, target_lang,
-                           output_folder_name, mod_context, game_profile, provider_name="gemini"):
-    """【EU4专用】处理 descriptor.mod (UTF-8 + BOM)."""
+def _process_eu4_metadata(mod_name: str, handler: Any, source_lang: dict, target_lang: dict,
+                           output_folder_name: str, mod_context: str, game_profile: dict):
+    """【EU4专用】处理 descriptor.mod。"""
     source_mod_file = os.path.join(SOURCE_DIR, mod_name, game_profile['metadata_file'])
     if not os.path.exists(source_mod_file):
         logging.warning("Warning: descriptor.mod not found, skipping metadata.")
         return
 
-    # Wczytaj z zachowaniem BOM
-    lines = read_text_bom(Path(source_mod_file)).splitlines()
+    with open(source_mod_file, 'r', encoding='utf-8-sig') as f:
+        lines = f.read().splitlines()
 
-    # ── tłumaczenie nazwy ──────────────────────────────────────────
     original_name = ""
     for ln in lines:
         if ln.strip().startswith('name='):
@@ -174,8 +162,8 @@ def _process_eu4_metadata(mod_name, client, source_lang, target_lang,
                 original_name = m.group(1)
             break
 
-    translated_name = translate_single_text(
-        client, provider_name, original_name, "mod name", mod_name,
+    translated_name = handler.translate_single_text(
+        original_name, "mod name", mod_name,
         source_lang, target_lang, mod_context, game_profile
     )
 
@@ -188,26 +176,20 @@ def _process_eu4_metadata(mod_name, client, source_lang, target_lang,
         suffix = f" ({target_lang['name']} Translation)"
     final_name = f"{translated_name}{suffix}"
 
-    # ── składanie nowej zawartości ─────────────────────────────────
     new_lines = []
     tags_written = False
     for ln in lines:
         stripped = ln.strip()
-
         if stripped.startswith('name='):
             new_lines.append(f'name="{final_name}"')
-
         elif stripped.startswith('tags={'):
             tags_written = True
             new_lines.append('tags={')
             new_lines.append('\t"Translation"')
             new_lines.append('}')
-            # pomiń oryginalne linie w bloku tags
             continue
-
         elif stripped.startswith('remote_file_id='):
-            continue  # usuń ID Workshopu
-
+            continue
         else:
             new_lines.append(ln)
 
@@ -221,39 +203,39 @@ def _process_eu4_metadata(mod_name, client, source_lang, target_lang,
     dest_mod_dir = os.path.join(DEST_DIR, output_folder_name)
     os.makedirs(dest_mod_dir, exist_ok=True)
 
-    # Zapis z BOM-em
-    write_text_bom(Path(os.path.join(dest_mod_dir, 'descriptor.mod')), "\n".join(new_lines))
+    dest_file_path = os.path.join(dest_mod_dir, 'descriptor.mod')
+    with open(dest_file_path, 'w', encoding='utf-8-sig') as f:
+        f.write("\n".join(new_lines))
 
     launcher_lines = new_lines + [f'\npath="mod/{output_folder_name}"']
-    write_text_bom(Path(os.path.join(DEST_DIR, f"{output_folder_name}.mod")), "\n".join(launcher_lines))
+    launcher_file_path = os.path.join(DEST_DIR, f"{output_folder_name}.mod")
+    with open(launcher_file_path, 'w', encoding='utf-8-sig') as f:
+        f.write("\n".join(launcher_lines))
 
     logging.info(i18n.t("metadata_success"))
 
 
-def process_metadata(mod_name, client, source_lang, target_lang,
-                     output_folder_name, mod_context, game_profile, provider_name="gemini"):
+def process_metadata(mod_name: str, handler: Any, source_lang: dict, target_lang: dict,
+                     output_folder_name: str, mod_context: str, game_profile: dict):
     """【总调度】元数据处理器，根据游戏档案调用对应的处理函数。"""
     logging.info(i18n.t("processing_metadata"))
 
     game_id = game_profile.get('id')
     
-    if game_id in ['stellaris', 'hoi4', 'ck3']: #Use the same process method
-        _process_stellaris_metadata(mod_name, client, source_lang, target_lang,
-                                    output_folder_name, mod_context, game_profile, provider_name)
+    if game_id in ['stellaris', 'hoi4', 'ck3']:
+        _process_stellaris_metadata(mod_name, handler, source_lang, target_lang,
+                                    output_folder_name, mod_context, game_profile)
     elif game_id == 'victoria3':
-        _process_victoria3_metadata(mod_name, client, source_lang, target_lang,
-                                      output_folder_name, mod_context, game_profile, provider_name)
+        _process_victoria3_metadata(mod_name, handler, source_lang, target_lang,
+                                      output_folder_name, mod_context, game_profile)
     elif game_id == 'eu4':
-        _process_eu4_metadata(mod_name, client, source_lang, target_lang,
-                              output_folder_name, mod_context, game_profile, provider_name)
+        _process_eu4_metadata(mod_name, handler, source_lang, target_lang,
+                              output_folder_name, mod_context, game_profile)
     else:
-        # warning msg
         logging.warning(i18n.t("unsupported_metadata", game_name=game_profile['name']))
 
-# ──────────────────────────────────────────────────────────────────
-# KOPIOWANIE DODATKOWYCH ASSETÓW (bez zmian)
-# ──────────────────────────────────────────────────────────────────
-def copy_assets(mod_name, output_folder_name, game_profile):
+
+def copy_assets(mod_name: str, output_folder_name: str, game_profile: dict):
     """根据游戏档案中的保护名单，复制所有必要的资产文件。"""
     logging.info(i18n.t("processing_assets"))
     source_dir = os.path.join(SOURCE_DIR, mod_name)
@@ -269,13 +251,18 @@ def copy_assets(mod_name, output_folder_name, game_profile):
             continue
 
         source_path = os.path.join(source_dir, item)
-        if os.path.isfile(source_path):
+        if os.path.exists(source_path):
+            dest_path = os.path.join(dest_dir, item)
             try:
-                os.makedirs(dest_dir, exist_ok=True)
-                shutil.copy2(source_path, dest_dir)
+                if os.path.isdir(source_path):
+                    shutil.copytree(source_path, dest_path)
+                else:
+                    os.makedirs(os.path.dirname(dest_path), exist_ok=True)
+                    shutil.copy2(source_path, dest_path)
                 logging.info(i18n.t("asset_copied", asset_name=item))
-            except FileNotFoundError:
-                logging.exception(i18n.t("asset_not_found", asset_name=item))
+            except FileExistsError:
+                 logging.warning(f"Asset '{item}' already exists at destination, skipping.")
             except Exception as e:
                 logging.exception(f"Error copying asset {item}: {e}")
-
+        else:
+            logging.warning(i18n.t("asset_not_found", asset_name=item))
