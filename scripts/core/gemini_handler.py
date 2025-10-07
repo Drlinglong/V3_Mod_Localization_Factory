@@ -128,8 +128,18 @@ def translate_single_text(
         logging.exception(i18n.t("api_call_error", error=e))
         return text
 
-def _translate_chunk(client, chunk, source_lang, target_lang, game_profile, mod_context, batch_num):
+from scripts.core.parallel_processor import BatchTask
+
+def _translate_chunk(client: "genai.Client", task: BatchTask) -> "list[str] | None":
     """[Worker Function] Translates a single chunk of text, with retry logic."""
+    # 从 task 对象中解包所需变量
+    chunk = task.texts
+    source_lang = task.file_task.source_lang
+    target_lang = task.file_task.target_lang
+    game_profile = task.file_task.game_profile
+    mod_context = task.file_task.mod_context
+    batch_num = task.batch_index + 1
+
     for attempt in range(MAX_RETRIES):
         try:
             numbered_list = "\n".join(f'{j + 1}. "{txt}"' for j, txt in enumerate(chunk))
