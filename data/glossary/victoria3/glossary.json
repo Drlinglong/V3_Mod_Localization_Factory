@@ -128,17 +128,6 @@
     },
     {
       "translations": {
-        "en": "leader",
-        "zh-CN": "领袖"
-      },
-      "id": "victoria3_leader",
-      "metadata": {
-        "part_of_speech": "Noun",
-        "remarks": "利益团体"
-      }
-    },
-    {
-      "translations": {
         "en": "Maka'āinana",
         "zh-CN": "玛卡艾纳纳"
       },
@@ -146,17 +135,6 @@
       "metadata": {
         "part_of_speech": "Noun",
         "remarks": "玛卡艾纳纳，夏威夷语“公民”，表意为下等阶层，是一种蔑称"
-      }
-    },
-    {
-      "translations": {
-        "en": "NO",
-        "zh-CN": "不存在"
-      },
-      "id": "victoria3_no",
-      "metadata": {
-        "part_of_speech": "Noun",
-        "remarks": "仅限Triggers"
       }
     },
     {
@@ -246,17 +224,6 @@
     },
     {
       "translations": {
-        "en": "TODO",
-        "zh-CN": "待完成"
-      },
-      "id": "victoria3_todo",
-      "metadata": {
-        "part_of_speech": "Noun",
-        "remarks": "待办，TODO均可\n---\n[来源合并备注]:\n作者还没写"
-      }
-    },
-    {
-      "translations": {
         "en": "Trade Union",
         "zh-CN": "工会"
       },
@@ -268,16 +235,6 @@
         "en": [
           "Trade Unions"
         ]
-      }
-    },
-    {
-      "translations": {
-        "en": "Academic Progress",
-        "zh-CN": "学术发展点"
-      },
-      "id": "victoria3_academic_progress",
-      "metadata": {
-        "part_of_speech": "Noun"
       }
     },
     {
@@ -306,16 +263,6 @@
         "zh-CN": "爱琴海"
       },
       "id": "victoria3_aegean",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Aeronautical Engineer",
-        "zh-CN": "航空工程师"
-      },
-      "id": "victoria3_aeronautical_engineer",
       "metadata": {
         "part_of_speech": "Noun"
       }
@@ -367,16 +314,6 @@
     },
     {
       "translations": {
-        "en": "African Penguin",
-        "zh-CN": "黑脚企鹅"
-      },
-      "id": "victoria3_african_penguin",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
         "en": "Afrikaner",
         "zh-CN": "阿非利卡"
       },
@@ -417,44 +354,12 @@
     },
     {
       "translations": {
-        "en": "Alcoholic",
-        "zh-CN": "酗酒"
-      },
-      "id": "victoria3_alcoholic",
-      "metadata": {
-        "part_of_speech": "Noun",
-        "remarks": "特质"
-      }
-    },
-    {
-      "translations": {
-        "en": "Alligator",
-        "zh-CN": "短吻鳄"
-      },
-      "id": "victoria3_alligator",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
         "en": "Alpine Club",
         "zh-CN": "高山俱乐部"
       },
       "id": "victoria3_alpine_club",
       "metadata": {
         "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Alpine ibex",
-        "zh-CN": "阿尔卑斯羱羊"
-      },
-      "id": "victoria3_alpine_ibex",
-      "metadata": {
-        "part_of_speech": "Noun",
-        "remarks": "一种野生山羊，生活在阿尔卑斯山雪顶上的岩石间"
       }
     },
     {
@@ -480,35 +385,10 @@
     },
     {
       "translations": {
-        "en": "Bison",
-        "zh-CN": "美洲野牛"
-      },
-      "id": "victoria3_bison",
-      "metadata": {
-        "part_of_speech": "Noun"
-      },
-      "variants": {
-        "en": [
-          "American Bison"
-        ]
-      }
-    },
-    {
-      "translations": {
         "en": "Ammonite",
         "zh-CN": "菊石"
       },
       "id": "victoria3_ammonite",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Andean condor",
-        "zh-CN": "安第斯神鹫"
-      },
-      "id": "victoria3_andean_condor",
       "metadata": {
         "part_of_speech": "Noun"
       }
@@ -535,40 +415,10 @@
     },
     {
       "translations": {
-        "en": "Ankylosaurus",
-        "zh-CN": "甲龙"
-      },
-      "id": "victoria3_ankylosaurus",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Antarctosaurus",
-        "zh-CN": "南极龙"
-      },
-      "id": "victoria3_antarctosaurus",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
         "en": "Anthrax",
         "zh-CN": "炭疽"
       },
       "id": "victoria3_anthrax",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Anthropologist",
-        "zh-CN": "人类学家"
-      },
-      "id": "victoria3_anthropologist",
       "metadata": {
         "part_of_speech": "Noun"
       }
@@ -636,36 +486,6 @@
     },
     {
       "translations": {
-        "en": "Archaeologist",
-        "zh-CN": "考古学家"
-      },
-      "id": "victoria3_archaeologist",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Archaeopteryx",
-        "zh-CN": "始祖鸟"
-      },
-      "id": "victoria3_archaeopteryx",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Architect",
-        "zh-CN": "建筑师"
-      },
-      "id": "victoria3_architect",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
         "en": "Architectural Blueprint",
         "zh-CN": "建筑蓝图"
       },
@@ -721,16 +541,6 @@
     },
     {
       "translations": {
-        "en": "Argyrosaurus",
-        "zh-CN": "银龙"
-      },
-      "id": "victoria3_argyrosaurus",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
         "en": "Ariel",
         "zh-CN": "天卫一"
       },
@@ -771,16 +581,6 @@
     },
     {
       "translations": {
-        "en": "Artistic Progress",
-        "zh-CN": "艺术发展点"
-      },
-      "id": "victoria3_artistic_progress",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
         "en": "Asian",
         "zh-CN": "亚洲"
       },
@@ -796,30 +596,10 @@
     },
     {
       "translations": {
-        "en": "Asiatic Cheetah",
-        "zh-CN": "亚洲猎豹"
-      },
-      "id": "victoria3_asiatic_cheetah",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
         "en": "aspe",
         "zh-CN": "半圆形后殿"
       },
       "id": "victoria3_aspe",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Astronomer",
-        "zh-CN": "天文学家"
-      },
-      "id": "victoria3_astronomer",
       "metadata": {
         "part_of_speech": "Noun"
       }
@@ -842,21 +622,6 @@
       "id": "victoria3_astronomical_prestige",
       "metadata": {
         "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Athletes",
-        "zh-CN": "运动员"
-      },
-      "id": "victoria3_athletes",
-      "metadata": {
-        "part_of_speech": "Noun"
-      },
-      "variants": {
-        "en": [
-          "Athlete"
-        ]
       }
     },
     {
@@ -937,36 +702,6 @@
         "zh-CN": "前沿知识"
       },
       "id": "victoria3_avantgarde_intelligentsia",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Axolotl",
-        "zh-CN": "墨西哥钝口螈"
-      },
-      "id": "victoria3_axolotl",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Bald Eagle",
-        "zh-CN": "白头海雕"
-      },
-      "id": "victoria3_bald_eagle",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Balloonist",
-        "zh-CN": "气球飞行家"
-      },
-      "id": "victoria3_balloonist",
       "metadata": {
         "part_of_speech": "Noun"
       }
@@ -1072,31 +807,6 @@
     },
     {
       "translations": {
-        "en": "Bengal Tiger",
-        "zh-CN": "孟加拉虎"
-      },
-      "id": "victoria3_bengal_tiger",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Bestseller",
-        "zh-CN": "畅销书"
-      },
-      "id": "victoria3_bestseller",
-      "metadata": {
-        "part_of_speech": "Noun"
-      },
-      "variants": {
-        "en": [
-          "Bestsellers"
-        ]
-      }
-    },
-    {
-      "translations": {
         "en": "Bildungsroman",
         "zh-CN": "成长小说"
       },
@@ -1108,31 +818,10 @@
     },
     {
       "translations": {
-        "en": "Biologist",
-        "zh-CN": "生物学家"
-      },
-      "id": "victoria3_biologist",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-
-    {
-      "translations": {
         "en": "Botanical Expedition",
         "zh-CN": "植物学考察"
       },
       "id": "victoria3_botanical_expedition",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Brown-throated Sloth",
-        "zh-CN": "褐喉树懒"
-      },
-      "id": "victoria3_brown_throated_sloth",
       "metadata": {
         "part_of_speech": "Noun"
       }
@@ -1233,16 +922,6 @@
     },
     {
       "translations": {
-        "en": "Capybara",
-        "zh-CN": "水豚"
-      },
-      "id": "victoria3_capybara",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
         "en": "Car Racer",
         "zh-CN": "赛车手"
       },
@@ -1284,16 +963,6 @@
     },
     {
       "translations": {
-        "en": "Cassowary",
-        "zh-CN": "鹤鸵"
-      },
-      "id": "victoria3_cassowary",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
         "en": "cat-o'-nine-tails",
         "zh-CN": "九尾鞭"
       },
@@ -1305,48 +974,12 @@
     },
     {
       "translations": {
-        "en": "Cave",
-        "zh-CN": "洞穴"
-      },
-      "id": "victoria3_cave",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Chamois",
-        "zh-CN": "臆羚"
-      },
-      "id": "victoria3_chamois",
-      "metadata": {
-        "part_of_speech": "Noun",
-        "remarks": "又称欧洲山羚，是一种粗壮像山羊的动物，生活于欧洲的阿尔卑斯山脉和喀尔巴阡山脉。"
-      }
-    },
-    {
-      "translations": {
         "en": "Champ de Mars",
         "zh-CN": "巴黎战神广场"
       },
       "id": "victoria3_champ_de_mars",
       "metadata": {
         "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Character",
-        "zh-CN": "角色"
-      },
-      "id": "victoria3_character",
-      "metadata": {
-        "part_of_speech": "Noun"
-      },
-      "variants": {
-        "en": [
-          "Characters"
-        ]
       }
     },
     {
@@ -1366,26 +999,6 @@
         "zh-CN": "化学战"
       },
       "id": "victoria3_chemical_warfare",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "chemist",
-        "zh-CN": "化学家"
-      },
-      "id": "victoria3_chemist",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Chemist Progress",
-        "zh-CN": "化学家进展"
-      },
-      "id": "victoria3_chemist_progress",
       "metadata": {
         "part_of_speech": "Noun"
       }
@@ -1462,16 +1075,6 @@
     },
     {
       "translations": {
-        "en": "Civil Engineer",
-        "zh-CN": "土木工程师"
-      },
-      "id": "victoria3_civil_engineer",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
         "en": "Civil Engineering",
         "zh-CN": "土木工程"
       },
@@ -1492,42 +1095,10 @@
     },
     {
       "translations": {
-        "en": "Coach",
-        "zh-CN": "总教练"
-      },
-      "id": "victoria3_coach",
-      "metadata": {
-        "part_of_speech": "Noun",
-        "remarks": "赤色晨曦用"
-      }
-    },
-    {
-      "translations": {
         "en": "Cocaine Addict",
         "zh-CN": "可卡因成瘾"
       },
       "id": "victoria3_cocaine_addict",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Composer",
-        "zh-CN": "作曲家"
-      },
-      "id": "victoria3_composer",
-      "metadata": {
-        "part_of_speech": "Noun",
-        "remarks": "赤色晨曦特殊角色"
-      }
-    },
-    {
-      "translations": {
-        "en": "Composer Progress",
-        "zh-CN": "谱曲进度"
-      },
-      "id": "victoria3_composer_progress",
       "metadata": {
         "part_of_speech": "Noun"
       }
@@ -1540,17 +1111,6 @@
       "id": "victoria3_composita",
       "metadata": {
         "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Conductor",
-        "zh-CN": "指挥家"
-      },
-      "id": "victoria3_conductor",
-      "metadata": {
-        "part_of_speech": "Noun",
-        "remarks": "赤色晨曦作曲家特质"
       }
     },
     {
@@ -1672,7 +1232,6 @@
         ]
       }
     },
-
     {
       "translations": {
         "en": "Der Grüne Heinrich",
@@ -1798,26 +1357,6 @@
     },
     {
       "translations": {
-        "en": "Diplodocus",
-        "zh-CN": "梁龙"
-      },
-      "id": "victoria3_diplodocus",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Discoverer",
-        "zh-CN": "发现者："
-      },
-      "id": "victoria3_discoverer",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
         "en": "Diskos of Phaistos",
         "zh-CN": "斐斯托斯圆盘"
       },
@@ -1933,16 +1472,6 @@
     },
     {
       "translations": {
-        "en": "Electrical Engineer",
-        "zh-CN": "电气工程师"
-      },
-      "id": "victoria3_electrical_engineer",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
         "en": "Electrical Engineering",
         "zh-CN": "电气工程"
       },
@@ -1983,26 +1512,6 @@
     },
     {
       "translations": {
-        "en": "Elephant",
-        "zh-CN": "大象"
-      },
-      "id": "victoria3_elephant",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Elk",
-        "zh-CN": "马鹿"
-      },
-      "id": "victoria3_elk",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
         "en": "Enceladus",
         "zh-CN": "土卫二"
       },
@@ -2030,16 +1539,6 @@
       "metadata": {
         "part_of_speech": "Noun",
         "remarks": "暂译，有更好的会换掉"
-      }
-    },
-    {
-      "translations": {
-        "en": "Engineer",
-        "zh-CN": "工程师"
-      },
-      "id": "victoria3_engineer",
-      "metadata": {
-        "part_of_speech": "Noun"
       }
     },
     {
@@ -2101,36 +1600,6 @@
     },
     {
       "translations": {
-        "en": "Eurasian Badger",
-        "zh-CN": "狗獾"
-      },
-      "id": "victoria3_eurasian_badger",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Eurasian Otter",
-        "zh-CN": "欧亚水獭"
-      },
-      "id": "victoria3_eurasian_otter",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Eurasian Wolf",
-        "zh-CN": "欧亚狼"
-      },
-      "id": "victoria3_eurasian_wolf",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
         "en": "European",
         "zh-CN": "欧洲"
       },
@@ -2142,16 +1611,6 @@
         "en": [
           "Europe"
         ]
-      }
-    },
-    {
-      "translations": {
-        "en": "Eusthenopteron",
-        "zh-CN": "真掌鳍鱼"
-      },
-      "id": "victoria3_eusthenopteron",
-      "metadata": {
-        "part_of_speech": "Noun"
       }
     },
     {
@@ -2187,34 +1646,12 @@
     },
     {
       "translations": {
-        "en": "Experienced",
-        "zh-CN": "经验丰富的"
-      },
-      "id": "victoria3_experienced",
-      "metadata": {
-        "part_of_speech": "Noun",
-        "remarks": "赤色晨曦学者特质"
-      }
-    },
-    {
-      "translations": {
         "en": "Expressionism",
         "zh-CN": "表现主义"
       },
       "id": "victoria3_expressionism",
       "metadata": {
         "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Famous",
-        "zh-CN": "著名"
-      },
-      "id": "victoria3_famous",
-      "metadata": {
-        "part_of_speech": "Noun",
-        "remarks": "赤色晨曦学者特质"
       }
     },
     {
@@ -2273,16 +1710,6 @@
         "zh-CN": "弗林德斯岛"
       },
       "id": "victoria3_flinders_island",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Florida Panther",
-        "zh-CN": "佛罗里达山狮"
-      },
-      "id": "victoria3_florida_panther",
       "metadata": {
         "part_of_speech": "Noun"
       }
@@ -2437,16 +1864,6 @@
     },
     {
       "translations": {
-        "en": "Geologist",
-        "zh-CN": "地质学家"
-      },
-      "id": "victoria3_geologist",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
         "en": "Geology",
         "zh-CN": "地质学"
       },
@@ -2529,56 +1946,6 @@
     },
     {
       "translations": {
-        "en": "Giant Anteater",
-        "zh-CN": "大食蚁兽"
-      },
-      "id": "victoria3_giant_anteater",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Giant Panda",
-        "zh-CN": "大熊猫"
-      },
-      "id": "victoria3_giant_panda",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Gila Monster",
-        "zh-CN": "美国毒蜥"
-      },
-      "id": "victoria3_gila_monster",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Giraffatitan",
-        "zh-CN": "长颈巨龙"
-      },
-      "id": "victoria3_giraffatitan",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Giraffe",
-        "zh-CN": "长颈鹿"
-      },
-      "id": "victoria3_giraffe",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
         "en": "Goitre",
         "zh-CN": "甲状腺肿"
       },
@@ -2593,16 +1960,6 @@
         "zh-CN": "戈登•贝内特杯"
       },
       "id": "victoria3_gordon_bennett_cup",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Gorilla",
-        "zh-CN": "大猩猩"
-      },
-      "id": "victoria3_gorilla",
       "metadata": {
         "part_of_speech": "Noun"
       }
@@ -2670,46 +2027,10 @@
     },
     {
       "translations": {
-        "en": "Green Sea Turtle",
-        "zh-CN": "绿蠵龟"
-      },
-      "id": "victoria3_green_sea_turtle",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Grizzly Bear",
-        "zh-CN": "灰熊"
-      },
-      "id": "victoria3_grizzly_bear",
-      "metadata": {
-        "part_of_speech": "Noun"
-      },
-      "variants": {
-        "en": [
-          "Grizzly Baer"
-        ]
-      }
-    },
-
-    {
-      "translations": {
         "en": "Gyeongbokgung",
         "zh-CN": "景福宫"
       },
       "id": "victoria3_gyeongbokgung",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Haast Eagle",
-        "zh-CN": "哈斯特鹰"
-      },
-      "id": "victoria3_haast_eagle",
       "metadata": {
         "part_of_speech": "Noun"
       }
@@ -2825,16 +2146,6 @@
     },
     {
       "translations": {
-        "en": "Hippopotamus",
-        "zh-CN": "河马"
-      },
-      "id": "victoria3_hippopotamus",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
         "en": "Histoire de monsieur Crépin",
         "zh-CN": "《克雷潘先生小传》"
       },
@@ -2852,16 +2163,6 @@
       "metadata": {
         "part_of_speech": "Noun",
         "remarks": "由拉穆兹操刀脚本，后改编为音乐剧"
-      }
-    },
-    {
-      "translations": {
-        "en": "Historically",
-        "zh-CN": "#b 历史背景：#!"
-      },
-      "id": "victoria3_historically",
-      "metadata": {
-        "part_of_speech": "Noun"
       }
     },
     {
@@ -2957,16 +2258,6 @@
     },
     {
       "translations": {
-        "en": "Iberian Lynx",
-        "zh-CN": "伊比利亚猞猁"
-      },
-      "id": "victoria3_iberian_lynx",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
         "en": "ibexes",
         "zh-CN": "羱羊"
       },
@@ -2980,21 +2271,6 @@
           "Ibex",
           "ibex",
           "Ibexes"
-        ]
-      }
-    },
-    {
-      "translations": {
-        "en": "Ichthyosaurus",
-        "zh-CN": "鱼龙"
-      },
-      "id": "victoria3_ichthyosaurus",
-      "metadata": {
-        "part_of_speech": "Noun"
-      },
-      "variants": {
-        "en": [
-          "Ichthyosaura"
         ]
       }
     },
@@ -3017,16 +2293,6 @@
       "metadata": {
         "part_of_speech": "Noun",
         "remarks": "全名伊戈尔·菲德洛维奇·斯特拉文斯基（Igor Fedorovitch Stravinsky），美籍俄国作曲家、指挥家和钢琴家，西方现代派音乐的重要人物。"
-      }
-    },
-    {
-      "translations": {
-        "en": "Iguanodon",
-        "zh-CN": "禽龙"
-      },
-      "id": "victoria3_iguanodon",
-      "metadata": {
-        "part_of_speech": "Noun"
       }
     },
     {
@@ -3071,27 +2337,6 @@
     },
     {
       "translations": {
-        "en": "Innovative",
-        "zh-CN": "创新精神"
-      },
-      "id": "victoria3_innovative",
-      "metadata": {
-        "part_of_speech": "Noun",
-        "remarks": "特质"
-      }
-    },
-    {
-      "translations": {
-        "en": "input",
-        "zh-CN": "投入"
-      },
-      "id": "victoria3_input",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
         "en": "Inspect Excavation",
         "zh-CN": "检查发掘现场"
       },
@@ -3125,7 +2370,6 @@
         ]
       }
     },
-
     {
       "translations": {
         "en": "Invention value going to",
@@ -3164,16 +2408,6 @@
         "zh-CN": "伊斯法罕"
       },
       "id": "victoria3_isfahan",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Jaguar",
-        "zh-CN": "美洲豹"
-      },
-      "id": "victoria3_jaguar",
       "metadata": {
         "part_of_speech": "Noun"
       }
@@ -3381,26 +2615,6 @@
     },
     {
       "translations": {
-        "en": "Koala",
-        "zh-CN": "考拉"
-      },
-      "id": "victoria3_koala",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Komodo Dragon",
-        "zh-CN": "科莫多巨蜥"
-      },
-      "id": "victoria3_komodo_dragon",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
         "en": "Kreisleriana",
         "zh-CN": "《克莱斯勒偶记》"
       },
@@ -3508,16 +2722,6 @@
     },
     {
       "translations": {
-        "en": "Lion",
-        "zh-CN": "狮子"
-      },
-      "id": "victoria3_lion",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
         "en": "Literary Tradition",
         "zh-CN": "文学传统"
       },
@@ -3584,31 +2788,10 @@
     },
     {
       "translations": {
-        "en": "Major",
-        "zh-CN": "重要"
-      },
-      "id": "victoria3_major",
-      "metadata": {
-        "part_of_speech": "Noun",
-        "remarks": "文物等级"
-      }
-    },
-    {
-      "translations": {
         "en": "Malaria Prevention",
         "zh-CN": "疟疾预防"
       },
       "id": "victoria3_malaria_prevention",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Malayan Tapir",
-        "zh-CN": "马来貘"
-      },
-      "id": "victoria3_malayan_tapir",
       "metadata": {
         "part_of_speech": "Noun"
       }
@@ -3622,16 +2805,6 @@
       "metadata": {
         "part_of_speech": "Noun",
         "remarks": "用于翻译AOW"
-      }
-    },
-    {
-      "translations": {
-        "en": "Manta Ray",
-        "zh-CN": "蝠鲼"
-      },
-      "id": "victoria3_manta_ray",
-      "metadata": {
-        "part_of_speech": "Noun"
       }
     },
     {
@@ -3723,16 +2896,6 @@
     },
     {
       "translations": {
-        "en": "mathematician",
-        "zh-CN": "数学家"
-      },
-      "id": "victoria3_mathematician",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
         "en": "Matterhorn",
         "zh-CN": "马特洪峰"
       },
@@ -3747,26 +2910,6 @@
         "zh-CN": "麻疹"
       },
       "id": "victoria3_measles",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Mechanic",
-        "zh-CN": "机械师"
-      },
-      "id": "victoria3_mechanic",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Mechanical Engineer",
-        "zh-CN": "机械工程师"
-      },
-      "id": "victoria3_mechanical_engineer",
       "metadata": {
         "part_of_speech": "Noun"
       }
@@ -3833,16 +2976,6 @@
     },
     {
       "translations": {
-        "en": "Meerkat",
-        "zh-CN": "狐獴"
-      },
-      "id": "victoria3_meerkat",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
         "en": "Megatherium",
         "zh-CN": "大地懒"
       },
@@ -3857,28 +2990,6 @@
         "zh-CN": "美索不达米亚"
       },
       "id": "victoria3_mesopotamia",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-
-    {
-      "translations": {
-        "en": "Meticulous",
-        "zh-CN": "谨小慎微"
-      },
-      "id": "victoria3_meticulous",
-      "metadata": {
-        "part_of_speech": "Noun",
-        "remarks": "特质"
-      }
-    },
-    {
-      "translations": {
-        "en": "Microbiologist",
-        "zh-CN": "微生物学家"
-      },
-      "id": "victoria3_microbiologist",
       "metadata": {
         "part_of_speech": "Noun"
       }
@@ -3913,16 +3024,6 @@
       "metadata": {
         "part_of_speech": "Noun",
         "remarks": "attaché指“专员”，一些情况也可以译为“军事专员”"
-      }
-    },
-    {
-      "translations": {
-        "en": "Military Engineer",
-        "zh-CN": "军事工程师"
-      },
-      "id": "victoria3_military_engineer",
-      "metadata": {
-        "part_of_speech": "Noun"
       }
     },
     {
@@ -3994,27 +3095,6 @@
       "id": "victoria3_mineral_cabinet",
       "metadata": {
         "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Mineralogist",
-        "zh-CN": "矿物学家"
-      },
-      "id": "victoria3_mineralogist",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Minor",
-        "zh-CN": "普通"
-      },
-      "id": "victoria3_minor",
-      "metadata": {
-        "part_of_speech": "Noun",
-        "remarks": "文物等级"
       }
     },
     {
@@ -4114,16 +3194,6 @@
         "zh-CN": "赤色晨曦界面"
       },
       "id": "victoria3_morgenröte_window",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Mosasaurus",
-        "zh-CN": "沧龙"
-      },
-      "id": "victoria3_mosasaurus",
       "metadata": {
         "part_of_speech": "Noun"
       }
@@ -4231,21 +3301,6 @@
     },
     {
       "translations": {
-        "en": "Mountaineer",
-        "zh-CN": "登山家"
-      },
-      "id": "victoria3_mountaineer",
-      "metadata": {
-        "part_of_speech": "Noun"
-      },
-      "variants": {
-        "en": [
-          "Mountaineers"
-        ]
-      }
-    },
-    {
-      "translations": {
         "en": "mountaineering club",
         "zh-CN": "登山协会"
       },
@@ -4307,26 +3362,6 @@
     },
     {
       "translations": {
-        "en": "Muttaburrasaurus",
-        "zh-CN": "木他龙"
-      },
-      "id": "victoria3_muttaburrasaurus",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Naked Mole-Rat",
-        "zh-CN": "裸鼹鼠"
-      },
-      "id": "victoria3_naked_mole_rat",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
         "en": "National Composer",
         "zh-CN": "民族作曲家"
       },
@@ -4352,16 +3387,6 @@
         "zh-CN": "国立图书馆"
       },
       "id": "victoria3_national_library",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Naturalist",
-        "zh-CN": "博物学家"
-      },
-      "id": "victoria3_naturalist",
       "metadata": {
         "part_of_speech": "Noun"
       }
@@ -4397,7 +3422,6 @@
         "remarks": "西班牙北部自治区，参考：https://zh.wikipedia.org/wiki/%E7%B4%8D%E7%93%A6%E6%8B%89"
       }
     },
-
     {
       "translations": {
         "en": "Neanderthal",
@@ -4498,22 +3522,6 @@
         "part_of_speech": "Noun"
       }
     },
-
-    {
-      "translations": {
-        "en": "New Zealand Sea Lion",
-        "zh-CN": "新西兰海狮"
-      },
-      "id": "victoria3_new_zealand_sea_lion",
-      "metadata": {
-        "part_of_speech": "Noun"
-      },
-      "variants": {
-        "en": [
-          "New Zealand Sealion"
-        ]
-      }
-    },
     {
       "translations": {
         "en": "Ngāti",
@@ -4523,16 +3531,6 @@
       "metadata": {
         "part_of_speech": "Noun",
         "remarks": "毛利语"
-      }
-    },
-    {
-      "translations": {
-        "en": "Nine-banded Armadillo",
-        "zh-CN": "九带犰狳"
-      },
-      "id": "victoria3_nine_banded_armadillo",
-      "metadata": {
-        "part_of_speech": "Noun"
       }
     },
     {
@@ -4634,16 +3632,6 @@
     },
     {
       "translations": {
-        "en": "Orangutan",
-        "zh-CN": "猩猩"
-      },
-      "id": "victoria3_orangutan",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
         "en": "Othóneion Panepistímion",
         "zh-CN": "奥森大学"
       },
@@ -4651,16 +3639,6 @@
       "metadata": {
         "part_of_speech": "Noun",
         "remarks": "希腊的第一所大学，以奥托一世命名"
-      }
-    },
-    {
-      "translations": {
-        "en": "output",
-        "zh-CN": "产出"
-      },
-      "id": "victoria3_output",
-      "metadata": {
-        "part_of_speech": "Noun"
       }
     },
     {
@@ -4689,26 +3667,6 @@
         "zh-CN": "维修区"
       },
       "id": "victoria3_paddock",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Painter",
-        "zh-CN": "画家"
-      },
-      "id": "victoria3_painter",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Painter Progress",
-        "zh-CN": "绘画进度"
-      },
-      "id": "victoria3_painter_progress",
       "metadata": {
         "part_of_speech": "Noun"
       }
@@ -4816,16 +3774,6 @@
     },
     {
       "translations": {
-        "en": "Paleontologist",
-        "zh-CN": "古生物学家"
-      },
-      "id": "victoria3_paleontologist",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
         "en": "Paleontology",
         "zh-CN": "古生物学"
       },
@@ -4840,16 +3788,6 @@
         "zh-CN": "那尔迈调色板"
       },
       "id": "victoria3_palette_of_narmer",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Pallas's Cat",
-        "zh-CN": "兔狲"
-      },
-      "id": "victoria3_pallas_s_cat",
       "metadata": {
         "part_of_speech": "Noun"
       }
@@ -4958,27 +3896,6 @@
     },
     {
       "translations": {
-        "en": "Peppered Moth",
-        "zh-CN": "桦尺蛾"
-      },
-      "id": "victoria3_peppered_moth",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Persistent",
-        "zh-CN": "执着"
-      },
-      "id": "victoria3_persistent",
-      "metadata": {
-        "part_of_speech": "Noun",
-        "remarks": "特质"
-      }
-    },
-    {
-      "translations": {
         "en": "Phobos",
         "zh-CN": "火卫一"
       },
@@ -4993,16 +3910,6 @@
         "zh-CN": "土卫九"
       },
       "id": "victoria3_phoebe",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "physician",
-        "zh-CN": "医生"
-      },
-      "id": "victoria3_physician",
       "metadata": {
         "part_of_speech": "Noun"
       }
@@ -5059,36 +3966,6 @@
         "zh-CN": "板块构造理论"
       },
       "id": "victoria3_plate_tectonics",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Plateosaurus",
-        "zh-CN": "板龙"
-      },
-      "id": "victoria3_plateosaurus",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Platypus",
-        "zh-CN": "鸭嘴兽"
-      },
-      "id": "victoria3_platypus",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Polar Bear",
-        "zh-CN": "北极熊"
-      },
-      "id": "victoria3_polar_bear",
       "metadata": {
         "part_of_speech": "Noun"
       }
@@ -5243,36 +4120,6 @@
     },
     {
       "translations": {
-        "en": "Progress",
-        "zh-CN": "进度"
-      },
-      "id": "victoria3_progress",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Psittacosaurus",
-        "zh-CN": "鹦鹉嘴龙"
-      },
-      "id": "victoria3_psittacosaurus",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Psychiatrist",
-        "zh-CN": "精神科医生"
-      },
-      "id": "victoria3_psychiatrist",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
         "en": "Psychoanalysis",
         "zh-CN": "精神分析"
       },
@@ -5320,16 +4167,6 @@
         "en": [
           "Psychotherapeutic Points"
         ]
-      }
-    },
-    {
-      "translations": {
-        "en": "Pterodactylus",
-        "zh-CN": "翼手龙"
-      },
-      "id": "victoria3_pterodactylus",
-      "metadata": {
-        "part_of_speech": "Noun"
       }
     },
     {
@@ -5385,41 +4222,10 @@
     },
     {
       "translations": {
-        "en": "Reckless",
-        "zh-CN": "鲁莽"
-      },
-      "id": "victoria3_reckless",
-      "metadata": {
-        "part_of_speech": "Noun",
-        "remarks": "特质"
-      }
-    },
-    {
-      "translations": {
         "en": "Red Cross Medic",
         "zh-CN": "红十字会医务人员"
       },
       "id": "victoria3_red_cross_medic",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Red Kangaroo",
-        "zh-CN": "红大袋鼠"
-      },
-      "id": "victoria3_red_kangaroo",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Red Panda",
-        "zh-CN": "小熊猫"
-      },
-      "id": "victoria3_red_panda",
       "metadata": {
         "part_of_speech": "Noun"
       }
@@ -5455,27 +4261,6 @@
       "metadata": {
         "part_of_speech": "Noun",
         "remarks": "赤色晨曦中的艺术家经验"
-      }
-    },
-    {
-      "translations": {
-        "en": "Reserved",
-        "zh-CN": "内敛"
-      },
-      "id": "victoria3_reserved",
-      "metadata": {
-        "part_of_speech": "Noun",
-        "remarks": "特质"
-      }
-    },
-    {
-      "translations": {
-        "en": "Rhoetosaurus",
-        "zh-CN": "瑞拖斯龙"
-      },
-      "id": "victoria3_rhoetosaurus",
-      "metadata": {
-        "part_of_speech": "Noun"
       }
     },
     {
@@ -5538,17 +4323,6 @@
       "metadata": {
         "part_of_speech": "Noun",
         "remarks": "分布于瑞士东部格劳宾登州的一个民族，其母语为罗曼什语。"
-      }
-    },
-    {
-      "translations": {
-        "en": "run",
-        "zh-CN": "放羊场"
-      },
-      "id": "victoria3_run",
-      "metadata": {
-        "part_of_speech": "Noun",
-        "remarks": "这里的Run是指澳大利亚和新西兰的sheep station，即放羊的地方"
       }
     },
     {
@@ -5662,7 +4436,6 @@
         "part_of_speech": "Noun"
       }
     },
-
     {
       "translations": {
         "en": "Scientific Society",
@@ -5731,17 +4504,6 @@
       "id": "victoria3_seismoscope",
       "metadata": {
         "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Senile",
-        "zh-CN": "衰老"
-      },
-      "id": "victoria3_senile",
-      "metadata": {
-        "part_of_speech": "Noun",
-        "remarks": "特质"
       }
     },
     {
@@ -5850,36 +4612,6 @@
     },
     {
       "translations": {
-        "en": "Smilodon",
-        "zh-CN": "剑齿虎"
-      },
-      "id": "victoria3_smilodon",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Snake Godess",
-        "zh-CN": "米诺斯的持蛇女神像"
-      },
-      "id": "victoria3_snake_godess",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Snow Leopard",
-        "zh-CN": "雪豹"
-      },
-      "id": "victoria3_snow_leopard",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
         "en": "Sonderbundskrieg",
         "zh-CN": "分离同盟战争"
       },
@@ -5967,36 +4699,6 @@
     },
     {
       "translations": {
-        "en": "Spinosaurus",
-        "zh-CN": "棘龙"
-      },
-      "id": "victoria3_spinosaurus",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Sports Overview",
-        "zh-CN": "体育概览"
-      },
-      "id": "victoria3_sports_overview",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "squirrel monkey",
-        "zh-CN": "松鼠猴"
-      },
-      "id": "victoria3_squirrel_monkey",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
         "en": "St. Gallen",
         "zh-CN": "圣加伦"
       },
@@ -6018,43 +4720,12 @@
     },
     {
       "translations": {
-        "en": "Stegosaurus",
-        "zh-CN": "剑龙"
-      },
-      "id": "victoria3_stegosaurus",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Stoat",
-        "zh-CN": "白鼬"
-      },
-      "id": "victoria3_stoat",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
         "en": "Straitjacket",
         "zh-CN": "约束衣"
       },
       "id": "victoria3_straitjacket",
       "metadata": {
         "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Studied",
-        "zh-CN": "习得"
-      },
-      "id": "victoria3_studied",
-      "metadata": {
-        "part_of_speech": "Noun",
-        "remarks": "赤色晨曦画家特质前缀"
       }
     },
     {
@@ -6066,22 +4737,6 @@
       "metadata": {
         "part_of_speech": "Noun",
         "remarks": "赤色晨曦画家特质"
-      }
-    },
-    {
-      "translations": {
-        "en": "subject",
-        "zh-CN": "附属国"
-      },
-      "id": "victoria3_subject",
-      "metadata": {
-        "part_of_speech": "Noun"
-      },
-      "variants": {
-        "en": [
-          "subjects",
-          "subject"
-        ]
       }
     },
     {
@@ -6287,16 +4942,6 @@
     },
     {
       "translations": {
-        "en": "Thylacine",
-        "zh-CN": "袋狼"
-      },
-      "id": "victoria3_thylacine",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
         "en": "Tical",
         "zh-CN": "提卡"
       },
@@ -6390,26 +5035,6 @@
     },
     {
       "translations": {
-        "en": "Triceratops",
-        "zh-CN": "三角龙"
-      },
-      "id": "victoria3_triceratops",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Trilobite",
-        "zh-CN": "三叶虫"
-      },
-      "id": "victoria3_trilobite",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
         "en": "Triton",
         "zh-CN": "海卫一"
       },
@@ -6444,16 +5069,6 @@
         "zh-CN": "斑疹伤寒"
       },
       "id": "victoria3_typhus",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Tyrannosaurus Rex",
-        "zh-CN": "暴龙"
-      },
-      "id": "victoria3_tyrannosaurus_rex",
       "metadata": {
         "part_of_speech": "Noun"
       }
@@ -6567,16 +5182,6 @@
       "metadata": {
         "part_of_speech": "Noun",
         "remarks": "赤色晨曦国歌专用"
-      }
-    },
-    {
-      "translations": {
-        "en": "Velociraptor",
-        "zh-CN": "伶盗龙"
-      },
-      "id": "victoria3_velociraptor",
-      "metadata": {
-        "part_of_speech": "Noun"
       }
     },
     {
@@ -6695,16 +5300,6 @@
     },
     {
       "translations": {
-        "en": "West Indian Manatee",
-        "zh-CN": "西印度海牛"
-      },
-      "id": "victoria3_west_indian_manatee",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
         "en": "West Micronesia",
         "zh-CN": "西密克罗尼西亚"
       },
@@ -6736,27 +5331,6 @@
     },
     {
       "translations": {
-        "en": "WIP",
-        "zh-CN": "正在制作中"
-      },
-      "id": "victoria3_wip",
-      "metadata": {
-        "part_of_speech": "Verb",
-        "remarks": "WIP(Working In Progress)"
-      }
-    },
-    {
-      "translations": {
-        "en": "Wisent",
-        "zh-CN": "欧洲野牛"
-      },
-      "id": "victoria3_wisent",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
         "en": "Worker Anthem",
         "zh-CN": "工人之歌"
       },
@@ -6778,30 +5352,10 @@
     },
     {
       "translations": {
-        "en": "Zebra",
-        "zh-CN": "斑马"
-      },
-      "id": "victoria3_zebra",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
         "en": "Zeppelin Expedition",
         "zh-CN": "齐柏林飞艇探险"
       },
       "id": "victoria3_zeppelin_expedition",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Zoologist",
-        "zh-CN": "动物学家"
-      },
-      "id": "victoria3_zoologist",
       "metadata": {
         "part_of_speech": "Noun"
       }
@@ -6927,16 +5481,6 @@
         "zh-CN": "南岛人"
       },
       "id": "victoria3_austronesia",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Basilosaurus",
-        "zh-CN": "龙王鲸"
-      },
-      "id": "victoria3_basilosaurus",
       "metadata": {
         "part_of_speech": "Noun"
       }
@@ -7313,16 +5857,6 @@
     },
     {
       "translations": {
-        "en": "Megalodon",
-        "zh-CN": "巨齿鲨"
-      },
-      "id": "victoria3_megalodon",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
         "en": "Mont Blanc",
         "zh-CN": "勃朗峰"
       },
@@ -7341,8 +5875,6 @@
         "part_of_speech": "Noun"
       }
     },
-
-
     {
       "translations": {
         "en": "Mount Giluwe",
@@ -7426,7 +5958,6 @@
         "remarks": "法属新西兰殖民公司"
       }
     },
-
     {
       "translations": {
         "en": "Ngāi Tahu",
@@ -7521,7 +6052,6 @@
         "part_of_speech": "Noun"
       }
     },
-
     {
       "translations": {
         "en": "Pito-one",
@@ -7531,26 +6061,6 @@
       "metadata": {
         "part_of_speech": "Noun",
         "remarks": "毛利语"
-      }
-    },
-    {
-      "translations": {
-        "en": "Plesiosaurus",
-        "zh-CN": "蛇颈龙"
-      },
-      "id": "victoria3_plesiosaurus",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "Popocatépetl",
-        "zh-CN": "波波卡特佩特火山"
-      },
-      "id": "victoria3_popocatépetl",
-      "metadata": {
-        "part_of_speech": "Noun"
       }
     },
     {
@@ -7580,16 +6090,6 @@
         "zh-CN": "拉斯·达善峰"
       },
       "id": "victoria3_ras_dashen",
-      "metadata": {
-        "part_of_speech": "Noun"
-      }
-    },
-    {
-      "translations": {
-        "en": "scientist",
-        "zh-CN": "学者"
-      },
-      "id": "victoria3_scientist",
       "metadata": {
         "part_of_speech": "Noun"
       }
