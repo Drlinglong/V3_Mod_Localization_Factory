@@ -67,7 +67,7 @@ class GeminiCLIHandler(BaseApiHandler):
 
                 try:
                     gemini_command = f"{self.cli_path} --model {self.model} --output-format json"
-                    full_command = f"Set-ExecutionPolicy RemoteSigned -Scope Process -Force; Get-Content '{temp_file}' -Raw | {gemini_command}"
+                    full_command = f"Set-ExecutionPolicy RemoteSigned -Scope Process -Force; {gemini_command} < '{temp_file}'"
                     cmd = ["powershell", "-Command", full_command]
 
                     clean_env = {
@@ -95,7 +95,7 @@ class GeminiCLIHandler(BaseApiHandler):
                     translated_texts = parse_json_response(result.stdout, len(task.texts))
                     if translated_texts and len(translated_texts) == len(task.texts):
                         task.translated_texts = translated_texts
-                        self.logger.info(f"Gemini CLI Batch {batch_num} translated successfully on attempt {attempt + 1}.")
+                        self.logger.info(i18n.t("gemini_cli_batch_success", batch_num=batch_num, attempt=attempt + 1))
                         return task
                     else:
                         self.logger.warning(f"Gemini CLI response parsing failed for batch {batch_num}, attempt {attempt + 1}. Expected {len(task.texts)}, got {len(translated_texts) if translated_texts else 0}.")
@@ -131,7 +131,7 @@ class GeminiCLIHandler(BaseApiHandler):
             try:
                 # For single text, we don't request JSON output.
                 gemini_command = f"{self.cli_path} --model {self.model}"
-                full_command = f"Set-ExecutionPolicy RemoteSigned -Scope Process -Force; Get-Content '{temp_file}' -Raw | {gemini_command}"
+                full_command = f"Set-ExecutionPolicy RemoteSigned -Scope Process -Force; {gemini_command} < '{temp_file}'"
                 cmd = ["powershell", "-Command", full_command]
 
                 clean_env = {
