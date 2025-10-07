@@ -83,9 +83,15 @@ def run_translation_workflow(task_id: str, mod_name: str, game_profile_id: str, 
         tasks[task_id]["result_path"] = zip_path
 
     except Exception as e:
-        logging.exception(f"任务 {task_id} 执行失败")
+        import traceback
+        tb_str = traceback.format_exc()
+        error_message = f"工作流执行失败 (Workflow execution failed): {e}\n{tb_str}"
+        logging.error(f"任务 {task_id} 失败: {error_message}")
         tasks[task_id]["status"] = "failed"
-        tasks[task_id]["log"].append(f"错误: {e}")
+        tasks[task_id]["log"].append(error_message)
+        # 确保失败的任务没有可下载的结果路径
+        if "result_path" in tasks[task_id]:
+            del tasks[task_id]["result_path"]
 
 
 app = FastAPI(
