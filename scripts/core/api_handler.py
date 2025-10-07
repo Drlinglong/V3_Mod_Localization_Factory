@@ -29,6 +29,9 @@ def get_handler(provider_name):
         elif provider_name == "gemini_cli":
             from . import gemini_cli_handler
             return gemini_cli_handler
+        elif provider_name == "ollama":
+            from . import ollama_handler
+            return ollama_handler
         else:
             # 默认返回Gemini
             from . import gemini_handler
@@ -69,8 +72,8 @@ def initialize_client(provider_name, model_name: str = None):
         logging.error(f"Handler for {provider_name} is not available")
         return None, None
     
-    # CLI处理器不需要API密钥
-    if provider_name == "gemini_cli":
+    # CLI处理器或本地模型不需要API密钥
+    if provider_name in ["gemini_cli", "ollama"]:
         client = handler.initialize_client(model_name=model_name)
         return client, provider_name
         
