@@ -126,7 +126,18 @@
         "remarks": "利益集团"
       }
     },
-       {
+    {
+      "translations": {
+        "en": "leader",
+        "zh-CN": "领袖"
+      },
+      "id": "victoria3_leader",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "利益团体"
+      }
+    },
+    {
       "translations": {
         "en": "Maka'āinana",
         "zh-CN": "玛卡艾纳纳"
@@ -136,7 +147,18 @@
         "part_of_speech": "Noun",
         "remarks": "玛卡艾纳纳，夏威夷语“公民”，表意为下等阶层，是一种蔑称"
       }
-    },   
+    },
+    {
+      "translations": {
+        "en": "NO",
+        "zh-CN": "不存在"
+      },
+      "id": "victoria3_no",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "仅限Triggers"
+      }
+    },
     {
       "translations": {
         "en": "Obligation",
@@ -220,6 +242,17 @@
       "metadata": {
         "part_of_speech": "Noun",
         "remarks": "统一译为得克萨斯"
+      }
+    },
+    {
+      "translations": {
+        "en": "TODO",
+        "zh-CN": "待完成"
+      },
+      "id": "victoria3_todo",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "待办，TODO均可\n---\n[来源合并备注]:\n作者还没写"
       }
     },
     {
@@ -1272,6 +1305,16 @@
     },
     {
       "translations": {
+        "en": "Cave",
+        "zh-CN": "洞穴"
+      },
+      "id": "victoria3_cave",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
         "en": "Chamois",
         "zh-CN": "臆羚"
       },
@@ -1289,6 +1332,21 @@
       "id": "victoria3_champ_de_mars",
       "metadata": {
         "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Character",
+        "zh-CN": "角色"
+      },
+      "id": "victoria3_character",
+      "metadata": {
+        "part_of_speech": "Noun"
+      },
+      "variants": {
+        "en": [
+          "Characters"
+        ]
       }
     },
     {
@@ -1925,6 +1983,16 @@
     },
     {
       "translations": {
+        "en": "Elephant",
+        "zh-CN": "大象"
+      },
+      "id": "victoria3_elephant",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
         "en": "Elk",
         "zh-CN": "马鹿"
       },
@@ -2115,6 +2183,17 @@
       "id": "victoria3_exotic_animal",
       "metadata": {
         "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Experienced",
+        "zh-CN": "经验丰富的"
+      },
+      "id": "victoria3_experienced",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "赤色晨曦学者特质"
       }
     },
     {
@@ -2773,6 +2852,16 @@
       "metadata": {
         "part_of_speech": "Noun",
         "remarks": "由拉穆兹操刀脚本，后改编为音乐剧"
+      }
+    },
+    {
+      "translations": {
+        "en": "Historically",
+        "zh-CN": "#b 历史背景：#!"
+      },
+      "id": "victoria3_historically",
+      "metadata": {
+        "part_of_speech": "Noun"
       }
     },
     {
@@ -3495,6 +3584,17 @@
     },
     {
       "translations": {
+        "en": "Major",
+        "zh-CN": "重要"
+      },
+      "id": "victoria3_major",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "文物等级"
+      }
+    },
+    {
+      "translations": {
         "en": "Malaria Prevention",
         "zh-CN": "疟疾预防"
       },
@@ -3904,6 +4004,17 @@
       "id": "victoria3_mineralogist",
       "metadata": {
         "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Minor",
+        "zh-CN": "普通"
+      },
+      "id": "victoria3_minor",
+      "metadata": {
+        "part_of_speech": "Noun",
+        "remarks": "文物等级"
       }
     },
     {
@@ -5126,6 +5237,16 @@
         "zh-CN": "原始资料"
       },
       "id": "victoria3_primary_source",
+      "metadata": {
+        "part_of_speech": "Noun"
+      }
+    },
+    {
+      "translations": {
+        "en": "Progress",
+        "zh-CN": "进度"
+      },
+      "id": "victoria3_progress",
       "metadata": {
         "part_of_speech": "Noun"
       }
