@@ -57,41 +57,58 @@ const App = () => {
   }, []);
 
   useEffect(() => {
-    if (taskId && !isPolling) {
-      setIsPolling(true);
-      pollingRef.current = setInterval(() => {
-        axios.get(`/api/status/${taskId}`)
-          .then(response => {
-            const { status: newStatus, log: newLogs, result_path } = response.data;
-            setLogs(newLogs);
-            setStatus(newStatus);
-            if (newStatus === 'completed' || newStatus === 'failed') {
-              clearInterval(pollingRef.current);
-              setIsPolling(false);
-              if (newStatus === 'completed') {
-                message.success('Translation completed successfully!');
-                setResultUrl(`/api/result/${taskId}`);
-                setCurrent(3); // Move to download step
-              } else {
-                message.error('Translation task failed. Please check the logs.');
-              }
-            }
-          })
-          .catch(error => {
-            message.error('Failed to get task status.');
-            console.error('Polling error:', error);
-            clearInterval(pollingRef.current);
-            setIsPolling(false);
-          });
-      }, 2000);
+    if (!taskId) {
+      return; // Do nothing if there is no task ID
     }
 
+    // Start polling when a new taskId is set
+    setIsPolling(true);
+    const intervalId = setInterval(() => {
+      axios.get(`/api/status/${taskId}`)
+        .then(response => {
+          const { status: newStatus, log: newLogs } = response.data;
+          setLogs(newLogs); // Update logs on each poll
+
+          if (newStatus === 'completed' || newStatus === 'failed') {
+            // Stop polling
+            clearInterval(intervalId);
+
+            // **CRITICAL FIX**: Set final status first, then stop polling, then change page.
+            // This ensures the Result component receives the correct status prop.
+            setStatus(newStatus);
+            setIsPolling(false);
+            setCurrent(3);
+
+            // Show appropriate messages
+            if (newStatus === 'completed') {
+              message.success('Translation completed successfully!');
+              setResultUrl(`/api/result/${taskId}`);
+            } else {
+              message.error('Translation task failed. Please check the logs.');
+            }
+          } else {
+            // Keep updating status while polling (e.g., 'processing')
+            setStatus(newStatus);
+          }
+        })
+        .catch(error => {
+          // Handle polling network errors
+          message.error('Failed to get task status.');
+          console.error('Polling error:', error);
+          clearInterval(intervalId);
+
+          // Go to result page with a failed status
+          setStatus('failed');
+          setIsPolling(false);
+          setCurrent(3);
+        });
+    }, 2000);
+
+    // Cleanup function to run when taskId changes or component unmounts
     return () => {
-      if (pollingRef.current) {
-        clearInterval(pollingRef.current);
-      }
+      clearInterval(intervalId);
     };
-  }, [taskId, isPolling]);
+  }, [taskId]); // This effect re-runs ONLY when taskId changes
 
   const handleUploadChange = (info) => {
     let newFileList = [...info.fileList];
