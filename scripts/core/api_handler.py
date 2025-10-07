@@ -5,7 +5,7 @@ import time
 import logging
 import concurrent.futures
 from scripts.utils import i18n
-from scripts.config import CHUNK_SIZE, MAX_RETRIES, API_PROVIDERS
+from scripts.app_settings import CHUNK_SIZE, MAX_RETRIES, API_PROVIDERS
 from scripts.utils.text_clean import strip_pl_diacritics, strip_outer_quotes
 
 # 【核心修正】动态导入，避免不必要的依赖要求
@@ -35,7 +35,7 @@ def get_handler(provider_name):
         logging.error(f"Please install required dependencies for {provider_name}")
         return None
 
-def initialize_client(provider_name):
+def initialize_client(provider_name, model_name=None):
     """
     为选定的API供应商初始化客户端。
     """
@@ -48,7 +48,12 @@ def initialize_client(provider_name):
     if provider_name == "gemini_cli":
         provider_config = API_PROVIDERS.get(provider_name, {})
         cli_path = provider_config.get("cli_path", "gemini")
-        client = handler.GeminiCLIHandler(cli_path=cli_path)
+
+        # 如果未指定模型，则使用默认模型
+        if not model_name:
+            model_name = provider_config.get("default_model", "gemini-2.5-pro")
+
+        client = handler.GeminiCLIHandler(cli_path=cli_path, model=model_name)
         return client, provider_name
         
     provider_config = API_PROVIDERS.get(provider_name, {})
