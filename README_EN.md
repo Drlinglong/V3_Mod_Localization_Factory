@@ -66,6 +66,8 @@ We've hidden complex technology behind the scenes, so you can enjoy the purest a
 *   **Automatic "Health Check" After Translation**: The tool checks translated files for format errors and generates a report, helping you identify issues in advance.
 *   **Safety First**: In case of network interruption or AI error during translation, the tool retains a copy of the original file as a backup, ensuring your Mod is not damaged.
 
+> Curious about how the "Localization Factory" works internally? We've prepared an easy-to-read [overview of the technical details](./docs/en/user-guides/how_the_factory_works.md) for everyone!
+
 ***
 
 ## 3. How to Use

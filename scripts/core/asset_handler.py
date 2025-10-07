@@ -6,7 +6,7 @@ import shutil
 import logging
 # 【核心修正】统一使用绝对导入
 from scripts.utils import i18n
-from scripts.config import SOURCE_DIR, DEST_DIR
+from scripts.app_settings import SOURCE_DIR, DEST_DIR
 from scripts.core.api_handler import translate_single_text
 
 
