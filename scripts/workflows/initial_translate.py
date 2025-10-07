@@ -219,7 +219,7 @@ def run(mod_name: str,
                 for warning in all_warnings:
                     logging.warning(warning['message'])
 
-                logging.warning("[重要提示]：由于词典验证器目前主要针对英文等使用空格分词的语言进行优化，对于中文、日文等语言，可能会因无法识别单词边界而产生误报或漏报。以上警告请结合上下文自行判断。")
+                logging.warning(i18n.t("cjk_glossary_warning"))
 
             # 处理每个文件的翻译结果
             for filename, translated_texts in file_results.items():
