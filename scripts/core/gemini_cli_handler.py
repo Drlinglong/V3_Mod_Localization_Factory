@@ -11,6 +11,10 @@ from scripts.app_settings import API_PROVIDERS, GEMINI_CLI_MAX_RETRIES
 from scripts.utils import i18n
 from scripts.core.parallel_processor import BatchTask
 from scripts.utils.response_parser import parse_json_response
+from scripts.core.glossary_manager import glossary_manager
+from scripts.app_settings import FALLBACK_FORMAT_PROMPT
+from scripts.utils.punctuation_handler import generate_punctuation_prompt
+
 
 class GeminiCLIHandler(BaseApiHandler):
     """
@@ -52,6 +56,63 @@ class GeminiCLIHandler(BaseApiHandler):
         self.logger.warning("`_call_api` should not be called on GeminiCLIHandler.")
         pass
 
+    def _build_prompt(self, task: BatchTask) -> str:
+        """
+        【独有实现】重写prompt构建逻辑，将词典指令前置以提高CLI兼容性。
+        """
+        chunk = task.texts
+        source_lang = task.file_task.source_lang
+        target_lang = task.file_task.target_lang
+        game_profile = task.file_task.game_profile
+        mod_context = task.file_task.mod_context
+        batch_num = task.batch_index + 1
+
+        numbered_list = "\n".join(f'{j + 1}. "{txt}"' for j, txt in enumerate(chunk))
+
+        effective_target_lang_name = target_lang.get("custom_name", target_lang["name"]) if target_lang.get("is_shell") else target_lang["name"]
+
+        base_prompt = game_profile["prompt_template"].format(
+            source_lang_name=source_lang["name"],
+            target_lang_name=effective_target_lang_name,
+        )
+        context_prompt_part = (
+            f"CRITICAL CONTEXT: The mod you are translating is '{mod_context}'. "
+            "Use this information to ensure all translations are thematically appropriate.\n"
+        )
+
+        glossary_prompt_part = ""
+        if glossary_manager.current_game_glossary:
+            relevant_terms = glossary_manager.extract_relevant_terms(
+                chunk, source_lang["code"], target_lang["code"]
+            )
+            if relevant_terms:
+                glossary_prompt_part = glossary_manager.create_dynamic_glossary_prompt(
+                    relevant_terms, source_lang["code"], target_lang["code"]
+                ) + "\n\n"
+                self.logger.info(i18n.t("batch_translation_glossary_injected", batch_num=batch_num, count=len(relevant_terms)))
+
+        punctuation_prompt = generate_punctuation_prompt(
+            source_lang["code"],
+            target_lang["code"]
+        )
+
+        if "format_prompt" in game_profile:
+            format_prompt_part = game_profile["format_prompt"].format(
+                chunk_size=len(chunk),
+                numbered_list=numbered_list
+            )
+        else:
+            format_prompt_part = FALLBACK_FORMAT_PROMPT.format(
+                chunk_size=len(chunk),
+                numbered_list=numbered_list
+            )
+
+        punctuation_prompt_part = f"\nPUNCTUATION CONVERSION:\n{punctuation_prompt}\n" if punctuation_prompt else ""
+
+        # 将词典指令放在最前面
+        prompt = glossary_prompt_part + base_prompt + context_prompt_part + format_prompt_part + punctuation_prompt_part
+        return prompt
+
     def translate_batch(self, task: BatchTask) -> BatchTask:
         """
         【独有实现】重写整个翻译工作流，使用子进程和PowerShell管道与Gemini CLI交互。
@@ -67,7 +128,7 @@ class GeminiCLIHandler(BaseApiHandler):
 
                 try:
                     gemini_command = f"{self.cli_path} --model {self.model} --output-format json"
-                    full_command = f"Set-ExecutionPolicy RemoteSigned -Scope Process -Force; {gemini_command} < '{temp_file}'"
+                    full_command = f"$OutputEncoding = [System.Text.Encoding]::UTF8; Set-ExecutionPolicy RemoteSigned -Scope Process -Force; {gemini_command} < '{temp_file}'"
                     cmd = ["powershell", "-Command", full_command]
 
                     clean_env = {
@@ -131,7 +192,7 @@ class GeminiCLIHandler(BaseApiHandler):
             try:
                 # For single text, we don't request JSON output.
                 gemini_command = f"{self.cli_path} --model {self.model}"
-                full_command = f"Set-ExecutionPolicy RemoteSigned -Scope Process -Force; {gemini_command} < '{temp_file}'"
+                full_command = f"$OutputEncoding = [System.Text.Encoding]::UTF8; Set-ExecutionPolicy RemoteSigned -Scope Process -Force; {gemini_command} < '{temp_file}'"
                 cmd = ["powershell", "-Command", full_command]
 
                 clean_env = {
