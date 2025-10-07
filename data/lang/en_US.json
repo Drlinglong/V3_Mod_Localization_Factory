@@ -48,8 +48,6 @@
   "setup_env_var_restart_required": "Environment variable will take effect after next restart",
   "setup_env_var_set_failed": "Environment variable setting failed!",
   "setup_manual_env_var_instruction": "Please manually set environment variable {env_key}",
-  "setup_portable_env_detected": "[Portable Environment] Portable environment detected - all dependencies are pre-installed, no additional installation needed",
-  "setup_dev_env_detected": "[Development Environment] Development environment detected - please ensure the corresponding Python packages are installed",
   "setup_env_var_set_error": "Environment variable setting error: {error}",
   "setup_configuration_complete": "Configuration Complete!",
   "setup_dependencies_installed": "Dependencies installed",
@@ -347,7 +345,6 @@
   "validation_generic_banned_chars_found": "Found banned characters '{banned_chars}' in '{match_text}'",
   "validation_generic_format_error": "Format error: '{content}'",
   "validation_generic_color_tags_count": "Found {start_count} start tags, but {end_count} end markers.",
-  "validation_generic_unsupported_formatting": "Unsupported formatting command: '{found_text}'.",
   
   "post_processing_start": "\n--- Starting Post-Processing Format Validation ---",
   "post_processing_game": "Validating localization syntax format for {game_name}...",
@@ -433,15 +430,8 @@
   "setup_desc_qwen": "Uses the qwen-plus model. Friendly for users in China.",
   "setup_desc_grok": "Uses the grok-4-fast-reasoning model. Extremely cost-effective.",
   "setup_desc_ollama": "Run models on your own computer, completely free, but requires good hardware.",
-  "ollama_single_thread_warning": "Warning: Ollama is running in single-thread mode to prevent system overload. Translation may be slower.",
   "setup_desc_gemini_cli": "Authenticates via Google account, no API Key required, suitable for developers.",
-  "gemini_cli_model_selection_prompt": "Please select the Gemini CLI model to use:",
   "setup_press_enter_to_return": "Press Enter to return to the main menu...",
   "setup_configuration_complete_provider": "🎉 {provider} configuration complete!",
   "setup_configure_another_provider": "Configure another provider?"
-  ,"unexpected_error_see_logs": "An unexpected error occurred, please check the logs.",
-  "workflow_completed_ask_next": "Workflow completed. Continue translating other Mods? (Y/N)",
-  "enter_workflow_completed_choice": "Enter choice (Y or N): ",
-  "program_exit_thank_you": "Program exited, thank you for using!",
-  "glossary_validator_warning": "File '{file_path}' (Batch #{batch_id}): Source term '{source_term}' (found {source_count} times) may not be correctly translated to '{target_term}' (found {translated_count} times)."
 }
