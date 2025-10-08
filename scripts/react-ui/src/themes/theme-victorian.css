@@ -1,0 +1,54 @@
+/* scripts/react-ui/src/themes/theme-victorian.css */
+html.theme-victorian {
+  --color-primary: #004D40; /* Deep Ink Green/Cyan */
+  --color-background: #fdf5e6; /* Old Lace - for an antique feel */
+  --color-text: #36454F; /* Charcoal */
+  --color-border: #DAA520; /* GoldenRod / Brass */
+  --color-accent: #800000; /* Maroon / Deep Wine Red */
+
+  /* A gradient that simulates a metallic brass finish */
+  --border-image-gradient: linear-gradient(145deg, #b8860b, #daa520, #b8860b);
+}
+
+.theme-victorian .ant-layout-header {
+    background: var(--color-primary);
+}
+
+.theme-victorian .ant-layout-sider {
+    background: var(--color-background);
+    border-right: 4px solid;
+    border-image-source: var(--border-image-gradient);
+    border-image-slice: 1;
+}
+
+.theme-victorian .ant-menu {
+    background: var(--color-background);
+}
+
+.theme-victorian .ant-layout-content {
+    background: #f5efe2; /* A slightly darker antique white for content background */
+}
+
+.theme-victorian .ant-typography {
+    color: var(--color-text);
+}
+
+.theme-victorian .ant-btn-primary {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+}
+
+.theme-victorian .ant-select-selector {
+    border-color: var(--color-border) !important;
+}
+
+.theme-victorian .ant-layout-footer {
+    background: var(--color-background);
+}
+
+/* Example of applying the border to a "panel-like" component */
+.theme-victorian .ant-card-bordered {
+    border: 4px solid;
+    border-image-source: var(--border-image-gradient);
+    border-image-slice: 1;
+}
