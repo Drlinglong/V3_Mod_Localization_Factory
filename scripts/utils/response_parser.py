@@ -90,7 +90,7 @@ def parse_json_response(response_text: str, expected_count: int) -> List[str]:
         else:
             logger.warning(i18n.t("parser_json_not_list_warning", parsed_data=parsed_data))
             _save_debug_file(response_text, "Format Error", f"Expected a list, but got a dict: {parsed_data}")
-            return [""] * expected_count
+            return []
 
         if translations is None:
              # 这是一个不应该发生的情况，但作为保险
