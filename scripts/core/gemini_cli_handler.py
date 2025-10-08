@@ -49,7 +49,7 @@ class GeminiCLIHandler(BaseApiHandler):
     """
 
     def __init__(self, provider_name: str, model_name: str = None):
-        self.model = model_name or API_PROVIDERS.get("gemini_cli", {}).get("default_model", "gemini-1.5-flash")
+        self.model = model_name or API_PROVIDERS.get("gemini_cli", {}).get("default_model", "gemini-2.5-flash")
         super().__init__(provider_name)
 
     def initialize_client(self) -> Any:
