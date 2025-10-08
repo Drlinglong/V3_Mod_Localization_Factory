@@ -9,6 +9,7 @@
 ## 用户指南
 - [常见问题解答 (FAQ)](user-guides/faq.md) - 常见问题和解决方案
 - [常见问题](user-guides/troubleshooting.md) - 问题解决方案
+- [使用 Ollama 进行本地化翻译](user-guides/using_ollama.md) - 关于使用 Ollama 运行本地大语言模型的指南
 
 ## 安装与配置
 - [首次安装配置脚本](setup/首次安装配置.bat) - Windows 自动化安装脚本

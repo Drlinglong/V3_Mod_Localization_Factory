@@ -54,7 +54,7 @@
 2.  **清理**：删除之前生成的发布目录（如果存在）。
 3.  **脚手架**：创建新的发布目录结构（`app`、`packages`、`python-embed`）。
 4.  **Python 嵌入**：从 ZIP 包中提取嵌入式 Python 环境到 `python-embed` 目录。
-5.  **复制源代码**：将 `scripts`、`data`、`docs`、`requirements.txt`、`README.md`、`README_EN.md`、`LICENSE`、`banner.txt` 等核心文件复制到 `app` 目录。
+5.  **复制源代码**：将源代码复制到 `app` 目录。其中 `scripts` 目录的复制使用了 `robocopy` 命令，以精确地排除 `__pycache__`、`.vscode`、`node_modules`、`src` 和 `.vite` 等开发相关的子目录，从而减小发布包的体积。其他如 `data`、`docs`、`requirements.txt` 等必要文件也会被一并复制。
 6.  **创建空目录**：在 `app` 目录下创建 `logs`、`my_translation`、`source_mod` 等必要的空目录。
 7.  **复制安装脚本**：复制 `setup.bat` 和 `get-pip.py` 到发布目录和嵌入式 Python 目录。
 8.  **激活 Conda 环境**：激活指定的 Conda 环境，以便执行 `pip download` 命令。
