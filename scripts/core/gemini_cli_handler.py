@@ -153,7 +153,7 @@ class GeminiCLIHandler(BaseApiHandler):
 
                 try:
                     gemini_command = f"{self.cli_path} --model {self.model} --output-format json"
-                    full_command = f"chcp 65001; [System.Console]::OutputEncoding = [System.Text.Encoding]::UTF8; Set-ExecutionPolicy RemoteSigned -Scope Process -Force; {gemini_command} < '{temp_file}'"
+                    full_command = f"Set-ExecutionPolicy RemoteSigned -Scope Process -Force; Get-Content '{temp_file}' -Encoding UTF8 -Raw | {gemini_command}"
                     cmd = ["powershell", "-Command", full_command]
 
                     clean_env = {
@@ -220,7 +220,7 @@ class GeminiCLIHandler(BaseApiHandler):
             try:
                 # For single text, we don't request JSON output.
                 gemini_command = f"{self.cli_path} --model {self.model}"
-                full_command = f"chcp 65001; [System.Console]::OutputEncoding = [System.Text.Encoding]::UTF8; Set-ExecutionPolicy RemoteSigned -Scope Process -Force; {gemini_command} < '{temp_file}'"
+                full_command = f"Set-ExecutionPolicy RemoteSigned -Scope Process -Force; Get-Content '{temp_file}' -Encoding UTF8 -Raw | {gemini_command}"
                 cmd = ["powershell", "-Command", full_command]
 
                 clean_env = {
