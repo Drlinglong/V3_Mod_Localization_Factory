@@ -15,6 +15,7 @@ import './App.css';
 import InitialTranslation from './pages/InitialTranslation';
 import Homepage from './pages/Homepage';
 import ProjectManagement from './pages/ProjectManagement';
+import Documentation from './pages/Documentation';
 
 const { Header, Content, Footer } = Layout;
 const { Title } = Typography;
@@ -57,7 +58,7 @@ const App = () => {
                     文档
                 </span>
             ),
-            children: <Placeholder title="文档" />,
+            children: <Documentation />,
         },
         {
             key: 'translation',
