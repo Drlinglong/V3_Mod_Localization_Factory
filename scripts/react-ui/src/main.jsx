@@ -12,6 +12,7 @@ if (import.meta.env.DEV) {
   window.addEventListener('unhandledrejection', (e) => showErrorOverlay(e.reason));
 }
 
+import './i18n/i18n';
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
