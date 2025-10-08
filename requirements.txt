@@ -1,7 +1,16 @@
 # Core Dependencies
 # These are required for the project to run
 
+# Core Dependencies
+# These are required for the project to run
+PyYAML
+
 # AI API Dependencies
 # 用户可以选择使用OpenAI或Google Gemini API
 openai>=1.0.0
 google-genai>=1.41.0
+
+# Development Dependencies
+# These are used for testing and development
+pytest
+pytest-mock
