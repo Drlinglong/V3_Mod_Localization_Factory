@@ -1,3 +1,22 @@
+## Development Setup
+
+This project uses a "one-click" script to set up the development environment.
+
+**Prerequisites:**
+* [Git](https://git-scm.com/)
+* [Conda / Miniconda](https://docs.conda.io/en/latest/miniconda.html)
+* [NVM for Windows](https://github.com/coreybutler/nvm-windows) (or `nvm` on macOS/Linux)
+
+**Instructions:**
+1.  Clone the repository: `git clone <repository_url>`
+2.  Set up your Conda environment (e.g., `local_factory`) and install Python dependencies from `requirements.txt`.
+3.  Install the Node.js version specified in `scripts/react-ui/.nvmrc` by running `nvm install v20.12.2` inside the `scripts/react-ui` directory.
+4.  Run the launcher script:
+    ```bash
+    ./run-dev.bat
+    ```
+This will start both the backend and frontend servers in separate terminal windows.
+
 <div align="center">
 
   <img src="gfx/Project Remis.png" width="150" alt="Project Remis Logo">
