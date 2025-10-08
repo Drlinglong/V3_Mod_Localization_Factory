@@ -59,7 +59,7 @@ def run(mod_name: str,
 
     handler = api_handler.get_handler(selected_provider, model_name=gemini_cli_model)
     if not handler or not handler.client:
-        logging.warning(i18n.t("api_client_init_fail"))
+        logging.warning(i18n.t("api_key_not_configured", provider=selected_provider))
         return
 
     # ───────────── 2.5. 加载游戏专用词典 ─────────────

@@ -61,9 +61,9 @@ def setup_test_environment(tmp_path, mocker):
     # 直接mock词典加载，避免文件系统依赖
     mocker.patch("scripts.core.glossary_manager.glossary_manager.load_game_glossary", return_value=True)
 
-    # Mock i18n 以避免加载语言文件
-    # A better mock for i18n that includes kwargs
-    mocker.patch.object(i18n, 't', side_effect=lambda key, **kwargs: f"{key} {kwargs}")
+    # Mock i18n to produce a string containing both the key and its arguments,
+    # so that assertions on log messages with parameters can pass.
+    mocker.patch.object(i18n, 't', side_effect=lambda key, **kwargs: f"{key} {' '.join(map(str, kwargs.values()))}")
 
     # Mock create_proofreading_tracker
     mocker.patch("scripts.workflows.initial_translate.create_proofreading_tracker")
