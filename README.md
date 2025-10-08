@@ -7,7 +7,7 @@
 
   <p>
     <a href="https://github.com/Drlinglong/V3_Mod_Localization_Factory/releases/latest"><img src="https://img.shields.io/github/v/release/Drlinglong/V3_Mod_Localization_Factory?style=for-the-badge&logo=github&label=Release&labelColor=1a1a2e&color=4ecdc4" alt="Release Version"></a>
-    <img src="https://img.shields.io/badge/Python-3.12-blue?style=for-the-badge&logo=python&labelColor=1a1a2e" alt="Python Version">
+    <img src="https://img.shields.io/badge/Python-3.10-blue?style=for-the-badge&logo=python&labelColor=1a1a2e" alt="Python Version">
     </a>
     <img src="https://img.shields.io/github/license/Drlinglong/V3_Mod_Localization_Factory?style=for-the-badge&label=License&labelColor=1a1a2e&color=lightgrey" alt="License">
   </p>
