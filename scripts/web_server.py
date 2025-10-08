@@ -129,6 +129,21 @@ async def start_translation(
         with zipfile.ZipFile(temp_zip_path, 'r') as zip_ref:
             zip_ref.extractall(source_path)
 
+        # Smartly handle "double folder" zip files where all content is inside a single sub-directory.
+        extracted_items = os.listdir(source_path)
+        if len(extracted_items) == 1:
+            potential_inner_folder = os.path.join(source_path, extracted_items[0])
+            if os.path.isdir(potential_inner_folder):
+                logging.info(f"Detected single sub-directory '{extracted_items[0]}', promoting its contents.")
+                # Move all contents from the sub-directory to the parent (source_path)
+                for item_name in os.listdir(potential_inner_folder):
+                    shutil.move(
+                        os.path.join(potential_inner_folder, item_name),
+                        os.path.join(source_path, item_name)
+                    )
+                # Remove the now-empty sub-directory
+                os.rmdir(potential_inner_folder)
+
         os.remove(temp_zip_path) # Clean up the zip file
 
         tasks[task_id]["status"] = "starting"
