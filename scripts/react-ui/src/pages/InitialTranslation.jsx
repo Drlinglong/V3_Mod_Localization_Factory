@@ -269,4 +269,4 @@ const InitialTranslation = () => {
   );
 };
 
-export default App;
+export default InitialTranslation;
