@@ -200,6 +200,50 @@ def get_config():
         "api_providers": list(API_PROVIDERS.keys())
     }
 
+def build_docs_tree(directory: str, parent_key: str = ''):
+    """
+    Recursively builds a tree structure for Ant Design's Tree component.
+    """
+    tree = []
+    if not os.path.isdir(directory):
+        return []
+
+    for item in sorted(os.listdir(directory)):
+        path = os.path.join(directory, item)
+        key = os.path.join(parent_key, item).replace('\\', '/')
+
+        if os.path.isdir(path):
+            children = build_docs_tree(path, key)
+            # Only add directories that are not empty
+            if children:
+                tree.append({"title": item, "key": key, "children": children})
+        else:
+            if item.endswith(".md"):
+                tree.append({"title": item, "key": key, "isLeaf": True})
+    return tree
+
+@app.get("/api/docs-tree")
+def get_docs_tree():
+    """
+    Scans the documentation directory and returns a file tree structure.
+    """
+    # Path to the docs directory relative to the project root
+    docs_path = os.path.join(project_root, 'scripts', 'react-ui', 'public', 'docs')
+    tree_data = build_docs_tree(docs_path)
+    # The frontend expects a structure per language
+    # The top-level items from build_docs_tree will be the language folders ('en', 'zh')
+    # We need to re-structure it slightly to match the old mock data structure if needed,
+    # or just send the whole tree. Let's start by sending the tree as is.
+    # The old structure was { en: [...], zh: [...] }. The new one will be [ {title: 'en', ...}, {title: 'zh', ...} ]
+    # We can have the frontend adapt to this new, more generic structure.
+    # However, let's process this to create a dict keyed by lang.
+    lang_tree = {}
+    for lang_node in tree_data:
+        lang_tree[lang_node['title']] = lang_node['children']
+
+    return lang_tree
+
+
 @app.get("/")
 def read_root():
     return {"message": "欢迎使用P社Mod本地化工厂API"}
