@@ -1,0 +1,73 @@
+/* scripts/react-ui/src/themes/theme-byzantine.css */
+html.theme-byzantine {
+  --color-primary: #4B0082; /* Indigo - Represents Tyrian Purple */
+  --color-background: #FFD700; /* Gold */
+  --color-text: #F5F5DC; /* Beige - for text on dark backgrounds */
+  --color-text-dark: #333333; /* Dark text for light backgrounds */
+  --color-border: #DAA520; /* GoldenRod */
+  --color-accent: #FFFAF0; /* FloralWhite */
+
+  --border-image-gradient: linear-gradient(to bottom, #FFD700, #B8860B, #FFD700);
+}
+
+.theme-byzantine .ant-layout-header {
+    background: var(--color-primary);
+    border-bottom: 2px solid var(--color-border);
+}
+
+.theme-byzantine .ant-typography {
+    color: var(--color-text);
+}
+
+.theme-byzantine .ant-layout-sider {
+    background: var(--color-primary);
+    border-right: 2px solid var(--color-border);
+}
+
+.theme-byzantine .ant-menu {
+    background: var(--color-primary);
+    color: var(--color-text);
+}
+
+.theme-byzantine .ant-menu-item-selected {
+    background-color: #6a0dad !important; /* A slightly lighter purple */
+}
+
+.theme-byzantine .ant-menu-item a {
+    color: var(--color-text);
+}
+
+.theme-byzantine .ant-layout-content {
+    background: #2a004a; /* Darker purple for content background */
+    color: var(--color-text);
+}
+
+.theme-byzantine h1, .theme-byzantine h2, .theme-byzantine h3, .theme-byzantine h4, .theme-byzantine h5, .theme-byzantine h6 {
+    color: var(--color-accent);
+}
+
+.theme-byzantine .ant-btn-primary {
+    background-color: var(--color-border);
+    border-color: var(--color-border);
+    color: var(--color-text-dark);
+}
+
+.theme-byzantine .ant-select-selector {
+    background-color: transparent !important;
+    border-color: var(--color-border) !important;
+    color: var(--color-text);
+}
+
+.theme-byzantine .ant-select-arrow {
+    color: var(--color-text);
+}
+
+.theme-byzantine .ant-select-item {
+    color: var(--color-text-dark) !important;
+}
+
+.theme-byzantine .ant-layout-footer {
+    background: var(--color-primary);
+    color: var(--color-text);
+    border-top: 1px solid var(--color-border);
+}

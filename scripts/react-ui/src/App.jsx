@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Layout, Typography, Menu } from 'antd';
+import { ThemeProvider } from './ThemeContext';
 import {
     ToolOutlined,
     HomeOutlined,
@@ -104,9 +105,10 @@ const App = () => {
     ];
 
     return (
-        <Router>
-            <Layout style={{ minHeight: '100vh' }}>
-                <Header>
+        <ThemeProvider>
+            <Router>
+                <Layout style={{ minHeight: '100vh' }}>
+                    <Header>
                     <div className="logo" />
                     <Title style={{ color: 'white', lineHeight: '64px', float: 'left' }} level={3}>
                         <ToolOutlined /> {t('app_title')}
@@ -152,6 +154,7 @@ const App = () => {
                 </Footer>
             </Layout>
         </Router>
+    </ThemeProvider>
     );
 };
 
