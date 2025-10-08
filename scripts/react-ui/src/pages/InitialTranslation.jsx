@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import {
   Layout,
@@ -41,7 +41,6 @@ const InitialTranslation = () => {
   const [status, setStatus] = useState(null);
   const [resultUrl, setResultUrl] = useState(null);
   const [isPolling, setIsPolling] = useState(false);
-  const pollingRef = useRef(null);
 
   useEffect(() => {
     // Fetch config from backend
