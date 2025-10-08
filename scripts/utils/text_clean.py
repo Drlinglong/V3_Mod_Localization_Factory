@@ -41,6 +41,7 @@ def strip_pl_diacritics(txt: str) -> str:
 # --- Pary cudzysłowów do wycięcia -----------------------------
 QUOTE_PAIRS = [
     ('"', '"'),
+    ("'", "'"),
     ('„', '”'),
     ('«', '»'),
 ]
