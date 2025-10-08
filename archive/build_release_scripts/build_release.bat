@@ -69,7 +69,7 @@ echo.
 
 REM --- Step 5: Copy Source Code ---
 echo [INFO] Copying application source code...
-robocopy "%PROJECT_ROOT%\scripts" "%RELEASE_DIR%\app\scripts\" /e /xd "__pycache__" ".vscode" "node_modules" "src" ".vite"
+robocopy "%PROJECT_ROOT%\scripts" "%RELEASE_DIR%\app\scripts" /e /xd __pycache__ .vscode node_modules src .vite
 xcopy "%PROJECT_ROOT%\data" "%RELEASE_DIR%\app\data\" /s /i /y /q
 xcopy "%PROJECT_ROOT%\docs" "%RELEASE_DIR%\app\docs\" /s /i /y /q
 copy "%PROJECT_ROOT%\requirements.txt" "%RELEASE_DIR%\app\requirements.txt" /y
