@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Typography, Select, Space, Row, Col, Card, Table, Tag, Button, Tabs } from 'antd';
+import { Typography, Select, Space, Row, Col, Card, Table, Tag, Button, Tabs, Empty } from 'antd';
 import { ArrowLeftOutlined, ArrowRightOutlined } from '@ant-design/icons';
 
 const { Title, Text } = Typography;
 const { Option } = Select;
-const { TabPane } = Tabs;
 
 // Mock data for projects
 const mockProjects = [
@@ -27,6 +26,10 @@ const initialMockProjectDetails = {
     project2: {
         overview: { totalFiles: 10, translated: 95, toBeProofread: 10, glossary: 'project2_glossary.json' },
         files: [ { key: '1', name: 'another_file.yml', lines: 100, status: 'translated', progress: '100 / 100', notes: '无', actions: ['查看'] } ]
+    },
+    project3: {
+        overview: { totalFiles: 5, translated: 100, toBeProofread: 0, glossary: 'project3_glossary.json' },
+        files: [ { key: '1', name: 'final_mod_file.yml', lines: 50, status: 'translated', progress: '50 / 50', notes: '已完成', actions: ['查看'] } ]
     }
 };
 
@@ -37,7 +40,8 @@ const ProjectManagement = () => {
     const [projectDetails, setProjectDetails] = useState(null);
 
     useEffect(() => {
-        if (selectedProject) {
+        if (selectedProject && initialMockProjectDetails[selectedProject]) {
+            // Deep copy the mock data to allow for state changes
             setProjectDetails(JSON.parse(JSON.stringify(initialMockProjectDetails[selectedProject])));
         } else {
             setProjectDetails(null);
@@ -177,13 +181,27 @@ const ProjectManagement = () => {
                 </Select>
             </Space>
 
-            {projectDetails && (
-                <Tabs defaultActiveKey="overview">
-                    <TabPane tab="概览" key="overview">{renderOverview()}</TabPane>
-                    <TabPane tab="任务看板" key="taskboard">{renderTaskBoard()}</TabPane>
-                </Tabs>
-            )}
-        </div>
+                        {selectedProject ? (
+                            <Tabs
+                                defaultActiveKey="overview"
+                                items={[
+                                    {
+                                        label: '概览',
+                                        key: 'overview',
+                                        children: projectDetails ? renderOverview() : null, // Content handles its own state
+                                    },
+                                    {
+                                        label: '任务看板',
+                                        key: 'taskboard',
+                                        children: projectDetails ? renderTaskBoard() : null, // Content handles its own state
+                                    },
+                                ]}
+                            />
+                        ) : (
+                            <div style={{ marginTop: 20, textAlign: 'center' }}>
+                                <Empty description="请从上方选择一个项目以查看详情" />
+                            </div>
+                        )}        </div>
     );
 };
 
