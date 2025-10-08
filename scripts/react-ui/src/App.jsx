@@ -146,7 +146,7 @@ const App = () => {
                 </div>
             </Content>
             <Footer style={{ textAlign: 'center' }}>
-                Paradox Mod Localization Factory ©2025 Created by Jules
+                Paradox Mod Localization Factory ©2025 Created by Linglong
             </Footer>
         </Layout>
     );
