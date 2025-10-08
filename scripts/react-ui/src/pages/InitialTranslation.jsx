@@ -15,20 +15,19 @@ import {
 } from 'antd';
 import {
   InboxOutlined,
-  ToolOutlined,
   CloudUploadOutlined,
   SettingOutlined,
   SyncOutlined,
   DownloadOutlined,
 } from '@ant-design/icons';
-import './App.css';
+import '../App.css';
 
 const { Header, Content, Footer } = Layout;
 const { Title, Paragraph, Text } = Typography;
 const { Dragger } = Upload;
 const { Option } = Select;
 
-const App = () => {
+const InitialTranslation = () => {
   const [current, setCurrent] = useState(0);
   const [config, setConfig] = useState({
     game_profiles: {},
@@ -261,25 +260,12 @@ const App = () => {
   ];
 
   return (
-    <Layout className="layout">
-      <Header>
-        <div className="logo" />
-        <Title style={{ color: 'white', lineHeight: '64px', float: 'left' }} level={3}>
-            <ToolOutlined /> Paradox Mod Localization Factory
-        </Title>
-      </Header>
-      <Content style={{ padding: '0 50px', marginTop: '24px' }}>
-        <div className="site-layout-content" style={{ background: '#fff', padding: 24 }}>
-          <Steps current={current} items={steps.map(s => ({title: s.title, icon: s.icon}))}/>
-          <div className="steps-content">
-            {steps[current].content}
-          </div>
-        </div>
-      </Content>
-      <Footer style={{ textAlign: 'center' }}>
-        Paradox Mod Localization Factory ©2025 Created by Jules
-      </Footer>
-    </Layout>
+    <div>
+      <Steps current={current} items={steps.map(s => ({title: s.title, icon: s.icon}))}/>
+      <div className="steps-content" style={{ marginTop: '24px' }}>
+        {steps[current].content}
+      </div>
+    </div>
   );
 };
 
