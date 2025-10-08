@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import ThumbnailGenerator from '../components/tools/ThumbnailGenerator';
 
 const ToolsPage = () => {
   const { t } = useTranslation();
@@ -7,7 +8,7 @@ const ToolsPage = () => {
   return (
     <div>
       <h1>{t('page_title_tools')}</h1>
-      <p>This is the placeholder for the Tools Page.</p>
+      <ThumbnailGenerator />
     </div>
   );
 };
