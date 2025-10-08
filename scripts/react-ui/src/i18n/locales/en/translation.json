@@ -19,5 +19,26 @@
   "settings_save": "Save",
   "page_title_under_development": "Under Development",
   "page_title_under_construction": "Under Construction",
-  "page_title_in_conception": "In Conception"
+  "page_title_in_conception": "In Conception",
+  "homepage_title": "Smart Localization Workbench v2.0",
+  "homepage_action_card_new_project": "Start a New Translation Project",
+  "homepage_action_card_update_project": "Update an Existing Project",
+  "homepage_chart_pie_title": "Project Status Overview",
+  "homepage_chart_bar_title": "Game Glossary Analysis",
+  "homepage_pie_chart_translated": "Translated",
+  "homepage_pie_chart_proofreading": "Proofreading",
+  "homepage_pie_chart_untranslated": "Untranslated",
+  "homepage_bar_chart_terms": "Terms",
+  "homepage_slogans": [
+    "Victoria 3: The humming of the economy, the tears of the era",
+    "Stellaris: Look up at the stars, feet on the... wait, we don't have feet",
+    "Hearts of Iron 4: Today's spaghetti determines tomorrow's Rome"
+  ],
+  "game_name_vic3": "Victoria 3",
+  "game_name_stellaris": "Stellaris",
+  "game_name_hoi4": "Hearts of Iron 4",
+  "game_name_ck3": "Crusader Kings 3",
+  "game_name_eu4": "Europa Universalis 4",
+  "homepage_action_card_new_project_icon": "🚀",
+  "homepage_action_card_update_project_icon": "🔄"
 }

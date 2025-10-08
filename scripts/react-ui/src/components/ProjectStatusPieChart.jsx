@@ -1,15 +1,18 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { PieChart, Pie, Cell, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-
-const data = [
-  { name: '已翻译', value: 400 },
-  { name: '待校对', value: 300 },
-  { name: '未翻译', value: 300 },
-];
 
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28'];
 
 const ProjectStatusPieChart = () => {
+  const { t } = useTranslation();
+
+  const data = [
+    { name: t('homepage_pie_chart_translated'), value: 400 },
+    { name: t('homepage_pie_chart_proofreading'), value: 300 },
+    { name: t('homepage_pie_chart_untranslated'), value: 300 },
+  ];
+
   return (
     <ResponsiveContainer width="100%" height={300}>
       <PieChart>

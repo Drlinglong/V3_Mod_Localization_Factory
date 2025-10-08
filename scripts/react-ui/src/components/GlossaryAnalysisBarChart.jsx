@@ -1,15 +1,18 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
-const data = [
-  { name: 'Victoria 3', terms: 4000 },
-  { name: 'Stellaris', terms: 3000 },
-  { name: 'Hearts of Iron 4', terms: 2000 },
-  { name: 'Crusader Kings 3', terms: 2780 },
-  { name: 'Europa Universalis 4', terms: 1890 },
-];
-
 const GlossaryAnalysisBarChart = () => {
+  const { t } = useTranslation();
+
+  const data = [
+    { name: t('game_name_vic3'), terms: 4000 },
+    { name: t('game_name_stellaris'), terms: 3000 },
+    { name: t('game_name_hoi4'), terms: 2000 },
+    { name: t('game_name_ck3'), terms: 2780 },
+    { name: t('game_name_eu4'), terms: 1890 },
+  ];
+
   return (
     <ResponsiveContainer width="100%" height={300}>
       <BarChart
@@ -23,7 +26,7 @@ const GlossaryAnalysisBarChart = () => {
         <YAxis />
         <Tooltip />
         <Legend />
-        <Bar dataKey="terms" fill="#8884d8" />
+        <Bar dataKey="terms" name={t('homepage_bar_chart_terms')} fill="#8884d8" />
       </BarChart>
     </ResponsiveContainer>
   );
