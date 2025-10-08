@@ -24,7 +24,9 @@
     "recharts": "^3.2.1",
     "react-konva": "^19.0.10",
 
-    "uuid": "^13.0.0"
+    "uuid": "^13.0.0",
+    "react-markdown": "^10.1.0",
+
   },
   "devDependencies": {
     "@eslint/js": "^9.37.0",
