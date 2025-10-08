@@ -72,6 +72,10 @@ We've hidden complex technology behind the scenes, so you can enjoy the purest a
 
 ## 3. How to Use
 
+> **Want to run models locally?**
+> If you're concerned about data privacy, want to work offline, or prefer not to pay for API fees, we highly recommend using Ollama for localization.
+> [Click here for the Ollama Setup and User Guide](./docs/en/user-guides/using_ollama.md).
+
 Thanks to new packaging technology, using this project has become easier than ever. **No Python installation, no environment configuration required, truly plug-and-play.**
 
 ### Step 1: Download and Unzip
