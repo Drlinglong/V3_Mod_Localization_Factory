@@ -1,0 +1,87 @@
+.thumbnail-generator-layout {
+  display: flex;
+  flex-direction: row;
+  height: calc(100vh - 150px); /* Adjust height as needed */
+  gap: 16px;
+}
+
+.toolbox-panel, .inspector-panel {
+  flex: 1;
+  border: 1px solid #e8e8e8;
+  padding: 16px;
+  border-radius: 8px;
+  overflow-y: auto;
+  background-color: #fafafa;
+}
+
+.canvas-panel {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e8e8e8;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+#thumbnail-canvas {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 4px; /* Slightly rounded corners for the canvas */
+  overflow: hidden; /* Ensures content stays within rounded corners */
+}
+
+.tool-section {
+    margin-bottom: 24px;
+}
+
+.tool-section h4 {
+    margin-bottom: 12px;
+    color: #555;
+}
+
+.flag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.flag-item {
+    width: 40px;
+    height: 30px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.flag-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* General Ant Design button style override for consistency if needed */
+.ant-btn {
+    width: 100%;
+}
+
+.property-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.property-group label {
+    font-weight: 500;
+    color: #333;
+    display: block; /* Make labels take full width */
+    margin-bottom: 4px;
+}
+
+.prop-input {
+    width: 100%;
+    padding: 6px 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Important for width calculation */
+}
