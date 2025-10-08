@@ -14,6 +14,7 @@ import {
 import './App.css';
 import InitialTranslation from './pages/InitialTranslation';
 import Homepage from './pages/Homepage';
+import ProjectManagement from './pages/ProjectManagement';
 
 const { Header, Content, Footer } = Layout;
 const { Title } = Typography;
@@ -76,7 +77,7 @@ const App = () => {
                     项目管理
                 </span>
             ),
-            children: <Placeholder title="项目管理" />,
+            children: <ProjectManagement />,
         },
         {
             key: 'glossary',
