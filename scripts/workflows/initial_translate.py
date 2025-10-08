@@ -215,7 +215,7 @@ def run(mod_name: str,
             
             # 报告词典验证警告
             if all_warnings:
-                logging.warning("词典一致性验证发现潜在问题：")
+                logging.warning(i18n.t("glossary_consistency_warning_header"))
                 for warning in all_warnings:
                     logging.warning(warning['message'])
 
