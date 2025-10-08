@@ -506,5 +506,6 @@
   "validator_error_regex_error": "规则 '{rule_name}' 的正则表达式错误: {e}, 模式: {pattern}",
   "validator_error_executing_rule": "执行规则 '{rule_name}' 时发生错误: {e}",
   "validator_warning_unknown_check_function": "规则 '{rule_name}' 指定了未知的检查函数: '{check_function_name}'",
-  "validator_warning_cannot_load_i18n": "无法加载国际化: {e}"
+  "validator_warning_cannot_load_i18n": "无法加载国际化: {e}",
+  "glossary_consistency_warning_header": "词典一致性验证发现潜在问题："
 }
