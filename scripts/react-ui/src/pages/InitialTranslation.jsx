@@ -190,28 +190,28 @@ const InitialTranslation = () => {
         <Form form={form} layout="vertical" onFinish={onFinish}>
           <Form.Item name="game_profile_id" label="Game" rules={[{ required: true }]}>
             <Select placeholder="Select a game">
-              {Object.entries(config.game_profiles).map(([id, profile]) => (
+              {Object.entries(config.game_profiles || {}).map(([id, profile]) => (
                 <Option key={id} value={id}>{profile.name}</Option>
               ))}
             </Select>
           </Form.Item>
           <Form.Item name="source_lang_code" label="Source Language" rules={[{ required: true }]}>
              <Select placeholder="Select source language">
-              {Object.values(config.languages).map(lang => (
+              {Object.values(config.languages || {}).map(lang => (
                 <Option key={lang.code} value={lang.code}>{lang.name}</Option>
               ))}
             </Select>
           </Form.Item>
           <Form.Item name="target_lang_codes" label="Target Language(s)" rules={[{ required: true }]}>
             <Select mode="multiple" placeholder="Select target language(s)">
-              {Object.values(config.languages).map(lang => (
+              {Object.values(config.languages || {}).map(lang => (
                 <Option key={lang.code} value={lang.code}>{lang.name}</Option>
               ))}
             </Select>
           </Form.Item>
           <Form.Item name="api_provider" label="API Provider" rules={[{ required: true }]}>
             <Select placeholder="Select an API provider">
-              {config.api_providers.map(provider => (
+              {(config.api_providers || []).map(provider => (
                 <Option key={provider} value={provider}>{provider}</Option>
               ))}
             </Select>
