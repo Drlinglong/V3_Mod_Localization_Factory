@@ -54,7 +54,7 @@ You can modify the following variables at the beginning of the `build_release.ba
 2.  **Cleanup**: Delete the previously generated release directory (if it exists).
 3.  **Scaffolding**: Create the new release directory structure (`app`, `packages`, `python-embed`).
 4.  **Python Embedding**: Extract the embeddable Python environment from the ZIP package to the `python-embed` directory.
-5.  **Copy Source Code**: Copy core files such as `scripts`, `data`, `docs`, `requirements.txt`, `README.md`, `README_EN.md`, `LICENSE`, `banner.txt` to the `app` directory.
+5.  **Copy Source Code**: Copy source code to the `app` directory. The `scripts` directory is copied using `robocopy` to specifically exclude development-related subdirectories such as `__pycache__`, `.vscode`, `node_modules`, `src`, and `.vite`, ensuring a smaller package size. Other necessary files like `data`, `docs`, `requirements.txt`, etc., are also copied.
 6.  **Create Empty Directories**: Create necessary empty directories like `logs`, `my_translation`, `source_mod` under the `app` directory.
 7.  **Copy Installation Scripts**: Copy `setup.bat` and `get-pip.py` to the release directory and embeddable Python directory.
 8.  **Activate Conda Environment**: Activate the specified Conda environment to execute the `pip download` command.

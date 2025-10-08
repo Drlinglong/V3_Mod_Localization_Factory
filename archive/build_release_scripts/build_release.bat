@@ -7,7 +7,7 @@ set ENV_NAME=local_factory
 
 REM =================================================================
 REM Project Remis - Portable Release Build Script (Final Architect's Edition)
-REM Version: 1.1.7
+REM Version: 1.1.8
 REM Assumption: This script is run from an already activated Conda/Python environment.
 REM =================================================================
 
@@ -23,7 +23,7 @@ set "SCRIPT_DIR=%~dp0"
 set "PROJECT_ROOT=%SCRIPT_DIR%..\..\"
 
 set "PROJECT_NAME=Project_Remis"
-set "VERSION=1.1.7"
+set "VERSION=1.1.8"
 set "RELEASE_DIR=%PROJECT_ROOT%\%PROJECT_NAME%_%VERSION%"
 set "RELEASE_DIR_NAME=%PROJECT_NAME%_%VERSION%"
 
@@ -69,7 +69,7 @@ echo.
 
 REM --- Step 5: Copy Source Code ---
 echo [INFO] Copying application source code...
-xcopy "%PROJECT_ROOT%\scripts" "%RELEASE_DIR%\app\scripts\" /e /i /y /q
+robocopy "%PROJECT_ROOT%\scripts" "%RELEASE_DIR%\app\scripts\" /e /xd "__pycache__" ".vscode" "node_modules" "src" ".vite"
 xcopy "%PROJECT_ROOT%\data" "%RELEASE_DIR%\app\data\" /s /i /y /q
 xcopy "%PROJECT_ROOT%\docs" "%RELEASE_DIR%\app\docs\" /s /i /y /q
 copy "%PROJECT_ROOT%\requirements.txt" "%RELEASE_DIR%\app\requirements.txt" /y

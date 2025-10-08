@@ -9,6 +9,7 @@ This directory contains all English documentation for the V3 Mod Localization Fa
 ## User Guides
 - [Frequently Asked Questions (FAQ)](user-guides/faq.md) - Common questions and solutions
 - [Common Issues](user-guides/troubleshooting.md) - Solutions to common problems
+- [Using Ollama for Localization](user-guides/using_ollama.md) - Guide to using local LLMs with Ollama
 
 ## Installation and Configuration
 - [First-time Installation and Configuration Script](setup/首次安装配置.bat) - Windows automated installation script
