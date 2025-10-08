@@ -17,8 +17,9 @@ class GeminiHandler(BaseApiHandler):
             self.logger.error("API Key 'GEMINI_API_KEY' not found in environment variables.")
             raise ValueError("GEMINI_API_KEY not set")
         try:
-            genai.configure(api_key=api_key)
-            client = genai.Client()
+            # The genai.configure() method is deprecated.
+            # The API key is now passed directly to the genai.Client constructor.
+            client = genai.Client(api_key=api_key)
             self.logger.info("Gemini client initialized successfully.")
             return client
         except Exception as e:
