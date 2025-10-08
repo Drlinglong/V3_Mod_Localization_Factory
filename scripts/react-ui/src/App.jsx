@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
-import { Layout, Typography, Tabs } from 'antd';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { Layout, Typography, Menu } from 'antd';
 import {
     ToolOutlined,
     HomeOutlined,
@@ -10,145 +12,146 @@ import {
     SettingOutlined,
     BranchesOutlined,
     DashboardOutlined,
+    HourglassOutlined, // New icon for placeholder pages
+    BuildOutlined, // New icon for placeholder pages
+    BulbOutlined, // New icon for placeholder pages
 } from '@ant-design/icons';
 import './App.css';
-import InitialTranslation from './pages/InitialTranslation';
-import Homepage from './pages/Homepage';
-import ProjectManagement from './pages/ProjectManagement';
-import Documentation from './pages/Documentation';
 
-const { Header, Content, Footer } = Layout;
+// Import original pages
+import OriginalHomepage from './pages/Homepage';
+import OriginalDocumentation from './pages/Documentation';
+import OriginalInitialTranslation from './pages/InitialTranslation';
+import OriginalProjectManagement from './pages/ProjectManagement';
+
+// Import new placeholder pages
+import GlossaryManagerPage from './pages/GlossaryManagerPage';
+import ProofreadingPage from './pages/ProofreadingPage';
+import ToolsPage from './pages/ToolsPage';
+import CICDPage from './pages/CICDPage';
+import SettingsPage from './pages/SettingsPage';
+import UnderDevelopmentPage from './pages/UnderDevelopmentPage'; // New
+import UnderConstructionPage from './pages/UnderConstructionPage'; // New
+import InConceptionPage from './pages/InConceptionPage'; // New
+
+const { Header, Content, Footer, Sider } = Layout;
 const { Title } = Typography;
 
-// Placeholder components for other pages
-const Placeholder = ({ title }) => (
-    <div style={{ padding: '20px' }}>
-        <Title level={2}>{title}</Title>
-        <p>This page is under construction.</p>
-    </div>
-);
-
 const App = () => {
-    const [activeTab, setActiveTab] = useState('home');
+    const { t } = useTranslation();
 
-    const handleTabChange = (key) => {
-        setActiveTab(key);
-    };
-
-    const handleStartProject = () => {
-        setActiveTab('translation');
-    };
-
-    const items = [
+    const menuItems = [
         {
-            key: 'home',
-            label: (
-                <span>
-                    <HomeOutlined />
-                    主页
-                </span>
-            ),
-            children: <Homepage onStart={handleStartProject} />,
+            key: '/',
+            icon: <HomeOutlined />,
+            label: <Link to="/">{t('nav_home')}</Link>,
         },
         {
-            key: 'docs',
-            label: (
-                <span>
-                    <FileTextOutlined />
-                    文档
-                </span>
-            ),
-            children: <Documentation />,
+            key: '/docs',
+            icon: <FileTextOutlined />,
+            label: <Link to="/docs">{t('nav_docs')}</Link>,
         },
         {
-            key: 'translation',
-            label: (
-                <span>
-                    <RocketOutlined />
-                    初次汉化
-                </span>
-            ),
-            children: <InitialTranslation />,
+            key: '/translation',
+            icon: <RocketOutlined />,
+            label: <Link to="/translation">{t('page_title_translation')}</Link>,
         },
         {
-            key: 'projects',
-            label: (
-                <span>
-                    <DashboardOutlined />
-                    项目管理
-                </span>
-            ),
-            children: <ProjectManagement />,
+            key: '/glossary-manager',
+            icon: <BookOutlined />,
+            label: <Link to="/glossary-manager">{t('page_title_glossary_manager')}</Link>
         },
         {
-            key: 'glossary',
-            label: (
-                <span>
-                    <BookOutlined />
-                    词典管理
-                </span>
-            ),
-            children: <Placeholder title="词典管理" />,
+            key: '/proofreading',
+            icon: <ExperimentOutlined />,
+            label: <Link to="/proofreading">{t('page_title_proofreading')}</Link>,
         },
         {
-            key: 'proofreading',
-            label: (
-                <span>
-                    <ExperimentOutlined />
-                    文件校对
-                </span>
-            ),
-            children: <Placeholder title="文件校对" />,
+            key: '/project-management',
+            icon: <DashboardOutlined />,
+            label: <Link to="/project-management">{t('page_title_project_management')}</Link>,
         },
         {
-            key: 'tools',
-            label: (
-                <span>
-                    <ToolOutlined />
-                    其他工具
-                </span>
-            ),
-            children: <Placeholder title="其他工具" />,
+            key: '/cicd',
+            icon: <BranchesOutlined />,
+            label: <Link to="/cicd">{t('page_title_cicd')}</Link>,
         },
         {
-            key: 'cicd',
-            label: (
-                <span>
-                    <BranchesOutlined />
-                    CI/CD
-                </span>
-            ),
-            children: <Placeholder title="CI/CD" />,
+            key: '/tools',
+            icon: <ToolOutlined />,
+            label: <Link to="/tools">{t('page_title_tools')}</Link>,
         },
         {
-            key: 'settings',
-            label: (
-                <span>
-                    <SettingOutlined />
-                    控制面板
-                </span>
-            ),
-            children: <Placeholder title="控制面板" />,
+            key: '/settings',
+            icon: <SettingOutlined />,
+            label: <Link to="/settings">{t('page_title_settings')}</Link>,
+        },
+        {
+            key: '/under-development',
+            icon: <HourglassOutlined />,
+            label: <Link to="/under-development">{t('page_title_under_development')}</Link>,
+        },
+        {
+            key: '/under-construction',
+            icon: <BuildOutlined />,
+            label: <Link to="/under-construction">{t('page_title_under_construction')}</Link>,
+        },
+        {
+            key: '/in-conception',
+            icon: <BulbOutlined />,
+            label: <Link to="/in-conception">{t('page_title_in_conception')}</Link>,
         },
     ];
 
     return (
-        <Layout className="layout">
-            <Header>
-                <div className="logo" />
-                <Title style={{ color: 'white', lineHeight: '64px', float: 'left' }} level={3}>
-                    <ToolOutlined /> Paradox Mod Localization Factory
-                </Title>
-            </Header>
-            <Content style={{ padding: '0 50px', marginTop: '24px' }}>
-                <div className="site-layout-content" style={{ background: '#fff', padding: '0 24px 24px 24px' }}>
-                    <Tabs activeKey={activeTab} onChange={handleTabChange} items={items} />
-                </div>
-            </Content>
-            <Footer style={{ textAlign: 'center' }}>
-                Paradox Mod Localization Factory ©2025 Created by Linglong
-            </Footer>
-        </Layout>
+        <Router>
+            <Layout style={{ minHeight: '100vh' }}>
+                <Header>
+                    <div className="logo" />
+                    <Title style={{ color: 'white', lineHeight: '64px', float: 'left' }} level={3}>
+                        <ToolOutlined /> {t('app_title')}
+                    </Title>
+                </Header>
+                <Layout>
+                    <Sider width={200} style={{ background: '#fff' }}>
+                        <Menu
+                            mode="inline"
+                            defaultSelectedKeys={['/']}
+                            style={{ height: '100%', borderRight: 0 }}
+                            items={menuItems}
+                        />
+                    </Sider>
+                    <Layout style={{ padding: '0 24px 24px' }}>
+                        <Content
+                            style={{
+                                background: '#fff',
+                                padding: 24,
+                                margin: 0,
+                                minHeight: 280,
+                            }}
+                        >
+                            <Routes>
+                                <Route path="/" element={<OriginalHomepage />} />
+                                <Route path="/docs" element={<OriginalDocumentation />} />
+                                <Route path="/translation" element={<OriginalInitialTranslation />} />
+                                <Route path="/glossary-manager" element={<GlossaryManagerPage />} />
+                                <Route path="/proofreading" element={<ProofreadingPage />} />
+                                <Route path="/tools" element={<ToolsPage />} />
+                                <Route path="/cicd" element={<CICDPage />} />
+                                <Route path="/project-management" element={<OriginalProjectManagement />} />
+                                <Route path="/settings" element={<SettingsPage />} />
+                                <Route path="/under-development" element={<UnderDevelopmentPage />} />
+                                <Route path="/under-construction" element={<UnderConstructionPage />} />
+                                <Route path="/in-conception" element={<InConceptionPage />} />
+                            </Routes>
+                        </Content>
+                    </Layout>
+                </Layout>
+                <Footer style={{ textAlign: 'center' }}>
+                    {t('footer_text')}
+                </Footer>
+            </Layout>
+        </Router>
     );
 };
 
