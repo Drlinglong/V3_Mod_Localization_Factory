@@ -94,7 +94,10 @@ class GeminiCLIHandler(BaseApiHandler):
 
         numbered_list = "\n".join(f'{j + 1}. "{txt}"' for j, txt in enumerate(chunk))
 
-        effective_target_lang_name = target_lang.get("custom_name", target_lang["name"]) if target_lang.get("is_shell") else target_lang["name"]
+        # For Gemini CLI, we prioritize using the English name ('name_en') to prevent encoding issues
+        # with the CLI process, while still respecting the override logic for 'is_shell' and 'custom_name'.
+        default_lang_name = target_lang.get("name_en", target_lang["name"])
+        effective_target_lang_name = target_lang.get("custom_name", default_lang_name) if target_lang.get("is_shell") else default_lang_name
 
         base_prompt = game_profile["prompt_template"].format(
             source_lang_name=source_lang["name"],
@@ -147,13 +150,19 @@ class GeminiCLIHandler(BaseApiHandler):
 
         for attempt in range(GEMINI_CLI_MAX_RETRIES):
             try:
-                with tempfile.NamedTemporaryFile(mode='w', suffix='.txt', delete=False, encoding='utf-8') as f:
+                # Use 'utf-8-sig' to write a BOM, which is the most reliable way to signal UTF-8 encoding on Windows.
+                with tempfile.NamedTemporaryFile(mode='w', suffix='.txt', delete=False, encoding='utf-8-sig') as f:
                     f.write(prompt)
                     temp_file = f.name
 
                 try:
                     gemini_command = f"{self.cli_path} --model {self.model} --output-format json"
-                    full_command = f"Set-ExecutionPolicy RemoteSigned -Scope Process -Force; Get-Content '{temp_file}' -Encoding UTF8 -Raw | {gemini_command}"
+                    # BOM file ensures Get-Content reads correctly; $OutputEncoding ensures the pipe to CLI is UTF-8.
+                    full_command = (
+                        f"$OutputEncoding = [System.Text.Encoding]::UTF8; "
+                        f"Set-ExecutionPolicy RemoteSigned -Scope Process -Force; "
+                        f"Get-Content -Path '{temp_file}' -Raw | {gemini_command}"
+                    )
                     cmd = ["powershell", "-Command", full_command]
 
                     clean_env = {
@@ -213,14 +222,20 @@ class GeminiCLIHandler(BaseApiHandler):
         prompt = self._build_single_text_prompt(text, task_description, mod_name, source_lang, target_lang, mod_context, game_profile)
 
         try:
-            with tempfile.NamedTemporaryFile(mode='w', suffix='.txt', delete=False, encoding='utf-8') as f:
+            # Use 'utf-8-sig' for BOM to ensure PowerShell reads the file content correctly.
+            with tempfile.NamedTemporaryFile(mode='w', suffix='.txt', delete=False, encoding='utf-8-sig') as f:
                 f.write(prompt)
                 temp_file = f.name
 
             try:
                 # For single text, we don't request JSON output.
                 gemini_command = f"{self.cli_path} --model {self.model}"
-                full_command = f"Set-ExecutionPolicy RemoteSigned -Scope Process -Force; Get-Content '{temp_file}' -Encoding UTF8 -Raw | {gemini_command}"
+                # The robust PowerShell command structure is also applied here.
+                full_command = (
+                    f"$OutputEncoding = [System.Text.Encoding]::UTF8; "
+                    f"Set-ExecutionPolicy RemoteSigned -Scope Process -Force; "
+                    f"Get-Content -Path '{temp_file}' -Raw | {gemini_command}"
+                )
                 cmd = ["powershell", "-Command", full_command]
 
                 clean_env = {
