@@ -1,25 +1,30 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Select, Button, Space, Typography } from 'antd'; // Import Ant Design components
+import { Select, Space, Typography } from 'antd';
+import ThemeContext from '../ThemeContext';
+import { AVAILABLE_THEMES } from '../config/themes';
 
 const { Option } = Select;
 const { Title } = Typography;
 
 const SettingsPage = () => {
   const { t, i18n } = useTranslation();
+  const { theme, toggleTheme } = useContext(ThemeContext);
+
+  useEffect(() => {
+    const savedLanguage = localStorage.getItem('language');
+    if (savedLanguage) {
+      i18n.changeLanguage(savedLanguage);
+    }
+  }, [i18n]);
 
   const handleLanguageChange = (value) => {
     i18n.changeLanguage(value);
+    localStorage.setItem('language', value);
   };
 
   const handleThemeChange = (value) => {
-    console.log(`Theme changed to: ${value}`);
-    // Implement theme change logic here
-  };
-
-  const handleSaveSettings = () => {
-    console.log('Settings saved!');
-    // Implement save settings logic here
+    toggleTheme(value);
   };
 
   return (
@@ -30,7 +35,7 @@ const SettingsPage = () => {
           <label htmlFor="language-select" style={{ marginRight: '10px' }}>{t('settings_language')}:</label>
           <Select
             id="language-select"
-            defaultValue={i18n.language}
+            value={i18n.language}
             style={{ width: 120 }}
             onChange={handleLanguageChange}
           >
@@ -42,17 +47,17 @@ const SettingsPage = () => {
           <label htmlFor="theme-select" style={{ marginRight: '10px' }}>{t('settings_theme')}:</label>
           <Select
             id="theme-select"
-            defaultValue="light" // Default theme
+            value={theme}
             style={{ width: 120 }}
             onChange={handleThemeChange}
           >
-            <Option value="light">{t('theme_light')}</Option>
-            <Option value="dark">{t('theme_dark')}</Option>
+            {AVAILABLE_THEMES.map((themeOption) => (
+              <Option key={themeOption.id} value={themeOption.id}>
+                {t(themeOption.nameKey)}
+              </Option>
+            ))}
           </Select>
         </div>
-        <Button type="primary" onClick={handleSaveSettings}>
-          {t('settings_save')}
-        </Button>
       </Space>
     </div>
   );
