@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Layout, Typography, Select, Tree, Spin } from 'antd';
 import ReactMarkdown from 'react-markdown';
 import axios from 'axios';
@@ -18,14 +19,14 @@ const fetchDocTree = async () => {
 };
 
 const fetchDocContent = async (path) => {
-    console.log(`Fetching content from URL: /docs/${path}`);
+    if (!path) return 'No file selected.';
+    console.log(`Fetching content from API for path: ${path}`);
     try {
-        const response = await fetch(`/docs/${path}`);
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const text = await response.text();
-        return text;
+        // Use axios to call the new backend endpoint
+        const response = await axios.get('/api/doc-content', {
+            params: { path: path }
+        });
+        return response.data;
     } catch (error) {
         console.error(`Failed to fetch doc content for path ${path}:`, error);
         return 'Content could not be loaded. Please check the console for more details.';
@@ -33,12 +34,13 @@ const fetchDocContent = async (path) => {
 };
 
 const Documentation = () => {
+    const { t } = useTranslation();
     const [selectedLang, setSelectedLang] = useState('en');
     const [fullTreeData, setFullTreeData] = useState({});
     const [treeData, setTreeData] = useState([]);
     const [treeLoading, setTreeLoading] = useState(true);
 
-    const [selectedFile, setSelectedFile] = useState('en/user-guides/getting-started.md');
+    const [selectedFile, setSelectedFile] = useState('en/index.md');
     const [content, setContent] = useState('');
     const [contentLoading, setContentLoading] = useState(true);
 
@@ -74,13 +76,11 @@ const Documentation = () => {
 
     const handleLangChange = (value) => {
         setSelectedLang(value);
-        // Select a default file for the new language, if it exists in the tree
+        // Select a default file for the new language
         const defaultFile = value === 'zh'
-            ? 'zh/user-guides/getting-started.md'
-            : 'en/user-guides/getting-started.md';
+            ? 'zh/index.md'
+            : 'en/index.md';
 
-        // A simple check to see if the default file is likely to exist.
-        // A more robust check would involve searching the new treeData.
         setSelectedFile(defaultFile);
     };
 
@@ -94,7 +94,7 @@ const Documentation = () => {
         <Layout style={{ padding: '24px 0', background: '#fff', height: '100%' }}>
             <Sider width={300} style={{ background: '#fff', borderRight: '1px solid #f0f0f0', padding: '10px', height: '100%', overflow: 'auto' }}>
                 <div style={{ padding: '0 16px 16px 16px' }}>
-                    <Title level={4}>文档导航</Title>
+                    <Title level={4}>{t('doc_nav_title')}</Title>
                     <Select value={selectedLang} style={{ width: '100%' }} onChange={handleLangChange}>
                         <Option value="en">English</Option>
                         <Option value="zh">中文</Option>
