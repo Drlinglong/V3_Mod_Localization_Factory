@@ -233,7 +233,11 @@ def get_docs_tree():
 
     lang_tree = {}
     for lang_node in tree_data:
-        lang_tree[lang_node['title']] = lang_node['children']
+        # This post-processing step is designed to structure the output by language folders (e.g., 'en', 'zh').
+        # We should only process nodes that are directories (i.e., have a 'children' key)
+        # and ignore any standalone files at the root of the /docs directory.
+        if 'children' in lang_node:
+            lang_tree[lang_node['title']] = lang_node['children']
 
     return lang_tree
 
