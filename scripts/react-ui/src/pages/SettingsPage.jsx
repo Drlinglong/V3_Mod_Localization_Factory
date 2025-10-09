@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Select, Space, Typography } from 'antd';
 import ThemeContext from '../ThemeContext';
+import { AVAILABLE_THEMES } from '../config/themes';
 
 const { Option } = Select;
 const { Title } = Typography;
@@ -50,10 +51,11 @@ const SettingsPage = () => {
             style={{ width: 120 }}
             onChange={handleThemeChange}
           >
-            <Option value="light">{t('theme_light', 'Light')}</Option>
-            <Option value="dark">{t('theme_dark', 'Dark')}</Option>
-            <Option value="theme-victorian">{t('theme_victorian', 'Victorian')}</Option>
-            <Option value="theme-byzantine">{t('theme_byzantine', 'Byzantine')}</Option>
+            {AVAILABLE_THEMES.map((themeOption) => (
+              <Option key={themeOption.id} value={themeOption.id}>
+                {t(themeOption.nameKey)}
+              </Option>
+            ))}
           </Select>
         </div>
       </Space>
