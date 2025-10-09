@@ -31,6 +31,20 @@
   overflow: hidden; /* Ensures content stays within rounded corners */
 }
 
+.canvas-placeholder {
+    width: 512px;
+    height: 512px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa;
+    border: 2px dashed #dee2e6;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+}
+
 .tool-section {
     margin-bottom: 24px;
 }
