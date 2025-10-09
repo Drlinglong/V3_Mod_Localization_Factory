@@ -556,5 +556,6 @@
   "log.tag_analysis.loaded_official_tags": "成功从 '{path}' 加载了 {count} 个官方标签。",
   "log.tag_analysis.found_unique_tags": "在Mod中找到 {count} 个唯一标签。",
   "log.tag_analysis.no_custom_tags": "未在Mod中发现自定义标签。所有标签均符合官方规范。",
-  "log.tag_analysis.final_whitelist": "本次会话的最终合并白名单包含 {count} 个标签。"
+  "log.tag_analysis.final_whitelist": "本次会话的最终合并白名单包含 {count} 个标签。",
+  "validation_generic_tags_count": "发现 {start_count} 个起始标签，但有 {end_count} 个结束符。"
 }
