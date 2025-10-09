@@ -200,6 +200,151 @@ def get_config():
         "api_providers": list(API_PROVIDERS.keys())
     }
 
+#<-- Glossar-API-Endpunkte -->
+import json
+from pydantic import BaseModel, Field
+
+GLOSSARY_DIR = os.path.join(project_root, "data", "glossary")
+
+# --- Pydantic Models for Glossary ---
+class GlossaryTranslation(BaseModel):
+    en: str
+    zh_cn: str = Field(alias='zh-CN')
+
+class GlossaryMetadata(BaseModel):
+    part_of_speech: str
+    remarks: str | None = None
+
+class GlossaryEntry(BaseModel):
+    translations: GlossaryTranslation
+    id: str
+    metadata: GlossaryMetadata
+    variants: dict | None = None
+
+class UpdateGlossaryRequest(BaseModel):
+    entries: List[GlossaryEntry]
+
+class CreateGlossaryFileRequest(BaseModel):
+    game_id: str
+    file_name: str
+
+
+@app.post("/api/glossary/file")
+def create_glossary_file(payload: CreateGlossaryFileRequest):
+    """
+    Creates a new, empty glossary JSON file for a given game.
+    """
+    game_id = payload.game_id
+    file_name = payload.file_name
+
+    # --- Validation ---
+    if not file_name.endswith(".json"):
+        raise HTTPException(status_code=400, detail="File name must end with .json")
+
+    # Basic security check for filename
+    if ".." in file_name or "/" in file_name or "\\" in file_name:
+        raise HTTPException(status_code=400, detail="Invalid characters in file name.")
+
+    game_path = os.path.join(GLOSSARY_DIR, game_id)
+    if not os.path.isdir(game_path):
+        raise HTTPException(status_code=404, detail=f"Game '{game_id}' not found.")
+
+    file_path = os.path.join(game_path, file_name)
+    if os.path.exists(file_path):
+        raise HTTPException(status_code=409, detail=f"File '{file_name}' already exists in game '{game_id}'.")
+
+    # --- File Creation ---
+    try:
+        default_content = {
+            "metadata": {
+                "description": f"New glossary file: {file_name}",
+                "last_updated": ""
+            },
+            "entries": []
+        }
+        with open(file_path, 'w', encoding='utf-8') as f:
+            json.dump(default_content, f, ensure_ascii=False, indent=2)
+
+        return {"status": "success", "message": f"Successfully created '{file_name}' for game '{game_id}'."}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to create glossary file: {e}")
+
+
+@app.get("/api/glossary/tree")
+def get_glossary_tree():
+    """
+    Scans the data/glossary directory and returns a tree structure
+    for the Ant Design Tree component.
+    """
+    tree_data = []
+    for game_id in os.listdir(GLOSSARY_DIR):
+        game_path = os.path.join(GLOSSARY_DIR, game_id)
+        if os.path.isdir(game_path):
+            game_node = {
+                "title": game_id,
+                "key": game_id,
+                "children": []
+            }
+            for filename in os.listdir(game_path):
+                if filename.endswith(".json"):
+                    game_node["children"].append({
+                        "title": filename,
+                        "key": f"{game_id}|{filename}", # Use a separator for easy splitting on the frontend
+                        "isLeaf": True
+                    })
+            # Only add games that have at least one JSON file
+            if game_node["children"]:
+                tree_data.append(game_node)
+    return tree_data
+
+@app.get("/api/glossary/content")
+def get_glossary_content(game_id: str, file_name: str):
+    """
+    Reads and returns the content of a specific glossary JSON file.
+    """
+    file_path = os.path.join(GLOSSARY_DIR, game_id, file_name)
+    if not os.path.exists(file_path):
+        raise HTTPException(status_code=404, detail="Glossary file not found.")
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+        return data.get("entries", [])
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to read or parse glossary file: {e}")
+
+@app.post("/api/glossary/content")
+def update_glossary_content(game_id: str, file_name: str, payload: UpdateGlossaryRequest):
+    """
+    Updates the content of a specific glossary JSON file.
+    """
+    file_path = os.path.join(GLOSSARY_DIR, game_id, file_name)
+    if not os.path.exists(file_path):
+        raise HTTPException(status_code=404, detail="Glossary file not found.")
+
+    try:
+        # 1. Read existing metadata
+        with open(file_path, 'r', encoding='utf-8') as f:
+            original_data = json.load(f)
+            metadata = original_data.get("metadata", {})
+
+        # 2. Create a backup
+        backup_path = file_path + ".bak"
+        shutil.copy2(file_path, backup_path)
+
+        # 3. Prepare new content
+        new_data = {
+            "metadata": metadata,
+            "entries": [entry.model_dump(by_alias=True) for entry in payload.entries]
+        }
+
+        # 4. Write the new content back to the file
+        with open(file_path, 'w', encoding='utf-8') as f:
+            json.dump(new_data, f, ensure_ascii=False, indent=2)
+
+        return {"status": "success", "message": f"Glossary file '{file_name}' for game '{game_id}' updated successfully."}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to update glossary file: {e}")
+
 @app.get("/")
 def read_root():
     return {"message": "欢迎使用P社Mod本地化工厂API"}
