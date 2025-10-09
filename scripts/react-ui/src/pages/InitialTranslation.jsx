@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useTranslation } from 'react-i18next';
 import {
   Steps,
   Button,
@@ -25,11 +26,11 @@ import {
 import '../App.css';
 import LogViewer from '../components/shared/LogViewer';
 
-const { Title, Text } = Typography;
 const { Dragger } = Upload;
 const { Option } = Select;
 
 const InitialTranslation = () => {
+  const { t } = useTranslation();
   const [current, setCurrent] = useState(0);
   const [config, setConfig] = useState({
     game_profiles: {},
@@ -49,10 +50,10 @@ const InitialTranslation = () => {
     axios.get('/api/config')
       .then(response => setConfig(response.data))
       .catch(error => {
-        message.error('Failed to load configuration from server.');
+        message.error(t('message_error_load_config'));
         console.error('Config fetch error:', error);
       });
-  }, []);
+  }, [t]);
 
   useEffect(() => {
     if (!taskId || !isProcessing) return;
@@ -61,7 +62,6 @@ const InitialTranslation = () => {
       axios.get(`/api/status/${taskId}`)
         .then(response => {
           const { status: newStatus, log: newLogs } = response.data;
-          // Simulate new log format
           const formattedLogs = newLogs.map(l => (typeof l === 'string' ? { level: 'INFO', message: l } : l));
           setLogs(formattedLogs);
 
@@ -71,10 +71,10 @@ const InitialTranslation = () => {
             setIsProcessing(false);
             setCurrent(3);
             if (newStatus === 'completed') {
-              message.success('Translation completed successfully!');
+              message.success(t('message_success_translation_complete'));
               setResultUrl(`/api/result/${taskId}`);
             } else {
-              message.error('Translation task failed. Please check the logs.');
+              message.error(t('message_error_translation_failed'));
             }
           } else {
             setStatus(newStatus);
@@ -82,7 +82,7 @@ const InitialTranslation = () => {
         })
         .catch(error => {
           clearInterval(poll);
-          message.error('Failed to get task status.');
+          message.error(t('message_error_get_status'));
           console.error('Polling error:', error);
           setStatus('failed');
           setIsProcessing(false);
@@ -91,7 +91,7 @@ const InitialTranslation = () => {
     }, 2000);
 
     return () => clearInterval(poll);
-  }, [taskId, isProcessing]);
+  }, [taskId, isProcessing, t]);
 
   const handleUploadChange = ({ fileList: newFileList }) => {
     setFileList(newFileList.slice(-1));
@@ -109,22 +109,20 @@ const InitialTranslation = () => {
   const handleAbort = async () => {
     if (!taskId) return;
     try {
-      // Mock API call
-      // In a real scenario: await axios.post(`/api/tasks/${taskId}/abort`);
       console.log(`Aborting task ${taskId}`);
-      message.warn('Translation has been aborted by the user.');
+      message.warn(t('message_warn_aborted'));
       setIsProcessing(false);
       setStatus('failed');
-      setLogs(prev => [...prev, { level: 'WARN', message: 'Task aborted by user.' }]);
+      setLogs(prev => [...prev, { level: 'WARN', message: t('log_aborted') }]);
     } catch (error) {
-      message.error('Failed to abort the translation task.');
+      message.error(t('message_error_abort_failed'));
       console.error('Abort error:', error);
     }
   };
 
   const onFinish = (values) => {
     if (fileList.length === 0) {
-      message.error('Please upload a mod file first!');
+      message.error(t('message_error_upload_first'));
       return;
     }
 
@@ -152,7 +150,7 @@ const InitialTranslation = () => {
     });
 
     setTaskId(null);
-    setLogs([{ level: 'INFO', message: 'Starting translation...' }]);
+    setLogs([{ level: 'INFO', message: t('log_starting') }]);
     setStatus('pending');
     setResultUrl(null);
     setCurrent(2);
@@ -163,10 +161,10 @@ const InitialTranslation = () => {
     })
     .then(response => {
       setTaskId(response.data.task_id);
-      message.success('Translation task started!');
+      message.success(t('message_success_task_started'));
     })
     .catch(error => {
-      message.error('Failed to start translation task.');
+      message.error(t('message_error_task_start_failed'));
       console.error('Translate API error:', error);
       setIsProcessing(false);
       setStatus('failed');
@@ -176,13 +174,13 @@ const InitialTranslation = () => {
 
   const renderBackButton = () => (
     <Button onClick={handleBack} icon={<ArrowLeftOutlined />} style={{ marginRight: 8 }}>
-      Back
+      {t('button_back')}
     </Button>
   );
 
   const steps = [
     {
-      title: 'Upload Mod',
+      title: t('initial_translation_step_upload'),
       icon: <CloudUploadOutlined />,
       content: (
         <Dragger
@@ -193,40 +191,40 @@ const InitialTranslation = () => {
           maxCount={1}
         >
           <p className="ant-upload-drag-icon"><InboxOutlined /></p>
-          <p className="ant-upload-text">Click or drag a .zip mod file to this area to upload</p>
-          <p className="ant-upload-hint">Support for a single .zip file containing your mod's localization files.</p>
+          <p className="ant-upload-text">{t('initial_translation_upload_text')}</p>
+          <p className="ant-upload-hint">{t('initial_translation_upload_hint')}</p>
         </Dragger>
       ),
     },
     {
-      title: 'Configure',
+      title: t('initial_translation_step_configure'),
       icon: <SettingOutlined />,
       content: (
         <>
           <Form form={form} layout="vertical" onFinish={onFinish}>
-            <Form.Item name="game_profile_id" label="Game" rules={[{ required: true }]}>
-              <Select placeholder="Select a game">
+            <Form.Item name="game_profile_id" label={t('form_label_game')} rules={[{ required: true }]}>
+              <Select placeholder={t('form_placeholder_game')}>
                 {Object.entries(config.game_profiles).map(([id, profile]) => (
                   <Option key={id} value={id}>{profile.name}</Option>
                 ))}
               </Select>
             </Form.Item>
-            <Form.Item name="source_lang_code" label="Source Language" rules={[{ required: true }]}>
-              <Select placeholder="Select source language">
+            <Form.Item name="source_lang_code" label={t('form_label_source_language')} rules={[{ required: true }]}>
+              <Select placeholder={t('form_placeholder_source_language')}>
                 {Object.values(config.languages).map(lang => (
                   <Option key={lang.code} value={lang.code}>{lang.name}</Option>
                 ))}
               </Select>
             </Form.Item>
-            <Form.Item name="target_lang_codes" label="Target Language(s)" rules={[{ required: true }]}>
-              <Select mode="multiple" placeholder="Select target language(s)">
+            <Form.Item name="target_lang_codes" label={t('form_label_target_languages')} rules={[{ required: true }]}>
+              <Select mode="multiple" placeholder={t('form_placeholder_target_languages')}>
                 {Object.values(config.languages).map(lang => (
                   <Option key={lang.code} value={lang.code}>{lang.name}</Option>
                 ))}
               </Select>
             </Form.Item>
-            <Form.Item name="api_provider" label="API Provider" rules={[{ required: true }]}>
-              <Select placeholder="Select an API provider">
+            <Form.Item name="api_provider" label={t('form_label_api_provider')} rules={[{ required: true }]}>
+              <Select placeholder={t('form_placeholder_api_provider')}>
                 {config.api_providers.map(provider => (
                   <Option key={provider} value={provider}>{provider}</Option>
                 ))}
@@ -235,7 +233,7 @@ const InitialTranslation = () => {
             <Form.Item>
               <Space>
                 {renderBackButton()}
-                <Button type="primary" htmlType="submit">Start Translation</Button>
+                <Button type="primary" htmlType="submit">{t('button_start_translation')}</Button>
               </Space>
             </Form.Item>
           </Form>
@@ -243,18 +241,18 @@ const InitialTranslation = () => {
       ),
     },
     {
-      title: 'Translate',
+      title: t('initial_translation_step_translate'),
       icon: <SyncOutlined spin={isProcessing} />,
       content: (
         <Space direction="vertical" style={{ width: '100%' }}>
           {translationDetails && (
              <Card>
-                <Descriptions title="Translation Job Details" bordered column={1} size="small">
-                    <Descriptions.Item label="Mod Name">{translationDetails.modName}</Descriptions.Item>
-                    <Descriptions.Item label="Game">{translationDetails.game}</Descriptions.Item>
-                    <Descriptions.Item label="Source Language">{translationDetails.source}</Descriptions.Item>
-                    <Descriptions.Item label="Target Language(s)">{translationDetails.targets}</Descriptions.Item>
-                    <Descriptions.Item label="API Provider">{translationDetails.provider}</Descriptions.Item>
+                <Descriptions title={t('job_details_title')} bordered column={1} size="small">
+                    <Descriptions.Item label={t('job_details_mod_name')}>{translationDetails.modName}</Descriptions.Item>
+                    <Descriptions.Item label={t('job_details_game')}>{translationDetails.game}</Descriptions.Item>
+                    <Descriptions.Item label={t('job_details_source_language')}>{translationDetails.source}</Descriptions.Item>
+                    <Descriptions.Item label={t('job_details_target_languages')}>{translationDetails.targets}</Descriptions.Item>
+                    <Descriptions.Item label={t('job_details_api_provider')}>{translationDetails.provider}</Descriptions.Item>
                 </Descriptions>
             </Card>
           )}
@@ -263,7 +261,7 @@ const InitialTranslation = () => {
             {renderBackButton()}
             {isProcessing && (
               <Button onClick={handleAbort} icon={<StopOutlined />} danger>
-                Abort Translation
+                {t('button_abort_translation')}
               </Button>
             )}
           </Space>
@@ -271,19 +269,19 @@ const InitialTranslation = () => {
       ),
     },
     {
-      title: 'Download',
+      title: t('initial_translation_step_download'),
       icon: <DownloadOutlined />,
       content: (
         <Result
           status={status === 'completed' ? 'success' : 'error'}
-          title={status === 'completed' ? "Translation Successful!" : "Translation Failed"}
-          subTitle={status === 'completed' ? "Your translated mod is ready for download." : "Something went wrong. Please check the logs and try again."}
+          title={status === 'completed' ? t('result_title_success') : t('result_title_failed')}
+          subTitle={status === 'completed' ? t('result_subtitle_success') : t('result_subtitle_failed')}
           extra={
             <Space>
               {renderBackButton()}
               {status === 'completed' && resultUrl && (
                 <Button type="primary" href={resultUrl} icon={<DownloadOutlined />}>
-                  Download Translated Mod
+                  {t('button_download_mod')}
                 </Button>
               )}
             </Space>
@@ -293,9 +291,11 @@ const InitialTranslation = () => {
     },
   ];
 
+  const translatedSteps = steps.map(step => ({ ...step, title: t(step.title) }));
+
   return (
     <div>
-      <Steps current={current} items={steps.map(s => ({ title: s.title, icon: s.icon }))} />
+      <Steps current={current} items={translatedSteps.map(s => ({title: s.title, icon: s.icon}))} />
       <div className="steps-content" style={{ marginTop: '24px' }}>
         {steps[current].content}
       </div>
