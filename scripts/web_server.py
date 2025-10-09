@@ -5,8 +5,8 @@ import uuid
 import shutil
 import zipfile
 import logging
-from fastapi import FastAPI, UploadFile, File, BackgroundTasks, HTTPException, Form
-from fastapi.responses import FileResponse
+from fastapi import FastAPI, UploadFile, File, BackgroundTasks, HTTPException, Form, Query
+from fastapi.responses import FileResponse, PlainTextResponse
 from typing import Dict, List
 from dotenv import load_dotenv
 
@@ -225,23 +225,44 @@ def build_docs_tree(directory: str, parent_key: str = ''):
 @app.get("/api/docs-tree")
 def get_docs_tree():
     """
-    Scans the documentation directory and returns a file tree structure.
+    Scans the project's root 'docs' directory and returns a file tree structure.
     """
-    # Path to the docs directory relative to the project root
-    docs_path = os.path.join(project_root, 'scripts', 'react-ui', 'public', 'docs')
+    # Correctly point to the root 'docs' directory
+    docs_path = os.path.join(project_root, 'docs')
     tree_data = build_docs_tree(docs_path)
-    # The frontend expects a structure per language
-    # The top-level items from build_docs_tree will be the language folders ('en', 'zh')
-    # We need to re-structure it slightly to match the old mock data structure if needed,
-    # or just send the whole tree. Let's start by sending the tree as is.
-    # The old structure was { en: [...], zh: [...] }. The new one will be [ {title: 'en', ...}, {title: 'zh', ...} ]
-    # We can have the frontend adapt to this new, more generic structure.
-    # However, let's process this to create a dict keyed by lang.
+
     lang_tree = {}
     for lang_node in tree_data:
         lang_tree[lang_node['title']] = lang_node['children']
 
     return lang_tree
+
+@app.get("/api/doc-content", response_class=PlainTextResponse)
+def get_doc_content(path: str = Query(...)):
+    """
+    Safely reads and returns the content of a specific markdown file from the root 'docs' directory.
+    Includes security checks to prevent directory traversal.
+    """
+    if ".." in path:
+        raise HTTPException(status_code=400, detail="Invalid path.")
+
+    # Create a secure, absolute path to the requested file
+    docs_dir = os.path.abspath(os.path.join(project_root, 'docs'))
+    requested_path = os.path.abspath(os.path.join(docs_dir, path))
+
+    # Security check: Ensure the requested path is still within the 'docs' directory
+    if not requested_path.startswith(docs_dir):
+        raise HTTPException(status_code=403, detail="Access forbidden.")
+
+    if not os.path.isfile(requested_path) or not requested_path.endswith(".md"):
+        raise HTTPException(status_code=404, detail="File not found or not a markdown file.")
+
+    try:
+        with open(requested_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        return content
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error reading file: {e}")
 
 
 @app.get("/")
