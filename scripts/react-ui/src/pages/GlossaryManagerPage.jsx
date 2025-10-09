@@ -71,10 +71,11 @@ const GlossaryManagerPage = () => {
         setIsLoadingContent(true);
         try {
             const response = await axios.get(`/api/glossary/content?game_id=${gameId}&file_name=${fileName}`);
-            // Ensure translations object exists for every entry
+            // Ensure translations object and variants array exist for every entry
             const sanitizedData = response.data.map(entry => ({
                 ...entry,
-                translations: entry.translations || {}
+                translations: entry.translations || {},
+                variants: Array.isArray(entry.variants) ? entry.variants : []
             }));
             setData(sanitizedData);
         } catch (error) {
@@ -98,7 +99,7 @@ const GlossaryManagerPage = () => {
             source: entry.source,
             translation: entry.translations[selectedTargetLang] || '',
             notes: entry.notes,
-            variants: entry.variants ? entry.variants.join(', ') : '',
+            variants: Array.isArray(entry.variants) ? entry.variants.join(', ') : '',
         });
         setIsModalVisible(true);
     };
@@ -176,7 +177,7 @@ const GlossaryManagerPage = () => {
         { accessorKey: 'source', header: () => t('glossary_source_text'), cell: info => info.getValue() },
         { id: 'translation', header: () => t('glossary_translation'), cell: ({ row }) => row.original.translations[selectedTargetLang] || '' },
         { accessorKey: 'notes', header: () => t('glossary_notes'), cell: info => info.getValue() },
-        { accessorKey: 'variants', header: () => t('glossary_variants'), cell: info => <>{info.getValue()?.map(v => <Tag key={v}>{v}</Tag>)}</> },
+        { accessorKey: 'variants', header: () => t('glossary_variants'), cell: info => <>{Array.isArray(info.getValue()) ? info.getValue().map(v => <Tag key={v}>{v}</Tag>) : null}</> },
         { id: 'actions', header: () => t('glossary_actions'), cell: ({ row }) => (
             <Space size="middle">
                 <Button icon={<EditOutlined />} onClick={() => handleEdit(row.original)} />
