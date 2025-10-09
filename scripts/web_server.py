@@ -5,8 +5,8 @@ import uuid
 import shutil
 import zipfile
 import logging
-from fastapi import FastAPI, UploadFile, File, BackgroundTasks, HTTPException, Form
-from fastapi.responses import FileResponse
+from fastapi import FastAPI, UploadFile, File, BackgroundTasks, HTTPException, Form, Query
+from fastapi.responses import FileResponse, PlainTextResponse
 from typing import Dict, List
 from dotenv import load_dotenv
 
@@ -312,38 +312,33 @@ def get_glossary_content(game_id: str, file_name: str):
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Failed to read or parse glossary file: {e}")
 
-@app.post("/api/glossary/content")
-def update_glossary_content(game_id: str, file_name: str, payload: UpdateGlossaryRequest):
+@app.get("/api/doc-content", response_class=PlainTextResponse)
+def get_doc_content(path: str = Query(...)):
     """
-    Updates the content of a specific glossary JSON file.
+    Safely reads and returns the content of a specific markdown file from the root 'docs' directory.
+    Includes security checks to prevent directory traversal.
     """
-    file_path = os.path.join(GLOSSARY_DIR, game_id, file_name)
-    if not os.path.exists(file_path):
-        raise HTTPException(status_code=404, detail="Glossary file not found.")
+    if ".." in path:
+        raise HTTPException(status_code=400, detail="Invalid path.")
+
+    # Create a secure, absolute path to the requested file
+    docs_dir = os.path.abspath(os.path.join(project_root, 'docs'))
+    requested_path = os.path.abspath(os.path.join(docs_dir, path))
+
+    # Security check: Ensure the requested path is still within the 'docs' directory
+    if not requested_path.startswith(docs_dir):
+        raise HTTPException(status_code=403, detail="Access forbidden.")
+
+    if not os.path.isfile(requested_path) or not requested_path.endswith(".md"):
+        raise HTTPException(status_code=404, detail="File not found or not a markdown file.")
 
     try:
-        # 1. Read existing metadata
-        with open(file_path, 'r', encoding='utf-8') as f:
-            original_data = json.load(f)
-            metadata = original_data.get("metadata", {})
-
-        # 2. Create a backup
-        backup_path = file_path + ".bak"
-        shutil.copy2(file_path, backup_path)
-
-        # 3. Prepare new content
-        new_data = {
-            "metadata": metadata,
-            "entries": [entry.model_dump(by_alias=True) for entry in payload.entries]
-        }
-
-        # 4. Write the new content back to the file
-        with open(file_path, 'w', encoding='utf-8') as f:
-            json.dump(new_data, f, ensure_ascii=False, indent=2)
-
-        return {"status": "success", "message": f"Glossary file '{file_name}' for game '{game_id}' updated successfully."}
+        with open(requested_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        return content
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Failed to update glossary file: {e}")
+        raise HTTPException(status_code=500, detail=f"Error reading file: {e}")
+
 
 @app.get("/")
 def read_root():
