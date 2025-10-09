@@ -5,9 +5,12 @@ import uuid
 import shutil
 import zipfile
 import logging
+import json
+import re
 from fastapi import FastAPI, UploadFile, File, BackgroundTasks, HTTPException, Form, Query
 from fastapi.responses import FileResponse, PlainTextResponse
-from typing import Dict, List
+from typing import Dict, List, Optional
+from pydantic import BaseModel, Field, field_validator
 from dotenv import load_dotenv
 
 # Load environment variables from .env file
