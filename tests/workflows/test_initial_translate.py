@@ -56,8 +56,9 @@ def setup_test_environment(tmp_path, mocker):
     mocker.patch("scripts.core.glossary_manager.glossary_manager.load_game_glossary", return_value=True)
     mocker.patch("scripts.core.glossary_manager.glossary_manager.get_glossary_stats", return_value={'total_entries': 0})
 
-    # Mock i18n 以避免加载语言文件
-    mocker.patch.object(i18n, 't', side_effect=lambda key, **kwargs: key)
+    # Mock i18n to produce a string containing both the key and its arguments,
+    # so that assertions on log messages with parameters can pass.
+    mocker.patch.object(i18n, 't', side_effect=lambda key, **kwargs: f"{key} {' '.join(map(str, kwargs.values()))}")
 
     # Mock create_proofreading_tracker
     mocker.patch("scripts.workflows.initial_translate.create_proofreading_tracker")

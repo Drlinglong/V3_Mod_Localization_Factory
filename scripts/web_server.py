@@ -5,8 +5,8 @@ import uuid
 import shutil
 import zipfile
 import logging
-from fastapi import FastAPI, UploadFile, File, BackgroundTasks, HTTPException, Form
-from fastapi.responses import FileResponse
+from fastapi import FastAPI, UploadFile, File, BackgroundTasks, HTTPException, Form, Query
+from fastapi.responses import FileResponse, PlainTextResponse
 from typing import Dict, List
 from dotenv import load_dotenv
 
@@ -200,150 +200,74 @@ def get_config():
         "api_providers": list(API_PROVIDERS.keys())
     }
 
-#<-- Glossar-API-Endpunkte -->
-import json
-from pydantic import BaseModel, Field
-
-GLOSSARY_DIR = os.path.join(project_root, "data", "glossary")
-
-# --- Pydantic Models for Glossary ---
-class GlossaryTranslation(BaseModel):
-    en: str
-    zh_cn: str = Field(alias='zh-CN')
-
-class GlossaryMetadata(BaseModel):
-    part_of_speech: str
-    remarks: str | None = None
-
-class GlossaryEntry(BaseModel):
-    translations: GlossaryTranslation
-    id: str
-    metadata: GlossaryMetadata
-    variants: dict | None = None
-
-class UpdateGlossaryRequest(BaseModel):
-    entries: List[GlossaryEntry]
-
-class CreateGlossaryFileRequest(BaseModel):
-    game_id: str
-    file_name: str
-
-
-@app.post("/api/glossary/file")
-def create_glossary_file(payload: CreateGlossaryFileRequest):
+def build_docs_tree(directory: str, parent_key: str = ''):
     """
-    Creates a new, empty glossary JSON file for a given game.
+    Recursively builds a tree structure for Ant Design's Tree component.
     """
-    game_id = payload.game_id
-    file_name = payload.file_name
+    tree = []
+    if not os.path.isdir(directory):
+        return []
 
-    # --- Validation ---
-    if not file_name.endswith(".json"):
-        raise HTTPException(status_code=400, detail="File name must end with .json")
+    for item in sorted(os.listdir(directory)):
+        path = os.path.join(directory, item)
+        key = os.path.join(parent_key, item).replace('\\', '/')
 
-    # Basic security check for filename
-    if ".." in file_name or "/" in file_name or "\\" in file_name:
-        raise HTTPException(status_code=400, detail="Invalid characters in file name.")
+        if os.path.isdir(path):
+            children = build_docs_tree(path, key)
+            # Only add directories that are not empty
+            if children:
+                tree.append({"title": item, "key": key, "children": children})
+        else:
+            if item.endswith(".md"):
+                tree.append({"title": item, "key": key, "isLeaf": True})
+    return tree
 
-    game_path = os.path.join(GLOSSARY_DIR, game_id)
-    if not os.path.isdir(game_path):
-        raise HTTPException(status_code=404, detail=f"Game '{game_id}' not found.")
-
-    file_path = os.path.join(game_path, file_name)
-    if os.path.exists(file_path):
-        raise HTTPException(status_code=409, detail=f"File '{file_name}' already exists in game '{game_id}'.")
-
-    # --- File Creation ---
-    try:
-        default_content = {
-            "metadata": {
-                "description": f"New glossary file: {file_name}",
-                "last_updated": ""
-            },
-            "entries": []
-        }
-        with open(file_path, 'w', encoding='utf-8') as f:
-            json.dump(default_content, f, ensure_ascii=False, indent=2)
-
-        return {"status": "success", "message": f"Successfully created '{file_name}' for game '{game_id}'."}
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Failed to create glossary file: {e}")
-
-
-@app.get("/api/glossary/tree")
-def get_glossary_tree():
+@app.get("/api/docs-tree")
+def get_docs_tree():
     """
-    Scans the data/glossary directory and returns a tree structure
-    for the Ant Design Tree component.
+    Scans the project's root 'docs' directory and returns a file tree structure.
     """
-    tree_data = []
-    for game_id in os.listdir(GLOSSARY_DIR):
-        game_path = os.path.join(GLOSSARY_DIR, game_id)
-        if os.path.isdir(game_path):
-            game_node = {
-                "title": game_id,
-                "key": game_id,
-                "children": []
-            }
-            for filename in os.listdir(game_path):
-                if filename.endswith(".json"):
-                    game_node["children"].append({
-                        "title": filename,
-                        "key": f"{game_id}|{filename}", # Use a separator for easy splitting on the frontend
-                        "isLeaf": True
-                    })
-            # Only add games that have at least one JSON file
-            if game_node["children"]:
-                tree_data.append(game_node)
-    return tree_data
+    # Correctly point to the root 'docs' directory
+    docs_path = os.path.join(project_root, 'docs')
+    tree_data = build_docs_tree(docs_path)
 
-@app.get("/api/glossary/content")
-def get_glossary_content(game_id: str, file_name: str):
-    """
-    Reads and returns the content of a specific glossary JSON file.
-    """
-    file_path = os.path.join(GLOSSARY_DIR, game_id, file_name)
-    if not os.path.exists(file_path):
-        raise HTTPException(status_code=404, detail="Glossary file not found.")
-    try:
-        with open(file_path, 'r', encoding='utf-8') as f:
-            data = json.load(f)
-        return data.get("entries", [])
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Failed to read or parse glossary file: {e}")
+    lang_tree = {}
+    for lang_node in tree_data:
+        # This post-processing step is designed to structure the output by language folders (e.g., 'en', 'zh').
+        # We should only process nodes that are directories (i.e., have a 'children' key)
+        # and ignore any standalone files at the root of the /docs directory.
+        if 'children' in lang_node:
+            lang_tree[lang_node['title']] = lang_node['children']
 
-@app.post("/api/glossary/content")
-def update_glossary_content(game_id: str, file_name: str, payload: UpdateGlossaryRequest):
+    return lang_tree
+
+@app.get("/api/doc-content", response_class=PlainTextResponse)
+def get_doc_content(path: str = Query(...)):
     """
-    Updates the content of a specific glossary JSON file.
+    Safely reads and returns the content of a specific markdown file from the root 'docs' directory.
+    Includes security checks to prevent directory traversal.
     """
-    file_path = os.path.join(GLOSSARY_DIR, game_id, file_name)
-    if not os.path.exists(file_path):
-        raise HTTPException(status_code=404, detail="Glossary file not found.")
+    if ".." in path:
+        raise HTTPException(status_code=400, detail="Invalid path.")
+
+    # Create a secure, absolute path to the requested file
+    docs_dir = os.path.abspath(os.path.join(project_root, 'docs'))
+    requested_path = os.path.abspath(os.path.join(docs_dir, path))
+
+    # Security check: Ensure the requested path is still within the 'docs' directory
+    if not requested_path.startswith(docs_dir):
+        raise HTTPException(status_code=403, detail="Access forbidden.")
+
+    if not os.path.isfile(requested_path) or not requested_path.endswith(".md"):
+        raise HTTPException(status_code=404, detail="File not found or not a markdown file.")
 
     try:
-        # 1. Read existing metadata
-        with open(file_path, 'r', encoding='utf-8') as f:
-            original_data = json.load(f)
-            metadata = original_data.get("metadata", {})
-
-        # 2. Create a backup
-        backup_path = file_path + ".bak"
-        shutil.copy2(file_path, backup_path)
-
-        # 3. Prepare new content
-        new_data = {
-            "metadata": metadata,
-            "entries": [entry.model_dump(by_alias=True) for entry in payload.entries]
-        }
-
-        # 4. Write the new content back to the file
-        with open(file_path, 'w', encoding='utf-8') as f:
-            json.dump(new_data, f, ensure_ascii=False, indent=2)
-
-        return {"status": "success", "message": f"Glossary file '{file_name}' for game '{game_id}' updated successfully."}
+        with open(requested_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        return content
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Failed to update glossary file: {e}")
+        raise HTTPException(status_code=500, detail=f"Error reading file: {e}")
+
 
 @app.get("/")
 def read_root():
