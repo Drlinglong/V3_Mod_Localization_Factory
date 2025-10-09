@@ -1,6 +1,5 @@
 import React, { createContext, useState, useEffect, useMemo } from 'react';
-import './themes/theme-victorian.css';
-import './themes/theme-byzantine.css';
+import './themes/index.css';
 
 // 1. Create the context
 const ThemeContext = createContext();
