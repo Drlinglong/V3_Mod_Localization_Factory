@@ -18,6 +18,7 @@ project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 if project_root not in sys.path:
     sys.path.insert(0, project_root)
 
+# Import using absolute imports from project root
 from scripts.app_settings import GAME_PROFILES, LANGUAGES, API_PROVIDERS, SOURCE_DIR, DEST_DIR
 from scripts.workflows import initial_translate
 from scripts.utils import logger, i18n
