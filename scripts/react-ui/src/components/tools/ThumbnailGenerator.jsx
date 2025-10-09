@@ -255,6 +255,72 @@ const ThumbnailGenerator = () => {
         });
     };
 
+    const handleAddAllFlags = () => {
+        const flagWidth = 80;
+        const flagHeight = 60;
+        const padding = 10;
+        const canvasWidth = 512;
+        const canvasHeight = 512;
+
+        const positions = [
+            // Left side
+            { x: padding, y: padding },
+            { x: padding, y: padding + (canvasHeight - padding * 2 - flagHeight) / 4 * 1 },
+            { x: padding, y: padding + (canvasHeight - padding * 2 - flagHeight) / 4 * 2 },
+            { x: padding, y: padding + (canvasHeight - padding * 2 - flagHeight) / 4 * 3 },
+            { x: padding, y: canvasHeight - flagHeight - padding },
+            // Right side
+            { x: canvasWidth - flagWidth - padding, y: padding },
+            { x: canvasWidth - flagWidth - padding, y: padding + (canvasHeight - padding * 2 - flagHeight) / 4 * 1 },
+            { x: canvasWidth - flagWidth - padding, y: padding + (canvasHeight - padding * 2 - flagHeight) / 4 * 2 },
+            { x: canvasWidth - flagWidth - padding, y: padding + (canvasHeight - padding * 2 - flagHeight) / 4 * 3 },
+            { x: canvasWidth - flagWidth - padding, y: canvasHeight - flagHeight - padding },
+            // Bottom center
+            { x: (canvasWidth - flagWidth) / 2, y: canvasHeight - flagHeight - padding },
+        ];
+
+        const flagPromises = AVAILABLE_FLAGS.map(flag => {
+            return new Promise((resolve) => {
+                const img = new window.Image();
+                img.src = flagSvgs[flag.code];
+                img.onload = () => resolve({img, code: flag.code});
+            });
+        });
+
+        Promise.all(flagPromises).then(loadedFlags => {
+            const newFlagElements = loadedFlags.map((flagData, index) => {
+                 // The last flag from app_settings is Turkish, let's put it at the bottom
+                if (flagData.code === 'tr') {
+                    return {
+                        type: 'image',
+                        image: flagData.img,
+                        x: positions[10].x,
+                        y: positions[10].y,
+                        width: flagWidth,
+                        height: flagHeight,
+                        id: uuidv4(),
+                    };
+                }
+                // Distribute the rest
+                return {
+                    type: 'image',
+                    image: flagData.img,
+                    x: positions[index].x,
+                    y: positions[index].y,
+                    width: flagWidth,
+                    height: flagHeight,
+                    id: uuidv4(),
+                };
+            }).filter((_, index) => index < positions.length);
+
+            setElements(prev => [...prev, ...newFlagElements]);
+        });
+    };
+
+    const handleResetCanvas = () => {
+        setElements([]);
+    };
+
     const checkDeselect = (e) => {
       const clickedOnEmpty = e.target === e.target.getStage();
       if (clickedOnEmpty) selectShape(null);
@@ -295,6 +361,7 @@ const ThumbnailGenerator = () => {
     };
 
     const selectedElement = elements.find(el => el.id === selectedId);
+    const isCanvasEmpty = !backgroundImage && elements.length === 0;
 
     return (
       <div className="thumbnail-generator-layout">
@@ -315,27 +382,36 @@ const ThumbnailGenerator = () => {
             </div>
           </div>
           <div className="tool-section">
-              <Button onClick={handleAddText}>{t('thumbnail_generator.add_text')}</Button>
+              <Button onClick={handleAddText} style={{ marginBottom: '8px' }}>{t('thumbnail_generator.add_text')}</Button>
+              <Button onClick={handleAddAllFlags} style={{ marginBottom: '8px' }}>{t('thumbnail_generator.add_all_flags')}</Button>
+              <Button danger onClick={handleResetCanvas}>{t('thumbnail_generator.reset_canvas')}</Button>
           </div>
         </div>
         <div className="canvas-panel" onDrop={handleDrop} onDragOver={handleDragOver}>
-          <div id="thumbnail-canvas" ref={canvasContainerRef}>
-            <Stage width={512} height={512} onMouseDown={checkDeselect} onTouchStart={checkDeselect}>
-              <Layer>
-                <Rect width={512} height={512} fill={backgroundColor} />
-                {backgroundImage && <KonvaImage image={backgroundImage} width={512} height={512} />}
-                {elements.map((item) => (
-                   <DraggableItem
-                      key={item.id}
-                      itemProps={item}
-                      isSelected={item.id === selectedId}
-                      onSelect={() => selectShape(item.id === selectedId ? null : item.id)}
-                      onChange={(newAttrs) => updateElement(item.id, newAttrs)}
-                    />
-                ))}
-              </Layer>
-            </Stage>
-          </div>
+            {isCanvasEmpty ? (
+                <div className="canvas-placeholder">
+                    <UploadOutlined style={{ fontSize: '48px', color: '#ccc' }} />
+                    <p style={{ color: '#aaa', marginTop: '16px' }}>{t('thumbnail_generator.canvas_placeholder')}</p>
+                </div>
+            ) : (
+                <div id="thumbnail-canvas" ref={canvasContainerRef}>
+                    <Stage width={512} height={512} onMouseDown={checkDeselect} onTouchStart={checkDeselect}>
+                    <Layer>
+                        <Rect width={512} height={512} fill={backgroundColor} />
+                        {backgroundImage && <KonvaImage image={backgroundImage} width={512} height={512} />}
+                        {elements.map((item) => (
+                        <DraggableItem
+                            key={item.id}
+                            itemProps={item}
+                            isSelected={item.id === selectedId}
+                            onSelect={() => selectShape(item.id === selectedId ? null : item.id)}
+                            onChange={(newAttrs) => updateElement(item.id, newAttrs)}
+                        />
+                        ))}
+                    </Layer>
+                    </Stage>
+                </div>
+            )}
           <Button type="primary" onClick={handleExport} style={{ marginTop: '16px' }}>
             {t('thumbnail_generator.download_thumbnail')}
           </Button>
