@@ -1,7 +1,4 @@
 <div align="center">
-
-  <img src="gfx/Project Remis.png" width="150" alt="Project Remis Logo">
-
   <h1>Project Remis</h1>
   <strong>P社Mod本地化工厂 (Paradox Mod Localization Factory)</strong>
 
