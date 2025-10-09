@@ -54,7 +54,7 @@ def run(mod_name: str,
 
     handler = api_handler.get_handler(selected_provider, model_name=gemini_cli_model)
     if not handler or not handler.client:
-        logging.warning(i18n.t("api_client_init_fail"))
+        logging.warning(i18n.t("api_key_not_configured", provider=selected_provider))
         return
 
     # ───────────── 2.5. 加载游戏专用词典 ─────────────
@@ -114,6 +114,10 @@ def run(mod_name: str,
                     "key_map": km,
                     "is_custom_loc": True
                 })
+
+    if not all_files_data:
+        logging.warning(i18n.t("no_localisable_files_found", lang_name=source_lang['key']))
+        return
 
     # ───────────── 5. 多语言并行翻译 ─────────────
     for target_lang in target_languages:
