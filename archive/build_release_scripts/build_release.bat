@@ -7,7 +7,7 @@ set ENV_NAME=local_factory
 
 REM =================================================================
 REM Project Remis - Portable Release Build Script (Final Architect's Edition)
-REM Version: 1.1.8
+REM Version: 1.1.9
 REM Assumption: This script is run from an already activated Conda/Python environment.
 REM =================================================================
 
@@ -23,7 +23,7 @@ set "SCRIPT_DIR=%~dp0"
 set "PROJECT_ROOT=%SCRIPT_DIR%..\..\"
 
 set "PROJECT_NAME=Project_Remis"
-set "VERSION=1.1.8"
+set "VERSION=1.1.9"
 set "RELEASE_DIR=%PROJECT_ROOT%\%PROJECT_NAME%_%VERSION%"
 set "RELEASE_DIR_NAME=%PROJECT_NAME%_%VERSION%"
 
