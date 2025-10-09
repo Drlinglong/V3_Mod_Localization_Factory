@@ -42,23 +42,28 @@ const GlossaryManagerPage = () => {
     const [isLoadingTree, setIsLoadingTree] = useState(true);
     const [isLoadingContent, setIsLoadingContent] = useState(false);
     const [isSaving, setIsSaving] = useState(false);
+    const [isFileCreateModalVisible, setIsFileCreateModalVisible] = useState(false);
+    const [newFileForm] = Form.useForm();
+
 
     // --- Data Fetching ---
-    useEffect(() => {
-        const fetchTreeData = async () => {
-            try {
-                const response = await axios.get('/api/glossary/tree');
-                setTreeData(response.data);
-                if (response.data.length > 0) {
-                    setSelectedGame(response.data[0].key);
-                }
-            } catch (error) {
-                message.error('Failed to load glossary file tree.');
-                console.error('Fetch tree error:', error);
-            } finally {
-                setIsLoadingTree(false);
+    const fetchTreeData = async () => {
+        setIsLoadingTree(true);
+        try {
+            const response = await axios.get('/api/glossary/tree');
+            setTreeData(response.data);
+            if (response.data.length > 0 && !selectedGame) {
+                setSelectedGame(response.data[0].key);
             }
-        };
+        } catch (error) {
+            message.error('Failed to load glossary file tree.');
+            console.error('Fetch tree error:', error);
+        } finally {
+            setIsLoadingTree(false);
+        }
+    };
+
+    useEffect(() => {
         fetchTreeData();
     }, []);
 
@@ -204,7 +209,16 @@ const GlossaryManagerPage = () => {
                                    </Select>
                                 </div>
                                 <div>
-                                    <Title level={5}>{t('glossary_files')}</Title>
+                                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                                      <Title level={5} style={{ margin: 0 }}>{t('glossary_files')}</Title>
+                                      <Button
+                                        icon={<PlusOutlined />}
+                                        size="small"
+                                        onClick={() => setIsFileCreateModalVisible(true)}
+                                        disabled={!selectedGame}
+                                        data-testid="add-new-glossary-button"
+                                      />
+                                    </div>
                                     {selectedGame && <Tree
                                         defaultExpandAll
                                         treeData={treeData.find(n => n.key === selectedGame)?.children}
@@ -253,6 +267,45 @@ const GlossaryManagerPage = () => {
                         </Form.Item>
                         <Form.Item name="notes" label={t('glossary_notes')}><Input.TextArea /></Form.Item>
                         <Form.Item name="variants" label={t('glossary_variants')} tooltip={t('glossary_variants_tooltip')}><Input placeholder={t('glossary_variants_placeholder')} /></Form.Item>
+                    </Form>
+                </Modal>
+
+                <Modal
+                  title={t('glossary_create_new_file', 'Create New Glossary File')}
+                  open={isFileCreateModalVisible}
+                  onCancel={() => setIsFileCreateModalVisible(false)}
+                  onOk={() => {
+                      newFileForm.validateFields().then(async values => {
+                          try {
+                              setIsSaving(true);
+                              await axios.post('/api/glossary/file', {
+                                  game_id: selectedGame,
+                                  file_name: values.fileName,
+                              });
+                              message.success(`Successfully created ${values.fileName}`);
+                              setIsFileCreateModalVisible(false);
+                              fetchTreeData(); // Refresh the tree
+                          } catch (error) {
+                              message.error(error.response?.data?.detail || 'Failed to create file.');
+                              console.error('Create file error:', error);
+                          } finally {
+                              setIsSaving(false);
+                          }
+                      });
+                  }}
+                  confirmLoading={isSaving}
+                >
+                    <Form form={newFileForm} layout="vertical">
+                        <Form.Item
+                          name="fileName"
+                          label={t('glossary_file_name', 'File Name')}
+                          rules={[
+                              { required: true, message: t('glossary_filename_required', 'Please enter a file name.') },
+                              { pattern: /^[a-zA-Z0-9_]+\.json$/, message: t('glossary_filename_invalid', 'Must be a valid name ending in .json (e.g., my_glossary.json)') }
+                          ]}
+                        >
+                            <Input placeholder="e.g., my_new_glossary.json" />
+                        </Form.Item>
                     </Form>
                 </Modal>
             </div>
