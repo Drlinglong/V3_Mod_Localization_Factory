@@ -53,7 +53,7 @@ const InitialTranslation = () => {
         message.error(t('message_error_load_config'));
         console.error('Config fetch error:', error);
       });
-  }, [t]);
+  }, []);
 
   useEffect(() => {
     if (!taskId || !isProcessing) return;
