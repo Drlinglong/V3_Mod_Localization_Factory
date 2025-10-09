@@ -2,27 +2,49 @@ import React, { useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Stage, Layer, Rect, Image as KonvaImage, Transformer, Text as KonvaText } from 'react-konva';
 import { Button } from 'antd';
+import { UploadOutlined } from '@ant-design/icons';
 import { v4 as uuidv4 } from 'uuid';
 import html2canvas from 'html2canvas';
 
 import './ThumbnailGenerator.css';
 
-import flagCn from '../../assets/flags/cn.svg';
-import flagUs from '../../assets/flags/us.svg';
-import flagJp from '../../assets/flags/jp.svg';
+import flagEn from '../../assets/flags/us.svg';
+import flagZhCN from '../../assets/flags/cn.svg';
+import flagFr from '../../assets/flags/fr.svg';
 import flagDe from '../../assets/flags/de.svg';
+import flagEs from '../../assets/flags/es.svg';
+import flagJa from '../../assets/flags/jp.svg';
+import flagKo from '../../assets/flags/ko.svg';
+import flagPl from '../../assets/flags/pl.svg';
+import flagPtBR from '../../assets/flags/br.svg';
+import flagRu from '../../assets/flags/ru.svg';
+import flagTr from '../../assets/flags/tr.svg';
 
 const flagSvgs = {
-    cn: flagCn,
-    us: flagUs,
-    jp: flagJp,
-    de: flagDe,
+    'en': flagEn,
+    'zh-CN': flagZhCN,
+    'fr': flagFr,
+    'de': flagDe,
+    'es': flagEs,
+    'ja': flagJa,
+    'ko': flagKo,
+    'pl': flagPl,
+    'pt-BR': flagPtBR,
+    'ru': flagRu,
+    'tr': flagTr,
 };
 const AVAILABLE_FLAGS = [
-    { code: 'cn', name: '简体中文' },
-    { code: 'us', name: 'English' },
-    { code: 'jp', name: '日本語' },
-    { code: 'de', name: 'Deutsch' },
+    { "code": "en",    "name": "English" },
+    { "code": "zh-CN", "name": "简体中文" },
+    { "code": "fr",    "name": "Français" },
+    { "code": "de",    "name": "Deutsch" },
+    { "code": "es",    "name": "Español" },
+    { "code": "ja",    "name": "日本語" },
+    { "code": "ko",    "name": "한국어" },
+    { "code": "pl",    "name": "Polski" },
+    { "code": "pt-BR", "name": "Português do Brasil" },
+    { "code": "ru",    "name": "Русский" },
+    { "code": "tr",    "name": "Türkçe" }
 ];
 
 const AVAILABLE_FONTS = ['Arial', 'Verdana', 'Times New Roman', 'Courier New', 'Georgia', 'Comic Sans MS'];
@@ -38,6 +60,14 @@ const DraggableItem = ({ itemProps, isSelected, onSelect, onChange }) => {
         trRef.current.getLayer().batchDraw();
       }
     }, [isSelected]);
+
+    const itemStyle = isSelected ? {
+        shadowColor: 'black',
+        shadowBlur: 10,
+        shadowOpacity: 0.6,
+        shadowOffsetX: 5,
+        shadowOffsetY: 5,
+    } : {};
 
     const commonProps = {
       onClick: onSelect,
@@ -66,11 +96,12 @@ const DraggableItem = ({ itemProps, isSelected, onSelect, onChange }) => {
 
     return (
       <>
-        {itemProps.type === 'image' && <KonvaImage {...commonProps} {...itemProps} />}
+        {itemProps.type === 'image' && <KonvaImage {...commonProps} {...itemProps} {...itemStyle} />}
         {itemProps.type === 'text' && (
           <KonvaText
             {...commonProps}
             {...itemProps}
+            {...itemStyle}
             // special handling for text resizing
             onTransform={() => {
                 const node = shapeRef.current;
@@ -90,6 +121,8 @@ const DraggableItem = ({ itemProps, isSelected, onSelect, onChange }) => {
         {isSelected && (
           <Transformer
             ref={trRef}
+            borderStroke="#007bff"
+            borderStrokeWidth={2}
             boundBoxFunc={(oldBox, newBox) => {
               if (newBox.width < 5 || newBox.height < 5) return oldBox;
               return newBox;
@@ -103,6 +136,8 @@ const DraggableItem = ({ itemProps, isSelected, onSelect, onChange }) => {
 const ThumbnailGenerator = () => {
     const { t } = useTranslation();
     const canvasContainerRef = useRef(null);
+    const modImageInputRef = useRef(null);
+    const bgImageInputRef = useRef(null);
     const [backgroundColor, setBackgroundColor] = useState('#ffffff');
     const [backgroundImage, setBackgroundImage] = useState(null);
     const [elements, setElements] = useState([]);
@@ -130,46 +165,65 @@ const ThumbnailGenerator = () => {
       setElements((prev) => [...prev, newElement]);
     };
 
+    const processAndAddImage = (file, isModImage = false) => {
+        const reader = new FileReader();
+        reader.onload = () => {
+            const img = new window.Image();
+            img.src = reader.result;
+            img.onload = () => {
+                const maxWidth = isModImage ? 512 : 128;
+                const maxHeight = isModImage ? 512 : 128;
+                let { width, height } = img;
+                if (width > height) {
+                    if (width > maxWidth) {
+                        height *= maxWidth / width;
+                        width = maxWidth;
+                    }
+                } else if (height > maxHeight) {
+                    width *= maxHeight / height;
+                    height = maxHeight;
+                }
+
+                const newImage = {
+                    type: 'image',
+                    image: img,
+                    x: isModImage ? (512 - width) / 2 : 50,
+                    y: isModImage ? (512 - height) / 2 : 50,
+                    width,
+                    height,
+                    id: uuidv4(),
+                };
+                if (isModImage) {
+                    setElements(prev => [newImage, ...prev.filter(el => el.isModImage !== true)]);
+                } else {
+                    addElement(newImage);
+                }
+            };
+        };
+        reader.readAsDataURL(file);
+    };
+
     const handleImageUpload = (e, isModImage = false) => {
         if (e.target.files && e.target.files[0]) {
-            const file = e.target.files[0];
-            const reader = new FileReader();
-            reader.onload = () => {
-                const img = new window.Image();
-                img.src = reader.result;
-                img.onload = () => {
-                    const maxWidth = isModImage ? 512 : 128;
-                    const maxHeight = isModImage ? 512 : 128;
-                    let { width, height } = img;
-                    if (width > height) {
-                        if (width > maxWidth) {
-                            height *= maxWidth / width;
-                            width = maxWidth;
-                        }
-                    } else if (height > maxHeight) {
-                        width *= maxHeight / height;
-                        height = maxHeight;
-                    }
-
-                    const newImage = {
-                        type: 'image',
-                        image: img,
-                        x: isModImage ? (512 - width) / 2 : 50,
-                        y: isModImage ? (512 - height) / 2 : 50,
-                        width,
-                        height,
-                        id: uuidv4(),
-                    };
-                    if (isModImage) {
-                        setElements(prev => [newImage, ...prev.filter(el => el.isModImage !== true)]);
-                    } else {
-                        addElement(newImage);
-                    }
-                };
-            };
-            reader.readAsDataURL(file);
+            processAndAddImage(e.target.files[0], isModImage);
             e.target.value = null;
         }
+    };
+
+    const handleDrop = (e) => {
+        e.preventDefault();
+        if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
+            for (const file of e.dataTransfer.files) {
+                if (file.type.startsWith('image/')) {
+                    processAndAddImage(file, false); // Dropped images are not mod images
+                }
+            }
+            e.dataTransfer.clearData();
+        }
+    };
+
+    const handleDragOver = (e) => {
+        e.preventDefault();
     };
 
     const handleAddFlag = (code) => {
@@ -247,10 +301,10 @@ const ThumbnailGenerator = () => {
         <div className="toolbox-panel">
           <h2>{t('thumbnail_generator.toolbox_title')}</h2>
           <div className="tool-section">
-            <label htmlFor="mod-image-upload" className="ant-btn">
+            <Button icon={<UploadOutlined />} onClick={() => modImageInputRef.current && modImageInputRef.current.click()}>
               {t('thumbnail_generator.upload_mod_image')}
-            </label>
-            <input id="mod-image-upload" type="file" accept="image/*" onChange={(e) => handleImageUpload(e, true)} style={{ display: 'none' }} />
+            </Button>
+            <input ref={modImageInputRef} id="mod-image-upload" type="file" accept="image/*" onChange={(e) => handleImageUpload(e, true)} style={{ display: 'none' }} />
           </div>
           <div className="tool-section">
             <h4>{t('thumbnail_generator.add_flags')}</h4>
@@ -264,7 +318,7 @@ const ThumbnailGenerator = () => {
               <Button onClick={handleAddText}>{t('thumbnail_generator.add_text')}</Button>
           </div>
         </div>
-        <div className="canvas-panel">
+        <div className="canvas-panel" onDrop={handleDrop} onDragOver={handleDragOver}>
           <div id="thumbnail-canvas" ref={canvasContainerRef}>
             <Stage width={512} height={512} onMouseDown={checkDeselect} onTouchStart={checkDeselect}>
               <Layer>
@@ -275,7 +329,7 @@ const ThumbnailGenerator = () => {
                       key={item.id}
                       itemProps={item}
                       isSelected={item.id === selectedId}
-                      onSelect={() => selectShape(item.id)}
+                      onSelect={() => selectShape(item.id === selectedId ? null : item.id)}
                       onChange={(newAttrs) => updateElement(item.id, newAttrs)}
                     />
                 ))}
@@ -294,10 +348,10 @@ const ThumbnailGenerator = () => {
               {t('thumbnail_generator.background_color')}:&nbsp;
               <input type="color" value={backgroundColor} onChange={handleBgColorChange} />
             </label>
-            <label htmlFor="bg-image-upload" className="ant-btn" style={{marginTop: '8px'}}>
+            <Button icon={<UploadOutlined />} style={{marginTop: '8px'}} onClick={() => bgImageInputRef.current && bgImageInputRef.current.click()}>
                 {t('thumbnail_generator.upload_background_image')}
-            </label>
-            <input id="bg-image-upload" type="file" accept="image/*" onChange={handleBackgroundImageUpload} style={{ display: 'none' }} />
+            </Button>
+            <input ref={bgImageInputRef} id="bg-image-upload" type="file" accept="image/*" onChange={handleBackgroundImageUpload} style={{ display: 'none' }} />
           </div>
           {selectedElement && (
             <div className="tool-section">
