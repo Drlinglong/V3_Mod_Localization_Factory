@@ -40,7 +40,7 @@
   "game_name_ck3": "十字军之王3",
   "game_name_eu4": "欧陆风云4",
   "homepage_action_card_new_project_icon": "🚀",
-  "homepage_action_card_update_project_icon": "🔄"
+  "homepage_action_card_update_project_icon": "🔄",
   "glossary_game": "游戏",
   "glossary_files": "词典文件",
   "glossary_content": "内容",
@@ -56,5 +56,9 @@
   "glossary_edit_entry": "编辑词条",
   "glossary_variants_tooltip": "使用逗号分隔多个变体",
   "glossary_variants_placeholder": "变体1, 变体2, ...",
-  "glossary_target_language": "目标语言"
+  "glossary_target_language": "目标语言",
+  "glossary_create_new_file": "创建新词典文件",
+  "glossary_file_name": "文件名",
+  "glossary_filename_required": "请输入文件名。",
+  "glossary_filename_invalid": "文件名必须有效且以 .json 结尾 (例如, my_glossary.json)"
 }

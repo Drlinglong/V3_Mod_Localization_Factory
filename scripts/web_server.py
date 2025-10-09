@@ -224,6 +224,51 @@ class GlossaryEntry(BaseModel):
 class UpdateGlossaryRequest(BaseModel):
     entries: List[GlossaryEntry]
 
+class CreateGlossaryFileRequest(BaseModel):
+    game_id: str
+    file_name: str
+
+
+@app.post("/api/glossary/file")
+def create_glossary_file(payload: CreateGlossaryFileRequest):
+    """
+    Creates a new, empty glossary JSON file for a given game.
+    """
+    game_id = payload.game_id
+    file_name = payload.file_name
+
+    # --- Validation ---
+    if not file_name.endswith(".json"):
+        raise HTTPException(status_code=400, detail="File name must end with .json")
+
+    # Basic security check for filename
+    if ".." in file_name or "/" in file_name or "\\" in file_name:
+        raise HTTPException(status_code=400, detail="Invalid characters in file name.")
+
+    game_path = os.path.join(GLOSSARY_DIR, game_id)
+    if not os.path.isdir(game_path):
+        raise HTTPException(status_code=404, detail=f"Game '{game_id}' not found.")
+
+    file_path = os.path.join(game_path, file_name)
+    if os.path.exists(file_path):
+        raise HTTPException(status_code=409, detail=f"File '{file_name}' already exists in game '{game_id}'.")
+
+    # --- File Creation ---
+    try:
+        default_content = {
+            "metadata": {
+                "description": f"New glossary file: {file_name}",
+                "last_updated": ""
+            },
+            "entries": []
+        }
+        with open(file_path, 'w', encoding='utf-8') as f:
+            json.dump(default_content, f, ensure_ascii=False, indent=2)
+
+        return {"status": "success", "message": f"Successfully created '{file_name}' for game '{game_id}'."}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to create glossary file: {e}")
+
 
 @app.get("/api/glossary/tree")
 def get_glossary_tree():
