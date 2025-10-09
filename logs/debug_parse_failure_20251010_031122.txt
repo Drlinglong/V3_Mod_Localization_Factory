@@ -1,0 +1,47 @@
+=== 批量翻译解析失败调试信息 ===
+时间: 2025-10-10 03:11:22
+错误类型: Nested JSON Decode Error
+详细信息: Expecting ',' delimiter: line 76 column 40 (char 4828)
+================================================================================
+原始响应文本:
+----------------------------------------
+{
+  "response": "```json\n[\n  \"#header [Technology.GetName]#!\\n#v ##[Technology.GetResearchQueuePosition(GetPlayer.Self)]#! en file d'attente\\nEstimation de la recherche dans [Technology.PredictTimeLeftInQueueDesc(GetPlayer.Self)]\",\n  \"#BOLD Résultats des élections <2>#!\",\n  \"#title Total des voix#!\",\n  \"#title Emplacement#!\",\n  \"#title Pays#!\",\n  \"#title Total [concept_political_strength]#!\",\n  \"#title Gain d'[concept_authority]#!\",\n  \"#title Population#!\",\n  \"#title Main-d'œuvre#!\",\n  \"#title Revenu de la main-d'œuvre#!\",\n  \"#title Personnes à charge#!\",\n  \"#title Revenu des personnes à charge#!\",\n  \"#title Voix#!\",\n  \"#title [concept_culture]#!\",\n  \"#title [concept_religion]#!\",\n  \"Religion majoritaire\",\n  \"[concept_political_strength]\",\n  \"#title [concept_political_strength]#!\",\n  \"#title Gain d'[concept_authority]#!\",\n  \"Temps restant : #BOLD [GetPlayer.GetGovernmentData.GetTimeRemainingElection] jours#!\",\n  \"Former le gouvernement : (#BOLD [GetPlayer.GetGovernmentData.GetCost] @aut!#!)\",\n  \"Former le gouvernement\",\n  \"[concept_government_type]\",\n  \"#header Changer les [Concept('concept_interest_group', '$concept_interest_groups$')] au pouvoir#!\\n$TOOLTIP_DELIMITER$\\nCeci changera vos $concept_interest_groups$ au pouvoir pour ceux sélectionnés.\",\n  \"#title $VERY_GOOD_IDEA_NAME$#!\",\n  \"#title $VERY_BAD_IDEA_NAME$#!\",\n  \"#title $GOOD_IDEA_NAME$#!\",\n  \"#title $BAD_IDEA_NAME$#!\",\n  \"Désire ardemment\",\n  \"S'oppose fermement\",\n  \"Désire\",\n  \"S'oppose\",\n  \"Ambivalent quant à\",\n  \"#bold #P Désire ardemment#!#! ceci\",\n  \"#bold #N S'oppose fermement#!#! à ceci\",\n  \"#bold #P Désire#!#! ceci\",\n  \"#bold #N S'oppose#!#! à ceci\",\n  \"sont #header Indifférents#! à ceci\",\n  \"Aucune limite de temps\",\n  \"[SelectLocalization(Or(EventWindow.GetEvent.HasCategory('enactment'), EventWindow.GetEvent.HasCategory('revolution')), 'EVENT_WINDOW_CATEGORY_SUBTITLE', 'EVENT_WINDOW_SUBTITLE')]\",\n  \"Événement en [EventWindow.AccessEvent.GetState.GetName]\",\n  \"[AddLocalizationIf(EventWindow.GetEvent.HasCategory('enactment'), 'EVENT_WINDOW_CATEGORY_ENACTMENT_SUBTITLE')][AddLocalizationIf(EventWindow.GetEvent.HasCategory('revolution'), 'EVENT_WINDOW_CATEGORY_REVOLUTION_SUBTITLE')]\",\n  \"[AddLocalizationIf(GetPlayer.GetLawBeingEnacted.HasEnactmentLastCheckpoint, Concatenate(GetPlayer.GetLawBeingEnacted.GetEnactmentLastCheckpointResult, ' '))]Événement pour l'[Concept('concept_enactment_of_laws','$concept_enactment_of_laws_enactment$')] de [GetPlayer.GetLawBeingEnacted.GetName]\",\n  \"Jours restants : [EVENT.GetRemainingDays]\",\n  \"Les résultats des élections sont connus !\",\n  \"#BOLD Élection dans [GetPlayer.GetGovernmentData.GetTimeRemainingPreElection] jours#!\\nÉtat actuel des votes :\",\n  \"Nouvelle technologie acquise !\",\n  \"#title Population non incorporée#!\",\n  \"#title [Concept('concept_politically_unaligned_aligned', '$concept_politically_unaligned$')]#!\",\n  \"#title Politiquement non aligné#!\",\n  \"(Inactif)\",\n  \"[Concept('concept_politically_unaligned_aligned', '$concept_politically_unaligned$')] Population : [Country.GetInactivePopulation|kv]\",\n  \"#header Population [Concept('concept_politically_unaligned_aligned', '$concept_politically_unaligned$')]#!\\nTotal : [GetPlayer.GetInactivePopulation|kv]\\n$TOOLTIP_DELIMITER$\\n[GetPlayer.GetInactivePopulationDesc]\",\n  \"#header Population [Concept('concept_politically_unaligned_aligned', '$concept_politically_involved$')]#!\\nTotal : [GetPlayer.GetPoliticallyInvolvedPopulation|kv]\\n$TOOLTIP_DELIMITER$\\n[GetPlayer.GetPoliticallyInvolvedPopulationDesc]\",\n  \"#title [concept_political_strength]#!\",\n  \"[BUILDING.GetExpansionLevelDesc]\",\n  \"Niveau d'[concept_urbanization] de #v [STATE.GetUrbanization]#!\",\n  \"[Building.GetExpansionLevelBreakdown]\",\n  \"Le niveau maximum de [BUILDING.GetName] de $MAXIMUM|v$ est dû à :\\n$TAB$$EXPLANATION$\",\n  \"[concept_arable_land] disponible en [STATE.GetName] : $AVAILABLE_ARABLE_LAND|v$\",\n  \"Potentiel total en [STATE_REGION.GetName] : $MAX_IN_STATE_REGION|v$\\n$TAB$Part de terre possédée par [STATE.GetName] en [STATE_REGION.GetName] : $LAND_SHARE|v1%$\",\n  \"[BUILDING.GetName] n'a pas de niveau maximum\",\n  \"Ce bâtiment a des niveaux invalides dans la [concept_construction_queue].\",\n  \"Construction\",\n  \"#N Seul l'hôte est autorisé à changer la vitesse du jeu#!\",\n  \"#N Impossible d'augmenter davantage la vitesse du jeu#!\",\n  \"#N Impossible de diminuer davantage la vitesse du jeu#!\",\n  \"Augmenter la vitesse du jeu\",\n  \"Diminuer la vitesse du jeu\",\n  \"Le jeu est en pause. #instruction Cliquez#! pour reprendre\",\n  \"Le jeu est en cours. #instruction Cliquez#! pour mettre en pause\",\n  \"#N Seul l'hôte est autorisé à activer/désactiver la pause#!\",\n  \"Mis en pause par #v [TimeKeeper.GetPausedBy]#!\",\n  \"Seul vous pouvez reprendre le jeu pendant [TimeKeeper.GetTimeAnyoneUnpause] secondes supplémentaires\",\n  \"Seul #v [TimeKeeper.GetPausedBy]#!\" \" peut reprendre le jeu pendant [TimeKeeper.GetTimeAnyoneUnpause] secondes supplémentaires\",\n  \"N'importe qui peut reprendre\",\n  \"#variable [BUILDING_TYPE.GetName]#!\",\n  \"La prochaine croissance de la colonie est estimée pour le #variable [State.GetColonyGrowthDateDesc]#!\\n\\nLa progression augmente chaque jour de #variable [State.GetDailyColonyProgress|%]#! en raison de : \\n[State.GetColonyGrowthModifierDesc]\",\n  \"\\n#R Impossible de gagner de la progression supplémentaire en raison de l'absence d'[concept_active_interest] [State.GetOwner.GetAdjective] en [State.GetStateRegion.GetStrategicRegion.GetName]#!\",\n  \"#header [State.GetOwner.GetAdjective] [concept_colony]#!\\n[SelectLocalization(State.IsCompanyColony, 'COMPANY_ESTABLISHING_COLONY', 'COUNTRY_ESTABLISHING_COLONY')]\\n[GetPlayer.GetTensionTooltip( State.GetNextColonyProvince.GetState.GetOwner )][ConcatIfNeitherEmpty('\\n', AddLocalizationIf( GreaterThan_int32(GetPlayer.GetTensionWith( State.GetNextColonyProvince.GetState.GetOwner), '(int32)50'), 'TENSIONS_ARE_HIGH'))]\\n$TOOLTIP_DELIMITER$\\nProgression vers l'obtention d'une province supplémentaire : #variable [State.GetColonyProgress|%]#!\\n[SelectLocalization( State.IsColonyProgressBlockedByInactiveInterest, 'STATE_COLONY_TOOLTIP_INACTIVE_INTEREST', 'STATE_COLONY_ACTIVE_INTEREST' )]\",\n  \" @warning! Les [Concept('concept_tension', '$concept_tensions$')] sont élevées\",\n  \"#header Établissement d'une [concept_colony] [State.GetOwner.GetAdjective] en [State.GetName]#!\",\n  \"#header [State.GetColonyCompany.GetName] établit une [concept_colony] [State.GetOwner.GetAdjective] en [State.GetName]#!\",\n  \"[concept_market_capital]\",\n  \"#title [concept_market_capital]#!\\n[Market.GetMarketCapital.GetName]\",\n  \"#N Impossible de déplacer la capitale pendant un [concept_diplomatic_play]#!\",\n  \"#N Impossible de déplacer la [concept_market_capital] pendant un [concept_diplomatic_play]#!\",\n  \"#N Impossible de déplacer la capitale en cas de [concept_war]#!\",\n  \"#N Impossible de déplacer la [concept_market_capital] en cas de [concept_war]#!\",\n  \"#N Nous avons récemment changé notre [concept_capital_state] et ne pouvons pas le changer à nouveau avant le $DATE|v$#!\",\n  \"#N [STATE.GetName] est déjà notre [concept_capital_state]#!\",\n  \"#N Ne peut faire d'un [concept_incorporated_state] que la [concept_capital_state]#!\",\n  \"#N Ne peut faire d'une [concept_homeland] de l'une de vos [concept_primary_cultures] que la [concept_capital_state]#!\",\n  \"#N Nous avons récemment changé notre [concept_market_capital] et ne pouvons pas le changer à nouveau avant le $DATE|v$#!\",\n  \"#N [STATE.GetName] est déjà notre [concept_market_capital]#!\",\n  \"#N Ne peut faire d'un [concept_incorporated_state] que la [concept_market_capital]#!\",\n  \"#N Nous faisons partie du [concept_market] d'un autre [Concept('concept_country','$concept_country_possessive$')] et ne pouvons pas déplacer la [concept_market_capital]#!\",\n  \"Ne peut incorporer qu'un État voisin d'un État déjà incorporé\",\n  \"Impossible d'incorporer une [concept_colony] tant qu'elle est en croissance\",\n  \"Déjà incorporé\"\n]\n```",
+  "stats": {
+    "models": {
+      "gemini-2.5-flash": {
+        "api": {
+          "totalRequests": 1,
+          "totalErrors": 0,
+          "totalLatencyMs": 56822
+        },
+        "tokens": {
+          "prompt": 12658,
+          "candidates": 2335,
+          "total": 27319,
+          "cached": 9918,
+          "thoughts": 12326,
+          "tool": 0
+        }
+      }
+    },
+    "tools": {
+      "totalCalls": 0,
+      "totalSuccess": 0,
+      "totalFail": 0,
+      "totalDurationMs": 0,
+      "totalDecisions": {
+        "accept": 0,
+        "reject": 0,
+        "modify": 0,
+        "auto_accept": 0
+      },
+      "byName": {}
+    },
+    "files": {
+      "totalLinesAdded": 0,
+      "totalLinesRemoved": 0
+    }
+  }
+}
+================================================================================

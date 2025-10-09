@@ -1,0 +1,47 @@
+=== 批量翻译解析失败调试信息 ===
+时间: 2025-10-10 03:07:41
+错误类型: Nested JSON Decode Error
+详细信息: Unterminated string starting at: line 31 column 3 (char 6197)
+================================================================================
+原始响应文本:
+----------------------------------------
+{
+  "response": "```json\n[\n  \"Vieille Garde\",\n  \"Les Magnats les plus anciens et les mieux établis ; ce sont des conquérants purs et durs, convaincus qu'il n'y a pas de meilleure façon d'assurer la prospérité de la Ligue que de soumettre ses ennemis, renforçant ainsi notre gloire et enrichissant notre complexe militaro-industriel – dont ils sont une grande partie.\",\n  \"Barons Commerçants\",\n  \"Les Barons Commerçants cherchent à renforcer les communautés locales (et l'industrie en leur sein) afin d'assurer la stabilité et la prospérité pour toute la Ligue. Une marée montante soulèvera tous les bateaux (mais peut-être ceux des Barons plus que tout).\",\n  \"Coopératistes\",\n  \"Les Coopératistes cherchent à imposer une vision unique à la Ligue du Nord, fondée sur l'efficacité et la coopération entre les peuples afin d'assurer le pouvoir et la force du gouvernement central qui, à son tour, représentera les intérêts des Magnats.\",\n  \"Baronites\",\n  \"Les Baronites étaient l'ancienne petite noblesse qui a comblé le vide lorsque l'ancienne noblesse magique fut purgée pendant la Rébellion de la Poudre Noire. Motivés à moitié par des notions libérales et l'auto-préservation, ils s'allièrent aux Poudrenoiristes modérés pour renverser le régime révolutionnaire Borandiste et mettre fin à la rébellion. Ils soutiennent les vertus du Parlement Damerien féodal : un monarque asservi aux caprices et aux conseils de la noblesse élue.\",\n  \"Ordre de Sainte Aldresia\",\n  \"L'Ordre de Sainte Aldresia est un ordre de chevaliers arcaniques qui agit comme le bras armé de l'Église Ravélienne.\",\n  \"Légions du Phénix\",\n  \"Les Légions du Phénix, anciennement connues sous le nom de légions Jaddari, sont les héritières des armées qui conquirent autrefois Bulwar et Haless pour Jaher et servirent plus tard sous Jaddar dans sa sainte mission.\",\n  \"Rangers Paravimata\",\n  \"L'armée des Ghankedheni a historiquement consisté en un petit corps de troupes bien entraînées, connues sous le nom de rangers, qui, en cas de besoin, étaient soutenues par une milice.\",\n  \"Légion du Lion\",\n  \"Cherchant à créer une fraternité humaine sous l'égide du Dieu unique, l'armée de Busilar cherche à étendre le recrutement à toutes les colonies et protectorats de Busilar, croyant qu'à travers l'armée, ils peuvent trouver une unité de but et répandre la Vérité.\",\n  \"Stratéor\",\n  \"Le Stratéor est l'armée professionnelle d'Ameion. Tirant son origine mythique de l'armée du fondateur d'Ameion, le Prince Syrenthos, le Stratéor était à l'origine un simple cadre permettant aux chefs militaires d'Ameion de préserver les connaissances institutionnelles entre les campagnes. Après les conquêtes de Laskaris le Conquérant, Ameion acquit les ressources nécessaires pour maintenir des armées sur le terrain de manière permanente – modelée en partie sur les armées du Second Empire Gophrien, une armée véritablement professionnelle naquit. Depuis lors, le Stratéor est réputé dans tout Aelantir pour sa force, son dynamisme et son ingéniosité stratégique et tactique – même si l'Empire qu'il a bâti vacille.\",\n  \"Fotistrépei\",\n  \"Les Fotistrépei, autrefois auxiliaires Taychendi khéionisés d'Ameion, forment désormais la colonne vertébrale des armées des États successeurs Klereyen. Pendant les conquêtes de Laskaris, Ameion s'appuyait sur son infanterie lourde Kheionai disciplinée et fiable. Mais ils étaient peu nombreux, et afin de rivaliser avec leurs ennemis Taychendi, Ameion chercha à exploiter la main-d'œuvre de Taychend. Une classe militaire de Taychendi khéionisés loyaux, plus tard Klereyen, les Fotistrépei devinrent l'infanterie légère innombrable et dynamique d'Ameion, et, à mesure que le mousquet remplaçait la pique, leur organisation et leurs tactiques influencèrent le Stratéor dans son ensemble. Mais la force des Fotistrépei, comme tous les Klereyen, inquiétait l'élite Ambhen de la capitale – lorsque le Saímogemos qui en résulta dégénéra en guerre civile, les Fotistrépei se révoltèrent, rejoignant les citadins et propriétaires terriens Klereyen.\",\n  \"Altreíones\",\n  \"La faction des Altreíones (« villes vaillantes ») de la Ligue est représentée par les Kheions d'Arpedifér et d'Oktikheion, les grands innovateurs militaires. Tandis qu'Arpedifér maîtrisa la phalange et a récemment expérimenté l'armement Kaydhano sur terre, en mer Oktikheion créa les premiers navires de guerre Kheionai, puis les colossales Degárikes, et enfin les troupes de choc marines Thamasthaltus. À bien des égards, ils sont aussi la lance et le bouclier – tandis qu'Oktikheion se tourne vers la mer pour l'aventure navale, la garde d'Arpedifér est toujours levée, ses nombreux yeux toujours vigilants. Que les soldats et marins de Kheiós désirent le frisson de la bataille ou simplement protéger leur foyer, ces villes sont leur premier port d'escale.\",\n  \"Kilaiek-Mudaliars\",\n  \"Lorsque Nanru Nakar se déchira, puis se reforma en Triple Alliance, les Kilaiek-Mudaliars se dressèrent comme l'épée de l'Empire Nakari. Ils menèrent chaque campagne contre les ennemis de la grande cité, tout en maintenant un front audacieux et patriotique contre l'empiètement des intrus. Les Kilaiek-Mudaliars ont un contrôle quasi total sur les forces armées du royaume.\",\n  \"Hôte Fidèle\",\n  \"Les armées des nations de Drozma Tur existent au service du Dieu Dragon, et tous ceux qui y servent sont Ses armes.\",\n  \"Rectorat\",\n  \"Le Ravélianisme est une religion monothéiste croyant en un Dieu unique, et que tous les autres dieux ne sont que des aspects ou des saints de ce Dieu unique. Les Ravélianistes sont mi-érudits, mi-prédicateurs, et croient en la nécessité de démêler les secrets du monde pour découvrir et répandre ses Vérités fondamentales. Un grand nombre de ces révélations proviennent de leurs recherches sur le Fragment Divin, un étrange appareil en forme d'éclat qui communique dans un langage presque indéchiffrable et qui prétend être la dernière portion de divinité, et que les elfes précurseurs ont volé la divinité de Dieu et l'ont transformée en ce que nous connaissons aujourd'hui sous le nom de magie. Un principe populaire de la foi Ravélienne est leur désir d'utiliser l'artificerie pour apporter cette magie volée à tous.\",\n  \"Église Ravélienne\",\n  \"Le Ravélianisme est une religion monothéiste croyant en un Dieu unique, et que tous les autres dieux ne sont que des aspects ou des saints de ce Dieu unique. Les Ravélianistes sont mi-érudits, mi-prédicateurs, et croient en la nécessité de démêler les secrets",
+  "stats": {
+    "models": {
+      "gemini-2.5-flash": {
+        "api": {
+          "totalRequests": 1,
+          "totalErrors": 1,
+          "totalLatencyMs": 97832
+        },
+        "tokens": {
+          "prompt": 0,
+          "candidates": 0,
+          "total": 0,
+          "cached": 0,
+          "thoughts": 0,
+          "tool": 0
+        }
+      }
+    },
+    "tools": {
+      "totalCalls": 0,
+      "totalSuccess": 0,
+      "totalFail": 0,
+      "totalDurationMs": 0,
+      "totalDecisions": {
+        "accept": 0,
+        "reject": 0,
+        "modify": 0,
+        "auto_accept": 0
+      },
+      "byName": {}
+    },
+    "files": {
+      "totalLinesAdded": 0,
+      "totalLinesRemoved": 0
+    }
+  }
+}
+================================================================================

@@ -1,0 +1,47 @@
+=== 批量翻译解析失败调试信息 ===
+时间: 2025-10-10 03:36:16
+错误类型: Nested JSON Decode Error
+详细信息: Expecting ',' delimiter: line 69 column 47 (char 4398)
+================================================================================
+原始响应文本:
+----------------------------------------
+{
+  "response": "```json\n[\n  \"フリゲート\",\n  \"軽武装の帆船で、主に偵察、哨戒、護衛任務に使用される。\",\n  \"駆逐艦\",\n  \"素早い機動のために設計されており、潜水艦の追跡や貴重な目標の護衛を可能にする。\",\n  \"水雷艇\",\n  \"重く動きの遅い艦船に対し、魚雷攻撃で対抗するために建造された。\",\n  \"偵察巡洋艦\",\n  \"海外任務のために建造された軽装甲巡洋艦。\",\n  \"戦列艦\",\n  \"大砲で武装した帆船。\",\n  \"鉄甲艦\",\n  \"蒸気で推進し、金属製の装甲板で覆われている。\",\n  \"モニター艦\",\n  \"非常に大型の砲を搭載した小型艦で、主に沿岸で使用される。\",\n  \"ドレッドノート\",\n  \"複数の大口径砲を搭載した大型で重い艦船。\",\n  \"戦艦\",\n  \"最大級の艦船で、比類なき大口径砲を装備している。\",\n  \"潜水艦\",\n  \"魚雷で武装した半潜水艦。\",\n  \"空母\",\n  \"航空機さえも運用できる強力な艦船。\",\n  \"敵性補給網:\",\n  \"[Country.GetName]\",\n  \"[Concept('concept_military_formation', '$concept_military_formations$')]が[concept_invasion] [concept_front]に到着するのを待機中\",\n  \"[concept_invasion]の準備中 ([LabelingHelper.GetDaysLocWithoutTooltip('(int32)$NUM_DAYS$')])\",\n  \" @warning! [concept_invasion]は#n 停滞#!しています。現在、[concept_general]が[concept_front]を[Concept('concept_advancement_progress', '$advance_gerund$')]していないためです。\",\n  \"$concept_armies$を展開中\",\n  \"準備中 ([LabelingHelper.GetDaysLocWithoutTooltip(Invasion.GetPreparationDaysLeftRaw)])\",\n  \"進軍中 ([Invasion.GetAdvancementProgress|%0v])\",\n  \"[SelectLocalization(Invasion.IsWaiting, 'INVASION_STATUS_TRAVELING_SHORT', SelectLocalization(Invasion.IsPreparing, 'INVASION_STATUS_PREPARING_SHORT', 'INVASION_STATUS_ADVANCING_SHORT'))]\",\n  \"[MilitaryFormation.GetName]が$REGION_NAME$の[concept_sea_node]に到着するのを待機中\",\n  \"[MilitaryFormation.GetName]が部隊を動員するのを待機中:\\n$JOM_BULLET_WITH_TAB$[MilitaryFormation.GetMobilizationPercentageFormatted]#!\",\n  \"[Battle.GetName|v]で敵の[Concept( 'concept_fleet', '$concept_fleets$' )]と交戦中\",\n  \"[Battle.GetName|v]で敵の[Concept( 'concept_army', '$concept_armies$' )]と交戦中\",\n  \"[State.GetNameWithCountryFlag]の制圧を試行中 ($ADVANCEMENT|%0v$ [concept_advancement_progress])\",\n  \"$REGION_NAME$の[concept_sea_node]の制圧を試行中\",\n  \"[STATE.GetName]の制圧を試行中\",\n  \"侵攻は停滞中\",\n  \"#header $NAVAL_INVASION_STALLED_DUE_TO_ORDERS$#!\\n$TOOLTIP_DELIMITER$\\n侵攻中の[concept_admiral]が迎撃行動の命令を持っていないため、[concept_naval_invasion]は進行できません。\",\n  \"[concept_dead]: #variable #N -[WarParticipant.GetNumDead|K-]#!#!\",\n  \"[concept_wounded]: #variable #N -[WarParticipant.GetNumWounded|K-]#!#!\",\n  \"#header [concept_dead]#!\\n[WarParticipant.GetNumDead|K-] [WarParticipant.GetCountry.GetAdjectiveNoFormatting]が#v [War.GetName] War#!で死亡しました:\\n$TAB$[WarParticipant.GetNumDeadFromBattle|-]が[concept_battle]で\\n$TAB$[WarParticipant.GetNumDeadFromAttrition|-]が[concept_attrition]により\",\n  \"#header [concept_wounded]#!\\n[WarParticipant.GetNumWounded|K-] [WarParticipant.GetCountry.GetAdjectiveNoFormatting]が#v [War.GetName] War#!で負傷しました:\\n$TAB$[WarParticipant.GetNumWoundedFromBattle|-]が[concept_battle]で\\n$TAB$[WarParticipant.GetNumWoundedFromAttrition|-]が[concept_attrition]により\",\n  \"#header [concept_wounded]の総数: $NUM|-D$#!\\n$TOTALS_HEADER$\\n$TOOLTIP_DELIMITER$\\n$BREAKDOWN$\",\n  \"[concept_attrition]による: $NUM|-D$\",\n  \"[concept_battle]による: $NUM|-D$\",\n  \"[Country.GetName]の$concept_attrition$: $NUM|-K$\",\n  \"[Country.GetName]の$concept_battle$: $NUM|-K$\",\n  \"#header [concept_dead]の総数: $NUM|-D$#!\\n$TOTALS_HEADER$\\n$TOOLTIP_DELIMITER$\\n$BREAKDOWN$\",\n  \"[concept_attrition]による: $NUM|-D$\",\n  \"[concept_battle]による: $NUM|-D$\",\n  \"[Country.GetName]の$concept_attrition$: $NUM|-K$\",\n  \"[Country.GetName]の$concept_battle$: $NUM|-K$\",\n  \"#header [SelectLocalization(Building.IsBuildingType('building_naval_base'), Concept('concept_flotilla', '$concept_flotillas$'), Concept('concept_battalion', '$concept_battalions$'))]#!\\n[Building.GetCombatUnitProduction]を[Building.GetState.GetOwner.GetName]へ\\n$TOOLTIP_DELIMITER$\\n[Building.GetCombatUnitProductionBreakdown]\",\n  \"$SOURCE|v$より: @flotillas! #variable $VALUE|0$#!\",\n  \"#title 戦闘部隊#!\",\n  \"部隊が提供する編成\",\n  \"[concept_offense]\",\n  \"[concept_defense]\",\n  \"#title 平均[concept_offense]: $VALUE|v0$#!\\n進軍中の$NUM_UNITS|v0$ [Concept('concept_unit','$concept_units$')]の平均$concept_offense$は$VALUE|v0$です。\",\n  \"#title 平均[concept_defense]: $VALUE|v0$#!\\n防御中の$NUM_UNITS|v0$ [Concept('concept_unit','$concept_units$')]の平均$concept_defense$は$VALUE|v0$です。\",\n  \" @unit_offense! $VALUE|0v$\",\n  \" @unit_defense! $VALUE|0v$\",\n  \"$NAME$には$COMBAT_UNIT_MANPOWER$の人的資源が利用可能です\",\n  \" @manpower! $VAL$\",\n  \"#title [SelectLocalization(Building.IsBuildingType('building_naval_base'), ' @flotillas!', ' @battalions!')] #v #tooltippable #tooltip:MILITARY_UNITS_PRODUCTION [Building.GetNumberOfCombatUnits]#!#!#! [SelectLocalization(Building.IsBuildingType('building_naval_base'), '$concept_flotillas$', '$concept_battalions$')]#!\",\n  \"#variable [CombatUnit.GetBattle.GetName]#!\"の戦いにおいて\",\n  \"(#variable 1#!日残)\",\n  \"($DAYS|v$日残)\",\n  \"$NAME$の補給: #$COLOR_STRING$ $VALUE|0%$#!\",\n  \"#tooltippable #tooltip:$BREAKDOWN_TAG$ #$COLOR_STRING$ $VALUE|0%$#!#!#!\",\n  \"#R [HQ.GetName]に到達できません#!\",\n  \"[HQ.GetName]への陸路補給路あり\",\n  \"#title [Character.GetMilitaryFormation.GetName|v](#todo make me tooltippable#!)#!\",\n  \"#title [concept_supply_route]#!\",\n  \"#title [Concept('concept_shipping_lane', '$concept_shipping_lanes$')]#!\",\n  \"#BOLD #$COLOR$ $VALUE|%0$#!#! [concept_supply]\",\n  \"[GetUnitStrengthHeader( '(int64)$CURRENT$', '(int64)$MAX$', '$ICON$' )] [STATE.GetName]の$UNIT_NAME$ (#BOLD #$MORALE_COLOR$ $MORALE|%0$#!#! [concept_morale]と$SUPPLY$)\",\n  \"[GetUnitStrengthHeader( '(int64)$CURRENT$', '(int64)$MAX$', '$ICON$' )] [STATE.GetName]の$UNIT_NAME$\",\n  \"[Concept('concept_mobilize_battalion', '$concept_mobilize_battalion_demobilized$')]\",\n  \"[CombatUnit.GetName]は現在[Concept('concept_mobilize_battalion', '$concept_mobilize_battalion_demobilized$')]\",\n  \"[Concept('concept_mobilize_battalion', '$concept_mobilize_battalion_mobilizing$')] ([CombatUnit.GetMobilization|v%0])\",\n  \"[CombatUnit.GetName]は現在[CombatUnit.GetMobilization|v%0]完了[Concept('concept_mobilize_battalion', '$concept_mobilize_battalion_mobilizing$')]\",\n  \"[Concept('concept_mobilize_battalion', '$concept_mobilize_battalion_mobilized$')]\",\n  \"[CombatUnit.GetName]は完全に[Concept('concept_mobilize_battalion', '$concept_mobilize_battalion_mobilized$')]\",\n  \"徴集兵\",\n  \"$NUM|O$ $ORIGIN$\",\n  \"$COMBAT_UNIT_TYPE$[ConcatIfNeitherEmpty(' ', '$CONSCRIPT$')]\",\n  \"$COMBAT_UNIT_BATTALION_NAME_ONE$ $COMBAT_UNIT_BATTALION_NAME_TWO$\",\n  \"[ConcatIfNeitherEmpty('$PREFIX$', ' ')]$NAME$[ConcatIfNeitherEmpty(' ', '$NUM_STR$')]\",\n  \"$COMBAT_UNIT_FLOTILLA_NAME_ONE$ $COMBAT_UNIT_FLOTILLA_NAME_TWO$\",\n  \"$NUM|O$ $COUNTRY_ADJECTIVE$ $TYPE$\",\n  \"#title [Concept('concept_hq', '司令部')]#!\",\n  \"空の司令部\",\n  \"[Country.GetName]は[FRONT.GetName]に@battalions!#tooltippable #tooltip:[GetRawTextTooltipTag('$BREAKDOWN$')] $NUM_UNITS|v$#!#!を保有\",\n  \"[Country.GetName]は[FRONT.GetName]へ向かう@battalions!#tooltippable #tooltip:[GetRawTextTooltipTag('$BREAKDOWN$')] $NUM_UNITS|v$#!#!をさらに保有\",\n  \"#header [Country.GetAdjective] [Concept('concept_army', '$concept_armies$')]が[Front.GetName]に#! \\n @battalions!合計$NUM_UNITS|v$ [Concept('concept_battalion', '$concept_battalions$')] \\n$TOOLTIP_DELIMITER$\\n\",\n  \"#header [Country.GetAdjective] [Concept('concept_army', '$concept_armies$')]が[Front.GetName]へ移動中#! \\n @battalions!合計$NUM_UNITS|v$ [Concept('concept_battalion', '$concept_battalions$')] \\n$TOOLTIP_DELIMITER$\\n\",\n  \" @battalions!#tooltippable #tooltip:[MILITARY_FORMATION.GetTooltipTag],MILITARY_FORMATION_BATTALIONS_TOOLTIP $NUM_BATTALIONS|v$#!#! $FORMATION_NAME$\"\n]\n```",
+  "stats": {
+    "models": {
+      "gemini-2.5-flash": {
+        "api": {
+          "totalRequests": 1,
+          "totalErrors": 0,
+          "totalLatencyMs": 29203
+        },
+        "tokens": {
+          "prompt": 13323,
+          "candidates": 2676,
+          "total": 21752,
+          "cached": 9968,
+          "thoughts": 5753,
+          "tool": 0
+        }
+      }
+    },
+    "tools": {
+      "totalCalls": 0,
+      "totalSuccess": 0,
+      "totalFail": 0,
+      "totalDurationMs": 0,
+      "totalDecisions": {
+        "accept": 0,
+        "reject": 0,
+        "modify": 0,
+        "auto_accept": 0
+      },
+      "byName": {}
+    },
+    "files": {
+      "totalLinesAdded": 0,
+      "totalLinesRemoved": 0
+    }
+  }
+}
+================================================================================

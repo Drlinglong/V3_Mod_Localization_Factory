@@ -1,0 +1,47 @@
+=== 批量翻译解析失败调试信息 ===
+时间: 2025-10-10 03:17:22
+错误类型: Nested JSON Decode Error
+详细信息: Unterminated string starting at: line 23 column 3 (char 6151)
+================================================================================
+原始响应文本:
+----------------------------------------
+{
+  "response": "```json\n[\n  \"Adeanisch\",\n  \"Der Regentenrat (auch bekannt als das Cannorische Pantheon) ist eine Sammlung von Göttern, die auf dem Kontinent Cannor prominent verehrt werden. Anhänger halten sich gewöhnlich an eine bestimmte Schutzgottheit, können aber ansonsten viele andere Götter innerhalb des Pantheons verehren und respektieren. Das Pantheon ist ähnlich einem Feudalhof organisiert, wobei jede Gottheit Rollen einnimmt, die verschiedenen Positionen innerhalb dieses Hofes ähneln.\\nErstgeborener von Castellos und Gott des Guten, der Ehre und der Ritterlichkeit. Adean war Knappe von Agrados (dem ehemaligen Kriegsgott und Castellos' verräterischem Bruder), wählte aber nach dem Verrat seines Mentors die Seite des Guten. Vor dem Aufstieg Corins war Adean der De-facto-Gott gerechter und ehrenhafter Kriege und Konflikte. Mit der Offenbarung von Castellos' Tod begann Adean, eine aktivere Rolle bei der Führung des Hofes zu übernehmen.\",\n  \"Corinit\",\n  \"Die Coriniten glauben, dass Corin, der kürzlich aufgestiegene Kriegsgott, besser geeignet ist, den Regentenrat zu führen als Castellos' Sohn Adean. Sie glauben, dass Adean zu konservativ und nachlässig ist und dass der Regentenrat ein aktiverer Teil des Lebens der Menschen werden muss: Dunkelheit und Tyrannei dürfen nicht einfach zurückgehalten werden, sie müssen ausgerottet und zerstört werden.\",\n  \"Ravelianisch\",\n  \"Der Ravelianismus ist eine monotheistische Religion, die an einen Gott glaubt und dass alle anderen Götter nur Aspekte oder Heilige dieses einen Gottes sind. Ravelianer sind teils Gelehrte, teils Prediger und glauben daran, die Geheimnisse der Welt zu entschlüsseln, um ihre fundamentalen Wahrheiten zu entdecken und zu verbreiten. Eine große Anzahl dieser Offenbarungen stammt aus ihrer Forschung am Götterfragment, einem seltsamen, scherbenartigen Gerät, das in einer nahezu unentzifferbaren Sprache kommuniziert und behauptet, es sei der letzte Teil der Göttlichkeit, und dass die Vorläufer-Elfen die Göttlichkeit Gottes stahlen und sie in das verwandelten, was wir heute als Magie kennen. Ein populäres Dogma im ravelianischen Glauben ist ihr Wunsch, durch Artifizierie diese gestohlene Magie allen zugänglich zu machen.\",\n  \"Alter Sonnenkult\",\n  \"Kult des Exemplarischen\",\n  \"Die Jadd\",\n  \"Jadd ist der Name der neuesten Denomination des Bulwarischen Sonnenkults. Gegründet von Jaddar Jexiszuir, behaupten sie, dass alle Anhänger des Jadd von Surael auserwählt wurden, die Dunkelheit zu bekämpfen, unabhängig von ihrer Rasse. Die Hauptlehren des Glaubens konzentrieren sich auf eine dualistische Sicht von Gut und Böse und den ewigen Kampf zwischen Licht und Dunkelheit.\\n\\nSie glauben, dass alle Götter tot sind, wobei der letzte Gott, Surael, sich selbst opferte, um zur Sonne zu werden und so die Bösartige Dunkelheit in Schach zu halten. Die Anhänger des Kultes versuchen, das Licht zu schützen, indem sie die Dunkelheit bekämpfen, Lügen, Traurigkeit und Verzweiflung ablehnen, den Bedürftigen helfen und die Hoffnung bewahren. Der Jadd hat der Bösartigen Dunkelheit den Krieg erklärt und versucht aktiv, den Krieg auf Halann fortzusetzen, während Surael den Krieg am Himmel fortsetzt.\\n\\nJeder außerhalb des Jadd erhält die Chance, zu konvertieren und ein Auserwählter zu werden und sich dem Kampf anzuschließen, oder sich selbst als Diener der Dunkelheit zu erklären.\",\n  \"Der Gedanke\",\n  \"WARNING: Source localization entry is incomplete\",\n  \"Gottverloren\",\n  \"Die Gottverlorenen haben die schamanischen Wege der Goblin-Kulte verleugnet und stattdessen ihre Gesellschaft in eine starre Struktur geformt. Sie schätzen Familie und Land über religiöse Praktiken und kosmische Kräfte. Eine disziplinierte und loyale Haltung wird verehrt, und jeder Ungehorsam wird hart bestraft. Sie haben dies in einer Reihe von Lehren strukturiert, an die sich alle halten sollen, aber einige legen möglicherweise größeren Wert auf das eine als auf das andere.\",\n  \"Elikhetist\",\n  \"Anhänger des Khetismus verehren und beten die Khet an, Wesen, die Menschen mit Katzenköpfen ähneln und gottähnliche Kräfte innerhalb ihrer gleichnamigen Kheterata besitzen, die sie seit undenklichen Zeiten durch von Mandaten gewählte sterbliche Herrscher gegründet und kontrolliert haben. Von den Anhängern wird erwartet, dass sie sich an die Lehren des Khetarch halten, einer von den Nachkommen Elikhets, des ersten Khet, gewählten Galionsfigur.\\n\\nObwohl alle Khet von Elikhetisten verehrt werden, gilt Elikhet als ihr einziger wahrer Gott. Andere Gottheiten werden weder anerkannt noch geleugnet, nur ihre Verehrung ist verboten.\",\n  \"Nirakhetist\",\n  \"Anhänger des Khetismus verehren und beten die Khet an, Wesen, die Menschen mit Katzenköpfen ähneln und gottähnliche Kräfte innerhalb ihrer gleichnamigen Kheterata besitzen, die sie seit undenklichen Zeiten durch von Mandaten gewählte sterbliche Herrscher gegründet und kontrolliert haben. Von den Anhängern wird erwartet, dass sie sich an die Lehren des Khetarch halten, einer von den Nachkommen Elikhets, des ersten Khet, gewählten Galionsfigur.\\n\\nNirakhetisten verehren Nirakhet, die Mutter Elikhets, über alles und bezeichnen sie als die Göttliche Mutter. Ihre Verehrung Elikhets reicht nicht an die ihrer elikhetistischen Brüder heran; sie sehen ihn nach seinem Abstieg aus dem Bulwarischen Pantheon nicht göttlicher als seine Nachkommen (das heißt, immer noch sehr göttlich). Durch diesen Akt entstand das Leid, als die Abschiedstränen der Göttlichen Mutter auf Halann fielen, was Elikhet und seinen Verwandten ermöglichte, immer in ihrer Nähe zu sein.\",\n  \"Aakhetist\",\n  \"Die Armeen von Kheterata wurden einst vom mächtigen Drachen Aakhet dem Bronzenen in einer Reihe großer Eroberungen von Kheterat bis Bulwar angeführt. Diejenigen, die dem Aakhetismus anhängen, folgen immer noch den Lehren Elikhets wie alle anderen Khetisten. Doch während die meisten Khetisten heute Aakhets Herrschaft als die eines blutrünstigen Kriegstreibers betrachten, glauben Aakhetisten, dass der Bronzedrache die Reinkarnation Elikhets selbst war und dass er eines Tages zurückkehren wird, um ihre Armeen in glorreichen Eroberungen anzuführen.\",\n  \"Xhazobkult\",\n  \"Der Xhazobkult verehrt die Xhazobine, messianische Figuren, von denen angenommen wird, dass sie von einem Xhazob besessen sind, einem ursprünglichen dämonischen Geist, den die Kult-Folklore als die Stammväter ihrer Rasse ansieht. Frühere Xhazobine waren für kontinentweite Invasionen verantwortlich, und ihre brutalen Errungenschaften spielen eine prominente Rolle in den mündlichen Überlieferungen vieler Gnollish-Rudeln.\\n\\nDie strikte Einhaltung des Xhazobkults variiert von Region zu Region; für einige Rudel ist er",
+  "stats": {
+    "models": {
+      "gemini-2.5-flash": {
+        "api": {
+          "totalRequests": 1,
+          "totalErrors": 1,
+          "totalLatencyMs": 40915
+        },
+        "tokens": {
+          "prompt": 0,
+          "candidates": 0,
+          "total": 0,
+          "cached": 0,
+          "thoughts": 0,
+          "tool": 0
+        }
+      }
+    },
+    "tools": {
+      "totalCalls": 0,
+      "totalSuccess": 0,
+      "totalFail": 0,
+      "totalDurationMs": 0,
+      "totalDecisions": {
+        "accept": 0,
+        "reject": 0,
+        "modify": 0,
+        "auto_accept": 0
+      },
+      "byName": {}
+    },
+    "files": {
+      "totalLinesAdded": 0,
+      "totalLinesRemoved": 0
+    }
+  }
+}
+================================================================================

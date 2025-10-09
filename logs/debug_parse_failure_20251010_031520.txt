@@ -1,0 +1,47 @@
+=== 批量翻译解析失败调试信息 ===
+时间: 2025-10-10 03:15:20
+错误类型: Nested JSON Decode Error
+详细信息: Unterminated string starting at: line 35 column 3 (char 6594)
+================================================================================
+原始响应文本:
+----------------------------------------
+{
+  "response": "```json\n[\n  \"Die Unabhängigkeit von [ROOT.GetCountry.GetName] von Spanien hat zu nationalistischen Regungen im ganzen Land geführt. Während unsere Nation in die Zukunft schreitet, versuchen unsere Intellektuellen, eine neue Identität zu formulieren, die sich deutlich und ausschließlich als [SCOPE.sCulture('new_national_culture').GetName] auszeichnet.\\n\\nDie folgenden Bedingungen werden den Prozess der Entwicklung unserer #bold nationalen Identität#! fördern:\\n• [GetIdeology('ideology_patriotic').GetName] oder [GetIdeology('ideology_liberal').GetName] [Concept('concept_interest_group','$concept_interest_groups$')] die [concept_in_government] sind oder hohen [concept_clout] haben\\n• Laufende [Concept('concept_war','$concept_wars$')] mit hoher [concept_war_support]\\n• [GetBuildingType('building_university').GetName], [GetBuildingType('building_arts_academy').GetName] und [GetBuildingType('building_government_administration').GetName] Gebäude mit hoher [concept_occupancy]\\n• Hohes nationales [concept_prestige]\\n• Keine [Concept('concept_homeland','$concept_homelands$')] zu besitzen, die nicht [SCOPE.sCulture('old_national_culture').GetName] sind\\n\\nDer Fortschritt dieses #bold nationalen Erwachens#! wird voraussichtlich im nächsten Monat um #tooltippable;tooltip:[Country.GetTooltipTag],je_south_american_national_identity_emergence_special_tooltip [Country.MakeScope.Var('national_identity_progress_var_next').GetValue|+=]#! zunehmen.\\n\\n @warning! Das Abschließen dieses [concept_journal_entry] wird [ROOT.GetCountry.GetName] davon ausschließen, #bold größere pan-nationale Ambitionen#! zu verfolgen!\",\n  \"Diese Rate wird durch Folgendes bestimmt:\\n#variable [Country.MakeScope.Var('national_identity_progress_from_igs').GetValue|+=]#! aus [concept_clout] von [GetIdeology('ideology_patriotic').GetName] und [GetIdeology('ideology_liberal').GetName] [Concept('concept_interest_group','$concept_interest_groups$')]\\n#variable [Country.MakeScope.Var('national_identity_progress_from_wars').GetValue|+=]#! aus laufenden [Concept('concept_war','$concept_wars$')]\\n#variable [Country.MakeScope.Var('national_identity_progress_from_universities').GetValue|+=]#! aus [GetBuildingType('building_university').GetName], [GetBuildingType('building_arts_academy').GetName] und [GetBuildingType('building_government_administration').GetName] Gebäuden\\n#variable [Country.MakeScope.Var('national_identity_progress_from_prestige').GetValue|+=]#! aus [concept_prestige]\\n#variable [Country.MakeScope.Var('national_identity_progress_from_homelands').GetValue|+=]#! aus dem Besitz von [Concept('concept_homeland','$concept_homelands$')], die nicht [Concept('concept_primary_cultures','$concept_primary_culture$')] sind\\n#variable [Country.MakeScope.Var('national_identity_progress_var_add').GetValue|+=]#! aus anderen Effekten\",\n  \"Der Fortschritt der entstehenden [ROOT.GetCountry.GetAdjectiveNoFormatting] #bold Nationalen Identität#! hat #variable 100%#! erreicht!\",\n  \"Wir haben erfolgreich eine der #bold Peru-Bolivianischen Konföderation#!, #bold Großkolumbien#! oder #bold Bolivars Ambition#! [Concept('concept_journal_entry', '$concept_journal_entries$')] abgeschlossen.\",\n  \"[SCOPE.sCharacter('salaverry_scope').GetFullName] hingerichtet\",\n  \"Der Tod des Anführers der peruanischen Opposition markiert das Ende des peruanischen Bürgerkriegs und den Beginn der #bold Peru-Bolivianischen Konföderation#!.\",\n  \"#header $notification_bol_salaverry_death_name$#!\\n$TOOLTIP_DELIMITER$\\n$notification_bol_salaverry_death_desc$\",\n  \"Keiner unserer [SCOPE.sCulture('south_andean_culture').GetName] und [SCOPE.sCulture('quechua_culture').GetName] [Concept('concept_subject', '$concept_subjects$')] befindet sich derzeit in einem [concept_civil_war]\",\n  \"Amerikanisches Zweiparteiensystem\",\n  \"Aus südlichen Interessen\",\n  \"Aus nördlichen Interessen\",\n  \"Von den Norddemokraten\",\n  \"Unterdrücker und Unterdrückte\",\n  \"Während unsere Industrien für die Zukunft der [ROOT.GetCountry.GetAdjective] Nation immer entscheidender geworden sind, so ist es auch die Arbeiterklasse. Verschiedene Arbeiterbewegungen haben begonnen, sich unter der Sache des Sozialismus zu vereinen.\",\n  \"Ein Sturm zieht auf.\",\n  \"Die Welt wird eines Tages frei sein.\",\n  \"#bold Sozialistische#! Unruhen werden jeden Monat um #variable 0.5#! #bold zunehmen#!.\",\n  \"Brandmauer\",\n  \"Ob durch das Vertrauen unseres Volkes oder die Schlagstöcke unserer Soldaten, [ROOT.GetCountry.GetName] ist unversehrt aus der Welle sozialistischer Agitation hervorgegangen, die es bedrohte.\",\n  \"Sie sahen die Flugblätter immer noch, manchmal – verrottete Papierleichen, in den Rinnsteinen gefangen, verkrustet mit Ruß und Schlamm, kühne rote und schwarze Tinte, abgerieben von rauen Steinen und noch raueren Schritten. Die Polizei hatte sich nicht die Mühe gemacht, sie aufzuheben, betrachtete sie als Affront gegen ihre Handschuhe – oder erkannte vielleicht, dass ihre gefallenen Überreste mehr aussagten als ihr vollständiges Verschwinden.\",\n  \"Ein Triumph für ganz [ROOT.GetCountry.GetNameNoFormatting].\",\n  \"Nichts wird jemals wieder so sein wie zuvor.\",\n  \"[GetIdeology('ideology_communist').GetName], [GetIdeology('ideology_anarchist').GetName] und [GetIdeology('ideology_vanguardist').GetName] Charaktere werden in [ROOT.GetCountry.GetNameNoFlag] viel häufiger erscheinen.\",\n  \"Die [ROOT.GetCountry.GetAdjectiveNoFlag] sozialistische Bewegung wird auf absehbare Zeit geschwächt sein.\",\n  \"Siege gegen den Sozialismus\",\n  \"Der kommende Krieg\",\n  \"Eine eigene Nation\",\n  \"Das Erbe der Unabhängigkeit unserer Nation von Spanien hat den Beginn einer entwickelten nationalen Identität angeregt. Konflikte haben zwischen der Vision eines einzigartigen und unabhängigen [ROOT.GetCountry.GetName] und dem Traum eines unteilbaren Lateinamerikas begonnen.\",\n  \"Jahrhundertelang hatten die Waffen gefeuert, zuerst auf jene gerichtet, die der Eroberung widerstanden, und dann auf jene, die die Nation an ihren früheren Meister ketten wollten. Ein informeller Frieden war mit der Flucht der spanischen Armeen eingekehrt – doch sie hatten nie wirklich aufgehört. Sie bleiben geschultert, nach innen und außen gerichtet – wartend auf das Ende dieser momentanen Verwirrung und ein einziges Ziel, das es zu verfolgen gilt.\",\n  \"Unsere Heimat macht einen weiteren Schritt in Richtung Freiheit.\",\n  \"Wir sind nur eine Nation unter vielen.\",\n  \"Die Entwicklung einer einzigartigen [SCOPE.sCulture('new_national_culture').GetName] Kultur wird #bold verlangsamt#!, aber nicht abgewendet.\",\n  \"Republikanischer Putsch in [SCOPE.sCountry('brazil_scope').GetName]\",\n  \"Die [SCOPE.sCountry('brazil_scope').GetAdjective] Monarchie ist einem Putsch unter der Führung der [SCOPE.gsInterestGroup('landowners_ig').",
+  "stats": {
+    "models": {
+      "gemini-2.5-flash": {
+        "api": {
+          "totalRequests": 1,
+          "totalErrors": 0,
+          "totalLatencyMs": 32658
+        },
+        "tokens": {
+          "prompt": 13473,
+          "candidates": 1715,
+          "total": 22111,
+          "cached": 9055,
+          "thoughts": 6923,
+          "tool": 0
+        }
+      }
+    },
+    "tools": {
+      "totalCalls": 0,
+      "totalSuccess": 0,
+      "totalFail": 0,
+      "totalDurationMs": 0,
+      "totalDecisions": {
+        "accept": 0,
+        "reject": 0,
+        "modify": 0,
+        "auto_accept": 0
+      },
+      "byName": {}
+    },
+    "files": {
+      "totalLinesAdded": 0,
+      "totalLinesRemoved": 0
+    }
+  }
+}
+================================================================================

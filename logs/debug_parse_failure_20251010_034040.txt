@@ -1,0 +1,47 @@
+=== 批量翻译解析失败调试信息 ===
+时间: 2025-10-10 03:40:40
+错误类型: Nested JSON Decode Error
+详细信息: Expecting value: line 1 column 1 (char 0)
+================================================================================
+原始响应文本:
+----------------------------------------
+{
+  "response": "",
+  "stats": {
+    "models": {
+      "gemini-2.5-flash": {
+        "api": {
+          "totalRequests": 10,
+          "totalErrors": 10,
+          "totalLatencyMs": 4126
+        },
+        "tokens": {
+          "prompt": 0,
+          "candidates": 0,
+          "total": 0,
+          "cached": 0,
+          "thoughts": 0,
+          "tool": 0
+        }
+      }
+    },
+    "tools": {
+      "totalCalls": 0,
+      "totalSuccess": 0,
+      "totalFail": 0,
+      "totalDurationMs": 0,
+      "totalDecisions": {
+        "accept": 0,
+        "reject": 0,
+        "modify": 0,
+        "auto_accept": 0
+      },
+      "byName": {}
+    },
+    "files": {
+      "totalLinesAdded": 0,
+      "totalLinesRemoved": 0
+    }
+  }
+}
+================================================================================

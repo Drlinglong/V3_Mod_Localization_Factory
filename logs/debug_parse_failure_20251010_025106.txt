@@ -1,0 +1,47 @@
+=== 批量翻译解析失败调试信息 ===
+时间: 2025-10-10 02:51:07
+错误类型: Nested JSON Decode Error
+详细信息: Expecting ',' delimiter: line 20 column 20 (char 1282)
+================================================================================
+原始响应文本:
+----------------------------------------
+{
+  "response": "```json\n[\n  \"预算: #BOLD @money![Building.GetLastIncome|1]#!\",\n  \"每周税收:\",\n  \"#header 每周税收#!\\n总计: @money![Building.GetTaxationRevenue|D+=]\\n$TOOLTIP_DELIMITER$\\n[Building.GetTaxationRevenueTooltip]\\n\\n[concept_taxes_desc]\",\n  \"位于[Concept('concept_unincorporated_state', '$concept_unincorporated_states$')]的建筑不缴纳任何所得税\\n\",\n  \"这种[concept_building]建筑不缴纳税款\\n\",\n  \"[concept_budget_income_taxes]: #tooltippable #tooltip:[GetRawTextTooltipTag('$INCOME_TAX_BREAKDOWN$')] #variable @money!$VAL|D+$#!#!#!\",\n  \"#header 所得税#!\\n总计: @money!$VAL|D+=$\\n$TOOLTIP_DELIMITER$\\n税率:\\n$BREAKDOWN$\",\n  \"$ENTRY_TYPE$: @money!$VAL|vD$\\n$BREAKDOWN$\",\n  \"[concept_budget_poll_taxes]: #tooltippable #tooltip:[GetRawTextTooltipTag('$POLL_TAX_BREAKDOWN$')] #variable @money!$VAL|D+$#!#!#!\",\n  \"#header 人头税#!\\n总计: @money!$VAL|D+=$\\n$TOOLTIP_DELIMITER$\\n税率:\\n$BREAKDOWN$\",\n  \"$ENTRY_TYPE$: @money!$VAL|vD$\\n$BREAKDOWN$\",\n  \"[concept_budget_dividends_taxes]: @money!$VAL|D+$\",\n  \"建筑税收修正值: #variable $VAL|%0+$#!\",\n  \"维持 @arrow_none!\",\n  \"扩大 @arrow_up_up!\",\n  \"勒紧裤腰带 @arrow_down_down!\",\n  \"#header 收入#!\\n价值: @money![Building.GetEarnings|vD=]\\n$TOOLTIP_DELIMITER$\\n收入: #BOLD #V @money![Building.GetLastRevenue|D+=]#!#![Building.GetLastMaterialExpensesDesc][Building.GetLastSlaveUpkeepDesc]\",\n  \"#title 劳动力 #!\",\n  \"按 #BOLD 平均工资#!\" 排序\",\n  \"按 #BOLD 人口#!\" 排序\",\n  \"#title 战争#!\",\n  \"[Concept('concept_war','$concept_wars$')]\",\n  \"无 $WARS$\",\n  \"活跃的[Concept('concept_diplomatic_play', '$concept_diplomatic_plays$')]\",\n  \"无 $ACTIVE_DIPLOMATIC_PLAYS$\",\n  \"$concept_wars$ & $concept_diplomatic_plays$\",\n  \"[Concept('concept_ongoing_diplomatic_action', '$concept_ongoing_diplomatic_actions$')]\",\n  \"无活跃的[Concept('concept_war','$concept_wars$')]或[Concept('concept_diplomatic_play', '$concept_diplomatic_plays$')]\",\n  \"[DiplomaticAction.GetNameNoFormatting]\",\n  \"[DiplomaticAction.GetNameWithContext]\",\n  \"[DiplomaticAction.GetBreakName]\",\n  \"[Concept('concept_diplomatic_action', '$concept_diplomatic_actions$')]针对[Country.GetName]\",\n  \"无可能的[concept_diplomatic_action]\",\n  \"无可能的[concept_overlord_action]\",\n  \"无可能的[concept_subject_action]\",\n  \"无可能的[concept_bloc_leader_action]\",\n  \"无可能的[concept_bloc_member_action]\",\n  \"无可能的[concept_diplomatic_play]\",\n  \"无活跃外交\",\n  \"[Concept('concept_diplomatic_demand', '$concept_diplomatic_demands$')]针对[Country.GetName]\",\n  \"不可用 $concept_diplomatic_demands_short$\",\n  \"不可用 $concept_diplomatic_demands_short$ 针对 $concept_states$\",\n  \"无[Concept('concept_diplomatic_demand', '$concept_diplomatic_demands$')]可用\",\n  \"无[Concept('concept_diplomatic_demand', '$concept_diplomatic_demands$')]可用\",\n  \"#title 外交状态#!\",\n  \"停战协议\",\n  \"欠下义务方\",\n  \"欠下义务给\",\n  \"#title [Concept('concept_interest', '$concept_interests$')]#!\",\n  \"#header 慢速运算#!\",\n  \"N/A\",\n  \"[Concept('concept_sol', '$SOL_SHORT_TEXT$')]\",\n  \"SoL\",\n  \"[concept_truce]与[Country.GetName]\",\n  \"#header [concept_truce]与[Country.GetName]#!\\n$TOOLTIP_DELIMITER$\\n$concept_truce$持续至#variable [Truce.GetFirstTruceDate]#!\",\n  \"进攻方军队损失: #v [Negate_int32(Battle.GetAttackerLostUnits)|+=]#!\",\n  \"防守方军队损失: #v [Negate_int32(Battle.GetDefenderLostUnits)|+=]#!\",\n  \"战区\",\n  \"显示补给区\",\n  \"显示补给区\",\n  \"计划推进\",\n  \"快速推进\",\n  \"分散\",\n  \"防御\",\n  \"#title 主要目标#!\",\n  \"#header 储备#!\\n$TOOLTIP_DELIMITER$\\n$STOCKPILE_MAXIMUM_TOOLTIP$\",\n  \"#title 储备修正值:#!\\n[Stockpile.GetCapacityBreakdown]\\n\\n$STRATEGIC_GOODS_STOCKPILE_CONCEPT$\",\n  \"#concept 当前储备的弹药箱数量 / 储备中最多可容纳的弹药箱数量。#!\",\n  \"#header 目标姿态: #![AreaOfOperation.GetAOStance(GetPlayer)]\",\n  \"#header 目标姿态: #![MilitaryCommandDetachment.GetAOStance]\",\n  \"占领\",\n  \"#header 占领#!\",\n  \"力量投射\",\n  \"#header 力量投射#!\",\n  \"移除力量投射\",\n  \"创建陆军\",\n  \"#header 创建陆军#!\",\n  \"创建海军\",\n  \"#header 创建海军#!\",\n  \"#N 该省份没有力量投射#!\",\n  \"#N 该省份正在进行力量投射#!\",\n  \"#N 该命令已有 $LEVEL$#!\",\n  \"#N 该命令不与此战略区域相邻#!\",\n  \"#N 该命令不在此战略区域内#!\",\n  \"建立存在\",\n  \"投射力量\",\n  \"投射大国力量\",\n  \"存在\",\n  \"力量\",\n  \"无力量\",\n  \"#header 力量排名#!\",\n  \"如果[COUNTRY.GetName]的$concept_prestige$达到至少[COUNTRY.GetPrestigeForNextRank|v]，其$concept_rank$将提升至[COUNTRY.GetNextRank|v]\",\n  \"如果[COUNTRY.GetName]的$concept_prestige$长时间低于[COUNTRY.GetPrestigeToMaintainRank|v]，其$concept_rank$将降至[COUNTRY.GetPreviousRank|v]\",\n  \" @information! [COUNTRY.GetName]无法获得高于$HIGHEST_RANK|v$的$concept_rank$，因为其是[concept_subject]的[Country.GetOverlord.GetName]，这将其最高得分排名限制为世界第#v ##$HIGHEST_POSITION$#!位\",\n  \" @information! [COUNTRY.GetName]无法获得高于$HIGHEST_RANK|v$的$concept_rank$，因为其$COUNTRY_TYPE|v$地位，这将其最高得分排名限制为世界第#v ##$HIGHEST_POSITION$#!位\",\n  \"#header [concept_rank]#!\\n$TOOLTIP_DELIMITER$\\n[COUNTRY.GetName]目前拥有$concept_rank$#variable [COUNTRY.GetRank]#!，世界总得分排名第#variable ##[COUNTRY.GetCountryScorePositionDesc]#!位。\\n\\n[concept_prestige]: @prestige!#tooltippable #tooltip:[COUNTRY.GetTooltipTag],COUNTRY_PRESTIGE_BREAKDOWN [COUNTRY.GetPrestige|v]#!#!\",\n  \"#header [Country.GetName]的[concept_prestige]#!\\n当前: @prestige![Country.GetPrestige|v]\\n$TOOLTIP_DELIMITER$\\n[Country.GetPrestigeDesc]\",\n  \"#header [concept_rank]#!\\n#v ##0 #!$OBSERVER_NO_COUNTRY_SELECTED$\",\n  \"#header [concept_power_bloc_rank]#!\\n$TOOLTIP_DELIMITER$\\n$POWER_BLOC_NAME$目前在所有[Concept('concept_power_bloc', '$concept_power_blocs$')]中排名第#variable $POWER_BLOC_RANK_FORMATTED$#!，总[concept_prestige]为@prestige!#v #tooltippable #tooltip:$POWER_BLOC_TOOLTIP_TAG$,POWER_BLOC_PRESTIGE_BREAKDOWN $POWER_BLOC_TOTAL_PRESTIGE$#!#!#!\",\n  \"#header [PowerBloc.GetName]的[concept_prestige]#!\\n总计: @prestige![PowerBloc.GetTotalPrestige|v]\\n$TOOLTIP_DELIMITER$\\n[PowerBloc.GetPrestigeDesc]\"\n]\n```",
+  "stats": {
+    "models": {
+      "gemini-2.5-flash": {
+        "api": {
+          "totalRequests": 1,
+          "totalErrors": 0,
+          "totalLatencyMs": 44049
+        },
+        "tokens": {
+          "prompt": 13163,
+          "candidates": 2111,
+          "total": 24746,
+          "cached": 9052,
+          "thoughts": 9472,
+          "tool": 0
+        }
+      }
+    },
+    "tools": {
+      "totalCalls": 0,
+      "totalSuccess": 0,
+      "totalFail": 0,
+      "totalDurationMs": 0,
+      "totalDecisions": {
+        "accept": 0,
+        "reject": 0,
+        "modify": 0,
+        "auto_accept": 0
+      },
+      "byName": {}
+    },
+    "files": {
+      "totalLinesAdded": 0,
+      "totalLinesRemoved": 0
+    }
+  }
+}
+================================================================================
