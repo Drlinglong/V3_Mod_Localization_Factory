@@ -1,10 +1,12 @@
 import React, { useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Card, Typography } from 'antd';
 import './LogViewer.css';
 
 const { Text } = Typography;
 
 const LogViewer = ({ logs }) => {
+  const { t } = useTranslation();
   const logContainerRef = useRef(null);
 
   useEffect(() => {
@@ -31,7 +33,7 @@ const LogViewer = ({ logs }) => {
   };
 
   return (
-    <Card title="Logs" bordered={false} style={{ backgroundColor: '#2c3e50', color: 'white' }}>
+    <Card title={t('log_viewer_title')} bordered={false} style={{ backgroundColor: '#2c3e50', color: 'white' }}>
       <div className="log-container" ref={logContainerRef}>
         {logs.map((log, index) => (
           <div key={index} className="log-entry">
