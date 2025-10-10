@@ -138,14 +138,57 @@ const ThumbnailGenerator = () => {
     const canvasContainerRef = useRef(null);
     const modImageInputRef = useRef(null);
     const bgImageInputRef = useRef(null);
+    const customEmblemInputRef = useRef(null);
     const [backgroundColor, setBackgroundColor] = useState('#ffffff');
     const [backgroundImage, setBackgroundImage] = useState(null);
     const [elements, setElements] = useState([]);
     const [selectedId, selectShape] = useState(null);
 
+    const processAndAddEmblem = (file) => {
+        const reader = new FileReader();
+        reader.onload = () => {
+            const img = new window.Image();
+            img.src = reader.result;
+            img.onload = () => {
+                const maxWidth = 128;
+                const maxHeight = 128;
+                let { width, height } = img;
+                if (width > height) {
+                    if (width > maxWidth) {
+                        height *= maxWidth / width;
+                        width = maxWidth;
+                    }
+                } else if (height > maxHeight) {
+                    width *= maxHeight / height;
+                    height = maxHeight;
+                }
+
+                const newImage = {
+                    type: 'image',
+                    image: img,
+                    x: 50,
+                    y: 50,
+                    width,
+                    height,
+                    id: uuidv4(),
+                };
+                addElement(newImage);
+            };
+        };
+        reader.readAsDataURL(file);
+    };
+
+    const handleCustomEmblemUpload = (e) => {
+        if (e.target.files && e.target.files[0]) {
+            processAndAddEmblem(e.target.files[0]);
+            e.target.value = null;
+        }
+    };
+
     const handleBgColorChange = (e) => setBackgroundColor(e.target.value);
 
     const handleBackgroundImageUpload = (e) => {
+        console.log('handleBackgroundImageUpload triggered');
         if (e.target.files && e.target.files[0]) {
             const file = e.target.files[0];
             const reader = new FileReader();
@@ -153,7 +196,31 @@ const ThumbnailGenerator = () => {
                 const img = new window.Image();
                 img.src = reader.result;
                 img.onload = () => {
-                    setBackgroundImage(img);
+                    const canvasWidth = 512;
+                    const canvasHeight = 512;
+                    let { width, height } = img;
+
+                    const aspectRatio = width / height;
+                    const canvasAspectRatio = canvasWidth / canvasHeight;
+
+                    let newWidth = canvasWidth;
+                    let newHeight = canvasHeight;
+
+                    if (aspectRatio > canvasAspectRatio) {
+                        // Image is wider than canvas, fit by width
+                        newHeight = canvasWidth / aspectRatio;
+                    } else {
+                        // Image is taller than canvas, fit by height
+                        newWidth = canvasHeight * aspectRatio;
+                    }
+
+                    setBackgroundImage({
+                        image: img,
+                        x: (canvasWidth - newWidth) / 2,
+                        y: (canvasHeight - newHeight) / 2,
+                        width: newWidth,
+                        height: newHeight,
+                    });
                 };
             };
             reader.readAsDataURL(file);
@@ -166,6 +233,7 @@ const ThumbnailGenerator = () => {
     };
 
     const processAndAddImage = (file, isModImage = false) => {
+        console.log('processAndAddImage triggered for file:', file.name, 'isModImage:', isModImage);
         const reader = new FileReader();
         reader.onload = () => {
             const img = new window.Image();
@@ -212,13 +280,13 @@ const ThumbnailGenerator = () => {
 
     const handleDrop = (e) => {
         e.preventDefault();
+        console.log('handleDrop triggered');
         if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
-            for (const file of e.dataTransfer.files) {
-                if (file.type.startsWith('image/')) {
-                    processAndAddImage(file, false); // Dropped images are not mod images
-                }
+            const file = e.dataTransfer.files[0];
+            if (file.type.startsWith('image/')) {
+                // Simulate event object for handleBackgroundImageUpload
+                handleBackgroundImageUpload({ target: { files: [file] } });
             }
-            e.dataTransfer.clearData();
         }
     };
 
@@ -321,6 +389,11 @@ const ThumbnailGenerator = () => {
         setElements([]);
     };
 
+    const handleDeleteCanvas = () => {
+        setBackgroundImage(null);
+        setBackgroundColor('#ffffff'); // Reset to default white background
+    };
+
     const checkDeselect = (e) => {
       const clickedOnEmpty = e.target === e.target.getStage();
       if (clickedOnEmpty) selectShape(null);
@@ -384,21 +457,22 @@ const ThumbnailGenerator = () => {
           <div className="tool-section">
               <Button onClick={handleAddText} style={{ marginBottom: '8px' }}>{t('thumbnail_generator.add_text')}</Button>
               <Button onClick={handleAddAllFlags} style={{ marginBottom: '8px' }}>{t('thumbnail_generator.add_all_flags')}</Button>
-              <Button danger onClick={handleResetCanvas}>{t('thumbnail_generator.reset_canvas')}</Button>
+              <Button danger onClick={handleResetCanvas} style={{ marginBottom: '8px' }}>{t('thumbnail_generator.reset_canvas')}</Button>
+              <Button danger onClick={handleDeleteCanvas}>{t('thumbnail_generator.delete_canvas')}</Button>
           </div>
         </div>
         <div className="canvas-panel" onDrop={handleDrop} onDragOver={handleDragOver}>
             {isCanvasEmpty ? (
-                <div className="canvas-placeholder">
+                <div className="canvas-placeholder" onClick={() => bgImageInputRef.current && bgImageInputRef.current.click()}>
                     <UploadOutlined style={{ fontSize: '48px', color: '#ccc' }} />
                     <p style={{ color: '#aaa', marginTop: '16px' }}>{t('thumbnail_generator.canvas_placeholder')}</p>
                 </div>
             ) : (
-                <div id="thumbnail-canvas" ref={canvasContainerRef}>
+                <div id="thumbnail-canvas" ref={canvasContainerRef} style={{ width: 512, height: 512 }}>
                     <Stage width={512} height={512} onMouseDown={checkDeselect} onTouchStart={checkDeselect}>
                     <Layer>
                         <Rect width={512} height={512} fill={backgroundColor} />
-                        {backgroundImage && <KonvaImage image={backgroundImage} width={512} height={512} />}
+                        {backgroundImage && <KonvaImage image={backgroundImage.image} x={backgroundImage.x} y={backgroundImage.y} width={backgroundImage.width} height={backgroundImage.height} />}
                         {elements.map((item) => (
                         <DraggableItem
                             key={item.id}
@@ -473,6 +547,12 @@ const ThumbnailGenerator = () => {
                 <Button danger onClick={handleDeleteElement} style={{ marginTop: '16px' }}>{t('thumbnail_generator.delete_element')}</Button>
             </div>
           )}
+          <div className="tool-section">
+            <Button icon={<UploadOutlined />} style={{marginTop: '8px'}} onClick={() => customEmblemInputRef.current && customEmblemInputRef.current.click()}>
+              {t('thumbnail_generator.upload_custom_emblem')}
+            </Button>
+            <input ref={customEmblemInputRef} id="custom-emblem-upload" type="file" accept="image/*" onChange={handleCustomEmblemUpload} style={{ display: 'none' }} />
+          </div>
         </div>
       </div>
     );
