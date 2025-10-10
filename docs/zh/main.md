@@ -1,7 +1,7 @@
 <div align="center">
+  <img src="/Project Remis.png" width="150" alt="Project Remis Logo">
   <h1>Project Remis</h1>
   <strong>P社Mod本地化工厂 (Paradox Mod Localization Factory)</strong>
-
   <p>
     <a href="https://github.com/Drlinglong/V3_Mod_Localization_Factory/releases/latest"><img src="https://img.shields.io/github/v/release/Drlinglong/V3_Mod_Localization_Factory?style=for-the-badge&logo=github&label=Release&labelColor=1a1a2e&color=4ecdc4" alt="Release Version"></a>
     <img src="https://img.shields.io/badge/Python-3.10-blue?style=for-the-badge&logo=python&labelColor=1a1a2e" alt="Python Version">
