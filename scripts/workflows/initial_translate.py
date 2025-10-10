@@ -115,6 +115,10 @@ def run(mod_name: str,
                     "is_custom_loc": True
                 })
 
+    if not all_files_data:
+        logging.warning(i18n.t("no_localisable_files_found", lang_name=source_lang['name']))
+        return
+
     # ───────────── 5. 多语言并行翻译 ─────────────
     for target_lang in target_languages:
         logging.info(i18n.t("translating_to_language", lang_name=target_lang["name"]))
