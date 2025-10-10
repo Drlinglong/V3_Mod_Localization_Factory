@@ -1,7 +1,7 @@
 .thumbnail-generator-layout {
   display: flex;
   flex-direction: row;
-  height: calc(100vh - 150px); /* Adjust height as needed */
+  /* Removed height: calc(100vh - 150px); */
   gap: 16px;
 }
 
@@ -19,7 +19,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  overflow-y: auto; /* Enable vertical scrolling */
+  min-height: 512px; /* Ensure enough height for the canvas */
   border: 1px solid #e8e8e8;
   padding: 16px;
   border-radius: 8px;
