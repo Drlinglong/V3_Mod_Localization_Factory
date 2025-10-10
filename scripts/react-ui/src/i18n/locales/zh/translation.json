@@ -134,5 +134,19 @@
   "message_warn_aborted": "翻译已被用户中止。",
   "message_error_abort_failed": "中止翻译任务失败。",
   "log_starting": "开始翻译...",
-  "log_aborted": "任务被用户中止。"
+  "log_aborted": "任务被用户中止。",
+  "glossary_page_info": "第 {{page}} 页，共 {{total}} 页",
+  "glossary_show_entries": "显示 {{count}} 条",
+  "glossary_previous_page": "上一页",
+  "glossary_next_page": "下一页",
+  "button_ok": "确定",
+  "button_cancel": "取消",
+  "glossary_advanced_mode": "高级模式",
+  "glossary_abbreviations": "缩写",
+  "glossary_metadata": "元数据",
+  "glossary_variants_tooltip_json": "以JSON对象形式输入变体，例如：{\"en\": [\"variant1\", \"variant2\"], \"zh-CN\": [\"变体1\"]}",
+  "glossary_abbreviations_tooltip_json": "以JSON对象形式输入缩写，例如：{\"en\": \"abbr\", \"zh-CN\": \"缩写\"}",
+  "glossary_metadata_tooltip_json": "以JSON对象形式输入元数据，例如：{\"category\": \"school\", \"part_of_speech\": \"专有名词\"}",
+  "glossary_delete_confirm_title": "确认删除",
+  "glossary_delete_confirm_content": "您确定要删除此词条吗？此操作不可撤销。"
 }
