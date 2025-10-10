@@ -8,6 +8,27 @@ const { Title } = Typography;
 const { Sider, Content } = Layout;
 const { Option } = Select;
 
+// Map language codes to their display names for a better UI.
+const languageNameMap = {
+    en: 'English',
+    zh: '中文',
+};
+
+const getLanguageName = (code) => {
+    return languageNameMap[code] || code; // Fallback to the code itself if no mapping exists
+};
+
+
+const fetchDocLanguages = async () => {
+    try {
+        const response = await axios.get('/api/docs-languages');
+        return response.data;
+    } catch (error) {
+        console.error("Failed to fetch doc languages:", error);
+        return ['en']; // Fallback to 'en'
+    }
+};
+
 const fetchDocTree = async () => {
     try {
         const response = await axios.get('/api/docs-tree');
@@ -22,7 +43,6 @@ const fetchDocContent = async (path) => {
     if (!path) return 'No file selected.';
     console.log(`Fetching content from API for path: ${path}`);
     try {
-        // Use axios to call the new backend endpoint
         const response = await axios.get('/api/doc-content', {
             params: { path: path }
         });
@@ -34,31 +54,42 @@ const fetchDocContent = async (path) => {
 };
 
 const Documentation = () => {
-    const { t } = useTranslation();
-    const [selectedLang, setSelectedLang] = useState('en');
+    const { t, i18n } = useTranslation();
+    const [availableLangs, setAvailableLangs] = useState([]);
+    const [selectedLang, setSelectedLang] = useState('');
     const [fullTreeData, setFullTreeData] = useState({});
     const [treeData, setTreeData] = useState([]);
     const [treeLoading, setTreeLoading] = useState(true);
 
-    const [selectedFile, setSelectedFile] = useState('en/index.md');
+    const [selectedFile, setSelectedFile] = useState('');
     const [content, setContent] = useState('');
     const [contentLoading, setContentLoading] = useState(true);
 
-    // Effect for fetching the entire directory tree once on component mount
+    // Effect for fetching languages and the entire directory tree on component mount
     useEffect(() => {
         setTreeLoading(true);
-        fetchDocTree().then(data => {
-            setFullTreeData(data);
-            setTreeData(data[selectedLang] || []);
+        Promise.all([fetchDocLanguages(), fetchDocTree()]).then(([langs, tree]) => {
+            setAvailableLangs(langs);
+            const initialLang = langs.includes(i18n.language) ? i18n.language : (langs[0] || 'en');
+            setSelectedLang(initialLang);
+
+            setFullTreeData(tree);
+            setTreeData(tree[initialLang] || []);
+
+            // Set a default file to display initially
+            const defaultFile = `${initialLang}/index.md`;
+            setSelectedFile(defaultFile);
+
             setTreeLoading(false);
         });
-    }, []);
+    }, [i18n.language]);
 
     // Effect for updating the displayed tree when language changes
     useEffect(() => {
-        setTreeData(fullTreeData[selectedLang] || []);
-    }, [selectedLang, fullTreeData]);
-
+        if (!treeLoading) { // Avoid running on initial load before fullTreeData is set
+            setTreeData(fullTreeData[selectedLang] || []);
+        }
+    }, [selectedLang, fullTreeData, treeLoading]);
 
     // Effect for fetching file content when selectedFile changes
     useEffect(() => {
@@ -69,7 +100,6 @@ const Documentation = () => {
                 setContentLoading(false);
             });
         } else {
-            // No file selected, clear content
             setContent('');
         }
     }, [selectedFile]);
@@ -77,10 +107,7 @@ const Documentation = () => {
     const handleLangChange = (value) => {
         setSelectedLang(value);
         // Select a default file for the new language
-        const defaultFile = value === 'zh'
-            ? 'zh/index.md'
-            : 'en/index.md';
-
+        const defaultFile = `${value}/index.md`;
         setSelectedFile(defaultFile);
     };
 
@@ -95,9 +122,12 @@ const Documentation = () => {
             <Sider width={300} style={{ background: '#fff', borderRight: '1px solid #f0f0f0', padding: '10px', height: '100%', overflow: 'auto' }}>
                 <div style={{ padding: '0 16px 16px 16px' }}>
                     <Title level={4}>{t('doc_nav_title')}</Title>
-                    <Select value={selectedLang} style={{ width: '100%' }} onChange={handleLangChange}>
-                        <Option value="en">English</Option>
-                        <Option value="zh">中文</Option>
+                    <Select value={selectedLang} style={{ width: '100%' }} onChange={handleLangChange} loading={!availableLangs.length}>
+                        {availableLangs.map(lang => (
+                            <Option key={lang} value={lang}>
+                                {getLanguageName(lang)}
+                            </Option>
+                        ))}
                     </Select>
                 </div>
                 {treeLoading ? (
@@ -116,9 +146,11 @@ const Documentation = () => {
                 {contentLoading ? (
                      <div style={{ textAlign: 'center', marginTop: '50px' }}><Spin size="large" /></div>
                 ) : (
-                    <ReactMarkdown>
-                        {content}
-                    </ReactMarkdown>
+                    <div style={{ textAlign: 'left' }}>
+                        <ReactMarkdown>
+                            {content}
+                        </ReactMarkdown>
+                    </div>
                 )}
             </Content>
         </Layout>
