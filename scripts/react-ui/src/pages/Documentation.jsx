@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Layout, Typography, Select, Tree, Spin } from 'antd';
 import ReactMarkdown from 'react-markdown';
+import rehypeRaw from 'rehype-raw';
 import axios from 'axios';
 
 const { Title } = Typography;
@@ -147,7 +148,7 @@ const Documentation = () => {
                      <div style={{ textAlign: 'center', marginTop: '50px' }}><Spin size="large" /></div>
                 ) : (
                     <div style={{ textAlign: 'left' }}>
-                        <ReactMarkdown>
+                        <ReactMarkdown rehypePlugins={[rehypeRaw]}>
                             {content}
                         </ReactMarkdown>
                     </div>

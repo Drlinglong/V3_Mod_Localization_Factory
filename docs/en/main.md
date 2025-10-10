@@ -1,7 +1,10 @@
 <div align="center">
+
+  <img src="/Project Remis.png" width="150" alt="Project Remis Logo">
+
   <h1>Project Remis</h1>
   <strong>Paradox Mod Localization Factory</strong>
-  <img src="gfx/Project Remis.png" width="150" alt="Project Remis Logo">
+
   <p>
     <a href="https://github.com/Drlinglong/V3_Mod_Localization_Factory/releases/latest"><img src="https://img.shields.io/github/v/release/Drlinglong/V3_Mod_Localization_Factory?style=for-the-badge&logo=github&label=Release&labelColor=1a1a2e&color=4ecdc4" alt="Release Version"></a>
     <img src="https://img.shields.io/badge/Python-3.10-blue?style=for-the-badge&logo=python&labelColor=1a1a2e" alt="Python Version">
@@ -117,7 +120,7 @@ Thanks to new packaging technology, using this project has become easier than ev
     *   Select the original language of the Mod and the language you want to translate it into.
     *   Choose to enable or disable fuzzy matching for the glossary.
     *   Confirm all your selections in the project overview, then start the translation!
-3.  Wait for the program to finish running. Upon success, the localized Mod package will automatically appear in the `my_translation` folder.
+4.  Wait for the program to finish running. Upon success, the localized Mod package will automatically appear in the `my_translation` folder.
 
 ### Step 4: Enable the Mod in Game
 1.  Go to the `my_translation` folder and find the newly generated localized Mod package (e.g., `zh-CN-Your Mod Name`).
@@ -137,7 +140,7 @@ Thanks to new packaging technology, using this project has become easier than ev
 - **Translation not taking effect?**
   - Check if the loading order of the localized Mod in the game launcher is **below** the original Mod.
   - Try deleting fake localization files in the original mod. Some mods come with **fake localization files**, which can prevent localization patches from taking effect. You need to manually delete these files.
-  - Go to `SteamLibrary\\steamapps\\workshop\\content\\529340\\3535929411 (replace this string of numbers with the workshop ID of the MOD you are localizing)\\localization`, and **delete all folders except the original language folder of the MOD**.
+  - Go to `SteamLibrary\steamapps\workshop\content\529340\3535929411 (replace this string of numbers with the workshop ID of the MOD you are localizing)\localization`, and **delete all folders except the original language folder of the MOD**.
   - For example, if the original mod is in English, you need to delete all folders under `localization` except the `english` folder.
   - You can also choose to **overwrite** the content of this localization patch into the original MOD folder. This can reduce annoying verification processes, and Steam will no longer try to re-download missing fake localization files from the workshop.
 - **Poor translation quality?**
@@ -224,7 +227,7 @@ We welcome any form of feedback, suggestions, and code contributions!
 
 ### License
 
-This project adopts a **dual-license model**:
+This project adopts a **dual-license model**：
 
 1.  **Code Section** (all `.py` source code files)
     Uses **[GNU Affero General Public License v3.0 (AGPL-3.0)](https://www.gnu.org/licenses/agpl-3.0.html)**
@@ -240,4 +243,4 @@ If you have used the "Paradox Mod Localization Factory" to create or assist in c
 
 Your attribution is the best way to support this project and helps other mod authors discover this tool. Thank you very much for your support!
 
-**Repository URL:** `https://github.com/Drlinglong/V3_Mod_Localization_Factory` 
+**Repository URL:** `https://github.com/Drlinglong/V3_Mod_Localization_Factory`
