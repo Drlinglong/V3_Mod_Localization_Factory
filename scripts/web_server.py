@@ -204,12 +204,92 @@ def get_config():
         "api_providers": list(API_PROVIDERS.keys())
     }
 
+@app.get("/api/docs-languages")
+def get_docs_languages():
+    """
+    Scans the docs directory and returns a list of available language subdirectories.
+    """
+    languages = []
+    if os.path.exists(DOCS_DIR) and os.path.isdir(DOCS_DIR):
+        for item in os.listdir(DOCS_DIR):
+            item_path = os.path.join(DOCS_DIR, item)
+            # Check if it's a directory and not a hidden directory (e.g., .git)
+            if os.path.isdir(item_path) and not item.startswith('.'):
+                languages.append(item)
+    return languages
+
+def _scan_docs_recursive(directory, parent_key=''):
+    """
+    Recursively scans a directory to build a tree structure for Ant Design.
+    """
+    nodes = []
+    if not os.path.isdir(directory):
+        return []
+
+    for item in sorted(os.listdir(directory)):
+        path = os.path.join(directory, item)
+        key = os.path.join(parent_key, item)
+
+        if os.path.isdir(path):
+            children = _scan_docs_recursive(path, key)
+            if children: # Only add directory if it's not empty
+                nodes.append({
+                    "title": item,
+                    "key": key,
+                    "children": children,
+                })
+        elif item.endswith(".md"):
+            nodes.append({
+                "title": item.replace(".md", ""),
+                "key": key,
+                "isLeaf": True,
+            })
+    return nodes
+
+@app.get("/api/docs-languages")
+def get_docs_languages():
+    """
+    Scans the root 'docs' directory and returns a list of available languages (directories).
+    """
+    docs_dir = os.path.join(project_root, 'docs')
+    languages = []
+    if not os.path.isdir(docs_dir):
+        logging.warning("The 'docs' directory does not exist.")
+        return []
+
+    for item in os.listdir(docs_dir):
+        if os.path.isdir(os.path.join(docs_dir, item)):
+            languages.append(item)
+    return sorted(languages)
+
+@app.get("/api/docs-tree")
+def get_docs_tree():
+    """
+    Scans the root 'docs' directory and returns a language-keyed dictionary
+    of recursively scanned file trees for the Ant Design Tree component.
+    """
+    docs_dir = os.path.join(project_root, 'docs')
+    tree_data = {}
+
+    if not os.path.isdir(docs_dir):
+        logging.warning("The 'docs' directory does not exist.")
+        return {}
+
+    for lang in os.listdir(docs_dir):
+        lang_path = os.path.join(docs_dir, lang)
+        if os.path.isdir(lang_path):
+            # Start scanning from the language directory itself
+            tree_data[lang] = _scan_docs_recursive(lang_path, lang)
+
+    return tree_data
+
 #<-- Glossar-API-Endpunkte -->
 import json
 from pydantic import BaseModel, Field
 from datetime import datetime
 
 GLOSSARY_DIR = os.path.join(project_root, "data", "glossary")
+DOCS_DIR = os.path.join(project_root, "docs")
 
 # --- Pydantic Models for Glossary ---
 # Model for data COMING FROM the frontend for updates
