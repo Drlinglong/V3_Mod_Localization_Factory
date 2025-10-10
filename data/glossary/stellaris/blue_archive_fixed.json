@@ -3,7 +3,7 @@
     "name": "Blue Archive Stellaris Mod - Fixed Dictionary",
     "description": "A comprehensive glossary of all extracted terms (characters, schools, clubs, concepts, etc.) from the mod's localization files. Fixed and cleaned version.",
     "version": "1.2-fixed",
-    "last_updated": "2025-01-27",
+    "last_updated": "2025-10-10T15:20:34.179708",
     "sources": [
       "BA_Club_l_simp_chinese.yml",
       "BA_common_l_simp_chinese.yml",
@@ -35,21 +35,11 @@
         "ja": "トリニティ総合学園",
         "ko": "트리니티 종합학원"
       },
+      "variants": {},
       "metadata": {
         "category": "school",
         "part_of_speech": "Proper Noun",
-        "remarks": "One of the three largest academies in Kivotos."
-      },
-      "abbreviations": {
-        "zh-CN": "三一",
-        "en": "Trinity",
-        "ja": "トリニティ",
-        "ko": "트리니티"
-      },
-      "variants": {
-        "zh-CN": [
-          "圣三一"
-        ]
+        "remarks": "One of the three largest academies in Kivotos..."
       }
     },
     {
@@ -71,9 +61,11 @@
         "ja": "ゲヘナ",
         "ko": "게헨나"
       },
-      "variants": {"zh-CN": [
+      "variants": {
+        "zh-CN": [
           "格黑那"
-        ]}
+        ]
+      }
     },
     {
       "id": "ba_school_millennium",
