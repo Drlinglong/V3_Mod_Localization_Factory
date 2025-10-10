@@ -132,5 +132,19 @@
   "message_warn_aborted": "Translation has been aborted by the user.",
   "message_error_abort_failed": "Failed to abort the translation task.",
   "log_starting": "Starting translation...",
-  "log_aborted": "Task aborted by user."
+  "log_aborted": "Task aborted by user.",
+  "glossary_page_info": "Page {{page}} of {{total}}",
+  "glossary_show_entries": "Show {{count}} entries",
+  "glossary_previous_page": "Previous Page",
+  "glossary_next_page": "Next Page",
+  "button_ok": "OK",
+  "button_cancel": "Cancel",
+  "glossary_advanced_mode": "Advanced Mode",
+  "glossary_abbreviations": "Abbreviations",
+  "glossary_metadata": "Metadata",
+  "glossary_variants_tooltip_json": "Enter variants as a JSON object, e.g., {\"en\": [\"variant1\", \"variant2\"], \"zh-CN\": [\"变体1\"]}",
+  "glossary_abbreviations_tooltip_json": "Enter abbreviations as a JSON object, e.g., {\"en\": \"abbr\", \"zh-CN\": \"缩写\"}",
+  "glossary_metadata_tooltip_json": "Enter metadata as a JSON object, e.g., {\"category\": \"school\", \"part_of_speech\": \"Proper Noun\"}",
+  "glossary_delete_confirm_title": "Confirm Deletion",
+  "glossary_delete_confirm_content": "Are you sure you want to delete this entry? This action cannot be undone."
 }

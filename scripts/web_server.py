@@ -218,7 +218,8 @@ class GlossaryEntryIn(BaseModel):
     source: str
     translations: Dict[str, str]
     notes: Optional[str] = ""
-    variants: List[str] = []
+    variants: Optional[Dict[str, List[str]]] = {}
+    abbreviations: Optional[Dict[str, str]] = {}
     # metadata can be flexible, so we accept a dict
     metadata: Optional[Dict] = {}
 
@@ -335,6 +336,15 @@ def get_glossary_content(
             if 'translations' not in new_entry or not isinstance(new_entry['translations'], dict):
                 new_entry['translations'] = {}
 
+            # 4. Extract 'remarks' from metadata and assign to top-level 'notes'
+            new_entry['notes'] = new_entry.get('metadata', {}).get('remarks', '')
+
+            # 5. Ensure variants is a dict (it should be from file, but for safety)
+            new_entry['variants'] = entry.get('variants', {})
+
+            # 6. Ensure abbreviations is a dict (it should be from file, but for safety)
+            new_entry['abbreviations'] = entry.get('abbreviations', {})
+
             transformed_entries.append(new_entry)
 
         # --- Pagination Logic ---
@@ -356,7 +366,8 @@ class GlossaryEntryCreate(BaseModel):
     source: str
     translations: Dict[str, str]
     notes: Optional[str] = ""
-    variants: List[str] = []
+    variants: Optional[Dict[str, List[str]]] = {}
+    abbreviations: Optional[Dict[str, str]] = {}
     metadata: Optional[Dict] = {}
 
 # --- Helper function to read/write glossary files ---
@@ -379,15 +390,57 @@ def _write_glossary_file(file_path: str, data: Dict):
         raise HTTPException(status_code=500, detail=f"Failed to write glossary file: {e}")
 
 def _transform_entry_to_storage_format(entry: Dict) -> Dict:
+
     """Transforms a frontend-formatted entry back to the storage format."""
+
     entry['translations'] = entry.get('translations', {})
+
     entry['translations']['en'] = entry.get('source', '')
-    if entry.get('variants'):
-        entry['variants'] = {'en': entry['variants']}
-    else:
+
+
+
+    # Ensure variants is a dict (it should be from frontend payload)
+
+    if 'variants' not in entry:
+
         entry['variants'] = {}
+
+
+
+    # Ensure abbreviations is a dict (it should be from frontend payload)
+
+    if 'abbreviations' not in entry:
+
+        entry['abbreviations'] = {}
+
+
+
     if 'source' in entry:
+
         del entry['source']
+
+
+
+    # Handle notes -> metadata.remarks
+
+    if 'notes' in entry:
+
+        if 'metadata' not in entry:
+
+            entry['metadata'] = {}
+
+        entry['metadata']['remarks'] = entry['notes']
+
+        del entry['notes'] # Remove top-level notes after moving it
+
+    elif 'metadata' in entry and 'remarks' in entry['metadata']:
+
+        # If notes was not provided, but remarks exists, ensure it's cleared if notes was meant to be empty
+
+        entry['metadata']['remarks'] = ''
+
+
+
     return entry
 
 @app.post("/api/glossary/entry", status_code=201)

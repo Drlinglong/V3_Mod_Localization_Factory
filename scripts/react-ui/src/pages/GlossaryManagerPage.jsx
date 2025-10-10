@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
-    Row, Col, Select, Tree, Input, Typography, Button, Modal, Form, Popconfirm, Tag, Space, Spin, message, Tooltip
+    Row, Col, Select, Tree, Input, Typography, Button, Modal, Form, Popconfirm, Tag, Space, Spin, message, Tooltip, Switch
 } from 'antd';
-import { PlusOutlined, EditOutlined, DeleteOutlined } from '@ant-design/icons';
+import { PlusOutlined, EditOutlined, DeleteOutlined, EllipsisOutlined } from '@ant-design/icons';
 import {
     useReactTable,
     getCoreRowModel,
@@ -27,7 +27,7 @@ const GlossaryManagerPage = () => {
     const [selectedGame, setSelectedGame] = useState(null);
     const [selectedFile, setSelectedFile] = useState({ key: null, title: t('glossary_no_file_selected'), gameId: null });
     const [targetLanguages, setTargetLanguages] = useState([]);
-    const [selectedTargetLang, setSelectedTargetLang] = useState(null);
+    const [selectedTargetLang, setSelectedTargetLang] = useState('');
 
     // UI and Table State
     const [filtering, setFiltering] = useState('');
@@ -40,6 +40,15 @@ const GlossaryManagerPage = () => {
     const [isSaving, setIsSaving] = useState(false);
     const [isFileCreateModalVisible, setIsFileCreateModalVisible] = useState(false);
     const [newFileForm] = Form.useForm();
+    const [isAdvancedMode, setIsAdvancedMode] = useState(false);
+
+    const [isDeleteModalVisible, setIsDeleteModalVisible] = useState(false);
+    const [deletingItemId, setDeletingItemId] = useState(null);
+
+    const showDeleteModal = (id) => {
+        setDeletingItemId(id);
+        setIsDeleteModalVisible(true);
+    };
 
     // --- Data Fetching ---
     const fetchInitialConfigs = async () => {
@@ -81,7 +90,7 @@ const GlossaryManagerPage = () => {
         setIsLoadingContent(true);
         try {
             const response = await axios.get(
-                `/api/glossary/content?game_id=${gameId}&file_name=${title}&page=${pageIndex + 1}&pageSize=${pageSize}`
+                `/api/glossary/content?game_id=${gameId}&file_name=${title}&page=${pageIndex + 1}&pageSize=${pageSize}&filter=${filtering}`
             );
             setData(response.data.entries);
             setRowCount(response.data.totalCount);
@@ -98,7 +107,7 @@ const GlossaryManagerPage = () => {
     // Effect to fetch content when file or pagination changes
     useEffect(() => {
         fetchGlossaryContent();
-    }, [selectedFile, pagination]);
+    }, [selectedFile, pagination, filtering]);
 
 
     // --- Handlers ---
@@ -110,11 +119,14 @@ const GlossaryManagerPage = () => {
 
     const handleEdit = (entry) => {
         setEditingEntry(entry);
+        form.resetFields();
         form.setFieldsValue({
             source: entry.source,
             translation: entry.translations[selectedTargetLang] || '',
             notes: entry.notes,
-            variants: Array.isArray(entry.variants) ? entry.variants.join(', ') : '',
+            variants: entry.variants ? JSON.stringify(entry.variants, null, 2) : '',
+            abbreviations: entry.abbreviations ? JSON.stringify(entry.abbreviations, null, 2) : '',
+            metadata: entry.metadata ? JSON.stringify(entry.metadata, null, 2) : '',
         });
         setIsModalVisible(true);
     };
@@ -125,8 +137,35 @@ const GlossaryManagerPage = () => {
         setIsSaving(true);
         try {
             const values = await form.validateFields();
-            const { source, translation, notes, variants } = values;
-            const processedVariants = variants ? variants.split(',').map(v => v.trim()).filter(Boolean) : [];
+            const { source, translation, notes, variants, abbreviations, metadata } = values;
+
+            // Parse JSON strings back to objects
+            let parsedVariants = {};
+            try {
+                parsedVariants = variants ? JSON.parse(variants) : {};
+            } catch (e) {
+                message.error('Variants JSON is invalid.');
+                setIsSaving(false);
+                return;
+            }
+
+            let parsedAbbreviations = {};
+            try {
+                parsedAbbreviations = abbreviations ? JSON.parse(abbreviations) : {};
+            } catch (e) {
+                message.error('Abbreviations JSON is invalid.');
+                setIsSaving(false);
+                return;
+            }
+
+            let parsedMetadata = {};
+            try {
+                parsedMetadata = metadata ? JSON.parse(metadata) : {};
+            } catch (e) {
+                message.error('Metadata JSON is invalid.');
+                setIsSaving(false);
+                return;
+            }
 
             if (editingEntry) {
                 // Update existing entry
@@ -134,7 +173,9 @@ const GlossaryManagerPage = () => {
                     ...editingEntry,
                     source,
                     notes,
-                    variants: processedVariants,
+                    variants: parsedVariants,
+                    abbreviations: parsedAbbreviations,
+                    metadata: parsedMetadata,
                     translations: { ...editingEntry.translations, [selectedTargetLang]: translation },
                 };
                 await axios.put(
@@ -146,9 +187,10 @@ const GlossaryManagerPage = () => {
                 const payload = {
                     source,
                     notes,
-                    variants: processedVariants,
+                    variants: parsedVariants,
+                    abbreviations: parsedAbbreviations,
+                    metadata: parsedMetadata,
                     translations: { [selectedTargetLang]: translation },
-                    metadata: { part_of_speech: "Noun" } // Default metadata
                 };
                  await axios.post(
                     `/api/glossary/entry?game_id=${selectedFile.gameId}&file_name=${selectedFile.title}`,
@@ -201,18 +243,42 @@ const GlossaryManagerPage = () => {
         }
     };
 
+    const handleDeleteConfirm = async () => {
+        setIsSaving(true); // Set loading state
+        try {
+            await handleDelete(deletingItemId); // Call your original delete logic
+            setIsDeleteModalVisible(false);
+            setDeletingItemId(null);
+        } finally {
+            setIsSaving(false); // Reset loading state
+        }
+    };
+
+    const handleDeleteCancel = () => {
+        setIsDeleteModalVisible(false);
+        setDeletingItemId(null);
+    };
+
     // --- Table Definition ---
     const columns = [
         { accessorKey: 'source', header: () => t('glossary_source_text'), cell: info => info.getValue() },
         { id: 'translation', header: () => t('glossary_translation'), cell: ({ row }) => row.original.translations[selectedTargetLang] || '' },
-        { accessorKey: 'notes', header: () => t('glossary_notes'), cell: info => info.getValue() },
+        { accessorKey: 'notes', header: () => t('glossary_notes'), cell: ({ row }) => (
+            row.original.notes ? (
+                <Tooltip title={t('glossary_view_edit_notes', 'View/Edit Notes')}>
+                    <Button
+                        icon={<EllipsisOutlined />}
+                        size="small"
+                        onClick={() => handleEdit(row.original)}
+                    />
+                </Tooltip>
+            ) : null
+        ) },
         { accessorKey: 'variants', header: () => t('glossary_variants'), cell: info => <>{Array.isArray(info.getValue()) ? info.getValue().map(v => <Tag key={v}>{v}</Tag>) : null}</> },
         { id: 'actions', header: () => t('glossary_actions'), cell: ({ row }) => (
             <Space size="middle">
                 <Button icon={<EditOutlined />} onClick={() => handleEdit(row.original)} />
-                <Popconfirm title={t('glossary_delete_confirm')} onConfirm={() => handleDelete(row.original.id)}>
-                    <Button icon={<DeleteOutlined />} danger />
-                </Popconfirm>
+                <Button icon={<DeleteOutlined />} danger onClick={() => showDeleteModal(row.original.id)} />
             </Space>
         )},
     ];
@@ -312,10 +378,7 @@ const GlossaryManagerPage = () => {
                                         ))}
                                     </Select>
                                     <span>
-                                        {t('glossary_page_info', {
-                                            page: table.getState().pagination.pageIndex + 1,
-                                            total: table.getPageCount()
-                                        })}
+                                        {t('glossary_page_info', { page: table.getState().pagination.pageIndex + 1, total: table.getPageCount() })}
                                     </span>
                                 </Space>
                                 <Space>
@@ -337,16 +400,34 @@ const GlossaryManagerPage = () => {
                     </Col>
                 </Row>
 
-                <Modal title={editingEntry ? t('glossary_edit_entry') : t('glossary_add_entry')} open={isModalVisible} onOk={saveData} onCancel={() => setIsModalVisible(false)} destroyOnClose confirmLoading={isSaving}>
+                <Modal title={editingEntry ? t('glossary_edit_entry') : t('glossary_add_entry')} open={isModalVisible} onOk={saveData} onCancel={() => { setIsModalVisible(false); setIsAdvancedMode(false); }} destroyOnClose confirmLoading={isSaving} okText={t('button_ok')} cancelText={t('button_cancel')}>
                     <Form form={form} layout="vertical" name="glossary_entry_form">
                         <Form.Item name="source" label={t('glossary_source_text')} rules={[{ required: true }]}>
-                            <Input disabled={!!editingEntry} />
+                            <Input />
                         </Form.Item>
                         <Form.Item name="translation" label={`${t('glossary_translation')} (${targetLanguages.find(l=>l.code === selectedTargetLang)?.name_local || selectedTargetLang})`} rules={[{ required: true }]}>
                             <Input />
                         </Form.Item>
                         <Form.Item name="notes" label={t('glossary_notes')}><Input.TextArea /></Form.Item>
-                        <Form.Item name="variants" label={t('glossary_variants')} tooltip={t('glossary_variants_tooltip')}><Input placeholder={t('glossary_variants_placeholder')} /></Form.Item>
+
+                        <div style={{ marginBottom: 16, display: 'flex', justifyContent: 'flex-end', alignItems: 'center' }}>
+                            <span style={{ marginRight: 8 }}>{t('glossary_advanced_mode', 'Advanced Mode')}</span>
+                            <Switch checked={isAdvancedMode} onChange={setIsAdvancedMode} />
+                        </div>
+
+                        {isAdvancedMode && (
+                            <>
+                                <Form.Item name="variants" label={t('glossary_variants')} tooltip={t('glossary_variants_tooltip_json', 'Enter variants as a JSON object, e.g., {"en": ["variant1", "variant2"], "zh-CN": ["变体1"]}')}>
+                                    <Input.TextArea autoSize={{ minRows: 3, maxRows: 10 }} />
+                                </Form.Item>
+                                <Form.Item name="abbreviations" label={t('glossary_abbreviations')} tooltip={t('glossary_abbreviations_tooltip_json', 'Enter abbreviations as a JSON object, e.g., {"en": "abbr", "zh-CN": "缩写"}')}>
+                                    <Input.TextArea autoSize={{ minRows: 3, maxRows: 10 }} />
+                                </Form.Item>
+                                <Form.Item name="metadata" label={t('glossary_metadata')} tooltip={t('glossary_metadata_tooltip_json', 'Enter metadata as a JSON object, e.g., {"category": "school", "part_of_speech": "Proper Noun"}')}>
+                                    <Input.TextArea autoSize={{ minRows: 3, maxRows: 10 }} />
+                                </Form.Item>
+                            </>
+                        )}
                     </Form>
                 </Modal>
 
@@ -387,6 +468,29 @@ const GlossaryManagerPage = () => {
                             <Input placeholder="e.g., my_new_glossary.json" />
                         </Form.Item>
                     </Form>
+                </Modal>
+
+                {/* Delete Confirmation Modal */}
+                <Modal
+                    title={t('glossary_delete_confirm_title', 'Confirm Deletion')}
+                    open={isDeleteModalVisible}
+                    onOk={handleDeleteConfirm}
+                    onCancel={handleDeleteCancel}
+                    okText={t('button_ok')}
+                    cancelText={t('button_cancel')}
+                    okButtonProps={{ danger: true }}
+                    footer={[
+                        <Space key="footer-space">
+                            <Button key="cancel" onClick={handleDeleteCancel}>
+                                {t('button_cancel')}
+                            </Button>
+                            <Button key="ok" type="primary" danger onClick={handleDeleteConfirm} loading={isSaving}>
+                                {t('button_ok')}
+                            </Button>
+                        </Space>
+                    ]}
+                >
+                    <p>{t('glossary_delete_confirm_content', 'Are you sure you want to delete this entry? This action cannot be undone.')}</p>
                 </Modal>
             </div>
         </Spin>
