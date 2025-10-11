@@ -10,7 +10,7 @@ from scripts.core.base_handler import BaseApiHandler
 from scripts.app_settings import API_PROVIDERS, GEMINI_CLI_MAX_RETRIES
 from scripts.utils import i18n
 from scripts.core.parallel_processor import BatchTask
-from scripts.utils.response_parser import parse_json_response
+from scripts.utils.response_parser import parse_json_response, ParsingFailedAfterRepairError
 from scripts.core.glossary_manager import glossary_manager
 from scripts.app_settings import FALLBACK_FORMAT_PROMPT
 from scripts.utils.punctuation_handler import generate_punctuation_prompt
@@ -201,6 +201,9 @@ class GeminiCLIHandler(BaseApiHandler):
                 else:
                     self.logger.error(f"Gemini CLI call failed for batch {batch_num}, attempt {attempt+1}. Stderr: {stderr_str}")
                     raise RuntimeError(f"Gemini CLI failed with stderr: {stderr_str}")
+
+            except ParsingFailedAfterRepairError as e:
+                self.logger.warning(f"Gemini CLI response parsing failed for batch {batch_num} on attempt {attempt + 1}, even after repair. Error: {e}")
 
             except Exception as e:
                 self.logger.exception(f"Exception in Gemini CLI batch {batch_num} on attempt {attempt + 1}: {e}")

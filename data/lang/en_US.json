@@ -522,5 +522,7 @@
   "log_warn_descriptor_not_found": "Mod descriptor file not found at {path}. Cannot determine remote_file_id.",
   "log_warn_skip_archive_missing_id": "Skipping archive process due to missing remote_file_id.",
   "log_found_glossaries_for_game": "Found {count} available glossaries for game_id: {game_id}",
-  "log_glossary_loaded_from_selected": "Successfully loaded {entries_count} entries from {glossaries_count} selected glossaries."
+  "log_glossary_loaded_from_selected": "Successfully loaded {entries_count} entries from {glossaries_count} selected glossaries.",
+  "log_warn_remote_id_not_in_file": "remote_file_id not found in {path}.",
+  "log_error_parsing_mod_file": "Error parsing mod file {path}: {error}"
 }
