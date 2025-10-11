@@ -21,6 +21,27 @@ html.theme-victorian {
     border-image-slice: 1;
 }
 
+/*
+  Adds a subtle, fixed background texture to the entire page for the Victorian theme.
+  It uses a blend mode to tint the monochrome damask pattern with the theme's primary color,
+  creating a rich, dark, and elegant wallpaper effect. The low opacity keeps it from
+  being distracting.
+*/
+html.theme-victorian body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("/src/assets/textures/victorian-bg.jpg");
+    background-color: var(--color-primary);
+    background-blend-mode: multiply;
+    background-repeat: repeat;
+    opacity: 0.08; /* Even more subtle for this detailed pattern */
+    z-index: -1;
+}
+
 .theme-victorian .ant-menu {
     background: var(--color-background);
 }
@@ -46,9 +67,62 @@ html.theme-victorian {
     background: var(--color-background);
 }
 
-/* Example of applying the border to a "panel-like" component */
-.theme-victorian .ant-card-bordered {
-    border: 4px solid;
+/*
+  Custom Card styling for the Victorian theme, creating a "picture frame" effect.
+  - position: relative is crucial for positioning the pseudo-elements.
+  - The border-image simulates a brass/cast-iron frame.
+  - The ::before and ::after pseudo-elements add decorative "rivets" to the corners,
+    enhancing the ornate, industrial feel of the theme.
+*/
+.theme-victorian .ant-card {
+    position: relative;
+    background: #f4e9d8; /* A slightly darker antique paper color */
+    border: 10px solid;
     border-image-source: var(--border-image-gradient);
     border-image-slice: 1;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+/* We need position relative here to position the pseudo-elements for the other two corners */
+.theme-victorian .ant-card-body {
+    position: relative;
+}
+
+/* Create 4 corner "rivets" using pseudo-elements on both the card and its body */
+.theme-victorian .ant-card::before,
+.theme-victorian .ant-card::after,
+.theme-victorian .ant-card-body::before,
+.theme-victorian .ant-card-body::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #b8860b; /* Darker brass color for rivets */
+    box-shadow: inset 0 0 2px rgba(0,0,0,0.6);
+    border-radius: 50%;
+    z-index: 10; /* Ensure rivets are on top */
+}
+
+/* Top-left */
+.theme-victorian .ant-card::before {
+    top: -15px;
+    left: -15px;
+}
+
+/* Bottom-right */
+.theme-victorian .ant-card::after {
+    bottom: -15px;
+    right: -15px;
+}
+
+/* Top-right */
+.theme-victorian .ant-card-body::before {
+    top: -39px;  /* Adjust based on card padding + border */
+    right: -39px; /* Adjust based on card padding + border */
+}
+
+/* Bottom-left */
+.theme-victorian .ant-card-body::after {
+    bottom: -39px; /* Adjust based on card padding + border */
+    left: -39px;  /* Adjust based on card padding + border */
 }
