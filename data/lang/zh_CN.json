@@ -522,5 +522,6 @@
   "log_warn_descriptor_not_found": "在 {path} 找不到 Mod 描述符文件。无法确定 remote_file_id。",
   "log_warn_skip_archive_missing_id": "因缺少 remote_file_id，正在跳过存档过程。",
   "log_found_glossaries_for_game": "为游戏 {game_id} 找到 {count} 个可用词典",
-  "log_glossary_loaded_from_selected": "成功从 {glossaries_count} 个选定词典中加载了 {entries_count} 条条目。"
+  "log_glossary_loaded_from_selected": "成功从 {glossaries_count} 个选定词典中加载了 {entries_count} 条条目。",
+  "log_error_parsing_mod_file": "解析 .mod 文件 {path} 时出错: {error}"
 }
