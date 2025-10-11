@@ -285,7 +285,7 @@ def run(mod_name: str,
             post_processor = PostProcessingManager(game_profile, output_folder_path)
             
             # 运行验证
-            validation_success = post_processor.run_validation(target_lang)
+            validation_success = post_processor.run_validation(target_lang, source_lang)
             
             if validation_success:
                 # 获取验证统计信息

@@ -50,12 +50,13 @@ class PostProcessingManager:
         # 详细的验证结果
         self.validation_results: Dict[str, List[ValidationResult]] = {}
     
-    def run_validation(self, target_lang: dict) -> bool:
+    def run_validation(self, target_lang: dict, source_lang: dict) -> bool:
         """
         运行后处理验证
         
         Args:
             target_lang: 目标语言信息
+            source_lang: 源语言信息
             
         Returns:
             bool: 验证是否成功完成
@@ -80,7 +81,7 @@ class PostProcessingManager:
             
             # 验证每个文件
             for file_path in translated_files:
-                self._validate_single_file(file_path, target_lang)
+                self._validate_single_file(file_path, target_lang, source_lang)
             
             # 输出验证摘要
             self._log_validation_summary()
@@ -172,13 +173,14 @@ class PostProcessingManager:
         
         self.logger.info("\n" + "="*60)
     
-    def _validate_single_file(self, file_path: str, target_lang: dict):
+    def _validate_single_file(self, file_path: str, target_lang: dict, source_lang: dict):
         """
         验证单个文件
         
         Args:
             file_path: 文件路径
             target_lang: 目标语言信息
+            source_lang: 源语言信息
         """
         try:
             # 读取文件内容
@@ -201,7 +203,7 @@ class PostProcessingManager:
                 translatable_content = QuoteExtractor.extract_from_line(line)
                 if translatable_content:
                     # 只检查引号内的内容
-                    results = self.validator.validate_game_text(self.normalized_game_key, translatable_content, line_num)
+                    results = self.validator.validate_game_text(self.normalized_game_key, translatable_content, line_num, source_lang)
                     if results:
                         file_results.extend(results)
             

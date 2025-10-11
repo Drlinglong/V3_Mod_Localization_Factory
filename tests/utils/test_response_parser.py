@@ -44,9 +44,9 @@ MOCK_ORIGINAL_INPUT_2 = ["source1", "source2"]
      MOCK_ORIGINAL_INPUT_3,
      MOCK_ORIGINAL_INPUT_3), # 期望回退到原文
     ("mixed_poisoning_attack",
-     '```json\n["A""B", "Another "illegal" quote"]\n```\nAnd that is all.',
+     '```json\\n["A""B", "Another "illegal" quote"]\\n```\\nAnd that is all.',
      MOCK_ORIGINAL_INPUT_2,
-     ["A", "B", 'Another "illegal" quote']), # Corrected expected output
+     ["A", "B", 'Another "illegal" quote']),
 ])
 def test_ultimate_response_parser(test_name, response_text, original_input, expected_output):
     """

@@ -221,16 +221,20 @@ class BaseGameValidator:
             results.append(ValidationResult(is_valid=True, level=ValidationLevel(rule["level"]), message=message, details=details, line_number=line_number, text_sample=text[:100]))
         return results
 
-    def _check_residual_punctuation(self, text: str, line_number: Optional[int]) -> List[ValidationResult]:
+    def _check_residual_punctuation(self, text: str, line_number: Optional[int], source_lang: Optional[Dict] = None) -> List[ValidationResult]:
         """
         工人方法：检查翻译后的文本中是否还残留着源语言的标点符号。
         这是一个内置的基础检查，适用于所有游戏。
         """
         results = []
-        # 从游戏配置中获取源语言，默认为中文
-        source_lang_code = self.config.get("source_language_code", "zh-CN")
 
-        if not punctuation_handler:
+        # 如果没有动态传入 source_lang，则尝试从配置中获取，最后回退到中文
+        if source_lang and source_lang.get("code"):
+            source_lang_code = source_lang.get("code")
+        else:
+            source_lang_code = self.config.get("source_language_code", "zh-CN")
+
+        if not punctuation_handler or not source_lang_code:
             return results
 
         analysis = punctuation_handler.analyze_punctuation(text, source_lang_code)
@@ -253,7 +257,7 @@ class BaseGameValidator:
             ))
         return results
 
-    def validate_text(self, text: str, line_number: Optional[int] = None) -> List[ValidationResult]:
+    def validate_text(self, text: str, line_number: Optional[int] = None, source_lang: Optional[Dict] = None) -> List[ValidationResult]:
         """
         纯粹的规则执行引擎。
         它遍历加载自Python模块的规则，并根据 rule['check_function'] 的值，
@@ -277,7 +281,7 @@ class BaseGameValidator:
                 self.logger.warning(self._get_i18n_message("validator_warning_unknown_check_function", rule_name=rule.get('name', 'N/A'), check_function_name=check_function_name))
 
         # --- 内置基础检查 ---
-        punctuation_results = self._check_residual_punctuation(text, line_number)
+        punctuation_results = self._check_residual_punctuation(text, line_number, source_lang)
         all_results.extend(punctuation_results)
 
         return all_results
@@ -336,18 +340,18 @@ class PostProcessValidator:
                 return validator
         return None
 
-    def validate_game_text(self, game_id: str, text: str, line_number: Optional[int] = None) -> List[ValidationResult]:
+    def validate_game_text(self, game_id: str, text: str, line_number: Optional[int] = None, source_lang: Optional[Dict] = None) -> List[ValidationResult]:
         """验证指定游戏的文本格式"""
         validator = self.get_validator_by_game_id(game_id)
         if not validator:
             self.logger.error(self._get_i18n_message("validation_unknown_game", game_id=game_id))
             return []
-        results = validator.validate_text(text, line_number)
+        results = validator.validate_text(text, line_number, source_lang)
         for result in results:
             validator._log_validation_result(result)
         return results
     
-    def validate_batch(self, game_id: str, texts: List[str], start_line: int = 1) -> Dict[int, List[ValidationResult]]:
+    def validate_batch(self, game_id: str, texts: List[str], start_line: int = 1, source_lang: Optional[Dict] = None) -> Dict[int, List[ValidationResult]]:
         """批量验证文本"""
         batch_results = {}
         validator = self.get_validator_by_game_id(game_id)
@@ -356,7 +360,7 @@ class PostProcessValidator:
             return {}
         for i, text in enumerate(texts):
             line_number = start_line + i
-            results = validator.validate_text(text, line_number)
+            results = validator.validate_text(text, line_number, source_lang)
             if results:
                 batch_results[line_number] = results
         self.log_validation_summary(batch_results, validator.game_name)

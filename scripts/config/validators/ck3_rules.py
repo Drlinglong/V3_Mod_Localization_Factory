@@ -3,7 +3,6 @@
 RULES = {
   "game_id": "5",
   "game_name": "Crusader Kings III",
-  "source_language_code": "zh-CN",
   "rules": [
     {
       "name": "non_ascii_in_scopes_and_functions",
