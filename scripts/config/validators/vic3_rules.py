@@ -77,8 +77,9 @@ RULES = {
             "bold",
             "tooltip",
             "debug",
-            "indent_newline",
-            "abcd"
+            "abcd",
+            #安本纳尔
+            "strikethrough","warning","influence","indent_newline",            
         ],
         "no_space_required_tags": ["tooltippable", "tooltip"],
         "unknown_tag_error_key": "validation_vic3_unknown_formatting",
