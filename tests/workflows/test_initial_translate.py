@@ -71,12 +71,6 @@ def setup_test_environment(tmp_path, mocker):
     # Mock asset copying to avoid dependency on non-existent files
     mocker.patch("scripts.core.asset_handler.copy_assets")
 
-    # [FIX] Mock the 'google.genai' import to prevent ImportError in test env
-    mock_google = mocker.MagicMock()
-    mock_google.genai = mocker.MagicMock()
-    mocker.patch.dict('sys.modules', {'google': mock_google})
-
-
     return {
         "source_dir": source_dir,
         "dest_dir": dest_dir,

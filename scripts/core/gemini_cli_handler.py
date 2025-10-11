@@ -200,11 +200,11 @@ class GeminiCLIHandler(BaseApiHandler):
                         raise ValueError("Response parsing failed, triggering retry.")
                 else:
                     self.logger.error(f"Gemini CLI call failed for batch {batch_num}, attempt {attempt+1}. Stderr: {stderr_str}")
-                    # CLI调用本身失败也应该触发重试
                     raise RuntimeError(f"Gemini CLI failed with stderr: {stderr_str}")
 
             except Exception as e:
                 self.logger.exception(f"Exception in Gemini CLI batch {batch_num} on attempt {attempt + 1}: {e}")
+                raise e # Re-throw the exception to be caught by the base handler
 
             if attempt < GEMINI_CLI_MAX_RETRIES - 1:
                 delay = (attempt + 1) * 2
