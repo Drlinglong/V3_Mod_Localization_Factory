@@ -68,12 +68,13 @@
   white-space: pre-wrap;
 }
 
-/* Fix for stretched icons in collapsible sidebar */
-.ant-layout-sider:not(.ant-layout-sider-collapsed) .ant-menu-item .anticon {
-  font-size: 18px !important; /* Force a consistent font size for the icon container */
-}
-
-.ant-layout-sider .ant-menu-item .anticon svg {
-  width: 1em;  /* Ensure SVG scales with the font size of its container */
-  height: 1em; /* Ensure SVG scales with the font size of its container */
+/* Final fix for stretched icons, based on runtime DOM analysis */
+.ant-menu-item .ant-menu-item-icon {
+  font-size: 18px; /* Control the icon's base size */
+  flex: none;      /* Prevent the icon from growing or shrinking as a flex item */
+  width: 1em;      /* Explicitly set width to match the font size */
+  height: 1em;     /* Explicitly set height to match the font size */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
