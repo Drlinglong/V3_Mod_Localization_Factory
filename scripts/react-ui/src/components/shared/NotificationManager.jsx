@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useNotification } from '../../context/NotificationContext';
 import { useToasterStore, toast } from 'react-hot-toast';
 import { Drawer, Card, Button, Typography, Space, Badge, Tooltip } from 'antd';
@@ -20,7 +20,7 @@ const NotificationControls = () => {
       style={{
         position: 'fixed',
         bottom: 16,
-        left: 16,
+        right: 16,
         zIndex: 10000, // Extremely high z-index to stay on top of everything
         background: 'rgba(255, 255, 255, 0.9)',
         padding: '8px',
@@ -62,21 +62,10 @@ const NotificationControls = () => {
 
 // --- 2. The Notification Views ---
 const NotificationViews = () => {
-  const { notificationStyle } = useNotification();
+  const { notificationStyle, setNotificationStyle } = useNotification(); // Get setter for closing sidebar
   const { toasts } = useToasterStore();
-  const [sidebarVisible, setSidebarVisible] = useState(false);
 
   const latestToast = toasts.filter(t => t.visible).slice(-1)[0];
-
-  // FIX: This effect now only *opens* the sidebar, it doesn't force it to stay open.
-  useEffect(() => {
-    // If the style is sidebar and there are new, visible toasts, open the drawer.
-    // A "new" toast is one that was created in the last few seconds.
-    if (notificationStyle === 'sidebar' && toasts.some(t => t.visible && t.createdAt > (Date.now() - 3000))) {
-        setSidebarVisible(true);
-    }
-  }, [toasts, notificationStyle]);
-
 
   // Render Bottom-Right Windows
   if (notificationStyle === 'bottom-right') {
@@ -90,6 +79,8 @@ const NotificationViews = () => {
           display: 'flex',
           flexDirection: 'column',
           gap: '8px',
+          // Move the stack above the controls
+          bottom: '80px',
         }}
       >
         {toasts.filter(t => t.visible).map(t => (
@@ -107,7 +98,16 @@ const NotificationViews = () => {
   // Render Sidebar Log
   if (notificationStyle === 'sidebar') {
     return (
-      <Drawer title="Notification Log" placement="right" onClose={() => setSidebarVisible(false)} open={sidebarVisible} width={400} zIndex={9999}>
+      <Drawer
+        title="Notification Log"
+        placement="right"
+        // FIX: Closing the drawer now switches the style back to minimal
+        onClose={() => setNotificationStyle('minimal')}
+        // FIX: The drawer is open simply if the style is 'sidebar'
+        open={true}
+        width={400}
+        zIndex={9999}
+      >
         <Space direction="vertical" style={{ width: '100%' }}>
           {toasts.map(t => (
             <Badge.Ribbon key={t.id} text={t.type.toUpperCase()} color={t.type === 'error' ? 'red' : 'green'}>
@@ -130,7 +130,7 @@ const NotificationViews = () => {
         bottom: 0,
         left: 0,
         width: '100%',
-        zIndex: 9990, // Lower z-index than controls and other views
+        zIndex: 9990,
         background: '#fff',
         borderTop: '1px solid #f0f0f0',
         padding: '8px 24px',
@@ -138,7 +138,7 @@ const NotificationViews = () => {
         justifyContent: 'center',
         alignItems: 'center',
         boxShadow: '0 -2px 8px rgba(0,0,0,0.06)',
-        paddingLeft: '200px', // Offset for the controls on the left
+        paddingRight: '200px', // Offset for the controls on the right
       }}
     >
       {latestToast ? (
