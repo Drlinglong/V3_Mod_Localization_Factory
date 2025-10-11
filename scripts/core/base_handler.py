@@ -8,7 +8,7 @@ from scripts.app_settings import MAX_RETRIES, FALLBACK_FORMAT_PROMPT
 from scripts.core.parallel_processor import BatchTask
 from scripts.utils.punctuation_handler import generate_punctuation_prompt
 from scripts.core.glossary_manager import glossary_manager
-from scripts.utils.response_parser import parse_json_response
+from scripts.utils.response_parser import parse_json_response, ParsingFailedAfterRepairError
 
 
 class BaseApiHandler(ABC):
@@ -113,6 +113,9 @@ class BaseApiHandler(ABC):
                         f"Response parsing failed for batch {batch_num} on attempt {attempt + 1}. "
                         f"Expected {len(task.texts)} items, got {len(translated_texts) if translated_texts else 0}."
                     )
+
+            except ParsingFailedAfterRepairError as e:
+                self.logger.warning(f"Response parsing failed for batch {batch_num} on attempt {attempt + 1}, even after repair. Error: {e}")
 
             except Exception as e:
                 self.logger.exception(f"API call failed for batch {batch_num} on attempt {attempt + 1}: {e}")
