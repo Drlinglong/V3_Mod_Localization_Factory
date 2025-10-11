@@ -35,7 +35,7 @@ def run(mod_name: str,
     logging.info(i18n.t("start_workflow",
                  workflow_name=i18n.t("workflow_initial_translate_name"),
                  mod_name=mod_name))
-    logging.info(f"Selected provider in initial_translate.run: {selected_provider}")
+    logging.info(i18n.t("log_selected_provider", provider=selected_provider))
 
     # ───────────── ARCHIVE STAGE 1: Get/Create Mod ID ─────────────
     mod_id_for_archive = None

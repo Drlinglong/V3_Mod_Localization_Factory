@@ -329,7 +329,13 @@ def select_glossaries_from_db(game_profile):
             logging.warning(i18n.t("invalid_input_number"))
 
     if enable_choice == "2":
-        return None # 用户选择不加载任何额外词典
+        # User wants main glossary only. Find it and return its ID.
+        all_glossaries = glossary_manager.get_available_glossaries(game_profile['id'])
+        main_glossary = next((g for g in all_glossaries if g['is_main']), None)
+        if main_glossary:
+            return [main_glossary['glossary_id']]
+        else:
+            return None # No main glossary exists anyway
 
     logging.info(i18n.t("cli_glossary_loading_all"))
     available_glossaries = glossary_manager.get_available_glossaries(game_profile['id'])

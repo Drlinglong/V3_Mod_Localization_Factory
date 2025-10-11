@@ -57,7 +57,7 @@ class BaseApiHandler(ABC):
         )
 
         glossary_prompt_part = ""
-        if glossary_manager.current_game_glossary:
+        if glossary_manager.get_glossary_for_translation():
             relevant_terms = glossary_manager.extract_relevant_terms(
                 chunk, source_lang["code"], target_lang["code"]
             )
@@ -136,7 +136,7 @@ class BaseApiHandler(ABC):
         )
 
         glossary_prompt_part = ""
-        if glossary_manager.current_game_glossary:
+        if glossary_manager.get_glossary_for_translation():
             relevant_terms = glossary_manager.extract_relevant_terms(
                 [text], source_lang["code"], target_lang["code"]
             )

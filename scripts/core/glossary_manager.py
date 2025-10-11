@@ -6,6 +6,7 @@ import re
 from typing import Dict, List, Any, Optional
 
 from scripts.app_settings import PROJECT_ROOT
+from scripts.utils import i18n
 
 DB_PATH = f"{PROJECT_ROOT}/data/database.sqlite"
 
@@ -42,7 +43,7 @@ class GlossaryManager:
                 (game_id,)
             )
             glossaries = [dict(row) for row in cursor.fetchall()]
-            logging.info(f"Found {len(glossaries)} available glossaries for game_id: {game_id}")
+            logging.info(i18n.t("log_found_glossaries_for_game", count=len(glossaries), game_id=game_id))
             return glossaries
         except Exception as e:
             logging.error(f"Failed to get available glossaries for {game_id}: {e}")
@@ -99,7 +100,7 @@ class GlossaryManager:
                 entry['raw_metadata'] = json.loads(entry['raw_metadata']) if entry['raw_metadata'] else {}
                 self.in_memory_glossary['entries'].append(entry)
             
-            logging.info(f"Successfully loaded {len(rows)} entries from {len(selected_glossary_ids)} selected glossaries.")
+            logging.info(i18n.t("log_glossary_loaded_from_selected", entries_count=len(rows), glossaries_count=len(selected_glossary_ids)))
             return True
 
         except Exception as e:
@@ -186,7 +187,6 @@ class GlossaryManager:
                 'confidence': match['confidence']
             })
         relevant_terms.sort(key=lambda x: (x['confidence'], len(x['translations'][source_lang])), reverse=True)
-        from scripts.utils import i18n
         logging.info(i18n.t("glossary_terms_extracted", count=len(relevant_terms), text_count=len(texts)))
         return relevant_terms
 
@@ -392,7 +392,6 @@ class GlossaryManager:
     def set_fuzzy_matching_mode(self, mode: str):
         if mode in ['strict', 'loose']:
             self.fuzzy_matching_mode = mode
-            from scripts.utils import i18n
             mode_name = i18n.t("fuzzy_mode_strict") if mode == 'strict' else i18n.t("fuzzy_mode_loose")
             logging.info(i18n.t("fuzzy_mode_set", mode=mode_name))
         else:

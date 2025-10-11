@@ -6,6 +6,7 @@ import hashlib
 from typing import Dict, List, Optional, Tuple, Any
 import re
 
+from scripts.utils import i18n
 from scripts.app_settings import PROJECT_ROOT, SOURCE_DIR
 
 MODS_CACHE_DB_PATH = os.path.join(PROJECT_ROOT, 'data', 'mods_cache.sqlite')
@@ -41,7 +42,7 @@ class ArchiveManager:
         """解析 .mod 文件以获取 remote_file_id"""
         mod_file_path = os.path.join(SOURCE_DIR, mod_name, game_profile.get('descriptor_filename', 'descriptor.mod'))
         if not os.path.exists(mod_file_path):
-            logging.warning(f"Mod descriptor file not found at {mod_file_path}. Cannot determine remote_file_id.")
+            logging.warning(i18n.t("log_warn_descriptor_not_found", path=mod_file_path))
             return None
         try:
             with open(mod_file_path, 'r', encoding='utf-8') as f:
@@ -61,7 +62,7 @@ class ArchiveManager:
 
         remote_file_id = self._parse_mod_file(mod_name, game_profile)
         if not remote_file_id:
-            logging.warning("Skipping archive process due to missing remote_file_id.")
+            logging.warning(i18n.t("log_warn_skip_archive_missing_id"))
             return None
 
         cursor = self.conn.cursor()

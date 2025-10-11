@@ -517,5 +517,10 @@
   "cli_glossary_select_prompt": "请输入您想加载的辅助词典编号 (多个请用逗号隔开), 或直接按 Enter 跳过:",
   "cli_glossary_selected": "已选择加载以下词典: {glossary_names}",
   "cli_glossary_not_found": "错误: 未找到编号为 {glossary_index} 的词典。",
-  "cli_glossary_invalid_input": "输入无效，请输入数字或以逗号分隔的数字。"
+  "cli_glossary_invalid_input": "输入无效，请输入数字或以逗号分隔的数字。",
+  "log_selected_provider": "已选择提供商：{provider}",
+  "log_warn_descriptor_not_found": "在 {path} 找不到 Mod 描述符文件。无法确定 remote_file_id。",
+  "log_warn_skip_archive_missing_id": "因缺少 remote_file_id，正在跳过存档过程。",
+  "log_found_glossaries_for_game": "为游戏 {game_id} 找到 {count} 个可用词典",
+  "log_glossary_loaded_from_selected": "成功从 {glossaries_count} 个选定词典中加载了 {entries_count} 条条目。"
 }
