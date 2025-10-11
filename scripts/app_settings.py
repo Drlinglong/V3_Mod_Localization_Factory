@@ -4,6 +4,9 @@ import os
 import multiprocessing
 from scripts.config import prompts
 
+# Global switch for archiving translation results
+ARCHIVE_RESULTS_AFTER_TRANSLATION = True
+
 # --- 项目信息 ----------------------------------------------------
 PROJECT_NAME = "Paradox Mod 本地化工厂 - Paradox Mod Localization Factory"
 PROJECT_DISPLAY_NAME = "蕾姆丝计划 - Project Remis "

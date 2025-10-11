@@ -507,5 +507,15 @@
   "validator_warning_unknown_check_function": "Rule '{rule_name}' specifies an unknown check function: '{check_function_name}'",
   "validator_warning_cannot_load_i18n": "Cannot load internationalization: {e}",
   "validation_generic_tags_count": "Found {start_count} start tags, but {end_count} end markers.",
-  "glossary_consistency_warning_header": "Glossary consistency validation found potential issues:"
+  "glossary_consistency_warning_header": "Glossary consistency check found potential issues:",
+  "cli_select_glossary_prompt": "\nLoad auxiliary glossaries?",
+  "cli_select_glossary_yes": "Yes",
+  "cli_select_glossary_no": "No (Default, use main glossary only)",
+  "cli_glossary_loading_all": "Loading all available glossaries...",
+  "cli_glossary_available": "Available glossaries for '{game_name}':",
+  "cli_glossary_main_suffix": "(Main)",
+  "cli_glossary_select_prompt": "Enter the numbers of the auxiliary glossaries you want to load (comma-separated), or press Enter to skip:",
+  "cli_glossary_selected": "Selected glossaries to load: {glossary_names}",
+  "cli_glossary_not_found": "Error: Glossary with number {glossary_index} not found.",
+  "cli_glossary_invalid_input": "Invalid input. Please enter numbers or comma-separated numbers."
 }

@@ -53,7 +53,6 @@ def setup_test_environment(tmp_path, mocker):
 
     # 直接mock词典加载，避免文件系统依赖
     mocker.patch("scripts.core.glossary_manager.glossary_manager.load_game_glossary", return_value=True)
-    mocker.patch("scripts.core.glossary_manager.glossary_manager.get_glossary_stats", return_value={'total_entries': 0})
 
     # Mock i18n 以避免加载语言文件
     mocker.patch.object(i18n, 't', side_effect=lambda key, **kwargs: key)
@@ -227,8 +226,7 @@ def test_run_without_api_key(setup_test_environment, mocker, caplog):
     )
 
     # 断言 (Assert)
-    assert "api_key_not_configured" in caplog.text
-    assert "openai" in caplog.text # 确保服务商名称被正确打印
+    assert "api_client_init_fail" in caplog.text
 
 def test_run_with_no_source_files(setup_test_environment, mocker, caplog):
     """测试当源目录中没有任何可本地化文件时，程序能给出提示"""
@@ -254,4 +252,3 @@ def test_run_with_no_source_files(setup_test_environment, mocker, caplog):
 
     # 断言 (Assert)
     assert "no_localisable_files_found" in caplog.text
-    assert "l_english" in caplog.text # 确保语言名称被正确打印

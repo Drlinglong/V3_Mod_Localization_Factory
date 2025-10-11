@@ -507,5 +507,15 @@
   "validator_error_executing_rule": "执行规则 '{rule_name}' 时发生错误: {e}",
   "validator_warning_unknown_check_function": "规则 '{rule_name}' 指定了未知的检查函数: '{check_function_name}'",
   "validator_warning_cannot_load_i18n": "无法加载国际化: {e}",
-  "glossary_consistency_warning_header": "词典一致性验证发现潜在问题："
+  "glossary_consistency_warning_header": "词典一致性验证发现潜在问题：",
+  "cli_select_glossary_prompt": "\n是否加载额外的辅助词典？",
+  "cli_select_glossary_yes": "是",
+  "cli_select_glossary_no": "否 (默认, 仅使用主词典)",
+  "cli_glossary_loading_all": "正在加载所有可用词典...",
+  "cli_glossary_available": "以下是 '{game_name}' 可用的所有词典:",
+  "cli_glossary_main_suffix": "(主词典)",
+  "cli_glossary_select_prompt": "请输入您想加载的辅助词典编号 (多个请用逗号隔开), 或直接按 Enter 跳过:",
+  "cli_glossary_selected": "已选择加载以下词典: {glossary_names}",
+  "cli_glossary_not_found": "错误: 未找到编号为 {glossary_index} 的词典。",
+  "cli_glossary_invalid_input": "输入无效，请输入数字或以逗号分隔的数字。"
 }
