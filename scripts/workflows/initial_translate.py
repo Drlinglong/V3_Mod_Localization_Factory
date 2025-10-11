@@ -1,13 +1,14 @@
 # scripts/workflows/initial_translate.py
 import os
 import logging
-from typing import Any
+from typing import Any, Optional, List
 
 from scripts.core import file_parser, api_handler, file_builder, asset_handler, directory_handler
 from scripts.core.glossary_manager import glossary_manager
 from scripts.core.proofreading_tracker import create_proofreading_tracker
 from scripts.core.parallel_processor import ParallelProcessor, FileTask
-from scripts.app_settings import SOURCE_DIR, DEST_DIR, LANGUAGES, RECOMMENDED_MAX_WORKERS
+from scripts.core.archive_manager import archive_manager
+from scripts.app_settings import SOURCE_DIR, DEST_DIR, LANGUAGES, RECOMMENDED_MAX_WORKERS, ARCHIVE_RESULTS_AFTER_TRANSLATION
 from scripts.utils import i18n
 
 
@@ -16,7 +17,8 @@ def run(mod_name: str,
         target_languages: list[dict],
         game_profile: dict,
         mod_context: str,
-        selected_provider: str = "gemini"):
+        selected_provider: str = "gemini",
+        selected_glossary_ids: Optional[List[int]] = None):
     """【最终版】初次翻译工作流（多语言 & 多游戏兼容）"""
 
     # ───────────── 1. ścieżki i tryb ─────────────
@@ -33,7 +35,12 @@ def run(mod_name: str,
     logging.info(i18n.t("start_workflow",
                  workflow_name=i18n.t("workflow_initial_translate_name"),
                  mod_name=mod_name))
-    logging.info(f"Selected provider in initial_translate.run: {selected_provider}")
+    logging.info(i18n.t("log_selected_provider", provider=selected_provider))
+
+    # ───────────── ARCHIVE STAGE 1: Get/Create Mod ID ─────────────
+    mod_id_for_archive = None
+    if ARCHIVE_RESULTS_AFTER_TRANSLATION:
+        mod_id_for_archive = archive_manager.get_or_create_mod_id(mod_name, game_profile)
 
     # ───────────── 2. init klienta ─────────────
     gemini_cli_model = None
@@ -60,12 +67,10 @@ def run(mod_name: str,
     # ───────────── 2.5. 加载游戏专用词典 ─────────────
     game_id = game_profile.get("id", "")
     if game_id:
-        glossary_loaded = glossary_manager.load_game_glossary(game_id)
-        if glossary_loaded:
-            stats = glossary_manager.get_glossary_stats()
-            logging.info(i18n.t("glossary_loaded_success", count=stats['total_entries']))
+        if selected_glossary_ids:
+            glossary_manager.load_selected_glossaries(selected_glossary_ids)
         else:
-            logging.warning(i18n.t("glossary_load_failed"))
+            glossary_manager.load_game_glossary(game_id)
 
     # ───────────── 3. 创建输出目录 + 复制资源 ─────────────
     directory_handler.create_output_structure(
@@ -118,6 +123,11 @@ def run(mod_name: str,
     if not all_files_data:
         logging.warning(i18n.t("no_localisable_files_found", lang_name=source_lang['name']))
         return
+
+    # ───────────── ARCHIVE STAGE 2: Create Source Version Snapshot ─────────────
+    version_id_for_archive = None
+    if ARCHIVE_RESULTS_AFTER_TRANSLATION and mod_id_for_archive:
+        version_id_for_archive = archive_manager.create_source_version(mod_id_for_archive, all_files_data)
 
     # ───────────── 5. 多语言并行翻译 ─────────────
     for target_lang in target_languages:
@@ -306,6 +316,15 @@ def run(mod_name: str,
             logging.info(i18n.t("proofreading_board_generated_success"))
         else:
             logging.warning(i18n.t("proofreading_board_generation_failed"))
+
+        # ───────────── ARCHIVE STAGE 3: Archive Translated Results ─────────────
+        if ARCHIVE_RESULTS_AFTER_TRANSLATION and version_id_for_archive and file_results:
+            archive_manager.archive_translated_results(
+                version_id=version_id_for_archive,
+                file_results=file_results,
+                all_files_data=all_files_data,
+                target_lang_code=target_lang['code']
+            )
 
     # ───────────── 7. 处理元数据 ─────────────
     if is_batch_mode:

@@ -312,57 +312,81 @@ def handle_shell_language_selection(game_profile):
         except ValueError:
             logging.warning(i18n.t("error_invalid_not_number"))
 
-def select_auxiliary_glossaries(game_profile):
+def select_glossaries_from_db(game_profile):
     """
-    选择外挂词典
+    新的函数：从数据库获取词典并让用户选择。
     """
     from scripts.core.glossary_manager import glossary_manager
 
-    main_glossary_loaded = glossary_manager.load_game_glossary(game_profile['id'])
+    logging.info(i18n.t("cli_select_glossary_prompt"))
+    print(f"  [1] {i18n.t('cli_select_glossary_yes')}")
+    print(f"  [2] {i18n.t('cli_select_glossary_no')}")
 
-    if not main_glossary_loaded:
-        logging.warning(i18n.t("main_glossary_not_loaded"))
-        return []
+    enable_choice = ""
+    while enable_choice not in ["1", "2"]:
+        enable_choice = input(i18n.t("enter_choice_prompt")).strip()
+        if enable_choice not in ["1", "2"]:
+            logging.warning(i18n.t("invalid_input_number"))
 
-    auxiliary_glossaries = glossary_manager.get_auxiliary_glossaries_info()
+    if enable_choice == "2":
+        # User wants main glossary only. Find it and return its ID.
+        all_glossaries = glossary_manager.get_available_glossaries(game_profile['id'])
+        main_glossary = next((g for g in all_glossaries if g['is_main']), None)
+        if main_glossary:
+            return [main_glossary['glossary_id']]
+        else:
+            return None # No main glossary exists anyway
 
-    if not auxiliary_glossaries:
-        logging.info(i18n.t("aux_glossary_not_found"))
-        return []
+    logging.info(i18n.t("cli_glossary_loading_all"))
+    available_glossaries = glossary_manager.get_available_glossaries(game_profile['id'])
 
-    main_stats = glossary_manager.get_glossary_stats()
-    if main_stats['loaded']:
-        logging.info(i18n.t("main_glossary_enabled", count=main_stats['total_entries']))
-    else:
-        logging.warning(i18n.t("main_glossary_not_loaded"))
+    if not available_glossaries:
+        logging.warning(i18n.t("no_glossaries_available"))
+        return None
 
-    logging.info(i18n.t("auxiliary_glossaries_detected"))
-    for i, glossary in enumerate(auxiliary_glossaries, 1):
-        logging.info(i18n.t("auxiliary_glossary_option",
-                           index=i,
-                           name=glossary['name'],
-                           description=glossary['description'],
-                           entry_count=glossary['entry_count']))
+    main_glossary = next((g for g in available_glossaries if g['is_main']), None)
+    aux_glossaries = [g for g in available_glossaries if not g['is_main']]
 
-    logging.info(i18n.t("select_all_auxiliary"))
-    logging.info(i18n.t("no_auxiliary_glossary"))
+    logging.info(i18n.t("cli_glossary_available", game_name=game_profile['name']))
+    if main_glossary:
+        logging.info(f"  -> {main_glossary['name']} {i18n.t('cli_glossary_main_suffix')}")
+
+    for i, g in enumerate(aux_glossaries, 1):
+        logging.info(f"  [{i}] {g['name']} - {g.get('description', '')}")
+
+    selected_ids = set()
+    if main_glossary:
+        selected_ids.add(main_glossary['glossary_id'])
 
     while True:
-        choice = input(i18n.t("enter_auxiliary_choice")).strip().upper()
+        raw_input = input(i18n.t("cli_glossary_select_prompt")).strip()
+        if not raw_input:
+            break
 
-        if choice == 'N':
-            return []
-        elif choice == '0':
-            return list(range(len(auxiliary_glossaries)))
-        else:
-            try:
-                idx = int(choice) - 1
-                if 0 <= idx < len(auxiliary_glossaries):
-                    return [idx]
+        try:
+            choices = [int(i.strip()) for i in raw_input.split(',')]
+            valid_choices = True
+            temp_ids = set()
+            for choice in choices:
+                if 1 <= choice <= len(aux_glossaries):
+                    temp_ids.add(aux_glossaries[choice - 1]['glossary_id'])
                 else:
-                    logging.warning(i18n.t("invalid_auxiliary_choice"))
-            except ValueError:
-                logging.warning(i18n.t("invalid_auxiliary_choice"))
+                    logging.warning(i18n.t("cli_glossary_not_found", glossary_index=choice))
+                    valid_choices = False
+                    break
+            if valid_choices:
+                selected_ids.update(temp_ids)
+                break
+        except ValueError:
+            logging.warning(i18n.t("cli_glossary_invalid_input"))
+
+    if selected_ids:
+        # For logging purposes, get the names of selected glossaries
+        selected_names = [g['name'] for g in available_glossaries if g['glossary_id'] in selected_ids]
+        logging.info(i18n.t("cli_glossary_selected", glossary_names=", ".join(selected_names)))
+
+    return list(selected_ids) if selected_ids else None
+
 
 def select_fuzzy_matching_mode():
     """
@@ -383,10 +407,11 @@ def select_fuzzy_matching_mode():
         else:
             logging.warning(i18n.t("invalid_fuzzy_choice"))
 
-def show_project_overview(mod_name, api_provider, game_profile, source_lang, target_languages, auxiliary_glossaries, cleanup_choice, fuzzy_mode):
+def show_project_overview(mod_name, api_provider, game_profile, source_lang, target_languages, selected_glossary_ids, cleanup_choice, fuzzy_mode):
     """
     显示工程总览并等待用户确认
     """
+    from scripts.core.glossary_manager import glossary_manager
     logging.info(i18n.t("project_overview_title"))
 
     logging.info(i18n.t("project_overview_mod", mod_name=mod_name))
@@ -400,16 +425,15 @@ def show_project_overview(mod_name, api_provider, game_profile, source_lang, tar
         target_lang_info = i18n.t("target_languages_multiple", count=len(target_languages))
     logging.info(i18n.t("project_overview_target", target_lang=target_lang_info))
 
-    if auxiliary_glossaries:
-        glossary_status = i18n.t("glossary_status_combined_auxiliary", count=len(auxiliary_glossaries))
+    # New glossary status logic
+    if selected_glossary_ids:
+        all_glossaries = glossary_manager.get_available_glossaries(game_profile['id'])
+        selected_names = [g['name'] for g in all_glossaries if g['glossary_id'] in selected_glossary_ids]
+        glossary_status = ", ".join(selected_names)
     else:
-        from scripts.core.glossary_manager import glossary_manager
-        if glossary_manager.current_game_glossary:
-            main_count = len(glossary_manager.current_game_glossary.get('entries', []))
-            glossary_status = i18n.t("glossary_status_main_only", count=main_count)
-        else:
-            glossary_status = i18n.t("glossary_status_none")
+        glossary_status = i18n.t("glossary_status_none")
     logging.info(i18n.t("project_overview_glossary", glossary_status=glossary_status))
+
 
     fuzzy_status = i18n.t("fuzzy_matching_status_enabled") if fuzzy_mode == 'loose' else i18n.t("fuzzy_matching_status_disabled")
     logging.info(i18n.t("project_overview_fuzzy_matching", fuzzy_status=fuzzy_status))
