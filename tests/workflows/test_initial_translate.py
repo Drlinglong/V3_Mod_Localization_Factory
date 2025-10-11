@@ -59,7 +59,6 @@ def setup_test_environment(tmp_path, mocker):
 
     # 直接mock词典加载，避免文件系统依赖
     mocker.patch("scripts.core.glossary_manager.glossary_manager.load_game_glossary", return_value=True)
-    mocker.patch("scripts.core.glossary_manager.glossary_manager.get_glossary_stats", return_value={'total_entries': 0})
 
     # Mock i18n 以避免加载语言文件
     mocker.patch.object(i18n, 't', side_effect=lambda key, **kwargs: key)
