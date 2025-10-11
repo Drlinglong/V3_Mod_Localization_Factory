@@ -4,7 +4,7 @@ Core module for formatting Steam Workshop descriptions.
 import os
 import requests
 import datetime
-from scripts.utils.logger import logger
+from scripts.utils import logger
 from scripts.config.prompts import STEAM_BBCODE_PROMPT_TEMPLATE
 from scripts.app_settings import LANGUAGES
 from scripts.core.glossary_manager import glossary_manager
