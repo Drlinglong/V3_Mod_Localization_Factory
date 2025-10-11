@@ -67,3 +67,13 @@
   text-align: left;
   white-space: pre-wrap;
 }
+
+/* Fix for stretched icons in collapsible sidebar */
+.ant-layout-sider:not(.ant-layout-sider-collapsed) .ant-menu-item .anticon {
+  font-size: 18px !important; /* Force a consistent font size for the icon container */
+}
+
+.ant-layout-sider .ant-menu-item .anticon svg {
+  width: 1em;  /* Ensure SVG scales with the font size of its container */
+  height: 1em; /* Ensure SVG scales with the font size of its container */
+}
