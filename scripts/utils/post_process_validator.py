@@ -64,8 +64,8 @@ class BaseGameValidator:
             rules_path (str): 指向该游戏验证规则的 .py 文件的路径。
         """
         self.logger = logging.getLogger(__name__)
-        self.config = {}  # 提前初始化，防止加载失败时崩溃
-        self.rules = self._load_rules(rules_path)
+        self.config = self._load_rules(rules_path)
+        self.rules = self.config.get("rules", [])
         self.game_name = self.config.get("game_name", "Unknown Game")
 
         # 将字符串函数名映射到实际的“工人”检查方法
@@ -76,7 +76,7 @@ class BaseGameValidator:
             "informational_pattern": self._check_informational_pattern,
         }
 
-    def _load_rules(self, rules_path: str) -> List[Dict]:
+    def _load_rules(self, rules_path: str) -> Dict:
         """从Python模块文件加载和解析规则。"""
         try:
             # 使用spec_from_file_location，因为它更健壮，不依赖于包的上下文
@@ -84,21 +84,20 @@ class BaseGameValidator:
             spec = importlib.util.spec_from_file_location(module_name, rules_path)
             if spec is None or spec.loader is None:
                 self.logger.error(self._get_i18n_message("validator_error_cannot_create_spec", rules_path=rules_path))
-                return []
+                return {}
 
             rule_module = importlib.util.module_from_spec(spec)
             spec.loader.exec_module(rule_module)
 
             # 从模块中获取RULES字典
-            self.config = getattr(rule_module, 'RULES')
-            return self.config.get("rules", [])
+            return getattr(rule_module, 'RULES', {})
 
         except FileNotFoundError:
             self.logger.error(self._get_i18n_message("validator_error_rules_not_found", rules_path=rules_path))
-            return []
+            return {}
         except (AttributeError, ImportError) as e:
             self.logger.error(self._get_i18n_message("validator_error_cannot_load_rules", rules_path=rules_path, e=e))
-            return []
+            return {}
 
     def _get_i18n_message(self, message_key: str, **kwargs) -> str:
         """
@@ -222,29 +221,6 @@ class BaseGameValidator:
             results.append(ValidationResult(is_valid=True, level=ValidationLevel(rule["level"]), message=message, details=details, line_number=line_number, text_sample=text[:100]))
         return results
 
-    def validate_text(self, text: str, line_number: Optional[int] = None) -> List[ValidationResult]:
-        """
-        纯粹的规则执行引擎。
-        它遍历加载自Python模块的规则，并根据 rule['check_function'] 的值，
-        从 self.check_map 中动态调用相应的“工人”检查方法。
-        """
-        all_results = []
-        if not self.rules: # 如果规则加载失败，则直接返回
-            return all_results
-
-        for rule in self.rules:
-            check_function_name = rule.get("check_function")
-            checker = self.check_map.get(check_function_name)
-            if checker:
-                try:
-                    results = checker(text, rule, line_number)
-                    all_results.extend(results)
-                except Exception as e:
-                    self.logger.error(self._get_i18n_message("validator_error_executing_rule", rule_name=rule.get('name', 'N/A'), e=e))
-            else:
-                self.logger.warning(self._get_i18n_message("validator_warning_unknown_check_function", rule_name=rule.get('name', 'N/A'), check_function_name=check_function_name))
-        return all_results
-
     def _check_residual_punctuation(self, text: str, line_number: Optional[int]) -> List[ValidationResult]:
         """
         工人方法：检查翻译后的文本中是否还残留着源语言的标点符号。
@@ -285,7 +261,7 @@ class BaseGameValidator:
         增加了内置的标点符号检查。
         """
         all_results = []
-        if not self.rules: # 如果规则加载失败，则直接返回
+        if not self.rules and not self.config: # 如果规则加载失败，则直接返回
             return all_results
 
         for rule in self.rules:
@@ -435,6 +411,9 @@ if __name__ == "__main__":
         print("\n--- Testing Victoria 3 Validator ---")
         main_validator.validate_game_text("1", "This has #bolda bad format command.", 4)
         main_validator.validate_game_text("1", "This has a [中文概念].", 5)
+        print("\n--- Testing CK3 Validator (New Rule) ---")
+        main_validator.validate_game_text("5", "This contains a #totally_fake_command that should be caught.", 6)
+        main_validator.validate_game_text("5", "This one #bold is valid.", 7)
     except Exception as e:
         print(f"An error occurred during testing: {e}")
         print("Please ensure all Python rule files are present and correctly formatted.")

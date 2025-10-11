@@ -3,6 +3,7 @@
 RULES = {
   "game_id": "1",
   "game_name": "Victoria 3",
+  "source_language_code": "zh-CN",
   "rules": [
     {
       "name": "non_ascii_in_simple_concept",
