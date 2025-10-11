@@ -20,7 +20,7 @@ html.theme-byzantine {
 }
 
 .theme-byzantine .ant-layout-sider {
-    background: var(--color-primary);
+    background: transparent !important;
     border-right: 2px solid var(--color-border);
 }
 
@@ -38,7 +38,7 @@ html.theme-byzantine {
 }
 
 .theme-byzantine .ant-layout-content {
-    background: #2a004a; /* Darker purple for content background */
+    background: transparent !important;
     color: var(--color-text);
 }
 

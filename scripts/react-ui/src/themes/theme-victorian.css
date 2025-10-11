@@ -15,7 +15,7 @@ html.theme-victorian {
 }
 
 .theme-victorian .ant-layout-sider {
-    background: var(--color-background);
+    background: transparent !important;
     border-right: 4px solid;
     border-image-source: var(--border-image-gradient);
     border-image-slice: 1;
@@ -47,7 +47,7 @@ html.theme-victorian body::before {
 }
 
 .theme-victorian .ant-layout-content {
-    background: #f5efe2; /* A slightly darker antique white for content background */
+    background: transparent !important;
 }
 
 .theme-victorian .ant-typography {
