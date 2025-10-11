@@ -34,75 +34,67 @@ import SettingsPage from './pages/SettingsPage';
 import UnderDevelopmentPage from './pages/UnderDevelopmentPage'; // New
 import UnderConstructionPage from './pages/UnderConstructionPage'; // New
 import InConceptionPage from './pages/InConceptionPage'; // New
+import Breadcrumbs from './components/shared/Breadcrumbs';
+
+import { useParams } from 'react-router-dom';
 
 const { Header, Content, Footer, Sider } = Layout;
 const { Title } = Typography;
 
+// --- Breadcrumb Generation ---
+const LocalizedBreadcrumb = ({ match }) => {
+    const { t } = useTranslation();
+    const { i18nKey } = match.route;
+    return <>{t(i18nKey)}</>;
+};
+
+const DynamicProjectBreadcrumb = () => {
+    const { projectId } = useParams();
+    return <span>{projectId.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}</span>;
+};
+
+// --- Single Source of Truth for Routing ---
+const appRouteConfig = [
+    { path: '/', element: <OriginalHomepage />, i18nKey: 'nav_home', icon: <HomeOutlined />, showInMenu: true },
+    { path: '/docs', element: <OriginalDocumentation />, i18nKey: 'nav_docs', icon: <FileTextOutlined />, showInMenu: true },
+    { path: '/translation', element: <OriginalInitialTranslation />, i18nKey: 'page_title_translation', icon: <RocketOutlined />, showInMenu: true },
+    { path: '/glossary-manager', element: <GlossaryManagerPage />, i18nKey: 'page_title_glossary_manager', icon: <BookOutlined />, showInMenu: true },
+    { path: '/proofreading', element: <ProofreadingPage />, i18nKey: 'page_title_proofreading', icon: <ExperimentOutlined />, showInMenu: true },
+    { path: '/project-management', element: <OriginalProjectManagement />, i18nKey: 'page_title_project_management', icon: <DashboardOutlined />, showInMenu: true },
+    { path: '/project-management/:projectId', element: <OriginalProjectManagement />, breadcrumb: DynamicProjectBreadcrumb, showInMenu: false },
+    { path: '/cicd', element: <CICDPage />, i18nKey: 'page_title_cicd', icon: <BranchesOutlined />, showInMenu: true },
+    { path: '/tools', element: <ToolsPage />, i18nKey: 'page_title_tools', icon: <ToolOutlined />, showInMenu: true },
+    { path: '/settings', element: <SettingsPage />, i18nKey: 'page_title_settings', icon: <SettingOutlined />, showInMenu: true },
+    { path: '/under-development', element: <UnderDevelopmentPage />, i18nKey: 'page_title_under_development', icon: <HourglassOutlined />, showInMenu: true },
+    { path: '/under-construction', element: <UnderConstructionPage />, i18nKey: 'page_title_under_construction', icon: <BuildOutlined />, showInMenu: true },
+    { path: '/in-conception', element: <InConceptionPage />, i18nKey: 'page_title_in_conception', icon: <BulbOutlined />, showInMenu: true },
+];
+
+export const routes = appRouteConfig.map(route => {
+    if (route.breadcrumb) { // Handle special cases like DynamicProjectBreadcrumb
+        return { path: route.path, breadcrumb: route.breadcrumb };
+    }
+    if (!route.i18nKey) { // Handle routes that shouldn't have a breadcrumb
+        return { path: route.path, breadcrumb: null };
+    }
+    return {
+        path: route.path,
+        breadcrumb: LocalizedBreadcrumb,
+        i18nKey: route.i18nKey,
+    };
+});
+
+
 const App = () => {
     const { t } = useTranslation();
 
-    const menuItems = [
-        {
-            key: '/',
-            icon: <HomeOutlined />,
-            label: <Link to="/">{t('nav_home')}</Link>,
-        },
-        {
-            key: '/docs',
-            icon: <FileTextOutlined />,
-            label: <Link to="/docs">{t('nav_docs')}</Link>,
-        },
-        {
-            key: '/translation',
-            icon: <RocketOutlined />,
-            label: <Link to="/translation">{t('page_title_translation')}</Link>,
-        },
-        {
-            key: '/glossary-manager',
-            icon: <BookOutlined />,
-            label: <Link to="/glossary-manager">{t('page_title_glossary_manager')}</Link>
-        },
-        {
-            key: '/proofreading',
-            icon: <ExperimentOutlined />,
-            label: <Link to="/proofreading">{t('page_title_proofreading')}</Link>,
-        },
-        {
-            key: '/project-management',
-            icon: <DashboardOutlined />,
-            label: <Link to="/project-management">{t('page_title_project_management')}</Link>,
-        },
-        {
-            key: '/cicd',
-            icon: <BranchesOutlined />,
-            label: <Link to="/cicd">{t('page_title_cicd')}</Link>,
-        },
-        {
-            key: '/tools',
-            icon: <ToolOutlined />,
-            label: <Link to="/tools">{t('page_title_tools')}</Link>,
-        },
-        {
-            key: '/settings',
-            icon: <SettingOutlined />,
-            label: <Link to="/settings">{t('page_title_settings')}</Link>,
-        },
-        {
-            key: '/under-development',
-            icon: <HourglassOutlined />,
-            label: <Link to="/under-development">{t('page_title_under_development')}</Link>,
-        },
-        {
-            key: '/under-construction',
-            icon: <BuildOutlined />,
-            label: <Link to="/under-construction">{t('page_title_under_construction')}</Link>,
-        },
-        {
-            key: '/in-conception',
-            icon: <BulbOutlined />,
-            label: <Link to="/in-conception">{t('page_title_in_conception')}</Link>,
-        },
-    ];
+    const menuItems = appRouteConfig
+        .filter(route => route.showInMenu)
+        .map(route => ({
+            key: route.path,
+            icon: route.icon,
+            label: <Link to={route.path}>{t(route.i18nKey)}</Link>,
+        }));
 
     return (
         <ThemeProvider>
@@ -124,6 +116,7 @@ const App = () => {
                         />
                     </Sider>
                     <Layout style={{ padding: '0 24px 24px' }}>
+                        <Breadcrumbs />
                         <Content
                             style={{
                                 background: '#fff',
@@ -133,18 +126,9 @@ const App = () => {
                             }}
                         >
                             <Routes>
-                                <Route path="/" element={<OriginalHomepage />} />
-                                <Route path="/docs" element={<OriginalDocumentation />} />
-                                <Route path="/translation" element={<OriginalInitialTranslation />} />
-                                <Route path="/glossary-manager" element={<GlossaryManagerPage />} />
-                                <Route path="/proofreading" element={<ProofreadingPage />} />
-                                <Route path="/tools" element={<ToolsPage />} />
-                                <Route path="/cicd" element={<CICDPage />} />
-                                <Route path="/project-management" element={<OriginalProjectManagement />} />
-                                <Route path="/settings" element={<SettingsPage />} />
-                                <Route path="/under-development" element={<UnderDevelopmentPage />} />
-                                <Route path="/under-construction" element={<UnderConstructionPage />} />
-                                <Route path="/in-conception" element={<InConceptionPage />} />
+                                {appRouteConfig.map(route => (
+                                    <Route key={route.path} path={route.path} element={route.element} />
+                                ))}
                             </Routes>
                         </Content>
                     </Layout>
