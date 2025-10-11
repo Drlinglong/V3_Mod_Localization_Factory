@@ -34,9 +34,33 @@ import SettingsPage from './pages/SettingsPage';
 import UnderDevelopmentPage from './pages/UnderDevelopmentPage'; // New
 import UnderConstructionPage from './pages/UnderConstructionPage'; // New
 import InConceptionPage from './pages/InConceptionPage'; // New
+import Breadcrumbs from './components/shared/Breadcrumbs';
+
+import { useParams } from 'react-router-dom';
 
 const { Header, Content, Footer, Sider } = Layout;
 const { Title } = Typography;
+
+// Helper component for dynamic breadcrumbs
+const DynamicProjectBreadcrumb = () => {
+    const { projectId } = useParams();
+    // In a real app, you might fetch the project name from an API
+    // For now, we'll just format the projectId
+    return <span>{projectId.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}</span>;
+};
+
+export const routes = [
+    { path: '/', breadcrumb: 'Home' },
+    { path: '/docs', breadcrumb: 'Documentation' },
+    { path: '/translation', breadcrumb: 'Initial Translation' },
+    { path: '/glossary-manager', breadcrumb: 'Glossary Manager' },
+    { path: '/proofreading', breadcrumb: 'Proofreading' },
+    { path: '/project-management', breadcrumb: 'Project Management' },
+    { path: '/project-management/:projectId', breadcrumb: DynamicProjectBreadcrumb },
+    { path: '/cicd', breadcrumb: 'CI/CD' },
+    { path: '/tools', breadcrumb: 'Tools' },
+    { path: '/settings', breadcrumb: 'Settings' },
+];
 
 const App = () => {
     const { t } = useTranslation();
@@ -124,6 +148,7 @@ const App = () => {
                         />
                     </Sider>
                     <Layout style={{ padding: '0 24px 24px' }}>
+                        <Breadcrumbs />
                         <Content
                             style={{
                                 background: '#fff',
@@ -141,6 +166,7 @@ const App = () => {
                                 <Route path="/tools" element={<ToolsPage />} />
                                 <Route path="/cicd" element={<CICDPage />} />
                                 <Route path="/project-management" element={<OriginalProjectManagement />} />
+                                <Route path="/project-management/:projectId" element={<OriginalProjectManagement />} />
                                 <Route path="/settings" element={<SettingsPage />} />
                                 <Route path="/under-development" element={<UnderDevelopmentPage />} />
                                 <Route path="/under-construction" element={<UnderConstructionPage />} />
