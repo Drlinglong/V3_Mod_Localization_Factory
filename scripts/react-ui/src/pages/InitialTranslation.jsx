@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useTranslation } from 'react-i18next';
+import { useNotification } from '../context/NotificationContext';
 import {
   Steps,
   Button,
   Upload,
   Form,
   Select,
-  message,
   Typography,
   Space,
   Result,
@@ -31,6 +31,7 @@ const { Option } = Select;
 
 const InitialTranslation = () => {
   const { t } = useTranslation();
+  const { notify } = useNotification();
   const [current, setCurrent] = useState(0);
   const [config, setConfig] = useState({
     game_profiles: {},
@@ -50,10 +51,10 @@ const InitialTranslation = () => {
     axios.get('/api/config')
       .then(response => setConfig(response.data))
       .catch(error => {
-        message.error(t('message_error_load_config'));
+        notify.error(t('message_error_load_config'));
         console.error('Config fetch error:', error);
       });
-  }, []);
+  }, [notify]);
 
   useEffect(() => {
     if (!taskId || !isProcessing) return;
@@ -71,10 +72,10 @@ const InitialTranslation = () => {
             setIsProcessing(false);
             setCurrent(3);
             if (newStatus === 'completed') {
-              message.success(t('message_success_translation_complete'));
+              notify.success(t('message_success_translation_complete'));
               setResultUrl(`/api/result/${taskId}`);
             } else {
-              message.error(t('message_error_translation_failed'));
+              notify.error(t('message_error_translation_failed'));
             }
           } else {
             setStatus(newStatus);
@@ -82,7 +83,7 @@ const InitialTranslation = () => {
         })
         .catch(error => {
           clearInterval(poll);
-          message.error(t('message_error_get_status'));
+          notify.error(t('message_error_get_status'));
           console.error('Polling error:', error);
           setStatus('failed');
           setIsProcessing(false);
@@ -110,19 +111,19 @@ const InitialTranslation = () => {
     if (!taskId) return;
     try {
       console.log(`Aborting task ${taskId}`);
-      message.warn(t('message_warn_aborted'));
+      notify.error(t('message_warn_aborted')); // Use error style for warnings
       setIsProcessing(false);
       setStatus('failed');
       setLogs(prev => [...prev, { level: 'WARN', message: t('log_aborted') }]);
     } catch (error) {
-      message.error(t('message_error_abort_failed'));
+      notify.error(t('message_error_abort_failed'));
       console.error('Abort error:', error);
     }
   };
 
   const onFinish = (values) => {
     if (fileList.length === 0) {
-      message.error(t('message_error_upload_first'));
+      notify.error(t('message_error_upload_first'));
       return;
     }
 
@@ -161,10 +162,10 @@ const InitialTranslation = () => {
     })
     .then(response => {
       setTaskId(response.data.task_id);
-      message.success(t('message_success_task_started'));
+      notify.success(t('message_success_task_started'));
     })
     .catch(error => {
-      message.error(t('message_error_task_start_failed'));
+      notify.error(t('message_error_task_start_failed'));
       console.error('Translate API error:', error);
       setIsProcessing(false);
       setStatus('failed');
