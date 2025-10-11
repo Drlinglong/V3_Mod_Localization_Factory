@@ -10,7 +10,7 @@ from scripts.core.base_handler import BaseApiHandler
 from scripts.app_settings import API_PROVIDERS, GEMINI_CLI_MAX_RETRIES
 from scripts.utils import i18n
 from scripts.core.parallel_processor import BatchTask
-from scripts.utils.response_parser import parse_json_response, ParsingFailedAfterRepairError
+from scripts.utils.response_parser import parse_json_from_response
 from scripts.core.glossary_manager import glossary_manager
 from scripts.app_settings import FALLBACK_FORMAT_PROMPT
 from scripts.utils.punctuation_handler import generate_punctuation_prompt
@@ -191,8 +191,10 @@ class GeminiCLIHandler(BaseApiHandler):
                 stderr_str = robust_decode(result.stderr)
 
                 if result.returncode == 0:
-                    translated_texts = parse_json_response(stdout_str, len(task.texts))
-                    if translated_texts and len(translated_texts) == len(task.texts):
+                    translated_texts = parse_json_from_response(stdout_str, task.texts)
+
+                    # Check for success: must not be None, must not be the original list, and length must match.
+                    if translated_texts is not None and translated_texts is not task.texts and len(translated_texts) == len(task.texts):
                         task.translated_texts = translated_texts
                         elapsed_time = time.time() - start_time
                         self.logger.info(i18n.t("gemini_cli_batch_success", batch_num=batch_num, attempt=attempt + 1, elapsed_time=elapsed_time))
@@ -203,9 +205,6 @@ class GeminiCLIHandler(BaseApiHandler):
                 else:
                     self.logger.error(f"Gemini CLI call failed for batch {batch_num}, attempt {attempt+1}. Stderr: {stderr_str}")
                     raise RuntimeError(f"Gemini CLI failed with stderr: {stderr_str}")
-
-            except ParsingFailedAfterRepairError as e:
-                self.logger.warning(f"Gemini CLI response parsing failed for batch {batch_num} on attempt {attempt + 1}, even after repair. Error: {e}")
 
             except Exception as e:
                 self.logger.exception(f"Exception in Gemini CLI batch {batch_num} on attempt {attempt + 1}: {e}")

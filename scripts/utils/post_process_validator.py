@@ -24,8 +24,12 @@ from enum import Enum
 # 导入国际化支持
 try:
     from . import i18n
+    from ..utils import punctuation_handler
+    from ..app_settings import LANGUAGES
 except ImportError:
     i18n = None
+    punctuation_handler = None
+    LANGUAGES = {}
 
 
 class ValidationLevel(Enum):
@@ -239,6 +243,67 @@ class BaseGameValidator:
                     self.logger.error(self._get_i18n_message("validator_error_executing_rule", rule_name=rule.get('name', 'N/A'), e=e))
             else:
                 self.logger.warning(self._get_i18n_message("validator_warning_unknown_check_function", rule_name=rule.get('name', 'N/A'), check_function_name=check_function_name))
+        return all_results
+
+    def _check_residual_punctuation(self, text: str, line_number: Optional[int]) -> List[ValidationResult]:
+        """
+        工人方法：检查翻译后的文本中是否还残留着源语言的标点符号。
+        这是一个内置的基础检查，适用于所有游戏。
+        """
+        results = []
+        # 从游戏配置中获取源语言，默认为中文
+        source_lang_code = self.config.get("source_language_code", "zh-CN")
+
+        if not punctuation_handler:
+            return results
+
+        analysis = punctuation_handler.analyze_punctuation(text, source_lang_code)
+
+        if analysis.get("found"):
+            # 找到了残留的标点符号
+            found_punctuations = ", ".join(analysis.get("details", {}).keys())
+            message = self._get_i18n_message("validation_residual_punctuation_found")
+            details = self._get_i18n_message(
+                "validation_residual_punctuation_details",
+                punctuations=found_punctuations
+            )
+            results.append(ValidationResult(
+                is_valid=False,
+                level=ValidationLevel.WARNING, # 通常这是一个警告而非致命错误
+                message=message,
+                details=details,
+                line_number=line_number,
+                text_sample=text[:100]
+            ))
+        return results
+
+    def validate_text(self, text: str, line_number: Optional[int] = None) -> List[ValidationResult]:
+        """
+        纯粹的规则执行引擎。
+        它遍历加载自Python模块的规则，并根据 rule['check_function'] 的值，
+        从 self.check_map 中动态调用相应的“工人”检查方法。
+        增加了内置的标点符号检查。
+        """
+        all_results = []
+        if not self.rules: # 如果规则加载失败，则直接返回
+            return all_results
+
+        for rule in self.rules:
+            check_function_name = rule.get("check_function")
+            checker = self.check_map.get(check_function_name)
+            if checker:
+                try:
+                    results = checker(text, rule, line_number)
+                    all_results.extend(results)
+                except Exception as e:
+                    self.logger.error(self._get_i18n_message("validator_error_executing_rule", rule_name=rule.get('name', 'N/A'), e=e))
+            else:
+                self.logger.warning(self._get_i18n_message("validator_warning_unknown_check_function", rule_name=rule.get('name', 'N/A'), check_function_name=check_function_name))
+
+        # --- 内置基础检查 ---
+        punctuation_results = self._check_residual_punctuation(text, line_number)
+        all_results.extend(punctuation_results)
+
         return all_results
 
     def _log_validation_result(self, result: ValidationResult):
