@@ -1,4 +1,22 @@
 # tests/workflows/test_initial_translate.py
+import sys
+from unittest.mock import MagicMock
+
+# --- Pre-emptive Mocking to solve ImportError ---
+# Create a mock 'genai' module and a mock 'google' module.
+# This is necessary to prevent an ImportError during test collection in environments
+# where the 'google' namespace might be structured differently. By inserting these
+# mocks into sys.modules *before* our application code is imported, we ensure that
+# the 'from google import genai' statement in gemini_handler.py resolves to our
+# mock, allowing the test file to be loaded without error. The actual API calls
+# are already mocked later in the tests, so this does not affect test logic.
+mock_genai = MagicMock()
+sys.modules['google.genai'] = mock_genai
+mock_google = MagicMock()
+mock_google.genai = mock_genai
+sys.modules['google'] = mock_google
+# --- End of Mocking ---
+
 import os
 import yaml
 import json

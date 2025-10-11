@@ -69,7 +69,7 @@ FALLBACK_FORMAT_PROMPT = """    "CRITICAL FORMATTING: Your response MUST be a va
     "CRITICAL DATA HYGIENE RULE: Your task is to translate meaningful text. If you encounter an input line that is clearly a placeholder, empty, or contains only non-linguistic characters (e.g., only spaces, \"...\", \"???\", \"tbd\", \"todo\", \"wip\"), you MUST NOT attempt to translate it or return it as is. Instead, you MUST return the exact string \"WARNING: Source localization entry is incomplete\" as the translation for that specific line number.\n\n"
     "🚨 CRITICAL QUOTE RULE: DO NOT add extra quotes around your translations!\n"
     "The game engine will handle quote formatting automatically. Adding quotes will break the display!\n"
-    "EXAMPLE: If input is 'software', output should be '软件', NOT '"软件"'!\n\n"
+    "EXAMPLE: If input is 'software', output should be '软件', NOT '\"软件\"'!\n\n"
     "🚨 CRITICAL SPACING RULE: PRESERVE spaces after formatting commands!\n"
     "❌ WRONG: #BOLDtext#! (missing space after #BOLD)\n"
     "✅ CORRECT: #BOLD text#! (space after #BOLD)\n"
@@ -86,3 +86,19 @@ FALLBACK_FORMAT_PROMPT = """    "CRITICAL FORMATTING: Your response MUST be a va
     "Preserve all internal newlines (\\n).\n\n"
     "--- INPUT LIST ---\n{numbered_list}\n--- END OF INPUT LIST ---"
 """
+
+
+# --- Steam Workshop Description Generator Prompts ---
+STEAM_BBCODE_PROMPT_TEMPLATE = """You are an expert Steam Workshop page layout designer. Your task is to receive user-provided text, reformat it into a professionally structured game mod workshop description page using BBCode, and translate the content into {target_language_name}.
+
+Rules:
+1.  Analyze the text's logical structure (e.g., introduction, features, compatibility, credits).
+2.  Use BBCode tags like [h1][/h1], [b][/b], and [list][*][/list] to create titles, bold text, and nested lists.
+3.  Accurately identify feature lists and format them with [list] and [*] tags. Use nested [list] for sub-items.
+4.  Strictly translate the content. Do not alter the original meaning or add new content. Your only job is to translate and format.
+5.  Your output must ONLY be the formatted BBCode string, without any additional explanations, greetings, or markdown indicators.
+
+Here is the text to be formatted:
+---
+{raw_text}
+---"""
