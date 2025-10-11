@@ -71,3 +71,52 @@ html.theme-byzantine {
     color: var(--color-text);
     border-top: 1px solid var(--color-border);
 }
+
+/* RemisButton Byzantine Theme */
+.theme-byzantine .remis-button {
+  border: 2px solid;
+  border-image-source: linear-gradient(to bottom, #FFD700, #B8860B);
+  border-image-slice: 1;
+  background: linear-gradient(145deg, #5e0c9e, #4b0082);
+  color: var(--color-accent, #FFFAF0);
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4), inset 0 2px 3px rgba(255, 255, 255, 0.2);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.theme-byzantine .remis-button:hover {
+  background: linear-gradient(145deg, #6a0dad, #5e0c9e);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.5), inset 0 2px 4px rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
+}
+
+.theme-byzantine .remis-button:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(145deg, #4b0082, #3a0066);
+}
+
+/* Custom Scrollbar Byzantine Theme */
+.theme-byzantine ::-webkit-scrollbar {
+  width: 12px;
+}
+
+.theme-byzantine ::-webkit-scrollbar-track {
+  background: #2a004a; /* Dark content background */
+  border-left: 1px solid var(--color-border);
+}
+
+.theme-byzantine ::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #FFD700, #B8860B);
+  border-radius: 6px;
+  border: 1px solid #4B0082;
+}
+
+.theme-byzantine ::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #FFEDA0, #CCA32F);
+}

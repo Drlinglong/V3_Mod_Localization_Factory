@@ -4,6 +4,7 @@ import { Row, Col, Typography, Card } from 'antd';
 import ActionCard from '../components/ActionCard';
 import ProjectStatusPieChart from '../components/ProjectStatusPieChart';
 import GlossaryAnalysisBarChart from '../components/GlossaryAnalysisBarChart';
+import RemisButton from '../components/shared/RemisButton';
 
 const { Title, Paragraph } = Typography;
 
@@ -24,6 +25,9 @@ const HomePage = () => {
       <Card style={{ marginBottom: '24px', textAlign: 'center' }}>
         <Title level={3}>{t('homepage_title')}</Title>
         <Paragraph>"{slogan}"</Paragraph>
+        <RemisButton onClick={() => alert('RemisButton Clicked!')}>
+          {t('homepage_test_button')}
+        </RemisButton>
       </Card>
 
       <Row gutter={[24, 24]}>
