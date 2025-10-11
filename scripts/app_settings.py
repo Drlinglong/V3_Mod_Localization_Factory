@@ -29,7 +29,7 @@ MAX_RETRIES = 3
 
 # --- Gemini CLI 特定配置 -----------------------------------------
 GEMINI_CLI_CHUNK_SIZE = 100
-GEMINI_CLI_MAX_RETRIES = 2
+GEMINI_CLI_MAX_RETRIES = 3
 
 # --- 智能线程池配置 ----------------------------------------------------
 def get_smart_max_workers():

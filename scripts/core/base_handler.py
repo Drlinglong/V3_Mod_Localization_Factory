@@ -113,6 +113,7 @@ class BaseApiHandler(ABC):
                         f"Response parsing failed for batch {batch_num} on attempt {attempt + 1}. "
                         f"Expected {len(task.texts)} items, got {len(translated_texts) if translated_texts else 0}."
                     )
+                    raise ValueError("Response parsing failed, triggering retry.")
 
             except Exception as e:
                 self.logger.exception(f"API call failed for batch {batch_num} on attempt {attempt + 1}: {e}")
