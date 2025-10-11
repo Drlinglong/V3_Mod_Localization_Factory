@@ -400,7 +400,7 @@ const GlossaryManagerPage = () => {
                     </Col>
                 </Row>
 
-                <Modal title={editingEntry ? t('glossary_edit_entry') : t('glossary_add_entry')} open={isModalVisible} onOk={saveData} onCancel={() => { setIsModalVisible(false); setIsAdvancedMode(false); }} destroyOnClose confirmLoading={isSaving} okText={t('button_ok')} cancelText={t('button_cancel')}>
+                <Modal title={editingEntry ? t('glossary_edit_entry') : t('glossary_add_entry')} open={isModalVisible} onOk={saveData} onCancel={() => { setIsModalVisible(false); setIsAdvancedMode(false); }} destroyOnHidden confirmLoading={isSaving} okText={t('button_ok')} cancelText={t('button_cancel')}>
                     <Form form={form} layout="vertical" name="glossary_entry_form">
                         <Form.Item name="source" label={t('glossary_source_text')} rules={[{ required: true }]}>
                             <Input />
