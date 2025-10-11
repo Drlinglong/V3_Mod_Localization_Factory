@@ -507,5 +507,7 @@
   "validator_warning_unknown_check_function": "Rule '{rule_name}' specifies an unknown check function: '{check_function_name}'",
   "validator_warning_cannot_load_i18n": "Cannot load internationalization: {e}",
   "validation_generic_tags_count": "Found {start_count} start tags, but {end_count} end markers.",
-  "glossary_consistency_warning_header": "Glossary consistency validation found potential issues:"
+  "glossary_consistency_warning_header": "Glossary consistency validation found potential issues:",
+  "log_warn_remote_id_not_in_file": "remote_file_id not found in {path}.",
+  "log_error_parsing_mod_file": "Error parsing mod file {path}: {error}"
 }
