@@ -147,6 +147,7 @@ class GeminiCLIHandler(BaseApiHandler):
         """
         prompt = self._build_prompt(task)
         batch_num = task.batch_index + 1
+        start_time = time.time()
 
         for attempt in range(GEMINI_CLI_MAX_RETRIES):
             try:
@@ -193,7 +194,8 @@ class GeminiCLIHandler(BaseApiHandler):
                     translated_texts = parse_json_response(stdout_str, len(task.texts))
                     if translated_texts and len(translated_texts) == len(task.texts):
                         task.translated_texts = translated_texts
-                        self.logger.info(i18n.t("gemini_cli_batch_success", batch_num=batch_num, attempt=attempt + 1))
+                        elapsed_time = time.time() - start_time
+                        self.logger.info(i18n.t("gemini_cli_batch_success", batch_num=batch_num, attempt=attempt + 1, elapsed_time=elapsed_time))
                         return task
                     else:
                         self.logger.warning(f"Gemini CLI response parsing failed for batch {batch_num}, attempt {attempt + 1}. Expected {len(task.texts)}, got {len(translated_texts) if translated_texts else 0}.")

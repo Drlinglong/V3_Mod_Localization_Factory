@@ -88,8 +88,18 @@ def parse_json_response(response_text: str, expected_count: int) -> Optional[Lis
         # Handle cases where the list is nested inside a dictionary
         logger.info(i18n.t("unpacking_wrapped_response"))
         nested_text = parsed_data['response']
+        
+        # Clean the nested text, removing markdown code blocks
+        clean_nested_text = nested_text.strip()
+        if clean_nested_text.startswith("```json"):
+            clean_nested_text = clean_nested_text.removeprefix("```json").strip()
+        if clean_nested_text.startswith("```"):
+            clean_nested_text = clean_nested_text.removeprefix("```").strip()
+        if clean_nested_text.endswith("```"):
+            clean_nested_text = clean_nested_text.removesuffix("```").strip()
+
         try:
-            translations = json.loads(nested_text)
+            translations = json.loads(clean_nested_text)
             if not isinstance(translations, list):
                  logger.warning(i18n.t("parser_unpack_json_not_list_warning", nested_data=translations))
                  return [""] * expected_count

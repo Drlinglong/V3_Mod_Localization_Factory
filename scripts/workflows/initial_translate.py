@@ -18,7 +18,8 @@ def run(mod_name: str,
         game_profile: dict,
         mod_context: str,
         selected_provider: str = "gemini",
-        selected_glossary_ids: Optional[List[int]] = None):
+        selected_glossary_ids: Optional[List[int]] = None,
+        mod_id_for_archive: Optional[int] = None):
     """【最终版】初次翻译工作流（多语言 & 多游戏兼容）"""
 
     # ───────────── 1. ścieżki i tryb ─────────────
@@ -37,10 +38,7 @@ def run(mod_name: str,
                  mod_name=mod_name))
     logging.info(i18n.t("log_selected_provider", provider=selected_provider))
 
-    # ───────────── ARCHIVE STAGE 1: Get/Create Mod ID ─────────────
-    mod_id_for_archive = None
-    if ARCHIVE_RESULTS_AFTER_TRANSLATION:
-        mod_id_for_archive = archive_manager.get_or_create_mod_id(mod_name, game_profile)
+    # ARCHIVE STAGE 1 is now handled in main.py
 
     # ───────────── 2. init klienta ─────────────
     gemini_cli_model = None

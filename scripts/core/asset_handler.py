@@ -261,7 +261,7 @@ def copy_assets(mod_name: str, output_folder_name: str, game_profile: dict):
                     shutil.copy2(source_path, dest_path)
                 logging.info(i18n.t("asset_copied", asset_name=item))
             except FileExistsError:
-                 logging.warning(f"Asset '{item}' already exists at destination, skipping.")
+                 logging.warning(i18n.t("log_warn_asset_exists", item=item))
             except Exception as e:
                 logging.exception(f"Error copying asset {item}: {e}")
         else:
