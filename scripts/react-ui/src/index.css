@@ -11,3 +11,44 @@
 body {
   margin: 0;
 }
+
+/* --- Global Custom Scrollbar --- */
+/* Works on Chrome, Edge, and Safari */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+html.theme-dark ::-webkit-scrollbar-track {
+    background: #2e2e2e;
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 10px;
+}
+html.theme-dark ::-webkit-scrollbar-thumb {
+    background: #555;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+html.theme-dark ::-webkit-scrollbar-thumb:hover {
+    background: #777;
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #c1c1c1 #f1f1f1;
+}
+
+html.theme-dark * {
+    scrollbar-color: #555 #2e2e2e;
+}
