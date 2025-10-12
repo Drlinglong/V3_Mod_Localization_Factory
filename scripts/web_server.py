@@ -25,6 +25,7 @@ if project_root not in sys.path:
 from scripts.app_settings import GAME_PROFILES, LANGUAGES, API_PROVIDERS, SOURCE_DIR, DEST_DIR
 from scripts.workflows import initial_translate
 from scripts.utils import logger, i18n
+from scripts.core import workshop_formatter
 
 # Setup logger
 logger.setup_logger()
@@ -600,6 +601,69 @@ def get_doc_content(path: str = Query(...)):
         return content
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error reading file: {e}")
+
+
+# --- Models for Workshop Generator ---
+class WorkshopRequest(BaseModel):
+    item_id: str
+    user_template: str
+    target_language: str
+    project_id: Optional[str] = "" # Can be empty if using manual item ID
+    custom_language: Optional[str] = ""
+    api_provider: str # Added new field
+
+# --- API Endpoints for Workshop Generator ---
+
+@app.get("/api/projects")
+def get_projects():
+    """
+    Returns a list of available projects.
+    TODO: This should eventually query a database or project config file.
+    """
+    # Mock data for now
+    return [
+        {"name": "My Awesome Mod", "id": "my_awesome_mod", "workshop_id": "123456789"},
+        {"name": "Another Great Project", "id": "another_great_project", "workshop_id": "987654321"},
+    ]
+
+@app.post("/api/tools/generate_workshop_description")
+def generate_workshop_description(payload: WorkshopRequest):
+    """
+    Handles the full workflow for generating a Steam Workshop description.
+    """
+    # 1. Get original description from Steam
+    original_desc = workshop_formatter.get_workshop_item_details(payload.item_id)
+    if original_desc is None:
+        raise HTTPException(status_code=502, detail="Failed to fetch description from Steam Workshop. The Workshop ID might be invalid or the service may be down.")
+
+    # 2. Format description with AI
+    formatted_bbcode = workshop_formatter.format_description_with_ai(
+        original_description=original_desc,
+        user_template=payload.user_template,
+        target_language=payload.target_language,
+        custom_language=payload.custom_language,
+        project_id=payload.project_id,
+        selected_provider=payload.api_provider
+    )
+    if "[AI Formatting Failed" in formatted_bbcode or "[AI Formatting Skipped" in formatted_bbcode:
+         raise HTTPException(status_code=500, detail=f"AI processing failed. Details: {formatted_bbcode}")
+
+    # 3. Archive the generated description
+    saved_path = workshop_formatter.archive_generated_description(
+        project_id=payload.project_id,
+        bbcode_content=formatted_bbcode,
+        workshop_id=payload.item_id
+    )
+    if saved_path is None:
+        # Even if saving fails, we should still return the generated content to the user.
+        # We can add a warning or special status in the response.
+        return {
+            "bbcode": formatted_bbcode,
+            "saved_path": None,
+            "message": "BBCode generated successfully, but failed to save the archive file."
+        }
+
+    return {"bbcode": formatted_bbcode, "saved_path": saved_path}
 
 
 @app.get("/")
