@@ -26,6 +26,7 @@
     "react-router-dom": "^7.9.3",
     "recharts": "^3.2.1",
     "rehype-raw": "^7.0.0",
+    "use-react-router-breadcrumbs": "^4.0.1",
     "uuid": "^13.0.0"
   },
   "devDependencies": {

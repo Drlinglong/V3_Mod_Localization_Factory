@@ -10,6 +10,10 @@ html.theme-victorian {
   --border-image-gradient: linear-gradient(145deg, #b8860b, #daa520, #b8860b);
 }
 
+.theme-victorian .ant-layout-has-sider {
+    background: transparent !important;
+}
+
 .theme-victorian .ant-layout-header {
     background: var(--color-primary);
 }
@@ -19,6 +23,78 @@ html.theme-victorian {
     border-right: 4px solid;
     border-image-source: var(--border-image-gradient);
     border-image-slice: 1;
+}
+
+/*
+  Adds a subtle, fixed background texture to the entire page for the Victorian theme.
+  It uses a blend mode to tint the monochrome damask pattern with the theme's primary color,
+  creating a rich, dark, and elegant wallpaper effect. The low opacity keeps it from
+  being distracting.
+*/
+html.theme-victorian body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("/src/assets/textures/victorian-bg.jpg");
+    background-color: var(--color-primary);
+    background-blend-mode: multiply;
+    background-repeat: repeat;
+    opacity: 0.08; /* Even more subtle for this detailed pattern */
+    z-index: -1;
+/* RemisButton Victorian Theme */
+.theme-victorian .remis-button {
+  border: 2px solid #5C3A1E; /* Dark wood color */
+  border-radius: 50px; /* To get the old typewriter key shape */
+  background: linear-gradient(145deg, #EADCB3, #C3A37A); /* Brass gradient */
+  color: #362211;
+  padding: 12px 22px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 5px 0 #5C3A1E, 0 8px 10px rgba(0,0,0,0.4);
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+.theme-victorian .remis-button:hover {
+  background: linear-gradient(145deg, #F0EAD6, #DABF92); /* Lighter brass */
+  box-shadow: 0 5px 0 #5C3A1E, 0 9px 12px rgba(0,0,0,0.5);
+  transform: translateY(-1px);
+}
+
+.theme-victorian .remis-button:active {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 #5C3A1E, 0 4px 5px rgba(0,0,0,0.5);
+  background: linear-gradient(145deg, #C3A37A, #B2926B); /* Darker brass */
+}
+
+/* Custom Scrollbar Victorian Theme */
+.theme-victorian ::-webkit-scrollbar {
+  width: 14px;
+}
+
+.theme-victorian ::-webkit-scrollbar-track {
+  background: #6B4F3A; /* Dark wood color */
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.5);
+}
+
+.theme-victorian ::-webkit-scrollbar-thumb {
+  background: linear-gradient(145deg, #EADCB3, #C3A37A); /* Brass gradient */
+  border-radius: 7px;
+  border: 2px solid #5C3A1E; /* Dark wood border */
+}
+
+.theme-victorian ::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(145deg, #F0EAD6, #DABF92); /* Lighter brass */
+}
+
+/* Firefox scrollbar color for Victorian theme */
+.theme-victorian * {
+  scrollbar-color: #C3A37A #6B4F3A; /* thumb track */
 }
 
 .theme-victorian .ant-menu {
@@ -46,9 +122,62 @@ html.theme-victorian {
     background: var(--color-background);
 }
 
-/* Example of applying the border to a "panel-like" component */
-.theme-victorian .ant-card-bordered {
-    border: 4px solid;
+/*
+  Custom Card styling for the Victorian theme, creating a "picture frame" effect.
+  - position: relative is crucial for positioning the pseudo-elements.
+  - The border-image simulates a brass/cast-iron frame.
+  - The ::before and ::after pseudo-elements add decorative "rivets" to the corners,
+    enhancing the ornate, industrial feel of the theme.
+*/
+.theme-victorian .ant-card {
+    position: relative;
+    background: #f4e9d8; /* A slightly darker antique paper color */
+    border: 10px solid;
     border-image-source: var(--border-image-gradient);
     border-image-slice: 1;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+/* We need position relative here to position the pseudo-elements for the other two corners */
+.theme-victorian .ant-card-body {
+    position: relative;
+}
+
+/* Create 4 corner "rivets" using pseudo-elements on both the card and its body */
+.theme-victorian .ant-card::before,
+.theme-victorian .ant-card::after,
+.theme-victorian .ant-card-body::before,
+.theme-victorian .ant-card-body::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #b8860b; /* Darker brass color for rivets */
+    box-shadow: inset 0 0 2px rgba(0,0,0,0.6);
+    border-radius: 50%;
+    z-index: 10; /* Ensure rivets are on top */
+}
+
+/* Top-left */
+.theme-victorian .ant-card::before {
+    top: -15px;
+    left: -15px;
+}
+
+/* Bottom-right */
+.theme-victorian .ant-card::after {
+    bottom: -15px;
+    right: -15px;
+}
+
+/* Top-right */
+.theme-victorian .ant-card-body::before {
+    top: -39px;  /* Adjust based on card padding + border */
+    right: -39px; /* Adjust based on card padding + border */
+}
+
+/* Bottom-left */
+.theme-victorian .ant-card-body::after {
+    bottom: -39px; /* Adjust based on card padding + border */
+    left: -39px;  /* Adjust based on card padding + border */
 }

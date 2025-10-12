@@ -67,3 +67,14 @@
   text-align: left;
   white-space: pre-wrap;
 }
+
+/* Final fix for stretched icons, based on runtime DOM analysis */
+.ant-menu-item .ant-menu-item-icon {
+  font-size: 18px; /* Control the icon's base size */
+  flex: none;      /* Prevent the icon from growing or shrinking as a flex item */
+  width: 1em;      /* Explicitly set width to match the font size */
+  height: 1em;     /* Explicitly set height to match the font size */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}

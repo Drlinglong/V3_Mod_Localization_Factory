@@ -1,7 +1,7 @@
 import os
 import logging
 from typing import Any
-from google import genai
+import google.generativeai as genai
 
 from scripts.app_settings import API_PROVIDERS
 from scripts.core.base_handler import BaseApiHandler
