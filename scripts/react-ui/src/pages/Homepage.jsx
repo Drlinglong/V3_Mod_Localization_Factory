@@ -59,30 +59,6 @@ const HomePage = () => {
           </Card>
         </Col>
       </Row>
-
-      {/* --- Scrollbar Test Container --- */}
-      <Card style={{ marginTop: '24px' }}>
-        <Title level={4}>Scrollbar Test Container</Title>
-        <div
-          style={{
-            height: '200px',
-            overflowY: 'scroll',
-            border: '1px solid #ccc',
-            padding: '10px',
-            marginTop: '10px'
-          }}
-        >
-          <Paragraph>This is a test container to demonstrate the custom scrollbar.</Paragraph>
-          <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Paragraph>
-          <Paragraph>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</Paragraph>
-          <Paragraph>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</Paragraph>
-          <Paragraph>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</Paragraph>
-          <Paragraph>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</Paragraph>
-          <Paragraph>This is the end of the content. Scroll up and down to see the custom scrollbar in action.</Paragraph>
-        </div>
-      </Card>
-      {/* --- End of Scrollbar Test Container --- */}
-
     </div>
   );
 };
