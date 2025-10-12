@@ -116,7 +116,7 @@ class BaseApiHandler(ABC):
                 if translated_texts is not None and translated_texts is not task.texts and len(translated_texts) == len(task.texts):
                     task.translated_texts = translated_texts
                     elapsed_time = time.time() - start_time # <--- 计算耗时
-                    self.logger.debug(i18n.t("batch_success", batch_num=batch_num, attempt=attempt + 1, elapsed_time=f"{elapsed_time:.2f}")) # <--- 传递参数
+                    self.logger.info(i18n.t("batch_success", batch_num=batch_num, attempt=attempt + 1, elapsed_time=elapsed_time)) # <--- 传递参数
                     return task
                 else:
                     self.logger.warning(

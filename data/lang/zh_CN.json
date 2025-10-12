@@ -550,5 +550,11 @@
   "log_info_db_connection_closed": "模组缓存数据库连接已关闭。",
   "log_info_source_version_exists": "源版本已存在: {hash} (版本ID: {version_id})",
   "validation_residual_punctuation_found": "检测到残留的源语言标点符号。",
-  "validation_residual_punctuation_details": "发现了以下本应被转换的标点符号: {punctuations}"
+  "validation_residual_punctuation_details": "发现了以下本应被转换的标点符号: {punctuations}",
+  "log.tag_analysis.starting_dynamic_validation": "开始动态标签分析以进行后处理验证...",
+  "log.tag_analysis.starting_mod_validation": "开始Mod标签分析以进行动态验证...",
+  "log.tag_analysis.loaded_official_tags": "成功从 '{path}' 加载了 {count} 个官方标签。",
+  "log.tag_analysis.found_unique_tags": "在Mod中找到 {count} 个唯一标签。",
+  "log.tag_analysis.no_custom_tags": "未在Mod中发现自定义标签。所有标签均符合官方规范。",
+  "log.tag_analysis.final_whitelist": "本次会话的最终合并白名单包含 {count} 个标签。"
 }
