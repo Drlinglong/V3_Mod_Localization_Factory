@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useTranslation } from 'react-i18next';
+import { useNotification } from '../context/NotificationContext';
+import notificationService from '../services/notificationService';
 import {
   Steps,
   Button,
   Upload,
   Form,
   Select,
-  message,
   Typography,
   Space,
   Result,
@@ -31,6 +32,7 @@ const { Option } = Select;
 
 const InitialTranslation = () => {
   const { t } = useTranslation();
+  const { notificationStyle } = useNotification();
   const [current, setCurrent] = useState(0);
   const [config, setConfig] = useState({
     game_profiles: {},
@@ -50,10 +52,10 @@ const InitialTranslation = () => {
     axios.get('/api/config')
       .then(response => setConfig(response.data))
       .catch(error => {
-        message.error(t('message_error_load_config'));
+        notificationService.error(t('message_error_load_config'), notificationStyle);
         console.error('Config fetch error:', error);
       });
-  }, []);
+  }, [notificationStyle]);
 
   useEffect(() => {
     if (!taskId || !isProcessing) return;
@@ -71,10 +73,10 @@ const InitialTranslation = () => {
             setIsProcessing(false);
             setCurrent(3);
             if (newStatus === 'completed') {
-              message.success(t('message_success_translation_complete'));
+              notificationService.success(t('message_success_translation_complete'), notificationStyle);
               setResultUrl(`/api/result/${taskId}`);
             } else {
-              message.error(t('message_error_translation_failed'));
+              notificationService.error(t('message_error_translation_failed'), notificationStyle);
             }
           } else {
             setStatus(newStatus);
@@ -82,7 +84,7 @@ const InitialTranslation = () => {
         })
         .catch(error => {
           clearInterval(poll);
-          message.error(t('message_error_get_status'));
+          notificationService.error(t('message_error_get_status'), notificationStyle);
           console.error('Polling error:', error);
           setStatus('failed');
           setIsProcessing(false);
@@ -91,7 +93,7 @@ const InitialTranslation = () => {
     }, 2000);
 
     return () => clearInterval(poll);
-  }, [taskId, isProcessing, t]);
+  }, [taskId, isProcessing, t, notificationStyle]);
 
   const handleUploadChange = ({ fileList: newFileList }) => {
     setFileList(newFileList.slice(-1));
@@ -110,19 +112,19 @@ const InitialTranslation = () => {
     if (!taskId) return;
     try {
       console.log(`Aborting task ${taskId}`);
-      message.warn(t('message_warn_aborted'));
+      notificationService.error(t('message_warn_aborted'), notificationStyle); // Use error style for warnings
       setIsProcessing(false);
       setStatus('failed');
       setLogs(prev => [...prev, { level: 'WARN', message: t('log_aborted') }]);
     } catch (error) {
-      message.error(t('message_error_abort_failed'));
+      notificationService.error(t('message_error_abort_failed'), notificationStyle);
       console.error('Abort error:', error);
     }
   };
 
   const onFinish = (values) => {
     if (fileList.length === 0) {
-      message.error(t('message_error_upload_first'));
+      notificationService.error(t('message_error_upload_first'), notificationStyle);
       return;
     }
 
@@ -161,10 +163,10 @@ const InitialTranslation = () => {
     })
     .then(response => {
       setTaskId(response.data.task_id);
-      message.success(t('message_success_task_started'));
+      notificationService.success(t('message_success_task_started'), notificationStyle);
     })
     .catch(error => {
-      message.error(t('message_error_task_start_failed'));
+      notificationService.error(t('message_error_task_start_failed'), notificationStyle);
       console.error('Translate API error:', error);
       setIsProcessing(false);
       setStatus('failed');
