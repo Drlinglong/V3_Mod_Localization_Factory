@@ -47,6 +47,12 @@ MOCK_ORIGINAL_INPUT_2 = ["source1", "source2"]
      '```json\\n["A""B", "Another "illegal" quote"]\\n```\\nAnd that is all.',
      MOCK_ORIGINAL_INPUT_2,
      ["A", "B", 'Another "illegal" quote']),
+
+    # --- Final Regression Test for the "Expecting ',' delimiter" chain failure ---
+    ("expecting_comma_delimiter_regression",
+     '{"response": "```json\\n[\\n  \\"A\\"\\n  \\"B\\"\\n]\\n```"}',
+     ["dummy"],
+     ["A", "B"]),
 ])
 def test_ultimate_response_parser(test_name, response_text, original_input, expected_output):
     """
