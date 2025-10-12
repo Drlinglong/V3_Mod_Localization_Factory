@@ -66,7 +66,9 @@ API_PROVIDERS = {
     },
     "openai": {
         "api_key_env": "OPENAI_API_KEY",
-        "default_model": "gpt-5-mini"
+        "default_model": "gpt-5-mini",
+        "enable_thinking": False,
+        "reasoning_effort": "minimal"
     },
     "qwen": {
         "api_key_env": "DASHSCOPE_API_KEY",
@@ -80,16 +82,19 @@ API_PROVIDERS = {
         "base_url": "https://api.x.ai/v1",
         "default_model": "grok-4-fast-reasoning",
         "description": "通过xAI官方API访问grok-4-fast-reasoning模型"
+        #实在价格太低了，就启用思考模式了
     },
     "deepseek": {
         "api_key_env": "DEEPSEEK_API_KEY",
         "base_url": "https://api.deepseek.com",
         "default_model": "deepseek-chat",
+        "enable_thinking": False,
         "description": "DeepSeek-V3.2-Exp (Non-thinking Mode) - 与OpenAI API兼容"
     },
     "ollama": {
         "base_url_env": "OLLAMA_BASE_URL",
         "default_model": "llama3.2",
+        "enable_thinking": False,
         "description": "本地Ollama模型，无需API密钥"
     },
 }

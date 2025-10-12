@@ -41,6 +41,9 @@ class OllamaHandler(BaseApiHandler):
         """【必须由子类实现】使用requests调用本地Ollama API。"""
         # 'client'参数是handler实例本身
         handler_instance = client
+        
+        provider_config = API_PROVIDERS.get(self.provider_name, {})
+        enable_thinking = provider_config.get("enable_thinking", False)
 
         # Ollama API的请求体格式
         payload = {
@@ -49,7 +52,8 @@ class OllamaHandler(BaseApiHandler):
                 {"role": "system", "content": "You are a professional translator for game mods."},
                 {"role": "user", "content": prompt}
             ],
-            "stream": False
+            "stream": False,
+            "think": enable_thinking  # 关键参数
         }
 
         try:
