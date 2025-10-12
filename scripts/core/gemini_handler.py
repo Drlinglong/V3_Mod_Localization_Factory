@@ -28,11 +28,24 @@ class GeminiHandler(BaseApiHandler):
 
     def _call_api(self, client: Any, prompt: str) -> str:
         """【必须由子类实现】执行对Gemini API的调用并返回原始文本响应。"""
-        model_name = API_PROVIDERS.get("gemini", {}).get("default_model", "gemini-1.5-flash")
+        provider_config = API_PROVIDERS.get(self.provider_name, {})
+        model_name = provider_config.get("default_model", "gemini-1.5-flash")
+        
+        enable_thinking = provider_config.get("enable_thinking", False)
+        thinking_budget = provider_config.get("thinking_budget", 0)
+
+        generation_config = {}
+        if not enable_thinking:
+            generation_config["thinking_config"] = {"thinking_budget": 0}
+        elif thinking_budget != 0: # If thinking is enabled, use the specified budget
+            generation_config["thinking_config"] = {"thinking_budget": thinking_budget}
+
         try:
+            # Pass the generation_config to the API call
             response = client.models.generate_content(
                 model=model_name,
                 contents=prompt,
+                generation_config=generation_config if generation_config else None
             )
             return response.text.strip()
         except Exception as e:
