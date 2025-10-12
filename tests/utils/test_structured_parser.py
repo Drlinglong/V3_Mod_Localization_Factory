@@ -125,3 +125,26 @@ def test_json_with_nested_structures_and_newlines():
         "第二行翻译，包含一个逗号。",
         "第三行\n带有一个转义换行符。"
     ]
+
+def test_parse_nested_gemini_cli_format():
+    """
+    Tests the parser's ability to handle the specific nested JSON format
+    returned by gemini-cli: {"response": "[...]"}.
+    """
+    nested_json_string = '{"response": "[\\"你好\\", \\"世界\\"]"}'
+    result = parse_response(nested_json_string, TranslationResponse)
+    assert result is not None
+    assert isinstance(result, TranslationResponse)
+    assert result.translations == ["你好", "世界"]
+
+def test_parse_composite_pollution_format():
+    """
+    Tests the parser's ability to handle the composite pollution from gemini-cli:
+    A nested JSON object whose string payload is wrapped in a markdown code block.
+    e.g., {"response": "```json\n[...]\n```"}
+    """
+    composite_string = '{"response": "```json\\n[\\"Final\\", \\"Test\\"]\\n```"}'
+    result = parse_response(composite_string, TranslationResponse)
+    assert result is not None
+    assert isinstance(result, TranslationResponse)
+    assert result.translations == ["Final", "Test"]

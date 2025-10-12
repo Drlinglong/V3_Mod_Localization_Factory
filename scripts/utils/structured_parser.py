@@ -1,8 +1,9 @@
 # scripts/utils/structured_parser.py
+import json
 import logging
-from typing import Type, TypeVar
-from pydantic import BaseModel, ValidationError
 from json_repair import repair_json
+from pydantic import ValidationError, BaseModel
+from typing import Type, TypeVar
 
 from scripts.core.schemas import TranslationResponse
 
@@ -11,48 +12,57 @@ logger = logging.getLogger(__name__)
 # Define a TypeVar for Pydantic models to ensure type safety
 T = TypeVar('T', bound=BaseModel)
 
-def parse_response(
-    response_text: str,
-    pydantic_model: Type[T] = TranslationResponse
-) -> T | None:
+def parse_response(response_text: str, pydantic_model: Type[T] = TranslationResponse) -> T | None:
     """
-    Parses a potentially malformed JSON string from an LLM response into a Pydantic model.
-
-    This function implements a two-layer defense system:
-    1.  **json_repair**: First, it uses the `json_repair` library to fix common JSON syntax
-        errors (e.g., missing commas, trailing commas, incorrect quoting). This makes the
-        parsing process much more robust against "dirty" LLM outputs.
-    2.  **Pydantic Validation**: After the string is repaired, it's validated against the
-        provided Pydantic model. This ensures that the final output strictly adheres to the
-        expected data structure (schema).
-
-    Args:
-        response_text: The raw string response from the LLM.
-        pydantic_model: The Pydantic model class to validate against. Defaults to
-                        `TranslationResponse`.
-
-    Returns:
-        An instance of the Pydantic model if parsing and validation are successful,
-        otherwise `None`.
+    Parses an LLM response string into a Pydantic model using a robust,
+    layered approach that handles both direct JSON arrays (for TranslationResponse)
+    and nested JSON objects (like those from gemini-cli).
     """
-    repaired_json_str = ""
     try:
-        # First Line of Defense: Use json_repair for robust fixing
+        # First defense: Repair the raw string to ensure it's valid JSON.
         repaired_json_str = repair_json(response_text)
-        logger.debug("Successfully repaired JSON string with json_repair.")
+        payload_to_validate = repaired_json_str
 
-        # Second Line of Defense: Use Pydantic to validate and load the data
-        model_instance = pydantic_model.model_validate_json(repaired_json_str)
-        logger.debug("Successfully validated repaired JSON with Pydantic model.")
+        # Unpacking procedure: Check for and handle gemini-cli's nested structure.
+        try:
+            data = json.loads(repaired_json_str)
+            if isinstance(data, dict) and 'response' in data and isinstance(data['response'], str):
+                # It's a nested structure. Extract the real payload.
+                # The payload itself might be a JSON string, so repair it again just in case.
+                payload_to_validate = repair_json(data['response'])
+                logger.debug("Unwrapped nested JSON response from gemini-cli.")
+        except (json.JSONDecodeError, TypeError):
+            # If it fails to load as a dict, it's likely not a nested object.
+            # Proceed with the repaired string directly.
+            pass
+
+        # Purification procedure: Strip markdown code block fences if they exist.
+        if payload_to_validate.strip().startswith("```json"):
+            payload_to_validate = payload_to_validate.strip()[7:-3].strip()
+            logger.debug("Stripped markdown JSON code block.")
+        elif payload_to_validate.strip().startswith("```"):
+            payload_to_validate = payload_to_validate.strip()[3:-3].strip()
+            logger.debug("Stripped markdown generic code block.")
+
+        # Second defense: Pydantic Validation with conditional wrapping.
+        # The payload might be a JSON array string '["..."]' or a JSON object string '{"key": ...}'.
+
+        # If payload is a list AND the target is TranslationResponse, wrap it to match the schema.
+        if payload_to_validate.strip().startswith('[') and pydantic_model is TranslationResponse:
+             final_input_for_pydantic = f'{{"translations": {payload_to_validate}}}'
+             model_instance = pydantic_model.model_validate_json(final_input_for_pydantic)
+        else:
+            # Otherwise, assume the payload is a complete object string for the target model.
+            # This handles the 'SimpleModel' test case and direct '{"translations": ...}' cases.
+            model_instance = pydantic_model.model_validate_json(payload_to_validate)
+
         return model_instance
 
-    except ValidationError as e:
-        logger.error(f"Pydantic validation failed after json_repair: {e}")
-        # Optionally, log the failed text for debugging
-        # logger.debug(f"Repaired text that failed validation: {repaired_json_str}")
+    except (ValidationError, json.JSONDecodeError) as e:
+        logger.error(f"Pydantic validation failed after all parsing attempts. Error: {e}", exc_info=False)
+        logger.debug(f"Failed to parse input (first 100 chars): {response_text[:100]}...")
         return None
     except Exception as e:
-        # Catch other potential errors from repair_json or other unexpected issues
-        logger.critical(f"An unexpected error occurred during parsing: {e}")
-        # logger.debug(f"Original text that caused the error: {response_text}")
+        logger.critical(f"An unexpected critical error occurred during parsing. Error: {e}", exc_info=True)
+        logger.debug(f"Failed to parse input (first 100 chars): {response_text[:100]}...")
         return None
