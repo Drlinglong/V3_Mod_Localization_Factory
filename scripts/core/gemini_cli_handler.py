@@ -210,7 +210,6 @@ class GeminiCLIHandler(BaseApiHandler):
 
             except Exception as e:
                 self.logger.exception(f"Exception in Gemini CLI batch {batch_num} on attempt {attempt + 1}: {e}")
-                raise e # Re-throw the exception to be caught by the base handler
 
             if attempt < GEMINI_CLI_MAX_RETRIES - 1:
                 delay = (attempt + 1) * 2
