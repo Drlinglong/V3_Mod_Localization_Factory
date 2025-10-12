@@ -31,7 +31,10 @@ python scripts/developer_tools/generate_all_codexes.py
 2.  遍历 `scripts/app_settings.py` 中 `GAME_PROFILES` 定义的所有游戏。
 3.  对于每一个游戏：
     a.  找到其官方本地化文件夹。
-    b.  调用 `tag_scanner` 工具扫描所有 `.yml` 和 `.txt` 文件，提取所有 `#tag`。
+    b.  调用 `tag_scanner` 工具，该工具现在使用精确的三步逻辑进行扫描：
+        i.  **跳过注释行**：如果一行的第一个非空格字符是 `#`，则直接忽略。
+        ii. **查找“值”**：只查找该行中被双引号 `""` 包围的内容。
+        iii. **在“值”内查找标签**：只在双引号内部的内容里查找 `#tag` 格式的标签。
     c.  将结果写入到该游戏在 `GAME_PROFILES` 中配置的 `official_tags_codex` 路径下（例如 `scripts/config/validators/vic3_official_tags.json`）。
 4.  脚本会清晰地打印出每个游戏的执行情况，包括成功或失败。
 
