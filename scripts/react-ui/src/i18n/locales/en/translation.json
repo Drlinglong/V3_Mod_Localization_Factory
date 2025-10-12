@@ -149,5 +149,8 @@
   "glossary_metadata_tooltip_json": "Enter metadata as a JSON object, e.g., {\"category\": \"school\", \"part_of_speech\": \"Proper Noun\"}",
   "glossary_delete_confirm_title": "Confirm Deletion",
   "glossary_delete_confirm_content": "Are you sure you want to delete this entry? This action cannot be undone.",
+  "notification_tooltip_minimal": "Minimized Log",
+  "notification_tooltip_windowed": "Windowed Log",
+  "notification_tooltip_sidebar": "Sidebar Log"
   "homepage_test_button": "Test RemisButton"
 }
