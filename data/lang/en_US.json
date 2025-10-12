@@ -549,5 +549,11 @@
   "log_info_db_connection_closed": "Mods cache database connection closed.",
   "log_info_source_version_exists": "Source version already exists: {hash} (version_id: {version_id})",
   "validation_residual_punctuation_found": "Residual source language punctuation detected.",
-  "validation_residual_punctuation_details": "Found the following punctuations that should have been converted: {punctuations}"
+  "validation_residual_punctuation_details": "Found the following punctuations that should have been converted: {punctuations}",
+  "log.tag_analysis.starting_dynamic_validation": "Starting dynamic tag analysis for post-processing validation...",
+  "log.tag_analysis.starting_mod_validation": "Starting mod tag analysis for dynamic validation...",
+  "log.tag_analysis.loaded_official_tags": "Successfully loaded {count} official tags from '{path}'.",
+  "log.tag_analysis.found_unique_tags": "Found {count} unique tags in the mod.",
+  "log.tag_analysis.no_custom_tags": "No custom tags found in the mod. All tags conform to the official codex.",
+  "log.tag_analysis.final_whitelist": "Final combined whitelist for this session contains {count} tags."
 }

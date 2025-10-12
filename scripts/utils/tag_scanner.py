@@ -5,6 +5,8 @@ import json
 import logging
 from typing import Set, List, Dict
 
+from scripts.utils import i18n
+
 def _scan_directory_for_tags(path: str) -> Set[str]:
     """
     Helper function to scan all .yml/.txt files in a directory recursively for tags,
@@ -93,14 +95,14 @@ def analyze_mod_and_get_all_valid_tags(mod_loc_path: str, official_tags_json_pat
     Returns:
         List[str]: A final list of all valid tags for the session (official + custom).
     """
-    logging.info("Starting mod tag analysis for dynamic validation...")
+    logging.info(i18n.t("log.tag_analysis.starting_mod_validation"))
 
     # Load the official codex
     official_tags_set: Set[str] = set()
     try:
         with open(official_tags_json_path, 'r', encoding='utf-8') as f:
             official_tags_set = set(json.load(f))
-        logging.info(f"Successfully loaded {len(official_tags_set)} official tags from '{official_tags_json_path}'.")
+        logging.info(i18n.t("log.tag_analysis.loaded_official_tags", count=len(official_tags_set), path=official_tags_json_path))
     except FileNotFoundError:
         logging.warning(f"Official tag codex not found at '{official_tags_json_path}'. The validation will only use tags found in the mod.")
     except Exception as e:
@@ -108,7 +110,7 @@ def analyze_mod_and_get_all_valid_tags(mod_loc_path: str, official_tags_json_pat
 
     # Scan the mod for its tags
     mod_tags_set = _scan_directory_for_tags(mod_loc_path)
-    logging.info(f"Found {len(mod_tags_set)} unique tags in the mod.")
+    logging.info(i18n.t("log.tag_analysis.found_unique_tags", count=len(mod_tags_set)))
 
     # The Judgement: Find the "heretic" tags
     custom_tags_set = mod_tags_set - official_tags_set
@@ -123,10 +125,10 @@ def analyze_mod_and_get_all_valid_tags(mod_loc_path: str, official_tags_json_pat
                 logging.warning("  - ... (and more)")
                 break
     else:
-        logging.info("No custom tags found in the mod. All tags conform to the official codex.")
+        logging.info(i18n.t("log.tag_analysis.no_custom_tags"))
 
     # The Final Verdict: Combine official and custom tags
     final_valid_tags = sorted(list(official_tags_set.union(mod_tags_set)))
-    logging.info(f"Final combined whitelist for this session contains {len(final_valid_tags)} tags.")
+    logging.info(i18n.t("log.tag_analysis.final_whitelist", count=len(final_valid_tags)))
 
     return final_valid_tags

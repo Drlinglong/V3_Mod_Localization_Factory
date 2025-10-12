@@ -283,7 +283,7 @@ def run(mod_name: str,
             official_tags_path = game_profile.get("official_tags_codex")
             
             if official_tags_path:
-                logging.info("Starting dynamic tag analysis for post-processing validation...")
+                logging.info(i18n.t("log.tag_analysis.starting_dynamic_validation"))
                 mod_loc_path_for_scan = os.path.join(SOURCE_DIR, mod_name, game_profile["source_localization_folder"])
                 dynamic_tags = tag_scanner.analyze_mod_and_get_all_valid_tags(
                     mod_loc_path=mod_loc_path_for_scan,

@@ -25,7 +25,7 @@ from enum import Enum
 try:
     from . import i18n
     from ..utils import punctuation_handler
-    from ..app_settings import LANGUAGES
+    from ..app_settings import LANGUAGES, GAME_PROFILES
 except ImportError:
     i18n = None
     punctuation_handler = None
@@ -330,13 +330,23 @@ class CK3Validator(BaseGameValidator):
 class PostProcessValidator:
     """后处理验证器主类"""
     def __init__(self):
-        self.validators = {
+        # 创建一个临时的、按游戏ID（如'victoria3'）索引的验证器字典
+        validators_by_id = {
             "victoria3": Victoria3Validator(),
             "stellaris": StellarisValidator(),
             "eu4": EU4Validator(),
             "hoi4": HOI4Validator(),
             "ck3": CK3Validator()
         }
+
+        # 最终的、按数字键（如'1'）索引的验证器字典
+        self.validators: Dict[str, BaseGameValidator] = {}
+        if GAME_PROFILES:
+            for numeric_key, profile in GAME_PROFILES.items():
+                game_id_str = profile.get("id")
+                if game_id_str and game_id_str in validators_by_id:
+                    self.validators[numeric_key] = validators_by_id[game_id_str]
+
         self.logger = logging.getLogger(__name__)
         if i18n and not getattr(i18n, '_language_loaded', False):
             try:
@@ -345,11 +355,8 @@ class PostProcessValidator:
                 self.logger.warning(self._get_i18n_message("validator_warning_cannot_load_i18n", e=e))
     
     def get_validator_by_game_id(self, game_id: str) -> Optional[BaseGameValidator]:
-        """根据game_id查找验证器实例"""
-        for validator in self.validators.values():
-            if validator.config.get("game_id") == game_id:
-                return validator
-        return None
+        """根据数字游戏ID（如 "1"）直接从字典中查找验证器实例。"""
+        return self.validators.get(game_id)
 
     def validate_game_text(self, game_id: str, text: str, line_number: Optional[int] = None, source_lang: Optional[Dict] = None, dynamic_valid_tags: Optional[List[str]] = None) -> List[ValidationResult]:
         """验证指定游戏的文本格式"""

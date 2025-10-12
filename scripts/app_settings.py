@@ -25,11 +25,11 @@ PROJECT_INFO = {
 
 # --- 核心配置 ----------------------------------------------------
 CHUNK_SIZE = 40
-MAX_RETRIES = 3
+MAX_RETRIES = 2
 
 # --- Gemini CLI 特定配置 -----------------------------------------
 GEMINI_CLI_CHUNK_SIZE = 100
-GEMINI_CLI_MAX_RETRIES = 3
+GEMINI_CLI_MAX_RETRIES = 2
 
 # --- 智能线程池配置 ----------------------------------------------------
 def get_smart_max_workers():

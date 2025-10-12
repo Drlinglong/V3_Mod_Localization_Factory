@@ -8,7 +8,7 @@ from scripts.app_settings import MAX_RETRIES, FALLBACK_FORMAT_PROMPT
 from scripts.core.parallel_processor import BatchTask
 from scripts.utils.punctuation_handler import generate_punctuation_prompt
 from scripts.core.glossary_manager import glossary_manager
-from scripts.utils.response_parser import parse_json_from_response
+from scripts.utils.structured_parser import parse_response
 
 
 class BaseApiHandler(ABC):
@@ -89,8 +89,15 @@ class BaseApiHandler(ABC):
         return prompt
 
     def _parse_response(self, response: str, original_texts: list[str]) -> list[str] | None:
-        """【通用逻辑】调用通用解析器来解析API响应。"""
-        return parse_json_from_response(response, original_texts)
+        """
+        【通用逻辑】调用结构化解析器来解析API响应。
+        -   成功：返回翻译文本列表。
+        -   失败：返回None，以触发上游的重试机制。
+        """
+        parsed_model = parse_response(response)
+        if parsed_model:
+            return parsed_model.translations
+        return None
 
     def translate_batch(self, task: BatchTask) -> BatchTask:
         """
@@ -98,6 +105,7 @@ class BaseApiHandler(ABC):
         """
         prompt = self._build_prompt(task)
         batch_num = task.batch_index + 1
+        start_time = time.time() # <--- 添加时间记录
 
         for attempt in range(MAX_RETRIES):
             try:
@@ -107,7 +115,8 @@ class BaseApiHandler(ABC):
                 # Check for success: must not be None, must not be the original list, and length must match.
                 if translated_texts is not None and translated_texts is not task.texts and len(translated_texts) == len(task.texts):
                     task.translated_texts = translated_texts
-                    self.logger.debug(i18n.t("batch_success", batch_num=batch_num, attempt=attempt + 1))
+                    elapsed_time = time.time() - start_time # <--- 计算耗时
+                    self.logger.info(i18n.t("batch_success", batch_num=batch_num, attempt=attempt + 1, elapsed_time=elapsed_time)) # <--- 传递参数
                     return task
                 else:
                     self.logger.warning(
@@ -124,8 +133,8 @@ class BaseApiHandler(ABC):
                 self.logger.warning(i18n.t("retrying_batch", batch_num=batch_num, attempt=attempt + 1, max_retries=MAX_RETRIES, delay=delay))
                 time.sleep(delay)
 
-        self.logger.error(f"Batch {batch_num} failed after {MAX_RETRIES} attempts.")
-        task.translated_texts = None
+        self.logger.error(f"Batch {batch_num} failed after {MAX_RETRIES} attempts. Falling back to original texts.")
+        task.translated_texts = task.texts
         return task
 
     def _build_single_text_prompt(self, text: str, task_description: str, mod_name: str, source_lang: dict, target_lang: dict, mod_context: str, game_profile: dict) -> str:

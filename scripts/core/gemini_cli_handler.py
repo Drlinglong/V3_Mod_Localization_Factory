@@ -10,7 +10,7 @@ from scripts.core.base_handler import BaseApiHandler
 from scripts.app_settings import API_PROVIDERS, GEMINI_CLI_MAX_RETRIES
 from scripts.utils import i18n
 from scripts.core.parallel_processor import BatchTask
-from scripts.utils.response_parser import parse_json_from_response
+from scripts.utils.structured_parser import parse_response
 from scripts.core.glossary_manager import glossary_manager
 from scripts.app_settings import FALLBACK_FORMAT_PROMPT
 from scripts.utils.punctuation_handler import generate_punctuation_prompt
@@ -191,16 +191,18 @@ class GeminiCLIHandler(BaseApiHandler):
                 stderr_str = robust_decode(result.stderr)
 
                 if result.returncode == 0:
-                    translated_texts = parse_json_from_response(stdout_str, task.texts)
+                    parsed_model = parse_response(stdout_str)
 
-                    # Check for success: must not be None, must not be the original list, and length must match.
-                    if translated_texts is not None and translated_texts is not task.texts and len(translated_texts) == len(task.texts):
-                        task.translated_texts = translated_texts
+                    # New success check: model is valid and the translation list length matches.
+                    if parsed_model and len(parsed_model.translations) == len(task.texts):
+                        task.translated_texts = parsed_model.translations
                         elapsed_time = time.time() - start_time
                         self.logger.info(i18n.t("gemini_cli_batch_success", batch_num=batch_num, attempt=attempt + 1, elapsed_time=elapsed_time))
                         return task
                     else:
-                        self.logger.warning(f"Gemini CLI response parsing failed for batch {batch_num}, attempt {attempt + 1}. Expected {len(task.texts)}, got {len(translated_texts) if translated_texts else 0}.")
+                        # Log failure with more context if parsing returned a model but with wrong item count
+                        log_msg = f"Expected {len(task.texts)}, got {len(parsed_model.translations) if parsed_model else 'None'}."
+                        self.logger.warning(f"Gemini CLI response parsing failed for batch {batch_num}, attempt {attempt + 1}. {log_msg}")
                         raise ValueError("Response parsing failed, triggering retry.")
                 else:
                     self.logger.error(f"Gemini CLI call failed for batch {batch_num}, attempt {attempt+1}. Stderr: {stderr_str}")
@@ -208,15 +210,14 @@ class GeminiCLIHandler(BaseApiHandler):
 
             except Exception as e:
                 self.logger.exception(f"Exception in Gemini CLI batch {batch_num} on attempt {attempt + 1}: {e}")
-                raise e # Re-throw the exception to be caught by the base handler
 
             if attempt < GEMINI_CLI_MAX_RETRIES - 1:
                 delay = (attempt + 1) * 2
                 self.logger.warning(i18n.t("retrying_batch", batch_num=batch_num, attempt=attempt + 1, max_retries=GEMINI_CLI_MAX_RETRIES, delay=delay))
                 time.sleep(delay)
 
-        self.logger.error(f"Gemini CLI Batch {batch_num} failed after {GEMINI_CLI_MAX_RETRIES} attempts.")
-        task.translated_texts = None
+        self.logger.error(f"Gemini CLI Batch {batch_num} failed after {GEMINI_CLI_MAX_RETRIES} attempts. Falling back to original texts.")
+        task.translated_texts = task.texts
         return task
 
     def translate_single_text(self, text: str, task_description: str, mod_name: str, source_lang: dict, target_lang: dict, mod_context: str, game_profile: dict) -> str:
