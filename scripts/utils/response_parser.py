@@ -8,6 +8,7 @@ from scripts.utils import i18n
 
 logger = logging.getLogger(__name__)
 
+
 def _save_critical_failure_log(response_text: str, purified_text: str, repaired_text: str, final_error: str):
     """Saves a detailed log for critical, unrecoverable parsing failures."""
     try:
@@ -98,6 +99,7 @@ def _run_repair_surgeries(dirty_json: str) -> str:
 def parse_json_from_response(response_text: str, original_input_list: list[str]) -> list[str]:
     """
     Parses a JSON array string from an LLM response using a 3-layer defense system.
+    This function is designed to be robust against various malformed response types.
 
     Args:
         response_text: The raw string response from the LLM.
@@ -111,16 +113,44 @@ def parse_json_from_response(response_text: str, original_input_list: list[str])
     purified_text = ""
     repaired_text = ""
 
+    # --- Triage Step: Intelligent Unwrapping ---
+    # This step distinguishes between a well-formed nested JSON object and a dirty string.
+    payload_to_process = response_text
+    try:
+        parsed_object = json.loads(response_text)
+        # If the response is a valid JSON object (dict), it MUST adhere to the nested structure.
+        if isinstance(parsed_object, dict):
+            if "response" in parsed_object and isinstance(parsed_object["response"], str):
+                # Happy path: It's the nested structure we expect. Target the inner payload.
+                payload_to_process = parsed_object["response"]
+                logger.debug("Successfully unwrapped nested JSON response.")
+            else:
+                # Strict failure: It's a dict, but not in the expected format. Do not proceed.
+                logger.warning("Parsed a dictionary that does not match the expected nested structure. Falling back.")
+                _save_critical_failure_log(response_text, "N/A", "N/A", "Unexpected dictionary structure.")
+                return original_input_list
+    except json.JSONDecodeError:
+        # This is not an error. It just means the response is not a JSON object,
+        # so we will treat it as a potentially dirty string and proceed to the purifier.
+        logger.debug("Response is not a valid JSON object, proceeding with standard parsing.")
+        pass
+
     # --- First Line of Defense: The Purifier ---
-    # Greedily find the first JSON array structure. This helps discard markdown wrappers,
-    # leading/trailing text, and even duplicate JSON blocks.
-    match = re.search(r"\[.*\]", response_text, re.DOTALL)
+    # Non-greedily find the first JSON array structure within the payload.
+    # This helps handle cases where a malformed outer JSON object still contains a valid inner array.
+    match = re.search(r"\[.*?\]", payload_to_process, re.DOTALL)
     if not match:
         logging.critical("Purifier failed: No JSON array structure (`[...]`) found in the response.")
         _save_critical_failure_log(response_text, "N/A", "N/A", "No `[...]` structure found.")
         return original_input_list
 
     purified_text = match.group(0)
+
+    # --- Heuristic Repair Step ---
+    # If the original payload looked like an object, it's highly likely that
+    # the purified text contains escaped quotes that need to be un-escaped.
+    if payload_to_process.strip().startswith('{'):
+        purified_text = purified_text.replace('\\"', '"')
 
     # --- Second Line of Defense: The Surgeon ---
     repaired_text = _run_repair_surgeries(purified_text)

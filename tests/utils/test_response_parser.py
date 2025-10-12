@@ -7,6 +7,7 @@ MOCK_ORIGINAL_INPUT_3 = ["source1", "source2", "source3"]
 MOCK_ORIGINAL_INPUT_2 = ["source1", "source2"]
 
 @pytest.mark.parametrize("test_name, response_text, original_input, expected_output", [
+    # --- Standard Dirty String Tests ---
     ("perfectly_legal_json",
      '["A", "B", "C"]',
      MOCK_ORIGINAL_INPUT_3,
@@ -47,6 +48,24 @@ MOCK_ORIGINAL_INPUT_2 = ["source1", "source2"]
      '```json\\n["A""B", "Another "illegal" quote"]\\n```\\nAnd that is all.',
      MOCK_ORIGINAL_INPUT_2,
      ["A", "B", 'Another "illegal" quote']),
+
+    # --- Nested JSON (Triage Step) Tests ---
+    ("gemini_cli_style_success",
+     '{"response": "[\\"A\\", \\"B\\", \\"C\\"]", "stats": {}}',
+     MOCK_ORIGINAL_INPUT_3,
+     ["A", "B", "C"]),
+    ("malformed_outer_json_fallback_success",
+     '{"response": "[\\"A\\", \\"B\\"]", "stats": { ...some garbage', # Outer is broken
+     MOCK_ORIGINAL_INPUT_2,
+     ["A", "B"]), # But inner is findable by the purifier
+    ("missing_response_key_fallback",
+     '{"not_the_right_key": "[\\"A\\", \\"B\\"]"}',
+     MOCK_ORIGINAL_INPUT_2,
+     MOCK_ORIGINAL_INPUT_2), # Triage fails, purifier finds nothing, fallback
+    ("wrong_payload_type_fallback",
+     '{"response": ["A", "B"]}', # Payload is a list, not a string
+     MOCK_ORIGINAL_INPUT_2,
+     MOCK_ORIGINAL_INPUT_2), # Triage fails, purifier finds nothing, fallback
 ])
 def test_ultimate_response_parser(test_name, response_text, original_input, expected_output):
     """
