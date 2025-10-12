@@ -7,7 +7,8 @@ from typing import Set, List, Dict
 
 def _scan_directory_for_tags(path: str) -> Set[str]:
     """
-    Helper function to scan all .yml files in a directory recursively for tags.
+    Helper function to scan all .yml/.txt files in a directory recursively for tags,
+    following a precise 3-step logic to avoid commented-out keys.
 
     Args:
         path (str): The directory path to scan.
@@ -17,6 +18,7 @@ def _scan_directory_for_tags(path: str) -> Set[str]:
     """
     tags: Set[str] = set()
     tag_pattern = re.compile(r"#([a-zA-Z_][a-zA-Z0-9_]*)")
+    value_pattern = re.compile(r'"(.*)"')
 
     if not os.path.isdir(path):
         logging.error(f"FATAL: Provided path for tag scanning is not a valid directory: {path}")
@@ -24,15 +26,26 @@ def _scan_directory_for_tags(path: str) -> Set[str]:
 
     for root, _, files in os.walk(path):
         for filename in files:
-            # PDS localisation files can be either .yml or .txt
             if filename.endswith((".yml", ".txt")):
                 filepath = os.path.join(root, filename)
                 try:
                     with open(filepath, 'r', encoding='utf-8-sig', errors='ignore') as f:
                         for line in f:
-                            found = tag_pattern.findall(line)
-                            for tag in found:
-                                tags.add(tag)
+                            stripped_line = line.strip()
+
+                            # 1. Skip empty lines or lines that are comments.
+                            if not stripped_line or stripped_line.startswith('#'):
+                                continue
+
+                            # 2. Find content within double quotes.
+                            value_match = value_pattern.search(stripped_line)
+                            if value_match:
+                                quoted_content = value_match.group(1)
+
+                                # 3. Only search for tags within that quoted content.
+                                found_tags = tag_pattern.findall(quoted_content)
+                                for tag in found_tags:
+                                    tags.add(tag)
                 except Exception as e:
                     logging.warning(f"Warning: Error reading file {filepath}: {e}")
     return tags
