@@ -49,9 +49,10 @@ def _run_repair_surgeries(dirty_json: str) -> str:
         repaired_json = repaired_json.replace(warning_str, f'"{warning_str}"')
 
     # Surgery 2: Add missing commas between consecutive quoted strings.
-    # This handles both ` "A" "B" ` and ` "A""B" `. Run this first as it's a more
-    # reliable and less ambiguous repair than quote escaping.
-    repaired_json = re.sub(r'(?<!\\)"\s*(?<!\\)"', '","', repaired_json)
+    # This handles both ` "A" "B" ` and ` "A""B" `. We explicitly use [ \t]
+    # instead of \s to avoid matching newlines, which was identified as a
+    # source of catastrophic repair failures on already-valid JSON.
+    repaired_json = re.sub(r'(?<!\\)"[ \t]*(?<!\\)"', '","', repaired_json)
 
     # Surgery 3: State-machine-based internal quote escaping
     in_string = False
@@ -136,15 +137,17 @@ def parse_json_from_response(response_text: str, original_input_list: list[str])
         pass
 
     # --- First Line of Defense: The Purifier ---
-    # Non-greedily find the first JSON array structure within the payload.
-    # This helps handle cases where a malformed outer JSON object still contains a valid inner array.
-    match = re.search(r"\[.*?\]", payload_to_process, re.DOTALL)
-    if not match:
-        logging.critical("Purifier failed: No JSON array structure (`[...]`) found in the response.")
-        _save_critical_failure_log(response_text, "N/A", "N/A", "No `[...]` structure found.")
+    # Use robust index finding instead of fragile regex to extract the main JSON array.
+    # This is immune to square brackets appearing within the string content.
+    start_index = payload_to_process.find('[')
+    end_index = payload_to_process.rfind(']')
+
+    if start_index == -1 or end_index == -1 or end_index < start_index:
+        logging.critical("Purifier failed: Could not find a valid start '[' and end ']' pair.")
+        _save_critical_failure_log(response_text, "N/A", "N/A", "No valid `[...]` boundaries found.")
         return original_input_list
 
-    purified_text = match.group(0)
+    purified_text = payload_to_process[start_index : end_index + 1]
 
     # --- Heuristic Repair Step ---
     # If the original payload looked like an object, it's highly likely that

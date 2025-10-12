@@ -66,6 +66,16 @@ MOCK_ORIGINAL_INPUT_2 = ["source1", "source2"]
      '{"response": ["A", "B"]}', # Payload is a list, not a string
      MOCK_ORIGINAL_INPUT_2,
      MOCK_ORIGINAL_INPUT_2), # Triage fails, purifier finds nothing, fallback
+
+    # --- Regression Tests for Specific Failures ---
+    ("greedy_trap_regression",
+     '["국가 [concept_journal_entry]는 특정 국가 또는 소수 국가에 고유한 [concept_journal_entry]입니다."]',
+     ["dummy"],
+     ["국가 [concept_journal_entry]는 특정 국가 또는 소수 국가에 고유한 [concept_journal_entry]입니다."]),
+    ("repair_storm_regression_with_newlines",
+     '["- जर्नल प्रविष्टि [GetPlayer.GetPrimaryCulture.GetName] संस्कृति की होनी चाहिए\\n- [Root.GetCountry.GetName] को [GetPlayer.GetPrimaryCulture.GetName] संस्कृति को प्राथमिक बनाना चाहिए"]',
+     ["dummy"],
+     ["- जर्नल प्रविष्टि [GetPlayer.GetPrimaryCulture.GetName] संस्कृति की होनी चाहिए\n- [Root.GetCountry.GetName] को [GetPlayer.GetPrimaryCulture.GetName] संस्कृति को प्राथमिक बनाना चाहिए"]),
 ])
 def test_ultimate_response_parser(test_name, response_text, original_input, expected_output):
     """
