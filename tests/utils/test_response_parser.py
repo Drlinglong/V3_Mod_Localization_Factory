@@ -7,7 +7,6 @@ MOCK_ORIGINAL_INPUT_3 = ["source1", "source2", "source3"]
 MOCK_ORIGINAL_INPUT_2 = ["source1", "source2"]
 
 @pytest.mark.parametrize("test_name, response_text, original_input, expected_output", [
-    # --- Standard Dirty String Tests ---
     ("perfectly_legal_json",
      '["A", "B", "C"]',
      MOCK_ORIGINAL_INPUT_3,
@@ -49,33 +48,15 @@ MOCK_ORIGINAL_INPUT_2 = ["source1", "source2"]
      MOCK_ORIGINAL_INPUT_2,
      ["A", "B", 'Another "illegal" quote']),
 
-    # --- Nested JSON (Triage Step) Tests ---
-    ("gemini_cli_style_success",
-     '{"response": "[\\"A\\", \\"B\\", \\"C\\"]", "stats": {}}',
-     MOCK_ORIGINAL_INPUT_3,
-     ["A", "B", "C"]),
-    ("malformed_outer_json_fallback_success",
-     '{"response": "[\\"A\\", \\"B\\"]", "stats": { ...some garbage', # Outer is broken
-     MOCK_ORIGINAL_INPUT_2,
-     ["A", "B"]), # But inner is findable by the purifier
-    ("missing_response_key_fallback",
-     '{"not_the_right_key": "[\\"A\\", \\"B\\"]"}',
-     MOCK_ORIGINAL_INPUT_2,
-     MOCK_ORIGINAL_INPUT_2), # Triage fails, purifier finds nothing, fallback
-    ("wrong_payload_type_fallback",
-     '{"response": ["A", "B"]}', # Payload is a list, not a string
-     MOCK_ORIGINAL_INPUT_2,
-     MOCK_ORIGINAL_INPUT_2), # Triage fails, purifier finds nothing, fallback
-
-    # --- Regression Tests for Specific Failures ---
-    ("greedy_trap_regression",
-     '["국가 [concept_journal_entry]는 특정 국가 또는 소수 국가에 고유한 [concept_journal_entry]입니다."]',
+    # --- Final Regression Tests for Bracket Balancer and Surgeon Safety ---
+    ("bracket_balancer_stress_test",
+     'some garbage text ["outer text", ["[nested array]"], "more outer text [with brackets]"] and then more garbage',
      ["dummy"],
-     ["국가 [concept_journal_entry]는 특정 국가 또는 소수 국가에 고유한 [concept_journal_entry]입니다."]),
-    ("repair_storm_regression_with_newlines",
-     '["- जर्नल प्रविष्टि [GetPlayer.GetPrimaryCulture.GetName] संस्कृति की होनी चाहिए\\n- [Root.GetCountry.GetName] को [GetPlayer.GetPrimaryCulture.GetName] संस्कृति को प्राथमिक बनाना चाहिए"]',
+     ["outer text", ["[nested array]"], "more outer text [with brackets]"]),
+    ("surgeon_newline_safety_test",
+     '["string 1",\n "string 2"]',
      ["dummy"],
-     ["- जर्नल प्रविष्टि [GetPlayer.GetPrimaryCulture.GetName] संस्कृति की होनी चाहिए\n- [Root.GetCountry.GetName] को [GetPlayer.GetPrimaryCulture.GetName] संस्कृति को प्राथमिक बनाना चाहिए"]),
+     ["string 1", "string 2"]),
 ])
 def test_ultimate_response_parser(test_name, response_text, original_input, expected_output):
     """

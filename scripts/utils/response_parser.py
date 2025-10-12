@@ -8,7 +8,6 @@ from scripts.utils import i18n
 
 logger = logging.getLogger(__name__)
 
-
 def _save_critical_failure_log(response_text: str, purified_text: str, repaired_text: str, final_error: str):
     """Saves a detailed log for critical, unrecoverable parsing failures."""
     try:
@@ -100,7 +99,6 @@ def _run_repair_surgeries(dirty_json: str) -> str:
 def parse_json_from_response(response_text: str, original_input_list: list[str]) -> list[str]:
     """
     Parses a JSON array string from an LLM response using a 3-layer defense system.
-    This function is designed to be robust against various malformed response types.
 
     Args:
         response_text: The raw string response from the LLM.
@@ -114,46 +112,43 @@ def parse_json_from_response(response_text: str, original_input_list: list[str])
     purified_text = ""
     repaired_text = ""
 
-    # --- Triage Step: Intelligent Unwrapping ---
-    # This step distinguishes between a well-formed nested JSON object and a dirty string.
-    payload_to_process = response_text
-    try:
-        parsed_object = json.loads(response_text)
-        # If the response is a valid JSON object (dict), it MUST adhere to the nested structure.
-        if isinstance(parsed_object, dict):
-            if "response" in parsed_object and isinstance(parsed_object["response"], str):
-                # Happy path: It's the nested structure we expect. Target the inner payload.
-                payload_to_process = parsed_object["response"]
-                logger.debug("Successfully unwrapped nested JSON response.")
-            else:
-                # Strict failure: It's a dict, but not in the expected format. Do not proceed.
-                logger.warning("Parsed a dictionary that does not match the expected nested structure. Falling back.")
-                _save_critical_failure_log(response_text, "N/A", "N/A", "Unexpected dictionary structure.")
-                return original_input_list
-    except json.JSONDecodeError:
-        # This is not an error. It just means the response is not a JSON object,
-        # so we will treat it as a potentially dirty string and proceed to the purifier.
-        logger.debug("Response is not a valid JSON object, proceeding with standard parsing.")
-        pass
-
-    # --- First Line of Defense: The Purifier ---
-    # Use robust index finding instead of fragile regex to extract the main JSON array.
-    # This is immune to square brackets appearing within the string content.
-    start_index = payload_to_process.find('[')
-    end_index = payload_to_process.rfind(']')
-
-    if start_index == -1 or end_index == -1 or end_index < start_index:
-        logging.critical("Purifier failed: Could not find a valid start '[' and end ']' pair.")
-        _save_critical_failure_log(response_text, "N/A", "N/A", "No valid `[...]` boundaries found.")
+    # --- First Line of Defense: Balanced Bracket Extractor ---
+    # This robustly finds the first complete JSON array, even with nested brackets.
+    start_index = response_text.find('[')
+    if start_index == -1:
+        logging.critical("Extractor failed: No opening bracket '[' found in the response.")
+        _save_critical_failure_log(response_text, "N/A", "N/A", "No opening bracket found.")
         return original_input_list
 
-    purified_text = payload_to_process[start_index : end_index + 1]
+    balance_counter = 1
+    end_index = -1
+    # We must also consider quoted strings, as brackets inside them do not count.
+    in_string = False
+    for i in range(start_index + 1, len(response_text)):
+        char = response_text[i]
 
-    # --- Heuristic Repair Step ---
-    # If the original payload looked like an object, it's highly likely that
-    # the purified text contains escaped quotes that need to be un-escaped.
-    if payload_to_process.strip().startswith('{'):
-        purified_text = purified_text.replace('\\"', '"')
+        # Toggle in_string state if we encounter a quote that is not escaped.
+        if char == '"':
+            # Check for escaped quote, e.g., \\"
+            if i > 0 and response_text[i-1] != '\\':
+                in_string = not in_string
+
+        if not in_string:
+            if char == '[':
+                balance_counter += 1
+            elif char == ']':
+                balance_counter -= 1
+
+        if balance_counter == 0:
+            end_index = i
+            break
+
+    if end_index == -1:
+        logging.critical("Extractor failed: Could not find matching closing bracket ']' for the initial opening bracket.")
+        _save_critical_failure_log(response_text, "N/A", "N/A", "No matching closing bracket found.")
+        return original_input_list
+
+    purified_text = response_text[start_index : end_index + 1]
 
     # --- Second Line of Defense: The Surgeon ---
     repaired_text = _run_repair_surgeries(purified_text)
