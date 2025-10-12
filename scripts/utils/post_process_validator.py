@@ -115,7 +115,7 @@ class BaseGameValidator:
 
     # --- "工人"检查方法 ---
 
-    def _check_banned_chars(self, text: str, rule: Dict, line_number: Optional[int]) -> List[ValidationResult]:
+    def _check_banned_chars(self, text: str, rule: Dict, line_number: Optional[int], **kwargs) -> List[ValidationResult]:
         """
         工人方法：根据'pattern'查找，并检查其捕获组内是否包含不允许的非ASCII字符。
         """
@@ -150,15 +150,23 @@ class BaseGameValidator:
             self.logger.warning(self._get_i18n_message("validator_error_regex_error", rule_name=rule['name'], e=e, pattern=pattern))
         return results
 
-    def _check_formatting_tags(self, text: str, rule: Dict, line_number: Optional[int]) -> List[ValidationResult]:
+    def _check_formatting_tags(self, text: str, rule: Dict, line_number: Optional[int], **kwargs) -> List[ValidationResult]:
         """
         工人方法：检查格式化标签，如V3的 #tag。
         它从 rule['params'] 中动态读取所有配置。
+        支持从 kwargs 动态传入 valid_tags 列表以覆盖规则文件中的设置。
         """
         results = []
         pattern = rule.get("pattern")
         params = rule.get("params", {})
-        valid_tags = set(tag.lower() for tag in params.get("valid_tags", []))
+
+        # 核心改造：优先使用动态传入的标签列表
+        dynamic_tags = kwargs.get("dynamic_valid_tags")
+        if dynamic_tags is not None:
+            valid_tags = set(tag.lower() for tag in dynamic_tags)
+        else:
+            valid_tags = set(tag.lower() for tag in params.get("valid_tags", []))
+
         no_space_required_tags = set(tag.lower() for tag in params.get("no_space_required_tags", []))
 
         if not pattern or not valid_tags:
@@ -183,7 +191,7 @@ class BaseGameValidator:
             self.logger.warning(self._get_i18n_message("validator_error_regex_error", rule_name=rule['name'], e=e, pattern=pattern))
         return results
 
-    def _check_mismatched_tags(self, text: str, rule: Dict, line_number: Optional[int]) -> List[ValidationResult]:
+    def _check_mismatched_tags(self, text: str, rule: Dict, line_number: Optional[int], **kwargs) -> List[ValidationResult]:
         """
         工人方法：一个强大的通用方法，用于检查所有游戏中不成对的标签。
         它从 rule['params'] 中读取 start_tag_pattern 和 end_tag_string。
@@ -208,7 +216,7 @@ class BaseGameValidator:
             self.logger.warning(self._get_i18n_message("validator_error_regex_error", rule_name=rule['name'], e=e, pattern=start_tag_pattern))
         return results
         
-    def _check_informational_pattern(self, text: str, rule: Dict, line_number: Optional[int]) -> List[ValidationResult]:
+    def _check_informational_pattern(self, text: str, rule: Dict, line_number: Optional[int], **kwargs) -> List[ValidationResult]:
         """
         工人方法：检查一个模式是否存在，并发出一个信息性（非错误）的提示。
         """
@@ -257,12 +265,13 @@ class BaseGameValidator:
             ))
         return results
 
-    def validate_text(self, text: str, line_number: Optional[int] = None, source_lang: Optional[Dict] = None) -> List[ValidationResult]:
+    def validate_text(self, text: str, line_number: Optional[int] = None, source_lang: Optional[Dict] = None, **kwargs) -> List[ValidationResult]:
         """
         纯粹的规则执行引擎。
         它遍历加载自Python模块的规则，并根据 rule['check_function'] 的值，
         从 self.check_map 中动态调用相应的“工人”检查方法。
         增加了内置的标点符号检查。
+        现在可以接受并传递 **kwargs 给工人方法。
         """
         all_results = []
         if not self.rules and not self.config: # 如果规则加载失败，则直接返回
@@ -273,7 +282,8 @@ class BaseGameValidator:
             checker = self.check_map.get(check_function_name)
             if checker:
                 try:
-                    results = checker(text, rule, line_number)
+                    # 将 kwargs 传递给工人方法
+                    results = checker(text, rule, line_number, **kwargs)
                     all_results.extend(results)
                 except Exception as e:
                     self.logger.error(self._get_i18n_message("validator_error_executing_rule", rule_name=rule.get('name', 'N/A'), e=e))
@@ -281,6 +291,7 @@ class BaseGameValidator:
                 self.logger.warning(self._get_i18n_message("validator_warning_unknown_check_function", rule_name=rule.get('name', 'N/A'), check_function_name=check_function_name))
 
         # --- 内置基础检查 ---
+        # _check_residual_punctuation 目前不使用 kwargs，但为了统一性可以修改
         punctuation_results = self._check_residual_punctuation(text, line_number, source_lang)
         all_results.extend(punctuation_results)
 
@@ -340,18 +351,19 @@ class PostProcessValidator:
                 return validator
         return None
 
-    def validate_game_text(self, game_id: str, text: str, line_number: Optional[int] = None, source_lang: Optional[Dict] = None) -> List[ValidationResult]:
+    def validate_game_text(self, game_id: str, text: str, line_number: Optional[int] = None, source_lang: Optional[Dict] = None, dynamic_valid_tags: Optional[List[str]] = None) -> List[ValidationResult]:
         """验证指定游戏的文本格式"""
         validator = self.get_validator_by_game_id(game_id)
         if not validator:
             self.logger.error(self._get_i18n_message("validation_unknown_game", game_id=game_id))
             return []
-        results = validator.validate_text(text, line_number, source_lang)
+        # 将 dynamic_valid_tags 通过 kwargs 传递下去
+        results = validator.validate_text(text, line_number, source_lang, dynamic_valid_tags=dynamic_valid_tags)
         for result in results:
             validator._log_validation_result(result)
         return results
     
-    def validate_batch(self, game_id: str, texts: List[str], start_line: int = 1, source_lang: Optional[Dict] = None) -> Dict[int, List[ValidationResult]]:
+    def validate_batch(self, game_id: str, texts: List[str], start_line: int = 1, source_lang: Optional[Dict] = None, dynamic_valid_tags: Optional[List[str]] = None) -> Dict[int, List[ValidationResult]]:
         """批量验证文本"""
         batch_results = {}
         validator = self.get_validator_by_game_id(game_id)
@@ -360,7 +372,8 @@ class PostProcessValidator:
             return {}
         for i, text in enumerate(texts):
             line_number = start_line + i
-            results = validator.validate_text(text, line_number, source_lang)
+            # 将 dynamic_valid_tags 通过 kwargs 传递下去
+            results = validator.validate_text(text, line_number, source_lang, dynamic_valid_tags=dynamic_valid_tags)
             if results:
                 batch_results[line_number] = results
         self.log_validation_summary(batch_results, validator.game_name)
@@ -397,13 +410,13 @@ class PostProcessValidator:
             pass
         return message_key
 
-def validate_text(game_id: str, text: str, line_number: Optional[int] = None) -> List[ValidationResult]:
+def validate_text(game_id: str, text: str, line_number: Optional[int] = None, dynamic_valid_tags: Optional[List[str]] = None) -> List[ValidationResult]:
     validator = PostProcessValidator()
-    return validator.validate_game_text(game_id, text, line_number)
+    return validator.validate_game_text(game_id, text, line_number, dynamic_valid_tags=dynamic_valid_tags)
 
-def validate_batch(game_id: str, texts: List[str], start_line: int = 1) -> Dict[int, List[ValidationResult]]:
+def validate_batch(game_id: str, texts: List[str], start_line: int = 1, dynamic_valid_tags: Optional[List[str]] = None) -> Dict[int, List[ValidationResult]]:
     validator = PostProcessValidator()
-    return validator.validate_batch(game_id, texts, start_line)
+    return validator.validate_batch(game_id, texts, start_line, dynamic_valid_tags=dynamic_valid_tags)
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -413,11 +426,13 @@ if __name__ == "__main__":
         main_validator.validate_game_text("2", "This has mismatched §Ycolor§!", 2)
         main_validator.validate_game_text("2", "This has a bad variable $中文变量$ inside.", 3)
         print("\n--- Testing Victoria 3 Validator ---")
-        main_validator.validate_game_text("1", "This has #bolda bad format command.", 4)
+        # Test with dynamic tags
+        main_validator.validate_game_text("1", "This has #custom_tag now.", 4, dynamic_valid_tags=["custom_tag"])
         main_validator.validate_game_text("1", "This has a [中文概念].", 5)
         print("\n--- Testing CK3 Validator (New Rule) ---")
         main_validator.validate_game_text("5", "This contains a #totally_fake_command that should be caught.", 6)
-        main_validator.validate_game_text("5", "This one #bold is valid.", 7)
+        # Test dynamic tag override for CK3
+        main_validator.validate_game_text("5", "This #totally_fake_command is now valid.", 7, dynamic_valid_tags=["totally_fake_command"])
     except Exception as e:
         print(f"An error occurred during testing: {e}")
         print("Please ensure all Python rule files are present and correctly formatted.")

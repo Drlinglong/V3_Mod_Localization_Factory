@@ -1,0 +1,55 @@
+# 开发者工具：动态标签验证系统
+
+本文档面向开发者，介绍如何使用和维护动态格式标签验证系统。
+
+## 1. 核心理念
+
+为了解决 Mod 中自定义格式标签（`#[tag]`）导致的验证警告泛滥问题，我们建立了一套动态验证系统。其核心是：**验证规则应与游戏版本深度绑定，并能由开发者一键更新。**
+
+为此，我们实现了两个关键部分：
+1.  **游戏配置绑定**：每款游戏在 `app_settings.py` 的 `GAME_PROFILES` 中都有一个专属的 `"official_tags_codex"` 路径，指向其官方标签的 JSON “法典”文件。
+2.  **一键生成工具**：一个独立的开发者脚本，用于批量生成所有受支持游戏的“法典”。
+
+## 2. [开发者] 如何更新官方标签“法典”
+
+当 Paradox 发布游戏更新（尤其是那些会影响UI或添加新格式标签的更新）后，您作为开发者，应该为所有受影响的游戏重新生成官方标签“法典”，并将更新后的 JSON 文件提交到版本库中，以惠及所有用户。
+
+操作流程非常简单，只需一步。
+
+### 运行一键式生成脚本
+
+打开您的命令行终端，执行以下命令：
+
+```bash
+python scripts/developer_tools/generate_all_codexes.py
+```
+
+**它会做什么？**
+
+这个脚本会自动执行以下所有操作：
+1.  读取 `scripts/developer_tools/generate_all_codexes.py` 内部硬编码的 `GAME_INSTALLATION_PATHS` 字典，找到您本地的游戏安装路径。
+2.  遍历 `scripts/app_settings.py` 中 `GAME_PROFILES` 定义的所有游戏。
+3.  对于每一个游戏：
+    a.  找到其官方本地化文件夹。
+    b.  调用 `tag_scanner` 工具扫描所有 `.yml` 和 `.txt` 文件，提取所有 `#tag`。
+    c.  将结果写入到该游戏在 `GAME_PROFILES` 中配置的 `official_tags_codex` 路径下（例如 `scripts/config/validators/vic3_official_tags.json`）。
+4.  脚本会清晰地打印出每个游戏的执行情况，包括成功或失败。
+
+**你需要做什么？**
+
+1.  **首次配置**：第一次使用时，请打开 `scripts/developer_tools/generate_all_codexes.py` 文件，**更新 `GAME_INSTALLATION_PATHS` 字典**，确保其中的路径与您本地 Steam 库或游戏安装目录完全一致。
+2.  **日常更新**：游戏更新后，只需运行上述 `python` 命令即可。
+3.  **提交更改**：运行成功后，Git 会检测到对应的 `_official_tags.json` 文件发生了变化。将这些更新后的 JSON 文件提交到版本库即可。
+
+## 3. [用户] 自动化的工作流
+
+对于最终用户而言，整个过程是**完全透明和自动的**。
+
+当用户针对某个 Mod 运行 `initial_translate` 工作流时：
+1.  系统会读取当前 `game_profile`。
+2.  它会找到该游戏对应的 `official_tags_codex` 路径，并加载官方“法典”。
+3.  接着，它会扫描 Mod 文件，找出所有自定义标签。
+4.  然后，它将两者合并，生成一个本次任务专用的、动态的、完整的标签白名单。
+5.  最后，`PostProcessValidator` 会使用这个动态白名单进行验证。
+
+这确保了即使用户的 Mod 充满了自定义标签，也不会收到任何不必要的格式警告，从而可以专注于真正的翻译问题。

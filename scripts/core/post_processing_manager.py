@@ -50,13 +50,14 @@ class PostProcessingManager:
         # 详细的验证结果
         self.validation_results: Dict[str, List[ValidationResult]] = {}
     
-    def run_validation(self, target_lang: dict, source_lang: dict) -> bool:
+    def run_validation(self, target_lang: dict, source_lang: dict, dynamic_valid_tags: Optional[List[str]] = None) -> bool:
         """
         运行后处理验证
         
         Args:
             target_lang: 目标语言信息
             source_lang: 源语言信息
+            dynamic_valid_tags: 动态生成的有效标签列表，用于覆盖默认规则
             
         Returns:
             bool: 验证是否成功完成
@@ -81,7 +82,7 @@ class PostProcessingManager:
             
             # 验证每个文件
             for file_path in translated_files:
-                self._validate_single_file(file_path, target_lang, source_lang)
+                self._validate_single_file(file_path, target_lang, source_lang, dynamic_valid_tags=dynamic_valid_tags)
             
             # 输出验证摘要
             self._log_validation_summary()
@@ -173,7 +174,7 @@ class PostProcessingManager:
         
         self.logger.info("\n" + "="*60)
     
-    def _validate_single_file(self, file_path: str, target_lang: dict, source_lang: dict):
+    def _validate_single_file(self, file_path: str, target_lang: dict, source_lang: dict, dynamic_valid_tags: Optional[List[str]] = None):
         """
         验证单个文件
         
@@ -181,6 +182,7 @@ class PostProcessingManager:
             file_path: 文件路径
             target_lang: 目标语言信息
             source_lang: 源语言信息
+            dynamic_valid_tags: 动态生成的有效标签列表
         """
         try:
             # 读取文件内容
@@ -202,8 +204,14 @@ class PostProcessingManager:
                 # 使用统一的引号提取工具
                 translatable_content = QuoteExtractor.extract_from_line(line)
                 if translatable_content:
-                    # 只检查引号内的内容
-                    results = self.validator.validate_game_text(self.normalized_game_key, translatable_content, line_num, source_lang)
+                    # 只检查引号内的内容，并传入动态标签列表
+                    results = self.validator.validate_game_text(
+                        self.normalized_game_key,
+                        translatable_content,
+                        line_num,
+                        source_lang,
+                        dynamic_valid_tags=dynamic_valid_tags
+                    )
                     if results:
                         file_results.extend(results)
             

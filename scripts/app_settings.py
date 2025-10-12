@@ -139,6 +139,7 @@ GAME_PROFILES = {
         "prompt_template": prompts.VICTORIA3_PROMPT_TEMPLATE,
         "single_prompt_template": prompts.VICTORIA3_SINGLE_PROMPT_TEMPLATE,
         "format_prompt": prompts.VICTORIA3_FORMAT_PROMPT,
+        "official_tags_codex": "scripts/config/validators/vic3_official_tags.json",
     },
     "2": {
         "id": "stellaris", "name": "Stellaris (群星)",
@@ -150,6 +151,7 @@ GAME_PROFILES = {
         "prompt_template": prompts.STELLARIS_PROMPT_TEMPLATE,
         "single_prompt_template": prompts.STELLARIS_SINGLE_PROMPT_TEMPLATE,
         "format_prompt": prompts.STELLARIS_FORMAT_PROMPT,
+        "official_tags_codex": "scripts/config/validators/stellaris_official_tags.json",
     },
     "3": {
         "id": "eu4", "name": "Europa Universalis IV (欧陆风云4)",
@@ -161,6 +163,7 @@ GAME_PROFILES = {
         "prompt_template": prompts.EU4_PROMPT_TEMPLATE,
         "single_prompt_template": prompts.EU4_SINGLE_PROMPT_TEMPLATE,
         "format_prompt": prompts.EU4_FORMAT_PROMPT,
+        "official_tags_codex": "scripts/config/validators/eu4_official_tags.json",
     },
     "4": {
         "id": "hoi4", "name": "Hearts of Iron IV (钢铁雄心4)",
@@ -172,6 +175,7 @@ GAME_PROFILES = {
         "prompt_template": prompts.HOI4_PROMPT_TEMPLATE,
         "single_prompt_template": prompts.HOI4_SINGLE_PROMPT_TEMPLATE,
         "format_prompt": prompts.HOI4_FORMAT_PROMPT,
+        "official_tags_codex": "scripts/config/validators/hoi4_official_tags.json",
     },
     "5": {
         "id": "ck3", "name": "Crusader Kings III (十字军之王3)",
@@ -183,6 +187,7 @@ GAME_PROFILES = {
         "prompt_template": prompts.CK3_PROMPT_TEMPLATE,
         "single_prompt_template": prompts.CK3_SINGLE_PROMPT_TEMPLATE,
         "format_prompt": prompts.CK3_FORMAT_PROMPT,
+        "official_tags_codex": "scripts/config/validators/ck3_official_tags.json",
     }
 }
 
