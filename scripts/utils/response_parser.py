@@ -2,127 +2,136 @@ import json
 import os
 import re
 from datetime import datetime
-from typing import List, Optional
+from typing import List
 import logging
 from scripts.utils import i18n
 
 logger = logging.getLogger(__name__)
 
-class ParsingFailedAfterRepairError(Exception):
-    """Custom exception raised when JSON parsing fails even after repair attempts."""
-    pass
-
-def _save_debug_file(response_text: str, error_type: str, details: str):
-    """Saves a debug file to the logs directory."""
+def _save_critical_failure_log(response_text: str, purified_text: str, repaired_text: str, final_error: str):
+    """Saves a detailed log for critical, unrecoverable parsing failures."""
     try:
         log_dir = 'logs'
         if not os.path.exists(log_dir):
             os.makedirs(log_dir)
 
         timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-        debug_file = os.path.join(log_dir, f"debug_parse_failure_{timestamp}.log") # Changed extension to .log
+        debug_file = os.path.join(log_dir, f"critical_parse_failure_{timestamp}.log")
 
         with open(debug_file, 'w', encoding='utf-8') as f:
-            f.write(i18n.t("debug_file_header") + "\n")
-            f.write(i18n.t("debug_file_time", time=datetime.now().strftime('%Y-%m-%d %H:%M:%S')) + "\n")
-            f.write(i18n.t("debug_file_error_type", error_type=error_type) + "\n")
-            f.write(i18n.t("debug_file_details", details=details) + "\n")
+            f.write("=== CRITICAL PARSING FAILURE LOG ===\n")
+            f.write(f"Time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+            f.write(f"Final Error: {final_error}\n")
+            f.write("=" * 80 + "\n\n")
+            f.write("--- Original Response Text ---\n")
+            f.write(response_text + "\n\n")
+            f.write("--- 1. After Purification Attempt ---\n")
+            f.write(purified_text + "\n\n")
+            f.write("--- 2. After Repair Attempt ---\n")
+            f.write(repaired_text + "\n\n")
             f.write("=" * 80 + "\n")
-            f.write(i18n.t("debug_file_raw_response") + "\n")
-            f.write("-" * 40 + "\n")
-            f.write(response_text)
-            f.write("\n" + "=" * 80 + "\n")
 
-        logger.info(i18n.t("debug_file_saved", debug_file=debug_file))
+        logger.critical(f"Saved critical failure log to: {debug_file}")
     except Exception as e:
-        logger.error(i18n.t("debug_file_save_failed", e=e))
+        logger.error(f"Failed to save critical failure log: {e}")
 
-def _attempt_to_repair_json(json_string: str) -> str:
+
+def _run_repair_surgeries(dirty_json: str) -> str:
     """
-    Attempts to repair a broken JSON string.
-    Currently focuses on adding missing commas between consecutive quoted strings.
+    Performs a series of surgical repairs on a JSON string.
     """
-    # This regex finds occurrences of "a" "b" (separated by whitespace) and replaces them with "a", "b"
-    repaired_string = re.sub(r'(?<!\\)"\s+(?<!\\)"', '","', json_string)
-    return repaired_string
+    repaired_json = dirty_json
 
-def parse_json_response(response_text: str, expected_count: int) -> Optional[List[str]]:
-    """
-    Parses a JSON array string from an LLM response, with fault tolerance and repair.
-    """
-    if not response_text:
-        return None # Handle empty string input gracefully
+    # Surgery 1: Fix known warning messages that are not quoted
+    warning_str = "WARNING: Source localization entry is incomplete"
+    if warning_str in repaired_json:
+        repaired_json = repaired_json.replace(warning_str, f'"{warning_str}"')
 
-    # --- 1. Optimistic First Pass ---
-    clean_text = response_text.strip()
-    if clean_text.startswith("```json"):
-        clean_text = clean_text.removeprefix("```json").strip()
-    if clean_text.startswith("```"):
-        clean_text = clean_text.removeprefix("```").strip()
-    if clean_text.endswith("```"):
-        clean_text = clean_text.removesuffix("```").strip()
+    # Surgery 2: Add missing commas between consecutive quoted strings.
+    # This handles both ` "A" "B" ` and ` "A""B" `. Run this first as it's a more
+    # reliable and less ambiguous repair than quote escaping.
+    repaired_json = re.sub(r'(?<!\\)"\s*(?<!\\)"', '","', repaired_json)
 
-    try:
-        parsed_data = json.loads(clean_text)
-    except json.JSONDecodeError as initial_error:
-        # --- 2. Repair and Retry ---
-        logger.warning(i18n.t("parser_initial_decode_failed_retrying"))
-        repaired_text = _attempt_to_repair_json(clean_text)
-
-        try:
-            parsed_data = json.loads(repaired_text)
-            logger.info(i18n.t("parser_repair_succeeded"))
-        except json.JSONDecodeError as final_error:
-            # --- 3. Final Failure ---
-            logger.error(i18n.t("parser_repair_failed"))
-            _save_debug_file(response_text, "JSON Decode Error After Repair", str(final_error))
-            raise ParsingFailedAfterRepairError(
-                "JSON parsing failed even after repair attempts."
-            ) from final_error
-
-    # --- 4. Structure Validation and Normalization ---
-    translations = None
-    if isinstance(parsed_data, list):
-        translations = parsed_data
-    elif isinstance(parsed_data, dict) and 'response' in parsed_data:
-        # Handle cases where the list is nested inside a dictionary
-        logger.info(i18n.t("unpacking_wrapped_response"))
-        nested_text = parsed_data['response']
+    # Surgery 3: State-machine-based internal quote escaping
+    in_string = False
+    escaped_chars = []
+    i = 0
+    while i < len(repaired_json):
+        char = repaired_json[i]
         
-        # Clean the nested text, removing markdown code blocks
-        clean_nested_text = nested_text.strip()
-        if clean_nested_text.startswith("```json"):
-            clean_nested_text = clean_nested_text.removeprefix("```json").strip()
-        if clean_nested_text.startswith("```"):
-            clean_nested_text = clean_nested_text.removeprefix("```").strip()
-        if clean_nested_text.endswith("```"):
-            clean_nested_text = clean_nested_text.removesuffix("```").strip()
+        # Pass through existing escape sequences
+        if char == '\\':
+            escaped_chars.append(char)
+            if i + 1 < len(repaired_json):
+                escaped_chars.append(repaired_json[i+1])
+                i += 1
+            i += 1
+            continue
 
-        try:
-            translations = json.loads(clean_nested_text)
-            if not isinstance(translations, list):
-                 logger.warning(i18n.t("parser_unpack_json_not_list_warning", nested_data=translations))
-                 return [""] * expected_count
-        except json.JSONDecodeError as e:
-            logger.error(i18n.t("parser_unpack_json_decode_error", nested_text=nested_text))
-            _save_debug_file(response_text, "Nested JSON Decode Error", str(e))
-            raise ParsingFailedAfterRepairError("Failed to decode nested JSON.") from e
-    else:
-        logger.warning(i18n.t("parser_json_not_list_warning", parsed_data=parsed_data))
-        # Not raising an exception here, as it's a format issue, not a parsing failure.
-        # Returning an empty list or padded list might be appropriate. Let's pad it.
-        return [""] * expected_count
+        if char == '"':
+            if not in_string:
+                # We are entering a string.
+                in_string = True
+                escaped_chars.append(char)
+            else:
+                # We are inside a string. Is this the closing quote?
+                # Peek ahead to see if the next non-whitespace char is a comma or bracket.
+                j = i + 1
+                while j < len(repaired_json) and repaired_json[j].isspace():
+                    j += 1
 
-    if translations is None:
-        logger.error(i18n.t("parser_unknown_logic_error"))
-        _save_debug_file(response_text, "Logic Error", "Translations variable was not assigned.")
-        return [""] * expected_count
+                if j < len(repaired_json) and (repaired_json[j] == ',' or repaired_json[j] == ']'):
+                    # This is a valid closing quote.
+                    in_string = False
+                    escaped_chars.append(char)
+                else:
+                    # This is an internal quote. Escape it.
+                    escaped_chars.append('\\"')
+        else:
+            escaped_chars.append(char)
+        i += 1
+    repaired_json = "".join(escaped_chars)
 
-    # --- 5. Count Adjustment ---
-    if len(translations) != expected_count:
-        logger.warning(i18n.t("parser_translation_count_mismatch", expected_count=expected_count, actual_count=len(translations)))
-        while len(translations) < expected_count:
-            translations.append("")
-        translations = translations[:expected_count]
+    return repaired_json
 
-    return [str(item) for item in translations]
+
+def parse_json_from_response(response_text: str, original_input_list: list[str]) -> list[str]:
+    """
+    Parses a JSON array string from an LLM response using a 3-layer defense system.
+
+    Args:
+        response_text: The raw string response from the LLM.
+        original_input_list: The original list of strings that were sent for processing.
+                             This is used as the ultimate fallback.
+
+    Returns:
+        A list of strings. On successful parsing, it's the parsed list.
+        On any unrecoverable failure, it's the original_input_list.
+    """
+    purified_text = ""
+    repaired_text = ""
+
+    # --- First Line of Defense: The Purifier ---
+    # Greedily find the first JSON array structure. This helps discard markdown wrappers,
+    # leading/trailing text, and even duplicate JSON blocks.
+    match = re.search(r"\[.*\]", response_text, re.DOTALL)
+    if not match:
+        logging.critical("Purifier failed: No JSON array structure (`[...]`) found in the response.")
+        _save_critical_failure_log(response_text, "N/A", "N/A", "No `[...]` structure found.")
+        return original_input_list
+
+    purified_text = match.group(0)
+
+    # --- Second Line of Defense: The Surgeon ---
+    repaired_text = _run_repair_surgeries(purified_text)
+
+    # --- Third Line of Defense: The Judge ---
+    try:
+        # Attempt to parse the repaired string.
+        parsed_list = json.loads(repaired_text)
+        return parsed_list
+    except json.JSONDecodeError as e:
+        # --- The Ultimate Fallback ---
+        logging.critical(f"Judge failed: Final parsing attempt failed after purification and repair. Error: {e}")
+        _save_critical_failure_log(response_text, purified_text, repaired_text, str(e))
+        return original_input_list

@@ -547,5 +547,7 @@
   "log_info_archived_updated_translations": "Archived/Updated {count} translated entries for language '{lang_code}'.",
   "log_error_db_archive_results": "Database error in archive_translated_results for language '{lang_code}': {error}",
   "log_info_db_connection_closed": "Mods cache database connection closed.",
-  "log_info_source_version_exists": "Source version already exists: {hash} (version_id: {version_id})"
+  "log_info_source_version_exists": "Source version already exists: {hash} (version_id: {version_id})",
+  "validation_residual_punctuation_found": "Residual source language punctuation detected.",
+  "validation_residual_punctuation_details": "Found the following punctuations that should have been converted: {punctuations}"
 }

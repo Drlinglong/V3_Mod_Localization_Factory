@@ -277,15 +277,29 @@ def run(mod_name: str,
         # ───────────── 6. 运行后处理格式验证 ─────────────
         try:
             from scripts.core.post_processing_manager import PostProcessingManager
+            from scripts.utils import tag_scanner
+
+            dynamic_tags = None
+            official_tags_path = game_profile.get("official_tags_codex")
             
+            if official_tags_path:
+                logging.info("Starting dynamic tag analysis for post-processing validation...")
+                mod_loc_path_for_scan = os.path.join(SOURCE_DIR, mod_name, game_profile["source_localization_folder"])
+                dynamic_tags = tag_scanner.analyze_mod_and_get_all_valid_tags(
+                    mod_loc_path=mod_loc_path_for_scan,
+                    official_tags_json_path=official_tags_path
+                )
+            else:
+                logging.warning(f"Skipping dynamic tag analysis: 'official_tags_codex' not defined for game '{game_profile.get('id')}'.")
+
             # 构建输出文件夹路径
             output_folder_path = os.path.join(DEST_DIR, output_folder_name)
             
             # 创建后处理验证管理器
             post_processor = PostProcessingManager(game_profile, output_folder_path)
             
-            # 运行验证
-            validation_success = post_processor.run_validation(target_lang)
+            # 运行验证, 传入动态生成的标签列表 (如果存在)
+            validation_success = post_processor.run_validation(target_lang, source_lang, dynamic_valid_tags=dynamic_tags)
             
             if validation_success:
                 # 获取验证统计信息
