@@ -148,5 +148,8 @@
   "glossary_abbreviations_tooltip_json": "以JSON对象形式输入缩写，例如：{\"en\": \"abbr\", \"zh-CN\": \"缩写\"}",
   "glossary_metadata_tooltip_json": "以JSON对象形式输入元数据，例如：{\"category\": \"school\", \"part_of_speech\": \"专有名词\"}",
   "glossary_delete_confirm_title": "确认删除",
-  "glossary_delete_confirm_content": "您确定要删除此词条吗？此操作不可撤销。"
+  "glossary_delete_confirm_content": "您确定要删除此词条吗？此操作不可撤销。",
+  "notification_tooltip_minimal": "最小化日志",
+  "notification_tooltip_windowed": "窗口化日志",
+  "notification_tooltip_sidebar": "侧边栏日志"
 }

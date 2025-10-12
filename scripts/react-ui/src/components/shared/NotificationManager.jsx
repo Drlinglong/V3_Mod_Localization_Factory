@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { useNotification } from '../../context/NotificationContext';
 import { useToasterStore, toast } from 'react-hot-toast';
 import { Drawer, Card, Button, Typography, Space, Badge, Tooltip } from 'antd';
@@ -7,12 +8,14 @@ import {
   LineOutlined,
   BlockOutlined,
   LayoutOutlined,
+  NotificationOutlined,
 } from '@ant-design/icons';
 
 const { Text } = Typography;
 
 // --- 1. The Always-Visible Control Panel ---
 const NotificationControls = () => {
+  const { t } = useTranslation();
   const { notificationStyle, setNotificationStyle } = useNotification();
 
   return (
@@ -20,8 +23,8 @@ const NotificationControls = () => {
       style={{
         position: 'fixed',
         bottom: 16,
-        right: 16,
-        zIndex: 10000, // Extremely high z-index to stay on top of everything
+        right: 16, // Corrected position
+        zIndex: 10000,
         background: 'rgba(255, 255, 255, 0.9)',
         padding: '8px',
         borderRadius: '8px',
@@ -30,7 +33,7 @@ const NotificationControls = () => {
       }}
     >
       <Space>
-        <Tooltip title="Minimized Log">
+        <Tooltip title={t('notification_tooltip_minimal')}>
           <Button
             shape="circle"
             icon={<LineOutlined />}
@@ -38,7 +41,7 @@ const NotificationControls = () => {
             onClick={() => setNotificationStyle('minimal')}
           />
         </Tooltip>
-        <Tooltip title="Windowed Log">
+        <Tooltip title={t('notification_tooltip_windowed')}>
           <Button
             shape="circle"
             icon={<BlockOutlined />}
@@ -46,7 +49,7 @@ const NotificationControls = () => {
             onClick={() => setNotificationStyle('bottom-right')}
           />
         </Tooltip>
-        <Tooltip title="Sidebar Log">
+        <Tooltip title={t('notification_tooltip_sidebar')}>
           <Button
             shape="circle"
             icon={<LayoutOutlined />}
@@ -62,10 +65,11 @@ const NotificationControls = () => {
 
 // --- 2. The Notification Views ---
 const NotificationViews = () => {
-  const { notificationStyle, setNotificationStyle } = useNotification(); // Get setter for closing sidebar
+  const { notificationStyle, setNotificationStyle } = useNotification();
   const { toasts } = useToasterStore();
 
   const latestToast = toasts.filter(t => t.visible).slice(-1)[0];
+  const hasVisibleToasts = toasts.some(t => t.visible);
 
   // Render Bottom-Right Windows
   if (notificationStyle === 'bottom-right') {
@@ -73,16 +77,20 @@ const NotificationViews = () => {
       <div
         style={{
           position: 'fixed',
-          bottom: 16,
+          bottom: '80px', // Position above controls
           right: 16,
           zIndex: 9998,
           display: 'flex',
           flexDirection: 'column',
           gap: '8px',
-          // Move the stack above the controls
-          bottom: '80px',
         }}
       >
+        {/* Empty State */}
+        {!hasVisibleToasts && (
+          <Card style={{ width: 320 }} bodyStyle={{ padding: '12px' }} size="small">
+            <Text type="secondary">No new notifications.</Text>
+          </Card>
+        )}
         {toasts.filter(t => t.visible).map(t => (
           <Card key={t.id} style={{ width: 320, boxShadow: '0 4px 12px rgba(0,0,0,0.15)' }} bodyStyle={{ padding: '12px' }} size="small">
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
@@ -101,14 +109,19 @@ const NotificationViews = () => {
       <Drawer
         title="Notification Log"
         placement="right"
-        // FIX: Closing the drawer now switches the style back to minimal
-        onClose={() => setNotificationStyle('minimal')}
-        // FIX: The drawer is open simply if the style is 'sidebar'
-        open={true}
+        onClose={() => setNotificationStyle('minimal')} // Close button switches back to minimal
+        open={true} // Always open if style is 'sidebar'
         width={400}
         zIndex={9999}
       >
         <Space direction="vertical" style={{ width: '100%' }}>
+          {/* Empty State */}
+          {toasts.length === 0 && (
+            <div style={{ textAlign: 'center', marginTop: '20px' }}>
+              <NotificationOutlined style={{ fontSize: '24px', color: '#ccc' }} />
+              <p><Text type="secondary">The notification log is empty.</Text></p>
+            </div>
+          )}
           {toasts.map(t => (
             <Badge.Ribbon key={t.id} text={t.type.toUpperCase()} color={t.type === 'error' ? 'red' : 'green'}>
               <Card size="small" style={{ width: '100%' }}>
@@ -116,7 +129,6 @@ const NotificationViews = () => {
               </Card>
             </Badge.Ribbon>
           ))}
-          {toasts.length === 0 && <Text type="secondary">No notifications yet.</Text>}
         </Space>
       </Drawer>
     );
@@ -138,7 +150,7 @@ const NotificationViews = () => {
         justifyContent: 'center',
         alignItems: 'center',
         boxShadow: '0 -2px 8px rgba(0,0,0,0.06)',
-        paddingRight: '200px', // Offset for the controls on the right
+        paddingRight: '200px', // Offset for the controls
       }}
     >
       {latestToast ? (
