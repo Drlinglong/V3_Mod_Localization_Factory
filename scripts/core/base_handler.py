@@ -105,6 +105,7 @@ class BaseApiHandler(ABC):
         """
         prompt = self._build_prompt(task)
         batch_num = task.batch_index + 1
+        start_time = time.time() # <--- 添加时间记录
 
         for attempt in range(MAX_RETRIES):
             try:
@@ -114,7 +115,8 @@ class BaseApiHandler(ABC):
                 # Check for success: must not be None, must not be the original list, and length must match.
                 if translated_texts is not None and translated_texts is not task.texts and len(translated_texts) == len(task.texts):
                     task.translated_texts = translated_texts
-                    self.logger.debug(i18n.t("batch_success", batch_num=batch_num, attempt=attempt + 1))
+                    elapsed_time = time.time() - start_time # <--- 计算耗时
+                    self.logger.debug(i18n.t("batch_success", batch_num=batch_num, attempt=attempt + 1, elapsed_time=f"{elapsed_time:.2f}")) # <--- 传递参数
                     return task
                 else:
                     self.logger.warning(

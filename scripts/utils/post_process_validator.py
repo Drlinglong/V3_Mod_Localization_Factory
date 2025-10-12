@@ -25,7 +25,7 @@ from enum import Enum
 try:
     from . import i18n
     from ..utils import punctuation_handler
-    from ..app_settings import LANGUAGES
+    from ..app_settings import LANGUAGES, GAME_PROFILES
 except ImportError:
     i18n = None
     punctuation_handler = None
