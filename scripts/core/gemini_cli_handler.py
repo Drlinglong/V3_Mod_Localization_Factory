@@ -217,8 +217,8 @@ class GeminiCLIHandler(BaseApiHandler):
                 self.logger.warning(i18n.t("retrying_batch", batch_num=batch_num, attempt=attempt + 1, max_retries=GEMINI_CLI_MAX_RETRIES, delay=delay))
                 time.sleep(delay)
 
-        self.logger.error(f"Gemini CLI Batch {batch_num} failed after {GEMINI_CLI_MAX_RETRIES} attempts.")
-        task.translated_texts = None
+        self.logger.error(f"Gemini CLI Batch {batch_num} failed after {GEMINI_CLI_MAX_RETRIES} attempts. Falling back to original texts.")
+        task.translated_texts = task.texts
         return task
 
     def translate_single_text(self, text: str, task_description: str, mod_name: str, source_lang: dict, target_lang: dict, mod_context: str, game_profile: dict) -> str:

@@ -131,8 +131,8 @@ class BaseApiHandler(ABC):
                 self.logger.warning(i18n.t("retrying_batch", batch_num=batch_num, attempt=attempt + 1, max_retries=MAX_RETRIES, delay=delay))
                 time.sleep(delay)
 
-        self.logger.error(f"Batch {batch_num} failed after {MAX_RETRIES} attempts.")
-        task.translated_texts = None
+        self.logger.error(f"Batch {batch_num} failed after {MAX_RETRIES} attempts. Falling back to original texts.")
+        task.translated_texts = task.texts
         return task
 
     def _build_single_text_prompt(self, text: str, task_description: str, mod_name: str, source_lang: dict, target_lang: dict, mod_context: str, game_profile: dict) -> str:
