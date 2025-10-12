@@ -21,6 +21,59 @@ html.theme-victorian {
     border-image-slice: 1;
 }
 
+/* RemisButton Victorian Theme */
+.theme-victorian .remis-button {
+  border: 2px solid #5C3A1E; /* Dark wood color */
+  border-radius: 50px; /* To get the old typewriter key shape */
+  background: linear-gradient(145deg, #EADCB3, #C3A37A); /* Brass gradient */
+  color: #362211;
+  padding: 12px 22px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 5px 0 #5C3A1E, 0 8px 10px rgba(0,0,0,0.4);
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+.theme-victorian .remis-button:hover {
+  background: linear-gradient(145deg, #F0EAD6, #DABF92); /* Lighter brass */
+  box-shadow: 0 5px 0 #5C3A1E, 0 9px 12px rgba(0,0,0,0.5);
+  transform: translateY(-1px);
+}
+
+.theme-victorian .remis-button:active {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 #5C3A1E, 0 4px 5px rgba(0,0,0,0.5);
+  background: linear-gradient(145deg, #C3A37A, #B2926B); /* Darker brass */
+}
+
+/* Custom Scrollbar Victorian Theme */
+.theme-victorian ::-webkit-scrollbar {
+  width: 14px;
+}
+
+.theme-victorian ::-webkit-scrollbar-track {
+  background: #6B4F3A; /* Dark wood color */
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.5);
+}
+
+.theme-victorian ::-webkit-scrollbar-thumb {
+  background: linear-gradient(145deg, #EADCB3, #C3A37A); /* Brass gradient */
+  border-radius: 7px;
+  border: 2px solid #5C3A1E; /* Dark wood border */
+}
+
+.theme-victorian ::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(145deg, #F0EAD6, #DABF92); /* Lighter brass */
+}
+
+/* Firefox scrollbar color for Victorian theme */
+.theme-victorian * {
+  scrollbar-color: #C3A37A #6B4F3A; /* thumb track */
+}
+
 .theme-victorian .ant-menu {
     background: var(--color-background);
 }
