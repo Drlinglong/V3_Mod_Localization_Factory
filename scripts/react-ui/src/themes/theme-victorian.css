@@ -69,6 +69,11 @@ html.theme-victorian {
   background: linear-gradient(145deg, #F0EAD6, #DABF92); /* Lighter brass */
 }
 
+/* Firefox scrollbar color for Victorian theme */
+.theme-victorian * {
+  scrollbar-color: #C3A37A #6B4F3A; /* thumb track */
+}
+
 .theme-victorian .ant-menu {
     background: var(--color-background);
 }

@@ -120,3 +120,8 @@ html.theme-byzantine {
 .theme-byzantine ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(to bottom, #FFEDA0, #CCA32F);
 }
+
+/* Firefox scrollbar color for Byzantine theme */
+.theme-byzantine * {
+  scrollbar-color: #B8860B #2a004a; /* thumb track */
+}
