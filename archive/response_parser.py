@@ -1,3 +1,23 @@
+# ==============================================================================
+#  DEPRECATION NOTICE
+# ==============================================================================
+#  THIS MODULE IS DEPRECATED AND ARCHIVED. DO NOT USE IT FOR NEW DEVELOPMENT.
+#
+#  Reason: This module is based on a fragile "post-processing repair" paradigm,
+#          relying on complex, hand-written rules and regex surgeries to fix
+#          malformed JSON from LLMs. This approach has proven to be a high-maintenance
+#          and unreliable "arms race".
+#
+#  Replacement: A new, robust, schema-driven parsing system has been implemented.
+#               Please use the new module:
+#
+#               scripts.utils.structured_parser.py
+#
+#  The new module uses a "layered defense" approach with `json_repair` for robust
+#  fixing and `Pydantic` for strict schema validation, ensuring deterministic and
+#  reliable parsing.
+# ==============================================================================
+
 import json
 import os
 import re

@@ -8,7 +8,7 @@ from scripts.app_settings import MAX_RETRIES, FALLBACK_FORMAT_PROMPT
 from scripts.core.parallel_processor import BatchTask
 from scripts.utils.punctuation_handler import generate_punctuation_prompt
 from scripts.core.glossary_manager import glossary_manager
-from scripts.utils.response_parser import parse_json_from_response
+from scripts.utils.structured_parser import parse_response
 
 
 class BaseApiHandler(ABC):
@@ -89,8 +89,15 @@ class BaseApiHandler(ABC):
         return prompt
 
     def _parse_response(self, response: str, original_texts: list[str]) -> list[str] | None:
-        """【通用逻辑】调用通用解析器来解析API响应。"""
-        return parse_json_from_response(response, original_texts)
+        """
+        【通用逻辑】调用结构化解析器来解析API响应。
+        -   成功：返回翻译文本列表。
+        -   失败：返回None，以触发上游的重试机制。
+        """
+        parsed_model = parse_response(response)
+        if parsed_model:
+            return parsed_model.translations
+        return None
 
     def translate_batch(self, task: BatchTask) -> BatchTask:
         """
