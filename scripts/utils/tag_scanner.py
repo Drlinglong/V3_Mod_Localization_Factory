@@ -17,7 +17,8 @@ def _scan_directory_for_tags(path: str) -> Set[str]:
         Set[str]: A set of unique tags found.
     """
     tags: Set[str] = set()
-    tag_pattern = re.compile(r"#([a-zA-Z_][a-zA-Z0-9_]*)")
+    # Upgraded regex: requires a preceding space, and the character after # must be a letter/underscore.
+    tag_pattern = re.compile(r"(?<=\s)#([a-zA-Z_][a-zA-Z0-9_]*)")
     value_pattern = re.compile(r'"(.*)"')
 
     if not os.path.isdir(path):
