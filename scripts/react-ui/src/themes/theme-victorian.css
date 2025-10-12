@@ -10,12 +10,16 @@ html.theme-victorian {
   --border-image-gradient: linear-gradient(145deg, #b8860b, #daa520, #b8860b);
 }
 
+.theme-victorian .ant-layout-has-sider {
+    background: transparent !important;
+}
+
 .theme-victorian .ant-layout-header {
     background: var(--color-primary);
 }
 
 .theme-victorian .ant-layout-sider {
-    background: transparent !important;
+    background: var(--color-background);
     border-right: 4px solid;
     border-image-source: var(--border-image-gradient);
     border-image-slice: 1;
@@ -47,7 +51,7 @@ html.theme-victorian body::before {
 }
 
 .theme-victorian .ant-layout-content {
-    background: transparent !important;
+    background: #f5efe2; /* A slightly darker antique white for content background */
 }
 
 .theme-victorian .ant-typography {
