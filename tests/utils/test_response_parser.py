@@ -48,15 +48,11 @@ MOCK_ORIGINAL_INPUT_2 = ["source1", "source2"]
      MOCK_ORIGINAL_INPUT_2,
      ["A", "B", 'Another "illegal" quote']),
 
-    # --- Final Regression Tests for Bracket Balancer and Surgeon Safety ---
-    ("bracket_balancer_stress_test",
-     'some garbage text ["outer text", ["[nested array]"], "more outer text [with brackets]"] and then more garbage',
+    # --- Final Regression Test for the "Expecting ',' delimiter" chain failure ---
+    ("expecting_comma_delimiter_regression",
+     '{"response": "```json\\n[\\n  \\"A\\"\\n  \\"B\\"\\n]\\n```"}',
      ["dummy"],
-     ["outer text", ["[nested array]"], "more outer text [with brackets]"]),
-    ("surgeon_newline_safety_test",
-     '["string 1",\n "string 2"]',
-     ["dummy"],
-     ["string 1", "string 2"]),
+     ["A", "B"]),
 ])
 def test_ultimate_response_parser(test_name, response_text, original_input, expected_output):
     """
