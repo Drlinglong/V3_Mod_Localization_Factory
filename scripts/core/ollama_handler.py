@@ -13,21 +13,8 @@ class OllamaHandler(BaseApiHandler):
     def initialize_client(self) -> Any:
         """【必须由子类实现】初始化Ollama配置。"""
         try:
-         # 直接在这里写死默认值，逻辑最清晰
+            # 从环境变量 OLLAMA_BASE_URL 读取URL，如果未设置，则使用默认值
             self.base_url = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
-        
-            self.model = API_PROVIDERS.get("ollama", {}).get("default_model", "llama3.2")
-        
-            self.logger.info(f"Ollama client configured. Base URL: {self.base_url}, Model: {self.model}")
-            return self
-        except Exception as e:
-            self.logger.exception(f"Error initializing Ollama client: {e}")
-            raise
-        
-    def initialize_client(self) -> Any:
-        """【必须由子类实现】初始化Ollama配置。"""
-        try:
-            self.base_url = os.getenv("OLLAMA_BASE_URL", API_PROVIDERS.get("ollama", {}).get("base_url_env", "http://localhost:11434"))
             self.model = API_PROVIDERS.get("ollama", {}).get("default_model", "llama3.2")
             
             self.logger.info(f"Ollama client configured. Base URL: {self.base_url}, Model: {self.model}")
