@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Card } from 'antd';
+import { Card, Text } from '@mantine/core';
 
 const ActionCard = ({ icon, title, linkTo }) => {
   return (
-    <Link to={linkTo}>
-      <Card hoverable style={{ textAlign: 'center' }}>
-        <div style={{ fontSize: '48px' }}>{icon}</div>
-        <h2>{title}</h2>
+    <Link to={linkTo} style={{ textDecoration: 'none' }}>
+      <Card shadow="sm" padding="lg" radius="md" withBorder style={{ textAlign: 'center' }}>
+        <Text size="xl" style={{ fontSize: '48px' }}>{icon}</Text>
+        <Text weight={500} size="lg" mt="md">{title}</Text>
       </Card>
     </Link>
   );

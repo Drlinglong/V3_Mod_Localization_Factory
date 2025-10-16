@@ -2,16 +2,8 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNotification } from '../../context/NotificationContext';
 import { useToasterStore, toast } from 'react-hot-toast';
-import { Drawer, Card, Button, Typography, Space, Badge, Tooltip } from 'antd';
-import {
-  CloseOutlined,
-  LineOutlined,
-  BlockOutlined,
-  LayoutOutlined,
-  NotificationOutlined,
-} from '@ant-design/icons';
-
-const { Text } = Typography;
+import { Drawer, Card, Button, Text, Group, Badge, Tooltip } from '@mantine/core';
+import { IconX, IconMinus, IconSquare, IconLayoutSidebar, IconBell } from '@tabler/icons-react';
 
 // --- 1. The Always-Visible Control Panel ---
 const NotificationControls = () => {
@@ -19,46 +11,52 @@ const NotificationControls = () => {
   const { notificationStyle, setNotificationStyle } = useNotification();
 
   return (
-    <div
+    <Card
+      shadow="md"
+      padding="xs"
+      radius="md"
+      withBorder
       style={{
         position: 'fixed',
         bottom: 16,
-        right: 16, // Corrected position
+        right: 16,
         zIndex: 10000,
-        background: 'rgba(255, 255, 255, 0.9)',
-        padding: '8px',
-        borderRadius: '8px',
-        boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
         backdropFilter: 'blur(5px)',
       }}
     >
-      <Space>
-        <Tooltip title={t('notification_tooltip_minimal')}>
+      <Group>
+        <Tooltip label={t('notification_tooltip_minimal')}>
           <Button
-            shape="circle"
-            icon={<LineOutlined />}
-            type={notificationStyle === 'minimal' ? 'primary' : 'default'}
+            variant={notificationStyle === 'minimal' ? 'filled' : 'light'}
+            size="sm"
+            isIcon
             onClick={() => setNotificationStyle('minimal')}
-          />
+          >
+            <IconMinus />
+          </Button>
         </Tooltip>
-        <Tooltip title={t('notification_tooltip_windowed')}>
+        <Tooltip label={t('notification_tooltip_windowed')}>
           <Button
-            shape="circle"
-            icon={<BlockOutlined />}
-            type={notificationStyle === 'bottom-right' ? 'primary' : 'default'}
+            variant={notificationStyle === 'bottom-right' ? 'filled' : 'light'}
+            size="sm"
+            isIcon
             onClick={() => setNotificationStyle('bottom-right')}
-          />
+          >
+            <IconSquare />
+          </Button>
         </Tooltip>
-        <Tooltip title={t('notification_tooltip_sidebar')}>
+        <Tooltip label={t('notification_tooltip_sidebar')}>
           <Button
-            shape="circle"
-            icon={<LayoutOutlined />}
-            type={notificationStyle === 'sidebar' ? 'primary' : 'default'}
+            variant={notificationStyle === 'sidebar' ? 'filled' : 'light'}
+            size="sm"
+            isIcon
             onClick={() => setNotificationStyle('sidebar')}
-          />
+          >
+            <IconLayoutSidebar />
+          </Button>
         </Tooltip>
-      </Space>
-    </div>
+      </Group>
+    </Card>
   );
 };
 
@@ -87,16 +85,18 @@ const NotificationViews = () => {
       >
         {/* Empty State */}
         {!hasVisibleToasts && (
-          <Card style={{ width: 320 }} bodyStyle={{ padding: '12px' }} size="small">
-            <Text type="secondary">No new notifications.</Text>
+          <Card withBorder radius="md" shadow="sm" style={{ width: 320 }} p="xs">
+            <Text c="dimmed">No new notifications.</Text>
           </Card>
         )}
         {toasts.filter(t => t.visible).map(t => (
-          <Card key={t.id} style={{ width: 320, boxShadow: '0 4px 12px rgba(0,0,0,0.15)' }} bodyStyle={{ padding: '12px' }} size="small">
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-              <Text type={t.type === 'error' ? 'danger' : 'success'}>{t.message}</Text>
-              <Button type="text" shape="circle" icon={<CloseOutlined />} size="small" onClick={() => toast.dismiss(t.id)} />
-            </div>
+          <Card key={t.id} withBorder radius="md" shadow="sm" style={{ width: 320 }} p="xs">
+            <Group justify="space-between">
+              <Text color={t.type === 'error' ? 'red' : 'green'}>{t.message}</Text>
+              <Button variant="light" size="xs" isIcon onClick={() => toast.dismiss(t.id)}>
+                <IconX size={14} />
+              </Button>
+            </Group>
           </Card>
         ))}
       </div>
@@ -108,57 +108,50 @@ const NotificationViews = () => {
     return (
       <Drawer
         title="Notification Log"
-        placement="right"
-        onClose={() => setNotificationStyle('minimal')} // Close button switches back to minimal
-        open={true} // Always open if style is 'sidebar'
-        width={400}
+        position="right"
+        onClose={() => setNotificationStyle('minimal')}
+        opened={true}
+        size="md"
         zIndex={9999}
       >
-        <Space direction="vertical" style={{ width: '100%' }}>
-          {/* Empty State */}
+        <Group direction="vertical" style={{ width: '100%' }}>
           {toasts.length === 0 && (
             <div style={{ textAlign: 'center', marginTop: '20px' }}>
-              <NotificationOutlined style={{ fontSize: '24px', color: '#ccc' }} />
-              <p><Text type="secondary">The notification log is empty.</Text></p>
+              <IconBell size={24} style={{ color: '#ccc' }} />
+              <p><Text c="dimmed">The notification log is empty.</Text></p>
             </div>
           )}
           {toasts.map(t => (
-            <Badge.Ribbon key={t.id} text={t.type.toUpperCase()} color={t.type === 'error' ? 'red' : 'green'}>
-              <Card size="small" style={{ width: '100%' }}>
-                <Text>{t.message}</Text>
-              </Card>
-            </Badge.Ribbon>
+            <Card key={t.id} withBorder radius="md" style={{ width: '100%' }}>
+               <Badge color={t.type === 'error' ? 'red' : 'green'} variant="light" >{t.type.toUpperCase()}</Badge>
+               <Text>{t.message}</Text>
+            </Card>
           ))}
-        </Space>
+        </Group>
       </Drawer>
     );
   }
 
   // Render Minimized Bar (Default)
   return (
-    <div
+    <Card
+      withBorder
+      radius={0}
       style={{
         position: 'fixed',
         bottom: 0,
         left: 0,
         width: '100%',
         zIndex: 9990,
-        background: '#fff',
-        borderTop: '1px solid #f0f0f0',
-        padding: '8px 24px',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        boxShadow: '0 -2px 8px rgba(0,0,0,0.06)',
         paddingRight: '200px', // Offset for the controls
       }}
     >
       {latestToast ? (
-        <Text type={latestToast.type === 'error' ? 'danger' : 'success'}>{latestToast.message}</Text>
+        <Text color={latestToast.type === 'error' ? 'red' : 'green'}>{latestToast.message}</Text>
       ) : (
-        <Text type="secondary">Ready.</Text>
+        <Text c="dimmed">Ready.</Text>
       )}
-    </div>
+    </Card>
   );
 };
 

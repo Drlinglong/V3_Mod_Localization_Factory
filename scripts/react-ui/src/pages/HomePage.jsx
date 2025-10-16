@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Row, Col, Typography, Card } from 'antd';
+import { Grid, Card, Title, Text } from '@mantine/core';
 import ActionCard from '../components/ActionCard';
 import ProjectStatusPieChart from '../components/ProjectStatusPieChart';
 import GlossaryAnalysisBarChart from '../components/GlossaryAnalysisBarChart';
-
-const { Title, Paragraph } = Typography;
 
 const HomePage = () => {
   const { t } = useTranslation();
@@ -21,40 +19,42 @@ const HomePage = () => {
 
   return (
     <div style={{ padding: '24px' }}>
-      <Card style={{ marginBottom: '24px', textAlign: 'center' }}>
-        <Title level={3}>{t('homepage_title')}</Title>
-        <Paragraph>"{slogan}"</Paragraph>
+      <Card shadow="sm" padding="lg" radius="md" withBorder style={{ marginBottom: '24px', textAlign: 'center' }}>
+        <Title order={3}>{t('homepage_title')}</Title>
+        <Text>"{slogan}"</Text>
       </Card>
 
-      <Row gutter={[24, 24]}>
-        <Col xs={24} sm={12}>
+      <Grid gutter="xl">
+        <Grid.Col span={{ xs: 12, sm: 6 }}>
           <ActionCard
             icon={t('homepage_action_card_new_project_icon')}
             title={t('homepage_action_card_new_project')}
             linkTo="/translation"
           />
-        </Col>
-        <Col xs={24} sm={12}>
+        </Grid.Col>
+        <Grid.Col span={{ xs: 12, sm: 6 }}>
           <ActionCard
             icon={t('homepage_action_card_update_project_icon')}
             title={t('homepage_action_card_update_project')}
             linkTo="/translation"
           />
-        </Col>
-      </Row>
+        </Grid.Col>
+      </Grid>
 
-      <Row gutter={[24, 24]} style={{ marginTop: '24px' }}>
-        <Col xs={24} lg={12}>
-          <Card title={t('homepage_chart_pie_title')}>
+      <Grid gutter="xl" style={{ marginTop: '24px' }}>
+        <Grid.Col span={{ xs: 12, lg: 6 }}>
+          <Card shadow="sm" padding="lg" radius="md" withBorder>
+            <Title order={4}>{t('homepage_chart_pie_title')}</Title>
             <ProjectStatusPieChart />
           </Card>
-        </Col>
-        <Col xs={24} lg={12}>
-          <Card title={t('homepage_chart_bar_title')}>
+        </Grid.Col>
+        <Grid.Col span={{ xs: 12, lg: 6 }}>
+          <Card shadow="sm" padding="lg" radius="md" withBorder>
+            <Title order={4}>{t('homepage_chart_bar_title')}</Title>
             <GlossaryAnalysisBarChart />
           </Card>
-        </Col>
-      </Row>
+        </Grid.Col>
+      </Grid>
     </div>
   );
 };
