@@ -1,13 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Layout, Typography, Select, Tree, Spin } from 'antd';
+import { Grid, Title, Select, Loader, Paper, ScrollArea } from '@mantine/core';
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
 import axios from 'axios';
-
-const { Title } = Typography;
-const { Sider, Content } = Layout;
-const { Option } = Select;
 
 // Map language codes to their display names for a better UI.
 const languageNameMap = {
@@ -112,49 +108,80 @@ const Documentation = () => {
         setSelectedFile(defaultFile);
     };
 
-    const handleSelect = (selectedKeys, info) => {
-        if (info.node.isLeaf && selectedKeys.length > 0) {
-            setSelectedFile(selectedKeys[0]);
-        }
+    const handleSelect = (key) => {
+        setSelectedFile(key);
+    };
+
+    // A simple recursive component to render the file tree
+    const FileTree = ({ nodes, onSelect, selectedKey }) => {
+        return (
+            <div>
+                {nodes.map(node => (
+                    <div key={node.key} style={{ paddingLeft: '20px' }}>
+                        {node.isLeaf ? (
+                             <a
+                                href="#"
+                                onClick={(e) => { e.preventDefault(); onSelect(node.key); }}
+                                style={{
+                                    display: 'block',
+                                    padding: '5px',
+                                    borderRadius: '4px',
+                                    backgroundColor: node.key === selectedKey ? 'var(--mantine-color-blue-light)' : 'transparent',
+                                    color: node.key === selectedKey ? 'var(--mantine-color-blue-filled)' : 'inherit',
+                                    textDecoration: 'none'
+                                }}
+                            >
+                                {node.title}
+                            </a>
+                        ) : (
+                            <div>
+                                <strong>{node.title}</strong>
+                                {node.children && <FileTree nodes={node.children} onSelect={onSelect} selectedKey={selectedKey} />}
+                            </div>
+                        )}
+                    </div>
+                ))}
+            </div>
+        );
     };
 
     return (
-        <Layout style={{ padding: '24px 0', background: '#fff', height: '100%' }}>
-            <Sider width={300} style={{ background: '#fff', borderRight: '1px solid #f0f0f0', padding: '10px', height: '100%', overflow: 'auto' }}>
-                <div style={{ padding: '0 16px 16px 16px' }}>
-                    <Title level={4}>{t('doc_nav_title')}</Title>
-                    <Select value={selectedLang} style={{ width: '100%' }} onChange={handleLangChange} loading={!availableLangs.length}>
-                        {availableLangs.map(lang => (
-                            <Option key={lang} value={lang}>
-                                {getLanguageName(lang)}
-                            </Option>
-                        ))}
-                    </Select>
-                </div>
-                {treeLoading ? (
-                    <div style={{ textAlign: 'center', marginTop: '20px' }}><Spin /></div>
-                ) : (
-                    <Tree
-                        showLine
-                        defaultExpandAll
-                        onSelect={handleSelect}
-                        treeData={treeData}
-                        selectedKeys={[selectedFile]}
-                    />
-                )}
-            </Sider>
-            <Content style={{ padding: '24px', minHeight: 280, overflow: 'auto', height: '100%' }}>
-                {contentLoading ? (
-                     <div style={{ textAlign: 'center', marginTop: '50px' }}><Spin size="large" /></div>
-                ) : (
-                    <div style={{ textAlign: 'left' }}>
-                        <ReactMarkdown rehypePlugins={[rehypeRaw]}>
-                            {content}
-                        </ReactMarkdown>
-                    </div>
-                )}
-            </Content>
-        </Layout>
+        <Grid style={{ height: 'calc(100vh - 120px)' }}>
+            <Grid.Col span={4}>
+                <Paper withBorder p="md" style={{ height: '100%' }}>
+                    <ScrollArea style={{ height: '100%' }}>
+                        <Title order={4}>{t('doc_nav_title')}</Title>
+                        <Select
+                            value={selectedLang}
+                            onChange={setSelectedLang}
+                            data={availableLangs.map(lang => ({ value: lang, label: getLanguageName(lang) }))}
+                            disabled={!availableLangs.length}
+                            style={{ marginBottom: '20px' }}
+                        />
+                        {treeLoading ? (
+                            <div style={{ textAlign: 'center', marginTop: '20px' }}><Loader /></div>
+                        ) : (
+                            <FileTree nodes={treeData} onSelect={handleSelect} selectedKey={selectedFile} />
+                        )}
+                    </ScrollArea>
+                </Paper>
+            </Grid.Col>
+            <Grid.Col span={8}>
+                <Paper withBorder p="md" style={{ height: '100%' }}>
+                    <ScrollArea style={{ height: '100%' }}>
+                        {contentLoading ? (
+                            <div style={{ textAlign: 'center', marginTop: '50px' }}><Loader size="xl" /></div>
+                        ) : (
+                            <div style={{ textAlign: 'left' }}>
+                                <ReactMarkdown rehypePlugins={[rehypeRaw]}>
+                                    {content}
+                                </ReactMarkdown>
+                            </div>
+                        )}
+                    </ScrollArea>
+                </Paper>
+            </Grid.Col>
+        </Grid>
     );
 };
 

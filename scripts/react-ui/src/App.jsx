@@ -1,40 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Layout, Typography, Menu, ConfigProvider } from 'antd'; // Import ConfigProvider
+import { MantineProvider, AppShell, Burger, Group, NavLink } from '@mantine/core';
+import { useDisclosure } from '@mantine/hooks';
+import '@mantine/core/styles.css';
+
 import { ThemeProvider } from './ThemeContext';
 import { NotificationProvider } from './context/NotificationContext';
 import NotificationManager from './components/shared/NotificationManager';
-import {
-    ToolOutlined,
-    HomeOutlined,
-    FileTextOutlined,
-    RocketOutlined,
-    BookOutlined,
-    ExperimentOutlined,
-    SettingOutlined,
-    BranchesOutlined,
-    DashboardOutlined,
-    HourglassOutlined,
-    BuildOutlined,
-    BulbOutlined,
-} from '@ant-design/icons';
-
-// Custom Icons
-import HomeIcon from './assets/icons/HomeIcon';
-import DocsIcon from './assets/icons/DocsIcon';
-import TranslationIcon from './assets/icons/TranslationIcon';
-import GlossaryManagerIcon from './assets/icons/GlossaryManagerIcon';
-import ProofreadingIcon from './assets/icons/ProofreadingIcon';
-import ProjectManagementIcon from './assets/icons/ProjectManagementIcon';
-import CICDIcon from './assets/icons/CICDIcon';
-import ToolsIcon from './assets/icons/ToolsIcon';
-import SettingsIcon from './assets/icons/SettingsIcon';
 
 import './App.css';
 
 // Import pages...
-import OriginalHomepage from './pages/Homepage';
+import OriginalHomepage from './pages/HomePage';
 import OriginalDocumentation from './pages/Documentation';
 import OriginalInitialTranslation from './pages/InitialTranslation';
 import OriginalProjectManagement from './pages/ProjectManagement';
@@ -46,15 +24,9 @@ import SettingsPage from './pages/SettingsPage';
 import UnderDevelopmentPage from './pages/UnderDevelopmentPage';
 import UnderConstructionPage from './pages/UnderConstructionPage';
 import InConceptionPage from './pages/InConceptionPage';
-import UnderDevelopmentPage from './pages/UnderDevelopmentPage'; // New
-import UnderConstructionPage from './pages/UnderConstructionPage'; // New
-import InConceptionPage from './pages/InConceptionPage'; // New
 import Breadcrumbs from './components/shared/Breadcrumbs';
 
 import { useParams } from 'react-router-dom';
-
-const { Header, Content, Footer, Sider } = Layout;
-const { Title } = Typography;
 
 // --- Breadcrumb Generation ---
 const LocalizedBreadcrumb = ({ match }) => {
@@ -70,19 +42,19 @@ const DynamicProjectBreadcrumb = () => {
 
 // --- Single Source of Truth for Routing ---
 const appRouteConfig = [
-    { path: '/', element: <OriginalHomepage />, i18nKey: 'nav_home', icon: <HomeOutlined />, showInMenu: true },
-    { path: '/docs', element: <OriginalDocumentation />, i18nKey: 'nav_docs', icon: <FileTextOutlined />, showInMenu: true },
-    { path: '/translation', element: <OriginalInitialTranslation />, i18nKey: 'page_title_translation', icon: <RocketOutlined />, showInMenu: true },
-    { path: '/glossary-manager', element: <GlossaryManagerPage />, i18nKey: 'page_title_glossary_manager', icon: <BookOutlined />, showInMenu: true },
-    { path: '/proofreading', element: <ProofreadingPage />, i18nKey: 'page_title_proofreading', icon: <ExperimentOutlined />, showInMenu: true },
-    { path: '/project-management', element: <OriginalProjectManagement />, i18nKey: 'page_title_project_management', icon: <DashboardOutlined />, showInMenu: true },
+    { path: '/', element: <OriginalHomepage />, i18nKey: 'nav_home', showInMenu: true },
+    { path: '/docs', element: <OriginalDocumentation />, i18nKey: 'nav_docs', showInMenu: true },
+    { path: '/translation', element: <OriginalInitialTranslation />, i18nKey: 'page_title_translation', showInMenu: true },
+    { path: '/glossary-manager', element: <GlossaryManagerPage />, i18nKey: 'page_title_glossary_manager', showInMenu: true },
+    { path: '/proofreading', element: <ProofreadingPage />, i18nKey: 'page_title_proofreading', showInMenu: true },
+    { path: '/project-management', element: <OriginalProjectManagement />, i18nKey: 'page_title_project_management', showInMenu: true },
     { path: '/project-management/:projectId', element: <OriginalProjectManagement />, breadcrumb: DynamicProjectBreadcrumb, showInMenu: false },
-    { path: '/cicd', element: <CICDPage />, i18nKey: 'page_title_cicd', icon: <BranchesOutlined />, showInMenu: true },
-    { path: '/tools', element: <ToolsPage />, i18nKey: 'page_title_tools', icon: <ToolOutlined />, showInMenu: true },
-    { path: '/settings', element: <SettingsPage />, i18nKey: 'page_title_settings', icon: <SettingOutlined />, showInMenu: true },
-    { path: '/under-development', element: <UnderDevelopmentPage />, i18nKey: 'page_title_under_development', icon: <HourglassOutlined />, showInMenu: true },
-    { path: '/under-construction', element: <UnderConstructionPage />, i18nKey: 'page_title_under_construction', icon: <BuildOutlined />, showInMenu: true },
-    { path: '/in-conception', element: <InConceptionPage />, i18nKey: 'page_title_in_conception', icon: <BulbOutlined />, showInMenu: true },
+    { path: '/cicd', element: <CICDPage />, i18nKey: 'page_title_cicd', showInMenu: true },
+    { path: '/tools', element: <ToolsPage />, i18nKey: 'page_title_tools', showInMenu: true },
+    { path: '/settings', element: <SettingsPage />, i18nKey: 'page_title_settings', showInMenu: true },
+    { path: '/under-development', element: <UnderDevelopmentPage />, i18nKey: 'page_title_under_development', showInMenu: true },
+    { path: '/under-construction', element: <UnderConstructionPage />, i18nKey: 'page_title_under_construction', showInMenu: true },
+    { path: '/in-conception', element: <InConceptionPage />, i18nKey: 'page_title_in_conception', showInMenu: true },
 ];
 
 export const routes = appRouteConfig.map(route => {
@@ -101,185 +73,49 @@ export const routes = appRouteConfig.map(route => {
 
 
 const App = () => {
+    const [opened, { toggle }] = useDisclosure();
     const { t } = useTranslation();
-    const [collapsed, setCollapsed] = useState(true);
-
-    const menuItems = [
-        { key: '/', icon: <HomeOutlined />, label: <Link to="/">{t('nav_home')}</Link> },
-        { key: '/docs', icon: <FileTextOutlined />, label: <Link to="/docs">{t('nav_docs')}</Link> },
-        { key: '/translation', icon: <RocketOutlined />, label: <Link to="/translation">{t('page_title_translation')}</Link> },
-        { key: '/glossary-manager', icon: <BookOutlined />, label: <Link to="/glossary-manager">{t('page_title_glossary_manager')}</Link> },
-        { key: '/proofreading', icon: <ExperimentOutlined />, label: <Link to="/proofreading">{t('page_title_proofreading')}</Link> },
-        { key: '/project-management', icon: <DashboardOutlined />, label: <Link to="/project-management">{t('page_title_project_management')}</Link> },
-        { key: '/cicd', icon: <BranchesOutlined />, label: <Link to="/cicd">{t('page_title_cicd')}</Link> },
-        { key: '/tools', icon: <ToolOutlined />, label: <Link to="/tools">{t('page_title_tools')}</Link> },
-        { key: '/settings', icon: <SettingOutlined />, label: <Link to="/settings">{t('page_title_settings')}</Link> },
-        { key: '/under-development', icon: <HourglassOutlined />, label: <Link to="/under-development">{t('page_title_under_development')}</Link> },
-        { key: '/under-construction', icon: <BuildOutlined />, label: <Link to="/under-construction">{t('page_title_under_construction')}</Link> },
-        { key: '/in-conception', icon: <BulbOutlined />, label: <Link to="/in-conception">{t('page_title_in_conception')}</Link> },
-    ];
 
     return (
-        <ConfigProvider>
+        <MantineProvider defaultColorScheme="dark">
             <NotificationProvider>
                 <ThemeProvider>
                     <Router>
                         <NotificationManager />
-                        <Layout style={{ minHeight: '100vh' }}>
-                            <Header>
-                            <div className="logo" />
-                            <Title style={{ color: 'white', lineHeight: '64px', float: 'left' }} level={3}>
-                                <ToolOutlined /> {t('app_title')}
-                            </Title>
-                        </Header>
-                        <Layout>
-                            <Sider width={200} style={{ background: '#fff' }}>
-                                <Menu
-                                    mode="inline"
-                                    defaultSelectedKeys={['/']}
-                                    style={{ height: '100%', borderRight: 0 }}
-                                    items={menuItems}
-                                />
-                            </Sider>
-                            <Layout style={{ padding: '0 24px 24px' }}>
-                                <Content
-                                    style={{
-                                        background: '#fff',
-                                        padding: 24,
-                                        margin: 0,
-                                        minHeight: 280,
-                                    }}
-                                >
-                                    <Routes>
-                                        <Route path="/" element={<OriginalHomepage />} />
-                                        <Route path="/docs" element={<OriginalDocumentation />} />
-                                        <Route path="/translation" element={<OriginalInitialTranslation />} />
-                                        <Route path="/glossary-manager" element={<GlossaryManagerPage />} />
-                                        <Route path="/proofreading" element={<ProofreadingPage />} />
-                                        <Route path="/tools" element={<ToolsPage />} />
-                                        <Route path="/cicd" element={<CICDPage />} />
-                                        <Route path="/project-management" element={<OriginalProjectManagement />} />
-                                        <Route path="/settings" element={<SettingsPage />} />
-                                        <Route path="/under-development" element={<UnderDevelopmentPage />} />
-                                        <Route path="/under-construction" element={<UnderConstructionPage />} />
-                                        <Route path="/in-conception" element={<InConceptionPage />} />
-                                    </Routes>
-                                </Content>
-                            </Layout>
-                        </Layout>
-                        <Footer style={{ textAlign: 'center' }}>
-                            {t('footer_text')}
-                        </Footer>
-        {
-            key: '/',
-            icon: <HomeIcon />,
-            label: <Link to="/">{t('nav_home')}</Link>,
-        },
-        {
-            key: '/docs',
-            icon: <DocsIcon />,
-            label: <Link to="/docs">{t('nav_docs')}</Link>,
-        },
-        {
-            key: '/translation',
-            icon: <TranslationIcon />,
-            label: <Link to="/translation">{t('page_title_translation')}</Link>,
-        },
-        {
-            key: '/glossary-manager',
-            icon: <GlossaryManagerIcon />,
-            label: <Link to="/glossary-manager">{t('page_title_glossary_manager')}</Link>
-        },
-        {
-            key: '/proofreading',
-            icon: <ProofreadingIcon />,
-            label: <Link to="/proofreading">{t('page_title_proofreading')}</Link>,
-        },
-        {
-            key: '/project-management',
-            icon: <ProjectManagementIcon />,
-            label: <Link to="/project-management">{t('page_title_project_management')}</Link>,
-        },
-        {
-            key: '/cicd',
-            icon: <CICDIcon />,
-            label: <Link to="/cicd">{t('page_title_cicd')}</Link>,
-        },
-        {
-            key: '/tools',
-            icon: <ToolsIcon />,
-            label: <Link to="/tools">{t('page_title_tools')}</Link>,
-        },
-        {
-            key: '/settings',
-            icon: <SettingsIcon />,
-            label: <Link to="/settings">{t('page_title_settings')}</Link>,
-        },
-        {
-            key: '/under-development',
-            icon: <HourglassOutlined />,
-            label: <Link to="/under-development">{t('page_title_under_development')}</Link>,
-        },
-        {
-            key: '/under-construction',
-            icon: <BuildOutlined />,
-            label: <Link to="/under-construction">{t('page_title_under_construction')}</Link>,
-        },
-        {
-            key: '/in-conception',
-            icon: <BulbOutlined />,
-            label: <Link to="/in-conception">{t('page_title_in_conception')}</Link>,
-        },
-    ];
-
-    return (
-        <ThemeProvider>
-            <Router>
-                <Layout style={{ minHeight: '100vh' }}>
-                    <Header>
-                    <div className="logo" />
-                    <Title style={{ color: 'white', lineHeight: '64px', float: 'left' }} level={3}>
-                        <ToolOutlined /> {t('app_title')}
-                    </Title>
-                </Header>
-                <Layout>
-                    <Sider
-                        collapsible
-                        collapsed={collapsed}
-                        onMouseEnter={() => setCollapsed(false)}
-                        onMouseLeave={() => setCollapsed(true)}
-                        trigger={null}
-                        width={200}
-                        style={{ background: '#fff', transition: 'width 0.2s' }}
-                    >
-                        <Menu
-                            mode="inline"
-                            defaultSelectedKeys={['/']}
-                            style={{ height: '100%', borderRight: 0 }}
-                            items={menuItems}
-                        />
-                    </Sider>
-                    <Layout style={{ padding: '0 24px 24px' }}>
-                        <Breadcrumbs />
-                        <Content
-                            style={{
-                                background: '#fff',
-                                padding: 24,
-                                margin: 0,
-                                minHeight: 280,
-                            }}
+                        <AppShell
+                            header={{ height: 60 }}
+                            navbar={{ width: 300, breakpoint: 'sm', collapsed: { mobile: !opened } }}
+                            padding="md"
                         >
-                            <Routes>
-                                {appRouteConfig.map(route => (
-                                    <Route key={route.path} path={route.path} element={route.element} />
+                            <AppShell.Header>
+                                <Group h="100%" px="md">
+                                    <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
+                                    {t('app_title')}
+                                </Group>
+                            </AppShell.Header>
+                            <AppShell.Navbar p="md">
+                                {appRouteConfig.filter(route => route.showInMenu).map((route) => (
+                                    <NavLink
+                                        key={route.path}
+                                        label={t(route.i18nKey)}
+                                        component={Link}
+                                        to={route.path}
+                                        onClick={toggle}
+                                    />
                                 ))}
-                            </Routes>
-                        </Content>
-                    </Layout>
-                </Router>
-            </ThemeProvider>
+                            </AppShell.Navbar>
+                            <AppShell.Main>
+                                <Routes>
+                                    {appRouteConfig.map(route => (
+                                        <Route key={route.path} path={route.path} element={route.element} />
+                                    ))}
+                                </Routes>
+                            </AppShell.Main>
+                        </AppShell>
+                    </Router>
+                </ThemeProvider>
             </NotificationProvider>
-        </ConfigProvider>
+        </MantineProvider>
     );
 };
 
