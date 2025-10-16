@@ -1,15 +1,12 @@
 import React, { useContext, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Select, Space, Typography } from 'antd';
+import { Select, Group, Title, Text } from '@mantine/core';
 import ThemeContext from '../ThemeContext';
 import { AVAILABLE_THEMES } from '../config/themes';
 
-const { Option } = Select;
-const { Title } = Typography;
-
 const SettingsPage = () => {
-  const { t, i18n } = useTranslation();
-  const { theme, toggleTheme } = useContext(ThemeContext);
+    const { t, i18n } = useTranslation();
+    const { theme, toggleTheme } = useContext(ThemeContext);
 
   useEffect(() => {
     const savedLanguage = localStorage.getItem('language');
@@ -18,49 +15,43 @@ const SettingsPage = () => {
     }
   }, [i18n]);
 
-  const handleLanguageChange = (value) => {
-    i18n.changeLanguage(value);
+    const handleLanguageChange = (value) => {
+        i18n.changeLanguage(value);
     localStorage.setItem('language', value);
-  };
+    };
 
-  const handleThemeChange = (value) => {
-    toggleTheme(value);
-  };
+    const handleThemeChange = (value) => {
+        toggleTheme(value);
+    };
 
-  return (
-    <div>
-      <Title level={2}>{t('page_title_settings')}</Title>
-      <Space direction="vertical" size="middle" style={{ width: '100%' }}>
+    return (
         <div>
-          <label htmlFor="language-select" style={{ marginRight: '10px' }}>{t('settings_language')}:</label>
-          <Select
-            id="language-select"
-            value={i18n.language}
-            style={{ width: 120 }}
-            onChange={handleLanguageChange}
-          >
-            <Option value="en">English</Option>
-            <Option value="zh">中文</Option>
-          </Select>
+            <Title order={2}>{t('page_title_settings')}</Title>
+            <Group direction="column" gap="lg" mt="md">
+                <Group>
+                    <Text>{t('settings_language')}:</Text>
+                    <Select
+                        value={i18n.language}
+                        onChange={handleLanguageChange}
+                        data={[
+                            { value: 'en', label: 'English' },
+                            { value: 'zh', label: '中文' },
+                        ]}
+                        style={{ width: 150 }}
+                    />
+                </Group>
+                <Group>
+                    <Text>{t('settings_theme')}:</Text>
+                    <Select
+                        value={theme}
+                        onChange={handleThemeChange}
+                        data={AVAILABLE_THEMES.map(theme => ({ value: theme.id, label: t(theme.nameKey) }))}
+                        style={{ width: 150 }}
+                    />
+                </Group>
+            </Group>
         </div>
-        <div>
-          <label htmlFor="theme-select" style={{ marginRight: '10px' }}>{t('settings_theme')}:</label>
-          <Select
-            id="theme-select"
-            value={theme}
-            style={{ width: 120 }}
-            onChange={handleThemeChange}
-          >
-            {AVAILABLE_THEMES.map((themeOption) => (
-              <Option key={themeOption.id} value={themeOption.id}>
-                {t(themeOption.nameKey)}
-              </Option>
-            ))}
-          </Select>
-        </div>
-      </Space>
-    </div>
-  );
+    );
 };
 
 export default SettingsPage;

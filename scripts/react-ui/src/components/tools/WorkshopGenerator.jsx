@@ -2,21 +2,23 @@ import React, { useState, useEffect } from 'react';
 import {
   Radio,
   Select,
-  Input,
+  TextInput,
+  Textarea,
   Button,
-  Spin,
-  Typography,
-  Space,
+  LoadingOverlay,
+  Title,
+  Text,
+  Group,
   Alert,
-  message,
-  AutoComplete
-} from 'antd';
-import { CopyOutlined } from '@ant-design/icons';
+  Autocomplete,
+  CopyButton,
+  ActionIcon,
+  Tooltip
+} from '@mantine/core';
+import { IconCopy, IconAlertCircle } from '@tabler/icons-react';
 import axios from 'axios';
 import { useTranslation } from 'react-i18next';
-
-const { TextArea } = Input;
-const { Title, Paragraph } = Typography;
+import { notifications } from '@mantine/notifications';
 
 const WorkshopGenerator = () => {
   const { t } = useTranslation();
@@ -24,9 +26,9 @@ const WorkshopGenerator = () => {
   // --- State Management ---
   const [projects, setProjects] = useState([]);
   const [languages, setLanguages] = useState([]);
-  const [apiProviders, setApiProviders] = useState([]); // State for API providers
+  const [apiProviders, setApiProviders] = useState([]);
   const [selectedProjectId, setSelectedProjectId] = useState(null);
-  const [selectedProvider, setSelectedProvider] = useState(null); // State for selected provider
+  const [selectedProvider, setSelectedProvider] = useState(null);
   const [manualItemId, setManualItemId] = useState('');
   const [inputMode, setInputMode] = useState('project');
   const [userTemplate, setUserTemplate] = useState(
@@ -62,14 +64,14 @@ const WorkshopGenerator = () => {
         if (configData.api_providers) {
           setApiProviders(configData.api_providers);
           if (configData.api_providers.length > 0) {
-            setSelectedProvider(configData.api_providers[0]); // Set default provider
+            setSelectedProvider(configData.api_providers[0]);
           }
         }
 
       } catch (err) {
         const fetchError = t('workshop_generator.errors.fetch_config_failed');
         setError(fetchError);
-        message.error(fetchError);
+        notifications.show({ title: 'Error', message: fetchError, color: 'red' });
       }
     };
     fetchData();
@@ -85,13 +87,6 @@ const WorkshopGenerator = () => {
   const handleManualIdChange = (value) => {
     const extractedId = extractWorkshopId(value);
     setManualItemId(extractedId);
-  };
-
-  const handleCopyToClipboard = () => {
-    if (generatedBbcode) {
-      navigator.clipboard.writeText(generatedBbcode);
-      message.success(t('workshop_generator.messages.copied_to_clipboard'));
-    }
   };
 
   // --- Core Logic Handler ---
@@ -138,11 +133,12 @@ const WorkshopGenerator = () => {
         api_provider: selectedProvider
       });
       setGeneratedBbcode(response.data.bbcode);
-      if (response.data.saved_path) {
-        setSuccessMessage(`${t('workshop_generator.messages.generation_successful')} ${response.data.saved_path}`);
-      } else {
-         setSuccessMessage(response.data.message || t('workshop_generator.messages.generation_successful_no_save'));
-      }
+      const message = response.data.saved_path
+        ? `${t('workshop_generator.messages.generation_successful')} ${response.data.saved_path}`
+        : response.data.message || t('workshop_generator.messages.generation_successful_no_save');
+      setSuccessMessage(message);
+      notifications.show({ title: 'Success', message, color: 'green' });
+
     } catch (err) {
       const errorMessage = err.response?.data?.detail || t('workshop_generator.errors.generation_failed');
       setError(errorMessage);
@@ -153,120 +149,110 @@ const WorkshopGenerator = () => {
 
   // --- Render ---
   return (
-    <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '24px' }}>
-      <Title level={3}>{t('workshop_generator.title')}</Title>
-      <Paragraph>{t('workshop_generator.description')}</Paragraph>
+    <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '24px', position: 'relative' }}>
+        <LoadingOverlay visible={isLoading} />
+        <Title order={3}>{t('workshop_generator.title')}</Title>
+        <Text>{t('workshop_generator.description')}</Text>
 
-      <Spin spinning={isLoading} tip={t('workshop_generator.loading_tip')}>
-        <Space direction="vertical" size="large" style={{ width: '100%' }}>
+        <Group direction="column" grow mt="lg">
 
           {/* Input Mode */}
-          <Radio.Group value={inputMode} onChange={(e) => setInputMode(e.target.value)}>
-            <Radio.Button value="project">{t('workshop_generator.input_mode.project')}</Radio.Button>
-            <Radio.Button value="manual">{t('workshop_generator.input_mode.manual')}</Radio.Button>
+          <Radio.Group value={inputMode} onChange={setInputMode}>
+            <Group>
+              <Radio value="project" label={t('workshop_generator.input_mode.project')} />
+              <Radio value="manual" label={t('workshop_generator.input_mode.manual')} />
+            </Group>
           </Radio.Group>
 
           {/* Input Area */}
           {inputMode === 'project' ? (
             <Select
-              style={{ width: '100%' }}
               value={selectedProjectId}
               onChange={setSelectedProjectId}
-              options={projects.map(p => ({ label: p.name, value: p.id }))}
+              data={projects.map(p => ({ label: p.name, value: p.id }))}
               placeholder={t('workshop_generator.placeholders.select_project')}
             />
           ) : (
-            <AutoComplete
-              style={{ width: '100%' }}
+            <Autocomplete
               value={manualItemId}
               onChange={handleManualIdChange}
               placeholder={t('workshop_generator.placeholders.manual_input')}
-              options={[]}
+              data={[]}
             />
           )}
 
           {/* User Template */}
-          <div>
-            <Title level={5}>{t('workshop_generator.template_title')}</Title>
-            <TextArea
-              rows={10}
-              value={userTemplate}
-              onChange={(e) => setUserTemplate(e.target.value)}
-              placeholder={t('workshop_generator.placeholders.template_input')}
-            />
-          </div>
+          <Textarea
+            label={<Title order={5}>{t('workshop_generator.template_title')}</Title>}
+            minRows={10}
+            value={userTemplate}
+            onChange={(e) => setUserTemplate(e.currentTarget.value)}
+            placeholder={t('workshop_generator.placeholders.template_input')}
+          />
 
           {/* Configuration */}
-          <Space wrap>
+          <Group grow>
             <Select
+              label={t('workshop_generator.labels.target_language')}
               value={targetLanguage}
               onChange={setTargetLanguage}
-              style={{ width: 200 }}
-              aria-label={t('workshop_generator.labels.target_language')}
-            >
-              {languages.map(lang => (
-                <Select.Option key={lang.code} value={lang.code}>
-                  {lang.name}
-                </Select.Option>
-              ))}
-              <Select.Option value="custom">{t('workshop_generator.languages.custom')}</Select.Option>
-            </Select>
+              data={[
+                  ...languages.map(lang => ({ value: lang.code, label: lang.name })),
+                  { value: 'custom', label: t('workshop_generator.languages.custom') }
+              ]}
+            />
 
             {targetLanguage === 'custom' && (
-              <Input
+              <TextInput
                 value={customLanguage}
-                onChange={(e) => setCustomLanguage(e.target.value)}
+                onChange={(e) => setCustomLanguage(e.currentTarget.value)}
                 placeholder={t('workshop_generator.placeholders.custom_language')}
-                style={{ width: 200 }}
               />
             )}
 
             <Select
+              label={t('workshop_generator.labels.api_provider')}
               value={selectedProvider}
               onChange={setSelectedProvider}
-              style={{ width: 200 }}
-              aria-label={t('workshop_generator.labels.api_provider')}
               placeholder={t('workshop_generator.placeholders.select_provider')}
-            >
-              {apiProviders.map(provider => (
-                <Select.Option key={provider} value={provider}>
-                  {provider}
-                </Select.Option>
-              ))}
-            </Select>
-          </Space>
+              data={apiProviders.map(p => ({ value: p, label: p }))}
+            />
+          </Group>
 
           {/* Controls */}
-          <Button type="primary" onClick={handleGenerate} disabled={isLoading}>
+          <Button onClick={handleGenerate} loading={isLoading} fullWidth>
             {t('workshop_generator.buttons.generate')}
           </Button>
 
           {/* Messages */}
-          {error && <Alert message={error} type="error" showIcon />}
-          {successMessage && <Alert message={successMessage} type="success" showIcon />}
+          {error && <Alert icon={<IconAlertCircle size={16} />} title="Error" color="red">{error}</Alert>}
+          {successMessage && <Alert icon={<IconAlertCircle size={16} />} title="Success" color="green">{successMessage}</Alert>}
 
           {/* Output Area */}
           {generatedBbcode && (
             <div>
-              <Title level={5}>{t('workshop_generator.output_title')}</Title>
-              <TextArea
-                rows={15}
+              <Group justify="space-between">
+                <Title order={5}>{t('workshop_generator.output_title')}</Title>
+                <CopyButton value={generatedBbcode}>
+                  {({ copied, copy }) => (
+                    <Tooltip label={copied ? 'Copied' : t('workshop_generator.buttons.copy')}>
+                        <ActionIcon color={copied ? 'teal' : 'gray'} onClick={copy}>
+                            <IconCopy size={16} />
+                        </ActionIcon>
+                    </Tooltip>
+                  )}
+                </CopyButton>
+              </Group>
+              <Textarea
+                minRows={15}
                 value={generatedBbcode}
                 readOnly
-                style={{ fontFamily: 'monospace', backgroundColor: '#f0f2f5' }}
+                styles={{ input: { fontFamily: 'monospace', backgroundColor: 'var(--mantine-color-gray-1)' } }}
               />
-              <Button
-                icon={<CopyOutlined />}
-                onClick={handleCopyToClipboard}
-                style={{ marginTop: '10px' }}
-              >
-                {t('workshop_generator.buttons.copy')}
-              </Button>
             </div>
           )}
 
-        </Space>
-      </Spin>
+        </Group>
     </div>
   );
 };

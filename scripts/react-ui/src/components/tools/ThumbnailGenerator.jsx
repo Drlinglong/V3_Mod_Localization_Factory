@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Stage, Layer, Rect, Image as KonvaImage, Transformer, Text as KonvaText } from 'react-konva';
-import { Button } from 'antd';
-import { UploadOutlined } from '@ant-design/icons';
+import { Button } from '@mantine/core';
+import { IconUpload } from '@tabler/icons-react';
 import { v4 as uuidv4 } from 'uuid';
 import html2canvas from 'html2canvas';
 
@@ -441,7 +441,7 @@ const ThumbnailGenerator = () => {
         <div className="toolbox-panel">
           <h2>{t('thumbnail_generator.toolbox_title')}</h2>
           <div className="tool-section">
-            <Button icon={<UploadOutlined />} onClick={() => modImageInputRef.current && modImageInputRef.current.click()}>
+            <Button leftSection={<IconUpload size={14} />} onClick={() => modImageInputRef.current && modImageInputRef.current.click()}>
               {t('thumbnail_generator.upload_mod_image')}
             </Button>
             <input ref={modImageInputRef} id="mod-image-upload" type="file" accept="image/*" onChange={(e) => handleImageUpload(e, true)} style={{ display: 'none' }} />
@@ -457,14 +457,14 @@ const ThumbnailGenerator = () => {
           <div className="tool-section">
               <Button onClick={handleAddText} style={{ marginBottom: '8px' }}>{t('thumbnail_generator.add_text')}</Button>
               <Button onClick={handleAddAllFlags} style={{ marginBottom: '8px' }}>{t('thumbnail_generator.add_all_flags')}</Button>
-              <Button danger onClick={handleResetCanvas} style={{ marginBottom: '8px' }}>{t('thumbnail_generator.reset_canvas')}</Button>
-              <Button danger onClick={handleDeleteCanvas}>{t('thumbnail_generator.delete_canvas')}</Button>
+              <Button color="red" onClick={handleResetCanvas} style={{ marginBottom: '8px' }}>{t('thumbnail_generator.reset_canvas')}</Button>
+              <Button color="red" onClick={handleDeleteCanvas}>{t('thumbnail_generator.delete_canvas')}</Button>
           </div>
         </div>
         <div className="canvas-panel" onDrop={handleDrop} onDragOver={handleDragOver}>
             {isCanvasEmpty ? (
                 <div className="canvas-placeholder" onClick={() => bgImageInputRef.current && bgImageInputRef.current.click()}>
-                    <UploadOutlined style={{ fontSize: '48px', color: '#ccc' }} />
+                    <IconUpload style={{ fontSize: '48px', color: '#ccc' }} />
                     <p style={{ color: '#aaa', marginTop: '16px' }}>{t('thumbnail_generator.canvas_placeholder')}</p>
                 </div>
             ) : (
@@ -486,7 +486,7 @@ const ThumbnailGenerator = () => {
                     </Stage>
                 </div>
             )}
-          <Button type="primary" onClick={handleExport} style={{ marginTop: '16px' }}>
+          <Button onClick={handleExport} style={{ marginTop: '16px' }}>
             {t('thumbnail_generator.download_thumbnail')}
           </Button>
         </div>
@@ -498,7 +498,7 @@ const ThumbnailGenerator = () => {
               {t('thumbnail_generator.background_color')}:&nbsp;
               <input type="color" value={backgroundColor} onChange={handleBgColorChange} />
             </label>
-            <Button icon={<UploadOutlined />} style={{marginTop: '8px'}} onClick={() => bgImageInputRef.current && bgImageInputRef.current.click()}>
+            <Button leftSection={<IconUpload size={14} />} style={{marginTop: '8px'}} onClick={() => bgImageInputRef.current && bgImageInputRef.current.click()}>
                 {t('thumbnail_generator.upload_background_image')}
             </Button>
             <input ref={bgImageInputRef} id="bg-image-upload" type="file" accept="image/*" onChange={handleBackgroundImageUpload} style={{ display: 'none' }} />
@@ -544,11 +544,11 @@ const ThumbnailGenerator = () => {
                         <label>{t('thumbnail_generator.prop_height')}: {Math.round(selectedElement.height)}px</label>
                     </div>
                 )}
-                <Button danger onClick={handleDeleteElement} style={{ marginTop: '16px' }}>{t('thumbnail_generator.delete_element')}</Button>
+                <Button color="red" onClick={handleDeleteElement} style={{ marginTop: '16px' }}>{t('thumbnail_generator.delete_element')}</Button>
             </div>
           )}
           <div className="tool-section">
-            <Button icon={<UploadOutlined />} style={{marginTop: '8px'}} onClick={() => customEmblemInputRef.current && customEmblemInputRef.current.click()}>
+            <Button leftSection={<IconUpload size={14} />} style={{marginTop: '8px'}} onClick={() => customEmblemInputRef.current && customEmblemInputRef.current.click()}>
               {t('thumbnail_generator.upload_custom_emblem')}
             </Button>
             <input ref={customEmblemInputRef} id="custom-emblem-upload" type="file" accept="image/*" onChange={handleCustomEmblemUpload} style={{ display: 'none' }} />

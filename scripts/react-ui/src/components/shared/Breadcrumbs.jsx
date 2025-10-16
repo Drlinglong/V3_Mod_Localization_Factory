@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import useBreadcrumbs from 'use-react-router-breadcrumbs';
-import { Breadcrumb } from 'antd';
+import { Breadcrumbs as MantineBreadcrumbs, Anchor } from '@mantine/core';
 import { routes } from '../../App'; // Import the routes from App.jsx
 
 const Breadcrumbs = () => {
@@ -9,18 +9,17 @@ const Breadcrumbs = () => {
 
     const items = breadcrumbs.map(({ match, breadcrumb }, index) => {
         const isLast = index === breadcrumbs.length - 1;
-        return {
-            key: match.pathname,
-            title: isLast ? (
-                <span>{breadcrumb}</span>
-            ) : (
-                <NavLink to={match.pathname}>{breadcrumb}</NavLink>
-            ),
-        };
+        return isLast ? (
+            <span key={match.pathname}>{breadcrumb}</span>
+        ) : (
+            <Anchor component={NavLink} to={match.pathname} key={match.pathname}>
+                {breadcrumb}
+            </Anchor>
+        );
     });
 
     return (
-        <Breadcrumb style={{ margin: '16px 0' }} items={items} />
+        <MantineBreadcrumbs style={{ margin: '16px 0' }}>{items}</MantineBreadcrumbs>
     );
 };
 
