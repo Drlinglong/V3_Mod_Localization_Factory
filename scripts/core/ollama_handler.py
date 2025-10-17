@@ -49,35 +49,42 @@ class OllamaHandler(BaseApiHandler):
 
     def _call_api(self, client: Any, prompt: str) -> str:
         """【必须由子类实现】使用requests调用本地Ollama API。"""
-        # 'client'参数是handler实例本身
         handler_instance = client
-        
-        provider_config = API_PROVIDERS.get(self.provider_name, {})
-        enable_thinking = provider_config.get("enable_thinking", False)
 
-        # Ollama API的请求体格式
+        # Split the prompt into system instructions and user data
+        # to use the API more effectively.
+        try:
+            system_prompt, user_prompt = prompt.split("--- INPUT LIST ---", 1)
+            user_prompt = "--- INPUT LIST ---" + user_prompt
+        except ValueError:
+            # Fallback if the separator is not found
+            system_prompt = "You are a professional translator. Your response MUST be a valid JSON array of strings."
+            user_prompt = prompt
+
         payload = {
             "model": handler_instance.model,
-            "messages": [
-                {"role": "system", "content": "You are a professional translator for game mods."},
-                {"role": "user", "content": prompt}
-            ],
+            "system": system_prompt,
+            "prompt": user_prompt,
             "stream": False,
-            "think": enable_thinking  # 关键参数
+            #"format": "json" 有很多模型不支持这个参数 暂时先注释掉
         }
 
         try:
+            proxies = {
+                "http": None,
+                "https": None,
+            }
             response = requests.post(
-                f"{handler_instance.base_url}/api/chat",
+                f"{handler_instance.base_url}/api/generate",
                 json=payload,
-                timeout=300  # 5分钟超时
+                timeout=300,
+                proxies=proxies
             )
             response.raise_for_status()
             
             result = response.json()
             
-            # 提取并返回响应内容
-            return result.get("message", {}).get("content", "").strip()
+            return result.get("response", "").strip()
             
         except requests.exceptions.RequestException as e:
             self.logger.exception(f"Ollama API call failed: {e}")

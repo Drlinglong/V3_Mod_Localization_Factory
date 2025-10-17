@@ -19,32 +19,60 @@ First, you need to install Ollama on your computer.
 - Download and install the appropriate application for your operating system (Windows, macOS, or Linux).
 - The installer will automatically set up Ollama as a background service.
 
-### 2. Download a Language Model
+### 2. Download a Capable Language Model
 
-After installing Ollama, you need to download a language model for translation. We recommend using a versatile and high-performance model, such as `llama3` or `qwen`.
+After installing Ollama, you need to download a language model. The model's ability to follow complex instructions is **critical**. This application requires the model to return translations in a strict JSON format. Many smaller or chat-focused models may fail to do this, resulting in errors.
 
-Open your terminal (Command Prompt or PowerShell on Windows) and run the following command:
+- **Recommended Model**: We strongly recommend starting with a powerful, instruction-following model like `llama3`.
+  ```bash
+  ollama pull llama3
+  ```
+- **Warning About Model Choice**: If you choose another model family (e.g., `qwen`), ensure you use a larger, more capable version (e.g., `qwen:7b`, not `qwen:4b`). Using a model that is not powerful enough is the most common cause of errors.
 
-```bash
-ollama pull llama3
+You can see a list of all your downloaded models by running `ollama list`.
+
+### 3. Configure the Model in the Application
+
+The application needs to be told exactly which Ollama model to use. You must configure this manually in the settings file.
+
+1.  Open the file: `scripts/app_settings.py`.
+2.  Find the `API_PROVIDERS` dictionary.
+3.  Inside the `ollama` section, change the `default_model` value to the exact name of the model you downloaded.
+
+**Example:**
+```python
+# scripts/app_settings.py
+
+API_PROVIDERS = {
+    # ... other providers
+    "ollama": {
+        "base_url_env": "OLLAMA_BASE_URL",
+        "default_model": "llama3:latest",  # <-- Change this value
+        "enable_thinking": False,
+        "description": "Local Ollama models, no API key required"
+    },
+}
 ```
 
-Alternatively, if you wish to use another model like Qwen:
+### 4. Troubleshooting
 
-```bash
-ollama pull qwen
-```
+#### Error: Connection Failed or `404 Not Found`
 
-The model download may take some time, depending on your network speed and the model's size. You can see a list of all your downloaded models by running the `ollama list` command.
+This error means the application cannot reach your Ollama service.
+- **Is Ollama running?** Make sure the Ollama application is running on your machine.
+- **Is the address correct?** The application defaults to `http://localhost:11434`. If you run Ollama on a different address, you must set the `OLLAMA_BASE_URL` environment variable as described in the "Advanced" section below.
+- **Is a firewall or proxy interfering?** Check your system's firewall or proxy settings to ensure they are not blocking the connection from the Python application.
 
-### 3. Configure Ollama in the Application
+#### Error: `Pydantic validation failed` or `Invalid JSON`
 
-The application is pre-configured to connect to a local Ollama service.
+This is the most common issue and almost always means **your chosen model is not capable enough.**
 
-- **Default Address**: The program defaults to connecting to `http://localhost:11434`. For most standard Ollama installations, no extra configuration is needed.
-- **Model Selection**: In the translation settings of the application, select **Ollama** from the "Translation Provider" dropdown menu. The program will automatically load the list of models you have downloaded, allowing you to choose one for translation.
+- **Explanation**: The application sends a complex prompt that instructs the model to return a perfectly formatted JSON array. This error means the model failed to follow these instructions and returned plain text or malformed data instead.
+- **Solution**: You **must** switch to a more powerful model.
+    - Edit `scripts/app_settings.py` and change `default_model` to a more capable model you have downloaded, such as `llama3`.
+    - If you are using a model family like `qwen` or `mistral`, try a version with more parameters (e.g., `7b` instead of `1b` or `4b`).
 
-### 4. (Advanced) Custom Ollama Service Address
+### 5. (Advanced) Custom Ollama Service Address
 
 If your Ollama service is running on a different IP address or port (e.g., on another machine in your local network), you can specify the connection address by setting an environment variable.
 

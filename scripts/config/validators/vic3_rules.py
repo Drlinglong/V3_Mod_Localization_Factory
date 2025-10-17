@@ -7,7 +7,7 @@ RULES = {
     {
       "name": "non_ascii_in_simple_concept",
       "check_function": "banned_chars",
-      "pattern": r"\[([a-zA-Z0-9_]+)\]",
+      "pattern": r"\[([^\]]+)\]",
       "level": "error",
       "message_key": "validation_vic3_simple_concept_chinese",
       "params": {
@@ -51,40 +51,21 @@ RULES = {
       "level": "warning",
       "message_key": "validation_vic3_formatting_missing_space",
       "params": {
-        "valid_tags": [
-            "active", "inactive", "shadow",
-            "white", "darker_white", "grey",
-            "red", "green", "light_green", "yellow", "blue", "u",
-            "gold", "o", "black", "bold_black",
-            "default_text",
-            "clickable_link", "clickable_link_hover",
-            "variable", "v",
-            "header", "h1", "title",
-            "clickable",
-            "negative_value", "n", "positive_value", "p", "zero_value", "z",
-            "r", "g", "y",
-            "blue_value", "gold_value",
-            "concept", "tooltippable_concept",
-            "instruction", "i",
-            "lore",
-            "tooltip_header", "t", "tooltip_sub_header", "s",
-            "tooltippable", "tooltippable_name", "tooltippable_no_shadow",
-            "b",
-            "maximum", "outliner_header", "regular_size",
-            "todo", "todo_in_tooltip", "broken",
-            "gray",
-            "italic", "l",
-            "bold",
-            "tooltip",
-            "debug",
-            "abcd",
-            #安本纳尔
-            "strikethrough","warning","influence","indent_newline",            
-        ],
+        
         "no_space_required_tags": ["tooltippable", "tooltip"],
         "unknown_tag_error_key": "validation_vic3_unknown_formatting",
         "unsupported_formatting_details_key": "validation_vic3_unsupported_formatting",
-        "missing_space_details_key": "validation_vic3_formatting_found_at"
+      }
+    },
+    {
+      "name": "non_ascii_in_formatting_tag_key",
+      "check_function": "banned_chars",
+      "pattern": r'#([^\s!#;]+)',
+      "level": "warning",
+      "message_key": "validation_vic3_tag_key_chinese",
+      "params": {
+        "capture_group": 1,
+        "details_key": "validation_vic3_unsupported_formatting"
       }
     },
     {

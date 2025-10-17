@@ -31,6 +31,10 @@ MAX_RETRIES = 2
 GEMINI_CLI_CHUNK_SIZE = 100
 GEMINI_CLI_MAX_RETRIES = 2
 
+# --- Ollama 特定配置 ---------------------------------------------
+OLLAMA_CHUNK_SIZE = 20
+OLLAMA_MAX_RETRIES = 2
+
 # --- 智能线程池配置 ----------------------------------------------------
 def get_smart_max_workers():
     cpu_count = multiprocessing.cpu_count() or 1
@@ -93,8 +97,10 @@ API_PROVIDERS = {
     },
     "ollama": {
         "base_url_env": "OLLAMA_BASE_URL",
-        "default_model": "llama3.2",
+        "default_model": "qwen3:4b",
         "enable_thinking": False,
+        "chunk_size": OLLAMA_CHUNK_SIZE,
+        "max_retries": OLLAMA_MAX_RETRIES,
         "description": "本地Ollama模型，无需API密钥"
     },
 }
