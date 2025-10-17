@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
-    Grid, Select, Input, Title, Button, Modal, Popover, Badge, Group, LoadingOverlay, Tooltip, Switch, Text, Paper, ScrollArea
+    Grid, Select, Input, Title, Button, Modal, Popover, Badge, Group, LoadingOverlay, Tooltip, Switch, Text, Paper, ScrollArea, Table, TextInput
 } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { notifications } from '@mantine/notifications';
@@ -16,7 +16,6 @@ import axios from 'axios';
 
 
 const GlossaryManagerPage = () => {
-    const { t } = useTranslation();
     const { t } = useTranslation();
     const form = useForm({
         initialValues: {
@@ -227,9 +226,9 @@ const GlossaryManagerPage = () => {
     };
 
     const onSelectTree = (selectedKeys, info) => {
-        if (info.node.isLeaf) {
-            const [gameId, fileName] = info.node.key.split('|');
-            setSelectedFile({ key: info.node.key, title: fileName, gameId: gameId });
+        if (info.isLeaf) {
+            const [gameId, fileName] = info.key.split('|');
+            setSelectedFile({ key: info.key, title: fileName, gameId: gameId });
             setFiltering('');
             setPagination({ pageIndex: 0, pageSize: 25 }); // Reset pagination, which triggers useEffect to fetch data.
         }
@@ -265,19 +264,6 @@ const GlossaryManagerPage = () => {
         )},
     ];
 
-    // --- Table Definition ---
-    const columns = [
-        { accessorKey: 'source', header: () => t('glossary_source_text'), cell: info => info.getValue() },
-        { id: 'translation', header: () => t('glossary_translation'), cell: ({ row }) => row.original.translations[selectedTargetLang] || '' },
-        { accessorKey: 'notes', header: () => t('glossary_notes'), cell: ({ row }) => ( row.original.notes ? ( <Tooltip label={t('glossary_view_edit_notes', 'View/Edit Notes')}><Button size="xs" variant="subtle" onClick={() => handleEdit(row.original)}><IconDots size={14} /></Button></Tooltip>) : null ) },
-        { accessorKey: 'variants', header: () => t('glossary_variants'), cell: info => <Group gap="xs">{Array.isArray(info.getValue()) ? info.getValue().map(v => <Badge key={v}>{v}</Badge>) : null}</Group> },
-        { id: 'actions', header: () => t('glossary_actions'), cell: ({ row }) => (
-            <Group gap="xs">
-                <Button size="xs" variant="light" onClick={() => handleEdit(row.original)}><IconEdit size={14} /></Button>
-                <Button size="xs" variant="light" color="red" onClick={() => showDeleteModal(row.original.id)}><IconTrash size={14} /></Button>
-            </Group>
-        )},
-    ];
 
     const table = useReactTable({
         data,
@@ -332,11 +318,11 @@ const GlossaryManagerPage = () => {
                             <Group direction="column" grow>
                                 <div>
                                     <Text size="sm" fw={500}>{t('glossary_game')}</Text>
-                                    <Select data={treeData.map(g => ({ value: g.key, label: g.title }))} value={selectedGame} onChange={setSelectedGame} />
+                                    <Select data={treeData.map(g => ({ value: g.key, label: g.title || g.key }))} value={selectedGame} onChange={setSelectedGame} />
                                 </div>
                                 <div>
                                     <Text size="sm" fw={500}>{t('glossary_target_language')}</Text>
-                                    <Select data={targetLanguages.map(l => ({ value: l.code, label: l.name_local }))} value={selectedTargetLang} onChange={setSelectedTargetLang} />
+                                    <Select data={targetLanguages.map(l => ({ value: l.code, label: l.name_local || l.code }))} value={selectedTargetLang} onChange={setSelectedTargetLang} />
                                 </div>
                                 <div>
                                     <Group justify="space-between">
@@ -460,3 +446,5 @@ const GlossaryManagerPage = () => {
         </div>
     );
 };
+
+export default GlossaryManagerPage;
