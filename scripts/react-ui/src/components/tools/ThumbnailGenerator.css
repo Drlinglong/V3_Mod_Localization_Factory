@@ -1,30 +1,4 @@
-.thumbnail-generator-layout {
-  display: flex;
-  flex-direction: row;
-  /* Removed height: calc(100vh - 150px); */
-  gap: 16px;
-}
-
-.toolbox-panel, .inspector-panel {
-  flex: 1;
-  border: 1px solid #e8e8e8;
-  padding: 16px;
-  border-radius: 8px;
-  overflow-y: auto;
-  background-color: #fafafa;
-}
-
-.canvas-panel {
-  flex: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow-y: auto; /* Enable vertical scrolling */
-  min-height: 512px; /* Ensure enough height for the canvas */
-  border: 1px solid #e8e8e8;
-  padding: 16px;
-  border-radius: 8px;
-}
+/* Styles handled by Mantine components are removed. */
 
 #thumbnail-canvas {
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -39,20 +13,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #f8f9fa;
-    border: 2px dashed #dee2e6;
+    background-color: #f8f9fa; /* This might need to be theme-aware */
+    border: 2px dashed #dee2e6; /* This might need to be theme-aware */
     border-radius: 8px;
     text-align: center;
     cursor: pointer;
-}
-
-.tool-section {
-    margin-bottom: 24px;
-}
-
-.tool-section h4 {
-    margin-bottom: 12px;
-    color: #555;
 }
 
 .flag-list {
@@ -73,30 +38,4 @@
 .flag-item:hover {
     transform: scale(1.1);
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-
-/* General Ant Design button style override for consistency if needed */
-.ant-btn {
-    width: 100%;
-}
-
-.property-group {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.property-group label {
-    font-weight: 500;
-    color: #333;
-    display: block; /* Make labels take full width */
-    margin-bottom: 4px;
-}
-
-.prop-input {
-    width: 100%;
-    padding: 6px 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box; /* Important for width calculation */
 }
