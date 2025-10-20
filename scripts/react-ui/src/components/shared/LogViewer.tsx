@@ -1,9 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Card, Typography } from 'antd';
+import { Card, Text } from '@mantine/core';
 import './LogViewer.css';
-
-const { Text } = Typography;
 
 const LogViewer = ({ logs }) => {
   const { t } = useTranslation();
@@ -33,14 +31,17 @@ const LogViewer = ({ logs }) => {
   };
 
   return (
-    <Card title={t('log_viewer_title')} bordered={false} style={{ backgroundColor: '#2c3e50', color: 'white' }}>
-      <div className="log-container" ref={logContainerRef}>
+    <Card withBorder radius="md" style={{ backgroundColor: '#2c3e50', color: 'white' }}>
+      <Card.Section withBorder inheritPadding py="xs">
+        <Text fw={500}>{t('log_viewer_title')}</Text>
+      </Card.Section>
+      <div className="log-container" ref={logContainerRef} style={{paddingTop: "10px"}}>
         {logs.map((log, index) => (
           <div key={index} className="log-entry">
-            <Text style={{ color: getLogColor(log.level), marginRight: '8px' }}>
+            <Text c={getLogColor(log.level)} style={{ marginRight: '8px' }}>
               [{formatTimestamp(Date.now())}] [{log.level}]
             </Text>
-            <Text style={{ color: 'white' }}>{log.message}</Text>
+            <Text c="white">{log.message}</Text>
           </div>
         ))}
       </div>

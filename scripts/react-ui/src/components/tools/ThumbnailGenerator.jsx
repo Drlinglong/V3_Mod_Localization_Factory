@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Stage, Layer, Rect, Image as KonvaImage, Transformer, Text as KonvaText } from 'react-konva';
-import { Button } from 'antd';
-import { UploadOutlined } from '@ant-design/icons';
+import { Button, Grid, Paper, Title, ColorInput, TextInput, NumberInput, Select, Stack, Tooltip, Text } from '@mantine/core';
+import { IconUpload } from '@tabler/icons-react';
 import { v4 as uuidv4 } from 'uuid';
 import html2canvas from 'html2canvas';
 
@@ -185,10 +185,7 @@ const ThumbnailGenerator = () => {
         }
     };
 
-    const handleBgColorChange = (e) => setBackgroundColor(e.target.value);
-
     const handleBackgroundImageUpload = (e) => {
-        console.log('handleBackgroundImageUpload triggered');
         if (e.target.files && e.target.files[0]) {
             const file = e.target.files[0];
             const reader = new FileReader();
@@ -207,10 +204,8 @@ const ThumbnailGenerator = () => {
                     let newHeight = canvasHeight;
 
                     if (aspectRatio > canvasAspectRatio) {
-                        // Image is wider than canvas, fit by width
                         newHeight = canvasWidth / aspectRatio;
                     } else {
-                        // Image is taller than canvas, fit by height
                         newWidth = canvasHeight * aspectRatio;
                     }
 
@@ -233,7 +228,6 @@ const ThumbnailGenerator = () => {
     };
 
     const processAndAddImage = (file, isModImage = false) => {
-        console.log('processAndAddImage triggered for file:', file.name, 'isModImage:', isModImage);
         const reader = new FileReader();
         reader.onload = () => {
             const img = new window.Image();
@@ -280,19 +274,15 @@ const ThumbnailGenerator = () => {
 
     const handleDrop = (e) => {
         e.preventDefault();
-        console.log('handleDrop triggered');
         if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
             const file = e.dataTransfer.files[0];
             if (file.type.startsWith('image/')) {
-                // Simulate event object for handleBackgroundImageUpload
                 handleBackgroundImageUpload({ target: { files: [file] } });
             }
         }
     };
 
-    const handleDragOver = (e) => {
-        e.preventDefault();
-    };
+    const handleDragOver = (e) => e.preventDefault();
 
     const handleAddFlag = (code) => {
       const img = new window.Image();
@@ -331,19 +321,16 @@ const ThumbnailGenerator = () => {
         const canvasHeight = 512;
 
         const positions = [
-            // Left side
             { x: padding, y: padding },
             { x: padding, y: padding + (canvasHeight - padding * 2 - flagHeight) / 4 * 1 },
             { x: padding, y: padding + (canvasHeight - padding * 2 - flagHeight) / 4 * 2 },
             { x: padding, y: padding + (canvasHeight - padding * 2 - flagHeight) / 4 * 3 },
             { x: padding, y: canvasHeight - flagHeight - padding },
-            // Right side
             { x: canvasWidth - flagWidth - padding, y: padding },
             { x: canvasWidth - flagWidth - padding, y: padding + (canvasHeight - padding * 2 - flagHeight) / 4 * 1 },
             { x: canvasWidth - flagWidth - padding, y: padding + (canvasHeight - padding * 2 - flagHeight) / 4 * 2 },
             { x: canvasWidth - flagWidth - padding, y: padding + (canvasHeight - padding * 2 - flagHeight) / 4 * 3 },
             { x: canvasWidth - flagWidth - padding, y: canvasHeight - flagHeight - padding },
-            // Bottom center
             { x: (canvasWidth - flagWidth) / 2, y: canvasHeight - flagHeight - padding },
         ];
 
@@ -357,46 +344,23 @@ const ThumbnailGenerator = () => {
 
         Promise.all(flagPromises).then(loadedFlags => {
             const newFlagElements = loadedFlags.map((flagData, index) => {
-                 // The last flag from app_settings is Turkish, let's put it at the bottom
                 if (flagData.code === 'tr') {
-                    return {
-                        type: 'image',
-                        image: flagData.img,
-                        x: positions[10].x,
-                        y: positions[10].y,
-                        width: flagWidth,
-                        height: flagHeight,
-                        id: uuidv4(),
-                    };
+                    return { type: 'image', image: flagData.img, x: positions[10].x, y: positions[10].y, width: flagWidth, height: flagHeight, id: uuidv4() };
                 }
-                // Distribute the rest
-                return {
-                    type: 'image',
-                    image: flagData.img,
-                    x: positions[index].x,
-                    y: positions[index].y,
-                    width: flagWidth,
-                    height: flagHeight,
-                    id: uuidv4(),
-                };
+                return { type: 'image', image: flagData.img, x: positions[index].x, y: positions[index].y, width: flagWidth, height: flagHeight, id: uuidv4() };
             }).filter((_, index) => index < positions.length);
-
             setElements(prev => [...prev, ...newFlagElements]);
         });
     };
 
-    const handleResetCanvas = () => {
-        setElements([]);
-    };
-
+    const handleResetCanvas = () => setElements([]);
     const handleDeleteCanvas = () => {
         setBackgroundImage(null);
-        setBackgroundColor('#ffffff'); // Reset to default white background
+        setBackgroundColor('#ffffff');
     };
 
     const checkDeselect = (e) => {
-      const clickedOnEmpty = e.target === e.target.getStage();
-      if (clickedOnEmpty) selectShape(null);
+      if (e.target === e.target.getStage()) selectShape(null);
     };
 
     const updateElement = (id, newAttrs) => {
@@ -406,29 +370,26 @@ const ThumbnailGenerator = () => {
     const handleDeleteElement = () => {
         if (selectedId) {
             setElements(elements.filter(el => el.id !== selectedId));
-            selectShape(null); // Deselect after deleting
+            selectShape(null);
         }
     };
 
     const handleExport = () => {
         const originallySelectedId = selectedId;
-        selectShape(null); // Deselect to hide transformers
+        selectShape(null);
 
         setTimeout(() => {
             if (canvasContainerRef.current) {
-                html2canvas(canvasContainerRef.current, {
-                    backgroundColor: null,
-                    logging: false,
-                    useCORS: true,
-                }).then(canvas => {
-                    const link = document.createElement('a');
-                    link.download = 'thumbnail.png';
-                    link.href = canvas.toDataURL('image/png');
-                    link.click();
-                    selectShape(originallySelectedId); // Reselect
-                });
+                html2canvas(canvasContainerRef.current, { backgroundColor: null, logging: false, useCORS: true })
+                    .then(canvas => {
+                        const link = document.createElement('a');
+                        link.download = 'thumbnail.png';
+                        link.href = canvas.toDataURL('image/png');
+                        link.click();
+                        selectShape(originallySelectedId);
+                    });
             } else {
-                selectShape(originallySelectedId); // Reselect if ref is null
+                selectShape(originallySelectedId);
             }
         }, 100);
     };
@@ -437,36 +398,57 @@ const ThumbnailGenerator = () => {
     const isCanvasEmpty = !backgroundImage && elements.length === 0;
 
     return (
-      <div className="thumbnail-generator-layout">
-        <div className="toolbox-panel">
-          <h2>{t('thumbnail_generator.toolbox_title')}</h2>
-          <div className="tool-section">
-            <Button icon={<UploadOutlined />} onClick={() => modImageInputRef.current && modImageInputRef.current.click()}>
-              {t('thumbnail_generator.upload_mod_image')}
-            </Button>
-            <input ref={modImageInputRef} id="mod-image-upload" type="file" accept="image/*" onChange={(e) => handleImageUpload(e, true)} style={{ display: 'none' }} />
-          </div>
-          <div className="tool-section">
-            <h4>{t('thumbnail_generator.add_flags')}</h4>
-            <div className="flag-list">
-              {AVAILABLE_FLAGS.map(({ code, name }) => (
-                <img key={code} src={flagSvgs[code]} alt={name} title={name} onClick={() => handleAddFlag(code)} className="flag-item" />
-              ))}
-            </div>
-          </div>
-          <div className="tool-section">
-              <Button onClick={handleAddText} style={{ marginBottom: '8px' }}>{t('thumbnail_generator.add_text')}</Button>
-              <Button onClick={handleAddAllFlags} style={{ marginBottom: '8px' }}>{t('thumbnail_generator.add_all_flags')}</Button>
-              <Button danger onClick={handleResetCanvas} style={{ marginBottom: '8px' }}>{t('thumbnail_generator.reset_canvas')}</Button>
-              <Button danger onClick={handleDeleteCanvas}>{t('thumbnail_generator.delete_canvas')}</Button>
-          </div>
-        </div>
-        <div className="canvas-panel" onDrop={handleDrop} onDragOver={handleDragOver}>
-            {isCanvasEmpty ? (
-                <div className="canvas-placeholder" onClick={() => bgImageInputRef.current && bgImageInputRef.current.click()}>
-                    <UploadOutlined style={{ fontSize: '48px', color: '#ccc' }} />
-                    <p style={{ color: '#aaa', marginTop: '16px' }}>{t('thumbnail_generator.canvas_placeholder')}</p>
+      <Grid>
+        <Grid.Col span={{ base: 12, md: 3 }}>
+          <Paper withBorder p="md">
+            <Stack>
+              <Title order={4}>{t('thumbnail_generator.toolbox_title')}</Title>
+              <Button leftSection={<IconUpload size={14} />} onClick={() => modImageInputRef.current?.click()}>
+                {t('thumbnail_generator.upload_mod_image')}
+              </Button>
+              <input ref={modImageInputRef} type="file" accept="image/*" onChange={(e) => handleImageUpload(e, true)} style={{ display: 'none' }} />
+              
+              <div>
+                <Title order={5}>{t('thumbnail_generator.add_flags')}</Title>
+                <div className="flag-list">
+                  {AVAILABLE_FLAGS.map(({ code, name }) => (
+                    <Tooltip label={name} key={code}>
+                        <img src={flagSvgs[code]} alt={name} onClick={() => handleAddFlag(code)} className="flag-item" />
+                    </Tooltip>
+                  ))}
                 </div>
+              </div>
+
+              <Button onClick={handleAddText}>{t('thumbnail_generator.add_text')}</Button>
+              <Button onClick={handleAddAllFlags}>{t('thumbnail_generator.add_all_flags')}</Button>
+              <Button color="red" onClick={handleResetCanvas}>{t('thumbnail_generator.reset_canvas')}</Button>
+              <Button color="red" onClick={handleDeleteCanvas}>{t('thumbnail_generator.delete_canvas')}</Button>
+            </Stack>
+          </Paper>
+        </Grid.Col>
+
+        <Grid.Col span={{ base: 12, md: 6 }}>
+          <Paper withBorder p="md" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            {isCanvasEmpty ? (
+                <Paper
+                    withBorder
+                    p="md"
+                    onClick={() => bgImageInputRef.current?.click()}
+                    style={(theme) => ({
+                        width: 512,
+                        height: 512,
+                        display: 'flex',
+                        flexDirection: 'column',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        cursor: 'pointer',
+                        backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
+                        border: `2px dashed ${theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[4]}`,
+                    })}
+                >
+                    <IconUpload size={48} style={{ color: (theme) => theme.colorScheme === 'dark' ? theme.colors.dark[3] : theme.colors.gray[5] }} />
+                    <Text color="dimmed" mt="md">{t('thumbnail_generator.canvas_placeholder')}</Text>
+                </Paper>
             ) : (
                 <div id="thumbnail-canvas" ref={canvasContainerRef} style={{ width: 512, height: 512 }}>
                     <Stage width={512} height={512} onMouseDown={checkDeselect} onTouchStart={checkDeselect}>
@@ -486,75 +468,67 @@ const ThumbnailGenerator = () => {
                     </Stage>
                 </div>
             )}
-          <Button type="primary" onClick={handleExport} style={{ marginTop: '16px' }}>
-            {t('thumbnail_generator.download_thumbnail')}
-          </Button>
-        </div>
-        <div className="inspector-panel">
-          <h2>{t('thumbnail_generator.inspector_title')}</h2>
-          <div className="tool-section">
-            <h4>{t('thumbnail_generator.background_options')}</h4>
-            <label>
-              {t('thumbnail_generator.background_color')}:&nbsp;
-              <input type="color" value={backgroundColor} onChange={handleBgColorChange} />
-            </label>
-            <Button icon={<UploadOutlined />} style={{marginTop: '8px'}} onClick={() => bgImageInputRef.current && bgImageInputRef.current.click()}>
-                {t('thumbnail_generator.upload_background_image')}
+            <Button onClick={handleExport} mt="md">
+                {t('thumbnail_generator.download_thumbnail')}
             </Button>
-            <input ref={bgImageInputRef} id="bg-image-upload" type="file" accept="image/*" onChange={handleBackgroundImageUpload} style={{ display: 'none' }} />
-          </div>
-          {selectedElement && (
-            <div className="tool-section">
-                <h4>{t('thumbnail_generator.element_properties')}</h4>
-                {selectedElement.type === 'text' && (
-                    <div className="property-group">
-                        <label>{t('thumbnail_generator.prop_text_content')}</label>
-                        <input
-                            type="text"
-                            className="prop-input"
-                            value={selectedElement.text}
-                            onChange={(e) => updateElement(selectedId, { ...selectedElement, text: e.target.value })}
-                        />
-                         <label>{t('thumbnail_generator.prop_font_size')}</label>
-                        <input
-                            type="number"
-                            className="prop-input"
-                            value={selectedElement.fontSize}
-                            onChange={(e) => updateElement(selectedId, { ...selectedElement, fontSize: Number(e.target.value) })}
-                        />
-                        <label>{t('thumbnail_generator.prop_font_family')}</label>
-                        <select
-                            className="prop-input"
-                            value={selectedElement.fontFamily}
-                            onChange={(e) => updateElement(selectedId, { ...selectedElement, fontFamily: e.target.value })}
-                        >
-                            {AVAILABLE_FONTS.map(font => <option key={font} value={font}>{font}</option>)}
-                        </select>
-                         <label>{t('thumbnail_generator.prop_color')}</label>
-                         <input
-                            type="color"
-                            value={selectedElement.fill}
-                            onChange={(e) => updateElement(selectedId, { ...selectedElement, fill: e.target.value })}
-                        />
-                    </div>
-                )}
-                 {selectedElement.type === 'image' && (
-                    <div className="property-group">
-                        <label>{t('thumbnail_generator.prop_width')}: {Math.round(selectedElement.width)}px</label>
-                        <label>{t('thumbnail_generator.prop_height')}: {Math.round(selectedElement.height)}px</label>
-                    </div>
-                )}
-                <Button danger onClick={handleDeleteElement} style={{ marginTop: '16px' }}>{t('thumbnail_generator.delete_element')}</Button>
-            </div>
-          )}
-          <div className="tool-section">
-            <Button icon={<UploadOutlined />} style={{marginTop: '8px'}} onClick={() => customEmblemInputRef.current && customEmblemInputRef.current.click()}>
-              {t('thumbnail_generator.upload_custom_emblem')}
-            </Button>
-            <input ref={customEmblemInputRef} id="custom-emblem-upload" type="file" accept="image/*" onChange={handleCustomEmblemUpload} style={{ display: 'none' }} />
-          </div>
-        </div>
-      </div>
+          </Paper>
+        </Grid.Col>
+
+        <Grid.Col span={{ base: 12, md: 3 }}>
+          <Paper withBorder p="md">
+            <Stack>
+              <Title order={4}>{t('thumbnail_generator.inspector_title')}</Title>
+              
+              <ColorInput
+                label={t('thumbnail_generator.background_color')}
+                value={backgroundColor}
+                onChange={setBackgroundColor}
+              />
+              <Button leftSection={<IconUpload size={14} />} onClick={() => bgImageInputRef.current?.click()}>
+                  {t('thumbnail_generator.upload_background_image')}
+              </Button>
+              <input ref={bgImageInputRef} type="file" accept="image/*" onChange={handleBackgroundImageUpload} style={{ display: 'none' }} />
+
+              {selectedElement && (
+                <Stack>
+                    <Title order={5}>{t('thumbnail_generator.element_properties')}</Title>
+                    {selectedElement.type === 'text' && (
+                        <>
+                            <TextInput
+                                label={t('thumbnail_generator.prop_text_content')}
+                                value={selectedElement.text}
+                                onChange={(e) => updateElement(selectedId, { ...selectedElement, text: e.target.value })}
+                            />
+                            <NumberInput
+                                label={t('thumbnail_generator.prop_font_size')}
+                                value={selectedElement.fontSize}
+                                onChange={(value) => updateElement(selectedId, { ...selectedElement, fontSize: value })}
+                            />
+                            <Select
+                                label={t('thumbnail_generator.prop_font_family')}
+                                value={selectedElement.fontFamily}
+                                onChange={(value) => updateElement(selectedId, { ...selectedElement, fontFamily: value })}
+                                data={AVAILABLE_FONTS}
+                            />
+                            <ColorInput
+                                label={t('thumbnail_generator.prop_color')}
+                                value={selectedElement.fill}
+                                onChange={(value) => updateElement(selectedId, { ...selectedElement, fill: value })}
+                            />
+                        </>
+                    )}
+                    <Button color="red" onClick={handleDeleteElement} mt="md">{t('thumbnail_generator.delete_element')}</Button>
+                </Stack>
+              )}
+              
+              <Button leftSection={<IconUpload size={14} />} mt="md" onClick={() => customEmblemInputRef.current?.click()}>
+                {t('thumbnail_generator.upload_custom_emblem')}
+              </Button>
+              <input ref={customEmblemInputRef} type="file" accept="image/*" onChange={handleCustomEmblemUpload} style={{ display: 'none' }} />
+            </Stack>
+          </Paper>
+        </Grid.Col>
+      </Grid>
     );
 };
 

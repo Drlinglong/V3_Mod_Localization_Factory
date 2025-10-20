@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Typography, Select, Space, Row, Col, Card, Table, Tag, Button, Tabs, Empty } from 'antd';
-import { ArrowLeftOutlined, ArrowRightOutlined } from '@ant-design/icons';
-
-const { Title, Text } = Typography;
-const { Option } = Select;
+import { Title, Text, Select, Group, Grid, Card, Table, Badge, Button, Tabs, Center } from '@mantine/core';
+import { IconArrowLeft, IconArrowRight } from '@tabler/icons-react';
 
 // Mock data for projects
 const mockProjects = [
@@ -57,47 +54,6 @@ const ProjectManagement = () => {
         // In the future, this will handle the logic to switch tabs and pass the file info.
     };
 
-    const fileTableColumns = [
-        { title: '文件名', dataIndex: 'name', key: 'name' },
-        { title: '行数', dataIndex: 'lines', key: 'lines' },
-        {
-            title: '状态',
-            dataIndex: 'status',
-            key: 'status',
-            render: status => {
-                let color = 'grey';
-                let text = '未处理';
-                if (status === 'translated') { color = 'green'; text = '✅ 已翻译'; }
-                else if (status === 'failed') { color = 'red'; text = '🔴 翻译失败'; }
-                else if (status === 'pending') { color = 'blue'; text = '⚪ 待处理'; }
-                else if (status === 'in_progress') { color = 'gold'; text = '▶️ 进行中'; }
-                return <Tag color={color}>{text}</Tag>;
-            }
-        },
-        { title: '校对进度', dataIndex: 'progress', key: 'progress' },
-        { title: '备注', dataIndex: 'notes', key: 'notes' },
-        {
-            title: '操作',
-            key: 'actions',
-            render: (_, record) => (
-                <Space size="middle">
-                    {record.actions.map(action => {
-                        const isProofreadAction = action === '继续校对';
-                        return (
-                            <Button
-                                type="link"
-                                key={action}
-                                onClick={isProofreadAction ? () => handleProofread(record) : null}
-                            >
-                                {action}
-                            </Button>
-                        );
-                    })}
-                </Space>
-            ),
-        },
-    ];
-
     const handleStatusChange = (fileKey, direction) => {
         const currentFiles = projectDetails.files;
         const fileIndex = currentFiles.findIndex(f => f.key === fileKey);
@@ -129,32 +85,76 @@ const ProjectManagement = () => {
         const statusIndex = statusFlow.indexOf(currentStatus);
 
         return (
-            <Card key={file.key} title={file.name} style={{ marginBottom: '10px' }}
-                actions={[
-                    <Button key="left" icon={<ArrowLeftOutlined />} disabled={statusIndex === 0} onClick={() => handleStatusChange(file.key, 'left')} />,
-                    <Button key="right" icon={<ArrowRightOutlined />} disabled={statusIndex === statusFlow.length - 1} onClick={() => handleStatusChange(file.key, 'right')} />
-                ]}
-            >
-                <p>行数: {file.lines}</p>
-                <p>进度: {file.progress}</p>
-                {file.notes && <p>备注: {file.notes}</p>}
+            <Card key={file.key} withBorder shadow="sm" radius="md" style={{ marginBottom: '10px' }}>
+                <Text fw={500}>{file.name}</Text>
+                <Text size="sm">行数: {file.lines}</Text>
+                <Text size="sm">进度: {file.progress}</Text>
+                {file.notes && <Text size="sm">备注: {file.notes}</Text>}
+                <Group justify="flex-end" mt="sm">
+                    <Button.Group>
+                        <Button variant="default" size="xs" disabled={statusIndex === 0} onClick={() => handleStatusChange(file.key, 'left')}><IconArrowLeft size={16} /></Button>
+                        <Button variant="default" size="xs" disabled={statusIndex === statusFlow.length - 1} onClick={() => handleStatusChange(file.key, 'right')}><IconArrowRight size={16} /></Button>
+                    </Button.Group>
+                </Group>
             </Card>
         );
     };
 
-    const renderOverview = () => (
-        <div>
-            <Title level={4}>项目概览: {mockProjects.find(p => p.id === selectedProject)?.name}</Title>
-            <Row gutter={16}>
-                <Col span={6}><Card title="文件总数">{projectDetails.overview.totalFiles}</Card></Col>
-                <Col span={6}><Card title="已翻译">{projectDetails.overview.translated}%</Card></Col>
-                <Col span={6}><Card title="待校对">{projectDetails.overview.toBeProofread}%</Card></Col>
-                <Col span={6}><Card title="使用词典">{projectDetails.overview.glossary}</Card></Col>
-            </Row>
-            <Title level={4} style={{ marginTop: '20px' }}>文件详情列表</Title>
-            <Table columns={fileTableColumns} dataSource={projectDetails.files} />
-        </div>
-    );
+    const renderOverview = () => {
+        const rows = projectDetails.files.map((file) => {
+            let color = 'gray';
+            let text = '未处理';
+            if (file.status === 'translated') { color = 'green'; text = '✅ 已翻译'; }
+            else if (file.status === 'failed') { color = 'red'; text = '🔴 翻译失败'; }
+            else if (file.status === 'pending') { color = 'blue'; text = '⚪ 待处理'; }
+            else if (file.status === 'in_progress') { color = 'yellow'; text = '▶️ 进行中'; }
+
+            return (
+                <Table.Tr key={file.key}>
+                    <Table.Td>{file.name}</Table.Td>
+                    <Table.Td>{file.lines}</Table.Td>
+                    <Table.Td><Badge color={color}>{text}</Badge></Table.Td>
+                    <Table.Td>{file.progress}</Table.Td>
+                    <Table.Td>{file.notes}</Table.Td>
+                    <Table.Td>
+                        <Group gap="xs">
+                            {file.actions.map(action => (
+                                <Button variant="subtle" size="xs" key={action} onClick={action === '继续校对' ? () => handleProofread(file) : null}>
+                                    {action}
+                                </Button>
+                            ))}
+                        </Group>
+                    </Table.Td>
+                </Table.Tr>
+            );
+        });
+
+        return (
+            <div>
+                <Title order={4}>项目概览: {mockProjects.find(p => p.id === selectedProject)?.name}</Title>
+                <Grid>
+                    <Grid.Col span={3}><Card withBorder><Text>文件总数</Text><Title order={3}>{projectDetails.overview.totalFiles}</Title></Card></Grid.Col>
+                    <Grid.Col span={3}><Card withBorder><Text>已翻译</Text><Title order={3}>{projectDetails.overview.translated}%</Title></Card></Grid.Col>
+                    <Grid.Col span={3}><Card withBorder><Text>待校对</Text><Title order={3}>{projectDetails.overview.toBeProofread}%</Title></Card></Grid.Col>
+                    <Grid.Col span={3}><Card withBorder><Text>使用词典</Text><Title order={3}>{projectDetails.overview.glossary}</Title></Card></Grid.Col>
+                </Grid>
+                <Title order={4} style={{ marginTop: '20px' }}>文件详情列表</Title>
+                <Table>
+                    <Table.Thead>
+                        <Table.Tr>
+                            <Table.Th>文件名</Table.Th>
+                            <Table.Th>行数</Table.Th>
+                            <Table.Th>状态</Table.Th>
+                            <Table.Th>校对进度</Table.Th>
+                            <Table.Th>备注</Table.Th>
+                            <Table.Th>操作</Table.Th>
+                        </Table.Tr>
+                    </Table.Thead>
+                    <Table.Tbody>{rows}</Table.Tbody>
+                </Table>
+            </div>
+        );
+    };
 
     const renderTaskBoard = () => {
         const files = projectDetails?.files || [];
@@ -163,45 +163,48 @@ const ProjectManagement = () => {
         const doneFiles = files.filter(f => f.status === 'translated');
 
         return (
-            <Row gutter={16}>
-                <Col span={8}><Title level={4}>To Do</Title>{todoFiles.map(renderTaskCard)}</Col>
-                <Col span={8}><Title level={4}>In Progress</Title>{inProgressFiles.map(renderTaskCard)}</Col>
-                <Col span={8}><Title level={4}>Done</Title>{doneFiles.map(renderTaskCard)}</Col>
-            </Row>
+            <Grid>
+                <Grid.Col span={4}><Title order={4}>To Do</Title>{todoFiles.map(renderTaskCard)}</Grid.Col>
+                <Grid.Col span={4}><Title order={4}>In Progress</Title>{inProgressFiles.map(renderTaskCard)}</Grid.Col>
+                <Grid.Col span={4}><Title order={4}>Done</Title>{doneFiles.map(renderTaskCard)}</Grid.Col>
+            </Grid>
         );
     };
 
     return (
         <div>
-            <Title level={2}>项目管理中心</Title>
-            <Space align="center" style={{ marginBottom: '20px' }}>
+            <Title order={2}>项目管理中心</Title>
+            <Group align="center" style={{ marginBottom: '20px' }}>
                 <Text>请选择要管理的项目:</Text>
-                <Select style={{ width: 240 }} placeholder="选择一个项目" onChange={handleProjectChange} allowClear>
-                    {mockProjects.map(project => (<Option key={project.id} value={project.id}>{project.name}</Option>))}
-                </Select>
-            </Space>
+                <Select
+                    style={{ width: 240 }}
+                    placeholder="选择一个项目"
+                    onChange={handleProjectChange}
+                    clearable
+                    data={mockProjects.map(p => ({ value: p.id, label: p.name }))}
+                />
+            </Group>
 
-                        {selectedProject ? (
-                            <Tabs
-                                defaultActiveKey="overview"
-                                items={[
-                                    {
-                                        label: '概览',
-                                        key: 'overview',
-                                        children: projectDetails ? renderOverview() : null, // Content handles its own state
-                                    },
-                                    {
-                                        label: '任务看板',
-                                        key: 'taskboard',
-                                        children: projectDetails ? renderTaskBoard() : null, // Content handles its own state
-                                    },
-                                ]}
-                            />
-                        ) : (
-                            <div style={{ marginTop: 20, textAlign: 'center' }}>
-                                <Empty description="请从上方选择一个项目以查看详情" />
-                            </div>
-                        )}        </div>
+            {selectedProject ? (
+                <Tabs defaultValue="overview">
+                    <Tabs.List>
+                        <Tabs.Tab value="overview">概览</Tabs.Tab>
+                        <Tabs.Tab value="taskboard">任务看板</Tabs.Tab>
+                    </Tabs.List>
+
+                    <Tabs.Panel value="overview" pt="xs">
+                        {projectDetails ? renderOverview() : null}
+                    </Tabs.Panel>
+                    <Tabs.Panel value="taskboard" pt="xs">
+                        {projectDetails ? renderTaskBoard() : null}
+                    </Tabs.Panel>
+                </Tabs>
+            ) : (
+                <Center style={{ marginTop: 20 }}>
+                    <Text c="dimmed">请从上方选择一个项目以查看详情</Text>
+                </Center>
+            )}
+        </div>
     );
 };
 
