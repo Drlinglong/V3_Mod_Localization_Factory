@@ -125,10 +125,15 @@ def rebuild_and_write_file(
     with open(dest_file_path, "w", encoding=game_profile.get("encoding", "utf-8-sig")) as f:
         f.writelines(new_lines) # Use the modified 'new_lines' list
         
+    try:
+        log_filename = os.path.join(os.path.relpath(dest_dir_path, "my_translation"), new_filename)
+    except ValueError:
+        log_filename = new_filename
+
     logging.info(
         i18n.t(
             "writing_file_success",
-            filename=os.path.join(os.path.relpath(dest_dir_path, "my_translation"), new_filename),
+            filename=log_filename,
         )
     )
     

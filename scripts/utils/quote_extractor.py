@@ -125,7 +125,12 @@ class QuoteExtractor:
         Returns:
             tuple: (original_lines, texts_to_translate, key_map)
         """
-        rel_path = os.path.relpath(file_path)
+        try:
+            rel_path = os.path.relpath(file_path)
+        except ValueError:
+            # 当 file_path 和当前工作目录不在同一个驱动器时，os.path.relpath 会抛出 ValueError
+            # 在这种情况下，我们回退到使用绝对路径或文件名
+            rel_path = os.path.basename(file_path)
         logging.info(i18n.t("parsing_file", filename=rel_path) if i18n else f"Parsing file: {rel_path}")
 
         # 1) Read file lines with a fallback to cp1252 for unexpected encodings.
