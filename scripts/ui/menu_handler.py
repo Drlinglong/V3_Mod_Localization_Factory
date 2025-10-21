@@ -11,6 +11,7 @@ import logging
 import re
 import subprocess
 import importlib.util
+from typing import Optional, Dict, List
 
 from scripts.utils import i18n
 from scripts.app_settings import (
@@ -20,6 +21,7 @@ from scripts.app_settings import (
     API_PROVIDERS,
     PROJECT_INFO,
 )
+from scripts.core.archive_manager import archive_manager
 
 
 def display_version_info():
@@ -108,6 +110,11 @@ def preflight_checks():
             checks_passed = False
     else:
         error_messages.append(i18n.t("preflight_error_source_mod_missing"))
+        checks_passed = False
+
+    # 5. 初始化数据库
+    if not archive_manager.initialize_database():
+        # The function already logs the detailed error
         checks_passed = False
 
     # 显示检查结果
@@ -407,7 +414,16 @@ def select_fuzzy_matching_mode():
         else:
             logging.warning(i18n.t("invalid_fuzzy_choice"))
 
-def show_project_overview(mod_name, api_provider, game_profile, source_lang, target_languages, selected_glossary_ids, cleanup_choice, fuzzy_mode):
+def prompt_for_manual_workshop_id() -> Optional[str]:
+    """提示用户手动输入创意工坊ID。"""
+    logging.info(f"\n--- {i18n.t('prompt_workshop_id_title')} ---")
+    logging.info(f"{i18n.t('prompt_workshop_id_desc')}")
+    logging.info(f"{i18n.t('prompt_workshop_id_skip')}")
+    workshop_id = input(i18n.t("prompt_workshop_id_enter")).strip()
+    return workshop_id if workshop_id else None
+
+
+def show_project_overview(mod_name, api_provider, game_profile, source_lang, target_languages, selected_glossary_ids, cleanup_choice, fuzzy_mode, workshop_id_info: Dict):
     """
     显示工程总览并等待用户确认
     """
@@ -425,7 +441,7 @@ def show_project_overview(mod_name, api_provider, game_profile, source_lang, tar
         target_lang_info = i18n.t("target_languages_multiple", count=len(target_languages))
     logging.info(i18n.t("project_overview_target", target_lang=target_lang_info))
 
-    # New glossary status logic
+    # Glossary status
     if selected_glossary_ids:
         all_glossaries = glossary_manager.get_available_glossaries(game_profile['id'])
         selected_names = [g['name'] for g in all_glossaries if g['glossary_id'] in selected_glossary_ids]
@@ -434,6 +450,15 @@ def show_project_overview(mod_name, api_provider, game_profile, source_lang, tar
         glossary_status = i18n.t("glossary_status_none")
     logging.info(i18n.t("project_overview_glossary", glossary_status=glossary_status))
 
+    # Workshop ID status
+    status = workshop_id_info['status']
+    if status == 'manual':
+        workshop_id_status_text = i18n.t("overview_workshop_id_manual", id=workshop_id_info['id'])
+    elif status == 'auto':
+        workshop_id_status_text = i18n.t("overview_workshop_id_auto")
+    else: # not_found
+        workshop_id_status_text = i18n.t("overview_workshop_id_disabled")
+    logging.info(i18n.t("project_overview_workshop_id", status=workshop_id_status_text))
 
     fuzzy_status = i18n.t("fuzzy_matching_status_enabled") if fuzzy_mode == 'loose' else i18n.t("fuzzy_matching_status_disabled")
     logging.info(i18n.t("project_overview_fuzzy_matching", fuzzy_status=fuzzy_status))

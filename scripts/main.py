@@ -46,6 +46,8 @@ from scripts.utils.banner import print_banner
 from scripts.workflows import initial_translate
 from scripts.core import directory_handler
 from scripts.core.glossary_manager import glossary_manager
+from scripts.core.archive_manager import archive_manager
+from scripts.core import workshop_handler
 from scripts.ui import menu_handler
 from scripts.app_settings import SOURCE_DIR
 
@@ -75,31 +77,48 @@ def main_menu_workflow():
         target_languages = menu_handler.select_language("select_target_language_prompt", game_profile, source_lang)
         if not target_languages: return
 
-        # NEW: Use the database-driven glossary selection
+        # NEW: Glossary and Workshop ID handling
         selected_glossary_ids = menu_handler.select_glossaries_from_db(game_profile)
         fuzzy_mode = menu_handler.select_fuzzy_matching_mode()
+        
+        # --- 2. 核心逻辑预处理 (ID获取) ---
+        # Step 1: Try to auto-extract the ID
+        workshop_id_info = workshop_handler.try_auto_extract_workshop_id(mod_name, game_profile)
+        
+        # Step 2: If auto-extraction fails, prompt the user manually
+        if workshop_id_info['status'] == 'not_found':
+            manual_id = menu_handler.prompt_for_manual_workshop_id()
+            if manual_id:
+                workshop_id_info = {'id': manual_id, 'status': 'manual'}
 
-        # --- 2. 工程总览与确认 ---
+        final_remote_id = workshop_id_info['id']
+
+        # --- 3. 工程总览与确认 ---
         user_confirmed = menu_handler.show_project_overview(
             mod_name, api_provider, game_profile, source_lang, target_languages,
-            selected_glossary_ids, cleanup_choice, fuzzy_mode
+            selected_glossary_ids, cleanup_choice, fuzzy_mode, workshop_id_info
         )
 
         if not user_confirmed:
             continue
 
-        # --- 3. 核心逻辑执行阶段 ---
+        # --- 4. 核心逻辑执行阶段 ---
         
-        # 3.1 清理
+        # 4.1 清理
         if cleanup_choice:
             logging.info(i18n.t("executing_cleanup"))
             directory_handler.cleanup_source_directory(mod_name, game_profile)
             logging.info(i18n.t("cleanup_completed"))
 
-        # 3.2 词典加载 (Logic is now inside the workflow)
+        # 4.2 存档ID获取
+        mod_id_for_archive = None
+        if final_remote_id:
+            mod_id_for_archive = archive_manager.get_or_create_mod_entry(mod_name, final_remote_id)
+
+        # 4.3 词典加载
         glossary_manager.set_fuzzy_matching_mode(fuzzy_mode)
         
-        # 3.3 执行翻译工作流
+        # 4.4 执行翻译工作流
         initial_translate.run(
             mod_name=mod_name,
             source_lang=source_lang,
@@ -107,7 +126,8 @@ def main_menu_workflow():
             game_profile=game_profile,
             mod_context=mod_context,
             selected_provider=api_provider,
-            selected_glossary_ids=selected_glossary_ids # Pass the selected IDs
+            selected_glossary_ids=selected_glossary_ids, # Pass the selected IDs
+            mod_id_for_archive=mod_id_for_archive # Pass the archive mod_id
         )
 
         logging.info(i18n.t("workflow_completed_ask_next"))

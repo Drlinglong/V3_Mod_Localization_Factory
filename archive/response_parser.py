@@ -1,0 +1,189 @@
+# ==============================================================================
+#  DEPRECATION NOTICE
+# ==============================================================================
+#  THIS MODULE IS DEPRECATED AND ARCHIVED. DO NOT USE IT FOR NEW DEVELOPMENT.
+#
+#  Reason: This module is based on a fragile "post-processing repair" paradigm,
+#          relying on complex, hand-written rules and regex surgeries to fix
+#          malformed JSON from LLMs. This approach has proven to be a high-maintenance
+#          and unreliable "arms race".
+#
+#  Replacement: A new, robust, schema-driven parsing system has been implemented.
+#               Please use the new module:
+#
+#               scripts.utils.structured_parser.py
+#
+#  The new module uses a "layered defense" approach with `json_repair` for robust
+#  fixing and `Pydantic` for strict schema validation, ensuring deterministic and
+#  reliable parsing.
+# ==============================================================================
+
+import json
+import os
+import re
+from datetime import datetime
+from typing import List
+import logging
+from scripts.utils import i18n
+
+logger = logging.getLogger(__name__)
+
+def _save_critical_failure_log(response_text: str, purified_text: str, repaired_text: str, final_error: str):
+    """Saves a detailed log for critical, unrecoverable parsing failures."""
+    try:
+        log_dir = 'logs'
+        if not os.path.exists(log_dir):
+            os.makedirs(log_dir)
+
+        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+        debug_file = os.path.join(log_dir, f"critical_parse_failure_{timestamp}.log")
+
+        with open(debug_file, 'w', encoding='utf-8') as f:
+            f.write("=== CRITICAL PARSING FAILURE LOG ===\n")
+            f.write(f"Time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+            f.write(f"Final Error: {final_error}\n")
+            f.write("=" * 80 + "\n\n")
+            f.write("--- Original Response Text ---\n")
+            f.write(response_text + "\n\n")
+            f.write("--- 1. After Extraction Attempt ---\n")
+            f.write(purified_text + "\n\n")
+            f.write("--- 2. After Repair Attempt ---\n")
+            f.write(repaired_text + "\n\n")
+            f.write("=" * 80 + "\n")
+
+        logger.critical(f"Saved critical failure log to: {debug_file}")
+    except Exception as e:
+        logger.error(f"Failed to save critical failure log: {e}")
+
+
+def _run_repair_surgeries(dirty_json: str) -> str:
+    """
+    Performs a series of surgical repairs on a JSON string.
+    """
+    repaired_json = dirty_json
+
+    # Surgery 1: Fix known warning messages that are not quoted
+    warning_str = "WARNING: Source localization entry is incomplete"
+    if warning_str in repaired_json:
+        repaired_json = repaired_json.replace(warning_str, f'"{warning_str}"')
+
+    # Surgery 2: Add missing commas between consecutive quoted strings.
+    # This handles both ` "A" "B" ` and ` "A"\n"B" `. \s* is safe here because
+    # the new architecture ensures this surgery only runs on strings that have
+    # already failed to parse, so we don't risk damaging valid JSON.
+    repaired_json = re.sub(r'(?<!\\)"\s*(?<!\\)"', '","', repaired_json)
+
+    # Surgery 3: State-machine-based internal quote escaping
+    in_string = False
+    escaped_chars = []
+    i = 0
+    while i < len(repaired_json):
+        char = repaired_json[i]
+        
+        if char == '\\':
+            escaped_chars.append(char)
+            if i + 1 < len(repaired_json):
+                escaped_chars.append(repaired_json[i+1])
+                i += 1
+            i += 1
+            continue
+
+        if char == '"':
+            if not in_string:
+                in_string = True
+                escaped_chars.append(char)
+            else:
+                j = i + 1
+                while j < len(repaired_json) and repaired_json[j].isspace():
+                    j += 1
+
+                if j < len(repaired_json) and (repaired_json[j] == ',' or repaired_json[j] == ']'):
+                    in_string = False
+                    escaped_chars.append(char)
+                else:
+                    escaped_chars.append('\\"')
+        else:
+            escaped_chars.append(char)
+        i += 1
+    repaired_json = "".join(escaped_chars)
+
+    return repaired_json
+
+
+def parse_json_from_response(response_text: str, original_input_list: list[str]) -> list[str]:
+    """
+    Parses a JSON array string from an LLM response using a multi-layer defense system.
+    """
+    purified_text = ""
+    repaired_text = ""
+    was_unwrapped = False
+
+    # --- Triage Step: Intelligent Unwrapping ---
+    payload_to_process = response_text
+    try:
+        parsed_object = json.loads(response_text)
+        if isinstance(parsed_object, dict):
+            if "response" in parsed_object and isinstance(parsed_object["response"], str):
+                payload_to_process = parsed_object["response"]
+                was_unwrapped = True
+                logger.debug("Successfully unwrapped nested JSON response.")
+            else:
+                logger.warning("Parsed a dict that does not match the expected nested structure. Falling back.")
+                _save_critical_failure_log(response_text, "N/A", "N/A", "Unexpected dictionary structure.")
+                return original_input_list
+    except json.JSONDecodeError:
+        logger.debug("Response is not a valid JSON object, proceeding with standard parsing.")
+        pass
+
+    # --- First Line of Defense: Balanced Bracket Extractor ---
+    start_index = payload_to_process.find('[')
+    if start_index == -1:
+        logging.critical("Extractor failed: No opening bracket '[' found.")
+        _save_critical_failure_log(response_text, "N/A", "N/A", "No opening bracket.")
+        return original_input_list
+
+    balance_counter = 1
+    end_index = -1
+    in_string = False
+    for i in range(start_index + 1, len(payload_to_process)):
+        char = payload_to_process[i]
+        if char == '"' and (i == 0 or payload_to_process[i-1] != '\\'):
+            in_string = not in_string
+
+        if not in_string:
+            if char == '[':
+                balance_counter += 1
+            elif char == ']':
+                balance_counter -= 1
+
+        if balance_counter == 0:
+            end_index = i
+            break
+
+    if end_index == -1:
+        logging.critical("Extractor failed: Could not find matching closing bracket ']'.")
+        _save_critical_failure_log(response_text, "N/A", "N/A", "No matching closing bracket.")
+        return original_input_list
+
+    purified_text = payload_to_process[start_index : end_index + 1]
+
+    # --- Heuristic Repair Step ---
+    if was_unwrapped:
+        purified_text = purified_text.replace('\\"', '"')
+
+    # --- Second Line of Defense: The Surgeon ---
+    # First, try to parse the text as is. Only if it fails, we proceed to risky repairs.
+    try:
+        return json.loads(purified_text)
+    except json.JSONDecodeError:
+        logger.warning("Initial parse failed. Proceeding to surgical repairs.")
+        repaired_text = _run_repair_surgeries(purified_text)
+
+    # --- Third Line of Defense: The Judge ---
+    try:
+        parsed_list = json.loads(repaired_text)
+        return parsed_list
+    except json.JSONDecodeError as e:
+        logging.critical(f"Judge failed: Final parsing attempt failed. Error: {e}")
+        _save_critical_failure_log(response_text, purified_text, repaired_text, str(e))
+        return original_input_list

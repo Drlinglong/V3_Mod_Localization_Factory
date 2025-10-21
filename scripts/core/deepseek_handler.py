@@ -35,8 +35,9 @@ class DeepSeekHandler(BaseApiHandler):
 
     def _call_api(self, client: OpenAI, prompt: str) -> str:
         """【必须由子类实现】执行对DeepSeek API的调用并返回原始文本响应。"""
-        provider_config = API_PROVIDERS.get("deepseek", {})
+        provider_config = API_PROVIDERS.get(self.provider_name, {})
         model_name = provider_config.get("default_model", "deepseek-chat")
+        enable_thinking = provider_config.get("enable_thinking", False)
 
         try:
             response = client.chat.completions.create(
@@ -45,7 +46,8 @@ class DeepSeekHandler(BaseApiHandler):
                     {"role": "system", "content": "You are a professional translator for game mods."},
                     {"role": "user", "content": prompt}
                 ],
-                max_completion_tokens=4000
+                max_tokens=4000,
+                extra_body={"enable_thinking": enable_thinking}
             )
             return response.choices[0].message.content.strip()
         except Exception as e:

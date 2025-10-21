@@ -1,0 +1,47 @@
+=== 批量翻译解析失败调试信息 ===
+时间: 2025-10-12 04:23:58
+错误类型: Nested JSON Decode Error
+详细信息: Expecting value: line 1 column 1 (char 0)
+================================================================================
+原始响应文本:
+----------------------------------------
+{
+  "response": "```json\n[\n  \"增加船队贡献\",\n  \"增加[concept_subject]对其[concept_market_owner][concept_overlord]的船队贡献。\",\n  \"[INITIATOR_COUNTRY.GetName]增加船队贡献\",\n  \"[INITIATOR_COUNTRY.GetName]已提议增加其船队贡献。\",\n  \"取消增加船队贡献\",\n  \"[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName]提议增加对[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]的船队贡献。\",\n  \"[INITIATOR_COUNTRY.GetName]取消了增加船队贡献\",\n  \"[INITIATOR_COUNTRY.GetName]已将船队贡献恢复至常规水平。\"\n]\n```",
+  "stats": {
+    "models": {
+      "gemini-2.5-flash": {
+        "api": {
+          "totalRequests": 1,
+          "totalErrors": 0,
+          "totalLatencyMs": 7340
+        },
+        "tokens": {
+          "prompt": 10336,
+          "candidates": 179,
+          "total": 11956,
+          "cached": 0,
+          "thoughts": 1441,
+          "tool": 0
+        }
+      }
+    },
+    "tools": {
+      "totalCalls": 0,
+      "totalSuccess": 0,
+      "totalFail": 0,
+      "totalDurationMs": 0,
+      "totalDecisions": {
+        "accept": 0,
+        "reject": 0,
+        "modify": 0,
+        "auto_accept": 0
+      },
+      "byName": {}
+    },
+    "files": {
+      "totalLinesAdded": 0,
+      "totalLinesRemoved": 0
+    }
+  }
+}
+================================================================================

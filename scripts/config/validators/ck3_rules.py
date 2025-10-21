@@ -64,6 +64,20 @@ RULES = {
         "end_tag_string": "#!",
         "details_key": "validation_generic_color_tags_count"
       }
+    },
+    {
+      "name": "formatting_tags",
+      "check_function": "formatting_tags",
+      "pattern": r"#([a-zA-Z0-9_]+)",
+      "level": "warning",
+      "message_key": "validation_ck3_unknown_formatting",
+      "params": {
+        
+        "no_space_required_tags": [],
+        "unknown_tag_error_key": "validation_ck3_unknown_formatting",
+        "unsupported_formatting_details_key": "validation_ck3_unsupported_formatting",
+        "missing_space_details_key": "validation_ck3_formatting_found_at"
+      }
     }
   ]
 }
