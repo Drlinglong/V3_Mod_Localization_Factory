@@ -26,7 +26,16 @@ class OpenAIHandler(BaseApiHandler):
 
     def _call_api(self, client: OpenAI, prompt: str) -> str:
         """【必须由子类实现】执行对OpenAI API的调用并返回原始文本响应。"""
-        model_name = API_PROVIDERS["openai"]["default_model"]
+        provider_config = API_PROVIDERS.get(self.provider_name, {})
+        model_name = provider_config.get("default_model", "gpt-5-mini")
+        
+        enable_thinking = provider_config.get("enable_thinking", False)
+        reasoning_effort_value = provider_config.get("reasoning_effort")
+
+        extra_params = {}
+        if not enable_thinking and reasoning_effort_value:
+            extra_params["reasoning_effort"] = reasoning_effort_value
+
         try:
             response = client.chat.completions.create(
                 model=model_name,
@@ -34,7 +43,8 @@ class OpenAIHandler(BaseApiHandler):
                     {"role": "system", "content": "You are a professional translator for game mods."},
                     {"role": "user", "content": prompt}
                 ],
-                max_completion_tokens=4000  # 保持较大的token以适应大批次
+                max_completion_tokens=4000,  # 保持较大的token以适应大批次
+                **extra_params
             )
             return response.choices[0].message.content.strip()
         except Exception as e:

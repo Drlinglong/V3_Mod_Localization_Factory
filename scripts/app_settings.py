@@ -10,8 +10,8 @@ ARCHIVE_RESULTS_AFTER_TRANSLATION = True
 # --- 项目信息 ----------------------------------------------------
 PROJECT_NAME = "Paradox Mod 本地化工厂 - Paradox Mod Localization Factory"
 PROJECT_DISPLAY_NAME = "蕾姆丝计划 - Project Remis "
-VERSION = "1.1.9"
-LAST_UPDATE_DATE = "2025-10-10"
+VERSION = "1.2.0"
+LAST_UPDATE_DATE = "2025-10-12"
 COPYRIGHT = "© 2025 Project Remis Team"
 
 # --- 项目信息显示配置 --------------------------------------------
@@ -25,11 +25,15 @@ PROJECT_INFO = {
 
 # --- 核心配置 ----------------------------------------------------
 CHUNK_SIZE = 40
-MAX_RETRIES = 3
+MAX_RETRIES = 2
 
 # --- Gemini CLI 特定配置 -----------------------------------------
 GEMINI_CLI_CHUNK_SIZE = 100
-GEMINI_CLI_MAX_RETRIES = 3
+GEMINI_CLI_MAX_RETRIES = 2
+
+# --- Ollama 特定配置 ---------------------------------------------
+OLLAMA_CHUNK_SIZE = 20
+OLLAMA_MAX_RETRIES = 2
 
 # --- 智能线程池配置 ----------------------------------------------------
 def get_smart_max_workers():
@@ -66,7 +70,9 @@ API_PROVIDERS = {
     },
     "openai": {
         "api_key_env": "OPENAI_API_KEY",
-        "default_model": "gpt-5-mini"
+        "default_model": "gpt-5-mini",
+        "enable_thinking": False,
+        "reasoning_effort": "minimal"
     },
     "qwen": {
         "api_key_env": "DASHSCOPE_API_KEY",
@@ -80,17 +86,40 @@ API_PROVIDERS = {
         "base_url": "https://api.x.ai/v1",
         "default_model": "grok-4-fast-reasoning",
         "description": "通过xAI官方API访问grok-4-fast-reasoning模型"
+        #实在价格太低了，就启用思考模式了
     },
     "deepseek": {
         "api_key_env": "DEEPSEEK_API_KEY",
         "base_url": "https://api.deepseek.com",
         "default_model": "deepseek-chat",
+        "enable_thinking": False,
         "description": "DeepSeek-V3.2-Exp (Non-thinking Mode) - 与OpenAI API兼容"
     },
     "ollama": {
         "base_url_env": "OLLAMA_BASE_URL",
-        "default_model": "llama3.2",
+        "default_model": "qwen3:4b",
+        "enable_thinking": False,
+        "chunk_size": OLLAMA_CHUNK_SIZE,
+        "max_retries": OLLAMA_MAX_RETRIES,
         "description": "本地Ollama模型，无需API密钥"
+    },
+    "modelscope": {
+        "api_key_env": "MODELSCOPE_API_KEY",
+        "base_url": "https://api-inference.modelscope.cn/v1/",
+        "default_model": "deepseek-ai/DeepSeek-V3.2-Exp",
+        "description": "通过魔搭（ModelScope）调用AI模型"
+    },
+    "siliconflow": {
+        "api_key_env": "SILICONFLOW_API_KEY",
+        "base_url": "https://api.siliconflow.cn/v1",
+        "default_model": "DeepSeek-R1",
+        "description": "通过硅基流动（SiliconFlow）调用AI模型"
+    },
+    "your_favourite_api": {
+        "api_key_env": "YOUR_FAVOURITE_API_KEY",
+        "base_url": "YOUR_BASE_URL_HERE",
+        "default_model": "YOUR_MODEL_NAME_HERE",
+        "description": "（需要技术知识）连接到您自选的任何兼容OpenAI的API服务"
     },
 }
 
@@ -139,6 +168,7 @@ GAME_PROFILES = {
         "prompt_template": prompts.VICTORIA3_PROMPT_TEMPLATE,
         "single_prompt_template": prompts.VICTORIA3_SINGLE_PROMPT_TEMPLATE,
         "format_prompt": prompts.VICTORIA3_FORMAT_PROMPT,
+        "official_tags_codex": "scripts/config/validators/vic3_official_tags.json",
     },
     "2": {
         "id": "stellaris", "name": "Stellaris (群星)",
@@ -150,6 +180,7 @@ GAME_PROFILES = {
         "prompt_template": prompts.STELLARIS_PROMPT_TEMPLATE,
         "single_prompt_template": prompts.STELLARIS_SINGLE_PROMPT_TEMPLATE,
         "format_prompt": prompts.STELLARIS_FORMAT_PROMPT,
+        "official_tags_codex": "scripts/config/validators/stellaris_official_tags.json",
     },
     "3": {
         "id": "eu4", "name": "Europa Universalis IV (欧陆风云4)",
@@ -161,6 +192,7 @@ GAME_PROFILES = {
         "prompt_template": prompts.EU4_PROMPT_TEMPLATE,
         "single_prompt_template": prompts.EU4_SINGLE_PROMPT_TEMPLATE,
         "format_prompt": prompts.EU4_FORMAT_PROMPT,
+        "official_tags_codex": "scripts/config/validators/eu4_official_tags.json",
     },
     "4": {
         "id": "hoi4", "name": "Hearts of Iron IV (钢铁雄心4)",
@@ -172,6 +204,7 @@ GAME_PROFILES = {
         "prompt_template": prompts.HOI4_PROMPT_TEMPLATE,
         "single_prompt_template": prompts.HOI4_SINGLE_PROMPT_TEMPLATE,
         "format_prompt": prompts.HOI4_FORMAT_PROMPT,
+        "official_tags_codex": "scripts/config/validators/hoi4_official_tags.json",
     },
     "5": {
         "id": "ck3", "name": "Crusader Kings III (十字军之王3)",
@@ -183,6 +216,7 @@ GAME_PROFILES = {
         "prompt_template": prompts.CK3_PROMPT_TEMPLATE,
         "single_prompt_template": prompts.CK3_SINGLE_PROMPT_TEMPLATE,
         "format_prompt": prompts.CK3_FORMAT_PROMPT,
+        "official_tags_codex": "scripts/config/validators/ck3_official_tags.json",
     }
 }
 

@@ -5,6 +5,7 @@ import logging
 import hashlib
 from typing import Dict, List, Optional, Tuple, Any
 import re
+import json
 
 from scripts.utils import i18n
 from scripts.app_settings import PROJECT_ROOT, SOURCE_DIR
@@ -16,18 +17,22 @@ class ArchiveManager:
     管理模组翻译结果的归档，与 mods_cache.sqlite 数据库交互。
     """
     def __init__(self):
-        self.conn = self._init_database()
+        self.conn: Optional[sqlite3.Connection] = None
 
-    def _init_database(self) -> Optional[sqlite3.Connection]:
+    def initialize_database(self) -> bool:
+        """Initializes the database connection. Returns True on success, False on failure."""
+        if self.conn:
+            return True
         try:
-            conn = sqlite3.connect(MODS_CACHE_DB_PATH, check_same_thread=False)
-            conn.row_factory = sqlite3.Row
-            self._create_tables(conn)
-            logging.info(f"Successfully connected to mods cache database at {MODS_CACHE_DB_PATH}")
-            return conn
+            self.conn = sqlite3.connect(MODS_CACHE_DB_PATH, check_same_thread=False)
+            self.conn.row_factory = sqlite3.Row
+            self._create_tables(self.conn)
+            logging.info(i18n.t("log_info_db_connected", path=MODS_CACHE_DB_PATH))
+            return True
         except Exception as e:
-            logging.error(f"Error connecting to mods cache database: {e}")
-            return None
+            logging.error(i18n.t("log_error_db_connect", error=e))
+            self.conn = None
+            return False
 
     def _create_tables(self, conn: sqlite3.Connection):
         cursor = conn.cursor()
@@ -38,32 +43,9 @@ class ArchiveManager:
         cursor.execute("CREATE TABLE IF NOT EXISTS translated_entries (translated_entry_id INTEGER PRIMARY KEY AUTOINCREMENT, source_entry_id INTEGER NOT NULL, language_code TEXT NOT NULL, translated_text TEXT NOT NULL, last_translated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP, UNIQUE(source_entry_id, language_code), FOREIGN KEY (source_entry_id) REFERENCES source_entries (source_entry_id))")
         conn.commit()
 
-    def _parse_mod_file(self, mod_name: str, game_profile: Dict) -> Optional[str]:
-        """解析 .mod 文件以获取 remote_file_id"""
-        mod_file_path = os.path.join(SOURCE_DIR, mod_name, game_profile.get('descriptor_filename', 'descriptor.mod'))
-        if not os.path.exists(mod_file_path):
-            logging.warning(i18n.t("log_warn_descriptor_not_found", path=mod_file_path))
-            return None
-        try:
-            with open(mod_file_path, 'r', encoding='utf-8') as f:
-                content = f.read()
-                match = re.search(r'remote_file_id="(\d+)"', content)
-                if match:
-                    return match.group(1)
-            logging.warning(f"remote_file_id not found in {mod_file_path}.")
-            return None
-        except Exception as e:
-            logging.error(f"Error parsing mod file {mod_file_path}: {e}")
-            return None
-
-    def get_or_create_mod_id(self, mod_name: str, game_profile: Dict) -> Optional[int]:
+    def get_or_create_mod_entry(self, mod_name: str, remote_file_id: str) -> Optional[int]:
         """阶段一: 根据 remote_file_id 查询或创建 mod 记录，返回内部 mod_id"""
         if not self.conn: return None
-
-        remote_file_id = self._parse_mod_file(mod_name, game_profile)
-        if not remote_file_id:
-            logging.warning(i18n.t("log_warn_skip_archive_missing_id"))
-            return None
 
         cursor = self.conn.cursor()
         try:
@@ -84,7 +66,7 @@ class ArchiveManager:
 
             cursor.execute("INSERT INTO mod_identities (mod_id, remote_file_id) VALUES (?, ?)", (mod_id, remote_file_id))
             self.conn.commit()
-            logging.info(f"Created new archive entry for mod '{mod_name}' (mod_id: {mod_id}, remote_file_id: {remote_file_id}).")
+            logging.info(i18n.t("log_info_archive_entry_created", mod_name=mod_name, mod_id=mod_id, remote_file_id=remote_file_id))
             return mod_id
         except sqlite3.IntegrityError:
              # This can happen in a race condition, so we try to fetch the id again.
@@ -92,10 +74,10 @@ class ArchiveManager:
             result = cursor.fetchone()
             if result:
                 return result['mod_id']
-            logging.error("Failed to get or create mod_id due to an unexpected integrity error.")
+            logging.error(i18n.t("log_error_archive_integrity"))
             return None
         except Exception as e:
-            logging.error(f"Database error in get_or_create_mod_id: {e}")
+            logging.error(i18n.t("log_error_db_get_create_mod_id", error=e))
             self.conn.rollback()
             return None
 
@@ -118,13 +100,13 @@ class ArchiveManager:
             cursor.execute("SELECT version_id FROM source_versions WHERE snapshot_hash = ?", (snapshot_hash,))
             result = cursor.fetchone()
             if result:
-                logging.info(f"Source version with hash {snapshot_hash[:7]} already exists. Using version_id: {result['version_id']}.")
+                logging.info(i18n.t("log_info_source_version_exists", hash=snapshot_hash[:7], version_id=result['version_id']))
                 return result['version_id']
 
             # 3. 创建新版本
             cursor.execute("INSERT INTO source_versions (mod_id, snapshot_hash) VALUES (?, ?)", (mod_id, snapshot_hash))
             version_id = cursor.lastrowid
-            logging.info(f"Created new source version {version_id} for mod_id {mod_id} with hash {snapshot_hash[:7]}.")
+            logging.info(i18n.t("log_info_created_source_version", version_id=version_id, mod_id=mod_id, hash=snapshot_hash[:7]))
 
             # 4. 插入所有源条目
             source_entries = []
@@ -134,10 +116,10 @@ class ArchiveManager:
 
             cursor.executemany("INSERT INTO source_entries (version_id, entry_key, source_text) VALUES (?, ?, ?)", source_entries)
             self.conn.commit()
-            logging.info(f"Archived {len(source_entries)} source entries for version_id {version_id}.")
+            logging.info(i18n.t("log_info_archived_source_entries", count=len(source_entries), version_id=version_id))
             return version_id
         except Exception as e:
-            logging.error(f"Database error in create_source_version: {e}")
+            logging.error(i18n.t("log_error_db_create_source_version", error=e))
             self.conn.rollback()
             return None
 
@@ -158,7 +140,7 @@ class ArchiveManager:
                     key_to_translation[key] = translated_text
 
             if not key_to_translation:
-                logging.warning("No translations to archive.")
+                logging.warning(i18n.t("log_warn_no_translations_to_archive"))
                 return
 
             # 2. 准备 UPSERT 数据
@@ -184,16 +166,16 @@ class ArchiveManager:
             """, upsert_data)
 
             self.conn.commit()
-            logging.info(f"Archived/Updated {len(upsert_data)} translated entries for language '{target_lang_code}'.")
+            logging.info(i18n.t("log_info_archived_updated_translations", count=len(upsert_data), lang_code=target_lang_code))
 
         except Exception as e:
-            logging.error(f"Database error in archive_translated_results for language '{target_lang_code}': {e}")
+            logging.error(i18n.t("log_error_db_archive_results", lang_code=target_lang_code, error=e))
             self.conn.rollback()
 
     def close(self):
         if self.conn:
             self.conn.close()
-            logging.info("Mods cache database connection closed.")
+            logging.info(i18n.t("log_info_db_connection_closed"))
 
 # 全局实例
 archive_manager = ArchiveManager()

@@ -47,7 +47,7 @@ class QwenHandler(BaseApiHandler):
                     {"role": "system", "content": "You are a professional translator for game mods."},
                     {"role": "user", "content": prompt}
                 ],
-                max_completion_tokens=4000,
+                max_tokens=4000,
                 temperature=0.3, # 降低随机性
                 extra_body={"enable_thinking": enable_thinking}
             )
