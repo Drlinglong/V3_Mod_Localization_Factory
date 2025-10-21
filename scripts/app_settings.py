@@ -11,7 +11,7 @@ ARCHIVE_RESULTS_AFTER_TRANSLATION = True
 PROJECT_NAME = "Paradox Mod 本地化工厂 - Paradox Mod Localization Factory"
 PROJECT_DISPLAY_NAME = "蕾姆丝计划 - Project Remis "
 VERSION = "1.2.0"
-LAST_UPDATE_DATE = "2025-10-12"
+LAST_UPDATE_DATE = "2025-10-21"
 COPYRIGHT = "© 2025 Project Remis Team"
 
 # --- 项目信息显示配置 --------------------------------------------
