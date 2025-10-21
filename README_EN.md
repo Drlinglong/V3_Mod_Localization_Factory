@@ -72,9 +72,10 @@ We've hidden complex technology behind the scenes, so you can enjoy the purest a
 
 ## 3. How to Use
 
-> **Want to run models locally?**
-> If you're concerned about data privacy, want to work offline, or prefer not to pay for API fees, we highly recommend using Ollama for localization.
-> [Click here for the Ollama Setup and User Guide](./docs/en/user-guides/using_ollama.md).
+> **Want to run models locally? (Technical Knowledge Required)**
+> If you have some technical background, are concerned about data privacy, or want to work offline, you can try using Ollama for localization.
+> **Warning:** Using local models requires manual configuration, and the translation quality is often **significantly inferior** to large online models (like Gemini/GPT). We do not recommend this feature if you are unfamiliar with command lines or configuration files.
+> [If you insist on using it, you must first click here to read the Ollama Setup and User Guide](./docs/en/user-guides/using_ollama.md).
 
 Thanks to new packaging technology, using this project has become easier than ever. **No Python installation, no environment configuration required, truly plug-and-play.**
 

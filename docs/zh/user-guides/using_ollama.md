@@ -61,6 +61,7 @@ API_PROVIDERS = {
 这个错误意味着本程序无法连接到您的 Ollama 服务。
 - **Ollama 运行了吗？** 请确保 Ollama 程序正在您的电脑上运行。
 - **地址对吗？** 程序默认连接 `http://localhost:11434`。如果您在其他地址上运行 Ollama，则必须设置 `OLLAMA_BASE_URL` 环境变量，详情请见下面的“高级”部分。
+- **模型名称正确吗？** 这是导致 `404 Not Found` 的另一个常见原因。请确保您在 `scripts/app_settings.py` 中设置的 `default_model` 名称，与您通过 `ollama list` 命令看到的已安装模型列表中的名称完全一致。
 - **被防火墙或代理挡住了吗？** 检查您系统的防火墙或代理设置，确保它们没有阻止 Python 程序的网络连接。
 
 #### 错误：`Pydantic validation failed` 或 `Invalid JSON`

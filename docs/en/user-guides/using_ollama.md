@@ -61,6 +61,7 @@ API_PROVIDERS = {
 This error means the application cannot reach your Ollama service.
 - **Is Ollama running?** Make sure the Ollama application is running on your machine.
 - **Is the address correct?** The application defaults to `http://localhost:11434`. If you run Ollama on a different address, you must set the `OLLAMA_BASE_URL` environment variable as described in the "Advanced" section below.
+- **Is the model name correct?** This is another common cause for a `404 Not Found` error. Ensure the `default_model` name you have set in `scripts/app_settings.py` exactly matches a model name from your `ollama list`.
 - **Is a firewall or proxy interfering?** Check your system's firewall or proxy settings to ensure they are not blocking the connection from the Python application.
 
 #### Error: `Pydantic validation failed` or `Invalid JSON`
