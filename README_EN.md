@@ -48,7 +48,7 @@ In the era of artificial intelligence and large language models, language should
 We've hidden complex technology behind the scenes, so you can enjoy the purest and simplest localization experience.
 
 #### **Powerful AI Translation Core**
-*   **Multiple AI Engines to Choose From**: Built-in support for industry-leading AI translation services such as Gemini, OpenAI, DeepSeek, Grok, Ollama, allowing you to choose the one that suits you best.
+*   **Multiple AI Engines to Choose From**: Built-in support for industry-leading AI translation services such as Gemini, OpenAI, DeepSeek, Grok, Ollama, [ModelScope, and SiliconFlow](./docs/en/user-guides/using_modelscope_and_siliconflow.md), and even allows technical users to [connect to any custom service](./docs/en/user-guides/using_custom_openai_api.md). You can choose the one that suits you best.
 *   **Game Terminology, Accurate Translation**: Features an intelligent glossary system. It acts like an experienced player who understands the game, automatically recognizing specialized terms like "convoy" or "ideology" and ensuring consistent translation throughout the Mod, avoiding the stiffness of machine translation.
 *   **No Fear of Strange Files**: Paradox game file formats can sometimes be "tricky," but our tool handles them with ease, ensuring all text can be found and translated.
 *   **No Fear of Large Files**: Encountering a huge text file with tens of thousands of lines? The tool automatically breaks it into smaller chunks for stable and reliable processing.
@@ -72,11 +72,6 @@ We've hidden complex technology behind the scenes, so you can enjoy the purest a
 
 ## 3. How to Use
 
-> **Want to run models locally? (Technical Knowledge Required)**
-> If you have some technical background, are concerned about data privacy, or want to work offline, you can try using Ollama for localization.
-> **Warning:** Using local models requires manual configuration, and the translation quality is often **significantly inferior** to large online models (like Gemini/GPT). We do not recommend this feature if you are unfamiliar with command lines or configuration files.
-> [If you insist on using it, you must first click here to read the Ollama Setup and User Guide](./docs/en/user-guides/using_ollama.md).
-
 Thanks to new packaging technology, using this project has become easier than ever. **No Python installation, no environment configuration required, truly plug-and-play.**
 
 ### Step 1: Download and Unzip
@@ -84,9 +79,15 @@ Thanks to new packaging technology, using this project has become easier than ev
 2.  Unzip it to any location on your computer.
 3.  Run `setup.bat`, which will automatically install dependencies and guide you to enter your API key, setting it as an environment variable for subsequent localization processes.
 
+> **Want to run models locally? (Technical Knowledge Required)**
+> If you have some technical background, are concerned about data privacy, or want to work offline, you can try using Ollama for localization.
+> **Warning:** Using local models requires manual configuration, and the translation quality is often **significantly inferior** to large online models (like Gemini/GPT). We do not recommend this feature if you are unfamiliar with command lines or configuration files.
+> [If you insist on using it, you must first click here to read the Ollama Setup and User Guide](./docs/en/user-guides/using_ollama.md).
+
 > **Important Note: Prepare Your API Key!**
 > This tool is an "AI translation porter"; it does not provide translation capabilities itself. You need to use your own AI service API Key for translation.
 > During operation, the program will prompt you to select an AI service and enter the corresponding API Key. Please ensure you have a valid API Key for your chosen AI service (e.g., Gemini, OpenAI, etc.).
+> For users of **ModelScope** or **SiliconFlow**, we highly recommend reading [this guide](./docs/en/user-guides/using_modelscope_and_siliconflow.md) to configure your preferred model for the best experience.
 >  **Important Reminder**:
 >  Applying for an API key requires account registration and binding a bank card.
 >  Using the API may incur costs, subject to the service provider's billing terms.

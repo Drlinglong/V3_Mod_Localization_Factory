@@ -14,6 +14,9 @@ from .qwen_handler import QwenHandler
 from .deepseek_handler import DeepSeekHandler
 from .grok_handler import GrokHandler
 from .ollama_handler import OllamaHandler
+from .modelscope_handler import ModelScopeHandler
+from .siliconflow_handler import SiliconFlowHandler
+from .yourfavourite_handler import YourFavouriteHandler
 
 
 def get_handler(provider_name: str, model_name: str = None) -> 'BaseApiHandler':
@@ -36,6 +39,12 @@ def get_handler(provider_name: str, model_name: str = None) -> 'BaseApiHandler':
             return GrokHandler(provider_name)
         elif provider_name == "ollama":
             return OllamaHandler(provider_name)
+        elif provider_name == "modelscope":
+            return ModelScopeHandler(provider_name)
+        elif provider_name == "siliconflow":
+            return SiliconFlowHandler(provider_name)
+        elif provider_name == "your_favourite_api":
+            return YourFavouriteHandler(provider_name)
         else:
             # 默认返回 Gemini
             logging.warning(f"Unknown provider '{provider_name}', falling back to 'gemini'.")

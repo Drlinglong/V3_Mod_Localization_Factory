@@ -103,6 +103,24 @@ API_PROVIDERS = {
         "max_retries": OLLAMA_MAX_RETRIES,
         "description": "本地Ollama模型，无需API密钥"
     },
+    "modelscope": {
+        "api_key_env": "MODELSCOPE_API_KEY",
+        "base_url": "https://api-inference.modelscope.cn/v1/",
+        "default_model": "deepseek-ai/DeepSeek-V3.2-Exp",
+        "description": "通过魔搭（ModelScope）调用AI模型"
+    },
+    "siliconflow": {
+        "api_key_env": "SILICONFLOW_API_KEY",
+        "base_url": "https://api.siliconflow.cn/v1",
+        "default_model": "DeepSeek-R1",
+        "description": "通过硅基流动（SiliconFlow）调用AI模型"
+    },
+    "your_favourite_api": {
+        "api_key_env": "YOUR_FAVOURITE_API_KEY",
+        "base_url": "YOUR_BASE_URL_HERE",
+        "default_model": "YOUR_MODEL_NAME_HERE",
+        "description": "（需要技术知识）连接到您自选的任何兼容OpenAI的API服务"
+    },
 }
 
 # --- 语言数据库 --------------------------------------------------

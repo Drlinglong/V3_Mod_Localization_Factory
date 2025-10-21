@@ -74,6 +74,22 @@ class SetupInstaller:
                 "type": "key_required"
             },
             "6": {
+                "name": "ModelScope (魔搭)",
+                "package": "openai",
+                "env_key": "MODELSCOPE_API_KEY",
+                "url": "https://modelscope.cn/my/my-accesstoken",
+                "description": "setup_desc_modelscope",
+                "type": "key_required"
+            },
+            "7": {
+                "name": "SiliconFlow (硅基流动)",
+                "package": "openai",
+                "env_key": "SILICONFLOW_API_KEY",
+                "url": "https://siliconflow.cn/",
+                "description": "setup_desc_siliconflow",
+                "type": "key_required"
+            },
+            "8": {
                 "name": "Ollama (本地模型)",
                 "url": "https://ollama.com/",
                 "description": "setup_desc_ollama",
@@ -90,7 +106,7 @@ Ollama 是一个本地化运行大语言模型的框架，它不需要API Key。
 3. 确保Ollama程序在后台持续运行，本工具才能连接到它。
 """
             },
-            "7": {
+            "9": {
                 "name": "Gemini CLI (谷歌官方CLI)",
                 "url": "https://github.com/google/gemini-cli",
                 "description": "setup_desc_gemini_cli",
