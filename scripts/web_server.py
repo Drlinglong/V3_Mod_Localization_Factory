@@ -142,12 +142,27 @@ async def start_translation(
                 logging.info(f"Detected single sub-directory '{extracted_items[0]}', promoting its contents.")
                 # Move all contents from the sub-directory to the parent (source_path)
                 for item_name in os.listdir(potential_inner_folder):
-                    shutil.move(
-                        os.path.join(potential_inner_folder, item_name),
-                        os.path.join(source_path, item_name)
-                    )
+                    src = os.path.join(potential_inner_folder, item_name)
+                    dst = os.path.join(source_path, item_name)
+                    try:
+                        # Remove destination if it already exists
+                        if os.path.exists(dst):
+                            if os.path.isdir(dst):
+                                shutil.rmtree(dst)
+                            else:
+                                os.remove(dst)
+                        shutil.move(src, dst)
+                    except Exception as move_error:
+                        logging.warning(f"Failed to move '{item_name}': {move_error}, attempting direct copy")
+                        if os.path.isdir(src):
+                            shutil.copytree(src, dst, dirs_exist_ok=True)
+                        else:
+                            shutil.copy2(src, dst)
                 # Remove the now-empty sub-directory
-                os.rmdir(potential_inner_folder)
+                try:
+                    os.rmdir(potential_inner_folder)
+                except Exception as rmdir_error:
+                    logging.warning(f"Failed to remove sub-directory: {rmdir_error}")
 
         os.remove(temp_zip_path) # Clean up the zip file
 
