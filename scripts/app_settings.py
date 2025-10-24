@@ -36,7 +36,7 @@ def get_smart_max_workers():
     cpu_count = multiprocessing.cpu_count() or 1
     return min(32, cpu_count * 2)
 
-RECOMMENDED_MAX_WORKERS = get_smart_max_workers()
+RECOMMENDED_MAX_WORKERS = 1
 BATCH_SIZE = CHUNK_SIZE
 
 # --- 路径配置 ----------------------------------------------------

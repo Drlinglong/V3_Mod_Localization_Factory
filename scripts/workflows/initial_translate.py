@@ -1,6 +1,7 @@
 # scripts/workflows/initial_translate.py
 import os
 import logging
+import time
 from typing import Any, Optional, List
 
 from scripts.core import file_parser, api_handler, file_builder, asset_handler, directory_handler
@@ -8,6 +9,8 @@ from scripts.core.glossary_manager import glossary_manager
 from scripts.core.proofreading_tracker import create_proofreading_tracker
 from scripts.core.parallel_processor import ParallelProcessor, FileTask
 from scripts.core.archive_manager import archive_manager
+from scripts.core.progress_db_manager import ProgressDBManager
+from scripts.core.file_aggregator import assemble_files_from_db
 from scripts.app_settings import SOURCE_DIR, DEST_DIR, LANGUAGES, RECOMMENDED_MAX_WORKERS, ARCHIVE_RESULTS_AFTER_TRANSLATION
 from scripts.utils import i18n
 
@@ -127,216 +130,122 @@ def run(mod_name: str,
     if ARCHIVE_RESULTS_AFTER_TRANSLATION and mod_id_for_archive:
         version_id_for_archive = archive_manager.create_source_version(mod_id_for_archive, all_files_data)
 
-    # ───────────── 5. 多语言并行翻译 ─────────────
+    # ───────────── 5. 多语言并行翻译 (CRASH-SAFE WORKFLOW) ─────────────
     for target_lang in target_languages:
-        logging.info(i18n.t("translating_to_language", lang_name=target_lang["name"]))
+        # ─── 5.1. 初始化任务 & 进度数据库 ───
+        job_id = f"{mod_name}-{target_lang['code']}-{int(time.time())}"
+        progress_manager = ProgressDBManager(job_id=job_id)
+        logging.info(i18n.t("translating_to_language_job", lang_name=target_lang["name"], job_id=job_id))
         
-        # 创建校对进度追踪器
         proofreading_tracker = create_proofreading_tracker(
             mod_name, output_folder_name, target_lang.get("code", "zh-CN")
         )
         
-        # 创建文件任务列表
         file_tasks = []
         for fd in all_files_data:
-            # 检查是否需要创建fallback文件
-            if not fd["texts_to_translate"]:
-                # 空文件，创建fallback
-                # 创建临时的FileTask对象用于构建目录
-                temp_file_task = FileTask(
-                    filename=fd["filename"],
-                    root=fd["root"],
-                    original_lines=fd["original_lines"],
-                    texts_to_translate=fd["texts_to_translate"],
-                    key_map=fd["key_map"],
-                    is_custom_loc=fd["is_custom_loc"],
-                    target_lang=target_lang,
-                    source_lang=source_lang,
-                    game_profile=game_profile,
-                    mod_context=mod_context,
-                    provider_name=handler.provider_name,
-                    output_folder_name=output_folder_name,
-                    source_dir=SOURCE_DIR,
-                    dest_dir=DEST_DIR,
-                    client=handler.client,
-                    mod_name=mod_name
+            if not fd["texts_to_translate"]: # Fallback logic for empty files
+                dest_dir = _build_dest_dir_from_info(
+                    {"is_custom_loc": fd["is_custom_loc"], "root": fd["root"], "mod_name": mod_name},
+                    target_lang, output_folder_name, game_profile
                 )
-                
-                dest_dir = _build_dest_dir(temp_file_task, target_lang, output_folder_name, game_profile)
                 os.makedirs(dest_dir, exist_ok=True)
-                
                 dest_file_path = file_builder.create_fallback_file(
-                    os.path.join(fd["root"], fd["filename"]), 
-                    dest_dir, 
-                    fd["filename"],
-                    source_lang, 
-                    target_lang, 
-                    game_profile
+                    os.path.join(fd["root"], fd["filename"]), dest_dir, fd["filename"],
+                    source_lang, target_lang, game_profile
                 )
-                
-                # 收集fallback文件信息用于校对进度追踪
                 if dest_file_path:
-                    source_file_path = os.path.join(fd["root"], fd["filename"])
                     proofreading_tracker.add_file_info({
-                        'source_path': source_file_path,
-                        'dest_path': dest_file_path,
-                        'translated_lines': 0,  # fallback文件没有翻译行数
-                        'filename': fd["filename"],
-                        'is_custom_loc': fd["is_custom_loc"]
+                        'source_path': os.path.join(fd["root"], fd["filename"]),
+                        'dest_path': dest_file_path, 'translated_lines': 0,
+                        'filename': fd["filename"], 'is_custom_loc': fd["is_custom_loc"]
                     })
                 continue
             
-            # 创建文件任务
-            file_task = FileTask(
-                filename=fd["filename"],
-                root=fd["root"],
-                original_lines=fd["original_lines"],
-                texts_to_translate=fd["texts_to_translate"],
-                key_map=fd["key_map"],
-                is_custom_loc=fd["is_custom_loc"],
-                target_lang=target_lang,
-                source_lang=source_lang,
-                game_profile=game_profile,
-                mod_context=mod_context,
-                provider_name=handler.provider_name,
-                output_folder_name=output_folder_name,
-                source_dir=SOURCE_DIR,
-                dest_dir=DEST_DIR,
-                client=handler.client,
-                mod_name=mod_name
-            )
-            file_tasks.append(file_task)
+            file_tasks.append(FileTask(
+                filename=fd["filename"], root=fd["root"], original_lines=fd["original_lines"],
+                texts_to_translate=fd["texts_to_translate"], key_map=fd["key_map"],
+                is_custom_loc=fd["is_custom_loc"], target_lang=target_lang, source_lang=source_lang,
+                game_profile=game_profile, mod_context=mod_context, provider_name=handler.provider_name,
+                output_folder_name=output_folder_name, source_dir=SOURCE_DIR, dest_dir=DEST_DIR,
+                client=handler.client, mod_name=mod_name
+            ))
         
-        # 使用并行处理器处理文件
+        # ─── 5.2. [生产阶段] 并行处理，填充数据库 ───
+        all_ok = True
         if file_tasks:
-            # 计算最优并行数（建议24个批次同时运行）
             max_workers = RECOMMENDED_MAX_WORKERS
             if selected_provider == "ollama":
                 max_workers = 1
                 logging.info(i18n.t("ollama_single_thread_warning"))
             processor = ParallelProcessor(max_workers=max_workers)
-            
-            # 获取翻译函数（使用统一的API Handler接口）
             translation_function = handler.translate_batch
             
-            # 并行处理所有文件，获取翻译结果
-            file_results, all_warnings = processor.process_files_parallel(
+            all_ok, all_warnings = processor.process_files_parallel(
                 file_tasks=file_tasks,
-                translation_function=translation_function
+                translation_function=translation_function,
+                progress_manager=progress_manager
             )
             
-            # 报告词典验证警告
             if all_warnings:
                 logging.warning(i18n.t("glossary_consistency_warning_header"))
-                for warning in all_warnings:
-                    logging.warning(warning['message'])
-
+                for warning in all_warnings: logging.warning(warning['message'])
                 logging.warning(i18n.t("cjk_glossary_warning"))
 
-            # 处理每个文件的翻译结果
-            for filename, translated_texts in file_results.items():
-                # 找到对应的文件任务
-                file_task = next(ft for ft in file_tasks if ft.filename == filename)
-                
-                if translated_texts is None:
-                    logging.error(i18n.t("file_translation_failed", filename=filename))
-                    continue
-                
-                # 构建目标目录
-                dest_dir = _build_dest_dir(file_task, target_lang, output_folder_name, game_profile)
-                os.makedirs(dest_dir, exist_ok=True)
-                
-                # 重建并写入文件
-                dest_file_path = file_builder.rebuild_and_write_file(
-                    file_task.original_lines,
-                    file_task.texts_to_translate,
-                    translated_texts,
-                    file_task.key_map,
-                    dest_dir,
-                    file_task.filename,
-                    file_task.source_lang,
-                    file_task.target_lang,
-                    file_task.game_profile,
-                )
-                
-                # 更新校对进度追踪
-                if dest_file_path:
-                    source_file_path = os.path.join(file_task.root, file_task.filename)
-                    translated_lines_count = len(file_task.texts_to_translate)
-                    
-                    proofreading_tracker.add_file_info({
-                        'source_path': source_file_path,
-                        'dest_path': dest_file_path,
-                        'translated_lines': translated_lines_count,
-                        'filename': file_task.filename,
-                        'is_custom_loc': file_task.is_custom_loc
-                    })
-                    
-                    logging.info(i18n.t("file_build_completed", filename=filename))
-        
-        # ───────────── 6. 运行后处理格式验证 ─────────────
-        try:
-            from scripts.core.post_processing_manager import PostProcessingManager
-            from scripts.utils import tag_scanner
+        if not all_ok:
+            logging.error(i18n.t("log_error_parallel_processing_failed", job_id=job_id, lang_name=target_lang["name"]))
+            progress_manager.close()
+            continue
 
-            dynamic_tags = None
-            official_tags_path = game_profile.get("official_tags_codex")
-            
-            if official_tags_path:
-                logging.info(i18n.t("log.tag_analysis.starting_dynamic_validation"))
-                mod_loc_path_for_scan = os.path.join(SOURCE_DIR, mod_name, game_profile["source_localization_folder"])
-                dynamic_tags = tag_scanner.analyze_mod_and_get_all_valid_tags(
-                    mod_loc_path=mod_loc_path_for_scan,
-                    official_tags_json_path=official_tags_path
-                )
-            else:
-                logging.warning(f"Skipping dynamic tag analysis: 'official_tags_codex' not defined for game '{game_profile.get('id')}'.")
+        # ─── 5.3. [消费阶段] 从数据库组装文件 ───
+        assemble_files_from_db(
+            job_id=job_id, progress_manager=progress_manager, all_files_data=all_files_data,
+            target_lang=target_lang, source_lang=source_lang, game_profile=game_profile,
+            output_folder_name=output_folder_name, mod_name=mod_name
+        )
 
-            # 构建输出文件夹路径
-            output_folder_path = os.path.join(DEST_DIR, output_folder_name)
-            
-            # 创建后处理验证管理器
-            post_processor = PostProcessingManager(game_profile, output_folder_path)
-            
-            # 运行验证, 传入动态生成的标签列表 (如果存在)
-            validation_success = post_processor.run_validation(target_lang, source_lang, dynamic_valid_tags=dynamic_tags)
-            
-            if validation_success:
-                # 获取验证统计信息
-                stats = post_processor.get_validation_stats()
-                logging.info(i18n.t("post_processing_completion_summary", 
-                                   total_files=stats['total_files'],
-                                   valid_files=stats['valid_files'],
-                                   files_with_issues=stats['files_with_issues'],
-                                   total_errors=stats['total_errors'],
-                                   total_warnings=stats['total_warnings']))
+        # ─── 5.4. 更新校对追踪器 (文件写入后) ───
+        for fd in all_files_data:
+            if not fd["texts_to_translate"]: continue
+            dest_dir_path = _build_dest_dir_from_info(
+                {"is_custom_loc": fd["is_custom_loc"], "root": fd["root"], "mod_name": mod_name},
+                target_lang, output_folder_name, game_profile
+            )
+            dest_file_path = file_builder.get_dest_filepath(
+                dest_dir_path, fd['filename'], source_lang, target_lang, game_profile
+            )
+            proofreading_tracker.add_file_info({
+                'source_path': os.path.join(fd["root"], fd["filename"]),
+                'dest_path': dest_file_path, 'translated_lines': len(fd["texts_to_translate"]),
+                'filename': fd['filename'], 'is_custom_loc': fd['is_custom_loc']
+            })
 
-                # 合并结果进校对进度表
-                post_processor.attach_results_to_proofreading_tracker(proofreading_tracker)
-            else:
-                logging.warning("后处理验证过程中发生错误")
-                
-        except ImportError:
-            logging.warning("后处理验证模块未找到，跳过格式验证")
-        except Exception as e:
-            logging.error(f"后处理验证失败: {e}")
+        # ─── 6. 后处理 & 校对看板 ───
+        _run_post_processing(game_profile, mod_name, output_folder_name, target_lang, source_lang, proofreading_tracker)
 
-        # ───────────── 6.5. 生成校对进度看板 ─────────────
-        # 仅在此处保存一次，避免重复写入导致“复读”
         logging.info(i18n.t("generating_proofreading_board"))
         if proofreading_tracker.save_proofreading_progress():
             logging.info(i18n.t("proofreading_board_generated_success"))
         else:
             logging.warning(i18n.t("proofreading_board_generation_failed"))
 
-        # ───────────── ARCHIVE STAGE 3: Archive Translated Results ─────────────
-        if ARCHIVE_RESULTS_AFTER_TRANSLATION and version_id_for_archive and file_results:
-            archive_manager.archive_translated_results(
-                version_id=version_id_for_archive,
-                file_results=file_results,
-                all_files_data=all_files_data,
-                target_lang_code=target_lang['code']
-            )
+        # ─── 7. 归档翻译结果 (从数据库获取) ───
+        if ARCHIVE_RESULTS_AFTER_TRANSLATION and version_id_for_archive:
+            completed_batches = progress_manager.get_all_completed_batches_for_job()
+            file_results_from_db = {}
+            for batch in completed_batches:
+                filename = os.path.basename(batch['file_path'])
+                if filename not in file_results_from_db: file_results_from_db[filename] = []
+                file_results_from_db[filename].extend(batch['translated_texts'])
+
+            if file_results_from_db:
+                archive_manager.archive_translated_results(
+                    version_id=version_id_for_archive, file_results=file_results_from_db,
+                    all_files_data=all_files_data, target_lang_code=target_lang['code']
+                )
+
+        # ─── 8. 清理本次任务 ───
+        progress_manager.cleanup_job_data()
+        progress_manager.close()
 
     # ───────────── 7. 处理元数据 ─────────────
     if is_batch_mode:
@@ -357,30 +266,62 @@ def run(mod_name: str,
     logging.info(i18n.t("output_folder_created", folder=output_folder_name))
 
 
-def _build_dest_dir(file_task: FileTask, target_lang: dict, output_folder_name: str, game_profile: dict) -> str:
-    """构建目标目录路径"""
-    if file_task.is_custom_loc:
-        cust_loc_root = os.path.join(SOURCE_DIR, file_task.mod_name, "customizable_localization")
-        rel = os.path.relpath(file_task.root, cust_loc_root)
+def _build_dest_dir_from_info(file_info: dict, target_lang: dict, output_folder_name: str, game_profile: dict) -> str:
+    """(Refactored) 构建目标目录路径"""
+    if file_info["is_custom_loc"]:
+        cust_loc_root = os.path.join(SOURCE_DIR, file_info["mod_name"], "customizable_localization")
+        rel = os.path.relpath(file_info["root"], cust_loc_root)
         dest_dir = os.path.join(
-            DEST_DIR,
-            output_folder_name,
-            "customizable_localization",
-            target_lang["key"][2:],
-            rel,
+            DEST_DIR, output_folder_name, "customizable_localization",
+            target_lang["key"][2:], rel
         )
     else:
         source_loc_folder = game_profile["source_localization_folder"]
-        source_loc_path = os.path.join(SOURCE_DIR, file_task.mod_name, source_loc_folder)
-        rel = os.path.relpath(file_task.root, source_loc_path)
+        source_loc_path = os.path.join(SOURCE_DIR, file_info["mod_name"], source_loc_folder)
+        rel = os.path.relpath(file_info["root"], source_loc_path)
         dest_dir = os.path.join(
-            DEST_DIR,
-            output_folder_name,
-            source_loc_folder,
-            target_lang["key"][2:],
-            rel,
+            DEST_DIR, output_folder_name, source_loc_folder,
+            target_lang["key"][2:], rel
         )
     return dest_dir
+
+def _run_post_processing(game_profile, mod_name, output_folder_name, target_lang, source_lang, proofreading_tracker):
+    """(Extracted) 运行后处理格式验证"""
+    try:
+        from scripts.core.post_processing_manager import PostProcessingManager
+        from scripts.utils import tag_scanner
+
+        dynamic_tags = None
+        official_tags_path = game_profile.get("official_tags_codex")
+
+        if official_tags_path:
+            logging.info(i18n.t("log.tag_analysis.starting_dynamic_validation"))
+            mod_loc_path_for_scan = os.path.join(SOURCE_DIR, mod_name, game_profile["source_localization_folder"])
+            dynamic_tags = tag_scanner.analyze_mod_and_get_all_valid_tags(
+                mod_loc_path=mod_loc_path_for_scan,
+                official_tags_json_path=official_tags_path
+            )
+        else:
+            logging.warning(f"Skipping dynamic tag analysis: 'official_tags_codex' not defined for game '{game_profile.get('id')}'.")
+
+        output_folder_path = os.path.join(DEST_DIR, output_folder_name)
+        post_processor = PostProcessingManager(game_profile, output_folder_path)
+        validation_success = post_processor.run_validation(target_lang, source_lang, dynamic_valid_tags=dynamic_tags)
+
+        if validation_success:
+            stats = post_processor.get_validation_stats()
+            logging.info(i18n.t("post_processing_completion_summary",
+                               total_files=stats['total_files'], valid_files=stats['valid_files'],
+                               files_with_issues=stats['files_with_issues'], total_errors=stats['total_errors'],
+                               total_warnings=stats['total_warnings']))
+            post_processor.attach_results_to_proofreading_tracker(proofreading_tracker)
+        else:
+            logging.warning("后处理验证过程中发生错误")
+
+    except ImportError:
+        logging.warning("后处理验证模块未找到，跳过格式验证")
+    except Exception as e:
+        logging.error(f"后处理验证失败: {e}")
 
 
 def process_metadata_for_language(

@@ -33,15 +33,10 @@ def create_fallback_file(
         if not header_found_and_replaced:
             lines.insert(0, f"{target_lang['key']}:\n")
 
-        # Dynamically generate the new filename based on language keys
-        source_suffix = f"_l_{source_lang['key'][2:]}"
-        target_suffix = f"_l_{target_lang['key'][2:]}"
-        new_filename = (
-            original_filename.replace(source_suffix, target_suffix)
-            if source_suffix in original_filename
-            else original_filename
+        # Generate the new filename and path
+        dest_file_path = get_dest_filepath(
+            dest_dir, original_filename, source_lang, target_lang, game_profile
         )
-        dest_file_path = os.path.join(dest_dir, new_filename)
 
         # Write the file using the encoding specified in the game profile
         with open(dest_file_path, "w", encoding=game_profile.get("encoding", "utf-8-sig")) as f:
@@ -110,16 +105,11 @@ def rebuild_and_write_file(
     if not header_found_and_replaced:
         new_lines.insert(0, f"{target_lang['key']}:\n")
         
-    # --- Generate the new filename ---
-    source_suffix = f"_l_{source_lang['key'][2:]}"
-    target_suffix = f"_l_{target_lang['key'][2:]}"
-    new_filename = (
-        original_filename.replace(source_suffix, target_suffix)
-        if source_suffix in original_filename
-        else original_filename
+    # --- Generate the new filename and path ---
+    dest_file_path = get_dest_filepath(
+        dest_dir_path, original_filename, source_lang, target_lang, game_profile
     )
-    
-    dest_file_path = os.path.join(dest_dir_path, new_filename)
+    new_filename = os.path.basename(dest_file_path)
 
     # --- Save the file using the correct encoding from the game profile ---
     with open(dest_file_path, "w", encoding=game_profile.get("encoding", "utf-8-sig")) as f:
@@ -134,3 +124,23 @@ def rebuild_and_write_file(
     
     # 返回生成的文件路径
     return dest_file_path
+
+
+def get_dest_filepath(
+    dest_dir_path: str,
+    original_filename: str,
+    source_lang: dict,
+    target_lang: dict,
+    game_profile: dict,
+) -> str:
+    """
+    (Extracted Helper) Generates the destination file path, including the new filename.
+    """
+    source_suffix = f"_l_{source_lang['key'][2:]}"
+    target_suffix = f"_l_{target_lang['key'][2:]}"
+    new_filename = (
+        original_filename.replace(source_suffix, target_suffix)
+        if source_suffix in original_filename
+        else original_filename
+    )
+    return os.path.join(dest_dir_path, new_filename)

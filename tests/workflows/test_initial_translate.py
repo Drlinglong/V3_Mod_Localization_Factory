@@ -57,6 +57,9 @@ def setup_test_environment(tmp_path, mocker):
     # 3. Mock 关键模块和变量 (在它们被引用的地方)
     mocker.patch("scripts.workflows.initial_translate.SOURCE_DIR", str(source_dir))
     mocker.patch("scripts.workflows.initial_translate.DEST_DIR", str(dest_dir))
+    # ALSO mock for the newly created aggregator module
+    mocker.patch("scripts.core.file_aggregator.SOURCE_DIR", str(source_dir))
+    mocker.patch("scripts.core.file_aggregator.DEST_DIR", str(dest_dir))
 
     # 直接mock词典加载，避免文件系统依赖
     mocker.patch("scripts.core.glossary_manager.glossary_manager.load_game_glossary", return_value=True)
@@ -98,10 +101,22 @@ def test_run_happy_path(setup_test_environment, mocker, capsys):
     }
     mock_warnings = []
 
-    # 劫持并行处理器，直接返回预设结果
+    # 劫持并行处理器，现在它只返回状态和警告
     mocker.patch(
         "scripts.core.parallel_processor.ParallelProcessor.process_files_parallel",
-        return_value=(mock_file_results, mock_warnings)
+        return_value=(True, mock_warnings) # (all_ok, warnings)
+    )
+
+    # 劫持进度数据库，让 file_aggregator 能“读到”模拟结果
+    # 构建模拟的数据库返回批次
+    mock_db_batches = [{
+        "file_path": str(Path(setup_test_environment["source_dir"]) / TEST_MOD_NAME / "localisation" / "zz_test_file_l_english.yml"),
+        "batch_index": 0,
+        "translated_texts": mock_translated_texts
+    }]
+    mocker.patch(
+        "scripts.core.progress_db_manager.ProgressDBManager.get_all_completed_batches_for_job",
+        return_value=mock_db_batches
     )
 
     # 劫持元数据处理函数，避免不必要的API调用
@@ -182,7 +197,18 @@ def test_run_with_glossary_warning(setup_test_environment, mocker, caplog):
     # 劫持并行处理器，返回“有问题”的结果和警告
     mocker.patch(
         "scripts.core.parallel_processor.ParallelProcessor.process_files_parallel",
-        return_value=(mock_file_results, mock_warnings)
+        return_value=(True, mock_warnings) # (all_ok, warnings)
+    )
+
+    # 劫持进度数据库，让 file_aggregator 能“读到”模拟结果
+    mock_db_batches = [{
+        "file_path": str(source_file),
+        "batch_index": 0,
+        "translated_texts": mock_translated_texts
+    }]
+    mocker.patch(
+        "scripts.core.progress_db_manager.ProgressDBManager.get_all_completed_batches_for_job",
+        return_value=mock_db_batches
     )
 
     # 劫持API Handler的创建
