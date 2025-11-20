@@ -19,9 +19,6 @@
     --mantine-color-dark-0: var(--byzantine-ivory);
 }
 
-border: 3px solid var(--byzantine-gold-border);
-}
-
 /* Buttons */
 html.byzantine .mantine-Button-root {
     background: linear-gradient(135deg, var(--byzantine-gold-border) 0%, var(--byzantine-gold) 100%);
