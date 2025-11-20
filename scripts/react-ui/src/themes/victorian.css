@@ -20,9 +20,6 @@
     --mantine-color-dark-0: var(--victorian-ivory);
 }
 
-border: 2px solid var(--victorian-brass);
-}
-
 /* Buttons */
 html.victorian .mantine-Button-root {
     background: linear-gradient(135deg, var(--victorian-brass) 0%, var(--victorian-brass-light) 100%);
@@ -30,7 +27,7 @@ html.victorian .mantine-Button-root {
 }
 
 html.victorian .mantine-Button-root:hover {
-    background: var(--victorian-gasl ight);
+    background: var(--victorian-gaslight);
 }
 
 /* Inputs */

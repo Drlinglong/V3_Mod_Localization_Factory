@@ -20,9 +20,6 @@
     --mantine-color-dark-0: var(--medieval-ink);
 }
 
-border: 3px solid var(--medieval-gold-border);
-}
-
 /* Buttons */
 html.medieval .mantine-Button-root {
     background: linear-gradient(135deg, var(--medieval-royal-red) 0%, var(--medieval-crimson) 100%);

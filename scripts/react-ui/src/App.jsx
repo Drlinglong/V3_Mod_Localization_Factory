@@ -5,6 +5,7 @@ import { MantineProvider } from '@mantine/core';
 import '@mantine/core/styles.css';
 
 import { ThemeProvider } from './ThemeContext';
+import GlobalStyles from './components/GlobalStyles';
 import { NotificationProvider } from './context/NotificationContext';
 import { MainLayout } from './components/layout/MainLayout';
 
@@ -44,6 +45,7 @@ const appRouteConfig = [
 const App = () => {
     return (
         <ThemeProvider>
+            <GlobalStyles />
             <NotificationProvider>
                 <Router>
                     <MainLayout>
