@@ -105,7 +105,8 @@ export function AppSider() {
                 display: 'flex',
                 flexDirection: 'column',
                 borderRight: `1px solid ${theme.colors.dark[6]}`, // Subtle border
-                backgroundColor: theme.colors.dark[6], // Surface color
+                backgroundColor: 'rgba(26, 27, 30, 0.7)', // Semi-transparent surface
+                backdropFilter: 'blur(10px)',
                 width: expanded ? 240 : 80, // Expand width
                 transition: 'width 300ms ease',
                 padding: theme.spacing.md,
