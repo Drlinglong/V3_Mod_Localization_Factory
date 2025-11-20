@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
-    Grid, Select, Input, Title, Button, Modal, Popover, Badge, Group, LoadingOverlay, Tooltip, Switch, Text, Paper, ScrollArea, Table, TextInput
+    Grid, Select, Input, Title, Button, Modal, Popover, Badge, Group, LoadingOverlay, Tooltip, Switch, Text, Paper, ScrollArea, Table, TextInput, NavLink, Box, Stack
 } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { notifications } from '@mantine/notifications';
-import { IconPlus, IconEdit, IconTrash, IconDots } from '@tabler/icons-react';
+import { IconPlus, IconEdit, IconTrash, IconDots, IconFolder, IconFileText } from '@tabler/icons-react';
 import {
     useReactTable,
     getCoreRowModel,
@@ -225,10 +225,10 @@ const GlossaryManagerPage = () => {
         }
     };
 
-    const onSelectTree = (selectedKeys, info) => {
+    const onSelectTree = (key, info) => {
         if (info.isLeaf) {
-            const [gameId, fileName] = info.key.split('|');
-            setSelectedFile({ key: info.key, title: fileName, gameId: gameId });
+            const [gameId, fileName] = key.split('|');
+            setSelectedFile({ key: key, title: fileName, gameId: gameId });
             setFiltering('');
             setPagination({ pageIndex: 0, pageSize: 25 }); // Reset pagination, which triggers useEffect to fetch data.
         }
@@ -254,14 +254,16 @@ const GlossaryManagerPage = () => {
     const columns = [
         { accessorKey: 'source', header: () => t('glossary_source_text'), cell: info => info.getValue() },
         { id: 'translation', header: () => t('glossary_translation'), cell: ({ row }) => row.original.translations[selectedTargetLang] || '' },
-        { accessorKey: 'notes', header: () => t('glossary_notes'), cell: ({ row }) => ( row.original.notes ? ( <Tooltip label={t('glossary_view_edit_notes', 'View/Edit Notes')}><Button size="xs" variant="subtle" onClick={() => handleEdit(row.original)}><IconDots size={14} /></Button></Tooltip>) : null ) },
+        { accessorKey: 'notes', header: () => t('glossary_notes'), cell: ({ row }) => (row.original.notes ? (<Tooltip label={t('glossary_view_edit_notes', 'View/Edit Notes')}><Button size="xs" variant="subtle" onClick={() => handleEdit(row.original)}><IconDots size={14} /></Button></Tooltip>) : null) },
         { accessorKey: 'variants', header: () => t('glossary_variants'), cell: info => <Group gap="xs">{Array.isArray(info.getValue()) ? info.getValue().map(v => <Badge key={v}>{v}</Badge>) : null}</Group> },
-        { id: 'actions', header: () => t('glossary_actions'), cell: ({ row }) => (
-            <Group gap="xs">
-                <Button size="xs" variant="light" onClick={() => handleEdit(row.original)}><IconEdit size={14} /></Button>
-                <Button size="xs" variant="light" color="red" onClick={() => showDeleteModal(row.original.id)}><IconTrash size={14} /></Button>
-            </Group>
-        )},
+        {
+            id: 'actions', header: () => t('glossary_actions'), cell: ({ row }) => (
+                <Group gap="xs">
+                    <Button size="xs" variant="light" onClick={() => handleEdit(row.original)}><IconEdit size={14} /></Button>
+                    <Button size="xs" variant="light" color="red" onClick={() => showDeleteModal(row.original.id)}><IconTrash size={14} /></Button>
+                </Group>
+            )
+        },
     ];
 
 
@@ -280,83 +282,108 @@ const GlossaryManagerPage = () => {
         onGlobalFilterChange: setFiltering,
     });
 
-    // A simple recursive component to render the file tree
-    const FileTree = ({ nodes, onSelect, selectedKey }) => (
-        <div>
-            {nodes.map(node => (
-                <div key={node.key} style={{ paddingLeft: '20px' }}>
-                    {node.isLeaf ? (
-                        <a href="#" onClick={(e) => { e.preventDefault(); onSelect(node.key, node); }}
-                           style={{
-                               display: 'block', padding: '5px', borderRadius: '4px',
-                               backgroundColor: node.key === selectedKey ? 'var(--mantine-color-blue-light)' : 'transparent',
-                               color: node.key === selectedKey ? 'var(--mantine-color-blue-filled)' : 'inherit',
-                               textDecoration: 'none'
-                           }}>
-                            {node.title}
-                        </a>
-                    ) : (
-                        <div>
-                            <Text fw={500}>{node.title}</Text>
-                            {node.children && <FileTree nodes={node.children} onSelect={onSelect} selectedKey={selectedKey} />}
-                        </div>
-                    )}
-                </div>
-            ))}
-        </div>
-    );
+    // Recursive component to render the file tree using Mantine NavLink
+    const FileTree = ({ nodes, onSelect, selectedKey }) => {
+        return (
+            <>
+                {nodes.map(node => {
+                    if (node.isLeaf) {
+                        return (
+                            <NavLink
+                                key={node.key}
+                                label={node.title}
+                                leftSection={<IconFileText size="1rem" stroke={1.5} />}
+                                active={node.key === selectedKey}
+                                onClick={() => onSelect(node.key, node)}
+                                style={{ borderRadius: 'var(--mantine-radius-sm)' }}
+                            />
+                        );
+                    } else {
+                        return (
+                            <NavLink
+                                key={node.key}
+                                label={node.title}
+                                leftSection={<IconFolder size="1rem" stroke={1.5} />}
+                                childrenOffset={28}
+                                defaultOpened={true}
+                                style={{ borderRadius: 'var(--mantine-radius-sm)' }}
+                            >
+                                {node.children && (
+                                    <FileTree
+                                        nodes={node.children}
+                                        onSelect={onSelect}
+                                        selectedKey={selectedKey}
+                                    />
+                                )}
+                            </NavLink>
+                        );
+                    }
+                })}
+            </>
+        );
+    };
 
 
     return (
-        <div style={{ position: 'relative' }}>
+        <div style={{ height: '100%', display: 'flex', flexDirection: 'column', position: 'relative' }}>
             <LoadingOverlay visible={isSaving} />
-            <Grid>
-                <Grid.Col span={4}>
-                     <Paper withBorder p="md" style={{ height: '100%' }}>
+            <Grid gutter={0} style={{ flex: 1, overflow: 'hidden' }}>
+                <Grid.Col span={3} style={{ height: '100%', borderRight: '1px solid var(--mantine-color-dark-4)' }}>
+                    <Paper p="md" style={{ height: '100%', backgroundColor: 'var(--mantine-color-dark-7)', display: 'flex', flexDirection: 'column' }}>
                         <LoadingOverlay visible={isLoadingTree} />
-                        <ScrollArea style={{ height: 'calc(100vh - 120px)' }}>
-                            <Group direction="column" grow>
-                                <div>
-                                    <Text size="sm" fw={500}>{t('glossary_game')}</Text>
-                                    <Select data={treeData.map(g => ({ value: g.key, label: g.title || g.key }))} value={selectedGame} onChange={setSelectedGame} />
-                                </div>
-                                <div>
-                                    <Text size="sm" fw={500}>{t('glossary_target_language')}</Text>
-                                    <Select data={targetLanguages.map(l => ({ value: l.code, label: l.name_local || l.code }))} value={selectedTargetLang} onChange={setSelectedTargetLang} />
-                                </div>
-                                <div>
-                                    <Group justify="space-between">
-                                        <Text size="sm" fw={500}>{t('glossary_files')}</Text>
-                                        <Button size="xs" variant="light" onClick={() => setIsFileCreateModalVisible(true)} disabled={!selectedGame}><IconPlus size={14} /></Button>
-                                    </Group>
-                                    {selectedGame && <FileTree nodes={treeData.find(n => n.key === selectedGame)?.children || []} onSelect={onSelectTree} selectedKey={selectedFile.key} />}
-                                </div>
-                            </Group>
+                        <Title order={4} mb="md">{t('glossary_manager_title', 'Glossary Manager')}</Title>
+
+                        <Stack gap="sm" mb="md">
+                            <div>
+                                <Text size="xs" c="dimmed" mb={4}>{t('glossary_game')}</Text>
+                                <Select data={treeData.map(g => ({ value: g.key, label: g.title || g.key }))} value={selectedGame} onChange={setSelectedGame} />
+                            </div>
+                            <div>
+                                <Text size="xs" c="dimmed" mb={4}>{t('glossary_target_language')}</Text>
+                                <Select data={targetLanguages.map(l => ({ value: l.code, label: l.name_local || l.code }))} value={selectedTargetLang} onChange={setSelectedTargetLang} />
+                            </div>
+                        </Stack>
+
+                        <Group justify="space-between" mb="xs">
+                            <Text size="sm" fw={500}>{t('glossary_files')}</Text>
+                            <Tooltip label={t('glossary_create_new_file')}>
+                                <Button size="xs" variant="light" onClick={() => setIsFileCreateModalVisible(true)} disabled={!selectedGame}><IconPlus size={14} /></Button>
+                            </Tooltip>
+                        </Group>
+
+                        <ScrollArea style={{ flex: 1 }}>
+                            {selectedGame && <FileTree nodes={treeData.find(n => n.key === selectedGame)?.children || []} onSelect={onSelectTree} selectedKey={selectedFile.key} />}
                         </ScrollArea>
-                     </Paper>
+                    </Paper>
                 </Grid.Col>
-                <Grid.Col span={8}>
-                     <Paper withBorder p="md" style={{ height: '100%', position: 'relative' }}>
+                <Grid.Col span={9} style={{ height: '100%' }}>
+                    <Paper p="md" style={{ height: '100%', backgroundColor: 'var(--mantine-color-dark-8)', display: 'flex', flexDirection: 'column' }}>
                         <LoadingOverlay visible={isLoadingContent} />
                         <Group justify="space-between" mb="md">
-                            <Title order={5}>{t('glossary_content')}: {selectedFile.title}</Title>
-                            <Tooltip label={t('glossary_add_entry')}>
-                                <Button onClick={handleAdd} disabled={!selectedFile.key}><IconPlus size={16} /></Button>
-                            </Tooltip>
+                            <Title order={4}>{selectedFile.title !== t('glossary_no_file_selected') ? selectedFile.title : t('glossary_select_file_prompt', 'Select a file')}</Title>
+                            <Button leftSection={<IconPlus size={16} />} onClick={handleAdd} disabled={!selectedFile.key}>{t('glossary_add_entry')}</Button>
                         </Group>
                         <Input placeholder={t('glossary_filter_placeholder')} value={filtering} onChange={e => setFiltering(e.currentTarget.value)} style={{ marginBottom: 16 }} />
 
-                        <ScrollArea style={{ height: 'calc(100vh - 300px)' }}>
-                            <Table>
+                        <ScrollArea style={{ flex: 1 }}>
+                            <Table striped highlightOnHover withTableBorder>
                                 <Table.Thead>
                                     {table.getHeaderGroups().map(hg => (
                                         <Table.Tr key={hg.id}>{hg.headers.map(header => <Table.Th key={header.id}>{flexRender(header.column.columnDef.header, header.getContext())}</Table.Th>)}</Table.Tr>
                                     ))}
                                 </Table.Thead>
                                 <Table.Tbody>
-                                    {table.getRowModel().rows.map(row => (
-                                        <Table.Tr key={row.id}>{row.getVisibleCells().map(cell => <Table.Td key={cell.id}>{flexRender(cell.column.columnDef.cell, cell.getContext())}</Table.Td>)}</Table.Tr>
-                                    ))}
+                                    {table.getRowModel().rows.length > 0 ? (
+                                        table.getRowModel().rows.map(row => (
+                                            <Table.Tr key={row.id}>{row.getVisibleCells().map(cell => <Table.Td key={cell.id}>{flexRender(cell.column.columnDef.cell, cell.getContext())}</Table.Td>)}</Table.Tr>
+                                        ))
+                                    ) : (
+                                        <Table.Tr>
+                                            <Table.Td colSpan={columns.length} style={{ textAlign: 'center', padding: '20px' }}>
+                                                <Text c="dimmed">{t('glossary_no_entries', 'No entries found')}</Text>
+                                            </Table.Td>
+                                        </Table.Tr>
+                                    )}
                                 </Table.Tbody>
                             </Table>
                         </ScrollArea>
@@ -369,7 +396,7 @@ const GlossaryManagerPage = () => {
                                     onChange={value => table.setPageSize(Number(value))}
                                     data={['25', '50', '100'].map(size => ({ value: size, label: t('glossary_show_entries', { count: size }) }))}
                                 />
-                                <Text size="sm">
+                                <Text size="sm" c="dimmed">
                                     {t('glossary_page_info', { page: table.getState().pagination.pageIndex + 1, total: table.getPageCount() })}
                                 </Text>
                             </Group>
@@ -378,14 +405,14 @@ const GlossaryManagerPage = () => {
                                 <Button variant="default" onClick={() => table.nextPage()} disabled={!table.getCanNextPage()}>{t('glossary_next_page')}</Button>
                             </Button.Group>
                         </Group>
-                     </Paper>
+                    </Paper>
                 </Grid.Col>
             </Grid>
 
             <Modal title={editingEntry ? t('glossary_edit_entry') : t('glossary_add_entry')} opened={isModalVisible} onClose={() => { setIsModalVisible(false); setIsAdvancedMode(false); }}>
                 <form onSubmit={form.onSubmit(saveData)}>
                     <TextInput label={t('glossary_source_text')} required {...form.getInputProps('source')} />
-                    <TextInput label={`${t('glossary_translation')} (${targetLanguages.find(l=>l.code === selectedTargetLang)?.name_local || selectedTargetLang})`} required {...form.getInputProps('translation')} />
+                    <TextInput label={`${t('glossary_translation')} (${targetLanguages.find(l => l.code === selectedTargetLang)?.name_local || selectedTargetLang})`} required {...form.getInputProps('translation')} />
                     <Input.Wrapper label={t('glossary_notes')}><Input component="textarea" {...form.getInputProps('notes')} /></Input.Wrapper>
 
                     <Group justify="flex-end" my="md">
@@ -398,10 +425,10 @@ const GlossaryManagerPage = () => {
                             <Input.Wrapper label={t('glossary_variants')} description={t('glossary_variants_tooltip_json')}>
                                 <Input component="textarea" autosize minRows={3} {...form.getInputProps('variants')} />
                             </Input.Wrapper>
-                             <Input.Wrapper label={t('glossary_abbreviations')} description={t('glossary_abbreviations_tooltip_json')}>
+                            <Input.Wrapper label={t('glossary_abbreviations')} description={t('glossary_abbreviations_tooltip_json')}>
                                 <Input component="textarea" autosize minRows={3} {...form.getInputProps('abbreviations')} />
                             </Input.Wrapper>
-                             <Input.Wrapper label={t('glossary_metadata')} description={t('glossary_metadata_tooltip_json')}>
+                            <Input.Wrapper label={t('glossary_metadata')} description={t('glossary_metadata_tooltip_json')}>
                                 <Input component="textarea" autosize minRows={3} {...form.getInputProps('metadata')} />
                             </Input.Wrapper>
                         </>
