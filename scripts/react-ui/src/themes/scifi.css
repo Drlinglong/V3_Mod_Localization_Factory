@@ -19,10 +19,6 @@
     --mantine-color-dark-0: var(--scifi-holo-white);
 }
 
-border: 2px solid var(--scifi-electric-blue);
-box-shadow: 0 0 20px rgba(0, 217, 255, 0.3);
-}
-
 /* Buttons */
 html.scifi .mantine-Button-root {
     background: linear-gradient(135deg, rgba(0, 153, 204, 0.6) 0%, rgba(0, 217, 255, 0.8) 100%);
