@@ -9,6 +9,15 @@
     transition: background-image 0.5s ease, background-color 0.5s ease;
 }
 
+/* Force Main Layout Transparency */
+/* We need to ensure the Mantine AppShell and Body don't block the view */
+body,
+#root,
+.mantine-AppShell-root,
+.mantine-AppShell-main {
+    background-color: transparent !important;
+}
+
 /* --- 1. Victorian: Wood Texture --- */
 /* Simulating wood grain with repeating gradients */
 .global-background-layer.victorian {
