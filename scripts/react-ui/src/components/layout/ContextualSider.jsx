@@ -47,7 +47,8 @@ export function ContextualSider() {
                     width: 50,
                     height: '100%',
                     borderLeft: `1px solid ${theme.colors.dark[6]}`,
-                    backgroundColor: theme.colors.dark[6],
+                    backgroundColor: 'rgba(26, 27, 30, 0.7)', // Semi-transparent
+                    backdropFilter: 'blur(10px)',
                     display: 'flex',
                     flexDirection: 'column',
                     alignItems: 'center',
@@ -71,7 +72,8 @@ export function ContextualSider() {
                 display: 'flex',
                 flexDirection: 'column',
                 borderLeft: `1px solid ${theme.colors.dark[6]}`,
-                backgroundColor: theme.colors.dark[6],
+                backgroundColor: 'rgba(26, 27, 30, 0.7)', // Semi-transparent
+                backdropFilter: 'blur(10px)',
             })}
         >
             {/* Header */}
