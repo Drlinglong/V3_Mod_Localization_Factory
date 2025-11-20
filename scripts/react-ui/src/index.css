@@ -21,27 +21,6 @@ body {
   overflow: hidden;
 }
 
-/* Theme-specific #root backgrounds */
-html.victorian #root {
-  background-color: #2C1810 !important;
-}
-
-html.byzantine #root {
-  background-color: #2E1A47 !important;
-}
-
-html.scifi #root {
-  background-color: #0A0E1A !important;
-}
-
-html.wwii #root {
-  background-color: #3D3D29 !important;
-}
-
-html.medieval #root {
-  background-color: #2E2416 !important;
-}
-
 /* --- Global Custom Scrollbar --- */
 /* Works on Chrome, Edge, and Safari */
 ::-webkit-scrollbar {
