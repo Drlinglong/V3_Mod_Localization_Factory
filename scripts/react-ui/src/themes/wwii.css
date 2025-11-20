@@ -18,6 +18,24 @@
     --mantine-color-dark-2: var(--wwii-steel-light);
     --mantine-color-dark-1: #AAB7C3;
     --mantine-color-dark-0: var(--wwii-manila);
+
+    /* --- Semantic Design Tokens (Inferred) --- */
+    /* 核心色板: 橄榄绿 & 战术灰 */
+    --primary-color: #6C7A89;       /* 战术钢灰 */
+    --secondary-color: #A0522D;     /* 锈红/警告色 */
+    --text-main: #2A2A1E;           /* 深橄榄色 (打字机墨水) */
+    --text-muted: #56563D;
+    --text-highlight: #8B0000;      /* 机密章红 */
+
+    /* 容器材质: 文件夹/档案纸 */
+    --glass-bg: rgba(245, 230, 211, 0.95); /* 马尼拉纸色 */
+    --glass-border: #8B7355;    /* 枪灰色边框 */
+    --card-radius: 0px;             /* 严格直角 */
+
+    /* 特效 */
+    --shadow-elevation: 2px 2px 4px rgba(0,0,0,0.4); /* 实体投影 */
+    --font-header: "Courier New", monospace; /* 打字机字体 */
+    --font-body: "Arial", sans-serif;
 }
 
 /* Buttons */
