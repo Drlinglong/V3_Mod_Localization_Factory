@@ -1,0 +1,58 @@
+/* Sci-Fi Theme - Deep Space & Holographic */
+.scifi {
+    --scifi-space-black: #0A0E1A;
+    --scifi-space-darker: #050810;
+    --scifi-electric-blue: #00D9FF;
+    --scifi-cyan: #0099CC;
+    --scifi-neon-cyan: #00FFCC;
+    --scifi-holo-white: #E0F7FF;
+
+    --mantine-color-dark-9: var(--scifi-space-darker);
+    --mantine-color-dark-8: var(--scifi-space-black);
+    --mantine-color-dark-7: #121827;
+    --mantine-color-dark-6: #1A2235;
+    --mantine-color-dark-5: #232C43;
+    --mantine-color-dark-4: #2B3651;
+    --mantine-color-dark-3: #39476B;
+    --mantine-color-dark-2: #4A5E8A;
+    --mantine-color-dark-1: #6B82B0;
+    --mantine-color-dark-0: var(--scifi-holo-white);
+}
+
+border: 2px solid var(--scifi-electric-blue);
+box-shadow: 0 0 20px rgba(0, 217, 255, 0.3);
+}
+
+/* Buttons */
+html.scifi .mantine-Button-root {
+    background: linear-gradient(135deg, rgba(0, 153, 204, 0.6) 0%, rgba(0, 217, 255, 0.8) 100%);
+    border: 2px solid var(--scifi-electric-blue);
+    color: var(--scifi-space-darker);
+    box-shadow: 0 0 15px rgba(0, 217, 255, 0.5);
+}
+
+html.scifi .mantine-Button-root:hover {
+    box-shadow: 0 0 30px rgba(0, 255, 229, 0.8);
+}
+
+/* Inputs */
+html.scifi .mantine-Input-input,
+html.scifi .mantine-Select-input {
+    background-color: rgba(10, 14, 26, 0.7);
+    border: 2px solid var(--scifi-electric-blue);
+    color: var(--scifi-holo-white);
+    box-shadow: 0 0 10px rgba(0, 217, 255, 0.3);
+}
+
+/* Navbar */
+html.scifi .mantine-AppShell-navbar {
+    background: linear-gradient(180deg, rgba(5, 8, 16, 0.95) 0%, rgba(10, 14, 26, 0.95) 100%);
+    border-right: 3px solid var(--scifi-electric-blue);
+    box-shadow: 0 0 20px rgba(0, 217, 255, 0.3);
+}
+
+/* Titles */
+html.scifi .mantine-Title-root {
+    color: var(--scifi-electric-blue);
+    text-shadow: 0 0 10px rgba(0, 217, 255, 0.8);
+}

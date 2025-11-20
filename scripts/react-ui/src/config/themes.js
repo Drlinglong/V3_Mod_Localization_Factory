@@ -12,19 +12,27 @@
  */
 export const AVAILABLE_THEMES = [
   {
-    id: 'light',
-    nameKey: 'theme_light', // Corresponds to the key in translation.json
-  },
-  {
     id: 'dark',
-    nameKey: 'theme_dark',
+    nameKey: 'theme_dark', // Corresponds to the key in translation.json
   },
   {
-    id: 'theme-victorian',
+    id: 'victorian',
     nameKey: 'theme_victorian',
   },
   {
-    id: 'theme-byzantine',
+    id: 'byzantine',
     nameKey: 'theme_byzantine',
+  },
+  {
+    id: 'scifi',
+    nameKey: 'theme_scifi',
+  },
+  {
+    id: 'wwii',
+    nameKey: 'theme_wwii',
+  },
+  {
+    id: 'medieval',
+    nameKey: 'theme_medieval',
   },
 ];

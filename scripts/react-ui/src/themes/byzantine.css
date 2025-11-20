@@ -1,0 +1,48 @@
+/* Byzantine Theme - Imperial Purple & Gold */
+.byzantine {
+    --byzantine-purple-dark: #2E1A47;
+    --byzantine-purple-darker: #1C0F2A;
+    --byzantine-imperial: #6A0DAD;
+    --byzantine-gold: #FFD700;
+    --byzantine-gold-border: #B8860B;
+    --byzantine-ivory: #F8F5E4;
+
+    --mantine-color-dark-9: var(--byzantine-purple-darker);
+    --mantine-color-dark-8: var(--byzantine-purple-dark);
+    --mantine-color-dark-7: #3D2456;
+    --mantine-color-dark-6: #4D2E66;
+    --mantine-color-dark-5: #5D3876;
+    --mantine-color-dark-4: var(--byzantine-imperial);
+    --mantine-color-dark-3: #7E1BAD;
+    --mantine-color-dark-2: #9A3FC8;
+    --mantine-color-dark-1: #B766D6;
+    --mantine-color-dark-0: var(--byzantine-ivory);
+}
+
+border: 3px solid var(--byzantine-gold-border);
+}
+
+/* Buttons */
+html.byzantine .mantine-Button-root {
+    background: linear-gradient(135deg, var(--byzantine-gold-border) 0%, var(--byzantine-gold) 100%);
+    color: var(--byzantine-purple-darker);
+}
+
+/* Inputs */
+html.byzantine .mantine-Input-input,
+html.byzantine .mantine-Select-input {
+    background-color: rgba(46, 26, 71, 0.7);
+    border: 2px solid var(--byzantine-imperial);
+    color: var(--byzantine-ivory);
+}
+
+/* Navbar */
+html.byzantine .mantine-AppShell-navbar {
+    background: linear-gradient(180deg, var(--byzantine-purple-darker) 0%, var(--byzantine-purple-dark) 100%);
+    border-right: 4px solid var(--byzantine-gold-border);
+}
+
+/* Titles */
+html.byzantine .mantine-Title-root {
+    color: var(--byzantine-gold);
+}
