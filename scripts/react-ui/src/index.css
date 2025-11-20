@@ -8,8 +8,38 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+html,
 body {
   margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#root {
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Theme-specific #root backgrounds */
+html.victorian #root {
+  background-color: #2C1810 !important;
+}
+
+html.byzantine #root {
+  background-color: #2E1A47 !important;
+}
+
+html.scifi #root {
+  background-color: #0A0E1A !important;
+}
+
+html.wwii #root {
+  background-color: #3D3D29 !important;
+}
+
+html.medieval #root {
+  background-color: #2E2416 !important;
 }
 
 /* --- Global Custom Scrollbar --- */
@@ -22,8 +52,9 @@ body {
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
+
 html.theme-dark ::-webkit-scrollbar-track {
-    background: #2e2e2e;
+  background: #2e2e2e;
 }
 
 
@@ -31,16 +62,18 @@ html.theme-dark ::-webkit-scrollbar-track {
   background: #c1c1c1;
   border-radius: 10px;
 }
+
 html.theme-dark ::-webkit-scrollbar-thumb {
-    background: #555;
+  background: #555;
 }
 
 
 ::-webkit-scrollbar-thumb:hover {
   background: #a8a8a8;
 }
+
 html.theme-dark ::-webkit-scrollbar-thumb:hover {
-    background: #777;
+  background: #777;
 }
 
 /* For Firefox */
@@ -50,5 +83,5 @@ html.theme-dark ::-webkit-scrollbar-thumb:hover {
 }
 
 html.theme-dark * {
-    scrollbar-color: #555 #2e2e2e;
+  scrollbar-color: #555 #2e2e2e;
 }

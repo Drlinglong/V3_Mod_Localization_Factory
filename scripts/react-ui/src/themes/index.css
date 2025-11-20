@@ -5,5 +5,8 @@
  * To add a new theme's stylesheet, simply add a new @import statement here.
  */
 
-@import './theme-victorian.css';
-@import './theme-byzantine.css';
+@import './victorian.css';
+@import './byzantine.css';
+@import './scifi.css';
+@import './wwii.css';
+@import './medieval.css';

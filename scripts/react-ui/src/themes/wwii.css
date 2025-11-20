@@ -1,0 +1,50 @@
+/* WWII Theme - Military War Room */
+.wwii {
+    --wwii-olive: #3D3D29;
+    --wwii-olive-darker: #2A2A1E;
+    --wwii-steel-gray: #6C7A89;
+    --wwii-steel-light: #95A5A6;
+    --wwii-rust-red: #A0522D;
+    --wwii-manila: #F5E6D3;
+    --wwii-gunmetal: #8B7355;
+
+    --mantine-color-dark-9: var(--wwii-olive-darker);
+    --mantine-color-dark-8: var(--wwii-olive);
+    --mantine-color-dark-7: #4A4A33;
+    --mantine-color-dark-6: #56563D;
+    --mantine-color-dark-5: #636347;
+    --mantine-color-dark-4: var(--wwii-steel-gray);
+    --mantine-color-dark-3: #7B8896;
+    --mantine-color-dark-2: var(--wwii-steel-light);
+    --mantine-color-dark-1: #AAB7C3;
+    --mantine-color-dark-0: var(--wwii-manila);
+}
+
+border: 3px solid var(--wwii-gunmetal);
+}
+
+/* Buttons */
+html.wwii .mantine-Button-root {
+    background: linear-gradient(135deg, var(--wwii-steel-gray) 0%, var(--wwii-steel-light) 100%);
+    border: 2px solid var(--wwii-gunmetal);
+    color: var(--wwii-olive-darker);
+}
+
+/* Inputs */
+html.wwii .mantine-Input-input,
+html.wwii .mantine-Select-input {
+    background-color: rgba(245, 230, 211, 0.15);
+    border: 2px solid var(--wwii-gunmetal);
+    color: var(--wwii-manila);
+}
+
+/* Navbar */
+html.wwii .mantine-AppShell-navbar {
+    background: linear-gradient(180deg, var(--wwii-olive-darker) 0%, rgba(42, 42, 30, 0.95) 100%);
+    border-right: 4px solid var(--wwii-gunmetal);
+}
+
+/* Titles */
+html.wwii .mantine-Title-root {
+    color: var(--wwii-manila);
+}
