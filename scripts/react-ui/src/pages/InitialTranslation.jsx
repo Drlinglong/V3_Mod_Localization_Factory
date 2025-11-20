@@ -16,11 +16,15 @@ import {
   Space,
   Alert,
   Center,
+  Container,
+  Paper,
+  Stack,
+  Grid,
+  Loader,
 } from '@mantine/core';
 import { IconAlertCircle, IconCheck, IconX, IconFileUpload, IconSettings, IconRefresh, IconDownload, IconArrowLeft, IconPlayerStop } from '@tabler/icons-react';
 import { openProjectDialog } from '../services/fileService';
 import '../App.css';
-import LogViewer from '../components/shared/LogViewer';
 
 const InitialTranslation = () => {
   const { t } = useTranslation();
@@ -47,10 +51,10 @@ const InitialTranslation = () => {
       api_provider: '',
     },
     validate: {
-        game_profile_id: (value) => (value ? null : t('form_validation_required')),
-        source_lang_code: (value) => (value ? null : t('form_validation_required')),
-        target_lang_codes: (value) => (value.length > 0 ? null : t('form_validation_required')),
-        api_provider: (value) => (value ? null : t('form_validation_required')),
+      game_profile_id: (value) => (value ? null : t('form_validation_required')),
+      source_lang_code: (value) => (value ? null : t('form_validation_required')),
+      target_lang_codes: (value) => (value.length > 0 ? null : t('form_validation_required')),
+      api_provider: (value) => (value ? null : t('form_validation_required')),
     },
   });
 
@@ -104,8 +108,8 @@ const InitialTranslation = () => {
   const handleBrowseClick = async () => {
     const fileName = await openProjectDialog();
     if (fileName) {
-        setProjectPath(fileName);
-        setActive(1);
+      setProjectPath(fileName);
+      setActive(1);
     }
   };
 
@@ -151,8 +155,8 @@ const InitialTranslation = () => {
     // NOTE: The actual file upload is replaced by sending the path.
     // The backend will need to be adapted to handle a local file path instead of an upload.
     const payload = {
-        ...values,
-        project_path: projectPath
+      ...values,
+      project_path: projectPath
     };
 
     setTaskId(null);
@@ -163,17 +167,17 @@ const InitialTranslation = () => {
     setIsProcessing(true);
 
     axios.post('/api/translate_v2', payload) // Assuming a new endpoint for path-based translation
-    .then(response => {
-      setTaskId(response.data.task_id);
-      notificationService.success(t('message_success_task_started'), notificationStyle);
-    })
-    .catch(error => {
-      notificationService.error(t('message_error_task_start_failed'), notificationStyle);
-      console.error('Translate API error:', error);
-      setIsProcessing(false);
-      setStatus('failed');
-      setActive(1);
-    });
+      .then(response => {
+        setTaskId(response.data.task_id);
+        notificationService.success(t('message_success_task_started'), notificationStyle);
+      })
+      .catch(error => {
+        notificationService.error(t('message_error_task_start_failed'), notificationStyle);
+        console.error('Translate API error:', error);
+        setIsProcessing(false);
+        setStatus('failed');
+        setActive(1);
+      });
   };
 
   const renderBackButton = () => (
@@ -183,110 +187,132 @@ const InitialTranslation = () => {
   );
 
   return (
-    <div>
-      <Stepper active={active} onStepClick={setActive}>
-        <Stepper.Step label={t('initial_translation_step_upload')} icon={<IconFileUpload size="1.1rem" />} />
-        <Stepper.Step label={t('initial_translation_step_configure')} icon={<IconSettings size="1.1rem" />} />
-        <Stepper.Step label={t('initial_translation_step_translate')} icon={isProcessing ? <IconRefresh size="1.1rem" className="spin-icon" /> : <IconRefresh size="1.1rem" />} />
-        <Stepper.Step label={t('initial_translation_step_download')} icon={<IconDownload size="1.1rem" />} />
-      </Stepper>
+    <Container size="lg" py="xl">
+      <Paper p="xl" radius="md" withBorder style={{ backgroundColor: 'var(--mantine-color-dark-7)' }}>
+        <Stepper active={active} onStepClick={setActive} breakpoint="sm">
+          <Stepper.Step label={t('initial_translation_step_upload')} description={t('initial_translation_step_upload_desc')} icon={<IconFileUpload size="1.1rem" />} />
+          <Stepper.Step label={t('initial_translation_step_configure')} description={t('initial_translation_step_configure_desc')} icon={<IconSettings size="1.1rem" />} />
+          <Stepper.Step label={t('initial_translation_step_translate')} description={t('initial_translation_step_translate_desc')} icon={isProcessing ? <IconRefresh size="1.1rem" className="spin-icon" /> : <IconRefresh size="1.1rem" />} />
+          <Stepper.Step label={t('initial_translation_step_download')} description={t('initial_translation_step_download_desc')} icon={<IconDownload size="1.1rem" />} />
+        </Stepper>
 
-      <div style={{ marginTop: '24px' }}>
-        {active === 0 && (
-          <Group>
-            <TextInput
-              label={t('form_label_project_path')}
-              placeholder={t('form_placeholder_project_path')}
-              readOnly
-              value={projectPath}
-              style={{ flexGrow: 1 }}
-            />
-            <Button onClick={handleBrowseClick} style={{ alignSelf: 'flex-end' }}>
-              {t('button_browse')}
-            </Button>
-          </Group>
-        )}
-
-        {active === 1 && (
-          <form onSubmit={form.onSubmit(startTranslation)}>
-            <Select
-              label={t('form_label_game')}
-              placeholder={t('form_placeholder_game')}
-              data={Object.entries(config.game_profiles).map(([id, profile]) => ({ value: id, label: profile.name }))}
-              {...form.getInputProps('game_profile_id')}
-            />
-            <Select
-              label={t('form_label_source_language')}
-              placeholder={t('form_placeholder_source_language')}
-              data={Object.values(config.languages).map(lang => ({ value: lang.code, label: lang.name }))}
-              {...form.getInputProps('source_lang_code')}
-            />
-            <MultiSelect
-              label={t('form_label_target_languages')}
-              placeholder={t('form_placeholder_target_languages')}
-              data={Object.values(config.languages).map(lang => ({ value: lang.code, label: lang.name }))}
-              {...form.getInputProps('target_lang_codes')}
-            />
-            <Select
-              label={t('form_label_api_provider')}
-              placeholder={t('form_placeholder_api_provider')}
-              data={config.api_providers}
-              {...form.getInputProps('api_provider')}
-            />
-            <Group justify="flex-start" mt="md">
-              {renderBackButton()}
-              <Button type="submit">{t('button_start_translation')}</Button>
-            </Group>
-          </form>
-        )}
-
-        {active === 2 && (
-          <Space direction="vertical" style={{ width: '100%' }}>
-            {translationDetails && (
-               <Card withBorder>
-                    <Text fw={500}>{t('job_details_title')}</Text>
-                    <Text size="sm">{t('job_details_mod_name')}: {translationDetails.modName}</Text>
-                    <Text size="sm">{t('job_details_game')}: {translationDetails.game}</Text>
-                    <Text size="sm">{t('job_details_source_language')}: {translationDetails.source}</Text>
-                    <Text size="sm">{t('job_details_target_languages')}: {translationDetails.targets}</Text>
-                    <Text size="sm">{t('job_details_api_provider')}: {translationDetails.provider}</Text>
-              </Card>
-            )}
-            <LogViewer logs={logs} />
-            <Group>
-              {renderBackButton()}
-              {isProcessing && (
-                <Button onClick={handleAbort} leftSection={<IconPlayerStop size={14} />} color="red">
-                  {t('button_abort_translation')}
+        <div style={{ marginTop: '40px' }}>
+          {active === 0 && (
+            <Card withBorder padding="xl" radius="md">
+              <Text size="lg" fw={500} mb="md">{t('initial_translation_step_upload')}</Text>
+              <Group align="flex-end">
+                <TextInput
+                  label={t('form_label_project_path')}
+                  placeholder={t('form_placeholder_project_path')}
+                  readOnly
+                  value={projectPath}
+                  style={{ flexGrow: 1 }}
+                />
+                <Button onClick={handleBrowseClick} leftSection={<IconFileUpload size={16} />}>
+                  {t('button_browse')}
                 </Button>
-              )}
-            </Group>
-          </Space>
-        )}
+              </Group>
+            </Card>
+          )}
 
-        {active === 3 && (
+          {active === 1 && (
+            <Card withBorder padding="xl" radius="md">
+              <Text size="lg" fw={500} mb="md">{t('initial_translation_step_configure')}</Text>
+              <form onSubmit={form.onSubmit(startTranslation)}>
+                <Stack gap="md">
+                  <Select
+                    label={t('form_label_game')}
+                    placeholder={t('form_placeholder_game')}
+                    data={Object.entries(config.game_profiles).map(([id, profile]) => ({ value: id, label: profile.name }))}
+                    {...form.getInputProps('game_profile_id')}
+                  />
+                  <Select
+                    label={t('form_label_source_language')}
+                    placeholder={t('form_placeholder_source_language')}
+                    data={Object.values(config.languages).map(lang => ({ value: lang.code, label: lang.name }))}
+                    {...form.getInputProps('source_lang_code')}
+                  />
+                  <MultiSelect
+                    label={t('form_label_target_languages')}
+                    placeholder={t('form_placeholder_target_languages')}
+                    data={Object.values(config.languages).map(lang => ({ value: lang.code, label: lang.name }))}
+                    {...form.getInputProps('target_lang_codes')}
+                  />
+                  <Select
+                    label={t('form_label_api_provider')}
+                    placeholder={t('form_placeholder_api_provider')}
+                    data={config.api_providers}
+                    {...form.getInputProps('api_provider')}
+                  />
+                  <Group justify="flex-end" mt="xl">
+                    {renderBackButton()}
+                    <Button type="submit">{t('button_start_translation')}</Button>
+                  </Group>
+                </Stack>
+              </form>
+            </Card>
+          )}
+
+          {active === 2 && (
+            <Card withBorder padding="xl" radius="md">
+              <Stack gap="md">
+                {translationDetails && (
+                  <Card withBorder bg="dark.8">
+                    <Text fw={500} mb="xs">{t('job_details_title')}</Text>
+                    <Grid>
+                      <Grid.Col span={6}><Text size="sm" c="dimmed">{t('job_details_mod_name')}:</Text> <Text size="sm">{translationDetails.modName}</Text></Grid.Col>
+                      <Grid.Col span={6}><Text size="sm" c="dimmed">{t('job_details_game')}:</Text> <Text size="sm">{translationDetails.game}</Text></Grid.Col>
+                      <Grid.Col span={6}><Text size="sm" c="dimmed">{t('job_details_source_language')}:</Text> <Text size="sm">{translationDetails.source}</Text></Grid.Col>
+                      <Grid.Col span={6}><Text size="sm" c="dimmed">{t('job_details_target_languages')}:</Text> <Text size="sm">{translationDetails.targets}</Text></Grid.Col>
+                      <Grid.Col span={6}><Text size="sm" c="dimmed">{t('job_details_api_provider')}:</Text> <Text size="sm">{translationDetails.provider}</Text></Grid.Col>
+                    </Grid>
+                  </Card>
+                )}
+
+                <Center p="xl">
+                  <Stack align="center">
+                    <Loader size="xl" type="dots" />
+                    <Text size="lg" mt="md">{t('processing_translation')}</Text>
+                    <Text size="sm" c="dimmed">{t('please_wait')}</Text>
+                  </Stack>
+                </Center>
+
+                <Group justify="space-between" mt="md">
+                  {renderBackButton()}
+                  {isProcessing && (
+                    <Button onClick={handleAbort} leftSection={<IconPlayerStop size={14} />} color="red" variant="light">
+                      {t('button_abort_translation')}
+                    </Button>
+                  )}
+                </Group>
+              </Stack>
+            </Card>
+          )}
+
+          {active === 3 && (
             <Center>
-            <Alert
+              <Alert
                 icon={status === 'completed' ? <IconCheck size="1rem" /> : <IconX size="1rem" />}
                 title={status === 'completed' ? t('result_title_success') : t('result_title_failed')}
                 color={status === 'completed' ? 'green' : 'red'}
                 variant="light"
-                style={{ maxWidth: 400 }}
-            >
+                style={{ maxWidth: 500, width: '100%' }}
+              >
                 {status === 'completed' ? t('result_subtitle_success') : t('result_subtitle_failed')}
-                <Group justify="center" mt="md">
-                    {renderBackButton()}
-                    {status === 'completed' && resultUrl && (
-                        <Button component="a" href={resultUrl} leftSection={<IconDownload size={14} />}>
-                        {t('button_download_mod')}
-                        </Button>
-                    )}
+                <Group justify="flex-end" mt="md">
+                  {renderBackButton()}
+                  {status === 'completed' && resultUrl && (
+                    <Button component="a" href={resultUrl} leftSection={<IconDownload size={14} />}>
+                      {t('button_download_mod')}
+                    </Button>
+                  )}
                 </Group>
-            </Alert>
+              </Alert>
             </Center>
-        )}
-      </div>
-    </div>
+          )}
+        </div>
+      </Paper>
+    </Container>
   );
 };
 

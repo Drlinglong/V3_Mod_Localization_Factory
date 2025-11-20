@@ -1,0 +1,53 @@
+/* Victorian Theme - Brass & Dark Wood */
+.victorian {
+    --victorian-wood-dark: #2C1810;
+    --victorian-wood-darker: #1A0F08;
+    --victorian-brass: #B8860B;
+    --victorian-brass-light: #DAA520;
+    --victorian-gaslight: #FFA500;
+    --victorian-ivory: #FFFFF0;
+    --victorian-copper-green: #4A7C59;
+
+    --mantine-color-dark-9: var(--victorian-wood-darker);
+    --mantine-color-dark-8: var(--victorian-wood-dark);
+    --mantine-color-dark-7: #3D2818;
+    --mantine-color-dark-6: #4A3020;
+    --mantine-color-dark-5: #5C3D2A;
+    --mantine-color-dark-4: var(--victorian-copper-green);
+    --mantine-color-dark-3: #6B8E7A;
+    --mantine-color-dark-2: #8FA696;
+    --mantine-color-dark-1: #B5C4B8;
+    --mantine-color-dark-0: var(--victorian-ivory);
+}
+
+border: 2px solid var(--victorian-brass);
+}
+
+/* Buttons */
+html.victorian .mantine-Button-root {
+    background: linear-gradient(135deg, var(--victorian-brass) 0%, var(--victorian-brass-light) 100%);
+    color: var(--victorian-wood-darker);
+}
+
+html.victorian .mantine-Button-root:hover {
+    background: var(--victorian-gasl ight);
+}
+
+/* Inputs */
+html.victorian .mantine-Input-input,
+html.victorian .mantine-Select-input {
+    background-color: rgba(42, 24, 16, 0.6);
+    border: 2px solid var(--victorian-copper-green);
+    color: var(--victorian-ivory);
+}
+
+/* Navbar */
+html.victorian .mantine-AppShell-navbar {
+    background-color: var(--victorian-wood-darker);
+    border-right: 3px solid var(--victorian-brass);
+}
+
+/* Titles */
+html.victorian .mantine-Title-root {
+    color: var(--victorian-brass-light);
+}

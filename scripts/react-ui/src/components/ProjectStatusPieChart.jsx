@@ -2,7 +2,8 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { PieChart, Pie, Cell, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
-const COLORS = ['#0088FE', '#00C49F', '#FFBB28'];
+// Modern Dark Theme Colors
+const COLORS = ['#4dabf7', '#69db7c', '#ffd43b']; // Mantine Blue 4, Green 4, Yellow 4
 
 const ProjectStatusPieChart = () => {
   const { t } = useTranslation();
@@ -20,17 +21,21 @@ const ProjectStatusPieChart = () => {
           data={data}
           cx="50%"
           cy="50%"
+          innerRadius={60} // Donut chart looks more modern
           outerRadius={100}
-          fill="#8884d8"
+          paddingAngle={5}
           dataKey="value"
-          label
+          stroke="none"
         >
           {data.map((entry, index) => (
             <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
           ))}
         </Pie>
-        <Tooltip />
-        <Legend />
+        <Tooltip
+          contentStyle={{ backgroundColor: '#2C2E33', borderColor: '#373A40', color: '#C1C2C5' }}
+          itemStyle={{ color: '#C1C2C5' }}
+        />
+        <Legend wrapperStyle={{ paddingTop: '20px' }} />
       </PieChart>
     </ResponsiveContainer>
   );

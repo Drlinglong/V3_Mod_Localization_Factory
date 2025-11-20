@@ -1,0 +1,50 @@
+/* Medieval Theme - Royal Court & Manuscripts */
+.medieval {
+    --medieval-parchment: #2E2416;
+    --medieval-parchment-darker: #1F1810;
+    --medieval-royal-red: #8B0000;
+    --medieval-crimson: #A52A2A;
+    --medieval-gold-leaf: #DAA520;
+    --medieval-ink: #F5E6D3;
+    --medieval-gold-border: #B8860B;
+
+    --mantine-color-dark-9: var(--medieval-parchment-darker);
+    --mantine-color-dark-8: var(--medieval-parchment);
+    --mantine-color-dark-7: #3D2F1E;
+    --mantine-color-dark-6: #4A3926;
+    --mantine-color-dark-5: #5B472E;
+    --mantine-color-dark-4: #6D5536;
+    --mantine-color-dark-3: #8A6B45;
+    --mantine-color-dark-2: #A68659;
+    --mantine-color-dark-1: #C4A875;
+    --mantine-color-dark-0: var(--medieval-ink);
+}
+
+border: 3px solid var(--medieval-gold-border);
+}
+
+/* Buttons */
+html.medieval .mantine-Button-root {
+    background: linear-gradient(135deg, var(--medieval-royal-red) 0%, var(--medieval-crimson) 100%);
+    border: 3px solid var(--medieval-gold-border);
+    color: var(--medieval-gold-leaf);
+}
+
+/* Inputs */
+html.medieval .mantine-Input-input,
+html.medieval .mantine-Select-input {
+    background-color: rgba(245, 230, 211, 0.1);
+    border: 2px solid var(--medieval-gold-border);
+    color: var(--medieval-ink);
+}
+
+/* Navbar */
+html.medieval .mantine-AppShell-navbar {
+    background: linear-gradient(180deg, var(--medieval-parchment-darker) 0%, rgba(31, 24, 16, 0.98) 100%);
+    border-right: 4px solid var(--medieval-gold-border);
+}
+
+/* Titles */
+html.medieval .mantine-Title-root {
+    color: var(--medieval-gold-leaf);
+}

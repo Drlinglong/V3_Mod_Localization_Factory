@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Grid, Title, Select, Loader, Paper, ScrollArea } from '@mantine/core';
+import { Grid, Title, Select, Loader, Paper, ScrollArea, NavLink, Box, Group, Text } from '@mantine/core';
+import { IconFileText, IconFolder, IconFolderOpen } from '@tabler/icons-react';
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
 import axios from 'axios';
@@ -101,87 +102,99 @@ const Documentation = () => {
         }
     }, [selectedFile]);
 
-    const handleLangChange = (value) => {
-        setSelectedLang(value);
-        // Select a default file for the new language
-        const defaultFile = `${value}/index.md`;
-        setSelectedFile(defaultFile);
-    };
-
     const handleSelect = (key) => {
         setSelectedFile(key);
     };
 
-    // A simple recursive component to render the file tree
-    const FileTree = ({ nodes, onSelect, selectedKey }) => {
+    // Recursive component to render the file tree using Mantine NavLink
+    const FileTree = ({ nodes, onSelect, selectedKey, level = 0 }) => {
         return (
-            <div>
-                {nodes.map(node => (
-                    <div key={node.key} style={{ paddingLeft: '20px' }}>
-                        {node.isLeaf ? (
-                             <a
-                                href="#"
-                                onClick={(e) => { e.preventDefault(); onSelect(node.key); }}
-                                style={{
-                                    display: 'block',
-                                    padding: '5px',
-                                    borderRadius: '4px',
-                                    backgroundColor: node.key === selectedKey ? 'var(--mantine-color-blue-light)' : 'transparent',
-                                    color: node.key === selectedKey ? 'var(--mantine-color-blue-filled)' : 'inherit',
-                                    textDecoration: 'none'
-                                }}
+            <>
+                {nodes.map(node => {
+                    if (node.isLeaf) {
+                        return (
+                            <NavLink
+                                key={node.key}
+                                label={node.title}
+                                leftSection={<IconFileText size="1rem" stroke={1.5} />}
+                                active={node.key === selectedKey}
+                                onClick={() => onSelect(node.key)}
+                                style={{ borderRadius: 'var(--mantine-radius-sm)' }}
+                            />
+                        );
+                    } else {
+                        return (
+                            <NavLink
+                                key={node.key}
+                                label={node.title}
+                                leftSection={<IconFolder size="1rem" stroke={1.5} />}
+                                childrenOffset={28}
+                                defaultOpened={true} // Default to opened for better visibility
+                                style={{ borderRadius: 'var(--mantine-radius-sm)' }}
                             >
-                                {node.title}
-                            </a>
-                        ) : (
-                            <div>
-                                <strong>{node.title}</strong>
-                                {node.children && <FileTree nodes={node.children} onSelect={onSelect} selectedKey={selectedKey} />}
-                            </div>
-                        )}
-                    </div>
-                ))}
-            </div>
+                                {node.children && (
+                                    <FileTree
+                                        nodes={node.children}
+                                        onSelect={onSelect}
+                                        selectedKey={selectedKey}
+                                        level={level + 1}
+                                    />
+                                )}
+                            </NavLink>
+                        );
+                    }
+                })}
+            </>
         );
     };
 
     return (
-        <Grid style={{ height: 'calc(100vh - 120px)' }}>
-            <Grid.Col span={4}>
-                <Paper withBorder p="md" style={{ height: '100%' }}>
-                    <ScrollArea style={{ height: '100%' }}>
+        <div style={{ display: 'flex', height: '100%', width: '100%' }}>
+            {/* Left Sidebar: Documentation Navigation */}
+            <div style={{ width: '300px', height: '100%', borderRight: '1px solid var(--mantine-color-dark-4)', display: 'flex', flexDirection: 'column' }}>
+                <Paper p="md" style={{ height: '100%', backgroundColor: 'var(--mantine-color-dark-7)', display: 'flex', flexDirection: 'column' }}>
+                    <Group justify="space-between" mb="md">
                         <Title order={4}>{t('doc_nav_title')}</Title>
-                        <Select
-                            value={selectedLang}
-                            onChange={setSelectedLang}
-                            data={availableLangs.map(lang => ({ value: lang, label: getLanguageName(lang) }))}
-                            disabled={!availableLangs.length}
-                            style={{ marginBottom: '20px' }}
-                        />
+                    </Group>
+
+                    <Select
+                        value={selectedLang}
+                        onChange={setSelectedLang}
+                        data={availableLangs.map(lang => ({ value: lang, label: getLanguageName(lang) }))}
+                        disabled={!availableLangs.length}
+                        mb="md"
+                        allowDeselect={false}
+                    />
+
+                    <ScrollArea style={{ flex: 1 }} type="auto">
                         {treeLoading ? (
-                            <div style={{ textAlign: 'center', marginTop: '20px' }}><Loader /></div>
+                            <div style={{ textAlign: 'center', marginTop: '20px' }}><Loader size="sm" /></div>
                         ) : (
-                            <FileTree nodes={treeData} onSelect={handleSelect} selectedKey={selectedFile} />
+                            <Box>
+                                <FileTree nodes={treeData} onSelect={handleSelect} selectedKey={selectedFile} />
+                            </Box>
                         )}
                     </ScrollArea>
                 </Paper>
-            </Grid.Col>
-            <Grid.Col span={8}>
-                <Paper withBorder p="md" style={{ height: '100%' }}>
-                    <ScrollArea style={{ height: '100%' }}>
-                        {contentLoading ? (
-                            <div style={{ textAlign: 'center', marginTop: '50px' }}><Loader size="xl" /></div>
-                        ) : (
-                            <div style={{ textAlign: 'left' }}>
-                                <ReactMarkdown rehypePlugins={[rehypeRaw]}>
-                                    {content}
-                                </ReactMarkdown>
-                            </div>
-                        )}
-                    </ScrollArea>
+            </div>
+
+            {/* Right Content: Documentation Viewer */}
+            <div style={{ flex: 1, height: '100%', overflow: 'auto' }}>
+                <Paper p="xl" style={{ minHeight: '100%', backgroundColor: 'var(--mantine-color-dark-8)' }}>
+                    {contentLoading ? (
+                        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '200px' }}>
+                            <Loader size="xl" />
+                        </div>
+                    ) : (
+                        <div className="markdown-body">
+                            <ReactMarkdown rehypePlugins={[rehypeRaw]}>
+                                {content}
+                            </ReactMarkdown>
+                        </div>
+                    )}
                 </Paper>
-            </Grid.Col>
-        </Grid>
+            </div>
+        </div>
     );
 };
 

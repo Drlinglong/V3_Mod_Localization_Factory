@@ -21,12 +21,16 @@ const GlossaryAnalysisBarChart = () => {
           top: 5, right: 30, left: 20, bottom: 5,
         }}
       >
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" />
-        <YAxis />
-        <Tooltip />
-        <Legend />
-        <Bar dataKey="terms" name={t('homepage_bar_chart_terms')} fill="#8884d8" />
+        <CartesianGrid strokeDasharray="3 3" stroke="#373A40" vertical={false} />
+        <XAxis dataKey="name" stroke="#909296" tick={{ fill: '#909296' }} />
+        <YAxis stroke="#909296" tick={{ fill: '#909296' }} />
+        <Tooltip
+          cursor={{ fill: '#373A40', opacity: 0.4 }}
+          contentStyle={{ backgroundColor: '#2C2E33', borderColor: '#373A40', color: '#C1C2C5' }}
+          itemStyle={{ color: '#C1C2C5' }}
+        />
+        <Legend wrapperStyle={{ paddingTop: '20px' }} />
+        <Bar dataKey="terms" name={t('homepage_bar_chart_terms')} fill="#339af0" radius={[4, 4, 0, 0]} />
       </BarChart>
     </ResponsiveContainer>
   );

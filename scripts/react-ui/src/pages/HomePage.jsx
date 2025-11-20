@@ -1,13 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Grid, Card, Title, Text } from '@mantine/core';
+import { Grid, Card, Title, Text, ThemeIcon, Group, Stack, Box, Button, BackgroundImage, Overlay, ActionIcon } from '@mantine/core';
+import { IconRocket, IconRefresh, IconChartBar, IconVocabulary, IconChecklist, IconActivity } from '@tabler/icons-react';
 import ActionCard from '../components/ActionCard';
 import ProjectStatusPieChart from '../components/ProjectStatusPieChart';
 import GlossaryAnalysisBarChart from '../components/GlossaryAnalysisBarChart';
+import StatCard from '../components/StatCard';
+import RecentActivityList from '../components/RecentActivityList';
 
 const HomePage = () => {
   const { t } = useTranslation();
   const [slogan, setSlogan] = useState('');
+  const [greeting, setGreeting] = useState('');
 
   useEffect(() => {
     const slogans = t('homepage_slogans', { returnObjects: true });
@@ -15,47 +19,146 @@ const HomePage = () => {
       const randomIndex = Math.floor(Math.random() * slogans.length);
       setSlogan(slogans[randomIndex]);
     }
+
+    const hour = new Date().getHours();
+    if (hour < 12) setGreeting('Good Morning');
+    else if (hour < 18) setGreeting('Good Afternoon');
+    else setGreeting('Good Evening');
   }, [t]);
 
   return (
-    <div style={{ padding: '24px' }}>
-      <Card shadow="sm" padding="lg" radius="md" withBorder style={{ marginBottom: '24px', textAlign: 'center' }}>
-        <Title order={3}>{t('homepage_title')}</Title>
-        <Text>"{slogan}"</Text>
-      </Card>
+    <Box p="md" style={{ height: '100%' }}>
+      {/* Welcome Banner */}
+      <Box
+        mb="xl"
+        style={{
+          position: 'relative',
+          borderRadius: '16px',
+          overflow: 'hidden',
+          background: 'linear-gradient(135deg, #1c7ed6 0%, #228be6 100%)',
+          boxShadow: '0 10px 30px rgba(0,0,0,0.3)'
+        }}
+      >
+        <Stack p={40} style={{ position: 'relative', zIndex: 2 }}>
+          <Title order={1} c="white" style={{ fontSize: '2.5rem', fontWeight: 800 }}>
+            {greeting}, User!
+          </Title>
+          <Text c="white" size="lg" style={{ opacity: 0.9, maxWidth: '600px' }}>
+            "{slogan}"
+          </Text>
+          <Group mt="lg">
+            <Button variant="white" color="blue" size="md" radius="md" leftSection={<IconRocket size={20} />}>
+              {t('homepage_action_card_new_project')}
+            </Button>
+            <Button variant="filled" color="rgba(0,0,0,0.2)" size="md" radius="md" leftSection={<IconRefresh size={20} />}>
+              {t('homepage_action_card_update_project')}
+            </Button>
+          </Group>
+        </Stack>
 
-      <Grid gutter="xl">
-        <Grid.Col span={{ xs: 12, sm: 6 }}>
-          <ActionCard
-            icon={t('homepage_action_card_new_project_icon')}
-            title={t('homepage_action_card_new_project')}
-            linkTo="/translation"
+        {/* Decorative Background Elements */}
+        <IconRocket
+          size={300}
+          style={{
+            position: 'absolute',
+            right: -50,
+            bottom: -50,
+            opacity: 0.1,
+            color: 'white',
+            transform: 'rotate(-15deg)'
+          }}
+        />
+      </Box>
+
+      {/* Key Metrics Row */}
+      <Grid gutter="md" mb="xl">
+        <Grid.Col span={{ xs: 12, sm: 6, lg: 3 }}>
+          <StatCard
+            title="Total Projects"
+            value="12"
+            icon={<IconChecklist size={24} />}
+            color="blue"
+            progress={75}
+            trend={12}
           />
         </Grid.Col>
-        <Grid.Col span={{ xs: 12, sm: 6 }}>
-          <ActionCard
-            icon={t('homepage_action_card_update_project_icon')}
-            title={t('homepage_action_card_update_project')}
-            linkTo="/translation"
+        <Grid.Col span={{ xs: 12, sm: 6, lg: 3 }}>
+          <StatCard
+            title="Words Translated"
+            value="45,231"
+            icon={<IconVocabulary size={24} />}
+            color="teal"
+            progress={45}
+            trend={5.4}
+          />
+        </Grid.Col>
+        <Grid.Col span={{ xs: 12, sm: 6, lg: 3 }}>
+          <StatCard
+            title="Active Tasks"
+            value="8"
+            icon={<IconActivity size={24} />}
+            color="orange"
+            progress={25}
+            trend={-2}
+          />
+        </Grid.Col>
+        <Grid.Col span={{ xs: 12, sm: 6, lg: 3 }}>
+          <StatCard
+            title="Completion Rate"
+            value="89%"
+            icon={<IconChartBar size={24} />}
+            color="grape"
+            progress={89}
+            trend={1.2}
           />
         </Grid.Col>
       </Grid>
 
-      <Grid gutter="xl" style={{ marginTop: '24px' }}>
-        <Grid.Col span={{ xs: 12, lg: 6 }}>
-          <Card shadow="sm" padding="lg" radius="md" withBorder>
-            <Title order={4}>{t('homepage_chart_pie_title')}</Title>
-            <ProjectStatusPieChart />
-          </Card>
+      {/* Main Dashboard Content */}
+      <Grid gutter="md">
+        {/* Left Column: Charts */}
+        <Grid.Col span={{ xs: 12, lg: 8 }}>
+          <Stack gap="md">
+            <Card shadow="sm" padding="lg" radius="md" withBorder bg="dark.7">
+              <Group justify="space-between" mb="md">
+                <Title order={4}>{t('homepage_chart_pie_title')}</Title>
+                <ActionIcon variant="subtle" color="gray"><IconRefresh size={16} /></ActionIcon>
+              </Group>
+              <ProjectStatusPieChart />
+            </Card>
+            <Card shadow="sm" padding="lg" radius="md" withBorder bg="dark.7">
+              <Group justify="space-between" mb="md">
+                <Title order={4}>{t('homepage_chart_bar_title')}</Title>
+                <ActionIcon variant="subtle" color="gray"><IconRefresh size={16} /></ActionIcon>
+              </Group>
+              <GlossaryAnalysisBarChart />
+            </Card>
+          </Stack>
         </Grid.Col>
-        <Grid.Col span={{ xs: 12, lg: 6 }}>
-          <Card shadow="sm" padding="lg" radius="md" withBorder>
-            <Title order={4}>{t('homepage_chart_bar_title')}</Title>
-            <GlossaryAnalysisBarChart />
-          </Card>
+
+        {/* Right Column: Recent Activity & Quick Actions */}
+        <Grid.Col span={{ xs: 12, lg: 4 }}>
+          <Stack gap="md">
+            <RecentActivityList />
+
+            <Card shadow="sm" padding="lg" radius="md" withBorder bg="dark.7">
+              <Title order={4} mb="md">Quick Links</Title>
+              <Stack gap="xs">
+                <Button variant="light" color="blue" fullWidth justify="flex-start" leftSection={<IconRocket size={16} />}>
+                  New Translation
+                </Button>
+                <Button variant="light" color="teal" fullWidth justify="flex-start" leftSection={<IconRefresh size={16} />}>
+                  Sync Glossary
+                </Button>
+                <Button variant="light" color="orange" fullWidth justify="flex-start" leftSection={<IconChecklist size={16} />}>
+                  Proofread Pending
+                </Button>
+              </Stack>
+            </Card>
+          </Stack>
         </Grid.Col>
       </Grid>
-    </div>
+    </Box>
   );
 };
 

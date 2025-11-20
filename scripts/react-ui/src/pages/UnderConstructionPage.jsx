@@ -1,14 +1,21 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { Container, Paper, Title, Text, Center } from '@mantine/core';
+import { IconCrane } from '@tabler/icons-react';
 
 const UnderConstructionPage = () => {
   const { t } = useTranslation();
 
   return (
-    <div>
-      <h1>{t('page_title_under_construction')}</h1>
-      <p>This page is currently under construction.</p>
-    </div>
+    <Container size="md" py="xl">
+      <Paper withBorder p="xl" radius="md" bg="dark.7">
+        <Center style={{ flexDirection: 'column', height: '300px' }}>
+          <IconCrane size={64} color="orange" style={{ marginBottom: '20px' }} />
+          <Title order={2} mb="md">{t('page_title_under_construction')}</Title>
+          <Text c="dimmed">We are working hard to bring you this page.</Text>
+        </Center>
+      </Paper>
+    </Container>
   );
 };
 
