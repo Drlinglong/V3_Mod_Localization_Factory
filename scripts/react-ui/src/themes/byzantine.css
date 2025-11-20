@@ -17,6 +17,24 @@
     --mantine-color-dark-2: #9A3FC8;
     --mantine-color-dark-1: #B766D6;
     --mantine-color-dark-0: var(--byzantine-ivory);
+
+    /* --- Semantic Design Tokens --- */
+    /* 核心色板: 帝王紫 & 黄金 */
+    --primary-color: #6a1b9a;       /* 提尔紫 */
+    --secondary-color: #ffd700;     /* 黄金 */
+    --text-main: #212121;           /* 深色字 (配合浅色大理石背景) */
+    --text-muted: #616161;
+    --text-highlight: #6A0DAD;      /* 帝王紫 */
+
+    /* 容器材质: 大理石/马赛克 */
+    --glass-bg: rgba(255, 248, 225, 0.92);
+    --glass-border: #ffd700;
+    --card-radius: 8px;
+
+    /* 特效 */
+    --shadow-elevation: 0 4px 6px rgba(0,0,0,0.3);
+    --font-header: "Cinzel", serif;
+    --font-body: "Lato", sans-serif;
 }
 
 /* Buttons */
