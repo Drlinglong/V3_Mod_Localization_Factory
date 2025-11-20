@@ -17,6 +17,24 @@
     --mantine-color-dark-2: #4A5E8A;
     --mantine-color-dark-1: #6B82B0;
     --mantine-color-dark-0: var(--scifi-holo-white);
+
+    /* --- Semantic Design Tokens --- */
+    /* 核心色板: 赛博青 & 虚空紫 */
+    --primary-color: #00f3ff;       /* 霓虹青 */
+    --secondary-color: #bc00ff;     /* 激光紫 */
+    --text-main: #e0f7fa;           /* 高亮终端字 */
+    --text-muted: #546e7a;          /* 暗淡数据 */
+    --text-highlight: #00FFCC;      /* 强调色 */
+
+    /* 容器材质: 全息玻璃 */
+    --glass-bg: rgba(10, 25, 41, 0.85);
+    --glass-border: rgba(0, 243, 255, 0.3);
+    --card-radius: 2px;             /* 硬朗切角 */
+
+    /* 特效 */
+    --shadow-elevation: 0 0 15px rgba(0, 243, 255, 0.15); /* 发光效果 */
+    --font-header: "Orbitron", "Roboto Mono", monospace;
+    --font-body: "Roboto", sans-serif;
 }
 
 /* Buttons */
