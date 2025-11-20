@@ -18,6 +18,24 @@
     --mantine-color-dark-2: #A68659;
     --mantine-color-dark-1: #C4A875;
     --mantine-color-dark-0: var(--medieval-ink);
+
+    /* --- Semantic Design Tokens (Inferred) --- */
+    /* 核心色板: 皇室红 & 金箔 */
+    --primary-color: #8B0000;       /* 皇室红 */
+    --secondary-color: #DAA520;     /* 金箔 */
+    --text-main: #2E2416;           /* 深羊皮纸褐 */
+    --text-muted: #5B472E;
+    --text-highlight: #B8860B;      /* 烫金 */
+
+    /* 容器材质: 旧羊皮纸 */
+    --glass-bg: rgba(240, 230, 210, 0.95); /* 浅色羊皮纸 */
+    --glass-border: #B8860B;    /* 金边 */
+    --card-radius: 12px;            /* 手抄本圆角 */
+
+    /* 特效 */
+    --shadow-elevation: 3px 3px 8px rgba(0,0,0,0.5); /* 烛光阴影 */
+    --font-header: "MedievalSharp", cursive; /* 手写体 */
+    --font-body: "Times New Roman", serif;
 }
 
 /* Buttons */

@@ -18,6 +18,24 @@
     --mantine-color-dark-2: #8FA696;
     --mantine-color-dark-1: #B5C4B8;
     --mantine-color-dark-0: var(--victorian-ivory);
+
+    /* --- Semantic Design Tokens --- */
+    /* 核心色板: 羊皮纸 & 黄铜 */
+    --primary-color: #8d6e63;       /* 皮革棕 */
+    --secondary-color: #2e3b55;     /* 普鲁士蓝 */
+    --text-main: #3e2723;           /* 墨水黑 (在深色木纹上可能需要反转，但先遵循指令) */
+    --text-muted: #8d6e63;          /* 褪色墨水 */
+    --text-highlight: #B8860B;      /* 黄铜色 */
+
+    /* 容器材质: 磨砂玻璃/厚纸 */
+    --glass-bg: rgba(245, 245, 220, 0.90); /* 米色不透明 */
+    --glass-border: #8d6e63;    /* 双线边框模拟手绘 */
+    --card-radius: 4px;
+
+    /* 特效 */
+    --shadow-elevation: 4px 4px 0px rgba(62, 39, 35, 0.2); /* 硬阴影 */
+    --font-header: "Playfair Display", serif;
+    --font-body: "Georgia", serif;
 }
 
 /* Buttons */
