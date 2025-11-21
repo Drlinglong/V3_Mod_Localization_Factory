@@ -4,21 +4,24 @@
 .sidebar {
     background: var(--glass-bg) !important;
     backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     transition: all 0.3s ease;
     color: var(--text-main);
     box-shadow: var(--shadow-elevation);
-    z-index: 100; /* Ensure it floats above content/bg */
+    z-index: 100;
+    /* Ensure it floats above content/bg */
+    border-color: var(--glass-border) !important;
 }
 
 /* Specific Sidebars */
 .sidebarLeft {
     composes: sidebar;
-    border-right: var(--glass-border) !important;
+    border-right: 1px solid var(--glass-border) !important;
 }
 
 .sidebarRight {
     composes: sidebar;
-    border-left: var(--glass-border) !important;
+    border-left: 1px solid var(--glass-border) !important;
 }
 
 /* Navigation Links / Icons */
@@ -31,6 +34,7 @@
     border-radius: var(--card-radius) !important;
     transition: all 0.2s ease;
     color: var(--text-main) !important;
+    background: transparent !important;
 }
 
 .navLink:hover {
@@ -41,7 +45,12 @@
 .navLink[data-active="true"] {
     background-color: rgba(255, 255, 255, 0.15) !important;
     color: var(--color-primary) !important;
-    border: 1px solid var(--color-primary); /* Optional: outline active state */
+    border: 1px solid var(--color-primary);
+    /* Optional: outline active state */
+}
+
+.navLink[data-active="true"] .icon {
+    color: var(--color-primary) !important;
 }
 
 /* Sci-Fi Glow Effect for Icons */
@@ -54,5 +63,26 @@
 .sidebarHeader {
     font-family: var(--font-header);
     color: var(--text-highlight);
-    text-shadow: 0 0 5px rgba(0,0,0,0.3);
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* --- Global Glass Utilities --- */
+.glassCard {
+    background: var(--glass-bg) !important;
+    border: 1px solid var(--glass-border) !important;
+    border-radius: var(--card-radius) !important;
+    box-shadow: var(--shadow-elevation) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    color: var(--text-main) !important;
+}
+
+.glassPanel {
+    background: rgba(0, 0, 0, 0.3) !important;
+    /* Slightly darker/more transparent for panels */
+    border: 1px solid var(--glass-border) !important;
+    border-radius: var(--card-radius) !important;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: var(--text-main) !important;
 }

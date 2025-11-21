@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Card, Text, ThemeIcon, Group, Stack } from '@mantine/core';
 import { IconArrowRight } from '@tabler/icons-react';
 
-const ActionCard = ({ icon, title, description, linkTo, color = 'blue' }) => {
+const ActionCard = ({ icon, title, description, linkTo, color = 'blue', className }) => {
   return (
     <Link to={linkTo} style={{ textDecoration: 'none' }}>
       <Card
@@ -11,7 +11,7 @@ const ActionCard = ({ icon, title, description, linkTo, color = 'blue' }) => {
         padding="xl"
         radius="md"
         withBorder
-        bg="dark.7"
+        className={className}
         style={{
           transition: 'transform 0.2s ease, box-shadow 0.2s ease',
           cursor: 'pointer'

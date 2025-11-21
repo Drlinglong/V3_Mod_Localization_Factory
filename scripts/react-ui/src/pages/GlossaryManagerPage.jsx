@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { useTranslation } from 'react-i18next';
 import {
     Grid, Select, Input, Title, Button, Modal, Badge, Group, LoadingOverlay, Tooltip, Switch, Text, Paper, ScrollArea, Table, TextInput, NavLink, Box, Stack
 } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { notifications } from '@mantine/notifications';
-import { IconPlus, IconEdit, IconTrash, IconDots, IconFolder, IconFileText } from '@tabler/icons-react';
+import { IconPlus, IconEdit, IconTrash, IconDots, IconFolder, IconFileText, IconX } from '@tabler/icons-react';
 import {
     useReactTable,
     getCoreRowModel,
@@ -13,6 +14,7 @@ import {
     getFilteredRowModel,
 } from '@tanstack/react-table';
 import axios from 'axios';
+import { useSidebar } from '../context/SidebarContext';
 import styles from './GlossaryManager.module.css';
 
 
@@ -68,6 +70,9 @@ const GlossaryManagerPage = () => {
 
     const [isDeleteModalVisible, setIsDeleteModalVisible] = useState(false);
     const [deletingItemId, setDeletingItemId] = useState(null);
+
+    // New State for Master-Detail View
+    const [selectedTerm, setSelectedTerm] = useState(null);
 
     const showDeleteModal = (id) => {
         setDeletingItemId(id);
@@ -137,12 +142,21 @@ const GlossaryManagerPage = () => {
     // --- Handlers ---
     const handleAdd = () => {
         setEditingEntry(null);
+        setSelectedTerm(null); // Clear selection when adding new
         form.reset();
-        setIsModalVisible(true);
+        setIsModalVisible(true); // Keep modal for adding new entries for now, or switch to panel? Let's keep modal for "Add" to avoid confusion, or maybe panel is better?
+        // User asked for "click row -> show details". Adding new might still be better in a modal or just an empty panel.
+        // Let's stick to Modal for ADD for now to minimize risk, but use Panel for EDIT/VIEW.
     };
 
-    const handleEdit = (entry) => {
+    const { setSidebarWidth } = useSidebar();
+
+    // ...
+
+    const handleRowClick = (entry) => {
+        setSelectedTerm(entry);
         setEditingEntry(entry);
+        setSidebarWidth(450); // Widen the sidebar for editing
         form.setValues({
             source: entry.source,
             translation: entry.translations[selectedTargetLang] || '',
@@ -151,7 +165,12 @@ const GlossaryManagerPage = () => {
             abbreviations: entry.abbreviations ? JSON.stringify(entry.abbreviations, null, 2) : '',
             metadata: entry.metadata ? JSON.stringify(entry.metadata, null, 2) : '',
         });
-        setIsModalVisible(true);
+    };
+
+    const handleClosePanel = () => {
+        setSelectedTerm(null);
+        setEditingEntry(null);
+        setSidebarWidth(300); // Reset width
     };
 
     const saveData = async (values) => {
@@ -196,6 +215,16 @@ const GlossaryManagerPage = () => {
             notifications.show({ title: 'Success', message: 'Glossary saved successfully!', color: 'green' });
             setIsModalVisible(false);
             fetchGlossaryContent();
+
+            // If we are in panel mode (editingEntry exists and selectedTerm exists), we might want to keep the panel open or update it.
+            // For now, let's just refresh the data. The selectedTerm might need to be updated with new values if we want to reflect changes immediately without re-clicking.
+            if (selectedTerm && editingEntry && selectedTerm.id === editingEntry.id) {
+                // We can't easily update selectedTerm with full server response here without refetching, 
+                // but fetchGlossaryContent will refresh the list. 
+                // We might lose selection if the list rebuilds? No, selection is by ID reference usually, but here it's an object.
+                // Let's rely on the list refresh.
+            }
+
         } catch (error) {
             notifications.show({ title: 'Error', message: 'Failed to save glossary.', color: 'red' });
             console.error('Save error:', error);
@@ -218,6 +247,9 @@ const GlossaryManagerPage = () => {
             } else {
                 fetchGlossaryContent();
             }
+            if (selectedTerm && selectedTerm.id === id) {
+                setSelectedTerm(null); // Deselect if deleted
+            }
         } catch (error) {
             notifications.show({ title: 'Error', message: 'Failed to delete entry.', color: 'red' });
             console.error('Delete error:', error);
@@ -232,6 +264,7 @@ const GlossaryManagerPage = () => {
             setSelectedFile({ key: key, title: fileName, gameId: gameId });
             setFiltering('');
             setPagination({ pageIndex: 0, pageSize: 25 }); // Reset pagination, which triggers useEffect to fetch data.
+            setSelectedTerm(null); // Clear selection on file change
         }
     };
 
@@ -266,7 +299,7 @@ const GlossaryManagerPage = () => {
         {
             accessorKey: 'notes',
             header: () => <Text className={styles.textMain} fw={700}>{t('glossary_notes')}</Text>,
-            cell: ({ row }) => (row.original.notes ? (<Tooltip label={t('glossary_view_edit_notes', 'View/Edit Notes')}><Button size="xs" variant="subtle" onClick={() => handleEdit(row.original)} className={styles.actionButton}><IconDots size={14} /></Button></Tooltip>) : null)
+            cell: ({ row }) => (row.original.notes ? (<Tooltip label={t('glossary_view_edit_notes', 'View/Edit Notes')}><IconDots size={14} style={{ color: 'var(--text-muted)' }} /></Tooltip>) : null)
         },
         {
             accessorKey: 'variants',
@@ -277,16 +310,8 @@ const GlossaryManagerPage = () => {
             id: 'actions',
             header: () => <Text className={styles.textMain} fw={700}>{t('glossary_actions')}</Text>,
             cell: ({ row }) => (
-                <Group gap="xs">
-                    <Button
-                        size="xs"
-                        variant="outline"
-                        className={styles.actionButton}
-                        style={{ borderColor: 'var(--color-primary)', color: 'var(--color-primary)' }}
-                        onClick={() => handleEdit(row.original)}
-                    >
-                        <IconEdit size={14} />
-                    </Button>
+                <Group gap="xs" onClick={(e) => e.stopPropagation()}>
+                    {/* Stop propagation so clicking delete doesn't select the row */}
                     <Button
                         size="xs"
                         variant="outline"
@@ -366,6 +391,7 @@ const GlossaryManagerPage = () => {
         <div className={styles.pageContainer}>
             <LoadingOverlay visible={isSaving} />
             <Grid gutter="md" style={{ flex: 1, overflow: 'hidden' }}>
+                {/* Left Sidebar: Navigation */}
                 <Grid.Col span={3} style={{ height: '100%' }}>
                     <Paper p="md" className={styles.sidebarCard}>
                         <LoadingOverlay visible={isLoadingTree} />
@@ -405,7 +431,9 @@ const GlossaryManagerPage = () => {
                         </ScrollArea>
                     </Paper>
                 </Grid.Col>
-                <Grid.Col span={9} style={{ height: '100%' }}>
+
+                {/* Middle Column: Table */}
+                <Grid.Col span={9} style={{ height: '100%', transition: 'all 0.3s ease' }}>
                     <Paper p="md" className={styles.contentCard}>
                         <LoadingOverlay visible={isLoadingContent} />
                         <Group justify="space-between" mb="md">
@@ -438,7 +466,13 @@ const GlossaryManagerPage = () => {
                                 <Table.Tbody>
                                     {table.getRowModel().rows.length > 0 ? (
                                         table.getRowModel().rows.map(row => (
-                                            <Table.Tr key={row.id}>{row.getVisibleCells().map(cell => <Table.Td key={cell.id}>{flexRender(cell.column.columnDef.cell, cell.getContext())}</Table.Td>)}</Table.Tr>
+                                            <Table.Tr
+                                                key={row.id}
+                                                onClick={() => handleRowClick(row.original)}
+                                                className={selectedTerm && selectedTerm.id === row.original.id ? styles.selectedRow : ''}
+                                            >
+                                                {row.getVisibleCells().map(cell => <Table.Td key={cell.id}>{flexRender(cell.column.columnDef.cell, cell.getContext())}</Table.Td>)}
+                                            </Table.Tr>
                                         ))
                                     ) : (
                                         <Table.Tr>
@@ -472,8 +506,50 @@ const GlossaryManagerPage = () => {
                 </Grid.Col>
             </Grid>
 
+            {/* Portal to ContextualSider */}
+            {selectedTerm && document.getElementById('glossary-detail-portal') && createPortal(
+                <Stack gap="md">
+                    <Group justify="space-between">
+                        <Title order={5} className={styles.headerTitle}>{t('glossary_edit_entry', 'Edit Entry')}</Title>
+                        <Button variant="subtle" size="xs" onClick={handleClosePanel}><IconX size={16} /></Button>
+                    </Group>
+                    <form onSubmit={form.onSubmit(saveData)}>
+                        <Stack gap="md">
+                            <TextInput label={<Text className={styles.textMain}>{t('glossary_source_text')}</Text>} required {...form.getInputProps('source')} />
+                            <TextInput label={<Text className={styles.textMain}>{`${t('glossary_translation')} (${targetLanguages.find(l => l.code === selectedTargetLang)?.name_local || selectedTargetLang})`}</Text>} required {...form.getInputProps('translation')} />
+                            <Input.Wrapper label={<Text className={styles.textMain}>{t('glossary_notes')}</Text>}><Input component="textarea" autosize minRows={3} {...form.getInputProps('notes')} /></Input.Wrapper>
+
+                            <Group justify="space-between" mt="xs">
+                                <Text size="sm" className={styles.textMain}>{t('glossary_advanced_mode', 'Advanced Mode')}</Text>
+                                <Switch checked={isAdvancedMode} onChange={(event) => setIsAdvancedMode(event.currentTarget.checked)} />
+                            </Group>
+
+                            {isAdvancedMode && (
+                                <>
+                                    <Input.Wrapper label={<Text className={styles.textMain}>{t('glossary_variants')}</Text>} description={t('glossary_variants_tooltip_json')}>
+                                        <Input component="textarea" autosize minRows={2} {...form.getInputProps('variants')} />
+                                    </Input.Wrapper>
+                                    <Input.Wrapper label={<Text className={styles.textMain}>{t('glossary_abbreviations')}</Text>} description={t('glossary_abbreviations_tooltip_json')}>
+                                        <Input component="textarea" autosize minRows={2} {...form.getInputProps('abbreviations')} />
+                                    </Input.Wrapper>
+                                    <Input.Wrapper label={<Text className={styles.textMain}>{t('glossary_metadata')}</Text>} description={t('glossary_metadata_tooltip_json')}>
+                                        <Input component="textarea" autosize minRows={2} {...form.getInputProps('metadata')} />
+                                    </Input.Wrapper>
+                                </>
+                            )}
+
+                            <Group justify="flex-end" mt="md">
+                                <Button variant="default" onClick={handleClosePanel} className={styles.actionButton}>{t('button_cancel')}</Button>
+                                <Button type="submit" loading={isSaving} className={styles.primaryButton}>{t('button_save')}</Button>
+                            </Group>
+                        </Stack>
+                    </form>
+                </Stack>,
+                document.getElementById('glossary-detail-portal')
+            )}
+
             <Modal
-                title={<Text className={styles.headerTitle}>{editingEntry ? t('glossary_edit_entry') : t('glossary_add_entry')}</Text>}
+                title={<Text className={styles.headerTitle}>{t('glossary_add_entry')}</Text>}
                 opened={isModalVisible}
                 onClose={() => { setIsModalVisible(false); setIsAdvancedMode(false); }}
                 classNames={{ content: styles.modalContent, header: styles.modalHeader, body: styles.modalBody, title: styles.modalTitle }}

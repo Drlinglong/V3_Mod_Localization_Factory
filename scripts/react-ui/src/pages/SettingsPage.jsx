@@ -5,6 +5,8 @@ import { IconLanguage, IconPalette } from '@tabler/icons-react';
 import ThemeContext from '../ThemeContext';
 import { AVAILABLE_THEMES } from '../config/themes';
 
+import styles from './SettingsPage.module.css';
+
 const SettingsPage = () => {
     const { t, i18n } = useTranslation();
     const { theme, toggleTheme } = useContext(ThemeContext);
@@ -27,8 +29,8 @@ const SettingsPage = () => {
 
     return (
         <Container size="sm" py="xl">
-            <Paper withBorder p="xl" radius="md" bg="dark.7">
-                <Title order={2} mb="xl">{t('page_title_settings')}</Title>
+            <Paper withBorder p="xl" radius="md" className={styles.glassCard}>
+                <Title order={2} mb="xl" className={styles.headerTitle}>{t('page_title_settings')}</Title>
 
                 <Stack gap="lg">
                     <Group justify="space-between">

@@ -29,8 +29,9 @@
 .headerTitle {
     font-family: var(--font-header) !important;
     color: var(--text-highlight) !important;
-    text-shadow: 0 0 5px rgba(0,0,0,0.2);
-    margin-bottom: 16px; /* Standard spacing */
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 16px;
+    /* Standard spacing */
 }
 
 /* --- Interactive Elements --- */
@@ -48,9 +49,11 @@
 .primaryButton {
     composes: actionButton;
     background-color: var(--color-primary) !important;
-    color: #000 !important; /* Fallback */
+    color: #000 !important;
+    /* Fallback */
     border: 1px solid var(--color-accent) !important;
 }
+
 /* Adjust text color based on theme brightness if possible,
    or rely on specific theme variables for button text if defined.
    For now, we assume dark themes, so light text or theme-specific logic.
@@ -58,9 +61,11 @@
 [data-theme='scifi'] .primaryButton {
     color: #000 !important;
 }
+
 [data-theme='victorian'] .primaryButton {
     color: #fff !important;
 }
+
 [data-theme='byzantine'] .primaryButton {
     color: #fff !important;
 }
@@ -72,7 +77,7 @@
 }
 
 .filterInput :global(.mantine-Input-input) {
-    background-color: rgba(0,0,0,0.2) !important;
+    background-color: rgba(0, 0, 0, 0.2) !important;
     border-color: var(--glass-border) !important;
     color: var(--text-main) !important;
     font-family: var(--font-body) !important;
@@ -84,7 +89,7 @@
 }
 
 .dataTable thead tr th {
-    background-color: rgba(0,0,0,0.2) !important;
+    background-color: rgba(0, 0, 0, 0.2) !important;
     color: var(--text-highlight) !important;
     font-family: var(--font-header) !important;
     border-bottom: 1px solid var(--glass-border) !important;
@@ -99,6 +104,12 @@
 /* Hover effect for rows */
 .dataTable tbody tr:hover td {
     background-color: rgba(255, 255, 255, 0.05) !important;
+    cursor: pointer;
+}
+
+.selectedRow td {
+    background-color: rgba(var(--color-primary-rgb), 0.15) !important;
+    border-bottom-color: var(--color-primary) !important;
 }
 
 /* --- Text Utilities --- */

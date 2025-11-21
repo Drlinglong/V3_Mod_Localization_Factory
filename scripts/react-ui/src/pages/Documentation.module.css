@@ -1,0 +1,66 @@
+/* scripts/react-ui/src/pages/Documentation.module.css */
+
+.container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    gap: 16px;
+    overflow: hidden;
+}
+
+.sidebarWrapper {
+    width: 300px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: var(--glass-bg) !important;
+    border: 1px solid var(--glass-border) !important;
+    border-radius: var(--card-radius) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: var(--shadow-elevation);
+}
+
+.contentWrapper {
+    flex: 1;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1;
+    height: 100%;
+    background: var(--glass-bg) !important;
+    border: 1px solid var(--glass-border) !important;
+    border-radius: var(--card-radius) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: var(--shadow-elevation);
+    color: var(--text-main) !important;
+    overflow: auto;
+}
+
+.navLink {
+    border-radius: var(--card-radius) !important;
+    color: var(--text-main) !important;
+    transition: all 0.2s ease;
+    margin-bottom: 4px;
+}
+
+.navLink:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.navLink[data-active="true"] {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    color: var(--color-primary) !important;
+    border: 1px solid var(--glass-border);
+}

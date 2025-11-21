@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Title, Text, Select, Group, Grid, Card, Table, Badge, Button, Tabs, Center, Container, Paper, Stack, ScrollArea } from '@mantine/core';
 import { IconArrowLeft, IconArrowRight, IconCheck, IconX, IconClock, IconPlayerPlay, IconFolder } from '@tabler/icons-react';
+import styles from './ProjectManagement.module.css';
 
 // Mock data for projects
 const mockProjects = [
@@ -85,7 +86,7 @@ const ProjectManagement = () => {
         const statusIndex = statusFlow.indexOf(currentStatus);
 
         return (
-            <Card key={file.key} withBorder shadow="sm" radius="md" mb="sm" bg="dark.6">
+            <Card key={file.key} withBorder shadow="sm" radius="md" mb="sm" className={styles.taskCard}>
                 <Text fw={500} truncate>{file.name}</Text>
                 <Group justify="space-between" mt="xs">
                     <Text size="xs" c="dimmed">Lines: {file.lines}</Text>
@@ -139,20 +140,20 @@ const ProjectManagement = () => {
 
         return (
             <Stack gap="lg">
-                <Paper withBorder p="md" radius="md" bg="dark.7">
+                <Paper withBorder p="md" radius="md" className={styles.glassCard}>
                     <Title order={4} mb="md">项目概览: {mockProjects.find(p => p.id === selectedProject)?.name}</Title>
                     <Grid>
-                        <Grid.Col span={3}><Card withBorder bg="dark.6"><Text size="xs" c="dimmed">文件总数</Text><Title order={3}>{projectDetails.overview.totalFiles}</Title></Card></Grid.Col>
-                        <Grid.Col span={3}><Card withBorder bg="dark.6"><Text size="xs" c="dimmed">已翻译</Text><Title order={3} c="green">{projectDetails.overview.translated}%</Title></Card></Grid.Col>
-                        <Grid.Col span={3}><Card withBorder bg="dark.6"><Text size="xs" c="dimmed">待校对</Text><Title order={3} c="yellow">{projectDetails.overview.toBeProofread}%</Title></Card></Grid.Col>
-                        <Grid.Col span={3}><Card withBorder bg="dark.6"><Text size="xs" c="dimmed">使用词典</Text><Title order={3} size="h4">{projectDetails.overview.glossary}</Title></Card></Grid.Col>
+                        <Grid.Col span={3}><Card withBorder className={styles.statCard}><Text size="xs" c="dimmed">文件总数</Text><Title order={3}>{projectDetails.overview.totalFiles}</Title></Card></Grid.Col>
+                        <Grid.Col span={3}><Card withBorder className={styles.statCard}><Text size="xs" c="dimmed">已翻译</Text><Title order={3} c="green">{projectDetails.overview.translated}%</Title></Card></Grid.Col>
+                        <Grid.Col span={3}><Card withBorder className={styles.statCard}><Text size="xs" c="dimmed">待校对</Text><Title order={3} c="yellow">{projectDetails.overview.toBeProofread}%</Title></Card></Grid.Col>
+                        <Grid.Col span={3}><Card withBorder className={styles.statCard}><Text size="xs" c="dimmed">使用词典</Text><Title order={3} size="h4">{projectDetails.overview.glossary}</Title></Card></Grid.Col>
                     </Grid>
                 </Paper>
 
-                <Paper withBorder p="md" radius="md" bg="dark.7">
+                <Paper withBorder p="md" radius="md" className={styles.glassCard}>
                     <Title order={4} mb="md">文件详情列表</Title>
                     <ScrollArea>
-                        <Table verticalSpacing="sm">
+                        <Table verticalSpacing="sm" className={styles.table}>
                             <Table.Thead>
                                 <Table.Tr>
                                     <Table.Th>文件名</Table.Th>
@@ -180,7 +181,7 @@ const ProjectManagement = () => {
         return (
             <Grid gutter="xl">
                 <Grid.Col span={4}>
-                    <Paper p="sm" radius="md" bg="dark.8" withBorder>
+                    <Paper p="sm" radius="md" withBorder className={styles.kanbanColumn}>
                         <Group justify="space-between" mb="md">
                             <Title order={5}>To Do</Title>
                             <Badge color="gray">{todoFiles.length}</Badge>
@@ -191,7 +192,7 @@ const ProjectManagement = () => {
                     </Paper>
                 </Grid.Col>
                 <Grid.Col span={4}>
-                    <Paper p="sm" radius="md" bg="dark.8" withBorder>
+                    <Paper p="sm" radius="md" withBorder className={styles.kanbanColumn}>
                         <Group justify="space-between" mb="md">
                             <Title order={5}>In Progress</Title>
                             <Badge color="yellow">{inProgressFiles.length}</Badge>
@@ -202,7 +203,7 @@ const ProjectManagement = () => {
                     </Paper>
                 </Grid.Col>
                 <Grid.Col span={4}>
-                    <Paper p="sm" radius="md" bg="dark.8" withBorder>
+                    <Paper p="sm" radius="md" withBorder className={styles.kanbanColumn}>
                         <Group justify="space-between" mb="md">
                             <Title order={5}>Done</Title>
                             <Badge color="green">{doneFiles.length}</Badge>
@@ -217,9 +218,9 @@ const ProjectManagement = () => {
     };
 
     return (
-        <Container size="xl" py="xl">
+        <Container size="xl" py="xl" className={styles.container}>
             <Group justify="space-between" mb="xl">
-                <Title order={2}>项目管理中心</Title>
+                <Title order={2} style={{ fontFamily: 'var(--font-header)', color: 'var(--text-highlight)' }}>项目管理中心</Title>
                 <Select
                     style={{ width: 300 }}
                     placeholder="选择一个项目"
@@ -245,7 +246,7 @@ const ProjectManagement = () => {
                     </Tabs.Panel>
                 </Tabs>
             ) : (
-                <Paper p="xl" withBorder radius="md" bg="dark.7">
+                <Paper p="xl" withBorder radius="md" className={styles.emptyState}>
                     <Center style={{ height: 200, flexDirection: 'column' }}>
                         <IconFolder size={48} color="gray" style={{ marginBottom: 16 }} />
                         <Text c="dimmed" size="lg">请从上方选择一个项目以查看详情</Text>
