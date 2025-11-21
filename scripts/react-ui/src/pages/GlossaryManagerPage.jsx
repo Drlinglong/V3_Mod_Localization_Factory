@@ -118,12 +118,8 @@ const GlossaryManagerPage = () => {
 
         try {
             let response;
-            // If searching with scope 'game' or 'all', or searching in 'file' with a query
-            // (Note: The user asked for separate search options, we implement 'search' endpoint logic)
-            // Actually, if searchScope is 'file' and NO filter, we use GET /content.
-            // If searchScope is 'file' WITH filter, we can use GET /content (existing filter) OR the new search.
-            // The user prompt implies "Search Option ... Dropdown".
 
+            // If filtering is empty, use standard content fetch
             if (searchScope === 'file' && !filtering) {
                 if (!selectedFile.key) {
                     setData([]);
@@ -136,7 +132,7 @@ const GlossaryManagerPage = () => {
                     `/api/glossary/content?game_id=${gameId}&file_name=${title}&page=${pageIndex + 1}&pageSize=${pageSize}`
                 );
             } else {
-                // Search logic
+                // Search logic (even for file scope if there is a filter)
                 const payload = {
                     scope: searchScope,
                     query: filtering,
@@ -404,6 +400,7 @@ const GlossaryManagerPage = () => {
         getCoreRowModel: getCoreRowModel(),
         getFilteredRowModel: getFilteredRowModel(),
         manualPagination: true,
+        manualFiltering: true, // IMPORTANT: Server-side filtering only
         pageCount: Math.ceil(rowCount / pagination.pageSize),
         state: {
             globalFilter: filtering,
@@ -568,9 +565,9 @@ const GlossaryManagerPage = () => {
                                         <Table.Tr>
                                             <Table.Td colSpan={columns.length} style={{ textAlign: 'center', padding: '20px' }}>
                                                 <Text className={styles.textMuted}>
-                                                    {searchScope === 'file'
+                                                    {searchScope === 'file' && !filtering
                                                         ? t('glossary_no_entries', 'No entries found')
-                                                        : t('glossary_no_search_results', `No matching terms found in ${searchScope === 'game' ? 'current game' : 'all games'}`)}
+                                                        : t('glossary_no_search_results', `No matching terms found`)}
                                                 </Text>
                                             </Table.Td>
                                         </Table.Tr>

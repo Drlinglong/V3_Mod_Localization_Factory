@@ -2,13 +2,14 @@
 
 /* Page Container */
 .pageContainer {
-    height: calc(100vh - 100px);
+    height: 100%;
     display: flex;
     flex-direction: column;
     position: relative;
     font-family: var(--font-body);
     color: var(--text-main);
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 /* --- Panels / Cards --- */
@@ -33,7 +34,7 @@
     color: var(--text-highlight) !important;
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     margin-bottom: 16px;
-    /* Standard spacing */
+    flex-shrink: 0; /* Prevent header from shrinking */
 }
 
 /* --- Interactive Elements --- */
@@ -56,10 +57,7 @@
     border: 1px solid var(--color-accent) !important;
 }
 
-/* Adjust text color based on theme brightness if possible,
-   or rely on specific theme variables for button text if defined.
-   For now, we assume dark themes, so light text or theme-specific logic.
-*/
+/* Adjust text color based on theme brightness if possible */
 [data-theme='scifi'] .primaryButton {
     color: #000 !important;
 }
@@ -75,7 +73,7 @@
 
 /* --- Form Elements --- */
 .filterInput {
-    margin-bottom: 16px;
+    margin-bottom: 0 !important; /* Removed bottom margin to align with group */
 }
 
 .filterInput :global(.mantine-Input-input) {
@@ -88,6 +86,7 @@
 /* --- Table Styling --- */
 .dataTable {
     border-color: var(--glass-border) !important;
+    height: 100%; /* Ensure table container takes height */
 }
 
 .dataTable thead tr th {
@@ -95,6 +94,9 @@
     color: var(--text-highlight) !important;
     font-family: var(--font-header) !important;
     border-bottom: 1px solid var(--glass-border) !important;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 .dataTable tbody tr td {
@@ -124,10 +126,6 @@
 }
 
 /* --- Modals --- */
-/* Since Modals are rendered in a Portal, we might need global overrides
-   or pass classNames to the Modal component.
-   Here we define a class we can pass to the Modal's `classNames` prop.
-*/
 .modalContent {
     background: var(--glass-bg) !important;
     border: var(--glass-border) !important;
