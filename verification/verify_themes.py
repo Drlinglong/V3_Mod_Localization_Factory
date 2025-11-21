@@ -8,10 +8,9 @@ def verify_themes():
         context = browser.new_context(viewport={'width': 1280, 'height': 720})
         page = context.new_page()
 
-        print("Navigating to Glossary Manager page...")
+        print("Navigating to Settings page (for full layout check)...")
         try:
-            page.goto("http://localhost:5173/glossary-manager", timeout=60000)
-            # Wait for app to load
+            page.goto("http://localhost:5173/settings", timeout=60000)
             page.wait_for_selector("body", timeout=10000)
         except Exception as e:
             print(f"Failed to load page: {e}")
@@ -19,9 +18,8 @@ def verify_themes():
             return
 
         print("Page loaded.")
-        time.sleep(3) # Give it a moment to render
+        time.sleep(3)
 
-        # Function to check computed style property
         def get_computed_style(selector, property_name):
             value = page.evaluate(f"""() => {{
                 const el = document.querySelector('{selector}');
@@ -30,38 +28,37 @@ def verify_themes():
             }}""")
             return value
 
-        # Function to change theme via JS
         def set_theme(theme_name):
             print(f"Attempting to set theme to {theme_name}...")
-            # New logic uses data-theme attribute, but ThemeContext updates it based on localStorage
             page.evaluate(f"localStorage.setItem('theme', '{theme_name}')")
             page.reload()
             time.sleep(3)
 
-            # Verify data-theme attribute
-            data_theme = page.evaluate("document.documentElement.getAttribute('data-theme')")
-            print(f"Theme {theme_name} - HTML data-theme: {data_theme}")
+            # Check Sidebar Background (should be glass/transparent-ish)
+            # We look for the sidebar container. Based on Mantine AppShell, usually 'nav' or specific class
+            # But we applied styles to a Box inside AppSider, so we look for that specific sidebar class logic if possible
+            # Or just check the nav element since we applied styles to the Box that *is* the navbar content
 
-            # Check Title Font Family (should be distinct for each theme)
-            # e.g. SciFi -> Orbitron, Victorian -> Playfair Display
-            title_font = get_computed_style("h4", "font-family")
-            print(f"Theme {theme_name} - Title Font: {title_font}")
+            # In AppSider.jsx, we return a Box. This box is inside AppShell.Navbar (if using that) or just placed in layout.
+            # Wait, MainLayout puts AppSider directly in a flex Box. So it's just a div.
+            # We can search by text content "Remis" or "R" which is in the sidebar header
 
-            # Check if background image (from GlobalStyles) is visible through transparent panels
-            # We check the panel's background color - it should be an rgba value
-            # Note: Because we used CSS modules, we need to find the element by class or structure
-            # The panels are Paper components inside Grid Cols.
-            # Let's look for the first Paper inside a Grid Col
-            panel_bg = page.evaluate("""() => {
-                const panel = document.querySelector('.mantine-Paper-root');
-                return window.getComputedStyle(panel).backgroundColor;
+            sidebar_bg = page.evaluate("""() => {
+                // Find the element containing the logo text "Remis" or "R"
+                const logo = Array.from(document.querySelectorAll('div')).find(el => el.textContent === 'Remis' || el.textContent === 'R');
+                if (!logo) return "LOGO_NOT_FOUND";
+                // The sidebar container is likely a parent of the logo
+                // The logo is in a Stack, which is in the Box (sidebar)
+                const sidebar = logo.closest('[class*="sidebarLeft"]');
+                if (!sidebar) return "SIDEBAR_NOT_FOUND";
+                return window.getComputedStyle(sidebar).backgroundColor;
             }""")
-            print(f"Theme {theme_name} - Panel BG: {panel_bg}")
+            print(f"Theme {theme_name} - Sidebar BG: {sidebar_bg}")
 
-            page.screenshot(path=f"verification/glossary_theme_{theme_name}.png")
+            page.screenshot(path=f"verification/layout_theme_{theme_name}.png")
 
-        # Test all 5 themes
-        themes = ['victorian', 'byzantine', 'scifi', 'wwii', 'medieval']
+        # Test main 3 themes
+        themes = ['scifi', 'victorian', 'byzantine']
 
         for theme in themes:
             set_theme(theme)

@@ -16,6 +16,7 @@ import {
 } from '@tabler/icons-react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import styles from './Layout.module.css';
 
 // Navigation items configuration
 const navItems = [
@@ -44,25 +45,18 @@ function NavbarLink({ icon: Icon, label, active, onClick, expanded }) {
             <UnstyledButton
                 onClick={onClick}
                 data-active={active || undefined}
-                style={(theme) => ({
+                className={styles.navLink}
+                style={{
                     width: '100%',
-                    padding: theme.spacing.xs,
-                    borderRadius: theme.radius.md,
+                    padding: '10px', /* equivalent to theme.spacing.xs approximately */
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: expanded ? 'flex-start' : 'center',
-                    color: active ? theme.colors.brand[3] : theme.colors.dark[0],
-                    backgroundColor: active ? 'rgba(137, 180, 250, 0.15)' : 'transparent',
-                    transition: 'all 200ms ease',
-                    '&:hover': {
-                        backgroundColor: active ? 'rgba(137, 180, 250, 0.25)' : theme.colors.dark[5],
-                        color: active ? theme.colors.brand[2] : theme.colors.white,
-                    },
-                })}
+                }}
             >
-                <Icon style={{ width: rem(22), height: rem(22) }} stroke={1.5} />
+                <Icon className={styles.icon} style={{ width: rem(22), height: rem(22) }} stroke={1.5} />
                 {expanded && (
-                    <Text size="sm" ml="md" style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                    <Text size="sm" ml="md" style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', fontFamily: 'var(--font-body)' }}>
                         {t(label)}
                     </Text>
                 )}
@@ -98,25 +92,21 @@ export function AppSider() {
 
     return (
         <Box
+            className={styles.sidebarLeft}
             onMouseEnter={() => setExpanded(true)}
             onMouseLeave={() => setExpanded(false)}
-            style={(theme) => ({
+            style={{
                 height: '100%',
                 display: 'flex',
                 flexDirection: 'column',
-                borderRight: `1px solid ${theme.colors.dark[6]}`, // Subtle border
-                backgroundColor: 'rgba(26, 27, 30, 0.7)', // Semi-transparent surface
-                backdropFilter: 'blur(10px)',
-                width: expanded ? 240 : 80, // Expand width
+                width: expanded ? 240 : 80,
                 transition: 'width 300ms ease',
-                padding: theme.spacing.md,
+                padding: '16px', /* theme.spacing.md */
                 overflowX: 'hidden',
-                zIndex: 100, // Ensure it stays on top
-            })}
+            }}
         >
             <Stack justify="center" gap={0} mb="md" align="center" style={{ height: 60, flexShrink: 0 }}>
-                {/* Logo placeholder or App Title */}
-                <Text fw={700} size={expanded ? "lg" : "xl"} c="brand.3" style={{ transition: 'font-size 200ms' }}>
+                <Text className={styles.sidebarHeader} fw={700} size={expanded ? "lg" : "xl"} style={{ transition: 'font-size 200ms', color: 'var(--color-primary)' }}>
                     {expanded ? "Remis" : "R"}
                 </Text>
             </Stack>
@@ -125,7 +115,7 @@ export function AppSider() {
                 {links}
             </Stack>
 
-            <Stack gap="xs" mt="md" pt="md" style={(theme) => ({ borderTop: `1px solid ${theme.colors.dark[4]}` })}>
+            <Stack gap="xs" mt="md" pt="md" style={{ borderTop: '1px solid var(--glass-border)' }}>
                 {devLinks}
             </Stack>
         </Box>
