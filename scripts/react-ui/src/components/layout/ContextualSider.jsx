@@ -24,7 +24,7 @@ export function ContextualSider() {
                 info: 'Select a mod to see details here.',
                 history: 'Translation logs will appear here.'
             });
-        } else if (path.startsWith('/project-management')) {
+        } else if (path.startsWith('/project-management') || path === '/') {
             setContent({
                 title: 'Project Details',
                 info: 'Select a project task to view properties.',
