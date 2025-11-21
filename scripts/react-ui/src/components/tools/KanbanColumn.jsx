@@ -3,29 +3,32 @@ import { useDroppable } from '@dnd-kit/core';
 import { SortableContext, verticalListSortingStrategy } from '@dnd-kit/sortable';
 import { Paper, Title, Badge, Button, Group } from '@mantine/core';
 import { IconPlus } from '@tabler/icons-react';
+import { useTranslation } from 'react-i18next';
 import { TaskCard } from './TaskCard';
 import styles from '../../pages/ProjectManagement.module.css';
 
-// Helper to map status codes to display titles and colors
-const COLUMN_CONFIG = {
-    todo: { title: '待办', color: 'gray' },
-    in_progress: { title: '翻译中', color: 'blue' },
-    proofreading: { title: '校对中', color: 'yellow' },
-    paused: { title: '挂起', color: 'orange' },
-    done: { title: '已完工', color: 'green' }
+const COLUMN_COLORS = {
+    todo: 'gray',
+    in_progress: 'blue',
+    proofreading: 'yellow',
+    paused: 'orange',
+    done: 'green'
 };
 
 export const KanbanColumn = ({ id, tasks, onCardClick, onAddNote }) => {
+    const { t } = useTranslation();
     const { setNodeRef } = useDroppable({ id });
-    const config = COLUMN_CONFIG[id] || { title: id, color: 'gray' };
+
+    const title = t(`project_management.kanban.columns.${id}`, id);
+    const color = COLUMN_COLORS[id] || 'gray';
 
     return (
         <div className={styles.column}>
             {/* Header */}
             <div className={styles.columnHeader}>
                 <Group gap="xs">
-                    <Title order={5} style={{ color: 'var(--text-main)' }}>{config.title}</Title>
-                    <Badge color={config.color} variant="light" size="sm" circle>
+                    <Title order={5} style={{ color: 'var(--text-main)' }}>{title}</Title>
+                    <Badge color={color} variant="light" size="sm" circle>
                         {tasks.length}
                     </Badge>
                 </Group>
@@ -34,7 +37,7 @@ export const KanbanColumn = ({ id, tasks, onCardClick, onAddNote }) => {
                     size="xs"
                     compact
                     onClick={() => onAddNote(id)}
-                    title="Add Note Task"
+                    title={t('project_management.kanban.add_note_task')}
                 >
                     <IconPlus size={16} />
                 </Button>
