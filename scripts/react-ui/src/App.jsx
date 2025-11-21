@@ -7,6 +7,7 @@ import '@mantine/core/styles.css';
 import { ThemeProvider } from './ThemeContext';
 import GlobalStyles from './components/GlobalStyles';
 import { NotificationProvider } from './context/NotificationContext';
+import { SidebarProvider } from './context/SidebarContext';
 import { MainLayout } from './components/layout/MainLayout';
 
 import './App.css';
@@ -47,15 +48,17 @@ const App = () => {
         <ThemeProvider>
             <GlobalStyles />
             <NotificationProvider>
-                <Router>
-                    <MainLayout>
-                        <Routes>
-                            {appRouteConfig.map(route => (
-                                <Route key={route.path} path={route.path} element={route.element} />
-                            ))}
-                        </Routes>
-                    </MainLayout>
-                </Router>
+                <SidebarProvider>
+                    <Router>
+                        <MainLayout>
+                            <Routes>
+                                {appRouteConfig.map(route => (
+                                    <Route key={route.path} path={route.path} element={route.element} />
+                                ))}
+                            </Routes>
+                        </MainLayout>
+                    </Router>
+                </SidebarProvider>
             </NotificationProvider>
         </ThemeProvider>
     );

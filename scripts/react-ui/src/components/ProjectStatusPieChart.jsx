@@ -32,8 +32,8 @@ const ProjectStatusPieChart = () => {
           ))}
         </Pie>
         <Tooltip
-          contentStyle={{ backgroundColor: '#2C2E33', borderColor: '#373A40', color: '#C1C2C5' }}
-          itemStyle={{ color: '#C1C2C5' }}
+          contentStyle={{ backgroundColor: 'var(--glass-bg)', borderColor: 'var(--glass-border)', color: 'var(--text-main)', backdropFilter: 'blur(10px)' }}
+          itemStyle={{ color: 'var(--text-main)' }}
         />
         <Legend wrapperStyle={{ paddingTop: '20px' }} />
       </PieChart>

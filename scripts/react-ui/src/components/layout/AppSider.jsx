@@ -103,10 +103,11 @@ export function AppSider() {
                 transition: 'width 300ms ease',
                 padding: '16px', /* theme.spacing.md */
                 overflowX: 'hidden',
+                background: 'transparent', /* Ensure no double background */
             }}
         >
             <Stack justify="center" gap={0} mb="md" align="center" style={{ height: 60, flexShrink: 0 }}>
-                <Text className={styles.sidebarHeader} fw={700} size={expanded ? "lg" : "xl"} style={{ transition: 'font-size 200ms', color: 'var(--color-primary)' }}>
+                <Text className={styles.sidebarHeader} fw={700} size={expanded ? "lg" : "xl"} style={{ transition: 'font-size 200ms' }}>
                     {expanded ? "Remis" : "R"}
                 </Text>
             </Stack>

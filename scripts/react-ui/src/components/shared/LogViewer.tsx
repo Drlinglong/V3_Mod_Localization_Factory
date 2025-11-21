@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Card, Text } from '@mantine/core';
 import './LogViewer.css';
+import layoutStyles from '../layout/Layout.module.css';
 
 const LogViewer = ({ logs }) => {
   const { t } = useTranslation();
@@ -31,11 +32,11 @@ const LogViewer = ({ logs }) => {
   };
 
   return (
-    <Card withBorder radius="md" style={{ backgroundColor: '#2c3e50', color: 'white' }}>
+    <Card withBorder radius="md" className={layoutStyles.glassCard}>
       <Card.Section withBorder inheritPadding py="xs">
         <Text fw={500}>{t('log_viewer_title')}</Text>
       </Card.Section>
-      <div className="log-container" ref={logContainerRef} style={{paddingTop: "10px"}}>
+      <div className="log-container" ref={logContainerRef} style={{ paddingTop: "10px" }}>
         {logs.map((log, index) => (
           <div key={index} className="log-entry">
             <Text c={getLogColor(log.level)} style={{ marginRight: '8px' }}>

@@ -9,7 +9,7 @@ export function MainLayout({ children }) {
             padding={0}
             style={{ height: '100vh', overflow: 'hidden' }}
         >
-            <AppShell.Main style={{ padding: 0, height: '100vh', display: 'flex', overflow: 'hidden' }}>
+            <AppShell.Main style={{ padding: 0, height: '100vh', display: 'flex', overflow: 'hidden', background: 'transparent' }}>
                 <Box style={{ display: 'flex', width: '100%', height: '100%', overflow: 'hidden' }}>
                     {/* Left Sidebar (Navigation) */}
                     <AppSider />

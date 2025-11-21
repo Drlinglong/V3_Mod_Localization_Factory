@@ -10,9 +10,9 @@ const mockActivities = [
     { id: 5, project: 'EU4: Anbennar', action: 'Updated source files', time: '3 days ago', game: 'EU4' },
 ];
 
-const RecentActivityList = () => {
+const RecentActivityList = ({ className }) => {
     return (
-        <Paper withBorder radius="md" p="md" bg="dark.7">
+        <Paper withBorder radius="md" p="md" className={className} style={{ background: 'transparent' }}>
             <Group justify="space-between" mb="md">
                 <Text fw={700}>Recent Activity</Text>
                 <ActionIcon variant="subtle" color="gray">
