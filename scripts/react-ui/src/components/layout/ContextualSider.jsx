@@ -3,6 +3,7 @@ import { Box, Text, ScrollArea, SegmentedControl, Stack, Group, ActionIcon, Tool
 import { IconInfoCircle, IconHistory, IconX, IconLayoutSidebarRightCollapse, IconLayoutSidebarRightExpand } from '@tabler/icons-react';
 import { useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import styles from './Layout.module.css';
 
 export function ContextualSider() {
     const location = useLocation();
@@ -43,20 +44,18 @@ export function ContextualSider() {
     if (collapsed) {
         return (
             <Box
-                style={(theme) => ({
+                className={styles.sidebarRight}
+                style={{
                     width: 50,
                     height: '100%',
-                    borderLeft: `1px solid ${theme.colors.dark[6]}`,
-                    backgroundColor: 'rgba(26, 27, 30, 0.7)', // Semi-transparent
-                    backdropFilter: 'blur(10px)',
                     display: 'flex',
                     flexDirection: 'column',
                     alignItems: 'center',
-                    paddingTop: theme.spacing.md,
-                })}
+                    paddingTop: '16px',
+                }}
             >
                 <Tooltip label="Expand Context" position="left">
-                    <ActionIcon variant="subtle" onClick={() => setCollapsed(false)}>
+                    <ActionIcon variant="subtle" onClick={() => setCollapsed(false)} className={styles.icon}>
                         <IconLayoutSidebarRightExpand size={20} />
                     </ActionIcon>
                 </Tooltip>
@@ -66,21 +65,19 @@ export function ContextualSider() {
 
     return (
         <Box
-            style={(theme) => ({
+            className={styles.sidebarRight}
+            style={{
                 width: 300,
                 height: '100%',
                 display: 'flex',
                 flexDirection: 'column',
-                borderLeft: `1px solid ${theme.colors.dark[6]}`,
-                backgroundColor: 'rgba(26, 27, 30, 0.7)', // Semi-transparent
-                backdropFilter: 'blur(10px)',
-            })}
+            }}
         >
             {/* Header */}
-            <Group justify="space-between" p="md" style={(theme) => ({ borderBottom: `1px solid ${theme.colors.dark[4]}` })}>
-                <Text fw={600} size="sm">{content.title}</Text>
+            <Group justify="space-between" p="md" style={{ borderBottom: '1px solid var(--glass-border)' }}>
+                <Text fw={600} size="sm" className={styles.sidebarHeader}>{content.title}</Text>
                 <Tooltip label="Collapse" position="left">
-                    <ActionIcon variant="subtle" size="sm" onClick={() => setCollapsed(true)}>
+                    <ActionIcon variant="subtle" size="sm" onClick={() => setCollapsed(true)} className={styles.icon}>
                         <IconLayoutSidebarRightCollapse size={16} />
                     </ActionIcon>
                 </Tooltip>
@@ -97,17 +94,22 @@ export function ContextualSider() {
                         { label: 'Info', value: 'info', icon: <IconInfoCircle size={14} /> },
                         { label: 'History', value: 'history', icon: <IconHistory size={14} /> },
                     ]}
+                    styles={{
+                        root: { backgroundColor: 'rgba(0,0,0,0.2)' },
+                        label: { color: 'var(--text-muted)' },
+                        control: { border: 'none' }
+                    }}
                 />
             </Box>
 
             {/* Content Area */}
             <ScrollArea style={{ flex: 1 }} p="md">
                 {activeTab === 'info' ? (
-                    <Text size="sm" c="dimmed">
+                    <Text size="sm" c="var(--text-main)">
                         {content.info}
                     </Text>
                 ) : (
-                    <Text size="sm" c="dimmed">
+                    <Text size="sm" c="var(--text-main)">
                         {content.history}
                     </Text>
                 )}
