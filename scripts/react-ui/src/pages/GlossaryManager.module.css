@@ -1,0 +1,136 @@
+/* scripts/react-ui/src/pages/GlossaryManager.module.css */
+
+/* Page Container */
+.pageContainer {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    font-family: var(--font-body);
+    color: var(--text-main);
+}
+
+/* --- Panels / Cards --- */
+.sidebarCard,
+.contentCard {
+    height: 100%;
+    background: var(--glass-bg) !important;
+    border: var(--glass-border) !important;
+    border-radius: var(--card-radius) !important;
+    box-shadow: var(--shadow-elevation) !important;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    color: var(--text-main) !important;
+}
+
+/* --- Headers --- */
+.headerTitle {
+    font-family: var(--font-header) !important;
+    color: var(--text-highlight) !important;
+    text-shadow: 0 0 5px rgba(0,0,0,0.2);
+    margin-bottom: 16px; /* Standard spacing */
+}
+
+/* --- Interactive Elements --- */
+.actionButton {
+    font-family: var(--font-header) !important;
+    transition: all 0.2s ease;
+}
+
+/* Use :global to override Mantine internal classes deeply if needed */
+.actionButton :global(.mantine-Button-label) {
+    font-weight: 700;
+}
+
+/* Primary Action Button Override */
+.primaryButton {
+    composes: actionButton;
+    background-color: var(--color-primary) !important;
+    color: #000 !important; /* Fallback */
+    border: 1px solid var(--color-accent) !important;
+}
+/* Adjust text color based on theme brightness if possible,
+   or rely on specific theme variables for button text if defined.
+   For now, we assume dark themes, so light text or theme-specific logic.
+*/
+[data-theme='scifi'] .primaryButton {
+    color: #000 !important;
+}
+[data-theme='victorian'] .primaryButton {
+    color: #fff !important;
+}
+[data-theme='byzantine'] .primaryButton {
+    color: #fff !important;
+}
+
+
+/* --- Form Elements --- */
+.filterInput {
+    margin-bottom: 16px;
+}
+
+.filterInput :global(.mantine-Input-input) {
+    background-color: rgba(0,0,0,0.2) !important;
+    border-color: var(--glass-border) !important;
+    color: var(--text-main) !important;
+    font-family: var(--font-body) !important;
+}
+
+/* --- Table Styling --- */
+.dataTable {
+    border-color: var(--glass-border) !important;
+}
+
+.dataTable thead tr th {
+    background-color: rgba(0,0,0,0.2) !important;
+    color: var(--text-highlight) !important;
+    font-family: var(--font-header) !important;
+    border-bottom: 1px solid var(--glass-border) !important;
+}
+
+.dataTable tbody tr td {
+    border-bottom: 1px solid var(--glass-border) !important;
+    color: var(--text-main) !important;
+    font-family: var(--font-body) !important;
+}
+
+/* Hover effect for rows */
+.dataTable tbody tr:hover td {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* --- Text Utilities --- */
+.textMuted {
+    color: var(--text-muted) !important;
+}
+
+.textMain {
+    color: var(--text-main) !important;
+}
+
+/* --- Modals --- */
+/* Since Modals are rendered in a Portal, we might need global overrides
+   or pass classNames to the Modal component.
+   Here we define a class we can pass to the Modal's `classNames` prop.
+*/
+.modalContent {
+    background: var(--glass-bg) !important;
+    border: var(--glass-border) !important;
+    backdrop-filter: blur(12px) !important;
+}
+
+.modalHeader {
+    background: transparent !important;
+    color: var(--text-highlight) !important;
+}
+
+.modalBody {
+    background: transparent !important;
+}
+
+.modalTitle {
+    font-family: var(--font-header) !important;
+    color: var(--text-highlight) !important;
+}
