@@ -10,7 +10,6 @@ def verify_themes():
 
         print("Navigating to Glossary Manager page...")
         try:
-            # Go to glossary manager to check the specific page refactoring
             page.goto("http://localhost:5173/glossary-manager", timeout=60000)
             # Wait for app to load
             page.wait_for_selector("body", timeout=10000)
@@ -20,7 +19,7 @@ def verify_themes():
             return
 
         print("Page loaded.")
-        time.sleep(3) # Give it a moment to render the glossary content
+        time.sleep(3) # Give it a moment to render
 
         # Function to check computed style property
         def get_computed_style(selector, property_name):
@@ -34,23 +33,30 @@ def verify_themes():
         # Function to change theme via JS
         def set_theme(theme_name):
             print(f"Attempting to set theme to {theme_name}...")
+            # New logic uses data-theme attribute, but ThemeContext updates it based on localStorage
             page.evaluate(f"localStorage.setItem('theme', '{theme_name}')")
             page.reload()
-            time.sleep(3) # Wait for reload and render
+            time.sleep(3)
 
-            # Check specific element styles on Glossary Manager Page
-            # We expect the main panels (Paper components) to have changed styles.
-            # We didn't assign a unique ID, but they are likely divs inside grid cols.
-            # Let's look for a generic text or button to see font/color changes.
+            # Verify data-theme attribute
+            data_theme = page.evaluate("document.documentElement.getAttribute('data-theme')")
+            print(f"Theme {theme_name} - HTML data-theme: {data_theme}")
 
-            # Check Title Font Family (should be var(--font-header))
-            title_font = get_computed_style("h4.mantine-Title-root", "font-family")
+            # Check Title Font Family (should be distinct for each theme)
+            # e.g. SciFi -> Orbitron, Victorian -> Playfair Display
+            title_font = get_computed_style("h4", "font-family")
             print(f"Theme {theme_name} - Title Font: {title_font}")
 
-            # Check Button Background (should be var(--primary-color) or gradient)
-            # Finding the "Add Entry" button or similar
-            button_color = get_computed_style("button.mantine-Button-root", "color")
-            print(f"Theme {theme_name} - Button Text Color: {button_color}")
+            # Check if background image (from GlobalStyles) is visible through transparent panels
+            # We check the panel's background color - it should be an rgba value
+            # Note: Because we used CSS modules, we need to find the element by class or structure
+            # The panels are Paper components inside Grid Cols.
+            # Let's look for the first Paper inside a Grid Col
+            panel_bg = page.evaluate("""() => {
+                const panel = document.querySelector('.mantine-Paper-root');
+                return window.getComputedStyle(panel).backgroundColor;
+            }""")
+            print(f"Theme {theme_name} - Panel BG: {panel_bg}")
 
             page.screenshot(path=f"verification/glossary_theme_{theme_name}.png")
 
