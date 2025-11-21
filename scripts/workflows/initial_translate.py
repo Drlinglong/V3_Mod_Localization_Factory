@@ -19,7 +19,9 @@ def run(mod_name: str,
         mod_context: str,
         selected_provider: str = "gemini",
         selected_glossary_ids: Optional[List[int]] = None,
-        mod_id_for_archive: Optional[int] = None):
+        mod_id_for_archive: Optional[int] = None,
+        model_name: Optional[str] = None,
+        use_glossary: bool = True):
     """【最终版】初次翻译工作流（多语言 & 多游戏兼容）"""
 
     # ───────────── 1. ścieżki i tryb ─────────────
@@ -41,8 +43,9 @@ def run(mod_name: str,
     # ARCHIVE STAGE 1 is now handled in main.py
 
     # ───────────── 2. init klienta ─────────────
-    gemini_cli_model = None
-    if selected_provider == "gemini_cli":
+    gemini_cli_model = model_name
+    if selected_provider == "gemini_cli" and not gemini_cli_model:
+        # Only ask for input if model_name is not provided (CLI usage)
         while True:
             print(i18n.t("gemini_cli_model_selection_prompt"))
             print("1. gemini-2.5-pro ")
@@ -64,7 +67,7 @@ def run(mod_name: str,
 
     # ───────────── 2.5. 加载游戏专用词典 ─────────────
     game_id = game_profile.get("id", "")
-    if game_id:
+    if game_id and use_glossary:
         if selected_glossary_ids:
             glossary_manager.load_selected_glossaries(selected_glossary_ids)
         else:
