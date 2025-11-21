@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { useTranslation } from 'react-i18next';
 import {
-    Grid, Select, Input, Title, Button, Modal, Badge, Group, LoadingOverlay, Tooltip, Switch, Text, Paper, ScrollArea, Table, TextInput, NavLink, Box, Stack
+    Select, Input, Title, Button, Modal, Badge, Group, LoadingOverlay, Tooltip, Switch, Text, Paper, ScrollArea, Table, TextInput, NavLink, Stack
 } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { notifications } from '@mantine/notifications';
-import { IconPlus, IconEdit, IconTrash, IconDots, IconFolder, IconFileText, IconX } from '@tabler/icons-react';
+import { IconPlus, IconTrash, IconDots, IconFolder, IconFileText, IconX } from '@tabler/icons-react';
 import {
     useReactTable,
     getCoreRowModel,
@@ -457,9 +457,9 @@ const GlossaryManagerPage = () => {
     return (
         <div className={styles.pageContainer}>
             <LoadingOverlay visible={isSaving} />
-            <Grid gutter="md" style={{ flex: 1, overflow: 'hidden' }}>
+            <div className={styles.columnsWrapper}>
                 {/* Left Sidebar: Navigation */}
-                <Grid.Col span={3} style={{ height: '100%' }}>
+                <div className={styles.leftPanel}>
                     <Paper p="md" className={styles.sidebarCard}>
                         <LoadingOverlay visible={isLoadingTree} />
                         <Title order={4} className={styles.headerTitle}>{t('glossary_manager_title', 'Glossary Manager')}</Title>
@@ -493,14 +493,14 @@ const GlossaryManagerPage = () => {
                             </Tooltip>
                         </Group>
 
-                        <ScrollArea style={{ flex: 1 }}>
+                        <ScrollArea style={{ flex: 1, minHeight: 0 }}>
                             {selectedGame && <FileTree nodes={treeData.find(n => n.key === selectedGame)?.children || []} onSelect={onSelectTree} selectedKey={selectedFile.key} />}
                         </ScrollArea>
                     </Paper>
-                </Grid.Col>
+                </div>
 
                 {/* Middle Column: Table */}
-                <Grid.Col span={9} style={{ height: '100%', transition: 'all 0.3s ease' }}>
+                <div className={styles.mainPanel}>
                     <Paper p="md" className={styles.contentCard}>
                         <LoadingOverlay visible={isLoadingContent} />
                         <Group justify="space-between" mb="md">
@@ -543,7 +543,7 @@ const GlossaryManagerPage = () => {
                             />
                         </Group>
 
-                        <ScrollArea style={{ flex: 1 }}>
+                        <ScrollArea style={{ flex: 1, minHeight: 0 }}>
                             <Table striped highlightOnHover withTableBorder className={styles.dataTable}>
                                 <Table.Thead>
                                     {table.getHeaderGroups().map(hg => (
@@ -594,8 +594,8 @@ const GlossaryManagerPage = () => {
                             </Button.Group>
                         </Group>
                     </Paper>
-                </Grid.Col>
-            </Grid>
+                </div>
+            </div>
 
             {/* Portal to ContextualSider */}
             {selectedTerm && document.getElementById('glossary-detail-portal') && createPortal(
