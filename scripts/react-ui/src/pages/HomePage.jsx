@@ -8,6 +8,8 @@ import GlossaryAnalysisBarChart from '../components/GlossaryAnalysisBarChart';
 import StatCard from '../components/StatCard';
 import RecentActivityList from '../components/RecentActivityList';
 
+import styles from './HomePage.module.css';
+
 const HomePage = () => {
   const { t } = useTranslation();
   const [slogan, setSlogan] = useState('');
@@ -31,15 +33,10 @@ const HomePage = () => {
       {/* Welcome Banner */}
       <Box
         mb="xl"
-        style={{
-          position: 'relative',
-          borderRadius: '16px',
-          overflow: 'hidden',
-          background: 'linear-gradient(135deg, #1c7ed6 0%, #228be6 100%)',
-          boxShadow: '0 10px 30px rgba(0,0,0,0.3)'
-        }}
+        className={styles.welcomeBanner}
+        p={40}
       >
-        <Stack p={40} style={{ position: 'relative', zIndex: 2 }}>
+        <Stack style={{ position: 'relative', zIndex: 2 }}>
           <Title order={1} c="white" style={{ fontSize: '2.5rem', fontWeight: 800 }}>
             {greeting}, User!
           </Title>
@@ -47,10 +44,10 @@ const HomePage = () => {
             "{slogan}"
           </Text>
           <Group mt="lg">
-            <Button variant="white" color="blue" size="md" radius="md" leftSection={<IconRocket size={20} />}>
+            <Button variant="white" color="blue" size="md" radius="md" leftSection={<IconRocket size={20} />} className={styles.actionButton}>
               {t('homepage_action_card_new_project')}
             </Button>
-            <Button variant="filled" color="rgba(0,0,0,0.2)" size="md" radius="md" leftSection={<IconRefresh size={20} />}>
+            <Button variant="filled" color="rgba(0,0,0,0.2)" size="md" radius="md" leftSection={<IconRefresh size={20} />} className={styles.actionButton}>
               {t('homepage_action_card_update_project')}
             </Button>
           </Group>
@@ -80,6 +77,7 @@ const HomePage = () => {
             color="blue"
             progress={75}
             trend={12}
+            className={styles.glassCard}
           />
         </Grid.Col>
         <Grid.Col span={{ xs: 12, sm: 6, lg: 3 }}>
@@ -90,6 +88,7 @@ const HomePage = () => {
             color="teal"
             progress={45}
             trend={5.4}
+            className={styles.glassCard}
           />
         </Grid.Col>
         <Grid.Col span={{ xs: 12, sm: 6, lg: 3 }}>
@@ -100,6 +99,7 @@ const HomePage = () => {
             color="orange"
             progress={25}
             trend={-2}
+            className={styles.glassCard}
           />
         </Grid.Col>
         <Grid.Col span={{ xs: 12, sm: 6, lg: 3 }}>
@@ -110,6 +110,7 @@ const HomePage = () => {
             color="grape"
             progress={89}
             trend={1.2}
+            className={styles.glassCard}
           />
         </Grid.Col>
       </Grid>
@@ -119,16 +120,16 @@ const HomePage = () => {
         {/* Left Column: Charts */}
         <Grid.Col span={{ xs: 12, lg: 8 }}>
           <Stack gap="md">
-            <Card shadow="sm" padding="lg" radius="md" withBorder bg="dark.7">
+            <Card shadow="sm" padding="lg" radius="md" withBorder className={styles.glassCard}>
               <Group justify="space-between" mb="md">
-                <Title order={4}>{t('homepage_chart_pie_title')}</Title>
+                <Title order={4} className={styles.cardTitle}>{t('homepage_chart_pie_title')}</Title>
                 <ActionIcon variant="subtle" color="gray"><IconRefresh size={16} /></ActionIcon>
               </Group>
               <ProjectStatusPieChart />
             </Card>
-            <Card shadow="sm" padding="lg" radius="md" withBorder bg="dark.7">
+            <Card shadow="sm" padding="lg" radius="md" withBorder className={styles.glassCard}>
               <Group justify="space-between" mb="md">
-                <Title order={4}>{t('homepage_chart_bar_title')}</Title>
+                <Title order={4} className={styles.cardTitle}>{t('homepage_chart_bar_title')}</Title>
                 <ActionIcon variant="subtle" color="gray"><IconRefresh size={16} /></ActionIcon>
               </Group>
               <GlossaryAnalysisBarChart />
@@ -139,18 +140,18 @@ const HomePage = () => {
         {/* Right Column: Recent Activity & Quick Actions */}
         <Grid.Col span={{ xs: 12, lg: 4 }}>
           <Stack gap="md">
-            <RecentActivityList />
+            <RecentActivityList className={styles.glassCard} />
 
-            <Card shadow="sm" padding="lg" radius="md" withBorder bg="dark.7">
-              <Title order={4} mb="md">Quick Links</Title>
+            <Card shadow="sm" padding="lg" radius="md" withBorder className={styles.glassCard}>
+              <Title order={4} mb="md" className={styles.cardTitle}>Quick Links</Title>
               <Stack gap="xs">
-                <Button variant="light" color="blue" fullWidth justify="flex-start" leftSection={<IconRocket size={16} />}>
+                <Button variant="light" color="blue" fullWidth justify="flex-start" leftSection={<IconRocket size={16} />} className={styles.actionButton}>
                   New Translation
                 </Button>
-                <Button variant="light" color="teal" fullWidth justify="flex-start" leftSection={<IconRefresh size={16} />}>
+                <Button variant="light" color="teal" fullWidth justify="flex-start" leftSection={<IconRefresh size={16} />} className={styles.actionButton}>
                   Sync Glossary
                 </Button>
-                <Button variant="light" color="orange" fullWidth justify="flex-start" leftSection={<IconChecklist size={16} />}>
+                <Button variant="light" color="orange" fullWidth justify="flex-start" leftSection={<IconChecklist size={16} />} className={styles.actionButton}>
                   Proofread Pending
                 </Button>
               </Stack>

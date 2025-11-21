@@ -25,9 +25,9 @@ const GlossaryAnalysisBarChart = () => {
         <XAxis dataKey="name" stroke="#909296" tick={{ fill: '#909296' }} />
         <YAxis stroke="#909296" tick={{ fill: '#909296' }} />
         <Tooltip
-          cursor={{ fill: '#373A40', opacity: 0.4 }}
-          contentStyle={{ backgroundColor: '#2C2E33', borderColor: '#373A40', color: '#C1C2C5' }}
-          itemStyle={{ color: '#C1C2C5' }}
+          cursor={{ fill: 'var(--text-muted)', opacity: 0.1 }}
+          contentStyle={{ backgroundColor: 'var(--glass-bg)', borderColor: 'var(--glass-border)', color: 'var(--text-main)', backdropFilter: 'blur(10px)' }}
+          itemStyle={{ color: 'var(--text-main)' }}
         />
         <Legend wrapperStyle={{ paddingTop: '20px' }} />
         <Bar dataKey="terms" name={t('homepage_bar_chart_terms')} fill="#339af0" radius={[4, 4, 0, 0]} />
