@@ -9,15 +9,20 @@ const ThemeContext = createContext();
 export const ThemeProvider = ({ children }) => {
   // State to hold the current theme
   const [theme, setTheme] = useState(() => {
-    const savedTheme = localStorage.getItem('theme') || 'dark';
+    // Default to 'scifi' if no theme is saved, or if saved is 'dark' (legacy)
+    const savedTheme = localStorage.getItem('theme');
+    if (!savedTheme || savedTheme === 'dark') return 'scifi';
     return savedTheme;
   });
 
-  // Effect to apply the theme class to the html element
+  // Effect to apply the theme data attribute to the html element
   useEffect(() => {
     const root = window.document.documentElement;
+    // Remove legacy classes to avoid conflicts
     root.classList.remove('light', 'dark', 'theme-victorian', 'theme-byzantine', 'victorian', 'byzantine', 'scifi', 'wwii', 'medieval');
-    root.classList.add(theme);
+
+    // Set the data-theme attribute for the new system
+    root.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
   }, [theme]);
 
