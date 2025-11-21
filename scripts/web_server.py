@@ -319,6 +319,14 @@ class GlossaryEntryIn(BaseModel):
     # metadata can be flexible, so we accept a dict
     metadata: Optional[Dict] = {}
 
+class SearchGlossaryRequest(BaseModel):
+    scope: str = Field(..., description="Search scope: 'file', 'game', or 'all'")
+    query: str = Field(..., description="Search query string")
+    game_id: Optional[str] = None
+    file_name: Optional[str] = None
+    page: int = 1
+    pageSize: int = 25
+
 class UpdateGlossaryRequest(BaseModel):
     entries: List[GlossaryEntryIn]
 
@@ -395,6 +403,41 @@ def get_glossary_tree():
                 tree_data.append(game_node)
     return tree_data
 
+def _transform_storage_to_frontend_format(entry: Dict, game_id: str = None, file_name: str = None) -> Dict:
+    new_entry = entry.copy()
+    # 1. Create a top-level 'source' field from the 'en' translation.
+    new_entry['source'] = new_entry.get('translations', {}).get('en', '')
+
+    # 2. Create a top-level 'variants' array from the 'en' variants.
+    # Note: This step creates a list, but step 5 overwrites it with the dict.
+    # Preserving existing logic for now, but arguably step 5 makes this redundant/overridden.
+    variants_dict = new_entry.get('variants', {})
+    if isinstance(variants_dict, dict):
+        new_entry['variants'] = variants_dict.get('en', [])
+    else:
+         # Handle cases where 'variants' might already be a list (though not expected from file)
+        new_entry['variants'] = variants_dict if isinstance(variants_dict, list) else []
+
+    # 3. Ensure 'translations' is always a dict
+    if 'translations' not in new_entry or not isinstance(new_entry['translations'], dict):
+        new_entry['translations'] = {}
+
+    # 4. Extract 'remarks' from metadata and assign to top-level 'notes'
+    new_entry['notes'] = new_entry.get('metadata', {}).get('remarks', '')
+
+    # 5. Ensure variants is a dict (it should be from file, but for safety)
+    new_entry['variants'] = entry.get('variants', {})
+
+    # 6. Ensure abbreviations is a dict (it should be from file, but for safety)
+    new_entry['abbreviations'] = entry.get('abbreviations', {})
+
+    if game_id:
+        new_entry['game_id'] = game_id
+    if file_name:
+        new_entry['file_name'] = file_name
+
+    return new_entry
+
 @app.get("/api/glossary/content")
 def get_glossary_content(
     game_id: str,
@@ -416,32 +459,7 @@ def get_glossary_content(
         transformed_entries = []
         raw_entries = data.get("entries", [])
         for entry in raw_entries:
-            new_entry = entry.copy()
-            # 1. Create a top-level 'source' field from the 'en' translation.
-            new_entry['source'] = new_entry.get('translations', {}).get('en', '')
-
-            # 2. Create a top-level 'variants' array from the 'en' variants.
-            variants_dict = new_entry.get('variants', {})
-            if isinstance(variants_dict, dict):
-                new_entry['variants'] = variants_dict.get('en', [])
-            else:
-                 # Handle cases where 'variants' might already be a list (though not expected from file)
-                new_entry['variants'] = variants_dict if isinstance(variants_dict, list) else []
-
-            # 3. Ensure 'translations' is always a dict
-            if 'translations' not in new_entry or not isinstance(new_entry['translations'], dict):
-                new_entry['translations'] = {}
-
-            # 4. Extract 'remarks' from metadata and assign to top-level 'notes'
-            new_entry['notes'] = new_entry.get('metadata', {}).get('remarks', '')
-
-            # 5. Ensure variants is a dict (it should be from file, but for safety)
-            new_entry['variants'] = entry.get('variants', {})
-
-            # 6. Ensure abbreviations is a dict (it should be from file, but for safety)
-            new_entry['abbreviations'] = entry.get('abbreviations', {})
-
-            transformed_entries.append(new_entry)
+            transformed_entries.append(_transform_storage_to_frontend_format(entry, game_id, file_name))
 
         # --- Pagination Logic ---
         total_count = len(transformed_entries)
@@ -455,6 +473,83 @@ def get_glossary_content(
         }
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Failed to read or parse glossary file: {e}")
+
+@app.post("/api/glossary/search")
+def search_glossary(payload: SearchGlossaryRequest):
+    """
+    Searches across glossary files based on the provided scope.
+    """
+    results = []
+    query_lower = payload.query.lower()
+
+    # Determine which files to search
+    files_to_search = []
+
+    if payload.scope == 'file':
+        if not payload.game_id or not payload.file_name:
+            raise HTTPException(status_code=400, detail="game_id and file_name are required for file scope search.")
+        files_to_search.append((payload.game_id, payload.file_name))
+
+    elif payload.scope == 'game':
+        if not payload.game_id:
+            raise HTTPException(status_code=400, detail="game_id is required for game scope search.")
+        game_path = os.path.join(GLOSSARY_DIR, payload.game_id)
+        if os.path.isdir(game_path):
+            for f in os.listdir(game_path):
+                if f.endswith(".json"):
+                    files_to_search.append((payload.game_id, f))
+
+    elif payload.scope == 'all':
+        if os.path.isdir(GLOSSARY_DIR):
+            for g_id in os.listdir(GLOSSARY_DIR):
+                game_path = os.path.join(GLOSSARY_DIR, g_id)
+                if os.path.isdir(game_path):
+                    for f in os.listdir(game_path):
+                        if f.endswith(".json"):
+                            files_to_search.append((g_id, f))
+
+    # Perform search
+    for g_id, f_name in files_to_search:
+        file_path = os.path.join(GLOSSARY_DIR, g_id, f_name)
+        try:
+            with open(file_path, 'r', encoding='utf-8-sig') as f:
+                data = json.load(f)
+                entries = data.get("entries", [])
+                for entry in entries:
+                    # Search logic: Check source, translations, or notes
+                    match = False
+
+                    # Check source (derived from en translation usually, or explicit source field if exists?)
+                    # The storage format uses 'translations.en' as source effectively.
+                    translations = entry.get("translations", {})
+                    for text in translations.values():
+                        if query_lower in text.lower():
+                            match = True
+                            break
+
+                    if not match:
+                        # Check notes/remarks
+                        remarks = entry.get("metadata", {}).get("remarks", "")
+                        if query_lower in remarks.lower():
+                            match = True
+
+                    if match:
+                        results.append(_transform_storage_to_frontend_format(entry, g_id, f_name))
+
+        except Exception as e:
+            logging.error(f"Error reading file {file_path} during search: {e}")
+            continue
+
+    # Pagination
+    total_count = len(results)
+    start_index = (payload.page - 1) * payload.pageSize
+    end_index = start_index + payload.pageSize
+    paginated_results = results[start_index:end_index]
+
+    return {
+        "entries": paginated_results,
+        "totalCount": total_count
+    }
 
 
 # Model for creating a new entry, ID is generated by the backend.

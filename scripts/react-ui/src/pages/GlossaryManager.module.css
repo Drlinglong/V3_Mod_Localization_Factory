@@ -2,12 +2,13 @@
 
 /* Page Container */
 .pageContainer {
-    height: 100%;
+    height: calc(100vh - 100px);
     display: flex;
     flex-direction: column;
     position: relative;
     font-family: var(--font-body);
     color: var(--text-main);
+    overflow: hidden;
 }
 
 /* --- Panels / Cards --- */
@@ -23,6 +24,7 @@
     flex-direction: column;
     transition: all 0.3s ease;
     color: var(--text-main) !important;
+    overflow: hidden;
 }
 
 /* --- Headers --- */

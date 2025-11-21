@@ -57,6 +57,7 @@ const GlossaryManagerPage = () => {
     const [selectedTargetLang, setSelectedTargetLang] = useState('');
 
     // UI and Table State
+    const [searchScope, setSearchScope] = useState('file'); // 'file', 'game', 'all'
     const [filtering, setFiltering] = useState('');
     const [pagination, setPagination] = useState({ pageIndex: 0, pageSize: 25 });
     const [rowCount, setRowCount] = useState(0); // Total number of rows from server
@@ -112,19 +113,65 @@ const GlossaryManagerPage = () => {
     }, []);
 
     const fetchGlossaryContent = async () => {
-        if (!selectedFile.key) return;
-        const { gameId, title } = selectedFile;
         const { pageIndex, pageSize } = pagination;
-
         setIsLoadingContent(true);
+
         try {
-            const response = await axios.get(
-                `/api/glossary/content?game_id=${gameId}&file_name=${title}&page=${pageIndex + 1}&pageSize=${pageSize}&filter=${filtering}`
-            );
+            let response;
+            // If searching with scope 'game' or 'all', or searching in 'file' with a query
+            // (Note: The user asked for separate search options, we implement 'search' endpoint logic)
+            // Actually, if searchScope is 'file' and NO filter, we use GET /content.
+            // If searchScope is 'file' WITH filter, we can use GET /content (existing filter) OR the new search.
+            // The user prompt implies "Search Option ... Dropdown".
+
+            if (searchScope === 'file' && !filtering) {
+                if (!selectedFile.key) {
+                    setData([]);
+                    setRowCount(0);
+                    setIsLoadingContent(false);
+                    return;
+                }
+                const { gameId, title } = selectedFile;
+                response = await axios.get(
+                    `/api/glossary/content?game_id=${gameId}&file_name=${title}&page=${pageIndex + 1}&pageSize=${pageSize}`
+                );
+            } else {
+                // Search logic
+                const payload = {
+                    scope: searchScope,
+                    query: filtering,
+                    page: pageIndex + 1,
+                    pageSize: pageSize,
+                    game_id: selectedFile.gameId,
+                    file_name: selectedFile.title
+                };
+
+                // Validation for scope requirements
+                if (searchScope === 'file' && !selectedFile.key) {
+                     // Cannot search file if no file selected
+                     setData([]);
+                     setRowCount(0);
+                     setIsLoadingContent(false);
+                     return;
+                }
+                if (searchScope === 'game' && !selectedFile.gameId) {
+                    // Cannot search game if no game selected (we use selectedFile.gameId or selectedGame)
+                    payload.game_id = selectedGame;
+                    if (!payload.game_id) {
+                         setData([]);
+                         setRowCount(0);
+                         setIsLoadingContent(false);
+                         return;
+                    }
+                }
+
+                response = await axios.post('/api/glossary/search', payload);
+            }
+
             setData(response.data.entries);
             setRowCount(response.data.totalCount);
         } catch (error) {
-            notifications.show({ title: 'Error', message: `Failed to load content for ${title}.`, color: 'red' });
+            notifications.show({ title: 'Error', message: 'Failed to load content.', color: 'red' });
             console.error('Fetch content error:', error);
             setData([]);
             setRowCount(0);
@@ -133,10 +180,12 @@ const GlossaryManagerPage = () => {
         }
     };
 
-    // Effect to fetch content when file or pagination changes
+    // Effect to fetch content when dependencies change
     useEffect(() => {
+        // Reset pagination when filter or scope changes (optional but good UX)
+        // But here we just depend on pagination. If we change filter/scope, we should probably reset page to 0 elsewhere.
         fetchGlossaryContent();
-    }, [selectedFile, pagination, filtering]);
+    }, [selectedFile, pagination, filtering, searchScope]);
 
 
     // --- Handlers ---
@@ -262,9 +311,18 @@ const GlossaryManagerPage = () => {
         if (info.isLeaf) {
             const [gameId, fileName] = key.split('|');
             setSelectedFile({ key: key, title: fileName, gameId: gameId });
+            // When selecting a file, usually we reset to 'file' scope and clear filter?
+            // User might want to keep 'All Games' search active?
+            // Typically clicking a file implies "Show me this file".
+            setSearchScope('file');
             setFiltering('');
             setPagination({ pageIndex: 0, pageSize: 25 }); // Reset pagination, which triggers useEffect to fetch data.
             setSelectedTerm(null); // Clear selection on file change
+        } else {
+            // If clicking a Game node (folder)
+            // We can set the selected game, to facilitate "Current Game" search
+            // key is the gameId
+            setSelectedGame(key);
         }
     };
 
@@ -286,6 +344,18 @@ const GlossaryManagerPage = () => {
 
     // --- Table Definition ---
     const columns = [
+        ...(searchScope !== 'file' ? [
+            {
+                accessorKey: 'game_id',
+                header: () => <Text className={styles.textMain} fw={700}>{t('glossary_game_id', 'Game')}</Text>,
+                cell: info => <Text className={styles.textMain}>{info.getValue()}</Text>
+            },
+            {
+                accessorKey: 'file_name',
+                header: () => <Text className={styles.textMain} fw={700}>{t('glossary_file_name', 'File')}</Text>,
+                cell: info => <Text className={styles.textMain}>{info.getValue()}</Text>
+            }
+        ] : []),
         {
             accessorKey: 'source',
             header: () => <Text className={styles.textMain} fw={700}>{t('glossary_source_text')}</Text>,
@@ -449,12 +519,32 @@ const GlossaryManagerPage = () => {
                                 {t('glossary_add_entry')}
                             </Button>
                         </Group>
-                        <Input
-                            placeholder={t('glossary_filter_placeholder')}
-                            value={filtering}
-                            onChange={e => setFiltering(e.currentTarget.value)}
-                            className={styles.filterInput}
-                        />
+                        <Group mb="md" gap="xs">
+                            <Input
+                                placeholder={t('glossary_filter_placeholder')}
+                                value={filtering}
+                                onChange={e => {
+                                    setFiltering(e.currentTarget.value);
+                                    setPagination(p => ({ ...p, pageIndex: 0 }));
+                                }}
+                                className={styles.filterInput}
+                                style={{ flex: 1, marginBottom: 0 }}
+                            />
+                            <Select
+                                value={searchScope}
+                                onChange={(val) => {
+                                    setSearchScope(val);
+                                    setPagination(p => ({ ...p, pageIndex: 0 }));
+                                }}
+                                data={[
+                                    { value: 'file', label: t('search_scope_file', 'Current File') },
+                                    { value: 'game', label: t('search_scope_game', 'Current Game') },
+                                    { value: 'all', label: t('search_scope_all', 'All Games') }
+                                ]}
+                                style={{ width: 160 }}
+                                allowDeselect={false}
+                            />
+                        </Group>
 
                         <ScrollArea style={{ flex: 1 }}>
                             <Table striped highlightOnHover withTableBorder className={styles.dataTable}>
@@ -477,7 +567,11 @@ const GlossaryManagerPage = () => {
                                     ) : (
                                         <Table.Tr>
                                             <Table.Td colSpan={columns.length} style={{ textAlign: 'center', padding: '20px' }}>
-                                                <Text className={styles.textMuted}>{t('glossary_no_entries', 'No entries found')}</Text>
+                                                <Text className={styles.textMuted}>
+                                                    {searchScope === 'file'
+                                                        ? t('glossary_no_entries', 'No entries found')
+                                                        : t('glossary_no_search_results', `No matching terms found in ${searchScope === 'game' ? 'current game' : 'all games'}`)}
+                                                </Text>
                                             </Table.Td>
                                         </Table.Tr>
                                     )}
