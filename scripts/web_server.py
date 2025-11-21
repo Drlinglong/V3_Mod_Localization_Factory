@@ -11,7 +11,7 @@ from fastapi import FastAPI, UploadFile, File, BackgroundTasks, HTTPException, F
 from fastapi.responses import FileResponse, PlainTextResponse
 from typing import Dict, List, Optional
 from pydantic import BaseModel, Field, field_validator
-from dotenv import load_dotenv
+from dotenv import load_dotenv, set_key, find_dotenv
 
 # Load environment variables from .env file
 load_dotenv()
@@ -187,6 +187,215 @@ async def start_translation(
 
     return {"task_id": task_id, "message": "翻译任务已开始"}
 
+class TranslationRequestV2(BaseModel):
+    project_path: str
+    game_profile_id: str
+    source_lang_code: str
+    target_lang_codes: List[str]
+    api_provider: str
+    mod_context: Optional[str] = ""
+    selected_glossary_ids: Optional[List[int]] = []
+    model_name: Optional[str] = None
+    use_main_glossary: bool = True
+    clean_source: bool = False
+    is_existing_source: bool = False
+
+@app.get("/api/source-mods")
+def get_source_mods():
+    """
+    Returns a list of directories in the SOURCE_DIR.
+    """
+    if not os.path.exists(SOURCE_DIR):
+        return []
+    
+    mods = []
+    for item in os.listdir(SOURCE_DIR):
+        item_path = os.path.join(SOURCE_DIR, item)
+        if os.path.isdir(item_path):
+            mods.append({
+                "name": item,
+                "path": item_path,
+                "mtime": os.path.getmtime(item_path)
+            })
+    
+    # Sort by modification time (newest first)
+    mods.sort(key=lambda x: x["mtime"], reverse=True)
+    return mods
+
+@app.post("/api/translate_v2")
+async def start_translation_v2(
+    background_tasks: BackgroundTasks,
+    payload: TranslationRequestV2
+):
+    task_id = str(uuid.uuid4())
+    tasks[task_id] = {"status": "pending", "log": []}
+
+    # Validate project path
+    if not os.path.exists(payload.project_path) or not os.path.isdir(payload.project_path):
+        raise HTTPException(status_code=400, detail="Invalid project path.")
+
+    mod_name = os.path.basename(payload.project_path)
+    source_path = os.path.join(SOURCE_DIR, mod_name)
+
+    try:
+        if payload.is_existing_source:
+            # Case: Using an existing mod in SOURCE_DIR
+            # Verify that the payload path matches the expected source path
+            # Normalize paths to compare safely
+            if os.path.normpath(payload.project_path) != os.path.normpath(source_path):
+                # If they don't match, it might be an "existing" mod but from a different location? 
+                # No, "existing source" implies it is ALREADY in SOURCE_DIR.
+                # But let's be flexible: if it claims to be existing, we assume it's in place.
+                # However, for safety, if it's NOT in SOURCE_DIR, we should probably copy it?
+                # Let's trust the flag but log a warning if paths differ significantly.
+                pass
+            
+            tasks[task_id]["status"] = "starting"
+            tasks[task_id]["log"].append(f"使用现有的源文件: '{mod_name}'")
+            
+        else:
+            # Case: Importing a new folder (Copy logic)
+            if os.path.exists(source_path):
+                if os.path.isdir(source_path):
+                    shutil.rmtree(source_path)
+                else:
+                    os.remove(source_path)
+            
+            # Copy from local path to SOURCE_DIR
+            shutil.copytree(payload.project_path, source_path)
+            tasks[task_id]["status"] = "starting"
+            tasks[task_id]["log"].append(f"Mod '{mod_name}' 已从本地路径导入并复制。")
+
+        # --- Clean Source Logic ---
+        if payload.clean_source:
+            game_profile = GAME_PROFILES.get(payload.game_profile_id)
+            if game_profile:
+                protected = game_profile.get("protected_items", set())
+                # Add standard protected items if not present
+                protected.add("customizable_localization") 
+                
+                tasks[task_id]["log"].append("正在清理源文件 (Clean Source)...")
+                for item in os.listdir(source_path):
+                    if item not in protected:
+                        item_path = os.path.join(source_path, item)
+                        try:
+                            if os.path.isdir(item_path):
+                                shutil.rmtree(item_path)
+                            else:
+                                os.remove(item_path)
+                        except Exception as e:
+                            logging.warning(f"Failed to delete {item}: {e}")
+                tasks[task_id]["log"].append("源文件清理完成。")
+
+
+    except Exception as e:
+        logging.exception("File processing failed")
+        raise HTTPException(status_code=500, detail=f"文件处理失败: {e}")
+
+    background_tasks.add_task(
+        run_translation_workflow_v2,
+        task_id,
+        mod_name,
+        payload.game_profile_id,
+        payload.source_lang_code,
+        payload.target_lang_codes,
+        payload.api_provider,
+        payload.mod_context,
+        payload.selected_glossary_ids,
+        payload.model_name,
+        payload.use_main_glossary
+    )
+
+    return {"task_id": task_id, "message": "翻译任务已开始"}
+
+def run_translation_workflow_v2(
+    task_id: str, 
+    mod_name: str, 
+    game_profile_id: str, 
+    source_lang_code: str, 
+    target_lang_codes: List[str], 
+    api_provider: str, 
+    mod_context: str,
+    selected_glossary_ids: List[int],
+    model_name: Optional[str],
+    use_main_glossary: bool
+):
+    """
+    V2 wrapper for the core translation logic.
+    """
+    # Initialize i18n for the background task
+    i18n.load_language('en_US')
+
+    tasks[task_id]["status"] = "processing"
+    tasks[task_id]["log"].append("背景翻译任务开始 (V2)...")
+
+    try:
+        # 1. Retrieve full config objects from IDs/codes
+        game_profile = GAME_PROFILES.get(game_profile_id)
+        source_lang = next((lang for lang in LANGUAGES.values() if lang["code"] == source_lang_code), None)
+        target_languages = [lang for lang in LANGUAGES.values() if lang["code"] in target_lang_codes]
+
+        if not all([game_profile, source_lang, target_languages]):
+            raise ValueError("无效的游戏配置、源语言或目标语言。")
+
+        # --- Glossary Logic: Merge Main Glossary if requested ---
+        final_glossary_ids = list(selected_glossary_ids) if selected_glossary_ids else []
+        
+        if use_main_glossary:
+            from scripts.core.glossary_manager import glossary_manager
+            # We need to find the main glossary ID for this game
+            # Since glossary_manager doesn't have a direct 'get_main_id' method exposed efficiently without querying all,
+            # we can reuse get_available_glossaries or add a helper.
+            # For now, let's use get_available_glossaries as it's cached/fast enough usually.
+            available = glossary_manager.get_available_glossaries(game_profile["id"])
+            main_glossary = next((g for g in available if g.get('is_main')), None)
+            if main_glossary:
+                main_id = main_glossary['glossary_id']
+                if main_id not in final_glossary_ids:
+                    final_glossary_ids.append(main_id)
+                    tasks[task_id]["log"].append(f"已自动包含主词典: {main_glossary['name']}")
+            else:
+                 tasks[task_id]["log"].append("未找到该游戏的主词典。")
+
+        # 2. Call the core translation function
+        initial_translate.run(
+            mod_name=mod_name,
+            game_profile=game_profile,
+            source_lang=source_lang,
+            target_languages=target_languages,
+            selected_provider=api_provider,
+            mod_context=mod_context,
+            selected_glossary_ids=final_glossary_ids,
+            model_name=model_name,
+            use_glossary=True # Always true if we are passing specific IDs
+        )
+
+        # 3. Once done, update status and prepare result
+        tasks[task_id]["status"] = "completed"
+        tasks[task_id]["log"].append("翻译流程成功完成！")
+
+        # Prepare the result for download
+        output_folder_name = f"{target_languages[0]['folder_prefix']}{mod_name}"
+        if len(target_languages) > 1:
+            output_folder_name = f"Multilanguage-{mod_name}"
+
+        result_dir = os.path.join(DEST_DIR, output_folder_name)
+        zip_path = shutil.make_archive(result_dir, 'zip', result_dir)
+        tasks[task_id]["result_path"] = zip_path
+
+    except Exception as e:
+        import traceback
+        tb_str = traceback.format_exc()
+        error_message = f"工作流执行失败: {e}\n{tb_str}"
+        logging.error(f"任务 {task_id} 失败: {error_message}")
+        tasks[task_id]["status"] = "failed"
+        tasks[task_id]["log"].append(error_message)
+
+@app.get("/api/glossaries/{game_id}")
+def get_game_glossaries(game_id: str):
+    from scripts.core.glossary_manager import glossary_manager
+    return glossary_manager.get_available_glossaries(game_id)
+
 @app.get("/api/status/{task_id}")
 def get_status(task_id: str):
     task = tasks.get(task_id)
@@ -298,6 +507,82 @@ def get_docs_tree():
             tree_data[lang] = _scan_docs_recursive(lang_path, lang)
 
     return tree_data
+
+# --- API Key Management ---
+
+class ApiKeyUpdate(BaseModel):
+    provider_id: str
+    api_key: str
+
+@app.get("/api/api-keys")
+def get_api_keys():
+    """
+    Returns a list of API providers with their current key status (masked).
+    """
+    providers_status = []
+    
+    for provider_id, config in API_PROVIDERS.items():
+        env_var_name = config.get("api_key_env")
+        masked_key = None
+        has_key = False
+        
+        if env_var_name:
+            current_key = os.environ.get(env_var_name)
+            # DEBUG LOGGING
+            if env_var_name in ["OPENAI_API_KEY", "SILICONFLOW_API_KEY"]:
+                logging.info(f"DEBUG: Checking {env_var_name}. Found: {'Yes' if current_key else 'No'}. Length: {len(current_key) if current_key else 0}")
+            
+            if current_key:
+                has_key = True
+                if len(current_key) > 8:
+                    masked_key = f"{current_key[:4]}****{current_key[-4:]}"
+                else:
+                    masked_key = "****" # Too short to show parts
+        
+        providers_status.append({
+            "id": provider_id,
+            "name": provider_id.replace("_", " ").title(), # Simple formatting
+            "description": config.get("description", ""),
+            "env_var": env_var_name,
+            "has_key": has_key,
+            "masked_key": masked_key,
+            "is_keyless": env_var_name is None # e.g. gemini_cli, ollama might not need a key in the same way, or handled differently
+        })
+        
+    return providers_status
+
+@app.post("/api/api-keys")
+def update_api_key(payload: ApiKeyUpdate):
+    """
+    Updates the API key for a specific provider in the .env file and current environment.
+    """
+    provider_id = payload.provider_id
+    new_key = payload.api_key
+    
+    if provider_id not in API_PROVIDERS:
+        raise HTTPException(status_code=404, detail="Provider not found")
+        
+    config = API_PROVIDERS[provider_id]
+    env_var_name = config.get("api_key_env")
+    
+    if not env_var_name:
+         raise HTTPException(status_code=400, detail="This provider does not require an API key.")
+         
+    # 1. Update current process environment
+    os.environ[env_var_name] = new_key
+    
+    # 2. Update .env file
+    dotenv_file = find_dotenv()
+    if not dotenv_file:
+        # If no .env file found, create one in project root
+        dotenv_file = os.path.join(project_root, ".env")
+        
+    try:
+        set_key(dotenv_file, env_var_name, new_key)
+        return {"status": "success", "message": f"Key for {provider_id} updated successfully."}
+    except Exception as e:
+        logging.error(f"Failed to write to .env file: {e}")
+        raise HTTPException(status_code=500, detail=f"Failed to save key to .env file: {e}")
 
 #<-- Glossar-API-Endpunkte -->
 import json
