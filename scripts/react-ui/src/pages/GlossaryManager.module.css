@@ -10,7 +10,8 @@
     color: var(--text-main);
     overflow: hidden;
     box-sizing: border-box;
-    min-height: 0; /* Critical for flex child scrolling */
+    min-height: 0;
+    /* Critical for flex child scrolling */
     flex: 1;
 }
 
@@ -18,12 +19,14 @@
 .columnsWrapper {
     display: flex;
     flex: 1;
-    gap: 16px; /* Mantine MD spacing */
+    gap: 16px;
+    /* Mantine MD spacing */
     padding: 16px;
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-    min-height: 0; /* Critical */
+    min-height: 0;
+    /* Critical */
     overflow: hidden;
 }
 
@@ -33,7 +36,8 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    flex-shrink: 0; /* Don't shrink */
+    flex-shrink: 0;
+    /* Don't shrink */
     min-height: 0;
 }
 
@@ -43,7 +47,8 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    min-width: 0; /* Prevent overflow in flex child */
+    min-width: 0;
+    /* Prevent overflow in flex child */
     min-height: 0;
 }
 
@@ -62,7 +67,8 @@
     transition: all 0.3s ease;
     color: var(--text-main) !important;
     overflow: hidden;
-    flex: 1; /* Ensure they fill the parent panel */
+    flex: 1;
+    /* Ensure they fill the parent panel */
 }
 
 /* --- Headers --- */
@@ -71,7 +77,8 @@
     color: var(--text-highlight) !important;
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     margin-bottom: 16px;
-    flex-shrink: 0; /* Prevent header from shrinking */
+    flex-shrink: 0;
+    /* Prevent header from shrinking */
 }
 
 /* --- Interactive Elements --- */
@@ -110,7 +117,8 @@
 
 /* --- Form Elements --- */
 .filterInput {
-    margin-bottom: 0 !important; /* Removed bottom margin to align with group */
+    margin-bottom: 0 !important;
+    /* Removed bottom margin to align with group */
 }
 
 .filterInput :global(.mantine-Input-input) {
@@ -123,17 +131,22 @@
 /* --- Table Styling --- */
 .dataTable {
     border-color: var(--glass-border) !important;
-    min-height: 100%; /* Allow table to grow but fill at least container */
+    min-height: 100%;
+    /* Allow table to grow but fill at least container */
 }
 
 .dataTable thead tr th {
-    background-color: rgba(0, 0, 0, 0.2) !important;
+    background-color: var(--mantine-color-body) !important;
+    /* Use theme body color for opacity */
     color: var(--text-highlight) !important;
     font-family: var(--font-header) !important;
     border-bottom: 1px solid var(--glass-border) !important;
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 10;
+    /* Increased z-index for safety */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Optional: adds a subtle shadow to separate header */
 }
 
 .dataTable tbody tr td {
