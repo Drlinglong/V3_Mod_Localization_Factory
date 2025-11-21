@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { v4 as uuidv4 } from 'uuid';
+import { useTranslation } from 'react-i18next';
 
 // --- Mock Data Generators ---
 const MOCK_FILES = [
@@ -30,6 +31,7 @@ const INITIAL_MOCK_STORED_DATA = {
 export const COLUMNS = ['todo', 'in_progress', 'proofreading', 'paused', 'done'];
 
 export const useKanban = () => {
+    const { t } = useTranslation();
     const [tasks, setTasks] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
@@ -81,7 +83,7 @@ export const useKanban = () => {
         const newTask = {
             id: uuidv4(),
             type: 'note',
-            title: 'New Task',
+            title: t('project_management.kanban.new_task'), // Localized default title
             status,
             comments: '',
             priority: 'medium'
@@ -89,7 +91,7 @@ export const useKanban = () => {
         setTasks(prev => [newTask, ...prev]);
         console.log(`[Sync] Created note ${newTask.id}`);
         return newTask;
-    }, []);
+    }, [t]); // Added t as dependency
 
     const updateTask = useCallback((taskId, updates) => {
         setTasks(prev => prev.map(t =>
