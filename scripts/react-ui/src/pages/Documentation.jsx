@@ -51,7 +51,12 @@ const fetchDocContent = async (path) => {
     }
 };
 
+import styles from './Documentation.module.css';
+
+// ... imports ...
+
 const Documentation = () => {
+    // ... existing state ...
     const { t, i18n } = useTranslation();
     const [availableLangs, setAvailableLangs] = useState([]);
     const [selectedLang, setSelectedLang] = useState('');
@@ -63,6 +68,7 @@ const Documentation = () => {
     const [content, setContent] = useState('');
     const [contentLoading, setContentLoading] = useState(true);
 
+    // ... effects ...
     // Effect for fetching languages and the entire directory tree on component mount
     useEffect(() => {
         setTreeLoading(true);
@@ -119,7 +125,8 @@ const Documentation = () => {
                                 leftSection={<IconFileText size="1rem" stroke={1.5} />}
                                 active={node.key === selectedKey}
                                 onClick={() => onSelect(node.key)}
-                                style={{ borderRadius: 'var(--mantine-radius-sm)' }}
+                                className={styles.navLink}
+                                variant="subtle"
                             />
                         );
                     } else {
@@ -130,7 +137,8 @@ const Documentation = () => {
                                 leftSection={<IconFolder size="1rem" stroke={1.5} />}
                                 childrenOffset={28}
                                 defaultOpened={true} // Default to opened for better visibility
-                                style={{ borderRadius: 'var(--mantine-radius-sm)' }}
+                                className={styles.navLink}
+                                variant="subtle"
                             >
                                 {node.children && (
                                     <FileTree
@@ -149,12 +157,12 @@ const Documentation = () => {
     };
 
     return (
-        <div style={{ display: 'flex', height: '100%', width: '100%' }}>
+        <div className={styles.container}>
             {/* Left Sidebar: Documentation Navigation */}
-            <div style={{ width: '300px', height: '100%', borderRight: '1px solid var(--mantine-color-dark-4)', display: 'flex', flexDirection: 'column' }}>
-                <Paper p="md" style={{ height: '100%', backgroundColor: 'var(--mantine-color-dark-7)', display: 'flex', flexDirection: 'column' }}>
+            <div className={styles.sidebarWrapper}>
+                <Paper p="md" className={styles.sidebar}>
                     <Group justify="space-between" mb="md">
-                        <Title order={4}>{t('doc_nav_title')}</Title>
+                        <Title order={4} style={{ fontFamily: 'var(--font-header)', color: 'var(--text-highlight)' }}>{t('doc_nav_title')}</Title>
                     </Group>
 
                     <Select
@@ -179,14 +187,14 @@ const Documentation = () => {
             </div>
 
             {/* Right Content: Documentation Viewer */}
-            <div style={{ flex: 1, height: '100%', overflow: 'auto' }}>
-                <Paper p="xl" style={{ minHeight: '100%', backgroundColor: 'var(--mantine-color-dark-8)' }}>
+            <div className={styles.contentWrapper}>
+                <Paper p="xl" className={styles.content}>
                     {contentLoading ? (
                         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '200px' }}>
                             <Loader size="xl" />
                         </div>
                     ) : (
-                        <div className="markdown-body">
+                        <div className="markdown-body" style={{ color: 'var(--text-main)' }}>
                             <ReactMarkdown rehypePlugins={[rehypeRaw]}>
                                 {content}
                             </ReactMarkdown>

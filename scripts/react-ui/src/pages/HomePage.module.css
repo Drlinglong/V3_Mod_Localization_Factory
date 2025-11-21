@@ -1,0 +1,54 @@
+/* scripts/react-ui/src/pages/HomePage.module.css */
+
+.welcomeBanner {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    background: var(--glass-bg) !important;
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--shadow-elevation);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.welcomeBanner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(28, 126, 214, 0.2) 0%, rgba(34, 139, 230, 0.1) 100%);
+    z-index: 1;
+}
+
+.bannerContent {
+    position: relative;
+    z-index: 2;
+}
+
+.glassCard {
+    background: var(--glass-bg) !important;
+    border: 1px solid var(--glass-border) !important;
+    border-radius: var(--card-radius) !important;
+    box-shadow: var(--shadow-elevation) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    color: var(--text-main) !important;
+}
+
+.cardTitle {
+    font-family: var(--font-header);
+    color: var(--text-highlight);
+    margin-bottom: 16px;
+}
+
+.actionButton {
+    backdrop-filter: blur(4px);
+    transition: all 0.2s ease;
+}
+
+.actionButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

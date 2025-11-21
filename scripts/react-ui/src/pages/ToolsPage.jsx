@@ -6,13 +6,14 @@ import ThumbnailGenerator from '../components/tools/ThumbnailGenerator';
 import WorkshopGenerator from '../components/tools/WorkshopGenerator';
 import EventRenderer from './EventRenderer';
 import UIDebugger from './UIDebugger';
+import layoutStyles from '../components/layout/Layout.module.css';
 
 const ToolsPage = () => {
     const { t } = useTranslation();
 
     return (
-        <Container size="xl" py="xl">
-            <Paper withBorder p="xl" radius="md" bg="dark.7">
+        <Container size="lg" py="xl">
+            <Paper withBorder p="xl" radius="md" className={layoutStyles.glassCard}>
                 <Title order={2} mb="xl">{t('page_title_tools')}</Title>
                 <Tabs defaultValue="thumbnail" variant="pills" radius="md">
                     <Tabs.List mb="lg">

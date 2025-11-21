@@ -2,9 +2,9 @@ import React from 'react';
 import { Paper, Text, Group, ThemeIcon, RingProgress } from '@mantine/core';
 import { IconArrowUpRight, IconArrowDownRight } from '@tabler/icons-react';
 
-const StatCard = ({ title, value, icon, color, progress, trend }) => {
+const StatCard = ({ title, value, icon, color, progress, trend, className }) => {
     return (
-        <Paper withBorder radius="md" p="xs" bg="dark.7" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+        <Paper withBorder radius="md" p="xs" className={className} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', background: 'transparent' }}>
             <Group>
                 <RingProgress
                     size={80}

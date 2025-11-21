@@ -3,11 +3,13 @@ import { Box, Text, ScrollArea, SegmentedControl, Stack, Group, ActionIcon, Tool
 import { IconInfoCircle, IconHistory, IconX, IconLayoutSidebarRightCollapse, IconLayoutSidebarRightExpand } from '@tabler/icons-react';
 import { useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { useSidebar } from '../../context/SidebarContext';
 import styles from './Layout.module.css';
 
 export function ContextualSider() {
     const location = useLocation();
     const { t } = useTranslation();
+    const { sidebarContent, sidebarWidth } = useSidebar();
     const [activeTab, setActiveTab] = useState('info');
     const [collapsed, setCollapsed] = useState(false);
     const [content, setContent] = useState(null);
@@ -52,6 +54,7 @@ export function ContextualSider() {
                     flexDirection: 'column',
                     alignItems: 'center',
                     paddingTop: '16px',
+                    transition: 'width 0.3s ease',
                 }}
             >
                 <Tooltip label="Expand Context" position="left">
@@ -67,10 +70,11 @@ export function ContextualSider() {
         <Box
             className={styles.sidebarRight}
             style={{
-                width: 300,
+                width: collapsed ? 50 : sidebarWidth,
                 height: '100%',
                 display: 'flex',
                 flexDirection: 'column',
+                transition: 'width 0.3s ease',
             }}
         >
             {/* Header */}
@@ -95,9 +99,10 @@ export function ContextualSider() {
                         { label: 'History', value: 'history', icon: <IconHistory size={14} /> },
                     ]}
                     styles={{
-                        root: { backgroundColor: 'rgba(0,0,0,0.2)' },
+                        root: { backgroundColor: 'rgba(0,0,0,0.2)', border: '1px solid var(--glass-border)' },
                         label: { color: 'var(--text-muted)' },
-                        control: { border: 'none' }
+                        control: { border: 'none' },
+                        indicator: { backgroundColor: 'var(--color-primary)', opacity: 0.3 }
                     }}
                 />
             </Box>
@@ -105,9 +110,16 @@ export function ContextualSider() {
             {/* Content Area */}
             <ScrollArea style={{ flex: 1 }} p="md">
                 {activeTab === 'info' ? (
-                    <Text size="sm" c="var(--text-main)">
-                        {content.info}
-                    </Text>
+                    sidebarContent || (
+                        <>
+                            <div id="glossary-detail-portal" />
+                            {!document.getElementById('glossary-detail-portal')?.hasChildNodes() && (
+                                <Text size="sm" c="var(--text-main)">
+                                    {content.info}
+                                </Text>
+                            )}
+                        </>
+                    )
                 ) : (
                     <Text size="sm" c="var(--text-main)">
                         {content.history}

@@ -25,6 +25,7 @@ import {
 import { IconAlertCircle, IconCheck, IconX, IconFileUpload, IconSettings, IconRefresh, IconDownload, IconArrowLeft, IconPlayerStop } from '@tabler/icons-react';
 import { openProjectDialog } from '../services/fileService';
 import '../App.css';
+import layoutStyles from '../components/layout/Layout.module.css';
 
 const InitialTranslation = () => {
   const { t } = useTranslation();
@@ -188,7 +189,7 @@ const InitialTranslation = () => {
 
   return (
     <Container size="lg" py="xl">
-      <Paper p="xl" radius="md" withBorder style={{ backgroundColor: 'var(--mantine-color-dark-7)' }}>
+      <Paper p="xl" radius="md" withBorder className={layoutStyles.glassCard}>
         <Stepper active={active} onStepClick={setActive} breakpoint="sm">
           <Stepper.Step label={t('initial_translation_step_upload')} description={t('initial_translation_step_upload_desc')} icon={<IconFileUpload size="1.1rem" />} />
           <Stepper.Step label={t('initial_translation_step_configure')} description={t('initial_translation_step_configure_desc')} icon={<IconSettings size="1.1rem" />} />
@@ -198,7 +199,7 @@ const InitialTranslation = () => {
 
         <div style={{ marginTop: '40px' }}>
           {active === 0 && (
-            <Card withBorder padding="xl" radius="md">
+            <Card withBorder padding="xl" radius="md" className={layoutStyles.glassCard}>
               <Text size="lg" fw={500} mb="md">{t('initial_translation_step_upload')}</Text>
               <Group align="flex-end">
                 <TextInput
@@ -216,7 +217,7 @@ const InitialTranslation = () => {
           )}
 
           {active === 1 && (
-            <Card withBorder padding="xl" radius="md">
+            <Card withBorder padding="xl" radius="md" className={layoutStyles.glassCard}>
               <Text size="lg" fw={500} mb="md">{t('initial_translation_step_configure')}</Text>
               <form onSubmit={form.onSubmit(startTranslation)}>
                 <Stack gap="md">
@@ -254,10 +255,10 @@ const InitialTranslation = () => {
           )}
 
           {active === 2 && (
-            <Card withBorder padding="xl" radius="md">
+            <Card withBorder padding="xl" radius="md" className={layoutStyles.glassCard}>
               <Stack gap="md">
                 {translationDetails && (
-                  <Card withBorder bg="dark.8">
+                  <Card withBorder className={layoutStyles.glassCard}>
                     <Text fw={500} mb="xs">{t('job_details_title')}</Text>
                     <Grid>
                       <Grid.Col span={6}><Text size="sm" c="dimmed">{t('job_details_mod_name')}:</Text> <Text size="sm">{translationDetails.modName}</Text></Grid.Col>
