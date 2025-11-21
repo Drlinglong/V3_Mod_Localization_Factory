@@ -1,0 +1,58 @@
+/* scripts/react-ui/src/components/layout/Layout.module.css */
+
+/* Common Sidebar Base */
+.sidebar {
+    background: var(--glass-bg) !important;
+    backdrop-filter: blur(12px);
+    transition: all 0.3s ease;
+    color: var(--text-main);
+    box-shadow: var(--shadow-elevation);
+    z-index: 100; /* Ensure it floats above content/bg */
+}
+
+/* Specific Sidebars */
+.sidebarLeft {
+    composes: sidebar;
+    border-right: var(--glass-border) !important;
+}
+
+.sidebarRight {
+    composes: sidebar;
+    border-left: var(--glass-border) !important;
+}
+
+/* Navigation Links / Icons */
+.icon {
+    color: var(--text-muted);
+    transition: all 0.2s ease;
+}
+
+.navLink {
+    border-radius: var(--card-radius) !important;
+    transition: all 0.2s ease;
+    color: var(--text-main) !important;
+}
+
+.navLink:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: var(--text-highlight) !important;
+}
+
+.navLink[data-active="true"] {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    color: var(--color-primary) !important;
+    border: 1px solid var(--color-primary); /* Optional: outline active state */
+}
+
+/* Sci-Fi Glow Effect for Icons */
+[data-theme='scifi'] .navLink[data-active="true"] .icon {
+    color: var(--color-primary);
+    filter: drop-shadow(0 0 5px var(--color-primary));
+}
+
+/* Headers in Sidebars */
+.sidebarHeader {
+    font-family: var(--font-header);
+    color: var(--text-highlight);
+    text-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
