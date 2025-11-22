@@ -20,44 +20,97 @@
 
     /* --- Semantic Design Tokens --- */
     /* 核心色板: 帝王紫 & 黄金 */
-    --primary-color: #6a1b9a;       /* 提尔紫 */
-    --secondary-color: #ffd700;     /* 黄金 */
-    --text-main: #212121;           /* 深色字 (配合浅色大理石背景) */
+    --primary-color: #6a1b9a;
+    /* 提尔紫 */
+    --secondary-color: #ffd700;
+    /* 黄金 */
+    --text-main: #212121;
+    /* 深色字 (配合浅色大理石背景) */
     --text-muted: #616161;
-    --text-highlight: #6A0DAD;      /* 帝王紫 */
+    --text-highlight: #6A0DAD;
+    /* 帝王紫 */
 
     /* 容器材质: 大理石/马赛克 */
     --glass-bg: rgba(255, 248, 225, 0.92);
     --glass-border: #ffd700;
-    --card-radius: 8px;
+    --card-radius: 4px;
+    /* Less rounded */
 
     /* 特效 */
-    --shadow-elevation: 0 4px 6px rgba(0,0,0,0.3);
+    /* Flat, heavy shadow for candle-lit feel */
+    --shadow-elevation: 4px 4px 0px #3e2723;
+
     --font-header: "Cinzel", serif;
     --font-body: "Lato", sans-serif;
 }
 
-/* Buttons */
+/* Global Font Application */
+html.byzantine body {
+    font-family: var(--font-body);
+}
+
+html.byzantine h1,
+html.byzantine h2,
+html.byzantine h3,
+html.byzantine h4,
+html.byzantine h5,
+html.byzantine h6 {
+    font-family: var(--font-header);
+    letter-spacing: 1px;
+}
+
+/* Buttons: Gold Flow Hover */
 html.byzantine .mantine-Button-root {
-    background: linear-gradient(135deg, var(--byzantine-gold-border) 0%, var(--byzantine-gold) 100%);
-    color: var(--byzantine-purple-darker);
+    background: linear-gradient(135deg, var(--byzantine-gold-border) 0%, var(--byzantine-gold) 100%) !important;
+    color: var(--byzantine-purple-darker) !important;
+    border: 2px double #5a3a1a !important;
+    box-shadow: var(--shadow-elevation) !important;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
-/* Inputs */
+html.byzantine .mantine-Button-root::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: 0.5s;
+}
+
+html.byzantine .mantine-Button-root:hover::after {
+    left: 100%;
+}
+
+html.byzantine .mantine-Button-root:hover {
+    transform: translateY(-1px);
+    box-shadow: 6px 6px 0px #3e2723 !important;
+}
+
+/* Inputs: Parchment Style */
 html.byzantine .mantine-Input-input,
-html.byzantine .mantine-Select-input {
-    background-color: rgba(46, 26, 71, 0.7);
-    border: 2px solid var(--byzantine-imperial);
-    color: var(--byzantine-ivory);
+html.byzantine .mantine-Select-input,
+html.byzantine .mantine-Paper-root {
+    background-color: rgba(255, 248, 225, 0.95);
+    /* Parchment */
+    border: 3px double var(--byzantine-gold-border);
+    color: #3e2723;
+    /* Dark Brown Text */
+    box-shadow: inset 0 0 10px rgba(184, 134, 11, 0.1);
 }
 
-/* Navbar */
+/* Navbar: Mosaic Border */
 html.byzantine .mantine-AppShell-navbar {
     background: linear-gradient(180deg, var(--byzantine-purple-darker) 0%, var(--byzantine-purple-dark) 100%);
-    border-right: 4px solid var(--byzantine-gold-border);
+    border-right: 4px double var(--byzantine-gold);
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.5);
 }
 
 /* Titles */
 html.byzantine .mantine-Title-root {
     color: var(--byzantine-gold);
+    text-shadow: 2px 2px 0px #000;
 }
