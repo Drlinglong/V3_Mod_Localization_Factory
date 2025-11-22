@@ -11,8 +11,21 @@ const ProjectOverview = ({ projectDetails, handleStatusChange, handleProofread, 
     const [managePathsOpen, setManagePathsOpen] = useState(false);
     const [translationDirs, setTranslationDirs] = useState([]);
     const [newDirPath, setNewDirPath] = useState('');
+    const [notes, setNotes] = useState(projectDetails?.notes || '');
 
     if (!projectDetails) return null;
+
+    const handleSaveNotes = async () => {
+        try {
+            await axios.put(`http://localhost:8000/api/project/${projectDetails.project_id}/notes`, {
+                notes: notes
+            });
+            // Optionally show a notification
+        } catch (error) {
+            console.error('Failed to save notes:', error);
+            alert(`Failed to save notes: ${error.response?.data?.detail || error.message}`);
+        }
+    };
 
     const handleOpenManagePaths = () => {
         setTranslationDirs(projectDetails.translation_dirs || []);
@@ -116,6 +129,21 @@ const ProjectOverview = ({ projectDetails, handleStatusChange, handleProofread, 
                         <Grid.Col span={3}><Card withBorder className={styles.statCard}><Text size="xs" c="dimmed">已翻译</Text><Title order={3} c="green">{projectDetails.overview.translated}%</Title></Card></Grid.Col>
                         <Grid.Col span={3}><Card withBorder className={styles.statCard}><Text size="xs" c="dimmed">待校对</Text><Title order={3} c="yellow">{projectDetails.overview.toBeProofread}%</Title></Card></Grid.Col>
                     </Grid>
+                </Paper>
+
+                {/* Notes Section */}
+                <Paper withBorder p="md" radius="md" className={styles.glassCard} mb="md">
+                    <Group justify="space-between" mb="xs">
+                        <Title order={4}>备注</Title>
+                        <Button variant="outline" size="xs" onClick={handleSaveNotes}>Save Notes</Button>
+                    </Group>
+                    <Textarea
+                        value={notes}
+                        onChange={(event) => setNotes(event.currentTarget.value)}
+                        placeholder="Add any notes for this project..."
+                        autosize
+                        minRows={2}
+                    />
                 </Paper>
 
                 {/* Path Management */}

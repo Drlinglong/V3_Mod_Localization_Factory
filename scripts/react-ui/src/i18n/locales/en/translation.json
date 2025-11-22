@@ -254,5 +254,14 @@
   "proofreading.loading": "Loading...",
   "proofreading.select_mod_placeholder": "Select a mod to proofread",
   "proofreading.select_file_placeholder": "Select a file",
-  "proofreading.target_language": "Target Language"
+  "project_management.delete_project": "Delete Project",
+  "glossary_editor": {
+    "language": "Language",
+    "value": "Value",
+    "add": "Add",
+    "variants_desc": "Add language-specific variations. For multiple values, separate with a comma.",
+    "abbreviations_desc": "Add language-specific abbreviations.",
+    "metadata_label": "Metadata (JSON)",
+    "error_invalid_json": "Invalid JSON format"
+  }
 }

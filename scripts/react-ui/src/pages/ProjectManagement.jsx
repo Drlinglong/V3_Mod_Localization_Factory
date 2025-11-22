@@ -203,24 +203,24 @@ export default function ProjectManagement() {
               </Text>
             </Card>
 
-            {/* Import/Open Card (Placeholder for future feature) */}
+            {/* Archives Card */}
             <Card
               shadow="sm"
               padding="lg"
               radius="md"
               withBorder
               className={styles.actionCard}
-              style={{ opacity: 0.7 }}
+              onClick={() => navigate('/archives')}
             >
               <Card.Section>
                 <BackgroundImage src={cardOpenProject} style={{ height: 140 }} />
               </Card.Section>
               <Group position="apart" mt="md" mb="xs">
-                <Text weight={500}>Open Existing</Text>
-                <Badge color="gray" variant="light">Soon</Badge>
+                <Text weight={500}>Archives</Text>
+                <Badge color="gray" variant="light">View</Badge>
               </Group>
               <Text size="sm" color="dimmed">
-                Open a project from a different location.
+                Browse archived or deleted projects.
               </Text>
             </Card>
           </SimpleGrid>
@@ -269,13 +269,22 @@ export default function ProjectManagement() {
     }
   };
 
+  const handleArchiveProject = async () => {
+    if (!selectedProject) return;
+    try {
+      await axios.put(`${API_BASE}/project/${selectedProject.project_id}/status`, { status: 'archived' });
+      setSelectedProject(null); // Go back to project list
+    } catch (error) {
+      alert(`Failed to archive project: ${error.response?.data?.detail || error.message}`);
+    }
+  };
+
   const handleDeleteProject = async () => {
     if (!selectedProject) return;
     try {
-      await axios.delete(`${API_BASE}/project/${selectedProject.project_id}?delete_files=${deleteSourceFiles}`);
+      await axios.delete(`${API_BASE}/project/${selectedProject.project_id}`);
       setDeleteModalOpen(false);
       setSelectedProject(null);
-      setDeleteSourceFiles(false);
       fetchProjects();
     } catch (error) {
       alert(`Failed to delete project: ${error.response?.data?.detail || error.message}`);
@@ -298,7 +307,8 @@ export default function ProjectManagement() {
           </Group>
           <Group>
             <Button variant="light" size="xs" onClick={handleRefreshFiles}>{t('project_management.refresh_files')}</Button>
-            <Button variant="light" color="red" size="xs" onClick={() => setDeleteModalOpen(true)}>{t('project_management.delete_project')}</Button>
+            <Button variant="light" color="orange" size="xs" onClick={handleArchiveProject}>Archive</Button>
+            <Button variant="light" color="red" size="xs" onClick={() => setDeleteModalOpen(true)}>Delete</Button>
             <Badge size="lg">{selectedProject.game_id}</Badge>
           </Group>
         </Group>
@@ -380,24 +390,15 @@ export default function ProjectManagement() {
 
       <Modal
         opened={deleteModalOpen}
-        onClose={() => { setDeleteModalOpen(false); setDeleteSourceFiles(false); }}
+        onClose={() => { setDeleteModalOpen(false); }}
         title="Delete Project"
         size="md"
       >
         <Stack>
-          <Text>Are you sure you want to delete this project?</Text>
+          <Text>Are you sure you want to move this project to the recycle bin?</Text>
           <Text size="sm" c="dimmed">Project: {selectedProject?.name}</Text>
-          <input
-            type="checkbox"
-            checked={deleteSourceFiles}
-            onChange={(e) => setDeleteSourceFiles(e.target.checked)}
-            id="delete-files-checkbox"
-          />
-          <label htmlFor="delete-files-checkbox">
-            <Text size="sm" c="red">Also delete source files from disk</Text>
-          </label>
           <Group justify="flex-end" mt="md">
-            <Button variant="default" onClick={() => { setDeleteModalOpen(false); setDeleteSourceFiles(false); }}>
+            <Button variant="default" onClick={() => { setDeleteModalOpen(false); }}>
               Cancel
             </Button>
             <Button color="red" onClick={handleDeleteProject}>

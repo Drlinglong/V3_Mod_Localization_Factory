@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { useTranslation } from 'react-i18next';
 import {
-    Select, Input, Title, Button, Modal, Badge, Group, LoadingOverlay, Tooltip, Switch, Text, Paper, ScrollArea, Table, TextInput, NavLink, Stack
+    Select, Input, Title, Button, Modal, Badge, Group, LoadingOverlay, Tooltip, Switch, Text, Paper, ScrollArea, Table, TextInput, NavLink, Stack, ActionIcon, Textarea
 } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { notifications } from '@mantine/notifications';
-import { IconPlus, IconTrash, IconDots, IconFolder, IconFileText, IconX } from '@tabler/icons-react';
+import { IconPlus, IconTrash, IconDots, IconFolder, IconFileText, IconX, IconSparkles } from '@tabler/icons-react';
 import {
     useReactTable,
     getCoreRowModel,
@@ -25,8 +25,8 @@ const GlossaryManagerPage = () => {
             source: '',
             translation: '',
             notes: '',
-            variants: '',
-            abbreviations: '',
+            variants: [],
+            abbreviations: [],
             metadata: '',
         },
         validate: {
@@ -39,9 +39,9 @@ const GlossaryManagerPage = () => {
         initialValues: { fileName: '' },
         validate: {
             fileName: (value) => {
-                if (!value) return t('glossary_filename_required', 'Please enter a file name.');
+                if (!value) return t('glossary_filename_required');
                 if (!/^[a-zA-Z0-9_]+\.json$/.test(value)) {
-                    return t('glossary_filename_invalid', 'Must be a valid name ending in .json (e.g., my_glossary.json)');
+                    return t('glossary_filename_invalid');
                 }
                 return null;
             }
@@ -50,17 +50,15 @@ const GlossaryManagerPage = () => {
 
     // --- State ---
     const [treeData, setTreeData] = useState([]);
-    const [data, setData] = useState([]); // This will hold the data for the current page
+    const [data, setData] = useState([]);
     const [selectedGame, setSelectedGame] = useState(null);
-    const [selectedFile, setSelectedFile] = useState({ key: null, title: t('glossary_no_file_selected'), gameId: null });
+    const [selectedFile, setSelectedFile] = useState({ key: null, title: t('glossary_no_file_selected'), gameId: null, glossaryId: null });
     const [targetLanguages, setTargetLanguages] = useState([]);
     const [selectedTargetLang, setSelectedTargetLang] = useState('');
-
-    // UI and Table State
-    const [searchScope, setSearchScope] = useState('file'); // 'file', 'game', 'all'
+    const [searchScope, setSearchScope] = useState('file');
     const [filtering, setFiltering] = useState('');
     const [pagination, setPagination] = useState({ pageIndex: 0, pageSize: 25 });
-    const [rowCount, setRowCount] = useState(0); // Total number of rows from server
+    const [rowCount, setRowCount] = useState(0);
     const [isModalVisible, setIsModalVisible] = useState(false);
     const [editingEntry, setEditingEntry] = useState(null);
     const [isLoadingTree, setIsLoadingTree] = useState(true);
@@ -68,11 +66,9 @@ const GlossaryManagerPage = () => {
     const [isSaving, setIsSaving] = useState(false);
     const [isFileCreateModalVisible, setIsFileCreateModalVisible] = useState(false);
     const [isAdvancedMode, setIsAdvancedMode] = useState(false);
-
     const [isDeleteModalVisible, setIsDeleteModalVisible] = useState(false);
     const [deletingItemId, setDeletingItemId] = useState(null);
-
-    // New State for Master-Detail View
+    const [jsonError, setJsonError] = useState(null);
     const [selectedTerm, setSelectedTerm] = useState(null);
 
     const showDeleteModal = (id) => {
@@ -80,211 +76,153 @@ const GlossaryManagerPage = () => {
         setIsDeleteModalVisible(true);
     };
 
-    // --- Data Fetching ---
-    const fetchInitialConfigs = async () => {
-        setIsLoadingTree(true);
-        try {
-            const [treeResponse, configResponse] = await Promise.all([
-                axios.get('/api/glossary/tree'),
-                axios.get('/api/config')
-            ]);
-
-            setTreeData(treeResponse.data);
-            if (treeResponse.data.length > 0 && !selectedGame) {
-                setSelectedGame(treeResponse.data[0].key);
-            }
-
-            const languages = Object.values(configResponse.data.languages);
-            setTargetLanguages(languages);
-            if (languages.length > 0 && !selectedTargetLang) {
-                // Default to Chinese if available, otherwise the first language in the list
-                setSelectedTargetLang(languages.find(l => l.code === 'zh-CN')?.code || languages[0].code);
-            }
-        } catch (error) {
-            notifications.show({ title: 'Error', message: 'Failed to load initial configuration.', color: 'red' });
-            console.error('Fetch initial config error:', error);
-        } finally {
-            setIsLoadingTree(false);
-        }
-    };
-
+    // --- Data Fetching & Handlers ---
     useEffect(() => {
+        const fetchInitialConfigs = async () => {
+            setIsLoadingTree(true);
+            try {
+                const [treeResponse, configResponse] = await Promise.all([
+                    axios.get('/api/glossary/tree'),
+                    axios.get('/api/config')
+                ]);
+                setTreeData(treeResponse.data);
+                if (treeResponse.data.length > 0 && !selectedGame) {
+                    setSelectedGame(treeResponse.data[0].key);
+                }
+                const languages = Object.values(configResponse.data.languages);
+                setTargetLanguages(languages);
+                if (languages.length > 0 && !selectedTargetLang) {
+                    setSelectedTargetLang(languages.find(l => l.code === 'zh-CN')?.code || languages[0].code);
+                }
+            } catch (error) {
+                notifications.show({ title: 'Error', message: 'Failed to load initial configuration.', color: 'red' });
+            } finally {
+                setIsLoadingTree(false);
+            }
+        };
         fetchInitialConfigs();
     }, []);
 
-    const fetchGlossaryContent = async () => {
-        const { pageIndex, pageSize } = pagination;
-        setIsLoadingContent(true);
-
-        try {
-            let response;
-
-            // If filtering is empty, use standard content fetch
-            if (searchScope === 'file' && !filtering) {
-                if (!selectedFile.key) {
-                    setData([]);
-                    setRowCount(0);
-                    setIsLoadingContent(false);
-                    return;
-                }
-                const { gameId, title } = selectedFile;
-                response = await axios.get(
-                    `/api/glossary/content?game_id=${gameId}&file_name=${title}&page=${pageIndex + 1}&pageSize=${pageSize}`
-                );
-            } else {
-                // Search logic (even for file scope if there is a filter)
-                const payload = {
-                    scope: searchScope,
-                    query: filtering,
-                    page: pageIndex + 1,
-                    pageSize: pageSize,
-                    game_id: selectedFile.gameId,
-                    file_name: selectedFile.title
-                };
-
-                // Validation for scope requirements
-                if (searchScope === 'file' && !selectedFile.key) {
-                     // Cannot search file if no file selected
-                     setData([]);
-                     setRowCount(0);
-                     setIsLoadingContent(false);
-                     return;
-                }
-                if (searchScope === 'game' && !selectedFile.gameId) {
-                    // Cannot search game if no game selected (we use selectedFile.gameId or selectedGame)
-                    payload.game_id = selectedGame;
-                    if (!payload.game_id) {
-                         setData([]);
-                         setRowCount(0);
-                         setIsLoadingContent(false);
-                         return;
-                    }
-                }
-
-                response = await axios.post('/api/glossary/search', payload);
-            }
-
-            setData(response.data.entries);
-            setRowCount(response.data.totalCount);
-        } catch (error) {
-            notifications.show({ title: 'Error', message: 'Failed to load content.', color: 'red' });
-            console.error('Fetch content error:', error);
-            setData([]);
-            setRowCount(0);
-        } finally {
-            setIsLoadingContent(false);
-        }
-    };
-
-    // Effect to fetch content when dependencies change
     useEffect(() => {
-        // Reset pagination when filter or scope changes (optional but good UX)
-        // But here we just depend on pagination. If we change filter/scope, we should probably reset page to 0 elsewhere.
+        const fetchGlossaryContent = async () => {
+            const { pageIndex, pageSize } = pagination;
+            setIsLoadingContent(true);
+            try {
+                let response;
+                if (searchScope === 'file' && !filtering) {
+                    if (!selectedFile.glossaryId) {
+                        setData([]); setRowCount(0); setIsLoadingContent(false); return;
+                    }
+                    response = await axios.get(`/api/glossary/content?glossary_id=${selectedFile.glossaryId}&page=${pageIndex + 1}&pageSize=${pageSize}`);
+                } else {
+                    const payload = {
+                        scope: searchScope, query: filtering, page: pageIndex + 1, pageSize: pageSize,
+                        game_id: searchScope === 'game' ? (selectedFile.gameId || selectedGame) : null,
+                        file_name: searchScope === 'file' ? selectedFile.key : null,
+                    };
+                    if ((payload.scope === 'file' && !payload.file_name) || (payload.scope === 'game' && !payload.game_id)) {
+                        setData([]); setRowCount(0); setIsLoadingContent(false); return;
+                    }
+                    response = await axios.post('/api/glossary/search', payload);
+                }
+                setData(response.data.entries);
+                setRowCount(response.data.totalCount);
+            } catch (error) {
+                notifications.show({ title: 'Error', message: 'Failed to load content.', color: 'red' });
+                setData([]); setRowCount(0);
+            } finally {
+                setIsLoadingContent(false);
+            }
+        };
         fetchGlossaryContent();
     }, [selectedFile, pagination, filtering, searchScope]);
 
-
-    // --- Handlers ---
-    const handleAdd = () => {
-        setEditingEntry(null);
-        setSelectedTerm(null); // Clear selection when adding new
-        form.reset();
-        setIsModalVisible(true); // Keep modal for adding new entries for now, or switch to panel? Let's keep modal for "Add" to avoid confusion, or maybe panel is better?
-        // User asked for "click row -> show details". Adding new might still be better in a modal or just an empty panel.
-        // Let's stick to Modal for ADD for now to minimize risk, but use Panel for EDIT/VIEW.
-    };
-
     const { setSidebarWidth } = useSidebar();
-
-    // ...
 
     const handleRowClick = (entry) => {
         setSelectedTerm(entry);
         setEditingEntry(entry);
-        setSidebarWidth(450); // Widen the sidebar for editing
+        setSidebarWidth(450);
+        
+        const variantsArray = entry.variants ? Object.entries(entry.variants).map(([lang, values]) => ({ lang, value: values.join(', ') })) : [];
+        const abbreviationsArray = entry.abbreviations ? Object.entries(entry.abbreviations).map(([lang, value]) => ({ lang, value })) : [];
+
         form.setValues({
             source: entry.source,
             translation: entry.translations[selectedTargetLang] || '',
             notes: entry.notes,
-            variants: entry.variants ? JSON.stringify(entry.variants, null, 2) : '',
-            abbreviations: entry.abbreviations ? JSON.stringify(entry.abbreviations, null, 2) : '',
-            metadata: entry.metadata ? JSON.stringify(entry.metadata, null, 2) : '',
+            variants: variantsArray,
+            abbreviations: abbreviationsArray,
+            metadata: JSON.stringify(entry.metadata || {}, null, 2),
         });
+        setJsonError(null);
     };
 
     const handleClosePanel = () => {
         setSelectedTerm(null);
         setEditingEntry(null);
-        setSidebarWidth(300); // Reset width
+        setSidebarWidth(300);
     };
 
     const saveData = async (values) => {
-        if (!selectedFile.gameId || !selectedFile.title) return;
-
+        if (!selectedFile.glossaryId) return;
+        if (jsonError) {
+            notifications.show({ title: 'Error', message: t('glossary_editor.error_invalid_json'), color: 'red' });
+            return;
+        }
+        try {
+            JSON.parse(values.metadata);
+        } catch (e) {
+            notifications.show({ title: 'Error', message: t('glossary_editor.error_invalid_json'), color: 'red' });
+            setJsonError(t('glossary_editor.error_invalid_json'));
+            return;
+        }
         setIsSaving(true);
         try {
             const { source, translation, notes, variants, abbreviations, metadata } = values;
 
-            let parsedVariants = {};
-            try {
-                parsedVariants = variants ? JSON.parse(variants) : {};
-            } catch (e) {
-                notifications.show({ title: 'Error', message: 'Variants JSON is invalid.', color: 'red' });
-                setIsSaving(false); return;
-            }
+            const variantsObject = variants.reduce((acc, item) => {
+                if (item.lang && item.value) {
+                    acc[item.lang] = item.value.split(',').map(s => s.trim()).filter(Boolean);
+                }
+                return acc;
+            }, {});
+            const abbreviationsObject = abbreviations.reduce((acc, item) => {
+                if (item.lang && item.value) {
+                    acc[item.lang] = item.value;
+                }
+                return acc;
+            }, {});
 
-            let parsedAbbreviations = {};
-            try {
-                parsedAbbreviations = abbreviations ? JSON.parse(abbreviations) : {};
-            } catch (e) {
-                notifications.show({ title: 'Error', message: 'Abbreviations JSON is invalid.', color: 'red' });
-                setIsSaving(false); return;
-            }
-
-            let parsedMetadata = {};
-            try {
-                parsedMetadata = metadata ? JSON.parse(metadata) : {};
-            } catch (e) {
-                notifications.show({ title: 'Error', message: 'Metadata JSON is invalid.', color: 'red' });
-                setIsSaving(false); return;
-            }
+            const payload = {
+                source, notes, 
+                variants: variantsObject,
+                abbreviations: abbreviationsObject,
+                metadata: JSON.parse(metadata),
+                translations: { ...editingEntry?.translations, [selectedTargetLang]: translation },
+                id: editingEntry?.id
+            };
 
             if (editingEntry) {
-                const payload = { ...editingEntry, source, notes, variants: parsedVariants, abbreviations: parsedAbbreviations, metadata: parsedMetadata, translations: { ...editingEntry.translations, [selectedTargetLang]: translation }, };
-                await axios.put(`/api/glossary/entry/${editingEntry.id}?game_id=${selectedFile.gameId}&file_name=${selectedFile.title}`, payload);
+                await axios.put(`/api/glossary/entry/${editingEntry.id}`, payload);
             } else {
-                const payload = { source, notes, variants: parsedVariants, abbreviations: parsedAbbreviations, metadata: parsedMetadata, translations: { [selectedTargetLang]: translation }, };
-                await axios.post(`/api/glossary/entry?game_id=${selectedFile.gameId}&file_name=${selectedFile.title}`, payload);
+                await axios.post(`/api/glossary/entry?glossary_id=${selectedFile.glossaryId}`, payload);
             }
-
             notifications.show({ title: 'Success', message: 'Glossary saved successfully!', color: 'green' });
             setIsModalVisible(false);
             fetchGlossaryContent();
-
-            // If we are in panel mode (editingEntry exists and selectedTerm exists), we might want to keep the panel open or update it.
-            // For now, let's just refresh the data. The selectedTerm might need to be updated with new values if we want to reflect changes immediately without re-clicking.
-            if (selectedTerm && editingEntry && selectedTerm.id === editingEntry.id) {
-                // We can't easily update selectedTerm with full server response here without refetching, 
-                // but fetchGlossaryContent will refresh the list. 
-                // We might lose selection if the list rebuilds? No, selection is by ID reference usually, but here it's an object.
-                // Let's rely on the list refresh.
-            }
-
         } catch (error) {
             notifications.show({ title: 'Error', message: 'Failed to save glossary.', color: 'red' });
-            console.error('Save error:', error);
         } finally {
             setIsSaving(false);
         }
     };
 
-
     const handleDelete = async (id) => {
         setIsSaving(true);
         try {
-            await axios.delete(`/api/glossary/entry/${id}?game_id=${selectedFile.gameId}&file_name=${selectedFile.title}`);
+            await axios.delete(`/api/glossary/entry/${id}`);
             notifications.show({ title: 'Success', message: 'Entry deleted successfully!', color: 'green' });
-
             const newTotalCount = rowCount - 1;
             const newPageCount = Math.ceil(newTotalCount / pagination.pageSize);
             if (pagination.pageIndex >= newPageCount && newPageCount > 0) {
@@ -293,11 +231,10 @@ const GlossaryManagerPage = () => {
                 fetchGlossaryContent();
             }
             if (selectedTerm && selectedTerm.id === id) {
-                setSelectedTerm(null); // Deselect if deleted
+                setSelectedTerm(null);
             }
         } catch (error) {
             notifications.show({ title: 'Error', message: 'Failed to delete entry.', color: 'red' });
-            console.error('Delete error:', error);
         } finally {
             setIsSaving(false);
         }
@@ -305,31 +242,25 @@ const GlossaryManagerPage = () => {
 
     const onSelectTree = (key, info) => {
         if (info.isLeaf) {
-            const [gameId, fileName] = key.split('|');
-            setSelectedFile({ key: key, title: fileName, gameId: gameId });
-            // When selecting a file, usually we reset to 'file' scope and clear filter?
-            // User might want to keep 'All Games' search active?
-            // Typically clicking a file implies "Show me this file".
+            const [gameId, glossaryId, fileName] = key.split('|');
+            setSelectedFile({ key, title: fileName, gameId, glossaryId: parseInt(glossaryId, 10) });
             setSearchScope('file');
             setFiltering('');
-            setPagination({ pageIndex: 0, pageSize: 25 }); // Reset pagination, which triggers useEffect to fetch data.
-            setSelectedTerm(null); // Clear selection on file change
+            setPagination({ pageIndex: 0, pageSize: 25 });
+            setSelectedTerm(null);
         } else {
-            // If clicking a Game node (folder)
-            // We can set the selected game, to facilitate "Current Game" search
-            // key is the gameId
             setSelectedGame(key);
         }
     };
 
     const handleDeleteConfirm = async () => {
-        setIsSaving(true); // Set loading state
+        setIsSaving(true);
         try {
-            await handleDelete(deletingItemId); // Call your original delete logic
+            await handleDelete(deletingItemId);
             setIsDeleteModalVisible(false);
             setDeletingItemId(null);
         } finally {
-            setIsSaving(false); // Reset loading state
+            setIsSaving(false);
         }
     };
 
@@ -338,119 +269,66 @@ const GlossaryManagerPage = () => {
         setDeletingItemId(null);
     };
 
-    // --- Table Definition ---
     const columns = [
-        ...(searchScope !== 'file' ? [
-            {
-                accessorKey: 'game_id',
-                header: () => <Text className={styles.textMain} fw={700}>{t('glossary_game_id', 'Game')}</Text>,
-                cell: info => <Text className={styles.textMain}>{info.getValue()}</Text>
-            },
-            {
-                accessorKey: 'file_name',
-                header: () => <Text className={styles.textMain} fw={700}>{t('glossary_file_name', 'File')}</Text>,
-                cell: info => <Text className={styles.textMain}>{info.getValue()}</Text>
-            }
-        ] : []),
-        {
-            accessorKey: 'source',
-            header: () => <Text className={styles.textMain} fw={700}>{t('glossary_source_text')}</Text>,
-            cell: info => <Text className={styles.textMain}>{info.getValue()}</Text>
-        },
-        {
-            id: 'translation',
-            header: () => <Text className={styles.textMain} fw={700}>{t('glossary_translation')}</Text>,
-            cell: ({ row }) => <Text className={styles.textMain}>{row.original.translations[selectedTargetLang] || ''}</Text>
-        },
-        {
-            accessorKey: 'notes',
-            header: () => <Text className={styles.textMain} fw={700}>{t('glossary_notes')}</Text>,
-            cell: ({ row }) => (row.original.notes ? (<Tooltip label={t('glossary_view_edit_notes', 'View/Edit Notes')}><IconDots size={14} style={{ color: 'var(--text-muted)' }} /></Tooltip>) : null)
-        },
-        {
-            accessorKey: 'variants',
-            header: () => <Text className={styles.textMain} fw={700}>{t('glossary_variants')}</Text>,
-            cell: info => <Group gap="xs">{Array.isArray(info.getValue()) ? info.getValue().map(v => <Badge key={v} variant="light" color="var(--color-primary)">{v}</Badge>) : null}</Group>
-        },
-        {
-            id: 'actions',
-            header: () => <Text className={styles.textMain} fw={700}>{t('glossary_actions')}</Text>,
-            cell: ({ row }) => (
-                <Group gap="xs" onClick={(e) => e.stopPropagation()}>
-                    {/* Stop propagation so clicking delete doesn't select the row */}
-                    <Button
-                        size="xs"
-                        variant="outline"
-                        color="red"
-                        className={styles.actionButton}
-                        style={{ borderColor: 'var(--color-accent)', color: 'var(--color-accent)' }}
-                        onClick={() => showDeleteModal(row.original.id)}
-                    >
-                        <IconTrash size={14} />
-                    </Button>
-                </Group>
-            )
-        },
+        { accessorKey: 'source', header: () => <Text fw={700}>{t('glossary_source_text')}</Text>, cell: info => <Text>{info.getValue()}</Text> },
+        { id: 'translation', header: () => <Text fw={700}>{t('glossary_translation')}</Text>, cell: ({ row }) => <Text>{row.original.translations[selectedTargetLang] || ''}</Text> },
+        { accessorKey: 'notes', header: () => <Text fw={700}>{t('glossary_notes')}</Text>, cell: ({ row }) => (row.original.notes ? <Tooltip label={t('glossary_view_edit_notes')}><IconDots size={14} /></Tooltip> : null) },
+        { id: 'actions', header: () => <Text fw={700}>{t('glossary_actions')}</Text>, cell: ({ row }) => (<Group gap="xs" onClick={(e) => e.stopPropagation()}><ActionIcon color="red" onClick={() => showDeleteModal(row.original.id)}><IconTrash size={14} /></ActionIcon></Group>) },
     ];
 
-
     const table = useReactTable({
-        data,
-        columns,
-        getCoreRowModel: getCoreRowModel(),
-        getFilteredRowModel: getFilteredRowModel(),
-        manualPagination: true,
-        manualFiltering: true, // IMPORTANT: Server-side filtering only
-        pageCount: Math.ceil(rowCount / pagination.pageSize),
-        state: {
-            globalFilter: filtering,
-            pagination,
-        },
-        onPaginationChange: setPagination,
-        onGlobalFilterChange: setFiltering,
+        data, columns, getCoreRowModel: getCoreRowModel(), getFilteredRowModel: getFilteredRowModel(), manualPagination: true, manualFiltering: true, pageCount: Math.ceil(rowCount / pagination.pageSize),
+        state: { globalFilter: filtering, pagination },
+        onPaginationChange: setPagination, onGlobalFilterChange: setFiltering,
     });
 
-    // Recursive component to render the file tree using Mantine NavLink
-    const FileTree = ({ nodes, onSelect, selectedKey }) => {
+    const FileTree = ({ nodes, onSelect, selectedKey }) => (
+        <>
+            {nodes.map(node => node.isLeaf ? (
+                <NavLink key={node.key} label={node.title} leftSection={<IconFileText size="1rem" />} active={node.key === selectedKey} onClick={() => onSelect(node.key, node)} variant="light" />
+            ) : (
+                <NavLink key={node.key} label={node.title} leftSection={<IconFolder size="1rem" />} childrenOffset={28} defaultOpened>
+                    {node.children && <FileTree nodes={node.children} onSelect={onSelect} selectedKey={selectedKey} />}
+                </NavLink>
+            ))}
+        </>
+    );
+
+    const DynamicListEditor = ({ field, label, description }) => {
+        const items = form.values[field] || [];
         return (
-            <>
-                {nodes.map(node => {
-                    if (node.isLeaf) {
-                        return (
-                            <NavLink
-                                key={node.key}
-                                label={node.title}
-                                leftSection={<IconFileText size="1rem" stroke={1.5} style={{ color: 'var(--color-primary)' }} />}
-                                active={node.key === selectedKey}
-                                onClick={() => onSelect(node.key, node)}
-                                className={styles.actionButton}
-                                style={{ borderRadius: 'var(--card-radius)', color: 'var(--text-main)' }}
-                                variant="light"
-                            />
-                        );
-                    } else {
-                        return (
-                            <NavLink
-                                key={node.key}
-                                label={node.title}
-                                leftSection={<IconFolder size="1rem" stroke={1.5} style={{ color: 'var(--color-accent)' }} />}
-                                childrenOffset={28}
-                                defaultOpened={true}
-                                className={styles.actionButton}
-                                style={{ borderRadius: 'var(--card-radius)', color: 'var(--text-main)' }}
-                            >
-                                {node.children && (
-                                    <FileTree
-                                        nodes={node.children}
-                                        onSelect={onSelect}
-                                        selectedKey={selectedKey}
-                                    />
-                                )}
-                            </NavLink>
-                        );
-                    }
-                })}
-            </>
+            <Stack>
+                <Text size="sm" fw={500}>{label}</Text>
+                {description && <Text size="xs" c="dimmed" mt={-10} mb={5}>{description}</Text>}
+                {items.map((item, index) => (
+                    <Group key={index} wrap="nowrap">
+                        <Select
+                            data={targetLanguages.map(l => ({ value: l.code, label: l.name_local || l.code }))}
+                            value={item.lang}
+                            onChange={(value) => form.setFieldValue(`${field}.${index}.lang`, value)}
+                            placeholder={t('glossary_editor.language')}
+                            style={{ width: 120 }}
+                        />
+                        <TextInput
+                            placeholder={t('glossary_editor.value')}
+                            value={item.value}
+                            onChange={(event) => form.setFieldValue(`${field}.${index}.value`, event.currentTarget.value)}
+                            style={{ flex: 1 }}
+                        />
+                        <ActionIcon color="red" onClick={() => form.removeListItem(field, index)}>
+                            <IconTrash size={16} />
+                        </ActionIcon>
+                    </Group>
+                ))}
+                <Button
+                    leftSection={<IconPlus size={14} />}
+                    variant="light"
+                    fullWidth
+                    onClick={() => form.insertListItem(field, { lang: '', value: '' })}
+                >
+                    {t('glossary_editor.add')}
+                </Button>
+            </Stack>
         );
     };
 
@@ -458,263 +336,123 @@ const GlossaryManagerPage = () => {
         <div className={styles.pageContainer}>
             <LoadingOverlay visible={isSaving} />
             <div className={styles.columnsWrapper}>
-                {/* Left Sidebar: Navigation */}
                 <div className={styles.leftPanel}>
                     <Paper p="md" className={styles.sidebarCard}>
                         <LoadingOverlay visible={isLoadingTree} />
-                        <Title order={4} className={styles.headerTitle}>{t('glossary_manager_title', 'Glossary Manager')}</Title>
-
-                        <Stack gap="sm" mb="md">
-                            <div>
-                                <Text size="xs" className={styles.textMuted} mb={4}>{t('glossary_game')}</Text>
-                                <Select
-                                    data={treeData.map(g => ({ value: g.key, label: g.title || g.key }))}
-                                    value={selectedGame}
-                                    onChange={setSelectedGame}
-                                    comboboxProps={{ transitionProps: { transition: 'pop', duration: 200 } }}
-                                />
-                            </div>
-                            <div>
-                                <Text size="xs" className={styles.textMuted} mb={4}>{t('glossary_target_language')}</Text>
-                                <Select
-                                    data={targetLanguages.map(l => ({ value: l.code, label: l.name_local || l.code }))}
-                                    value={selectedTargetLang}
-                                    onChange={setSelectedTargetLang}
-                                />
-                            </div>
+                        <Title order={4}>{t('glossary_manager_title')}</Title>
+                        <Stack gap="sm" mb="md" mt="md">
+                            <Select label={t('glossary_game')} data={treeData.map(g => ({ value: g.key, label: g.title || g.key }))} value={selectedGame} onChange={setSelectedGame} />
+                            <Select label={t('glossary_target_language')} data={targetLanguages.map(l => ({ value: l.code, label: l.name_local || l.code }))} value={selectedTargetLang} onChange={setSelectedTargetLang} />
                         </Stack>
-
                         <Group justify="space-between" mb="xs">
-                            <Text size="sm" fw={500} className={styles.textMain}>{t('glossary_files')}</Text>
-                            <Tooltip label={t('glossary_create_new_file')}>
-                                <Button size="xs" variant="light" onClick={() => setIsFileCreateModalVisible(true)} disabled={!selectedGame} className={styles.actionButton}>
-                                    <IconPlus size={14} />
-                                </Button>
-                            </Tooltip>
+                            <Text size="sm" fw={500}>{t('glossary_files')}</Text>
+                            <Tooltip label={t('glossary_create_new_file')}><Button size="xs" variant="light" onClick={() => setIsFileCreateModalVisible(true)} disabled={!selectedGame}><IconPlus size={14} /></Button></Tooltip>
                         </Group>
-
                         <ScrollArea style={{ flex: 1, minHeight: 0 }}>
                             {selectedGame && <FileTree nodes={treeData.find(n => n.key === selectedGame)?.children || []} onSelect={onSelectTree} selectedKey={selectedFile.key} />}
                         </ScrollArea>
                     </Paper>
                 </div>
-
-                {/* Middle Column: Table */}
                 <div className={styles.mainPanel}>
                     <Paper p="md" className={styles.contentCard}>
                         <LoadingOverlay visible={isLoadingContent} />
                         <Group justify="space-between" mb="md">
-                            <Title order={4} className={styles.headerTitle}>
-                                {selectedFile.title !== t('glossary_no_file_selected') ? selectedFile.title : t('glossary_select_file_prompt', 'Select a file')}
-                            </Title>
-                            <Button
-                                leftSection={<IconPlus size={16} />}
-                                onClick={handleAdd}
-                                disabled={!selectedFile.key}
-                                className={styles.primaryButton}
-                            >
-                                {t('glossary_add_entry')}
-                            </Button>
+                            <Title order={4}>{selectedFile.title !== t('glossary_no_file_selected') ? selectedFile.title : t('glossary_select_file_prompt')}</Title>
+                            <Button leftSection={<IconPlus size={16} />} onClick={() => setIsModalVisible(true)} disabled={!selectedFile.key}>{t('glossary_add_entry')}</Button>
                         </Group>
                         <Group mb="md" gap="xs">
-                            <Input
-                                placeholder={t('glossary_filter_placeholder')}
-                                value={filtering}
-                                onChange={e => {
-                                    setFiltering(e.currentTarget.value);
-                                    setPagination(p => ({ ...p, pageIndex: 0 }));
-                                }}
-                                className={styles.filterInput}
-                                style={{ flex: 1, marginBottom: 0 }}
-                            />
-                            <Select
-                                value={searchScope}
-                                onChange={(val) => {
-                                    setSearchScope(val);
-                                    setPagination(p => ({ ...p, pageIndex: 0 }));
-                                }}
-                                data={[
-                                    { value: 'file', label: t('search_scope_file', 'Current File') },
-                                    { value: 'game', label: t('search_scope_game', 'Current Game') },
-                                    { value: 'all', label: t('search_scope_all', 'All Games') }
-                                ]}
-                                style={{ width: 160 }}
-                                allowDeselect={false}
-                            />
+                            <Input placeholder={t('glossary_filter_placeholder')} value={filtering} onChange={e => { setFiltering(e.currentTarget.value); setPagination(p => ({ ...p, pageIndex: 0 })); }} style={{ flex: 1 }} />
+                            <Select value={searchScope} onChange={(val) => { setSearchScope(val); setPagination(p => ({ ...p, pageIndex: 0 })); }}
+                                data={[{ value: 'file', label: t('search_scope_file') }, { value: 'game', label: t('search_scope_game') }, { value: 'all', label: t('search_scope_all') }]}
+                                style={{ width: 160 }} allowDeselect={false} />
                         </Group>
-
                         <ScrollArea style={{ flex: 1, minHeight: 0 }}>
-                            <Table striped highlightOnHover withTableBorder className={styles.dataTable}>
+                            <Table striped highlightOnHover withTableBorder>
                                 <Table.Thead>
-                                    {table.getHeaderGroups().map(hg => (
-                                        <Table.Tr key={hg.id}>{hg.headers.map(header => <Table.Th key={header.id}>{flexRender(header.column.columnDef.header, header.getContext())}</Table.Th>)}</Table.Tr>
-                                    ))}
+                                    {table.getHeaderGroups().map(hg => (<Table.Tr key={hg.id}>{hg.headers.map(header => <Table.Th key={header.id}>{flexRender(header.column.columnDef.header, header.getContext())}</Table.Th>)}</Table.Tr>))}
                                 </Table.Thead>
                                 <Table.Tbody>
-                                    {table.getRowModel().rows.length > 0 ? (
-                                        table.getRowModel().rows.map(row => (
-                                            <Table.Tr
-                                                key={row.id}
-                                                onClick={() => handleRowClick(row.original)}
-                                                className={selectedTerm && selectedTerm.id === row.original.id ? styles.selectedRow : ''}
-                                            >
-                                                {row.getVisibleCells().map(cell => <Table.Td key={cell.id}>{flexRender(cell.column.columnDef.cell, cell.getContext())}</Table.Td>)}
-                                            </Table.Tr>
-                                        ))
-                                    ) : (
-                                        <Table.Tr>
-                                            <Table.Td colSpan={columns.length} style={{ textAlign: 'center', padding: '20px' }}>
-                                                <Text className={styles.textMuted}>
-                                                    {searchScope === 'file' && !filtering
-                                                        ? t('glossary_no_entries', 'No entries found')
-                                                        : t('glossary_no_search_results', `No matching terms found`)}
-                                                </Text>
-                                            </Table.Td>
+                                    {table.getRowModel().rows.length > 0 ? table.getRowModel().rows.map(row => (
+                                        <Table.Tr key={row.id} onClick={() => handleRowClick(row.original)} className={selectedTerm && selectedTerm.id === row.original.id ? styles.selectedRow : ''}>
+                                            {row.getVisibleCells().map(cell => <Table.Td key={cell.id}>{flexRender(cell.column.columnDef.cell, cell.getContext())}</Table.Td>)}
                                         </Table.Tr>
+                                    )) : (
+                                        <Table.Tr><Table.Td colSpan={columns.length} style={{ textAlign: 'center', padding: '20px' }}><Text c="dimmed">{t('glossary_no_entries')}</Text></Table.Td></Table.Tr>
                                     )}
                                 </Table.Tbody>
                             </Table>
                         </ScrollArea>
-
                         <Group justify="space-between" mt="md">
                             <Group>
-                                <Select
-                                    style={{ width: 120 }}
-                                    value={String(table.getState().pagination.pageSize)}
-                                    onChange={value => table.setPageSize(Number(value))}
-                                    data={['25', '50', '100'].map(size => ({ value: size, label: t('glossary_show_entries', { count: size }) }))}
-                                />
-                                <Text size="sm" className={styles.textMuted}>
-                                    {t('glossary_page_info', { page: table.getState().pagination.pageIndex + 1, total: table.getPageCount() })}
-                                </Text>
+                                <Select style={{ width: 120 }} value={String(table.getState().pagination.pageSize)} onChange={value => table.setPageSize(Number(value))} data={['25', '50', '100'].map(size => ({ value: size, label: t('glossary_show_entries', { count: size }) }))} />
+                                <Text size="sm" c="dimmed">{t('glossary_page_info', { page: table.getState().pagination.pageIndex + 1, total: table.getPageCount() })}</Text>
                             </Group>
                             <Button.Group>
-                                <Button variant="default" onClick={() => table.previousPage()} disabled={!table.getCanPreviousPage()} className={styles.actionButton}>{t('glossary_previous_page')}</Button>
-                                <Button variant="default" onClick={() => table.nextPage()} disabled={!table.getCanNextPage()} className={styles.actionButton}>{t('glossary_next_page')}</Button>
+                                <Button variant="default" onClick={() => table.previousPage()} disabled={!table.getCanPreviousPage()}>{t('glossary_previous_page')}</Button>
+                                <Button variant="default" onClick={() => table.nextPage()} disabled={!table.getCanNextPage()}>{t('glossary_next_page')}</Button>
                             </Button.Group>
                         </Group>
                     </Paper>
                 </div>
             </div>
 
-            {/* Portal to ContextualSider */}
             {selectedTerm && document.getElementById('glossary-detail-portal') && createPortal(
-                <Stack gap="md">
+                <Stack gap="md" style={{ height: '100%' }}>
                     <Group justify="space-between">
-                        <Title order={5} className={styles.headerTitle}>{t('glossary_edit_entry', 'Edit Entry')}</Title>
-                        <Button variant="subtle" size="xs" onClick={handleClosePanel}><IconX size={16} /></Button>
+                        <Title order={5}>{t('glossary_edit_entry')}</Title>
+                        <ActionIcon variant="subtle" onClick={handleClosePanel}><IconX size={16} /></ActionIcon>
                     </Group>
-                    <form onSubmit={form.onSubmit(saveData)}>
-                        <Stack gap="md">
-                            <TextInput label={<Text className={styles.textMain}>{t('glossary_source_text')}</Text>} required {...form.getInputProps('source')} />
-                            <TextInput label={<Text className={styles.textMain}>{`${t('glossary_translation')} (${targetLanguages.find(l => l.code === selectedTargetLang)?.name_local || selectedTargetLang})`}</Text>} required {...form.getInputProps('translation')} />
-                            <Input.Wrapper label={<Text className={styles.textMain}>{t('glossary_notes')}</Text>}><Input component="textarea" autosize minRows={3} {...form.getInputProps('notes')} /></Input.Wrapper>
+                    <form onSubmit={form.onSubmit(saveData)} style={{ display: 'flex', flexDirection: 'column', flex: 1, minHeight: 0 }}>
+                        <ScrollArea style={{ flex: 1 }}>
+                            <Stack p="xs" gap="md">
+                                <TextInput label={t('glossary_source_text')} required {...form.getInputProps('source')} />
+                                <TextInput label={`${t('glossary_translation')} (${targetLanguages.find(l => l.code === selectedTargetLang)?.name_local || selectedTargetLang})`} required {...form.getInputProps('translation')} />
+                                <Textarea label={t('glossary_notes')} autosize minRows={3} {...form.getInputProps('notes')} />
+                                
+                                <Switch
+                                    label={t('glossary_advanced_mode')}
+                                    checked={isAdvancedMode}
+                                    onChange={(event) => setIsAdvancedMode(event.currentTarget.checked)}
+                                />
 
-                            <Group justify="space-between" mt="xs">
-                                <Text size="sm" className={styles.textMain}>{t('glossary_advanced_mode', 'Advanced Mode')}</Text>
-                                <Switch checked={isAdvancedMode} onChange={(event) => setIsAdvancedMode(event.currentTarget.checked)} />
+                                {isAdvancedMode && (
+                                    <>
+                                        <DynamicListEditor field="variants" label={t('glossary_variants')} description={t('glossary_editor.variants_desc')} />
+                                        <DynamicListEditor field="abbreviations" label={t('glossary_abbreviations')} description={t('glossary_editor.abbreviations_desc')} />
+                                        
+                                        <Textarea
+                                            label={t('glossary_editor.metadata_label')}
+                                            placeholder='{ "key": "value" }'
+                                            autosize
+                                            minRows={4}
+                                            {...form.getInputProps('metadata')}
+                                            error={jsonError}
+                                            styles={{ input: { fontFamily: 'monospace' } }}
+                                            onChange={(event) => {
+                                                const val = event.currentTarget.value;
+                                                form.setFieldValue('metadata', val);
+                                                try {
+                                                    JSON.parse(val);
+                                                    setJsonError(null);
+                                                } catch (e) {
+                                                    setJsonError(t('glossary_editor.error_invalid_json'));
+                                                }
+                                            }}
+                                        />
+                                    </>
+                                )}
+                            </Stack>
+                        </ScrollArea>
+                        <Paper withBorder p="sm" mt="md" radius="md" style={{ flexShrink: 0 }}>
+                            <Group justify="flex-end">
+                                <Button variant="default" onClick={handleClosePanel}>{t('button_cancel')}</Button>
+                                <Button type="submit" loading={isSaving}>{t('button_save')}</Button>
                             </Group>
-
-                            {isAdvancedMode && (
-                                <>
-                                    <Input.Wrapper label={<Text className={styles.textMain}>{t('glossary_variants')}</Text>} description={t('glossary_variants_tooltip_json')}>
-                                        <Input component="textarea" autosize minRows={2} {...form.getInputProps('variants')} />
-                                    </Input.Wrapper>
-                                    <Input.Wrapper label={<Text className={styles.textMain}>{t('glossary_abbreviations')}</Text>} description={t('glossary_abbreviations_tooltip_json')}>
-                                        <Input component="textarea" autosize minRows={2} {...form.getInputProps('abbreviations')} />
-                                    </Input.Wrapper>
-                                    <Input.Wrapper label={<Text className={styles.textMain}>{t('glossary_metadata')}</Text>} description={t('glossary_metadata_tooltip_json')}>
-                                        <Input component="textarea" autosize minRows={2} {...form.getInputProps('metadata')} />
-                                    </Input.Wrapper>
-                                </>
-                            )}
-
-                            <Group justify="flex-end" mt="md">
-                                <Button variant="default" onClick={handleClosePanel} className={styles.actionButton}>{t('button_cancel')}</Button>
-                                <Button type="submit" loading={isSaving} className={styles.primaryButton}>{t('button_save')}</Button>
-                            </Group>
-                        </Stack>
+                        </Paper>
                     </form>
                 </Stack>,
                 document.getElementById('glossary-detail-portal')
             )}
-
-            <Modal
-                title={<Text className={styles.headerTitle}>{t('glossary_add_entry')}</Text>}
-                opened={isModalVisible}
-                onClose={() => { setIsModalVisible(false); setIsAdvancedMode(false); }}
-                classNames={{ content: styles.modalContent, header: styles.modalHeader, body: styles.modalBody, title: styles.modalTitle }}
-            >
-                <form onSubmit={form.onSubmit(saveData)}>
-                    <TextInput label={<Text className={styles.textMain}>{t('glossary_source_text')}</Text>} required {...form.getInputProps('source')} />
-                    <TextInput label={<Text className={styles.textMain}>{`${t('glossary_translation')} (${targetLanguages.find(l => l.code === selectedTargetLang)?.name_local || selectedTargetLang})`}</Text>} required {...form.getInputProps('translation')} />
-                    <Input.Wrapper label={<Text className={styles.textMain}>{t('glossary_notes')}</Text>}><Input component="textarea" {...form.getInputProps('notes')} /></Input.Wrapper>
-
-                    <Group justify="flex-end" my="md">
-                        <Text size="sm" className={styles.textMain}>{t('glossary_advanced_mode', 'Advanced Mode')}</Text>
-                        <Switch checked={isAdvancedMode} onChange={(event) => setIsAdvancedMode(event.currentTarget.checked)} />
-                    </Group>
-
-                    {isAdvancedMode && (
-                        <>
-                            <Input.Wrapper label={<Text className={styles.textMain}>{t('glossary_variants')}</Text>} description={t('glossary_variants_tooltip_json')}>
-                                <Input component="textarea" autosize minRows={3} {...form.getInputProps('variants')} />
-                            </Input.Wrapper>
-                            <Input.Wrapper label={<Text className={styles.textMain}>{t('glossary_abbreviations')}</Text>} description={t('glossary_abbreviations_tooltip_json')}>
-                                <Input component="textarea" autosize minRows={3} {...form.getInputProps('abbreviations')} />
-                            </Input.Wrapper>
-                            <Input.Wrapper label={<Text className={styles.textMain}>{t('glossary_metadata')}</Text>} description={t('glossary_metadata_tooltip_json')}>
-                                <Input component="textarea" autosize minRows={3} {...form.getInputProps('metadata')} />
-                            </Input.Wrapper>
-                        </>
-                    )}
-                    <Group justify="flex-end" mt="md">
-                        <Button variant="default" onClick={() => { setIsModalVisible(false); setIsAdvancedMode(false); }} className={styles.actionButton}>{t('button_cancel')}</Button>
-                        <Button type="submit" loading={isSaving} className={styles.primaryButton}>{t('button_ok')}</Button>
-                    </Group>
-                </form>
-            </Modal>
-
-            <Modal
-                title={<Text className={styles.headerTitle}>{t('glossary_create_new_file', 'Create New Glossary File')}</Text>}
-                opened={isFileCreateModalVisible}
-                onClose={() => setIsFileCreateModalVisible(false)}
-                classNames={{ content: styles.modalContent, header: styles.modalHeader, body: styles.modalBody, title: styles.modalTitle }}
-            >
-                <form onSubmit={newFileForm.onSubmit(async (values) => {
-                    try {
-                        setIsSaving(true);
-                        await axios.post('/api/glossary/file', { game_id: selectedGame, file_name: values.fileName });
-                        notifications.show({ title: 'Success', message: `Successfully created ${values.fileName}`, color: 'green' });
-                        setIsFileCreateModalVisible(false);
-                        fetchInitialConfigs();
-                    } catch (error) {
-                        notifications.show({ title: 'Error', message: error.response?.data?.detail || 'Failed to create file.', color: 'red' });
-                        console.error('Create file error:', error);
-                    } finally {
-                        setIsSaving(false);
-                    }
-                })}>
-                    <TextInput label={<Text className={styles.textMain}>{t('glossary_file_name', 'File Name')}</Text>} placeholder="e.g., my_new_glossary.json" required {...newFileForm.getInputProps('fileName')} />
-                    <Group justify="flex-end" mt="md">
-                        <Button variant="default" onClick={() => setIsFileCreateModalVisible(false)} className={styles.actionButton}>{t('button_cancel')}</Button>
-                        <Button type="submit" loading={isSaving} className={styles.primaryButton}>{t('button_ok')}</Button>
-                    </Group>
-                </form>
-            </Modal>
-
-            <Modal
-                title={<Text className={styles.headerTitle}>{t('glossary_delete_confirm_title', 'Confirm Deletion')}</Text>}
-                opened={isDeleteModalVisible}
-                onClose={handleDeleteCancel}
-                classNames={{ content: styles.modalContent, header: styles.modalHeader, body: styles.modalBody, title: styles.modalTitle }}
-            >
-                <Text className={styles.textMain}>{t('glossary_delete_confirm_content', 'Are you sure you want to delete this entry? This action cannot be undone.')}</Text>
-                <Group justify="flex-end" mt="md">
-                    <Button variant="default" onClick={handleDeleteCancel} className={styles.actionButton}>{t('button_cancel')}</Button>
-                    <Button color="red" onClick={handleDeleteConfirm} loading={isSaving} className={styles.actionButton} style={{ borderColor: 'var(--color-accent)', color: 'var(--color-accent)' }}>{t('button_ok')}</Button>
-                </Group>
-            </Modal>
         </div>
     );
 };

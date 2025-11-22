@@ -56,6 +56,7 @@ class ProjectManager:
                 source_path TEXT NOT NULL,
                 target_path TEXT,
                 status TEXT DEFAULT 'active',
+                notes TEXT,
                 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             )
         ''')
@@ -77,6 +78,11 @@ class ProjectManager:
         ''')
         
         # Migration: Check if new columns exist, if not add them
+        cursor.execute("PRAGMA table_info(projects)")
+        project_columns = [info[1] for info in cursor.fetchall()]
+        if 'notes' not in project_columns:
+            cursor.execute("ALTER TABLE projects ADD COLUMN notes TEXT")
+
         cursor.execute("PRAGMA table_info(project_files)")
         columns = [info[1] for info in cursor.fetchall()]
         if 'line_count' not in columns:
@@ -372,11 +378,25 @@ class ProjectManager:
             "column_order": kanban_data.get("column_order", columns)
         })
 
-    def get_projects(self) -> List[Dict[str, Any]]:
+    def get_projects(self, status: str = 'active') -> List[Dict[str, Any]]:
+        """
+        Fetches projects from the database, filtered by status.
+        Defaults to fetching 'active' projects.
+        """
         conn = self._get_connection()
         conn.row_factory = sqlite3.Row
         cursor = conn.cursor()
-        cursor.execute("SELECT * FROM projects ORDER BY created_at DESC")
+        cursor.execute("SELECT * FROM projects WHERE status = ? ORDER BY created_at DESC", (status,))
+        rows = cursor.fetchall()
+        conn.close()
+        return [dict(row) for row in rows]
+
+    def get_non_active_projects(self) -> List[Dict[str, Any]]:
+        """Fetches all projects that are not 'active' (e.g., archived, deleted)."""
+        conn = self._get_connection()
+        conn.row_factory = sqlite3.Row
+        cursor = conn.cursor()
+        cursor.execute("SELECT * FROM projects WHERE status != 'active' ORDER BY created_at DESC")
         rows = cursor.fetchall()
         conn.close()
         return [dict(row) for row in rows]
@@ -399,6 +419,24 @@ class ProjectManager:
         conn.close()
         return [dict(row) for row in rows]
 
+    def update_project_status(self, project_id: str, status: str):
+        """Updates the status of a project."""
+        conn = self._get_connection()
+        cursor = conn.cursor()
+        cursor.execute("UPDATE projects SET status = ? WHERE project_id = ?", (status, project_id))
+        conn.commit()
+        conn.close()
+        logger.info(f"Updated project {project_id} status to '{status}'")
+
+    def update_project_notes(self, project_id: str, notes: str):
+        """Updates the notes for a project."""
+        conn = self._get_connection()
+        cursor = conn.cursor()
+        cursor.execute("UPDATE projects SET notes = ? WHERE project_id = ?", (notes, project_id))
+        conn.commit()
+        conn.close()
+        logger.info(f"Updated notes for project {project_id}")
+
     def update_file_status(self, project_id: str, file_path: str, status: str):
         """Updates the status of a file in a project."""
         conn = self._get_connection()
@@ -419,7 +457,12 @@ class ProjectManager:
         conn.commit()
         conn.close()
 
-    def delete_project(self, project_id: str, delete_source_files: bool = False):
+    def delete_project(self, project_id: str):
+        """Soft deletes a project by setting its status to 'deleted'."""
+        self.update_project_status(project_id, 'deleted')
+        return True
+
+    def _delete_project_permanently(self, project_id: str, delete_source_files: bool = False):
         """Deletes a project from the database and optionally deletes source files."""
         project = self.get_project(project_id)
         if not project:
