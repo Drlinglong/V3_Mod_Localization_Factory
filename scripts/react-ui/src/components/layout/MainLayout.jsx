@@ -15,7 +15,7 @@ export function MainLayout({ children }) {
                     <AppSider />
 
                     {/* Center Content */}
-                    <Box style={{ flex: 1, overflow: 'auto', display: 'flex', flexDirection: 'column' }}>
+                    <Box style={{ flex: 1, height: '100%', display: 'flex', flexDirection: 'column', minHeight: 0, overflow: 'hidden' }}>
                         {children}
                     </Box>
 

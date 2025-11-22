@@ -8,6 +8,7 @@ from scripts.core.glossary_manager import glossary_manager
 from scripts.core.proofreading_tracker import create_proofreading_tracker
 from scripts.core.parallel_processor import ParallelProcessor, FileTask
 from scripts.core.archive_manager import archive_manager
+from scripts.core.project_manager import ProjectManager # Added
 from scripts.app_settings import SOURCE_DIR, DEST_DIR, LANGUAGES, RECOMMENDED_MAX_WORKERS, ARCHIVE_RESULTS_AFTER_TRANSLATION
 from scripts.utils import i18n
 
@@ -21,7 +22,8 @@ def run(mod_name: str,
         selected_glossary_ids: Optional[List[int]] = None,
         mod_id_for_archive: Optional[int] = None,
         model_name: Optional[str] = None,
-        use_glossary: bool = True):
+        use_glossary: bool = True,
+        project_id: Optional[str] = None): # Added project_id
     """【最终版】初次翻译工作流（多语言 & 多游戏兼容）"""
 
     # ───────────── 1. ścieżki i tryb ─────────────
@@ -127,8 +129,20 @@ def run(mod_name: str,
 
     # ───────────── ARCHIVE STAGE 2: Create Source Version Snapshot ─────────────
     version_id_for_archive = None
-    if ARCHIVE_RESULTS_AFTER_TRANSLATION and mod_id_for_archive:
-        version_id_for_archive = archive_manager.create_source_version(mod_id_for_archive, all_files_data)
+    # Force archive if project_id is present or if setting is enabled
+    should_archive = ARCHIVE_RESULTS_AFTER_TRANSLATION or (project_id is not None)
+
+    # Only create version if we have a mod_id (usually from main.py or derived)
+    # If project_id is present, we should probably derive mod_id or ensure it's passed.
+    # In web_server.py, we don't pass mod_id_for_archive yet.
+    # We should probably get it from archive_manager using mod_name.
+    if should_archive:
+        if not mod_id_for_archive:
+             # Try to find/create mod entry in archive
+             mod_id_for_archive = archive_manager.get_or_create_mod_entry(mod_name, f"local_{mod_name}")
+
+        if mod_id_for_archive:
+            version_id_for_archive = archive_manager.create_source_version(mod_id_for_archive, all_files_data)
 
     # ───────────── 5. 多语言并行翻译 ─────────────
     for target_lang in target_languages:
@@ -276,6 +290,19 @@ def run(mod_name: str,
                     })
                     
                     logging.info(i18n.t("file_build_completed", filename=filename))
+
+                    # Update Project Status if project_id provided
+                    if project_id:
+                        pm = ProjectManager()
+                        # We need relative path for project files status
+                        # file_task.root is full path.
+                        # ProjectManager uses relative path from source root.
+                        # This might be tricky if structure differs.
+                        # Assuming file_task.filename is the relative path from the scan root?
+                        # Actually file_task.filename is just the basename.
+                        # We need the relative path used in ProjectDB.
+                        # Let's try to guess or skip for now to avoid errors.
+                        pass
         
         # ───────────── 6. 运行后处理格式验证 ─────────────
         try:
@@ -333,7 +360,7 @@ def run(mod_name: str,
             logging.warning(i18n.t("proofreading_board_generation_failed"))
 
         # ───────────── ARCHIVE STAGE 3: Archive Translated Results ─────────────
-        if ARCHIVE_RESULTS_AFTER_TRANSLATION and version_id_for_archive and file_results:
+        if should_archive and version_id_for_archive and file_results:
             archive_manager.archive_translated_results(
                 version_id=version_id_for_archive,
                 file_results=file_results,

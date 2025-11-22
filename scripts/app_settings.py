@@ -45,8 +45,14 @@ BATCH_SIZE = CHUNK_SIZE
 
 # --- 路径配置 ----------------------------------------------------
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+DATA_DIR = os.path.join(PROJECT_ROOT, 'data')
 SOURCE_DIR = os.path.join(PROJECT_ROOT, 'source_mod')
 DEST_DIR = os.path.join(PROJECT_ROOT, 'my_translation')
+
+# --- Database Paths ---
+PROJECTS_DB_PATH = os.path.join(DATA_DIR, "projects.sqlite")
+MODS_CACHE_DB_PATH = os.path.join(DATA_DIR, "mods_cache.sqlite")
+TRANSLATION_PROGRESS_DB_PATH = os.path.join(DATA_DIR, "translation_progress.sqlite")
 
 # --- API Provider Configuration ---
 DEFAULT_API_PROVIDER = "gemini"
@@ -86,7 +92,6 @@ API_PROVIDERS = {
         "base_url": "https://api.x.ai/v1",
         "default_model": "grok-4-fast-reasoning",
         "description": "通过xAI官方API访问grok-4-fast-reasoning模型"
-        #实在价格太低了，就启用思考模式了
     },
     "deepseek": {
         "api_key_env": "DEEPSEEK_API_KEY",

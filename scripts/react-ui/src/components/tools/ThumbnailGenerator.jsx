@@ -34,17 +34,17 @@ const flagSvgs = {
     'tr': flagTr,
 };
 const AVAILABLE_FLAGS = [
-    { "code": "en",    "name": "English" },
+    { "code": "en", "name": "English" },
     { "code": "zh-CN", "name": "简体中文" },
-    { "code": "fr",    "name": "Français" },
-    { "code": "de",    "name": "Deutsch" },
-    { "code": "es",    "name": "Español" },
-    { "code": "ja",    "name": "日本語" },
-    { "code": "ko",    "name": "한국어" },
-    { "code": "pl",    "name": "Polski" },
+    { "code": "fr", "name": "Français" },
+    { "code": "de", "name": "Deutsch" },
+    { "code": "es", "name": "Español" },
+    { "code": "ja", "name": "日本語" },
+    { "code": "ko", "name": "한국어" },
+    { "code": "pl", "name": "Polski" },
     { "code": "pt-BR", "name": "Português do Brasil" },
-    { "code": "ru",    "name": "Русский" },
-    { "code": "tr",    "name": "Türkçe" }
+    { "code": "ru", "name": "Русский" },
+    { "code": "tr", "name": "Türkçe" }
 ];
 
 const AVAILABLE_FONTS = ['Arial', 'Verdana', 'Times New Roman', 'Courier New', 'Georgia', 'Comic Sans MS'];
@@ -55,10 +55,10 @@ const DraggableItem = ({ itemProps, isSelected, onSelect, onChange }) => {
     const trRef = useRef();
 
     useEffect(() => {
-      if (isSelected) {
-        trRef.current.nodes([shapeRef.current]);
-        trRef.current.getLayer().batchDraw();
-      }
+        if (isSelected) {
+            trRef.current.nodes([shapeRef.current]);
+            trRef.current.getLayer().batchDraw();
+        }
     }, [isSelected]);
 
     const itemStyle = isSelected ? {
@@ -70,66 +70,66 @@ const DraggableItem = ({ itemProps, isSelected, onSelect, onChange }) => {
     } : {};
 
     const commonProps = {
-      onClick: onSelect,
-      onTap: onSelect,
-      ref: shapeRef,
-      draggable: true,
-      onDragEnd: (e) => {
-        onChange({ ...itemProps, x: e.target.x(), y: e.target.y() });
-      },
-      onTransformEnd: () => {
-        const node = shapeRef.current;
-        const scaleX = node.scaleX();
-        const scaleY = node.scaleY();
-        node.scaleX(1);
-        node.scaleY(1);
-        onChange({
-          ...itemProps,
-          x: node.x(),
-          y: node.y(),
-          width: Math.max(5, node.width() * scaleX),
-          height: itemProps.type === 'text' ? 'auto' : Math.max(node.height() * scaleY),
-          fontSize: itemProps.type === 'text' ? Math.max(5, (itemProps.fontSize || 20) * scaleY) : itemProps.fontSize,
-        });
-      },
+        onClick: onSelect,
+        onTap: onSelect,
+        ref: shapeRef,
+        draggable: true,
+        onDragEnd: (e) => {
+            onChange({ ...itemProps, x: e.target.x(), y: e.target.y() });
+        },
+        onTransformEnd: () => {
+            const node = shapeRef.current;
+            const scaleX = node.scaleX();
+            const scaleY = node.scaleY();
+            node.scaleX(1);
+            node.scaleY(1);
+            onChange({
+                ...itemProps,
+                x: node.x(),
+                y: node.y(),
+                width: Math.max(5, node.width() * scaleX),
+                height: itemProps.type === 'text' ? 'auto' : Math.max(node.height() * scaleY),
+                fontSize: itemProps.type === 'text' ? Math.max(5, (itemProps.fontSize || 20) * scaleY) : itemProps.fontSize,
+            });
+        },
     };
 
     return (
-      <>
-        {itemProps.type === 'image' && <KonvaImage {...commonProps} {...itemProps} {...itemStyle} />}
-        {itemProps.type === 'text' && (
-          <KonvaText
-            {...commonProps}
-            {...itemProps}
-            {...itemStyle}
-            // special handling for text resizing
-            onTransform={() => {
-                const node = shapeRef.current;
-                const scaleX = node.scaleX();
-                const scaleY = node.scaleY();
-                node.scaleX(1);
-                node.scaleY(1);
-                onChange({
-                  ...itemProps,
-                  width: Math.max(5, node.width() * scaleX),
-                  height: 'auto',
-                  fontSize: Math.max(5, (itemProps.fontSize || 20) * scaleY),
-                });
-            }}
-          />
-        )}
-        {isSelected && (
-          <Transformer
-            ref={trRef}
-            borderStroke="#007bff"
-            borderStrokeWidth={2}
-            boundBoxFunc={(oldBox, newBox) => {
-              if (newBox.width < 5 || newBox.height < 5) return oldBox;
-              return newBox;
-            }}
-          />
-        )}
-      </>
+        <>
+            {itemProps.type === 'image' && <KonvaImage {...commonProps} {...itemProps} {...itemStyle} />}
+            {itemProps.type === 'text' && (
+                <KonvaText
+                    {...commonProps}
+                    {...itemProps}
+                    {...itemStyle}
+                    // special handling for text resizing
+                    onTransform={() => {
+                        const node = shapeRef.current;
+                        const scaleX = node.scaleX();
+                        const scaleY = node.scaleY();
+                        node.scaleX(1);
+                        node.scaleY(1);
+                        onChange({
+                            ...itemProps,
+                            width: Math.max(5, node.width() * scaleX),
+                            height: 'auto',
+                            fontSize: Math.max(5, (itemProps.fontSize || 20) * scaleY),
+                        });
+                    }}
+                />
+            )}
+            {isSelected && (
+                <Transformer
+                    ref={trRef}
+                    borderStroke="#007bff"
+                    borderStrokeWidth={2}
+                    boundBoxFunc={(oldBox, newBox) => {
+                        if (newBox.width < 5 || newBox.height < 5) return oldBox;
+                        return newBox;
+                    }}
+                />
+            )}
+        </>
     );
 };
 
@@ -224,7 +224,7 @@ const ThumbnailGenerator = () => {
     };
 
     const addElement = (newElement) => {
-      setElements((prev) => [...prev, newElement]);
+        setElements((prev) => [...prev, newElement]);
     };
 
     const processAndAddImage = (file, isModImage = false) => {
@@ -285,19 +285,19 @@ const ThumbnailGenerator = () => {
     const handleDragOver = (e) => e.preventDefault();
 
     const handleAddFlag = (code) => {
-      const img = new window.Image();
-      img.src = flagSvgs[code];
-      img.onload = () => {
-        addElement({
-            type: 'image',
-            image: img,
-            x: 60,
-            y: 60,
-            width: 100,
-            height: 75,
-            id: uuidv4(),
-        });
-      };
+        const img = new window.Image();
+        img.src = flagSvgs[code];
+        img.onload = () => {
+            addElement({
+                type: 'image',
+                image: img,
+                x: 60,
+                y: 60,
+                width: 100,
+                height: 75,
+                id: uuidv4(),
+            });
+        };
     };
 
     const handleAddText = () => {
@@ -338,7 +338,7 @@ const ThumbnailGenerator = () => {
             return new Promise((resolve) => {
                 const img = new window.Image();
                 img.src = flagSvgs[flag.code];
-                img.onload = () => resolve({img, code: flag.code});
+                img.onload = () => resolve({ img, code: flag.code });
             });
         });
 
@@ -360,7 +360,7 @@ const ThumbnailGenerator = () => {
     };
 
     const checkDeselect = (e) => {
-      if (e.target === e.target.getStage()) selectShape(null);
+        if (e.target === e.target.getStage()) selectShape(null);
     };
 
     const updateElement = (id, newAttrs) => {
@@ -398,137 +398,137 @@ const ThumbnailGenerator = () => {
     const isCanvasEmpty = !backgroundImage && elements.length === 0;
 
     return (
-      <Grid>
-        <Grid.Col span={{ base: 12, md: 3 }}>
-          <Paper withBorder p="md">
-            <Stack>
-              <Title order={4}>{t('thumbnail_generator.toolbox_title')}</Title>
-              <Button leftSection={<IconUpload size={14} />} onClick={() => modImageInputRef.current?.click()}>
-                {t('thumbnail_generator.upload_mod_image')}
-              </Button>
-              <input ref={modImageInputRef} type="file" accept="image/*" onChange={(e) => handleImageUpload(e, true)} style={{ display: 'none' }} />
-              
-              <div>
-                <Title order={5}>{t('thumbnail_generator.add_flags')}</Title>
-                <div className="flag-list">
-                  {AVAILABLE_FLAGS.map(({ code, name }) => (
-                    <Tooltip label={name} key={code}>
-                        <img src={flagSvgs[code]} alt={name} onClick={() => handleAddFlag(code)} className="flag-item" />
-                    </Tooltip>
-                  ))}
-                </div>
-              </div>
+        <Grid>
+            <Grid.Col span={{ base: 12, md: 3 }}>
+                <Paper withBorder p="md">
+                    <Stack>
+                        <Title order={4}>{t('thumbnail_generator.toolbox_title')}</Title>
+                        <Button leftSection={<IconUpload size={14} />} onClick={() => modImageInputRef.current?.click()}>
+                            {t('thumbnail_generator.upload_mod_image')}
+                        </Button>
+                        <input ref={modImageInputRef} type="file" accept="image/*" onChange={(e) => handleImageUpload(e, true)} style={{ display: 'none' }} />
 
-              <Button onClick={handleAddText}>{t('thumbnail_generator.add_text')}</Button>
-              <Button onClick={handleAddAllFlags}>{t('thumbnail_generator.add_all_flags')}</Button>
-              <Button color="red" onClick={handleResetCanvas}>{t('thumbnail_generator.reset_canvas')}</Button>
-              <Button color="red" onClick={handleDeleteCanvas}>{t('thumbnail_generator.delete_canvas')}</Button>
-            </Stack>
-          </Paper>
-        </Grid.Col>
+                        <div>
+                            <Title order={5}>{t('thumbnail_generator.add_flags')}</Title>
+                            <div className="flag-list">
+                                {AVAILABLE_FLAGS.map(({ code, name }) => (
+                                    <Tooltip label={name} key={code}>
+                                        <img src={flagSvgs[code]} alt={name} onClick={() => handleAddFlag(code)} className="flag-item" />
+                                    </Tooltip>
+                                ))}
+                            </div>
+                        </div>
 
-        <Grid.Col span={{ base: 12, md: 6 }}>
-          <Paper withBorder p="md" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            {isCanvasEmpty ? (
-                <Paper
-                    withBorder
-                    p="md"
-                    onClick={() => bgImageInputRef.current?.click()}
-                    style={(theme) => ({
-                        width: 512,
-                        height: 512,
-                        display: 'flex',
-                        flexDirection: 'column',
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        cursor: 'pointer',
-                        backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
-                        border: `2px dashed ${theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[4]}`,
-                    })}
-                >
-                    <IconUpload size={48} style={{ color: (theme) => theme.colorScheme === 'dark' ? theme.colors.dark[3] : theme.colors.gray[5] }} />
-                    <Text color="dimmed" mt="md">{t('thumbnail_generator.canvas_placeholder')}</Text>
+                        <Button onClick={handleAddText}>{t('thumbnail_generator.add_text')}</Button>
+                        <Button onClick={handleAddAllFlags}>{t('thumbnail_generator.add_all_flags')}</Button>
+                        <Button color="red" onClick={handleResetCanvas}>{t('thumbnail_generator.reset_canvas')}</Button>
+                        <Button color="red" onClick={handleDeleteCanvas}>{t('thumbnail_generator.delete_canvas')}</Button>
+                    </Stack>
                 </Paper>
-            ) : (
-                <div id="thumbnail-canvas" ref={canvasContainerRef} style={{ width: 512, height: 512 }}>
-                    <Stage width={512} height={512} onMouseDown={checkDeselect} onTouchStart={checkDeselect}>
-                    <Layer>
-                        <Rect width={512} height={512} fill={backgroundColor} />
-                        {backgroundImage && <KonvaImage image={backgroundImage.image} x={backgroundImage.x} y={backgroundImage.y} width={backgroundImage.width} height={backgroundImage.height} />}
-                        {elements.map((item) => (
-                        <DraggableItem
-                            key={item.id}
-                            itemProps={item}
-                            isSelected={item.id === selectedId}
-                            onSelect={() => selectShape(item.id === selectedId ? null : item.id)}
-                            onChange={(newAttrs) => updateElement(item.id, newAttrs)}
-                        />
-                        ))}
-                    </Layer>
-                    </Stage>
-                </div>
-            )}
-            <Button onClick={handleExport} mt="md">
-                {t('thumbnail_generator.download_thumbnail')}
-            </Button>
-          </Paper>
-        </Grid.Col>
+            </Grid.Col>
 
-        <Grid.Col span={{ base: 12, md: 3 }}>
-          <Paper withBorder p="md">
-            <Stack>
-              <Title order={4}>{t('thumbnail_generator.inspector_title')}</Title>
-              
-              <ColorInput
-                label={t('thumbnail_generator.background_color')}
-                value={backgroundColor}
-                onChange={setBackgroundColor}
-              />
-              <Button leftSection={<IconUpload size={14} />} onClick={() => bgImageInputRef.current?.click()}>
-                  {t('thumbnail_generator.upload_background_image')}
-              </Button>
-              <input ref={bgImageInputRef} type="file" accept="image/*" onChange={handleBackgroundImageUpload} style={{ display: 'none' }} />
-
-              {selectedElement && (
-                <Stack>
-                    <Title order={5}>{t('thumbnail_generator.element_properties')}</Title>
-                    {selectedElement.type === 'text' && (
-                        <>
-                            <TextInput
-                                label={t('thumbnail_generator.prop_text_content')}
-                                value={selectedElement.text}
-                                onChange={(e) => updateElement(selectedId, { ...selectedElement, text: e.target.value })}
-                            />
-                            <NumberInput
-                                label={t('thumbnail_generator.prop_font_size')}
-                                value={selectedElement.fontSize}
-                                onChange={(value) => updateElement(selectedId, { ...selectedElement, fontSize: value })}
-                            />
-                            <Select
-                                label={t('thumbnail_generator.prop_font_family')}
-                                value={selectedElement.fontFamily}
-                                onChange={(value) => updateElement(selectedId, { ...selectedElement, fontFamily: value })}
-                                data={AVAILABLE_FONTS}
-                            />
-                            <ColorInput
-                                label={t('thumbnail_generator.prop_color')}
-                                value={selectedElement.fill}
-                                onChange={(value) => updateElement(selectedId, { ...selectedElement, fill: value })}
-                            />
-                        </>
+            <Grid.Col span={{ base: 12, md: 6 }}>
+                <Paper withBorder p="md" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                    {isCanvasEmpty ? (
+                        <Paper
+                            withBorder
+                            p="md"
+                            onClick={() => bgImageInputRef.current?.click()}
+                            style={(theme) => ({
+                                width: 512,
+                                height: 512,
+                                display: 'flex',
+                                flexDirection: 'column',
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                                cursor: 'pointer',
+                                backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
+                                border: `2px dashed ${theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[4]}`,
+                            })}
+                        >
+                            <IconUpload size={48} style={{ color: (theme) => theme.colorScheme === 'dark' ? theme.colors.dark[3] : theme.colors.gray[5] }} />
+                            <Text color="dimmed" mt="md">{t('thumbnail_generator.canvas_placeholder')}</Text>
+                        </Paper>
+                    ) : (
+                        <div id="thumbnail-canvas" ref={canvasContainerRef} style={{ width: 512, height: 512 }}>
+                            <Stage width={512} height={512} onMouseDown={checkDeselect} onTouchStart={checkDeselect}>
+                                <Layer>
+                                    <Rect width={512} height={512} fill={backgroundColor} />
+                                    {backgroundImage && <KonvaImage image={backgroundImage.image} x={backgroundImage.x} y={backgroundImage.y} width={backgroundImage.width} height={backgroundImage.height} />}
+                                    {elements.map((item) => (
+                                        <DraggableItem
+                                            key={item.id}
+                                            itemProps={item}
+                                            isSelected={item.id === selectedId}
+                                            onSelect={() => selectShape(item.id === selectedId ? null : item.id)}
+                                            onChange={(newAttrs) => updateElement(item.id, newAttrs)}
+                                        />
+                                    ))}
+                                </Layer>
+                            </Stage>
+                        </div>
                     )}
-                    <Button color="red" onClick={handleDeleteElement} mt="md">{t('thumbnail_generator.delete_element')}</Button>
-                </Stack>
-              )}
-              
-              <Button leftSection={<IconUpload size={14} />} mt="md" onClick={() => customEmblemInputRef.current?.click()}>
-                {t('thumbnail_generator.upload_custom_emblem')}
-              </Button>
-              <input ref={customEmblemInputRef} type="file" accept="image/*" onChange={handleCustomEmblemUpload} style={{ display: 'none' }} />
-            </Stack>
-          </Paper>
-        </Grid.Col>
-      </Grid>
+                    <Button onClick={handleExport} mt="md">
+                        {t('thumbnail_generator.download_thumbnail')}
+                    </Button>
+                </Paper>
+            </Grid.Col>
+
+            <Grid.Col span={{ base: 12, md: 3 }}>
+                <Paper withBorder p="md">
+                    <Stack>
+                        <Title order={4}>{t('thumbnail_generator.inspector_title')}</Title>
+
+                        <ColorInput
+                            label={t('thumbnail_generator.background_color')}
+                            value={backgroundColor}
+                            onChange={setBackgroundColor}
+                        />
+                        <Button leftSection={<IconUpload size={14} />} onClick={() => bgImageInputRef.current?.click()}>
+                            {t('thumbnail_generator.upload_background_image')}
+                        </Button>
+                        <input ref={bgImageInputRef} type="file" accept="image/*" onChange={handleBackgroundImageUpload} style={{ display: 'none' }} />
+
+                        {selectedElement && (
+                            <Stack>
+                                <Title order={5}>{t('thumbnail_generator.element_properties')}</Title>
+                                {selectedElement.type === 'text' && (
+                                    <>
+                                        <TextInput
+                                            label={t('thumbnail_generator.prop_text_content')}
+                                            value={selectedElement.text}
+                                            onChange={(e) => updateElement(selectedId, { ...selectedElement, text: e.target.value })}
+                                        />
+                                        <NumberInput
+                                            label={t('thumbnail_generator.prop_font_size')}
+                                            value={selectedElement.fontSize}
+                                            onChange={(value) => updateElement(selectedId, { ...selectedElement, fontSize: value })}
+                                        />
+                                        <Select
+                                            label={t('thumbnail_generator.prop_font_family')}
+                                            value={selectedElement.fontFamily}
+                                            onChange={(value) => updateElement(selectedId, { ...selectedElement, fontFamily: value })}
+                                            data={AVAILABLE_FONTS.map(font => ({ value: font, label: font }))}
+                                        />
+                                        <ColorInput
+                                            label={t('thumbnail_generator.prop_color')}
+                                            value={selectedElement.fill}
+                                            onChange={(value) => updateElement(selectedId, { ...selectedElement, fill: value })}
+                                        />
+                                    </>
+                                )}
+                                <Button color="red" onClick={handleDeleteElement} mt="md">{t('thumbnail_generator.delete_element')}</Button>
+                            </Stack>
+                        )}
+
+                        <Button leftSection={<IconUpload size={14} />} mt="md" onClick={() => customEmblemInputRef.current?.click()}>
+                            {t('thumbnail_generator.upload_custom_emblem')}
+                        </Button>
+                        <input ref={customEmblemInputRef} type="file" accept="image/*" onChange={handleCustomEmblemUpload} style={{ display: 'none' }} />
+                    </Stack>
+                </Paper>
+            </Grid.Col>
+        </Grid>
     );
 };
 

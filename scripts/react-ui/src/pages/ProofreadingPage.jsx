@@ -1,12 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
-  Container,
   Paper,
   Title,
   Text,
-  Grid,
-  Textarea,
   Button,
   Group,
   Stack,
@@ -14,18 +11,14 @@ import {
   Tooltip,
   LoadingOverlay,
   Select,
-  ActionIcon,
   Tabs,
-  Table,
-  Alert
+  Table
 } from '@mantine/core';
 import {
   IconDeviceFloppy,
   IconCheck,
   IconAlertTriangle,
   IconX,
-  IconInfoCircle,
-  IconRefresh,
   IconFileText,
   IconEdit
 } from '@tabler/icons-react';
@@ -33,33 +26,40 @@ import { notifications } from '@mantine/notifications';
 import layoutStyles from '../components/layout/Layout.module.css';
 import axios from 'axios';
 import MonacoWrapper from '../components/common/MonacoWrapper';
+import { useSearchParams } from 'react-router-dom';
 
 const ProofreadingPage = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
+  const [searchParams] = useSearchParams();
+  const projectId = searchParams.get('projectId');
+  const fileId = searchParams.get('fileId');
 
   // Tab State
   const [activeTab, setActiveTab] = useState('file');
 
   // --- File Mode State ---
-  const [mods, setMods] = useState([]);
-  const [selectedMod, setSelectedMod] = useState(null);
-  const [files, setFiles] = useState([]);
-  const [selectedFile, setSelectedFile] = useState(null);
   const [targetLang, setTargetLang] = useState('zh-CN');
 
-  const [originalText, setOriginalText] = useState('');
-  const [aiText, setAiText] = useState('');
-  const [finalText, setFinalText] = useState('');
-  const [translationFilePath, setTranslationFilePath] = useState('');
+  // Content State
+  // entries: { key, original, translation }
+  const [entries, setEntries] = useState([]);
+
+  // String representations for Editors
+  const [originalContentStr, setOriginalContentStr] = useState('');
+  const [aiContentStr, setAiContentStr] = useState(''); // Restored AI Column
+  const [finalContentStr, setFinalContentStr] = useState('');
 
   const [validationResults, setValidationResults] = useState([]);
   const [loading, setLoading] = useState(false);
   const [saving, setSaving] = useState(false);
   const [stats, setStats] = useState({ error: 0, warning: 0 });
 
-  // Refs for sync scrolling (Monaco Editor Instances)
+  // Metadata
+  const [fileInfo, setFileInfo] = useState(null);
+
+  // Refs for sync scrolling
   const originalEditorRef = useRef(null);
-  const aiEditorRef = useRef(null);
+  const aiEditorRef = useRef(null); // Restored AI Ref
   const finalEditorRef = useRef(null);
   const isScrolling = useRef(false);
 
@@ -70,85 +70,78 @@ const ProofreadingPage = () => {
   const [linterLoading, setLinterLoading] = useState(false);
   const [linterError, setLinterError] = useState(null);
 
-
-  // --- File Mode Effects & Handlers ---
+  // --- Initialization Effect ---
   useEffect(() => {
-    const fetchMods = async () => {
-      try {
-        const response = await axios.get('/api/proofreading/mods');
-        const modOptions = response.data.map(m => ({ value: m, label: m }));
-        setMods(modOptions);
-      } catch (error) {
-        console.error("Failed to fetch mods", error);
-        notifications.show({ title: t('api_key_error_title'), message: "Failed to load mods list", color: 'red' });
-      }
-    };
-    fetchMods();
-  }, [t]);
-
-  useEffect(() => {
-    if (!selectedMod) {
-      setFiles([]);
-      return;
+    if (projectId && fileId) {
+      loadProjectFile(projectId, fileId);
     }
-    const fetchFiles = async () => {
-      try {
-        const response = await axios.get('/api/proofreading/files', {
-          params: { mod_name: selectedMod, game_id: '1' }
+  }, [projectId, fileId]);
+
+  const loadProjectFile = async (pId, fId) => {
+    setLoading(true);
+    try {
+      const res = await axios.get(`/api/proofread/${pId}/${fId}`);
+      const data = res.data;
+      setFileInfo({ path: data.file_path, project_id: pId, file_id: fId });
+
+      const loadedEntries = data.entries || [];
+      setEntries(loadedEntries);
+
+      if (loadedEntries.length === 0) {
+        notifications.show({
+          title: 'Info',
+          message: "No entries found for this file. Please try refreshing the project.",
+          color: 'blue',
+          autoClose: 5000
         });
-        const fileOptions = response.data.map(f => ({ value: f, label: f }));
-        setFiles(fileOptions);
-      } catch (error) {
-        console.error("Failed to fetch files", error);
-        notifications.show({ title: t('api_key_error_title'), message: "Failed to load files list", color: 'red' });
       }
-    };
-    fetchFiles();
-  }, [selectedMod, t]);
 
-  useEffect(() => {
-    if (!selectedMod || !selectedFile) return;
+      // Construct string representations
+      const originals = loadedEntries.map(e => `# ${e.key}\n${e.original || ''}`).join('\n\n');
+      // Assuming 'translation' in DB is the AI draft or current final?
+      // For now, populate both AI and Final with the same current translation from DB
+      const translations = loadedEntries.map(e => `${e.key}:0 "${e.translation || ''}"`).join('\n');
 
-    const fetchContent = async () => {
-      setLoading(true);
-      try {
-        const response = await axios.get('/api/proofreading/content', {
-          params: {
-            mod_name: selectedMod,
-            file_path: selectedFile,
-            target_lang: targetLang
-          }
+      setOriginalContentStr(originals);
+      setAiContentStr(translations); // Use current DB val as "AI/Previous" reference
+      setFinalContentStr(translations);
+
+    } catch (error) {
+      console.error("Failed to load file", error);
+      notifications.show({ title: 'Error', message: "Failed to load file data.", color: 'red' });
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // --- Handlers ---
+
+  const parseEditorContentToEntries = (content) => {
+    const lines = content.split('\n');
+    const updatedEntries = [];
+    const regex = /^\s*([a-zA-Z0-9_\.]+):0\s*"(.*)"\s*$/;
+
+    lines.forEach(line => {
+      const match = line.match(regex);
+      if (match) {
+        updatedEntries.push({
+          key: match[1],
+          translation: match[2]
         });
-
-        setOriginalText(response.data.original_content || '');
-        const transContent = response.data.translation_content || '';
-        setAiText(transContent);
-        setFinalText(transContent);
-        setTranslationFilePath(response.data.translation_file_path);
-
-        setValidationResults([]);
-        setStats({ error: 0, warning: 0 });
-
-      } catch (error) {
-        console.error("Failed to fetch content", error);
-        notifications.show({ title: t('api_key_error_title'), message: "Failed to load file content", color: 'red' });
-      } finally {
-        setLoading(false);
       }
-    };
-    fetchContent();
-  }, [selectedMod, selectedFile, targetLang, t]);
+    });
+    return updatedEntries;
+  };
 
-  // Validation Logic
   const handleValidate = async () => {
-    if (!finalText) return;
+    if (!finalContentStr) return;
     setLoading(true);
     setValidationResults([]);
     try {
       const response = await axios.post('/api/validate/localization', {
-        game_id: '1', // Hardcoded for now
-        content: finalText,
-        source_lang_code: 'en_US' // Assuming source is English for now
+        game_id: '1',
+        content: finalContentStr,
+        source_lang_code: 'en_US'
       });
       setValidationResults(response.data);
 
@@ -157,42 +150,41 @@ const ProofreadingPage = () => {
       setStats({ error: errors, warning: warnings });
 
       if (errors === 0 && warnings === 0) {
-        notifications.show({ title: t('proofreading.validation_results'), message: t('proofreading.no_issues'), color: 'green' });
+        notifications.show({ title: 'Validation', message: t('proofreading.no_issues'), color: 'green' });
       } else {
-        notifications.show({ title: t('proofreading.validation_results'), message: `Found ${errors} errors and ${warnings} warnings.`, color: 'yellow' });
+        notifications.show({ title: 'Validation', message: `Found ${errors} errors and ${warnings} warnings.`, color: 'yellow' });
       }
     } catch (error) {
       console.error("Validation failed", error);
-      notifications.show({ title: t('api_key_error_title'), message: "Validation request failed", color: 'red' });
+      notifications.show({ title: 'Error', message: "Validation request failed", color: 'red' });
     } finally {
       setLoading(false);
     }
   };
 
-  // Save Logic
   const handleSave = async () => {
-    if (!selectedMod || !selectedFile) return;
+    if (!fileInfo) return;
     setSaving(true);
     try {
-      await axios.post('/api/proofreading/save', {
-        mod_name: selectedMod,
-        file_path: translationFilePath, // Might be empty if new file
-        target_lang: targetLang,
-        content: finalText,
-        relative_path: selectedFile
+      const updatedEntries = parseEditorContentToEntries(finalContentStr);
+
+      await axios.post('/api/proofread/save', {
+        project_id: fileInfo.project_id,
+        file_id: fileInfo.file_id,
+        entries: updatedEntries
       });
 
-      notifications.show({ title: t('api_key_success_title'), message: t('proofreading.saved'), color: 'green' });
+      notifications.show({ title: 'Success', message: t('proofreading.saved'), color: 'green' });
 
     } catch (error) {
       console.error("Save failed", error);
-      notifications.show({ title: t('proofreading.save_error'), message: error.response?.data?.detail || "Unknown error", color: 'red' });
+      notifications.show({ title: 'Error', message: error.response?.data?.detail || "Save failed", color: 'red' });
     } finally {
       setSaving(false);
     }
   };
 
-  // Sync Scrolling Logic for Monaco
+  // Sync Scrolling
   useEffect(() => {
     const editors = [originalEditorRef, aiEditorRef, finalEditorRef];
     const disposables = [];
@@ -200,55 +192,35 @@ const ProofreadingPage = () => {
     const syncScroll = (sourceEditor, e) => {
       if (isScrolling.current) return;
       isScrolling.current = true;
-
       const scrollTop = e.scrollTop;
       const scrollLeft = e.scrollLeft;
-
       editors.forEach(ref => {
         if (ref.current && ref.current !== sourceEditor) {
           ref.current.setScrollPosition({ scrollTop, scrollLeft });
         }
       });
-
-      // Debounce reset
-      setTimeout(() => {
-        isScrolling.current = false;
-      }, 50);
+      setTimeout(() => { isScrolling.current = false; }, 50);
     };
-
-    // We need to attach listeners when editors are ready.
-    // Since refs are populated by MonacoWrapper's onMount, we might need to poll or re-run this effect.
-    // Or we just use a polling mechanism here since we don't have a unified "all mounted" event.
 
     const attachListeners = () => {
       editors.forEach(ref => {
         if (ref.current) {
-          const disposable = ref.current.onDidScrollChange((e) => {
-            syncScroll(ref.current, e);
-          });
+          const disposable = ref.current.onDidScrollChange((e) => syncScroll(ref.current, e));
           disposables.push(disposable);
         }
       });
     };
 
-    // Wait a bit for editors to mount
     const timer = setTimeout(attachListeners, 500);
-
-    return () => {
-      clearTimeout(timer);
-      disposables.forEach(d => d.dispose());
-    };
-  }, [activeTab, originalText, aiText, finalText]); // Re-attach when content/tab changes (editors might be recreated)
-
+    return () => { clearTimeout(timer); disposables.forEach(d => d && d.dispose()); };
+  }, [originalContentStr, aiContentStr, finalContentStr]);
 
   // --- Free Mode Handlers ---
   const handleLinterValidate = async () => {
     if (!linterContent.trim()) return;
-
     setLinterLoading(true);
     setLinterError(null);
     setLinterResults([]);
-
     try {
       const response = await axios.post('/api/validate/localization', {
         game_id: linterGameId,
@@ -257,8 +229,7 @@ const ProofreadingPage = () => {
       });
       setLinterResults(response.data);
     } catch (err) {
-      console.error("Validation failed:", err);
-      setLinterError("Failed to validate content. Please check the backend connection.");
+      setLinterError("Failed to validate.");
     } finally {
       setLinterLoading(false);
     }
@@ -268,20 +239,9 @@ const ProofreadingPage = () => {
     switch (level) {
       case 'error': return 'red';
       case 'warning': return 'yellow';
-      case 'info': return 'blue';
       default: return 'gray';
     }
   };
-
-  const getLevelIcon = (level) => {
-    switch (level) {
-      case 'error': return <IconX size={16} />;
-      case 'warning': return <IconAlertTriangle size={16} />;
-      case 'info': return <IconInfoCircle size={16} />;
-      default: return null;
-    }
-  };
-
 
   return (
     <div style={{ height: 'calc(100vh - 20px)', display: 'flex', flexDirection: 'column', padding: '10px', width: '100%' }}>
@@ -290,7 +250,7 @@ const ProofreadingPage = () => {
         <Group position="apart" mb="xs">
           <Group>
             <Title order={4}>{t('page_title_proofreading')}</Title>
-            <Badge color="blue" variant="light" size="sm">Beta</Badge>
+            {fileInfo && <Badge variant="outline">{fileInfo.path}</Badge>}
           </Group>
           <Tabs value={activeTab} onTabChange={setActiveTab} variant="pills" radius="md">
             <Tabs.List>
@@ -304,43 +264,13 @@ const ProofreadingPage = () => {
 
           {/* --- File Mode Panel --- */}
           <Tabs.Panel value="file" style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-            {/* Header & Controls */}
             <Stack spacing="xs" mb="xs">
               <Group position="apart">
                 <Group spacing="xs">
-                  <Select
-                    placeholder={t('proofreading.select_mod_placeholder')}
-                    data={mods}
-                    value={selectedMod}
-                    onChange={setSelectedMod}
-                    searchable
-                    size="xs"
-                    style={{ width: 200 }}
-                  />
-                  <Select
-                    placeholder={t('proofreading.select_file_placeholder')}
-                    data={files}
-                    value={selectedFile}
-                    onChange={setSelectedFile}
-                    searchable
-                    disabled={!selectedMod}
-                    size="xs"
-                    style={{ width: 250 }}
-                  />
-                  <Select
-                    placeholder={t('proofreading.target_language')}
-                    data={[
-                      { value: 'zh-CN', label: '简体中文' },
-                    ]}
-                    value={targetLang}
-                    onChange={setTargetLang}
-                    size="xs"
-                    style={{ width: 100 }}
-                  />
+                  <Text size="sm" c="dimmed">Mode: 3-Column View</Text>
                 </Group>
 
                 <Group spacing="xs">
-                  {/* Validation Stats */}
                   <Tooltip label="Errors">
                     <Badge color="red" leftSection={<IconX size={10} />} size="sm">{stats.error}</Badge>
                   </Tooltip>
@@ -353,7 +283,6 @@ const ProofreadingPage = () => {
                     onClick={handleValidate}
                     loading={loading}
                     variant="light"
-                    disabled={!finalText}
                     size="xs"
                   >
                     {t('proofreading.validate')}
@@ -362,7 +291,6 @@ const ProofreadingPage = () => {
                     leftSection={<IconDeviceFloppy size={14} />}
                     onClick={handleSave}
                     loading={saving}
-                    disabled={!finalText}
                     size="xs"
                   >
                     {t('proofreading.save')}
@@ -371,27 +299,29 @@ const ProofreadingPage = () => {
               </Group>
             </Stack>
 
-            {/* 3-Column Layout */}
+            {/* 3-Column Layout Restored */}
             <div style={{ flex: 1, display: 'flex', flexDirection: 'row', gap: '10px', overflow: 'hidden', width: '100%' }}>
               {/* Column 1: Original */}
               <div style={{ flex: 1, display: 'flex', flexDirection: 'column', height: '100%', minWidth: 0 }}>
                 <Text fw={500} mb={4} size="xs">{t('proofreading.original')}</Text>
                 <MonacoWrapper
                   scrollRef={originalEditorRef}
-                  value={originalText}
+                  value={originalContentStr}
                   readOnly={true}
                   theme="vs-dark"
+                  language="yaml"
                 />
               </div>
 
-              {/* Column 2: AI Draft */}
+              {/* Column 2: AI Draft (Restored) */}
               <div style={{ flex: 1, display: 'flex', flexDirection: 'column', height: '100%', minWidth: 0 }}>
                 <Text fw={500} mb={4} size="xs">{t('proofreading.ai_draft')}</Text>
                 <MonacoWrapper
                   scrollRef={aiEditorRef}
-                  value={aiText}
+                  value={aiContentStr}
                   readOnly={true}
                   theme="vs-dark"
+                  language="yaml"
                 />
               </div>
 
@@ -402,27 +332,27 @@ const ProofreadingPage = () => {
                   <LoadingOverlay visible={loading || saving} overlayBlur={2} />
                   <MonacoWrapper
                     scrollRef={finalEditorRef}
-                    value={finalText}
-                    onChange={setFinalText}
+                    value={finalContentStr}
+                    onChange={setFinalContentStr}
                     theme="vs-dark"
+                    language="yaml"
                   />
                 </div>
               </div>
             </div>
 
-            {/* Validation Results Panel (Bottom) */}
+            {/* Validation Results */}
             {validationResults.length > 0 && (
               <Paper withBorder p="xs" mt="xs" h={120} style={{ overflowY: 'auto' }}>
                 <Title order={6} mb="xs" size="sm">{t('proofreading.validation_results')}</Title>
                 <Stack spacing={4}>
                   {validationResults.map((res, idx) => (
                     <Group key={idx} spacing="xs" noWrap>
-                      <Badge color={res.level === 'error' ? 'red' : 'yellow'} size="xs" style={{ flexShrink: 0 }}>
+                      <Badge color={res.level === 'error' ? 'red' : 'yellow'} size="xs">
                         {res.level.toUpperCase()}
                       </Badge>
-                      <Text size="xs" ff="monospace" style={{ flexShrink: 0 }}>L{res.line_number}</Text>
-                      <Text size="xs" style={{ wordBreak: 'break-all' }}>{res.message}</Text>
-                      {res.details && <Text size="xs" c="dimmed" style={{ wordBreak: 'break-all' }}>({res.details})</Text>}
+                      <Text size="xs" ff="monospace">L{res.line_number}</Text>
+                      <Text size="xs">{res.message}</Text>
                     </Group>
                   ))}
                 </Stack>
@@ -432,82 +362,32 @@ const ProofreadingPage = () => {
 
           {/* --- Free Mode Panel --- */}
           <Tabs.Panel value="free" style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden', paddingTop: '10px' }}>
-            <Stack spacing="xs" style={{ flex: 1, overflow: 'hidden' }}>
-              <Group position="apart">
-                <Text size="sm" c="dimmed">Paste localization code here to validate.</Text>
-                <Group>
-                  <Select
-                    placeholder="Select game"
-                    data={[
-                      { value: '1', label: 'Victoria 3' },
-                      { value: '2', label: 'Stellaris' },
-                      { value: '3', label: 'Europa Universalis IV' },
-                      { value: '4', label: 'Hearts of Iron IV' },
-                      { value: '5', label: 'Crusader Kings III' },
-                    ]}
-                    value={linterGameId}
-                    onChange={setLinterGameId}
-                    size="xs"
-                    style={{ width: 150 }}
-                  />
-                  <Button
-                    onClick={handleLinterValidate}
-                    loading={linterLoading}
-                    leftSection={<IconCheck size={14} />}
-                    size="xs"
-                  >
-                    Validate
-                  </Button>
-                </Group>
-              </Group>
-
-              <div style={{ flex: 1, minHeight: 0 }}>
-                <MonacoWrapper
-                  value={linterContent}
-                  onChange={setLinterContent}
-                  theme="vs-dark"
-                />
-              </div>
-
-              {linterError && (
-                <Alert icon={<IconX size={16} />} title="Error" color="red" variant="light">
-                  {linterError}
-                </Alert>
-              )}
-
-              {linterResults.length > 0 ? (
-                <Paper withBorder p="xs" h={200} style={{ overflowY: 'auto' }}>
-                  <Table striped highlightOnHover size="xs">
-                    <Table.Thead>
-                      <Table.Tr>
-                        <Table.Th>Line</Table.Th>
-                        <Table.Th>Level</Table.Th>
-                        <Table.Th>Key</Table.Th>
-                        <Table.Th>Message</Table.Th>
+            <Group mb="xs">
+              <Select
+                data={['1', '2', '3', '4', '5']}
+                value={linterGameId}
+                onChange={setLinterGameId}
+                placeholder="Game ID"
+                size="xs"
+              />
+              <Button onClick={handleLinterValidate} loading={linterLoading} size="xs">Validate</Button>
+            </Group>
+            <MonacoWrapper value={linterContent} onChange={setLinterContent} theme="vs-dark" language="yaml" />
+            {linterError && <Text color="red">{linterError}</Text>}
+            {linterResults.length > 0 && (
+              <Paper withBorder p="xs" mt="xs" h={150} style={{ overflowY: 'auto' }}>
+                <Table striped highlightOnHover size="xs">
+                  <Table.Tbody>
+                    {linterResults.map((r, i) => (
+                      <Table.Tr key={i}>
+                        <Table.Td><Badge color={getLevelColor(r.level)}>{r.level}</Badge></Table.Td>
+                        <Table.Td>{r.message}</Table.Td>
                       </Table.Tr>
-                    </Table.Thead>
-                    <Table.Tbody>
-                      {linterResults.map((result, index) => (
-                        <Table.Tr key={index}>
-                          <Table.Td>{result.line_number}</Table.Td>
-                          <Table.Td>
-                            <Badge color={getLevelColor(result.level)} leftSection={getLevelIcon(result.level)} size="xs">
-                              {result.level.toUpperCase()}
-                            </Badge>
-                          </Table.Td>
-                          <Table.Td style={{ fontFamily: 'monospace' }}>{result.key || '-'}</Table.Td>
-                          <Table.Td>{result.message}</Table.Td>
-                        </Table.Tr>
-                      ))}
-                    </Table.Tbody>
-                  </Table>
-                </Paper>
-              ) : (
-                !linterLoading && linterContent.trim() && !linterError && (
-                  <Text c="dimmed" ta="center" fs="italic" size="xs">No issues found.</Text>
-                )
-              )}
-            </Stack>
+                    ))}
+                  </Table.Tbody>
+                </Table>
+              </Paper>
+            )}
           </Tabs.Panel>
 
         </Tabs>

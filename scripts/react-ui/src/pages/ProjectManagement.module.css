@@ -8,7 +8,7 @@
     /* Remove header height (approx 60-80px) from viewport height */
     height: calc(100vh - 80px);
     overflow-x: auto;
-    overflow-y: hidden;
+    overflow-y: auto;
     width: 100%;
     /* Use flex-start alignment so columns don't stretch weirdly if content is short */
     align-items: flex-start;
@@ -22,9 +22,11 @@
     max-height: 100%;
 
     /* Glass Style */
-    background: rgba(0, 0, 0, 0.2); /* Very subtle background */
+    background: rgba(0, 0, 0, 0.2);
+    /* Very subtle background */
     border: 1px solid var(--glass-border, rgba(255, 255, 255, 0.1));
-    border-radius: 12px; /* var(--card-radius) usually */
+    border-radius: 12px;
+    /* var(--card-radius) usually */
 
     /* Layout */
     display: flex;
@@ -56,9 +58,11 @@
     scrollbar-width: thin;
     scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
 }
+
 .taskList::-webkit-scrollbar {
     width: 6px;
 }
+
 .taskList::-webkit-scrollbar-thumb {
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 3px;
@@ -99,13 +103,15 @@
     box-shadow: 0 0 15px var(--primary-color, #1971c2);
     border: 1px solid var(--primary-color, #1971c2);
     cursor: grabbing;
-    z-index: 999; /* Ensure it floats above everything */
+    z-index: 999;
+    /* Ensure it floats above everything */
 }
 
 /* Task Type Indicators */
 .fileTaskIndicator {
     border-left: 3px solid var(--color-info, #339af0);
 }
+
 .noteTaskIndicator {
     border-left: 3px solid var(--color-warning, #fcc419);
 }
@@ -118,6 +124,7 @@
     color: var(--text-muted);
     transition: all 0.2s ease;
 }
+
 .ghostButton:hover {
     background: rgba(255, 255, 255, 0.05);
     border-color: var(--primary-color);

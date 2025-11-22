@@ -9,7 +9,8 @@ import json
 import re
 from fastapi import FastAPI, UploadFile, File, BackgroundTasks, HTTPException, Form, Query
 from fastapi.responses import FileResponse, PlainTextResponse
-from typing import Dict, List, Optional
+from fastapi.middleware.cors import CORSMiddleware
+from typing import Dict, List, Optional, Any
 from pydantic import BaseModel, Field, field_validator
 from dotenv import load_dotenv, set_key, find_dotenv
 
@@ -22,13 +23,23 @@ if project_root not in sys.path:
     sys.path.insert(0, project_root)
 
 # Import using absolute imports from project root
-from scripts.app_settings import GAME_PROFILES, LANGUAGES, API_PROVIDERS, SOURCE_DIR, DEST_DIR
+from scripts.app_settings import GAME_PROFILES, LANGUAGES, API_PROVIDERS, SOURCE_DIR, DEST_DIR, MODS_CACHE_DB_PATH
 from scripts.workflows import initial_translate
 from scripts.utils import logger, i18n
 from scripts.core import workshop_formatter
+from scripts.core.glossary_manager import GlossaryManager
+from scripts.core.project_manager import ProjectManager
+from scripts.core.project_json_manager import ProjectJsonManager
+from scripts.core.archive_manager import ArchiveManager
 
 # Setup logger
 logger.setup_logger()
+i18n.load_language() # Load default language
+
+# Initialize Managers
+glossary_manager = GlossaryManager()
+project_manager = ProjectManager()
+archive_manager = ArchiveManager() # Needs to be initialized
 
 # In-memory storage for task status.
 # In a real production app, this should be replaced with a more robust solution like Redis.
@@ -104,6 +115,252 @@ app = FastAPI(
     description="为P社Mod本地化工厂提供Web UI的后端API。",
     version="1.0.0",
 )
+
+# CORS Configuration
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allow all origins for development
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+# --- New Pydantic Models for Project/Proofreading ---
+class CreateProjectRequest(BaseModel):
+    name: str
+    folder_path: str
+    game_id: str
+
+class SaveProofreadingRequest(BaseModel):
+    project_id: str
+    file_id: str
+    entries: List[Dict[str, Any]]
+    content: str = "" # Legacy support
+
+class InitialTranslationRequest(BaseModel):
+    project_id: str
+    target_language: str = "zh"
+    api_provider: str = "gemini"
+    model: str = "gemini-pro"
+
+# --- New Project Endpoints ---
+@app.get("/api/projects")
+def list_projects():
+    """Returns a list of all projects."""
+    return project_manager.get_projects()
+
+@app.post("/api/project/create")
+def create_project(request: CreateProjectRequest):
+    """Creates a new project."""
+    try:
+        if not os.path.exists(request.folder_path):
+             raise HTTPException(status_code=404, detail=f"Path not found: {request.folder_path}")
+
+        project = project_manager.create_project(request.name, request.folder_path, request.game_id)
+        return {"status": "success", "project": project}
+    except Exception as e:
+        logging.error(f"Error creating project: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/api/project/{project_id}/files")
+def list_project_files(project_id: str):
+    """Lists files for a given project."""
+    return project_manager.get_project_files(project_id)
+
+@app.delete("/api/project/{project_id}")
+def delete_project(project_id: str, delete_files: bool = False):
+    """Deletes a project. Set delete_files=true to also delete source directory."""
+    try:
+        success = project_manager.delete_project(project_id, delete_source_files=delete_files)
+        if success:
+            return {"status": "success", "message": "Project deleted"}
+        else:
+            raise HTTPException(status_code=404, detail="Project not found")
+    except Exception as e:
+        logging.error(f"Error deleting project: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/api/translate/start")
+def start_translation_project(request: InitialTranslationRequest, background_tasks: BackgroundTasks):
+    """
+    Starts the initial translation workflow for a project.
+    """
+    project = project_manager.get_project(request.project_id)
+    if not project:
+        raise HTTPException(status_code=404, detail="Project not found")
+
+    # Map request to workflow args
+    # We need to fetch game profile etc.
+    # This is a simplified integration.
+
+    # TODO: Full integration with run_initial_translation using project context
+
+    return {"status": "started", "message": f"Translation started for project {project['name']}"}
+
+@app.get("/api/proofread/{project_id}/{file_id}")
+def get_proofread_data(project_id: str, file_id: str):
+    files = project_manager.get_project_files(project_id)
+    target_file = next((f for f in files if f['file_id'] == file_id), None)
+
+    if not target_file:
+        raise HTTPException(status_code=404, detail="File not found in project")
+
+    file_path = target_file['file_path']
+    project = project_manager.get_project(project_id)
+    mod_name = project['name']
+
+    entries = archive_manager.get_entries(mod_name, file_path)
+
+    return {
+        "file_id": file_id,
+        "file_path": file_path,
+        "mod_name": mod_name,
+        "entries": entries
+    }
+
+# --- Kanban & Config Endpoints ---
+
+@app.get("/api/project/{project_id}/kanban")
+def get_project_kanban(project_id: str):
+    """Gets the Kanban board state from the JSON sidecar."""
+    project = project_manager.get_project(project_id)
+    if not project:
+        raise HTTPException(status_code=404, detail="Project not found")
+    
+    try:
+        json_manager = ProjectJsonManager(project['source_path'])
+        return json_manager.get_kanban_data()
+    except Exception as e:
+        logging.error(f"Error loading Kanban data: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/api/project/{project_id}/kanban")
+def save_project_kanban(project_id: str, kanban_data: Dict[str, Any]):
+    """Saves the Kanban board state to the JSON sidecar."""
+    project = project_manager.get_project(project_id)
+    if not project:
+        raise HTTPException(status_code=404, detail="Project not found")
+    
+    try:
+        json_manager = ProjectJsonManager(project['source_path'])
+        json_manager.save_kanban_data(kanban_data)
+        return {"status": "success"}
+    except Exception as e:
+        logging.error(f"Error saving Kanban data: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/api/project/{project_id}/refresh")
+def refresh_project_files(project_id: str):
+    """Rescans the project files and updates the DB and Kanban."""
+    try:
+        project_manager.refresh_project_files(project_id)
+        return {"status": "success"}
+    except Exception as e:
+        logging.error(f"Error refreshing project files: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/api/project/{project_id}/config")
+def get_project_config(project_id: str):
+    """Gets the project configuration (e.g. translation dirs)."""
+    project = project_manager.get_project(project_id)
+    if not project:
+        raise HTTPException(status_code=404, detail="Project not found")
+    
+    try:
+        json_manager = ProjectJsonManager(project['source_path'])
+        config = json_manager.get_config()
+        return {
+            "source_path": project['source_path'],
+            "translation_dirs": config.get("translation_dirs", [])
+        }
+    except Exception as e:
+        logging.error(f"Error loading config: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/api/project/{project_id}/config")
+def update_project_config(project_id: str, config_data: Dict[str, Any]):
+    """Updates the project configuration (e.g. translation dirs)."""
+    project = project_manager.get_project(project_id)
+    if not project:
+        raise HTTPException(status_code=404, detail="Project not found")
+    
+    try:
+        json_manager = ProjectJsonManager(project['source_path'])
+        json_manager.update_config(config_data)
+        return {"status": "success"}
+    except Exception as e:
+        logging.error(f"Error updating config: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+class UpdateConfigRequest(BaseModel):
+    action: str # 'add_dir', 'remove_dir'
+    path: str
+
+@app.post("/api/project/{project_id}/config")
+def update_project_config(project_id: str, request: UpdateConfigRequest):
+    """Updates project configuration."""
+    project = project_manager.get_project(project_id)
+    if not project:
+        raise HTTPException(status_code=404, detail="Project not found")
+    
+    try:
+        json_manager = ProjectJsonManager(project['source_path'])
+        
+        if request.action == 'add_dir':
+            if not os.path.exists(request.path):
+                 raise HTTPException(status_code=404, detail="Directory not found")
+            json_manager.add_translation_dir(request.path)
+        elif request.action == 'remove_dir':
+            json_manager.remove_translation_dir(request.path)
+        else:
+            raise HTTPException(status_code=400, detail="Invalid action")
+            
+        # Refresh files after config change
+        project_manager.refresh_project_files(project_id)
+        
+        return {"status": "success"}
+    except HTTPException:
+        raise
+    except Exception as e:
+        logging.error(f"Error updating project config: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+# --- Existing Endpoints (Restored) ---
+
+@app.post("/api/proofread/save")
+def save_proofreading_db(request: SaveProofreadingRequest):
+    try:
+        project = project_manager.get_project(request.project_id)
+        files = project_manager.get_project_files(request.project_id)
+        target_file = next((f for f in files if f['file_id'] == request.file_id), None)
+
+        if not project or not target_file:
+            raise HTTPException(status_code=404, detail="Project or File not found")
+
+        archive_manager.update_translations(project['name'], target_file['file_path'], request.entries)
+
+        # Write to disk
+        output_path = os.path.join(project['target_path'], target_file['file_path'])
+        os.makedirs(os.path.dirname(output_path), exist_ok=True)
+
+        with open(output_path, 'w', encoding='utf-8-sig') as f:
+            f.write(u'\uFEFF')
+            f.write("l_simp_chinese:\n")
+            for entry in request.entries:
+                val = entry.get('translation', '')
+                val = val.replace('"', '\\"')
+                f.write(f' {entry["key"]}:0 "{val}"\n')
+
+        project_manager.update_file_status_by_id(request.file_id, "done")
+
+        return {"status": "success"}
+    except Exception as e:
+        logging.error(f"Error saving proofreading: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+# --- Existing Endpoints (Restored) ---
 
 @app.post("/api/translate")
 async def start_translation(
@@ -207,7 +464,7 @@ def get_source_mods():
     """
     if not os.path.exists(SOURCE_DIR):
         return []
-    
+
     mods = []
     for item in os.listdir(SOURCE_DIR):
         item_path = os.path.join(SOURCE_DIR, item)
@@ -217,7 +474,7 @@ def get_source_mods():
                 "path": item_path,
                 "mtime": os.path.getmtime(item_path)
             })
-    
+
     # Sort by modification time (newest first)
     mods.sort(key=lambda x: x["mtime"], reverse=True)
     return mods
@@ -243,16 +500,16 @@ async def start_translation_v2(
             # Verify that the payload path matches the expected source path
             # Normalize paths to compare safely
             if os.path.normpath(payload.project_path) != os.path.normpath(source_path):
-                # If they don't match, it might be an "existing" mod but from a different location? 
+                # If they don't match, it might be an "existing" mod but from a different location?
                 # No, "existing source" implies it is ALREADY in SOURCE_DIR.
                 # But let's be flexible: if it claims to be existing, we assume it's in place.
                 # However, for safety, if it's NOT in SOURCE_DIR, we should probably copy it?
                 # Let's trust the flag but log a warning if paths differ significantly.
                 pass
-            
+
             tasks[task_id]["status"] = "starting"
             tasks[task_id]["log"].append(f"使用现有的源文件: '{mod_name}'")
-            
+
         else:
             # Case: Importing a new folder (Copy logic)
             if os.path.exists(source_path):
@@ -260,7 +517,7 @@ async def start_translation_v2(
                     shutil.rmtree(source_path)
                 else:
                     os.remove(source_path)
-            
+
             # Copy from local path to SOURCE_DIR
             shutil.copytree(payload.project_path, source_path)
             tasks[task_id]["status"] = "starting"
@@ -272,8 +529,8 @@ async def start_translation_v2(
             if game_profile:
                 protected = game_profile.get("protected_items", set())
                 # Add standard protected items if not present
-                protected.add("customizable_localization") 
-                
+                protected.add("customizable_localization")
+
                 tasks[task_id]["log"].append("正在清理源文件 (Clean Source)...")
                 for item in os.listdir(source_path):
                     if item not in protected:
@@ -309,12 +566,12 @@ async def start_translation_v2(
     return {"task_id": task_id, "message": "翻译任务已开始"}
 
 def run_translation_workflow_v2(
-    task_id: str, 
-    mod_name: str, 
-    game_profile_id: str, 
-    source_lang_code: str, 
-    target_lang_codes: List[str], 
-    api_provider: str, 
+    task_id: str,
+    mod_name: str,
+    game_profile_id: str,
+    source_lang_code: str,
+    target_lang_codes: List[str],
+    api_provider: str,
     mod_context: str,
     selected_glossary_ids: List[int],
     model_name: Optional[str],
@@ -340,7 +597,7 @@ def run_translation_workflow_v2(
 
         # --- Glossary Logic: Merge Main Glossary if requested ---
         final_glossary_ids = list(selected_glossary_ids) if selected_glossary_ids else []
-        
+
         if use_main_glossary:
             from scripts.core.glossary_manager import glossary_manager
             # We need to find the main glossary ID for this game
@@ -426,22 +683,25 @@ def get_config():
     return {
         "game_profiles": GAME_PROFILES,
         "languages": LANGUAGES,
-        "api_providers": list(API_PROVIDERS.keys())
+        "api_providers": list(API_PROVIDERS.keys()),
+        "source_dir": SOURCE_DIR # Shared config needs this
     }
 
 @app.get("/api/docs-languages")
 def get_docs_languages():
     """
-    Scans the docs directory and returns a list of available language subdirectories.
+    Scans the root 'docs' directory and returns a list of available languages (directories).
     """
+    docs_dir = os.path.join(project_root, 'docs')
     languages = []
-    if os.path.exists(DOCS_DIR) and os.path.isdir(DOCS_DIR):
-        for item in os.listdir(DOCS_DIR):
-            item_path = os.path.join(DOCS_DIR, item)
-            # Check if it's a directory and not a hidden directory (e.g., .git)
-            if os.path.isdir(item_path) and not item.startswith('.'):
-                languages.append(item)
-    return languages
+    if not os.path.isdir(docs_dir):
+        logging.warning("The 'docs' directory does not exist.")
+        return []
+
+    for item in os.listdir(docs_dir):
+        if os.path.isdir(os.path.join(docs_dir, item)):
+            languages.append(item)
+    return sorted(languages)
 
 def _scan_docs_recursive(directory, parent_key=''):
     """
@@ -470,22 +730,6 @@ def _scan_docs_recursive(directory, parent_key=''):
                 "isLeaf": True,
             })
     return nodes
-
-@app.get("/api/docs-languages")
-def get_docs_languages():
-    """
-    Scans the root 'docs' directory and returns a list of available languages (directories).
-    """
-    docs_dir = os.path.join(project_root, 'docs')
-    languages = []
-    if not os.path.isdir(docs_dir):
-        logging.warning("The 'docs' directory does not exist.")
-        return []
-
-    for item in os.listdir(docs_dir):
-        if os.path.isdir(os.path.join(docs_dir, item)):
-            languages.append(item)
-    return sorted(languages)
 
 @app.get("/api/docs-tree")
 def get_docs_tree():
@@ -520,25 +764,21 @@ def get_api_keys():
     Returns a list of API providers with their current key status (masked).
     """
     providers_status = []
-    
+
     for provider_id, config in API_PROVIDERS.items():
         env_var_name = config.get("api_key_env")
         masked_key = None
         has_key = False
-        
+
         if env_var_name:
             current_key = os.environ.get(env_var_name)
-            # DEBUG LOGGING
-            if env_var_name in ["OPENAI_API_KEY", "SILICONFLOW_API_KEY"]:
-                logging.info(f"DEBUG: Checking {env_var_name}. Found: {'Yes' if current_key else 'No'}. Length: {len(current_key) if current_key else 0}")
-            
             if current_key:
                 has_key = True
                 if len(current_key) > 8:
                     masked_key = f"{current_key[:4]}****{current_key[-4:]}"
                 else:
                     masked_key = "****" # Too short to show parts
-        
+
         providers_status.append({
             "id": provider_id,
             "name": provider_id.replace("_", " ").title(), # Simple formatting
@@ -548,7 +788,7 @@ def get_api_keys():
             "masked_key": masked_key,
             "is_keyless": env_var_name is None # e.g. gemini_cli, ollama might not need a key in the same way, or handled differently
         })
-        
+
     return providers_status
 
 @app.post("/api/api-keys")
@@ -558,25 +798,25 @@ def update_api_key(payload: ApiKeyUpdate):
     """
     provider_id = payload.provider_id
     new_key = payload.api_key
-    
+
     if provider_id not in API_PROVIDERS:
         raise HTTPException(status_code=404, detail="Provider not found")
-        
+
     config = API_PROVIDERS[provider_id]
     env_var_name = config.get("api_key_env")
-    
+
     if not env_var_name:
          raise HTTPException(status_code=400, detail="This provider does not require an API key.")
-         
+
     # 1. Update current process environment
     os.environ[env_var_name] = new_key
-    
+
     # 2. Update .env file
     dotenv_file = find_dotenv()
     if not dotenv_file:
         # If no .env file found, create one in project root
         dotenv_file = os.path.join(project_root, ".env")
-        
+
     try:
         set_key(dotenv_file, env_var_name, new_key)
         return {"status": "success", "message": f"Key for {provider_id} updated successfully."}
@@ -585,10 +825,6 @@ def update_api_key(payload: ApiKeyUpdate):
         raise HTTPException(status_code=500, detail=f"Failed to save key to .env file: {e}")
 
 #<-- Glossar-API-Endpunkte -->
-import json
-from pydantic import BaseModel, Field
-from datetime import datetime
-
 GLOSSARY_DIR = os.path.join(project_root, "data", "glossary")
 DOCS_DIR = os.path.join(project_root, "docs")
 
@@ -612,9 +848,6 @@ class SearchGlossaryRequest(BaseModel):
     page: int = 1
     pageSize: int = 25
 
-class UpdateGlossaryRequest(BaseModel):
-    entries: List[GlossaryEntryIn]
-
 class CreateGlossaryFileRequest(BaseModel):
     game_id: str
     file_name: str
@@ -628,11 +861,9 @@ def create_glossary_file(payload: CreateGlossaryFileRequest):
     game_id = payload.game_id
     file_name = payload.file_name
 
-    # --- Validation ---
     if not file_name.endswith(".json"):
         raise HTTPException(status_code=400, detail="File name must end with .json")
 
-    # Basic security check for filename
     if ".." in file_name or "/" in file_name or "\\" in file_name:
         raise HTTPException(status_code=400, detail="Invalid characters in file name.")
 
@@ -644,7 +875,6 @@ def create_glossary_file(payload: CreateGlossaryFileRequest):
     if os.path.exists(file_path):
         raise HTTPException(status_code=409, detail=f"File '{file_name}' already exists in game '{game_id}'.")
 
-    # --- File Creation ---
     try:
         default_content = {
             "metadata": {
@@ -690,30 +920,19 @@ def get_glossary_tree():
 
 def _transform_storage_to_frontend_format(entry: Dict, game_id: str = None, file_name: str = None) -> Dict:
     new_entry = entry.copy()
-    # 1. Create a top-level 'source' field from the 'en' translation.
     new_entry['source'] = new_entry.get('translations', {}).get('en', '')
 
-    # 2. Create a top-level 'variants' array from the 'en' variants.
-    # Note: This step creates a list, but step 5 overwrites it with the dict.
-    # Preserving existing logic for now, but arguably step 5 makes this redundant/overridden.
     variants_dict = new_entry.get('variants', {})
     if isinstance(variants_dict, dict):
         new_entry['variants'] = variants_dict.get('en', [])
     else:
-         # Handle cases where 'variants' might already be a list (though not expected from file)
         new_entry['variants'] = variants_dict if isinstance(variants_dict, list) else []
 
-    # 3. Ensure 'translations' is always a dict
     if 'translations' not in new_entry or not isinstance(new_entry['translations'], dict):
         new_entry['translations'] = {}
 
-    # 4. Extract 'remarks' from metadata and assign to top-level 'notes'
     new_entry['notes'] = new_entry.get('metadata', {}).get('remarks', '')
-
-    # 5. Ensure variants is a dict (it should be from file, but for safety)
     new_entry['variants'] = entry.get('variants', {})
-
-    # 6. Ensure abbreviations is a dict (it should be from file, but for safety)
     new_entry['abbreviations'] = entry.get('abbreviations', {})
 
     if game_id:
@@ -732,7 +951,6 @@ def get_glossary_content(
 ):
     """
     Reads, sanitizes, and returns a paginated list of entries from a specific glossary file.
-    Transforms the data structure for frontend compatibility.
     """
     file_path = os.path.join(GLOSSARY_DIR, game_id, file_name)
     if not os.path.exists(file_path):
@@ -801,11 +1019,7 @@ def search_glossary(payload: SearchGlossaryRequest):
                 data = json.load(f)
                 entries = data.get("entries", [])
                 for entry in entries:
-                    # Search logic: Check source, translations, or notes
                     match = False
-
-                    # Check source (derived from en translation usually, or explicit source field if exists?)
-                    # The storage format uses 'translations.en' as source effectively.
                     translations = entry.get("translations", {})
                     for text in translations.values():
                         if query_lower in text.lower():
@@ -813,7 +1027,6 @@ def search_glossary(payload: SearchGlossaryRequest):
                             break
 
                     if not match:
-                        # Check notes/remarks
                         remarks = entry.get("metadata", {}).get("remarks", "")
                         if query_lower in remarks.lower():
                             match = True
@@ -837,7 +1050,6 @@ def search_glossary(payload: SearchGlossaryRequest):
     }
 
 
-# Model for creating a new entry, ID is generated by the backend.
 class GlossaryEntryCreate(BaseModel):
     source: str
     translations: Dict[str, str]
@@ -846,7 +1058,6 @@ class GlossaryEntryCreate(BaseModel):
     abbreviations: Optional[Dict[str, str]] = {}
     metadata: Optional[Dict] = {}
 
-# --- Helper function to read/write glossary files ---
 def _read_glossary_file(file_path: str) -> Dict:
     if not os.path.exists(file_path):
         raise HTTPException(status_code=404, detail="Glossary file not found.")
@@ -857,66 +1068,27 @@ def _read_glossary_file(file_path: str) -> Dict:
         raise HTTPException(status_code=500, detail=f"Failed to read or parse glossary file: {e}")
 
 def _write_glossary_file(file_path: str, data: Dict):
+    from datetime import datetime
     try:
         data["metadata"]["last_updated"] = datetime.utcnow().isoformat()
         with open(file_path, 'w', encoding='utf-8') as f:
             json.dump(data, f, ensure_ascii=False, indent=2)
     except Exception as e:
-        logging.error(f"Failed to write glossary file: {traceback.format_exc()}")
+        logging.error(f"Failed to write glossary file: {e}")
         raise HTTPException(status_code=500, detail=f"Failed to write glossary file: {e}")
 
 def _transform_entry_to_storage_format(entry: Dict) -> Dict:
-
-    """Transforms a frontend-formatted entry back to the storage format."""
-
     entry['translations'] = entry.get('translations', {})
-
     entry['translations']['en'] = entry.get('source', '')
-
-
-
-    # Ensure variants is a dict (it should be from frontend payload)
-
-    if 'variants' not in entry:
-
-        entry['variants'] = {}
-
-
-
-    # Ensure abbreviations is a dict (it should be from frontend payload)
-
-    if 'abbreviations' not in entry:
-
-        entry['abbreviations'] = {}
-
-
-
-    if 'source' in entry:
-
-        del entry['source']
-
-
-
-    # Handle notes -> metadata.remarks
-
+    if 'variants' not in entry: entry['variants'] = {}
+    if 'abbreviations' not in entry: entry['abbreviations'] = {}
+    if 'source' in entry: del entry['source']
     if 'notes' in entry:
-
-        if 'metadata' not in entry:
-
-            entry['metadata'] = {}
-
+        if 'metadata' not in entry: entry['metadata'] = {}
         entry['metadata']['remarks'] = entry['notes']
-
-        del entry['notes'] # Remove top-level notes after moving it
-
+        del entry['notes']
     elif 'metadata' in entry and 'remarks' in entry['metadata']:
-
-        # If notes was not provided, but remarks exists, ensure it's cleared if notes was meant to be empty
-
         entry['metadata']['remarks'] = ''
-
-
-
     return entry
 
 @app.post("/api/glossary/entry", status_code=201)
@@ -972,24 +1144,14 @@ def delete_glossary_entry(game_id: str, file_name: str, entry_id: str):
 
 @app.get("/api/doc-content", response_class=PlainTextResponse)
 def get_doc_content(path: str = Query(...)):
-    """
-    Safely reads and returns the content of a specific markdown file from the root 'docs' directory.
-    Includes security checks to prevent directory traversal.
-    """
     if ".." in path:
         raise HTTPException(status_code=400, detail="Invalid path.")
-
-    # Create a secure, absolute path to the requested file
     docs_dir = os.path.abspath(os.path.join(project_root, 'docs'))
     requested_path = os.path.abspath(os.path.join(docs_dir, path))
-
-    # Security check: Ensure the requested path is still within the 'docs' directory
     if not requested_path.startswith(docs_dir):
         raise HTTPException(status_code=403, detail="Access forbidden.")
-
     if not os.path.isfile(requested_path) or not requested_path.endswith(".md"):
         raise HTTPException(status_code=404, detail="File not found or not a markdown file.")
-
     try:
         with open(requested_path, 'r', encoding='utf-8') as f:
             content = f.read()
@@ -1008,18 +1170,6 @@ class WorkshopRequest(BaseModel):
     api_provider: str # Added new field
 
 # --- API Endpoints for Workshop Generator ---
-
-@app.get("/api/projects")
-def get_projects():
-    """
-    Returns a list of available projects.
-    TODO: This should eventually query a database or project config file.
-    """
-    # Mock data for now
-    return [
-        {"name": "My Awesome Mod", "id": "my_awesome_mod", "workshop_id": "123456789"},
-        {"name": "Another Great Project", "id": "another_great_project", "workshop_id": "987654321"},
-    ]
 
 @app.post("/api/tools/generate_workshop_description")
 def generate_workshop_description(payload: WorkshopRequest):
@@ -1050,8 +1200,6 @@ def generate_workshop_description(payload: WorkshopRequest):
         workshop_id=payload.item_id
     )
     if saved_path is None:
-        # Even if saving fails, we should still return the generated content to the user.
-        # We can add a warning or special status in the response.
         return {
             "bbcode": formatted_bbcode,
             "saved_path": None,
@@ -1077,35 +1225,28 @@ def validate_localization(payload: ValidationRequest):
     """
     Validates a snippet of localization text (YAML format).
     """
-    from scripts.utils.post_process_validator import PostProcessValidator, ValidationResult
-    
+    from scripts.utils.post_process_validator import PostProcessValidator
+
     validator = PostProcessValidator()
     results = []
-    
-    # Simple line-by-line parsing to extract key and value
-    # Regex for standard Paradox YAML:  key:0 "value"  or  key: "value"
-    # We also want to catch lines that *look* like keys but are malformed
-    
+
     lines = payload.content.split('\n')
-    
+
     # Regex to capture: (key) (optional :version) " (value) "
-    # This is a simplified regex.
-    # Group 1: Key
-    # Group 2: Value (inside quotes)
     pair_pattern = re.compile(r'^\s*([a-zA-Z0-9_\.]+)\s*(?::\d*)?\s*"(.*)"\s*(?:#.*)?$')
-    
+
     for i, line in enumerate(lines):
         line_num = i + 1
         stripped = line.strip()
-        
+
         if not stripped or stripped.startswith('#') or stripped.startswith('l_'):
             continue
-            
+
         match = pair_pattern.match(line)
         if match:
             key = match.group(1)
             value = match.group(2)
-            
+
             # Validate Entry
             entry_results = validator.validate_entry(
                 game_id=payload.game_id,
@@ -1115,17 +1256,6 @@ def validate_localization(payload: ValidationRequest):
                 source_lang={"code": payload.source_lang_code}
             )
             results.extend(entry_results)
-        else:
-            # If line has content but doesn't match key-value pattern, 
-            # we might want to check if it's a malformed line or just a comment/empty
-            # For now, let's just check if it looks like it *should* be a key-value
-            if ":" in line and '"' in line:
-                 # Potential malformed line
-                 pass 
-            
-            # Also run generic text validation on the whole line just in case?
-            # No, that might produce too much noise.
-            pass
 
     # Transform results to simple dicts for JSON response
     json_results = []
@@ -1138,213 +1268,8 @@ def validate_localization(payload: ValidationRequest):
             "line_number": r.line_number,
             "key": r.key
         })
-        
+
     return json_results
 
-# --- Proofreading API ---
-
-@app.get("/api/proofreading/mods")
-def list_proofreading_mods():
-    """
-    List all mods available in the SOURCE_DIR.
-    """
-    if not os.path.exists(SOURCE_DIR):
-        return []
-    
-    mods = []
-    for item in os.listdir(SOURCE_DIR):
-        item_path = os.path.join(SOURCE_DIR, item)
-        if os.path.isdir(item_path):
-            mods.append(item)
-            
-    # Add Demo Mod
-    mods.append("Demo Mod")
-    
-    return sorted(mods)
-
-@app.get("/api/proofreading/files")
-def list_proofreading_files(mod_name: str = Query(...), game_id: str = Query(...)):
-    """
-    List all localization files for a given mod.
-    It scans the SOURCE_DIR for the mod and looks for localization files.
-    """
-    if mod_name == "Demo Mod":
-        return ["localization/english/OCC_l_english.yml"]
-
-    source_mod_path = os.path.join(SOURCE_DIR, mod_name)
-    if not os.path.exists(source_mod_path):
-        raise HTTPException(status_code=404, detail="Mod not found")
-    
-    files = []
-    # Simplified scanning for now, assuming standard structure or recursive scan
-    for root, dirs, filenames in os.walk(mod_path):
-        for filename in filenames:
-            if filename.endswith(".yml") or filename.endswith(".yaml"):
-                # We only want source files (usually english)
-                if "l_english" in filename or "l_braz_por" in filename: # Simple heuristic
-                    rel_path = os.path.relpath(os.path.join(root, filename), mod_path)
-                    files.append(rel_path.replace("\\", "/"))
-    
-    return sorted(files)
-
-@app.get("/api/proofreading/content")
-def get_proofreading_content(mod_name: str = Query(...), file_path: str = Query(...), target_lang: str = "zh-CN"):
-    """
-    Gets the content of the original file and the translation file.
-    """
-    if mod_name == "Demo Mod":
-        # Hardcoded paths for demo
-        archive_dir = os.path.join(os.getcwd(), "archive", "proofreading")
-        original_path = os.path.join(archive_dir, "OCC_l_english.yml")
-        translation_path = os.path.join(archive_dir, "OCC_l_simp_chinese.yml")
-        
-        original_content = ""
-        if os.path.exists(original_path):
-            with open(original_path, 'r', encoding='utf-8-sig') as f:
-                original_content = f.read()
-                
-        translation_content = ""
-        if os.path.exists(translation_path):
-            with open(translation_path, 'r', encoding='utf-8-sig') as f:
-                translation_content = f.read()
-                
-        return {
-            "original_content": original_content,
-            "translation_content": translation_content,
-            "translation_file_path": translation_path # Allow saving back to archive for demo
-        }
-
-    mod_path = os.path.join(SOURCE_DIR, mod_name)
-    original_full_path = os.path.join(mod_path, file_path)
-    
-    if not os.path.exists(original_full_path):
-         raise HTTPException(status_code=404, detail="Original file not found")
-         
-    with open(original_full_path, 'r', encoding='utf-8-sig') as f:
-        original_content = f.read()
-
-    # Try to find translation file
-    # Heuristic: Replace 'l_english' with 'l_simp_chinese' (or target lang)
-    # And look in DEST_DIR/TargetLang-ModName/...
-    
-    # Map target_lang code to Paradox language key
-    # This is a simplification. Ideally use a proper mapping.
-    paradox_lang = "simp_chinese" if target_lang == "zh-CN" else "english"
-    
-    # Construct expected translation filename
-    # e.g. OCC_l_english.yml -> OCC_l_simp_chinese.yml
-    filename = os.path.basename(file_path)
-    dir_name = os.path.dirname(file_path)
-    
-    # Simple heuristic replacement
-    target_filename = filename
-    for lang in LANGUAGES.values():
-        if lang["key"] in filename:
-            target_filename = filename.replace(lang["key"], target_lang_config["key"])
-            break
-            
-    # If no key found, maybe it's just appended?
-    if target_filename == filename:
-         # Try to see if it has l_english and replace it
-         if "l_english" in filename:
-             target_filename = filename.replace("l_english", target_lang_config["key"])
-    
-    translation_content = ""
-    translation_path = ""
-    
-    # Re-evaluate possible paths with the new filename
-    possible_paths = [
-        os.path.join(DEST_DIR, f"{folder_prefix}{mod_name}", dir_name, target_filename),
-        os.path.join(DEST_DIR, f"Multilanguage-{mod_name}", dir_name, target_filename),
-        # Sometimes structure is flattened or different, but let's start with these.
-    ]
-
-    found_path = None
-    for p in possible_paths:
-        if os.path.exists(p):
-            found_path = p
-            break
-            
-    if found_path:
-        try:
-            with open(found_path, 'r', encoding='utf-8-sig') as f:
-                translation_content = f.read()
-            translation_path = found_path
-        except:
-             with open(found_path, 'r', encoding='utf-8', errors='replace') as f:
-                translation_content = f.read()
-                translation_path = found_path
-    else:
-        translation_content = "" # No translation found
-
-    return {
-        "original_content": original_content,
-        "translation_content": translation_content,
-        "translation_file_path": translation_path, # Return this so we know where to save back
-        "suggested_filename": target_filename # In case we need to create it
-    }
-
-class SaveTranslationRequest(BaseModel):
-    file_path: str
-    content: str
-    mod_name: str # Needed if we are creating a new file
-    target_lang: str # Needed if we are creating a new file
-    relative_path: str # Relative path of the file in the mod structure
-
-@app.post("/api/proofreading/save")
-def save_proofreading_content(payload: SaveTranslationRequest):
-    """
-    Save the modified translation content.
-    If file_path exists, overwrite it.
-    If not, create it in the appropriate DEST_DIR location.
-    """
-    target_path = payload.file_path
-    
-    # Special handling for Demo Mod
-    if payload.mod_name == "Demo Mod":
-        archive_dir = os.path.join(os.getcwd(), "archive", "proofreading")
-        target_path = os.path.join(archive_dir, "OCC_l_simp_chinese.yml")
-        
-        try:
-            with open(target_path, 'w', encoding='utf-8-sig') as f:
-                f.write(payload.content)
-            return {"status": "success", "path": target_path}
-        except Exception as e:
-            raise HTTPException(status_code=500, detail=f"Failed to save demo file: {str(e)}")
-
-    # If no existing path, we need to create one
-    if not target_path:
-        target_lang_config = next((l for l in LANGUAGES.values() if l["code"] == payload.target_lang), None)
-        if not target_lang_config:
-             raise HTTPException(status_code=400, detail="Invalid target language")
-             
-        folder_prefix = target_lang_config["folder_prefix"]
-        # Default to single language folder for now
-        save_dir = os.path.join(DEST_DIR, f"{folder_prefix}{payload.mod_name}") 
-        
-        # Construct full path
-        # payload.relative_path includes the filename, e.g. "localization/english/foo_l_english.yml"
-        # We need to adjust the filename to the target language
-        
-        rel_dir = os.path.dirname(payload.relative_path)
-        filename = os.path.basename(payload.relative_path)
-        
-        target_filename = filename
-        if "l_english" in filename:
-             target_filename = filename.replace("l_english", target_lang_config["key"])
-        
-        target_path = os.path.join(save_dir, rel_dir, target_filename)
-        
-    # Ensure directory exists
-    os.makedirs(os.path.dirname(target_path), exist_ok=True)
-    
-    try:
-        with open(target_path, 'w', encoding='utf-8-sig') as f:
-            f.write(payload.content)
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Failed to save file: {str(e)}")
-        
-    return {"status": "success", "path": target_path}
-
 if __name__ == "__main__":
-    uvicorn.run("web_server:app", host="0.0.0.0", port=8000)
+    uvicorn.run("scripts.web_server:app", host="0.0.0.0", port=8000, reload=True)
