@@ -1,128 +1,201 @@
 import React, { useState, useEffect } from 'react';
-import { Title, Select, Group, Tabs, Center, Container, Paper, Text, Button } from '@mantine/core';
-import { IconFolder, IconPlus } from '@tabler/icons-react';
-import { useTranslation } from 'react-i18next';
-import styles from './ProjectManagement.module.css';
-import { KanbanBoard } from '../components/tools/KanbanBoard';
-import ProjectOverview from '../components/tools/ProjectOverview';
+import {
+  Container, Title, Button, Group, Card, Text, Grid, Modal, TextInput, Select,
+  Stack, Badge, ActionIcon, ScrollArea, Table, Box
+} from '@mantine/core';
+import { IconPlus, IconFolder, IconFileText, IconEdit } from '@tabler/icons-react';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
-// Mock data for projects (restored from original)
-const mockProjects = [
-    { id: 'project1', name: '甲MOD v1.2' },
-    { id: 'project2', name: '乙MOD v2.0' },
-    { id: 'project3', name: '丙MOD v3.5' },
-];
+const API_BASE = 'http://localhost:8000/api';
 
-// Mock data for project details (restored from original)
-const initialMockProjectDetails = {
-    project1: {
-        overview: { totalFiles: 15, translated: 80, toBeProofread: 35, glossary: 'my_glossary.json' },
-        files: [
-            { key: '1', name: 'file_A.yml', lines: 150, status: 'translated', progress: '150 / 150', notes: '无', actions: ['查看', '重译'] },
-            { key: '2', name: 'file_B.yml', lines: 200, status: 'in_progress', progress: '50 / 200', notes: '部分语句不通顺', actions: ['继续校对'] },
-            { key: '3', name: 'file_C.yml', lines: 120, status: 'failed', progress: '0 / 120', notes: 'API翻译失败', actions: ['重试', '查看日志'] },
-            { key: '4', name: 'file_D.yml', lines: 80, status: 'pending', progress: '0 / 80', notes: '', actions: ['翻译此文件'] },
-        ],
-    },
-    project2: {
-        overview: { totalFiles: 10, translated: 95, toBeProofread: 10, glossary: 'project2_glossary.json' },
-        files: [{ key: '1', name: 'another_file.yml', lines: 100, status: 'translated', progress: '100 / 100', notes: '无', actions: ['查看'] }]
-    },
-    project3: {
-        overview: { totalFiles: 5, translated: 100, toBeProofread: 0, glossary: 'project3_glossary.json' },
-        files: [{ key: '1', name: 'final_mod_file.yml', lines: 50, status: 'translated', progress: '50 / 50', notes: '已完成', actions: ['查看'] }]
+export default function ProjectManagement() {
+  const [projects, setProjects] = useState([]);
+  const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [projectFiles, setProjectFiles] = useState([]);
+
+  // Form State
+  const [newProjectName, setNewProjectName] = useState('');
+  const [newProjectPath, setNewProjectPath] = useState('');
+  const [newProjectGame, setNewProjectGame] = useState('stellaris'); // Default
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    fetchProjects();
+  }, []);
+
+  useEffect(() => {
+    if (selectedProject) {
+      fetchProjectFiles(selectedProject.project_id);
     }
-};
+  }, [selectedProject]);
 
-const ProjectManagement = () => {
-    const { t } = useTranslation();
-    const [selectedProject, setSelectedProject] = useState(null);
-    const [projectDetails, setProjectDetails] = useState(null);
+  const fetchProjects = async () => {
+    try {
+      const res = await axios.get(`${API_BASE}/projects`);
+      setProjects(res.data);
+    } catch (error) {
+      console.error("Failed to load projects", error);
+    }
+  };
 
-    useEffect(() => {
-        if (selectedProject && initialMockProjectDetails[selectedProject]) {
-            // Deep copy the mock data to allow for state changes
-            setProjectDetails(JSON.parse(JSON.stringify(initialMockProjectDetails[selectedProject])));
-        } else {
-            setProjectDetails(null);
-        }
-    }, [selectedProject]);
+  const fetchProjectFiles = async (projectId) => {
+    try {
+      const res = await axios.get(`${API_BASE}/project/${projectId}/files`);
+      setProjectFiles(res.data);
+    } catch (error) {
+      console.error("Failed to load files", error);
+    }
+  };
 
-    const handleProjectChange = (value) => {
-        setSelectedProject(value);
-    };
+  const handleCreateProject = async () => {
+    try {
+      await axios.post(`${API_BASE}/project/create`, {
+        name: newProjectName,
+        folder_path: newProjectPath,
+        game_id: newProjectGame
+      });
+      setIsCreateModalOpen(false);
+      fetchProjects();
+      // Reset form
+      setNewProjectName('');
+      setNewProjectPath('');
+    } catch (error) {
+      alert(`Failed to create project: ${error.response?.data?.detail || error.message}`);
+    }
+  };
 
-    // Placeholder handlers for Overview interaction
-    const handleProofread = (file) => {
-        console.log(`Preparing to navigate to proofreading for file: ${file.name}`);
-    };
+  const handleProofread = (file) => {
+    if (!selectedProject) return;
+    navigate(`/proofreading?projectId=${selectedProject.project_id}&fileId=${file.file_id}`);
+  };
 
-    const handleStatusChange = (fileKey, direction) => {
-       console.log('Status change from Overview not fully implemented in this refactor');
-    };
+  return (
+    <Container fluid p="md" style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+      <Group position="apart" mb="md">
+        <Title order={2}>Project Management</Title>
+        <Button leftIcon={<IconPlus size={16} />} onClick={() => setIsCreateModalOpen(true)}>
+          New Project
+        </Button>
+      </Group>
 
-    return (
-        <div className={styles.container} style={{ overflow: 'hidden' }}>
-            {/* Header Section */}
-            <Paper p="md" style={{ background: 'rgba(0,0,0,0.2)', borderBottom: '1px solid var(--glass-border)', backdropFilter: 'blur(10px)' }}>
-                <Group justify="space-between">
-                    <Title order={3} style={{ fontFamily: 'var(--font-header)', color: 'var(--text-highlight)' }}>
-                        {t('page_title_project_management')}
-                    </Title>
-                    <Group>
-                         <Select
-                            style={{ width: 300 }}
-                            placeholder="选择一个项目" // TODO: i18n
-                            value={selectedProject}
-                            onChange={handleProjectChange}
-                            clearable
-                            data={mockProjects.map(p => ({ value: p.id, label: p.name }))}
-                            leftSection={<IconFolder size={16} />}
-                        />
-                        <Button variant="light" leftSection={<IconPlus size={16} />}>
-                            新建/导入
-                        </Button>
-                    </Group>
+      <Grid style={{ flex: 1 }}>
+        {/* Project List Sidebar / Grid */}
+        <Grid.Col span={selectedProject ? 3 : 12}>
+           <ScrollArea style={{ height: 'calc(100vh - 150px)' }}>
+            <Stack spacing="sm">
+              {projects.map((p) => (
+                <Card
+                  key={p.project_id}
+                  shadow="sm"
+                  p="sm"
+                  radius="md"
+                  withBorder
+                  onClick={() => setSelectedProject(p)}
+                  style={{
+                    cursor: 'pointer',
+                    borderColor: selectedProject?.project_id === p.project_id ? '#228be6' : undefined,
+                    backgroundColor: selectedProject?.project_id === p.project_id ? 'rgba(34, 139, 230, 0.1)' : undefined
+                  }}
+                >
+                  <Group position="apart" noWrap>
+                    <Box>
+                        <Text weight={500}>{p.name}</Text>
+                        <Text size="xs" color="dimmed">{p.game_id}</Text>
+                    </Box>
+                    <Badge color={p.status === 'active' ? 'green' : 'gray'}>{p.status}</Badge>
+                  </Group>
+                </Card>
+              ))}
+            </Stack>
+           </ScrollArea>
+        </Grid.Col>
+
+        {/* Project Details */}
+        {selectedProject && (
+          <Grid.Col span={9} style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+             <Card shadow="sm" p="md" radius="md" withBorder style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
+                <Group position="apart" mb="md">
+                    <Title order={3}>{selectedProject.name} - Files</Title>
+                    <Text size="sm" color="dimmed">{selectedProject.source_path}</Text>
                 </Group>
-            </Paper>
 
-            {selectedProject ? (
-                <Tabs defaultValue="taskboard" variant="outline" radius="md" style={{ height: '100%', display: 'flex', flexDirection: 'column' }} classNames={{
-                    root: styles.tabsRoot,
-                    list: styles.tabsList,
-                    panel: styles.tabsPanel
-                }}>
-                    <Tabs.List style={{ paddingLeft: '1rem', paddingTop: '0.5rem', background: 'rgba(0,0,0,0.1)' }}>
-                        <Tabs.Tab value="overview">{t('homepage_chart_pie_title')}</Tabs.Tab> {/* Using "Project Status Overview" key as proxy for "Overview" */}
-                        <Tabs.Tab value="taskboard">任务看板</Tabs.Tab> {/* TODO: i18n key for Kanban Board */}
-                    </Tabs.List>
+                <ScrollArea style={{ flex: 1 }}>
+                    <Table highlightOnHover>
+                        <thead>
+                            <tr>
+                                <th>File</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {projectFiles.map((f) => (
+                                <tr key={f.file_id}>
+                                    <td><Text size="sm">{f.file_path}</Text></td>
+                                    <td>
+                                        <Badge
+                                            color={f.status === 'done' ? 'green' : f.status === 'proofreading' ? 'yellow' : 'gray'}
+                                        >
+                                            {f.status}
+                                        </Badge>
+                                    </td>
+                                    <td>
+                                        <Button
+                                            size="xs"
+                                            variant="light"
+                                            leftIcon={<IconEdit size={14}/>}
+                                            onClick={() => handleProofread(f)}
+                                        >
+                                            Proofread
+                                        </Button>
+                                    </td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </Table>
+                </ScrollArea>
+             </Card>
+          </Grid.Col>
+        )}
+      </Grid>
 
-                    <Tabs.Panel value="overview" style={{ flex: 1, overflow: 'auto', padding: '1rem' }}>
-                        {projectDetails ? (
-                            <ProjectOverview
-                                projectDetails={projectDetails}
-                                handleStatusChange={handleStatusChange}
-                                handleProofread={handleProofread}
-                            />
-                        ) : null}
-                    </Tabs.Panel>
-
-                    <Tabs.Panel value="taskboard" style={{ flex: 1, overflow: 'hidden', position: 'relative' }}>
-                        <KanbanBoard />
-                    </Tabs.Panel>
-                </Tabs>
-            ) : (
-                <Container size="sm" style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                     <Paper p="xl" withBorder radius="md" className={styles.emptyState} style={{ width: '100%' }}>
-                        <Center style={{ height: 200, flexDirection: 'column' }}>
-                            <IconFolder size={48} color="gray" style={{ marginBottom: 16 }} />
-                            <Text c="dimmed" size="lg">请从上方选择一个项目以查看详情</Text>
-                        </Center>
-                    </Paper>
-                </Container>
-            )}
-        </div>
-    );
-};
-
-export default ProjectManagement;
+      <Modal
+        opened={isCreateModalOpen}
+        onClose={() => setIsCreateModalOpen(false)}
+        title="Create New Project"
+      >
+        <Stack>
+            <TextInput
+                label="Project Name"
+                placeholder="My Awesome Mod"
+                value={newProjectName}
+                onChange={(e) => setNewProjectName(e.currentTarget.value)}
+            />
+            <TextInput
+                label="Folder Path"
+                placeholder="C:/Users/Me/Desktop/ModFolder"
+                description="If outside source folder, it will be moved."
+                value={newProjectPath}
+                onChange={(e) => setNewProjectPath(e.currentTarget.value)}
+            />
+            <Select
+                label="Game"
+                data={[
+                    { value: 'stellaris', label: 'Stellaris' },
+                    { value: 'hoi4', label: 'Hearts of Iron IV' },
+                    { value: 'vic3', label: 'Victoria 3' },
+                    { value: 'ck3', label: 'Crusader Kings III' },
+                    { value: 'eu4', label: 'Europa Universalis IV' }
+                ]}
+                value={newProjectGame}
+                onChange={setNewProjectGame}
+            />
+            <Button onClick={handleCreateProject}>Create Project</Button>
+        </Stack>
+      </Modal>
+    </Container>
+  );
+}
