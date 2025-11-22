@@ -261,5 +261,22 @@ class ArchiveManager:
             self.conn.close()
             logging.info(i18n.t("log_info_db_connection_closed"))
 
-# 全局实例
-archive_manager = ArchiveManager()
+# 延迟初始化的全局实例
+_archive_manager_instance = None
+
+class _ArchiveManagerProxy:
+    """代理类，实现真正的延迟初始化"""
+    def __getattr__(self, name):
+        global _archive_manager_instance
+        if _archive_manager_instance is None:
+            _archive_manager_instance = ArchiveManager()
+        return getattr(_archive_manager_instance, name)
+    
+    def __call__(self, *args, **kwargs):
+        global _archive_manager_instance
+        if _archive_manager_instance is None:
+            _archive_manager_instance = ArchiveManager()
+        return _archive_manager_instance(*args, **kwargs)
+
+# 使用代理对象作为全局实例，只有在实际调用方法时才初始化
+archive_manager = _ArchiveManagerProxy()

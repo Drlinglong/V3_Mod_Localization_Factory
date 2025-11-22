@@ -7,8 +7,9 @@ from scripts.core import file_parser, api_handler, file_builder, asset_handler, 
 from scripts.core.glossary_manager import glossary_manager
 from scripts.core.proofreading_tracker import create_proofreading_tracker
 from scripts.core.parallel_processor import ParallelProcessor, FileTask
-from scripts.core.archive_manager import archive_manager
+from scripts.core.loc_parser import parse_loc_file
 from scripts.core.project_manager import ProjectManager # Added
+from scripts.core.archive_manager import archive_manager
 from scripts.app_settings import SOURCE_DIR, DEST_DIR, LANGUAGES, RECOMMENDED_MAX_WORKERS, ARCHIVE_RESULTS_AFTER_TRANSLATION
 from scripts.utils import i18n
 

@@ -172,7 +172,8 @@ class ProjectManager:
             json_manager = ProjectJsonManager(source_path)
             config = json_manager.get_config()
             translation_dirs = config.get('translation_dirs', [])
-            logger.info(f"Loaded {len(translation_dirs)} translation directories from config")
+            logger.info(f"Refresh: Loaded {len(translation_dirs)} translation directories from config")
+            logger.info(f"Refresh: Translation directories: {translation_dirs}")
         except Exception as e:
             logger.error(f"Failed to load translation_dirs from JSON: {e}")
             translation_dirs = []
@@ -185,9 +186,12 @@ class ProjectManager:
             if not os.path.exists(root_path):
                 logger.warning(f"Directory not found: {root_path}")
                 return
+            
+            files_found = 0
             for root, dirs, files in os.walk(root_path):
                 for file in files:
                     if file.endswith(('.yml', '.yaml', '.txt', '.csv', '.json')):
+                        files_found += 1
                         full_path = os.path.join(root, file)
                         
                         # Count lines
@@ -207,12 +211,16 @@ class ProjectManager:
                             'line_count': line_count,
                             'file_type': file_type
                         })
+            
+            logger.info(f"Scan {file_type}: Found {files_found} files in {root_path}")
 
         # Scan source directory
+        logger.info(f"Scanning source directory: {source_path}")
         scan_dir(source_path, 'source')
         
         # Scan translation directories
         for trans_dir in translation_dirs:
+            logger.info(f"Scanning translation directory: {trans_dir}")
             scan_dir(trans_dir, 'translation')
 
         logger.info(f"Found {len(files_to_upsert)} total files to upsert")
