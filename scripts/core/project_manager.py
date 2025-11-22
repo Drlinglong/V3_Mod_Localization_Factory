@@ -2,6 +2,7 @@ import sqlite3
 import os
 import shutil
 import uuid
+import datetime
 import logging
 from typing import List, Optional, Dict, Any
 from dataclasses import dataclass
@@ -53,7 +54,7 @@ class ProjectManager:
                 name TEXT NOT NULL,
                 game_id TEXT NOT NULL,
                 source_path TEXT NOT NULL,
-                target_path TEXT NOT NULL,
+                target_path TEXT,
                 status TEXT DEFAULT 'active',
                 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             )
