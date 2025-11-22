@@ -117,11 +117,11 @@ class ProjectManager:
                 counter += 1
 
             try:
-                shutil.move(abs_folder_path, final_source_path)
-                logger.info(f"Moved to {final_source_path}")
+                shutil.copytree(abs_folder_path, final_source_path)
+                logger.info(f"Copied to {final_source_path}")
             except Exception as e:
-                logger.error(f"Failed to move folder: {e}")
-                raise RuntimeError(f"Failed to move folder to source directory: {e}")
+                logger.error(f"Failed to copy folder: {e}")
+                raise RuntimeError(f"Failed to copy folder to source directory: {e}")
         else:
             logger.info("Folder is already in source directory.")
 
