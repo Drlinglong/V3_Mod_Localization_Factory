@@ -266,5 +266,14 @@
   "project_management.manage_paths.cancel": "取消",
   "project_management.manage_paths.save": "保存更改",
   "project_management.refresh_files": "刷新文件",
-  "project_management.delete_project": "删除项目"
+  "project_management.delete_project": "删除项目",
+  "glossary_editor": {
+    "language": "语言",
+    "value": "值",
+    "add": "添加",
+    "variants_desc": "添加特定语言的变体。如果是多个值，请用逗号分隔。",
+    "abbreviations_desc": "添加特定语言的缩写。",
+    "metadata_label": "元数据 (JSON)",
+    "error_invalid_json": "JSON 格式无效"
+  }
 }

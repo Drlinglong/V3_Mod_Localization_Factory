@@ -49,6 +49,131 @@ class GlossaryManager:
             logging.error(f"Failed to get available glossaries for {game_id}: {e}")
             return []
 
+    def get_glossary_tree_data(self) -> List[Dict]:
+        """Queries the database to build a tree structure of glossaries grouped by game."""
+        if not self.conn:
+            logging.error("Database connection not available.")
+            return []
+        
+        try:
+            cursor = self.conn.cursor()
+            # Fetch all glossaries, ordered by game_id to make grouping easy
+            cursor.execute("SELECT glossary_id, name, game_id FROM glossaries ORDER BY game_id, name")
+            rows = cursor.fetchall()
+
+            tree_data = []
+            current_game_id = None
+            game_node = None
+
+            for row in rows:
+                if row['game_id'] != current_game_id:
+                    # If there's a previous game node, add it to the list
+                    if game_node:
+                        tree_data.append(game_node)
+                    
+                    # Start a new game node
+                    current_game_id = row['game_id']
+                    game_node = {
+                        "title": current_game_id,
+                        "key": current_game_id,
+                        "children": []
+                    }
+                
+                # Add the glossary file to the current game's children
+                if game_node:
+                    game_node["children"].append({
+                        "title": row['name'],
+                        # Use a format that can be easily parsed on the frontend
+                        "key": f"{row['game_id']}|{row['glossary_id']}|{row['name']}",
+                        "isLeaf": True
+                    })
+            
+            # Add the last game node if it exists
+            if game_node:
+                tree_data.append(game_node)
+                
+            return tree_data
+
+        except Exception as e:
+            logging.error(f"Failed to build glossary tree from database: {e}")
+            return []
+
+    def get_glossary_entries_paginated(self, glossary_id: int, page: int, page_size: int) -> Dict:
+        """Fetches paginated entries for a given glossary_id."""
+        if not self.conn:
+            return {"entries": [], "totalCount": 0}
+
+        try:
+            cursor = self.conn.cursor()
+            
+            # Get total count
+            cursor.execute("SELECT COUNT(*) FROM entries WHERE glossary_id = ?", (glossary_id,))
+            total_count = cursor.fetchone()[0]
+            
+            # Get paginated entries
+            offset = (page - 1) * page_size
+            cursor.execute(
+                "SELECT * FROM entries WHERE glossary_id = ? LIMIT ? OFFSET ?",
+                (glossary_id, page_size, offset)
+            )
+            rows = cursor.fetchall()
+            
+            entries = []
+            for row in rows:
+                entry = dict(row)
+                # Deserialize JSON fields
+                entry['translations'] = json.loads(entry['translations']) if entry['translations'] else {}
+                entry['abbreviations'] = json.loads(entry['abbreviations']) if entry['abbreviations'] else {}
+                entry['variants'] = json.loads(entry['variants']) if entry['variants'] else {}
+                entry['raw_metadata'] = json.loads(entry['raw_metadata']) if entry['raw_metadata'] else {}
+                entries.append(entry)
+
+            return {"entries": entries, "totalCount": total_count}
+
+        except Exception as e:
+            logging.error(f"Failed to get paginated entries for glossary {glossary_id}: {e}")
+            return {"entries": [], "totalCount": 0}
+
+    def search_glossary_entries_paginated(self, query: str, glossary_ids: List[int], page: int, page_size: int) -> Dict:
+        """Searches for entries across a list of glossaries with pagination."""
+        if not self.conn or not glossary_ids:
+            return {"entries": [], "totalCount": 0}
+
+        try:
+            cursor = self.conn.cursor()
+            
+            search_query = f"%{query.lower()}%"
+            placeholders = ','.join('?' for _ in glossary_ids)
+            
+            # Base query for counting and selecting
+            base_sql = f"FROM entries WHERE glossary_id IN ({placeholders}) AND LOWER(translations) LIKE ?"
+            
+            # Get total count
+            count_sql = f"SELECT COUNT(*) {base_sql}"
+            cursor.execute(count_sql, glossary_ids + [search_query])
+            total_count = cursor.fetchone()[0]
+            
+            # Get paginated entries
+            select_sql = f"SELECT * {base_sql} LIMIT ? OFFSET ?"
+            offset = (page - 1) * page_size
+            cursor.execute(select_sql, glossary_ids + [search_query, page_size, offset])
+            rows = cursor.fetchall()
+            
+            entries = []
+            for row in rows:
+                entry = dict(row)
+                entry['translations'] = json.loads(entry['translations']) if entry['translations'] else {}
+                entry['abbreviations'] = json.loads(entry['abbreviations']) if entry['abbreviations'] else {}
+                entry['variants'] = json.loads(entry['variants']) if entry['variants'] else {}
+                entry['raw_metadata'] = json.loads(entry['raw_metadata']) if entry['raw_metadata'] else {}
+                entries.append(entry)
+
+            return {"entries": entries, "totalCount": total_count}
+
+        except Exception as e:
+            logging.error(f"Failed to search entries: {e}")
+            return {"entries": [], "totalCount": 0}
+
     def load_game_glossary(self, game_id: str) -> bool:
         """默认只加载指定游戏的主词典 (is_main = 1)"""
         if not self.conn:

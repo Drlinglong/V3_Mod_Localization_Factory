@@ -25,6 +25,7 @@ import SettingsPage from './pages/SettingsPage';
 import UnderDevelopmentPage from './pages/UnderDevelopmentPage';
 import UnderConstructionPage from './pages/UnderConstructionPage';
 import InConceptionPage from './pages/InConceptionPage';
+import ArchivesPage from './pages/ArchivesPage';
 
 // --- Single Source of Truth for Routing ---
 const appRouteConfig = [
@@ -35,6 +36,7 @@ const appRouteConfig = [
     { path: '/proofreading', element: <ProofreadingPage /> },
     { path: '/project-management', element: <OriginalProjectManagement /> },
     { path: '/project-management/:projectId', element: <OriginalProjectManagement /> },
+    { path: '/archives', element: <ArchivesPage /> },
     { path: '/cicd', element: <CICDPage /> },
     { path: '/tools', element: <ToolsPage /> },
     { path: '/settings', element: <SettingsPage /> },
