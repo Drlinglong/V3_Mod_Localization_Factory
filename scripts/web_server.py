@@ -26,15 +26,16 @@ if project_root not in sys.path:
 from scripts.app_settings import GAME_PROFILES, LANGUAGES, API_PROVIDERS, SOURCE_DIR, DEST_DIR, MODS_CACHE_DB_PATH
 from scripts.workflows import initial_translate
 from scripts.utils import logger, i18n
+
+# Setup logger and i18n BEFORE importing managers that use them
+logger.setup_logger()
+i18n.load_language() # Load default language
+
 from scripts.core import workshop_formatter
 from scripts.core.glossary_manager import GlossaryManager
 from scripts.core.project_manager import ProjectManager
 from scripts.core.project_json_manager import ProjectJsonManager
 from scripts.core.archive_manager import ArchiveManager
-
-# Setup logger
-logger.setup_logger()
-i18n.load_language() # Load default language
 
 # Initialize Managers
 glossary_manager = GlossaryManager()
