@@ -269,11 +269,27 @@ def get_project_config(project_id: str):
     try:
         json_manager = ProjectJsonManager(project['source_path'])
         config = json_manager.get_config()
-        # Also return source_path for reference
-        config['source_path'] = project['source_path']
-        return config
+        return {
+            "source_path": project['source_path'],
+            "translation_dirs": config.get("translation_dirs", [])
+        }
     except Exception as e:
-        logging.error(f"Error loading project config: {e}")
+        logging.error(f"Error loading config: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/api/project/{project_id}/config")
+def update_project_config(project_id: str, config_data: Dict[str, Any]):
+    """Updates the project configuration (e.g. translation dirs)."""
+    project = project_manager.get_project(project_id)
+    if not project:
+        raise HTTPException(status_code=404, detail="Project not found")
+    
+    try:
+        json_manager = ProjectJsonManager(project['source_path'])
+        json_manager.update_config(config_data)
+        return {"status": "success"}
+    except Exception as e:
+        logging.error(f"Error updating config: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
 class UpdateConfigRequest(BaseModel):

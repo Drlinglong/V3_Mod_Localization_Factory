@@ -554,5 +554,16 @@
   "proofreading.original": "原文",
   "proofreading.ai_draft": "AI 参考",
   "proofreading.final_edit": "最终编辑",
-  "proofreading.validation_results": "验证结果"
+  "proofreading.validation_results": "验证结果",
+  "project_management.manage_paths.title": "管理翻译目录",
+  "project_management.manage_paths.current_dirs": "当前翻译目录",
+  "project_management.manage_paths.no_dirs": "未配置翻译目录",
+  "project_management.manage_paths.add_new": "添加新目录",
+  "project_management.manage_paths.placeholder": "输入或浏览目录路径",
+  "project_management.manage_paths.browse": "浏览",
+  "project_management.manage_paths.add": "添加",
+  "project_management.manage_paths.cancel": "取消",
+  "project_management.manage_paths.save": "保存更改",
+  "project_management.refresh_files": "刷新文件",
+  "project_management.delete_project": "删除项目"
 }

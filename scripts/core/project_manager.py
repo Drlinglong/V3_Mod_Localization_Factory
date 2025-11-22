@@ -125,107 +125,98 @@ class ProjectManager:
         else:
             logger.info("Folder is already in source directory.")
 
-        # 2. Generate IDs and Data
+        # Initialize JSON sidecar with empty translation_dirs
+        # User will add translation directories via Manage Paths UI
+        json_manager = ProjectJsonManager(final_source_path)
+        json_manager.update_config({
+            "translation_dirs": []
+        })
+
+        # Create project record in database
         project_id = str(uuid.uuid4())
-        target_path = f"{final_source_path}_translation"
-
-        project = Project(
-            project_id=project_id,
-            name=name,
-            game_id=game_id,
-            source_path=final_source_path,
-            target_path=target_path,
-            status='active',
-            created_at='' # DB handles this
-        )
-
-        # 3. DB Insertion
         conn = self._get_connection()
         cursor = conn.cursor()
-
         cursor.execute('''
-            INSERT INTO projects (project_id, name, game_id, source_path, target_path, status)
+            INSERT INTO projects (project_id, name, game_id, source_path, status, created_at)
             VALUES (?, ?, ?, ?, ?, ?)
-        ''', (project.project_id, project.name, project.game_id, project.source_path, project.target_path, project.status))
-        
+        ''', (project_id, name, game_id, final_source_path, 'active', datetime.datetime.now().isoformat()))
         conn.commit()
         conn.close()
 
-        # 4. Initialize JSON Sidecar
-        json_manager = ProjectJsonManager(final_source_path)
-        # Add default translation dir
-        json_manager.add_translation_dir(target_path)
+        # Create project object for return
+        project = {
+            'project_id': project_id,
+            'name': name,
+            'game_id': game_id,
+            'source_path': final_source_path,
+            'status': 'active'
+        }
 
-        # 5. Scan Files (Initial Scan)
+        # Scan files (Initial Scan)
         self.refresh_project_files(project_id)
 
         return project
 
     def refresh_project_files(self, project_id: str):
-        """
-        Rescans source and translation directories and updates the DB and JSON sidecar.
-        """
+        """Rescans source and translation directories and updates the DB and JSON sidecar."""
         project = self.get_project(project_id)
         if not project:
+            logger.error(f"Project {project_id} not found")
             return
 
         source_path = project['source_path']
-        json_manager = ProjectJsonManager(source_path)
-        config = json_manager.get_config()
-        translation_dirs = config.get("translation_dirs", [])
+        
+        # Get translation_dirs from JSON sidecar
+        try:
+            json_manager = ProjectJsonManager(source_path)
+            config = json_manager.get_config()
+            translation_dirs = config.get('translation_dirs', [])
+            logger.info(f"Loaded {len(translation_dirs)} translation directories from config")
+        except Exception as e:
+            logger.error(f"Failed to load translation_dirs from JSON: {e}")
+            translation_dirs = []
 
-        # Collect all files
+        # Collect all files to upsert
         files_to_upsert = []
         
         # Helper to scan a directory
         def scan_dir(root_path, file_type):
             if not os.path.exists(root_path):
+                logger.warning(f"Directory not found: {root_path}")
                 return
             for root, dirs, files in os.walk(root_path):
                 for file in files:
                     if file.endswith(('.yml', '.yaml', '.txt', '.csv', '.json')):
                         full_path = os.path.join(root, file)
-                        # Store relative path relative to the specific root (source or translation dir)
-                        # BUT for uniqueness in DB, we might need a better strategy if filenames collide.
-                        # For now, let's store the absolute path or relative to project root?
-                        # The DB schema has `file_path` which was relative.
-                        # Let's store RELATIVE path if inside source, ABSOLUTE if outside?
-                        # Or just store absolute path in DB for simplicity now that we have multiple roots.
-                        # Wait, `file_path` in DB is part of UNIQUE constraint.
-                        # Let's stick to storing the full path in `file_path` column for clarity, 
-                        # or relative to the specific root if we track which root it belongs to.
-                        # Given the requirement "allow user to add translation directory", 
-                        # these dirs could be anywhere.
-                        # So `file_path` should probably be the absolute path to be safe.
                         
                         # Count lines
                         line_count = 0
                         try:
                             with open(full_path, 'r', encoding='utf-8', errors='ignore') as f:
                                 line_count = sum(1 for _ in f)
-                            # logger.info(f"Counted {line_count} lines for {file}") 
                         except Exception as e:
                             logger.error(f"Failed to count lines for {full_path}: {e}")
-                            pass
 
                         files_to_upsert.append({
-                            'file_id': str(uuid.uuid5(uuid.NAMESPACE_URL, full_path)), # Deterministic ID based on path
+                            'file_id': str(uuid.uuid5(uuid.NAMESPACE_URL, full_path)),
                             'project_id': project_id,
-                            'file_path': full_path, # Storing absolute path
-                            'status': 'todo', # Default, will be ignored on update if exists
-                            'original_key_count': 0, # Placeholder
+                            'file_path': full_path,
+                            'status': 'todo',
+                            'original_key_count': 0,
                             'line_count': line_count,
                             'file_type': file_type
                         })
 
-        # Scan Source
+        # Scan source directory
         scan_dir(source_path, 'source')
+        
+        # Scan translation directories
+        for trans_dir in translation_dirs:
+            scan_dir(trans_dir, 'translation')
 
-        # Scan Translation Dirs
-        for t_dir in translation_dirs:
-            scan_dir(t_dir, 'translation')
+        logger.info(f"Found {len(files_to_upsert)} total files to upsert")
 
-        # Update DB
+        # Upsert into DB
         conn = self._get_connection()
         cursor = conn.cursor()
 

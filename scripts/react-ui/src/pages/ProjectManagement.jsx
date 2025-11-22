@@ -76,6 +76,7 @@ export default function ProjectManagement() {
       const totalLines = files.reduce((acc, f) => acc + (f.line_count || 0), 0);
 
       setProjectDetails({
+        project_id: projectId, // Add project_id here!
         overview: {
           totalFiles: files.length,
           totalLines: totalLines,
@@ -296,8 +297,8 @@ export default function ProjectManagement() {
             </Title>
           </Group>
           <Group>
-            <Button variant="light" size="xs" onClick={handleRefreshFiles}>Refresh Files</Button>
-            <Button variant="light" color="red" size="xs" onClick={() => setDeleteModalOpen(true)}>Delete Project</Button>
+            <Button variant="light" size="xs" onClick={handleRefreshFiles}>{t('project_management.refresh_files')}</Button>
+            <Button variant="light" color="red" size="xs" onClick={() => setDeleteModalOpen(true)}>{t('project_management.delete_project')}</Button>
             <Badge size="lg">{selectedProject.game_id}</Badge>
           </Group>
         </Group>
@@ -319,6 +320,7 @@ export default function ProjectManagement() {
               projectDetails={projectDetails}
               handleProofread={handleProofread}
               handleStatusChange={() => { }}
+              onPathsUpdated={() => fetchProjectFiles(selectedProject.project_id)}
             />
           ) : <Text>Loading details...</Text>}
         </Tabs.Panel>
