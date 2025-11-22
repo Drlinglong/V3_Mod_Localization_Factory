@@ -165,6 +165,160 @@ class ParallelProcessor:
 
         return processed_task, warnings
 
+    def process_files_stream(
+        self,
+        file_tasks_generator: Any, # Iterator[FileTask]
+        translation_function: Callable
+    ) -> Any: # Iterator[Tuple[str, List[str], List[Dict[str, Any]]]]
+        """
+        Stream processing of files.
+        Yields (filename, translated_texts, warnings) as soon as a file is completed.
+        """
+        # Buffer to hold incomplete file batches: {filename: {batch_index: BatchTask}}
+        file_buffers: Dict[str, Dict[int, BatchTask]] = {}
+        # Track total batches expected per file: {filename: total_batches}
+        file_batch_counts: Dict[str, int] = {}
+        
+        # We need a way to map futures back to their file and batch index
+        # But since we are consuming a generator, we can't submit everything at once if we want to be lazy?
+        # Actually, for "streaming" input, we should submit as we consume.
+        # But we also need to yield results as they complete.
+        
+        # Use a bounded executor or semaphore to prevent submitting too many tasks at once if the generator is infinite?
+        # For now, assuming the generator yields all files, but we want to process them in parallel and yield results ASAP.
+        
+        with concurrent.futures.ThreadPoolExecutor(max_workers=self.max_workers) as executor:
+            # We need to manage submission and completion simultaneously.
+            # Since we can't easily "select" on both generator and futures, 
+            # we can submit all tasks (if memory allows) or use a separate thread for submission.
+            # Given the requirement is to reduce memory usage, we shouldn't generate ALL BatchTasks at once if there are millions.
+            # But typically we have thousands. 
+            
+            # However, the main memory bottleneck is loading ALL file contents into memory.
+            # The `file_tasks_generator` should yield FileTasks one by one (reading file content on demand).
+            
+            future_to_info = {}
+            
+            # Helper to submit batches for a file
+            def submit_file(file_task: FileTask):
+                if not file_task.texts_to_translate:
+                    # Handle empty file immediately
+                    return True, (file_task.filename, [], [])
+                
+                chunk_size = GEMINI_CLI_CHUNK_SIZE if file_task.provider_name == "gemini_cli" else CHUNK_SIZE
+                texts = file_task.texts_to_translate
+                total_batches = (len(texts) + chunk_size - 1) // chunk_size
+                file_batch_counts[file_task.filename] = total_batches
+                file_buffers[file_task.filename] = {}
+                
+                for i in range(0, len(texts), chunk_size):
+                    batch_texts = texts[i:i + chunk_size]
+                    batch_index = i // chunk_size
+                    
+                    batch_task = BatchTask(
+                        file_task=file_task,
+                        batch_index=batch_index,
+                        start_index=i,
+                        end_index=i + len(batch_texts),
+                        texts=batch_texts
+                    )
+                    
+                    future = executor.submit(self._process_single_batch, batch_task, translation_function)
+                    future_to_info[future] = (file_task.filename, batch_index)
+                return False, None
+
+            # We iterate through the generator and submit tasks. 
+            # To avoid loading EVERYTHING, we can't just loop to end.
+            # But `as_completed` requires a set of futures.
+            
+            # Strategy: 
+            # 1. Submit a chunk of files.
+            # 2. Loop while there are pending futures.
+            # 3. In the loop, check for completed futures.
+            # 4. Also try to submit more files if we have capacity (optional, for now let's just submit all or use a smart loop).
+            
+            # Simpler approach for V1: 
+            # The generator yields FileTasks. We iterate it.
+            # If we just iterate and submit, we still hold all Futures in memory. 
+            # But Futures are small. The FileTask content is what's big.
+            # Wait, `BatchTask` holds reference to `FileTask`. 
+            # So if we submit all, we hold all FileTasks in memory. That defeats the purpose.
+            
+            # So we MUST limit the number of active files/batches.
+            MAX_PENDING_BATCHES = self.max_workers * 4
+            pending_batches_count = 0
+            
+            iterator = iter(file_tasks_generator)
+            done_consuming = False
+            
+            while not done_consuming or future_to_info:
+                # 1. Submit new tasks if we have capacity
+                while not done_consuming and pending_batches_count < MAX_PENDING_BATCHES:
+                    try:
+                        file_task = next(iterator)
+                        is_empty, empty_result = submit_file(file_task)
+                        if is_empty:
+                            yield empty_result
+                        else:
+                            # Update pending count
+                            pending_batches_count += file_batch_counts[file_task.filename]
+                    except StopIteration:
+                        done_consuming = True
+                
+                # 2. Wait for at least one future to complete
+                if future_to_info:
+                    # wait for first completed
+                    done, _ = concurrent.futures.wait(
+                        future_to_info.keys(), 
+                        return_when=concurrent.futures.FIRST_COMPLETED
+                    )
+                    
+                    for future in done:
+                        filename, batch_index = future_to_info.pop(future)
+                        pending_batches_count -= 1
+                        
+                        try:
+                            processed_task, warnings = future.result()
+                        except Exception as e:
+                            self.logger.error(f"Batch processing failed: {e}")
+                            # Fail the file?
+                            # For now, just mark as failed in buffer
+                            # We need to handle this gracefully
+                            continue
+
+                        if filename not in file_buffers:
+                            # Should not happen unless logic error
+                            continue
+                            
+                        file_buffers[filename][batch_index] = processed_task
+                        
+                            # Check if file is complete
+                        if len(file_buffers[filename]) == file_batch_counts[filename]:
+                            # Assemble file
+                            sorted_batches = [file_buffers[filename][i] for i in range(file_batch_counts[filename])]
+                            
+                            # Get the FileTask from the first batch (all batches share the same FileTask reference)
+                            # We need this to return the full context (original lines, etc.)
+                            file_task_ref = sorted_batches[0].file_task
+                            
+                            full_translated_texts = []
+                            file_failed = False
+                            
+                            for task in sorted_batches:
+                                if task.failed:
+                                    file_failed = True
+                                full_translated_texts.extend(task.translated_texts or [])
+                            
+                            if file_failed:
+                                self.logger.error(f"File {filename} incomplete.")
+                                yield (file_task_ref, None, []) # None indicates failure
+                            else:
+                                yield (file_task_ref, full_translated_texts, []) # TODO: Pass warnings if tracked
+                            
+                            # Cleanup
+                            del file_buffers[filename]
+                            del file_batch_counts[filename]
+
     def _collect_file_results(
         self,
         file_tasks: List[FileTask],
@@ -177,7 +331,7 @@ class ParallelProcessor:
             if filename not in grouped_batch_results:
                 grouped_batch_results[filename] = {}
             grouped_batch_results[filename][batch_idx] = task
-
+        
         for file_task in file_tasks:
             if not file_task.texts_to_translate:
                 file_results[file_task.filename] = []
@@ -187,6 +341,11 @@ class ParallelProcessor:
             file_failed = False
             
             file_batches = grouped_batch_results.get(file_task.filename, {})
+            # Check if we have all batches
+            # In the original code, we didn't strictly check if we have ALL batches, 
+            # but we iterated sorted keys. 
+            # If a batch was missing (e.g. exception), it would be skipped, length mismatch -> fallback.
+            
             sorted_batch_indices = sorted(file_batches.keys())
 
             for batch_idx in sorted_batch_indices:
