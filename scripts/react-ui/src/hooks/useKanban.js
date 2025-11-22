@@ -1,109 +1,125 @@
 import { useState, useEffect, useCallback } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { useTranslation } from 'react-i18next';
+import axios from 'axios';
 
-// --- Mock Data Generators ---
-const MOCK_FILES = [
-    { name: 'events_l_english.yml', path: 'localization/english/events_l_english.yml', lines: 150 },
-    { name: 'modifiers_l_english.yml', path: 'localization/english/modifiers_l_english.yml', lines: 45 },
-    { name: 'decisions_l_english.yml', path: 'localization/english/decisions_l_english.yml', lines: 200 },
-    { name: 'diplomacy_l_english.yml', path: 'localization/english/diplomacy_l_english.yml', lines: 80 },
-    { name: 'gui_l_english.yml', path: 'localization/english/gui_l_english.yml', lines: 320 },
-];
+const API_BASE = 'http://localhost:8000/api';
 
-const INITIAL_MOCK_STORED_DATA = {
-    // Tasks that have been modified or are notes
-    'task-note-1': {
-        id: 'task-note-1',
-        type: 'note',
-        title: 'Fix typo in intro',
-        status: 'todo',
-        comments: 'Line 42 has a typo.',
-        priority: 'high'
-    },
-    // Example of a file task that has moved
-    'events_l_english.yml': {
-        status: 'in_progress',
-        comments: 'Working on the naval events.'
-    }
-};
-
-export const COLUMNS = ['todo', 'in_progress', 'proofreading', 'paused', 'done'];
-
-export const useKanban = () => {
+export const useKanban = (projectId) => {
     const { t } = useTranslation();
     const [tasks, setTasks] = useState([]);
+    const [columns, setColumns] = useState(['todo', 'in_progress', 'proofreading', 'paused', 'done']);
     const [isLoading, setIsLoading] = useState(true);
 
-    // --- Simulation: Load Data ---
+    // Load Data from Backend
     useEffect(() => {
+        if (!projectId) return;
+
         const loadData = async () => {
             setIsLoading(true);
-            // In a real app, this would fetch the file list and the JSON sidecar
-            // await api.getProjectStatus();
+            try {
+                const res = await axios.get(`${API_BASE}/project/${projectId}/kanban`);
+                const data = res.data;
 
-            // 1. Generate File Tasks
-            const fileTasks = MOCK_FILES.map(file => {
-                const storedInfo = INITIAL_MOCK_STORED_DATA[file.name];
-                return {
-                    id: file.name, // Using filename as ID for simplicity in this mock
-                    type: 'file',
-                    title: file.name,
-                    filePath: file.path,
-                    // Default to 'todo' if not stored, or use stored status
-                    status: storedInfo?.status || 'todo',
-                    comments: storedInfo?.comments || '',
-                    priority: 'medium',
-                    meta: { lines: file.lines }
-                };
-            });
-
-            // 2. Load Note Tasks
-            const noteTasks = Object.values(INITIAL_MOCK_STORED_DATA)
-                .filter(item => item.type === 'note');
-
-            setTasks([...fileTasks, ...noteTasks]);
-            setIsLoading(false);
+                if (data.tasks) {
+                    setTasks(Object.values(data.tasks));
+                }
+                if (data.column_order) {
+                    setColumns(data.column_order);
+                }
+            } catch (error) {
+                console.error("Failed to load Kanban data:", error);
+            } finally {
+                setIsLoading(false);
+            }
         };
 
         loadData();
-    }, []);
+    }, [projectId]);
+
+    // Save Data to Backend
+    const saveBoard = useCallback(async (newTasks, newColumns) => {
+        if (!projectId) return;
+
+        // Convert array back to map for storage
+        const tasksMap = {};
+        newTasks.forEach(t => tasksMap[t.id] = t);
+
+        try {
+            await axios.post(`${API_BASE}/project/${projectId}/kanban`, {
+                tasks: tasksMap,
+                columns: newColumns || columns, // Ensure we save columns even if not passed
+                column_order: newColumns || columns
+            });
+        } catch (error) {
+            console.error("Failed to save Kanban data:", error);
+        }
+    }, [projectId, columns]);
 
     // --- Actions ---
 
     const moveTask = useCallback((taskId, newStatus) => {
-        setTasks((prev) => prev.map(t =>
-            t.id === taskId ? { ...t, status: newStatus } : t
-        ));
-        // TODO: Trigger "Save" to backend
-        console.log(`[Sync] Moved ${taskId} to ${newStatus}`);
-    }, []);
+        setTasks((prev) => {
+            const updatedTasks = prev.map(t =>
+                t.id === taskId ? { ...t, status: newStatus } : t
+            );
+            saveBoard(updatedTasks, columns);
+            return updatedTasks;
+        });
+    }, [saveBoard, columns]);
 
     const addNoteTask = useCallback((status = 'todo') => {
         const newTask = {
             id: uuidv4(),
             type: 'note',
-            title: t('project_management.kanban.new_task'), // Localized default title
+            title: t('project_management.kanban.new_task'),
             status,
             comments: '',
             priority: 'medium'
         };
-        setTasks(prev => [newTask, ...prev]);
-        console.log(`[Sync] Created note ${newTask.id}`);
+        setTasks(prev => {
+            const updatedTasks = [newTask, ...prev];
+            saveBoard(updatedTasks, columns);
+            return updatedTasks;
+        });
         return newTask;
-    }, [t]); // Added t as dependency
+    }, [t, saveBoard, columns]);
 
     const updateTask = useCallback((taskId, updates) => {
-        setTasks(prev => prev.map(t =>
-            t.id === taskId ? { ...t, ...updates } : t
-        ));
-        console.log(`[Sync] Updated ${taskId}`, updates);
-    }, []);
+        setTasks(prev => {
+            const updatedTasks = prev.map(t =>
+                t.id === taskId ? { ...t, ...updates } : t
+            );
+            saveBoard(updatedTasks, columns);
+            return updatedTasks;
+        });
+    }, [saveBoard, columns]);
 
     const deleteTask = useCallback((taskId) => {
-        setTasks(prev => prev.filter(t => t.id !== taskId));
-        console.log(`[Sync] Deleted ${taskId}`);
-    }, []);
+        setTasks(prev => {
+            const updatedTasks = prev.filter(t => t.id !== taskId);
+            saveBoard(updatedTasks, columns);
+            return updatedTasks;
+        });
+    }, [saveBoard, columns]);
+
+    const refreshBoard = useCallback(async () => {
+        if (!projectId) return;
+        setIsLoading(true);
+        try {
+            // Trigger backend refresh
+            await axios.post(`${API_BASE}/project/${projectId}/refresh`);
+            // Reload data
+            const res = await axios.get(`${API_BASE}/project/${projectId}/kanban`);
+            const data = res.data;
+            if (data.tasks) setTasks(Object.values(data.tasks));
+            if (data.column_order) setColumns(data.column_order);
+        } catch (error) {
+            console.error("Failed to refresh board:", error);
+        } finally {
+            setIsLoading(false);
+        }
+    }, [projectId]);
 
     return {
         tasks,
@@ -112,6 +128,7 @@ export const useKanban = () => {
         addNoteTask,
         updateTask,
         deleteTask,
-        columns: COLUMNS
+        refreshBoard,
+        columns
     };
 };

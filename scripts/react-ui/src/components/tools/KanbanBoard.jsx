@@ -8,7 +8,7 @@ import { TaskCard } from './TaskCard';
 import { TaskDetailsPanel } from './TaskDetailsPanel';
 import styles from '../../pages/ProjectManagement.module.css';
 
-export const KanbanBoard = () => {
+export const KanbanBoard = ({ projectId }) => {
     const {
         tasks,
         columns,
@@ -16,7 +16,7 @@ export const KanbanBoard = () => {
         addNoteTask,
         updateTask,
         deleteTask
-    } = useKanban();
+    } = useKanban(projectId);
 
     const { setSidebarContent, setSidebarWidth } = useSidebar();
     const [activeId, setActiveId] = useState(null); // For DragOverlay

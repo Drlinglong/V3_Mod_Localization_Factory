@@ -8,7 +8,7 @@ from pathlib import Path
 from scripts.utils import read_text_bom, write_text_bom
 
 # KEY:0 "Tekst"
-ENTRY_RE = re.compile(r'^([A-Za-z0-9_\.]+):0\s+"(.*)"$')
+ENTRY_RE = re.compile(r'^\s*([A-Za-z0-9_\.\-]+):[0-9]*\s*"(.*)"\s*$')
 
 def parse_loc_file(path: Path) -> list[tuple[str, str]]:
     """

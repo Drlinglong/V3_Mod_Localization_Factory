@@ -4,13 +4,10 @@ import os
 import logging
 import hashlib
 from typing import Dict, List, Optional, Tuple, Any
-import re
 import json
 
 from scripts.utils import i18n
-from scripts.app_settings import PROJECT_ROOT, SOURCE_DIR
-
-MODS_CACHE_DB_PATH = os.path.join(PROJECT_ROOT, 'data', 'mods_cache.sqlite')
+from scripts.app_settings import PROJECT_ROOT, MODS_CACHE_DB_PATH
 
 class ArchiveManager:
     """
@@ -18,12 +15,14 @@ class ArchiveManager:
     """
     def __init__(self):
         self.conn: Optional[sqlite3.Connection] = None
+        self.initialize_database()
 
     def initialize_database(self) -> bool:
         """Initializes the database connection. Returns True on success, False on failure."""
         if self.conn:
             return True
         try:
+            os.makedirs(os.path.dirname(MODS_CACHE_DB_PATH), exist_ok=True)
             self.conn = sqlite3.connect(MODS_CACHE_DB_PATH, check_same_thread=False)
             self.conn.row_factory = sqlite3.Row
             self._create_tables(self.conn)
@@ -49,33 +48,25 @@ class ArchiveManager:
 
         cursor = self.conn.cursor()
         try:
-            # 检查 remote_file_id 是否已存在
-            cursor.execute("SELECT mod_id FROM mod_identities WHERE remote_file_id = ?", (remote_file_id,))
+            # Check by name first to avoid duplicates if remote_id changes or isn't used consistently
+            cursor.execute("SELECT mod_id FROM mods WHERE name = ?", (mod_name,))
             result = cursor.fetchone()
             if result:
                 return result['mod_id']
 
-            # 如果不存在，则创建新 mod 和 identity
             cursor.execute("INSERT OR IGNORE INTO mods (name) VALUES (?)", (mod_name,))
-            # 获取刚刚插入或已存在的 mod_id
             cursor.execute("SELECT mod_id FROM mods WHERE name = ?", (mod_name,))
             mod_id_result = cursor.fetchone()
             if not mod_id_result:
                  raise Exception("Failed to retrieve mod_id after insertion.")
             mod_id = mod_id_result['mod_id']
 
-            cursor.execute("INSERT INTO mod_identities (mod_id, remote_file_id) VALUES (?, ?)", (mod_id, remote_file_id))
+            # Optional: Link remote_file_id if provided
+            if remote_file_id:
+                cursor.execute("INSERT OR IGNORE INTO mod_identities (mod_id, remote_file_id) VALUES (?, ?)", (mod_id, remote_file_id))
+
             self.conn.commit()
-            logging.info(i18n.t("log_info_archive_entry_created", mod_name=mod_name, mod_id=mod_id, remote_file_id=remote_file_id))
             return mod_id
-        except sqlite3.IntegrityError:
-             # This can happen in a race condition, so we try to fetch the id again.
-            cursor.execute("SELECT mod_id FROM mod_identities WHERE remote_file_id = ?", (remote_file_id,))
-            result = cursor.fetchone()
-            if result:
-                return result['mod_id']
-            logging.error(i18n.t("log_error_archive_integrity"))
-            return None
         except Exception as e:
             logging.error(i18n.t("log_error_db_get_create_mod_id", error=e))
             self.conn.rollback()
@@ -90,7 +81,8 @@ class ArchiveManager:
         # Sort by filename to ensure consistent hash
         sorted_files = sorted(all_files_data, key=lambda x: x['filename'])
         for file_data in sorted_files:
-            for text in file_data['texts_to_translate']:
+            # Use texts_to_translate for hash
+            for text in file_data.get('texts_to_translate', []):
                 hasher.update(text.encode('utf-8'))
         snapshot_hash = hasher.hexdigest()
 
@@ -111,10 +103,25 @@ class ArchiveManager:
             # 4. 插入所有源条目
             source_entries = []
             for file_data in all_files_data:
+                # We need to store the file path somehow? The original schema didn't have file_path in source_entries.
+                # It seems the original schema was key-centric, assuming unique keys across the mod version.
+                # However, for the "Project" flow, we need file-based retrieval.
+                # I will ADD a 'file_path' column to source_entries if it doesn't exist?
+                # Or simpler: For now, I will assume keys are unique enough or I will rely on the structure.
+                # Wait, the key map is needed.
+                # The previous code: zip(file_data['key_map'], file_data['texts_to_translate'])
                 for key, text in zip(file_data['key_map'], file_data['texts_to_translate']):
-                    source_entries.append((version_id, key, text))
+                    # We are losing file_path here. This is a flaw in the original schema for my new requirement.
+                    # I will modify the schema to include file_path.
+                    source_entries.append((version_id, key, text, file_data.get('filename', 'unknown')))
 
-            cursor.executemany("INSERT INTO source_entries (version_id, entry_key, source_text) VALUES (?, ?, ?)", source_entries)
+            # Check if file_path column exists, if not add it
+            cursor.execute("PRAGMA table_info(source_entries)")
+            columns = [col['name'] for col in cursor.fetchall()]
+            if 'file_path' not in columns:
+                cursor.execute("ALTER TABLE source_entries ADD COLUMN file_path TEXT DEFAULT ''")
+
+            cursor.executemany("INSERT OR IGNORE INTO source_entries (version_id, entry_key, source_text, file_path) VALUES (?, ?, ?, ?)", source_entries)
             self.conn.commit()
             logging.info(i18n.t("log_info_archived_source_entries", count=len(source_entries), version_id=version_id))
             return version_id
@@ -129,34 +136,26 @@ class ArchiveManager:
 
         cursor = self.conn.cursor()
         try:
-            # 1. 构建 key -> translated_text 的映射
-            key_to_translation = {}
+            upsert_data = []
+
             for filename, translated_texts in file_results.items():
-                # Find the corresponding file_data
                 file_data = next((fd for fd in all_files_data if fd['filename'] == filename), None)
                 if not file_data or not translated_texts: continue
 
                 for key, translated_text in zip(file_data['key_map'], translated_texts):
-                    key_to_translation[key] = translated_text
+                    # Find source entry
+                    cursor.execute(
+                        "SELECT source_entry_id FROM source_entries WHERE version_id = ? AND entry_key = ? AND file_path = ?",
+                        (version_id, key, filename)
+                    )
+                    row = cursor.fetchone()
+                    if row:
+                        source_entry_id = row['source_entry_id']
+                        upsert_data.append((source_entry_id, target_lang_code, translated_text, translated_text))
 
-            if not key_to_translation:
-                logging.warning(i18n.t("log_warn_no_translations_to_archive"))
+            if not upsert_data:
                 return
 
-            # 2. 准备 UPSERT 数据
-            upsert_data = []
-            # Fetch all relevant source_entry_ids at once for efficiency
-            keys = list(key_to_translation.keys())
-            placeholders = ','.join('?' for _ in keys)
-            cursor.execute(f"SELECT source_entry_id, entry_key FROM source_entries WHERE version_id = ? AND entry_key IN ({placeholders})", [version_id] + keys)
-            source_entry_map = {row['entry_key']: row['source_entry_id'] for row in cursor.fetchall()}
-
-            for key, translated_text in key_to_translation.items():
-                source_entry_id = source_entry_map.get(key)
-                if source_entry_id:
-                    upsert_data.append((source_entry_id, target_lang_code, translated_text, translated_text))
-
-            # 3. 执行 UPSERT
             cursor.executemany("""
                 INSERT INTO translated_entries (source_entry_id, language_code, translated_text)
                 VALUES (?, ?, ?)
@@ -171,6 +170,91 @@ class ArchiveManager:
         except Exception as e:
             logging.error(i18n.t("log_error_db_archive_results", lang_code=target_lang_code, error=e))
             self.conn.rollback()
+
+    # --- New Methods for Project/Proofreading Flow ---
+
+    def get_entries(self, mod_name: str, file_path: str, language: str = "zh-CN") -> List[Dict[str, Any]]:
+        """
+        Retrieves merged source and translation entries for a specific file in the latest version of a mod.
+        """
+        if not self.conn: return []
+        cursor = self.conn.cursor()
+
+        # 1. Get Mod ID
+        cursor.execute("SELECT mod_id FROM mods WHERE name = ?", (mod_name,))
+        mod_row = cursor.fetchone()
+        if not mod_row: return []
+        mod_id = mod_row['mod_id']
+
+        # 2. Get Latest Version ID
+        cursor.execute("SELECT version_id FROM source_versions WHERE mod_id = ? ORDER BY created_at DESC LIMIT 1", (mod_id,))
+        ver_row = cursor.fetchone()
+        if not ver_row: return []
+        version_id = ver_row['version_id']
+
+        # 3. Fetch Entries
+        # Note: file_path in DB might be just filename or relative path depending on how it was saved.
+        # In create_source_version, I saved it as `file_data.get('filename')`.
+        # The `file_path` arg passed here is likely the relative path.
+        # We need to match the filename.
+        filename = os.path.basename(file_path)
+
+        query = '''
+            SELECT
+                s.entry_key as key,
+                s.source_text as original,
+                t.translated_text as translation
+            FROM source_entries s
+            LEFT JOIN translated_entries t ON s.source_entry_id = t.source_entry_id AND t.language_code = ?
+            WHERE s.version_id = ? AND s.file_path = ?
+        '''
+
+        cursor.execute(query, (language, version_id, filename))
+        rows = cursor.fetchall()
+
+        return [dict(row) for row in rows]
+
+    def update_translations(self, mod_name: str, file_path: str, entries: List[Dict[str, Any]], language: str = "zh-CN"):
+        """
+        Updates translations for specific keys.
+        """
+        if not self.conn: return
+        cursor = self.conn.cursor()
+
+        # Get Mod/Version (Similar to get_entries)
+        cursor.execute("SELECT mod_id FROM mods WHERE name = ?", (mod_name,))
+        mod_row = cursor.fetchone()
+        if not mod_row: return
+        mod_id = mod_row['mod_id']
+
+        cursor.execute("SELECT version_id FROM source_versions WHERE mod_id = ? ORDER BY created_at DESC LIMIT 1", (mod_id,))
+        ver_row = cursor.fetchone()
+        if not ver_row: return
+        version_id = ver_row['version_id']
+
+        filename = os.path.basename(file_path)
+
+        for entry in entries:
+            key = entry['key']
+            translation = entry.get('translation', '')
+
+            # Find source entry ID
+            cursor.execute("SELECT source_entry_id FROM source_entries WHERE version_id=? AND file_path=? AND entry_key=?",
+                           (version_id, filename, key))
+            row = cursor.fetchone()
+
+            if row:
+                source_entry_id = row['source_entry_id']
+                # Upsert translation
+                cursor.execute('''
+                    INSERT INTO translated_entries (source_entry_id, language_code, translated_text)
+                    VALUES (?, ?, ?)
+                    ON CONFLICT(source_entry_id, language_code) DO UPDATE SET
+                    translated_text=excluded.translated_text,
+                    last_translated_at=CURRENT_TIMESTAMP
+                ''', (source_entry_id, language, translation))
+
+        self.conn.commit()
 
     def close(self):
         if self.conn:
