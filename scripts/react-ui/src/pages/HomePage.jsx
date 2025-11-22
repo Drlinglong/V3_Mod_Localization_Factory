@@ -37,17 +37,17 @@ const HomePage = () => {
         p={40}
       >
         <Stack style={{ position: 'relative', zIndex: 2 }}>
-          <Title order={1} c="white" style={{ fontSize: '2.5rem', fontWeight: 800 }}>
+          <Title order={1} className={styles.cardTitle} style={{ fontSize: '2.5rem', fontWeight: 800 }}>
             {greeting}, User!
           </Title>
-          <Text c="white" size="lg" style={{ opacity: 0.9, maxWidth: '600px' }}>
+          <Text size="lg" style={{ opacity: 0.9, maxWidth: '600px', color: 'var(--text-main)' }}>
             "{slogan}"
           </Text>
           <Group mt="lg">
-            <Button variant="white" color="blue" size="md" radius="md" leftSection={<IconRocket size={20} />} className={styles.actionButton}>
+            <Button size="md" radius="md" leftSection={<IconRocket size={20} />} className={styles.actionButton}>
               {t('homepage_action_card_new_project')}
             </Button>
-            <Button variant="filled" color="rgba(0,0,0,0.2)" size="md" radius="md" leftSection={<IconRefresh size={20} />} className={styles.actionButton}>
+            <Button size="md" radius="md" leftSection={<IconRefresh size={20} />} className={styles.actionButton}>
               {t('homepage_action_card_update_project')}
             </Button>
           </Group>
@@ -61,7 +61,7 @@ const HomePage = () => {
             right: -50,
             bottom: -50,
             opacity: 0.1,
-            color: 'white',
+            color: 'var(--text-highlight)',
             transform: 'rotate(-15deg)'
           }}
         />

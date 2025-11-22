@@ -23,6 +23,9 @@ export const ThemeProvider = ({ children }) => {
 
     // Set the data-theme attribute for the new system
     root.setAttribute('data-theme', theme);
+    // ALSO add the class for CSS selectors like .byzantine .mantine-Button-root
+    root.classList.add(theme);
+
     localStorage.setItem('theme', theme);
   }, [theme]);
 

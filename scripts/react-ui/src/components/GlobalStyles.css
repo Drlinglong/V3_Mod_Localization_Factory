@@ -23,45 +23,118 @@ body,
 .global-background-layer.victorian {
     background-color: #3b2519;
     background-image:
-        repeating-linear-gradient(90deg, transparent 0, transparent 2px, rgba(0,0,0,0.1) 2px, rgba(0,0,0,0.1) 4px),
-        repeating-linear-gradient(0deg, transparent 0, transparent 50px, rgba(0,0,0,0.1) 50px, rgba(0,0,0,0.1) 51px),
+        repeating-linear-gradient(90deg, transparent 0, transparent 2px, rgba(0, 0, 0, 0.1) 2px, rgba(0, 0, 0, 0.1) 4px),
+        repeating-linear-gradient(0deg, transparent 0, transparent 50px, rgba(0, 0, 0, 0.1) 50px, rgba(0, 0, 0, 0.1) 51px),
         linear-gradient(rgba(60, 34, 20, 0.9), rgba(60, 34, 20, 0.9));
     background-size: 100% 100%, 100% 100%, cover;
 }
 
-/* --- 2. Byzantine: Deep Purple & Gold --- */
-/* Radial gradient for depth + subtle texture */
+/* --- 2. Byzantine: Deep Purple & Gold (Mosaic/Parchment) --- */
+/* Radial gradient for depth + subtle texture + Noise */
 .global-background-layer.byzantine {
     background-color: #2E1A47;
     background-image:
-        radial-gradient(circle at 50% 50%, #4a2c72 0%, #2E1A47 60%, #1C0F2A 100%),
-        repeating-linear-gradient(45deg, rgba(184, 134, 11, 0.03) 0px, rgba(184, 134, 11, 0.03) 1px, transparent 1px, transparent 10px);
+        /* Vignette */
+        radial-gradient(circle at 50% 50%, transparent 50%, rgba(0, 0, 0, 0.6) 100%),
+        /* Gold Dust/Mosaic Glimmer */
+        radial-gradient(white, rgba(255, 255, 255, .1) 1px, transparent 2px),
+        /* Base Gradient */
+        radial-gradient(circle at 50% 50%, #4a2c72 0%, #2E1A47 60%, #1C0F2A 100%);
+    background-size: 100% 100%, 150px 150px, 100% 100%;
 }
 
-/* --- 3. Sci-Fi: Deep Space --- */
-/* Black/Blue gradient + Stars simulation */
+/* Add a noise overlay for Byzantine to simulate parchment/stone texture */
+.global-background-layer.byzantine::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.05;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* --- 3. Sci-Fi: Deep Space (Hologram/CRT) --- */
+/* Black/Blue gradient + Stars simulation + Scanlines */
 .global-background-layer.scifi {
     background-color: #050508;
     background-image:
-        radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 3px),
-        radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 2px),
-        radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 3px),
+        /* Stars */
+        radial-gradient(white, rgba(255, 255, 255, .2) 2px, transparent 3px),
+        radial-gradient(white, rgba(255, 255, 255, .15) 1px, transparent 2px),
+        radial-gradient(white, rgba(255, 255, 255, .1) 2px, transparent 3px),
+        /* Deep Space */
         radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
     background-size: 550px 550px, 350px 350px, 250px 250px, 100% 100%;
     background-position: 0 0, 40px 60px, 130px 270px, 0 0;
 }
 
-/* --- 4. WWII: Olive Drab Camouflage --- */
+/* Scanline Animation */
+@keyframes scanline {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+.global-background-layer.scifi::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.2));
+    background-size: 100% 4px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.global-background-layer.scifi::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    z-index: 2;
+    background-size: 100% 2px, 3px 100%;
+    pointer-events: none;
+}
+
+/* --- 4. WWII: Olive Drab Camouflage (Old Photo) --- */
 /* Overlapping radial gradients to create organic blobs */
 .global-background-layer.wwii {
-    background-color: #4b5320; /* Base Olive Drab */
+    background-color: #4b5320;
+    /* Base Olive Drab */
     background-image:
         radial-gradient(circle at 20% 30%, #3d3d29 10%, transparent 11%),
         radial-gradient(circle at 80% 80%, #3d3d29 10%, transparent 11%),
         radial-gradient(circle at 50% 50%, #5e5e45 20%, transparent 21%),
         radial-gradient(circle at 10% 90%, #2e2e1e 15%, transparent 16%),
         radial-gradient(circle at 90% 10%, #2e2e1e 15%, transparent 16%);
-    background-size: 400px 400px; /* Pattern repeat size */
+    background-size: 400px 400px;
+    /* Pattern repeat size */
+}
+
+/* Sepia Overlay */
+.global-background-layer.wwii::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(112, 66, 20, 0.2);
+    mix-blend-mode: overlay;
+    pointer-events: none;
 }
 
 /* --- 5. Medieval: Parchment --- */
@@ -69,6 +142,6 @@ body,
 .global-background-layer.medieval {
     background-color: #f0e6d2;
     background-image:
-        linear-gradient(to bottom right, rgba(0,0,0,0.05), rgba(0,0,0,0.2)),
+        linear-gradient(to bottom right, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.2)),
         repeating-linear-gradient(0deg, transparent 0, transparent 1px, rgba(139, 69, 19, 0.02) 1px, rgba(139, 69, 19, 0.02) 3px);
 }
