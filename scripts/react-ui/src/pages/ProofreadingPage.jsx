@@ -87,6 +87,15 @@ const ProofreadingPage = () => {
       const loadedEntries = data.entries || [];
       setEntries(loadedEntries);
 
+      if (loadedEntries.length === 0) {
+        notifications.show({
+          title: 'Info',
+          message: "No entries found for this file. Please try refreshing the project.",
+          color: 'blue',
+          autoClose: 5000
+        });
+      }
+
       // Construct string representations
       const originals = loadedEntries.map(e => `# ${e.key}\n${e.original || ''}`).join('\n\n');
       // Assuming 'translation' in DB is the AI draft or current final?
@@ -113,13 +122,13 @@ const ProofreadingPage = () => {
     const regex = /^\s*([a-zA-Z0-9_\.]+):0\s*"(.*)"\s*$/;
 
     lines.forEach(line => {
-        const match = line.match(regex);
-        if (match) {
-            updatedEntries.push({
-                key: match[1],
-                translation: match[2]
-            });
-        }
+      const match = line.match(regex);
+      if (match) {
+        updatedEntries.push({
+          key: match[1],
+          translation: match[2]
+        });
+      }
     });
     return updatedEntries;
   };
@@ -220,7 +229,7 @@ const ProofreadingPage = () => {
       });
       setLinterResults(response.data);
     } catch (err) {
-        setLinterError("Failed to validate.");
+      setLinterError("Failed to validate.");
     } finally {
       setLinterLoading(false);
     }
@@ -258,7 +267,7 @@ const ProofreadingPage = () => {
             <Stack spacing="xs" mb="xs">
               <Group position="apart">
                 <Group spacing="xs">
-                   <Text size="sm" c="dimmed">Mode: 3-Column View</Text>
+                  <Text size="sm" c="dimmed">Mode: 3-Column View</Text>
                 </Group>
 
                 <Group spacing="xs">
@@ -353,32 +362,32 @@ const ProofreadingPage = () => {
 
           {/* --- Free Mode Panel --- */}
           <Tabs.Panel value="free" style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden', paddingTop: '10px' }}>
-             <Group mb="xs">
-                <Select
-                    data={['1', '2', '3', '4', '5']}
-                    value={linterGameId}
-                    onChange={setLinterGameId}
-                    placeholder="Game ID"
-                    size="xs"
-                />
-                <Button onClick={handleLinterValidate} loading={linterLoading} size="xs">Validate</Button>
-             </Group>
-             <MonacoWrapper value={linterContent} onChange={setLinterContent} theme="vs-dark" language="yaml" />
-             {linterError && <Text color="red">{linterError}</Text>}
-             {linterResults.length > 0 && (
-                 <Paper withBorder p="xs" mt="xs" h={150} style={{ overflowY: 'auto' }}>
-                    <Table striped highlightOnHover size="xs">
-                        <Table.Tbody>
-                            {linterResults.map((r, i) => (
-                                <Table.Tr key={i}>
-                                    <Table.Td><Badge color={getLevelColor(r.level)}>{r.level}</Badge></Table.Td>
-                                    <Table.Td>{r.message}</Table.Td>
-                                </Table.Tr>
-                            ))}
-                        </Table.Tbody>
-                    </Table>
-                 </Paper>
-             )}
+            <Group mb="xs">
+              <Select
+                data={['1', '2', '3', '4', '5']}
+                value={linterGameId}
+                onChange={setLinterGameId}
+                placeholder="Game ID"
+                size="xs"
+              />
+              <Button onClick={handleLinterValidate} loading={linterLoading} size="xs">Validate</Button>
+            </Group>
+            <MonacoWrapper value={linterContent} onChange={setLinterContent} theme="vs-dark" language="yaml" />
+            {linterError && <Text color="red">{linterError}</Text>}
+            {linterResults.length > 0 && (
+              <Paper withBorder p="xs" mt="xs" h={150} style={{ overflowY: 'auto' }}>
+                <Table striped highlightOnHover size="xs">
+                  <Table.Tbody>
+                    {linterResults.map((r, i) => (
+                      <Table.Tr key={i}>
+                        <Table.Td><Badge color={getLevelColor(r.level)}>{r.level}</Badge></Table.Td>
+                        <Table.Td>{r.message}</Table.Td>
+                      </Table.Tr>
+                    ))}
+                  </Table.Tbody>
+                </Table>
+              </Paper>
+            )}
           </Tabs.Panel>
 
         </Tabs>

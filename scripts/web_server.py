@@ -29,10 +29,12 @@ from scripts.utils import logger, i18n
 from scripts.core import workshop_formatter
 from scripts.core.glossary_manager import GlossaryManager
 from scripts.core.project_manager import ProjectManager
+from scripts.core.project_json_manager import ProjectJsonManager
 from scripts.core.archive_manager import ArchiveManager
 
 # Setup logger
 logger.setup_logger()
+i18n.load_language() # Load default language
 
 # Initialize Managers
 glossary_manager = GlossaryManager()
@@ -165,6 +167,19 @@ def list_project_files(project_id: str):
     """Lists files for a given project."""
     return project_manager.get_project_files(project_id)
 
+@app.delete("/api/project/{project_id}")
+def delete_project(project_id: str, delete_files: bool = False):
+    """Deletes a project. Set delete_files=true to also delete source directory."""
+    try:
+        success = project_manager.delete_project(project_id, delete_source_files=delete_files)
+        if success:
+            return {"status": "success", "message": "Project deleted"}
+        else:
+            raise HTTPException(status_code=404, detail="Project not found")
+    except Exception as e:
+        logging.error(f"Error deleting project: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
 @app.post("/api/translate/start")
 def start_translation_project(request: InitialTranslationRequest, background_tasks: BackgroundTasks):
     """
@@ -197,11 +212,105 @@ def get_proofread_data(project_id: str, file_id: str):
     entries = archive_manager.get_entries(mod_name, file_path)
 
     return {
-        "project_id": project_id,
         "file_id": file_id,
         "file_path": file_path,
+        "mod_name": mod_name,
         "entries": entries
     }
+
+# --- Kanban & Config Endpoints ---
+
+@app.get("/api/project/{project_id}/kanban")
+def get_project_kanban(project_id: str):
+    """Gets the Kanban board state from the JSON sidecar."""
+    project = project_manager.get_project(project_id)
+    if not project:
+        raise HTTPException(status_code=404, detail="Project not found")
+    
+    try:
+        json_manager = ProjectJsonManager(project['source_path'])
+        return json_manager.get_kanban_data()
+    except Exception as e:
+        logging.error(f"Error loading Kanban data: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/api/project/{project_id}/kanban")
+def save_project_kanban(project_id: str, kanban_data: Dict[str, Any]):
+    """Saves the Kanban board state to the JSON sidecar."""
+    project = project_manager.get_project(project_id)
+    if not project:
+        raise HTTPException(status_code=404, detail="Project not found")
+    
+    try:
+        json_manager = ProjectJsonManager(project['source_path'])
+        json_manager.save_kanban_data(kanban_data)
+        return {"status": "success"}
+    except Exception as e:
+        logging.error(f"Error saving Kanban data: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/api/project/{project_id}/refresh")
+def refresh_project_files(project_id: str):
+    """Rescans the project files and updates the DB and Kanban."""
+    try:
+        project_manager.refresh_project_files(project_id)
+        return {"status": "success"}
+    except Exception as e:
+        logging.error(f"Error refreshing project files: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/api/project/{project_id}/config")
+def get_project_config(project_id: str):
+    """Gets the project configuration (e.g. translation dirs)."""
+    project = project_manager.get_project(project_id)
+    if not project:
+        raise HTTPException(status_code=404, detail="Project not found")
+    
+    try:
+        json_manager = ProjectJsonManager(project['source_path'])
+        config = json_manager.get_config()
+        # Also return source_path for reference
+        config['source_path'] = project['source_path']
+        return config
+    except Exception as e:
+        logging.error(f"Error loading project config: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+class UpdateConfigRequest(BaseModel):
+    action: str # 'add_dir', 'remove_dir'
+    path: str
+
+@app.post("/api/project/{project_id}/config")
+def update_project_config(project_id: str, request: UpdateConfigRequest):
+    """Updates project configuration."""
+    project = project_manager.get_project(project_id)
+    if not project:
+        raise HTTPException(status_code=404, detail="Project not found")
+    
+    try:
+        json_manager = ProjectJsonManager(project['source_path'])
+        
+        if request.action == 'add_dir':
+            if not os.path.exists(request.path):
+                 raise HTTPException(status_code=404, detail="Directory not found")
+            json_manager.add_translation_dir(request.path)
+        elif request.action == 'remove_dir':
+            json_manager.remove_translation_dir(request.path)
+        else:
+            raise HTTPException(status_code=400, detail="Invalid action")
+            
+        # Refresh files after config change
+        project_manager.refresh_project_files(project_id)
+        
+        return {"status": "success"}
+    except HTTPException:
+        raise
+    except Exception as e:
+        logging.error(f"Error updating project config: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+# --- Existing Endpoints (Restored) ---
 
 @app.post("/api/proofread/save")
 def save_proofreading_db(request: SaveProofreadingRequest):

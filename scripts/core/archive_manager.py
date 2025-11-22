@@ -121,7 +121,7 @@ class ArchiveManager:
             if 'file_path' not in columns:
                 cursor.execute("ALTER TABLE source_entries ADD COLUMN file_path TEXT DEFAULT ''")
 
-            cursor.executemany("INSERT INTO source_entries (version_id, entry_key, source_text, file_path) VALUES (?, ?, ?, ?)", source_entries)
+            cursor.executemany("INSERT OR IGNORE INTO source_entries (version_id, entry_key, source_text, file_path) VALUES (?, ?, ?, ?)", source_entries)
             self.conn.commit()
             logging.info(i18n.t("log_info_archived_source_entries", count=len(source_entries), version_id=version_id))
             return version_id
