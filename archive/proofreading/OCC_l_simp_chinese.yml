@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+
+ occ_offer_convoys:"提升船队贡献"
+ occ_offer_convoys_desc:"提升 [concept_subject] 向其 [concept_market_owner] 的 [concept_overlord] 船队贡献"
+ occ_offer_convoys_action_notification_name:"[INITIATOR_COUNTRY.GetName] 提升船队贡献"
+ occ_offer_convoys_action_notification_desc:"[INITIATOR_COUNTRY.GetName] 已提出提升其船队贡献"
+ occ_offer_convoys_action_propose_name: "$occ_offer_convoys$"
+ occ_offer_convoys_action_break_name:"取消已提升的船队贡献"
+ occ_offer_convoys_pact_desc:"[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] 提出向 [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName] 提升船队贡献"
+ occ_offer_convoys_action_notification_break_name:"[INITIATOR_COUNTRY.GetName] 已取消提升的船队贡献"
+ occ_offer_convoys_action_notification_break_desc:"[INITIATOR_COUNTRY.GetName] 已将船队贡献恢复至正常水平"

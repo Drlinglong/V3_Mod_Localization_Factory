@@ -48,6 +48,7 @@ class ValidationResult:
     details: Optional[str] = None
     line_number: Optional[int] = None
     text_sample: Optional[str] = None
+    key: Optional[str] = None  # Added key field
 
 
 class BaseGameValidator:
@@ -265,6 +266,32 @@ class BaseGameValidator:
             ))
         return results
 
+    def _check_key_format(self, key: str, line_number: Optional[int]) -> List[ValidationResult]:
+        """
+        检查键名格式。
+        目前只检查是否包含空格或非法字符。
+        """
+        results = []
+        if not key:
+            return results
+            
+        # 简单的键名检查：只允许字母、数字、下划线、点、冒号(某些游戏允许?)
+        # 通常P社键名是 alphanumeric + underscore + dot
+        if not re.match(r'^[a-zA-Z0-9_\.]+$', key):
+             # 暂时只作为 Warning，因为有些Mod可能有奇怪的键名
+            message = "Invalid key format"
+            details = f"Key '{key}' contains invalid characters. Expected alphanumeric, underscore, or dot."
+            results.append(ValidationResult(
+                is_valid=False,
+                level=ValidationLevel.WARNING,
+                message=message,
+                details=details,
+                line_number=line_number,
+                text_sample=key,
+                key=key
+            ))
+        return results
+
     def validate_text(self, text: str, line_number: Optional[int] = None, source_lang: Optional[Dict] = None, **kwargs) -> List[ValidationResult]:
         """
         纯粹的规则执行引擎。
@@ -296,11 +323,33 @@ class BaseGameValidator:
         all_results.extend(punctuation_results)
 
         return all_results
+    
+    def validate_entry(self, key: str, value: str, line_number: Optional[int] = None, source_lang: Optional[Dict] = None, **kwargs) -> List[ValidationResult]:
+        """
+        验证单个键值对。
+        先验证键，再验证值。
+        """
+        results = []
+        
+        # 1. 验证键
+        key_results = self._check_key_format(key, line_number)
+        results.extend(key_results)
+        
+        # 2. 验证值
+        value_results = self.validate_text(value, line_number, source_lang, **kwargs)
+        # 为值验证结果添加 key 信息
+        for res in value_results:
+            res.key = key
+        results.extend(value_results)
+        
+        return results
 
     def _log_validation_result(self, result: ValidationResult):
         """记录验证结果到日志"""
         log_level = getattr(self.logger, result.level.value, self.logger.info)
         message = f"[{self.game_name}] {result.message}"
+        if result.key:
+            message = f"[Key: {result.key}] " + message
         if result.details:
             message += f" - {self._get_i18n_message('validation_details')}: {result.details}"
         log_level(message)
@@ -370,6 +419,17 @@ class PostProcessValidator:
             validator._log_validation_result(result)
         return results
     
+    def validate_entry(self, game_id: str, key: str, value: str, line_number: Optional[int] = None, source_lang: Optional[Dict] = None, dynamic_valid_tags: Optional[List[str]] = None) -> List[ValidationResult]:
+        """验证单个键值对"""
+        validator = self.get_validator_by_game_id(game_id)
+        if not validator:
+            self.logger.error(self._get_i18n_message("validation_unknown_game", game_id=game_id))
+            return []
+        results = validator.validate_entry(key, value, line_number, source_lang, dynamic_valid_tags=dynamic_valid_tags)
+        for result in results:
+            validator._log_validation_result(result)
+        return results
+
     def validate_batch(self, game_id: str, texts: List[str], start_line: int = 1, source_lang: Optional[Dict] = None, dynamic_valid_tags: Optional[List[str]] = None) -> Dict[int, List[ValidationResult]]:
         """批量验证文本"""
         batch_results = {}
@@ -440,6 +500,11 @@ if __name__ == "__main__":
         main_validator.validate_game_text("5", "This contains a #totally_fake_command that should be caught.", 6)
         # Test dynamic tag override for CK3
         main_validator.validate_game_text("5", "This #totally_fake_command is now valid.", 7, dynamic_valid_tags=["totally_fake_command"])
+        
+        print("\n--- Testing Key Validation ---")
+        main_validator.validate_entry("1", "valid_key", "Valid value")
+        main_validator.validate_entry("1", "invalid key with spaces", "Value")
+        
     except Exception as e:
         print(f"An error occurred during testing: {e}")
         print("Please ensure all Python rule files are present and correctly formatted.")

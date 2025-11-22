@@ -1065,5 +1065,286 @@ def generate_workshop_description(payload: WorkshopRequest):
 def read_root():
     return {"message": "欢迎使用P社Mod本地化工厂API"}
 
+# --- Validation API ---
+
+class ValidationRequest(BaseModel):
+    game_id: str
+    content: str
+    source_lang_code: Optional[str] = "en_US" # Default to checking against English rules or just generic
+
+@app.post("/api/validate/localization")
+def validate_localization(payload: ValidationRequest):
+    """
+    Validates a snippet of localization text (YAML format).
+    """
+    from scripts.utils.post_process_validator import PostProcessValidator, ValidationResult
+    
+    validator = PostProcessValidator()
+    results = []
+    
+    # Simple line-by-line parsing to extract key and value
+    # Regex for standard Paradox YAML:  key:0 "value"  or  key: "value"
+    # We also want to catch lines that *look* like keys but are malformed
+    
+    lines = payload.content.split('\n')
+    
+    # Regex to capture: (key) (optional :version) " (value) "
+    # This is a simplified regex.
+    # Group 1: Key
+    # Group 2: Value (inside quotes)
+    pair_pattern = re.compile(r'^\s*([a-zA-Z0-9_\.]+)\s*(?::\d*)?\s*"(.*)"\s*(?:#.*)?$')
+    
+    for i, line in enumerate(lines):
+        line_num = i + 1
+        stripped = line.strip()
+        
+        if not stripped or stripped.startswith('#') or stripped.startswith('l_'):
+            continue
+            
+        match = pair_pattern.match(line)
+        if match:
+            key = match.group(1)
+            value = match.group(2)
+            
+            # Validate Entry
+            entry_results = validator.validate_entry(
+                game_id=payload.game_id,
+                key=key,
+                value=value,
+                line_number=line_num,
+                source_lang={"code": payload.source_lang_code}
+            )
+            results.extend(entry_results)
+        else:
+            # If line has content but doesn't match key-value pattern, 
+            # we might want to check if it's a malformed line or just a comment/empty
+            # For now, let's just check if it looks like it *should* be a key-value
+            if ":" in line and '"' in line:
+                 # Potential malformed line
+                 pass 
+            
+            # Also run generic text validation on the whole line just in case?
+            # No, that might produce too much noise.
+            pass
+
+    # Transform results to simple dicts for JSON response
+    json_results = []
+    for r in results:
+        json_results.append({
+            "is_valid": r.is_valid,
+            "level": r.level.value,
+            "message": r.message,
+            "details": r.details,
+            "line_number": r.line_number,
+            "key": r.key
+        })
+        
+    return json_results
+
+# --- Proofreading API ---
+
+@app.get("/api/proofreading/mods")
+def list_proofreading_mods():
+    """
+    List all mods available in the SOURCE_DIR.
+    """
+    if not os.path.exists(SOURCE_DIR):
+        return []
+    
+    mods = []
+    for item in os.listdir(SOURCE_DIR):
+        item_path = os.path.join(SOURCE_DIR, item)
+        if os.path.isdir(item_path):
+            mods.append(item)
+            
+    # Add Demo Mod
+    mods.append("Demo Mod")
+    
+    return sorted(mods)
+
+@app.get("/api/proofreading/files")
+def list_proofreading_files(mod_name: str = Query(...), game_id: str = Query(...)):
+    """
+    List all localization files for a given mod.
+    It scans the SOURCE_DIR for the mod and looks for localization files.
+    """
+    if mod_name == "Demo Mod":
+        return ["localization/english/OCC_l_english.yml"]
+
+    source_mod_path = os.path.join(SOURCE_DIR, mod_name)
+    if not os.path.exists(source_mod_path):
+        raise HTTPException(status_code=404, detail="Mod not found")
+    
+    files = []
+    # Simplified scanning for now, assuming standard structure or recursive scan
+    for root, dirs, filenames in os.walk(mod_path):
+        for filename in filenames:
+            if filename.endswith(".yml") or filename.endswith(".yaml"):
+                # We only want source files (usually english)
+                if "l_english" in filename or "l_braz_por" in filename: # Simple heuristic
+                    rel_path = os.path.relpath(os.path.join(root, filename), mod_path)
+                    files.append(rel_path.replace("\\", "/"))
+    
+    return sorted(files)
+
+@app.get("/api/proofreading/content")
+def get_proofreading_content(mod_name: str = Query(...), file_path: str = Query(...), target_lang: str = "zh-CN"):
+    """
+    Gets the content of the original file and the translation file.
+    """
+    if mod_name == "Demo Mod":
+        # Hardcoded paths for demo
+        archive_dir = os.path.join(os.getcwd(), "archive", "proofreading")
+        original_path = os.path.join(archive_dir, "OCC_l_english.yml")
+        translation_path = os.path.join(archive_dir, "OCC_l_simp_chinese.yml")
+        
+        original_content = ""
+        if os.path.exists(original_path):
+            with open(original_path, 'r', encoding='utf-8-sig') as f:
+                original_content = f.read()
+                
+        translation_content = ""
+        if os.path.exists(translation_path):
+            with open(translation_path, 'r', encoding='utf-8-sig') as f:
+                translation_content = f.read()
+                
+        return {
+            "original_content": original_content,
+            "translation_content": translation_content,
+            "translation_file_path": translation_path # Allow saving back to archive for demo
+        }
+
+    mod_path = os.path.join(SOURCE_DIR, mod_name)
+    original_full_path = os.path.join(mod_path, file_path)
+    
+    if not os.path.exists(original_full_path):
+         raise HTTPException(status_code=404, detail="Original file not found")
+         
+    with open(original_full_path, 'r', encoding='utf-8-sig') as f:
+        original_content = f.read()
+
+    # Try to find translation file
+    # Heuristic: Replace 'l_english' with 'l_simp_chinese' (or target lang)
+    # And look in DEST_DIR/TargetLang-ModName/...
+    
+    # Map target_lang code to Paradox language key
+    # This is a simplification. Ideally use a proper mapping.
+    paradox_lang = "simp_chinese" if target_lang == "zh-CN" else "english"
+    
+    # Construct expected translation filename
+    # e.g. OCC_l_english.yml -> OCC_l_simp_chinese.yml
+    filename = os.path.basename(file_path)
+    dir_name = os.path.dirname(file_path)
+    
+    # Simple heuristic replacement
+    target_filename = filename
+    for lang in LANGUAGES.values():
+        if lang["key"] in filename:
+            target_filename = filename.replace(lang["key"], target_lang_config["key"])
+            break
+            
+    # If no key found, maybe it's just appended?
+    if target_filename == filename:
+         # Try to see if it has l_english and replace it
+         if "l_english" in filename:
+             target_filename = filename.replace("l_english", target_lang_config["key"])
+    
+    translation_content = ""
+    translation_path = ""
+    
+    # Re-evaluate possible paths with the new filename
+    possible_paths = [
+        os.path.join(DEST_DIR, f"{folder_prefix}{mod_name}", dir_name, target_filename),
+        os.path.join(DEST_DIR, f"Multilanguage-{mod_name}", dir_name, target_filename),
+        # Sometimes structure is flattened or different, but let's start with these.
+    ]
+
+    found_path = None
+    for p in possible_paths:
+        if os.path.exists(p):
+            found_path = p
+            break
+            
+    if found_path:
+        try:
+            with open(found_path, 'r', encoding='utf-8-sig') as f:
+                translation_content = f.read()
+            translation_path = found_path
+        except:
+             with open(found_path, 'r', encoding='utf-8', errors='replace') as f:
+                translation_content = f.read()
+                translation_path = found_path
+    else:
+        translation_content = "" # No translation found
+
+    return {
+        "original_content": original_content,
+        "translation_content": translation_content,
+        "translation_file_path": translation_path, # Return this so we know where to save back
+        "suggested_filename": target_filename # In case we need to create it
+    }
+
+class SaveTranslationRequest(BaseModel):
+    file_path: str
+    content: str
+    mod_name: str # Needed if we are creating a new file
+    target_lang: str # Needed if we are creating a new file
+    relative_path: str # Relative path of the file in the mod structure
+
+@app.post("/api/proofreading/save")
+def save_proofreading_content(payload: SaveTranslationRequest):
+    """
+    Save the modified translation content.
+    If file_path exists, overwrite it.
+    If not, create it in the appropriate DEST_DIR location.
+    """
+    target_path = payload.file_path
+    
+    # Special handling for Demo Mod
+    if payload.mod_name == "Demo Mod":
+        archive_dir = os.path.join(os.getcwd(), "archive", "proofreading")
+        target_path = os.path.join(archive_dir, "OCC_l_simp_chinese.yml")
+        
+        try:
+            with open(target_path, 'w', encoding='utf-8-sig') as f:
+                f.write(payload.content)
+            return {"status": "success", "path": target_path}
+        except Exception as e:
+            raise HTTPException(status_code=500, detail=f"Failed to save demo file: {str(e)}")
+
+    # If no existing path, we need to create one
+    if not target_path:
+        target_lang_config = next((l for l in LANGUAGES.values() if l["code"] == payload.target_lang), None)
+        if not target_lang_config:
+             raise HTTPException(status_code=400, detail="Invalid target language")
+             
+        folder_prefix = target_lang_config["folder_prefix"]
+        # Default to single language folder for now
+        save_dir = os.path.join(DEST_DIR, f"{folder_prefix}{payload.mod_name}") 
+        
+        # Construct full path
+        # payload.relative_path includes the filename, e.g. "localization/english/foo_l_english.yml"
+        # We need to adjust the filename to the target language
+        
+        rel_dir = os.path.dirname(payload.relative_path)
+        filename = os.path.basename(payload.relative_path)
+        
+        target_filename = filename
+        if "l_english" in filename:
+             target_filename = filename.replace("l_english", target_lang_config["key"])
+        
+        target_path = os.path.join(save_dir, rel_dir, target_filename)
+        
+    # Ensure directory exists
+    os.makedirs(os.path.dirname(target_path), exist_ok=True)
+    
+    try:
+        with open(target_path, 'w', encoding='utf-8-sig') as f:
+            f.write(payload.content)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to save file: {str(e)}")
+        
+    return {"status": "success", "path": target_path}
+
 if __name__ == "__main__":
     uvicorn.run("web_server:app", host="0.0.0.0", port=8000)
