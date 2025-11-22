@@ -1,56 +1,92 @@
-# Byte-compiled / optimized / DLL files
+# Python
 __pycache__/
 *.py[cod]
 *$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+*.log
 
-# Virtual environment
-.venv/
+# Virtual Environment
 venv/
 ENV/
+env/
 
-# Databases
-*.db
-*.sqlite3
-
-# Output files from the app
-output/
-*.log
-*.gif
-
-# IDE / Editor specific
+# IDE
 .vscode/
 .idea/
+*.swp
+*.swo
+*~
 
-# Mod file and translate file
-/source_mod/*
-/my_translation/*
+# OS
+.DS_Store
+Thumbs.db
 
-# Do NOT ignore the folder
+# Windows Git cache (should never be tracked)
+%SystemDrive%/
+**/Caches/
+*.ver0x*
+
+# Project-specific
+source_mod/
+my_translation/
+data/*.sqlite
+data/*.db
+logs/
+temp/
+*.tmp
+
+# Do NOT ignore these folders
 !/source_mod/.gitkeep
 !/my_translation/.gitkeep
 
-# Node / React Frontend Dependencies
-/ui/frontend/node_modules/
-/ui/frontend/build/
-/ui/frontend/dist/
-.env
+# Node modules
+node_modules/
+.npm/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# React UI (scripts/react-ui)
-/scripts/react-ui/node_modules
-/scripts/react-ui/dist
-/scripts/react-ui/.vite
-/scripts/react-ui/coverage
+# React UI
+/scripts/react-ui/node_modules/
+/scripts/react-ui/dist/
+/scripts/react-ui/.vite/
+/scripts/react-ui/coverage/
 /scripts/react-ui/.env.local
 /scripts/react-ui/.env.*.local
-/scripts/react-ui/npm-debug.log*
-/scripts/react-ui/yarn-debug.log*
-/scripts/react-ui/yarn-error.log*
 
-# Build script dependencies
+# Tauri & Rust build artifacts
+/scripts/react-ui/src-tauri/target/
+/scripts/react-ui/src-tauri/Cargo.lock
+/scripts/react-ui/src-tauri/.cargo/
+/scripts/react-ui/src-tauri/gen/
+
+# Migration scripts (temporary)
+migrate_projects_db.py
+
+# Build artifacts
+/ui/frontend/node_modules/
+/ui/frontend/build/
+/ui/frontend/dist/
 /archive/build_release_scripts/get-pip.py
 /archive/build_release_scripts/python-3.10.11-embed-amd64.zip
 
+# Environment files with secrets
+.env
 .config/
