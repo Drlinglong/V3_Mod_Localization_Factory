@@ -12,15 +12,13 @@ import {
   LoadingOverlay,
   Select,
   Tabs,
-  Table,
-  Alert
+  Table
 } from '@mantine/core';
 import {
   IconDeviceFloppy,
   IconCheck,
   IconAlertTriangle,
   IconX,
-  IconInfoCircle,
   IconFileText,
   IconEdit
 } from '@tabler/icons-react';
@@ -43,8 +41,12 @@ const ProofreadingPage = () => {
   const [targetLang, setTargetLang] = useState('zh-CN');
 
   // Content State
-  const [entries, setEntries] = useState([]); // Structure: { key, original, translation }
+  // entries: { key, original, translation }
+  const [entries, setEntries] = useState([]);
+
+  // String representations for Editors
   const [originalContentStr, setOriginalContentStr] = useState('');
+  const [aiContentStr, setAiContentStr] = useState(''); // Restored AI Column
   const [finalContentStr, setFinalContentStr] = useState('');
 
   const [validationResults, setValidationResults] = useState([]);
@@ -57,6 +59,7 @@ const ProofreadingPage = () => {
 
   // Refs for sync scrolling
   const originalEditorRef = useRef(null);
+  const aiEditorRef = useRef(null); // Restored AI Ref
   const finalEditorRef = useRef(null);
   const isScrolling = useRef(false);
 
@@ -81,15 +84,17 @@ const ProofreadingPage = () => {
       const data = res.data;
       setFileInfo({ path: data.file_path, project_id: pId, file_id: fId });
 
-      // Convert entries to string format for Editor
       const loadedEntries = data.entries || [];
       setEntries(loadedEntries);
 
-      // Construct string representation for Monaco
-      const originals = loadedEntries.map(e => `# ${e.key}\n${e.original}`).join('\n\n');
-      const translations = loadedEntries.map(e => `${e.key}:0 "${e.translation}"`).join('\n');
+      // Construct string representations
+      const originals = loadedEntries.map(e => `# ${e.key}\n${e.original || ''}`).join('\n\n');
+      // Assuming 'translation' in DB is the AI draft or current final?
+      // For now, populate both AI and Final with the same current translation from DB
+      const translations = loadedEntries.map(e => `${e.key}:0 "${e.translation || ''}"`).join('\n');
 
       setOriginalContentStr(originals);
+      setAiContentStr(translations); // Use current DB val as "AI/Previous" reference
       setFinalContentStr(translations);
 
     } catch (error) {
@@ -103,11 +108,6 @@ const ProofreadingPage = () => {
   // --- Handlers ---
 
   const parseEditorContentToEntries = (content) => {
-    // This is a naive parser for the MVP.
-    // It assumes the user keeps the "key:0 "value"" format.
-    // We need to map these back to the original keys.
-    // A better approach for the future is a custom Monaco diff view or line-by-line editor.
-    // For now, we try to regex extract keys and values.
     const lines = content.split('\n');
     const updatedEntries = [];
     const regex = /^\s*([a-zA-Z0-9_\.]+):0\s*"(.*)"\s*$/;
@@ -117,7 +117,7 @@ const ProofreadingPage = () => {
         if (match) {
             updatedEntries.push({
                 key: match[1],
-                translation: match[2] // TODO: handle unescaping if needed
+                translation: match[2]
             });
         }
     });
@@ -130,7 +130,7 @@ const ProofreadingPage = () => {
     setValidationResults([]);
     try {
       const response = await axios.post('/api/validate/localization', {
-        game_id: '1', // TODO: Fetch game_id from project info
+        game_id: '1',
         content: finalContentStr,
         source_lang_code: 'en_US'
       });
@@ -157,7 +157,6 @@ const ProofreadingPage = () => {
     if (!fileInfo) return;
     setSaving(true);
     try {
-      // Parse current editor content back to entries
       const updatedEntries = parseEditorContentToEntries(finalContentStr);
 
       await axios.post('/api/proofread/save', {
@@ -178,7 +177,7 @@ const ProofreadingPage = () => {
 
   // Sync Scrolling
   useEffect(() => {
-    const editors = [originalEditorRef, finalEditorRef];
+    const editors = [originalEditorRef, aiEditorRef, finalEditorRef];
     const disposables = [];
 
     const syncScroll = (sourceEditor, e) => {
@@ -205,7 +204,7 @@ const ProofreadingPage = () => {
 
     const timer = setTimeout(attachListeners, 500);
     return () => { clearTimeout(timer); disposables.forEach(d => d && d.dispose()); };
-  }, [originalContentStr, finalContentStr]);
+  }, [originalContentStr, aiContentStr, finalContentStr]);
 
   // --- Free Mode Handlers ---
   const handleLinterValidate = async () => {
@@ -259,8 +258,7 @@ const ProofreadingPage = () => {
             <Stack spacing="xs" mb="xs">
               <Group position="apart">
                 <Group spacing="xs">
-                   {/* Project controls removed in favor of URL params for this version */}
-                   <Text size="sm" c="dimmed">Project Mode</Text>
+                   <Text size="sm" c="dimmed">Mode: 3-Column View</Text>
                 </Group>
 
                 <Group spacing="xs">
@@ -292,8 +290,9 @@ const ProofreadingPage = () => {
               </Group>
             </Stack>
 
+            {/* 3-Column Layout Restored */}
             <div style={{ flex: 1, display: 'flex', flexDirection: 'row', gap: '10px', overflow: 'hidden', width: '100%' }}>
-              {/* Original */}
+              {/* Column 1: Original */}
               <div style={{ flex: 1, display: 'flex', flexDirection: 'column', height: '100%', minWidth: 0 }}>
                 <Text fw={500} mb={4} size="xs">{t('proofreading.original')}</Text>
                 <MonacoWrapper
@@ -305,7 +304,19 @@ const ProofreadingPage = () => {
                 />
               </div>
 
-              {/* Final Edit */}
+              {/* Column 2: AI Draft (Restored) */}
+              <div style={{ flex: 1, display: 'flex', flexDirection: 'column', height: '100%', minWidth: 0 }}>
+                <Text fw={500} mb={4} size="xs">{t('proofreading.ai_draft')}</Text>
+                <MonacoWrapper
+                  scrollRef={aiEditorRef}
+                  value={aiContentStr}
+                  readOnly={true}
+                  theme="vs-dark"
+                  language="yaml"
+                />
+              </div>
+
+              {/* Column 3: Final Edit */}
               <div style={{ flex: 1, display: 'flex', flexDirection: 'column', height: '100%', minWidth: 0 }}>
                 <Text fw={500} mb={4} size="xs">{t('proofreading.final_edit')}</Text>
                 <div style={{ position: 'relative', flex: 1, display: 'flex', flexDirection: 'column' }}>
@@ -342,7 +353,6 @@ const ProofreadingPage = () => {
 
           {/* --- Free Mode Panel --- */}
           <Tabs.Panel value="free" style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden', paddingTop: '10px' }}>
-             {/* Simplified Free Mode for Restoration */}
              <Group mb="xs">
                 <Select
                     data={['1', '2', '3', '4', '5']}
