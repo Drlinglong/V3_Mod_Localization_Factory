@@ -24,8 +24,9 @@ import {
   Switch,
   Collapse,
   Tabs,
+  Modal,
 } from '@mantine/core';
-import { IconAlertCircle, IconCheck, IconX, IconSettings, IconRefresh, IconDownload, IconArrowLeft, IconPlayerStop, IconChevronDown, IconChevronUp, IconFolder, IconFolderOpen } from '@tabler/icons-react';
+import { IconAlertCircle, IconCheck, IconX, IconSettings, IconRefresh, IconDownload, IconArrowLeft, IconPlayerStop, IconChevronDown, IconChevronUp, IconFolder, IconFolderOpen, IconPlayerPlay } from '@tabler/icons-react';
 import { useNavigate } from 'react-router-dom';
 import '../App.css';
 import layoutStyles from '../components/layout/Layout.module.css';
@@ -54,6 +55,11 @@ const InitialTranslation = () => {
   const [translationDetails, setTranslationDetails] = useState(null);
   const [availableGlossaries, setAvailableGlossaries] = useState([]);
   const [availableModels, setAvailableModels] = useState([]);
+
+  // Resume Modal State
+  const [resumeModalOpen, setResumeModalOpen] = useState(false);
+  const [checkpointInfo, setCheckpointInfo] = useState(null);
+  const [pendingFormValues, setPendingFormValues] = useState(null);
 
   const form = useForm({
     initialValues: {
@@ -102,14 +108,67 @@ const InitialTranslation = () => {
   }, [form.values.api_provider]);
 
   const handleProjectSelect = () => {
-      if (selectedProjectId) {
-          setActive(1);
-      }
+    if (selectedProjectId) {
+      setActive(1);
+    }
   };
 
   const handleBack = () => {
     if (active > 0) {
       setActive(active - 1);
+    }
+  };
+
+  const handleStartClick = async (values) => {
+    // 1. Check for existing checkpoint
+    const modName = projects.find(p => p.value === selectedProjectId)?.label;
+    if (!modName) return;
+
+    try {
+      const response = await axios.post('/api/translation/checkpoint-status', {
+        mod_name: modName,
+        target_lang_codes: [values.target_lang_code]
+      });
+
+      if (response.data.exists) {
+        setCheckpointInfo(response.data);
+        setPendingFormValues(values);
+        setResumeModalOpen(true);
+      } else {
+        // No checkpoint, start normally
+        startTranslation(values);
+      }
+    } catch (error) {
+      console.error("Failed to check checkpoint:", error);
+      // Fallback to normal start if check fails
+      startTranslation(values);
+    }
+  };
+
+  const handleResume = () => {
+    setResumeModalOpen(false);
+    if (pendingFormValues) {
+      startTranslation(pendingFormValues);
+    }
+  };
+
+  const handleStartOver = async () => {
+    setResumeModalOpen(false);
+    if (pendingFormValues) {
+      const modName = projects.find(p => p.value === selectedProjectId)?.label;
+      try {
+        await axios.delete('/api/translation/checkpoint', {
+          data: {
+            mod_name: modName,
+            target_lang_codes: [pendingFormValues.target_lang_code]
+          }
+        });
+        notificationService.success("Checkpoint cleared. Starting fresh.", notificationStyle);
+        startTranslation(pendingFormValues);
+      } catch (error) {
+        notificationService.error("Failed to clear checkpoint.", notificationStyle);
+        console.error(error);
+      }
     }
   };
 
@@ -182,15 +241,15 @@ const InitialTranslation = () => {
                 <Text size="xl" fw={500}>Select a Project</Text>
 
                 {projects.length > 0 ? (
-                    <Select
-                        data={projects}
-                        value={selectedProjectId}
-                        onChange={setSelectedProjectId}
-                        placeholder="Choose a project..."
-                        w="100%"
-                    />
+                  <Select
+                    data={projects}
+                    value={selectedProjectId}
+                    onChange={setSelectedProjectId}
+                    placeholder="Choose a project..."
+                    w="100%"
+                  />
                 ) : (
-                    <Text c="dimmed">No projects found. Please create one in Project Management.</Text>
+                  <Text c="dimmed">No projects found. Please create one in Project Management.</Text>
                 )}
 
                 <Button size="lg" onClick={handleProjectSelect} disabled={!selectedProjectId}>
@@ -198,7 +257,7 @@ const InitialTranslation = () => {
                 </Button>
 
                 <Button variant="subtle" size="sm" onClick={() => navigate('/')}>
-                    Go to Project Management
+                  Go to Project Management
                 </Button>
               </Stack>
             </Center>
@@ -207,7 +266,7 @@ const InitialTranslation = () => {
           {active === 1 && (
             <Card withBorder padding="xl" radius="md" className={layoutStyles.glassCard}>
               <Text size="lg" fw={500} mb="md">{t('initial_translation_step_configure')}</Text>
-              <form onSubmit={form.onSubmit(startTranslation)}>
+              <form onSubmit={form.onSubmit(handleStartClick)}>
                 <Stack gap="md">
                   <Select
                     label="Target Language"
@@ -294,6 +353,42 @@ const InitialTranslation = () => {
           )}
         </Paper>
       </Stack>
+
+      {/* Resume Confirmation Modal */}
+      <Modal
+        opened={resumeModalOpen}
+        onClose={() => setResumeModalOpen(false)}
+        title={<Group><IconAlertCircle color="orange" /> <Text fw={700}>Interrupted Session Found</Text></Group>}
+        centered
+      >
+        <Stack>
+          <Text>
+            Found an interrupted translation session for this mod.
+          </Text>
+          {checkpointInfo && (
+            <Alert color="blue" variant="light">
+              <Text size="sm"><b>Completed Files:</b> {checkpointInfo.completed_count}</Text>
+              {checkpointInfo.total_files_estimate > 0 && (
+                <Text size="sm"><b>Estimated Progress:</b> {Math.round((checkpointInfo.completed_count / checkpointInfo.total_files_estimate) * 100)}%</Text>
+              )}
+              {checkpointInfo.metadata?.model_name && (
+                <Text size="sm"><b>Previous Model:</b> {checkpointInfo.metadata.model_name}</Text>
+              )}
+            </Alert>
+          )}
+          <Text size="sm" c="dimmed">
+            Do you want to resume from where it left off, or start over from the beginning?
+          </Text>
+          <Group justify="flex-end" mt="md">
+            <Button variant="default" onClick={handleStartOver} leftSection={<IconRefresh size={16} />}>
+              Start Over
+            </Button>
+            <Button onClick={handleResume} leftSection={<IconPlayerPlay size={16} />}>
+              Resume
+            </Button>
+          </Group>
+        </Stack>
+      </Modal>
     </Container>
   );
 };

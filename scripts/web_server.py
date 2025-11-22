@@ -35,6 +35,7 @@ from scripts.core import workshop_formatter
 from scripts.core.glossary_manager import GlossaryManager
 from scripts.core.project_manager import ProjectManager
 from scripts.core.project_json_manager import ProjectJsonManager
+from scripts.core.checkpoint_manager import CheckpointManager
 from scripts.core.archive_manager import ArchiveManager
 
 # Initialize Managers
@@ -757,21 +758,81 @@ class ValidationRequest(BaseModel):
     content: str
     source_lang_code: Optional[str] = "en_US"
 
-@app.post("/api/validate/localization")
-def validate_localization(payload: ValidationRequest):
-    from scripts.utils.post_process_validator import PostProcessValidator
-    validator = PostProcessValidator()
-    lines = payload.content.split('\n')
-    pair_pattern = re.compile(r'^\s*([a-zA-Z0-9_\.]+)\s*(?::\d*)?\s*"(.*)"\s*(?:#.*)?$')
-    results = []
-    for i, line in enumerate(lines):
-        match = pair_pattern.match(line)
-        if match:
-            results.extend(validator.validate_entry(
-                game_id=payload.game_id, key=match.group(1), value=match.group(2),
-                line_number=i + 1, source_lang={"code": payload.source_lang_code}
-            ))
-    return [r.dict() for r in results]
+
+class CheckpointStatusRequest(BaseModel):
+    mod_name: str
+    target_lang_codes: List[str]
+
+@app.post("/api/translation/checkpoint-status")
+def check_checkpoint_status(payload: CheckpointStatusRequest):
+    """Checks if a checkpoint exists for the given configuration."""
+    try:
+        # Determine output folder name logic (duplicated from initial_translate, ideally shared)
+        # NOTE: This logic must match initial_translate.py exactly
+        is_batch_mode = len(payload.target_lang_codes) > 1
+        if is_batch_mode:
+            output_folder_name = f"Multilanguage-{payload.mod_name}"
+        else:
+            # We need the folder prefix. This is tricky without the full language object.
+            # Assuming standard prefix or we need to look it up.
+            # Let's look up the language object from LANGUAGES
+            target_code = payload.target_lang_codes[0]
+            target_lang = next((l for l in LANGUAGES.values() if l["code"] == target_code), None)
+            if target_lang:
+                prefix = target_lang.get("folder_prefix", f"{target_lang['code']}-")
+                output_folder_name = f"{prefix}{payload.mod_name}"
+            else:
+                # Fallback if lang not found (shouldn't happen if frontend sends valid codes)
+                output_folder_name = f"{target_code}-{payload.mod_name}"
+
+        output_dir = os.path.join(DEST_DIR, output_folder_name)
+        cm = CheckpointManager(output_dir)
+        info = cm.get_checkpoint_info()
+        
+        total_files = 0
+        if info["exists"]:
+            source_path = os.path.join(SOURCE_DIR, payload.mod_name)
+            # Quick count
+            for root, _, files in os.walk(source_path):
+                for f in files:
+                    if f.endswith(".yml") or f.endswith(".txt"):
+                        total_files += 1
+        
+        return {
+            "exists": info["exists"],
+            "completed_count": info["completed_count"],
+            "total_files_estimate": total_files,
+            "metadata": info["metadata"]
+        }
+    except Exception as e:
+        logging.error(f"Error checking checkpoint: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.delete("/api/translation/checkpoint")
+def delete_checkpoint(payload: CheckpointStatusRequest):
+    """Deletes the checkpoint file for the given configuration."""
+    try:
+        # Determine output folder name logic (duplicated)
+        is_batch_mode = len(payload.target_lang_codes) > 1
+        if is_batch_mode:
+            output_folder_name = f"Multilanguage-{payload.mod_name}"
+        else:
+            target_code = payload.target_lang_codes[0]
+            target_lang = next((l for l in LANGUAGES.values() if l["code"] == target_code), None)
+            if target_lang:
+                prefix = target_lang.get("folder_prefix", f"{target_lang['code']}-")
+                output_folder_name = f"{prefix}{payload.mod_name}"
+            else:
+                output_folder_name = f"{target_code}-{payload.mod_name}"
+
+        output_dir = os.path.join(DEST_DIR, output_folder_name)
+        cm = CheckpointManager(output_dir)
+        cm.clear_checkpoint()
+        return {"status": "success", "message": "Checkpoint deleted."}
+    except Exception as e:
+        logging.error(f"Error deleting checkpoint: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
 
 if __name__ == "__main__":
     uvicorn.run("scripts.web_server:app", host="0.0.0.0", port=8000, reload=True)
