@@ -267,6 +267,23 @@
   "project_management.manage_paths.save": "保存更改",
   "project_management.refresh_files": "刷新文件",
   "project_management.delete_project": "删除项目",
+  "project_management.actions.create_new": "创建新项目",
+  "project_management.actions.create_new_desc": "从本地 Mod 文件夹开始新的翻译之旅。",
+  "project_management.actions.archives": "档案馆",
+  "project_management.actions.archives_desc": "浏览已归档或已删除的项目。",
+  "project_management.status.active": "活跃",
+  "project_management.status.archived": "已归档",
+  "project_management.status.deleted": "已删除",
+  "project_management.notes": "项目备注",
+  "project_management.notes_placeholder": "在此添加关于项目的备注...",
+  "project_management.archive_project": "归档项目",
+  "project_management.restore_project": "恢复项目",
+  "project_management.delete_forever": "永久删除",
+  "project_management.archives_title": "项目档案馆",
+  "project_management.empty_archives": "未找到归档项目。",
+  "project_management.confirm_archive": "您确定要归档此项目吗？它将移至档案馆。",
+  "project_management.confirm_delete_forever": "您确定要永久删除此项目吗？此操作不可撤销。",
+  "project_management.confirm_restore": "您确定要恢复此项目吗？",
   "glossary_editor": {
     "language": "语言",
     "value": "值",
@@ -275,5 +292,32 @@
     "abbreviations_desc": "添加特定语言的缩写。",
     "metadata_label": "元数据 (JSON)",
     "error_invalid_json": "JSON 格式无效"
+  },
+  "neologism_review": {
+    "title": "新词审判庭",
+    "tab_mining": "挖掘控制台",
+    "tab_court": "审判庭",
+    "mining": {
+      "select_project": "1. 选择项目",
+      "select_project_placeholder": "选择一个项目源",
+      "select_provider": "3. API 供应商",
+      "start_mining": "开始挖掘",
+      "select_files": "2. 选择要挖掘的文件（可选）",
+      "select_files_desc": "留空以扫描整个项目。",
+      "no_files": "选择项目以查看文件...",
+      "mining_disclaimer": "将调用 LLM 进行新词挖掘，可能会产生 API 费用。"
+    },
+    "court": {
+      "docket": "案卷列表",
+      "caught_up": "全部处理完毕！",
+      "select_case": "从案卷中选择一个案件",
+      "candidate_term": "候选词汇",
+      "ai_analysis": "AI 分析",
+      "final_translation": "最终翻译",
+      "final_translation_desc": "在批准前审查并编辑建议的翻译。",
+      "ignore": "驳回 / 忽略",
+      "approve": "批准术语",
+      "context_evidence": "上下文证据"
+    }
   }
 }

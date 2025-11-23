@@ -13,6 +13,7 @@ import {
     IconCrane,
     IconBulb,
     IconCode,
+    IconSparkles,
 } from '@tabler/icons-react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
@@ -24,6 +25,7 @@ const navItems = [
     { icon: IconBook, label: 'nav_docs', path: '/docs' },
     { icon: IconLanguage, label: 'page_title_translation', path: '/translation' },
     { icon: IconVocabulary, label: 'page_title_glossary_manager', path: '/glossary-manager' },
+    { icon: IconSparkles, label: 'neologism_review.title', path: '/neologism-review' },
     { icon: IconChecklist, label: 'page_title_proofreading', path: '/proofreading' },
     { icon: IconBriefcase, label: 'page_title_project_management', path: '/project-management' },
     { icon: IconGitBranch, label: 'page_title_cicd', path: '/cicd' },

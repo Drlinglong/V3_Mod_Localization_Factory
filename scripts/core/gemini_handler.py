@@ -50,3 +50,47 @@ class GeminiHandler(BaseApiHandler):
         except Exception as e:
             self.logger.exception(f"Gemini API call failed: {e}")
             raise
+
+    def generate_with_messages(self, messages: list[dict], temperature: float = 0.7) -> str:
+        """
+        Supports chat-like interaction for NeologismMiner.
+        """
+        provider_config = API_PROVIDERS.get(self.provider_name, {})
+        model_name = provider_config.get("default_model", "gemini-1.5-flash")
+        
+        # Convert messages to Gemini format if needed, or just concatenate for now
+        # Gemini client supports chat history, but for single turn we can just use generate_content
+        # with system instruction if supported, or just prompt engineering.
+        
+        # Extract system prompt
+        system_instruction = None
+        user_content = ""
+        
+        for msg in messages:
+            if msg['role'] == 'system':
+                system_instruction = msg['content']
+            elif msg['role'] == 'user':
+                user_content += msg['content'] + "\n"
+        
+        try:
+            # New Gemini API supports system_instruction in generation_config or client.models.generate_content
+            # Let's try passing it in config or as argument if supported by library version
+            # Based on google-genai library, it might be 'config'
+            
+            # Simple fallback: Prepend system prompt
+            full_prompt = user_content
+            if system_instruction:
+                full_prompt = f"{system_instruction}\n\n{user_content}"
+            
+            response = self.client.models.generate_content(
+                model=model_name,
+                contents=full_prompt,
+                config={
+                    'temperature': temperature
+                }
+            )
+            return response.text.strip()
+        except Exception as e:
+            self.logger.exception(f"Gemini chat generation failed: {e}")
+            return ""
+

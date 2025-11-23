@@ -20,8 +20,9 @@ class Project:
     game_id: str
     source_path: str
     target_path: str
-    status: str  # 'active', 'archived', etc.
+    status: str  # 'active', 'archived', 'deleted'
     created_at: str
+    notes: str = "" # Added notes field
 
 @dataclass
 class ProjectFile:
@@ -78,17 +79,18 @@ class ProjectManager:
         ''')
         
         # Migration: Check if new columns exist, if not add them
-        cursor.execute("PRAGMA table_info(projects)")
-        project_columns = [info[1] for info in cursor.fetchall()]
-        if 'notes' not in project_columns:
-            cursor.execute("ALTER TABLE projects ADD COLUMN notes TEXT")
-
         cursor.execute("PRAGMA table_info(project_files)")
         columns = [info[1] for info in cursor.fetchall()]
         if 'line_count' not in columns:
             cursor.execute("ALTER TABLE project_files ADD COLUMN line_count INTEGER DEFAULT 0")
         if 'file_type' not in columns:
             cursor.execute("ALTER TABLE project_files ADD COLUMN file_type TEXT DEFAULT 'source'")
+
+        # Migration for projects table
+        cursor.execute("PRAGMA table_info(projects)")
+        project_columns = [info[1] for info in cursor.fetchall()]
+        if 'notes' not in project_columns:
+            cursor.execute("ALTER TABLE projects ADD COLUMN notes TEXT DEFAULT ''")
 
         conn.commit()
         conn.close()
@@ -144,9 +146,9 @@ class ProjectManager:
         conn = self._get_connection()
         cursor = conn.cursor()
         cursor.execute('''
-            INSERT INTO projects (project_id, name, game_id, source_path, status, created_at)
-            VALUES (?, ?, ?, ?, ?, ?)
-        ''', (project_id, name, game_id, final_source_path, 'active', datetime.datetime.now().isoformat()))
+            INSERT INTO projects (project_id, name, game_id, source_path, status, created_at, notes)
+            VALUES (?, ?, ?, ?, ?, ?, ?)
+        ''', (project_id, name, game_id, final_source_path, 'active', datetime.datetime.now().isoformat(), ''))
         conn.commit()
         conn.close()
 
@@ -156,7 +158,8 @@ class ProjectManager:
             'name': name,
             'game_id': game_id,
             'source_path': final_source_path,
-            'status': 'active'
+            'status': 'active',
+            'notes': ''
         }
 
         # Scan files (Initial Scan)
@@ -378,15 +381,16 @@ class ProjectManager:
             "column_order": kanban_data.get("column_order", columns)
         })
 
-    def get_projects(self, status: str = 'active') -> List[Dict[str, Any]]:
-        """
-        Fetches projects from the database, filtered by status.
-        Defaults to fetching 'active' projects.
-        """
+    def get_projects(self, status: Optional[str] = None) -> List[Dict[str, Any]]:
         conn = self._get_connection()
         conn.row_factory = sqlite3.Row
         cursor = conn.cursor()
-        cursor.execute("SELECT * FROM projects WHERE status = ? ORDER BY created_at DESC", (status,))
+        
+        if status:
+            cursor.execute("SELECT * FROM projects WHERE status = ? ORDER BY created_at DESC", (status,))
+        else:
+            cursor.execute("SELECT * FROM projects ORDER BY created_at DESC")
+            
         rows = cursor.fetchall()
         conn.close()
         return [dict(row) for row in rows]
@@ -457,12 +461,22 @@ class ProjectManager:
         conn.commit()
         conn.close()
 
-    def delete_project(self, project_id: str):
-        """Soft deletes a project by setting its status to 'deleted'."""
-        self.update_project_status(project_id, 'deleted')
-        return True
+    def update_project_notes(self, project_id: str, notes: str):
+        conn = self._get_connection()
+        cursor = conn.cursor()
+        cursor.execute("UPDATE projects SET notes = ? WHERE project_id = ?", (notes, project_id))
+        conn.commit()
+        conn.close()
 
-    def _delete_project_permanently(self, project_id: str, delete_source_files: bool = False):
+    def update_project_status(self, project_id: str, status: str):
+        """Updates the project status (active, archived, deleted)."""
+        conn = self._get_connection()
+        cursor = conn.cursor()
+        cursor.execute("UPDATE projects SET status = ? WHERE project_id = ?", (status, project_id))
+        conn.commit()
+        conn.close()
+
+    def delete_project(self, project_id: str, delete_source_files: bool = False):
         """Deletes a project from the database and optionally deletes source files."""
         project = self.get_project(project_id)
         if not project:

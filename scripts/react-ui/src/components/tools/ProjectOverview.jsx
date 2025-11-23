@@ -1,29 +1,30 @@
-import React, { useState } from 'react';
-import { Title, Text, Grid, Card, Table, Badge, Button, Paper, Group, Modal, TextInput, ActionIcon, Stack } from '@mantine/core';
-import { IconCheck, IconX, IconClock, IconPlayerPlay, IconArrowLeft, IconArrowRight, IconEdit, IconPlus, IconTrash, IconFolder } from '@tabler/icons-react';
+import React, { useState, useEffect } from 'react';
+import { Title, Text, Grid, Card, Table, Badge, Button, Paper, Group, Modal, TextInput, ActionIcon, Stack, Textarea, Tooltip } from '@mantine/core';
+import { IconCheck, IconX, IconClock, IconPlayerPlay, IconArrowLeft, IconArrowRight, IconEdit, IconPlus, IconTrash, IconFolder, IconArchive, IconRestore } from '@tabler/icons-react';
 import { useTranslation } from 'react-i18next';
 import { open } from '@tauri-apps/plugin-dialog';
 import axios from 'axios';
 import styles from '../../pages/ProjectManagement.module.css';
 
-const ProjectOverview = ({ projectDetails, handleStatusChange, handleProofread, onPathsUpdated }) => {
+const ProjectOverview = ({ projectDetails, handleStatusChange, handleNotesChange, handleProofread, onPathsUpdated, onDeleteForever }) => {
     const { t } = useTranslation();
     const [managePathsOpen, setManagePathsOpen] = useState(false);
     const [translationDirs, setTranslationDirs] = useState([]);
     const [newDirPath, setNewDirPath] = useState('');
     const [notes, setNotes] = useState(projectDetails?.notes || '');
 
+    // Update local notes state when projectDetails changes
+    useEffect(() => {
+        if (projectDetails) {
+            setNotes(projectDetails.notes || '');
+        }
+    }, [projectDetails]);
+
     if (!projectDetails) return null;
 
-    const handleSaveNotes = async () => {
-        try {
-            await axios.put(`http://localhost:8000/api/project/${projectDetails.project_id}/notes`, {
-                notes: notes
-            });
-            // Optionally show a notification
-        } catch (error) {
-            console.error('Failed to save notes:', error);
-            alert(`Failed to save notes: ${error.response?.data?.detail || error.message}`);
+    const onSaveNotes = () => {
+        if (handleNotesChange) {
+            handleNotesChange(notes);
         }
     };
 
@@ -70,7 +71,6 @@ const ProjectOverview = ({ projectDetails, handleStatusChange, handleProofread, 
             }
         } catch (error) {
             console.error('Failed to save paths:', error);
-            console.error('Error response:', error.response?.data);
             alert(`Failed to save translation directories: ${error.response?.data?.detail || error.message}`);
         }
     };
@@ -122,7 +122,46 @@ const ProjectOverview = ({ projectDetails, handleStatusChange, handleProofread, 
             <div style={{ position: 'absolute', top: 0, left: 0, right: 0, paddingBottom: '1rem' }}>
                 {/* Stats Card */}
                 <Paper withBorder p="md" radius="md" className={styles.glassCard} mb="md">
-                    <Title order={4} mb="md">项目概览</Title>
+                    <Group justify="space-between" mb="md">
+                        <Title order={4}>{t('project_management.overview_title') || 'Project Overview'}</Title>
+                        <Group>
+                            {projectDetails.status === 'active' && (
+                                <Tooltip label={t('project_management.archive_project')}>
+                                    <Button variant="light" color="orange" size="xs" leftSection={<IconArchive size={16} />} onClick={() => handleStatusChange('archived')}>
+                                        {t('project_management.archive_project')}
+                                    </Button>
+                                </Tooltip>
+                            )}
+                            {projectDetails.status === 'archived' && (
+                                <>
+                                    <Tooltip label={t('project_management.restore_project')}>
+                                        <Button variant="light" color="blue" size="xs" leftSection={<IconRestore size={16} />} onClick={() => handleStatusChange('active')}>
+                                            {t('project_management.restore_project')}
+                                        </Button>
+                                    </Tooltip>
+                                    <Tooltip label={t('project_management.delete_project')}>
+                                        <Button variant="light" color="red" size="xs" leftSection={<IconTrash size={16} />} onClick={() => handleStatusChange('deleted')}>
+                                            {t('project_management.delete_project')}
+                                        </Button>
+                                    </Tooltip>
+                                </>
+                            )}
+                            {projectDetails.status === 'deleted' && (
+                                <>
+                                    <Tooltip label={t('project_management.restore_project')}>
+                                        <Button variant="light" color="blue" size="xs" leftSection={<IconRestore size={16} />} onClick={() => handleStatusChange('active')}>
+                                            {t('project_management.restore_project')}
+                                        </Button>
+                                    </Tooltip>
+                                    <Tooltip label={t('project_management.delete_forever')}>
+                                        <Button variant="filled" color="red" size="xs" leftSection={<IconTrash size={16} />} onClick={onDeleteForever}>
+                                            {t('project_management.delete_forever')}
+                                        </Button>
+                                    </Tooltip>
+                                </>
+                            )}
+                        </Group>
+                    </Group>
                     <Grid>
                         <Grid.Col span={3}><Card withBorder className={styles.statCard}><Text size="xs" c="dimmed">文件总数</Text><Title order={3}>{projectDetails.overview.totalFiles}</Title></Card></Grid.Col>
                         <Grid.Col span={3}><Card withBorder className={styles.statCard}><Text size="xs" c="dimmed">总行数</Text><Title order={3}>{projectDetails.overview.totalLines}</Title></Card></Grid.Col>
@@ -134,13 +173,13 @@ const ProjectOverview = ({ projectDetails, handleStatusChange, handleProofread, 
                 {/* Notes Section */}
                 <Paper withBorder p="md" radius="md" className={styles.glassCard} mb="md">
                     <Group justify="space-between" mb="xs">
-                        <Title order={4}>备注</Title>
-                        <Button variant="outline" size="xs" onClick={handleSaveNotes}>Save Notes</Button>
+                        <Title order={4}>{t('project_management.notes')}</Title>
+                        <Button variant="outline" size="xs" onClick={onSaveNotes}>Save Notes</Button>
                     </Group>
                     <Textarea
                         value={notes}
                         onChange={(event) => setNotes(event.currentTarget.value)}
-                        placeholder="Add any notes for this project..."
+                        placeholder={t('project_management.notes_placeholder')}
                         autosize
                         minRows={2}
                     />
@@ -165,7 +204,7 @@ const ProjectOverview = ({ projectDetails, handleStatusChange, handleProofread, 
             </div>
 
             {/* Scrollable file list - positioned below header */}
-            <div style={{ position: 'absolute', top: '280px', bottom: 0, left: 0, right: 0, overflowY: 'auto', overflowX: 'hidden' }}>
+            <div style={{ position: 'absolute', top: '380px', bottom: 0, left: 0, right: 0, overflowY: 'auto', overflowX: 'hidden' }}>
                 <Paper withBorder p="md" radius="md" className={styles.glassCard}>
                     <Group position="apart" mb="md">
                         <Title order={4}>文件详情列表 ({projectDetails.files.length} 个文件)</Title>

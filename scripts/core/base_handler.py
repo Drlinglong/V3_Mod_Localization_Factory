@@ -188,3 +188,32 @@ class BaseApiHandler(ABC):
         except Exception as e:
             self.logger.exception(f"Single text translation failed for '{text[:30]}...': {e}")
             return text # Fallback to original text
+
+    def generate_with_messages(self, messages: list[dict], temperature: float = 0.7) -> str:
+        """
+        【通用逻辑】支持基于消息的对话生成。
+        默认实现将消息拼接为单个 Prompt，调用 _call_api。
+        子类（如 OpenAIHandler）可以覆盖此方法以使用原生 Chat 接口。
+        """
+        system_instruction = ""
+        user_content = ""
+        
+        for msg in messages:
+            role = msg.get('role', 'user')
+            content = msg.get('content', '')
+            if role == 'system':
+                system_instruction = content
+            elif role == 'user':
+                user_content += content + "\n"
+        
+        full_prompt = user_content
+        if system_instruction:
+            full_prompt = f"{system_instruction}\n\n{user_content}"
+            
+        try:
+            # 使用 _call_api，这意味着所有实现了 _call_api 的子类都自动支持此功能
+            return self._call_api(self.client, full_prompt)
+        except Exception as e:
+            self.logger.exception(f"Generate with messages failed: {e}")
+            return ""
+
