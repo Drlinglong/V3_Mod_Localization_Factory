@@ -21,3 +21,9 @@ colorama
 fastapi
 uvicorn[standard]
 python-multipart
+
+# Phonetic Matching Dependencies
+pypinyin
+pykakasi
+jamo
+python-Levenshtein

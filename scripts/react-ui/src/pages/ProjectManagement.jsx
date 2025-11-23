@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import {
   Container, Title, Button, Group, Card, Text, Grid, Modal, TextInput, Select,
   Stack, Badge, ScrollArea, Table, Box, Tabs, Center, Paper, BackgroundImage,
-  ActionIcon, SimpleGrid, Overlay, Input
+  ActionIcon, SimpleGrid, Overlay, Input, Tooltip
 } from '@mantine/core';
-import { IconPlus, IconFolder, IconEdit, IconArrowLeft, IconSearch, IconBooks, IconCompass, IconArrowRight } from '@tabler/icons-react';
+import { IconPlus, IconFolder, IconEdit, IconArrowLeft, IconSearch, IconBooks, IconCompass, IconArrowRight, IconArchive, IconTrash, IconRestore } from '@tabler/icons-react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { useTranslation } from 'react-i18next';
@@ -18,7 +18,7 @@ import styles from './ProjectManagement.module.css';
 // Assets
 import heroBg from '../assets/project_hero_bg.png';
 import cardNewProject from '../assets/card_new_project.png';
-import cardOpenProject from '../assets/card_open_project.png';
+import cardOpenProject from '../assets/card_open_project.png'; // Reusing for Archives
 
 const API_BASE = 'http://localhost:8000/api';
 
@@ -29,6 +29,9 @@ export default function ProjectManagement() {
   const [searchQuery, setSearchQuery] = useState('');
   const [deleteModalOpen, setDeleteModalOpen] = useState(false);
   const [deleteSourceFiles, setDeleteSourceFiles] = useState(false);
+
+  // View Mode: 'active' | 'archives'
+  const [viewMode, setViewMode] = useState('active');
 
   // Selection State
   const [selectedProject, setSelectedProject] = useState(null);
@@ -44,7 +47,7 @@ export default function ProjectManagement() {
 
   useEffect(() => {
     fetchProjects();
-  }, []);
+  }, [viewMode]);
 
   useEffect(() => {
     if (selectedProject) {
@@ -54,8 +57,18 @@ export default function ProjectManagement() {
 
   const fetchProjects = async () => {
     try {
-      const res = await axios.get(`${API_BASE}/projects`);
-      setProjects(res.data);
+      let res;
+      if (viewMode === 'active') {
+        res = await axios.get(`${API_BASE}/projects?status=active`);
+        setProjects(res.data);
+      } else {
+        // Fetch both archived and deleted for archives view
+        const [archivedRes, deletedRes] = await Promise.all([
+          axios.get(`${API_BASE}/projects?status=archived`),
+          axios.get(`${API_BASE}/projects?status=deleted`)
+        ]);
+        setProjects([...archivedRes.data, ...deletedRes.data]);
+      }
     } catch (error) {
       console.error("Failed to load projects", error);
     }
@@ -76,7 +89,10 @@ export default function ProjectManagement() {
       const totalLines = files.reduce((acc, f) => acc + (f.line_count || 0), 0);
 
       setProjectDetails({
-        project_id: projectId, // Add project_id here!
+        project_id: projectId,
+        name: selectedProject.name, // Pass name
+        status: selectedProject.status, // Pass status
+        notes: selectedProject.notes, // Pass notes
         overview: {
           totalFiles: files.length,
           totalLines: totalLines,
@@ -88,10 +104,10 @@ export default function ProjectManagement() {
         translation_dirs: config.translation_dirs,
         files: files.map(f => ({
           key: f.file_id,
-          name: f.file_path, // This is full path now, maybe show relative?
+          name: f.file_path,
           status: f.status,
           lines: f.line_count,
-          file_type: f.file_type, // Pass file_type
+          file_type: f.file_type,
           progress: f.status === 'done' ? '100%' : '0%',
           actions: ['Proofread']
         }))
@@ -139,6 +155,57 @@ export default function ProjectManagement() {
     navigate(`/proofreading?projectId=${selectedProject.project_id}&fileId=${fileId}`);
   };
 
+  const handleUpdateNotes = async (notes) => {
+    if (!selectedProject) return;
+    try {
+      await axios.post(`${API_BASE}/project/${selectedProject.project_id}/notes`, { notes });
+      // Update local state
+      setSelectedProject(prev => ({ ...prev, notes }));
+      setProjectDetails(prev => ({ ...prev, notes }));
+    } catch (error) {
+      console.error("Failed to update notes", error);
+      alert("Failed to save notes");
+    }
+  };
+
+  const handleUpdateStatus = async (status) => {
+    if (!selectedProject) return;
+    try {
+      await axios.post(`${API_BASE}/project/${selectedProject.project_id}/status`, { status });
+      // If status changes such that it leaves the current view, we might want to go back or refresh
+      // But for now, just update local state and refresh list
+      setSelectedProject(prev => ({ ...prev, status }));
+      setProjectDetails(prev => ({ ...prev, status }));
+      fetchProjects(); // Refresh list to reflect changes
+
+      // If we archived/deleted while in active view, go back to list
+      if (viewMode === 'active' && status !== 'active') {
+        setSelectedProject(null);
+      }
+      // If we restored while in archives view, go back to list
+      if (viewMode === 'archives' && status === 'active') {
+        setSelectedProject(null);
+      }
+
+    } catch (error) {
+      console.error("Failed to update status", error);
+      alert("Failed to update status");
+    }
+  };
+
+  const handleDeleteForever = async () => {
+    if (!selectedProject) return;
+    try {
+      await axios.delete(`${API_BASE}/project/${selectedProject.project_id}?delete_files=${deleteSourceFiles}`);
+      setDeleteModalOpen(false);
+      setSelectedProject(null);
+      setDeleteSourceFiles(false);
+      fetchProjects();
+    } catch (error) {
+      alert(`Failed to delete project: ${error.response?.data?.detail || error.message}`);
+    }
+  };
+
   // --- Render Views ---
 
   // View 1: Project List (Hero UI)
@@ -156,79 +223,91 @@ export default function ProjectManagement() {
             <Overlay color="#000" opacity={0.6} zIndex={1} radius="md" />
             <Center p="md" style={{ height: '100%', position: 'relative', zIndex: 2, flexDirection: 'column' }}>
               <Title order={1} style={{ color: '#fff', fontSize: '3rem', textShadow: '0 0 20px rgba(0,0,0,0.8)' }}>
-                {t('page_title_project_management')}
+                {viewMode === 'active' ? t('page_title_project_management') : t('project_management.archives_title')}
               </Title>
               <Text c="dimmed" size="lg" mt="sm">
-                Manage your localization projects with steampunk precision.
+                {viewMode === 'active' ? 'Manage your localization projects with steampunk precision.' : t('project_management.actions.archives_desc')}
               </Text>
 
-              <Input
-                icon={<IconSearch size={16} />}
-                placeholder="Search projects..."
-                radius="xl"
-                size="md"
-                mt="xl"
-                style={{ width: '400px' }}
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.currentTarget.value)}
-                styles={{ input: { background: 'rgba(255,255,255,0.1)', color: '#fff', border: '1px solid rgba(255,255,255,0.2)' } }}
-              />
+              <Group mt="xl">
+                {viewMode === 'archives' && (
+                  <Button variant="outline" color="gray" leftSection={<IconArrowLeft />} onClick={() => setViewMode('active')}>
+                    {t('button_back')}
+                  </Button>
+                )}
+                <Input
+                  icon={<IconSearch size={16} />}
+                  placeholder="Search projects..."
+                  radius="xl"
+                  size="md"
+                  style={{ width: '400px' }}
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.currentTarget.value)}
+                  styles={{ input: { background: 'rgba(255,255,255,0.1)', color: '#fff', border: '1px solid rgba(255,255,255,0.2)' } }}
+                />
+              </Group>
             </Center>
           </BackgroundImage>
         </Box>
 
         {/* Content Section */}
         <ScrollArea style={{ flex: 1, padding: '20px' }}>
-          <Title order={3} mb="md">Actions</Title>
-          <SimpleGrid cols={3} spacing="lg" breakpoints={[{ maxWidth: 'sm', cols: 1 }]}>
+          {viewMode === 'active' && (
+            <>
+              <Title order={3} mb="md">Actions</Title>
+              <SimpleGrid cols={3} spacing="lg" breakpoints={[{ maxWidth: 'sm', cols: 1 }]}>
 
-            {/* Create New Card */}
-            <Card
-              shadow="sm"
-              padding="lg"
-              radius="md"
-              withBorder
-              className={styles.actionCard}
-              onClick={() => setIsCreateModalOpen(true)}
-            >
-              <Card.Section>
-                <BackgroundImage src={cardNewProject} style={{ height: 140 }} />
-              </Card.Section>
-              <Group position="apart" mt="md" mb="xs">
-                <Text weight={500}>Create New Project</Text>
-                <Badge color="pink" variant="light">New</Badge>
-              </Group>
-              <Text size="sm" color="dimmed">
-                Start a new localization journey from a local mod folder.
-              </Text>
-            </Card>
+                {/* Create New Card */}
+                <Card
+                  shadow="sm"
+                  padding="lg"
+                  radius="md"
+                  withBorder
+                  className={styles.actionCard}
+                  onClick={() => setIsCreateModalOpen(true)}
+                >
+                  <Card.Section>
+                    <BackgroundImage src={cardNewProject} style={{ height: 140 }} />
+                  </Card.Section>
+                  <Group position="apart" mt="md" mb="xs">
+                    <Text weight={500}>{t('project_management.actions.create_new')}</Text>
+                    <Badge color="pink" variant="light">New</Badge>
+                  </Group>
+                  <Text size="sm" color="dimmed">
+                    {t('project_management.actions.create_new_desc')}
+                  </Text>
+                </Card>
 
-            {/* Archives Card */}
-            <Card
-              shadow="sm"
-              padding="lg"
-              radius="md"
-              withBorder
-              className={styles.actionCard}
-              onClick={() => navigate('/archives')}
-            >
-              <Card.Section>
-                <BackgroundImage src={cardOpenProject} style={{ height: 140 }} />
-              </Card.Section>
-              <Group position="apart" mt="md" mb="xs">
-                <Text weight={500}>Archives</Text>
-                <Badge color="gray" variant="light">View</Badge>
-              </Group>
-              <Text size="sm" color="dimmed">
-                Browse archived or deleted projects.
-              </Text>
-            </Card>
-          </SimpleGrid>
+                {/* Archives Card */}
+                <Card
+                  shadow="sm"
+                  padding="lg"
+                  radius="md"
+                  withBorder
+                  className={styles.actionCard}
+                  onClick={() => setViewMode('archives')}
+                >
+                  <Card.Section>
+                    <BackgroundImage src={cardOpenProject} style={{ height: 140 }} />
+                  </Card.Section>
+                  <Group position="apart" mt="md" mb="xs">
+                    <Text weight={500}>{t('project_management.actions.archives')}</Text>
+                    <Badge color="gray" variant="light">View</Badge>
+                  </Group>
+                  <Text size="sm" color="dimmed">
+                    {t('project_management.actions.archives_desc')}
+                  </Text>
+                </Card>
+              </SimpleGrid>
+            </>
+          )}
 
-          <Title order={3} mt="xl" mb="md">Recent Projects</Title>
+          <Title order={3} mt="xl" mb="md">{viewMode === 'active' ? 'Recent Projects' : 'Archived Projects'}</Title>
 
           {filteredProjects.length === 0 ? (
-            <Text c="dimmed" fs="italic">No projects found. Create one above!</Text>
+            <Text c="dimmed" fs="italic">
+              {viewMode === 'active' ? t('no_existing_mods') : t('project_management.empty_archives')}
+            </Text>
           ) : (
             <SimpleGrid cols={2} spacing="md">
               {filteredProjects.map((p) => (
@@ -238,14 +317,17 @@ export default function ProjectManagement() {
                   withBorder
                   className={styles.projectRow}
                   onClick={() => setSelectedProject(p)}
+                  style={{ opacity: p.status === 'deleted' ? 0.6 : 1 }}
                 >
                   <Group>
-                    <IconBooks size={32} color="var(--mantine-color-blue-6)" />
+                    {p.status === 'deleted' ? <IconTrash size={32} color="red" /> : <IconBooks size={32} color="var(--mantine-color-blue-6)" />}
                     <Box style={{ flex: 1 }}>
-                      <Text weight={600} size="lg">{p.name}</Text>
+                      <Text weight={600} size="lg" td={p.status === 'deleted' ? 'line-through' : 'none'}>{p.name}</Text>
                       <Text size="xs" c="dimmed">{p.game_id} • {p.source_path}</Text>
                     </Box>
-                    <Badge>{p.status}</Badge>
+                    <Badge color={p.status === 'active' ? 'blue' : p.status === 'archived' ? 'orange' : 'red'}>
+                      {t(`project_management.status.${p.status}`)}
+                    </Badge>
                     <IconArrowRight size={18} color="gray" />
                   </Group>
                 </Paper>
@@ -269,28 +351,6 @@ export default function ProjectManagement() {
     }
   };
 
-  const handleArchiveProject = async () => {
-    if (!selectedProject) return;
-    try {
-      await axios.put(`${API_BASE}/project/${selectedProject.project_id}/status`, { status: 'archived' });
-      setSelectedProject(null); // Go back to project list
-    } catch (error) {
-      alert(`Failed to archive project: ${error.response?.data?.detail || error.message}`);
-    }
-  };
-
-  const handleDeleteProject = async () => {
-    if (!selectedProject) return;
-    try {
-      await axios.delete(`${API_BASE}/project/${selectedProject.project_id}`);
-      setDeleteModalOpen(false);
-      setSelectedProject(null);
-      fetchProjects();
-    } catch (error) {
-      alert(`Failed to delete project: ${error.response?.data?.detail || error.message}`);
-    }
-  };
-
   // View 2: Project Dashboard
   const renderProjectDashboard = () => (
     <div className={styles.container} style={{ overflow: 'hidden', height: '100%', display: 'flex', flexDirection: 'column' }}>
@@ -299,16 +359,17 @@ export default function ProjectManagement() {
         <Group justify="space-between">
           <Group>
             <Button variant="subtle" onClick={() => setSelectedProject(null)} leftSection={<IconArrowLeft size={16} />}>
-              Back
+              {t('button_back')}
             </Button>
             <Title order={3} style={{ fontFamily: 'var(--font-header)', color: 'var(--text-highlight)' }}>
               {selectedProject.name}
             </Title>
+            <Badge color={selectedProject.status === 'active' ? 'blue' : selectedProject.status === 'archived' ? 'orange' : 'red'}>
+              {t(`project_management.status.${selectedProject.status}`)}
+            </Badge>
           </Group>
           <Group>
             <Button variant="light" size="xs" onClick={handleRefreshFiles}>{t('project_management.refresh_files')}</Button>
-            <Button variant="light" color="orange" size="xs" onClick={handleArchiveProject}>Archive</Button>
-            <Button variant="light" color="red" size="xs" onClick={() => setDeleteModalOpen(true)}>Delete</Button>
             <Badge size="lg">{selectedProject.game_id}</Badge>
           </Group>
         </Group>
@@ -329,8 +390,10 @@ export default function ProjectManagement() {
             <ProjectOverview
               projectDetails={projectDetails}
               handleProofread={handleProofread}
-              handleStatusChange={() => { }}
+              handleStatusChange={handleUpdateStatus}
+              handleNotesChange={handleUpdateNotes}
               onPathsUpdated={() => fetchProjectFiles(selectedProject.project_id)}
+              onDeleteForever={() => setDeleteModalOpen(true)}
             />
           ) : <Text>Loading details...</Text>}
         </Tabs.Panel>
@@ -349,7 +412,7 @@ export default function ProjectManagement() {
       <Modal
         opened={isCreateModalOpen}
         onClose={() => setIsCreateModalOpen(false)}
-        title="Create New Project"
+        title={t('project_management.actions.create_new')}
         size="lg"
       >
         <Stack>
@@ -384,25 +447,34 @@ export default function ProjectManagement() {
             value={newProjectGame}
             onChange={setNewProjectGame}
           />
-          <Button onClick={handleCreateProject} fullWidth mt="md">Create Project</Button>
+          <Button onClick={handleCreateProject} fullWidth mt="md">{t('project_management.actions.create_new')}</Button>
         </Stack>
       </Modal>
 
       <Modal
         opened={deleteModalOpen}
-        onClose={() => { setDeleteModalOpen(false); }}
-        title="Delete Project"
+        onClose={() => { setDeleteModalOpen(false); setDeleteSourceFiles(false); }}
+        title={t('project_management.delete_forever')}
         size="md"
       >
         <Stack>
-          <Text>Are you sure you want to move this project to the recycle bin?</Text>
+          <Text>{t('project_management.confirm_delete_forever')}</Text>
           <Text size="sm" c="dimmed">Project: {selectedProject?.name}</Text>
+          <input
+            type="checkbox"
+            checked={deleteSourceFiles}
+            onChange={(e) => setDeleteSourceFiles(e.target.checked)}
+            id="delete-files-checkbox"
+          />
+          <label htmlFor="delete-files-checkbox">
+            <Text size="sm" c="red">Also delete source files from disk</Text>
+          </label>
           <Group justify="flex-end" mt="md">
-            <Button variant="default" onClick={() => { setDeleteModalOpen(false); }}>
-              Cancel
+            <Button variant="default" onClick={() => { setDeleteModalOpen(false); setDeleteSourceFiles(false); }}>
+              {t('button_cancel')}
             </Button>
-            <Button color="red" onClick={handleDeleteProject}>
-              Delete
+            <Button color="red" onClick={handleDeleteForever}>
+              {t('project_management.delete_forever')}
             </Button>
           </Group>
         </Stack>

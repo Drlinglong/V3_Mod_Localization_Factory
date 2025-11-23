@@ -255,6 +255,23 @@
   "proofreading.select_mod_placeholder": "Select a mod to proofread",
   "proofreading.select_file_placeholder": "Select a file",
   "project_management.delete_project": "Delete Project",
+  "project_management.actions.create_new": "Create New Project",
+  "project_management.actions.create_new_desc": "Start a new localization journey from a local mod folder.",
+  "project_management.actions.archives": "Archives",
+  "project_management.actions.archives_desc": "Browse archived or deleted projects.",
+  "project_management.status.active": "Active",
+  "project_management.status.archived": "Archived",
+  "project_management.status.deleted": "Deleted",
+  "project_management.notes": "Project Notes",
+  "project_management.notes_placeholder": "Add notes about this project...",
+  "project_management.archive_project": "Archive Project",
+  "project_management.restore_project": "Restore Project",
+  "project_management.delete_forever": "Delete Forever",
+  "project_management.archives_title": "Project Archives",
+  "project_management.empty_archives": "No archived projects found.",
+  "project_management.confirm_archive": "Are you sure you want to archive this project? It will be moved to the Archives.",
+  "project_management.confirm_delete_forever": "Are you sure you want to permanently delete this project? This cannot be undone.",
+  "project_management.confirm_restore": "Are you sure you want to restore this project?",
   "glossary_editor": {
     "language": "Language",
     "value": "Value",
@@ -263,5 +280,32 @@
     "abbreviations_desc": "Add language-specific abbreviations.",
     "metadata_label": "Metadata (JSON)",
     "error_invalid_json": "Invalid JSON format"
+  },
+  "neologism_review": {
+    "title": "Neologism Review",
+    "tab_mining": "Mining Console",
+    "tab_court": "Judgment Court",
+    "mining": {
+      "select_project": "1. Select Project",
+      "select_project_placeholder": "Choose a project source",
+      "select_provider": "3. API Provider",
+      "start_mining": "Start Mining",
+      "select_files": "2. Select Files to Mine (Optional)",
+      "select_files_desc": "Leave empty to scan the entire project.",
+      "no_files": "Select a project to view files...",
+      "mining_disclaimer": "Invokes LLM for mining, which may incur API costs."
+    },
+    "court": {
+      "docket": "Docket",
+      "caught_up": "All caught up!",
+      "select_case": "Select a case from the docket",
+      "candidate_term": "Candidate Term",
+      "ai_analysis": "AI Analysis",
+      "final_translation": "Final Translation",
+      "final_translation_desc": "Review and edit the suggested translation before approving.",
+      "ignore": "Ignore",
+      "approve": "Approve Term",
+      "context_evidence": "Contextual Evidence"
+    }
   }
 }

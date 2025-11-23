@@ -7,6 +7,7 @@ from typing import Dict, List, Any, Optional
 
 from scripts.app_settings import PROJECT_ROOT
 from scripts.utils import i18n
+from scripts.utils.phonetics_engine import PhoneticsEngine
 
 DB_PATH = f"{PROJECT_ROOT}/data/database.sqlite"
 
@@ -18,6 +19,7 @@ class GlossaryManager:
         self.current_game_id: Optional[str] = None
         self.in_memory_glossary: Dict[str, Any] = {'entries': []}
         self.fuzzy_matching_mode: str = 'loose'
+        self.phonetics_engine = PhoneticsEngine()
         
     def _create_connection(self):
         """创建并返回一个数据库连接"""
@@ -320,12 +322,23 @@ class GlossaryManager:
         glossary = self.get_glossary_for_translation()
         if not glossary:
             return matches
+            
+        # Pre-compute text fingerprint for CJK languages to optimize loop
+        text_fingerprint = ""
+        is_cjk = source_lang in ['zh-CN', 'zh-TW', 'ja', 'ko']
+        if is_cjk:
+            # Map locale to PhoneticsEngine lang code
+            pe_lang = 'zh' if 'zh' in source_lang else source_lang
+            text_fingerprint = self.phonetics_engine.generate_fingerprint(text, pe_lang)
+
         for entry in glossary.get('entries', []):
             translations = entry.get('translations', {})
             source_term = translations.get(source_lang, "")
             target_term = translations.get(target_lang, "")
             if not source_term or not target_term:
                 continue
+                
+            # 1. Exact Match
             if source_term.lower() in text:
                 matches.append({
                     'source_term': source_term,
@@ -337,6 +350,27 @@ class GlossaryManager:
                     'confidence': 1.0
                 })
                 continue
+                
+            # 2. Phonetic Match (New Tier 1 Feature)
+            if is_cjk and len(source_term) > 1: # Avoid single character phonetic noise
+                term_fingerprint = self.phonetics_engine.generate_fingerprint(source_term, pe_lang)
+                if term_fingerprint and term_fingerprint in text_fingerprint:
+                    matches.append({
+                        'source_term': source_term,
+                        'target_term': target_term,
+                        'id': entry.get('entry_id', ''),
+                        'metadata': entry.get('raw_metadata', {}),
+                        'variants': entry.get('variants', {}),
+                        'match_type': 'phonetic',
+                        'confidence': 0.85 # High confidence for homophone match
+                    })
+                    # Don't continue, check other match types too? 
+                    # Actually if phonetic match is found, we might still want to check variants/abbrs
+                    # But usually phonetic match is strong enough to be a candidate.
+                    # Let's continue to avoid duplicates if variants also match.
+                    continue
+
+            # 3. Variant Match
             variants = entry.get('variants', {}).get(source_lang, [])
             for variant in variants:
                 if variant.lower() in text:
@@ -350,6 +384,8 @@ class GlossaryManager:
                         'confidence': 0.9
                     })
                     break
+            
+            # 4. Abbreviation Match
             abbreviations = entry.get('abbreviations', {}).get(source_lang, [])
             if abbreviations:
                  for abbreviation in abbreviations:
@@ -364,6 +400,8 @@ class GlossaryManager:
                             'confidence': 0.85
                         })
                         break
+            
+            # 5. Partial Match
             partial_match = self._check_partial_match(source_term, text, source_lang)
             if partial_match:
                 matches.append({
@@ -407,6 +445,7 @@ class GlossaryManager:
             "",
             "Match Type Explanation:",
             "• EXACT: Exact match, highest priority",
+            "• PHONETIC: Phonetic/Homophone match (potential typo in source)",
             "• VARIANT: Variant match, such as plural forms, synonyms, abbreviations",
             "• ABBREVIATION: Abbreviation match, such as organization abbreviations, person name abbreviations",
             "• PARTIAL: Smart partial match, automatically identifies abbreviation and full name relationships",
@@ -415,11 +454,12 @@ class GlossaryManager:
             "Translation Requirements:",
             "1. The above terms must be translated strictly according to the glossary, no arbitrary changes allowed",
             "2. Variant forms of terms should also be translated to the same target language equivalent",
-            "3. For abbreviation and partial match terms, choose the most appropriate translation based on context",
-            "4. For fuzzy match terms, translate reasonably based on context and glossary",
-            "5. Maintain consistency and accuracy of game terminology",
-            "6. Term placement in sentences should be natural and appropriate",
-            "7. If encountering terms not in the glossary, translate reasonably based on context",
+            "3. For phonetic matches, be aware that the source text might contain a homophone typo; use the glossary term as the correct reference.",
+            "4. For abbreviation and partial match terms, choose the most appropriate translation based on context",
+            "5. For fuzzy match terms, translate reasonably based on context and glossary",
+            "6. Maintain consistency and accuracy of game terminology",
+            "7. Term placement in sentences should be natural and appropriate",
+            "8. If encountering terms not in the glossary, translate reasonably based on context",
             "",
             "Please ensure strict adherence to the above glossary reference during translation."
         ])

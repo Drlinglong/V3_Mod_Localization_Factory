@@ -51,3 +51,22 @@ class OpenAIHandler(BaseApiHandler):
             self.logger.exception(f"OpenAI API call failed: {e}")
             # 重新引发异常，让基类的重试逻辑捕获
             raise
+
+    def generate_with_messages(self, messages: list[dict], temperature: float = 0.7) -> str:
+        """
+        Supports chat-like interaction for NeologismMiner.
+        """
+        provider_config = API_PROVIDERS.get(self.provider_name, {})
+        model_name = provider_config.get("default_model", "gpt-5-mini")
+        
+        try:
+            response = self.client.chat.completions.create(
+                model=model_name,
+                messages=messages,
+                temperature=temperature
+            )
+            return response.choices[0].message.content.strip()
+        except Exception as e:
+            self.logger.exception(f"OpenAI chat generation failed: {e}")
+            return ""
+

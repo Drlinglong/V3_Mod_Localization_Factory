@@ -37,6 +37,7 @@ from scripts.core.project_manager import ProjectManager
 from scripts.core.project_json_manager import ProjectJsonManager
 from scripts.core.checkpoint_manager import CheckpointManager
 from scripts.core.archive_manager import ArchiveManager
+from scripts.core.neologism_manager import neologism_manager
 
 # Initialize Managers
 glossary_manager = GlossaryManager()
@@ -153,14 +154,9 @@ class InitialTranslationRequest(BaseModel):
 
 # --- New Project Endpoints ---
 @app.get("/api/projects")
-def list_projects():
-    """Returns a list of all active projects."""
-    return project_manager.get_projects(status='active')
-
-@app.get("/api/projects/archives")
-def list_non_active_projects():
-    """Returns a list of all non-active (archived, deleted) projects."""
-    return project_manager.get_non_active_projects()
+def list_projects(status: Optional[str] = None):
+    """Returns a list of all projects, optionally filtered by status."""
+    return project_manager.get_projects(status)
 
 @app.post("/api/project/create")
 def create_project(request: CreateProjectRequest):
@@ -180,20 +176,10 @@ def list_project_files(project_id: str):
     """Lists files for a given project."""
     return project_manager.get_project_files(project_id)
 
-@app.delete("/api/project/{project_id}")
-def delete_project(project_id: str):
-    """Soft deletes a project by setting its status to 'deleted'."""
-    try:
-        success = project_manager.delete_project(project_id)
-        if success:
-            return {"status": "success", "message": "Project moved to recycle bin"}
-        else:
-            raise HTTPException(status_code=404, detail="Project not found")
-    except Exception as e:
-        logging.error(f"Error deleting project: {e}")
-        raise HTTPException(status_code=500, detail=str(e))
+class UpdateProjectStatusRequest(BaseModel):
+    status: str
 
-@app.put("/api/project/{project_id}/status")
+@app.post("/api/project/{project_id}/status")
 def update_project_status(project_id: str, request: UpdateProjectStatusRequest):
     """Updates a project's status."""
     try:
@@ -203,7 +189,7 @@ def update_project_status(project_id: str, request: UpdateProjectStatusRequest):
         logging.error(f"Error updating project status: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
-@app.put("/api/project/{project_id}/notes")
+@app.post("/api/project/{project_id}/notes")
 def update_project_notes(project_id: str, request: UpdateProjectNotesRequest):
     """Updates a project's notes."""
     try:
@@ -747,6 +733,82 @@ def generate_workshop_description(payload: WorkshopRequest):
         project_id=payload.project_id, bbcode_content=formatted_bbcode, workshop_id=payload.item_id
     )
     return {"bbcode": formatted_bbcode, "saved_path": saved_path}
+
+# --- Neologism API ---
+class ApproveNeologismRequest(BaseModel):
+    final_translation: str
+    glossary_id: int
+
+class UpdateNeologismRequest(BaseModel):
+    suggestion: str
+
+class MineNeologismsRequest(BaseModel):
+    project_id: str
+    api_provider: str
+    file_paths: Optional[List[str]] = None
+
+@app.get("/api/projects/{project_id}/files")
+def list_project_files(project_id: str):
+    project = project_manager.get_project(project_id)
+    if not project:
+        raise HTTPException(status_code=404, detail="Project not found")
+    
+    files = []
+    source_path = project['source_path']
+    for root, _, filenames in os.walk(source_path):
+        for filename in filenames:
+            if filename.endswith(('.txt', '.yml', '.yaml', '.csv', '.json')):
+                full_path = os.path.join(root, filename)
+                rel_path = os.path.relpath(full_path, source_path)
+                files.append({"path": full_path, "name": filename, "rel_path": rel_path})
+    return files
+
+@app.get("/api/neologisms")
+def list_neologisms():
+    return neologism_manager.get_pending_candidates()
+
+@app.post("/api/neologisms/{candidate_id}/approve")
+def approve_neologism(candidate_id: str, payload: ApproveNeologismRequest):
+    if neologism_manager.approve_candidate(candidate_id, payload.final_translation, payload.glossary_id):
+        return {"status": "success"}
+    raise HTTPException(status_code=404, detail="Candidate not found or failed to approve")
+
+@app.post("/api/neologisms/{candidate_id}/reject")
+def reject_neologism(candidate_id: str):
+    if neologism_manager.reject_candidate(candidate_id):
+        return {"status": "success"}
+    raise HTTPException(status_code=404, detail="Candidate not found")
+
+@app.patch("/api/neologisms/{candidate_id}")
+def update_neologism_suggestion(candidate_id: str, payload: UpdateNeologismRequest):
+    if neologism_manager.update_candidate_suggestion(candidate_id, payload.suggestion):
+        return {"status": "success"}
+    raise HTTPException(status_code=404, detail="Candidate not found")
+
+@app.post("/api/neologisms/mine")
+def trigger_mining(payload: MineNeologismsRequest, background_tasks: BackgroundTasks):
+    project = project_manager.get_project(payload.project_id)
+    if not project:
+        raise HTTPException(status_code=404, detail="Project not found")
+    
+    # Get all text files in project
+    if payload.file_paths:
+        files = payload.file_paths
+    else:
+        # Get all text files in project
+        files = []
+        for root, _, filenames in os.walk(project['source_path']):
+            for filename in filenames:
+                if filename.endswith(('.txt', '.yml', '.yaml', '.csv')):
+                    files.append(os.path.join(root, filename))
+    
+    background_tasks.add_task(
+        neologism_manager.run_mining_workflow,
+        files,
+        payload.api_provider
+    )
+    return {"status": "started", "message": "Mining started in background"}
+
 
 @app.get("/")
 def read_root():
