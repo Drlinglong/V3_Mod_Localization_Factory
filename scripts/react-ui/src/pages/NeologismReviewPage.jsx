@@ -23,6 +23,7 @@ const MiningDashboard = () => {
     const [files, setFiles] = useState([]);
     const [selectedFiles, setSelectedFiles] = useState([]);
     const [apiProvider, setApiProvider] = useState('gemini');
+    const [targetLang, setTargetLang] = useState('zh-CN');
     const [scanning, setScanning] = useState(false);
 
     useEffect(() => {
@@ -64,6 +65,7 @@ const MiningDashboard = () => {
             await axios.post(`${API_BASE_URL}/neologisms/mine`, {
                 project_id: selectedProject,
                 api_provider: apiProvider,
+                target_lang: targetLang,
                 file_paths: selectedFiles.length > 0 ? selectedFiles : null // null means all
             });
             notifications.show({
@@ -95,6 +97,27 @@ const MiningDashboard = () => {
                             data={projects}
                             value={selectedProject}
                             onChange={setSelectedProject}
+                            size="md"
+                        />
+
+                        <Select
+                            label="Target Language"
+                            description="AI will provide suggestions in this language"
+                            data={[
+                                { value: 'zh-CN', label: 'Simplified Chinese (简体中文)' },
+                                { value: 'zh-TW', label: 'Traditional Chinese (繁體中文)' },
+                                { value: 'en', label: 'English' },
+                                { value: 'ja', label: 'Japanese (日本語)' },
+                                { value: 'ko', label: 'Korean (한국어)' },
+                                { value: 'fr', label: 'French (Français)' },
+                                { value: 'de', label: 'German (Deutsch)' },
+                                { value: 'ru', label: 'Russian (Русский)' },
+                                { value: 'es', label: 'Spanish (Español)' },
+                                { value: 'pt', label: 'Portuguese (Português)' },
+                                { value: 'pl', label: 'Polish (Polski)' }
+                            ]}
+                            value={targetLang}
+                            onChange={setTargetLang}
                             size="md"
                         />
 

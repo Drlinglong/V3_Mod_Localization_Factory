@@ -747,6 +747,7 @@ class UpdateNeologismRequest(BaseModel):
 class MineNeologismsRequest(BaseModel):
     project_id: str
     api_provider: str
+    target_lang: str = "zh-CN"
     file_paths: Optional[List[str]] = None
 
 @app.get("/api/projects/{project_id}/files")
@@ -816,9 +817,11 @@ def trigger_mining(payload: MineNeologismsRequest, background_tasks: BackgroundT
     
     background_tasks.add_task(
         neologism_manager.run_mining_workflow,
-        payload.project_id,  # NEW: pass project_id first
+        payload.project_id,
         files,
-        payload.api_provider
+        payload.api_provider,
+        "en", # source_lang
+        payload.target_lang # target_lang
     )
     return {"status": "started", "message": "Mining started in background"}
 

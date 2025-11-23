@@ -157,7 +157,26 @@ class NeologismManager:
                             break
                 
                 for chunk in chunks:
-                    terms = miner.extract_terms(chunk)
+                    # Pass target language to miner
+                    # Assuming target_lang is passed as language code (e.g. 'zh-CN', 'ja')
+                    # We might need a mapping to full language name if the prompt expects it, 
+                    # but the prompt template uses both code and name.
+                    # For now, let's map common codes or just pass the code as name if unknown.
+                    lang_name_map = {
+                        "zh": "Chinese", "zh-CN": "Chinese", "zh-TW": "Traditional Chinese",
+                        "en": "English",
+                        "ja": "Japanese",
+                        "ko": "Korean",
+                        "fr": "French",
+                        "de": "German",
+                        "ru": "Russian",
+                        "es": "Spanish",
+                        "pt": "Portuguese",
+                        "pl": "Polish"
+                    }
+                    target_lang_name = lang_name_map.get(target_lang, target_lang)
+                    
+                    terms = miner.extract_terms(chunk, target_lang=target_lang_name, target_lang_code=target_lang)
                     for term in terms:
                         if term not in all_terms:
                             all_terms.add(term)
