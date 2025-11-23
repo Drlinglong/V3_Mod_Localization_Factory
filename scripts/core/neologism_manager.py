@@ -9,10 +9,11 @@ from scripts.core.api_handler import get_handler
 from scripts.core.neologism_miner import NeologismMiner
 from scripts.core.glossary_manager import glossary_manager
 
-CACHE_FILE = os.path.join(PROJECT_ROOT, "data", "cache", "neologism_candidates.json")
+CACHE_DIR = os.path.join(PROJECT_ROOT, "data", "cache", "neologism_candidates")
 
 class Candidate(BaseModel):
     id: str
+    project_id: str  # NEW: bind candidate to project
     original: str
     context_snippets: List[str]
     suggestion: str
@@ -22,80 +23,99 @@ class Candidate(BaseModel):
 
 class NeologismManager:
     def __init__(self):
-        self.candidates: List[Candidate] = []
-        self.load_candidates()
         self.logger = logging.getLogger(__name__)
+    
+    def _get_cache_file(self, project_id: str) -> str:
+        """Get project-specific cache file path."""
+        os.makedirs(CACHE_DIR, exist_ok=True)
+        return os.path.join(CACHE_DIR, f"{project_id}.json")
 
-    def load_candidates(self):
-        if os.path.exists(CACHE_FILE):
+    def load_candidates(self, project_id: str) -> List[Candidate]:
+        """Load candidates for a specific project."""
+        cache_file = self._get_cache_file(project_id)
+        if os.path.exists(cache_file):
             try:
-                with open(CACHE_FILE, 'r', encoding='utf-8') as f:
+                with open(cache_file, 'r', encoding='utf-8') as f:
                     data = json.load(f)
-                    self.candidates = [Candidate(**item) for item in data]
+                    return [Candidate(**item) for item in data]
             except Exception as e:
-                self.logger.error(f"Failed to load neologism candidates: {e}")
-                self.candidates = []
+                self.logger.error(f"Failed to load candidates for {project_id}: {e}")
+                return []
         else:
-            self.candidates = []
+            return []
 
-    def save_candidates(self):
-        os.makedirs(os.path.dirname(CACHE_FILE), exist_ok=True)
+    def save_candidates(self, project_id: str, candidates: List[Candidate]):
+        """Save candidates for a specific project."""
+        cache_file = self._get_cache_file(project_id)
         try:
-            with open(CACHE_FILE, 'w', encoding='utf-8') as f:
-                json.dump([c.dict() for c in self.candidates], f, ensure_ascii=False, indent=2)
+            with open(cache_file, 'w', encoding='utf-8') as f:
+                json.dump([c.dict() for c in candidates], f, ensure_ascii=False, indent=2)
         except Exception as e:
-            self.logger.error(f"Failed to save neologism candidates: {e}")
+            self.logger.error(f"Failed to save candidates for {project_id}: {e}")
 
-    def get_pending_candidates(self) -> List[Dict]:
-        return [c.dict() for c in self.candidates if c.status == "pending"]
+    def get_pending_candidates(self, project_id: Optional[str] = None) -> List[Dict]:
+        """Get pending candidates, optionally filtered by project."""
+        if project_id:
+            candidates = self.load_candidates(project_id)
+            return [c.dict() for c in candidates if c.status == "pending"]
+        else:
+            # Return all pending from all projects
+            all_pending = []
+            if os.path.exists(CACHE_DIR):
+                for filename in os.listdir(CACHE_DIR):
+                    if filename.endswith('.json'):
+                        pid = filename[:-5]  # Remove .json
+                        candidates = self.load_candidates(pid)
+                        all_pending.extend([c.dict() for c in candidates if c.status == "pending"])
+            return all_pending
 
-    def approve_candidate(self, candidate_id: str, final_translation: str, glossary_id: int) -> bool:
-        candidate = next((c for c in self.candidates if c.id == candidate_id), None)
+    def approve_candidate(self, project_id: str, candidate_id: str, final_translation: str, glossary_id: int) -> bool:
+        """Approve a candidate and add it to glossary."""
+        candidates = self.load_candidates(project_id)
+        candidate = next((c for c in candidates if c.id == candidate_id), None)
         if not candidate:
             return False
         
         # Add to glossary
-        entry = {
-            "source": candidate.original,
-            "translations": {"zh-CN": final_translation}, # Assuming zh-CN for now, should be configurable
-            "notes": f"Auto-mined. Reasoning: {candidate.reasoning}",
-            "metadata": {"source_file": candidate.source_file}
-        }
-        
-        # We need to construct the payload for glossary_manager.add_entry
-        # glossary_manager.add_entry expects storage format
         new_entry_id = str(uuid.uuid4())
         storage_entry = {
             "id": new_entry_id,
-            "translations": {"en": candidate.original, "zh-CN": final_translation}, # Assuming source is EN
-            "raw_metadata": {"remarks": entry["notes"], "source_file": candidate.source_file},
+            "translations": {"en": candidate.original, "zh-CN": final_translation},
+            "raw_metadata": {
+                "remarks": f"Auto-mined. Reasoning: {candidate.reasoning}",
+                "source_file": candidate.source_file
+            },
             "variants": {},
             "abbreviations": {}
         }
         
         if glossary_manager.add_entry(glossary_id, storage_entry):
             candidate.status = "approved"
-            self.save_candidates()
+            self.save_candidates(project_id, candidates)
             return True
         return False
 
-    def reject_candidate(self, candidate_id: str) -> bool:
-        candidate = next((c for c in self.candidates if c.id == candidate_id), None)
+    def reject_candidate(self, project_id: str, candidate_id: str) -> bool:
+        """Reject a candidate (mark as ignored)."""
+        candidates = self.load_candidates(project_id)
+        candidate = next((c for c in candidates if c.id == candidate_id), None)
         if candidate:
             candidate.status = "ignored"
-            self.save_candidates()
+            self.save_candidates(project_id, candidates)
             return True
         return False
     
-    def update_candidate_suggestion(self, candidate_id: str, suggestion: str) -> bool:
-        candidate = next((c for c in self.candidates if c.id == candidate_id), None)
+    def update_candidate_suggestion(self, project_id: str, candidate_id: str, suggestion: str) -> bool:
+        """Update a candidate's suggestion."""
+        candidates = self.load_candidates(project_id)
+        candidate = next((c for c in candidates if c.id == candidate_id), None)
         if candidate:
             candidate.suggestion = suggestion
-            self.save_candidates()
+            self.save_candidates(project_id, candidates)
             return True
         return False
 
-    def run_mining_workflow(self, file_paths: List[str], api_provider: str, source_lang: str = "en", target_lang: str = "zh"):
+    def run_mining_workflow(self, project_id: str, file_paths: List[str], api_provider: str, source_lang: str = "en", target_lang: str = "zh"):
         """
         Main workflow:
         1. Initialize Miner with API provider.
@@ -115,13 +135,26 @@ class NeologismManager:
         for file_path in file_paths:
             try:
                 with open(file_path, 'r', encoding='utf-8-sig') as f:
-                    content = f.read()
+                    lines = f.readlines()
                 
-                # Simple chunking if content is too large
-                # For now, let's assume files are manageable or we chunk by lines
-                # Better to chunk by paragraphs or max chars
-                chunk_size = 4000
-                chunks = [content[i:i+chunk_size] for i in range(0, len(content), chunk_size)]
+                # Intelligent line-based chunking
+                # ≤50 lines: process entire file
+                # >50 lines: chunk by 50 lines with 3-line overlap
+                if len(lines) <= 50:
+                    chunks = [''.join(lines)]
+                else:
+                    chunks = []
+                    chunk_size = 50
+                    overlap = 3
+                    step = chunk_size - overlap
+                    
+                    for i in range(0, len(lines), step):
+                        chunk_lines = lines[i:i + chunk_size]
+                        chunks.append(''.join(chunk_lines))
+                        
+                        # Stop if we've covered all lines
+                        if i + chunk_size >= len(lines):
+                            break
                 
                 for chunk in chunks:
                     terms = miner.extract_terms(chunk)
@@ -132,17 +165,17 @@ class NeologismManager:
             except Exception as e:
                 self.logger.error(f"Error reading file {file_path}: {e}")
 
-        # Filter out terms already in glossary or ignored/approved
+        # Load existing candidates for this project
+        existing_candidates = self.load_candidates(project_id)
         existing_terms = set()
-        # Check glossary (this is expensive if glossary is huge, but necessary)
-        # For now, let's just check against our own candidates status
-        for c in self.candidates:
+        for c in existing_candidates:
             if c.status in ["approved", "ignored"]:
                 existing_terms.add(c.original)
         
-        new_terms = [t for t in all_terms if t not in existing_terms and not any(c.original == t for c in self.candidates)]
+        new_terms = [t for t in all_terms if t not in existing_terms and not any(c.original == t for c in existing_candidates)]
 
         # Stage B: Analysis
+        new_candidates = []
         for term in new_terms:
             source_file = term_sources[term]
             context_snippets = self._find_context_snippets(term, source_file)
@@ -151,6 +184,7 @@ class NeologismManager:
             
             candidate = Candidate(
                 id=str(uuid.uuid4()),
+                project_id=project_id,  # NEW: bind to project
                 original=term,
                 context_snippets=context_snippets,
                 suggestion=analysis.get("suggestion", ""),
@@ -158,9 +192,11 @@ class NeologismManager:
                 status="pending",
                 source_file=source_file
             )
-            self.candidates.append(candidate)
+            new_candidates.append(candidate)
         
-        self.save_candidates()
+        # Merge with existing and save
+        all_candidates = existing_candidates + new_candidates
+        self.save_candidates(project_id, all_candidates)
         return len(new_terms)
 
     def _find_context_snippets(self, term: str, file_path: str, max_snippets: int = 3) -> List[str]:

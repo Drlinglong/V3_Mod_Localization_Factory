@@ -7,13 +7,29 @@ import sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
 
 from scripts.core.neologism_manager import NeologismManager, Candidate
+from scripts.core.project_manager import ProjectManager
 
-def create_demo_data():
+def create_demo_data(project_id: str = None):
+    """
+    Create demo neologism candidates for a project.
+    If project_id is not provided, uses the first available project.
+    """
     manager = NeologismManager()
+    project_mgr = ProjectManager()
+    
+    # Get project or use first available
+    if not project_id:
+        projects = project_mgr.get_projects()
+        if not projects:
+            print("ERROR: No projects found. Please create a project first.")
+            return
+        project_id = projects[0]['project_id']
+        print(f"Using project: {projects[0]['name']} ({project_id})")
     
     demo_candidates = [
         Candidate(
             id=str(uuid.uuid4()),
+            project_id=project_id,  # NEW: bind to project
             original="Aetherophasic Engine",
             context_snippets=[
                 "The Aetherophasic Engine is a megastructure capable of harvesting the very fabric of reality.",
@@ -26,6 +42,7 @@ def create_demo_data():
         ),
         Candidate(
             id=str(uuid.uuid4()),
+            project_id=project_id,
             original="Blorg Commonality",
             context_snippets=[
                 "The Blorg Commonality has sent a diplomatic insult.",
@@ -38,6 +55,7 @@ def create_demo_data():
         ),
         Candidate(
             id=str(uuid.uuid4()),
+            project_id=project_id,
             original="Zro Distillation",
             context_snippets=[
                 "New technology researched: Zro Distillation.",
@@ -50,6 +68,7 @@ def create_demo_data():
         ),
         Candidate(
             id=str(uuid.uuid4()),
+            project_id=project_id,
             original="Grand Herald",
             context_snippets=[
                 "We have discovered an ancient titan known as the Grand Herald.",
@@ -62,9 +81,11 @@ def create_demo_data():
         )
     ]
     
-    manager.candidates = demo_candidates
-    manager.save_candidates()
-    print(f"Successfully created {len(demo_candidates)} demo candidates.")
+    # Use new project-specific save method
+    manager.save_candidates(project_id, demo_candidates)
+    print(f"✅ Successfully created {len(demo_candidates)} demo candidates for project {project_id}")
 
 if __name__ == "__main__":
-    create_demo_data()
+    # Allow specifying project_id as command line argument
+    project_id = sys.argv[1] if len(sys.argv) > 1 else None
+    create_demo_data(project_id)

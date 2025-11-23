@@ -736,10 +736,12 @@ def generate_workshop_description(payload: WorkshopRequest):
 
 # --- Neologism API ---
 class ApproveNeologismRequest(BaseModel):
+    project_id: str
     final_translation: str
     glossary_id: int
 
 class UpdateNeologismRequest(BaseModel):
+    project_id: str
     suggestion: str
 
 class MineNeologismsRequest(BaseModel):
@@ -764,29 +766,39 @@ def list_project_files(project_id: str):
     return files
 
 @app.get("/api/neologisms")
-def list_neologisms():
-    return neologism_manager.get_pending_candidates()
+def list_neologisms(project_id: Optional[str] = None):
+    """List neologism candidates, optionally filtered by project."""
+    if not project_id:
+        raise HTTPException(status_code=400, detail="project_id query parameter is required")
+    return neologism_manager.get_pending_candidates(project_id)
 
 @app.post("/api/neologisms/{candidate_id}/approve")
 def approve_neologism(candidate_id: str, payload: ApproveNeologismRequest):
-    if neologism_manager.approve_candidate(candidate_id, payload.final_translation, payload.glossary_id):
+    """Approve a neologism candidate and add to glossary."""
+    if neologism_manager.approve_candidate(payload.project_id, candidate_id, payload.final_translation, payload.glossary_id):
         return {"status": "success"}
     raise HTTPException(status_code=404, detail="Candidate not found or failed to approve")
 
 @app.post("/api/neologisms/{candidate_id}/reject")
-def reject_neologism(candidate_id: str):
-    if neologism_manager.reject_candidate(candidate_id):
+def reject_neologism(candidate_id: str, payload: dict):
+    """Reject a neologism candidate."""
+    project_id = payload.get('project_id')
+    if not project_id:
+        raise HTTPException(status_code=400, detail="project_id is required")
+    if neologism_manager.reject_candidate(project_id, candidate_id):
         return {"status": "success"}
     raise HTTPException(status_code=404, detail="Candidate not found")
 
 @app.patch("/api/neologisms/{candidate_id}")
 def update_neologism_suggestion(candidate_id: str, payload: UpdateNeologismRequest):
-    if neologism_manager.update_candidate_suggestion(candidate_id, payload.suggestion):
+    """Update a candidate's suggestion."""
+    if neologism_manager.update_candidate_suggestion(payload.project_id, candidate_id, payload.suggestion):
         return {"status": "success"}
     raise HTTPException(status_code=404, detail="Candidate not found")
 
 @app.post("/api/neologisms/mine")
 def trigger_mining(payload: MineNeologismsRequest, background_tasks: BackgroundTasks):
+    """Trigger neologism mining for a project."""
     project = project_manager.get_project(payload.project_id)
     if not project:
         raise HTTPException(status_code=404, detail="Project not found")
@@ -804,6 +816,7 @@ def trigger_mining(payload: MineNeologismsRequest, background_tasks: BackgroundT
     
     background_tasks.add_task(
         neologism_manager.run_mining_workflow,
+        payload.project_id,  # NEW: pass project_id first
         files,
         payload.api_provider
     )
