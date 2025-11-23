@@ -4,10 +4,11 @@ import uuid
 import logging
 from typing import List, Dict, Optional, Literal
 from pydantic import BaseModel
-from scripts.app_settings import PROJECT_ROOT
+from scripts.app_settings import PROJECT_ROOT, GAME_PROFILES
 from scripts.core.api_handler import get_handler
 from scripts.core.neologism_miner import NeologismMiner
 from scripts.core.glossary_manager import glossary_manager
+from scripts.core.project_manager import ProjectManager
 
 CACHE_DIR = os.path.join(PROJECT_ROOT, "data", "cache", "neologism_candidates")
 
@@ -24,6 +25,7 @@ class Candidate(BaseModel):
 class NeologismManager:
     def __init__(self):
         self.logger = logging.getLogger(__name__)
+        self.project_manager = ProjectManager()
     
     def _get_cache_file(self, project_id: str) -> str:
         """Get project-specific cache file path."""
@@ -128,10 +130,18 @@ class NeologismManager:
         handler = get_handler(api_provider)
         miner = NeologismMiner(handler)
         
+        # Get Game Context
+        project = self.project_manager.get_project(project_id)
+        game_name = "Paradox Game"
+        if project:
+            game_id = project.get('game_id')
+            if game_id and game_id in GAME_PROFILES:
+                game_name = GAME_PROFILES[game_id]['name']
+        
         all_terms = set()
         term_sources = {} # term -> source_file
-
-        # Stage A: Mining
+        term_data = {} # Store analysis data from miner
+        
         for file_path in file_paths:
             try:
                 with open(file_path, 'r', encoding='utf-8-sig') as f:
@@ -158,10 +168,6 @@ class NeologismManager:
                 
                 for chunk in chunks:
                     # Pass target language to miner
-                    # Assuming target_lang is passed as language code (e.g. 'zh-CN', 'ja')
-                    # We might need a mapping to full language name if the prompt expects it, 
-                    # but the prompt template uses both code and name.
-                    # For now, let's map common codes or just pass the code as name if unknown.
                     lang_name_map = {
                         "zh": "Chinese", "zh-CN": "Chinese", "zh-TW": "Traditional Chinese",
                         "en": "English",
@@ -176,11 +182,17 @@ class NeologismManager:
                     }
                     target_lang_name = lang_name_map.get(target_lang, target_lang)
                     
-                    terms = miner.extract_terms(chunk, target_lang=target_lang_name, target_lang_code=target_lang)
-                    for term in terms:
+                    # Miner now returns list of dicts: [{'original': '...', 'suggestion': '...', 'reasoning': '...'}]
+                    extracted_items = miner.extract_terms(chunk, target_lang=target_lang_name, target_lang_code=target_lang, game_name=game_name)
+                    
+                    for item in extracted_items:
+                        term = item['original']
                         if term not in all_terms:
                             all_terms.add(term)
                             term_sources[term] = file_path
+                            # Store the initial analysis
+                            term_data[term] = item
+                            
             except Exception as e:
                 self.logger.error(f"Error reading file {file_path}: {e}")
 
@@ -191,19 +203,22 @@ class NeologismManager:
             if c.status in ["approved", "ignored"]:
                 existing_terms.add(c.original)
         
+        # Filter new terms
         new_terms = [t for t in all_terms if t not in existing_terms and not any(c.original == t for c in existing_candidates)]
 
-        # Stage B: Analysis
+        # Create candidates (Single Stage: Analysis already done by Miner)
         new_candidates = []
         for term in new_terms:
             source_file = term_sources[term]
+            # Still extract context snippets for evidence
             context_snippets = self._find_context_snippets(term, source_file)
             
-            analysis = self._analyze_term(term, context_snippets, handler, source_lang, target_lang)
+            # Get analysis from miner output
+            analysis = term_data.get(term, {})
             
             candidate = Candidate(
                 id=str(uuid.uuid4()),
-                project_id=project_id,  # NEW: bind to project
+                project_id=project_id,
                 original=term,
                 context_snippets=context_snippets,
                 suggestion=analysis.get("suggestion", ""),

@@ -13,7 +13,11 @@ class NeologismMiner:
 
 # Goal
 Your task is to read the provided game mod source text and extract all **potential, undefined proper nouns or neologisms**.
-These are typically fictional names of people, places, technologies, creatures, or organizations created by the author that require a unified translation.
+For each extracted term, you must also provide a translation suggestion and a brief reasoning based on the context.
+
+# Game Context
+You are currently working on a mod for the game: **{game_name}**.
+Please ensure your analysis and translation suggestions align with the specific lore, style, and terminology of this game.
 
 # Target Language
 You should provide translation suggestions in: **{target_lang}** (Language Code: {target_lang_code})
@@ -36,7 +40,20 @@ Please filter terms based on the following criteria:
 # Output Format
 
 *   **Output ONLY a raw JSON string**.
-*   Format: A list of strings `["Term1", "Term2", "Term3"]`
+*   Format: A list of objects.
+*   Example:
+    [
+        {{
+            "original": "Aetherophasic Engine",
+            "suggestion": "以太相引擎",
+            "reasoning": "Aetherophasic is a compound of Aether and Phasic. Engine translates to 引擎. This term refers to a specific Stellaris crisis megastructure."
+        }},
+        {{
+            "original": "Blorg Commonality",
+            "suggestion": "布洛格公社",
+            "reasoning": "Blorg is a species name, transliterated as 布洛格. Commonality implies a shared or communal government, translated as 公社 or 共联. '布洛格公社' sounds like a standard sci-fi faction name."
+        }}
+    ]
 *   Do NOT include markdown formatting (like ```json), and do NOT include any explanatory text.
 """
 
@@ -47,15 +64,17 @@ Please filter terms based on the following criteria:
         self.client = client
         self.logger = logging.getLogger(__name__)
 
-    def extract_terms(self, text_chunk: str, target_lang: str = "Chinese", target_lang_code: str = "zh-CN") -> List[str]:
+    def extract_terms(self, text_chunk: str, target_lang: str = "Chinese", target_lang_code: str = "zh-CN", game_name: str = "Paradox Game") -> List[dict]:
         """
         Call LLM to extract neologisms from text.
+        Returns a list of dicts: [{'original': '...', 'suggestion': '...', 'reasoning': '...'}]
         """
         try:
-            # Inject target language into system prompt
+            # Inject target language and game context into system prompt
             system_prompt = self.SYSTEM_PROMPT_TEMPLATE.format(
                 target_lang=target_lang,
-                target_lang_code=target_lang_code
+                target_lang_code=target_lang_code,
+                game_name=game_name
             )
 
             # Construct Prompt
@@ -90,7 +109,15 @@ Please filter terms based on the following criteria:
 
             terms = json.loads(cleaned_response)
             if isinstance(terms, list):
-                return [str(t) for t in terms]
+                # Validate items are dicts
+                valid_terms = []
+                for t in terms:
+                    if isinstance(t, dict) and "original" in t:
+                        valid_terms.append(t)
+                    elif isinstance(t, str):
+                        # Fallback for legacy string output
+                        valid_terms.append({"original": t, "suggestion": "", "reasoning": "Legacy extraction"})
+                return valid_terms
             else:
                 self.logger.warning(f"Unexpected JSON format from Neologism Miner: {terms}")
                 return []
@@ -101,4 +128,3 @@ Please filter terms based on the following criteria:
         except Exception as e:
             self.logger.error(f"Error in Neologism Miner: {e}")
             return []
-
