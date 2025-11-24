@@ -1,0 +1,613 @@
+textformatting = {
+	color_blind_mode = deuteranopia
+
+	format = {
+		name = color_green
+		format = "color:{ 0.75, 0.93, 0 }"
+	}
+
+	format = {
+		name = color_red
+		format = "color:{ 0.41, 0.40, 0.97 }"
+	}
+}
+
+textformatting = {
+	color_blind_mode = protanopia
+
+	format = {
+		name = color_green
+		format = "color:{ 0.75, 0.93, 0 }"
+	}
+
+	format = {
+		name = color_red
+		format = "color:{ 0.41, 0.40, 0.97 }"
+	}
+}
+
+textformatting = {
+	color_blind_mode = tritanopia
+
+	format = {
+		name = color_green
+		format = "color:{ 0.21, 0.72, 0.94 }"
+	}
+
+	format = {
+		name = color_red
+		format = "color:{ 0.94, 0.27, 0.20 }"
+	}
+}
+
+textformatting = {
+	###### COLORS ###
+	# USE THESE AS A BASE OF ANY FORMATTING
+	format = {
+		name = color_placeholder
+		format = "color:{ 1, 0, 1 }"
+	}
+
+	format = {
+		name = color_debug
+		format = "color:{ 1, 0, 1 }"
+	}
+
+	format = {
+		name = color_pure_white
+		format = "color:{ 1, 1, 1 }"
+	}
+
+	format = {
+		name = color_white
+		format = "color:{0.94, 0.92, 0.85 }"
+	}
+
+	format = {
+		name = color_gray
+		format = "color:{0.7, 0.7, 0.7}"
+	}
+
+	format = {
+		name = color_light_gray
+		format = "color:{0.8, 0.8, 0.8}"
+	}
+
+	format = {
+		name = color_dark_gray
+		format = "color:{0.4, 0.39, 0.37}"
+	}
+
+	format = {
+		name = color_red
+		format = "color:{0.89,0.38,0.4};glow_color:{0.0,0.0,0.0,0.5};glow_offset:{0.0,1.0}"
+	}
+
+	format = {
+		name = color_highlight
+		format = "color:{0.8,0.8,0}"
+	}
+
+	format = {
+		name = color_gold
+		format = "color:{0.56,0.49,0.37}"
+	}
+
+	format = {
+		name = color_link
+		format = "color:{0.98,0.88,0.65}"
+	}
+
+	format = {
+		name = color_green
+		format = "color:{0.35,0.83,0.41};glow_color:{0.0,0.0,0.0,0.5};glow_offset:{0.0,1.0}"
+	}
+
+	format = {
+		name = color_yellow
+		format = "color:{0.94, 0.85, 0.6};glow_color:{0.0,0.0,0.0,0.8};glow_offset:{0.5,2.5}"
+	}
+
+	format = {
+		name = color_yellow_dark
+		# format = "color:{0.87, 0.75, 0.53};glow_color:{0.0,0.0,0.0,0.8};glow_offset:{0.5,2.5}"
+		format = "color:{0.82, 0.70, 0.49};glow_color:{0.0,0.0,0.0,0.8};glow_offset:{0.5,2.5}"
+	}
+
+	format = {
+		name = color_yellow_desat
+		format = "color:{0.70, 0.65, 0.50};glow_color:{0.0,0.0,0.0,0.8};glow_offset:{0.5,2.5}"
+	}
+
+	format = {
+		name = color_very_light_blue
+		format = "color:{0.68, 0.81, 0.86}"
+	}
+
+	format = {
+		name = color_light_blue
+		format = "color:{0.51, 0.61, 0.65}"
+	}
+
+	format = {
+		name = color_concept
+		format = "color:{0.49,0.78,0.89}"
+	}
+
+	format = {
+		name = color_blue_gray
+		format = "color:{0.45, 0.45, 0.5}"
+	}
+
+	format = {
+		name = color_goldy_yellow
+		format = "color:{0.68, 0.56, 0.41}"
+	}
+
+	format = {
+		name = color_black
+		format = "color:{ 0.16, 0.16, 0.03 }"
+	}
+
+	# For labels in tooltips, the first line
+	format = {
+		name = tooltip_label
+		format = "font:HeadersFont;color_white;bold;glow_color:{0.0,0.0,0.0,0.3};glow_offset:{1.0,3.0}"
+	}
+
+	format = {
+		name = T
+		format = "tooltip_label"
+	}
+
+	format = {
+		name = "placeholder"
+		format = "font:ConsoleFont;color_placeholder;bold"
+	}
+
+	format = {
+		name = tooltip_subheading
+		format = "color_gray"
+	}
+
+	format = {
+		name = S
+		format = "tooltip_subheading;italic"
+	}
+
+	# For run-of-the-mill values
+	format = {
+		name = value
+		format = "color_white"
+	}
+
+	format = {
+		name = V
+		format = "value"
+	}
+
+	# Currently only used on mapmode tooltips to show what is different
+	format = {
+		name = highlight
+		format = "color_highlight;bold"
+	}
+
+	format = {
+		name = light
+		format = "color_white;semibold"
+	}
+
+	format = {
+		name = H
+		format = "highlight"
+	}
+
+	# DEPRECATED: We need to move to instructional blocks instead
+	# For things like: Press "SHIFT-X" to... and so on
+	format = {
+		name = "instruction"
+		format = "color_placeholder;italic"
+	}
+
+	format = {
+		name = I
+		format = "instruction"
+	}
+
+	# For when things are wrong or buttons disabled
+	format = {
+		name = "warning"
+		format = "color_red;italic"
+	}
+
+	format = {
+		name = X
+		format = "warning"
+	}
+
+	# For numbers etc
+	format = {
+		name = negative_value
+		format = "color_red"
+	}
+
+	format = {
+		name = positive_value
+		format = "color_green"
+	}
+
+	format = {
+		name = zero_value
+		format = "color_white"
+	}
+
+	format = {
+		name = zero_value_gray
+		format = "color_dark_gray"
+	}
+
+	format = {
+		name = N
+		format = "negative_value"
+	}
+
+	format = {
+		name = P
+		format = "positive_value"
+	}
+
+	format = {
+		name = Z
+		format = "zero_value"
+	}
+
+	format = {
+		name = ZG
+		format = "zero_value_gray"
+	}
+
+	# For hints and tips in Alert/Suggestion/Current Situation Tooltips
+	format = {
+		name = "help"
+		format = "color_very_light_blue;italic"
+	}
+
+	# For links
+	format = {
+		name = game_link
+		# format = "UNDERLINE;bold"
+		format = "bold"
+	}
+
+	format = {
+		name = explanation_link
+		format = "bold;color_concept"
+	}
+
+	format = {
+		name = explanation_link_overview
+		format = "bold;color_concept;glow_color:{0.0,0.0,0.0,0.8};glow_offset:{1.5,2.5}"
+	}
+
+	format = {
+		name = L
+		format = "game_link;color_link"
+	}
+
+	format = {
+		name = E
+		format = "explanation_link"
+
+	}
+
+	# Debug
+	format = {
+		name = debug
+		format = "color_debug"
+	}
+
+	format = {
+		name = D
+		format = "debug"
+	}
+
+	# Normal text
+	format = {
+		name = black
+		format = "color:{0,0,0}"
+	}
+	format = {
+		name = white
+		format = "color:{0.86, 0.86, 0.73}"
+	}
+	format = {
+		name = weak
+		format = "color:{0.4,0.4,0.4};italic"
+	}
+
+	format = {
+		name = B
+		format = "black"
+	}
+
+	format = {
+		name = W
+		format = "white"
+	}
+	format = {
+		name = emphasis
+		format = "italic"
+	}
+	format = {
+		name = EMP
+		format = "emphasis"
+	}
+
+	format = {
+		name = subtle_name
+		format = "font:FlavorFont;color_light_blue;italic;glow_color:{0.0,0.0,0.0,0.3};glow_offset:{1.0,3.0}"
+	}
+
+	format = {
+		name = flavor_title
+		format = "font:HeadersFont;color_yellow;italic;glow_color:{0.0,0.0,0.0,0.5};glow_offset:{1.0,3.0}"
+	}
+
+	format = {
+		name = flavor
+		format = "font:FlavorFont;color_gray;glow_color:{0.0,0.0,0.0,0.3};glow_offset:{1.0,3.0}"
+	}
+	format = {
+		name = F
+		format = "flavor"
+	}
+
+	format = {
+		name = script
+		format = "font:ConsoleFont;color_dark_gray"
+	}
+
+	format = {
+		name = high
+		format = "color_white"
+	}
+
+	format = {
+		name = header_titles
+		format = "font:HeadersFont;color_white;glow_color:{0.0,0.0,0.0,0.3};glow_offset:{1.0,3.0}"
+	}
+	
+	format = {
+		name = yellow_titles
+		format = "font:HeadersFont;color_yellow;glow_color:{0.0,0.0,0.0,0.3};glow_offset:{1.0,3.0}"
+	}
+
+	format = {
+		name = character_name
+		format = "font:HeadersFont;color_yellow;glow_color:{0.0,0.0,0.0,0.3};glow_offset:{1.0,3.0};size:17"
+	}
+
+	format = {
+		name = regnal_name
+		format = "font:HeadersFont;color_yellow;glow_color:{0.0,0.0,0.0,0.3};glow_offset:{1.0,3.0};size:17"
+	}
+
+	format = {
+		name = nickname
+		format = "font:HeadersFont;color_yellow_desat;glow_color:{0.0,0.0,0.0,0.3};glow_offset:{1.0,3.0};size:15"
+	}
+
+	format = {
+		name = lastname
+		format = "font:HeadersFont;color_yellow_dark;glow_color:{0.0,0.0,0.0,0.3};glow_offset:{1.0,3.0};size:18"
+	}
+
+	format = {
+		name = prefix_name
+		format = "font:HeadersFont;color_yellow_desat;glow_color:{0.0,0.0,0.0,0.3};glow_offset:{1.0,3.0};size:15"
+	}
+
+	format = {
+		name = suffix_name
+		format = "font:HeadersFont;color_yellow_desat;glow_color:{0.0,0.0,0.0,0.3};glow_offset:{1.0,3.0};size:5"
+	}
+
+	format = {
+		name = light_gray_flavor
+		format = "font:FlavorFont;color_light_gray;italic;glow_color:{0.0,0.0,0.0,0.4};glow_offset:{0,2.0}"
+	}
+
+	format = {
+		name = dark_dark_flavor
+		format = "font:FlavorFont;color_black;italic;glow_color:{0.0,0.0,0.0,0.1};glow_offset:{0,2.0}"
+	}
+
+	format = {
+		name = dark_white_flavor
+		format = "font:FlavorFont;color_white;italic;glow_color:{0.0,0.0,0.0,0.3};glow_offset:{0,2.0}"
+	}
+
+	format = {
+		name = medium
+		format = "color_gray"
+	}
+
+	format = {
+		name = low
+		format = "color_dark_gray"
+	}
+
+	format = {
+		name = weak
+		format = "low;italic"
+	}
+
+	format = {
+		name = trigger_inactive
+		format = "low"
+	}
+	
+	format = {
+		name = important_number
+		format = "font:FlavorFont;color_pure_white;bold;glow_color:{0.0,0.0,0.0,1.0};glow_offset:{1.0,2.0}"
+	}
+
+	format = {
+		name = map_city_label
+		format = "font:HeadersFont;color_pure_white;glow_color:{0.0,0.0,0.0,1.0};glow_offset:{1.0,2.0}"
+	}
+
+	format = {
+		name = map_city_label_capital
+		format = "font:HeadersFont;color_pure_white;bold;glow_color:{0.0,0.0,0.0,1.0};glow_offset:{1.0,2.0}"
+	}
+
+	format = {
+		name = outliner_top
+		format = "color_white;glow_color:{0.0,0.0,0.0,0.3};glow_offset:{1.0,2.0}"
+	}
+
+	format = {
+		name = outliner_status
+		format = "color_white;bold;glow_color:{0.0,0.0,0.0,0.3};glow_offset:{1.0,2.0}"
+	}
+
+	format = {
+		name = overview_text
+		format = "color_white;bold;glow_color:{0.0,0.0,0.0,0.8};glow_offset:{1.5,2.5}"
+	}
+
+	# Legacy-shortened names, should be replaced?
+	format = {
+		name = R
+		format = "negative_value"
+	}
+
+	format = {
+		name = G
+		format = "positive_value"
+	}
+
+	format = {
+		name = Y
+		format = "zero_value"
+	}
+
+	# For Buttons etc
+	format = {
+		name = clickable
+		format = "color_goldy_yellow"
+	}
+
+	format = {
+		name = tutorial_highlight
+		format = "color_white;bold;"
+	}
+}
+
+	# Credits
+textformatting = {
+	format = {
+		name = credits_title
+		format = "color:{1.0, 1.0, 1.0};SIZE:70;FONT:HeadersFont"
+	}
+
+	format = {
+		name = credits_studio
+		format = "color:{0.9, 0.9, 0.9};SIZE:60;FONT:HeadersFont"
+	}
+
+	format = {
+		name = credits_discipline
+		format = "color:{0.85, 0.85, 0.85};SIZE:50;glow_color:{0,0,0,1};FONT:HeadersFont"
+	}
+
+	format = {
+		name = credits_role
+		format = "color:{0.8, 0.8, 0.8};bold;SIZE:30;glow_color:{0,0,0,1}"
+	}
+
+#	format = {
+#		name = credits_entries
+#		format = "color:{0.75, 0.75, 0.75};SIZE:15;glow_color:{0,0,0,1}"
+#	}
+}
+
+template text_common_template {
+	text_selectable = no
+	using = tooltip_se
+	using = Font_Type_Standard
+	using = Font_Size_Small
+	fontsize_min = 8
+}
+
+template text_single_template {
+	using = text_common_template
+
+	autoresize = yes
+	default_format = "#high"
+	alwaystransparent = yes
+}
+
+template text_multi_template {
+	using = text_common_template
+	multiline = yes
+
+	default_format = "#medium"
+	alwaystransparent = no
+}
+
+# template mask_fade_horizontal_right_texture {
+# 	name = "mask"
+# 	texture = "gfx/interface/component_masks/mask_fade_horizontal_right.dds"
+# 	spriteType = Corneredstretched
+# 	spriteborder = { 0 0 }
+# 	blend_mode = alphamultiply
+# }
+
+template mask_fade_horizontal_middle_texture {
+	name = "mask"
+	texture = "gfx/interface/component_masks/mask_fade_horizontal_middle.dds"
+	spriteType = Corneredstretched
+	spriteborder = { 0 0 }
+	blend_mode = alphamultiply
+}
+
+# template mask_fade_horizontal_left_texture {
+# 	name = "mask"
+# 	texture = "gfx/interface/component_masks/mask_fade_horizontal_left.dds"
+# 	spriteType = Corneredstretched
+# 	spriteborder = { 0 0 }
+# 	blend_mode = alphamultiply
+# }
+
+# template text_background_solid_common_template {
+# 	margin_left = 50
+# 	margin_right = 50
+# 	alpha = 1
+# }
+
+# template text_background_solid_bone_texture {
+# 	using = color_bone_texture
+# 	spriteType = Corneredtiled
+# 	spriteborder = { 1 1 }
+# 	shaderfile = "gfx/FX/pdxgui_default.shader"
+# }
+
+# template text_background_solid_light_blue_texture {
+# 	using = color_light_blue_texture
+# 	spriteType = Corneredtiled
+# 	spriteborder = { 1 1 }
+# 	shaderfile = "gfx/FX/pdxgui_default.shader"
+# }
+
+# template text_background_solid_dark_blue_texture {
+# 	using = color_dark_blue_texture
+# 	spriteType = Corneredtiled
+# 	spriteborder = { 1 1 }
+# 	shaderfile = "gfx/FX/pdxgui_default.shader"
+# }
+
+template text_default_text_template {
+	text = "DEFAULT_TEXT"
+}

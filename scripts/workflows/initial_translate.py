@@ -89,25 +89,7 @@ def run(mod_name: str,
     checkpoint_manager = CheckpointManager(output_dir_path, current_config=current_config)
 
     # ───────────── 4. 发现所有源文件 (Discovery Phase) ─────────────
-    source_loc_folder = game_profile["source_localization_folder"]
-    source_loc_path = os.path.join(SOURCE_DIR, mod_name, source_loc_folder)
-    cust_loc_root = os.path.join(SOURCE_DIR, mod_name, "customizable_localization")
-
-    # 仅收集文件路径，不读取内容
-    all_file_paths = []
-
-    if os.path.isdir(source_loc_path):
-        suffix = f"_l_{source_lang['key'][2:]}.yml"
-        for root, _, files in os.walk(source_loc_path):
-            for fn in files:
-                if fn.endswith(suffix):
-                    all_file_paths.append({"path": os.path.join(root, fn), "filename": fn, "root": root, "is_custom_loc": False})
-
-    if os.path.isdir(cust_loc_root):
-        for root, _, files in os.walk(cust_loc_root):
-            for fn in files:
-                if fn.endswith(".txt"):
-                    all_file_paths.append({"path": os.path.join(root, fn), "filename": fn, "root": root, "is_custom_loc": True})
+    all_file_paths = discover_files(mod_name, game_profile, source_lang)
 
     if not all_file_paths:
         logging.warning(i18n.t("no_localisable_files_found", lang_name=source_lang['name']))
@@ -120,6 +102,49 @@ def run(mod_name: str,
     version_id_for_archive = None
     if should_archive and not mod_id_for_archive:
          mod_id_for_archive = archive_manager.get_or_create_mod_entry(mod_name, f"local_{mod_name}")
+
+
+def discover_files(mod_name: str, game_profile: dict, source_lang: dict) -> List[dict]:
+    """
+    Discover all localizable files in the mod directory.
+    Supports recursive search for EU5-style multi-module structures.
+    """
+    source_loc_folder = game_profile["source_localization_folder"]
+    mod_root_path = os.path.join(SOURCE_DIR, mod_name)
+    source_loc_path = os.path.join(mod_root_path, source_loc_folder)
+    cust_loc_root = os.path.join(mod_root_path, "customizable_localization")
+
+    # 仅收集文件路径，不读取内容
+    all_file_paths = []
+    suffix = f"_l_{source_lang['key'][2:]}.yml"
+
+    # 策略：如果标准路径存在，仅使用标准路径（保持兼容性）
+    # 如果标准路径不存在，则递归搜索所有名为 source_loc_folder 的目录 (EU5 模式)
+    search_paths = []
+    
+    if os.path.isdir(source_loc_path):
+        search_paths.append(source_loc_path)
+    else:
+        # 递归搜索所有匹配的文件夹
+        logging.info(f"Standard localization folder not found at {source_loc_path}. Searching recursively for '{source_loc_folder}'...")
+        for root, dirs, files in os.walk(mod_root_path):
+            if os.path.basename(root) == source_loc_folder:
+                search_paths.append(root)
+    
+    for loc_path in search_paths:
+        logging.info(f"Discovered localization directory: {loc_path}")
+        for root, _, files in os.walk(loc_path):
+            for fn in files:
+                if fn.endswith(suffix):
+                    all_file_paths.append({"path": os.path.join(root, fn), "filename": fn, "root": root, "is_custom_loc": False})
+
+    if os.path.isdir(cust_loc_root):
+        for root, _, files in os.walk(cust_loc_root):
+            for fn in files:
+                if fn.endswith(".txt"):
+                    all_file_paths.append({"path": os.path.join(root, fn), "filename": fn, "root": root, "is_custom_loc": True})
+                    
+    return all_file_paths
     
     # 注意：流式处理模式下，我们无法在开始前创建完整的 Source Version Snapshot，
     # 除非我们再次遍历所有文件读取内容。
@@ -188,7 +213,8 @@ def run(mod_name: str,
                     source_dir=SOURCE_DIR,
                     dest_dir=DEST_DIR,
                     client=handler.client,
-                    mod_name=mod_name
+                    mod_name=mod_name,
+                    loc_root=file_info.get("loc_root", "")
                 )
 
         # 初始化并行处理器
@@ -201,7 +227,7 @@ def run(mod_name: str,
         # 开始流式处理 (Consumer / Aggregator)
         # process_files_stream 返回一个迭代器，每当一个文件完成时 yield 结果
         stream = processor.process_files_stream(
-            file_tasks_generator(),
+            file_task_generator(),
             handler.translate_batch
         )
 
@@ -280,7 +306,8 @@ def _handle_empty_file(file_info, orig, texts, km, source_lang, target_lang, gam
     temp_task = FileTask(
         filename=file_info["filename"], root=file_info["root"], original_lines=orig, texts_to_translate=texts, key_map=km,
         is_custom_loc=file_info["is_custom_loc"], target_lang=target_lang, source_lang=source_lang, game_profile=game_profile,
-        mod_context="", provider_name="", output_folder_name=output_folder_name, source_dir=SOURCE_DIR, dest_dir=DEST_DIR, client=None, mod_name=mod_name
+        mod_context="", provider_name="", output_folder_name=output_folder_name, source_dir=SOURCE_DIR, dest_dir=DEST_DIR, client=None, mod_name=mod_name,
+        loc_root=file_info.get("loc_root", "")
     )
     dest_dir = _build_dest_dir(temp_task, target_lang, output_folder_name, game_profile)
     os.makedirs(dest_dir, exist_ok=True)
@@ -331,10 +358,65 @@ def _build_dest_dir(file_task: FileTask, target_lang: dict, output_folder_name: 
         rel = os.path.relpath(file_task.root, cust_loc_root)
         dest_dir = os.path.join(DEST_DIR, output_folder_name, "customizable_localization", target_lang["key"][2:], rel)
     else:
-        source_loc_folder = game_profile["source_localization_folder"]
-        source_loc_path = os.path.join(SOURCE_DIR, file_task.mod_name, source_loc_folder)
-        rel = os.path.relpath(file_task.root, source_loc_path)
-        dest_dir = os.path.join(DEST_DIR, output_folder_name, source_loc_folder, target_lang["key"][2:], rel)
+        # 使用 loc_root 来计算相对路径，确保多模块结构被保留
+        if file_task.loc_root:
+            # file_task.root 是文件所在的目录 (e.g. .../main_menu/localization/english/replace)
+            # file_task.loc_root 是该模块的 localization 根目录 (e.g. .../main_menu/localization)
+            
+            # 1. 计算相对于 loc_root 的路径 (e.g. english/replace)
+            rel_from_loc_root = os.path.relpath(file_task.root, file_task.loc_root)
+            
+            # 2. 处理语言文件夹替换
+            # 我们需要把 source_lang 文件夹替换为 target_lang 文件夹
+            # 假设结构是 [lang_folder]/[subfolders]
+            parts = rel_from_loc_root.split(os.sep)
+            if parts and (parts[0] == file_task.source_lang.get("name_en", "").lower() or \
+                          parts[0] == "english" or \
+                          parts[0] == file_task.source_lang.get("code", "")):
+                 # 替换第一个文件夹为目标语言 key (去掉 l_)
+                 # e.g. english -> simp_chinese
+                 parts[0] = target_lang["key"][2:]
+            else:
+                 # 如果没有语言文件夹，或者无法识别，则直接插入目标语言文件夹
+                 # 这通常不应该发生，除非文件直接在 localization 根目录下
+                 if parts[0] == ".": # relpath returns . if same dir
+                     parts = [target_lang["key"][2:]]
+                 else:
+                     # 插入到最前面? 或者保留原样?
+                     # 标准做法是 localization/[target_lang]/...
+                     # 如果原路径是 localization/replace/... (没有语言文件夹?)
+                     # 那我们应该把它放到 localization/[target_lang]/replace/...
+                     parts.insert(0, target_lang["key"][2:])
+            
+            new_rel_path = os.path.join(*parts)
+            
+            # 3. 计算模块路径 (相对于 mod root)
+            # loc_root 是 absolute path. 
+            # 我们需要它相对于 mod root 的路径 (e.g. main_menu/localization)
+            mod_root = os.path.join(SOURCE_DIR, file_task.mod_name)
+            module_rel_path = os.path.relpath(file_task.loc_root, mod_root)
+            
+            # 4. 组合最终路径
+            # DEST_DIR / output_folder / module_rel_path / new_rel_path
+            dest_dir = os.path.join(DEST_DIR, output_folder_name, module_rel_path, new_rel_path)
+            
+        else:
+            # Fallback for legacy behavior (single localization folder)
+            source_loc_folder = game_profile["source_localization_folder"]
+            source_loc_path = os.path.join(SOURCE_DIR, file_task.mod_name, source_loc_folder)
+            rel = os.path.relpath(file_task.root, source_loc_path)
+            
+            # 尝试替换语言文件夹 (简单 heuristic)
+            # 如果 rel 开始于 english, 替换它
+            parts = rel.split(os.sep)
+            if parts and (parts[0] == "english" or parts[0] == file_task.source_lang.get("name_en", "").lower()):
+                 parts[0] = target_lang["key"][2:]
+                 rel = os.path.join(*parts)
+            else:
+                 rel = os.path.join(target_lang["key"][2:], rel)
+
+            dest_dir = os.path.join(DEST_DIR, output_folder_name, source_loc_folder, rel)
+            
     return dest_dir
 
 
@@ -344,4 +426,77 @@ def process_metadata_for_language(mod_name, handler, source_lang, target_lang, o
         asset_handler.process_metadata(mod_name, handler, source_lang, target_lang, output_folder_name, mod_context, game_profile)
     except Exception as e:
         logging.exception(i18n.t("metadata_processing_failed", error=e))
+
+
+def discover_files(mod_name: str, game_profile: dict, source_lang: dict) -> List[dict]:
+    """
+    Discover all localizable files in the mod directory.
+    Supports recursive search for EU5-style multi-module structures.
+    """
+    source_loc_folder = game_profile["source_localization_folder"]
+    mod_root_path = os.path.join(SOURCE_DIR, mod_name)
+    source_loc_path = os.path.join(mod_root_path, source_loc_folder)
+    cust_loc_root = os.path.join(mod_root_path, "customizable_localization")
+
+    # 仅收集文件路径，不读取内容
+    all_file_paths = []
+    suffix = f"_l_{source_lang['key'][2:]}.yml"
+
+    # 策略：如果标准路径存在，仅使用标准路径（保持兼容性）
+    # 如果标准路径不存在，则递归搜索所有名为 source_loc_folder 的目录 (EU5 模式)
+    search_paths = []
+    
+    if os.path.isdir(source_loc_path):
+        search_paths.append(source_loc_path)
+    else:
+        # 递归搜索所有匹配的文件夹
+        logging.info(f"Standard localization folder not found at {source_loc_path}. Searching recursively for '{source_loc_folder}'...")
+        for root, dirs, files in os.walk(mod_root_path):
+            if os.path.basename(root) == source_loc_folder:
+                search_paths.append(root)
+    
+    for loc_path in search_paths:
+        logging.info(f"Discovered localization directory: {loc_path}")
+        for root, _, files in os.walk(loc_path):
+            for fn in files:
+                if fn.endswith(suffix):
+                    # loc_path 是当前模块的 localization 根目录
+                    all_file_paths.append({
+                        "path": os.path.join(root, fn), 
+                        "filename": fn, 
+                        "root": root, 
+                        "is_custom_loc": False,
+                        "loc_root": loc_path # 记录 loc_root
+                    })
+
+    if os.path.isdir(cust_loc_root):
+        for root, _, files in os.walk(cust_loc_root):
+            for fn in files:
+                if fn.endswith(".txt"):
+                    all_file_paths.append({
+                        "path": os.path.join(root, fn), 
+                        "filename": fn, 
+                        "root": root, 
+                        "is_custom_loc": True,
+                        "loc_root": "" # Custom loc doesn't use standard localization structure
+                    })
+                    
+    return all_file_paths
+    
+    # 注意：流式处理模式下，我们无法在开始前创建完整的 Source Version Snapshot，
+    # 除非我们再次遍历所有文件读取内容。
+    # 为了性能，我们可以在流式处理过程中收集数据，或者接受 Snapshot 创建需要额外一次IO的成本。
+    # 鉴于 Snapshot 很重要，我们先快速读取一遍用于归档（如果启用了归档）。
+    # 或者，我们可以推迟归档到处理过程中？不，Source Version 应该是原始状态。
+    # 现在的逻辑是：如果启用了归档，我们还是得读一遍。
+    # 但为了避免内存爆炸，我们可以分批读并写入归档？ArchiveManager目前不支持流式写入。
+    # 暂时保留：如果启用归档，可能会消耗较多内存。但通常归档是在本地数据库，压力稍小。
+    # 为了真正解决内存问题，ArchiveManager 也应该优化，但那是另一个任务。
+    # 这里我们先假设归档步骤仍然是一次性的，或者我们跳过它以专注于翻译流。
+    # *决定*: 暂时跳过 Source Version 的自动创建，或者仅记录元数据。
+    # 为了保持兼容性，如果文件非常多，这步确实是瓶颈。
+    # 暂时保留原逻辑的简化版：只有在文件数可控时才归档？
+    # 实际上，我们可以让 ArchiveManager 逐个文件添加？
+    # 现有的 archive_manager.create_source_version 需要 all_files_data。
+    # 我们先略过这步的优化，专注于翻译过程的流式化。
 
