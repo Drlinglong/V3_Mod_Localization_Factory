@@ -375,6 +375,10 @@ class CK3Validator(BaseGameValidator):
     def __init__(self):
         super().__init__("scripts/config/validators/ck3_rules.py")
 
+class EU5Validator(BaseGameValidator):
+    def __init__(self):
+        super ().__init__("scripts/config/validators/eu5_rules.py")
+
 
 class PostProcessValidator:
     """后处理验证器主类"""
@@ -385,7 +389,8 @@ class PostProcessValidator:
             "stellaris": StellarisValidator(),
             "eu4": EU4Validator(),
             "hoi4": HOI4Validator(),
-            "ck3": CK3Validator()
+            "ck3": CK3Validator(),
+            "eu5": EU5Validator()
         }
 
         # 最终的、按数字键（如'1'）索引的验证器字典

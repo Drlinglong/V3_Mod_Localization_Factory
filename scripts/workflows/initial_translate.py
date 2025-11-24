@@ -95,41 +95,6 @@ def run(mod_name: str,
         logging.warning(i18n.t("no_localisable_files_found", lang_name=source_lang['name']))
         return
 
-    # ───────────── 5. 多语言并行翻译 (Streaming) ─────────────
-    
-    # 准备归档 (如果需要)
-    should_archive = ARCHIVE_RESULTS_AFTER_TRANSLATION or (project_id is not None)
-    version_id_for_archive = None
-    if should_archive and not mod_id_for_archive:
-         mod_id_for_archive = archive_manager.get_or_create_mod_entry(mod_name, f"local_{mod_name}")
-
-
-def discover_files(mod_name: str, game_profile: dict, source_lang: dict) -> List[dict]:
-    """
-    Discover all localizable files in the mod directory.
-    Supports recursive search for EU5-style multi-module structures.
-    """
-    source_loc_folder = game_profile["source_localization_folder"]
-    mod_root_path = os.path.join(SOURCE_DIR, mod_name)
-    source_loc_path = os.path.join(mod_root_path, source_loc_folder)
-    cust_loc_root = os.path.join(mod_root_path, "customizable_localization")
-
-    # 仅收集文件路径，不读取内容
-    all_file_paths = []
-    suffix = f"_l_{source_lang['key'][2:]}.yml"
-
-    # 策略：如果标准路径存在，仅使用标准路径（保持兼容性）
-    # 如果标准路径不存在，则递归搜索所有名为 source_loc_folder 的目录 (EU5 模式)
-    search_paths = []
-    
-    if os.path.isdir(source_loc_path):
-        search_paths.append(source_loc_path)
-    else:
-        # 递归搜索所有匹配的文件夹
-        logging.info(f"Standard localization folder not found at {source_loc_path}. Searching recursively for '{source_loc_folder}'...")
-        for root, dirs, files in os.walk(mod_root_path):
-            if os.path.basename(root) == source_loc_folder:
-                search_paths.append(root)
     # ───────────── 4.5. 强制全量备份 (Brute Force Backup) ─────────────
     # 策略变更：数据安全第一。在开始任何翻译前，强制将所有源文件读入内存并创建快照。
     # 即使是大 Mod，文本数据通常也不超过 50MB，内存不是瓶颈。
@@ -148,12 +113,7 @@ def discover_files(mod_name: str, game_profile: dict, source_lang: dict) -> List
                 file_info["key_map"] = km
                 all_files_content.append(file_info)
             else:
-                # 空文件也需要处理吗？归档可能不需要，但翻译流程需要处理空文件以生成对应的空文件
-                # 为了简单，我们暂不归档空文件，但在翻译流中如果需要生成空文件，
-                # 我们可能需要保留它们。
-                # 之前的逻辑是 _handle_empty_file。
-                # 让我们把空文件也加进去，但在归档时 archive_manager 可能会忽略没有文本的条目？
-                # archive_manager 依赖 texts_to_translate。如果为空，它不会插入条目，这没问题。
+                # 空文件也保留
                 file_info["original_lines"] = orig
                 file_info["texts_to_translate"] = []
                 file_info["key_map"] = []
@@ -161,9 +121,6 @@ def discover_files(mod_name: str, game_profile: dict, source_lang: dict) -> List
                 
         except Exception as e:
             logging.error(f"Failed to parse file {fp} for backup: {e}")
-            # 如果读文件失败，是否终止？为了安全，应该记录错误但继续尝试其他文件？
-            # 或者严格模式下终止？用户要求 "Block execution until this backup is confirmed successful".
-            # 如果读文件都失败了，备份肯定不完整。
             logging.error("Aborting workflow due to file read error.")
             return
 
@@ -184,6 +141,13 @@ def discover_files(mod_name: str, game_profile: dict, source_lang: dict) -> List
 
     # ───────────── 5. 多语言并行翻译 (Streaming from Memory) ─────────────
     
+    # 准备归档 (如果需要)
+    should_archive = ARCHIVE_RESULTS_AFTER_TRANSLATION or (project_id is not None)
+    version_id_for_archive = None
+    if should_archive and not mod_id_for_archive:
+         mod_id_for_archive = archive_manager.get_or_create_mod_entry(mod_name, f"local_{mod_name}")
+
+
     for target_lang in target_languages:
         logging.info(i18n.t("translating_to_language", lang_name=target_lang["name"]))
         

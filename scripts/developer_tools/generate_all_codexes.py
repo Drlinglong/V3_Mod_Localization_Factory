@@ -20,6 +20,7 @@ GAME_INSTALLATION_PATHS = {
     "hoi4": "I:\\SteamLibrary\\steamapps\\common\\Hearts of Iron IV\\localisation",
     "eu4": "K:\\SteamLibrary\\steamapps\\common\\Europa Universalis IV\\localisation",
     "ck3": "K:\\SteamLibrary\\steamapps\\common\\Crusader Kings III\\game\\localization",
+    "eu5": "I:\\SteamLibrary\\steamapps\\common\\Europa Universalis V\\game",
 }
 
 def main():
