@@ -9,6 +9,7 @@ from scripts.core.parallel_processor import BatchTask
 from scripts.utils.punctuation_handler import generate_punctuation_prompt
 from scripts.core.glossary_manager import glossary_manager
 from scripts.utils.structured_parser import parse_response
+from scripts.utils.text_clean import mask_special_tokens
 
 
 class BaseApiHandler(ABC):
@@ -43,7 +44,11 @@ class BaseApiHandler(ABC):
         mod_context = task.file_task.mod_context
         batch_num = task.batch_index + 1
 
-        numbered_list = "\n".join(f'{j + 1}. "{txt}"' for j, txt in enumerate(chunk))
+        batch_num = task.batch_index + 1
+
+        # Apply Token Masking (Newlines & Quotes)
+        masked_chunk = [mask_special_tokens(txt) for txt in chunk]
+        numbered_list = "\n".join(f'{j + 1}. "{txt}"' for j, txt in enumerate(masked_chunk))
 
         effective_target_lang_name = target_lang.get("custom_name", target_lang["name"]) if target_lang.get("is_shell") else target_lang["name"]
 
@@ -88,13 +93,15 @@ class BaseApiHandler(ABC):
         prompt = base_prompt + context_prompt_part + glossary_prompt_part + format_prompt_part + punctuation_prompt_part
         return prompt
 
-    def _parse_response(self, response: str, original_texts: list[str]) -> list[str] | None:
+    def _parse_response(self, response: str, original_texts: list[str], target_lang_code: str) -> list[str] | None:
         """
         【通用逻辑】调用结构化解析器来解析API响应。
         -   成功：返回翻译文本列表。
         -   失败：返回None，以触发上游的重试机制。
         """
-        parsed_model = parse_response(response)
+        -   失败：返回None，以触发上游的重试机制。
+        """
+        parsed_model = parse_response(response, target_lang=target_lang_code)
         if parsed_model:
             return parsed_model.translations
         return None
@@ -109,8 +116,9 @@ class BaseApiHandler(ABC):
 
         for attempt in range(MAX_RETRIES):
             try:
+            try:
                 raw_response = self._call_api(self.client, prompt)
-                translated_texts = self._parse_response(raw_response, task.texts)
+                translated_texts = self._parse_response(raw_response, task.texts, task.file_task.target_lang["code"])
 
                 # Check for success: must not be None, must not be the original list, and length must match.
                 if translated_texts is not None and translated_texts is not task.texts and len(translated_texts) == len(task.texts):
