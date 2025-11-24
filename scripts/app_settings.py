@@ -233,7 +233,7 @@ GAME_PROFILES = {
         "prompt_template": prompts.EU5_PROMPT_TEMPLATE,
         "single_prompt_template": prompts.EU5_SINGLE_PROMPT_TEMPLATE,
         "format_prompt": prompts.EU5_FORMAT_PROMPT,
-        "official_tags_codex": "", # No official tags yet
+        "official_tags_codex": "scripts/config/validators/eu5_official_tags.json",
     }
 }
 
