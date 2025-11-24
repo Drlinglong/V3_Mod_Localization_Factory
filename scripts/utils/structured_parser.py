@@ -12,11 +12,18 @@ logger = logging.getLogger(__name__)
 # Define a TypeVar for Pydantic models to ensure type safety
 T = TypeVar('T', bound=BaseModel)
 
-def parse_response(response_text: str, pydantic_model: Type[T] = TranslationResponse) -> T | None:
+from scripts.utils.text_clean import restore_special_tokens
+
+def parse_response(response_text: str, pydantic_model: Type[T] = TranslationResponse, target_lang: str = "en") -> T | None:
     """
     Parses an LLM response string into a Pydantic model using a robust,
     layered approach that handles both direct JSON arrays (for TranslationResponse)
     and nested JSON objects (like those from gemini-cli).
+    
+    Args:
+        response_text: The raw text response from the LLM.
+        pydantic_model: The Pydantic model class to validate against.
+        target_lang: The target language code (e.g., "zh", "de") for token restoration.
     """
     try:
         # First defense: Repair the raw string to ensure it's valid JSON.
@@ -55,6 +62,12 @@ def parse_response(response_text: str, pydantic_model: Type[T] = TranslationResp
             # Otherwise, assume the payload is a complete object string for the target model.
             # This handles the 'SimpleModel' test case and direct '{"translations": ...}' cases.
             model_instance = pydantic_model.model_validate_json(payload_to_validate)
+
+        # Post-processing: Restore special tokens (Newlines and Quotes)
+        if pydantic_model is TranslationResponse and hasattr(model_instance, 'translations'):
+            model_instance.translations = [
+                restore_special_tokens(t, target_lang) for t in model_instance.translations
+            ]
 
         return model_instance
 
