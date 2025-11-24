@@ -222,6 +222,18 @@ GAME_PROFILES = {
         "single_prompt_template": prompts.CK3_SINGLE_PROMPT_TEMPLATE,
         "format_prompt": prompts.CK3_FORMAT_PROMPT,
         "official_tags_codex": "scripts/config/validators/ck3_official_tags.json",
+    },
+    "6": {
+        "id": "eu5", "name": "Europa Universalis V (欧陆风云5)",
+        "supported_language_keys": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"],
+        "source_localization_folder": "localization", # Will be searched recursively
+        "protected_items": {".metadata", "localization", "thumbnail.png"},
+        "metadata_file": os.path.join(".metadata", "metadata.json"),
+        "encoding": "utf-8-sig", "strip_pl_diacritics": False,
+        "prompt_template": prompts.EU5_PROMPT_TEMPLATE,
+        "single_prompt_template": prompts.EU5_SINGLE_PROMPT_TEMPLATE,
+        "format_prompt": prompts.EU5_FORMAT_PROMPT,
+        "official_tags_codex": "", # No official tags yet
     }
 }
 
