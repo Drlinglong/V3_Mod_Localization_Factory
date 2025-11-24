@@ -130,38 +130,59 @@ def discover_files(mod_name: str, game_profile: dict, source_lang: dict) -> List
         for root, dirs, files in os.walk(mod_root_path):
             if os.path.basename(root) == source_loc_folder:
                 search_paths.append(root)
+    # ───────────── 4.5. 强制全量备份 (Brute Force Backup) ─────────────
+    # 策略变更：数据安全第一。在开始任何翻译前，强制将所有源文件读入内存并创建快照。
+    # 即使是大 Mod，文本数据通常也不超过 50MB，内存不是瓶颈。
     
-    for loc_path in search_paths:
-        logging.info(f"Discovered localization directory: {loc_path}")
-        for root, _, files in os.walk(loc_path):
-            for fn in files:
-                if fn.endswith(suffix):
-                    all_file_paths.append({"path": os.path.join(root, fn), "filename": fn, "root": root, "is_custom_loc": False})
+    logging.info("Reading all source files for backup...")
+    all_files_content = []
+    
+    for file_info in all_file_paths:
+        fp = file_info["path"]
+        try:
+            orig, texts, km = file_parser.extract_translatable_content(fp)
+            # 仅存储包含可翻译文本的文件
+            if texts: 
+                file_info["original_lines"] = orig
+                file_info["texts_to_translate"] = texts
+                file_info["key_map"] = km
+                all_files_content.append(file_info)
+            else:
+                # 空文件也需要处理吗？归档可能不需要，但翻译流程需要处理空文件以生成对应的空文件
+                # 为了简单，我们暂不归档空文件，但在翻译流中如果需要生成空文件，
+                # 我们可能需要保留它们。
+                # 之前的逻辑是 _handle_empty_file。
+                # 让我们把空文件也加进去，但在归档时 archive_manager 可能会忽略没有文本的条目？
+                # archive_manager 依赖 texts_to_translate。如果为空，它不会插入条目，这没问题。
+                file_info["original_lines"] = orig
+                file_info["texts_to_translate"] = []
+                file_info["key_map"] = []
+                all_files_content.append(file_info)
+                
+        except Exception as e:
+            logging.error(f"Failed to parse file {fp} for backup: {e}")
+            # 如果读文件失败，是否终止？为了安全，应该记录错误但继续尝试其他文件？
+            # 或者严格模式下终止？用户要求 "Block execution until this backup is confirmed successful".
+            # 如果读文件都失败了，备份肯定不完整。
+            logging.error("Aborting workflow due to file read error.")
+            return
 
-    if os.path.isdir(cust_loc_root):
-        for root, _, files in os.walk(cust_loc_root):
-            for fn in files:
-                if fn.endswith(".txt"):
-                    all_file_paths.append({"path": os.path.join(root, fn), "filename": fn, "root": root, "is_custom_loc": True})
-                    
-    return all_file_paths
+    # 创建源版本快照
+    mod_id = archive_manager.get_or_create_mod_entry(mod_name, f"local_{mod_name}")
+    if not mod_id:
+        logging.error("Failed to get/create mod entry in database. Aborting.")
+        return
+
+    logging.info("Creating source version snapshot...")
+    version_id = archive_manager.create_source_version(mod_id, all_files_content)
     
-    # 注意：流式处理模式下，我们无法在开始前创建完整的 Source Version Snapshot，
-    # 除非我们再次遍历所有文件读取内容。
-    # 为了性能，我们可以在流式处理过程中收集数据，或者接受 Snapshot 创建需要额外一次IO的成本。
-    # 鉴于 Snapshot 很重要，我们先快速读取一遍用于归档（如果启用了归档）。
-    # 或者，我们可以推迟归档到处理过程中？不，Source Version 应该是原始状态。
-    # 现在的逻辑是：如果启用了归档，我们还是得读一遍。
-    # 但为了避免内存爆炸，我们可以分批读并写入归档？ArchiveManager目前不支持流式写入。
-    # 暂时保留：如果启用归档，可能会消耗较多内存。但通常归档是在本地数据库，压力稍小。
-    # 为了真正解决内存问题，ArchiveManager 也应该优化，但那是另一个任务。
-    # 这里我们先假设归档步骤仍然是一次性的，或者我们跳过它以专注于翻译流。
-    # *决定*: 暂时跳过 Source Version 的自动创建，或者仅记录元数据。
-    # 为了保持兼容性，如果文件非常多，这步确实是瓶颈。
-    # 暂时保留原逻辑的简化版：只有在文件数可控时才归档？
-    # 实际上，我们可以让 ArchiveManager 逐个文件添加？
-    # 现有的 archive_manager.create_source_version 需要 all_files_data。
-    # 我们先略过这步的优化，专注于翻译过程的流式化。
+    if not version_id:
+        logging.error("Failed to create source version snapshot. Aborting workflow to prevent data loss.")
+        return
+        
+    logging.info(f"Source snapshot created successfully (Version ID: {version_id}). Proceeding to translation.")
+
+    # ───────────── 5. 多语言并行翻译 (Streaming from Memory) ─────────────
     
     for target_lang in target_languages:
         logging.info(i18n.t("translating_to_language", lang_name=target_lang["name"]))
@@ -170,40 +191,31 @@ def discover_files(mod_name: str, game_profile: dict, source_lang: dict) -> List
             mod_name, output_folder_name, target_lang.get("code", "zh-CN")
         )
 
-        # 定义文件任务生成器 (Producer)
+        # 定义文件任务生成器 (Producer) - 现在从内存读取
         def file_task_generator() -> Iterator[FileTask]:
-            for file_info in all_file_paths:
+            for file_data in all_files_content:
                 # 检查断点
-                if checkpoint_manager.is_file_completed(file_info["filename"]):
-                    logging.info(f"Skipping completed file: {file_info['filename']}")
+                if checkpoint_manager.is_file_completed(file_data["filename"]):
+                    logging.info(f"Skipping completed file: {file_data['filename']}")
                     continue
 
-                # 读取文件内容 (Lazy Loading)
-                fp = file_info["path"]
-                try:
-                    orig, texts, km = file_parser.extract_translatable_content(fp)
-                except Exception as e:
-                    logging.error(f"Failed to parse file {fp}: {e}")
-                    continue
+                texts = file_data["texts_to_translate"]
+                orig = file_data["original_lines"]
+                km = file_data["key_map"]
 
                 # 如果是空文件，直接处理并跳过生成器
                 if not texts:
-                    # 创建 fallback (直接在这里处理，不通过 ParallelProcessor)
-                    # ... (Fallback logic copied/adapted)
-                    # 为了保持生成器纯净，我们可以在这里 yield 一个特殊的空任务，或者直接处理
-                    # 直接处理更简单
-                    _handle_empty_file(file_info, orig, texts, km, source_lang, target_lang, game_profile, output_folder_name, mod_name, proofreading_tracker)
-                    # 标记为完成
-                    checkpoint_manager.mark_file_completed(file_info["filename"])
+                    _handle_empty_file(file_data, orig, texts, km, source_lang, target_lang, game_profile, output_folder_name, mod_name, proofreading_tracker)
+                    checkpoint_manager.mark_file_completed(file_data["filename"])
                     continue
 
                 yield FileTask(
-                    filename=file_info["filename"],
-                    root=file_info["root"],
+                    filename=file_data["filename"],
+                    root=file_data["root"],
                     original_lines=orig,
                     texts_to_translate=texts,
                     key_map=km,
-                    is_custom_loc=file_info["is_custom_loc"],
+                    is_custom_loc=file_data["is_custom_loc"],
                     target_lang=target_lang,
                     source_lang=source_lang,
                     game_profile=game_profile,
@@ -214,7 +226,7 @@ def discover_files(mod_name: str, game_profile: dict, source_lang: dict) -> List
                     dest_dir=DEST_DIR,
                     client=handler.client,
                     mod_name=mod_name,
-                    loc_root=file_info.get("loc_root", "")
+                    loc_root=file_data.get("loc_root", "")
                 )
 
         # 初始化并行处理器
@@ -274,6 +286,18 @@ def discover_files(mod_name: str, game_profile: dict, source_lang: dict) -> List
 
             # 标记断点
             checkpoint_manager.mark_file_completed(file_task.filename)
+
+            # 实时归档翻译结果 (Incremental Archiving)
+            if version_id:
+                try:
+                    archive_manager.archive_translated_results(
+                        version_id,
+                        {file_task.filename: translated_texts},
+                        all_files_content,
+                        target_lang.get("code")
+                    )
+                except Exception as e:
+                    logging.error(f"Failed to archive results for {file_task.filename}: {e}")
 
         # ───────────── 6. 后处理 & 归档 ─────────────
         # (Post-processing logic remains similar, but runs after all files are done)
