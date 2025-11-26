@@ -25,8 +25,14 @@ import {
   Collapse,
   Tabs,
   Modal,
+  TextInput,
+  ScrollArea,
+  Title,
+  ThemeIcon,
+  Badge,
+  Box,
 } from '@mantine/core';
-import { IconAlertCircle, IconCheck, IconX, IconSettings, IconRefresh, IconDownload, IconArrowLeft, IconPlayerStop, IconChevronDown, IconChevronUp, IconFolder, IconFolderOpen, IconPlayerPlay } from '@tabler/icons-react';
+import { IconAlertCircle, IconCheck, IconX, IconSettings, IconRefresh, IconDownload, IconArrowLeft, IconPlayerStop, IconChevronDown, IconChevronUp, IconFolder, IconFolderOpen, IconPlayerPlay, IconLanguage, IconRobot, IconAdjustments, IconSearch } from '@tabler/icons-react';
 import { useNavigate } from 'react-router-dom';
 import '../App.css';
 import layoutStyles from '../components/layout/Layout.module.css';
@@ -35,7 +41,7 @@ const InitialTranslation = () => {
   const { t } = useTranslation();
   const { notificationStyle } = useNotification();
   const [active, setActive] = useState(0);
-  const [showAdvanced, setShowAdvanced] = useState(false);
+  const [showAdvanced, setShowAdvanced] = useState(true); // Default to true for 2-col layout
   const [config, setConfig] = useState({
     game_profiles: {},
     languages: {},
@@ -45,6 +51,8 @@ const InitialTranslation = () => {
   // Project State
   const [projects, setProjects] = useState([]);
   const [selectedProjectId, setSelectedProjectId] = useState(null);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [gameFilter, setGameFilter] = useState('all');
   const navigate = useNavigate();
 
   const [taskId, setTaskId] = useState(null);
@@ -63,15 +71,27 @@ const InitialTranslation = () => {
 
   const form = useForm({
     initialValues: {
-      target_lang_code: 'zh-CN', // Default
+      source_lang_code: 'en',
+      target_lang_codes: ['zh-CN'], // Default to array
       api_provider: 'gemini',
       model_name: 'gemini-pro',
       mod_context: '',
       selected_glossary_ids: [],
       use_main_glossary: true,
+      clean_source: false,
+      // Custom Language Fields
+      custom_name: '',
+      custom_key: 'l_english',
+      custom_prefix: 'Custom-',
+      english_disguise: false,
+      disguise_target_key: 'l_english',
     },
     validate: {
       api_provider: (value) => (value ? null : t('form_validation_required')),
+      custom_name: (value, values) => (values.english_disguise && !value ? 'Required' : null),
+      custom_key: (value, values) => (values.english_disguise && !value ? 'Required' : null),
+      custom_prefix: (value, values) => (values.english_disguise && !value ? 'Required' : null),
+      target_lang_codes: (value, values) => (!values.english_disguise && value.length === 0 ? 'Select at least one language' : null),
     },
   });
 
@@ -88,7 +108,7 @@ const InitialTranslation = () => {
     // Fetch Projects
     axios.get('/api/projects')
       .then(response => {
-        setProjects(response.data.map(p => ({ value: p.project_id, label: p.name })));
+        setProjects(response.data.map(p => ({ value: p.project_id, label: p.name, game_id: p.game_id })));
       })
       .catch(error => {
         console.error("Failed to load projects", error);
@@ -107,10 +127,9 @@ const InitialTranslation = () => {
     }
   }, [form.values.api_provider]);
 
-  const handleProjectSelect = () => {
-    if (selectedProjectId) {
-      setActive(1);
-    }
+  const handleProjectSelect = (projectId) => {
+    setSelectedProjectId(projectId);
+    setActive(1); // Auto-advance to configuration
   };
 
   const handleBack = () => {
@@ -127,7 +146,7 @@ const InitialTranslation = () => {
     try {
       const response = await axios.post('/api/translation/checkpoint-status', {
         mod_name: modName,
-        target_lang_codes: [values.target_lang_code]
+        target_lang_codes: values.english_disguise ? ['custom'] : values.target_lang_codes
       });
 
       if (response.data.exists) {
@@ -160,7 +179,7 @@ const InitialTranslation = () => {
         await axios.delete('/api/translation/checkpoint', {
           data: {
             mod_name: modName,
-            target_lang_codes: [pendingFormValues.target_lang_code]
+            target_lang_codes: pendingFormValues.english_disguise ? ['custom'] : pendingFormValues.target_lang_codes
           }
         });
         notificationService.success("Checkpoint cleared. Starting fresh.", notificationStyle);
@@ -186,10 +205,27 @@ const InitialTranslation = () => {
 
     const payload = {
       project_id: selectedProjectId,
-      target_language: values.target_lang_code, // Only supporting simplified logic for MVP
+      source_lang_code: values.source_lang_code,
+      // target_language: values.target_lang_code, // Removed in favor of target_lang_codes logic below
       api_provider: values.api_provider,
       model: values.model_name,
+      mod_context: values.mod_context,
+      selected_glossary_ids: values.selected_glossary_ids,
+      use_main_glossary: values.use_main_glossary,
+      clean_source: values.clean_source,
     };
+
+    if (values.english_disguise) {
+      payload.custom_lang_config = {
+        name: values.custom_name,
+        code: 'custom',
+        key: values.custom_key,
+        folder_prefix: values.custom_prefix
+      };
+      payload.target_lang_codes = ['custom'];
+    } else {
+      payload.target_lang_codes = values.target_lang_codes;
+    }
 
     setTaskId(null);
     setStatus('pending');
@@ -220,145 +256,366 @@ const InitialTranslation = () => {
   );
 
   return (
-    <Container size="lg" py="xl">
-      <Stack gap="xl">
-        <Stepper active={active} onStepClick={setActive} allowNextStepsSelect={false}>
-          <Stepper.Step label="Select Project" description="Choose a project">
-          </Stepper.Step>
-          <Stepper.Step label={t('initial_translation_step_configure')} description={t('initial_translation_step_configure_desc', 'Settings')}>
-          </Stepper.Step>
-          <Stepper.Step label={t('initial_translation_step_translate')} description={t('initial_translation_step_translate_desc', 'Processing')}>
-          </Stepper.Step>
-          <Stepper.Step label="Finish" description="Done">
-          </Stepper.Step>
-        </Stepper>
+    <Container fluid py="xl" h="100vh" style={{ overflow: 'hidden', display: 'flex', flexDirection: 'column', maxWidth: '100%', width: '100%' }}>
+      <ScrollArea h="100%" type="scroll">
+        <Stack gap="xl" pb="xl" w="100%">
+          <Box w="100%">
+            <Stepper active={active} onStepClick={setActive} allowNextStepsSelect={false}>
+              <Stepper.Step label="Select Project" description="Choose a project">
+              </Stepper.Step>
+              <Stepper.Step label={t('initial_translation_step_configure')} description={t('initial_translation_step_configure_desc', 'Settings')}>
+              </Stepper.Step>
+              <Stepper.Step label={t('initial_translation_step_translate')} description={t('initial_translation_step_translate_desc', 'Processing')}>
+              </Stepper.Step>
+              <Stepper.Step label="Finish" description="Done">
+              </Stepper.Step>
+            </Stepper>
+          </Box>
 
-        <Paper p="md" radius="md" className={layoutStyles.glassCard}>
           {active === 0 && (
-            <Center pt="xl" pb="xl">
-              <Stack align="center" gap="md" w="100%" maw={400}>
-                <IconFolderOpen size={48} stroke={1.5} color="var(--mantine-color-blue-5)" />
-                <Text size="xl" fw={500}>Select a Project</Text>
+            <Container fluid px="xl" style={{ maxWidth: '100%', width: '100%' }}> {/* Use fluid container for maximum width */}
+              <Stack gap="lg">
+                <Title order={2} ta="center" mb="lg" style={{ letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--mantine-color-blue-4)' }}>
+                  Select a Project to Translate
+                </Title>
 
                 {projects.length > 0 ? (
-                  <Select
-                    data={projects}
-                    value={selectedProjectId}
-                    onChange={setSelectedProjectId}
-                    placeholder="Choose a project..."
-                    w="100%"
-                  />
+                  <>
+                    {/* --- Search & Filter Bar --- */}
+                    <Group mb="md" grow>
+                      <TextInput
+                        placeholder="Search projects..."
+                        leftSection={<IconSearch size={16} />}
+                        value={searchQuery}
+                        onChange={(e) => setSearchQuery(e.currentTarget.value)}
+                        variant="filled"
+                        radius="md"
+                      />
+                      <Select
+                        placeholder="Filter by Game"
+                        data={[
+                          { value: 'all', label: 'All Games' },
+                          ...Object.values(config.game_profiles).map(p => ({ value: p.id, label: p.name.split('(')[0].trim() }))
+                        ]}
+                        value={gameFilter}
+                        onChange={(value) => setGameFilter(value || 'all')}
+                        clearable
+                        variant="filled"
+                        radius="md"
+                      />
+                    </Group>
+
+                    {/* --- Project List Header --- */}
+                    <Card p="sm" radius="md" mb="xs" bg="rgba(0, 0, 0, 0.3)" withBorder style={{ borderColor: 'var(--mantine-color-dark-4)' }}>
+                      <Group>
+                        <Text fw={700} size="sm" c="dimmed" style={{ width: '150px', textTransform: 'uppercase', letterSpacing: '1px' }}>Game</Text>
+                        <Text fw={700} size="sm" c="dimmed" style={{ flex: 1, textTransform: 'uppercase', letterSpacing: '1px' }}>Mod Name</Text>
+                        <Text fw={700} size="sm" c="dimmed" style={{ width: '80px', textAlign: 'right', textTransform: 'uppercase', letterSpacing: '1px' }}>Action</Text>
+                      </Group>
+                    </Card>
+
+                    {/* --- Project List Rows --- */}
+                    <ScrollArea h={600} offsetScrollbars type="always">
+                      <Stack gap="xs">
+                        {projects
+                          .filter(project => {
+                            const normalizedId = project.game_id === 'vic3' ? 'victoria3' : project.game_id;
+                            const matchesGame = gameFilter === 'all' || !gameFilter || normalizedId === gameFilter;
+                            const matchesSearch = project.label.toLowerCase().includes(searchQuery.toLowerCase());
+                            return matchesGame && matchesSearch;
+                          })
+                          .map((project) => {
+                            const normalizedId = project.game_id === 'vic3' ? 'victoria3' : project.game_id;
+                            const profile = config.game_profiles[normalizedId] ||
+                              Object.values(config.game_profiles).find(p => p.id === normalizedId);
+                            const gameName = profile ? profile.name.split('(')[0].trim() : 'Unknown';
+
+                            return (
+                              <Card
+                                key={project.value}
+                                p="md"
+                                radius="md"
+                                withBorder
+                                className={layoutStyles.glassCard}
+                                style={{
+                                  cursor: 'pointer',
+                                  borderColor: selectedProjectId === project.value ? 'var(--mantine-color-blue-6)' : 'transparent',
+                                  backgroundColor: selectedProjectId === project.value ? 'rgba(34, 139, 230, 0.1)' : 'rgba(255, 255, 255, 0.03)',
+                                  transition: 'all 0.2s ease',
+                                  '&:hover': {
+                                    backgroundColor: 'rgba(255, 255, 255, 0.05)',
+                                    transform: 'translateX(5px)'
+                                  }
+                                }}
+                                onClick={() => handleProjectSelect(project.value)}
+                              >
+                                <Group>
+                                  <Badge
+                                    color={normalizedId === 'victoria3' ? 'pink' : 'blue'}
+                                    variant="filled"
+                                    w={150}
+                                    radius="sm"
+                                  >
+                                    {gameName}
+                                  </Badge>
+                                  <Text fw={500} size="lg" style={{ flex: 1 }}>{project.label}</Text>
+                                  <Button
+                                    size="sm"
+                                    variant={selectedProjectId === project.value ? "filled" : "subtle"}
+                                    color="blue"
+                                    onClick={(e) => {
+                                      e.stopPropagation();
+                                      handleProjectSelect(project.value);
+                                    }}
+                                  >
+                                    {selectedProjectId === project.value ? "SELECTED" : "SELECT"}
+                                  </Button>
+                                </Group>
+                              </Card>
+                            );
+                          })}
+                        {projects.length === 0 && (
+                          <Text c="dimmed" ta="center" py="xl">No projects found.</Text>
+                        )}
+                      </Stack>
+                    </ScrollArea>
+                  </>
                 ) : (
-                  <Text c="dimmed">No projects found. Please create one in Project Management.</Text>
+                  <Center p="xl">
+                    <Stack align="center">
+                      <IconFolderOpen size={48} stroke={1.5} color="var(--mantine-color-gray-5)" />
+                      <Text c="dimmed">No projects found. Please create one in Project Management.</Text>
+                      <Button variant="subtle" onClick={() => navigate('/')}>Go to Project Management</Button>
+                    </Stack>
+                  </Center>
                 )}
-
-                <Button size="lg" onClick={handleProjectSelect} disabled={!selectedProjectId}>
-                  Continue
-                </Button>
-
-                <Button variant="subtle" size="sm" onClick={() => navigate('/')}>
-                  Go to Project Management
-                </Button>
               </Stack>
-            </Center>
+            </Container>
           )}
-
-          {active === 1 && (
-            <Card withBorder padding="xl" radius="md" className={layoutStyles.glassCard}>
-              <Text size="lg" fw={500} mb="md">{t('initial_translation_step_configure')}</Text>
+          {
+            active === 1 && (
               <form onSubmit={form.onSubmit(handleStartClick)}>
-                <Stack gap="md">
-                  <Select
-                    label="Target Language"
-                    data={[{ value: 'zh', label: 'Chinese (Simplified)' }]} // Hardcoded for MVP
-                    {...form.getInputProps('target_lang_code')}
-                  />
-                  <Select
-                    label={t('form_label_api_provider')}
-                    data={config.api_providers}
-                    {...form.getInputProps('api_provider')}
-                  />
-
-                  {availableModels.length > 0 && (
-                    <Select
-                      label="Model"
-                      data={availableModels}
-                      {...form.getInputProps('model_name')}
-                    />
-                  )}
-
-                  <Button
-                    variant="subtle"
-                    onClick={() => setShowAdvanced(!showAdvanced)}
-                    rightSection={showAdvanced ? <IconChevronUp size={14} /> : <IconChevronDown size={14} />}
-                    fullWidth
-                    styles={{ inner: { justifyContent: 'space-between' } }}
-                  >
-                    {t('advanced_options', 'Advanced Options')}
-                  </Button>
-
-                  <Collapse in={showAdvanced}>
-                    <Card withBorder className={layoutStyles.glassCard} p="md" mt="xs">
+                <Grid gutter="xl">
+                  {/* Left Column: Core Configuration */}
+                  <Grid.Col span={{ base: 12, md: 5 }}>
+                    <Card withBorder padding="xl" radius="md" className={layoutStyles.glassCard} h="100%">
                       <Stack gap="md">
-                        <Textarea
-                          label="Additional Prompt Injection"
-                          autosize
-                          minRows={3}
-                          {...form.getInputProps('mod_context')}
+                        <Group>
+                          <ThemeIcon size="lg" radius="md" variant="light" color="blue">
+                            <IconSettings size={20} />
+                          </ThemeIcon>
+                          <Text size="lg" fw={500}>Core Settings</Text>
+                        </Group>
+
+                        {/* Game Display */}
+                        {selectedProjectId && (
+                          <TextInput
+                            label={t('form_label_game')}
+                            value={(() => {
+                              const project = projects.find(p => p.value === selectedProjectId);
+                              if (!project) return 'Unknown';
+                              // Try direct lookup or find by ID
+                              // Handle legacy/alias 'vic3' -> 'victoria3'
+                              const normalizedId = project.game_id === 'vic3' ? 'victoria3' : project.game_id;
+                              const profile = config.game_profiles[normalizedId] ||
+                                Object.values(config.game_profiles).find(p => p.id === normalizedId);
+                              return profile ? profile.name : 'Unknown';
+                            })()}
+                            disabled
+                            variant="filled"
+                          />
+                        )}
+
+                        <Select
+                          label={t('form_label_source_language')}
+                          placeholder={t('form_placeholder_source_language')}
+                          leftSection={<IconLanguage size={16} />}
+                          data={Object.values(config.languages).map(l => ({ value: l.code, label: l.name }))}
+                          {...form.getInputProps('source_lang_code')}
                         />
+
+                        {!form.values.english_disguise && (
+                          <MultiSelect
+                            label={t('form_label_target_languages')}
+                            placeholder={t('form_placeholder_target_languages')}
+                            leftSection={<IconLanguage size={16} />}
+                            data={Object.values(config.languages).map(l => ({ value: l.code, label: l.name }))}
+                            {...form.getInputProps('target_lang_codes')}
+                            searchable
+                            hidePickedOptions
+                          />
+                        )}
+
+                        <Select
+                          label={t('form_label_api_provider')}
+                          leftSection={<IconRobot size={16} />}
+                          data={config.api_providers}
+                          {...form.getInputProps('api_provider')}
+                        />
+
+                        {availableModels.length > 0 && (
+                          <Select
+                            label="Model"
+                            data={availableModels}
+                            {...form.getInputProps('model_name')}
+                          />
+                        )}
                       </Stack>
                     </Card>
-                  </Collapse>
+                  </Grid.Col>
 
-                  <Group justify="flex-end" mt="xl">
-                    {renderBackButton()}
-                    <Button type="submit">{t('button_start_translation')}</Button>
-                  </Group>
-                </Stack>
-              </form>
-            </Card>
-          )}
+                  {/* Right Column: Advanced Configuration */}
+                  <Grid.Col span={{ base: 12, md: 7 }}>
+                    <Card withBorder padding="xl" radius="md" className={layoutStyles.glassCard} h="100%">
+                      <Stack gap="md">
+                        <Group>
+                          <ThemeIcon size="lg" radius="md" variant="light" color="orange">
+                            <IconAdjustments size={20} />
+                          </ThemeIcon>
+                          <Text size="lg" fw={500}>{t('advanced_options', 'Advanced Options')}</Text>
+                        </Group>
 
-          {active === 2 && (
-            <Card withBorder padding="xl" radius="md" className={layoutStyles.glassCard}>
-              <Stack gap="md">
-                <Center p="xl">
-                  <Stack align="center">
-                    <Loader size="xl" type="dots" />
-                    <Text size="lg" mt="md">{t('processing_translation')}</Text>
-                    <Text size="sm" c="dimmed">{t('please_wait')}</Text>
-                  </Stack>
-                </Center>
-              </Stack>
-            </Card>
-          )}
+                        <Textarea
+                          label={t('form_label_additional_prompt')}
+                          placeholder={t('form_placeholder_additional_prompt')}
+                          autosize
+                          minRows={4}
+                          {...form.getInputProps('mod_context')}
+                        />
 
-          {active === 3 && (
-            <Center>
-              <Alert
-                icon={<IconCheck size="1rem" />}
-                title="Translation Started"
-                color="green"
-                variant="light"
-                style={{ maxWidth: 500, width: '100%' }}
-              >
-                The translation task has been submitted to the background queue. You can check the progress in the Project Management dashboard.
-                <Group justify="flex-end" mt="md">
-                  <Button onClick={() => navigate('/')}>
-                    Go to Dashboard
-                  </Button>
+                        <Group grow align="flex-start">
+                          <Stack gap="xs">
+                            <Switch
+                              label={t('form_label_use_main_glossary')}
+                              description={t('form_desc_use_main_glossary')}
+                              {...form.getInputProps('use_main_glossary', { type: 'checkbox' })}
+                            />
+                            <Switch
+                              label={t('form_label_clean_source')}
+                              description={t('warning_clean_source')}
+                              color="red"
+                              {...form.getInputProps('clean_source', { type: 'checkbox' })}
+                            />
+                          </Stack>
+
+                          <MultiSelect
+                            label={t('form_label_extra_glossaries')}
+                            placeholder={t('form_placeholder_extra_glossaries')}
+                            data={availableGlossaries}
+                            {...form.getInputProps('selected_glossary_ids')}
+                            clearable
+                          />
+                        </Group>
+
+                        <Card withBorder p="md" radius="md" bg="var(--mantine-color-body)">
+                          <Stack gap="xs">
+                            <Switch
+                              label={t('form_label_disguise_mode')}
+                              description={t('form_desc_disguise_mode')}
+                              {...form.getInputProps('english_disguise', {
+                                type: 'checkbox',
+                                onChange: (event) => {
+                                  form.setFieldValue('english_disguise', event.currentTarget.checked);
+                                  if (event.currentTarget.checked) {
+                                    form.setFieldValue('target_lang_codes', []); // Clear target languages if disguise is on
+                                  } else {
+                                    // Clear custom fields if disguise is off
+                                    form.setFieldValue('custom_name', '');
+                                    form.setFieldValue('custom_key', '');
+                                    form.setFieldValue('custom_prefix', '');
+                                    form.setFieldValue('disguise_target_key', '');
+                                  }
+                                }
+                              })}
+                            />
+
+                            {form.values.english_disguise && (
+                              <>
+                                <Text size="sm" fw={500} mt="xs">{t('form_title_custom_config')}</Text>
+                                <TextInput
+                                  label={t('form_label_custom_name')}
+                                  placeholder={t('form_placeholder_custom_name')}
+                                  description={t('form_desc_custom_name')}
+                                  {...form.getInputProps('custom_name')}
+                                />
+                                <Group grow>
+                                  <Select
+                                    label={t('form_label_disguise_target')}
+                                    placeholder={t('form_placeholder_disguise_target')}
+                                    data={Object.values(config.languages).map(l => ({ value: l.key, label: `${l.name} (${l.key})` }))}
+                                    {...form.getInputProps('disguise_target_key')}
+                                    onChange={(value) => {
+                                      form.setFieldValue('disguise_target_key', value);
+                                      form.setFieldValue('custom_key', value);
+                                    }}
+                                  />
+                                  <TextInput
+                                    label={t('form_label_folder_prefix')}
+                                    placeholder={t('form_placeholder_folder_prefix')}
+                                    {...form.getInputProps('custom_prefix')}
+                                  />
+                                </Group>
+                              </>
+                            )}
+                          </Stack>
+                        </Card>
+                      </Stack>
+                    </Card>
+                  </Grid.Col>
+                </Grid>
+
+                <Group justify="flex-end" mt="xl">
+                  {renderBackButton()}
+                  <Button type="submit" size="lg">{t('button_start_translation')}</Button>
                 </Group>
-              </Alert>
-            </Center>
-          )}
-        </Paper>
-      </Stack>
+              </form>
+            )
+          }
+
+          {
+            active === 2 && (
+              <Card withBorder padding="xl" radius="md" className={layoutStyles.glassCard}>
+                <Stack gap="md">
+                  <Center p="xl">
+                    <Stack align="center">
+                      <Loader size="xl" type="dots" />
+                      <Text size="lg" mt="md">{t('processing_translation')}</Text>
+                      <Text size="sm" c="dimmed">{t('please_wait')}</Text>
+                    </Stack>
+                  </Center>
+                </Stack>
+              </Card>
+            )
+          }
+
+          {
+            active === 3 && (
+              <Center>
+                <Alert
+                  icon={<IconCheck size="1rem" />}
+                  title="Translation Started"
+                  color="green"
+                  variant="light"
+                  style={{ maxWidth: 500, width: '100%' }}
+                >
+                  The translation task has been submitted to the background queue. You can check the progress in the Project Management dashboard.
+                  <Group justify="flex-end" mt="md">
+                    <Button onClick={() => navigate('/')}>
+                      Go to Dashboard
+                    </Button>
+                  </Group>
+                </Alert>
+              </Center>
+            )
+          }
+        </Stack >
+      </ScrollArea >
 
       {/* Resume Confirmation Modal */}
-      <Modal
+      < Modal
         opened={resumeModalOpen}
         onClose={() => setResumeModalOpen(false)}
-        title={<Group><IconAlertCircle color="orange" /> <Text fw={700}>Interrupted Session Found</Text></Group>}
+        title={< Group ><IconAlertCircle color="orange" /> <Text fw={700}>Interrupted Session Found</Text></Group >}
         centered
       >
         <Stack>
@@ -388,8 +645,8 @@ const InitialTranslation = () => {
             </Button>
           </Group>
         </Stack>
-      </Modal>
-    </Container>
+      </Modal >
+    </Container >
   );
 };
 

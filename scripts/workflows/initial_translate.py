@@ -25,7 +25,8 @@ def run(mod_name: str,
         mod_id_for_archive: Optional[int] = None,
         model_name: Optional[str] = None,
         use_glossary: bool = True,
-        project_id: Optional[str] = None):
+        project_id: Optional[str] = None,
+        custom_lang_config: Optional[dict] = None):
     """【最终版】初次翻译工作流（多语言 & 多游戏兼容）- 流式处理 & 断点续传版"""
 
     # ───────────── 1. 路径与模式 ─────────────

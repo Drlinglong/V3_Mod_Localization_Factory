@@ -44,7 +44,7 @@ class BaseApiHandler(ABC):
         mod_context = task.file_task.mod_context
         batch_num = task.batch_index + 1
 
-        batch_num = task.batch_index + 1
+
 
         # Apply Token Masking (Newlines & Quotes)
         masked_chunk = [mask_special_tokens(txt) for txt in chunk]
@@ -99,8 +99,7 @@ class BaseApiHandler(ABC):
         -   成功：返回翻译文本列表。
         -   失败：返回None，以触发上游的重试机制。
         """
-        -   失败：返回None，以触发上游的重试机制。
-        """
+
         parsed_model = parse_response(response, target_lang=target_lang_code)
         if parsed_model:
             return parsed_model.translations
@@ -116,7 +115,7 @@ class BaseApiHandler(ABC):
 
         for attempt in range(MAX_RETRIES):
             try:
-            try:
+
                 raw_response = self._call_api(self.client, prompt)
                 translated_texts = self._parse_response(raw_response, task.texts, task.file_task.target_lang["code"])
 
