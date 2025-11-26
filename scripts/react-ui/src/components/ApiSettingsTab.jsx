@@ -16,6 +16,7 @@ import {
 import { IconCheck, IconX, IconEdit, IconKey } from '@tabler/icons-react';
 import { notifications } from '@mantine/notifications';
 import { useTranslation } from 'react-i18next';
+import styles from './ApiSettingsTab.module.css';
 
 const ApiSettingsTab = () => {
     const { t } = useTranslation();
@@ -117,72 +118,75 @@ const ApiSettingsTab = () => {
                 {t('api_settings_description')}
             </Text>
 
-            {providers.map((provider) => (
-                <Paper key={provider.id} withBorder p="md" radius="md" style={{ backgroundColor: 'var(--mantine-color-body)' }}>
-                    <Group justify="space-between" align="flex-start">
-                        <Box style={{ flex: 1 }}>
-                            <Group mb={4}>
-                                <Text fw={600}>{provider.name}</Text>
-                                {provider.is_keyless && (
-                                    <Badge color="blue" variant="light">{t('api_key_no_required')}</Badge>
-                                )}
-                                {!provider.is_keyless && provider.has_key && (
-                                    <Badge color="green" variant="light">{t('api_key_active')}</Badge>
-                                )}
-                                {!provider.is_keyless && !provider.has_key && (
-                                    <Badge color="gray" variant="light">{t('api_key_not_configured')}</Badge>
-                                )}
-                            </Group>
-                            <Text size="sm" c="dimmed" mb="xs">{provider.description}</Text>
+            <div className={styles.grid}>
+                {providers.map((provider) => (
+                    <div key={provider.id} className={styles.card}>
+                        <div className={styles.header}>
+                            <Text className={styles.title}>{provider.name}</Text>
+                            {provider.is_keyless && (
+                                <Badge color="blue" variant="light" className={styles.statusBadge}>{t('api_key_no_required')}</Badge>
+                            )}
+                            {!provider.is_keyless && provider.has_key && (
+                                <Badge color="green" variant="light" className={styles.statusBadge}>{t('api_key_active')}</Badge>
+                            )}
+                            {!provider.is_keyless && !provider.has_key && (
+                                <Badge color="gray" variant="light" className={styles.statusBadge}>{t('api_key_not_configured')}</Badge>
+                            )}
+                        </div>
 
-                            {!provider.is_keyless && (
-                                <Box mt="sm">
-                                    {editingId === provider.id ? (
-                                        <Group align="flex-end">
-                                            <PasswordInput
-                                                placeholder={t('api_key_placeholder')}
-                                                value={editValue}
-                                                onChange={(event) => setEditValue(event.currentTarget.value)}
-                                                style={{ flex: 1, maxWidth: 400 }}
-                                                autoFocus
-                                            />
+                        <Text className={styles.description}>{provider.description}</Text>
+
+                        {!provider.is_keyless && (
+                            <div className={styles.actions}>
+                                {editingId === provider.id ? (
+                                    <Stack gap="xs">
+                                        <PasswordInput
+                                            placeholder={t('api_key_placeholder')}
+                                            value={editValue}
+                                            onChange={(event) => setEditValue(event.currentTarget.value)}
+                                            size="sm"
+                                            autoFocus
+                                        />
+                                        <Group grow>
                                             <Button
+                                                size="xs"
                                                 onClick={() => handleSave(provider.id)}
                                                 loading={submitting}
-                                                leftSection={<IconCheck size={16} />}
+                                                leftSection={<IconCheck size={14} />}
                                             >
                                                 {t('api_key_save')}
                                             </Button>
                                             <Button
                                                 variant="subtle"
                                                 color="gray"
+                                                size="xs"
                                                 onClick={handleCancelEdit}
                                                 disabled={submitting}
                                             >
                                                 {t('api_key_cancel')}
                                             </Button>
                                         </Group>
-                                    ) : (
-                                        <Group>
-                                            <Text family="monospace" size="sm">
-                                                {provider.has_key ? t('api_key_current', { key: provider.masked_key }) : t('api_key_none_set')}
-                                            </Text>
-                                            <Button
-                                                variant="light"
-                                                size="xs"
-                                                leftSection={<IconEdit size={14} />}
-                                                onClick={() => handleEditClick(provider)}
-                                            >
-                                                {provider.has_key ? t('api_key_update') : t('api_key_set')}
-                                            </Button>
-                                        </Group>
-                                    )}
-                                </Box>
-                            )}
-                        </Box>
-                    </Group>
-                </Paper>
-            ))}
+                                    </Stack>
+                                ) : (
+                                    <Group justify="space-between" align="center">
+                                        <Text family="monospace" size="xs" c="dimmed">
+                                            {provider.has_key ? t('api_key_current', { key: provider.masked_key }) : t('api_key_none_set')}
+                                        </Text>
+                                        <Button
+                                            variant="light"
+                                            size="xs"
+                                            leftSection={<IconEdit size={14} />}
+                                            onClick={() => handleEditClick(provider)}
+                                        >
+                                            {provider.has_key ? t('api_key_update') : t('api_key_set')}
+                                        </Button>
+                                    </Group>
+                                )}
+                            </div>
+                        )}
+                    </div>
+                ))}
+            </div>
         </Stack>
     );
 };
