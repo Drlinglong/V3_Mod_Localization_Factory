@@ -383,6 +383,12 @@ async def start_translation(
 
     return {"task_id": task_id, "message": "翻译任务已开始"}
 
+class CustomLangConfig(BaseModel):
+    name: str
+    code: str
+    key: str
+    folder_prefix: str
+
 class TranslationRequestV2(BaseModel):
     project_path: str
     game_profile_id: str
@@ -395,6 +401,7 @@ class TranslationRequestV2(BaseModel):
     use_main_glossary: bool = True
     clean_source: bool = False
     is_existing_source: bool = False
+    custom_lang_config: Optional[CustomLangConfig] = None
 
 @app.get("/api/source-mods")
 def get_source_mods():
@@ -455,7 +462,8 @@ async def start_translation_v2(
         payload.mod_context,
         payload.selected_glossary_ids,
         payload.model_name,
-        payload.use_main_glossary
+        payload.use_main_glossary,
+        payload.custom_lang_config
     )
 
     return {"task_id": task_id, "message": "翻译任务已开始"}
@@ -463,7 +471,8 @@ async def start_translation_v2(
 def run_translation_workflow_v2(
     task_id: str, mod_name: str, game_profile_id: str, source_lang_code: str,
     target_lang_codes: List[str], api_provider: str, mod_context: str,
-    selected_glossary_ids: List[int], model_name: Optional[str], use_main_glossary: bool
+    selected_glossary_ids: List[int], model_name: Optional[str], use_main_glossary: bool,
+    custom_lang_config: Optional[CustomLangConfig] = None
 ):
     i18n.load_language('en_US')
     tasks[task_id]["status"] = "processing"
@@ -472,7 +481,16 @@ def run_translation_workflow_v2(
         game_profile = GAME_PROFILES.get(game_profile_id)
         source_lang = next((lang for lang in LANGUAGES.values() if lang["code"] == source_lang_code), None)
         target_languages = [lang for lang in LANGUAGES.values() if lang["code"] in target_lang_codes]
-        if not all([game_profile, source_lang, target_languages]):
+        
+        # If custom language is provided, use it instead (or in addition? For now, let's assume it replaces if target_lang_codes contains 'custom')
+        if custom_lang_config:
+             # Convert Pydantic model to dict
+             custom_lang = custom_lang_config.dict()
+             # Ensure it has necessary fields
+             if not custom_lang.get('name_en'): custom_lang['name_en'] = custom_lang['name']
+             target_languages = [custom_lang]
+
+        if not all([game_profile, source_lang]) or (not target_languages and not custom_lang_config):
             raise ValueError("无效的游戏配置、源语言或目标语言。")
         
         final_glossary_ids = list(selected_glossary_ids) if selected_glossary_ids else []

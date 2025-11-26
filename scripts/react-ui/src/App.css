@@ -80,3 +80,46 @@
   align-items: center;
   justify-content: center;
 }
+
+/* Global Scrollbar Styles - Webkit (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 10px !important;
+  height: 10px !important;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent !important;
+  /* Transparent track for a cleaner look */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  /* Semi-transparent white for dark mode */
+  border-radius: 5px !important;
+  border: 2px solid transparent !important;
+  /* Creates padding effect */
+  background-clip: content-box !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Global Scrollbar Styles - Firefox */
+* {
+  scrollbar-width: thin !important;
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent !important;
+}
+
+/* Mantine ScrollArea Overrides */
+.mantine-ScrollArea-scrollbar {
+  background-color: transparent !important;
+}
+
+.mantine-ScrollArea-thumb {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.mantine-ScrollArea-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.3) !important;
+}
