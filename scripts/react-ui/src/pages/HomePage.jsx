@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 import { Grid, Card, Title, Text, ThemeIcon, Group, Stack, Box, Button, BackgroundImage, Overlay, ActionIcon, ScrollArea } from '@mantine/core';
-import { IconRocket, IconRefresh, IconChartBar, IconVocabulary, IconChecklist, IconActivity } from '@tabler/icons-react';
+import { IconRocket, IconRefresh, IconChartBar, IconVocabulary, IconChecklist, IconActivity, IconTools } from '@tabler/icons-react';
 import ActionCard from '../components/ActionCard';
 import ProjectStatusPieChart from '../components/ProjectStatusPieChart';
 import GlossaryAnalysisBarChart from '../components/GlossaryAnalysisBarChart';
@@ -12,6 +13,7 @@ import styles from './HomePage.module.css';
 
 const HomePage = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const [slogan, setSlogan] = useState('');
   const [greeting, setGreeting] = useState('');
 
@@ -46,12 +48,18 @@ const HomePage = () => {
                 "{slogan}"
               </Text>
               <Group mt="lg">
-                <Button size="md" radius="md" leftSection={<IconRocket size={20} />} className={styles.actionButton}>
+                <Button
+                  size="md"
+                  radius="md"
+                  leftSection={<IconRocket size={20} />}
+                  className={styles.actionButton}
+                  onClick={() => navigate('/project-management')}
+                >
                   {t('homepage_action_card_new_project')}
                 </Button>
-                <Button size="md" radius="md" leftSection={<IconRefresh size={20} />} className={styles.actionButton}>
+                {/* <Button size="md" radius="md" leftSection={<IconRefresh size={20} />} className={styles.actionButton}>
                   {t('homepage_action_card_update_project')}
-                </Button>
+                </Button> */}
               </Group>
             </Stack>
 
@@ -73,7 +81,7 @@ const HomePage = () => {
           <Grid gutter="md" mb="xl">
             <Grid.Col span={{ xs: 12, sm: 6, lg: 3 }}>
               <StatCard
-                title="Total Projects"
+                title={t('homepage_stat_total_projects')}
                 value="12"
                 icon={<IconChecklist size={24} />}
                 color="blue"
@@ -84,7 +92,7 @@ const HomePage = () => {
             </Grid.Col>
             <Grid.Col span={{ xs: 12, sm: 6, lg: 3 }}>
               <StatCard
-                title="Words Translated"
+                title={t('homepage_stat_words_translated')}
                 value="45,231"
                 icon={<IconVocabulary size={24} />}
                 color="teal"
@@ -95,7 +103,7 @@ const HomePage = () => {
             </Grid.Col>
             <Grid.Col span={{ xs: 12, sm: 6, lg: 3 }}>
               <StatCard
-                title="Active Tasks"
+                title={t('homepage_stat_active_tasks')}
                 value="8"
                 icon={<IconActivity size={24} />}
                 color="orange"
@@ -106,7 +114,7 @@ const HomePage = () => {
             </Grid.Col>
             <Grid.Col span={{ xs: 12, sm: 6, lg: 3 }}>
               <StatCard
-                title="Completion Rate"
+                title={t('homepage_stat_completion_rate')}
                 value="89%"
                 icon={<IconChartBar size={24} />}
                 color="grape"
@@ -145,16 +153,40 @@ const HomePage = () => {
                 <RecentActivityList className={styles.glassCard} />
 
                 <Card shadow="sm" padding="lg" radius="md" withBorder className={styles.glassCard}>
-                  <Title order={4} mb="md" className={styles.cardTitle}>Quick Links</Title>
+                  <Title order={4} mb="md" className={styles.cardTitle}>{t('homepage_quick_links')}</Title>
                   <Stack gap="xs">
-                    <Button variant="light" color="blue" fullWidth justify="flex-start" leftSection={<IconRocket size={16} />} className={styles.actionButton}>
-                      New Translation
+                    <Button
+                      variant="light"
+                      color="blue"
+                      fullWidth
+                      justify="flex-start"
+                      leftSection={<IconTools size={16} />}
+                      className={styles.actionButton}
+                      onClick={() => navigate('/tools')}
+                    >
+                      {t('homepage_quick_link_toolbox')}
                     </Button>
-                    <Button variant="light" color="teal" fullWidth justify="flex-start" leftSection={<IconRefresh size={16} />} className={styles.actionButton}>
-                      Sync Glossary
+                    <Button
+                      variant="light"
+                      color="teal"
+                      fullWidth
+                      justify="flex-start"
+                      leftSection={<IconRefresh size={16} />}
+                      className={styles.actionButton}
+                      onClick={() => navigate('/glossary-manager')}
+                    >
+                      {t('homepage_quick_link_glossary')}
                     </Button>
-                    <Button variant="light" color="orange" fullWidth justify="flex-start" leftSection={<IconChecklist size={16} />} className={styles.actionButton}>
-                      Proofread Pending
+                    <Button
+                      variant="light"
+                      color="orange"
+                      fullWidth
+                      justify="flex-start"
+                      leftSection={<IconChecklist size={16} />}
+                      className={styles.actionButton}
+                      onClick={() => navigate('/proofreading')}
+                    >
+                      {t('homepage_quick_link_proofreading')}
                     </Button>
                   </Stack>
                 </Card>
