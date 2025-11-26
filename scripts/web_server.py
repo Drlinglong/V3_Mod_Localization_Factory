@@ -930,5 +930,75 @@ def delete_checkpoint(payload: CheckpointStatusRequest):
         raise HTTPException(status_code=500, detail=str(e))
 
 
+# --- API Key Management ---
+
+class UpdateApiKeyRequest(BaseModel):
+    provider_id: str
+    api_key: str
+
+@app.get("/api/api-keys")
+def get_api_keys():
+    providers = []
+    # Reload env to ensure we have the latest keys if they were changed externally
+    load_dotenv(override=True)
+    
+    for provider_id, config in API_PROVIDERS.items():
+        env_var = config.get("api_key_env")
+        is_keyless = env_var is None
+        
+        api_key = os.getenv(env_var) if env_var else None
+        has_key = bool(api_key)
+        
+        masked_key = None
+        if has_key and len(api_key) > 8:
+            masked_key = f"{api_key[:4]}...{api_key[-4:]}"
+        elif has_key:
+            masked_key = "***"
+            
+        providers.append({
+            "id": provider_id,
+            "name": provider_id.replace("_", " ").title(),
+            "description": config.get("description", ""),
+            "is_keyless": is_keyless,
+            "has_key": has_key,
+            "masked_key": masked_key
+        })
+    return providers
+
+@app.post("/api/api-keys")
+def update_api_key(payload: UpdateApiKeyRequest):
+    provider_id = payload.provider_id
+    new_key = payload.api_key
+    
+    if provider_id not in API_PROVIDERS:
+        raise HTTPException(status_code=400, detail="Invalid provider ID")
+        
+    config = API_PROVIDERS[provider_id]
+    env_var = config.get("api_key_env")
+    
+    if not env_var:
+        raise HTTPException(status_code=400, detail="This provider does not require an API key")
+        
+    # Update .env file
+    dotenv_file = find_dotenv()
+    if not dotenv_file:
+         # Fallback to creating one in current directory if not found
+         dotenv_file = os.path.join(os.getcwd(), ".env")
+         
+    # set_key handles creating the file if it doesn't exist? 
+    # Actually set_key requires the path to exist usually, but let's try.
+    try:
+        success = set_key(dotenv_file, env_var, new_key)
+        if not success:
+             raise Exception("Failed to write to .env file")
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to save API key: {str(e)}")
+    
+    # Update current environment variable immediately
+    os.environ[env_var] = new_key
+    
+    return {"status": "success"}
+
+
 if __name__ == "__main__":
     uvicorn.run("scripts.web_server:app", host="0.0.0.0", port=8000, reload=True)
