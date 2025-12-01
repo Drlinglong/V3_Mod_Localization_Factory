@@ -41,6 +41,7 @@ from scripts.core.project_json_manager import ProjectJsonManager
 from scripts.core.checkpoint_manager import CheckpointManager
 from scripts.core.archive_manager import ArchiveManager
 from scripts.core.neologism_manager import neologism_manager
+from scripts.utils.post_process_validator import validate_text as validate_text_util
 
 # Initialize Managers
 glossary_manager = GlossaryManager()
@@ -185,12 +186,48 @@ def update_project_status(project_id: str, request: UpdateProjectStatusRequest):
 
 @app.post("/api/project/{project_id}/notes")
 def update_project_notes(project_id: str, request: UpdateProjectNotesRequest):
-    """Updates a project's notes."""
+    """Adds a new note to the project."""
+    project = project_manager.get_project(project_id)
+    if not project:
+        raise HTTPException(status_code=404, detail="Project not found")
     try:
+        # Also update the summary in DB for backward compatibility
         project_manager.update_project_notes(project_id, request.notes)
-        return {"status": "success", "message": "Project notes updated"}
+        
+        # Add to JSON history
+        json_manager = ProjectJsonManager(project['source_path'])
+        json_manager.add_note(request.notes)
+        
+        return {"status": "success", "message": "Note added"}
     except Exception as e:
         logging.error(f"Error updating project notes: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/api/project/{project_id}/notes")
+def list_project_notes(project_id: str):
+    """Lists all notes for a project."""
+    project = project_manager.get_project(project_id)
+    if not project:
+        raise HTTPException(status_code=404, detail="Project not found")
+    try:
+        json_manager = ProjectJsonManager(project['source_path'])
+        return json_manager.get_notes()
+    except Exception as e:
+        logging.error(f"Error listing project notes: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.delete("/api/project/{project_id}/notes/{note_id}")
+def delete_project_note(project_id: str, note_id: str):
+    """Deletes a note from a project."""
+    project = project_manager.get_project(project_id)
+    if not project:
+        raise HTTPException(status_code=404, detail="Project not found")
+    try:
+        json_manager = ProjectJsonManager(project['source_path'])
+        json_manager.delete_note(note_id)
+        return {"status": "success", "message": "Note deleted"}
+    except Exception as e:
+        logging.error(f"Error deleting project note: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
 class CustomLangConfig(BaseModel):
@@ -945,6 +982,30 @@ class ValidationRequest(BaseModel):
     game_id: str
     content: str
     source_lang_code: Optional[str] = "en_US"
+
+@app.post("/api/validate/localization")
+def validate_localization(payload: ValidationRequest):
+    try:
+        results = validate_text_util(
+            game_id=payload.game_id,
+            text=payload.content,
+            source_lang={"code": payload.source_lang_code}
+        )
+        # Convert ValidationResult objects to dicts
+        return [
+            {
+                "is_valid": r.is_valid,
+                "level": r.level.value,
+                "message": r.message,
+                "details": r.details,
+                "line_number": r.line_number,
+                "text_sample": r.text_sample
+            }
+            for r in results
+        ]
+    except Exception as e:
+        logging.error(f"Validation error: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
 
 
 class CheckpointStatusRequest(BaseModel):

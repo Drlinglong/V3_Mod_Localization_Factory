@@ -80,3 +80,30 @@ class ProjectJsonManager:
         if dir_path in dirs:
             dirs.remove(dir_path)
             self.update_config({"translation_dirs": dirs})
+
+    def get_notes(self) -> List[Dict[str, Any]]:
+        """Returns the list of notes."""
+        data = self._load_json()
+        return data.get("notes", [])
+
+    def add_note(self, content: str):
+        """Appends a new note with timestamp."""
+        import datetime
+        data = self._load_json()
+        if "notes" not in data:
+            data["notes"] = []
+        
+        new_note = {
+            "id": str(datetime.datetime.now().timestamp()),
+            "content": content,
+            "created_at": datetime.datetime.now().isoformat()
+        }
+        data["notes"].insert(0, new_note) # Prepend to show newest first
+        self._save_json(data)
+
+    def delete_note(self, note_id: str):
+        """Deletes a note by ID."""
+        data = self._load_json()
+        if "notes" in data:
+            data["notes"] = [note for note in data["notes"] if note["id"] != note_id]
+            self._save_json(data)

@@ -355,7 +355,7 @@ export default function ProjectManagement() {
   const renderProjectDashboard = () => (
     <div className={styles.container} style={{ overflow: 'hidden', height: '100%', display: 'flex', flexDirection: 'column' }}>
       {/* Header with Back Button */}
-      <Paper p="md" style={{ background: 'rgba(0,0,0,0.2)', borderBottom: '1px solid var(--glass-border)', backdropFilter: 'blur(10px)' }}>
+      <Paper p="md" radius={0} style={{ background: 'rgba(0,0,0,0.2)', borderBottom: '1px solid var(--glass-border)', backdropFilter: 'blur(10px)' }}>
         <Group justify="space-between">
           <Group>
             <Button variant="subtle" onClick={() => setSelectedProject(null)} leftSection={<IconArrowLeft size={16} />}>
