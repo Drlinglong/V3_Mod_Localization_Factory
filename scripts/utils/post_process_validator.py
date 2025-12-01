@@ -482,13 +482,13 @@ class PostProcessValidator:
             pass
         return message_key
 
-def validate_text(game_id: str, text: str, line_number: Optional[int] = None, dynamic_valid_tags: Optional[List[str]] = None) -> List[ValidationResult]:
+def validate_text(game_id: str, text: str, line_number: Optional[int] = None, source_lang: Optional[Dict] = None, dynamic_valid_tags: Optional[List[str]] = None) -> List[ValidationResult]:
     validator = PostProcessValidator()
-    return validator.validate_game_text(game_id, text, line_number, dynamic_valid_tags=dynamic_valid_tags)
+    return validator.validate_game_text(game_id, text, line_number, source_lang=source_lang, dynamic_valid_tags=dynamic_valid_tags)
 
-def validate_batch(game_id: str, texts: List[str], start_line: int = 1, dynamic_valid_tags: Optional[List[str]] = None) -> Dict[int, List[ValidationResult]]:
+def validate_batch(game_id: str, texts: List[str], start_line: int = 1, source_lang: Optional[Dict] = None, dynamic_valid_tags: Optional[List[str]] = None) -> Dict[int, List[ValidationResult]]:
     validator = PostProcessValidator()
-    return validator.validate_batch(game_id, texts, start_line, dynamic_valid_tags=dynamic_valid_tags)
+    return validator.validate_batch(game_id, texts, start_line, source_lang=source_lang, dynamic_valid_tags=dynamic_valid_tags)
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')

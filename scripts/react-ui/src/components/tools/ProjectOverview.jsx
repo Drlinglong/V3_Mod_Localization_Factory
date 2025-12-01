@@ -1,30 +1,113 @@
 import React, { useState, useEffect } from 'react';
-import { Title, Text, Grid, Card, Table, Badge, Button, Paper, Group, Modal, TextInput, ActionIcon, Stack, Textarea, Tooltip } from '@mantine/core';
+import {
+    Stack, Badge, ScrollArea, Table, Box, Tabs, Center, Paper, BackgroundImage,
+    ActionIcon, SimpleGrid, Overlay, Input, Tooltip, Textarea, Group, Title, Text, Button, Grid, Card, Modal, TextInput
+} from '@mantine/core';
 import { IconCheck, IconX, IconClock, IconPlayerPlay, IconArrowLeft, IconArrowRight, IconEdit, IconPlus, IconTrash, IconFolder, IconArchive, IconRestore } from '@tabler/icons-react';
 import { useTranslation } from 'react-i18next';
 import { open } from '@tauri-apps/plugin-dialog';
 import axios from 'axios';
 import styles from '../../pages/ProjectManagement.module.css';
 
+import { useSidebar } from '../../context/SidebarContext';
+
 const ProjectOverview = ({ projectDetails, handleStatusChange, handleNotesChange, handleProofread, onPathsUpdated, onDeleteForever }) => {
     const { t } = useTranslation();
     const [managePathsOpen, setManagePathsOpen] = useState(false);
     const [translationDirs, setTranslationDirs] = useState([]);
     const [newDirPath, setNewDirPath] = useState('');
-    const [notes, setNotes] = useState(projectDetails?.notes || '');
+    const [notes, setNotes] = useState(''); // Current input for new note
+    const [deleteModalOpen, setDeleteModalOpen] = useState(false);
+    const [deleteNoteId, setDeleteNoteId] = useState(null);
 
-    // Update local notes state when projectDetails changes
+    // Sidebar Context
+    const { setSidebarContent, setSidebarWidth, sidebarWidth } = useSidebar();
+
+    // Cleanup sidebar on unmount (leaving the page)
     useEffect(() => {
-        if (projectDetails) {
-            setNotes(projectDetails.notes || '');
-        }
-    }, [projectDetails]);
+        return () => {
+            setSidebarContent(null);
+        };
+    }, []);
 
     if (!projectDetails) return null;
 
-    const onSaveNotes = () => {
-        if (handleNotesChange) {
-            handleNotesChange(notes);
+    const onSaveNote = async () => {
+        if (!notes.trim()) return;
+        try {
+            await axios.post(`/api/project/${projectDetails.project_id}/notes`, { notes });
+            setNotes(''); // Clear input
+            // Refresh sidebar if it's showing notes
+            handleViewNotesHistory();
+            // Refresh sidebar if it's showing notes
+            handleViewNotesHistory();
+            // alert(t('project_management.note_added')); // Removed as per user request
+        } catch (error) {
+            console.error("Failed to save note", error);
+            alert("Failed to save note");
+        }
+    };
+
+    const handleDeleteNote = (noteId) => {
+        setDeleteNoteId(noteId);
+        setDeleteModalOpen(true);
+    };
+
+    const confirmDeleteNote = async () => {
+        if (!deleteNoteId) return;
+        try {
+            await axios.delete(`/api/project/${projectDetails.project_id}/notes/${deleteNoteId}`);
+            // Refresh sidebar
+            handleViewNotesHistory();
+            setDeleteModalOpen(false);
+            setDeleteNoteId(null);
+            // alert(t('project_management.note_deleted')); // Removed default alert
+        } catch (error) {
+            console.error("Failed to delete note", error);
+            alert("Failed to delete note");
+        }
+    };
+
+    const handleViewNotesHistory = async () => {
+        try {
+            const res = await axios.get(`/api/project/${projectDetails.project_id}/notes`);
+            const history = res.data;
+
+            // Auto-expand sidebar if collapsed or too narrow
+            if (!sidebarWidth || sidebarWidth < 300) {
+                setSidebarWidth(350);
+            }
+
+            const NotesHistoryView = (
+                <Stack>
+                    <Group justify="space-between" mb="sm">
+                        <Title order={5}>{t('project_management.notes_history_title')}</Title>
+                        <ActionIcon variant="subtle" color="gray" onClick={() => setSidebarContent(null)}>
+                            <IconX size={16} />
+                        </ActionIcon>
+                    </Group>
+                    {history.length === 0 ? (
+                        <Text c="dimmed" fs="italic">No notes recorded yet.</Text>
+                    ) : (
+                        history.map((note) => (
+                            <Paper key={note.id} withBorder p="sm" radius="md" style={{ background: 'rgba(255,255,255,0.05)' }}>
+                                <Group justify="space-between" mb="xs">
+                                    <Text size="xs" c="dimmed">{new Date(note.created_at).toLocaleString()}</Text>
+                                    <ActionIcon color="red" variant="subtle" size="xs" onClick={() => handleDeleteNote(note.id)}>
+                                        <IconTrash size={14} />
+                                    </ActionIcon>
+                                </Group>
+                                <Text style={{ whiteSpace: 'pre-wrap' }} size="sm">{note.content}</Text>
+                            </Paper>
+                        ))
+                    )}
+                </Stack>
+            );
+
+            setSidebarContent(NotesHistoryView);
+            // Ensure sidebar is open/visible (ContextualSider handles this via content not null)
+        } catch (error) {
+            console.error("Failed to load notes history", error);
         }
     };
 
@@ -75,6 +158,31 @@ const ProjectOverview = ({ projectDetails, handleStatusChange, handleNotesChange
         }
     };
 
+    // Helper to get relative path
+    const getRelativePath = (fullPath) => {
+        if (!fullPath) return '';
+
+        // Check source path
+        if (projectDetails.source_path && fullPath.startsWith(projectDetails.source_path)) {
+            let rel = fullPath.substring(projectDetails.source_path.length);
+            if (rel.startsWith('/') || rel.startsWith('\\')) rel = rel.substring(1);
+            return rel;
+        }
+
+        // Check translation dirs
+        if (projectDetails.translation_dirs) {
+            for (const dir of projectDetails.translation_dirs) {
+                if (fullPath.startsWith(dir)) {
+                    let rel = fullPath.substring(dir.length);
+                    if (rel.startsWith('/') || rel.startsWith('\\')) rel = rel.substring(1);
+                    return rel;
+                }
+            }
+        }
+
+        return fullPath; // Fallback
+    };
+
     const rows = projectDetails.files.map((file) => {
         let color = 'gray';
         let text = '未处理';
@@ -86,24 +194,28 @@ const ProjectOverview = ({ projectDetails, handleStatusChange, handleNotesChange
         else if (file.status === 'in_progress') { color = 'yellow'; text = '进行中'; Icon = IconPlayerPlay; }
         else if (file.status === 'proofreading') { color = 'orange'; text = '校对中'; Icon = IconEdit; }
 
+        const relativePath = getRelativePath(file.name);
+
         return (
             <Table.Tr key={file.key}>
-                <Table.Td>
-                    <Text fw={500} truncate title={file.name}>{file.name}</Text>
+                <Table.Td style={{ maxWidth: '300px' }}>
+                    <Tooltip label={file.name} openDelay={500}>
+                        <Text fw={500} truncate>{relativePath}</Text>
+                    </Tooltip>
                 </Table.Td>
-                <Table.Td>
+                <Table.Td style={{ width: '100px' }}>
                     <Badge variant="dot" color={file.file_type === 'source' ? 'blue' : 'violet'}>
                         {file.file_type === 'source' ? '源文件' : '翻译'}
                     </Badge>
                 </Table.Td>
-                <Table.Td>{file.lines}</Table.Td>
-                <Table.Td>
+                <Table.Td style={{ width: '80px' }}>{file.lines}</Table.Td>
+                <Table.Td style={{ width: '120px' }}>
                     <Badge color={color} variant="light" leftSection={<Icon size={12} />}>
                         {text}
                     </Badge>
                 </Table.Td>
-                <Table.Td>{file.progress}</Table.Td>
-                <Table.Td>
+                <Table.Td style={{ width: '80px' }}>{file.progress}</Table.Td>
+                <Table.Td style={{ width: '120px' }}>
                     <Group gap="xs">
                         {file.actions.map(action => (
                             <Button variant="subtle" size="xs" key={action} onClick={action === 'Proofread' ? () => handleProofread(file) : null}>
@@ -117,9 +229,9 @@ const ProjectOverview = ({ projectDetails, handleStatusChange, handleNotesChange
     });
 
     return (
-        <div style={{ position: 'relative', height: '100%', width: '100%' }}>
-            {/* Fixed header section with stats and paths */}
-            <div style={{ position: 'absolute', top: 0, left: 0, right: 0, paddingBottom: '1rem' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', height: '100%', width: '100%', overflow: 'hidden', gap: '1rem' }}>
+            {/* Header section with stats and paths - Natural height */}
+            <div style={{ flexShrink: 0 }}>
                 {/* Stats Card */}
                 <Paper withBorder p="md" radius="md" className={styles.glassCard} mb="md">
                     <Group justify="space-between" mb="md">
@@ -174,7 +286,10 @@ const ProjectOverview = ({ projectDetails, handleStatusChange, handleNotesChange
                 <Paper withBorder p="md" radius="md" className={styles.glassCard} mb="md">
                     <Group justify="space-between" mb="xs">
                         <Title order={4}>{t('project_management.notes')}</Title>
-                        <Button variant="outline" size="xs" onClick={onSaveNotes}>Save Notes</Button>
+                        <Group>
+                            <Button variant="light" size="xs" onClick={handleViewNotesHistory}>{t('project_management.view_notes_history')}</Button>
+                            <Button variant="filled" size="xs" onClick={onSaveNote}>{t('project_management.add_note')}</Button>
+                        </Group>
                     </Group>
                     <Textarea
                         value={notes}
@@ -198,31 +313,33 @@ const ProjectOverview = ({ projectDetails, handleStatusChange, handleNotesChange
                                 {projectDetails.translation_dirs ? projectDetails.translation_dirs.join(', ') : 'Default'}
                             </Text>
                         </div>
-                        <Button variant="outline" size="xs" onClick={handleOpenManagePaths}>Manage Paths</Button>
+                        <Button variant="outline" size="xs" onClick={handleOpenManagePaths}>{t('project_management.manage_paths_button')}</Button>
                     </Group>
                 </Paper>
             </div>
 
-            {/* Scrollable file list - positioned below header */}
-            <div style={{ position: 'absolute', top: '380px', bottom: 0, left: 0, right: 0, overflowY: 'auto', overflowX: 'hidden' }}>
-                <Paper withBorder p="md" radius="md" className={styles.glassCard}>
-                    <Group position="apart" mb="md">
-                        <Title order={4}>文件详情列表 ({projectDetails.files.length} 个文件)</Title>
-                    </Group>
-                    <Table verticalSpacing="sm" className={styles.table} stickyHeader>
-                        <Table.Thead style={{ position: 'sticky', top: 0, backgroundColor: 'var(--glass-bg)', zIndex: 1 }}>
-                            <Table.Tr>
-                                <Table.Th>文件名</Table.Th>
-                                <Table.Th>类型</Table.Th>
-                                <Table.Th>行数</Table.Th>
-                                <Table.Th>状态</Table.Th>
-                                <Table.Th>进度</Table.Th>
-                                <Table.Th>操作</Table.Th>
-                            </Table.Tr>
-                        </Table.Thead>
-                        <Table.Tbody>{rows}</Table.Tbody>
-                    </Table>
-                </Paper>
+            {/* Scrollable file list - Fills remaining space using Absolute-in-Flex pattern */}
+            <div style={{ flex: 1, position: 'relative', minHeight: 0 }}>
+                <div style={{ position: 'absolute', top: 0, bottom: 0, left: 0, right: 0, overflowY: 'auto', overflowX: 'hidden' }}>
+                    <Paper withBorder p="md" radius="md" className={styles.glassCard}>
+                        <Group position="apart" mb="md">
+                            <Title order={4}>文件详情列表 ({projectDetails.files.length} 个文件)</Title>
+                        </Group>
+                        <Table verticalSpacing="sm" className={styles.table} stickyHeader>
+                            <Table.Thead style={{ position: 'sticky', top: 0, backgroundColor: 'var(--glass-bg)', zIndex: 1 }}>
+                                <Table.Tr>
+                                    <Table.Th>文件名</Table.Th>
+                                    <Table.Th style={{ width: '100px' }}>类型</Table.Th>
+                                    <Table.Th style={{ width: '80px' }}>行数</Table.Th>
+                                    <Table.Th style={{ width: '120px' }}>状态</Table.Th>
+                                    <Table.Th style={{ width: '80px' }}>进度</Table.Th>
+                                    <Table.Th style={{ width: '120px' }}>操作</Table.Th>
+                                </Table.Tr>
+                            </Table.Thead>
+                            <Table.Tbody>{rows}</Table.Tbody>
+                        </Table>
+                    </Paper>
+                </div>
             </div>
 
             {/* Manage Paths Modal */}
@@ -279,8 +396,27 @@ const ProjectOverview = ({ projectDetails, handleStatusChange, handleNotesChange
                     </Group>
                 </Stack>
             </Modal>
-        </div>
+
+            {/* Delete Note Confirmation Modal */}
+            <Modal
+                opened={deleteModalOpen}
+                onClose={() => setDeleteModalOpen(false)}
+                title={t('project_management.delete_note_confirm_title')}
+                centered
+            >
+                <Text size="sm">{t('project_management.delete_note_confirm_content')}</Text>
+                <Group justify="flex-end" mt="md">
+                    <Button variant="default" onClick={() => setDeleteModalOpen(false)}>
+                        {t('button_cancel')}
+                    </Button>
+                    <Button color="red" onClick={confirmDeleteNote}>
+                        {t('project_management.delete_note')}
+                    </Button>
+                </Group>
+            </Modal>
+        </div >
     );
 };
+
 
 export default ProjectOverview;
