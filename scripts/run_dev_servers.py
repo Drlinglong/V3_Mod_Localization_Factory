@@ -50,7 +50,7 @@ def run_servers():
     try:
         with open(config_path, 'w') as f:
             json.dump({
-                'apiBaseUrl': f'http://localhost:{backend_port}',
+                'apiBaseUrl': f'http://127.0.0.1:{backend_port}',
                 'port': backend_port
             }, f, indent=2)
         print(f"[INFO] Generated frontend config at {config_path}")
