@@ -1,0 +1,30 @@
+import logging
+from fastapi import APIRouter, HTTPException
+from scripts.utils.post_process_validator import validate_text as validate_text_util
+from scripts.schemas.validation import ValidationRequest
+
+router = APIRouter()
+
+@router.post("/api/validate/localization")
+def validate_localization(payload: ValidationRequest):
+    try:
+        results = validate_text_util(
+            game_id=payload.game_id,
+            text=payload.content,
+            source_lang={"code": payload.source_lang_code}
+        )
+        # Convert ValidationResult objects to dicts
+        return [
+            {
+                "is_valid": r.is_valid,
+                "level": r.level.value,
+                "message": r.message,
+                "details": r.details,
+                "line_number": r.line_number,
+                "text_sample": r.text_sample
+            }
+            for r in results
+        ]
+    except Exception as e:
+        logging.error(f"Validation error: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
