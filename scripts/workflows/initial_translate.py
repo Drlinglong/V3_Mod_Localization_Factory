@@ -11,7 +11,7 @@ from scripts.core.loc_parser import parse_loc_file
 from scripts.core.project_manager import ProjectManager
 from scripts.core.archive_manager import archive_manager
 from scripts.core.checkpoint_manager import CheckpointManager
-from scripts.app_settings import SOURCE_DIR, DEST_DIR, LANGUAGES, RECOMMENDED_MAX_WORKERS, ARCHIVE_RESULTS_AFTER_TRANSLATION
+from scripts.app_settings import SOURCE_DIR, DEST_DIR, LANGUAGES, RECOMMENDED_MAX_WORKERS, ARCHIVE_RESULTS_AFTER_TRANSLATION, CHUNK_SIZE, GEMINI_CLI_CHUNK_SIZE, OLLAMA_CHUNK_SIZE
 from scripts.utils import i18n
 
 
@@ -26,8 +26,10 @@ def run(mod_name: str,
         model_name: Optional[str] = None,
         use_glossary: bool = True,
         project_id: Optional[str] = None,
-        custom_lang_config: Optional[dict] = None):
+        custom_lang_config: Optional[dict] = None,
+        progress_callback: Optional[Any] = None):
     """【最终版】初次翻译工作流（多语言 & 多游戏兼容）- 流式处理 & 断点续传版"""
+    logging.info("Entered initial_translate.run")
 
     # ───────────── 1. 路径与模式 ─────────────
     is_batch_mode = len(target_languages) > 1
@@ -48,19 +50,8 @@ def run(mod_name: str,
     # ───────────── 2. 初始化客户端 ─────────────
     gemini_cli_model = model_name
     if selected_provider == "gemini_cli" and not gemini_cli_model:
-        while True:
-            print(i18n.t("gemini_cli_model_selection_prompt"))
-            print("1. gemini-2.5-pro ")
-            print("2. gemini-2.5-flash ")
-            choice = input(i18n.t("setup_enter_choice")).strip()
-            if choice == "1":
-                gemini_cli_model = "gemini-2.5-pro"
-                break
-            elif choice == "2":
-                gemini_cli_model = "gemini-2.5-flash"
-                break
-            else:
-                print(i18n.t("setup_invalid_choice"))
+        logging.warning("No model specified for Gemini CLI. Defaulting to 'gemini-1.5-flash'.")
+        gemini_cli_model = "gemini-1.5-flash"
 
     handler = api_handler.get_handler(selected_provider, model_name=gemini_cli_model)
     if not handler or not handler.client:
@@ -96,6 +87,11 @@ def run(mod_name: str,
         logging.warning(i18n.t("no_localisable_files_found", lang_name=source_lang['name']))
         return
 
+    # Update progress total
+    total_files = len(all_file_paths)
+    if progress_callback:
+        progress_callback(0, total_files, "", "Analyzing Files")
+
     # ───────────── 4.5. 强制全量备份 (Brute Force Backup) ─────────────
     # 策略变更：数据安全第一。在开始任何翻译前，强制将所有源文件读入内存并创建快照。
     # 即使是大 Mod，文本数据通常也不超过 50MB，内存不是瓶颈。
@@ -103,8 +99,10 @@ def run(mod_name: str,
     logging.info("Reading all source files for backup...")
     all_files_content = []
     
-    for file_info in all_file_paths:
+    for idx, file_info in enumerate(all_file_paths):
         fp = file_info["path"]
+        if progress_callback:
+             progress_callback(idx, total_files, file_info["filename"], "Reading Source")
         try:
             orig, texts, km = file_parser.extract_translatable_content(fp)
             # 仅存储包含可翻译文本的文件
@@ -125,6 +123,20 @@ def run(mod_name: str,
             logging.error("Aborting workflow due to file read error.")
             return
 
+    # Calculate Total Batches (Pre-calculation)
+    total_batches = 0
+    # Determine chunk size based on provider
+    if selected_provider == "gemini_cli":
+        chunk_size = GEMINI_CLI_CHUNK_SIZE
+    elif selected_provider == "ollama":
+        chunk_size = OLLAMA_CHUNK_SIZE
+    else:
+        chunk_size = CHUNK_SIZE
+
+    for file_data in all_files_content:
+        if not file_data["texts_to_translate"]: continue
+        total_batches += (len(file_data["texts_to_translate"]) + chunk_size - 1) // chunk_size
+
     # 创建源版本快照
     mod_id = archive_manager.get_or_create_mod_entry(mod_name, f"local_{mod_name}")
     if not mod_id:
@@ -132,6 +144,9 @@ def run(mod_name: str,
         return
 
     logging.info("Creating source version snapshot...")
+    if progress_callback:
+        progress_callback(0, total_files, "", "Creating Backup", total_batches=total_batches)
+        
     version_id = archive_manager.create_source_version(mod_id, all_files_content)
     
     if not version_id:
@@ -148,6 +163,7 @@ def run(mod_name: str,
     if should_archive and not mod_id_for_archive:
          mod_id_for_archive = archive_manager.get_or_create_mod_entry(mod_name, f"local_{mod_name}")
 
+    import threading
 
     for target_lang in target_languages:
         logging.info(i18n.t("translating_to_language", lang_name=target_lang["name"]))
@@ -155,6 +171,35 @@ def run(mod_name: str,
         proofreading_tracker = create_proofreading_tracker(
             mod_name, output_folder_name, target_lang.get("code", "zh-CN")
         )
+
+
+
+        # Progress Tracking State
+        completed_batches = 0
+        processed_files_count = 0
+        error_count = 0
+        glossary_issues = 0
+        format_issues = 0
+        progress_lock = threading.Lock()
+
+        def update_progress(current_file_name="", stage="Translating", log_message=None, format_issues_override=None):
+            nonlocal format_issues
+            if format_issues_override is not None:
+                format_issues = format_issues_override
+
+            if progress_callback:
+                progress_callback(
+                    current=processed_files_count,
+                    total=total_files,
+                    current_file=current_file_name,
+                    stage=stage,
+                    current_batch=completed_batches,
+                    total_batches=total_batches,
+                    error_count=error_count,
+                    glossary_issues=glossary_issues,
+                    format_issues=format_issues,
+                    log_message=log_message
+                )
 
         # 定义文件任务生成器 (Producer) - 现在从内存读取
         def file_task_generator() -> Iterator[FileTask]:
@@ -172,6 +217,10 @@ def run(mod_name: str,
                 if not texts:
                     _handle_empty_file(file_data, orig, texts, km, source_lang, target_lang, game_profile, output_folder_name, mod_name, proofreading_tracker)
                     checkpoint_manager.mark_file_completed(file_data["filename"])
+                    # Update progress for empty files
+                    nonlocal processed_files_count
+                    processed_files_count += 1
+                    update_progress(file_data["filename"], log_message=f"Skipped empty file: {file_data['filename']}")
                     continue
 
                 yield FileTask(
@@ -197,76 +246,112 @@ def run(mod_name: str,
         # 初始化并行处理器
         max_workers = RECOMMENDED_MAX_WORKERS
         if selected_provider == "ollama":
-            max_workers = 1
+            max_workers = 1 # Ollama usually can't handle parallel requests well locally
         
         processor = ParallelProcessor(max_workers=max_workers)
-        
-        # 开始流式处理 (Consumer / Aggregator)
-        # process_files_stream 返回一个迭代器，每当一个文件完成时 yield 结果
-        stream = processor.process_files_stream(
-            file_task_generator(),
-            handler.translate_batch
-        )
 
-        for file_task, translated_texts, warnings in stream:
-            # 处理警告
-            if warnings:
-                filename = file_task.filename if hasattr(file_task, 'filename') else "Unknown"
-                for w in warnings:
-                    logging.warning(f"[{filename}] {w.get('message', '')}")
+        # 定义翻译函数 (Consumer)
+        def translation_wrapper(batch_task):
+            result = handler.translate_batch(batch_task)
+            with progress_lock:
+                nonlocal completed_batches
+                completed_batches += 1
+                update_progress(batch_task.file_task.filename)
+            return result
 
-            if translated_texts is None:
-                logging.error(i18n.t("file_translation_failed", filename=file_task.filename))
-                # Fallback?
-                translated_texts = file_task.texts_to_translate
-
-            # 构建目标目录
-            dest_dir = _build_dest_dir(file_task, target_lang, output_folder_name, game_profile)
-            os.makedirs(dest_dir, exist_ok=True)
-
-            # 重建并写入文件
-            dest_file_path = file_builder.rebuild_and_write_file(
-                file_task.original_lines,
-                file_task.texts_to_translate,
-                translated_texts,
-                file_task.key_map,
-                dest_dir,
-                file_task.filename,
-                file_task.source_lang,
-                file_task.target_lang,
-                file_task.game_profile,
-            )
-
-            # 更新校对进度
-            if dest_file_path:
-                source_file_path = os.path.join(file_task.root, file_task.filename)
-                proofreading_tracker.add_file_info({
-                    'source_path': source_file_path,
-                    'dest_path': dest_file_path,
-                    'translated_lines': len(file_task.texts_to_translate),
-                    'filename': file_task.filename,
-                    'is_custom_loc': file_task.is_custom_loc
-                })
-                logging.info(i18n.t("file_build_completed", filename=file_task.filename))
-
-            # 标记断点
-            checkpoint_manager.mark_file_completed(file_task.filename)
-
-            # 实时归档翻译结果 (Incremental Archiving)
-            if version_id:
+        # ───────────── Log Capture Handler ─────────────
+        class CallbackHandler(logging.Handler):
+            def emit(self, record):
                 try:
-                    archive_manager.archive_translated_results(
-                        version_id,
-                        {file_task.filename: translated_texts},
-                        all_files_content,
-                        target_lang.get("code")
-                    )
-                except Exception as e:
-                    logging.error(f"Failed to archive results for {file_task.filename}: {e}")
+                    msg = self.format(record)
+                    if "GET /api/status" in msg: return 
+                    update_progress(log_message=msg)
+                except Exception:
+                    self.handleError(record)
+
+        log_handler = CallbackHandler()
+        log_handler.setLevel(logging.INFO)
+        formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+        log_handler.setFormatter(formatter)
+        logging.getLogger().addHandler(log_handler)
+
+        try:
+            # 开始流式处理
+            for file_task, translated_texts, warnings in processor.process_files_stream(file_task_generator(), translation_wrapper):
+                processed_files_count += 1
+                
+                # Aggregate warnings and send logs
+                if warnings:
+                    filename = file_task.filename if hasattr(file_task, 'filename') else "Unknown"
+                    for w in warnings:
+                        msg = f"[{filename}] {w.get('message', '')}"
+                        logging.warning(msg)
+                        # update_progress is called by logging handler now, so we don't need explicit call unless we want to force it
+                        
+                        if "glossary" in w.get("type", "").lower():
+                            glossary_issues += 1
+                        elif "format" in w.get("type", "").lower():
+                            format_issues += 1
+                
+                if not translated_texts:
+                    error_count += 1
+                    logging.error(f"File {file_task.filename} failed to translate.")
+                    update_progress(file_task.filename, "Failed", log_message=f"ERROR: File {file_task.filename} failed to translate.")
+                    continue
+
+                # 这里的 update_progress 主要是为了更新文件计数，日志已经在 logging.info 中捕获
+                update_progress(file_task.filename, log_message=f"SUCCESS: {file_task.filename} translated.")
+
+                # 构建目标目录
+                dest_dir = _build_dest_dir(file_task, target_lang, output_folder_name, game_profile)
+                os.makedirs(dest_dir, exist_ok=True)
+
+                # 重建并写入文件
+                dest_file_path = file_builder.rebuild_and_write_file(
+                    file_task.original_lines,
+                    file_task.texts_to_translate,
+                    translated_texts,
+                    file_task.key_map,
+                    dest_dir,
+                    file_task.filename,
+                    file_task.source_lang,
+                    file_task.target_lang,
+                    file_task.game_profile,
+                )
+
+                # 更新校对进度
+                if dest_file_path:
+                    source_file_path = os.path.join(file_task.root, file_task.filename)
+                    proofreading_tracker.add_file_info({
+                        'source_path': source_file_path,
+                        'dest_path': dest_file_path,
+                        'translated_lines': len(file_task.texts_to_translate),
+                        'filename': file_task.filename,
+                        'is_custom_loc': file_task.is_custom_loc
+                    })
+                    logging.info(i18n.t("file_build_completed", filename=file_task.filename))
+
+                # 标记断点
+                checkpoint_manager.mark_file_completed(file_task.filename)
+
+                # 实时归档翻译结果 (Incremental Archiving)
+                if version_id:
+                    try:
+                        archive_manager.archive_translated_results(
+                            version_id,
+                            {file_task.filename: translated_texts},
+                            all_files_content,
+                            target_lang.get("code")
+                        )
+                    except Exception as e:
+                        logging.error(f"Failed to archive results for {file_task.filename}: {e}")
+
+        finally:
+            logging.getLogger().removeHandler(log_handler)
 
         # ───────────── 6. 后处理 & 归档 ─────────────
         # (Post-processing logic remains similar, but runs after all files are done)
-        _run_post_processing(mod_name, game_profile, target_lang, source_lang, output_folder_name, proofreading_tracker)
+        _run_post_processing(mod_name, game_profile, target_lang, source_lang, output_folder_name, proofreading_tracker, update_progress)
 
         # 保存校对看板
         proofreading_tracker.save_proofreading_progress()
@@ -316,7 +401,7 @@ def _handle_empty_file(file_info, orig, texts, km, source_lang, target_lang, gam
         })
 
 
-def _run_post_processing(mod_name, game_profile, target_lang, source_lang, output_folder_name, proofreading_tracker):
+def _run_post_processing(mod_name, game_profile, target_lang, source_lang, output_folder_name, proofreading_tracker, update_progress_callback=None):
     """运行后处理验证"""
     try:
         from scripts.core.post_processing_manager import PostProcessingManager
@@ -333,6 +418,15 @@ def _run_post_processing(mod_name, game_profile, target_lang, source_lang, outpu
         post_processor = PostProcessingManager(game_profile, output_folder_path)
         validation_success = post_processor.run_validation(target_lang, source_lang, dynamic_valid_tags=dynamic_tags)
         
+        # Get validation stats and update frontend
+        stats = post_processor.get_validation_stats()
+        total_issues = stats.get('total_errors', 0) + stats.get('total_warnings', 0)
+        
+        if update_progress_callback:
+            # Update the format_issues count in the frontend
+            # We use "Translating" stage or maybe "Verifying"? Let's keep it simple.
+            update_progress_callback(log_message=f"Validation completed. Found {total_issues} issues.", format_issues_override=total_issues)
+
         if validation_success:
             post_processor.attach_results_to_proofreading_tracker(proofreading_tracker)
             

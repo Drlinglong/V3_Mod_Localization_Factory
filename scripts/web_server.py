@@ -500,6 +500,8 @@ async def start_translation_v2(
 
     return {"task_id": task_id, "message": "翻译任务已开始"}
 
+import traceback
+
 def run_translation_workflow_v2(
     task_id: str, mod_name: str, game_profile_id: str, source_lang_code: str,
     target_lang_codes: List[str], api_provider: str, mod_context: str,
@@ -509,11 +511,62 @@ def run_translation_workflow_v2(
     i18n.load_language('en_US')
     tasks[task_id]["status"] = "processing"
     tasks[task_id]["log"].append("背景翻译任务开始 (V2)...")
+    
+    # Initialize progress structure
+    tasks[task_id]["progress"] = {
+        "total": 0,
+        "current": 0,
+        "percent": 0,
+        "current_file": "",
+        "stage": "Initializing",
+        "total_batches": 0,
+        "current_batch": 0,
+        "error_count": 0,
+        "glossary_issues": 0,
+        "format_issues": 0
+    }
+
+    def progress_callback(current, total, current_file, stage="Translating", 
+                          current_batch=0, total_batches=0, 
+                          error_count=0, glossary_issues=0, format_issues=0,
+                          log_message: str = None):
+        tasks[task_id]["progress"]["current"] = current
+        tasks[task_id]["progress"]["total"] = total
+        tasks[task_id]["progress"]["current_file"] = current_file
+        tasks[task_id]["progress"]["stage"] = stage
+        tasks[task_id]["progress"]["current_batch"] = current_batch
+        tasks[task_id]["progress"]["total_batches"] = total_batches
+        tasks[task_id]["progress"]["error_count"] = error_count
+        tasks[task_id]["progress"]["glossary_issues"] = glossary_issues
+        tasks[task_id]["progress"]["format_issues"] = format_issues
+        
+        if log_message:
+            tasks[task_id]["log"].append(log_message)
+        
+        if total > 0:
+            tasks[task_id]["progress"]["percent"] = int((current / total) * 100)
+
     try:
-        game_profile = GAME_PROFILES.get(game_profile_id)
+        # Debug Logging
+        logging.info(f"Starting V2 Workflow for Task {task_id}")
+        logging.info(f"Params: game_profile_id={game_profile_id}, source={source_lang_code}, targets={target_lang_codes}")
+        
+        # Handle legacy/alias 'vic3' -> 'victoria3'
+        normalized_game_id = game_profile_id
+        if game_profile_id == 'vic3':
+            normalized_game_id = 'victoria3'
+            logging.info(f"Normalized game_id 'vic3' to '{normalized_game_id}'")
+
+        game_profile = GAME_PROFILES.get(normalized_game_id)
+        # Fallback: Try finding by 'id' field in values if key lookup fails
+        if not game_profile:
+             game_profile = next((p for p in GAME_PROFILES.values() if p['id'] == normalized_game_id), None)
+
         source_lang = next((lang for lang in LANGUAGES.values() if lang["code"] == source_lang_code), None)
         target_languages = [lang for lang in LANGUAGES.values() if lang["code"] in target_lang_codes]
         
+        logging.info(f"Resolved: GameProfile={game_profile is not None}, SourceLang={source_lang is not None}, TargetLangs={len(target_languages)}")
+
         # If custom language is provided, use it instead (or in addition? For now, let's assume it replaces if target_lang_codes contains 'custom')
         if custom_lang_config:
              # Convert Pydantic model to dict
@@ -521,8 +574,10 @@ def run_translation_workflow_v2(
              # Ensure it has necessary fields
              if not custom_lang.get('name_en'): custom_lang['name_en'] = custom_lang['name']
              target_languages = [custom_lang]
+             logging.info(f"Using Custom Language Config: {custom_lang}")
 
         if not all([game_profile, source_lang]) or (not target_languages and not custom_lang_config):
+            logging.error(f"Validation Failed: GameProfile={game_profile}, SourceLang={source_lang}, TargetLangs={target_languages}")
             raise ValueError("无效的游戏配置、源语言或目标语言。")
         
         final_glossary_ids = list(selected_glossary_ids) if selected_glossary_ids else []
@@ -532,13 +587,17 @@ def run_translation_workflow_v2(
             if main_glossary and main_glossary['glossary_id'] not in final_glossary_ids:
                 final_glossary_ids.append(main_glossary['glossary_id'])
         
+        logging.info("Calling initial_translate.run...")
         initial_translate.run(
             mod_name=mod_name, game_profile=game_profile, source_lang=source_lang,
             target_languages=target_languages, selected_provider=api_provider,
             mod_context=mod_context, selected_glossary_ids=final_glossary_ids,
-            model_name=model_name, use_glossary=True
+            model_name=model_name, use_glossary=True, progress_callback=progress_callback
         )
+        logging.info("Returned from initial_translate.run")
         tasks[task_id]["status"] = "completed"
+        tasks[task_id]["progress"]["percent"] = 100
+        tasks[task_id]["progress"]["stage"] = "Completed"
         tasks[task_id]["log"].append("翻译流程成功完成！")
         output_folder_name = f"{target_languages[0]['folder_prefix']}{mod_name}"
         if len(target_languages) > 1:
@@ -549,6 +608,7 @@ def run_translation_workflow_v2(
     except Exception as e:
         tb_str = traceback.format_exc()
         error_message = f"工作流执行失败: {e}\n{tb_str}"
+        logging.error(error_message) # Log to console!
         tasks[task_id]["status"] = "failed"
         tasks[task_id]["log"].append(error_message)
 

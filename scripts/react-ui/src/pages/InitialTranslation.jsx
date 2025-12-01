@@ -37,6 +37,8 @@ import { useNavigate } from 'react-router-dom';
 import '../App.css';
 import layoutStyles from '../components/layout/Layout.module.css';
 
+import TaskRunner from '../components/TaskRunner';
+
 const InitialTranslation = () => {
   const { t } = useTranslation();
   const { notificationStyle } = useNotification();
@@ -58,6 +60,7 @@ const InitialTranslation = () => {
   const [taskId, setTaskId] = useState(null);
   const [logs, setLogs] = useState([]);
   const [status, setStatus] = useState(null);
+  const [taskStatus, setTaskStatus] = useState(null);
   const [resultUrl, setResultUrl] = useState(null);
   const [isProcessing, setIsProcessing] = useState(false);
   const [translationDetails, setTranslationDetails] = useState(null);
@@ -122,10 +125,44 @@ const InitialTranslation = () => {
         { value: 'gemini-pro', label: 'Gemini Pro' },
         { value: 'gemini-flash', label: 'Gemini Flash' },
       ]);
+      form.setFieldValue('model_name', 'gemini-flash');
+    } else if (form.values.api_provider === 'ollama') {
+      setAvailableModels([
+        { value: 'qwen3:4b', label: 'Qwen 3 (4B)' },
+        { value: 'qwen2.5:7b', label: 'Qwen 2.5 (7B)' },
+        { value: 'llama3', label: 'Llama 3' },
+      ]);
+      form.setFieldValue('model_name', 'qwen3:4b');
     } else {
       setAvailableModels([]);
+      form.setFieldValue('model_name', '');
     }
   }, [form.values.api_provider]);
+
+  // Polling Logic
+  useEffect(() => {
+    let interval;
+    if (taskId && isProcessing) {
+      interval = setInterval(async () => {
+        try {
+          const response = await axios.get(`/api/status/${taskId}`);
+          if (response.status === 200) {
+            setTaskStatus(response.data);
+            if (response.data.status === 'completed' || response.data.status === 'failed') {
+              setIsProcessing(false);
+              clearInterval(interval);
+              if (response.data.status === 'completed') {
+                setActive(3);
+              }
+            }
+          }
+        } catch (error) {
+          console.error("Error polling status:", error);
+        }
+      }, 1000);
+    }
+    return () => clearInterval(interval);
+  }, [taskId, isProcessing]);
 
   const handleProjectSelect = (projectId) => {
     setSelectedProjectId(projectId);
@@ -201,6 +238,10 @@ const InitialTranslation = () => {
       modName: projects.find(p => p.value === selectedProjectId)?.label,
       provider: values.api_provider,
       model: values.model_name,
+      sourceLang: Object.values(config.languages).find(l => l.code === values.source_lang_code)?.name,
+      targetLangs: values.english_disguise
+        ? ['Custom (Disguise)']
+        : values.target_lang_codes.map(code => Object.values(config.languages).find(l => l.code === code)?.name)
     });
 
     const payload = {
@@ -234,12 +275,11 @@ const InitialTranslation = () => {
 
     axios.post('/api/translate/start', payload)
       .then(response => {
-        // setTaskId(response.data.task_id); // Background task ID if returned
-        notificationService.success("Translation started in background!", notificationStyle);
-        // For this MVP, we might just navigate away or show a success message since it's async
-        setStatus('completed');
-        setIsProcessing(false);
-        setActive(3);
+        setTaskId(response.data.task_id);
+        notificationService.success("Translation started!", notificationStyle);
+        setStatus('processing');
+        setIsProcessing(true);
+        setActive(2);
       })
       .catch(error => {
         notificationService.error("Failed to start translation.", notificationStyle);
@@ -573,39 +613,29 @@ const InitialTranslation = () => {
           }
 
           {
-            active === 2 && (
+            (active === 2 || active === 3) && (
               <Card withBorder padding="xl" radius="md" className={layoutStyles.glassCard}>
-                <Stack gap="md">
-                  <Center p="xl">
-                    <Stack align="center">
-                      <Loader size="xl" type="dots" />
-                      <Text size="lg" mt="md">{t('processing_translation')}</Text>
-                      <Text size="sm" c="dimmed">{t('please_wait')}</Text>
-                    </Stack>
-                  </Center>
-                </Stack>
+                {taskStatus ? (
+                  <TaskRunner
+                    task={taskStatus}
+                    onComplete={() => navigate(`/project/${selectedProjectId}/proofread`)}
+                    onRestart={() => {
+                      setTaskId(null);
+                      setTaskStatus(null);
+                      setStatus(null);
+                      setIsProcessing(false);
+                      setActive(0);
+                    }}
+                    onDashboard={() => navigate('/project-management')}
+                    translationDetails={translationDetails}
+                  />
+                ) : (
+                  <Stack align="center" p="xl">
+                    <Loader size="xl" type="dots" />
+                    <Text size="lg" mt="md">Initializing...</Text>
+                  </Stack>
+                )}
               </Card>
-            )
-          }
-
-          {
-            active === 3 && (
-              <Center>
-                <Alert
-                  icon={<IconCheck size="1rem" />}
-                  title="Translation Started"
-                  color="green"
-                  variant="light"
-                  style={{ maxWidth: 500, width: '100%' }}
-                >
-                  The translation task has been submitted to the background queue. You can check the progress in the Project Management dashboard.
-                  <Group justify="flex-end" mt="md">
-                    <Button onClick={() => navigate('/')}>
-                      Go to Dashboard
-                    </Button>
-                  </Group>
-                </Alert>
-              </Center>
             )
           }
         </Stack >
