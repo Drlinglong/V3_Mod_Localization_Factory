@@ -23,9 +23,12 @@ if project_root not in sys.path:
     sys.path.insert(0, project_root)
 
 # Import using absolute imports from project root
-from scripts.app_settings import GAME_PROFILES, LANGUAGES, API_PROVIDERS, SOURCE_DIR, DEST_DIR, MODS_CACHE_DB_PATH
+from scripts.app_settings import GAME_PROFILES, LANGUAGES, API_PROVIDERS, SOURCE_DIR, DEST_DIR, MODS_CACHE_DB_PATH, get_api_key, load_api_keys_to_env, get_appdata_config_path
 from scripts.workflows import initial_translate
 from scripts.utils import logger, i18n
+
+# Load API keys from keyring into environment variables
+load_api_keys_to_env()
 
 # Setup logger and i18n BEFORE importing managers that use them
 logger.setup_logger()
@@ -146,12 +149,6 @@ class SaveProofreadingRequest(BaseModel):
     entries: List[Dict[str, Any]]
     content: str = "" # Legacy support
 
-class InitialTranslationRequest(BaseModel):
-    project_id: str
-    target_language: str = "zh"
-    api_provider: str = "gemini"
-    model: str = "gemini-pro"
-
 # --- New Project Endpoints ---
 @app.get("/api/projects")
 def list_projects(status: Optional[str] = None):
@@ -176,9 +173,6 @@ def list_project_files(project_id: str):
     """Lists files for a given project."""
     return project_manager.get_project_files(project_id)
 
-class UpdateProjectStatusRequest(BaseModel):
-    status: str
-
 @app.post("/api/project/{project_id}/status")
 def update_project_status(project_id: str, request: UpdateProjectStatusRequest):
     """Updates a project's status."""
@@ -199,6 +193,24 @@ def update_project_notes(project_id: str, request: UpdateProjectNotesRequest):
         logging.error(f"Error updating project notes: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
+class CustomLangConfig(BaseModel):
+    name: str
+    code: str
+    key: str
+    folder_prefix: str
+
+class InitialTranslationRequest(BaseModel):
+    project_id: str
+    source_lang_code: str
+    target_lang_codes: List[str] = ["zh-CN"]
+    api_provider: str = "gemini"
+    model: str = "gemini-pro"
+    mod_context: Optional[str] = ""
+    selected_glossary_ids: Optional[List[int]] = []
+    use_main_glossary: bool = True
+    clean_source: bool = False
+    custom_lang_config: Optional[CustomLangConfig] = None
+
 @app.post("/api/translate/start")
 def start_translation_project(request: InitialTranslationRequest, background_tasks: BackgroundTasks):
     """
@@ -208,8 +220,34 @@ def start_translation_project(request: InitialTranslationRequest, background_tas
     if not project:
         raise HTTPException(status_code=404, detail="Project not found")
 
-    # TODO: Full integration with run_initial_translation using project context
-    return {"status": "started", "message": f"Translation started for project {project['name']}"}
+    task_id = str(uuid.uuid4())
+    tasks[task_id] = {"status": "pending", "log": []}
+
+    # Prepare arguments for the workflow
+    mod_name = project['name']
+    # Ensure source path exists
+    if not os.path.exists(project['source_path']):
+         raise HTTPException(status_code=400, detail=f"Project source path not found: {project['source_path']}")
+
+    tasks[task_id]["status"] = "starting"
+    tasks[task_id]["log"].append(f"Starting translation for project: '{mod_name}'")
+
+    background_tasks.add_task(
+        run_translation_workflow_v2,
+        task_id,
+        mod_name,
+        project['game_id'], # Assuming game_id maps to game_profile_id
+        request.source_lang_code,
+        request.target_lang_codes,
+        request.api_provider,
+        request.mod_context,
+        request.selected_glossary_ids,
+        request.model,
+        request.use_main_glossary,
+        request.custom_lang_config
+    )
+
+    return {"task_id": task_id, "status": "started", "message": f"Translation started for project {project['name']}"}
 
 @app.get("/api/proofread/{project_id}/{file_id}")
 def get_proofread_data(project_id: str, file_id: str):
@@ -382,12 +420,6 @@ async def start_translation(
     )
 
     return {"task_id": task_id, "message": "翻译任务已开始"}
-
-class CustomLangConfig(BaseModel):
-    name: str
-    code: str
-    key: str
-    folder_prefix: str
 
 class TranslationRequestV2(BaseModel):
     project_path: str
@@ -946,7 +978,7 @@ def get_api_keys():
         env_var = config.get("api_key_env")
         is_keyless = env_var is None
         
-        api_key = os.getenv(env_var) if env_var else None
+        api_key = get_api_key(provider_id, env_var) if env_var else None
         has_key = bool(api_key)
         
         masked_key = None
@@ -979,20 +1011,28 @@ def update_api_key(payload: UpdateApiKeyRequest):
     if not env_var:
         raise HTTPException(status_code=400, detail="This provider does not require an API key")
         
-    # Update .env file
-    dotenv_file = find_dotenv()
-    if not dotenv_file:
-         # Fallback to creating one in current directory if not found
-         dotenv_file = os.path.join(os.getcwd(), ".env")
-         
-    # set_key handles creating the file if it doesn't exist? 
-    # Actually set_key requires the path to exist usually, but let's try.
+    # Save to AppData config.json
     try:
-        success = set_key(dotenv_file, env_var, new_key)
-        if not success:
-             raise Exception("Failed to write to .env file")
+        config_path = get_appdata_config_path()
+        config = {}
+        if os.path.exists(config_path):
+            with open(config_path, 'r', encoding='utf-8') as f:
+                try:
+                    config = json.load(f)
+                except json.JSONDecodeError:
+                    config = {} # Corrupt file, overwrite
+        
+        if "api_keys" not in config:
+            config["api_keys"] = {}
+            
+        config["api_keys"][provider_id] = new_key
+        
+        with open(config_path, 'w', encoding='utf-8') as f:
+            json.dump(config, f, indent=4)
+            
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Failed to save API key: {str(e)}")
+        logging.error(f"Failed to save to AppData config: {e}")
+        raise HTTPException(status_code=500, detail=f"Failed to save API key to config file: {str(e)}")
     
     # Update current environment variable immediately
     os.environ[env_var] = new_key
