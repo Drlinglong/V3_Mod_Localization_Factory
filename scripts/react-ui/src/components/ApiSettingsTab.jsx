@@ -11,9 +11,10 @@ import {
     Loader,
     ActionIcon,
     Tooltip,
-    Box
+    Box,
+    Alert
 } from '@mantine/core';
-import { IconCheck, IconX, IconEdit, IconKey } from '@tabler/icons-react';
+import { IconCheck, IconX, IconEdit, IconKey, IconInfoCircle } from '@tabler/icons-react';
 import { notifications } from '@mantine/notifications';
 import { useTranslation } from 'react-i18next';
 import styles from './ApiSettingsTab.module.css';
@@ -117,6 +118,10 @@ const ApiSettingsTab = () => {
             <Text c="dimmed" size="sm">
                 {t('api_settings_description')}
             </Text>
+
+            <Alert variant="light" color="blue" title="API Key Storage" icon={<IconInfoCircle />}>
+                {t('api_settings_storage_info')}
+            </Alert>
 
             <div className={styles.grid}>
                 {providers.map((provider) => (

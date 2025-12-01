@@ -3,6 +3,64 @@
 import os
 import multiprocessing
 from scripts.config import prompts
+import json
+
+def get_appdata_config_path():
+    """Returns the path to the AppData config file."""
+    appdata = os.getenv('APPDATA')
+    if not appdata:
+        # Fallback for non-standard environments
+        return os.path.join(os.path.expanduser("~"), ".remis", "config.json")
+    
+    config_dir = os.path.join(appdata, "Remis")
+    os.makedirs(config_dir, exist_ok=True)
+    return os.path.join(config_dir, "config.json")
+
+def get_api_key(provider_id: str, env_var_name: str) -> str:
+    """
+    Retrieves the API key for a given provider.
+    Priority:
+    1. AppData Config (config.json)
+    2. Environment Variable (os.environ)
+    """
+    # 1. Try AppData config
+    try:
+        config_path = get_appdata_config_path()
+        if os.path.exists(config_path):
+            with open(config_path, 'r', encoding='utf-8') as f:
+                config = json.load(f)
+                key = config.get("api_keys", {}).get(provider_id)
+                if key:
+                    return key
+    except Exception:
+        pass
+    
+    # 2. Fallback to environment variable
+    return os.environ.get(env_var_name)
+
+def load_api_keys_to_env():
+    """
+    Loads API keys from AppData config into os.environ.
+    This ensures that SDKs and CLI tools that rely on environment variables
+    can find the keys.
+    """
+    try:
+        config_path = get_appdata_config_path()
+        if not os.path.exists(config_path):
+            return
+
+        with open(config_path, 'r', encoding='utf-8') as f:
+            config = json.load(f)
+            api_keys = config.get("api_keys", {})
+            
+        for provider_id, key in api_keys.items():
+            if provider_id in API_PROVIDERS:
+                env_var = API_PROVIDERS[provider_id].get("api_key_env")
+                if env_var and key:
+                    os.environ[env_var] = key
+    except Exception:
+        pass
+
 
 # Global switch for archiving translation results
 ARCHIVE_RESULTS_AFTER_TRANSLATION = True
