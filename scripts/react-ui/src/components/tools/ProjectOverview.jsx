@@ -61,7 +61,7 @@ const ProjectOverview = ({ projectDetails, handleStatusChange, handleNotesChange
 
     const handleSavePaths = async () => {
         try {
-            const response = await axios.post(`http://localhost:8000/api/project/${projectDetails.project_id}/config`, {
+            const response = await axios.post(`/api/project/${projectDetails.project_id}/config`, {
                 translation_dirs: translationDirs
             });
             console.log('Save response:', response.data);
