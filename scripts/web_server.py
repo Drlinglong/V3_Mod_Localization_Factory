@@ -1001,4 +1001,5 @@ def update_api_key(payload: UpdateApiKeyRequest):
 
 
 if __name__ == "__main__":
-    uvicorn.run("scripts.web_server:app", host="0.0.0.0", port=8000, reload=True)
+    port = int(os.environ.get("BACKEND_PORT", 9000))
+    uvicorn.run("scripts.web_server:app", host="0.0.0.0", port=port, reload=True)
