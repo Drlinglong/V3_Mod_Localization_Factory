@@ -4,10 +4,27 @@ import logging
 from fastapi import APIRouter, HTTPException
 from dotenv import load_dotenv
 
-from scripts.app_settings import API_PROVIDERS, get_api_key, get_appdata_config_path
+from scripts.app_settings import API_PROVIDERS, get_api_key, get_appdata_config_path, GAME_PROFILES, LANGUAGES
 from scripts.schemas.config import UpdateApiKeyRequest
 
 router = APIRouter()
+
+@router.get("/api/config")
+def get_config():
+    """Returns the global configuration for the frontend."""
+    # Convert API_PROVIDERS dict to list for frontend select
+    api_providers_list = []
+    for pid, pconf in API_PROVIDERS.items():
+        api_providers_list.append({
+            "value": pid,
+            "label": pconf.get("description", pid).split(' - ')[0] if "description" in pconf else pid.title()
+        })
+
+    return {
+        "game_profiles": GAME_PROFILES,
+        "languages": LANGUAGES,
+        "api_providers": api_providers_list
+    }
 
 @router.get("/api/api-keys")
 def get_api_keys():

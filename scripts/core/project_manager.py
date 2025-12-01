@@ -6,7 +6,7 @@ import datetime
 import logging
 from typing import List, Optional, Dict, Any
 from dataclasses import dataclass
-from scripts.app_settings import PROJECTS_DB_PATH, SOURCE_DIR
+from scripts.app_settings import PROJECTS_DB_PATH, SOURCE_DIR, GAME_ID_ALIASES
 
 # Configure logger
 logger = logging.getLogger(__name__)
@@ -103,6 +103,9 @@ class ProjectManager:
         3. Creates DB records.
         4. Initializes JSON sidecar.
         """
+        # Normalize game_id
+        game_id = GAME_ID_ALIASES.get(game_id.lower(), game_id)
+        
         logger.info(f"Creating project '{name}' from '{folder_path}' for game '{game_id}'")
 
         # 1. Handle Folder Movement/Validation
@@ -393,7 +396,14 @@ class ProjectManager:
             
         rows = cursor.fetchall()
         conn.close()
-        return [dict(row) for row in rows]
+        
+        # Normalize game_id in output
+        results = []
+        for row in rows:
+            p = dict(row)
+            p['game_id'] = GAME_ID_ALIASES.get(p['game_id'].lower(), p['game_id'])
+            results.append(p)
+        return results
 
     def get_non_active_projects(self) -> List[Dict[str, Any]]:
         """Fetches all projects that are not 'active' (e.g., archived, deleted)."""

@@ -295,5 +295,16 @@ GAME_PROFILES = {
     }
 }
 
+# --- Game ID Aliases (Normalization) -----------------------------
+GAME_ID_ALIASES = {
+    "vic3": "victoria3",
+    "victoria 3": "victoria3",
+    "stellaris": "stellaris",
+    "hoi4": "hoi4",
+    "ck3": "ck3",
+    "eu4": "eu4",
+    "eu5": "eu5"
+}
+
 # --- 保底格式提示模板 ---------------------------------------------
 FALLBACK_FORMAT_PROMPT = prompts.FALLBACK_FORMAT_PROMPT

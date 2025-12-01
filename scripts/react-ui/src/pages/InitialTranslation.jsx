@@ -359,15 +359,13 @@ const InitialTranslation = () => {
                       <Stack gap="xs">
                         {projects
                           .filter(project => {
-                            const normalizedId = project.game_id === 'vic3' ? 'victoria3' : project.game_id;
-                            const matchesGame = gameFilter === 'all' || !gameFilter || normalizedId === gameFilter;
+                            const matchesGame = gameFilter === 'all' || !gameFilter || project.game_id === gameFilter;
                             const matchesSearch = project.label.toLowerCase().includes(searchQuery.toLowerCase());
                             return matchesGame && matchesSearch;
                           })
                           .map((project) => {
-                            const normalizedId = project.game_id === 'vic3' ? 'victoria3' : project.game_id;
-                            const profile = config.game_profiles[normalizedId] ||
-                              Object.values(config.game_profiles).find(p => p.id === normalizedId);
+                            const profile = config.game_profiles[project.game_id] ||
+                              Object.values(config.game_profiles).find(p => p.id === project.game_id);
                             const gameName = profile ? profile.name.split('(')[0].trim() : 'Unknown';
 
                             return (
@@ -391,7 +389,7 @@ const InitialTranslation = () => {
                               >
                                 <Group>
                                   <Badge
-                                    color={normalizedId === 'victoria3' ? 'pink' : 'blue'}
+                                    color={project.game_id === 'victoria3' ? 'pink' : 'blue'}
                                     variant="filled"
                                     w={150}
                                     radius="sm"
@@ -455,10 +453,8 @@ const InitialTranslation = () => {
                               const project = projects.find(p => p.value === selectedProjectId);
                               if (!project) return 'Unknown';
                               // Try direct lookup or find by ID
-                              // Handle legacy/alias 'vic3' -> 'victoria3'
-                              const normalizedId = project.game_id === 'vic3' ? 'victoria3' : project.game_id;
-                              const profile = config.game_profiles[normalizedId] ||
-                                Object.values(config.game_profiles).find(p => p.id === normalizedId);
+                              const profile = config.game_profiles[project.game_id] ||
+                                Object.values(config.game_profiles).find(p => p.id === project.game_id);
                               return profile ? profile.name : 'Unknown';
                             })()}
                             disabled
