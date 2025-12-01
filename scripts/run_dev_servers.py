@@ -8,6 +8,19 @@ import sys
 import os
 import signal
 import time
+import socket
+import json
+
+def find_free_port(start_port=8000, max_attempts=100):
+    """Find a free port starting from start_port."""
+    for port in range(start_port, start_port + max_attempts):
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
+            try:
+                sock.bind(('0.0.0.0', port))
+                return port
+            except OSError:
+                continue
+    raise RuntimeError(f"No free ports found between {start_port} and {start_port + max_attempts}")
 
 def run_servers():
     """Run both backend and frontend servers concurrently."""
@@ -20,7 +33,8 @@ def run_servers():
     
     # Backend process (FastAPI)
     backend_cwd = project_root
-    backend_cmd = [sys.executable, '-m', 'uvicorn', 'scripts.web_server:app', '--host', '0.0.0.0', '--port', '8000']
+    backend_port = find_free_port(9000)
+    backend_cmd = [sys.executable, '-m', 'uvicorn', 'scripts.web_server:app', '--host', '0.0.0.0', '--port', str(backend_port)]
     
     # Frontend process (Vite)
     frontend_cwd = os.path.join(project_root, 'scripts', 'react-ui')
@@ -29,6 +43,24 @@ def run_servers():
     else:
         frontend_cmd = ['npm', 'run', 'dev']
     
+    # Generate frontend config
+    config_dir = os.path.join(frontend_cwd, 'public')
+    os.makedirs(config_dir, exist_ok=True)
+    config_path = os.path.join(config_dir, 'server_config.json')
+    try:
+        with open(config_path, 'w') as f:
+            json.dump({
+                'apiBaseUrl': f'http://localhost:{backend_port}',
+                'port': backend_port
+            }, f, indent=2)
+        print(f"[INFO] Generated frontend config at {config_path}")
+    except Exception as e:
+        print(f"[WARN] Failed to generate frontend config: {e}")
+
+    # Prepare environment for frontend
+    frontend_env = os.environ.copy()
+    frontend_env['BACKEND_PORT'] = str(backend_port)
+    
     print("=" * 60)
     print("Remis Development Server Launcher")
     print("=" * 60)
@@ -36,7 +68,7 @@ def run_servers():
     
     try:
         # Start backend server
-        print("[INFO] Starting FastAPI backend server on port 8000...")
+        print(f"[INFO] Starting FastAPI backend server on port {backend_port}...")
         print(f"[INFO] Working directory: {backend_cwd}")
         print(f"[INFO] Command: {' '.join(backend_cmd)}")
         backend_process = subprocess.Popen(
@@ -69,13 +101,14 @@ def run_servers():
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
             universal_newlines=True,
-            bufsize=1
+            bufsize=1,
+            env=frontend_env
         )
         processes.append(('Frontend', frontend_process, frontend_cmd))
         
         print()
         print("[SUCCESS] Both servers are running!")
-        print("[INFO] Backend: http://localhost:8000/")
+        print(f"[INFO] Backend: http://localhost:{backend_port}/")
         print("[INFO] Frontend: http://localhost:5173/")
         print()
         print("Press Ctrl+C to stop all servers...")

@@ -20,7 +20,7 @@ import heroBg from '../assets/project_hero_bg.png';
 import cardNewProject from '../assets/card_new_project.png';
 import cardOpenProject from '../assets/card_open_project.png'; // Reusing for Archives
 
-const API_BASE = 'http://localhost:8000/api';
+const API_BASE = '/api';
 
 export default function ProjectManagement() {
   const { t } = useTranslation();

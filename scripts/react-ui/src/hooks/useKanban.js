@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { useTranslation } from 'react-i18next';
 import axios from 'axios';
 
-const API_BASE = 'http://localhost:8000/api';
+const API_BASE = '/api';
 
 export const useKanban = (projectId) => {
     const { t } = useTranslation();
