@@ -35,7 +35,6 @@ export const KanbanColumn = ({ id, tasks, onCardClick, onAddNote }) => {
                 <Button
                     variant="subtle"
                     size="xs"
-                    compact
                     onClick={() => onAddNote(id)}
                     title={t('project_management.kanban.add_note_task')}
                 >

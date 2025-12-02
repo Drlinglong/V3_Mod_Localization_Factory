@@ -37,3 +37,25 @@ async def open_folder(request: OpenFolderRequest):
     except Exception as e:
         logger.error(f"Failed to open folder {path}: {e}")
         raise HTTPException(status_code=500, detail=f"Failed to open folder: {str(e)}")
+
+class SaveFileRequest(BaseModel):
+    file_path: str
+    content: str
+
+@router.post("/save_file")
+async def save_file(request: SaveFileRequest):
+    """
+    Saves content to a local file with UTF-8-SIG encoding.
+    """
+    try:
+        # Ensure directory exists
+        os.makedirs(os.path.dirname(request.file_path), exist_ok=True)
+        
+        with open(request.file_path, 'w', encoding='utf-8-sig') as f:
+            f.write(request.content)
+            
+        logger.info(f"Saved file: {request.file_path}")
+        return {"status": "success", "message": "File saved successfully"}
+    except Exception as e:
+        logger.error(f"Failed to save file {request.file_path}: {e}")
+        raise HTTPException(status_code=500, detail=f"Failed to save file: {str(e)}")

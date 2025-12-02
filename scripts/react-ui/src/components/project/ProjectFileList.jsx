@@ -67,7 +67,14 @@ const ProjectFileList = ({ projectDetails, handleProofread }) => {
                 <Table.Td style={{ width: '120px' }}>
                     <Group gap="xs">
                         {file.actions.map(action => (
-                            <Button variant="subtle" size="xs" key={action} onClick={action === 'Proofread' ? () => handleProofread(file) : null}>
+                            <Button
+                                variant="subtle"
+                                size="xs"
+                                key={action}
+                                onClick={() => {
+                                    if (action === 'Proofread') handleProofread(file);
+                                }}
+                            >
                                 {t('proofreading.proofread')}
                             </Button>
                         ))}

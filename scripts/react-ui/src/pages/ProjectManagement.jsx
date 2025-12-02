@@ -150,9 +150,23 @@ export default function ProjectManagement() {
   };
 
   const handleProofread = (file) => {
-    if (!selectedProject) return;
+    console.log("handleProofread called with:", file);
+    if (!selectedProject) {
+      console.error("No selected project!");
+      return;
+    }
+
+    // Ensure we have a file ID
     const fileId = file.key || file.file_id;
-    navigate(`/proofreading?projectId=${selectedProject.project_id}&fileId=${fileId}`);
+    if (!fileId) {
+      console.error("No fileId found in file object:", file);
+      alert("Error: Cannot identify file. Please refresh the project.");
+      return;
+    }
+
+    const url = `/proofreading?projectId=${selectedProject.project_id}&fileId=${fileId}`;
+    console.log("Navigating to:", url);
+    navigate(url);
   };
 
   const handleUpdateNotes = async (notes) => {
