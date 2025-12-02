@@ -155,4 +155,9 @@ def restore_special_tokens(text: str, target_lang: str) -> str:
         
         text = restored_text
 
+    # 3. Final Safety: Escape any remaining actual newlines
+    # If the LLM returned actual newlines instead of tokens, we must escape them
+    # to prevent breaking the YAML-like structure.
+    text = text.replace("\n", "\\n")
+
     return text

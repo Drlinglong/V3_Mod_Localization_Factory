@@ -17,7 +17,7 @@ def get_config():
     for pid, pconf in API_PROVIDERS.items():
         api_providers_list.append({
             "value": pid,
-            "label": pconf.get("description", pid).split(' - ')[0] if "description" in pconf else pid.title()
+            "label": pconf.get("name", pid.title())
         })
 
     return {

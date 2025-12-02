@@ -203,7 +203,8 @@ def start_translation_project(request: InitialTranslationRequest, background_tas
     tasks[task_id] = {"status": "pending", "log": []}
 
     # Prepare arguments for the workflow
-    mod_name = project['name']
+    # Use the actual folder name from source_path to ensure it matches the directory on disk
+    mod_name = os.path.basename(project['source_path'])
     # Ensure source path exists
     if not os.path.exists(project['source_path']):
          raise HTTPException(status_code=400, detail=f"Project source path not found: {project['source_path']}")
