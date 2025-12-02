@@ -95,7 +95,7 @@ class ProjectManager:
         conn.commit()
         conn.close()
 
-    def create_project(self, name: str, folder_path: str, game_id: str) -> Project:
+    def create_project(self, name: str, folder_path: str, game_id: str, source_language: str = "english") -> Project:
         """
         Creates a new project.
         1. Moves folder to SOURCE_DIR if not already there.
@@ -106,7 +106,7 @@ class ProjectManager:
         # Normalize game_id
         game_id = GAME_ID_ALIASES.get(game_id.lower(), game_id)
         
-        logger.info(f"Creating project '{name}' from '{folder_path}' for game '{game_id}'")
+        logger.info(f"Creating project '{name}' from '{folder_path}' for game '{game_id}' (Source: {source_language})")
 
         # 1. Handle Folder Movement/Validation
         source_root = os.path.abspath(SOURCE_DIR)
@@ -141,7 +141,8 @@ class ProjectManager:
         # User will add translation directories via Manage Paths UI
         json_manager = ProjectJsonManager(final_source_path)
         json_manager.update_config({
-            "translation_dirs": []
+            "translation_dirs": [],
+            "source_language": source_language
         })
 
         # Create project record in database
@@ -200,6 +201,16 @@ class ProjectManager:
                 'notes': row[6],
                 'created_at': row[7]
             }
+            
+            # Fetch source_language from JSON
+            try:
+                json_manager = ProjectJsonManager(project['source_path'])
+                config = json_manager.get_config()
+                project['source_language'] = config.get('source_language', 'english')
+            except Exception:
+                project['source_language'] = 'english'
+            
+            return project
         return None
 
     def refresh_project_files(self, project_id: str):
@@ -470,7 +481,19 @@ class ProjectManager:
         cursor.execute("SELECT * FROM projects WHERE project_id = ?", (project_id,))
         row = cursor.fetchone()
         conn.close()
-        return dict(row) if row else None
+        
+        if row:
+            project = dict(row)
+            # Fetch source_language from JSON
+            try:
+                json_manager = ProjectJsonManager(project['source_path'])
+                config = json_manager.get_config()
+                project['source_language'] = config.get('source_language', 'english') # Default to english
+            except Exception as e:
+                logger.error(f"Failed to fetch source_language for project {project_id}: {e}")
+                project['source_language'] = 'english'
+            return project
+        return None
 
     def get_project_files(self, project_id: str) -> List[Dict[str, Any]]:
         conn = self._get_connection()

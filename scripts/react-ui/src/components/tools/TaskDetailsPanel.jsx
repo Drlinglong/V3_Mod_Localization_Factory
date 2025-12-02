@@ -76,8 +76,8 @@ export const TaskDetailsPanel = ({ task, onUpdate, onDelete }) => {
             <Select
                 label={t('project_management.details.status')}
                 data={STATUS_OPTIONS}
-                value={task.status}
-                onChange={handleStatusChange}
+                value={task.status || ''}
+                onChange={(val) => handleStatusChange(val)}
             />
 
             {/* File Specific Info */}

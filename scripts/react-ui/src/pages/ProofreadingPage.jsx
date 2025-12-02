@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
   Paper,
@@ -12,7 +12,16 @@ import {
   LoadingOverlay,
   Select,
   Tabs,
-  Table
+  Table,
+  TextInput,
+  Textarea,
+  ScrollArea,
+  ActionIcon,
+  Alert,
+  Modal,
+  Collapse,
+  Divider,
+  Box
 } from '@mantine/core';
 import {
   IconDeviceFloppy,
@@ -21,7 +30,13 @@ import {
   IconX,
   IconFileText,
   IconEdit,
-  IconFolder
+  IconFolder,
+  IconArrowRight,
+  IconAlertCircle,
+  IconDatabase,
+  IconChevronDown,
+  IconChevronUp,
+  IconSearch
 } from '@tabler/icons-react';
 import { notifications } from '@mantine/notifications';
 import layoutStyles from '../components/layout/Layout.module.css';
@@ -31,24 +46,31 @@ import { useSearchParams } from 'react-router-dom';
 
 const ProofreadingPage = () => {
   const { t } = useTranslation();
-  const [searchParams] = useSearchParams();
-  const projectId = searchParams.get('projectId');
-  const fileId = searchParams.get('fileId');
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  // Project & File State
+  const [projects, setProjects] = useState([]);
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [isHeaderOpen, setIsHeaderOpen] = useState(false);
+  const [projectFilter, setProjectFilter] = useState('');
+
+  // File Navigation State
+  const [sourceFiles, setSourceFiles] = useState([]); // List of source files
+  const [targetFilesMap, setTargetFilesMap] = useState({}); // Map: source_file_id -> [target_files]
+  const [currentSourceFile, setCurrentSourceFile] = useState(null); // Selected Source File Object
+  const [currentTargetFile, setCurrentTargetFile] = useState(null); // Selected Target File Object
 
   // Tab State
   const [activeTab, setActiveTab] = useState('file');
   const [zoomLevel, setZoomLevel] = useState('1');
 
-  // --- File Mode State ---
-  const [targetLang, setTargetLang] = useState('zh-CN');
-
   // Content State
-  // entries: { key, original, translation }
+  // entries: { key, original, translation, line_number }
   const [entries, setEntries] = useState([]);
 
   // String representations for Editors
   const [originalContentStr, setOriginalContentStr] = useState('');
-  const [aiContentStr, setAiContentStr] = useState(''); // Restored AI Column
+  const [aiContentStr, setAiContentStr] = useState('');
   const [finalContentStr, setFinalContentStr] = useState('');
 
   const [validationResults, setValidationResults] = useState([]);
@@ -56,12 +78,16 @@ const ProofreadingPage = () => {
   const [saving, setSaving] = useState(false);
   const [stats, setStats] = useState({ error: 0, warning: 0 });
 
+  // Key Modification Detection
+  const [keyChangeWarning, setKeyChangeWarning] = useState(false);
+  const [saveModalOpen, setSaveModalOpen] = useState(false);
+
   // Metadata
   const [fileInfo, setFileInfo] = useState(null);
 
   // Refs for sync scrolling
   const originalEditorRef = useRef(null);
-  const aiEditorRef = useRef(null); // Restored AI Ref
+  const aiEditorRef = useRef(null);
   const finalEditorRef = useRef(null);
   const isScrolling = useRef(false);
 
@@ -72,43 +98,258 @@ const ProofreadingPage = () => {
   const [linterLoading, setLinterLoading] = useState(false);
   const [linterError, setLinterError] = useState(null);
 
-  // --- Initialization Effect ---
+  // --- Initialization & Data Fetching ---
   useEffect(() => {
-    if (projectId && fileId) {
-      loadProjectFile(projectId, fileId);
+    fetchProjects();
+  }, []);
+
+  // Sync URL params with state
+  useEffect(() => {
+    const pId = searchParams.get('projectId');
+    const fId = searchParams.get('fileId');
+    if (pId && projects.length > 0 && !selectedProject) {
+      const proj = projects.find(p => p.project_id === pId);
+      if (proj) setSelectedProject(proj);
     }
-  }, [projectId, fileId]);
+  }, [searchParams, projects]);
 
-  const loadProjectFile = async (pId, fId) => {
-    console.log(`Loading proofreading data for Project: ${pId}, File: ${fId}`);
-    setLoading(true);
+  useEffect(() => {
+    if (selectedProject) {
+      fetchProjectFiles(selectedProject.project_id);
+    }
+  }, [selectedProject]);
+
+  const fetchProjects = async () => {
     try {
-      const res = await axios.get(`/api/proofread/${pId}/${fId}`);
-      const data = res.data;
-      console.log("Proofreading data loaded:", data);
-      setFileInfo({ path: data.file_path, project_id: pId, file_id: fId });
+      const res = await axios.get('/api/projects?status=active');
+      setProjects(res.data);
+    } catch (error) {
+      console.error("Failed to load projects", error);
+    }
+  };
 
-      const loadedEntries = data.entries || [];
-      setEntries(loadedEntries);
+  const fetchProjectFiles = async (pId) => {
+    try {
+      const res = await axios.get(`/api/project/${pId}/files`);
+      const files = res.data;
+      groupFiles(files);
+    } catch (error) {
+      console.error("Failed to load project files", error);
+    }
+  };
 
-      if (loadedEntries.length === 0) {
-        notifications.show({
-          title: 'Info',
-          message: "No entries found for this file. Please try refreshing the project.",
-          color: 'blue',
-          autoClose: 5000
-        });
+  const groupFiles = (files) => {
+    if (!selectedProject) return;
+    const sourceLang = selectedProject.source_language || 'english';
+
+    // 1. Identify Source Files
+    // Pattern: ends with _l_<sourceLang>.yml
+    const sourcePattern = `_l_${sourceLang}.yml`;
+    const sources = files.filter(f => f.file_path.endsWith(sourcePattern));
+
+    // 2. Group Target Files
+    // Map source file ID -> List of target files
+    // We match by base name. 
+    // Source: foo_l_english.yml -> Base: foo
+    // Target: foo_l_german.yml -> Base: foo
+
+    const targetsMap = {};
+    const sourceBaseMap = {}; // base -> sourceFile
+
+    // Helper to get filename from path (handles both / and \)
+    const getFileName = (path) => path.replace(/\\/g, '/').split('/').pop();
+
+    sources.forEach(s => {
+      const fileName = getFileName(s.file_path);
+      const baseName = fileName.replace(sourcePattern, '');
+      sourceBaseMap[baseName] = s;
+      targetsMap[s.file_id] = [];
+    });
+
+    files.forEach(f => {
+      if (f.file_type === 'source') return; // Skip source files (already handled)
+
+      const fileName = getFileName(f.file_path);
+      for (const base in sourceBaseMap) {
+        if (fileName.startsWith(base + '_l_') && f.file_id !== sourceBaseMap[base].file_id) {
+          targetsMap[sourceBaseMap[base].file_id].push(f);
+          break;
+        }
+      }
+    });
+
+    setSourceFiles(sources);
+    setTargetFilesMap(targetsMap);
+
+    // Auto-load logic
+    // If URL has fileId, try to load that.
+    // Else, load first source and its first target.
+    const urlFileId = searchParams.get('fileId');
+
+    if (urlFileId) {
+      // Find which source this target belongs to
+      let foundSource = null;
+      let foundTarget = null;
+
+      // Check if it is a source file
+      const isSource = sources.find(s => s.file_id === urlFileId);
+      if (isSource) {
+        foundSource = isSource;
+        // Try to find first target
+        if (targetsMap[isSource.file_id]?.length > 0) {
+          foundTarget = targetsMap[isSource.file_id][0];
+        }
+      } else {
+        // Must be a target file
+        for (const sId in targetsMap) {
+          const t = targetsMap[sId].find(t => t.file_id === urlFileId);
+          if (t) {
+            foundSource = sources.find(s => s.file_id === sId);
+            foundTarget = t;
+            break;
+          }
+        }
       }
 
-      // Align entries
-      const { originalStr, aiStr, finalStr } = alignEntries(loadedEntries);
+      if (foundSource) {
+        setCurrentSourceFile(foundSource);
+        if (foundTarget) {
+          setCurrentTargetFile(foundTarget);
+          loadEditorData(selectedProject.project_id, foundSource.file_id, foundTarget.file_id);
+        } else {
+          // Load source as target (fallback)
+          setCurrentTargetFile(null);
+          loadEditorData(selectedProject.project_id, foundSource.file_id, null);
+        }
+      }
 
-      setOriginalContentStr(originalStr);
-      setAiContentStr(aiStr);
-      setFinalContentStr(finalStr);
+    } else if (sources.length > 0) {
+      const firstSource = sources[0];
+      setCurrentSourceFile(firstSource);
+      const targets = targetsMap[firstSource.file_id];
+      if (targets && targets.length > 0) {
+        setCurrentTargetFile(targets[0]);
+        loadEditorData(selectedProject.project_id, firstSource.file_id, targets[0].file_id);
+      } else {
+        setCurrentTargetFile(null);
+        loadEditorData(selectedProject.project_id, firstSource.file_id, null);
+      }
+    }
+  };
+
+  // Detect Key Changes
+  useEffect(() => {
+    if (!entries.length || !finalContentStr) return;
+
+    // Parse current keys from finalContentStr
+    const currentKeys = new Set();
+    const regex = /([\w\.]+):0\s*"/g;
+    let match;
+    while ((match = regex.exec(finalContentStr)) !== null) {
+      currentKeys.add(match[1]);
+    }
+
+    // Check against original keys
+    const originalKeys = new Set(entries.map(e => e.key));
+
+    // Simple check: Are sets equal?
+    let hasChanges = false;
+    if (currentKeys.size !== originalKeys.size) {
+      hasChanges = true;
+    } else {
+      for (let k of currentKeys) {
+        if (!originalKeys.has(k)) {
+          hasChanges = true;
+          break;
+        }
+      }
+    }
+
+    setKeyChangeWarning(hasChanges);
+
+  }, [finalContentStr, entries]);
+
+  const loadEditorData = async (pId, sourceId, targetId) => {
+    setLoading(true);
+    try {
+      // 1. Load Source File (for Original Column)
+      // If sourceId exists in DB, load from API. Otherwise, infer from target file path.
+      if (sourceId) {
+        try {
+          const resSource = await axios.get(`/api/proofread/${pId}/${sourceId}`);
+          setOriginalContentStr(resSource.data.original_content || "");
+        } catch (error) {
+          // Source file not in DB, try to infer from target file
+          if (targetId) {
+            const resTarget = await axios.get(`/api/proofread/${pId}/${targetId}`);
+            const targetPath = resTarget.data.file_path;
+
+            // Infer source file path
+            // Pattern: replace _l_<targetLang> with _l_<sourceLang>
+            // Also replace target language folder with source language folder
+            const sourceLang = selectedProject?.source_language || 'english';
+
+            // Example: .../simp_chinese/xxx_l_simp_chinese.yml -> .../english/xxx_l_english.yml
+            let sourcePath = targetPath;
+
+            // Replace language suffix in filename
+            sourcePath = sourcePath.replace(/_l_\w+\.yml$/, `_l_${sourceLang}.yml`);
+
+            // Replace language folder (last component before filename)
+            const parts = sourcePath.replace(/\\/g, '/').split('/');
+            const filename = parts[parts.length - 1];
+            const folderIdx = parts.length - 2;
+
+            // Check if the folder is a language folder
+            if (['simp_chinese', 'english', 'french', 'german', 'russian', 'spanish', 'japanese', 'korean'].includes(parts[folderIdx])) {
+              parts[folderIdx] = sourceLang;
+            }
+
+            sourcePath = parts.join('/');
+
+            console.log(`[Proofreading] Inferred source file path: ${sourcePath}`);
+
+            // Read source file directly from disk
+            try {
+              const readRes = await axios.post('/api/system/read_file', { file_path: sourcePath });
+              setOriginalContentStr(readRes.data.content || "");
+            } catch (readError) {
+              console.error("Failed to read source file from disk:", readError);
+              setOriginalContentStr("");
+            }
+          } else {
+            setOriginalContentStr("");
+          }
+        }
+      } else {
+        setOriginalContentStr("");
+      }
+
+      // 2. Load Target File (for AI/Final Columns)
+      if (targetId) {
+        const resTarget = await axios.get(`/api/proofread/${pId}/${targetId}`);
+        const data = resTarget.data;
+        setFileInfo({ path: data.file_path, project_id: pId, file_id: targetId }); // File info tracks the EDITABLE file (Target)
+        setEntries(data.entries || []);
+
+        if (data.file_content) {
+          setAiContentStr(data.file_content);
+          setFinalContentStr(data.file_content);
+        } else {
+          // Fallback alignment
+          const { aiStr, finalStr } = alignEntries(data.entries || []);
+          setAiContentStr(aiStr);
+          setFinalContentStr(finalStr);
+        }
+      } else {
+        setAiContentStr("");
+        setFinalContentStr("");
+        setEntries([]);
+        setFileInfo(null);
+      }
 
     } catch (error) {
-      console.error("Failed to load file", error);
+      console.error("Failed to load editor data", error);
       notifications.show({ title: 'Error', message: "Failed to load file data.", color: 'red' });
     } finally {
       setLoading(false);
@@ -124,7 +365,7 @@ const ProofreadingPage = () => {
     entries.forEach(e => {
       const origText = e.original || "";
       const aiText = e.translation || "";
-      const finalText = e.translation || ""; // Initially same as AI
+      const finalText = e.translation || "";
 
       // Fixed wrap width to match Monaco 'wordWrapColumn'
       const WRAP_WIDTH = 60;
@@ -133,7 +374,6 @@ const ProofreadingPage = () => {
         if (!text) return 1;
         let len = 0;
         for (let i = 0; i < text.length; i++) {
-          // Count Chinese/Full-width chars as 2 width (Monaco standard)
           len += text.charCodeAt(i) > 255 ? 2 : 1;
         }
         return Math.max(1, Math.ceil(len / WRAP_WIDTH));
@@ -141,16 +381,17 @@ const ProofreadingPage = () => {
 
       const l1 = calcLines(origText);
       const l2 = calcLines(aiText);
+      // We don't align finalStr anymore because it's free-text with comments
+      // But we calculate it for fallback
       const l3 = calcLines(finalText);
-      const maxL = Math.max(l1, l2, l3);
+      const maxL = Math.max(l1, l2); // Only align first two columns
 
       const pad1 = Math.max(0, maxL - l1);
       const pad2 = Math.max(0, maxL - l2);
-      const pad3 = Math.max(0, maxL - l3);
 
       originalStr += `${e.key}:0 "${origText}"` + "\n".repeat(pad1) + "\n";
       aiStr += `${e.key}:0 "${aiText}"` + "\n".repeat(pad2) + "\n";
-      finalStr += `${e.key}:0 "${finalText}"` + "\n".repeat(pad3) + "\n";
+      finalStr += `${e.key}:0 "${finalText}"\n`; // No padding for finalStr
     });
 
     return { originalStr, aiStr, finalStr };
@@ -158,14 +399,48 @@ const ProofreadingPage = () => {
 
   // --- Handlers ---
 
+  const handleProjectSelect = (val) => {
+    const proj = projects.find(p => p.project_id === val);
+    if (proj) {
+      setSelectedProject(proj);
+      // Update URL without reloading
+      setSearchParams({ projectId: proj.project_id });
+    }
+  };
+
+  const handleSourceFileChange = (val) => {
+    const source = sourceFiles.find(s => s.file_id === val);
+    if (source) {
+      setCurrentSourceFile(source);
+      // Auto-select first target
+      const targets = targetFilesMap[source.file_id];
+      if (targets && targets.length > 0) {
+        setCurrentTargetFile(targets[0]);
+        loadEditorData(selectedProject.project_id, source.file_id, targets[0].file_id);
+        setSearchParams({ projectId: selectedProject.project_id, fileId: targets[0].file_id });
+      } else {
+        // Fallback to source only
+        setCurrentTargetFile(null);
+        loadEditorData(selectedProject.project_id, source.file_id, null);
+        setSearchParams({ projectId: selectedProject.project_id, fileId: source.file_id });
+      }
+    }
+  };
+
+  const handleTargetFileChange = (val) => {
+    // Find target in current map
+    if (!currentSourceFile) return;
+    const targets = targetFilesMap[currentSourceFile.file_id];
+    const target = targets.find(t => t.file_id === val);
+    if (target) {
+      setCurrentTargetFile(target);
+      loadEditorData(selectedProject.project_id, currentSourceFile.file_id, target.file_id);
+      setSearchParams({ projectId: selectedProject.project_id, fileId: target.file_id });
+    }
+  };
+
   const parseEditorContentToEntries = (content) => {
-    // Parse .yml format: key:0 "text"
-    // We need to handle the extra newlines we added for alignment.
-    // The regex should match the key and the quoted string, ignoring extra whitespace/newlines between entries.
     const entries = [];
-    // Regex: ^\s*([\w\.]+):0\s*"((?:[^"\\]|\\.)*)"
-    // We split by lines? No, because we have multi-line padding.
-    // We can use a global regex match.
     const regex = /([\w\.]+):0\s*"((?:[^"\\]|\\.)*)"/g;
     let match;
     while ((match = regex.exec(content)) !== null) {
@@ -178,21 +453,24 @@ const ProofreadingPage = () => {
     setLoading(true);
     setValidationResults([]);
     try {
-      // Parse content from Final Editor
-      // We validate the file on disk, so we should save first?
-      // Or we can send content to validate endpoint if supported.
-      // For now, let's assume validate checks the file on disk.
-      // Ideally we should auto-save or warn.
-
-      const response = await axios.post(`/api/validate_file`, {
-        file_path: fileInfo.path,
-        game_id: 'victoria3' // Hardcoded for now or get from project
+      // Validate current content (virtual file)
+      const parsed = parseEditorContentToEntries(finalContentStr);
+      let virtualContent = "";
+      parsed.forEach(e => {
+        virtualContent += ` ${e.key}:0 "${e.value}"\n`;
       });
-      setValidationResults(response.data.issues || []);
 
-      // Update stats
-      const errors = (response.data.issues || []).filter(i => i.level === 'error').length;
-      const warnings = (response.data.issues || []).filter(i => i.level === 'warning').length;
+      const response = await axios.post('/api/validate/localization', {
+        game_id: 'victoria3', // TODO: Get from project settings
+        content: virtualContent,
+        source_lang_code: 'en_US'
+      });
+
+      const issues = response.data;
+      setValidationResults(issues);
+
+      const errors = issues.filter(i => i.level === 'error').length;
+      const warnings = issues.filter(i => i.level === 'warning').length;
       setStats({ error: errors, warning: warnings });
 
       if (errors === 0 && warnings === 0) {
@@ -209,41 +487,39 @@ const ProofreadingPage = () => {
     }
   };
 
-  const handleSave = async () => {
+  const handleSaveClick = () => {
+    if (keyChangeWarning) {
+      setSaveModalOpen(true);
+    } else {
+      confirmSave();
+    }
+  };
+
+  const confirmSave = async () => {
+    setSaveModalOpen(false);
     setSaving(true);
     try {
       const parsedEntries = parseEditorContentToEntries(finalContentStr);
 
-      // Convert back to original entry format for saving
-      // We need to merge with original keys to keep order?
-      // parsedEntries is [{key, value}].
-      // We should map back to the `entries` state to preserve other metadata if needed.
+      // Map back to original line numbers for patching
+      // We iterate over parsedEntries (current state)
+      // For each entry, find its original line_number from `entries` state
 
-      // Construct the file content
-      // Paradox format:
-      // l_english:
-      //  key:0 "value"
+      // Create a map for fast lookup
+      const originalMap = new Map(entries.map(e => [e.key, e.line_number]));
 
-      // We need the header!
-      // The editor only shows entries.
-      // We should probably preserve the header from the original file?
-      // Or just reconstruct it: `l_${targetLang}:`
+      const patchEntries = parsedEntries.map(e => ({
+        key: e.key,
+        value: e.value,
+        line_number: originalMap.get(e.key) || null // If new key, line_number is null (append)
+      }));
 
-      // For now, simple reconstruction:
-      let fileContent = `l_${targetLang}:\n`;
-      parsedEntries.forEach(e => {
-        fileContent += ` ${e.key}:0 "${e.value}"\n`;
-      });
-
-      await axios.post('/api/system/save_file', {
+      await axios.post('/api/system/patch_file', {
         file_path: fileInfo.path,
-        content: fileContent
+        entries: patchEntries
       });
 
-      notifications.show({ title: 'Saved', message: 'File saved successfully.', color: 'green' });
-
-      // Refresh?
-      // loadProjectFile(); 
+      notifications.show({ title: 'Saved', message: 'File patched successfully.', color: 'green' });
 
     } catch (error) {
       console.error("Save failed", error);
@@ -251,20 +527,6 @@ const ProofreadingPage = () => {
     } finally {
       setSaving(false);
     }
-  };
-
-  // Editor Options for Fixed Width
-  const editorOptions = {
-    wordWrap: 'wordWrapColumn',
-    wordWrapColumn: 60,
-    minimap: { enabled: false },
-    scrollBeyondLastLine: false,
-    lineNumbers: 'on',
-    glyphMargin: false,
-    folding: false,
-    // Disable overview ruler to save space
-    overviewRulerBorder: false,
-    overviewRulerLanes: 0,
   };
 
   // Sync Scrolling
@@ -300,21 +562,13 @@ const ProofreadingPage = () => {
 
   // --- Free Mode Handlers ---
   const handleOpenFolder = async () => {
-    console.log("handleOpenFolder called", fileInfo);
-    if (!fileInfo || !fileInfo.path) {
-      console.error("No file path available");
-      return;
-    }
+    if (!fileInfo || !fileInfo.path) return;
     try {
-      // Robust directory extraction handling mixed slashes
       const path = fileInfo.path.replace(/\\/g, '/');
       const dirPath = path.substring(0, path.lastIndexOf('/'));
-      console.log("Opening folder:", dirPath);
-
       await axios.post('/api/system/open_folder', { path: dirPath });
       notifications.show({ title: 'Success', message: 'Folder opened', color: 'green' });
     } catch (error) {
-      console.error("Failed to open folder", error);
       notifications.show({ title: 'Error', message: 'Failed to open folder', color: 'red' });
     }
   };
@@ -350,15 +604,23 @@ const ProofreadingPage = () => {
     <div style={{ height: 'calc(100vh - 20px)', display: 'flex', flexDirection: 'column', padding: '10px', width: '100%' }}>
       <Paper withBorder p="xs" radius="md" className={layoutStyles.glassCard} style={{ flex: 1, display: 'flex', flexDirection: 'column', width: '100%', overflow: 'hidden' }}>
 
+        {/* --- Header --- */}
         <Group position="apart" mb="xs">
           <Group>
             <Title order={4}>{t('page_title_proofreading')}</Title>
-            {fileInfo && <Badge variant="outline">{fileInfo.path}</Badge>}
+            <Button
+              variant="subtle"
+              size="xs"
+              onClick={() => setIsHeaderOpen(!isHeaderOpen)}
+              rightSection={isHeaderOpen ? <IconChevronUp size={14} /> : <IconChevronDown size={14} />}
+            >
+              {selectedProject ? selectedProject.name : "Select Project"}
+            </Button>
           </Group>
           <Group>
             <Select
               value={zoomLevel}
-              onChange={setZoomLevel}
+              onChange={(val) => setZoomLevel(val)}
               data={[
                 { value: '1', label: '100%' },
                 { value: '1.1', label: '110%' },
@@ -387,13 +649,29 @@ const ProofreadingPage = () => {
           </Group>
         </Group>
 
+        <Collapse in={isHeaderOpen}>
+          <Paper withBorder p="sm" mb="sm" style={{ background: 'rgba(0,0,0,0.2)' }}>
+            <Group>
+              <Select
+                label="Select Project"
+                placeholder="Search projects..."
+                data={projects.map(p => ({ value: p.project_id, label: `${p.name} (${p.game_id})` }))}
+                value={selectedProject?.project_id}
+                onChange={handleProjectSelect}
+                searchable
+                style={{ flex: 1 }}
+              />
+            </Group>
+          </Paper>
+        </Collapse>
+
         <div style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden', zoom: zoomLevel }}>
           <Tabs value={activeTab} style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
             <Tabs.Panel value="file" style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
               <Stack spacing="xs" mb="xs">
                 <Group position="apart">
                   <Group spacing="xs">
-                    <Text size="sm" c="dimmed">Mode: 3-Column View</Text>
+                    <Text size="sm" c="dimmed">{t('proofreading.mode.soft_protection')}</Text>
                   </Group>
 
                   <Group spacing="xs">
@@ -415,9 +693,10 @@ const ProofreadingPage = () => {
                     </Button>
                     <Button
                       leftSection={<IconDeviceFloppy size={14} />}
-                      onClick={handleSave}
+                      onClick={handleSaveClick}
                       loading={saving}
                       size="xs"
+                      color={keyChangeWarning ? "red" : "blue"}
                     >
                       {t('proofreading.save')}
                     </Button>
@@ -425,11 +704,35 @@ const ProofreadingPage = () => {
                 </Group>
               </Stack>
 
-              {/* 3-Column Layout Restored */}
+              {/* 3-Column Layout */}
               <div style={{ flex: 1, display: 'flex', flexDirection: 'row', gap: '10px', overflow: 'hidden', width: '100%' }}>
-                {/* Column 1: Original */}
+                {/* Column 1: Original (Read Only) */}
                 <div style={{ flex: 1, display: 'flex', flexDirection: 'column', height: '100%', minWidth: 0 }}>
-                  <Text fw={500} mb={4} size="xs">{t('proofreading.original')}</Text>
+                  <Group mb={4} justify="space-between">
+                    <Text fw={500} size="xs">{t('proofreading.original')}</Text>
+                    <Select
+                      size="xs"
+                      placeholder="Select Source File"
+                      data={sourceFiles.map(f => ({ value: f.file_id, label: f.file_path.split('/').pop() }))}
+                      value={currentSourceFile?.file_id}
+                      onChange={handleSourceFileChange}
+                      style={{ width: '200px' }}
+                    />
+                  </Group>
+
+                  {/* Source Hint */}
+                  <Alert
+                    variant="light"
+                    color="gray"
+                    icon={<IconFileText size={14} />}
+                    style={{ marginBottom: 8, padding: '6px', minHeight: '52px', display: 'flex', alignItems: 'center' }}
+                    styles={{ message: { marginTop: 0 } }}
+                  >
+                    <Text size="xs" c="dimmed">
+                      {t('proofreading.hint.original_source')}
+                    </Text>
+                  </Alert>
+
                   <MonacoWrapper
                     scrollRef={originalEditorRef}
                     value={originalContentStr}
@@ -439,9 +742,36 @@ const ProofreadingPage = () => {
                   />
                 </div>
 
-                {/* Column 2: AI Draft (Restored) */}
+                {/* Column 2: AI Draft (Read Only) */}
                 <div style={{ flex: 1, display: 'flex', flexDirection: 'column', height: '100%', minWidth: 0 }}>
-                  <Text fw={500} mb={4} size="xs">{t('proofreading.ai_draft')}</Text>
+                  <Group mb={4} justify="space-between">
+                    <Text fw={500} size="xs">{t('proofreading.ai_draft')}</Text>
+                    <Select
+                      size="xs"
+                      placeholder="Select Translation"
+                      data={currentSourceFile && targetFilesMap[currentSourceFile.file_id]
+                        ? targetFilesMap[currentSourceFile.file_id].map(f => ({ value: f.file_id, label: f.file_path.split('/').pop() }))
+                        : []}
+                      value={currentTargetFile?.file_id}
+                      onChange={handleTargetFileChange}
+                      style={{ width: '200px' }}
+                      disabled={!currentSourceFile}
+                    />
+                  </Group>
+
+                  {/* Source Hint */}
+                  <Alert
+                    variant="light"
+                    color="gray"
+                    icon={<IconDatabase size={14} />}
+                    style={{ marginBottom: 8, padding: '6px', minHeight: '52px', display: 'flex', alignItems: 'center' }}
+                    styles={{ message: { marginTop: 0 } }}
+                  >
+                    <Text size="xs" c="dimmed">
+                      {t('proofreading.hint.ai_source')}
+                    </Text>
+                  </Alert>
+
                   <MonacoWrapper
                     scrollRef={aiEditorRef}
                     value={aiContentStr}
@@ -451,10 +781,63 @@ const ProofreadingPage = () => {
                   />
                 </div>
 
-                {/* Column 3: Final Edit */}
+                {/* Column 3: Final Edit (Monaco with Warning) */}
                 <div style={{ flex: 1, display: 'flex', flexDirection: 'column', height: '100%', minWidth: 0 }}>
-                  <Text fw={500} mb={4} size="xs">{t('proofreading.final_edit')}</Text>
+                  <Group justify="space-between" mb={4}>
+                    <Group>
+                      <Text fw={500} size="xs">{t('proofreading.final_edit')}</Text>
+                      <Select
+                        size="xs"
+                        placeholder="Select Translation"
+                        data={currentSourceFile && targetFilesMap[currentSourceFile.file_id]
+                          ? targetFilesMap[currentSourceFile.file_id].map(f => ({ value: f.file_id, label: f.file_path.split('/').pop() }))
+                          : []}
+                        value={currentTargetFile?.file_id}
+                        onChange={handleTargetFileChange}
+                        style={{ width: '200px' }}
+                        disabled={!currentSourceFile}
+                      />
+                    </Group>
+                    {keyChangeWarning && (
+                      <Badge color="red" variant="filled" size="xs" leftSection={<IconAlertTriangle size={10} />}>
+                        {t('proofreading.warning.key_modified')}
+                      </Badge>
+                    )}
+                  </Group>
+
                   <div style={{ position: 'relative', flex: 1, display: 'flex', flexDirection: 'column', minHeight: 0, overflow: 'hidden' }}>
+                    {keyChangeWarning && (
+                      <Alert
+                        variant="filled"
+                        color="red"
+                        title={t('proofreading.warning.key_modified_title')}
+                        icon={<IconAlertCircle size={16} />}
+                        style={{ marginBottom: 8 }}
+                      >
+                        <Text size="xs">
+                          {t('proofreading.warning.key_modified_desc')}
+                        </Text>
+                      </Alert>
+                    )}
+
+                    {/* Subtle Hint for Comments + Source */}
+                    <Alert
+                      variant="light"
+                      color="gray"
+                      icon={<IconFileText size={14} />}
+                      style={{ marginBottom: 8, padding: '6px', minHeight: '52px', display: 'flex', alignItems: 'center' }}
+                      styles={{ message: { marginTop: 0 } }}
+                    >
+                      <Stack spacing={0}>
+                        <Text size="xs" c="dimmed" fw={500}>
+                          {t('proofreading.hint.final_source')}
+                        </Text>
+                        <Text size="xs" c="dimmed">
+                          {t('proofreading.hint.comments_ignored')}
+                        </Text>
+                      </Stack>
+                    </Alert>
+
                     <LoadingOverlay visible={loading || saving} overlayProps={{ blur: 2 }} />
                     <MonacoWrapper
                       scrollRef={finalEditorRef}
@@ -477,7 +860,6 @@ const ProofreadingPage = () => {
                         <Badge color={res.level === 'error' ? 'red' : 'yellow'} size="xs">
                           {res.level.toUpperCase()}
                         </Badge>
-                        <Text size="xs" ff="monospace">L{res.line_number}</Text>
                         <Text size="xs">{res.message}</Text>
                       </Group>
                     ))}
@@ -492,7 +874,7 @@ const ProofreadingPage = () => {
                 <Select
                   data={['1', '2', '3', '4', '5']}
                   value={linterGameId}
-                  onChange={setLinterGameId}
+                  onChange={(val) => setLinterGameId(val)}
                   placeholder="Game ID"
                   size="xs"
                 />
@@ -519,6 +901,34 @@ const ProofreadingPage = () => {
           </Tabs>
         </div>
       </Paper >
+
+      {/* Save Confirmation Modal */}
+      <Modal
+        opened={saveModalOpen}
+        onClose={() => setSaveModalOpen(false)}
+        title={<Group><IconAlertTriangle color="red" /><Text fw={700} c="red">{t('proofreading.modal.title')}</Text></Group>}
+        centered
+        overlayProps={{
+          backgroundOpacity: 0.55,
+          blur: 3,
+        }}
+      >
+        <Stack>
+          <Text size="sm">
+            <span dangerouslySetInnerHTML={{ __html: t('proofreading.modal.content_1').replace('**', '<b>').replace('**', '</b>') }} />
+          </Text>
+          <Alert color="red" variant="light">
+            <span dangerouslySetInnerHTML={{ __html: t('proofreading.modal.content_2').replace('**', '<b>').replace('**', '</b>') }} />
+          </Alert>
+          <Text size="sm" fw={500}>
+            {t('proofreading.modal.confirm')}
+          </Text>
+          <Group justify="flex-end" mt="md">
+            <Button variant="default" onClick={() => setSaveModalOpen(false)}>{t('proofreading.modal.button_cancel')}</Button>
+            <Button color="red" onClick={confirmSave}>{t('proofreading.modal.button_confirm')}</Button>
+          </Group>
+        </Stack>
+      </Modal>
     </div >
   );
 };

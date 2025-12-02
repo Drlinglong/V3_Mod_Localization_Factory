@@ -64,7 +64,7 @@ const WorkshopGenerator = () => {
         if (configData.api_providers) {
           setApiProviders(configData.api_providers);
           if (configData.api_providers.length > 0) {
-            setSelectedProvider(configData.api_providers[0]);
+            setSelectedProvider(configData.api_providers[0].value);
           }
         }
 
@@ -215,7 +215,7 @@ const WorkshopGenerator = () => {
             value={selectedProvider}
             onChange={setSelectedProvider}
             placeholder={t('workshop_generator.placeholders.select_provider')}
-            data={apiProviders.map(p => ({ value: p, label: p }))}
+            data={apiProviders}
           />
         </Group>
 
