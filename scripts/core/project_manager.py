@@ -518,3 +518,30 @@ class ProjectManager:
                     logger.error(f"Failed to delete JSON sidecar: {e}")
         
         return True
+
+    def add_translation_path(self, project_id: str, translation_path: str):
+        """
+        Adds a translation directory to the project's configuration and refreshes files.
+        """
+        project = self.get_project(project_id)
+        if not project:
+            logger.error(f"Project {project_id} not found")
+            return
+
+        source_path = project['source_path']
+        json_manager = ProjectJsonManager(source_path)
+        config = json_manager.get_config()
+        translation_dirs = config.get('translation_dirs', [])
+
+        # Normalize path
+        abs_path = os.path.abspath(translation_path)
+
+        if abs_path not in translation_dirs:
+            translation_dirs.append(abs_path)
+            json_manager.update_config({"translation_dirs": translation_dirs})
+            logger.info(f"Added translation path {abs_path} to project {project_id}")
+            
+            # Refresh files to include new translation files
+            self.refresh_project_files(project_id)
+        else:
+            logger.info(f"Translation path {abs_path} already exists for project {project_id}")

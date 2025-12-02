@@ -44,7 +44,7 @@ class GeminiHandler(BaseApiHandler):
             response = client.models.generate_content(
                 model=model_name,
                 contents=prompt,
-                generation_config=generation_config if generation_config else None
+                config=generation_config if generation_config else None
             )
             return response.text.strip()
         except Exception as e:

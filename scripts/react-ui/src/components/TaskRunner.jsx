@@ -26,9 +26,11 @@ import {
     IconLayoutDashboard,
     IconBug,
     IconBook,
-    IconTypography
+    IconTypography,
+    IconFolderOpen
 } from '@tabler/icons-react';
 import { useTranslation } from 'react-i18next';
+import axios from 'axios';
 
 const TaskRunner = ({ task, onRestart, onDashboard, translationDetails }) => {
     const { t } = useTranslation();
@@ -72,6 +74,35 @@ const TaskRunner = ({ task, onRestart, onDashboard, translationDetails }) => {
             'Failed': 'stage_failed'
         };
         return t(map[stage] || stage);
+    };
+
+    const handleOpenFolder = async () => {
+        if (!task?.result_path) return;
+        // result_path is a zip file path, we want the directory containing it or the extracted folder
+        // The backend sets result_path to the zip file.
+        // However, the folder also exists at the same location without .zip extension (usually)
+        // Or we can just open the parent directory of the zip.
+
+        // Actually, let's try to open the folder that was zipped.
+        // result_path: .../DEST_DIR/folder.zip
+        // folder: .../DEST_DIR/folder
+
+        const zipPath = task.result_path;
+        const folderPath = zipPath.replace('.zip', '');
+
+        try {
+            await axios.post('/api/system/open_folder', { path: folderPath });
+        } catch (error) {
+            console.error("Failed to open folder:", error);
+            // Fallback: Try opening the parent directory
+            try {
+                // If folder doesn't exist (maybe deleted?), open parent
+                const parentDir = zipPath.substring(0, zipPath.lastIndexOf('\\'));
+                await axios.post('/api/system/open_folder', { path: parentDir });
+            } catch (e) {
+                console.error("Failed to open parent folder:", e);
+            }
+        }
     };
 
     // Render Report Card
@@ -131,6 +162,14 @@ const TaskRunner = ({ task, onRestart, onDashboard, translationDetails }) => {
                         </SimpleGrid>
 
                         <Group mt="xl">
+                            <Button
+                                leftSection={<IconFolderOpen size={20} />}
+                                size="lg"
+                                color="teal"
+                                onClick={handleOpenFolder}
+                            >
+                                {t('button_open_folder', 'Open Folder')}
+                            </Button>
                             <Button
                                 leftSection={<IconRefresh size={20} />}
                                 size="lg"
