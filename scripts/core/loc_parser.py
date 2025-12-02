@@ -12,15 +12,39 @@ ENTRY_RE = re.compile(r'^\s*([A-Za-z0-9_\.\-]+):[0-9]*\s*"(.*)"\s*$')
 
 def parse_loc_file(path: Path) -> list[tuple[str, str]]:
     """
-    Wczytaj plik .yml i zwróć listę krotek (key, text).
+    Wczytaj plik .yml lub .json i zwróć listę krotek (key, text).
     UTF-8 + BOM obsługiwane przez read_text_bom().
     """
     entries: list[tuple[str, str]] = []
-    for line in read_text_bom(path).splitlines():
-        match = ENTRY_RE.match(line)
-        if match:
-            key, value = match.groups()
-            entries.append((key, value))
+    
+    if path.suffix.lower() == '.json':
+        import json
+        try:
+            content = read_text_bom(path)
+            data = json.loads(content)
+            # Flatten JSON if needed, or assume simple key-value
+            # If it's a list of objects? Or a dict?
+            # Paradox metadata.json is usually a dict.
+            if isinstance(data, dict):
+                for k, v in data.items():
+                    if isinstance(v, str):
+                        entries.append((k, v))
+                    else:
+                        # Handle nested or non-string values as string representation
+                        entries.append((k, str(v)))
+            elif isinstance(data, list):
+                 # Handle list if necessary (unlikely for loc, but possible for metadata)
+                 pass
+        except Exception as e:
+            print(f"JSON parse error: {e}")
+            pass
+    else:
+        # YAML / Paradox Loc
+        for line in read_text_bom(path).splitlines():
+            match = ENTRY_RE.match(line)
+            if match:
+                key, value = match.groups()
+                entries.append((key, value))
     return entries
 
 

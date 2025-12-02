@@ -130,3 +130,22 @@
     border-color: var(--primary-color);
     color: var(--text-main);
 }
+
+/* --- Added for ProjectFileList --- */
+.glassCard {
+    background: var(--glass-bg, rgba(30, 30, 30, 0.6));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.table {
+    /* Ensure table doesn't overflow or block clicks */
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table thead tr th {
+    background-color: rgba(0, 0, 0, 0.2) !important; /* Force darker header */
+    color: var(--text-highlight);
+}

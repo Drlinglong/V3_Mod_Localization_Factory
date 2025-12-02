@@ -170,6 +170,38 @@ class ProjectManager:
 
         return project
 
+    def get_project_by_file_id(self, file_id: str) -> Optional[Dict[str, Any]]:
+        """Retrieves project details associated with a specific file ID."""
+        conn = self._get_connection()
+        cursor = conn.cursor()
+        cursor.execute('''
+            SELECT p.* 
+            FROM projects p
+            JOIN project_files pf ON p.project_id = pf.project_id
+            WHERE pf.file_id = ?
+        ''', (file_id,))
+        row = cursor.fetchone()
+        conn.close()
+        
+        if row:
+            # Map row to dictionary matching Project dataclass fields + extra
+            # Assuming columns order: project_id, name, game_id, source_path, target_path, status, notes, created_at
+            # But better to use row_factory or explicit mapping if columns might change.
+            # For now, let's use a dict based on column names from cursor.description if possible, 
+            # or just hardcode if we are sure of the schema.
+            # Let's use row_factory for safety in this method locally.
+            return {
+                'project_id': row[0],
+                'name': row[1],
+                'game_id': row[2],
+                'source_path': row[3],
+                'target_path': row[4],
+                'status': row[5],
+                'notes': row[6],
+                'created_at': row[7]
+            }
+        return None
+
     def refresh_project_files(self, project_id: str):
         """Rescans source and translation directories and updates the DB and JSON sidecar."""
         project = self.get_project(project_id)
@@ -201,6 +233,9 @@ class ProjectManager:
             
             files_found = 0
             for root, dirs, files in os.walk(root_path):
+                # Exclude hidden directories like .metadata, .git, etc.
+                dirs[:] = [d for d in dirs if not d.startswith('.')]
+
                 for file in files:
                     if file.endswith(('.yml', '.yaml', '.txt', '.csv', '.json')):
                         files_found += 1
@@ -237,12 +272,18 @@ class ProjectManager:
 
         logger.info(f"Found {len(files_to_upsert)} total files to upsert")
 
-        # Upsert into DB
+        # Upsert into DB and Clean up obsolete files
         conn = self._get_connection()
         cursor = conn.cursor()
 
+        # 1. Get existing file IDs for this project
+        cursor.execute("SELECT file_id FROM project_files WHERE project_id = ?", (project_id,))
+        existing_file_ids = {row[0] for row in cursor.fetchall()}
+        
+        # 2. Upsert new/updated files
+        current_scan_ids = set()
         for f in files_to_upsert:
-            # Upsert logic
+            current_scan_ids.add(f['file_id'])
             cursor.execute('''
                 INSERT INTO project_files (file_id, project_id, file_path, status, original_key_count, line_count, file_type)
                 VALUES (?, ?, ?, ?, ?, ?, ?)
@@ -251,6 +292,13 @@ class ProjectManager:
                     file_type = excluded.file_type
             ''', (f['file_id'], f['project_id'], f['file_path'], f['status'], f['original_key_count'], f['line_count'], f['file_type']))
         
+        # 3. Delete obsolete files
+        files_to_delete = existing_file_ids - current_scan_ids
+        if files_to_delete:
+            logger.info(f"Deleting {len(files_to_delete)} obsolete files from project {project_id}")
+            for fid in files_to_delete:
+                cursor.execute("DELETE FROM project_files WHERE file_id = ?", (fid,))
+
         conn.commit()
         conn.close()
 
