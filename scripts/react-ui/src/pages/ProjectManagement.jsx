@@ -42,6 +42,7 @@ export default function ProjectManagement() {
   const [newProjectName, setNewProjectName] = useState('');
   const [newProjectPath, setNewProjectPath] = useState('');
   const [newProjectGame, setNewProjectGame] = useState('stellaris');
+  const [newProjectSourceLang, setNewProjectSourceLang] = useState('english');
 
   const navigate = useNavigate();
 
@@ -123,7 +124,8 @@ export default function ProjectManagement() {
       await axios.post(`${API_BASE}/project/create`, {
         name: newProjectName,
         folder_path: newProjectPath,
-        game_id: newProjectGame
+        game_id: newProjectGame,
+        source_language: newProjectSourceLang
       });
       setIsCreateModalOpen(false);
       fetchProjects();
@@ -459,7 +461,23 @@ export default function ProjectManagement() {
               { value: 'eu4', label: 'Europa Universalis IV' }
             ]}
             value={newProjectGame}
-            onChange={setNewProjectGame}
+            onChange={(val) => setNewProjectGame(val)}
+          />
+          <Select
+            label="Source Language"
+            description="The language of the original files (e.g., english)."
+            data={[
+              { value: 'english', label: 'English' },
+              { value: 'simp_chinese', label: 'Simplified Chinese' },
+              { value: 'german', label: 'German' },
+              { value: 'french', label: 'French' },
+              { value: 'russian', label: 'Russian' },
+              { value: 'spanish', label: 'Spanish' },
+              { value: 'japanese', label: 'Japanese' },
+              { value: 'korean', label: 'Korean' }
+            ]}
+            value={newProjectSourceLang}
+            onChange={(val) => setNewProjectSourceLang(val)}
           />
           <Button onClick={handleCreateProject} fullWidth mt="md">{t('project_management.actions.create_new')}</Button>
         </Stack>

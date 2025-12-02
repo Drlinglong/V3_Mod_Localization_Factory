@@ -48,6 +48,37 @@ def parse_loc_file(path: Path) -> list[tuple[str, str]]:
     return entries
 
 
+def parse_loc_file_with_lines(path: Path) -> list[tuple[str, str, int]]:
+    """
+    Same as parse_loc_file but returns (key, value, line_number).
+    Line numbers are 1-based.
+    """
+    entries: list[tuple[str, str, int]] = []
+    
+    if path.suffix.lower() == '.json':
+        # JSON usually doesn't have line numbers in a meaningful way for this context
+        # We'll just use 0 or index + 1
+        import json
+        try:
+            content = read_text_bom(path)
+            data = json.loads(content)
+            if isinstance(data, dict):
+                for i, (k, v) in enumerate(data.items()):
+                    val = str(v)
+                    entries.append((k, val, i + 1))
+        except Exception:
+            pass
+    else:
+        # YAML / Paradox Loc
+        lines = read_text_bom(path).splitlines()
+        for i, line in enumerate(lines):
+            match = ENTRY_RE.match(line)
+            if match:
+                key, value = match.groups()
+                entries.append((key, value, i + 1))
+    return entries
+
+
 def emit_loc_file(header: str, entries: list[tuple[str, str]]) -> str:
     """
     Zamień listę krotek z powrotem na tekst pliku lokalizacyjnego.
