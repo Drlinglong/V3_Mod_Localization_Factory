@@ -34,7 +34,10 @@ from scripts.routers import (
     tools,
     neologism,
     validation,
-    config
+    neologism,
+    validation,
+    config,
+    system
 )
 
 app = FastAPI(
@@ -62,6 +65,7 @@ app.include_router(tools.router)
 app.include_router(neologism.router)
 app.include_router(validation.router)
 app.include_router(config.router)
+app.include_router(system.router)
 
 @app.get("/")
 def read_root():

@@ -227,6 +227,27 @@ def start_translation_project(request: InitialTranslationRequest, background_tas
         request.custom_lang_config
     )
 
+    # Auto-register translation path (Optimistic registration)
+    # We predict the output path based on the request
+    try:
+        target_lang_codes = request.target_lang_codes
+        if len(target_lang_codes) > 1:
+            output_folder_name = f"Multilanguage-{mod_name}"
+        else:
+            target_code = target_lang_codes[0]
+            target_lang = next((l for l in LANGUAGES.values() if l["code"] == target_code), None)
+            if target_lang:
+                prefix = target_lang.get("folder_prefix", f"{target_lang['code']}-")
+                output_folder_name = f"{prefix}{mod_name}"
+            else:
+                output_folder_name = f"{target_code}-{mod_name}"
+        
+        result_dir = os.path.join(DEST_DIR, output_folder_name)
+        project_manager.add_translation_path(request.project_id, result_dir)
+        logging.info(f"Auto-registered translation path: {result_dir}")
+    except Exception as e:
+        logging.error(f"Failed to auto-register translation path: {e}")
+
     return {"task_id": task_id, "status": "started", "message": f"Translation started for project {project['name']}"}
 
 @router.post("/api/translate")
