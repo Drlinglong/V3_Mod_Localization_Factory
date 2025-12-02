@@ -564,6 +564,20 @@ def discover_files(mod_name: str, game_profile: dict, source_lang: dict) -> List
                         "loc_root": "" # Custom loc doesn't use standard localization structure
                     })
                     
+    if not all_file_paths:
+        # Diagnostic scan: Check if files exist for other languages
+        found_others = []
+        for loc_path in search_paths:
+            for root, _, files in os.walk(loc_path):
+                for fn in files:
+                    if fn.endswith(".yml"):
+                        found_others.append(fn)
+        
+        if found_others:
+            logging.warning(f"No files found for source language '{source_lang['name']}' (suffix: {suffix}).")
+            logging.warning(f"However, found {len(found_others)} other .yml files, e.g., {found_others[:3]}")
+            logging.warning("Please check if you selected the correct Source Language.")
+
     return all_file_paths
     
     # 注意：流式处理模式下，我们无法在开始前创建完整的 Source Version Snapshot，

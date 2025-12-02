@@ -168,6 +168,9 @@ class BaseApiHandler(ABC):
             target_lang["code"]
         )
 
+        # Apply masking to the single text as well
+        masked_text = mask_special_tokens(text)
+
         prompt = (
             base_prompt
             + f"CRITICAL CONTEXT: The mod's theme is '{mod_context}'. Use this to ensure accuracy.\n"
@@ -176,7 +179,7 @@ class BaseApiHandler(ABC):
             "DO NOT include explanations, pinyin, or any other text.\n"
             'For example, if the input is "Flavor Pack", your output must be "风味包" and nothing else.\n\n'
             + (f"PUNCTUATION CONVERSION:\n{punctuation_prompt}\n\n" if punctuation_prompt else "")
-            + f'Translate this: "{text}"'
+            + f'Translate this: "{masked_text}"'
         )
         return prompt
 
@@ -191,6 +194,11 @@ class BaseApiHandler(ABC):
             raw_response = self._call_api(self.client, prompt)
             # Simple cleanup for single text
             translated_text = raw_response.strip().strip('"')
+            
+            # Restore tokens
+            from scripts.utils.text_clean import restore_special_tokens
+            translated_text = restore_special_tokens(translated_text, target_lang["code"])
+            
             return translated_text
         except Exception as e:
             self.logger.exception(f"Single text translation failed for '{text[:30]}...': {e}")

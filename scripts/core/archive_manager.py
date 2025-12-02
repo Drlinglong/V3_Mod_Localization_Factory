@@ -151,7 +151,7 @@ class ArchiveManager:
                     row = cursor.fetchone()
                     if row:
                         source_entry_id = row['source_entry_id']
-                        upsert_data.append((source_entry_id, target_lang_code, translated_text, translated_text))
+                        upsert_data.append((source_entry_id, target_lang_code, translated_text))
 
             if not upsert_data:
                 return

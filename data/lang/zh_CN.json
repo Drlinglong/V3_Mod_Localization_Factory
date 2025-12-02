@@ -98,6 +98,7 @@
   "fallback_file_created": "已创建备用文件: {filename}",
   "fallback_creation_error": "创建备用文件时出错: {error}",
   "no_translatable_text": "文件中没有找到可翻译的文本，已直接复制文件结构。",
+  "no_localisable_files_found": "未在 {lang_name} 语言文件夹中找到可翻译文件",
   "processing_metadata": "\n--- 正在处理 metadata.json ---",
   "metadata_not_found": "未找到 metadata.json，跳过此步骤。",
   "translating_mod_name": "正在翻译 mod name: \"{text}...\"",

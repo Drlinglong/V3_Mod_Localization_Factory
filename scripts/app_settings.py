@@ -118,6 +118,7 @@ DEFAULT_API_PROVIDER = "gemini"
 API_PROVIDERS = {
     "gemini": {
         "api_key_env": "GEMINI_API_KEY",
+        "name": "Google Gemini",
         "default_model": "gemini-2.5-flash",
         "enable_thinking": False,
         "thinking_budget": 0,
@@ -130,10 +131,12 @@ API_PROVIDERS = {
         "chunk_size": GEMINI_CLI_CHUNK_SIZE,
         "max_retries": GEMINI_CLI_MAX_RETRIES,
         "max_daily_calls": 1000,
+        "name": "Gemini CLI",
         "description": "通过Google Gemini CLI调用，每天1000次免费，使用2.5 Pro模型，支持并行处理"
     },
     "openai": {
         "api_key_env": "OPENAI_API_KEY",
+        "name": "OpenAI",
         "default_model": "gpt-5-mini",
         "enable_thinking": False,
         "reasoning_effort": "minimal"
@@ -143,11 +146,13 @@ API_PROVIDERS = {
         "default_model": "qwen-plus",
         "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
         "region": "beijing",
+        "name": "Qwen (通义千问)",
         "enable_thinking": False,
     },
     "grok": {
         "api_key_env": "XAI_API_KEY",
         "base_url": "https://api.x.ai/v1",
+        "name": "Grok (xAI)",
         "default_model": "grok-4-fast-reasoning",
         "description": "通过xAI官方API访问grok-4-fast-reasoning模型"
     },
@@ -155,6 +160,7 @@ API_PROVIDERS = {
         "api_key_env": "DEEPSEEK_API_KEY",
         "base_url": "https://api.deepseek.com",
         "default_model": "deepseek-chat",
+        "name": "DeepSeek (深度求索)",
         "enable_thinking": False,
         "description": "DeepSeek-V3.2-Exp (Non-thinking Mode) - 与OpenAI API兼容"
     },
@@ -164,24 +170,28 @@ API_PROVIDERS = {
         "enable_thinking": False,
         "chunk_size": OLLAMA_CHUNK_SIZE,
         "max_retries": OLLAMA_MAX_RETRIES,
+        "name": "Ollama (Local)",
         "description": "本地Ollama模型，无需API密钥"
     },
     "modelscope": {
         "api_key_env": "MODELSCOPE_API_KEY",
         "base_url": "https://api-inference.modelscope.cn/v1/",
         "default_model": "deepseek-ai/DeepSeek-V3.2-Exp",
+        "name": "ModelScope (魔搭)",
         "description": "通过魔搭（ModelScope）调用AI模型"
     },
     "siliconflow": {
         "api_key_env": "SILICONFLOW_API_KEY",
         "base_url": "https://api.siliconflow.cn/v1",
         "default_model": "DeepSeek-R1",
+        "name": "SiliconFlow (硅基流动)",
         "description": "通过硅基流动（SiliconFlow）调用AI模型"
     },
     "your_favourite_api": {
         "api_key_env": "YOUR_FAVOURITE_API_KEY",
         "base_url": "YOUR_BASE_URL_HERE",
         "default_model": "YOUR_MODEL_NAME_HERE",
+        "name": "Custom (OpenAI Compatible)",
         "description": "（需要技术知识）连接到您自选的任何兼容OpenAI的API服务"
     },
 }
