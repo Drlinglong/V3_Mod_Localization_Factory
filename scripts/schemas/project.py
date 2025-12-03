@@ -11,3 +11,7 @@ class UpdateProjectStatusRequest(BaseModel):
 
 class UpdateProjectNotesRequest(BaseModel):
     notes: str
+
+class UpdateProjectMetadataRequest(BaseModel):
+    game_id: str
+    source_language: str

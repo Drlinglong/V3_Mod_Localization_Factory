@@ -1,10 +1,10 @@
 import React from 'react';
 import { Paper, Group, Title, Button, Tooltip, Grid, Card, Text } from '@mantine/core';
-import { IconArchive, IconRestore, IconTrash } from '@tabler/icons-react';
+import { IconArchive, IconRestore, IconTrash, IconSettings } from '@tabler/icons-react';
 import { useTranslation } from 'react-i18next';
 import styles from '../../pages/ProjectManagement.module.css';
 
-const ProjectHeader = ({ projectDetails, handleStatusChange, onDeleteForever }) => {
+const ProjectHeader = ({ projectDetails, handleStatusChange, onDeleteForever, onManageProject }) => {
     const { t } = useTranslation();
 
     return (
@@ -13,11 +13,41 @@ const ProjectHeader = ({ projectDetails, handleStatusChange, onDeleteForever }) 
                 <Title order={4}>{t('project_management.overview_title') || 'Project Overview'}</Title>
                 <Group>
                     {projectDetails.status === 'active' && (
-                        <Tooltip label={t('project_management.archive_project')}>
-                            <Button variant="light" color="orange" size="xs" leftSection={<IconArchive size={16} />} onClick={() => handleStatusChange('archived')}>
-                                {t('project_management.archive_project')}
-                            </Button>
-                        </Tooltip>
+                        <>
+                            <Tooltip label={t('project_management.delete_project')}>
+                                <Button
+                                    variant="light"
+                                    color="red"
+                                    size="xs"
+                                    leftSection={<IconTrash size={16} />}
+                                    onClick={onDeleteForever}
+                                >
+                                    {t('project_management.delete_project')}
+                                </Button>
+                            </Tooltip>
+                            <Tooltip label={t('project_management.archive_project')}>
+                                <Button
+                                    variant="light"
+                                    color="orange"
+                                    size="xs"
+                                    leftSection={<IconArchive size={16} />}
+                                    onClick={() => handleStatusChange('archived')}
+                                >
+                                    {t('project_management.archive_project')}
+                                </Button>
+                            </Tooltip>
+                            <Tooltip label={t('project_management.manage_project')}>
+                                <Button
+                                    variant="light"
+                                    color="blue"
+                                    size="xs"
+                                    leftSection={<IconSettings size={16} />}
+                                    onClick={onManageProject}
+                                >
+                                    {t('project_management.manage_project')}
+                                </Button>
+                            </Tooltip>
+                        </>
                     )}
                     {projectDetails.status === 'archived' && (
                         <>

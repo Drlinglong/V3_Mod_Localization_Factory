@@ -1,0 +1,57 @@
+{
+    "version": "1.0",
+    "config": {
+        "translation_dirs": [
+            "J:\\V3_Mod_Localization_Factory\\my_translation\\zh-CN-Test_Project_Remis_Vic3",
+            "J:\\V3_Mod_Localization_Factory\\my_translation\\en-Test_Project_Remis_Vic3",
+            "J:\\V3_Mod_Localization_Factory\\my_translation\\Multilanguage-Test_Project_Remis_Vic3"
+        ],
+        "source_language": "simp_chinese"
+    },
+    "kanban": {
+        "columns": [
+            "todo",
+            "in_progress",
+            "proofreading",
+            "paused",
+            "done"
+        ],
+        "tasks": {
+            "5106092e-ef70-5169-b2eb-8669422a1cc3": {
+                "id": "5106092e-ef70-5169-b2eb-8669422a1cc3",
+                "type": "file",
+                "title": ".remis_project.json",
+                "filePath": "J:\\V3_Mod_Localization_Factory\\source_mod\\Test_Project_Remis_Vic3\\.remis_project.json",
+                "status": "todo",
+                "comments": "",
+                "priority": "medium",
+                "meta": {
+                    "source_lines": 57,
+                    "translation_status": {},
+                    "rel_path": ".remis_project.json"
+                }
+            },
+            "8646e2d7-2d1e-56d3-a7b9-cc96ecc54d42": {
+                "id": "8646e2d7-2d1e-56d3-a7b9-cc96ecc54d42",
+                "type": "file",
+                "title": "remis_demo_l_simp_chinese.yml",
+                "filePath": "J:\\V3_Mod_Localization_Factory\\source_mod\\Test_Project_Remis_Vic3\\localization\\simp_chinese\\remis_demo_l_simp_chinese.yml",
+                "status": "todo",
+                "comments": "",
+                "priority": "medium",
+                "meta": {
+                    "source_lines": 67,
+                    "translation_status": {},
+                    "rel_path": "localization\\simp_chinese\\remis_demo_l_simp_chinese.yml"
+                }
+            }
+        },
+        "column_order": [
+            "todo",
+            "in_progress",
+            "proofreading",
+            "paused",
+            "done"
+        ]
+    }
+}

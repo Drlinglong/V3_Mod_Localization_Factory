@@ -1,141 +1,176 @@
-# scripts/core/file_builder.py
-import os
 import re
 import logging
-from scripts.utils import i18n
-from scripts.app_settings import DEST_DIR
-from scripts.utils.punctuation_handler import clean_language_specific_punctuation
 
-def create_fallback_file(
-    source_path: str,
-    dest_dir: str,
-    original_filename: str,
-    source_lang: dict,
-    target_lang: dict,
-    game_profile: dict,
-) -> str:
+def patch_file_content(
+    original_lines: list[str],
+    texts_to_translate: list[str],
+    translated_texts: list[str],
+    key_map: dict[int, dict],
+    source_lang_key: str,
+    target_lang_key: str,
+) -> list[str]:
     """
-    [Fallback Function] Copies the source file, changing only the header and filename.
-    This is a safety net for when translation fails or is not needed.
+    Patches the original file content with translated texts.
+    Preserves comments, indentation, and structure.
+    Replaces the language header.
     """
-    logging.info(i18n.t("creating_fallback_file"))
-    try:
-        with open(source_path, "r", encoding="utf-8-sig") as f:
-            lines = f.readlines()
+    new_lines = list(original_lines)
 
-        # Robustly find and replace the language header
-        header_found_and_replaced = False
-        for i, line in enumerate(lines):
-            if line.strip().startswith(source_lang["key"]):
-                lines[i] = line.replace(source_lang["key"], target_lang["key"])
-                header_found_and_replaced = True
-                break
-        if not header_found_and_replaced:
-            lines.insert(0, f"{target_lang['key']}:\n")
+    for i, original_text in enumerate(texts_to_translate):
+        if i >= len(translated_texts):
+            break
+            
+        translated_text = translated_texts[i]
+        line_info = key_map[i]
+        line_num = line_info["line_num"]
+        key_part = line_info["key_part"]
+        
+        original_line_content = original_lines[line_num]
+        
+        # 1. Find key position
+        key_pos = original_line_content.find(key_part)
+        if key_pos == -1:
+            logging.warning(f"Could not find key '{key_part}' in line {line_num}: {original_line_content.strip()}")
+            continue
+            
+        # 2. Find the first quote after the key
+        search_start_pos = key_pos + len(key_part)
+        first_quote_pos = original_line_content.find('"', search_start_pos)
+        
+        if first_quote_pos == -1:
+             logging.warning(f"Could not find opening quote in line {line_num}: {original_line_content.strip()}")
+             continue
+             
+        # 3. Find the last quote
+        comment_pos = original_line_content.find('#', first_quote_pos)
+        if comment_pos != -1:
+            search_end_pos = comment_pos
+        else:
+            search_end_pos = len(original_line_content)
+            
+        last_quote_pos = original_line_content.rfind('"', first_quote_pos + 1, search_end_pos)
+        if last_quote_pos == -1:
+            logging.warning(f"Could not find closing quote in line {line_num}: {original_line_content.strip()}")
+            continue
+            
+        # 4. Replace content between quotes
+        # Escape the new value for quotes
+        safe_translated_text = translated_text.replace('"', r'\"')
+        prefix = original_line_content[:first_quote_pos + 1]
+        suffix = original_line_content[last_quote_pos:]
+        new_lines[line_num] = f"{prefix}{safe_translated_text}{suffix}"
 
-        # Dynamically generate the new filename based on language keys
-        source_suffix = f"_l_{source_lang['key'][2:]}"
-        target_suffix = f"_l_{target_lang['key'][2:]}"
-        new_filename = (
-            original_filename.replace(source_suffix, target_suffix)
-            if source_suffix in original_filename
-            else original_filename
-        )
-        dest_file_path = os.path.join(dest_dir, new_filename)
-
-        # Write the file using the encoding specified in the game profile
-        with open(dest_file_path, "w", encoding=game_profile.get("encoding", "utf-8-sig")) as f:
-            f.writelines(lines)
-        logging.info(i18n.t("fallback_file_created", filename=new_filename))
-        return dest_file_path
-    except Exception as e:
-        logging.error(i18n.t("fallback_creation_error", error=e))
-        return ""
-
+    # --- Replace the language header ---
+    # Robustly find any language header (e.g. l_english:, l_simp_chinese:, l_zh-CN:)
+    # We look for lines starting with l_ followed by word chars and maybe hyphens, ending with colon
+    header_pattern = re.compile(r"^\s*l_[\w-]+:\s*")
+    
+    first_header_index = -1
+    indices_to_remove = []
+    
+    for i, line in enumerate(new_lines):
+        if header_pattern.match(line):
+            if first_header_index == -1:
+                first_header_index = i
+            else:
+                # Found a duplicate header, mark for removal
+                indices_to_remove.append(i)
+    
+    # Remove duplicate headers (in reverse order to keep indices valid)
+    for i in reversed(indices_to_remove):
+        new_lines.pop(i)
+        
+    # Replace or Insert the correct header
+    if first_header_index != -1:
+        new_lines[first_header_index] = f"{target_lang_key}:\n"
+    else:
+        # No header found, insert at top
+        new_lines.insert(0, f"{target_lang_key}:\n")
+        
+    return new_lines
 
 def rebuild_and_write_file(
     original_lines: list[str],
     texts_to_translate: list[str],
     translated_texts: list[str],
     key_map: dict[int, dict],
-    dest_dir_path: str,
-    original_filename: str,
+    dest_dir: str,
+    filename: str,
     source_lang: dict,
     target_lang: dict,
-    game_profile: dict,
+    game_profile: dict
 ) -> str:
     """
-    Reconstructs the .yml file with the translated text and saves it to disk.
+    Rebuilds the file content with translated texts and writes it to the output path.
+    This is a wrapper around patch_file_content that handles file writing.
     """
-    # Create a map from original text to translated text for easy lookup.
-    translation_map = dict(zip(texts_to_translate, translated_texts))
+    import os
+    from scripts.utils.punctuation_handler import clean_punctuation_core
     
-    # Work on a copy of the original lines to preserve comments and structure.
-    new_lines = list(original_lines)
+    # 1. Determine Target Filename
+    # Replace the source language key in the filename with the target language key
+    # e.g. "foo_l_simp_chinese.yml" -> "foo_l_english.yml"
+    source_lang_key_clean = source_lang.get("key", "").replace(":", "").strip()
+    target_lang_key_clean = target_lang.get("key", "").replace(":", "").strip()
+    
+    logging.info(f"DEBUG: filename='{filename}', source_key='{source_lang_key_clean}', target_key='{target_lang_key_clean}'")
+    
+    # Handle cases where key might be "l_english" or just "english" depending on config
+    # We try to be robust: if filename contains source_lang_key, replace it.
+    if source_lang_key_clean and source_lang_key_clean in filename:
+        target_filename = filename.replace(source_lang_key_clean, target_lang_key_clean)
+    else:
+        # Fallback: if filename ends with .yml, insert target key? 
+        # Or just append? This is tricky. 
+        # Let's assume standard Paradox format: name_l_language.yml
+        # If we can't find the source key, we might just prepend/append?
+        # But usually source_lang_key IS in the filename for the source file.
+        # Let's try to find the last occurrence of l_xxxx
+        import re
+        # Match _l_something.yml or _l_something.txt
+        match = re.search(r"(_l_[a-zA-Z0-9_-]+)\.(yml|txt)$", filename)
+        if match:
+            # Replace the found suffix with target suffix
+            # target_lang["key"] usually is "l_english"
+            suffix = f"_{target_lang_key_clean}"
+            target_filename = filename[:match.start(1)] + suffix + "." + match.group(2)
+        else:
+            # Worst case: just use the original filename (which was the bug)
+            # But we should try to at least append the language
+            name, ext = os.path.splitext(filename)
+            target_filename = f"{name}_{target_lang_key_clean}{ext}"
 
-    # --- Reconstruct each translated line ---
-    for i, original_text in enumerate(texts_to_translate):
-        translated_text = translation_map.get(original_text, original_text)
-        
-        # 智能清理标点符号（后处理层）
-        cleaned_translated_text = clean_language_specific_punctuation(
-            translated_text, 
-            source_lang["code"], 
-            target_lang["code"]
-        )
-        
-        line_info = key_map[i]
-        
-        line_num = line_info["line_num"]
-        key_part = line_info["key_part"]
-        original_value_part = line_info["original_value_part"]
-        
-        # Rebuild the value part, preserving things like the ":0" and escaping quotes.
-        safe_translated_text = cleaned_translated_text.strip().replace('"', r"\"")
-        new_value_part = original_value_part.replace(f'"{original_text}"', f'"{safe_translated_text}"')
-        
-        # Preserve the original indentation.
-        indent = original_lines[line_num][: original_lines[line_num].find(key_part)]
-        
-        # Reconstruct the full line without adding an extra colon.
-        new_lines[line_num] = f"{indent}{key_part}:{new_value_part}\n"
+    output_path = os.path.join(dest_dir, target_filename)
+    source_lang_key = source_lang.get("key", f"l_{source_lang.get('code', 'english')}")
+    target_lang_key = target_lang.get("key", f"l_{target_lang.get('code', 'english')}")
 
-    # --- Replace the language header ---
-    header_found_and_replaced = False
-    for i, line in enumerate(new_lines):
-        if line.strip().startswith(source_lang["key"]):
-            new_lines[i] = line.replace(source_lang["key"], target_lang["key"])
-            header_found_and_replaced = True
-            break
-    if not header_found_and_replaced:
-        new_lines.insert(0, f"{target_lang['key']}:\n")
-        
-    # --- Generate the new filename ---
-    source_suffix = f"_l_{source_lang['key'][2:]}"
-    target_suffix = f"_l_{target_lang['key'][2:]}"
-    new_filename = (
-        original_filename.replace(source_suffix, target_suffix)
-        if source_suffix in original_filename
-        else original_filename
+    # 2. Punctuation Cleaning (Using robust handler)
+    source_code = source_lang.get("code", "zh-CN")
+    target_code = target_lang.get("code", "en")
+    
+    cleaned_translations = []
+    for text in translated_texts:
+        # Use the centralized punctuation handler
+        cleaned = clean_punctuation_core(text, source_code, target_code)
+        # Clean up double spaces that might result from the mapping (e.g. ", " + " ")
+        cleaned = cleaned.replace("  ", " ")
+        cleaned_translations.append(cleaned)
+
+    # 3. Patch the content
+    new_lines = patch_file_content(
+        original_lines,
+        texts_to_translate,
+        cleaned_translations,
+        key_map,
+        source_lang_key,
+        target_lang_key
     )
     
-    dest_file_path = os.path.join(dest_dir_path, new_filename)
-
-    # --- Save the file using the correct encoding from the game profile ---
-    with open(dest_file_path, "w", encoding=game_profile.get("encoding", "utf-8-sig")) as f:
-        f.writelines(new_lines) # Use the modified 'new_lines' list
-        
+    # 4. Write to file
     try:
-        log_filename = os.path.join(os.path.relpath(dest_dir_path, "my_translation"), new_filename)
-    except ValueError:
-        log_filename = new_filename
-
-    logging.info(
-        i18n.t(
-            "writing_file_success",
-            filename=log_filename,
-        )
-    )
-    
-    # 返回生成的文件路径
-    return dest_file_path
+        with open(output_path, 'w', encoding='utf-8-sig') as f:
+            f.writelines(new_lines)
+        return output_path
+    except Exception as e:
+        logging.error(f"Failed to write file to {output_path}: {e}")
+        raise e

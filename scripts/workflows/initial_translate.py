@@ -72,13 +72,13 @@ def run(mod_name: str,
     
     output_dir_path = os.path.join(DEST_DIR, output_folder_name)
     
-    # Config for checkpoint validation
-    current_config = {
-        "model_name": gemini_cli_model or selected_provider, # Use specific model if available
-        "source_lang": source_lang.get("code"),
-        "target_lang_code": target_lang.get("code") if not is_batch_mode else "multi"
-    }
-    checkpoint_manager = CheckpointManager(output_dir_path, current_config=current_config)
+    # Config for checkpoint validation - MOVED INSIDE LOOP
+    # current_config = {
+    #     "model_name": gemini_cli_model or selected_provider, 
+    #     "source_lang": source_lang.get("code"),
+    #     "target_lang_code": target_lang.get("code") if not is_batch_mode else "multi"
+    # }
+    # checkpoint_manager = CheckpointManager(output_dir_path, current_config=current_config)
 
     # ───────────── 4. 发现所有源文件 (Discovery Phase) ─────────────
     all_file_paths = discover_files(mod_name, game_profile, source_lang)
@@ -171,6 +171,16 @@ def run(mod_name: str,
         proofreading_tracker = create_proofreading_tracker(
             mod_name, output_folder_name, target_lang.get("code", "zh-CN")
         )
+
+        # Initialize Checkpoint Manager for this language
+        current_config = {
+            "model_name": gemini_cli_model or selected_provider,
+            "source_lang": source_lang.get("code"),
+            "target_lang_code": target_lang.get("code")
+        }
+        # Use a unique checkpoint file for each language to prevent conflicts in batch mode
+        checkpoint_filename = f".remis_checkpoint_{target_lang.get('code', 'unknown')}.json"
+        checkpoint_manager = CheckpointManager(output_dir_path, current_config=current_config, checkpoint_filename=checkpoint_filename)
 
 
 
@@ -329,7 +339,7 @@ def run(mod_name: str,
                         'filename': file_task.filename,
                         'is_custom_loc': file_task.is_custom_loc
                     })
-                    logging.info(i18n.t("file_build_completed", filename=file_task.filename))
+                    logging.info(i18n.t("file_build_completed", filename=os.path.basename(dest_file_path)))
 
                 # 标记断点
                 checkpoint_manager.mark_file_completed(file_task.filename)

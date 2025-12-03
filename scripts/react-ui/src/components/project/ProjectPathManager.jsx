@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Paper, Group, Text, Button, Modal, Stack, TextInput, ActionIcon } from '@mantine/core';
-import { IconFolder, IconPlus, IconTrash } from '@tabler/icons-react';
+import { IconFolder, IconPlus, IconTrash, IconExternalLink } from '@tabler/icons-react';
 import { useTranslation } from 'react-i18next';
 import { open } from '@tauri-apps/plugin-dialog';
 import axios from 'axios';
@@ -59,16 +59,38 @@ const ProjectPathManager = ({ projectDetails, onPathsUpdated }) => {
         }
     };
 
+    const handleOpenFolder = async (path) => {
+        if (!path) return;
+        try {
+            await axios.post('/api/system/open_folder', { path });
+        } catch (error) {
+            console.error("Failed to open folder", error);
+            alert(`Failed to open folder: ${error.message}`);
+        }
+    };
+
     return (
         <>
             <Paper withBorder p="md" radius="md" className={styles.glassCard}>
                 <Group position="apart">
                     <div>
-                        <Text size="sm" fw={500}>源文件目录:</Text>
+                        <Group gap={4}>
+                            <Text size="sm" fw={500}>{t('project_management.source_dir')}:</Text>
+                            <ActionIcon size="xs" variant="transparent" onClick={() => handleOpenFolder(projectDetails.source_path)} title={t('project_management.open_source_dir')}>
+                                <IconExternalLink size={14} />
+                            </ActionIcon>
+                        </Group>
                         <Text size="xs" c="dimmed" style={{ wordBreak: 'break-all' }}>{projectDetails.source_path || 'Loading...'}</Text>
                     </div>
                     <div>
-                        <Text size="sm" fw={500}>翻译目录:</Text>
+                        <Group gap={4}>
+                            <Text size="sm" fw={500}>{t('project_management.translation_dir')}:</Text>
+                            {projectDetails.translation_dirs && projectDetails.translation_dirs.length > 0 && (
+                                <ActionIcon size="xs" variant="transparent" onClick={() => handleOpenFolder(projectDetails.translation_dirs[0])} title={t('project_management.open_translation_dir')}>
+                                    <IconExternalLink size={14} />
+                                </ActionIcon>
+                            )}
+                        </Group>
                         <Text size="xs" c="dimmed" style={{ wordBreak: 'break-all' }}>
                             {projectDetails.translation_dirs ? projectDetails.translation_dirs.join(', ') : 'Default'}
                         </Text>
