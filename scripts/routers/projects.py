@@ -5,7 +5,7 @@ from typing import Optional, Dict, Any
 
 from scripts.shared.services import project_manager
 from scripts.core.project_json_manager import ProjectJsonManager
-from scripts.schemas.project import CreateProjectRequest, UpdateProjectStatusRequest, UpdateProjectNotesRequest
+from scripts.schemas.project import CreateProjectRequest, UpdateProjectStatusRequest, UpdateProjectNotesRequest, UpdateProjectMetadataRequest
 from scripts.schemas.config import UpdateConfigRequest
 
 router = APIRouter()
@@ -43,6 +43,18 @@ def update_project_status(project_id: str, request: UpdateProjectStatusRequest):
         return {"status": "success", "message": f"Project status updated to {request.status}"}
     except Exception as e:
         logging.error(f"Error updating project status: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@router.post("/api/project/{project_id}/metadata")
+def update_project_metadata(project_id: str, request: UpdateProjectMetadataRequest):
+    """Updates a project's metadata (game_id, source_language)."""
+    try:
+        project_manager.update_project_metadata(project_id, request.game_id, request.source_language)
+        return {"status": "success", "message": "Project metadata updated"}
+    except ValueError as e:
+        raise HTTPException(status_code=404, detail=str(e))
+    except Exception as e:
+        logging.error(f"Error updating project metadata: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
 @router.post("/api/project/{project_id}/notes")
@@ -144,17 +156,42 @@ def update_project_config(project_id: str, request: UpdateConfigRequest):
         raise HTTPException(status_code=404, detail="Project not found")
     try:
         json_manager = ProjectJsonManager(project['source_path'])
-        if request.action == 'add_dir':
+        
+        if request.translation_dirs is not None:
+            # Bulk update
+            json_manager.update_config({"translation_dirs": request.translation_dirs})
+        elif request.action == 'add_dir':
             if not os.path.exists(request.path):
                  raise HTTPException(status_code=404, detail="Directory not found")
             json_manager.add_translation_dir(request.path)
         elif request.action == 'remove_dir':
             json_manager.remove_translation_dir(request.path)
         else:
-            raise HTTPException(status_code=400, detail="Invalid action")
+            raise HTTPException(status_code=400, detail="Invalid action or missing parameters")
         project_manager.refresh_project_files(project_id)
         return {"status": "success"}
     except HTTPException:
         raise
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+@router.delete("/api/project/{project_id}")
+def delete_project(project_id: str, delete_files: bool = False):
+    """
+    Permanently delete a project.
+    
+    Args:
+        project_id: The ID of the project to delete
+        delete_files: If True, also delete the source files from disk
+    """
+    project = project_manager.get_project(project_id)
+    if not project:
+        raise HTTPException(status_code=404, detail="Project not found")
+    
+    try:
+        project_manager.delete_project(project_id, delete_source_files=delete_files)
+        return {"status": "success", "message": f"Project deleted successfully (delete_files={delete_files})"}
+    except Exception as e:
+        logging.error(f"Error deleting project: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+

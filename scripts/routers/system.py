@@ -59,6 +59,31 @@ async def save_file(request: SaveFileRequest):
     except Exception as e:
         logger.error(f"Failed to save file {request.file_path}: {e}")
         raise HTTPException(status_code=500, detail=f"Failed to save file: {str(e)}")
+
+class ReadFileRequest(BaseModel):
+    file_path: str
+
+@router.post("/read_file")
+async def read_file(request: ReadFileRequest):
+    """
+    Reads content from a local file with UTF-8-SIG encoding.
+    """
+    try:
+        if not os.path.exists(request.file_path):
+            raise HTTPException(status_code=404, detail=f"File not found: {request.file_path}")
+        
+        with open(request.file_path, 'r', encoding='utf-8-sig') as f:
+            content = f.read()
+            
+        logger.info(f"Read file: {request.file_path}")
+        return {"status": "success", "content": content}
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Failed to read file {request.file_path}: {e}")
+        raise HTTPException(status_code=500, detail=f"Failed to read file: {str(e)}")
+
+
 class PatchEntry(BaseModel):
     key: str
     value: str

@@ -456,11 +456,24 @@ class ProjectManager:
         rows = cursor.fetchall()
         conn.close()
         
-        # Normalize game_id in output
+        # Normalize game_id in output and inject source_language
         results = []
         for row in rows:
             p = dict(row)
             p['game_id'] = GAME_ID_ALIASES.get(p['game_id'].lower(), p['game_id'])
+            
+            # Inject source_language from JSON sidecar
+            try:
+                if p.get('source_path') and os.path.exists(p['source_path']):
+                    json_manager = ProjectJsonManager(p['source_path'])
+                    config = json_manager.get_config()
+                    p['source_language'] = config.get('source_language', 'english')
+                else:
+                    p['source_language'] = 'english'
+            except Exception as e:
+                logger.warning(f"Failed to load source_language for project {p.get('name')}: {e}")
+                p['source_language'] = 'english'
+                
             results.append(p)
         return results
 
@@ -616,3 +629,31 @@ class ProjectManager:
             self.refresh_project_files(project_id)
         else:
             logger.info(f"Translation path {abs_path} already exists for project {project_id}")
+
+    def update_project_metadata(self, project_id: str, game_id: str, source_language: str):
+        """
+        Updates the project's metadata (game_id and source_language).
+        """
+        project = self.get_project(project_id)
+        if not project:
+            raise ValueError(f"Project {project_id} not found")
+
+        # Normalize game_id
+        game_id = GAME_ID_ALIASES.get(game_id.lower(), game_id)
+
+        # Update DB (game_id)
+        conn = self._get_connection()
+        cursor = conn.cursor()
+        cursor.execute("UPDATE projects SET game_id = ? WHERE project_id = ?", (game_id, project_id))
+        conn.commit()
+        conn.close()
+
+        # Update JSON sidecar (source_language)
+        try:
+            json_manager = ProjectJsonManager(project['source_path'])
+            json_manager.update_config({"source_language": source_language})
+        except Exception as e:
+            logger.error(f"Failed to update source_language in JSON for project {project_id}: {e}")
+            # Non-fatal, but should be noted
+        
+        logger.info(f"Updated metadata for project {project_id}: game_id={game_id}, source_language={source_language}")

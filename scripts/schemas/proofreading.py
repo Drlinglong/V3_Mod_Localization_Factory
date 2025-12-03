@@ -6,3 +6,5 @@ class SaveProofreadingRequest(BaseModel):
     file_id: str
     entries: List[Dict[str, Any]]
     content: str = "" # Legacy support
+    target_language: str = "l_simp_chinese"
+

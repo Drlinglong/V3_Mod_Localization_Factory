@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import {
   Container, Title, Button, Group, Card, Text, Grid, Modal, TextInput, Select,
   Stack, Badge, ScrollArea, Table, Box, Tabs, Center, Paper, BackgroundImage,
-  ActionIcon, SimpleGrid, Overlay, Input, Tooltip
+  ActionIcon, SimpleGrid, Overlay, Input, Tooltip, Checkbox, Alert
 } from '@mantine/core';
-import { IconPlus, IconFolder, IconEdit, IconArrowLeft, IconSearch, IconBooks, IconCompass, IconArrowRight, IconArchive, IconTrash, IconRestore } from '@tabler/icons-react';
+import { IconPlus, IconFolder, IconEdit, IconArrowLeft, IconSearch, IconBooks, IconCompass, IconArrowRight, IconArchive, IconTrash, IconRestore, IconAlertTriangle } from '@tabler/icons-react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { useTranslation } from 'react-i18next';
@@ -43,6 +43,11 @@ export default function ProjectManagement() {
   const [newProjectPath, setNewProjectPath] = useState('');
   const [newProjectGame, setNewProjectGame] = useState('stellaris');
   const [newProjectSourceLang, setNewProjectSourceLang] = useState('english');
+
+  // Manage Project State
+  const [manageModalOpen, setManageModalOpen] = useState(false);
+  const [editGameId, setEditGameId] = useState('');
+  const [editSourceLang, setEditSourceLang] = useState('');
 
   const navigate = useNavigate();
 
@@ -206,6 +211,45 @@ export default function ProjectManagement() {
     } catch (error) {
       console.error("Failed to update status", error);
       alert("Failed to update status");
+    }
+  };
+
+  const handleOpenManage = () => {
+    if (selectedProject) {
+      setEditGameId(selectedProject.game_id);
+      setEditSourceLang(selectedProject.source_language || 'english');
+      setManageModalOpen(true);
+    }
+  };
+
+  const handleUpdateMetadata = async () => {
+    if (!selectedProject) return;
+    try {
+      await axios.post(`${API_BASE}/project/${selectedProject.project_id}/metadata`, {
+        game_id: editGameId,
+        source_language: editSourceLang
+      });
+
+      // Update local state
+      setSelectedProject(prev => ({
+        ...prev,
+        game_id: editGameId,
+        source_language: editSourceLang
+      }));
+
+      // Also update projectDetails if it exists
+      if (projectDetails) {
+        setProjectDetails(prev => ({
+          ...prev,
+          game_id: editGameId,
+          source_language: editSourceLang
+        }));
+      }
+
+      setManageModalOpen(false);
+      fetchProjects(); // Refresh list
+    } catch (error) {
+      alert(`Failed to update project: ${error.response?.data?.detail || error.message}`);
     }
   };
 
@@ -410,6 +454,7 @@ export default function ProjectManagement() {
               handleNotesChange={handleUpdateNotes}
               onPathsUpdated={() => fetchProjectFiles(selectedProject.project_id)}
               onDeleteForever={() => setDeleteModalOpen(true)}
+              onManageProject={handleOpenManage}
             />
           ) : <Text>Loading details...</Text>}
         </Tabs.Panel>
@@ -486,28 +531,91 @@ export default function ProjectManagement() {
       <Modal
         opened={deleteModalOpen}
         onClose={() => { setDeleteModalOpen(false); setDeleteSourceFiles(false); }}
-        title={t('project_management.delete_forever')}
+        title={
+          <Group>
+            <IconAlertTriangle color="red" size={24} />
+            <Text fw={700} c="red">{t('project_management.delete_forever')}</Text>
+          </Group>
+        }
         size="md"
+        centered
       >
         <Stack>
-          <Text>{t('project_management.confirm_delete_forever')}</Text>
-          <Text size="sm" c="dimmed">Project: {selectedProject?.name}</Text>
-          <input
-            type="checkbox"
+          <Alert color="red" variant="light" icon={<IconAlertTriangle size={16} />}>
+            <Text size="sm" fw={600}>此操作不可撤销！</Text>
+            <Text size="xs" c="dimmed" mt={4}>删除后项目配置将永久丢失，请谨慎操作。</Text>
+          </Alert>
+
+          <Text size="sm">
+            确认要永久删除以下项目吗？
+          </Text>
+          <Paper withBorder p="xs" bg="rgba(255, 0, 0, 0.05)">
+            <Text size="sm" fw={600}>{selectedProject?.name}</Text>
+            <Text size="xs" c="dimmed">{selectedProject?.source_path}</Text>
+          </Paper>
+
+          <Checkbox
             checked={deleteSourceFiles}
-            onChange={(e) => setDeleteSourceFiles(e.target.checked)}
-            id="delete-files-checkbox"
+            onChange={(e) => setDeleteSourceFiles(e.currentTarget.checked)}
+            label={
+              <div>
+                <Text size="sm" fw={600} c="red">同时删除硬盘上的原始文件</Text>
+                <Text size="xs" c="dimmed">如果勾选，将永久删除项目文件夹中的所有原始文件</Text>
+              </div>
+            }
+            color="red"
+            size="md"
+            mt="md"
           />
-          <label htmlFor="delete-files-checkbox">
-            <Text size="sm" c="red">Also delete source files from disk</Text>
-          </label>
-          <Group justify="flex-end" mt="md">
+
+          <Group justify="flex-end" mt="xl">
             <Button variant="default" onClick={() => { setDeleteModalOpen(false); setDeleteSourceFiles(false); }}>
               {t('button_cancel')}
             </Button>
-            <Button color="red" onClick={handleDeleteForever}>
-              {t('project_management.delete_forever')}
+            <Button color="red" leftSection={<IconTrash size={16} />} onClick={handleDeleteForever}>
+              {deleteSourceFiles ? '删除配置 + 原始文件' : '仅删除配置'}
             </Button>
+          </Group>
+        </Stack>
+      </Modal>
+
+      <Modal
+        opened={manageModalOpen}
+        onClose={() => setManageModalOpen(false)}
+        title={t('project_management.manage_project')}
+        size="lg"
+      >
+        <Stack>
+          <Select
+            label={t('form_label_game')}
+            data={[
+              { value: 'stellaris', label: 'Stellaris' },
+              { value: 'hoi4', label: 'Hearts of Iron IV' },
+              { value: 'vic3', label: 'Victoria 3' },
+              { value: 'ck3', label: 'Crusader Kings III' },
+              { value: 'eu4', label: 'Europa Universalis IV' }
+            ]}
+            value={editGameId}
+            onChange={setEditGameId}
+          />
+          <Select
+            label={t('form_label_source_language')}
+            data={[
+              { value: 'english', label: 'English' },
+              { value: 'simp_chinese', label: 'Simplified Chinese' },
+              { value: 'german', label: 'German' },
+              { value: 'french', label: 'French' },
+              { value: 'russian', label: 'Russian' },
+              { value: 'spanish', label: 'Spanish' },
+              { value: 'japanese', label: 'Japanese' },
+              { value: 'korean', label: 'Korean' }
+            ]}
+            value={editSourceLang}
+            onChange={setEditSourceLang}
+          />
+          <Group justify="flex-end" mt="md">
+            <Button variant="default" onClick={() => setManageModalOpen(false)}>{t('button_cancel')}</Button>
+            <Button onClick={handleUpdateMetadata}>{t('settings_save')}</Button>
           </Group>
         </Stack>
       </Modal>

@@ -1,230 +1,232 @@
 import os
+import re
+import logging
+from pathlib import Path
 from fastapi import APIRouter, HTTPException
+from typing import List, Dict, Any
 
 from scripts.shared.services import project_manager, archive_manager
 from scripts.schemas.proofreading import SaveProofreadingRequest
+from scripts.utils.quote_extractor import QuoteExtractor
+from scripts.core.file_builder import patch_file_content
 
 router = APIRouter()
 
+def find_source_template(target_path: str, source_lang: str, current_lang: str, project_id: str = None) -> str:
+    """
+    Robustly finds the source template file path given the target file path.
+    1. Try path manipulation (folder/suffix swap).
+    2. Fallback: Search entire project for the matching source filename.
+    """
+    # --- Strategy 1: Path Manipulation ---
+    try:
+        path_obj = Path(target_path)
+        parts = list(path_obj.parts)
+        
+        # 1. Identify the language folder index (case-insensitive)
+        lang_folder_index = -1
+        for i, part in enumerate(parts):
+            if part.lower() == current_lang.lower():
+                lang_folder_index = i
+                break
+        
+        if lang_folder_index != -1:
+            # Replace directory name
+            parts[lang_folder_index] = source_lang 
+            
+            # Replace filename suffix
+            filename = parts[-1]
+            current_suffix = f"_l_{current_lang}"
+            source_suffix = f"_l_{source_lang}"
+            
+            if current_suffix.lower() in filename.lower():
+                new_filename = re.sub(re.escape(current_suffix), source_suffix, filename, flags=re.IGNORECASE)
+                parts[-1] = new_filename
+                
+                new_path = Path(*parts)
+                if new_path.exists():
+                    return str(new_path)
+
+        # Fallback for Strategy 1: Simple String Replacement
+        target_path_str = str(target_path)
+        pattern_dir = re.compile(re.escape(os.sep + current_lang + os.sep), re.IGNORECASE)
+        # Fix: Escape backslashes in replacement string for re.sub
+        replacement_dir = (os.sep + source_lang + os.sep).replace('\\', '\\\\')
+        new_path_str = pattern_dir.sub(replacement_dir, target_path_str)
+        
+        pattern_suffix = re.compile(re.escape(f"_l_{current_lang}"), re.IGNORECASE)
+        new_path_str = pattern_suffix.sub(f"_l_{source_lang}", new_path_str)
+        
+        if os.path.exists(new_path_str):
+            return new_path_str
+            
+    except Exception as e:
+        print(f"Strategy 1 failed: {e}")
+        # Continue to Strategy 2
+
+    # --- Strategy 2: Project-wide Search (The "Nuclear Option") ---
+    try:
+        if project_id:
+            # Calculate expected source filename
+            filename = os.path.basename(target_path)
+            current_suffix = f"_l_{current_lang}"
+            source_suffix = f"_l_{source_lang}"
+            
+            if current_suffix.lower() in filename.lower():
+                expected_source_filename = re.sub(re.escape(current_suffix), source_suffix, filename, flags=re.IGNORECASE)
+                
+                # Search all project files
+                files = project_manager.get_project_files(project_id)
+                for f in files:
+                    if os.path.basename(f['file_path']).lower() == expected_source_filename.lower():
+                        print(f"Fallback found source file: {f['file_path']}")
+                        return f['file_path']
+    except Exception as e:
+        print(f"Strategy 2 failed: {e}")
+
+    return ""
+
 @router.get("/api/proofread/{project_id}/{file_id}")
 def get_proofread_data(project_id: str, file_id: str):
+    """
+    获取校对数据 - Patching Mode
+    """
+    # 1. 获取项目和目标文件信息
+    project = project_manager.get_project(project_id)
+    if not project:
+        raise HTTPException(status_code=404, detail="Project not found")
+        
     files = project_manager.get_project_files(project_id)
     target_file = next((f for f in files if f['file_id'] == file_id), None)
-
     if not target_file:
         raise HTTPException(status_code=404, detail="File not found in project")
 
-    file_path = target_file['file_path']
-    project = project_manager.get_project(project_id)
-    mod_name = project['name']
-
-    # Strategy:
-    # 1. Always parse the file on disk to get the "Skeleton" (Keys, Values, Line Numbers).
-    #    This ensures we have the correct line numbers for patching.
-    # 2. Fetch translations from DB (AI results).
-    # 3. Merge: Use DB translation if available, otherwise use File value.
+    target_file_path = target_file['file_path']
+    filename = os.path.basename(target_file_path)
     
-    file_entries = []
-    if os.path.exists(file_path):
-        from scripts.core.loc_parser import parse_loc_file_with_lines
-        from pathlib import Path
-        try:
-            parsed_entries = parse_loc_file_with_lines(Path(file_path))
-            # parsed_entries is list of (key, value, line_number)
-            file_entries = parsed_entries
-        except Exception as e:
-            print(f"File parsing failed for {file_path}: {e}")
-            # If file parsing fails, we are in trouble for patching.
-            # But we might still show DB data.
-
-    # Fetch DB entries (Key, Original, Translation)
-    # archive_manager.get_entries returns list of dicts
-    db_entries = archive_manager.get_entries(mod_name, file_path)
-    db_map = {e['key']: e.get('translation', '') for e in db_entries}
-
-    # Construct final entries list
-    entries = []
-    if file_entries:
-        for key, val, ln in file_entries:
-            # If key exists in DB, use DB translation (AI result)
-            # Otherwise use the value from file (which might be empty or original)
-            translation = db_map.get(key, val)
-            entries.append({
-                "key": key,
-                "original": val, # Initially use file value as original (will be updated by source resolution)
-                "translation": translation,
-                "line_number": ln
-            })
+    # 2. 确定当前文件的语言 (Target Language for this file)
+    current_lang = "english" # Fallback
+    lang_match = re.search(r"_l_(\w+)\.yml$", filename, re.IGNORECASE)
+    if lang_match:
+        current_lang = lang_match.group(1).lower() # Normalize to lowercase
     else:
-        # Fallback: If file is missing or empty, use DB entries (but line_number will be None)
-        # This prevents "Explosion" but Patching won't work for these.
-        entries = db_entries
-        for e in entries:
-            e['line_number'] = None
+        try:
+            with open(target_file_path, 'r', encoding='utf-8-sig') as f:
+                first_line = f.readline()
+                header_match = re.match(r"^\s*l_(\w+):", first_line, re.IGNORECASE)
+                if header_match:
+                    current_lang = header_match.group(1).lower()
+        except:
+            pass
 
-    # --- Source File Resolution Logic ---
-    source_file_path = None
+    current_lang_key = f"l_{current_lang}"
+    
+    # 3. 确定源语言 (Source Language)
+    source_lang = project.get('source_language', 'simp_chinese')
+    source_lang_key = f"l_{source_lang}"
+    
+    # 4. 定位模板文件 (Source File)
+    template_file_path = ""
+    if current_lang == source_lang:
+        template_file_path = target_file_path
+    else:
+        # Pass project_id for fallback search
+        template_file_path = find_source_template(target_file_path, source_lang, current_lang, project_id)
+
+    if not template_file_path or not os.path.exists(template_file_path):
+        print(f"Warning: Source file not found for {target_file_path}. Using target as template (formatting may be lost).")
+        template_file_path = target_file_path
+
+    # 5. 解析源文件 (Master Template)
     try:
-        project = project_manager.get_project_by_file_id(file_id)
-        if project:
-            filename = os.path.basename(file_path)
-            import re
-            match = re.match(r"(.+)_l_([a-z_]+)\.yml", filename)
-            
-            if match:
-                base_name = match.group(1)
-                
-                # Query DB for other files with same base_name
-                conn = project_manager._get_connection()
-                cursor = conn.cursor()
-                pattern = f"%{base_name}_l_%.yml"
-                cursor.execute("SELECT file_path FROM project_files WHERE project_id = ? AND file_path LIKE ? AND file_path != ?", 
-                               (project['project_id'], pattern, project['project_id'])) 
-                rows = cursor.fetchall()
-                conn.close()
-                
-                candidates = []
-                for r in rows:
-                    cand_path = r[0]
-                    if os.path.normpath(cand_path) == os.path.normpath(file_path):
-                        continue
-                    candidates.append(cand_path)
-                
-                if candidates:
-                    from scripts.core.project_json_manager import ProjectJsonManager
-                    json_manager = ProjectJsonManager(project['source_path'])
-                    config = json_manager.get_config()
-                    source_lang = config.get('source_language', 'simp_chinese')
-                    
-                    best_candidate = None
-                    for cand in candidates:
-                        if f"l_{source_lang}" in os.path.basename(cand):
-                            best_candidate = cand
-                            break
-                    
-                    if not best_candidate:
-                        best_candidate = candidates[0]
-                    
-                    source_file_path = best_candidate
-
-            # Fallback: If DB didn't find source file, try filesystem heuristic
-            if not source_file_path and match:
-                base_name = match.group(1)
-                current_lang = match.group(2)
-                # Try to find english file in same directory
-                # This assumes standard structure
-                dir_path = os.path.dirname(file_path)
-                
-                # Common source languages
-                for lang in ['english', 'simp_chinese', 'french', 'german', 'russian']:
-                    if lang == current_lang: continue
-                    
-                    potential_path = os.path.join(dir_path, f"{base_name}_l_{lang}.yml")
-                    if os.path.exists(potential_path):
-                        source_file_path = potential_path
-                        break
-
-            if source_file_path and os.path.exists(source_file_path):
-                from scripts.core.loc_parser import parse_loc_file
-                from pathlib import Path
-                source_parsed = parse_loc_file(Path(source_file_path))
-                source_map = {k: v for k, v in source_parsed}
-                
-                # Update entries with real original text
-                for entry in entries:
-                    if entry['key'] in source_map:
-                        entry['original'] = source_map[entry['key']]
-
+        original_lines, texts_to_translate, key_map = QuoteExtractor.extract_from_file(template_file_path)
     except Exception as e:
-        print(f"Source resolution failed: {e}")
+        raise HTTPException(status_code=500, detail=f"Failed to parse template file: {str(e)}")
 
-    # --- Helper: Inject Values into Structure ---
-    def inject_values(lines, val_map, target_lang_code=None):
-        merged = []
-        # Regex to find keys in source lines:  key:0 "value"
-        line_regex = re.compile(r'^(\s*)([\w\.]+):0\s*"(.*)"(.*)$')
-        
-        for line in lines:
-            # Handle Language Declaration
-            if line.strip().startswith("l_"):
-                if target_lang_code:
-                    merged.append(f"l_{target_lang_code}:\n")
-                else:
-                    merged.append(line)
-                continue
+    original_content = "".join(original_lines)
 
-            match = line_regex.match(line)
-            if match:
-                indent = match.group(1)
-                key = match.group(2)
-                # val = match.group(3) 
-                comment = match.group(4) 
-                
-                if key in val_map:
-                    new_val = val_map[key]
-                    if new_val is None: new_val = ""
-                    # Escape quotes
-                    new_val = new_val.replace('"', '\\"')
-                    merged.append(f'{indent}{key}:0 "{new_val}"{comment}\n')
-                else:
-                    # Key not in map? Keep original line
-                    merged.append(line)
-            else:
-                merged.append(line)
-        return "".join(merged)
-
-    # --- Construct Full File Content (with Comments) ---
-    original_file_content = ""
-    ai_file_content = "" # Current translation
+    # 6. 准备中间栏数据 (AI Draft) - 来自数据库
+    # 数据库查询使用 Template Path (Source Path)
+    db_entries = archive_manager.get_entries(project['name'], template_file_path, current_lang)
+    db_translation_map = {e['key']: e['translation'] for e in db_entries if e['translation']}
     
-    # We need the "Skeleton" lines. 
-    # Prefer Source File for structure as it's the "Truth".
-    skeleton_lines = []
+    # 7. 准备右侧栏数据 (Final Edit) - 来自磁盘上的目标文件
+    disk_translation_map = {}
+    if os.path.exists(target_file_path):
+        try:
+            _, target_texts, target_map = QuoteExtractor.extract_from_file(target_file_path)
+            for i, text in enumerate(target_texts):
+                if i in target_map:
+                    k = target_map[i]['key_part'].strip()
+                    disk_translation_map[k] = text
+        except Exception as e:
+            print(f"Failed to parse target file {target_file_path}: {e}")
+
+    # 8. 构建返回数据
+    entries = []
+    ai_translated_texts = []
+    disk_translated_texts = []
     
-    if source_file_path and os.path.exists(source_file_path):
-        try:
-            with open(source_file_path, 'r', encoding='utf-8-sig') as f:
-                skeleton_lines = f.readlines()
-        except:
-            pass
-    elif os.path.exists(file_path):
-        # Fallback to target file itself if no source
-        try:
-            with open(file_path, 'r', encoding='utf-8-sig') as f:
-                skeleton_lines = f.readlines()
-        except:
-            pass
-
-    if skeleton_lines:
-        # 1. Original Content (Source Values)
-        # We can just use the source file content directly, BUT we want to ensure keys match?
-        # Actually, raw source file content is best for "Original" column.
-        # But wait, if we want to align them line-by-line, injecting is safer.
-        # Let's use the source map we built earlier.
+    for i, text in enumerate(texts_to_translate):
+        key_info = key_map[i]
+        key = key_info['key_part'].strip()
         
-        # Re-read source map if needed, but we have entries['original']
-        original_map = {e['key']: e.get('original', '') for e in entries}
-        original_file_content = inject_values(skeleton_lines, original_map, None) # Keep source lang header? Or maybe not.
-
-        # 2. AI/Final Content (Translation Values)
-        trans_map = {e['key']: e.get('translation', '') for e in entries}
+        # AI 翻译
+        ai_trans = db_translation_map.get(key, text)
+        ai_translated_texts.append(ai_trans)
         
-        # Infer target lang
-        target_lang = "simp_chinese"
-        target_lang_match = re.search(r"_l_([a-z_]+)\.yml", os.path.basename(file_path))
-        if target_lang_match:
-            target_lang = target_lang_match.group(1)
+        # 磁盘现有翻译
+        disk_trans = disk_translation_map.get(key, ai_trans) 
+        disk_translated_texts.append(disk_trans)
+        
+        entries.append({
+            "key": key,
+            "original": text,
+            "translation": disk_trans, 
+            "line_number": key_info['line_num'] 
+        })
 
-        ai_file_content = inject_values(skeleton_lines, trans_map, target_lang)
+    # 9. 生成 Patch 后的内容
+    # AI Content (Middle Pane)
+    try:
+        ai_lines = patch_file_content(
+            original_lines,
+            texts_to_translate,
+            ai_translated_texts,
+            key_map,
+            source_lang_key,
+            current_lang_key 
+        )
+        ai_content = "".join(ai_lines)
+    except Exception as e:
+        print(f"AI Patching failed: {e}")
+        ai_content = original_content
+
+    # Final Content (Right Pane - Initial View)
+    try:
+        final_lines = patch_file_content(
+            original_lines,
+            texts_to_translate,
+            disk_translated_texts,
+            key_map,
+            source_lang_key,
+            current_lang_key
+        )
+        file_content = "".join(final_lines)
+    except Exception as e:
+        print(f"Final Patching failed: {e}")
+        file_content = original_content
 
     return {
         "file_id": file_id,
-        "file_path": file_path,
-        "mod_name": mod_name,
+        "file_path": target_file_path,
+        "mod_name": project['name'],
         "entries": entries,
-        "original_content": original_file_content,
-        "file_content": ai_file_content # This is the "Final/AI" one
+        "file_content": original_content, # Left: Source Template
+        "ai_content": ai_content,         # Middle: Source + AI
+        "final_content": file_content     # Right: Source + Disk
     }
+
 
 @router.post("/api/proofread/save")
 def save_proofreading_db(request: SaveProofreadingRequest):
@@ -236,20 +238,74 @@ def save_proofreading_db(request: SaveProofreadingRequest):
         if not project or not target_file:
             raise HTTPException(status_code=404, detail="Project or File not found")
 
-        archive_manager.update_translations(project['name'], target_file['file_path'], request.entries)
+        target_file_path = target_file['file_path']
+        filename = os.path.basename(target_file_path)
 
-        output_path = os.path.join(project['target_path'], target_file['file_path'])
-        os.makedirs(os.path.dirname(output_path), exist_ok=True)
+        # 1. 确定当前文件的语言 (Target Language)
+        current_lang = "english"
+        lang_match = re.search(r"_l_(\w+)\.yml$", filename, re.IGNORECASE)
+        if lang_match:
+            current_lang = lang_match.group(1).lower()
+        else:
+             try:
+                with open(target_file_path, 'r', encoding='utf-8-sig') as f:
+                    first_line = f.readline()
+                    header_match = re.match(r"^\s*l_(\w+):", first_line, re.IGNORECASE)
+                    if header_match:
+                        current_lang = header_match.group(1).lower()
+             except:
+                pass
+        
+        current_lang_key = f"l_{current_lang}"
+        
+        # 2. 确定源语言
+        source_lang = project.get('source_language', 'simp_chinese')
+        source_lang_key = f"l_{source_lang}"
 
-        with open(output_path, 'w', encoding='utf-8-sig') as f:
-            f.write(u'\ufeff')
-            f.write("l_simp_chinese:\n")
-            for entry in request.entries:
-                val = entry.get('translation', '')
-                val = val.replace('"', '\"')
-                f.write(f' {entry["key"]}:0 "{val}"\n')
+        # 3. 定位模板文件
+        if current_lang == source_lang:
+            template_file_path = target_file_path
+        else:
+            template_file_path = find_source_template(target_file_path, source_lang, current_lang, request.project_id)
+        
+        if not template_file_path or not os.path.exists(template_file_path):
+            template_file_path = target_file_path
 
+        # 4. 读取模板文件
+        original_lines, texts_to_translate, key_map = QuoteExtractor.extract_from_file(template_file_path)
+        
+        # 5. 准备翻译数据
+        user_translation_map = {e['key']: e['translation'] for e in request.entries}
+        
+        translated_texts = []
+        for i, text in enumerate(texts_to_translate):
+            key_info = key_map[i]
+            key = key_info['key_part'].strip()
+            trans = user_translation_map.get(key, text)
+            translated_texts.append(trans)
+            
+        # 6. Patch 生成最终文件内容
+        patched_lines = patch_file_content(
+            original_lines,
+            texts_to_translate,
+            translated_texts,
+            key_map,
+            source_lang_key,
+            current_lang_key
+        )
+        
+        # 7. 写入磁盘 (直接覆盖 target_file_path)
+        with open(target_file_path, 'w', encoding='utf-8-sig') as f:
+            f.writelines(patched_lines)
+
+        # 8. 更新数据库和状态
+        # We DO NOT update the translation DB here. 
+        # The DB should store the "AI Draft" (Original AI Translation).
+        # User edits are stored in the file on disk.
+        # archive_manager.update_translations(project['name'], template_file_path, request.entries)
         project_manager.update_file_status_by_id(request.file_id, "done")
-        return {"status": "success"}
+        
+        return {"status": "success", "output_path": target_file_path}
+        
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))

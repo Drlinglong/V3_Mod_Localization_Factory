@@ -15,8 +15,9 @@ class CheckpointManager:
 
     CHECKPOINT_FILENAME = ".remis_checkpoint.json"
 
-    def __init__(self, output_dir: str, current_config: Optional[Dict[str, Any]] = None):
+    def __init__(self, output_dir: str, current_config: Optional[Dict[str, Any]] = None, checkpoint_filename: str = ".remis_checkpoint.json"):
         self.output_dir = output_dir
+        self.CHECKPOINT_FILENAME = checkpoint_filename
         self.checkpoint_path = os.path.join(output_dir, self.CHECKPOINT_FILENAME)
         self.completed_files: Set[str] = set()
         self.metadata: Dict[str, Any] = {}
