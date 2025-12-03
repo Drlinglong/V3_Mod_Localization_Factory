@@ -1,10 +1,11 @@
 import React, { useContext, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Select, Group, Title, Text, Container, Paper, Stack, Divider, Tabs, Box } from '@mantine/core';
-import { IconLanguage, IconPalette, IconSettings, IconKey } from '@tabler/icons-react';
+import { IconLanguage, IconPalette, IconSettings, IconKey, IconMessage } from '@tabler/icons-react';
 import ThemeContext from '../ThemeContext';
 import { AVAILABLE_THEMES } from '../config/themes';
 import ApiSettingsTab from '../components/ApiSettingsTab';
+import PromptSettingsTab from '../components/PromptSettingsTab';
 
 import styles from './SettingsPage.module.css';
 
@@ -41,6 +42,9 @@ const SettingsPage = () => {
                             </Tabs.Tab>
                             <Tabs.Tab value="api" leftSection={<IconKey size={16} />}>
                                 {t('settings_api') || 'API Settings'}
+                            </Tabs.Tab>
+                            <Tabs.Tab value="prompts" leftSection={<IconMessage size={16} />}>
+                                {t('settings_prompts') || 'Prompt Settings'}
                             </Tabs.Tab>
                         </Tabs.List>
 
@@ -81,6 +85,10 @@ const SettingsPage = () => {
 
                         <Tabs.Panel value="api">
                             <ApiSettingsTab />
+                        </Tabs.Panel>
+
+                        <Tabs.Panel value="prompts">
+                            <PromptSettingsTab />
                         </Tabs.Panel>
                     </Tabs>
                 </Paper>

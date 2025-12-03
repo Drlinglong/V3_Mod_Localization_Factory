@@ -42,7 +42,8 @@ from scripts.routers import (
     neologism,
     validation,
     config,
-    system
+    system,
+    prompts
 )
 
 import time
@@ -105,6 +106,7 @@ app.include_router(neologism.router)
 app.include_router(validation.router)
 app.include_router(config.router)
 app.include_router(system.router)
+app.include_router(prompts.router)
 
 @app.get("/")
 def read_root():
