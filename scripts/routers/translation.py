@@ -285,7 +285,14 @@ async def start_translation(
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"文件处理失败: {e}")
 
-    target_codes = target_lang_codes.split(',')
+    try:
+        # Normalize languages using strict schema
+        from scripts.schemas.common import LanguageCode
+        source_lang_code = LanguageCode.from_str(source_lang_code).value
+        target_codes = [LanguageCode.from_str(code.strip()).value for code in target_lang_codes.split(',')]
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
     background_tasks.add_task(
         run_translation_workflow,
         task_id,

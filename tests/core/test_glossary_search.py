@@ -2,7 +2,9 @@ import pytest
 import os
 import json
 from unittest.mock import MagicMock, patch, mock_open
-from scripts.web_server import app, _transform_storage_to_frontend_format, SearchGlossaryRequest
+from scripts.web_server import app
+from scripts.routers.glossary import _transform_storage_to_frontend_format
+from scripts.schemas.glossary import SearchGlossaryRequest
 from fastapi.testclient import TestClient
 
 client = TestClient(app)
