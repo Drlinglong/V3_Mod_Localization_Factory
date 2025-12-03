@@ -150,14 +150,13 @@ def get_proofread_data(project_id: str, file_id: str):
     # Fix 1: Use Mod Folder Name as mod_name (matching initial_translate.py)
     mod_name = os.path.basename(project['source_path'])
     
-    # Fix 2: Convert language key (e.g. "english") to code (e.g. "en")
-    from scripts.app_settings import LANGUAGES
-    lang_code = current_lang
-    full_key = f"l_{current_lang}"
-    for lang_data in LANGUAGES.values():
-        if lang_data['key'] == full_key:
-            lang_code = lang_data['code']
-            break
+    # Fix 2: Convert language key (e.g. "english") to code (e.g. "en") using strict schema
+    from scripts.schemas.common import LanguageCode
+    try:
+        lang_code = LanguageCode.from_str(current_lang).value
+    except ValueError:
+        # Fallback if detection fails, though from_str is robust
+        lang_code = "en"
             
     logging.info(f"DEBUG: Fetching DB entries for mod='{mod_name}', file='{template_file_path}', lang='{lang_code}'")
     db_entries = archive_manager.get_entries(mod_name, template_file_path, lang_code)
