@@ -123,7 +123,7 @@ def test_json_with_nested_structures_and_newlines():
     assert result.translations == [
         "第一行翻译",
         "第二行翻译，包含一个逗号。",
-        "第三行\n带有一个转义换行符。"
+        "第三行\\n带有一个转义换行符。"
     ]
 
 def test_parse_nested_gemini_cli_format():

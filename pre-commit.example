@@ -1,0 +1,46 @@
+#!/usr/bin/env bash
+# Pre-commit hook for automatic quality checks
+# Install: copy this file to .git/hooks/pre-commit
+
+echo ""
+echo "==========================================="
+echo "  Running Pre-Commit Checks..."
+echo "==========================================="
+echo ""
+
+# 1. Python Tests
+echo "[1/3] Running Python tests..."
+if ! pytest --quiet --tb=line; then
+    echo ""
+    echo "✗ Python tests FAILED!"
+    echo "Commit aborted. Fix tests and try again."
+    exit 1
+fi
+echo "  ✓ Python tests passed"
+echo ""
+
+# 2. Frontend Linting
+echo "[2/3] Running ESLint..."
+cd scripts/react-ui
+if [ -f "node_modules/.bin/eslint" ]; then
+    if ! npm run lint; then
+        echo ""
+        echo "✗ ESLint checks FAILED!"
+        echo "Commit aborted. Fix linting errors and try again."
+        exit 1
+    fi
+    echo "  ✓ ESLint checks passed"
+else
+    echo "  ⚠ ESLint not configured, skipping..."
+fi
+cd ../..
+echo ""
+
+# 3. Success
+echo "[3/3] All checks passed!"
+echo "==========================================="
+echo "  ✓ Proceeding with commit..."
+echo "==========================================="
+echo ""
+
+exit 0
