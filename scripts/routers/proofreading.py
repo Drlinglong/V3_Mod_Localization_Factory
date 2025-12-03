@@ -147,7 +147,21 @@ def get_proofread_data(project_id: str, file_id: str):
 
     # 6. 准备中间栏数据 (AI Draft) - 来自数据库
     # 数据库查询使用 Template Path (Source Path)
-    db_entries = archive_manager.get_entries(project['name'], template_file_path, current_lang)
+    # Fix 1: Use Mod Folder Name as mod_name (matching initial_translate.py)
+    mod_name = os.path.basename(project['source_path'])
+    
+    # Fix 2: Convert language key (e.g. "english") to code (e.g. "en")
+    from scripts.app_settings import LANGUAGES
+    lang_code = current_lang
+    full_key = f"l_{current_lang}"
+    for lang_data in LANGUAGES.values():
+        if lang_data['key'] == full_key:
+            lang_code = lang_data['code']
+            break
+            
+    logging.info(f"DEBUG: Fetching DB entries for mod='{mod_name}', file='{template_file_path}', lang='{lang_code}'")
+    db_entries = archive_manager.get_entries(mod_name, template_file_path, lang_code)
+    logging.info(f"DEBUG: Found {len(db_entries)} entries in DB.")
     db_translation_map = {e['key']: e['translation'] for e in db_entries if e['translation']}
     
     # 7. 准备右侧栏数据 (Final Edit) - 来自磁盘上的目标文件
@@ -172,7 +186,9 @@ def get_proofread_data(project_id: str, file_id: str):
         key = key_info['key_part'].strip()
         
         # AI 翻译
-        ai_trans = db_translation_map.get(key, text)
+        # Fix: DB stores keys as stringified indices ("0", "1"...), not the actual key string ("remis_event.1.t")
+        # This is because initial_translate.py passed the key_map dict keys (indices) to archive_manager.
+        ai_trans = db_translation_map.get(str(i), text)
         ai_translated_texts.append(ai_trans)
         
         # 磁盘现有翻译
