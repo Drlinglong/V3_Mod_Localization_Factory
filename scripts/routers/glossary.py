@@ -1,9 +1,12 @@
 import uuid
+import logging
 from fastapi import APIRouter, HTTPException, Query
 from typing import Dict
 
 from scripts.shared.services import glossary_manager
 from scripts.schemas.glossary import SearchGlossaryRequest, GlossaryEntryCreate, GlossaryEntryIn
+
+logger = logging.getLogger(__name__)
 
 router = APIRouter()
 
@@ -79,6 +82,9 @@ def search_glossary(payload: SearchGlossaryRequest):
                     continue
     if not glossary_ids_to_search:
         return {"entries": [], "totalCount": 0}
+    
+    logger.debug(f"Searching glossaries {glossary_ids_to_search} for query '{payload.query}'")
+    
     result_data = glossary_manager.search_glossary_entries_paginated(
         query=payload.query, glossary_ids=glossary_ids_to_search,
         page=payload.page, page_size=payload.pageSize
@@ -92,31 +98,13 @@ def create_glossary_entry(glossary_id: int, payload: GlossaryEntryCreate):
     new_entry_dict['id'] = str(uuid.uuid4())
     storage_entry = _transform_entry_to_storage_format(new_entry_dict)
     if not glossary_manager.add_entry(glossary_id, storage_entry):
+        logger.error(f"Failed to create glossary entry in glossary {glossary_id}")
         raise HTTPException(status_code=500, detail="Failed to create glossary entry.")
+    
+    logger.info(f"Created new glossary entry {new_entry_dict['id']} in glossary {glossary_id}")
     return new_entry_dict
 
 @router.put("/api/glossary/entry/{entry_id}")
 def update_glossary_entry(entry_id: str, payload: GlossaryEntryIn):
-    # Note: The original code didn't implement the logic for this endpoint fully in the snippet provided,
-    # but it was defined. I'll implement a basic update based on the pattern.
-    # Assuming glossary_manager has an update_entry method or similar.
-    # The original snippet cut off at this function definition.
-    # I will assume there is NO update_entry in glossary_manager based on previous context, 
-    # OR I should check glossary_manager.
-    # For now, I'll raise NotImplementedError or try to implement if I knew the manager API.
-    # Given the user didn't provide the full file, I'll assume it's a placeholder or I should implement it.
-    # I'll implement it using add_entry (overwrite) if supported, or just leave it as a placeholder if unsure.
-    # Actually, looking at the previous file content, it cut off right at this function.
-    # I will implement it assuming standard behavior.
-    
-    # Wait, I don't have the glossary_id here. The API design seems to require glossary_id for updates if the manager requires it.
-    # If the manager can update by ID alone, great.
-    # Let's check glossary_manager.py if I can... actually I can't check it right now without a tool call.
-    # I'll assume for now that I can't implement it fully without more info, but I'll try to match the signature.
-    
-    # Re-reading the snippet:
-    # @app.put("/api/glossary/entry/{entry_id}")
-    # def update_glossary_entry(entry_id: str, payload: GlossaryEntryIn):
-    
-    # I'll just put a placeholder for now to avoid breaking.
+    # Placeholder for update logic
     raise HTTPException(status_code=501, detail="Not implemented yet")

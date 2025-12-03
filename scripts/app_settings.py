@@ -1,19 +1,21 @@
 # scripts/app_settings.py
 # ---------------------------------------------------------------
 import os
+import sys
 import multiprocessing
 from scripts.config import prompts
 import json
 
 def get_appdata_config_path():
     """Returns the path to the AppData config file."""
-    appdata = os.getenv('APPDATA')
-    if not appdata:
-        # Fallback for non-standard environments
-        return os.path.join(os.path.expanduser("~"), ".remis", "config.json")
-    
-    config_dir = os.path.join(appdata, "Remis")
-    os.makedirs(config_dir, exist_ok=True)
+    # Use the centralized AppData logic
+    config_dir = get_app_data_dir()
+    # Note: The original code used "Remis/config.json" inside AppData/Remis
+    # But get_app_data_dir uses "RemisModFactory"
+    # To maintain backward compatibility if needed, we might want to check.
+    # But for a clean break, let's use the new directory.
+    # However, the user might have existing config in .remis or AppData/Remis.
+    # Let's stick to the new standard: AppData/RemisModFactory/config.json
     return os.path.join(config_dir, "config.json")
 
 def get_api_key(provider_id: str, env_var_name: str) -> str:
@@ -102,15 +104,58 @@ RECOMMENDED_MAX_WORKERS = get_smart_max_workers()
 BATCH_SIZE = CHUNK_SIZE
 
 # --- 路径配置 ----------------------------------------------------
-PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-DATA_DIR = os.path.join(PROJECT_ROOT, 'data')
+# --- 路径配置 ----------------------------------------------------
+def get_app_root():
+    """Returns the application root directory."""
+    if getattr(sys, 'frozen', False):
+        return os.path.dirname(sys.executable)
+    return os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+
+def get_app_data_dir():
+    """Returns the user data directory (AppData)."""
+    appdata = os.getenv('APPDATA')
+    if not appdata:
+        # Fallback for non-standard environments
+        base_dir = os.path.join(os.path.expanduser("~"), ".remis")
+    else:
+        base_dir = os.path.join(appdata, "RemisModFactory")
+    
+    os.makedirs(base_dir, exist_ok=True)
+    return base_dir
+
+def get_resource_dir():
+    """Returns the directory containing static resources."""
+    if getattr(sys, 'frozen', False):
+        # Check for PyInstaller temporary directory (onefile)
+        if hasattr(sys, '_MEIPASS'):
+            return sys._MEIPASS
+        # Check for _internal directory (onedir)
+        internal = os.path.join(os.path.dirname(sys.executable), '_internal')
+        if os.path.exists(internal):
+            return internal
+        return os.path.dirname(sys.executable)
+    return get_app_root()
+
+PROJECT_ROOT = get_app_root()
+APP_DATA_DIR = get_app_data_dir()
+RESOURCE_DIR = get_resource_dir()
+
+# Data directory for static assets (in dev) or resources (in prod)
+# In dev: PROJECT_ROOT/data
+# In prod: RESOURCE_DIR/data (if we ship data folder) or just RESOURCE_DIR if flattened
+# For now, let's assume we ship a 'data' folder in resources
+DATA_DIR = os.path.join(RESOURCE_DIR, 'data') if getattr(sys, 'frozen', False) else os.path.join(PROJECT_ROOT, 'data')
+
 SOURCE_DIR = os.path.join(PROJECT_ROOT, 'source_mod')
 DEST_DIR = os.path.join(PROJECT_ROOT, 'my_translation')
 
 # --- Database Paths ---
-PROJECTS_DB_PATH = os.path.join(DATA_DIR, "projects.sqlite")
-MODS_CACHE_DB_PATH = os.path.join(DATA_DIR, "mods_cache.sqlite")
-TRANSLATION_PROGRESS_DB_PATH = os.path.join(DATA_DIR, "translation_progress.sqlite")
+# All user databases live in AppData
+PROJECTS_DB_PATH = os.path.join(APP_DATA_DIR, "projects.sqlite")
+MODS_CACHE_DB_PATH = os.path.join(APP_DATA_DIR, "mods_cache.sqlite")
+TRANSLATION_PROGRESS_DB_PATH = os.path.join(APP_DATA_DIR, "translation_progress.sqlite")
+# The main glossary database
+DATABASE_PATH = os.path.join(APP_DATA_DIR, "database.sqlite")
 
 # --- API Provider Configuration ---
 DEFAULT_API_PROVIDER = "gemini"

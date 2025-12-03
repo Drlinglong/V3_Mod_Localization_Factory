@@ -24,6 +24,11 @@ load_api_keys_to_env()
 logger.setup_logger()
 i18n.load_language() # Load default language
 
+# Initialize Database (Cold Start / Seed Data)
+# Must be called BEFORE importing routers/services which instantiate managers
+from scripts.core.db_initializer import initialize_database
+initialize_database()
+
 # Import Routers
 from scripts.routers import (
     projects,
@@ -40,11 +45,45 @@ from scripts.routers import (
     system
 )
 
+import time
+import logging
+from fastapi import Request
+
+# Get logger for this module
+logger_web = logging.getLogger(__name__)
+
 app = FastAPI(
     title="P社Mod本地化工厂 API",
     description="为P社Mod本地化工厂提供Web UI的后端API。",
     version="1.0.0",
 )
+
+@app.middleware("http")
+async def log_requests(request: Request, call_next):
+    start_time = time.time()
+    
+    # 记录请求进入 (Optional)
+    # logger_web.info(f"➡️ [REQ] {request.method} {request.url.path}") 
+
+    try:
+        response = await call_next(request)
+        process_time = (time.time() - start_time) * 1000
+        
+        # 记录请求完成 (包含状态码和耗时)
+        logger_web.info(
+            f"✅ [API] {request.method} {request.url.path} "
+            f"- Status: {response.status_code} - Time: {process_time:.2f}ms"
+        )
+        return response
+    except Exception as e:
+        process_time = (time.time() - start_time) * 1000
+        # 记录未捕获的异常 (炸厕所现场)
+        logger_web.error(
+            f"❌ [ERR] {request.method} {request.url.path} "
+            f"- Time: {process_time:.2f}ms - Error: {str(e)}",
+            exc_info=True # 打印堆栈信息
+        )
+        raise e
 
 # CORS Configuration
 app.add_middleware(

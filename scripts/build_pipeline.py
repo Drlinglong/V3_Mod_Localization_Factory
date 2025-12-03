@@ -42,6 +42,21 @@ def main():
         print(f"[INIT] Creating {binaries_dir}")
         os.makedirs(binaries_dir)
 
+    # Step 1.5: Export Seed Data
+    print_step("Step 1.5: Export Seed Data")
+    export_script = os.path.join(scripts_dir, "utils", "export_seed_data.py")
+    run_command(f"python \"{export_script}\"", cwd=project_root)
+    
+    seed_main = os.path.join(project_root, "data", "seed_data_main.sql")
+    seed_projects = os.path.join(project_root, "data", "seed_data_projects.sql")
+    
+    if not os.path.exists(seed_main):
+        print(f"[ERROR] Main seed data not found at {seed_main}")
+        sys.exit(1)
+    if not os.path.exists(seed_projects):
+        print(f"[ERROR] Projects seed data not found at {seed_projects}")
+        sys.exit(1)
+
     # Step 2: Freeze the Backend (PyInstaller)
     print_step("Step 2: Freeze the Backend (PyInstaller)")
     
@@ -52,9 +67,19 @@ def main():
     # --noconsole: No terminal window
     # --name web_server: Name of the executable
     # --hidden-import: Ensure dependencies are included
+    # --add-data: Include seed data and demos
+    
+    add_data_args = f'--add-data "{seed_main};data" --add-data "{seed_projects};data"'
+    
+    # Check for demos folder
+    demos_dir = os.path.join(project_root, "demos")
+    if os.path.exists(demos_dir):
+        add_data_args += f' --add-data "{demos_dir};demos"'
+    
     pyinstaller_cmd = (
         f'pyinstaller --clean --onefile --noconsole --name web_server '
         f'--hidden-import uvicorn --hidden-import fastapi --hidden-import pydantic '
+        f'{add_data_args} '
         f'"{web_server_script}"'
     )
     

@@ -1,3 +1,7 @@
+import os
+import sqlite3
+import sys
+from scripts import app_settings
 from scripts.core.glossary_manager import GlossaryManager
 from scripts.core.project_manager import ProjectManager
 from scripts.core.archive_manager import ArchiveManager
