@@ -1,0 +1,4 @@
+-- Remis Main DB Seed Data
+BEGIN TRANSACTION;
+
+COMMIT;

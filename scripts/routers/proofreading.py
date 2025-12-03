@@ -10,6 +10,8 @@ from scripts.schemas.proofreading import SaveProofreadingRequest
 from scripts.utils.quote_extractor import QuoteExtractor
 from scripts.core.file_builder import patch_file_content
 
+logger = logging.getLogger(__name__)
+
 router = APIRouter()
 
 def find_source_template(target_path: str, source_lang: str, current_lang: str, project_id: str = None) -> str:
@@ -61,7 +63,7 @@ def find_source_template(target_path: str, source_lang: str, current_lang: str, 
             return new_path_str
             
     except Exception as e:
-        print(f"Strategy 1 failed: {e}")
+        logger.warning(f"Strategy 1 failed: {e}")
         # Continue to Strategy 2
 
     # --- Strategy 2: Project-wide Search (The "Nuclear Option") ---
@@ -79,10 +81,10 @@ def find_source_template(target_path: str, source_lang: str, current_lang: str, 
                 files = project_manager.get_project_files(project_id)
                 for f in files:
                     if os.path.basename(f['file_path']).lower() == expected_source_filename.lower():
-                        print(f"Fallback found source file: {f['file_path']}")
+                        logger.info(f"Fallback found source file: {f['file_path']}")
                         return f['file_path']
     except Exception as e:
-        print(f"Strategy 2 failed: {e}")
+        logger.warning(f"Strategy 2 failed: {e}")
 
     return ""
 
@@ -134,13 +136,14 @@ def get_proofread_data(project_id: str, file_id: str):
         template_file_path = find_source_template(target_file_path, source_lang, current_lang, project_id)
 
     if not template_file_path or not os.path.exists(template_file_path):
-        print(f"Warning: Source file not found for {target_file_path}. Using target as template (formatting may be lost).")
+        logger.warning(f"Source file not found for {target_file_path}. Using target as template (formatting may be lost).")
         template_file_path = target_file_path
 
     # 5. 解析源文件 (Master Template)
     try:
         original_lines, texts_to_translate, key_map = QuoteExtractor.extract_from_file(template_file_path)
     except Exception as e:
+        logger.error(f"Failed to parse template file: {str(e)}", exc_info=True)
         raise HTTPException(status_code=500, detail=f"Failed to parse template file: {str(e)}")
 
     original_content = "".join(original_lines)
@@ -158,9 +161,9 @@ def get_proofread_data(project_id: str, file_id: str):
         # Fallback if detection fails, though from_str is robust
         lang_code = "en"
             
-    logging.info(f"DEBUG: Fetching DB entries for mod='{mod_name}', file='{template_file_path}', lang='{lang_code}'")
+    logger.debug(f"Fetching DB entries for mod='{mod_name}', file='{template_file_path}', lang='{lang_code}'")
     db_entries = archive_manager.get_entries(mod_name, template_file_path, lang_code)
-    logging.info(f"DEBUG: Found {len(db_entries)} entries in DB.")
+    logger.debug(f"Found {len(db_entries)} entries in DB.")
     db_translation_map = {e['key']: e['translation'] for e in db_entries if e['translation']}
     
     # 7. 准备右侧栏数据 (Final Edit) - 来自磁盘上的目标文件
@@ -173,7 +176,7 @@ def get_proofread_data(project_id: str, file_id: str):
                     k = target_map[i]['key_part'].strip()
                     disk_translation_map[k] = text
         except Exception as e:
-            print(f"Failed to parse target file {target_file_path}: {e}")
+            logger.error(f"Failed to parse target file {target_file_path}: {e}", exc_info=True)
 
     # 8. 构建返回数据
     entries = []
@@ -214,7 +217,7 @@ def get_proofread_data(project_id: str, file_id: str):
         )
         ai_content = "".join(ai_lines)
     except Exception as e:
-        print(f"AI Patching failed: {e}")
+        logger.error(f"AI Patching failed: {e}", exc_info=True)
         ai_content = original_content
 
     # Final Content (Right Pane - Initial View)
@@ -229,7 +232,7 @@ def get_proofread_data(project_id: str, file_id: str):
         )
         file_content = "".join(final_lines)
     except Exception as e:
-        print(f"Final Patching failed: {e}")
+        logger.error(f"Final Patching failed: {e}", exc_info=True)
         file_content = original_content
 
     return {
@@ -323,4 +326,5 @@ def save_proofreading_db(request: SaveProofreadingRequest):
         return {"status": "success", "output_path": target_file_path}
         
     except Exception as e:
+        logger.error(f"Save failed: {e}", exc_info=True)
         raise HTTPException(status_code=500, detail=str(e))

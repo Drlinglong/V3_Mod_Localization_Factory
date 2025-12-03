@@ -10,6 +10,8 @@ from scripts.core.neologism_miner import NeologismMiner
 from scripts.core.glossary_manager import glossary_manager
 from scripts.core.project_manager import ProjectManager
 
+logger = logging.getLogger(__name__)
+
 CACHE_DIR = os.path.join(PROJECT_ROOT, "data", "cache", "neologism_candidates")
 
 class Candidate(BaseModel):
@@ -41,7 +43,7 @@ class NeologismManager:
                     data = json.load(f)
                     return [Candidate(**item) for item in data]
             except Exception as e:
-                self.logger.error(f"Failed to load candidates for {project_id}: {e}")
+                self.logger.error(f"Failed to load candidates for {project_id}: {e}", exc_info=True)
                 return []
         else:
             return []
@@ -53,7 +55,7 @@ class NeologismManager:
             with open(cache_file, 'w', encoding='utf-8') as f:
                 json.dump([c.dict() for c in candidates], f, ensure_ascii=False, indent=2)
         except Exception as e:
-            self.logger.error(f"Failed to save candidates for {project_id}: {e}")
+            self.logger.error(f"Failed to save candidates for {project_id}: {e}", exc_info=True)
 
     def get_pending_candidates(self, project_id: Optional[str] = None) -> List[Dict]:
         """Get pending candidates, optionally filtered by project."""
@@ -94,6 +96,7 @@ class NeologismManager:
         if glossary_manager.add_entry(glossary_id, storage_entry):
             candidate.status = "approved"
             self.save_candidates(project_id, candidates)
+            self.logger.info(f"Approved candidate {candidate_id} for project {project_id}")
             return True
         return False
 
@@ -104,6 +107,7 @@ class NeologismManager:
         if candidate:
             candidate.status = "ignored"
             self.save_candidates(project_id, candidates)
+            self.logger.info(f"Rejected candidate {candidate_id} for project {project_id}")
             return True
         return False
     
@@ -114,6 +118,7 @@ class NeologismManager:
         if candidate:
             candidate.suggestion = suggestion
             self.save_candidates(project_id, candidates)
+            self.logger.info(f"Updated candidate {candidate_id} suggestion for project {project_id}")
             return True
         return False
 
@@ -127,6 +132,7 @@ class NeologismManager:
         5. Call LLM for analysis (Stage B).
         6. Save candidates.
         """
+        self.logger.info(f"Starting mining workflow for project {project_id} with {len(file_paths)} files.")
         handler = get_handler(api_provider)
         miner = NeologismMiner(handler)
         
@@ -194,7 +200,7 @@ class NeologismManager:
                             term_data[term] = item
                             
             except Exception as e:
-                self.logger.error(f"Error reading file {file_path}: {e}")
+                self.logger.error(f"Error reading file {file_path}: {e}", exc_info=True)
 
         # Load existing candidates for this project
         existing_candidates = self.load_candidates(project_id)
@@ -231,6 +237,7 @@ class NeologismManager:
         # Merge with existing and save
         all_candidates = existing_candidates + new_candidates
         self.save_candidates(project_id, all_candidates)
+        self.logger.info(f"Mining complete. Found {len(new_terms)} new terms.")
         return len(new_terms)
 
     def _find_context_snippets(self, term: str, file_path: str, max_snippets: int = 3) -> List[str]:
@@ -289,7 +296,7 @@ class NeologismManager:
             
             return json.loads(cleaned)
         except Exception as e:
-            self.logger.error(f"Analysis failed for term {term}: {e}")
+            self.logger.error(f"Analysis failed for term {term}: {e}", exc_info=True)
             return {"suggestion": "", "reasoning": "Analysis failed"}
 
 neologism_manager = NeologismManager()
