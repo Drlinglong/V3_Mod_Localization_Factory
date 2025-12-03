@@ -3,12 +3,10 @@ import { Container, Title, Text, Paper, Group, Badge, Button, ScrollArea, Box, L
 import { IconArchive, IconArrowLeft, IconRefresh } from '@tabler/icons-react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import { useTranslation } from 'react-i18next';
 
 const API_BASE = '/api';
 
 export default function ArchivesPage() {
-  const { t } = useTranslation();
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();

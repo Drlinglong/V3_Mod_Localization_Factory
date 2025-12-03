@@ -31,6 +31,7 @@ import {
   ThemeIcon,
   Badge,
   Box,
+  Tooltip,
 } from '@mantine/core';
 import { IconAlertCircle, IconCheck, IconX, IconSettings, IconRefresh, IconDownload, IconArrowLeft, IconPlayerStop, IconChevronDown, IconChevronUp, IconFolder, IconFolderOpen, IconPlayerPlay, IconLanguage, IconRobot, IconAdjustments, IconSearch } from '@tabler/icons-react';
 import { useNavigate } from 'react-router-dom';
@@ -116,28 +117,69 @@ const InitialTranslation = () => {
       .catch(error => {
         console.error("Failed to load projects", error);
       });
+
+    // Fetch Prompts for Custom Global Prompt
+    axios.get('/api/prompts')
+      .then(response => {
+        if (response.data.custom_global_prompt) {
+          form.setFieldValue('mod_context', response.data.custom_global_prompt);
+        }
+      })
+      .catch(err => console.error("Failed to fetch prompts", err));
   }, [notificationStyle]);
 
   // Update available models based on provider
   useEffect(() => {
-    if (form.values.api_provider === 'gemini') {
-      setAvailableModels([
-        { value: 'gemini-pro', label: 'Gemini Pro' },
-        { value: 'gemini-flash', label: 'Gemini Flash' },
-      ]);
-      form.setFieldValue('model_name', 'gemini-flash');
-    } else if (form.values.api_provider === 'ollama') {
-      setAvailableModels([
-        { value: 'qwen3:4b', label: 'Qwen 3 (4B)' },
-        { value: 'qwen2.5:7b', label: 'Qwen 2.5 (7B)' },
-        { value: 'llama3', label: 'Llama 3' },
-      ]);
-      form.setFieldValue('model_name', 'qwen3:4b');
+    const providerConfig = config.api_providers.find(p => p.value === form.values.api_provider);
+
+    if (providerConfig) {
+      let models = [];
+
+      // Add default models
+      if (providerConfig.default_models && providerConfig.default_models.length > 0) {
+        models = models.concat(providerConfig.default_models.map(m => ({ value: m, label: m })));
+      }
+
+      // Add custom models
+      if (providerConfig.custom_models && providerConfig.custom_models.length > 0) {
+        models = models.concat(providerConfig.custom_models.map(m => ({ value: m, label: `${m} (Custom)` })));
+      }
+
+      // Fallbacks for hardcoded providers if config is missing (legacy support)
+      if (models.length === 0) {
+        if (form.values.api_provider === 'gemini') {
+          models = [
+            { value: 'gemini-pro', label: 'Gemini Pro' },
+            { value: 'gemini-flash', label: 'Gemini Flash' },
+          ];
+        } else if (form.values.api_provider === 'ollama') {
+          models = [
+            { value: 'qwen3:4b', label: 'Qwen 3 (4B)' },
+            { value: 'qwen2.5:7b', label: 'Qwen 2.5 (7B)' },
+            { value: 'llama3', label: 'Llama 3' },
+          ];
+        }
+      }
+
+      setAvailableModels(models);
+
+      // Auto-select first model if current selection is invalid or empty
+      if (models.length > 0) {
+        const currentModelValid = models.some(m => m.value === form.values.model_name);
+        if (!currentModelValid) {
+          form.setFieldValue('model_name', models[0].value);
+        }
+      } else {
+        // If no models available (e.g. custom provider without models), allow free text or keep empty?
+        // For now, keep empty, but maybe we should allow free text input if no models defined?
+        // The requirement says "dropdown menu", so we stick to dropdown.
+        form.setFieldValue('model_name', '');
+      }
     } else {
       setAvailableModels([]);
       form.setFieldValue('model_name', '');
     }
-  }, [form.values.api_provider]);
+  }, [form.values.api_provider, config.api_providers]);
 
   // Polling Logic
   useEffect(() => {
@@ -490,11 +532,19 @@ const InitialTranslation = () => {
                         />
 
                         {availableModels.length > 0 && (
-                          <Select
-                            label="Model"
-                            data={availableModels}
-                            {...form.getInputProps('model_name')}
-                          />
+                          <Group align="flex-end" gap={5} style={{ width: '100%' }}>
+                            <Select
+                              label="Model"
+                              data={availableModels}
+                              {...form.getInputProps('model_name')}
+                              style={{ flex: 1 }}
+                            />
+                            <Tooltip label={t('model_settings_hint', 'You can add more models in Settings > API Settings')} withArrow>
+                              <ThemeIcon variant="light" color="gray" size="lg" mb={2}>
+                                <IconSettings size={18} />
+                              </ThemeIcon>
+                            </Tooltip>
+                          </Group>
                         )}
                       </Stack>
                     </Card>

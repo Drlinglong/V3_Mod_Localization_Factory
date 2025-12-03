@@ -1,5 +1,4 @@
 from pydantic import BaseModel
-
 from typing import Optional, List
 
 class UpdateConfigRequest(BaseModel):
@@ -10,3 +9,9 @@ class UpdateConfigRequest(BaseModel):
 class UpdateApiKeyRequest(BaseModel):
     provider_id: str
     api_key: str
+
+class UpdateProviderConfigRequest(BaseModel):
+    provider_id: str
+    api_key: Optional[str] = None
+    models: Optional[List[str]] = None # Custom models list
+    api_url: Optional[str] = None # Custom API URL

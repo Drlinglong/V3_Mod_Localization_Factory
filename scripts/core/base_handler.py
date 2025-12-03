@@ -10,6 +10,7 @@ from scripts.utils.punctuation_handler import generate_punctuation_prompt
 from scripts.core.glossary_manager import glossary_manager
 from scripts.utils.structured_parser import parse_response
 from scripts.utils.text_clean import mask_special_tokens
+from scripts.core.prompt_manager import prompt_manager
 
 
 class BaseApiHandler(ABC):
@@ -52,7 +53,15 @@ class BaseApiHandler(ABC):
 
         effective_target_lang_name = target_lang.get("custom_name", target_lang["name"]) if target_lang.get("is_shell") else target_lang["name"]
 
-        base_prompt = game_profile["prompt_template"].format(
+        effective_target_lang_name = target_lang.get("custom_name", target_lang["name"]) if target_lang.get("is_shell") else target_lang["name"]
+
+        # Use PromptManager to get the effective prompt (handling overrides)
+        prompt_template = prompt_manager.get_effective_prompt(game_profile["id"])
+        if not prompt_template:
+            # Fallback if for some reason it's missing (shouldn't happen if game_profile is valid)
+            prompt_template = game_profile.get("prompt_template", "")
+
+        base_prompt = prompt_template.format(
             source_lang_name=source_lang["name"],
             target_lang_name=effective_target_lang_name,
         )

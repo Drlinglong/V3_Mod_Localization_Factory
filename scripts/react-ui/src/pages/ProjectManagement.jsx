@@ -35,7 +35,7 @@ export default function ProjectManagement() {
 
   // Selection State
   const [selectedProject, setSelectedProject] = useState(null);
-  const [projectFiles, setProjectFiles] = useState([]);
+  // const [projectFiles, setProjectFiles] = useState([]); // Unused
   const [projectDetails, setProjectDetails] = useState(null); // For Overview
 
   // Form State
@@ -89,7 +89,7 @@ export default function ProjectManagement() {
 
       const files = filesRes.data;
       const config = configRes.data;
-      setProjectFiles(files);
+      // setProjectFiles(files);
 
       // Construct Details for Overview
       const totalLines = files.reduce((acc, f) => acc + (f.line_count || 0), 0);
