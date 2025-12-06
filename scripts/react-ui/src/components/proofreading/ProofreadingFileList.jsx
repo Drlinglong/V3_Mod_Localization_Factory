@@ -32,7 +32,7 @@ export const SourceFileSelector = ({
                 <Select
                     size="xs"
                     placeholder="Select Source File"
-                    data={sourceFiles.map(f => ({ value: f.file_id, label: f.file_path.split('/').pop() }))}
+                    data={sourceFiles.map(f => ({ value: f.file_id, label: f.file_path.replace(/\\/g, '/').split('/').pop() }))}
                     value={currentSourceFile?.file_id}
                     onChange={onSourceFileChange}
                     style={{ width: '200px' }}
@@ -74,7 +74,7 @@ export const AIFileSelector = ({
                     size="xs"
                     placeholder="Select Translation"
                     data={currentSourceFile && targetFilesMap[currentSourceFile.file_id]
-                        ? targetFilesMap[currentSourceFile.file_id].map(f => ({ value: f.file_id, label: f.file_path.split('/').pop() }))
+                        ? targetFilesMap[currentSourceFile.file_id].map(f => ({ value: f.file_id, label: f.file_path.replace(/\\/g, '/').split('/').pop() }))
                         : []}
                     value={currentTargetFile?.file_id}
                     onChange={onTargetFileChange}

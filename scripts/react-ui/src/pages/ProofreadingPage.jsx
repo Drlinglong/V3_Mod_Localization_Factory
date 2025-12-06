@@ -6,7 +6,8 @@ import {
   Button,
   Group,
   Select,
-  Tabs
+  Tabs,
+  Text
 } from '@mantine/core';
 import {
   IconFolder,
@@ -57,47 +58,51 @@ const ProofreadingPage = () => {
       <Paper withBorder p="xs" radius="md" className={layoutStyles.glassCard} style={{ flex: 1, display: 'flex', flexDirection: 'column', width: '100%', overflow: 'hidden' }}>
 
         {/* Header */}
-        <Group position="apart" mb="xs">
+        <Group justify="space-between" mb="xs" w="100%">
           <Group>
             <Title order={4}>{t('page_title_proofreading')}</Title>
             <ProjectSelector
               projects={state.projects}
               selectedProject={state.selectedProject}
-              isHeaderOpen={state.isHeaderOpen}
-              onToggleHeader={() => state.setIsHeaderOpen(!state.isHeaderOpen)}
               onProjectSelect={state.handleProjectSelect}
             />
           </Group>
 
           <Group>
-            <Select
-              value={zoomLevel}
-              onChange={setZoomLevel}
-              data={[
-                { value: '1', label: '100%' },
-                { value: '1.1', label: '110%' },
-                { value: '1.25', label: '125%' },
-                { value: '1.5', label: '150%' },
-                { value: '1.75', label: '175%' },
-                { value: '2', label: '200%' },
-              ]}
-              size="xs"
-              style={{ width: 80 }}
-            />
-            <Button
-              variant="default"
-              size="xs"
-              leftSection={<IconFolder size={14} />}
-              onClick={state.handleOpenFolder}
-            >
-              {t('proofreading.open_folder')}
-            </Button>
-            <Tabs value={activeTab} onChange={setActiveTab} variant="pills" radius="md">
-              <Tabs.List>
-                <Tabs.Tab value="file" leftSection={<IconFileText size={14} />}>{t('proofreading.tab_file_mode')}</Tabs.Tab>
-                <Tabs.Tab value="free" leftSection={<IconEdit size={14} />}>{t('proofreading.tab_free_mode')}</Tabs.Tab>
-              </Tabs.List>
-            </Tabs>
+
+            <Group spacing="xs">
+              <Text size="xs" c="dimmed" mr={4}>{t('common.page_scale', 'Scale')}:</Text>
+              <Select
+                value={zoomLevel}
+                onChange={setZoomLevel}
+                data={[
+                  { value: '1', label: '100%' },
+                  { value: '1.1', label: '110%' },
+                  { value: '1.25', label: '125%' },
+                  { value: '1.5', label: '150%' },
+                  { value: '1.75', label: '175%' },
+                  { value: '2', label: '200%' },
+                ]}
+                size="xs"
+                variant="filled"
+                style={{ width: 75 }}
+                styles={{ input: { paddingRight: 0, textAlign: 'center' } }}
+              />
+              <Button
+                variant="default"
+                size="xs"
+                leftSection={<IconFolder size={14} />}
+                onClick={state.handleOpenFolder}
+              >
+                {t('proofreading.open_folder')}
+              </Button>
+              <Tabs value={activeTab} onChange={setActiveTab} variant="pills" radius="md">
+                <Tabs.List>
+                  <Tabs.Tab value="file" leftSection={<IconFileText size={14} />}>{t('proofreading.tab_file_mode')}</Tabs.Tab>
+                  <Tabs.Tab value="free" leftSection={<IconEdit size={14} />}>{t('proofreading.tab_free_mode')}</Tabs.Tab>
+                </Tabs.List>
+              </Tabs>
+            </Group>
           </Group>
         </Group>
 

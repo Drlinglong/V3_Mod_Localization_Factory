@@ -81,9 +81,13 @@ def find_source_template(target_path: str, source_lang: str, current_lang: str, 
                 # Search all project files
                 files = project_manager.get_project_files(project_id)
                 for f in files:
-                    if os.path.basename(f['file_path']).lower() == expected_source_filename.lower():
-                        logger.info(f"Fallback found source file: {f['file_path']}")
-                        return f['file_path']
+                    f_path = f['file_path']
+                    if os.path.basename(f_path).lower() == expected_source_filename.lower():
+                        if os.path.exists(f_path):
+                            logger.info(f"Fallback found source file: {f_path}")
+                            return f_path
+                        else:
+                            logger.warning(f"Fallback match found in DB but missing on disk: {f_path}")
     except Exception as e:
         logger.warning(f"Strategy 2 failed: {e}")
 
@@ -125,8 +129,9 @@ def get_proofread_data(project_id: str, file_id: str):
     current_lang_key = f"l_{current_lang}"
     
     # 3. 确定源语言 (Source Language)
-    source_lang = project.get('source_language', 'simp_chinese')
-    logger.info(f"Proofreading: Project '{project['name']}' (ID: {project_id}) Source Lang: '{source_lang}'")
+    iso_source = project.get('source_language', 'simp_chinese')
+    source_lang = iso_to_paradox(iso_source)
+    logger.info(f"Proofreading: Project '{project['name']}' (ID: {project_id}) Source Lang: '{source_lang}' (ISO: {iso_source})")
     
     # Validation: If source_lang is same as current_lang, checking if this is really the source file?
     # User Case: "remis_demo_l_japanese.yml" (Current=Japanese). Source should be Chinese.
