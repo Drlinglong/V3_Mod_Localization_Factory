@@ -14,7 +14,7 @@ const useProofreadingState = () => {
     // ==================== 项目相关状态 ====================
     const [projects, setProjects] = useState([]);
     const [selectedProject, setSelectedProject] = useState(null);
-    const [isHeaderOpen, setIsHeaderOpen] = useState(false);
+
     const [projectFilter, setProjectFilter] = useState('');
 
     // ==================== 文件导航状态 ====================
@@ -65,53 +65,49 @@ const useProofreadingState = () => {
     const groupFiles = useCallback((files) => {
         if (!selectedProject) return;
 
-        // Standardize Source Language to Paradox Format (e.g. en -> english, zh-cn -> simp_chinese)
+        // Strict Source Identification based on Project Settings
+        // We do NOT trust DB 'file_type' blindly because scanner might misclassify English files as Source
+        // if the user's directory structure is messy.
         const dbLang = selectedProject.source_language || 'english';
         const paradoxLang = toParadoxLang(dbLang);
+        const sourceSuffix = `_l_${paradoxLang}.yml`;
 
-        // Construct pattern: _l_{paradoxLang}.yml
-        // const sourcePattern = `_l_${paradoxLang}.yml`; 
-
-        // Fix: Use 'file_type' from DB as the Single Source of Truth
-        const sources = files.filter(f => f.file_type === 'source');
-
+        const sources = [];
         const targetsMap = {};
         const sourceBaseMap = {};
 
         const getFileName = (path) => path.replace(/\\/g, '/').split('/').pop();
 
-        sources.forEach(s => {
-            const fileName = getFileName(s.file_path);
-            // Robust base name extraction: Remove _l_{lang}.yml CASE INSENSITIVE
-            // Use paradoxLang here
-            const regex = new RegExp(`_l_${paradoxLang}\\.yml$`, 'i');
-            const baseName = fileName.replace(regex, '');
-            sourceBaseMap[baseName.toLowerCase()] = s;
-            targetsMap[s.file_id] = [];
-        });
-
+        // Pass 1: Identify REAL Sources based on filename pattern
         files.forEach(f => {
             const fileName = getFileName(f.file_path);
+            if (fileName.toLowerCase().endsWith(sourceSuffix.toLowerCase())) {
+                sources.push(f);
+                const baseName = fileName.slice(0, -sourceSuffix.length);
+                sourceBaseMap[baseName.toLowerCase()] = f;
+                targetsMap[f.file_id] = [];
+            }
+        });
 
-            // Skip if it looks like a source file (matches standard pattern)
-            // Or explicitly if DB says source
-            if (f.file_type === 'source') return;
+        // Pass 2: Identify Targets (everything that is NOT a source)
+        files.forEach(f => {
+            // Skip if it was already identified as source
+            if (sources.includes(f)) return;
 
-            // Try to match against sourceBaseMap
-            // Target file: {base}_l_{targetLang}.yml
-            // We strip the _l_{targetLang}.yml part? 
-            // We don't know targetLang easily, so let's try to match prefix.
+            const fileName = getFileName(f.file_path);
 
-            // Iterate sources and see if fileName starts with source's base + '_l_'
+            // Try to match against known source bases
+            // Strategy: Check if fileName starts with any sourceBase (+ _l_)
             for (const baseLower in sourceBaseMap) {
-                // Original usage: fileName.startsWith(base + '_l_')
-                // Now we compare case-insensitively
-                // But we need the original casing of the base to be safe? 
-                // Actually if we normalize everything to lower for checking it's safer for Paradox files.
+                // Check if it looks like a translation: {base}_l_{otherLang}.yml
+                // We roughly check if it starts with base.
+                // NOTE: Paradox files are fickle. 
+                // Strict check: fileName starts with base (case insensitive) AND contains _l_
 
-                if (fileName.toLowerCase().startsWith(baseLower + '_l_') && f.file_id !== sourceBaseMap[baseLower].file_id) {
+                if (fileName.toLowerCase().startsWith(baseLower) && fileName.toLowerCase().includes('_l_')) {
+                    // Ensure it belongs to THIS source file's group
                     targetsMap[sourceBaseMap[baseLower].file_id].push(f);
-                    break;
+                    break; // One file belongs to one source (usually)
                 }
             }
         });
@@ -183,12 +179,13 @@ const useProofreadingState = () => {
         setLoading(true);
         try {
             // Load Source File
-            if (sourceFilePath) {
+            if (sourceFilePath && sourceFilePath.trim() !== '') {
                 try {
                     const readRes = await axios.post('/api/system/read_file', { file_path: sourceFilePath });
                     setOriginalContentStr(readRes.data.content || "");
                 } catch (readError) {
                     console.error("Failed to read source file from disk:", readError);
+                    // Do not show error notification to user to reduce noise, just clear content
                     setOriginalContentStr("");
                 }
             } else {
@@ -267,7 +264,9 @@ const useProofreadingState = () => {
 
     const parseEditorContentToEntries = useCallback((content) => {
         const entries = [];
-        const regex = /([\w\.]+)(?::\d+)?\s*"((?:[^"\\]|\\.)*)"/g;
+        // Support standard Paradox syntax: key:0 "value"
+        // Also supports indentation
+        const regex = /^\s*([\w\.]+)(?:\s*:\s*\d+)?\s*"((?:[^"\\]|\\.)*)"/gm;
         let match;
         while ((match = regex.exec(content)) !== null) {
             entries.push({ key: match[1], value: match[2] });
@@ -442,8 +441,11 @@ const useProofreadingState = () => {
     useEffect(() => {
         if (!entries.length || !finalContentStr) return;
 
+        // Regex to extract keys from content: 
+        // Matches: key:0 "value"
+        // Improved: Allow whitespace around ':' and before key
         const currentKeys = new Set();
-        const regex = /([\w\.]+):0\s*"/g;
+        const regex = /^\s*([\w\.]+)\s*:\s*0\s*"/gm;
         let match;
         while ((match = regex.exec(finalContentStr)) !== null) {
             currentKeys.add(match[1]);
@@ -503,8 +505,7 @@ const useProofreadingState = () => {
         projects,
         selectedProject,
         setSelectedProject,
-        isHeaderOpen,
-        setIsHeaderOpen,
+
         projectFilter,
         setProjectFilter,
 
