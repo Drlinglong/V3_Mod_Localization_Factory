@@ -12,6 +12,15 @@ from scripts.app_settings import PROJECTS_DB_PATH, SOURCE_DIR, GAME_ID_ALIASES
 logger = logging.getLogger(__name__)
 
 from scripts.core.project_json_manager import ProjectJsonManager
+# from scripts.services import kanban_service # Circular import if we import instance here? 
+# project_manager is imported in services.py. 
+# So we should probably import the instance inside methods OR import class and instantiated?
+# Better: Import the service instance at the top of the file if possible, or inside methods if circular.
+# services.py imports ProjectManager. So importing services here is Circular.
+# Solution: Import the CLASS here, or inject it? 
+# Or just import services inside the methods?
+# Let's import inside methods for now to be safe, or import the module scripts.core.services.kanban_service
+from scripts.core.services.kanban_service import KanbanService
 
 @dataclass
 class Project:
@@ -35,35 +44,51 @@ class ProjectFile:
     file_type: str = 'source' # 'source' or 'translation'
 
 class ProjectManager:
-    def __init__(self, db_path: str = PROJECTS_DB_PATH):
+    def __init__(self, file_service=None, project_repository=None, db_path: str = PROJECTS_DB_PATH):
+        """
+        Args:
+            file_service: Injected FileService instance. 
+            project_repository: Injected ProjectRepository instance.
+        """
         self.db_path = db_path
-        self._init_db()
+        self._init_db() # Keeps schema init just in case, or delegate to repo? Repo doesn't strictly have init_db yet. 
+                        # Ideally Repo should handle init. But let's leave legacy init for safety or move it.
+                        # Since ProjectManager is fading, let's keep it harmless.
+        self.file_service = file_service
+        self.repository = project_repository
 
-    def _get_connection(self):
-        return sqlite3.connect(self.db_path)
+        # Fallback injection logic
+        if self.file_service:
+            self.kanban_service = self.file_service.kanban_service
+        else:
+            from scripts.core.services.kanban_service import KanbanService
+            self.kanban_service = KanbanService()
+        
+        if not self.repository:
+            # Fallback for tests/legacy
+            from scripts.core.repositories.project_repository import ProjectRepository
+            self.repository = ProjectRepository(db_path)
+
+    # _get_connection removed as we use repository
 
     def _init_db(self):
-        """Initialize the projects database tables."""
-        os.makedirs(os.path.dirname(self.db_path), exist_ok=True)
-        conn = self._get_connection()
+        # We should really move this to Repository's initialization or a DbContext
+        # But for now, let's just use the Repo's connection if we had one?
+        # Or just keep doing what it was doing but using the constant path.
+        conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
-
-        # Create Projects table
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS projects (
                 project_id TEXT PRIMARY KEY,
                 name TEXT NOT NULL,
                 game_id TEXT NOT NULL,
                 source_path TEXT NOT NULL,
-                target_path TEXT,
+                source_language TEXT NOT NULL,
                 status TEXT DEFAULT 'active',
-                notes TEXT,
-                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+                created_at TEXT,
+                last_modified TEXT
             )
         ''')
-
-        # Create ProjectFiles table
-        # Added line_count and file_type columns
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS project_files (
                 file_id TEXT PRIMARY KEY,
@@ -73,29 +98,41 @@ class ProjectManager:
                 original_key_count INTEGER DEFAULT 0,
                 line_count INTEGER DEFAULT 0,
                 file_type TEXT DEFAULT 'source',
-                FOREIGN KEY (project_id) REFERENCES projects (project_id) ON DELETE CASCADE,
+                FOREIGN KEY (project_id) REFERENCES projects (project_id),
                 UNIQUE(project_id, file_path)
             )
         ''')
         
-        # Migration: Check if new columns exist, if not add them
-        cursor.execute("PRAGMA table_info(project_files)")
-        columns = [info[1] for info in cursor.fetchall()]
-        if 'line_count' not in columns:
-            cursor.execute("ALTER TABLE project_files ADD COLUMN line_count INTEGER DEFAULT 0")
-        if 'file_type' not in columns:
-            cursor.execute("ALTER TABLE project_files ADD COLUMN file_type TEXT DEFAULT 'source'")
-
-        # Migration for projects table
+        # --- Migrations ---
+        # Check projects table cols
         cursor.execute("PRAGMA table_info(projects)")
-        project_columns = [info[1] for info in cursor.fetchall()]
-        if 'notes' not in project_columns:
-            cursor.execute("ALTER TABLE projects ADD COLUMN notes TEXT DEFAULT ''")
+        p_cols = [info[1] for info in cursor.fetchall()]
+        
+        if 'last_modified' not in p_cols:
+            cursor.execute("ALTER TABLE projects ADD COLUMN last_modified TEXT")
+        if 'source_language' not in p_cols:
+            cursor.execute("ALTER TABLE projects ADD COLUMN source_language TEXT DEFAULT 'english'")
+        if 'created_at' not in p_cols:
+            cursor.execute("ALTER TABLE projects ADD COLUMN created_at TEXT")
+            
+        # Backfill defaults for any NULLs resulting from migration or legacy data
+        cursor.execute("UPDATE projects SET last_modified = datetime('now') WHERE last_modified IS NULL")
+        cursor.execute("UPDATE projects SET created_at = datetime('now') WHERE created_at IS NULL")
+        cursor.execute("UPDATE projects SET source_language = 'english' WHERE source_language IS NULL")
+
+        # Check project_files table cols
+        cursor.execute("PRAGMA table_info(project_files)")
+        pf_cols = [info[1] for info in cursor.fetchall()]
+        
+        if 'line_count' not in pf_cols:
+            cursor.execute("ALTER TABLE project_files ADD COLUMN line_count INTEGER DEFAULT 0")
+        if 'file_type' not in pf_cols:
+            cursor.execute("ALTER TABLE project_files ADD COLUMN file_type TEXT DEFAULT 'source'")
 
         conn.commit()
         conn.close()
 
-    def create_project(self, name: str, folder_path: str, game_id: str, source_language: str = "english") -> Project:
+    def create_project(self, name: str, folder_path: str, game_id: str, source_language: str) -> Dict[str, Any]:
         """
         Creates a new project.
         1. Moves folder to SOURCE_DIR if not already there.
@@ -137,6 +174,24 @@ class ProjectManager:
         else:
             logger.info("Folder is already in source directory.")
 
+        project_id = str(uuid.uuid4())
+        now = datetime.datetime.now().isoformat()
+        
+        from scripts.schemas.project import Project as PydanticProject # Renamed to avoid conflict with dataclass Project
+        
+        new_project = PydanticProject(
+            project_id=project_id,
+            name=name,
+            game_id=game_id,
+            source_path=final_source_path,
+            source_language=source_language,
+            status='active',
+            created_at=now,
+            last_modified=now
+        )
+        
+        saved_project = self.repository.create_project(new_project)
+        
         # Initialize JSON sidecar with empty translation_dirs
         # User will add translation directories via Manage Paths UI
         json_manager = ProjectJsonManager(final_source_path)
@@ -145,72 +200,26 @@ class ProjectManager:
             "source_language": source_language
         })
 
-        # Create project record in database
-        project_id = str(uuid.uuid4())
-        conn = self._get_connection()
-        cursor = conn.cursor()
-        cursor.execute('''
-            INSERT INTO projects (project_id, name, game_id, source_path, status, created_at, notes)
-            VALUES (?, ?, ?, ?, ?, ?, ?)
-        ''', (project_id, name, game_id, final_source_path, 'active', datetime.datetime.now().isoformat(), ''))
-        conn.commit()
-        conn.close()
-
-        # Create project object for return
-        project = {
-            'project_id': project_id,
-            'name': name,
-            'game_id': game_id,
-            'source_path': final_source_path,
-            'status': 'active',
-            'notes': ''
-        }
-
         # Scan files (Initial Scan)
         self.refresh_project_files(project_id)
-
-        return project
+        
+        return saved_project.model_dump()
 
     def get_project_by_file_id(self, file_id: str) -> Optional[Dict[str, Any]]:
         """Retrieves project details associated with a specific file ID."""
-        conn = self._get_connection()
-        cursor = conn.cursor()
-        cursor.execute('''
-            SELECT p.* 
-            FROM projects p
-            JOIN project_files pf ON p.project_id = pf.project_id
-            WHERE pf.file_id = ?
-        ''', (file_id,))
-        row = cursor.fetchone()
-        conn.close()
-        
-        if row:
-            # Map row to dictionary matching Project dataclass fields + extra
-            # Assuming columns order: project_id, name, game_id, source_path, target_path, status, notes, created_at
-            # But better to use row_factory or explicit mapping if columns might change.
-            # For now, let's use a dict based on column names from cursor.description if possible, 
-            # or just hardcode if we are sure of the schema.
-            # Let's use row_factory for safety in this method locally.
-            return {
-                'project_id': row[0],
-                'name': row[1],
-                'game_id': row[2],
-                'source_path': row[3],
-                'target_path': row[4],
-                'status': row[5],
-                'notes': row[6],
-                'created_at': row[7]
-            }
-            
-            # Fetch source_language from JSON
-            try:
-                json_manager = ProjectJsonManager(project['source_path'])
-                config = json_manager.get_config()
-                project['source_language'] = config.get('source_language', 'english')
-            except Exception:
-                project['source_language'] = 'english'
-            
-            return project
+        project_data = self.repository.get_project_by_file_id(file_id)
+        if project_data:
+             # Fetch source_language from JSON if source_path exists in data
+             # The repo returns p.*, so source_path is there.
+             try:
+                 source_path = project_data.get('source_path')
+                 if source_path:
+                    json_manager = ProjectJsonManager(source_path)
+                    config = json_manager.get_config()
+                    project_data['source_language'] = config.get('source_language', 'english')
+             except Exception:
+                 pass
+             return project_data
         return None
 
     def refresh_project_files(self, project_id: str):
@@ -227,255 +236,24 @@ class ProjectManager:
             json_manager = ProjectJsonManager(source_path)
             config = json_manager.get_config()
             translation_dirs = config.get('translation_dirs', [])
-            logger.info(f"Refresh: Loaded {len(translation_dirs)} translation directories from config")
-            logger.info(f"Refresh: Translation directories: {translation_dirs}")
         except Exception as e:
             logger.error(f"Failed to load translation_dirs from JSON: {e}")
             translation_dirs = []
 
-        # Collect all files to upsert
-        files_to_upsert = []
-        
-        # Helper to scan a directory
-        def scan_dir(root_path, file_type):
-            if not os.path.exists(root_path):
-                logger.warning(f"Directory not found: {root_path}")
-                return
-            
-            files_found = 0
-            for root, dirs, files in os.walk(root_path):
-                # Exclude hidden directories like .metadata, .git, etc.
-                dirs[:] = [d for d in dirs if not d.startswith('.')]
-
-                for file in files:
-                    if file.endswith(('.yml', '.yaml', '.txt', '.csv', '.json')):
-                        files_found += 1
-                        full_path = os.path.join(root, file)
-                        
-                        # Count lines
-                        line_count = 0
-                        try:
-                            with open(full_path, 'r', encoding='utf-8', errors='ignore') as f:
-                                line_count = sum(1 for _ in f)
-                        except Exception as e:
-                            logger.error(f"Failed to count lines for {full_path}: {e}")
-
-                        files_to_upsert.append({
-                            'file_id': str(uuid.uuid5(uuid.NAMESPACE_URL, full_path)),
-                            'project_id': project_id,
-                            'file_path': full_path,
-                            'status': 'todo',
-                            'original_key_count': 0,
-                            'line_count': line_count,
-                            'file_type': file_type
-                        })
-            
-            logger.info(f"Scan {file_type}: Found {files_found} files in {root_path}")
-
-        # Scan source directory
-        logger.info(f"Scanning source directory: {source_path}")
-        scan_dir(source_path, 'source')
-        
-        # Scan translation directories
-        for trans_dir in translation_dirs:
-            logger.info(f"Scanning translation directory: {trans_dir}")
-            scan_dir(trans_dir, 'translation')
-
-        logger.info(f"Found {len(files_to_upsert)} total files to upsert")
-
-        # Upsert into DB and Clean up obsolete files
-        conn = self._get_connection()
-        cursor = conn.cursor()
-
-        # 1. Get existing file IDs for this project
-        cursor.execute("SELECT file_id FROM project_files WHERE project_id = ?", (project_id,))
-        existing_file_ids = {row[0] for row in cursor.fetchall()}
-        
-        # 2. Upsert new/updated files
-        current_scan_ids = set()
-        for f in files_to_upsert:
-            current_scan_ids.add(f['file_id'])
-            cursor.execute('''
-                INSERT INTO project_files (file_id, project_id, file_path, status, original_key_count, line_count, file_type)
-                VALUES (?, ?, ?, ?, ?, ?, ?)
-                ON CONFLICT(project_id, file_path) DO UPDATE SET
-                    line_count = excluded.line_count,
-                    file_type = excluded.file_type
-            ''', (f['file_id'], f['project_id'], f['file_path'], f['status'], f['original_key_count'], f['line_count'], f['file_type']))
-        
-        # 3. Delete obsolete files
-        files_to_delete = existing_file_ids - current_scan_ids
-        if files_to_delete:
-            logger.info(f"Deleting {len(files_to_delete)} obsolete files from project {project_id}")
-            for fid in files_to_delete:
-                cursor.execute("DELETE FROM project_files WHERE file_id = ?", (fid,))
-
-        conn.commit()
-        conn.close()
-
-        # Update Kanban (Sync tasks)
-        self._sync_kanban_with_files(project_id, files_to_upsert)
-
-        # --- Archive Integration (Populate Source DB) ---
-        # Only process source files for now to enable Proofreading
-        from scripts.core.archive_manager import archive_manager
-        from scripts.core.loc_parser import parse_loc_file
-        from pathlib import Path
-
-        source_files_data = []
-        for f in files_to_upsert:
-            if f['file_type'] == 'source' and f['file_path'].endswith(('.yml', '.yaml')):
-                try:
-                    entries = parse_loc_file(Path(f['file_path']))
-                    if entries:
-                        source_files_data.append({
-                            'filename': os.path.basename(f['file_path']),
-                            'key_map': [e[0] for e in entries],
-                            'texts_to_translate': [e[1] for e in entries]
-                        })
-                except Exception as e:
-                    logger.error(f"Failed to parse {f['file_path']} for archiving: {e}")
-
-        if source_files_data:
-            # We need a mod_id. Use project name as mod name?
-            # Or use project_id? archive_manager uses 'name' as unique key for mods table.
-            # Let's use project.name.
-            mod_id = archive_manager.get_or_create_mod_entry(project['name'], project_id)
-            if mod_id:
-                archive_manager.create_source_version(mod_id, source_files_data)
+        # Delegate to FileService
+        if self.file_service:
+            self.file_service.scan_and_sync_files(project_id, source_path, translation_dirs, project['name'])
+        else:
+            logger.error("FileService not initialized in ProjectManager!")
 
 
-    def _sync_kanban_with_files(self, project_id: str, files: List[Dict]):
-        """
-        Syncs the file list with the Kanban board in JSON sidecar.
-        Creates a task for each SOURCE file.
-        Translation files are tracked as metadata on the source file task.
-        """
-        project = self.get_project(project_id)
-        if not project:
-            return
-            
-        json_manager = ProjectJsonManager(project['source_path'])
-        kanban_data = json_manager.get_kanban_data()
-        tasks = kanban_data.get("tasks", {})
-        columns = kanban_data.get("columns", [])
-        
-        # Ensure 'todo' column exists
-        if "todo" not in columns:
-            columns.insert(0, "todo")
-
-        # Group files by relative path (ignoring language prefix/suffix if possible, 
-        # but for now, we assume source files are the master).
-        # Strategy:
-        # 1. Iterate over SOURCE files to create/update tasks.
-        # 2. Iterate over TRANSLATION files to update status/metadata of corresponding source task.
-        
-        # Helper to get relative path from full path
-        # We need to know which root it came from.
-        # But `files` list doesn't explicitly say which root.
-        # However, we know source files come from project['source_path'].
-        
-        source_path = project['source_path']
-        
-        # 1. Process Source Files
-        source_file_count = 0
-        for f in files:
-            if f['file_type'] == 'source':
-                source_file_count += 1
-                # Determine relative path for ID stability
-                # If file is inside source_path
-                if f['file_path'].startswith(source_path):
-                    rel_path = os.path.relpath(f['file_path'], source_path)
-                else:
-                    # Should not happen for source files based on create_project logic,
-                    # but if it does, use basename or full path hash
-                    rel_path = os.path.basename(f['file_path'])
-                
-                # Task ID based on relative path (stable across machines if relative)
-                # But we used uuid5(full_path) for file_id.
-                # Let's use file_id of the SOURCE file as the Task ID.
-                task_id = f['file_id'] 
-                
-                if task_id not in tasks:
-                    # Create new task
-                    tasks[task_id] = {
-                        "id": task_id,
-                        "type": "file",
-                        "title": os.path.basename(f['file_path']),
-                        "filePath": f['file_path'], # Source file path
-                        "status": "todo",
-                        "comments": "",
-                        "priority": "medium",
-                        "meta": {
-                            "source_lines": f['line_count'],
-                            "translation_status": {}, # Lang code -> status
-                            "rel_path": rel_path
-                        }
-                    }
-                else:
-                    # Update existing task meta
-                    if "meta" not in tasks[task_id]: tasks[task_id]["meta"] = {}
-                    tasks[task_id]["meta"]["source_lines"] = f['line_count']
-                    tasks[task_id]["meta"]["rel_path"] = rel_path
-                    # Update title
-                    tasks[task_id]["title"] = os.path.basename(f['file_path'])
-
-        # 2. Process Translation Files (Update Status)
-        # We need to link translation files to source files.
-        # Assumption: Translation file has same relative path structure or same basename?
-        # Usually:
-        # Source: localization/english/foo_l_english.yml
-        # Target: localization/simp_chinese/foo_l_simp_chinese.yml
-        # This mapping is complex to reverse engineer perfectly without strict conventions.
-        # FOR NOW: We will just list source files as tasks.
-        # Future: We can try to match them, but it's risky.
-        # Let's stick to: Kanban manages SOURCE files (which represent the "content" to be translated).
-        # The status of the task represents the overall progress.
-        
-        # If we want to show translation progress, we need to know which languages are done.
-        # This requires the `refresh_project_files` to be smarter about matching.
-        # For this iteration, let's just ensure Source files are on the board.
-        
-        logger.info(f"Syncing Kanban: Found {source_file_count} source files. Saving {len(tasks)} tasks.")
-        json_manager.save_kanban_data({
-            "columns": columns,
-            "tasks": tasks,
-            "column_order": kanban_data.get("column_order", columns)
-        })
+    # Removed _sync_kanban_with_files (Logic moved to KanbanService)
 
     def get_projects(self, status: Optional[str] = None) -> List[Dict[str, Any]]:
-        conn = self._get_connection()
-        conn.row_factory = sqlite3.Row
-        cursor = conn.cursor()
-        
-        if status:
-            cursor.execute("SELECT * FROM projects WHERE status = ? ORDER BY created_at DESC", (status,))
-        else:
-            cursor.execute("SELECT * FROM projects ORDER BY created_at DESC")
-            
-        rows = cursor.fetchall()
-        conn.close()
-        
-        # Normalize game_id in output and inject source_language
-        results = []
-        for row in rows:
-            p = dict(row)
-            p['game_id'] = GAME_ID_ALIASES.get(p['game_id'].lower(), p['game_id'])
-            
-            # Inject source_language from JSON sidecar
-            try:
-                if p.get('source_path') and os.path.exists(p['source_path']):
-                    json_manager = ProjectJsonManager(p['source_path'])
-                    config = json_manager.get_config()
-                    p['source_language'] = config.get('source_language', 'english')
-                else:
-                    p['source_language'] = 'english'
-            except Exception as e:
-                logger.warning(f"Failed to load source_language for project {p.get('name')}: {e}")
-                p['source_language'] = 'english'
-                
-            results.append(p)
-        return results
+        """Returns a list of projects, ordered by last_modified."""
+        projects = self.repository.list_projects(status)
+        # Convert Pydantic models to dicts for API compatibility
+        return [p.model_dump() for p in projects]
 
     def get_non_active_projects(self) -> List[Dict[str, Any]]:
         """Fetches all projects that are not 'active' (e.g., archived, deleted)."""
@@ -488,43 +266,16 @@ class ProjectManager:
         return [dict(row) for row in rows]
 
     def get_project(self, project_id: str) -> Optional[Dict[str, Any]]:
-        conn = self._get_connection()
-        conn.row_factory = sqlite3.Row
-        cursor = conn.cursor()
-        cursor.execute("SELECT * FROM projects WHERE project_id = ?", (project_id,))
-        row = cursor.fetchone()
-        conn.close()
-        
-        if row:
-            project = dict(row)
-            # Fetch source_language from JSON
-            try:
-                json_manager = ProjectJsonManager(project['source_path'])
-                config = json_manager.get_config()
-                project['source_language'] = config.get('source_language', 'english') # Default to english
-            except Exception as e:
-                logger.error(f"Failed to fetch source_language for project {project_id}: {e}")
-                project['source_language'] = 'english'
-            return project
-        return None
+        p = self.repository.get_project(project_id)
+        return p.model_dump() if p else None
 
     def get_project_files(self, project_id: str) -> List[Dict[str, Any]]:
-        conn = self._get_connection()
-        conn.row_factory = sqlite3.Row
-        cursor = conn.cursor()
-        cursor.execute("SELECT * FROM project_files WHERE project_id = ? ORDER BY file_path", (project_id,))
-        rows = cursor.fetchall()
-        conn.close()
-        return [dict(row) for row in rows]
+        """Returns all files for a project."""
+        files = self.repository.get_project_files(project_id)
+        return [f.model_dump() for f in files]
 
     def update_project_status(self, project_id: str, status: str):
-        """Updates the status of a project."""
-        conn = self._get_connection()
-        cursor = conn.cursor()
-        cursor.execute("UPDATE projects SET status = ? WHERE project_id = ?", (status, project_id))
-        conn.commit()
-        conn.close()
-        logger.info(f"Updated project {project_id} status to '{status}'")
+        self.repository.update_project_status(project_id, status)
 
     def update_project_notes(self, project_id: str, notes: str):
         """Updates the notes for a project."""
@@ -549,59 +300,39 @@ class ProjectManager:
         conn.close()
 
     def update_file_status_by_id(self, file_id: str, status: str):
-        conn = self._get_connection()
-        cursor = conn.cursor()
-        cursor.execute("UPDATE project_files SET status = ? WHERE file_id = ?", (status, file_id))
-        conn.commit()
-        conn.close()
-
-    def update_project_notes(self, project_id: str, notes: str):
-        conn = self._get_connection()
-        cursor = conn.cursor()
-        cursor.execute("UPDATE projects SET notes = ? WHERE project_id = ?", (notes, project_id))
-        conn.commit()
-        conn.close()
-
-    def update_project_status(self, project_id: str, status: str):
-        """Updates the project status (active, archived, deleted)."""
-        conn = self._get_connection()
-        cursor = conn.cursor()
-        cursor.execute("UPDATE projects SET status = ? WHERE project_id = ?", (status, project_id))
-        conn.commit()
-        conn.close()
+        self.repository.update_file_status_by_id(file_id, status)
 
     def delete_project(self, project_id: str, delete_source_files: bool = False):
-        """Deletes a project from the database and optionally deletes source files."""
-        project = self.get_project(project_id)
-        if not project:
-            return False
-        
-        # Delete from database (CASCADE will handle project_files)
-        conn = self._get_connection()
-        cursor = conn.cursor()
-        cursor.execute("DELETE FROM projects WHERE project_id = ?", (project_id,))
-        conn.commit()
-        conn.close()
-        
-        # Optionally delete source directory
-        if delete_source_files:
-            source_path = project['source_path']
-            if os.path.exists(source_path):
-                try:
-                    shutil.rmtree(source_path)
-                    logger.info(f"Deleted source directory: {source_path}")
-                except Exception as e:
-                    logger.error(f"Failed to delete source directory {source_path}: {e}")
+        try:
+            project = self.get_project(project_id)
+            if not project:
+                return False
+
+            # Remove config file from disk first if exists
+            if 'source_path' in project and os.path.exists(project['source_path']):
+                config_path = os.path.join(project['source_path'], '.remis_project.json')
+                if os.path.exists(config_path):
+                    try:
+                        os.remove(config_path)
+                    except Exception as e:
+                        logger.error(f"Failed to delete JSON sidecar: {e}")
             
-            # Also delete JSON sidecar
-            json_path = os.path.join(source_path, '.remis_project.json')
-            if os.path.exists(json_path):
+            # Delete from DB via Repository
+            self.repository.delete_project(project_id)
+            
+            # Optional: Delete source folder
+            if delete_source_files and 'source_path' in project and os.path.exists(project['source_path']):
                 try:
-                    os.remove(json_path)
+                    shutil.rmtree(project['source_path'])
+                    logger.info(f"Deleted source directory: {project['source_path']}")
                 except Exception as e:
-                    logger.error(f"Failed to delete JSON sidecar: {e}")
-        
-        return True
+                    logger.error(f"Failed to delete source directory {project['source_path']}: {e}")
+
+            return True
+                
+        except Exception as e:
+            logger.error(f"Failed to delete project: {e}")
+            raise e
 
     def add_translation_path(self, project_id: str, translation_path: str):
         """
@@ -641,12 +372,9 @@ class ProjectManager:
         # Normalize game_id
         game_id = GAME_ID_ALIASES.get(game_id.lower(), game_id)
 
-        # Update DB (game_id)
-        conn = self._get_connection()
-        cursor = conn.cursor()
-        cursor.execute("UPDATE projects SET game_id = ? WHERE project_id = ?", (game_id, project_id))
-        conn.commit()
-        conn.close()
+        # Update DB (game_id and source_language)
+        # Note: repository.update_project_metadata updates both game_id and source_language
+        self.repository.update_project_metadata(project_id, game_id, source_language)
 
         # Update JSON sidecar (source_language)
         try:

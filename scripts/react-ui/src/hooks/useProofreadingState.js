@@ -2,6 +2,7 @@ import { useState, useRef, useEffect, useCallback } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { notifications } from '@mantine/notifications';
 import axios from 'axios';
+import { toParadoxLang } from '../utils/paradoxMapping';
 
 /**
  * 校对页面的核心状态管理 Hook
@@ -60,24 +61,19 @@ const useProofreadingState = () => {
         }
     }, []);
 
-    const fetchProjectFiles = useCallback(async (pId) => {
-        try {
-            const res = await axios.get(`/api/project/${pId}/files`);
-            const files = res.data;
-            groupFiles(files);
-        } catch (error) {
-            console.error("Failed to load project files", error);
-        }
-    }, [selectedProject]);
-
     // ==================== 业务逻辑函数 ====================
     const groupFiles = useCallback((files) => {
         if (!selectedProject) return;
-        const sourceLang = selectedProject.source_language || 'english';
 
-        // 修复：根据源语言正确识别源文件
-        const sourcePattern = `_l_${sourceLang}.yml`;
-        const sources = files.filter(f => f.file_path.endsWith(sourcePattern));
+        // Standardize Source Language to Paradox Format (e.g. en -> english, zh-cn -> simp_chinese)
+        const dbLang = selectedProject.source_language || 'english';
+        const paradoxLang = toParadoxLang(dbLang);
+
+        // Construct pattern: _l_{paradoxLang}.yml
+        // const sourcePattern = `_l_${paradoxLang}.yml`; 
+
+        // Fix: Use 'file_type' from DB as the Single Source of Truth
+        const sources = files.filter(f => f.file_type === 'source');
 
         const targetsMap = {};
         const sourceBaseMap = {};
@@ -86,20 +82,35 @@ const useProofreadingState = () => {
 
         sources.forEach(s => {
             const fileName = getFileName(s.file_path);
-            const baseName = fileName.replace(sourcePattern, '');
-            sourceBaseMap[baseName] = s;
+            // Robust base name extraction: Remove _l_{lang}.yml CASE INSENSITIVE
+            // Use paradoxLang here
+            const regex = new RegExp(`_l_${paradoxLang}\\.yml$`, 'i');
+            const baseName = fileName.replace(regex, '');
+            sourceBaseMap[baseName.toLowerCase()] = s;
             targetsMap[s.file_id] = [];
         });
 
-        // 修复：移除 file_type 检查，匹配所有翻译文件
         files.forEach(f => {
-            // 跳过源文件本身
-            if (f.file_path.endsWith(sourcePattern)) return;
-
             const fileName = getFileName(f.file_path);
-            for (const base in sourceBaseMap) {
-                if (fileName.startsWith(base + '_l_') && f.file_id !== sourceBaseMap[base].file_id) {
-                    targetsMap[sourceBaseMap[base].file_id].push(f);
+
+            // Skip if it looks like a source file (matches standard pattern)
+            // Or explicitly if DB says source
+            if (f.file_type === 'source') return;
+
+            // Try to match against sourceBaseMap
+            // Target file: {base}_l_{targetLang}.yml
+            // We strip the _l_{targetLang}.yml part? 
+            // We don't know targetLang easily, so let's try to match prefix.
+
+            // Iterate sources and see if fileName starts with source's base + '_l_'
+            for (const baseLower in sourceBaseMap) {
+                // Original usage: fileName.startsWith(base + '_l_')
+                // Now we compare case-insensitively
+                // But we need the original casing of the base to be safe? 
+                // Actually if we normalize everything to lower for checking it's safer for Paradox files.
+
+                if (fileName.toLowerCase().startsWith(baseLower + '_l_') && f.file_id !== sourceBaseMap[baseLower].file_id) {
+                    targetsMap[sourceBaseMap[baseLower].file_id].push(f);
                     break;
                 }
             }
@@ -156,6 +167,17 @@ const useProofreadingState = () => {
             }
         }
     }, [selectedProject, searchParams]);
+
+    const fetchProjectFiles = useCallback(async (projectId) => {
+        try {
+            const res = await axios.get(`/api/project/${projectId}/files`);
+            if (res.data) {
+                groupFiles(res.data);
+            }
+        } catch (error) {
+            console.error("Failed to load project files", error);
+        }
+    }, [groupFiles]);
 
     const loadEditorData = useCallback(async (pId, sourceFilePath, targetId) => {
         setLoading(true);

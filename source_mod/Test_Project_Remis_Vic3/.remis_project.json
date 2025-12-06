@@ -1,13 +1,4 @@
 {
-    "version": "1.0",
-    "config": {
-        "translation_dirs": [
-            "J:\\V3_Mod_Localization_Factory\\my_translation\\zh-CN-Test_Project_Remis_Vic3",
-            "J:\\V3_Mod_Localization_Factory\\my_translation\\en-Test_Project_Remis_Vic3",
-            "J:\\V3_Mod_Localization_Factory\\my_translation\\Multilanguage-Test_Project_Remis_Vic3"
-        ],
-        "source_language": "simp_chinese"
-    },
     "kanban": {
         "columns": [
             "todo",
@@ -26,9 +17,10 @@
                 "comments": "",
                 "priority": "medium",
                 "meta": {
-                    "source_lines": 57,
+                    "source_lines": 97,
                     "translation_status": {},
-                    "rel_path": ".remis_project.json"
+                    "rel_path": ".remis_project.json",
+                    "file_type": "config"
                 }
             },
             "8646e2d7-2d1e-56d3-a7b9-cc96ecc54d42": {
@@ -36,13 +28,57 @@
                 "type": "file",
                 "title": "remis_demo_l_simp_chinese.yml",
                 "filePath": "J:\\V3_Mod_Localization_Factory\\source_mod\\Test_Project_Remis_Vic3\\localization\\simp_chinese\\remis_demo_l_simp_chinese.yml",
-                "status": "todo",
+                "status": "in_progress",
                 "comments": "",
                 "priority": "medium",
                 "meta": {
                     "source_lines": 67,
-                    "translation_status": {},
-                    "rel_path": "localization\\simp_chinese\\remis_demo_l_simp_chinese.yml"
+                    "translation_status": {
+                        "english": {
+                            "exists": true,
+                            "line_count": 67,
+                            "file_id": "b4325ec2-4c56-549a-ae83-5a73ffb77ee0"
+                        },
+                        "japanese": {
+                            "exists": true,
+                            "line_count": 67,
+                            "file_id": "0ea979b1-bbc8-5a4e-a926-63e766a50466"
+                        }
+                    },
+                    "rel_path": "localization\\simp_chinese\\remis_demo_l_simp_chinese.yml",
+                    "file_type": "source"
+                }
+            },
+            "b4325ec2-4c56-549a-ae83-5a73ffb77ee0": {
+                "id": "b4325ec2-4c56-549a-ae83-5a73ffb77ee0",
+                "type": "file",
+                "title": "remis_demo_l_english.yml",
+                "filePath": "J:\\V3_Mod_Localization_Factory\\my_translation\\Multilanguage-Test_Project_Remis_Vic3\\localization\\english\\simp_chinese\\remis_demo_l_english.yml",
+                "status": "proofreading",
+                "comments": "",
+                "priority": "medium",
+                "meta": {
+                    "lines": 67,
+                    "file_type": "translation",
+                    "lang": "english",
+                    "parent_task_id": "8646e2d7-2d1e-56d3-a7b9-cc96ecc54d42",
+                    "rel_path": "remis_demo_l_english.yml"
+                }
+            },
+            "0ea979b1-bbc8-5a4e-a926-63e766a50466": {
+                "id": "0ea979b1-bbc8-5a4e-a926-63e766a50466",
+                "type": "file",
+                "title": "remis_demo_l_japanese.yml",
+                "filePath": "J:\\V3_Mod_Localization_Factory\\my_translation\\Multilanguage-Test_Project_Remis_Vic3\\localization\\japanese\\simp_chinese\\remis_demo_l_japanese.yml",
+                "status": "proofreading",
+                "comments": "",
+                "priority": "medium",
+                "meta": {
+                    "lines": 67,
+                    "file_type": "translation",
+                    "lang": "japanese",
+                    "parent_task_id": "8646e2d7-2d1e-56d3-a7b9-cc96ecc54d42",
+                    "rel_path": "remis_demo_l_japanese.yml"
                 }
             }
         },
@@ -53,5 +89,11 @@
             "paused",
             "done"
         ]
+    },
+    "config": {
+        "translation_dirs": [
+            "J:\\V3_Mod_Localization_Factory\\my_translation\\Multilanguage-Test_Project_Remis_Vic3"
+        ],
+        "source_language": "zh-CN"
     }
 }
