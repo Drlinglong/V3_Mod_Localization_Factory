@@ -1,11 +1,13 @@
 import React from 'react';
 import { useSortable } from '@dnd-kit/sortable';
+import { useTranslation } from 'react-i18next';
 import { CSS } from '@dnd-kit/utilities';
 import { Paper, Text, Group, Badge, ActionIcon, Tooltip } from '@mantine/core';
 import { IconFileText, IconNote } from '@tabler/icons-react';
 import styles from '../../pages/ProjectManagement.module.css';
 
 export const TaskCard = ({ task, onClick }) => {
+    const { t } = useTranslation();
     const {
         attributes,
         listeners,
@@ -19,6 +21,21 @@ export const TaskCard = ({ task, onClick }) => {
         transform: CSS.Transform.toString(transform),
         transition,
     };
+
+    // Determine badge content
+    let badge = null;
+    if (task.type === 'file') {
+        if (task.meta?.file_type === 'source') {
+            badge = <Badge size="xs" color="blue" variant="light">{t('project_management.kanban.badge_source')}</Badge>;
+        } else if (task.meta?.file_type === 'translation') {
+            badge = <Badge size="xs" color="violet" variant="light">{t('project_management.kanban.badge_translation')}</Badge>;
+        } else if (task.meta?.file_type === 'metadata' || task.meta?.file_type === 'config') {
+            badge = <Badge size="xs" color="gray" variant="light">{t('project_management.kanban.badge_metadata')}</Badge>;
+        }
+    } else {
+        // Assume note or other types are metadata related or just generic
+        badge = <Badge size="xs" color="gray" variant="light">{t('project_management.kanban.badge_metadata')}</Badge>;
+    }
 
     return (
         <div
@@ -40,14 +57,12 @@ export const TaskCard = ({ task, onClick }) => {
                         {task.title}
                     </Text>
                 </Group>
-                {task.priority === 'high' && (
-                    <Badge size="xs" color="red" variant="dot" />
-                )}
+                {badge}
             </Group>
 
             {task.type === 'file' && task.meta && (
                 <Text size="xs" c="dimmed" mt={4}>
-                    Lines: {task.meta.lines}
+                    Lines: {task.meta.source_lines || task.meta.lines}
                 </Text>
             )}
 

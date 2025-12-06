@@ -20,6 +20,8 @@ import heroBg from '../assets/project_hero_bg.png';
 import cardNewProject from '../assets/card_new_project.png';
 import cardOpenProject from '../assets/card_open_project.png'; // Reusing for Archives
 
+import { normalizeGameId, toIsoLang } from '../utils/paradoxMapping';
+
 const API_BASE = '/api';
 
 export default function ProjectManagement() {
@@ -216,8 +218,15 @@ export default function ProjectManagement() {
 
   const handleOpenManage = () => {
     if (selectedProject) {
-      setEditGameId(selectedProject.game_id);
-      setEditSourceLang(selectedProject.source_language || 'english');
+      // Normalization Map
+      const gameMap = { 'victoria3': 'vic3', 'hearts of iron iv': 'hoi4' };
+      const langMap = { 'zh-cn': 'simp_chinese' };
+
+      let gId = (selectedProject.game_id || 'stellaris').toLowerCase();
+      let sLang = (selectedProject.source_language || 'english').toLowerCase();
+
+      setEditGameId(gameMap[gId] || gId);
+      setEditSourceLang(langMap[sLang] || sLang);
       setManageModalOpen(true);
     }
   };
@@ -595,7 +604,7 @@ export default function ProjectManagement() {
               { value: 'ck3', label: 'Crusader Kings III' },
               { value: 'eu4', label: 'Europa Universalis IV' }
             ]}
-            value={editGameId}
+            value={editGameId ? editGameId.toLowerCase() : ''}
             onChange={setEditGameId}
           />
           <Select
@@ -610,7 +619,7 @@ export default function ProjectManagement() {
               { value: 'japanese', label: 'Japanese' },
               { value: 'korean', label: 'Korean' }
             ]}
-            value={editSourceLang}
+            value={editSourceLang ? editSourceLang.toLowerCase() : ''}
             onChange={setEditSourceLang}
           />
           <Group justify="flex-end" mt="md">

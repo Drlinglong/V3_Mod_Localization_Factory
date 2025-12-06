@@ -63,6 +63,56 @@ class LanguageCode(str, Enum):
                 if member.value.lower() == value:
                     return member
             raise ValueError(f"不支持的语言代码: {value}")
+            
+    def to_paradox(self) -> str:
+        """
+        转换为 P社游戏使用的语言字符串 (e.g. 'en' -> 'english', 'zh-CN' -> 'simp_chinese')
+        """
+        mapping = {
+            self.EN: "english",
+            self.ZH_CN: "simp_chinese",
+            self.FR: "french",
+            self.DE: "german",
+            self.ES: "spanish",
+            self.JA: "japanese",
+            self.KO: "korean",
+            self.PL: "polish",
+            self.PT_BR: "braz_por",
+            self.RU: "russian",
+            self.TR: "turkish"
+        }
+        return mapping.get(self, "english") # Default to english
+
+class GameType(str, Enum):
+    """
+    Standard Game IDs (ISO-like internal IDs)
+    """
+    STELLARIS = "stellaris"
+    HOI4 = "hoi4"
+    VIC3 = "vic3"
+    CK3 = "ck3"
+    EU4 = "eu4"
+    
+    @classmethod
+    def from_str(cls, value: str):
+        if not value: return cls.STELLARIS
+        value = value.lower().strip()
+        mapping = {
+            "stellaris": cls.STELLARIS,
+            "hearts of iron iv": cls.HOI4, "hoi4": cls.HOI4,
+            "victoria 3": cls.VIC3, "victoria3": cls.VIC3, "vic3": cls.VIC3,
+            "crusader kings iii": cls.CK3, "ck3": cls.CK3,
+            "europa universalis iv": cls.EU4, "eu4": cls.EU4
+        }
+        return mapping.get(value, cls.STELLARIS)
+        
+    def to_paradox(self) -> str:
+        """
+        Usually Paradox just uses lowercase internal IDs too, but sometimes full names for display?
+        The folder structure usually matches the internal ID or specific mod paths.
+        Here we map to the 'Standard ID' expected by our Frontend Selects (e.g. 'vic3').
+        """
+        return self.value
 
 class ProjectID(str):
     """

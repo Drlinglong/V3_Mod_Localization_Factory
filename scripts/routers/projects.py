@@ -109,8 +109,7 @@ def get_project_kanban(project_id: str):
     if not project:
         raise HTTPException(status_code=404, detail="Project not found")
     try:
-        json_manager = ProjectJsonManager(project['source_path'])
-        return json_manager.get_kanban_data()
+        return project_manager.kanban_service.get_board(project['source_path'])
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
@@ -120,8 +119,7 @@ def save_project_kanban(project_id: str, kanban_data: Dict[str, Any]):
     if not project:
         raise HTTPException(status_code=404, detail="Project not found")
     try:
-        json_manager = ProjectJsonManager(project['source_path'])
-        json_manager.save_kanban_data(kanban_data)
+        project_manager.kanban_service.save_board(project['source_path'], kanban_data)
         return {"status": "success"}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
@@ -161,8 +159,13 @@ def update_project_config(project_id: str, request: UpdateConfigRequest):
             # Bulk update
             json_manager.update_config({"translation_dirs": request.translation_dirs})
         elif request.action == 'add_dir':
+            logging.info(f"Adding translation dir: {request.path}")
             if not os.path.exists(request.path):
-                 raise HTTPException(status_code=404, detail="Directory not found")
+                 logging.error(f"Directory not found: {request.path}")
+                 raise HTTPException(status_code=404, detail=f"Directory not found: {request.path}")
+            if not os.path.isdir(request.path):
+                 logging.error(f"Path is not a directory: {request.path}")
+                 raise HTTPException(status_code=400, detail=f"Path is not a directory: {request.path}")
             json_manager.add_translation_dir(request.path)
         elif request.action == 'remove_dir':
             json_manager.remove_translation_dir(request.path)

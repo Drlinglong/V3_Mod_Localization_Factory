@@ -9,6 +9,7 @@ from scripts.shared.services import project_manager, archive_manager
 from scripts.schemas.proofreading import SaveProofreadingRequest
 from scripts.utils.quote_extractor import QuoteExtractor
 from scripts.core.file_builder import patch_file_content
+from scripts.utils.i18n_utils import iso_to_paradox
 
 logger = logging.getLogger(__name__)
 
@@ -125,15 +126,28 @@ def get_proofread_data(project_id: str, file_id: str):
     
     # 3. 确定源语言 (Source Language)
     source_lang = project.get('source_language', 'simp_chinese')
+    logger.info(f"Proofreading: Project '{project['name']}' (ID: {project_id}) Source Lang: '{source_lang}'")
+    
+    # Validation: If source_lang is same as current_lang, checking if this is really the source file?
+    # User Case: "remis_demo_l_japanese.yml" (Current=Japanese). Source should be Chinese.
+    # If project['source_language'] is 'english' (wrongly), then source_lang='english'.
+    # We will try to find a file ending in _l_english.yml.
+    
     source_lang_key = f"l_{source_lang}"
     
     # 4. 定位模板文件 (Source File)
     template_file_path = ""
-    if current_lang == source_lang:
+    
+    logger.debug(f"Proofreading: Target '{target_file_path}' (Lang: {current_lang}). Seaching for Source ({source_lang})...")
+
+    if current_lang.lower() == source_lang.lower():
+        # If we are editing the source file itself
         template_file_path = target_file_path
+        logger.info("Proofreading: Editing source file directly.")
     else:
         # Pass project_id for fallback search
         template_file_path = find_source_template(target_file_path, source_lang, current_lang, project_id)
+        logger.info(f"Proofreading: Found template path: '{template_file_path}'")
 
     if not template_file_path or not os.path.exists(template_file_path):
         logger.warning(f"Source file not found for {target_file_path}. Using target as template (formatting may be lost).")
@@ -259,7 +273,7 @@ def save_proofreading_db(request: SaveProofreadingRequest):
         target_file_path = target_file['file_path']
         filename = os.path.basename(target_file_path)
 
-        # 1. 确定当前文件的语言 (Target Language)
+        # 1. Determine Current Language (Target Language)
         current_lang = "english"
         lang_match = re.search(r"_l_(\w+)\.yml$", filename, re.IGNORECASE)
         if lang_match:
@@ -275,16 +289,20 @@ def save_proofreading_db(request: SaveProofreadingRequest):
                 pass
         
         current_lang_key = f"l_{current_lang}"
-        
-        # 2. 确定源语言
-        source_lang = project.get('source_language', 'simp_chinese')
-        source_lang_key = f"l_{source_lang}"
 
-        # 3. 定位模板文件
-        if current_lang == source_lang:
+        # 2. Determine Source Language (Adapter Layer)
+        # DB has ISO ('zh-CN'), Disk needs Paradox ('simp_chinese')
+        iso_source = project.get('source_language', 'en')
+        disk_source_lang = iso_to_paradox(iso_source)
+        
+        source_lang_key = f"l_{disk_source_lang}"
+
+        # 3. Locate Template
+        # Use disk_source_lang here
+        if current_lang == disk_source_lang:
             template_file_path = target_file_path
         else:
-            template_file_path = find_source_template(target_file_path, source_lang, current_lang, request.project_id)
+            template_file_path = find_source_template(target_file_path, disk_source_lang, current_lang, request.project_id)
         
         if not template_file_path or not os.path.exists(template_file_path):
             template_file_path = target_file_path
