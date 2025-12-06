@@ -418,5 +418,16 @@
   "prompt_reset_error": "重置 Prompt 失败",
   "api_settings_saved": "设置保存成功",
   "prompt_settings_warning_title": "警告：高级配置",
-  "prompt_settings_warning_desc": "除非您非常清楚自己在做什么，否则强烈建议不要修改这些系统 Prompt。错误的修改可能导致翻译失败或质量严重下降。"
+  "prompt_settings_warning_desc": "除非您非常清楚自己在做什么，否则强烈建议不要修改这些系统 Prompt。错误的修改可能导致翻译失败或质量严重下降。",
+  "prompt_formatting_rules": "格式化规则 (JSON结构)",
+  "prompt_formatting_desc": "这些规则确保 AI 输出有效的 JSON 格式。修改时请务必小心！",
+  "select_game_profile": "选择游戏预设",
+  "current_prompt": "当前 Prompt",
+  "current_rules": "当前规则",
+  "overridden": "已自定义",
+  "reset": "重置",
+  "default_system_prompt": "默认系统 Prompt",
+  "default_format_rules": "默认规则",
+  "reset_desc": "重置为默认值",
+  "reset_disabled_desc": "当前使用默认值，无需重置"
 }
