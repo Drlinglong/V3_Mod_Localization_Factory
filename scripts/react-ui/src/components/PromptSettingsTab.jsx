@@ -13,12 +13,68 @@ import {
     Modal,
     Loader,
     ActionIcon,
-    Tooltip
+    Tooltip,
+    Grid,
+    Badge,
+    Collapse,
+    Box
 } from '@mantine/core';
-import { IconDeviceFloppy, IconRefresh, IconAlertTriangle, IconInfoCircle } from '@tabler/icons-react';
+import {
+    IconDeviceFloppy,
+    IconRefresh,
+    IconAlertTriangle,
+    IconInfoCircle,
+    IconMaximize,
+    IconMinimize
+} from '@tabler/icons-react';
 import { notifications } from '@mantine/notifications';
 import { useTranslation } from 'react-i18next';
 import axios from 'axios';
+
+// Internal Component: Expandable Textarea
+const ExpandableTextarea = ({ label, value, onChange, readOnly, placeholder, minRows = 4, maxRows = 30, rightSection }) => {
+    const [expanded, setExpanded] = useState(false);
+
+    return (
+        <Box>
+            <Group justify="space-between" mb={4}>
+                <Text size="sm" fw={500}>{label}</Text>
+                <Group gap="xs">
+                    {rightSection}
+                    <Button
+                        size="compact-xs"
+                        variant="subtle"
+                        color="gray"
+                        onClick={(e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            setExpanded(!expanded);
+                        }}
+                        leftSection={expanded ? <IconMinimize size={14} /> : <IconMaximize size={14} />}
+                    >
+                        {expanded ? "Collapse" : "Expand"}
+                    </Button>
+                </Group>
+            </Group>
+            <Textarea
+                placeholder={placeholder}
+                value={value}
+                onChange={onChange}
+                readOnly={readOnly}
+                minRows={expanded ? 25 : minRows}
+                maxRows={expanded ? 50 : maxRows}
+                styles={{
+                    input: {
+                        fontFamily: 'monospace',
+                        fontSize: '12px',
+                        transition: 'all 0.2s ease',
+                        minHeight: expanded ? '600px' : undefined
+                    }
+                }}
+            />
+        </Box>
+    );
+};
 
 const PromptSettingsTab = () => {
     const { t } = useTranslation();
@@ -28,13 +84,23 @@ const PromptSettingsTab = () => {
 
     // Form states
     const [currentSystemPrompt, setCurrentSystemPrompt] = useState('');
+    const [currentFormatPrompt, setCurrentFormatPrompt] = useState('');
     const [customGlobalPrompt, setCustomGlobalPrompt] = useState('');
 
     // UI states
     const [submittingSystem, setSubmittingSystem] = useState(false);
+    const [submittingFormat, setSubmittingFormat] = useState(false);
     const [submittingCustom, setSubmittingCustom] = useState(false);
     const [resetModalOpen, setResetModalOpen] = useState(false);
-    const [resetTarget, setResetTarget] = useState(null); // 'system' or 'custom'
+    const [resetTarget, setResetTarget] = useState(null); // 'system', 'format', 'custom'
+
+    // Helpers
+    const variables = [
+        { label: '{source_lang_name}', desc: 'Source Language Name' },
+        { label: '{target_lang_name}', desc: 'Target Language Name' },
+        { label: '{mod_name}', desc: 'Mod Name' },
+        { label: '{task_description}', desc: 'Task Description' },
+    ];
 
     useEffect(() => {
         fetchPrompts();
@@ -45,6 +111,7 @@ const PromptSettingsTab = () => {
             const gameData = promptsData.system_prompts[selectedGameId];
             if (gameData) {
                 setCurrentSystemPrompt(gameData.current);
+                setCurrentFormatPrompt(gameData.format_current);
             }
         }
     }, [selectedGameId, promptsData]);
@@ -85,7 +152,6 @@ const PromptSettingsTab = () => {
                 message: t('prompt_save_success', 'System prompt saved successfully'),
                 color: 'green'
             });
-            // Refresh data to update "is_overridden" status if needed
             fetchPrompts();
         } catch (error) {
             console.error("Failed to save system prompt:", error);
@@ -96,6 +162,32 @@ const PromptSettingsTab = () => {
             });
         } finally {
             setSubmittingSystem(false);
+        }
+    };
+
+    const handleSaveFormatPrompt = async () => {
+        if (!selectedGameId) return;
+        setSubmittingFormat(true);
+        try {
+            await axios.post('/api/prompts/format', {
+                game_id: selectedGameId,
+                format_prompt: currentFormatPrompt
+            });
+            notifications.show({
+                title: t('success'),
+                message: t('prompt_save_success', 'Format prompt saved successfully'),
+                color: 'green'
+            });
+            fetchPrompts();
+        } catch (error) {
+            console.error("Failed to save format prompt:", error);
+            notifications.show({
+                title: t('error'),
+                message: t('prompt_save_error', 'Failed to save format prompt'),
+                color: 'red'
+            });
+        } finally {
+            setSubmittingFormat(false);
         }
     };
 
@@ -131,8 +223,9 @@ const PromptSettingsTab = () => {
         setResetModalOpen(false);
         try {
             const payload = {
-                game_id: resetTarget === 'system' ? selectedGameId : null,
-                reset_custom: resetTarget === 'custom'
+                game_id: ['system', 'format'].includes(resetTarget) ? selectedGameId : null,
+                reset_custom: resetTarget === 'custom',
+                reset_format: resetTarget === 'format'
             };
 
             await axios.post('/api/prompts/reset', payload);
@@ -153,6 +246,10 @@ const PromptSettingsTab = () => {
         }
     };
 
+    const insertVariable = (variable, setter, currentValue) => {
+        setter(currentValue + variable);
+    };
+
     if (loading) return <Loader />;
 
     const gameOptions = promptsData?.system_prompts
@@ -168,116 +265,210 @@ const PromptSettingsTab = () => {
 
     return (
         <Stack spacing="xl">
+            {/* --- Warnings --- */}
             <Alert variant="light" color="orange" title={t('prompt_settings_warning_title')} icon={<IconAlertTriangle />}>
                 {t('prompt_settings_warning_desc')}
             </Alert>
 
-            {/* --- System Prompts Section --- */}
-            <Paper p="md" withBorder>
-                <Group justify="space-between" mb="md">
-                    <Title order={4}>{t('prompt_settings_system_title', 'System Prompt Configuration')}</Title>
-                    <Select
-                        data={gameOptions}
-                        value={selectedGameId}
-                        onChange={setSelectedGameId}
-                        placeholder="Select Game"
-                        allowDeselect={false}
-                    />
-                </Group>
+            {/* --- Game Selector --- */}
+            <Group>
+                <Select
+                    label={t('select_game_profile', 'Select Game Profile')}
+                    data={gameOptions}
+                    value={selectedGameId}
+                    onChange={setSelectedGameId}
+                    allowDeselect={false}
+                    searchable
+                    style={{ flexGrow: 1 }}
+                />
+            </Group>
 
-                {selectedGameData && (
-                    <Stack>
-                        <Alert icon={<IconInfoCircle size={16} />} color="blue" variant="light">
-                            {t('prompt_settings_system_desc', 'This is the core instruction sent to the AI for batch translation. Modify with caution.')}
-                        </Alert>
+            {selectedGameData && (
+                <Grid gutter="xl">
+                    {/* --- LEFT COLUMN: System Prompt --- */}
+                    <Grid.Col span={6}>
+                        <Paper p="md" withBorder h="100%">
+                            <Stack h="100%">
+                                <Title order={4}>{t('prompt_settings_system_title', 'System Prompt (Role & Context)')}</Title>
+                                <Text size="sm" c="dimmed">{t('prompt_settings_system_desc')}</Text>
 
-                        <Group align="flex-start" grow>
-                            <Stack spacing="xs">
-                                <Text size="sm" fw={500}>{t('prompt_default', 'Default System Prompt (Read-only)')}</Text>
-                                <Textarea
-                                    value={selectedGameData.default}
-                                    readOnly
-                                    minRows={10}
-                                    maxRows={10}
-                                    variant="filled"
-                                    styles={{ input: { fontFamily: 'monospace', fontSize: '12px', color: 'gray' } }}
-                                />
-                            </Stack>
-                            <Stack spacing="xs">
-                                <Group justify="space-between">
-                                    <Text size="sm" fw={500}>
-                                        {t('prompt_current', 'Current Effective Prompt')}
+                                <Group justify="space-between" align="center">
+                                    <Group spacing="xs">
+                                        <Text size="sm" fw={600}>{t('current_prompt', 'Current Prompt')}</Text>
                                         {selectedGameData.is_overridden && (
-                                            <Text span c="orange" ml="xs" size="xs">({t('prompt_overridden', 'Overridden')})</Text>
+                                            <Badge color="orange" variant="light">{t('overridden', 'Overridden')}</Badge>
                                         )}
-                                    </Text>
-                                    <Button
-                                        variant="subtle"
-                                        color="red"
-                                        size="xs"
-                                        onClick={() => handleResetClick('system')}
-                                        disabled={!selectedGameData.is_overridden}
-                                        leftSection={<IconRefresh size={14} />}
-                                    >
-                                        {t('prompt_reset', 'Reset to Default')}
-                                    </Button>
+                                    </Group>
+                                    <Group spacing="xs">
+                                        <Tooltip label={selectedGameData.is_overridden ? t('reset_desc', 'Reset to default') : t('reset_disabled_desc', 'No override to reset')}>
+                                            <span style={{ display: 'inline-block' }}> {/* Wrapper for disabled button tooltip */}
+                                                <Button
+                                                    variant="subtle" color="red" size="xs"
+                                                    onClick={() => handleResetClick('system')}
+                                                    disabled={!selectedGameData.is_overridden}
+                                                    style={{ pointerEvents: !selectedGameData.is_overridden ? 'none' : 'auto' }} // Ensure click is blocked if disabled but tooltip works on wrapper
+                                                >
+                                                    {t('reset')}
+                                                </Button>
+                                            </span>
+                                        </Tooltip>
+                                        <Button
+                                            leftSection={<IconDeviceFloppy size={14} />}
+                                            size="xs"
+                                            onClick={handleSaveSystemPrompt}
+                                            loading={submittingSystem}
+                                        >
+                                            {t('save')}
+                                        </Button>
+                                    </Group>
                                 </Group>
-                                <Textarea
+
+                                <Group spacing={5}>
+                                    {variables.map(v => (
+                                        <Tooltip label={v.desc} key={v.label}>
+                                            <Badge
+                                                variant="outline"
+                                                style={{ cursor: 'pointer' }}
+                                                onClick={() => insertVariable(v.label, setCurrentSystemPrompt, currentSystemPrompt)}
+                                            >
+                                                {v.label}
+                                            </Badge>
+                                        </Tooltip>
+                                    ))}
+                                </Group>
+
+                                <ExpandableTextarea
                                     value={currentSystemPrompt}
                                     onChange={(e) => setCurrentSystemPrompt(e.currentTarget.value)}
-                                    minRows={10}
-                                    maxRows={10}
-                                    styles={{ input: { fontFamily: 'monospace', fontSize: '12px' } }}
+                                    minRows={4}
+                                />
+
+                                <Divider label={t('default_system_prompt')} labelPosition="center" />
+
+                                <ExpandableTextarea
+                                    value={selectedGameData.default}
+                                    readOnly={true}
+                                    minRows={4}
                                 />
                             </Stack>
-                        </Group>
+                        </Paper>
+                    </Grid.Col>
 
-                        <Group justify="flex-end">
-                            <Button
-                                leftSection={<IconDeviceFloppy size={16} />}
-                                onClick={handleSaveSystemPrompt}
-                                loading={submittingSystem}
-                            >
-                                {t('prompt_save_override', 'Save System Prompt Override')}
-                            </Button>
-                        </Group>
-                    </Stack>
-                )}
-            </Paper>
+                    {/* --- RIGHT COLUMN: Format Prompt --- */}
+                    <Grid.Col span={6}>
+                        <Paper p="md" withBorder h="100%">
+                            <Stack h="100%">
+                                <Title order={4}>{t('prompt_formatting_rules', 'Formatting Rules (JSON Structure)')}</Title>
+                                <Text size="sm" c="dimmed">
+                                    {t('prompt_formatting_desc')}
+                                </Text>
 
-            {/* --- Custom Global Prompt Section --- */}
-            <Paper p="md" withBorder>
+                                <Group justify="space-between" align="center">
+                                    <Group spacing="xs">
+                                        <Text size="sm" fw={600}>{t('current_rules', 'Current Rules')}</Text>
+                                        {selectedGameData.is_format_overridden && (
+                                            <Badge color="orange" variant="light">{t('overridden', 'Overridden')}</Badge>
+                                        )}
+                                    </Group>
+                                    <Group spacing="xs">
+                                        <Tooltip label={selectedGameData.is_format_overridden ? t('reset_desc', 'Reset to default') : t('reset_disabled_desc', 'No override to reset')}>
+                                            <span style={{ display: 'inline-block' }}>
+                                                <Button
+                                                    variant="subtle" color="red" size="xs"
+                                                    onClick={() => handleResetClick('format')}
+                                                    disabled={!selectedGameData.is_format_overridden}
+                                                    style={{ pointerEvents: !selectedGameData.is_format_overridden ? 'none' : 'auto' }}
+                                                >
+                                                    {t('reset')}
+                                                </Button>
+                                            </span>
+                                        </Tooltip>
+                                        <Button
+                                            leftSection={<IconDeviceFloppy size={14} />}
+                                            size="xs"
+                                            onClick={handleSaveFormatPrompt}
+                                            loading={submittingFormat}
+                                        >
+                                            {t('save')}
+                                        </Button>
+                                    </Group>
+                                </Group>
+
+                                {/* Common format variables */}
+                                <Group spacing={5}>
+                                    <Tooltip label="Input chunk size">
+                                        <Badge
+                                            variant="outline" color="gray"
+                                            style={{ cursor: 'pointer' }}
+                                            onClick={() => insertVariable('{chunk_size}', setCurrentFormatPrompt, currentFormatPrompt)}
+                                        >
+                                            {'{chunk_size}'}
+                                        </Badge>
+                                    </Tooltip>
+                                    <Tooltip label="Input list content">
+                                        <Badge
+                                            variant="outline" color="gray"
+                                            style={{ cursor: 'pointer' }}
+                                            onClick={() => insertVariable('{numbered_list}', setCurrentFormatPrompt, currentFormatPrompt)}
+                                        >
+                                            {'{numbered_list}'}
+                                        </Badge>
+                                    </Tooltip>
+                                </Group>
+
+                                <ExpandableTextarea
+                                    value={currentFormatPrompt}
+                                    onChange={(e) => setCurrentFormatPrompt(e.currentTarget.value)}
+                                    minRows={4}
+                                />
+
+                                <Divider label={t('default_format_rules')} labelPosition="center" />
+
+                                <ExpandableTextarea
+                                    value={selectedGameData.format_default}
+                                    readOnly={true}
+                                    minRows={4}
+                                />
+                            </Stack>
+                        </Paper>
+                    </Grid.Col>
+                </Grid>
+            )}
+
+            {/* --- Custom Global Prompt Section (Full Width) --- */}
+            <Paper p="md" withBorder mt="xl">
                 <Title order={4} mb="sm">{t('prompt_settings_custom_title', 'Persistent Custom Prompt')}</Title>
                 <Alert icon={<IconInfoCircle size={16} />} color="green" variant="light" mb="md">
-                    {t('prompt_settings_custom_desc', 'This prompt will be automatically pre-filled into the "Additional Prompt" field for every new translation task. Useful for consistent style instructions.')}
+                    {t('prompt_settings_custom_desc', 'This prompt will be automatically pre-filled into the "Additional Prompt" field for every new translation task.')}
                 </Alert>
 
-                <Textarea
-                    placeholder={t('prompt_custom_placeholder', 'Enter your custom instructions here... (e.g. "Always use formal tone", "Do not translate proper nouns")')}
-                    value={customGlobalPrompt}
-                    onChange={(e) => setCustomGlobalPrompt(e.currentTarget.value)}
-                    minRows={4}
-                    mb="md"
-                />
-
-                <Group justify="space-between">
+                <Group justify="flex-end" mb="xs">
                     <Button
                         variant="subtle"
                         color="red"
                         onClick={() => handleResetClick('custom')}
                         disabled={!customGlobalPrompt}
                         leftSection={<IconRefresh size={16} />}
+                        size="xs"
                     >
-                        {t('prompt_clear', 'Clear Custom Prompt')}
+                        {t('prompt_clear', 'Clear')}
                     </Button>
                     <Button
                         leftSection={<IconDeviceFloppy size={16} />}
                         onClick={handleSaveCustomPrompt}
                         loading={submittingCustom}
+                        size="xs"
                     >
-                        {t('prompt_save_custom', 'Save Custom Prompt')}
+                        {t('prompt_save_custom', 'Save')}
                     </Button>
                 </Group>
+
+                <ExpandableTextarea
+                    placeholder={t('prompt_custom_placeholder')}
+                    value={customGlobalPrompt}
+                    onChange={(e) => setCustomGlobalPrompt(e.currentTarget.value)}
+                    minRows={4}
+                />
             </Paper>
 
             {/* --- Reset Confirmation Modal --- */}

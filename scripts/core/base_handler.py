@@ -86,8 +86,10 @@ class BaseApiHandler(ABC):
             target_lang["code"]
         )
 
-        if "format_prompt" in game_profile:
-            format_prompt_part = game_profile["format_prompt"].format(
+        effective_format_prompt = prompt_manager.get_effective_format_prompt(game_profile["id"])
+        
+        if effective_format_prompt:
+             format_prompt_part = effective_format_prompt.format(
                 chunk_size=len(chunk),
                 numbered_list=numbered_list
             )

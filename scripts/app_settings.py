@@ -165,6 +165,7 @@ API_PROVIDERS = {
         "api_key_env": "GEMINI_API_KEY",
         "name": "Google Gemini",
         "default_model": "gemini-2.5-flash",
+        "base_url": "https://generativelanguage.googleapis.com",
         "enable_thinking": False,
         "thinking_budget": 0,
     },
@@ -182,6 +183,7 @@ API_PROVIDERS = {
     "openai": {
         "api_key_env": "OPENAI_API_KEY",
         "name": "OpenAI",
+        "base_url": "https://api.openai.com/v1",
         "default_model": "gpt-5-mini",
         "enable_thinking": False,
         "reasoning_effort": "minimal"

@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException
 from scripts.core.prompt_manager import prompt_manager
-from scripts.schemas.prompts import UpdateSystemPromptRequest, UpdateCustomPromptRequest, ResetPromptRequest
+from scripts.schemas.prompts import UpdateSystemPromptRequest, UpdateCustomPromptRequest, ResetPromptRequest, UpdateFormatPromptRequest
 
 router = APIRouter()
 
@@ -29,6 +29,17 @@ def update_custom_prompt(payload: UpdateCustomPromptRequest):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
+@router.post("/api/prompts/format")
+def update_format_prompt(payload: UpdateFormatPromptRequest):
+    """Updates (overrides) the format prompt for a specific game."""
+    try:
+        prompt_manager.save_format_prompt_override(payload.game_id, payload.format_prompt)
+        return {"status": "success"}
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
 @router.post("/api/prompts/reset")
 def reset_prompts(payload: ResetPromptRequest):
     """Resets prompts to their default values."""
@@ -36,7 +47,8 @@ def reset_prompts(payload: ResetPromptRequest):
         prompt_manager.reset_prompts(
             game_id=payload.game_id,
             reset_all=payload.reset_all,
-            reset_custom=payload.reset_custom
+            reset_custom=payload.reset_custom,
+            reset_format=payload.reset_format
         )
         return {"status": "success"}
     except Exception as e:

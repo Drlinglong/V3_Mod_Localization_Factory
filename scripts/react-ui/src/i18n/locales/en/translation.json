@@ -387,5 +387,16 @@
   "prompt_reset_error": "Failed to reset prompt",
   "api_settings_saved": "Settings saved successfully",
   "prompt_settings_warning_title": "Warning: Advanced Configuration",
-  "prompt_settings_warning_desc": "Unless you fully understand how the prompt engineering works, we strongly advise against modifying these system prompts. Incorrect changes may lead to translation failures or quality degradation."
+  "prompt_settings_warning_desc": "Unless you fully understand how the prompt engineering works, we strongly advise against modifying these system prompts. Incorrect changes may lead to translation failures or quality degradation.",
+  "prompt_formatting_rules": "Formatting Rules (JSON Structure)",
+  "prompt_formatting_desc": "These rules ensure the AI output is valid JSON. Edit with caution!",
+  "select_game_profile": "Select Game Profile",
+  "current_prompt": "Current Prompt",
+  "current_rules": "Current Rules",
+  "overridden": "Overridden",
+  "reset": "Reset",
+  "default_system_prompt": "Default System Prompt",
+  "default_format_rules": "Default Rules",
+  "reset_desc": "Reset to default",
+  "reset_disabled_desc": "No server-side override to reset"
 }
