@@ -14,7 +14,7 @@ The AI operates within a **Windows-based local development environment**, buildi
     *   Runs on a dev server (e.g., port 5173).
     *   Proxies API requests to the backend.
 *   **Backend**: **Python 3.x** (FastAPI).
-    *   Runs as a local server (e.g., port 8000).
+    *   Runs as a local server (e.g., port 8081).
     *   **Strict Separation**: Core logic (`scripts/core/`) must be callable by both the Web UI and CLI/Tests without modification.
 *   **Communication**: REST API via `axios`.
 

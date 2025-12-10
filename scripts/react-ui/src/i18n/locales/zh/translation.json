@@ -96,6 +96,7 @@
   "glossary_file_name": "文件名",
   "glossary_filename_required": "请输入文件名。",
   "glossary_filename_invalid": "文件名必须有效且以 .json 结尾 (例如, my_glossary.json)",
+  "tools_tab_workshop_generator": "工坊描述生成器",
   "tools_tab_thumbnail_generator": "封面图生成器",
   "tools_tab_event_renderer": "事件渲染器",
   "tools_tab_ui_debugger": "UI调试器",
