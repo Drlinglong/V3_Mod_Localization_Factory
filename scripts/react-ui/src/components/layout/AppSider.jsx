@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Stack, Tooltip, UnstyledButton, rem, Text, Box } from '@mantine/core';
 import {
-    IconHome2,
+    IconHome,
     IconBook,
     IconLanguage,
     IconVocabulary,
@@ -18,18 +18,19 @@ import {
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import styles from './Layout.module.css';
+import { FEATURES } from '../../config/features';
 
 // Navigation items configuration
 const navItems = [
-    { icon: IconHome2, label: 'nav_home', path: '/' },
-    { icon: IconBook, label: 'nav_docs', path: '/docs' },
+    { icon: IconHome, label: 'page_title_home', path: '/' },
+    { icon: IconBriefcase, label: 'page_title_project_management', path: '/project-management' },
     { icon: IconLanguage, label: 'page_title_translation', path: '/translation' },
     { icon: IconVocabulary, label: 'page_title_glossary_manager', path: '/glossary-manager' },
-    { icon: IconSparkles, label: 'neologism_review.title', path: '/neologism-review' },
     { icon: IconChecklist, label: 'page_title_proofreading', path: '/proofreading' },
-    { icon: IconBriefcase, label: 'page_title_project_management', path: '/project-management' },
-    { icon: IconGitBranch, label: 'page_title_cicd', path: '/cicd' },
+    // Conditionally include Neologism Tribunal
+    ...(FEATURES.ENABLE_NEOLOGISM_TRIBUNAL ? [{ icon: IconSparkles, label: 'neologism_review.title', path: '/neologism-review' }] : []),
     { icon: IconTools, label: 'page_title_tools', path: '/tools' },
+    // { icon: IconBook, label: 'page_title_docs', path: '/docs' },
     { icon: IconSettings, label: 'page_title_settings', path: '/settings' },
 ];
 
