@@ -5,14 +5,27 @@ import { PieChart, Pie, Cell, Tooltip, Legend, ResponsiveContainer } from 'recha
 // Modern Dark Theme Colors
 const COLORS = ['#4dabf7', '#69db7c', '#ffd43b']; // Mantine Blue 4, Green 4, Yellow 4
 
-const ProjectStatusPieChart = () => {
+const ProjectStatusPieChart = ({ data: dynamicData }) => {
   const { t } = useTranslation();
 
-  const data = [
-    { name: t('homepage_pie_chart_translated'), value: 400 },
-    { name: t('homepage_pie_chart_proofreading'), value: 300 },
-    { name: t('homepage_pie_chart_untranslated'), value: 300 },
+  const statusMap = {
+    'done': t('homepage_pie_chart_translated'),
+    'proofreading': t('homepage_pie_chart_proofreading'),
+    'todo': t('homepage_pie_chart_untranslated'),
+    'Done': t('homepage_pie_chart_translated'),
+    'Proofreading': t('homepage_pie_chart_proofreading'),
+    'Todo': t('homepage_pie_chart_untranslated')
+  };
+
+  const defaultData = [
+    { name: t('homepage_pie_chart_translated'), value: 0 },
+    { name: t('homepage_pie_chart_proofreading'), value: 0 },
+    { name: t('homepage_pie_chart_untranslated'), value: 0 },
   ];
+
+  const data = dynamicData && dynamicData.length > 0
+    ? dynamicData.map(d => ({ ...d, name: statusMap[d.name] || d.name }))
+    : defaultData;
 
   return (
     <ResponsiveContainer width="100%" height={300}>

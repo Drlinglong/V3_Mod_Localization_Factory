@@ -185,12 +185,14 @@ const ApiSettingsTab = () => {
                                     )}
 
                                     <Select
-                                        label={t('api_model_select_label', 'Translation Model')}
-                                        placeholder={t('api_model_select_placeholder', 'Select a model')}
+                                        label={t('api_model_select_label', 'Active Translation Model')}
+                                        placeholder={t('api_model_select_placeholder', 'Choose a model to use')}
+                                        description={t('api_model_select_description', 'Select which model will perform the translations')}
                                         data={[
                                             ...(provider.available_models || []),
-                                            ...(editForm.models || [])
-                                        ].filter((val, index, self) => self.indexOf(val) === index)}
+                                            ...(editForm.models || []),
+                                            ...(editForm.selectedModel ? [editForm.selectedModel] : [])
+                                        ].filter((val, index, self) => val && self.indexOf(val) === index).map(m => ({ value: m, label: m }))}
                                         value={editForm.selectedModel}
                                         onChange={(val) => setEditForm({ ...editForm, selectedModel: val })}
                                         size="xs"
@@ -202,8 +204,16 @@ const ApiSettingsTab = () => {
                                     <TagsInput
                                         label={t('api_models_label', 'Custom Models')}
                                         placeholder={t('api_models_placeholder', 'Type and press Enter to add models')}
+                                        description={t('api_models_description', 'Models defined here will appear in the selector above')}
                                         value={editForm.models}
-                                        onChange={(val) => setEditForm({ ...editForm, models: val })}
+                                        onChange={(val) => {
+                                            const isAdded = val.length > editForm.models.length;
+                                            setEditForm(prev => ({
+                                                ...prev,
+                                                models: val,
+                                                selectedModel: isAdded ? val[val.length - 1] : prev.selectedModel
+                                            }));
+                                        }}
                                         size="xs"
                                         leftSection={<IconRobot size={14} />}
                                         clearable

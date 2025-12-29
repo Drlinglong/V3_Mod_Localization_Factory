@@ -5,9 +5,67 @@ import logging
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 
+from scripts.shared.services import project_manager, glossary_manager
+from scripts.app_settings import TRANSLATION_PROGRESS_DB_PATH
+import sqlite3
+
 logger = logging.getLogger(__name__)
 
 router = APIRouter(prefix="/api/system", tags=["System"])
+
+@router.get("/stats")
+async def get_system_stats():
+    """
+    Returns aggregate statistics for the homepage dashboard.
+    """
+    try:
+        # 1. Project Stats from Repository
+        dashboard_stats = project_manager.repository.get_dashboard_stats()
+        
+        # 2. Glossary Stats
+        glossary_stats = glossary_manager.get_glossary_stats()
+        
+        # 3. Recent Activity (Latest 5 logs from translation_progress)
+        recent_activities = []
+        if os.path.exists(TRANSLATION_PROGRESS_DB_PATH):
+            conn = sqlite3.connect(TRANSLATION_PROGRESS_DB_PATH)
+            conn.row_factory = sqlite3.Row
+            cursor = conn.cursor()
+            try:
+                # Assuming there's a logs or tasks table. Let's check for a common one or just return empty if unsure.
+                # Usually we track progress. Let's try to get latest entries from project_files or similar.
+                # Actually, let's just use the projects' last_modified for now as activities.
+                projects = project_manager.get_projects()
+                for p in projects[:5]:
+                    recent_activities.append({
+                        "id": p['project_id'],
+                        "type": "project_update",
+                        "title": p['name'],
+                        "description": f"Status updated to: {p['status']}",
+                        "timestamp": p['last_modified'],
+                        "user": "System"
+                    })
+            except Exception:
+                pass
+            finally:
+                conn.close()
+
+        return {
+            "stats": {
+                "total_projects": dashboard_stats["total_projects"],
+                "words_translated": dashboard_stats["translated_keys"], # Using keys as proxy
+                "active_tasks": dashboard_stats["active_projects"],
+                "completion_rate": dashboard_stats["completion_rate"]
+            },
+            "charts": {
+                "project_status": dashboard_stats["status_distribution"],
+                "glossary_analysis": glossary_stats["game_distribution"]
+            },
+            "recent_activity": recent_activities
+        }
+    except Exception as e:
+        logger.error(f"Failed to fetch system stats: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
 
 class OpenFolderRequest(BaseModel):
     path: str
