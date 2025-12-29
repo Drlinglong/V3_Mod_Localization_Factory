@@ -115,11 +115,8 @@ def get_project_kanban(project_id: str):
 
 @router.post("/api/project/{project_id}/kanban")
 def save_project_kanban(project_id: str, kanban_data: Dict[str, Any]):
-    project = project_manager.get_project(project_id)
-    if not project:
-        raise HTTPException(status_code=404, detail="Project not found")
     try:
-        project_manager.kanban_service.save_board(project['source_path'], kanban_data)
+        project_manager.save_project_kanban(project_id, kanban_data)
         return {"status": "success"}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))

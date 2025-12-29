@@ -116,8 +116,30 @@ class ProjectRepository:
         conn = self._get_connection()
         try:
             cursor = conn.cursor()
-            cursor.execute("UPDATE projects SET status = ?, last_modified = ? WHERE project_id = ?",
-                           (status, datetime.datetime.now().isoformat(), project_id))
+            cursor.execute("UPDATE projects SET status = ?, last_modified = ? WHERE project_id = ?", 
+                         (status, datetime.datetime.now().isoformat(), project_id))
+            conn.commit()
+        finally:
+            conn.close()
+
+    def update_project_notes(self, project_id: str, notes: str):
+        """Persists project notes to the database and updates last_modified."""
+        conn = self._get_connection()
+        try:
+            cursor = conn.cursor()
+            cursor.execute("UPDATE projects SET notes = ?, last_modified = ? WHERE project_id = ?", 
+                         (notes, datetime.datetime.now().isoformat(), project_id))
+            conn.commit()
+        finally:
+            conn.close()
+
+    def touch_project(self, project_id: str):
+        """Updates the last_modified timestamp for a project."""
+        conn = self._get_connection()
+        try:
+            cursor = conn.cursor()
+            cursor.execute("UPDATE projects SET last_modified = ? WHERE project_id = ?", 
+                         (datetime.datetime.now().isoformat(), project_id))
             conn.commit()
         finally:
             conn.close()
