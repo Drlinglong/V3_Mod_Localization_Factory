@@ -114,6 +114,10 @@ class ProjectManager:
             cursor.execute("ALTER TABLE projects ADD COLUMN source_language TEXT DEFAULT 'english'")
         if 'created_at' not in p_cols:
             cursor.execute("ALTER TABLE projects ADD COLUMN created_at TEXT")
+        if 'last_activity_type' not in p_cols:
+            cursor.execute("ALTER TABLE projects ADD COLUMN last_activity_type TEXT")
+        if 'last_activity_desc' not in p_cols:
+            cursor.execute("ALTER TABLE projects ADD COLUMN last_activity_desc TEXT")
             
         # Backfill defaults for any NULLs resulting from migration or legacy data
         cursor.execute("UPDATE projects SET last_modified = datetime('now') WHERE last_modified IS NULL")
@@ -292,7 +296,11 @@ class ProjectManager:
         self.kanban_service.save_board(project['source_path'], kanban_data)
         
         # 2. Touch DB to update activity feed
-        self.repository.touch_project(project_id)
+        self.repository.touch_project(
+            project_id, 
+            activity_type='kanban_update', 
+            activity_desc="Updated Kanban board layout"
+        )
         logger.info(f"Saved kanban and touched project {project_id}")
 
     def update_file_status(self, project_id: str, file_path: str, status: str):
