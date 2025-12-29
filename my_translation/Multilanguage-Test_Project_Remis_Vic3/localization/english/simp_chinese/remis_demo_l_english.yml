@@ -16,8 +16,8 @@
  # 事件 2: 展现能力
  # ----------------------------------------------
  remis_event.2.t:0 "Unexpected Talent"
- remis_event.2.d:0 "The girl known as \"Remus\" displayed astonishing administrative and diplomatic talents."
- remis_event.2.f:0 "The girl we call \"Remus\" recovered quickly. To repay the kindness of sheltering her, she volunteered to take on work.\n\nAt first, the other bureaucrats, with smirks of schadenfreude, pushed the most tedious tax archives and moldy diplomatic documents onto her. However, a few days later, those smiles disappeared.\n\nHer speed in processing documents was astonishing, the classification logic as clear as if she had drafted a legal code. She even corrected a Latin grammatical error in a draft declaration of war reason sent to [SCOPE.sCountry('rival_country').GetName], pointing to that line and saying: \"§Y[Root.GetCharacter.GetFullName]§!, such wording is not only rude, but also makes us seem lacking in refinement. \""
+ remis_event.2.d:0 "The girl known as \\"
+ remis_event.2.f:0 "The girl we call \\"
  remis_event.2.a:0 "Who is she really?"
 
  # ----------------------------------------------
@@ -25,7 +25,7 @@
  # ----------------------------------------------
  remis_event.3.t:0 "Confession on a Rainy Night"
  remis_event.3.d:0 "Remus tried to leave, but you successfully retained her by promising safety and stability."
- remis_event.3.f:0 "Another rainy night. I passed by her office and saw the processed documents neatly stacked on the desk-that was some ancient military phalanx formation. But the person was gone.\n\nAn ominous premonition led me to summon the guards. We searched the residence for half a day, finally discovering her in the corner of the bathroom. She was curled up there crying, clutching that gold coin tightly in her hand. Seeing me enter, she hurriedly tried to wipe away her tears, and when standing up, accidentally knocked over the miscellaneous items on the washstand, perfume bottles and combs shattering all over the floor.\n\n\"I... I've finished the work,\" she said with her head bowed, voice trembling, \"if the lord finds me in the way, I can leave at any time. \""
+ remis_event.3.f:0 "Another rainy night. I passed by her office and saw the processed documents neatly stacked on the desk-that was some ancient military phalanx formation. But the person was gone.\n\nAn ominous premonition led me to summon the guards. We searched the residence for half a day, finally discovering her in the corner of the bathroom. She was curled up there crying, clutching that gold coin tightly in her hand. Seeing me enter, she hurriedly tried to wipe away her tears, and when standing up, accidentally knocked over the miscellaneous items on the washstand, perfume bottles and combs shattering all over the floor.\n\n\\"
  remis_event.3.a:0 "Stay here; it's safer than outside."
  remis_event.3.b:0 "Tell me your wish; perhaps I can help you achieve it."
 
@@ -34,7 +34,7 @@
  # ----------------------------------------------
  remis_event.4.t:0 "Daughter of the Wolf"
  remis_event.4.d:0 "Remus revealed her true identity and proposed to assist you with Constantinople as the goal."
- remis_event.4.f:0 "In the following days, she kept herself locked in her room. Until this morning, she pushed open the door to my office. She was no longer that timid wanderer; she had changed into a sharp modern outfit, but her eyes burned with some ancient millennial flame.\n\n\"I've observed you for a long time, [Root.GetCharacter.GetFullName],\" she said, addressing him by name, \"your strategies, your ambitions... remind me of my forebears. I am willing to use everything I know about the empire to assist you. \"\n\nShe walked to the world map, her finger crossing the ocean, pressing heavily on the Bosphorus Strait.\n\n\"But I want to see my homeland. I want to see §YConstantinople§! again. \""
+ remis_event.4.f:0 "In the following days, she kept herself locked in her room. Until this morning, she pushed open the door to my office. She was no longer that timid wanderer; she had changed into a sharp modern outfit, but her eyes burned with some ancient millennial flame.\n\n\\"
  remis_event.4.a:0 "Then let's go on a diplomatic visit."
  remis_event.4.b:0 "The time to restore Rome has come!"
 
@@ -43,7 +43,7 @@
  # ----------------------------------------------
  remis_event.5.t:0 "Wisdom of the Eternal City"
  remis_event.5.d:0 "Ancient Rome's advanced technologies and laws are reborn in the modern state."
- remis_event.5.f:0 "Under Miss Remus's guidance, a series of \"retro\" reforms are quietly taking place in [Root.GetCountry.GetName]. This sounds crazy, but the effects are surprisingly good.\n\nThe improved §Ysewer and aqueduct systems§! have greatly enhanced urban hygiene; a certain §YGreek fire§! improved based on lost recipes has been equipped to our armed forces; and the new legal code fuses the essence of the Napoleonic Code and ancient Roman law. Most surprisingly, in the back garden of the residence, relying on memory, she guided the craftsmen to build a miniature model of the §YHagia Sophia§!, its dome structure so exquisite that contemporary Architects were left in awe."
+ remis_event.5.f:0 "Under Miss Remus's guidance, a series of \\"
  remis_event.5.a:0 "Rome can be revived in a single day."
  # 获得现代排水系统科技，海军攻防+10，对护卫舰和风帆战舰的伤害额外增加
  # 在首都创建一个等级为1的‘圣索菲亚大教堂模型‘奇观
@@ -53,7 +53,7 @@
  # ----------------------------------------------
  remis_event.6.t:0 "Debate on Legitimacy"
  remis_event.6.d:0 "Remus refuted the envoys of Greece and the Ottomans in diplomatic settings, establishing Roman legitimacy."
- remis_event.6.f:0 "Envoys from the Kingdom of Greece and the Ottoman Empire arrived simultaneously. They had heard the rumors about the \"Roman princess\" and expressed strong protests and mockery. However, in the debate in the congressional hall, that mockery soon turned to fear.\n\nRemus not only refuted their accusations in fluent Greek and Turkish, but also cited every legal provision from the past few centuries, proving the illegitimacy of their rule. When she pulled out that ancient gold coin from her sleeve and explained the origin of the emblem on it, the entire hall fell silent.\n\nThis debate spread around the world via telegraph. Now, even newspapers in London and Paris are discussing: §RWho is the true Rome?§!"
+ remis_event.6.f:0 "Envoys from the Kingdom of Greece and the Ottoman Empire arrived simultaneously. They had heard the rumors about the \\"
  remis_event.6.a:0 "Of course, it's us!"
  # 玩家获得30点恶名，和奥斯曼与希腊的关系下降150
 

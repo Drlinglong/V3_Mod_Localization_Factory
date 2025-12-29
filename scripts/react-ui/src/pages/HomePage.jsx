@@ -16,6 +16,18 @@ const HomePage = () => {
   const navigate = useNavigate();
   const [slogan, setSlogan] = useState('');
   const [greeting, setGreeting] = useState('');
+  const [stats, setStats] = useState({
+    total_projects: 0,
+    words_translated: 0,
+    active_tasks: 0,
+    completion_rate: 0
+  });
+  const [charts, setCharts] = useState({
+    project_status: [],
+    glossary_analysis: []
+  });
+  const [recentActivity, setRecentActivity] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const slogans = t('homepage_slogans', { returnObjects: true });
@@ -28,7 +40,26 @@ const HomePage = () => {
     if (hour < 12) setGreeting('Good Morning');
     else if (hour < 18) setGreeting('Good Afternoon');
     else setGreeting('Good Evening');
+
+    fetchDashboardData();
   }, [t]);
+
+  const fetchDashboardData = async () => {
+    try {
+      setLoading(true);
+      const response = await fetch('/api/system/stats');
+      if (response.ok) {
+        const data = await response.json();
+        setStats(data.stats);
+        setCharts(data.charts);
+        setRecentActivity(data.recent_activity);
+      }
+    } catch (error) {
+      console.error('Failed to fetch dashboard data:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <Box h="100vh" style={{ overflow: 'hidden' }}>
@@ -82,44 +113,44 @@ const HomePage = () => {
             <Grid.Col span={{ xs: 12, sm: 6, lg: 3 }}>
               <StatCard
                 title={t('homepage_stat_total_projects')}
-                value="12"
+                value={stats.total_projects.toString()}
                 icon={<IconChecklist size={24} />}
                 color="blue"
-                progress={75}
-                trend={12}
+                progress={100}
+                trend={0}
                 className={styles.glassCard}
               />
             </Grid.Col>
             <Grid.Col span={{ xs: 12, sm: 6, lg: 3 }}>
               <StatCard
                 title={t('homepage_stat_words_translated')}
-                value="45,231"
+                value={stats.words_translated.toLocaleString()}
                 icon={<IconVocabulary size={24} />}
                 color="teal"
-                progress={45}
-                trend={5.4}
+                progress={stats.completion_rate}
+                trend={0}
                 className={styles.glassCard}
               />
             </Grid.Col>
             <Grid.Col span={{ xs: 12, sm: 6, lg: 3 }}>
               <StatCard
                 title={t('homepage_stat_active_tasks')}
-                value="8"
+                value={stats.active_tasks.toString()}
                 icon={<IconActivity size={24} />}
                 color="orange"
-                progress={25}
-                trend={-2}
+                progress={Math.min(100, (stats.active_tasks / (stats.total_projects || 1)) * 100)}
+                trend={0}
                 className={styles.glassCard}
               />
             </Grid.Col>
             <Grid.Col span={{ xs: 12, sm: 6, lg: 3 }}>
               <StatCard
                 title={t('homepage_stat_completion_rate')}
-                value="89%"
+                value={`${stats.completion_rate}%`}
                 icon={<IconChartBar size={24} />}
                 color="grape"
-                progress={89}
-                trend={1.2}
+                progress={stats.completion_rate}
+                trend={0}
                 className={styles.glassCard}
               />
             </Grid.Col>
@@ -133,16 +164,16 @@ const HomePage = () => {
                 <Card shadow="sm" padding="lg" radius="md" withBorder className={styles.glassCard}>
                   <Group justify="space-between" mb="md">
                     <Title order={4} className={styles.cardTitle}>{t('homepage_chart_pie_title')}</Title>
-                    <ActionIcon variant="subtle" color="gray"><IconRefresh size={16} /></ActionIcon>
+                    <ActionIcon variant="subtle" color="gray" onClick={fetchDashboardData} loading={loading}><IconRefresh size={16} /></ActionIcon>
                   </Group>
-                  <ProjectStatusPieChart />
+                  <ProjectStatusPieChart data={charts.project_status} />
                 </Card>
                 <Card shadow="sm" padding="lg" radius="md" withBorder className={styles.glassCard}>
                   <Group justify="space-between" mb="md">
                     <Title order={4} className={styles.cardTitle}>{t('homepage_chart_bar_title')}</Title>
-                    <ActionIcon variant="subtle" color="gray"><IconRefresh size={16} /></ActionIcon>
+                    <ActionIcon variant="subtle" color="gray" onClick={fetchDashboardData} loading={loading}><IconRefresh size={16} /></ActionIcon>
                   </Group>
-                  <GlossaryAnalysisBarChart />
+                  <GlossaryAnalysisBarChart data={charts.glossary_analysis} />
                 </Card>
               </Stack>
             </Grid.Col>
@@ -150,7 +181,11 @@ const HomePage = () => {
             {/* Right Column: Recent Activity & Quick Actions */}
             <Grid.Col span={{ xs: 12, lg: 4 }}>
               <Stack gap="md">
-                <RecentActivityList className={styles.glassCard} />
+                <RecentActivityList
+                  className={styles.glassCard}
+                  activities={recentActivity}
+                  loading={loading}
+                />
 
                 <Card shadow="sm" padding="lg" radius="md" withBorder className={styles.glassCard}>
                   <Title order={4} mb="md" className={styles.cardTitle}>{t('homepage_quick_links')}</Title>

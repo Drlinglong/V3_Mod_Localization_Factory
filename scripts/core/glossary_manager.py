@@ -563,4 +563,39 @@ class GlossaryManager:
             logging.warning(f"Invalid fuzzy matching mode: {mode}. Using default 'loose' mode.")
             self.fuzzy_matching_mode = 'loose'
 
+    def get_glossary_stats(self) -> Dict[str, Any]:
+        """Returns statistics about the glossary database."""
+        if not self.conn:
+            return {"total_terms": 0, "game_distribution": []}
+        
+        try:
+            cursor = self.conn.cursor()
+            
+            # 1. Total terms count
+            cursor.execute("SELECT COUNT(*) FROM entries")
+            total_terms = cursor.fetchone()[0]
+            
+            # 2. Distribution by game
+            cursor.execute("""
+                SELECT g.game_id, COUNT(e.entry_id) as term_count
+                FROM glossaries g
+                LEFT JOIN entries e ON g.glossary_id = e.glossary_id
+                GROUP BY g.game_id
+                ORDER BY term_count DESC
+            """)
+            rows = cursor.fetchall()
+            
+            game_distribution = [
+                {"name": row['game_id'], "terms": row['term_count']} 
+                for row in rows if row['term_count'] > 0
+            ]
+            
+            return {
+                "total_terms": total_terms,
+                "game_distribution": game_distribution
+            }
+        except Exception as e:
+            logging.error(f"Failed to get glossary stats: {e}")
+            return {"total_terms": 0, "game_distribution": []}
+
 glossary_manager = GlossaryManager()

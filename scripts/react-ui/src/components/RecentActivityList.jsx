@@ -2,19 +2,27 @@ import React from 'react';
 import { Paper, Text, Group, Avatar, Stack, Badge, ActionIcon, ScrollArea } from '@mantine/core';
 import { IconDotsVertical, IconFileText } from '@tabler/icons-react';
 
-const mockActivities = [
-    { id: 1, project: 'Victoria 3: Divergences', action: 'Translated 50 keys', time: '2 hours ago', game: 'Vic3' },
-    { id: 2, project: 'Stellaris: Gigastructures', action: 'Proofread 12 files', time: '5 hours ago', game: 'Stellaris' },
-    { id: 3, project: 'HOI4: Kaiserreich', action: 'Exported mod', time: '1 day ago', game: 'HOI4' },
-    { id: 4, project: 'CK3: Godherja', action: 'Created new glossary', time: '2 days ago', game: 'CK3' },
-    { id: 5, project: 'EU4: Anbennar', action: 'Updated source files', time: '3 days ago', game: 'EU4' },
-];
+import dayjs from 'dayjs';
+import relativeTime from 'dayjs/plugin/relativeTime';
+import { Skeleton } from '@mantine/core';
 
-const RecentActivityList = ({ className }) => {
+import { useTranslation } from 'react-i18next';
+
+dayjs.extend(relativeTime);
+
+const RecentActivityList = ({ className, activities, loading }) => {
+    const { t } = useTranslation();
+
+    const statusMap = {
+        'active': t('project_management.status.active'),
+        'archived': t('project_management.status.archived'),
+        'deleted': t('project_management.status.deleted')
+    };
+
     return (
         <Paper withBorder radius="md" p="md" className={className} style={{ background: 'transparent' }}>
             <Group justify="space-between" mb="md">
-                <Text fw={700}>Recent Activity</Text>
+                <Text fw={700}>{t('homepage_recent_activity')}</Text>
                 <ActionIcon variant="subtle" color="gray">
                     <IconDotsVertical size={16} />
                 </ActionIcon>
@@ -22,22 +30,40 @@ const RecentActivityList = ({ className }) => {
 
             <ScrollArea h={300} offsetScrollbars>
                 <Stack gap="md">
-                    {mockActivities.map((activity) => (
-                        <Group key={activity.id} wrap="nowrap">
-                            <Avatar color="blue" radius="xl">
-                                {activity.game.substring(0, 2)}
-                            </Avatar>
-                            <div style={{ flex: 1 }}>
-                                <Text size="sm" fw={500}>
-                                    {activity.project}
-                                </Text>
-                                <Text c="dimmed" size="xs">
-                                    {activity.action} • {activity.time}
-                                </Text>
-                            </div>
-                            <Badge variant="light" size="xs">{activity.game}</Badge>
-                        </Group>
-                    ))}
+                    {loading ? (
+                        Array(5).fill(0).map((_, i) => (
+                            <Group key={i} wrap="nowrap">
+                                <Skeleton height={38} circle />
+                                <div style={{ flex: 1 }}>
+                                    <Skeleton height={14} mb={6} width="80%" />
+                                    <Skeleton height={10} width="40%" />
+                                </div>
+                            </Group>
+                        ))
+                    ) : (activities || []).length > 0 ? (
+                        activities.map((activity) => (
+                            <Group key={activity.id} wrap="nowrap">
+                                <Avatar color="blue" radius="xl">
+                                    {activity.title.substring(0, 2).toUpperCase()}
+                                </Avatar>
+                                <div style={{ flex: 1 }}>
+                                    <Text size="sm" fw={500}>
+                                        {activity.title}
+                                    </Text>
+                                    <Text c="dimmed" size="xs">
+                                        {activity.description.includes('Status updated to:')
+                                            ? t('recent_activity_desc_status_updated', { status: statusMap[activity.description.split(': ')[1]] || activity.description.split(': ')[1] })
+                                            : activity.description} • {dayjs(activity.timestamp).fromNow()}
+                                    </Text>
+                                </div>
+                                <Badge variant="light" size="xs">
+                                    {t(`recent_activity_type_${activity.type}`, activity.type.replace('_', ' '))}
+                                </Badge>
+                            </Group>
+                        ))
+                    ) : (
+                        <Text size="xs" c="dimmed" ta="center" py="xl">{t('recent_activity_no_data')}</Text>
+                    )}
                 </Stack>
             </ScrollArea>
         </Paper>

@@ -2,16 +2,13 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
-const GlossaryAnalysisBarChart = () => {
+const GlossaryAnalysisBarChart = ({ data: dynamicData }) => {
   const { t } = useTranslation();
 
-  const data = [
-    { name: t('game_name_vic3'), terms: 4000 },
-    { name: t('game_name_stellaris'), terms: 3000 },
-    { name: t('game_name_hoi4'), terms: 2000 },
-    { name: t('game_name_ck3'), terms: 2780 },
-    { name: t('game_name_eu4'), terms: 1890 },
-  ];
+  const data = (dynamicData || []).map(item => ({
+    ...item,
+    name: t(`game_name_${item.name.toLowerCase()}`, item.name) // Map 'Victoria 3' or 'vic3' to translated name
+  }));
 
   return (
     <ResponsiveContainer width="100%" height={300}>

@@ -266,3 +266,51 @@ class ProjectRepository:
             return [ProjectFile(**dict(row)) for row in cursor.fetchall()]
         finally:
             conn.close()
+
+    def get_dashboard_stats(self) -> Dict[str, Any]:
+        """
+        Retrieves aggregate statistics for the dashboard.
+        """
+        conn = self._get_connection()
+        try:
+            cursor = conn.cursor()
+            
+            # 1. Total Projects
+            cursor.execute("SELECT COUNT(*) as count FROM projects")
+            total_projects = cursor.fetchone()['count']
+            
+            # 2. Active Projects (status='active')
+            cursor.execute("SELECT COUNT(*) as count FROM projects WHERE status = 'active'")
+            active_projects = cursor.fetchone()['count']
+            
+            # 3. File Statistics (by status)
+            cursor.execute("""
+                SELECT status, COUNT(*) as count, SUM(original_key_count) as total_keys
+                FROM project_files
+                GROUP BY status
+            """)
+            file_stats = cursor.fetchall()
+            
+            status_counts = {row['status']: row['count'] for row in file_stats}
+            status_keys = {row['status']: row['total_keys'] or 0 for row in file_stats}
+            
+            total_keys = sum(status_keys.values())
+            translated_keys = status_keys.get('done', 0) + status_keys.get('proofreading', 0)
+            
+            completion_rate = (translated_keys / total_keys * 100) if total_keys > 0 else 0
+            
+            return {
+                "total_projects": total_projects,
+                "active_projects": active_projects,
+                "total_files": sum(status_counts.values()),
+                "status_distribution": [
+                    {"name": "Done", "value": status_counts.get('done', 0)},
+                    {"name": "Proofreading", "value": status_counts.get('proofreading', 0)},
+                    {"name": "Todo", "value": status_counts.get('todo', 0)}
+                ],
+                "total_keys": total_keys,
+                "translated_keys": translated_keys,
+                "completion_rate": round(completion_rate, 1)
+            }
+        finally:
+            conn.close()

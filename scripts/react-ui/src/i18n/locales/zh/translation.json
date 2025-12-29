@@ -70,10 +70,12 @@
   "homepage_stat_active_tasks": "活跃任务",
   "homepage_stat_completion_rate": "完成率",
   "game_name_vic3": "维多利亚3",
+  "game_name_victoria3": "维多利亚3",
   "game_name_stellaris": "群星",
   "game_name_hoi4": "钢铁雄心4",
   "game_name_ck3": "十字军之王3",
   "game_name_eu4": "欧陆风云4",
+  "game_name_eu5": "欧陆风云5",
   "homepage_action_card_new_project_icon": "🚀",
   "homepage_action_card_update_project_icon": "🔄",
   "glossary_game": "游戏",
@@ -433,5 +435,9 @@
   "default_system_prompt": "默认系统 Prompt",
   "default_format_rules": "默认规则",
   "reset_desc": "重置为默认值",
-  "reset_disabled_desc": "当前使用默认值，无需重置"
+  "reset_disabled_desc": "当前使用默认值，无需重置",
+  "homepage_recent_activity": "近期活动",
+  "recent_activity_type_project_update": "项目更新",
+  "recent_activity_desc_status_updated": "状态已更新为: {{status}}",
+  "recent_activity_no_data": "暂无近期活动"
 }
