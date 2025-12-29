@@ -105,9 +105,27 @@ class FileService:
         for trans_dir in translation_dirs:
             files_to_upsert.extend(self.scan_dir(trans_dir, 'translation', disk_source_lang, project_id))
 
+        # 2. JSON Hydration (Status Reconciliation)
+        # Establish .remis_project.json as the SSOT for file statuses.
+        try:
+            kanban_data = self.kanban_service.get_board(source_path)
+            kanban_tasks = kanban_data.get("tasks", {})
+            
+            for f in files_to_upsert:
+                file_id = f['file_id']
+                if file_id in kanban_tasks:
+                    # Use status from JSON if it exists
+                    json_status = kanban_tasks[file_id].get('status')
+                    if json_status:
+                        f['status'] = json_status
+            
+            logger.info("FileService: Hydrated file statuses from JSON sidecar.")
+        except Exception as e:
+            logger.warning(f"FileService: Could not hydrate from JSON (normal for new projects): {e}")
+
         logger.info(f"FileService: Total files to upsert: {len(files_to_upsert)}")
 
-        # 2. Update Database (Upsert & Clean) via Repository
+        # 3. Update Database (Upsert & Clean) via Repository
         try:
             # Get existing file IDs for this project
             existing_file_ids = set(self.project_repository.get_project_file_ids(project_id))
