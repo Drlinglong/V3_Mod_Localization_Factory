@@ -24,6 +24,37 @@ class ProjectRepository:
         conn.row_factory = sqlite3.Row
         return conn
 
+    def add_activity_log(self, project_id: str, activity_type: str, description: str):
+        """Records a new activity log entry."""
+        import uuid
+        conn = self._get_connection()
+        try:
+            cursor = conn.cursor()
+            cursor.execute("""
+                INSERT INTO activity_log (log_id, project_id, type, description, timestamp)
+                VALUES (?, ?, ?, ?, ?)
+            """, (str(uuid.uuid4()), project_id, activity_type, description, datetime.datetime.now().isoformat()))
+            conn.commit()
+        finally:
+            conn.close()
+
+    def get_recent_logs(self, limit: int = 10) -> List[Dict[str, Any]]:
+        """Retrieves the latest activity logs with project names."""
+        conn = self._get_connection()
+        try:
+            cursor = conn.cursor()
+            query = """
+                SELECT l.*, p.name as title
+                FROM activity_log l
+                JOIN projects p ON l.project_id = p.project_id
+                ORDER BY l.timestamp DESC
+                LIMIT ?
+            """
+            cursor.execute(query, (limit,))
+            return [dict(row) for row in cursor.fetchall()]
+        finally:
+            conn.close()
+
     # --- Project CRUD ---
 
     def get_project(self, project_id: str) -> Optional[Project]:

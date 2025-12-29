@@ -25,25 +25,22 @@ async def get_system_stats():
         # 2. Glossary Stats
         glossary_stats = glossary_manager.get_glossary_stats()
         
-        # 3. Recent Activity (Latest 5 modified projects)
+        # 3. Recent Activity (Latest 10 logs from activity_log table)
         recent_activities = []
         try:
-            projects = project_manager.get_projects()
-            for p in projects[:5]:
-                # Use persisted activity info or fallback to basic status update
-                activity_type = p.get('last_activity_type') or 'project_update'
-                activity_desc = p.get('last_activity_desc') or f"Status updated to: {p['status']}"
-                
+            logs = project_manager.repository.get_recent_logs(limit=10)
+            for log in logs:
                 recent_activities.append({
-                    "id": p['project_id'],
-                    "type": activity_type,
-                    "title": p['name'],
-                    "description": activity_desc,
-                    "timestamp": p['last_modified'],
+                    "id": log['log_id'],  # Unique log ID for React keys
+                    "project_id": log['project_id'],
+                    "type": log['type'],
+                    "title": log['title'],  # This is the project name joined in SQL
+                    "description": log['description'],
+                    "timestamp": log['timestamp'],
                     "user": "System"
                 })
         except Exception as e:
-            logger.error(f"Failed to build activity list: {e}")
+            logger.error(f"Failed to build activity list from logs: {e}")
             pass
 
         return {

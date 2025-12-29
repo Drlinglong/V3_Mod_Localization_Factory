@@ -413,5 +413,8 @@
   "recent_activity_type_kanban_update": "Kanban Updated",
   "recent_activity_type_status_change": "Status Changed",
   "recent_activity_desc_status_updated": "Status updated to: {{status}}",
+  "recent_activity_desc_note_added": "Added a new note",
+  "recent_activity_desc_kanban_update": "Updated Kanban board layout",
+  "recent_activity_desc_file_update": "Updated a file status",
   "recent_activity_no_data": "No recent activity"
 }

@@ -53,7 +53,7 @@ const RecentActivityList = ({ className, activities, loading }) => {
                                     <Text c="dimmed" size="xs">
                                         {activity.description.includes('Status updated to:')
                                             ? t('recent_activity_desc_status_updated', { status: statusMap[activity.description.split(': ')[1]] || activity.description.split(': ')[1] })
-                                            : activity.description} • {dayjs(activity.timestamp).fromNow()}
+                                            : t(`recent_activity_desc_${activity.type}`, activity.description)} • {dayjs(activity.timestamp).fromNow()}
                                     </Text>
                                 </div>
                                 <Badge variant="light" size="xs">
