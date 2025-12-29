@@ -409,6 +409,9 @@
   "reset_disabled_desc": "No server-side override to reset",
   "homepage_recent_activity": "Recent Activity",
   "recent_activity_type_project_update": "Project Update",
+  "recent_activity_type_note_added": "Note Added",
+  "recent_activity_type_kanban_update": "Kanban Updated",
+  "recent_activity_type_status_change": "Status Changed",
   "recent_activity_desc_status_updated": "Status updated to: {{status}}",
   "recent_activity_no_data": "No recent activity"
 }

@@ -25,30 +25,26 @@ async def get_system_stats():
         # 2. Glossary Stats
         glossary_stats = glossary_manager.get_glossary_stats()
         
-        # 3. Recent Activity (Latest 5 logs from translation_progress)
+        # 3. Recent Activity (Latest 5 modified projects)
         recent_activities = []
-        if os.path.exists(TRANSLATION_PROGRESS_DB_PATH):
-            conn = sqlite3.connect(TRANSLATION_PROGRESS_DB_PATH)
-            conn.row_factory = sqlite3.Row
-            cursor = conn.cursor()
-            try:
-                # Assuming there's a logs or tasks table. Let's check for a common one or just return empty if unsure.
-                # Usually we track progress. Let's try to get latest entries from project_files or similar.
-                # Actually, let's just use the projects' last_modified for now as activities.
-                projects = project_manager.get_projects()
-                for p in projects[:5]:
-                    recent_activities.append({
-                        "id": p['project_id'],
-                        "type": "project_update",
-                        "title": p['name'],
-                        "description": f"Status updated to: {p['status']}",
-                        "timestamp": p['last_modified'],
-                        "user": "System"
-                    })
-            except Exception:
-                pass
-            finally:
-                conn.close()
+        try:
+            projects = project_manager.get_projects()
+            for p in projects[:5]:
+                # Use persisted activity info or fallback to basic status update
+                activity_type = p.get('last_activity_type') or 'project_update'
+                activity_desc = p.get('last_activity_desc') or f"Status updated to: {p['status']}"
+                
+                recent_activities.append({
+                    "id": p['project_id'],
+                    "type": activity_type,
+                    "title": p['name'],
+                    "description": activity_desc,
+                    "timestamp": p['last_modified'],
+                    "user": "System"
+                })
+        except Exception as e:
+            logger.error(f"Failed to build activity list: {e}")
+            pass
 
         return {
             "stats": {

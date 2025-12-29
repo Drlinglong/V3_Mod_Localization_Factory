@@ -116,8 +116,12 @@ class ProjectRepository:
         conn = self._get_connection()
         try:
             cursor = conn.cursor()
-            cursor.execute("UPDATE projects SET status = ?, last_modified = ? WHERE project_id = ?", 
-                         (status, datetime.datetime.now().isoformat(), project_id))
+            now = datetime.datetime.now().isoformat()
+            cursor.execute("""
+                UPDATE projects 
+                SET status = ?, last_modified = ?, last_activity_type = ?, last_activity_desc = ? 
+                WHERE project_id = ?
+            """, (status, now, 'status_change', f"Status updated to: {status}", project_id))
             conn.commit()
         finally:
             conn.close()
@@ -127,19 +131,26 @@ class ProjectRepository:
         conn = self._get_connection()
         try:
             cursor = conn.cursor()
-            cursor.execute("UPDATE projects SET notes = ?, last_modified = ? WHERE project_id = ?", 
-                         (notes, datetime.datetime.now().isoformat(), project_id))
+            now = datetime.datetime.now().isoformat()
+            cursor.execute("""
+                UPDATE projects 
+                SET notes = ?, last_modified = ?, last_activity_type = ?, last_activity_desc = ? 
+                WHERE project_id = ?
+            """, (notes, now, 'note_added', "Added a new note", project_id))
             conn.commit()
         finally:
             conn.close()
 
-    def touch_project(self, project_id: str):
-        """Updates the last_modified timestamp for a project."""
+    def touch_project(self, project_id: str, activity_type: str = 'project_update', activity_desc: str = "Project updated"):
+        """Updates the last_modified timestamp and activity info for a project."""
         conn = self._get_connection()
         try:
             cursor = conn.cursor()
-            cursor.execute("UPDATE projects SET last_modified = ? WHERE project_id = ?", 
-                         (datetime.datetime.now().isoformat(), project_id))
+            cursor.execute("""
+                UPDATE projects 
+                SET last_modified = ?, last_activity_type = ?, last_activity_desc = ? 
+                WHERE project_id = ?
+            """, (datetime.datetime.now().isoformat(), activity_type, activity_desc, project_id))
             conn.commit()
         finally:
             conn.close()

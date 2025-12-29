@@ -438,6 +438,9 @@
   "reset_disabled_desc": "当前使用默认值，无需重置",
   "homepage_recent_activity": "近期活动",
   "recent_activity_type_project_update": "项目更新",
+  "recent_activity_type_note_added": "添加笔记",
+  "recent_activity_type_kanban_update": "更新看板",
+  "recent_activity_type_status_change": "状态变更",
   "recent_activity_desc_status_updated": "状态已更新为: {{status}}",
   "recent_activity_no_data": "暂无近期活动"
 }
