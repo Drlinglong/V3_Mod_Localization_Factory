@@ -41,8 +41,6 @@ class Project(BaseModel):
     status: str
     created_at: str
     last_modified: str
-    last_activity_type: Optional[str] = None
-    last_activity_desc: Optional[str] = None
 
 class ProjectFile(BaseModel):
     file_id: str

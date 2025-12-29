@@ -51,8 +51,11 @@ class KanbanService:
             tasks = kanban_data.get("tasks", {})
             columns = kanban_data.get("columns", [])
             
-            # Ensure 'todo' column exists
-            if "todo" not in columns:
+            # Robustness: Ensure default columns exist if the list is suspicious
+            default_columns = ["todo", "in_progress", "proofreading", "paused", "done"]
+            if len(columns) < 3:
+                columns = default_columns
+            elif "todo" not in columns:
                 columns.insert(0, "todo")
 
             # 1. Separate Source, Translation, and Metadata files

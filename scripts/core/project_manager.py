@@ -32,8 +32,6 @@ class Project:
     status: str  # 'active', 'archived', 'deleted'
     created_at: str
     notes: str = "" # Added notes field
-    last_activity_type: Optional[str] = None
-    last_activity_desc: Optional[str] = None
 
 @dataclass
 class ProjectFile:
