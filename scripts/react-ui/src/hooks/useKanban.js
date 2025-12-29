@@ -63,7 +63,8 @@ export const useKanban = (projectId) => {
             const updatedTasks = prev.map(t =>
                 t.id === taskId ? { ...t, status: newStatus } : t
             );
-            saveBoard(updatedTasks, columns);
+            // Move persistence out of the pure updater
+            setTimeout(() => saveBoard(updatedTasks, columns), 0);
             return updatedTasks;
         });
     }, [saveBoard, columns]);
@@ -79,7 +80,7 @@ export const useKanban = (projectId) => {
         };
         setTasks(prev => {
             const updatedTasks = [newTask, ...prev];
-            saveBoard(updatedTasks, columns);
+            setTimeout(() => saveBoard(updatedTasks, columns), 0);
             return updatedTasks;
         });
         return newTask;
@@ -90,7 +91,7 @@ export const useKanban = (projectId) => {
             const updatedTasks = prev.map(t =>
                 t.id === taskId ? { ...t, ...updates } : t
             );
-            saveBoard(updatedTasks, columns);
+            setTimeout(() => saveBoard(updatedTasks, columns), 0);
             return updatedTasks;
         });
     }, [saveBoard, columns]);
@@ -98,7 +99,7 @@ export const useKanban = (projectId) => {
     const deleteTask = useCallback((taskId) => {
         setTasks(prev => {
             const updatedTasks = prev.filter(t => t.id !== taskId);
-            saveBoard(updatedTasks, columns);
+            setTimeout(() => saveBoard(updatedTasks, columns), 0);
             return updatedTasks;
         });
     }, [saveBoard, columns]);
