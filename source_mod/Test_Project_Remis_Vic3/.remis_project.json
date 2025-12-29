@@ -1,12 +1,5 @@
 {
     "kanban": {
-        "columns": [
-            "todo",
-            "in_progress",
-            "proofreading",
-            "paused",
-            "done"
-        ],
         "tasks": {
             "5106092e-ef70-5169-b2eb-8669422a1cc3": {
                 "id": "5106092e-ef70-5169-b2eb-8669422a1cc3",
@@ -29,7 +22,7 @@
                 "title": "remis_demo_l_simp_chinese.yml",
                 "filePath": "J:\\V3_Mod_Localization_Factory\\source_mod\\Test_Project_Remis_Vic3\\localization\\simp_chinese\\remis_demo_l_simp_chinese.yml",
                 "status": "in_progress",
-                "comments": "",
+                "comments": "test",
                 "priority": "medium",
                 "meta": {
                     "source_lines": 67,
@@ -54,7 +47,7 @@
                 "type": "file",
                 "title": "remis_demo_l_english.yml",
                 "filePath": "J:\\V3_Mod_Localization_Factory\\my_translation\\Multilanguage-Test_Project_Remis_Vic3\\localization\\english\\simp_chinese\\remis_demo_l_english.yml",
-                "status": "proofreading",
+                "status": "in_progress",
                 "comments": "",
                 "priority": "medium",
                 "meta": {
@@ -70,7 +63,7 @@
                 "type": "file",
                 "title": "remis_demo_l_japanese.yml",
                 "filePath": "J:\\V3_Mod_Localization_Factory\\my_translation\\Multilanguage-Test_Project_Remis_Vic3\\localization\\japanese\\simp_chinese\\remis_demo_l_japanese.yml",
-                "status": "proofreading",
+                "status": "in_progress",
                 "comments": "",
                 "priority": "medium",
                 "meta": {
@@ -82,6 +75,13 @@
                 }
             }
         },
+        "columns": [
+            "todo",
+            "in_progress",
+            "proofreading",
+            "paused",
+            "done"
+        ],
         "column_order": [
             "todo",
             "in_progress",

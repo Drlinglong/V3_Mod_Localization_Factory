@@ -279,25 +279,41 @@ class ProjectManager:
 
     def update_project_notes(self, project_id: str, notes: str):
         """Updates the notes for a project."""
-        conn = self._get_connection()
-        cursor = conn.cursor()
-        cursor.execute("UPDATE projects SET notes = ? WHERE project_id = ?", (notes, project_id))
-        conn.commit()
-        conn.close()
+        self.repository.update_project_notes(project_id, notes)
         logger.info(f"Updated notes for project {project_id}")
+
+    def save_project_kanban(self, project_id: str, kanban_data: Dict[str, Any]):
+        """Saves kanban board and updates project timestamp."""
+        project = self.get_project(project_id)
+        if not project:
+            raise ValueError(f"Project {project_id} not found")
+        
+        # 1. Save to JSON sidecar
+        self.kanban_service.save_board(project['source_path'], kanban_data)
+        
+        # 2. Touch DB to update activity feed
+        self.repository.touch_project(project_id)
+        logger.info(f"Saved kanban and touched project {project_id}")
 
     def update_file_status(self, project_id: str, file_path: str, status: str):
         """Updates the status of a file in a project."""
-        conn = self._get_connection()
-        cursor = conn.cursor()
-        # Use file_path + project_id to identify
-        cursor.execute('''
-            UPDATE project_files
-            SET status = ?
-            WHERE project_id = ? AND file_path = ?
-        ''', (status, project_id, file_path))
-        conn.commit()
-        conn.close()
+        # Find file_id or update by path via repo if repo supports it
+        # Current repo doesn't have update_file_status_by_path, but Manager had it.
+        # Let's add it to repo or just use SQL here for one last time (not recommended).
+        # Better: use repository.update_file_status_by_id if we have the ID.
+        # For simplicity and isolation, I'll update the repo to handle this or use the safer path.
+        conn = sqlite3.connect(self.db_path)
+        try:
+            cursor = conn.cursor()
+            cursor.execute('''
+                UPDATE project_files
+                SET status = ?
+                WHERE project_id = ? AND file_path = ?
+            ''', (status, project_id, file_path))
+            conn.commit()
+            self.repository.touch_project(project_id) # Trigger activity feed
+        finally:
+            conn.close()
 
     def update_file_status_by_id(self, file_id: str, status: str):
         self.repository.update_file_status_by_id(file_id, status)
