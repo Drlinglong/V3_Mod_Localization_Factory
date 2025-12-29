@@ -62,6 +62,99 @@ const useProofreadingState = () => {
         }
     }, []);
 
+    // ==================== 辅助解析函数 ====================
+    const alignEntries = useCallback((entries) => {
+        let originalStr = "";
+        let aiStr = "";
+        let finalStr = "";
+
+        entries.forEach(e => {
+            const origText = e.original || "";
+            const aiText = e.translation || "";
+            const finalText = e.translation || "";
+
+            const WRAP_WIDTH = 60;
+
+            const calcLines = (text) => {
+                if (!text) return 1;
+                let len = 0;
+                for (let i = 0; i < text.length; i++) {
+                    len += text.charCodeAt(i) > 255 ? 2 : 1;
+                }
+                return Math.max(1, Math.ceil(len / WRAP_WIDTH));
+            };
+
+            const l1 = calcLines(origText);
+            const l2 = calcLines(aiText);
+            const maxL = Math.max(l1, l2);
+
+            const pad1 = Math.max(0, maxL - l1);
+            const pad2 = Math.max(0, maxL - l2);
+
+            originalStr += `${e.key}:0 "${origText}"` + "\n".repeat(pad1) + "\n";
+            aiStr += `${e.key}:0 "${aiText}"` + "\n".repeat(pad2) + "\n";
+            finalStr += `${e.key}:0 "${finalText}"\n`;
+        });
+
+        return { originalStr, aiStr, finalStr };
+    }, []);
+
+    const parseEditorContentToEntries = useCallback((content) => {
+        const entries = [];
+        const regex = /^\s*([\w\.]+)(?:\s*:\s*\d+)?\s*"((?:[^"\\]|\\.)*)"/gm;
+        let match;
+        while ((match = regex.exec(content)) !== null) {
+            entries.push({ key: match[1], value: match[2] });
+        }
+        return entries;
+    }, []);
+
+    const loadEditorData = useCallback(async (pId, sourceFilePath, targetId) => {
+        setLoading(true);
+        try {
+            if (sourceFilePath && sourceFilePath.trim() !== '') {
+                try {
+                    const readRes = await axios.post('/api/system/read_file', { file_path: sourceFilePath });
+                    setOriginalContentStr(readRes.data.content || "");
+                } catch (readError) {
+                    console.error("Failed to read source file:", readError);
+                    setOriginalContentStr("");
+                }
+            } else {
+                setOriginalContentStr("");
+            }
+
+            if (targetId) {
+                const resTarget = await axios.get(`/api/proofread/${pId}/${targetId}`);
+                const data = resTarget.data;
+                setFileInfo({ path: data.file_path, project_id: pId, file_id: targetId });
+                setEntries(data.entries || []);
+
+                if (data.ai_content) {
+                    setAiContentStr(data.ai_content);
+                    setFinalContentStr(data.final_content || data.ai_content);
+                } else if (data.file_content) {
+                    setAiContentStr(data.file_content);
+                    setFinalContentStr(data.file_content);
+                } else {
+                    const { aiStr, finalStr } = alignEntries(data.entries || []);
+                    setAiContentStr(aiStr);
+                    setFinalContentStr(finalStr);
+                }
+            } else {
+                setAiContentStr("");
+                setFinalContentStr("");
+                setEntries([]);
+                setFileInfo(null);
+            }
+        } catch (error) {
+            console.error("Failed to load editor data", error);
+            notifications.show({ title: 'Error', message: "Failed to load file data.", color: 'red' });
+        } finally {
+            setLoading(false);
+        }
+    }, [alignEntries]);
+
     // ==================== 业务逻辑函数 ====================
     const groupFiles = useCallback((files) => {
         if (!selectedProject) return;
@@ -71,7 +164,6 @@ const useProofreadingState = () => {
         setSourceFiles(sources);
         setTargetFilesMap(targetsMap);
 
-        // Auto-load logic
         const urlFileId = searchParams.get('fileId');
 
         if (urlFileId) {
@@ -130,105 +222,6 @@ const useProofreadingState = () => {
             console.error("Failed to load project files", error);
         }
     }, [groupFiles]);
-
-    const loadEditorData = useCallback(async (pId, sourceFilePath, targetId) => {
-        setLoading(true);
-        try {
-            // Load Source File
-            if (sourceFilePath && sourceFilePath.trim() !== '') {
-                try {
-                    const readRes = await axios.post('/api/system/read_file', { file_path: sourceFilePath });
-                    setOriginalContentStr(readRes.data.content || "");
-                } catch (readError) {
-                    console.error("Failed to read source file from disk:", readError);
-                    // Do not show error notification to user to reduce noise, just clear content
-                    setOriginalContentStr("");
-                }
-            } else {
-                setOriginalContentStr("");
-            }
-
-            // Load Target File
-            if (targetId) {
-                const resTarget = await axios.get(`/api/proofread/${pId}/${targetId}`);
-                const data = resTarget.data;
-                setFileInfo({ path: data.file_path, project_id: pId, file_id: targetId });
-                setEntries(data.entries || []);
-
-                if (data.ai_content) {
-                    setAiContentStr(data.ai_content);
-                    setFinalContentStr(data.final_content || data.ai_content);
-                } else if (data.file_content) {
-                    // Fallback for legacy backend or if ai_content generation failed
-                    setAiContentStr(data.file_content);
-                    setFinalContentStr(data.file_content);
-                } else {
-                    const { aiStr, finalStr } = alignEntries(data.entries || []);
-                    setAiContentStr(aiStr);
-                    setFinalContentStr(finalStr);
-                }
-            } else {
-                setAiContentStr("");
-                setFinalContentStr("");
-                setEntries([]);
-                setFileInfo(null);
-            }
-
-        } catch (error) {
-            console.error("Failed to load editor data", error);
-            notifications.show({ title: 'Error', message: "Failed to load file data.", color: 'red' });
-        } finally {
-            setLoading(false);
-        }
-    }, []);
-
-    const alignEntries = useCallback((entries) => {
-        let originalStr = "";
-        let aiStr = "";
-        let finalStr = "";
-
-        entries.forEach(e => {
-            const origText = e.original || "";
-            const aiText = e.translation || "";
-            const finalText = e.translation || "";
-
-            const WRAP_WIDTH = 60;
-
-            const calcLines = (text) => {
-                if (!text) return 1;
-                let len = 0;
-                for (let i = 0; i < text.length; i++) {
-                    len += text.charCodeAt(i) > 255 ? 2 : 1;
-                }
-                return Math.max(1, Math.ceil(len / WRAP_WIDTH));
-            };
-
-            const l1 = calcLines(origText);
-            const l2 = calcLines(aiText);
-            const maxL = Math.max(l1, l2);
-
-            const pad1 = Math.max(0, maxL - l1);
-            const pad2 = Math.max(0, maxL - l2);
-
-            originalStr += `${e.key}:0 "${origText}"` + "\n".repeat(pad1) + "\n";
-            aiStr += `${e.key}:0 "${aiText}"` + "\n".repeat(pad2) + "\n";
-            finalStr += `${e.key}:0 "${finalText}"\n`;
-        });
-
-        return { originalStr, aiStr, finalStr };
-    }, []);
-
-    const parseEditorContentToEntries = useCallback((content) => {
-        const entries = [];
-        // Support standard Paradox syntax: key:0 "value"
-        // Also supports indentation
-        const regex = /^\s*([\w\.]+)(?:\s*:\s*\d+)?\s*"((?:[^"\\]|\\.)*)"/gm;
-        let match;
-        while ((match = regex.exec(content)) !== null) {
-            entries.push({ key: match[1], value: match[2] });
-        }
-        return entries;
-    }, []);
 
     // ==================== 事件处理器 ====================
     const handleProjectSelect = useCallback((val) => {
