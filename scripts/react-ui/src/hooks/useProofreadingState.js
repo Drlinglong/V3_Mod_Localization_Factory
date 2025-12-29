@@ -3,6 +3,7 @@ import { useSearchParams } from 'react-router-dom';
 import { notifications } from '@mantine/notifications';
 import axios from 'axios';
 import { toParadoxLang } from '../utils/paradoxMapping';
+import { groupFiles as performGrouping } from '../utils/fileGrouping';
 
 /**
  * 校对页面的核心状态管理 Hook
@@ -65,52 +66,7 @@ const useProofreadingState = () => {
     const groupFiles = useCallback((files) => {
         if (!selectedProject) return;
 
-        // Strict Source Identification based on Project Settings
-        // We do NOT trust DB 'file_type' blindly because scanner might misclassify English files as Source
-        // if the user's directory structure is messy.
-        const dbLang = selectedProject.source_language || 'english';
-        const paradoxLang = toParadoxLang(dbLang);
-        const sourceSuffix = `_l_${paradoxLang}.yml`;
-
-        const sources = [];
-        const targetsMap = {};
-        const sourceBaseMap = {};
-
-        const getFileName = (path) => path.replace(/\\/g, '/').split('/').pop();
-
-        // Pass 1: Identify REAL Sources based on filename pattern
-        files.forEach(f => {
-            const fileName = getFileName(f.file_path);
-            if (fileName.toLowerCase().endsWith(sourceSuffix.toLowerCase())) {
-                sources.push(f);
-                const baseName = fileName.slice(0, -sourceSuffix.length);
-                sourceBaseMap[baseName.toLowerCase()] = f;
-                targetsMap[f.file_id] = [];
-            }
-        });
-
-        // Pass 2: Identify Targets (everything that is NOT a source)
-        files.forEach(f => {
-            // Skip if it was already identified as source
-            if (sources.includes(f)) return;
-
-            const fileName = getFileName(f.file_path);
-
-            // Try to match against known source bases
-            // Strategy: Check if fileName starts with any sourceBase (+ _l_)
-            for (const baseLower in sourceBaseMap) {
-                // Check if it looks like a translation: {base}_l_{otherLang}.yml
-                // We roughly check if it starts with base.
-                // NOTE: Paradox files are fickle. 
-                // Strict check: fileName starts with base (case insensitive) AND contains _l_
-
-                if (fileName.toLowerCase().startsWith(baseLower) && fileName.toLowerCase().includes('_l_')) {
-                    // Ensure it belongs to THIS source file's group
-                    targetsMap[sourceBaseMap[baseLower].file_id].push(f);
-                    break; // One file belongs to one source (usually)
-                }
-            }
-        });
+        const { sources, targetsMap } = performGrouping(files, selectedProject);
 
         setSourceFiles(sources);
         setTargetFilesMap(targetsMap);
@@ -162,7 +118,7 @@ const useProofreadingState = () => {
                 loadEditorData(selectedProject.project_id, firstSource.file_path, null);
             }
         }
-    }, [selectedProject, searchParams]);
+    }, [selectedProject, searchParams, loadEditorData]);
 
     const fetchProjectFiles = useCallback(async (projectId) => {
         try {
@@ -322,7 +278,7 @@ const useProofreadingState = () => {
             });
 
             const response = await axios.post('/api/validate/localization', {
-                game_id: 'victoria3',
+                game_id: selectedProject.game_id || 'victoria3',
                 content: virtualContent,
                 source_lang_code: 'en_US'
             });
@@ -361,7 +317,7 @@ const useProofreadingState = () => {
                     key: e.key,
                     translation: e.value
                 })),
-                target_language: "l_simp_chinese" // Hardcoded for now, should be dynamic
+                target_language: `l_${toParadoxLang(selectedProject.source_language || 'english')}` // Heuristic: default to source lang if unknown, or ideally user should select target
             };
 
             await axios.post('/api/proofread/save', savePayload);

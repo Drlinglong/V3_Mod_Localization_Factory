@@ -51,9 +51,6 @@ class ProjectManager:
             project_repository: Injected ProjectRepository instance.
         """
         self.db_path = db_path
-        self._init_db() # Keeps schema init just in case, or delegate to repo? Repo doesn't strictly have init_db yet. 
-                        # Ideally Repo should handle init. But let's leave legacy init for safety or move it.
-                        # Since ProjectManager is fading, let's keep it harmless.
         self.file_service = file_service
         self.repository = project_repository
 
@@ -68,83 +65,6 @@ class ProjectManager:
             # Fallback for tests/legacy
             from scripts.core.repositories.project_repository import ProjectRepository
             self.repository = ProjectRepository(db_path)
-
-    # _get_connection removed as we use repository
-
-    def _init_db(self):
-        # We should really move this to Repository's initialization or a DbContext
-        # But for now, let's just use the Repo's connection if we had one?
-        # Or just keep doing what it was doing but using the constant path.
-        conn = sqlite3.connect(self.db_path)
-        cursor = conn.cursor()
-        cursor.execute('''
-            CREATE TABLE IF NOT EXISTS projects (
-                project_id TEXT PRIMARY KEY,
-                name TEXT NOT NULL,
-                game_id TEXT NOT NULL,
-                source_path TEXT NOT NULL,
-                source_language TEXT NOT NULL,
-                status TEXT DEFAULT 'active',
-                created_at TEXT,
-                last_modified TEXT
-            )
-        ''')
-        cursor.execute('''
-            CREATE TABLE IF NOT EXISTS project_files (
-                file_id TEXT PRIMARY KEY,
-                project_id TEXT NOT NULL,
-                file_path TEXT NOT NULL,
-                status TEXT DEFAULT 'todo',
-                original_key_count INTEGER DEFAULT 0,
-                line_count INTEGER DEFAULT 0,
-                file_type TEXT DEFAULT 'source',
-                FOREIGN KEY (project_id) REFERENCES projects (project_id),
-                UNIQUE(project_id, file_path)
-            )
-        ''')
-        cursor.execute('''
-            CREATE TABLE IF NOT EXISTS activity_log (
-                log_id TEXT PRIMARY KEY,
-                project_id TEXT NOT NULL,
-                type TEXT NOT NULL,
-                description TEXT NOT NULL,
-                timestamp TEXT NOT NULL,
-                FOREIGN KEY (project_id) REFERENCES projects (project_id)
-            )
-        ''')
-        
-        # --- Migrations ---
-        # Check projects table cols
-        cursor.execute("PRAGMA table_info(projects)")
-        p_cols = [info[1] for info in cursor.fetchall()]
-        
-        if 'last_modified' not in p_cols:
-            cursor.execute("ALTER TABLE projects ADD COLUMN last_modified TEXT")
-        if 'source_language' not in p_cols:
-            cursor.execute("ALTER TABLE projects ADD COLUMN source_language TEXT DEFAULT 'english'")
-        if 'created_at' not in p_cols:
-            cursor.execute("ALTER TABLE projects ADD COLUMN created_at TEXT")
-        if 'last_activity_type' not in p_cols:
-            cursor.execute("ALTER TABLE projects ADD COLUMN last_activity_type TEXT")
-        if 'last_activity_desc' not in p_cols:
-            cursor.execute("ALTER TABLE projects ADD COLUMN last_activity_desc TEXT")
-            
-        # Backfill defaults for any NULLs resulting from migration or legacy data
-        cursor.execute("UPDATE projects SET last_modified = datetime('now') WHERE last_modified IS NULL")
-        cursor.execute("UPDATE projects SET created_at = datetime('now') WHERE created_at IS NULL")
-        cursor.execute("UPDATE projects SET source_language = 'english' WHERE source_language IS NULL")
-
-        # Check project_files table cols
-        cursor.execute("PRAGMA table_info(project_files)")
-        pf_cols = [info[1] for info in cursor.fetchall()]
-        
-        if 'line_count' not in pf_cols:
-            cursor.execute("ALTER TABLE project_files ADD COLUMN line_count INTEGER DEFAULT 0")
-        if 'file_type' not in pf_cols:
-            cursor.execute("ALTER TABLE project_files ADD COLUMN file_type TEXT DEFAULT 'source'")
-
-        conn.commit()
-        conn.close()
 
     def create_project(self, name: str, folder_path: str, game_id: str, source_language: str) -> Dict[str, Any]:
         """
