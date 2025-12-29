@@ -13,8 +13,9 @@ class OllamaHandler(BaseApiHandler):
     def initialize_client(self) -> Any:
         """【必须由子类实现】初始化Ollama配置。"""
         try:
-            # 从环境变量 OLLAMA_BASE_URL 读取URL，如果未设置，则使用默认值
-            self.base_url = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
+            provider_config = self.get_provider_config()
+            # 从环境变量 OLLAMA_BASE_URL 读取URL，如果未设置，则从配置读取，最后使用默认值
+            self.base_url = os.getenv("OLLAMA_BASE_URL", provider_config.get("base_url", "http://localhost:11434"))
 
             # 检查Ollama版本是否支持/api/chat
             try:
@@ -38,7 +39,7 @@ class OllamaHandler(BaseApiHandler):
                 self.logger.error(f"无法连接到Ollama或检查其版本。请确保Ollama正在运行于 {self.base_url}。错误: {e}")
                 raise
 
-            self.model = API_PROVIDERS.get("ollama", {}).get("default_model", "llama3.2")
+            self.model = provider_config.get("default_model", "llama3.2")
             
             self.logger.info(f"Ollama client configured. Base URL: {self.base_url}, Model: {self.model}, Version: {version_str}")
             # 返回自身实例作为客户端，因为它持有配置信息

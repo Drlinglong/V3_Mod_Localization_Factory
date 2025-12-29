@@ -82,6 +82,8 @@ def get_api_keys():
             "is_keyless": is_keyless,
             "has_key": has_key,
             "masked_key": masked_key,
+            "available_models": config.get("available_models", []),
+            "selected_model": override.get("selected_model", config.get("default_model")),
             "custom_models": override.get("models", []),
             "api_url": override.get("api_url", config.get("base_url", ""))
         })
@@ -146,6 +148,9 @@ def update_provider_config(payload: UpdateProviderConfigRequest):
         
     if payload.api_url is not None:
         current_overrides[provider_id]["api_url"] = payload.api_url
+
+    if payload.selected_model is not None:
+        current_overrides[provider_id]["selected_model"] = payload.selected_model
         
     config_manager.set_value("provider_config", current_overrides)
     

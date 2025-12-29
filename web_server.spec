@@ -5,7 +5,7 @@ a = Analysis(
     ['J:\\V3_Mod_Localization_Factory\\scripts\\web_server.py'],
     pathex=[],
     binaries=[],
-    datas=[],
+    datas=[('J:\\V3_Mod_Localization_Factory\\data\\seed_data_main.sql', 'data'), ('J:\\V3_Mod_Localization_Factory\\data\\seed_data_projects.sql', 'data')],
     hiddenimports=['uvicorn', 'fastapi', 'pydantic'],
     hookspath=[],
     hooksconfig={},

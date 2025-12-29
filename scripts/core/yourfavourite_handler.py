@@ -17,10 +17,10 @@ class YourFavouriteHandler(BaseApiHandler):
             raise ValueError("YOUR_FAVOURITE_API_KEY not set")
 
         try:
-            provider_config = API_PROVIDERS.get("your_favourite_api", {})
+            provider_config = self.get_provider_config()
             base_url = provider_config.get("base_url")
             if not base_url or base_url == "YOUR_BASE_URL_HERE":
-                raise ValueError("Base URL for your_favourite_api is not configured in app_settings.py.")
+                raise ValueError("Base URL for your_favourite_api is not configured correctly.")
 
             client = OpenAI(
                 api_key=api_key,
@@ -36,11 +36,11 @@ class YourFavouriteHandler(BaseApiHandler):
             raise
 
     def _call_api(self, client: OpenAI, prompt: str) -> str:
-        """【必须由子类实现】执行对通用OAI兼容API的调用并返回原始文本响应。"""
-        provider_config = API_PROVIDERS.get(self.provider_name, {})
+        """【必须由子类实现】执行对针对通用OAI兼容API的调用并返回原始文本响应。"""
+        provider_config = self.get_provider_config()
         model_name = provider_config.get("default_model")
         if not model_name or model_name == "YOUR_MODEL_NAME_HERE":
-            raise ValueError("Model name for your_favourite_api is not configured in app_settings.py.")
+            raise ValueError("Model name for your_favourite_api is not configured correctly.")
 
         try:
             response = client.chat.completions.create(

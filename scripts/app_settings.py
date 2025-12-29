@@ -165,6 +165,15 @@ API_PROVIDERS = {
         "api_key_env": "GEMINI_API_KEY",
         "name": "Google Gemini",
         "default_model": "gemini-2.5-flash",
+        "available_models": [
+            "gemini-2.5-flash", 
+            "gemini-2.5-pro", 
+            "gemini-3-flash", 
+            "gemini-3-pro", 
+            "gemini-3-deep-think",
+            "gemini-2.0-flash",
+            "gemini-2.0-pro"
+        ],
         "base_url": "https://generativelanguage.googleapis.com",
         "enable_thinking": False,
         "thinking_budget": 0,
@@ -172,6 +181,12 @@ API_PROVIDERS = {
     "gemini_cli": {
         "cli_path": "gemini",
         "default_model": "gemini-2.5-flash",
+        "available_models": [
+            "gemini-2.5-flash", 
+            "gemini-2.5-pro", 
+            "gemini-3-flash", 
+            "gemini-3-pro"
+        ],
         "enable_thinking": True,
         "thinking_budget": -1,
         "chunk_size": GEMINI_CLI_CHUNK_SIZE,
@@ -185,12 +200,28 @@ API_PROVIDERS = {
         "name": "OpenAI",
         "base_url": "https://api.openai.com/v1",
         "default_model": "gpt-5-mini",
+        "available_models": [
+            "gpt-5.2",
+            "gpt-5.2-pro",
+            "gpt-5-mini",
+            "o3",
+            "o4-mini",
+            "gpt-4.5-preview",
+            "gpt-4.1-mini"
+        ],
         "enable_thinking": False,
         "reasoning_effort": "minimal"
     },
     "qwen": {
         "api_key_env": "DASHSCOPE_API_KEY",
         "default_model": "qwen-plus",
+        "available_models": [
+            "qwen-turbo",
+            "qwen-plus",
+            "qwen-max",
+            "qwen-long",
+            "qwen2.5-72b-instruct"
+        ],
         "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
         "region": "beijing",
         "name": "Qwen (通义千问)",
@@ -201,12 +232,27 @@ API_PROVIDERS = {
         "base_url": "https://api.x.ai/v1",
         "name": "Grok (xAI)",
         "default_model": "grok-4-fast-reasoning",
+        "available_models": [
+            "grok-4.1",
+            "grok-4.1-thinking",
+            "grok-4",
+            "grok-3",
+            "grok-3-mini"
+        ],
         "description": "通过xAI官方API访问grok-4-fast-reasoning模型"
     },
     "deepseek": {
         "api_key_env": "DEEPSEEK_API_KEY",
         "base_url": "https://api.deepseek.com",
         "default_model": "deepseek-chat",
+        "available_models": [
+            "deepseek-chat",
+            "deepseek-reasoner",
+            "deepseek-v3.2",
+            "deepseek-v3.2-speciale",
+            "deepseek-r2",
+            "deepseek-r1"
+        ],
         "name": "DeepSeek (深度求索)",
         "enable_thinking": False,
         "description": "DeepSeek-V3.2-Exp (Non-thinking Mode) - 与OpenAI API兼容"
@@ -214,6 +260,15 @@ API_PROVIDERS = {
     "ollama": {
         "base_url_env": "OLLAMA_BASE_URL",
         "default_model": "qwen3:4b",
+        "available_models": [
+            "llama3.2",
+            "llama3.1",
+            "qwen2.5",
+            "qwen3:4b",
+            "deepseek-v3",
+            "mistral",
+            "gemma2"
+        ],
         "enable_thinking": False,
         "chunk_size": OLLAMA_CHUNK_SIZE,
         "max_retries": OLLAMA_MAX_RETRIES,
@@ -231,6 +286,12 @@ API_PROVIDERS = {
         "api_key_env": "SILICONFLOW_API_KEY",
         "base_url": "https://api.siliconflow.cn/v1",
         "default_model": "DeepSeek-R1",
+        "available_models": [
+            "DeepSeek-R1",
+            "DeepSeek-V3",
+            "Qwen2.5-72B-Instruct",
+            "Llama-3.3-70B-Instruct"
+        ],
         "name": "SiliconFlow (硅基流动)",
         "description": "通过硅基流动（SiliconFlow）调用AI模型"
     },

@@ -27,7 +27,7 @@ class GeminiHandler(BaseApiHandler):
 
     def _call_api(self, client: Any, prompt: str) -> str:
         """【必须由子类实现】执行对Gemini API的调用并返回原始文本响应。"""
-        provider_config = API_PROVIDERS.get(self.provider_name, {})
+        provider_config = self.get_provider_config()
         model_name = provider_config.get("default_model", "gemini-1.5-flash")
         
         enable_thinking = provider_config.get("enable_thinking", False)
