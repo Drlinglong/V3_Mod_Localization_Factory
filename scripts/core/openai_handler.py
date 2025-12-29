@@ -26,7 +26,7 @@ class OpenAIHandler(BaseApiHandler):
 
     def _call_api(self, client: OpenAI, prompt: str) -> str:
         """【必须由子类实现】执行对OpenAI API的调用并返回原始文本响应。"""
-        provider_config = API_PROVIDERS.get(self.provider_name, {})
+        provider_config = self.get_provider_config()
         model_name = provider_config.get("default_model", "gpt-5-mini")
         
         enable_thinking = provider_config.get("enable_thinking", False)
@@ -56,7 +56,7 @@ class OpenAIHandler(BaseApiHandler):
         """
         Supports chat-like interaction for NeologismMiner.
         """
-        provider_config = API_PROVIDERS.get(self.provider_name, {})
+        provider_config = self.get_provider_config()
         model_name = provider_config.get("default_model", "gpt-5-mini")
         
         try:

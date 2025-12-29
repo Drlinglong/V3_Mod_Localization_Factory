@@ -24,6 +24,25 @@ class BaseApiHandler(ABC):
         self.logger = logging.getLogger(self.__class__.__name__)
         self.client = self.initialize_client()
 
+    def get_provider_config(self) -> dict:
+        """
+        获取提供商的配置，合并默认配置和用户覆盖配置。
+        """
+        from scripts.app_settings import API_PROVIDERS
+        from scripts.core.config_manager import config_manager
+        
+        base_config = API_PROVIDERS.get(self.provider_name, {}).copy()
+        user_overrides = config_manager.get_value("provider_config", {}).get(self.provider_name, {})
+        
+        # Merge user overrides
+        if user_overrides:
+            if "selected_model" in user_overrides and user_overrides["selected_model"]:
+                base_config["default_model"] = user_overrides["selected_model"]
+            if "api_url" in user_overrides and user_overrides["api_url"]:
+                base_config["base_url"] = user_overrides["api_url"]
+            
+        return base_config
+
     @abstractmethod
     def initialize_client(self):
         """【必须由子类实现】初始化并返回特定于该Provider的API客户端。"""

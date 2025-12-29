@@ -15,3 +15,4 @@ class UpdateProviderConfigRequest(BaseModel):
     api_key: Optional[str] = None
     models: Optional[List[str]] = None # Custom models list
     api_url: Optional[str] = None # Custom API URL
+    selected_model: Optional[str] = None # Currently selected model

@@ -17,8 +17,8 @@ class GrokHandler(BaseApiHandler):
             raise ValueError("XAI_API_KEY not set")
 
         try:
-            provider_config = API_PROVIDERS.get("grok", {})
-            base_url = provider_config.get("base_url", "https://api.x.ai/v1")
+            provider_config = self.get_provider_config()
+            base_url = provider_config.get("base_url")
             
             client = OpenAI(
                 api_key=api_key,
@@ -35,7 +35,7 @@ class GrokHandler(BaseApiHandler):
 
     def _call_api(self, client: OpenAI, prompt: str) -> str:
         """【必须由子类实现】执行对Grok API的调用并返回原始文本响应。"""
-        provider_config = API_PROVIDERS.get("grok", {})
+        provider_config = self.get_provider_config()
         model_name = provider_config.get("default_model", "grok-4-fast-reasoning")
 
         try:

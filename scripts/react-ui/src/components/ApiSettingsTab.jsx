@@ -15,7 +15,8 @@ import {
     Alert,
     TagsInput,
     TextInput,
-    Divider
+    Divider,
+    Select
 } from '@mantine/core';
 import { IconCheck, IconX, IconEdit, IconKey, IconInfoCircle, IconServer, IconRobot } from '@tabler/icons-react';
 import { notifications } from '@mantine/notifications';
@@ -32,7 +33,8 @@ const ApiSettingsTab = () => {
     const [editForm, setEditForm] = useState({
         apiKey: '',
         models: [],
-        apiUrl: ''
+        apiUrl: '',
+        selectedModel: ''
     });
 
     const [submitting, setSubmitting] = useState(false);
@@ -67,27 +69,24 @@ const ApiSettingsTab = () => {
         setEditForm({
             apiKey: '', // Always start empty for security
             models: provider.custom_models || [],
-            apiUrl: provider.api_url || ''
+            apiUrl: provider.api_url || '',
+            selectedModel: provider.selected_model || ''
         });
     };
 
     const handleCancelEdit = () => {
         setEditingId(null);
-        setEditForm({ apiKey: '', models: [], apiUrl: '' });
+        setEditForm({ apiKey: '', models: [], apiUrl: '', selectedModel: '' });
     };
 
     const handleSave = async (providerId) => {
-        // Validation: If key is required but empty, and we are not just updating models/url?
-        // Actually, if the user leaves key empty, we assume they don't want to change it (if it exists)
-        // But for new keys, it might be tricky.
-        // Let's assume if key is empty string, we don't update it.
-
         setSubmitting(true);
         try {
             const payload = {
                 provider_id: providerId,
                 models: editForm.models,
-                api_url: editForm.apiUrl
+                api_url: editForm.apiUrl,
+                selected_model: editForm.selectedModel
             };
 
             if (editForm.apiKey.trim()) {
@@ -185,6 +184,21 @@ const ApiSettingsTab = () => {
                                         />
                                     )}
 
+                                    <Select
+                                        label={t('api_model_select_label', 'Translation Model')}
+                                        placeholder={t('api_model_select_placeholder', 'Select a model')}
+                                        data={[
+                                            ...(provider.available_models || []),
+                                            ...(editForm.models || [])
+                                        ].filter((val, index, self) => self.indexOf(val) === index)}
+                                        value={editForm.selectedModel}
+                                        onChange={(val) => setEditForm({ ...editForm, selectedModel: val })}
+                                        size="xs"
+                                        leftSection={<IconRobot size={14} />}
+                                        searchable
+                                        clearable
+                                    />
+
                                     <TagsInput
                                         label={t('api_models_label', 'Custom Models')}
                                         placeholder={t('api_models_placeholder', 'Type and press Enter to add models')}
@@ -225,6 +239,11 @@ const ApiSettingsTab = () => {
                                             </Text>
                                         </Group>
                                     )}
+
+                                    <Group justify="space-between">
+                                        <Text size="xs" c="dimmed">Model:</Text>
+                                        <Text size="xs" fw={500}>{provider.selected_model || 'N/A'}</Text>
+                                    </Group>
 
                                     {provider.api_url && (
                                         <Group justify="space-between">

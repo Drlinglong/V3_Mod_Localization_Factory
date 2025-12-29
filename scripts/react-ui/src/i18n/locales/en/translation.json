@@ -379,6 +379,8 @@
   "prompt_reset_confirm_title": "Confirm Reset",
   "prompt_reset_confirm_message": "This will revert your changes to the default system settings. This action cannot be undone. Are you sure?",
   "confirm_reset": "Yes, Reset",
+  "api_model_select_label": "Translation Model",
+  "api_model_select_placeholder": "Select a model",
   "api_models_label": "Custom Models",
   "api_models_placeholder": "Type and press Enter to add models",
   "api_url_label": "API Base URL",
