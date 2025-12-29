@@ -49,7 +49,19 @@ class ProjectJsonManager:
 
     def get_kanban_data(self) -> Dict[str, Any]:
         data = self._load_json()
-        return data.get("kanban", {})
+        kanban = data.get("kanban", {})
+        
+        # Robustness: Auto-repair if columns are missing or corrupted (e.g. only 1 column)
+        expected_columns = ["todo", "in_progress", "proofreading", "paused", "done"]
+        columns = kanban.get("columns", [])
+        
+        if len(columns) < 3: # Heuristic: if fewer than 3 columns, something is wrong
+            logger.warning(f"Kanban columns corrupted for {self.project_root}. Repairing...")
+            kanban["columns"] = expected_columns
+            kanban["column_order"] = expected_columns
+            self.save_kanban_data(kanban)
+            
+        return kanban
 
     def save_kanban_data(self, kanban_data: Dict[str, Any]):
         data = self._load_json()
