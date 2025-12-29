@@ -32,6 +32,8 @@ class Project:
     status: str  # 'active', 'archived', 'deleted'
     created_at: str
     notes: str = "" # Added notes field
+    last_activity_type: Optional[str] = None
+    last_activity_desc: Optional[str] = None
 
 @dataclass
 class ProjectFile:
@@ -100,6 +102,16 @@ class ProjectManager:
                 file_type TEXT DEFAULT 'source',
                 FOREIGN KEY (project_id) REFERENCES projects (project_id),
                 UNIQUE(project_id, file_path)
+            )
+        ''')
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS activity_log (
+                log_id TEXT PRIMARY KEY,
+                project_id TEXT NOT NULL,
+                type TEXT NOT NULL,
+                description TEXT NOT NULL,
+                timestamp TEXT NOT NULL,
+                FOREIGN KEY (project_id) REFERENCES projects (project_id)
             )
         ''')
         
@@ -280,10 +292,20 @@ class ProjectManager:
 
     def update_project_status(self, project_id: str, status: str):
         self.repository.update_project_status(project_id, status)
+        self.repository.add_activity_log(
+            project_id=project_id,
+            activity_type='status_change',
+            description=f"Status updated to: {status}"
+        )
 
     def update_project_notes(self, project_id: str, notes: str):
         """Updates the notes for a project."""
         self.repository.update_project_notes(project_id, notes)
+        self.repository.add_activity_log(
+            project_id=project_id,
+            activity_type='note_added',
+            description="Added a new note"
+        )
         logger.info(f"Updated notes for project {project_id}")
 
     def save_project_kanban(self, project_id: str, kanban_data: Dict[str, Any]):
@@ -295,13 +317,14 @@ class ProjectManager:
         # 1. Save to JSON sidecar
         self.kanban_service.save_board(project['source_path'], kanban_data)
         
-        # 2. Touch DB to update activity feed
-        self.repository.touch_project(
-            project_id, 
-            activity_type='kanban_update', 
-            activity_desc="Updated Kanban board layout"
+        # 2. Touch DB and Log activity
+        self.repository.touch_project(project_id)
+        self.repository.add_activity_log(
+            project_id=project_id,
+            activity_type='kanban_update',
+            description="Updated Kanban board layout"
         )
-        logger.info(f"Saved kanban and touched project {project_id}")
+        logger.info(f"Saved kanban and logged activity for project {project_id}")
 
     def update_file_status(self, project_id: str, file_path: str, status: str):
         """Updates the status of a file in a project."""
@@ -319,7 +342,14 @@ class ProjectManager:
                 WHERE project_id = ? AND file_path = ?
             ''', (status, project_id, file_path))
             conn.commit()
-            self.repository.touch_project(project_id) # Trigger activity feed
+            
+            # Log activity
+            self.repository.add_activity_log(
+                project_id=project_id,
+                activity_type='file_update',
+                description=f"File {os.path.basename(file_path)} status updated to {status}"
+            )
+            self.repository.touch_project(project_id) # Trigger last_modified
         finally:
             conn.close()
 

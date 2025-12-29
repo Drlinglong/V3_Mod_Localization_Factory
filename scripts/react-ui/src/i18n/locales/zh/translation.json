@@ -442,5 +442,8 @@
   "recent_activity_type_kanban_update": "更新看板",
   "recent_activity_type_status_change": "状态变更",
   "recent_activity_desc_status_updated": "状态已更新为: {{status}}",
+  "recent_activity_desc_note_added": "添加了新笔记",
+  "recent_activity_desc_kanban_update": "更新了看板任务布局",
+  "recent_activity_desc_file_update": "更新了文件状态",
   "recent_activity_no_data": "暂无近期活动"
 }

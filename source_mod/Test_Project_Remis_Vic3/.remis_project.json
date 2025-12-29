@@ -1,94 +1,7 @@
 {
     "kanban": {
-        "columns": [
-            "todo",
-            "in_progress",
-            "proofreading",
-            "paused",
-            "done"
-        ],
-        "tasks": {
-            "5106092e-ef70-5169-b2eb-8669422a1cc3": {
-                "id": "5106092e-ef70-5169-b2eb-8669422a1cc3",
-                "type": "file",
-                "title": ".remis_project.json",
-                "filePath": "J:\\V3_Mod_Localization_Factory\\source_mod\\Test_Project_Remis_Vic3\\.remis_project.json",
-                "status": "todo",
-                "comments": "",
-                "priority": "medium",
-                "meta": {
-                    "source_lines": 97,
-                    "translation_status": {},
-                    "rel_path": ".remis_project.json",
-                    "file_type": "config"
-                }
-            },
-            "8646e2d7-2d1e-56d3-a7b9-cc96ecc54d42": {
-                "id": "8646e2d7-2d1e-56d3-a7b9-cc96ecc54d42",
-                "type": "file",
-                "title": "remis_demo_l_simp_chinese.yml",
-                "filePath": "J:\\V3_Mod_Localization_Factory\\source_mod\\Test_Project_Remis_Vic3\\localization\\simp_chinese\\remis_demo_l_simp_chinese.yml",
-                "status": "in_progress",
-                "comments": "test",
-                "priority": "medium",
-                "meta": {
-                    "source_lines": 67,
-                    "translation_status": {
-                        "english": {
-                            "exists": true,
-                            "line_count": 67,
-                            "file_id": "b4325ec2-4c56-549a-ae83-5a73ffb77ee0"
-                        },
-                        "japanese": {
-                            "exists": true,
-                            "line_count": 67,
-                            "file_id": "0ea979b1-bbc8-5a4e-a926-63e766a50466"
-                        }
-                    },
-                    "rel_path": "localization\\simp_chinese\\remis_demo_l_simp_chinese.yml",
-                    "file_type": "source"
-                }
-            },
-            "b4325ec2-4c56-549a-ae83-5a73ffb77ee0": {
-                "id": "b4325ec2-4c56-549a-ae83-5a73ffb77ee0",
-                "type": "file",
-                "title": "remis_demo_l_english.yml",
-                "filePath": "J:\\V3_Mod_Localization_Factory\\my_translation\\Multilanguage-Test_Project_Remis_Vic3\\localization\\english\\simp_chinese\\remis_demo_l_english.yml",
-                "status": "proofreading",
-                "comments": "",
-                "priority": "medium",
-                "meta": {
-                    "lines": 67,
-                    "file_type": "translation",
-                    "lang": "english",
-                    "parent_task_id": "8646e2d7-2d1e-56d3-a7b9-cc96ecc54d42",
-                    "rel_path": "remis_demo_l_english.yml"
-                }
-            },
-            "0ea979b1-bbc8-5a4e-a926-63e766a50466": {
-                "id": "0ea979b1-bbc8-5a4e-a926-63e766a50466",
-                "type": "file",
-                "title": "remis_demo_l_japanese.yml",
-                "filePath": "J:\\V3_Mod_Localization_Factory\\my_translation\\Multilanguage-Test_Project_Remis_Vic3\\localization\\japanese\\simp_chinese\\remis_demo_l_japanese.yml",
-                "status": "proofreading",
-                "comments": "",
-                "priority": "medium",
-                "meta": {
-                    "lines": 67,
-                    "file_type": "translation",
-                    "lang": "japanese",
-                    "parent_task_id": "8646e2d7-2d1e-56d3-a7b9-cc96ecc54d42",
-                    "rel_path": "remis_demo_l_japanese.yml"
-                }
-            }
-        },
-        "column_order": [
-            "todo",
-            "in_progress",
-            "proofreading",
-            "paused",
-            "done"
-        ]
+        "version": "2.0",
+        "columns": []
     },
     "config": {
         "translation_dirs": [
@@ -98,9 +11,9 @@
     },
     "notes": [
         {
-            "id": "1767017449.265993",
-            "content": "test",
-            "created_at": "2025-12-30T01:10:49.265993"
+            "id": "1767017907.81147",
+            "content": "tets2",
+            "created_at": "2025-12-30T01:18:27.811470"
         }
     ]
 }
