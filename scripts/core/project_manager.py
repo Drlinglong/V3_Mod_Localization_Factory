@@ -307,22 +307,63 @@ class ProjectManager:
         logger.info(f"Updated notes for project {project_id}")
 
     def save_project_kanban(self, project_id: str, kanban_data: Dict[str, Any]):
-        """Saves kanban board and updates project timestamp."""
+        """Saves kanban board, updates file statuses in DB, and logs activity."""
         project = self.get_project(project_id)
         if not project:
             raise ValueError(f"Project {project_id} not found")
         
-        # 1. Save to JSON sidecar
+        # 1. Get Old Board for Diff (Read before save)
+        try:
+            old_board = self.kanban_service.get_board(project['source_path'])
+            old_tasks = old_board.get("tasks", {})
+        except Exception:
+            old_tasks = {}
+
+        # 2. Save NEW Board to disk
         self.kanban_service.save_board(project['source_path'], kanban_data)
         
-        # 2. Touch DB and Log activity
+        # 3. Process Diff and Log
+        try:
+            new_tasks = kanban_data.get("tasks", {})
+            moved_tasks = []
+            for tid, new_task in new_tasks.items():
+                old_task = old_tasks.get(tid)
+                if old_task and old_task.get('status') != new_task.get('status'):
+                    moved_tasks.append(new_task)
+            
+            # Update DB for moved files
+            for task in moved_tasks:
+                if task.get('type') == 'file':
+                    self.repository.update_file_status_by_id(task['id'], task['status'])
+            
+            # Log with De-duplication check
+            if moved_tasks:
+                first = moved_tasks[0]
+                desc = f"Moved '{first.get('title')}' to {first.get('status')}"
+                if len(moved_tasks) > 1:
+                    desc += f" (and {len(moved_tasks)-1} others)"
+                
+                # Check for recent identical log (within last 3 logs) to prevent race-induced doubles
+                recent_logs = self.repository.get_recent_logs(limit=3)
+                is_dupe = any(l['project_id'] == project_id and l['type'] == 'file_update' and l['description'] == desc for l in recent_logs)
+                
+                if not is_dupe:
+                    self.repository.add_activity_log(project_id, 'file_update', desc)
+                else:
+                    logger.info(f"Suppressed duplicate file_update log for {project_id}")
+            else:
+                # Layout update de-dupe
+                recent_logs = self.repository.get_recent_logs(limit=5)
+                is_dupe = any(l['project_id'] == project_id and l['type'] == 'kanban_update' for l in recent_logs)
+                if not is_dupe:
+                    self.repository.add_activity_log(project_id, 'kanban_update', "Updated Kanban board layout")
+                
+        except Exception as e:
+            logger.error(f"Error during kanban diff/sync: {e}")
+
+        # 4. Final Touch
         self.repository.touch_project(project_id)
-        self.repository.add_activity_log(
-            project_id=project_id,
-            activity_type='kanban_update',
-            description="Updated Kanban board layout"
-        )
-        logger.info(f"Saved kanban and logged activity for project {project_id}")
+        logger.info(f"Saved kanban and synchronized status for project {project_id}")
 
     def update_file_status(self, project_id: str, file_path: str, status: str):
         """Updates the status of a file in a project."""
