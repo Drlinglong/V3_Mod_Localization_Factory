@@ -34,8 +34,8 @@ const EditTermForm = ({
             metadata: '',
         },
         validate: {
-            source: (value) => (value.trim().length > 0 ? null : 'Source text is required'),
-            translation: (value) => (value.trim().length > 0 ? null : 'Translation is required'),
+            source: (value) => (value.trim().length > 0 ? null : t('glossary_editor.error_source_required')),
+            translation: (value) => (value.trim().length > 0 ? null : t('glossary_editor.error_translation_required')),
         },
     });
 

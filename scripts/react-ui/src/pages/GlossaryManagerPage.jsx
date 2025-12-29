@@ -176,7 +176,7 @@ const GlossaryManagerPage = () => {
 
                         <Group justify="space-between" mb="md">
                             <Title order={4}>
-                                {glossary.selectedFile.title !== t('glossary_no_file_selected')
+                                {glossary.selectedFile.key
                                     ? glossary.selectedFile.title
                                     : t('glossary_select_file_prompt')}
                             </Title>
