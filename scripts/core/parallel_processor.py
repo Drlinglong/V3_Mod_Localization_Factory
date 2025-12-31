@@ -225,7 +225,7 @@ class ParallelProcessor:
                     )
                     
                     future = executor.submit(self._process_single_batch, batch_task, translation_function)
-                    future_to_info[future] = (file_task.filename, batch_index)
+                    future_to_info[future] = (file_task.filename, batch_index, batch_task)
                 return False, None
 
             # We iterate through the generator and submit tasks. 
@@ -275,25 +275,24 @@ class ParallelProcessor:
                     )
                     
                     for future in done:
-                        filename, batch_index = future_to_info.pop(future)
+                        filename, batch_index, batch_task = future_to_info.pop(future)
                         pending_batches_count -= 1
                         
                         try:
                             processed_task, warnings = future.result()
                         except Exception as e:
-                            self.logger.error(f"Batch processing failed: {e}")
-                            # Fail the file?
-                            # For now, just mark as failed in buffer
-                            # We need to handle this gracefully
-                            continue
+                            self.logger.error(f"Critical error in batch processing thread for {filename} batch {batch_index}: {e}")
+                            # Create a failed task result so the file logic can progress
+                            batch_task.failed = True
+                            batch_task.translated_texts = batch_task.texts
+                            processed_task = batch_task
 
                         if filename not in file_buffers:
-                            # Should not happen unless logic error
                             continue
                             
                         file_buffers[filename][batch_index] = processed_task
                         
-                            # Check if file is complete
+                        # Check if file is complete (all batches accounted for, even if failed)
                         if len(file_buffers[filename]) == file_batch_counts[filename]:
                             # Assemble file
                             sorted_batches = [file_buffers[filename][i] for i in range(file_batch_counts[filename])]
@@ -311,10 +310,10 @@ class ParallelProcessor:
                                 full_translated_texts.extend(task.translated_texts or [])
                             
                             if file_failed:
-                                self.logger.error(f"File {filename} incomplete.")
-                                yield (file_task_ref, None, []) # None indicates failure
+                                self.logger.error(f"File {filename} incomplete or failed.")
+                                yield (file_task_ref, full_translated_texts, [], True) # Fourth item is 'failed' flag
                             else:
-                                yield (file_task_ref, full_translated_texts, []) # TODO: Pass warnings if tracked
+                                yield (file_task_ref, full_translated_texts, [], False)
                             
                             # Cleanup
                             del file_buffers[filename]

@@ -80,8 +80,8 @@ def test_english_disguise_configuration(setup_teardown):
         dummy_file_task.mod_name = MOCK_PROJECT_NAME
         dummy_file_task.is_custom_loc = False
         
-        # Mock return value: Generator yielding (file_task, translated_texts, warnings)
-        mock_process.return_value = iter([(dummy_file_task, ["l_english:\n TEST_KEY:0 \"Valore di prova\"\n"], [])])
+        # Mock return value: Generator yielding (file_task, translated_texts, warnings, is_failed)
+        mock_process.return_value = iter([(dummy_file_task, ["l_english:\n TEST_KEY:0 \"Valore di prova\"\n"], [], False)])
         
         # Mock discover_files to ensure run() proceeds past the check
         with patch("scripts.workflows.initial_translate.discover_files") as mock_discover:

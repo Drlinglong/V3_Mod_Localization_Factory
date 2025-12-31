@@ -41,16 +41,32 @@ def patch_file_content(
              logging.warning(f"Could not find opening quote in line {line_num}: {original_line_content.strip()}")
              continue
              
-        # 3. Find the last quote
-        comment_pos = original_line_content.find('#', first_quote_pos)
-        if comment_pos != -1:
-            search_end_pos = comment_pos
-        else:
-            search_end_pos = len(original_line_content)
-            
+        # 3. Find the last quote and real comment position
+        # We need to iterate to find the first # that is NOT inside quotes
+        comment_pos = -1
+        in_quotes = False
+        escape_next = False
+        
+        # We start from the key position to be safe
+        for idx in range(key_pos, len(original_line_content)):
+            char = original_line_content[idx]
+            if escape_next:
+                escape_next = False
+                continue
+            if char == '\\':
+                escape_next = True
+                continue
+            if char == '"':
+                in_quotes = not in_quotes
+            elif char == '#' and not in_quotes:
+                comment_pos = idx
+                break
+        
+        search_end_pos = comment_pos if comment_pos != -1 else len(original_line_content)
         last_quote_pos = original_line_content.rfind('"', first_quote_pos + 1, search_end_pos)
+        
         if last_quote_pos == -1:
-            logging.warning(f"Could not find closing quote in line {line_num}: {original_line_content.strip()}")
+            logging.warning(f"Could not find closing quote (ignoring tags) in line {line_num}: {original_line_content.strip()}")
             continue
             
         # 4. Replace content between quotes

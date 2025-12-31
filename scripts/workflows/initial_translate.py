@@ -198,9 +198,11 @@ def run(mod_name: str,
                 format_issues = format_issues_override
 
             if progress_callback:
+                # PROGRESS FIX: Use batch counts for 'current' and 'total' so the progress bar is smooth.
+                # 'processed_files_count' and 'total_files' are still tracked but not used for the percentage calculation.
                 progress_callback(
-                    current=processed_files_count,
-                    total=total_files,
+                    current=completed_batches,
+                    total=total_batches,
                     current_file=current_file_name,
                     stage=stage,
                     current_batch=completed_batches,
@@ -287,27 +289,18 @@ def run(mod_name: str,
 
         try:
             # 开始流式处理
-            for file_task, translated_texts, warnings in processor.process_files_stream(file_task_generator(), translation_wrapper):
+            for file_task, translated_texts, warnings, is_failed in processor.process_files_stream(file_task_generator(), translation_wrapper):
                 processed_files_count += 1
                 
                 # Aggregate warnings and send logs
-                if warnings:
-                    filename = file_task.filename if hasattr(file_task, 'filename') else "Unknown"
-                    for w in warnings:
-                        msg = f"[{filename}] {w.get('message', '')}"
-                        logging.warning(msg)
-                        # update_progress is called by logging handler now, so we don't need explicit call unless we want to force it
-                        
-                        if "glossary" in w.get("type", "").lower():
-                            glossary_issues += 1
-                        elif "format" in w.get("type", "").lower():
-                            format_issues += 1
-                
-                if not translated_texts:
+                if is_failed:
                     error_count += 1
-                    logging.error(f"File {file_task.filename} failed to translate.")
-                    update_progress(file_task.filename, "Failed", log_message=f"ERROR: File {file_task.filename} failed to translate.")
-                    continue
+                    logging.error(f"File {file_task.filename} failed to translate (partially or fully). Using fallback.")
+                    update_progress(file_task.filename, "Failed", log_message=f"ERROR: File {file_task.filename} failed to translate. Rolled back to original text.")
+                
+                if warnings:
+                    # (Already handled by log handler but good for internal state)
+                    pass
 
                 # 这里的 update_progress 主要是为了更新文件计数，日志已经在 logging.info 中捕获
                 update_progress(file_task.filename, log_message=f"SUCCESS: {file_task.filename} translated.")

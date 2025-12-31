@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useTranslation } from 'react-i18next';
 import { useNotification } from '../context/NotificationContext';
+import { useTranslationContext } from '../context/TranslationContext';
 import notificationService from '../services/notificationService';
 import { useForm } from '@mantine/form';
 import {
@@ -43,7 +44,22 @@ import TaskRunner from '../components/TaskRunner';
 const InitialTranslation = () => {
   const { t } = useTranslation();
   const { notificationStyle } = useNotification();
-  const [active, setActive] = useState(0);
+  const {
+    activeStep: active,
+    setActiveStep: setActive,
+    taskId,
+    setTaskId,
+    taskStatus,
+    setTaskStatus,
+    isProcessing,
+    setIsProcessing,
+    translationDetails,
+    setTranslationDetails,
+    selectedProjectId,
+    setSelectedProjectId,
+    resetTranslation
+  } = useTranslationContext();
+
   const [showAdvanced, setShowAdvanced] = useState(true); // Default to true for 2-col layout
   const [config, setConfig] = useState({
     game_profiles: {},
@@ -53,18 +69,13 @@ const InitialTranslation = () => {
 
   // Project State
   const [projects, setProjects] = useState([]);
-  const [selectedProjectId, setSelectedProjectId] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [gameFilter, setGameFilter] = useState('all');
   const navigate = useNavigate();
 
-  const [taskId, setTaskId] = useState(null);
   const [logs, setLogs] = useState([]);
   const [status, setStatus] = useState(null);
-  const [taskStatus, setTaskStatus] = useState(null);
   const [resultUrl, setResultUrl] = useState(null);
-  const [isProcessing, setIsProcessing] = useState(false);
-  const [translationDetails, setTranslationDetails] = useState(null);
   const [availableGlossaries, setAvailableGlossaries] = useState([]);
   const [availableModels, setAvailableModels] = useState([]);
 
@@ -135,14 +146,24 @@ const InitialTranslation = () => {
     if (providerConfig) {
       let models = [];
 
-      // Add default models
-      if (providerConfig.default_models && providerConfig.default_models.length > 0) {
-        models = models.concat(providerConfig.default_models.map(m => ({ value: m, label: m })));
+      // Combine standard available models and custom models
+      const availableModelsList = providerConfig.available_models || [];
+      const customModelsList = providerConfig.custom_models || [];
+      const combinedModels = [...new Set([...availableModelsList, ...customModelsList])];
+
+      if (combinedModels.length > 0) {
+        models = combinedModels.map(m => {
+          const isCustom = customModelsList.includes(m) && !availableModelsList.includes(m);
+          return {
+            value: m,
+            label: isCustom ? `${m} (Custom)` : m
+          };
+        });
       }
 
-      // Add custom models
-      if (providerConfig.custom_models && providerConfig.custom_models.length > 0) {
-        models = models.concat(providerConfig.custom_models.map(m => ({ value: m, label: `${m} (Custom)` })));
+      // Add default model if not already in the list
+      if (providerConfig.default_model && !models.some(m => m.value === providerConfig.default_model)) {
+        models.unshift({ value: providerConfig.default_model, label: providerConfig.default_model });
       }
 
       // Fallbacks for hardcoded providers if config is missing (legacy support)
@@ -163,17 +184,18 @@ const InitialTranslation = () => {
 
       setAvailableModels(models);
 
-      // Auto-select first model if current selection is invalid or empty
-      if (models.length > 0) {
-        const currentModelValid = models.some(m => m.value === form.values.model_name);
-        if (!currentModelValid) {
-          form.setFieldValue('model_name', models[0].value);
+      // Priority 1: User-selected model from settings (selected_model)
+      // Priority 2: Current selection if still valid
+      // Priority 3: First available model
+      const currentModelValid = models.some(m => m.value === form.values.model_name);
+
+      if (providerConfig.selected_model && models.some(m => m.value === providerConfig.selected_model)) {
+        // If we just switched provider, or current model is invalid, use settings model
+        if (!currentModelValid || !form.values.model_name) {
+          form.setFieldValue('model_name', providerConfig.selected_model);
         }
-      } else {
-        // If no models available (e.g. custom provider without models), allow free text or keep empty?
-        // For now, keep empty, but maybe we should allow free text input if no models defined?
-        // The requirement says "dropdown menu", so we stick to dropdown.
-        form.setFieldValue('model_name', '');
+      } else if (!currentModelValid && models.length > 0) {
+        form.setFieldValue('model_name', models[0].value);
       }
     } else {
       setAvailableModels([]);
@@ -181,30 +203,7 @@ const InitialTranslation = () => {
     }
   }, [form.values.api_provider, config.api_providers]);
 
-  // Polling Logic
-  useEffect(() => {
-    let interval;
-    if (taskId && isProcessing) {
-      interval = setInterval(async () => {
-        try {
-          const response = await axios.get(`/api/status/${taskId}`);
-          if (response.status === 200) {
-            setTaskStatus(response.data);
-            if (response.data.status === 'completed' || response.data.status === 'failed') {
-              setIsProcessing(false);
-              clearInterval(interval);
-              if (response.data.status === 'completed') {
-                setActive(3);
-              }
-            }
-          }
-        } catch (error) {
-          console.error("Error polling status:", error);
-        }
-      }, 1000);
-    }
-    return () => clearInterval(interval);
-  }, [taskId, isProcessing]);
+  // Polling Logic removed from here (now in TranslationContext)
 
   const handleProjectSelect = (projectId) => {
     setSelectedProjectId(projectId);
@@ -666,11 +665,8 @@ const InitialTranslation = () => {
                     task={taskStatus}
                     onComplete={() => navigate(`/project/${selectedProjectId}/proofread`)}
                     onRestart={() => {
-                      setTaskId(null);
-                      setTaskStatus(null);
+                      resetTranslation();
                       setStatus(null);
-                      setIsProcessing(false);
-                      setActive(0);
                     }}
                     onDashboard={() => navigate('/project-management')}
                     translationDetails={translationDetails}

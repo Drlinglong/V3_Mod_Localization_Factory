@@ -8,6 +8,7 @@ import { ThemeProvider } from './ThemeContext';
 import GlobalStyles from './components/GlobalStyles';
 import { NotificationProvider } from './context/NotificationContext';
 import { SidebarProvider } from './context/SidebarContext';
+import { TranslationProvider } from './context/TranslationContext';
 import { MainLayout } from './components/layout/MainLayout';
 
 import './App.css';
@@ -53,15 +54,17 @@ const App = () => {
             <GlobalStyles />
             <NotificationProvider>
                 <SidebarProvider>
-                    <Router>
-                        <MainLayout>
-                            <Routes>
-                                {appRouteConfig.map(route => (
-                                    <Route key={route.path} path={route.path} element={route.element} />
-                                ))}
-                            </Routes>
-                        </MainLayout>
-                    </Router>
+                    <TranslationProvider>
+                        <Router>
+                            <MainLayout>
+                                <Routes>
+                                    {appRouteConfig.map(route => (
+                                        <Route key={route.path} path={route.path} element={route.element} />
+                                    ))}
+                                </Routes>
+                            </MainLayout>
+                        </Router>
+                    </TranslationProvider>
                 </SidebarProvider>
             </NotificationProvider>
         </ThemeProvider>

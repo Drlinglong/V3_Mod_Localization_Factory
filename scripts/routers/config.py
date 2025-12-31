@@ -28,10 +28,9 @@ def get_config():
         provider_data = {
             "value": pid,
             "label": pconf.get("name", pid.title()),
-            "default_models": [pconf.get("default_model")] if pconf.get("default_model") else [],
-            # If the provider has a static list of models in app_settings, we could use that, 
-            # but currently it mostly just has 'default_model'.
-            # We will rely on frontend to know default models or just show the default one.
+            "available_models": pconf.get("available_models", []),
+            "default_model": pconf.get("default_model"),
+            "selected_model": override.get("selected_model", pconf.get("default_model")),
         }
         
         # Add custom models and URL if present

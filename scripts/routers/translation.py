@@ -16,7 +16,9 @@ from scripts.workflows import initial_translate
 from scripts.utils import i18n
 from scripts.core.checkpoint_manager import CheckpointManager
 
+import threading
 router = APIRouter()
+task_lock = threading.Lock()
 
 def run_translation_workflow(task_id: str, mod_name: str, game_profile_id: str, source_lang_code: str, target_lang_codes: List[str], api_provider: str, mod_context: str):
     """
@@ -108,21 +110,24 @@ def run_translation_workflow_v2(
                           current_batch=0, total_batches=0, 
                           error_count=0, glossary_issues=0, format_issues=0,
                           log_message: str = None):
-        tasks[task_id]["progress"]["current"] = current
-        tasks[task_id]["progress"]["total"] = total
-        tasks[task_id]["progress"]["current_file"] = current_file
-        tasks[task_id]["progress"]["stage"] = stage
-        tasks[task_id]["progress"]["current_batch"] = current_batch
-        tasks[task_id]["progress"]["total_batches"] = total_batches
-        tasks[task_id]["progress"]["error_count"] = error_count
-        tasks[task_id]["progress"]["glossary_issues"] = glossary_issues
-        tasks[task_id]["progress"]["format_issues"] = format_issues
-        
-        if log_message:
-            tasks[task_id]["log"].append(log_message)
-        
-        if total > 0:
-            tasks[task_id]["progress"]["percent"] = int((current / total) * 100)
+        with task_lock:
+            if task_id not in tasks: return
+            
+            tasks[task_id]["progress"]["current"] = current
+            tasks[task_id]["progress"]["total"] = total
+            tasks[task_id]["progress"]["current_file"] = current_file
+            tasks[task_id]["progress"]["stage"] = stage
+            tasks[task_id]["progress"]["current_batch"] = current_batch
+            tasks[task_id]["progress"]["total_batches"] = total_batches
+            tasks[task_id]["progress"]["error_count"] = error_count
+            tasks[task_id]["progress"]["glossary_issues"] = glossary_issues
+            tasks[task_id]["progress"]["format_issues"] = format_issues
+            
+            if log_message:
+                tasks[task_id]["log"].append(log_message)
+            
+            if total > 0:
+                tasks[task_id]["progress"]["percent"] = int((current / total) * 100)
 
     try:
         # Debug Logging
