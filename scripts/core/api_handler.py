@@ -25,30 +25,30 @@ def get_handler(provider_name: str, model_name: str = None) -> 'BaseApiHandler':
     """
     try:
         if provider_name == "openai":
-            return OpenAIHandler(provider_name)
+            return OpenAIHandler(provider_name, model_id=model_name)
         elif provider_name == "qwen":
-            return QwenHandler(provider_name)
+            return QwenHandler(provider_name, model_id=model_name)
         elif provider_name == "gemini":
-            return GeminiHandler(provider_name)
+            return GeminiHandler(provider_name, model_id=model_name)
         elif provider_name == "gemini_cli":
-            # GeminiCLIHandler has a custom constructor
+            # GeminiCLIHandler has a custom constructor but we should still be consistent
             return GeminiCLIHandler(provider_name, model_name=model_name)
         elif provider_name == "deepseek":
-            return DeepSeekHandler(provider_name)
+            return DeepSeekHandler(provider_name, model_id=model_name)
         elif provider_name == "grok":
-            return GrokHandler(provider_name)
+            return GrokHandler(provider_name, model_id=model_name)
         elif provider_name == "ollama":
-            return OllamaHandler(provider_name)
+            return OllamaHandler(provider_name, model_id=model_name)
         elif provider_name == "modelscope":
-            return ModelScopeHandler(provider_name)
+            return ModelScopeHandler(provider_name, model_id=model_name)
         elif provider_name == "siliconflow":
-            return SiliconFlowHandler(provider_name)
+            return SiliconFlowHandler(provider_name, model_id=model_name)
         elif provider_name == "your_favourite_api":
-            return YourFavouriteHandler(provider_name)
+            return YourFavouriteHandler(provider_name, model_id=model_name)
         else:
             # 默认返回 Gemini
             logging.warning(f"Unknown provider '{provider_name}', falling back to 'gemini'.")
-            return GeminiHandler("gemini")
+            return GeminiHandler("gemini", model_id=model_name)
     except Exception as e:
         logging.error(f"Failed to instantiate handler for {provider_name}: {e}", exc_info=True)
         raise

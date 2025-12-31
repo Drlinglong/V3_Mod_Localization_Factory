@@ -16,11 +16,12 @@ from scripts.core.prompt_manager import prompt_manager
 class BaseApiHandler(ABC):
     """【基类】API Handler 抽象基类，封装通用逻辑。"""
 
-    def __init__(self, provider_name: str):
+    def __init__(self, provider_name: str, model_id: str = None):
         """
         通用的构造函数。
         """
         self.provider_name = provider_name
+        self.model_id = model_id
         self.logger = logging.getLogger(self.__class__.__name__)
         self.client = self.initialize_client()
 
@@ -36,10 +37,22 @@ class BaseApiHandler(ABC):
         
         # Merge user overrides
         if user_overrides:
-            if "selected_model" in user_overrides and user_overrides["selected_model"]:
-                base_config["default_model"] = user_overrides["selected_model"]
+            # Priority: 1. Request param (self.model_id), 2. User Override, 3. Base Default
+            selected_model = self.model_id or user_overrides.get("selected_model")
+            available_models = base_config.get("available_models", [])
+            
+            # Use selected model only if it exists in the available list or is a custom model
+            if selected_model:
+                if selected_model in available_models:
+                    base_config["default_model"] = selected_model
+                else:
+                    self.logger.warning(f"Selected model '{selected_model}' for provider '{self.provider_name}' is not in available list. Falling back to default: {base_config.get('default_model')}")
+
             if "api_url" in user_overrides and user_overrides["api_url"]:
                 base_config["base_url"] = user_overrides["api_url"]
+        elif self.model_id:
+            # If no overrides but we have a request model, use it
+            base_config["default_model"] = self.model_id
             
         return base_config
 
@@ -119,8 +132,18 @@ class BaseApiHandler(ABC):
             )
 
         punctuation_prompt_part = f"\nPUNCTUATION CONVERSION:\n{punctuation_prompt}\n" if punctuation_prompt else ""
+        
+        # Add a "Final Warning" section for Victoria 3 specifically
+        final_warning = ""
+        if game_profile["id"] == "victoria3":
+            final_warning = (
+                "\n🚨 FINAL MANDATORY REMINDER FOR VICTORIA 3:\n"
+                "- DO NOT translate the label inside [Concept('key', 'Label')]. Keep it English.\n"
+                "- DO NOT translate anything inside [SCOPE...].\n"
+                "- Ensure the JSON format is strictly followed.\n"
+            )
 
-        prompt = base_prompt + context_prompt_part + glossary_prompt_part + format_prompt_part + punctuation_prompt_part
+        prompt = base_prompt + context_prompt_part + glossary_prompt_part + format_prompt_part + punctuation_prompt_part + final_warning
         return prompt
 
     def _parse_response(self, response: str, original_texts: list[str], target_lang_code: str) -> list[str] | None:
@@ -171,7 +194,9 @@ class BaseApiHandler(ABC):
                 time.sleep(delay)
 
         self.logger.error(f"Batch {batch_num} failed after {MAX_RETRIES} attempts. Falling back to original texts.")
+        task.failed = True
         task.translated_texts = task.texts
+        # We still return the task object so the aggregator can see it failed but has text
         return task
 
     def _build_single_text_prompt(self, text: str, task_description: str, mod_name: str, source_lang: dict, target_lang: dict, mod_context: str, game_profile: dict) -> str:

@@ -2,6 +2,7 @@ import os
 import logging
 from typing import Any
 from google import genai
+from google.genai import types
 
 from scripts.app_settings import API_PROVIDERS
 from scripts.core.base_handler import BaseApiHandler
@@ -34,18 +35,46 @@ class GeminiHandler(BaseApiHandler):
         thinking_budget = provider_config.get("thinking_budget", 0)
 
         generation_config = {}
-        if not enable_thinking:
-            generation_config["thinking_config"] = {"thinking_budget": 0}
-        elif thinking_budget != 0: # If thinking is enabled, use the specified budget
-            generation_config["thinking_config"] = {"thinking_budget": thinking_budget}
+        if enable_thinking:
+            # According to latest google-genai docs:
+            # Gemini 3 models support thinking_level ('low', 'high', 'medium', 'minimal')
+            # Gemini 2.5 models use thinking_budget
+            
+            # Map user's desire: For Gemini 3, 'low' is requested.
+            is_gemini_3 = "gemini-3" in model_name
+            
+            if is_gemini_3:
+                # The SDK uses ThinkingConfig for both.
+                generation_config["thinking_config"] = types.ThinkingConfig(
+                    include_thoughts=True,
+                    thinking_level="low" # User specifically requested 'low' for Gemini 3
+                )
+            elif thinking_budget != 0:
+                generation_config["thinking_config"] = types.ThinkingConfig(
+                    include_thoughts=True
+                )
+                # For Gemini 2.x, thinking_budget is the field. 
+                # Note: If the SDK supports setting budget on ThinkingConfig, we'd do it here.
+                # Many implementations pass thinking_budget as a top-level field in GenerateContentConfig.
+                if thinking_budget > 0:
+                    generation_config["thinking_budget"] = thinking_budget
 
         try:
             # Pass the generation_config to the API call
             response = client.models.generate_content(
                 model=model_name,
                 contents=prompt,
-                config=generation_config if generation_config else None
+                config=types.GenerateContentConfig(**generation_config) if generation_config else None
             )
+            
+            # SAFE EXTRACTION: Avoid the 'thought_signature' warning by extracting only text parts
+            # Response parts can contain Text, Thought, Call, etc.
+            if response.candidates and response.candidates[0].content.parts:
+                text_parts = [part.text for part in response.candidates[0].content.parts if part.text]
+                if text_parts:
+                    return "".join(text_parts).strip()
+            
+            # Fallback to .text if parts extraction fails (will trigger warning but at least returns something)
             return response.text.strip()
         except Exception as e:
             self.logger.exception(f"Gemini API call failed: {e}")

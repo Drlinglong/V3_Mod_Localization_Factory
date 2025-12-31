@@ -164,13 +164,13 @@ API_PROVIDERS = {
     "gemini": {
         "api_key_env": "GEMINI_API_KEY",
         "name": "Google Gemini",
-        "default_model": "gemini-2.5-flash",
+        "default_model": "gemini-2.5-flash-lite",
         "available_models": [
-            "gemini-2.5-flash", 
-            "gemini-2.5-pro", 
-            "gemini-3-flash", 
-            "gemini-3-pro", 
-            "gemini-3-deep-think",
+            "gemini-2.5-flash-lite", 
+            "gemini-2.5-pro-preview", 
+            "gemini-3-flash-preview", 
+            "gemini-3-pro-preview", 
+            "gemini-3-pro-image-preview",
             "gemini-2.0-flash",
             "gemini-2.0-pro"
         ],
@@ -180,12 +180,12 @@ API_PROVIDERS = {
     },
     "gemini_cli": {
         "cli_path": "gemini",
-        "default_model": "gemini-2.5-flash",
+        "default_model": "gemini-2.5-flash-lite",
         "available_models": [
-            "gemini-2.5-flash", 
-            "gemini-2.5-pro", 
-            "gemini-3-flash", 
-            "gemini-3-pro"
+            "gemini-2.5-flash-lite", 
+            "gemini-2.5-pro-preview", 
+            "gemini-3-flash-preview", 
+            "gemini-3-pro-preview"
         ],
         "enable_thinking": True,
         "thinking_budget": -1,

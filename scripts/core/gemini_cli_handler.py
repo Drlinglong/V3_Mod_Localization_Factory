@@ -50,7 +50,7 @@ class GeminiCLIHandler(BaseApiHandler):
 
     def __init__(self, provider_name: str, model_name: str = None):
         self.model_override = model_name
-        super().__init__(provider_name)
+        super().__init__(provider_name, model_id=model_name)
 
     def initialize_client(self) -> Any:
         provider_config = self.get_provider_config()
