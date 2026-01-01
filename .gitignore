@@ -21,6 +21,7 @@ wheels/
 *.egg
 MANIFEST
 *.log
+*.spec
 
 # Virtual Environment
 venv/
@@ -48,6 +49,7 @@ source_mod/
 my_translation/
 data/*.sqlite
 data/*.db
+data/seed_data_*.sql
 logs/
 temp/
 *.tmp
@@ -76,6 +78,7 @@ yarn-error.log*
 /scripts/react-ui/src-tauri/Cargo.lock
 /scripts/react-ui/src-tauri/.cargo/
 /scripts/react-ui/src-tauri/gen/
+/scripts/react-ui/src-tauri/binaries/
 
 # Migration scripts (temporary)
 migrate_projects_db.py
