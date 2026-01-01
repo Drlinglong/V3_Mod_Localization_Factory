@@ -6,14 +6,23 @@ import { getTutorialSteps } from '../config/tutorialSteps';
 
 const TutorialContext = createContext();
 
+export const TUTORIAL_VERSION = 'v1';
+export const getTutorialKey = (page = 'general') => `remis_tutorial_${page}_${TUTORIAL_VERSION}`;
+
 export const TutorialProvider = ({ children }) => {
     const { t, i18n } = useTranslation();
     const [isTourActive, setIsTourActive] = useState(false);
+    const [pageContext, setPageContext] = useState('home'); // Default page context
 
-    const startTour = useCallback((pageName = 'home') => {
-        const steps = getTutorialSteps(t, pageName);
+    const startTour = useCallback((pageName = null) => {
+        // Use provided pageName or fallback to current pageContext
+        const targetPage = pageName || pageContext;
+        const steps = getTutorialSteps(t, targetPage);
 
-        if (!steps || steps.length === 0) return;
+        if (!steps || steps.length === 0) {
+            console.warn(`No tutorial steps found for page: ${targetPage}`);
+            return;
+        }
 
         const driverObj = driver({
             showProgress: true,
@@ -34,7 +43,7 @@ export const TutorialProvider = ({ children }) => {
 
         setIsTourActive(true);
         driverObj.drive();
-    }, [t]);
+    }, [t, pageContext]);
 
     // Optional: Check for first-time user
     useEffect(() => {
@@ -46,7 +55,7 @@ export const TutorialProvider = ({ children }) => {
     }, []);
 
     return (
-        <TutorialContext.Provider value={{ startTour, isTourActive }}>
+        <TutorialContext.Provider value={{ startTour, isTourActive, pageContext, setPageContext }}>
             {children}
         </TutorialContext.Provider>
     );

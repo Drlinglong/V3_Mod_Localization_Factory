@@ -130,14 +130,7 @@ export function AppSider() {
                     label="tutorial.sidebar_tutorial_btn"
                     active={false}
                     onClick={() => {
-                        // Determine current page for tutorial
-                        const path = location.pathname;
-                        let page = 'home';
-                        if (path === '/') page = 'home';
-                        else if (path === '/glossary-manager') page = 'glossary-manager';
-                        // Add more mappings as needed
-
-                        startTour(page);
+                        startTour();
                     }}
                     expanded={expanded}
                 />

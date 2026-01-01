@@ -83,7 +83,7 @@ export const KanbanBoard = ({ projectId }) => {
     const activeTask = activeId ? tasks.find(t => t.id === activeId) : null;
 
     return (
-        <div className={styles.boardContainer}>
+        <div id="kanban-board" className={styles.boardContainer}>
             <DndContext
                 sensors={sensors}
                 collisionDetection={closestCorners}

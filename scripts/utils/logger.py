@@ -5,37 +5,33 @@ import logging
 import platform
 from logging.handlers import RotatingFileHandler
 
+def get_logs_dir():
+    """Returns the absolute path to the logs directory."""
+    if getattr(sys, 'frozen', False):
+        if platform.system() == "Windows":
+            base = os.getenv('APPDATA')
+        else:
+            base = os.path.expanduser("~/.local/share")
+        if not base:
+            base = os.path.expanduser("~")
+        return os.path.join(base, "RemisModFactory", "logs")
+    else:
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        project_root = os.path.abspath(os.path.join(current_dir, '..', '..'))
+        return os.path.join(project_root, "logs")
+
+LOGS_DIR = get_logs_dir()
+
 def setup_logger():
     """
     Configures the global root logger for the entire project.
     Implements smart path resolution (AppData vs Dev) and log rotation.
     """
-    # 1. 智能路径解析 (Smart Path Resolution)
-    if getattr(sys, 'frozen', False):
-        # 打包环境 (Frozen/Production)
-        if platform.system() == "Windows":
-            base = os.getenv('APPDATA')
-        else:
-            # Linux/Mac fallback (though we are Windows focused)
-            base = os.path.expanduser("~/.local/share")
-        
-        # Fallback if APPDATA is missing
-        if not base:
-            base = os.path.expanduser("~")
-            
-        logs_dir = os.path.join(base, "RemisModFactory", "logs")
-    else:
-        # 开发环境 (Development)
-        # Assuming script is in scripts/utils/logger.py, project root is ../../
-        current_dir = os.path.dirname(os.path.abspath(__file__))
-        project_root = os.path.abspath(os.path.join(current_dir, '..', '..'))
-        logs_dir = os.path.join(project_root, "logs")
-    
-    os.makedirs(logs_dir, exist_ok=True)
-    print(f"[LOGGER] Writing logs to: {logs_dir}")
+    os.makedirs(LOGS_DIR, exist_ok=True)
+    print(f"[LOGGER] Writing logs to: {LOGS_DIR}")
 
     # 2. 飞行记录仪模式 (Rotating File Handler)
-    log_filename = os.path.join(logs_dir, "remis_backend.log")
+    log_filename = os.path.join(LOGS_DIR, "remis_backend.log")
 
     logger = logging.getLogger()
     logger.setLevel(logging.INFO)
@@ -71,7 +67,7 @@ def setup_logger():
     stream_handler.setLevel(logging.INFO)
     logger.addHandler(stream_handler)
 
-    logging.info(f"Logger initialized. Writing to: {logs_dir}")
+    logging.info(f"Logger initialized. Writing to: {LOGS_DIR}")
     
     # Try to log i18n message if available
     try:

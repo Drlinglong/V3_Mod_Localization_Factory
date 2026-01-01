@@ -9,6 +9,9 @@ from scripts.shared.services import project_manager, glossary_manager
 from scripts.app_settings import TRANSLATION_PROGRESS_DB_PATH
 import sqlite3
 
+import webbrowser
+from scripts.utils.logger import LOGS_DIR
+
 logger = logging.getLogger(__name__)
 
 router = APIRouter(prefix="/api/system", tags=["System"])
@@ -88,6 +91,41 @@ async def open_folder(request: OpenFolderRequest):
     except Exception as e:
         logger.error(f"Failed to open folder {path}: {e}")
         raise HTTPException(status_code=500, detail=f"Failed to open folder: {str(e)}")
+
+@router.post("/open-logs")
+async def open_logs_folder():
+    """
+    Opens the application logs directory in the file explorer.
+    """
+    if not os.path.exists(LOGS_DIR):
+        os.makedirs(LOGS_DIR, exist_ok=True)
+    
+    try:
+        if platform.system() == "Windows":
+            os.startfile(LOGS_DIR)
+        elif platform.system() == "Darwin":
+            subprocess.Popen(["open", LOGS_DIR])
+        else:
+            subprocess.Popen(["xdg-open", LOGS_DIR])
+        return {"status": "success"}
+    except Exception as e:
+        logger.error(f"Failed to open logs dir: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+class OpenUrlRequest(BaseModel):
+    url: str
+
+@router.post("/open-url")
+async def open_url(request: OpenUrlRequest):
+    """
+    Opens a URL in the default system browser.
+    """
+    try:
+        webbrowser.open(request.url)
+        return {"status": "success"}
+    except Exception as e:
+        logger.error(f"Failed to open URL {request.url}: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
 
 class SaveFileRequest(BaseModel):
     file_path: str

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
   Paper,
@@ -7,7 +7,8 @@ import {
   Group,
   Select,
   Tabs,
-  Text
+  Text,
+  Box
 } from '@mantine/core';
 import {
   IconFolder,
@@ -15,6 +16,7 @@ import {
   IconEdit
 } from '@tabler/icons-react';
 import layoutStyles from '../components/layout/Layout.module.css';
+import { useTutorial } from '../context/TutorialContext';
 import useProofreadingState from '../hooks/useProofreadingState';
 import ProjectSelector from '../components/proofreading/ProjectSelector';
 import { SourceFileSelector, AIFileSelector } from '../components/proofreading/ProofreadingFileList';
@@ -27,11 +29,16 @@ import FreeLinterMode from '../components/proofreading/FreeLinterMode';
  */
 const ProofreadingPage = () => {
   const { t } = useTranslation();
+  const { setPageContext } = useTutorial();
   const state = useProofreadingState();
 
   // 本地 UI 状态
   const [activeTab, setActiveTab] = useState('file');
   const [zoomLevel, setZoomLevel] = useState('1');
+
+  useEffect(() => {
+    setPageContext('proofreading');
+  }, [setPageContext]);
 
   // 源文件选择器组件
   const sourceFileSelector = (
@@ -61,11 +68,13 @@ const ProofreadingPage = () => {
         <Group justify="space-between" mb="xs" w="100%">
           <Group>
             <Title order={4}>{t('page_title_proofreading')}</Title>
-            <ProjectSelector
-              projects={state.projects}
-              selectedProject={state.selectedProject}
-              onProjectSelect={state.handleProjectSelect}
-            />
+            <Box id="proofreading-mod-select">
+              <ProjectSelector
+                projects={state.projects}
+                selectedProject={state.selectedProject}
+                onProjectSelect={state.handleProjectSelect}
+              />
+            </Box>
           </Group>
 
           <Group>
@@ -107,7 +116,7 @@ const ProofreadingPage = () => {
         </Group>
 
         {/* Main Content */}
-        <div style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden', zoom: zoomLevel }}>
+        <div id="proofreading-main-content" style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden', zoom: zoomLevel }}>
           <Tabs value={activeTab} style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
 
             {/* File Mode Tab */}

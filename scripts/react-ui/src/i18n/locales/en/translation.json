@@ -487,6 +487,42 @@
       "search": {
         "title": "Power Search",
         "desc": "Global search across files and games to locate any term instantly."
+      },
+      "files": {
+        "title": "Glossary Files",
+        "desc": "Manage glossary files for different games on the left."
+      },
+      "table": {
+        "title": "Entry Management",
+        "desc": "Edit source text, translations, and variants here. Changes are saved to SQLite instantly."
+      }
+    },
+    "project_management": {
+      "kanban": {
+        "title": "Task Kanban",
+        "desc": "Visually manage all localization projects. Drag tasks to update file status."
+      },
+      "new_task": {
+        "title": "New Task",
+        "desc": "Create file tasks or custom note tasks to track your workflow."
+      },
+      "paths": {
+        "title": "Path Management",
+        "desc": "Configure source and output paths for your mods."
+      }
+    },
+    "proofreading": {
+      "mod_select": {
+        "title": "Module Selection",
+        "desc": "Switch between different mods to proofread their contents."
+      },
+      "editor": {
+        "title": "Triple-Column Editor",
+        "desc": "Compare original, AI draft, and final edit side-by-side with real-time sync."
+      },
+      "validate": {
+        "title": "Integrity Check",
+        "desc": "Run automated checks for missing tags, broken variables, or inconsistent terminology."
       }
     },
     "sidebar_tutorial_btn": "Tutorial",
@@ -495,17 +531,18 @@
       "message": "It seems it's your first time here. Would you like a quick tour?",
       "confirm": "Start Tour",
       "cancel": "No thanks"
-    },
-    "version_info": {
-      "tab_title": "Version Info",
-      "project_version": "Project Version",
-      "last_updated": "Last Updated",
-      "github_repo": "GitHub Repository",
-      "issue_title": "Found an issue?",
-      "issue_desc": "If you encounter any bugs or have feature suggestions, please feel free to leave a message on our GitHub Issues page.",
-      "log_hint": "💡 **Tip**: To help us identify the problem quickly, please make sure to attach the relevant log files from the `logs/` directory.",
-      "star_encouragement": "If you find this project helpful, giving us a **Star** 🌟 on GitHub would be the greatest encouragement!",
-      "github_link_text": "Visit Repository"
     }
+  },
+  "version_info": {
+    "tab_title": "Version Info",
+    "project_version": "Project Version",
+    "last_updated": "Last Updated",
+    "github_repo": "GitHub Repository",
+    "issue_title": "Found an issue?",
+    "issue_desc": "If you encounter any bugs or have feature suggestions, please feel free to leave a message on our GitHub Issues page.",
+    "log_hint": "Tip: To help us identify the problem quickly, please make sure to attach the relevant log files from the logs/ directory.",
+    "star_encouragement": "If you find this project helpful, giving us a Star 🌟 on GitHub would be the greatest encouragement!",
+    "github_link_text": "Visit Repository",
+    "open_logs_btn": "Open Logs Directory"
   }
 }
