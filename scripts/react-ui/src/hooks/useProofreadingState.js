@@ -101,7 +101,8 @@ const useProofreadingState = () => {
 
     const parseEditorContentToEntries = useCallback((content) => {
         const entries = [];
-        const regex = /^\s*([\w\.]+)(?:\s*:\s*\d+)?\s*"((?:[^"\\]|\\.)*)"/gm;
+        // Support keys with dots, underscores, and hyphens. Support optional digit index.
+        const regex = /^\s*([\w\.-]+)(?:\s*:\s*\d+)?\s*"((?:[^"\\]|\\.)*)"/gm;
         let match;
         while ((match = regex.exec(content)) !== null) {
             entries.push({ key: match[1], value: match[2] });
@@ -393,8 +394,9 @@ const useProofreadingState = () => {
         // Regex to extract keys from content: 
         // Matches: key:0 "value"
         // Improved: Allow whitespace around ':' and before key
+        // Support keys with dots, underscores, and hyphens. Match any :digit index or just colon.
         const currentKeys = new Set();
-        const regex = /^\s*([\w\.]+)\s*:\s*0\s*"/gm;
+        const regex = /^\s*([\w\.-]+)\s*:\s*\d*\s*"/gm;
         let match;
         while ((match = regex.exec(finalContentStr)) !== null) {
             currentKeys.add(match[1]);
