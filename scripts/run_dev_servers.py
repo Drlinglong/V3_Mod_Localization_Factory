@@ -45,21 +45,27 @@ def find_free_port(start_port=8081, max_attempts=200):
     raise RuntimeError(f"No free ports found between {start_port} and {start_port + max_attempts}")
 
 def wait_for_backend(port, timeout=30):
-    """Wait until the backend API returns HTTP 200."""
+    """Wait until the backend API returns HTTP 200 constantly."""
     start_time = time.time()
-    urls_to_check = [f"http://127.0.0.1:{port}/", f"http://localhost:{port}/"]
+    urls_to_check = [f"http://127.0.0.1:{port}/"] # Stick to 127.0.0.1 for speed
+    
+    success_count = 0
+    required_successes = 3
     
     while time.time() - start_time < timeout:
         for url in urls_to_check:
             try:
                 with urllib.request.urlopen(url, timeout=1) as response:
                     if response.status == 200:
-                        return True
+                        success_count += 1
+                        if success_count >= required_successes:
+                            return True
+                    else:
+                        success_count = 0 # Reset if we get non-200
             except (ConnectionRefusedError, urllib.error.URLError, socket.timeout):
+                success_count = 0 # Reset if connection fails
                 pass
             except Exception:
-                # Other errors (e.g. 500) mean it's running but broken, but at least listening.
-                # Ideally we wait for 200.
                 pass
         time.sleep(0.5)
     return False
