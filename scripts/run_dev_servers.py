@@ -8,6 +8,8 @@ import sys
 import os
 import signal
 import time
+import urllib.request
+import urllib.error
 import socket
 import json
 
@@ -22,21 +24,24 @@ def find_free_port(start_port=8081, max_attempts=200):
                 continue
     raise RuntimeError(f"No free ports found between {start_port} and {start_port + max_attempts}")
 
-def wait_for_port(port, host='127.0.0.1', timeout=30):
-    """Wait until a port accepts connections."""
+def wait_for_backend(port, timeout=30):
+    """Wait until the backend API returns HTTP 200."""
     start_time = time.time()
+    urls_to_check = [f"http://127.0.0.1:{port}/", f"http://localhost:{port}/"]
+    
     while time.time() - start_time < timeout:
-        try:
-            with socket.create_connection((host, port), timeout=1):
-                return True
-        except (OSError, ConnectionRefusedError):
-            # Try verification on 0.0.0.0/localhost just in case
+        for url in urls_to_check:
             try:
-                with socket.create_connection(('localhost', port), timeout=0.5):
-                    return True
-            except:
+                with urllib.request.urlopen(url, timeout=1) as response:
+                    if response.status == 200:
+                        return True
+            except (ConnectionRefusedError, urllib.error.URLError, socket.timeout):
                 pass
-            time.sleep(0.5)
+            except Exception:
+                # Other errors (e.g. 500) mean it's running but broken, but at least listening.
+                # Ideally we wait for 200.
+                pass
+        time.sleep(0.5)
     return False
 
 def run_servers():
@@ -101,7 +106,7 @@ def run_servers():
         
         # Wait for backend to be ready
         print(f"[INFO] Waiting for backend to start listening on port {backend_port}...")
-        if not wait_for_port(backend_port):
+        if not wait_for_backend(backend_port):
             print(f"[ERROR] Backend failed to start listening on port {backend_port} within 30 seconds.")
             # Let the subsequent poll logic handle the process cleanup/log dumping
         else:
