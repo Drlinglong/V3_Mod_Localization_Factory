@@ -38,7 +38,7 @@ def find_free_port(start_port=8081, max_attempts=200):
     for port in range(start_port, start_port + max_attempts):
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
             try:
-                sock.bind(('0.0.0.0', port))
+                sock.bind(('127.0.0.1', port))
                 return port
             except OSError:
                 continue
@@ -87,7 +87,7 @@ def run_servers():
     
     # We prefer 8081 because Vite default proxy aligns with it
     backend_port = find_free_port(8081)
-    backend_cmd = [sys.executable, '-m', 'uvicorn', 'scripts.web_server:app', '--host', '0.0.0.0', '--port', str(backend_port)]
+    backend_cmd = [sys.executable, '-m', 'uvicorn', 'scripts.web_server:app', '--host', '127.0.0.1', '--port', str(backend_port)]
     
     # Frontend process (Vite)
     frontend_cwd = os.path.join(project_root, 'scripts', 'react-ui')
