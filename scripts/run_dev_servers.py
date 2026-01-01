@@ -22,6 +22,23 @@ def find_free_port(start_port=8081, max_attempts=200):
                 continue
     raise RuntimeError(f"No free ports found between {start_port} and {start_port + max_attempts}")
 
+def wait_for_port(port, host='127.0.0.1', timeout=30):
+    """Wait until a port accepts connections."""
+    start_time = time.time()
+    while time.time() - start_time < timeout:
+        try:
+            with socket.create_connection((host, port), timeout=1):
+                return True
+        except (OSError, ConnectionRefusedError):
+            # Try verification on 0.0.0.0/localhost just in case
+            try:
+                with socket.create_connection(('localhost', port), timeout=0.5):
+                    return True
+            except:
+                pass
+            time.sleep(0.5)
+    return False
+
 def run_servers():
     """Run both backend and frontend servers concurrently."""
     
@@ -33,7 +50,8 @@ def run_servers():
     
     # Backend process (FastAPI)
     backend_cwd = project_root
-    backend_port = find_free_port(9000)
+    # We prefer 8081 because Vite default proxy aligns with it
+    backend_port = find_free_port(8081)
     backend_cmd = [sys.executable, '-m', 'uvicorn', 'scripts.web_server:app', '--host', '0.0.0.0', '--port', str(backend_port)]
     
     # Frontend process (Vite)
@@ -80,7 +98,14 @@ def run_servers():
             bufsize=1
         )
         processes.append(('Backend', backend_process, backend_cmd))
-        time.sleep(3)  # Give backend time to start
+        
+        # Wait for backend to be ready
+        print(f"[INFO] Waiting for backend to start listening on port {backend_port}...")
+        if not wait_for_port(backend_port):
+            print(f"[ERROR] Backend failed to start listening on port {backend_port} within 30 seconds.")
+            # Let the subsequent poll logic handle the process cleanup/log dumping
+        else:
+            print(f"[INFO] Backend is ready!")
 
         # Check if backend started successfully
         if backend_process.poll() is not None:
