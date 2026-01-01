@@ -13,6 +13,26 @@ import urllib.error
 import socket
 import json
 
+def kill_process_on_port(port):
+    """Forcefully kill any process listening on the specified port."""
+    try:
+        if sys.platform == 'win32':
+            # Find PID
+            cmd = f'netstat -ano | findstr :{port}'
+            output = subprocess.check_output(cmd, shell=True).decode()
+            lines = output.strip().split('\n')
+            for line in lines:
+                parts = line.strip().split()
+                if len(parts) > 4 and f':{port}' in parts[1]:
+                    pid = parts[-1]
+                    print(f"[INFO] Killing zombie process on port {port} (PID: {pid})...")
+                    subprocess.run(f'taskkill /F /PID {pid}', shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        else:
+             # Linux/Mac implementation (skipped for now as user is on Windows)
+             pass
+    except (subprocess.CalledProcessError, IndexError, ValueError):
+        pass
+
 def find_free_port(start_port=8081, max_attempts=200):
     """Find a free port starting from start_port."""
     for port in range(start_port, start_port + max_attempts):
@@ -55,6 +75,10 @@ def run_servers():
     
     # Backend process (FastAPI)
     backend_cwd = project_root
+    
+    # Force cleanup of port 8081 to avoid zombie processes causing port shifts
+    kill_process_on_port(8081)
+    
     # We prefer 8081 because Vite default proxy aligns with it
     backend_port = find_free_port(8081)
     backend_cmd = [sys.executable, '-m', 'uvicorn', 'scripts.web_server:app', '--host', '0.0.0.0', '--port', str(backend_port)]
