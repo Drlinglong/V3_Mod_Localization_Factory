@@ -427,5 +427,11 @@
   "recent_activity_desc_note_added": "Added a new note",
   "recent_activity_desc_kanban_update": "Updated Kanban board layout",
   "recent_activity_desc_file_update": "Updated a file status",
+  "recent_activity_type_translation_workflow": "Translation",
+  "recent_activity_type_path_registered": "Path Registration",
+  "recent_activity_desc_translation_started": "Started translation task",
+  "recent_activity_desc_translation_completed": "Translation completed successfully",
+  "recent_activity_desc_translation_failed": "Translation task failed",
+  "recent_activity_desc_path_registered": "Auto-registered translation output path",
   "recent_activity_no_data": "No recent activity"
 }

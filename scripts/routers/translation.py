@@ -20,7 +20,7 @@ import threading
 router = APIRouter()
 task_lock = threading.Lock()
 
-def run_translation_workflow(task_id: str, mod_name: str, game_profile_id: str, source_lang_code: str, target_lang_codes: List[str], api_provider: str, mod_context: str):
+def run_translation_workflow(task_id: str, mod_name: str, game_profile_id: str, source_lang_code: str, target_lang_codes: List[str], api_provider: str, mod_context: str, project_id: Optional[str] = None):
     """
     A wrapper for the core translation logic to be run in the background.
     """
@@ -29,6 +29,16 @@ def run_translation_workflow(task_id: str, mod_name: str, game_profile_id: str, 
 
     tasks[task_id]["status"] = "processing"
     tasks[task_id]["log"].append("背景翻译任务开始...")
+
+    if project_id:
+        try:
+            project_manager.repository.add_activity_log(
+                project_id=project_id,
+                activity_type='translation_workflow',
+                description="Translation task started"
+            )
+        except Exception as e:
+            logging.error(f"Failed to log activity: {e}")
 
     try:
         # 1. Retrieve full config objects from IDs/codes
@@ -72,6 +82,16 @@ def run_translation_workflow(task_id: str, mod_name: str, game_profile_id: str, 
         zip_path = shutil.make_archive(result_dir, 'zip', result_dir)
         tasks[task_id]["result_path"] = zip_path
 
+        if project_id:
+            try:
+                project_manager.repository.add_activity_log(
+                    project_id=project_id,
+                    activity_type='translation_workflow',
+                    description="Translation completed successfully"
+                )
+            except Exception as e:
+                logging.error(f"Failed to log completion activity: {e}")
+
     except Exception as e:
         tb_str = traceback.format_exc()
         error_message = f"工作流执行失败 (Workflow execution failed): {e}\n{tb_str}"
@@ -81,17 +101,37 @@ def run_translation_workflow(task_id: str, mod_name: str, game_profile_id: str, 
         # 确保失败的任务没有可下载的结果路径
         if "result_path" in tasks[task_id]:
             del tasks[task_id]["result_path"]
+        if project_id:
+            try:
+                project_manager.repository.add_activity_log(
+                    project_id=project_id,
+                    activity_type='translation_workflow',
+                    description="Translation workflow failed"
+                )
+            except Exception as e:
+                logging.error(f"Failed to log failure activity: {e}")
 
 def run_translation_workflow_v2(
     task_id: str, mod_name: str, game_profile_id: str, source_lang_code: str,
     target_lang_codes: List[str], api_provider: str, mod_context: str,
     selected_glossary_ids: List[int], model_name: Optional[str], use_main_glossary: bool,
-    custom_lang_config: Optional[CustomLangConfig] = None
+    custom_lang_config: Optional[CustomLangConfig] = None,
+    project_id: Optional[str] = None
 ):
     i18n.load_language('en_US')
     tasks[task_id]["status"] = "processing"
     tasks[task_id]["log"].append("背景翻译任务开始 (V2)...")
     
+    if project_id:
+        try:
+            project_manager.repository.add_activity_log(
+                project_id=project_id,
+                activity_type='translation_workflow',
+                description="Translation task (V2) started"
+            )
+        except Exception as e:
+            logging.error(f"Failed to log activity (v2): {e}")
+
     # Initialize progress structure
     tasks[task_id]["progress"] = {
         "total": 0,
@@ -188,13 +228,31 @@ def run_translation_workflow_v2(
         result_dir = os.path.join(DEST_DIR, output_folder_name)
         zip_path = shutil.make_archive(result_dir, 'zip', result_dir)
         tasks[task_id]["result_path"] = zip_path
+
+        if project_id:
+            try:
+                project_manager.repository.add_activity_log(
+                    project_id=project_id,
+                    activity_type='translation_workflow',
+                    description="Translation completed successfully"
+                )
+            except Exception as e:
+                logging.error(f"Failed to log completion activity (v2): {e}")
     except Exception as e:
         tb_str = traceback.format_exc()
         error_message = f"工作流执行失败: {e}\n{tb_str}"
         logging.error(error_message) # Log to console!
         tasks[task_id]["status"] = "failed"
         tasks[task_id]["log"].append(error_message)
-
+        if project_id:
+            try:
+                project_manager.repository.add_activity_log(
+                    project_id=project_id,
+                    activity_type='translation_workflow',
+                    description="Translation workflow failed"
+                )
+            except Exception as e:
+                logging.error(f"Failed to log failure activity (v2): {e}")
 @router.post("/api/translate/start")
 def start_translation_project(request: InitialTranslationRequest, background_tasks: BackgroundTasks):
     """
@@ -229,7 +287,8 @@ def start_translation_project(request: InitialTranslationRequest, background_tas
         request.selected_glossary_ids,
         request.model,
         request.use_main_glossary,
-        request.custom_lang_config
+        request.custom_lang_config,
+        project_id=request.project_id
     )
 
     # Auto-register translation path (Optimistic registration)
@@ -306,7 +365,8 @@ async def start_translation(
         source_lang_code,
         target_codes,
         api_provider,
-        mod_context
+        mod_context,
+        project_id=None # Zip upload has no project ID
     )
 
     return {"task_id": task_id, "message": "翻译任务已开始"}
@@ -349,7 +409,8 @@ async def start_translation_v2(
         payload.selected_glossary_ids,
         payload.model_name,
         payload.use_main_glossary,
-        payload.custom_lang_config
+        payload.custom_lang_config,
+        project_id=None # Path-based upload might not have project ID
     )
 
     return {"task_id": task_id, "message": "翻译任务已开始"}

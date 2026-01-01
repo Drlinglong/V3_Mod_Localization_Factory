@@ -369,6 +369,13 @@ class ProjectManager:
             json_manager.update_config({"translation_dirs": translation_dirs})
             logger.info(f"Added translation path {abs_path} to project {project_id}")
             
+            # Log activity
+            self.repository.add_activity_log(
+                project_id=project_id,
+                activity_type='path_registered',
+                description="Auto-registered translation output path"
+            )
+
             # Refresh files to include new translation files
             self.refresh_project_files(project_id)
         else:

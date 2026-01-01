@@ -456,5 +456,11 @@
   "recent_activity_desc_note_added": "添加了新笔记",
   "recent_activity_desc_kanban_update": "更新了看板任务布局",
   "recent_activity_desc_file_update": "更新了文件状态",
+  "recent_activity_type_translation_workflow": "翻译任务",
+  "recent_activity_type_path_registered": "路径注册",
+  "recent_activity_desc_translation_started": "开始翻译项目",
+  "recent_activity_desc_translation_completed": "翻译任务已成功完成",
+  "recent_activity_desc_translation_failed": "翻译任务执行失败",
+  "recent_activity_desc_path_registered": "已自动注册翻译输出路径",
   "recent_activity_no_data": "暂无近期活动"
 }
