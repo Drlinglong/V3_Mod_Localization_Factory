@@ -176,8 +176,8 @@ const InitialTranslation = () => {
       if (models.length === 0) {
         if (form.values.api_provider === 'gemini') {
           models = [
-            { value: 'gemini-pro', label: 'Gemini Pro' },
-            { value: 'gemini-flash', label: 'Gemini Flash' },
+            { value: 'gemini-3-flash-preview', label: 'Gemini 3 Flash Preview' },
+            { value: 'gemini-3-pro-preview', label: 'Gemini 3 Pro Preview' },
           ];
         } else if (form.values.api_provider === 'ollama') {
           models = [

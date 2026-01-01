@@ -164,15 +164,10 @@ API_PROVIDERS = {
     "gemini": {
         "api_key_env": "GEMINI_API_KEY",
         "name": "Google Gemini",
-        "default_model": "gemini-2.5-flash-lite",
+        "default_model": "gemini-3-flash-preview",
         "available_models": [
-            "gemini-2.5-flash-lite", 
-            "gemini-2.5-pro-preview", 
             "gemini-3-flash-preview", 
-            "gemini-3-pro-preview", 
-            "gemini-3-pro-image-preview",
-            "gemini-2.0-flash",
-            "gemini-2.0-pro"
+            "gemini-3-pro-preview"
         ],
         "base_url": "https://generativelanguage.googleapis.com",
         "enable_thinking": False,
@@ -180,10 +175,8 @@ API_PROVIDERS = {
     },
     "gemini_cli": {
         "cli_path": "gemini",
-        "default_model": "gemini-2.5-flash-lite",
+        "default_model": "gemini-3-flash-preview",
         "available_models": [
-            "gemini-2.5-flash-lite", 
-            "gemini-2.5-pro-preview", 
             "gemini-3-flash-preview", 
             "gemini-3-pro-preview"
         ],
@@ -202,12 +195,8 @@ API_PROVIDERS = {
         "default_model": "gpt-5-mini",
         "available_models": [
             "gpt-5.2",
-            "gpt-5.2-pro",
             "gpt-5-mini",
-            "o3",
-            "o4-mini",
-            "gpt-4.5-preview",
-            "gpt-4.1-mini"
+            "gpt-5-nano"
         ],
         "enable_thinking": False,
         "reasoning_effort": "minimal"
@@ -216,11 +205,9 @@ API_PROVIDERS = {
         "api_key_env": "DASHSCOPE_API_KEY",
         "default_model": "qwen-plus",
         "available_models": [
-            "qwen-turbo",
             "qwen-plus",
             "qwen-max",
-            "qwen-long",
-            "qwen2.5-72b-instruct"
+            "qwen-flash"
         ],
         "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
         "region": "beijing",
@@ -231,13 +218,10 @@ API_PROVIDERS = {
         "api_key_env": "XAI_API_KEY",
         "base_url": "https://api.x.ai/v1",
         "name": "Grok (xAI)",
-        "default_model": "grok-4-fast-reasoning",
+        "default_model": "grok-4-1-fast-reasoning",
         "available_models": [
-            "grok-4.1",
-            "grok-4.1-thinking",
-            "grok-4",
-            "grok-3",
-            "grok-3-mini"
+            "grok-4-1-fast-reasoning",
+            "grok-4-1-fast-non-reasoning"
         ],
         "description": "通过xAI官方API访问grok-4-fast-reasoning模型"
     },
