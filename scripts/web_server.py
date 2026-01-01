@@ -112,6 +112,10 @@ app.include_router(prompts.router)
 def read_root():
     return {"message": "欢迎使用P社Mod本地化工厂API"}
 
+@app.get("/api/health")
+def health_check():
+    return {"status": "ok", "timestamp": time.time()}
+
 # Legacy startup block removed to prevent conflict with run_dev_servers.py launcher
 # DO NOT ADD 'if __name__ == "__main__":' block here.
 # Use 'start_dev_servers.bat' to run the application.

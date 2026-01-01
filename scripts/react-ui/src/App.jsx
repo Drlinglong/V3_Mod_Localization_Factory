@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { MantineProvider } from '@mantine/core';
+// import { MantineProvider } from '@mantine/core'; // Removed unused import
 import '@mantine/core/styles.css';
 
 import { ThemeProvider } from './ThemeContext';
@@ -11,6 +11,7 @@ import { SidebarProvider } from './context/SidebarContext';
 import { TranslationProvider } from './context/TranslationContext';
 import { TutorialProvider } from './context/TutorialContext';
 import { MainLayout } from './components/layout/MainLayout';
+import SplashScreen from './components/SplashScreen';
 
 import './App.css';
 
@@ -50,25 +51,31 @@ const appRouteConfig = [
 ];
 
 const App = () => {
+    const [isReady, setIsReady] = useState(false);
+
     return (
         <ThemeProvider>
             <GlobalStyles />
             <NotificationProvider>
-                <SidebarProvider>
-                    <TranslationProvider>
-                        <Router>
-                            <TutorialProvider>
-                                <MainLayout>
-                                    <Routes>
-                                        {appRouteConfig.map(route => (
-                                            <Route key={route.path} path={route.path} element={route.element} />
-                                        ))}
-                                    </Routes>
-                                </MainLayout>
-                            </TutorialProvider>
-                        </Router>
-                    </TranslationProvider>
-                </SidebarProvider>
+                {!isReady ? (
+                    <SplashScreen onReady={() => setIsReady(true)} />
+                ) : (
+                    <SidebarProvider>
+                        <TranslationProvider>
+                            <Router>
+                                <TutorialProvider>
+                                    <MainLayout>
+                                        <Routes>
+                                            {appRouteConfig.map(route => (
+                                                <Route key={route.path} path={route.path} element={route.element} />
+                                            ))}
+                                        </Routes>
+                                    </MainLayout>
+                                </TutorialProvider>
+                            </Router>
+                        </TranslationProvider>
+                    </SidebarProvider>
+                )}
             </NotificationProvider>
         </ThemeProvider>
     );

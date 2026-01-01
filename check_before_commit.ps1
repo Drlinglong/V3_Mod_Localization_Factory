@@ -6,7 +6,7 @@
 #   .\check_before_commit.ps1 -Silent   # 静默模式（Agent 自动运行）
 
 param(
-    [switch]$Silent = $false  # Agent 模式：不提示，直接返回结果
+    [switch]$Silent = $false
 )
 
 $ErrorActionPreference = "Stop"
