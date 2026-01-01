@@ -32,16 +32,28 @@ class PhoneticsEngine:
     """
     
     def __init__(self):
-        self.kakasi = None
-        if PYKAKASI_AVAILABLE:
-            self.kakasi = pykakasi.kakasi()
-            self.kakasi.setMode("H", "a") # Hiragana to Romaji
-            self.kakasi.setMode("K", "a") # Katakana to Romaji
-            self.kakasi.setMode("J", "a") # Kanji to Romaji
-            self.kakasi_converter = self.kakasi.getConverter()
-        
+        self._kakasi_converter = None
         # Hook for future heavy models
         self.advanced_corrector = None
+
+    def _get_kakasi_converter(self):
+        """Lazy load pykakasi converter on demand."""
+        if self._kakasi_converter:
+            return self._kakasi_converter
+            
+        if PYKAKASI_AVAILABLE:
+            try:
+                k = pykakasi.kakasi()
+                k.setMode("H", "a") # Hiragana to Romaji
+                k.setMode("K", "a") # Katakana to Romaji
+                k.setMode("J", "a") # Kanji to Romaji
+                self._kakasi_converter = k.getConverter()
+                logging.info("Pykakasi initialized (Lazy Load)")
+                return self._kakasi_converter
+            except Exception as e:
+                logging.error(f"Failed to initialize pykakasi: {e}")
+                return None
+        return None
 
     def generate_fingerprint(self, text: str, lang: str) -> str:
         """
@@ -66,8 +78,11 @@ class PhoneticsEngine:
                 return text
             # Convert to Romaji
             # e.g., "科学" -> "kagaku"
-            result = self.kakasi_converter.do(text)
-            return result
+            converter = self._get_kakasi_converter()
+            if converter:
+                result = converter.do(text)
+                return result
+            return text
             
         elif lang == 'ko': # Korean
             if not JAMO_AVAILABLE:
