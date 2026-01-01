@@ -14,23 +14,29 @@ class ArchiveManager:
     管理模组翻译结果的归档，与 mods_cache.sqlite 数据库交互。
     """
     def __init__(self):
-        self.conn: Optional[sqlite3.Connection] = None
-        self.initialize_database()
+        self._conn: Optional[sqlite3.Connection] = None
+
+    @property
+    def connection(self) -> Optional[sqlite3.Connection]:
+        """Lazy load database connection."""
+        if self._conn is None:
+            self.initialize_database()
+        return self._conn
 
     def initialize_database(self) -> bool:
         """Initializes the database connection. Returns True on success, False on failure."""
-        if self.conn:
+        if self._conn:
             return True
         try:
             os.makedirs(os.path.dirname(MODS_CACHE_DB_PATH), exist_ok=True)
-            self.conn = sqlite3.connect(MODS_CACHE_DB_PATH, check_same_thread=False)
-            self.conn.row_factory = sqlite3.Row
-            self._create_tables(self.conn)
+            self._conn = sqlite3.connect(MODS_CACHE_DB_PATH, check_same_thread=False)
+            self._conn.row_factory = sqlite3.Row
+            self._create_tables(self._conn)
             logging.info(i18n.t("log_info_db_connected", path=MODS_CACHE_DB_PATH))
             return True
         except Exception as e:
             logging.error(i18n.t("log_error_db_connect", error=e))
-            self.conn = None
+            self._conn = None
             return False
 
     def _create_tables(self, conn: sqlite3.Connection):
@@ -44,9 +50,9 @@ class ArchiveManager:
 
     def get_or_create_mod_entry(self, mod_name: str, remote_file_id: str) -> Optional[int]:
         """阶段一: 根据 remote_file_id 查询或创建 mod 记录，返回内部 mod_id"""
-        if not self.conn: return None
+        if not self.connection: return None
 
-        cursor = self.conn.cursor()
+        cursor = self.connection.cursor()
         try:
             # Check by name first to avoid duplicates if remote_id changes or isn't used consistently
             cursor.execute("SELECT mod_id FROM mods WHERE name = ?", (mod_name,))
@@ -65,16 +71,16 @@ class ArchiveManager:
             if remote_file_id:
                 cursor.execute("INSERT OR IGNORE INTO mod_identities (mod_id, remote_file_id) VALUES (?, ?)", (mod_id, remote_file_id))
 
-            self.conn.commit()
+            self.connection.commit()
             return mod_id
         except Exception as e:
             logging.error(i18n.t("log_error_db_get_create_mod_id", error=e))
-            self.conn.rollback()
+            self.connection.rollback()
             return None
 
     def create_source_version(self, mod_id: int, all_files_data: List[Dict]) -> Optional[int]:
         """阶段二: 计算哈希，如果不存在则创建源版本快照"""
-        if not self.conn: return None
+        if not self.connection: return None
 
         # 1. 计算总哈希
         hasher = hashlib.sha256()
@@ -86,7 +92,7 @@ class ArchiveManager:
                 hasher.update(text.encode('utf-8'))
         snapshot_hash = hasher.hexdigest()
 
-        cursor = self.conn.cursor()
+        cursor = self.connection.cursor()
         try:
             # 2. 检查哈希是否存在
             cursor.execute("SELECT version_id FROM source_versions WHERE snapshot_hash = ?", (snapshot_hash,))
@@ -122,19 +128,19 @@ class ArchiveManager:
                 cursor.execute("ALTER TABLE source_entries ADD COLUMN file_path TEXT DEFAULT ''")
 
             cursor.executemany("INSERT OR IGNORE INTO source_entries (version_id, entry_key, source_text, file_path) VALUES (?, ?, ?, ?)", source_entries)
-            self.conn.commit()
+            self.connection.commit()
             logging.info(i18n.t("log_info_archived_source_entries", count=len(source_entries), version_id=version_id))
             return version_id
         except Exception as e:
             logging.error(i18n.t("log_error_db_create_source_version", error=e))
-            self.conn.rollback()
+            self.connection.rollback()
             return None
 
     def archive_translated_results(self, version_id: int, file_results: Dict[str, Any], all_files_data: List[Dict], target_lang_code: str):
         """阶段三: 将指定语言的翻译结果存入或更新到数据库"""
-        if not self.conn or not version_id: return
+        if not self.connection or not version_id: return
 
-        cursor = self.conn.cursor()
+        cursor = self.connection.cursor()
         try:
             upsert_data = []
 
@@ -164,12 +170,12 @@ class ArchiveManager:
                 last_translated_at = CURRENT_TIMESTAMP
             """, upsert_data)
 
-            self.conn.commit()
+            self.connection.commit()
             logging.info(i18n.t("log_info_archived_updated_translations", count=len(upsert_data), lang_code=target_lang_code))
 
         except Exception as e:
             logging.error(i18n.t("log_error_db_archive_results", lang_code=target_lang_code, error=e))
-            self.conn.rollback()
+            self.connection.rollback()
 
     # --- New Methods for Project/Proofreading Flow ---
 
@@ -177,8 +183,8 @@ class ArchiveManager:
         """
         Retrieves merged source and translation entries for a specific file in the latest version of a mod.
         """
-        if not self.conn: return []
-        cursor = self.conn.cursor()
+        if not self.connection: return []
+        cursor = self.connection.cursor()
 
         # 1. Get Mod ID
         cursor.execute("SELECT mod_id FROM mods WHERE name = ?", (mod_name,))
@@ -218,8 +224,8 @@ class ArchiveManager:
         """
         Updates translations for specific keys.
         """
-        if not self.conn: return
-        cursor = self.conn.cursor()
+        if not self.connection: return
+        cursor = self.connection.cursor()
 
         # Get Mod/Version (Similar to get_entries)
         cursor.execute("SELECT mod_id FROM mods WHERE name = ?", (mod_name,))
@@ -254,29 +260,12 @@ class ArchiveManager:
                     last_translated_at=CURRENT_TIMESTAMP
                 ''', (source_entry_id, language, translation))
 
-        self.conn.commit()
+        self.connection.commit()
 
     def close(self):
-        if self.conn:
-            self.conn.close()
+        if self._conn:
+            self._conn.close()
             logging.info(i18n.t("log_info_db_connection_closed"))
 
 # 延迟初始化的全局实例
-_archive_manager_instance = None
-
-class _ArchiveManagerProxy:
-    """代理类，实现真正的延迟初始化"""
-    def __getattr__(self, name):
-        global _archive_manager_instance
-        if _archive_manager_instance is None:
-            _archive_manager_instance = ArchiveManager()
-        return getattr(_archive_manager_instance, name)
-    
-    def __call__(self, *args, **kwargs):
-        global _archive_manager_instance
-        if _archive_manager_instance is None:
-            _archive_manager_instance = ArchiveManager()
-        return _archive_manager_instance(*args, **kwargs)
-
-# 使用代理对象作为全局实例，只有在实际调用方法时才初始化
-archive_manager = _ArchiveManagerProxy()
+archive_manager = ArchiveManager()
