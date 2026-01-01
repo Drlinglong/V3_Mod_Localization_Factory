@@ -10,7 +10,7 @@ import { useTranslation } from 'react-i18next';
 
 dayjs.extend(relativeTime);
 
-const RecentActivityList = ({ className, activities, loading }) => {
+const RecentActivityList = ({ id, className, activities, loading }) => {
     const { t } = useTranslation();
 
     const statusMap = {
@@ -20,7 +20,7 @@ const RecentActivityList = ({ className, activities, loading }) => {
     };
 
     return (
-        <Paper withBorder radius="md" p="md" className={className} style={{ background: 'transparent' }}>
+        <Paper id={id} withBorder radius="md" p="md" className={className} style={{ background: 'transparent' }}>
             <Group justify="space-between" mb="md">
                 <Text fw={700}>{t('homepage_recent_activity')}</Text>
                 <ActionIcon variant="subtle" color="gray">

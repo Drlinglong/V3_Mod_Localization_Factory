@@ -10,13 +10,17 @@ import StatCard from '../components/StatCard';
 import RecentActivityList from '../components/RecentActivityList';
 
 import styles from './HomePage.module.css';
-import { useTutorial } from '../context/TutorialContext';
+import { useTutorial, getTutorialKey } from '../context/TutorialContext';
 
 const HomePage = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
-  const { startTour } = useTutorial();
+  const { startTour, setPageContext } = useTutorial();
   const [showTutorialPrompt, setShowTutorialPrompt] = useState(false);
+
+  useEffect(() => {
+    setPageContext('home');
+  }, [setPageContext]);
   const [slogan, setSlogan] = useState('');
   const [greeting, setGreeting] = useState('');
   const [stats, setStats] = useState({
@@ -47,7 +51,8 @@ const HomePage = () => {
     fetchDashboardData();
 
     // Check for first-time user
-    const hasSeenTutorialPrompt = localStorage.getItem('remis_has_seen_tutorial_prompt');
+    const tutorialKey = getTutorialKey('prompt_seen');
+    const hasSeenTutorialPrompt = localStorage.getItem(tutorialKey);
     if (!hasSeenTutorialPrompt) {
       setShowTutorialPrompt(true);
     }
@@ -76,7 +81,7 @@ const HomePage = () => {
         opened={showTutorialPrompt}
         onClose={() => {
           setShowTutorialPrompt(false);
-          localStorage.setItem('remis_has_seen_tutorial_prompt', 'true');
+          localStorage.setItem(getTutorialKey('prompt_seen'), 'true');
         }}
         title={t('tutorial.auto_start_prompt.title')}
         centered
@@ -87,13 +92,13 @@ const HomePage = () => {
           <Group justify="flex-end" mt="md">
             <Button variant="subtle" color="gray" onClick={() => {
               setShowTutorialPrompt(false);
-              localStorage.setItem('remis_has_seen_tutorial_prompt', 'true');
+              localStorage.setItem(getTutorialKey('prompt_seen'), 'true');
             }}>
               {t('tutorial.auto_start_prompt.cancel')}
             </Button>
             <Button color="blue" onClick={() => {
               setShowTutorialPrompt(false);
-              localStorage.setItem('remis_has_seen_tutorial_prompt', 'true');
+              localStorage.setItem(getTutorialKey('prompt_seen'), 'true');
               startTour('home');
             }}>
               {t('tutorial.auto_start_prompt.confirm')}

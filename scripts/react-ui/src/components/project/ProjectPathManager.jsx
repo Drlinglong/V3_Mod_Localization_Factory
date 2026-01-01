@@ -95,7 +95,14 @@ const ProjectPathManager = ({ projectDetails, onPathsUpdated }) => {
                             {projectDetails.translation_dirs ? projectDetails.translation_dirs.join(', ') : 'Default'}
                         </Text>
                     </div>
-                    <Button variant="outline" size="xs" onClick={handleOpenManagePaths}>{t('project_management.manage_paths_button')}</Button>
+                    <Button
+                        id="manage-paths-btn"
+                        variant="outline"
+                        size="xs"
+                        onClick={handleOpenManagePaths}
+                    >
+                        {t('project_management.manage_paths_button')}
+                    </Button>
                 </Group>
             </Paper>
 

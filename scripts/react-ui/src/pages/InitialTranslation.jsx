@@ -36,6 +36,7 @@ import {
 } from '@mantine/core';
 import { IconAlertCircle, IconCheck, IconX, IconSettings, IconRefresh, IconDownload, IconArrowLeft, IconPlayerStop, IconChevronDown, IconChevronUp, IconFolder, IconFolderOpen, IconPlayerPlay, IconLanguage, IconRobot, IconAdjustments, IconSearch } from '@tabler/icons-react';
 import { useNavigate } from 'react-router-dom';
+import { useTutorial } from '../context/TutorialContext';
 import '../App.css';
 import layoutStyles from '../components/layout/Layout.module.css';
 
@@ -59,6 +60,7 @@ const InitialTranslation = () => {
     setSelectedProjectId,
     resetTranslation
   } = useTranslationContext();
+  const { setPageContext } = useTutorial();
 
   const [showAdvanced, setShowAdvanced] = useState(true); // Default to true for 2-col layout
   const [config, setConfig] = useState({
@@ -138,6 +140,10 @@ const InitialTranslation = () => {
       })
       .catch(err => console.error("Failed to fetch prompts", err));
   }, [notificationStyle]);
+
+  useEffect(() => {
+    setPageContext(`translation-step-${active}`);
+  }, [active, setPageContext]);
 
   // Update available models based on provider
   useEffect(() => {
@@ -355,7 +361,7 @@ const InitialTranslation = () => {
           </Box>
 
           {active === 0 && (
-            <Container fluid px="xl" style={{ maxWidth: '100%', width: '100%' }}> {/* Use fluid container for maximum width */}
+            <Container fluid px="xl" id="translation-project-list" style={{ maxWidth: '100%', width: '100%' }}> {/* Use fluid container for maximum width */}
               <Stack gap="lg">
                 <Title order={2} ta="center" mb="lg" style={{ letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--mantine-color-blue-4)' }}>
                   Select a Project to Translate
@@ -478,7 +484,7 @@ const InitialTranslation = () => {
                 <Grid gutter="xl">
                   {/* Left Column: Core Configuration */}
                   <Grid.Col span={{ base: 12, md: 5 }}>
-                    <Card withBorder padding="xl" radius="md" className={layoutStyles.glassCard} h="100%">
+                    <Card id="translation-config-card" withBorder padding="xl" radius="md" className={layoutStyles.glassCard} h="100%">
                       <Stack gap="md">
                         <Group>
                           <ThemeIcon size="lg" radius="md" variant="light" color="blue">
@@ -652,7 +658,7 @@ const InitialTranslation = () => {
 
                 <Group justify="flex-end" mt="xl">
                   {renderBackButton()}
-                  <Button type="submit" size="lg">{t('button_start_translation')}</Button>
+                  <Button id="translation-start-btn" type="submit" size="lg">{t('button_start_translation')}</Button>
                 </Group>
               </form>
             )
@@ -662,16 +668,18 @@ const InitialTranslation = () => {
             (active === 2 || active === 3) && (
               <Card withBorder padding="xl" radius="md" className={layoutStyles.glassCard}>
                 {taskStatus ? (
-                  <TaskRunner
-                    task={taskStatus}
-                    onComplete={() => navigate(`/project/${selectedProjectId}/proofread`)}
-                    onRestart={() => {
-                      resetTranslation();
-                      setStatus(null);
-                    }}
-                    onDashboard={() => navigate('/project-management')}
-                    translationDetails={translationDetails}
-                  />
+                  <div id="task-runner-container">
+                    <TaskRunner
+                      task={taskStatus}
+                      onComplete={() => navigate(`/project/${selectedProjectId}/proofread`)}
+                      onRestart={() => {
+                        resetTranslation();
+                        setStatus(null);
+                      }}
+                      onDashboard={() => navigate('/project-management')}
+                      translationDetails={translationDetails}
+                    />
+                  </div>
                 ) : (
                   <Stack align="center" p="xl">
                     <Loader size="xl" type="dots" />

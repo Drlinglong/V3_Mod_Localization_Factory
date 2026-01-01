@@ -73,6 +73,7 @@ const ProofreadingWorkspace = ({
                         </Tooltip>
 
                         <Button
+                            id="proofreading-validate-btn"
                             leftSection={<IconCheck size={14} />}
                             onClick={onValidate}
                             loading={loading}

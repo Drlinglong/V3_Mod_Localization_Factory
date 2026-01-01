@@ -8,6 +8,7 @@ import { IconPlus, IconFolder, IconEdit, IconArrowLeft, IconSearch, IconBooks, I
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { useTranslation } from 'react-i18next';
+import { useTutorial } from '../context/TutorialContext';
 import { open } from '@tauri-apps/plugin-dialog';
 
 // Restore original components
@@ -26,6 +27,7 @@ const API_BASE = '/api';
 
 export default function ProjectManagement() {
   const { t } = useTranslation();
+  const { setPageContext } = useTutorial();
   const [projects, setProjects] = useState([]);
   const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
@@ -56,6 +58,14 @@ export default function ProjectManagement() {
   useEffect(() => {
     fetchProjects();
   }, [viewMode]);
+
+  useEffect(() => {
+    if (selectedProject) {
+      setPageContext('project-management-dashboard');
+    } else {
+      setPageContext('project-management-list');
+    }
+  }, [selectedProject, setPageContext]);
 
   useEffect(() => {
     if (selectedProject) {
@@ -285,7 +295,7 @@ export default function ProjectManagement() {
     );
 
     return (
-      <div style={{ height: '100%', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
+      <div id="project-list-container" style={{ height: '100%', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
         {/* Hero Section */}
         <Box style={{ height: '300px', position: 'relative', flexShrink: 0 }}>
           <BackgroundImage src={heroBg} radius="md" style={{ height: '100%' }}>
@@ -328,6 +338,7 @@ export default function ProjectManagement() {
 
                 {/* Create New Card */}
                 <Card
+                  id="create-project-btn"
                   shadow="sm"
                   padding="lg"
                   radius="md"
@@ -451,7 +462,7 @@ export default function ProjectManagement() {
       }}>
         <Tabs.List style={{ paddingLeft: '1rem', paddingTop: '0.5rem', background: 'rgba(0,0,0,0.1)' }}>
           <Tabs.Tab value="overview">{t('homepage_chart_pie_title')}</Tabs.Tab>
-          <Tabs.Tab value="taskboard">任务看板</Tabs.Tab>
+          <Tabs.Tab value="taskboard" id="kanban-tab-control">任务看板</Tabs.Tab>
         </Tabs.List>
 
         <Tabs.Panel value="overview" style={{ flex: 1, overflow: 'hidden', padding: '1rem', minHeight: 0 }}>

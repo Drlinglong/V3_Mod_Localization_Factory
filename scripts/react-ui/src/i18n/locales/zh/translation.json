@@ -516,6 +516,42 @@
       "search": {
         "title": "强力搜索",
         "desc": "支持跨文件、跨游戏的全局搜索，让您精准定位任何术语。"
+      },
+      "files": {
+        "title": "词典文件",
+        "desc": "在左侧管理不同游戏的词典文件，支持新建与切换。"
+      },
+      "table": {
+        "title": "词条管理",
+        "desc": "直接在这里编辑原词、译词及变体，所有更改会实时保存到 SQLite。"
+      }
+    },
+    "project_management": {
+      "kanban": {
+        "title": "任务看板",
+        "desc": "直观管理所有本地化项目。支持拖拽任务以更新文件的翻译状态。"
+      },
+      "new_task": {
+        "title": "新建任务",
+        "desc": "除了文件任务，您还可以创建自定义的笔记任务来记录灵感。"
+      },
+      "paths": {
+        "title": "路径管理",
+        "desc": "配置 Mod 的源文件目录与输出目录，实现一键部署的基础。"
+      }
+    },
+    "proofreading": {
+      "mod_select": {
+        "title": "模块选择",
+        "desc": "在不同 Mod 之间切换，校对它们的本地化内容。"
+      },
+      "editor": {
+        "title": "三栏编辑器",
+        "desc": "实时同步滚动，对比原文、AI 初稿与最终译文。"
+      },
+      "validate": {
+        "title": "完整性检查",
+        "desc": "运行自动校验，检查缺失标签、损坏变量或术语不一致。"
       }
     },
     "sidebar_tutorial_btn": "教学引导",
@@ -533,8 +569,9 @@
     "github_repo": "GitHub 仓库",
     "issue_title": "遇到问题了？",
     "issue_desc": "如果您在使用过程中遇到任何 Bug 或有功能建议，欢迎前往我们的 GitHub Issue 区留言反馈。",
-    "log_hint": "💡 **贴士**：为了帮我们快速定位问题，反馈时请务必附上 `logs/` 目录下的相关日志文件。",
-    "star_encouragement": "如果您觉得这个项目对您有帮助，点个 **Star** 🌟 就是对我们最大的鼓励！",
-    "github_link_text": "访问仓库"
+    "log_hint": "提示：为了帮我们快速定位问题，反馈时请务必附上 logs/ 目录下的相关日志文件。",
+    "star_encouragement": "如果您觉得这个项目对您有帮助，点个 Star 🌟 就是对我们最大的鼓励！",
+    "github_link_text": "访问仓库",
+    "open_logs_btn": "打开日志目录"
   }
 }

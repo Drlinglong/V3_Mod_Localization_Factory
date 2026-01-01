@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import {
     Select, Input, Title, Button, Group, LoadingOverlay,
@@ -13,6 +14,7 @@ import {
     getFilteredRowModel,
 } from '@tanstack/react-table';
 import { useSidebar } from '../context/SidebarContext';
+import { useTutorial } from '../context/TutorialContext';
 import useGlossaryActions from '../hooks/useGlossaryActions';
 import FileTree from '../components/glossary/FileTree';
 import NewFileModal from '../components/glossary/NewFileModal';
@@ -26,6 +28,11 @@ import styles from './GlossaryManager.module.css';
 const GlossaryManagerPage = () => {
     const { t } = useTranslation();
     const { setSidebarWidth } = useSidebar();
+    const { setPageContext } = useTutorial();
+
+    useEffect(() => {
+        setPageContext('glossaryManager');
+    }, [setPageContext]);
 
     // Hook 集中管理所有状态和逻辑
     const glossary = useGlossaryActions();
@@ -123,7 +130,7 @@ const GlossaryManagerPage = () => {
 
             <div className={styles.columnsWrapper}>
                 {/* Left Panel: File Tree */}
-                <div className={styles.leftPanel}>
+                <div id="glossary-file-list" className={styles.leftPanel}>
                     <Paper p="md" className={styles.sidebarCard}>
                         <LoadingOverlay visible={glossary.isLoadingTree} />
                         <Title order={4}>{t('glossary_manager_title')}</Title>
@@ -191,6 +198,7 @@ const GlossaryManagerPage = () => {
 
                         <Group mb="md" gap="xs">
                             <Input
+                                id="glossary-search"
                                 placeholder={t('glossary_filter_placeholder')}
                                 value={glossary.filtering}
                                 onChange={e => {
@@ -216,7 +224,7 @@ const GlossaryManagerPage = () => {
                         </Group>
 
                         <ScrollArea style={{ flex: 1, minHeight: 0 }}>
-                            <Table striped highlightOnHover withTableBorder>
+                            <Table id="glossary-entries-table" striped highlightOnHover withTableBorder>
                                 <Table.Thead>
                                     {table.getHeaderGroups().map(hg => (
                                         <Table.Tr key={hg.id}>
