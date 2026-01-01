@@ -37,11 +37,14 @@ def find_free_port(start_port=8081, max_attempts=200):
     """Find a free port starting from start_port."""
     for port in range(start_port, start_port + max_attempts):
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
+            sock.settimeout(0.5)
             try:
-                sock.bind(('127.0.0.1', port))
+                # Try to connect. If we can connect, it's occupied.
+                sock.connect(('127.0.0.1', port))
+            except (ConnectionRefusedError, OSError, socket.timeout):
+                # Connection failed, so it's likely free!
+                # Double check with a bind? No, binding causes TIME_WAIT. Trust the connect fail.
                 return port
-            except OSError:
-                continue
     raise RuntimeError(f"No free ports found between {start_port} and {start_port + max_attempts}")
 
 def wait_for_backend(port, timeout=30):
@@ -84,6 +87,7 @@ def run_servers():
     
     # Force cleanup of port 8081 to avoid zombie processes causing port shifts
     kill_process_on_port(8081)
+    time.sleep(2) # Wait for OS to release the port (TIME_WAIT)
     
     # We prefer 8081 because Vite default proxy aligns with it
     backend_port = find_free_port(8081)
