@@ -1,6 +1,7 @@
 from fastapi import APIRouter, HTTPException
-from scripts.core import workshop_formatter
+from scripts.core import workshop_formatter, deploy_manager
 from scripts.schemas.tools import WorkshopRequest
+from pydantic import BaseModel
 
 router = APIRouter()
 
@@ -18,3 +19,17 @@ def generate_workshop_description(payload: WorkshopRequest):
         project_id=payload.project_id, bbcode_content=formatted_bbcode, workshop_id=payload.item_id
     )
     return {"bbcode": formatted_bbcode, "saved_path": saved_path}
+
+class DeployRequest(BaseModel):
+    output_folder_name: str
+    game_id: str
+
+@router.post("/api/tools/deploy_mod")
+def deploy_mod(payload: DeployRequest):
+    result = deploy_manager.mod_deployer.deploy_mod(
+        output_folder_name=payload.output_folder_name,
+        game_id=payload.game_id
+    )
+    if result["status"] == "error":
+        raise HTTPException(status_code=500, detail=result["message"])
+    return result

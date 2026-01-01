@@ -282,7 +282,8 @@ const InitialTranslation = () => {
       sourceLang: Object.values(config.languages).find(l => l.code === values.source_lang_code)?.name,
       targetLangs: values.english_disguise
         ? ['Custom (Disguise)']
-        : values.target_lang_codes.map(code => Object.values(config.languages).find(l => l.code === code)?.name)
+        : values.target_lang_codes.map(code => Object.values(config.languages).find(l => l.code === code)?.name),
+      gameId: projects.find(p => p.value === selectedProjectId)?.game_id
     });
 
     const payload = {

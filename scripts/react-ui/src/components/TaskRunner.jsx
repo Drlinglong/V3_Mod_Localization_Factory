@@ -27,15 +27,19 @@ import {
     IconBug,
     IconBook,
     IconTypography,
-    IconFolderOpen
+    IconFolderOpen,
+    IconRocket,
+    IconCloudUpload
 } from '@tabler/icons-react';
 import { useTranslation } from 'react-i18next';
 import axios from 'axios';
+import notificationService from '../services/notificationService';
 
 const TaskRunner = ({ task, onRestart, onDashboard, translationDetails }) => {
     const { t } = useTranslation();
     const theme = useMantineTheme();
     const [showLogs, setShowLogs] = useState(false);
+    const [deployStatus, setDeployStatus] = useState('idle'); // 'idle', 'loading', 'success', 'error'
     const viewport = useRef(null);
 
     // Auto-scroll logs
@@ -105,6 +109,37 @@ const TaskRunner = ({ task, onRestart, onDashboard, translationDetails }) => {
         }
     };
 
+    const handleDeploy = async () => {
+        if (!task?.result_path || !translationDetails?.gameId) return;
+
+        setDeployStatus('loading');
+
+        // result_path: .../DEST_DIR/folder.zip
+        // We need the folder name: folder
+        const zipName = task.result_path.split(/[\\/]/).pop();
+        const folderName = zipName.replace('.zip', '');
+
+        try {
+            const response = await axios.post('/api/tools/deploy_mod', {
+                output_folder_name: folderName,
+                game_id: translationDetails.gameId
+            });
+
+            if (response.data.status === 'success') {
+                setDeployStatus('success');
+                notificationService.success(t('deploy_success_message'), { title: t('deploy_success_title') });
+            } else {
+                setDeployStatus('error');
+                notificationService.error(response.data.message || 'Deployment failed', { title: t('deploy_failed_title') });
+            }
+        } catch (error) {
+            console.error("Deployment failed:", error);
+            setDeployStatus('error');
+            const errorMsg = error.response?.data?.detail || error.message;
+            notificationService.error(errorMsg, { title: t('deploy_failed_title') });
+        }
+    };
+
     // Render Report Card
     if (isCompleted) {
         return (
@@ -169,6 +204,16 @@ const TaskRunner = ({ task, onRestart, onDashboard, translationDetails }) => {
                                 onClick={handleOpenFolder}
                             >
                                 {t('button_open_folder', 'Open Folder')}
+                            </Button>
+                            <Button
+                                leftSection={deployStatus === 'loading' ? <Loader size={14} color="white" /> : <IconRocket size={20} />}
+                                size="lg"
+                                color={deployStatus === 'success' ? 'green' : (deployStatus === 'error' ? 'red' : 'blue')}
+                                onClick={handleDeploy}
+                                loading={deployStatus === 'loading'}
+                                disabled={deployStatus === 'success'}
+                            >
+                                {deployStatus === 'loading' ? t('button_deploying') : t('button_auto_deploy')}
                             </Button>
                             <Button
                                 leftSection={<IconRefresh size={20} />}

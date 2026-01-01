@@ -14,11 +14,13 @@ import {
     IconBulb,
     IconCode,
     IconSparkles,
+    IconQuestionMark,
 } from '@tabler/icons-react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import styles from './Layout.module.css';
 import { FEATURES } from '../../config/features';
+import { useTutorial } from '../../context/TutorialContext';
 
 // Navigation items configuration
 const navItems = [
@@ -71,6 +73,7 @@ function NavbarLink({ icon: Icon, label, active, onClick, expanded }) {
 export function AppSider() {
     const navigate = useNavigate();
     const location = useLocation();
+    const { startTour } = useTutorial();
     const [expanded, setExpanded] = useState(false);
 
     const links = navItems.map((link) => (
@@ -95,6 +98,7 @@ export function AppSider() {
 
     return (
         <Box
+            id="sidebar-nav"
             className={styles.sidebarLeft}
             onMouseEnter={() => setExpanded(true)}
             onMouseLeave={() => setExpanded(false)}
@@ -121,6 +125,22 @@ export function AppSider() {
 
             <Stack gap="xs" mt="md" pt="md" style={{ borderTop: '1px solid var(--glass-border)' }}>
                 {devLinks}
+                <NavbarLink
+                    icon={IconQuestionMark}
+                    label="tutorial.sidebar_tutorial_btn"
+                    active={false}
+                    onClick={() => {
+                        // Determine current page for tutorial
+                        const path = location.pathname;
+                        let page = 'home';
+                        if (path === '/') page = 'home';
+                        else if (path === '/glossary-manager') page = 'glossary-manager';
+                        // Add more mappings as needed
+
+                        startTour(page);
+                    }}
+                    expanded={expanded}
+                />
             </Stack>
         </Box>
     );

@@ -12,6 +12,9 @@
   "page_title_settings": "Settings",
   "app_title": "Paradox Mod Localization Factory",
   "footer_text": "Paradox Mod Localization Factory ©2025 Created by Linglong",
+  "common.all_games": "All Games",
+  "common.filter_game": "Filter Game",
+  "common.nothing_found": "No results found",
   "settings_language": "Language",
   "settings_theme": "Theme",
   "theme_light": "Light",
@@ -144,6 +147,11 @@
   "button_abort_translation": "Abort Translation",
   "button_download_mod": "Download Translated Mod",
   "button_open_folder": "Open Folder",
+  "button_auto_deploy": "Auto Deploy",
+  "button_deploying": "Deploying...",
+  "deploy_success_title": "Deploy Successful",
+  "deploy_success_message": "Mod has been deployed to the Paradox official directory. You can now launch the game to see it.",
+  "deploy_failed_title": "Deploy Failed",
   "job_details_title": "Translation Job Details",
   "job_details_mod_name": "Mod Name",
   "job_details_game": "Game",
@@ -292,6 +300,7 @@
   "proofreading.select_mod_placeholder": "Select a mod to proofread",
   "proofreading.select_file_placeholder": "Select a file",
   "proofreading.open_folder": "Open Folder",
+  "proofreading.proofread": "Proofread",
   "proofreading.warning.key_modified": "KEY MODIFIED",
   "proofreading.warning.key_modified_title": "Warning: Key Modification Detected",
   "proofreading.warning.key_modified_desc": "Modifying keys can break localization. Only proceed if you know what you are doing.",
@@ -331,12 +340,26 @@
   "project_management.note_added": "Note added",
   "project_management.note_deleted": "Note deleted",
   "project_management.delete_note_confirm_title": "Delete Note",
-  "project_management.delete_note_confirm_content": "Are you sure you want to delete this note? This action cannot be undone.",
-  "project_management.manage_project": "Manage Project",
-  "project_management.source_dir": "Source Directory",
-  "project_management.translation_dir": "Translation Directory",
-  "project_management.open_source_dir": "Open Source Directory",
   "project_management.open_translation_dir": "Open Translation Directory",
+  "project_management.file_list_title": "File Details List ({{count}} files)",
+  "project_management.file_list.table.name": "File Name",
+  "project_management.file_list.table.type": "Type",
+  "project_management.file_list.table.lines": "Lines",
+  "project_management.file_list.table.status": "Status",
+  "project_management.file_list.table.progress": "Progress",
+  "project_management.file_list.table.actions": "Actions",
+  "project_management.file_type.source": "Source",
+  "project_management.file_type.translation": "Translation",
+  "project_management.file_status.todo": "To Do",
+  "project_management.file_status.in_progress": "In Progress",
+  "project_management.file_status.failed": "Failed",
+  "project_management.file_status.done": "Done",
+  "project_management.file_status.proofreading": "Proofreading",
+  "project_management.overview.total_files": "Total Files",
+  "project_management.overview.total_lines": "Total Lines",
+  "project_management.overview.translated": "Translated",
+  "project_management.overview.to_be_proofread": "To Be Proofread",
+  "project_management.details.lines_count": "Lines: {{count}}",
   "glossary_editor": {
     "language": "Language",
     "value": "Value",
@@ -433,5 +456,56 @@
   "recent_activity_desc_translation_completed": "Translation completed successfully",
   "recent_activity_desc_translation_failed": "Translation task failed",
   "recent_activity_desc_path_registered": "Auto-registered translation output path",
-  "recent_activity_no_data": "No recent activity"
+  "recent_activity_no_data": "No recent activity",
+  "tutorial": {
+    "next": "Next",
+    "prev": "Back",
+    "done": "Got it!",
+    "home": {
+      "welcome": {
+        "title": "Welcome to Remis!",
+        "desc": "I'm your smart localization assistant. Let's take a quick tour of the workbench."
+      },
+      "stats": {
+        "title": "Core Metrics",
+        "desc": "View translation progress, word counts, and active tasks at a glance."
+      },
+      "activity": {
+        "title": "Recent Activity",
+        "desc": "Tracks your recent actions including project updates and notes."
+      },
+      "quick_links": {
+        "title": "Quick Access",
+        "desc": "One-click access to common tools like Workshop Generator and Glossary Manager."
+      },
+      "navigation": {
+        "title": "Navigation",
+        "desc": "Switch between different modules using the sidebar: from Kanban to Proofreading."
+      }
+    },
+    "glossary": {
+      "search": {
+        "title": "Power Search",
+        "desc": "Global search across files and games to locate any term instantly."
+      }
+    },
+    "sidebar_tutorial_btn": "Tutorial",
+    "auto_start_prompt": {
+      "title": "Quick Start",
+      "message": "It seems it's your first time here. Would you like a quick tour?",
+      "confirm": "Start Tour",
+      "cancel": "No thanks"
+    },
+    "version_info": {
+      "tab_title": "Version Info",
+      "project_version": "Project Version",
+      "last_updated": "Last Updated",
+      "github_repo": "GitHub Repository",
+      "issue_title": "Found an issue?",
+      "issue_desc": "If you encounter any bugs or have feature suggestions, please feel free to leave a message on our GitHub Issues page.",
+      "log_hint": "💡 **Tip**: To help us identify the problem quickly, please make sure to attach the relevant log files from the `logs/` directory.",
+      "star_encouragement": "If you find this project helpful, giving us a **Star** 🌟 on GitHub would be the greatest encouragement!",
+      "github_link_text": "Visit Repository"
+    }
+  }
 }

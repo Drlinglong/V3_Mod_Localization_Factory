@@ -15,6 +15,11 @@
   "report_title_formatting": "格式检查",
   "button_go_dashboard": "前往项目管理",
   "button_open_folder": "打开文件夹",
+  "button_auto_deploy": "一键部署",
+  "button_deploying": "正在部署...",
+  "deploy_success_title": "部署成功",
+  "deploy_success_message": "Mod 已成功部署到 Paradox 官方目录，现在可以直接启动游戏查看了。",
+  "deploy_failed_title": "部署失败",
   "show_detailed_logs": "显示详细日志",
   "hide_detailed_logs": "隐藏详细日志",
   "stage_creating_backup": "正在创建备份",
@@ -34,6 +39,9 @@
   "page_title_settings": "设置",
   "app_title": "Paradox Mod 本地化工厂",
   "footer_text": "Paradox Mod 本地化工厂 ©2025 由 Linglong 创建",
+  "common.all_games": "所有游戏",
+  "common.filter_game": "过滤游戏",
+  "common.nothing_found": "未找到结果",
   "settings_language": "语言",
   "settings_theme": "主题",
   "theme_light": "浅色",
@@ -365,11 +373,26 @@
   "project_management.note_deleted": "备注已删除",
   "project_management.delete_note_confirm_title": "确认删除备注",
   "project_management.delete_note_confirm_content": "您确定要删除这条备注吗？此操作不可撤销。",
-  "project_management.manage_project": "管理项目",
-  "project_management.source_dir": "源文件目录",
-  "project_management.translation_dir": "翻译目录",
-  "project_management.open_source_dir": "打开源文件目录",
   "project_management.open_translation_dir": "打开翻译文件目录",
+  "project_management.file_list_title": "文件详情列表 ({{count}} 个文件)",
+  "project_management.file_list.table.name": "文件名",
+  "project_management.file_list.table.type": "类型",
+  "project_management.file_list.table.lines": "行数",
+  "project_management.file_list.table.status": "状态",
+  "project_management.file_list.table.progress": "进度",
+  "project_management.file_list.table.actions": "操作",
+  "project_management.file_type.source": "源文件",
+  "project_management.file_type.translation": "翻译",
+  "project_management.file_status.todo": "待处理",
+  "project_management.file_status.in_progress": "进行中",
+  "project_management.file_status.failed": "翻译失败",
+  "project_management.file_status.done": "已翻译",
+  "project_management.file_status.proofreading": "校对中",
+  "project_management.overview.total_files": "文件总数",
+  "project_management.overview.total_lines": "总行数",
+  "project_management.overview.translated": "已翻译",
+  "project_management.overview.to_be_proofread": "待校对",
+  "project_management.details.lines_count": "行数: {{count}}",
   "glossary_editor": {
     "language": "语言",
     "value": "值",
@@ -462,5 +485,56 @@
   "recent_activity_desc_translation_completed": "翻译任务已成功完成",
   "recent_activity_desc_translation_failed": "翻译任务执行失败",
   "recent_activity_desc_path_registered": "已自动注册翻译输出路径",
-  "recent_activity_no_data": "暂无近期活动"
+  "recent_activity_no_data": "暂无近期活动",
+  "tutorial": {
+    "next": "下一步",
+    "prev": "上一步",
+    "done": "完成引导",
+    "home": {
+      "welcome": {
+        "title": "欢迎来到 Remis!",
+        "desc": "我是您的智能本地化助手。让我们用几秒钟带您熟悉一下这个工作台。"
+      },
+      "stats": {
+        "title": "核心数据看板",
+        "desc": "在这里您可以直观地看到所有项目的翻译进度、词数统计和活跃任务。"
+      },
+      "activity": {
+        "title": "近期动态",
+        "desc": "这里记录了您最近的所有操作，包括项目更新和笔记添加，方便随时回溯。"
+      },
+      "quick_links": {
+        "title": "快速入口",
+        "desc": "常用工具一键直达：无论是工坊描述生成还是词典管理。"
+      },
+      "navigation": {
+        "title": "功能导航",
+        "desc": "通过左侧边栏切换不同功能模块：从项目看板到高级校对。"
+      }
+    },
+    "glossary": {
+      "search": {
+        "title": "强力搜索",
+        "desc": "支持跨文件、跨游戏的全局搜索，让您精准定位任何术语。"
+      }
+    },
+    "sidebar_tutorial_btn": "教学引导",
+    "auto_start_prompt": {
+      "title": "新手引导",
+      "message": "检测到您是第一次使用此版本，是否需要开启快速入门教学？",
+      "confirm": "开启教学",
+      "cancel": "不用了，我自己摸索"
+    }
+  },
+  "version_info": {
+    "tab_title": "版本信息",
+    "project_version": "项目版本",
+    "last_updated": "最后更新",
+    "github_repo": "GitHub 仓库",
+    "issue_title": "遇到问题了？",
+    "issue_desc": "如果您在使用过程中遇到任何 Bug 或有功能建议，欢迎前往我们的 GitHub Issue 区留言反馈。",
+    "log_hint": "💡 **贴士**：为了帮我们快速定位问题，反馈时请务必附上 `logs/` 目录下的相关日志文件。",
+    "star_encouragement": "如果您觉得这个项目对您有帮助，点个 **Star** 🌟 就是对我们最大的鼓励！",
+    "github_link_text": "访问仓库"
+  }
 }

@@ -28,7 +28,7 @@ const ProjectSelector = ({
         const games = new Set(projects.map(p => p.game_id).filter(Boolean));
         return ['ALL', ...Array.from(games)].map(game => ({
             value: game,
-            label: game === 'ALL' ? t('common.all_games', 'All Games') : game.toUpperCase()
+            label: game === 'ALL' ? t('common.all_games') : game.toUpperCase()
         }));
     }, [projects, t]);
 
@@ -55,7 +55,7 @@ const ProjectSelector = ({
         <Group spacing="xs" noWrap align="center">
             {/* Game Filter */}
             <Select
-                placeholder={t('common.filter_game', "Game")}
+                placeholder={t('common.filter_game')}
                 data={gameOptions}
                 value={gameFilter}
                 onChange={setGameFilter}
@@ -78,12 +78,12 @@ const ProjectSelector = ({
 
             {/* Project Search & Select */}
             <Select
-                placeholder={t('proofreading.select_project_placeholder', "Search project...")}
+                placeholder={t('proofreading.select_project_placeholder')}
                 data={projectOptions}
                 value={selectedProject?.project_id || null}
                 onChange={onProjectSelect}
                 searchable
-                nothingFoundMessage="No projects found"
+                nothingFoundMessage={t('common.nothing_found')}
                 variant="filled"
                 size="xs"
                 style={{ minWidth: 240, flex: 1 }}

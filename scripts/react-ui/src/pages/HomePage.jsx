@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
-import { Grid, Card, Title, Text, ThemeIcon, Group, Stack, Box, Button, BackgroundImage, Overlay, ActionIcon, ScrollArea } from '@mantine/core';
+import { Grid, Card, Title, Text, ThemeIcon, Group, Stack, Box, Button, BackgroundImage, Overlay, ActionIcon, ScrollArea, Modal } from '@mantine/core';
 import { IconRocket, IconRefresh, IconChartBar, IconVocabulary, IconChecklist, IconActivity, IconTools } from '@tabler/icons-react';
 import ActionCard from '../components/ActionCard';
 import ProjectStatusPieChart from '../components/ProjectStatusPieChart';
@@ -10,10 +10,13 @@ import StatCard from '../components/StatCard';
 import RecentActivityList from '../components/RecentActivityList';
 
 import styles from './HomePage.module.css';
+import { useTutorial } from '../context/TutorialContext';
 
 const HomePage = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const { startTour } = useTutorial();
+  const [showTutorialPrompt, setShowTutorialPrompt] = useState(false);
   const [slogan, setSlogan] = useState('');
   const [greeting, setGreeting] = useState('');
   const [stats, setStats] = useState({
@@ -42,6 +45,12 @@ const HomePage = () => {
     else setGreeting('Good Evening');
 
     fetchDashboardData();
+
+    // Check for first-time user
+    const hasSeenTutorialPrompt = localStorage.getItem('remis_has_seen_tutorial_prompt');
+    if (!hasSeenTutorialPrompt) {
+      setShowTutorialPrompt(true);
+    }
   }, [t]);
 
   const fetchDashboardData = async () => {
@@ -63,10 +72,41 @@ const HomePage = () => {
 
   return (
     <Box h="100vh" style={{ overflow: 'hidden' }}>
+      <Modal
+        opened={showTutorialPrompt}
+        onClose={() => {
+          setShowTutorialPrompt(false);
+          localStorage.setItem('remis_has_seen_tutorial_prompt', 'true');
+        }}
+        title={t('tutorial.auto_start_prompt.title')}
+        centered
+        className={styles.glassModal}
+      >
+        <Stack>
+          <Text>{t('tutorial.auto_start_prompt.message')}</Text>
+          <Group justify="flex-end" mt="md">
+            <Button variant="subtle" color="gray" onClick={() => {
+              setShowTutorialPrompt(false);
+              localStorage.setItem('remis_has_seen_tutorial_prompt', 'true');
+            }}>
+              {t('tutorial.auto_start_prompt.cancel')}
+            </Button>
+            <Button color="blue" onClick={() => {
+              setShowTutorialPrompt(false);
+              localStorage.setItem('remis_has_seen_tutorial_prompt', 'true');
+              startTour('home');
+            }}>
+              {t('tutorial.auto_start_prompt.confirm')}
+            </Button>
+          </Group>
+        </Stack>
+      </Modal>
+
       <ScrollArea h="100%" type="scroll">
         <Box p="md">
           {/* Welcome Banner */}
           <Box
+            id="welcome-banner"
             mb="xl"
             className={styles.welcomeBanner}
             p={40}
@@ -109,7 +149,7 @@ const HomePage = () => {
           </Box>
 
           {/* Key Metrics Row */}
-          <Grid gutter="md" mb="xl">
+          <Grid id="stat-cards" gutter="md" mb="xl">
             <Grid.Col span={{ xs: 12, sm: 6, lg: 3 }}>
               <StatCard
                 title={t('homepage_stat_total_projects')}
@@ -182,12 +222,13 @@ const HomePage = () => {
             <Grid.Col span={{ xs: 12, lg: 4 }}>
               <Stack gap="md">
                 <RecentActivityList
+                  id="recent-activity"
                   className={styles.glassCard}
                   activities={recentActivity}
                   loading={loading}
                 />
 
-                <Card shadow="sm" padding="lg" radius="md" withBorder className={styles.glassCard}>
+                <Card id="quick-links" shadow="sm" padding="lg" radius="md" withBorder className={styles.glassCard}>
                   <Title order={4} mb="md" className={styles.cardTitle}>{t('homepage_quick_links')}</Title>
                   <Stack gap="xs">
                     <Button

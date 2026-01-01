@@ -10,7 +10,7 @@ const ProjectHeader = ({ projectDetails, handleStatusChange, onDeleteForever, on
     return (
         <Paper withBorder p="md" radius="md" className={styles.glassCard} mb="md">
             <Group justify="space-between" mb="md">
-                <Title order={4}>{t('project_management.overview_title') || 'Project Overview'}</Title>
+                <Title order={4}>{t('project_management.overview_title')}</Title>
                 <Group>
                     {projectDetails.status === 'active' && (
                         <>
@@ -80,10 +80,10 @@ const ProjectHeader = ({ projectDetails, handleStatusChange, onDeleteForever, on
                 </Group>
             </Group>
             <Grid>
-                <Grid.Col span={3}><Card withBorder className={styles.statCard}><Text size="xs" c="dimmed">文件总数</Text><Title order={3}>{projectDetails.overview.totalFiles}</Title></Card></Grid.Col>
-                <Grid.Col span={3}><Card withBorder className={styles.statCard}><Text size="xs" c="dimmed">总行数</Text><Title order={3}>{projectDetails.overview.totalLines}</Title></Card></Grid.Col>
-                <Grid.Col span={3}><Card withBorder className={styles.statCard}><Text size="xs" c="dimmed">已翻译</Text><Title order={3} c="green">{projectDetails.overview.translated}%</Title></Card></Grid.Col>
-                <Grid.Col span={3}><Card withBorder className={styles.statCard}><Text size="xs" c="dimmed">待校对</Text><Title order={3} c="yellow">{projectDetails.overview.toBeProofread}%</Title></Card></Grid.Col>
+                <Grid.Col span={3}><Card withBorder className={styles.statCard}><Text size="xs" c="dimmed">{t('project_management.overview.total_files')}</Text><Title order={3}>{projectDetails.overview.totalFiles}</Title></Card></Grid.Col>
+                <Grid.Col span={3}><Card withBorder className={styles.statCard}><Text size="xs" c="dimmed">{t('project_management.overview.total_lines')}</Text><Title order={3}>{projectDetails.overview.totalLines}</Title></Card></Grid.Col>
+                <Grid.Col span={3}><Card withBorder className={styles.statCard}><Text size="xs" c="dimmed">{t('project_management.overview.translated')}</Text><Title order={3} c="green">{projectDetails.overview.translated}%</Title></Card></Grid.Col>
+                <Grid.Col span={3}><Card withBorder className={styles.statCard}><Text size="xs" c="dimmed">{t('project_management.overview.to_be_proofread')}</Text><Title order={3} c="yellow">{projectDetails.overview.toBeProofread}%</Title></Card></Grid.Col>
             </Grid>
         </Paper>
     );
