@@ -112,27 +112,6 @@ app.include_router(prompts.router)
 def read_root():
     return {"message": "欢迎使用P社Mod本地化工厂API"}
 
-if __name__ == "__main__":
-    # Get configured port
-    port = int(os.environ.get("BACKEND_PORT", 8081))
-    
-    # Pre-flight check: Warn user if specific port is blocked (mostly for manual runs)
-    import socket
-    try:
-        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-            s.bind(("0.0.0.0", port))
-    except OSError as e: # Catch permission errors or address in use
-        print(f"\n{'!'*60}")
-        print(f"[CRITICAL ERROR] Cannot bind to port {port}.")
-        print(f"Reason: {e}")
-        print(f"If you are seeing '[WinError 10013] ... access permissions', it implies the port is reserved by Windows (Hyper-V/Docker).")
-        print(f"\nSOLUTION: Please run 'start_dev_servers.bat' instead.")
-        print(f"The launcher script will automatically find an available port for you.")
-        print(f"{'!'*60}\n")
-        # We don't exit here, we let uvicorn try and fail usually, or we can choose to exit. 
-        # But uvicorn might have better error formatting. Let's just print the warning.
-        # Actually, if we bound it successfully above, we released it when 'with' closed.
-        # If we failed, we print the warning.
-        
-    print(f"[INFO] Backend attempting to start on port {port}...")
-    uvicorn.run(app, host="0.0.0.0", port=port)
+# Legacy startup block removed to prevent conflict with run_dev_servers.py launcher
+# DO NOT ADD 'if __name__ == "__main__":' block here.
+# Use 'start_dev_servers.bat' to run the application.
