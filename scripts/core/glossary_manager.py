@@ -15,12 +15,19 @@ class GlossaryManager:
     """游戏专用词典管理器 (SQLite 版本)"""
     
     def __init__(self):
-        self.conn = self._create_connection()
+        self._conn = None
         self.current_game_id: Optional[str] = None
         self.in_memory_glossary: Dict[str, Any] = {'entries': []}
         self.fuzzy_matching_mode: str = 'loose'
         self.phonetics_engine = PhoneticsEngine()
         
+    @property
+    def connection(self):
+        """Lazy load database connection."""
+        if self._conn is None:
+            self._conn = self._create_connection()
+        return self._conn
+
     def _create_connection(self):
         """创建并返回一个数据库连接"""
         try:
@@ -34,12 +41,12 @@ class GlossaryManager:
 
     def get_available_glossaries(self, game_id: str) -> List[Dict]:
         """查询并返回指定游戏所有可用的词典元信息"""
-        if not self.conn:
+        if not self.connection:
             logging.error("Database connection not available.")
             return []
         
         try:
-            cursor = self.conn.cursor()
+            cursor = self.connection.cursor()
             cursor.execute(
                 "SELECT glossary_id, name, description, is_main FROM glossaries WHERE game_id = ?",
                 (game_id,)
@@ -53,12 +60,12 @@ class GlossaryManager:
 
     def get_glossary_tree_data(self) -> List[Dict]:
         """Queries the database to build a tree structure of glossaries grouped by game."""
-        if not self.conn:
+        if not self.connection:
             logging.error("Database connection not available.")
             return []
         
         try:
-            cursor = self.conn.cursor()
+            cursor = self.connection.cursor()
             # Fetch all glossaries, ordered by game_id to make grouping easy
             cursor.execute("SELECT glossary_id, name, game_id FROM glossaries ORDER BY game_id, name")
             rows = cursor.fetchall()
@@ -102,11 +109,11 @@ class GlossaryManager:
 
     def get_glossary_entries_paginated(self, glossary_id: int, page: int, page_size: int) -> Dict:
         """Fetches paginated entries for a given glossary_id."""
-        if not self.conn:
+        if not self.connection:
             return {"entries": [], "totalCount": 0}
 
         try:
-            cursor = self.conn.cursor()
+            cursor = self.connection.cursor()
             
             # Get total count
             cursor.execute("SELECT COUNT(*) FROM entries WHERE glossary_id = ?", (glossary_id,))
@@ -138,11 +145,11 @@ class GlossaryManager:
 
     def search_glossary_entries_paginated(self, query: str, glossary_ids: List[int], page: int, page_size: int) -> Dict:
         """Searches for entries across a list of glossaries with pagination."""
-        if not self.conn or not glossary_ids:
+        if not self.connection or not glossary_ids:
             return {"entries": [], "totalCount": 0}
 
         try:
-            cursor = self.conn.cursor()
+            cursor = self.connection.cursor()
             
             search_query = f"%{query.lower()}%"
             placeholders = ','.join('?' for _ in glossary_ids)
@@ -178,12 +185,12 @@ class GlossaryManager:
 
     def load_game_glossary(self, game_id: str) -> bool:
         """默认只加载指定游戏的主词典 (is_main = 1)"""
-        if not self.conn:
+        if not self.connection:
             logging.error("Database connection not available.")
             return False
         self.current_game_id = game_id
         try:
-            cursor = self.conn.cursor()
+            cursor = self.connection.cursor()
             cursor.execute(
                 "SELECT glossary_id FROM glossaries WHERE game_id = ? AND is_main = 1",
                 (game_id,)
@@ -202,7 +209,7 @@ class GlossaryManager:
 
     def load_selected_glossaries(self, selected_glossary_ids: List[int]) -> bool:
         """根据选定的glossary_id列表，加载并合并这些词典的条目到内存中"""
-        if not self.conn:
+        if not self.connection:
             logging.error("Database connection not available.")
             return False
         
@@ -212,7 +219,7 @@ class GlossaryManager:
             return True
 
         try:
-            cursor = self.conn.cursor()
+            cursor = self.connection.cursor()
             placeholders = ','.join('?' for _ in selected_glossary_ids)
             query = f"SELECT * FROM entries WHERE glossary_id IN ({placeholders})"
             cursor.execute(query, selected_glossary_ids)
@@ -236,9 +243,9 @@ class GlossaryManager:
             return False
 
     def add_entry(self, glossary_id: int, entry_data: Dict) -> bool:
-        if not self.conn: return False
+        if not self.connection: return False
         try:
-            cursor = self.conn.cursor()
+            cursor = self.connection.cursor()
             cursor.execute("""
             INSERT OR REPLACE INTO entries (entry_id, glossary_id, translations, abbreviations, variants, raw_metadata)
             VALUES (?, ?, ?, ?, ?, ?)
@@ -250,7 +257,7 @@ class GlossaryManager:
                 json.dumps(entry_data.get('variants', {})),
                 json.dumps(entry_data.get('metadata', {}))
             ))
-            self.conn.commit()
+            self.connection.commit()
             logging.info(f"Successfully added/replaced entry with id {entry_data['id']} to glossary {glossary_id}")
             return True
         except Exception as e:
@@ -258,9 +265,9 @@ class GlossaryManager:
             return False
 
     def update_entry(self, entry_id: str, entry_data: Dict) -> bool:
-        if not self.conn: return False
+        if not self.connection: return False
         try:
-            cursor = self.conn.cursor()
+            cursor = self.connection.cursor()
             cursor.execute("""
             UPDATE entries
             SET translations = ?, abbreviations = ?, variants = ?, raw_metadata = ?
@@ -272,7 +279,7 @@ class GlossaryManager:
                 json.dumps(entry_data.get('metadata', {})),
                 entry_id
             ))
-            self.conn.commit()
+            self.connection.commit()
             logging.info(f"Successfully updated entry with id {entry_id}")
             return True
         except Exception as e:
@@ -280,11 +287,11 @@ class GlossaryManager:
             return False
 
     def delete_entry(self, entry_id: str) -> bool:
-        if not self.conn: return False
+        if not self.connection: return False
         try:
-            cursor = self.conn.cursor()
+            cursor = self.connection.cursor()
             cursor.execute("DELETE FROM entries WHERE entry_id = ?", (entry_id,))
-            self.conn.commit()
+            self.connection.commit()
             logging.info(f"Successfully deleted entry with id {entry_id}")
             return True
         except Exception as e:
@@ -565,11 +572,11 @@ class GlossaryManager:
 
     def get_glossary_stats(self) -> Dict[str, Any]:
         """Returns statistics about the glossary database."""
-        if not self.conn:
+        if not self.connection:
             return {"total_terms": 0, "game_distribution": []}
         
         try:
-            cursor = self.conn.cursor()
+            cursor = self.connection.cursor()
             
             # 1. Total terms count
             cursor.execute("SELECT COUNT(*) FROM entries")
