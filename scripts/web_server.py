@@ -17,6 +17,7 @@ if project_root not in sys.path:
 from scripts.app_settings import load_api_keys_to_env
 from scripts.utils import logger, i18n
 
+
 # Load API keys from keyring into environment variables
 load_api_keys_to_env()
 
@@ -39,12 +40,12 @@ from scripts.routers import (
     tools,
     neologism,
     validation,
-    neologism,
-    validation,
     config,
     system,
     prompts
 )
+
+
 
 import time
 import logging
