@@ -61,7 +61,8 @@ def preflight_checks():
     required_libraries = {
         "openai": "api_lib_openai",
         "google.genai": "api_lib_gemini",
-        "dashscope": "api_lib_qwen"
+        "dashscope": "api_lib_qwen",
+        "requests": "api_lib_ollama"
     }
 
     available_libraries = []
@@ -93,10 +94,23 @@ def preflight_checks():
         checks_passed = False
 
     # 3. 检查API密钥
-    api_keys = ["OPENAI_API_KEY", "GEMINI_API_KEY", "DASHSCOPE_API_KEY"]
+    api_keys = [
+        "OPENAI_API_KEY", 
+        "GEMINI_API_KEY", 
+        "DASHSCOPE_API_KEY",
+        "DEEPSEEK_API_KEY",
+        "XAI_API_KEY",
+        "SILICONFLOW_API_KEY",
+        "MODELSCOPE_API_KEY"
+    ]
     available_keys = [key for key in api_keys if os.getenv(key)]
 
-    if not available_keys:
+    # 4. 专项检查 Ollama
+    # 已经在上面的库检查中检测了 requests，这里主要看是否可以用
+    ollama_ready = "requests" in sys.modules or importlib.util.find_spec("requests") is not None
+
+    # 只要有任何一个 Key 或者 Ollama 可用，就认为 API 环节通过
+    if not available_keys and not ollama_ready:
         error_messages.append(i18n.t("preflight_error_no_api_keys"))
         checks_passed = False
 
