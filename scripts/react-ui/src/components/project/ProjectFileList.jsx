@@ -34,14 +34,14 @@ const ProjectFileList = ({ projectDetails, handleProofread }) => {
 
     const rows = projectDetails.files.map((file) => {
         let color = 'gray';
-        let text = '未处理';
+        let text = t('project_management.file_status.todo');
         let Icon = IconClock;
 
-        if (file.status === 'translated' || file.status === 'done') { color = 'green'; text = '已翻译'; Icon = IconCheck; }
-        else if (file.status === 'failed') { color = 'red'; text = '翻译失败'; Icon = IconX; }
-        else if (file.status === 'pending' || file.status === 'todo') { color = 'blue'; text = '待处理'; Icon = IconClock; }
-        else if (file.status === 'in_progress') { color = 'yellow'; text = '进行中'; Icon = IconPlayerPlay; }
-        else if (file.status === 'proofreading') { color = 'orange'; text = '校对中'; Icon = IconEdit; }
+        if (file.status === 'translated' || file.status === 'done') { color = 'green'; text = t('project_management.file_status.done'); Icon = IconCheck; }
+        else if (file.status === 'failed') { color = 'red'; text = t('project_management.file_status.failed'); Icon = IconX; }
+        else if (file.status === 'pending' || file.status === 'todo') { color = 'blue'; text = t('project_management.file_status.todo'); Icon = IconClock; }
+        else if (file.status === 'in_progress') { color = 'yellow'; text = t('project_management.file_status.in_progress'); Icon = IconPlayerPlay; }
+        else if (file.status === 'proofreading') { color = 'orange'; text = t('project_management.file_status.proofreading'); Icon = IconEdit; }
 
         const relativePath = getRelativePath(file.name);
 
@@ -54,7 +54,7 @@ const ProjectFileList = ({ projectDetails, handleProofread }) => {
                 </Table.Td>
                 <Table.Td style={{ width: '100px' }}>
                     <Badge variant="dot" color={file.file_type === 'source' ? 'blue' : 'violet'}>
-                        {file.file_type === 'source' ? '源文件' : '翻译'}
+                        {file.file_type === 'source' ? t('project_management.file_type.source') : t('project_management.file_type.translation')}
                     </Badge>
                 </Table.Td>
                 <Table.Td style={{ width: '80px' }}>{file.lines}</Table.Td>
@@ -89,17 +89,17 @@ const ProjectFileList = ({ projectDetails, handleProofread }) => {
             <div style={{ position: 'absolute', top: 0, bottom: 0, left: 0, right: 0, overflowY: 'auto', overflowX: 'hidden' }}>
                 <Paper withBorder p="md" radius="md" className={styles.glassCard}>
                     <Group position="apart" mb="md">
-                        <Title order={4}>文件详情列表 ({projectDetails.files.length} 个文件)</Title>
+                        <Title order={4}>{t('project_management.file_list_title', { count: projectDetails.files.length })}</Title>
                     </Group>
                     <Table verticalSpacing="sm" className={styles.table} stickyHeader>
                         <Table.Thead style={{ position: 'sticky', top: 0, backgroundColor: 'var(--glass-bg)', zIndex: 1 }}>
                             <Table.Tr>
-                                <Table.Th>文件名</Table.Th>
-                                <Table.Th style={{ width: '100px' }}>类型</Table.Th>
-                                <Table.Th style={{ width: '80px' }}>行数</Table.Th>
-                                <Table.Th style={{ width: '120px' }}>状态</Table.Th>
-                                <Table.Th style={{ width: '80px' }}>进度</Table.Th>
-                                <Table.Th style={{ width: '120px' }}>操作</Table.Th>
+                                <Table.Th>{t('project_management.file_list.table.name')}</Table.Th>
+                                <Table.Th style={{ width: '100px' }}>{t('project_management.file_list.table.type')}</Table.Th>
+                                <Table.Th style={{ width: '80px' }}>{t('project_management.file_list.table.lines')}</Table.Th>
+                                <Table.Th style={{ width: '120px' }}>{t('project_management.file_list.table.status')}</Table.Th>
+                                <Table.Th style={{ width: '80px' }}>{t('project_management.file_list.table.progress')}</Table.Th>
+                                <Table.Th style={{ width: '120px' }}>{t('project_management.file_list.table.actions')}</Table.Th>
                             </Table.Tr>
                         </Table.Thead>
                         <Table.Tbody>{rows}</Table.Tbody>

@@ -62,7 +62,7 @@ export const TaskCard = ({ task, onClick }) => {
 
             {task.type === 'file' && task.meta && (
                 <Text size="xs" c="dimmed" mt={4}>
-                    Lines: {task.meta.source_lines || task.meta.lines}
+                    {t('project_management.details.lines_count', { count: task.meta.source_lines || task.meta.lines })}
                 </Text>
             )}
 
