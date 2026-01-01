@@ -498,6 +498,14 @@
       }
     },
     "project_management": {
+      "list": {
+        "title": "Project List",
+        "desc": "View and manage all your localization projects here."
+      },
+      "create": {
+        "title": "Create Project",
+        "desc": "Click here to start a new localization project from a folder."
+      },
       "kanban": {
         "title": "Task Kanban",
         "desc": "Visually manage all localization projects. Drag tasks to update file status."
@@ -509,6 +517,28 @@
       "paths": {
         "title": "Path Management",
         "desc": "Configure source and output paths for your mods."
+      },
+      "tabs": {
+        "title": "Task Board",
+        "desc": "Switch to the Task Board tab to see your Kanban board."
+      }
+    },
+    "translation": {
+      "select": {
+        "title": "Select Project",
+        "desc": "Please select a project to begin the translation process."
+      },
+      "config": {
+        "title": "Configure Translation",
+        "desc": "Set up your source/target languages and choosing an AI model."
+      },
+      "start": {
+        "title": "Start Batch",
+        "desc": "Click this to begin the automated translation batch."
+      },
+      "processing": {
+        "title": "Processing",
+        "desc": "The AI is now translating your files. You can watch the real-time logs here."
       }
     },
     "proofreading": {
