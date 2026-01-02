@@ -9,6 +9,7 @@ import GlossaryAnalysisBarChart from '../components/GlossaryAnalysisBarChart';
 import StatCard from '../components/StatCard';
 import RecentActivityList from '../components/RecentActivityList';
 
+import api from '../utils/api';
 import styles from './HomePage.module.css';
 import { useTutorial, getTutorialKey } from '../context/TutorialContext';
 
@@ -61,13 +62,11 @@ const HomePage = () => {
   const fetchDashboardData = async () => {
     try {
       setLoading(true);
-      const response = await fetch('/api/system/stats');
-      if (response.ok) {
-        const data = await response.json();
-        setStats(data.stats);
-        setCharts(data.charts);
-        setRecentActivity(data.recent_activity);
-      }
+      const response = await api.get('/api/system/stats');
+      const data = response.data;
+      setStats(data.stats);
+      setCharts(data.charts);
+      setRecentActivity(data.recent_activity);
     } catch (error) {
       console.error('Failed to fetch dashboard data:', error);
     } finally {

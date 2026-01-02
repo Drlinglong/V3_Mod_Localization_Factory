@@ -21,6 +21,7 @@ import {
 import { IconCheck, IconX, IconEdit, IconKey, IconInfoCircle, IconServer, IconRobot } from '@tabler/icons-react';
 import { notifications } from '@mantine/notifications';
 import { useTranslation } from 'react-i18next';
+import api from '../utils/api';
 import styles from './ApiSettingsTab.module.css';
 
 const ApiSettingsTab = () => {
@@ -45,20 +46,15 @@ const ApiSettingsTab = () => {
 
     const fetchProviders = async () => {
         try {
-            const response = await fetch('/api/api-keys');
-            if (response.ok) {
-                const data = await response.json();
-                setProviders(data);
-            } else {
-                console.error('Failed to fetch API providers');
-                notifications.show({
-                    title: t('api_key_error_title'),
-                    message: t('api_key_error_fetch'),
-                    color: 'red'
-                });
-            }
+            const response = await api.get('/api/api-keys');
+            setProviders(response.data);
         } catch (error) {
             console.error('Error fetching API providers:', error);
+            notifications.show({
+                title: t('api_key_error_title'),
+                message: t('api_key_error_fetch'),
+                color: 'red'
+            });
         } finally {
             setLoading(false);
         }
@@ -93,31 +89,20 @@ const ApiSettingsTab = () => {
                 payload.api_key = editForm.apiKey.trim();
             }
 
-            const response = await fetch('/api/providers/config', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(payload),
-            });
+            await api.post('/api/providers/config', payload);
 
-            if (response.ok) {
-                notifications.show({
-                    title: t('success'),
-                    message: t('api_settings_saved', 'Settings saved successfully'),
-                    color: 'green'
-                });
-                setEditingId(null);
-                fetchProviders(); // Refresh
-            } else {
-                const errorData = await response.json();
-                throw new Error(errorData.detail || 'Failed to update settings');
-            }
+            notifications.show({
+                title: t('success'),
+                message: t('api_settings_saved', 'Settings saved successfully'),
+                color: 'green'
+            });
+            setEditingId(null);
+            fetchProviders(); // Refresh
         } catch (error) {
             console.error('Error updating API settings:', error);
             notifications.show({
                 title: t('error'),
-                message: error.message,
+                message: error.response?.data?.detail || error.message,
                 color: 'red'
             });
         } finally {
