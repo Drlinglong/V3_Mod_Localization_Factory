@@ -268,3 +268,20 @@ async def patch_file(request: PatchFileRequest):
     except Exception as e:
         logger.error(f"Failed to patch file {request.file_path}: {e}")
         raise HTTPException(status_code=500, detail=f"Failed to patch file: {str(e)}")
+@router.get("/debug/config")
+async def debug_config():
+    """
+    Diagnostic endpoint to verify app_settings and API_PROVIDERS in frozen mode.
+    """
+    from scripts import app_settings
+    import sys
+    
+    return {
+        "is_frozen": getattr(sys, "frozen", False),
+        "resource_dir": app_settings.RESOURCE_DIR,
+        "app_data_dir": app_settings.APP_DATA_DIR,
+        "projects_db_path": app_settings.PROJECTS_DB_PATH,
+        "api_providers_count": len(app_settings.API_PROVIDERS),
+        "api_providers_keys": list(app_settings.API_PROVIDERS.keys()),
+        "sys_path": sys.path[:5], # First few items
+    }

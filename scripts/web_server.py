@@ -15,15 +15,16 @@ if sys.stdout is None:
 if sys.stderr is None:
     sys.stderr = MockStream()
 
-# Hard patch for __stdout__ / __stderr__ as well (some libs check these)
-if getattr(sys, '__stdout__', None) is None:
-    sys.__stdout__ = sys.stdout
-if getattr(sys, '__stderr__', None) is None:
-    sys.__stderr__ = sys.stderr
-
 # PANIC LOGGER START
 import datetime
 import multiprocessing
+import os
+
+# Add project root to Python path IMMEDIATELY
+# This allows us to import system_utils right away
+project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+if project_root not in sys.path:
+    sys.path.insert(0, project_root)
 
 def panic_log(msg):
     try:
@@ -36,6 +37,10 @@ def panic_log(msg):
     except:
         pass
 
+# 0. Robust Port Check (Call ASAP)
+# This prevents [WinError 10013] in dev mode (--reload) and frozen mode.
+# Note: In dev mode, this is also called by run-backend.bat as a pre-flight check.
+
 panic_log("=== WEB SERVER STARTUP (LOG_CONFIG=NONE) ===")
 
 import uvicorn
@@ -45,11 +50,6 @@ from dotenv import load_dotenv
 
 # Load environment variables from .env file
 load_dotenv()
-
-# Add project root to Python path
-project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-if project_root not in sys.path:
-    sys.path.insert(0, project_root)
 
 # Import using absolute imports from project root
 try:
@@ -69,18 +69,13 @@ logger.setup_logger()
 i18n.load_language() # Load default language
 
 # Initialize Database (Cold Start / Seed Data)
-# Must be called BEFORE importing routers/services which instantiate managers
-# In frozen mode, we skip this global call because we call it explicitly in __main__
-# after setting up stream redirection.
-if not getattr(sys, 'frozen', False):
-    try:
-        panic_log("Importing db_initializer...")
-        from scripts.core.db_initializer import initialize_database
-        panic_log("Calling initialize_database()...")
-        initialize_database()
-        panic_log("initialize_database() COMPLETED.")
-    except Exception as e:
-        panic_log(f"INIT CRASH: {e}")
+# CRITICAL: This must be called BEFORE importing routers/services which instantiate managers
+# that open persistent DB connections, otherwise we get "database is locked" during copy/init.
+try:
+    from scripts.core.db_initializer import initialize_database
+    initialize_database()
+except Exception as e:
+    panic_log(f"INIT CRASH: {e}")
 
 
 # Import Routers
@@ -222,6 +217,16 @@ def health_check():
 if __name__ == "__main__":
     multiprocessing.freeze_support()
     
+    # Free port 8081 if occupied (frozen sidecar mode)
+    try:
+        from scripts.utils.force_free_port import force_free_port
+        force_free_port(8081)
+    except ImportError:
+        # psutil might still be missing if hidden-import failed
+        print("[PORT] psutil not found, skipping port cleanup.")
+    except Exception as e:
+        print(f"[PORT] Error during port cleanup: {e}")
+    
     # Specific entry point for the frozen application (PyInstaller)
     import uvicorn
     import uvicorn.logging
@@ -238,15 +243,8 @@ if __name__ == "__main__":
                 sys.stdout = open(os.path.join(log_dir, "startup_stdout.log"), "a", encoding="utf-8", buffering=1)
                 sys.stderr = open(os.path.join(log_dir, "startup_stderr.log"), "a", encoding="utf-8", buffering=1)
             
-            # 2. Initialize Database explicitly
-            panic_log("Importing scripts.core.db_initializer...")
-            from scripts.core import db_initializer
-            panic_log("Initializing Database...")
-            db_initializer.initialize_database()
-            panic_log("Database Initialized.")
-            
         except Exception as e:
-            panic_log(f"Startup Critical Error: {e}")
+            panic_log(f"Startup Redirection Error: {e}")
 
     # 3. Simplified Run with Redirection
     # We have already redirected sys.stdout/stderr to files above.

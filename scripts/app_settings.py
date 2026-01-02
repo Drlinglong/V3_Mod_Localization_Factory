@@ -114,11 +114,17 @@ def get_app_root():
 def get_app_data_dir():
     """Returns the user data directory (AppData)."""
     appdata = os.getenv('APPDATA')
+    
+    # [FIX] Differentiate between Dev and Production to prevent data collision
+    # Frozen (EXE/Installer) -> RemisModFactory
+    # Not Frozen (python scripts/web_server.py) -> RemisModFactoryDev
+    app_folder = "RemisModFactory" if getattr(sys, 'frozen', False) else "RemisModFactoryDev"
+    
     if not appdata:
         # Fallback for non-standard environments
-        base_dir = os.path.join(os.path.expanduser("~"), ".remis")
+        base_dir = os.path.join(os.path.expanduser("~"), f".{app_folder.lower()}")
     else:
-        base_dir = os.path.join(appdata, "RemisModFactory")
+        base_dir = os.path.join(appdata, app_folder)
     
     os.makedirs(base_dir, exist_ok=True)
     return base_dir

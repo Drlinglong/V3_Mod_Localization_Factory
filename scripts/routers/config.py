@@ -19,6 +19,8 @@ def get_config():
     
     # Load overrides from AppData
     provider_overrides = config_manager.get_value("provider_config", {})
+    
+    logging.info(f"[CONFIG] API_PROVIDERS count: {len(API_PROVIDERS)}")
 
     for pid, pconf in API_PROVIDERS.items():
         # Merge overrides

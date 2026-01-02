@@ -57,7 +57,10 @@ def main():
         print(f"[ERROR] Projects seed data not found at {seed_projects}")
         sys.exit(1)
 
-    # Step 2: Freeze the Backend (PyInstaller)
+    # Step 1.6: Generate Skeleton DB
+    print_step("Step 1.6: Generate Skeleton DB")
+    skeleton_script = os.path.join(scripts_dir, "db", "generate_skeleton.py")
+    run_command(f"python \"{skeleton_script}\"", cwd=project_root)
     print_step("Step 2: Freeze the Backend (PyInstaller)")
     
     web_server_script = os.path.join(scripts_dir, "web_server.py")
@@ -72,8 +75,10 @@ def main():
     add_data_args = f'--add-data "{seed_main};data" --add-data "{seed_projects};data"'
     
     # [NEW] Add Language Files
+    # Use absolute paths for source to be extremely safe
     lang_dir = os.path.join(project_root, "data", "lang")
     if os.path.exists(lang_dir):
+        # We want the 'lang' folder to appear INSIDE 'data' in the bundle
         add_data_args += f' --add-data "{lang_dir};data/lang"'
     else:
         print(f"[WARNING] Language files not found at {lang_dir}")
@@ -100,6 +105,22 @@ def main():
         else:
              print(f"[WARNING] Demo mod not found at {src_path}")
     
+    # [NEW] Add Demo Translations
+    # We map the dev folders to the clean structure expected by rehydration.
+    trans_map = {
+        "zh-CN-Test_Project_Remis_stellaris": "my_translation/zh-CN-Test_Project_Remis_stellaris",
+        "Multilanguage-Test_Project_Remis_Vic3": "my_translation/zh-CN-Test_Project_Remis_Vic3",
+        "zh-CN-蕾姆丝计划演示模组：最后一位罗马人": "my_translation/legacy_vic3" # Fallback
+    }
+    
+    trans_dir = os.path.join(project_root, "my_translation")
+    for folder_name, dest_tag in trans_map.items():
+        src_path = os.path.join(trans_dir, folder_name)
+        if os.path.exists(src_path):
+            add_data_args += f' --add-data "{src_path};{dest_tag}"'
+        else:
+             print(f"[WARNING] Demo translation not found at {src_path}")
+    
     # Check for demos folder (Legacy/General)
     demos_dir = os.path.join(project_root, "demos")
     if os.path.exists(demos_dir):
@@ -115,7 +136,10 @@ def main():
     pyinstaller_cmd = (
         f'pyinstaller --clean --onefile --name web_server '
         f'--hidden-import uvicorn --hidden-import fastapi --hidden-import pydantic '
+        f'--hidden-import psutil '
+        f'--hidden-import scripts.hooks '
         f'--hidden-import scripts.hooks.file_parser_hook '
+        f'--hidden-import scripts.config.prompts '
         f'{add_data_args} '
         f'"{web_server_script}"'
     )

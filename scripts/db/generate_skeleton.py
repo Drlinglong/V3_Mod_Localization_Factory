@@ -20,6 +20,7 @@ KEEP_PROJECT_IDS = [
 ]
 
 DEMO_ROOT_PLACEHOLDER = "{{BUNDLED_DEMO_ROOT}}"
+TRANS_ROOT_PLACEHOLDER = "{{BUNDLED_TRANSLATION_ROOT}}"
 
 # Hardcoded replacement logic:
 # Map the DEV path to the PLACEHOLDER path relative structure.
@@ -107,7 +108,12 @@ def create_skeleton():
     ''')
     
     # 4. Migrate Data
-    print("[MIGRATE] Copying Project Data...")
+    print("[MIGRATE] Cleaning and Copying Project Data...")
+    
+    # NEW: Clear tables in main first (since they might have come from Glossary DB copy)
+    cursor.execute("DELETE FROM main.projects")
+    cursor.execute("DELETE FROM main.project_files")
+    cursor.execute("DELETE FROM main.activity_log")
     
     # Projects
     # We need to handle potential missing columns in SRC by selecting literals if needed.
@@ -175,32 +181,44 @@ def create_skeleton():
     # 6. Apply Placeholders
     print("[SANITIZE] Applying path placeholders...")
     
-    # We replace the common parent content.
-    # Assuming standard structure: J:\V3_Mod_Localization_Factory\source_mod\xxxx
-    # We want to replace everything up to the folder name with placeholder.
+    # Aggressive search: Any path containing demo folder names should be converted.
+    demos_folders = {
+        'Test_Project_Remis_stellaris': DEMO_ROOT_PLACEHOLDER,
+        'Test_Project_Remis_Vic3': DEMO_ROOT_PLACEHOLDER
+    }
     
-    # For Stellaris
-    cursor.execute("""
-        UPDATE projects 
-        SET source_path = REPLACE(source_path, 'J:\\V3_Mod_Localization_Factory\\source_mod\\', ? || '/')
-        WHERE project_id = ?
-    """, (DEMO_ROOT_PLACEHOLDER, KEEP_PROJECT_IDS[0]))
-    
-    cursor.execute("""
-        UPDATE projects 
-        SET target_path = REPLACE(target_path, 'J:\\V3_Mod_Localization_Factory', ?)
-        WHERE project_id = ?
-    """, ("{{BUNDLED_USER_ROOT}}", KEEP_PROJECT_IDS[0])) # Maybe clear export path? Or use another placeholder?
-    # Actually export path isn't critical for demo to work, but good to be safe.
-    
-    # For Vic3
-    cursor.execute("""
-        UPDATE projects 
-        SET source_path = REPLACE(source_path, 'J:\\V3_Mod_Localization_Factory\\source_mod\\', ? || '/')
-        WHERE project_id = ?
-    """, (DEMO_ROOT_PLACEHOLDER, KEEP_PROJECT_IDS[1]))
-    
-    # Also update project_files file_path!!!
+    for folder, placeholder in demos_folders.items():
+        # Source Paths: Replaces anything before the folder name
+        # Using a pattern like %/folder_name ensures we match regardless of parent
+        pattern = f'%/{folder}'
+        alt_pattern = f'%\\{folder}'
+        
+        cursor.execute(f"UPDATE projects SET source_path = ? || '/{folder}' WHERE source_path LIKE ?", (placeholder, pattern))
+        cursor.execute(f"UPDATE projects SET source_path = ? || '/{folder}' WHERE source_path LIKE ?", (placeholder, alt_pattern))
+        
+        # Translation Paths for demos: 
+        # These are usually in my_translation/zh-CN-xxxxx
+        # Let's map them robustly.
+        trans_folders = {
+            'zh-CN-Test_Project_Remis_stellaris': 'zh-CN-Test_Project_Remis_stellaris',
+            'zh-CN-Test_Project_Remis_Vic3': 'zh-CN-Test_Project_Remis_Vic3', # Note: mapping to the bundled structure
+            'Multilanguage-Test_Project_Remis_Vic3': 'zh-CN-Test_Project_Remis_Vic3',
+            'zh-CN-蕾姆丝计划演示模组：最后一位罗马人': 'zh-CN-Test_Project_Remis_Vic3'
+        }
+        
+        for t_folder, bundled_name in trans_folders.items():
+             t_pattern = f'%/{t_folder}'
+             t_alt_pattern = f'%\\{t_folder}'
+             cursor.execute(f"UPDATE projects SET target_path = ? || '/{bundled_name}' WHERE target_path LIKE ? OR target_path LIKE ?", 
+                            (TRANS_ROOT_PLACEHOLDER, t_pattern, t_alt_pattern))
+
+    # Force set target_path if it's NULL for our demo projects
+    cursor.execute(f"UPDATE projects SET target_path = ? || '/zh-CN-Test_Project_Remis_stellaris' WHERE project_id = ? AND (target_path IS NULL OR target_path = '')", 
+                   (TRANS_ROOT_PLACEHOLDER, KEEP_PROJECT_IDS[0]))
+    cursor.execute(f"UPDATE projects SET target_path = ? || '/zh-CN-Test_Project_Remis_Vic3' WHERE project_id = ? AND (target_path IS NULL OR target_path = '')", 
+                   (TRANS_ROOT_PLACEHOLDER, KEEP_PROJECT_IDS[1]))
+
+    conn.commit()
     # file_path in project_files is RELATIVE to project root usually? 
     # Let's check the dump or knowledge...
     # Usually file_path is relative in Remis? 

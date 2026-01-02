@@ -459,8 +459,8 @@ export default function ProjectManagement() {
         panel: styles.tabsPanel
       }}>
         <Tabs.List style={{ paddingLeft: '1rem', paddingTop: '0.5rem', background: 'rgba(0,0,0,0.1)' }}>
-          <Tabs.Tab value="overview">{t('homepage_chart_pie_title')}</Tabs.Tab>
-          <Tabs.Tab value="taskboard" id="kanban-tab-control">任务看板</Tabs.Tab>
+          <Tabs.Tab value="overview">{t('project_management.tabs_overview')}</Tabs.Tab>
+          <Tabs.Tab value="taskboard" id="kanban-tab-control">{t('project_management.tabs_kanban')}</Tabs.Tab>
         </Tabs.List>
 
         <Tabs.Panel value="overview" style={{ flex: 1, overflow: 'hidden', padding: '1rem', minHeight: 0 }}>

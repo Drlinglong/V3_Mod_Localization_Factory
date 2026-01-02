@@ -9,7 +9,7 @@ from scripts import app_settings
 from scripts.utils import i18n
 from scripts.utils.phonetics_engine import PhoneticsEngine
 
-DB_PATH = app_settings.DATABASE_PATH
+# DB_PATH is now accessed dynamically to prevent path leaks in frozen environments
 
 class GlossaryManager:
     """游戏专用词典管理器 (SQLite 版本)"""
@@ -30,13 +30,14 @@ class GlossaryManager:
 
     def _create_connection(self):
         """创建并返回一个数据库连接"""
+        db_path = app_settings.DATABASE_PATH
         try:
-            conn = sqlite3.connect(DB_PATH, check_same_thread=False)
+            conn = sqlite3.connect(db_path, check_same_thread=False)
             conn.row_factory = sqlite3.Row
-            logging.info(f"Successfully connected to SQLite database at {DB_PATH}")
+            logging.info(f"Successfully connected to SQLite database at {db_path}")
             return conn
         except Exception as e:
-            logging.error(f"Error connecting to database at {DB_PATH}: {e}")
+            logging.error(f"Error connecting to database at {db_path}: {e}")
             return None
 
     def get_available_glossaries(self, game_id: str) -> List[Dict]:
