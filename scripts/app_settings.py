@@ -142,9 +142,9 @@ def get_resource_dir():
         return os.path.dirname(sys.executable)
     return get_app_root()
 
-PROJECT_ROOT = get_app_root()
-APP_DATA_DIR = get_app_data_dir()
-RESOURCE_DIR = get_resource_dir()
+PROJECT_ROOT = get_app_root().replace("\\", "/")
+APP_DATA_DIR = get_app_data_dir().replace("\\", "/")
+RESOURCE_DIR = get_resource_dir().replace("\\", "/")
 
 # Data directory for static assets (in dev) or resources (in prod)
 # In dev: PROJECT_ROOT/data

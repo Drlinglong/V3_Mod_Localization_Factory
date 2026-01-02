@@ -5,7 +5,6 @@ import sqlite3
 from scripts import app_settings
 
 # Setup a dedicated logger for initialization that writes to a file in AppData
-# This is critical because stdout is swallowed in frozen mode.
 init_logger = logging.getLogger("remis_init")
 init_logger.setLevel(logging.DEBUG)
 
@@ -19,66 +18,76 @@ def setup_init_logging():
         init_logger.addHandler(file_handler)
         init_logger.info(f"Logging initialized. AppData: {log_dir}")
         init_logger.info(f"Resource Dir: {app_settings.RESOURCE_DIR}")
-    except Exception as e:
-        pass # Can't do much if we can't log
+    except Exception:
+        pass
 
 def fix_demo_paths(conn, persistent_demo_root, persistent_translation_root):
-    """
-    Hydrates placeholders in the database with actual persistent AppData paths.
-    """
+    """Hydrates placeholders in the database with actual persistent AppData paths using robust regex."""
+    import re
     try:
         demo_root = persistent_demo_root.replace("\\", "/")
         trans_root = persistent_translation_root.replace("\\", "/")
-        
         cursor = conn.cursor()
         
-        # Check if we have any projects with placeholders
+        # Check tables exist
         cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='projects'")
         if not cursor.fetchone():
-            init_logger.warning("Projects table not found in fix_demo_paths")
             return
 
-        init_logger.info(f"[INFO] Hydrating demo paths. Source: {demo_root}, Translation: {trans_root}")
+        init_logger.info(f"[INIT] Hydrating demo paths. Source: {demo_root}, Translation: {trans_root}")
         
-        # Update projects table
+        # 1. Update Placeholders
         cursor.execute("UPDATE projects SET source_path = REPLACE(source_path, '{{BUNDLED_DEMO_ROOT}}', ?)", (demo_root,))
         cursor.execute("UPDATE projects SET target_path = REPLACE(target_path, '{{BUNDLED_TRANSLATION_ROOT}}', ?)", (trans_root,))
-        init_logger.info(f"Updated projects rows: {cursor.rowcount}")
-
-        # Update project_files table
+        
         cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='project_files'")
         if cursor.fetchone():
              cursor.execute("UPDATE project_files SET file_path = REPLACE(file_path, '{{BUNDLED_DEMO_ROOT}}', ?)", (demo_root,))
-             init_logger.info(f"Updated project_files rows: {cursor.rowcount}")
 
-        # [SAFETY CHECK] Direct replacement of developer path leaks if any remain
-        # We also catch J:\ and j:\ variants
-        dev_root_win = 'J:\\V3_Mod_Localization_Factory'
-        dev_root_posix = 'J:/V3_Mod_Localization_Factory'
-        dev_root_win_lower = 'j:\\V3_Mod_Localization_Factory'
-        dev_root_posix_lower = 'j:/V3_Mod_Localization_Factory'
+        # 2. Robust Regex Fix for leaked Dev Paths (Case insensitive, slash agnostic)
+        # We find anything that looks like J:\...V3_Mod_Localization_Factory\source_mod\... and map to demo_root
+        # And any J:\...V3_Mod_Localization_Factory\my_translation\... map to trans_root
         
-        roots = [dev_root_win, dev_root_posix, dev_root_win_lower, dev_root_posix_lower]
-        
-        for r in roots:
-            cursor.execute("UPDATE projects SET source_path = REPLACE(source_path, ?, ?) WHERE source_path LIKE ?", (r, demo_root, f"{r}%"))
-            cursor.execute("UPDATE projects SET target_path = REPLACE(target_path, ?, ?) WHERE target_path LIKE ?", (r, trans_root, f"{r}%"))
-            cursor.execute("UPDATE project_files SET file_path = REPLACE(file_path, ?, ?) WHERE file_path LIKE ?", (r, demo_root, f"{r}%"))
+        dev_root_pattern = re.compile(r".*V3_Mod_Localization_Factory/source_mod/", re.IGNORECASE)
+        trans_root_pattern = re.compile(r".*V3_Mod_Localization_Factory/my_translation/", re.IGNORECASE)
+
+        # Process projects
+        cursor.execute("SELECT project_id, source_path, target_path FROM projects")
+        projects = cursor.fetchall()
+        for pid, s_path, t_path in projects:
+            new_s = s_path.replace("\\", "/")
+            new_t = t_path.replace("\\", "/") if t_path else ""
             
+            # Apply regex
+            if dev_root_pattern.search(new_s):
+                new_s = dev_root_pattern.sub(demo_root + "/", new_s)
+            
+            if t_path and trans_root_pattern.search(new_t):
+                new_t = trans_root_pattern.sub(trans_root + "/", new_t)
+            
+            if new_s != s_path or new_t != t_path:
+                cursor.execute("UPDATE projects SET source_path = ?, target_path = ? WHERE project_id = ?", (new_s, new_t, pid))
+
+        # Process project_files
+        cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='project_files'")
+        if cursor.fetchone():
+            cursor.execute("SELECT file_id, file_path FROM project_files")
+            files = cursor.fetchall()
+            for fid, f_path in files:
+                new_f = f_path.replace("\\", "/")
+                if dev_root_pattern.search(new_f):
+                    new_f = dev_root_pattern.sub(demo_root + "/", new_f)
+                
+                if new_f != f_path:
+                    cursor.execute("UPDATE project_files SET file_path = ? WHERE file_id = ?", (new_f, fid))
+
         conn.commit()
-        init_logger.info("[INFO] Demo paths hydrated successfully.")
-        
     except Exception as e:
         init_logger.error(f"[ERROR] Failed to fix demo paths: {e}")
 
 def run_projects_db_migrations(conn):
-    """
-    Handles schema updates and migrations for the Projects database.
-    """
+    """Handles schema updates for the Projects database."""
     cursor = conn.cursor()
-    
-    # 1. Base Tables (Ensure schemas match what we want)
-    # ... (Keep existing schema creation logic or trust skeleton? Best to keep IF NOT EXISTS for safety)
     cursor.execute('''
         CREATE TABLE IF NOT EXISTS projects (
             project_id TEXT PRIMARY KEY,
@@ -95,145 +104,133 @@ def run_projects_db_migrations(conn):
             notes TEXT
         )
     ''')
-    # ... (Other tables omitted for brevity in thought, but should be kept in actual code if not relying purely on skeleton consistency)
-    
-    # Schema Migrations logic ...
-    # (Assuming skeleton has latest schema, but migrations help for future updates)
-    
     conn.commit()
 
+def hydrate_json_configs(app_data_dir):
+    """Recursively finds all .remis_project.json files and fixes hardcoded paths."""
+    init_logger.info("[JSON] Hydrating .remis_project.json files...")
+    import json
+    app_data_root = app_data_dir.replace("\\", "/")
+    dev_roots = ['J:/V3_Mod_Localization_Factory', 'j:/V3_Mod_Localization_Factory']
+    
+    fix_count = 0
+    for root, dirs, files in os.walk(app_data_dir):
+        if ".remis_project.json" in files:
+            json_path = os.path.join(root, ".remis_project.json")
+            try:
+                with open(json_path, 'r', encoding='utf-8') as f:
+                    content = f.read()
+                
+                original_content = content
+                for dr in dev_roots:
+                    content = content.replace(dr, app_data_root)
+                content = content.replace("\\\\", "/").replace("\\", "/")
+                content = content.replace(app_data_root, app_data_dir.replace("\\", "/"))
+                
+                if content != original_content:
+                    with open(json_path, 'w', encoding='utf-8') as f:
+                        f.write(content)
+                    fix_count += 1
+            except Exception as e:
+                init_logger.error(f"Failed to hydrate JSON at {json_path}: {e}")
+    init_logger.info(f"[JSON] Hydrated {fix_count} config files.")
+
 def initialize_database():
-    """
-    Checks if the database exists in AppData. 
-    If not, initializes it from bundled skeleton.sqlite and extracts demo mods.
-    """
-def initialize_database():
-    """
-    Checks if the database exists in AppData. 
-    If not, initializes it from bundled skeleton.sqlite and extracts demo mods.
-    Also ensures demos are present if missing.
-    """
+    """Main entry point for DB setup."""
     setup_init_logging()
     init_logger.info("Starting Database Initialization...")
 
-    # Paths
     remis_db_path = app_settings.REMIS_DB_PATH
     app_data_dir = app_settings.APP_DATA_DIR
     resource_dir = app_settings.RESOURCE_DIR
+    config_path = app_settings.get_appdata_config_path()
     
-    # Ensure AppData dir exists (Redundant but safe)
     os.makedirs(app_data_dir, exist_ok=True)
     os.makedirs(os.path.dirname(remis_db_path), exist_ok=True)
     
-    init_logger.info(f"Target DB: {remis_db_path}")
-    init_logger.info(f"Resource Dir: {resource_dir}")
-    
-    # 1. Database Initialization
-    db_needs_init = False
-    if not os.path.exists(remis_db_path):
-        db_needs_init = True
-        init_logger.info("DB missing.")
-    elif os.path.getsize(remis_db_path) < 1024:
-        db_needs_init = True
-        init_logger.info("DB exists but is empty/small. Forcing re-init.")
+    # [NEW] Config Self-Healing
+    if not os.path.exists(config_path):
+        init_logger.info("[INIT] Config missing. Creating default config.json.")
+        import json
+        default_config = {
+            "api_keys": {},
+            "theme": "dark",
+            "language": "zh-CN"
+        }
         try:
-            os.remove(remis_db_path)
+            with open(config_path, 'w', encoding='utf-8') as f:
+                json.dump(default_config, f, indent=4)
         except Exception as e:
-            init_logger.error(f"Failed to remove empty DB: {e}")
-    else:
-        # [NEW] Even if DB exists and is large, check if it's actually populated
-        # This protects against broken partial initializations
+            init_logger.error(f"Failed to create config: {e}")
+
+    db_needs_init = False
+    
+    # [STALE PATH CHECK]
+    if os.path.exists(remis_db_path) and os.path.getsize(remis_db_path) > 1024:
         try:
             conn = sqlite3.connect(remis_db_path)
             cursor = conn.cursor()
-            # Check if projects table exists and has rows
-            cursor.execute("SELECT count(*) FROM sqlite_master WHERE type='table' AND name='projects'")
-            if cursor.fetchone()[0] == 0:
+            # Double check: Any remaining "V3_Mod_Localization_Factory" leaked paths?
+            cursor.execute("SELECT count(*) FROM projects WHERE source_path LIKE '%V3_Mod_Localization_Factory%' OR target_path LIKE '%V3_Mod_Localization_Factory%'")
+            if cursor.fetchone()[0] > 0:
                 db_needs_init = True
-                init_logger.info("Projects table missing. Forcing re-init.")
-            else:
+                init_logger.info("Detected leaked paths in DB. Forcing re-init.")
+            
+            if not db_needs_init:
                 cursor.execute("SELECT count(*) FROM projects")
                 if cursor.fetchone()[0] == 0:
                     db_needs_init = True
                     init_logger.info("Projects table is empty. Forcing re-init.")
             conn.close()
-            if db_needs_init:
-                try: os.remove(remis_db_path)
-                except: pass
-        except Exception as e:
-            init_logger.warning(f"Health check failed on existing DB: {e}. Forcing re-init.")
+        except Exception:
             db_needs_init = True
-            try: os.remove(remis_db_path)
-            except: pass
+
+    if not os.path.exists(remis_db_path) or os.path.getsize(remis_db_path) < 1024:
+        db_needs_init = True
 
     if db_needs_init:
-        init_logger.info("[INIT] Extracting DB from Skeleton...")
+        init_logger.info("[INIT] Extracting fresh DB from Skeleton...")
         skeleton_source = os.path.join(resource_dir, "assets", "skeleton.sqlite")
-        init_logger.info(f"Skeleton Source: {skeleton_source}")
-        
-        if os.path.exists(skeleton_source):
-            try:
-                # Log sizes before copy
-                skel_size = os.path.getsize(skeleton_source)
-                init_logger.info(f"Copying Skeleton DB ({skel_size} bytes) to {remis_db_path}")
+        try:
+            if os.path.exists(remis_db_path): os.remove(remis_db_path)
+            if os.path.exists(skeleton_source):
                 shutil.copy2(skeleton_source, remis_db_path)
-                
-                # Verify copy
-                if os.path.exists(remis_db_path):
-                    new_size = os.path.getsize(remis_db_path)
-                    init_logger.info(f"Copy Success. New size: {new_size} bytes")
-                    if new_size != skel_size:
-                        init_logger.error(f"SIZE MISMATCH: Expected {skel_size}, got {new_size}")
-                else:
-                    init_logger.error("DB File missing AFTER copy!")
-                    
-            except Exception as e:
-                init_logger.error(f"Failed to copy DB: {e}", exc_info=True)
-        else:
-             init_logger.error(f"CRITICAL: Skeleton DB NOT FOUND at {skeleton_source}")
-    
-    persistent_demos_dir = os.path.join(app_data_dir, "demos")
-    bundled_demos_dir = os.path.join(resource_dir, "demos")
-    
-    persistent_trans_dir = os.path.join(app_data_dir, "my_translation")
-    bundled_trans_dir = os.path.join(resource_dir, "my_translation")
-    
-    # Extraction Logic
-    def extract_if_needed(bundled, persistent, label):
-        if not os.path.exists(bundled):
-            init_logger.warning(f"{label} bundle not found at {bundled}")
-            return False
-            
-        if not os.path.exists(persistent) or db_needs_init:
-            init_logger.info(f"[INIT] Extracting {label} to {persistent}...")
+                init_logger.info("Skeleton DB copied.")
+            else:
+                init_logger.error("Skeleton DB missing!")
+        except Exception as e:
+            init_logger.error(f"DB Copy failed: {e}")
+
+    # Extraction of Demo Mods
+    p_demos = os.path.join(app_data_dir, "demos")
+    b_demos = os.path.join(resource_dir, "demos")
+    p_trans = os.path.join(app_data_dir, "my_translation")
+    b_trans = os.path.join(resource_dir, "my_translation")
+
+    def extract(b, p, l):
+        if os.path.exists(b) and (not os.path.exists(p) or db_needs_init):
             try:
-                if os.path.exists(persistent):
-                    shutil.rmtree(persistent)
-                shutil.copytree(bundled, persistent)
-                init_logger.info(f"{label} extracted successfully.")
+                if os.path.exists(p): shutil.rmtree(p)
+                shutil.copytree(b, p)
+                init_logger.info(f"{l} extracted.")
                 return True
-            except Exception as e:
-                init_logger.error(f"Failed to extract {label}: {e}")
+            except Exception: pass
         return False
 
-    demo_extracted = extract_if_needed(bundled_demos_dir, persistent_demos_dir, "Demos")
-    trans_extracted = extract_if_needed(bundled_trans_dir, persistent_trans_dir, "Translations")
+    demo_ex = extract(b_demos, p_demos, "Demos")
+    trans_ex = extract(b_trans, p_trans, "Translations")
 
-    if demo_extracted or trans_extracted or db_needs_init:
-        init_logger.info("Triggering Path Rehydration...")
+    if demo_ex or trans_ex or db_needs_init:
         try:
             conn = sqlite3.connect(remis_db_path)
-            fix_demo_paths(conn, persistent_demos_dir, persistent_trans_dir)
+            fix_demo_paths(conn, p_demos, p_trans)
             conn.close()
-        except Exception as e:
-            init_logger.error(f"Path rehydration failed: {e}")
+            hydrate_json_configs(app_data_dir)
+        except Exception: pass
 
-    # 4. Migrations
+    # Migrations
     try:
-        init_logger.info("Running migrations...")
         conn = sqlite3.connect(remis_db_path)
         run_projects_db_migrations(conn)
         conn.close()
-        init_logger.info("Migrations complete.")
-    except Exception as e:
-        init_logger.error(f"Failed to run migrations: {e}", exc_info=True)
+    except Exception: pass

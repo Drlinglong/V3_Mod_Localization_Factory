@@ -61,6 +61,12 @@ def force_free_port(port: int):
 
         if not pids_to_kill:
             print(f"[SYSTEM] Port {port} is clear.", file=sys.stderr, flush=True)
+            # [ADDITION] Even if port is clear, kill any background web_server.exe 
+            # that might be hung or using a different port but interfering.
+            if getattr(sys, 'frozen', False):
+                executable_name = os.path.basename(sys.executable)
+                print(f"[SYSTEM] Cleaning up any other instances of {executable_name}...", file=sys.stderr, flush=True)
+                subprocess.run(f"taskkill /F /IM {executable_name} /FI \"PID ne {current_pid}\"", shell=True, capture_output=True)
             return
 
         for pid in pids_to_kill:
@@ -74,10 +80,16 @@ def force_free_port(port: int):
             print(f"\033[91m{msg}\033[0m", file=sys.stderr, flush=True)
             panic_log(msg)
             
+            # Kill the process and its children
             subprocess.run(f"taskkill /F /T /PID {pid}", shell=True, capture_output=True)
             time.sleep(0.5)
                 
         time.sleep(1.0)
+        # Ensure it's REALLY gone
+        if getattr(sys, 'frozen', False):
+             executable_name = os.path.basename(sys.executable)
+             subprocess.run(f"taskkill /F /IM {executable_name} /FI \"PID ne {current_pid}\"", shell=True, capture_output=True)
+
         print(f"[SYSTEM] Port {port} cleared successfully.", file=sys.stderr, flush=True)
         
     except Exception as e:

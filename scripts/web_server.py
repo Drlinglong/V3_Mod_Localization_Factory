@@ -2,8 +2,6 @@ import os
 import sys
 
 # PATCH: Fix for PyInstaller where sys.stdout/stderr can be None
-# This MUST come before any other imports that might check isatty
-
 class MockStream:
     def write(self, msg): pass
     def flush(self): pass
@@ -38,8 +36,12 @@ def panic_log(msg):
         pass
 
 # 0. Robust Port Check (Call ASAP)
-# This prevents [WinError 10013] in dev mode (--reload) and frozen mode.
-# Note: In dev mode, this is also called by run-backend.bat as a pre-flight check.
+# This prevents [WinError 10013] and [Errno 10048]
+try:
+    from scripts.utils.system_utils import force_free_port
+    force_free_port(8081)
+except Exception:
+    pass
 
 panic_log("=== WEB SERVER STARTUP (LOG_CONFIG=NONE) ===")
 
@@ -217,48 +219,30 @@ def health_check():
 if __name__ == "__main__":
     multiprocessing.freeze_support()
     
-    # Free port 8081 if occupied (frozen sidecar mode)
-    try:
-        from scripts.utils.force_free_port import force_free_port
-        force_free_port(8081)
-    except ImportError:
-        # psutil might still be missing if hidden-import failed
-        print("[PORT] psutil not found, skipping port cleanup.")
-    except Exception as e:
-        print(f"[PORT] Error during port cleanup: {e}")
+    # [STANDARDIZED] Port cleanup now happens at file load time (line 40)
+    # for maximum impact before any server imports can lock sockets.
     
     # Specific entry point for the frozen application (PyInstaller)
     import uvicorn
     import uvicorn.logging
 
-    # --- CRITICAL STARTUP FIX FOR FROZEN APP ---
-    if getattr(sys, 'frozen', False):
-        try:
-            # 1. Redirect stdout/stderr to files to prevent 'isatty' crashes
-            app_data = os.getenv('APPDATA')
-            if app_data:
-                log_dir = os.path.join(app_data, "RemisModFactory", "logs")
-                os.makedirs(log_dir, exist_ok=True)
-                # buffering=1 means line buffered
-                sys.stdout = open(os.path.join(log_dir, "startup_stdout.log"), "a", encoding="utf-8", buffering=1)
-                sys.stderr = open(os.path.join(log_dir, "startup_stderr.log"), "a", encoding="utf-8", buffering=1)
-            
-        except Exception as e:
-            panic_log(f"Startup Redirection Error: {e}")
-
-    # 3. Simplified Run with Redirection
-    # We have already redirected sys.stdout/stderr to files above.
-    # These file objects return False for isatty(), so Uvicorn's default
-    # ColourizedFormatter will happily run without colors (no crash).
-    # We pass log_config=None to use Uvicorn's defaults, which will write 
-    # to our redirected sys.stdout/stderr.
+    # [FIX] Do NOT manually redirect stdout/stderr to files with open() if it causes OSError 22
+    # The setup_logger() in scripts.utils.logger already handles RotatingFileHandler.
+    # Uvicorn will use our root logger's configuration if we pass log_config=None.
     
     try:
-        panic_log("Starting Uvicorn (log_config=None)...")
+        logging.info("Starting Uvicorn...")
         # Initialize default logging config to ensure it binds to our redirected streams
-        config = uvicorn.Config(app, host="127.0.0.1", port=8081, log_config=None)
+        config = uvicorn.Config(
+            app, 
+            host="127.0.0.1", 
+            port=8081, 
+            log_config=None,
+            reload=not getattr(sys, 'frozen', False)
+        )
         server = uvicorn.Server(config)
         server.run()
     except Exception as e:
-        panic_log(f"Uvicorn Crashed: {e}")
+        if 'panic_log' in globals():
+            panic_log(f"Uvicorn Crashed: {e}")
         raise e

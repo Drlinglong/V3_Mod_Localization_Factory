@@ -274,20 +274,20 @@ export default function ProjectManagement() {
   const handleDeleteForever = async () => {
     if (!selectedProject) return;
     try {
-      await api.delete(`/ api / project / ${selectedProject.project_id}?delete_files = ${deleteSourceFiles} `);
+      await api.delete(`/api/project/${selectedProject.project_id}?delete_files=${deleteSourceFiles}`);
       setDeleteModalOpen(false);
       setSelectedProject(null);
       setDeleteSourceFiles(false);
       fetchProjects();
     } catch (error) {
-      alert(`Failed to delete project: ${error.response?.data?.detail || error.message} `);
+      alert(`Failed to delete project: ${error.response?.data?.detail || error.message}`);
     }
   };
 
   const handleRefreshFiles = async () => {
     if (!selectedProject) return;
     try {
-      await api.post(`/ api / project / ${selectedProject.project_id}/refresh`);
+      await api.post(`/api/project/${selectedProject.project_id}/refresh`);
       fetchProjectFiles(selectedProject.project_id);
       setProjectDetails(prev => ({ ...prev, refreshKey: Date.now() }));
     } catch (error) {
