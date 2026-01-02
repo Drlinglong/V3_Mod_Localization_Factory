@@ -79,6 +79,7 @@ yarn-error.log*
 /scripts/react-ui/src-tauri/.cargo/
 /scripts/react-ui/src-tauri/gen/
 /scripts/react-ui/src-tauri/binaries/
+/scripts/react-ui/src-tauri/*.exe
 
 # Migration scripts (temporary)
 migrate_projects_db.py
