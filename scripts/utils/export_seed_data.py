@@ -67,9 +67,19 @@ def export_table_data(cursor, table_name, condition=None, params=None):
 
 def sanitize_path(path):
     path = path.replace("\\", "/")
+    # Handle development paths mapping to demos
+    if "/source_mod/" in path:
+        parts = path.split("/source_mod/")
+        return "{{DEMO_ROOT}}/demos/" + parts[1]
     if "/demos/" in path:
         parts = path.split("/demos/")
         return "{{DEMO_ROOT}}/demos/" + parts[1]
+    
+    # If it's a translation output path in the user's workspace, try to sanitize it
+    if "/my_translation/" in path:
+         # For seed data, we probably want to clear this or point to a default
+         return ""
+         
     return path
 
 def main():

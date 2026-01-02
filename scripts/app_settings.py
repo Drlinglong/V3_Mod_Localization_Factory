@@ -151,11 +151,14 @@ DEST_DIR = os.path.join(PROJECT_ROOT, 'my_translation')
 
 # --- Database Paths ---
 # All user databases live in AppData
-PROJECTS_DB_PATH = os.path.join(APP_DATA_DIR, "projects.sqlite")
-MODS_CACHE_DB_PATH = os.path.join(APP_DATA_DIR, "mods_cache.sqlite")
+# [Unified Database] remis.sqlite containing both Glossary and Projects
+REMIS_DB_PATH = os.path.join(APP_DATA_DIR, "remis.sqlite")
+
+PROJECTS_DB_PATH = REMIS_DB_PATH
+MODS_CACHE_DB_PATH = os.path.join(APP_DATA_DIR, "mods_cache.sqlite") # Keep separate? Yes, cache is cache.
 TRANSLATION_PROGRESS_DB_PATH = os.path.join(APP_DATA_DIR, "translation_progress.sqlite")
 # The main glossary database
-DATABASE_PATH = os.path.join(APP_DATA_DIR, "database.sqlite")
+DATABASE_PATH = REMIS_DB_PATH
 
 # --- API Provider Configuration ---
 DEFAULT_API_PROVIDER = "gemini"

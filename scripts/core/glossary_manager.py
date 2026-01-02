@@ -5,11 +5,11 @@ import logging
 import re
 from typing import Dict, List, Any, Optional
 
-from scripts.app_settings import PROJECT_ROOT
+from scripts import app_settings
 from scripts.utils import i18n
 from scripts.utils.phonetics_engine import PhoneticsEngine
 
-DB_PATH = f"{PROJECT_ROOT}/data/database.sqlite"
+DB_PATH = app_settings.DATABASE_PATH
 
 class GlossaryManager:
     """游戏专用词典管理器 (SQLite 版本)"""

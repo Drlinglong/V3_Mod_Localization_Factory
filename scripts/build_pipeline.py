@@ -71,7 +71,36 @@ def main():
     
     add_data_args = f'--add-data "{seed_main};data" --add-data "{seed_projects};data"'
     
-    # Check for demos folder
+    # [NEW] Add Language Files
+    lang_dir = os.path.join(project_root, "data", "lang")
+    if os.path.exists(lang_dir):
+        add_data_args += f' --add-data "{lang_dir};data/lang"'
+    else:
+        print(f"[WARNING] Language files not found at {lang_dir}")
+    
+    # [NEW] Add Skeleton DB
+    skeleton_db = os.path.join(project_root, "assets", "skeleton.sqlite")
+    if os.path.exists(skeleton_db):
+         add_data_args += f' --add-data "{skeleton_db};assets"'
+    else:
+         print(f"[WARNING] Skeleton DB not found at {skeleton_db}")
+
+    # [NEW] Add Demo Mods
+    # Mapping source folders to 'demos' directory in resources
+    demos_map = {
+        "Test_Project_Remis_stellaris": "demos/Test_Project_Remis_stellaris",
+        "Test_Project_Remis_Vic3": "demos/Test_Project_Remis_Vic3"
+    }
+    
+    source_mod_dir = os.path.join(project_root, "source_mod")
+    for folder_name, dest_tag in demos_map.items():
+        src_path = os.path.join(source_mod_dir, folder_name)
+        if os.path.exists(src_path):
+            add_data_args += f' --add-data "{src_path};{dest_tag}"'
+        else:
+             print(f"[WARNING] Demo mod not found at {src_path}")
+    
+    # Check for demos folder (Legacy/General)
     demos_dir = os.path.join(project_root, "demos")
     if os.path.exists(demos_dir):
         add_data_args += f' --add-data "{demos_dir};demos"'
@@ -86,6 +115,7 @@ def main():
     pyinstaller_cmd = (
         f'pyinstaller --clean --onefile --name web_server '
         f'--hidden-import uvicorn --hidden-import fastapi --hidden-import pydantic '
+        f'--hidden-import scripts.hooks.file_parser_hook '
         f'{add_data_args} '
         f'"{web_server_script}"'
     )
@@ -127,6 +157,12 @@ def main():
     
     print(f"[MOVE] Moving {original_exe} -> {target_path}")
     shutil.move(original_exe, target_path)
+    
+    # [ROBUSTNESS] Duplicate to src-tauri root just in case
+    # Some versions/configs look in root, some in binaries.
+    root_target_path = os.path.join(src_tauri_dir, new_exe_name)
+    print(f"[COPY] {target_path} -> {root_target_path}")
+    shutil.copy2(target_path, root_target_path)
 
     # Step 4: Frontend Build & Tauri Build
     print_step("Step 4: Frontend Build & Tauri Build")
@@ -158,9 +194,27 @@ def main():
             if file.endswith(".exe"):
                 src_file = os.path.join(nsis_dir, file)
                 dst_file = os.path.join(release_dir, file)
+                
+                # [ROBUSTNESS] Remove existing file to ensure clean copy
+                if os.path.exists(dst_file):
+                    print(f"[CLEAN] Removing old artifact: {dst_file}")
+                    os.remove(dst_file)
+                
                 print(f"[COPY] {src_file} -> {dst_file}")
-                shutil.copy2(src_file, dst_file)
-                found_exe = True
+                try:
+                    shutil.copy2(src_file, dst_file)
+                    
+                    # [VERIFY] Check if copy succeeded
+                    if os.path.exists(dst_file) and os.path.getsize(dst_file) == os.path.getsize(src_file):
+                        print(f"[SUCCESS] Artifact copied and verified: {dst_file} ({os.path.getsize(dst_file)/1024/1024:.2f} MB)")
+                    else:
+                        print(f"[ERROR] Copy verification failed for {dst_file}")
+                        sys.exit(1)
+                        
+                    found_exe = True
+                except Exception as e:
+                    print(f"[ERROR] Failed to copy artifact: {e}")
+                    sys.exit(1)
         
         if not found_exe:
             print("[WARNING] No .exe files found in NSIS directory.")

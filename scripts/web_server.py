@@ -3,10 +3,40 @@ import sys
 
 # PATCH: Fix for PyInstaller where sys.stdout/stderr can be None
 # This MUST come before any other imports that might check isatty
+
+class MockStream:
+    def write(self, msg): pass
+    def flush(self): pass
+    def isatty(self): return False
+    def fileno(self): return -1
+
 if sys.stdout is None:
-    sys.stdout = open(os.devnull, "w")
+    sys.stdout = MockStream()
 if sys.stderr is None:
-    sys.stderr = open(os.devnull, "w")
+    sys.stderr = MockStream()
+
+# Hard patch for __stdout__ / __stderr__ as well (some libs check these)
+if getattr(sys, '__stdout__', None) is None:
+    sys.__stdout__ = sys.stdout
+if getattr(sys, '__stderr__', None) is None:
+    sys.__stderr__ = sys.stderr
+
+# PANIC LOGGER START
+import datetime
+import multiprocessing
+
+def panic_log(msg):
+    try:
+        appdata = os.getenv('APPDATA')
+        if appdata:
+             path = os.path.join(appdata, "RemisModFactory", "startup_panic.log")
+             os.makedirs(os.path.dirname(path), exist_ok=True)
+             with open(path, "a", encoding="utf-8") as f:
+                 f.write(f"[{datetime.datetime.now()}] {msg}\n")
+    except:
+        pass
+
+panic_log("=== WEB SERVER STARTUP (LOG_CONFIG=NONE) ===")
 
 import uvicorn
 from fastapi import FastAPI
@@ -22,8 +52,13 @@ if project_root not in sys.path:
     sys.path.insert(0, project_root)
 
 # Import using absolute imports from project root
-from scripts.app_settings import load_api_keys_to_env
-from scripts.utils import logger, i18n
+try:
+    panic_log("Importing app_settings...")
+    from scripts.app_settings import load_api_keys_to_env
+    from scripts.utils import logger, i18n
+except Exception as e:
+    panic_log(f"Import Failed: {e}")
+    raise e
 
 
 # Load API keys from keyring into environment variables
@@ -35,8 +70,18 @@ i18n.load_language() # Load default language
 
 # Initialize Database (Cold Start / Seed Data)
 # Must be called BEFORE importing routers/services which instantiate managers
-from scripts.core.db_initializer import initialize_database
-initialize_database()
+# In frozen mode, we skip this global call because we call it explicitly in __main__
+# after setting up stream redirection.
+if not getattr(sys, 'frozen', False):
+    try:
+        panic_log("Importing db_initializer...")
+        from scripts.core.db_initializer import initialize_database
+        panic_log("Calling initialize_database()...")
+        initialize_database()
+        panic_log("initialize_database() COMPLETED.")
+    except Exception as e:
+        panic_log(f"INIT CRASH: {e}")
+
 
 # Import Routers
 from scripts.routers import (
@@ -104,6 +149,55 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+
+def get_frozen_log_config():
+    """
+    Returns a logging configuration that writes ONLY to a file.
+    This bypasses any StreamHandler that might check isatty() on sys.stderr.
+    """
+    appdata = os.getenv('APPDATA')
+    if appdata:
+         log_file = os.path.join(appdata, "RemisModFactory", "logs", "uvicorn_frozen.log")
+         os.makedirs(os.path.dirname(log_file), exist_ok=True)
+    else:
+         log_file = "uvicorn_frozen.log"
+
+    return {
+        "version": 1,
+        "disable_existing_loggers": False,
+        "formatters": {
+            "default": {
+                "format": "%(asctime)s - %(levelname)s - %(message)s",
+                "class": "logging.Formatter", 
+            },
+            "access": {
+                "format": "%(asctime)s - %(levelname)s - %(client_addr)s - \"%(request_line)s\" %(status_code)s",
+                "class": "logging.Formatter",
+            },
+        },
+        "handlers": {
+            "file": {
+                "class": "logging.FileHandler",
+                "formatter": "default",
+                "filename": log_file,
+                "encoding": "utf-8",
+                "mode": "a",
+            },
+            "access_file": {
+                "class": "logging.FileHandler",
+                "formatter": "access",
+                "filename": log_file,
+                "encoding": "utf-8",
+                "mode": "a",
+            },
+        },
+        "loggers": {
+            "uvicorn": {"handlers": ["file"], "level": "INFO", "propagate": False},
+            "uvicorn.error": {"handlers": ["file"], "level": "INFO", "propagate": False},
+            "uvicorn.access": {"handlers": ["access_file"], "level": "INFO", "propagate": False},
+        },
+    }
+
 # Include Routers
 app.include_router(projects.router)
 app.include_router(translation.router)
@@ -126,11 +220,47 @@ def health_check():
     return {"status": "ok", "timestamp": time.time()}
 
 if __name__ == "__main__":
+    multiprocessing.freeze_support()
+    
     # Specific entry point for the frozen application (PyInstaller)
-    # This block allows web_server.exe to actually start the server.
-    # In development, this file is imported by run_dev_servers.py, so this block is skipped.
     import uvicorn
-    # Ensure we bind to 127.0.0.1:8081 as expected by the frontend configuration
-    # use_colors=False: Prevents checking for isatty
-    # log_config=None: Prevents uvicorn from overriding our custom logger and accessing stdout
-    uvicorn.run(app, host="127.0.0.1", port=8081, use_colors=False, log_config=None)
+    import uvicorn.logging
+
+    # --- CRITICAL STARTUP FIX FOR FROZEN APP ---
+    if getattr(sys, 'frozen', False):
+        try:
+            # 1. Redirect stdout/stderr to files to prevent 'isatty' crashes
+            app_data = os.getenv('APPDATA')
+            if app_data:
+                log_dir = os.path.join(app_data, "RemisModFactory", "logs")
+                os.makedirs(log_dir, exist_ok=True)
+                # buffering=1 means line buffered
+                sys.stdout = open(os.path.join(log_dir, "startup_stdout.log"), "a", encoding="utf-8", buffering=1)
+                sys.stderr = open(os.path.join(log_dir, "startup_stderr.log"), "a", encoding="utf-8", buffering=1)
+            
+            # 2. Initialize Database explicitly
+            panic_log("Importing scripts.core.db_initializer...")
+            from scripts.core import db_initializer
+            panic_log("Initializing Database...")
+            db_initializer.initialize_database()
+            panic_log("Database Initialized.")
+            
+        except Exception as e:
+            panic_log(f"Startup Critical Error: {e}")
+
+    # 3. Simplified Run with Redirection
+    # We have already redirected sys.stdout/stderr to files above.
+    # These file objects return False for isatty(), so Uvicorn's default
+    # ColourizedFormatter will happily run without colors (no crash).
+    # We pass log_config=None to use Uvicorn's defaults, which will write 
+    # to our redirected sys.stdout/stderr.
+    
+    try:
+        panic_log("Starting Uvicorn (log_config=None)...")
+        # Initialize default logging config to ensure it binds to our redirected streams
+        config = uvicorn.Config(app, host="127.0.0.1", port=8081, log_config=None)
+        server = uvicorn.Server(config)
+        server.run()
+    except Exception as e:
+        panic_log(f"Uvicorn Crashed: {e}")
+        raise e
