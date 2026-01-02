@@ -76,8 +76,15 @@ def main():
     if os.path.exists(demos_dir):
         add_data_args += f' --add-data "{demos_dir};demos"'
     
+    # Find jamo path dynamically to include its data files
+    import jamo
+    jamo_path = os.path.dirname(jamo.__file__)
+    jamo_data = os.path.join(jamo_path, "data")
+    if os.path.exists(jamo_data):
+        add_data_args += f' --add-data "{jamo_data};jamo/data"'
+
     pyinstaller_cmd = (
-        f'pyinstaller --clean --onefile --noconsole --name web_server '
+        f'pyinstaller --clean --onefile --name web_server '
         f'--hidden-import uvicorn --hidden-import fastapi --hidden-import pydantic '
         f'{add_data_args} '
         f'"{web_server_script}"'
@@ -133,6 +140,33 @@ def main():
     # Build Tauri App
     run_command("npm run tauri build", cwd=react_ui_dir)
     
+    # Step 5: Move Artifacts
+    print_step("Step 5: Move Artifacts")
+    
+    release_dir = r"J:\V3_Mod_Localization_Factory\archive\release"
+    if not os.path.exists(release_dir):
+        print(f"[INIT] Creating {release_dir}")
+        os.makedirs(release_dir)
+        
+    # Standard Tauri NSIS output path
+    # output is in src-tauri/target/release/bundle/nsis/
+    nsis_dir = os.path.join(src_tauri_dir, "target", "release", "bundle", "nsis")
+    
+    if os.path.exists(nsis_dir):
+        found_exe = False
+        for file in os.listdir(nsis_dir):
+            if file.endswith(".exe"):
+                src_file = os.path.join(nsis_dir, file)
+                dst_file = os.path.join(release_dir, file)
+                print(f"[COPY] {src_file} -> {dst_file}")
+                shutil.copy2(src_file, dst_file)
+                found_exe = True
+        
+        if not found_exe:
+            print("[WARNING] No .exe files found in NSIS directory.")
+    else:
+        print(f"[WARNING] NSIS directory not found at {nsis_dir}")
+
     print_step("Build Pipeline Completed Successfully!")
 
 if __name__ == "__main__":

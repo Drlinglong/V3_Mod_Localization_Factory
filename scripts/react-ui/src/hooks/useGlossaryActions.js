@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { notifications } from '@mantine/notifications';
-import axios from 'axios';
+import api from '../utils/api';
 
 /**
  * 词典管理的数据和操作 Hook
@@ -34,8 +34,8 @@ const useGlossaryActions = () => {
             setIsLoadingTree(true);
             try {
                 const [treeResponse, configResponse] = await Promise.all([
-                    axios.get('/api/glossary/tree'),
-                    axios.get('/api/config')
+                    api.get('/api/glossary/tree'),
+                    api.get('/api/config')
                 ]);
 
                 setTreeData(treeResponse.data);
@@ -78,7 +78,7 @@ const useGlossaryActions = () => {
                     setIsLoadingContent(false);
                     return;
                 }
-                response = await axios.get(
+                response = await api.get(
                     `/api/glossary/content?glossary_id=${selectedFile.glossaryId}&page=${pageIndex + 1}&pageSize=${pageSize}`
                 );
             } else {
@@ -99,7 +99,7 @@ const useGlossaryActions = () => {
                     return;
                 }
 
-                response = await axios.post('/api/glossary/search', payload);
+                response = await api.post('/api/glossary/search', payload);
             }
 
             setData(response.data.entries);
@@ -145,9 +145,9 @@ const useGlossaryActions = () => {
         setIsSaving(true);
         try {
             if (payload.id) {
-                await axios.put(`/api/glossary/entry/${payload.id}`, payload);
+                await api.put(`/api/glossary/entry/${payload.id}`, payload);
             } else {
-                await axios.post(
+                await api.post(
                     `/api/glossary/entry?glossary_id=${selectedFile.glossaryId}`,
                     payload
                 );

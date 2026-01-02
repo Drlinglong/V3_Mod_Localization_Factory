@@ -6,7 +6,7 @@ import {
 } from '@mantine/core';
 import { IconPlus, IconFolder, IconEdit, IconArrowLeft, IconSearch, IconBooks, IconCompass, IconArrowRight, IconArchive, IconTrash, IconRestore, IconAlertTriangle } from '@tabler/icons-react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import api from '../utils/api';
 import { useTranslation } from 'react-i18next';
 import { useTutorial } from '../context/TutorialContext';
 import { open } from '@tauri-apps/plugin-dialog';
@@ -23,7 +23,8 @@ import cardOpenProject from '../assets/card_open_project.png'; // Reusing for Ar
 
 import { normalizeGameId, toIsoLang } from '../utils/paradoxMapping';
 
-const API_BASE = '/api';
+// API_BASE is handled by axios instance 'api'
+
 
 export default function ProjectManagement() {
   const { t } = useTranslation();
@@ -77,13 +78,13 @@ export default function ProjectManagement() {
     try {
       let res;
       if (viewMode === 'active') {
-        res = await axios.get(`${API_BASE}/projects?status=active`);
+        res = await api.get(`/api/projects?status=active`);
         setProjects(res.data);
       } else {
         // Fetch both archived and deleted for archives view
         const [archivedRes, deletedRes] = await Promise.all([
-          axios.get(`${API_BASE}/projects?status=archived`),
-          axios.get(`${API_BASE}/projects?status=deleted`)
+          api.get(`/api/projects?status=archived`),
+          api.get(`/api/projects?status=deleted`)
         ]);
         setProjects([...archivedRes.data, ...deletedRes.data]);
       }
@@ -95,8 +96,8 @@ export default function ProjectManagement() {
   const fetchProjectFiles = async (projectId) => {
     try {
       const [filesRes, configRes] = await Promise.all([
-        axios.get(`${API_BASE}/project/${projectId}/files`),
-        axios.get(`${API_BASE}/project/${projectId}/config`)
+        api.get(`/api/project/${projectId}/files`),
+        api.get(`/api/project/${projectId}/config`)
       ]);
 
       const files = filesRes.data;
@@ -138,7 +139,7 @@ export default function ProjectManagement() {
 
   const handleCreateProject = async () => {
     try {
-      await axios.post(`${API_BASE}/project/create`, {
+      await api.post(`/api/project/create`, {
         name: newProjectName,
         folder_path: newProjectPath,
         game_id: newProjectGame,
@@ -191,7 +192,7 @@ export default function ProjectManagement() {
   const handleUpdateNotes = async (notes) => {
     if (!selectedProject) return;
     try {
-      await axios.post(`${API_BASE}/project/${selectedProject.project_id}/notes`, { notes });
+      await api.post(`/api/project/${selectedProject.project_id}/notes`, { notes });
       // Update local state
       setSelectedProject(prev => ({ ...prev, notes }));
       setProjectDetails(prev => ({ ...prev, notes }));
@@ -204,7 +205,7 @@ export default function ProjectManagement() {
   const handleUpdateStatus = async (status) => {
     if (!selectedProject) return;
     try {
-      await axios.post(`${API_BASE}/project/${selectedProject.project_id}/status`, { status });
+      await api.post(`/api/project/${selectedProject.project_id}/status`, { status });
       // If status changes such that it leaves the current view, we might want to go back or refresh
       // But for now, just update local state and refresh list
       setSelectedProject(prev => ({ ...prev, status }));
@@ -244,7 +245,7 @@ export default function ProjectManagement() {
   const handleUpdateMetadata = async () => {
     if (!selectedProject) return;
     try {
-      await axios.post(`${API_BASE}/project/${selectedProject.project_id}/metadata`, {
+      await api.post(`/api/project/${selectedProject.project_id}/metadata`, {
         game_id: editGameId,
         source_language: editSourceLang
       });
@@ -265,23 +266,32 @@ export default function ProjectManagement() {
         }));
       }
 
-      setManageModalOpen(false);
-      fetchProjects(); // Refresh list
     } catch (error) {
-      alert(`Failed to update project: ${error.response?.data?.detail || error.message}`);
+      alert(`Failed to update project: ${error.response?.data?.detail || error.message} `);
     }
   };
 
   const handleDeleteForever = async () => {
     if (!selectedProject) return;
     try {
-      await axios.delete(`${API_BASE}/project/${selectedProject.project_id}?delete_files=${deleteSourceFiles}`);
+      await api.delete(`/ api / project / ${selectedProject.project_id}?delete_files = ${deleteSourceFiles} `);
       setDeleteModalOpen(false);
       setSelectedProject(null);
       setDeleteSourceFiles(false);
       fetchProjects();
     } catch (error) {
-      alert(`Failed to delete project: ${error.response?.data?.detail || error.message}`);
+      alert(`Failed to delete project: ${error.response?.data?.detail || error.message} `);
+    }
+  };
+
+  const handleRefreshFiles = async () => {
+    if (!selectedProject) return;
+    try {
+      await api.post(`/ api / project / ${selectedProject.project_id}/refresh`);
+      fetchProjectFiles(selectedProject.project_id);
+      setProjectDetails(prev => ({ ...prev, refreshKey: Date.now() }));
+    } catch (error) {
+      console.error("Failed to refresh files", error);
     }
   };
 
@@ -382,61 +392,49 @@ export default function ProjectManagement() {
             </>
           )}
 
-          <Title order={3} mt="xl" mb="md">{viewMode === 'active' ? 'Recent Projects' : 'Archived Projects'}</Title>
+          <Title order={3} mt="xl" mb="md">
+            {viewMode === 'active' ? t('page_title_project_management') : t('project_management.archives_title')}
+            <Badge ml="md" size="lg" variant="outline">
+              {filteredProjects.length}
+            </Badge>
+          </Title>
 
-          {filteredProjects.length === 0 ? (
-            <Text c="dimmed" fs="italic">
-              {viewMode === 'active' ? t('no_existing_mods') : t('project_management.empty_archives')}
-            </Text>
-          ) : (
-            <SimpleGrid cols={2} spacing="md">
-              {filteredProjects.map((p) => (
-                <Paper
-                  key={p.project_id}
-                  p="md"
-                  withBorder
-                  className={styles.projectRow}
-                  onClick={() => setSelectedProject(p)}
-                  style={{ opacity: p.status === 'deleted' ? 0.6 : 1 }}
-                >
-                  <Group>
-                    {p.status === 'deleted' ? <IconTrash size={32} color="red" /> : <IconBooks size={32} color="var(--mantine-color-blue-6)" />}
-                    <Box style={{ flex: 1 }}>
-                      <Text weight={600} size="lg" td={p.status === 'deleted' ? 'line-through' : 'none'}>{p.name}</Text>
-                      <Text size="xs" c="dimmed">{p.game_id} • {p.source_path}</Text>
-                    </Box>
-                    <Badge color={p.status === 'active' ? 'blue' : p.status === 'archived' ? 'orange' : 'red'}>
-                      {t(`project_management.status.${p.status}`)}
-                    </Badge>
-                    <IconArrowRight size={18} color="gray" />
-                  </Group>
-                </Paper>
-              ))}
-            </SimpleGrid>
-          )}
-
+          <SimpleGrid cols={3} spacing="lg" breakpoints={[{ maxWidth: 'sm', cols: 1 }]}>
+            {filteredProjects.map(project => (
+              <Card
+                key={project.project_id}
+                shadow="sm"
+                padding="lg"
+                radius="md"
+                withBorder
+                onClick={() => setSelectedProject(project)}
+                style={{ cursor: 'pointer', transition: 'transform 0.2s' }}
+                className={styles.projectCard}
+              >
+                <Group position="apart" mb="xs">
+                  <Text weight={500}>{project.name}</Text>
+                  <Badge color={project.status === 'active' ? 'blue' : 'gray'}>{project.game_id}</Badge>
+                </Group>
+                <Text size="sm" color="dimmed" lineClamp={2}>
+                  {project.notes || "No notes"}
+                </Text>
+                <Group mt="md">
+                  <Text size="xs" color="dimmed">
+                    Last updated: {new Date(project.last_updated || Date.now()).toLocaleDateString()}
+                  </Text>
+                </Group>
+              </Card>
+            ))}
+          </SimpleGrid>
         </ScrollArea>
       </div>
     );
   };
 
-  const handleRefreshFiles = async () => {
-    if (!selectedProject) return;
-    try {
-      await axios.post(`${API_BASE}/project/${selectedProject.project_id}/refresh`);
-      fetchProjectFiles(selectedProject.project_id);
-      setProjectDetails(prev => ({ ...prev, refreshKey: Date.now() }));
-    } catch (error) {
-      console.error("Failed to refresh files", error);
-    }
-  };
-
-  // View 2: Project Dashboard
   const renderProjectDashboard = () => (
-    <div className={styles.container} style={{ overflow: 'hidden', height: '100%', display: 'flex', flexDirection: 'column' }}>
-      {/* Header with Back Button */}
-      <Paper p="md" radius={0} style={{ background: 'rgba(0,0,0,0.2)', borderBottom: '1px solid var(--glass-border)', backdropFilter: 'blur(10px)' }}>
-        <Group justify="space-between">
+    <div style={{ height: '100%', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
+      <Paper p="md" shadow="xs" style={{ zIndex: 10 }}>
+        <Group position="apart">
           <Group>
             <Button variant="subtle" onClick={() => setSelectedProject(null)} leftSection={<IconArrowLeft size={16} />}>
               {t('button_back')}

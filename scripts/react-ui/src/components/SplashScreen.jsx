@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Center, Stack, Title, Text, Button, Loader, Transition, Box, RingProgress, ThemeIcon, Group } from '@mantine/core';
 import { IconRocket, IconCheck, IconServer2, IconDatabase, IconPlugConnected } from '@tabler/icons-react';
-import axios from 'axios';
+import api from '../utils/api';
 import { useTranslation } from 'react-i18next';
 
 const SplashScreen = ({ onReady }) => {
@@ -20,7 +20,7 @@ const SplashScreen = ({ onReady }) => {
                 addLog('Pinging Neural Link (API)...');
                 const start = Date.now();
                 // We ping the health endpoint
-                await axios.get('/api/health');
+                await api.get('/api/health');
 
                 if (!isMounted) return;
 

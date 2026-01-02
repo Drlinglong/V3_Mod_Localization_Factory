@@ -3,7 +3,7 @@ import { Paper, Group, Text, Button, Modal, Stack, TextInput, ActionIcon } from 
 import { IconFolder, IconPlus, IconTrash, IconExternalLink } from '@tabler/icons-react';
 import { useTranslation } from 'react-i18next';
 import { open } from '@tauri-apps/plugin-dialog';
-import axios from 'axios';
+import api from '../../utils/api';
 import styles from '../../pages/ProjectManagement.module.css';
 
 const ProjectPathManager = ({ projectDetails, onPathsUpdated }) => {
@@ -45,7 +45,7 @@ const ProjectPathManager = ({ projectDetails, onPathsUpdated }) => {
 
     const handleSavePaths = async () => {
         try {
-            const response = await axios.post(`/api/project/${projectDetails.project_id}/config`, {
+            const response = await api.post(`/api/project/${projectDetails.project_id}/config`, {
                 translation_dirs: translationDirs
             });
             console.log('Save response:', response.data);
@@ -62,7 +62,7 @@ const ProjectPathManager = ({ projectDetails, onPathsUpdated }) => {
     const handleOpenFolder = async (path) => {
         if (!path) return;
         try {
-            await axios.post('/api/system/open_folder', { path });
+            await api.post('/api/system/open_folder', { path });
         } catch (error) {
             console.error("Failed to open folder", error);
             alert(`Failed to open folder: ${error.message}`);

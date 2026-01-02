@@ -29,7 +29,7 @@ import {
 } from '@tabler/icons-react';
 import { notifications } from '@mantine/notifications';
 import { useTranslation } from 'react-i18next';
-import axios from 'axios';
+import api from '../utils/api';
 
 // Internal Component: Expandable Textarea
 const ExpandableTextarea = ({ label, value, onChange, readOnly, placeholder, minRows = 4, maxRows = 30, rightSection }) => {
@@ -118,7 +118,7 @@ const PromptSettingsTab = () => {
 
     const fetchPrompts = async () => {
         try {
-            const response = await axios.get('/api/prompts');
+            const response = await api.get('/api/prompts');
             setPromptsData(response.data);
             setCustomGlobalPrompt(response.data.custom_global_prompt || '');
 
@@ -143,7 +143,7 @@ const PromptSettingsTab = () => {
         if (!selectedGameId) return;
         setSubmittingSystem(true);
         try {
-            await axios.post('/api/prompts/system', {
+            await api.post('/api/prompts/system', {
                 game_id: selectedGameId,
                 prompt_template: currentSystemPrompt
             });
@@ -169,7 +169,7 @@ const PromptSettingsTab = () => {
         if (!selectedGameId) return;
         setSubmittingFormat(true);
         try {
-            await axios.post('/api/prompts/format', {
+            await api.post('/api/prompts/format', {
                 game_id: selectedGameId,
                 format_prompt: currentFormatPrompt
             });
@@ -194,7 +194,7 @@ const PromptSettingsTab = () => {
     const handleSaveCustomPrompt = async () => {
         setSubmittingCustom(true);
         try {
-            await axios.post('/api/prompts/custom', {
+            await api.post('/api/prompts/custom', {
                 custom_prompt: customGlobalPrompt
             });
             notifications.show({
@@ -228,7 +228,7 @@ const PromptSettingsTab = () => {
                 reset_format: resetTarget === 'format'
             };
 
-            await axios.post('/api/prompts/reset', payload);
+            await api.post('/api/prompts/reset', payload);
 
             notifications.show({
                 title: t('success'),

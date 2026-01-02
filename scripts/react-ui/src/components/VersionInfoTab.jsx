@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Stack, Group, Text, Title, Paper, Anchor, Alert, ThemeIcon, List, Box, Divider, Button } from '@mantine/core';
 import { IconBrandGithub, IconInfoCircle, IconStar, IconBug, IconFileCode, IconFolderOpen } from '@tabler/icons-react';
-import axios from 'axios';
+import api from '../utils/api';
 import { notifications } from '@mantine/notifications';
 
 const VersionInfoTab = () => {
@@ -13,7 +13,7 @@ const VersionInfoTab = () => {
 
     const handleOpenLogs = async () => {
         try {
-            await axios.post('/api/system/open-logs');
+            await api.post('/api/system/open-logs');
         } catch (error) {
             notifications.show({
                 title: 'Error',
@@ -25,7 +25,7 @@ const VersionInfoTab = () => {
 
     const handleOpenUrl = async (url) => {
         try {
-            await axios.post('/api/system/open-url', { url });
+            await api.post('/api/system/open-url', { url });
         } catch (error) {
             window.open(url, '_blank'); // Fallback
         }

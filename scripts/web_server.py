@@ -1,5 +1,13 @@
 import os
 import sys
+
+# PATCH: Fix for PyInstaller where sys.stdout/stderr can be None
+# This MUST come before any other imports that might check isatty
+if sys.stdout is None:
+    sys.stdout = open(os.devnull, "w")
+if sys.stderr is None:
+    sys.stderr = open(os.devnull, "w")
+
 import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
@@ -117,6 +125,12 @@ def read_root():
 def health_check():
     return {"status": "ok", "timestamp": time.time()}
 
-# Legacy startup block removed to prevent conflict with run_dev_servers.py launcher
-# DO NOT ADD 'if __name__ == "__main__":' block here.
-# Use 'start_dev_servers.bat' to run the application.
+if __name__ == "__main__":
+    # Specific entry point for the frozen application (PyInstaller)
+    # This block allows web_server.exe to actually start the server.
+    # In development, this file is imported by run_dev_servers.py, so this block is skipped.
+    import uvicorn
+    # Ensure we bind to 127.0.0.1:8081 as expected by the frontend configuration
+    # use_colors=False: Prevents checking for isatty
+    # log_config=None: Prevents uvicorn from overriding our custom logger and accessing stdout
+    uvicorn.run(app, host="127.0.0.1", port=8081, use_colors=False, log_config=None)

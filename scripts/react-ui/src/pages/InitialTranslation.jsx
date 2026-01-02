@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import api from '../utils/api';
 import { useTranslation } from 'react-i18next';
 import { useNotification } from '../context/NotificationContext';
 import { useTranslationContext } from '../context/TranslationContext';
@@ -113,7 +113,7 @@ const InitialTranslation = () => {
   });
 
   useEffect(() => {
-    axios.get('/api/config')
+    api.get('/api/config')
       .then(response => {
         setConfig(response.data);
       })
@@ -123,7 +123,7 @@ const InitialTranslation = () => {
       });
 
     // Fetch Projects
-    axios.get('/api/projects')
+    api.get('/api/projects')
       .then(response => {
         setProjects(response.data.map(p => ({ value: p.project_id, label: p.name, game_id: p.game_id })));
       })
@@ -132,7 +132,7 @@ const InitialTranslation = () => {
       });
 
     // Fetch Prompts for Custom Global Prompt
-    axios.get('/api/prompts')
+    api.get('/api/prompts')
       .then(response => {
         if (response.data.custom_global_prompt) {
           form.setFieldValue('mod_context', response.data.custom_global_prompt);
@@ -228,7 +228,7 @@ const InitialTranslation = () => {
     if (!modName) return;
 
     try {
-      const response = await axios.post('/api/translation/checkpoint-status', {
+      const response = await api.post('/api/translation/checkpoint-status', {
         mod_name: modName,
         target_lang_codes: values.english_disguise ? ['custom'] : values.target_lang_codes
       });

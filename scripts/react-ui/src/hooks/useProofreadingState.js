@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { notifications } from '@mantine/notifications';
-import axios from 'axios';
+import api from '../utils/api';
 import { toParadoxLang } from '../utils/paradoxMapping';
 import { groupFiles as performGrouping } from '../utils/fileGrouping';
 
@@ -55,7 +55,7 @@ const useProofreadingState = () => {
     // ==================== 数据获取函数 ====================
     const fetchProjects = useCallback(async () => {
         try {
-            const res = await axios.get('/api/projects?status=active');
+            const res = await api.get('/api/projects?status=active');
             setProjects(res.data);
         } catch (error) {
             console.error("Failed to load projects", error);
@@ -115,7 +115,7 @@ const useProofreadingState = () => {
         try {
             if (sourceFilePath && sourceFilePath.trim() !== '') {
                 try {
-                    const readRes = await axios.post('/api/system/read_file', { file_path: sourceFilePath });
+                    const readRes = await api.post('/api/system/read_file', { file_path: sourceFilePath });
                     setOriginalContentStr(readRes.data.content || "");
                 } catch (readError) {
                     console.error("Failed to read source file:", readError);
@@ -126,7 +126,7 @@ const useProofreadingState = () => {
             }
 
             if (targetId) {
-                const resTarget = await axios.get(`/api/proofread/${pId}/${targetId}`);
+                const resTarget = await api.get(`/api/proofread/${pId}/${targetId}`);
                 const data = resTarget.data;
                 setFileInfo({ path: data.file_path, project_id: pId, file_id: targetId });
                 setEntries(data.entries || []);
@@ -215,7 +215,7 @@ const useProofreadingState = () => {
 
     const fetchProjectFiles = useCallback(async (projectId) => {
         try {
-            const res = await axios.get(`/api/project/${projectId}/files`);
+            const res = await api.get(`/api/project/${projectId}/files`);
             if (res.data) {
                 groupFiles(res.data);
             }
@@ -271,7 +271,7 @@ const useProofreadingState = () => {
                 virtualContent += ` ${e.key}:0 "${e.value}"\n`;
             });
 
-            const response = await axios.post('/api/validate/localization', {
+            const response = await api.post('/api/validate/localization', {
                 game_id: selectedProject.game_id || 'victoria3',
                 content: virtualContent,
                 source_lang_code: 'en_US'
@@ -314,7 +314,7 @@ const useProofreadingState = () => {
                 target_language: `l_${toParadoxLang(selectedProject.source_language || 'english')}` // Heuristic: default to source lang if unknown, or ideally user should select target
             };
 
-            await axios.post('/api/proofread/save', savePayload);
+            await api.post('/api/proofread/save', savePayload);
 
             notifications.show({ title: 'Saved', message: 'File saved successfully.', color: 'green' });
 
@@ -339,7 +339,7 @@ const useProofreadingState = () => {
         try {
             const path = fileInfo.path.replace(/\\/g, '/');
             const dirPath = path.substring(0, path.lastIndexOf('/'));
-            await axios.post('/api/system/open_folder', { path: dirPath });
+            await api.post('/api/system/open_folder', { path: dirPath });
             notifications.show({ title: 'Success', message: 'Folder opened', color: 'green' });
         } catch (error) {
             notifications.show({ title: 'Error', message: 'Failed to open folder', color: 'red' });

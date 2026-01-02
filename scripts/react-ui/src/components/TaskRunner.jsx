@@ -32,7 +32,7 @@ import {
     IconCloudUpload
 } from '@tabler/icons-react';
 import { useTranslation } from 'react-i18next';
-import axios from 'axios';
+import api from '../utils/api';
 import notificationService from '../services/notificationService';
 
 const TaskRunner = ({ task, onRestart, onDashboard, translationDetails }) => {
@@ -95,14 +95,14 @@ const TaskRunner = ({ task, onRestart, onDashboard, translationDetails }) => {
         const folderPath = zipPath.replace('.zip', '');
 
         try {
-            await axios.post('/api/system/open_folder', { path: folderPath });
+            await api.post('/api/system/open_folder', { path: folderPath });
         } catch (error) {
             console.error("Failed to open folder:", error);
             // Fallback: Try opening the parent directory
             try {
                 // If folder doesn't exist (maybe deleted?), open parent
                 const parentDir = zipPath.substring(0, zipPath.lastIndexOf('\\'));
-                await axios.post('/api/system/open_folder', { path: parentDir });
+                await api.post('/api/system/open_folder', { path: parentDir });
             } catch (e) {
                 console.error("Failed to open parent folder:", e);
             }
@@ -120,7 +120,7 @@ const TaskRunner = ({ task, onRestart, onDashboard, translationDetails }) => {
         const folderName = zipName.replace('.zip', '');
 
         try {
-            const response = await axios.post('/api/tools/deploy_mod', {
+            const response = await api.post('/api/tools/deploy_mod', {
                 output_folder_name: folderName,
                 game_id: translationDetails.gameId
             });

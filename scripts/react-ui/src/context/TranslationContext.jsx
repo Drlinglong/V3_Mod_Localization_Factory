@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
-import axios from 'axios';
+import api from '../utils/api';
 
 const TranslationContext = createContext();
 
@@ -34,7 +34,7 @@ export const TranslationProvider = ({ children }) => {
         if (taskId && isProcessing) {
             interval = setInterval(async () => {
                 try {
-                    const response = await axios.get(`/api/status/${taskId}`);
+                    const response = await api.get(`/api/status/${taskId}`);
                     if (response.status === 200) {
                         setTaskStatus(response.data);
                         if (response.data.status === 'completed' || response.data.status === 'failed') {
