@@ -141,13 +141,14 @@ const HomePage = () => {
             {/* Decorative Background Elements */}
             <IconRocket
               size={300}
+              className={styles.floatingIcon}
               style={{
                 position: 'absolute',
                 right: -50,
                 bottom: -50,
-                opacity: 0.1,
+                opacity: 0.08,
                 color: 'var(--text-highlight)',
-                transform: 'rotate(-15deg)'
+                pointerEvents: 'none'
               }}
             />
           </Box>
