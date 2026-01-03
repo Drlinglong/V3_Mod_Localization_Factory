@@ -437,11 +437,11 @@ export default function ProjectManagement() {
                   <Badge color={project.status === 'active' ? 'blue' : 'gray'}>{project.game_id}</Badge>
                 </Group>
                 <Text size="sm" color="dimmed" lineClamp={2}>
-                  {project.notes || "No notes"}
+                  {project.notes || t('project_management.no_notes', "No notes")}
                 </Text>
                 <Group mt="md">
                   <Text size="xs" color="dimmed">
-                    Last updated: {new Date(project.last_updated || Date.now()).toLocaleDateString()}
+                    {t('project_management.last_updated', 'Last updated')}: {new Date(project.last_updated || Date.now()).toLocaleDateString()}
                   </Text>
                 </Group>
               </Card>

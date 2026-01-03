@@ -644,5 +644,18 @@
   "api_desc_vllm": "连接到本地运行的 vLLM 服务 (默认端口 8000)",
   "api_desc_koboldcpp": "连接到本地运行的 KoboldCPP 服务 (默认端口 5001)",
   "api_desc_oobabooga": "连接到 Oobabooga Text Gen WebUI (需开启 OpenAI 扩展, 默认端口 5000)",
-  "api_desc_custom": "（需要技术知识）连接到您自选的任何兼容OpenAI的API服务"
+  "api_desc_custom": "（需要技术知识）连接到您自选的任何兼容OpenAI的API服务",
+  "project_management.no_notes": "暂无备注",
+  "project_management.last_updated": "最后更新",
+  "context_sidebar.translation_context": "翻译任务上下文",
+  "context_sidebar.translation_info": "选择一个Mod以在此处查看详细信息。",
+  "context_sidebar.translation_history": "翻译日志将显示在这里。",
+  "context_sidebar.project_details": "项目详情",
+  "context_sidebar.project_info": "选择一个项目任务以查看属性。",
+  "context_sidebar.project_history": "近期项目活动。",
+  "context_sidebar.glossary_term": "术语详情",
+  "context_sidebar.glossary_info": "选择一个术语以查看定义和变体。",
+  "context_sidebar.glossary_history": "术语编辑历史。",
+  "context_sidebar.tab_info": "信息",
+  "context_sidebar.tab_history": "历史"
 }

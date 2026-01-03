@@ -20,26 +20,26 @@ export function ContextualSider() {
 
         if (path.startsWith('/translation')) {
             setContent({
-                title: 'Translation Context',
-                info: 'Select a mod to see details here.',
-                history: 'Translation logs will appear here.'
+                title: t('context_sidebar.translation_context', 'Translation Context'),
+                info: t('context_sidebar.translation_info', 'Select a mod to see details here.'),
+                history: t('context_sidebar.translation_history', 'Translation logs will appear here.')
             });
         } else if (path.startsWith('/project-management') || path === '/') {
             setContent({
-                title: 'Project Details',
-                info: 'Select a project task to view properties.',
-                history: 'Recent project activity.'
+                title: t('context_sidebar.project_details', 'Project Details'),
+                info: t('context_sidebar.project_info', 'Select a project task to view properties.'),
+                history: t('context_sidebar.project_history', 'Recent project activity.')
             });
         } else if (path.startsWith('/glossary-manager')) {
             setContent({
-                title: 'Glossary Term',
-                info: 'Select a term to view definitions and variants.',
-                history: 'Term edit history.'
+                title: t('context_sidebar.glossary_term', 'Glossary Term'),
+                info: t('context_sidebar.glossary_info', 'Select a term to view definitions and variants.'),
+                history: t('context_sidebar.glossary_history', 'Term edit history.')
             });
         } else {
             setContent(null); // Hide for pages without context
         }
-    }, [location.pathname]);
+    }, [location.pathname, t]);
 
     if (!content) return null;
 
@@ -95,8 +95,8 @@ export function ContextualSider() {
                     value={activeTab}
                     onChange={setActiveTab}
                     data={[
-                        { label: 'Info', value: 'info', icon: <IconInfoCircle size={14} /> },
-                        { label: 'History', value: 'history', icon: <IconHistory size={14} /> },
+                        { label: t('context_sidebar.tab_info', 'Info'), value: 'info', icon: <IconInfoCircle size={14} /> },
+                        { label: t('context_sidebar.tab_history', 'History'), value: 'history', icon: <IconHistory size={14} /> },
                     ]}
                     styles={{
                         root: { backgroundColor: 'rgba(0,0,0,0.2)', border: '1px solid var(--glass-border)' },

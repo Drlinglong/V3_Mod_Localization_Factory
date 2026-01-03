@@ -620,5 +620,18 @@
   "api_desc_vllm": "Connect to local vLLM Service (Default Port 8000)",
   "api_desc_koboldcpp": "Connect to local KoboldCPP Service (Default Port 5001)",
   "api_desc_oobabooga": "Connect to Oobabooga Text Gen WebUI (OpenAI Extension, Port 5000)",
-  "api_desc_custom": "(Advanced) Connect to any OpenAI-compatible API service"
+  "api_desc_custom": "(Advanced) Connect to any OpenAI-compatible API service",
+  "project_management.no_notes": "No notes",
+  "project_management.last_updated": "Last updated",
+  "context_sidebar.translation_context": "Translation Context",
+  "context_sidebar.translation_info": "Select a mod to see details here.",
+  "context_sidebar.translation_history": "Translation logs will appear here.",
+  "context_sidebar.project_details": "Project Details",
+  "context_sidebar.project_info": "Select a project task to view properties.",
+  "context_sidebar.project_history": "Recent project activity.",
+  "context_sidebar.glossary_term": "Glossary Term",
+  "context_sidebar.glossary_info": "Select a term to view definitions and variants.",
+  "context_sidebar.glossary_history": "Term edit history.",
+  "context_sidebar.tab_info": "Info",
+  "context_sidebar.tab_history": "History"
 }

@@ -97,6 +97,38 @@
                     "file_type": "config",
                     "rel_path": ".remis_project.json"
                 }
+            },
+            "99ff5435-3d61-53fc-867c-e4dadf07828c": {
+                "id": "99ff5435-3d61-53fc-867c-e4dadf07828c",
+                "type": "file",
+                "title": "remis_demo_l_english.yml",
+                "filePath": "J:\\V3_Mod_Localization_Factory\\my_translation\\Multilanguage-Test_Project_Remis_Vic3\\localization\\english\\simp_chinese\\remis_demo_l_english.yml",
+                "status": "todo",
+                "comments": "",
+                "priority": "medium",
+                "meta": {
+                    "lines": 67,
+                    "file_type": "translation",
+                    "lang": "english",
+                    "parent_task_id": "a6047e4a-7972-5e44-a1cd-2334a18a4010",
+                    "rel_path": "remis_demo_l_english.yml"
+                }
+            },
+            "b6227bfe-0a3b-5ad5-8a1c-17f0156a7c9f": {
+                "id": "b6227bfe-0a3b-5ad5-8a1c-17f0156a7c9f",
+                "type": "file",
+                "title": "remis_demo_l_japanese.yml",
+                "filePath": "J:\\V3_Mod_Localization_Factory\\my_translation\\Multilanguage-Test_Project_Remis_Vic3\\localization\\japanese\\simp_chinese\\remis_demo_l_japanese.yml",
+                "status": "todo",
+                "comments": "",
+                "priority": "medium",
+                "meta": {
+                    "lines": 67,
+                    "file_type": "translation",
+                    "lang": "japanese",
+                    "parent_task_id": "a6047e4a-7972-5e44-a1cd-2334a18a4010",
+                    "rel_path": "remis_demo_l_japanese.yml"
+                }
             }
         },
         "column_order": [
@@ -109,7 +141,7 @@
     },
     "config": {
         "translation_dirs": [
-            "J:\\V3_Mod_Localization_Factory\\my_translation\\zh-CN-蕾姆丝计划演示模组：最后一位罗马人"
+            "J:\\V3_Mod_Localization_Factory\\my_translation\\Multilanguage-Test_Project_Remis_Vic3"
         ],
         "source_language": "zh-CN"
     },
