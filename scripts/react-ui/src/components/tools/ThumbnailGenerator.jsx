@@ -434,7 +434,7 @@ const ThumbnailGenerator = () => {
                             withBorder
                             p="md"
                             onClick={() => bgImageInputRef.current?.click()}
-                            style={(theme) => ({
+                            style={{
                                 width: 512,
                                 height: 512,
                                 display: 'flex',
@@ -442,12 +442,14 @@ const ThumbnailGenerator = () => {
                                 justifyContent: 'center',
                                 alignItems: 'center',
                                 cursor: 'pointer',
-                                backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
-                                border: `2px dashed ${theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[4]}`,
-                            })}
+                                background: 'var(--glass-bg, rgba(30, 30, 30, 0.3))',
+                                border: '2px dashed var(--mantine-color-dimmed)',
+                                backdropFilter: 'blur(5px)',
+                                transition: 'all 0.2s ease'
+                            }}
                         >
-                            <IconUpload size={48} style={{ color: (theme) => theme.colorScheme === 'dark' ? theme.colors.dark[3] : theme.colors.gray[5] }} />
-                            <Text color="dimmed" mt="md">{t('thumbnail_generator.canvas_placeholder')}</Text>
+                            <IconUpload size={48} color="var(--mantine-color-dimmed)" />
+                            <Text c="dimmed" mt="md">{t('thumbnail_generator.canvas_placeholder')}</Text>
                         </Paper>
                     ) : (
                         <div id="thumbnail-canvas" ref={canvasContainerRef} style={{ width: 512, height: 512 }}>
