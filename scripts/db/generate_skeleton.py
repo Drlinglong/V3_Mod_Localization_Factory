@@ -15,9 +15,9 @@ OUTPUT_DB = os.path.join(ASSETS_DIR, 'skeleton.sqlite')
 # 1. Project Remis Stellaris Demo Mod
 # 2. 蕾姆丝计划演示mod：最后的罗马人 (Vic3)
 KEEP_PROJECT_IDS = [
-    'bbd299e7-694f-41d8-835c-0b9ef391d581', 
-    'b53d8d2c-3b1f-4d3c-860e-f1bc4f680a5d',
-    'DEMO-EU5-PROJECT-ID-001',
+    '6049331a-433d-4d09-9205-165c3aad6010', 
+    'a525f596-6c71-43fe-ade2-52c9205a2720',
+    'ae507ae2-2a08-44e3-9c3d-caa4445911f2'
 ]
 
 DEMO_ROOT_PLACEHOLDER = "{{BUNDLED_DEMO_ROOT}}"
