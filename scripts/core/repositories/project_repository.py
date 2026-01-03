@@ -259,6 +259,7 @@ class ProjectRepository:
                 INSERT INTO project_files (file_id, project_id, file_path, status, original_key_count, line_count, file_type)
                 VALUES (?, ?, ?, ?, ?, ?, ?)
                 ON CONFLICT(project_id, file_path) DO UPDATE SET
+                    status = excluded.status,
                     line_count = excluded.line_count,
                     file_type = excluded.file_type
             ''', data_tuples)
