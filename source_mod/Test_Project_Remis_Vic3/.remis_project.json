@@ -1,5 +1,12 @@
 {
     "kanban": {
+        "columns": [
+            "todo",
+            "in_progress",
+            "proofreading",
+            "paused",
+            "done"
+        ],
         "tasks": {
             "8646e2d7-2d1e-56d3-a7b9-cc96ecc54d42": {
                 "id": "8646e2d7-2d1e-56d3-a7b9-cc96ecc54d42",
@@ -61,15 +68,37 @@
                     "file_type": "config",
                     "rel_path": ".remis_project.json"
                 }
+            },
+            "a6047e4a-7972-5e44-a1cd-2334a18a4010": {
+                "id": "a6047e4a-7972-5e44-a1cd-2334a18a4010",
+                "type": "file",
+                "title": "remis_demo_l_simp_chinese.yml",
+                "filePath": "J:\\V3_Mod_Localization_Factory\\source_mod\\Test_Project_Remis_Vic3\\localization\\simp_chinese\\remis_demo_l_simp_chinese.yml",
+                "status": "todo",
+                "comments": "",
+                "priority": "medium",
+                "meta": {
+                    "source_lines": 67,
+                    "file_type": "source",
+                    "translation_status": {},
+                    "rel_path": "localization\\simp_chinese\\remis_demo_l_simp_chinese.yml"
+                }
+            },
+            "ce683bec-e770-5189-a803-bebe88421bfe": {
+                "id": "ce683bec-e770-5189-a803-bebe88421bfe",
+                "type": "file",
+                "title": ".remis_project.json",
+                "filePath": "J:\\V3_Mod_Localization_Factory\\source_mod\\Test_Project_Remis_Vic3\\.remis_project.json",
+                "status": "todo",
+                "comments": "Configuration/Metadata File",
+                "priority": "low",
+                "meta": {
+                    "lines": 92,
+                    "file_type": "config",
+                    "rel_path": ".remis_project.json"
+                }
             }
         },
-        "columns": [
-            "todo",
-            "in_progress",
-            "proofreading",
-            "paused",
-            "done"
-        ],
         "column_order": [
             "todo",
             "in_progress",
@@ -79,7 +108,9 @@
         ]
     },
     "config": {
-        "translation_dirs": [],
+        "translation_dirs": [
+            "J:\\V3_Mod_Localization_Factory\\my_translation\\zh-CN-蕾姆丝计划演示模组：最后一位罗马人"
+        ],
         "source_language": "zh-CN"
     },
     "notes": [

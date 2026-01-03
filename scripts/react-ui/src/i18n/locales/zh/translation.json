@@ -13,6 +13,7 @@
   "modal_reset_db_safe_3": "修改磁盘上的任何文件。",
   "btn_reset_db": "重置数据库",
   "btn_confirm_reset": "确认重置",
+  "enter_system": "进入系统",
   "msg_reset_success": "数据库已成功重置。应用程序将重新加载。",
   "msg_reset_fail": "重置数据库失败：",
   "progress_translating_model": "正在使用 {{model}} 模型翻译 {{total_files}} 个文件中的 {{total_batches}} 个批次...",

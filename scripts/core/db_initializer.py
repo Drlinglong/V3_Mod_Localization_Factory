@@ -166,7 +166,10 @@ def initialize_database():
     db_needs_init = False
     
     # [STALE PATH CHECK]
-    if os.path.exists(remis_db_path) and os.path.getsize(remis_db_path) > 1024:
+    import sys
+    # [STALE PATH CHECK] - Only for Frozen (End User) builds
+    # In Dev mode, we expect V3_Mod_Localization_Factory paths.
+    if getattr(sys, "frozen", False) and os.path.exists(remis_db_path) and os.path.getsize(remis_db_path) > 1024:
         try:
             conn = sqlite3.connect(remis_db_path)
             cursor = conn.cursor()
