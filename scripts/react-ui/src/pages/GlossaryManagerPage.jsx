@@ -358,7 +358,7 @@ const GlossaryManagerPage = () => {
                         {t('cancel')}
                     </Button>
                     <Button color="red" onClick={handleDeleteGlossaryConfirm} loading={glossary.isSaving}>
-                        {t('glossary_delete_confirm')}
+                        {t('btn_confirm_reset')}
                     </Button>
                 </Group>
             </Modal>
