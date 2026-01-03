@@ -239,6 +239,40 @@ const useGlossaryActions = () => {
         }
     };
 
+    const handleDeleteGlossary = async () => {
+        if (!selectedFile.glossaryId) return false;
+
+        setIsSaving(true);
+        try {
+            await api.delete(`/api/glossary/file/${selectedFile.glossaryId}`);
+
+            notifications.show({
+                title: 'Success',
+                message: 'Glossary deleted successfully!',
+                color: 'green'
+            });
+
+            // Reset selection and reload tree
+            setSelectedFile({ key: null, title: 'No file selected', gameId: null, glossaryId: null });
+            setData([]);
+            setRowCount(0);
+
+            const treeResponse = await api.get('/api/glossary/tree');
+            setTreeData(treeResponse.data);
+
+            return true;
+        } catch (error) {
+            notifications.show({
+                title: 'Error',
+                message: 'Failed to delete glossary.',
+                color: 'red'
+            });
+            return false;
+        } finally {
+            setIsSaving(false);
+        }
+    };
+
     // ==================== 返回接口 ====================
     return {
         // 状态
@@ -268,6 +302,7 @@ const useGlossaryActions = () => {
         handleSave,
         handleDelete,
         handleCreateFile,
+        handleDeleteGlossary,
         fetchGlossaryContent,
     };
 };

@@ -143,3 +143,14 @@ def create_glossary_file(payload: CreateGlossaryFileRequest):
     
     logger.info(f"Created new glossary file {payload.file_name} for game {payload.game_id}")
     return {"message": "File created successfully", "file_name": payload.file_name}
+
+
+@router.delete("/api/glossary/file/{glossary_id}")
+def delete_glossary_file(glossary_id: int):
+    """Deletes an entire glossary file and all its entries."""
+    if not glossary_manager.delete_glossary(glossary_id):
+        logger.error(f"Failed to delete glossary {glossary_id}")
+        raise HTTPException(status_code=500, detail="Failed to delete glossary.")
+    
+    logger.info(f"Deleted glossary {glossary_id}")
+    return {"message": "Glossary deleted successfully"}

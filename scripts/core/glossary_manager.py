@@ -587,6 +587,23 @@ class GlossaryManager:
             logging.error(f"Failed to create glossary file: {e}")
             return False
 
+    def delete_glossary(self, glossary_id: int) -> bool:
+        """Deletes an entire glossary file and all its entries."""
+        if not self.connection: return False
+        try:
+            cursor = self.connection.cursor()
+            # First delete all entries belonging to this glossary
+            cursor.execute("DELETE FROM entries WHERE glossary_id = ?", (glossary_id,))
+            entries_deleted = cursor.rowcount
+            # Then delete the glossary itself
+            cursor.execute("DELETE FROM glossaries WHERE glossary_id = ?", (glossary_id,))
+            self.connection.commit()
+            logging.info(f"Successfully deleted glossary {glossary_id} and {entries_deleted} entries")
+            return True
+        except Exception as e:
+            logging.error(f"Failed to delete glossary {glossary_id}: {e}")
+            return False
+
     def get_glossary_stats(self) -> Dict[str, Any]:
         """Returns statistics about the glossary database."""
         if not self.connection:
