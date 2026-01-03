@@ -55,7 +55,8 @@ async def get_system_stats():
             },
             "charts": {
                 "project_status": dashboard_stats["status_distribution"],
-                "glossary_analysis": glossary_stats["game_distribution"]
+                "glossary_analysis": glossary_stats["game_distribution"],
+                "project_distribution": dashboard_stats.get("game_distribution", [])
             },
             "recent_activity": recent_activities
         }

@@ -5,6 +5,7 @@ import { Grid, Card, Title, Text, ThemeIcon, Group, Stack, Box, Button, Backgrou
 import { IconRocket, IconRefresh, IconChartBar, IconVocabulary, IconChecklist, IconActivity, IconTools } from '@tabler/icons-react';
 import ActionCard from '../components/ActionCard';
 import ProjectStatusPieChart from '../components/ProjectStatusPieChart';
+import ProjectDistributionPieChart from '../components/ProjectDistributionPieChart';
 import GlossaryAnalysisBarChart from '../components/GlossaryAnalysisBarChart';
 import StatCard from '../components/StatCard';
 import RecentActivityList from '../components/RecentActivityList';
@@ -32,7 +33,8 @@ const HomePage = () => {
   });
   const [charts, setCharts] = useState({
     project_status: [],
-    glossary_analysis: []
+    glossary_analysis: [],
+    project_distribution: []
   });
   const [recentActivity, setRecentActivity] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -211,7 +213,16 @@ const HomePage = () => {
                     <Title order={4} className={styles.cardTitle}>{t('homepage_chart_pie_title')}</Title>
                     <ActionIcon variant="subtle" color="gray" onClick={fetchDashboardData} loading={loading}><IconRefresh size={16} /></ActionIcon>
                   </Group>
-                  <ProjectStatusPieChart data={charts.project_status} />
+                  <Grid>
+                    <Grid.Col span={{ base: 12, md: 6 }}>
+                      <Text ta="center" size="sm" c="dimmed" mb="xs">{t('homepage_pie_chart_status_title', 'By Status')}</Text>
+                      <ProjectStatusPieChart data={charts.project_status} />
+                    </Grid.Col>
+                    <Grid.Col span={{ base: 12, md: 6 }}>
+                      <Text ta="center" size="sm" c="dimmed" mb="xs">{t('homepage_pie_chart_distribution_title', 'By Game')}</Text>
+                      <ProjectDistributionPieChart data={charts.project_distribution} />
+                    </Grid.Col>
+                  </Grid>
                 </Card>
                 <Card shadow="sm" padding="lg" radius="md" withBorder className={styles.glassCard}>
                   <Group justify="space-between" mb="md">

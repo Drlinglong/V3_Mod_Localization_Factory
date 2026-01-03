@@ -363,6 +363,11 @@ class ProjectRepository:
             translated_keys = status_keys.get('done', 0) + status_keys.get('proofreading', 0)
             
             completion_rate = (translated_keys / total_keys * 100) if total_keys > 0 else 0
+
+            # 4. Game Distribution
+            cursor.execute("SELECT game_id, COUNT(*) as count FROM projects GROUP BY game_id")
+            game_stats = cursor.fetchall()
+            game_distribution = [{"name": row['game_id'], "value": row['count']} for row in game_stats]
             
             return {
                 "total_projects": total_projects,
@@ -373,6 +378,7 @@ class ProjectRepository:
                     {"name": "Proofreading", "value": status_counts.get('proofreading', 0)},
                     {"name": "Todo", "value": status_counts.get('todo', 0)}
                 ],
+                "game_distribution": game_distribution,
                 "total_keys": total_keys,
                 "translated_keys": translated_keys,
                 "completion_rate": round(completion_rate, 1)
