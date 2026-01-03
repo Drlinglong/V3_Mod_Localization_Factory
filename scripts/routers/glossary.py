@@ -4,7 +4,7 @@ from fastapi import APIRouter, HTTPException, Query
 from typing import Dict
 
 from scripts.shared.services import glossary_manager
-from scripts.schemas.glossary import SearchGlossaryRequest, GlossaryEntryCreate, GlossaryEntryIn
+from scripts.schemas.glossary import SearchGlossaryRequest, GlossaryEntryCreate, GlossaryEntryIn, CreateGlossaryFileRequest
 
 logger = logging.getLogger(__name__)
 
@@ -134,3 +134,12 @@ def delete_glossary_entry(entry_id: str):
     
     logger.info(f"Deleted glossary entry {entry_id}")
     return {"message": "Entry deleted successfully"}
+
+@router.post("/api/glossary/file", status_code=201)
+def create_glossary_file(payload: CreateGlossaryFileRequest):
+    if not glossary_manager.create_glossary_file(payload.game_id, payload.file_name):
+        logger.error(f"Failed to create glossary file {payload.file_name} for game {payload.game_id}")
+        raise HTTPException(status_code=500, detail="Failed to create glossary file.")
+    
+    logger.info(f"Created new glossary file {payload.file_name} for game {payload.game_id}")
+    return {"message": "File created successfully", "file_name": payload.file_name}

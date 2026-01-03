@@ -571,6 +571,22 @@ class GlossaryManager:
             logging.warning(f"Invalid fuzzy matching mode: {mode}. Using default 'loose' mode.")
             self.fuzzy_matching_mode = 'loose'
 
+    def create_glossary_file(self, game_id: str, file_name: str) -> bool:
+        """Creates a new glossary file (record) for a game."""
+        if not self.connection: return False
+        try:
+            cursor = self.connection.cursor()
+            cursor.execute("""
+                INSERT INTO glossaries (game_id, name, description, is_main)
+                VALUES (?, ?, ?, 0)
+            """, (game_id, file_name, f"User created glossary for {game_id}"))
+            self.connection.commit()
+            logging.info(f"Created new glossary file '{file_name}' for game {game_id}")
+            return True
+        except Exception as e:
+            logging.error(f"Failed to create glossary file: {e}")
+            return False
+
     def get_glossary_stats(self) -> Dict[str, Any]:
         """Returns statistics about the glossary database."""
         if not self.connection:

@@ -103,3 +103,25 @@ def test_glossary_crud_lifecycle():
             found_after_delete = True
             break
     assert not found_after_delete, "Entry still exists after deletion"
+
+def test_create_glossary_file():
+    payload = {
+        "game_id": "ck3",
+        "file_name": "Test Glossary File"
+    }
+    response = client.post("/api/glossary/file", json=payload)
+    assert response.status_code == 201
+    assert response.json()["message"] == "File created successfully"
+    
+    # Verify it appears in the tree
+    response = client.get("/api/glossary/tree")
+    assert response.status_code == 200
+    tree = response.json()
+    found = False
+    for game in tree:
+        if game["key"] == "ck3":
+            for child in game["children"]:
+                if "Test Glossary File" in child["title"]:
+                    found = True
+                    break
+    assert found, "Created glossary file not found in tree"
