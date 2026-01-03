@@ -15,7 +15,8 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../../')))
 from scripts import app_settings
 
-DB_PATH = os.path.join(app_settings.PROJECT_ROOT, 'data', 'database.sqlite')
+# Use the correct database path from app_settings (AppData in dev, bundled in prod)
+DB_PATH = app_settings.DATABASE_PATH
 
 
 def import_glossary_from_json(game_id: str, json_path: str) -> bool:

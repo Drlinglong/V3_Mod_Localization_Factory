@@ -14,7 +14,8 @@ import {
     Code,
     useMantineTheme,
     Alert,
-    SimpleGrid
+    SimpleGrid,
+    Loader
 } from '@mantine/core';
 import {
     IconChevronDown,
