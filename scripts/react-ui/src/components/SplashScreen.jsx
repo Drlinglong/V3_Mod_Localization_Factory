@@ -146,24 +146,34 @@ const SplashScreen = ({ onReady }) => {
                         { value: 'zh', label: '中文' }
                     ]}
                     value={i18n.language ? i18n.language.split('-')[0] : 'en'}
-                    onChange={(val) => i18n.changeLanguage(val)}
+                    onChange={(val) => {
+                        if (val) i18n.changeLanguage(val);
+                    }}
+                    comboboxProps={{ zIndex: 10005 }}
                     styles={{
                         input: {
-                            backgroundColor: 'rgba(255,255,255,0.1)',
+                            backgroundColor: 'rgba(20, 20, 20, 0.6)',
                             color: styles.textColor,
                             borderColor: styles.dimmedColor,
-                            textAlign: 'center'
+                            textAlign: 'center',
+                            backdropFilter: 'blur(5px)'
                         },
                         dropdown: {
-                            backgroundColor: '#25262b',
-                            color: 'white'
+                            backgroundColor: '#1A1B1E',
+                            color: '#C1C2C5',
+                            border: `1px solid ${styles.dimmedColor}`,
+                            boxShadow: '0 4px 20px rgba(0,0,0,0.5)'
+                        },
+                        option: {
+                            color: '#C1C2C5'
                         }
                     }}
-                    w={150}
+                    w={160}
                     mb="xl"
                     variant="filled"
                     radius="md"
                     allowDeselect={false}
+                    checkIconPosition="right"
                 />
 
                 <RingProgress
