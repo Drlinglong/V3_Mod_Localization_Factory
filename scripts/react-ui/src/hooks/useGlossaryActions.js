@@ -176,7 +176,7 @@ const useGlossaryActions = () => {
     const handleDelete = async (id) => {
         setIsSaving(true);
         try {
-            await axios.delete(`/api/glossary/entry/${id}`);
+            await api.delete(`/api/glossary/entry/${id}`);
 
             notifications.show({
                 title: 'Success',
@@ -211,7 +211,7 @@ const useGlossaryActions = () => {
 
         setIsSaving(true);
         try {
-            await axios.post('/api/glossary/file', {
+            await api.post('/api/glossary/file', {
                 game_id: selectedGame,
                 file_name: fileName
             });
@@ -223,7 +223,7 @@ const useGlossaryActions = () => {
             });
 
             // Reload tree
-            const treeResponse = await axios.get('/api/glossary/tree');
+            const treeResponse = await api.get('/api/glossary/tree');
             setTreeData(treeResponse.data);
 
             return true;

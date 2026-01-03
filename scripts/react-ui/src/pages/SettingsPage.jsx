@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Select, Group, Title, Text, Container, Paper, Stack, Divider, Tabs, Box } from '@mantine/core';
+import { Select, Group, Title, Text, Container, Paper, Stack, Divider, Tabs, Box, Button, Modal } from '@mantine/core';
+import api from '../utils/api';
 import { IconLanguage, IconPalette, IconSettings, IconKey, IconMessage, IconInfoCircle } from '@tabler/icons-react';
 import ThemeContext from '../ThemeContext';
 import { AVAILABLE_THEMES } from '../config/themes';
@@ -10,9 +11,11 @@ import VersionInfoTab from '../components/VersionInfoTab';
 
 import styles from './SettingsPage.module.css';
 
+
 const SettingsPage = () => {
     const { t, i18n } = useTranslation();
     const { theme, toggleTheme } = useContext(ThemeContext);
+    const [resetModalOpen, setResetModalOpen] = React.useState(false);
 
     useEffect(() => {
         const savedLanguage = localStorage.getItem('language');
@@ -84,6 +87,20 @@ const SettingsPage = () => {
                                         style={{ width: 200 }}
                                     />
                                 </Group>
+
+                                <Divider my="xl" label={t('settings_system_maintenance')} labelPosition="center" />
+
+                                <Group justify="space-between">
+                                    <Box>
+                                        <Text fw={500} c="red">{t('settings_reset_db_title')}</Text>
+                                        <Text size="sm" c="dimmed">
+                                            {t('settings_reset_db_desc')}
+                                        </Text>
+                                    </Box>
+                                    <Button color="red" variant="light" onClick={() => setResetModalOpen(true)}>
+                                        {t('btn_reset_db')}
+                                    </Button>
+                                </Group>
                             </Stack>
                         </Tabs.Panel>
 
@@ -101,6 +118,50 @@ const SettingsPage = () => {
                     </Tabs>
                 </Paper>
             </Container>
+
+            <Modal
+                opened={resetModalOpen}
+                onClose={() => setResetModalOpen(false)}
+                title={<Text c="red" fw={700}>⚠️ DANGER: Reset Project Database</Text>}
+                centered
+            >
+                <Stack>
+                    <Text size="sm">
+                        Are you sure you want to wipe the internal database?
+                    </Text>
+                    <Text size="sm" fw={700}>
+                        This action will:
+                    </Text>
+                    <ul style={{ fontSize: '0.9em', marginTop: 0 }}>
+                        <li>Remove all projects from the "Open Recent" list.</li>
+                        <li>Clear all file status (Todo/Done/Proofreading) in the dashboard.</li>
+                    </ul>
+                    <Text size="sm" fw={700} c="green">
+                        This action will NOT:
+                    </Text>
+                    <ul style={{ fontSize: '0.9em', marginTop: 0 }}>
+                        <li>Delete your translations.</li>
+                        <li>Delete your source files.</li>
+                        <li>Modify any file on your disk.</li>
+                    </ul>
+
+                    <Group justify="flex-end" mt="md">
+                        <Button variant="default" onClick={() => setResetModalOpen(false)}>Cancel</Button>
+                        <Button color="red" onClick={async () => {
+                            try {
+                                await api.post('/api/system/reset-db');
+                                setResetModalOpen(false);
+                                alert("Database reset successfully. The application will now reload.");
+                                window.location.reload();
+                            } catch (e) {
+                                alert("Failed to reset database: " + e.message);
+                            }
+                        }}>
+                            Confirm Reset
+                        </Button>
+                    </Group>
+                </Stack>
+            </Modal>
         </Box>
     );
 };

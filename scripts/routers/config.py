@@ -78,8 +78,9 @@ def get_api_keys():
             
         providers.append({
             "id": provider_id,
-            "name": provider_id.replace("_", " ").title(),
+            "name": config.get("name", provider_id.replace("_", " ").title()),
             "description": config.get("description", ""),
+            "description_key": config.get("description_key", ""),
             "is_keyless": is_keyless,
             "has_key": has_key,
             "masked_key": masked_key,

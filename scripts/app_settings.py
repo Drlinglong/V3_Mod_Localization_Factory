@@ -181,6 +181,7 @@ API_PROVIDERS = {
         "base_url": "https://generativelanguage.googleapis.com",
         "enable_thinking": False,
         "thinking_budget": 0,
+        "description_key": "api_desc_gemini"
     },
     "gemini_cli": {
         "cli_path": "gemini",
@@ -195,7 +196,20 @@ API_PROVIDERS = {
         "max_retries": GEMINI_CLI_MAX_RETRIES,
         "max_daily_calls": 1000,
         "name": "Gemini CLI",
-        "description": "通过Google Gemini CLI调用，每天1000次免费，使用2.5 Pro模型，支持并行处理"
+        "description_key": "api_desc_gemini_cli"
+    },
+    "anthropic": {
+        "api_key_env": "ANTHROPIC_API_KEY",
+        "base_url": "https://api.anthropic.com/v1",
+        "name": "Anthropic Claude",
+        "default_model": "claude-4-5-sonnet",
+        "available_models": [
+            "claude-4-5-sonnet",
+            "claude-4-5-haiku",
+            "claude-3-5-sonnet-20241022",
+            "claude-3-5-haiku-20241022"
+        ],
+        "description_key": "api_desc_anthropic"
     },
     "openai": {
         "api_key_env": "OPENAI_API_KEY",
@@ -208,7 +222,8 @@ API_PROVIDERS = {
             "gpt-5-nano"
         ],
         "enable_thinking": False,
-        "reasoning_effort": "minimal"
+        "reasoning_effort": "minimal",
+        "description_key": "api_desc_openai"
     },
     "qwen": {
         "api_key_env": "DASHSCOPE_API_KEY",
@@ -222,6 +237,7 @@ API_PROVIDERS = {
         "region": "beijing",
         "name": "Qwen (通义千问)",
         "enable_thinking": False,
+        "description_key": "api_desc_qwen"
     },
     "grok": {
         "api_key_env": "XAI_API_KEY",
@@ -232,7 +248,7 @@ API_PROVIDERS = {
             "grok-4-1-fast-reasoning",
             "grok-4-1-fast-non-reasoning"
         ],
-        "description": "通过xAI官方API访问grok-4-fast-reasoning模型"
+        "description_key": "api_desc_grok"
     },
     "deepseek": {
         "api_key_env": "DEEPSEEK_API_KEY",
@@ -248,10 +264,11 @@ API_PROVIDERS = {
         ],
         "name": "DeepSeek (深度求索)",
         "enable_thinking": False,
-        "description": "DeepSeek-V3.2-Exp (Non-thinking Mode) - 与OpenAI API兼容"
+        "description_key": "api_desc_deepseek"
     },
     "ollama": {
         "base_url_env": "OLLAMA_BASE_URL",
+        "base_url": "http://localhost:11434/v1",
         "default_model": "qwen3:4b",
         "available_models": [
             "llama3.2",
@@ -266,14 +283,14 @@ API_PROVIDERS = {
         "chunk_size": OLLAMA_CHUNK_SIZE,
         "max_retries": OLLAMA_MAX_RETRIES,
         "name": "Ollama (Local)",
-        "description": "本地Ollama模型，无需API密钥"
+        "description_key": "api_desc_ollama"
     },
     "modelscope": {
         "api_key_env": "MODELSCOPE_API_KEY",
         "base_url": "https://api-inference.modelscope.cn/v1/",
         "default_model": "deepseek-ai/DeepSeek-V3.2-Exp",
         "name": "ModelScope (魔搭)",
-        "description": "通过魔搭（ModelScope）调用AI模型"
+        "description_key": "api_desc_modelscope"
     },
     "siliconflow": {
         "api_key_env": "SILICONFLOW_API_KEY",
@@ -286,14 +303,96 @@ API_PROVIDERS = {
             "Llama-3.3-70B-Instruct"
         ],
         "name": "SiliconFlow (硅基流动)",
-        "description": "通过硅基流动（SiliconFlow）调用AI模型"
+        "description_key": "api_desc_siliconflow"
+    },
+    "lm_studio": {
+        "base_url_env": "LM_STUDIO_BASE_URL",
+        "default_model": "local-model",
+        "base_url": "http://localhost:1234/v1",
+        "name": "LM Studio",
+        "description_key": "api_desc_lm_studio",
+        "chunk_size": OLLAMA_CHUNK_SIZE,
+        "max_retries": OLLAMA_MAX_RETRIES
+    },
+    "vllm": {
+        "base_url_env": "VLLM_BASE_URL",
+        "default_model": "vllm-model", 
+        "base_url": "http://localhost:8000/v1",
+        "name": "vLLM",
+        "description_key": "api_desc_vllm",
+        "chunk_size": OLLAMA_CHUNK_SIZE,
+        "max_retries": OLLAMA_MAX_RETRIES
+    },
+    "koboldcpp": {
+        "base_url_env": "KOBOLD_BASE_URL",
+        "default_model": "kobold-model",
+        "base_url": "http://localhost:5001/v1", 
+        "name": "KoboldCPP", 
+        "description_key": "api_desc_koboldcpp",
+        "chunk_size": OLLAMA_CHUNK_SIZE,
+        "max_retries": OLLAMA_MAX_RETRIES
+    },
+    "oobabooga": {
+        "base_url_env": "OOBA_BASE_URL",
+        "default_model": "ooba-model",
+        "base_url": "http://localhost:5000/v1",
+        "name": "Oobabooga (Text Gen WebUI)",
+        "description_key": "api_desc_oobabooga",
+        "chunk_size": OLLAMA_CHUNK_SIZE,
+        "max_retries": OLLAMA_MAX_RETRIES
+    },
+    "kimi": {
+        "api_key_env": "KIMI_API_KEY",
+        "base_url": "https://api.moonshot.cn/v1",
+        "default_model": "moonshot-v1-8k",
+        "available_models": [
+            "moonshot-v1-8k",
+            "moonshot-v1-32k",
+            "moonshot-v1-128k",
+            "kimi-k2-chat", 
+            "kimi-k2", 
+            "kimi-k2-turbo",
+            "kimi-k2-thinking"
+        ],
+        "name": "Kimi (Moonshot AI)",
+        "description_key": "api_desc_kimi"
+    },
+    "minimax": {
+        "api_key_env": "MINIMAX_API_KEY",
+        "base_url": "https://api.minimaxi.com/v1",
+        "default_model": "MiniMax-M2.1",
+        "available_models": [
+            "MiniMax-M2.1",
+            "MiniMax-M2.1-lightning",
+            "MiniMax-M2",
+            "abab6.5-chat"
+        ],
+        "name": "Minimax (海螺)",
+        "description_key": "api_desc_minimax"
+    },
+    "zhipu": {
+        "api_key_env": "ZHIPU_API_KEY",
+        "base_url": "https://open.bigmodel.cn/api/paas/v4/",
+        "default_model": "glm-4-plus",
+        "available_models": [
+            "glm-4.7",
+            "glm-4.6",
+            "glm-4.5",
+            "glm-4.5-air",
+            "glm-4.5-flash",
+            "glm-4-plus",
+            "glm-4-air",
+            "glm-4-flash"
+        ],
+        "name": "ChatGLM (Zhipu AI)",
+        "description_key": "api_desc_zhipu"
     },
     "your_favourite_api": {
         "api_key_env": "YOUR_FAVOURITE_API_KEY",
         "base_url": "YOUR_BASE_URL_HERE",
         "default_model": "YOUR_MODEL_NAME_HERE",
         "name": "Custom (OpenAI Compatible)",
-        "description": "（需要技术知识）连接到您自选的任何兼容OpenAI的API服务"
+        "description_key": "api_desc_custom"
     },
 }
 

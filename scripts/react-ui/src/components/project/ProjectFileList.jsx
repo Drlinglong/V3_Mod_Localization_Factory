@@ -48,8 +48,8 @@ const ProjectFileList = ({ projectDetails, handleProofread }) => {
         return (
             <Table.Tr key={file.key}>
                 <Table.Td style={{ maxWidth: '300px' }}>
-                    <Tooltip label={file.name} openDelay={500}>
-                        <Text fw={500} truncate>{relativePath}</Text>
+                    <Tooltip label={relativePath} openDelay={500}>
+                        <Text fw={500} truncate>{relativePath.split('/').pop().split('\\').pop()}</Text>
                     </Tooltip>
                 </Table.Td>
                 <Table.Td style={{ width: '100px' }}>

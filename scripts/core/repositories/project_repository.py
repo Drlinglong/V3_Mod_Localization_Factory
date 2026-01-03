@@ -198,6 +198,8 @@ class ProjectRepository:
         conn = self._get_connection()
         try:
             cursor = conn.cursor()
+            # First delete all associated files to prevent orphans and constraint errors
+            cursor.execute("DELETE FROM project_files WHERE project_id = ?", (project_id,))
             cursor.execute("DELETE FROM projects WHERE project_id = ?", (project_id,))
             conn.commit()
         finally:

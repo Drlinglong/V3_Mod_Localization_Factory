@@ -260,7 +260,7 @@ const InitialTranslation = () => {
     if (pendingFormValues) {
       const modName = projects.find(p => p.value === selectedProjectId)?.label;
       try {
-        await axios.delete('/api/translation/checkpoint', {
+        await api.delete('/api/translation/checkpoint', {
           data: {
             mod_name: modName,
             target_lang_codes: pendingFormValues.english_disguise ? ['custom'] : pendingFormValues.target_lang_codes
@@ -321,7 +321,7 @@ const InitialTranslation = () => {
     setActive(2);
     setIsProcessing(true);
 
-    axios.post('/api/translate/start', payload)
+    api.post('/api/translate/start', payload)
       .then(response => {
         setTaskId(response.data.task_id);
         notificationService.success("Translation started!", notificationStyle);

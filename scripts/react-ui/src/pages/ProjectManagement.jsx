@@ -30,6 +30,7 @@ export default function ProjectManagement() {
   const { t } = useTranslation();
   const { setPageContext } = useTutorial();
   const [projects, setProjects] = useState([]);
+  const [availableGames, setAvailableGames] = useState([]);
   const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [deleteModalOpen, setDeleteModalOpen] = useState(false);
@@ -58,7 +59,23 @@ export default function ProjectManagement() {
 
   useEffect(() => {
     fetchProjects();
+    fetchGameConfig();
   }, [viewMode]);
+
+  const fetchGameConfig = async () => {
+    try {
+      const res = await api.get('/api/config');
+      if (res.data && res.data.game_profiles) {
+        const profiles = Object.values(res.data.game_profiles).map(p => ({
+          value: p.id,
+          label: p.name
+        }));
+        setAvailableGames(profiles);
+      }
+    } catch (error) {
+      console.error("Failed to fetch game config", error);
+    }
+  };
 
   useEffect(() => {
     if (selectedProject) {
@@ -229,15 +246,19 @@ export default function ProjectManagement() {
 
   const handleOpenManage = () => {
     if (selectedProject) {
-      // Normalization Map
-      const gameMap = { 'victoria3': 'vic3', 'hearts of iron iv': 'hoi4' };
-      const langMap = { 'zh-cn': 'simp_chinese' };
+      // Normalization Map: Handle legacy IDs (e.g., old projects might use 'vic3', new config uses 'victoria3')
+      const gameMap = { 'vic3': 'victoria3', 'victoria 3': 'victoria3' };
+      // const langMap = { 'zh-cn': 'simp_chinese' }; // Generally standard
 
       let gId = (selectedProject.game_id || 'stellaris').toLowerCase();
-      let sLang = (selectedProject.source_language || 'english').toLowerCase();
-
+      // If the current ID is in our map (e.g. vic3), convert it to canonical (victoria3). 
+      // Otherwise, keep it as is (e.g. eu4, stellaris).
       setEditGameId(gameMap[gId] || gId);
-      setEditSourceLang(langMap[sLang] || sLang);
+
+      let sLang = (selectedProject.source_language || 'english').toLowerCase();
+      // setEditSourceLang(langMap[sLang] || sLang);
+      setEditSourceLang(sLang);
+
       setManageModalOpen(true);
     }
   };
@@ -516,7 +537,7 @@ export default function ProjectManagement() {
           </Group>
           <Select
             label="Game"
-            data={[
+            data={availableGames.length > 0 ? availableGames : [
               { value: 'stellaris', label: 'Stellaris' },
               { value: 'hoi4', label: 'Hearts of Iron IV' },
               { value: 'vic3', label: 'Victoria 3' },
@@ -606,7 +627,7 @@ export default function ProjectManagement() {
         <Stack>
           <Select
             label={t('form_label_game')}
-            data={[
+            data={availableGames.length > 0 ? availableGames : [
               { value: 'stellaris', label: 'Stellaris' },
               { value: 'hoi4', label: 'Hearts of Iron IV' },
               { value: 'vic3', label: 'Victoria 3' },

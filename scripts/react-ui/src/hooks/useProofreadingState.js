@@ -352,7 +352,7 @@ const useProofreadingState = () => {
         setLinterError(null);
         setLinterResults([]);
         try {
-            const response = await axios.post('/api/validate/localization', {
+            const response = await api.post('/api/validate/localization', {
                 game_id: linterGameId,
                 content: linterContent,
                 source_lang_code: 'en_US'

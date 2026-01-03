@@ -17,6 +17,10 @@ def _transform_storage_to_frontend_format(entry: Dict) -> Dict:
     """
     new_entry = entry.copy()
     
+    # Map entry_id to id for frontend compatibility
+    if 'entry_id' in new_entry:
+        new_entry['id'] = new_entry['entry_id']
+    
     # Extract 'en' translation as the source term
     new_entry['source'] = new_entry.get('translations', {}).get('en', '')
 
@@ -33,14 +37,18 @@ def _transform_storage_to_frontend_format(entry: Dict) -> Dict:
     return new_entry
 
 def _transform_entry_to_storage_format(entry: Dict) -> Dict:
+    entry = entry.copy()
     if 'translations' not in entry: entry['translations'] = {}
     if entry.get('source'):
         entry['translations']['en'] = entry['source']
     if 'notes' in entry:
-        if 'raw_metadata' not in entry: entry['raw_metadata'] = {}
-        entry['raw_metadata']['remarks'] = entry['notes']
+        if 'metadata' not in entry: entry['metadata'] = {}
+        entry['metadata']['remarks'] = entry['notes']
         del entry['notes']
     if 'source' in entry: del entry['source']
+    # Ensure entry_id is present if id is present
+    if 'id' in entry and 'entry_id' not in entry:
+        entry['entry_id'] = entry['id']
     return entry
 
 @router.get("/api/glossaries/{game_id}")
@@ -106,5 +114,23 @@ def create_glossary_entry(glossary_id: int, payload: GlossaryEntryCreate):
 
 @router.put("/api/glossary/entry/{entry_id}")
 def update_glossary_entry(entry_id: str, payload: GlossaryEntryIn):
-    # Placeholder for update logic
-    raise HTTPException(status_code=501, detail="Not implemented yet")
+    entry_dict = payload.dict()
+    entry_dict['id'] = entry_id # Ensure ID matches URL
+    
+    storage_entry = _transform_entry_to_storage_format(entry_dict)
+    
+    if not glossary_manager.update_entry(entry_id, storage_entry):
+        logger.error(f"Failed to update glossary entry {entry_id}")
+        raise HTTPException(status_code=500, detail="Failed to update glossary entry.")
+    
+    logger.info(f"Updated glossary entry {entry_id}")
+    return entry_dict
+
+@router.delete("/api/glossary/entry/{entry_id}")
+def delete_glossary_entry(entry_id: str):
+    if not glossary_manager.delete_entry(entry_id):
+        logger.error(f"Failed to delete glossary entry {entry_id}")
+        raise HTTPException(status_code=500, detail="Failed to delete glossary entry.")
+    
+    logger.info(f"Deleted glossary entry {entry_id}")
+    return {"message": "Entry deleted successfully"}

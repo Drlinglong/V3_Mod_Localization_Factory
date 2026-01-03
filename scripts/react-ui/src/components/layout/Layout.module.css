@@ -44,13 +44,13 @@
 
 .navLink[data-active="true"] {
     background-color: rgba(255, 255, 255, 0.15) !important;
-    color: var(--color-primary) !important;
-    border: 1px solid var(--color-primary);
+    color: var(--text-highlight) !important;
+    border: 1px solid var(--text-highlight);
     /* Optional: outline active state */
 }
 
 .navLink[data-active="true"] .icon {
-    color: var(--color-primary) !important;
+    color: var(--text-highlight) !important;
 }
 
 /* Sci-Fi Glow Effect for Icons */
