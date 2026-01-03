@@ -116,10 +116,12 @@ class ArchiveManager:
                 # Or simpler: For now, I will assume keys are unique enough or I will rely on the structure.
                 # Wait, the key map is needed.
                 # The previous code: zip(file_data['key_map'], file_data['texts_to_translate'])
-                for key, text in zip(file_data['key_map'], file_data['texts_to_translate']):
+                for key_info, text in zip(file_data['key_map'], file_data['texts_to_translate']):
+                    # Fix: key_map is a list of dicts like {'key_part': 'remis.1.t', 'line_num': 5}
+                    entry_key = key_info['key_part'].strip() if isinstance(key_info, dict) else str(key_info)
                     # We are losing file_path here. This is a flaw in the original schema for my new requirement.
                     # I will modify the schema to include file_path.
-                    source_entries.append((version_id, key, text, file_data.get('filename', 'unknown')))
+                    source_entries.append((version_id, entry_key, text, file_data.get('filename', 'unknown')))
 
             # Check if file_path column exists, if not add it
             cursor.execute("PRAGMA table_info(source_entries)")
@@ -148,11 +150,15 @@ class ArchiveManager:
                 file_data = next((fd for fd in all_files_data if fd['filename'] == filename), None)
                 if not file_data or not translated_texts: continue
 
-                for key, translated_text in zip(file_data['key_map'], translated_texts):
+                for key_info, translated_text in zip(file_data['key_map'], translated_texts):
+                    # Fix: key_map is a list of dicts like {'key_part': 'remis.1.t', 'line_num': 5}
+                    # We need to extract the actual key string
+                    entry_key = key_info['key_part'].strip() if isinstance(key_info, dict) else str(key_info)
+                
                     # Find source entry
                     cursor.execute(
                         "SELECT source_entry_id FROM source_entries WHERE version_id = ? AND entry_key = ? AND file_path = ?",
-                        (version_id, key, filename)
+                        (version_id, entry_key, filename)
                     )
                     row = cursor.fetchone()
                     if row:
