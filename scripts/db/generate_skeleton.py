@@ -16,7 +16,8 @@ OUTPUT_DB = os.path.join(ASSETS_DIR, 'skeleton.sqlite')
 # 2. 蕾姆丝计划演示mod：最后的罗马人 (Vic3)
 KEEP_PROJECT_IDS = [
     'bbd299e7-694f-41d8-835c-0b9ef391d581', 
-    'b53d8d2c-3b1f-4d3c-860e-f1bc4f680a5d'
+    'b53d8d2c-3b1f-4d3c-860e-f1bc4f680a5d',
+    'DEMO-EU5-PROJECT-ID-001',
 ]
 
 DEMO_ROOT_PLACEHOLDER = "{{BUNDLED_DEMO_ROOT}}"
@@ -26,15 +27,18 @@ TRANS_ROOT_PLACEHOLDER = "{{BUNDLED_TRANSLATION_ROOT}}"
 # Map the DEV path to the PLACEHOLDER path relative structure.
 # Dev Path 1: J:\V3_Mod_Localization_Factory\source_mod\Test_Project_Remis_stellaris
 # Dev Path 2: J:\V3_Mod_Localization_Factory\source_mod\Test_Project_Remis_Vic3
+# Dev Path 3: J:\V3_Mod_Localization_Factory\source_mod\Test_Project_Remis_EU5
 #
 # Target Structure in EXE:
 # resources/demo_mod/
 #   |-- Test_Project_Remis_stellaris
 #   |-- Test_Project_Remis_Vic3
+#   |-- Test_Project_Remis_EU5
 #
 # So we want:
 # {{BUNDLED_DEMO_ROOT}}/Test_Project_Remis_stellaris
 # {{BUNDLED_DEMO_ROOT}}/Test_Project_Remis_Vic3
+# {{BUNDLED_DEMO_ROOT}}/Test_Project_Remis_EU5
 
 def ensure_assets_dir():
     if not os.path.exists(ASSETS_DIR):
@@ -144,18 +148,18 @@ def create_skeleton():
         SELECT 
             {select_clause}
         FROM src.projects
-        WHERE project_id IN (?, ?)
+        WHERE project_id IN (?, ?, ?)
     """
     
     print(query)
-    cursor.execute(query, (KEEP_PROJECT_IDS[0], KEEP_PROJECT_IDS[1]))
+    cursor.execute(query, (KEEP_PROJECT_IDS[0], KEEP_PROJECT_IDS[1], KEEP_PROJECT_IDS[2]))
     
     # Files
     cursor.execute("""
         INSERT INTO main.project_files
         SELECT * FROM src.project_files
-        WHERE project_id IN (?, ?)
-    """, (KEEP_PROJECT_IDS[0], KEEP_PROJECT_IDS[1]))
+        WHERE project_id IN (?, ?, ?)
+    """, (KEEP_PROJECT_IDS[0], KEEP_PROJECT_IDS[1], KEEP_PROJECT_IDS[2]))
     
     # Logs - Do we keep them? Let's keep them for history or maybe clear them.
     # User said "Clean user data" - maybe clean logs?
@@ -168,8 +172,8 @@ def create_skeleton():
         cursor.execute("""
             INSERT INTO main.activity_log
             SELECT * FROM src.activity_log
-            WHERE project_id IN (?, ?)
-        """, (KEEP_PROJECT_IDS[0], KEEP_PROJECT_IDS[1]))
+            WHERE project_id IN (?, ?, ?)
+        """, (KEEP_PROJECT_IDS[0], KEEP_PROJECT_IDS[1], KEEP_PROJECT_IDS[2]))
     else:
         print("[WARN] activity_log table not found in source DB. Skipping logs.")
 
@@ -184,7 +188,8 @@ def create_skeleton():
     # Aggressive search: Any path containing demo folder names should be converted.
     demos_folders = {
         'Test_Project_Remis_stellaris': DEMO_ROOT_PLACEHOLDER,
-        'Test_Project_Remis_Vic3': DEMO_ROOT_PLACEHOLDER
+        'Test_Project_Remis_Vic3': DEMO_ROOT_PLACEHOLDER,
+        'Test_Project_Remis_EU5': DEMO_ROOT_PLACEHOLDER
     }
     
     for folder, placeholder in demos_folders.items():

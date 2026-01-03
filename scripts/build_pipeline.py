@@ -94,7 +94,8 @@ def main():
     # Mapping source folders to 'demos' directory in resources
     demos_map = {
         "Test_Project_Remis_stellaris": "demos/Test_Project_Remis_stellaris",
-        "Test_Project_Remis_Vic3": "demos/Test_Project_Remis_Vic3"
+        "Test_Project_Remis_Vic3": "demos/Test_Project_Remis_Vic3",
+        "Test_Project_Remis_EU5": "demos/Test_Project_Remis_EU5"
     }
     
     source_mod_dir = os.path.join(project_root, "source_mod")
